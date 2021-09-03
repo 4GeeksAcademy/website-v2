@@ -49,7 +49,7 @@ const Landing = (props) => {
 
   // data sent to the form already prefilled
   const preData = {
-    course: {type: "hidden", value: `${programs <=1 ? (programs[0].value) : (yml.meta_info.utm_course)}`, valid: true},
+    course: {type: "hidden", value: programs.length <=1 ? (programs[0].value) : (yml.meta_info.utm_course), valid: true},
     utm_location: {type: "hidden", value: yml.meta_info.utm_location, valid: true},
     automation: {type: "hidden", value: yml.meta_info.automation, valid: true},
     tag: {type: "hidden", value: yml.meta_info.tag, valid: true}
@@ -58,8 +58,9 @@ const Landing = (props) => {
   return (
     <>
       <LandingNavbar
-        buttonText={yml.navbar ? yml.navbar.buttonText : pageContext.lang === "us" ? "Apply" : "Aplicar"}
-        link={yml.navbar?.url || ''}
+        buttonText={yml.navbar?.buttonText || pageContext.lang === "us" ? "Apply" : "Aplicar"}
+        buttonUrl={yml.navbar?.buttonUrl}
+        logoUrl={yml.navbar?.logoUrl}
         lang={pageContext.lang}
       />
       <FollowBar position={yml.follow_bar.position} showOnScrollPosition={400}
@@ -95,7 +96,6 @@ const Landing = (props) => {
         backgroundColor={Colors.lightGray}
         align="center"
         alt="4Geeks Academy"
-        // borderRadius="0"
         borderRadius="0"
       >
         <GridContainer
@@ -202,7 +202,7 @@ const Landing = (props) => {
               background={Colors.white}
               margin_tablet="50px 0 0 0" 
               margin="0" 
-              style={{ marginTop: "50px" }}
+              style={{ marginTop: "50px", minHeight: "350px" }}
               selectProgram={programs}
               formHandler={requestSyllabus}
               heading={yml.form.heading}
@@ -257,6 +257,7 @@ const Landing = (props) => {
               margin="0"
               formHandler={requestSyllabus}
               heading={yml.form.heading}
+              style={{ minHeight: "350px" }}
               motivation={yml.form.motivation}
               sendLabel={yml.form.button_label}
               redirect={yml.form.redirect}
@@ -347,8 +348,9 @@ export const query = graphql`
               }
             }
             navbar{
+              logoUrl
               buttonText
-              url
+              buttonUrl
             }
             form{
               heading
