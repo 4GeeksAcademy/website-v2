@@ -115,8 +115,10 @@ const LeadForm = ({marginButton, background, margin, margin_tablet, justifyConte
 
     const [formStatus, setFormStatus] = useState({status: "idle", msg: ""});
     const [formData, setVal] = useState(_fields);
+    const [consentValue, setConsentValue] = useState(false);
     const {session} = useContext(SessionContext);
     const courseSelector = yml.form_fields.find(f => f.name === "course")
+    const consentCheckboxField = yml.form_fields.find(f => f.name === "consent")
     React.useEffect(() => {
         setVal(_data => {
             const _ = Object.keys(_data).reduce((total, key) => {
@@ -140,6 +142,8 @@ const LeadForm = ({marginButton, background, margin, margin_tablet, justifyConte
             setFormStatus({status: "error", msg: yml.messages.error});
         } else if (Array.isArray(formData.course.value) && formData.course.value.length > 1){
             setFormStatus({status: "error", msg: courseSelector.error});
+        } else if (consentValue === false && session.location?.gdpr_compliant === true){
+            setFormStatus({status: "error", msg: consentCheckboxField.error});
         } else {
             setFormStatus({status: "loading", msg: yml.messages.loading});
             formHandler(cleanedData, session)
@@ -226,8 +230,11 @@ const LeadForm = ({marginButton, background, margin, margin_tablet, justifyConte
                             <input
                                 name="isGoing"
                                 type="checkbox"
-                                checked={formData.consent.valid}
-                                onChange={() => setVal({...formData, consent: {...formData.consent, valid: !formData.consent.valid}})} />
+                                checked={consentValue}
+                                onChange={() => {
+                                    setConsentValue(!consentValue)
+                                // setVal({...formData, consent: {...formData.consent, valid: !formData.consent.valid}})
+                                }} />
                             {yml.consent.message}
                             <a target="_blank" rel="noopener noreferrer nofollow" className="decorated" href={yml.consent.url}>{yml.consent.link_label}</a>
                         </Paragraph>
