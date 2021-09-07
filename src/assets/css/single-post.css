@@ -1,3 +1,12 @@
+.heading-link.after{
+    padding-left: 10px;
+    fill: gray;
+}
+.heading-link:hover{
+    padding-left: 10px;
+    fill: rgb(0 151 206);
+}
+
 .single-post{
     margin-bottom: 100px;
     font-family: 'Lato';
@@ -26,10 +35,12 @@
 }
 .single-post h2, .single-event h2{
     font-size: 36px;
-    margin: 45px 0;
+    margin: 0 0 20px 0;
     text-align: center;
     position: relative;
-    margin: 30px 0px;
+    padding: 30px 0 20px 0px;
+    border-bottom: 1px solid #C4C4C4;
+    /* margin: 30px 0px; */
 }
 .single-event p{
     font-size: 16px;
@@ -133,4 +144,7 @@
 }
 .single-post table tr:nth-child(2n):hover {
     background-color: #c8c3d8;
+}
+a.sidebar-content {
+    color: #000000;
 }

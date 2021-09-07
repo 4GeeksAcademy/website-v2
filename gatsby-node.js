@@ -88,7 +88,7 @@ const createBlog = async ({actions, graphql}) => {
         redirects.push(`Redirect from ${args.fromPath} to ${args.toPath}`);
         createRedirect(args);
     }
-    const postTemplate = path.resolve('src/templates/post.js');
+    const postTemplate = path.resolve('src/templates/landing_post.js');
     const clusterTemplate = path.resolve("src/templates/clusters.js");
     const result = await graphql(`
     {
