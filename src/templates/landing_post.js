@@ -121,7 +121,7 @@ export default function Template (props) {
                         textAlign_tablet="left"
                       >
                         <Link to={ `#${id}` || "#"}>
-                                {children[0].toString().toUpperCase()}
+                          {children[0].toString().toUpperCase()}
                         </Link >
                       </Paragraph>
                     )}
