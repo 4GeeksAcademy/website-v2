@@ -97,7 +97,7 @@ export default function Template (props) {
         />
 
         {/* Container */}
-        <GridContainer containerColumns_tablet="0fr repeat(12, 1fr) 0fr" columns_tablet="1" gridColumn_tablet="4 / -4" columns="1" margin="0">
+        <GridContainer containerColumns_tablet={h2.length >= 1 ? "0fr repeat(12, 1fr) 0fr" : "2fr repeat(12, 1fr) 2fr"} columns_tablet="1" gridColumn_tablet="4 / -4" columns="1" margin="0">
 
   
           <Div flexDirection="column" margin="30px 0 0 0" background={Colors.white}>
@@ -105,6 +105,8 @@ export default function Template (props) {
             </Div>
           </Div>
 
+        {
+          h2.length >= 1 &&
           <Div gridColumn_tablet="4 ​/ span 1" margin="54px 0 0 0" display="none" display_md="flex" style={{position: "relative"}}>
             <Div flexDirection="column" padding="0 30px" position="sticky" style={{boxShadow: "0px 2px 5px rgba(0, 0, 0, 0.1)", top: "85px"}} borderRadius="3px" border={`1px solid #e5e5e5`} width="250px" height="fit-content">
               <Div margin="25px 0" flexDirection="column" justifyContent="space-around" gap="16px">
@@ -121,7 +123,7 @@ export default function Template (props) {
                         textAlign_tablet="left"
                       >
                         <Link to={ `#${id}` || "#"}>
-                          {children[0].toString().toUpperCase()}
+                          {children[0].props?.children.toString().toUpperCase() || children[0].toString().toUpperCase()}
                         </Link >
                       </Paragraph>
                     )}
@@ -145,7 +147,7 @@ export default function Template (props) {
               </Div>
             </Div>
           </Div>
-
+        }
         </GridContainer>
 
       </Layout>
