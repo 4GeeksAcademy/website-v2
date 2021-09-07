@@ -2,7 +2,7 @@
     padding-left: 10px;
     fill: gray;
 }
-.heading-link:hover{
+.heading-link.after:hover{
     padding-left: 10px;
     fill: rgb(0 151 206);
 }
@@ -145,6 +145,6 @@
 .single-post table tr:nth-child(2n):hover {
     background-color: #c8c3d8;
 }
-a.sidebar-content {
+p.sidebar-content a {
     color: #000000;
 }

@@ -90,10 +90,6 @@ const Apply = (props) => {
     let privacy = data.privacy.edges.find(({node}) => node.fields.lang === pageContext.lang);
     if (privacy) privacy = privacy.node;
 
-    console.log("LOCATIONS_&&:::", locations?.find(el => el.value === formData.location.value))
-    console.log("LOCATION_VALUE", formData.location.value)
-    // console.log("FormData:::", formData)
-
     return (
         <>
             <Header

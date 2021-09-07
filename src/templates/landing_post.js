@@ -2,22 +2,19 @@ import React, {useContext} from 'react'
 import {H1, H2, H3, H4, Title, Separator, Paragraph, Span} from '../new_components/Heading'
 import {RoundImage, Colors, Button, Link} from '../new_components/Styling'
 import Layout from '../global/Layout'
-import LazyLoad from 'react-lazyload';
-import twitterUser from '../utils/twitter'
-import Icon from '../new_components/Icon'
-import {TwitterFollowButton} from 'react-twitter-embed';
 import "../assets/css/single-post.css"
 
 //FROM new_components
 import {GridContainer, Grid, Div, Header, Row, Column} from '../new_components/Sections'
 
+import parse from 'html-react-parser';
+
 export default function Template (props) {
   const {data, pageContext} = props;
   const post = data.markdownRemark;
-  const parser = new DOMParser()
   const lang = pageContext.lang
-  const doc = parser.parseFromString(post.html, "text/html");
-  const head2 = doc.querySelectorAll("h2");
+  const doc = parse(post.html);
+  const h2 = doc.filter(el => el.type == "h2");
 
   //Returns month's name
   function GetMonth (n) {
@@ -112,17 +109,19 @@ export default function Template (props) {
             <Div flexDirection="column" padding="0 30px" position="sticky" style={{boxShadow: "0px 2px 5px rgba(0, 0, 0, 0.1)", top: "85px"}} borderRadius="3px" border={`1px solid #e5e5e5`} width="250px" height="fit-content">
               <Div margin="25px 0" flexDirection="column" justifyContent="space-around" gap="16px">
                 {
-                  [...head2].map((title) => {
+                  h2.map((heading) => {
+                    const {id, children} = heading.props
                     return (
                       <Paragraph
+                        className="sidebar-content"
                         letterSpacing="0.05em"
-                        key={title.id}
+                        key={id}
                         fontSize="14px"
                         textAlign="center"
                         textAlign_tablet="left"
                       >
-                        <Link class="sidebar-content" to={ `#${title.id}` || "#"}>
-                                {title.innerText.toUpperCase()}
+                        <Link to={ `#${id}` || "#"}>
+                                {children[0].toString().toUpperCase()}
                         </Link >
                       </Paragraph>
                     )}

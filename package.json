@@ -69,6 +69,7 @@
     "gatsby-transformer-remark": "^2.6.32",
     "gatsby-transformer-sharp": "^2.12.1",
     "gatsby-transformer-yaml": "^2.2.15",
+    "html-react-parser": "^1.2.9",
     "lazysizes": "^5.2.2",
     "node-fetch": "^2.6.1",
     "prismjs": "^1.24.1",
