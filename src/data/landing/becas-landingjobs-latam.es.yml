@@ -1,5 +1,5 @@
 meta_info:
-  slug: becas-landing-jobs # <--- URL 4geeksacademy.com/us/landing/example
+  slug: becas-landing-jobs-latam # <--- URL 4geeksacademy.com/us/landing/example
 
   visibility: "hidden" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   # This will show on social media when shared
