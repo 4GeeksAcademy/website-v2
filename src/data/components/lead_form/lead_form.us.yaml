@@ -38,4 +38,4 @@ form_fields:
     required: true
     type: 'selector'
     place_holder: "Select a program *"
-    error: "You need to choose a program"
+    error: "Please choose a program"

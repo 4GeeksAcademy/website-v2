@@ -14,12 +14,13 @@ meta_info:
   # utm_course available ["full-stack", "software-engineering", "machine-learning-engineering"]
   utm_course: ["full-stack"] 
   utm_location: madrid-spain
-  automation: request_more_info #optional, this is the default value
-  tag: soft #optional, this is the default value
+  automation: soft #optional, this is the default value
+  tag: request_more_info #optional, this is the default value
 
 navbar:
+  logoUrl: "#"
   buttonText: "Solicitar" # this modifies the button text in the navbar
-  url: "#bottom"
+  buttonUrl: "#bottom"
 # └── url accepts: relative(/apply), absolute(https://google.com) or id(#componentName)
 
 form:
@@ -45,6 +46,7 @@ follow_bar:
     # └── path accepts: relative(/example/path), absolute(https://google.com) or id(#idName)
   phone:
     text: "Llama "
+    number: "+1 (786) 416-6640" # you can set your own phone number, or leave it false to use the utm_location number
 
 # jumbotron on the top (cannot be commented out)
 header_data:

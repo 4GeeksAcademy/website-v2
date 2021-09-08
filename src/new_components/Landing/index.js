@@ -226,7 +226,19 @@ export const landingSections = {
     },
         // <GridContainer key={index} p_sm="0" p_xs="0"><Badges lang={pageContext.lang} /></GridContainer>,
 
-    syllabus: ({session, data, pageContext, yml, course, location, index}) =>
+    syllabus: ({session, data, pageContext, yml, course, location, index}) => {
+        const filteredPrograms  = data.allChooseProgramYaml.edges[0].node.programs.filter((course_el) => {
+            return course.filter((array_el) => {
+              return course_el.bc_slug === array_el;
+            }).length !== 0;
+          });
+        
+        const programs = filteredPrograms.map(p => ({
+            label: p.text,
+            value: p.bc_slug
+        }))
+
+        return (
         <GridContainer id="syllabus" padding_tabletChild="0px calc(55% - 30%)" id="Syllabus" key={index} padding="50px 40px" padding_tablet="50px 40px" background={Colors.lightGray}>
             <Div
                 key={index}
@@ -253,19 +265,20 @@ export const landingSections = {
                     buttonBorderRadius="3px"
                     justifyContentButton="center"
                     inputBgColor="#F9F9F9"
-                    // style={{padding: "10px 0px", maxWidth: "100%"}}
+                    selectProgram={programs}
                     inputBgColor={Colors.white}
                     layout="flex"
                     lang={pageContext.lang}
                     sendLabel={yml.button ? yml.button.text : "SEND"}
                     formHandler={requestSyllabus}
                     data={{
-                        course: {type: "hidden", value: course, valid: true},
+                        course: {type: "hidden", value: programs.length <=1 ? (programs[0].value) : (course), valid: true},
                         utm_location: {type: "hidden", value: location, valid: true}
                     }}
                 />
             </Div>
-        </GridContainer>
+        </GridContainer>)
+    }
     ,
     geeks_vs_others: ({session, pageContext, yml, course, index}) => {
         return (

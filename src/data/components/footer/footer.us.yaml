@@ -38,9 +38,9 @@ footer:
       - name: "Full Stack Developer"
         link: "/us/coding-bootcamps/part-time-full-stack-developer"
       - name: "Software Engineer"
-        link: ""
-      - name: "Online"
-        link: ""
+        link: "/us/coding-bootcamps/software-engineer-bootcamp"
+      - name: "AI/Machine Learning Engineering"
+        link: "/us/coding-bootcamps/machine-learning-engineering"
   - column_four:
     width: 2
     heading: "LOCATIONS"

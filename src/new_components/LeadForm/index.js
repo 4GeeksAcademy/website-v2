@@ -50,6 +50,7 @@ const clean = (fields, data) => {
 
     Object.keys(cleanedData).forEach(key =>
         // i also make sure I don't delete the hidden fields
+        key !== 'course' &&
         cleanedData[key].type !== 'hidden' &&
         //clean all the rest of the fields that are no supposed to be sent 
         //according to the landing YML data
@@ -114,8 +115,10 @@ const LeadForm = ({marginButton, background, margin, margin_tablet, justifyConte
 
     const [formStatus, setFormStatus] = useState({status: "idle", msg: ""});
     const [formData, setVal] = useState(_fields);
+    const [consentValue, setConsentValue] = useState(false);
     const {session} = useContext(SessionContext);
     const courseSelector = yml.form_fields.find(f => f.name === "course")
+    const consentCheckboxField = yml.form_fields.find(f => f.name === "consent")
     React.useEffect(() => {
         setVal(_data => {
             const _ = Object.keys(_data).reduce((total, key) => {
@@ -137,8 +140,11 @@ const LeadForm = ({marginButton, background, margin, margin_tablet, justifyConte
         const cleanedData = clean(fields, formData);
         if (!formIsValid(cleanedData)) {
             setFormStatus({status: "error", msg: yml.messages.error});
-        }
-        else {
+        } else if (Array.isArray(formData.course.value) && formData.course.value.length > 1){
+            setFormStatus({status: "error", msg: courseSelector.error});
+        } else if (consentValue === false && session.location?.gdpr_compliant === true){
+            setFormStatus({status: "error", msg: consentCheckboxField.error});
+        } else {
             setFormStatus({status: "loading", msg: yml.messages.loading});
             formHandler(cleanedData, session)
                 .then(data => {
@@ -191,20 +197,19 @@ const LeadForm = ({marginButton, background, margin, margin_tablet, justifyConte
 
                     {
                         selectProgram?.length > 1 
-                            ? (
+                            && (
                                 <Div data-cy="dropdown_program_selector" margin_tablet="0 0 23px 0">
                                     <SelectRaw
                                         style={{
                                             background: '#FFFFFF',
                                         }}
                                         options={selectProgram}
-                                        value={selectProgram?.value}
                                         placeholder={courseSelector.place_holder}
-                                        onChange={(selected, valid) => setVal({...formData, course: {value: selected["value"], valid}})}
+                                        valid={true}
+                                        onChange={(selected, valid) => setVal({...formData, course: { value: selected.value, valid }})}
                                     />
                                 </Div>
                             )
-                            : null
                     }
                     {layout === "flex" &&
                         <Button 
@@ -220,26 +225,26 @@ const LeadForm = ({marginButton, background, margin, margin_tablet, justifyConte
                             disabled={formStatus.status === "loading" ? true : false}
                         >{formStatus.status === "loading" ? "Loading..." : sendLabel}</Button>
                     }
-                    {/* </Div> */}
                     {session && session.location && session.location.gdpr_compliant &&
                         <Paragraph fontSize="11px" margin="5px 0 0 0" textAlign="left" >
                             <input
                                 name="isGoing"
                                 type="checkbox"
-                                checked={formData.consent.valid}
-                                onChange={() => setVal({...formData, consent: {...formData.consent, valid: !formData.consent.valid}})} />
+                                checked={consentValue}
+                                onChange={() => {
+                                    setConsentValue(!consentValue)
+                                // setVal({...formData, consent: {...formData.consent, valid: !formData.consent.valid}})
+                                }} />
                             {yml.consent.message}
                             <a target="_blank" rel="noopener noreferrer nofollow" className="decorated" href={yml.consent.url}>{yml.consent.link_label}</a>
                         </Paragraph>
                     }
                     {formStatus.status === "error" && <Alert color="red" margin="0 15px" padding="5px 0 0 0">{formStatus.msg}</Alert>}
-                    {/* </Row> */}
                 </GridContainer>
                 {layout === "block" &&
                     <GridContainer containerColumns_tablet={landingTemplate && "0fr repeat(12, 1fr) 0fr"} containerGridGap={landingTemplate && "0"} >
                         <Div justifyContent={justifyContentButton ? justifyContentButton : "end" } display="flex" padding="5px 0 0 0">
                             <Button
-                                // width="fit-content"
                                 variant="full"
                                 type={`submit ${layout}`}
                                 margin={marginButton}
@@ -247,7 +252,6 @@ const LeadForm = ({marginButton, background, margin, margin_tablet, justifyConte
                                 textColor={Colors.white}
                                 disabled={formStatus.status === "loading" ? true : false}
                             >{formStatus.status === "loading" ? "Loading..." : sendLabel}</Button>
-                            {/* </Column> */}
                         </Div>
                     </GridContainer>
                 }

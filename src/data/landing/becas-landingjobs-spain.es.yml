@@ -1,5 +1,5 @@
 meta_info:
-  slug: scholarships-landing-jobs # <--- URL 4geeksacademy.com/us/landing/example
+  slug: becas-landing-jobs-spain # <--- URL 4geeksacademy.com/us/landing/example
 
   visibility: "hidden" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   # This will show on social media when shared
@@ -15,12 +15,13 @@ meta_info:
   # this UTM fields will be also included in the CRM contact
   utm_course: ["full-stack", "software-engineering"]
   utm_location: europe
-  automation: request_more_info #optional, this is the default value
-  tag: soft #optional, this is the default value
+  automation: soft #optional, this is the default value
+  tag: request_more_info #optional, this is the default value
 
 navbar:
+  logoUrl: "#" # relative(/apply), absolute(https://google.com) or id(#componentName)
   buttonText: "Solicita tu beca"
-  url: "#bottom" # url accepts: relative(/apply), absolute(https://google.com) or id(#componentName)
+  buttonUrl: "#bottom" # url accepts: relative(/apply), absolute(https://google.com) or id(#componentName)
 
 form:
   # posible fields: "first_name", "last_name", "full_name", "phone", "email"
@@ -32,7 +33,7 @@ form:
 
 # jumbotron on the top (cannot be commented out)
 header_data:
-  tagline: Tu futuro está en tech
+  tagline: +1.000.000€ en becas
   sub_heading: ""
   scholarship: "../../../static/images/partner/landing-jobs.png"
   image: "../../../static/images/Happy-People-Landing-4Geeks-ES.jpg"
@@ -43,10 +44,10 @@ features:
 
   #                                         up   left down  right
   styles: '{ "fontSize": "15px", "margin": "10px 0px 10px 0px" }'
-  text: Landing Jobs ofrece más de 1.000.000€ en Becas para estudiar Desarrollo Web en 4Geeks. La beca mínima es de un 30% y se otorgarán en función del resultado del proceso de selección. Si quieres empezar tu carrera como programador junior o impulsarla y convertirte en un desarrollador senior, no dejes pasar esta oportunidad.
+  text: Landing Jobs y 4Geeks se unen para ofrecer más de 1.000.000€ en Becas para estudiar Desarrollo Web. La beca mínima es de un 30% y se otorgarán en función del resultado del proceso de selección. Si quieres empezar tu carrera como programador junior o impulsarla y convertirte en un desarrollador senior, no dejes pasar esta oportunidad.
   bullets:
     - 300 becas en total, la mayoría superiores al 50% 
-    - Cursos Fullstack (iniciación) y Software Engineering (avanzado)
+    - Programas Fullstack (iniciación) y Software Engineering (avanzado)
     - Formato full-time y part-time
 
 follow_bar:
@@ -54,7 +55,7 @@ follow_bar:
   content:
     text: "Solicita tu beca Landing Jobs ya. \n Planes de pago de hasta 24 meses."
     text_mobile: "Becas de Landing Jobs . \n Plan de pago de 24 m."
-    # devices:   XL      LG    MD      SM    XS
+    # devices:    XL      LG      MD      SM      XS
     font_size: ["25px", "25px", "25px", "18px", "4.3vw"]
   button:
     text: "Solicita tu beca"
@@ -63,6 +64,7 @@ follow_bar:
     # └── path accepts: relative(/example/path), absolute(https://google.com) or id(#idName)
   phone:
     text: "Llama "
+    number: null # change only if need to customize
 
 #
 # ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇
@@ -82,7 +84,7 @@ about4Geeks:
     - title: "Preparación para entrevistas y procesos de selección"
   paragraph: ""
   button_text: "Solicita tu beca"
-  button_link: "/es/aplica"
+  button_link: "#" # accepts url: relative(/us/apply), absolute(https://google.com) or component id(#componentName)
   image: "../../../static/images/bg/community.png"
   image_mobile: "../../../static/images/bg/community.png"
 
@@ -90,7 +92,7 @@ iconogram:
   position: 3
   icons:
   - icon: "touch"
-    title: Solicita tu beca antes del 30 de septiembre
+    title: Solicita tu beca antes del 8 de octubre
   - icon: "receive_mail"
     title: Recibirás un correo electrónico con toda la información y un test de lógica
   - icon: "talk"
@@ -119,8 +121,6 @@ choose_your_program:
     sub_title: "Nivel 1"
     icon: "fullstack"
     description: |
-      Aprende desde cero, empezando por lo básico: HTML + CSS3 + Javascript.
-      
       Desde 0 hasta convertirte en programador fullstack Jr. Trabajarás con HTML5, CSS3, Bootstrap, JS, Reactjs, SQL, Python, Flask, REST API's, etc. para diseñar y crear webs responsive. Obtendrás una sólida base de front, back, bbdd, procesos distribuidos y despliegue con instructores apasionados y un plan de estudios práctico y actualizado. 
       Disponible en modalidad part time y full time.
       Descarga aquí el <a href=https://storage.googleapis.com/4geeks-academy-website/syllabus/madrid-spain/Syllabus-Fullstack-2021-Espa%C3%B1a.pdf target=_blank>"programa de estudios"</a>.
@@ -134,7 +134,7 @@ choose_your_program:
     description: |
       Profundiza a un nivel avanzado en principios específicos de computación y algoritmia. Desarrolla más habilidades adentrándote en el mundo de las aplicaciones altamente escalables, nativas y distribuidas en la nube.
 
-      ¡Lleva tu carrera al siguiente nivel!, crea tecnlogía con un impacto real en el mundo (quizás el próximo unicornio), trabaja en empresas Fortune 500 y mejora tu salario. 
+      ¡Lleva tu carrera al siguiente nivel!, crea tecnología con un impacto real en el mundo (quizás el próximo unicornio), trabaja en empresas Fortune 500 y mejora tu salario. 
       
       Disponible sólo en modalidad part-time.
       Descarga aquí el <a href=https://storage.googleapis.com/4geeks-academy-website/syllabus/madrid-spain/Syllabus-Fullstack-2021-Espa%C3%B1a.pdf target=_blank>"programa de estudios"</a>.
