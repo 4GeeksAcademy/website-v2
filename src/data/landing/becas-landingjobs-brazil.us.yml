@@ -1,5 +1,5 @@
 meta_info:
-  slug: scholarships-landing-jobs # <--- URL 4geeksacademy.com/us/landing/example
+  slug: scholarships-landing-jobs-brazil # <--- URL 4geeksacademy.com/us/landing/example
 
   visibility: "hidden" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   # This will show on social media when shared
@@ -20,8 +20,8 @@ meta_info:
 
 navbar:
   buttonText: "Apply now"
-  # url accepts: relative(/apply), absolute(https://google.com) or id(#componentName)
-  url: "#bottom"
+  buttonUrl: "#bottom" # url accepts: relative(/apply), absolute(https://google.com) or id(#componentName)
+  logoUrl: "#"
 
 form:
   # posible fields: "first_name", "last_name", "full_name", "phone", "email"
