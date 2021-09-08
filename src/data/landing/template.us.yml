@@ -46,6 +46,7 @@ follow_bar:
     # └── path accepts: relative(/example/path), absolute(https://google.com) or id(#idName)
   phone:
     text: "Llama "
+    number: "+1 (786) 416-6640" # you can set your own phone number, or leave it false to use the utm_location number
 
 # jumbotron on the top (cannot be commented out)
 header_data:

@@ -64,6 +64,7 @@ follow_bar:
     # └── path accepts: relative(/example/path), absolute(https://google.com) or id(#idName)
   phone:
     text: "Llama "
+    number: null # change only if need to customize
 
 #
 # ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇

@@ -54,18 +54,21 @@ const Landing = (props) => {
     automation: {type: "hidden", value: yml.meta_info.automation, valid: true},
     tag: {type: "hidden", value: yml.meta_info.tag, valid: true}
   };
-
+  
+  const landingLocation = session && session.locations?.find(l => console.log(`comparando ${l.breathecode_location_slug} con ${yml.meta_info.utm_location}`) || l.breathecode_location_slug === yml.meta_info.utm_location)
+  console.log("landingLocation: ", landingLocation)
+  
   return (
     <>
       <LandingNavbar
-        buttonText={yml.navbar?.buttonText || pageContext.lang === "us" ? "Apply" : "Aplicar"}
+        buttonText={yml.navbar?.buttonText || "buttonText not set"}
         buttonUrl={yml.navbar?.buttonUrl}
         logoUrl={yml.navbar?.logoUrl}
         lang={pageContext.lang}
       />
       <FollowBar position={yml.follow_bar.position} showOnScrollPosition={400}
         buttonText={yml.follow_bar.button.text}
-        phone={session && session.location && session.location.phone}
+        phone={yml.follow_bar.phone.number || landingLocation && landingLocation.phone}
         phoneText={yml.follow_bar.phone.text}
         link={yml.follow_bar.button.path}
       >
@@ -345,6 +348,7 @@ export const query = graphql`
               }
               phone{
                 text
+                number
               }
             }
             navbar{

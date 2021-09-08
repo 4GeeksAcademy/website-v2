@@ -471,12 +471,6 @@ courses:
   - "Full-Time"
   - "Part-Time"
 flag_icon: ""
-location_map: ""
-location_phone_number: ""
-location_office_image: ""
-location_office_image2: ""
-location_office_image3: ""
-should_know: ""
 value: "Miami"
 defaultLanguage: "us" # All lead marketing communications will arrive on this language
 

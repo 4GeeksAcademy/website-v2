@@ -86,7 +86,7 @@ const Footer = ({ yml }) => {
                     <H4 margin="0 0 10px 0" display="none" display_md="block">{yml.newsletter.heading}</H4>
                     <Div>
                         {(socials ? socials : yml.socials && yml.socials).map((ln, i) => {
-
+                            if(!ln.icon) return null;
                             return (
                                 <Anchor
                                     key={i}
@@ -100,7 +100,7 @@ const Footer = ({ yml }) => {
                                     textTransform="uppercase"
                                     color={Colors.black}
                                 >
-                                    {(ln.social_name || ln.icon) && <Icon icon={ln.social_name.toLowerCase() || ln.icon} style={{margin: "0 15px 0 0"}} color={Colors.black} fill={Colors.black} height="32px" width="32px" />}
+                                    <Icon icon={ln.icon} style={{margin: "0 15px 0 0"}} color={Colors.black} fill={Colors.black} height="32px" width="32px" />
                                 </Anchor>
                             )
                         })}
