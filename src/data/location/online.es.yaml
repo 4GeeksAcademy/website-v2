@@ -303,6 +303,18 @@ zip_code: "33130"
 phone: "+1 (786) 416-6640"
 state: "Florida"
 country: "Remoto"
+
+socials:
+  - name: "Facebook"
+    icon: "facebook"
+    link: "https://www.facebook.com/4geeksacademy"
+  - name: "Twitter"
+    icon: "twitter"
+    link: "https://www.twitter.com/4geeksacademy"
+  - name: "Instagram"
+    icon: "instagram"
+    link: "https://www.instagram.com/4geeksacademy"
+
 courses:
   - "Full-Time"
   - "Part-Time"

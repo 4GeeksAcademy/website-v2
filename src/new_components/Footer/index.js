@@ -85,13 +85,13 @@ const Footer = ({ yml }) => {
                 >
                     <H4 margin="0 0 10px 0" display="none" display_md="block">{yml.newsletter.heading}</H4>
                     <Div>
-                        {(socials ? socials : yml.socials && yml.socials).map((ln, i) => {
+                        {(yml.socials || socials).map((ln, i) => {
                             if(!ln.icon) return null;
                             return (
                                 <Anchor
                                     key={i}
                                     cursor="pointer"
-                                    to={ln.social_link || ln.link}
+                                    to={ln.link}
                                     textAlign="left"
                                     margin="0 0 5px 0"
                                     fontSize="13px"
