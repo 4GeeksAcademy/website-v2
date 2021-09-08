@@ -296,8 +296,8 @@ in_person_available: false # important to accept in-person applicants
 
 city: "Online"
 name: "Online/Remoto"
-latitude: "40.439769"
-longitude: "-3.680207"
+latitude: "45.764042"
+longitude: "4.835659"
 address: "Calle Edison, 3"
 zip_code: "28006"
 state: ""
