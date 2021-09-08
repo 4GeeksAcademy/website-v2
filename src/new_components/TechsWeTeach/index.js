@@ -8,54 +8,8 @@ import Icon from '../Icon';
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import Marquee_v2 from '../Marquee_v2';
 
-const TechsWeTeach = ({lang}) => {
-  const data = useStaticQuery(graphql`
-    {
-      allTechsWeTeachYaml {
-        edges {
-          node {
-            title
-            sub_title
-            image{
-                childImageSharp {
-                  gatsbyImageData(
-                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                    width: 390
-                    height: 289
-                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
-                  )
-                  # fluid(maxHeight: 289, maxWidth: 390){
-                  #   ...GatsbyImageSharpFluid_withWebp
-                  # }
-                }
-            }
-            tech_list {
-              image{
-                childImageSharp {
-                  gatsbyImageData(
-                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                    width: 100
-                    height: 100
-                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
-                  )
-                  # fluid(maxHeight: 100, maxWidth: 100){
-                  #   ...GatsbyImageSharpFluid_withWebp
-                  # }
-                }
-              }
-              alt
-            }
-            fields {
-                lang
-              }
-          }
-        }
-      }
-    }
-  `)
-  let content = data.allTechsWeTeachYaml.edges.find(({node}) => node.fields.lang === lang);
-  if (content) content = content.node;
-  else return null;
+const TechsWeTeach = ({lang, data}) => {
+  let content = data.edges[0].node;
 
   return (
     <>
@@ -79,9 +33,10 @@ const TechsWeTeach = ({lang}) => {
           <StyledBackgroundSection
             // className={`image`}
             height={`289px`}
+            width={`500px`}
             image={content.image.childImageSharp.gatsbyImageData}
             bgSize={`contain`}
-            alt="Cnn Logo"
+            alt="Tech Logo"
             borderRadius={`0 0 0 3px`}
           />
         </Div>
