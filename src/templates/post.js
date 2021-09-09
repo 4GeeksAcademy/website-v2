@@ -8,6 +8,7 @@ import twitterUser from '../utils/twitter'
 import Icon from '../new_components/Icon'
 import {TwitterFollowButton} from 'react-twitter-embed';
 import "../assets/css/single-post.css"
+import rehypeReact from "rehype-react"
 
 //FROM new_components
 import {GridContainer, Grid, Div, Header, Row, Column} from '../new_components/Sections'
@@ -22,6 +23,17 @@ export default function Template (props) {
       obj = twitterUser[key];
       return obj;
     }, {});
+
+    const renderAst = new rehypeReact({
+      createElement: React.createElement,
+      components: { "button": Button }
+    }).Compiler
+
+    console.log("POST_DATA:::", post)
+    // "Hacks for learning to code: Read Less and Learn Better"
+    const removedTitleClone = renderAst(post.htmlAst).props.children?.filter(el => el.type !== "h1")
+
+    console.log("HTML_AST:::", removedTitleClone)
 
   //Returns month's name
   function GetMonth (n) {
@@ -178,7 +190,11 @@ export default function Template (props) {
 
           {/* Post Content */}
           <Div margin="100px 0 0 0" background={Colors.white}>
-            <Div className="single-post" flexDirection="Column" dangerouslySetInnerHTML={{__html: post.html.replace(/<h1>.*<\/h1>/gm, "")}}>
+            <Div 
+              className="single-post" 
+              flexDirection="Column" 
+            >
+              {removedTitleClone}
             </Div>
           </Div>
 
@@ -231,25 +247,25 @@ export default function Template (props) {
 }
 export const postQuery = graphql`
 query BlogPostBySlug($slug: String!){
-    markdownRemark(frontmatter: {slug: {eq: $slug}}){
-        html
-        frontmatter{
-            slug
-            title
-            author
-            date
-            excerpt
-            unlisted
-            image
-            cluster
-        }
-        fields{
-            readingTime {
-              text
-            }
-        }
-        
+  markdownRemark(frontmatter: {slug: {eq: $slug}}){
+    html
+    htmlAst
+    frontmatter{
+      slug
+      title
+      author
+      date
+      excerpt
+      unlisted
+      image
+      cluster
     }
+    fields{
+      readingTime {
+        text
+      }
+    }
+  }
 }
 
 

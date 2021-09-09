@@ -43,21 +43,25 @@ module.exports = {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
-            {
-                resolve: `gatsby-remark-images`,
-                options: {
-                maxWidth: 800,
-                loading: 'lazy'
-                },
+          {
+            resolve: "gatsby-remark-component",
+            options: { components: ["button"] }
+          },
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+            maxWidth: 800,
+            loading: 'lazy'
             },
-            `gatsby-remark-lazy-load`,
-            {
-                resolve: "gatsby-remark-external-links",
-                options: {
-                target: "_self",
-                rel: "nofollow"
-                }
-            },
+          },
+          `gatsby-remark-lazy-load`,
+          {
+            resolve: "gatsby-remark-external-links",
+            options: {
+            target: "_self",
+            rel: "nofollow"
+            }
+          },
         ]
       }
     },

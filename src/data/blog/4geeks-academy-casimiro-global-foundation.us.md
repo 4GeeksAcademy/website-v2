@@ -14,6 +14,9 @@ featured: "false"
 
 As passionate educators, we aim to impact the educational ecosystem of Miami by teaching coding to young professionals who understand its importance in the constantly changing market.  What better way to do so than to collaborate with the organization that is the leader among the Miami community of young entrepreneurs: Casimiro Global Foundation. 
 
+<button variant="outline" color="black" fontSize="13px" lineHeight="15px" fontWeight="700">Texto de Ejemplo</button>
+
+<button>Texto de Ejemplo</button>
 
 
 Our partnership with Casimiro Global Foundation seeks to empower young entrepreneurs by teaching them coding skills which they implement in their pitch day in the [Biznovator Camp](https://www.casimiroglobalfoundation.org/).  This 1-3 week international camp trains youth, ages 13 to 20, in a FUN and inspiring format.  They learn entrepreneurship, social innovation, leadership, coding skills and much more!  While working in teams, they learn to create a social enterprise - a tech savvy venture or a passion-driven project.  Visits to corporations, high tech start-ups and non-profit organizations allow students to network and further their learning directly from experts.
