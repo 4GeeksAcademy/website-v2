@@ -72,7 +72,7 @@ const Side = ({video, image, heading, content, button, bullets}) => {
     return <Div flexDirection_tablet="column" flexDirection="column" padding="40px 20px" padding_tablet="36px 72px">
         {heading && <H2 type="h2"
             textAlign_tablet="left"
-            lineHeight="45px"
+            lineHeight="40px"
             lineHeight_tablet="60px"
             fontSize={h_xs || "30px"} fs_xl={h_xl} fontSize_md={h_md || "50px"} fontSize_sm={h_sm}
             margin="30px 0 20px 0" type="h1">{heading.text}</H2>
@@ -226,11 +226,28 @@ export const landingSections = {
     },
         // <GridContainer key={index} p_sm="0" p_xs="0"><Badges lang={pageContext.lang} /></GridContainer>,
 
-    syllabus: ({session, data, pageContext, yml, course, location, index}) =>
+    syllabus: ({session, data, pageContext, yml, course, location, index}) => {
+        const filteredPrograms  = data.allChooseProgramYaml.edges[0].node.programs.filter((course_el) => {
+            return course.filter((array_el) => {
+              return course_el.bc_slug === array_el;
+            }).length !== 0;
+          });
+        
+        const programs = filteredPrograms.map(p => ({
+            label: p.text,
+            value: p.bc_slug
+        }))
+
+        return (
         <GridContainer id="syllabus" padding_tabletChild="0px calc(55% - 30%)" id="Syllabus" key={index} padding="50px 40px" padding_tablet="50px 40px" background={Colors.lightGray}>
             <Div
                 key={index}
                 flexDirection="column"
+                background={Colors.verylightGray}
+                padding="20px 0"
+                borderRadius="3px"
+                borderRadius_tablet="10px"
+                padding_tablet="60px 40px"
                 size="12"
                 size_tablet="12"
                 width="100%"
@@ -248,19 +265,20 @@ export const landingSections = {
                     buttonBorderRadius="3px"
                     justifyContentButton="center"
                     inputBgColor="#F9F9F9"
-                    // style={{padding: "10px 0px", maxWidth: "100%"}}
+                    selectProgram={programs}
                     inputBgColor={Colors.white}
                     layout="flex"
                     lang={pageContext.lang}
                     sendLabel={yml.button ? yml.button.text : "SEND"}
                     formHandler={requestSyllabus}
                     data={{
-                        course: {type: "hidden", value: course, valid: true},
+                        course: {type: "hidden", value: programs.length <=1 ? (programs[0].value) : (course), valid: true},
                         utm_location: {type: "hidden", value: location, valid: true}
                     }}
                 />
             </Div>
-        </GridContainer>
+        </GridContainer>)
+    }
     ,
     geeks_vs_others: ({session, pageContext, yml, course, index}) => {
         return (

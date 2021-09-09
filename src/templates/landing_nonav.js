@@ -26,8 +26,6 @@ const Landing = (props) => {
       return course_el.bc_slug === array_el;
     }).length !== 0;
   });
-  
-  console.log("FILTERED COURSES", filteredPrograms)
 
   const programs = filteredPrograms.map(p => ({
     label: p.text,
@@ -51,31 +49,28 @@ const Landing = (props) => {
 
   // data sent to the form already prefilled
   const preData = {
-    course: {type: "hidden", value: `${programs <=1 ? (programs[0].value) : (yml.meta_info.utm_course)}`, valid: true},
+    course: {type: "hidden", value: programs.length <=1 ? (programs[0].value) : (yml.meta_info.utm_course), valid: true},
     utm_location: {type: "hidden", value: yml.meta_info.utm_location, valid: true},
     automation: {type: "hidden", value: yml.meta_info.automation, valid: true},
     tag: {type: "hidden", value: yml.meta_info.tag, valid: true}
   };
-
+  
+  const landingLocation = session && session.locations?.find(l => console.log(`comparing ${l.breathecode_location_slug} with ${yml.meta_info.utm_location}`) || l.breathecode_location_slug === yml.meta_info.utm_location)
+  // console.log("landingLocation: ", landingLocation)
+  
   return (
     <>
       <LandingNavbar
-        buttonText={yml.navbar ? yml.navbar.buttonText : pageContext.lang === "us" ? "Apply" : "Aplicar"}
-        link={yml.navbar?.url || ''}
+        buttonText={yml.navbar?.buttonText || "buttonText not set"}
+        buttonUrl={yml.navbar?.buttonUrl}
+        logoUrl={yml.navbar?.logoUrl}
         lang={pageContext.lang}
       />
       <FollowBar position={yml.follow_bar.position} showOnScrollPosition={400}
         buttonText={yml.follow_bar.button.text}
-        phone={session && session.location && session.location.phone}
+        phone={yml.follow_bar.phone.number || landingLocation && landingLocation.phone}
         phoneText={yml.follow_bar.phone.text}
-        onClick={() => {
-          if (yml.follow_bar.button.path === "#top") {
-            window.scrollTo({
-              top: 0,
-              behavior: "smooth"
-            });
-          }
-        }}
+        link={yml.follow_bar.button.path}
       >
         <Paragraph
           margin="0"
@@ -91,6 +86,7 @@ const Landing = (props) => {
         </Paragraph>
       </FollowBar>
       <StyledBackgroundSection
+        id="top"
         className={`image`}
         image={yml.header_data.image && yml.header_data.image.childImageSharp.gatsbyImageData}
         bgSize={`cover`}
@@ -103,7 +99,6 @@ const Landing = (props) => {
         backgroundColor={Colors.lightGray}
         align="center"
         alt="4Geeks Academy"
-        // borderRadius="0"
         borderRadius="0"
       >
         <GridContainer
@@ -210,7 +205,7 @@ const Landing = (props) => {
               background={Colors.white}
               margin_tablet="50px 0 0 0" 
               margin="0" 
-              style={{ marginTop: "50px" }}
+              style={{ marginTop: "50px", minHeight: "350px" }}
               selectProgram={programs}
               formHandler={requestSyllabus}
               heading={yml.form.heading}
@@ -239,7 +234,7 @@ const Landing = (props) => {
           })
       }
 
-      <GridContainerWithImage id="apply_schollarship" background={Colors.verylightGray} imageSide={applySchollarship?.imageSide} padding="0" padding_tablet="80px 0 90px 0" columns_tablet="14" margin="0" margin_tablet="0">
+      <GridContainerWithImage id="bottom" background={Colors.verylightGray} imageSide={applySchollarship?.imageSide} padding="0" padding_tablet="80px 0 90px 0" columns_tablet="14" margin="0" margin_tablet="0">
         <Div flexDirection="column" margin="0" justifyContent_tablet="start" padding="40px 40px 40px" padding_tablet="0" 
         gridArea_tablet={applySchollarship?.imageSide === "right" ? "1/1/1/6" : "1/7/1/13"}
         // gridArea_tablet="1/1/1/6"
@@ -265,6 +260,7 @@ const Landing = (props) => {
               margin="0"
               formHandler={requestSyllabus}
               heading={yml.form.heading}
+              style={{ minHeight: "350px" }}
               motivation={yml.form.motivation}
               sendLabel={yml.form.button_label}
               redirect={yml.form.redirect}
@@ -352,11 +348,13 @@ export const query = graphql`
               }
               phone{
                 text
+                number
               }
             }
             navbar{
+              logoUrl
               buttonText
-              url
+              buttonUrl
             }
             form{
               heading

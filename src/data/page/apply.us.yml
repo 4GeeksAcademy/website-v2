@@ -29,8 +29,8 @@ left:
     open: "Please select one program"
     close: "What program would you like to attend?"
   referral_section:
-    placeholder: "Refferral Key"
-    content: "If you have a referral code or if were referred by any current or past student, use your referral code for extra credit or discount."
+    placeholder: "Referral Key"
+    content: "If you have a referral code or if you were referred by any student, use your referral code for promos and discounts."
   button:
     button_text: "APPLY"
     button_link: ""

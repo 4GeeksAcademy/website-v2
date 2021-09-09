@@ -1,8 +1,8 @@
 meta_info:
   slug: carne-joven # <--- URL 4geeksacademy.com/us/landing/example
   # This will show on social media when shared
-  title: "Impulsa tu carrera profesional, ¡aprende a programar con 4Geeks Academy y el Carne Joven!"
-  description: "La programación se ha convertido en un conocimiento escencial para tu éxito profesional, aprende a programar con 4Geeks Academy."
+  title: "Impulsa tu carrera profesional, ¡aprende a programar con 4Geeks Academy y Carné Joven!"
+  description: "La programación se ha convertido en un conocimiento esencial para el desarrollo profesional, aprende a programar con 4Geeks Academy y Carné Joven."
   image: "/images/bg/remote.jpeg"
   keywords: "Aprende a programar, 4Geeks academy, aprende programacion, aprende ingenieria informatica"
   template: "landing_nonav" # <--- choose your landing template
@@ -11,6 +11,8 @@ meta_info:
   # this UTM fields will be also included in the CRM contact
   utm_course: ["full-stack"]
   utm_location: madrid-spain
+  automation: soft #optional, this is the default value
+  tag: request_more_info #optional, this is the default value
 
 form:
   # posible fields: "first_name", "last_name", "full_name", "phone", "email"

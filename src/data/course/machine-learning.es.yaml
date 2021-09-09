@@ -12,7 +12,7 @@ header:
   title: "Conviertete en un Ingeniero de Inteligencia Artificial"
   paragraph: "Conviértete en uno de los profesionales mejor pagados del mundo."
   image: "../../../static/images/bg/apple-building.jpg"
-  image_alt: ""
+  image_alt: "apple-building"
 
 button:
   syllabus_heading: "Descargar Detalles del Curso"

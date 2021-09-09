@@ -12,10 +12,8 @@ export const save_form = async (formData=null, tags=[], automations=[], session=
     if(typeof(formData) !== 'object') throw Error("Missing formData");
     const getEnvironmentAPI = () => {
         if (process.env.NODE_ENV === 'development') {
-            // development case
             return process.env.GATSBY_BREATHECODE_TEST
         } else {
-            // production case
             return process.env.GATSBY_BREATHECODE_HOST
         }
     }

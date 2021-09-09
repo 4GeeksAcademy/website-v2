@@ -15,9 +15,9 @@ meta_info:
 seo_title: "Aprende a programar en Colombia"
 header:
   tagline: "4Geeks Academy en Colombia"
-  paragraph: "Únete a uno de los coding bootcamps y comunidades de programadores más grandes del mundo, mejora tus habilidades de codigo o aprende a programar desde cero y recibe soporte técnico y profesional de por vida."
+  paragraph: "Únete a uno de los coding bootcamps y comunidades de programadores más grandes del mundo, mejora tus habilidades de código o aprende a programar desde cero y recibe soporte técnico y profesional de por vida."
   image: "../../../static/images/locations/colombia-header.png"
-  alt: ""
+  alt: "4Geeks Academy modalidad online para Colombia"
 
 button_header:
   button_text: Ver Programas
@@ -31,7 +31,7 @@ button:
   cohort_more_details_text: "DETALLES"
 badges:
   title: ""
-  paragraph: "Únete a uno de los coding bootcamps y comunidades de programadores más grandes del mundo, mejora tus habilidades de codigo o 
+  paragraph: "Únete a uno de los coding bootcamps y comunidades de programadores más grandes del mundo, mejora tus habilidades de código o 
   
   aprende a programar desde cero y recibe soporte técnico y profesional de por vida."
 news:
@@ -208,12 +208,15 @@ zip_code: ""
 state: ""
 country: "Colombia"
 socials:
-  - social_name: "Facebook"
-    social_link: "https://www.facebook.com/4geeksacademy"
-  - social_name: "Twitter"
-    social_link: "https://www.twitter.com/4geeksacademy"
-  - social_name: "Instagram"
-    social_link: "https://www.instagram.com/4geeksacademy"
+  - name: "Facebook"
+    icon: "facebook"
+    link: "https://www.facebook.com/4geeksacademy"
+  - name: "Twitter"
+    icon: "twitter"
+    link: "https://www.twitter.com/4geeksacademy"
+  - name: "Instagram"
+    icon: "instagram"
+    link: "https://www.instagram.com/4geeksacademy"
 courses:
   - "Full-Time"
   - "Part-Time"

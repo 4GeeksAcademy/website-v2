@@ -8,8 +8,6 @@ import {GridContainerWithImage, Div, GridContainer} from '../new_components/Sect
 import {Colors, StyledBackgroundSection} from '../new_components/Styling';
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import LandingNavbar from '../new_components/NavbarDesktop/landing';
-
-
 import BaseRender from './_baseLandingLayout'
 import {requestSyllabus} from "../actions";
 import {SessionContext} from '../session.js'
@@ -28,11 +26,7 @@ const Landing = (props) => {
       return course_el.bc_slug === array_el;
     }).length !== 0;
   });
-//   const programs = data.allChooseProgramYaml.edges[0].node.programs.map(p => ({
-//     label: p.text,
-//     value: p.bc_slug
-// }))
-  console.log("FILTERED COURSES", filteredPrograms)
+
   const programs = filteredPrograms.map(p => ({
     label: p.text,
     value: p.bc_slug
@@ -55,7 +49,7 @@ const Landing = (props) => {
 
   // data sent to the form already prefilled
   const preData = {
-    course: {type: "hidden", value: `${programs <=1 ? (programs[0].value) : (yml.meta_info.utm_course)}`, valid: true},
+    course: {type: "hidden", value: programs.length <=1 ? (programs[0].value) : (yml.meta_info.utm_course), valid: true},
     utm_location: {type: "hidden", value: yml.meta_info.utm_location, valid: true},
     automation: {type: "hidden", value: yml.meta_info.automation, valid: true},
     tag: {type: "hidden", value: yml.meta_info.tag, valid: true}
@@ -65,21 +59,15 @@ const Landing = (props) => {
     <>
       <LandingNavbar
         buttonText={yml.navbar?.buttonText || pageContext.lang === "us" ? "Apply" : "Aplicar"}
-        link={yml?.navbar?.url || ''}
+        buttonUrl={yml.navbar?.buttonUrl}
+        logoUrl={yml.navbar?.logoUrl}
         lang={pageContext.lang}
       />
-      <FollowBar position={yml.follow_bar.position} showOnScrollPosition={400}
+      <FollowBar position={yml.follow_bar.position} showOnScrollPosition={12400}
         buttonText={yml.follow_bar.button.text}
         phone={session && session.location && session.location.phone}
         phoneText={yml.follow_bar.phone.text}
-        onClick={() => {
-          if (yml.follow_bar.button.path === "#top") {
-            window.scrollTo({
-              top: 0,
-              behavior: "smooth"
-            });
-          }
-        }}
+        link={yml.follow_bar.button.path}
       >
         <Paragraph
           margin="0"
@@ -95,6 +83,7 @@ const Landing = (props) => {
         </Paragraph>
       </FollowBar>
       <StyledBackgroundSection
+        id="top"
         className={`image`}
         image={yml.header_data.image && yml.header_data.image.childImageSharp.gatsbyImageData}
         bgSize={`cover`}
@@ -110,6 +99,7 @@ const Landing = (props) => {
         borderRadius="0"
       >
         <GridContainer
+          padding="0"
           padding="72px 0 35px 0"
           containerGridGap="0"
           containerColumns_tablet="repeat(1,0fr)"
@@ -213,7 +203,7 @@ const Landing = (props) => {
               margin_tablet="50px 0 0 0" 
               selectProgram={programs}
               margin="0" 
-              style={{ marginTop: "50px" }}
+              style={{ marginTop: "50px", minHeight: "350px" }}
               formHandler={requestSyllabus}
               heading={yml.form.heading}
               motivation={yml.form.motivation}
@@ -231,9 +221,6 @@ const Landing = (props) => {
         </GridContainer>
       </StyledBackgroundSection>
 
-      {/* <Badges lang={pageContext.lang} background={Colors.lightYellow} paragraph={yml.badges.paragraph} padding="60px 0" padding_tablet="68px 0" margin="0 0 58px 0" margin_tablet="0 0 78px 0" /> */}
-
-
       {
         Object.keys(components)
           .filter(name => components[name] && (landingSections[name] || landingSections[components[name].layout]))
@@ -244,7 +231,7 @@ const Landing = (props) => {
           })
       }
 
-      <GridContainerWithImage id="apply_schollarship" background={Colors.verylightGray} imageSide={applySchollarship?.imageSide || "right"} padding="0" padding_tablet="80px 0 90px 0" columns_tablet="14" margin="0" margin_tablet="0">
+      <GridContainerWithImage id="bottom" background={Colors.verylightGray} imageSide={applySchollarship?.imageSide || "right"} padding="0" padding_tablet="80px 0 90px 0" columns_tablet="14" margin="0" margin_tablet="0">
         <Div flexDirection="column" margin="0" margin_tablet="0 50px" justifyContent_tablet="start" padding="40px 40px 40px" padding_tablet="0" 
         gridArea_tablet={(applySchollarship?.imageSide) === "right" ? "1/1/1/6" : "1/7/1/13"}
         // gridArea_tablet="1/1/1/6"
@@ -268,6 +255,7 @@ const Landing = (props) => {
               layout="block"
               background={Colors.verylightGray}
               margin="0"
+              style={{ minHeight: "350px" }}
               formHandler={requestSyllabus}
               heading={yml.form.heading}
               motivation={yml.form.motivation}
@@ -361,8 +349,9 @@ export const query = graphql`
               }
             }
             navbar {
+              logoUrl
               buttonText
-              url
+              buttonUrl
             }
             form{
               heading
