@@ -48,7 +48,7 @@ info_box:
   email: "info@4GeeksAcademy.com"
 
 images_box:
-  heading: "What you should know about this location: "
+  heading: "Lo que deberías saber sobre nuestra sede en Colombia: "
   content: "4Geeks Colombia es un proyecto que funciona principalmente Online, luego de un proyecto increíble desarrollado por el Banco Interamericano de Desarrollo y el Ministerio de Ciencia, Información y Telecomunicaciones."
   images: null
     # - path: "../../../static/images/locations/mcbo-chinita.jpeg"
