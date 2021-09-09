@@ -88,13 +88,12 @@ const Calendar = (props) => {
         name === "Full-Stack Software Developer FT" ? name = modality["full_time"] : name
 
         name === "Full-Stack Software Developer" ? name = modality["part_time"] : name      
-        // console.log("NAME:", name)
+
         syllabus.push(name) 
       }
 
       for(let zx in cohorts){
         cohorts[zx].syllabus.certificate.name = syllabus[zx]
-        // console.log("COHORTS - modified", cohorts[zx].syllabus.certificate.name)
       }
       let _types = []
       for (let i = 0; i < events.length; i++) {
