@@ -119,7 +119,7 @@ Do not get caught in the resume queues: We know you want to apply to a lot of jo
 
 
 
-## Time management 
+## Time management
 
 
 Finding a job is a Full-time job. You have to allocate enough time to the task of finding a new job.
