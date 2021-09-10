@@ -13,7 +13,7 @@ meta_info:
 
   # Set a particular course or location to the landing page
   # this UTM fields will be also included in the CRM contact
-  utm_course: ["full-stack", "software-engineering"]
+  utm_course: ["full-stack", "machine-learning-engineering"]
   utm_location: europe
   automation: soft #optional, this is the default value
   tag: request_more_info #optional, this is the default value
@@ -33,7 +33,7 @@ form:
 
 # jumbotron on the top (cannot be commented out)
 header_data:
-  tagline: Tu futuro está en tech
+  tagline: +1.000.000€ in scholarshipsh
   sub_heading: ""
   scholarship: "../../../static/images/partner/landing-jobs.png"
   image: "../../../static/images/Happy-People-Landing-4Geeks-ES.jpg"
@@ -44,10 +44,10 @@ features:
 
   #                                         up   left down  right
   styles: '{ "fontSize": "15px", "margin": "10px 0px 10px 0px" }'
-  text: Landing Jobs ofrece más de 1.000.000€ en Becas para estudiar Desarrollo Web en 4Geeks. La beca mínima es de un 30% y se otorgarán en función del resultado del proceso de selección. Si quieres empezar tu carrera como programador junior o impulsarla y convertirte en un desarrollador senior, no dejes pasar esta oportunidad.
+  text: Landing Jobs ofrece más de 1.000.000€ en Becas para estudiar Desarrollo Web o Inteligencia Artificial en 4Geeks. La beca mínima es de un 30% y se otorgarán en función del resultado del proceso de selección. Si quieres empezar tu carrera como programador junior o impulsarla y convertirte en un desarrollador senior, no dejes pasar esta oportunidad.
   bullets:
     - 300 becas en total, la mayoría superiores al 50% 
-    - Cursos Fullstack (iniciación) y Software Engineering (avanzado)
+    - Programas Full-Stack (iniciación) e Inteligencia Artificial
     - Formato full-time y part-time
 
 follow_bar:
@@ -127,20 +127,17 @@ choose_your_program:
     text_link: Solicita tu beca
     link: "#" # moves to start position
     
-  - title: "Ingeniero de Software"
-    sub_title: "Nivel 2"
-    icon: "software"
+  - title: "AI & Machine Learning"
+    sub_title: "Developers o perfiles STEM"
+    icon: "machine"
     description: |
-      Profundiza a un nivel avanzado en principios específicos de computación y algoritmia. Desarrolla más habilidades adentrándote en el mundo de las aplicaciones altamente escalables, nativas y distribuidas en la nube.
+      Explora los fundamentos del machine learning y el deep learning con las tecnologías más poderosas que escalan la inteligencia para los negocios. 
+      Practica con escenarios comerciales de la vida real y maneja las herramientas más utilizadas en la industria. Elabora estrategias y desarrolla tu Inteligencia Artificial, siguiendo el desarrollo del ciclo de vida de principio a fin, incluida la implementación en producción y mantenimiento con Privacidad, Seguridad y Ética. 
 
-      ¡Lleva tu carrera al siguiente nivel!, crea tecnología con un impacto real en el mundo (quizás el próximo unicornio), trabaja en empresas Fortune 500 y mejora tu salario. 
-      
-      Disponible sólo en modalidad part-time.
       Descarga aquí el <a href=https://storage.googleapis.com/4geeks-academy-website/syllabus/madrid-spain/Syllabus-Fullstack-2021-Espa%C3%B1a.pdf target=_blank>"programa de estudios"</a>.
 
     text_link: Solicita tu beca
     link: "#"
-
 
 why_4geeks:
   position: 7
@@ -167,10 +164,10 @@ components:
     # video: "B01-eTfgqqc"
     heading:
       text:
-        "Python, Java y Javascript"
+        "Python y Javascript"
         #           xl      lg      md      sm      xs
       font_size: ["50px", "50px", "50px", "50px", "50px"]
     content:
-      text: "Nuestros programa están basados en el uso de Python, Java y Javascript. ¿La razón? Java es el lenguaje más utilizado del mundo (por mucho). En el mercado laboral JavaScript tiene 26 veces más puestos de trabajo que Ruby on Rails. Python tiene 10 veces más trabajos que Node.js. 
+      text: "Nuestros programa están basados en el uso de Python y Javascript. ¿La razón? En el mercado laboral JavaScript tiene 26 veces más puestos de trabajo que Ruby on Rails. Python tiene 10 veces más trabajos que Node.js. 
         Otras herramientas que también aprenderás a usar en nuestros programas son: GitHub, Git, Redux, Amazon Web Services, etc."
       font_size: ["16px"]
