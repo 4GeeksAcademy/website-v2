@@ -88,7 +88,6 @@ const createBlog = async ({actions, graphql}) => {
         redirects.push(`Redirect from ${args.fromPath} to ${args.toPath}`);
         createRedirect(args);
     }
-    const postTemplate = path.resolve('src/templates/post.js');
     const clusterTemplate = path.resolve("src/templates/clusters.js");
     const result = await graphql(`
     {
@@ -100,6 +99,7 @@ const createBlog = async ({actions, graphql}) => {
                     frontmatter{
                         title
                         slug
+                        template
                         author
                         date
                         status
@@ -126,6 +126,7 @@ const createBlog = async ({actions, graphql}) => {
     const posts = result.data.allMarkdownRemark.edges;
 
     posts.forEach(({node}) => {
+        const postTemplate = path.resolve(`src/templates/${node.frontmatter.template || "post"}.js`);
         console.log(`Creating post ${node.fields.pagePath}`);
         createPage({
             path: node.fields.pagePath,

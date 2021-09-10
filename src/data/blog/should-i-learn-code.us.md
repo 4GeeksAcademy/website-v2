@@ -3,6 +3,7 @@ author: "MRiciglianoC"
 date: "2021-02-24T05:29:14+00:00"
 excerpt: "Should I learn to Code? Benefits of learning to code."
 slug: "should-i-learn-code"
+template: "post" # post or landing_post
 title: "Should I learn to Code?"
 image: "https://github.com/4GeeksAcademy/website-v2/blob/master/static/images/blog/student-coding.jpg"
 image_alt: "student coding in a notebook"

@@ -3,6 +3,7 @@ author: "vsegnini"
 date: "2020-01-20T21:09:10+00:00"
 excerpt: "We actually do not understand why only a few coding schools are teaching JS and Python combined into just one program."
 slug: "digital-marketing-in-the-coding-world"
+template: "post" # post or landing_post
 title: "Digital Marketing in the Coding World"
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2020/01/BLOG-04-1-scaled.jpg"
 image_alt: ""

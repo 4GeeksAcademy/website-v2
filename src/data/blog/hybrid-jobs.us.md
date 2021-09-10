@@ -3,6 +3,7 @@ author: "MRiciglianoC"
 date: "2019-10-15T20:53:47+00:00"
 excerpt: "The key to being a great coder is having the disposition to improve every day and apply strategies that will make you more productive and efficient."
 slug: "hybrid-jobs"
+template: "post" # post or landing_post
 title: "Hybrid Jobs: An Unstoppable Movement"
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2019/10/BLOG-HYBRID-1-1024x524.jpg"
 image_alt: ""

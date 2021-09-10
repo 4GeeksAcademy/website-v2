@@ -3,6 +3,7 @@ author: "alesanchezr"
 date: "2020-11-23T22:32:53+00:00"
 excerpt: "Ruby o Node.js no son las mejores tecnologias para convertirte en programador, aprende porqué enseñamos Python en 4Geeks Academy"
 slug: "porque-ensenamos-python-4geeks"
+template: "post" # post or landing_post
 title: "¿Porqué 4Geeks Academy enseña Python como lenguaje para Backend?"
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2019/03/Screen-Shot-2019-03-28-at-6.25.55-PM.png"
 image_alt: ""

@@ -3,6 +3,7 @@ author: "4GeeksAcademyES"
 date: "2021-07-07T00:00:00+00:00"
 excerpt: "Conoce estos 5 tips para encontrar trabajo en programación y aterriza el trabajo que buscas"
 slug: "tips-para-encontrar-trabajo"
+template: "post" # post or landing_post
 title: "5 tips para encontrar tu próximo empleo en programación"
 image: "https://github.com/marcelovaldebenito/website-v2/blob/master/static/images/blog/tptpe_1.jpg?raw=true"
 image_alt: "imagen con tips para encontrar trabajo en programación"

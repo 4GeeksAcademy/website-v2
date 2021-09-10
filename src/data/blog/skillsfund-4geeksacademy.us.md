@@ -3,6 +3,7 @@ author: "MRiciglianoC"
 date: "2018-02-28T20:41:26+00:00"
 excerpt: "4Geeks Academy has partnered with Skills Fund to remove all barriers to enrolling in our transformative skills training program."
 slug: "skillsfund-4geeksacademy"
+template: "post" # post or landing_post
 title: "Skills Fund & 4Geeks Academy finally together"
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2018/02/Skill-Fund-04-1-1-768x433.jpg"
 image_alt: ""

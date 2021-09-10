@@ -1,12 +1,13 @@
 import React, {useContext} from 'react'
 import {Link} from 'gatsby'
-import {H1, H2, H3, H4, Title, Separator, Paragraph, Span} from '../new_components/Heading'
+import {H1, Paragraph} from '../new_components/Heading'
 import {RoundImage, Colors, Button} from '../new_components/Styling'
 import Layout from '../global/Layout'
 import LazyLoad from 'react-lazyload';
 import twitterUser from '../utils/twitter'
-import Icon from '../new_components/Icon'
-import {TwitterFollowButton} from 'react-twitter-embed';
+// import Icon from '../new_components/Icon'
+// import {TwitterFollowButton} from 'react-twitter-embed';
+import CallToAction from '../new_components/CallToAction'
 import "../assets/css/single-post.css"
 import rehypeReact from "rehype-react"
 
@@ -24,16 +25,17 @@ export default function Template (props) {
       return obj;
     }, {});
 
-    const renderAst = new rehypeReact({
-      createElement: React.createElement,
-      components: { "button": Button }
-    }).Compiler
+  const renderAst = new rehypeReact({
+    createElement: React.createElement,
+    components: { 
+      "button": Button,
+      "call-to-action": CallToAction,
+    }
+  }).Compiler
 
-    console.log("POST_DATA:::", post)
-    // "Hacks for learning to code: Read Less and Learn Better"
-    const removedTitleClone = renderAst(post.htmlAst).props.children?.filter(el => el.type !== "h1")
+  const markdownAST = renderAst(post.htmlAst).props.children
+  const sanitizedData = markdownAST?.filter(el => el.type !== "h1")
 
-    console.log("HTML_AST:::", removedTitleClone)
 
   //Returns month's name
   function GetMonth (n) {
@@ -156,13 +158,14 @@ export default function Template (props) {
           <Div width="100%" justifyContent="center" flex="column">
 
             {/* Avatar */}
-            <Div justifyContent="center" height="100%" align="around" display="flex" style={{zIndex: "1"}} >
+            <Div background="#F3F3F3" justifyContent="center" height="100%" align="around" display="flex" style={{zIndex: "1"}} >
               <LazyLoad scroll={true} height={100} once={true}>
                 <RoundImage border="0%"
                   style={{border: "4px solid white"}}
                   width="75px"
                   height="75px"
                   bsize="contain"
+                  position="center"
                   url={filtered.avatar} />
               </LazyLoad>
             </Div>
@@ -194,13 +197,13 @@ export default function Template (props) {
               className="single-post" 
               flexDirection="Column" 
             >
-              {removedTitleClone}
+              {sanitizedData}
             </Div>
           </Div>
 
         </GridContainer>
 
-        <Div
+        {/* <Div
           flexDirection="column"
           justifyContent="center"
           alignItems="center"
@@ -216,7 +219,7 @@ export default function Template (props) {
             color="#3A3A3A"
             margin="0 0 10px 0"
             display="none"
-            display_md="block"
+            display_tablet="block"
             fontWeight="900"
             fontSize="15px"
             lineHeight="19px"
@@ -239,7 +242,7 @@ export default function Template (props) {
               width="32px"
             />
           </Div>
-        </Div>
+        </Div> */}
 
       </Layout>
     </>

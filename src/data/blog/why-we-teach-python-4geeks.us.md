@@ -3,6 +3,7 @@ author: "MRiciglianoC"
 date: "2020-11-23T22:32:53+00:00"
 excerpt: "Ruby was a bad decision and after weeks of consideration between several programming languages we decided to start teaching Python at 4Geeks Academy"
 slug: "why-we-teach-python-4geeks"
+template: "post" # post or landing_post
 title: "Why 4Geeks Academy teaches Python as Backend Language?"
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2019/03/Screen-Shot-2019-03-28-at-6.25.55-PM.png"
 image_alt: ""

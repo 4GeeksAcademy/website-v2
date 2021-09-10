@@ -327,7 +327,7 @@ export const Button = styled(SmartButton)`
     height: 40px;
     cursor: pointer;
     text-align: ${props => props.textAlign || "center"};
-    letter-spacing: 0px;
+    letter-spacing: ${props => props.letterSpacing || "0px"};;
     line-height: ${props => props.lineHeight};
     vertical-align: middle;
     width: ${props => props.width};

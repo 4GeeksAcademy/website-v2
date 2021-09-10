@@ -3,6 +3,7 @@ author: "MRiciglianoC"
 date: "2017-12-11T23:15:20+00:00"
 excerpt: "Students shall start to ask: Do you need me all day every day? Or can I actually have a life and also become a developer?"
 slug: "truth-behind-part-time-education"
+template: "post" # post or landing_post
 title: "The truth behind our Part-time education"
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2017/12/The-Truth-02-768x384.jpg"
 image_alt: ""

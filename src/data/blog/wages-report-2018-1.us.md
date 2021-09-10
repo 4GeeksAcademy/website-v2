@@ -3,6 +3,7 @@ author: "MRiciglianoC"
 date: "2018-03-19T22:36:42+00:00"
 excerpt: "It’s time to update our numbers. The annual average salary in the US has grown up 1% in February 2018."
 slug: "wages-report-2018-1"
+template: "post" # post or landing_post
 title: "Bootcamp Graduates Salary 2018"
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2018/03/BOOTCAMP2018-01-768x505.png"
 image_alt: ""
