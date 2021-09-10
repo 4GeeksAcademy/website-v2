@@ -13,7 +13,7 @@ meta_info:
 
   # Set a particular course or location to the landing page
   # this UTM fields will be also included in the CRM contact
-  utm_course: ["full-stack", "software-engineering"]
+  utm_course: ["full-stack", "machine-learning-engineering"]
   utm_location: europe
   automation: soft #optional, this is the default value
   tag: request_more_info #optional, this is the default value
@@ -44,10 +44,10 @@ features:
 
   #                                         up   left down  right
   styles: '{ "fontSize": "15px", "margin": "10px 0px 10px 0px" }'
-  text: Landing Jobs is offering more than €1,000,000 in Scholarships to study Web Development at 4Geeks Academy. The minimum scholarship is 30% and they will be awarded based on the results of the selection process. Whether you want to start your career as a Junior programmer or upskill  and become a Senior Developer, don't miss out on this amazing opportunity.
+  text: Landing Jobs is offering more than €1,000,000 in Scholarships to study Web Development or AI at 4Geeks Academy. The minimum scholarship is 30% and they will be awarded based on the results of the selection process. Whether you want to start your career as a Junior programmer or upskill  and become a Senior Developer, don't miss out on this amazing opportunity.
   bullets:
     - 300 scholarships in total, most of them greater than 50%
-    - Ful-Stack Developer (Level 1) and Software Engineering (Level 2) programs
+    - Ful-Stack Developer (Level 1) and AI/Machine Learning programs
     - Full-Time and Part-Time modality
 
 follow_bar:
@@ -63,7 +63,7 @@ follow_bar:
     # ├──if path is empty("") it point to top per default ("#" -> points to top)
     # └── path accepts: relative(/example/path), absolute(https://google.com) or id(#idName)
   phone:
-    text: "Call "
+    text: "WhatsApp "
 
 #
 # ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇
@@ -126,11 +126,11 @@ choose_your_program:
     text_link: Apply for a scholarship
     link: "#" # moves to start position
     
-  - title: "Software Engineer"
-    sub_title: "Level 2"
-    icon: "software"
+  - title: "AI & Machine Learning"
+    sub_title: "Developers and STEM Profiles"
+    icon: "machine"
     description: |
-      Delve to an advanced level in specific principles of computation and algorithms. Develop more skills by entering the world of highly scalable, native and distributed applications in the cloud. Take your career to the next level, create technology with a real impact on the world (perhaps the next unicorn), work at Fortune 500 companies and improve your salary. Available only Part-Time. 
+      Get trained by a renowned expert in A.I.; explore Machine Learning's fundamentals and Deep Learning with some of the most powerful technologies that truly scale intelligence for business. Practice with real-life business scenarios typical in business and review some of the tools used in the industry. Strategize and develop your A.I. following the lifecycle development from start to end, including deployment into production and maintenance with Privacy, Security, and Ethics. 
       Download <a href=https://storage.googleapis.com/4geeks-academy-website/syllabus/madrid-spain/Syllabus-Fullstack-2021-Espa%C3%B1a.pdf target=_blank>"here the syllabus"</a>. 
       
 
@@ -144,7 +144,7 @@ why_4geeks:
   sub_heading: ""
   footer:
     text: "Financing options"
-    text_link: "/"
+    text_link: "https://storage.googleapis.com/4geeks-academy-website/syllabus/europe/Payment-Guide-Landing-Jobs-Scholarships.pdf"
 
 apply_schollarship: # form that is displayed at the end of the landing
   # title: "Apoyo Profesional Ilimitado"
@@ -163,10 +163,10 @@ components:
     # video: "B01-eTfgqqc"
     heading:
       text:
-        "Python, Java and Javascript"
+        "Python and Javascript"
         #           xl      lg      md      sm      xs
       font_size: ["50px", "50px", "50px", "50px", "50px"]
     content:
-      text: "Our programs are based on the use of Python, Java and Javascript. The reason? Java is the most widely used language in the world (by far). In the job market JavaScript has 26 times more job openings than Ruby on Rails. Python has 10 times more jobs than node.js.
+      text: "Our programs are based on the use of Python and Javascript. The reason? In the job market JavaScript has 26 times more job openings than Ruby on Rails. Python has 10 times more jobs than node.js.
       Other tools that you will also learn to use in our programs are: GitHub, Git, Redux, Amazon Web Services, etc."
       font_size: ["16px"]
