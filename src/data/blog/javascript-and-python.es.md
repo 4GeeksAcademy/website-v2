@@ -18,7 +18,7 @@ Dentro del ecosistema de la programación, aparecen constantemente nuevos lengua
 
 JavaScript y Python están hechos para trabajar juntos en aplicaciones web y mucho más. En realidad, no entendemos por qué no todo el mundo enseña JS y Python. Aunque si eso sucede, entonces otra tecnología será aún más popular (así son somos - los seres humanos :)).
 
-## ** ¿Qué importancia tiene JavaScript para los desarrolladores web modernos? **
+## **¿Qué importancia tiene JavaScript para los desarrolladores web modernos?**
 
 
 Si le preguntas a cualquier programador sobre JavaScript, probablemente te diga que es inimaginable ser un desarrollador de software sin conocer JavaScript. JavaScript es para los sitios web lo que son las pastas para el italiano. Según algunos [informes] (https://medium.com/javascript-scene/how-popular-is-javascript-in-2019-823712f7c4b1), "Hay más de 1.600 millones de sitios web en el mundo y JavaScript se utiliza en 95% de ellos (1.520 millones de sitios web con JavaScript) ”. Sin embargo, si eres novato, puede que te estés preguntando y...¿qué es JavaScript? Es un lenguaje de programación de front-end que se encarga de la interacción, la experiencia dinámica del usuario, cualquier cosa que se mueva, actualice o cambie en tu pantalla sin necesidad de actualizar manualmente una página web.
