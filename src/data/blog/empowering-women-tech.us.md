@@ -3,6 +3,7 @@ author: "MRiciglianoC"
 date: "2018-04-12T18:18:16+00:00"
 excerpt: "Our most recent cohort begun with 60% of women enrollment. Women in Miami are choosing 4Geeks to build their software careers."
 slug: "empowering-women-tech"
+template: "post" # post or landing_post
 title: "4Geeks Academy empowering Women in Tech"
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2018/04/Women-Powering-01-1-1024x645.png"
 image_alt: ""

@@ -3,6 +3,7 @@ author: "MRiciglianoC"
 date: "2018-11-05T22:22:21+00:00"
 excerpt: "We want to share our student’s stories, motivations and reasons."
 slug: "student-testimonials"
+template: "post" # post or landing_post
 title: "Learn to code at 4Geeks| Voices to be heard"
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2018/11/Jennifer-768x768.png"
 image_alt: ""

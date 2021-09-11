@@ -3,6 +3,7 @@ author: "alesanchezr"
 date: "2020-04-29T05:31:23+00:00"
 excerpt: "More information about the Geekpal system of 4Geeks Academy"
 slug: "geekpal"
+template: "post" # post or landing_post
 title: "Never Code Alone Again"
 image: "/images/why2.jpg"
 image_alt: ""

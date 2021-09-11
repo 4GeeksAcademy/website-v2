@@ -3,6 +3,7 @@ author: "alesanchezr"
 date: "2016-01-08T12:00:40+00:00"
 excerpt: "Part-time education could only be effective within a methodology focused on offering a premium education in a part-time schedule."
 slug: "part-time-future-education"
+template: "post" # post or landing_post
 title: "Part-time is the future of education"
 image: "https://4GeeksAcademy.com/wp-content/uploads/2016/01/part-timevsfull-1.png"
 image_alt: ""

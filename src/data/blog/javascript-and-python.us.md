@@ -3,6 +3,7 @@ author: "MRiciglianoC"
 date: "2019-11-20T22:48:11+00:00"
 excerpt: "We actually do not understand why only a few coding schools are teaching JS and Python combined into just one program."
 slug: "javascript-and-python"
+template: "post" # post or landing_post
 title: "JavaScript and Python: A-must for any coder"
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2019/11/JSandPython-768x552.jpg"
 image_alt: ""

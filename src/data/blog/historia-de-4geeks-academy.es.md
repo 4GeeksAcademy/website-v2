@@ -3,6 +3,7 @@ author: "4GeeksAcademy"
 date: "2016-04-13T20:36:02+00:00"
 excerpt: "Conoce la historia en profundidad de 4Geeks Academy"
 slug: "historia-de-4geeks-academy"
+template: "post" # post or landing_post
 title: "Historia de 4Geeks Academy"
 image: ""
 image_alt: ""

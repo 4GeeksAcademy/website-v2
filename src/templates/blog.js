@@ -132,7 +132,7 @@ const Blog = ({data, pageContext, yml}) => {
 
                 <GridContainer columns_tablet="1"
                     margin="0 0 78px 0"
-                    background={Colors.lightGray}
+                    background={Colors.verylightGray}
                     height="auto"
                     width="100%"
                     columns="1"

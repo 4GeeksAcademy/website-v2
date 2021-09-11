@@ -1,5 +1,6 @@
 ---
 slug: "sample"
+template: "post" # post or landing_post
 date: "2018-11-19T00:00:00+00:00"
 title: "the coding bootcamp syllabus matters"
 author: "alesanchezr"
@@ -11,6 +12,7 @@ status: "published"
 featured: "true"
 unlisted: "true"
 cluster: "learn-to-code"
-
 ---
 
+<!--call-to-action reiceves: {background, title, text, button_text, button_link} -->
+<call-to-action button_text="Ver programa" button_link="#" background="rgba(0, 151, 205, 0.15)" title="Impulsa tu carrera, gracias a la programación" text="Te invitamos a impulsa tu carrera, aprendiendo a programar con nuestro Programa Full Stack Developer."></call-to-action>

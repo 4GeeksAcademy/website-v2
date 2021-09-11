@@ -3,6 +3,7 @@ author: "MRiciglianoC"
 date: "2018-12-17T15:09:53+00:00"
 excerpt: "La sexta sede de 4Geeks ya es una realidad. En WeWork, en Santiago, ya se empieza a sentir el código de la mano de 4Geeks Academy."
 slug: "4geeks-santiago-chile-programacion-2"
+template: "landing_post"
 title: "4Geeks en Santiago de Chile"
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2018/12/BANNER-CHILE-copia-3APRENDE-A-PROGRAMAR-CHL-3-1024x540.png"
 image_alt: ""
@@ -17,10 +18,13 @@ featured: "true"
 
 
 
-**4Geeks Academy inaugurará nueva sede en Santiago de Chile**
+## **4Geeks Academy inaugurará nueva sede en Santiago de Chile**
 
 
 [Newsweek](https://www.newsweek.com/insights/coding-career-and-you-top-coding-schools-2017/4geeks-academy) los definió en 2017 como uno de los 10 mejores Bootcamp de Programación en Estados Unidos. Ahora en Chile abrirán una nueva sede. La sexta sede de 4Geeks ya es una realidad. En WeWork, en Santiago, ya se empieza a sentir el código de la mano de 4Geeks Academy. Ya van dos (2) en Estados Unidos, tres (3) en Venezuela, y ahora se vienen más. También cuentan con más de 400 estudiantes graduados. “Está mejorando cada vez más el producto y hay que compartirlos en más Ciudades”, apunta Alejandro Sánchez, cofundador de 4Geeks Academy. Esta vez, la academia está preparada para entrenar y desarrollar sus programas de software en Santiago de Chile.
+
+<!--call-to-action reiceves: {background, title, text, button_text, button_link} -->
+<call-to-action button_text="Ver programa" button_link="#" background="rgba(0, 151, 205, 0.15)" title="Impulsa tu carrera, gracias a la programación" text="Te invitamos a impulsa tu carrera, aprendiendo a programar con nuestro Programa Full Stack Developer."></call-to-action>
 
 Esta oportunidad no pudo tener mejor cronometraje. Muchos chilenos están probando la miel del desarrollo de su país mientras expanden su alcance tecnológico. 4Geeks está uniendo su entusiasmo por la tecnología, su experiencia entrenando programadores, con las empresas que lideran el desarrollo económico chileno y con el talento que tanto hace falta para que se empodere de los nuevos proyectos que en Chile se están impulsando.
 

@@ -3,6 +3,7 @@ author: "alesanchezr"
 date: "2017-10-11T20:30:18+00:00"
 excerpt: "Have you ever played The Sims or League of Legends? If you have, you familiar with the concept of “earning skills”"
 slug: "the-talent-tree"
+template: "post" # post or landing_post
 title: "The Talent Tree"
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2017/10/Talents_for_Paladins.jpg"
 image_alt: ""
