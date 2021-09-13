@@ -3,6 +3,7 @@ author: "MRiciglianoC"
 date: "2019-09-18T23:16:33+00:00"
 excerpt: "The key to being a great coder is having the disposition to improve every day and apply strategies that will make you more productive and efficient."
 slug: "hacks-learn-to-code"
+template: "post" # post or landing_post
 title: "Hacks for learning to code: Read Less and Learn Better"
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2019/09/Study-Hacks-03-1024x523.jpg"
 image_alt: ""

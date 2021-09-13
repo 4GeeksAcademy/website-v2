@@ -18,7 +18,8 @@ meta_info:
   tag: request_more_info #optional, this is the default value
 
 navbar:
-  buttonText: "Solicitar"
+  logoUrl: "#"
+  buttonText: "Solicita tu beca"
   # url accepts: relative(/apply), absolute(https://google.com) or id(#componentName)
   buttonUrl: "#bottom" # [#top, #bottom or another #componentId]
 

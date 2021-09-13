@@ -3,6 +3,7 @@ author: "4GeeksAcademy"
 date: "2016-01-08T11:19:14+00:00"
 excerpt: "We are proud to say that we have partnered with LaunchCode.org"
 slug: "launchcode-and-4geeks-academy"
+template: "post" # post or landing_post
 title: "4Geeks Academy and LaunchCode.org"
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2016/01/launchcode-button-300x89.png"
 image_alt: ""

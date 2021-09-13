@@ -3,6 +3,7 @@ author: "MRiciglianoC"
 date: "2018-06-22T03:51:55+00:00"
 excerpt: "Feelings when learning and working as a developer."
 slug: "feelings-learning-coding"
+template: "post" # post or landing_post
 title: "The feelings when Learning to Code"
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2018/06/feelings.jpg"
 image_alt: ""

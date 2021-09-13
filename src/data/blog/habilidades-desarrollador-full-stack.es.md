@@ -3,6 +3,7 @@ author: "VictorManuelG"
 date: "2021-04-26T20:44:51+00:00"
 excerpt: "Conoce aquí las habilidades a desarrollar para un desarrollador full stack"
 slug: "habilidades-desarrollador-full-stack"
+template: "post" # post or landing_post
 title: "Habilidades de un Desarrollador Full-Stack"
 image: "https://github.com/marcelovaldebenito/website-v2/blob/master/static/images/blog/hfl-01.png?raw=true"
 image_alt: "sketch de un joven aprendiendo código"

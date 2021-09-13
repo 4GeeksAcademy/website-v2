@@ -93,7 +93,7 @@ const NotFoundPage = () =>
                 <tr>
                   <td><Anchor to={`/${node.fields.lang}/landing/${node.meta_info.slug}`}>{node.meta_info.slug}</Anchor></td>
                   <td>{node.meta_info.utm_location}</td>
-                  <td>{node.meta_info.utm_course}</td>
+                  <td>{node.meta_info.utm_course.join(",")}</td>
                 </tr>
               )}
             </tbody>

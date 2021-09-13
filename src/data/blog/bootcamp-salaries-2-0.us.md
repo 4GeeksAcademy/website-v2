@@ -3,6 +3,7 @@ author: "MRiciglianoC"
 date: "2017-10-27T23:10:20+00:00"
 excerpt: "According to the Bureau of Labor Statistic, web developers made an annual wage of $72,890 ?."
 slug: "bootcamp-salaries-2-0"
+template: "post" # post or landing_post
 title: "Bootcamp Graduates Salary 2017: 2.0 edition"
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2017/10/portada-bootcamp-02-1-1024x674.jpg"
 image_alt: ""

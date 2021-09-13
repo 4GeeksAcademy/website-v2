@@ -3,6 +3,7 @@ author: "MRiciglianoC"
 date: "2017-12-12T21:22:15+00:00"
 excerpt: "We are so pleased to announce that we have partnered with the startup technology and marketing studio: Launch Potato"
 slug: "new-year-new-hiring-partners-launch-potato-us"
+template: "post" # post or landing_post
 title: "New year, New Hiring Partners: Launch Potato & Us"
 image: "https://4GeeksAcademy.com/wp-content/uploads/2017/12/POTATO-ADS-02.jpg"
 image_alt: ""

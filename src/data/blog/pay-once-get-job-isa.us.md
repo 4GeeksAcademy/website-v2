@@ -3,6 +3,7 @@ author: "MRiciglianoC"
 date: "2019-04-10T17:57:47+00:00"
 excerpt: "4Geeks is now offering an ISA (Income Sharing Agreement) for anyone looking to enroll in our Full-time programs."
 slug: "pay-once-get-job-isa"
+template: "post" # post or landing_post
 title: "Pay once you get a Job"
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2019/04/ISA-Blog-Cover.png"
 image_alt: ""

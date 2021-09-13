@@ -3,6 +3,7 @@ author: "MRiciglianoC"
 date: "2019-11-20T22:48:11+00:00"
 excerpt: "No logramos comprender por qué solo algunas escuelas de programación enseñan un combinación de JS y Python en un solo programa"
 slug: "javascript-and-python"
+template: "post" # post or landing_post
 title: "JavaScript y Python: Imprescindibles para cualquier programador"
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2019/11/JSandPython-768x552.jpg"
 image_alt: ""

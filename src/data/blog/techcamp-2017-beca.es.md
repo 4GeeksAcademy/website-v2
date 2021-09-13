@@ -3,6 +3,7 @@ author: "4GeeksAcademy"
 date: "2017-07-18T20:38:51+00:00"
 excerpt: "Conoce las becas entregadas a 4 emprendedores del TechCamp Caracas 2017"
 slug: "techcamp-2017-beca"
+template: "post" # post or landing_post
 title: "¡4Geeks Academy becó a 4 emprendedores del TechCamp Caracas 2017!"
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2017/07/ISA-Blog-Cover.png"
 image_alt: ""

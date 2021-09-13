@@ -3,6 +3,7 @@ author: "alesanchezr"
 date: "2017-09-25T18:07:08+00:00"
 excerpt: "4Geeks decided to leave nodejs out from the Full-Stack Development program, click here to learn why."
 slug: "dont-teach-nodejs-full-stack-development-program"
+template: "post" # post or landing_post
 title: "Why we don't teach NodeJS in our Full-Stack Development program"
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2017/09/Screen-Shot-2017-09-25-at-10.54.52-PM.png"
 image_alt: ""

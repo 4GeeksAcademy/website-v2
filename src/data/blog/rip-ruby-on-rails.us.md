@@ -3,6 +3,7 @@ author: "alesanchezr"
 date: "2016-01-18T15:02:43+00:00"
 excerpt: "Rails framework gave us a lot, it changed the way web products were made, but now Ruby is behind the rest. Is not even in the top 10 already."
 slug: "rip-ruby-on-rails"
+template: "post" # post or landing_post
 title: "R.I.P. Ruby on Rails. Thanks for everything!"
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2016/01/ruby.png"
 image_alt: ""

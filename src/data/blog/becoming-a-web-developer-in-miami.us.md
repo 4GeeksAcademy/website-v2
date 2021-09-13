@@ -3,6 +3,7 @@ author: "4GeeksAcademy"
 date: "2016-02-03T05:34:01+00:00"
 excerpt: "Is it possible to be a software developer working in Miami? That would be like going to heaven without having to die."
 slug: "becoming-a-web-developer-in-miami"
+template: "post" # post or landing_post
 title: "Learning to code in Miami"
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2016/02/admin-ajax-4.10.10-PM.jpeg"
 image_alt: ""
