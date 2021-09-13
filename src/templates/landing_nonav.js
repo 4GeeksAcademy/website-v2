@@ -56,7 +56,7 @@ const Landing = (props) => {
   };
   
   const landingLocation = session && session.locations?.find(l => l.breathecode_location_slug === yml.meta_info.utm_location)
-  console.log("navbar", yml.navbar.buttonText)
+  
   return (
     <>
       <LandingNavbar
