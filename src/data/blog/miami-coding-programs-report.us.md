@@ -3,6 +3,7 @@ author: "MRiciglianoC"
 date: "2018-11-06T20:24:41+00:00"
 excerpt: "Everything you need to know about Miami Coding Programs"
 slug: "miami-coding-programs-report"
+template: "post" # post or landing_post
 title: "Miami Coding Bootcamps | 2018 Report"
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2018/11/MIAMI-CODING-04-768x768.jpg"
 image_alt: ""

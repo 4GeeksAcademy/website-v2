@@ -55,13 +55,12 @@ const Landing = (props) => {
     tag: {type: "hidden", value: yml.meta_info.tag, valid: true}
   };
   
-  const landingLocation = session && session.locations?.find(l => console.log(`comparing ${l.breathecode_location_slug} with ${yml.meta_info.utm_location}`) || l.breathecode_location_slug === yml.meta_info.utm_location)
-  // console.log("landingLocation: ", landingLocation)
+  const landingLocation = session && session.locations?.find(l => l.breathecode_location_slug === yml.meta_info.utm_location)
   
   return (
     <>
       <LandingNavbar
-        buttonText={yml.navbar?.buttonText || "buttonText not set"}
+        buttonText={yml.navbar ? yml.navbar.buttonText : pageContext.lang === "us" ? "Apply" : "Solicita una plaza"}
         buttonUrl={yml.navbar?.buttonUrl}
         logoUrl={yml.navbar?.logoUrl}
         lang={pageContext.lang}

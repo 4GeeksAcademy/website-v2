@@ -121,6 +121,8 @@ navbar:
               link_to: "/es/coding-campus/bootcamp-programacion-costa-rica"
         - title: "-"
           sub_links:
+            - title: "Orlando, USA"
+              link_to: "/es/coding-campus/bootcamp-programacion-orlando"
             - title: "Colombia"
               link_to: "/es/coding-campus/bootcamp-programacion-colombia"
             - title: "México"

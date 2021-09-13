@@ -3,6 +3,7 @@ author: "MRiciglianoC"
 date: "2021-02-24T05:29:14+00:00"
 excerpt: "Pandemic changes in coding. In the midst of Covid-19, 4Geeks has found its way to grow."
 slug: "pandemic-impact-on-coding-bootcamp"
+template: "post" # post or landing_post
 title: "PANDEMIC IMPACT ON CODING BOOTCAMPS"
 image: "https://github.com/marcelovaldebenito/website-v2/blob/master/static/images/blog/student-coding.jpg?raw=true"
 image_alt: "student typing how the pandemic has changed the coding industry"

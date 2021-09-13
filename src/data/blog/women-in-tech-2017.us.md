@@ -3,6 +3,7 @@ author: "MRiciglianoC"
 date: "2018-01-17T04:01:12+00:00"
 excerpt: "Among the tech community, women are only taking 31% of the total workspace, but today women occupy only 18% of proportion in computer science degrees"
 slug: "women-in-tech-2017"
+template: "post" # post or landing_post
 title: "Women in Tech 2017"
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2018/01/Screen-Shot-2018-01-16-at-11.58.32-PM.png"
 image_alt: ""

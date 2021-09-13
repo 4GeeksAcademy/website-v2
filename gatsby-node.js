@@ -88,7 +88,6 @@ const createBlog = async ({actions, graphql}) => {
         redirects.push(`Redirect from ${args.fromPath} to ${args.toPath}`);
         createRedirect(args);
     }
-    const postTemplate = path.resolve('src/templates/post.js');
     const clusterTemplate = path.resolve("src/templates/clusters.js");
     const result = await graphql(`
     {
@@ -100,6 +99,7 @@ const createBlog = async ({actions, graphql}) => {
                     frontmatter{
                         title
                         slug
+                        template
                         author
                         date
                         status
@@ -126,30 +126,36 @@ const createBlog = async ({actions, graphql}) => {
     const posts = result.data.allMarkdownRemark.edges;
 
     posts.forEach(({node}) => {
+        const postTemplate = path.resolve(`src/templates/${node.frontmatter.template || "post"}.js`);
         console.log(`Creating post ${node.fields.pagePath}`);
+
+        // if a blog post has the "landing_cluster" template its not a real blog post, its more like a landing page meant as a topic cluster
+        // and it will not follow the same URL structure, landing_cluster's have a very unique URL.
         createPage({
-            path: node.fields.pagePath,
+            path: node.frontmatter.template != "landing_cluster" ? node.fields.pagePath : `/${node.fields.slug}`,
             component: postTemplate,
             context: {
                 ...node.fields,
             }
         });
 
-        // the old website had the blog posts with this path '/post-name' and we want now '/<lang>/<cluster>/post-name'
-        _createRedirect({
-            fromPath: `/${node.fields.slug}`,
-            toPath: node.fields.pagePath,
-            redirectInBrowser: true,
-            isPermanent: true
-        });
-
-        console.log(`Redirect for post /us/post/${node.fields.slug}`);
-        _createRedirect({
-            fromPath: `/us/post/${node.fields.slug}`,
-            toPath: node.fields.pagePath,
-            redirectInBrowser: true,
-            isPermanent: true
-        });
+        if(node.frontmatter.template != "landing_cluster"){
+            // the old website had the blog posts with this path '/post-name' and we want now '/<lang>/<cluster>/post-name'
+            _createRedirect({
+                fromPath: `/${node.fields.slug}`,
+                toPath: node.fields.pagePath,
+                redirectInBrowser: true,
+                isPermanent: true
+            });
+    
+            console.log(`Redirect for post /us/post/${node.fields.slug}`);
+            _createRedirect({
+                fromPath: `/us/post/${node.fields.slug}`,
+                toPath: node.fields.pagePath,
+                redirectInBrowser: true,
+                isPermanent: true
+            });
+        }
     });
 
     // Read redirect property from front-matter

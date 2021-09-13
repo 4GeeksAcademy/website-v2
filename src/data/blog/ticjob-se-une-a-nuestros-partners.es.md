@@ -3,6 +3,7 @@ author: "4GeeksAcademyES"
 date: "2021-03-08T05:31:23+00:00"
 excerpt: "Conoce el nuevo partnership con Ticjob"
 slug: "ticjob-se-une-a-nuestros-partners"
+template: "post" # post or landing_post
 title: "Ticjob se une a nuestros partners"
 image: "/images/blog/Blog_post.png"
 image_alt: ""

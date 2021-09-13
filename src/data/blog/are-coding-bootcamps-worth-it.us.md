@@ -3,6 +3,7 @@ author: "MRiciglianoC"
 date: "2021-04-09T05:29:14+00:00"
 excerpt: "Short analysis about leads and interviews to know if coding bootcamps are worth it"
 slug: "are-coding-bootcamp-worth-it"
+template: "post" # post or landing_post
 title: "Are Coding Bootcamps worth it? My take after interviewing more than +3000 leads"
 image: "https://github.com/marcelovaldebenito/website-v2/blob/master/static/images/blog/coding-in-bootcamp.jpg?raw=true"
 image_alt: "students learning code in a bootcamp"

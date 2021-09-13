@@ -3,6 +3,7 @@ author: "4GeeksAcademyES"
 date: "2021-05-19T20:44:51+00:00"
 excerpt: "Conoce aquí cómo encontrar trabajo freelance desde España o el mundo"
 slug: "freelance-espana"
+template: "post" # post or landing_post
 title: "Plataformas para encontrar trabajo Freelance"
 image: "https://github.com/marcelovaldebenito/website-v2/blob/master/static/images/blog/fe-0.png?raw=true"
 image_alt: "imagen con el texto: Freelance España"

@@ -4,6 +4,7 @@ date: "2016-07-25T16:19:57+00:00"
 excerpt: "El instructor ideal, conoce los atributos y habilidades de un buen profesor cuándo estás aprendiendo a programar"
 published: "false"
 slug: "el-instructor-ideal"
+template: "post" # post or landing_post
 title: "EL INSTRUCTOR IDEAL..."
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2016/07/admin-ajax-1.jpeg"
 image_alt: ""

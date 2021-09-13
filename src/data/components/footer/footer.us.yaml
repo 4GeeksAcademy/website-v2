@@ -49,6 +49,8 @@ footer:
         link: "/us/coding-campus/online-coding-bootcamp"
       - name: "Miami"
         link: "/us/coding-campus/coding-bootcamp-miami"
+      - name: "Orlando"
+        link: "/us/coding-campus/coding-bootcamp-orlando"
       - name: "Madrid"
         link: "/us/coding-campus/coding-bootcamp-madrid"
       - name: "Chile"

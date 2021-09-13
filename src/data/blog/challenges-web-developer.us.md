@@ -3,6 +3,7 @@ author: "alesanchezr"
 date: "2015-12-17T17:30:43+00:00"
 excerpt: "know the challenges of a web developer and how to overcome them"
 slug: "challenges-web-developer"
+template: "post" # post or landing_post
 title: "The Challenges of a Web Developer, Living and working as a developer"
 image: "https://github.com/4geeksacademy/website-v2/blob/master/static/images/blog/web-developer.jpeg?raw=true"
 image_alt: ""

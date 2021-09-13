@@ -3,6 +3,7 @@ author: "alesanchezr"
 date: "2015-12-28T15:53:55+00:00"
 excerpt: "The #IntroToCoding Workshop was held on December 17th at WeWork Lincoln Road. The topic of the workshop was: How Does The Web Work?"
 slug: "how-does-the-web-work-html-css"
+template: "post" # post or landing_post
 title: "HTML + CSS - Understanding How The Web Works"
 image: "https://4GeeksAcademy.com/wp-content/uploads/2015/12/htmlcss.png"
 image_alt: ""

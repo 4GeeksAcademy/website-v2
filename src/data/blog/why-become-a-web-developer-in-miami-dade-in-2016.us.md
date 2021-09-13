@@ -3,6 +3,7 @@ author: "alesanchezr"
 date: "2016-01-18T00:38:18+00:00"
 excerpt: "Choosing a career is like getting married: you have to be sure you’re making the right choice."
 slug: "why-become-a-web-developer-in-miami-dade-in-2016"
+template: "post" # post or landing_post
 title: "Why Become A Web Developer In Miami Dade In 2016"
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2016/01/Martes-1.png"
 image_alt: ""

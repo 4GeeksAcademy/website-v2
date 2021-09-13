@@ -3,6 +3,7 @@ author: "MRiciglianoC"
 date: "2018-07-16T20:43:46+00:00"
 excerpt: "There are many important elements to consider when you are choosing the best coding Bootcamp for you. We believe that you should address these four questions."
 slug: "choosing-coding-bootcamp"
+template: "post" # post or landing_post
 title: "How to choose the best coding Bootcamp?"
 image: "https://4GeeksAcademy.com/wp-content/uploads/2018/07/Picture-Post-1.png"
 image_alt: ""

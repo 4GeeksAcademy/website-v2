@@ -3,6 +3,7 @@ author: "MRiciglianoC"
 date: "2018-10-04T15:33:22+00:00"
 excerpt: "There are many options to choose from but Part-Time is best for whoever wants to learn to code"
 slug: "part-time-bootcamps"
+template: "post" # post or landing_post
 title: "Why is a Part-Time Coding Bootcamp  Best for You"
 image: "https://4GeeksAcademy.com/wp-content/uploads/2018/10/Part-time-coding-bootcamp-1.png"
 image_alt: ""
