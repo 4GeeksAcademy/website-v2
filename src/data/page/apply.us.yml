@@ -24,7 +24,7 @@ left:
     last_name: "Last Name"
     email: "Email"
     phone: "Phone"
-  locations_title: "Select a location"
+  locations_title: "Select one of our campus"
   course_title:
     open: "Please select one program"
     close: "What program would you like to attend?"
