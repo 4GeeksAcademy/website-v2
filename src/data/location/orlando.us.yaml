@@ -445,8 +445,8 @@ in_person_available: true # important to accept in-person applicants
 
 city: "Orlando"
 name: "Orlando, USA"
-latitude: "25.760158"
-longitude: "-80.200154"
+latitude: "28.538336"
+longitude: "-81.379234"
 phone: "+1 (786) 416-6640"
 address: "37 N Orange Ave"
 zip_code: "32801"
