@@ -12,12 +12,28 @@ jobs:
     runs-on: ubuntu-latest
     env: # environment variable
       GATSBY_BREATHECODE_HOST: https://breathecode-cypress.herokuapp.com/v1
-    # strategy:
-    #   matrix:
-    #     node-version: [14.x]
     steps:
+      - id: timestamp
+        run: echo "::set-output name=timestamp::$(timestamp +%s)"
+
+      - name: Restore the previous run result
+        uses: actions/cache@v2
+        with:
+          path: |
+            run_result
+          key: ${{ github.run_id }}-${{ github.job }}-${{ steps.timestamp.outputs.timestamp }}
+          restore-keys: |
+            ${{ github.run_id }}-${{ github.job }}-
+
+      - name: Get the previous run result
+        id: run_result
+        run: cat run_result 2>/dev/null || echo 'default'
+
+
       - name: Checkout
         uses: actions/checkout@v2
+        if: steps.run_result.outputs.run_result != 'success'
+
       - name: Running Tests
         # Install NPM dependencies, cache them correctly
         uses: cypress-io/github-action@v2
@@ -27,3 +43,8 @@ jobs:
           browser: electron
           wait-on: 'http://localhost:8080'
           config: pageLoadTimeout=100000,baseUrl=http://localhost:8080
+
+      - if: steps.run_result.outputs.run_result != 'success'
+        run: echo "I'm alive!" && exit 0
+
+      - run: echo "::set-output name=run_result::success" > run_result

@@ -242,8 +242,8 @@ prices:
         button:
           button_text: "Apply another courses"
 
-active_campaign_location_slug: "online"
-breathecode_location_slug: "online"
+active_campaign_location_slug: "europe"
+breathecode_location_slug: "europe"
 gdpr_compliant: true # do we need to ask for permision?
 in_person_available: false # important to accept in-person applicants
 

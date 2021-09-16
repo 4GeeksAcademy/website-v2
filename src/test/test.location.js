@@ -1,14 +1,21 @@
 const fs = require('fs');
 var colors = require('colors');
 const fetch = require('node-fetch');
-const { walk, loadYML, empty, fail, success, localizeImage } = require('./_utils');
+const { walk, loadYML, empty, fail, warn, success, localizeImage } = require('./_utils');
 
 require('dotenv').config()
 
-let limit_images = 5;
-const front_matter_fields = [
+const content_fields = [
   { key: 'breathecode_location_slug', type: 'string', mandatory: true },
 ];
+
+const locations_fields = [
+  { key: 'active_campaign_location_slug', type: 'string', mandatory: true },
+  { key: 'city', type: 'string', mandatory: true },
+  { key: 'phone', type: 'string', mandatory: false },
+  { key: 'latitude', type: 'string', mandatory: true },
+  { key: 'longitude', type: 'string', mandatory: true },
+]
 
 walk(`${__dirname}/../data/location`, async (err, files) => {
   const academySlug = []
@@ -20,19 +27,13 @@ walk(`${__dirname}/../data/location`, async (err, files) => {
     if (!doc || !doc.yaml) fail('Invalid YML syntax for ' + _path);
   });
 
-  let academyData = null;
+    // let academyData = null;
+    // const res = await fetch('https://breathecode.herokuapp.com/v1/admissions/academy') 
+    // if(res.status !== 200) fail(res.status + ': Unable to retreive academy API location Information: ', await res.json());
+    // else academyData = await res.json()
 
-  try{
-    const res = await fetch('https://breathecode.herokuapp.com/v1/admissions/academy') 
-    if(res.status !== 200) fail(res.status + ': Unable to retreive academy API location Information: ', await res.json());
-    else academyData = await res.json()
-
-  }catch(err){
-    fail(res.status + ': Unable to retreive academy API location Information: ', err)
-  }
-
-  if(!academyData || !Array.isArray(academyData)) fail("Invalid academy data", academyData)
-  academyData.map(el => academySlug.push(el.slug))
+    // if(!academyData || !Array.isArray(academyData)) fail("Invalid academy data", academyData)
+    // academyData.map(el => academySlug.push(el.slug))
 
   const _files = files.filter(
     (f) =>
@@ -42,14 +43,27 @@ walk(`${__dirname}/../data/location`, async (err, files) => {
   );
 
   let slugs = []
+  let active_campaign_location_slug = []
+  let city = []
+  let phone = []
+  let latitude = []
+  let longitude = []
+
   for (let i = 0; i < _files.length; i++) {
     const _path = _files[i];
     const doc = loadYML(_path);
+    const location = doc.yaml
     
     let _slug = await _path.split(".")[0].substr(_path.lastIndexOf("/") +1)
     slugs.push(_slug)
+    await active_campaign_location_slug.push(location.active_campaign_location_slug)
+    await city.push(location.city)
+    await phone.push(location.phone)
+    await latitude.push(location.latitude)
+    await longitude.push(location.longitude)
 
     if(slugs.length === _files.length){
+
       let uniq_slug = slugs.filter((curr, prev, self) => self.indexOf(curr) === prev)
       for (let i = 0; i < uniq_slug.length; i++) {
         let slug_es = `${__dirname}/../data/location/${uniq_slug[i]}.es.yaml`
@@ -58,7 +72,6 @@ walk(`${__dirname}/../data/location`, async (err, files) => {
         !fs.existsSync(slug_es) ? fail("File language does not exist, expected as", slug_es.green)
         : !fs.existsSync(slug_us) ? fail("File language does not exist, expected as", slug_us.green) 
         : null
-       
       }
     }
 
@@ -85,11 +98,11 @@ walk(`${__dirname}/../data/location`, async (err, files) => {
 
       //NOTE: warn if location not have any image
       if(location.images_box.images?.length < 5 || location.images_box.images?.length === undefined){
-        console.log("\nlocation needs images as soon as possible".yellow)
-        console.log("Images count:", location.images_box.images?.length, "\npath: ", _path, "\n")
+        // console.log("\nlocation needs images as soon as possible".yellow)
+        // console.log("Images count:", location.images_box.images?.length, "\npath: ", _path, "\n")
       }
 
-      front_matter_fields.forEach(obj => {
+      content_fields.forEach(obj => {
         let slugMatch = academySlug.some(el=> el === location.breathecode_location_slug)
 
         // NOTE: Uncoment when all location have correct images
@@ -100,6 +113,32 @@ walk(`${__dirname}/../data/location`, async (err, files) => {
         else{
           if(obj["type"] === "string"){
             if(obj["mandatory"] === true && slugMatch !== true && (location[obj["key"]] !== _slug)) fail(`\n\nInvalid mandatory prop ${obj["key"]} on ${_path} expected: ${location[obj["key"]].yellow} ${"match with".red} ${_slug.yellow}\n\n`)
+          }
+        }
+      })
+
+      await locations_fields.forEach(obj => {
+        if(!meta_keys.includes(obj["key"]) && obj["mandatory"] === true) warn(`Missing prop ${obj["key"]} from location on ${_path}`)
+        else{
+          if(obj["type"] === "string" && i%2 === 0){
+            const verifyMatch = async (arr) => {
+              let currentKey = Object.keys(arr)[0]
+              // console.log(arr[currentKey][0])
+              for (let i = 0; i <= arr[currentKey].length; i ++) {
+                if(i%2 === 0 && arr[currentKey][i+1] !== undefined){
+
+                  await arr[currentKey][i] === arr[currentKey][i+1]
+                    ? null
+                    : fail(`❌ ERROR: key ${currentKey.yellow} trying match ${arr[currentKey][i].yellow} and ${arr[currentKey][i+1].yellow} in ${_files[i].split(".")[0]}.[es/us].yaml`)
+                }
+              }
+            }
+            verifyMatch({active_campaign_location_slug})
+            verifyMatch({city})
+            verifyMatch({phone})
+            verifyMatch({latitude})
+            verifyMatch({longitude})
+
           }
         }
       })
