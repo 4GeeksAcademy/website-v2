@@ -77,17 +77,7 @@ const Contact = (props) => {
                 display={`flex`}
                  >  
 
-                <H1
-                type="h1"
-                zIndex="5"
-                fontSize="13px"
-                lineHeight="16px"
-                fontWeight="700"
-                letterSpacing="0.05em"
-                color="#606060"
-                >Coding Bootcamp</H1>
-
-                <H2 type="h2" zIndex="5" fontSize="48px" lineHeight="60px" margin="16px 0px 19px 0px">{yml.greetings}<br/>{yml.tagline}</H2>
+                <H2 type="h1" zIndex="5" fontSize="48px" lineHeight="60px" margin="16px 0px 19px 0px">{yml.greetings}<br/>{yml.tagline}</H2>
                 <Paragraph zIndex="5" padding_sm="0 35px" padding_tablet="0 12em" padding_md="0 30%" padding="0 5%" >{yml.sub_heading} 
                 <Link to={`/${yml.fields.lang}/${yml.pathFAQ}`} style={{color: "#52a6d1"}}> {yml.sub_headingFAQ}</Link>
                 </Paragraph>

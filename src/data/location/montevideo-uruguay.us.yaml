@@ -1,7 +1,7 @@
 meta_info:
   slug: "coding-bootcamp-uruguay"
   title: "4Geeks Academy in Uruguay, Monte Video"
-  position: 5
+  position: 38
   description: "Get to know here all about our coding bootcamp campus in Uruguay, Monte Video of 4Geeks Academy"
   image: ""
   keywords: ""
@@ -210,12 +210,15 @@ zip_code: ""
 state: ""
 country: "Uruguay"
 socials:
-  - social_name: "Facebook"
-    social_link: "https://www.facebook.com/4geeksacademy"
-  - social_name: "Twitter"
-    social_link: "https://www.twitter.com/4geeksacademy"
-  - social_name: "Instagram"
-    social_link: "https://www.instagram.com/4geeksacademy"
+  - name: "Facebook"
+    icon: "facebook"
+    link: "https://www.facebook.com/4geeksacademy"
+  - name: "Twitter"
+    icon: "twitter"
+    link: "https://www.twitter.com/4geeksacademy"
+  - name: "Instagram"
+    icon: "instagram"
+    link: "https://www.instagram.com/4geeksacademy"
 courses:
   - "Full-Time"
   - "Part-Time"

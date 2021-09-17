@@ -22,16 +22,18 @@ export const defaultSession = {
 
 export const locByLanguage = (locations, languageToFilter) => {
     if(languageToFilter == "en") languageToFilter = "us";
-
+    
     let repeated = [];
-    return locations.nodes.filter(l => {
+    const locs = locations.nodes.filter(l => {
         const [ name, _lang ] = l.fields.file_name.split(".");
-
+        
         //filter repetead locations and only focuse on the desired language
         if(_lang !== languageToFilter || repeated.includes(name)) return false;
         repeated.push(name);
         return true;
     }).map(l => locations.edges.find(loc => loc.node.meta_info.slug === l.fields.slug).node);
+    
+    return locs;
 }
 
  /*  removeStorage: removes a key from localStorage and its sibling expiracy key

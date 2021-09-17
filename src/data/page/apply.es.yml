@@ -24,7 +24,7 @@ left:
     last_name: Apellidos
     email: "Email"
     phone: "Móvil"
-  locations_title: "Selecciona una sede"
+  locations_title: "Selecciona una sede donde estudiar"
   course_title:
     open: "¿Qué programa quisieras estudiar?"
     close: "Selecciona un programa"

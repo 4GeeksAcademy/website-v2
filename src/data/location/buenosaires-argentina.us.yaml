@@ -1,7 +1,7 @@
 meta_info:
   slug: "coding-bootcamp-argentina-buenos-aires"
   title: "4Geeks Academy in Argentina, Buenos Aires"
-  position: 5
+  position: 33
   description: "Get to know here all about our coding bootcamp campus in Argentina, Buenos Aires of 4Geeks Academy"
   image: ""
   keywords: ""
@@ -210,12 +210,15 @@ zip_code: ""
 state: ""
 country: "Argentina"
 socials:
-  - social_name: "Facebook"
-    social_link: "https://www.facebook.com/4geeksacademy"
-  - social_name: "Twitter"
-    social_link: "https://www.twitter.com/4geeksacademy"
-  - social_name: "Instagram"
-    social_link: "https://www.instagram.com/4geeksacademy"
+  - name: "Facebook"
+    icon: "facebook"
+    link: "https://www.facebook.com/4geeksacademy"
+  - name: "Twitter"
+    icon: "twitter"
+    link: "https://www.twitter.com/4geeksacademy"
+  - name: "Instagram"
+    icon: "instagram"
+    link: "https://www.instagram.com/4geeksacademy"
 courses:
   - "Full-Time"
   - "Part-Time"

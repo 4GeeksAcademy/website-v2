@@ -1,7 +1,7 @@
 meta_info:
   slug: "online-coding-bootcamp"
   title: "Online Coding Bootcamps"
-  position: 0
+  position: 30
   description: "Discover here all the online coding bootcamps taught by 4geeks Academy. Sign up today!"
   image: ""
   keywords: "null"
@@ -251,10 +251,23 @@ city: "Online"
 name: "Online/Remote"
 latitude: "10000.760158"
 longitude: "-800000.200154"
+phone: "+1 (786) 416-6640"
 address: "1801 SW 18th Road"
 zip_code: "33130"
 state: ""
 country: "Remote"
+
+socials:
+  - name: "Facebook"
+    icon: "facebook"
+    link: "https://www.facebook.com/4geeksacademy"
+  - name: "Twitter"
+    icon: "twitter"
+    link: "https://www.twitter.com/4geeksacademy"
+  - name: "Instagram"
+    icon: "instagram"
+    link: "https://www.instagram.com/4geeksacademy"
+
 courses:
   - "Full-Time"
   - "Part-Time"

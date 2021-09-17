@@ -11,8 +11,16 @@ intro: "Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vivamus sag
 status: "published"
 featured: "true"
 unlisted: "true"
-cluster: "learn-to-code"
+cluster: "learn-to-code" # topic clusters, each of them has a landing page
+redirects: [
+    #"/some/blog/path"
+]
 ---
 
-<!--call-to-action reiceves: {background, title, text, button_text, button_link} -->
+Some example text here.
+<!--
+    call-to-action receives: background, title, text, button_text, button_link 
+-->
 <call-to-action button_text="Ver programa" button_link="#" background="rgba(0, 151, 205, 0.15)" title="Impulsa tu carrera, gracias a la programación" text="Te invitamos a impulsa tu carrera, aprendiendo a programar con nuestro Programa Full Stack Developer."></call-to-action>
+
+Some other example text here

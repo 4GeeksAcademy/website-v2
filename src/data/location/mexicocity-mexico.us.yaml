@@ -1,7 +1,7 @@
 meta_info:
   slug: "coding-bootcamp-mexico"
   title: "4Geeks Academy in Mexico, Mexico City"
-  position: 5
+  position: 32
   description: "Get to know here all about our coding bootcamp campus in Mexico, Mexico City of 4Geeks Academy"
   image: ""
   keywords: ""
@@ -209,13 +209,17 @@ address: ""
 zip_code: ""
 state: ""
 country: "Mexico"
+phone: "(506) 8692 8372"
 socials:
-  - social_name: "Facebook"
-    social_link: "https://www.facebook.com/4geeksacademy"
-  - social_name: "Twitter"
-    social_link: "https://www.twitter.com/4geeksacademy"
-  - social_name: "Instagram"
-    social_link: "https://www.instagram.com/4geeksacademy"
+  - name: "Facebook"
+    icon: "facebook"
+    link: "https://www.facebook.com/4geeksacademy"
+  - name: "Twitter"
+    icon: "twitter"
+    link: "https://www.twitter.com/4geeksacademy"
+  - name: "Instagram"
+    icon: "instagram"
+    link: "https://www.instagram.com/4geeksacademy"
 courses:
   - "Full-Time"
   - "Part-Time"

@@ -1,27 +1,21 @@
 meta_info:
-  slug: "coding-bootcamp-miami"
-  title: "Miami Coding Bootcamp"
-  position: 1
-  description: "Get to know here all about our coding bootcamp campus in Miami, Florida of 4Geeks Academy"
+  slug: "coding-bootcamp-orlando"
+  title: "Orlando Coding Bootcamp"
+  position: 2
+  description: "Get to know here all about our coding bootcamp campus in Orlando, Florida of 4Geeks Academy"
   image: ""
   keywords: "null"
   redirects:
     [
-      "/locations",
-      "/miami",
-      "/us/location/downtown-miami",
-      "/location/downtown-miami",
-      "/us/coding-campus/downtown-miami",
-      "/coding-campus/coding-bootcamp-miami",
-      "/us/coding-bootcamp-miami",
+      "/orlando",
     ]
 
-seo_title: "Coding Bootcamp in Miami"
+seo_title: "Coding Bootcamp in Orlando"
 header:
-  tagline: "4Geeks Academy in Miami"
+  tagline: "4Geeks Academy in Orlando"
   paragraph: ""
   image: "../../../static/images/locations/miami-home.png"
-  alt: "4Geeks Academy online and in-person coding bootcamp in Miami, Florida"
+  alt: "4Geeks Academy online and in-person coding bootcamp in Orlando, Florida"
 
 badges:
   title: ""
@@ -29,14 +23,14 @@ badges:
  
 We are licensed by the USA F. Dep. of Education.
   
-Chosen as one of the top 35 coding bootcamps of the world and the top coding bootcamp in Miami according to SwitchUp.
+Chosen as one of the top 35 coding bootcamps of the world and the top coding bootcamp in Orlando according to SwitchUp.
 
 4Geeks Academy has been recognized as one of the top 10 coding bootcamps in the United States according to Newsweek.
 
 
 A community built for developers."
 news:
-  title: "4Geeks Academy Miami has been reviewed in:"
+  title: "4Geeks Academy Orlando has been reviewed in:"
 upcoming:
   no_dates_message: "There are currently no upcoming dates for this campus"
 button_header:
@@ -50,8 +44,8 @@ button:
   cohort_more_details_text: "DETAILS"
 
 info_box:
-  heading: "Find us in Miami"
-  address: "1801 SW 3rd Ave #100, Miami, FL 33129"
+  heading: "Find us in Orlando"
+  address: "37 N Orange Ave, Orlando, FL 32801"
   iframeMapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1126.521243034489!2d-80.20142868794088!3d25.759937884725943!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b153865e526d%3A0xf884fb3f86a9c7db!2s4Geeks%20Academy!5e0!3m2!1ses-419!2scl!4v1621010581768!5m2!1ses-419!2scl"
   contact_heading: "Contacts"
   phone: "(786) 416-6640"
@@ -60,18 +54,18 @@ info_box:
   alt: ""
 images_box:
   heading: "What you should know about this location: "
-  content: "Miami is one of the fastest growing tech ecosystems in the world. Join the #1 part-time Coding Bootcamp in Miami and become part of the best place to learn to code in Florida. \\n Career Support and Mentorship for our students is for life. Located in Brickell and 5 mins away from the Metro Mover (subway station). Our place is full of amenities, and close to everything. We have parking (free for students and members of the community), and we have a great terrace! Brickell is one of the most active areas in the city. The office is opened 24/7 during the week and on Saturday we host our famous 'Coding Weekends' when students and other developers gather to code all day with mentors, pizzas and drinks on the house!"
+  content: "Orlando is one of the fastest growing tech ecosystems in the world. Join the #1 part-time Coding Bootcamp in Orlando and become part of the best place to learn to code in Florida. \\n Career Support and Mentorship for our students is for life. Located in Brickell and 5 mins away from the Metro Mover (subway station). Our place is full of amenities, and close to everything. We have parking (free for students and members of the community), and we have a great terrace! Brickell is one of the most active areas in the city. The office is opened 24/7 during the week and on Saturday we host our famous 'Coding Weekends' when students and other developers gather to code all day with mentors, pizzas and drinks on the house!"
   images:
     - path: "../../../static/images/locations/miami-loc.jpg"
-      alt: "miami-sunset"
+      alt: "4Geeks Miami Sunset"
     - path: "../../../static/images/locations/miami-people2.jpeg"
-      alt: "4Geeeks miami room"
+      alt: "4Geeeks Orlando room"
     - path: "../../../static/images/locations/miami-people.jpeg"
-      alt: "4Geeeks miami day"
+      alt: "4Geeeks Orlando day"
     - path: "../../../static/images/locations/miami-old.jpg"
-      alt: "4Geeeks miami location"
+      alt: "4Geeeks Orlando location"
     - path: "../../../static/images/locations/miami-old2.jpg"
-      alt: "4Geeeks miami lab"
+      alt: "4Geeeks Orlando lab"
 
 ## HEADING SECTION
 
@@ -343,7 +337,7 @@ prices:
           sub_heading: ""
         content:
           price: "Full-Time modality is not available"
-          price_info: "Downtown - Miami"
+          price_info: "Orlando"
         button:
           button_text: "Apply another courses"
 
@@ -440,22 +434,22 @@ prices:
           sub_heading: ""
         content:
           price: "Full-Time modality is not available"
-          price_info: "Downtown - Miami"
+          price_info: "Orlando"
         button:
           button_text: "Apply another courses"
 
-active_campaign_location_slug: "downtown-miami"
-breathecode_location_slug: "downtown-miami"
+active_campaign_location_slug: "orlando"
+breathecode_location_slug: "orlando"
 gdpr_compliant: false # do we need to ask for permision?
 in_person_available: true # important to accept in-person applicants
 
-city: "Miami"
-name: "Miami, USA"
-latitude: "25.760158"
-longitude: "-80.200154"
+city: "Orlando"
+name: "Orlando, USA"
+latitude: "28.538336"
+longitude: "-81.379234"
 phone: "+1 (786) 416-6640"
-address: "1801 SW 3rd Ave #100"
-zip_code: "33130"
+address: "37 N Orange Ave"
+zip_code: "32801"
 state: "Florida"
 country: "USA"
 socials:
@@ -475,7 +469,7 @@ courses:
   - "Full-Time"
   - "Part-Time"
 flag_icon: ""
-value: "Miami"
+value: "Orlando"
 defaultLanguage: "us" # All lead marketing communications will arrive on this language
 
 documents:

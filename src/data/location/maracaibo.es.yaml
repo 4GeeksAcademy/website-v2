@@ -5,7 +5,7 @@ meta_info:
   image: ""
   # it will not show up on the applications forms
   unlisted: true
-  position: 21
+  position: 41
   keywords: "Coding bootcamp Maracaibo"
   redirects: ["/es/location/maracaibo-venezuela"]
 
@@ -192,12 +192,15 @@ zip_code: ""
 state: ""
 country: "Venezuela"
 socials:
-  - social_name: "Facebook"
-    social_link: "https://www.facebook.com/4geeksacademyve"
-  - social_name: "Twitter"
-    social_link: "https://www.twitter.com/4geeksacademyve"
-  - social_name: "Instagram"
-    social_link: "https://www.instagram.com/4geeksacademyve"
+  - name: "Facebook"
+    icon: "facebook"
+    link: "https://www.facebook.com/4geeksacademyve"
+  - name: "Twitter"
+    icon: "twitter"
+    link: "https://www.twitter.com/4geeksacademyve"
+  - name: "Instagram"
+    icon: "instagram"
+    link: "https://www.instagram.com/4geeksacademyve"
 courses:
   - "Full-Time"
   - "Part-Time"

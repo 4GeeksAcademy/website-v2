@@ -53,7 +53,7 @@ const Location = ({data, pageContext, yml}) => {
   return (<>
     <GridContainerWithImage padding="75px 0 0 0" padding_tablet="0 0 20px 0" columns_tablet="14" margin="70px 0 0 0" margin_tablet="100px 0 0 0">
       <Div flexDirection="column" alignItems="center" alignItems_tablet="start" justifyContent_tablet="start" padding_tablet="70px 0 0 0" gridColumn_tablet="1 / 7">
-        <H1 textAlign_tablet="left" margin="0 0 11px 0" color="#606060">{yml.seo_title}</H1>
+        <H1 type="h1" textAlign_tablet="left" margin="0 0 11px 0" color="#606060">{yml.seo_title}</H1>
         <H2 textAlign_tablet="left" fontSize="50px" lineHeight="60px">{`${yml.header.tagline}`}</H2>
         <Paragraph textAlign_tablet="left" margin="26px 0">{yml.info_box.address} </Paragraph>
         <Paragraph textAlign_tablet="left" >{yml.info_box.phone} </Paragraph>

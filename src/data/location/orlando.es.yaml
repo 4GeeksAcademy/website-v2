@@ -1,18 +1,20 @@
 meta_info:
-  slug: "bootcamp-programacion-miami"
-  position: 1
-  title: "4Geeks Academy Miami - Bootcamp de programación en Miami, aprende a programar en Miami"
-  description: "Conoce aquí todo sobre nuestro campus de bootcamp de programación en Miami, Florida de 4Geeks Academy"
+  slug: "bootcamp-programacion-orlando"
+  position: 2
+  title: "4Geeks Academy Orlando - Bootcamp de programación en Orlando, aprende a programar en Orlando"
+  description: "Conoce aquí todo sobre nuestro campus de bootcamp de programación en Orlando, Florida de 4Geeks Academy"
   image: ""
   keywords: "null"
-  redirects: ["/es/location/downtown-miami-usa"]
+  redirects: [
+  #  "/es/location/orlando-usa"
+  ]
 
-seo_title: "Bootcamp de Programación en Miami"
+seo_title: "Bootcamp de Programación en Orlando"
 header:
-  tagline: "4Geeks Academy en Miami"
+  tagline: "4Geeks Academy en Orlando"
   paragraph: ""
   image: "../../../static/images/locations/miami-home.png"
-  alt: "4Geeks Academy modalidad online y presencial en Miami, Florida"
+  alt: "4Geeks Academy modalidad online y presencial en Orlando, Florida"
 button_header:
   button_text: Ver Programas
   button_link: "#programs"
@@ -29,19 +31,19 @@ badges:
  
 Estamos autorizados por el Departamento de Educación de Florida.
   
-Elegido como uno de los 35 mejores bootcamps de codificación del mundo y el mejor bootcamp de codificación en Miami según SwitchUp.
+Elegido como uno de los 35 mejores bootcamps de codificación del mundo y el mejor bootcamp de codificación en Orlando según SwitchUp.
 
 4Geeks Academy ha sido reconocida como uno de los 10 mejores bootcamps de codificación en los Estados Unidos según Newsweek.
 
 Una comunidad construida para desarrolladores."
 news:
-  title: "4Geeks Academy Miami en las noticias..."
+  title: "4Geeks Academy Orlando en las noticias..."
 upcoming:
   no_dates_message: "Actualmente no hay próximas fechas para este campus"
 
 info_box:
-  heading: "Encuéntranos en Miami"
-  address: "1801 SW 3rd Ave #100, Miami, FL 33129"
+  heading: "Encuéntranos en Orlando"
+  address: "37 N Orange Ave, Orlando, FL 32801"
   iframeMapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1126.521243034489!2d-80.20142868794088!3d25.759937884725943!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b153865e526d%3A0xf884fb3f86a9c7db!2s4Geeks%20Academy!5e0!3m2!1ses-419!2scl!4v1621010581768!5m2!1ses-419!2scl"
   contact_heading: "Contacts"
   phone: "(786) 416-6640"
@@ -50,18 +52,18 @@ info_box:
   alt: ""
 images_box:
   heading: "Qué deberías saber acerca de esta ubicacion: "
-  content: "Miami es una de las ciudades de mayor crecimiento tecnólogico, únete al Bootcamp de Programación part-time numero uno de la ciudad y la mayor comunidad de desarrolladores. \\n El Career Support y Student Support es de por vida.Estamos ubicados a corta distancia de la estación de metro y a tan solo 5 minutos de Brickell, una de las áreas más activas de la ciudad. Nuestra oficina está abierta 24/7 durante la semana y los sábados hacemos los famosos “Findes de Programación”, donde los estudiantes y otros programadores se juntan a programar con pizzas y tragos! Además, contamos con parqueo gratuito para los estudiantes!"
+  content: "Orlando es una de las ciudades de mayor crecimiento tecnólogico, únete al Bootcamp de Programación part-time numero uno de la ciudad y la mayor comunidad de desarrolladores. \\n El Career Support y Student Support es de por vida.Estamos ubicados a corta distancia de la estación de metro y a tan solo 5 minutos de Brickell, una de las áreas más activas de la ciudad. Nuestra oficina está abierta 24/7 durante la semana y los sábados hacemos los famosos “Findes de Programación”, donde los estudiantes y otros programadores se juntan a programar con pizzas y tragos! Además, contamos con parqueo gratuito para los estudiantes!"
   images:
     - path: "../../../static/images/locations/miami-loc.jpg"
-      alt: "miami-sunset"
+      alt: "4Geeks miami sunset"
     - path: "../../../static/images/locations/miami-people2.jpeg"
-      alt: "4Geeeks miami room"
+      alt: "4Geeeks Orlando room"
     - path: "../../../static/images/locations/miami-people.jpeg"
-      alt: "4Geeeks miami day"
+      alt: "4Geeeks Orlando day"
     - path: "../../../static/images/locations/miami-old.jpg"
-      alt: "4Geeeks miami location"
+      alt: "4Geeeks Orlando location"
     - path: "../../../static/images/locations/miami-old2.jpg"
-      alt: "4Geeeks miami lab"
+      alt: "4Geeeks Orlando lab"
 
 ## HEADING SECTION
 hasFinancialsOption: true
@@ -430,16 +432,16 @@ prices:
         button:
           button_text: "Aplicar a otros cursos"
 
-active_campaign_location_slug: "downtown-miami"
-breathecode_location_slug: "downtown-miami"
+active_campaign_location_slug: "orlando"
+breathecode_location_slug: "orlando"
 gdpr_compliant: false # do we need to ask for permision?
 in_person_available: true # important to accept in-person applicants
 
-city: "Miami"
-name: "Miami, USA"
-latitude: "25.760158"
-longitude: "-80.200154"
-address: "1801 SW 3rd Ave #100"
+city: "Orlando"
+name: "Orlando, USA"
+latitude: "28.538336"
+longitude: "-81.379234"
+address: "37 N Orange Ave"
 phone: "+1 (786) 416-6640"
 zip_code: "33130"
 state: "Florida"
@@ -467,5 +469,5 @@ location_office_image: ""
 location_office_image2: ""
 location_office_image3: ""
 should_know: ""
-value: "Miami"
+value: "Orlando"
 defaultLanguage: "us" # All lead marketing communications will arrive on this language

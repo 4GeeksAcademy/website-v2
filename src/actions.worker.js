@@ -79,6 +79,7 @@ const getClosestLoc = (locations, lat, lon) => {
             location = locations[i]
         }
     }
+    
     return location;
 }
 

@@ -1,27 +1,27 @@
 meta_info:
-  slug: scholarships-landing-jobs # <--- URL 4geeksacademy.com/us/landing/example
+  slug: scholarships-landing-jobs-brazil # <--- URL 4geeksacademy.com/us/landing/example
 
-  visibility: "hidden" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
+  visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   # This will show on social media when shared
   title: "Get your scholarship!"
-  description: "Programming has become an essential knowledge for your professional success, learn to program with 4Geeks Academy"
+  description: "Programming has become an essential skill to have for your professional success, learn to code with 4Geeks Academy"
   image: "/images/bg/remote.jpeg"
-  keywords: "Learn to program, 4Geeks academy, Learn programming, learn computer engineering"
+  keywords: "Learn to code, 4Geeks academy, Learn programming, learn computer engineering"
 
   template: "landing_nonav" # <--- choose your landing template
   redirects: ["/landing/becas-partner"] # <--- URL redirections to avoid 404 errors
 
   # Set a particular course or location to the landing page
   # this UTM fields will be also included in the CRM contact
-  utm_course: ["full-stack", "software-engineering"]
+  utm_course: ["full-stack", "machine-learning-engineering"]
   utm_location: europe
-  automation: request_more_info #optional, this is the default value
-  tag: soft #optional, this is the default value
+  automation: strong #optional, this is the default value
+  tag: website-lead #optional, this is the default value
 
 navbar:
   buttonText: "Apply now"
-  # url accepts: relative(/apply), absolute(https://google.com) or id(#componentName)
-  url: "#bottom"
+  buttonUrl: "#bottom" # url accepts: relative(/apply), absolute(https://google.com) or id(#componentName)
+  logoUrl: "#"
 
 form:
   # posible fields: "first_name", "last_name", "full_name", "phone", "email"
@@ -44,11 +44,11 @@ features:
 
   #                                         up   left down  right
   styles: '{ "fontSize": "15px", "margin": "10px 0px 10px 0px" }'
-  text: Landing Jobs offers more than €1,000,000 in Scholarships to study Web Development at 4Geeks. The minimum scholarship is 30% and will be awarded based on the result of the selection process. If you want to start your career as a junior programmer or push it forward and become a senior developer, don't miss out on this opportunity.
+  text: Landing Jobs is offering more than €1,000,000 in Scholarships to study Web Development at 4Geeks Academy. The minimum scholarship is 30% and they will be awarded based on the results of the selection process. Whether you want to start your career as a Junior programmer or upskill  and become a Senior Developer, don't miss out on this amazing opportunity.
   bullets:
     - 300 scholarships in total, most of them greater than 50%
-    - Fullstack (initiation) and Software Engineering (advanced) courses
-    - Full-time and part-time format
+    - Ful-Stack Developer (Level 1) and AI/Machine Learning programs
+    - Full-Time and Part-Time modality
 
 follow_bar:
   position: "top" # top, bottom, hidden
@@ -70,16 +70,16 @@ follow_bar:
 #
 badges:
   position: 1 # It's the position of the component that will be rendered first
-  heading: "4Geeks Academy has awards and recognitions that validate its excellence"
+  heading: "4Geeks Academy has awards and recognitions that validate it's excellence"
 
 about4Geeks:
   position: 2
   heading: Flexible and intensive education
-  sub_heading: "More than 400 hours of practical learning (exercises, projects). You will improve your skills to be able to face selection processes and find a job as a junior or senior developer."
+  sub_heading: "More than 400 hours of practical learning (exercises, projects). You will be able to improve your skills in order to face interviews and different selection processes that will allow you to find a job as a Junior or Senior Developer."
   list:
-    - title: "Lifetime Professional Support"
+    - title: "Lifetime Career Support"
     - title: "Financial options to complement your scholarship"
-    - title: "Ratio 1:5 teacher student. Unlimited 1 to 1 mentoring"
+    - title: "Ratio 1:5 teacher student. Unlimited 1 on 1 mentoring"
     - title: "Preparation for interviews and selection processes"
   paragraph: ""
   button_text: "Apply for a scholarship"
@@ -91,7 +91,7 @@ iconogram:
   position: 3
   icons:
   - icon: "touch"
-    title: Apply for your scholarship before October 8th
+    title: Apply for your scholarship before October 8th, 2021
   - icon: "receive_mail"
     title: You will receive an email with all the information and a logic test 
   - icon: "talk"
@@ -102,7 +102,7 @@ iconogram:
 who_is_hiring:
   position: 4
   heading: "OUR STUDENTS WORK AT"
-  sub_heading: "Get a job in less than 3 months thanks to our growing network of more than 500 technology companies. Access national and international offers and a community of more than 2000 graduates"
+  sub_heading: "Get a job in less than 3 months thanks to our growing network of more than 500 technology companies. Access to national and international offers and a community of more than 2000 graduates"
   featured:
     - name: "Facebook"
       image: "../../../static/images/partner/facebook.png"
@@ -114,24 +114,24 @@ who_is_hiring:
 choose_your_program:
   position: 5
   title: Our Programs
-  paragraph: Programs in full-time or part-time format with live classes taught by experts
+  paragraph: Programs in Full-Time or Part-Time modality with live classes taught by experts
   programs:
   - title: "Full Stack Developer"
-    sub_title: "Nivel 1"
+    sub_title: "Level 1"
     icon: "fullstack"
     description: |
-      From 0 to becoming a Fullstack Jr. programmer, you will work with HTML5, CSS3, Bootstrap, JS, Reactjs, SQL, Python, Flask, REST API's, etc. to design and create responsive websites. You'll gain a solid foundation of front, back, database, distributed processes, and deployment with passionate instructors and an up-to-date, hands-on curriculum.
-      Available in part time and full time mode. Download <a href=https://storage.googleapis.com/4geeks-academy-website/syllabus/madrid-spain/Syllabus-Fullstack-2021-Espa%C3%B1a.pdf target=_blank>"here the syllabus"</a>.  
+      From 0 to becoming a Full-Stack Jr. programmer, you will work with HTML5, CSS3, Bootstrap, JS, Reactjs, SQL, Python, Flask, REST API's, etc. to design and create responsive websites. You'll gain a solid foundation of front, back, database, distributed processes, and deployment with passionate instructors and an up-to-date, hands-on syllabus.
+      Available Part-Time or Full-Time mode.   
     
     text_link: Apply for a scholarship
     link: "#" # moves to start position
     
-  - title: "Software Engineer"
-    sub_title: "Nivel 2"
-    icon: "software"
+  - title: "AI & Machine Learning"
+    sub_title: "Level 2"
+    icon: "machine"
     description: |
-      Delve to an advanced level in specific principles of computation and algorithms. Develop more skills by entering the world of highly scalable, native and distributed applications in the cloud. Take your career to the next level, create technology with a real impact on the world (perhaps the next unicorn), work at Fortune 500 companies and improve your salary. Available only in part-time mode. 
-      Download <a href=https://storage.googleapis.com/4geeks-academy-website/syllabus/madrid-spain/Syllabus-Fullstack-2021-Espa%C3%B1a.pdf target=_blank>"here the syllabus"</a>. 
+      Get trained by a renowned expert in A.I.; explore Machine Learning's fundamentals and Deep Learning with some of the most powerful technologies that truly scale intelligence for business. Practice with real-life business scenarios typical in business and review some of the tools used in the industry. Strategize and develop your A.I. following the lifecycle development from start to end, including deployment into production and maintenance with Privacy, Security, and Ethics. 
+
       
 
     text_link: Apply for a scholarship
@@ -163,10 +163,10 @@ components:
     # video: "B01-eTfgqqc"
     heading:
       text:
-        "Python, Java and Javascript"
+        "Python and Javascript"
         #           xl      lg      md      sm      xs
       font_size: ["50px", "50px", "50px", "50px", "50px"]
     content:
-      text: "Our programs are based on the use of Python, Java and Javascript. The reason? Java is the most widely used language in the world (by far). In the job market JavaScript has 26 times more job openings than Ruby on Rails. Python has 10 times more jobs than node.js.
+      text: "Our programs are based on the use of Python and Javascript. The reason? In the job market JavaScript has 26 times more job openings than Ruby on Rails. Python has 10 times more jobs than node.js.
       Other tools that you will also learn to use in our programs are: GitHub, Git, Redux, Amazon Web Services, etc."
       font_size: ["16px"]

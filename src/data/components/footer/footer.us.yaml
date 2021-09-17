@@ -38,9 +38,9 @@ footer:
       - name: "Full Stack Developer"
         link: "/us/coding-bootcamps/part-time-full-stack-developer"
       - name: "Software Engineer"
-        link: ""
-      - name: "Online"
-        link: ""
+        link: "/us/coding-bootcamps/software-engineer-bootcamp"
+      - name: "AI/Machine Learning Engineering"
+        link: "/us/coding-bootcamps/machine-learning-engineering"
   - column_four:
     width: 2
     heading: "LOCATIONS"
@@ -49,6 +49,8 @@ footer:
         link: "/us/coding-campus/online-coding-bootcamp"
       - name: "Miami"
         link: "/us/coding-campus/coding-bootcamp-miami"
+      - name: "Orlando"
+        link: "/us/coding-campus/coding-bootcamp-orlando"
       - name: "Madrid"
         link: "/us/coding-campus/coding-bootcamp-madrid"
       - name: "Chile"

@@ -1,7 +1,7 @@
 meta_info:
   slug: "coding-bootcamp-costa-rica"
   title: "4Geeks Academy Costa Rica"
-  position: 5
+  position: 34
   description: "Get to know here all about our coding bootcamp campus in Costa Rica, San José of 4Geeks Academy"
   image: ""
   keywords: ""
@@ -209,12 +209,15 @@ zip_code: ""
 state: ""
 country: "Costa Rica"
 socials:
-  - social_name: "Facebook"
-    social_link: "https://www.facebook.com/4geeksacademycr"
-  - social_name: "Twitter"
-    social_link: "https://www.twitter.com/4geeksacademycr"
-  - social_name: "Instagram"
-    social_link: "https://www.instagram.com/4geeksacademycr"
+  - name: "Facebook"
+    icon: "facebook"
+    link: "https://www.facebook.com/4geeksacademycr"
+  - name: "Twitter"
+    icon: "twitter"
+    link: "https://www.twitter.com/4geeksacademycr"
+  - name: "Instagram"
+    icon: "instagram"
+    link: "https://www.instagram.com/4geeksacademycr"
 courses:
   - "Full-Time"
   - "Part-Time"
