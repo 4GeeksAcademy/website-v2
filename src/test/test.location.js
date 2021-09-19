@@ -1,7 +1,7 @@
 const fs = require('fs');
 var colors = require('colors');
 const fetch = require('node-fetch');
-const { walk, loadYML, empty, fail, warn, success, localizeImage } = require('./_utils');
+const { walk, loadYML, empty, fail, warn, success, localizeImage, checkForLanguages } = require('./_utils');
 
 require('dotenv').config()
 
@@ -43,16 +43,6 @@ walk(`${__dirname}/../data/location`, async (err, files) => {
     }
   });
 
-  
-
-    // let academyData = null;
-    // const res = await fetch('https://breathecode.herokuapp.com/v1/admissions/academy') 
-    // if(res.status !== 200) fail(res.status + ': Unable to retreive academy API location Information: ', await res.json());
-    // else academyData = await res.json()
-
-    // if(!academyData || !Array.isArray(academyData)) fail("Invalid academy data", academyData)
-    // academyData.map(el => academySlug.push(el.slug))
-
   const _files = files.filter(
     (f) =>
       (f.indexOf('.yml') > 1 || f.indexOf('.yaml') > 1) &&
@@ -61,42 +51,15 @@ walk(`${__dirname}/../data/location`, async (err, files) => {
   );
 
   let slugs = []
-  let active_campaign_location_slug = []
-  let city = []
-  let phone = []
-  let latitude = []
-  let longitude = []
 
   for (let i = 0; i < _files.length; i++) {
     const _path = _files[i];
     const doc = loadYML(_path);
-    const location = doc.yaml
-    
-    // TODO: remover await que no devuelvan promesas
     let _slug = _path.split(".")[0].substr(_path.lastIndexOf("/") +1)
     slugs.push(_slug)
-    // await active_campaign_location_slug.push(location.active_campaign_location_slug)
-    // await city.push(location.city)
-    // await phone.push(location.phone)
-    // await latitude.push(location.latitude)
-    // await longitude.push(location.longitude)
 
-    // ask if we already looped thru all the files
-    // TODO: No hay necesidad de usar este if si movemos este codigo debajo del for
-    if(slugs.length === _files.length){
-
-      // TODO: Crear una funcion CheckForLanguages con este codigo
-      let uniq_slug = slugs.filter((curr, prev, self) => self.indexOf(curr) === prev)
-      for (let i = 0; i < uniq_slug.length; i++) {
-        let slug_es = `${__dirname}/../data/location/${uniq_slug[i]}.es.yaml`
-        let slug_us = `${__dirname}/../data/location/${uniq_slug[i]}.us.yaml`
-
-        !fs.existsSync(slug_es) ? fail("File language does not exist, expected as", slug_es.green)
-        : !fs.existsSync(slug_us) ? fail("File language does not exist, expected as", slug_us.green) 
-        : null
-      }
-    }
-
+    // It ask if we already looped thru all the files
+    if(slugs.length === _files.length) checkForLanguages(slugs, 'location')
 
     try {
       const location = doc.yaml
@@ -118,8 +81,8 @@ walk(`${__dirname}/../data/location`, async (err, files) => {
 
       //NOTE: warn if location not have any image
       if(location.images_box.images?.length < 5 || location.images_box.images?.length === undefined){
-        // console.log("\nlocation needs images as soon as possible".yellow)
-        // console.log("Images count:", location.images_box.images?.length, "\npath: ", _path, "\n")
+        console.log("\nlocation needs images as soon as possible".yellow)
+        console.log("Images count:", location.images_box.images?.length, "\npath: ", _path, "\n")
       }
 
       content_fields.forEach(obj => {
@@ -140,33 +103,14 @@ walk(`${__dirname}/../data/location`, async (err, files) => {
       locations_fields.forEach(field => {
         if(!meta_keys.includes(field["key"]) && field["mandatory"] === true) warn(`Missing prop ${field["key"]} from location on ${_path}`)
         Object.keys(allLocations['us']).forEach(slug => {
-          const location_es = allLocations['es'][slug]['yaml'][field["key"]]
-          const location_us = allLocations['us'][slug]['yaml'][field["key"]]
-          const path = allLocations['es'][slug]['filePath']
-          // console.log("FIELD:::", field["key"])
-          // console.log(`runing ${field["key"]}, ${allLocations['es'][slug]['lang']} ${location_es} === ${allLocations['us'][slug]['lang']} ${location_us}\nin::: ${allLocations['us'][slug]['filePath']} or \n${allLocations['es'][slug]['filePath']}\n\n`)
-          console.log(`runing ${field["key"]}`,location_es === location_us, 'on PATH\n', path, '\n\n')
-          
-          // console.log("FIELDS:::", allLocations['es'][slug]['filePath'])
+          const location_fields_es = allLocations['es'][slug]['yaml'][field["key"]]
+          const location_fields_us = allLocations['us'][slug]['yaml'][field["key"]]
+          const path = allLocations['es'][slug].filePath
+          if(location_fields_es !== location_fields_us){
+            fail(`❌ ERROR: key ${field["key"].yellow} trying match ${location_fields_es.yellow} with ${location_fields_us.yellow} in ${path}.yaml\n`)
+          }
         })
-
-        // if(Object.keys(allLocations['us'])){
-        //   if(allLocations['us'][slug][field] !== allLocations['es'][slug][field]){
-        //     fail(`❌ ERROR: key ${field.yellow} trying match ${allLocations['us'][slug][field].yellow} and ${allLocations['es'][slug][field].yellow} in ${allLocations['us'][slug].filePath}.yaml`)
-        //   }
-        // }
       })
-
-
-      // locations_fields.forEach(field => {
-      //   if(!meta_keys.includes(obj["key"]) && obj["mandatory"] === true) warn(`Missing prop ${obj["key"]} from location on ${_path}`)
-          // if(Object.keys(allLocations['us']).forEach(slug => {
-      //       if(allLocations['us'][slug][field] !== allLocations['es'][slug][field]){
-      //         fail(`❌ ERROR: key ${field.yellow} trying match ${allLocations['us'][slug][field].yellow} and ${allLocations['es'][slug][field].yellow} in ${allLocations['us'][slug].filePath}.yaml`)
-      //       }
-      //     }))
-      //   })
-
     } catch (error) {
       console.error(`Error on file: ${_path}`.red);
       fail(error.message || error);

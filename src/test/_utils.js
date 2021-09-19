@@ -197,4 +197,17 @@ const localizeImage = async (content, type, _path, folder_of_images) => {
   }
 }
 
-module.exports = { walk, loadYML, loadMD, empty, fail, warn, success, parsePathImage, localizeImage, validateObjectProperties }
+// It only accepts array([]) of slugs and location name(string)
+const checkForLanguages = (slugs, folder_name) => {
+  let uniq_slug = slugs.filter((curr, prev, self) => self.indexOf(curr) === prev)
+  for (let i = 0; i < uniq_slug.length; i++) {
+    let slug_es = `${__dirname}/../data/${folder_name}/${uniq_slug[i]}.es.yaml`
+    let slug_us = `${__dirname}/../data/${folder_name}/${uniq_slug[i]}.us.yaml`
+
+    !fs.existsSync(slug_es) ? fail("File language does not exist, expected as", slug_es.green)
+    : !fs.existsSync(slug_us) ? fail("File language does not exist, expected as", slug_us.green) 
+    : null
+  }
+}
+
+module.exports = { walk, loadYML, loadMD, empty, fail, warn, success, parsePathImage, localizeImage, validateObjectProperties, checkForLanguages }
