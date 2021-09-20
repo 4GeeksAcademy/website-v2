@@ -5,7 +5,7 @@ meta_info:
   image: ""
   # it will not show up on the applications forms
   unlisted: true
-  position: 21
+  position: 41
   keywords: "Coding bootcamp Maracaibo"
   redirects: ["/es/location/maracaibo-venezuela"]
 

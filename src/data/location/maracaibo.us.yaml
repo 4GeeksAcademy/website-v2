@@ -6,7 +6,7 @@ meta_info:
   template: "location" # js component that will be handling the rendering
   keywords: ""
   # will be last in the priority of location
-  position: 21
+  position: 41
   # it will not show up on the applications forms
   unlisted: true
   redirects: ["/us/location/maracaibo", "/location/maracaibo"]
