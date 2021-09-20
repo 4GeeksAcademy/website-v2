@@ -84,7 +84,7 @@ const Calendar = (props) => {
       let events = await getEvents();
       let syllabus = []
       for(let i in cohorts) {
-        let name = cohorts[i].syllabus?.certificate?.name
+        let name = cohorts[i].syllabus_version.name
         name === "Full-Stack Software Developer FT" ? name = modality["full_time"] : name
 
         name === "Full-Stack Software Developer" ? name = modality["part_time"] : name      
@@ -130,7 +130,6 @@ const Calendar = (props) => {
         background={Colors.veryLightBlue}
         position="relative"
         height="auto"
-        // height_tablet="auto"
         margin="95px 0 0 0"
         padding_tablet="70px 0 0 0"
         padding="70px 0 0 0"
