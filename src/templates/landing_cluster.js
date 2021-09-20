@@ -27,6 +27,10 @@ export default function Template (props) {
   const sanitizedData = markdownAST?.filter(el => el.type !== "h1")
   const filteredH2 = markdownAST?.filter(el => el.type === "h2")
 
+
+  console.log("markdownAST:::", markdownAST)
+  console.log("FILTERED_H2:::", filteredH2)
+
   //Returns month's name
   function GetMonth (n) {
     let monthsEs = ["", "ENE", "FEB", "MAR", "ABR", "MAY", "JUN", "JUL", "AGO", "SEP", "OCT", "NOV", "DIC"]
@@ -34,7 +38,7 @@ export default function Template (props) {
 
     let mes = "";
 
-    if (pageContext == "es")
+    if (pageContext.lang == "es")
       mes = monthsEs[n];
     else
       mes = monthsUs[n];
@@ -89,6 +93,7 @@ export default function Template (props) {
                 {
                   filteredH2.map((heading) => {
                     const {id, children} = heading.props
+                    console.log("TEST_H2:::", children[1])
                     return (
                       <Paragraph
                         className="sidebar-content"
@@ -99,7 +104,7 @@ export default function Template (props) {
                         textAlign_tablet="left"
                       >
                         <Link to={ `#${id}` || "#"}>
-                          {children[0].props?.children?.toString().toUpperCase() || children[0].toString().toUpperCase()}
+                          {children[1].props?.children?.toString().toUpperCase() || children[1].toString().toUpperCase()}
                         </Link >
                       </Paragraph>
                     )}

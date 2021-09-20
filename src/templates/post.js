@@ -44,7 +44,7 @@ export default function Template (props) {
 
     let mes = "";
 
-    if (pageContext == "es")
+    if (pageContext.lang == "es")
       mes = monthsEs[n];
     else
       mes = monthsUs[n];
@@ -75,7 +75,7 @@ export default function Template (props) {
 
     let res = "";
 
-    if (pageContext == "es")
+    if (pageContext.lang == "es")
       //mes dia, año
       res = mesName + " " + day + ", " + year
     else
