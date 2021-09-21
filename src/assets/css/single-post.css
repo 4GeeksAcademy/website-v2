@@ -1,9 +1,14 @@
-.heading-link.after{
-    padding-left: 10px;
+.heading-link.before{
+    opacity: 0.6;
+    margin: 0 10px;
+    padding-right: 15px;
+    transition: opacity .35s ease;
+    top: 26px;
+    left: -5px;
     fill: gray;
 }
-.heading-link.after:hover{
-    padding-left: 10px;
+.heading-link.before:hover{
+    opacity: 1;
     fill: rgb(0 151 206);
 }
 
@@ -36,7 +41,7 @@
 .single-post h2, .single-event h2{
     font-size: 36px;
     margin: 0 0 20px 0;
-    text-align: center;
+    text-align: left;
     position: relative;
     padding: 30px 0 20px 0px;
     border-bottom: 1px solid #C4C4C4;
