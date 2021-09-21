@@ -3,6 +3,7 @@ author: "4GeeksAcademy"
 date: "2016-03-18T00:00:00+00:00"
 excerpt: "Companies are looking for people with coding skills. Because they need people capable of understanding how a tech-related company works"
 slug: "what-kinds-of-jobs-do-coding-bootcamp-graduates-find-2"
+template: "post" # post or landing_post
 title: "What kinds of jobs do coding bootcamp graduates find?"
 image: "https://4GeeksAcademy.com/wp-content/uploads/2017/08/you-are-hired-1024x465.png"
 image_alt: ""

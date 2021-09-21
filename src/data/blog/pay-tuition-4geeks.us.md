@@ -3,6 +3,7 @@ author: "MRiciglianoC"
 date: "2017-10-24T16:29:31+00:00"
 excerpt: "Education has always been a matter of “How to Pay?”, “Do I qualify?”, Am I going to be accepted?”, and then, again “How do I Pay that tuition?”."
 slug: "pay-tuition-4geeks"
+template: "post" # post or landing_post
 title: "How to Pay your tuition at 4Geeks"
 image: "https://4GeeksAcademy.com/wp-content/uploads/2017/10/Henry-Adams-said-.jpg"
 image_alt: ""

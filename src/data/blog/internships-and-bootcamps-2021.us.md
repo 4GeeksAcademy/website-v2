@@ -3,6 +3,7 @@ author: "anzolagi"
 date: "2021-02-24T05:29:14+00:00"
 excerpt: "Find the key opportunities that internships and bootcamps are have to prepare your company for challenging market demands in a post-pandemic world"
 slug: "internships-bootcamps-2021"
+template: "post" # post or landing_post
 title: "Internships and bootcamps: the keys to prepare tech companies for 2021 demands"
 image: "https://github.com/marcelovaldebenito/website-v2/blob/master/static/images/blog/internship.jpg?raw=true"
 image_alt: "estudiantes aprendiendo código en un bootcamp"

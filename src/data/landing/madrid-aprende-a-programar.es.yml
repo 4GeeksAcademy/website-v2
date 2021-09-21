@@ -14,8 +14,8 @@ meta_info:
   # this UTM fields will be also included in the CRM contact
   utm_course: ["full-stack"]
   utm_location: madrid-spain
-  automation: request_more_info #optional, this is the default value
-  tag: soft #optional, this is the default value
+  automation: soft #optional, this is the default value
+  tag: request_more_info #optional, this is the default value
 
 form:
   # posible fields: "first_name", "last_name", "full_name", "phone", "email"
@@ -148,9 +148,10 @@ components:
         "Todo lo hacemos con pasión y con la mirada puesta en tu desarrollo profesional."
         #xl      lg     md     sm    xs
       font_size: ["40px", "34px", "34px", "25px", "20px"]
-    content:
-      text: " "
-      font_size: ["16px"]
+    # content:
+    #   text: ""
+    #   # font_size: ["16px"]
+
 # why_python:
 #   position: 7
 #   heading: "¿Porqué enseñamos Python?" # optional or set to white space to hide

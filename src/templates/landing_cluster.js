@@ -1,0 +1,163 @@
+import React, {useContext} from 'react'
+import {Paragraph} from '../new_components/Heading'
+import {RoundImage, Colors, Button, Link} from '../new_components/Styling'
+import CallToAction from '../new_components/CallToAction'
+import Layout from '../global/Layout'
+import "../assets/css/single-post.css"
+import rehypeReact from "rehype-react"
+
+//FROM new_components
+import {GridContainer, Div, Header} from '../new_components/Sections'
+
+export default function Template (props) {
+  const {data, pageContext} = props;
+  const post = data.markdownRemark;
+  const lang = pageContext.lang
+
+  const renderAst = new rehypeReact({
+    createElement: React.createElement,
+    components: { 
+      "button": Button,
+      "call-to-action": CallToAction,
+    }
+  }).Compiler
+
+  // mdAST is a specification for representing Markdown in a syntax tree
+  const markdownAST = renderAst(post.htmlAst).props.children
+  const sanitizedData = markdownAST?.filter(el => el.type !== "h1")
+  const filteredH2 = markdownAST?.filter(el => el.type === "h2")
+
+
+  console.log("markdownAST:::", markdownAST)
+  console.log("FILTERED_H2:::", filteredH2)
+
+  //Returns month's name
+  function GetMonth (n) {
+    let monthsEs = ["", "ENE", "FEB", "MAR", "ABR", "MAY", "JUN", "JUL", "AGO", "SEP", "OCT", "NOV", "DIC"]
+    let monthsUs = ["", "JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"]
+
+    let mes = "";
+
+    if (pageContext.lang == "es")
+      mes = monthsEs[n];
+    else
+      mes = monthsUs[n];
+
+    return mes;
+  }
+
+  return (
+
+    <>
+      <Layout type="post" seo={data.markdownRemark.frontmatter} context={pageContext}>
+
+        <Header
+          hideArrowKey
+          padding="90px 0 70px 0"
+          padding_tablet="90px 0 70px 0"
+          paddingParagraph="0px 14% 0px 0"   
+          textAlign_tablet="left"        
+          seo_title={post.frontmatter.cluster}
+          title={post.frontmatter.title}
+          paragraph={post.frontmatter.excerpt}
+          display_mobile="flex"
+          svg_image={
+            <RoundImage border="0rem"
+              width="100%"
+              height="320px"
+              width_tablet="390px"
+              width_md="520px"
+              width_lg="630px"
+              bsize="cover"
+              position="right"
+              url={post.frontmatter.image} />}
+          background={Colors.lightYellow}
+        />
+
+        {/* Container */}
+        <GridContainer containerColumns_tablet={filteredH2.length >= 1 ? "0fr repeat(12, 1fr) 0fr" : "2fr repeat(12, 1fr) 2fr"} columns_tablet="1" gridColumn_tablet="4 / -4" columns="1" margin="0">  
+          <Div flexDirection="column" margin="30px 0 0 0" background={Colors.white}>
+            <Div 
+                className="single-post" 
+                flexDirection="Column" 
+            >
+              {sanitizedData}
+            </Div>
+          </Div>
+
+        {
+          filteredH2.length >= 1 &&
+          <Div gridColumn_tablet="4 ​/ span 1" margin="54px 0 0 0" display="none" display_md="flex" style={{position: "relative"}}>
+            <Div flexDirection="column" padding="0 30px" position="sticky" style={{boxShadow: "0px 2px 5px rgba(0, 0, 0, 0.1)", top: "85px"}} borderRadius="3px" border={`1px solid #e5e5e5`} width="250px" height="fit-content">
+              <Div margin="25px 0" flexDirection="column" justifyContent="space-around" gap="16px">
+                {
+                  filteredH2.map((heading) => {
+                    const {id, children} = heading.props
+                    console.log("TEST_H2:::", children[1])
+                    return (
+                      <Paragraph
+                        className="sidebar-content"
+                        letterSpacing="0.05em"
+                        key={id}
+                        fontSize="14px"
+                        textAlign="center"
+                        textAlign_tablet="left"
+                      >
+                        <Link to={ `#${id}` || "#"}>
+                          {children[1].props?.children?.toString().toUpperCase() || children[1].toString().toUpperCase()}
+                        </Link >
+                      </Paragraph>
+                    )}
+                  )
+                }
+                <Link style={{color: Colors.white}} to={lang === "us" ? '/us/apply' : '/es/aplica'}>
+                  <Button
+                    width="100%"
+                    fontSize="12px"
+                    background={Colors.blue}
+                    borderRadius=".25rem"
+                    padding="5px"
+                    flexDirection
+                    justifyContent="center"
+                    margin="14px 0 4px 0"
+                    color={Colors.white}
+                  >                    
+                    {lang === "us" ? 'APPLY NOW' : 'APLICA AHORA'}
+                  </Button>
+                </Link >
+              </Div>
+            </Div>
+          </Div>
+        }
+        </GridContainer>
+
+      </Layout>
+    </>
+  )
+}
+export const postQuery = graphql`
+query Landing_BlogPostBySlug($slug: String!){
+    markdownRemark(frontmatter: {slug: {eq: $slug}}){
+        html
+        htmlAst
+        frontmatter{
+            slug
+            title
+            author
+            date
+            excerpt
+            unlisted
+            image
+            cluster
+        }
+        fields{
+            readingTime {
+              text
+            }
+        }
+        
+    }
+}
+
+
+`

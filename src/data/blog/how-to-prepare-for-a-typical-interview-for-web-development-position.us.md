@@ -3,6 +3,7 @@ author: "4GeeksAcademy"
 date: "2016-03-04T04:48:24+00:00"
 excerpt: "Why do I feel so nervous when I plan to go to a job interview?  The truth is that these kinds of emotions keep me alert, and make me do my task."
 slug: "how-to-prepare-for-a-typical-interview-for-web-development-position"
+template: "post" # post or landing_post
 title: "My Job Interview"
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2016/03/jobinterview.jpeg"
 image_alt: ""

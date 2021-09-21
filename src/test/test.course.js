@@ -52,7 +52,7 @@ walk(`${__dirname}/../data/course`, async (err, files) => {
         if(!meta_keys.includes(obj["key"])) fail(`Missing prop ${obj["key"]} from course on ${_path}`)
         else{
           if(obj["type"] === "string"){
-            if(obj["mandatory"] === true && (course.meta_info[obj["key"]] !== _slug)) fail(`\n\nInvalid mandatory prop ${obj["key"]} on ${_path} expected: ${course.meta_info[obj["key"]].yellow} ${"match with".red} ${_slug.green} \n\n`)
+            if(obj["mandatory"] === true && (course.meta_info[obj["key"]] !== _slug)) fail(`\n\nInvalid mandatory prop ${obj["key"]} on ${_path} expected: ${course.meta_info[obj["key"]].yellow} ${"to match with".red} ${_slug.green} \n\n`)
           }
         }
       })

@@ -74,7 +74,7 @@ const Side = ({video, image, heading, content, button, bullets}) => {
             textAlign_tablet="left"
             lineHeight="40px"
             lineHeight_tablet="60px"
-            fontSize={h_xs || "30px"} fs_xl={h_xl} fontSize_md={h_md || "50px"} fontSize_sm={h_sm}
+            fontSize={h_xs || "30px"} fs_xl={h_xl} fontSize_md={h_md || "40px"} fontSize_sm={h_sm}
             margin="30px 0 20px 0" type="h1">{heading.text}</H2>
         }
         {content && 

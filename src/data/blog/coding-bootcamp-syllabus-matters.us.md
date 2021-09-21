@@ -3,6 +3,7 @@ author: "alesanchezr"
 date: "2017-11-04T00:33:50+00:00"
 excerpt: "The stack of technologies included in a Syllabus actually matters. It does, sorry. We all know that."
 slug: "coding-bootcamp-syllabus-matters"
+template: "post" # post or landing_post
 title: "The coding bootcamp syllabus matters"
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2017/11/POST-TECNOLOGIA-01.jpg"
 image_alt: ""

@@ -90,7 +90,6 @@ const createBlog = async ({actions, graphql}) => {
         redirects.push(`Redirect from ${args.fromPath} to ${args.toPath}`);
         createRedirect(args);
     }
-    const postTemplate = path.resolve('src/templates/post.js');
     const clusterTemplate = path.resolve("src/templates/clusters.js");
     const result = await graphql(`
     {
@@ -102,6 +101,7 @@ const createBlog = async ({actions, graphql}) => {
                     frontmatter{
                         title
                         slug
+                        template
                         author
                         date
                         status
@@ -128,89 +128,86 @@ const createBlog = async ({actions, graphql}) => {
     const posts = result.data.allMarkdownRemark.edges;
 
     posts.forEach(({node}) => {
+        const postTemplate = path.resolve(`src/templates/${node.frontmatter.template || "post"}.js`);
         console.log(`Creating post ${node.fields.pagePath}`);
+
+        // if a blog post has the "landing_cluster" template its not a real blog post, its more like a landing page meant as a topic cluster
+        // and it will not follow the same URL structure, landing_cluster's have a very unique URL.
         createPage({
-            path: node.fields.pagePath,
+            path: node.frontmatter.template != "landing_cluster" ? node.fields.pagePath : `/${node.fields.slug}`,
             component: postTemplate,
             context: {
                 ...node.fields,
             }
         });
 
-        // the old website had the blog posts with this path '/post-name' and we want now '/en/post/post-name'
-        _createRedirect({
-            fromPath: `/${node.fields.slug}`,
-            toPath: node.fields.pagePath,
-            redirectInBrowser: true,
-            isPermanent: true
-        });
-
-        if (node.fields.lang === "us") {
+        if(node.frontmatter.template != "landing_cluster"){
+            // the old website had the blog posts with this path '/post-name' and we want now '/<lang>/<cluster>/post-name'
             _createRedirect({
-                fromPath: `/en/${node.fields.template}/${node.fields.slug}`,
+                fromPath: `/${node.fields.slug}`,
+                toPath: node.fields.pagePath,
+                redirectInBrowser: true,
+                isPermanent: true
+            });
+    
+            console.log(`Redirect for post /us/post/${node.fields.slug}`);
+            _createRedirect({
+                fromPath: `/us/post/${node.fields.slug}`,
                 toPath: node.fields.pagePath,
                 redirectInBrowser: true,
                 isPermanent: true
             });
         }
-
-        _createRedirect({
-            fromPath: `/${node.fields.template}/${node.fields.slug}`,
-            toPath: node.fields.pagePath,
-            redirectInBrowser: true,
-            isPermanent: true
-        });
     });
-    // CLUSTERS:
 
-    let clusterUs = [];
-    let clusterEs = [];
-    // Iterate through each post, putting all found tags into `tags`
+    // Read redirect property from front-matter
     posts.forEach(({node}) => {
-        if (node.frontmatter.cluster) {
-            if (node.fields.lang === "us") {
-                clusterUs = clusterUs.concat(node.frontmatter.cluster);
-            } else {
-                clusterEs = clusterEs.concat(node.frontmatter.cluster);
-            }
+        if (node.frontmatter.redirects) {
+            node.frontmatter.redirects.forEach(path => {
+                if (typeof (path) !== "string") throw new Error(`The path in ${node.frontmatter.slug} is not a string: ${path}`);
+                if (!path || path === "") return;
+                path = path[0] !== '/' ? '/' + path : path; //and forward slash at the beginning of path
+                console.log(`Additional redirect ${path} => ${node.fields.pagePath}`)
+                _createRedirect({
+                    fromPath: path,
+                    toPath: node.fields.pagePath,
+                    redirectInBrowser: true,
+                    isPermanent: true
+                });
+            })
         }
     });
+
+    // CLUSTERS:
+    let clusters = {
+        us: [],
+        es: []
+    };
+    // Iterate through each post, putting all found tags into `tags`
+    posts.forEach(({node}) => {
+        if (node.frontmatter.cluster)
+            clusters[node.fields.lang] = clusters[node.fields.lang].concat(node.frontmatter.cluster)
+    });
     // Eliminate duplicate clusters
-    clusterUs = clusterUs.filter((value, index) => clusterUs.indexOf(value) === index)
-    clusterEs = clusterEs.filter((value, index) => clusterEs.indexOf(value) === index)
+    Object.keys(clusters).forEach(lang => clusters[lang] = clusters[lang].filter((value, index) => clusters[lang].indexOf(value) === index))
     // Make clusters pages
-    clusterUs.forEach(cluster => {
-        let file_name = `clusters.us`
-        let lang = "us";
-        let type = "page";
-        createPage({
-            path: `/us/blog/${cluster}/`,
-            component: clusterTemplate,
-            context: {
-                cluster,
-                file_name,
-                lang,
-                type
-            },
-        });
-    });
-    clusterEs.forEach(cluster => {
-        let file_name = `clusters.es`;
-        let lang = "es";
-        let type = "page";
-        createPage({
-            path: `/es/blog-en-espanol/${cluster}/`,
-            component: clusterTemplate,
-            context: {
-                cluster,
-                file_name,
-                lang,
-                type
-            },
-        });
-    });
-    //     return true;
-    // }
+    Object.keys(clusters).forEach(lang => 
+        clusters[lang].forEach(cluster => {
+            let file_name = `clusters.${lang}`
+            let type = "page";
+            createPage({
+                path: `/${lang}/blog/${cluster}/`,
+                component: clusterTemplate,
+                context: {
+                    cluster,
+                    file_name,
+                    lang,
+                    type
+                },
+            });
+        })
+    )
+    
     return true;
 }
 const createEntityPagesfromYml = async (entity, {graphql, actions}, extraFields = [], extraContext = null) => {

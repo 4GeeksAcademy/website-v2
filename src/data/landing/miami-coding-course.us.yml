@@ -15,8 +15,8 @@ meta_info:
   # this UTM fields will be also included in the CRM contact
   utm_course: ["full-stack"]
   utm_location: downtown-miami
-  automation: request_more_info #optional, this is the default value
-  tag: soft #optional, this is the default value
+  automation: soft #optional, this is the default value
+  tag: request_more_info #optional, this is the default value
 
 form:
   # posible fields: "first_name", "last_name", "full_name", "phone", "email"
@@ -137,11 +137,11 @@ components:
     layout: two_column_left
     image:
       src: "https://storage.googleapis.com/4geeks-academy-website/landing-pictures/testimonials.webp"
-    content:
+    heading:
       text:
         "86% of our graduates are now working in the field with an average entry salary of $50,000/yr"
-        #xl      lg     md     sm    xs
-      font_size: ["40px", "34px", "34px", "25px", "20px"]
+        #           xl      lg     md     sm    xs
+      font_size: ["40px", "34px"]
 # why_python:
 #   position: 7
 #   heading: "¿Porqué enseñamos Python?" # optional or set to white space to hide

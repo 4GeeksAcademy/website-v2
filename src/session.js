@@ -19,8 +19,9 @@ export default ({children}) => {
                 longitude
                 phone
                 socials{
-                  social_name
-                  social_link
+                  name
+                  icon
+                  link
                 }
                 country
                 defaultLanguage

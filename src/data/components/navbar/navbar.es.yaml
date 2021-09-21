@@ -69,6 +69,7 @@ navbar:
               link_to: "/es/alumnos-y-proyectos"
             # - title: "Testimonios"
             #   link_to: "/es/testimonios"
+  
   - name: "Academia"
     link: "/es/sobre-la-academia"
     sub_menu:
@@ -87,6 +88,7 @@ navbar:
               link_to: "/es/blog-en-espanol"
             - title: "Partners"
               link_to: "/es/alianzas"
+  
   - name: "Campus"
     link: "/partners"
     sub_menu:
@@ -119,6 +121,8 @@ navbar:
               link_to: "/es/coding-campus/bootcamp-programacion-costa-rica"
         - title: "-"
           sub_links:
+            - title: "Orlando, USA"
+              link_to: "/es/coding-campus/bootcamp-programacion-orlando"
             - title: "Colombia"
               link_to: "/es/coding-campus/bootcamp-programacion-colombia"
             - title: "México"
@@ -131,6 +135,7 @@ navbar:
               link_to: "/es/coding-campus/bootcamp-programacion-uruguay"
             - title: "Venezuela"
               link_to: "/es/coding-campus/bootcamp-programacion-venezuela"
+  
   - name: "Próximas Fechas"
     link: "/es/proximas-fechas"
 

@@ -84,17 +84,16 @@ const Calendar = (props) => {
       let events = await getEvents();
       let syllabus = []
       for(let i in cohorts) {
-        let name = cohorts[i].syllabus?.certificate?.name
+        let name = cohorts[i].syllabus_version.name
         name === "Full-Stack Software Developer FT" ? name = modality["full_time"] : name
 
         name === "Full-Stack Software Developer" ? name = modality["part_time"] : name      
-        // console.log("NAME:", name)
+
         syllabus.push(name) 
       }
 
       for(let zx in cohorts){
-        cohorts[zx].syllabus.certificate.name = syllabus[zx]
-        // console.log("COHORTS - modified", cohorts[zx].syllabus.certificate.name)
+        cohorts[zx].syllabus_version.name = syllabus[zx]
       }
       let _types = []
       for (let i = 0; i < events.length; i++) {
@@ -131,7 +130,6 @@ const Calendar = (props) => {
         background={Colors.veryLightBlue}
         position="relative"
         height="auto"
-        // height_tablet="auto"
         margin="95px 0 0 0"
         padding_tablet="70px 0 0 0"
         padding="70px 0 0 0"
@@ -203,7 +201,7 @@ const Calendar = (props) => {
                 </Div>
                 <Div flexDirection="column" width_tablet="calc(35% - 15%)" margin="0 0 20px 0">
                   <H4 textAlign="left" textTransform="uppercase">{content.cohorts.info.program_label}</H4>
-                  <Link to={info[pageContext.lang][m.syllabus.certificate.slug] || ""}><Paragraph textAlign="left" color={Colors.blue}>{m.syllabus.certificate.name}</Paragraph></Link>
+                  <Link to={info[pageContext.lang][m.syllabus_version.slug] || ""}><Paragraph textAlign="left" color={Colors.blue}>{m.syllabus_version.name}</Paragraph></Link>
                 </Div>
                 <Div flexDirection="column" display="none" display_tablet="flex" minWidth="120px" >
                   <H4 textAlign="left" textTransform="uppercase">{content.cohorts.info.location_label}</H4>
@@ -220,9 +218,9 @@ const Calendar = (props) => {
                   <H4 textAlign="left" textTransform="uppercase">{content.cohorts.info.duration_label}</H4>
                   <Paragraph textAlign="left">
                     {
-                      m.syllabus.certificate.name === modality["full_time"] 
+                      m.syllabus_version.name === modality["full_time"] 
                         ? content.cohorts.info.duration_full_time
-                        : m.syllabus.certificate.name === modality["part_time"] 
+                        : m.syllabus_version.name === modality["part_time"] 
                         ? content.cohorts.info.duration_part_time
                         : content.cohorts.info.duration_weeks
                     }

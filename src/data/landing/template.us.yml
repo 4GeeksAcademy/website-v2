@@ -14,8 +14,8 @@ meta_info:
   # utm_course available ["full-stack", "software-engineering", "machine-learning-engineering"]
   utm_course: ["full-stack"] 
   utm_location: madrid-spain
-  automation: request_more_info #optional, this is the default value
-  tag: soft #optional, this is the default value
+  automation: soft #optional, this is the default value
+  tag: request_more_info #optional, this is the default value
 
 navbar:
   logoUrl: "#"
@@ -46,6 +46,7 @@ follow_bar:
     # └── path accepts: relative(/example/path), absolute(https://google.com) or id(#idName)
   phone:
     text: "Llama "
+    number: "+1 (786) 416-6640" # you can set your own phone number, or leave it false to use the utm_location number
 
 # jumbotron on the top (cannot be commented out)
 header_data:
@@ -171,7 +172,7 @@ components:
     video: "plwPwyrxX84" #youtube id
     heading: 
       text: "Todo lo hacemos con pasión y con la mirada puesta en tu desarrollo profesional."
-                  #xl      lg     md     sm    xs
+      #             xl     lg     md     sm      xs
       font_size: ["40px","34px","34px","25px", "20px"]
     content: 
       text: " "

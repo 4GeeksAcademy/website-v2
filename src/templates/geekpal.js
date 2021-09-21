@@ -22,7 +22,7 @@ const GeekPal = (props) => {
     <>
       <GridContainerWithImage padding="24px 0 " padding_tablet="100px 0" columns_tablet="14" margin="120px 0 24px 0" margin_tablet="0">
         <Div flexDirection="column" justifyContent_tablet="start" gridColumn_tablet="1 / 6">
-          <H1 textAlign_tablet="left" margin="0 0 11px 0" color="#606060">{yml.seo_title}</H1>
+          <H1 type="h1" textAlign_tablet="left" margin="0 0 11px 0" color="#606060">{yml.seo_title}</H1>
 
          <Div alignSelf="center" alignSelf_tablet="initial
          " >

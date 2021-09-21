@@ -43,21 +43,37 @@ module.exports = {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
-            {
-                resolve: `gatsby-remark-images`,
-                options: {
-                maxWidth: 800,
-                loading: 'lazy'
-                },
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 800,
+              loading: 'lazy'
             },
-            `gatsby-remark-lazy-load`,
-            {
-                resolve: "gatsby-remark-external-links",
-                options: {
-                target: "_self",
-                rel: "nofollow"
-                }
+          },
+          {
+            resolve: "gatsby-remark-component",
+            options: { components: ["button", "call-to-action"] }
+          },
+          `gatsby-remark-lazy-load`,
+          {
+            resolve: "gatsby-remark-external-links",
+            options: {
+              target: "_self",
+              rel: "nofollow"
+            }
+          },
+          {
+            resolve: `gatsby-remark-autolink-headers`,
+            options: {
+              offsetY: `0`,
+              icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M22.548 9l.452-2h-5.364l1.364-6h-2l-1.364 6h-5l1.364-6h-2l-1.364 6h-6.184l-.452 2h6.182l-1.364 6h-5.36l-.458 2h5.364l-1.364 6h2l1.364-6h5l-1.364 6h2l1.364-6h6.185l.451-2h-6.182l1.364-6h5.366zm-8.73 6h-5l1.364-6h5l-1.364 6z"/></svg>`,
+              className: `heading-link`,
+              maintainCase: false,
+              removeAccents: true,
+              isIconAfterHeader: false,
+              elements: [`h2`],
             },
+          },
         ]
       }
     },

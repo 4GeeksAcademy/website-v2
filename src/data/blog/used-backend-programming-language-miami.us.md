@@ -3,6 +3,7 @@ author: "4GeeksAcademy"
 date: "2016-05-29T18:16:20+00:00"
 excerpt: "Python, Ruby on Rails or PHP? Let's take a look at what's the best option for you."
 slug: "used-backend-programming-language-miami"
+template: "post" # post or landing_post
 title: "What is the most used back-end programming language in Miami?"
 image: "https://4GeeksAcademy.com/wp-content/uploads/2017/08/Python.jpg"
 image_alt: ""

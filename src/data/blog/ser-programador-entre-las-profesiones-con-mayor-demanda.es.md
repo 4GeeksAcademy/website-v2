@@ -3,6 +3,7 @@ author: "4GeeksAcademy"
 date: "2016-05-11T14:52:45+00:00"
 excerpt: "Conoce porque la programación esta entre las profesiones con mayor demanda"
 slug: "ser-programador-entre-las-profesiones-con-mayor-demanda"
+template: "post" # post or landing_post
 title: "Ser Programador… Entre las profesiones con mayor demanda"
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2016/05/1-1.jpg"
 image_alt: ""

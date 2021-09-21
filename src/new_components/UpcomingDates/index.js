@@ -105,7 +105,7 @@ const UpcomingDates = ({lang, location, message}) => {
             console.log("cohorts upcoming", cohorts)
             let syllabus = []
             for(let i in cohorts) {
-              let name = cohorts[i].syllabus?.certificate?.name
+              let name = cohorts[i].syllabus_version.name
               name === "Full-Stack Software Developer FT" ? name = modality["full_time"] : name
       
               name === "Full-Stack Software Developer" ? name = modality["part_time"] : name      
@@ -114,8 +114,8 @@ const UpcomingDates = ({lang, location, message}) => {
             }
       
             for(let zx in cohorts){
-              cohorts[zx].syllabus.certificate.name = syllabus[zx]
-              // console.log("COHORTS - modified", cohorts[zx].syllabus.certificate.name)
+              cohorts[zx].syllabus_version.name = syllabus[zx]
+              // console.log("COHORTS - modified", cohorts[zx].syllabus_version.name)
             }
             
             setData(oldData => ({
@@ -183,7 +183,7 @@ const UpcomingDates = ({lang, location, message}) => {
                             <Div flexDirection="column" width_tablet="calc(35% - 15%)" margin="0 0 20px 0">
                                 <H4 textAlign="left" textTransform="uppercase">{content.info.program_label}</H4>
                                 
-                                <Link to={info[lang][m.syllabus.certificate.slug] || ""}><Paragraph textAlign="left" color={Colors.blue}>{m.syllabus.certificate.name}</Paragraph></Link>
+                                <Link to={info[lang][m.syllabus_version.slug] || ""}><Paragraph textAlign="left" color={Colors.blue}>{m.syllabus_version.name}</Paragraph></Link>
                             </Div>
                             <Div flexDirection="column" display="none" display_tablet="flex" minWidth="120px" >
                                 <H4 textAlign="left" textTransform="uppercase">{content.info.location_label}</H4>

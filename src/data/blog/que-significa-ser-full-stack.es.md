@@ -3,6 +3,7 @@ author: "jimena_y_yo"
 date: "2021-04-14T20:44:51+00:00"
 excerpt: "¿Qué es full stack? Te explicamos que significa ser full stack en el siguiente artículo de 4geeks Academy"
 slug: "que-es-full-stack"
+template: "post" # post or landing_post
 title: "¿Qué significa ser Full Stack?"
 image: "https://github.com/marcelovaldebenito/website-v2/blob/master/static/images/blog/learn-to-code.jpg?raw=true"
 image_alt: "dos estudiantes aprendiendo que es full stack"

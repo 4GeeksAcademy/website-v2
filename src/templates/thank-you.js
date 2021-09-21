@@ -81,7 +81,7 @@ const ThankYou = (props) => {
               <Anchor
                 key={i}
                 cursor="pointer"
-                to={ln.social_link}
+                to={ln.link}
                 textAlign="left"
                 fontSize="13px"
                 lineHeight="22px"
@@ -89,9 +89,9 @@ const ThankYou = (props) => {
                 textTransform="uppercase"
                 color={Colors.black}
               >
-                {ln.social_name && (
+                {ln.icon && (
                   <Icon
-                    icon={ln.social_name.toLowerCase()}
+                    icon={ln.icon}
                     // style={{ margin: '0 15px 0 0' }}
                     color={Colors.black}
                     fill={Colors.black}
