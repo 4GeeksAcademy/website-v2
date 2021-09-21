@@ -112,25 +112,25 @@ prices:
       ## CHANGE HERE THE INFO IN THE LEFT BOX
       left_section:
         header:
-          heading_one: "FULL-TIME"
-          sub_heading: ""
+          heading_one: "PART-TIME"
+          sub_heading: "Pregunta por las Becas disponibles"
         content:
-          price: "Pay upfront and get a discount or ask for a 2 payment options"
-          price_info: ""
+          price: "USD $3,750"
+          price_info: "Un Pago"
         button:
-          button_text: "APLICAR AHORA"
+          button_text: "Aplica YA"
 
       ## RIGHT BOX SECTION
       ## CHANGE HERE THE INFO IN THE RIGHT BOX
       right_section:
         header:
-          heading_one: "PART-TIME"
-          sub_heading: ""
+          heading_one: "En cuotas"
+          sub_heading: "Plan de Pagos"
         content:
-          price: "Pay upfront and get a discount or ask for a 3 - 4 payment options"
-          price_info: ""
+          price: "USD $800"
+          price_info: "5 cuotas/meses"
         button:
-          button_text: "APLICAR AHORA"
+          button_text: "Aplica YA"
 
   software_engineering:
     part_time:
