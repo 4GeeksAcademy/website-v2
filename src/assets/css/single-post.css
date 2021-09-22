@@ -158,17 +158,16 @@ p.sidebar-content {
     transition: all 0.3s ease;
 }
 p.sidebar-content:hover {
-    border-left: 3px solid;
+    border-left: 3px solid #0097CD;
 }
 
-p.container-sidebar-content.sidebar-content.selected2 {
-    border-left: 3px solid;
+.container-sidebar-content p.sidebar-content.selected-border {
+    border-left: 3px solid #0097CD;
 }
 
 p.sidebar-content a {
     color: #000000;
     font-size: 13px;
-    border-left: 0;
 }
 p.sidebar-content a:hover {
     color: #0097CE;

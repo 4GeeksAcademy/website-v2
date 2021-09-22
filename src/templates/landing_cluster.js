@@ -91,7 +91,7 @@ export default function Template (props) {
                   const {id, children} = heading.props
                   return (
                     <Paragraph
-                      className={`sidebar-content ${selected === i && 'selected2' || ''}`}
+                      className={`sidebar-content ${selected === i && 'selected-border' || ''}`}
                       letterSpacing="0.05em"
                       key={id}
                       fontSize="14px"
