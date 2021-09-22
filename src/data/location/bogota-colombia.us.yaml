@@ -126,8 +126,8 @@ prices:
       ## CHANGE HERE THE INFO IN THE RIGHT BOX
       right_section:
         header:
-          heading_one: "Extended"
-          sub_heading: "Payment Plan"
+          heading_one: "Payment Plan"
+          sub_heading: "Extended"
         content:
           price: "US $800"
           price_info: "5 months"
