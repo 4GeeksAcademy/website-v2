@@ -3,7 +3,7 @@
     margin: 0 10px;
     padding-right: 15px;
     transition: opacity .35s ease;
-    top: 26px;
+    top: 32px;
     left: -5px;
     fill: gray;
 }
@@ -39,7 +39,7 @@
     margin: 30px 0px;
 }
 .single-post h2, .single-event h2{
-    font-size: 36px;
+    font-size: 26px;
     margin: 0 0 20px 0;
     text-align: left;
     position: relative;
@@ -67,6 +67,7 @@
 
 .single-post p{
     margin: 25px 0px;
+    letter-spacing: 0.05em;
     line-height: 30px;
 }
 .single-post ul,.single-post ol,.single-post blockquote{
@@ -86,7 +87,8 @@
     font-size: 16px;
     line-height: 1.5;
     word-wrap: break-word;
-    font-family: PingFangSC-Semibold, Microsoft YaHei, sans-serif;
+    font-family: Lato;
+    /* font-family: PingFangSC-Semibold, Microsoft YaHei, sans-serif; */
 }
 
 
@@ -150,6 +152,29 @@
 .single-post table tr:nth-child(2n):hover {
     background-color: #c8c3d8;
 }
+
+p.sidebar-content {
+    padding: 0 30px;
+    transition: all 0.3s ease;
+}
+p.sidebar-content:hover {
+    border-left: 3px solid;
+}
+
+p.container-sidebar-content.sidebar-content.selected2 {
+    border-left: 3px solid;
+}
+
 p.sidebar-content a {
     color: #000000;
+    font-size: 13px;
+    border-left: 0;
+}
+p.sidebar-content a:hover {
+    color: #0097CE;
+    transition: color 0.3s ease;
+    font-size: 13px;
+}
+p.sidebar-content a.selected {
+    color:#0097CE;
 }
