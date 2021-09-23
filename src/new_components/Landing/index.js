@@ -2,14 +2,13 @@ import React from "react"
 import {GridContainerWithImage, Div, GridContainer} from '../Sections'
 import {H2, H5, H4, Paragraph} from '../Heading'
 import {Colors, Img, Button, StyledBackgroundSection} from '../Styling'
-// import WhoIsHiring from '../../components/WhoIsHiring';
 import Badges from '../Badges';
 import News from '../News'
 import {navigate} from "gatsby"
 import {requestSyllabus} from "../../actions"
 import ReactPlayer from '../ReactPlayer';
 import TestimonialsCarrousel from '../Testimonials';
-import Why4Geeks from '../With4Geeks';
+import With4Geeks from '../With4Geeks';
 // import WhyPython from '../WhyPython';
 import AlumniProjects from '../AlumniProjects';
 import GeeksVsOthers from '../GeeksVsOthers';
@@ -332,7 +331,7 @@ export const landingSections = {
             paragraphColor={Colors.gray}
             variant="primary"
         />
-        <Why4Geeks
+        <With4Geeks
             text={yml.footer?.text}
             text_link={yml.footer?.text_link}
             lang={pageContext.lang}

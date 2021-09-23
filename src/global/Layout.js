@@ -2,11 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import '../assets/css/style.css';
 import '../assets/css/utils.css';
-// import Navbar from '../components/Navbar';
 import {Navbar} from '../new_components/NavbarDesktop';
 import {NavbarMobile} from '../new_components/NavbarMobile';
 import {StaticQuery, graphql} from 'gatsby';
-import UpcomingProgram from '../components/UpcomingProgram';
 import Footer from '../new_components/Footer';
 import CookieBot from "react-cookiebot";
 
@@ -163,7 +161,6 @@ const Layout = ({children, seo, context}) => {
             <>
               {children}
             </>
-            {/* { showUpcoming && <UpcomingProgram button={myNavbar.node.button} lang={context.lang} position="bottom" showOnScrollPosition={400} />} */}
             <Footer yml={myFooter.node} />
           </>
         )

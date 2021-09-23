@@ -1,9 +1,8 @@
 import React, {useState, useContext} from 'react';
-import {Column, Row, Container, Divider, Wrapper, WrapperImage, Div} from "../components/Sections";
-import {Title, H2, H5, Paragraph} from '../components/Heading';
-import {Button, Colors, StyledBackgroundSection} from '../components/Styling';
-import PricesAndPayment from '../components/PricesAndPayment';
-import WhoIsHiring from '../components/WhoIsHiring';
+import {Div, Container, Divider, Wrapper, WrapperImage} from "../new_components/Sections";
+import {Title, H2, H5, Paragraph} from '../new_components/Heading';
+import {Button, Colors, StyledBackgroundSection} from '../new_components/Styling';
+import PricesAndPayment from '../new_components/PricesAndPayment';
 import BaseRender from './_baseLayout';
 import {openGuidebook} from "../actions";
 import {SessionContext} from '../session.js'
@@ -52,9 +51,9 @@ const Pricing = (props) => {
 
         />
       </WrapperImage>
-      <Wrapper>
-        <Row m_sm="0px 0px 100px 0" display="flex">
-          <Column size="5" size_sm="12" height="300px" align_sm="center">
+
+        <Div flexDirection="column-reverse" placeItems="center" m_sm="0px 0px 100px 0" display="flex">
+          <Div flexDirection="column" size="5" size_sm="12" height="300px" align_sm="center">
             <GatsbyImage
               // fixed={yml.intro.image.childImageSharp.gatsbyImageData}
               image={getImage(yml.intro.image.childImageSharp.gatsbyImageData)}
@@ -62,21 +61,19 @@ const Pricing = (props) => {
               objectPosition="50% 50%"
               margin="auto"
             />
-          </Column>
-          <Column size="7" size_sm="12">
+          </Div>
+          <Div flexDirection="column" size="7" size_sm="12">
             <H2 align="left" margin="30px 0 20px 0" type="h2">{yml.intro.heading}</H2>
             <H5 align="left" fontSize="20px" fontHeight="30px">{yml.intro.content}</H5>
-          </Column>
-        </Row>
-      </Wrapper>
-      <Wrapper>
-        <Row m_sm="0px 0px 0px 0" display="flex">
-          <Column size="7" size_sm="12">
+          </Div>
+        </Div>
+        <Div m_sm="0px 0px 0px 0" display="flex" padding="0 12%">
+          <Div flexDirection="column" size="7" size_sm="12">
             <H2 align="left" margin="30px 0 20px 0" >{yml.intro.heading_second}</H2>
-            <Paragraph align="left" fontSize="20px" fontHeight="30px">{yml.intro.content_second}</Paragraph>
-            {yml.intro.bullets.map(b => <Paragraph align_sm="left" margin="10px 0">• {b}</Paragraph>)}
-          </Column>
-          <Column size="5" disp_sm="none" height="300px" align_sm="center">
+            <Paragraph textAlign="left" fontSize="20px" fontHeight="30px">{yml.intro.content_second}</Paragraph>
+            {yml.intro.bullets.map(b => <Paragraph textAlign="left" margin="10px 0">• {b}</Paragraph>)}
+          </Div>
+          <Div flexDirection="column" size="5" disp_sm="none" height="300px" align_sm="center">
             <StyledBackgroundSection
               className={`image`}
               height={`250px`}
@@ -86,10 +83,9 @@ const Pricing = (props) => {
               alt="4Geeks Academy"
               borderRadius={`1.25rem`}
             />
-          </Column>
-        </Row>
-      </Wrapper>
-      <Wrapper margin="50px 0px" m_sm="0" right
+          </Div>
+      </Div>
+      <Div flexDirection="column" margin="50px 0px" m_sm="0" right
         customBorderRadius="1.25rem 0 0 1.25rem"
         background={Colors.lightGray}
         border="top"
@@ -110,9 +106,9 @@ const Pricing = (props) => {
           lang={pageContext.lang}
           locations={data.allLocationYaml.edges}
         />
-      </Wrapper >
+      </Div >
       {/* { location && location.documents && location.documents.payment_guidebook && location.documents.payment_guidebook.url && location.documents.payment_guidebook.url != "" &&
-        <Wrapper margin="50px 0px">
+        <Div margin="50px 0px">
           <Title
             size="10"
             title={yml.payment_guide.heading}
@@ -121,31 +117,25 @@ const Pricing = (props) => {
             variant="primary"
           />
           <Divider height="30px" />
-          <Row display="flex" justifyContent="center">
+          <Div display="flex" justifyContent="center">
             <Button outline position="relative" width="300px" onClick={() => openGuidebook(location.documents.payment_guidebook.url)} color={Colors.blue}>{yml.payment_guide.button_text}</Button>
-          </Row>
-        </Wrapper>
+          </Div>
+        </Div>
       } */}
-      <Wrapper right margin="50px 0px"
+      <Div flexDirection="column" right margin="50px 0px"
         background={Colors.lightGray}
         border="top"
       >
         <Title
+          textAlign="center"
           size="10"
           title={yml.ecosystem?.heading}
           paragraph={yml.ecosystem?.sub_heading}
           paragraphColor="black"
           variant="primary"
         />
-        <WhoIsHiring
-          margin="50px"
-          images={hiring.financials.images}
-          footerTagline={hiring.financials.footer_tagline}
-          footerLink={hiring.financials.footer_link}
-          footerButton={hiring.financials.footer_button}
-        />
         <Divider height="150px" />
-      </Wrapper>
+      </Div>
 
     </ >
   )

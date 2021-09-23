@@ -1,7 +1,6 @@
 import React, {useState, useEffect, useContext, useRef} from 'react';
 import Link from 'gatsby-link'
 import {navigate} from "gatsby";
-import {GeekCard} from '../components/Card'
 import {Container, GridContainer, Row, Column, Wrapper, WrapperImage, Divider, Header, Div} from '../new_components/Sections'
 import {H1, H2, Title, Paragraph, H5} from '../new_components/Heading'
 import {Button, Colors} from '../new_components/Styling'

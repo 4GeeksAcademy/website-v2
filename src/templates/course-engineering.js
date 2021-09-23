@@ -1,8 +1,6 @@
-import React, {useState, useEffect, useContext, useRef} from 'react';
+import React from 'react';
 import Link from 'gatsby-link'
-// import {GeekCard} from '../components/Card'
-import {Container, GridContainer, Header, Div} from '../new_components/Sections'
-// import {H1, H2, Title, Paragraph, H5} from '../new_components/Heading'
+import {GridContainer, Header, Div} from '../new_components/Sections'
 import {Button, Colors} from '../new_components/Styling'
 import ProgramDetails from '../new_components/ProgramDetails';
 import ProgramDetailsMobile from '../new_components/ProgramDetailsMobile';
@@ -177,13 +175,6 @@ export const query = graphql`
                       quality: 100
                       breakpoints:	[200, 340, 520, 890]
                   )
-
-                  # fluid(
-                  #   maxWidth: 500, 
-                  #   quality: 100, 
-                  #   srcSetBreakpoints: [ 200, 340, 520, 890 ]){
-                  #   ...GatsbyImageSharpFluid_withWebp
-                  # }
                 }
               } 
             }
