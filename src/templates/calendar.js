@@ -1,12 +1,10 @@
 import React, {useState, useEffect, useContext} from 'react';
-import {Row, Column, Wrapper, Header, Divider, Div, GridContainer} from '../new_components/Sections'
-import {H2, H3, H4, H5, Title, Separator, Paragraph} from '../new_components/Heading'
+import {Header, Div, GridContainer} from '../new_components/Sections'
+import {H3, H4, Paragraph} from '../new_components/Heading'
 import {Colors, Button, Img, Anchor} from '../new_components/Styling'
-import Icon from '../new_components/Icon'
+// import Icon from '../new_components/Icon'
 import Select from '../new_components/Select'
-import UpcomingDates from '../new_components/UpcomingDates'
-import Card from '../components/Card'
-import {ZoomOut} from "../components/Animations"
+// import UpcomingDates from '../new_components/UpcomingDates'
 import {getCohorts, getEvents} from "../actions"
 import BaseRender from './_baseLayout'
 import dayjs from "dayjs"

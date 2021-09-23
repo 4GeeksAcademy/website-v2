@@ -5,7 +5,6 @@ import '../assets/css/utils.css';
 import {Navbar} from '../new_components/NavbarDesktop';
 import {NavbarMobile} from '../new_components/NavbarMobile';
 import {StaticQuery, graphql} from 'gatsby';
-import CustomBar from '../components/CustomBar';
 import Footer from '../new_components/Footer';
 
 
@@ -176,7 +175,6 @@ const BlogLayout = ({children, seo, context}) => {
             <>
               {children}
             </>
-            {/* { showUpcoming && myCustomBar && <CustomBar button={myCustomBar.node.bar_content} lang={context.lang} position="bottom" showOnScrollPosition={400} />} */}
             {myFooter && <Footer yml={myFooter.node} />}
           </>
         )
