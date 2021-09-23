@@ -8,9 +8,6 @@ import Credentials from '../new_components/Credentials'
 import GeeksVsOthers from '../new_components/GeeksVsOthers'
 import BaseRender from './_baseLayout'
 import Staff from '../new_components/Staff';
-import BlogPosts from '../components/BlogPosts'
-import {Link} from 'gatsby'
-import Icon from '../new_components/Icon'
 
 const SVGImage = () =>
     <svg width="550" height="335" viewBox="0 0 550 335" fill="none" xmlns="https:://www.w3.org/2000/svg">

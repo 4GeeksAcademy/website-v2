@@ -1,7 +1,6 @@
 import React from 'react';
 import {Link} from "gatsby";
 import BaseRender from './_baseLayout'
-import {Card, GeekCard} from '../components/Card'
 import {Container, Header, Column, Wrapper, WrapperImage, Divider, Sidebar, Div, GridContainer} from '../new_components/Sections'
 import {Title, H1, H2, H3, H4, H5, Span, Paragraph} from '../new_components/Heading'
 import {Button, Colors} from '../new_components/Styling'
@@ -11,14 +10,11 @@ import ProgramDetails from '../new_components/ProgramDetails';
 import ProgramDetailsMobile from '../new_components/ProgramDetailsMobile';
 import PricesAndPayment from '../new_components/PricesAndPayment';
 import Modal from '../new_components/Modal';
-import TypicalDay from '../components/TypicalDay';
 import LeadForm from '../new_components/LeadForm';
 import AlumniProjects from '../new_components/AlumniProjects';
-import ProgramSelector from '../components/ProgramSelector';
 import Badges from '../new_components/Badges';
 import TechsWeTeach from '../new_components/TechsWeTeach';
 import {Circle} from '../new_components/BackgroundDrawing'
-import ProgramSVG from '../components/ProgramSVG';
 import UpcomingDates from '../new_components/UpcomingDates';
 import GeeksInfo from '../new_components/GeeksInfo';
 import Testimonials from '../new_components/Testimonials';

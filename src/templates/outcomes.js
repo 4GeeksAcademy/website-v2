@@ -6,7 +6,7 @@ import {Colors, Button} from '../new_components/Styling'
 import {Charts} from '../new_components/Chart'
 import BaseRender from './_baseLayout'
 import ChooseProgram from '../new_components/ChooseProgram'
-import { StyledBackgroundSection } from '../components/Styling';
+import { StyledBackgroundSection } from '../new_components/Styling';
 import Modal from '../new_components/Modal';
 import LeadForm from '../new_components/LeadForm';
 import {outcomesReport} from "../actions";

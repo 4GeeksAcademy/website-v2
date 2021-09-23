@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import BaseRender from './_baseLayout'
-// import TestimonialsCarrousel from '../components/Testimonials';
 
 //new components
 import Icon from '../new_components/Icon'

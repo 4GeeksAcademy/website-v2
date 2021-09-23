@@ -12,11 +12,7 @@ import ChooseProgram from '../new_components/ChooseProgram'
 import BaseRender from './_baseLayout'
 import {SessionContext} from '../session.js'
 import Loc from '../new_components/Loc';
-import WhyPython from '../components/WhyPython';
 import Badges from '../new_components/Badges';
-import WhoIsHiring from '../components/WhoIsHiring';
-import AlumniProjects from '../components/AlumniProjects';
-// import Why4Geeks from '../components/Why4Geeks';
 import With4Geeks from '../new_components/With4Geeks';
 import About4Geeks from '../new_components/About4Geeks';
 import OurPartners from '../new_components/OurPartners';
@@ -24,8 +20,6 @@ import ChooseYourProgram from '../new_components/ChooseYourProgram';
 import Testimonials from '../new_components/Testimonials';
 // import Carousel from '../new_components/Carousel';
 // import {MegaMenu} from '../new_components/NavbarDesktop';
-import Card from '../components/Card';
-import GeeksVsOthers from '../components/GeeksVsOthers';
 import {WrapperCustom} from '../new_components/Sections';
 
 
