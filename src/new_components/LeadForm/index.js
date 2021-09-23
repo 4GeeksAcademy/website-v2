@@ -138,9 +138,10 @@ const LeadForm = ({marginButton, background, margin, margin_tablet, justifyConte
         if (formStatus.status === "error") setFormStatus({status: "idle", msg: ""})
 
         const cleanedData = clean(fields, formData);
+
         if (!formIsValid(cleanedData)) {
             setFormStatus({status: "error", msg: yml.messages.error});
-        } else if (Array.isArray(formData.course.value) && formData.course.value.length > 1){
+        } else if (formData.course !== undefined && Array.isArray(formData.course.value) && formData.course.value.length > 1){
             setFormStatus({status: "error", msg: courseSelector.error});
         } else if (consentValue === false && session.location?.gdpr_compliant === true){
             setFormStatus({status: "error", msg: consentCheckboxField.error});
