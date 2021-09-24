@@ -136,6 +136,8 @@ export const Div = styled.div`
     grid-row: ${props => props.gridRow};
     padding: ${props => props.padding};
     gap: ${props => props.gap};
+    row-gap: ${props => props.rowGap};
+    column-gap: ${props => props.columnGap};
     height: ${props => props.height};
     width: ${props => props.width};
     min-width: ${props => props.minWidth};
@@ -158,7 +160,7 @@ export const Div = styled.div`
     text-align: ${props => props.textAlign};
     justify-self: ${props => props.justifySelf};
     box-shadow: ${props => props.isActive ? props.boxShadowActive : props.boxShadow};
-    flex-wrap: nowrap; 
+    flex-wrap: ${props => props.flexWrap || "nowrap"}; 
     align-content: ${props => props.alignContent};
     align: ${props => props.align};
     cursor: ${props => props.cursor};

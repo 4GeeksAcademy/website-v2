@@ -69,7 +69,7 @@ const clean = (fields, data) => {
     return cleanedData;
 }
 
-const LeadForm = ({marginButton, background, margin, margin_tablet, justifyContentButton, buttonWidth_tablet, titleTextAlign, buttonBorderRadius, d_sm, fields, thankyou, heading, redirect, formHandler, data, handleClose, style, sendLabel, lang, motivation, layout, inputBgColor, landingTemplate, selectProgram}) => {
+const LeadForm = ({marginButton, background, margin, margin_tablet, justifyContentButton, buttonWidth_tablet, titleTextAlign, buttonBorderRadius, d_sm, fields, thankyou, heading, redirect, formHandler, data, handleClose, style, sendLabel, lang, motivation, layout, inputBgColor, landingTemplate, selectProgram, textPadding, textPadding_tablet, titleMargin, titleMargin_tablet}) => {
     const _query = useStaticQuery(graphql`
     query newLeadFormQuery {
         allPageYaml(filter: { fields: { file_name: { regex: "/privacy-policy/" }}}) {
@@ -173,12 +173,12 @@ const LeadForm = ({marginButton, background, margin, margin_tablet, justifyConte
                 })
         }
     }}>
-        {heading && <H4 type="h4" fontSize="25px" width="auto" textAlign="center" textAlign_tablet={titleTextAlign || "left"} margin={landingTemplate ? "15px 0px 30px 0" : "20px 0px 15px 40px"}>{heading}</H4>}
+        {heading && <H4 type="h4" fontSize="25px" width="auto" textAlign="center" textAlign_tablet={titleTextAlign || "left"} margin={landingTemplate ? "15px 0px 30px 0" : titleMargin || "20px 30px 15px 30px"} margin_tablet={titleMargin_tablet || "20px 40px 15px 40px"}>{heading}</H4>}
         {formStatus.status === "thank-you" ?
-            <Paragraph align="center" margin="20px 0px 0px 0px">{thankyou || formStatus.msg}</Paragraph>
+            <Paragraph margin="20px 0px 0px 0px">{thankyou || formStatus.msg}</Paragraph>
             :
             <>
-                {motivation && <Paragraph textAlign="center" margin="20px 0px 0px 0px">{motivation}</Paragraph>}
+                {motivation && <Paragraph textAlign="left" padding={textPadding || "6px 20px 20px 20px"}padding_tablet={textPadding_tablet || "6px 42px 20px 42px"}>{motivation}</Paragraph>}
                 <GridContainer display="block" containerColumns_tablet={landingTemplate && "0fr repeat(12, 1fr) 0fr"} containerGridGap={landingTemplate && "0"} className={"leadform-" + layout} size="12" paddingLeft="0" paddingRight="0">
                     {fields.filter(f => formData[f].type !== 'hidden').map((f, i) => {
                         const _field = formData[f]
@@ -247,7 +247,7 @@ const LeadForm = ({marginButton, background, margin, margin_tablet, justifyConte
                             <a target="_blank" rel="noopener noreferrer nofollow" className="decorated" href={yml.consent.url}>{yml.consent.link_label}</a>
                         </Paragraph>
                     }
-                    {formStatus.status === "error" && <Alert color="red" margin="0 15px" padding="5px 0 0 0">{formStatus.msg}</Alert>}
+                    {formStatus.status === "error" && <Alert color="red" margin="0" padding="5px 0 0 0">{formStatus.msg}</Alert>}
                 </GridContainer>
                 {layout === "block" &&
                     <GridContainer containerColumns_tablet={landingTemplate && "0fr repeat(12, 1fr) 0fr"} containerGridGap={landingTemplate && "0"} >

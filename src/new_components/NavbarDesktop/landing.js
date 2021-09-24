@@ -61,7 +61,7 @@ const LandingNavbar = ({lang, onToggle, buttonUrl, logoUrl, buttonText}) => {
           }
         }
       }
-      file(relativePath: { eq: "images/logoweb.png" }) {
+      file(relativePath: { eq: "images/4geeks-logo.png" }) {
         childImageSharp {
           gatsbyImageData(
             layout: FIXED # --> CONSTRAINED || FIXED || FULL_WIDTH

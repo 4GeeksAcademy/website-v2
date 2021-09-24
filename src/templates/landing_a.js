@@ -202,9 +202,9 @@ const Landing = (props) => {
           >
             <LeadForm
               background={Colors.white}
-              margin_tablet="50px 0 0 0" 
+              margin_tablet="18px 38px"
               selectProgram={programs}
-              margin="0" 
+              margin="18px 30px"
               style={{ marginTop: "50px", minHeight: "350px" }}
               formHandler={requestSyllabus}
               heading={yml.form.heading}
@@ -253,7 +253,13 @@ const Landing = (props) => {
           >
             <LeadForm
               landingTemplate
+              titleMargin="20px 0px 15px 0px"
+              titleMargin_tablet="20px 0px 15px 0px"
+              textPadding_tablet="6px 0px 20px 0px"
+              textPadding="6px 0px 20px 0px"
+              margin_tablet="18px 38px"
               selectProgram={programs}
+              margin="18px 30px"
               layout="block"
               background={Colors.verylightGray}
               margin="0"

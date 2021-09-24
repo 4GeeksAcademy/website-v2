@@ -145,7 +145,7 @@ export const Navbar = ({lang, currentURL, menu, open, button, onToggle, language
           }
         }
       }
-      file(relativePath: { eq: "images/logoweb.png" }) {
+      file(relativePath: { eq: "images/4geeks-logo.png" }) {
         childImageSharp {
           gatsbyImageData(
             layout: FIXED # --> CONSTRAINED || FIXED || FULL_WIDTH
