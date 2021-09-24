@@ -42,6 +42,7 @@ const _fields = {
     email: {value: '', valid: false, required: true, type: 'email', place_holder: "Your email *", error: "Please specify a valid email"},
     phone: {value: '', valid: false, required: true, type: 'phone', place_holder: "Phone number", error: "Please specify a valid phone"},
     consent: {value: true, valid: true, required: true, type: 'text', place_holder: "", error: "You need to accept the privacy terms"},
+    client_comments: {value: '', valid: true, required: false, type: 'text', place_holder: "Any comments?", error: "Please specify any comments"},
 }
 
 const clean = (fields, data) => {
@@ -131,6 +132,12 @@ const LeadForm = ({marginButton, background, margin, margin_tablet, justifyConte
             return ({..._, ...data, utm_url: {type: "hidden", value: window.location.href, valid: true}})
         })
     }, [data])
+
+    //validate fields
+    console.log("validating fields")
+    fields.forEach(f => {
+        if(formData[f] === undefined) throw Error(`Invalid form field ${f}, options are: ${Object.keys(formData).join(",")}`)
+    });
 
     return <Form margin={margin} background={background} margin_tablet={margin_tablet} d_sm={d_sm} style={style} onSubmit={(e) => {
         e.preventDefault();
