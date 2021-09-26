@@ -382,14 +382,14 @@ export const landingSections = {
         sm={yml.height[3]}
         xs={yml.height[4]}
     />,
-    two_column_left: ({session, data, pageContext, yml, index}) => <Div id="two_column_left" key={index} background={Colors[yml.background] || yml.background} flexDirection="column" padding="50px 0 50px 0" padding_tablet="50px 14%" margin="0">
+    two_column_left: ({session, data, pageContext, yml, index}) => <Div id="two_column_left" key={index} background={Colors[yml.background] || yml.background} flexDirection="column" padding="50px 0 50px 0" padding_tablet="50px 6%" margin="0">
         <TwoColumn
             left={{image: yml.image, video: yml.video}}
             right={{heading: yml.heading, content: yml.content, button: yml.button,}}
             proportions={yml.proportions}
         />
     </Div>,
-    two_column_right: ({session, data, pageContext, yml, index}) => <Div id="two_column_right" key={index} background={Colors[yml.background] || yml.background} flexDirection="column" padding="0 0 50px 0" padding_tablet="50px 14%" margin="0">
+    two_column_right: ({session, data, pageContext, yml, index}) => <Div id="two_column_right" key={index} background={Colors[yml.background] || yml.background} flexDirection="column" padding="0 0 50px 0" padding_tablet="50px 6%" margin="0">
         <TwoColumn
             left={{heading: yml.heading, content: yml.content, button: yml.button}}
             right={{image: yml.image, video: yml.video,}}

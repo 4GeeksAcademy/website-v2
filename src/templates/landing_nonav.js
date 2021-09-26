@@ -217,7 +217,8 @@ const Landing = (props) => {
               fields={yml.form.fields}
               data={preData}
               justifyContentButton="center"
-              marginButton={`15px auto 30px auto`}
+              marginButton="15px auto 30px auto"
+              marginButton_tablet="15px 0 30px auto"
             />
           </Div>
         </GridContainer>
