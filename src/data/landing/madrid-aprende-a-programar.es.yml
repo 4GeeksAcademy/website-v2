@@ -111,7 +111,7 @@ components:
     image:
       style: '{ "backgroundSize": "contain" }'
       src: "/images/badges/switchup.png"
-      link: "https://www.switchup.org/rankings/best-coding-bootcamp"
+      link: "https://www.switchup.org/bootcamps/4geeks-academy"
     heading:
       text:
         "Hemos sido seleccionados como uno de los mejores bootcamps del mundo"

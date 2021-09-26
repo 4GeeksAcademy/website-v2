@@ -258,7 +258,6 @@ const Landing = (props) => {
               titleMargin_tablet="20px 0px 15px 0px"
               textPadding_tablet="6px 0px 20px 0px"
               textPadding="6px 0px 20px 0px"
-              margin_tablet="18px 38px"
               selectProgram={programs}
               margin="18px 30px"
               layout="block"
