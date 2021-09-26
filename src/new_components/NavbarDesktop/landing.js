@@ -8,6 +8,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 const Nav = styled.nav`
     height: 71px;
+    gap: 40px;
     display: ${props => props.display};
     position: fixed;
     width: 100%;

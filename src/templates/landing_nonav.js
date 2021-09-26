@@ -203,7 +203,7 @@ const Landing = (props) => {
             <LeadForm
               background={Colors.white}
               margin_tablet="18px 38px"
-              margin="18px 30px"
+              margin="18px 10px"
               style={{ marginTop: "50px", minHeight: "350px" }}
               selectProgram={programs}
               formHandler={requestSyllabus}
@@ -217,7 +217,7 @@ const Landing = (props) => {
               fields={yml.form.fields}
               data={preData}
               justifyContentButton="center"
-              marginButton={`15px 0 30px auto`}
+              marginButton={`15px auto 30px auto`}
             />
           </Div>
         </GridContainer>
@@ -234,7 +234,7 @@ const Landing = (props) => {
       }
 
       <GridContainerWithImage id="bottom" background={Colors.verylightGray} imageSide={applySchollarship?.imageSide} padding="0" padding_tablet="80px 0 90px 0" columns_tablet="14" margin="0" margin_tablet="0">
-        <Div flexDirection="column" margin="0" justifyContent_tablet="start" padding="40px 40px 40px" padding_tablet="0" 
+        <Div flexDirection="column" margin="0" justifyContent_tablet="start" padding="0" padding_tablet="0" 
         gridArea_tablet={applySchollarship?.imageSide === "right" ? "1/1/1/6" : "1/7/1/13"}
         // gridArea_tablet="1/1/1/6"
         >
@@ -261,7 +261,7 @@ const Landing = (props) => {
               selectProgram={programs}
               layout="block"
               background={Colors.verylightGray}
-              margin="18px 30px"
+              margin="0"
               formHandler={requestSyllabus}
               heading={yml.form.heading}
               style={{ minHeight: "350px" }}
@@ -273,7 +273,8 @@ const Landing = (props) => {
               fields={yml.form.fields}
               data={preData}
               justifyContentButton="center"
-              marginButton={`15px 0 30px auto`}
+              marginButton="15px auto 30px auto"
+              marginButton_tablet="15px 0 30px auto"
             />
           </Div>
         </Div>
