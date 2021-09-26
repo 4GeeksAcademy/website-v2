@@ -235,7 +235,7 @@ const Landing = (props) => {
       }
 
       <GridContainerWithImage id="bottom" background={Colors.verylightGray} imageSide={applySchollarship?.imageSide || "right"} padding="0" padding_tablet="80px 0 90px 0" columns_tablet="14" margin="0" margin_tablet="0">
-        <Div flexDirection="column" margin="0" margin_tablet="0 50px" justifyContent_tablet="start" padding="0" padding_tablet="0" 
+        <Div flexDirection="column" margin="0" justifyContent_tablet="start" padding="0" padding_tablet="0 30px" 
         gridArea_tablet={(applySchollarship?.imageSide) === "right" ? "1/1/1/6" : "1/7/1/13"}
         // gridArea_tablet="1/1/1/6"
         >
