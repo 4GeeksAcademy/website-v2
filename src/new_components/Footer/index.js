@@ -70,7 +70,7 @@ const Footer = ({ yml }) => {
                     borderRadius="3px"
                     gridArea_tablet="1/1/2/3"
                 >
-                    <RoundImage url="/images/logoweb.png" height="43px" width="143px" backgroundColor="transparent" position="center" bsize="contain" />
+                    <RoundImage url="/images/4geeks-logo.png" height="43px" width="143px" backgroundColor="transparent" position="center" bsize="contain" />
                 </Div>
                 <Div
                     flexDirection="column"

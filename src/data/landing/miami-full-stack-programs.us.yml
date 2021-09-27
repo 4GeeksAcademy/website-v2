@@ -114,7 +114,7 @@ components:
     image:
       style: '{ "backgroundSize": "contain" }'
       src: "/images/badges/switchup.png"
-      link: "https://www.switchup.org/rankings/best-coding-bootcamp"
+      link: "https://www.switchup.org/bootcamps/4geeks-academy"
     video: "SixRm6R8rc0"
     heading:
       text: "Our passion is your future"
@@ -129,7 +129,7 @@ components:
     image:
       style: '{ "backgroundSize": "contain" }'
       src: "/images/badges/switchup.png"
-      link: "https://www.switchup.org/rankings/best-coding-bootcamp"
+      link: "https://www.switchup.org/bootcamps/4geeks-academy"
     heading:
       text:
         "We have been named one of the TOP coding bootcamps in the World"
