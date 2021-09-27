@@ -1,6 +1,4 @@
 import React, {useState} from 'react';
-// import {Title, H2, H3, H4, H5, Paragraph} from '../components/Heading';
-// import {Button, Colors, RoundImage} from '../components/Styling';
 import BaseRender from './_baseLayout';
 
 // new_components

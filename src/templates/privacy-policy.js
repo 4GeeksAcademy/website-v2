@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
-// import {Column, Row, Container, Divider, Wrapper} from "../components/Sections";
-import {Button, Colors, RoundImage} from '../components/Styling';
+import {Button, Colors, RoundImage} from '../new_components/Styling';
 import BaseRender from './_baseLayout';
 
 // new_components

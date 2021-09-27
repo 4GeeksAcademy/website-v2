@@ -7,8 +7,6 @@ import OurPartners from '../new_components/OurPartners'
 import Credentials from '../new_components/Credentials'
 import BaseRender from './_baseLayout'
 import Staff from '../new_components/Staff';
-import BlogPosts from '../components/BlogPosts'
-import {Link} from 'gatsby'
 import Icon from '../new_components/Icon'
 import {Circle} from '../new_components/BackgroundDrawing'
 

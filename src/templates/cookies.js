@@ -1,7 +1,4 @@
-import React, {useState} from 'react';
-// import {Column, Row, Container, Divider, Wrapper} from "../components/Sections";
-// import {Title, H2, H3, H4, H5, Paragraph} from '../components/Heading';
-import {Button, Colors, RoundImage} from '../components/Styling';
+import React from 'react';
 import BaseRender from './_baseLayout';
 
 // new_components
@@ -15,8 +12,10 @@ const Cookies = (props) => {
       <GridContainer
         github="/components/privacy"
         columns_tablet="12"
-        margin_tablet="50px 0 0 0"
-        margin="25px 0 0 0"
+        margin_tablet="70px 0 0 0"
+        margin="70px 0 0 0"
+        padding="45px 0"
+        padding_tablet="45px 0"
 
       >
         <Div flexDirection="column" gridColumn_tablet=" 2 / 12">
@@ -54,41 +53,34 @@ export const query = graphql`
       allPageYaml(filter: { fields: { file_name: { eq: $file_name }, lang: { eq: $lang }}}) {
         edges{
           node{
-              meta_info{
-                  title
-                  description
-                  image
-                  keywords
-              }
-              seo_title
-              header{
-                  tagline
-                  sub_heading
-                  image{
-                      childImageSharp {
-                        gatsbyImageData(
-                          layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                          width: 800
-                          placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
-                        )
-                        # fluid(maxWidth: 800){
-                        #   ...GatsbyImageSharpFluid_withWebp
-                        # }
-                      }
-                    } 
-                  alt
-              }
-             
-            sections{
-                title
-                text
+            meta_info{
+              title
+              description
+              image
+              keywords
             }
-             
-              
+            seo_title
+            header{
+              tagline
+              sub_heading
+              image{
+                childImageSharp {
+                  gatsbyImageData(
+                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                    width: 800
+                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                  )
+                }
+              } 
+              alt
+            }
+            sections{
+              title
+              text
+            }
           }
         }
       }
-      
     }
   `;
 export default BaseRender(Cookies);
