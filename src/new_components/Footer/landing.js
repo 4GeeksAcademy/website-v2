@@ -38,9 +38,9 @@ const LandingFooter = ({ yml }) => {
           // gridArea_tablet="1/1/2/3"
         >
           <RoundImage
-            url="/images/logoweb.png"
-            height="150px"
-            width="100%"
+            url="/images/4geeks-logo.png"
+            height="125px"
+            width="70%"
             backgroundColor="transparent"
             position="center"
             bsize="contain"

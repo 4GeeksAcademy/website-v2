@@ -137,7 +137,7 @@ const Partners = (props) => {
           )}
         </Div>
         <Div justifyContent="center" gridColumn_tablet="8 / 13" gridRow_tablet="2 / 2" margin="0 0 81px 0">
-          <LeadForm formHandler={beHiringPartner} handleClose={handleClose} lang={pageContext.lang} inputBgColor={Colors.white} />
+          <LeadForm formHandler={beHiringPartner} handleClose={handleClose} lang={pageContext.lang} inputBgColor={Colors.white} fields={['full_name', 'email', 'phone', 'client_comments']} />
         </Div>
 
       </GridContainer>

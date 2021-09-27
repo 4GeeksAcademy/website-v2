@@ -1,7 +1,5 @@
 import React, {useState} from 'react';
 import {Header, Column, Wrapper, Divider, Div} from '../new_components/Sections'
-import {Title} from '../components/Heading'
-import {Colors} from '../components/Styling'
 import GeeksVsOthers from '../new_components/GeeksVsOthers'
 import BaseRender from './_baseLayout'
 import {graphql} from 'gatsby'

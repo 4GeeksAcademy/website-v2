@@ -58,7 +58,7 @@ export default ({location, margin, lang, limit, filter, padding, padding_tablet,
   }
   return (
 
-    <Div width="calc(100% - 70px)"
+    <Div width="100%"
       justifySelf={justifySelf}
       margin={margin ? margin : "35px 0"}
       margin_tablet={margin ? margin : "40px 0 0 0"}
@@ -68,8 +68,8 @@ export default ({location, margin, lang, limit, filter, padding, padding_tablet,
       gap="20px"
       height="auto"
       overflowX={overflowX || "auto"}
-      justifyContent="between"
-      justifyContent_tablet="between"
+      justifyContent="around"
+      justifyContent_tablet="around"
     >
       {Array.isArray(locationNews) && locationNews.map((l, i) => {
         return (
@@ -89,18 +89,3 @@ export default ({location, margin, lang, limit, filter, padding, padding_tablet,
     // </Fragment>
   )
 }
-
-    // <Row github="/components/news" display={`flex`} marginTop="75px" justifyContent={`between`}>
-    //   {locationNews.map((l, i) => (
-    //     <Column style={{whiteSpace: "nowrap", height: "60px"}} key={i} size="2" size_md="3">
-    //       <a href={l.url} target="_blank" rel="noopener noreferrer nofollow">
-    //         <Img
-    //           style={{height: "100%"}}
-    //           imgStyle={{objectFit: "contain"}}
-    //           alt={l.name}
-    //           fluid={l.image.childImageSharp.fluid}
-    //         />
-    //       </a>
-    //     </Column>
-    //   ))}
-    // </Row>

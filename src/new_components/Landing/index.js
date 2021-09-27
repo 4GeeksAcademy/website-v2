@@ -2,14 +2,13 @@ import React from "react"
 import {GridContainerWithImage, Div, GridContainer} from '../Sections'
 import {H2, H5, H4, Paragraph} from '../Heading'
 import {Colors, Img, Button, StyledBackgroundSection} from '../Styling'
-// import WhoIsHiring from '../../components/WhoIsHiring';
 import Badges from '../Badges';
 import News from '../News'
 import {navigate} from "gatsby"
 import {requestSyllabus} from "../../actions"
 import ReactPlayer from '../ReactPlayer';
 import TestimonialsCarrousel from '../Testimonials';
-import Why4Geeks from '../With4Geeks';
+import With4Geeks from '../With4Geeks';
 // import WhyPython from '../WhyPython';
 import AlumniProjects from '../AlumniProjects';
 import GeeksVsOthers from '../GeeksVsOthers';
@@ -179,6 +178,8 @@ export const landingSections = {
             maxWidth="100px"
             justifySelf="center"
             margin="40px 0 40px"
+            padding="0"
+            padding_tablet="0 6%"
             limit={yml.limit || 3}
             location={location ? location : session && session.location && session.location.breathecode_location_slug}
             lang={pageContext.lang}
@@ -212,6 +213,8 @@ export const landingSections = {
         let badges = data.allLandingYaml.edges[0].node.badges
         return(
             <Badges
+                // short_link
+                wrapped_images={true}
                 id="badges"
                 lang={pageContext.lang}
                 background={Colors.verylightGray}
@@ -332,7 +335,7 @@ export const landingSections = {
             paragraphColor={Colors.gray}
             variant="primary"
         />
-        <Why4Geeks
+        <With4Geeks
             text={yml.footer?.text}
             text_link={yml.footer?.text_link}
             lang={pageContext.lang}
@@ -354,7 +357,7 @@ export const landingSections = {
         const hiring = data.allPartnerYaml.edges[0].node;
         let landingHiriging = data.allLandingYaml.edges[0].node?.who_is_hiring
 
-        return <Div id="who_is_hiring" key={index} flexDirection="column" margin="100px 0" margin_tablet="100px" m_sm="0" p_xs="0">
+        return <Div id="who_is_hiring" key={index} flexDirection="column" margin="40px 0" margin_tablet="40px 50px 100px" m_sm="0" p_xs="0">
             <OurPartners
                 images={hiring.partners.images} 
                 margin="0"
@@ -379,14 +382,14 @@ export const landingSections = {
         sm={yml.height[3]}
         xs={yml.height[4]}
     />,
-    two_column_left: ({session, data, pageContext, yml, index}) => <Div id="two_column_left" key={index} background={Colors[yml.background] || yml.background} flexDirection="column" padding="50px 0 50px 0" padding_tablet="50px 14%" margin="0">
+    two_column_left: ({session, data, pageContext, yml, index}) => <Div id="two_column_left" key={index} background={Colors[yml.background] || yml.background} flexDirection="column" padding="50px 0 50px 0" padding_tablet="50px 6%" margin="0">
         <TwoColumn
             left={{image: yml.image, video: yml.video}}
             right={{heading: yml.heading, content: yml.content, button: yml.button,}}
             proportions={yml.proportions}
         />
     </Div>,
-    two_column_right: ({session, data, pageContext, yml, index}) => <Div id="two_column_right" key={index} background={Colors[yml.background] || yml.background} flexDirection="column" padding="0 0 50px 0" padding_tablet="50px 14%" margin="0">
+    two_column_right: ({session, data, pageContext, yml, index}) => <Div id="two_column_right" key={index} background={Colors[yml.background] || yml.background} flexDirection="column" padding="0 0 50px 0" padding_tablet="50px 6%" margin="0">
         <TwoColumn
             left={{heading: yml.heading, content: yml.content, button: yml.button}}
             right={{image: yml.image, video: yml.video,}}
