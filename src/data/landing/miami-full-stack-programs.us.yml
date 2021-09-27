@@ -114,7 +114,7 @@ components:
     image:
       style: '{ "backgroundSize": "contain" }'
       src: "/images/badges/switchup.png"
-      link: "https://www.switchup.org/rankings/best-coding-bootcamp"
+      link: "https://www.switchup.org/bootcamps/4geeks-academy"
     video: "SixRm6R8rc0"
     heading:
       text: "Our passion is your future"
@@ -129,7 +129,7 @@ components:
     image:
       style: '{ "backgroundSize": "contain" }'
       src: "/images/badges/switchup.png"
-      link: "https://www.switchup.org/rankings/best-coding-bootcamp"
+      link: "https://www.switchup.org/bootcamps/4geeks-academy"
     heading:
       text:
         "We have been named one of the TOP coding bootcamps in the World"
@@ -141,11 +141,11 @@ components:
     layout: two_column_left
     image:
       src: "https://storage.googleapis.com/4geeks-academy-website/landing-pictures/testimonials.webp"
-    content:
+    heading:
       text:
         "86% of our graduates are now working in the field with an average entry salary of $50,000/yr."
-        #xl      lg     md     sm    xs
-      font_size: ["40px", "34px", "34px", "25px", "20px"]
+        #           xl      lg     md     sm    xs
+      font_size: ["40px", "34px"]
 # why_python:
 #   position: 7
 #   heading: "¿Porqué enseñamos Python?" # optional or set to white space to hide

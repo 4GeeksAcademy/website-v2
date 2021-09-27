@@ -27,7 +27,9 @@ exports.onCreateNode = ({node, getNode, actions}) => {
         'LocationYaml', 'JobYaml', 'AlumniProjects', 'ChooseProgramYaml',
         'TestimonialsYaml', 'GeeksVsOthersYaml', 'JobsStatisticsYaml',
         'Why4GeeksYaml', 'AlumniProjectsYaml', 'StaffYaml', 'ProgramSvgYaml', 'PricesAndPaymentYaml',
-        'WhyPythonYaml', 'ChooseYourProgramYaml', 'About4GeeksYaml', 'LocYaml', 'UpcomingDatesYaml', 'GeeksInfoYaml', 'TechsWeTeachYaml', 'With4GeeksYaml',
+        'WhyPythonYaml', 'ChooseYourProgramYaml', 'About4GeeksYaml', 'LocYaml', 'UpcomingDatesYaml', 
+        'GeeksInfoYaml', 'TechsWeTeachYaml', 'FullStackTechsYaml', 'SoftwareEngineeringTechsYaml', 'MachineLearningTechsYaml',
+        'With4GeeksYaml',
     ].includes(node.internal.type)) {
         const url = createFilePath({node, getNode})
         const meta = getMetaFromPath({url, ...node});

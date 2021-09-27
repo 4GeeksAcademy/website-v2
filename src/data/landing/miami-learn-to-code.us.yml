@@ -120,7 +120,7 @@ components:
     image:
       style: '{ "backgroundSize": "contain" }'
       src: "/images/badges/switchup.png"
-      link: "https://www.switchup.org/rankings/best-coding-bootcamp"
+      link: "https://www.switchup.org/bootcamps/4geeks-academy"
     button:
       text: "Read testimonials"
       color: null
@@ -143,7 +143,7 @@ components:
       text:
         "89% of our graduates are now working as software developers with an average entry salary of $50,000/yr."
       #             xl      lg      md      sm      xs
-      font_size: ["40px", "40px", "40px", "25px", "20px"]
+      font_size: ["40px", "34px"]
     
     # content:
     #   text:

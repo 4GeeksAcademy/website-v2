@@ -1,4 +1,4 @@
-import React, {useContext} from 'react'
+import React, {useEffect, useState} from 'react'
 import {Paragraph} from '../new_components/Heading'
 import {RoundImage, Colors, Button, Link} from '../new_components/Styling'
 import CallToAction from '../new_components/CallToAction'
@@ -11,6 +11,7 @@ import {GridContainer, Div, Header} from '../new_components/Sections'
 
 export default function Template (props) {
   const {data, pageContext} = props;
+  const [selected, setSelected] = useState(null);
   const post = data.markdownRemark;
   const lang = pageContext.lang
 
@@ -34,14 +35,14 @@ export default function Template (props) {
 
     let mes = "";
 
-    if (pageContext == "es")
+    if (pageContext.lang == "es")
       mes = monthsEs[n];
     else
       mes = monthsUs[n];
 
     return mes;
   }
-
+    
   return (
 
     <>
@@ -84,43 +85,45 @@ export default function Template (props) {
         {
           filteredH2.length >= 1 &&
           <Div gridColumn_tablet="4 ​/ span 1" margin="54px 0 0 0" display="none" display_md="flex" style={{position: "relative"}}>
-            <Div flexDirection="column" padding="0 30px" position="sticky" style={{boxShadow: "0px 2px 5px rgba(0, 0, 0, 0.1)", top: "85px"}} borderRadius="3px" border={`1px solid #e5e5e5`} width="250px" height="fit-content">
-              <Div margin="25px 0" flexDirection="column" justifyContent="space-around" gap="16px">
-                {
-                  filteredH2.map((heading) => {
-                    const {id, children} = heading.props
-                    return (
-                      <Paragraph
-                        className="sidebar-content"
-                        letterSpacing="0.05em"
-                        key={id}
-                        fontSize="14px"
-                        textAlign="center"
-                        textAlign_tablet="left"
+            <Div className="container-sidebar-content" padding="25px 0" flexDirection="column" justifyContent="space-around" gap="16px" flexDirection="column" position="sticky" style={{boxShadow: "0px 2px 5px rgba(0, 0, 0, 0.1)", top: "85px"}} borderRadius="3px" border={`1px solid #e5e5e5`} width="250px" height="fit-content">
+              {
+                filteredH2.map((heading, i) => {
+                  const {id, children} = heading.props
+                  return (
+                    <Paragraph
+                      className={`sidebar-content ${selected === i && 'selected-border' || ''}`}
+                      letterSpacing="0.05em"
+                      key={id}
+                      fontSize="14px"
+                      textAlign="center"
+                      textAlign_tablet="left"
+                    >
+                      <Link
+                        onClick={() => setSelected(i)}
+                        className={selected === i && 'selected'} 
+                        to={`#${id}` || "#"}
                       >
-                        <Link to={ `#${id}` || "#"}>
-                          {children[0].props?.children?.toString().toUpperCase() || children[0].toString().toUpperCase()}
-                        </Link >
-                      </Paragraph>
-                    )}
-                  )
-                }
-                <Link style={{color: Colors.white}} to={lang === "us" ? '/us/apply' : '/es/aplica'}>
-                  <Button
-                    width="100%"
-                    fontSize="12px"
-                    background={Colors.blue}
-                    borderRadius=".25rem"
-                    padding="5px"
-                    flexDirection
-                    justifyContent="center"
-                    margin="14px 0 4px 0"
-                    color={Colors.white}
-                  >                    
-                    {lang === "us" ? 'APPLY NOW' : 'APLICA AHORA'}
-                  </Button>
-                </Link >
-              </Div>
+                        {children[1].props?.children?.toString().toUpperCase() || children[1].toString().toUpperCase()}
+                      </Link >
+                    </Paragraph>
+                  )}
+                )
+              }
+              <Link style={{color: Colors.white, margin: '0 30px'}} to={lang === "us" ? '/us/apply' : '/es/aplica'}>
+                <Button
+                  width="100%"
+                  fontSize="12px"
+                  background={Colors.blue}
+                  borderRadius=".25rem"
+                  padding="5px"
+                  flexDirection
+                  justifyContent="center"
+                  margin="14px 0 4px 0"
+                  color={Colors.white}
+                >                    
+                  {lang === "us" ? 'APPLY NOW' : 'APLICA AHORA'}
+                </Button>
+              </Link >
             </Div>
           </Div>
         }

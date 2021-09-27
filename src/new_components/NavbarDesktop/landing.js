@@ -8,6 +8,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 const Nav = styled.nav`
     height: 71px;
+    gap: 40px;
     display: ${props => props.display};
     position: fixed;
     width: 100%;
@@ -61,7 +62,7 @@ const LandingNavbar = ({lang, onToggle, buttonUrl, logoUrl, buttonText}) => {
           }
         }
       }
-      file(relativePath: { eq: "images/logoweb.png" }) {
+      file(relativePath: { eq: "images/4geeks-logo.png" }) {
         childImageSharp {
           gatsbyImageData(
             layout: FIXED # --> CONSTRAINED || FIXED || FULL_WIDTH

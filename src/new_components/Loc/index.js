@@ -113,7 +113,7 @@ const Loc = ({locations, title, paragraph, lang}) => {
                     {content.label}
                   </Paragraph >
                   <Paragraph textAlign="left" fontSize="15px" lineHeight="22px" color={Colors.darkGray}>
-                    {next != undefined ? next.syllabus_version.name : "No upcoming dates at this location"}
+                    {next != undefined ? next.syllabus_version?.name : "No upcoming dates at this location"}
                   </Paragraph>
                   {next != undefined && next.kickoff_date && <Paragraph textAlign="left" fontSize="15px" lineHeight="22px" color={Colors.darkGray}>
                     <span className="capitalize">{stringDate}</span>

@@ -105,7 +105,7 @@ const Program = ({data, pageContext, yml}) => {
     </Header>
     <ProgramDetails details={courseDetails.details} lang={pageContext.lang} course={program_type} />
     <ProgramDetailsMobile details={courseDetails.details} lang={pageContext.lang} course={program_type} />
-    <TechsWeTeach lang={pageContext.lang} />
+    <TechsWeTeach lang={pageContext.lang} data={data.allFullStackTechsYaml} />
     <GeeksInfo lang={pageContext.lang} />
     <GridContainer padding_tablet="0" margin_tablet="90px 0 62px 0" margin="57px 0">
       <Div height="5px" background="#EBEBEB"></Div>
@@ -133,6 +133,46 @@ const Program = ({data, pageContext, yml}) => {
 
 export const query = graphql`
   query CourseQuery($file_name: String!, $lang: String!) {
+    allFullStackTechsYaml(filter: { fields: { lang: { eq: $lang }}}) {
+      edges {
+        node {
+          title
+          sub_title
+          image{
+            childImageSharp {
+              gatsbyImageData(
+                layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                width: 390
+                height: 289
+                placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+              )
+              # fluid(maxHeight: 289, maxWidth: 390){
+              #   ...GatsbyImageSharpFluid_withWebp
+              # }
+            }
+          }
+          tech_list {
+            image{
+              childImageSharp {
+                gatsbyImageData(
+                  layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                  width: 100
+                  height: 100
+                  placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                )
+                # fluid(maxHeight: 100, maxWidth: 100){
+                #   ...GatsbyImageSharpFluid_withWebp
+                # }
+              }
+            }
+            alt
+          }
+          fields {
+            lang
+          }
+        }
+      }
+    }
     allCourseYaml(filter: { fields: { file_name: { eq: $file_name }, lang: { eq: $lang }}}) {
       edges{
         node{

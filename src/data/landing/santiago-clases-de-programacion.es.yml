@@ -69,7 +69,7 @@ in_the_news:
 
 badges:
   position: 2
-  heading: " "
+  heading: "Este es el lugar para impulsar tu carrera aprendiendo a programar. Estamos muy orgullosos de nuestros programas y metodología para capacitar a los desarrolladores en solo unos meses y ayudarlos a impulsar sus carreras profesionales."
 
 program_details:
   position: 3
@@ -112,7 +112,7 @@ components:
     image:
       style: '{ "backgroundSize": "contain" }'
       src: "/images/badges/switchup.png"
-      link: "https://www.switchup.org/rankings/best-coding-bootcamp"
+      link: "https://www.switchup.org/bootcamps/4geeks-academy"
     button:
       text: "Leer testimoniales"
       color: null
@@ -137,11 +137,11 @@ components:
     layout: two_column_left
     image:
       src: "https://storage.googleapis.com/4geeks-academy-website/landing-pictures/testimonials.webp"
-    content:
+    heading:
       text:
         "89% de nuestros graduados ya trabajan como desarrolladores de software."
-        #xl      lg     md     sm    xs
-      font_size: ["40px", "34px", "34px", "25px", "20px"]
+        #           xl      lg     md     sm    xs
+      font_size: ["40px", "34px"]
 # why_python:
 #   position: 7
 #   heading: "¿Por qué enseñamos Python?" # optional or set to white space to hide
