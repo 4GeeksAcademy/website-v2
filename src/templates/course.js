@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import {Link} from "gatsby";
 import BaseRender from './_baseLayout'
 import {Card, GeekCard} from '../components/Card'
@@ -43,8 +43,18 @@ const Program = ({data, pageContext, yml}) => {
     setOpen(false);
   };
 
-  const apply_button_text = session && session.location ? session.location.button.apply_button_text : "Apply";
-  const syllabus_button_text = session && session.location ? session.location.button.syllabus_button_text : "Download Syllabus";
+  const [applyButtonText, setApplyButtonText] = useState("");
+  let city = session && session.location ? session.location.city : [];
+  let currentLocation = data.allLocationYaml.edges.find(loc => loc.node?.city === city);
+
+  useEffect( () => {
+    if (currentLocation !== undefined){
+      setApplyButtonText(currentLocation.node.button.apply_button_text)
+    }
+  }, [currentLocation])
+
+  const apply_button_text = session && session.location ? applyButtonText : "Apply";
+  const syllabus_button_text = yml.button.syllabus_heading;
 
   return (<>
 
@@ -492,6 +502,9 @@ export const query = graphql`
           breathecode_location_slug
           fields{
             lang
+          }
+          button {
+            apply_button_text
           }
           meta_info {
             slug
