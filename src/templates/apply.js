@@ -47,7 +47,7 @@ const Apply = (props) => {
     }))
     const locations = session && session.locations && session.locations
         .filter(l => !l.active_campaign_location_slug.includes("online"))
-        .sort((a,b) => console.log(`${a.active_campaign_location_slug} ${a.meta_info.position} vs ${b.active_campaign_location_slug} ${b.meta_info.position}`) || a.meta_info.position > b.meta_info.position ? 1 : -1)
+        .sort((a,b) =>  a.meta_info.position > b.meta_info.position ? 1 : -1)
         .map(m => ({
             label: m.name + " " + (m.in_person_available == true ? trans[pageContext.lang]["(In-person and from home available)"] : trans[pageContext.lang]["(From home until further notice)"]),
             value: m.active_campaign_location_slug

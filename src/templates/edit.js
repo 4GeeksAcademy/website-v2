@@ -1,9 +1,9 @@
 import React from 'react';
 import Editor from 'react-simple-code-editor';
 import styled from "styled-components";
-import {Row, Column} from "../components/Sections"
-import {Colors} from "../components/Styling"
-import {H2} from "../components/Heading"
+import {Row, Column} from "../new_components/Sections"
+import {Colors} from "../new_components/Styling"
+import {H2} from "../new_components/Heading"
 import jsyaml from "js-yaml";
 import {highlight, languages} from 'prismjs/components/prism-core';
 import 'prismjs/components/prism-clike';

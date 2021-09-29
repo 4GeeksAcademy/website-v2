@@ -2,10 +2,9 @@ import React from 'react';
 import {useStaticQuery, graphql, Link} from "gatsby"
 import {Title, H2, H4, H3, Paragraph} from '../Heading'
 import {Column, Row, Div, Grid, GridContainer} from '../Sections'
-import {RoundImage, Colors} from '../../components/Styling'
-import ReactPlayer from '../../new_components/ReactPlayer'
-import Fragment from "../../components/Fragment"
-import Icon from "../../components/Icon"
+import {RoundImage, Colors} from '../Styling'
+import ReactPlayer from '../ReactPlayer'
+import Fragment from "../Fragment"
 
 export default ({lang, playerHeight, title, text, text_link, paragraph, background}) => {
   const data = useStaticQuery(graphql`

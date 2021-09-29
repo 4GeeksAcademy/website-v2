@@ -89,18 +89,3 @@ export default ({location, margin, lang, limit, filter, padding, padding_tablet,
     // </Fragment>
   )
 }
-
-    // <Row github="/components/news" display={`flex`} marginTop="75px" justifyContent={`between`}>
-    //   {locationNews.map((l, i) => (
-    //     <Column style={{whiteSpace: "nowrap", height: "60px"}} key={i} size="2" size_md="3">
-    //       <a href={l.url} target="_blank" rel="noopener noreferrer nofollow">
-    //         <Img
-    //           style={{height: "100%"}}
-    //           imgStyle={{objectFit: "contain"}}
-    //           alt={l.name}
-    //           fluid={l.image.childImageSharp.fluid}
-    //         />
-    //       </a>
-    //     </Column>
-    //   ))}
-    // </Row>

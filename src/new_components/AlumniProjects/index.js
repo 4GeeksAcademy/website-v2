@@ -3,13 +3,6 @@ import {GridContainer, GridContainerWithImage, Div, Grid} from '../Sections'
 import PropTypes from "prop-types"
 import {H2, H3, H4, H5, Paragraph} from '../Heading';
 import {Colors, StyledBackgroundSection, Span} from '../Styling';
-// import "react-responsive-carousel/lib/styles/carousel.min.css";
-// import Carousel, {Dots} from "@brainhubeu/react-carousel";
-// import "@brainhubeu/react-carousel/lib/style.css";
-// import SliderCarousel from '../SliderCarousel'
-// import {Carousel} from 'react-responsive-carousel';
-import {Link} from 'gatsby';
-import Fragment from "../Fragment"
 import Icon from "../Icon"
 import ReactPlayer from '../ReactPlayer';
 import Slider from 'react-slick';
@@ -20,7 +13,6 @@ const AlumniProjects = ({lang, showThumbs, limit, playerHeight, title, paragraph
     const [projects, setProjects] = useState(lang[0].node.projects.slice(0, limit || lang[0].node.projects.length))
     const [value, setValue] = useState(0);
 
-    // console.log(projects.map(i => i.project_name))
     const CustomNextArrow = (props) => {
         const { className, style, onClick } = props;
         return (
@@ -60,7 +52,6 @@ const AlumniProjects = ({lang, showThumbs, limit, playerHeight, title, paragraph
         prevArrow: <CustomPrevArrow />
     }
     return (
-        // <Fragment github="/components/alumni_projects">
         <>
         <GridContainer margin="73px 0 60px 0">
             <Div
