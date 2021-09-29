@@ -45,13 +45,13 @@ context("Test Contact page with correct data", () => {
 
     cy.log("**_____ Verifying Interception API _____**")
     cy.wait('@postContact');
-    cy.get('@postContact').then(xhr => {
+    cy.get('@postContact').then(({ request, response }) => {
       console.log("Response Intercepted:::", xhr)
       // expect(xhr.response.statusCode).to.equal(201)
-      expect(xhr.response.body.first_name).to.equal('Rowan')
-      expect(xhr.response.body.last_name).to.equal('Dash')
-      expect(xhr.response.body.email).to.equal('rodash@outlook.com')
-      expect(xhr.response.body.client_comments).to.equal('Im Rowan Dash')
+      cy.wrap(request.body).its('first_name').should('eq', response.body.first_name)
+      cy.wrap(request.body).its('last_name').should('eq', response.body.last_name)
+      cy.wrap(request.body).its('email').should('eq', response.body.email)
+      cy.wrap(request.body).its('client_comments').should('eq', response.body.client_comments)
     })
 
   });
