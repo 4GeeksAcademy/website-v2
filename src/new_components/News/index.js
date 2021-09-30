@@ -58,7 +58,7 @@ export default ({location, margin, lang, limit, filter, padding, padding_tablet,
   }
   return (
 
-    <Div width="calc(100% - 70px)"
+    <Div width="100%"
       justifySelf={justifySelf}
       margin={margin ? margin : "35px 0"}
       margin_tablet={margin ? margin : "40px 0 0 0"}
@@ -68,8 +68,8 @@ export default ({location, margin, lang, limit, filter, padding, padding_tablet,
       gap="20px"
       height="auto"
       overflowX={overflowX || "auto"}
-      justifyContent="between"
-      justifyContent_tablet="between"
+      justifyContent="around"
+      justifyContent_tablet="around"
     >
       {Array.isArray(locationNews) && locationNews.map((l, i) => {
         return (
