@@ -33,8 +33,7 @@
     "cy:run": "cypress run",
     "open:e2e": "START_SERVER_AND_TEST_INSECURE=1 start-server-and-test start http://localhost:8000 cy:open",
     "run:e2e": "START_SERVER_AND_TEST_INSECURE=1 start-server-and-test start http://localhost:8000 cy:run",
-    "cy:clean": "cypress cache clear",
-    "test_loc": "node --experimental-modules ./src/test/test.location.js"
+    "cy:clean": "cypress cache clear"
   },
   "dependencies": {
     "@loadable/component": "^5.13.2",

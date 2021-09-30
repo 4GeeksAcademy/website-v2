@@ -56,27 +56,28 @@ const Partners = (props) => {
         
       // height_tablet="350px"
       >
-        <Circle color="grey" width="17px" height="17px" top="0" left="90px" zIndex="1" display="none" display_tablet="inline" />
-        <Circle color="black" width="17px" height="17px" top="0" left="125px" zIndex="1" display="none" display_tablet="inline" />
-        <Circle color="grey" width="17px" height="17px" top="0" left="168px" zIndex="1" display="none" display_tablet="inline" />
-        <Circle color="grey" width="17px" height="17px" top="0" left="205px" zIndex="1" display="none" display_tablet="inline" />
-        <Circle color="grey" width="17px" height="17px" top="0" left="304px" zIndex="1" display="none" display_tablet="inline" />
-        <Circle color="yellow" width="17px" height="17px" top="32px" left="35px" zIndex="1" display="none" display_tablet="inline" opacity="0.2" />
-        <Circle color="black" width="17px" height="17px" top="32px" left="70px" zIndex="1" display="none" display_tablet="inline" />
-        <Circle color="grey" width="17px" height="17px" top="32px" left="125px" zIndex="1" display="none" display_tablet="inline" />
-        <Circle color="grey" width="17px" height="17px" top="32px" left="168px" zIndex="1" display="none" display_tablet="inline" />
-        <Circle color="blue" width="17px" height="17px" top="32px" left="249px" zIndex="1" display="none" display_tablet="inline" />
+        <Circle color="grey" width="17px" height="17px" top="20px" left="90px" zIndex="1" display="none" display_tablet="inline" />
+        <Circle color="black" width="17px" height="17px" top="20px" left="125px" zIndex="1" display="none" display_tablet="inline" />
+        <Circle color="grey" width="17px" height="17px" top="20px" left="168px" zIndex="1" display="none" display_tablet="inline" />
+        <Circle color="grey" width="17px" height="17px" top="20px" left="205px" zIndex="1" display="none" display_tablet="inline" />
+        <Circle color="grey" width="17px" height="17px" top="20px" left="304px" zIndex="1" display="none" display_tablet="inline" />
+        <Circle color="yellow" width="17px" height="17px" top="52px" left="35px" zIndex="1" display="none" display_tablet="inline" opacity="0.2" />
+        <Circle color="black" width="17px" height="17px" top="52px" left="70px" zIndex="1" display="none" display_tablet="inline" />
+        <Circle color="grey" width="17px" height="17px" top="52px" left="125px" zIndex="1" display="none" display_tablet="inline" />
+        <Circle color="grey" width="17px" height="17px" top="52px" left="168px" zIndex="1" display="none" display_tablet="inline" />
+        <Circle color="blue" width="17px" height="17px" top="52px" left="249px" zIndex="1" display="none" display_tablet="inline" />
+        <Circle color="lightBlue" width="57px" height="57px" top="52px" left="-28px" display="inline" display_tablet="none" />
         <Circle color="red" width="27px" height="27px" top="183px" left="125px" zIndex="1" display="none" display_tablet="inline" />
+        <Circle color="yellow" width="116px" height="116px" bottom="-58px" left="-58px" zIndex="10" />
+
         <Circle color="yellow" width="250px" height="250px" bottom="-100px" right="-68px" opacity="0.2" zIndex="10" display="none" display_tablet="inline" />
         <Circle color="grey" width="17px" height="17px" top="120px" right="50px" zIndex="1" display="none" display_tablet="inline" />
         <Circle color="black" width="17px" height="17px" top="120px" right="89px" zIndex="1" display="none" display_tablet="inline" />
         <Circle color="grey" width="17px" height="17px" top="120px" right="128px" zIndex="1" display="none" display_tablet="inline" />
         <Circle color="black" width="119px" height="11px" border="10px" bottom="115px" right="40px" zIndex="1" display="none" display_tablet="inline" />
         <Circle color="black" width="77px" height="11px" border="10px" bottom="115px" right="175px" zIndex="1" display="none" display_tablet="inline" />
-        <Circle color="yellow" width="116px" height="116px" bottom="-58px" left="-58px" zIndex="10" />
         <Circle color="yellow" width="21px" height="21px" top="10px" right="320px" zIndex="1" display="none" display_tablet="inline" />
         <Circle color="blue" width="57px" height="57px" top="32px" right="61px" display="none" display_tablet="inline" />
-        <Circle color="lightBlue" width="57px" height="57px" top="32px" left="-28px" display="inline" display_tablet="none" />
 
         <Div flexDirection_tablet="row" flexDirection="column" justifyContent="center" alignItems="center">
           <Link to={yml.button_section.button_link}
@@ -104,7 +105,7 @@ const Partners = (props) => {
         images={partnersData.partners.images}
         title={partnersData.partners.tagline}
         paragraph={partnersData.partners.sub_heading}
-        showFeatured={true}
+        showFeatured
         props={partnersData.partners}
       />
       <GridContainer fluid background={Colors.verylightGray} padding="36px 17px 80px 17px" padding_tablet="75px 0 133px 0" margin_tablet="115px 0 100px 0">
@@ -122,22 +123,31 @@ const Partners = (props) => {
         <GridContainer backgroundChild={Colors.white} padding_tablet="42px 0 80px 0">
           <OurPartners
             images={partnersData.coding.images}
-            showFeatured={true}
+            showFeatured
             props={partnersData.partners}
           />
         </GridContainer>
       </GridContainer>
       <GridContainer columns_tablet="12" padding="99px  17px 80px 17px" padding_tablet="0" margin_tablet="0 0 81px 0">
-        <Div ref={joinPartnersRef} gridColumn_tablet="1 / 7" gridRow_tablet="1 / 1" flexDirection="column" >
+        <Div ref={joinPartnersRef} gridColumn_tablet="1 / 7" flexDirection="column" >
           <H2 textAlign_md="left" margin="0 0 30px 0">{`</ ${yml.form.title}`}</H2>
-        </Div>
-        <Div gridColumn_tablet="1 / 7" gridRow_tablet="2 / 2" flexDirection="column" >
           {yml.form.paragraph.split("\n").map((m, i) =>
-            <Paragraph key={i} margin="7px 0" textAlign_md="left" dangerouslySetInnerHTML={{__html: m}}></Paragraph>
+            <Paragraph 
+              key={i}
+              margin="7px 0"
+              textAlign_md="left"
+              dangerouslySetInnerHTML={{__html: m}}
+            />
           )}
         </Div>
-        <Div justifyContent="center" gridColumn_tablet="8 / 13" gridRow_tablet="2 / 2" margin="0 0 81px 0">
-          <LeadForm formHandler={beHiringPartner} handleClose={handleClose} lang={pageContext.lang} inputBgColor={Colors.white} fields={['full_name', 'email', 'phone', 'client_comments']} />
+        <Div flexDirection="column" gridColumn_tablet="7 / 13">
+          <LeadForm
+            formHandler={beHiringPartner}
+            handleClose={handleClose}
+            lang={pageContext.lang}
+            inputBgColor={Colors.white}
+            fields={['full_name', 'email', 'phone', 'client_comments']}
+          />
         </Div>
 
       </GridContainer>
