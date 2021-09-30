@@ -20,6 +20,11 @@ cities:
     - Santiago de Chile
     - Caracas
 button_text: "APPLY NOW"
+button:
+  syllabus_heading: "Download syllabus etc"
+  syllabus_btn_label: "Download instantly"
+  syllabus_motivation: "You can receive a email"
+
 ## JOB MAIN SECTION INFO
 title: "Human Resources & Recruiting"
 description: "We are revolutionizing the coding education industry be graduating thriving junior software developers 10x faster than the universities, 91% of our graduates have been hired in coding-related positions with at least 30% increase in their salary. We are looking for someone to help use rise those numbers, by engaging with our students and alumni and potential employers.  What kind of person are we looking for?"
