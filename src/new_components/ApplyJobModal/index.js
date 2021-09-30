@@ -1,9 +1,14 @@
 import React, { useEffect, useState, useContext } from 'react';
 import PropTypes from 'prop-types';
-import styled, { css, keyframes } from 'styled-components';
+import {H4} from '../Heading'
+
+import styled from 'styled-components';
 import { GridContainer, Div } from '../Sections';
 import { Button, Colors } from '../Styling';
 import Icon from '../Icon';
+import {SessionContext} from '../../session';
+import {newsletterSignup} from "../../actions"
+import {Input} from "../Form"
 
 const formIsValid = (formData = null) => {
   if (!formData) return null;
@@ -12,6 +17,14 @@ const formIsValid = (formData = null) => {
   }
   return true;
 }
+
+const Form = styled.form`
+  padding: 0 0 35px 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px
+`;
 
 const ModalBox = styled.div`
   position: fixed;
@@ -27,6 +40,7 @@ const ModalBox = styled.div`
   display: ${(props) => (props.open ? 'block' : 'none')};
 `;
 const ApplyJobModal = (props) => {
+  const {session} = React.useContext(SessionContext);
   const [formStatus, setFormStatus] = useState({
     status: 'idle',
     msg: 'Resquest',
@@ -43,14 +57,14 @@ const ApplyJobModal = (props) => {
     website: { value: '', valid: true },
   });
   return (
-    <ModalBox top={props.top} padding={props.boxPadding} open={props.open}>
+    <ModalBox className="set-overflow hideOverflowX__" top={props.top} padding={props.boxPadding} open={props.open}>
       <GridContainer
         github="/components/job"
         columns_tablet="12"
-        margin_tablet="70px 0 0 0"
-        margin="70px 0 0 0"
-        padding="30px 0 0 0"
-        padding_tablet="30px 0 0 0"
+        // margin_tablet="70px 0 0 0"
+        // margin="70px 0 0 0"
+        padding="40px 0 0 0"
+        padding_tablet="40px 0 0 0"
       >
         <Div flexDirection="column" gridColumn_tablet=" 2 / 12">
           <Button
@@ -74,20 +88,35 @@ const ApplyJobModal = (props) => {
                 margin="10px 0 10px 10px"
                 align="center"
               >
-                {yml.newsletter.thankyou}
+                {props.thankyou}
               </H4>
             </Div>
           ) : (
             <>
               <H4
-                margin="0 0 10px 0"
+                type="h4"
+                margin="34px 0"
                 textAlign="left"
-                display="none"
+                // display="none"
+                fontSize="30px"
+                lineHeight="36px"
+                fontWeight="700"
                 display_tablet="block"
               >
-                {yml.newsletter.heading}
+                {props.title_job}
               </H4>
-              <Div justifyContent="center" width="100%">
+              <Div width="100%" height="1px" background="#C4C4C4"/>
+              <H4
+                type="h4"
+                margin="34px 0 22px 0"
+                textAlign="left"
+                // display="none"
+                fontSize="22px"
+                display_tablet="block"
+              >
+                {props.heading}
+              </H4>
+
                 <Form
                   onSubmit={(e) => {
                     console.log('E:', e);
@@ -167,44 +196,45 @@ const ApplyJobModal = (props) => {
                     required
                   />
                   {/*NOTE: 2 column here */}
-                  <Input
-                    type="email"
-                    className="form-control"
-                    width="100%"
-                    placeholder="Email *"
-                    borderRadius="3px"
-                    bgColor={Colors.white}
-                    margin="0"
-                    onChange={(value, valid) => {
-                      setVal({ ...formData, email: { value, valid } });
-                      if (formStatus.status === 'error') {
-                        setFormStatus({ status: 'idle', msg: 'Resquest' });
-                      }
-                    }}
-                    value={formData.email.value}
-                    errorMsg="Please specify a valid email"
-                    required
-                  />
+                  <Div flexDirection="row" gap="24px">
+                    <Input
+                      type="email"
+                      className="form-control"
+                      width="100%"
+                      placeholder="Email *"
+                      borderRadius="3px"
+                      bgColor={Colors.white}
+                      margin="0"
+                      onChange={(value, valid) => {
+                        setVal({ ...formData, email: { value, valid } });
+                        if (formStatus.status === 'error') {
+                          setFormStatus({ status: 'idle', msg: 'Resquest' });
+                        }
+                      }}
+                      value={formData.email.value}
+                      errorMsg="Please specify a valid email"
+                      required
+                    />
 
-                  <Input
-                    type="text"
-                    className="form-control"
-                    width="100%"
-                    placeholder="Phone *"
-                    borderRadius="3px"
-                    bgColor={Colors.white}
-                    margin="0"
-                    onChange={(value, valid) => {
-                      setVal({ ...formData, phone: { value, valid } });
-                      if (formStatus.status === 'error') {
-                        setFormStatus({ status: 'idle', msg: 'Resquest' });
-                      }
-                    }}
-                    value={formData.phone.value}
-                    errorMsg="Please specify a valid phone"
-                    required
-                  />
-
+                    <Input
+                      type="text"
+                      className="form-control"
+                      width="100%"
+                      placeholder="Phone *"
+                      borderRadius="3px"
+                      bgColor={Colors.white}
+                      margin="0"
+                      onChange={(value, valid) => {
+                        setVal({ ...formData, phone: { value, valid } });
+                        if (formStatus.status === 'error') {
+                          setFormStatus({ status: 'idle', msg: 'Resquest' });
+                        }
+                      }}
+                      value={formData.phone.value}
+                      errorMsg="Please specify a valid phone"
+                      required
+                    />
+                  </Div>
 
 
                   {/* TODO: Resume file here */}
@@ -227,37 +257,66 @@ const ApplyJobModal = (props) => {
                     required
                   />
 
+                  <Input
+                    type="text"
+                    className="form-control"
+                    width="100%"
+                    placeholder="https://linkedin.com/in/..."
+                    borderRadius="3px"
+                    bgColor={Colors.white}
+                    margin="0"
+                    onChange={(value, valid) => {
+                      setVal({ ...formData, linkedin: { value, valid } });
+                      if (formStatus.status === 'error') {
+                        setFormStatus({ status: 'idle', msg: 'Resquest' });
+                      }
+                    }}
+                    value={formData.linkedin.value}
+                    // errorMsg="Linkedin link is required"
+                    // required
+                  />
 
-
+                  <Input
+                    type="text"
+                    className="form-control"
+                    width="100%"
+                    placeholder="https://website-exmaple.me"
+                    borderRadius="3px"
+                    bgColor={Colors.white}
+                    margin="0"
+                    onChange={(value, valid) => {
+                      setVal({ ...formData, website: { value, valid } });
+                      if (formStatus.status === 'error') {
+                        setFormStatus({ status: 'idle', msg: 'Resquest' });
+                      }
+                    }}
+                    value={formData.website.value}
+                    // errorMsg="Linkedin link is required"
+                    // required
+                  />
                   <Button
                     height="40px"
-                    margin="0 0 0 10px"
+                    margin="25px 0 0 auto"
                     type="submit"
-                    fontSize="22px"
+                    fontSize="12px"
                     variant="full"
                     borderRadius="3px"
                     color={
                       formStatus.status === 'loading'
                         ? Colors.darkGray
-                        : Colors.black
+                        : Colors.blue
                     }
                     textColor={Colors.white}
                     disabled={formStatus.status === 'loading' ? true : false}
                   >
+                
                     {formStatus.status === 'loading' ? (
                       'Loading...'
                     ) : (
-                      <Icon
-                        icon="send"
-                        height="16px"
-                        width="16px"
-                        color={Colors.white}
-                        fill={Colors.white}
-                      />
+                      `${props.apply_button_text || "Enviar aplicación".toUpperCase()}`
                     )}
                   </Button>
                 </Form>
-              </Div>
             </>
           )}
 

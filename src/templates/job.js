@@ -43,7 +43,6 @@ const Job = ({ data, pageContext, yml }) => {
   //   email: '',
   // });
   return (
-    <>
       <GridContainer
         github="/components/job"
         columns_tablet="12"
@@ -91,10 +90,13 @@ const Job = ({ data, pageContext, yml }) => {
           <ApplyJobModal
             aria-labelledby="simple-modal-title"
             aria-describedby="simple-modal-description"
+            title_job={yml.banner_heading}
+            heading="Cuéntanos sobre ti"
+            thankyou={yml.button.thankyou}
             open={open}
             onClose={handleClose}
-          >
-            <LeadForm
+          />
+            {/* <LeadForm
               style={{ marginTop: '50px' }}
               heading={yml.button.syllabus_heading}
               motivation={yml.button.syllabus_motivation}
@@ -110,7 +112,7 @@ const Job = ({ data, pageContext, yml }) => {
               //   },
               // }}
             />
-          </ApplyJobModal>
+          </ApplyJobModal> */}
 
           <Div flexDirection="column">
             {yml.content.map((m, i) => (
@@ -152,7 +154,6 @@ const Job = ({ data, pageContext, yml }) => {
           />
         </Div>
       </GridContainer>
-    </>
   );
 };
 
@@ -179,6 +180,7 @@ export const query = graphql`
             syllabus_heading
             syllabus_btn_label
             syllabus_motivation
+            thankyou
           }
           cities
           title

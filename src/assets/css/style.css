@@ -14,6 +14,12 @@ html, body
     scroll-padding: 10%;
 }
 
+.set-overflow {
+    overflow: auto!important;
+    /* overflow-y: clip!important;
+    scroll-padding: 10%; */
+}
+
 /* adds three dots to text when reaches the end of line */
 
 .img-border::before{

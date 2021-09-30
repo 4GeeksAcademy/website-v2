@@ -25,6 +25,7 @@ button:
   syllabus_heading: "Descargar Detalles del Curso"
   syllabus_btn_label: "Descarga Instantánea"
   syllabus_motivation: "Recibirás en tu buzón de correo un PDF con información muy detallada sobre nuestra metodología, tecnologías, financiación e información del curso."
+  thankyou: "¡Listo! Tu aplicación a este empleo ha sido enviada exitosamente"
 
 ## JOB MAIN SECTION INFO
 title: "Admisión y Recursos Humanos"

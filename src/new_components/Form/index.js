@@ -9,7 +9,8 @@ const regex = {
     text: /^.+$/,
     textarea: /^.+$/,
     number: /^\d+$/,
-    phone: /^(?!(\d{2,})\1+)(?!(\d+)\2{3,})(\+\d{1,3})?(\d{8,10})$/
+    phone: /^(?!(\d{2,})\1+)(?!(\d+)\2{3,})(\+\d{1,3})?(\d{8,10})$/,
+    file: /^.*\.(jpg|png|JPG|gif|GIF|doc|DOC|pdf|PDF)$/
 }
 
 
