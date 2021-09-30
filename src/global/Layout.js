@@ -61,6 +61,10 @@ const Layout = ({children, seo, context}) => {
                 icon
                 link
               }
+              policy{
+                name
+                link
+              }
               fields {
                 lang
               }
