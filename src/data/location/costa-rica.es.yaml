@@ -41,7 +41,7 @@ info_box:
   address: ""
   iframeMapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1113.9468207368486!2d-84.05324642641304!3d9.926577771692926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0e47a42cec70b%3A0x63f6a801c5a73b61!2s4Geeks%20Costa%20Rica!5e0!3m2!1ses-419!2scl!4v1621010232303!5m2!1ses-419!2scl"
   contact_heading: "Escríbenos al Whatsapp"
-  phone: "(506) 8692 8372"
+  phone: "(571) 580-6848"
   email: "puravida@4GeeksAcademy.com"
 
 images_box:
@@ -109,10 +109,10 @@ prices:
       ## CHANGE HERE THE INFO IN THE LEFT BOX
       left_section:
         header:
-          heading_one: "FULL-TIME"
-          sub_heading: ""
+          heading_one: "PART-TIME"
+          sub_heading: "Puedes pagar por Adelantado y tener un gran descuento"
         content:
-          price: "Pay upfront and get a discount or ask for a 2 payment options"
+          price: "Desde $USD 3500"
           price_info: ""
         button:
           button_text: "APLICAR AHORA"
@@ -122,9 +122,9 @@ prices:
       right_section:
         header:
           heading_one: "PART-TIME"
-          sub_heading: ""
+          sub_heading: "Pago en cuotas o por mensualidades"
         content:
-          price: "Pay upfront and get a discount or ask for a 3 - 4 payment options"
+          price: "Cuotas por hasta 12 meses y que empiezan desde $USD250 al mes"
           price_info: ""
         button:
           button_text: "APLICAR AHORA"
