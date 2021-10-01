@@ -116,21 +116,25 @@ const Images_Centered = (props) => {
       flexDirection="row"
       borderRadius="3px"
       style={{flexWrap: "wrap"}}
+      // columnGap="70px"
       justifyContent="center"
       background={Colors.white}
-      padding="50px 20px 0px 20px"
-      margin="0 25px 50px 25px" >
+      padding="25px 0 0 0"
+      margin="0 0 50px 0" >
 
       {props.images.map((l, i) => {
         return (
-          <Div margin="0 20px 40px 20px" 
+          <Div margin="0 20px 40px 20px"
+          // columnGap={i >= 4 ? "": ""}
+          // margin_tablet={`0 calc(${i % 2 === 1 ? `${120}px`: "30px"}) 30px calc(${i % 2 === 1 ? `${120}px`: "30px"})`}
 
-          margin_tablet={`0 calc(${i % 2 === 1 ? `${120}px`: "30px"}) 30px calc(${i % 2 === 1 ? `${120}px`: "30px"})`}
+          margin_tablet={`0 ${i >= 4 ? '32px': "42px"} 30px ${i >= 4 ? '32px': "42px"}`}
+
           // margin_tablet="0 61px 40px 0"
           >
             <GatsbyImage
               key={i}
-              style={{height: "80px", minWidth: "110px"}}
+              style={{height: "60px", minWidth: "90px"}}
               imgStyle={{objectFit: "contain"}}
               alt={l.name}
               fluid={l.image.childImageSharp.fluid}
@@ -149,7 +153,7 @@ const Images_Featured = (props) => {
   return (
     <>
       <GridContainer columns_tablet="3" padding_tablet={props.paddingFeatured || "0"}>
-        {(props.featuredImages ? props.featuredImages : props.images.filter(f => f.featured == true)).map((m, i) => {
+        {(props.featuredImages ? props.featuredImages : props.images.filter(f => f.featured === true)).map((m, i) => {
           return (
             <GatsbyImage
               key={i}
@@ -166,7 +170,7 @@ const Images_Featured = (props) => {
       {
         !props.withoutLine 
         && <GridContainer>
-            <Div height="1px" background={Colors.lightGray} margin="30px 0" margin_tablet="80px 0" />
+            <Div height="1px" background={Colors.lightGray} margin="30px 0" margin_tablet="60px 0" />
           </GridContainer>
       }
     </>

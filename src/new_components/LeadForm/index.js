@@ -255,7 +255,7 @@ const LeadForm = ({marginButton, marginButton_tablet, background, margin, margin
                         <Div justifyContent={justifyContentButton ? justifyContentButton : "end" } display="flex" padding="5px 0 0 0">
                             <Button
                                 variant="full"
-                                type={`submit ${layout}`}
+                                type="submit"
                                 margin={marginButton}
                                 margin_tablet={marginButton_tablet}
                                 color={formStatus.status === "loading" ? Colors.darkGray : Colors.blue}
