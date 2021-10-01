@@ -128,7 +128,7 @@ prices:
           heading_one: "PART-TIME"
           sub_heading: "Pago en cuotas o mensualidades"
         content:
-          price: "Desde $USD3500"
+          price: "Desde $USD250 cada mensualidad"
           price_info: ""
         button:
           button_text: "APLICAR AHORA"
