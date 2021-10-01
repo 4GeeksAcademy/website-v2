@@ -115,7 +115,7 @@ prices:
           heading_one: "PART-TIME"
           sub_heading: "Pregunta por las Becas disponibles"
         content:
-          price: "USD $3,750"
+          price: "Desde USD $3,500"
           price_info: "Un Pago"
         button:
           button_text: "Aplica YA"
@@ -127,8 +127,8 @@ prices:
           heading_one: "En cuotas"
           sub_heading: "Plan de Pagos"
         content:
-          price: "USD $800"
-          price_info: "5 cuotas/meses"
+          price: "Desde $USD $254"
+          price_info: "Desde 4 hasta 12 cuotas/meses"
         button:
           button_text: "Aplica YA"
 
