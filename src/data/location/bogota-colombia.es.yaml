@@ -127,7 +127,7 @@ prices:
           heading_one: "En cuotas"
           sub_heading: "Plan de Pagos"
         content:
-          price: "Desde $USD $254"
+          price: "Desde solo $USD $254"
           price_info: "Desde 4 hasta 12 cuotas/meses"
         button:
           button_text: "Aplica YA"
