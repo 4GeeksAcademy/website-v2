@@ -1,8 +1,9 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useRef} from 'react';
 import PropTypes from 'prop-types';
 import styled, {css, keyframes} from 'styled-components';
 import {Colors, Button} from '../Styling';
 import {Break} from "../Responsive"
+import {Div} from "../Sections"
 
 const regex = {
     email: /^[-!#$%&'*+\/0-9=?A-Z^_a-z`{|}~](\.?[-!#$%&'*+\/0-9=?A-Z^_a-z`{|}~])*@(?!mailinator|leonvero|ichkoch|naymeo|naymio)[a-zA-Z0-9]*\.[a-zA-Z](-?[a-zA-Z0-9])+$/,
@@ -53,7 +54,7 @@ const Msg = styled.span`
 export const Input = ({onChange, type, required, validate, errorMsg, width, margin, ...rest}) => {
     const [validStatus, setValidStatus] = useState({valid: true});
 
-    return <Rel width={width}>
+    return <Div flexDirection="column" width={width || "100%"} position="relative">
         {!validStatus.valid && <Msg>{errorMsg}</Msg>}
         <StyledInput {...rest} type={type} margin={margin} required={required} valid={validStatus.valid}
             onChange={(e) => {
@@ -71,7 +72,7 @@ export const Input = ({onChange, type, required, validate, errorMsg, width, marg
                 if (onChange) onChange(e.target.value, isValid);
             }}
         />
-    </Rel>
+    </Div>
 }
 
 Input.propTypes = {

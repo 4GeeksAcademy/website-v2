@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useContext } from 'react';
+import React, { useEffect, useState, useContext, useRef } from 'react';
 import PropTypes from 'prop-types';
 import {H4} from '../Heading'
 
@@ -7,7 +7,7 @@ import { GridContainer, Div } from '../Sections';
 import { Button, Colors } from '../Styling';
 import Icon from '../Icon';
 import {SessionContext} from '../../session';
-import {newsletterSignup} from "../../actions"
+import {applyJob} from "../../actions"
 import {Input} from "../Form"
 
 const formIsValid = (formData = null) => {
@@ -40,6 +40,10 @@ const ModalBox = styled.div`
   display: ${(props) => (props.open ? 'block' : 'none')};
 `;
 const ApplyJobModal = (props) => {
+  const {
+    form_data, lang, heading, top, boxPadding, open, 
+    onClose, title_job, children
+  } = props
   const {session} = React.useContext(SessionContext);
   const [formStatus, setFormStatus] = useState({
     status: 'idle',
@@ -56,20 +60,26 @@ const ApplyJobModal = (props) => {
     linkedin: { value: '', valid: true },
     website: { value: '', valid: true },
   });
+
+
+  const findElement = (inputName, type) => {
+    return form_data.form_fields.find(field => field.name === inputName)[type]
+  }
+
   return (
-    <ModalBox className="set-overflow hideOverflowX__" top={props.top} padding={props.boxPadding} open={props.open}>
+    <ModalBox className="set-overflow hideOverflowX__" top={top} padding={boxPadding} open={open}>
       <GridContainer
         github="/components/job"
         columns_tablet="12"
         // margin_tablet="70px 0 0 0"
         // margin="70px 0 0 0"
-        padding="40px 0 0 0"
+        padding="40px 15px 0 15px"
         padding_tablet="40px 0 0 0"
       >
         <Div flexDirection="column" gridColumn_tablet=" 2 / 12">
           <Button
             style={{ margin: '8px 0 0 0', padding: '0', width: 'fit-content' }}
-            onClick={props.onClose}
+            onClick={onClose}
           >
             <Icon
               icon="arrowLeft2"
@@ -80,30 +90,46 @@ const ApplyJobModal = (props) => {
           </Button>
 
           {formStatus.status === 'thank-you' ? (
-            <Div alignItems="center">
+            <Div alignItems="center" height="50vh" flexDirection="column" justifyContent="center">
               <Icon icon="success" />
               <H4
                 fontSize="15px"
-                lineHeight="22px"
-                margin="10px 0 10px 10px"
+                lineHeight="26px"
+                padding="25px 4%"
+                padding_tablet="25px 30%"
+                textAlign="center"
                 align="center"
               >
-                {props.thankyou}
+                {form_data.apply_job.thankyou}
               </H4>
+              <Button 
+                color={Colors.blue}
+                textColor={Colors.white}
+                margin="5px 0"
+                variant="full"
+                onClick={onClose}
+                type="button"
+                fontSize="12px"
+                variant="full"
+                borderRadius="3px"
+              >
+                {form_data.apply_job.close}
+              </Button>
             </Div>
           ) : (
             <>
               <H4
                 type="h4"
                 margin="34px 0"
-                textAlign="left"
+                textAlign="center"
                 // display="none"
+                textAlign_tablet="left"
                 fontSize="30px"
                 lineHeight="36px"
                 fontWeight="700"
                 display_tablet="block"
               >
-                {props.title_job}
+                {title_job}
               </H4>
               <Div width="100%" height="1px" background="#C4C4C4"/>
               <H4
@@ -114,12 +140,11 @@ const ApplyJobModal = (props) => {
                 fontSize="22px"
                 display_tablet="block"
               >
-                {props.heading}
+                {form_data.apply_job.text}
               </H4>
 
                 <Form
                   onSubmit={(e) => {
-                    console.log('E:', e);
                     e.preventDefault();
                     if (formStatus.status === 'error') {
                       setFormStatus({ status: 'idle', msg: 'Resquest' });
@@ -131,7 +156,7 @@ const ApplyJobModal = (props) => {
                       });
                     } else {
                       setFormStatus({ status: 'loading', msg: 'Loading...' });
-                      newsletterSignup(formData, session)
+                      applyJob(formData, session)
                         .then((data) => {
                           if (
                             data.error !== false
@@ -162,7 +187,7 @@ const ApplyJobModal = (props) => {
                     type="text"
                     className="form-control"
                     width="100%"
-                    placeholder="Full name *"
+                    placeholder={findElement("full_name", "place_holder")}
                     borderRadius="3px"
                     bgColor={Colors.white}
                     margin="0"
@@ -173,15 +198,15 @@ const ApplyJobModal = (props) => {
                       }
                     }}
                     value={formData.full_name.value}
-                    errorMsg="Full name is required"
-                    required
+                    errorMsg={findElement("full_name", "error")}
+                    required={findElement("full_name", "required")}
                   />
 
                   <Input
                     type="text"
                     className="form-control"
                     width="100%"
-                    placeholder="Location *"
+                    placeholder={findElement("location", "place_holder")}
                     borderRadius="3px"
                     bgColor={Colors.white}
                     margin="0"
@@ -192,16 +217,15 @@ const ApplyJobModal = (props) => {
                       }
                     }}
                     value={formData.location.value}
-                    errorMsg="Full name is required"
-                    required
+                    errorMsg={findElement("location", "error")}
+                    required={findElement("location", "required")}
                   />
-                  {/*NOTE: 2 column here */}
                   <Div flexDirection="row" gap="24px">
                     <Input
                       type="email"
                       className="form-control"
                       width="100%"
-                      placeholder="Email *"
+                      placeholder={findElement("email", "place_holder")}
                       borderRadius="3px"
                       bgColor={Colors.white}
                       margin="0"
@@ -212,15 +236,15 @@ const ApplyJobModal = (props) => {
                         }
                       }}
                       value={formData.email.value}
-                      errorMsg="Please specify a valid email"
-                      required
+                      errorMsg={findElement("email", "error")}
+                      required={findElement("email", "required")}
                     />
 
                     <Input
                       type="text"
                       className="form-control"
                       width="100%"
-                      placeholder="Phone *"
+                      placeholder={findElement("phone", "place_holder")}
                       borderRadius="3px"
                       bgColor={Colors.white}
                       margin="0"
@@ -231,18 +255,16 @@ const ApplyJobModal = (props) => {
                         }
                       }}
                       value={formData.phone.value}
-                      errorMsg="Please specify a valid phone"
-                      required
+                      errorMsg={findElement("phone", "error")}
+                      required={findElement("phone", "required")}
                     />
                   </Div>
 
-
-                  {/* TODO: Resume file here */}
                   <Input
                     type="file"
+                    // input-file
                     className="form-control"
                     width="100%"
-                    // placeholder="Resume *"
                     borderRadius="3px"
                     bgColor={Colors.white}
                     margin="0"
@@ -272,8 +294,6 @@ const ApplyJobModal = (props) => {
                       }
                     }}
                     value={formData.linkedin.value}
-                    // errorMsg="Linkedin link is required"
-                    // required
                   />
 
                   <Input
@@ -291,12 +311,10 @@ const ApplyJobModal = (props) => {
                       }
                     }}
                     value={formData.website.value}
-                    // errorMsg="Linkedin link is required"
-                    // required
                   />
                   <Button
                     height="40px"
-                    margin="25px 0 0 auto"
+                    margin="5px 0 0 auto"
                     type="submit"
                     fontSize="12px"
                     variant="full"
@@ -313,14 +331,14 @@ const ApplyJobModal = (props) => {
                     {formStatus.status === 'loading' ? (
                       'Loading...'
                     ) : (
-                      `${props.apply_button_text || "Enviar aplicación".toUpperCase()}`
+                      `${form_data.apply_job.apply_button_text.toUpperCase()}`
                     )}
                   </Button>
                 </Form>
             </>
           )}
 
-          {props.children}
+          {children}
         </Div>
       </GridContainer>
     </ModalBox>

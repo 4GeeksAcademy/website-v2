@@ -475,3 +475,13 @@ a.faq-link:hover {
     width: 0!important;
     height: 0!important;
 }
+
+.input-file[type="file"]{
+    /* display: none; */
+    width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}

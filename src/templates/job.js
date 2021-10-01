@@ -6,19 +6,7 @@ import { GridContainer, Div } from '../new_components/Sections';
 import { H1, H4, Paragraph } from '../new_components/Heading';
 import { Button, Colors } from '../new_components/Styling';
 import BaseRender from './_baseLayout';
-import { applyJob } from '../actions';
-import LeadForm from '../new_components/LeadForm';
 
-// const Input = styled.input`
-//   background-color: ${Colors.lightGray};
-//   height: 40px;
-//   width: 100%;
-//   border: none;
-//   font-family: 'Lato', sans-serif;
-
-//   font-size: 14px;
-//   font-color: ${Colors.black};
-// `;
 const Job = ({ data, pageContext, yml }) => {
   const [open, setOpen] = React.useState(false);
   const { lang } = pageContext;
@@ -31,24 +19,13 @@ const Job = ({ data, pageContext, yml }) => {
     setOpen(false);
   };
 
-  console.log('CONTEXT:::', pageContext);
-  console.log("YAML:::", yml)
-
-  // const [form, setForm] = useState(false);
-  // const [buttonToggle, setButtonToggle] = useState();
-  // const [formData, setVal] = useState({
-  //   first_name: '',
-  //   last_name: '',
-  //   phone: '',
-  //   email: '',
-  // });
   return (
       <GridContainer
         github="/components/job"
         columns_tablet="12"
         margin_tablet="70px 0 0 0"
         margin="70px 0 0 0"
-        padding="30px 0 0 0"
+        padding="30px 15px 0 15px"
         padding_tablet="30px 0 0 0"
       >
         <Div flexDirection="column" gridColumn_tablet=" 2 / 12">
@@ -63,10 +40,11 @@ const Job = ({ data, pageContext, yml }) => {
               // fill={Colors.blue}
             />
           </Link>
-          <Div alignItems="center">
+          <Div alignItems="center" flexDirection="column" flexDirection_tablet="row">
             <H1
               type="h1"
-              textAlign="left"
+              textAlign="center"
+              textAlign_tablet="left"
               zIndex="5"
               fontSize="30px"
               lineHeight="36px"
@@ -90,29 +68,14 @@ const Job = ({ data, pageContext, yml }) => {
           <ApplyJobModal
             aria-labelledby="simple-modal-title"
             aria-describedby="simple-modal-description"
+            lang={lang}
             title_job={yml.banner_heading}
-            heading="Cuéntanos sobre ti"
-            thankyou={yml.button.thankyou}
+            // heading={yml.apply_job.text}
+            // thankyou={yml.apply_job.thankyou}
+            form_data={data.allLeadFormYaml.edges[0].node}
             open={open}
             onClose={handleClose}
           />
-            {/* <LeadForm
-              style={{ marginTop: '50px' }}
-              heading={yml.button.syllabus_heading}
-              motivation={yml.button.syllabus_motivation}
-              sendLabel={yml.button_text}
-              formHandler={applyJob}
-              handleClose={handleClose}
-              lang={pageContext.lang}
-              // data={{
-              //   slug: {
-              //     type: 'hidden',
-              //     value: yml.meta_info.bc_slug,
-              //     valid: true,
-              //   },
-              // }}
-            />
-          </ApplyJobModal> */}
 
           <Div flexDirection="column">
             {yml.content.map((m, i) => (
@@ -176,18 +139,40 @@ export const query = graphql`
           link_back
           banner_image
           button_text
-          button {
-            syllabus_heading
-            syllabus_btn_label
-            syllabus_motivation
-            thankyou
-          }
           cities
           title
           description
           content {
             label
             list
+          }
+          # apply_job {
+          #   text
+          #   thankyou
+          # }
+        }
+      }
+    }
+    allLeadFormYaml(
+      filter: { fields: { lang: { eq: $lang } } }
+    ){
+      edges{
+        node{
+          fields{
+            lang
+          }
+          apply_job {
+            text
+            thankyou
+            apply_button_text
+            close
+          }
+          form_fields{
+            name
+            required
+            type
+            place_holder
+            error
           }
         }
       }
