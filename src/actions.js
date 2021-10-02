@@ -190,7 +190,7 @@ export const applyJob = async (data) => {
     let body = {};
     for (let key in data) body[key] = data[key].value;
 
-    
+    // TODO: tag and utm are still missing for the form
     // if(!session || !session.utm || !session.utm.utm_test) return await save_form(body, ['hiring-partner'], ['hiring-partner']);
     return true;
 }
