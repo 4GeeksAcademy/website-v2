@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import {Link} from "gatsby";
 import BaseRender from './_baseLayout'
 import {Container, Header, Column, Wrapper, WrapperImage, Divider, Sidebar, Div, GridContainer} from '../new_components/Sections'
@@ -39,8 +39,17 @@ const Program = ({data, pageContext, yml}) => {
     setOpen(false);
   };
 
-  const apply_button_text = session && session.location ? session.location.button.apply_button_text : "Apply";
-  const syllabus_button_text = session && session.location ? session.location.button.syllabus_button_text : "Download Syllabus";
+  const [applyButtonText, setApplyButtonText] = useState("");
+  let city = session && session.location ? session.location.city : [];
+  let currentLocation = data.allLocationYaml.edges.find(loc => loc.node?.city === city);
+
+  useEffect( () => {
+    if (currentLocation !== undefined){
+      setApplyButtonText(currentLocation.node.button.apply_button_text)
+    }
+  }, [currentLocation])
+
+  const syllabus_button_text = yml.button.syllabus_heading;
 
   return (<>
 
@@ -78,7 +87,7 @@ const Program = ({data, pageContext, yml}) => {
         <Link to={yml.button.apply_button_link}
           state={{course: yml.meta_info.bc_slug}}
         >
-          <Button variant="full" justifyContent="center" width="200px" width_tablet="fit-content" color={Colors.blue} margin_tablet="10px 24px 10px 0" textColor="white">{apply_button_text}</Button>
+          <Button variant="full" justifyContent="center" width="200px" width_tablet="fit-content" color={Colors.blue} margin_tablet="10px 24px 10px 0" textColor="white">{applyButtonText}</Button>
         </Link>
         <Button onClick={handleOpen} width="200px" width_tablet="fit-content" variant="outline" icon={<Icon icon="download" stroke={Colors.black} style={{marginRight: "10px"}} width="46px" height="46px" />} color={Colors.black} margin="10px 0 50px 0" margin_tablet="0" textColor={Colors.black}>{syllabus_button_text}</Button>
       </Div>
@@ -488,6 +497,9 @@ export const query = graphql`
           breathecode_location_slug
           fields{
             lang
+          }
+          button {
+            apply_button_text
           }
           meta_info {
             slug
