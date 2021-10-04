@@ -88,6 +88,8 @@ navbar:
               link_to: "/es/blog-en-espanol"
             - title: "Partners"
               link_to: "/es/alianzas"
+            - title: "Trabaja con Nosotros"
+              link_to: "/es/empleo"
   
   - name: "Campus"
     link: "/partners"
