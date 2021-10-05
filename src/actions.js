@@ -247,3 +247,13 @@ export const getEvents = async (_query = {}) => {
     const resp = await fetch(`${process.env.GATSBY_BREATHECODE_HOST}/events/all?${query}`);
     return await resp.json();
 }
+
+export const downloadPythonGuide = async (data,session) => {
+    console.log("Succesfully contact us", data)
+    let body = {};
+    for (let key in data) body[key] = data[key].value;
+    
+    //                                                                                              tag              automation
+    // if(!session || !session.utm || !session.utm.utm_test) return await save_form(body, ['donwload_python_guide'], ['soft'], session);
+    // return true;
+}

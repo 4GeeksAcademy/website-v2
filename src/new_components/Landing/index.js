@@ -71,8 +71,8 @@ const Side = ({video, image, heading, content, button, bullets}) => {
     return <Div flexDirection_tablet="column" flexDirection="column" padding="40px 20px" padding_tablet="36px 72px">
         {heading && <H2 type="h2"
             textAlign_tablet="left"
-            lineHeight="40px"
-            lineHeight_tablet="60px"
+            lineHeight="38px"
+            lineHeight_tablet="38px"
             fontSize={h_xs || "30px"} fs_xl={h_xl} fontSize_md={h_md || "40px"} fontSize_sm={h_sm}
             margin="30px 0 20px 0" type="h1">{heading.text}</H2>
         }
@@ -89,10 +89,16 @@ const Side = ({video, image, heading, content, button, bullets}) => {
             </Paragraph>
         )}
 
-        {button && <Button outline width="200px"
+        {button && <Button outline width="250px"
             colorHoverText={Colors.blue}
+            lineHeight="26px"
             textColor={Colors.black}
-            margin="2rem 0" padding=".35rem.85rem"
+            padding="0"
+            padding_tablet="0"
+            fontSize="15px"
+            textAlign="left"
+            margin="2rem 0" 
+            // padding=".35rem.85rem"
             onClick={() => {
                 if (button.path && button.path.indexOf("http") > -1) window.open(button.path);
                 else navigate(button.path);
@@ -382,13 +388,17 @@ export const landingSections = {
         sm={yml.height[3]}
         xs={yml.height[4]}
     />,
-    two_column_left: ({session, data, pageContext, yml, index}) => <Div id="two_column_left" key={index} background={Colors[yml.background] || yml.background} flexDirection="column" padding="50px 0 50px 0" padding_tablet="50px 6%" margin="0">
+    two_column_left: ({session, data, pageContext, yml, index}) => {
+        console.log("YAML:::", yml)
+    return (
+    <Div id="two_column_left" key={index} background={Colors[yml.background] || yml.background} flexDirection="column" padding="50px 0 50px 0" padding_tablet="50px 6%" margin="0">
         <TwoColumn
             left={{image: yml.image, video: yml.video}}
             right={{heading: yml.heading, content: yml.content, button: yml.button,}}
             proportions={yml.proportions}
         />
-    </Div>,
+    </Div>)
+    },
     two_column_right: ({session, data, pageContext, yml, index}) => <Div id="two_column_right" key={index} background={Colors[yml.background] || yml.background} flexDirection="column" padding="0 0 50px 0" padding_tablet="50px 6%" margin="0">
         <TwoColumn
             left={{heading: yml.heading, content: yml.content, button: yml.button}}

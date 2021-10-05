@@ -57,6 +57,7 @@ const Landing = (props) => {
 
   const landingLocation = session && session.locations?.find(l => l.breathecode_location_slug === yml.meta_info.utm_location)
 
+  console.log("PROPS:::", yml)
   return (
     <>
       <LandingNavbar
@@ -122,12 +123,12 @@ const Landing = (props) => {
             margin="0 0 35px auto"
             padding={`40px 0 0 0`}
             height="auto"
-            padding_tablet={`40px 0 0 20px`}
+            padding_tablet={`55px 0 0 20px`}
           >
             {
               yml.header_data.scholarship && 
               <>
-                <Div width="242px" flexDirection_tablet="column" height="auto" padding="0 0 25px 0">
+                <Div width="242px" flexDirection_tablet="column" height="auto" padding="0 0 20px 0">
                   <GatsbyImage 
                     loading="eager"
                     imgStyle={{ objectFit: 'contain' }}
@@ -139,6 +140,7 @@ const Landing = (props) => {
                 <Div display="none" display_tablet="flex" background="#FFFFFF" width="calc(50% - 30px)" height="2px" margin="7px 0"/>
               </>
             }
+            {yml.header_data.tagline.split("\n").map((title) => 
             <H1
               type="h1"
               variant="main"
@@ -150,9 +152,11 @@ const Landing = (props) => {
               fontSize_tablet="42px"
               fontWeight="bolder"
               textAlign="center"
-              textAlign_tablet="left" >{inLocation}{yml.header_data.tagline}
+              textAlign_tablet="left" >{inLocation}{title}
+                
               {/* <Span animated color={Colors.yellow}>_</Span> */}
             </H1>
+            )}
             {
               yml.header_data.sub_heading !== "" && 
               <H2 type="h2" textAlign="left" fontSize="18px" color={Colors.white}
@@ -177,11 +181,11 @@ const Landing = (props) => {
                   color={Colors.white}>{'• '}{f}</Paragraph>
               )}
             {yml.features.text && 
-              <Paragraph key={i}
+              <Paragraph
                   isActive
                   style={JSON.parse(yml.features.styles)}
                   margin="7px 0"
-                  padding="0px 0px"
+                  padding="0 8% 0 0"
                   textShadow="0px 0px 4px black"
                   textAlign="left"
                   color={Colors.white}>{yml.features.text}</Paragraph>
@@ -513,6 +517,7 @@ export const query = graphql`
                 text
                 font_size
               }
+              background
               content{
                 text
                 font_size
