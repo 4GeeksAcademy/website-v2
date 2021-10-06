@@ -23,8 +23,6 @@ footer:
         link: "/es/proximas-fechas"
       - name: "Blog"
         link: "/es/blog-en-espanol"
-      - name: "Trabaja con Nosotros"
-        link: "/es/empleo"
       #- name: "Privacidad"
       #  link: "/es/privacidad"
       #- name: "Términos"
