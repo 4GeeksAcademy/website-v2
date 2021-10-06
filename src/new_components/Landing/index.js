@@ -42,9 +42,6 @@ const Side = ({video, image, heading, sub_heading, content, button, bullets}) =>
         }}
     />
 
-    console.log("BULLETS", bullets)
-
-
     if (image) {
         const imgStyles = image.style ? JSON.parse(image.style) : null;
         const [img_h_xl, img_h_lg, img_h_md, img_h_sm, img_h_xs] = imgStyles && imgStyles.height ? Array.isArray(imgStyles.height) ? imgStyles.height : [imgStyles.height] : ["100%"];
@@ -433,7 +430,6 @@ export const landingSections = {
         xs={yml.height[4]}
     />,
     two_column_left: ({session, data, pageContext, yml, index}) => {
-        console.log("two_column_left_YAML_BULLET:::", yml)
     return (
     <Div id="two_column_left" key={index} background={Colors[yml.background] || yml.background} flexDirection="column" padding="50px 0 50px 0" padding_tablet="50px 6%" margin="0">
         <TwoColumn
