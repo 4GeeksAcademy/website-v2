@@ -8,7 +8,7 @@ import {GridContainerWithImage, Div, GridContainer} from '../new_components/Sect
 import {Colors, StyledBackgroundSection} from '../new_components/Styling'
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import BaseRender from './_baseLandingLayout'
-import {requestSyllabus} from "../actions";
+import {requestSyllabus, downloadPythonGuide, newsletterSignup, openGuidebook, outcomesReport} from "../actions";
 import {SessionContext} from '../session.js'
 import LandingNavbar from '../new_components/NavbarDesktop/landing';
 
@@ -57,6 +57,20 @@ const Landing = (props) => {
   
   const landingLocation = session && session.locations?.find(l => l.breathecode_location_slug === yml.meta_info.utm_location)
   
+  let actionFormHandler = () => { 
+    if( yml.form.action_form_handler === "newsletterSignup"){
+      return newsletterSignup
+    } else if( yml.form.action_form_handler === "downloadPythonGuide"){
+      return downloadPythonGuide
+    } else if( yml.form.action_form_handler === "outcomesReport"){
+      return outcomesReport
+    } else if( yml.form.action_form_handler === "openGuidebook"){
+      return openGuidebook
+    } else {
+      return requestSyllabus
+    }
+  }
+
   return (
     <>
       <LandingNavbar
@@ -206,7 +220,7 @@ const Landing = (props) => {
               margin="18px 10px"
               style={{ marginTop: "50px", minHeight: "350px" }}
               selectProgram={programs}
-              formHandler={requestSyllabus}
+              formHandler={actionFormHandler()}
               heading={yml.form.heading}
               motivation={yml.form.motivation}
               sendLabel={yml.form.button_label}
@@ -262,7 +276,7 @@ const Landing = (props) => {
               layout="block"
               background={Colors.verylightGray}
               margin="0"
-              formHandler={requestSyllabus}
+              formHandler={actionFormHandler()}
               heading={yml.form.heading}
               style={{ minHeight: "350px" }}
               motivation={yml.form.motivation}
@@ -364,6 +378,7 @@ export const query = graphql`
             form{
               heading
               motivation
+              action_form_handler
               redirect
               fields
               button_label
@@ -511,7 +526,13 @@ export const query = graphql`
                 text
                 font_size
               }
+              sub_heading{
+                text
+                font_size
+              }
               background
+              containerBackground
+              bullets
               content{
                 text
                 font_size

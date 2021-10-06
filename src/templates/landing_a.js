@@ -2,6 +2,7 @@ import React, {useEffect} from 'react';
 import {graphql, navigate} from 'gatsby';
 import {landingSections} from '../new_components/Landing';
 import FollowBar from "../new_components/FollowBar"
+import loadable from '@loadable/component'
 import LeadForm from "../new_components/LeadForm";
 import {H1, H2, H4, Paragraph, Span} from '../new_components/Heading';
 import {GridContainerWithImage, Div, GridContainer} from '../new_components/Sections';
@@ -9,7 +10,7 @@ import {Colors, StyledBackgroundSection} from '../new_components/Styling';
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import LandingNavbar from '../new_components/NavbarDesktop/landing';
 import BaseRender from './_baseLandingLayout'
-import {requestSyllabus} from "../actions";
+import {requestSyllabus, downloadPythonGuide, newsletterSignup, openGuidebook, outcomesReport} from "../actions";
 import {SessionContext} from '../session.js'
 
 const Landing = (props) => {
@@ -57,7 +58,20 @@ const Landing = (props) => {
 
   const landingLocation = session && session.locations?.find(l => l.breathecode_location_slug === yml.meta_info.utm_location)
 
-  console.log("PROPS:::", yml)
+  let actionFormHandler = () => { 
+    if( yml.form.action_form_handler === "newsletterSignup"){
+      return newsletterSignup
+    } else if( yml.form.action_form_handler === "downloadPythonGuide"){
+      return downloadPythonGuide
+    } else if( yml.form.action_form_handler === "outcomesReport"){
+      return outcomesReport
+    } else if( yml.form.action_form_handler === "openGuidebook"){
+      return openGuidebook
+    } else {
+      return requestSyllabus
+    }
+  }
+
   return (
     <>
       <LandingNavbar
@@ -210,7 +224,7 @@ const Landing = (props) => {
               selectProgram={programs}
               margin="18px 10px"
               style={{ marginTop: "50px", minHeight: "350px" }}
-              formHandler={requestSyllabus}
+              formHandler={actionFormHandler()}
               heading={yml.form.heading}
               motivation={yml.form.motivation}
               sendLabel={yml.form.button_label}
@@ -263,12 +277,12 @@ const Landing = (props) => {
               textPadding_tablet="6px 0px 20px 0px"
               textPadding="6px 0px 20px 0px"
               selectProgram={programs}
-              margin="18px 30px"
+              // margin="18px 30px"
               layout="block"
               background={Colors.verylightGray}
               margin="0"
               style={{ minHeight: "350px" }}
-              formHandler={requestSyllabus}
+              formHandler={actionFormHandler()}
               heading={yml.form.heading}
               motivation={yml.form.motivation}
               sendLabel={yml.form.button_label}
@@ -370,6 +384,7 @@ export const query = graphql`
             form{
               heading
               motivation
+              action_form_handler
               redirect
               fields
               button_label
@@ -517,7 +532,13 @@ export const query = graphql`
                 text
                 font_size
               }
+              sub_heading{
+                text
+                font_size
+              }
               background
+              containerBackground
+              bullets
               content{
                 text
                 font_size

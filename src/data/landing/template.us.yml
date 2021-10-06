@@ -28,6 +28,7 @@ form:
   # always the first_name, email and phone will be mandatory if added.
   fields: ["full_name", "phone", "email"]
   heading: "Request more info."
+  action_form_handler: "" # optional form action, default value requestSyllabus
   motivation: "" # < -- subtitle ideal to movitate people on filling the form
   button_label: SEND
   redirect: "https://google.com" #you can redirect to another url or entirely diffrent website

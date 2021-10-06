@@ -1,5 +1,6 @@
 import React from "react"
 import {GridContainerWithImage, Div, GridContainer} from '../Sections'
+import Icon from '../Icon'
 import {H2, H5, H4, Paragraph} from '../Heading'
 import {Colors, Img, Button, StyledBackgroundSection} from '../Styling'
 import Badges from '../Badges';
@@ -30,7 +31,7 @@ const Title = ({title, paragraph}) => {
     )
 }
 
-const Side = ({video, image, heading, content, button, bullets}) => {
+const Side = ({video, image, heading, sub_heading, content, button, bullets}) => {
 
     if (video) return <ReactPlayer
         thumb={image && image.src}
@@ -40,6 +41,8 @@ const Side = ({video, image, heading, content, button, bullets}) => {
             height: '260px'
         }}
     />
+
+    console.log("BULLETS", bullets)
 
 
     if (image) {
@@ -56,7 +59,7 @@ const Side = ({video, image, heading, content, button, bullets}) => {
             style={imgStyles}
             // borderRadius={"1.25rem"}
             borderRadius={"3px"}
-            className="pointer"
+            // className="pointer"
             alt={"4Geeks Academy Section"}
             margin="auto"
             height={img_h_xl}
@@ -67,6 +70,7 @@ const Side = ({video, image, heading, content, button, bullets}) => {
     }
 
     const [h_xl, h_lg, h_md, h_sm, h_xs] = heading ? heading.font_size : [];
+    const [sh_xl, sh_lg, sh_md, sh_sm, sh_xs] = sub_heading ? sub_heading.font_size : [];
     const [c_xl, c_lg, c_md, c_sm, c_xs] = content ? content.font_size : [];
     return <Div flexDirection_tablet="column" flexDirection="column" padding="40px 20px" padding_tablet="36px 72px">
         {heading && <H2 type="h2"
@@ -76,6 +80,45 @@ const Side = ({video, image, heading, content, button, bullets}) => {
             fontSize={h_xs || "30px"} fs_xl={h_xl} fontSize_md={h_md || "40px"} fontSize_sm={h_sm}
             margin="30px 0 20px 0" type="h1">{heading.text}</H2>
         }
+        {sub_heading && 
+            <Paragraph
+                textAlign_tablet="left"
+                padding={heading ? "0" : "20px"}
+                margin="0" 
+                fontSize={sh_xl || "16px"} fontSize_sm={sh_sm} fonSize_md={sh_md} fontSize_sm={sh_sm} fontSize_xs={sh_xs}
+                fontHeight="30px">
+                    {sub_heading.text}
+            </Paragraph>
+        }
+        {Array.isArray(bullets) && 
+        <Div display="grid" gridAutoFlow="dense" gridTemplateColumns="repeat(auto-fill, minmax(8.5rem, 1fr))" gridAutoRows="4.6rem" gridGap="0">
+            {bullets.map((p, index) => {
+                return (
+                    <>
+                        {/* <Div flexDirection="column" size="1" alignSelf="center" >
+                            <Icon icon="check" width="12px" color={Colors.yellow} fill={Colors.yellow} />
+                        </Div> */}
+                        {/* <Div flexDirection="column" size="10" test paddingRight="0px" paddingLeft="5px" alignSelf="center">
+                            <Paragraph
+                            fontSize="16px"
+                            textAlign="left"
+                            color={Colors.black}>{p}</Paragraph>
+                        </Div> */}
+                        <Div gridColumn_tablet={index >= 5 ? "2/2" : "1/2"} borderBottom="1px solid rgba(164, 164, 164, 0.4)" height="74px" alignItems="center" padding="0 5px 0 20px" padding_tablet="0 5px 0 10px">
+                            <Div flexDirection="column" alignSelf="center" padding="0 8px 0 0" >
+                                <Icon icon="check" width="18px" color={Colors.yellow} fill={Colors.yellow} />
+                            </Div>
+                            <H2 type="h3" textAlign="left" fontSize="15px" fontWeight="400" lineHeight="22px">
+                                {p}
+                            </H2>
+                        </Div>
+
+                    </>
+                )
+            })}
+        </Div>
+        }
+
         {content && 
         content.text.split('\n').map((p, i) =>
             <Paragraph 
@@ -248,11 +291,11 @@ export const landingSections = {
         }))
 
         return (
-        <GridContainer id="syllabus" padding_tabletChild="0px calc(55% - 30%)" id="Syllabus" key={index} padding="50px 40px" padding_tablet="50px 40px" background={Colors.lightGray}>
+        <GridContainer id="syllabus" padding_tabletChild="0px calc(55% - 30%)" id="Syllabus" key={index} padding="50px 40px" padding_tablet="50px 40px" background={Colors[yml.containerBackground] || Colors.lightGray}>
             <Div
                 key={index}
                 flexDirection="column"
-                background={Colors.verylightGray}
+                background={Colors[yml.background] || Colors.verylightGray}
                 padding="20px 0"
                 borderRadius="3px"
                 borderRadius_tablet="10px"
@@ -268,11 +311,12 @@ export const landingSections = {
                 <LeadForm
                     landingTemplate
                     layout="block"
-                    background={Colors.verylightGray}
+                    background={Colors[yml.background] || Colors.verylightGray}
                     margin="0"
-                    marginButton={`15px 0 30px auto`}
+                    marginButton="15px auto 30px auto"
+                    marginButton_tablet="15px 0 30px auto"
                     buttonBorderRadius="3px"
-                    justifyContentButton="center"
+                    // justifyContentButton="center"
                     inputBgColor="#F9F9F9"
                     selectProgram={programs}
                     inputBgColor={Colors.white}
@@ -389,19 +433,19 @@ export const landingSections = {
         xs={yml.height[4]}
     />,
     two_column_left: ({session, data, pageContext, yml, index}) => {
-        console.log("YAML:::", yml)
+        console.log("two_column_left_YAML_BULLET:::", yml)
     return (
     <Div id="two_column_left" key={index} background={Colors[yml.background] || yml.background} flexDirection="column" padding="50px 0 50px 0" padding_tablet="50px 6%" margin="0">
         <TwoColumn
             left={{image: yml.image, video: yml.video}}
-            right={{heading: yml.heading, content: yml.content, button: yml.button,}}
+            right={{heading: yml.heading, sub_heading: yml.sub_heading, bullets: yml.bullets, content: yml.content, button: yml.button,}}
             proportions={yml.proportions}
         />
     </Div>)
     },
     two_column_right: ({session, data, pageContext, yml, index}) => <Div id="two_column_right" key={index} background={Colors[yml.background] || yml.background} flexDirection="column" padding="0 0 50px 0" padding_tablet="50px 6%" margin="0">
         <TwoColumn
-            left={{heading: yml.heading, content: yml.content, button: yml.button}}
+            left={{heading: yml.heading, sub_heading: yml.sub_heading, bullets: yml.bullets, content: yml.content, button: yml.button}}
             right={{image: yml.image, video: yml.video,}}
             proportions={yml.proportions}
         />

@@ -137,6 +137,9 @@ export const Div = styled.div`
     padding: ${props => props.padding};
     gap: ${props => props.gap};
     row-gap: ${props => props.rowGap};
+    grid-auto-flow: ${props => props.gridAutoFlow};
+    grid-template-columns: ${props => props.gridTemplateColumns};
+    grid-auto-rows: ${props => props.gridAutoRows};
     column-gap: ${props => props.columnGap};
     height: ${props => props.height};
     width: ${props => props.width};
@@ -273,6 +276,7 @@ export const Grid = styled(Div)`
     display: ${props => props.display || "grid"};
     direction: ${props => props.direction};
     
+    grid-auto-flow: ${props => props.gridAutoFlow};
     grid-template-columns: ${props => props.gridTemplateColumns ? `repeat(${props.gridTemplateColumns})` : `repeat(1, 1fr)`};
     grid-template-rows: ${props => props.gridTemplateRows ? `repeat(${props.gridTemplateRows})` : null};
     grid-gap: ${props => props.gridGap || "15px"};
