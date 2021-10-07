@@ -85,9 +85,9 @@ const Calendar = (props) => {
         let name = cohorts[i].syllabus_version.name
         name === "Full-Stack Software Developer FT" ? name = modality["full_time"] : name
 
-        name === "Full-Stack Software Developer" ? name = modality["part_time"] : name      
+        name === "Full-Stack Software Developer" ? name = modality["part_time"] : name
 
-        syllabus.push(name) 
+        syllabus.push(name)
       }
 
       for(let zx in cohorts){
@@ -224,6 +224,7 @@ const Calendar = (props) => {
                     }
                   </Paragraph>
                 </Div>
+
                 <Div display="flex" display_tablet="none" justifyContent="between" margin="0 0 20px 0">
                   <Div flexDirection="column" width="50%">
                     <H4 textAlign="left" textTransform="uppercase">{content.cohorts.info.location_label}</H4>
@@ -238,9 +239,18 @@ const Calendar = (props) => {
                   </Div>
                   <Div flexDirection="column" width="50%">
                     <H4 textAlign="left" textTransform="uppercase">{content.cohorts.info.duration_label}</H4>
-                    <Paragraph textAlign="left">{content.cohorts.info.duration_weeks}</Paragraph>
+                    <Paragraph textAlign="left">
+                    {
+                      m.syllabus_version.name === modality["full_time"] 
+                        ? content.cohorts.info.duration_full_time
+                        : m.syllabus_version.name === modality["part_time"] 
+                        ? content.cohorts.info.duration_part_time
+                        : content.cohorts.info.duration_weeks
+                    }
+                    </Paragraph>
                   </Div>
                 </Div>
+
                 <Div flexDirection="column">
                   <Link to={content.cohorts.info.button_link}>
                     <Button variant="full" width="fit-content" color={Colors.black} margin="10px 0" textColor="white">{content.cohorts.info.button_text}</Button>
