@@ -238,7 +238,15 @@ const Calendar = (props) => {
                   </Div>
                   <Div flexDirection="column" width="50%">
                     <H4 textAlign="left" textTransform="uppercase">{content.cohorts.info.duration_label}</H4>
-                    <Paragraph textAlign="left">{content.cohorts.info.duration_weeks}</Paragraph>
+                    <Paragraph textAlign="left">
+                      {
+                        m.syllabus_version.name === modality["full_time"] 
+                          ? content.cohorts.info.duration_full_time
+                          : m.syllabus_version.name === modality["part_time"] 
+                          ? content.cohorts.info.duration_part_time
+                          : content.cohorts.info.duration_weeks
+                      }
+                    </Paragraph>
                   </Div>
                 </Div>
                 <Div flexDirection="column">
