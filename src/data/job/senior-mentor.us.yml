@@ -9,15 +9,14 @@ meta_info:
 
 ## BANNER INFO
 banner_heading: "Lead Instructor"
-open: true #if true, this job will be accepting candidates
 banner_sub_heading: ""
 banner_image: "/images/bg/pricing-bg.jpg"
 link_back: "/us/jobs"
 cities:
   - Miami
-  - Santiago de Chile
-  - Caracas
-  - Maracaibo
+  - Spain
+  - LATAM
+
 button_text: "APPLY NOW"
 ## JOB MAIN SECTION INFO
 title: "What could be more important for a coding academy than having great teachers?"
