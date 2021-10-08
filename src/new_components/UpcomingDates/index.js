@@ -70,6 +70,8 @@ const UpcomingDates = ({lang, location, message}) => {
               program_label
               duration_label
               duration_weeks
+              duration_part_time
+              duration_full_time
               location_label
             }
             no_course_message
@@ -199,7 +201,15 @@ const UpcomingDates = ({lang, location, message}) => {
                             </Div>
                             <Div flexDirection="column" display="none" display_tablet="flex">
                                 <H4 textAlign="left" textTransform="uppercase">{content.info.duration_label}</H4>
-                                <Paragraph textAlign="left">{content.info.duration_weeks}</Paragraph>
+                                <Paragraph textAlign="left">
+                                    {
+                                        m.syllabus_version.name === modality["full_time"] 
+                                        ? content.info.duration_full_time
+                                        : m.syllabus_version.name === modality["part_time"] 
+                                        ? content.info.duration_part_time
+                                        : content.info.duration_weeks
+                                    }
+                                </Paragraph>
                             </Div>
                             <Div display="flex" display_tablet="none" justifyContent="between" margin="0 0 20px 0">
                                 <Div flexDirection="column" width="50%">
@@ -215,7 +225,15 @@ const UpcomingDates = ({lang, location, message}) => {
                                 </Div>
                                 <Div flexDirection="column" width="50%">
                                     <H4 textAlign="left" textTransform="uppercase">{content.info.duration_label}</H4>
-                                    <Paragraph textAlign="left">{content.info.duration_weeks}</Paragraph>
+                                    <Paragraph textAlign="left">
+                                        {
+                                            m.syllabus_version.name === modality["full_time"] 
+                                            ? content.info.duration_full_time
+                                            : m.syllabus_version.name === modality["part_time"] 
+                                            ? content.info.duration_part_time
+                                            : content.info.duration_weeks
+                                        }
+                                    </Paragraph>
                                 </Div>
                             </Div>
                             <Div flexDirection="column">
