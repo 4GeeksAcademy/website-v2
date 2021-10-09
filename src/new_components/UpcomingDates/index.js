@@ -109,15 +109,13 @@ const UpcomingDates = ({lang, location, message}) => {
             for(let i in cohorts) {
               let name = cohorts[i].syllabus_version.name
               name === "Full-Stack Software Developer FT" ? name = modality["full_time"] : name
-      
               name === "Full-Stack Software Developer" ? name = modality["part_time"] : name      
-              // console.log("NAME:", name)
               syllabus.push(name) 
             }
       
             for(let zx in cohorts){
+                // console.log("COHORTS - modified", cohorts[zx].syllabus_version.name)
               cohorts[zx].syllabus_version.name = syllabus[zx]
-              // console.log("COHORTS - modified", cohorts[zx].syllabus_version.name)
             }
             
             setData(oldData => ({
@@ -199,6 +197,7 @@ const UpcomingDates = ({lang, location, message}) => {
                                     </Paragraph>}
                                 </Div>
                             </Div>
+
                             <Div flexDirection="column" display="none" display_tablet="flex">
                                 <H4 textAlign="left" textTransform="uppercase">{content.info.duration_label}</H4>
                                 <Paragraph textAlign="left">
@@ -211,6 +210,7 @@ const UpcomingDates = ({lang, location, message}) => {
                                     }
                                 </Paragraph>
                             </Div>
+
                             <Div display="flex" display_tablet="none" justifyContent="between" margin="0 0 20px 0">
                                 <Div flexDirection="column" width="50%">
                                     <H4 textAlign="left" textTransform="uppercase">{content.info.location_label}</H4>
