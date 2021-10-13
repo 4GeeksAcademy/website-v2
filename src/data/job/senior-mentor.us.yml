@@ -27,7 +27,7 @@ description: "The brightest minds have always taken time taught what they know, 
 content:
   - label: "Responsabilities"
     list:
-    - "The Lead Instructor is responsible for leading the classes within the classroom."
+      - "The Lead Instructor is responsible for leading the classes within the classroom."
       - "1. Set the rhythm of the class, put the pressure and deadlines on the students and make sure your cohort is on schedule "
       - "2. Prepare your classes and make sure the projects, instructions, and exercises are properly explained and followed by the students."
       - "3. Identifying areas of improvement on the syllabus, tutorials, exercises or projects."
