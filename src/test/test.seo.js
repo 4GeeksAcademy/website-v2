@@ -1,5 +1,5 @@
 var colors = require('colors')
-const {walk, loadYML, empty, fail, warn, success, validateObjectProperties} = require("./_utils")
+const {walk, loadYML, empty, fail, warn, success, validateObjectProperties, getEntityTypeFromPath} = require("./_utils")
 
 const metas = [
     {key: "slug", type: "string", mandatory: true},
@@ -29,8 +29,10 @@ walk(`${__dirname}/../data/`, function (err, files) {
         else {
 
             // look for duplicated slugs
-            if (slugs[yml.meta_info.slug] !== undefined) fail(`Duplicate or invalid slug ${yml.meta_info.slug} on file ${_path}`)
-            else slugs[yml.meta_info.slug] = yml.meta_info
+            const type = getEntityTypeFromPath(_path)
+            console.log("typeeee", type)
+            if (slugs[yml.meta_info.slug+type] !== undefined) fail(`Duplicate or invalid slug ${yml.meta_info.slug} on file ${_path}`)
+            else slugs[yml.meta_info.slug+type] = yml.meta_info
 
             const meta_keys = Object.keys(yml.meta_info)
             metas.forEach(m => {

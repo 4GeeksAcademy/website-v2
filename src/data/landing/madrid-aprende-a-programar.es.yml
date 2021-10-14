@@ -29,7 +29,7 @@ form:
 header_data:
   tagline: Aprende a programar
   sub_heading: " "
-  # scholarship: "../../../static/images/partner/microsoft.png"
+  # partner_url: "../../../static/images/partner/microsoft.png"
   image: "../../../static/images/Happy-People-Landing-4Geeks-ES.jpg"
   image_filter: brightness(0.4)
 
