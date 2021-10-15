@@ -32,7 +32,7 @@ content:
       - "2. Prepare your classes and make sure the projects, instructions, and exercises are properly explained and followed by the students."
       - "3. Identifying areas of improvement on the syllabus, tutorials, exercises or projects."
       - "4. Make sure students are not stuck for a long period of time (minutes instead of hours or days)."
-      -"5. Leading the teacher assistants in helping you with answering questions and reviewing the exercises."
+      - "5. Leading the teacher assistants in helping you with answering questions and reviewing the exercises."
   - label: "Technical requirements"
     list:
       - "1. You must be a senior developer with years of experience."
@@ -41,7 +41,7 @@ content:
       - "4. Experience with React.js: The majority of the front-end coding is based on React.js, you need to understand Flux, Context API, Component Lifecycle, etc."
       - "5. API consumption: Use of fetch, consuming REST API's, async/await, Promises, JSON, serialization, etc."
       - "6. Python and Django knowledge: Develop API's with django-rest or Flask framework."
- 
+
   - label: "Schedule"
     list:
       - "1. Part time: 3 classes weekly, 9 hours per week, 16 weeks. Monday, Wednesday, and Friday from 6:00 pm to 9:00 pm (It depends on the time zone of each country)"
