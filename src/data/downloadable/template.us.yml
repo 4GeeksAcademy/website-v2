@@ -307,3 +307,5 @@ iconogram:
     title: Do an online interview with our admissions team 
   - icon: "terminal"
     title: Get the result, book your spot and start coding
+
+    # NOTE: Ahora solo falta hacer la funcionalidad de guia-de-python en downloadable folder
