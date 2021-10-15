@@ -191,13 +191,13 @@ export const landingSections = {
         return(
             <About4Geeks 
                 id="about4Geeks"
-                lang={data.allLandingYaml.edges[0].node.about4Geeks}
+                lang={data.allLandingYaml.edges[0].node.about4Geeks || data.allDownloadableYaml.edges[0].node.about4Geeks}
             />
         )
     },
 
     iconogram: ({session, data, pageContext, yml, index}) => {
-        let content = data.allLandingYaml.edges[0].node.iconogram
+        let content = data.allLandingYaml.edges[0].node.iconogram || data.allDownloadableYaml.edges[0].node.iconogram
         return(
             <GridContainer id="iconogram" background={Colors.lightYellow} columns="2" rows="2" columns_tablet="4" margin="0 0 58px 0" height="470px" height_tablet="320px" margin_tablet="0 0 78px 0">
             {Array.isArray(content.icons) && content.icons?.map((item, i) => {
@@ -210,7 +210,7 @@ export const landingSections = {
     },
 
     badges: ({session, data, pageContext, yml, course, index}) =>{
-        let badges = data.allLandingYaml.edges[0].node.badges
+        let badges = data.allLandingYaml.edges[0].node.badges || data.allDownloadableYaml.edges[0].node.badges
         return(
             <Badges
                 // short_link
@@ -306,7 +306,7 @@ export const landingSections = {
 
     choose_your_program: ({session, pageContext, yml, data, index}) => {
         // const course = data.allCourseYaml.edges.length > 0 ? data.allCourseYaml.edges[0].node : {};
-        let chooseYourProgram = data.allLandingYaml.edges[0].node?.choose_your_program
+        let chooseYourProgram = data.allLandingYaml.edges[0].node?.choose_your_program || data.allDownloadableYaml.edges[0].node?.choose_your_program
         return (
             <React.Fragment id="choose_your_program" key={index}>
                 <Div width="100%" flexDirection="column">
@@ -355,7 +355,7 @@ export const landingSections = {
     </Div>,
     who_is_hiring: ({session, data, pageContext, yml, location, index}) => {
         const hiring = data.allPartnerYaml.edges[0].node;
-        let landingHiriging = data.allLandingYaml.edges[0].node?.who_is_hiring
+        let landingHiriging = data.allLandingYaml.edges[0].node?.who_is_hiring || data.allDownloadableYaml.edges[0].node?.who_is_hiring;
 
         return <Div id="who_is_hiring" key={index} flexDirection="column" margin="40px 0" margin_tablet="40px 50px 100px" m_sm="0" p_xs="0">
             <OurPartners

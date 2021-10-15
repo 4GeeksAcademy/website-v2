@@ -30,7 +30,7 @@ walk(`${__dirname}/../data/`, function (err, files) {
 
             // look for duplicated slugs
             const type = getEntityTypeFromPath(_path)
-            console.log("typeeee", type)
+            // console.log("typeeee", type)
             if (slugs[yml.meta_info.slug+type] !== undefined) fail(`Duplicate or invalid slug ${yml.meta_info.slug} on file ${_path}`)
             else slugs[yml.meta_info.slug+type] = yml.meta_info
 
