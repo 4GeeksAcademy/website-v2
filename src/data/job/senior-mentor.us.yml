@@ -1,7 +1,7 @@
 meta_info:
   slug: "senior-mentor"
   title: "Full Stack Developer"
-  description: "The brightest minds have always taken time taught what they know, it's a great way to give back and also keep learning new developments or event create new ways of doing things."
+  description: "The brightest minds have always taken time taught what they know, it's a great way to give back and also keep learning or event create new ways of doing things."
 
   template: "job" # js component that will be handling the rendering
   image: null
