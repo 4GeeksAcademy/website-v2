@@ -1,12 +1,12 @@
 meta_info:
-  slug: "Full Stack Developer"
+  slug: "senior-mentor"
   title: "Full Stack Developer"
   description: "At 4Geeks we want to have the best minds mentoring to our students. That is why we are committed to supporting our teachers in their professional life, promoting their personal branding and projects in any space that the academy has available."
 
   template: "job" # js component that will be handling the rendering
   image: null
   keywords: "jobs, careers, mentor, teaching, teacher"
-  redirects: ["senior-mentor"]
+  redirects: ["/senior-mentor"]
 
 ## BANNER INFO
 banner_heading: "Lead Instructor"
