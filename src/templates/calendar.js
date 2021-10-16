@@ -209,7 +209,7 @@ const Calendar = (props) => {
                     <Link to={locations[pageContext.lang][m.academy.slug] || ""}>
                       <Paragraph textAlign="left" color={Colors.blue}>{m.academy.city.name} {m.academy.slug === 'online' && '(online)'}</Paragraph>
                     </Link>
-                    {m.academy.slug !== "online" && m.academy.slug !== "online-pt-1" && m.remote_available !== false && <Paragraph textAlign="left" margin="0 0 0 3px">
+                    {m.academy.slug !== "online" && m.remote_available !== false && <Paragraph textAlign="left" margin="0 0 0 3px">
                       {locationText[pageContext.lang]} <Link color={Colors.blue} to={locations[pageContext.lang]['online'] || ""}>{`Online`}</Link>
                     </Paragraph>}
                   </Div>
@@ -233,7 +233,7 @@ const Calendar = (props) => {
                       <Link to="">
                         <Paragraph textAlign="left" color={Colors.blue}>{m.academy.city.name}</Paragraph>
                       </Link>
-                      {m.academy.slug != "online" && <Link to={locations[pageContext.lang]['online'] || ""}>
+                      {m.academy.slug != "online" && m.remote_available !== false && <Link to={locations[pageContext.lang]['online'] || ""}>
                         <Paragraph textAlign="left" margin="0 0 0 3px" color={Colors.blue}>{`${locationText[pageContext.lang]} Online`}</Paragraph>
                       </Link>}
                     </Div>
