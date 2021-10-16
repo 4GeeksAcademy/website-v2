@@ -120,6 +120,8 @@ const Calendar = (props) => {
       setData(_data);
     }
   }, [session]);
+
+  console.log("datas", datas)
   return (
     <>
       <Header
@@ -207,7 +209,7 @@ const Calendar = (props) => {
                     <Link to={locations[pageContext.lang][m.academy.slug] || ""}>
                       <Paragraph textAlign="left" color={Colors.blue}>{m.academy.city.name} {m.academy.slug === 'online' && '(online)'}</Paragraph>
                     </Link>
-                    {m.academy.slug !== "online" && m.academy.slug !== "online-pt-1" && <Paragraph textAlign="left" margin="0 0 0 3px">
+                    {m.academy.slug !== "online" && m.remote_available !== false && <Paragraph textAlign="left" margin="0 0 0 3px">
                       {locationText[pageContext.lang]} <Link color={Colors.blue} to={locations[pageContext.lang]['online'] || ""}>{`Online`}</Link>
                     </Paragraph>}
                   </Div>
@@ -231,14 +233,22 @@ const Calendar = (props) => {
                       <Link to="">
                         <Paragraph textAlign="left" color={Colors.blue}>{m.academy.city.name}</Paragraph>
                       </Link>
-                      {m.academy.slug != "online" && <Link to={locations[pageContext.lang]['online'] || ""}>
+                      {m.academy.slug != "online" && m.remote_available !== false && <Link to={locations[pageContext.lang]['online'] || ""}>
                         <Paragraph textAlign="left" margin="0 0 0 3px" color={Colors.blue}>{`${locationText[pageContext.lang]} Online`}</Paragraph>
                       </Link>}
                     </Div>
                   </Div>
                   <Div flexDirection="column" width="50%">
                     <H4 textAlign="left" textTransform="uppercase">{content.cohorts.info.duration_label}</H4>
-                    <Paragraph textAlign="left">{content.cohorts.info.duration_weeks}</Paragraph>
+                    <Paragraph textAlign="left">
+                      {
+                        m.syllabus_version.name === modality["full_time"] 
+                          ? content.cohorts.info.duration_full_time
+                          : m.syllabus_version.name === modality["part_time"] 
+                          ? content.cohorts.info.duration_part_time
+                          : content.cohorts.info.duration_weeks
+                      }
+                    </Paragraph>
                   </Div>
                 </Div>
                 <Div flexDirection="column">
