@@ -15,9 +15,13 @@ banner_image: "/images/bg/pricing-bg.jpg"
 link_back: "/us/jobs"
 cities:
   - Miami
-  - España
+  - Santiago de Chile
+  - Caracas
+  - Orlando
+  - Spain
   - Europa
   - LATAM
+
 button_text: "APPLY NOW"
 ## JOB MAIN SECTION INFO
 title: "What could be more important for a coding academy than having great teachers?"
