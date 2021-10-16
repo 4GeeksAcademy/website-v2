@@ -1,12 +1,12 @@
 meta_info:
-  slug: "Full Stack Developer"
+  slug: "senior-mentor"
   title: "Full Stack Developer"
   description: "The brightest minds have always taken time taught what they know, become a coding teacher at 4Geeks Academy."
 
   template: "job" # js component that will be handling the rendering
   image: null
   keywords: "jobs, careers, mentor, teaching, teacher"
-  redirects: ["senior-mentor"]
+  redirects: ["/senior-mentor"]
 
 ## BANNER INFO
 banner_heading: "Lead Instructor"
@@ -41,7 +41,7 @@ content:
       - "4. Experience with React.js: The majority of the front-end coding is based on React.js, you need to understand Flux, Context API, Component Lifecycle, etc."
       - "5. API consumption: Use of fetch, consuming REST API's, async/await, Promises, JSON, serialization, etc."
       - "6. Python and Django knowledge: Develop API's with django-rest or Flask framework."
- 
+
   - label: "Schedule"
     list:
       - "1. Part time: 3 classes weekly, 9 hours per week, 16 weeks. Monday, Wednesday, and Friday from 6:00 pm to 9:00 pm (It depends on the time zone of each country)"
