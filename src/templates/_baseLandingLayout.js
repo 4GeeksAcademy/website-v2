@@ -10,7 +10,7 @@ const BaseRender = (Page, options={}) => (props) => {
     }
     catch (err) {
         // console.error("Props: ", props);
-        console.error("There was a problem loading the data", data);
+        console.error(`There was a problem loading the data for type ${cap(pageContext.type)}`, data);
         console.error(err);
         return <div className="alert alert-danger">There was a problem loading the data</div>
     }
