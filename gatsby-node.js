@@ -23,8 +23,8 @@ exports.onCreateNode = ({node, getNode, actions}) => {
     // curstom post types for the website
     if ([
         'MarkdownRemark', 'LeadFormYaml', 'NewsYaml', 'PartnerYaml', 'CredentialsYaml',
-        'FooterYaml', 'NavbarYaml', 'CustomBarYaml', 'BadgesYaml', 'PageYaml', 'LandingYaml', 'CourseYaml',
-        'LocationYaml', 'JobYaml', 'AlumniProjects', 'ChooseProgramYaml',
+        'FooterYaml', 'NavbarYaml', 'CustomBarYaml', 'BadgesYaml', 'PageYaml', 'LandingYaml', 
+        'DownloadableYaml', 'CourseYaml', 'LocationYaml', 'JobYaml', 'AlumniProjects', 'ChooseProgramYaml',
         'TestimonialsYaml', 'GeeksVsOthersYaml', 'JobsStatisticsYaml',
         'Why4GeeksYaml', 'AlumniProjectsYaml', 'StaffYaml', 'ProgramSvgYaml', 'PricesAndPaymentYaml',
         'WhyPythonYaml', 'ChooseYourProgramYaml', 'About4GeeksYaml', 'LocYaml', 'UpcomingDatesYaml', 
@@ -60,6 +60,14 @@ exports.createPages = async (params) =>
     await createEntityPagesfromYml('Course', params) &&
     await createEntityPagesfromYml('Location', params) &&
     await createEntityPagesfromYml('Job', params) &&
+    await createEntityPagesfromYml('Downloadable', params, extraFields = ['utm_course', 'utm_location', 'visibility'],
+        extraContext = (node) => {
+            return {
+                utm_course: node.meta_info.utm_course + "." + node.fields.lang,
+                visibility: node.meta_info.visibility
+            }
+        }
+    ) &&
     await createEntityPagesfromYml('Landing', params, extraFields = ['utm_course', 'utm_location', 'visibility'],
         extraContext = (node) => {
             return {

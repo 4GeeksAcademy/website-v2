@@ -49,7 +49,7 @@ const Apply = (props) => {
         .filter(l => !l.active_campaign_location_slug.includes("online"))
         .sort((a,b) =>  a.meta_info.position > b.meta_info.position ? 1 : -1)
         .map(m => ({
-            label: m.name + " " + (m.in_person_available == true ? trans[pageContext.lang]["(In-person and from home available)"] : trans[pageContext.lang]["(From home until further notice)"]),
+            label: m.name + " " + (m.online_available == false ? "" : m.in_person_available == true ? trans[pageContext.lang]["(In-person and from home available)"] : trans[pageContext.lang]["(From home until further notice)"]),
             value: m.active_campaign_location_slug
         }))
 
