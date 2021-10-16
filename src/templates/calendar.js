@@ -120,6 +120,8 @@ const Calendar = (props) => {
       setData(_data);
     }
   }, [session]);
+
+  console.log("datas", datas)
   return (
     <>
       <Header
@@ -207,7 +209,7 @@ const Calendar = (props) => {
                     <Link to={locations[pageContext.lang][m.academy.slug] || ""}>
                       <Paragraph textAlign="left" color={Colors.blue}>{m.academy.city.name} {m.academy.slug === 'online' && '(online)'}</Paragraph>
                     </Link>
-                    {m.academy.slug !== "online" && m.academy.slug !== "online-pt-1" && <Paragraph textAlign="left" margin="0 0 0 3px">
+                    {m.academy.slug !== "online" && m.academy.slug !== "online-pt-1" && m.remote_available !== false && <Paragraph textAlign="left" margin="0 0 0 3px">
                       {locationText[pageContext.lang]} <Link color={Colors.blue} to={locations[pageContext.lang]['online'] || ""}>{`Online`}</Link>
                     </Paragraph>}
                   </Div>
