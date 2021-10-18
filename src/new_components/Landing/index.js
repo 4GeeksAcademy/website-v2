@@ -222,10 +222,6 @@ export const landingSections = {
     </GridContainer>,
 
     about4Geeks: ({session, data, pageContext, yml, index}) => {
-
-        console.log("DATTA:LANDING:::", data.allLandingYaml)
-        console.log("DATA:DOWNLOADABLE:::", data.allDownloadableYaml)
-
         let dataYml = data.allLandingYaml.edges.length !== 0 && data.allLandingYaml.edges[0].node.about4Geeks !== null ? data.allLandingYaml.edges : data.allDownloadableYaml.edges
         return(
             <About4Geeks 
@@ -396,10 +392,6 @@ export const landingSections = {
     </Div>,
     who_is_hiring: ({session, data, pageContext, yml, location, index}) => {
         let dataYml = data.allLandingYaml.edges.length !== 0 && data.allLandingYaml.edges[0].node?.who_is_hiring !== null ? data.allLandingYaml.edges : data.allDownloadableYaml.edges
-
-    // console.log("CONTENT:::ICONOGRAM:::", chooseYourProgram)
-    // console.log("CONTENT:::", data.allDownloadableYaml)
-    // console.log("LNDUNG:::", data.allLandingYaml)
 
         const hiring = data.allPartnerYaml.edges[0].node;
         let landingHiriging = dataYml[0].node?.who_is_hiring

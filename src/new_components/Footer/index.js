@@ -126,7 +126,6 @@ const Footer = ({ yml }) => {
                             <H4 margin="0 0 10px 0" textAlign="left" display="none" display_tablet="block">{yml.newsletter.heading}</H4>
                             <Div justifyContent="center" width="100%">
                                 <Form onSubmit={(e) => {
-                                    console.log("E:", e)
                                     e.preventDefault();
                                     if (formStatus.status === "error") {
                                         setFormStatus({status: "idle", msg: "Resquest"})
