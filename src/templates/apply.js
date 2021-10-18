@@ -38,7 +38,7 @@ const Apply = (props) => {
         email: {value: '', valid: false},
         location: {value: '', valid: false},
         consent: {value: true, valid: true},
-        referral_key: {value: '', valid: true},
+        referral_key: {value: null, valid: true},
         course: {value: null, valid: false}
     });
     const programs = data.allChooseProgramYaml.edges[0].node.programs.map(p => ({
@@ -84,13 +84,14 @@ const Apply = (props) => {
             // its better if leads choose the location themselves
             // location: {value: _location || "", valid: typeof (_location) === "string" && _location !== ""},
             course: {value: _course || null, valid: _course && _course.value ? true : false},
+            referral_key: { value: session?.utm?.referral_code || null , valid: true },
         }));
     }, [session])
-
+    
     let privacy = data.privacy.edges.find(({node}) => node.fields.lang === pageContext.lang);
     if (privacy) privacy = privacy.node;
-
     return (
+
         <>
             <Header
                 padding="0 10px"
@@ -228,10 +229,13 @@ const Apply = (props) => {
                                 }}
                             />
                         </Div>
-                        <Input border="1px solid hsl(0,0%,80%)" bgColor={Colors.white} type="text" className="form-control" placeholder={yml.left.referral_section.placeholder}
-                            value={formData.referral_key.value}
-                            onChange={(value, valid) => setVal({...formData, referral_key: {value, valid}})}
-                        />
+                        {formData.referral_key.value && formData.referral_key.value != "" && <Alert color="blue">
+                            You have applied a referral code to this form
+                        </Alert>}
+                            <Input border="1px solid hsl(0,0%,80%)" bgColor={Colors.white} type="text" className="form-control" placeholder={yml.left.referral_section.placeholder}
+                                value={formData.referral_key.value}
+                                onChange={(value, valid) => setVal({...formData, referral_key: {value, valid}})}
+                            />
                         {session && session.location && location.gdpr_compliant &&
                             <Div>
                                 <Paragraph fontSize="14px" margin="5px 0 0 0">
