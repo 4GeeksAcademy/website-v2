@@ -16,6 +16,7 @@ meta_info:
   utm_location: madrid-spain
   automation: soft #optional, this is the default value
   tag: request_more_info #optional, this is the default value
+  current_download: "python-guide"
 
 navbar:
   logoUrl: "#"
@@ -32,6 +33,24 @@ form:
   button_label: SEND
   redirect: "https://google.com" #you can redirect to another url or entirely diffrent website
 
+# jumbotron on the top (cannot be commented out)
+header_data:
+  tagline: Aprende a programar
+  sub_heading: in only 16 weeks (part-time)
+  partner_url: "../../../static/images/partner/landing-jobs.png" #display a logo of the partner
+  image: "../../../static/images/4geeks-main.jpg"
+  image_filter: brightness(0.4) #0 is dark, 1 is bright
+
+features:
+  marginTop: 20px #<-- separation between tagline and the bullets
+  #                                         up   left down  right
+  styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
+  text: Landing Jobs is offering more than €1,000,000 in Scholarships to study Web Development at 4Geeks Academy. The minimum scholarship is 30% and they will be awarded based on the results of the selection process. Whether you want to start your career as a Junior programmer or upskill  and become a Senior Developer, don't miss out on this amazing opportunity.
+  bullets:
+    - Un Desarrollador en Madrid hace €25mil anual
+    - Hay más vacantes que en cualquier otra industria
+    - Impulsa tu Carrera y hazte programador de software
+
 follow_bar:
   position: "top" # top, bottom, hidden
   content:
@@ -47,25 +66,6 @@ follow_bar:
   phone:
     text: "Llama "
     number: "+1 (786) 416-6640" # you can set your own phone number, or leave it false to use the utm_location number
-
-# jumbotron on the top (cannot be commented out)
-header_data:
-  tagline: Aprende a programar
-  sub_heading: in only 16 weeks (part-time)
-  partner_url: "../../../static/images/partner/landing-jobs.png" #display a logo of the partner
-  image: "../../../static/images/bg/4main.jpg"
-  image_filter: brightness(0.4) #0 is dark, 1 is bright
-
-features:
-  marginTop: 20px #<-- separation between tagline and the bullets
-
-  #                                         up   left down  right
-  styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
-  text: Landing Jobs is offering more than €1,000,000 in Scholarships to study Web Development at 4Geeks Academy. The minimum scholarship is 30% and they will be awarded based on the results of the selection process. Whether you want to start your career as a Junior programmer or upskill  and become a Senior Developer, don't miss out on this amazing opportunity.
-  bullets:
-    - Un Desarrollador en Madrid hace €25mil anual
-    - Hay más vacantes que en cualquier otra industria
-    - Impulsa tu Carrera y hazte programador de software
 
 #
 # ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇ 
@@ -130,7 +130,7 @@ who_is_hiring:
 
 choose_your_program:
   position: 5
-  title: Our Programs
+  title: Our Programs____Downloadable
   paragraph: Programs in Full-Time or Part-Time modality with live classes taught by experts
   programs:
   - title: "Full Stack Developer"
@@ -258,6 +258,21 @@ components:
       text: "Todo lo hacemos con pasión y con la mirada puesta en tu desarrollo profesional."
                   #xl      lg     md     sm    xs
       font_size: ["40px","34px","34px","25px", "20px"]
+    sub_heading:
+      text:
+        "Tipos de datos con súperpoderes:"
+      font_size: ["15px"]
+    bullets:
+      - Número
+      - String
+      - Boolean
+      - Iterables
+      - Dictionary
+      - Lista
+      - Tupla
+      - Rango
+      - Set & Frozenset
+      - Tabla Hash
     content: 
       text: " "
       font_size: ["16px"]

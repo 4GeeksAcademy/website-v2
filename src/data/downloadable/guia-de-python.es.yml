@@ -13,7 +13,8 @@ meta_info:
   utm_course: ["full-stack"]
   utm_location: madrid-spain
   automation: soft #optional, this is the default value
-  tag: downloadable #optional, this is the default value
+  tag: downloadable
+  current_download: "python-guide"
 
 form:
   # posible fields: "first_name", "last_name", "full_name", "phone", "email"
@@ -32,8 +33,8 @@ navbar:
 # jumbotron on the top (cannot be commented out)
 header_data:
   tagline: "Amazing Python:\nGuía rápida para principiantes"
-  sub_heading: "test"
-  scholarship: "../../../static/images/techs/python-logo.png"
+  sub_heading: ""
+  partner_url: "../../../static/images/techs/python-logo.png"
   image: "../../../static/images/program-bg.png"
   image_filter: brightness(0.4)
 
@@ -123,6 +124,7 @@ components:
       - Rango
       - Set & Frozenset
       - Tabla Hash
+
     content:
       text: "El Zen del Phyton, variables, conditionals, loops, functions, decorators, generators, virtual environment, package manager."
       font_size: ["16px"]

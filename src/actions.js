@@ -247,3 +247,30 @@ export const getEvents = async (_query = {}) => {
     const resp = await fetch(`${process.env.GATSBY_BREATHECODE_HOST}/events/all?${query}`);
     return await resp.json();
 }
+
+export const processFormEntry = async (data,session) => {
+    console.log("Succesfully requested Syllabus", data)
+    tagManager('request_more_info');
+    let body = {};
+    Object.keys(data).forEach((key) => body[key] = data[key].value);
+
+    const tag = body.tag || 'request_more_info';
+    const automation = body.automation || 'soft';
+
+    //                                                                                      tag                automation
+    if(!session || !session.utm || !session.utm.utm_test) return await save_form(body, [tag.value || tag], [automation.value || automation], session);
+    return true;
+}
+
+export const downloadDownloadable = async (data,session) => {
+    console.log("Succesfully requested Download", data)
+    let body = {};
+    Object.keys(data).forEach((key) => body[key] = data[key].value);
+
+    const tag = body.tag || 'downloadable';
+    const automation = body.automation || 'soft';
+
+    //                                                                                  tag    automation
+    if(!session || !session.utm || !session.utm.utm_test) return await save_form(body, [tag], [automation], session);
+    return true
+}
