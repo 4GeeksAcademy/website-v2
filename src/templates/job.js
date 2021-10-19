@@ -22,8 +22,8 @@ const Job = ({ data, pageContext, yml }) => {
 
   useEffect(() => {
     yml.open ? 
-    toast.success('This position is open for new candidates',{duration: 5000,}) : 
-    toast.error('We are not currently accepting any applicants for this position',{duration: 5000,})
+    toast.success(data.allJobAlertYaml.edges[0].node.message.accepting,{duration: 5000,}) : 
+    toast.error(data.allJobAlertYaml.edges[0].node.message.no_accepting,{duration: 5000,})
   }, []);
 
   return (
@@ -194,6 +194,18 @@ export const query = graphql`
           #   text
           #   thankyou
           # }
+        }
+      }
+    }
+    allJobAlertYaml(
+      filter: { fields: { lang: { eq: $lang } } }
+    ) {
+      edges {
+        node {
+          message {
+            accepting
+            no_accepting
+          }
         }
       }
     }
