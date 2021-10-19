@@ -1,8 +1,6 @@
 const fetch = require('node-fetch');
 const { walk, loadYML, empty, fail, success, localizeImage } = require('./_utils');
 const front_matter_fields = [
-  { key: 'utm_course', type: 'array', mandatory: true },
-  { key: 'utm_location', type: 'string', mandatory: true },
   { key: 'current_download', type: 'string', mandatory: true },
 ];
 
@@ -53,16 +51,8 @@ walk(`${__dirname}/../data/downloadable`, async (err, files) => {
         fail(`${`\nProblem found in: ${_path}`.red}\n\n${`Property current_download with value ${`${current_download}`.yellow} ${`not found in the downloadables list`.red}`.red}\n\n`)
       }
 
-      
-
       front_matter_fields.forEach(obj => {
-        let utm_course = data.meta_info.utm_course
-
-        let verifying = courses.some(el => utm_course.includes(el))
-
         if(!meta_keys.includes(obj["key"])) fail(`Missing prop ${obj["key"]} from course on ${_path}`)
-        if( verifying === false ) fail(`${`\nProblem found in: ${_path}`.red}\n\n${`utm_course ${`${utm_course}`.yellow} ${`not match with the utm_course list:`.red}`.red} \n\n${courses.map(el => `${el.green}\n`)} \n`)
-        if(Array.isArray(utm_course) !== true) fail(`\n${`utm_course`.yellow} ${`expected an array in ${_path}`.red}\n`)
       })
     } catch (error) {
       console.error(`Error on file: ${_path}`.red);

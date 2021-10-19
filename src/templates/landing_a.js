@@ -19,13 +19,23 @@ const Landing = (props) => {
   const [inLocation, setInLocation] = React.useState("");
 
   const applySchollarship = data.allLandingYaml.edges.length !== 0 ? data.allLandingYaml.edges[0].node?.apply_schollarship : data.allDownloadableYaml.edges[0].node?.apply_schollarship
-  const landing_utm_course = yml.meta_info.utm_course
+  const landing_utm_course = yml.meta_info?.utm_course
 
-  const filteredPrograms  = data.allChooseProgramYaml.edges[0].node.programs.filter((course_el) => {
-    return landing_utm_course.filter((array_el) => {
-      return course_el.bc_slug === array_el;
-    }).length !== 0;
-  });
+  let filteredPrograms
+  if(pageContext === 'landing'){
+    filteredPrograms = data.allChooseProgramYaml.edges[0].node.programs.filter((course_el) => {
+      return landing_utm_course.filter((array_el) => {
+        return course_el.bc_slug === array_el;
+      }).length !== 0;
+    });
+  } else {
+    filteredPrograms = [
+      {
+        label: null,
+        value: null
+      }
+    ];
+  }
 
   const programs = filteredPrograms.map(p => ({
     label: p.text,
@@ -40,7 +50,7 @@ const Landing = (props) => {
     setComponents({...yml, ..._components});
   }, [yml]);
   useEffect(() => {
-    if (yml.meta_info && yml.meta_info.utm_location) setLocation(yml.meta_info.utm_location);
+    if (yml.meta_info && yml.meta_info.utm_location) setLocation(yml.meta_info.utm_location || null);
 
     const urlParams = new URLSearchParams(window.location.search);
     const _inLoc = urlParams.get('in') || null;
@@ -49,8 +59,8 @@ const Landing = (props) => {
 
   // data sent to the form already prefilled
   const preData = {
-    course: {type: "hidden", value: programs.length <=1 ? (programs[0].value) : (yml.meta_info.utm_course), valid: true},
-    utm_location: {type: "hidden", value: yml.meta_info.utm_location, valid: true},
+    course: {type: "hidden", value: programs.length <=1 ? (programs[0].value) : (yml.meta_info?.utm_course), valid: true},
+    utm_location: {type: "hidden", value: yml.meta_info.utm_location || null, valid: true},
     automation: {type: "hidden", value: yml.meta_info.automation, valid: true},
     tag: {type: "hidden", value: yml.meta_info.tag, valid: true},
     current_download: {type: "hidden", value: yml.meta_info.current_download, valid: true}
@@ -239,7 +249,7 @@ const Landing = (props) => {
           .sort((a, b) => components[b].position > components[a].position ? -1 : 1)
           .map(name => {
             const layout = components[name].layout || name;
-            return landingSections[layout]({...props, yml: components[name], session, course: yml.meta_info.utm_course, location: components.meta_info.utm_location})
+            return landingSections[layout]({...props, yml: components[name], session, course: yml.meta_info?.utm_course, location: components.meta_info.utm_location})
           })
       }
 
@@ -319,7 +329,7 @@ const Landing = (props) => {
   )
 };
 export const query = graphql`
-  query LandingAQuery($file_name: String!, $lang: String!, $utm_course: String!) {
+  query LandingAQuery($file_name: String!, $lang: String!, $utm_course: String) {
     allPageYaml(filter: { fields: { file_name: { regex: "/geekpal/" }, lang: { eq: $lang }}}) {
       edges {
         node {
@@ -600,8 +610,6 @@ export const query = graphql`
               description
               image
               keywords
-              utm_course
-              utm_location
               automation
               tag
               current_download
