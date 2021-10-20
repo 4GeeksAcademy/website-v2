@@ -18,7 +18,7 @@ jobs:
       GATSBY_BREATHECODE_HOST: https://breathecode-cypress.herokuapp.com/v1
     strategy:
       matrix:
-        node: [10.x, 12.x, 14.x, 16.x]
+        node: [12.x, 14.x]
     steps:
       # - uses: actions/setup-node@v2
       #   with:
