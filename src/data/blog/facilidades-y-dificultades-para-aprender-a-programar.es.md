@@ -46,7 +46,7 @@ Uno de nuestros egresados del programa full-time nos comentó que él intentó a
 - Frustración: es fácil sentirse de esta manera, sobre todo, cuando te das cuenta de la cantidad de cosas que tienes que aprender por tu cuenta y más, cuando no estás seguro si lo que estás aprendiendo es realmente necesario en tu etapa de aprendizaje actual.
 - Información errada: a veces puedes encontrar información que no necesariamente es precisa. Eso puede crear confusión porque la programación siempre va a variar dependiendo del problema que tengas presente.
 
-![Facilidades_y_dificultades_para_aprender_a_programar_2.jpg](../../../static/images/blog/Facilidades y dificultades para aprender a programar 2.jpg)
+![Facilidades_y_dificultades_para_aprender_a_programar_2.jpg](../../../static/images/blog/facilidades-y-dificultades-para-aprender-a-programar-2.jpg)
 
 - “Comunidad de soporte: Tienes a tus compañeros, a los profesores y a toda la comunidad de Slack a tu disposición, así, es posible resolver tus dudas de forma rápida.
 - Escalabilidad: el método de aprendizaje permite avanzar rápido y aprender en poco tiempo.
