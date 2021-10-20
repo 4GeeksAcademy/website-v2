@@ -8,34 +8,17 @@ import {GridContainerWithImage, Div, GridContainer} from '../new_components/Sect
 import {Colors, StyledBackgroundSection} from '../new_components/Styling'
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import BaseRender from './_baseLandingLayout'
-import {processFormEntry, downloadDownloadable} from "../actions";
+import {processFormEntry} from "../actions";
 import {SessionContext} from '../session.js'
 import LandingNavbar from '../new_components/NavbarDesktop/landing';
 
 const Landing = (props) => {
   const {session, setLocation} = React.useContext(SessionContext);
-  const {data, pageContext, yml} = props;
+  const {data, pageContext, yml, filteredPrograms} = props;
   const [components, setComponents] = React.useState({});
   const [inLocation, setInLocation] = React.useState("");
 
   const applySchollarship = data.allLandingYaml.edges.length !== 0 ? data.allLandingYaml.edges[0].node?.apply_schollarship : data.allDownloadableYaml.edges[0].node?.apply_schollarship
-  const landing_utm_course = yml.meta_info?.utm_course
-
-  let filteredPrograms
-  if(pageContext === 'landing'){
-    filteredPrograms = data.allChooseProgramYaml.edges[0].node.programs.filter((course_el) => {
-      return landing_utm_course.filter((array_el) => {
-        return course_el.bc_slug === array_el;
-      }).length !== 0;
-    });
-  } else {
-    filteredPrograms = [
-      {
-        label: null,
-        value: null
-      }
-    ];
-  }
 
   const programs = filteredPrograms.map(p => ({
     label: p.text,
@@ -63,18 +46,11 @@ const Landing = (props) => {
     utm_location: {type: "hidden", value: yml.meta_info?.utm_location, valid: true},
     automation: {type: "hidden", value: yml.meta_info.automation, valid: true},
     tag: {type: "hidden", value: yml.meta_info.tag, valid: true},
-    current_download: {type: "hidden", value: yml.meta_info.current_download, valid: true}
+    current_download: {type: "hidden", value: yml.meta_info.current_download, valid: true},
+    form_type: {type: "hidden", value: pageContext.type, valid: true}
   };
   
   const landingLocation = session && session.locations?.find(l => l.breathecode_location_slug === yml.meta_info.utm_location)
-  
-  let actionFormHandler = () => { 
-    if( pageContext.type === "downloadable"){
-      return downloadDownloadable
-    } else {
-      return processFormEntry
-    }
-  }
 
   return (
     <>
@@ -224,7 +200,7 @@ const Landing = (props) => {
               margin="18px 10px"
               style={{ marginTop: "50px", minHeight: "350px" }}
               selectProgram={programs}
-              formHandler={actionFormHandler()}
+              formHandler={processFormEntry}
               heading={yml.form.heading}
               motivation={yml.form.motivation}
               sendLabel={yml.form.button_label}
@@ -280,7 +256,7 @@ const Landing = (props) => {
               layout="block"
               background={Colors.verylightGray}
               margin="0"
-              formHandler={actionFormHandler()}
+              formHandler={processFormEntry}
               heading={yml.form.heading}
               style={{ minHeight: "350px" }}
               motivation={yml.form.motivation}
