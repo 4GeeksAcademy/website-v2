@@ -25,6 +25,8 @@ jobs:
           node-version: ${{ matrix.node }}
       - name: Checkout
         uses: actions/checkout@v2
+      - name: Install Node dependencies
+        run: npm install
       - name: Running Tests
         # Install NPM dependencies, cache them correctly
         uses: cypress-io/github-action@v2
