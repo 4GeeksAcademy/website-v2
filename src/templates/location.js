@@ -30,7 +30,7 @@ const Location = ({data, pageContext, yml}) => {
         setReady(true)
       }
     })
-    // setTimeout(() => { setReady(true) }, 3000)
+    // setTimeout(() => { setReady(true) }, 3000
   }, [])
   const chooseProgramRef = useRef(null)
 
