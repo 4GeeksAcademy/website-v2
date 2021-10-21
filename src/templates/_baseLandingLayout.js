@@ -38,22 +38,4 @@ const BaseRender = (Page, options={}) => (props) => {
     </Layout>
 };
 
-// export const query = graphql`
-//   query BaseLandingLayoutAQuery($lang: String!) {
-//     allChooseProgramYaml(filter: { fields: { lang: { eq: $lang }}}) {
-//       edges {
-//         node {
-//           programs{
-//             text
-//             link
-//             bc_slug
-//             location_bc_slug
-//             schedule
-//           }
-//         }
-//       }
-//     }
-// }
-// `;
-
 export default BaseRender;
