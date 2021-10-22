@@ -125,13 +125,13 @@ const Landing = (props) => {
             padding_tablet={`40px 0 0 20px`}
           >
             {
-              yml.header_data.scholarship && 
+              yml.header_data.partner_url && 
               <>
                 <Div width="242px" flexDirection_tablet="column" height="auto" padding="0 0 25px 0">
                   <GatsbyImage 
                     loading="eager"
                     imgStyle={{ objectFit: 'contain' }}
-                    image={getImage(yml.header_data.scholarship.childImageSharp.gatsbyImageData)}
+                    image={getImage(yml.header_data.partner_url.childImageSharp.gatsbyImageData)}
                     alt="4Geeks Logo" 
                   />
                 </Div>
@@ -177,7 +177,7 @@ const Landing = (props) => {
                   color={Colors.white}>{'• '}{f}</Paragraph>
               )}
             {yml.features.text && 
-              <Paragraph key={i}
+              <Paragraph
                   isActive
                   style={JSON.parse(yml.features.styles)}
                   margin="7px 0"
@@ -473,7 +473,7 @@ export const query = graphql`
                 icon
               }
             }
-
+      
             why_python{
               position
               heading
@@ -533,7 +533,7 @@ export const query = graphql`
               tagline
               sub_heading
               image_filter
-              scholarship {
+              partner_url {
                 childImageSharp {
                   gatsbyImageData(
                     layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
@@ -550,6 +550,243 @@ export const query = graphql`
                   gatsbyImageData(
                     layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
                     width: 1000
+                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                  )
+                  # fluid(maxWidth: 1000){
+                  #   ...GatsbyImageSharpFluid_withWebp
+                  # }
+                }
+              }
+            }
+            geeks_vs_others{
+              position
+              heading
+              paragraph
+              total_rows
+            }
+            testimonial{
+              position
+              heading
+              sub_heading
+              students{
+                name
+                sub_heading
+                comment
+                video
+              }
+            }
+        }
+      }
+    }
+    allDownloadableYaml(filter: { fields: { file_name: { eq: $file_name }, lang: { eq: $lang }}}) {
+      edges{
+        node{
+            meta_info{
+              title
+              description
+              image
+              keywords
+              utm_course
+              utm_location
+              automation
+              tag
+            }
+            follow_bar{
+              position
+              content{
+                text
+                text_mobile
+                font_size
+              }
+              button{
+                text
+                path
+              }
+              phone{
+                text
+                number
+              }
+            }
+            navbar {
+              logoUrl
+              buttonText
+              buttonUrl
+            }
+            form{
+              heading
+              motivation
+              redirect
+              fields
+              button_label
+            }
+            features{
+              marginTop
+              text
+              bullets
+              styles
+            }
+            badges{
+              position
+              heading
+            }
+            about4Geeks{
+              position
+              heading
+              sub_heading
+              list{
+                title
+              }
+              paragraph
+              button_text
+              button_link
+              image {
+                childImageSharp {
+                  gatsbyImageData(
+                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                    width: 1200
+                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                  )
+                }
+              }
+              image_mobile {
+                childImageSharp {
+                  gatsbyImageData(
+                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                    width: 800
+                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                  )
+                }
+              }
+            }
+            iconogram {
+              position
+              icons {
+                icon
+                title
+              }
+            }
+            in_the_news{
+              heading
+              position
+              filter
+            }
+            program_details{
+              position
+              heading
+              sub_heading
+            }
+            why_4geeks{
+              position
+              heading
+              sub_heading
+              footer {
+                text
+                text_link
+              }
+            }
+            alumni_projects{
+              position
+              heading
+              sub_heading
+            }
+            who_is_hiring{
+              position
+              heading
+              sub_heading
+              featured {
+                image {
+                  childImageSharp {
+                    gatsbyImageData(
+                      layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                      width: 150
+                      placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                    )
+                    # fluid(maxWidth: 150){
+                    #   ...GatsbyImageSharpFluid_withWebp
+                    # }
+                  }
+                }
+                # featured
+              }
+            }
+            choose_your_program{
+              position
+              title
+              paragraph
+              programs {
+                text_link
+                link
+                sub_title
+                title
+                description
+                icon
+              }
+            }
+      
+            why_python{
+              position
+              heading
+              sub_heading
+            }
+            apply_schollarship{
+              imageSide
+              image {
+                childImageSharp {
+                  gatsbyImageData(
+                    layout: CONSTRAINED
+                    width: 800
+                    placeholder: NONE
+                    quality: 100
+                  )
+                }
+              }
+            }
+            components{
+              name
+              position
+              proportions
+              layout
+              image{
+                src
+                style
+                link
+              }
+              video
+              height
+              button{
+                text
+                color
+                path
+              }
+              heading{
+                text
+                font_size
+              }
+              content{
+                text
+                font_size
+              }
+              columns{
+                size
+                content{
+                  text
+                  font_size
+                }
+                image{
+                  src
+                  style
+                }
+              }
+            }
+            header_data{
+              tagline
+              sub_heading
+              image_filter
+              partner_url {
+                childImageSharp {
+                  gatsbyImageData(
+                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                    width: 500
                     placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                   )
                   # fluid(maxWidth: 1000){

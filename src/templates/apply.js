@@ -38,7 +38,7 @@ const Apply = (props) => {
         email: {value: '', valid: false},
         location: {value: '', valid: false},
         consent: {value: true, valid: true},
-        referral_key: {value: '', valid: true},
+        referral_key: {value: null, valid: true},
         course: {value: null, valid: false}
     });
     const programs = data.allChooseProgramYaml.edges[0].node.programs.map(p => ({
@@ -49,7 +49,7 @@ const Apply = (props) => {
         .filter(l => !l.active_campaign_location_slug.includes("online"))
         .sort((a,b) =>  a.meta_info.position > b.meta_info.position ? 1 : -1)
         .map(m => ({
-            label: m.name + " " + (m.in_person_available == true ? trans[pageContext.lang]["(In-person and from home available)"] : trans[pageContext.lang]["(From home until further notice)"]),
+            label: m.name + " " + (m.online_available == false ? "" : m.in_person_available == true ? trans[pageContext.lang]["(In-person and from home available)"] : trans[pageContext.lang]["(From home until further notice)"]),
             value: m.active_campaign_location_slug
         }))
 
@@ -84,13 +84,14 @@ const Apply = (props) => {
             // its better if leads choose the location themselves
             // location: {value: _location || "", valid: typeof (_location) === "string" && _location !== ""},
             course: {value: _course || null, valid: _course && _course.value ? true : false},
+            referral_key: { value: session?.utm?.referral_code || null , valid: true },
         }));
     }, [session])
-
+    
     let privacy = data.privacy.edges.find(({node}) => node.fields.lang === pageContext.lang);
     if (privacy) privacy = privacy.node;
-
     return (
+
         <>
             <Header
                 padding="0 10px"
@@ -228,10 +229,13 @@ const Apply = (props) => {
                                 }}
                             />
                         </Div>
-                        <Input border="1px solid hsl(0,0%,80%)" bgColor={Colors.white} type="text" className="form-control" placeholder={yml.left.referral_section.placeholder}
-                            value={formData.referral_key.value}
-                            onChange={(value, valid) => setVal({...formData, referral_key: {value, valid}})}
-                        />
+                        {formData.referral_key.value && formData.referral_key.value != "" && <Alert color="blue">
+                            You have applied a referral code to this form
+                        </Alert>}
+                            <Input border="1px solid hsl(0,0%,80%)" bgColor={Colors.white} type="text" className="form-control" placeholder={yml.left.referral_section.placeholder}
+                                value={formData.referral_key.value}
+                                onChange={(value, valid) => setVal({...formData, referral_key: {value, valid}})}
+                            />
                         {session && session.location && location.gdpr_compliant &&
                             <Div>
                                 <Paragraph fontSize="14px" margin="5px 0 0 0">

@@ -36,7 +36,7 @@ walk(`${__dirname}/../data/`, async function (err, files) {
     for (let i = 0; i < _files.length; i++) {
         const _path = _files[i];
         const doc = loadYML(_path);
-        if (!doc.yaml) fail("Invalid YML syntax for " + _path)
+        if (!doc || !doc.yaml) fail("Invalid YML syntax for " + _path)
         if (!doc.lang) fail("Missing language on yml file name for " + _path)
 
         if (doc.type == "page"){
