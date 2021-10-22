@@ -19,7 +19,7 @@ RUN sudo apt-get install -y \
     xvfb
 
 RUN bash -c ". .nvm/nvm.sh \
-             && nvm install v14 && nvm alias default v14" \
+             && nvm install v14 && nvm alias default v14"
              
 # Install custom tools, runtime, etc. using apt-get
 # For example, the command below would install "bastet" - a command line tetris clone:
