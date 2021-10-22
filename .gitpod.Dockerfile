@@ -1,6 +1,5 @@
 FROM gitpod/workspace-full
 
-# Install cypress dependencies
 RUN sudo apt-get update
 # Install Cypress-base dependencies
 RUN sudo apt-get install -y \
