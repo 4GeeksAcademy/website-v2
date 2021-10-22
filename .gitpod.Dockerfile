@@ -1,8 +1,5 @@
 FROM gitpod/workspace-full
 
-RUN bash -c ". .nvm/nvm.sh \
-             && nvm install v14 && nvm alias default v14 && nvm use v14"
-
 RUN sudo apt-get update
 # Install Cypress-base dependencies
 RUN sudo apt-get install -y \
