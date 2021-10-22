@@ -1,5 +1,8 @@
 FROM gitpod/workspace-full
 
+RUN bash -c ". .nvm/nvm.sh \
+             && nvm install v14 && nvm alias default v14 && nvm use v14"
+
 RUN sudo apt-get update
 # Install Cypress-base dependencies
 RUN sudo apt-get install -y \
@@ -17,9 +20,6 @@ RUN sudo apt-get install -y \
     libxtst6 \
     xauth \
     xvfb
-
-RUN bash -c ". .nvm/nvm.sh \
-             && nvm install v14 && nvm alias default v14 && nvm use v14"
              
 # Install custom tools, runtime, etc. using apt-get
 # For example, the command below would install "bastet" - a command line tetris clone:
