@@ -6,7 +6,7 @@ import { GridContainer, Div } from '../new_components/Sections';
 import { H1, H4, Paragraph } from '../new_components/Heading';
 import { Button, Colors } from '../new_components/Styling';
 import BaseRender from './_baseLayout';
-import toast, { Toaster } from 'react-hot-toast';
+import {Alert, Input} from "../new_components/Form/index";
 
 const Job = ({ data, pageContext, yml }) => {
   const [open, setOpen] = React.useState(false);
@@ -20,12 +20,6 @@ const Job = ({ data, pageContext, yml }) => {
     setOpen(false);
   };
 
-  useEffect(() => {
-    yml.open ? 
-    toast.success(data.allJobAlertYaml.edges[0].node.message.accepting,{duration: 5000,}) : 
-    toast.error(data.allJobAlertYaml.edges[0].node.message.no_accepting,{duration: 5000,})
-  }, []);
-
   return (
       <GridContainer
         github="/components/job"
@@ -36,42 +30,8 @@ const Job = ({ data, pageContext, yml }) => {
         padding_tablet="30px 0 0 0"
       >
         <Div flexDirection="column" gridColumn_tablet=" 2 / 12">
-        <Toaster
-            toastOptions={{
-              success: {
-                style: {
-                  background: '#2acd2a',
-                  color: 'white',
-                  fontWeight: 'bold',
-                  fontFamily: 'Lato, Helvetica, sans-serif',
-                  boxShadow: '5px 10px 18px #888888'
-                },
-                iconTheme: {
-                  primary: 'white',
-                  secondary: '#2acd2a',
-                },
-              },
-              error: {
-                style: {
-                  background: '#cd2a2a',
-                  color: 'white',
-                  fontWeight: 'bold',
-                  fontFamily: 'Lato, Helvetica, sans-serif',
-                  boxShadow: '5px 10px 18px #888888'
-                },
-                iconTheme: {
-                  primary: 'white',
-                  secondary: '#cd2a2a',
-                },
-              },
-            }}
-            containerStyle={{
-              top: 70,
-              left: 70,
-              bottom: 70,
-              right: 70,
-            }}
-            />;
+        {yml.open ? <Alert color="green" margin="0" padding="5px 0 0 0">{data.allJobAlertYaml.edges[0].node.message.accepting}</Alert>
+         : <Alert color="red" margin="0" padding="5px 0 0 0">{data.allJobAlertYaml.edges[0].node.message.no_accepting}</Alert>}
           <Link
             style={{ margin: '20px 0', width: 'fit-content' }}
             to={lang === 'us' ? '/us/jobs' : '/es/empleo' || yml.link_back}
@@ -96,16 +56,16 @@ const Job = ({ data, pageContext, yml }) => {
             >
               {yml.banner_heading}
             </H1>
-            <Button
+            {yml.open ? <Button
               onClick={handleOpen}
               variant="full"
               width="130px"
               justifyContent="center"
               color={Colors.blue}
               textColor={Colors.white}
-            >
+              >
               {yml.button_text}
-            </Button>
+            </Button> : ""}
             {/* <Button onClick={() => {setForm(!form), setButtonToggle(!buttonToggle)}} width="200px" color={Colors.blue} textColor={Colors.white}>APPLY NOW</Button> */}
           </Div>
           <ApplyJobModal
