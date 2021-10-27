@@ -24,7 +24,7 @@ exports.onCreateNode = ({node, getNode, actions}) => {
     if ([
         'MarkdownRemark', 'LeadFormYaml', 'NewsYaml', 'PartnerYaml', 'CredentialsYaml',
         'FooterYaml', 'NavbarYaml', 'CustomBarYaml', 'BadgesYaml', 'PageYaml', 'LandingYaml', 
-        'DownloadableYaml', 'CourseYaml', 'LocationYaml', 'JobYaml', 'AlumniProjects', 'ChooseProgramYaml',
+        'DownloadableYaml', 'CourseYaml', 'LocationYaml', 'JobAlertYaml', 'JobYaml', 'AlumniProjects', 'ChooseProgramYaml',
         'TestimonialsYaml', 'GeeksVsOthersYaml', 'JobsStatisticsYaml',
         'Why4GeeksYaml', 'AlumniProjectsYaml', 'StaffYaml', 'ProgramSvgYaml', 'PricesAndPaymentYaml',
         'WhyPythonYaml', 'ChooseYourProgramYaml', 'About4GeeksYaml', 'LocYaml', 'UpcomingDatesYaml', 
