@@ -6,6 +6,7 @@ import { GridContainer, Div } from '../new_components/Sections';
 import { H1, H4, Paragraph } from '../new_components/Heading';
 import { Button, Colors } from '../new_components/Styling';
 import BaseRender from './_baseLayout';
+import {Alert, Input} from "../new_components/Form/index";
 
 const Job = ({ data, pageContext, yml }) => {
   const [open, setOpen] = React.useState(false);
@@ -29,6 +30,8 @@ const Job = ({ data, pageContext, yml }) => {
         padding_tablet="30px 0 0 0"
       >
         <Div flexDirection="column" gridColumn_tablet=" 2 / 12">
+        {yml.open ? <Alert color="green" margin="0" padding="5px 0 0 0">{data.allJobAlertYaml.edges[0].node.message.accepting}</Alert>
+         : <Alert color="red" margin="0" padding="5px 0 0 0">{data.allJobAlertYaml.edges[0].node.message.no_accepting}</Alert>}
           <Link
             style={{ margin: '20px 0', width: 'fit-content' }}
             to={lang === 'us' ? '/us/jobs' : '/es/empleo' || yml.link_back}
@@ -53,16 +56,16 @@ const Job = ({ data, pageContext, yml }) => {
             >
               {yml.banner_heading}
             </H1>
-            <Button
+            {yml.open ? <Button
               onClick={handleOpen}
               variant="full"
               width="130px"
               justifyContent="center"
               color={Colors.blue}
               textColor={Colors.white}
-            >
+              >
               {yml.button_text}
-            </Button>
+            </Button> : ""}
             {/* <Button onClick={() => {setForm(!form), setButtonToggle(!buttonToggle)}} width="200px" color={Colors.blue} textColor={Colors.white}>APPLY NOW</Button> */}
           </Div>
           <ApplyJobModal
@@ -136,6 +139,7 @@ export const query = graphql`
             keywords
           }
           banner_heading
+          open
           link_back
           banner_image
           button_text
@@ -150,6 +154,18 @@ export const query = graphql`
           #   text
           #   thankyou
           # }
+        }
+      }
+    }
+    allJobAlertYaml(
+      filter: { fields: { lang: { eq: $lang } } }
+    ) {
+      edges {
+        node {
+          message {
+            accepting
+            no_accepting
+          }
         }
       }
     }

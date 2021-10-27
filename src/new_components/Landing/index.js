@@ -18,6 +18,7 @@ import LeadForm from '../LeadForm';
 import OurPartners from "../OurPartners";
 import About4Geeks from '../About4Geeks';
 import IconsBanner from '../IconsBanner';
+import Icon from '../Icon';
 import ChooseYourProgram from '../ChooseYourProgram';
 
 
@@ -30,7 +31,7 @@ const Title = ({title, paragraph}) => {
     )
 }
 
-const Side = ({video, image, heading, content, button, bullets}) => {
+const Side = ({video, image, heading, sub_heading, content, button, bullets}) => {
 
     if (video) return <ReactPlayer
         thumb={image && image.src}
@@ -40,7 +41,6 @@ const Side = ({video, image, heading, content, button, bullets}) => {
             height: '260px'
         }}
     />
-
 
     if (image) {
         const imgStyles = image.style ? JSON.parse(image.style) : null;
@@ -56,7 +56,7 @@ const Side = ({video, image, heading, content, button, bullets}) => {
             style={imgStyles}
             // borderRadius={"1.25rem"}
             borderRadius={"3px"}
-            className="pointer"
+            // className="pointer"
             alt={"4Geeks Academy Section"}
             margin="auto"
             height={img_h_xl}
@@ -67,15 +67,43 @@ const Side = ({video, image, heading, content, button, bullets}) => {
     }
 
     const [h_xl, h_lg, h_md, h_sm, h_xs] = heading ? heading.font_size : [];
+    const [sh_xl, sh_lg, sh_md, sh_sm, sh_xs] = sub_heading ? sub_heading.font_size : [];
     const [c_xl, c_lg, c_md, c_sm, c_xs] = content ? content.font_size : [];
     return <Div flexDirection_tablet="column" flexDirection="column" padding="40px 20px" padding_tablet="36px 72px">
         {heading && <H2 type="h2"
             textAlign_tablet="left"
-            lineHeight="40px"
-            lineHeight_tablet="60px"
+            lineHeight="38px"
+            lineHeight_tablet="38px"
             fontSize={h_xs || "30px"} fs_xl={h_xl} fontSize_md={h_md || "40px"} fontSize_sm={h_sm}
             margin="30px 0 20px 0" type="h1">{heading.text}</H2>
         }
+        {sub_heading && 
+            <Paragraph
+                textAlign_tablet="left"
+                padding={heading ? "0" : "20px"}
+                margin="0" 
+                fontSize={sh_xl || "16px"} fontSize_sm={sh_sm} fonSize_md={sh_md} fontSize_sm={sh_sm} fontSize_xs={sh_xs}
+                fontHeight="30px">
+                    {sub_heading.text}
+            </Paragraph>
+        }
+        {Array.isArray(bullets) && 
+        <Div display="grid" gridAutoFlow="dense" gridTemplateColumns="repeat(auto-fill, minmax(40%, 1fr))" gridAutoRows="4.6rem" gridGap="0">
+            {bullets.map((p, index) => {
+                return (
+                    <Div gridColumn_tablet={index >= 5 ? "2/2" : "1/2"} borderBottom="1px solid rgba(164, 164, 164, 0.4)" height="74px" alignItems="center" padding="0 5px 0 20px" padding_tablet="0 5px 0 10px">
+                        <Div flexDirection="column" alignSelf="center" padding="0 8px 0 0" >
+                            <Icon icon="check" width="18px" color={Colors.yellow} fill={Colors.yellow} />
+                        </Div>
+                        <H2 type="h3" textAlign="left" fontSize="15px" fontWeight="400" lineHeight="22px">
+                            {p}
+                        </H2>
+                    </Div>
+                )
+            })}
+        </Div>
+        }
+
         {content && 
         content.text.split('\n').map((p, i) =>
             <Paragraph 
@@ -89,10 +117,16 @@ const Side = ({video, image, heading, content, button, bullets}) => {
             </Paragraph>
         )}
 
-        {button && <Button outline width="200px"
+        {button && <Button outline width="250px"
             colorHoverText={Colors.blue}
+            lineHeight="26px"
             textColor={Colors.black}
-            margin="2rem 0" padding=".35rem.85rem"
+            padding="0"
+            padding_tablet="0"
+            fontSize="15px"
+            textAlign="left"
+            margin="2rem 0" 
+            // padding=".35rem.85rem"
             onClick={() => {
                 if (button.path && button.path.indexOf("http") > -1) window.open(button.path);
                 else navigate(button.path);
@@ -188,16 +222,18 @@ export const landingSections = {
     </GridContainer>,
 
     about4Geeks: ({session, data, pageContext, yml, index}) => {
+        let dataYml = data.allLandingYaml.edges.length !== 0 && data.allLandingYaml.edges[0].node.about4Geeks !== null ? data.allLandingYaml.edges : data.allDownloadableYaml.edges
         return(
             <About4Geeks 
                 id="about4Geeks"
-                lang={data.allLandingYaml.edges[0].node.about4Geeks || data.allDownloadableYaml.edges[0].node.about4Geeks}
+                lang={dataYml[0].node.about4Geeks}
             />
         )
     },
 
     iconogram: ({session, data, pageContext, yml, index}) => {
-        let content = data.allLandingYaml.edges[0].node.iconogram || data.allDownloadableYaml.edges[0].node.iconogram
+        let dataYml = data.allLandingYaml.edges.length !== 0 && data.allLandingYaml.edges[0].node.iconogram !== null ? data.allLandingYaml.edges : data.allDownloadableYaml.edges
+        let content = dataYml[0].node.iconogram
         return(
             <GridContainer id="iconogram" background={Colors.lightYellow} columns="2" rows="2" columns_tablet="4" margin="0 0 58px 0" height="470px" height_tablet="320px" margin_tablet="0 0 78px 0">
             {Array.isArray(content.icons) && content.icons?.map((item, i) => {
@@ -210,7 +246,8 @@ export const landingSections = {
     },
 
     badges: ({session, data, pageContext, yml, course, index}) =>{
-        let badges = data.allLandingYaml.edges[0].node.badges || data.allDownloadableYaml.edges[0].node.badges
+        let dataYml = data.allLandingYaml.edges.length !== 0 && data.allLandingYaml.edges[0].node.badges !== null ? data.allLandingYaml.edges : data.allDownloadableYaml.edges
+        let badges = dataYml[0].node.badges
         return(
             <Badges
                 // short_link
@@ -305,8 +342,8 @@ export const landingSections = {
     },
 
     choose_your_program: ({session, pageContext, yml, data, index}) => {
-        // const course = data.allCourseYaml.edges.length > 0 ? data.allCourseYaml.edges[0].node : {};
-        let chooseYourProgram = data.allLandingYaml.edges[0].node?.choose_your_program || data.allDownloadableYaml.edges[0].node?.choose_your_program
+        let dataYml = data.allLandingYaml.edges.length !== 0 && data.allLandingYaml.edges[0].node.choose_your_program !== null ? data.allLandingYaml.edges : data.allDownloadableYaml.edges
+        let chooseYourProgram = dataYml[0].node?.choose_your_program
         return (
             <React.Fragment id="choose_your_program" key={index}>
                 <Div width="100%" flexDirection="column">
@@ -354,8 +391,10 @@ export const landingSections = {
         <AlumniProjects lang={data.allAlumniProjectsYaml.edges} hasTitle showThumbs="false" limit={2} />
     </Div>,
     who_is_hiring: ({session, data, pageContext, yml, location, index}) => {
+        let dataYml = data.allLandingYaml.edges.length !== 0 && data.allLandingYaml.edges[0].node?.who_is_hiring !== null ? data.allLandingYaml.edges : data.allDownloadableYaml.edges
+
         const hiring = data.allPartnerYaml.edges[0].node;
-        let landingHiriging = data.allLandingYaml.edges[0].node?.who_is_hiring || data.allDownloadableYaml.edges[0].node?.who_is_hiring;
+        let landingHiriging = dataYml[0].node?.who_is_hiring
 
         return <Div id="who_is_hiring" key={index} flexDirection="column" margin="40px 0" margin_tablet="40px 50px 100px" m_sm="0" p_xs="0">
             <OurPartners
@@ -385,13 +424,13 @@ export const landingSections = {
     two_column_left: ({session, data, pageContext, yml, index}) => <Div id="two_column_left" key={index} background={Colors[yml.background] || yml.background} flexDirection="column" padding="50px 0 50px 0" padding_tablet="50px 6%" margin="0">
         <TwoColumn
             left={{image: yml.image, video: yml.video}}
-            right={{heading: yml.heading, content: yml.content, button: yml.button,}}
+            right={{heading: yml.heading, sub_heading: yml.sub_heading, bullets: yml.bullets, content: yml.content, button: yml.button,}}
             proportions={yml.proportions}
         />
     </Div>,
     two_column_right: ({session, data, pageContext, yml, index}) => <Div id="two_column_right" key={index} background={Colors[yml.background] || yml.background} flexDirection="column" padding="0 0 50px 0" padding_tablet="50px 6%" margin="0">
         <TwoColumn
-            left={{heading: yml.heading, content: yml.content, button: yml.button}}
+            left={{heading: yml.heading, sub_heading: yml.sub_heading, bullets: yml.bullets, content: yml.content, button: yml.button}}
             right={{image: yml.image, video: yml.video,}}
             proportions={yml.proportions}
         />
