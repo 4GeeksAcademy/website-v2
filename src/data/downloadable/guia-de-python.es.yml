@@ -6,7 +6,7 @@ meta_info:
   image: "/images/bg/remote.jpeg"
   keywords: "Aprende a programar, 4Geeks academy, aprende programacion, aprende ingenieria informatica"
   template: "landing_a" # <--- choose your landing template
-  redirects: ["/landing/guia-de-python"] # <--- URL redirections to avoid 404 errors
+  redirects: [] # <--- URL redirections to avoid 404 errors
 
   visibility: "visible"
   automation: soft #optional, this is the default value
@@ -25,7 +25,7 @@ form:
 navbar:
   logoUrl: "#" # relative(/apply), absolute(https://google.com) or id(#componentName)
   buttonText: "Descargar Guía"
-  buttonUrl: "#" # url accepts: relative(/apply), absolute(https://google.com) or id(#componentName)
+  buttonUrl: "#bottom" # url accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
 
 # jumbotron on the top (cannot be commented out)
 header_data:
