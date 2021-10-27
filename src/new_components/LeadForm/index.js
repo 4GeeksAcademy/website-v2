@@ -43,6 +43,7 @@ const _fields = {
     phone: {value: '', valid: false, required: true, type: 'phone', place_holder: "Phone number", error: "Please specify a valid phone"},
     consent: {value: true, valid: true, required: true, type: 'text', place_holder: "", error: "You need to accept the privacy terms"},
     client_comments: {value: '', valid: true, required: false, type: 'text', place_holder: "Any comments?", error: "Please specify any comments"},
+    form_type: {value: '', valid: true, required: true, type: 'hidden', place_holder: "", error: "formType not found"},
 }
 
 const clean = (fields, data) => {

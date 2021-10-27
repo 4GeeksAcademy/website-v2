@@ -9,23 +9,16 @@ import {Colors, StyledBackgroundSection} from '../new_components/Styling';
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import LandingNavbar from '../new_components/NavbarDesktop/landing';
 import BaseRender from './_baseLandingLayout'
-import {requestSyllabus} from "../actions";
+import {processFormEntry} from "../actions";
 import {SessionContext} from '../session.js'
 
 const Landing = (props) => {
   const {session, setLocation} = React.useContext(SessionContext);
-  const {data, pageContext, yml} = props;
+  const {data, pageContext, yml, filteredPrograms} = props;
   const [components, setComponents] = React.useState({});
   const [inLocation, setInLocation] = React.useState("");
 
-  const applySchollarship = data.allLandingYaml.edges[0].node?.apply_schollarship
-  const landing_utm_course = yml.meta_info.utm_course
-
-  const filteredPrograms  = data.allChooseProgramYaml.edges[0].node.programs.filter((course_el) => {
-    return landing_utm_course.filter((array_el) => {
-      return course_el.bc_slug === array_el;
-    }).length !== 0;
-  });
+  const applySchollarship = data.allLandingYaml.edges.length !== 0 ? data.allLandingYaml.edges[0].node?.apply_schollarship : data.allDownloadableYaml.edges[0].node?.apply_schollarship
 
   const programs = filteredPrograms.map(p => ({
     label: p.text,
@@ -40,7 +33,7 @@ const Landing = (props) => {
     setComponents({...yml, ..._components});
   }, [yml]);
   useEffect(() => {
-    if (yml.meta_info && yml.meta_info.utm_location) setLocation(yml.meta_info.utm_location);
+    if (yml.meta_info && yml.meta_info.utm_location) setLocation(yml.meta_info.utm_location || null);
 
     const urlParams = new URLSearchParams(window.location.search);
     const _inLoc = urlParams.get('in') || null;
@@ -49,10 +42,12 @@ const Landing = (props) => {
 
   // data sent to the form already prefilled
   const preData = {
-    course: {type: "hidden", value: programs.length <=1 ? (programs[0].value) : (yml.meta_info.utm_course), valid: true},
-    utm_location: {type: "hidden", value: yml.meta_info.utm_location, valid: true},
+    course: {type: "hidden", value: programs.length <=1 ? (programs[0].value) : (yml.meta_info?.utm_course), valid: true},
+    utm_location: {type: "hidden", value: yml.meta_info.utm_location || null, valid: true},
     automation: {type: "hidden", value: yml.meta_info.automation, valid: true},
-    tag: {type: "hidden", value: yml.meta_info.tag, valid: true}
+    tag: {type: "hidden", value: yml.meta_info.tag, valid: true},
+    current_download: {type: "hidden", value: yml.meta_info.current_download, valid: true},
+    form_type: {type: "hidden", value: pageContext.type, valid: true}
   };
 
   const landingLocation = session && session.locations?.find(l => l.breathecode_location_slug === yml.meta_info.utm_location)
@@ -84,6 +79,7 @@ const Landing = (props) => {
           {yml.follow_bar.content.text_mobile && yml.follow_bar.content.text_mobile.split("\n").map((c, i) => <span className="d-none d-xs-block w-100">{c}</span>)}
         </Paragraph>
       </FollowBar>
+
       <StyledBackgroundSection
         id="top"
         className={`image`}
@@ -108,7 +104,6 @@ const Landing = (props) => {
           padding_tablet="72px 0 35px 0"
           columns_tablet="2"
         >
-
           <Div
             // display="none"
             display_tablet="flex"
@@ -206,7 +201,7 @@ const Landing = (props) => {
               selectProgram={programs}
               margin="18px 10px"
               style={{ marginTop: "50px", minHeight: "350px" }}
-              formHandler={requestSyllabus}
+              formHandler={processFormEntry}
               heading={yml.form.heading}
               motivation={yml.form.motivation}
               sendLabel={yml.form.button_label}
@@ -230,7 +225,7 @@ const Landing = (props) => {
           .sort((a, b) => components[b].position > components[a].position ? -1 : 1)
           .map(name => {
             const layout = components[name].layout || name;
-            return landingSections[layout]({...props, yml: components[name], session, course: yml.meta_info.utm_course, location: components.meta_info.utm_location})
+            return landingSections[layout]({...props, yml: components[name], session, course: yml.meta_info?.utm_course, location: components.meta_info.utm_location})
           })
       }
 
@@ -264,7 +259,7 @@ const Landing = (props) => {
               background={Colors.verylightGray}
               margin="0"
               style={{ minHeight: "350px" }}
-              formHandler={requestSyllabus}
+              formHandler={processFormEntry}
               heading={yml.form.heading}
               motivation={yml.form.motivation}
               sendLabel={yml.form.button_label}
@@ -310,7 +305,7 @@ const Landing = (props) => {
   )
 };
 export const query = graphql`
-  query LandingAQuery($file_name: String!, $lang: String!, $utm_course: String!) {
+  query LandingAQuery($file_name: String!, $lang: String!, $utm_course: String) {
     allPageYaml(filter: { fields: { file_name: { regex: "/geekpal/" }, lang: { eq: $lang }}}) {
       edges {
         node {
@@ -513,6 +508,11 @@ export const query = graphql`
                 text
                 font_size
               }
+              sub_heading{
+                text
+                font_size
+              }
+              bullets
               content{
                 text
                 font_size
@@ -586,10 +586,9 @@ export const query = graphql`
               description
               image
               keywords
-              utm_course
-              utm_location
               automation
               tag
+              current_download
             }
             follow_bar{
               position
@@ -762,6 +761,11 @@ export const query = graphql`
                 text
                 font_size
               }
+              sub_heading{
+                text
+                font_size
+              }
+              bullets
               content{
                 text
                 font_size
@@ -789,9 +793,15 @@ export const query = graphql`
                     width: 500
                     placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                   )
-                  # fluid(maxWidth: 1000){
-                  #   ...GatsbyImageSharpFluid_withWebp
-                  # }
+                }
+              }
+              image{
+                childImageSharp {
+                  gatsbyImageData(
+                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                    width: 1000
+                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                  )
                 }
               }
             }

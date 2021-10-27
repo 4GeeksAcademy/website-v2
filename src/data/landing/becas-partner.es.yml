@@ -36,7 +36,7 @@ form:
 header_data:
   tagline: Impulsa tu carrera profesional, Obtén tu beca!
   sub_heading: ""
-  partner_url: "../../../static/images/partner/microsoft_white.png"
+  partner_url: "../../../static/images/partner/microsoft.png"
   image: "../../../static/images/Happy-People-Landing-4Geeks-ES.jpg"
   image_filter: brightness(0.4)
 
