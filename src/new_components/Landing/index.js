@@ -250,8 +250,8 @@ export const landingSections = {
         let badges = dataYml[0].node.badges
         return(
             <Badges
-                // short_link
-                wrapped_images={true}
+                link
+                // wrapped_images={true}
                 id="badges"
                 lang={pageContext.lang}
                 background={Colors.verylightGray}
