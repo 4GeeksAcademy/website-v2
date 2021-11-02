@@ -1,10 +1,10 @@
 meta_info:
   slug: guia-de-python # <--- URL 4geeksacademy.com/us/landing/example
   # This will show on social media when shared
-  title: "Guía rápida de python para principiantes"
+  title: "Guía rápida de Python para principiantes"
   description: "Python es un lenguaje de programación que está revolucionando el mercado y es utilizado por empresas como: Netflix, Spotify, Amazon y muchas más."
   image: "/images/bg/remote.jpeg"
-  keywords: "Aprende a programar en python, 4Geeks academy, aprende programacion en python"
+  keywords: "Aprende a programar en Python, 4Geeks academy, aprende programacion en Python"
   template: "landing_a" # <--- choose your landing template
   redirects: [] # <--- URL redirections to avoid 404 errors
 
@@ -84,7 +84,7 @@ components:
     # video: "B01-eTfgqqc"
     heading:
       text:
-        "La guía que te ayudará a dar tus primeros pasos en Phyton"
+        "La guía que te ayudará a dar tus primeros pasos en Python"
         #           xl      lg      md      sm      xs
       font_size: ["35px", "35px", "35px", "35px", "35px"]
     content:
@@ -123,7 +123,7 @@ components:
       - Tabla Hash
 
     content:
-      text: "El Zen del Phyton, variables, conditionals, loops, functions, decorators, generators, virtual environment, package manager."
+      text: "El Zen del Python, variables, conditionals, loops, functions, decorators, generators, virtual environment, package manager."
       font_size: ["16px"]
 
   # - name: first_syllabus_form
