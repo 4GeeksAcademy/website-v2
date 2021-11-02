@@ -96,7 +96,7 @@ iconogram:
   position: 3
   icons:
   - icon: "touch" 
-    title: Soli
+    title: Postula al programa 
   - icon: "receive_mail"
     title: Recibe un correo electrónico con la información
   - icon: "talk"
