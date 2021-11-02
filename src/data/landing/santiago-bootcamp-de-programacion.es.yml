@@ -25,7 +25,7 @@ form:
   heading: "Conoce más información"
   motivation: "Llena el formulario y te enviaremos la info en menos de 5 min"
   button_label: Obtener malla y más información
-  redirect: null #you can redirect to another url or entirely diffrent website
+  redirect: "/es/gracias/?lang=es" #you can redirect to another url or entirely diffrent website
 
 # jumbotron on the top (cannot be commented out)
 header_data:
@@ -40,9 +40,9 @@ features:
   #                                         up   left down  right
   styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
   bullets:
-    - No se requiere experiencia previa
-    - Horarios part-time y full-time. Online o Presencial
-    - Mentorias y career support de por vida
+    - De cero a programador en 16 semanas
+    - Mentorías y career support de por vida
+    - ¿Estudias o trabajas? Tienes la opción del horario Part Time
     - Un desarrollador junior hace $900.000 CLP al mes
 
 follow_bar:
