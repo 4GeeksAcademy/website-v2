@@ -3,6 +3,7 @@ meta_info:
   title: "Senior Web Developer"
   description: null
   image: null
+  open: false #if true, this job will be accepting candidates
   keywords: ""
   redirects: []
 

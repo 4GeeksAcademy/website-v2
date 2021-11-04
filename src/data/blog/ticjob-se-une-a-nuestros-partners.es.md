@@ -9,7 +9,6 @@ image: "/images/blog/Blog_post.png"
 image_alt: ""
 cluster: "tendencias-y-tecnologia"
 status: "published"
-featured: "true"
 
 ---
 

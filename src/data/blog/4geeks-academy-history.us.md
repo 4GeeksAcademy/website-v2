@@ -9,7 +9,6 @@ image: "/images/why2.jpg"
 image_alt: ""
 cluster: "trends-and-tech"
 status: "published"
-featured: "true"
 
 ---
 

@@ -198,6 +198,7 @@ export const Div = styled.div`
         padding: ${props => props.padding_sm};
         justify-content: ${props => justifyContentOptions[props.justifyContent_sm]};
         height: ${props => props.height_sm};
+        display: ${props => props.display};
         
     }
     @media  ${Devices.tablet}{

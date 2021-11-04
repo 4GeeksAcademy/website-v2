@@ -2,6 +2,7 @@ meta_info:
   slug: formador-principal-de-programacion
   title: "Formador Principal de Programacion"
   description: null
+  open: false #if true, this job will be accepting candidates
   image: null
   keywords: ""
   redirects: []
