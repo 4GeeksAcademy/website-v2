@@ -22,7 +22,7 @@ Hoy en día, poseemos muchas máquinas utilizadas en la medicina avanzada, que s
 
 ## Impresiones 3D
 
-Esta es una técnica que ha proporcionado un abanico de posibilidades para identificar enfermedades a través del sudor, ya que, perite la medición de parámetros biométricos. Por otro lado, también ha permitido crear órganos artificiales para personas con órganos no funcionales.
+Esta es una técnica que ha proporcionado un abanico de posibilidades para identificar enfermedades a través del sudor, ya que, permite la medición de parámetros biométricos. Por otro lado, también ha permitido crear órganos artificiales para personas con órganos no funcionales.
 
 ¿Cómo lo hacen?
 
