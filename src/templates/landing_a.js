@@ -9,23 +9,16 @@ import {Colors, StyledBackgroundSection} from '../new_components/Styling';
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import LandingNavbar from '../new_components/NavbarDesktop/landing';
 import BaseRender from './_baseLandingLayout'
-import {requestSyllabus} from "../actions";
+import {processFormEntry} from "../actions";
 import {SessionContext} from '../session.js'
 
 const Landing = (props) => {
   const {session, setLocation} = React.useContext(SessionContext);
-  const {data, pageContext, yml} = props;
+  const {data, pageContext, yml, filteredPrograms} = props;
   const [components, setComponents] = React.useState({});
   const [inLocation, setInLocation] = React.useState("");
 
-  const applySchollarship = data.allLandingYaml.edges[0].node?.apply_schollarship
-  const landing_utm_course = yml.meta_info.utm_course
-
-  const filteredPrograms  = data.allChooseProgramYaml.edges[0].node.programs.filter((course_el) => {
-    return landing_utm_course.filter((array_el) => {
-      return course_el.bc_slug === array_el;
-    }).length !== 0;
-  });
+  const applySchollarship = data.allLandingYaml.edges.length !== 0 ? data.allLandingYaml.edges[0].node?.apply_schollarship : data.allDownloadableYaml.edges[0].node?.apply_schollarship
 
   const programs = filteredPrograms.map(p => ({
     label: p.text,
@@ -40,7 +33,7 @@ const Landing = (props) => {
     setComponents({...yml, ..._components});
   }, [yml]);
   useEffect(() => {
-    if (yml.meta_info && yml.meta_info.utm_location) setLocation(yml.meta_info.utm_location);
+    if (yml.meta_info && yml.meta_info.utm_location) setLocation(yml.meta_info.utm_location || null);
 
     const urlParams = new URLSearchParams(window.location.search);
     const _inLoc = urlParams.get('in') || null;
@@ -49,10 +42,12 @@ const Landing = (props) => {
 
   // data sent to the form already prefilled
   const preData = {
-    course: {type: "hidden", value: programs.length <=1 ? (programs[0].value) : (yml.meta_info.utm_course), valid: true},
-    utm_location: {type: "hidden", value: yml.meta_info.utm_location, valid: true},
+    course: {type: "hidden", value: programs.length <=1 ? (programs[0].value) : (yml.meta_info?.utm_course), valid: true},
+    utm_location: {type: "hidden", value: yml.meta_info.utm_location || null, valid: true},
     automation: {type: "hidden", value: yml.meta_info.automation, valid: true},
-    tag: {type: "hidden", value: yml.meta_info.tag, valid: true}
+    tag: {type: "hidden", value: yml.meta_info.tag, valid: true},
+    current_download: {type: "hidden", value: yml.meta_info.current_download, valid: true},
+    form_type: {type: "hidden", value: pageContext.type, valid: true}
   };
 
   const landingLocation = session && session.locations?.find(l => l.breathecode_location_slug === yml.meta_info.utm_location)
@@ -84,6 +79,7 @@ const Landing = (props) => {
           {yml.follow_bar.content.text_mobile && yml.follow_bar.content.text_mobile.split("\n").map((c, i) => <span className="d-none d-xs-block w-100">{c}</span>)}
         </Paragraph>
       </FollowBar>
+
       <StyledBackgroundSection
         id="top"
         className={`image`}
@@ -108,7 +104,6 @@ const Landing = (props) => {
           padding_tablet="72px 0 35px 0"
           columns_tablet="2"
         >
-
           <Div
             // display="none"
             display_tablet="flex"
@@ -125,13 +120,13 @@ const Landing = (props) => {
             padding_tablet={`40px 0 0 20px`}
           >
             {
-              yml.header_data.scholarship && 
+              yml.header_data.partner_url && 
               <>
                 <Div width="242px" flexDirection_tablet="column" height="auto" padding="0 0 25px 0">
                   <GatsbyImage 
                     loading="eager"
                     imgStyle={{ objectFit: 'contain' }}
-                    image={getImage(yml.header_data.scholarship.childImageSharp.gatsbyImageData)}
+                    image={getImage(yml.header_data.partner_url.childImageSharp.gatsbyImageData)}
                     alt="4Geeks Logo" 
                   />
                 </Div>
@@ -177,7 +172,7 @@ const Landing = (props) => {
                   color={Colors.white}>{'• '}{f}</Paragraph>
               )}
             {yml.features.text && 
-              <Paragraph key={i}
+              <Paragraph
                   isActive
                   style={JSON.parse(yml.features.styles)}
                   margin="7px 0"
@@ -202,11 +197,11 @@ const Landing = (props) => {
           >
             <LeadForm
               background={Colors.white}
-              margin_tablet="50px 0 0 0" 
+              margin_tablet="18px 38px"
               selectProgram={programs}
-              margin="0" 
+              margin="18px 10px"
               style={{ marginTop: "50px", minHeight: "350px" }}
-              formHandler={requestSyllabus}
+              formHandler={processFormEntry}
               heading={yml.form.heading}
               motivation={yml.form.motivation}
               sendLabel={yml.form.button_label}
@@ -217,7 +212,8 @@ const Landing = (props) => {
               fields={yml.form.fields}
               data={preData}
               justifyContentButton="center"
-              marginButton={`15px 0 30px auto`}
+              marginButton="15px auto 30px auto"
+              marginButton_tablet="15px 0 30px auto"
             />
           </Div>
         </GridContainer>
@@ -229,12 +225,12 @@ const Landing = (props) => {
           .sort((a, b) => components[b].position > components[a].position ? -1 : 1)
           .map(name => {
             const layout = components[name].layout || name;
-            return landingSections[layout]({...props, yml: components[name], session, course: yml.meta_info.utm_course, location: components.meta_info.utm_location})
+            return landingSections[layout]({...props, yml: components[name], session, course: yml.meta_info?.utm_course, location: components.meta_info.utm_location})
           })
       }
 
       <GridContainerWithImage id="bottom" background={Colors.verylightGray} imageSide={applySchollarship?.imageSide || "right"} padding="0" padding_tablet="80px 0 90px 0" columns_tablet="14" margin="0" margin_tablet="0">
-        <Div flexDirection="column" margin="0" margin_tablet="0 50px" justifyContent_tablet="start" padding="40px 40px 40px" padding_tablet="0" 
+        <Div flexDirection="column" margin="0" justifyContent_tablet="start" padding="0" padding_tablet="0 30px" 
         gridArea_tablet={(applySchollarship?.imageSide) === "right" ? "1/1/1/6" : "1/7/1/13"}
         // gridArea_tablet="1/1/1/6"
         >
@@ -253,12 +249,17 @@ const Landing = (props) => {
           >
             <LeadForm
               landingTemplate
+              titleMargin="20px 0px 15px 0px"
+              titleMargin_tablet="20px 0px 15px 0px"
+              textPadding_tablet="6px 0px 20px 0px"
+              textPadding="6px 0px 20px 0px"
               selectProgram={programs}
+              margin="18px 30px"
               layout="block"
               background={Colors.verylightGray}
               margin="0"
               style={{ minHeight: "350px" }}
-              formHandler={requestSyllabus}
+              formHandler={processFormEntry}
               heading={yml.form.heading}
               motivation={yml.form.motivation}
               sendLabel={yml.form.button_label}
@@ -269,7 +270,8 @@ const Landing = (props) => {
               fields={yml.form.fields}
               data={preData}
               justifyContentButton="center"
-              marginButton={`15px 0 30px auto`}
+              marginButton="15px auto 30px auto"
+              marginButton_tablet="15px 0 30px auto"
             />
           </Div>
         </Div>
@@ -303,7 +305,7 @@ const Landing = (props) => {
   )
 };
 export const query = graphql`
-  query LandingAQuery($file_name: String!, $lang: String!, $utm_course: String!) {
+  query LandingAQuery($file_name: String!, $lang: String!, $utm_course: String) {
     allPageYaml(filter: { fields: { file_name: { regex: "/geekpal/" }, lang: { eq: $lang }}}) {
       edges {
         node {
@@ -466,7 +468,7 @@ export const query = graphql`
                 icon
               }
             }
-
+      
             why_python{
               position
               heading
@@ -506,6 +508,11 @@ export const query = graphql`
                 text
                 font_size
               }
+              sub_heading{
+                text
+                font_size
+              }
+              bullets
               content{
                 text
                 font_size
@@ -526,7 +533,7 @@ export const query = graphql`
               tagline
               sub_heading
               image_filter
-              scholarship {
+              partner_url {
                 childImageSharp {
                   gatsbyImageData(
                     layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
@@ -548,6 +555,253 @@ export const query = graphql`
                   # fluid(maxWidth: 1000){
                   #   ...GatsbyImageSharpFluid_withWebp
                   # }
+                }
+              }
+            }
+            geeks_vs_others{
+              position
+              heading
+              paragraph
+              total_rows
+            }
+            testimonial{
+              position
+              heading
+              sub_heading
+              students{
+                name
+                sub_heading
+                comment
+                video
+              }
+            }
+        }
+      }
+    }
+    allDownloadableYaml(filter: { fields: { file_name: { eq: $file_name }, lang: { eq: $lang }}}) {
+      edges{
+        node{
+            meta_info{
+              title
+              description
+              image
+              keywords
+              automation
+              tag
+              current_download
+            }
+            follow_bar{
+              position
+              content{
+                text
+                text_mobile
+                font_size
+              }
+              button{
+                text
+                path
+              }
+              phone{
+                text
+                number
+              }
+            }
+            navbar {
+              logoUrl
+              buttonText
+              buttonUrl
+            }
+            form{
+              heading
+              motivation
+              redirect
+              fields
+              button_label
+            }
+            features{
+              marginTop
+              text
+              bullets
+              styles
+            }
+            badges{
+              position
+              heading
+            }
+            about4Geeks{
+              position
+              heading
+              sub_heading
+              list{
+                title
+              }
+              paragraph
+              button_text
+              button_link
+              image {
+                childImageSharp {
+                  gatsbyImageData(
+                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                    width: 1200
+                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                  )
+                }
+              }
+              image_mobile {
+                childImageSharp {
+                  gatsbyImageData(
+                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                    width: 800
+                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                  )
+                }
+              }
+            }
+            iconogram {
+              position
+              icons {
+                icon
+                title
+              }
+            }
+            in_the_news{
+              heading
+              position
+              filter
+            }
+            program_details{
+              position
+              heading
+              sub_heading
+            }
+            why_4geeks{
+              position
+              heading
+              sub_heading
+              footer {
+                text
+                text_link
+              }
+            }
+            alumni_projects{
+              position
+              heading
+              sub_heading
+            }
+            who_is_hiring{
+              position
+              heading
+              sub_heading
+              featured {
+                image {
+                  childImageSharp {
+                    gatsbyImageData(
+                      layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                      width: 150
+                      placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                    )
+                    # fluid(maxWidth: 150){
+                    #   ...GatsbyImageSharpFluid_withWebp
+                    # }
+                  }
+                }
+                # featured
+              }
+            }
+            choose_your_program{
+              position
+              title
+              paragraph
+              programs {
+                text_link
+                link
+                sub_title
+                title
+                description
+                icon
+              }
+            }
+      
+            why_python{
+              position
+              heading
+              sub_heading
+            }
+            apply_schollarship{
+              imageSide
+              image {
+                childImageSharp {
+                  gatsbyImageData(
+                    layout: CONSTRAINED
+                    width: 800
+                    placeholder: NONE
+                    quality: 100
+                  )
+                }
+              }
+            }
+            components{
+              name
+              position
+              proportions
+              layout
+              image{
+                src
+                style
+                link
+              }
+              video
+              height
+              button{
+                text
+                color
+                path
+              }
+              heading{
+                text
+                font_size
+              }
+              sub_heading{
+                text
+                font_size
+              }
+              bullets
+              content{
+                text
+                font_size
+              }
+              columns{
+                size
+                content{
+                  text
+                  font_size
+                }
+                image{
+                  src
+                  style
+                }
+              }
+            }
+            header_data{
+              tagline
+              sub_heading
+              image_filter
+              partner_url {
+                childImageSharp {
+                  gatsbyImageData(
+                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                    width: 500
+                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                  )
+                }
+              }
+              image{
+                childImageSharp {
+                  gatsbyImageData(
+                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                    width: 1000
+                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                  )
                 }
               }
             }

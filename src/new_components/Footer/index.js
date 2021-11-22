@@ -70,7 +70,7 @@ const Footer = ({ yml }) => {
                     borderRadius="3px"
                     gridArea_tablet="1/1/2/3"
                 >
-                    <RoundImage url="/images/logoweb.png" height="43px" width="143px" backgroundColor="transparent" position="center" bsize="contain" />
+                    <RoundImage url="/images/4geeks-logo.png" height="43px" width="143px" backgroundColor="transparent" position="center" bsize="contain" />
                 </Div>
                 <Div
                     flexDirection="column"
@@ -126,7 +126,6 @@ const Footer = ({ yml }) => {
                             <H4 margin="0 0 10px 0" textAlign="left" display="none" display_tablet="block">{yml.newsletter.heading}</H4>
                             <Div justifyContent="center" width="100%">
                                 <Form onSubmit={(e) => {
-                                    console.log("E:", e)
                                     e.preventDefault();
                                     if (formStatus.status === "error") {
                                         setFormStatus({status: "idle", msg: "Resquest"})

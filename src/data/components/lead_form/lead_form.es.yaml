@@ -3,6 +3,13 @@ messages:
   error: "Hay errores en el formulario"
   success: "¡Gracias! Revisa tu buzón de correo 😁"
   loading: "Enviando..."
+
+apply_job:
+  text: Cuéntanos sobre ti
+  thankyou: "¡Listo! Tu aplicación a este empleo ha sido enviada exitosamente"
+  apply_button_text: Enviar aplicación
+  close: cerrar
+
 form_fields:
   - name: first_name
     required: true
@@ -39,3 +46,8 @@ form_fields:
     type: 'selector'
     place_holder: "Selecciona un programa *"
     error: "Debes elegir un programa"
+  - name: location
+    required: true
+    type: 'text'
+    place_holder: "Locación *"
+    error: "El campo location es requerido"

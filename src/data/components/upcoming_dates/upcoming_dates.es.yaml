@@ -9,6 +9,8 @@ info:
   location_label: sede
   duration_label: duración
   duration_weeks: 16 semanas
+  duration_part_time: 16 semanas
+  duration_full_time: 9 semanas
   button_text: aplicar
   button_link: "/es/aplica"
 footer:

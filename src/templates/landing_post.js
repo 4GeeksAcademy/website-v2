@@ -156,6 +156,5 @@ query Landing_BlogPostBySlug($slug: String!){
         
     }
 }
-
-
 `
+

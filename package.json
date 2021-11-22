@@ -23,7 +23,7 @@
   ],
   "scripts": {
     "start": "gatsby develop -H 0.0.0.0 -o",
-    "test": "node --experimental-modules ./src/test/test.yml.js && node ./src/test/test.seo.js && node ./src/test/test.blog.js && node ./src/test/test.course.js && node ./src/test/test.landing.js && node ./src/test/test.location.js",
+    "test": "node --experimental-modules ./src/test/test.yml.js && node ./src/test/test.seo.js && node ./src/test/test.blog.js && node ./src/test/test.course.js && node ./src/test/test.landing.js && node ./src/test/test.location.js && node ./src/test/test.downloadable.js",
     "start:storybook": "start-storybook -p 9000 -c .storybook",
     "build": "npm run test && node ./src/utils/makePagesDictionary.js && node ./src/utils/makePostsDictionary.js && node ./src/utils/makeRedirectsDictionary.js && gatsby build",
     "build:gatsby": "gatsby build",
@@ -33,8 +33,7 @@
     "cy:run": "cypress run",
     "open:e2e": "START_SERVER_AND_TEST_INSECURE=1 start-server-and-test start http://localhost:8000 cy:open",
     "run:e2e": "START_SERVER_AND_TEST_INSECURE=1 start-server-and-test start http://localhost:8000 cy:run",
-    "cy:clean": "cypress cache clear",
-    "test_loc": "node --experimental-modules ./src/test/test.location.js"
+    "cy:clean": "cypress cache clear"
   },
   "dependencies": {
     "@loadable/component": "^5.13.2",

@@ -6,7 +6,7 @@ import {Colors} from '../Styling'
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import Fragment from "../Fragment"
 
-export default ({id, lang, loading, link, short_link, short_text, paragraph, background, padding, paddingText, paddingText_tablet, padding_tablet, margin}) => {
+export default ({id, lang, loading, link, short_link, short_text, paragraph, background, padding, paddingText, paddingText_tablet, padding_tablet, margin, wrapped_images}) => {
   const data = useStaticQuery(graphql`
     query myNewQueryBadges{
       allBadgesYaml{
@@ -61,7 +61,7 @@ export default ({id, lang, loading, link, short_link, short_text, paragraph, bac
           <Paragraph
             fontFamily="Lato-Light"
             padding={paddingText || "0 10px 45px 10px"}
-            padding_tablet={paddingText_tablet || "0 10px 55px 10px"}
+            padding_tablet={paddingText_tablet || "0 12% 55px 12%"}
             fontSize={short_link || short_text ? "15px" : "22px"}
             fontSize_tablet={short_link || short_text ? "15px" : "22px"}
             lineHeight={short_link || short_text ? "22px" : "38px"}
@@ -72,53 +72,88 @@ export default ({id, lang, loading, link, short_link, short_text, paragraph, bac
           />
         </Div>}
 
-        <Div 
-          className="badge-slider hideOverflowX__"
-          // justifyContent="center"
-          // alignItems="center"
-          >
+        {wrapped_images === true ? (
+          <Div 
+            className="badge-slider hideOverflowX__"
+            justifyContent="center"
+            rowGap="3rem"
+            flexWrap="wrap"
+            columnGap="1rem"
 
-          {short_link ? content.badges.map((l, i) => {
-            return (
-              i < 4 &&
-              <GatsbyImage
-                key={i}
-                style={{height: "65px", minWidth: "80px", margin: "0 20px"}}
-                imgStyle={{objectFit: "contain"}}
-                loading="eager"
-                // draggable={false}
-                // fadeIn={false}
-                alt={l.name}
-                image={getImage(l.image.childImageSharp.gatsbyImageData)}
-                // fluid={l.image.childImageSharp.fluid}
-              />
-            )
-          }) :
-            content.badges.map((l, i) => {
+            // row-gap: 3rem;
+            // column-gap: 1rem;
+            // display: flex;
+            // flex-wrap: wrap;
+          >
+            {
+              content.badges.map((l, i) => {
               return (
                 <GatsbyImage
                   key={i}
-                  style={{
-                    height: "85px", 
-                    // minWidth: "200px",
-                    minWidth: "150px", 
-                    margin: "0 24px"}}
+                  style={{height: "65px", minWidth: "150px", width: "min-content", margin: "0 20px"}}
                   imgStyle={{objectFit: "contain"}}
                   loading="eager"
-                  draggable={false}
+                  // draggable={false}
                   // fadeIn={false}
                   alt={l.name}
                   image={getImage(l.image.childImageSharp.gatsbyImageData)}
                   // fluid={l.image.childImageSharp.fluid}
                 />
               )
-            })}
+              })
+            }
+            
+          </Div>
+        ) 
+        : (
+          <Div 
+            className="badge-slider hideOverflowX__"
+            // justifyContent="center"
+            // alignItems="center"
+            >
 
-          {short_link &&
-            <Link to={content.link_to}><Paragraph width="150px" color={Colors.blue}>{`${content.short_link_text} >`}</Paragraph></Link>
-          }
+            {short_link ? content.badges.map((l, i) => {
+              return (
+                i < 4 &&
+                <GatsbyImage
+                  key={i}
+                  style={{height: "65px", minWidth: "80px", margin: "0 20px"}}
+                  imgStyle={{objectFit: "contain"}}
+                  loading="eager"
+                  // draggable={false}
+                  // fadeIn={false}
+                  alt={l.name}
+                  image={getImage(l.image.childImageSharp.gatsbyImageData)}
+                  // fluid={l.image.childImageSharp.fluid}
+                />
+              )
+            }) :
+              content.badges.map((l, i) => {
+                return (
+                  <GatsbyImage
+                    key={i}
+                    style={{
+                      height: "85px", 
+                      // minWidth: "200px",
+                      minWidth: "150px", 
+                      margin: "0 24px"}}
+                    imgStyle={{objectFit: "contain"}}
+                    loading="eager"
+                    draggable={false}
+                    // fadeIn={false}
+                    alt={l.name}
+                    image={getImage(l.image.childImageSharp.gatsbyImageData)}
+                    // fluid={l.image.childImageSharp.fluid}
+                  />
+                )
+              })}
 
-        </Div>
+            {short_link &&
+              <Link to={content.link_to}><Paragraph width="150px" color={Colors.blue}>{`${content.short_link_text} >`}</Paragraph></Link>
+            }
+
+          </Div>
+        )}
 
         {link &&
           <Div justifyContent="center" margin="50px 0 0 0">

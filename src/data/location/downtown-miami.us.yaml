@@ -21,7 +21,7 @@ header:
   tagline: "4Geeks Academy in Miami"
   paragraph: ""
   image: "../../../static/images/locations/miami-home.png"
-  alt: "4Geeks Academy online and in-person coding bootcamp in Miami, Florida"
+  alt: "4Geeks Academy live coding bootcamp in Miami, Florida"
 
 badges:
   title: ""
@@ -60,7 +60,7 @@ info_box:
   alt: ""
 images_box:
   heading: "What you should know about this location: "
-  content: "Miami is one of the fastest growing tech ecosystems in the world. Join the #1 part-time Coding Bootcamp in Miami and become part of the best place to learn to code in Florida. \\n Career Support and Mentorship for our students is for life. Located in Brickell and 5 mins away from the Metro Mover (subway station). Our place is full of amenities, and close to everything. We have parking (free for students and members of the community), and we have a great terrace! Brickell is one of the most active areas in the city. The office is opened 24/7 during the week and on Saturday we host our famous 'Coding Weekends' when students and other developers gather to code all day with mentors, pizzas and drinks on the house!"
+  content: "Miami is one of the fastest growing tech ecosystems in the world. Join the #1 part-time Coding Bootcamp in Miami and become part of the best place to learn to code in Florida. \n Career Support and Mentorship for our students is for life. Located in Brickell and 5 mins away from the Metro Mover (subway station). Our place is full of amenities, and close to everything. We have parking (free for students and members of the community), and we have a great terrace! Brickell is one of the most active areas in the city. The office is opened 24/7 during the week and on Saturday we host our famous 'Coding Weekends' when students and other developers gather to code all day with mentors, pizzas and drinks on the house!"
   images:
     - path: "../../../static/images/locations/miami-loc.jpg"
       alt: "miami-sunset"
@@ -448,6 +448,7 @@ active_campaign_location_slug: "downtown-miami"
 breathecode_location_slug: "downtown-miami"
 gdpr_compliant: false # do we need to ask for permision?
 in_person_available: true # important to accept in-person applicants
+online_available: false # important to accept online-only applicants
 
 city: "Miami"
 name: "Miami, USA"

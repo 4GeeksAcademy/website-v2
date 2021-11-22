@@ -21,7 +21,7 @@ const formIsValid = (formData = null) => {
 
 const Form = styled.form`
     margin: ${props => props.margin};
-    width: 100%;
+    width: auto;
     height: auto;
     display: block;
     background: ${props => props.background ? props.background : "#FFFFFF"};
@@ -43,6 +43,7 @@ const _fields = {
     phone: {value: '', valid: false, required: true, type: 'phone', place_holder: "Phone number", error: "Please specify a valid phone"},
     consent: {value: true, valid: true, required: true, type: 'text', place_holder: "", error: "You need to accept the privacy terms"},
     client_comments: {value: '', valid: true, required: false, type: 'text', place_holder: "Any comments?", error: "Please specify any comments"},
+    form_type: {value: '', valid: true, required: true, type: 'hidden', place_holder: "", error: "formType not found"},
 }
 
 const clean = (fields, data) => {
@@ -69,7 +70,7 @@ const clean = (fields, data) => {
     return cleanedData;
 }
 
-const LeadForm = ({marginButton, background, margin, margin_tablet, justifyContentButton, buttonWidth_tablet, titleTextAlign, buttonBorderRadius, d_sm, fields, thankyou, heading, redirect, formHandler, data, handleClose, style, sendLabel, lang, motivation, layout, inputBgColor, landingTemplate, selectProgram}) => {
+const LeadForm = ({marginButton, marginButton_tablet, background, margin, margin_tablet, justifyContentButton, buttonWidth_tablet, titleTextAlign, buttonBorderRadius, d_sm, fields, thankyou, heading, redirect, formHandler, data, handleClose, style, sendLabel, lang, motivation, layout, inputBgColor, landingTemplate, selectProgram, textPadding, textPadding_tablet, titleMargin, titleMargin_tablet}) => {
     const _query = useStaticQuery(graphql`
     query newLeadFormQuery {
         allPageYaml(filter: { fields: { file_name: { regex: "/privacy-policy/" }}}) {
@@ -134,7 +135,6 @@ const LeadForm = ({marginButton, background, margin, margin_tablet, justifyConte
     }, [data])
 
     //validate fields
-    console.log("validating fields")
     fields.forEach(f => {
         if(formData[f] === undefined) throw Error(`Invalid form field ${f}, options are: ${Object.keys(formData).join(",")}`)
     });
@@ -173,13 +173,14 @@ const LeadForm = ({marginButton, background, margin, margin_tablet, justifyConte
                 })
         }
     }}>
-        {heading && <H4 type="h4" fontSize="25px" width="auto" textAlign="center" textAlign_tablet={titleTextAlign || "left"} margin={landingTemplate ? "15px 0px 30px 0" : "20px 0px 15px 40px"}>{heading}</H4>}
+        {/* {heading && <H4 type="h4" fontSize="25px" width="auto" textAlign="center" textAlign_tablet={titleTextAlign || "left"} margin={landingTemplate ? "15px 0px 30px 0" : titleMargin || "20px 30px 15px 30px"} margin_tablet={titleMargin_tablet || "20px 40px 15px 40px"}>{heading}</H4>} */}
         {formStatus.status === "thank-you" ?
-            <Paragraph align="center" margin="20px 0px 0px 0px">{thankyou || formStatus.msg}</Paragraph>
+            <Paragraph margin="20px 0px 0px 0px">{thankyou || formStatus.msg}</Paragraph>
             :
             <>
-                {motivation && <Paragraph textAlign="center" margin="20px 0px 0px 0px">{motivation}</Paragraph>}
                 <GridContainer display="block" containerColumns_tablet={landingTemplate && "0fr repeat(12, 1fr) 0fr"} containerGridGap={landingTemplate && "0"} className={"leadform-" + layout} size="12" paddingLeft="0" paddingRight="0">
+                {heading && <H4 type="h4" fontSize="25px" width="auto" textAlign="center" textAlign_tablet={titleTextAlign || "left"} margin={landingTemplate ? "25px 0px 0px 0" : titleMargin || "20px 0px 5px 0px"} margin_tablet={titleMargin_tablet || "20px 0px 5px 0px"}>{heading}</H4>}
+                {motivation && <Paragraph textAlign="left" padding={textPadding || "0px 0px 10px 0px"}padding_tablet={textPadding_tablet || "0px 0px 10px 0px"}>{motivation}</Paragraph>}
                     {fields.filter(f => formData[f].type !== 'hidden').map((f, i) => {
                         const _field = formData[f]
                         return <>
@@ -247,15 +248,16 @@ const LeadForm = ({marginButton, background, margin, margin_tablet, justifyConte
                             <a target="_blank" rel="noopener noreferrer nofollow" className="decorated" href={yml.consent.url}>{yml.consent.link_label}</a>
                         </Paragraph>
                     }
-                    {formStatus.status === "error" && <Alert color="red" margin="0 15px" padding="5px 0 0 0">{formStatus.msg}</Alert>}
+                    {formStatus.status === "error" && <Alert color="red" margin="0" padding="5px 0 0 0">{formStatus.msg}</Alert>}
                 </GridContainer>
                 {layout === "block" &&
                     <GridContainer containerColumns_tablet={landingTemplate && "0fr repeat(12, 1fr) 0fr"} containerGridGap={landingTemplate && "0"} >
                         <Div justifyContent={justifyContentButton ? justifyContentButton : "end" } display="flex" padding="5px 0 0 0">
                             <Button
                                 variant="full"
-                                type={`submit ${layout}`}
+                                type="submit"
                                 margin={marginButton}
+                                margin_tablet={marginButton_tablet}
                                 color={formStatus.status === "loading" ? Colors.darkGray : Colors.blue}
                                 textColor={Colors.white}
                                 disabled={formStatus.status === "loading" ? true : false}

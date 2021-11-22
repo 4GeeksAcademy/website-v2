@@ -8,6 +8,13 @@ function isFunction(functionToCheck) {
   return functionToCheck && {}.toString.call(functionToCheck) === '[object Function]';
  }
 
+ const getEntityTypeFromPath = (path) => {
+  const regex = /src\/data\/([\w-]+)\.?(\w{2})?\//gm;
+  let m = regex.exec(path);
+  if (!m) return false;
+  else return m[1];
+}
+
 let breadcrumb = []
 const validateObjectProperties = (obj, validations) => {
   for(prop in obj) {
@@ -210,4 +217,4 @@ const checkForLanguages = (slugs, folder_name) => {
   }
 }
 
-module.exports = { walk, loadYML, loadMD, empty, fail, warn, success, parsePathImage, localizeImage, validateObjectProperties, checkForLanguages }
+module.exports = { walk, loadYML, loadMD, empty, fail, warn, success, parsePathImage, localizeImage, validateObjectProperties, checkForLanguages, getEntityTypeFromPath }

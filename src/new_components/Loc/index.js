@@ -49,7 +49,6 @@ const Loc = ({locations, title, paragraph, lang}) => {
     let cohort = datas.cohorts.all.find(item => item.academy.slug === location.node.breathecode_location_slug)
     let onlineCohort = datas.cohorts.all.find(item => item.academy.slug === "online")
     return cohort || onlineCohort
-
   }
   return (
     <>
@@ -69,27 +68,17 @@ const Loc = ({locations, title, paragraph, lang}) => {
             <Paragraph>{paragraph}</Paragraph>
           </Div>
         </GridContainer>}
-      <GridContainer
-
-        columns="1" columns_sm="2" columns_tablet="3" gridGap="0" margin_tablet="0 0 70px 0">
-        {loc != null &&
+      <GridContainer columns="1" columns_sm="2" columns_tablet="3" gridGap="0" margin_tablet="0 0 70px 0">
+        {loc !== null &&
           loc.map((item, i) => {
             const next = nextDate(item);
             let stringDate = "";
-            if(next != undefined && next.kickoff_date){
+            if(next !== undefined && next.kickoff_date){
               stringDate = dayjs(next.kickoff_date).locale(lang).format("ddd DD MMM YYYY");
               stringDate = stringDate[0].toUpperCase() + stringDate.substr(1,2) + "." + stringDate.substr(3);
             }
             return (
               <Div
-                // onMouseLeave={() => {
-                //   // setStatus({...status, hovered: false});
-
-                //   setTimeout(() => {
-                //     setIndex(index != null && null);
-                //   }, 1000)
-                // }}
-                // onMouseEnter={() => setStatus({...status, hovered: true})}
                 onMouseOver={() => setIndex(i)}
                 key={i}
                 style={{border: `1px solid ${Colors.black}`, position: "relative"}}
@@ -102,7 +91,7 @@ const Loc = ({locations, title, paragraph, lang}) => {
               >
                 <H3
                   textAlign="left"
-                >{item.node.name}
+                >{item.node.name} {next !== undefined && !item.node.city.includes('Online') && next.academy.slug === 'online' && '(Online)'}
                   <Span animated color={Colors.yellow}>_</Span>
                 </H3>
                 <Div
@@ -113,15 +102,14 @@ const Loc = ({locations, title, paragraph, lang}) => {
                     {content.label}
                   </Paragraph >
                   <Paragraph textAlign="left" fontSize="15px" lineHeight="22px" color={Colors.darkGray}>
-                    {next != undefined ? next.syllabus_version?.name : "No upcoming dates at this location"}
+                    {next !== undefined ? next.syllabus_version?.name : "No upcoming dates at this location"}
                   </Paragraph>
-                  {next != undefined && next.kickoff_date && <Paragraph textAlign="left" fontSize="15px" lineHeight="22px" color={Colors.darkGray}>
+                  {next !== undefined && next.kickoff_date && <Paragraph textAlign="left" fontSize="15px" lineHeight="22px" color={Colors.darkGray}>
                     <span className="capitalize">{stringDate}</span>
                   </Paragraph>}
                 </Div>
                 <Link to={`/${lang}/coding-campus/${item.node.meta_info.slug}`}><Icon style={{position: "absolute", bottom: "18px", right: "18px"}} icon="arrowright" height="32px" width="32px" /></Link>
               </Div>
-
             )
           })
         }

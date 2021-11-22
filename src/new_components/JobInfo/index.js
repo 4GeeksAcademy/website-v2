@@ -15,6 +15,7 @@ const JobInfo = () => {
           edges {
             node {
               banner_heading
+              open
               cities
               meta_info{
                 slug
@@ -30,7 +31,7 @@ const JobInfo = () => {
     <GridContainer columns="2" columns_tablet="3" gridGap="10px" margin_tablet="0 0 70px 0">
       {jobs
         ?
-        jobs.map((item, index) => {
+        jobs.filter(c => c.node.open).map((item, index) => {
           return (
             <Div
               key={index}

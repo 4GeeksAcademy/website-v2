@@ -22,7 +22,7 @@ const Location = ({data, pageContext, yml}) => {
   const hiring = data.allPartnerYaml.edges[0].node;
   const images = data.allLocationYaml.edges[0].node;
   const [cohorts, setCohorts] = React.useState([]);
-  const [ready, setReady] = useState(false)
+  const [ready, setReady] = useState(false);
 
   useEffect(() => {
     process.nextTick(() => {
@@ -30,7 +30,7 @@ const Location = ({data, pageContext, yml}) => {
         setReady(true)
       }
     })
-    // setTimeout(() => { setReady(true) }, 3000)
+    // setTimeout(() => { setReady(true) }, 3000
   }, [])
   const chooseProgramRef = useRef(null)
 
@@ -292,6 +292,8 @@ export const query = graphql`
               keywords
             }
             seo_title
+            active_campaign_location_slug
+            breathecode_location_slug
             header{
               sub_heading
               tagline

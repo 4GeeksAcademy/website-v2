@@ -85,6 +85,8 @@ navbar:
               link_to: "/us/blog"
             - title: "Partners"
               link_to: "/us/partners"
+            - title: "Work with us"
+              link_to: "/us/jobs"
   - name: "Campus"
     link: "/partners"
     sub_menu:

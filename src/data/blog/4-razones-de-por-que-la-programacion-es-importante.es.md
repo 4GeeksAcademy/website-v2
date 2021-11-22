@@ -1,6 +1,6 @@
 ---
 author: "4GeeksAcademy"
-date: "2016-02-08T17:18:12+00:00"
+date: "2021-10-01T17:18:12+00:00"
 excerpt: "Hoy te contamos cuatro razones de por qué la programación es tan importante en nuestras vidas."
 slug: "4-razones-de-por-que-la-programacion-es-importante"
 template: "post"
