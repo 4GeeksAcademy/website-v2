@@ -68,7 +68,7 @@ const Loc = ({locations, title, paragraph, lang}) => {
             <Paragraph>{paragraph}</Paragraph>
           </Div>
         </GridContainer>}
-      <GridContainer columns="1" columns_sm="2" columns_tablet="3" gridGap="0" margin_tablet="0 0 70px 0">
+      <GridContainer columns="1" columns_sm="2" columns_tablet="3" gridGap="0" columnGap="15px" margin_tablet="0 0 70px 0">
         {loc !== null &&
           loc.map((item, i) => {
             const next = nextDate(item);
@@ -81,20 +81,26 @@ const Loc = ({locations, title, paragraph, lang}) => {
               <Div
                 onMouseOver={() => setIndex(i)}
                 key={i}
-                style={{border: `1px solid ${Colors.black}`, position: "relative"}}
+                style={{
+                  borderBottom: `1px solid ${Colors.lightGray}`,
+                  position: "relative",
+                  transition: "background 0.5s ease, border-left 0.5s ease",
+                  borderLeft: `${index === i ? "10px solid" + Colors.yellow : "0"}`,
+                }}
                 display="flex"
-                flexDirection="column"
+                flexDirection="row"
                 justifyContent="between"
-                height="207px"
-                padding="24px"
-                background={index == i ? Colors.yellow : Colors.white}
+                // height="207px"
+                height="auto"
+                padding="30px 24px"
+                background={index === i ? Colors.verylightGray : Colors.white}
               >
                 <H3
                   textAlign="left"
                 >{item.node.name} {next !== undefined && !item.node.city.includes('Online') && next.academy.slug === 'online' && '(Online)'}
                   <Span animated color={Colors.yellow}>_</Span>
                 </H3>
-                <Div
+                {/* <Div
                   display="block"
                   display_tablet="block"
                 >
@@ -107,8 +113,15 @@ const Loc = ({locations, title, paragraph, lang}) => {
                   {next !== undefined && next.kickoff_date && <Paragraph textAlign="left" fontSize="15px" lineHeight="22px" color={Colors.darkGray}>
                     <span className="capitalize">{stringDate}</span>
                   </Paragraph>}
-                </Div>
-                <Link to={`/${lang}/coding-campus/${item.node.meta_info.slug}`}><Icon style={{position: "absolute", bottom: "18px", right: "18px"}} icon="arrowright" height="32px" width="32px" /></Link>
+                </Div> */}
+                <Link to={`/${lang}/coding-campus/${item.node.meta_info.slug}`}>
+                  <Icon 
+                    // style={{position: "absolute", bottom: "18px", right: "18px"}}
+                    icon="arrowright" 
+                    height="32px"
+                    width="32px"
+                  />
+                </Link>
               </Div>
             )
           })
