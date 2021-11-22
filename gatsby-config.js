@@ -121,7 +121,7 @@ module.exports = {
         background_color: '#ffffff',
         theme_color: '#744C9E',
         display: 'standalone',
-        icon: 'src/assets/logos/icon.png',
+        icon: 'src/assets/logos/favicon.png',
       },
     }, {
       resolve: 'gatsby-source-filesystem',
