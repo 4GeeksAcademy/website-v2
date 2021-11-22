@@ -379,15 +379,6 @@ export const landingSections = {
             playerHeight="auto" />
     </Div>,
     alumni_projects: ({session, data, pageContext, yml, index}) => <Div id="alumni_projects" key={index} flexDirection="column" margin="0" margin_tablet="0 11% 100px 11%" padding="0 0 60px 0" padding_tablet="0">
-        {/* <Title
-            size="10"
-            title={yml.heading}
-            paragraph={yml.sub_heading}
-            paragraphColor={Colors.darkGray}
-            maxWidth="66%"
-            margin="auto"
-            variant="primary"
-        /> */}
         <AlumniProjects lang={data.allAlumniProjectsYaml.edges} hasTitle showThumbs="false" limit={2} />
     </Div>,
     who_is_hiring: ({session, data, pageContext, yml, location, index}) => {
