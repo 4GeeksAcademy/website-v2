@@ -378,7 +378,7 @@ export const landingSections = {
             lang={pageContext.lang}
             playerHeight="auto" />
     </Div>,
-    alumni_projects: ({session, data, pageContext, yml, index}) => <Div id="alumni_projects" key={index} flexDirection="column" margin="0" margin_tablet="100px" padding="0 0 60px 0" padding_tablet="0">
+    alumni_projects: ({session, data, pageContext, yml, index}) => <Div id="alumni_projects" key={index} flexDirection="column" margin="0" margin_tablet="0 11% 100px 11%" padding="0 0 60px 0" padding_tablet="0">
         {/* <Title
             size="10"
             title={yml.heading}
