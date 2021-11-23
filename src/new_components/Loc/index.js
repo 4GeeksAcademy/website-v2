@@ -84,7 +84,7 @@ const Loc = ({locations, title, paragraph, lang}) => {
                 style={{
                   borderBottom: `1px solid ${Colors.lightGray}`,
                   position: "relative",
-                  transition: "background 0.5s ease, border-left 0.5s ease",
+                  transition: "background 0.3s ease, border-left 0.3s ease",
                   borderLeft: `${index === i ? "10px solid" + Colors.yellow : "0"}`,
                 }}
                 display="flex"
