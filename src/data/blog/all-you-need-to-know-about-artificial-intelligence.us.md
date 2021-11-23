@@ -8,7 +8,7 @@ image: "https://images.unsplash.com/photo-1507146153580-69a1fe6d8aa1?ixid=MnwxMj
 image_alt: ""
 cluster: "learn-to-code"
 status: "published"
-featured: "true"
+featured: true
 
 ---
 

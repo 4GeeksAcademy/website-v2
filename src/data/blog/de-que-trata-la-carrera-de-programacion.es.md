@@ -2,14 +2,14 @@
 author: "MRiciglianoC"
 date: "2015-12-23T05:31:23+00:00"
 excerpt: "La carrera de programación es una de las más demandadas y mejor pagadas actualmente. Aquí te decimos qué necesitas para convertirte en un gran programador."
-slug: "4geeks-academy-history"
+slug: "de-que-trata-la-careera-de-programacion"
 template: "landing_post" #
 title: "De qué trata la Carrera de Programación"
 image: "/images/why2.jpg"
 image_alt: "https://breathecode.herokuapp.com/v1/media/file/carrera-de-programacion-png?width=600"
 cluster: "aprender-a-programar"
 status: "published"
-featured: "true"
+featured: true
 
 ---
 

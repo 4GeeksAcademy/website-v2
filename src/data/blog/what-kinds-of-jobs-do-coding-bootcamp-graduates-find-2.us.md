@@ -9,7 +9,7 @@ image: "https://4GeeksAcademy.com/wp-content/uploads/2017/08/you-are-hired-1024x
 image_alt: ""
 cluster: "coding-bootcamps"
 status: "published"
-featured: "false"
+featured: false
 
 ---
 

@@ -9,7 +9,7 @@ image: "https://storage.googleapis.com/4geeks-academy-website/blog/2018/03/BOOTC
 image_alt: ""
 cluster: "career-growth"
 status: "published"
-featured: "false"
+featured: false
 
 ---
 

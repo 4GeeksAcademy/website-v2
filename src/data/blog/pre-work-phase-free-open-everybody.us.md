@@ -10,7 +10,7 @@ image: "https://storage.googleapis.com/4geeks-academy-website/blog/2016/01/welco
 image_alt: ""
 cluster: "coding-bootcamps"
 status: "published"
-featured: "false"
+featured: false
 
 ---
 

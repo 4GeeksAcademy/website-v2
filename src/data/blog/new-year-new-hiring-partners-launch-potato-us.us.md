@@ -9,7 +9,7 @@ image: "https://4GeeksAcademy.com/wp-content/uploads/2017/12/POTATO-ADS-02.jpg"
 image_alt: ""
 cluster: "trends-and-tech"
 status: "published"
-featured: "false"
+featured: false
 
 ---
 

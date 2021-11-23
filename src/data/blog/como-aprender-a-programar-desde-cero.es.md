@@ -9,7 +9,7 @@ description: "Guia completa sobre como aprender a programar desde cero utilizand
 image: "http://breathecode.herokuapp.com/v1/media/file/4geeks-feb-14th-3-jpeg?width=600"
 image_alt: ""
 status: "published"
-featured: "true"
+featured: true
 cluster: "full-stack"
 
 ---

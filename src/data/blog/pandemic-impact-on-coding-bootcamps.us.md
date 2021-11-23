@@ -9,7 +9,7 @@ image: "https://github.com/marcelovaldebenito/website-v2/blob/master/static/imag
 image_alt: "student typing how the pandemic has changed the coding industry"
 cluster: "coding-bootcamps"
 status: "published"
-featured: "true"
+featured: true
 
 ---
 

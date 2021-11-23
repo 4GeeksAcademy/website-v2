@@ -9,7 +9,7 @@ image: "https://storage.googleapis.com/4geeks-academy-website/blog/2018/06/feeli
 image_alt: ""
 cluster: "learn-to-code"
 status: "published"
-featured: "false"
+featured: false
 
 ---
 

@@ -9,7 +9,7 @@ image: "https://camo.githubusercontent.com/78510e7fca5ea47b77a49f114843ede99c5f7
 image_alt: ""
 cluster: "aprender-a-programar"
 status: "published"
-featured: "false"
+featured: false
 
 ---
 

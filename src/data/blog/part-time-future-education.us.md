@@ -9,7 +9,7 @@ image: "https://4GeeksAcademy.com/wp-content/uploads/2016/01/part-timevsfull-1.p
 image_alt: ""
 cluster: "trends-and-tech"
 status: "published"
-featured: "false"
+featured: false
 
 ---
 

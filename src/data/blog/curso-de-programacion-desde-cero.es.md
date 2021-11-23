@@ -9,7 +9,7 @@ description: "Guia completa para aprender a programación desde cero utilizando 
 image: "https://4GeeksAcademy.com/images/4geeks-main.jpg"
 image_alt: ""
 status: "published"
-featured: "true"
+featured: true
 cluster: "full-stack"
 
 ---

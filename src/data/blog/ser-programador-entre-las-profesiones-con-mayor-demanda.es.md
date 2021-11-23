@@ -9,7 +9,7 @@ image: "https://storage.googleapis.com/4geeks-academy-website/blog/2016/05/1-1.j
 image_alt: ""
 cluster: "desarrollo-profesional"
 status: "published"
-featured: "true"
+featured: true
 
 ---
 
