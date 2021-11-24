@@ -10,7 +10,7 @@ image: "http://breathecode.herokuapp.com/v1/media/file/4geeks-feb-14th-3-jpeg?wi
 image_alt: ""
 status: "published"
 featured: true
-cluster: "full-stack"
+cluster: "aprender-a-programar"
 
 ---
 
