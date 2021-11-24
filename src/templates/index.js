@@ -1,26 +1,26 @@
 import React, {useEffect, useRef, useState} from 'react';
 import styled from "styled-components";
 import {graphql, Link, navigate} from 'gatsby';
-import {H1, H2, H3, H4, Title, Separator, Paragraph, Span} from '../new_components/Heading'
-import {Row, Column, GridContainerWithImage, Container, Grid, Div, GridContainer} from '../new_components/Sections'
-import {Button, Colors, StyledBackgroundSection, Anchor} from '../new_components/Styling'
-import {Circle} from '../new_components/BackgroundDrawing'
-import News from '../new_components/News'
-import Icon from '../new_components/Icon'
-import Credentials from '../new_components/Credentials'
-import ChooseProgram from '../new_components/ChooseProgram'
+import {H1, H2, H3, H4, Title, Separator, Paragraph, Span} from '../components/Heading'
+import {Row, Column, GridContainerWithImage, Container, Grid, Div, GridContainer} from '../components/Sections'
+import {Button, Colors, StyledBackgroundSection, Anchor} from '../components/Styling'
+import {Circle} from '../components/BackgroundDrawing'
+import News from '../components/News'
+import Icon from '../components/Icon'
+import Credentials from '../components/Credentials'
+import ChooseProgram from '../components/ChooseProgram'
 import BaseRender from './_baseLayout'
 import {SessionContext} from '../session.js'
-import Loc from '../new_components/Loc';
-import Badges from '../new_components/Badges';
-import With4Geeks from '../new_components/With4Geeks';
-import About4Geeks from '../new_components/About4Geeks';
-import OurPartners from '../new_components/OurPartners';
-import ChooseYourProgram from '../new_components/ChooseYourProgram';
-import Testimonials from '../new_components/Testimonials';
-// import Carousel from '../new_components/Carousel';
-// import {MegaMenu} from '../new_components/NavbarDesktop';
-import {WrapperCustom} from '../new_components/Sections';
+import Loc from '../components/Loc';
+import Badges from '../components/Badges';
+import With4Geeks from '../components/With4Geeks';
+import About4Geeks from '../components/About4Geeks';
+import OurPartners from '../components/OurPartners';
+import ChooseYourProgram from '../components/ChooseYourProgram';
+import Testimonials from '../components/Testimonials';
+// import Carousel from '../components/Carousel';
+// import {MegaMenu} from '../components/NavbarDesktop';
+import {WrapperCustom} from '../components/Sections';
 
 
 const imageSvg = props => <svg style={props.style} width="587" height="514" viewBox="0 0 587 514" fill="none" xmlns="https://www.w3.org/2000/svg">

@@ -1,13 +1,13 @@
 import React from 'react';
-import {GridContainerWithImage, Column, GridContainer, Div, Grid, Header} from '../new_components/Sections';
-import {Title, H1, H2, H3, H4, Paragraph, Separator} from '../new_components/Heading'
-import {Colors, StyledBackgroundSection} from '../new_components/Styling'
-import Badges from '../new_components/Badges'
-import With4Geeks from '../new_components/With4Geeks'
-import Credentials from '../new_components/Credentials'
-import GeeksVsOthers from '../new_components/GeeksVsOthers'
+import {GridContainerWithImage, Column, GridContainer, Div, Grid, Header} from '../components/Sections';
+import {Title, H1, H2, H3, H4, Paragraph, Separator} from '../components/Heading'
+import {Colors, StyledBackgroundSection} from '../components/Styling'
+import Badges from '../components/Badges'
+import With4Geeks from '../components/With4Geeks'
+import Credentials from '../components/Credentials'
+import GeeksVsOthers from '../components/GeeksVsOthers'
 import BaseRender from './_baseLayout'
-import Staff from '../new_components/Staff';
+import Staff from '../components/Staff';
 
 const SVGImage = () =>
     <svg width="550" height="335" viewBox="0 0 550 335" fill="none" xmlns="https:://www.w3.org/2000/svg">

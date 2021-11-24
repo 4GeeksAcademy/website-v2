@@ -1,25 +1,25 @@
 import React, {useState, useEffect, useContext, useRef} from 'react';
 import Link from 'gatsby-link'
 import {navigate} from "gatsby";
-import {Container, GridContainer, Row, Column, Wrapper, WrapperImage, Divider, Header, Div} from '../new_components/Sections'
-import {H1, H2, Title, Paragraph, H5} from '../new_components/Heading'
-import {Button, Colors} from '../new_components/Styling'
-import ProgramDetails from '../new_components/ProgramDetails';
-import ProgramDetailsMobile from '../new_components/ProgramDetailsMobile';
-import TechsWeTeach from '../new_components/TechsWeTeach';
-import GeeksInfo from '../new_components/GeeksInfo';
-import OurPartners from '../new_components/OurPartners';
+import {Container, GridContainer, Row, Column, Wrapper, WrapperImage, Divider, Header, Div} from '../components/Sections'
+import {H1, H2, Title, Paragraph, H5} from '../components/Heading'
+import {Button, Colors} from '../components/Styling'
+import ProgramDetails from '../components/ProgramDetails';
+import ProgramDetailsMobile from '../components/ProgramDetailsMobile';
+import TechsWeTeach from '../components/TechsWeTeach';
+import GeeksInfo from '../components/GeeksInfo';
+import OurPartners from '../components/OurPartners';
 import BaseRender from './_baseLayout'
-import Icon from '../new_components/Icon'
+import Icon from '../components/Icon'
 import {requestSyllabus} from "../actions";
 import {SessionContext} from '../session'
-import Testimonials from '../new_components/Testimonials';
-import Badges from '../new_components/Badges';
-import PricesAndPayment from '../new_components/PricesAndPayment';
-import {Circle} from '../new_components/BackgroundDrawing'
-import LeadForm from '../new_components/LeadForm';
-import Modal from '../new_components/Modal';
-import Instructors from '../new_components/Instructors';
+import Testimonials from '../components/Testimonials';
+import Badges from '../components/Badges';
+import PricesAndPayment from '../components/PricesAndPayment';
+import {Circle} from '../components/BackgroundDrawing'
+import LeadForm from '../components/LeadForm';
+import Modal from '../components/Modal';
+import Instructors from '../components/Instructors';
 
 
 const Program = ({data, pageContext, yml}) => {

@@ -56,7 +56,7 @@ export default ({lang, playerHeight, title, text, text_link, paragraph, backgrou
   if (info) info = info.node;
 
   return (
-    <Fragment github="/new_components/with_4geeks">
+    <Fragment github="/components/with_4geeks">
       {title && <GridContainer margin="0 0 40px 0"
       >
         <Div

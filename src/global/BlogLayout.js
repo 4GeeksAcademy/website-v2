@@ -2,10 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import '../assets/css/style.css';
 import '../assets/css/utils.css';
-import {Navbar} from '../new_components/NavbarDesktop';
-import {NavbarMobile} from '../new_components/NavbarMobile';
+import {Navbar} from '../components/NavbarDesktop';
+import {NavbarMobile} from '../components/NavbarMobile';
 import {StaticQuery, graphql} from 'gatsby';
-import Footer from '../new_components/Footer';
+import Footer from '../components/Footer';
 
 
 import GlobalStyle from './GlobalStyle';

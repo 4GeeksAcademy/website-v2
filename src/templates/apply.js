@@ -1,13 +1,13 @@
 import React, {useState, useContext, useEffect} from 'react';
 import {navigate} from 'gatsby';
-import {Div, GridContainer, Header, Grid} from '../new_components/Sections'
-import {H1, H3, Paragraph} from '../new_components/Heading'
-import {Colors, Button} from '../new_components/Styling'
-import {Input, Alert} from '../new_components/Form'
-import {SelectRaw} from '../new_components/Select'
+import {Div, GridContainer, Header, Grid} from '../components/Sections'
+import {H1, H3, Paragraph} from '../components/Heading'
+import {Colors, Button} from '../components/Styling'
+import {Input, Alert} from '../components/Form'
+import {SelectRaw} from '../components/Select'
 import BaseRender from './_baseLayout'
 import {SessionContext} from '../session.js'
-import {Circle} from '../new_components/BackgroundDrawing'
+import {Circle} from '../components/BackgroundDrawing'
 import {apply, tagManager} from "../actions"
 
 const us = {

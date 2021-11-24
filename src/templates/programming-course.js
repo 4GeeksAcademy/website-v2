@@ -141,7 +141,7 @@ const Program = ({data, pageContext, yml}) => {
 };
 
 export const query = graphql`
-  query CourseQuery($file_name: String!, $lang: String!) {
+  query ProgrammingCourseQuery($file_name: String!, $lang: String!) {
     allFullStackTechsYaml(filter: { fields: { lang: { eq: $lang }}}) {
       edges {
         node {

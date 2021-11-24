@@ -1,9 +1,9 @@
 import React, {useState, useContext} from 'react';
 import BaseRender from './_baseLayout'
-import {Column, Wrapper, WrapperImage, Divider, Div, Row, GridContainer, HR} from '../new_components/Sections'
-import {H1, H2, H3, H4, Paragraph} from '../new_components/Heading'
-import {Button, Colors, Anchor, RoundImage} from '../new_components/Styling'
-import Icon from '../new_components/Icon';
+import {Column, Wrapper, WrapperImage, Divider, Div, Row, GridContainer, HR} from '../components/Sections'
+import {H1, H2, H3, H4, Paragraph} from '../components/Heading'
+import {Button, Colors, Anchor, RoundImage} from '../components/Styling'
+import Icon from '../components/Icon';
 import {SessionContext} from '../session.js'
 import Link from 'gatsby-link'
 import LazyLoad from 'react-lazyload';

@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
-import {Header, Column, Wrapper, Divider, Div} from '../new_components/Sections'
-import GeeksVsOthers from '../new_components/GeeksVsOthers'
+import {Header, Column, Wrapper, Divider, Div} from '../components/Sections'
+import GeeksVsOthers from '../components/GeeksVsOthers'
 import BaseRender from './_baseLayout'
 import {graphql} from 'gatsby'
 

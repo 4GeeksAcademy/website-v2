@@ -1,14 +1,14 @@
 import React, {useCallback, useState} from 'react';
 import {graphql} from 'gatsby'
-import {Grid, Div, Header, GridContainer} from '../new_components/Sections'
-import {H2, H3, H4, Paragraph} from '../new_components/Heading'
-import {Colors, Button} from '../new_components/Styling'
-import {Charts} from '../new_components/Chart'
+import {Grid, Div, Header, GridContainer} from '../components/Sections'
+import {H2, H3, H4, Paragraph} from '../components/Heading'
+import {Colors, Button} from '../components/Styling'
+import {Charts} from '../components/Chart'
 import BaseRender from './_baseLayout'
-import ChooseProgram from '../new_components/ChooseProgram'
-import { StyledBackgroundSection } from '../new_components/Styling';
-import Modal from '../new_components/Modal';
-import LeadForm from '../new_components/LeadForm';
+import ChooseProgram from '../components/ChooseProgram'
+import { StyledBackgroundSection } from '../components/Styling';
+import Modal from '../components/Modal';
+import LeadForm from '../components/LeadForm';
 import {outcomesReport} from "../actions";
 
 const SVGImage = () =>

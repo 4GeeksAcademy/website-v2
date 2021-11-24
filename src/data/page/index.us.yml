@@ -19,11 +19,11 @@ news:
 button:
   button_text: See Programs
   button_link: "#programs"
-## BADGES SECTION /new_components/Badges
+## BADGES SECTION /components/Badges
 badges:
   paragraph: "This is the place to boost your career by learning to code. We are very proud of our programs and methodology to train developers in just a few months and help them boost their professional careers."
 
-## CHOOSE YOUR PROGRAM /new_components/ChooseYourProgram
+## CHOOSE YOUR PROGRAM /components/ChooseYourProgram
 choose_program:
   title: Choose your program
   paragraph: Follow the path towards a life-changing experience. Become the developer that builds the next culture-shifting web app.

@@ -2,14 +2,14 @@ import React, {useState, useContext, useEffect} from 'react';
 import BaseRender from './_baseLayout';
 import {SessionContext} from '../session.js';
 import {contactUs} from '../actions.js';
-import Icon from '../new_components/Icon';
+import Icon from '../components/Icon';
 import Link from 'gatsby-link'
 
 // New components
-import {Colors, Button} from '../new_components/Styling'
-import {Input, Alert, TextArea} from '../new_components/Form';
-import {H1, H2, H3, Paragraph} from '../new_components/Heading'
-import { HR, Grid, Div, Old_Grid} from '../new_components/Sections'
+import {Colors, Button} from '../components/Styling'
+import {Input, Alert, TextArea} from '../components/Form';
+import {H1, H2, H3, Paragraph} from '../components/Heading'
+import { HR, Grid, Div, Old_Grid} from '../components/Sections'
 
 
 const Contact = (props) => {

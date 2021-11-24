@@ -27,7 +27,7 @@ button:
 badges:
   paragraph: "Este es el lugar para impulsar tu carrera aprendiendo a programar. Estamos muy orgullosos de nuestros programas y metodología para capacitar a los desarrolladores en solo unos meses y ayudarlos a impulsar sus carreras profesionales."
 
-## CHOOSE YOUR PROGRAM /new_components/ChooseYourProgram
+## CHOOSE YOUR PROGRAM /components/ChooseYourProgram
 choose_program:
   title: Elige tu programa
   paragraph: Contamos con programas que combinan clases prácticas dictadas por expertos

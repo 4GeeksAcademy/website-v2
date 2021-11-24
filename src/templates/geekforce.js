@@ -2,15 +2,15 @@ import React, {useState} from 'react';
 import BaseRender from './_baseLayout'
 
 //new components
-import Icon from '../new_components/Icon'
-import {Colors} from '../new_components/Styling'
-import ReactPlayer from '../new_components/ReactPlayer'
-import OurPartners from '../new_components/OurPartners'
-import IconsBanner from '../new_components/IconsBanner'
-import {Div, Grid, HR, GridContainerWithImage, GridContainer} from '../new_components/Sections'
-import {H1, H2, H3, Paragraph} from '../new_components/Heading'
-import {Button, RoundImage} from '../new_components/Styling'
-import {StyledBackgroundSection} from '../new_components/Styling'
+import Icon from '../components/Icon'
+import {Colors} from '../components/Styling'
+import ReactPlayer from '../components/ReactPlayer'
+import OurPartners from '../components/OurPartners'
+import IconsBanner from '../components/IconsBanner'
+import {Div, Grid, HR, GridContainerWithImage, GridContainer} from '../components/Sections'
+import {H1, H2, H3, Paragraph} from '../components/Heading'
+import {Button, RoundImage} from '../components/Styling'
+import {StyledBackgroundSection} from '../components/Styling'
 
 const GeekForce = (props) => {
   const {data, pageContext, yml} = props;
