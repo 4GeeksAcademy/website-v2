@@ -80,7 +80,8 @@ const ProgramDetails = (props) => {
                 </Div>
 
             </GridContainer>
-            <GridContainer padding_tablet="0" margin_tablet="0 0 83px 0" justifyItems="center">
+            {props.withoutAnimation !== true && (
+                <GridContainer padding_tablet="0" margin_tablet="0 0 83px 0" justifyItems="center">
                 <Div
                     flexDirection="column"
                     display="none"
@@ -176,8 +177,8 @@ const ProgramDetails = (props) => {
                         </Div>
                     </Div>
                 </Div>
-                {/* <Button variant="empty" color={Colors.blue} icon={<Icon icon="download" style={{marginRight: "10px"}} width="46px" height="46px" />}>Text</Button> */}
             </GridContainer>
+            )}
         </>
     )
 };

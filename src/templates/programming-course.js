@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import {Link} from "gatsby";
 import BaseRender from './_baseLayout'
-import {Container, Header, Column, Wrapper, WrapperImage, Divider, Sidebar, Div, GridContainer} from '../components/Sections'
+import {Header, Div, GridContainer, GridContainerWithImage} from '../components/Sections'
 import {Title, H1, H2, H3, H4, H5, Span, Paragraph} from '../components/Heading'
-import {Button, Colors} from '../components/Styling'
+import {Button, Colors, StyledBackgroundSection} from '../components/Styling'
 import {requestSyllabus} from "../actions";
 import {SessionContext} from '../session'
 import ProgramDetails from '../components/ProgramDetails';
@@ -52,69 +52,177 @@ const Program = ({data, pageContext, yml}) => {
   const syllabus_button_text = yml.button.syllabus_heading;
 
   return (<>
-
-    <Header
-      seo_title={yml.seo_title}
-      title={yml.header.title}
-      paragraph={yml.header.paragraph}
-      padding_tablet="72px 0 40px 0"
-      position="relative"
-    >
-      <Circle color="yellow" width="17px" height="17px" top="0" left="74px" zIndex="1" display="none" display_tablet="inline" opacity="0.2" />
-      <Circle color="grey" width="17px" height="17px" top="0" left="106px" zIndex="1" display="none" display_tablet="inline" />
-      <Circle color="black" width="17px" height="17px" top="32px" left="106px" zIndex="1" display="none" display_tablet="inline" />
-      <Circle color="black" width="17px" height="17px" top="32px" left="74px" zIndex="1" display="none" display_tablet="inline" />
-      <Circle color="grey" width="17px" height="17px" top="67px" left="74px" zIndex="1" display="none" display_tablet="inline" />
-      <Circle color="grey" width="17px" height="17px" top="102px" left="74px" zIndex="1" display="none" display_tablet="inline" />
-      <Circle color="grey" width="17px" height="17px" top="137px" left="106px" zIndex="1" display="none" display_tablet="inline" />
-      <Circle color="grey" width="17px" height="17px" top="172px" left="106px" zIndex="1" display="none" display_tablet="inline" />
-      <Circle color="blue" width="17px" height="17px" top="216px" left="74px" zIndex="1" display="none" display_tablet="inline" />
-      <Circle color="grey" width="17px" height="17px" top="271px" left="106px" zIndex="1" display="none" display_tablet="inline" />
-      <Circle color="red" width="27px" height="27px" top="222px" left="278px" zIndex="1" display="none" display_tablet="inline" />
-      <Circle color="yellow" width="250px" height="250px" bottom="20px" right="-68px" opacity="0.2" zIndex="1" display="none" display_tablet="inline" />
-      <Circle color="grey" width="17px" height="17px" top="120px" right="50px" zIndex="1" display="none" display_tablet="inline" />
-      <Circle color="black" width="17px" height="17px" top="120px" right="89px" zIndex="1" display="none" display_tablet="inline" />
-      <Circle color="grey" width="17px" height="17px" top="120px" right="128px" zIndex="1" display="none" display_tablet="inline" />
-      <Circle color="black" width="119px" height="11px" border="10px" bottom="115px" right="40px" zIndex="1" display="none" display_tablet="inline" />
-      <Circle color="black" width="77px" height="11px" border="10px" bottom="115px" right="175px" zIndex="1" display="none" display_tablet="inline" />
-      <Circle color="yellow" width="116px" height="116px" bottom="50px" left="-58px" zIndex="1" display="none" display_tablet="inline" />
-      <Circle color="yellow" width="116px" height="116px" bottom="200px" left="-90px" zIndex="1" display="inline" display_tablet="none" />
-      <Circle color="yellow" width="21px" height="21px" top="10px" right="320px" zIndex="1" display="none" display_tablet="inline" />
-      <Circle color="blue" width="57px" height="57px" top="32px" right="61px" display="none" display_tablet="inline" />
-      <Circle color="yellow" width="160px" height="160px" top="0" right="-120px" opacity="0.2" display="inline" display_tablet="none" />
-      <Circle color="red" width="25px" height="25px" top="60px" right="30px" display="inline" display_tablet="none" />
-      <Div flexDirection_tablet="row" flexDirection="column" justifyContent="center" alignItems="center" margin_tablet="0 0 50px 0">
-        <Link to={yml.button.apply_button_link}
-          state={{course: yml.meta_info.bc_slug}}
-        >
-          <Button variant="full" justifyContent="center" width="200px" width_tablet="fit-content" color={Colors.blue} margin_tablet="10px 24px 10px 0" textColor="white">{applyButtonText}</Button>
-        </Link>
-        <Button onClick={handleOpen} width="200px" width_tablet="fit-content" variant="outline" icon={<Icon icon="download" stroke={Colors.black} style={{marginRight: "10px"}} width="46px" height="46px" />} color={Colors.black} margin="10px 0 50px 0" margin_tablet="0" textColor={Colors.black}>{syllabus_button_text}</Button>
-      </Div>
-      <Modal
-        aria-labelledby="simple-modal-title"
-        aria-describedby="simple-modal-description"
-        open={open}
-        onClose={handleClose}
+      <GridContainerWithImage id="bottom"
+        background={Colors.veryLightBlue2}
+        imageSide="right"
+        padding="144px 12px 72px 12px"
+        columns_tablet="14"
+        margin="0"
+        margin_tablet="0"
       >
-        <LeadForm
-          style={{marginTop: "50px"}}
-          heading={yml.button.syllabus_heading}
-          motivation={yml.button.syllabus_motivation}
-          sendLabel={syllabus_button_text}
-          formHandler={requestSyllabus}
-          handleClose={handleClose}
-          lang={pageContext.lang}
-          data={{
-            course: {type: "hidden", value: yml.meta_info.bc_slug, valid: true}
-          }}
+        <Div flexDirection="column" margin="0" justifyContent_tablet="start" 
+        padding_tablet="0 30px" 
+        gridArea_tablet="1/1/1/6"
+        >
+          <Div
+            flexDirection="column"
+            size="12"
+            size_tablet="12"
+            width="100%"
+            width_tablet="100%"
+            margin="0"
+            textAlign_sm="center"
+          >
+            <H1 type="h1" margin="0 0 11px 0" textAlign_tablet="left" color="#606060">{yml.seo_title}</H1>
+            <H2 type="h2" padding="0" textAlign_tablet="left" fontSize="40px" fontSize_tablet="50px" lineHeight="60px">{yml.header.title}</H2>
+            <Paragraph padding="0" textAlign_tablet="left" letterSpacing="0.05em" margin="26px 0" >{yml.header.paragraph}</Paragraph>
+          </Div>
+        </Div>
+        <Div height="auto" width="100%" gridArea_tablet="1/7/1/13" style={{position: "relative"}}>
+          <StyledBackgroundSection
+            height={`350px`}
+            borderRadius={`3px`}
+            image={yml.header.image}
+            bgSize={`contain`}
+            alt={yml.header.image_alt}
+          />
+        </Div>
+      </GridContainerWithImage>
+
+    <ProgramDetails withoutAnimation background={Colors.white} details={courseDetails.details} lang={pageContext.lang} course={program_type} />
+
+    <GridContainerWithImage id="what_will_you_learn"
+        background={Colors.lightYellow}
+        imageSide="left"
+        padding="82px 0"
+        columns_tablet="14"
+        margin="0"
+        margin_tablet="0"
+    >
+      <Div height="auto" width="100%" gridArea_tablet="1/1/1/6" style={{position: "relative"}}>
+        <StyledBackgroundSection
+          height={`350px`}
+          borderRadius={`3px`}
+          image={yml.what_will_you_learn.image}
+          bgSize={`contain`}
+          alt={yml.what_will_you_learn.image_alt}
         />
-      </Modal>
-      <Badges lang={pageContext.lang} short_link={true} margin="0 0 40px 0" paragraph={yml.badges.paragraph} />
-    </Header>
-    <ProgramDetails details={courseDetails.details} lang={pageContext.lang} course={program_type} />
-    <ProgramDetailsMobile details={courseDetails.details} lang={pageContext.lang} course={program_type} />
-    <TechsWeTeach lang={pageContext.lang} data={data.allFullStackTechsYaml} />
+      </Div>
+      <Div flexDirection="column" margin="0" justifyContent_tablet="start" 
+        padding_tablet="0 30px" 
+        gridArea_tablet="1/7/1/13"
+      >
+        <Div
+          flexDirection="column"
+          size="12"
+          size_tablet="12"
+          width="100%"
+          width_tablet="100%"
+          margin="0"
+          textAlign_sm="center"
+        >
+          <H2 type="h2" padding="0 0 14px 0" textAlign_tablet="left" fontSize="30px" fontSize_tablet="30px" lineHeight="60px">{yml.what_will_you_learn.heading}</H2>
+          {yml.what_will_you_learn.sub_title.split("\n").map((m, i) =>
+            <Paragraph padding="0" textAlign_tablet="left" letterSpacing="0.05em" margin="10px 0" >
+              {m}
+            </Paragraph>
+          )}
+        </Div>
+      </Div>
+    </GridContainerWithImage>
+
+
+    <GridContainerWithImage id="what_does_it_mean_full_stack_developer"
+        background={Colors.white}
+        imageSide="right"
+        padding="82px 0"
+        columns_tablet="14"
+        margin="0"
+        margin_tablet="0"
+    >
+      <Div flexDirection="column" margin="0" justifyContent_tablet="start" 
+        padding_tablet="0 30px"
+        gridArea_tablet="1/1/1/7"
+      >
+        <Div
+          flexDirection="column"
+          size="12"
+          size_tablet="12"
+          width="100%"
+          width_tablet="100%"
+          margin="0"
+          padding="0 10px"
+          textAlign_sm="center"
+        >
+          <H2 type="h2" padding="0 0 14px 0" textAlign_tablet="left" fontSize="22px" fontSize_tablet="22px" lineHeight="60px">{yml.content_with_subtitle_and_image.heading}</H2>
+          {yml.content_with_subtitle_and_image.list.map((m, i) =>(
+            <>
+              {m.label && (
+                <H3 type="h3" width="fit-content" lineHeight="22px" padding="0 4px" margin="20px 0 8px 0" background={Colors.yellow} textAlign_tablet="left" fontSize="15px">{m.label}</H3>
+              )}
+              {m.content.split("\n").map((content, i) =>
+                <>
+                
+                  <Paragraph key={i} padding="0" textAlign="left" letterSpacing="0.05em" margin="10px 0" >
+                    {/* Text without <strong> tag */}
+                    {content.split("<strong>")[0] || m}
+
+                    {/* Extracts the <strong> tag and render a text with font weight: bold  */}
+                    {content.match("<strong>(.*?)<\/strong>") && (
+                      <Paragraph
+                        display="initial"
+                        color={Colors.black}
+                        padding="0"
+                        fontSize="15px"
+                        fontWeight="900"
+                        textAlign="left"
+                        // textAlign_tablet="left"
+                        letterSpacing="0.05em"
+                        margin="10px 0"
+                      >
+                        {content.match("<strong>(.*?)<\/strong>")[1]}
+                      </Paragraph>
+                    )}
+                  </Paragraph>
+                  {/* {content.split("<strong>")[0].map((m, i) => (
+                      <Paragraph key={i} padding="0" textAlign_tablet="left" letterSpacing="0.05em" margin="10px 0" >
+                        {m}
+                      </Paragraph>
+                  ))} */}
+
+                  {/* {content.match("<strong>(.*?)<\/strong>") && (
+                    <Paragraph padding="0" fontSize="20px" textAlign_tablet="left" letterSpacing="0.05em" margin="10px 0" >
+                      {content.match("<strong>(.*?)<\/strong>")[1]}
+                    </Paragraph>
+                  )} */}
+                </>
+              )}
+            </>
+          ))}
+        </Div>
+      </Div>
+      <Div height="auto" width="100%" gridArea_tablet="1/8/1/13" style={{position: "relative"}}>
+        <StyledBackgroundSection
+          height={`800px`}
+          borderRadius={`3px`}
+          image={yml.content_with_subtitle_and_image.image}
+          bgSize={`contain`}
+          alt={yml.content_with_subtitle_and_image.image_alt}
+        />
+      </Div>
+      <Div display="none" display_tablet="block" style={{right: '0', position: "absolute"}}>
+        <svg width="525" style={{zIndex: "99", right: "0", position: "absolute"}} height="762" viewBox="0 0 525 762" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="422.5" cy="619.5" r="142.5" fill="#FFB718" fill-opacity="0.2"/>
+          <circle cx="41" cy="542" r="41" fill="#FFB718"/>
+          <circle cx="414.5" cy="308.5" r="8.5" transform="rotate(-180 414.5 308.5)" fill="black"/>
+          <circle cx="356.5" cy="26.5" r="26.5" fill="#0097CD"/>
+          <circle cx="177.5" cy="24.5" r="6.5" fill="#CD0000"/>
+        </svg>
+      </Div>
+
+    </GridContainerWithImage>
+
+    {/* <TechsWeTeach lang={pageContext.lang} data={data.allFullStackTechsYaml} /> */}
     <GeeksInfo lang={pageContext.lang} />
     <GridContainer padding_tablet="0" margin_tablet="90px 0 62px 0" margin="57px 0">
       <Div height="5px" background="#EBEBEB"></Div>
@@ -133,7 +241,6 @@ const Program = ({data, pageContext, yml}) => {
       title={yml.prices.heading}
       paragraph={yml.prices.sub_heading}
     />
-    <AlumniProjects title={yml.alumni.heading} paragraph={yml.alumni.sub_heading} lang={data.allAlumniProjectsYaml.edges} limit={2} />
     <Testimonials lang={data.allTestimonialsYaml.edges} margin_tablet="75px 0 0 0" margin="45px 0 0 0" />
     <OurPartners images={hiring.partners.images} marquee></OurPartners>
   </>
@@ -155,9 +262,6 @@ export const query = graphql`
                 height: 289
                 placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
               )
-              # fluid(maxHeight: 289, maxWidth: 390){
-              #   ...GatsbyImageSharpFluid_withWebp
-              # }
             }
           }
           tech_list {
@@ -169,9 +273,6 @@ export const query = graphql`
                   height: 100
                   placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                 )
-                # fluid(maxHeight: 100, maxWidth: 100){
-                #   ...GatsbyImageSharpFluid_withWebp
-                # }
               }
             }
             alt
@@ -187,129 +288,158 @@ export const query = graphql`
         node{
           seo_title
           header{
+            title
+            paragraph
+            image_alt
+            image{
+              childImageSharp {
+                gatsbyImageData(
+                  layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                  width: 500
+                  placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                  quality: 100
+                  breakpoints:	[200, 340, 520, 890]
+                )
+              }
+            }
+          }
+          what_will_you_learn{
+            heading
+            sub_title
+            image{
+              childImageSharp {
+                gatsbyImageData(
+                  layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                  width: 500
+                  placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                  quality: 100
+                  breakpoints:	[200, 340, 520, 890]
+                )
+              }
+            }
+            image_alt
+          }
+          content_with_subtitle_and_image{
+            heading
+            image{
+              childImageSharp {
+                gatsbyImageData(
+                  layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                  width: 500
+                  placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                  quality: 100
+                  breakpoints:	[200, 340, 520, 890]
+                )
+              }
+            }
+            image_alt
+            list{
+              label
+              content
+            }
+          }
+          button{
+            syllabus_heading
+            syllabus_btn_label
+            syllabus_motivation
+            apply_button_link
+          }
+          meta_info{
+            title
+            description
+            image
+            keywords
+            slug
+            bc_slug
+          }
+          geek_data {
+            heading
+            geek_force
+            geek_pal
+          }
+          details {
+            about{
               title
-              paragraph
-              image_alt
-              image{
-                  childImageSharp {
-                    gatsbyImageData(
-                      layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                      width: 500
-                      placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
-                      quality: 100
-                      breakpoints:	[200, 340, 520, 890]
-                    )
-
-                    # fluid(maxWidth: 500, quality: 100, srcSetBreakpoints: [ 200, 340, 520, 890 ]){
-                    #   ...GatsbyImageSharpFluid_withWebp
-                    # }
-                  }
-                }
-              
-          }
-            button{
-              syllabus_heading
-              syllabus_btn_label
-              syllabus_motivation
-              apply_button_link
-            }
-            meta_info{
-                title
-                description
-                image
-                keywords
-                slug
-                bc_slug
-            }
-            geek_data {
-              heading
-              geek_force
-              geek_pal
-            }
-            details {
-              about{
-                title
-                sub_title
-                list{
-                  label
-                  content
-                  link
-                  link_text
-                }
-              }
-              heading
-              weeks
-              sub_heading
-              left_labels{
-                description
-                projects
-                duration
-                skills
-              }
-              details_modules {
-                title
-                projects
-                slug
-                module_name
-                duration
-                description
-                step
-              }
-            }
-            syllabus{
-              heading
-              button_label
-            }
-            badges{
-              paragraph
-            }
-            upcoming{
-              no_dates_message
-            }
-            credentials{
-              heading
-              paragraph
-            }
-            geeks_vs_others{
-              heading
-              sub_heading
-              sub_heading_link
-          }
-            
-            prices{
-              heading
-              sub_heading
-              selector{
-                top_label
-                placeholder
-              }
-              button{
-                text
-                link
-              }
-            }
-            typical{
-              heading
-              sub_heading
-              schedule{
-                title
-                time
-                icon
+              sub_title
+              list{
+                label
                 content
-                step
+                link
+                link_text
               }
             }
-            alumni{
-              heading
-              sub_heading
+            heading
+            weeks
+            sub_heading
+            left_labels{
+              description
+              projects
+              duration
+              skills
             }
-            sidebar{
-              membership
-              program
-              geeks_vs_other
-              pricing
-              alumni
+            details_modules {
+              title
+              projects
+              slug
+              module_name
+              duration
+              description
+              step
             }
+          }
+          syllabus{
+            heading
+            button_label
+          }
+          badges{
+            paragraph
+          }
+          upcoming{
+            no_dates_message
+          }
+          credentials{
+            heading
+            paragraph
+          }
+          geeks_vs_others{
+            heading
+            sub_heading
+            sub_heading_link
+          }
+          prices{
+            heading
+            sub_heading
+            selector{
+              top_label
+              placeholder
+            }
+            button{
+              text
+              link
+            }
+          }
+          typical{
+            heading
+            sub_heading
+            schedule{
+              title
+              time
+              icon
+              content
+              step
+            }
+          }
+          alumni{
+            heading
+            sub_heading
+          }
+          sidebar{
+            membership
+            program
+            geeks_vs_other
+            pricing
+            alumni
+          }
         }
       }
     }
