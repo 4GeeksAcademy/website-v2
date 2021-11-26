@@ -485,3 +485,7 @@ a.faq-link:hover {
 	position: absolute;
 	z-index: -1;
 }
+
+a.active p {
+    color: #0097CD;
+}

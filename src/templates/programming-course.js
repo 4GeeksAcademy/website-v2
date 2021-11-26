@@ -20,6 +20,7 @@ import GeeksInfo from '../components/GeeksInfo';
 import Testimonials from '../components/Testimonials';
 import OurPartners from '../components/OurPartners';
 import Icon from '../components/Icon';
+import ScrollSpy from '../components/ScrollSpy';
 
 
 const Program = ({data, pageContext, yml}) => {
@@ -52,52 +53,91 @@ const Program = ({data, pageContext, yml}) => {
   const syllabus_button_text = yml.button.syllabus_heading;
 
   return (<>
-      <GridContainerWithImage id="bottom"
-        background={Colors.veryLightBlue2}
-        imageSide="right"
-        padding="144px 12px 72px 12px"
-        columns_tablet="14"
-        margin="0"
-        margin_tablet="0"
+    <GridContainerWithImage id="bottom"
+      background={Colors.veryLightBlue2}
+      imageSide="right"
+      padding="144px 12px 72px 12px"
+      columns_tablet="14"
+      margin="0"
+      margin_tablet="0"
+    >
+      <Div flexDirection="column" margin="0" justifyContent_tablet="start" 
+      padding_tablet="0 30px" 
+      gridArea_tablet="1/1/1/6"
       >
-        <Div flexDirection="column" margin="0" justifyContent_tablet="start" 
-        padding_tablet="0 30px" 
-        gridArea_tablet="1/1/1/6"
+        <Div
+          flexDirection="column"
+          size="12"
+          size_tablet="12"
+          width="100%"
+          width_tablet="100%"
+          margin="0"
+          textAlign_sm="center"
         >
-          <Div
-            flexDirection="column"
-            size="12"
-            size_tablet="12"
-            width="100%"
-            width_tablet="100%"
-            margin="0"
-            textAlign_sm="center"
-          >
-            <H1 type="h1" margin="0 0 11px 0" textAlign_tablet="left" color="#606060">{yml.seo_title}</H1>
-            <H2 type="h2" padding="0" textAlign_tablet="left" fontSize="40px" fontSize_tablet="50px" lineHeight="60px">{yml.header.title}</H2>
-            <Paragraph padding="0" textAlign_tablet="left" letterSpacing="0.05em" margin="26px 0" >{yml.header.paragraph}</Paragraph>
-          </Div>
+          <H1 type="h1" margin="0 0 11px 0" textAlign_tablet="left" color="#606060">{yml.seo_title}</H1>
+          <H2 type="h2" padding="0" textAlign_tablet="left" fontSize="40px" fontSize_tablet="50px" lineHeight="60px">{yml.header.title}</H2>
+          <Paragraph padding="0" textAlign_tablet="left" letterSpacing="0.05em" margin="26px 0" >{yml.header.paragraph}</Paragraph>
         </Div>
-        <Div height="auto" width="100%" gridArea_tablet="1/7/1/13" style={{position: "relative"}}>
-          <StyledBackgroundSection
-            height={`350px`}
-            borderRadius={`3px`}
-            image={yml.header.image}
-            bgSize={`contain`}
-            alt={yml.header.image_alt}
-          />
-        </Div>
-      </GridContainerWithImage>
+      </Div>
+      <Div height="auto" width="100%" gridArea_tablet="1/7/1/13" style={{position: "relative"}}>
+        <StyledBackgroundSection
+          height={`350px`}
+          borderRadius={`3px`}
+          image={yml.header.image}
+          bgSize={`contain`}
+          alt={yml.header.image_alt}
+        />
+      </Div>
+    </GridContainerWithImage>
 
-    <ProgramDetails withoutAnimation background={Colors.white} details={courseDetails.details} lang={pageContext.lang} course={program_type} />
+    <Div
+      display="flex"
+      background={Colors.white}
+      style={{
+        borderBottom: "1px solid #EBEBEB",
+        overflowX: "auto",
+        zIndex: "999",
+        position:"sticky",
+        top: "0"
+      }}
+      alignItems="center"
+      flexDirection="row"
+      gap="40px"
+      width="100%"
+      height="70px"
+    >
+      <ScrollSpy offsetTop={70}>
+        <a width="auto" padding="0 20px" href="#about_the_program" ref={React.createRef()}>
+          <Paragraph textTransform="uppercase" >Acerca de</Paragraph>
+        </a>
+        <a width="auto" padding="0 20px" href="#what_will_you_learn" ref={React.createRef()}>
+          <Paragraph textTransform="uppercase">Qué Aprenderás</Paragraph>
+        </a>
+        <a width="auto" padding="0 20px" href="#what_does_it_mean_full_stack_developer" ref={React.createRef()}>
+          <Paragraph textTransform="uppercase">Qué significat</Paragraph>
+        </a>
+        <a width="auto" padding="0 20px" href="#geeks_info" ref={React.createRef()}>
+          <Paragraph textTransform="uppercase">Herramientas y lenguajes</Paragraph>
+        </a>
+        <a width="auto" padding="0 20px" href="#what_includes" ref={React.createRef()}>
+          <Paragraph textTransform="uppercase">Qué incluye?</Paragraph>
+        </a>
+        <a width="auto" padding="0 20px" href="#upcoming_dates" ref={React.createRef()}>
+          <Paragraph textTransform="uppercase">Fechas</Paragraph>
+        </a>
+      </ScrollSpy>
+    </Div>
 
-    <GridContainerWithImage id="what_will_you_learn"
-        background={Colors.lightYellow}
-        imageSide="left"
-        padding="82px 0"
-        columns_tablet="14"
-        margin="0"
-        margin_tablet="0"
+    <ProgramDetails id="about_the_program" withoutAnimation background={Colors.white} details={courseDetails.details} lang={pageContext.lang} course={program_type} />
+
+    <GridContainerWithImage
+      id="what_will_you_learn"
+      background={Colors.lightYellow}
+      imageSide="left"
+      padding="82px 0"
+      columns_tablet="14"
+      margin="0"
+      margin_tablet="0"
     >
       <Div height="auto" width="100%" gridArea_tablet="1/1/1/6" style={{position: "relative"}}>
         <StyledBackgroundSection
@@ -223,11 +263,11 @@ const Program = ({data, pageContext, yml}) => {
     </GridContainerWithImage>
 
     {/* <TechsWeTeach lang={pageContext.lang} data={data.allFullStackTechsYaml} /> */}
-    <GeeksInfo lang={pageContext.lang} />
+    <GeeksInfo id="geeks_info" lang={pageContext.lang} />
     <GridContainer padding_tablet="0" margin_tablet="90px 0 62px 0" margin="57px 0">
       <Div height="5px" background="#EBEBEB"></Div>
     </GridContainer>
-    <UpcomingDates lang={pageContext.lang} message={courseDetails.upcoming.no_dates_message} />
+    <UpcomingDates id="upcoming_dates" lang={pageContext.lang} message={courseDetails.upcoming.no_dates_message} />
     <GridContainer padding_tablet="0" margin_tablet="0 0 62px 0">
       <Div height="1px" background="#EBEBEB"></Div>
     </GridContainer>
