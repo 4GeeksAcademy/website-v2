@@ -1,0 +1,182 @@
+meta_info:
+  slug: coding-career
+  title: "Bootcamp Full Stack part time de 4Geeks Academy"
+  description: "Full stack part time es un coding bootcamp a nivel mundial que se especializa en la programación e informatica, no tienes que dejar tu trabajo para aprender"
+  image: null
+  visibility: "visible"
+  keywords: "Bootcamp, Full Stack, part time"
+  redirects: [
+    "coding-career"
+  ]
+
+seo_title: "Coding Bootcamp"
+header:
+  title: "Full Stack Developer"
+  image: "../../../static/images/bg/program-bg.png"
+  image_alt: ""
+  paragraph: "De cero a tener tu primer trabajo como programador, aprende todo lo necesario, recibe soporte de por vida y consigue un trabajo después de 16 semanas de estudio."
+
+button:
+  syllabus_heading: "Descargar Detalles del Curso"
+  syllabus_btn_label: "Descarga Instantánea"
+  syllabus_motivation: "En 2 min. recibirás en tu buzón de correo un PDF con información muy detallada sobre nuestra metodología, tecnologías, financiación e información del curso."
+  apply_button_link: "/es/aplica"
+  
+course_instructors: 
+  header:
+    title: "Conoce a nuestros instructores"
+    paragraph: ""
+
+  instructors:
+    - name: "Roldolfo Campos"
+      sub_title: "Co fundador de 4geeks y director de educación"
+      image: "../../../static/images/instructors/example.png"
+      bio: "Currently working as a Senior Solutions Architect at VMware, Rodolfo Campos is a Software Engineer with 17 years of experience in Linux, Java, SQL, Blockchain, etc. Master in Computer Science and passionate about Big Data and Entrepreneurship."
+      github: ""
+      linkedin: "https://www.linkedin.com/"
+
+    - name: "Gabriel Salinas"
+      sub_title: "Sophisticated Software Systems Engineer"
+      image: "../../../static/images/instructors/example.png"
+      bio: "Currently working as a Senior Solutions Architect at VMware"
+      github: ""
+      linkedin: "https://www.linkedin.com/"
+
+badges:
+  paragraph: "4Geeks Academy es el lugar donde los desarrolladores crecen y prosperan. Estamos autorizados por el Departamento de Educación de Florida. Elegido como uno de los 35 mejores bootcamps del mundo y el mejor bootcamp de codificación en Miami según SwitchUp. Reconocido como los 10 mejores bootcamps de codificación en los Estados Unidos según Newsweek."
+
+upcoming:
+  no_dates_message: "Actualmente no hay próximas fechas para este programa"  
+
+credentials:
+  heading: "RESULTADOS"
+  paragraph: "Nuestros números hablan por sí solos"
+## PROGRAM DETAILS
+details:
+  about:
+      title: "Acerca del programa"
+      sub_title: "En esta carrera te desarrollarás desde cero como Full Stack Developer.       
+      Aprenderás a crear un sitio web sumergiéndote en las mejores prácticas del       
+      diseño web responsive, trabajando con diversos lenguajes. Obtedrás una       
+      sólida base de front end, back end, base de datos, manejo de procesos       
+      distribuidos y despliegue a distintas plataformas web.
+
+      Al finalizar este programa, contarás con los conocimientos para       
+      desempeñarte como Full Stack Developer. 
+    "
+      list:
+        - label: "Duración"
+          content:  "16 semanas"
+        - label: "Clases"
+          content: "3 Clases semanales"
+        - label: "Certificado"
+          content: "Nuestros certificados son  reconocidos por múltiples instuticiones."
+          link_text: "Ver ejemplo"
+          link: "https://certificate.breatheco.de/4ae7a46bba78dc19b823e124fea120c17b45e044"
+        - label: "Requisitos"
+          content: "Tan solo necesitas un ordenador y una conexión a internet"
+  heading: DETALLES DEL PROGRAMA PART-TIME
+  weeks: 16
+  sub_heading: "Proyectos de la vida real y exactamente lo que buscan las empresas"
+  left_labels:
+    description: "DESCRIPCION:"
+    projects: "PROYECTOS:"
+    duration: "DURACIÓN:"
+    skills: "Tópico / Semana:"
+  details_modules:
+    - module_name: "PREWORK"
+      title: "Prework"
+      description: >
+        Empezando por lo básico: HTML5 + CSS3 + Javascript. Revisamos los fundamentos de la codificación y nos aseguramos de que todos estamos en la misma página.
+        Durante el prework revisarás cómo hacer un website con HTML y CSS, luego desarrollarás varios proyectos y por último te iniciaras en el mundo de Javascript, aprendiendo sobre variables, loops, condicionales, y funciones.
+      projects: "Contruye tu primera página web, y una versión mínima de Instagram."
+      slug: "prework"
+      duration: "(previo)"
+      step: 0
+    - module_name: "FUNDAMENTOS"
+      title: "Aprende a programar"
+      description: "Piensa como un ordenador: Controla el flujo de tu código, crea algoritmos, haz un bucle, usa condicionales y usa/mezcla JavaScript con HTML5 y CSS3 para lanzar tu primer sitio web interactivo."
+      projects: "Aplicación de Instagram, Juego de cartas de memoria, Tic Tac Toe, Flappy Bird, etc."
+      slug: "fundamentos"
+      duration: "2 sem"
+      step: 2
+    - module_name: "LA WEB"
+      title: "Desarrollo web"
+      description: "Crea tu primera aplicación con React.js, Patrón MVC, Módulos JS, Bundling, Babel JS, el DOM, Eventos"
+      projects: "Clon de Coursera, clon de Instagram, clon de Youtube, etc."
+      slug: "desarrollo-web"
+      duration: "6 sem"
+      step: 6
+    - module_name: "API'S"
+      title: "Desarrollo de APIs"
+      description: "Enfocado principalmente en Python, Flask y SQL construirás tus propias APIs e interactuarás con otras APIs muy conocidas como Google, Twillio, Facebook, Stripe y más!"
+      projects: "Clon de Coursera, Clon de Instagram, Clon de Youtube, etc."
+      slug: "web-development"
+      duration: "2 sem"
+      step: 2
+    - module_name: "APPS AVANZADAS"
+      title: "Apps Avanzadas"
+      description: "Python, Flask, REST API's, Bases de datos, SQL, Patrón MVC, Publica tu sitio web, etc."
+      projects: "Durante esta fase tendrás que diseñar, programar, probar y publicar tu propia aplicación web completa."
+      slug: "aplicacion-avanzada"
+      duration: "6 sem"
+      step: 5.9
+    - module_name: "DE POR VIDA"
+      title: "De por vida"
+      description: "Sigue recibiendo la ayuda de la academia de por vida, acceso a los contenidos, soporte profesional (career support). Recibe incluso ayuda durante el inicio de tu nuevo trabajo, nunca más estarás sólo."
+      projects: "Conseguirás tu primer trabajo, empezarás a ganar dinero pero continuarás aprendiendo hasta convertirte en Senior Developer, ganar muy bien y disfrutar de la vida de un programador."
+      slug: "lifelong-learning"
+      duration: "Para siempre"
+      step: 0.1
+
+syllabus:
+  heading: Descarga toda la infomación sobre este programa
+  button_label: Descargar
+
+## 4GEEKS VS OTHERS SECTION
+geeks_vs_others:
+  heading: "EN NÚMEROS: 4GEEKS VS OTROS"
+  sub_heading: ""
+  sub_heading_link: ""
+
+why_4geeks:
+  heading: Porqué 4Geeks Academy
+  sub_heading: ""
+
+## GEEK PAL AND GEEK FORCE BOXES
+geek_data:
+  heading: ¡Career Support de por vida!
+  geek_pal:
+    - Aprenderas Python, Javascript y React. Los Lenguajes más buscados.
+    - Un profesor cada cinco estudiantes (1:5).
+    - Sesiones ilimitadas de tutoría 1-1 por demanda, en persona o en línea.
+    - Miles de ejercicios interactivos y autoevaluados.
+    - Soluciones en video para una retroalimentación instantánea.
+    - Chat de apoyo en línea 12 horas al día.
+    - Transmisión en línea de las clases.
+    - Grabación de las clases para su posterior revisión.
+  geek_force:
+    - Construcción de CV y LinkedIn.
+    - Construcción del perfil de Github y portafolio desde el dia 1.
+    - Career Week para dedicación exclusiva a tu perfil profesional.
+    - Preparación de simulación de entrevistas.
+    - Sesión de preparación de entrevistas personalizadas para trabajos específicos.
+    - Entrenamiento de marca personal.
+    - Prácticas y ejercicios de programación posteriores a la graduación.
+    - Coaching SEMANAL hasta que consigas trabajo.
+
+## PRICES AND PAYMENTS SECTION
+prices:
+  heading: "Planes y Precios"
+  sub_heading: "Selecciona la sede o modalidad de tu curso para ver los precios y planes de pago"
+  selector:
+    top_label: Sede
+    placeholder: Selecciona una sede
+  button:
+    text: Ver planes / precios
+    link: ""
+    
+## ALUMNI SECTION
+alumni:
+  heading: "Conoce a los graduados y sus proyectos"
+  sub_heading: "Tú también podrás hacer proyectos como estos cuando seas programador"
