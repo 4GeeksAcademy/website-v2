@@ -179,13 +179,16 @@ export const MegaMenu = ({status, setStatus, menu, languageButton, currentURL, s
                     <Div background={Colors.lightGray} height="61px" alignItems="center" padding="24px 17px" justifyContent="between">
                         {status.toggle && status.itemIndex != null && status.itemIndex != menu.length - 1 ?
                             <>
+                                {status.itemIndex != null && <Link to={menu[status.itemIndex].sub_menu.link && menu[status.itemIndex].sub_menu.link} style={{display: 'contents'}} > 
                                 <Icon icon="arrowleft" color="#000000" width="16px" height="16px" style={{cursor: "pointer"}} onClick={() => setStatus({...status, itemIndex: null})} />
+
                                 <Div alignItems="center">
                                     {menu[status.itemIndex].sub_menu.icon && <Icon icon={menu[status.itemIndex].sub_menu.icon} width="43px" height="34px" />}
                                     <H3 textAlign="center" fontSize="13px" margin="0 30px 0 0" fontWeight="400" lineHeight="16px">
                                         {menu[status.itemIndex].sub_menu.title}
                                     </H3>
                                 </Div>
+                                </Link>}
                                 <Icon icon="cross" color="#000000" width="12px" height="12px" style={{cursor: "pointer"}} onClick={() => setStatus({...status, toggle: false, itemIndex: null})} />
                             </>
                             :
