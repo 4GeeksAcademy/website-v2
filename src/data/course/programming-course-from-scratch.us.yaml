@@ -111,7 +111,7 @@ what_will_you_learn:
     platforms. You will gain the skills and knowledge to create a website by immersing yourself in the 
     best practices of responsive web design, working with various languages.
   "
-  image: "../../../static/images/locations/miami-people2.jpeg"
+  image: "../../../static/images/learn_to_code.png"
   image_alt: "What will you learn in this course"
 
 content_with_subtitle_and_image:
@@ -145,6 +145,86 @@ content_with_subtitle_and_image:
 
         By becoming a full stack developer these terms will not be foreign to you and <strong>you will live 
         with them to create incredible things!</strong>"
+
+tools_and_tech:
+  - topic: "Herramientas y lenguajes de programación que aprenderás"
+    list:
+      - title: "Html"
+        image: "../../../static/images/techs/html.png"
+        description: |-
+          "lorem ipsum dolor sit amet, congue, sed"
+      - title: "Css"
+        image: "../../../static/images/techs/css.png"
+        description: |-
+          "Lorem ipsum dolor sit amet, con"
+      - title: "Python"
+        image: "../../../static/images/techs/python.png"
+        description: |-
+          "Python is the fastest growing language in the world, it is the primary language in virtually 
+          every industry. Together with React.js and Javascript, we teach the most desired stack of 
+          techonolgies companies want today."
+      - title: "React.js"
+        image: "../../../static/images/techs/react.png"
+        description: |-
+          "Lorem ipsum dolor sit amet, con"
+      - title: "DOM"
+        image: "../../../static/images/techs/dom.png"
+        description: |-
+          "Lorem ipsum dolor sit amet, con"
+      - title: "SQL"
+        image: "../../../static/images/techs/sql.png"
+        description: |-
+          "Lorem ipsum dolor sit amet, con"
+      - title: "Flask"
+        image: "../../../static/images/techs/flask.png"
+        description: |-
+          "Lorem ipsum dolor sit amet, con"
+
+what_includes:
+  - title: "What includes?"
+    description: "To become a programmer it is not only necessary to have knowledge of tools and languages, 
+      but it is also important to have help when you have doubts, overcome the frustrations of 
+      learning to program and have company in your introduction into the world of work as a Jr. 
+      developer. traditional web programming course you will receive technical training, but you 
+      will not necessarily have access to other benefits that will make you a comprehensive full 
+      stack developer."
+    list:
+      - title: "> All the Mentoring You Need"
+        icon: "chat-2"
+        description: "Online and in person, for the rest of your life, even to clarify doubts about 
+          your code related to your work. We adjust the sessions according to your calendar, we 
+          assure you that you have the opportunity for constant mentoring whenever you need it."
+
+      - title: "> Teacher:Student Ratio 1:5"
+        icon: "hierarchy"
+        description: "You'll find more teachers on 4Geeks than the industry average."
+
+      - title: "> Response time"
+        icon: "chronometer"
+        description: "Don't get stuck with your code, it won't take you more than 15 minutes for an 
+          instructor to help you through any of our community channels."
+
+      - title: "> Instructors with Live Classes"
+        icon: "instructor"
+        description: "The 4Geeks classes are totally live. Being connected with instructors and 
+          peers makes the experience more enriching."
+
+      - title: "> Access to the Platform for Lessons, Exercises and Community Channels"
+        icon: "screen"
+        description: "As a student at 4Geeks you will have access to the official class platform and you 
+          will belong to a community made up exclusively of students, graduates, instructors and academy 
+          staff ready to help."
+
+      - title: "> Access to the Platform for Lessons, Exercises and Community Channels"
+        icon: "notes-2"
+        description: "Based on each job opportunity, you will receive coaching in skills in addition to 
+          those related to programming.
+          We will help you perfect your professional profile. You will have personalized advice with 
+          our experts to improve your CV, Linkedin, GitHub and Portfolio.
+          We will conduct mock interviews to assess your strengths and weaknesses to create a stronger 
+          profile before the actual interviews. Every time you have an interview, we will practice 
+          using different technologies. We have our own set of self-rated exercises, so you can practice 
+          until you have mastered the skills to get the job you want."
 
 syllabus:
   heading: Get all the information about the syllabus

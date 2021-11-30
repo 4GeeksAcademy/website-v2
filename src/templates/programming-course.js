@@ -4,24 +4,17 @@ import BaseRender from './_baseLayout'
 import {Header, Div, GridContainer, GridContainerWithImage} from '../components/Sections'
 import {Title, H1, H2, H3, H4, H5, Span, Paragraph} from '../components/Heading'
 import {Button, Colors, StyledBackgroundSection} from '../components/Styling'
-import {requestSyllabus} from "../actions";
 import {SessionContext} from '../session'
 import ProgramDetails from '../components/ProgramDetails';
-import ProgramDetailsMobile from '../components/ProgramDetailsMobile';
 import PricesAndPayment from '../components/PricesAndPayment';
-import Modal from '../components/Modal';
-import LeadForm from '../components/LeadForm';
-import AlumniProjects from '../components/AlumniProjects';
-import Badges from '../components/Badges';
-import TechsWeTeach from '../components/TechsWeTeach';
-import {Circle} from '../components/BackgroundDrawing'
 import UpcomingDates from '../components/UpcomingDates';
 import GeeksInfo from '../components/GeeksInfo';
 import Testimonials from '../components/Testimonials';
 import OurPartners from '../components/OurPartners';
 import Icon from '../components/Icon';
 import ScrollSpy from '../components/ScrollSpy';
-
+import Card from '../components/Card'
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 const Program = ({data, pageContext, yml}) => {
   const {session} = React.useContext(SessionContext);
@@ -32,25 +25,44 @@ const Program = ({data, pageContext, yml}) => {
   const course_type = "full_stack"
   const program_type = yml.meta_info.slug.includes("full-time") ? "full_time" : "part_time"
 
-  const handleOpen = () => {
-    setOpen(true);
-  };
+  const [toggleIndex, setToggleIndex] = useState();
 
-  const handleClose = () => {
-    setOpen(false);
-  };
+  const [buttonToggle, setButtonToggle] = useState(false);
 
-  const [applyButtonText, setApplyButtonText] = useState("");
-  let city = session && session.location ? session.location.city : [];
-  let currentLocation = data.allLocationYaml.edges.find(loc => loc.node?.city === city);
-
-  useEffect( () => {
-    if (currentLocation !== undefined){
-      setApplyButtonText(currentLocation.node.button.apply_button_text)
+  const contentNav = [
+    {
+      title: "Acerca de",
+      href: "#about_the_program",
+    },
+    {
+      title: "Qué Aprenderás",
+      href: "#what_will_you_learn",
+    },
+    {
+      title: "Qué significa",
+      href: "#what_does_it_mean_full_stack_developer",
+    },
+    {
+      title: "Herramientas y lenguajes",
+      href: "#tools_and_tech",
+    },
+    {
+      title: "Qué incluye?",
+      href: "#what_includes",
+    },
+    {
+      title: "Fechas",
+      href: "#upcoming_dates"
+    },
+    {
+      title: "Precios",
+      href: "#prices_and_payment"
+    },
+    {
+      title: "Alumnos",
+      href: "#testimonials"
     }
-  }, [currentLocation])
-
-  const syllabus_button_text = yml.button.syllabus_heading;
+  ]
 
   return (<>
     <GridContainerWithImage id="bottom"
@@ -98,33 +110,22 @@ const Program = ({data, pageContext, yml}) => {
         overflowX: "auto",
         zIndex: "999",
         position:"sticky",
-        top: "0"
+        top: "0",
       }}
+      padding="0 35px"
       alignItems="center"
       flexDirection="row"
       gap="40px"
       width="100%"
       height="70px"
     >
-      <ScrollSpy offsetTop={70}>
-        <a width="auto" padding="0 20px" href="#about_the_program" ref={React.createRef()}>
-          <Paragraph textTransform="uppercase" >Acerca de</Paragraph>
-        </a>
-        <a width="auto" padding="0 20px" href="#what_will_you_learn" ref={React.createRef()}>
-          <Paragraph textTransform="uppercase">Qué Aprenderás</Paragraph>
-        </a>
-        <a width="auto" padding="0 20px" href="#what_does_it_mean_full_stack_developer" ref={React.createRef()}>
-          <Paragraph textTransform="uppercase">Qué significat</Paragraph>
-        </a>
-        <a width="auto" padding="0 20px" href="#geeks_info" ref={React.createRef()}>
-          <Paragraph textTransform="uppercase">Herramientas y lenguajes</Paragraph>
-        </a>
-        <a width="auto" padding="0 20px" href="#what_includes" ref={React.createRef()}>
-          <Paragraph textTransform="uppercase">Qué incluye?</Paragraph>
-        </a>
-        <a width="auto" padding="0 20px" href="#upcoming_dates" ref={React.createRef()}>
-          <Paragraph textTransform="uppercase">Fechas</Paragraph>
-        </a>
+      <ScrollSpy offsetTop={80}>
+        {contentNav.map((nav) => (
+          <a key={nav.href} width="auto" padding="0 20px" href={nav.href} ref={React.createRef()}>
+            <Paragraph textTransform="uppercase" width="max-content">{nav.title}</Paragraph>
+          </a>
+          )
+        )}
       </ScrollSpy>
     </Div>
 
@@ -170,7 +171,6 @@ const Program = ({data, pageContext, yml}) => {
         </Div>
       </Div>
     </GridContainerWithImage>
-
 
     <GridContainerWithImage id="what_does_it_mean_full_stack_developer"
         background={Colors.white}
@@ -224,17 +224,6 @@ const Program = ({data, pageContext, yml}) => {
                       </Paragraph>
                     )}
                   </Paragraph>
-                  {/* {content.split("<strong>")[0].map((m, i) => (
-                      <Paragraph key={i} padding="0" textAlign_tablet="left" letterSpacing="0.05em" margin="10px 0" >
-                        {m}
-                      </Paragraph>
-                  ))} */}
-
-                  {/* {content.match("<strong>(.*?)<\/strong>") && (
-                    <Paragraph padding="0" fontSize="20px" textAlign_tablet="left" letterSpacing="0.05em" margin="10px 0" >
-                      {content.match("<strong>(.*?)<\/strong>")[1]}
-                    </Paragraph>
-                  )} */}
                 </>
               )}
             </>
@@ -262,16 +251,184 @@ const Program = ({data, pageContext, yml}) => {
 
     </GridContainerWithImage>
 
-    {/* <TechsWeTeach lang={pageContext.lang} data={data.allFullStackTechsYaml} /> */}
-    <GeeksInfo id="geeks_info" lang={pageContext.lang} />
-    <GridContainer padding_tablet="0" margin_tablet="90px 0 62px 0" margin="57px 0">
-      <Div height="5px" background="#EBEBEB"></Div>
+    <GridContainer
+      id="tools_and_tech"
+      padding="60px 4%"
+      gridGap="0px"
+      padding_tablet="80px 20%"
+      github={`/page/faq.${pageContext.lang}.yml`}
+      background={Colors.verylightGray}
+    >
+      {
+        yml.tools_and_tech.map((item) =>(
+          <>
+            <H3 type="h3" key={item.topic} fontSize="20px" borderBottom="1px solid #C4C4C4" padding="0 30px 30px 30px" >{item.topic}</H3>
+            {item.list.map((tech) => {
+              return (
+                <Card
+                  color={buttonToggle && tech.title == toggleIndex}
+                  height="auto"
+                  width="100%"
+                  borders="0"
+                  color="verylightGray"
+                  borderBottom="1px solid #C4C4C4"
+                  padding="20px 10px"
+                  onClick={() => toggleIndex === tech.title ? (setToggleIndex(undefined), setButtonToggle(!buttonToggle)) : (setToggleIndex(tech.title), setButtonToggle(true))}
+                >
+                  <Div key={tech.title} display="block" height="100%">
+                    <Div onClick={() => {setButtonToggle(!buttonToggle), setToggleIndex(toggleIndex != undefined ? undefined : tech.title)}} display="flex" width="100%" align={`center`} alignSelf="center">
+                    <GatsbyImage
+                      key={tech.title}
+                      style={{height: "20px", minWidth: "20px", width: "min-content", margin: "0 20px 0 0"}}
+                      imgStyle={{objectFit: "contain"}}
+                      loading="eager"
+                      draggable={false}
+                      alt={tech.title}
+                      image={getImage(tech.image.childImageSharp.gatsbyImageData)}
+                    />
+                      <H4
+                        type="h4"
+                        textAlign="left"
+                        fontSize="14px"
+                        align={`left`}
+                        align_sm={`left`}
+                        color={Colors.black}
+                        paddingRight="5%"
+                        textTransform="uppercase"
+                        fontWeight="700"
+                      >{tech.title}</H4>
+                      {buttonToggle === false ?
+                        toggleIndex !== tech.title &&
+                        <Icon icon="plus"
+                          width="24"
+                        />
+                        :
+                        buttonToggle === true && toggleIndex === tech.title ?
+                          <Icon icon="minus"
+                            width="24"
+                          />
+                          :
+                          <Icon icon="plus"
+                            width="24"
+                          />
+                      }
+                    </Div>
+                    <Div size="12" size_sm="12" alignSelf="center">
+                      {buttonToggle === true && toggleIndex === tech.title &&
+                        <Paragraph
+                          textAlign="left"
+                          letterSpacing="0.05em"
+                          lineHeight="22px"
+                          fontWeight="normal"
+                          dangerouslySetInnerHTML={{__html: tech.description}}
+                          margin={`20px 0 0 0`}
+                          align_sm="left"
+                          fontFamily="Lato, sans-serif">
+                        </Paragraph>
+                      }
+                    </Div>
+
+                  </Div>
+                </Card>
+              )
+            }
+            )}
+          </>
+        ))
+      }
     </GridContainer>
-    <UpcomingDates id="upcoming_dates" lang={pageContext.lang} message={courseDetails.upcoming.no_dates_message} />
+
+    <GridContainer
+      id="what_includes"
+      padding="60px 10px"
+      gridGap="0px"
+      padding_tablet="80px 0"
+      github={`/page/faq.${pageContext.lang}.yml`}
+      background={Colors.white}
+    >
+      {yml?.what_includes.map(l => (
+        <>
+          <H3 type="h3" key={l.title} fontSize="20px" padding="0 30px 30px 30px" >{l.title}</H3>
+          <Paragraph
+            textAlign="center"
+            letterSpacing="0.05em"
+            lineHeight="22px"
+            fontWeight="normal"
+            margin="20px 0"
+            padding="0 4%"
+            padding_tablet="0 16%"
+            fontFamily="Lato, sans-serif">
+              {l.description}
+          </Paragraph>
+          <GridContainer padding_tablet="0" containerColumns_tablet="1fr repeat(12, 1fr) 1fr" margin_tablet="3% 0 6% 0" margin="5% 0">
+            <Div height="2px" background="#ACACAC" style={{opacity: "0.5"}}></Div>
+          </GridContainer>
+          <Div
+            display="block"
+            // gap="30px"
+            columnCount_tablet="2"
+            columnCount="0"
+            style={{orphans: "1", widows: "1", columnGap: "1.25rem", boxSizing: "border-box"}}
+            justifyContent="center"
+            padding="0 6%"
+          >
+            {l.list.map(item => (
+              <Div display="flex" flexDirection="row" style={{position: "relative"}}gap="12px" width="100%" width_tablet="100%" >
+                <Div height="100%">
+                  <Icon icon={item.icon} width="70px" height="54px" />
+                </Div>
+                <Div height="100%" display="flex" flexDirection="column">
+                  <H4
+                    type="h4"
+                    textAlign="left"
+                    fontSize="14px"
+                    align={`left`}
+                    align_sm={`left`}
+                    color={Colors.black}
+                    textTransform="uppercase"
+                    fontWeight="700"
+                  >{item.title}
+                  </H4>
+                  <Paragraph
+                    textAlign="left"
+                    letterSpacing="0.05em"
+                    lineHeight="22px"
+                    fontWeight="normal"
+                    margin="20px 0"
+                    align_sm="left"
+                    fontFamily="Lato, sans-serif"
+                  >
+                    {item.description}
+                  </Paragraph>
+                </Div>
+              </Div>
+            ))}
+          </Div>
+        </>
+      ))}
+    </GridContainer>
+    <GridContainer padding_tablet="0" margin_tablet="0 0 62px 0">
+      <Div height="1px" background="#EBEBEB"></Div>
+    </GridContainer>
+    <UpcomingDates
+      style={{
+        padding: "40px 0"
+      }}
+      id="upcoming_dates"
+      lang={pageContext.lang}
+      message={courseDetails.upcoming.no_dates_message}
+    />
     <GridContainer padding_tablet="0" margin_tablet="0 0 62px 0">
       <Div height="1px" background="#EBEBEB"></Div>
     </GridContainer>
     <PricesAndPayment
+      id="prices_and_payment"
+      background={`linear-gradient(to bottom,
+        ${Colors.white} 0%,
+        ${Colors.white} 50%,
+        ${Colors.lightYellow} 50%,
+        ${Colors.lightYellow} 100%
+      )`}
       type={pageContext.slug}
       lang={pageContext.lang}
       session={session}
@@ -281,8 +438,7 @@ const Program = ({data, pageContext, yml}) => {
       title={yml.prices.heading}
       paragraph={yml.prices.sub_heading}
     />
-    <Testimonials lang={data.allTestimonialsYaml.edges} margin_tablet="75px 0 0 0" margin="45px 0 0 0" />
-    <OurPartners images={hiring.partners.images} marquee></OurPartners>
+    <Testimonials id="testimonials" lang={data.allTestimonialsYaml.edges} background={Colors.white}/>
   </>
   )
 };
@@ -376,6 +532,33 @@ export const query = graphql`
             list{
               label
               content
+            }
+          }
+          tools_and_tech {
+            topic
+            list{
+              title
+              image{
+                childImageSharp {
+                  gatsbyImageData(
+                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                    width: 30
+                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                    quality: 100
+                    # breakpoints:	[200, 340, 520, 890]
+                  )
+                }
+              }
+              description
+            }
+          }
+          what_includes {
+            title
+            description
+            list{
+              title
+              icon
+              description
             }
           }
           button{

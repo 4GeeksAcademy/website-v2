@@ -30,9 +30,9 @@ const ScrollSpy = ({
     const onScrollHandler = throttle(() => {
       const scrollElement = document.scrollingElement || document.documentElement;
 
-      console.log("scrollElement.scrollTop", scrollElement.scrollTop)
-      console.log("offsetTop", offsetTop)
-      console.log("scrollElement.scrollTop + offsetTop", scrollElement.scrollTop + offsetTop)
+      // console.log("scrollElement.scrollTop", scrollElement.scrollTop)
+      // console.log("offsetTop", offsetTop)
+      // console.log("scrollElement.scrollTop + offsetTop", scrollElement.scrollTop + offsetTop)
       const center = {
         x: scrollElement.scrollLeft + window.innerWidth / 2,
         y: scrollElement.scrollTop + offsetTop,

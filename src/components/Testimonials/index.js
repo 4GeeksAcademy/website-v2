@@ -17,17 +17,17 @@ const Testimonials = (props) => {
     return (
 
         <Fragment github="/new_components/testimonials">
-            <GridContainer fluid background="linear-gradient(#f5f5f5, white)" height="425px" margin={props.margin} margin_tablet={props.margin_tablet} padding="30px 17px 60px 17px" padding_tablet="48px 0 36px 0">
+            <GridContainer id={props.id} fluid background={ props.background || "linear-gradient(#f5f5f5, white)"} height="425px" margin={props.margin} margin_tablet={props.margin_tablet} padding="30px 17px 60px 17px" padding_tablet="48px 0 36px 0">
                 <H2>{testimonialsArray.heading}</H2>
                 <Link to={testimonialsArray.button_link}><Paragraph margin="25px 0 36px 0" color={Colors.blue}>{testimonialsArray.button_text}</Paragraph></Link>
 
                 {/* MARQUEE_V2 
 
-                        you can modify:
-                            speed: number <int | dec>
-                            reversed: boolean
-                            containerStyle
-                    */}
+                    you can modify:
+                        speed: number <int | dec>
+                        reversed: boolean
+                        containerStyle
+                */}
                 <Marquee_v2
                     speed={0.7}
                     reversed={false}

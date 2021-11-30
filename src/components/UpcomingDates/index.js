@@ -52,7 +52,7 @@ let modality = {
     part_time: "Full Stack Developer - Part Time"
 };
 
-const UpcomingDates = ({lang, location, message}) => {
+const UpcomingDates = ({id, style, lang, location, message}) => {
     const dataQuery = useStaticQuery(graphql`
     {
       allUpcomingDatesYaml {
@@ -140,7 +140,7 @@ const UpcomingDates = ({lang, location, message}) => {
         }
     }, [session]);
     return (
-        <GridContainer padding_tablet="0" margin_tablet="0 0 48px 0">
+        <GridContainer id={id} style={style} margin_tablet="0 0 48px 0">
             <Div flexDirection="column">
                 <Div padding="0 0 30px 0" style={{borderBottom: "1px solid black"}} justifyContent_md="between" flexDirection="column" flexDirection_tablet="row" alignItems_tablet="center">
                     <H3 textAlign="left" width="188px">Next Dates</H3>

@@ -110,7 +110,7 @@ what_will_you_learn:
     distintas plataformas web. Obtendrás las habilidades y conocimientos para crear un sitio 
     web sumergiéndote en las mejores prácticas del diseño web responsivo, trabajando con diversos lenguajes.
   "
-  image: "../../../static/images/locations/miami-people2.jpeg"
+  image: "../../../static/images/learn_to_code.png"
   image_alt: "Qué aprenderás en el curso"
 
 content_with_subtitle_and_image:
@@ -145,6 +145,87 @@ content_with_subtitle_and_image:
 
         Al convertirte en un full stack developer estos términos no serán ajenos a tí y <strong>¡Vivirás con 
         ellos para crear cosas increíbles!</strong>"
+
+tools_and_tech:
+  - topic: "Herramientas y lenguajes de programación que aprenderás"
+    list:
+      - title: "Html"
+        image: "../../../static/images/techs/html.png"
+        description: |-
+          "lorem ipsum dolor sit amet, congue, sed"
+      - title: "Css"
+        image: "../../../static/images/techs/css.png"
+        description: |-
+          "Lorem ipsum dolor sit amet, con"
+      - title: "Python"
+        image: "../../../static/images/techs/python.png"
+        description: |-
+          "Python es el lenguaje de más rápido crecimiento en el mundo, es el idioma principal en 
+          prácticamente todas las industrias. Junto con React.js y Javascript, enseñamos la pila de 
+          tecnologías más deseada que las empresas desean en la actualidad."
+      - title: "React.js"
+        image: "../../../static/images/techs/react.png"
+        description: |-
+          "Lorem ipsum dolor sit amet, con"
+      - title: "DOM"
+        image: "../../../static/images/techs/dom.png"
+        description: |-
+          "Lorem ipsum dolor sit amet, con"
+      - title: "SQL"
+        image: "../../../static/images/techs/sql.png"
+        description: |-
+          "Lorem ipsum dolor sit amet, con"
+      - title: "Flask"
+        image: "../../../static/images/techs/flask.png"
+        description: |-
+          "Lorem ipsum dolor sit amet, con"
+
+what_includes:
+  - title: "¿Qué incluye?"
+    description: "Para convertirse en programador no sólo es necesario el conocimiento de herramientas 
+      y lenguajes, sino que también es importante contar con ayuda cuando tienes dudas, 
+      superar las frustraciones de aprender a programar y tener compañía en tu introducción 
+      en el mundo laboral como desarrollador Jr. En un curso de programación web tradicional 
+      recibirás la formación técnica, pero no necesariamente tendrás acceso a otros beneficios 
+      que te harán un full  stack developer integral."
+    list:
+      - title: "> Todas las Mentorías que Necesitas"
+        icon: "chat-2"
+        description: "En línea y en persona, por el resto de tu vida, incluso para aclarar dudas de tu código 
+          relacionadas a tu trabajo. Ajustamos las sesiones según tu calendario, te aseguramos que 
+          tienes la oportunidad de una mentoría constante siempre que la necesites."
+
+      - title: "> Proporción Profesor: Estudiante 1:5"
+        icon: "hierarchy"
+        description: "Encontrarás más profesores en 4Geeks que el promedio de la industria."
+
+      - title: "> Tiempo de Respuesta"
+        icon: "chronometer"
+        description: "No te quedes atascado con tu código, no te llevará más de 15 minutos para que 
+          un instructor te ayude a través de alguno de los canales de nuestra comunidad."
+
+      - title: "> Instructores con Clases en Vivo"
+        icon: "instructor"
+        description: "Las clases 4Geeks son totalmente en vivo. Estar conectado con instructores y 
+          compañeros hace la experiencia más enriquecedora."
+
+      - title: "> Acceso a Plataforma de Lecciones, Ejercicios y Canales de la Comunidad"
+        icon: "screen"
+        description: "Al ser estudiante en 4Geeks tendrás acceso a la plataforma oficinal de clases 
+          y pertenecerás a una comunidad formada exclusivamente por alumnos, graduados, instructores 
+          y personal de la academia listo para ayudar."
+
+      - title: "> Acceso a Plataforma de Lecciones, Ejercicios y Canales de la Comunidad"
+        icon: "notes-2"
+        description: "Basado en cada oportunidad laboral, recibirás coaching en habilidades además 
+          de las relacionadas a programar. 
+          Te ayudaremos a perfeccionar tu perfil profesional. Contarás con la asesoría personalizada 
+          con nuestros expertos para mejorar tu CV, Linkedin, GitHub y Portafolio.
+          Realizaremos simulacros de entrevistas para evaluar tus fortalezas y debilidades para crear 
+          un perfil más fuerte antes de las entrevistas reales. Cada vez que tenga una entrevista, practicaremos 
+          el uso de diferentes tecnologías. Tenemos nuestro propio grupo de ejercicios autocalificados, por lo 
+          que puede practicar hasta que domine las habilidades para obtener el trabajo que desea."
+
 
 syllabus:
   heading: Descarga toda la infomación sobre este programa
