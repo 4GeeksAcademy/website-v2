@@ -83,8 +83,8 @@ const GeekPal = (props) => {
       {Array.isArray(content.list) && content.list.map((m, i) => {
         return (
           <>
-            <GridContainerWithImage imageSide={i % 2 != 0 ? "left" : "right"} padding="24px 0 " padding_tablet="36px 0 100px 0" columns_tablet="14" margin="120px 0 24px 0" margin_tablet="0">
-              <Div flexDirection="column" justifyContent_tablet="start" padding="0px 40px 48px" padding_tablet="0" gridArea_tablet={i % 2 == 0 ? "1/1/1/6" : "1/7/1/13"}>
+            <GridContainerWithImage imageSide={i % 2 != 0 ? "left" : "right"} padding_tablet="36px 0 100px 0" columns_tablet="14" margin_tablet="0">
+              <Div flexDirection="column" justifyContent_tablet="start" padding="0px 24px 0" padding_tablet="0" gridArea_tablet={i % 2 == 0 ? "1/1/1/6" : "1/7/1/13"}>
                 <H2 key={i} type="h2" padding="20px 0" lineHeight="36px" textAlign="center" textAlign_tablet="left" margin="0" fontWeight="900" fontSize="30px">{m.title}</H2>
                 {
                   m.sub ? (
