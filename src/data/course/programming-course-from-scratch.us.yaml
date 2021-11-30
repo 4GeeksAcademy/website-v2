@@ -97,6 +97,24 @@ details:
       duration: "3.5 wks"
       step: 3.5
 
+sticky_nav:
+  - title: "About"
+    href: "#about_the_program"
+  - title: "What will you learn"
+    href: "#what_will_you_learn"
+  - title: "What does it mean"
+    href: "#what_does_it_mean_full_stack_developer"
+  - title: "Tools and languages"
+    href: "#tools_and_tech"
+  - title: "What includes?"
+    href: "#what_includes"
+  - title: "Dates"
+    href: "#upcoming_dates"
+  - title: "Prices"
+    href: "#prices_and_payment"
+  - title: "Students"
+    href: "#testimonials"
+
 what_will_you_learn:
   heading: "What will you learn in this course?"
   sub_title: "Learning to program is also about developing logic and understanding how a computer “thinks”, 

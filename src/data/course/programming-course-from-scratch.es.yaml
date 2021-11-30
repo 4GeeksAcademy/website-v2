@@ -96,6 +96,24 @@ details:
       duration: "2 sem"
       step: 3.4
 
+sticky_nav:
+  - title: "Acerca de"
+    href: "#about_the_program"
+  - title: "Qué Aprenderás"
+    href: "#what_will_you_learn"
+  - title: "Qué significa"
+    href: "#what_does_it_mean_full_stack_developer"
+  - title: "Herramientas y lenguajes"
+    href: "#tools_and_tech"
+  - title: "Qué incluye?"
+    href: "#what_includes"
+  - title: "Fechas"
+    href: "#upcoming_dates"
+  - title: "Precios"
+    href: "#prices_and_payment"
+  - title: "Alumnos"
+    href: "#testimonials"
+
 what_will_you_learn:
   heading: "¿Qué aprenderás en el curso?"
   sub_title: "Aprender a programar se trata también de desarrollar la lógica y entender cómo “piensa” 

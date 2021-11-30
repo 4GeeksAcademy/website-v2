@@ -29,41 +29,6 @@ const Program = ({data, pageContext, yml}) => {
 
   const [buttonToggle, setButtonToggle] = useState(false);
 
-  const contentNav = [
-    {
-      title: "Acerca de",
-      href: "#about_the_program",
-    },
-    {
-      title: "Qué Aprenderás",
-      href: "#what_will_you_learn",
-    },
-    {
-      title: "Qué significa",
-      href: "#what_does_it_mean_full_stack_developer",
-    },
-    {
-      title: "Herramientas y lenguajes",
-      href: "#tools_and_tech",
-    },
-    {
-      title: "Qué incluye?",
-      href: "#what_includes",
-    },
-    {
-      title: "Fechas",
-      href: "#upcoming_dates"
-    },
-    {
-      title: "Precios",
-      href: "#prices_and_payment"
-    },
-    {
-      title: "Alumnos",
-      href: "#testimonials"
-    }
-  ]
-
   return (<>
     <GridContainerWithImage id="bottom"
       background={Colors.veryLightBlue2}
@@ -120,7 +85,7 @@ const Program = ({data, pageContext, yml}) => {
       height="70px"
     >
       <ScrollSpy offsetTop={80}>
-        {contentNav.map((nav) => (
+        {yml.sticky_nav.map((nav) => (
           <a key={nav.href} width="auto" padding="0 20px" href={nav.href} ref={React.createRef()}>
             <Paragraph textTransform="uppercase" width="max-content">{nav.title}</Paragraph>
           </a>
@@ -514,6 +479,10 @@ export const query = graphql`
               }
             }
             image_alt
+          }
+          sticky_nav{
+            title
+            href
           }
           content_with_subtitle_and_image{
             heading
