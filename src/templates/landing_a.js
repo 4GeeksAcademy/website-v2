@@ -80,10 +80,10 @@ const Landing = (props) => {
         </Paragraph>
       </FollowBar>
 
-      <StyledBackgroundSection
+      <Div
         id="top"
         className={`image`}
-        image={yml.header_data.image && yml.header_data.image.childImageSharp.gatsbyImageData}
+        // image={yml.header_data.image && yml.header_data.image.childImageSharp.gatsbyImageData}
         bgSize={`cover`}
         // width="58%"
         width_tablet="100%"
@@ -91,7 +91,7 @@ const Landing = (props) => {
         // w_xs="100%"
         margin="0 0 auto 0"
         filter={yml.header_data.image_filter}
-        backgroundColor={Colors.lightGray}
+        background={Colors.lightYellow}
         align="center"
         alt="4Geeks Academy"
         borderRadius="0"
@@ -140,7 +140,7 @@ const Landing = (props) => {
               lineHeight="40px"
               margin="20px 0"
               padding="0 10px 0 0px"
-              color={Colors.white}
+              color={Colors.black}
               fontSize="38px"
               fontSize_tablet="42px"
               fontWeight="bolder"
@@ -150,12 +150,11 @@ const Landing = (props) => {
             </H1>
             {
               yml.header_data.sub_heading !== "" && 
-              <H2 type="h2" textAlign="left" fontSize="18px" color={Colors.white}
+              <H2 type="h2" textAlign="left" fontSize="18px" color={Colors.black}
                 variant="main"
                 margin_tablet="20px 0px 40px 0px"
                 margin="20px 0 20px 10px"
                 maxWidth="350px"
-                textShadow="0px 0px 4px black"
               >
                 {yml.header_data.sub_heading}
               </H2>
@@ -167,9 +166,9 @@ const Landing = (props) => {
                   style={JSON.parse(yml.features.styles)}
                   margin="7px 0"
                   padding="0px 20px"
-                  textShadow="0px 0px 4px black"
+                  // textShadow="0px 0px 4px black"
                   textAlign="left"
-                  color={Colors.white}>{'• '}{f}</Paragraph>
+                  color={Colors.black}>{'• '}{f}</Paragraph>
               )}
             {yml.features.text && 
               <Paragraph
@@ -217,7 +216,7 @@ const Landing = (props) => {
             />
           </Div>
         </GridContainer>
-      </StyledBackgroundSection>
+      </Div>
 
       {
         Object.keys(components)

@@ -153,27 +153,25 @@
     background-color: #c8c3d8;
 }
 
-p.sidebar-content {
+.container-sidebar-content a {
     padding: 0 30px;
     transition: all 0.3s ease;
 }
-p.sidebar-content:hover {
+a.active:hover {
     border-left: 3px solid #0097CD;
 }
 
-.container-sidebar-content p.sidebar-content.selected-border {
+.container-sidebar-content a.active {
     border-left: 3px solid #0097CD;
+    color:#0097CE;
 }
 
-p.sidebar-content a {
+.container-sidebar-content a {
     color: #000000;
     font-size: 13px;
 }
-p.sidebar-content a:hover {
+.container-sidebar-content a:hover {
     color: #0097CE;
     transition: color 0.3s ease;
     font-size: 13px;
-}
-p.sidebar-content a.selected {
-    color:#0097CE;
 }

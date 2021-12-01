@@ -27,12 +27,17 @@ const ScrollSpy = ({
       };
     };
 
+    const isBetween = (curr, next, value) => {
+      if(next !== undefined) {
+        return value >= Math.min(curr, next) && value <= Math.max(curr, next);
+      }
+      return value >= curr
+    };
+
     const onScrollHandler = throttle(() => {
       const scrollElement = document.scrollingElement || document.documentElement;
 
-      // console.log("scrollElement.scrollTop", scrollElement.scrollTop)
-      // console.log("offsetTop", offsetTop)
-      // console.log("scrollElement.scrollTop + offsetTop", scrollElement.scrollTop + offsetTop)
+      console.log("center.y", scrollElement.scrollTop + offsetTop)
       const center = {
         x: scrollElement.scrollLeft + window.innerWidth / 2,
         y: scrollElement.scrollTop + offsetTop,
@@ -47,13 +52,14 @@ const ScrollSpy = ({
           center.x < target.offsetLeft + target.offsetWidth;
 
         const visibleVertical =
-          target.offsetTop >= 0 &&
-          center.y >= target.offsetTop &&
-          center.y < target.offsetTop + target.offsetHeight;
+          isBetween(target.offsetTop, targetElements[i + 1]?.offsetTop, center.y);
+          // target.offsetTop >= 0 &&
+          // center.y >= target.offsetTop
+          // center.y < target.offsetTop + target.offsetHeight;
 
         if (visibleVertical && visibleHorizontal) {
           source.classList.add(className);
-        } else {
+        } else if (!visibleVertical) {
           source.classList.remove(className);
         }
 
