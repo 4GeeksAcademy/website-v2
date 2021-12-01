@@ -1,16 +1,16 @@
 import React, {useEffect} from 'react';
 import {graphql, navigate} from 'gatsby';
-import {landingSections} from '../new_components/Landing';
-import FollowBar from "../new_components/FollowBar"
-import LeadForm from "../new_components/LeadForm";
-import {H1, H2, H4, Paragraph, Span} from '../new_components/Heading'
-import {GridContainerWithImage, Div, GridContainer} from '../new_components/Sections'
-import {Colors, StyledBackgroundSection} from '../new_components/Styling'
+import {landingSections} from '../components/Landing';
+import FollowBar from "../components/FollowBar"
+import LeadForm from "../components/LeadForm";
+import {H1, H2, H4, Paragraph, Span} from '../components/Heading'
+import {GridContainerWithImage, Div, GridContainer} from '../components/Sections'
+import {Colors, StyledBackgroundSection} from '../components/Styling'
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import BaseRender from './_baseLandingLayout'
 import {processFormEntry} from "../actions";
 import {SessionContext} from '../session.js'
-import LandingNavbar from '../new_components/NavbarDesktop/landing';
+import LandingNavbar from '../components/NavbarDesktop/landing';
 
 const Landing = (props) => {
   const {session, setLocation} = React.useContext(SessionContext);

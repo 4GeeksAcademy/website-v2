@@ -2,10 +2,10 @@ import React, {useState} from 'react';
 import {graphql} from 'gatsby'
 import Link from 'gatsby-link'
 import Layout from '../global/Layout';
-import {Grid, Div, GridContainerWithImage, GridContainer} from '../new_components/Sections'
-import {H1, H2, H3, Paragraph} from '../new_components/Heading'
-import {Colors, Button, StyledBackgroundSection} from '../new_components/Styling'
-import Badges from '../new_components/Badges'
+import {Grid, Div, GridContainerWithImage, GridContainer} from '../components/Sections'
+import {H1, H2, H3, Paragraph} from '../components/Heading'
+import {Colors, Button, StyledBackgroundSection} from '../components/Styling'
+import Badges from '../components/Badges'
 import BaseRender from './_baseLayout'
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 

@@ -1,13 +1,13 @@
 import React, {useState, useContext} from 'react';
-import {Colors} from '../new_components/Styling'
+import {Colors} from '../components/Styling'
 import BaseRender from './_baseLayout'
 import {SessionContext} from '../session'
 
 import Link from 'gatsby-link'
-import Icon from '../new_components/Icon'
-import Card from '../new_components/Card'
-import {Divider, Div, GridContainer, Header} from '../new_components/Sections'
-import {H1, H2, H3, H4, Paragraph} from '../new_components/Heading'
+import Icon from '../components/Icon'
+import Card from '../components/Card'
+import {Divider, Div, GridContainer, Header} from '../components/Sections'
+import {H1, H2, H3, H4, Paragraph} from '../components/Heading'
 
 const Faq = (props) => {
   const {data, pageContext, yml} = props;

@@ -1,11 +1,11 @@
 import React, {useState} from 'react';
 import Layout from '../global/Layout';
 import styled, {css, keyframes} from 'styled-components';
-import {Div, Header, Wrapper, WrapperImage, Divider} from '../new_components/Sections'
-import {H2, H3, Title, Separator, Paragraph} from '../new_components/Heading'
-import {Colors, Button, StyledBackgroundSection} from '../new_components/Styling'
+import {Div, Header, Wrapper, WrapperImage, Divider} from '../components/Sections'
+import {H2, H3, Title, Separator, Paragraph} from '../components/Heading'
+import {Colors, Button, StyledBackgroundSection} from '../components/Styling'
 import BaseRender from './_baseLayout'
-import JobInfo from '../new_components/JobInfo'
+import JobInfo from '../components/JobInfo'
 import Link from 'gatsby-link'
 
 const Jobs = ({data, pageContext, yml}) => {

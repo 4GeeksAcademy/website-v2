@@ -1,21 +1,21 @@
 import React, {useState, useEffect, useRef, Suspense, lazy} from 'react';
-import ChooseProgram from '../new_components/ChooseProgram'
-import Badges from '../new_components/Badges'
-import Loc from '../new_components/Loc'
-import OurPartners from '../new_components/OurPartners'
-import ChooseYourProgram from '../new_components/ChooseYourProgram'
-import UpcomingDates from '../new_components/UpcomingDates'
-import Staff from '../new_components/Staff';
+import ChooseProgram from '../components/ChooseProgram'
+import Badges from '../components/Badges'
+import Loc from '../components/Loc'
+import OurPartners from '../components/OurPartners'
+import ChooseYourProgram from '../components/ChooseYourProgram'
+import UpcomingDates from '../components/UpcomingDates'
+import Staff from '../components/Staff';
 import 'dayjs/locale/de'
-import {Div, GridContainerWithImage, GridContainer} from '../new_components/Sections'
-import {H1, H2, Paragraph} from '../new_components/Heading'
-import {Colors, StyledBackgroundSection} from '../new_components/Styling'
+import {Div, GridContainerWithImage, GridContainer} from '../components/Sections'
+import {H1, H2, Paragraph} from '../components/Heading'
+import {Colors, StyledBackgroundSection} from '../components/Styling'
 import BaseRender from './_baseLayout'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
-import Icon from '../new_components/Icon'
+import Icon from '../components/Icon'
 
-const MapFrame = lazy(() => import('../new_components/MapFrame'));
+const MapFrame = lazy(() => import('../components/MapFrame'));
 
 const Location = ({data, pageContext, yml}) => {
   const {lang} = pageContext;

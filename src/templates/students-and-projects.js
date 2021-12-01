@@ -1,12 +1,12 @@
 import React, {useState} from 'react';
-import {Title, H1, H2, H3, H4, H5, Paragraph} from '../new_components/Heading';
+import {Title, H1, H2, H3, H4, H5, Paragraph} from '../components/Heading';
 import BaseRender from './_baseLayout';
-// new_components
-import News from '../new_components/News';
-import Icon from '../new_components/Icon';
-import {Colors, StyledBackgroundSection, Anchor, Span} from '../new_components/Styling'
-import {GridContainer, Div, Header} from "../new_components/Sections";
-import ReactPlayer from '../new_components/ReactPlayer'
+// components
+import News from '../components/News';
+import Icon from '../components/Icon';
+import {Colors, StyledBackgroundSection, Anchor, Span} from '../components/Styling'
+import {GridContainer, Div, Header} from "../components/Sections";
+import ReactPlayer from '../components/ReactPlayer'
 
 
 

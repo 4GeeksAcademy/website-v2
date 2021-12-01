@@ -2,15 +2,15 @@ import React, {useState} from 'react';
 import BaseRender from './_baseLayout'
 
 //new components
-import Icon from '../new_components/Icon'
-import {Colors} from '../new_components/Styling'
-import ReactPlayer from '../new_components/ReactPlayer'
-import OurPartners from '../new_components/OurPartners'
-import IconsBanner from '../new_components/IconsBanner'
-import {Div, Grid, HR, GridContainerWithImage, GridContainer} from '../new_components/Sections'
-import {H1, H2, H3, Paragraph} from '../new_components/Heading'
-import {Button, RoundImage} from '../new_components/Styling'
-import {StyledBackgroundSection} from '../new_components/Styling'
+import Icon from '../components/Icon'
+import {Colors} from '../components/Styling'
+import ReactPlayer from '../components/ReactPlayer'
+import OurPartners from '../components/OurPartners'
+import IconsBanner from '../components/IconsBanner'
+import {Div, Grid, HR, GridContainerWithImage, GridContainer} from '../components/Sections'
+import {H1, H2, H3, Paragraph} from '../components/Heading'
+import {Button, RoundImage} from '../components/Styling'
+import {StyledBackgroundSection} from '../components/Styling'
 
 const GeekForce = (props) => {
   const {data, pageContext, yml} = props;
@@ -83,8 +83,8 @@ const GeekForce = (props) => {
       {Array.isArray(content.list) && content.list.map((m, i) => {
         return (
           <>
-            <GridContainerWithImage imageSide={i % 2 != 0 ? "left" : "right"} padding="24px 0 " padding_tablet="36px 0 100px 0" columns_tablet="14" margin="120px 0 24px 0" margin_tablet="0">
-              <Div flexDirection="column" justifyContent_tablet="start" padding="0px 40px 48px" padding_tablet="0" gridArea_tablet={i % 2 == 0 ? "1/1/1/6" : "1/7/1/13"}>
+            <GridContainerWithImage imageSide={i % 2 != 0 ? "left" : "right"} padding_tablet="36px 0 100px 0" columns_tablet="14" margin_tablet="0">
+              <Div flexDirection="column" justifyContent_tablet="start" padding="0px 24px 0" padding_tablet="0" gridArea_tablet={i % 2 == 0 ? "1/1/1/6" : "1/7/1/13"}>
                 <H2 key={i} type="h2" padding="20px 0" lineHeight="36px" textAlign="center" textAlign_tablet="left" margin="0" fontWeight="900" fontSize="30px">{m.title}</H2>
                 {
                   m.sub ? (

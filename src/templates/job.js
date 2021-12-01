@@ -1,12 +1,12 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { graphql, Link } from 'gatsby';
-import Icon from '../new_components/Icon';
-import ApplyJobModal from '../new_components/ApplyJobModal';
-import { GridContainer, Div } from '../new_components/Sections';
-import { H1, H4, Paragraph } from '../new_components/Heading';
-import { Button, Colors } from '../new_components/Styling';
+import Icon from '../components/Icon';
+import ApplyJobModal from '../components/ApplyJobModal';
+import { GridContainer, Div } from '../components/Sections';
+import { H1, H4, Paragraph } from '../components/Heading';
+import { Button, Colors } from '../components/Styling';
 import BaseRender from './_baseLayout';
-import {Alert, Input} from "../new_components/Form/index";
+import {Alert, Input} from "../components/Form/index";
 
 const Job = ({ data, pageContext, yml }) => {
   const [open, setOpen] = React.useState(false);

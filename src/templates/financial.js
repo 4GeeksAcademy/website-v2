@@ -1,12 +1,12 @@
 import React from 'react';
-import { Colors} from '../new_components/Styling';
+import { Colors} from '../components/Styling';
 import BaseRender from './_baseLayout';
 import {SessionContext} from '../session.js'
 
-// new_components
-import FinancialFilter from '../new_components/FinancialFilter';
-import { Header } from '../new_components/Sections'
-import {Div} from '../new_components/Sections'
+// components
+import FinancialFilter from '../components/FinancialFilter';
+import { Header } from '../components/Sections'
+import {Div} from '../components/Sections'
 
 
 const SVGBubblesLeft = () => 
