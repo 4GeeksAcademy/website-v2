@@ -169,11 +169,27 @@ tools_and_tech:
       - title: "Html"
         image: "../../../static/images/techs/html.png"
         description: |-
-          "lorem ipsum dolor sit amet, congue, sed"
-      - title: "Css"
+          "HTML5 es la quinta versión de HTML. En términos generales, HTML, es el lenguaje que permite construir la estructura de una página web. 
+          HTML le dice al navegador cómo mostrar el contenido (imágenes y texto) de un website. 
+          Aunque podemos decir que HTML es un lenguaje, no es un lenguaje de programación. 
+          La verdad es que hay lenguajes de programación, de scripting (secuencia de comandos) y de markup. 
+          HTML es un lenguaje de markup que se usa para darle forma a la información que se presenta en una vista del website. 
+
+          HTML5 tiene varias ventajas que no aplican para HTML. Por ejemplo: 
+
+          Es más amigable para navegación en el celular
+          Ayuda a crear páginas más dinámicas porque funciona con audio y video 
+          Tiene múltiples opciones de almacenamiento (no solo en el caché del navegador)
+          Es más leniente con los errores de sintaxis en el código.
+          
+          Existen varias otras ventajas más técnicas que aprenderás en el camino a convertirte en full stack developer en el curso online de 4Geeks Academy."
+      - title: "CSS"
         image: "../../../static/images/techs/css.png"
         description: |-
-          "Lorem ipsum dolor sit amet, con"
+          "CSS describe cómo los elementos de HTML deben ser mostrados en la pantalla. 
+          CSS separa, distribuye contenido y da forma a la presentación del mismo en una página web. 
+          CSS es lo que permite que un website sea responsivo (que se adapte a cualquier pantalla), 
+          y además de esta propiedad tiene como beneficio que ayuda a definir el estilo de toda  la página -evita el trabajo de crear estilos página por página. "
       - title: "Python"
         image: "../../../static/images/techs/python.png"
         description: |-
@@ -183,19 +199,30 @@ tools_and_tech:
       - title: "React.js"
         image: "../../../static/images/techs/react.png"
         description: |-
-          "Lorem ipsum dolor sit amet, con"
+          "Es una librería JavaScript desarrollada por el equipo de tecnología de Facebook para desarrollar interfaces de usuario. 
+          En este contexto librería,  es un archivo con instrucciones para agregarle funcionalidades y efectos a un website.  
+          Desde su lanzamiento en 2013 se ha convertido hoy en día en una de las tecnologías front-end más utilizadas. 
+          React funciona con componentes, los cuales son piezas independientes de interfaz de usuario. 
+          Éstos son independientes y pueden ser reutilizados para crear interfaces complejas."
       - title: "DOM"
         image: "../../../static/images/techs/dom.png"
         description: |-
-          "Lorem ipsum dolor sit amet, con"
+          "El DOM (Modelo de Objetos de Documento) es la representación de datos de los objetos que componen la estructura y el contenido de un documento en la web,
+          por lo tanto funciona como una interfaz que permite navegar por la estructura de documentos que genera el navegador, 
+          y a través de él se puede añadir, modificar, o eliminar elementos y contenido."
       - title: "SQL"
         image: "../../../static/images/techs/sql.png"
         description: |-
-          "Lorem ipsum dolor sit amet, con"
+          "Es el lenguaje estándar para la gestión de bases relacionales. 
+          SQL se usa para comunicarse con una base de datos. 
+          A través de SQL se puede obtener y actualizar información de una base de datos."
       - title: "Flask"
         image: "../../../static/images/techs/flask.png"
         description: |-
-          "Lorem ipsum dolor sit amet, con"
+          "Flask es un framework escrito en Python. 
+          Un framework, o un framework para aplicaciones web es un conjunto de librerías, funcionalidades y módulos 
+          ya creados que permiten que los desarrolladores escriban código sin preocuparse por detalles en la programación. 
+          Un framework permite el desarrollo ágil de aplicaciones."
 
 what_includes:
   - title: "¿Qué incluye?"
