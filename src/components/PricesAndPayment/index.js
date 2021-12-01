@@ -117,7 +117,7 @@ const PricesAndPayments = (props) => {
 
   const apply_button_text = session && session.location ? session.location.button.apply_button_text : "Apply";
   return (
-    <Div github="/location" flexDirection="column" margin="50px 0" margin_tablet="70px 0">
+    <Div id={props.id} background={props.background} github="/location" flexDirection="column" padding="50px 0" padding_tablet="70px 0">
       <GridContainer margin_tablet="0 0 25px 0">
         <Div
           display="flex"
@@ -157,7 +157,7 @@ const PricesAndPayments = (props) => {
             />
             // </GridContainer>
           }
-          <Link to={info.button.button_link}><Button variant="full" color={Colors.black} margin="0 0 0 10px" textColor={Colors.white}>{info.button.button_text}</Button></Link>
+          <Link to={info.button.button_link} ><Button variant="full" color={Colors.black} margin="25px 0 25px 10px" margin_tablet="0 0 0 10px" textColor={Colors.white}>{info.button.button_text}</Button></Link>
         </Div>
       </GridContainer>
 

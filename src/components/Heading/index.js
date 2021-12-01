@@ -174,6 +174,7 @@ export const Paragraph = styled.p`
   font-weight: ${props => props.isActive ? "bold" : props.fontWeight || "400"};
   max-width: ${props => props.maxWidth};
   padding: ${props => props.padding};
+  text-transform: ${props => props.textTransform};
   padding-right: ${props => props.paddingRight || "innitial"};
   letter-spacing: ${props => props.letterSpacing};
   text-shadow: ${props => props.textShadow}; 

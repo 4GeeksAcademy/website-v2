@@ -49,7 +49,7 @@ const ProgramDetails = (props) => {
     }, [])
     return (
         <>
-            <GridContainer columns_tablet="2" background={props.background || Colors.verylightGray} padding_tablet="76px 0" padding="50px 17px" gridGap="50px">
+            <GridContainer id={props.id} columns_tablet="2" background={props.background || Colors.verylightGray} padding_tablet="76px 0" padding="50px 17px" gridGap="50px">
                 <Div flexDirection="column" >
                     <H3 textAlign="left" margin="0 0 20px 0">{props.details.about?.title && props.details.about?.title}</H3>
                     {props.details.about?.sub_title.split("\n").map((m, i) =>
@@ -80,7 +80,8 @@ const ProgramDetails = (props) => {
                 </Div>
 
             </GridContainer>
-            <GridContainer padding_tablet="0" margin_tablet="0 0 83px 0" justifyItems="center">
+            {props.withoutAnimation !== true && (
+                <GridContainer padding_tablet="0" margin_tablet="0 0 83px 0" justifyItems="center">
                 <Div
                     flexDirection="column"
                     display="none"
@@ -176,8 +177,8 @@ const ProgramDetails = (props) => {
                         </Div>
                     </Div>
                 </Div>
-                {/* <Button variant="empty" color={Colors.blue} icon={<Icon icon="download" style={{marginRight: "10px"}} width="46px" height="46px" />}>Text</Button> */}
             </GridContainer>
+            )}
         </>
     )
 };
