@@ -1,9 +1,9 @@
 import React, {useState} from 'react';
-import {Header, GridContainer, Container, Div, Grid} from "../new_components/Sections";
-import {Title, H1, H2, H3, H4, H5, Paragraph} from '../new_components/Heading';
-import {Button, Colors, StyledBackgroundSection} from '../new_components/Styling';
-import ReactPlayer from '../new_components/ReactPlayer'
-import Icon from '../new_components/Icon'
+import {Header, GridContainer, Container, Div, Grid} from "../components/Sections";
+import {Title, H1, H2, H3, H4, H5, Paragraph} from '../components/Heading';
+import {Button, Colors, StyledBackgroundSection} from '../components/Styling';
+import ReactPlayer from '../components/ReactPlayer'
+import Icon from '../components/Icon'
 import BaseRender from './_baseLayout';
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 

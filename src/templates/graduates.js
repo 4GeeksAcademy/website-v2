@@ -2,12 +2,12 @@ import React, {useState} from 'react';
 import {graphql} from 'gatsby'
 import Link from 'gatsby-link'
 import Layout from '../global/Layout';
-import {Div, Divider} from '../new_components/Sections'
-import {H2, H3, H4, Title, Separator, Paragraph} from '../new_components/Heading'
-import {Colors, Button, StyledBackgroundSection} from '../new_components/Styling'
-import Card from '../new_components/Card'
+import {Div, Divider} from '../components/Sections'
+import {H2, H3, H4, Title, Separator, Paragraph} from '../components/Heading'
+import {Colors, Button, StyledBackgroundSection} from '../components/Styling'
+import Card from '../components/Card'
 import BaseRender from './_baseLayout'
-import AlumniProjects from '../new_components/AlumniProjects'
+import AlumniProjects from '../components/AlumniProjects'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 const Graduates = ({data, pageContext, yml}) => {

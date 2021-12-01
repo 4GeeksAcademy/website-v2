@@ -1,17 +1,17 @@
 import React, {useState, useEffect, useContext} from 'react';
-import {Header, Div, GridContainer} from '../new_components/Sections'
-import {H3, H4, Paragraph} from '../new_components/Heading'
-import {Colors, Button, Img, Anchor} from '../new_components/Styling'
-// import Icon from '../new_components/Icon'
-import Select from '../new_components/Select'
-// import UpcomingDates from '../new_components/UpcomingDates'
+import {Header, Div, GridContainer} from '../components/Sections'
+import {H3, H4, Paragraph} from '../components/Heading'
+import {Colors, Button, Img, Anchor} from '../components/Styling'
+// import Icon from '../components/Icon'
+import Select from '../components/Select'
+// import UpcomingDates from '../components/UpcomingDates'
 import {getCohorts, getEvents} from "../actions"
 import BaseRender from './_baseLayout'
 import dayjs from "dayjs"
 import 'dayjs/locale/de'
 import LazyLoad from 'react-lazyload';
 import {Link} from 'gatsby'
-import {Circle} from '../new_components/BackgroundDrawing'
+import {Circle} from '../components/BackgroundDrawing'
 import {SessionContext} from '../session'
 
 

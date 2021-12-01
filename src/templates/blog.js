@@ -1,12 +1,12 @@
 import React, {useState} from 'react'
 import Link from 'gatsby-link'
 import {navigate} from 'gatsby'
-import {H1, H2, H3, H4, Title, Separator, Paragraph, Span} from '../new_components/Heading'
-import {Button, RoundImage, Colors, StyledBackgroundSection} from '../new_components/Styling'
+import {H1, H2, H3, H4, Title, Separator, Paragraph, Span} from '../components/Heading'
+import {Button, RoundImage, Colors, StyledBackgroundSection} from '../components/Styling'
 import LazyLoad from 'react-lazyload';
 import BaseBlogRender from './_baseBlogLayout'
 import twitterUser from '../utils/twitter'
-import {GridContainer, Div, GridContainerWithImage} from '../new_components/Sections'
+import {GridContainer, Div, GridContainerWithImage} from '../components/Sections'
 
 //Functional Component: Blog
 const Blog = ({data, pageContext, yml}) => {

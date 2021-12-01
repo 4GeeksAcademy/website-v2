@@ -1,14 +1,14 @@
 import React from 'react';
-import {Container, Column, GridContainer, Div, Grid, Header} from '../new_components/Sections';
-import {Title, H1, H2, H3, H4, Paragraph, Separator} from '../new_components/Heading'
-import {Colors, StyledBackgroundSection} from '../new_components/Styling'
-import Badges from '../new_components/Badges'
-import OurPartners from '../new_components/OurPartners'
-import Credentials from '../new_components/Credentials'
+import {Container, Column, GridContainer, Div, Grid, Header} from '../components/Sections';
+import {Title, H1, H2, H3, H4, Paragraph, Separator} from '../components/Heading'
+import {Colors, StyledBackgroundSection} from '../components/Styling'
+import Badges from '../components/Badges'
+import OurPartners from '../components/OurPartners'
+import Credentials from '../components/Credentials'
 import BaseRender from './_baseLayout'
-import Staff from '../new_components/Staff';
-import Icon from '../new_components/Icon'
-import {Circle} from '../new_components/BackgroundDrawing'
+import Staff from '../components/Staff';
+import Icon from '../components/Icon'
+import {Circle} from '../components/BackgroundDrawing'
 
 const Why = (props) => {
   const {data, pageContext, yml} = props;

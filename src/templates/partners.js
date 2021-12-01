@@ -1,17 +1,17 @@
 import React, {useState, useRef} from 'react';
 import Link from 'gatsby-link'
 import {navigate} from 'gatsby';
-import {Column, Row, GridContainer, Header, Div, Grid} from "../new_components/Sections"
-import {H1, H2, H3, H4, Paragraph} from '../new_components/Heading'
-import {Button, Colors, StyledBackgroundSection} from '../new_components/Styling'
-import Badges from '../new_components/Badges'
-import OurPartners from '../new_components/OurPartners'
+import {Column, Row, GridContainer, Header, Div, Grid} from "../components/Sections"
+import {H1, H2, H3, H4, Paragraph} from '../components/Heading'
+import {Button, Colors, StyledBackgroundSection} from '../components/Styling'
+import Badges from '../components/Badges'
+import OurPartners from '../components/OurPartners'
 import BaseRender from './_baseLayout'
 import {beHiringPartner} from "../actions";
-import {Circle} from '../new_components/BackgroundDrawing'
-import Modal from '../new_components/Modal';
+import {Circle} from '../components/BackgroundDrawing'
+import Modal from '../components/Modal';
 import {SessionContext} from '../session'
-import LeadForm from "../new_components/LeadForm/index.js";
+import LeadForm from "../components/LeadForm/index.js";
 
 function rand () {
   return Math.round(Math.random() * 20) - 10;

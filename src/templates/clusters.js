@@ -1,9 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 import {graphql} from 'gatsby';
-import {H1, H2, H3, H4, H5, Title, Separator, Paragraph, Span} from '../new_components/Heading';
-import {Container, Row, Grid, Div, GridContainerWithImage, GridContainer} from '../new_components/Sections';
-import {StyledBackgroundSection, RoundImage, Colors, Button} from '../new_components/Styling'
+import {H1, H2, H3, H4, H5, Title, Separator, Paragraph, Span} from '../components/Heading';
+import {Container, Row, Grid, Div, GridContainerWithImage, GridContainer} from '../components/Sections';
+import {StyledBackgroundSection, RoundImage, Colors, Button} from '../components/Styling'
 import LazyLoad from 'react-lazyload';
 import BaseBlogRender from './_baseBlogLayout';
 import Link from "gatsby-link";

@@ -49,7 +49,7 @@ const GeeksVsOthers = props => {
   if (geeks) geeks = geeks.node;
 
   return (
-    <Fragment github="/new_components/geeks_vs_others">
+    <Fragment github="/components/geeks_vs_others">
       {props.title && props.paragraph &&
         <GridContainer margin_tablet="0 0 38px 0" margin="0 0 24px 0">
           <Div

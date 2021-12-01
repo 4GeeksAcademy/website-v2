@@ -1,9 +1,9 @@
 import React, {useState} from 'react';
 import BaseRender from './_baseLayout';
 
-// new_components
-import {Div, GridContainer} from "../new_components/Sections";
-import {H1, H2, H4, Paragraph} from '../new_components/Heading'
+// components
+import {Div, GridContainer} from "../components/Sections";
+import {H1, H2, H4, Paragraph} from '../components/Heading'
 
 
 const Terms = (props) => {

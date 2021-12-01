@@ -1,13 +1,13 @@
 import React, {useEffect, useState} from 'react'
-import {Paragraph} from '../new_components/Heading'
-import {RoundImage, Colors, Button, Link} from '../new_components/Styling'
-import CallToAction from '../new_components/CallToAction'
+import {Paragraph} from '../components/Heading'
+import {RoundImage, Colors, Button, Link} from '../components/Styling'
+import CallToAction from '../components/CallToAction'
 import Layout from '../global/Layout'
 import "../assets/css/single-post.css"
 import rehypeReact from "rehype-react"
 
-//FROM new_components
-import {GridContainer, Div, Header} from '../new_components/Sections'
+//FROM components
+import {GridContainer, Div, Header} from '../components/Sections'
 
 export default function Template (props) {
   const {data, pageContext} = props;

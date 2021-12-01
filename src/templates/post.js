@@ -1,18 +1,18 @@
 import React, {useContext} from 'react'
 import {Link} from 'gatsby'
-import {H1, Paragraph} from '../new_components/Heading'
-import {RoundImage, Colors, Button} from '../new_components/Styling'
+import {H1, Paragraph} from '../components/Heading'
+import {RoundImage, Colors, Button} from '../components/Styling'
 import Layout from '../global/Layout'
 import LazyLoad from 'react-lazyload';
 import twitterUser from '../utils/twitter'
-// import Icon from '../new_components/Icon'
+// import Icon from '../components/Icon'
 // import {TwitterFollowButton} from 'react-twitter-embed';
-import CallToAction from '../new_components/CallToAction'
+import CallToAction from '../components/CallToAction'
 import "../assets/css/single-post.css"
 import rehypeReact from "rehype-react"
 
-//FROM new_components
-import {GridContainer, Grid, Div, Header, Row, Column} from '../new_components/Sections'
+//FROM components
+import {GridContainer, Grid, Div, Header, Row, Column} from '../components/Sections'
 
 export default function Template (props) {
   const {data, pageContext} = props;
