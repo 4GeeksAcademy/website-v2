@@ -153,24 +153,21 @@
     background-color: #c8c3d8;
 }
 
-.container-sidebar-content a {
+.container-sidebar-content button {
     padding: 0 30px;
     transition: all 0.3s ease;
 }
-a.active:hover {
-    border-left: 3px solid #0097CD;
-}
 
-.container-sidebar-content a.active {
+.container-sidebar-content button.active {
     border-left: 3px solid #0097CD;
     color:#0097CE;
 }
 
-.container-sidebar-content a {
+.container-sidebar-content button {
     color: #000000;
     font-size: 13px;
 }
-.container-sidebar-content a:hover {
+.container-sidebar-content button:hover {
     color: #0097CE;
     transition: color 0.3s ease;
     font-size: 13px;

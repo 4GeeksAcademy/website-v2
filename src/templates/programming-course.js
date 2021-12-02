@@ -83,12 +83,13 @@ const Program = ({data, pageContext, yml}) => {
       gap="40px"
       width="100%"
       height="70px"
+      className="scroll-spy-container"
     >
-      <ScrollSpy offsetTop={80}>
+      <ScrollSpy offsetTop={80} autoScrollOffsetTop={-70}>
         {yml.sticky_nav.map((nav) => (
-          <a key={nav.href} width="auto" padding="0 20px" href={nav.href} ref={React.createRef()}>
+          <button key={nav.href} width="auto" padding="0 20px" href={nav.href} ref={React.createRef()}>
             <Paragraph textTransform="uppercase" width="max-content">{nav.title}</Paragraph>
-          </a>
+          </button>
           )
         )}
       </ScrollSpy>

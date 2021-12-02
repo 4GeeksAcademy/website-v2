@@ -87,12 +87,12 @@ export default function Template (props) {
           filteredH2.length >= 1 &&
           <Div gridColumn_tablet="4 ​/ span 1" margin="54px 0 0 0" display="none" display_md="flex" style={{position: "relative"}}>
             <Div className="container-sidebar-content" padding="25px 0" flexDirection="column" justifyContent="space-around" gap="16px" flexDirection="column" position="sticky" style={{boxShadow: "0px 2px 5px rgba(0, 0, 0, 0.1)", top: "85px"}} borderRadius="3px" border={`1px solid #e5e5e5`} width="250px" height="fit-content">
-            <ScrollSpy offsetTop={80}>
+            <ScrollSpy offsetTop={60} autoScrollOffsetTop={-60}>
               {
                 filteredH2.map((heading, i) => {
                   const {id, children} = heading.props
                   return (
-                    <a
+                    <button
                       onClick={() => setSelected(i)}
                       className={selected === i && 'selected'} 
                       ref={React.createRef()}
@@ -109,7 +109,7 @@ export default function Template (props) {
                       >
                           {children[1].props?.children?.toString().toUpperCase() || children[1].toString().toUpperCase()}
                       </Paragraph>
-                    </a >
+                    </button >
                   )}
                 )
               }
