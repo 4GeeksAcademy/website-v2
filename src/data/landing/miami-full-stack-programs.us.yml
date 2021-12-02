@@ -2,28 +2,28 @@ meta_info:
   slug: full-stack-programs # <--- URL 4geeksacademy.com/us/landing/example
 
   # This will show on social media when shared
-  title: "Coding Classes Online and in person, learn to code and get a better professional career"
-  description: "Coding has become an essencial knowledge for every career, take coding classes and learn to code and have a better life."
+  title: "Coding Classes Online and In-person, learn to code and set up your professional career"
+  description: "Coding has become an essencial knowledge for every career, take coding classes, learn to code and upskill your career."
   image: "/images/bg/main-bg.jpg"
   keywords: "Coding Classes, Learn to code, 4Geeks Academy"
-  
+
   template: "landing_a" # <--- choose your landing template
-  redirects: [
-    "/landing/full-stack-programs"
-  ] 
-  
+  redirects: ["/landing/full-stack-programs"]
+
   # Set a particular course or location to the landing page
   # this UTM fields will be also included in the CRM contact
-  utm_course: full-stack
+  utm_course: ["full-stack"]
   utm_location: downtown-miami
+  automation: soft #optional, this is the default value
+  tag: request_more_info #optional, this is the default value
 
 form:
   # posible fields: "first_name", "last_name", "full_name", "phone", "email"
   # always the first_name, email and phone will be mandatory if added.
   fields: ["full_name", "phone", "email"]
-  heading: "Get a Partial Scholarship"
-  motivation: "If you ENROLL before March 31st, 2021."
-  button_label: Get more information 
+  heading: "Get more information, and change your life!"
+  motivation: "ENROLL NOW and change your life."
+  button_label: Get more information
   redirect: null #you can redirect to another url or entirely diffrent website
 
 # jumbotron on the top (cannot be commented out)
@@ -47,8 +47,8 @@ features:
 follow_bar:
   position: "top" # top, bottom, hidden
   content:
-    text: "Get a Partial Scholarship if you ENROLL before October 30th, 2020."
-    text_mobile: "Get a Partial Scholarship if you ENROLL before October 30th, 2020."
+    text: "Get $1,500 off if you enroll with our Labor Day Deal."
+    text_mobile: "ENROLL NOW and get $1,500 off when you use our code LABOR in our apply form"
     # devices:   XL      LG    MD      SM    XS
     font_size: ["25px", "25px", "25px", "20px", "18px"]
   button:
@@ -58,7 +58,7 @@ follow_bar:
     text: "Call "
 
 #
-# ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇ 
+# ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇
 #
 
 in_the_news:
@@ -100,51 +100,52 @@ alumni_projects:
 components:
   - name: first_syllabus_form
     position: 4
-    layout: syllabus 
-    button: 
+    layout: syllabus
+    button:
       text: "Instant Download"
-    heading: 
+    heading:
       text: "Download the course syllabus"
-                  #xl      lg     md     sm    xs
-      font_size: ["40px","40px","40px","40px", "40px"]
+      #xl      lg     md     sm    xs
+      font_size: ["40px", "40px", "40px", "40px", "40px"]
   - name: passion
     position: 6
-    layout: two_column_right 
-    proportions: [6,6]
-    image: 
+    layout: two_column_right
+    proportions: [6, 6]
+    image:
       style: '{ "backgroundSize": "contain" }'
       src: "/images/badges/switchup.png"
-      link: "https://www.switchup.org/rankings/best-coding-bootcamps"
+      link: "https://www.switchup.org/bootcamps/4geeks-academy"
     video: "SixRm6R8rc0"
-    heading: 
+    heading:
       text: "Our passion is your future"
-      font_size: ["40px","40px","40px","40px", "40px"]
-    content: 
+      font_size: ["40px", "40px", "40px", "40px", "40px"]
+    content:
       text: "Hear it from our graduates"
       font_size: ["16px"]
   - name: top_coding_bootcamp
     position: 4
-    layout: two_column_left 
-    proportions: [4,8]
-    image: 
+    layout: two_column_left
+    proportions: [4, 8]
+    image:
       style: '{ "backgroundSize": "contain" }'
       src: "/images/badges/switchup.png"
-      link: "https://www.switchup.org/rankings/best-coding-bootcamps"
-    heading: 
-      text: "We have been named one of the TOP coding bootcamps in the World"
-                  #xl      lg     md     sm    xs
-      font_size: ["40px","40px","40px","40px", "40px"]
-  - name: working_as_software_developers
+      link: "https://www.switchup.org/bootcamps/4geeks-academy"
+    heading:
+      text:
+        "We have been named one of the TOP coding bootcamps in the World"
+        #xl      lg     md     sm    xs
+      font_size: ["40px", "40px", "40px", "40px", "40px"]
+  - name: working_in_tech
     position: 7
-    proportions: [4,8]
-    layout: two_column_left 
-    image: 
+    proportions: [4, 8]
+    layout: two_column_left
+    image:
       src: "https://storage.googleapis.com/4geeks-academy-website/landing-pictures/testimonials.webp"
-    content: 
-      text: "89% of our graduates are now working as software developers with an average entry salary of $50,000/yr."
-                  #xl      lg     md     sm    xs
-      font_size: ["40px","34px","34px","25px", "20px"]
-
+    heading:
+      text:
+        "86% of our graduates are now working in the field with an average entry salary of $50,000/yr."
+        #           xl      lg     md     sm    xs
+      font_size: ["40px", "34px"]
 # why_python:
 #   position: 7
 #   heading: "¿Porqué enseñamos Python?" # optional or set to white space to hide

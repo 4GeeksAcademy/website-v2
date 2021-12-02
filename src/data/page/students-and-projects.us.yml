@@ -1,0 +1,14 @@
+meta_info:
+  slug: students-and-projects
+  title: ""
+  description: null
+  image: null
+  visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
+  keywords: ""
+  redirects: ["/students"]
+
+seo_title: "Alumni and Projects"
+header:
+  title: "Meet Our Alumni and Their Projects"
+  paragraph: "Get to know our graduates and some of the projects they built during the program"
+  # image: "../../../static/images/outcomes/outcomes.png"

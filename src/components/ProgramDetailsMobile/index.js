@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import {Div} from '../Sections'
+import {Div, Grid} from '../Sections'
 import {H3, H4, H5, Title, Separator, Span, Paragraph} from '../Heading';
 import {Colors} from '../Styling';
 import Card from '../Card';
@@ -25,99 +25,96 @@ const ProgramDetailsMobile = (props) => {
     }
     return (
         <>
-            {props.details.details_modules.map((item, index) => {
-                return (
-                    <React.Fragment key={index}>
-                        <Card
-                            key={index}
-                            color={`blue`}
-                            width="100%"
-                            height="82px"
-                            padding={`20px`}
-                            borders={`.5rem`}
-                            margin={`5px 0`}
-                            display={`none`}
-                            display_sm={`block`}
-                        >
+            <Grid padding="50px 17px" padding_tablet="0px" gridGap="0">
+                {props.details.details_modules.map((item, index) => {
+                    return (
+                        <React.Fragment key={index}>
                             <Div
-                                display="flex"
+                                key={index}
+                                width="100%"
+                                height={selected.index === index ? "auto" : "76px"}
+                                padding="20px"
+                                border={`1px solid ${Colors.black}`}
+                                borderRadius="3px"
+                                borderLeft={`6px solid ${Colors.black}`}
+                                margin={`7px 0`}
+                                display_tablet="none"
+                                cursor={`pointer`}
                                 onClick={() => selected.index === index ? setSelected({index: null, manual: true}) : setSelected({index: index, manual: true})}
                                 justifyContent={`between`}
-                                cursor={`pointer`}
+                                flexDirection={selected.index === index && "column"}
                             >
-                                <Div display="flex" flexDirection={`column`} alignItems={`flex-start`}>
+                                <Div display="flex" flexDirection={`column`} alignItems={`flex-start`} style={{position: "relative"}}>
                                     <H3
-                                        color={Colors.white}
-                                        align_sm={`left`}
-                                        align_xs={`left`}
+                                        textAlign="left"
                                     >
                                         {item.module_name}
                                     </H3>
                                     <Paragraph
-                                        color={Colors.white}
-                                        fontWeight={`500`}
+                                        textAlign="left"
+                                        margin="0 0 20px 0"
                                     >{item.duration}</Paragraph>
+
                                 </Div>
-                                <Icon icon="triangledown" width="16" color={Colors.white} fill={Colors.white} />
+                                <Icon icon="arrowdown" width="32" style={{position: "absolute", right: "35px"}} />
+                                {selected.index === index &&
+                                    <Div
+                                        flexDirection="column"
+                                    >
+                                        <Div alignItems={`center`} margin={`10px 0`}>
+                                            <Icon icon="laptop" width="36px" fill={Colors.blue} stroke={Colors.blue} />
+                                            <H3
+                                                textAlign="left"
+                                                margin="0 0 0 16px"
+                                                fontWeight="700"
+                                            >
+                                                {item.title}
+                                            </H3>
+                                        </Div>
+                                        <Paragraph
+                                            textAlign="left"
+                                            margin="0 0 20px 0"
+                                        >
+                                            {item.description}
+                                        </Paragraph>
+                                        <Div display="flex" alignItems={`center`} margin="10px 0">
+                                            <Icon icon="rocket" width="36px" fill={Colors.blue} stroke={Colors.blue} />
+                                            <H3
+                                                margin={`0 10px`}
+                                                fontWeight="700"
+                                                textAlign="left"
+                                            >
+                                                {strings[lang]["Projects"]}
+                                            </H3>
+                                        </Div>
+                                        <Paragraph
+                                            textAlign="left"
+                                            margin="0 0 20px 0"
+                                        >
+                                            {item.projects}
+                                        </Paragraph>
+                                        <Div display="flex" alignItems={`center`} margin={`10px 0`}>
+                                            <Icon icon="clock" width="36px" fill={Colors.blue} stroke={Colors.blue} />
+                                            <H3
+                                                margin={`0 10px`}
+                                                fontWeight="700"
+                                                textAlign="left"
+                                            >
+                                                {strings[lang]["Duration"]}
+                                            </H3>
+                                        </Div>
+                                        <Paragraph
+                                            textAlign="left"
+                                        >
+                                            {item.duration}
+                                        </Paragraph>
+                                    </Div>}
                             </Div>
 
-                        </Card>
-                        {selected.index === index &&
-                            <Card
-                                padding={`20px`}
-                            >
-                                <Div display="flex" alignItems={`center`} margin={`10px 0`}>
-                                    <Icon icon="laptop" width="36px" fill={Colors.blue} stroke={Colors.blue} />
-                                    <H3
-                                        margin={`0 10px`}
-                                        fontWeight={`400`}
-                                        align_sm={`left`}
-                                    >
-                                        {item.title}
-                                    </H3>
-                                </Div>
-                                <Paragraph
-                                    align_sm={`start`}
-                                    align_xs={`start`}
-                                >
-                                    {item.description}
-                                </Paragraph>
-                                <Div display="flex" alignItems={`center`} margin={`10px 0`}>
-                                    <Icon icon="rocket" width="36px" fill={Colors.blue} stroke={Colors.blue} />
-                                    <H3
-                                        margin={`0 10px`}
-                                        fontWeight={`400`}
-                                        align_sm={`left`}
-                                    >
-                                        {strings[lang]["Projects"]}
-                                    </H3>
-                                </Div>
-                                <Paragraph
-                                    align_sm={`start`}
-                                    align_xs={`start`}
-                                >
-                                    {item.projects}
-                                </Paragraph>
-                                <Div display="flex" alignItems={`center`} margin={`10px 0`}>
-                                    <Icon icon="clock" width="36px" fill={Colors.blue} stroke={Colors.blue} />
-                                    <H3
-                                        margin={`0 10px`}
-                                        fontWeight={`400`}
-                                        align_sm={`left`}
-                                    >
-                                        {strings[lang]["Duration"]}
-                                    </H3>
-                                </Div>
-                                <Paragraph
-                                    align_sm={`start`}
-                                    align_xs={`start`}
-                                >
-                                    {item.duration}
-                                </Paragraph>
-                            </Card>}
-                    </React.Fragment>
-                )
-            })}
+                        </React.Fragment>
+                    )
+                })}
+            </Grid>
         </>
     )
 }

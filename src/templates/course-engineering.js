@@ -1,234 +1,231 @@
-import React, {useState, useEffect, useContext, useRef} from 'react';
+import React,  {useState, useEffect} from 'react';
 import Link from 'gatsby-link'
-import {GeekCard} from '../components/Card'
-import {Container, Row, Column, Wrapper, WrapperImage, Divider, Sidebar, Div} from '../components/Sections'
-import {H1, H2, Title, Paragraph, H5} from '../components/Heading'
+import {GridContainer, Header, Div} from '../components/Sections'
 import {Button, Colors} from '../components/Styling'
-import BaseRender from './_baseLayout'
-import {requestSyllabus} from "../actions";
-import {SessionContext} from '../session'
-import Icon from '../components/Icon'
-import GeeksVsOthers from '../components/GeeksVsOthers';
 import ProgramDetails from '../components/ProgramDetails';
 import ProgramDetailsMobile from '../components/ProgramDetailsMobile';
-import WhoIsHiring from '../components/WhoIsHiring';
-import PricesAndPayment from '../components/PricesAndPayment';
-import LeadForm from '../components/LeadForm';
+import TechsWeTeach from '../components/TechsWeTeach';
+import GeeksInfo from '../components/GeeksInfo';
+import OurPartners from '../components/OurPartners';
+import BaseRender from './_baseLayout'
 import Modal from '../components/Modal';
+import LeadForm from '../components/LeadForm';
+import {requestSyllabus} from "../actions";
+import {SessionContext} from '../session'
+import {Circle} from '../components/BackgroundDrawing'
+import Icon from '../components/Icon'
+import Testimonials from '../components/Testimonials';
+import Badges from '../components/Badges';
+import PricesAndPayment from '../components/PricesAndPayment';
+import Instructors from '../components/Instructors';
+
 
 
 const Program = ({data, pageContext, yml}) => {
 
   const {session} = React.useContext(SessionContext);
-
+  const courseDetails = data.allCourseYaml.edges[0].node;
   const geek = data.allCourseYaml.edges[0].node;
   const [open, setOpen] = React.useState(false);
 
-  const apply_button_text = session && session.location ? session.location.button.apply_button_text : "Apply";
-  const syllabus_button_text = session && session.location ? session.location.button.syllabus_button_text : "Download Syllabus";
+  const course_type = "software_engineering"
+  const program_type = yml.meta_info.slug.includes("full-time") ? "full_time" : "part_time"
+  const handleOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
+  const hiring = data.allPartnerYaml.edges[0].node;
+
+  const [applyButtonText, setApplyButtonText] = useState("");
+  let city = session && session.location ? session.location.city : [];
+  let currentLocation = data.allLocationYaml.edges.find(loc => loc.node?.city === city);
+
+  useEffect( () => {
+    if (currentLocation !== undefined){
+      setApplyButtonText(currentLocation.node.button.apply_button_text)
+    }
+  }, [currentLocation])
+
+  const syllabus_button_text = yml.button.syllabus_heading;
 
   return (<>
-    <WrapperImage
-      github="/course"
-      imageData={yml.header.image && yml.header.image.childImageSharp.fluid}
-      backgroundPosition={yml.header.image_position}
-      className={`img-header`}
-      bgSize={`cover`}
-      alt={yml.header.alt}
-      paddingRight={`0`}
-      customBorderRadius="0 0 0 1.25rem"
-
+    <Header
+      seo_title={yml.seo_title}
+      title={yml.header.title}
+      paragraph={yml.header.paragraph}
+      padding_tablet="72px 0 40px 0"
+      position="relative"
     >
-      <H1
-        size="5"
-        variant="main"
-        marginTop="100px"
-        m_sm="50px 0 0 0"
-        color={Colors.white}
-        fontSize="46px"
-        align="center"
-
-      >{yml.header.tagline_top}</H1>
-      <Title
-        size="5"
-        title={yml.header.tagline}
-        variant="main"
-        marginTop="0"
-        color={Colors.white}
-        fontSize="46px"
-        textAlign="center"
-        paragraph={yml.header.sub_heading}
-        paragraphColor={Colors.white}
-        margin="0"
-      />
-      <H5 color={Colors.white} align="center" fontSize="18px">{yml.header.subsub_heading}</H5>
-      <Row display="flex" justifyContent="center" marginTop="20px" marginBottom="50px">
-        <Column align="right" size="6" size_xs="12" align_sm="center" m_sm="0px 0px 15px 0px">
-          <Link to={yml.button.apply_button_link}
-            state={{course: yml.meta_info.bc_slug}}
-          >
-            <Button width="200px" color="red" margin="0" textColor=" white">{apply_button_text}</Button>
-          </Link>
-        </Column>
-        <Column align="left" size="6" size_xs="12" align_sm="center">
-          <Button width="200px" onClick={() => setOpen(true)} color={Colors.blue} margin="0" textColor=" white">{syllabus_button_text}</Button>
-        </Column>
-      </Row>
+      <Circle color="yellow" width="17px" height="17px" top="0" left="74px" zIndex="1" display="none" display_tablet="inline" opacity="0.2" />
+      <Circle color="grey" width="17px" height="17px" top="0" left="106px" zIndex="1" display="none" display_tablet="inline" />
+      <Circle color="black" width="17px" height="17px" top="32px" left="106px" zIndex="1" display="none" display_tablet="inline" />
+      <Circle color="black" width="17px" height="17px" top="32px" left="74px" zIndex="1" display="none" display_tablet="inline" />
+      <Circle color="grey" width="17px" height="17px" top="67px" left="74px" zIndex="1" display="none" display_tablet="inline" />
+      <Circle color="grey" width="17px" height="17px" top="102px" left="74px" zIndex="1" display="none" display_tablet="inline" />
+      <Circle color="grey" width="17px" height="17px" top="137px" left="106px" zIndex="1" display="none" display_tablet="inline" />
+      <Circle color="grey" width="17px" height="17px" top="172px" left="106px" zIndex="1" display="none" display_tablet="inline" />
+      <Circle color="blue" width="17px" height="17px" top="216px" left="74px" zIndex="1" display="none" display_tablet="inline" />
+      <Circle color="grey" width="17px" height="17px" top="271px" left="106px" zIndex="1" display="none" display_tablet="inline" />
+      <Circle color="red" width="27px" height="27px" top="222px" left="278px" zIndex="1" display="none" display_tablet="inline" />
+      <Circle color="yellow" width="250px" height="250px" bottom="20px" right="-68px" opacity="0.2" zIndex="1" display="none" display_tablet="inline" />
+      <Circle color="grey" width="17px" height="17px" top="120px" right="50px" zIndex="1" display="none" display_tablet="inline" />
+      <Circle color="black" width="17px" height="17px" top="120px" right="89px" zIndex="1" display="none" display_tablet="inline" />
+      <Circle color="grey" width="17px" height="17px" top="120px" right="128px" zIndex="1" display="none" display_tablet="inline" />
+      <Circle color="black" width="119px" height="11px" border="10px" bottom="115px" right="40px" zIndex="1" display="none" display_tablet="inline" />
+      <Circle color="black" width="77px" height="11px" border="10px" bottom="115px" right="175px" zIndex="1" display="none" display_tablet="inline" />
+      <Circle color="yellow" width="116px" height="116px" bottom="50px" left="-58px" zIndex="1" display="none" display_tablet="inline" />
+      <Circle color="yellow" width="116px" height="116px" bottom="200px" left="-90px" zIndex="1" display="inline" display_tablet="none" />
+      <Circle color="yellow" width="21px" height="21px" top="10px" right="320px" zIndex="1" display="none" display_tablet="inline" />
+      <Circle color="blue" width="57px" height="57px" top="32px" right="61px" display="none" display_tablet="inline" />
+      <Circle color="yellow" width="160px" height="160px" top="0" right="-120px" opacity="0.2" display="inline" display_tablet="none" />
+      <Circle color="red" width="25px" height="25px" top="60px" right="30px" display="inline" display_tablet="none" />
+      <Div flexDirection_tablet="row" flexDirection="column" alignItems="center" justifyContent="center" margin_tablet="0 0 50px 0">
+        <Link to={yml.button.apply_button_link}
+          state={{course: yml.meta_info.bc_slug}}
+        >
+          <Button variant="full" justifyContent="center" width="200px" width_tablet="fit-content" color={Colors.blue} margin_tablet="10px 24px 10px 0" textColor="white">{applyButtonText}</Button>
+        </Link>
+        <Button onClick={handleOpen} width="200px" width_tablet="fit-content" variant="outline" icon={<Icon icon="download" stroke={Colors.black} style={{marginRight: "10px"}} width="46px" height="46px" />} color={Colors.black} margin="10px 0 50px 0" margin_tablet="0" textColor={Colors.black}>{syllabus_button_text}</Button>
+        {/* <Button onClick={handleOpen} variant="outline" width="200px" color={Colors.black} margin="10px 0 58px 0" textColor={Colors.black}>{syllabus_button_text}</Button> */}
+        {/* <Button onClick={handleOpen} variant="outline" icon={<Icon icon="download" stroke={Colors.black} style={{marginRight: "10px"}} width="46px" height="46px" />} color={Colors.black} margin="10px 0 50px 0" margin_tablet="0" textColor={Colors.black}>{syllabus_button_text}</Button> */}
+      </Div>
       <Modal
         aria-labelledby="simple-modal-title"
         aria-describedby="simple-modal-description"
         open={open}
-        onClose={() => setOpen(false)}
+        onClose={handleClose}
       >
         <LeadForm
           style={{marginTop: "50px"}}
           heading={yml.button.syllabus_heading}
           motivation={yml.button.syllabus_motivation}
-          sendLabel={yml.button.syllabus_btn_label}
-          formHandler={requestSyllabus}
-          handleClose={() => setOpen(false)}
-          lang={pageContext.lang}
-          data={{
-            course: {value: yml.meta_info.bc_slug, valid: true}
-          }}
-        />
-      </Modal>
-      <Divider height="100px" md="0px" />
-    </WrapperImage>
-
-
-    <Wrapper
-      margin="100px"
-      border="top">
-      <Title
-        size="10"
-        marginTop="40px"
-        title={yml.potential_companies.tagline}
-        paragraph={yml.potential_companies.sub_heading}
-        variant="primary"
-      />
-      <WhoIsHiring
-        images={yml.potential_companies.companies}
-      />
-    </Wrapper>
-
-    <Wrapper margin="50px 0 0 0">
-      <Title
-        size="10"
-        type="h2"
-        marginTop="40px"
-        title={yml.details.heading}
-        paragraph={yml.details.sub_heading}
-        variant="primary"
-      />
-      <ProgramDetails details={yml.details} lang={pageContext.lang} />
-      <ProgramDetailsMobile details={yml.details} lang={pageContext.lang} />
-    </Wrapper>
-
-    <Div
-      display="block"
-      margin="50px 0px 0px 0px"
-      m_sm="50px 0px"
-      background={Colors.lightGray}
-    >
-      <Wrapper>
-        <H5 fontSize="20px">{yml.syllabus.heading}</H5>
-        <LeadForm
-          style={{padding: "10px 0px", maxWidth: "100%"}}
-          inputBgColor={Colors.white}
-          layout="flex"
-          lang={pageContext.lang}
           sendLabel={syllabus_button_text}
           formHandler={requestSyllabus}
+          handleClose={handleClose}
+          lang={pageContext.lang}
           data={{
             course: {type: "hidden", value: yml.meta_info.bc_slug, valid: true}
           }}
         />
-      </Wrapper>
-    </Div>
+      </Modal>
+      <Badges lang={pageContext.lang} short_link={true} paragraph={yml.badges.paragraph && yml.badges.paragraph} />
+    </Header>
 
-    {/* GEEKPAL && GEEKFORCE SECTION */}
-    {/* ---------------------------- */}
-    <Wrapper
-      margin="50px"
-    >
-      <Column size="12" color="#1898CC" margin="-20px auto 30px auto" padding="20px" p_sm="20px 5px" borderRadius="20px">
-        <H2 margin="10px" fontSize="34px" fs_sm="28px" fs_xs="22px" color="white">{yml.geek_data.heading}</H2>
-        <Row display="flex" padding="0px 40px" p_md="0 10px">
-          <Column size="6" size_sm="12" paddingLeft={`0`} p_sm="0">
-            <GeekCard
-              icon="arrowright"
-              to={`/${pageContext.lang}/geekforce`}
-              image="/images/geekforce.png"
-              heading={geek.geek_data.geek_force_heading}
-              bullets={geek.geek_data.geek_force}
-            />
-          </Column>
-          <Column size="6" size_sm="12" paddingRight={`0`} p_sm="0">
-            <GeekCard
-              icon="arrowright"
-              to={`/${pageContext.lang}/geekforce`}
-              image="/images/geekpal.png"
-              heading={geek.geek_data.geek_pal_heading}
-              bullets={geek.geek_data.geek_pal}
-            />
-          </Column>
-        </Row>
-      </Column>
-    </Wrapper>
+    {/* 
+    this is the one used in home
+    <OurPartners images={hiring.partners.images} marquee title={hiring.partners.tagline} paragraph={hiring.partners.sub_heading} />
+    */}
+    <OurPartners background={Colors.verylightGray} images={hiring.partners.images} marquee title={hiring.partners.tagline} paragraph={hiring.partners.sub_heading}></OurPartners>
+    <ProgramDetails details={courseDetails.details} lang={pageContext.lang} course={program_type} background={Colors.white} />
+    <ProgramDetailsMobile details={courseDetails.details} lang={pageContext.lang} course={program_type} />
+    <TechsWeTeach lang={pageContext.lang} data={data.allSoftwareEngineeringTechsYaml}/>
+    <GeeksInfo lang={pageContext.lang} />
 
-    <Wrapper margin="50px 0">
-      <Title
-        size="10"
-        title={yml.geeks_vs_others.heading}
-        paragraph={yml.geeks_vs_others.sub_heading}
-        variant="primary"
-      />
-      <GeeksVsOthers lang={pageContext.lang} limit={5} />
-    </Wrapper>
+    <GridContainer padding_tablet="0" margin_tablet="0 0 62px 0">
+      <Div height="1px" background="#EBEBEB"></Div>
+    </GridContainer>
+    
+    {/* <Instructors lang={courseDetails.course_instructors}/> */}
+    <PricesAndPayment
+      type={pageContext.slug}
+      lang={pageContext.lang}
+      session={session}
+      locations={data.allLocationYaml.edges}
+      programType={program_type}
+      courseType={course_type}
+      title={yml.prices.heading}
+      paragraph={yml.prices.sub_heading}
+    />
 
-    <Wrapper
-
-      github="/course"
-    >
-      <Title
-        size="10"
-        title={yml.prices.heading}
-        paragraph={yml.prices.sub_heading}
-        variant="primary"
-      />
-      <PricesAndPayment
-        lang={pageContext.lang}
-        session={session}
-        type={pageContext.slug}
-        locations={data.allLocationYaml.edges}
-        course="software_engineering"
-      />
-    </Wrapper>
-
+    <Testimonials lang={data.allTestimonialsYaml.edges} />
+    <OurPartners images={hiring.partners.images} marquee></OurPartners>
   </>
   )
-};
+};  
 
 export const query = graphql`
   query CourseEngineeringQuery($file_name: String!, $lang: String!) {
+    allSoftwareEngineeringTechsYaml(filter: { fields: { lang: { eq: $lang }}}) {
+      edges {
+        node {
+          title
+          sub_title
+          image{
+              childImageSharp {
+                gatsbyImageData(
+                  layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                  width: 390
+                  height: 289
+                  placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                )
+                # fluid(maxHeight: 289, maxWidth: 390){
+                #   ...GatsbyImageSharpFluid_withWebp
+                # }
+              }
+          }
+          tech_list {
+            image{
+              childImageSharp {
+                gatsbyImageData(
+                  layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                  width: 100
+                  height: 100
+                  placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                )
+                # fluid(maxHeight: 100, maxWidth: 100){
+                #   ...GatsbyImageSharpFluid_withWebp
+                # }
+              }
+            }
+            alt
+          }
+          fields {
+            lang
+          }
+        }
+      }
+    }
     allCourseYaml(filter: { fields: { file_name: { eq: $file_name }, lang: { eq: $lang }}}) {
       edges{
         node{
-            header{
-              tagline_top
-              tagline
-              sub_heading
-              subsub_heading
-              image_position
+          seo_title
+          course_instructors {
+            header {
+              title
+              paragraph
+            }
+            instructors {
+              name
+              bio
+              github
+              linkedin
+              sub_title
               image {
                 childImageSharp {
-                  fluid(maxWidth: 1200){
-                    ...GatsbyImageSharpFluid_withWebp
-                  }
+                  gatsbyImageData(layout: CONSTRAINED width: 500 placeholder: NONE quality: 100 breakpoints:	[200, 340, 420, 490])
                 }
               }
-              alt
+            }
+          }
+          header{
+              title
+              paragraph
+              image_alt
+              image{
+                childImageSharp {
+                  gatsbyImageData(
+                      layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                      width: 500
+                      placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                      quality: 100
+                      breakpoints:	[200, 340, 520, 890]
+                  )
+                }
+              } 
             }
             button{
               syllabus_heading
@@ -248,11 +245,22 @@ export const query = graphql`
               geek_force
               geek_pal
             }
+            badges{
+              paragraph
+            }
             credentials{
               heading
               paragraph
             }
             details {
+              about{
+                title
+                sub_title
+                list{
+                  label
+                  content
+                }
+              }
               heading
               sub_heading
               left_labels{
@@ -282,9 +290,16 @@ export const query = graphql`
                 name
                 image{
                   childImageSharp {
-                    fluid(maxWidth: 100){
-                      ...GatsbyImageSharpFluid_withWebp
-                    }
+
+                    gatsbyImageData(
+                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                    width: 100
+                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                  )
+
+                    # fluid(maxWidth: 100){
+                    #   ...GatsbyImageSharpFluid_withWebp
+                    # }
                   }
                 }
               }
@@ -322,6 +337,145 @@ export const query = graphql`
         }
       }
     }
+
+    allPartnerYaml(filter: { fields: { lang: { eq: $lang }}}) {
+      edges {
+          node {
+            partners {
+              tagline
+              sub_heading
+              footer_tagline
+              footer_button
+              footer_link
+              images {
+                name
+                image {
+                  childImageSharp {
+                    gatsbyImageData(
+                      layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                      width: 150
+                      placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                    )
+
+                    # fluid(maxWidth: 150){
+                    #   ...GatsbyImageSharpFluid_withWebp
+                    # }
+                  }
+                }
+                featured
+              }
+            }
+            coding {
+              images {
+                name
+                image {
+                  childImageSharp {
+                    gatsbyImageData(
+                      layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                      width: 100
+                      placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                    )
+
+                    # fluid(maxWidth: 100){
+                    #   ...GatsbyImageSharpFluid_withWebp
+                    # }
+                  }
+                }
+                featured
+              }
+              tagline
+              sub_heading
+            }
+            influencers {
+              images {
+                name
+                image {
+                  childImageSharp {
+                    gatsbyImageData(
+                      layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                      width: 100
+                      placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                    )
+                    # fluid(maxWidth: 100){
+                    #   ...GatsbyImageSharpFluid_withWebp
+                    # }
+                  }
+                }
+                featured
+              }
+              tagline
+              sub_heading
+            }
+            financials {
+              images {
+                name
+                image {
+                  childImageSharp {
+                    gatsbyImageData(
+                      layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                      width: 100
+                      placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                    )
+
+                    # fluid(maxWidth: 100){
+                    #   ...GatsbyImageSharpFluid_withWebp
+                    # }
+                  }
+                }
+                featured
+              }
+              tagline
+              sub_heading
+            }
+          }
+        }
+      }
+    allTestimonialsYaml(filter: { fields: { lang: { eq: $lang }}}) {
+      edges {
+        node {
+          heading
+          button_text
+          button_link
+          testimonials {
+            student_name
+            testimonial_date
+            include_in_marquee
+            hidden
+            linkedin_url
+            linkedin_text
+            linkedin_image{
+              childImageSharp {
+                gatsbyImageData(
+                  layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                  height: 14
+                  placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                )
+
+                # fluid(maxHeight: 14){
+                #   ...GatsbyImageSharpFluid_withWebp
+                # }
+              }
+            }
+            student_thumb{
+              childImageSharp {
+                gatsbyImageData(
+                  layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                  height: 200
+                  placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                )
+                # fluid(maxHeight: 200){
+                #   ...GatsbyImageSharpFluid_withWebp
+                # }
+              }
+            }
+            short_content
+            content
+            source_url
+            source_url_text
+          }
+        }
+      }
+    }
     allAlumniProjectsYaml(filter: { fields: { lang: { eq: $lang }}}){
       edges {
         node {
@@ -334,9 +488,15 @@ export const query = graphql`
               slug
               project_image {
                 childImageSharp {
-                  fluid(maxWidth: 800){
-                    ...GatsbyImageSharpFluid_withWebp
-                  }
+                  gatsbyImageData(
+                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                    width: 800
+                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                  )
+
+                  # fluid(maxWidth: 800){
+                  #   ...GatsbyImageSharpFluid_withWebp
+                  # }
                 }
               } 
               project_content
@@ -376,12 +536,16 @@ export const query = graphql`
           id
           city
           country
+          name
           hasFinancialsOption
           financials_max_months
           active_campaign_location_slug
           breathecode_location_slug
           fields{
             lang
+          }
+          button {
+            apply_button_text
           }
           meta_info {
             slug
@@ -398,58 +562,72 @@ export const query = graphql`
             alt
             image {
               childImageSharp {
-                fluid(maxWidth: 800){
-                  ...GatsbyImageSharpFluid_withWebp
-                }
+                gatsbyImageData(
+                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                    width: 800
+                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                )
+
+                # fluid(maxWidth: 800){
+                #   ...GatsbyImageSharpFluid_withWebp
+                # }
               }
             } 
           }
           
           prices {
             software_engineering {
-              center_section {
-
-                header {
-                  sub_heading
-                  heading_one
-                  heading_two
+              part_time {
+                center_section {
+                  button {
+                    button_text
+                  }
+                  header {
+                    heading_two
+                    sub_heading
+                    heading_one
+                  }
+                  plans {
+                    months
+                    monthsInfo
+                    payment
+                    paymentInfo
+                    provider
+                    logo
+                    message
+                  }
                 }
-                plans {
-                  months
-                  payment
-                  paymentInfo
-                  provider
-                  logo
-                  message
+                left_section {
+                  button {
+                    button_text
+                  }
+                  content {
+                    price
+                    price_info
+                  }
+                  header {
+                    heading_one
+                    sub_heading
+                    heading_two
+                  }
                 }
-              }
-              left_section {
-
-                content {
-                  price
-                  price_info
-                }
-                header {
-                  heading_one
-                  heading_two
-                  sub_heading
-                }
-              }
-              right_section {
-
-                content {
-                  price
-                  price_info
-                }
-                header {
-                  sub_heading
-                  heading_one
-                  heading_two
+                right_section {
+                  button {
+                    button_text
+                  }
+                  content {
+                    price
+                    price_info
+                  }
+                  header {
+                    heading_one
+                    sub_heading
+                    heading_two
+                  }
                 }
               }
             }
           }
-          
         }
       }
     }

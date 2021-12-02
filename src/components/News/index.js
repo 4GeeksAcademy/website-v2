@@ -1,18 +1,20 @@
 import React from 'react';
 import {useStaticQuery, graphql, Link} from 'gatsby';
 import styled from "styled-components"
-import {Row, Column} from '../Sections'
+import {Row, Div} from '../Sections'
+import {Colors} from '../Styling'
 import graphic from "../../assets/images/graphic.png"
-import Img from "gatsby-image"
+import Fragment from "../Fragment"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 const Helper = styled.span`
   display: inline-block;
   height: 100%;
   vertical-align: middle;
 `
-export default ({location, lang, limit, filter}) => {
+export default ({location, margin, lang, limit, filter, padding, padding_tablet, height, width, maxWidth, overflowX, justifySelf, imgPadding}) => {
   const data = useStaticQuery(graphql`
-    query myQueryNews{
+    query myNewQueryNews{
       allNewsYaml{
         edges {
           node {
@@ -21,9 +23,15 @@ export default ({location, lang, limit, filter}) => {
               url
               image{
                 childImageSharp {
-                  fluid(maxHeight: 60){
-                    ...GatsbyImageSharpFluid_withWebp
-                  }
+                  gatsbyImageData(
+                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                    height: 60
+                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                  )
+
+                  # fluid(maxHeight: 60,){
+                  #   ...GatsbyImageSharpFluid_withWebp
+                  # }
                 }
               }
               location
@@ -48,21 +56,36 @@ export default ({location, lang, limit, filter}) => {
     console.error(`No news to display for location `, location, locationNews)
     return null;
   }
-
   return (
-    <Row github="/components/news" display={`flex`}>
-      {locationNews.map((l, i) => (
-        <Column margin="auto" style={{whiteSpace: "nowrap", height: "60px"}} key={i} size="2" size_md="3">
-          <a href={l.url} target="_blank" rel="noopener noreferrer nofollow">
-            <Img
-              style={{height: "100%"}}
-              imgStyle={{objectFit: "contain"}}
-              alt={l.name}
-              fluid={l.image.childImageSharp.fluid}
-            />
-          </a>
-        </Column>
-      ))}
-    </Row>
+
+    <Div width="100%"
+      justifySelf={justifySelf}
+      margin={margin ? margin : "35px 0"}
+      margin_tablet={margin ? margin : "40px 0 0 0"}
+      padding={padding}
+      padding_tablet={padding_tablet}
+      display="flex"
+      gap="20px"
+      height="auto"
+      overflowX={overflowX || "auto"}
+      justifyContent="around"
+      justifyContent_tablet="around"
+    >
+      {Array.isArray(locationNews) && locationNews.map((l, i) => {
+        return (
+          // <Div key={i} background={Colors.blue}>test</Div>
+          <GatsbyImage
+            key={i}
+            style={{height: `${height}`, width: `${width}`, minWidth: "60px", maxWidth:`${maxWidth}`, margin: "0"}}
+            imgStyle={{objectFit: "contain"}}
+            alt={l.name}
+            image={getImage(l.image != null && l.image.childImageSharp.gatsbyImageData)}
+            // fluid={l.image != null && l.image.childImageSharp.fluid}
+          />
+        )
+      })}
+
+    </Div>
+    // </Fragment>
   )
 }

@@ -1,30 +1,21 @@
 ---
-author: MRiciglianoC
-comments: true
-date: 2019-03-20 05:29:14+00:00
-excerpt: According to Payscale, a Web Developer in Miami earns an average of $64k
-  per year, and an entry-level developer earns an average of $51k in the same period.
-layout: post
-link: https://www.4geeksacademy.co/2019-developers-salaries-report/
-slug: 2019-developers-salaries-report
-title: BOOTCAMP GRADUATES SALARIES 2019 EDITION
-avatar: "/images/staff/marcelo.jpeg"
+author: "MRiciglianoC"
+date: "2019-03-20T05:29:14+00:00"
+excerpt: "According to Payscale, a Web Developer in Miami earns an average of $64k per year, and an entry-level developer earns an average of $51k in the same period."
+slug: "2019-developers-salaries-report"
+template: "post" # post or landing_post
+title: "BOOTCAMP GRADUATES SALARIES 2019 EDITION"
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2019/03/MAIN-BLOG-1024x270.jpg"
-wordpress_id: 3481
-categories:
-- Sin categoría
-lang: "us"
-status: "published" # PUBLISHED, DRAFT, UNASSIGNED
-featured: true
-tags: 
-- report
-- salary
+image_alt: ""
+cluster: "career-growth"
+status: "published"
+
 ---
 
 # BOOTCAMP GRADUATES SALARIES 2019 EDITION
 
 
-It’s been some time since we gathered an updated trend and data related to the [developer’s estimated wages](https://www.4geeksacademy.co/wages-report-2018-1/). If you’re considering a career path in technology, especially as a software developer, the first question that normally comes to your mind is: How much money developers make? There is a bunch of data to answer that question. 
+It’s been some time since we gathered an updated trend and data related to the [developer’s estimated wages](/us/career-growth/wages-report-2018-1). If you’re considering a career path in technology, especially as a software developer, the first question that normally comes to your mind is: How much money developers make? There is a bunch of data to answer that question. 
 
 [According to Payscale](https://www.payscale.com/research/US/Job=Front_End_Developer_%2F_Engineer/Salary/f9729119/Miami-FL), a Web Developer in Miami earns an average of $64k per year, and an entry-level developer earns an average of $51k in the same period. 
 
@@ -36,7 +27,7 @@ Web developers are one in a million right now. Sure, we know a lot of them, but 
 
 It’s not only about quantity but about quality. Software developers are capable of building apps, platforms, websites, programs, etc. The work environment, the organization culture, the field where you belong. There are several ways to achieve that status. Signing up for a coding Bootcamp can be a tough decision if you’re not well informed. The majority believes that college degrees are exactly what you need to get a professional job and earn six figures.
 
-If you check back [our 2017 report](https://www.4geeksacademy.co/web-salaries-2017-coding-bootcamp/), we’ve been gathering data on web developer’s salaries, just to help our students realize what they’re really worth in the job market. A well-rounded web developer that completes our Bootcamp has higher chances of getting a great job down the road. 
+If you check back [our 2017 report](/us/coding-bootcamps/web-salaries-2017-coding-bootcamp), we’ve been gathering data on web developer’s salaries, just to help our students realize what they’re really worth in the job market. A well-rounded web developer that completes our Bootcamp has higher chances of getting a great job down the road. 
 
 
 ## A look at what developers have said
@@ -46,7 +37,7 @@ StackOverflow is a holy grail for developers. Every year they make a survey abou
 
 Enrolling in a Bootcamp is a tricky decision. As they state, 82.7% of the developers surveyed learn to code asking questions and reading answers on the web. Seems illogical but keep in mind that many as 46.1% of them already have a degree. 
 
-We truly believe [coding Bootcamps are totally worth it](https://www.coursereport.com/blog/are-coding-bootcamps-worth-it). But it is a fact that many of them are self-taught. However, the time has come and Coding Bootcamps are still a recent upgrade to traditional education. If you want to learn in an effective, mentored, and coding environment, you have to join a Coding Bootcamp. 
+We truly believe [coding Bootcamps are totally worth it](https://www.coursereport.com/blog/are-coding-bootcamp-worth-it). But it is a fact that many of them are self-taught. However, the time has come and Coding Bootcamps are still a recent upgrade to traditional education. If you want to learn in an effective, mentored, and coding environment, you have to join a Coding Bootcamp. 
 
 
 ## What can make you scale up in the developer’s game 

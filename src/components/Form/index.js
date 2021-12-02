@@ -1,15 +1,17 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useRef} from 'react';
 import PropTypes from 'prop-types';
 import styled, {css, keyframes} from 'styled-components';
 import {Colors, Button} from '../Styling';
 import {Break} from "../Responsive"
+import {Div} from "../Sections"
 
 const regex = {
-    email: /^((?!\.)[\w-_.]*[^.])(@\w+)(\.\w+(\.\w+)?[^.\W])$/,
+    email: /^[-!#$%&'*+\/0-9=?A-Z^_a-z`{|}~](\.?[-!#$%&'*+\/0-9=?A-Z^_a-z`{|}~])*@(?!mailinator|leonvero|ichkoch|naymeo|naymio)[a-zA-Z0-9]*\.[a-zA-Z](-?[a-zA-Z0-9])+$/,
     text: /^.+$/,
     textarea: /^.+$/,
     number: /^\d+$/,
-    phone: /(\+\d{1,3})?(\d{9,10})$/, // +17834565748 or 7834565748
+    phone: /^(?!(\d{2,})\1+)(?!(\d+)\2{3,})(\+\d{1,3})?(\d{8,10})$/,
+    file: /^.*\.(jpg|png|JPG|gif|GIF|doc|DOC|pdf|PDF)$/
 }
 
 
@@ -19,12 +21,13 @@ const StyledInput = styled.input`
     width: ${props => props.width || "100%"};
     padding: 5px 10px;
     margin: ${props => props.margin || "5px 0px"};
-    border-radius: ${props => props.borderRadius};
-    border: none;
+    border-radius: ${props => props.borderRadius || "3px"};
+    border: ${props => props.border || "1px solid #A4A4A4"};
     font-family: 'Lato', sans-serif;
-    
-    font-size: 16px;
-    font-color: ${Colors.black};
+    font-size: 15px;
+    line-height: 22px;
+    fontWeight: 400;
+    font-color: ${props => props.color || "#606060"};
     user-select: initial;
     opacity: 0.7;
     :focus {
@@ -48,28 +51,28 @@ const Msg = styled.span`
     background-color: ${Colors.lightRed};
 `
 
-export const Input = ({ onChange, type, required, validate, errorMsg, width, margin,...rest}) => {
-    const [ validStatus, setValidStatus ] = useState({ valid: true });
-    
-    return <Rel width={width}>
-        { !validStatus.valid && <Msg>{errorMsg}</Msg>}
+export const Input = ({onChange, type, required, validate, errorMsg, width, margin, ...rest}) => {
+    const [validStatus, setValidStatus] = useState({valid: true});
+
+    return <Div flexDirection="column" width={width || "100%"} position="relative">
+        {!validStatus.valid && <Msg>{errorMsg}</Msg>}
         <StyledInput {...rest} type={type} margin={margin} required={required} valid={validStatus.valid}
             onChange={(e) => {
-            let isValid = true;
-            if(required === false && e.target.value.length === 0) isValid = true;
-            else if(rest.pattern) isValid = new RegExp(rest.pattern).test(e.target.value);
-            else isValid = regex[type].test(e.target.value);
-            
-            if(isValid != validStatus) {
-                setValidStatus({ 
-                    valid: isValid,
-                    msg: isValid ? "Ok" : errorMsg
-                });
-            }
-            if(onChange) onChange(e.target.value, isValid);
-        }} 
+                let isValid = true;
+                if (required === false && e.target.value.length === 0) isValid = true;
+                else if (rest.pattern) isValid = new RegExp(rest.pattern).test(e.target.value);
+                else isValid = regex[type].test(e.target.value);
+
+                if (isValid != validStatus) {
+                    setValidStatus({
+                        valid: isValid,
+                        msg: isValid ? "Ok" : errorMsg
+                    });
+                }
+                if (onChange) onChange(e.target.value, isValid);
+            }}
         />
-    </Rel>
+    </Div>
 }
 
 Input.propTypes = {
@@ -94,6 +97,7 @@ Input.defaultProps = {
 const colors = {
     red: [Colors.lightRed, Colors.red],
     green: [Colors.lightGreen, Colors.green],
+    blue: [Colors.lightBlue, Colors.blue],
 }
 export const Alert = styled.div`
     background-color: ${props => colors[props.color][0]};
@@ -114,31 +118,38 @@ const StyledTextArea = styled.textarea`
     padding: 5px 10px;
     border: none;
     font-family: 'Lato', sans-serif;
-    
+    border: ${props => props.border || "1px solid #606060"};
+    opacity: 0.7;
     font-size: 16px;
     font-color: ${Colors.black};
+    border-radius: ${props => props.borderRadius};
+    background-color: ${props => props.valid ? props.bgColor : Colors.lightRed};
+    :focus {
+        opacity: 1;
+        border: 1px solid ${props => props.valid ? props.lightGray : Colors.lightRed};
+    }
 `
 
-export const TextArea = ({ onChange, type,errorMsg, required, validate, ...rest}) => {
-    const [ validStatus, setValidStatus ] = useState({ valid: true });
+export const TextArea = ({onChange, type, errorMsg, required, validate, ...rest}) => {
+    const [validStatus, setValidStatus] = useState({valid: true});
     return (
         <Rel>
-        { !validStatus.valid && <Msg>{errorMsg}</Msg>}
-        <StyledTextArea 
-            {...rest}
-            type={type}
-            required={required} valid={validStatus.valid}
-            onChange= {(e) => {
-                let isValid = true;
-                if(required === false && e.target.value.length === 0) isValid = true;
-                
-                if(isValid != validStatus) setValidStatus({ 
-                    valid: isValid,
-                    msg: isValid ? "Ok" : errorMsg
-                });
-                if(onChange) onChange(e.target.value, isValid);
-         }}
-        />
+            { !validStatus.valid && <Msg>{errorMsg}</Msg>}
+            <StyledTextArea
+                {...rest}
+                type={type}
+                required={required} valid={validStatus.valid}
+                onChange={(e) => {
+                    let isValid = true;
+                    if (required === false && e.target.value.length === 0) isValid = true;
+
+                    if (isValid != validStatus) setValidStatus({
+                        valid: isValid,
+                        msg: isValid ? "Ok" : errorMsg
+                    });
+                    if (onChange) onChange(e.target.value, isValid);
+                }}
+            />
         </Rel>
     )
 }

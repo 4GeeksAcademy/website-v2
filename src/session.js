@@ -19,14 +19,17 @@ export default ({children}) => {
                 longitude
                 phone
                 socials{
-                  social_name
-                  social_link
+                  name
+                  icon
+                  link
                 }
                 country
                 defaultLanguage
                 breathecode_location_slug
                 active_campaign_location_slug
                 gdpr_compliant
+                in_person_available
+                online_available
                 meta_info{
                     slug
                     unlisted
@@ -55,7 +58,7 @@ export default ({children}) => {
     const urlParams = new URLSearchParams(window.location.search);
     ActionsWorker().initSession(data.allLocationYaml, getStorage("academy_session"), {
       navigator: JSON.stringify(window.navigator),
-      location: urlParams.get('location') || urlParams.get('city') || null,
+      location: urlParams.get('location') || urlParams.get('city') || urlParams.get('utm_location') || null,
       gclid: urlParams.get('gclid') || urlParams.get('fbclid') || undefined,
       utm_medium: urlParams.get('utm_medium') || undefined,
       utm_campaign: urlParams.get('utm_campaign') || undefined,

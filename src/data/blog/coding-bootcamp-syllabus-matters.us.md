@@ -1,21 +1,16 @@
 ---
-author: alesanchezr
-comments: true
-date: 2017-11-04 00:33:50+00:00
-excerpt: The stack of technologies included in a Syllabus actually matters. It does,
-  sorry. We all know that.
-layout: post
-link: https://www.4geeksacademy.co/coding-bootcamp-syllabus-matters/
-slug: coding-bootcamp-syllabus-matters
-title: The coding bootcamp syllabus matters
-avatar: "/images/staff/alejandro.png"
+author: "alesanchezr"
+date: "2017-11-04T00:33:50+00:00"
+excerpt: "The stack of technologies included in a Syllabus actually matters. It does, sorry. We all know that."
+slug: "coding-bootcamp-syllabus-matters"
+template: "post" # post or landing_post
+title: "The coding bootcamp syllabus matters"
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2017/11/POST-TECNOLOGIA-01.jpg"
-wordpress_id: 2600
-lang: "us"
-status: "published" # PUBLISHED, DRAFT, UNASSIGNED
+image_alt: ""
+status: "published"
 featured: false
-tags:
-- 4geeks
+cluster: "coding-bootcamps"
+
 ---
 
 If you look at the Full-Stack Web Development Bootcamp industry, you rapidly realize that they have been teaching the same programming languages since the beginning.  When potential students ask about that, the academies quickly start undermining the role of the language by saying that it does not really matter - that you can switch fast from one to the other.
@@ -24,7 +19,7 @@ As a coding Bootcamp co-founder and head of the Academic and Technologies Depart
 
 I became obsessed: reading everywhere, asking colleagues and CTO’s that I knew had demonstrated great vision when picking their company’s stack of technologies, and I quickly started experimenting with different technologies to be taught and included in our syllabus.
 
-![](https://www.4geeksacademy.co/wp-content/uploads/2017/10/Picture1-1.png)
+![4Geeks Academy Syllabus in Python and Javascript](https://storage.googleapis.com/4geeks-academy-website/blog/2019/11/JSandPython-768x552.jpg)
 
 **Why Do Coding Bootcamps say that the language is not “that important”?**
 
@@ -44,7 +39,7 @@ But I believe that the reason that they are relentless to change is because - as
   3. You have to test and measure how those changes may impact the performance of your students.
 
 
-The truth is that, in the last 12 years, the web has evolved into a lot more than just web applications.  Now, coding languages have bigger purposes and they are seeking to enter into new paths (AI, VR, Machine learning, etc.).  Being aware of that, we decided to implement [this syllabus.](https://www.4geeksacademy.co/wp-content/uploads/2017/09/4GEEKS-ACADEMY-FULL.pdf)
+The truth is that, in the last 12 years, the web has evolved into a lot more than just web applications.  Now, coding languages have bigger purposes and they are seeking to enter into new paths (AI, VR, Machine learning, etc.).  Being aware of that, we decided to implement [this syllabus.](/wp-content/uploads/2017/09/4GEEKS-ACADEMY-FULL.pdf)
 
 **For example, let's talk about functionality:**
 
@@ -94,4 +89,4 @@ I can keep going all day, but I hope you get the idea.  I agree that syntax doe
 
 **4Geeks Academy Syllabus:**
 
-We encourage our team to rethink our syllabus every month, adding or removing whatever is needed to have the best product possible. We think having an up-to-date syllabus will increase our student's success and put us ahead of the competition at the same time. [We invite you to read everything about our syllabus in this pdf.](https://www.4geeksacademy.co/wp-content/uploads/2017/09/4GEEKS-ACADEMY-FULL.pdf)
+We encourage our team to rethink our syllabus every month, adding or removing whatever is needed to have the best product possible. We think having an up-to-date syllabus will increase our student's success and put us ahead of the competition at the same time. [We invite you to read everything about our syllabus in this pdf.](/wp-content/uploads/2017/09/4GEEKS-ACADEMY-FULL.pdf)

@@ -1,24 +1,16 @@
 ---
-author: MRiciglianoC
-comments: true
-date: 2018-06-22 03:51:55+00:00
-excerpt: Our most recent cohort begun with 60% of women enrollment. Women in Miami
-  are choosing 4Geeks to build their software careers.
-layout: post
-link: https://www.4geeksacademy.co/feelings-learning-coding/
-slug: feelings-learning-coding
-title: The feelings when Learning to Code
-avatar: "/images/staff/marcelo.jpeg"
+author: "MRiciglianoC"
+date: "2018-06-22T03:51:55+00:00"
+excerpt: "Feelings when learning and working as a developer."
+slug: "feelings-learning-coding"
+template: "post" # post or landing_post
+title: "The feelings when Learning to Code"
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2018/06/feelings.jpg"
-wordpress_id: 3112
-categories:
-- Living and working as a developer
-- Why learn to code?
-lang: "us"
-status: "published" # PUBLISHED, DRAFT, UNASSIGNED
+image_alt: ""
+cluster: "learn-to-code"
+status: "published"
 featured: false
-tags:
-- 4geeks
+
 ---
 
 Have you decided to learn to code? Great! But that’s just the beginning. Whether you already had some experience or have never typed a line of code before, the feelings when learning to code are normally the same: a mixture of nervousness and frustration with a very strong motivation pushing you to overcome all barriers in your path.
@@ -37,7 +29,7 @@ As you start to learn the basic concepts and syntax, you start feeling the anxie
 
 In this stage no matter how hard people said it would be you feel you can achieve everything.
 
-![](https://www.4geeksacademy.co/wp-content/uploads/2018/06/1-300x224.jpg)
+![](/wp-content/uploads/2018/06/1-300x224.jpg)
 
 
 ## **Stage 2: Grasp the information: Falter & Overwhelm**
@@ -47,7 +39,7 @@ You will learn HTML, CSS, and Bootstrap and then your journey with JavaScript wi
 
 In the meanwhile, your training continues and more concepts, frameworks, technologies, languages, tools, libraries are coming into your life to say "hello" and to stay there until you master them. Anytime soon you will find a bug or maybe tons of them in your code. Practice is the only solution.
 
-![](https://www.4geeksacademy.co/wp-content/uploads/2018/06/2-300x224.jpg)
+![](/wp-content/uploads/2018/06/2-300x224.jpg)
 
 
 ## **Stage 3: Suffering self-doubts: Despair**
@@ -61,7 +53,7 @@ Don’t let your motivation vanish so soon. **You will** spend more time debuggi
 
 So, do not listen to that voice,** if you are developing software, you are a developer**.
 
-![](https://www.4geeksacademy.co/wp-content/uploads/2018/06/2-300x224.jpg)
+![](/wp-content/uploads/2018/06/2-300x224.jpg)
 
 
 ## **Stage 4: Go back. Ask questions. Look at other people's code: Optimism**
@@ -95,7 +87,7 @@ This is the point where you are probably facing two main options: you can easily
 
 Finally, you get the glory and all the efforts are worth the while. Your code does what you want it to and it looks exactly as you expected! You understand more and more about technologies and languages. You feel invincible, a bulletproof programmer...until the next time, of course.
 
-![](https://www.4geeksacademy.co/wp-content/uploads/2018/06/2-300x224.jpg)
+![](/wp-content/uploads/2018/06/2-300x224.jpg)
 
 
 ## **Stage 6: Return. Keep practicing: Motivation & Anxiety...again**
@@ -105,4 +97,4 @@ Aristotle said it: "the more you know, the more you don't know" and when you are
 
 Once you are here you never stop learning; technology advances every day and developers constantly learn new things to further adapt themselves to every change in our digital environment.
 
-![](https://www.4geeksacademy.co/wp-content/uploads/2018/06/5-300x224.jpg)
+![](/wp-content/uploads/2018/06/5-300x224.jpg)

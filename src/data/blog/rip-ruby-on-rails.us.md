@@ -1,28 +1,16 @@
 ---
-author: alesanchezr
-comments: true
-date: 2016-01-18 15:02:43+00:00
-excerpt: Rails framework gave us a lot, it changed the way web products were made,
-  but now Ruby is behind the rest. Is not even in the top 10 already.
-layout: post
-link: https://www.4geeksacademy.co/rip-ruby-on-rails/
-slug: rip-ruby-on-rails
-title: R.I.P. Ruby on Rails. Thanks for everything!
-avatar: "/images/staff/marcelo.jpeg"
+author: "alesanchezr"
+date: "2016-01-18T15:02:43+00:00"
+excerpt: "Rails framework gave us a lot, it changed the way web products were made, but now Ruby is behind the rest. Is not even in the top 10 already."
+slug: "rip-ruby-on-rails"
+template: "post" # post or landing_post
+title: "R.I.P. Ruby on Rails. Thanks for everything!"
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2016/01/ruby.png"
-wordpress_id: 634
-categories:
-- Learning to code
-- Why learn to code?
-
-tags:
-- Javascript
-- php
-- ruby
-- Web Developer
-lang: "us"
-status: "published" # PUBLISHED, DRAFT, UNASSIGNED
+image_alt: ""
+cluster: "learn-to-code"
+status: "published"
 featured: true
+
 ---
 
 I’ve been a developer since I was 13 years old.  I’ve used almost every web framework out there, from PHP 3.1 to Node.js, React, etc.  People around me know that I’m not one of those people that starts endless fights like: Mac vs PC, Metallica vs Megadeth, etc.
@@ -49,7 +37,7 @@ Java is the most used back-end language by far, especially because it is the la
 ### **Python is everywhere, and rising!**
 
 
-If PHP is the king of the web, Python is the prince of everywhere…it’s a very mature language; you can do almost whatever you want with it.  And it will never die.  A lot of websites are made in Python: Google, YouTube, Dropbox, Quora, Yahoo, Pinterest, Instagram, Spotify, etc. [Check the full list here.](https://www.shoop.io/en/blog/25-of-the-most-popular-python-and-django-websites/) They have a Rails copycat called [Django](https://www.djangoproject.com/), and many other great frameworks like [Pylons](http://www.pylonsproject.org/), [Web2Py](http://www.web2py.com/), etc.  Python was implemented in 1989 and it is still growing in popularity today!
+If PHP is the king of the web, Python is the prince of everywhere…it’s a very mature language; you can do almost whatever you want with it.  And it will never die.  A lot of websites are made in Python: Google, YouTube, Dropbox, Quora, Yahoo, Pinterest, Instagram, Spotify, etc. [Check the full list here.](https://www.shoop.io/en/blog/25-of-the-most-popular-python-and-django-websites/) They have a Rails copycat called [Django](https://www.djangoproject.com/), and many other great frameworks like [Pylons](https://www.pylonsproject.org/), [Web2Py](https://www.web2py.com/), etc.  Python was implemented in 1989 and it is still growing in popularity today!
 
 
 ### You need to learn JavaScript (JS)

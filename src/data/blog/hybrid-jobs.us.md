@@ -1,27 +1,16 @@
 ---
-author: MRiciglianoC
-comments: true
-date: 2019-10-15 20:53:47+00:00
-excerpt: The key to being a great coder is having the disposition to improve every
-  day and apply strategies that will make you more productive and efficient.
-layout: post
-link: https://www.4geeksacademy.co/hybrid-jobs/
-slug: hybrid-jobs
-title: 'Hybrid Jobs: An Unstoppable Movement'
-avatar: "/images/staff/marcelo.jpeg"
+author: "MRiciglianoC"
+date: "2019-10-15T20:53:47+00:00"
+excerpt: "The key to being a great coder is having the disposition to improve every day and apply strategies that will make you more productive and efficient."
+slug: "hybrid-jobs"
+template: "post" # post or landing_post
+title: "Hybrid Jobs: An Unstoppable Movement"
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2019/10/BLOG-HYBRID-1-1024x524.jpg"
-wordpress_id: 3675
-categories:
-- Sin categoría
-
-tags:
-- 4geeks
-- coding
-- Jobs in Miami
-- Python
-lang: "us"
-status: "published" # PUBLISHED, DRAFT, UNASSIGNED
+image_alt: ""
+cluster: "career-growth"
+status: "published"
 featured: false
+
 ---
 
 # **Hybrid Jobs: An Unstoppable Movement**
@@ -33,7 +22,7 @@ Nevertheless, [what are hybrid jobs?](https://ibtabusinessblog.com/what-you-need
 
 [Burning Glass Technologies](https://www.burning-glass.com/wp-content/uploads/hybrid_jobs_2019_final.pdf) found the hybrid trend in 2015 and the movement has significantly increased   “Hybrid roles are projected to grow twice as fast as jobs overall (21% vs 10% over the next decade)”, affirms the study. 
 
-![](https://www.4geeksacademy.co/wp-content/uploads/2019/10/BLOG-BETTER-1024x524.jpg)
+![](/wp-content/uploads/2019/10/BLOG-BETTER-1024x524.jpg)
 
 In fact, these [hybrid jobs](https://fortune.com/2019/03/21/hybrid-jobs-purple-squirrels/) are growing at twice the rate of the overall job market. They are 20-40% higher-paying than their more-traditional counterparts, and they are now found in every field of business. On the contrary, unlike 2018, this year more than 1.7 million jobs have been published in a wide labor field, companies that require data science skills. The hybrid jobs are not only growing fast and well paid, but they have a great advantage and it’s that they are immune to [automation](https://www.techopedia.com/definition/32099/automation), while single-role jobs can be automated, hybrid works can only be done by people. 
 
@@ -65,7 +54,7 @@ Burning Glass ensures that the necessary skills for any professional who wants t
   * Evolving Compliance and Regulatory Landscape
 
 
-![](https://www.4geeksacademy.co/wp-content/uploads/2019/10/BLOG-5KEYAREAS-1024x524.jpg)
+![picture of 5 coding skill areas](/wp-content/uploads/2019/10/BLOG-5KEYAREAS-1024x524.jpg)
 
 So, what does this mean? We are told: education starts with school and ends with your university degree. Wrong! Maybe that works for some but the truth is, if you want to succeed, given the outlook of careers in the future, you should be a lifelong learner. What do you need? A lot of motivation. Be willing to [learn every day](https://www.sciencedirect.com/science/article/pii/S1877042812019416) because you recognize that knowledge enhances the understanding of everything and will provide you better opportunities and also, will improve your quality of life.
 
@@ -77,10 +66,10 @@ Coding is a vital skill that any purple squirrel should have. In a digitizing li
 ## **How to be ready for a hybrid tech job?**
 
 
-It is a fact that the rise of hybrid jobs is increasing daily. To face this reality, you have to prepare yourself in [different disciplines](https://www.getsmarter.com/blog/employee-development/skills-of-the-future-workforce-upskilling-for-hybrid-jobs/) that go beyond your professional area. Having technological and digital skills is fundamental if you want to succeed in that hybrid position. [Learning to code](https://www.4geeksacademy.co/hacks-lear-to-code/) is no longer a limited task only for programming students. Having basic knowledge about programming, coding and web development is essential in today's world for getting new jobs, even if it is not your main work area. 
+It is a fact that the rise of hybrid jobs is increasing daily. To face this reality, you have to prepare yourself in [different disciplines](https://www.getsmarter.com/blog/employee-development/skills-of-the-future-workforce-upskilling-for-hybrid-jobs/) that go beyond your professional area. Having technological and digital skills is fundamental if you want to succeed in that hybrid position. [Learning to code](/us/learn-to-code/hacks-learn-to-code) is no longer a limited task only for programming students. Having basic knowledge about programming, coding and web development is essential in today's world for getting new jobs, even if it is not your main work area. 
 
 We’ll be left behind if we don’t start to jump into this race. We must keep our skills up to date so we’ll be ready to manage any job position. 4Geeks Academy believes in the current relevance of [hybrid jobs](https://www.thebalancecareers.com/hybrid-jobs-and-the-hybrid-skills-candidates-need-most-4586497) and also, in the proper preparation of the new hybrid professionals to conquer the challenges that they’re facing today at the companies. 
 
 As technology continues evolving rapidly, teaching coding is part of lifelong learning and will be fundamental for any professional. That is why our academy guarantees the necessary skills to be successful.
 
-To get started and apply for your part-time coding Bootcamp, [contact us today](https://www.4geeksacademy.co/contact/).
+To get started and apply for your part-time coding Bootcamp, [contact us today](/us/contact).

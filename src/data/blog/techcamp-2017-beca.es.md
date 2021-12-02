@@ -1,21 +1,15 @@
 ---
-author: 4GeeksAcademy
-comments: true
-date: 2017-07-18 20:38:51+00:00
-layout: post
-link: https://www.4geeksacademy.co/es/techcamp-2017-beca/
-slug: techcamp-2017-beca
-title: ¡4Geeks Academy becó a 4 emprendedores del TechCamp Caracas 2017!
-avatar: "/images/staff/marcelo.jpeg"
+author: "4GeeksAcademy"
+date: "2017-07-18T20:38:51+00:00"
+excerpt: "Conoce las becas entregadas a 4 emprendedores del TechCamp Caracas 2017"
+slug: "techcamp-2017-beca"
+template: "post" # post or landing_post
+title: "¡4Geeks Academy becó a 4 emprendedores del TechCamp Caracas 2017!"
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2017/07/ISA-Blog-Cover.png"
-wordpress_id: 2061
-categories:
-- Aprendiendo a desarrollar
-lang: "es"
-status: "published" # PUBLISHED, DRAFT, UNASSIGNED
-featured: true
-tags:
-- 4geeks
+image_alt: ""
+cluster: "tendencias-y-tecnologia"
+status: "published"
+
 ---
 
 El pasado mes de junio se celebró la tercera edición del [**TechCamp**](https://techcamp.america.gov/)** Caracas**. El evento contó con 60 proyectos de emprendedores sociales y líderes de Organizaciones No Gubernamentales (ONG’s), que se fueron a casa con herramientas tecnológicas innovadoras que facilitarán el cumplimiento de sus desafíos.
@@ -49,7 +43,7 @@ El TechCamp Caracas 2017 contó con la participación de expertos nacionales e i
 
 **_¡Programa tu historia con 4Geeks Academy!_**
 
-Para conocer más sobre la academia y los cursos que tenemos para ti, puedes ingresar a [http://mdc.4geeksacademy.com/](http://mdc.4geeksacademy.com/)
+Para conocer más sobre la academia y los cursos que tenemos para ti, puedes ingresar a [https://mdc.4geeksacademy.com/](https://mdc.4geeksacademy.com/)
 
 _Giuliana Rivero Meré._
 

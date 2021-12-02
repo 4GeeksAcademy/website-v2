@@ -8,5 +8,10 @@ ports:
 
 # List the start up tasks. You can start them in parallel in multiple terminals. See https://www.gitpod.io/docs/config-start-tasks/
 tasks:
-  - init: npm install # runs during prebuild
+  - init: 
+      (cp -n .env.example .env.development || true) && 
+      nvm install v14 &&
+      nvm alias default v14 && 
+      nvm use v14 &&
+      npm install
     command: npm run start

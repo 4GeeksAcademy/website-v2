@@ -5,6 +5,7 @@ const {createFilePath} = require(`gatsby-source-filesystem`)
 
 var redirects = [];
 var ymls = [];
+
 const saveRedirectLogs = () => {
 
     console.log('Saving redirect log');
@@ -22,11 +23,13 @@ exports.onCreateNode = ({node, getNode, actions}) => {
     // curstom post types for the website
     if ([
         'MarkdownRemark', 'LeadFormYaml', 'NewsYaml', 'PartnerYaml', 'CredentialsYaml',
-        'FooterYaml', 'NavbarYaml', 'CustomBarYaml', 'BadgesYaml', 'PageYaml', 'LandingYaml', 'CourseYaml',
-        'LocationYaml', 'JobYaml', 'AlumniProjects', 'ChooseProgramYaml',
+        'FooterYaml', 'NavbarYaml', 'CustomBarYaml', 'BadgesYaml', 'PageYaml', 'LandingYaml', 
+        'DownloadableYaml', 'CourseYaml', 'LocationYaml', 'JobAlertYaml', 'JobYaml', 'AlumniProjects', 'ChooseProgramYaml',
         'TestimonialsYaml', 'GeeksVsOthersYaml', 'JobsStatisticsYaml',
         'Why4GeeksYaml', 'AlumniProjectsYaml', 'StaffYaml', 'ProgramSvgYaml', 'PricesAndPaymentYaml',
-        'WhyPythonYaml',
+        'WhyPythonYaml', 'ChooseYourProgramYaml', 'About4GeeksYaml', 'LocYaml', 'UpcomingDatesYaml', 
+        'GeeksInfoYaml', 'TechsWeTeachYaml', 'FullStackTechsYaml', 'SoftwareEngineeringTechsYaml', 'MachineLearningTechsYaml',
+        'With4GeeksYaml',
     ].includes(node.internal.type)) {
         const url = createFilePath({node, getNode})
         const meta = getMetaFromPath({url, ...node});
@@ -43,7 +46,6 @@ exports.onCreateNode = ({node, getNode, actions}) => {
             createNodeField({node, name: `filePath`, value: url});
             ymls.push(meta)
 
-            //   createNodeField({ node, name: `ctas`, value: ctas });
         }
     }
 };
@@ -58,10 +60,18 @@ exports.createPages = async (params) =>
     await createEntityPagesfromYml('Course', params) &&
     await createEntityPagesfromYml('Location', params) &&
     await createEntityPagesfromYml('Job', params) &&
-    await createEntityPagesfromYml('Landing', params, extraFields = ['utm_course', 'utm_location'],
+    await createEntityPagesfromYml('Downloadable', params, extraFields = ['visibility'],
         extraContext = (node) => {
             return {
-                utm_course: node.meta_info.utm_course + "." + node.fields.lang
+                visibility: node.meta_info.visibility
+            }
+        }
+    ) &&
+    await createEntityPagesfromYml('Landing', params, extraFields = ['utm_course', 'utm_location', 'visibility'],
+        extraContext = (node) => {
+            return {
+                utm_course: node.meta_info.utm_course + "." + node.fields.lang,
+                visibility: node.meta_info.visibility
             }
         }
     ) &&
@@ -70,7 +80,6 @@ exports.createPages = async (params) =>
 
 const createEditPage = async ({actions, graphql}) => {
     const {createPage, createRedirect} = actions;
-
     createPage({
         path: "/edit",
         component: path.resolve('src/templates/edit.js'),
@@ -88,7 +97,7 @@ const createBlog = async ({actions, graphql}) => {
         redirects.push(`Redirect from ${args.fromPath} to ${args.toPath}`);
         createRedirect(args);
     }
-    const postTemplate = path.resolve('src/templates/post.js');
+    const clusterTemplate = path.resolve("src/templates/clusters.js");
     const result = await graphql(`
     {
         allMarkdownRemark(sort: {fields: frontmatter___date, order: DESC}){
@@ -99,11 +108,12 @@ const createBlog = async ({actions, graphql}) => {
                     frontmatter{
                         title
                         slug
+                        template
                         author
                         date
                         status
                         featured
-                        tags
+                        cluster
                     }
                     excerpt,
                     fields{
@@ -122,42 +132,89 @@ const createBlog = async ({actions, graphql}) => {
     `)
     if (result.errors) throw new Error(result.errors);
 
-    result.data.allMarkdownRemark.edges.forEach(({node}) => {
+    const posts = result.data.allMarkdownRemark.edges;
 
+    posts.forEach(({node}) => {
+        const postTemplate = path.resolve(`src/templates/${node.frontmatter.template || "post"}.js`);
         console.log(`Creating post ${node.fields.pagePath}`);
+
+        // if a blog post has the "landing_cluster" template its not a real blog post, its more like a landing page meant as a topic cluster
+        // and it will not follow the same URL structure, landing_cluster's have a very unique URL.
         createPage({
-            path: node.fields.pagePath,
+            path: node.frontmatter.template != "landing_cluster" ? node.fields.pagePath : `/${node.fields.slug}`,
             component: postTemplate,
             context: {
                 ...node.fields,
             }
         });
 
-        // the old website had the blog posts with this path '/post-name' and we want now '/en/post/post-name'
-        _createRedirect({
-            fromPath: `/${node.fields.slug}`,
-            toPath: node.fields.pagePath,
-            redirectInBrowser: true,
-            isPermanent: true
-        });
-
-        if (node.fields.lang === "us") {
+        if(node.frontmatter.template != "landing_cluster"){
+            // the old website had the blog posts with this path '/post-name' and we want now '/<lang>/<cluster>/post-name'
             _createRedirect({
-                fromPath: `/en/${node.fields.template}/${node.fields.slug}`,
+                fromPath: `/${node.fields.slug}`,
+                toPath: node.fields.pagePath,
+                redirectInBrowser: true,
+                isPermanent: true
+            });
+    
+            console.log(`Redirect for post /us/post/${node.fields.slug}`);
+            _createRedirect({
+                fromPath: `/us/post/${node.fields.slug}`,
                 toPath: node.fields.pagePath,
                 redirectInBrowser: true,
                 isPermanent: true
             });
         }
-
-        _createRedirect({
-            fromPath: `/${node.fields.template}/${node.fields.slug}`,
-            toPath: node.fields.pagePath,
-            redirectInBrowser: true,
-            isPermanent: true
-        });
     });
 
+    // Read redirect property from front-matter
+    posts.forEach(({node}) => {
+        if (node.frontmatter.redirects) {
+            node.frontmatter.redirects.forEach(path => {
+                if (typeof (path) !== "string") throw new Error(`The path in ${node.frontmatter.slug} is not a string: ${path}`);
+                if (!path || path === "") return;
+                path = path[0] !== '/' ? '/' + path : path; //and forward slash at the beginning of path
+                console.log(`Additional redirect ${path} => ${node.fields.pagePath}`)
+                _createRedirect({
+                    fromPath: path,
+                    toPath: node.fields.pagePath,
+                    redirectInBrowser: true,
+                    isPermanent: true
+                });
+            })
+        }
+    });
+
+    // CLUSTERS:
+    let clusters = {
+        us: [],
+        es: []
+    };
+    // Iterate through each post, putting all found tags into `tags`
+    posts.forEach(({node}) => {
+        if (node.frontmatter.cluster)
+            clusters[node.fields.lang] = clusters[node.fields.lang].concat(node.frontmatter.cluster)
+    });
+    // Eliminate duplicate clusters
+    Object.keys(clusters).forEach(lang => clusters[lang] = clusters[lang].filter((value, index) => clusters[lang].indexOf(value) === index))
+    // Make clusters pages
+    Object.keys(clusters).forEach(lang => 
+        clusters[lang].forEach(cluster => {
+            let file_name = `clusters.${lang}`
+            let type = "page";
+            createPage({
+                path: `/${lang}/blog/${cluster}/`,
+                component: clusterTemplate,
+                context: {
+                    cluster,
+                    file_name,
+                    lang,
+                    type
+                },
+            });
+        })
+    )
+    
     return true;
 }
 const createEntityPagesfromYml = async (entity, {graphql, actions}, extraFields = [], extraContext = null) => {
@@ -244,6 +301,7 @@ const createEntityPagesfromYml = async (entity, {graphql, actions}, extraFields 
                 if (typeof (path) !== "string") throw new Error(`The path in ${node.meta_info.slug} is not a string: ${path}`);
                 if (path === "") return;
                 path = path[0] !== '/' ? '/' + path : path; //and forward slash at the beginning of path
+                console.log(`Additional redirect ${path} => ${node.fields.pagePath}`)
                 _createRedirect({
                     fromPath: path,
                     toPath: node.fields.pagePath,
@@ -271,6 +329,7 @@ const createPagesfromYml = async ({graphql, actions}) => {
               node {
                 meta_info {
                     slug
+                    visibility
                     redirects
                 }
                 fields{
@@ -292,14 +351,22 @@ const createPagesfromYml = async ({graphql, actions}) => {
     const translations = buildTranslations(result.data[`allPageYaml`]);
 
     //for each page found on the YML
-    result.data[`allPageYaml`].edges.forEach(({node}) => {
+    for(let i = 0; i < result.data[`allPageYaml`].edges.length; i++){
+        
+        const { node } = result.data[`allPageYaml`].edges[i];
+
+        // ignore pages with visibility hidden
+        if(node.fields.visibility == "hidden") continue;
+
         const _targetPath = node.fields.slug === "index" ? "/" : node.fields.pagePath;
         console.log(`Creating page ${node.fields.slug === "index" ? "/" : node.fields.pagePath} in ${node.fields.lang}`);
+        if(node.fields.slug.includes("carrera-de-programacion")) console.log(node.fields)
         createPage({
             path: _targetPath,
             component: path.resolve(`./src/templates/${node.fields.defaultTemplate}.js`),
             context: {
                 ...node.fields,
+                ...node.meta_info,
                 translations: translations[node.fields.defaultTemplate]
             }
         });
@@ -351,7 +418,7 @@ const createPagesfromYml = async ({graphql, actions}) => {
                 }
                 path = path[0] !== '/' ? '/' + path : path;
                 const exists = redirects.find(p => p === `Redirect from ${path} to ${_targetPath}`);
-                if(!exists || exists === undefined)
+                if (!exists || exists === undefined)
                     _createRedirect({
                         fromPath: path,
                         toPath: _targetPath,
@@ -360,7 +427,7 @@ const createPagesfromYml = async ({graphql, actions}) => {
                     });
             })
         }
-    });
+    }
 
     return true;
 };
@@ -396,25 +463,33 @@ const addAdditionalRedirects = ({graphql, actions}) => {
 
 const getMetaFromPath = ({url, meta_info, frontmatter}) => {
 
+    let slugigy = (entity) => {
+        let slugMap = {
+            location: "coding-campus",
+            course: "coding-bootcamps"
+        }
+        return slugMap[entity] || entity
+    }
+
     //if its a blog post the meta_info comes from the front-matter
     if (typeof (meta_info) == 'undefined') meta_info = frontmatter;
 
     const regex = /.*\/([\w-]*)\/([\w-]+)\.?(\w{2})?\//gm;
     let m = regex.exec(url);
     if (!m) return false;
+    const _cluster = meta_info !== undefined && typeof meta_info.cluster === "string" ? meta_info.cluster : "post";
+    const type = frontmatter ? _cluster : m[1];
 
-    const type = frontmatter ? "post" : m[1];
-
-    const lang = m[3] || "en";
+    const lang = m[3] || "us";
     const customSlug = (meta_info !== undefined && typeof meta_info.slug === "string");
     const file_name = m[2];// + (lang == "es" ? "-es": "");
     const slug = (customSlug) ? meta_info.slug : file_name;
     const template = type === "page" ? file_name : type;
 
-    const pagePath = type === "page" ? `/${lang}/${slug}` : `/${lang}/${template}/${slug}`;
+    const pagePath = type === "page" ? `/${lang}/${slug}` : `/${lang}/${slugigy(template)}/${slug}`;
 
     const meta = {lang, slug, file_name: `${file_name}.${lang}`, template, type, url, pagePath};
-    //   console.log("meta: ", meta);
+
     return meta;
 };
 

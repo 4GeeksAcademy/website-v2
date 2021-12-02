@@ -1,29 +1,16 @@
 ---
-author: alesanchezr
-comments: true
-date: 2017-09-25 18:07:08+00:00
-excerpt: We love NodeJS, we even use it in some of 4Geeks experiments, it is super
-  cool and hot and it was growing a lot last year (2016). All that said, 4Geeks decided
-  to leave it out from the Full-Stack Development program, click here to learn why.
-layout: post
-link: https://www.4geeksacademy.co/dont-teach-nodejs-full-stack-development-program/
-slug: dont-teach-nodejs-full-stack-development-program
-title: Why we don't teach NodeJS in our Full-Stack Development program
-avatar: "/images/staff/marcelo.jpeg"
+author: "alesanchezr"
+date: "2017-09-25T18:07:08+00:00"
+excerpt: "4Geeks decided to leave nodejs out from the Full-Stack Development program, click here to learn why."
+slug: "dont-teach-nodejs-full-stack-development-program"
+template: "post" # post or landing_post
+title: "Why we don't teach NodeJS in our Full-Stack Development program"
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2017/09/Screen-Shot-2017-09-25-at-10.54.52-PM.png"
-wordpress_id: 2436
-categories:
-- Learning to code
-
-tags:
-- 4geeks academy
-- django
-- learn to code
-- nodejs
-- Python
-lang: "us"
-status: "published" # PUBLISHED, DRAFT, UNASSIGNED
+image_alt: ""
+cluster: "trends-and-tech"
+status: "published"
 featured: true
+
 ---
 
 We love NodeJS.  We even work with it in some of our 4Geeks experiments.  Node challenges the way the web is made - making it super fast and unifying it into a single language (which is amazing for the community because developers are able to specialize).  Node is super hot in the software development world and it was growing so much last year (2016) that it seemed unstoppable.  All that said, I’m sure you are asking yourself, why is it that 4Geeks decided to leave it out from its Full-Stack Development program?
@@ -42,7 +29,7 @@ According to studies made by [W3Techs](https://w3techs.com/technologies/details
 
 If you learn Python/Django, you will be comfortable working with Ruby/Rails or PHP/Laravel, but Node is extremely different from the rest of the back-end technologies.  We have to make sure that you understand how to build websites that are similar to the other 99.7% of the web.
 
-Node: If you are wondering why we discarded Ruby on Rails read this article: [R.I.P Ruby On Rails, Thanks for everything.](https://www.4geeksacademy.co/rip-ruby-on-rails/)
+Node: If you are wondering why we discarded Ruby on Rails read this article: [R.I.P Ruby On Rails, Thanks for everything.](/us/learn-to-code/rip-ruby-on-rails)
 
 
 ## Node has less structure
@@ -60,7 +47,7 @@ Recommended reading: [Why MIT Chooses Python as the main language to teach how t
 
 
 
-![](https://www.4geeksacademy.co/wp-content/uploads/2017/09/brain-august2013.jpg) Student Brain
+![](/wp-content/uploads/2017/09/brain-august2013.jpg) Student Brain
 
 
 
@@ -73,7 +60,7 @@ Our biggest challenge has always been finding ways to teach more with less, beca
 ## Node growth rate is declining
 
 
-![](https://www.4geeksacademy.co/wp-content/uploads/2017/09/node-downloads-1-300x150.png) Node.js Decrease in Adoption
+![](/wp-content/uploads/2017/09/node-downloads-1-300x150.png) Node.js Decrease in Adoption
 
 Node grew like crazy in 2015-2016, but if you keep reading about Node you will see how -throughout the last few months - more articles like [this one](https://blog.geekforbrains.com/after-a-year-of-using-nodejs-in-production-78eecef1f65a) or [this one](https://medium.com/@tjholowaychuk/farewell-node-js-4ba9e7f3e52b) started showing up.  Like it always happens with amazing new technologies, there was a bubble at the beginning that supported most of the Node growth, but that bubble has burst and now is the right time to start analyzing where the heck is Node going to be positioned in the future market.
 
@@ -81,6 +68,6 @@ Node grew like crazy in 2015-2016, but if you keep reading about Node you will s
 ## In conclusion
 
 
-We love Node!  It deserves a spot in [some of our Workshops](https://www.4geeksacademy.co/calendar/?type=events), but it's not the moment to include it as part of our main Full-Stack Development program.
+We love Node!  It deserves a spot in [some of our Workshops](/us/next-dates), but it's not the moment to include it as part of our main Full-Stack Development program.
 
 

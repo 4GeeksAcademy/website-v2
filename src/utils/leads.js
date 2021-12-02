@@ -10,8 +10,15 @@ export const save_form = async (formData=null, tags=[], automations=[], session=
     if(!Array.isArray(tags)) throw Error("Tags must be an array");
     if(typeof(session) !== 'object') throw Error("Missing session");
     if(typeof(formData) !== 'object') throw Error("Missing formData");
+    const getEnvironmentAPI = () => {
+        if (process.env.NODE_ENV === 'development') {
+            return process.env.GATSBY_BREATHECODE_TEST
+        } else {
+            return process.env.GATSBY_BREATHECODE_HOST
+        }
+    }
 
-    const resp = await fetch(`${process.env.GATSBY_BREATHECODE_HOST}/marketing/lead`, {
+    const resp = await fetch(`${getEnvironmentAPI()}/marketing/lead`, {
         headers: new Headers({'content-type': 'application/json'}),
         method: "POST",
         body: JSON.stringify({

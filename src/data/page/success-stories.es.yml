@@ -1,0 +1,15 @@
+meta_info:
+  slug: testimonios
+  visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
+  title: "Testimonios e historias de éxito de 4Geeks Academy"
+  description: "Descubre nuestras historias de éxito y lo que dicen nuestros estudiantes sobre los Bootcamps de 4Geeks Academy"
+  image: null
+  keywords: "Testimonios, historias de éxito, 4Geeks Academy"
+  redirects: []
+
+seo_title: "testimonios"
+header:
+  title: "Conoce a las personas que cambiaron sus carreras al aprender a programar"
+  paragraph: "Aprender a codificar puede llevar a diferentes caminos. Nuestros graduados se inscribieron con un objetivo: cambiar su futuro. Estos son algunos de nuestros ex alumnos que tomaron la decisión de impulsar sus carreras."
+  image: "../../../static/images/locations/caracas-loc-2.jpeg"
+  image_alt: ""

@@ -1,14 +1,20 @@
 meta_info:
   slug: aplica
-  title: ""
-  description: null
-  image: null
-  keywords: ""
-  redirects: ["/aplica","/es/apply"]
+  title: "Aplica a 4Geeks Academy Bootcamp"
+  visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
+  description: "Aplica a uno de los mejores bootcamps de código del mundo, online o en una de nuestras sedes: Miami, Santiago de Chile, Madrid, Costa Rica, Maracaibo y Caracas"
+  image: "https://4geeks-academy-main.s3-us-west-2.amazonaws.com/PresentacionBienvenidaEstudiante1.jpg"
+  keywords: "Aplica a 4Geeks Academy Bootcamp"
+  redirects: ["/aplica", "/es/apply"]
 
 ## APPLY HEADING
-tagline: APLICA A 4GEEKS
-sub_heading: ""
+seo_title: "Coding Bootcamp"
+header:
+  title: "Aplica a 4Geeks"
+  image:
+  image_alt: ""
+  paragraph: "Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et."
+  button:
 
 ## APPLY LEFT SECTION
 left:
@@ -18,13 +24,13 @@ left:
     last_name: Apellidos
     email: "Email"
     phone: "Móvil"
-  locations_title: "Selecciona una sede"
-  course_title: 
+  locations_title: "Selecciona una sede donde estudiar"
+  course_title:
     open: "¿Qué programa quisieras estudiar?"
     close: "Selecciona un programa"
   referral_section:
     placeholder: "Código de invitación"
-    content: "Si te ha referido alguien que estudia o ha estudiado en 4Geeks, tendrás un beneficio adicional usando su código de invitación."
+    content: "Si tienes un códido, o te ha referido alguien que estudia o ha estudiado en 4Geeks, tendrás un beneficio adicional usando su código de invitación."
   button:
     button_text: "APLICA"
     button_link: ""
@@ -37,7 +43,7 @@ right:
     - "1- Un correo electrónico de nuestro equipo local."
     - "2- Info y detalles sobre cómo funciona el programa y datos sobre nuestras sedes."
     - "3- Información sobre las opciones de financiación de tu matrícula."
-    - "4- El syllabus del programa y la asistencia de nuestros asesores para ayudarte a tomar la mejor decisión para tu carrera."
+    - "4- El contenido del programa y la asistencia de nuestros asesores para ayudarte a tomar la mejor decisión para tu carrera."
 
   ## TESTIMONIAL SECTION
 testimonial_header:

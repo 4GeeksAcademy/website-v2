@@ -1,13 +1,14 @@
 import React, {useContext, useState} from "react";
 import {Alert, Input} from "../Form/index";
-import {Row, Column} from "../Sections";
+import {Row, Column, Div, GridContainer} from "../Sections";
 import {H4, Paragraph} from "../Heading";
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import {SessionContext} from '../../session';
 import {Button, Colors} from "../Styling";
-import {Break} from "../Responsive";
+import {Break, Devices} from "../Responsive";
 import {useStaticQuery, graphql, navigate} from 'gatsby';
+import {SelectRaw} from '../Select'
 
 const formIsValid = (formData = null) => {
     if (!formData) return null;
@@ -19,11 +20,18 @@ const formIsValid = (formData = null) => {
 }
 
 const Form = styled.form`
-    margin: auto;
-    padding: 20px;
-    max-width: 600px;
+    margin: ${props => props.margin};
+    width: auto;
+    height: auto;
+    display: block;
+    background: ${props => props.background ? props.background : "#FFFFFF"};
+    border-radius: 3px;
     @media  ${Break.sm}{
         display: ${props => props.d_sm};
+    }
+    @media ${Devices.tablet} {
+        margin: ${props => props.margin_tablet};
+        width: 100%;
     }
 `;
 
@@ -34,6 +42,8 @@ const _fields = {
     email: {value: '', valid: false, required: true, type: 'email', place_holder: "Your email *", error: "Please specify a valid email"},
     phone: {value: '', valid: false, required: true, type: 'phone', place_holder: "Phone number", error: "Please specify a valid phone"},
     consent: {value: true, valid: true, required: true, type: 'text', place_holder: "", error: "You need to accept the privacy terms"},
+    client_comments: {value: '', valid: true, required: false, type: 'text', place_holder: "Any comments?", error: "Please specify any comments"},
+    form_type: {value: '', valid: true, required: true, type: 'hidden', place_holder: "", error: "formType not found"},
 }
 
 const clean = (fields, data) => {
@@ -42,6 +52,7 @@ const clean = (fields, data) => {
 
     Object.keys(cleanedData).forEach(key =>
         // i also make sure I don't delete the hidden fields
+        key !== 'course' &&
         cleanedData[key].type !== 'hidden' &&
         //clean all the rest of the fields that are no supposed to be sent 
         //according to the landing YML data
@@ -59,9 +70,9 @@ const clean = (fields, data) => {
     return cleanedData;
 }
 
-const LeadForm = ({d_sm, fields, thankyou, heading, redirect, formHandler, data, handleClose, style, sendLabel, lang, motivation, layout, inputBgColor}) => {
+const LeadForm = ({marginButton, marginButton_tablet, background, margin, margin_tablet, justifyContentButton, buttonWidth_tablet, titleTextAlign, buttonBorderRadius, d_sm, fields, thankyou, heading, redirect, formHandler, data, handleClose, style, sendLabel, lang, motivation, layout, inputBgColor, landingTemplate, selectProgram, textPadding, textPadding_tablet, titleMargin, titleMargin_tablet}) => {
     const _query = useStaticQuery(graphql`
-    query LeadFormQuery {
+    query newLeadFormQuery {
         allPageYaml(filter: { fields: { file_name: { regex: "/privacy-policy/" }}}) {
           edges{
                 node{
@@ -106,7 +117,10 @@ const LeadForm = ({d_sm, fields, thankyou, heading, redirect, formHandler, data,
 
     const [formStatus, setFormStatus] = useState({status: "idle", msg: ""});
     const [formData, setVal] = useState(_fields);
+    const [consentValue, setConsentValue] = useState(false);
     const {session} = useContext(SessionContext);
+    const courseSelector = yml.form_fields.find(f => f.name === "course")
+    const consentCheckboxField = yml.form_fields.find(f => f.name === "consent")
     React.useEffect(() => {
         setVal(_data => {
             const _ = Object.keys(_data).reduce((total, key) => {
@@ -119,16 +133,26 @@ const LeadForm = ({d_sm, fields, thankyou, heading, redirect, formHandler, data,
             return ({..._, ...data, utm_url: {type: "hidden", value: window.location.href, valid: true}})
         })
     }, [data])
-    return <Form d_sm={d_sm} style={style} onSubmit={(e) => {
+
+    //validate fields
+    fields.forEach(f => {
+        if(formData[f] === undefined) throw Error(`Invalid form field ${f}, options are: ${Object.keys(formData).join(",")}`)
+    });
+
+    return <Form margin={margin} background={background} margin_tablet={margin_tablet} d_sm={d_sm} style={style} onSubmit={(e) => {
         e.preventDefault();
 
         if (formStatus.status === "error") setFormStatus({status: "idle", msg: ""})
 
         const cleanedData = clean(fields, formData);
+
         if (!formIsValid(cleanedData)) {
             setFormStatus({status: "error", msg: yml.messages.error});
-        }
-        else {
+        } else if (formData.course !== undefined && Array.isArray(formData.course.value) && formData.course.value.length > 1){
+            setFormStatus({status: "error", msg: courseSelector.error});
+        } else if (consentValue === false && session.location?.gdpr_compliant === true){
+            setFormStatus({status: "error", msg: consentCheckboxField.error});
+        } else {
             setFormStatus({status: "loading", msg: yml.messages.loading});
             formHandler(cleanedData, session)
                 .then(data => {
@@ -149,75 +173,101 @@ const LeadForm = ({d_sm, fields, thankyou, heading, redirect, formHandler, data,
                 })
         }
     }}>
-        {heading && <H4 fontSize="25px" margin="20px 0px 0px 0px">{heading}</H4>}
+        {/* {heading && <H4 type="h4" fontSize="25px" width="auto" textAlign="center" textAlign_tablet={titleTextAlign || "left"} margin={landingTemplate ? "15px 0px 30px 0" : titleMargin || "20px 30px 15px 30px"} margin_tablet={titleMargin_tablet || "20px 40px 15px 40px"}>{heading}</H4>} */}
         {formStatus.status === "thank-you" ?
-            <Paragraph align="center" margin="20px 0px 0px 0px">{thankyou || formStatus.msg}</Paragraph>
+            <Paragraph margin="20px 0px 0px 0px">{thankyou || formStatus.msg}</Paragraph>
             :
             <>
-                {motivation && <Paragraph align="center" margin="20px 0px 0px 0px">{motivation}</Paragraph>}
-                <Row display="flex">
-                    <Column display={layout} className={"leadform-" + layout} size="12" paddingLeft="0" paddingRight="0">
-                        {fields.filter(f => formData[f].type !== 'hidden').map((f, i) => {
-                            const _field = formData[f]
-                            return <Input
-                                key={i}
-                                bgColor={inputBgColor}
-                                borderRadius={i === 0 && layout === "flex" ? "10px 0px 0px 10px" : "0"}
-                                type={_field.type} className="form-control" placeholder={_field.place_holder}
-                                onChange={(value, valid) => {
-                                    setVal({...formData, [f]: {..._field, value, valid}});
-                                    if (formStatus.status === "error") {
-                                        setFormStatus({status: "idle", msg: "Request"})
-                                    }
-                                }}
-                                value={_field.value}
-                                errorMsg={_field.error}
-                                required={_field.required}
-                                on
-                            />
-                        })}
-                        {layout === "flex" &&
-                            <Button width="100%" padding=".7rem .45rem"
-                                type="submit"
-                                margin="10px 0"
-                                borderRadius="0px 10px 10px 0px"
-                                color={formStatus.status === "loading" ? Colors.darkGray : Colors.red}
-                                textColor={Colors.white}
-                                disabled={formStatus.status === "loading" ? true : false}
-                            >{formStatus.status === "loading" ? "Loading..." : sendLabel}</Button>
-                        }
-                    </Column>
+                <GridContainer display="block" containerColumns_tablet={landingTemplate && "0fr repeat(12, 1fr) 0fr"} containerGridGap={landingTemplate && "0"} className={"leadform-" + layout} size="12" paddingLeft="0" paddingRight="0">
+                {heading && <H4 type="h4" fontSize="25px" width="auto" textAlign="center" textAlign_tablet={titleTextAlign || "left"} margin={landingTemplate ? "25px 0px 0px 0" : titleMargin || "20px 0px 5px 0px"} margin_tablet={titleMargin_tablet || "20px 0px 5px 0px"}>{heading}</H4>}
+                {motivation && <Paragraph textAlign="left" padding={textPadding || "0px 0px 10px 0px"}padding_tablet={textPadding_tablet || "0px 0px 10px 0px"}>{motivation}</Paragraph>}
+                    {fields.filter(f => formData[f].type !== 'hidden').map((f, i) => {
+                        const _field = formData[f]
+                        return <>
+                                <Input
+                                    data-cy={f}
+                                    key={i}
+                                    bgColor={inputBgColor || "#FFFFFF"}
+                                    type={_field.type} className="form-control" placeholder={_field.place_holder}
+                                    onChange={(value, valid) => {
+                                        setVal({...formData, [f]: {..._field, value, valid}});
+                                        if (formStatus.status === "error") {
+                                            setFormStatus({status: "idle", msg: "Request"})
+                                        }
+                                    }}
+                                    valid={true}
+                                    value={_field.value}
+                                    errorMsg={_field.error}
+                                    required={_field.required}
+                                    on
+                                />
+                        </>
+                    })}
+
+                    {
+                        selectProgram?.length > 1 
+                            && (
+                                <Div data-cy="dropdown_program_selector" margin_tablet="0 0 23px 0">
+                                    <SelectRaw
+                                        style={{
+                                            background: '#FFFFFF',
+                                        }}
+                                        options={selectProgram}
+                                        placeholder={courseSelector.place_holder}
+                                        valid={true}
+                                        onChange={(selected, valid) => setVal({...formData, course: { value: selected.value, valid }})}
+                                    />
+                                </Div>
+                            )
+                    }
+                    {layout === "flex" &&
+                        <Button 
+                            width="100%"
+                            justifyContent="center"
+                            width_tablet={buttonWidth_tablet}
+                            variant="full"
+                            type="submit"
+                            margin="10px 0"
+                            borderRadius={buttonBorderRadius || "0px 10px 10px 0px"}
+                            color={formStatus.status === "loading" ? Colors.darkGray : Colors.blue}
+                            textColor={Colors.white}
+                            disabled={formStatus.status === "loading" ? true : false}
+                        >{formStatus.status === "loading" ? "Loading..." : sendLabel}</Button>
+                    }
                     {session && session.location && session.location.gdpr_compliant &&
-                        <Paragraph fontSize="11px" margin="5px 0 0 0">
+                        <Paragraph fontSize="11px" margin="5px 0 0 0" textAlign="left" >
                             <input
                                 name="isGoing"
                                 type="checkbox"
-                                checked={formData.consent.valid}
-                                onChange={() => setVal({...formData, consent: {...formData.consent, valid: !formData.consent.valid}})} />
+                                checked={consentValue}
+                                onChange={() => {
+                                    setConsentValue(!consentValue)
+                                // setVal({...formData, consent: {...formData.consent, valid: !formData.consent.valid}})
+                                }} />
                             {yml.consent.message}
-                            <a target="_blank" rel="noopener noreferrer" className="decorated" href={yml.consent.url}>{yml.consent.link_label}</a>
+                            <a target="_blank" rel="noopener noreferrer nofollow" className="decorated" href={yml.consent.url}>{yml.consent.link_label}</a>
                         </Paragraph>
                     }
-                    {formStatus.status === "error" && <Alert color="red" margin="0 15px" padding="5px 0 0 0">{formStatus.msg}</Alert>}
-                </Row>
+                    {formStatus.status === "error" && <Alert color="red" margin="0" padding="5px 0 0 0">{formStatus.msg}</Alert>}
+                </GridContainer>
                 {layout === "block" &&
-                    <Row display="flex" padding="5px 0 0 0" >
-                        {handleClose && <Column size="6" padding="10px 20px">
-                            <Button width="100%" padding=".7rem .45rem" color={Colors.gray} textColor={Colors.white} onClick={handleClose}>Close</Button>
-                        </Column>}
-                        <Column size={handleClose ? "6" : "12"} padding="10px 20px" margin="auto">
-                            <Button width="100%" padding=".7rem .45rem"
+                    <GridContainer containerColumns_tablet={landingTemplate && "0fr repeat(12, 1fr) 0fr"} containerGridGap={landingTemplate && "0"} >
+                        <Div justifyContent={justifyContentButton ? justifyContentButton : "end" } display="flex" padding="5px 0 0 0">
+                            <Button
+                                variant="full"
                                 type="submit"
-                                color={formStatus.status === "loading" ? Colors.darkGray : Colors.red}
+                                margin={marginButton}
+                                margin_tablet={marginButton_tablet}
+                                color={formStatus.status === "loading" ? Colors.darkGray : Colors.blue}
                                 textColor={Colors.white}
                                 disabled={formStatus.status === "loading" ? true : false}
                             >{formStatus.status === "loading" ? "Loading..." : sendLabel}</Button>
-                        </Column>
-                    </Row>
+                        </Div>
+                    </GridContainer>
                 }
             </>
         }
-    </Form>
+    </Form >
 }
 
 LeadForm.propTypes = {
@@ -238,7 +288,6 @@ LeadForm.defaultProps = {
     redirect: null,
     handleClose: null,
     layout: "block",
-    inputBgColor: Colors.lightGray,
     data: {},
     fields: ['full_name', 'phone', 'email'],
 }

@@ -9,7 +9,15 @@ html, body
     width: 100%!important;
     margin: 0px!important;
     padding: 0px!important;
-    overflow-x: hidden!important; 
+    overflow-x: clip!important; 
+    scroll-behavior: smooth;
+    scroll-padding: 10%;
+}
+
+.set-overflow {
+    overflow: auto!important;
+    /* overflow-y: clip!important;
+    scroll-padding: 10%; */
 }
 
 /* adds three dots to text when reaches the end of line */
@@ -107,7 +115,6 @@ a.nav-item.nav-link.side {
 .carousel {
     position: relative;
     width: 100%;
-    border-radius: 1.25rem;
     /* box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
 }
 .carousel .control-dots .dot {
@@ -187,7 +194,7 @@ a {
 }
 .card-columns{
     display: inline-block;
-    width: 300px;
+    width: 33%;
 }
 @media (max-width: 768px) {
     .card-columns{
@@ -218,7 +225,9 @@ a {
     outline-style: auto;
     outline-width: 3px;
     } */
-
+.react-player-with4geeks img{
+    object-position: top center!important;
+}
 .trend{
     position: absolute;
     top: 40px;
@@ -227,12 +236,49 @@ a {
     @media (min-width: 992px) { ... }
     @media (min-width: 1200px) { ... } */
 }
+.react-player{
+    height: 82px;
+}
+@media (min-width: 320px) {
+    .mobile{
+        display: none;
+    }
+    
+}
 @media (min-width: 576px) {
     .trend{
         right: -20px;
     }
+    .mobile{
+        display: block;
+    }
 }
-@media (min-width: 992px) {
+@media (min-width: 768px) {
+    
+    .choose-your-program-icon{
+        width: 120px;
+        height: auto;
+    }
+    .react-player-with4geeks{
+        height: 158px;
+    }
+    .react-player-testimonials-big{
+        height: 310px;
+    }
+    .react-player-testimonials-small{
+        height: 182px;
+    }
+}
+@media (min-width: 994px) {
+    .react-player-with4geeks{
+        height: 158px;
+    }
+    .react-player-testimonials-big{
+        height: 310px;
+    }
+    .react-player-testimonials-small{
+        height: 182px;
+    }
     .trend{
         right: -35px;
     }
@@ -259,6 +305,20 @@ a.faq-link:hover {
     padding-left: 15px;
     list-style: none;
     margin: 10px 0;
+}
+.ul-outcomes{
+    /* padding-left: 15px; */
+    list-style: none;
+    margin: 15px 0;
+}
+
+.ul-outcomes .li-outcomes-link{
+    margin: 20px 0;
+}
+.ul-outcomes .li-outcomes-link::before{
+    content: "\2022";
+    color:#0097CE;
+    margin-right: 10px;
 }
 .ul-privacy .li-privacy-link::before{
     content: "\2022";
@@ -342,11 +402,90 @@ a.faq-link:hover {
 }
 
 
+.badge{
+    background: #FFCF18;
+    font-family: Lato, sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    height: 28px;
+}
+.span-blue{
+    color: #0097CD;
+    cursor: pointer;
+    font-weight: bold;
+}
 
+.testimonial-slider, .badge-slider, .partners-slider{
+    overflow-x: auto;
+}
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    /* background: rgba(0,150,205,0.8);  */
+    background: #0097CD;
 
+    /* -webkit-box-shadow: inset 0 0 0px rgba(0,0,0,0.5);*/        /* height of horizontal scrollbar ← You're missing this */              /* width of vertical scrollbar */
+}
+.testimonial-slider::-webkit-scrollbar-track, .badge-slider::-webkit-scrollbar-track  {
+    margin-top: 10px;
+    border-radius: 5px;
+    background: #E5E5E5;
+    margin-left: 20em;
+    margin-right: 20em;
+  }
+.testimonial-slider::-webkit-scrollbar {
+    height: 5px;
+    display: none;
 
+  }
+  .staff-slider::-webkit-scrollbar {
+    display: none;
+}
 
 /****** React Select ******/
 .react-select-wrapper{
     width: 100% !important;
+    /* border-radius: 3px !important; */
+}
+.css-1jdsf71-control{
+    border: #606060 !important;
+}
+.gallery__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.BrainhubCarousel__dots .BrainhubCarousel__dot:before {
+    content: '';
+    display: block;
+    width: 11px !important;
+    height: 11px !important;
+    border-radius: 50%;
+    padding: 0;
+    border: none;
+    background: #0097CD!important;
+}
+
+.lang{
+    font-weight: 700;
+}
+
+/* HINT: it hide the scrollbal default, and works in mobile size*/
+.hideOverflowX__::-webkit-scrollbar {
+    width: 0!important;
+    height: 0!important;
+}
+
+.input-file[type="file"]{
+    /* display: none; */
+    width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+a.active p {
+    color: #0097CD;
 }

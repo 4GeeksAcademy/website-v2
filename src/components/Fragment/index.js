@@ -38,7 +38,7 @@ const Fragment = ({ github, style, onClick, className, children }) => {
                 },300)
             }}
             onMouseEnter={() => setStatus({ ...status, hovered: true })}
-            href={`${GITHUB_REPO}${github}`} target="blank" rel="noopener noreferrer"
+            href={`${GITHUB_REPO}${github}`} target="blank" rel="noopener noreferrer nofollow"
         >edit</An>
         {children}
     </div>

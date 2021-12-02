@@ -2,11 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import '../assets/css/style.css';
 import '../assets/css/utils.css';
-import Navbar from '../components/Navbar';
+import {Navbar} from '../components/NavbarDesktop';
+import {NavbarMobile} from '../components/NavbarMobile';
 import {StaticQuery, graphql} from 'gatsby';
-import UpcomingProgram from '../components/UpcomingProgram';
 import Footer from '../components/Footer';
-
+import CookieBot from "react-cookiebot";
 
 import GlobalStyle from './GlobalStyle';
 import SEO from './SEO';
@@ -25,8 +25,20 @@ const Layout = ({children, seo, context}) => {
   return (
     <StaticQuery
       query={graphql`
-      query SiteTitleQuery {
-        
+      query SiteTitleQuery($lang: String) {
+        allLocationYaml(filter: { fields: {lang: { eq: $lang }}}) {
+          edges{
+            node{
+              city
+              fields {
+                lang
+              }
+              button {
+                apply_button_text
+              }
+            }
+          }
+        }
         allFooterYaml {
           edges {
             node {
@@ -44,6 +56,15 @@ const Layout = ({children, seo, context}) => {
                   link
                 }
               }
+              socials{
+                name
+                icon
+                link
+              }
+              policy{
+                name
+                link
+              }
               fields {
                 lang
               }
@@ -57,8 +78,33 @@ const Layout = ({children, seo, context}) => {
               navbar {
                 name
                 link
+                sub_menu{
+                  icon
+                  title
+                  link
+                  paragraph
+                  links{
+                    title
+                    level
+                    paragraph
+                    icon
+                    buttons{
+                      text
+                      link
+                    }
+                    sub_links{
+                      title
+                      link_to
+                    }
+                  }
+                }
+              }
+              language_button{
+                text
+                link
               }
               button {
+                apply_button_text
                 button_link
                 button_type
                 button_color_text
@@ -72,12 +118,17 @@ const Layout = ({children, seo, context}) => {
             }
           }
         }
+        cookiebotYaml {
+          domain_ID {
+            id
+          }
+        }
       }
     `}
       render={(data) => {
         let myFooter = data.allFooterYaml.edges.find(item => item.node.fields.lang === context.lang)
         let myNavbar = data.allNavbarYaml.edges.find(item => item.node.fields.lang === context.lang)
-
+        let myLocations = data.allLocationYaml.edges.filter(item => item.node.fields.lang === context.lang)
         return (
           <>
             {editMode && <div style={{background: "yellow", padding: "15px"}}>
@@ -91,12 +142,29 @@ const Layout = ({children, seo, context}) => {
               > ❌ Clear edit mode</button>
             </div>}
             <SEO {...seo} context={context} />
-            <Navbar onLocationChange={(slug) => setLocation(slug)} menu={myNavbar.node.navbar} button={myNavbar.node.button} lang={context.lang} />
+            <Navbar 
+              locationCity={myLocations}
+              currentURL={context.pagePath}
+              onLocationChange={(slug) => setLocation(slug)}
+              menu={myNavbar.node.navbar}
+              languageButton={myNavbar.node.language_button}
+              button={myNavbar.node.button}
+              lang={context.lang}
+            />
+            <NavbarMobile 
+              locationCity={myLocations}
+              currentURL={context.pagePath}
+              onLocationChange={(slug) => setLocation(slug)}
+              menu={myNavbar.node.navbar}
+              languageButton={myNavbar.node.language_button}
+              button={myNavbar.node.button}
+              lang={context.lang}
+            />
             <GlobalStyle />
+            <CookieBot domainGroupId={data.cookiebotYaml.domain_ID[0].id} />
             <>
               {children}
             </>
-            { showUpcoming && <UpcomingProgram button={myNavbar.node.button} lang={context.lang} position="bottom" showOnScrollPosition={400} />}
             <Footer yml={myFooter.node} />
           </>
         )

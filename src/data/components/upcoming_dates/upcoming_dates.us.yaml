@@ -1,0 +1,21 @@
+title: "Next Dates"
+paragraph: ""
+button:
+  text: Select Location
+  top_label: Location / Mode
+info:
+  date:
+  program_label: program
+  location_label: location
+  duration_label: duration
+  duration_weeks: 16 weeks
+  duration_part_time: 16 weeks
+  duration_full_time: 9 weeks
+  button_text: apply now
+  button_link: "/us/apply"
+footer:
+  button_text: See more dates
+  button_text_open: See more dates
+  button_text_close: See less dates
+  button_link: "/us/next-dates"
+no_course_message: "At the moment there are no dates available in this location!"

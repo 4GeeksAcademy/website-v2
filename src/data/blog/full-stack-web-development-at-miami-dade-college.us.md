@@ -1,34 +1,22 @@
 ---
-author: MRiciglianoC
-comments: true
-date: 2017-05-08 21:08:07+00:00
-excerpt: A Miami Dade College Web Development program. Only 14 week’s and for just
-  $3405. No other fees are charged to the student.
-layout: post
-link: https://www.4geeksacademy.co/full-stack-web-development-at-miami-dade-college/
-slug: full-stack-web-development-at-miami-dade-college
-title: Learn to Code at Miami Dade College
-avatar: "/images/staff/marcelo.jpeg"
-image: "https://www.4geeksacademy.co/wp-content/uploads/2017/08/Miami-Dade.jpg"
-wordpress_id: 1996
-
-post_translations:
-- pll_5703862f49f64
-tags:
-- 4geeks academy
-- coding education
-- Education
-- miami
-- Miami Dade College
-lang: "us"
-status: "published" # PUBLISHED, DRAFT, UNASSIGNED
+author: "MRiciglianoC"
+date: "2017-05-08T21:08:07+00:00"
+excerpt: "A Full Stack Miami Dade College Web Development program. Only 14 week’s and for just $3405. No other fees are charged to the student."
+slug: "full-stack-web-development-at-miami-dade-college"
+template: "post" # post or landing_post
+title: "Learn to Code at Miami Dade College"
+image: "https://4GeeksAcademy.com/wp-content/uploads/2017/08/Miami-Dade.jpg"
+image_alt: ""
+cluster: "full-stack-developer"
+status: "published"
 featured: false
+
 ---
 
 ### **What to believe when speaking about coding programs in Miami.**
 
 
-People are talking and taking Coding programs.  More and more.  It looks like a trend.  Like a cultural bubble of recent years.  There are hundreds of coding Schools all around the U.S.  Every major city in the U.S. has at least three to five (3-5) Bootcamps (aside from Online Bootcamps).
+People are talking and taking Coding programs.  More and more.  It looks like a trend.  Like a cultural bubble of recent years.  There are hundreds of coding Schools all around the U.S.  Every major city in the U.S. has at least three to five (3-5) Bootcamps (aside from Online Bootcamps)..
 
 
 
@@ -162,4 +150,4 @@ Price
 </table>
 It is a 14-week program and it’s only $3,405.  No other fees are charged to the student.  This is a Miami Dade College program and you will become a Miami Dade College student.  It’s not just a Bootcamp, it’s the experience, reputation and history of one of the largest Colleges in the U.S. focused on getting you trained with the skills of a Full Stack Web Developer.
 
-Please find more details about the Miami Dade College Full Stack program [here](http://mdc.4geeksacademy.com/).
+Please find more details about the Miami Dade College Full Stack program [here](https://mdc.4geeksacademy.com/).

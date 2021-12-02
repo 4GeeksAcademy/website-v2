@@ -1,27 +1,16 @@
 ---
-author: MRiciglianoC
-comments: true
-date: 2020-11-23 22:32:53+00:00
-excerpt: We were sure that Ruby was a bad decision (see here why) and after weeks
-  of consideration between several programming languages we decided to start teaching
-  Python at 4Geeks Academy
-layout: post
-link: https://www.4geeksacademy.co/why-we-teach-python-4geeks/
-slug: why-we-teach-python-4geeks
-title: Why 4Geeks Academy teaches Python as Backend Language?
-avatar: "/images/staff/marcelo.jpeg"
+author: "MRiciglianoC"
+date: "2020-11-23T22:32:53+00:00"
+excerpt: "Ruby was a bad decision and after weeks of consideration between several programming languages we decided to start teaching Python at 4Geeks Academy"
+slug: "why-we-teach-python-4geeks"
+template: "post" # post or landing_post
+title: "Why 4Geeks Academy teaches Python as Backend Language?"
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2019/03/Screen-Shot-2019-03-28-at-6.25.55-PM.png"
-wordpress_id: 3509
-categories:
-- Sin categoría
-
-tags:
-- 4geeks
-- coding
-- Python
-lang: "us"
-status: "published" # PUBLISHED, DRAFT, UNASSIGNED
+image_alt: ""
+cluster: "coding-bootcamps"
+status: "published"
 featured: true
+
 ---
 
 # **Why 4Geeks Academy teaches Python as Backend Language?**

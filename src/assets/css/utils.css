@@ -18,3 +18,6 @@
     overflow: hidden;
     white-space: nowrap;
 }
+.capitalize{
+    text-transform: capitalize;
+}

@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {graphql} from 'gatsby'
 import Link from 'gatsby-link'
 import Layout from '../global/Layout';
-import {Row, Column, Wrapper, Divider} from '../components/Sections'
+import {Div, Divider} from '../components/Sections'
 import {H2, H3, H4, Title, Separator, Paragraph} from '../components/Heading'
 import {Colors, Button, StyledBackgroundSection} from '../components/Styling'
 import Card from '../components/Card'
@@ -12,8 +12,12 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 const Graduates = ({data, pageContext, yml}) => {
   return (
-    <>
-      <Wrapper margin="50px 0">
+      <Div 
+        margin="70px 0"
+        padding="60px 0"
+        padding_tablet="60px 100px"
+        flexDirection="column"
+      >
         <Title
           title={yml.banner.tagline}
           variant="primary"
@@ -21,12 +25,13 @@ const Graduates = ({data, pageContext, yml}) => {
           paragraph={yml.banner.sub_heading}
           paragraphColor={Colors.darkGray}
         />
-        <AlumniProjects lang={data.allAlumniProjectsYaml.edges} showThumbs="true" changeIndex={() => setSlideIndex()} playerHeight="500px" />
-      </Wrapper>
-      <Divider height="50px" />
-      <Wrapper
-
+        <AlumniProjects lang={data.allAlumniProjectsYaml.edges} showThumbs="true" playerHeight="500px" />
+      
+        <Divider height="150px" />
+      <Div
+        flexDirection="column"
         height="400px"
+        padding="0 10%"
       >
         <Title
           title={yml.about.heading}
@@ -34,17 +39,16 @@ const Graduates = ({data, pageContext, yml}) => {
           size="8"
           paragraph={yml.about.sub_heading}
         />
-        <Divider height="50px" />
         <Card shadow borders="1.25rem"  >
-          <Row
+          <Div
             display="flex"
             height="100%"
             marginLeft="0"
             marginRight="0"
             customRespSize
           >
-            <Column size="6" size_sm={`12`} alignSelf="center" height="100%" >
-              <Row display="flex" justifyContent="center" padding={`20px`}>
+            <Div size="6" size_sm={`12`} justifyContent="center" alignSelf="center" flexDirection="column" height="100%" >
+              <Div display="flex" justifyContent="center" padding={`20px`}>
                 <Paragraph
                   color={Colors.gray}
                   fontSize="18px"
@@ -55,8 +59,8 @@ const Graduates = ({data, pageContext, yml}) => {
                 >
                   {yml.about.content}
                 </Paragraph>
-              </Row>
-              <Row display="flex" justifyContent="around" padding={`10px`}>
+              </Div>
+              <Div display="flex" justifyContent="around" padding={`10px`}>
                 <Link to={yml.about.button_link}>
                   <Paragraph
                     color={Colors.blue}
@@ -68,9 +72,9 @@ const Graduates = ({data, pageContext, yml}) => {
                   >
                     {yml.about.button}
                   </Paragraph></Link>
-              </Row>
-            </Column>
-            <Column
+              </Div>
+            </Div>
+            <Div
               size="6"
               size_sm={`12`}
               paddingLeft={`0`}
@@ -80,17 +84,17 @@ const Graduates = ({data, pageContext, yml}) => {
               <StyledBackgroundSection
                 className={`img-right`}
                 height={`426px`}
-                image={yml.about.about_image.image.childImageSharp.fluid}
+                image={yml.about.about_image.image.childImageSharp.gatsbyImageData}
                 bgSize={`cover`}
                 alt={yml.about.about_image.alt}
                 borderRadius={`0 1.25rem 1.25rem 0`}
               />
-            </Column>
-          </Row>
+            </Div>
+          </Div>
         </Card>
-      </Wrapper>
-      <Divider height="550px" />
-    </>
+      </Div>
+      <Divider height="90px" />
+    </Div>
   )
 };
 export const query = graphql`
@@ -111,9 +115,14 @@ export const query = graphql`
             sub_heading
             image{
               childImageSharp {
-                fluid(maxWidth: 1200){
-                  ...GatsbyImageSharpFluid_withWebp
-                }
+                gatsbyImageData(
+                  layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                  width: 1200
+                  placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                )
+                # fluid(maxWidth: 1200){
+                #   ...GatsbyImageSharpFluid_withWebp
+                # }
               }
             }  
           }
@@ -123,9 +132,14 @@ export const query = graphql`
             about_image{
               image {
                 childImageSharp {
-                  fluid(maxWidth: 800){
-                    ...GatsbyImageSharpFluid_withWebp
-                  }
+                  gatsbyImageData(
+                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                    width: 800
+                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                  )
+                  # fluid(maxWidth: 800){
+                  #   ...GatsbyImageSharpFluid_withWebp
+                  # }
                 }
               } 
               alt
@@ -149,9 +163,14 @@ export const query = graphql`
                 slug
                 project_image {
                   childImageSharp {
-                    fluid(maxWidth: 800){
-                      ...GatsbyImageSharpFluid_withWebp
-                    }
+                    gatsbyImageData(
+                      layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                      width: 800
+                      placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                    )
+                    # fluid(maxWidth: 800){
+                    #   ...GatsbyImageSharpFluid_withWebp
+                    # }
                   }
                 } 
                 project_content

@@ -1,138 +1,134 @@
-import React, {useContext} from 'react';
+import React, {useState, useContext, useEffect} from 'react';
 import {useStaticQuery, graphql} from 'gatsby';
 import {Title, H1, H2, H3, H4, Span, Paragraph, Separator} from '../Heading';
-import {Container, Row, Column, Wrapper, Divider} from '../Sections'
+import {GridContainer, Grid, Div} from '../Sections'
 import {Button, Colors, RoundImage, StyledBackgroundSection} from '../Styling'
-import styled from 'styled-components';
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import {Carousel} from 'react-responsive-carousel';
-import Card from '../Card';
+import Icon from "../Icon"
+import dayjs from "dayjs"
+import 'dayjs/locale/de'
+import { getCohorts } from "../../actions"
+import {SessionContext} from '../../session.js'
 import Link from 'gatsby-link'
 
-const Loc = (props) => {
-
-  let loc = props.locations.filter(l => l.node.meta_info.unlisted != true).sort((a, b) => a.node.meta_info.position > b.node.meta_info.position ? 1 : -1)
+const Loc = ({locations, title, paragraph, lang}) => {
+  const data = useStaticQuery(graphql`
+    {
+      allLocYaml {
+        edges {
+          node {
+            label
+            fields {
+              lang
+            }
+          }
+        }
+      }
+    }
+  `)
+  let content = data.allLocYaml.edges.find(({node}) => node.fields.lang === lang);
+  if (content) content = content.node;
+  else return null;
+  const {session} = useContext(SessionContext);
+  const [index, setIndex] = useState(null);
+  const [status, setStatus] = useState({toggle: false, hovered: false})
+  const [datas, setData] = useState({
+    cohorts: {catalog: [], all: [], filtered: []}
+  });
+  useEffect(() => {
+    const getData = async () => {
+      const cohorts = await getCohorts();
+      let _types = []
+      setData(oldData => ({
+        cohorts: {catalog: oldData.cohorts.catalog, all: cohorts, filtered: cohorts}
+      }))
+    }
+    getData();
+  }, []);
+  let loc = locations.filter(l => l.node.meta_info.unlisted != true).sort((a, b) => a.node.meta_info.position > b.node.meta_info.position ? 1 : -1)
+  const nextDate = (location) => {
+    let cohort = datas.cohorts.all.find(item => item.academy.slug === location.node.breathecode_location_slug)
+    let onlineCohort = datas.cohorts.all.find(item => item.academy.slug === "online")
+    return cohort || onlineCohort
+  }
   return (
     <>
-      <Row
-        github={"/location"}
-        display="flex"
-      >
-        <Column
-          size="12"
-          borderRadius="0 0 0 1.25rem"
-          image="no"
-          background={Colors.white}
-        ><Carousel
-          showIndicators={false}
-          showThumbs={false}
-          showStatus={false}
-          autoPlay={true}
-          infiniteLoop={true}
-          showArrows={true}
-          interval={5000}
-          transitionTime={1000}
+      {title &&
+        <GridContainer
+          margin_tablet="0 0 35px 0"
+          margin="0 0 32px 0"
+          gridGap="17px"
+
         >
-            {loc != null &&
-              loc.map((item, index) => {
-                return (
-                  <Card key={index} shadow borders="1.25rem" height="500px">
-                    <Row
-                      height="100%"
-                      marginLeft="0"
-                      marginRight="0"
-                      display="flex"
-                    >
-                      <Column
-                        size="6"
-                        size_sm="12"
-                        alignSelf="center"
-                        height="500px"
-                        h_sm="120px"
-                        paddingRight="0"
-                        paddingLeft="0"
-                      >
-                        <StyledBackgroundSection
-                          className={`image`}
-                          height={`500px`}
-                          h_sm={`120px`}
-                          image={item.node.header.image && item.node.header.image.childImageSharp.fluid}
-                          bgSize={`cover`}
-                          alt="Cnn Logo"
-                        />
-                      </Column>
-                      <Column size="6" size_sm="12" height="500px" h_sm="380px" image="no" borderRadius="0 0 0 1.25rem">
-                        <H3
-                          margin="20px 0"
-                          fs_xs="20px"
-                          fs_sm="22px"
-                          fs_md="20px"
-                          fs_lg="20px"
-                          fs_xl="20px"
-                          align="left"
-                        >
-                          {item.node.city}
-                        </H3>
-                        <Separator left variant="primary" />
-                        <Paragraph color={Colors.gray} margin="20px 0 0 0" align="left" fontSize="14px" lineHeight="20px">{item.node.carousel_box.content}</Paragraph>
-                      </Column>
-                    </Row>
-                  </Card>
-                )
-              })
-
+          <Div
+            display="flex"
+            flexDirection="column"
+            alignItems="center"
+          >
+            <H2 margin="0 0 15px 0" fontSize="15px" lineHeight="19px" fontWeight="900">{title}</H2>
+            <Paragraph>{paragraph}</Paragraph>
+          </Div>
+        </GridContainer>}
+      <GridContainer columns="1" columns_sm="2" columns_tablet="3" gridGap="0" columnGap="15px" margin_tablet="0 0 70px 0">
+        {loc !== null &&
+          loc.map((item, i) => {
+            const next = nextDate(item);
+            let stringDate = "";
+            if(next !== undefined && next.kickoff_date){
+              stringDate = dayjs(next.kickoff_date).locale(lang).format("ddd DD MMM YYYY");
+              stringDate = stringDate[0].toUpperCase() + stringDate.substr(1,2) + "." + stringDate.substr(3);
             }
-          </Carousel>
-        </Column>
-      </Row>
-      <Divider height="10px" />
-      <Row height="auto" justifyContent="center" display="flex">
-        {loc.map((pic, i) => {
-          let randLocImgIndex = Math.floor(Math.random() * pic.node.carousel_box.images.length)
-          return (
-            <Column key={i} size="2" padding="0 25px">
-              {/* <Card width="100%" > */}
-              <Link to={`/${props.lang}/location/${pic.node.meta_info.slug}`}>
-                <StyledBackgroundSection
-                  className={`img-thumbs`}
-                  height={`60px`}
-                  image={pic.node.carousel_box.images[randLocImgIndex].path && pic.node.carousel_box.images[randLocImgIndex].path.childImageSharp.fluid}
-                  bgSize={`cover`}
-                  alt={pic.node.carousel_box.images[randLocImgIndex].alt}
+            return (
+              <Div
+                onMouseOver={() => setIndex(i)}
+                key={i}
+                style={{
+                  borderBottom: `1px solid ${Colors.lightGray}`,
+                  position: "relative",
+                  transition: "background 0.3s ease, border-left 0.3s ease",
+                  borderLeft: `${index === i ? "10px solid" + Colors.yellow : "0"}`,
+                }}
+                display="flex"
+                flexDirection="row"
+                justifyContent="between"
+                // height="207px"
+                height="auto"
+                padding="30px 24px"
+                background={index === i ? Colors.verylightGray : Colors.white}
+              >
+                <H3
+                  textAlign="left"
+                >{item.node.name} {next !== undefined && !item.node.city.includes('Online') && next.academy.slug === 'online' && '(Online)'}
+                  <Span animated color={Colors.yellow}>_</Span>
+                </H3>
+                {/* <Div
+                  display="block"
+                  display_tablet="block"
                 >
-                  <Row
-                    height="100%"
-                    justifyContent="around"
-                    backgroundHover={Colors.blue}
-                    marginHover="0"
-                    borderRadiusHover=".25rem"
-                    display="flex"
-                  >
-                    <Column size="12" alignSelf="center" align="center">
-
-                      <H4
-                        bg={`rgba(0,0,0,0.4)`}
-                        bgHover={`initial`}
-                        color={Colors.white}
-                        fs_xs="9px"
-                        fs_sm="12px"
-                        fs_md="12px"
-                        fs_lg="14px"
-                        fontSize="20px"
-
-                      >
-                        {pic.node.city}
-                      </H4>
-
-                    </Column>
-                  </Row>
-                </StyledBackgroundSection>
-              </Link>
-            </Column>
-          )
-        })}
-      </Row>
-    </>)
+                  <Paragraph textAlign="left" fontSize="15px" lineHeight="22px" color={Colors.darkGray}>
+                    {content.label}
+                  </Paragraph >
+                  <Paragraph textAlign="left" fontSize="15px" lineHeight="22px" color={Colors.darkGray}>
+                    {next !== undefined ? next.syllabus_version?.name : "No upcoming dates at this location"}
+                  </Paragraph>
+                  {next !== undefined && next.kickoff_date && <Paragraph textAlign="left" fontSize="15px" lineHeight="22px" color={Colors.darkGray}>
+                    <span className="capitalize">{stringDate}</span>
+                  </Paragraph>}
+                </Div> */}
+                <Link to={`/${lang}/coding-campus/${item.node.meta_info.slug}`}>
+                  <Icon 
+                    // style={{position: "absolute", bottom: "18px", right: "18px"}}
+                    icon="arrowright" 
+                    height="32px"
+                    width="32px"
+                  />
+                </Link>
+              </Div>
+            )
+          })
+        }
+      </GridContainer>
+    </>
+  )
 };
 
 

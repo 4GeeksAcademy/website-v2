@@ -3,6 +3,7 @@ import styled, {css, keyframes} from 'styled-components';
 import PropTypes from 'prop-types';
 import {Colors} from '../Styling'
 import {Break} from '../Responsive'
+import {Devices} from '../Responsive'
 import {Blink} from '../Animations'
 import {redirectTo} from "@reach/router"
 
@@ -18,59 +19,91 @@ Heading.defaultProps = {
 };
 
 const BaseHeading = styled(Heading)`
-  display: block;
+  display: ${props => props.display || "block"};
   float: ${props => props.float || "none"};
   width: ${props => props.width || "100%"};
-  font-family: 'Futura', sans-serif;
-  letter-spacing: 0px;
+  font-family: 'Lato', sans-serif;
+  letter-spacing: ${props => props.letterSpacing};
   font-weight: ${props => props.fontWeight};
   font-size: ${props => props.fontSize};
-  font-style: normal;
-  
+  line-height: ${props => props.lineHeight};
+  font-style: ${props => props.fontStyle || "normal"};
   color: ${props => props.color};
   margin: ${props => props.margin};
+  border: ${props => props.border};
+  border-width: ${props => props.borderWidth};
+  border-color: ${props => props.borderColor};
   text-shadow: ${props => props.textShadow}; 
-  background-color: ${props => props.bg};
+  background-color: ${props => props.background};
   margin-top: ${props => props.marginTop}; 
-  text-transform: ${props => props.uppercase && "uppercase"};
-  text-align: ${props => props.align || "center"};
+  text-transform: ${props => props.textTransform};
+  text-align: ${props => props.textAlign || "center"};
+  align-self: ${props => props.alignSelf};
   padding: ${props => props.padding};
+  border-bottom: ${props => props.borderBottom};
 
   &:hover{
     background-color: ${props => props.bgHover || props.bg};
+    color: ${props => props.colorHover};
   }
-  @media ${Break.lg}{
-    text-align: ${props => props.align};
-    font-size: ${props => props.fs_lg};
+  @media ${Devices.xxs}{
+
   }
-  @media ${Break.md}{
-    text-align: ${props => props.align};
-    font-size: ${props => props.fs_md};
+  @media ${Devices.xs}{
+      
   }
-  @media  ${Break.sm}{
-    text-align: ${props => props.align_sm || "center"};
-    font-size: ${props => props.fs_sm};
-    margin: ${props => props.m_sm};
-  }  
-  @media ${Break.xs}{
-    text-align: ${props => props.align_xs};
-    font-size: ${props => props.fs_xs};
+  @media  ${Devices.sm}{
+    text-align: ${props => props.textAlign_sm};
+    
+  }
+  @media  ${Devices.tablet}{
+    text-align: ${props => props.textAlign_tablet};
+    font-size: ${props => props.fontSize_tablet};
+    line-height: ${props => props.lineHeight_tablet};
+    margin: ${props => props.margin_tablet};
+    padding: ${props => props.padding_tablet};
+    display: ${props => props.display_tablet};
+    align-self: ${props => props.alignSelf_tablet};
+  }
+  @media  ${Devices.md}{
+    font-size: ${props => props.fontSize_md};
+    text-align: ${props => props.textAlign_md};
+    line-height: ${props => props.lineHeight_md};
+    display: ${props => props.display_md};
+    margin: ${props => props.margin_md};
+    width: ${props => props.width_md};
+    padding: ${props => props.padding_md};
+  }
+  @media  ${Devices.lg}{
+
+  }
+  @media  ${Devices.xl}{
+
+  }
+  @media  ${Devices.xxl}{
+
   }
 `
 
-export const H1 = styled(BaseHeading)``;
+export const H1 = styled(BaseHeading)`
+  z-index: ${props => props.zIndex};
+`;
 
 export const H2 = styled(BaseHeading)`
-  font-weight: 800;
-  letter-spacing: -2px;
+  z-index: ${props => props.zIndex};
+  letter-spacing: 0.05em;
 `;
 export const H3 = styled(BaseHeading)`
-font-weight: 400;
-letter-spacing: -1px;
+  font-weight: ${props => props.fontWeight || "700"};
+  font-size: ${props => props.fonSize};
+  text-align: ${props => props.textAlign};
+  letter-spacing: 0.05em;
+  place-self: ${props => props.placeSelf};
 `;
 export const H4 = styled(BaseHeading)`
-letter-spacing: -1px;
-
+font-weight: ${props => props.fontWeight || "400"};
+  letter-spacing: 0.05em;
+  padding-right: ${props => props.paddingRight};
 `;
 export const H5 = styled(BaseHeading)`
   font-weight: 700;
@@ -102,7 +135,6 @@ const StyledSeparator = styled.div`
     margin-right: auto;
     width: ${props => props.width_xs};
   }
-};
 `
 export const Separator = ({variant, children, ...rest}) => {
   let variants = {
@@ -129,98 +161,125 @@ Separator.defaultProps = {
   variant: 'default',
 };
 
-export const Paragraph = styled.div`
-  
-  width: ${props => props.width};
+export const Paragraph = styled.p`
+  display: ${props => props.display};
+  direction: ${props => props.direction};
+  justify-content: ${props => props.justifyContent};
+  width: ${props => props.width || "100%"};
   cursor: ${props => props.cursor};
-  margin: ${props => props.margin};
+  margin: ${props => props.margin || "0"};
   font-size: ${props => props.fontSize};
+  flex-direction: ${props => props.flexDirection};
   font-family: ${props => props.fontFamily};
-  font-weight: ${props => props.fontWeight};
+  font-weight: ${props => props.isActive ? "bold" : props.fontWeight || "400"};
   max-width: ${props => props.maxWidth};
   padding: ${props => props.padding};
+  text-transform: ${props => props.textTransform};
   padding-right: ${props => props.paddingRight || "innitial"};
-  letter-spacing: 0px;
+  letter-spacing: ${props => props.letterSpacing};
   text-shadow: ${props => props.textShadow}; 
   line-height: ${props => props.lineHeight};
   color: ${props => props.color};
-  text-align: ${props => props.align};
+  text-align: ${props => props.textAlign || "center"};
+  align-self: ${props => props.alignSelf};
+  align-items: ${props => props.alignItems};
   height: ${props => props.height};
+  z-index: ${props => props.zIndex};
+  border-left: ${props => props.borderLeft};
+  opacity: ${props => props.isActive ? 1 : props.opacity ? props.opacity : 0.8};
 
-  @media ${Break.lg}{
-    text-align: ${props => props.align_lg};
-    font-size: ${props => props.fs_lg};
+  a{color: ${Colors.blue};}
+
+  @media ${Devices.xxs}{
   }
-  @media ${Break.md}{
-    text-align: ${props => props.align};
-    font-size: ${props => props.fs_md};
+  @media ${Devices.xs}{
+      padding: ${props => props.padding_xs}
   }
-  @media ${Break.sm}{
-    display: ${props => props.display_sm};
-    color: ${props => props.color_sm};
-    font-size: ${props => props.fs_sm};
-    margin: ${props => props.m_sm};
-    text-align: ${props => props.align_sm || 'center'};
-    max-width: ${props => props.mw_sm};
+  @media  ${Devices.sm}{
+      width: ${props => props.width_sm};
+      padding: ${props => props.padding_sm};
   }
-  @media ${Break.xs}{
-    font-size: ${props => props.fs_xs};
-    text-align: ${props => props.align_xs};
-  } 
+  @media  ${Devices.tablet}{
+      display: ${props => props.display_tablet};
+      justify-content: ${props => props.justifyContent_tablet};
+      width: ${props => props.width_tablet};
+      font-size: ${props => props.fontSize_tablet};
+      text-align: ${props => props.textAlign_tablet};
+      align-self: ${props => props.alignSelf_tablet};
+      padding: ${props => props.padding_tablet};
+      margin: ${props => props.margin_tablet};
+    }
+    @media  ${Devices.md}{
+      text-align: ${props => props.textAlign_md};
+      margin: ${props => props.margin_md};
+      padding: ${props => props.padding_md};
+  }
+  @media  ${Devices.lg}{
+    font-size: ${props => props.fontSize_lg};
+  }
+  @media  ${Devices.xl}{
+  }
+  @media  ${Devices.xxl}{
+  }
 `
 
 export const Title = props => {
   const variants = {
     default: {
       headingComponent: H2,
-      align: "center",
+      textAlign: "center",
     },
     primary: {
       headingComponent: H2,
-      fontSize: '20px',
-      fontWeight: '500',
-      align: "center",
+      fontSize: '15px',
+      fontWeight: '900',
+      fontWeight_p: '400',
+      lineHeight_p: '22px',
+      textAlign: "center",
     },
     shadow: "0px 0px 4px black",
     small: {
       headingComponent: H3,
       fontSize: '18px',
       fontWeight: '300',
-      align: "left",
+      textAlign: "left",
     },
     main: {
       headingComponent: H1,
       shadow: "0px 0px 4px black",
       fontSize: '20px',
-      align: "center",
+      textAlign: "center",
     }
   }
   const theme = variants[props.variant]
   const HeadingType = theme.headingComponent;
   return (
     <div style={{marginBottom: "30px "}}>
-      <HeadingType type={props.type} align={theme.align}
+      <HeadingType
+        type={props.type}
+        align={theme.textAlign}
         color={props.color}
         marginTop={props.marginTop}
         fontSize={props.fontSize}
         fs_xs={props.fs_xs}
-        align={props.textAlign}
+        textAlign={props.textAlign}
         textShadow={theme.shadow}
       >
         {props.title}
       </HeadingType>
-      <Separator align="center" variant={props.variant} />
       {props.paragraph && props.paragraph.split('\\n').map((content, i) =>
         <Paragraph key={i}
-          align="center"
+          textAlign="center"
           onClick={() => props.linkTo && redirectTo(props.linkTo)}
           color={props.paragraphColor}
           fontFamily={props.fontFamily}
           maxWidth={props.maxWidth}
           fontSize={theme.fontSize}
-          fontWeight={theme.fontWeight}
+          fontWeight={theme.fontWeight_p}
           margin={props.margin}
           textShadow={theme.shadow}
+          display="none"
+          display_tablet="block"
         >
           {content}
         </Paragraph>
@@ -247,11 +306,11 @@ Title.defaultProps = {
 //   primary: PropTypes.bool.isRequired,
 // }
 Paragraph.defaultProps = {
-  fontSize: "16px",
   fontFamily: "Lato, sans-serif",
-  fontWeight: "500",
-  marginTop: "40px",
-  color: "#898a8b"
+  fontSize: "15px",
+  lineHeight: "22px",
+  textAlign: "center",
+  color: `${Colors.darkGray}`,
 };
 Separator.defaultProps = {
   width: "50px",
@@ -259,29 +318,23 @@ Separator.defaultProps = {
   border: `2px solid black`
 };
 H1.defaultProps = {
-  // color: Colors.black,
-  fontSize: "42px",
-  textShadow: "0px 0px 4px black"
+  fontSize: "13px",
+  lineHeight: "16px",
+  fontWeight: "700",
+  letterSpacing: '0.05em'
 };
 H2.defaultProps = {
-  fs_xs: '7.5vw',
-  fs_sm: '6vw',
-  fs_md: '30px',
-  fs_lg: '30px',
-  fontSize: '35px'
+  fontSize: '30px',
+  lineHeight: '36px',
+  fontWeight: '700'
 
 };
 H3.defaultProps = {
-  fs_xs: '4.5vw',
-  fs_sm: '4vw',
-  fs_md: '25px',
-  fs_lg: '25px',
-  fontSize: '30px'
+  fontSize: '22px',
+  lineHeight: '26px'
 };
 H4.defaultProps = {
-  fontSize: '25px',
-  fs_lg: '23px',
-  fs_md: '23px',
-  fs_sm: '23px',
-  fontWeight: '400',
+  fontSize: '15px',
+  lineHeight: '26px',
+  letterSpacing: '0.05em'
 };

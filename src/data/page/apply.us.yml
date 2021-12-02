@@ -1,14 +1,20 @@
 meta_info:
   slug: apply
-  title: "Apply to 4Geeks Academy"
-  description: "Apply to one of the top coding bootcamps in the world with locations in Miami, Santiago de Chile, Madrid, Costa Rica, Maracaibo and Caracas"
+  title: "Apply to 4Geeks Academy Bootcamp"
+  visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
+  description: "Apply to one of the top coding bootcamps in the world, online or in one of our locations: Miami, Santiago de Chile, Madrid, Costa Rica, Maracaibo and Caracas."
   image: "https://4geeks-academy-main.s3-us-west-2.amazonaws.com/PresentacionBienvenidaEstudiante1.jpg"
   keywords: "apply, 4geeks academy, apply to 4geeks academy, apply to coding bootcamp, coding bootcamp, coding school, apply to coding school, apply to coding institution"
   redirects: ["/apply"]
 
 ## APPLY HEADING
-tagline: APPLY TO 4GEEKS
-sub_heading: "Cras mattis consectetur purus sit amet fermentum. Nulla vitae elit libero, a pharetra augue. Integer posuere erat a ante venenatis dapibus posuere velit aliquet."
+seo_title: "coding bootcamp"
+header:
+  title: "Apply to 4Geeks"
+  image:
+  image_alt: ""
+  paragraph: "Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et."
+  button:
 
 ## APPLY LEFT SECTION
 left:
@@ -18,13 +24,13 @@ left:
     last_name: "Last Name"
     email: "Email"
     phone: "Phone"
-  locations_title: "Select a location"
-  course_title: 
+  locations_title: "Select one of our campus"
+  course_title:
     open: "Please select one program"
     close: "What program would you like to attend?"
   referral_section:
-    placeholder: "Refferral Key"
-    content: "If you were referred by any current or past student, use your referral code for extra credit or discount."
+    placeholder: "Referral Key"
+    content: "If you have a referral code or if you were referred by any student, use your referral code for promos and discounts."
   button:
     button_text: "APPLY"
     button_link: ""
@@ -32,7 +38,7 @@ left:
 ## APPLY RIGHT SECTION
 
 right:
-  heading: "ONCE YOU CLICK ON APPLY, YOU WILL"
+  heading: "Once you click on apply, you will"
   content_section:
     - "1- Receive an email from your City Advisor"
     - "2- Get Info and details about the programs, people, community, outcomes, campus and more."

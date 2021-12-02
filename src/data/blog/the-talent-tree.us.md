@@ -1,28 +1,16 @@
 ---
-author: alesanchezr
-comments: true
-date: 2017-10-11 20:30:18+00:00
-excerpt: Have you ever played The Sims or League of Legends? If you have, you familiar
-  with the concept of “earning skills”, we are proud to have built the entire academy
-  around that concept...
-layout: post
-link: https://www.4geeksacademy.co/the-talent-tree/
-slug: the-talent-tree
-title: The Talent Tree
-avatar: "/images/staff/marcelo.jpeg"
+author: "alesanchezr"
+date: "2017-10-11T20:30:18+00:00"
+excerpt: "Have you ever played The Sims or League of Legends? If you have, you familiar with the concept of “earning skills”"
+slug: "the-talent-tree"
+template: "post" # post or landing_post
+title: "The Talent Tree"
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2017/10/Talents_for_Paladins.jpg"
-wordpress_id: 2539
-categories:
-- Learning to code
-
-tags:
-- 4geeks academy
-- challenges of a web developer
-- coding bootcamp
-- coding education
-lang: "us"
-status: "published" # PUBLISHED, DRAFT, UNASSIGNED
+image_alt: ""
+cluster: "coding-bootcamps"
+status: "published"
 featured: false
+
 ---
 
 Have you ever played Sims, League Of Legends, Zelda or Civilization?  If you have, you are very familiar with the concept of “earning skills.”  The** Talent Tree ®** is one of the things that makes us very proud – it is the foundation on which the entire academic experience is built on.  Here is why:
@@ -47,7 +35,7 @@ That is why we decided to base all of our syllabus, methodology, content, experi
 ## **The Talent Tree**
 
 
-![](https://www.4geeksacademy.co/wp-content/uploads/2017/10/specialties.png)
+![](/wp-content/uploads/2017/10/specialties.png)
 
 When you start learning in 4Geeks Academy, you are presented with a map with all the skills required to become a real developer.  Having clean organized code, doing research, and problem-solving are only some of the 10 skills that you will need to master in order to become a real-life developer.
 
@@ -63,7 +51,7 @@ You officially have a skill when you earn all of its badges by completing challe
 
 Another thing we love about The** Talent Tree ®** is its capacity to empower the student, making them self-aware of their real-time progress throughout the course.
 
-[Click here if you want to learn more about our syllabus, program details, and methodology.](https://www.4geeksacademy.co/the-program/)
+[Click here if you want to learn more about our syllabus, program details, and methodology.](/us/coding-bootcamps/part-time-full-stack-developer)
 
 
 ### Constant Evolution

@@ -36,29 +36,29 @@ export const Charts = (props) => {
 
 
     return (
-        <div className="col">
-            <Chart
-                chartType="PieChart"
-                width="100%"
-                height="250px"
-                data={data ? data : null}
-                options={{
 
-                    legend: 'none',
-                    pieHole: 0.5,
-                    is3D: false,
-                    // slices: {
-                    //     0: {color: "yellow"},
-                    //     1: {color: "red"},
-                    //     2: {color: "blue"}
-                    // },
-                    animation: {
-                        startup: true,
-                        easing: "linear",
-                        duration: 5500
-                    }
-                }}
-            />
-        </div>
+        <Chart
+            chartType="PieChart"
+            width="100%"
+            height="250px"
+            data={data ? data : null}
+            options={{
+
+                legend: 'none',
+                pieHole: 0.5,
+                is3D: false,
+                // slices: {
+                //     0: {color: "yellow"},
+                //     1: {color: "red"},
+                //     2: {color: "blue"}
+                // },
+                animation: {
+                    startup: true,
+                    easing: "linear",
+                    duration: 5500
+                }
+            }}
+        />
+
     )
 }

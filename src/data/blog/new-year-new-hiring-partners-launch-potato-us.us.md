@@ -1,24 +1,16 @@
 ---
-author: MRiciglianoC
-comments: true
-date: 2017-12-12 21:22:15+00:00
-excerpt: 'We are so pleased to announce that we have partnered with the startup technology
-  and marketing studio: Launch Potato'
-layout: post
-link: https://www.4geeksacademy.co/new-year-new-hiring-partners-launch-potato-us/
-slug: new-year-new-hiring-partners-launch-potato-us
-title: 'New year, New Hiring Partners: Launch Potato & Us'
-avatar: "/images/staff/marcelo.jpeg"
-image: "https://www.4geeksacademy.co/wp-content/uploads/2017/12/POTATO-ADS-02.jpg"
-wordpress_id: 2656
-categories:
-- Living and working as a developer
-- Why learn to code?
-lang: "us"
-status: "published" # PUBLISHED, DRAFT, UNASSIGNED
+author: "MRiciglianoC"
+date: "2017-12-12T21:22:15+00:00"
+excerpt: "We are so pleased to announce that we have partnered with the startup technology and marketing studio: Launch Potato"
+slug: "new-year-new-hiring-partners-launch-potato-us"
+template: "post" # post or landing_post
+title: "New year, New Hiring Partners: Launch Potato & Us"
+image: "https://4GeeksAcademy.com/wp-content/uploads/2017/12/POTATO-ADS-02.jpg"
+image_alt: ""
+cluster: "trends-and-tech"
+status: "published"
 featured: false
-tags:
-- 4geeks
+
 ---
 
 At 4Geeks Academy we have two main goals with our students:

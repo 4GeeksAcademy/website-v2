@@ -1,0 +1,21 @@
+title: "Próximas Fechas"
+paragraph: ""
+button:
+  text: Buscar por sede o modalidad
+  top_label: Sede / Modalidad
+info:
+  date:
+  program_label: programas
+  location_label: sede
+  duration_label: duración
+  duration_weeks: 16 semanas
+  duration_part_time: 16 semanas
+  duration_full_time: 9 semanas
+  button_text: aplicar
+  button_link: "/es/aplica"
+footer:
+  button_text: Ver más Fechas
+  button_text_open: Ver más Fechas
+  button_text_close:
+  button_link: "/es/proximas-fechas"
+no_course_message: "Actualmente no hay próximas fechas para este campus."

@@ -1,27 +1,63 @@
 import React, {useState} from 'react';
 import styled, {css} from 'styled-components';
 import {Break} from '../Responsive';
+import {Devices} from '../Responsive';
 import BackgroundImage from 'gatsby-background-image'
 import {Link} from 'gatsby'
 import {Location} from '@reach/router'
-// COLORS SET
+import { getImage } from "gatsby-plugin-image"
+
+const getBgImageType = imageData => imageData.layout === 'fixed' ? 'fixed' : 'fluid'
+const getAspectRatio = imageData => imageData.width / imageData.height
+const getPlaceholder = imageData => {
+  if (imageData.placeholder) {
+    return imageData.placeholder.fallback.includes(`base64`) ?
+      { base64: imageData.placeholder.fallback }
+      : { tracedSvg: imageData.placeholder.fallback }
+  }
+  return {}
+}
+
+const convertToBgImage = imageData => {
+  if (imageData && imageData.layout) {
+    const returnBgObject = {}
+    const bgType = getBgImageType(imageData)
+    const aspectRatio = getAspectRatio(imageData)
+    const placeholder = getPlaceholder(imageData)
+    returnBgObject[bgType] = {
+      ...imageData.images.fallback,
+      ...placeholder,
+      aspectRatio,
+    }
+    return returnBgObject
+  }
+  return {}
+}
 
 export const Colors = {
-    blue: "#0097CE",
+    blue: "#00A0DA",
     lightBlue: "#BBEAFC",
+    lightBlue2: "rgba(199, 243, 253, 0.5)",
+    veryLightBlue: "#C7F3FD",
+    veryLightBlue2: "#E3F9FE",
     gray: "#898a8b",
-    verylightGray: "#fafafa",
-    lightGray: "#ededed",
+    verylightGray: "#F5F5F5",
+    lightGray: "#ebebeb",
     lightGreen: "#c4f7b7",
     green: "#20630d",
-    darkGray: '#2e2e2e',
+    darkGray: '#3A3A3A;',
+    darkGray2: '#606060;',
     borderGray: '#ececec',
-    yellow: "#E6BA1F",
-    lightYellow: "#f3df98",
+    yellow: "#FFC718",
+    lightYellow: "rgba(255, 183, 24, 0.1)",
+    lightYellow2: "rgba(255, 183, 24, 0.2)",
+    darkYellow: "#FFECBF",
     black: "#000000",
     white: "#FFFFFF",
     red: "red",
     lightRed: "#ffcdc9",
+    shadow: "0px 0px 16px rgba(0, 0, 0, 0.15)"
+
 }
 
 export const Select = styled.select`
@@ -47,7 +83,6 @@ export const Tooltip = styled.div`
     z-index: 1;
     width: 300px;
     opacity: 1;
-    // right: -277px;
     border-radius: .25rem;
     margin-bottom: 1em;
     padding: 1em;
@@ -104,6 +139,16 @@ export const RoundImage = styled.div`
         border-radius: ${props => props.br_xs};
         
     }
+    
+    @media ${Devices.tablet} {
+        width: ${props => props.width_tablet};
+    }
+    @media ${Devices.md} {
+        width: ${props => props.width_md};
+    }
+    @media ${Devices.lg} {
+        width: ${props => props.width_lg};
+    }
 `
 export const Span = styled.div`
     color: ${props => props.color};
@@ -135,15 +180,24 @@ const StyledImage = styled.div`
 `
 export const Img = React.memo(StyledImage);
 
-export const BackgroundSection = ({children, className, image, height, width, bgSize, borderRadius, margin, withOverlay}) => {
+export const BackgroundSection = ({id, children, className, image, height, width, bgSize, borderRadius, margin, withOverlay}) => {
+
+    const thisImage = getImage(image)
+
+    // Use like this:
+    const bgImage = convertToBgImage(thisImage)
+
     return (
         <BackgroundImage
+            id={id}
             Tag="section"
             loading="eager"
-            fadeIn={false}
+            // fadeIn={false}
             className={className}
             borderRadius={borderRadius}
-            fluid={image}
+            // fluid={image}
+            {...bgImage}
+            preserveStackingContext
         >
             {children}
         </BackgroundImage>
@@ -154,13 +208,17 @@ export const StyledBackgroundSection = styled(BackgroundSection)`
     width: ${props => props.width || "100%"};
     padding: ${props => props.padding};
     text-align: ${props => props.align};
+    border-radius: ${props => props.borderRadius};
     background-repeat: no-repeat;
     margin: ${props => props.margin || "auto"};
+    z-index: ${props => props.zIndex || 1};
     opacity: 1;
     background-size: ${props => props.bgSize || "cover"};
     height: ${props => props.height};
     max-width: ${props => props.maxWidth};
+    min-height: ${props => props.minHeight};
     &:before, &:after {
+        min-height: ${props => props.minHeight};
         border-radius: ${props => props.borderRadius};
         filter: ${props => props.filter};
         height: ${props => props.h_sm};
@@ -168,31 +226,61 @@ export const StyledBackgroundSection = styled(BackgroundSection)`
         background-color: ${props => props.backgroundColor};
         background-position: ${props => props.backgroundPosition} !important;
     }
-    @media ${Break.lg}{
-        &:before, &:after {
-            background-position: ${props => props.bp_lg} !important;
-        }
+    @media ${Devices.xxs}{
+
     }
-    @media ${Break.md}{
-        &:before, &:after {
-            background-position: ${props => props.bp_md} !important;
-        }
+    @media ${Devices.xs}{
+        
+        
     }
-    @media ${Break.sm}{
-        height: ${props => props.h_sm};
-        width: ${props => props.w_sm};
-        &:before, &:after {
-            border-radius: ${props => props.borderRadius_sm};
-            background-position: ${props => props.bp_sm} !important;
-        }
+    @media  ${Devices.sm}{
+        
     }
-    @media ${Break.xs}{
-        width: ${props => props.w_xs};
+    @media  ${Devices.tablet}{
+        border-radius: ${props => props.borderRadius_tablet};
+        height: ${props => props.height_tablet};
         &:before, &:after {
-            background-position: ${props => props.bp_xs} !important;
+            border-radius: ${props => props.borderRadius_tablet};
         }
+        
     }
-  `
+    @media  ${Devices.md}{
+        width: ${props => props.width_md};
+    }
+    @media  ${Devices.lg}{
+
+    }
+    @media  ${Devices.xl}{
+
+    }
+    @media  ${Devices.xxl}{
+
+    }
+    `
+// @media ${Break.lg}{
+//     &:before, &:after {
+//         background-position: ${props => props.bp_lg} !important;
+//     }
+// }
+// @media ${Break.md}{
+//     &:before, &:after {
+//         background-position: ${props => props.bp_md} !important;
+//     }
+// }
+// @media ${Break.sm}{
+//     height: ${props => props.h_sm};
+//     width: ${props => props.w_sm};
+//     &:before, &:after {
+//         border-radius: ${props => props.borderRadius_sm};
+//         background-position: ${props => props.bp_sm} !important;
+//     }
+// }
+// @media ${Break.xs}{
+//     width: ${props => props.w_xs};
+//     &:before, &:after {
+//         background-position: ${props => props.bp_xs} !important;
+//     }
+// }
 
 
 export const Small = styled.small`
@@ -200,73 +288,99 @@ export const Small = styled.small`
 `
 
 const getVariant = (props) => ({
-    "true": {
+    "outline": {
         border: `1px solid ${props.color}`,
         background: "initial",
         color: props.color,
+        borderRadius: "3px"
     },
-    "false": {
+    "full": {
         border: "none",
         background: props.color,
         color: props.textColor || "white"
+    },
+    "empty": {
+        border: "none",
+        background: "none",
+        color: "#0097CD",
+        textTransform: "capitalize"
     }
 })
-const SmartButton = ({children, onClick, type, ...rest}) => {
-    const styles = getVariant(rest)[rest.outline];
-    return <button type={type || "button"} onClick={(e) => onClick && onClick(e)} className={rest.className} style={{...rest.style, ...styles}} >{children}</button>;
+const SmartButton = ({children, onClick, type, icon, ...rest}) => {
+    const styles = getVariant(rest)[rest.variant];
+    return <button type={type || "button"} onClick={(e) => onClick && onClick(e)} className={rest.className} style={{...rest.style, ...styles}} >{icon}{children}</button>;
 }
 export const Button = styled(SmartButton)`
-    font-size: ${props => props.fontSize || '14rem'};
-    font-family: ${props => props.font || "'Futura', sans-serif"};
-    
-    font-weight: 800;
+    font-size: ${props => props.fontSize};
+    font-family: 'Lato', sans-serif;
+    text-transform: ${props => props.textTransform || "uppercase"};
+    font-weight: ${props => props.fontWeight || "700"};
     margin: ${props => props.margin};
     border-radius: ${props => props.borderRadius};
     position: ${props => props.position};
     display: ${props => props.display};
-    padding: ${props => props.padding};
+    padding: ${props => props.padding || "12px 24px"};
     transform: ${props => props.transform};
-
-    color: ${props => props.border};
+    color: ${props => props.color};
     background: ${props => props.background};
-    border: ${props => props.color};
-
+    border: ${props => props.border};
+    height: 40px;
     cursor: pointer;
-    text-align: center;
-    letter-spacing: 0px;
-    line-height: 1.5;
+    text-align: ${props => props.textAlign || "center"};
+    letter-spacing: ${props => props.letterSpacing || "0px"};;
+    line-height: ${props => props.lineHeight};
     vertical-align: middle;
     width: ${props => props.width};
     max-width: ${props => props.maxWidth};
     min-width: ${props => props.minWidth};
     align-items: ${props => props.alignItems};
+    align-self: ${props => props.alignSelf};
+    justify-self: ${props => props.justifySelf};
     justify-content: ${props => props.justifyContent};
-    box-shadow: ${props => props.shadow};
+    box-shadow: ${props => props.boxShadow};
 
     &:hover {
-        background-color: ${props => props.colorHover || props.color};
+        background-color: ${props => props.colorHover};
+        color: ${props => props.colorHoverText};
     }
-    @media ${Break.lg}{
-        font-size: ${props => props.fs_lg};
+    @media ${Devices.xxs}{
     }
-    @media ${Break.md}{
-        font-size: ${props => props.fs_md};
+    @media ${Devices.xs}{
     }
-    @media ${Break.sm}{
-        margin: ${props => props.m_sm};
-        font-size: ${props => props.fs_sm};
+    @media  ${Devices.sm}{
+        width: ${props => props.width_sm};
+        margin: ${props => props.margin_sm};
+        font-size: ${props => props.fontSize_sm};
+    }
+    @media  ${Devices.tablet}{
+        width: ${props => props.width_tablet};
+        margin: ${props => props.margin_tablet};
+    }
+    @media  ${Devices.md}{
+        width: ${props => props.width_md};
+        font-size: ${props => props.fontSize_md};
+        margin: ${props => props.margin_md};
+    }
+    @media  ${Devices.lg}{
+        font-size: ${props => props.fontSize_lg};
+    }
+    @media  ${Devices.xl}{
+    }
+    @media  ${Devices.xxl}{
     }
 `;
+
+
 Button.defaultProps = {
-    padding: '10px 30px',
     fontSize: '12px',
-    width: '100%',
+    width: 'fit-content',
     type: 'button',
     colorHover: null,
-    borderRadius: '50rem',
+    borderRadius: '3px',
     outline: false,
     onClick: null,
-    display: 'inline-block'
+    display: 'flex',
+    alignItems: "center"
 };
 
 export const Toggle = styled.div`
@@ -283,8 +397,7 @@ export const Toggle = styled.div`
 `
 
 RoundImage.defaultProps = {
-    width: '100%',
-    backgroundColor: Colors.white
+    width: '100%'
 };
 Select.defaultProps = {
     background: Colors.white,
@@ -327,39 +440,64 @@ const StyledLink = ({children, ...rest}) => {
 export const Anchor = styled(StyledLink)`
   display: ${props => props.display || "block"};
   font-family: Lato,sans-serif;
+  text-align: ${props => props.textAlign};
+  font-size: ${props => props.fontSize};
+  font-weight: ${props => props.fontWeight};
+  letter-spacing: 0.05em;
+  text-transform: ${props => props.textTransform};
   maxWidth: ${props => props.maxWidth};
   cursor: ${props => props.cursor};
   margin: ${props => props.margin};
-  font-size: ${props => props.fontSize};
-  font-family: ${props => props.fontFamily};
-  font-weight: ${props => props.fontWeight};
   max-width: ${props => props.maxWidth};
   padding: ${props => props.padding};
   padding-right: ${props => props.paddingRight || "innitial"};
-  letter-spacing: 0px;
   text-shadow: ${props => props.textShadow}; 
   line-height: ${props => props.lineHeight};
   color: ${props => props.color};
-  text-align: ${props => props.align};
   &:hover{
     text-decoration: underline;
   }
+    @media ${Devices.xxs}{
 
-  @media ${Break.lg}{
-    text-align: ${props => props.align_lg};
-    font-size: ${props => props.fs_lg};
-  }
-  @media ${Break.md}{
-    text-align: ${props => props.align};
-    font-size: ${props => props.fs_md};
-  }
-  @media ${Break.sm}{
-    display: ${props => props.display_sm};
-    font-size: ${props => props.fs_sm};
-    text-align: ${props => props.align_sm || 'center'};
-  }
-  @media ${Break.xs}{
-    font-size: ${props => props.fs_xs};
-    text-align: ${props => props.align_xs};
-  } 
+    }
+    @media ${Devices.xs}{
+        
+        
+    }
+    @media  ${Devices.sm}{
+        
+    }
+    @media  ${Devices.tablet}{
+        
+    }
+    @media  ${Devices.md}{
+
+    }
+    @media  ${Devices.lg}{
+
+    }
+    @media  ${Devices.xl}{
+
+    }
+    @media  ${Devices.xxl}{
+
+    }
+
 `
+//   @media ${Break.lg}{
+//     text-align: ${props => props.align_lg};
+//     font-size: ${props => props.fs_lg};
+//   }
+//   @media ${Break.md}{
+//     text-align: ${props => props.align};
+//     font-size: ${props => props.fs_md};
+//   }
+//   @media ${Break.sm}{
+//     display: ${props => props.display_sm};
+//     font-size: ${props => props.fs_sm};
+//     text-align: ${props => props.align_sm || 'center'};
+//   }
+//   @media ${Break.xs}{
+//     font-size: ${props => props.fs_xs};
+//     text-align: ${props => props.align_xs};
+//   } 

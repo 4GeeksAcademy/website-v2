@@ -1,27 +1,17 @@
 ---
-author: MRiciglianoC
-comments: true
-date: 2017-04-07 17:34:13+00:00
-excerpt: Education needs a change. There are more than 500.000 computer science open
-  jobs nationwide. And it will increase up to 1.4 million by 2020.
-layout: post
-link: https://www.4geeksacademy.co/turnaround-education-traditions-4geeks-academy/
-slug: turnaround-education-traditions-4geeks-academy
-title: Turnaround on Education Traditions | Part I
-avatar: "/images/staff/marcelo.jpeg"
+author: "MRiciglianoC"
+date: "2017-04-07T17:34:13+00:00"
+excerpt: "Education needs a change. There are more than 500.000 computer science open jobs nationwide. And it will increase up to 1.4 million by 2020."
+slug: "turnaround-education-traditions-4geeks-academy"
+template: "post" # post or landing_post
+title: "Turnaround on Education Traditions | Part I"
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2017/04/ISA-Blog-Cover.png"
-wordpress_id: 1889
-
-post_translations:
-- pll_5703862f49f64
-tags:
-- 4geeks
-- 4geeks academy
-- coding education
-- Education
-lang: "us"
-status: "published" # PUBLISHED, DRAFT, UNASSIGNED
+image_alt: ""
+cluster: "learn-to-code"
+post_translations: ["pll_5703862f49f64"]
+status: "published"
 featured: false
+
 ---
 
 Education needs a change. It’s been changing, but probably not enough. Why? There are, in STEM at least, more open jobs than postulations. Either the Economy is saying that working as an employee is bad, or the education methods and standards are way behind the real needs. Let’s just focus on the educational problem and forget -for a bit- about the economic trend of becoming an entrepreneur.
@@ -62,8 +52,8 @@ For those who say that Education is not important, and support that theory, we b
 
 [1] [https://code.org/promote](https://code.org/promote)
 
-[2] [http://econdataus.com/claim400k.htm](http://econdataus.com/claim400k.htm)
+[2] [https://econdataus.com/claim400k.htm](https://econdataus.com/claim400k.htm)
 
-[3] Just to point out a few articles: [http://edtechreview.in/data-statistics/2457-flipped-learning-classroom-statistics](http://edtechreview.in/data-statistics/2457-flipped-learning-classroom-statistics)  - [https://www.learndash.com/interesting-flipped-classroom-statistics/](https://www.learndash.com/interesting-flipped-classroom-statistics/)  - [http://www.asee.org/file_server/papers/attachment/file/0003/3259/6219.pdf](http://www.asee.org/file_server/papers/attachment/file/0003/3259/6219.pdf)  - [http://www.ascd.org/publications/educational-leadership/mar13/vol70/num06/Evidence-on-Flipped-Classrooms-Is-Still-Coming-In.aspx](http://www.ascd.org/publications/educational-leadership/mar13/vol70/num06/Evidence-on-Flipped-Classrooms-Is-Still-Coming-In.aspx)
+[3] Just to point out a few articles: [https://edtechreview.in/data-statistics/2457-flipped-learning-classroom-statistics](https://edtechreview.in/data-statistics/2457-flipped-learning-classroom-statistics)  - [https://www.learndash.com/interesting-flipped-classroom-statistics/](https://www.learndash.com/interesting-flipped-classroom-statistics/)  - [https://www.asee.org/file_server/papers/attachment/file/0003/3259/6219.pdf](https://www.asee.org/file_server/papers/attachment/file/0003/3259/6219.pdf)  - [https://www.ascd.org/publications/educational-leadership/mar13/vol70/num06/Evidence-on-Flipped-Classrooms-Is-Still-Coming-In.aspx](https://www.ascd.org/publications/educational-leadership/mar13/vol70/num06/Evidence-on-Flipped-Classrooms-Is-Still-Coming-In.aspx)
 
 

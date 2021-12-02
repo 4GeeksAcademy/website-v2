@@ -9,15 +9,15 @@ const Heading = styled.h1`
   
   text-align: center;
   font-size: 30px;
-  margin: 10px 0;
+  margin: 0 0 50px 0;
   `;
-  const Div = styled.div`
+const Div = styled.div`
   font-family: 'Lato-Bold', sans-serif;
   
   text-align: center;
-  margin: 50px 0;
+  margin: 130px 0 40px 0;
   `;
-  const Heading2 = styled.h2`
+const Heading2 = styled.h2`
   font-family: 'Lato-Bold', sans-serif;
   
   margin: 40px 0;
@@ -44,7 +44,7 @@ tr:hover{
     background: #FBFBFB;
 }
 `;
-const NotFoundPage = () => 
+const NotFoundPage = () =>
   <StaticQuery
     query={graphql`
       query LandingQuery {
@@ -65,7 +65,7 @@ const NotFoundPage = () =>
       }
     `}
     render={data => {
-        const landings = data.allLandingYaml.edges;
+      const landings = data.allLandingYaml.edges;
       return <Layout
         seo={{
           slug: 'landings',
@@ -81,25 +81,25 @@ const NotFoundPage = () =>
         <Div>
           <Heading>Landing Pages</Heading>
           <Table>
-                <thead>
-                    <tr>
-                    <th scope="col">slug</th>
-                    <th scope="col">location</th>
-                    <th scope="col">course</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {landings && landings.map(({ node }) => 
-                        <tr>
-                            <td><Anchor to={`/${node.fields.lang}/landing/${node.meta_info.slug}`}>{node.meta_info.slug}</Anchor></td>
-                            <td>{node.meta_info.utm_location}</td>
-                            <td>{node.meta_info.utm_course}</td>
-                        </tr>
-                    )}
-                </tbody>
-            </Table>
+            <thead>
+              <tr>
+                <th scope="col">slug</th>
+                <th scope="col">location</th>
+                <th scope="col">course</th>
+              </tr>
+            </thead>
+            <tbody>
+              {landings && landings.map(({node}) =>
+                <tr>
+                  <td><Anchor to={`/${node.fields.lang}/landing/${node.meta_info.slug}`}>{node.meta_info.slug}</Anchor></td>
+                  <td>{node.meta_info.utm_location}</td>
+                  <td>{node.meta_info.utm_course.join(",")}</td>
+                </tr>
+              )}
+            </tbody>
+          </Table>
         </Div>
       </Layout>
     }}
-/>;
+  />;
 export default NotFoundPage;

@@ -1,17 +1,35 @@
 meta_info:
   slug: blog
-  title: ""
-  description: null
+  title: "4Geeks Academy Blog"
+  visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
+  description: "Find resources and news for both potential and current software builders. Basic knowledge, trends, career advice and much more in 4geeks Academy blog."
   image: null
-  keywords: ""
+  keywords: "4Geeks Academy Blog"
   redirects: []
 
 banner:
-  tagline: "4GEEKS ACADEMY BLOG"
+  tagline: "4Geeks Academy Blog"
   sub_heading: "Resources and news for both potential and current software builders."
   image: "../../../static/images/bg/pricing-bg.jpg"
+  no_image: "https://i.imgur.com/n3V1Rqq.jpeg"
+
+seo_title: "4Geeks Academy Blog"
+header:
+  title: "Blog"
+  paragraph: "Resources and news for both potential and current software builders."
+  image: "../../../static/images/blog/Blog-header.png"
+  image_alt: ""
+
+question: "What are you looking for?"
+topics:
+  - full-stack-developer
+  - learn-to-code
+  - coding-bootcamps
+  - career-growth
+  - trends-and-tech
+  
 # about:
 #   heading: "MORE ABOUT 4GEEKS ACADEMY"
 #   sub_heading: "Curabitur blandit tempus porttitor."
 #   image: "/images/our-story.png"
-#   content: "4Geeks Academy was founded in 2015. What started as an internal project to train more developers has now become our full-time passion. 4Geeks is today a USA based Coding Bootcamp pursuing to build a new framework for Coding Education, because coding is becoming an essentials part of our society. 4Geeks Academy has now Locations in 3 cities, 5 on-going campuses, and more than 600 graduates."
+#   content: "4Geeks Academy was founded in 2015. What started as an internal project to train more developers has now become our full-time passion. 4Geeks is today a USA based Coding Bootcamp pursuing to build a new framework for Coding Education, because coding is becoming an essentials part of our society. 4Geeks Academy has now Locations in 3 cities, 5 on-going campus, and more than 600 graduates."

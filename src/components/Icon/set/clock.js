@@ -1,2 +1,12 @@
 import React from 'react';
-export default props => <svg style={props.style} width={props.width} height={props.height} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path stroke={props.color} fill={props.fill} d="M 13 4 L 13 6 L 19 6 L 19 4 Z M 16 7 C 9.9375 7 5 11.9375 5 18 C 5 24.0625 9.9375 29 16 29 C 22.0625 29 27 24.0625 27 18 C 27 15.082031 25.863281 12.410156 24 10.4375 L 25.71875 8.71875 L 24.28125 7.28125 L 22.46875 9.09375 C 20.65625 7.773438 18.410156 7 16 7 Z M 16 9 C 20.980469 9 25 13.019531 25 18 C 25 22.980469 20.980469 27 16 27 C 11.019531 27 7 22.980469 7 18 C 7 13.019531 11.019531 9 16 9 Z M 15 11 L 15 16.28125 C 14.402344 16.628906 14 17.261719 14 18 C 14 18.738281 14.402344 19.371094 15 19.71875 L 15 21 L 17 21 L 17 19.71875 C 17.597656 19.371094 18 18.738281 18 18 C 18 17.261719 17.597656 16.628906 17 16.28125 L 17 11 Z" /></svg>
+export default props => <svg width="39" height="46" viewBox="0 0 39 46" fill="none" xmlns="https://www.w3.org/2000/svg">
+    <path d="M19.1666 45.0417C29.2228 45.0417 37.3749 36.8895 37.3749 26.8333C37.3749 16.7772 29.2228 8.625 19.1666 8.625C9.1104 8.625 0.958252 16.7772 0.958252 26.8333C0.958252 36.8895 9.1104 45.0417 19.1666 45.0417Z" stroke="#A4A4A4" strokeWidth="2" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M13.4167 0.958374H24.9167" stroke="#A4A4A4" strokeWidth="2" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M32.0474 13.9534L35.459 10.5417" stroke="#A4A4A4" strokeWidth="2" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M16.2915 8.72087V0.958374H22.0415V8.72087" stroke="#A4A4A4" strokeWidth="2" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M34.5 9.58337L36.4167 11.5" stroke="#A4A4A4" strokeWidth="2" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M19.1665 26.8334L10.5415 18.2084" stroke="#A4A4A4" strokeWidth="2" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
+</svg>
+
+
+

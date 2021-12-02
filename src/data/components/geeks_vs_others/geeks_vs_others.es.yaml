@@ -11,7 +11,7 @@ info:
   - features: "Apoyo Profesional"
     at4_Geeks: "Para Siempre"
     industry_average: "Hasta que Consigas Trabajo"
-    why_important: "Desde el día de tu graduación invitamos a algunos de nuestros hiring partners, después asistirás a nuestro 'career week' donde construiras tu CV, LinkedIn, Github y perfil online, asistirás a una entrevista ficticia para diagnosticar tu nivel y luego empezará un seguimiento semanal mientras aplicas a los diferentes trabajos. El soporte nunca termina, incluso recibirás ayuda para desempeñarte mejor en tu trabajo."
+    why_important: "Desde el día de tu graduación invitamos a algunos de nuestros hiring partners, después asistirás a nuestro 'Career Week' donde construirás tu CV, LinkedIn, Github y perfil online, asistirás a una entrevista ficticia para diagnosticar tu nivel y luego empezará un seguimiento semanal mientras aplicas a los diferentes trabajos. El soporte nunca termina, incluso recibirás ayuda para desempeñarte mejor en tu trabajo."
     icon: "teacher"
 
   - features: "Profesor: Estudiante Ratio"
@@ -86,8 +86,8 @@ info:
     why_important: "Todo desarrollador debe saber programar en Python y en JavaScript. Es el lenguaje backend de más crecimiento del mundo, el que se utiliza en más industrias y el que mejores oportunidades ofrece. "
     icon: ""
 
-  - features: "Actualización al Pénsum"
-    at4_Geeks: "Mensual"
+  - features: "Actualización del programa"
+    at4_Geeks: "Diariamente"
     industry_average: "Cada 6 o más meses"
     why_important: "Todos los instructores y directores constantemente estamos aportando mejoras al Syllabus para mantenerlo al día y adaptarlo a las exigencias del mercado y de nuestros estudiantes. ¡No hay quien pueda igualar nuestro ritmo!"
     icon: ""
@@ -100,4 +100,4 @@ info:
 
 button:
   button_text: "Revisa la comparación completa"
-  button_link: "/geeks-vs-otros"
+  button_link: "/es/geeks-vs-otros"

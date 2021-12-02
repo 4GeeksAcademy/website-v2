@@ -1,230 +1,195 @@
-import React, {useState, useEffect, useContext} from 'react';
-import {graphql} from 'gatsby'
-import styled from 'styled-components';
-import Card from '../components/Card'
-import Icon from '../components/Icon'
-import {Container, Row, Column, Wrapper, Divider} from '../components/Sections'
-import {Title, H1, H2, H3, H4, Span, Paragraph, Separator} from '../components/Heading'
-import {Button, Colors} from '../components/Styling'
-import BaseRender from './_baseLayout'
-import {Link} from 'gatsby';
-import {applyJob} from "../actions";
+import React, { useState, useEffect, useContext } from 'react';
+import { graphql, Link } from 'gatsby';
+import Icon from '../components/Icon';
+import ApplyJobModal from '../components/ApplyJobModal';
+import { GridContainer, Div } from '../components/Sections';
+import { H1, H4, Paragraph } from '../components/Heading';
+import { Button, Colors } from '../components/Styling';
+import BaseRender from './_baseLayout';
+import {Alert, Input} from "../components/Form/index";
 
-const Input = styled.input`
-    background-color:${Colors.lightGray};
-    height: 40px;
-    width: 100%;
-    border: none;
-    font-family: 'Lato', sans-serif;
-    
-    font-size: 14px;
-    font-color: ${Colors.black};
-`
-const Job = ({data, pageContext, yml}) => {
-    const [form, setForm] = useState(false);
-    const [buttonToggle, setButtonToggle] = useState();
-    const [formData, setVal] = useState({
-        first_name: '',
-        last_name: '',
-        phone: '',
-        email: ''
-    });
-    return (<>
-        <Wrapper
+const Job = ({ data, pageContext, yml }) => {
+  const [open, setOpen] = React.useState(false);
+  const { lang } = pageContext;
 
+  const handleOpen = () => {
+    setOpen(true);
+  };
 
-            url={yml.banner_image}
-            border="bottom"
-            height="200px"
-            backgroundSize="cover"
-        >
-            <Divider height="50px" />
-            <Row display="flex">
-                <Column size="12">
-                    <H1 color={Colors.white} fontSize="12px" align="center">{yml.seo_title}</H1>
-                </Column>
-            </Row>
-            {/* <ProgramSelector week={week} /> */}
-            <Divider height="20px" />
+  const handleClose = () => {
+    setOpen(false);
+  };
 
-            <Title
-                size="5"
-                title={yml.banner_heading}
-                variant="main"
-                color={Colors.black}
-                fontSize="46px"
-                textAlign="center"
-            // paragraph={`Cities: ${yml.cities.map(item => {return (item)})}`}
+  return (
+      <GridContainer
+        github="/components/job"
+        columns_tablet="12"
+        margin_tablet="70px 0 0 0"
+        margin="70px 0 0 0"
+        padding="30px 15px 0 15px"
+        padding_tablet="30px 0 0 0"
+      >
+        <Div flexDirection="column" gridColumn_tablet=" 2 / 12">
+        {yml.meta_info.open ? <Alert color="green" margin="0" padding="5px 0 0 0">{data.allJobAlertYaml.edges[0].node.message.accepting}</Alert>
+         : <Alert color="red" margin="0" padding="5px 0 0 0">{data.allJobAlertYaml.edges[0].node.message.no_accepting}</Alert>}
+          <Link
+            style={{ margin: '20px 0', width: 'fit-content' }}
+            to={lang === 'us' ? '/us/jobs' : '/es/empleo' || yml.link_back}
+          >
+            <Icon
+              icon="arrowLeft2"
+              width="32"
+              // color={Colors.blue}
+              // fill={Colors.blue}
             />
+          </Link>
+          <Div alignItems="center" flexDirection="column" flexDirection_tablet="row">
+            <H1
+              type="h1"
+              textAlign="center"
+              textAlign_tablet="left"
+              zIndex="5"
+              fontSize="30px"
+              lineHeight="36px"
+              fontWeight="700"
+              margin="16px 0px 19px 0px"
+            >
+              {yml.banner_heading}
+            </H1>
+            {yml.meta_info.open ? <Button
+              onClick={handleOpen}
+              variant="full"
+              width="130px"
+              justifyContent="center"
+              color={Colors.blue}
+              textColor={Colors.white}
+              >
+              {yml.button_text}
+            </Button> : ""}
+            {/* <Button onClick={() => {setForm(!form), setButtonToggle(!buttonToggle)}} width="200px" color={Colors.blue} textColor={Colors.white}>APPLY NOW</Button> */}
+          </Div>
+          <ApplyJobModal
+            aria-labelledby="simple-modal-title"
+            aria-describedby="simple-modal-description"
+            lang={lang}
+            title_job={yml.banner_heading}
+            // heading={yml.apply_job.text}
+            // thankyou={yml.apply_job.thankyou}
+            form_data={data.allLeadFormYaml.edges[0].node}
+            open={open}
+            onClose={handleClose}
+          />
 
-        </Wrapper>
-        <Divider height="100px" />
-        <Wrapper >
-            <Card height="auto"
-                width="100%"
-                shadow
-                padding="30px"
-                margin="5px 0 10px 0">
-                <Row justifyContent="center" display="flex">
-                    <Column size="12">
-                        <H3 align="center" uppercase fontSize="28px" color={Colors.blue}>{yml.title}</H3>
-                    </Column>
-                </Row>
-                <Divider height="20px" />
-                <Row justifyContent="center" display="flex">
-                    <Column size="8">
-                        <Paragraph color={Colors.gray} align="center" fontSize="16px">{yml.description}</Paragraph>
-                    </Column>
-                </Row>
-                <Divider height="30px" />
-                {yml.content.map((item, index) => {
-                    return (
-                        <>
-                            <Row key={index} justifyContent="center" display="flex">
-                                <Column size="12">
-                                    <H4 align="center" fontSize="28px" color={Colors.black}>{item.label}</H4>
-                                </Column>
-                            </Row>
-                            <Row height="5%" justifyContent="center" display="flex">
-
-                                <Separator variant="primary" />
-
-                            </Row>
-                            <Divider height="10px" />
-                            <Row justifyContent="center" display="flex">
-                                <Column size="8">
-                                    <ul>
-                                        {item.list.map((item) => {
-                                            return (
-                                                <li key={index}><Paragraph margin="10px 0" color={Colors.gray} align="left" fontSize="14px">{item}</Paragraph></li>
-                                            )
-                                        })}
-                                    </ul>
-                                </Column>
-                            </Row>
-                            <Divider height="30px" />
-                        </>
-                    )
-                })
-
-                }
-                <Row justifyContent="center" display="flex">
-                    <Column size="12" align="center">
-                        {
-                            form === false
-                                ? <Button onClick={() => {setForm(!form), setButtonToggle(!buttonToggle)}} width="200px" color={Colors.red} textColor={Colors.white}>APPLY NOW</Button>
-                                : null
-                        }
-                    </Column>
-                </Row>
-                {form === true
-                    ?
-
-                    <Row justifyContent="center" height="100%" display="flex">
-                        <Column size="8" height="100%">
-                            <Divider height="50px" />
-                            <Row display="flex" height="50px">
-                                <H3>APPLY FOR THIS JOB</H3>
-                            </Row>
-                            <Row display="flex" height="50px">
-                                <Input
-                                    type="text" className="form-control" placeholder="First name *"
-                                    onChange={(e) => setVal({...formData, first_name: e.target.value})}
-                                    value={formData.firstName}
-                                />
-                            </Row>
-                            <Row display="flex" height="50px">
-                                <Input type="text" className="form-control" placeholder="Last Name *"
-                                    onChange={(e) => setVal({...formData, last_name: e.target.value})}
-                                    value={formData.lastName}
-                                />
-                            </Row>
-                            <Row display="flex" height="50px">
-                                <Input type="email" className="form-control" placeholder="Email *"
-                                    onChange={(e) => setVal({...formData, email: e.target.value})}
-                                    value={formData.email}
-                                />
-                            </Row>
-                            <Row display="flex" height="50px">
-                                <Input
-                                    type="number" className="form-control" placeholder="Phone *"
-                                    onChange={(e) => setVal({...formData, phone: e.target.value})}
-                                    value={formData.phone}
-                                />
-                            </Row>
-                            <Row display="flex" justifyContent="center" height="100%">
-                                <Column size="3"></Column>
-                                <Column size="6">
-                                    <Row display="flex" justifyContent="around" height="100%">
-                                        <Column size="12" alignSelf="center">
-                                            <Button
-                                                color={Colors.blue} width="auto" textColor={Colors.white}
-                                                margin="2rem 0" padding=".45rem 3rem"
-                                                onClick={() => applyJob(formData)
-                                                    .then(() => {
-                                                        console.log("Thank you");
-                                                    })
-                                                    .catch((error) => {
-                                                        console.log("error", error);
-                                                    })
-                                                }
-                                            >APPLY FOR THIS JOB</Button>
-                                        </Column>
-                                    </Row>
-                                </Column>
-                                <Column size="3" align="right">
-                                    <Row display="flex" justifyContent="around" height="100%">
-                                        <Column size="12" alignSelf="center">
-                                            <Paragraph onClick={() => setForm(!form)} margin="10px 0" color={Colors.gray} align="right" fontSize="14px">Close</Paragraph>
-                                            {/* <Icon icon="arrowup" width="24" color={Colors.red} fill={Colors.red} /> */}
-                                        </Column>
-                                    </Row>
-                                </Column>
-
-                            </Row>
-                        </Column>
-                    </Row>
-
-                    :
-                    null}
-            </Card>
-        </Wrapper>
-        <Wrapper >
-
-            <Row display="flex" justifyContent="around" height="100%" >
-                <Column size="12" alignSelf="center" >
-                    <Link to="/jobs"><Icon icon="arrowleft" width="32" color={Colors.blue} fill={Colors.blue} /></Link>
-                </Column>
-            </Row>
-        </Wrapper>
-        <Divider height="100px" />
-    </>
-    )
+          <Div flexDirection="column">
+            {yml.content.map((m, i) => (
+              <>
+                <H4
+                  textAlign="left"
+                  fontSize="22px"
+                  lineHeight="26px"
+                  key={i}
+                  fontWeight="700"
+                  borderBottom="1px solid #C4C4C4"
+                  margin="0 0 15px 0"
+                  padding="74px 0 20px 0"
+                >
+                  {m.label}
+                </H4>
+                <ul>
+                  {m.list.map((item, i) => (
+                    <li key={i}>
+                      <Paragraph
+                        textAlign="left"
+                        margin="10px 0"
+                        color={Colors.darkGray}
+                        align="left"
+                        fontSize="14px"
+                      >
+                        {item}
+                      </Paragraph>
+                    </li>
+                  ))}
+                </ul>
+              </>
+            ))}
+          </Div>
+          <Paragraph
+            letterSpacing="0.05em"
+            margin="45px 0 0 0"
+            dangerouslySetInnerHTML={{ __html: yml.date_release }}
+          />
+        </Div>
+      </GridContainer>
+  );
 };
 
 export const query = graphql`
   query JobQuery($file_name: String!, $lang: String!) {
-    allJobYaml(filter: { fields: { file_name: { eq: $file_name }, lang: { eq: $lang }}}) {
-      edges{
-        node{
-            tagline
-            seo_title
-            meta_info{
-                title
-                description
-                image
-                keywords
-            }
-            banner_heading
-            banner_image
-            cities
+    allJobYaml(
+      filter: { fields: { file_name: { eq: $file_name }, lang: { eq: $lang } } }
+    ) {
+      edges {
+        node {
+          tagline
+          seo_title
+          meta_info {
             title
             description
-            content{
-                label
-                list
-            }
-            
+            image
+            keywords
+            open
+          }
+          banner_heading
+          link_back
+          banner_image
+          button_text
+          cities
+          title
+          description
+          content {
+            label
+            list
+          }
+          # apply_job {
+          #   text
+          #   thankyou
+          # }
+        }
+      }
+    }
+    allJobAlertYaml(
+      filter: { fields: { lang: { eq: $lang } } }
+    ) {
+      edges {
+        node {
+          message {
+            accepting
+            no_accepting
+          }
+        }
+      }
+    }
+    allLeadFormYaml(
+      filter: { fields: { lang: { eq: $lang } } }
+    ){
+      edges{
+        node{
+          fields{
+            lang
+          }
+          apply_job {
+            text
+            thankyou
+            apply_button_text
+            close
+          }
+          form_fields{
+            name
+            required
+            type
+            place_holder
+            error
+          }
         }
       }
     }

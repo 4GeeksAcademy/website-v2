@@ -1,19 +1,18 @@
-
 programs:
   - text: "Nivel 1: Full-Stack Developer"
     bc_slug: full-stack
     location_bc_slug: null #<--- puedes cambiar la location cuando hagan click
     schedule: "Horario Part-Time and Full-Time"
-    link: "/es/course/desarrollo-web-full-stack-bootcamp-part-time"
+    link: "/es/coding-bootcamps/full-stack-part-time"
   - text: "Nivel 2: Ingeniero de Software"
     bc_slug: software-engineering
     location_bc_slug: null
     schedule: "Horario Part-Time únicamente"
-    link: "/es/course/ingenieria-de-software-programacion"
-  - text: "Desde Casa (Online)"
-    bc_slug: full-stack
+    link: "/es/coding-bootcamps/ingenieria-de-software-programacion"
+  - text: "Machine Learning Engineering"
+    bc_slug: "machine-learning-engineering"
     location_bc_slug: online
-    schedule: "Horario Part-Time and Full-Time"
-    link: "/es/course/desarrollo-web-full-stack-bootcamp-full-time?location=online"
+    schedule: "Part-Time - Online"
+    link: "/es/coding-bootcamps/curso-inteligencia-artificial"
 open_button_text: "SELECCIONAR PROGRAMA"
 close_button_text: "Close"

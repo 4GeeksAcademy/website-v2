@@ -15,6 +15,7 @@ const _colors = () => ({
   grey: Colors.lightGray,
   darkGray: Colors.borderGray,
   blue: Colors.blue,
+  verylightGray: Colors.verylightGray
 })
 const Card = styled(Fragment)`
     :focus {outline: none;};
@@ -24,13 +25,16 @@ const Card = styled(Fragment)`
     z-index: ${props => props.index};
     text-align: ${props => props.align || "initial"};
     flex-direction: column;
-    min-height: ${props => props.minHeight}
+    min-height: ${props => props.minHeight};
     width: ${props => props.width};
     max-width: ${props => props.maxWidth};
     height: ${props => props.height};
     padding: ${props => props.padding};
     background: ${props => _colors()[props.color] || Colors.white};
     border-radius: ${props => props.borders};
+    border-top: ${props => props.borderTop};
+    border-bottom: ${props => props.borderBottom};
+    border-color: ${props => props.borderColor};
     transform: ${props => props.transform};
     display: ${props => props.display};
     box-shadow: ${props => props.shadow === true ?

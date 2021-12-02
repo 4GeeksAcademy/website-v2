@@ -1,16 +1,11 @@
 @font-face {
-  font-family: "Lato-Regular";
+  font-family: "Lato";
   font-display: swap;
   src: url("./lato/Lato-Regular.woff");
 }
 @font-face {
-  font-family: "Lato-Bold";
+  font-family: "Lato-Light";
   font-display: swap;
-  src: url("./lato/Lato-Bold.woff");
+  src: url("./lato/Lato-Light.woff");
 }
 
-@font-face {
-  font-family: "Futura";
-  font-display: swap;
-  src: url("./futura/FuturaPT-ExtraBold.woff");
-}

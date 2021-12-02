@@ -1,18 +1,16 @@
 ---
-author: alesanchezr
-date: 2020-04-29 05:31:23+00:00
-link: https://www.4geeksacademy.co/geekpal
-slug: geekpal
-title: Never Code Alone Again
-avatar: "/images/staff/alejandro.png"
+author: "alesanchezr"
+date: "2020-04-29T05:31:23+00:00"
+excerpt: "More information about the Geekpal system of 4Geeks Academy"
+slug: "geekpal"
+template: "post" # post or landing_post
+title: "Never Code Alone Again"
 image: "/images/why2.jpg"
-categories:
-- Learning to code
-tags:
-- 4geeks
-lang: "us"
-status: "published" # PUBLISHED, DRAFT, UNASSIGNED
+image_alt: ""
+cluster: "trends-and-tech"
+status: "published"
 featured: true
+
 ---
 
 Today I'm very happy to announce GeekPAL.

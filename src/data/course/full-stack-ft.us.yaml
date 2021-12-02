@@ -1,5 +1,5 @@
 meta_info:
-  slug: full-stack-web-development-bootcamp-full-time
+  slug: full-time-full-stack-developer
   title: ""
   description: ""
   bc_slug: "full-stack-ft"
@@ -11,21 +11,49 @@ meta_info:
       "full-time",
       "/us/full-time",
       "/us/course/full-time",
-      "/the-program",
       "/us/full-stack-ft",
+      "/us/coding-bootcamps/full-stack-web-development-bootcamp-full-time",
+      "/us/course/full-stack-web-development-bootcamp-full-time",
+      "/course/full-stack-web-development-bootcamp-full-time",
     ]
-
+seo_title: "Cooding Bootcamp"
 header:
-  tagline: "FULL STACK DEVELOPER"
+  title: "Full Stack Developer"
   image: "../../../static/images/bg/program-bg.png"
+  image_alt: ""
   paragraph: "From zero to getting paid as a developer, learn the skills of the present and future. \n Boost your professional career and get hired by a tech company."
-  alt: ""
 
 button:
   syllabus_heading: "Download Syllabus"
   syllabus_btn_label: "Instant Download"
   syllabus_motivation: "Get it in just a few seconds"
-  apply_button_link: "/apply"
+  apply_button_link: "/us/apply"
+
+course_instructors: 
+  header:
+    title: "Meet our instructors"
+    paragraph: ""
+
+  # instructors:
+  #   - name: "Roldolfo Campos"
+  #     sub_title: "Co fundador de 4geeks y director de educación"
+  #     image: "../../../static/images/instructors/example.png"
+  #     bio: "Currently working as a Senior Solutions Architect at VMware, Rodolfo Campos is a Software Engineer with 17 years of experience in Linux, Java, SQL, Blockchain, etc. Master in Computer Science and passionate about Big Data and Entrepreneurship."
+  #     github: ""
+  #     linkedin: "https://www.linkedin.com/"
+
+  #   - name: "Gabriel Salinas"
+  #     sub_title: "Sophisticated Software Systems Engineer"
+  #     image: "../../../static/images/instructors/example.png"
+  #     bio: "Currently working as a Senior Solutions Architect at VMware"
+  #     github: ""
+  #     linkedin: "https://www.linkedin.com/"
+
+badges:
+  paragraph: "4Geeks Academy is the place where developers grow and thrive. We are licensed by the USA F. Dep. of Education. Chosen as one of the top 35 bootcamps of the world and top coding bootcamp in Miami according to SwitchUp. Recognized as the top 10 coding bootcamps in the United States according to Newsweek."
+
+upcoming:
+  no_dates_message: "There are currently no upcoming dates for this program"  
 
 credentials:
   heading: "This Program By The Numbers"
@@ -33,8 +61,32 @@ credentials:
 
 ## PROGRAM DETAILS
 details:
+  about:
+      title: "About the program"
+      sub_title: "Learn the most wanted and highest paid technologies that will help you create amazing websites.
+      
+      The tech industry consistently requires Python and JavaScript developers. Both are the most popular programming languages to learn in 2021. 
+      
+      Start coding in a web development language and algorithm scripting. Build awesome apps using a front-end library. Use an API so you can consume data to fill your app.
+      
+      The program will end with the presentation of your final project that will help you get ready for  more web development experiences
+      
+      You will re-shape your mind to embrace new logical, developmental and researching skills.
+    "
+      list:
+        - label: "Duration"
+          content:  "9 Weeks"
+        - label: "Classes"
+          content: "4 Classes weekly"
+        - label: "Certificate"
+          content: "Full-Stack Developer"
+          link_text: "See example"
+          link: "https://certificate.breatheco.de/4ae7a46bba78dc19b823e124fea120c17b45e044"
+        - label: "Requisites"
+          content: "No previous coding skills required, no advanced Math required, logical thinking recommended."
   heading: PROGRAM DETAILS FULL-TIME
-  sub_heading: Real life projects and exactly what companies are looking for
+  weeks: 9
+  sub_heading: "Hands-on learning through real-life projects. Master the 3 most used languages in the world: Master Python, JS and React."
   left_labels:
     description: "DESCRIPTION:"
     projects: "PROJECTS:"
@@ -53,14 +105,14 @@ details:
       description: "Think like a computer: Control the flow of your code, code algorithms, loop, use conditionals, webpack, the command line, GIT, etc."
       projects: "Instagram Application, Memory Card Game, Tic Tac Toe, Flappy Bird, etc."
       slug: "foundations"
-      duration: "3.5 weeks"
+      duration: "3.5 wks"
       step: 3.5
     - module_name: "THE WEB"
       title: "Web Development"
       description: "Create your first React.js application, MVC Pattern, JS Modules, Bunding, Babel JS, The DOM, Events"
       projects: "Coursera clone, Instagram clone, Youtube clone, etc."
       slug: "web-development"
-      duration: "3.5 weeks"
+      duration: "3.5 wks"
       step: 3.5
     - module_name: "PROJECTS"
       title: "Projects"
@@ -74,7 +126,7 @@ details:
       description: "Keep practicing with the academy's help - we will be coaching you for life. Build your Resume, Github, LinkedIn.  We help you apply for jobs and provide support for you once you find a job."
       projects: "Get paid to keep learning. Raise your income gradually as you grow into a Senior Developer. Enjoy and build software for life."
       slug: "lifelong-learning"
-      duration: "1+ week"
+      duration: "forever"
       step: 1
 
 syllabus:
@@ -108,7 +160,13 @@ geek_data:
 ## PRICES AND PAYMENTS SECTION
 prices:
   heading: "PRICES AND PAYMENTS"
-
+  sub_heading: ""
+  selector:
+    top_label: Location
+    placeholder: Select a location
+  button:
+    text: Check Prices and Plans
+    link: ""
 ## TYPICAL DAY SECTION
 typical:
   heading: "TYPICAL DAY AT THE ACADEMY"
@@ -152,8 +210,8 @@ typical:
 
 ## ALUMNI SECTION
 alumni:
-  heading: "MEET THE ALUMNI AND PROJECTS"
-  sub_heading: "Get to know our graduates and some of the projects you will be building during the program"
+  heading: "Meet Our Alumni and Their Projects"
+  sub_heading: "Get to know our graduates and some of the projects they built during the program"
 
 ## SIDEBAR
 sidebar:

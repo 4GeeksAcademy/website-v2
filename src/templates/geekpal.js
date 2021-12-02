@@ -1,122 +1,149 @@
 import React from 'react';
-import {Column, Row, Divider, Wrapper, WrapperImage} from "../components/Sections";
-import {H3, H5, Title, Separator, Paragraph} from '../components/Heading'
-import {Colors, RoundImage, Check} from '../components/Styling'
-import Icon from '../components/Icon'
 import BaseRender from './_baseLayout'
-import TestimonialsCarrousel from '../components/Testimonials';
 
-function splitTitleString (string) {
-  let stringObj = {
-    first: "",
-    remainingString: ""
-  }
-  let firstLetter = "";
-  let remainingString = ""
-  for (let i = 0; i < string.length; i++) {
-    if (i != 0) {remainingString += string[i]}
-    else {firstLetter = string[i]}
-  }
-  stringObj["first"] = firstLetter
-  stringObj["remainingString"] = remainingString
-  return stringObj
-}
+//new components
+import Icon from '../components/Icon'
+import {Colors} from '../components/Styling'
+import ReactPlayer from '../components/ReactPlayer'
+import OurPartners from '../components/OurPartners'
+import IconsBanner from '../components/IconsBanner'
+import {Div, Grid, HR, GridContainerWithImage, GridContainer} from '../components/Sections'
+import {H1, H2, H3, Paragraph} from '../components/Heading'
+import {Button, RoundImage} from '../components/Styling'
+import {StyledBackgroundSection} from '../components/Styling'
 
 const GeekPal = (props) => {
   const {data, pageContext, yml} = props;
+  const partnersData = data.allPartnerYaml.edges[0].node;
+  const content = data.allPageYaml.edges[0].node
+
   return (
     <>
-      <WrapperImage
-        imageData={yml.image && yml.image.childImageSharp.fluid}
-        height="auto"
-        filter="brightness(0.4)"
-        customBorderRadius="0 0 0 1.25rem"
-      >
-        <Divider height="100px" />
-        <Title
-          size="5"
-          title={yml.tagline}
-          paragraph={yml.sub_heading}
-          variant="main"
-          color={Colors.white}
-          fontSize="46px"
-          textAlign="center"
-          paragraphColor={Colors.white}
-        />
-        <Divider height="100px" />
-      </WrapperImage>
-      <Wrapper margin="50px 0px" align="center">
-        <RoundImage
-          url={yml.image_logo}
-          bsize="contain"
-          margin="auto"
-          position="center center"
-          width="300px"
-          height="200px"
-        />
-      </Wrapper>
-      <Wrapper >
-        <Row display="flex" github={`/page/geekpal.${pageContext.lang}.md`}>
-          {yml.benefits.map((col, i) => {
-            const splittedTitle = splitTitleString(col.heading)
+      <GridContainerWithImage padding="24px 0 " padding_tablet="100px 0" columns_tablet="14" margin="120px 0 24px 0" margin_tablet="0">
+        <Div flexDirection="column" justifyContent_tablet="start" gridColumn_tablet="1 / 6">
+          <H1 type="h1" textAlign_tablet="left" margin="0 0 11px 0" color="#606060">{yml.seo_title}</H1>
+
+         <Div alignSelf="center" alignSelf_tablet="initial
+         " >
+          <RoundImage
+            alignItems="inherit"
+            alignItems_sm="center"
+            url={yml.header.image_logo}
+            bsize="contain"
+            position="center center"
+            width="256px"
+            height="74px"
+            />
+          </Div> 
+          <Paragraph fontSize="22px" lineHeight="38px" fontWeight="300" textAlign="inherit" padding="40px 10px" textAlign="center" textAlign_md="left" padding_md="30px 0px 0 0" 
+              dangerouslySetInnerHTML={{__html: yml.header.paragraph}}
+          />
+        </Div>
+        <Div height="auto" width="100%" gridColumn_tablet="7 / 15" style={{position: "relative"}}>
+          <Div display="none" display_md="flex" style={{position: "absolute", background: "#F5F5F5", width: "101%", height: "424px", top: "-40px", left: "25px", borderRadius: "3px"}}
+               displayAfter="none" displayAfter_tablet="flex" positionAfter="absolute" contentAfter="''" marginLeftAfter="auto" widthAfter="80%" rightAfter="0" bottomAfter="-10px" heightAfter="10px" backgroundColorAfter={Colors.yellow}
+          />
+          {yml.geekPal.map(item => {
             return (
-              <Column size="4" key={i}>
-                <Row display="flex" justifyContent="around" height="80px">
-                  <Column size="12" selfAlign="center" align="center">
-
-                    <H3
-                      fs_xl="36px"
-                    ><span className="text-danger split" >{splittedTitle.first}</span>{splittedTitle.remainingString}</H3>
-                  </Column>
-                </Row>
-                <Divider height="50px" />
-                {col.items.map((item, index) => {
-                  return (
-                    <Row display="flex" key={index} marginBottom="15px">
-                      <Column size="2" passingRight="0" >
-                        <Icon icon="check" width="24px" color={Colors.yellow} fill={Colors.yellow} />
-
-                      </Column>
-                      <Column size="10"  >
-                        <Row display="flex">
-                          <Column size="12">
-                            <H5
-                              margin="0px"
-                              fs_xl="16px"
-                              fs_lg="16px"
-                              fs_md="14px"
-                              fs_sm="16px"
-                              fs_xs="20px"
-                            >{item.title}
-                            </H5>
-                          </Column>
-                        </Row>
-                        <Row display="flex">
-                          <Column size="12">
-                            <Paragraph
-                              fs_xl="14px"
-                              fs_lg="14px"
-                              fs_md="12px"
-                              fs_sm="16px"
-                              fs_xs="14px"
-                            >{item.sub_title}
-                            </Paragraph>
-                          </Column>
-                        </Row>
-                      </Column>
-                    </Row>
-                  )
-                })}
-              </Column>
+              <>
+                {item.videoId === "" ?
+                  <StyledBackgroundSection
+                    height={`350px`}
+                    // width={`85%`}
+                    borderRadius={`3px`}
+                    image={item.image.childImageSharp.gatsbyImageData}
+                    bgSize={`contain`}
+                    alt="geekforce image"
+                  />
+                  :
+                  <ReactPlayer
+                    id={item.videoId}
+                    thumb={item.image}
+                    imageSize="maxresdefault"
+                    style={{
+                      width: "85%",
+                      height: "350px",
+                    }}
+                  />
+                }
+              </>
             )
           })}
-        </Row>
-      </Wrapper>
-      <Divider height="50px" />
-      <Wrapper >
-        <TestimonialsCarrousel lang={data.allTestimonialsYaml.edges} />
-      </Wrapper>
-      <Divider height="100px" />
+        </Div>
+      </GridContainerWithImage>
+
+      <GridContainer background={Colors.lightYellow} columns="2" rows="2" columns_tablet="4" margin="0 0 58px 0" height="470px" height_tablet="320px" margin_tablet="0 0 78px 0">
+        {Array.isArray(content.icons) && content.icons?.map((item, i) => {
+          return (
+            <IconsBanner icon={item.icon} index={i} title={item.title} />
+          )
+        })}
+      </GridContainer>
+
+      {Array.isArray(content.list) && content.list.map((m, i) => {
+        return (
+          <>
+            <GridContainerWithImage imageSide={i % 2 != 0 ? "left" : "right"} padding_tablet="36px 0 100px 0" columns_tablet="14" margin_tablet="0">
+              <Div flexDirection="column" justifyContent_tablet="start" padding="0px 24px 0" padding_tablet="0" gridArea_tablet={i % 2 == 0 ? "1/1/1/6" : "1/7/1/13"}>
+                <H2 key={i} type="h2" padding="20px 0" lineHeight="36px" textAlign="center" textAlign_tablet="left" margin="0" fontWeight="900" fontSize="30px">{m.title}</H2>
+                {
+                  m.sub ? (
+                    <>
+                      {
+                        m.sub?.map(sub => {
+                          return (
+                            <>
+                              <H3 type="h3" padding="10px 0px" textAlign="left" margin="0" fontWeight="900" textTransform="uppercase" fontSize="15px">{sub?.title}</H3>
+                              <Paragraph letterSpacing="0.05em" textAlign="left" margin="0 0 20px 0" fontSize="15px" lineHeight="26px"
+                                dangerouslySetInnerHTML={{__html: sub?.text}}
+                              />
+                            </>
+                          )
+                        })
+                      }
+                    </>
+                  ) : (
+                    <>
+                      <Paragraph letterSpacing="0.05em" fontSize="15px" textAlign="left" margin="0 0 20px 0" lineHeight="22px" 
+                        dangerouslySetInnerHTML={{__html: m?.text}}
+                      />
+                    </>
+                  )
+                }
+              </Div>
+              <Div height="auto" width="100%" gridArea_tablet={i % 2 == 0 ? "1/7/1/13" : "1/1/1/6"} style={{position: "relative"}}>
+                {
+                  i === 0 ? (
+                    <>
+                      <Div display="none" display_md="flex" style={{position: "absolute", background: "#F5F5F5", width: "101%", height: "282px", top: "-25px", left: "-35px", borderRadius: "3px"}}/>
+                      <Div display="none" display_md="flex" style={{position: "absolute", background: "#FFB718", width: "256px", height: "256px", bottom: "-20px", right: "-45px", borderRadius: "3px"}}/>
+                    </>
+                  ) : (
+                    i===1 ? (
+                      <>
+                        <Div display="none" display_md="flex" style={{position: "absolute", background: "#F5F5F5", width: "101%", height: "282px", top: "-25px", left: "30px", borderRadius: "3px"}}/>
+                      </>
+                      ) : (
+                          <>
+                            <Div display="none" display_md="flex" style={{position: "absolute", background: "#F5F5F5", width: "101%", height: "282px", top: "-25px", left: "25px", borderRadius: "3px"}}/>
+                            <Div display="none" display_md="flex" style={{position: "absolute", background: "#0097CD", width: "256px", height: "256px", bottom: "-20px", right: "0px", borderRadius: "3px"}}/>
+                          </>
+                      )
+                  )
+                }
+                <StyledBackgroundSection
+                  height={`350px`}
+                  // width={`85%`}
+                  borderRadius={`3px`}
+                  image={m.image.childImageSharp.gatsbyImageData}
+                  bgSize={`contain`}
+                  alt="geekforce image"
+                />
+              </Div>
+            </GridContainerWithImage>
+          </>
+        )
+      })}
     </>
   )
 };
@@ -125,31 +152,77 @@ export const query = graphql`
     allPageYaml(filter: { fields: { file_name: { eq: $file_name }, lang: { eq: $lang }}}) {
       edges{
         node{
-            meta_info{
-                title
-                description
-                image
-                keywords
-                slug
+          meta_info{
+              title
+              description
+              image
+              keywords
+              slug
+          }
+          seo_title
+          header{
+            title
+            paragraph
+            image{
+              childImageSharp {
+                gatsbyImageData(
+                  layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                  width: 800
+                  placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                  quality: 100
+                )
+                # fluid(maxWidth: 800, quality: 100){
+                #   ...GatsbyImageSharpFluid_withWebp
+                # }
+              }
             }
-            tagline
-            sub_heading
+            image_alt
+            image_logo
+          }
+          tagline
+          sub_heading
+          list {
+            title
+            text
+            sub {
+              title
+              text
+            }
             image {
               childImageSharp {
-                fluid(maxWidth: 1200){
-                  ...GatsbyImageSharpFluid_withWebp
-                }
+                gatsbyImageData(
+                  layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                  width: 800
+                  placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                  quality: 100
+                )
+                # fluid(maxWidth: 800, quality: 100){
+                #   ...GatsbyImageSharpFluid_withWebp
+                # }
               }
             }
-            image_logo
-            benefits {
-              heading
-              items {
-                title
-                sub_title
+            position
+          }
+          icons {
+            icon
+            title
+          }
+          geekPal {
+            videoId
+            image {
+              childImageSharp {
+                gatsbyImageData(
+                  layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                  width: 800
+                  placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                  quality: 100
+                )
+                # fluid(maxWidth: 800, quality: 100){
+                #   ...GatsbyImageSharpFluid_withWebp
+                # }
               }
-            } 
-              
+            }
+          }
         } 
       }
     }
@@ -164,17 +237,52 @@ export const query = graphql`
             linkedin_text
             student_thumb{
               childImageSharp {
-                fluid(maxWidth: 200){
-                  ...GatsbyImageSharpFluid_withWebp
-                }
-                fixed(width: 200, height: 200) {
-                  ...GatsbyImageSharpFixed
-                }
+                gatsbyImageData(
+                  layout: FIXED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                  width: 200
+                  height: 200
+                  placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                )
+
+                # fluid(maxWidth: 200){
+                #   ...GatsbyImageSharpFluid_withWebp
+                # }
+                # fixed(width: 200, height: 200) {
+                #   ...GatsbyImageSharpFixed
+                # }
               }
             }
             content
             source_url
             source_url_text
+          }
+        }
+      }
+    }
+    allPartnerYaml(filter: { fields: { lang: { eq: $lang }}}) {
+      edges {
+        node {
+          partners {
+            images {
+              name
+              image {
+                childImageSharp {
+                  gatsbyImageData(
+                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                    width: 150
+                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                  )
+                  # fluid(maxWidth: 150){
+                  #   ...GatsbyImageSharpFluid_withWebp
+                  # }
+                }
+              }
+              featured
+            }
+            tagline
+            sub_heading
+            footer_button
+            footer_link
           }
         }
       }

@@ -2,11 +2,12 @@ require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 })
 
+const robots = process.env.GATSBY_ROBOTS || "show";
 module.exports = {
   siteMetadata: {
     defaultTitle: '4Geeks Academy - Miami Coding Bootcamp, Madrid España, Santiago de Chile and Caracas',
     titleTemplate: "%s · 4Geeks Academy",
-    siteUrl: `https://www.4geeksacademy.co`,
+    siteUrl: `https://4geeksacademy.com`,
     defaultDescription: {
       "us": "4Geeks Academy is a world-wide leading coding school focused specially in part-time studies, you don't have to quite your job to become a web developer. Career support for life, coding mentoring for life. We have Miami Coding bootcamps; in Madrid, Spain; Santiago de Chile and Caracas, Venezuela. ",
       "es": "4Geeks Academy es un coding bootcamp a nivel mundial que se especializa en la programación e informatica, en estudios principalmente part-time donde no tienes que dejar tu trabajo para aprender a programar.",
@@ -34,6 +35,48 @@ module.exports = {
 
   },
   plugins: [
+    'gatsby-transformer-yaml',
+    `gatsby-plugin-image`,
+    'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 800,
+              loading: 'lazy'
+            },
+          },
+          {
+            resolve: "gatsby-remark-component",
+            options: { components: ["button", "call-to-action"] }
+          },
+          `gatsby-remark-lazy-load`,
+          {
+            resolve: "gatsby-remark-external-links",
+            options: {
+              target: "_self",
+              rel: "nofollow"
+            }
+          },
+          {
+            resolve: `gatsby-remark-autolink-headers`,
+            options: {
+              offsetY: `0`,
+              icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M22.548 9l.452-2h-5.364l1.364-6h-2l-1.364 6h-5l1.364-6h-2l-1.364 6h-6.184l-.452 2h6.182l-1.364 6h-5.36l-.458 2h5.364l-1.364 6h2l1.364-6h5l-1.364 6h2l1.364-6h6.185l.451-2h-6.182l1.364-6h5.366zm-8.73 6h-5l1.364-6h5l-1.364 6z"/></svg>`,
+              className: `heading-link`,
+              maintainCase: false,
+              removeAccents: true,
+              isIconAfterHeader: false,
+              elements: [`h2`],
+            },
+          },
+        ]
+      }
+    },
     // 'gatsby-plugin-force-trailing-slashes',
     'gatsby-plugin-loadable-components-ssr',
     {
@@ -64,7 +107,7 @@ module.exports = {
       resolve: "gatsby-plugin-web-font-loader",
       options: {
         custom: {
-          families: ["Futura, Lato"],
+          families: ["Lato"],
           urls: ["/fonts/fonts.css"],
         },
       },
@@ -78,7 +121,7 @@ module.exports = {
         background_color: '#ffffff',
         theme_color: '#744C9E',
         display: 'standalone',
-        icon: 'src/assets/logos/icon.png',
+        icon: 'src/assets/logos/favicon.png',
       },
     }, {
       resolve: 'gatsby-source-filesystem',
@@ -96,43 +139,49 @@ module.exports = {
     'gatsby-plugin-root-import',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-offline',
-    'gatsby-plugin-sharp',
-    'gatsby-transformer-sharp',
     'gatsby-plugin-styled-components',
-    {
-      resolve: `gatsby-transformer-remark`,
-      options: {
-        plugins: [
-          {
-            resolve: `gatsby-remark-images`,
-            options: {
-              maxWidth: 800,
-              loading: 'lazy'
-            },
-          },
-          `gatsby-remark-lazy-load`,
-        ]
-      }
-    },
-    'gatsby-transformer-yaml',
     'gatsby-plugin-zeit-now',
-    // 'gatsby-plugin-meta-redirect',
     'gatsby-remark-reading-time',
+    // 'gatsby-plugin-meta-redirect',
     {
       resolve: `gatsby-plugin-sitemap`,
       options: {
-        exclude: [`/admin`, `/tags/links`]
-      }
+        exclude: [`/admin`, `/tags`, `/edit`, `/landings`],
+        // output: `/some-other-sitemap.xml`,
+        query: `
+        {
+            site {
+                siteMetadata {
+                    siteUrl
+                }
+            }
+            allSitePage(
+              filter: {context: {visibility: {nin: ["hidden", "unlisted"]}}}
+            ) {
+                nodes {
+                    path
+                }
+            }
+        }`,
+        // serialize: ({ site, allSitePage }) =>
+        //     allSitePage.nodes.map(node => {
+        //         return {
+        //             url: `${site.siteMetadata.siteUrl}${node.path}`,
+        //             changefreq: `daily`,
+        //             priority: 0.7,
+        //         }
+        //     })
+        }
     },
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
         env: {
           production: {
-            policy: [{ userAgent: '*' }]
+            policy: robots !== "hidden" ? [{ userAgent: '*' }] : [{ userAgent: '*', disallow: ['/'] }]
           },
           development: {
-            policy: [{ userAgent: '*', disallow: ['/'] }]
+            policy: [{userAgent: '*', disallow: ['/']}]
           },
         }
       }

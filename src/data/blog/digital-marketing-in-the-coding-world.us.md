@@ -1,29 +1,16 @@
 ---
-author: vsegnini
-comments: true
-date: 2020-01-20 21:09:10+00:00
-excerpt: We actually do not understand why only a few coding schools are teaching
-  JS and Python combined into just one program.
-layout: post
-link: https://www.4geeksacademy.co/digital-marketing-in-the-coding-world/
-slug: digital-marketing-in-the-coding-world
-title: Digital Marketing in the Coding World
-avatar: "/images/staff/marcelo.jpeg"
+author: "vsegnini"
+date: "2020-01-20T21:09:10+00:00"
+excerpt: "We actually do not understand why only a few coding schools are teaching JS and Python combined into just one program."
+slug: "digital-marketing-in-the-coding-world"
+template: "post" # post or landing_post
+title: "Digital Marketing in the Coding World"
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2020/01/BLOG-04-1-scaled.jpg"
-wordpress_id: 3796
-categories:
-- Sin categoría
-
-tags:
-- 4geeks
-- coding
-- learn to code
-- marketing
-- miami
-- programmers
-lang: "us"
-status: "published" # PUBLISHED, DRAFT, UNASSIGNED
+image_alt: ""
+cluster: "trends-and-tech"
+status: "published"
 featured: false
+
 ---
 
 # **Digital marketing in the coding world**
@@ -42,7 +29,7 @@ Understanding what developers and fellow digital marketers want/need saves time 
 Even though most of our graduates at 4Geeks Academy become full-time software developers,  some of our students are graphic designers and marketers looking to become the best career-wise. This quick guide includes the most practical programming languages not only for programmers but also for marketers that want to be more accomplished in their area.   
 
 
-![](https://www.4geeksacademy.co/wp-content/uploads/2020/01/BLOG1.jpg)
+![](/wp-content/uploads/2020/01/BLOG1.jpg)
 
 
 
@@ -106,10 +93,10 @@ Remember, digital marketing thrives on data, large chunks of it. SQL excels at p
 
 **SQL and having the business knowledge allows marketers to create accurate and more detailed reports, also it will come in handy to create specific segments with Google Analytics data. **[BigQuery](https://cloud.google.com/bigquery/), a Google product, lets you use this language to manage Google Analytics data that is impossible to handle in the Google Analytics point-and-click interface such as adding advanced filters and running more complex calculations.
 
-![](https://www.4geeksacademy.co/wp-content/uploads/2020/01/BLOG2.jpg)
+![](/wp-content/uploads/2020/01/BLOG2.jpg)
 
 **Start Learning Today**
 
 **Dear marketers,** [learning technical digital marketing skills](https://www.stevepavlina.com/blog/2006/08/10-ways-to-improve-your-technical-skills/) can absolutely help you to stand out on the job market, get better results and be more effective on a job. If you are thinking of learning to code, leave all fears aside to have unique programming experience! And if you are not thinking about it, please start doing so!
 
-**Developers**: Do not stop learning. Get to know new languages and their implications for marketing, after all, what do you develop amazing web apps for? A marketer should not necessarily look to become on-par with a software developer, but there is no reason why anyone _shouldn’t_ learn programming. If you are looking for more robust education in any of these languages, or better, if you want to learn a bit about all of them,[ a coding Bootcamp](https://www.4geeksacademy.co/) is a great way to revise your skillset and improve your odds to land a new job or to get a new client!
+**Developers**: Do not stop learning. Get to know new languages and their implications for marketing, after all, what do you develop amazing web apps for? A marketer should not necessarily look to become on-par with a software developer, but there is no reason why anyone _shouldn’t_ learn programming. If you are looking for more robust education in any of these languages, or better, if you want to learn a bit about all of them,[ a coding Bootcamp](/us) is a great way to revise your skillset and improve your odds to land a new job or to get a new client!

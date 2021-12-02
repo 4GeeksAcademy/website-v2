@@ -1,244 +1,177 @@
-import React, {useState, useEffect, useContext} from 'react';
-import {Link, Anchor} from "../components/Styling/index"
-import Card from '../components/Card'
+import React, {useState, useEffect, useRef, Suspense, lazy} from 'react';
 import ChooseProgram from '../components/ChooseProgram'
-import News from '../components/News'
-import dayjs from "dayjs"
+import Badges from '../components/Badges'
+import Loc from '../components/Loc'
+import OurPartners from '../components/OurPartners'
+import ChooseYourProgram from '../components/ChooseYourProgram'
+import UpcomingDates from '../components/UpcomingDates'
+import Staff from '../components/Staff';
 import 'dayjs/locale/de'
-import {Div, Row, Column, Wrapper, WrapperImage, Divider} from '../components/Sections'
-import {Title, H1, H4, H3, Span, Paragraph, Separator} from '../components/Heading'
-import {Button, Colors, Small, Img, StyledBackgroundSection} from '../components/Styling'
+import {Div, GridContainerWithImage, GridContainer} from '../components/Sections'
+import {H1, H2, Paragraph} from '../components/Heading'
+import {Colors, StyledBackgroundSection} from '../components/Styling'
 import BaseRender from './_baseLayout'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import {Carousel} from 'react-responsive-carousel';
-import {requestSyllabus} from "../actions";
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import Icon from '../components/Icon'
-import LeadForm from '../components/LeadForm';
-import Modal from '../components/Modal';
-import Why4Geeks from '../components/Why4Geeks';
+
+const MapFrame = lazy(() => import('../components/MapFrame'));
 
 const Location = ({data, pageContext, yml}) => {
+  const {lang} = pageContext;
+  const hiring = data.allPartnerYaml.edges[0].node;
+  const images = data.allLocationYaml.edges[0].node;
+  const [cohorts, setCohorts] = React.useState([]);
+  const [ready, setReady] = useState(false);
 
-    const {lang} = pageContext;
-    const [open, setOpen] = React.useState(false);
-    const [cohorts, setCohorts] = React.useState([]);
-    const handleOpen = () => {
-        setOpen(true);
-    };
+  useEffect(() => {
+    process.nextTick(() => {
+      if (globalThis.window ?? false) {
+        setReady(true)
+      }
+    })
+    // setTimeout(() => { setReady(true) }, 3000
+  }, [])
+  const chooseProgramRef = useRef(null)
 
-    const handleClose = () => {
-        setOpen(false);
-    };
+  useEffect(() => {
+    const loadCohorts = async () => {
+      const resp = await fetch(`${process.env.GATSBY_BREATHECODE_HOST}/admissions/cohort/all?upcoming=true&academy=online,${yml.breathecode_location_slug}`)
+      const data = await resp.json();
+      setCohorts(data.slice(0, 3))
+    }
+    loadCohorts();
+  }, []);
 
-    useEffect(() => {
-        const loadCohorts = async () => {
-            const resp = await fetch(`${process.env.GATSBY_BREATHECODE_HOST}/admissions/cohort/all?upcoming=true&academy=${yml.breathecode_location_slug}`)
-            const data = await resp.json();
-            setCohorts(data.slice(0, 3))
-        }
-        loadCohorts();
-    }, []);
+  const goToChooseProgram = (e) => {
+    e.preventDefault();
+    window.scrollTo({
+      top: chooseProgramRef.current?.offsetTop,
+      behavior: "smooth"
+    })
+  }
+  return (<>
+    <GridContainerWithImage padding="75px 0 0 0" padding_tablet="0 0 20px 0" columns_tablet="14" margin="70px 0 0 0" margin_tablet="100px 0 0 0">
+      <Div flexDirection="column" alignItems="center" alignItems_tablet="start" justifyContent_tablet="start" padding_tablet="70px 0 0 0" gridColumn_tablet="1 / 7">
+        <H1 type="h1" textAlign_tablet="left" margin="0 0 11px 0" color="#606060">{yml.seo_title}</H1>
+        <H2 textAlign_tablet="left" fontSize="50px" lineHeight="60px">{`${yml.header.tagline}`}</H2>
+        <Paragraph textAlign_tablet="left" margin="26px 0">{yml.info_box.address} </Paragraph>
+        <Paragraph textAlign_tablet="left" >{yml.info_box.phone} </Paragraph>
+        {yml.info_box.whatsapp && <Paragraph justifyContent="center" justifyContent_tablet="start" textAlign_tablet="left" display="flex" alignItems="center" >
+          { yml.info_box.whatsapp_link ? (
+            <>
+              <Div width="22px" height="22px" alignItems="center" margin="0 8px 0 0">
+                <Icon icon="whatsapp"/>
+              </Div>
+              Whatsapp:
+              <a href={yml.info_box.whatsapp_link} target="_blank" rel="noopener noreferrer nofollow">
+                {yml.info_box.whatsapp}
+              </a>
+            </>
+          ) : `Whatsapp: ${yml.info_box.whatsapp}`
+          }
+          </Paragraph>}
+        <Paragraph textAlign_tablet="left" margin="0 0 30px 0">{yml.info_box.email} </Paragraph>
+        <ChooseProgram
+          goTo={goToChooseProgram}
+          right="15px"
+          top="40px"
+          textAlign="center"
+          textAlign_tablet="left"
+          openLabel={data.allChooseProgramYaml.edges[0].node.open_button_text}
+          closeLabel={data.allChooseProgramYaml.edges[0].node.open_button_text}
+        />
 
-    return (<>
-        <WrapperImage
-            github={`/location`}
-            imageData={yml.header.image && yml.header.image.childImageSharp.fluid}
-            filter="brightness(0.4)"
-            className={`img-header`}
-            bgSize={`cover`}
-            alt={yml.header.alt}
-            align="center"
-            customBorderRadius="0 0 0 1.25rem"
-        >
-            <H1 type="h1" fontSize="13px" marginTop="50px" color={Colors.white} align="center">{yml.seo_title}</H1>
-            <Divider height="20px" />
-            <Title
-                type="h2"
-                title={yml.header.tagline}
-                paragraph={yml.header.paragraph}
-                paragraphColor={Colors.lightGray}
-                variant="main"
-                color={Colors.white}
-                fontSize="46px"
-                textAlign="center"
-            />
-            <ChooseProgram
-                right="15px"
-                top="40px"
-                margin="0 0 40px 0"
-                programs={data.allChooseProgramYaml.edges[0].node.programs}
-                openLabel={data.allChooseProgramYaml.edges[0].node.close_button_text}
-                closeLabel={data.allChooseProgramYaml.edges[0].node.open_button_text}
-            />
-        </WrapperImage>
-        <Divider height="100px" />
-        {yml.news &&
-            <Wrapper >
-                <Title
-                    size="10"
-                    title={yml.news.title}
-                    margin="left"
-                    variant="small"
-                />
-                <News location={yml.breathecode_location_slug} lang={lang} />
-                <Why4Geeks lang={pageContext.lang} playerHeight="250px" />
-            </Wrapper>
-        }
-        { yml.breathecode_location_slug !== "online" &&
-            <Wrapper >
-                <Card shadow borders="1.25rem" >
-                    <Row display="flex"
-                        height="100%"
-                        marginLeft="0"
-                        marginRight="0"
-                        customRespSize
-                    >
-                        <Column size="6" size_sm="12" padding="20px" alignSelf="center" borderRadius="0 0 0 1.25rem">
-                            <H3 align="left" >{yml.info_box.heading}</H3>
-                            <Separator variant="primary" left />
-                            <Paragraph align="left">{yml.info_box.address}</Paragraph>
-                            <H3 margin='10px 0' align="left" >{yml.info_box.contact_heading}</H3>
-                            <Paragraph align="left"><a href={`tel:${yml.info_box.phone}`}>{yml.info_box.phone}</a></Paragraph>
-                            <Paragraph margin="10px 0 0 0" align="left">{yml.info_box.email}</Paragraph>
-                        </Column>
-                        <Column
-                            size="6" size_sm="12"
-                            paddingRight={`0`}
-                            paddingLeft={`0`}
-                            border="custom"
-                            borderRadius="0 1.25rem 1.25rem 0"
-                        >
-                            <Anchor to={yml.info_box.map_url}>
-                                <StyledBackgroundSection
-                                    className={`img-right`}
-                                    height={`426px`}
-                                    h_sm={`326px`}
-                                    image={yml.info_box.image && yml.info_box.image.childImageSharp.fluid}
-                                    bgSize={`cover`}
-                                    alt="Cnn Logo"
-                                    borderRadius="1.25rem"
-                                />
-                            </Anchor>
-                        </Column>
-                    </Row>
-                </Card>
-            </Wrapper>
-        }
-        <Wrapper>
-            <Title
-                size="10"
-                title={yml.upcoming.title}
-                margin="left"
-                variant="primary"
-            />
-            <Row display="flex">
-                {cohorts && cohorts.map((cohort, key) =>
-                    <Column
-                        key={key}
-                        size="4"
-                        size_md="4"
-                        size_sm="6"
-                        size_xs="12"
-                        borderRadius="0 0 0 1.25rem"
-                    >
-                        <Card
-                            color={`grey`}
-                            borders={`.5rem`}
-                            margin={`0 20px 0 0`}
-                            margin_sm={"20px auto"}
-                            margin_xs={"20px auto"}
-                        >
-                            <Link to={`/${pageContext.lang}/${cohort.syllabus.certificate.slug}`}><Img
-                                src={cohort.syllabus.certificate.logo}
-                                className="pointer"
-                                height="120px"
-                                borderRadius="1rem 1rem 0 0"
-                            /></Link>
-                            <H4 padding="10px">{cohort.syllabus.certificate.name}</H4>
-                            <Div padding="10px">
-                                <Icon icon="clock" width="24" color={Colors.blue} fill={Colors.blue} />
-                                {pageContext.lang == "us" ? 
-                                <Paragraph
-                                    margin={`0 0 0 10px`}
-                                    fs_xs="18px"
-                                    fs_sm="18px"
-                                    fs_md="9px"
-                                    fs_lg="11px"
-                                    fontSize="14px">
-                                    <Small display="block">Starting on:</Small>
-                                    {dayjs(cohort.kickoff_date).locale("us").add(5, "hour").format("ddd, D MMM YYYY")}
-                                </Paragraph>
-                                : <Paragraph
-                                    margin={`0 0 0 10px`}
-                                    fs_xs="18px"
-                                    fs_sm="18px"
-                                    fs_md="9px"
-                                    fs_lg="11px"
-                                    fontSize="14px">
-                                    <Small display="block">Empezando el:</Small>
-                                    {dayjs(cohort.kickoff_date).locale("es").add(5, "hour").format("ddd, D MMM YYYY")}
-                                </Paragraph>}
-                                
-                            </Div>
-                            <Div padding="10px" d_lg="block" d_sm="flex" justifyContent="center">
-                                <Link to={yml.button.apply_button_link}><Button outline color={Colors.red} padding="10px 12px" textColor={Colors.white}>{yml.button.apply_button_text}</Button></Link>
-                                &nbsp;
-                                <Link to={`/${pageContext.lang}/${cohort.syllabus.certificate.slug}`}><Button outline color={Colors.blue} padding="10px 17px" textColor={Colors.white}>{yml.button.cohort_more_details_text}</Button></Link>
-                            </Div>
-                        </Card>
-                    </Column>
-                )}
-            </Row>
-        </Wrapper>
-        <Wrapper >
-            <Row display="flex">
-                <Column
-                    size="12"
-                    borderRadius="0 0 0 1.25rem"
+      </Div>
+      <Div height="auto" width="100%" gridColumn_tablet="7 / 15" style={{position: "relative"}}>
 
-                >
-                    <Card shadow borders="1.25rem" >
-                        <Row display="flex"
-                            height="100%"
-                            marginLeft="0"
-                            marginRight="0"
-                            customRespSize
-                        >
-                            <Column size="6" size_sm="12" paddingLeft="0" paddingRight="0" alignSelf="center" height="100%" backgroundSize="cover" border="custom" borderRadius="1.25rem 0 0 1.25rem" >
-                                <Carousel showIndicators={false} showThumbs={false} showStatus={false} autoPlay={true} infiniteLoop={true}>
+        <StyledBackgroundSection
+          height={`495px`}
+          image={yml.header.image.childImageSharp.gatsbyImageData}
+          bgSize={`contain`}
+          alt={yml.header.alt}
+        />
+      </Div>
+    </GridContainerWithImage>
 
-                                    {yml.carousel_box.images.map((item, index) => {
-                                        return (
-                                            <StyledBackgroundSection
-                                                key={index}
-                                                className={`img-left`}
-                                                height={`426px`}
-                                                h_sm={`326px`}
-                                                image={item.path.childImageSharp.fluid}
-                                                bgSize={`cover`}
-                                                alt="Cnn Logo"
-                                                borderRadius="1.25rem"
-                                            />
-                                        )
-                                    })}
-                                </Carousel>
-                            </Column>
-                            <Column size="6" size_sm="12" padding="20px" alignSelf="center" borderRadius="0 0 0 1.25rem">
-                                <H3 align="left">{yml.carousel_box.heading}</H3>
-                                <Paragraph margin="5px 0" align="left" ></Paragraph>
-                                <Separator variant="primary" />
-                                <Paragraph color={Colors.gray} align="left">
-                                    {yml.carousel_box.content}
-                                </Paragraph>
-                            </Column>
-                        </Row>
-                    </Card>
-                </Column>
-            </Row>
-        </Wrapper>
-        <Divider height="100px" />
-    </>
-    )
+    <Badges lang={pageContext.lang} background={Colors.verylightGray} paragraph={yml.badges.paragraph} margin="0 0 57px 0" padding="27px 17px 50px 17px" padding_tablet="80px 0 100px 0" />
+    <GridContainer columns_tablet="12" padding_tablet="60px 0 77px 0" padding="40px 17px">
+      <Div gridColumn_tablet="1 / 4" ><H2 textAlign="left">{images.images_box.heading}</H2></Div>
+      <Div flexDirection="column" gridColumn_tablet="5 / 13">
+        {images.images_box.content.split("\n").map((m, i) =>
+          <Paragraph
+            key={i}
+            textAlign="left"
+            margin="0 0 20px 0"
+            fontSize="15px"
+            lineHeight="26px"
+          >
+            {m}
+          </Paragraph>
+        )}
+      </Div>
+    </GridContainer>
+    {yml.images_box.images && 
+      <GridContainer
+        columns_tablet="10"
+        gridTemplateRows_tablet="repeat(4, 1fr)"
+        gridTemplateAreas={`
+        'image1 image1 image1 image1 image1 image1 image1 image2 image2 image2'
+        'image1 image1 image1 image1 image1 image1 image1 image2 image2 image2'
+        'image3 image3 image3 image3 image5 image5 image5 image5 image5 image5'
+        'image4 image4 image4 image4 image5 image5 image5 image5 image5 image5'
+        `}
+        gridTemplateAreas_tablet={`
+          'image1 image1 image1 image1 image1 image1 image1 image2 image2 image2'
+          'image1 image1 image1 image1 image1 image1 image1 image2 image2 image2'
+          'image3 image3 image3 image3 image5 image5 image5 image5 image5 image5'
+          'image4 image4 image4 image4 image5 image5 image5 image5 image5 image5'
+          `}
+        height_tablet="813px" 
+        height="304px"
+        childHeight="inherit"
+
+      >
+        {yml.images_box.images.map((m, i) => {
+          return (
+            <GatsbyImage
+              style={{gridArea: `image${i+1}`}}
+              
+              key={i}
+              borderRadius="3px"
+              image={getImage(m.path.childImageSharp.gatsbyImageData)}
+              bgSize={`cover`}
+              alt={m.alt}
+            />)
+        })}
+      </GridContainer>
+    }
+    <OurPartners images={hiring.partners.images} showFeatured marquee title={hiring.partners.tagline} paragraph={hiring.partners.sub_heading}></OurPartners>
+    <ChooseYourProgram chooseProgramRef={chooseProgramRef} lang={pageContext.lang} programs={data.allChooseYourProgramYaml.edges[0].node.programs} />
+    <UpcomingDates lang={pageContext.lang} location={yml.breathecode_location_slug} message={yml.upcoming.no_dates_message} />
+    <Loc lang={pageContext.lang} locations={data.test.edges} />
+    <Staff lang={pageContext.lang} />
+
+    {/* IFRAME map */}
+    <Div>
+      {
+        !ready ? null : (
+          <Suspense fallback={() => 'loading'}>
+            {yml.info_box.iframeMapUrl === "" ? null 
+            : (
+              <MapFrame 
+                src={ready ? yml.info_box.iframeMapUrl : "about:blank"} 
+                width="100%" 
+                height="492px" 
+              />
+            )}
+          </Suspense>
+        )
+      }
+    </Div>
+
+  </>
+  )
 };
 
 export const query = graphql`
@@ -246,76 +179,293 @@ export const query = graphql`
     allLocationYaml(filter: { fields: { file_name: { eq: $file_name }, lang: { eq: $lang }}}) {
       edges{
         node{
+          seo_title
+          active_campaign_location_slug
+          name
+          breathecode_location_slug
+          header{
+            tagline
+            paragraph
+            sub_heading
+            image {
+              childImageSharp {
+                gatsbyImageData(
+                  layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                  width: 1200
+                  quality: 100
+                  placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                )
+                # fluid(maxWidth: 1200, quality: 100){
+                #     ...GatsbyImageSharpFluid_withWebp
+                # }
+              }
+            }
+            alt
+          }
+          button_header{
+            button_text
+            button_link
+          }
+          button{
+              apply_button_link
+              apply_button_text
+              cohort_more_details_text
+              syllabus_button_text
+              syllabus_submit_text
+          }
+          badges{
+            title
+            paragraph
+          }
+          news{
+              title
+          }
+          upcoming{
+            no_dates_message
+          }
+          info_box{
+              heading
+              map_url
+              address
+              iframeMapUrl
+              phone
+              email
+              contact_heading
+              whatsapp
+              whatsapp_link
+              image {
+                  childImageSharp {
+                    gatsbyImageData(
+                      layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                      width: 800
+                      quality: 100
+                      placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                    )
+                    # fluid(maxWidth: 800, quality: 100){
+                    #   ...GatsbyImageSharpFluid_withWebp
+                    # }
+                  }
+                }
+              alt 
+          }
+          meta_info{
+              title
+              description
+              image
+              keywords
+          }
+          images_box{
+            heading
+            content
+            images{
+              path{
+                childImageSharp {
+                  gatsbyImageData(
+                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                    width: 800
+                    quality: 100
+                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                  )
+                  # fluid(maxWidth: 800, quality: 100){
+                  #   ...GatsbyImageSharpFluid_withWebp
+                  # }
+                }
+              }
+              alt
+            } 
+          } 
+        }
+      }
+    }
+    test : allLocationYaml(filter: {fields: { lang: {eq: $lang}}}) {
+        edges {
+          node {
+            city
+            name
+            meta_info {
+              slug
+              title
+              description
+              unlisted
+              position
+              image
+              keywords
+            }
             seo_title
             active_campaign_location_slug
             breathecode_location_slug
             header{
-                tagline
-                paragraph
-                sub_heading
-                image {
-                    childImageSharp {
-                    fluid(maxWidth: 1200, quality: 100){
-                        ...GatsbyImageSharpFluid_withWebp
-                    }
-                    }
+              sub_heading
+              tagline
+              alt
+              image {
+                childImageSharp {
+                  gatsbyImageData(
+                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                    width: 800
+                    quality: 100
+                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                  )
+                  # fluid(maxWidth: 800){
+                  #   ...GatsbyImageSharpFluid_withWebp
+                  # }
+                }
+              } 
+            }
+            prices {
+                full_stack {
+                  full_time {
+                    slug
+                  }
+                  part_time {
+                    slug
+                  }
+                }
+              }
+            info_box {
+              heading
+              address
+              contact_heading
+              phone
+              email
+              image {
+                childImageSharp {
+                  gatsbyImageData(
+                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                    width: 800
+                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                  )
+                  # fluid(maxWidth: 800){
+                  #   ...GatsbyImageSharpFluid_withWebp
+                  # }
+                }
+              } 
+            }
+            images_box {
+              images {
+                path{
+                  childImageSharp {
+                    gatsbyImageData(
+                      layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                      width: 100
+                      placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                    )
+                    # fluid(maxWidth: 100){
+                    #   ...GatsbyImageSharpFluid_withWebp
+                    # }
+                  }
                 } 
                 alt
+              }
+              content
+              heading
             }
-            button{
-                apply_button_link
-                apply_button_text
-                cohort_more_details_text
-                syllabus_button_text
-                syllabus_submit_text
-            }
-            news{
-                title
-            }
-            upcoming{
-                title
-            }
-            info_box{
-                heading
-                map_url
-                address
-                phone
-                email
-                contact_heading
-                image {
-                    childImageSharp {
-                      fluid(maxWidth: 800, quality: 100){
-                        ...GatsbyImageSharpFluid_withWebp
-                      }
-                    }
-                  }
-                alt 
-            }
-            meta_info{
-                title
-                description
-                image
-                keywords
-            }
-            carousel_box{
-                heading
-                content
-                images{
-                    path{
-                        childImageSharp {
-                          fluid(maxWidth: 800, quality: 100){
-                            ...GatsbyImageSharpFluid_withWebp
-                          }
-                        }
-                      } 
-                    alt
-                }
-                
-            }
-            
+          }
         }
       }
-    }
+    allChooseYourProgramYaml (filter: { fields: { lang: { eq: $lang }}}){
+        edges {
+          node {
+            programs {
+              link
+              sub_title
+              title
+              description
+              icon
+            }
+          }
+        }
+      }
+    allPartnerYaml(filter: { fields: { lang: { eq: $lang }}}) {
+        edges {
+            node {
+              partners {
+                tagline
+                sub_heading
+                footer_tagline
+                footer_button
+                footer_link
+                images {
+                  name
+                  image {
+                    childImageSharp {
+                      gatsbyImageData(
+                        layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                        width: 150
+                        placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                      )
+                      # fluid(maxWidth: 150){
+                      #   ...GatsbyImageSharpFluid_withWebp
+                      # }
+                    }
+                  }
+                  featured
+                }
+              }
+              coding {
+                images {
+                  name
+                  image {
+                    childImageSharp {
+                      gatsbyImageData(
+                        layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                        width: 100
+                        placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                      )
+                      # fluid(maxWidth: 100){
+                      #   ...GatsbyImageSharpFluid_withWebp
+                      # }
+                    }
+                  }
+                  featured
+                }
+                tagline
+                sub_heading
+              }
+              influencers {
+                images {
+                  name
+                  image {
+                    childImageSharp {
+                      gatsbyImageData(
+                        layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                        width: 100
+                        placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                      )
+                      # fluid(maxWidth: 100){
+                      #   ...GatsbyImageSharpFluid_withWebp
+                      # }
+                    }
+                  }
+                  featured
+                }
+                tagline
+                sub_heading
+              }
+              financials {
+                images {
+                  name
+                  image {
+                    childImageSharp {
+                      gatsbyImageData(
+                        layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                        width: 100
+                        placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                      )
+                      # fluid(maxWidth: 100){
+                      #   ...GatsbyImageSharpFluid_withWebp
+                      # }
+                    }
+                  }
+                  featured
+                }
+                tagline
+                sub_heading
+              }
+            }
+          }
+        }
+        
     allChooseProgramYaml(filter: { fields: { lang: { eq: $lang }}}) {
         edges {
           node {

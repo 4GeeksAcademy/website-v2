@@ -1,48 +1,96 @@
 meta_info:
   slug: geekforce-career-support
-  title: ""
-  description: null
+  title: "GeekForce, a 4Geeks Academy system"
+  visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
+  description: "GeekForce system from 4Geeks Academy. Lifelong support for your professional career, maintenance and generation of new job opportunities."
   image: null
-  keywords: ""
+  keywords: "Geekforce, a 4Geeks Academy system"
   redirects: ["/career-support", "/geekforce", "/us/geekforce"]
 
-tagline: FIND A GREAT JOB
-sub_heading: "Job hunting will never be a problem again"
-image: "../../../static/images/bg/companies-bg.jpg"
-image_logo: "/images/geekforce.png"
-benefits:
-  - p:
-    heading: "Get Interviews"
-    items:
-      - title: Resume Preparation
-        sub_title: (up to 8 students per class)
-      - title: LinkedIn Preparation
-        sub_title: (one mentor for every 4 students)
-      - title: Github Preparation
-        sub_title: (unlimited sessions)
-      - title: Personal Portfolio
-        sub_title: (based on each job opportunity)
-      - title: Final Project
-        sub_title: (based on each job opportunity)
-  - a:
-    heading: "Get Job Offers"
-    items:
-      - title: Get Job offers from our partners
-        sub_title: Referrals coming from our own network of hundreds of partners
-      - title: Mock Interview Trainings
-        sub_title: Several mock interviews to assess your weaknesses and create a stronger profile before the actual interviews.
-      - title: Target Coaching per Interview 
-        sub_title: Intensive individual coaching. Each time you have an important interview, we will practice using and working with different technologies.
-      - title: Thousands of tailored exercises
-        sub_title: Our very own pool of thousands of auto-graded exercises will let you practice until you can master those skills.
-  - l:
-    heading: "Keep your job forever"
-    items:
-      - title: The coaching never ends
-        sub_title: Once you land the job, you get help to keep at it.
-      - title: Change your job
-        sub_title: Our referral system never ends; you can always come back to look for better jobs.
-      - title: Continue Growing
-        sub_title: Private invites to career fairs, events and networking sessions.
-      - title: Become a mentor
-        sub_title: Get paid to help other students; become a part of the mentoring network forever.
+seo_title: "geekforce"
+header:
+  title: ""
+  image: "../../../static/images/bg/companies-bg.jpg"
+  image_alt: ""
+  paragraph: "GeekForce is the collective process of Career Support at the Academy. The “force” stands For Career Empowerment and it is a lifetime membership. It provides you job placement assistance so you get ready to get a job in tech."
+  image_logo: "/images/geekforce.png"
+  
+# Introduction Video here
+geekForce:
+  - videoId: "ln3bQsV1BaQ"
+    image: ../../../static/images/staff/hernan.png
+
+# Banner of icons
+icons:
+  - icon: "contract"
+    title: "86% of our students hired"
+  - icon: "job"
+    title: "POST PROGRAM LABOR SUPPORT"
+  - icon: "talk"
+    title: "PREPARING FOR INTERVIEWS"
+  - icon: "worker-portrait"
+    title: "+1500 LIFE SHEETS CREATED"
+
+list:
+  - title: "Unlimited Professional Support"
+    image: "../../../static/images/professional-profile.png"
+    position: "right"
+    sub:
+      - title: "✔ Advice and creation of professional profile"
+        text: "At 4Geeks we will help you perfect your professional profile. You will have personalized advice with our experts to improve your CV, LinkedIn, GitHub and Portfolio."
+
+
+  - title: "Interview Simulation"
+    image: "../../../static/images/tech-interview.png"
+    position: "left"
+    text: "We will hold mock interviews to assess your strengths and weaknesses to create a stronger profile before the actual interviews. Every time you have an interview, we will practice using different technologies.
+    We have our very own pool of auto-graded exercises, so you can practice until you master the skills to get the job you want."
+
+  - title: "Lifetime Mentoring"
+    image: "../../../static/images/bg/main-bg.jpg"
+    position: "right"
+    text: "Launching a career in tech involves assessing your current situation and making informed decisions about the future.
+    It requires assessment of yourself, your context, and ACTION. You can do this alone; or you can rely on a mentor's experience which can give you
+    perspective, information and access to the right resources. In 4Geeks we adjust the sessions according to your calendar,
+    we also give you the opportunity to have them online or in-person.
+    In any case, we assure you that you have the opportunity for constant mentoring whenever you need it. "
+
+# benefits:
+#   - p:
+#     heading: "Get Interviews"
+#     items:
+#       - title: Resume Preparation
+#         sub_title: (up to 8 students per class)
+#       - title: LinkedIn Preparation
+#         sub_title: (one mentor for every 4 students)
+#       - title: Github Preparation
+#         sub_title: (unlimited sessions)
+#       - title: Personal Portfolio
+#         sub_title: (based on each job opportunity)
+#       - title: Final Project
+#         sub_title: (based on each job opportunity)
+#   - a:
+#     heading: "Get Job Offers"
+#     items:
+#       - title: Get Job offers from our partners
+#         sub_title: Referrals coming from our own network of hundreds of partners
+#       - title: Mock Interview Trainings
+#         sub_title: Several mock interviews to assess your weaknesses and create a stronger profile before the actual interviews.
+#       - title: Target Coaching per Interview 
+#         sub_title: Intensive individual coaching. Each time you have an important interview, we will practice using and working with different technologies.
+#       - title: Thousands of tailored exercises
+#         sub_title: Our very own pool of thousands of auto-graded exercises will let you practice until you can master those skills.
+#   - l:
+#     heading: "Keep your job forever"
+#     items:
+#       - title: The coaching never ends
+#         sub_title: Once you land the job, you get help to keep at it.
+#       - title: Change your job
+#         sub_title: Our referral system never ends; you can always come back to look for better jobs.
+#       - title: Continue Growing
+#         sub_title: Private invites to career fairs, events and networking sessions.
+#       - title: Become a mentor
+#         sub_title: Get paid to help other students; become a part of the mentoring network forever.
+
+# image1: "../../../static/images/geeksinfo/geeksinfo.png"
+# image2: "../../../static/images/bg/community.png"
