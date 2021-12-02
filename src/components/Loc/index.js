@@ -97,7 +97,7 @@ const Loc = ({locations, title, paragraph, lang}) => {
               >
                 <H3
                   textAlign="left"
-                >{item.node.name} {next !== undefined && !item.node.city.includes('Online') && next.academy.slug === 'online' && '(Online)'}
+                >{item.node.name}
                   <Span animated color={Colors.yellow}>_</Span>
                 </H3>
                 {/* <Div
