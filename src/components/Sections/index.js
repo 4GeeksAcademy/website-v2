@@ -199,6 +199,7 @@ export const Div = styled.div`
         padding: ${props => props.padding_sm};
         justify-content: ${props => justifyContentOptions[props.justifyContent_sm]};
         height: ${props => props.height_sm};
+        display: ${props => props.display};
         
     }
     @media  ${Devices.tablet}{
@@ -281,6 +282,7 @@ export const Grid = styled(Div)`
     grid-template-columns: ${props => props.gridTemplateColumns ? `repeat(${props.gridTemplateColumns})` : `repeat(1, 1fr)`};
     grid-template-rows: ${props => props.gridTemplateRows ? `repeat(${props.gridTemplateRows})` : null};
     grid-gap: ${props => props.gridGap || "15px"};
+    column-gap: ${props => props.columnGap};
     grid-auto-rows: ${props => props.gridAutoRows};
     grid-column: ${props => props.gridColumn};
     justify-items: ${props => props.justifyItems};

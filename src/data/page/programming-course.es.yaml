@@ -2,13 +2,12 @@ meta_info:
   slug: curso-de-programacion-desde-cero
   title: ""
   description: ""
-  image: ""
-  template: "programming-course"
-  bc_slug: "programming-course-from-scratch"
+  visibility: "visible"
+  image: null
   keywords: ""
   redirects: []
 
-seo_title: "Coding Bootcamp"
+seo_title: "curso-de-programacion"
 
 header:
   title: "Curso de programación desde cero"
@@ -330,11 +329,3 @@ typical:
 alumni:
   heading: "Conoce a los graduados y sus proyectos"
   sub_heading: "Tú también podrás hacer proyectos como estos cuando seas programador"
-
-## SIDEBAR
-sidebar:
-  membership: "MEMBERSHIPS"
-  program: "PROGRAM"
-  geeks_vs_other: "4GEEKS vs OTHERS"
-  pricing: "PRICING"
-  alumni: "THE ALUMNI"

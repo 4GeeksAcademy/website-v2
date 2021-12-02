@@ -30,7 +30,7 @@ const Job = ({ data, pageContext, yml }) => {
         padding_tablet="30px 0 0 0"
       >
         <Div flexDirection="column" gridColumn_tablet=" 2 / 12">
-        {yml.open ? <Alert color="green" margin="0" padding="5px 0 0 0">{data.allJobAlertYaml.edges[0].node.message.accepting}</Alert>
+        {yml.meta_info.open ? <Alert color="green" margin="0" padding="5px 0 0 0">{data.allJobAlertYaml.edges[0].node.message.accepting}</Alert>
          : <Alert color="red" margin="0" padding="5px 0 0 0">{data.allJobAlertYaml.edges[0].node.message.no_accepting}</Alert>}
           <Link
             style={{ margin: '20px 0', width: 'fit-content' }}
@@ -56,7 +56,7 @@ const Job = ({ data, pageContext, yml }) => {
             >
               {yml.banner_heading}
             </H1>
-            {yml.open ? <Button
+            {yml.meta_info.open ? <Button
               onClick={handleOpen}
               variant="full"
               width="130px"
@@ -137,9 +137,9 @@ export const query = graphql`
             description
             image
             keywords
+            open
           }
           banner_heading
-          open
           link_back
           banner_image
           button_text

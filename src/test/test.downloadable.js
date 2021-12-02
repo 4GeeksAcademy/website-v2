@@ -12,13 +12,6 @@ walk(`${__dirname}/../data/downloadable`, async (err, files) => {
       if (!doc || !doc.yaml) fail('Invalid YML syntax for ' + _path);
     });
 
-  let courses = [
-    "full-stack-ft",
-    "full-stack",
-    "software-engineering",
-    "machine-learning"
-  ];
-
   const _files = files.filter(
     (f) =>
       (f.indexOf('.yml') > 1 || f.indexOf('.yaml') > 1) &&
@@ -43,7 +36,7 @@ walk(`${__dirname}/../data/downloadable`, async (err, files) => {
       const meta_keys = Object.keys(data.meta_info)
       const current_download = data.meta_info.current_download
 
-      const resp = await fetch(`https://breathecode-test.herokuapp.com/v1/marketing/downloadable`);
+      const resp = await fetch(`https://breathecode.herokuapp.com/v1/marketing/downloadable`);
       const downloadables = await resp.json()
       const scanResult = downloadables.some(el => el.slug === current_download)
       if(scanResult === false) {

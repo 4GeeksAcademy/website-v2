@@ -2,15 +2,15 @@
 author: "4GeeksAcademy"
 date: "2016-05-04T14:32:02+00:00"
 excerpt: "Guia completa sobre como aprender a programar desde cero utilizando las tecnologias más buscadas para conseguir trabajo rápidamente"
-slug: "como-aprender-a-programar-desde-cero"
+slug: "aprender-a-programar-desde-cero"
 template: "landing_post"
 title: "Cómo aprender a programar desde cero"
 description: "Guia completa sobre como aprender a programar desde cero utilizando las tecnologias más buscadas para conseguir trabajo rápidamente"
 image: "http://breathecode.herokuapp.com/v1/media/file/4geeks-feb-14th-3-jpeg?width=600"
 image_alt: ""
 status: "published"
-featured: "true"
-cluster: "full-stack"
+featured: true
+cluster: "aprender-a-programar"
 
 ---
 
@@ -18,7 +18,7 @@ Son múltiples las razones para aprender a programar. Más allá de una carrera,
 
 ## ¿Por qué aprender a programar?
 
-### Mejora las posibilidades de conseguir empleo ☝️
+### Mejora las posibilidades de conseguir empleo
 
 Según el Foro Económico Mundial, en los últimos dos años se ha observado una aceleración importante en la adopción de nuevas tecnologías en las empresas. Además, a partir de la pandemia, la necesidad de algunos talentos se ha exacerbado: especialmente personal médico y personal que permita a las empresas transitar y desempeñarse en sus procesos de transformación digital.
 

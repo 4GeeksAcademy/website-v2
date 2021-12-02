@@ -3,6 +3,7 @@ meta_info:
     title: "Coordinador career support en 4Geeks Academy"
     description: "Conoce los requisitos de coordinador de career support en 4Geeks Academy"
     image: ""
+    open: false #if true, this job will be accepting candidates
     keywords: "coordinador, career, support"
     redirects: ["/career"]
 

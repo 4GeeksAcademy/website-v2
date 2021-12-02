@@ -135,7 +135,6 @@ const LeadForm = ({marginButton, marginButton_tablet, background, margin, margin
     }, [data])
 
     //validate fields
-    console.log("validating fields")
     fields.forEach(f => {
         if(formData[f] === undefined) throw Error(`Invalid form field ${f}, options are: ${Object.keys(formData).join(",")}`)
     });

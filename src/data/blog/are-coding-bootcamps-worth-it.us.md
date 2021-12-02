@@ -9,7 +9,7 @@ image: "https://github.com/marcelovaldebenito/website-v2/blob/master/static/imag
 image_alt: "students learning code in a bootcamp"
 cluster: "coding-bootcamps"
 status: "published"
-featured: "true"
+featured: true
 
 ---
 

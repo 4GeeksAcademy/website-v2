@@ -9,7 +9,7 @@ image: "https://4GeeksAcademy.com/wp-content/uploads/2016/01/wyncode4geeksironha
 image_alt: ""
 cluster: "coding-bootcamps"
 status: "published"
-featured: "false"
+featured: false
 
 ---
 

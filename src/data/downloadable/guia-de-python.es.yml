@@ -1,16 +1,16 @@
 meta_info:
   slug: guia-de-python # <--- URL 4geeksacademy.com/us/landing/example
   # This will show on social media when shared
-  title: "Guía rápida de python para principiantes"
-  description: "Python un lenguaje de programación que está revolucionando el mercado siendo usado por empresas como: Netflix, Spotify, Amazon y muchos más."
+  title: "Guía rápida de Python para principiantes"
+  description: "Python es un lenguaje de programación que está revolucionando el mercado y es utilizado por empresas como: Netflix, Spotify, Amazon y muchas más."
   image: "/images/bg/remote.jpeg"
-  keywords: "Aprende a programar, 4Geeks academy, aprende programacion, aprende ingenieria informatica"
+  keywords: "Aprende a programar en Python, 4Geeks academy, aprende programacion en Python"
   template: "landing_a" # <--- choose your landing template
-  redirects: ["/landing/guia-de-python"] # <--- URL redirections to avoid 404 errors
+  redirects: [] # <--- URL redirections to avoid 404 errors
 
-  visibility: "visible"
-  automation: soft #optional, this is the default value
-  tag: downloadable
+  visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
+  automation: downloadable # optional, lead as "null" if you don't know, it can be more than one (comma separated)
+  tag: request_more_info # mandatory: at lease one tag (comma separated)
   current_download: "python-guide"
 
 form:
@@ -25,7 +25,7 @@ form:
 navbar:
   logoUrl: "#" # relative(/apply), absolute(https://google.com) or id(#componentName)
   buttonText: "Descargar Guía"
-  buttonUrl: "#" # url accepts: relative(/apply), absolute(https://google.com) or id(#componentName)
+  buttonUrl: "#bottom" # url accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
 
 # jumbotron on the top (cannot be commented out)
 header_data:
@@ -40,7 +40,7 @@ features:
 
   #                                         up   left down  right
   styles: '{ "fontSize": "15px", "margin": "10px 0px 10px 0px" }'
-  text: "Aprenderás a programar en pocos días con un lenguaje de programación que está revolucionando el mercado siendo usado por empresas como: Netflix, Spotify, Amazon y muchos más."
+  text: "Introdúcete en el mundo de Python en pocos días, aprende un lenguaje de programación que está revolucionando el mercado y que es utilizado por empresas como: Netflix, Spotify, Amazon y muchos más."
   # bullets: ""
 
 follow_bar:
@@ -84,7 +84,7 @@ components:
     # video: "B01-eTfgqqc"
     heading:
       text:
-        "La guía que te ayudará a ser un experto en Phyton"
+        "La guía que te ayudará a dar tus primeros pasos en Python"
         #           xl      lg      md      sm      xs
       font_size: ["35px", "35px", "35px", "35px", "35px"]
     content:
@@ -123,7 +123,7 @@ components:
       - Tabla Hash
 
     content:
-      text: "El Zen del Phyton, variables, conditionals, loops, functions, decorators, generators, virtual environment, package manager."
+      text: "El Zen del Python, variables, conditionals, loops, functions, decorators, generators, virtual environment, package manager."
       font_size: ["16px"]
 
   # - name: first_syllabus_form

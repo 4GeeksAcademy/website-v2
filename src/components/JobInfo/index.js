@@ -15,10 +15,10 @@ const JobInfo = () => {
           edges {
             node {
               banner_heading
-              open
               cities
               meta_info{
                 slug
+                open
               }
             }
           }
@@ -31,7 +31,7 @@ const JobInfo = () => {
     <GridContainer columns="2" columns_tablet="3" gridGap="10px" margin_tablet="0 0 70px 0">
       {jobs
         ?
-        jobs.filter(c => c.node.open).map((item, index) => {
+        jobs.map((item, index) => {
           return (
             <Div
               key={index}
@@ -54,16 +54,15 @@ const JobInfo = () => {
                 <Span animated color={Colors.yellow}>_</Span>
               </H3>
               <Div
-                display="none"
-                display_tablet="block"
+                display="flex"
+                flexWrap={"wrap"}
               >
                 {
                   item.node.cities.map((city, index) => {
                     return (
-                      <Paragraph key={index} textAlign="left" fontSize="15px" lineHeight="22px" color={Colors.darkGray}>
+                      <Paragraph key={index} width="auto" padding={"3px"} margin={"3px"} background={Colors.verylightGray} textAlign="left" fontSize="15px" lineHeight="22px" color={Colors.darkGray}>
                         {city}
                       </Paragraph >
-
                     )
                   })
                 }

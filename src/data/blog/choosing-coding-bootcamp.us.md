@@ -9,7 +9,7 @@ image: "https://4GeeksAcademy.com/wp-content/uploads/2018/07/Picture-Post-1.png"
 image_alt: ""
 cluster: "coding-bootcamps"
 status: "published"
-featured: "true"
+featured: true
 
 ---
 

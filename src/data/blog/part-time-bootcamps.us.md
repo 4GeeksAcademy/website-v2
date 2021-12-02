@@ -9,7 +9,7 @@ image: "https://4GeeksAcademy.com/wp-content/uploads/2018/10/Part-time-coding-bo
 image_alt: ""
 cluster: "coding-bootcamps"
 status: "published"
-featured: "false"
+featured: false
 
 ---
 

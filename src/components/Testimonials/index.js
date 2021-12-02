@@ -16,7 +16,7 @@ const Testimonials = (props) => {
     let testimonialsFiltered = testimonialsArray.testimonials.filter(item => item.hidden !== true && item.include_in_marquee === true)
     return (
 
-        <Fragment github="/new_components/testimonials">
+        <Fragment github="/components/testimonials">
             <GridContainer id={props.id} fluid background={ props.background || "linear-gradient(#f5f5f5, white)"} height="425px" margin={props.margin} margin_tablet={props.margin_tablet} padding="30px 17px 60px 17px" padding_tablet="48px 0 36px 0">
                 <H2>{testimonialsArray.heading}</H2>
                 <Link to={testimonialsArray.button_link}><Paragraph margin="25px 0 36px 0" color={Colors.blue}>{testimonialsArray.button_text}</Paragraph></Link>

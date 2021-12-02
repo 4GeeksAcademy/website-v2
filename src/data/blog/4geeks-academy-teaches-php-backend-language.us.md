@@ -9,7 +9,7 @@ image: "https://4GeeksAcademy.com/wp-content/uploads/2016/01/language.jpeg"
 image_alt: ""
 cluster: "full-stack-developer"
 status: "published"
-featured: "false"
+featured: false
 
 ---
 

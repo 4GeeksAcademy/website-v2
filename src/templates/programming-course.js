@@ -18,12 +18,12 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 const Program = ({data, pageContext, yml}) => {
   const {session} = React.useContext(SessionContext);
-  const courseDetails = data.allCourseYaml.edges[0].node;
+  const pageDetails = data.allPageYaml.edges[0].node;
   const [open, setOpen] = React.useState(false);
   const hiring = data.allPartnerYaml.edges[0].node;
 
   const course_type = "full_stack"
-  const program_type = yml.meta_info.slug.includes("full-time") ? "full_time" : "part_time"
+  const program_type = "part_time"
 
   const [toggleIndex, setToggleIndex] = useState();
 
@@ -95,7 +95,7 @@ const Program = ({data, pageContext, yml}) => {
       </ScrollSpy>
     </Div>
 
-    <ProgramDetails id="about_the_program" withoutAnimation background={Colors.white} details={courseDetails.details} lang={pageContext.lang} course={program_type} />
+    <ProgramDetails id="about_the_program" withoutAnimation background={Colors.white} details={pageDetails.details} lang={pageContext.lang} course={program_type} />
 
     <GridContainerWithImage
       id="what_will_you_learn"
@@ -382,7 +382,7 @@ const Program = ({data, pageContext, yml}) => {
       }}
       id="upcoming_dates"
       lang={pageContext.lang}
-      message={courseDetails.upcoming.no_dates_message}
+      message={pageDetails.upcoming.no_dates_message}
     />
     <GridContainer padding_tablet="0" margin_tablet="0 0 62px 0">
       <Div height="1px" background="#EBEBEB"></Div>
@@ -445,7 +445,7 @@ export const query = graphql`
         }
       }
     }
-    allCourseYaml(filter: { fields: { file_name: { eq: $file_name }, lang: { eq: $lang }}}) {
+    allPageYaml(filter: { fields: { file_name: { eq: $file_name }, lang: { eq: $lang }}}) {
       edges{
         node{
           seo_title
@@ -543,7 +543,6 @@ export const query = graphql`
             image
             keywords
             slug
-            bc_slug
           }
           geek_data {
             heading
@@ -557,8 +556,6 @@ export const query = graphql`
               list{
                 label
                 content
-                link
-                link_text
               }
             }
             heading
@@ -625,13 +622,6 @@ export const query = graphql`
           alumni{
             heading
             sub_heading
-          }
-          sidebar{
-            membership
-            program
-            geeks_vs_other
-            pricing
-            alumni
           }
         }
       }
