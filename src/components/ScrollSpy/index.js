@@ -9,8 +9,9 @@ const ScrollSpy = ({
   children,
 }) => {
   let currentChild = 0;
-  const useDocument = typeof document !== "undefined" && document
-  const scrollSpyNavContainer = useDocument.querySelector('.scroll-spy-container');
+  // let scrollSpyNavContainer;
+
+  const scrollSpyNavContainer = typeof document !== "undefined" && document.querySelector('.scroll-spy-container');
 
   const handleAutoNavScroll = () => {
     if(scrollSpyNavContainer !== null) {
@@ -50,7 +51,7 @@ const ScrollSpy = ({
     };
 
     const onScrollHandler = throttle(() => {
-      const scrollElement = useDocument.scrollingElement || useDocument.documentElement;
+      const scrollElement = document.scrollingElement || document.documentElement;
 
       const center = {
         x: scrollElement.scrollLeft + window.innerWidth / 2,
@@ -99,7 +100,7 @@ const ScrollSpy = ({
         }
         return null
       })
-      const targetElement = href === '#' ? useDocument.body : useDocument.querySelector(href);
+      const targetElement = href === '#' ? document.body : document.querySelector(href);
 
       if (targetElement) {
         targetElements.push(targetElement);
