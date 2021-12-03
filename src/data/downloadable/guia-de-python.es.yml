@@ -2,7 +2,7 @@ meta_info:
   slug: guia-de-python # <--- URL 4geeksacademy.com/us/landing/example
   # This will show on social media when shared
   title: "Guía rápida de Python para principiantes"
-  description: "Python es un lenguaje de programación que está revolucionando el mercado y es utilizado por empresas como: Netflix, Spotify, Amazon y muchas más."
+  description: "Python es un lenguaje de programación que está revolucionando el mercado y es utilizado por empresas como: Google, Netflix, Spotify, Amazon y muchas más."
   image: "/images/bg/remote.jpeg"
   keywords: "Aprende a programar en Python, 4Geeks academy, aprende programacion en Python"
   template: "landing_a" # <--- choose your landing template
