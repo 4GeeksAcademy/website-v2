@@ -486,6 +486,11 @@ a.faq-link:hover {
 	z-index: -1;
 }
 
-a.active p {
+button.active p {
     color: #0097CD;
+}
+
+.scroll-spy-container button,
+.container-sidebar-content button {
+    cursor: pointer;
 }

@@ -5,6 +5,7 @@ import CallToAction from '../components/CallToAction'
 import Layout from '../global/Layout'
 import "../assets/css/single-post.css"
 import rehypeReact from "rehype-react"
+import ScrollSpy from "../components/ScrollSpy"
 
 //FROM components
 import {GridContainer, Div, Header} from '../components/Sections'
@@ -86,29 +87,33 @@ export default function Template (props) {
           filteredH2.length >= 1 &&
           <Div gridColumn_tablet="4 ​/ span 1" margin="54px 0 0 0" display="none" display_md="flex" style={{position: "relative"}}>
             <Div className="container-sidebar-content" padding="25px 0" flexDirection="column" justifyContent="space-around" gap="16px" flexDirection="column" position="sticky" style={{boxShadow: "0px 2px 5px rgba(0, 0, 0, 0.1)", top: "85px"}} borderRadius="3px" border={`1px solid #e5e5e5`} width="250px" height="fit-content">
+            <ScrollSpy offsetTop={60} autoScrollOffsetTop={-50}>
               {
                 filteredH2.map((heading, i) => {
                   const {id, children} = heading.props
                   return (
-                    <Paragraph
-                      className={`sidebar-content ${selected === i && 'selected-border' || ''}`}
-                      letterSpacing="0.05em"
-                      key={id}
-                      fontSize="14px"
-                      textAlign="center"
-                      textAlign_tablet="left"
+                    <button
+                      onClick={() => setSelected(i)}
+                      className={selected === i && 'selected'} 
+                      ref={React.createRef()}
+                      href={`#${id}`}
+                      // to={`#${id}` || "#"}
                     >
-                      <Link
-                        onClick={() => setSelected(i)}
-                        className={selected === i && 'selected'} 
-                        to={`#${id}` || "#"}
+                      <Paragraph
+                        className={`sidebar-content ${selected === i && 'selected-border' || ''}`}
+                        letterSpacing="0.05em"
+                        key={id}
+                        fontSize="14px"
+                        textAlign="center"
+                        textAlign_tablet="left"
                       >
-                        {children[1].props?.children?.toString().toUpperCase() || children[1].toString().toUpperCase()}
-                      </Link >
-                    </Paragraph>
+                          {children[1].props?.children?.toString().toUpperCase() || children[1].toString().toUpperCase()}
+                      </Paragraph>
+                    </button >
                   )}
                 )
               }
+              </ScrollSpy>
               <Link style={{color: Colors.white, margin: '0 30px'}} to={lang === "us" ? '/us/apply' : '/es/aplica'}>
                 <Button
                   width="100%"
