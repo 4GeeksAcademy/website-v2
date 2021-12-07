@@ -75,14 +75,19 @@ details:
       list:
         - label: "Duración"
           content:  "9 semanas"
+          icon: "calendar"
         - label: "Clases"
           content: "De Lunes a Viernes"
+          icon: "book"
         - label: "Certificados"
           content: "Nuestros certificados son  reconocidos por múltiples instuticiones."
           link_text: "Ver ejemplo"
           link: "https://certificate.breatheco.de/4ae7a46bba78dc19b823e124fea120c17b45e044"
+          icon: "certificate"
         - label: "Requisitos"
           content: "Tan solo necesitas un ordenador y una conexión a internet"
+          icon: "contract-checked"
+          
   heading: DETALLES DEL PROGRAMA FULL-TIME
   weeks: 9
   sub_heading: "Proyectos de la vida real y exactamente lo que buscan las empresas"

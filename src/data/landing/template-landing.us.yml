@@ -33,9 +33,11 @@ form:
 
 # jumbotron on the top (cannot be commented out)
 header_data:
-  tagline: Aprende a programar
-  sub_heading: in only 16 weeks (part-time)
+  background: "#FFF1D1"
+  tagline: Become a web developer in as 16 weeks through work on real project and mentorship by ezperienced professionals
+  sub_heading: "86% of our graduates have already started their future-proof, tech careers with on overage entry salary of $50.000"
   image: "../../../static/images/4geeks-main.jpg"
+  # badge: "../../../static/images/badges/switchup.png" #Tmage on the right side of the form
   image_filter: brightness(0.4) #0 is dark, 1 is bright
 
 features:
@@ -64,9 +66,44 @@ follow_bar:
     text: "Llama "
     number: "+1 (786) 416-6640" # you can set your own phone number, or leave it false to use the utm_location number
 
+short_badges:
+  - name: "Premios Excelencia Educativa"
+    url: ""
+    image: "../../../static/images/badges/exelencia-educativa-es.png"
+    alt: "Mejor centro de Coding Bootcamp"
+  - name: "Newsweek"
+    url: ""
+    image: "../../../static/images/badges/newsweek-es.png"
+    alt: "Top Coding Bootcamps Newsweek"
+  - name: "Switchup"
+    url: ""
+    image: "../../../static/images/badges/reviews.png"
+    alt: "Best cooding bootcamp Switchup 2021"
+
+
 #
 # ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇ 
 #
+
+rating_reviews:
+  position: 0
+  rating_list:
+    - alt: "Career Karma"
+      image: "../../../static/images/badges/career-karma.png"
+      rating: 4.86
+      url: ""
+    - alt: "Switchup"
+      image: "../../../static/images/badges/switchup-img.png"
+      rating: 4.86
+      url: ""
+    - alt: "Coruse Report"
+      image: "../../../static/images/badges/course-report.png"
+      rating: 4.86
+      url: ""
+    - alt: "Google"
+      image: "../../../static/images/badges/google.png"
+      rating: 4.86
+      url: ""
 
 in_the_news:
   position: 1
@@ -85,11 +122,13 @@ geeks_vs_others:
   position: 3
   heading: "¿Qué hace a 4Geeks Academy exitoso?"
   paragraph: ""
+  sub_heading: "lorem ipsum dot simet"
   total_rows: 5
 
 program_details:
   position: 4
   heading: "Lo que aprenderás"
+  background: "#FFFFFF"
   sub_heading: "Las tecnologias más buscadas en el mercado laboral"
 
 alumni_projects:
@@ -127,6 +166,7 @@ components:
   - name: more_testimonials
     position: 9
     layout: two_column_left 
+    background: "#FFFFFF"
     image: 
       style: "{}"
       src: "https://storage.googleapis.com/4geeks-academy-website/landing-pictures/testimonials.webp"
