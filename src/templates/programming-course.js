@@ -387,23 +387,25 @@ const Program = ({data, pageContext, yml}) => {
     <GridContainer padding_tablet="0" margin_tablet="0 0 62px 0">
       <Div height="1px" background="#EBEBEB"></Div>
     </GridContainer>
-    <PricesAndPayment
-      id="prices_and_payment"
-      background={`linear-gradient(to bottom,
-        ${Colors.white} 0%,
-        ${Colors.white} 50%,
-        ${Colors.lightYellow} 50%,
-        ${Colors.lightYellow} 100%
-      )`}
-      type={pageContext.slug}
-      lang={pageContext.lang}
-      session={session}
-      locations={data.allLocationYaml.edges}
-      programType={program_type}
-      courseType={course_type}
-      title={yml.prices.heading}
-      paragraph={yml.prices.sub_heading}
-    />
+    <Div id="prices_and_payment" height="auto">
+      <PricesAndPayment
+        // id="prices_and_payment"
+        background={`linear-gradient(to bottom,
+          ${Colors.white} 0%,
+          ${Colors.white} 50%,
+          ${Colors.lightYellow} 50%,
+          ${Colors.lightYellow} 100%
+        )`}
+        type={pageContext.slug}
+        lang={pageContext.lang}
+        session={session}
+        locations={data.allLocationYaml.edges}
+        programType={program_type}
+        courseType={course_type}
+        title={yml.prices.heading}
+        paragraph={yml.prices.sub_heading}
+      />
+    </Div>
     <Testimonials id="testimonials" lang={data.allTestimonialsYaml.edges} background={Colors.white}/>
   </>
   )
