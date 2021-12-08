@@ -75,7 +75,7 @@ export default ({lang, playerHeight, title, text, text_link, paragraph, backgrou
           return (
             <Div
               display="flex"
-              flexDirection="column"
+              flexDirection="row"
               flexDirection_tablet="column"
               justifyContent="start"
               // justifySelf={`center`}
@@ -96,6 +96,7 @@ export default ({lang, playerHeight, title, text, text_link, paragraph, backgrou
               >
                 <ReactPlayer
                   With_Modal={true}
+                  imageWidth="74px"
                   className="react-player-with4geeks"
                   thumb={i.image}
                   id={i.video}
@@ -107,7 +108,7 @@ export default ({lang, playerHeight, title, text, text_link, paragraph, backgrou
               </Div>
               <Div
                 marginTop="20px"
-                padding="0 25px 19px 25px"
+                padding="20px 25px"
                 display={`flex`}
                 height="100%"
                 flexDirection="column">
