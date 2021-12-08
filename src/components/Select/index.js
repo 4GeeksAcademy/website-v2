@@ -31,7 +31,7 @@ const SmartSelect = (props) => {
     const [status, setStatus] = useState({toggle: false, hovered: false})
     const _Selector = (_p) => <Div
         // margin_tablet="0 28px 0 0"
-        padding="7px"
+        padding={props.padding || "7px"}
         zIndex="9"
         alignItems="center"
         width="314px"
@@ -53,6 +53,7 @@ const SmartSelect = (props) => {
         <ChooseWrap
             centered={props.centered}
             margin={props.margin}
+            margin_tablet={props.margin_tablet || "0"}
             onMouseLeave={() => {
                 setStatus({...status, hovered: false});
                 setTimeout(() => {

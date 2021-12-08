@@ -164,6 +164,8 @@ const Calendar = (props) => {
               // margin="0 10px 0 0"
               top="40px"
               left="20px"
+              padding="4px 10px"
+              margin="0 0 22px 0"
               width="300px"
               maxWidth="100%"
               shadow="0px 0px 6px 2px rgba(0, 0, 0, 0.2)"
