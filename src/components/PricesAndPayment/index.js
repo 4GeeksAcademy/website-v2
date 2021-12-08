@@ -117,7 +117,7 @@ const PricesAndPayments = (props) => {
 
   const apply_button_text = session && session.location ? session.location.button.apply_button_text : "Apply";
   return (
-    <Div id="prices_and_payment" background={props.background} github="/location" flexDirection="column" padding="50px 0" padding_tablet="70px 0">
+    <Div background={props.background} github="/location" flexDirection="column" padding="50px 0" padding_tablet="70px 0">
       <GridContainer margin_tablet="0 0 25px 0">
         <Div
           display="flex"
