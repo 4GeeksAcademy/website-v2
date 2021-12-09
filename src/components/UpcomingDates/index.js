@@ -142,12 +142,13 @@ const UpcomingDates = ({id, style, lang, location, message}) => {
     return (
         <GridContainer id={id} style={style} margin_tablet="0 0 48px 0">
             <Div flexDirection="column">
-                <Div padding="0 0 30px 0" style={{borderBottom: "1px solid black"}} justifyContent_md="between" flexDirection="column" flexDirection_tablet="row" alignItems_tablet="center">
+                <Div padding="0 0 30px 0" gap="15px" style={{borderBottom: "1px solid black"}} justifyContent_md="between" flexDirection="column" flexDirection_tablet="row" alignItems_tablet="center">
                     <H3 textAlign="left" width="188px">Next Dates</H3>
                     {!location &&
                         <Select
                             // margin="0 10px 0 0"
                             top="40px"
+                            padding="4px 10px"
                             left="20px"
                             width="300px"
                             maxWidth="100%"
@@ -245,7 +246,7 @@ const UpcomingDates = ({id, style, lang, location, message}) => {
                     )
                 })
                     :
-                    <Div flexDirection="column" justifyContent="center" alignItems="center" padding_tablet="90px 0">
+                    <Div padding="70px 0" flexDirection="column" justifyContent="center" alignItems="center" padding_tablet="90px 0">
                         <Icon icon="agenda" />
                         {message && <Paragraph margin="25px 0 0 0">{message}</Paragraph>}
                     </Div>

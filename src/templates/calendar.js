@@ -163,6 +163,7 @@ const Calendar = (props) => {
             <Select
               // margin="0 10px 0 0"
               top="40px"
+              padding="4px 10px"
               left="20px"
               width="300px"
               maxWidth="100%"
