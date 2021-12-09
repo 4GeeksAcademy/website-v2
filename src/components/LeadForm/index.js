@@ -7,6 +7,7 @@ import PropTypes from 'prop-types';
 import {SessionContext} from '../../session';
 import {Button, Colors} from "../Styling";
 import {Break, Devices} from "../Responsive";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import {useStaticQuery, graphql, navigate} from 'gatsby';
 import {SelectRaw} from '../Select'
 
@@ -70,7 +71,7 @@ const clean = (fields, data) => {
     return cleanedData;
 }
 
-const LeadForm = ({marginButton, marginButton_tablet, background, margin, margin_tablet, justifyContentButton, buttonWidth_tablet, titleTextAlign, buttonBorderRadius, d_sm, fields, thankyou, heading, redirect, formHandler, data, handleClose, style, sendLabel, lang, motivation, layout, inputBgColor, landingTemplate, selectProgram, textPadding, textPadding_tablet, titleMargin, titleMargin_tablet}) => {
+const LeadForm = ({marginButton, marginButton_tablet, background, margin, margin_tablet, justifyContentButton, buttonWidth_tablet, titleTextAlign, buttonBorderRadius, d_sm, fields, thankyou, heading, redirect, formHandler, data, handleClose, style, sendLabel, lang, motivation, layout, inputBgColor, landingTemplate, selectProgram, textPadding, textPadding_tablet, titleMargin, titleMargin_tablet, headerImage}) => {
     const _query = useStaticQuery(graphql`
     query newLeadFormQuery {
         allPageYaml(filter: { fields: { file_name: { regex: "/privacy-policy/" }}}) {
@@ -173,13 +174,31 @@ const LeadForm = ({marginButton, marginButton_tablet, background, margin, margin
                 })
         }
     }}>
+        {
+            headerImage && (
+            <Div width="0px" display="none" display_tablet="none" display_md="flex" display_lg="flex" flexDirection_tablet="column" padding="0 0 25px 0">
+                <GatsbyImage 
+                loading="eager"
+                style={{
+                    width: "160px",
+                    height: "130px",
+                    position: "absolute",
+                    margin: "-44px 0 0 26%",
+                }}
+                imgStyle={{ objectFit: 'contain' }}
+                image={getImage(headerImage)}
+                alt="4Geeks Logo" 
+                />
+            </Div>
+            )
+        }
         {/* {heading && <H4 type="h4" fontSize="25px" width="auto" textAlign="center" textAlign_tablet={titleTextAlign || "left"} margin={landingTemplate ? "15px 0px 30px 0" : titleMargin || "20px 30px 15px 30px"} margin_tablet={titleMargin_tablet || "20px 40px 15px 40px"}>{heading}</H4>} */}
         {formStatus.status === "thank-you" ?
             <Paragraph margin="20px 0px 0px 0px">{thankyou || formStatus.msg}</Paragraph>
             :
             <>
                 <GridContainer display="block" containerColumns_tablet={landingTemplate && "0fr repeat(12, 1fr) 0fr"} containerGridGap={landingTemplate && "0"} className={"leadform-" + layout} size="12" paddingLeft="0" paddingRight="0">
-                {heading && <H4 type="h4" fontSize="25px" width="auto" textAlign="center" textAlign_tablet={titleTextAlign || "left"} margin={landingTemplate ? "25px 0px 0px 0" : titleMargin || "20px 0px 5px 0px"} margin_tablet={titleMargin_tablet || "20px 0px 5px 0px"}>{heading}</H4>}
+                {heading && <H4 type="h4" fontSize="25px" padding={headerImage && "0 10% 0 0"} fontWeight="700" width="auto" textAlign="center" textAlign_tablet={titleTextAlign || "left"} margin={landingTemplate ? "25px 0px 0px 0" : titleMargin || "20px 0px 5px 0px"} margin_tablet={titleMargin_tablet || "20px 0px 5px 0px"}>{heading}</H4>}
                 {motivation && <Paragraph textAlign="left" padding={textPadding || "0px 0px 10px 0px"}padding_tablet={textPadding_tablet || "0px 0px 10px 0px"}>{motivation}</Paragraph>}
                     {fields.filter(f => formData[f].type !== 'hidden').map((f, i) => {
                         const _field = formData[f]

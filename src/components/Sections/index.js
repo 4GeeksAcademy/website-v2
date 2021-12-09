@@ -262,6 +262,7 @@ export const Div = styled.div`
         grid-row: ${props => props.gridRow_md};
     }
     @media  ${Devices.lg}{
+        display: ${props => props.display_lg};
         justifyContent: ${props => justifyContentOptions[props.justifyContent_lg]};
         padding: ${props => props.padding_lg};
     }
