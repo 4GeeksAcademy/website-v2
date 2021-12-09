@@ -46,6 +46,7 @@ export default function Template (props) {
     
   return (
 
+    // TODO: Create responsive styles
     <>
       <Layout type="post" seo={data.markdownRemark.frontmatter} context={pageContext}>
 

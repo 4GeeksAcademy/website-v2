@@ -20,6 +20,8 @@ import About4Geeks from '../About4Geeks';
 import IconsBanner from '../IconsBanner';
 import Icon from '../Icon';
 import ChooseYourProgram from '../ChooseYourProgram';
+import StarRating from "../StarRating";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 
 const Title = ({title, paragraph}) => {
@@ -108,8 +110,9 @@ const Side = ({video, image, heading, sub_heading, content, button, bullets}) =>
         content.text.split('\n').map((p, i) =>
             <Paragraph 
                 key={i}
+                textAlign="left"
                 textAlign_tablet="left"
-                padding={heading ? "0" : "20px"}
+                padding={heading ? "0" : "15px"}
                 margin="26px 0" 
                 fontSize={c_xl || "16px"} fontSize_sm={c_sm} fonSize_md={c_md} fontSize_sm={c_sm} fontSize_xs={c_xs}
                 fontHeight="30px">
@@ -264,6 +267,49 @@ export const landingSections = {
             />
         )
     },
+
+    rating_reviews: ({session, data, pageContext, yml, course, index}) =>{
+        let dataYml = data.allLandingYaml.edges[0] || data.allDownloadableYaml.edges[0]
+        let ratingReviews = dataYml.node.rating_reviews
+
+        return(
+            <Div padding="60px 0 60px 0" display="flex" flexDirection="column" borderBottom="3px solid #F5F5F5">
+                <H2 type="h2" fontSize="22px" fontWeight="700" padding="10px 0 60px 0">
+                    {ratingReviews.heading}
+                </H2>
+                <Div display="flex" flexDirection="column" flexDirection_tablet="row " justifyContent="center" gap="45px" gap_tablet="10%">
+
+                    {
+                    ratingReviews.rating_list.map((item, i) => {
+                        return (
+                        <Div display="flex" alignItems="center" flexDirection="column">
+                        
+                            <GatsbyImage
+                                key={i}
+                                style={{height: "50px", minWidth: "135px", width: "135px"}}
+                                imgStyle={{objectFit: "contain"}}
+                                loading="eager"
+                                // draggable={false}
+                                // fadeIn={false}
+                                alt={item.alt}
+                                image={getImage(item.image.childImageSharp.gatsbyImageData)}
+                                // fluid={l.image.childImageSharp.fluid}
+                            />
+                                <StarRating
+                                    key={i}
+                                    rating={item.rating}
+                                />
+                                <Paragraph padding="6px 0" fontSize="15px" letterSpacing="0.05em" fontWeight="bold">
+                                    {`${item.rating} ${pageContext.lang === "us" ? "On Reviews" : "En reseñas"}`}
+                                </Paragraph>
+                        </Div>
+                        )
+                    })
+                    }
+                </Div>
+            </Div>
+        )
+    },
         // <GridContainer key={index} p_sm="0" p_xs="0"><Badges lang={pageContext.lang} /></GridContainer>,
 
     syllabus: ({session, data, pageContext, yml, course, location, index}) => {
@@ -321,9 +367,10 @@ export const landingSections = {
     }
     ,
     geeks_vs_others: ({session, pageContext, yml, course, index}) => {
+        console.log("YML", yml)
         return (
             <React.Fragment id="geeks_vs_others" key={index}>
-                <Title title={yml.heading} paragraph={yml.sub_heading} />
+                <Title title={yml.heading} paragraph={yml.paragraph} />
                 <GeeksVsOthers key={index} lang={pageContext.lang} limit={yml.total_rows} title={yml.heading} paragraph={yml.sub_heading} />,
             </React.Fragment>
 
@@ -378,8 +425,8 @@ export const landingSections = {
             lang={pageContext.lang}
             playerHeight="auto" />
     </Div>,
-    alumni_projects: ({session, data, pageContext, yml, index}) => <Div id="alumni_projects" key={index} flexDirection="column" margin="0" margin_tablet="0 11% 100px 11%" padding="0 0 60px 0" padding_tablet="0">
-        <AlumniProjects lang={data.allAlumniProjectsYaml.edges} hasTitle showThumbs="false" limit={2} />
+    alumni_projects: ({session, data, pageContext, yml, index}) => <Div id="alumni_projects" key={index} flexDirection="column" margin="0" margin_tablet="8% 0 100px 0" padding="60px 0" padding_tablet="0">
+        <AlumniProjects lang={data.allAlumniProjectsYaml.edges} hasTitle showThumbs="false" limit={5} />
     </Div>,
     who_is_hiring: ({session, data, pageContext, yml, location, index}) => {
         let dataYml = data.allLandingYaml.edges.length !== 0 && data.allLandingYaml.edges[0].node?.who_is_hiring !== null ? data.allLandingYaml.edges : data.allDownloadableYaml.edges
@@ -419,13 +466,14 @@ export const landingSections = {
             proportions={yml.proportions}
         />
     </Div>,
-    two_column_right: ({session, data, pageContext, yml, index}) => <Div id="two_column_right" key={index} background={Colors[yml.background] || yml.background} flexDirection="column" padding="0 0 50px 0" padding_tablet="50px 6%" margin="0">
+    two_column_right: ({session, data, pageContext, yml, index}) => {
+    return(<Div id="two_column_right" key={index} background={Colors[yml.background] || yml.background} flexDirection="column" padding="0 0 50px 0" padding_tablet="6%" margin="0">
         <TwoColumn
             left={{heading: yml.heading, sub_heading: yml.sub_heading, bullets: yml.bullets, content: yml.content, button: yml.button}}
             right={{image: yml.image, video: yml.video,}}
             proportions={yml.proportions}
         />
-    </Div>,
+    </Div>)},
     single_column: ({session, data, pageContext, yml, index}) => <Div id="single_column" key={index} flexDirection="column" padding="0px 0" padding_tablet="50px 14%">
         <SingleColumn
             column={{

@@ -62,12 +62,16 @@ details:
       list:
         - label: "Duration"
           content:  "16 Weeks"
+          icon: "calendar"
         - label: "Classes"
           content: "Online, 3 Classes weekly"
+          icon: "book"
         - label: "Certificate"
           content: ""
+          icon: "certificate"
         - label: "Requisites"
           content: "1-year experience as Software Developer"
+          icon: "contract-checked"
   heading: Software Engineering Syllabus
   weeks: 16
   sub_heading: "Master exactly what is required to be a real Software Engineer."
