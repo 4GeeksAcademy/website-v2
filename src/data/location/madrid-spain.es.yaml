@@ -25,6 +25,13 @@ button:
   cohort_more_details_text: "DETALLES"
   apply_button_link: "/aplica"
 
+custom_bar:
+  active: false
+  message: Lorem ipsum dot simet mosd ei
+  button: 
+    label: "Read More"
+    path: "#" #string (can be inline path using #, relative path or absolute path)
+
 info_box:
   heading: "Encuéntranos en Madrid"
   address: "Edison 3, 28006, Madrid."
