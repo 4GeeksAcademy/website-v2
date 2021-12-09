@@ -56,12 +56,16 @@ details:
       list:
         - label: "Duration"
           content:  "15 Weeks"
+          icon: "calendar"
         - label: "Classes"
           content: "3 classes weekly"
+          icon: "book"
         - label: "Certificate"
           content: ""
+          icon: "certificate"
         - label: "Requisites"
           content: "Have a background in math, data, statistics or programming"
+          icon: "contract-checked"
   heading: Machine Learning Engineering Syllabus
   weeks: 15
   weeks_label: "weeks"

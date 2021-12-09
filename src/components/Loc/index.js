@@ -68,7 +68,7 @@ const Loc = ({locations, title, paragraph, lang}) => {
             <Paragraph>{paragraph}</Paragraph>
           </Div>
         </GridContainer>}
-      <GridContainer columns="1" columns_sm="2" columns_tablet="3" gridGap="0" columnGap="15px" margin="0 0 60px 0" margin_tablet="0 0 70px 0">
+      <GridContainer columns="1" columns_sm="2" columns_tablet="3" gridGap="0" columnGap="15px" margin="0 0 50px 0" margin_tablet="0 0 70px 0">
         {loc !== null &&
           loc.map((item, i) => {
             const next = nextDate(item);
