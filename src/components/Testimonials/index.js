@@ -33,11 +33,11 @@ const Testimonials = (props) => {
                     reversed={false}
                     containerStyle={{height: "215px"}}
                 >
-                    <Div className="testimonial-slider" display="flex" height="auto" background="linear-gradient(#f5f5f5, white)" padding="0 0 40px 0">
+                    <Div className="testimonial-slider" display="flex" height="auto" padding="0 0 40px 0">
                         {testimonialsFiltered.map((item, i) => {
 
                             return (
-                                <Div display="flex" background="#ffffff" minWidth="245px" width="320px" height="150px" margin="0 12px 0 0" padding="20px 24px 30px 20px" border="1px solid #EBEBEB" alignItems="flex-start">
+                                <Div display="flex" background="#ffffff" minWidth="245px" boxShadow="0px 2px 5px rgba(0, 0, 0, 0.1)" width="320px" height="150px" margin="0 12px 0 0" padding="20px 24px 30px 20px" border="1px solid #EBEBEB" alignItems="flex-start">
                                     <GatsbyImage
                                         // fluid={item.student_thumb.childImageSharp.fluid}
                                         image={getImage(item.student_thumb.childImageSharp.gatsbyImageData)}
