@@ -53,7 +53,7 @@ const AlumniProjects = ({lang, showThumbs, limit, playerHeight, title, paragraph
     }
     return (
         <Div flexDirection="column">
-            <GridContainer margin="73px 0 60px 0">
+            <GridContainer margin="6rem 0">
                 <Div
                     display="flex"
                     flexDirection="column"
