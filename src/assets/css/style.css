@@ -239,11 +239,12 @@ a {
 .react-player{
     height: 82px;
 }
+
+.mobile{
+    display: none;
+}
+
 @media (min-width: 320px) {
-    .mobile{
-        display: none;
-    }
-    
 }
 @media (min-width: 576px) {
     .trend{
