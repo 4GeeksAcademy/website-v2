@@ -235,15 +235,6 @@ components:
         image:
           style: '{ "height": "80px", "backgroundSize": "contain", "margin": "20px 0 20px 0" }'
           src: "/images/isa/isa6.png"
-  # - name: first_syllabus_form
-  #   position: 4
-  #   layout: syllabus
-  #   button:
-  #     text: "Instant Download"
-  #   heading:
-  #     text: "Download the course syllabus"
-  #     #xl      lg     md     sm    xs
-  #     font_size: ["40px", "40px", "40px", "40px", "40px"]
   - name: more_testimonials
     position: 8
     layout: two_column_left 
