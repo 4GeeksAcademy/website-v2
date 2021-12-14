@@ -33,23 +33,25 @@ const imageSvg = props => <svg style={props.style} width="587" height="514" view
 </svg>
 
 
-const CityH1 = ({yml}) => {
-  const {session} = React.useContext(SessionContext);
-  const [city, setCity] = useState("")
+// const CityH1 = ({yml}) => {
+//   const {session} = React.useContext(SessionContext);
+//   const [city, setCity] = useState("")
   
-  // const city = session && session.location ? "" : "Miami";
+//   // const city = session && session.location ? "" : "Miami";
 
-  React.useEffect(() => {
-    console.log("HASH: ", window.location)
+//   React.useEffect(() => {
+//     console.log("HASH: ", window.location)
     
-    if (session.language === "es" && window.location.hash === "" && !RegExp('\/es\/inicio').test(window.location.href)) navigate("/es/inicio")
+//     if (session.language === "es" && window.location.hash === "" && !RegExp('\/es\/inicio').test(window.location.href)) navigate("/es/inicio")
 
-    // It returns the 4Geeks Academy campus closest to the user's country
-    setCity(session.location ? session.location.city : "");
-  }, [session])
+//     // It returns the 4Geeks Academy campus closest to the user's country
+//     setCity(session.location ? session.location.city : "");
+//   }, [session])
 
-  return <H1 type="h1" textAlign_md="left" textShadow="none" fontSize="13px" color="#606060" >{city}{" "}{yml.header_data.tagline}</H1>
-}
+//   return <H1 type="h1" textAlign_md="left" textShadow="none" fontSize="13px" color="#606060" >{city}{" "}{yml.header_data.tagline}</H1>
+// }
+
+
 // Unused functions
 // const CityWrapper = ({yml}) => {
 //   const {session} = React.useContext(SessionContext);
@@ -88,9 +90,22 @@ const SVGBubblesRight = () =>
 
 
 const Home = (props) => {
-
   const {data, pageContext, yml} = props;
   const hiring = data.allPartnerYaml.edges[0].node;
+  const {session} = React.useContext(SessionContext);
+  const [city, setCity] = useState("")
+  
+  // const city = session && session.location ? "" : "Miami";
+
+  React.useEffect(() => {
+    console.log("HASH: ", window.location)
+    
+    if (session.language === "es" && window.location.hash === "" && !RegExp('\/es\/inicio').test(window.location.href)) navigate("/es/inicio")
+
+    // It returns the 4Geeks Academy campus closest to the user's country
+    setCity(session.location ? session.location.city : "");
+  }, [session])
+
   const chooseProgramRef = useRef(null)
 
   const goToChooseProgram = (e) => {
@@ -120,7 +135,8 @@ const Home = (props) => {
       <GridContainerWithImage padding="65px 5px 0 5px" padding_tablet="0" columns_tablet="2" margin="72px 0 72px 0" margin_tablet="72px 0 108px 0" >
         <Div flexDirection="column" justifyContent_tablet="evenly" alignItems="center" alignItems_tablet="start">
           <Div flexDirection="column" alignItems="center" alignItems_tablet="start">
-            <CityH1 yml={yml} />
+            {/* <CityH1 yml={yml} /> */}
+            <H1 type="h1" textAlign_md="left" textShadow="none" fontSize="13px" color="#606060" >{city}{" "}{yml.header_data.tagline}</H1>
             <H2 type="h2" textAlign_tablet="left" padding="0" padding_md="0px 34% 0 0" fontSize="40px" fontSize_tablet="50px" margin="20px 0 0 0" lineHeight="60px">{`${yml.header_data.title}`}</H2>
             <Paragraph textAlign_tablet="left" margin="26px 0 35px 0" padding="0" padding_tablet="0 34% 0 0">{yml.header_data.sub_heading} </Paragraph>
             <ChooseProgram
@@ -158,7 +174,12 @@ const Home = (props) => {
 
       <About4Geeks lang={data.allAbout4GeeksYaml.edges} />
       <Credentials lang={data.allCredentialsYaml.edges} shadow={false} />
-      <With4Geeks lang={pageContext.lang} playerHeight="auto" title={true} />
+      <With4Geeks
+        lang={pageContext.lang}
+        sessionLocation={session && session.location && session.location.breathecode_location_slug}
+        playerHeight="auto"
+        title={true}
+      />
       <ChooseYourProgram chooseProgramRef={chooseProgramRef} lang={pageContext.lang} programs={data.allChooseYourProgramYaml.edges[0].node.programs} title={yml.choose_program.title} paragraph={yml.choose_program.paragraph} />
       <OurPartners images={hiring.partners.images} marquee title={hiring.partners.tagline} paragraph={hiring.partners.sub_heading} />
 

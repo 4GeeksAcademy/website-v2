@@ -157,6 +157,16 @@ prices:
           price_info: "una sola quota"
         button:
           button_text: "APLICA"
+      scholarship:
+        header:
+          heading_one: Scholorships
+          heading_two: ""
+          sub_heading: ""
+        content:
+          price: "$4,499.00"
+          price_info: "una sola cuota, con el mejor precio del mercado"
+        button:
+          button_text: "APLICAR AHORA"
     ## *****************
     ## PART-TIME SECTION
     ## *****************
@@ -240,6 +250,17 @@ prices:
           price_info: "una sola quota"
         button:
           button_text: "Aplicar Ahora"
+
+      scholarship:
+        header:
+          heading_one: Scholorships
+          heading_two: ""
+          sub_heading: ""
+        content:
+          price: "$4,499.00"
+          price_info: "una sola cuota, con el mejor precio del mercado"
+        button:
+          button_text: "APLICAR AHORA"
 
   software_engineering:
     # slug: "software-engineering"

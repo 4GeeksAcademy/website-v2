@@ -337,6 +337,20 @@ export const query = graphql`
                       heading_two
                     }
                   }
+                  scholarship {
+                    header {
+                      sub_heading
+                      heading_one
+                      heading_two
+                    }
+                    content {
+                      price
+                      price_info
+                    }
+                    button {
+                      button_text
+                    }
+                  }
                 }
                 part_time {
                   slug

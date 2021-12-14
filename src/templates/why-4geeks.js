@@ -7,6 +7,7 @@ import With4Geeks from '../components/With4Geeks'
 import Credentials from '../components/Credentials'
 import GeeksVsOthers from '../components/GeeksVsOthers'
 import BaseRender from './_baseLayout'
+import {SessionContext} from '../session.js'
 import Staff from '../components/Staff';
 
 const SVGImage = () =>
@@ -32,6 +33,7 @@ const RedPin = ({style}) =>
 
 const Why4Geeks = (props) => {
     const {data, pageContext, yml} = props;
+    const {session} = React.useContext(SessionContext);
     return (
         <>
             <GridContainerWithImage background="rgba(199, 243, 253, 0.5)" padding="24px 0 " padding_tablet="36px 40px 54px 0" columns_tablet="14" margin="70px 0 24px 0">
@@ -99,7 +101,11 @@ const Why4Geeks = (props) => {
                     })}
                 </GridContainer>
             </GridContainer>
-            <With4Geeks lang={pageContext.lang} playerHeight="125px" />
+            <With4Geeks
+                lang={pageContext.lang}
+                playerHeight="125px"
+                sessionLocation={session && session.location && session.location.breathecode_location_slug}
+            />
             <Credentials lang={data.allCredentialsYaml.edges} shadow={false} />
             <GeeksVsOthers lang={pageContext.lang} link={true} limit={4} title={yml.geeksvsothers.title} paragraph={yml.geeksvsothers.paragraph} />
 

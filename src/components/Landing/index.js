@@ -421,6 +421,7 @@ export const landingSections = {
         />
         <With4Geeks
             text={yml.footer?.text}
+            sessionLocation={session && session.location && session.location.breathecode_location_slug}
             text_link={yml.footer?.text_link}
             lang={pageContext.lang}
             playerHeight="auto" />
