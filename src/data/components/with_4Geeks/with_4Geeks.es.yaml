@@ -12,7 +12,7 @@ with:
     image: ../../../../static/images/staff/hernan.png
     alt: ""
     video: "https://www.youtube.com/watch?v=ln3bQsV1BaQ" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
-    location: ["all", "downtown-miami", "online", "madrid-spain", "costa-rica", "caracas-venezuela"]
+    location: ["all", "downtown-miami"]
     # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     icon: address
     footer:
@@ -27,7 +27,7 @@ with:
     image: ../../../../static/images/staff/luisa.png
     alt: ""
     video: "https://www.youtube.com/watch?v=MBXqEnhodx0" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
-    location: ["all", "downtown-miami"]
+    location: ["all"]
     # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     icon: address
     footer:
@@ -42,7 +42,7 @@ with:
     image: ../../../../static/images/staff/joao.png
     alt: ""
     video: "https://www.youtube.com/watch?v=PWkgaAT8pHg" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
-    location: ["all", "madrid-spain"]
+    location: ["downtown-miami"]
     # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     icon: address
     footer:
