@@ -19,6 +19,7 @@ const ChooseYourProgram = ({lang, programs, title, paragraph, chooseProgramRef, 
               title
               sub_title
               description
+              description_mobile
               link
               icon
             }
@@ -34,6 +35,7 @@ const ChooseYourProgram = ({lang, programs, title, paragraph, chooseProgramRef, 
   `)
     let info = data.allChooseYourProgramYaml.edges.find(({node}) => node.fields.lang === lang);
     if (info) info = info.node;
+    console.log("info", info)
     return (
         <Grid
             ref={chooseProgramRef}
@@ -68,7 +70,7 @@ const ChooseYourProgram = ({lang, programs, title, paragraph, chooseProgramRef, 
                             borderLeft_tablet="1px solid black"
                             borderTop_tablet="6px solid black"
                             flexDirection_tablet="column"
-                            flexDirection="column"
+                            flexDirection="row"
                             alignItems="center"
                             justifyContent="space-between"
                             alignItems_tablet="flex-end"
@@ -79,6 +81,8 @@ const ChooseYourProgram = ({lang, programs, title, paragraph, chooseProgramRef, 
                                 placeSelf_tablet={landingTemplate && "flex-start"}
                                 display="flex"
                                 justifyContent="end"
+                                width="90px"
+                                width_tablet="120px"
                             >
                                 <Icon className="choose-your-program-icon" icon={program.icon} height="40px" width="52px" />
                             </Div>
@@ -115,10 +119,12 @@ const ChooseYourProgram = ({lang, programs, title, paragraph, chooseProgramRef, 
                                         {m}
                                     </H3></Link>
                                 )}
-                                {program.description.split("\n").map((m, i) =>
+                                {program.description && program.description.split("\n").map((m, i) =>
                                     <Paragraph
                                         key={i}
                                         letterSpacing="0.05em"
+                                        display_tablet="block"
+                                        display="none"
                                         lineHeight="22px"
                                         textAlign="left"
                                         fontSize="15px"
@@ -128,6 +134,23 @@ const ChooseYourProgram = ({lang, programs, title, paragraph, chooseProgramRef, 
                                         margin={i == 0 && "10px 0px 25px 0"}
                                         dangerouslySetInnerHTML={{__html: m}}
                                     />
+                                )}
+
+                                {program.description_mobile && (
+                                    <Paragraph
+                                        letterSpacing="0.05em"
+                                        display="block"
+                                        display_tablet="none"
+                                        lineHeight="22px"
+                                        textAlign="left"
+                                        fontSize="15px"
+                                        lineHeight="19px"
+                                        fontWeight="400"
+                                        opacity="1"
+                                        margin="10px 0px 25px 0"
+                                    >
+                                        {program.description_mobile}
+                                    </Paragraph>
                                 )}
                             </Div>
                             <Link to={program.link}>

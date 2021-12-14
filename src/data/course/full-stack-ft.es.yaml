@@ -217,7 +217,9 @@ typical:
 ## ALUMNI SECTION
 alumni:
   heading: "Conoce a los graduados y sus proyectos"
-  sub_heading: "Tú también podrás hacer proyectos como estos cuando seas programador"
+  sub_heading: "La última fase del curso debes construir un proyecto final que tu mismo escogeras, 
+    puede ser un emprendimiento o trabajarás directamente en un proyecto de la vida real en 
+    colaboración con nuestros hiring partners."
 
 ## SIDEBAR
 sidebar:
