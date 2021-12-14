@@ -68,20 +68,20 @@ const Financial = (props) => {
       >
       </Header>
       <FinancialFilter
-          button_text={yml.syllabus_button_text}
-          program={yml.label.program.title}
-          programClosedLabel={yml.label.program.closedLabel}
-          modality={yml.label.modality.title}
-          modalityClosedLabel={yml.label.modality.closedLabel}
-          campus={yml.label.campus.title}
-          campusClosedLabel={yml.label.campus.closedLabel}
-          // openedLabel={yml.prices.opened_label}
-          session={session}
-          // closedLabel={yml.prices.closed_label}
-          type={pageContext.slug}
-          lang={pageContext.lang}
-          locations={data.allLocationYaml.edges}
-        />
+        button_text={yml.syllabus_button_text}
+        program={yml.label.program.title}
+        programClosedLabel={yml.label.program.closedLabel}
+        modality={yml.label.modality.title}
+        modalityClosedLabel={yml.label.modality.closedLabel}
+        campus={yml.label.campus.title}
+        campusClosedLabel={yml.label.campus.closedLabel}
+        // openedLabel={yml.prices.opened_label}
+        session={session}
+        // closedLabel={yml.prices.closed_label}
+        type={pageContext.slug}
+        lang={pageContext.lang}
+        locations={data.allLocationYaml.edges}
+      />
     </>
   )
 };
@@ -281,6 +281,20 @@ export const query = graphql`
                       heading_two
                     }
                   }
+                  scholarship {
+                    header {
+                      sub_heading
+                      heading_one
+                      heading_two
+                    }
+                    content {
+                      price
+                      price_info
+                    }
+                    button {
+                      button_text
+                    }
+                  }
                 }
                 part_time {
                   slug
@@ -329,6 +343,20 @@ export const query = graphql`
                       heading_one
                       sub_heading
                       heading_two
+                    }
+                  }
+                  scholarship {
+                    header {
+                      sub_heading
+                      heading_one
+                      heading_two
+                    }
+                    content {
+                      price
+                      price_info
+                    }
+                    button {
+                      button_text
                     }
                   }
                 }
