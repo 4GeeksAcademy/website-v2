@@ -33,7 +33,7 @@ const TechsWeTeach = ({lang, data}) => {
           <StyledBackgroundSection
             // className={`image`}
             height={`289px`}
-            width={`500px`}
+            width={`100%`}
             image={content.image.childImageSharp.gatsbyImageData}
             bgSize={`contain`}
             alt="Tech Logo"
