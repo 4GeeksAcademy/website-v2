@@ -124,6 +124,7 @@ const Program = ({data, pageContext, yml}) => {
       <Div height="1px" background="#EBEBEB"></Div>
     </GridContainer>
     <PricesAndPayment
+      background={`linear-gradient(to bottom, ${Colors.white} 50%, ${Colors.lightYellow2} 50%)`}
       type={pageContext.slug}
       lang={pageContext.lang}
       session={session}

@@ -20,6 +20,13 @@ html, body
     scroll-padding: 10%; */
 }
 
+a.customBar-link{
+    color: #00a0da;
+    border-radius: 4px;
+    padding: 0 4px;
+    background: #fffaf0;
+}
+
 /* adds three dots to text when reaches the end of line */
 
 .img-border::before{
@@ -239,11 +246,12 @@ a {
 .react-player{
     height: 82px;
 }
+
+.mobile{
+    display: none;
+}
+
 @media (min-width: 320px) {
-    .mobile{
-        display: none;
-    }
-    
 }
 @media (min-width: 576px) {
     .trend{

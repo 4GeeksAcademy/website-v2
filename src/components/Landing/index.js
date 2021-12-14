@@ -380,9 +380,9 @@ export const landingSections = {
     program_details: ({session, pageContext, yml, data, index}) => {
         const course = data.allCourseYaml.edges.length > 0 ? data.allCourseYaml.edges[0].node : {};
         return (
-            <React.Fragment id="program_details" key={index}>
+            <React.Fragment key={index}>
                 {/* <Title title={yml.heading} paragraph={yml.sub_heading} /> */}
-                <ProgramDetails heading={yml.heading} sub_heading={yml.sub_heading} background={yml?.background} details={course?.details} lang={pageContext.lang} />
+                <ProgramDetails id="program_details" heading={yml.heading} sub_heading={yml.sub_heading} background={yml?.background} details={course?.details} lang={pageContext.lang} />
                 <ProgramDetailsMobile details={course && course.details} />
             </React.Fragment>
         )

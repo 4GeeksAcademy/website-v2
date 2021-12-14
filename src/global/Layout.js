@@ -7,6 +7,7 @@ import {NavbarMobile} from '../components/NavbarMobile';
 import {StaticQuery, graphql} from 'gatsby';
 import Footer from '../components/Footer';
 import CookieBot from "react-cookiebot";
+import CustomBar from '../components/CustomBar';
 
 import GlobalStyle from './GlobalStyle';
 import SEO from './SEO';
@@ -35,6 +36,14 @@ const Layout = ({children, seo, context}) => {
               }
               button {
                 apply_button_text
+              }
+              custom_bar {
+                active
+                message
+                button {
+                  label
+                  path
+                }
               }
             }
           }

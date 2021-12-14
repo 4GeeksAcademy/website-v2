@@ -52,19 +52,17 @@ const AlumniProjects = ({lang, showThumbs, limit, playerHeight, title, paragraph
         prevArrow: <CustomPrevArrow />
     }
     return (
-        <>
-            {title || paragraph && (
-                <GridContainer margin="73px 0 60px 0">
-                    <Div
-                        display="flex"
-                        flexDirection="column"
-                        alignItems="center"
-                    >
-                        <H2 margin="0 0 15px 0" fontWeight="900">{title}</H2>
-                        <Paragraph>{paragraph}</Paragraph>
-                    </Div>
-                </GridContainer>
-            )}
+        <Div flexDirection="column">
+            <GridContainer margin="6rem 0">
+                <Div
+                    display="flex"
+                    flexDirection="column"
+                    alignItems="center"
+                >
+                    <H2 margin="0 0 15px 0" fontWeight="900">{title}</H2>
+                    <Paragraph padding="0" padding_tablet="0 16%">{paragraph}</Paragraph>
+                </Div>
+            </GridContainer>
 
             <Slider {...settings}>
                 {projects?.map((item, index) => {
@@ -153,7 +151,7 @@ const AlumniProjects = ({lang, showThumbs, limit, playerHeight, title, paragraph
                 })
                 }
             </Slider>
-        </>
+        </Div>
     )
 };
 AlumniProjects.propTypes = {

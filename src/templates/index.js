@@ -545,6 +545,7 @@ export const query = graphql`
                 sub_title
                 title
                 description
+                description_mobile
                 icon
               }
             }
