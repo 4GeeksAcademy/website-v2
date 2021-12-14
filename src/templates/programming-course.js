@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import {Link} from "gatsby";
 import BaseRender from './_baseLayout'
-import {Header, Div, GridContainer, GridContainerWithImage} from '../components/Sections'
+import {Header, Div, Grid, GridContainer, GridContainerWithImage} from '../components/Sections'
 import {Title, H1, H2, H3, H4, H5, Span, Paragraph} from '../components/Heading'
 import {Button, Colors, StyledBackgroundSection} from '../components/Styling'
 import {SessionContext} from '../session'
@@ -329,18 +329,16 @@ const Program = ({data, pageContext, yml}) => {
           <GridContainer padding_tablet="0" containerColumns_tablet="1fr repeat(12, 1fr) 1fr" margin_tablet="3% 0 6% 0" margin="5% 0">
             <Div height="2px" background="#ACACAC" style={{opacity: "0.5"}}></Div>
           </GridContainer>
-          <Div
-            display="block"
-            // gap="30px"
-            columnCount_tablet="2"
-            columnCount="0"
-            style={{orphans: "1", widows: "1", columnGap: "1.25rem", boxSizing: "border-box"}}
+          <Grid
+            gap="25px"
+            gridTemplateColumns_tablet="repeat(2, 1fr)"
+            style={{columnGap: "2.25rem", boxSizing: "border-box"}}
             justifyContent="center"
             padding="0 6%"
           >
             {l.list.map(item => (
               <Div display="flex" flexDirection="row" style={{position: "relative"}}gap="12px" width="100%" width_tablet="100%" >
-                <Div height="100%">
+                <Div height="100%" padding="10px 0 0 0">
                   <Icon icon={item.icon} width="70px" height="54px" />
                 </Div>
                 <Div height="100%" display="flex" flexDirection="column">
@@ -369,7 +367,7 @@ const Program = ({data, pageContext, yml}) => {
                 </Div>
               </Div>
             ))}
-          </Div>
+          </Grid>
         </>
       ))}
     </GridContainer>
