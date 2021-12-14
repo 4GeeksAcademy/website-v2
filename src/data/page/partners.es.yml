@@ -8,25 +8,25 @@ meta_info:
   redirects: ["/aliados", "/es/aliados"]
 
 
-seo_title: "Cooding Bootcamp"
+seo_title: "Partnerships"
 header:
-  title: "COMPAÑÍAS QUE CONFIAN EN NOSOTROS Y CONTRATAN A NUESTROS ESTUDIANTES"
-  image: "../../../static/images/bg/program-bg.png"
-  image_alt: ""
-  paragraph: "Estoy impresionado con el nivel de comprensión que tienen los estudiantes de 4Geeks, mi contratación terminó convirtiéndose en líder de equipo - CodeNinjas."
+  title: "Queremos ser tu aliado!"
+  image: "../../../static/images/partner/partnership-image.png"
+  image_alt: "Partnership header"
+  paragraph: "En 4Geeks creemos en el poder de la colaboración y el impacto positivo que crea una comunidad activa. Buscamos constantemente más formas de atraer talento y organizaciones que puedan ayudarnos y unirse a nuestra visión de crear la comunidad más relevante para los programadores futuros y presentes."
   button: HAZTE HIRING PARTNER
 
 form:
-  title: "Contáctanos y encuentra al talento adecuado para tu empresa"
+  title: "Conviértete en Partner de 4Geeks"
   paragraph: "Contáctenos y lo conectaremos directamente con los candidatos adecuados que se gradúan de 4Geeks Academy todos los días.
   Nuestros graduados tienen éxito en sus propios negocios, startups y grandes empresas por igual.
+
   Nuestros programas preparan a los estudiantes para trabajar y prosperar en cualquier organización tecnológica y con visión de futuro."
-  
 footer_data:
   image: "../../../static/images/partner/partnership.png"
   alt: ""
 button_section:
-  button_text: "Se Parte de nuestros Aliados"
+  button_text: "UNETE A NUESTROS ALIADOS"
   button_link: ""
 # ## PARTNERS SECTION
 # partners:
