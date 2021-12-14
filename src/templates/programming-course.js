@@ -339,7 +339,7 @@ const Program = ({data, pageContext, yml}) => {
             padding="0 6%"
           >
             {l.list.map(item => (
-              <Div display="flex" flexDirection="row" style={{position: "relative"}}gap="12px" width="100%" width_tablet="100%" >
+              <Div key={item.title} display="flex" flexDirection="row" style={{position: "relative"}}gap="12px" width="100%" width_tablet="100%" >
                 <Div height="100%">
                   <Icon icon={item.icon} width="70px" height="54px" />
                 </Div>
