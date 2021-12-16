@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react'
+import React, {useEffect, useContext} from 'react'
 import {Paragraph} from '../components/Heading'
 import {RoundImage, Colors, Button, Link} from '../components/Styling'
 import CallToAction from '../components/CallToAction'
@@ -6,16 +6,21 @@ import Layout from '../global/Layout'
 import "../assets/css/single-post.css"
 import rehypeReact from "rehype-react"
 import ScrollSpy from "../components/ScrollSpy"
+import {SessionContext} from '../session'
 
 //FROM components
 import {GridContainer, Div, Header} from '../components/Sections'
 
 export default function Template (props) {
   const {data, pageContext} = props;
-  // const [selected, setSelected] = useState(null);
+  const {session} = useContext(SessionContext);
   const post = data.markdownRemark;
   const lang = pageContext.lang
+  let isCustombarActive;
 
+  if(session && session.location){
+    isCustombarActive = session.location.custom_bar.active
+  }
   const renderAst = new rehypeReact({
     createElement: React.createElement,
     components: { 
@@ -52,7 +57,7 @@ export default function Template (props) {
 
         <Header
           hideArrowKey
-          padding="90px 0 70px 0"
+          padding="90px 10px 70px 10px"
           padding_tablet="90px 0 70px 0"
           paddingParagraph="0px 14% 0px 0"   
           textAlign_tablet="left"        
@@ -73,50 +78,57 @@ export default function Template (props) {
           background={Colors.lightYellow}
         />
 
-        {/* Container */}
-        <GridContainer containerColumns_tablet={filteredH2.length >= 1 ? "0fr repeat(12, 1fr) 0fr" : "2fr repeat(12, 1fr) 2fr"} columns_tablet="1" gridColumn_tablet="4 / -4" columns="1" margin="0">  
-          <Div
-            display="flex"
-            display_tablet="none"
-            margin="0 0 0 -17px"
-            background={Colors.white}
-            style={{
-              borderBottom: "1px solid #EBEBEB",
-              overflowX: "auto",
-              zIndex: "999",
-              position:"sticky",
-              top: "0",
-            }}
-            padding="0 35px"
-            alignItems="center"
-            flexDirection="row"
-            gap="40px"
-            width="100%"
-            height="70px"
-            className="scroll-spy-container"
-          >
-            <ScrollSpy offsetTop={80} autoScrollOffsetTop={-70}>
-              {filteredH2.map((nav) => {
-                const {id, children} = nav.props
+        <Div
+          display="flex"
+          display_tablet="none"
+          margin="0 0 0 -17px"
+          background={Colors.white}
+          style={{
+            borderBottom: "1px solid #EBEBEB",
+            overflowX: "auto",
+            zIndex: "999",
+            position:"sticky",
+            top: `${isCustombarActive ? "120px": "0"}`,
+          }}
+          padding="0 35px"
+          alignItems="center"
+          flexDirection="row"
+          gap="40px"
+          width="100%"
+          height="70px"
+          className="scroll-spy-container"
+        >
+          <ScrollSpy offsetTop={200} autoScrollOffsetTop={-190}>
+            {filteredH2.map((nav) => {
+              const {id, children} = nav.props
 
-                return (
-                  <button 
-                    key={id}
-                    width="auto"
-                    padding="0 20px"
-                    href={`#${id}`}
-                    ref={React.createRef()}
-                  >
+              return (
+                <button 
+                  key={id}
+                  width="auto"
+                  padding="0 20px"
+                  href={`#${id}`}
+                  ref={React.createRef()}
+                >
 
-                    <Paragraph textTransform="uppercase" width="max-content">
-                      {children[1].props?.children?.toString().toUpperCase() || children[1].toString().toUpperCase()}
-                    </Paragraph>
-                  </button>
-                )}
+                  <Paragraph textTransform="uppercase" width="max-content">
+                    {children[1].props?.children?.toString().toUpperCase() || children[1].toString().toUpperCase()}
+                  </Paragraph>
+                </button>
               )}
-            </ScrollSpy>
-          </Div>
-          <Div flexDirection="column" margin="30px 0 0 0" background={Colors.white}>
+            )}
+          </ScrollSpy>
+        </Div>
+
+        {/* Container */}
+        <Div
+          padding="0 10px"
+          padding_tablet="0 8%"
+          padding_md="0 16%"
+          gap="6%"
+        >  
+
+          <Div size="12" size_tablet="8" padding="0 12px" flexDirection="column" margin="30px 0 0 0" background={Colors.white}>
             <Div 
                 className="single-post" 
                 flexDirection="Column" 
@@ -128,34 +140,31 @@ export default function Template (props) {
         {
           filteredH2.length >= 1 && (
           <>
-            <Div display="none" display_md="flex" gridColumn_tablet="4 ​/ span 1" margin="54px 0 0 0" style={{position: "relative"}}>
-              <Div className="container-sidebar-content" padding="25px 0" flexDirection="column" justifyContent="space-around" gap="16px" flexDirection="column" position="sticky" style={{boxShadow: "0px 2px 5px rgba(0, 0, 0, 0.1)", top: "85px"}} borderRadius="3px" border={`1px solid #e5e5e5`} width="250px" height="fit-content">
-              <ScrollSpy offsetTop={60} autoScrollOffsetTop={-50}>
-                {
-                  filteredH2.map((heading, i) => {
-                    const {id, children} = heading.props
-                    return (
-                      <button
-                        // onClick={() => setSelected(i)}
-                        // className={selected === i && 'selected'}
-                        ref={React.createRef()}
-                        href={`#${id}`}
-                        // to={`#${id}` || "#"}
-                      >
-                        <Paragraph
-                          className="sidebar-content"
-                          letterSpacing="0.05em"
-                          key={id}
-                          fontSize="14px"
-                          textAlign="center"
-                          textAlign_tablet="left"
+            <Div display="none" size_tablet="4" display_tablet="flex" margin="54px 0 0 0" style={{position: "relative"}}>
+              <Div style={{boxShadow: "0px 2px 5px rgba(0, 0, 0, 0.1)", top: `${isCustombarActive ? "150px" : "85px"}`}} className="container-sidebar-content" padding="25px 0" margin="0 0 35px 0" flexDirection="column" justifyContent="space-around" gap="16px" flexDirection="column" position="sticky" borderRadius="3px" border={`1px solid #e5e5e5`} width="250px" height="fit-content">
+                <ScrollSpy offsetTop={60} autoScrollOffsetTop={-50}>
+                  {
+                    filteredH2.map((heading, i) => {
+                      const {id, children} = heading.props
+                      return (
+                        <button
+                          ref={React.createRef()}
+                          href={`#${id}`}
                         >
-                            {children[1].props?.children?.toString().toUpperCase() || children[1].toString().toUpperCase()}
-                        </Paragraph>
-                      </button >
-                    )}
-                  )
-                }
+                          <Paragraph
+                            className="sidebar-content"
+                            letterSpacing="0.05em"
+                            key={id}
+                            fontSize="14px"
+                            textAlign="center"
+                            textAlign_tablet="left"
+                          >
+                              {children[1].props?.children?.toString().toUpperCase() || children[1].toString().toUpperCase()}
+                          </Paragraph>
+                        </button >
+                      )}
+                    )
+                  }
                 </ScrollSpy>
                 <Link style={{color: Colors.white, margin: '0 30px'}} to={lang === "us" ? '/us/apply' : '/es/aplica'}>
                   <Button
@@ -177,7 +186,7 @@ export default function Template (props) {
           </>
           )
         }
-        </GridContainer>
+        </Div>
 
       </Layout>
     </>

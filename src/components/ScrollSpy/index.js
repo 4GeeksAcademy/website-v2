@@ -23,7 +23,7 @@ const ScrollSpy = ({
   const handleAutoNavScroll = () => {
     if(scrollSpyNavContainer !== null) {
       scrollSpyNavContainer.scrollTo({
-        left: (scrollSpyNavContainer.children.item(currentChild).offsetLeft) - 20,
+        left: (scrollSpyNavContainer.children.item(currentChild).offsetLeft) - 25,
         behavior: 'smooth',
       })
     }
