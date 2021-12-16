@@ -123,8 +123,8 @@ export default function Template (props) {
         {/* Container */}
         <Div
           padding="0 10px"
-          padding_tablet="0 8%"
-          padding_md="0 16%"
+          padding_tablet="0 8% 0 4%"
+          padding_md="0 11%"
           gap="6%"
         >  
 
