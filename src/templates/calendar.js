@@ -74,7 +74,6 @@ const Calendar = (props) => {
   let content = data.allPageYaml.edges[0].node
   const [academy, setAcademy] = useState(null)
   const [filterType, setFilterType] = useState(pageContext.lang == "us" ? {label: "Upcoming Courses and Events", value: "cohorts"} : {label: "Próximos Cursos y Eventos", value: "cohorts"});
-  
 
   useEffect(() => {
     const getData = async () => {
@@ -121,7 +120,6 @@ const Calendar = (props) => {
     }
   }, [session]);
 
-  console.log("datas", datas)
   return (
     <>
       <Header

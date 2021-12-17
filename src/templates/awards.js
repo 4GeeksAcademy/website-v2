@@ -96,12 +96,14 @@ const Awards = ({data, pageContext, yml}) => {
             <GridContainer padding="17px" columns="1" rows="1" columns_tablet="12" gridGap_tablet="11px" gridGap="0">
                 <Div gridArea_tablet="1/1/1/13" flexDirection="column"  >
                     {Array.isArray(yml.awards_list) && yml.awards_list.map((m, i) => {
+                        console.log("m", m)
                         return (
                             <Div key={i} flexDirection="column" flexDirection_tablet="row" margin="0 0 75px 0" >
                                 <GatsbyImage
                                     style={{height: "85px", minWidth: "150px", margin: "0 24px"}}
                                     imgStyle={{objectFit: "contain"}}
                                     loading="eager"
+                                    alt={m.title}
                                     image={getImage(m.image.childImageSharp.gatsbyImageData)}
                                 />
                                 <Div flexDirection="column" width="100%">
