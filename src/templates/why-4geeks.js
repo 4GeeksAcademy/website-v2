@@ -12,13 +12,13 @@ import Staff from '../components/Staff';
 
 const SVGImage = () =>
     <svg width="550" height="335" viewBox="0 0 550 335" fill="none" xmlns="https:://www.w3.org/2000/svg">
-        <circle cx="222" cy="37" r="37" fill="#FFB718" fill-opacity="0.2" />
+        <circle cx="222" cy="37" r="37" fill="#FFB718" fillOpacity="0.2" />
         <circle cx="330" cy="5" r="5" fill="#CD0000" />
         <circle cx="43.5" cy="291.5" r="43.5" fill="#0097CD" />
         <circle cx="473.5" cy="67.5" r="8.5" transform="rotate(90 473.5 67.5)" fill="black" />
         <rect x="110" y="326" width="77" height="6" rx="3" fill="black" />
         <rect x="201" y="326" width="119" height="6" rx="3" fill="black" />
-        <circle cx="437.5" cy="219.5" r="112.5" fill="#FFB718" fill-opacity="0.2" />
+        <circle cx="437.5" cy="219.5" r="112.5" fill="#FFB718" fillOpacity="0.2" />
     </svg>
 
 const RedPin = ({style}) =>

@@ -18,19 +18,19 @@ const SVGImage = () =>
 <circle cx="58" cy="194" r="58" fill="#FFB718"/>
 <circle cx="228" cy="128" r="14" fill="#FFB718"/>
 <circle cx="177.5" cy="55.5" r="26.5" fill="#0097CD"/>
-<circle cx="316.5" cy="8.5" r="8.5" fill="#FFB718" fill-opacity="0.2"/>
-<circle cx="348.5" cy="63.5" r="8.5" fill="#FFB718" fill-opacity="0.2"/>
-<circle cx="426.5" cy="27.5" r="8.5" transform="rotate(90 426.5 27.5)" fill="#FFB718" fill-opacity="0.2"/>
+<circle cx="316.5" cy="8.5" r="8.5" fill="#FFB718" fillOpacity="0.2"/>
+<circle cx="348.5" cy="63.5" r="8.5" fill="#FFB718" fillOpacity="0.2"/>
+<circle cx="426.5" cy="27.5" r="8.5" transform="rotate(90 426.5 27.5)" fill="#FFB718" fillOpacity="0.2"/>
 <circle cx="316.5" cy="43.5" r="8.5" fill="black"/>
 <circle cx="348.5" cy="98.5" r="8.5" fill="black"/>
 <circle cx="500.5" cy="276.5" r="8.5" transform="rotate(90 500.5 276.5)" fill="black"/>
-<circle cx="316.5" cy="98.5" r="8.5" fill="#FFB718" fill-opacity="0.2"/>
-<circle cx="348.5" cy="141.5" r="8.5" fill="#FFB718" fill-opacity="0.2"/>
-<circle cx="348.5" cy="27.5" r="8.5" transform="rotate(90 348.5 27.5)" fill="#FFB718" fill-opacity="0.2"/>
-<circle cx="316.5" cy="141.5" r="8.5" fill="#FFB718" fill-opacity="0.2"/>
-<circle cx="348.5" cy="178.5" r="8.5" fill="#FFB718" fill-opacity="0.2"/>
+<circle cx="316.5" cy="98.5" r="8.5" fill="#FFB718" fillOpacity="0.2"/>
+<circle cx="348.5" cy="141.5" r="8.5" fill="#FFB718" fillOpacity="0.2"/>
+<circle cx="348.5" cy="27.5" r="8.5" transform="rotate(90 348.5 27.5)" fill="#FFB718" fillOpacity="0.2"/>
+<circle cx="316.5" cy="141.5" r="8.5" fill="#FFB718" fillOpacity="0.2"/>
+<circle cx="348.5" cy="178.5" r="8.5" fill="#FFB718" fillOpacity="0.2"/>
 <circle cx="316.5" cy="243.5" r="8.5" fill="#0097CD"/>
-<circle cx="348.5" cy="277.5" r="8.5" fill="#FFB718" fill-opacity="0.2"/>
+<circle cx="348.5" cy="277.5" r="8.5" fill="#FFB718" fillOpacity="0.2"/>
 <rect x="398" y="76" width="77" height="11" rx="5.5" transform="rotate(90 398 76)" fill="black"/>
 <rect x="278" y="209" width="77" height="11" rx="5.5" transform="rotate(90 278 209)" fill="black"/>
 <rect x="183" y="209" width="77" height="11" rx="5.5" transform="rotate(90 183 209)" fill="black"/>

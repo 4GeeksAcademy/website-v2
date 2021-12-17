@@ -207,7 +207,7 @@ const Program = ({data, pageContext, yml}) => {
       </Div>
       <Div display="none" display_tablet="block" style={{right: '0', position: "absolute"}}>
         <svg width="525" style={{zIndex: "99", right: "0", position: "absolute"}} height="762" viewBox="0 0 525 762" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="422.5" cy="619.5" r="142.5" fill="#FFB718" fill-opacity="0.2"/>
+          <circle cx="422.5" cy="619.5" r="142.5" fill="#FFB718" fillOpacity="0.2"/>
           <circle cx="41" cy="542" r="41" fill="#FFB718"/>
           <circle cx="414.5" cy="308.5" r="8.5" transform="rotate(-180 414.5 308.5)" fill="black"/>
           <circle cx="356.5" cy="26.5" r="26.5" fill="#0097CD"/>

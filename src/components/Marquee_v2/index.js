@@ -37,7 +37,7 @@ const Marquee_elements = styled.div`
   The modifiable properties for this component are :
     speed: number
     reversed: boolean
-    containerStyle: object css
+    containerstyle: object css
 
 */}
 
@@ -53,7 +53,7 @@ export default function Marquee_v2({
   return (
     <div
     {...props}
-      style={props.containerStyle}
+      style={props.containerstyle}
       className={cx(
         styles.marquee,
         {

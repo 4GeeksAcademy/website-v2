@@ -12,7 +12,7 @@ import {Div} from '../components/Sections'
 const SVGBubblesLeft = () => 
     <svg style={{top: "75px", left: "75px", position: "absolute"}} width="205" height="286" viewBox="0 0 205 286" fill="none" xmlns="https:://www.w3.org/2000/svg">
       <circle cx="191.5" cy="59.5" r="13.5" fill="#CD0000"/>
-      <circle cx="8.5" cy="8.5" r="8.5" fill="#FFB718" fill-opacity="0.2"/>
+      <circle cx="8.5" cy="8.5" r="8.5" fill="#FFB718" fillOpacity="0.2"/>
       <circle cx="40.5" cy="63.5" r="8.5" fill="white"/>
       <circle cx="8.5" cy="43.5" r="8.5" fill="black"/>
       <circle cx="40.5" cy="98.5" r="8.5" fill="black"/>

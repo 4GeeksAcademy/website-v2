@@ -61,7 +61,6 @@ export default ({lang, playerHeight, title, text, text_link, paragraph, backgrou
   if(sessionLocation) locationFiltered = info.with.filter(n => n.location === "all" || n.location.includes("all") || !sessionLocation || n.location.includes(sessionLocation));
   else locationFiltered = info.with;
 
-  console.log("locationFiltered", locationFiltered)
   return (
     <Fragment github="/components/with_4geeks">
       {title && <GridContainer margin="0 0 40px 0"

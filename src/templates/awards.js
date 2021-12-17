@@ -13,7 +13,7 @@ const SVGBubblesLeft = () =>
     <svg style={{top: "85px", left: "0", position: "absolute"}} width="321" height="433" viewBox="0 0 321 433" fill="none" xmlns="http://www.w3.org/2000/svg">
         <circle cx="176.5" cy="185.5" r="13.5" fill="#CD0000"/>
         <circle cx="16" cy="375" r="58" fill="#FFB718"/>
-        <circle cx="43.5" cy="40.5" r="8.5" transform="rotate(-90 43.5 40.5)" fill="#FFB718" fill-opacity="0.2"/>
+        <circle cx="43.5" cy="40.5" r="8.5" transform="rotate(-90 43.5 40.5)" fill="#FFB718" fillOpacity="0.2"/>
         <circle cx="98.5" cy="8.5" r="8.5" transform="rotate(-90 98.5 8.5)" fill="white"/>
         <circle cx="78.5" cy="40.5" r="8.5" transform="rotate(-90 78.5 40.5)" fill="black"/>
         <circle cx="133.5" cy="8.5" r="8.5" transform="rotate(-90 133.5 8.5)" fill="black"/>
@@ -27,7 +27,7 @@ const SVGBubblesLeft = () =>
 
 const SVGBubblesRight = () =>
     <svg style={{right: "0px", position: "absolute", top: "100px"}} width="315" height="432" viewBox="0 0 315 432" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="274" cy="313" r="119" fill="#FFB718" fill-opacity="0.2"/>
+        <circle cx="274" cy="313" r="119" fill="#FFB718" fillOpacity="0.2"/>
         <circle cx="14" cy="14" r="14" fill="#FFB718"/>
         <circle cx="227.5" cy="45.5" r="26.5" fill="#0097CD"/>
         <circle cx="269.5" cy="131.5" r="8.5" transform="rotate(90 269.5 131.5)" fill="#F5F5F5"/>

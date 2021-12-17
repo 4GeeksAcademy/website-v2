@@ -47,7 +47,7 @@ const TechsWeTeach = ({lang, data}) => {
         <Marquee_v2
           speed={1.5}
           reverse={false}
-          containerStyle={{height: "160px"}}
+          containerstyle={{height: "160px"}}
         >
           <Div className="badge-slider" justifyContent="center" padding="44px 0" style={{borderTop: `1px solid ${Colors.lightGray}`}}>
           {/* <> */}
