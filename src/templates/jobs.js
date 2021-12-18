@@ -1,19 +1,18 @@
-import React, {useState} from 'react';
-import Layout from '../global/Layout';
-import styled, {css, keyframes} from 'styled-components';
-import {Div, Header, Wrapper, WrapperImage, Divider} from '../components/Sections'
-import {H2, H3, Title, Separator, Paragraph} from '../components/Heading'
-import {Colors, Button, StyledBackgroundSection} from '../components/Styling'
+import React from 'react';
+import {Header} from '../components/Sections'
 import BaseRender from './_baseLayout'
 import JobInfo from '../components/JobInfo'
-import Link from 'gatsby-link'
+import {isCustomBarActive} from '../actions';
+import {SessionContext} from '../session'
 
 const Jobs = ({data, pageContext, yml}) => {
+  const {session} = React.useContext(SessionContext);
   return (
     <>
       <Header
         seo_title={yml.seo_title}
         title={yml.header.title}
+        margin={isCustomBarActive(session) ? "120px 0 0 0" : "70px 0 0 0"}
         paragraph={yml.header.paragraph}
         padding_tablet="72px 0 40px 0"
       />

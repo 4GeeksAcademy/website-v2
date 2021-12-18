@@ -20,6 +20,13 @@ export const defaultSession = {
     }
 };
 
+export const isCustomBarActive = (session) => {
+    if(session && session.location){
+        return session.location.custom_bar.active
+    }
+    return session.location
+}
+
 export const locByLanguage = (locations, languageToFilter) => {
     if(languageToFilter == "en") languageToFilter = "us";
     

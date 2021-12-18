@@ -46,7 +46,7 @@ const TechsWeTeach = ({lang, data}) => {
       <GridContainer fluid background={Colors.lightYellow} margin_tablet="0 0 68px 0" margin="0 0 35px 0">
         <Marquee_v2
           speed={1.5}
-          reverse={false}
+          reversed={false}
           containerstyle={{height: "160px"}}
         >
           <Div className="badge-slider" justifyContent="center" padding="44px 0" style={{borderTop: `1px solid ${Colors.lightGray}`}}>
@@ -58,7 +58,7 @@ const TechsWeTeach = ({lang, data}) => {
                   draggable={false}
                   style={{height: "40px", minWidth: "40px", margin: "0 25px"}}
                   imgStyle={{objectFit: "contain"}}
-                  alt={l.name}
+                  alt={l.alt}
                   // fluid={l.image != null && l.image.childImageSharp.fluid}
                   image={getImage(l.image != null && l.image.childImageSharp.gatsbyImageData)}
                 />
@@ -75,5 +75,3 @@ const TechsWeTeach = ({lang, data}) => {
 };
 
 export default TechsWeTeach;
-
-

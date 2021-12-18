@@ -98,7 +98,7 @@ const GeeksInfo = ({lang}) => {
           </Div>
           {Array.isArray(content.list) && content.list.map((m, i) => {
             return (
-              <>
+              <React.Fragment key={`${i}-${m.title}`}>
                 <H4 textAlign="left" margin="0" fontWeight="900" textTransform="uppercase">{m.title}</H4>
                 {m.sub_title.split("\n").map((m, i) =>
                   <Paragraph
@@ -111,7 +111,7 @@ const GeeksInfo = ({lang}) => {
                     {m}
                   </Paragraph>
                 )}
-              </>
+              </React.Fragment>
             )
           })}
           <Paragraph

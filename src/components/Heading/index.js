@@ -7,9 +7,9 @@ import {Devices} from '../Responsive'
 import {Blink} from '../Animations'
 import {redirectTo} from "@reach/router"
 
-const Heading = ({type, children, className}) => {
+const Heading = ({type, children, className, id}) => {
   const Comp = type;
-  return <Comp className={className}>{children}</Comp>;
+  return <Comp id={id} className={className}>{children}</Comp>;
 }
 Heading.propTypes = {
   type: PropTypes.string.isRequired,

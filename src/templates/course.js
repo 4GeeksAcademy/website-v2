@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import {Link} from "gatsby";
+import {isCustomBarActive} from '../actions';
 import BaseRender from './_baseLayout'
 import {Container, Header, Column, Wrapper, WrapperImage, Divider, Sidebar, Div, GridContainer} from '../components/Sections'
 import {Title, H1, H2, H3, H4, H5, Span, Paragraph} from '../components/Heading'
@@ -54,6 +55,7 @@ const Program = ({data, pageContext, yml}) => {
   return (<>
 
     <Header
+      margin={isCustomBarActive(session) ? "120px 0 0 0" : ""}
       seo_title={yml.seo_title}
       title={yml.header.title}
       paragraph={yml.header.paragraph}

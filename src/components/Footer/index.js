@@ -92,12 +92,12 @@ const Footer = ({ yml }) => {
                                     key={i}
                                     cursor="pointer"
                                     to={ln.link}
-                                    textAlign="left"
+                                    // textAlign="left"
                                     margin="0 0 5px 0"
                                     fontSize="13px"
-                                    lineHeight="22px"
+                                    // lineHeight="22px"
                                     fontWeight="400"
-                                    textTransform="uppercase"
+                                    // textTransform="uppercase"
                                     color={Colors.black}
                                 >
                                     <Icon icon={ln.icon} style={{margin: "0 15px 0 0"}} color={Colors.black} fill={Colors.black} height="32px" width="32px" />
@@ -196,12 +196,14 @@ const Footer = ({ yml }) => {
                                             key={i}
                                             cursor="pointer"
                                             to={ln.link}
-                                            textAlign="left"
                                             margin="0 0 5px 0"
                                             fontSize="13px"
-                                            lineHeight="22px"
                                             fontWeight="400"
-                                            textTransform="uppercase"
+                                            style={{
+                                                textTransform: "uppercase",
+                                                lineHeight: "22px",
+                                                textAlign: "left"
+                                            }}
                                             color={Colors.black}
                                         >
                                             {ln.name}

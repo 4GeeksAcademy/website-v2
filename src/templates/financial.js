@@ -1,7 +1,8 @@
 import React from 'react';
 import { Colors} from '../components/Styling';
 import BaseRender from './_baseLayout';
-import {SessionContext} from '../session.js'
+import {SessionContext} from '../session'
+import {isCustomBarActive} from '../actions';
 
 // components
 import FinancialFilter from '../components/FinancialFilter';
@@ -58,15 +59,15 @@ const Financial = (props) => {
           <SVGBubblesRight />
       </Div>
       <Header
-          background={Colors.lightBlue2}
-          fontSize="40px"
-          seo_title={yml.seo_title}
-          title={yml.header.title}
-          paragraph={yml.header.paragraph}
-          padding_tablet="72px 0 15px 0"
-          padding="72px 0 15px 0"  
-      >
-      </Header>
+        margin={isCustomBarActive(session) ? "120px 0 0 0" : ""}
+        background={Colors.lightBlue2}
+        fontSize="40px"
+        seo_title={yml.seo_title}
+        title={yml.header.title}
+        paragraph={yml.header.paragraph}
+        padding_tablet="72px 0 15px 0"
+        padding="72px 0 15px 0"  
+      />
       <FinancialFilter
         button_text={yml.syllabus_button_text}
         program={yml.label.program.title}

@@ -24,9 +24,9 @@ import StarRating from "../StarRating";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 
-const Title = ({title, paragraph}) => {
+const Title = ({id, title, paragraph}) => {
     return (
-        <GridContainer margin="40px 0 0 0">
+        <GridContainer id={id} margin="40px 0 0 0">
             <H2 type="h2">{title}</H2>
             <Paragraph margin="26px 0" >{paragraph}</Paragraph>
         </GridContainer>
@@ -93,7 +93,7 @@ const Side = ({video, image, heading, sub_heading, content, button, bullets}) =>
         <Div display="grid" gridAutoFlow="dense" gridTemplateColumns="repeat(auto-fill, minmax(40%, 1fr))" gridAutoRows="4.6rem" gridGap="0">
             {bullets.map((p, index) => {
                 return (
-                    <Div gridColumn_tablet={index >= 5 ? "2/2" : "1/2"} borderBottom="1px solid rgba(164, 164, 164, 0.4)" height="74px" alignItems="center" padding="0 5px 0 20px" padding_tablet="0 5px 0 10px">
+                    <Div key={index} gridColumn_tablet={index >= 5 ? "2/2" : "1/2"} borderBottom="1px solid rgba(164, 164, 164, 0.4)" height="74px" alignItems="center" padding="0 5px 0 20px" padding_tablet="0 5px 0 10px">
                         <Div flexDirection="column" alignSelf="center" padding="0 8px 0 0" >
                             <Icon icon="check" width="18px" color={Colors.yellow} fill={Colors.yellow} />
                         </Div>
@@ -109,7 +109,7 @@ const Side = ({video, image, heading, sub_heading, content, button, bullets}) =>
         {content && 
         content.text.split('\n').map((p, i) =>
             <Paragraph 
-                key={i}
+                key={`${i}-${p}`}
                 textAlign="left"
                 textAlign_tablet="left"
                 padding={heading ? "0" : "15px"}
@@ -171,8 +171,8 @@ TwoColumn.defaultProps = {
 
 export const Columns = ({columns, proportions}) => {
     return <Div flexDirection="row" m_sm="0px 0px 100px 0">
-        {columns.map(c =>
-            <Div flexDirection="column" size={c.size[0]} size_sm={c.size[2]} size_xs={c.size[3]} textAlign={c.align}>
+        {columns.map((c, index) =>
+            <Div key={index} flexDirection="column" size={c.size[0]} size_sm={c.size[2]} size_xs={c.size[3]} textAlign={c.align}>
                 <Img
                     src={c.image.src}
                     onClick={() => {
@@ -227,10 +227,12 @@ export const landingSections = {
     about4Geeks: ({session, data, pageContext, yml, index}) => {
         let dataYml = data.allLandingYaml.edges.length !== 0 && data.allLandingYaml.edges[0].node.about4Geeks !== null ? data.allLandingYaml.edges : data.allDownloadableYaml.edges
         return(
-            <About4Geeks 
-                id="about4Geeks"
-                lang={dataYml[0].node.about4Geeks}
-            />
+            <React.Fragment key={index}>
+                <About4Geeks 
+                    id="about4Geeks"
+                    lang={dataYml[0].node.about4Geeks}
+                />
+            </React.Fragment>
         )
     },
 
@@ -238,10 +240,12 @@ export const landingSections = {
         let dataYml = data.allLandingYaml.edges.length !== 0 && data.allLandingYaml.edges[0].node.iconogram !== null ? data.allLandingYaml.edges : data.allDownloadableYaml.edges
         let content = dataYml[0].node.iconogram
         return(
-            <GridContainer id="iconogram" background={Colors.lightYellow} columns="2" rows="2" columns_tablet="4" margin="0 0 58px 0" height="470px" height_tablet="320px" margin_tablet="0 0 78px 0">
+            <GridContainer key={index} id="iconogram" background={Colors.lightYellow} columns="2" rows="2" columns_tablet="4" margin="0 0 58px 0" height="470px" height_tablet="320px" margin_tablet="0 0 78px 0">
             {Array.isArray(content.icons) && content.icons?.map((item, i) => {
               return (
-                <IconsBanner icon={item.icon} index={i} title={item.title} />
+                <React.Fragment key={i}>
+                    <IconsBanner icon={item.icon} title={item.title} />
+                </React.Fragment>
               )
             })}
           </GridContainer>
@@ -252,19 +256,21 @@ export const landingSections = {
         let dataYml = data.allLandingYaml.edges.length !== 0 && data.allLandingYaml.edges[0].node.badges !== null ? data.allLandingYaml.edges : data.allDownloadableYaml.edges
         let badges = dataYml[0].node.badges
         return(
-            <Badges
-                link
-                // wrapped_images={true}
-                id="badges"
-                lang={pageContext.lang}
-                background={Colors.verylightGray}
-                paragraph={badges.heading}
-                short_text
-                padding="60px 0"
-                padding_tablet="68px 0"
-                margin="0"
-                margin_tablet="0 0 78px 0"
-            />
+            <React.Fragment key={index}>
+                <Badges
+                    link
+                    // wrapped_images={true}
+                    id="badges"
+                    lang={pageContext.lang}
+                    background={Colors.verylightGray}
+                    paragraph={badges.heading}
+                    short_text
+                    padding="60px 0"
+                    padding_tablet="68px 0"
+                    margin="0"
+                    margin_tablet="0 0 78px 0"
+                />
+            </React.Fragment>
         )
     },
 
@@ -273,7 +279,7 @@ export const landingSections = {
         let ratingReviews = dataYml.node.rating_reviews
 
         return(
-            <Div padding="60px 0 60px 0" display="flex" flexDirection="column" borderBottom="3px solid #F5F5F5">
+            <Div key={index} padding="60px 0 60px 0" display="flex" flexDirection="column" borderBottom="3px solid #F5F5F5">
                 <H2 type="h2" fontSize="22px" fontWeight="700" padding="10px 0 60px 0">
                     {ratingReviews.heading}
                 </H2>
@@ -282,10 +288,9 @@ export const landingSections = {
                     {
                     ratingReviews.rating_list.map((item, i) => {
                         return (
-                        <Div display="flex" alignItems="center" flexDirection="column">
+                        <Div key={i} display="flex" alignItems="center" flexDirection="column">
                         
                             <GatsbyImage
-                                key={i}
                                 style={{height: "50px", minWidth: "135px", width: "135px"}}
                                 imgStyle={{objectFit: "contain"}}
                                 loading="eager"
@@ -296,7 +301,6 @@ export const landingSections = {
                                 // fluid={l.image.childImageSharp.fluid}
                             />
                                 <StarRating
-                                    key={i}
                                     rating={item.rating}
                                 />
                                 <Paragraph padding="6px 0" fontSize="15px" letterSpacing="0.05em" fontWeight="bold">
@@ -310,7 +314,6 @@ export const landingSections = {
             </Div>
         )
     },
-        // <GridContainer key={index} p_sm="0" p_xs="0"><Badges lang={pageContext.lang} /></GridContainer>,
 
     syllabus: ({session, data, pageContext, yml, course, location, index}) => {
         const filteredPrograms  = data.allChooseProgramYaml.edges[0].node.programs.filter((course_el) => {
@@ -325,9 +328,8 @@ export const landingSections = {
         }))
 
         return (
-        <GridContainer id="syllabus" padding_tabletChild="0px calc(55% - 30%)" id="Syllabus" key={index} padding="50px 40px" padding_tablet="50px 40px" background={Colors.lightGray}>
+        <GridContainer key={index} id="syllabus" padding_tabletChild="0px calc(55% - 30%)" padding="50px 40px" padding_tablet="50px 40px" background={Colors.lightGray}>
             <Div
-                key={index}
                 flexDirection="column"
                 background={Colors.verylightGray}
                 padding="20px 0"
@@ -369,9 +371,9 @@ export const landingSections = {
     geeks_vs_others: ({session, pageContext, yml, course, index}) => {
         console.log("YML", yml)
         return (
-            <React.Fragment id="geeks_vs_others" key={index}>
-                <Title title={yml.heading} paragraph={yml.paragraph} />
-                <GeeksVsOthers key={index} lang={pageContext.lang} limit={yml.total_rows} title={yml.heading} paragraph={yml.sub_heading} />,
+            <React.Fragment key={index}>
+                <Title id="geeks_vs_others" title={yml.heading} paragraph={yml.paragraph} />
+                <GeeksVsOthers lang={pageContext.lang} limit={yml.total_rows} title={yml.heading} paragraph={yml.sub_heading} />,
             </React.Fragment>
 
         )
@@ -381,7 +383,6 @@ export const landingSections = {
         const course = data.allCourseYaml.edges.length > 0 ? data.allCourseYaml.edges[0].node : {};
         return (
             <React.Fragment key={index}>
-                {/* <Title title={yml.heading} paragraph={yml.sub_heading} /> */}
                 <ProgramDetails id="program_details" heading={yml.heading} sub_heading={yml.sub_heading} background={yml?.background} details={course?.details} lang={pageContext.lang} />
                 <ProgramDetailsMobile details={course && course.details} />
             </React.Fragment>
@@ -392,8 +393,8 @@ export const landingSections = {
         let dataYml = data.allLandingYaml.edges.length !== 0 && data.allLandingYaml.edges[0].node.choose_your_program !== null ? data.allLandingYaml.edges : data.allDownloadableYaml.edges
         let chooseYourProgram = dataYml[0].node?.choose_your_program
         return (
-            <React.Fragment id="choose_your_program" key={index}>
-                <Div width="100%" flexDirection="column">
+            <React.Fragment key={index}>
+                <Div id="choose_your_program" width="100%" flexDirection="column">
                     <Div background={Colors.lightGray} alignSelf="center" height="2px" width="94%" width_tablet="63.4%"/>
                 </Div>
                 <ChooseYourProgram 

@@ -22,7 +22,7 @@ const positions = [{
 
 export default props => {
   return (
-    <Div key={props.index} gridGap="0" alignItems="center" justifyContent="center" justifyContent_tablet="center" flexDirection="column" flexDirection_tablet="column">
+    <Div gridGap="0" alignItems="center" justifyContent="center" justifyContent_tablet="center" flexDirection="column" flexDirection_tablet="column">
       <Div flexDirection="column" alignItems="center">
         <Icon icon={props.icon} width="94" height="98" />
         <H2 type="h2" fontSize="15px" width="140px" width_md="auto" textTransform="uppercase" lineHeight="19px" padding="20px 0" padding_tablet="20px 15%">{props.title}</H2>

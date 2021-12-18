@@ -202,10 +202,10 @@ const LeadForm = ({marginButton, marginButton_tablet, background, margin, margin
                 {motivation && <Paragraph textAlign="left" padding={textPadding || "0px 0px 10px 0px"}padding_tablet={textPadding_tablet || "0px 0px 10px 0px"}>{motivation}</Paragraph>}
                     {fields.filter(f => formData[f].type !== 'hidden').map((f, i) => {
                         const _field = formData[f]
-                        return <>
+                        return (
+                            <React.Fragment key={i}>
                                 <Input
                                     data-cy={f}
-                                    key={i}
                                     bgColor={inputBgColor || "#FFFFFF"}
                                     type={_field.type} className="form-control" placeholder={_field.place_holder}
                                     onChange={(value, valid) => {
@@ -218,9 +218,9 @@ const LeadForm = ({marginButton, marginButton_tablet, background, margin, margin
                                     value={_field.value}
                                     errorMsg={_field.error}
                                     required={_field.required}
-                                    on
                                 />
-                        </>
+                            </React.Fragment>
+                        )
                     })}
 
                     {
