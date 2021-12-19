@@ -1,7 +1,8 @@
 import React from 'react';
-import {GridContainerWithImage, Column, GridContainer, Div, Grid, Header} from '../components/Sections';
-import {Title, H1, H2, H3, H4, Paragraph, Separator} from '../components/Heading'
+import {GridContainerWithImage, GridContainer, Div, Grid, Header} from '../components/Sections';
+import {Title, H1, H2, H3, H4, Paragraph} from '../components/Heading'
 import {Colors, StyledBackgroundSection} from '../components/Styling'
+import {isCustomBarActive} from '../actions';
 import Badges from '../components/Badges'
 import With4Geeks from '../components/With4Geeks'
 import Credentials from '../components/Credentials'
@@ -10,17 +11,6 @@ import BaseRender from './_baseLayout'
 import {SessionContext} from '../session.js'
 import Staff from '../components/Staff';
 
-const SVGImage = () =>
-    <svg width="550" height="335" viewBox="0 0 550 335" fill="none" xmlns="https:://www.w3.org/2000/svg">
-        <circle cx="222" cy="37" r="37" fill="#FFB718" fillOpacity="0.2" />
-        <circle cx="330" cy="5" r="5" fill="#CD0000" />
-        <circle cx="43.5" cy="291.5" r="43.5" fill="#0097CD" />
-        <circle cx="473.5" cy="67.5" r="8.5" transform="rotate(90 473.5 67.5)" fill="black" />
-        <rect x="110" y="326" width="77" height="6" rx="3" fill="black" />
-        <rect x="201" y="326" width="119" height="6" rx="3" fill="black" />
-        <circle cx="437.5" cy="219.5" r="112.5" fill="#FFB718" fillOpacity="0.2" />
-    </svg>
-
 const RedPin = ({style}) =>
     <svg width="8" height="16" style={style} viewBox="0 0 8 16" fill="none" xmlns="https:://www.w3.org/2000/svg">
         <circle cx="4" cy="12" r="4" fill="#CD0000" />
@@ -28,15 +18,12 @@ const RedPin = ({style}) =>
         <path d="M4 10V5.09091M4 5.09091V1L7 3.04545L4 5.09091Z" stroke="#CD0000" />
     </svg>
 
-
-
-
 const Why4Geeks = (props) => {
     const {data, pageContext, yml} = props;
     const {session} = React.useContext(SessionContext);
     return (
         <>
-            <GridContainerWithImage background="rgba(199, 243, 253, 0.5)" padding="24px 0 " padding_tablet="36px 40px 54px 0" columns_tablet="14" margin="70px 0 24px 0">
+            <GridContainerWithImage background="rgba(199, 243, 253, 0.5)" padding="24px 0 " padding_tablet="36px 40px 54px 0" columns_tablet="14" margin={isCustomBarActive(session) ? "120px 0 24px 0" : "70px 0 24px 0"}>
                 <Div flexDirection="column" justifyContent_tablet="start" padding_tablet="70px 0 0 0" gridColumn_tablet="1 / 7">
                     <H1 textAlign_tablet="left" margin="0 0 11px 0" color="#606060">{yml.seo_title}</H1>
                     <H2 textAlign_tablet="left" fontSize="50px" lineHeight="60px">{`${yml.header.title}`}</H2>
