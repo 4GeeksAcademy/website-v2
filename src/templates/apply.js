@@ -168,7 +168,7 @@ const Apply = (props) => {
                                         setFormStatus({status: "idle", msg: "Resquest"})
                                     }
                                 }}
-                                value={formData.first_name.value}
+                                value={formData.first_name.value || ""}
                             />
                         </Div>
                         <Grid gridTemplateColumns_tablet="repeat(12, 1fr)" margin_tablet="0 0 23px 0" gridGap="0" gridGap_tablet="15px">
@@ -186,7 +186,7 @@ const Apply = (props) => {
                                             setFormStatus({status: "idle", msg: "Resquest"})
                                         }
                                     }}
-                                    value={formData.email.value}
+                                    value={formData.email.value || ""}
                                 />
                             </Div>
                             <Div gridColumn_tablet="7 / 13">
@@ -203,7 +203,7 @@ const Apply = (props) => {
                                             setFormStatus({status: "idle", msg: "Resquest"})
                                         }
                                     }}
-                                    value={formData.phone.value}
+                                    value={formData.phone.value || ""}
                                 />
                             </Div>
                         </Grid>
@@ -211,7 +211,7 @@ const Apply = (props) => {
                             <SelectRaw
                                 bgColor={Colors.white}
                                 options={programs}
-                                value={formData.course.value}
+                                value={formData.course.value || ""}
                                 defaultValue={formData.course.value}
                                 placeholder={yml.left.course_title.open}
                                 onChange={(value, valid) => setVal({...formData, course: {value, valid}})}
@@ -222,7 +222,7 @@ const Apply = (props) => {
                             <SelectRaw
                                 bgColor={Colors.black}
                                 options={locations && locations}
-                                value={locations?.find(el => el.value === formData.location.value)}
+                                value={locations?.find(el => el.value === formData.location.value) || ""}
                                 placeholder={yml.left.locations_title}
                                 onChange={(value, valid) => {
                                     setVal({...formData, location: {value, valid}})
@@ -233,7 +233,7 @@ const Apply = (props) => {
                             You have applied a referral code to this form
                         </Alert>}
                             <Input border="1px solid hsl(0,0%,80%)" bgColor={Colors.white} type="text" className="form-control" placeholder={yml.left.referral_section.placeholder}
-                                value={formData.referral_key.value}
+                                value={formData.referral_key.value || ""}
                                 onChange={(value, valid) => setVal({...formData, referral_key: {value, valid}})}
                             />
                         {session && session.location && location.gdpr_compliant &&

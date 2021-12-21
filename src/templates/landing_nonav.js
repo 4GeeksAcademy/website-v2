@@ -76,8 +76,8 @@ const Landing = (props) => {
           fontSize_tablet={yml.follow_bar.content.font_size[0]}
           fontSize={yml.follow_bar.content.font_size[4]}
         >
-          {yml.follow_bar.content.text.split("\n").map((c, i) => <span className="d-block d-xs-none w-100">{c}</span>)}
-          {yml.follow_bar.content.text_mobile && yml.follow_bar.content.text_mobile.split("\n").map((c, i) => <span className="d-none d-xs-block w-100">{c}</span>)}
+          {yml.follow_bar.content.text.split("\n").map((c, i) => <span key={i} className="d-block d-xs-none w-100">{c}</span>)}
+          {yml.follow_bar.content.text_mobile && yml.follow_bar.content.text_mobile.split("\n").map((c, i) => <span key={i} className="d-none d-xs-block w-100">{c}</span>)}
         </Paragraph>
       </FollowBar>
       <LandingContainer
@@ -153,7 +153,8 @@ const Landing = (props) => {
             }
             {Array.isArray(yml.features.bullets) && 
               yml.features.bullets.map((f, i) =>
-                <Paragraph key={i}
+                <Paragraph
+                  key={i}
                   // isActive
                   style={JSON.parse(yml.features.styles)}
                   margin="7px 0"
@@ -189,18 +190,19 @@ const Landing = (props) => {
               {
                 yml.short_badges.map((l, i) => {
                 return (
-                  i <= 3 &&
-                  <GatsbyImage
-                    key={i}
-                    style={{height: "65px", minWidth: "165px", width: "165px"}}
-                    imgStyle={{objectFit: "contain"}}
-                    loading="eager"
-                    // draggable={false}
-                    // fadeIn={false}
-                    alt={l.name}
-                    image={getImage(l.image.childImageSharp.gatsbyImageData)}
-                    // fluid={l.image.childImageSharp.fluid}
-                  />
+                  i <= 3 && (
+                  <React.Fragment key={i}>
+                    <GatsbyImage
+                      style={{height: "65px", minWidth: "165px", width: "165px"}}
+                      imgStyle={{objectFit: "contain"}}
+                      loading="eager"
+                      // draggable={false}
+                      // fadeIn={false}
+                      alt={l.name}
+                      image={getImage(l.image.childImageSharp.gatsbyImageData)}
+                      // fluid={l.image.childImageSharp.fluid}
+                    />
+                  </React.Fragment>)
                 )
               })}
               </Div>
@@ -248,9 +250,9 @@ const Landing = (props) => {
         Object.keys(components)
           .filter(name => components[name] && (landingSections[name] || landingSections[components[name].layout]))
           .sort((a, b) => components[b].position > components[a].position ? -1 : 1)
-          .map(name => {
+          .map((name, index) => {
             const layout = components[name].layout || name;
-            return landingSections[layout]({...props, yml: components[name], session, course: yml.meta_info?.utm_course, location: components.meta_info?.utm_location})
+            return landingSections[layout]({...props, yml: components[name], session, course: yml.meta_info?.utm_course, location: components.meta_info?.utm_location, index: index})
           })
       }
 
@@ -496,6 +498,7 @@ export const query = graphql`
               heading
               sub_heading
               featured {
+                name
                 image {
                   childImageSharp {
                     gatsbyImageData(
@@ -770,6 +773,7 @@ export const query = graphql`
               heading
               sub_heading
               featured {
+                name
                 image {
                   childImageSharp {
                     gatsbyImageData(

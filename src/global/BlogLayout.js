@@ -36,6 +36,14 @@ const BlogLayout = ({children, seo, context}) => {
               button {
                 apply_button_text
               }
+              custom_bar {
+                active
+                message
+                button {
+                  label
+                  path
+                }
+              }
             }
           }
         }

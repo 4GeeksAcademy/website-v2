@@ -45,8 +45,8 @@ export const Colors = {
     lightGray: "#ebebeb",
     lightGreen: "#c4f7b7",
     green: "#20630d",
-    darkGray: '#3A3A3A;',
-    darkGray2: '#606060;',
+    darkGray: '#3A3A3A',
+    darkGray2: '#606060',
     borderGray: '#ececec',
     yellow: "#FFC718",
     lightYellow: "rgba(255, 183, 24, 0.1)",
@@ -180,7 +180,7 @@ const StyledImage = styled.div`
 `
 export const Img = React.memo(StyledImage);
 
-export const BackgroundSection = ({id, children, className, image, height, width, bgSize, borderRadius, margin, withOverlay}) => {
+export const BackgroundSection = ({id, children, alt, className, image, height, width, bgSize, borderRadius, margin, withOverlay}) => {
 
     const thisImage = getImage(image)
 
@@ -190,6 +190,7 @@ export const BackgroundSection = ({id, children, className, image, height, width
     return (
         <BackgroundImage
             id={id}
+            alt={alt}
             Tag="section"
             loading="eager"
             // fadeIn={false}

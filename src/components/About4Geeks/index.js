@@ -19,6 +19,7 @@ const About4Geeks = ({id, lang}) => {
                 >{about.heading}</H2>
                 {about.sub_heading.split("\n").map((m, i) =>
                     <H4
+                        key={i}
                         textAlign="left"
                         fontSize="15px"
                         lineHeight="22px"
@@ -27,10 +28,10 @@ const About4Geeks = ({id, lang}) => {
                         {m}
                     </H4>
                 )}
-                {about.list != null && about.list.map((m, i) => {
+                {about.list !== null && about.list.map((m, i) => {
                     return (
                         <Div
-                            key={i}
+                            key={`${m.title}- ${i}`}
                             margin={i == 0 && "20px 0 0 0"}
                             padding="10px 0"
                             display="flex"

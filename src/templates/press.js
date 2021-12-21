@@ -1,6 +1,8 @@
 import React, {useState} from 'react';
 import {Title, H1, H2, H3, H4, H5, Paragraph} from '../components/Heading';
 import BaseRender from './_baseLayout';
+import {isCustomBarActive} from '../actions';
+import {SessionContext} from '../session'
 // components
 import News from '../components/News';
 import Icon from '../components/Icon';
@@ -11,9 +13,10 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 const Press = (props) => {
     const {data, pageContext, yml} = props;
+    const {session} = React.useContext(SessionContext);
     let content = data.allPageYaml.edges[0].node.content
     return (
-        <Div margin="90px 0 75px 0" flexDirection="column">
+        <Div margin={isCustomBarActive(session) ? "120px 0 75px 0" :"90px 0 75px 0"} flexDirection="column">
             <Div id="circles-left" display="none" display_tablet="inherit">
                 {/* first column smCircles */}
                 <Icon icon="landingCircles/smCircle-gray" width="17px" height="17px" style={{zIndex: 3, position: "absolute", left: "90px", top: "121px"}} />
@@ -50,38 +53,35 @@ const Press = (props) => {
             {/* <Div  flexDirection="column"> */}
             {Array.isArray(content.news) && content.news.slice(0, content.limit).map((l, i) => {
                 return (
-                    <>
-                        {<GridContainer columns_tablet="12" background={i % 2 == 0 && Colors.lightYellow2} padding_tablet="83px 0">
-                            <Div flexDirection="column" justifyContent_tablet="start" padding_tablet="70px 0 0 0" gridArea_tablet={i % 2 != 0 ? "1/1/1/6" : "1/7/1/13"}>
-                                <GatsbyImage
-                                    key={i}
-                                    style={{height: "50px", width: "100%", minWidth: "60px", margin: "22px 0"}}
-                                    imgStyle={{objectPosition: "left", width: "120px", objectFit: "contain"}}
-                                    alt={l.name}
-                                    image={getImage(l.logo != null && l.logo.childImageSharp.gatsbyImageData)}
-                                    // fluid={l.logo != null && l.logo.childImageSharp.gatsbyImageData}
-                                />
-                                <H3 type="h3" textAlign="left" fontSize="22px" lineHeight="26.4px">{l.title}</H3>
-                                <Paragraph textAlign="left" margin="15px 0" fontSize="15px" lineHeight="22px" letterSpacing="0.05em" fontWeight="300">{l.text}</Paragraph>
-                                <Paragraph style={{alignItems: "center"}} padding="15px 0px" display="flex" fontWeight="700" letterSpacing="0.05em" lineHeight="16px" textAlign="left" fontSize="13px" color={Colors.blue}>
-                                    <Anchor cursor="pointer"
-                                        to={l.url}>
-                                        {l.textUrl}
-                                        <Icon style={{margin: '0 0 0 10px', placeSelf: 'center'}} icon="arrow-right" width="10" height="12px" color={Colors.blue} />
-                                    </Anchor>
-                                </Paragraph>
-                            </Div>
-                            <Div height="auto" width="100%" gridArea_tablet={i % 2 != 0 ? "1/7/1/13" : "1/1/1/6"}>
-                                <StyledBackgroundSection
-                                    height={`389px`}
-                                    image={l.image != null && l.image.childImageSharp.gatsbyImageData}
-                                    bgSize={`cover`}
-                                    alt={l.name}
-                                />
-                            </Div>
-                        </GridContainer>
-                        }
-                    </>
+                    <GridContainer key={`${i}-${l.title}`} columns_tablet="12" background={i % 2 == 0 && Colors.lightYellow2} padding_tablet="83px 0">
+                        <Div flexDirection="column" justifyContent_tablet="start" padding_tablet="70px 0 0 0" gridArea_tablet={i % 2 != 0 ? "1/1/1/6" : "1/7/1/13"}>
+                            <GatsbyImage
+                                key={i}
+                                style={{height: "50px", width: "100%", minWidth: "60px", margin: "22px 0"}}
+                                imgStyle={{objectPosition: "left", width: "120px", objectFit: "contain"}}
+                                alt={l.name}
+                                image={getImage(l.logo != null && l.logo.childImageSharp.gatsbyImageData)}
+                                // fluid={l.logo != null && l.logo.childImageSharp.gatsbyImageData}
+                            />
+                            <H3 type="h3" textAlign="left" fontSize="22px" lineHeight="26.4px">{l.title}</H3>
+                            <Paragraph textAlign="left" margin="15px 0" fontSize="15px" lineHeight="22px" letterSpacing="0.05em" fontWeight="300">{l.text}</Paragraph>
+                            <Paragraph style={{alignItems: "center"}} padding="15px 0px" display="flex" fontWeight="700" letterSpacing="0.05em" lineHeight="16px" textAlign="left" fontSize="13px" color={Colors.blue}>
+                                <Anchor cursor="pointer"
+                                    to={l.url}>
+                                    {l.textUrl}
+                                    <Icon style={{margin: '0 0 0 10px', placeSelf: 'center'}} icon="arrow-right" width="10" height="12px" color={Colors.blue} />
+                                </Anchor>
+                            </Paragraph>
+                        </Div>
+                        <Div height="auto" width="100%" gridArea_tablet={i % 2 != 0 ? "1/7/1/13" : "1/1/1/6"}>
+                            <StyledBackgroundSection
+                                height={`389px`}
+                                image={l.image != null && l.image.childImageSharp.gatsbyImageData}
+                                bgSize={`cover`}
+                                alt={l.name}
+                            />
+                        </Div>
+                    </GridContainer>
                 )
             })}
         </Div>

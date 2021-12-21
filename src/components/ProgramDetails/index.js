@@ -54,6 +54,7 @@ const ProgramDetails = (props) => {
                     <H3 textAlign="left" margin="0 0 20px 0">{props.details.about?.title && props.details.about?.title}</H3>
                     {props.details.about?.sub_title.split("\n").map((m, i) =>
                         <Paragraph
+                            key={i}
                             textAlign="left"
                             margin="10px 0 "
                             fontSize="15px"
@@ -106,8 +107,8 @@ const ProgramDetails = (props) => {
                         {props.details.details_modules.map((item, index) => {
                             return (
                                 <Div
-                                    onClick={() => setSelected({index, manual: true})}
                                     key={index}
+                                    onClick={() => setSelected({index, manual: true})}
                                     cursor="pointer"
                                     flexDirection={`column`}
                                     alignItems={`center`}
@@ -146,9 +147,10 @@ const ProgramDetails = (props) => {
                             <H3 textAlign="left">{props.details.details_modules[selected.index].title}</H3>
                             {props.details.details_modules[selected.index].projects.split('\\n').map((d, i) =>
                                 <Paragraph
+                                    key={i}
                                     textAlign="left"
                                     color={Colors.darkGray}
-                                    key={i}                        >
+                                >
                                     {d}
                                 </Paragraph>
                             )}
@@ -163,9 +165,10 @@ const ProgramDetails = (props) => {
                                 <H3 textAlign="left">{strings[lang]["Projects"]}</H3>
                                 {props.details.details_modules[selected.index].description.split('\\n').map((d, i) =>
                                     <Paragraph
+                                        key={i}
                                         textAlign="left"
                                         color={Colors.darkGray}
-                                        key={i}                        >
+                                    >
                                         {d}
                                     </Paragraph>
                                 )}

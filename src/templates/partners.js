@@ -31,7 +31,7 @@ const Partners = (props) => {
   const goToForm = (e) => {
     e.preventDefault();
     window.scrollTo({
-      top: joinPartnersRef.current?.offsetTop - "100",
+      top: joinPartnersRef.current?.offsetTop - 200,
       behavior: "smooth"
     })
   }
@@ -46,12 +46,10 @@ const Partners = (props) => {
 
   const ButtonPartner = () => (
     <Div flexDirection_tablet="row" flexDirection="column" justifyContent="left" alignItems="center">
-      <Link to={yml.button_section.button_link}
-        state={{course: yml.meta_info.bc_slug}}
-      >
-        <Button onClick={goToForm} variant="full" color={Colors.blue} margin="0 auto" margin_tablet="10px 24px 10px 0" textColor="white">{yml.button_section.button_text}</Button>
-    </Link>
-  </Div>
+      <Button onClick={goToForm} variant="full" color={Colors.blue} margin="0 auto" margin_tablet="10px 24px 10px 0" textColor="white">
+        {yml.button_section.button_text}
+      </Button>
+    </Div>
   )
   return (
     <>
@@ -99,13 +97,14 @@ const Partners = (props) => {
       <Div display="flex" flexFlow="wrap!important" gap="40px" flexDirection="row" justifyContent="center">
         {
           partnersData.work_together.image_list.map((l, i) => (
-            <GatsbyImage
-              style={{height: "90px", width: "90px", margin: "0 20px"}}
-              imgStyle={{objectFit: "cover", width: "90px", borderRadius: "50px"}}
-              alt={l.alt}
-              image={getImage(l.image.childImageSharp.gatsbyImageData)}
-              // fluid={l.image.childImageSharp.fluid}
-            />
+            <React.Fragment key={i}>
+              <GatsbyImage
+                style={{height: "90px", width: "90px", margin: "0 20px"}}
+                imgStyle={{objectFit: "cover", width: "90px", borderRadius: "50px"}}
+                alt={l.alt}
+                image={getImage(l.image.childImageSharp.gatsbyImageData)}
+              />
+            </React.Fragment>
           ))
         }
       </Div>
@@ -126,8 +125,8 @@ const Partners = (props) => {
         justifyContent="center"
         padding="0 6%"
       >
-        {partnersData.work_together.features.map(item => (
-          <Div item={item.title} display="flex" flexDirection="row" style={{position: "relative"}}gap="12px" width="100%" width_tablet="100%" >
+        {partnersData.work_together.features.map((item, i) => (
+          <Div key={`${i}-${item.title}`} item={item.title} display="flex" flexDirection="row" style={{position: "relative"}}gap="12px" width="100%" width_tablet="100%" >
             <Div height="100%">
               <Icon icon={item.icon} width="70px" height="54px" />
             </Div>
@@ -359,7 +358,7 @@ const Partners = (props) => {
         padding="0 10% 0 6%"
       >
         {partnersData.partners_in_education.image_list.map((l, index) => (
-          <Div width="235px" height="175px" background={Colors.white} padding="25px">
+          <Div key={index} width="235px" height="175px" background={Colors.white} padding="25px">
             <GatsbyImage
               style={{height: "auto", minWidth: "150px", width: "150px", margin: "0 20px"}}
               imgStyle={{objectFit: "contain", WebkitUserDrag: "none"}}
@@ -465,6 +464,7 @@ query PartnersQuery($file_name: String!, $lang: String!) {
         }
         button_section{
           button_text
+          button_link
         }
       }
     }

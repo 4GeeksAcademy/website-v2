@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import BaseRender from './_baseLayout'
+import {SessionContext} from '../session'
 
 //new components
 import Icon from '../components/Icon'
@@ -7,6 +8,7 @@ import {Colors} from '../components/Styling'
 import ReactPlayer from '../components/ReactPlayer'
 import OurPartners from '../components/OurPartners'
 import IconsBanner from '../components/IconsBanner'
+import {isCustomBarActive} from '../actions';
 import {Div, Grid, HR, GridContainerWithImage, GridContainer} from '../components/Sections'
 import {H1, H2, H3, Paragraph} from '../components/Heading'
 import {Button, RoundImage} from '../components/Styling'
@@ -14,12 +16,13 @@ import {StyledBackgroundSection} from '../components/Styling'
 
 const GeekForce = (props) => {
   const {data, pageContext, yml} = props;
+  const {session} = React.useContext(SessionContext);
   const partnersData = data.allPartnerYaml.edges[0].node;
   const content = data.allPageYaml.edges[0].node
 
   return (
     <>
-      <GridContainerWithImage padding="24px 0 " padding_tablet="100px 0" columns_tablet="14" margin="120px 0 24px 0" margin_tablet="0">
+      <GridContainerWithImage padding="24px 0 " padding_tablet="100px 0" columns_tablet="14" margin={isCustomBarActive(session) ? "120px 0 24px 0" : "70px 0 24px 0"}>
         <Div flexDirection="column" justifyContent_tablet="start" gridColumn_tablet="1 / 6">
           <H1 type="h1" textAlign_tablet="left" margin="0 0 11px 0" color="#606060">{yml.seo_title}</H1>
 
@@ -43,9 +46,9 @@ const GeekForce = (props) => {
           <Div display="none" display_md="flex" style={{position: "absolute", background: "#F5F5F5", width: "101%", height: "424px", top: "-40px", left: "25px", borderRadius: "3px"}}
                displayAfter="none" displayAfter_tablet="flex" positionAfter="absolute" contentAfter="''" marginLeftAfter="auto" widthAfter="80%" rightAfter="0" bottomAfter="-10px" heightAfter="10px" backgroundColorAfter={Colors.yellow}
           />
-          {yml.geekForce.map(item => {
+          {yml.geekForce.map((item, index) => {
             return (
-              <>
+              <React.Fragment key={index}>
                 {item.videoId === "" ?
                   <StyledBackgroundSection
                     height={`350px`}
@@ -66,7 +69,7 @@ const GeekForce = (props) => {
                     }}
                   />
                 }
-              </>
+              </React.Fragment>
             )
           })}
         </Div>
@@ -75,29 +78,31 @@ const GeekForce = (props) => {
       <GridContainer background={Colors.lightYellow} columns="2" rows="2" columns_tablet="4" margin="0 0 58px 0" height="470px" height_tablet="320px" margin_tablet="0 0 78px 0">
         {Array.isArray(content.icons) && content.icons?.map((item, i) => {
           return (
-            <IconsBanner icon={item.icon} index={i} title={item.title} />
+            <React.Fragment key={`${i}-${item.title}`}>
+              <IconsBanner icon={item.icon} title={item.title} />
+            </React.Fragment>
           )
         })}
       </GridContainer>
 
       {Array.isArray(content.list) && content.list.map((m, i) => {
         return (
-          <>
+          <React.Fragment key={`${i}-${m.title}`}>
             <GridContainerWithImage imageSide={i % 2 != 0 ? "left" : "right"} padding_tablet="36px 0 100px 0" columns_tablet="14" margin_tablet="0">
               <Div flexDirection="column" justifyContent_tablet="start" padding="0px 24px 0" padding_tablet="0" gridArea_tablet={i % 2 == 0 ? "1/1/1/6" : "1/7/1/13"}>
-                <H2 key={i} type="h2" padding="20px 0" lineHeight="36px" textAlign="center" textAlign_tablet="left" margin="0" fontWeight="900" fontSize="30px">{m.title}</H2>
+                <H2 type="h2" padding="20px 0" lineHeight="36px" textAlign="center" textAlign_tablet="left" margin="0" fontWeight="900" fontSize="30px">{m.title}</H2>
                 {
                   m.sub ? (
                     <>
                       {
-                        m.sub?.map(sub => {
+                        m.sub?.map((sub, index) => {
                           return (
-                            <>
+                            <React.Fragment key={index} >
                               <H3 type="h3" padding="10px 0px" textAlign="left" margin="0" fontWeight="900" textTransform="uppercase" fontSize="15px">{sub?.title}</H3>
                               <Paragraph letterSpacing="0.05em" textAlign="left" margin="0 0 20px 0" fontSize="15px" lineHeight="26px"
                                 dangerouslySetInnerHTML={{__html: sub?.text}}
                               />
-                            </>
+                            </React.Fragment>
                           )
                         })
                       }
@@ -141,7 +146,7 @@ const GeekForce = (props) => {
                 />
               </Div>
             </GridContainerWithImage>
-          </>
+          </React.Fragment>
         )
       })}
       <HR background={Colors.verylightGray} margin="0px 0 70px 0" />

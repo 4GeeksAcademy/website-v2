@@ -9,7 +9,7 @@ import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-const AlumniProjects = ({lang, showThumbs, limit, playerHeight, title, paragraph}) => {
+const AlumniProjects = ({lang, showThumbs, containerStyle, limit, playerHeight, title, paragraph}) => {
     const [projects, setProjects] = useState(lang[0].node.projects.slice(0, limit || lang[0].node.projects.length))
     const [value, setValue] = useState(0);
 
@@ -52,22 +52,24 @@ const AlumniProjects = ({lang, showThumbs, limit, playerHeight, title, paragraph
         prevArrow: <CustomPrevArrow />
     }
     return (
-        <Div flexDirection="column">
-            <GridContainer margin="6rem 0">
-                <Div
-                    display="flex"
-                    flexDirection="column"
-                    alignItems="center"
-                >
-                    <H2 margin="0 0 15px 0" fontWeight="900">{title}</H2>
-                    <Paragraph padding="0" padding_tablet="0 16%">{paragraph}</Paragraph>
-                </Div>
-            </GridContainer>
+        <Div flexDirection="column" style={containerStyle}>
+            {title !== undefined && paragraph !== undefined && (
+                <GridContainer margin="6rem 0">
+                    <Div
+                        display="flex"
+                        flexDirection="column"
+                        alignItems="center"
+                    >
+                        <H2 margin="0 0 15px 0" fontWeight="900">{title}</H2>
+                        <Paragraph padding="0" padding_tablet="0 16%">{paragraph}</Paragraph>
+                    </Div>
+                </GridContainer>
+            )}
 
             <Slider {...settings}>
                 {projects?.map((item, index) => {
                     return (
-                        <GridContainerWithImage imageSide="left" columns_tablet="14" gridGap_tablet="0" margin_tablet="0 0 36px 0" margin="0 0 50px 0" padding_tablet="0">
+                        <GridContainerWithImage key={`${index}-${item.project_name}`} imageSide="left" columns_tablet="14" gridGap_tablet="0" margin_tablet="0 0 36px 0" margin="0 0 50px 0" padding_tablet="0">
                             <Div background={Colors.lightGray} height_tablet="auto" padding="0" padding_tablet="17px 51px" gridColumn_tablet="1 / 9">
                                 {item.project_video === "" ?
 

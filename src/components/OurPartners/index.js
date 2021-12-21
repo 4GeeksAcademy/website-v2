@@ -127,13 +127,10 @@ const Images_Centered = (props) => {
 
       {props.images.map((l, i) => {
         return (
-          <Div margin="0 20px 40px 20px"
-          // columnGap={i >= 4 ? "": ""}
-          // margin_tablet={`0 calc(${i % 2 === 1 ? `${120}px`: "30px"}) 30px calc(${i % 2 === 1 ? `${120}px`: "30px"})`}
-
-          margin_tablet={`0 ${i >= 4 ? '32px': "42px"} 30px ${i >= 4 ? '32px': "42px"}`}
-
-          // margin_tablet="0 61px 40px 0"
+          <Div
+            key={`${i}-${l.name}`}
+            margin="0 20px 40px 20px"
+            margin_tablet={`0 ${i >= 4 ? '32px': "42px"} 30px ${i >= 4 ? '32px': "42px"}`}
           >
             <GatsbyImage
               key={i}

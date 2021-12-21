@@ -79,11 +79,6 @@ export default ({id, lang, loading, link, short_link, short_text, paragraph, bac
             rowGap="3rem"
             flexWrap="wrap"
             columnGap="1rem"
-
-            // row-gap: 3rem;
-            // column-gap: 1rem;
-            // display: flex;
-            // flex-wrap: wrap;
           >
             {
               content.badges.map((l, i) => {

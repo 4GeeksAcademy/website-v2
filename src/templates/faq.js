@@ -35,12 +35,12 @@ const Faq = (props) => {
       >
         {yml && yml.faq.map((item, i) => {
           return (
-            <>
+            <React.Fragment key={`${i}-${item.topic}`}>
               <H3 type="h3" key={i} borderBottom="1px solid" borderColor="#C4C4C4" padding="80px 30px 30px 30px" >{item.topic}</H3>
               {item.questions.map((faq, index) => {
                 return (
                   <Card
-                    color={buttonToggle && faq.question == toggleIndex}
+                    key={`${index}-${faq.question}`}
                     height="auto"
                     width="100%"
                     borders="0"
@@ -98,7 +98,7 @@ const Faq = (props) => {
                 )
               }
               )}
-            </>
+            </React.Fragment>
           )
         })
         }

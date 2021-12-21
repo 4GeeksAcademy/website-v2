@@ -7,6 +7,8 @@ import LazyLoad from 'react-lazyload';
 import twitterUser from '../utils/twitter'
 // import Icon from '../components/Icon'
 // import {TwitterFollowButton} from 'react-twitter-embed';
+import {isCustomBarActive} from '../actions';
+import {SessionContext} from '../session'
 import CallToAction from '../components/CallToAction'
 import "../assets/css/single-post.css"
 import rehypeReact from "rehype-react"
@@ -16,6 +18,7 @@ import {GridContainer, Grid, Div, Header, Row, Column} from '../components/Secti
 
 export default function Template (props) {
   const {data, pageContext} = props;
+  const {session} = React.useContext(SessionContext);
   const post = props.data.markdownRemark;
   const allowed = [`${post.frontmatter.author ? post.frontmatter.author.toLowerCase() : ""}`];
   const filtered = Object.keys(twitterUser)
@@ -96,7 +99,7 @@ export default function Template (props) {
       <Layout type="post" seo={data.markdownRemark.frontmatter} context={pageContext}>
 
         {/* Container */}
-        <GridContainer columns_tablet="1" gridColumn_tablet="4 / -4" columns="1" margin="90px 0 0 0">
+        <GridContainer columns_tablet="1" gridColumn_tablet="4 / -4" columns="1" margin={`${isCustomBarActive(session) ? "140px 0 0 0": "90px 0 0 0"}`}>
 
           {/* Top cluster */}
           <Div justifyContent="center">

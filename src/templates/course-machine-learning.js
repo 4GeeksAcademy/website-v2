@@ -1,4 +1,5 @@
 import React, {useState, useEffect, useContext, useRef} from 'react';
+import {isCustomBarActive} from '../actions';
 import Link from 'gatsby-link'
 import {navigate} from "gatsby";
 import {Container, GridContainer, Row, Column, Wrapper, WrapperImage, Divider, Header, Div} from '../components/Sections'
@@ -55,6 +56,7 @@ const Program = ({data, pageContext, yml}) => {
   const partners = data.allPartnerYaml.edges[0].node.partners.images.filter(i => !Array.isArray(i.courses) || i.courses.includes("machine-learning")).sort((a, b) => Array.isArray(a.courses) && a.courses.includes("machine-learning") ? -1 : 1);
   return (<>
     <Header
+      margin={isCustomBarActive(session) ? "120px 0 0 0" : ""}
       seo_title={yml.seo_title}
       title={yml.header.title}
       paragraph={yml.header.paragraph}

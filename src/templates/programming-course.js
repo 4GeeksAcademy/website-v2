@@ -4,6 +4,7 @@ import BaseRender from './_baseLayout'
 import {Header, Div, Grid, GridContainer, GridContainerWithImage} from '../components/Sections'
 import {Title, H1, H2, H3, H4, H5, Span, Paragraph} from '../components/Heading'
 import {Button, Colors, StyledBackgroundSection} from '../components/Styling'
+import {isCustomBarActive} from '../actions';
 import {SessionContext} from '../session'
 import ProgramDetails from '../components/ProgramDetails';
 import PricesAndPayment from '../components/PricesAndPayment';
@@ -33,7 +34,8 @@ const Program = ({data, pageContext, yml}) => {
     <GridContainerWithImage id="bottom"
       background={Colors.veryLightBlue2}
       imageSide="right"
-      padding="144px 12px 72px 12px"
+      
+      padding={isCustomBarActive(session) ? "180px 12px 72px 12px" : "140px 12px 72px 12px"}
       columns_tablet="14"
       margin="0"
       margin_tablet="0"
@@ -75,7 +77,7 @@ const Program = ({data, pageContext, yml}) => {
         overflowX: "auto",
         zIndex: "999",
         position:"sticky",
-        top: "0",
+        top: isCustomBarActive(session) ? 50 : 0,
       }}
       padding="0 35px"
       alignItems="center"
@@ -86,8 +88,8 @@ const Program = ({data, pageContext, yml}) => {
       className="scroll-spy-container"
     >
       <ScrollSpy offsetTop={80} autoScrollOffsetTop={-70}>
-        {yml.sticky_nav.map((nav) => (
-          <button key={nav.href} width="auto" padding="0 20px" href={nav.href} ref={React.createRef()}>
+        {yml.sticky_nav.map((nav, i) => (
+          <button key={`${i}-${nav.href}`} width="auto" padding="0 20px" href={nav.href} ref={React.createRef()}>
             <Paragraph textTransform="uppercase" width="max-content">{nav.title}</Paragraph>
           </button>
           )
@@ -130,7 +132,7 @@ const Program = ({data, pageContext, yml}) => {
         >
           <H2 type="h2" padding="0 0 14px 0" textAlign_tablet="left" fontSize="30px" fontSize_tablet="30px" lineHeight="60px">{yml.what_will_you_learn.heading}</H2>
           {yml.what_will_you_learn.sub_title.split("\n").map((m, i) =>
-            <Paragraph padding="0" textAlign_tablet="left" letterSpacing="0.05em" margin="10px 0" >
+            <Paragraph key={i} padding="0" textAlign_tablet="left" letterSpacing="0.05em" margin="10px 0" >
               {m}
             </Paragraph>
           )}
@@ -162,37 +164,33 @@ const Program = ({data, pageContext, yml}) => {
         >
           <H2 type="h2" padding="0 0 14px 0" textAlign_tablet="left" fontSize="22px" fontSize_tablet="22px" lineHeight="60px">{yml.content_with_subtitle_and_image.heading}</H2>
           {yml.content_with_subtitle_and_image.list.map((m, i) =>(
-            <>
+            <React.Fragment key={i}>
               {m.label && (
                 <H3 type="h3" width="fit-content" lineHeight="22px" padding="0 4px" margin="20px 0 8px 0" background={Colors.yellow} textAlign_tablet="left" fontSize="15px">{m.label}</H3>
               )}
               {m.content.split("\n").map((content, i) =>
-                <>
-                
-                  <Paragraph key={i} padding="0" textAlign="left" letterSpacing="0.05em" margin="10px 0" >
-                    {/* Text without <strong> tag */}
-                    {content.split("<strong>")[0] || m}
+                <Paragraph key={i} padding="0" textAlign="left" letterSpacing="0.05em" margin="10px 0" >
+                  {/* Text without <strong> tag */}
+                  {content.split("<strong>")[0] || ""}
 
-                    {/* Extracts the <strong> tag and render a text with font weight: bold  */}
-                    {content.match("<strong>(.*?)<\/strong>") && (
-                      <Paragraph
-                        display="initial"
-                        color={Colors.black}
-                        padding="0"
-                        fontSize="15px"
-                        fontWeight="900"
-                        textAlign="left"
-                        // textAlign_tablet="left"
-                        letterSpacing="0.05em"
-                        margin="10px 0"
-                      >
-                        {content.match("<strong>(.*?)<\/strong>")[1]}
-                      </Paragraph>
-                    )}
-                  </Paragraph>
-                </>
+                  {/* Extracts the <strong> tag and render a text with font weight: bold  */}
+                  {content.match("<strong>(.*?)<\/strong>") && (
+                    <H3
+                      display="initial"
+                      color={Colors.black}
+                      padding="0"
+                      fontSize="15px"
+                      fontWeight="900"
+                      textAlign="left"
+                      letterSpacing="0.05em"
+                      margin="10px 0"
+                    >
+                      {content.match("<strong>(.*?)<\/strong>")[1]}
+                    </H3>
+                  )}
+                </Paragraph>
               )}
-            </>
+            </React.Fragment>
           ))}
         </Div>
       </Div>
@@ -207,7 +205,7 @@ const Program = ({data, pageContext, yml}) => {
       </Div>
       <Div display="none" display_tablet="block" style={{right: '0', position: "absolute"}}>
         <svg width="525" style={{zIndex: "99", right: "0", position: "absolute"}} height="762" viewBox="0 0 525 762" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="422.5" cy="619.5" r="142.5" fill="#FFB718" fill-opacity="0.2"/>
+          <circle cx="422.5" cy="619.5" r="142.5" fill="#FFB718" fillOpacity="0.2"/>
           <circle cx="41" cy="542" r="41" fill="#FFB718"/>
           <circle cx="414.5" cy="308.5" r="8.5" transform="rotate(-180 414.5 308.5)" fill="black"/>
           <circle cx="356.5" cy="26.5" r="26.5" fill="#0097CD"/>
@@ -226,12 +224,12 @@ const Program = ({data, pageContext, yml}) => {
       background={Colors.verylightGray}
     >
       {
-        yml.tools_and_tech.map((item) =>(
-          <>
-            <H3 type="h3" key={item.topic} fontSize="20px" borderBottom="1px solid #C4C4C4" padding="0 30px 30px 30px" >{item.topic}</H3>
-            {item.list.map((tech) => {
-              return (
+        yml.tools_and_tech.map((item, i) =>(
+          <React.Fragment key={`${i}-${item.topic}`}>
+            <H3 type="h3" fontSize="20px" borderBottom="1px solid #C4C4C4" padding="0 30px 30px 30px" >{item.topic}</H3>
+            {item.list.map((tech, i) => (
                 <Card
+                  key={`${i}-${tech.title}`}
                   color={buttonToggle && tech.title == toggleIndex}
                   height="auto"
                   width="100%"
@@ -241,10 +239,9 @@ const Program = ({data, pageContext, yml}) => {
                   padding="20px 10px"
                   onClick={() => toggleIndex === tech.title ? (setToggleIndex(undefined), setButtonToggle(!buttonToggle)) : (setToggleIndex(tech.title), setButtonToggle(true))}
                 >
-                  <Div key={tech.title} display="block" height="100%">
+                  <Div display="block" height="100%">
                     <Div onClick={() => {setButtonToggle(!buttonToggle), setToggleIndex(toggleIndex != undefined ? undefined : tech.title)}} display="flex" width="100%" align={`center`} alignSelf="center">
                     <GatsbyImage
-                      key={tech.title}
                       style={{height: "20px", minWidth: "20px", width: "min-content", margin: "0 20px 0 0"}}
                       imgStyle={{objectFit: "contain"}}
                       loading="eager"
@@ -297,9 +294,8 @@ const Program = ({data, pageContext, yml}) => {
                   </Div>
                 </Card>
               )
-            }
             )}
-          </>
+          </React.Fragment>
         ))
       }
     </GridContainer>
@@ -312,9 +308,9 @@ const Program = ({data, pageContext, yml}) => {
       github={`/page/faq.${pageContext.lang}.yml`}
       background={Colors.white}
     >
-      {yml?.what_includes.map(l => (
-        <>
-          <H3 type="h3" key={l.title} fontSize="20px" padding="0 30px 30px 30px" >{l.title}</H3>
+      {yml?.what_includes.map((l, i) => (
+        <React.Fragment key={`${i}-${l.title}`}>
+          <H3 type="h3" fontSize="20px" padding="0 30px 30px 30px" >{l.title}</H3>
           <Paragraph
             textAlign="center"
             letterSpacing="0.05em"
@@ -336,8 +332,8 @@ const Program = ({data, pageContext, yml}) => {
             justifyContent="center"
             padding="0 6%"
           >
-            {l.list.map(item => (
-              <Div key={item.title} display="flex" flexDirection="row" style={{position: "relative"}}gap="12px" width="100%" width_tablet="100%" >
+            {l.list.map((item, i) => (
+              <Div key={`${i}-${item.title}`} display="flex" flexDirection="row" style={{position: "relative"}}gap="12px" width="100%" width_tablet="100%" >
                 <Div height="100%">
                   <Icon icon={item.icon} width="70px" height="54px" />
                 </Div>
@@ -368,7 +364,7 @@ const Program = ({data, pageContext, yml}) => {
               </Div>
             ))}
           </Grid>
-        </>
+        </React.Fragment>
       ))}
     </GridContainer>
     <GridContainer padding_tablet="0" margin_tablet="0 0 62px 0">
@@ -385,7 +381,7 @@ const Program = ({data, pageContext, yml}) => {
     <GridContainer padding_tablet="0" margin_tablet="0 0 62px 0">
       <Div height="1px" background="#EBEBEB"></Div>
     </GridContainer>
-    <Div id="prices_and_payment" height="auto">
+    <Div id="prices_and_payment" display="block" height="auto">
       <PricesAndPayment
         // id="prices_and_payment"
         background={`linear-gradient(to bottom,

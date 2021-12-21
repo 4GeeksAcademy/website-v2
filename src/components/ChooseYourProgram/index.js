@@ -35,7 +35,6 @@ const ChooseYourProgram = ({lang, programs, title, paragraph, chooseProgramRef, 
   `)
     let info = data.allChooseYourProgramYaml.edges.find(({node}) => node.fields.lang === lang);
     if (info) info = info.node;
-    console.log("info", info)
     return (
         <Grid
             ref={chooseProgramRef}
