@@ -9,14 +9,21 @@ const ScrollSpy = ({
   children,
 }) => {
   let currentChild = 0;
-  // let scrollSpyNavContainer;
+  let scrollSpyNavContainer;
+  let viewportWidth;
 
-  const scrollSpyNavContainer = typeof document !== "undefined" && document.querySelector('.scroll-spy-container');
+  useEffect(() => {
+    viewportWidth = window.innerWidth;
+
+    if(typeof document !== "undefined" && viewportWidth <= 768) {
+      scrollSpyNavContainer = document.querySelector('.scroll-spy-container')
+    }
+  })
 
   const handleAutoNavScroll = () => {
     if(scrollSpyNavContainer !== null) {
       scrollSpyNavContainer.scrollTo({
-        left: (scrollSpyNavContainer.children.item(currentChild).offsetLeft) - 20,
+        left: (scrollSpyNavContainer.children.item(currentChild).offsetLeft) - 25,
         behavior: 'smooth',
       })
     }
@@ -25,7 +32,6 @@ const ScrollSpy = ({
   useEffect(() => {
     const sourceElements = [];
     const targetElements = [];
-    const viewportWidth = window.innerWidth;
 
     const throttle = (fn, wait = 100) => {
       let timer;
@@ -68,9 +74,6 @@ const ScrollSpy = ({
 
         const visibleVertical =
           isBetween(target.offsetTop, targetElements[i + 1]?.offsetTop, center.y);
-          // target.offsetTop >= 0 &&
-          // center.y >= target.offsetTop
-          // center.y < target.offsetTop + target.offsetHeight;
 
         if (visibleVertical && visibleHorizontal) {
           source.classList.add(className);
