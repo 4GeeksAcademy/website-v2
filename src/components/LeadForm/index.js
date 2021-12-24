@@ -10,6 +10,7 @@ import {Break, Devices} from "../Responsive";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import {useStaticQuery, graphql, navigate} from 'gatsby';
 import {SelectRaw} from '../Select'
+import PhoneInput from './PhoneInput';
 
 const formIsValid = (formData = null) => {
     if (!formData) return null;
@@ -204,21 +205,32 @@ const LeadForm = ({marginButton, marginButton_tablet, background, margin, margin
                         const _field = formData[f]
                         return (
                             <React.Fragment key={i}>
-                                <Input
+                                {_field.type !== 'phone' && (
+                                    <Input
+                                        data-cy={f}
+                                        bgColor={inputBgColor || "#FFFFFF"}
+                                        type={_field.type} className="form-control" placeholder={_field.place_holder}
+                                        onChange={(value, valid) => {
+                                            setVal({...formData, [f]: {..._field, value, valid}});
+                                            if (formStatus.status === "error") {
+                                                setFormStatus({status: "idle", msg: "Request"})
+                                            }
+                                        }}
+                                        valid={true}
+                                        value={_field.value}
+                                        errorMsg={_field.error}
+                                        required={_field.required}
+                                    />
+                                )}
+                                {/* TODO: FIX BUG */}
+                                {_field.type === "phone" && (
+                                    <PhoneInput
                                     data-cy={f}
-                                    bgColor={inputBgColor || "#FFFFFF"}
-                                    type={_field.type} className="form-control" placeholder={_field.place_holder}
-                                    onChange={(value, valid) => {
-                                        setVal({...formData, [f]: {..._field, value, valid}});
-                                        if (formStatus.status === "error") {
-                                            setFormStatus({status: "idle", msg: "Request"})
-                                        }
-                                    }}
-                                    valid={true}
-                                    value={_field.value}
-                                    errorMsg={_field.error}
-                                    required={_field.required}
-                                />
+                                    formData={formData}
+                                    setVal={setVal}
+                                    // className="form-control"
+                                    />
+                                )}
                             </React.Fragment>
                         )
                     })}
