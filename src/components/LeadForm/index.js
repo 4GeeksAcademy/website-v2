@@ -201,11 +201,11 @@ const LeadForm = ({marginButton, marginButton_tablet, background, margin, margin
                 <GridContainer display="block" containerColumns_tablet={landingTemplate && "0fr repeat(12, 1fr) 0fr"} containerGridGap={landingTemplate && "0"} className={"leadform-" + layout} size="12" paddingLeft="0" paddingRight="0">
                 {heading && <H4 type="h4" fontSize="25px" padding={headerImage && "0 10% 0 0"} fontWeight="700" width="auto" textAlign="center" textAlign_tablet={titleTextAlign || "left"} margin={landingTemplate ? "25px 0px 0px 0" : titleMargin || "20px 0px 5px 0px"} margin_tablet={titleMargin_tablet || "20px 0px 5px 0px"}>{heading}</H4>}
                 {motivation && <Paragraph textAlign="left" padding={textPadding || "0px 0px 10px 0px"}padding_tablet={textPadding_tablet || "0px 0px 10px 0px"}>{motivation}</Paragraph>}
-                    {fields.filter(f => formData[f].type !== 'hidden').map((f, i) => {
+                    {fields.filter(f => formData[f].type !== 'hidden' && formData[f].name !== 'phone').map((f, i) => {
                         const _field = formData[f]
                         return (
                             <React.Fragment key={i}>
-                                {_field.type !== 'phone' && (
+                                {_field.name !== "phone" && (
                                     <Input
                                         data-cy={f}
                                         bgColor={inputBgColor || "#FFFFFF"}
@@ -222,19 +222,16 @@ const LeadForm = ({marginButton, marginButton_tablet, background, margin, margin
                                         required={_field.required}
                                     />
                                 )}
-                                {/* TODO: FIX BUG */}
-                                {_field.type === "phone" && (
-                                    <PhoneInput
-                                    data-cy={f}
-                                    formData={formData}
-                                    setVal={setVal}
-                                    // className="form-control"
-                                    />
-                                )}
                             </React.Fragment>
                         )
                     })}
-
+                    <PhoneInput
+                        data-cy="phone"
+                        formData={formData}
+                        setVal={setVal}
+                        phoneFormValues={formData['phone']}
+                        className="form-control"
+                    />
                     {
                         selectProgram?.length > 1 
                             && (

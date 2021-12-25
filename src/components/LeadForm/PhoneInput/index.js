@@ -8,6 +8,7 @@ import InputMask from 'react-input-mask'
 
 const PhoneInput = ({
   defaultMask = '+999 999 999 999 999',
+  phoneFormValues,
   prefix = '+',
   containerStyle,
   formData,
@@ -114,7 +115,7 @@ const PhoneInput = ({
     const input = e.target.value
     setPhoneNumber(prefix + input.substr(prefix.length))
     
-    setVal({...formData, phone: {value: phoneNumber, valid: true}})
+    setVal({...formData, phone: { ...phoneFormValues, value: phoneNumber, valid: true}})
   }
 
   const searchedCountries = getSearchFilteredCountries()
@@ -150,7 +151,6 @@ const PhoneInput = ({
         type="phone"
         // mask="+1\(999) 999-9999"/
         mask={getCountryPhoneMask()}
-        // placeholder={getCountryPhoneMask()}
         maskChar=""
         formatChars={{
           "9": "[0-9]",
