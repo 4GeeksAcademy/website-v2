@@ -20,24 +20,23 @@ context("Test Contact page with correct data", () => {
           .should("have.css", "border-color", "rgb(0, 0, 0)"); // focus the form
 
         cy.get("[data-cy=email]")
-          .clear()
+          .clear({force: true})
           .type(email)
           .should("have.css", "border-color", "rgb(0, 0, 0)");
 
         cy.get("[data-cy=phone]")
-          .clear()
+          .clear({force: true})
           .type(phone)
-          .should("have.css", "border-color", "rgb(0, 0, 0)");
 
         cy.get("[data-cy=client_comments]")
-          .clear()
+          .clear({force: true})
           .type(comment)
           .should("have.css", "border-color", "rgb(0, 0, 0)");
       });
     });
 
     cy.log("**_____ Submit Form _____**")
-    cy.get('Button[type="submit"]').contains("SEND").click().wait(2500);
+    cy.get('Button[type="submit"]').contains("SEND").click({force: true}).wait(2500);
 
     cy.log("**_____ Verifying Interception API _____**")
     cy.wait('@post_partner');
