@@ -1,10 +1,17 @@
 import React, { useState } from 'react';
 import countriesList from './countriesList';
 import InputMask from 'react-input-mask'
+import styled from 'styled-components';
+import {Colors} from '../../Styling';
 
-// masks={{fr: '(...) ..-..-..', at: '(....) ...-....'}}
-// {{ca: 0, us: 1, kz: 0, ru: 1}}
-// areaCodes={{gr: ['2694', '2647'], fr: ['369', '463'], us: ['300']}}
+const Msg = styled.span`
+position: absolute;
+top: -18px;
+left: 0px;
+padding: 3px;
+font-size: 12px;
+background-color: ${Colors.lightRed};
+`
 
 const PhoneInput = ({
   defaultMask = '+999 999 999 999 999',
@@ -24,15 +31,32 @@ const PhoneInput = ({
   searchPlaceholder = 'search',
   autocompleteSearch = false,
   searchNotFound = 'No entries to show',
-  sessionContext,
+  enableAreaCodes = false,
+  sessionContextLocation,
+  errorMsg = 'Please specify a valid phone number'
 }) => {
   const [showDropdown, setShowDropdown] = useState(false);
   const [searchValue, setSearchValue] = useState('')
   const [phoneNumber, setPhoneNumber] = useState('')
-  const [selectedCountry, setSelectedCountry] = useState({});
+  const [selectedCountry, setSelectedCountry] = useState({
+    name: 'United States',
+    locations: ['downtown-miami'],
+    iso2: 'us',
+    countryCode: '1',
+    dialCode: '1',
+  });
+  const [validStatus, setValidStatus] = useState({valid: true});
+  const regex = {
+    phone: /^(?!(\d{2,})\1+)(?!(\d+)\2{3,})(\+\d{1,3})?(\d{8,10})$/,
+  }
   let highlightCountryIndex = 0;
 
   const getCountryPhoneMask= () => {
+    /*
+      maskList={{
+        us: '+9 (999) 999-9999',
+        cl: '+999 9999 9999'}}
+    */
     const maskList = [
       {us: '+9\ (999) 999-9999'},
       {cl: '+999 9999 9999'},
@@ -43,6 +67,11 @@ const PhoneInput = ({
   }
 
   const rawCountries = JSON.parse(JSON.stringify(countriesList));
+  let hiddenAreaCodes = [];
+
+  let enableAllCodes;
+  if (enableAreaCodes === true) { enableAllCodes = true }
+  else { enableAllCodes = false }
   const initializedCountries = [].concat(...rawCountries.map((country) => {
     const countryItem = {
       name: country[0],
@@ -53,19 +82,51 @@ const PhoneInput = ({
       priority: country[5] || 0,
     };
 
+    const areaItems = [];
+
+    country[6] &&
+      country[6].map((areaCode) => {
+        const areaItem = {...countryItem};
+        areaItem.dialCode = country[3] + areaCode;
+        areaItem.isAreaCode = true;
+        areaItem.areaCodeLength = areaCode.length;
+
+        areaItems.push(areaItem);
+      });
+
+    if (areaItems.length > 0) {
+      countryItem.mainCode = true;
+      if (enableAllCodes || (enableAreaCodes.constructor.name === 'Array' && enableAreaCodes.includes(country[2]))) {
+        countryItem.hasAreaCodes = true;
+        return [countryItem, ...areaItems];
+      } else {
+        hiddenAreaCodes = hiddenAreaCodes.concat(areaItems);
+        return [countryItem];
+      }
+    }
+
     return [countryItem];
   }));
 
-  React.useEffect(() => {
-    initializedCountries.find(country => {
-      //                                        Session.location
-      country.locations.some(location => location === sessionContext || location === 'downtown-miami') && setSelectedCountry(country)
-    })
-  }, [sessionContext])
+  const getLocationCoincidence = (country, sessionLocation) => {
+    if(country.name === sessionLocation.name) return setSelectedCountry(country)
+    if(country.locations.some(loc => 
+      loc === sessionLocation.active_campaign_location_slug
+    )) return setSelectedCountry(country)
+    return false
+  }
 
   React.useEffect(() => {
-    const prefix = `+${selectedCountry.dialCode}`;
-    setPhoneNumber(prefix)
+    if(sessionContextLocation !== null && sessionContextLocation){
+      initializedCountries.find(country => {
+        getLocationCoincidence(country, sessionContextLocation)
+      })
+    }
+  }, [sessionContextLocation])
+
+  React.useEffect(() => {
+    const prefixCode = prefix + selectedCountry.dialCode;
+    setPhoneNumber(prefixCode)
   }, [selectedCountry])
 
   const handleSearchChange = (e) => {
@@ -92,9 +153,7 @@ const PhoneInput = ({
       } else {
         const iso2countries = allCountries.filter(({ iso2 }) =>
           [`${iso2}`].some(field => field.toLowerCase().includes(sanitizedSearchValue)))
-        // || '' - is a fix to prevent search of 'undefined' strings
-        // Since all the other values shouldn't be undefined, this fix was accepte
-        // but the structure do not looks very good
+
         const searchedCountries = allCountries.filter(({ name, localName, iso2 }) =>
           [`${name}`, `${localName || ''}`].some(field => field.toLowerCase().includes(sanitizedSearchValue)))
         return [...new Set([].concat(iso2countries, searchedCountries))]
@@ -111,11 +170,27 @@ const PhoneInput = ({
   }
 
   const handlePhoneInput = (e) => {
-    const prefix = `+${selectedCountry.dialCode}`;
-    const input = e.target.value
-    setPhoneNumber(prefix + input.substr(prefix.length))
+    let isValid = true;
+    const prefixCode = prefix + selectedCountry.dialCode;
     
-    setVal({...formData, phone: { ...phoneFormValues, value: phoneNumber, valid: true}})
+    // Gets the character of the formatted phone number
+    const formatOfCharacters = e.target.value.match(/[^A-Za-z0-9 ]/g);
+    let prefixLength = selectedCountry.isAreaCode ? (prefixCode.length + formatOfCharacters.length) : prefixCode.length;
+    
+    // remove the prefix and characters of the formated country from the target input
+    const input = e.target.value.substr(prefixLength);
+    setPhoneNumber(prefixCode + input)
+
+    const cleanedPhoneInput = `+${(prefixCode + input).match(/\d+/g).join('')}`
+    isValid = regex.phone.test(cleanedPhoneInput);
+
+    if (isValid !== validStatus) {
+      setValidStatus({
+          valid: isValid,
+          msg: isValid ? "Ok" : errorMsg
+      });
+  }
+    setVal({...formData, phone: { ...phoneFormValues, value: cleanedPhoneInput, valid: true}})
   }
 
   const searchedCountries = getSearchFilteredCountries()
@@ -143,8 +218,10 @@ const PhoneInput = ({
 
   return (
     <div className="react-tel-input" style={style || containerStyle}>
+    {!validStatus.valid && <Msg>{errorMsg}</Msg>}
       <InputMask
-        className="form-control"
+        data-cy="phone"
+        className={`form-control ${!validStatus.valid ? 'invalid' : ''}`}
         style={inputStyle}
         onChange={(e) => handlePhoneInput(e)}
         value={phoneNumber}
@@ -167,7 +244,7 @@ const PhoneInput = ({
       /> */}
 
       <div
-        className={`flag-dropdown ${showDropdown ? 'open' : ''}`}
+        className={`flag-dropdown ${showDropdown ? 'open' : ''} ${!validStatus.valid ? 'invalid' : ''}`}
         style={buttonStyle}
       >
         <div

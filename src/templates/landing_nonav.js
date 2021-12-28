@@ -282,7 +282,7 @@ const Landing = (props) => {
               textPadding="6px 0px 20px 0px"
               selectProgram={programs}
               layout="block"
-              background={Colors.verylightGray}
+              background="#F9F9F9"
               margin="0"
               formHandler={processFormEntry}
               heading={yml.form.heading}

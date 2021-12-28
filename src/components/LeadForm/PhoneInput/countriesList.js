@@ -61,7 +61,7 @@ const countriesList = [
   ],
   [
     'Argentina',
-    ['america', 'south-america'],
+    ['america', 'buenosaires-argentina', 'south-america'],
     'ar',
     '54',
     '(..) ........',
@@ -159,7 +159,7 @@ const countriesList = [
   ],
   [
     'Bolivia',
-    ['america', 'south-america'],
+    ['america', 'lapaz-bolivia', 'south-america'],
     'bo',
     '591'
   ],
@@ -273,7 +273,7 @@ const countriesList = [
   ],
   [
     'Colombia',
-    ['america', 'south-america'],
+    ['america', 'bogota-colombia', 'south-america'],
     'co',
     '57',
     '... ... ....'
@@ -298,7 +298,7 @@ const countriesList = [
   ],
   [
     'Costa Rica',
-    ['america', 'central-america'],
+    ['america', 'costa-rica', 'central-america'],
     'cr',
     '506',
     '....-....'
@@ -372,7 +372,7 @@ const countriesList = [
   ],
   [
     'Ecuador',
-    ['america', 'south-america'],
+    ['america', 'quito-ecuador','south-america'],
     'ec',
     '593'
   ],
@@ -795,7 +795,7 @@ const countriesList = [
   ],
   [
     'Mexico',
-    ['america', 'central-america'],
+    ['america', 'mexicocity-mexico', 'central-america'],
     'mx',
     '52',
     '... ... ....',
@@ -946,7 +946,7 @@ const countriesList = [
   ],
   [
     'Panama',
-    ['america', 'central-america'],
+    ['america', 'panamacity-panama', 'central-america'],
     'pa',
     '507'
   ],
@@ -1146,7 +1146,7 @@ const countriesList = [
   ],
   [
     'Spain',
-    ['europe', 'eu-union'],
+    ['europe', 'madrid-spain', 'eu-union'],
     'es',
     '34',
     '... ... ...'
@@ -1296,7 +1296,7 @@ const countriesList = [
   ],
   [
     'United States',
-    ['america', 'downtown-miami', 'north-america'],
+    ['america', 'downtown-miami', 'orlando', 'north-america'],
     'us',
     '1',
     '(...) ...-....',
@@ -1304,7 +1304,7 @@ const countriesList = [
   ],
   [
     'Uruguay',
-    ['america', 'south-america'],
+    ['america', 'montevideo-uruguay','south-america'],
     'uy',
     '598'
   ],
@@ -1330,7 +1330,7 @@ const countriesList = [
   ],
   [
     'Venezuela',
-    ['america', 'south-america'],
+    ['america', 'caracas-venezuela', 'maracaibo-venezuela', 'south-america'],
     've',
     '58'
   ],

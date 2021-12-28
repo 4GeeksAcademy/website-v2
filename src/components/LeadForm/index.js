@@ -225,13 +225,22 @@ const LeadForm = ({marginButton, marginButton_tablet, background, margin, margin
                             </React.Fragment>
                         )
                     })}
-                    <PhoneInput
-                        data-cy="phone"
-                        formData={formData}
-                        setVal={setVal}
-                        phoneFormValues={formData['phone']}
-                        className="form-control"
-                    />
+
+                    {fields.filter(l => formData[l].name === "phone").map((f, i) => {
+                        const _field = formData[f]
+                        return (
+                            <PhoneInput
+                                data-cy="phone"
+                                formData={formData}
+                                enableAreaCodes
+                                setVal={setVal}
+                                phoneFormValues={formData['phone']}
+                                errorMsg={_field.error}
+                                sessionContextLocation={session && session.location}
+                            />
+                        )
+                    })}
+
                     {
                         selectProgram?.length > 1 
                             && (

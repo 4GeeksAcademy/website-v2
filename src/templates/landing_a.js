@@ -284,7 +284,7 @@ const Landing = (props) => {
               selectProgram={programs}
               margin="18px 30px"
               layout="block"
-              background={Colors.verylightGray}
+              background="#F9F9F9"
               margin="0"
               style={{ minHeight: "350px" }}
               formHandler={processFormEntry}
