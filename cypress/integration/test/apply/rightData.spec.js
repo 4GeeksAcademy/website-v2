@@ -17,7 +17,7 @@ context("Test Apply page with correct data", () => {
   
 
       cy.get("[data-cy=first_name]")
-        .clear().click()
+        .clear({force: true}).click({force: true})
         .type(firstName)
         .should("have.css", "border-color", "rgb(0, 0, 0)"); // focus the form
     });
@@ -33,17 +33,17 @@ context("Test Apply page with correct data", () => {
       }).as('postForm')
 
       cy.get("[data-cy=email]")
-        .clear().click()
+        .clear({force: true}).click({force: true})
         .type(email)
         .should("have.css", "border-color", "rgb(0, 0, 0)");
 
       cy.get("[data-cy=phone]")
-        .clear().click()
+        .clear({force: true}).click({force: true})
         .type(phone)
         .should("have.css", "border-color", "rgb(0, 0, 0)");
 
       cy.get("[data-cy=dropdown_program_selector]")
-        .click().wait(500)
+        .click().wait(1500)
         .get("#react-select-2-option-0").click()
 
       cy.get("[data-cy=dropdown_academy_selector]")

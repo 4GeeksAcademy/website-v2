@@ -81,6 +81,15 @@ export const NavbarMobile = ({lang, menu, open, button, onToggle, languageButton
         hovered: false,
         itemIndex: null
     })
+
+    //This Function prevents troubles when component renders during cypress test process
+    const isDevelopment = () => {
+        if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
+        return true
+        // dev code
+        }
+        return false
+    }
     // let buttonText = session.location ? session.location.button.apply_button_text : button.apply_button_text
 
     let city = session && session.location ? session.location.city : [];
@@ -132,7 +141,7 @@ export const NavbarMobile = ({lang, menu, open, button, onToggle, languageButton
   `)
     return (
         <>
-            <Nav display_md="none" style={{top: `${isCustombarActive ? '50px' : '0px'}`}} display="flex">
+            <Nav display_md="none" style={{top: `${(isCustombarActive && !isDevelopment()) ? '50px' : '0px'}`}} display="flex">
                 <Div alignItems="center">
                     <BurgerIcon style={{marginRight: "16px", cursor: "pointer"}} onClick={() => setStatus({...status, toggle: !status.toggle})} />
                     <Link to={lang == "es" ? "/es/inicio" : "/"}>

@@ -20,7 +20,7 @@ context("Test Contact page with wrong data", () => {
       cy.get("[data-cy=email]")
         .clear()
         .type(email)
-        .should("have.css", "background-color", "rgb(255, 205, 201)"); // reject input color
+        .should("have.css", "background-color", "rgb(250, 240, 240)"); // reject input color
       cy.get("span").contains("Please specify a valid email");
 
       cy.get("[data-cy=comment]").clear().type(comment);
