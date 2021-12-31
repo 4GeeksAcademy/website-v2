@@ -53,6 +53,7 @@ news:
 
 upcoming:
   no_dates_message: "Actualmente no hay próximas fechas para este campus"
+  actionMessage: "Avisenme fechas disponibles"
 
 images_box:
   heading: "Qué deberías saber sobre esta ubicación: "

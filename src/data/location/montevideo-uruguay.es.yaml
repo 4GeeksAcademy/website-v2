@@ -43,6 +43,7 @@ news:
   title: "4Geeks Academy Uruguay en las noticias..."
 upcoming:
   no_dates_message: "Actualmente no hay próximas fechas para este campus"
+  actionMessage: "Avisenme fechas disponibles"
 
 info_box:
   heading: "Encuéntranos en Uruguay"

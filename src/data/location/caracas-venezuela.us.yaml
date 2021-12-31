@@ -49,6 +49,7 @@ news:
 
 upcoming:
   no_dates_message: "There are currently no upcoming dates for this campus"
+  actionMessage: "Let me know when dates are available"
 info_box:
   heading: "Find us in Caracas"
   address: "Centro Financiero Madrid, Nivel Mezzanina Calle Madrid Municipio Baruta Distrito Capital, 1080, Miranda, Venezuela"

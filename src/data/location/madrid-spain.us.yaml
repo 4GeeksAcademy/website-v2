@@ -60,6 +60,7 @@ info_box:
 
 upcoming:
   no_dates_message: "There are currently no upcoming dates for this campus"
+  actionMessage: "Let me know when dates are available"
 
 images_box:
   heading: "What you should know about this location: "

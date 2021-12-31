@@ -376,7 +376,7 @@ export const Old_Grid = styled.div`
     }
 `
 
-export const Header = ({hideArrowKey, children, fontSize, fontSize_tablet, image, image_alt, svg_image, seo_title, title, paragraph, height, height_md, height_tablet, background, margin, margin_tablet, padding, padding_tablet, position, textAlign_tablet, paddingParagraph_tablet, paddingTitle_tablet, display_mobile}) => {
+export const Header = ({hideArrowKey, children, fontSize, fontSize_tablet, image, image_alt, svg_image, seo_title, title, paragraph, paragraphMargin, paragraphMargin_Tablet, height, height_md, height_tablet, background, margin, margin_tablet, padding, padding_tablet, position, textAlign_tablet, paddingParagraph_tablet, paddingTitle_tablet, display_mobile}) => {
     return (
         <Grid background={background} height={height} height_tablet={height_tablet} position={position} margin={margin || "70px 0 0 0"} margin_tablet={margin_tablet} padding={padding || "60px 17px"} padding_tablet={padding_tablet || "60px 0"}>
             <Grid gridTemplateColumns_tablet={`repeat(12, 1fr)`} gridArea_tablet="1/2/1/14">
@@ -384,7 +384,7 @@ export const Header = ({hideArrowKey, children, fontSize, fontSize_tablet, image
                 <Div flexDirection="column" gridColumn_tablet={svg_image ? null : "1 / 13"} gridArea_tablet={svg_image ? "1/1/1/7" : null}>
                     <H1 type="h1" textAlign_tablet={textAlign_tablet} margin="0 0 11px 0" color="#606060">{seo_title}</H1>
                     <H2 type="h2" textAlign_tablet={textAlign_tablet} padding="0" padding_tablet={paddingTitle_tablet} fontSize={fontSize || "40px"} fontSize_tablet={fontSize_tablet || "50px"} lineHeight="60px">{hideArrowKey ? title : `< ${title} >`}</H2>
-                    <Paragraph padding="0" letterSpacing="0.05em" padding_tablet={paddingParagraph_tablet} textAlign_tablet={textAlign_tablet} margin="26px 0" >{paragraph}</Paragraph>
+                    <Paragraph padding="0" width="auto" letterSpacing="0.05em" padding_tablet={paddingParagraph_tablet} textAlign_tablet={textAlign_tablet} margin={paragraphMargin || "26px 0"} margin_tablet={paragraphMargin_Tablet} >{paragraph}</Paragraph>
                     {children}
                 </Div>
                 {svg_image ?

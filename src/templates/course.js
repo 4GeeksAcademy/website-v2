@@ -56,6 +56,8 @@ const Program = ({data, pageContext, yml}) => {
 
     <Header
       margin={isCustomBarActive(session) ? "120px 0 0 0" : ""}
+      paragraphMargin="26px 0"
+      paragraphMargin_Tablet="26px 22%"
       seo_title={yml.seo_title}
       title={yml.header.title}
       paragraph={yml.header.paragraph}
@@ -121,7 +123,7 @@ const Program = ({data, pageContext, yml}) => {
     <GridContainer padding_tablet="0" margin_tablet="90px 0 62px 0" margin="57px 0">
       <Div height="5px" background="#EBEBEB"></Div>
     </GridContainer>
-    <UpcomingDates lang={pageContext.lang} message={courseDetails.upcoming.no_dates_message} />
+    <UpcomingDates lang={pageContext.lang} message={courseDetails.upcoming.no_dates_message} actionMessage={courseDetails.upcoming.actionMessage} />
     <GridContainer padding_tablet="0" margin_tablet="0 0 62px 0">
       <Div height="1px" background="#EBEBEB"></Div>
     </GridContainer>
@@ -268,6 +270,7 @@ export const query = graphql`
             }
             upcoming{
               no_dates_message
+              actionMessage
             }
             credentials{
               heading

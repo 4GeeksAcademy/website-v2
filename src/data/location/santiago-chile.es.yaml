@@ -59,6 +59,7 @@ news:
 
 upcoming:
   no_dates_message: "Actualmente no hay próximas fechas para este campus"
+  actionMessage: "Avisenme fechas disponibles"
 
 images_box:
   heading: "Lo que debes saber de nuestra sede en Santiago de Chile: "
