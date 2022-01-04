@@ -42,6 +42,7 @@ news:
   title: "4Geeks Academy Maracaibo en las noticias..."
 upcoming:
   no_dates_message: "Actualmente no hay próximas fechas para este campus"
+  actionMessage: "Avisenme fechas disponibles"
 
 info_box:
   heading: "Find us in Caracas"

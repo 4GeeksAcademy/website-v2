@@ -153,12 +153,12 @@ const Images_Featured = (props) => {
   const imagesFiltered = props.images.filter(f => f.featured === true)
   return (
     <>
-      <GridContainer justifyItems="center" justifyContentChild="center" columns_tablet={imagesFiltered.length <= 4 ? imagesFiltered.length : '3'} padding_tablet={props.paddingFeatured || "0"}>
+      <GridContainer justifyItems="center" style={{justifyItems: 'center'}} justifyContentChild="center" columns_tablet={imagesFiltered.length <= 4 ? imagesFiltered.length : '3'} padding_tablet={props.paddingFeatured || "0"}>
         {(props.featuredImages ? props.featuredImages : imagesFiltered).map((m, i) => {
           return (
             <GatsbyImage
               key={i}
-              style={{height: "55px", minWidth: "100px", width: "250px", margin: "23px 15px"}}
+              style={{height: "55px", minWidth: "100px", width: "200px", margin: "23px 15px"}}
               imgStyle={{objectFit: "contain"}}
               alt={m.name}
               image={getImage(m.image.childImageSharp.gatsbyImageData)}

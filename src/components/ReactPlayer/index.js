@@ -144,7 +144,7 @@ const Player = ({id, onPlay, onPause, onEnd, onError, onStateChange, onPlaybackR
           borderRadius={style.borderRadius}
           videoId={yt_parser(id)}
           id={`a-${id} do-not-delete-this-hack`}
-          onReady={e => e.target.playVideo()}
+          onReady={e => e.target.pauseVideo()}
           onPlay={onPlay}
           onPause={onPause}
           onEnd={onEnd}

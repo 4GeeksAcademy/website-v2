@@ -41,6 +41,7 @@ const AlumniProjects = ({lang, showThumbs, containerStyle, limit, playerHeight, 
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
+        pauseOnHover: true,
 
         /* OPTIONAL
             Disabled arrows becouse it's have a GrabAndSlide Functions
@@ -51,6 +52,27 @@ const AlumniProjects = ({lang, showThumbs, containerStyle, limit, playerHeight, 
         nextArrow: <CustomNextArrow />,
         prevArrow: <CustomPrevArrow />
     }
+
+    // Not works as expected (stop when hover outside of screen), rethink another idea
+    // const stopVideo = () => {
+    //     // check if document is defined
+    //     if(typeof document !== "undefined") {
+    //         const iframe = document.querySelector( 'iframe');
+    //         const video = document.querySelector( 'video' );
+    //         const containerSlider = document.querySelector('.container-slider')
+
+    //         if ( containerSlider && iframe ) {
+    //             const iframeSrc = iframe.src;
+    //             iframe.src = iframeSrc;
+    //         }
+    //         if ( containerSlider && video ) {
+    //             console.log('isOutContainerSlider')
+    //             video && video.pause();
+    //             // disable function for 5 seconds after paused
+    //         }
+    //     }
+    // };
+
     return (
         <Div flexDirection="column" style={containerStyle}>
             {title !== undefined && paragraph !== undefined && (
@@ -69,7 +91,7 @@ const AlumniProjects = ({lang, showThumbs, containerStyle, limit, playerHeight, 
             <Slider {...settings}>
                 {projects?.map((item, index) => {
                     return (
-                        <GridContainerWithImage key={`${index}-${item.project_name}`} imageSide="left" columns_tablet="14" gridGap_tablet="0" margin_tablet="0 0 36px 0" margin="0 0 50px 0" padding_tablet="0">
+                        <GridContainerWithImage className="container-slider" onMouseOutHandler={el => stopVideo(el)} key={`${index}-${item.project_name}`} imageSide="left" columns_tablet="14" gridGap_tablet="0" margin_tablet="0 0 36px 0" margin="0 0 50px 0" padding_tablet="0">
                             <Div background={Colors.lightGray} height_tablet="auto" padding="0" padding_tablet="17px 51px" gridColumn_tablet="1 / 9">
                                 {item.project_video === "" ?
 
@@ -82,6 +104,7 @@ const AlumniProjects = ({lang, showThumbs, containerStyle, limit, playerHeight, 
                                     :
                                     <ReactPlayer
                                         id={item.project_video}
+                                        index={index}
                                         thumb={item.project_image}
                                         imageSize="maxresdefault"
                                         right_tablet="-93px"
