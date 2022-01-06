@@ -49,6 +49,7 @@ news:
   title: "4Geeks Academy Mexico in the news..."
 upcoming:
   no_dates_message: "There are currently no upcoming dates for this campus"
+  actionMessage: "Let me know when dates are available"
 
 info_box:
   heading: "Find us in Mexico"

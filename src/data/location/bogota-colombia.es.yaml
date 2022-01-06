@@ -45,6 +45,7 @@ news:
   title: "4Geeks Academy Colombia en las noticias..."
 upcoming:
   no_dates_message: "Actualmente no hay próximas fechas para este campus"
+  actionMessage: "Avisenme fechas disponibles"
 
 info_box:
   heading: "Encuéntranos en Colombia"

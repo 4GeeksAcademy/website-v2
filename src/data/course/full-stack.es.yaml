@@ -60,6 +60,7 @@ badges:
 
 upcoming:
   no_dates_message: "Actualmente no hay próximas fechas para este programa"  
+  actionMessage: "Avisenme fechas disponibles"
 
 credentials:
   heading: "RESULTADOS"

@@ -148,7 +148,7 @@ const Location = ({data, pageContext, yml}) => {
     }
     <OurPartners images={hiring.partners.images} showFeatured marquee title={hiring.partners.tagline} paragraph={hiring.partners.sub_heading}></OurPartners>
     <ChooseYourProgram chooseProgramRef={chooseProgramRef} lang={pageContext.lang} programs={data.allChooseYourProgramYaml.edges[0].node.programs} />
-    <UpcomingDates lang={pageContext.lang} location={yml.breathecode_location_slug} message={yml.upcoming.no_dates_message} />
+    <UpcomingDates lang={pageContext.lang} location={yml.breathecode_location_slug} message={yml.upcoming.no_dates_message} actionMessage={yml.upcoming.actionMessage}/>
     <Loc lang={pageContext.lang} locations={data.test.edges} />
     <Staff lang={pageContext.lang} />
 
@@ -224,6 +224,7 @@ export const query = graphql`
           }
           upcoming{
             no_dates_message
+            actionMessage
           }
           info_box{
               heading
