@@ -232,7 +232,7 @@ const Apply = (props) => {
                             <SelectRaw
                                 bgColor={Colors.black}
                                 options={locations && locations}
-                                value={locations?.find(el => el.value === formData.location.value) || ""}
+                                value={locations?.find(el => el.value === formData.location.value)}
                                 placeholder={yml.left.locations_title}
                                 onChange={(value, valid) => {
                                     setVal({...formData, location: {value, valid}})
