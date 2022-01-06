@@ -146,7 +146,7 @@ const Landing = (props) => {
                 margin_tablet="0px 0px 40px 0px"
                 margin="0 0 20px 30px"
                 maxWidth="350px"
-                textShadow="0px 0px 4px black"
+                // textShadow="0px 0px 4px black"
               >
                 {yml.header_data.sub_heading}
               </H2>
@@ -170,7 +170,7 @@ const Landing = (props) => {
                   style={JSON.parse(yml.features.styles)}
                   margin="7px 0"
                   padding="0px 0px"
-                  textShadow="0px 0px 4px black"
+                  // textShadow="0px 0px 4px black"
                   textAlign="left"
                   color={yml.header_data.background ? Colors.black : Colors.white}>{yml.features.text}</Paragraph>
             }

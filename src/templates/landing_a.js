@@ -159,7 +159,7 @@ const Landing = (props) => {
                   margin="7px 0"
                   padding="0px 20px"
                   fontWeight="400"
-                  textShadow="1px 0px #898a8b"
+                  // textShadow="1px 0px #898a8b"
                   textAlign="left"
                   color={yml.header_data.background ? Colors.black : Colors.white }>{'• '}{f}</Paragraph>
               )}
@@ -169,7 +169,7 @@ const Landing = (props) => {
                   style={JSON.parse(yml.features.styles)}
                   margin="7px 0"
                   padding="0px 0px"
-                  textShadow="0px 0px 4px black"
+                  // textShadow="0px 0px 4px black"
                   textAlign="left"
                   color={Colors.white}>{yml.features.text}</Paragraph>
             }
