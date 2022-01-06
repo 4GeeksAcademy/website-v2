@@ -132,6 +132,7 @@ export const Div = styled.div`
     max-width: ${props => props.size ? `${(props.size / 12) * 100}%` : null};
     overflow-x:${props => props.overflowX};
     grid-area: ${props => props.gridArea};
+    place-self: ${props => props.placeSelf};
     grid-column: ${props => props.gridColumn};
     flex-flow: ${props => props.flexFlow};
     grid-row: ${props => props.gridRow};
