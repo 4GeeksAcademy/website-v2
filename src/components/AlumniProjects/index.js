@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import {GridContainer, GridContainerWithImage, Div, Grid} from '../Sections'
 import PropTypes from "prop-types"
 import {H2, H3, H4, H5, Paragraph} from '../Heading';
@@ -12,6 +12,7 @@ import "slick-carousel/slick/slick-theme.css";
 const AlumniProjects = ({lang, showThumbs, limit, playerHeight, title, paragraph}) => {
     const [projects, setProjects] = useState(lang[0].node.projects.slice(0, limit || lang[0].node.projects.length))
     const [value, setValue] = useState(0);
+    const [switched, setSwitched] = useState(false);
 
     const CustomNextArrow = (props) => {
         const { className, style, onClick } = props;
@@ -41,7 +42,9 @@ const AlumniProjects = ({lang, showThumbs, limit, playerHeight, title, paragraph
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
-
+        afterChange: ()=>{
+            setSwitched(!switched);
+        },
         /* OPTIONAL
             Disabled arrows becouse it's have a GrabAndSlide Functions
             And it works with the kewboard arrows (left/right) when the 
@@ -84,6 +87,7 @@ const AlumniProjects = ({lang, showThumbs, limit, playerHeight, title, paragraph
                                         imageSize="maxresdefault"
                                         right_tablet="-93px"
                                         left_tablet="unset"
+                                        switched={switched}
                                         style={{
                                             width: "100%",
                                             height: "500px",
