@@ -11,7 +11,7 @@ meta_info:
   redirects: [""] # <--- URL redirections to avoid 404 errors
 
   automation: downloadable # optional, lead as "null" if you don't know, it can be more than one (comma separated)
-  tag: request_more_info # mandatory: at lease one tag (comma separated)
+  tag: request_downloadable # mandatory: at lease one tag (comma separated)
   current_download: "python-guide"
 
 navbar:

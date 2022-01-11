@@ -260,7 +260,7 @@ export const processFormEntry = async (data, session) => {
 
     data.form_type.value === 'landing'
     ? tagManager('request_more_info')
-    : console.log(`No tagManager("...") was because landing is: ${data.form_type.value}`)
+    : console.log(`No tagManager("...") was because type is: ${data.form_type.value}`)
 
     let body = {};
     Object.keys(data).forEach((key) => key !== 'form_type' && (body[key] = data[key].value));

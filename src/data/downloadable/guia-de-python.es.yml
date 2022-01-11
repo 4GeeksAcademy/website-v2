@@ -10,7 +10,7 @@ meta_info:
 
   visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   automation: downloadable # optional, lead as "null" if you don't know, it can be more than one (comma separated)
-  tag: request_more_info # mandatory: at lease one tag (comma separated)
+  tag: request_downloadable # mandatory: at lease one tag (comma separated)
   current_download: "python-guide"
 
 form:
@@ -40,7 +40,7 @@ features:
 
   #                                         up   left down  right
   styles: '{ "fontSize": "15px", "margin": "10px 0px 10px 0px" }'
-  text: "Introdúcete en el mundo de Python en pocos días, aprende un lenguaje de programación que está revolucionando el mercado y que es utilizado por empresas como: Netflix, Spotify, Amazon y muchos más."
+  text: "Introdúcete en el mundo de Python en pocos días, aprende un lenguaje de programación que está revolucionando el mercado y que es utilizado por empresas como: Netflix, Spotify, Amazon y muchas más."
   # bullets: ""
 
 follow_bar:
@@ -65,7 +65,7 @@ follow_bar:
 
 badges:
   position: 2 # It's the position of the component that will be rendered first
-  heading: "4Geeks Academy cuenta con premios y reconocimientos de validan su excelencia"
+  heading: "4Geeks Academy cuenta con premios y reconocimientos que validan su excelencia"
 
 apply_schollarship: # form that is displayed at the end of the landing
   # title: "Apoyo Profesional Ilimitado"

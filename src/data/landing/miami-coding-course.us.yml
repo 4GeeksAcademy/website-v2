@@ -82,7 +82,7 @@ follow_bar:
 #
 rating_reviews:
   position: 1
-  heading: "One of the Top Coding Courses in the World"
+  heading: "Read about us in the media..."
   rating_list:
     - alt: "Career Karma"
       image: "../../../static/images/badges/career-karma.png"
@@ -100,6 +100,10 @@ rating_reviews:
       image: "../../../static/images/badges/google.png"
       rating: 5
       url: ""
+  
+badges:
+  position: 2
+  heading: "4Geeks Academy has awards and recognitions that validate it's excellence"
 
 program_details:
   position: 2

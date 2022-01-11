@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import styled from "styled-components"
 import YouTube from "react-youtube"
 import PropTypes from "prop-types"
@@ -87,10 +87,10 @@ const Image = styled.div`
 `
 
 const Player = ({id, onPlay, onPause, onEnd, onError, onStateChange, onPlaybackRateChange,
-  onPlaybackQualityChange, imageSize, playerVars, noCookies, style, className,
-  thumb, left_tablet, right_tablet, With_Modal, imageWidth, imageWidth_tablet, ...rest}) => {
+  onPlaybackQualityChange, imageSize, playerVars, noCookies, style, className, thumb, left_tablet, right_tablet, With_Modal, imageWidth, imageWidth_tablet, switched, ...rest}) => {
 
-  const [showVideo, setShowVideo] = React.useState(false)
+  const [showVideo, setShowVideo] = React.useState(false);
+  const [vid, setVid] = React.useState({});
 
   function yt_parser (url) {
     let regExpUrl = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#&?]*).*/;
@@ -110,6 +110,16 @@ const Player = ({id, onPlay, onPause, onEnd, onError, onStateChange, onPlaybackR
 
   // With_Modal
 
+
+  useEffect(()=>{
+    console.log(vid)
+    if(vid.pauseVideo){
+      vid.pauseVideo();
+    }
+    
+  }, [switched]);
+
+
   return <VideoWrapper {...rest} style={style}>
     {showVideo ? (
       <>
@@ -120,7 +130,8 @@ const Player = ({id, onPlay, onPause, onEnd, onError, onStateChange, onPlaybackR
               borderRadius={style.borderRadius}
               videoId={yt_parser(id)}
               id={`a-${id} do-not-delete-this-hack`}
-              onReady={e => e.target.playVideo()}
+              // onReady={e => e.target.playVideo()}
+              onReady={e => setVid(e.target)}
               onPlay={onPlay}
               onPause={onPause}
               onEnd={onEnd}
