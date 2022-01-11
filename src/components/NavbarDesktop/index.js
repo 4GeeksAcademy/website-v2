@@ -115,6 +115,15 @@ export const Navbar = ({lang, currentURL, menu, open, button, onToggle, language
         itemIndex: null
     })
 
+    //This Function prevents troubles when component renders during cypress test process
+    const isDevelopment = () => {
+        if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
+        return true
+        // dev code
+        }
+        return false
+    }
+
     let city = session && session.location ? session.location.city : [];
     let currentLocation = locationCity ? locationCity : [];
     const [buttonText, setButtonText] = useState("")
@@ -129,7 +138,6 @@ export const Navbar = ({lang, currentURL, menu, open, button, onToggle, language
             setContentBar(findCity.node.custom_bar)
         }
     }, [findCity])
-
 
     const data = useStaticQuery(graphql`
     query {
@@ -168,7 +176,7 @@ export const Navbar = ({lang, currentURL, menu, open, button, onToggle, language
     return (
         <>
             <CustomBar contentBar={contentBar}/>
-            <Nav display_md="flex" display="none" style={{top: `${contentBar.active ? '50px' : '0px'}`}}>
+            <Nav display_md="flex" display="none" style={{top: `${(contentBar.active && !isDevelopment()) ? '50px' : '0px'}`}}>
                 <Link to={lang == "es" ? "/es/inicio" : "/"}>
                     <GatsbyImage
                         // fadeIn={false}

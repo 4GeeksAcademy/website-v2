@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import '../assets/css/style.css';
 import '../assets/css/utils.css';
+import '../assets/css/PhoneInput/flags.css';
+import '../assets/css/PhoneInput/index.css';
 import {Navbar} from '../components/NavbarDesktop';
 import {NavbarMobile} from '../components/NavbarMobile';
 import {StaticQuery, graphql} from 'gatsby';

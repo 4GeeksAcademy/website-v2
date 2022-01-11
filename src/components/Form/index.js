@@ -16,13 +16,13 @@ const regex = {
 
 
 const StyledInput = styled.input`
-    background-color: ${props => props.valid ? props.bgColor : Colors.lightRed};
+    background-color: ${props => props.valid ? props.bgColor : '#FAF0F0'};
     height: 40px;
     width: ${props => props.width || "100%"};
     padding: 5px 10px;
     margin: ${props => props.margin || "5px 0px"};
     border-radius: ${props => props.borderRadius || "3px"};
-    border: ${props => props.border || "1px solid #A4A4A4"};
+    border: ${props => props.valid ? (props.border || "1px solid #A4A4A4") : '1px solid #d79f9f'};
     font-family: 'Lato', sans-serif;
     font-size: 15px;
     line-height: 22px;
@@ -32,7 +32,7 @@ const StyledInput = styled.input`
     opacity: 0.7;
     :focus {
         opacity: 1;
-        border: 1px solid ${props => props.valid ? props.lightGray : Colors.lightRed};
+        border: 1px solid ${props => props.valid ? props.lightGray : '#d79f9f'};
     }
     @media ${Break.sm}{
         width: ${props => props.w_sm};
@@ -44,7 +44,7 @@ const Rel = styled.div`
 `
 const Msg = styled.span`
     position: absolute;
-    top: -8px;
+    top: -13px;
     left: 0px;
     padding: 3px;
     font-size: 12px;

@@ -10,6 +10,7 @@ import {Break, Devices} from "../Responsive";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import {useStaticQuery, graphql, navigate} from 'gatsby';
 import {SelectRaw} from '../Select'
+import PhoneInput from './PhoneInput';
 
 const formIsValid = (formData = null) => {
     if (!formData) return null;
@@ -200,26 +201,43 @@ const LeadForm = ({marginButton, marginButton_tablet, background, margin, margin
                 <GridContainer display="block" containerColumns_tablet={landingTemplate && "0fr repeat(12, 1fr) 0fr"} containerGridGap={landingTemplate && "0"} className={"leadform-" + layout} size="12" paddingLeft="0" paddingRight="0">
                 {heading && <H4 type="h4" fontSize="25px" padding={headerImage && "0 10% 0 0"} fontWeight="700" width="auto" textAlign="center" textAlign_tablet={titleTextAlign || "left"} margin={landingTemplate ? "25px 0px 0px 0" : titleMargin || "20px 0px 5px 0px"} margin_tablet={titleMargin_tablet || "20px 0px 5px 0px"}>{heading}</H4>}
                 {motivation && <Paragraph textAlign="left" padding={textPadding || "0px 0px 10px 0px"}padding_tablet={textPadding_tablet || "0px 0px 10px 0px"}>{motivation}</Paragraph>}
-                    {fields.filter(f => formData[f].type !== 'hidden').map((f, i) => {
+                    {fields.filter(f => formData[f].type !== 'hidden' && formData[f].name !== 'phone').map((f, i) => {
                         const _field = formData[f]
                         return (
                             <React.Fragment key={i}>
-                                <Input
-                                    data-cy={f}
-                                    bgColor={inputBgColor || "#FFFFFF"}
-                                    type={_field.type} className="form-control" placeholder={_field.place_holder}
-                                    onChange={(value, valid) => {
-                                        setVal({...formData, [f]: {..._field, value, valid}});
-                                        if (formStatus.status === "error") {
-                                            setFormStatus({status: "idle", msg: "Request"})
-                                        }
-                                    }}
-                                    valid={true}
-                                    value={_field.value}
-                                    errorMsg={_field.error}
-                                    required={_field.required}
-                                />
+                                {_field.name !== "phone" && (
+                                    <Input
+                                        data-cy={f}
+                                        bgColor={inputBgColor || "#FFFFFF"}
+                                        type={_field.type} className="form-control" placeholder={_field.place_holder}
+                                        onChange={(value, valid) => {
+                                            setVal({...formData, [f]: {..._field, value, valid}});
+                                            if (formStatus.status === "error") {
+                                                setFormStatus({status: "idle", msg: "Request"})
+                                            }
+                                        }}
+                                        valid={true}
+                                        value={_field.value}
+                                        errorMsg={_field.error}
+                                        required={_field.required}
+                                    />
+                                )}
                             </React.Fragment>
+                        )
+                    })}
+
+                    {fields.filter(l => formData[l].name === "phone").map((f, i) => {
+                        const _field = formData[f]
+                        return (
+                            <PhoneInput
+                                data-cy="phone"
+                                formData={formData}
+                                enableAreaCodes
+                                setVal={setVal}
+                                phoneFormValues={formData['phone']}
+                                errorMsg={_field.error}
+                                sessionContextLocation={session && session.location}
+                            />
                         )
                     })}
 

@@ -9,6 +9,7 @@ import BaseRender from './_baseLayout'
 import {SessionContext} from '../session.js'
 import {Circle} from '../components/BackgroundDrawing'
 import {apply, tagManager} from "../actions"
+import PhoneInput from '../components/LeadForm/PhoneInput';
 
 const us = {
     "(In-person and from home available)": "(In-person and from home available)",
@@ -45,6 +46,9 @@ const Apply = (props) => {
         label: p.text,
         value: p.bc_slug
     }))
+
+    const locationContext = session && session.location
+
     const locations = session && session.locations && session.locations
         .filter(l => !l.active_campaign_location_slug.includes("online"))
         .sort((a,b) =>  a.meta_info.position > b.meta_info.position ? 1 : -1)
@@ -91,7 +95,6 @@ const Apply = (props) => {
     let privacy = data.privacy.edges.find(({node}) => node.fields.lang === pageContext.lang);
     if (privacy) privacy = privacy.node;
     return (
-
         <>
             <Header
                 padding="0 10px"
@@ -142,7 +145,6 @@ const Apply = (props) => {
                                     }
                                     else {
                                         setFormStatus({status: "thank-you", msg: "Thank you"});
-                                        // console.log("Thank you");
                                         if (!session || !session.utm || !session.utm.utm_test) navigate(`${pageContext.lang === 'us' ? '/us/thank-you' : '/es/gracias'}`);
                                         else console.log("Lead success, but no redirection because of testing purposes")
                                     }
@@ -190,7 +192,15 @@ const Apply = (props) => {
                                 />
                             </Div>
                             <Div gridColumn_tablet="7 / 13">
-                                <Input
+                                <PhoneInput
+                                    data-cy="phone"
+                                    setVal={setVal}
+                                    formData={formData}
+                                    phoneFormValues={formData['phone']}
+                                    errorMsg="Please specify a valid phone number"
+                                    sessionContextLocation={locationContext}
+                                />
+                                {/* <Input
                                     data-cy="phone"
                                     border="1px solid hsl(0,0%,80%)"
                                     bgColor={Colors.white}
@@ -204,7 +214,7 @@ const Apply = (props) => {
                                         }
                                     }}
                                     value={formData.phone.value || ""}
-                                />
+                                /> */}
                             </Div>
                         </Grid>
                         <Div data-cy="dropdown_program_selector" margin_tablet="0 0 23px 0">
@@ -222,7 +232,7 @@ const Apply = (props) => {
                             <SelectRaw
                                 bgColor={Colors.black}
                                 options={locations && locations}
-                                value={locations?.find(el => el.value === formData.location.value) || ""}
+                                value={locations?.find(el => el.value === formData.location.value)}
                                 placeholder={yml.left.locations_title}
                                 onChange={(value, valid) => {
                                     setVal({...formData, location: {value, valid}})

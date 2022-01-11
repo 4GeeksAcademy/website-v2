@@ -91,7 +91,7 @@ const AlumniProjects = ({lang, showThumbs, containerStyle, limit, playerHeight, 
             <Slider {...settings}>
                 {projects?.map((item, index) => {
                     return (
-                        <GridContainerWithImage className="container-slider" onMouseOutHandler={el => stopVideo(el)} key={`${index}-${item.project_name}`} imageSide="left" columns_tablet="14" gridGap_tablet="0" margin_tablet="0 0 36px 0" margin="0 0 50px 0" padding_tablet="0">
+                        <GridContainerWithImage className="container-slider" key={`${index}-${item.project_name}`} imageSide="left" columns_tablet="14" gridGap_tablet="0" margin_tablet="0 0 36px 0" margin="0 0 50px 0" padding_tablet="0">
                             <Div background={Colors.lightGray} height_tablet="auto" padding="0" padding_tablet="17px 51px" gridColumn_tablet="1 / 9">
                                 {item.project_video === "" ?
 

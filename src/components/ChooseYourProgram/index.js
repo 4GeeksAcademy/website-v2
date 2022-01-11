@@ -80,6 +80,10 @@ const ChooseYourProgram = ({lang, programs, title, paragraph, chooseProgramRef, 
                                 placeSelf_tablet={landingTemplate && "flex-start"}
                                 display="flex"
                                 justifyContent="end"
+                                alignSelf="flex-start"
+                                margin="10px 0 0 0"
+                                margin_tablet="0"
+                                alignSelf_tablet="flex-end"
                                 width="90px"
                                 width_tablet="120px"
                             >
