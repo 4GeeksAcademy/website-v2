@@ -60,7 +60,7 @@ const PhoneInput = ({
         cl: '+999 9999 9999'}}
     */
     const maskList = [
-      {us: `+${dialCode}\ (999) 999-9999`},
+      {us: `+${dialCode}\(999) 999-9999`},
       {cl: `+${dialCode}9 9999 9999`},
       {default: defaultMask || `+${dialCode} 999 999 999 999`},
     ];
@@ -229,7 +229,7 @@ const PhoneInput = ({
         value={phoneNumber}
         type="phone"
         // mask="+1\(999) 999-9999"/
-        mask={getCountryPhoneMask()}
+        mask={getCountryPhoneMask() || "+1\(999) 999-9999"}
         maskChar=""
         formatChars={{
           "9": "[0-9]",
