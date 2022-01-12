@@ -1,11 +1,12 @@
 context("Test Contact page with correct data", () => {
   it('Visit the Partners page with path "/us/partners"', () => {
-    cy.visit("/us/partners").wait(1500);
+    cy.visit("/us/partners").wait(3500);
   });
 
   it("Call the form and fill with right values", () => {
 
     cy.log('**_____ Filling form data _____**')
+    cy.wait(3000);
     cy.fixture("/contact/right.json").then((contact) => {
       cy.fixture("/apply/form_values/right.json").then((apply) => {
         const { firstName, lastName, email, comment } = contact;
@@ -26,7 +27,7 @@ context("Test Contact page with correct data", () => {
 
         cy.get("[data-cy=phone]")
           .clear({force: true})
-          .type(phone)
+          .type('{movetoend}' + phone)
 
         cy.get("[data-cy=client_comments]")
           .clear({force: true})
