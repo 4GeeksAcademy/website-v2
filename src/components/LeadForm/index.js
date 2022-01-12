@@ -230,6 +230,7 @@ const LeadForm = ({marginButton, marginButton_tablet, background, margin, margin
                         const _field = formData[f]
                         return (
                             <PhoneInput
+                                key={i}
                                 data-cy="phone"
                                 formData={formData}
                                 enableAreaCodes
