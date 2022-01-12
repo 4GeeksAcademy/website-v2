@@ -399,6 +399,7 @@ const Partners = (props) => {
           <LeadForm
             formHandler={beHiringPartner}
             handleClose={handleClose}
+            enableAreaCodes={false}
             lang={pageContext.lang}
             inputBgColor={Colors.white}
             fields={['full_name', 'email', 'phone', 'client_comments']}
