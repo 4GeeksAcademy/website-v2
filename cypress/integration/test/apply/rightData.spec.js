@@ -57,12 +57,13 @@ context("Test Apply page with correct data", () => {
     cy.log("**_____ Verifying Interception _____**")
     cy.wait('@postForm');
     // it verify if the response has been intercepted and changed
-    cy.get('@postForm').then(xhr => {
-      console.log("Response Intercepted:::",xhr)
+    cy.get('@postForm').then(({ request, response }) => {
+      console.log("Response Intercepted:::",response)
+      console.log("Request Intercepted:::",request)
       // expect(xhr.response.statusCode).to.equal(201)
-      expect(xhr.response.body.first_name).to.equal('Rowan')
-      expect(xhr.response.body.email).to.equal('mark@outlook.com')
-      expect(xhr.response.body.phone).to.equal('1234567890')
+      expect(response.body.first_name).to.equal(request.body.first_name)
+      expect(response.body.email).to.equal(request.body.email)
+      expect(response.body.phone).to.equal(request.body.phone)
     })
   })
 
