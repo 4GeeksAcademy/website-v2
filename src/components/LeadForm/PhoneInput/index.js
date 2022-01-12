@@ -63,7 +63,7 @@ const PhoneInput = ({
       {default: defaultMask || `+${selectedCountry.dialCode} 999 999 999 999`},
     ];
     const getMask = maskList.find(code => code[selectedCountry.iso2] || code['default'])
-    return getMask[selectedCountry.iso2] || getMask['default']
+    return getMask[selectedCountry.iso2]
   }
 
   const rawCountries = JSON.parse(JSON.stringify(countriesList));
@@ -229,11 +229,11 @@ const PhoneInput = ({
         // mask="+1\(999) 999-9999"/
         mask={getCountryPhoneMask()}
         maskChar=""
-        formatChars={{
-          "9": "[0-9]",
-          // a: "[A-Za-z]",
-          // "*": "[A-Za-z0-9]"
-        }}
+        // formatChars={{
+        //   "9": "[0-9]",
+        //   "a": "[A-Za-z]",
+        //   "*": "[A-Za-z0-9]"
+        // }}
       />
       {/* <input
         className="form-control "
