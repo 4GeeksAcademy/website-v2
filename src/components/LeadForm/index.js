@@ -233,7 +233,7 @@ const LeadForm = ({marginButton, marginButton_tablet, background, margin, margin
                                 key={i}
                                 data-cy="phone"
                                 formData={formData}
-                                enableAreaCodes
+                                // enableAreaCodes
                                 setVal={setVal}
                                 phoneFormValues={formData['phone']}
                                 errorMsg={_field.error}
