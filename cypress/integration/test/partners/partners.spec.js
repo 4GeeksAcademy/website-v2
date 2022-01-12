@@ -17,12 +17,10 @@ context("Test Contact page with correct data", () => {
         cy.intercept('POST', '**/marketing/lead').as('post_partner')
 
         cy.get("[data-cy=full_name]")
-          .clear()
           .type(`${firstName} ${lastName}`)
           .should("have.css", "border-color", "rgb(0, 0, 0)"); // focus the form
 
         cy.get("[data-cy=email]")
-          .clear({force: true})
           .type(email)
           .should("have.css", "border-color", "rgb(0, 0, 0)");
 
@@ -30,7 +28,6 @@ context("Test Contact page with correct data", () => {
           .type('{movetoend}' + phone)
 
         cy.get("[data-cy=client_comments]")
-          .clear({force: true})
           .type(comment)
           .should("have.css", "border-color", "rgb(0, 0, 0)");
       });
@@ -45,13 +42,13 @@ context("Test Contact page with correct data", () => {
       console.log("Request Intercepted:::", request)
       console.log("Response Intercepted:::", response)
 
-      cy.wrap(request.body).its('automations').should('eq', response.body.automations)
-      cy.wrap(request.body).its('city').should('eq', response.body.city)
-      cy.wrap(request.body).its('location').should('eq', response.body.location)
-      cy.wrap(request.body).its('first_name').should('eq', response.body.first_name)
-      cy.wrap(request.body).its('email').should('eq', response.body.email)
-      cy.wrap(request.body).its('phone').should('eq', response.body.phone)
-      cy.wrap(request.body).its('client_comments').should('eq', response.body.client_comments)
+      cy.wrap(request.body).its('automations').should('eq', response.body.automations);
+      cy.wrap(request.body).its('city').should('eq', response.body.city);
+      cy.wrap(request.body).its('location').should('eq', response.body.location);
+      cy.wrap(request.body).its('first_name').should('eq', response.body.first_name);
+      cy.wrap(request.body).its('email').should('eq', response.body.email);
+      cy.wrap(request.body).its('phone').should('eq', response.body.phone);
+      cy.wrap(request.body).its('client_comments').should('eq', response.body.client_comments);
     })
   });
 });
