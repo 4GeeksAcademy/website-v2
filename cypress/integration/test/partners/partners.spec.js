@@ -9,6 +9,7 @@ context("Test Contact page with correct data", () => {
     cy.wait(3000);
     cy.fixture("/contact/right.json").then((contact) => {
       cy.fixture("/apply/form_values/right.json").then((apply) => {
+        cy.wait(3000);
         const { firstName, lastName, email, comment } = contact;
         const { phone } = apply;
 
@@ -26,7 +27,6 @@ context("Test Contact page with correct data", () => {
           .should("have.css", "border-color", "rgb(0, 0, 0)");
 
         cy.get("[data-cy=phone]")
-          .clear({force: true})
           .type('{movetoend}' + phone)
 
         cy.get("[data-cy=client_comments]")
