@@ -229,7 +229,7 @@ const PhoneInput = ({
         value={phoneNumber}
         type="phone"
         // mask="+1\(999) 999-9999"/
-        mask={getCountryPhoneMask() || "+1\(999) 999-9999"}
+        mask={getCountryPhoneMask()}
         maskChar=""
         formatChars={{
           "9": "[0-9]",
