@@ -14,7 +14,7 @@ background-color: ${Colors.lightRed};
 `
 
 const PhoneInput = ({
-  defaultMask,
+  defaultMask = '+999 999 999 999 999',
   phoneFormValues,
   prefix = '+',
   containerStyle,
@@ -40,32 +40,30 @@ const PhoneInput = ({
   const [phoneNumber, setPhoneNumber] = useState('')
   const [selectedCountry, setSelectedCountry] = useState({
     name: 'United States',
-    locations: ['downtown-miami', 'america', 'north-america'],
+    locations: ['downtown-miami'],
     iso2: 'us',
     countryCode: '1',
     dialCode: '1',
   });
   const [validStatus, setValidStatus] = useState({valid: true});
   const regex = {
-    phone: /^(?!(\d{2,})\1+)(?!(\d+)\2{3,})(\+\d{1,3})?(\d{8,12})$/,
+    phone: /^(?!(\d{2,})\1+)(?!(\d+)\2{3,})(\+\d{1,3})?(\d{8,10})$/,
   }
   let highlightCountryIndex = 0;
-  const {dialCode, iso2, isAreaCode, name} = selectedCountry;
 
   const getCountryPhoneMask= () => {
-
     /*
       maskList={{
         us: '+9 (999) 999-9999',
         cl: '+999 9999 9999'}}
     */
     const maskList = [
-      {us: `+${dialCode || '1'}\(999) 999-9999`},
-      {cl: `+${dialCode || '99'}9 9999 9999`},
-      {default: defaultMask || `+${dialCode} 999 999 999 999`},
+      {us: '+9\ (999) 999-9999'},
+      {cl: '+999 9999 9999'},
+      {default: defaultMask},
     ];
-    const getMask = maskList.find(code => code[iso2] || code['default'])
-    return getMask[iso2] || getMask['default']
+    const getMask = maskList.find(code => code[selectedCountry.iso2] || code['default'])
+    return getMask[selectedCountry.iso2] || getMask['default']
   }
 
   const rawCountries = JSON.parse(JSON.stringify(countriesList));
@@ -127,7 +125,7 @@ const PhoneInput = ({
   }, [sessionContextLocation])
 
   React.useEffect(() => {
-    const prefixCode = prefix + dialCode;
+    const prefixCode = prefix + selectedCountry.dialCode;
     setPhoneNumber(prefixCode)
   }, [selectedCountry])
 
@@ -173,11 +171,11 @@ const PhoneInput = ({
 
   const handlePhoneInput = (e) => {
     let isValid = true;
-    const prefixCode = prefix + dialCode;
+    const prefixCode = prefix + selectedCountry.dialCode;
     
     // Gets the character of the formatted phone number
     const formatOfCharacters = e.target.value.match(/[^A-Za-z0-9 ]/g);
-    let prefixLength = isAreaCode ? (prefixCode.length + formatOfCharacters.length) : prefixCode.length;
+    let prefixLength = selectedCountry.isAreaCode ? (prefixCode.length + formatOfCharacters.length) : prefixCode.length;
     
     // remove the prefix and characters of the formated country from the target input
     const input = e.target.value.substr(prefixLength);
@@ -252,12 +250,12 @@ const PhoneInput = ({
         <div
           onClick={(e) => handleFlagDropdownClick(e)}
           className={`selected-flag ${showDropdown ? 'open' : ''}`}
-          title={selectedCountry ? `${name}: + ${dialCode}` : ''}
+          title={selectedCountry ? `${selectedCountry.name}: + ${selectedCountry.dialCode}` : ''}
           role="button"
           aria-haspopup="listbox"
           aria-expanded={showDropdown ? true : undefined}
         >
-          <div className={`flag ${iso2}`}>
+          <div className={`flag ${selectedCountry.iso2}`}>
             <div className={`arrow ${showDropdown ? 'up' : ''}`} />
           </div>
         </div>
