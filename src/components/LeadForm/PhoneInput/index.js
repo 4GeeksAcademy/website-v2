@@ -58,9 +58,9 @@ const PhoneInput = ({
         cl: '+999 9999 9999'}}
     */
     const maskList = [
-      {us: '+9\ (999) 999-9999'},
-      {cl: '+99 9 9999 9999'},
-      {default: defaultMask},
+      {us: `+${selectedCountry.dialCode || '1'}\(999) 999-9999`},
+      {cl: `+${selectedCountry.dialCode || '99'}9 9999 9999`},
+      {default: defaultMask || `+${selectedCountry.dialCode} 999 999 999 999`},
     ];
     const getMask = maskList.find(code => code[selectedCountry.iso2] || code['default'])
     return getMask[selectedCountry.iso2] || getMask['default']
