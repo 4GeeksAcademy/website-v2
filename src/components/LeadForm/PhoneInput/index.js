@@ -47,7 +47,7 @@ const PhoneInput = ({
   });
   const [validStatus, setValidStatus] = useState({valid: true});
   const regex = {
-    phone: /^(?!(\d{2,})\1+)(?!(\d+)\2{3,})(\+\d{1,3})?(\d{8,10})$/,
+    phone: /^(?!(\d{2,})\1+)(?!(\d+)\2{3,})(\+\d{1,3})?(\d{8,12})$/,
   }
   let highlightCountryIndex = 0;
   const {dialCode, iso2, isAreaCode, name} = selectedCountry;
