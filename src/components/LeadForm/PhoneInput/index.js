@@ -40,7 +40,7 @@ const PhoneInput = ({
   const [phoneNumber, setPhoneNumber] = useState('')
   const [selectedCountry, setSelectedCountry] = useState({
     name: 'United States',
-    locations: ['downtown-miami'],
+    locations: ['downtown-miami', 'america', 'north-america'],
     iso2: 'us',
     countryCode: '1',
     dialCode: '1',
