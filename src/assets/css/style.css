@@ -20,6 +20,13 @@ html, body
     scroll-padding: 10%; */
 }
 
+a.customBar-link{
+    color: #00a0da;
+    border-radius: 4px;
+    padding: 0 4px;
+    background: #fffaf0;
+}
+
 /* adds three dots to text when reaches the end of line */
 
 .img-border::before{
@@ -239,11 +246,12 @@ a {
 .react-player{
     height: 82px;
 }
+
+.mobile{
+    display: none;
+}
+
 @media (min-width: 320px) {
-    .mobile{
-        display: none;
-    }
-    
 }
 @media (min-width: 576px) {
     .trend{
@@ -493,4 +501,34 @@ button.active p {
 .scroll-spy-container button,
 .container-sidebar-content button {
     cursor: pointer;
+}
+
+.star-rating div {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 18px;
+  }
+.star-rating div.on {
+    background: #FFB718;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgb(0 0 0 / 0%);
+    -webkit-text-stroke-width: 0.4px;
+    -webkit-text-stroke-color: rgb(169 169 169);
+
+}
+.star-rating div.off {
+    background: #FFFFFF;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgb(0 0 0 / 0%);
+    -webkit-text-stroke-width: 0.4px;
+    -webkit-text-stroke-color: rgb(169 169 169);
+}
+
+.star-rating div.middle {
+    background: linear-gradient(to right, rgb(255 165 0) 50%, rgb(255 255 255) 50%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgb(0 0 0 / 0%);
+    -webkit-text-stroke-width: 0.4px;
+    -webkit-text-stroke-color: rgb(169 169 169);
 }

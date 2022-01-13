@@ -10,6 +10,7 @@ import {Div, Grid} from '../Sections';
 import Icon from "../Icon"
 import {NavItem} from '../Navbar';
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import CustomBar from  '../CustomBar'
 
 
 const MegaMenuContainer = styled(Div)`
@@ -114,16 +115,28 @@ export const Navbar = ({lang, currentURL, menu, open, button, onToggle, language
         itemIndex: null
     })
 
+    //This Function prevents troubles when component renders during cypress test process
+    const isDevelopment = () => {
+        if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
+        return true
+        // dev code
+        }
+        return false
+    }
+
     let city = session && session.location ? session.location.city : [];
     let currentLocation = locationCity ? locationCity : [];
     const [buttonText, setButtonText] = useState("")
+    const [contentBar, setContentBar] = useState({})
     /* In case of want change the Button text "Aplica" search the key 
        "apply_button_text" in /src/data/location/locationfile.yaml
     */
     let findCity = currentLocation.find(loc => loc.node?.city === city)
     useEffect(() => {
-        if(findCity !== undefined) 
-        setButtonText(findCity.node.button.apply_button_text)
+        if(findCity !== undefined && findCity.node) {
+            setButtonText(findCity.node.button.apply_button_text)
+            setContentBar(findCity.node.custom_bar)
+        }
     }, [findCity])
 
     const data = useStaticQuery(graphql`
@@ -162,7 +175,8 @@ export const Navbar = ({lang, currentURL, menu, open, button, onToggle, language
   `)
     return (
         <>
-            <Nav display_md="flex" display="none">
+            <CustomBar contentBar={contentBar}/>
+            <Nav display_md="flex" display="none" style={{top: `${(contentBar.active && !isDevelopment()) ? '50px' : '0px'}`}}>
                 <Link to={lang == "es" ? "/es/inicio" : "/"}>
                     <GatsbyImage
                         // fadeIn={false}

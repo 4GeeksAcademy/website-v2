@@ -49,11 +49,12 @@ const ProgramDetails = (props) => {
     }, [])
     return (
         <>
-            <GridContainer id={props.id} columns_tablet="2" background={props.background || Colors.verylightGray} padding_tablet="76px 0" padding="50px 17px" gridGap="50px">
+            <GridContainer id={props.id} columns_tablet="2" background={props.background || Colors.verylightGray} padding_tablet="76px 0" padding="50px 10px" gridGap="50px">
                 <Div flexDirection="column" >
                     <H3 textAlign="left" margin="0 0 20px 0">{props.details.about?.title && props.details.about?.title}</H3>
                     {props.details.about?.sub_title.split("\n").map((m, i) =>
                         <Paragraph
+                            key={i}
                             textAlign="left"
                             margin="10px 0 "
                             fontSize="15px"
@@ -67,7 +68,13 @@ const ProgramDetails = (props) => {
                     {Array.isArray(props.details.about?.list) && props.details.about?.list.map((m, i) => {
                         return (
                             <Div key={i} borderBottom="1px solid #ebebeb" gap_tablet="0" gap="20px" padding="15px 0" >
-                                <Div minWidth="25%" minWidth_tablet="32%"><H4 type="h4" fontWeight="700" textAlign="left" >{`${m.label}:`}</H4></Div>
+                                <Div minWidth="120px" minWidth_tablet="32%" gap="15px">
+                                    {/* Icon here */}
+                                    {m.icon && <Icon icon={m.icon} width="32px" height="32px" />}
+                                    <H4 type="h4" fontWeight="700" textAlign="left" >
+                                        {`${m.label}: test`}
+                                    </H4>
+                                </Div>
                                 <Div flexDirection={m.link && "column"} >
                                     <Paragraph textAlign="left" >{m.content}</Paragraph>
                                     {m.link &&
@@ -80,6 +87,9 @@ const ProgramDetails = (props) => {
                 </Div>
 
             </GridContainer>
+            <GridContainer>
+                <Div height="7px" background="#F5F5F5" margin="30px 0" margin_tablet="40px 0" />
+            </GridContainer>
             {props.withoutAnimation !== true && (
                 <GridContainer padding_tablet="0" margin_tablet="0 0 83px 0" justifyItems="center">
                 <Div
@@ -91,14 +101,14 @@ const ProgramDetails = (props) => {
                     height="auto"
                     borderBottom_tablet="1px solid black"
                 >
-                    <H2>{props.details.heading}</H2>
-                    <Paragraph>{props.details.sub_heading}</Paragraph>
+                    <H2>{props.heading || props.details.heading}</H2>
+                    <Paragraph padding="20px 0 0 0">{props.sub_heading || props.details.sub_heading}</Paragraph>
                     <Div justifyContent="between" margin="50px 0 20px 0">
                         {props.details.details_modules.map((item, index) => {
                             return (
                                 <Div
-                                    onClick={() => setSelected({index, manual: true})}
                                     key={index}
+                                    onClick={() => setSelected({index, manual: true})}
                                     cursor="pointer"
                                     flexDirection={`column`}
                                     alignItems={`center`}
@@ -137,9 +147,10 @@ const ProgramDetails = (props) => {
                             <H3 textAlign="left">{props.details.details_modules[selected.index].title}</H3>
                             {props.details.details_modules[selected.index].projects.split('\\n').map((d, i) =>
                                 <Paragraph
+                                    key={i}
                                     textAlign="left"
                                     color={Colors.darkGray}
-                                    key={i}                        >
+                                >
                                     {d}
                                 </Paragraph>
                             )}
@@ -154,9 +165,10 @@ const ProgramDetails = (props) => {
                                 <H3 textAlign="left">{strings[lang]["Projects"]}</H3>
                                 {props.details.details_modules[selected.index].description.split('\\n').map((d, i) =>
                                     <Paragraph
+                                        key={i}
                                         textAlign="left"
                                         color={Colors.darkGray}
-                                        key={i}                        >
+                                    >
                                         {d}
                                     </Paragraph>
                                 )}

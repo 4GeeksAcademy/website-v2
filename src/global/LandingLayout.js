@@ -27,6 +27,14 @@ const Layout = ({children, seo, context, landingFooter, landingNavbar}) => {
               button {
                 apply_button_text
               }
+              custom_bar {
+                active
+                message
+                button {
+                  label
+                  path
+                }
+              }
             }
           }
         }

@@ -7,6 +7,7 @@ import Fragment from "../Fragment"
 import styled from "styled-components";
 import Icon from "../Icon";
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import {SessionContext} from '../../session'
 
 
 const Staff = props => {
@@ -53,17 +54,26 @@ const Staff = props => {
         }
       }
     `);
-    let staff = data.allStaffYaml.edges.find(({node}) => node.fields.lang === props.lang);
-    if (staff) staff = staff.node;
+    let staffList = data.allStaffYaml.edges.find(({node}) => node.fields.lang === props.lang);
+    const {session} = React.useContext(SessionContext);
+    let staffFilteredByLocation;
+    let sessionLocation = session && session.location && session.location.breathecode_location_slug;
+    
+    if (staffList) staffList = staffList.node;
+
+    if(sessionLocation) staffFilteredByLocation = staffList.staff.filter(n => n.location.length <= 0 || n.location.includes('') || n.location === "all" || n.location.includes("all") || n.location.includes(sessionLocation))
+
+    console.log("staff", staffFilteredByLocation)
+    console.log("staffList", staffList)
     return (
         <Fragment github="/components/staff">
             <GridContainer columns_tablet="12" padding_tablet="0" margin_tablet="0 0 72px 0" margin="0 0 36px 0">
                 <Div alignItems="center" flexDirection="column" gridColumn_tablet="3 /11">
-                    <H4 fontSize="15px" textTransform="uppercase" lineHeight="19px" fontWeight="900">{props.heading || staff.heading}</H4>
-                    <Paragraph textAlign="center" margin="14px 0 50px 0">{props.paragraph || staff.sub_heading}</Paragraph>
+                    <H4 fontSize="15px" textTransform="uppercase" lineHeight="19px" fontWeight="900">{props.heading || staffList.heading}</H4>
+                    <Paragraph textAlign="center" margin="14px 0 50px 0">{props.paragraph || staffList.sub_heading}</Paragraph>
                 </Div>
                 <Div gridColumn_tablet="1/span 12" className="testimonial-slider" height="auto" padding="0 17px 59px 17px">
-                    {staff.staff.map((item, index) => {
+                    {staffFilteredByLocation?.map((item, index) => {
                         return (
                             <Div key={index} flexDirection="column" alignItems="center">
                                 <Div minWidth="184px" height="184px" margin="0 10px 0 0" alignItems="center">

@@ -1,6 +1,7 @@
 import React,  {useState, useEffect} from 'react';
 import Link from 'gatsby-link'
 import {GridContainer, Header, Div} from '../components/Sections'
+import {isCustomBarActive} from '../actions';
 import {Button, Colors} from '../components/Styling'
 import ProgramDetails from '../components/ProgramDetails';
 import ProgramDetailsMobile from '../components/ProgramDetailsMobile';
@@ -54,6 +55,7 @@ const Program = ({data, pageContext, yml}) => {
 
   return (<>
     <Header
+      margin={isCustomBarActive(session) ? "120px 0 0 0" : ""}
       seo_title={yml.seo_title}
       title={yml.header.title}
       paragraph={yml.header.paragraph}
@@ -115,10 +117,6 @@ const Program = ({data, pageContext, yml}) => {
       <Badges lang={pageContext.lang} short_link={true} paragraph={yml.badges.paragraph && yml.badges.paragraph} />
     </Header>
 
-    {/* 
-    this is the one used in home
-    <OurPartners images={hiring.partners.images} marquee title={hiring.partners.tagline} paragraph={hiring.partners.sub_heading} />
-    */}
     <OurPartners background={Colors.verylightGray} images={hiring.partners.images} marquee title={hiring.partners.tagline} paragraph={hiring.partners.sub_heading}></OurPartners>
     <ProgramDetails details={courseDetails.details} lang={pageContext.lang} course={program_type} background={Colors.white} />
     <ProgramDetailsMobile details={courseDetails.details} lang={pageContext.lang} course={program_type} />

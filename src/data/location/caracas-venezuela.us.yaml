@@ -24,6 +24,14 @@ button:
   syllabus_submit_text: "DOWNLOAD"
   apply_button_link: "/apply"
   cohort_more_details_text: "DETAILS"
+
+custom_bar:
+  active: false
+  message: Lorem ipsum dot simet mosd ei
+  button: 
+    label: "Read More"
+    path: "#" #string (can be inline path using #, relative path or absolute path)
+
 badges:
   title: ""
   paragraph: "4Geeks Academy is the place where developers grow and thrive.
@@ -41,6 +49,7 @@ news:
 
 upcoming:
   no_dates_message: "There are currently no upcoming dates for this campus"
+  actionMessage: "Let me know when dates are available"
 info_box:
   heading: "Find us in Caracas"
   address: "Centro Financiero Madrid, Nivel Mezzanina Calle Madrid Municipio Baruta Distrito Capital, 1080, Miranda, Venezuela"

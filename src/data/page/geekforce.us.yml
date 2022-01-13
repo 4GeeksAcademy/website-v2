@@ -22,7 +22,7 @@ geekForce:
 
 # Banner of icons
 icons:
-  - icon: "contract"
+  - icon: "contract-checked"
     title: "86% of our students hired"
   - icon: "job"
     title: "POST PROGRAM LABOR SUPPORT"

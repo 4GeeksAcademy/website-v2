@@ -1,7 +1,5 @@
 import React, {useState} from 'react';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import {Carousel} from 'react-responsive-carousel';
-import Card from "../Card"
 import {H2, H3, H4, Paragraph} from '../Heading'
 import {GridContainer, Div} from '../Sections'
 import {Colors} from '../Styling'
@@ -12,7 +10,6 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 const Testimonials = (props) => {
     let testimonialsArray = props.lang[0].node;
-    // console.log("testimonialsArray", testimonialsArray)
     let testimonialsFiltered = testimonialsArray.testimonials.filter(item => item.hidden !== true && item.include_in_marquee === true)
     return (
 
@@ -23,25 +20,25 @@ const Testimonials = (props) => {
 
                 {/* MARQUEE_V2 
 
-                    you can modify:
+                    Optional atrributes:
                         speed: number <int | dec>
                         reversed: boolean
-                        containerStyle
+                        containerstyle
                 */}
                 <Marquee_v2
                     speed={0.7}
                     reversed={false}
-                    containerStyle={{height: "215px"}}
+                    containerstyle={{height: "215px"}}
                 >
-                    <Div className="testimonial-slider" display="flex" height="auto" background="linear-gradient(#f5f5f5, white)" padding="0 0 40px 0">
+                    <Div className="testimonial-slider" display="flex" height="auto" padding="0 0 40px 0">
                         {testimonialsFiltered.map((item, i) => {
 
                             return (
-                                <Div display="flex" background="#ffffff" minWidth="245px" width="320px" height="150px" margin="0 12px 0 0" padding="20px 24px 30px 20px" border="1px solid #EBEBEB" alignItems="flex-start">
+                                <Div key={`${i}-${item.student_name}`} display="flex" background="#ffffff" minWidth="245px" boxShadow="0px 2px 5px rgba(0, 0, 0, 0.1)" width="320px" height="150px" margin="0 12px 0 0" padding="20px 24px 30px 20px" border="1px solid #EBEBEB" alignItems="flex-start">
                                     <GatsbyImage
                                         // fluid={item.student_thumb.childImageSharp.fluid}
                                         image={getImage(item.student_thumb.childImageSharp.gatsbyImageData)}
-                                        alt={item.alt}
+                                        alt={item.student_name}
                                         style={{height: "39px", minWidth: "39px", width: "39px", backgroundSize: `cover`}}
                                     />
                                     <Div display="flex" flexDirection="column" alignItems="flex-start" width="100%" height="100%" padding="0 9px 0 9px" style={{position: "relative"}}>
@@ -66,7 +63,7 @@ const Testimonials = (props) => {
                                                 <GatsbyImage
                                                     // fluid={item.linkedin_image.childImageSharp.fluid}
                                                     image={getImage(item.linkedin_image.childImageSharp.gatsbyImageData)}
-                                                    alt={item.alt}
+                                                    alt={`Linkedin - ${item.student_name}`}
                                                     style={{
                                                         height: "14px", width: "59px", margin: "auto", backgroundSize: `cover`, position: "absolute", bottom: "0", right: "0"
                                                     }}

@@ -1,7 +1,7 @@
-import React, {useEffect, useState, useContext} from 'react';
+import React from 'react';
 import PropTypes from "prop-types"
-import styled, {css, keyframes} from 'styled-components';
-import {Button, Colors} from '../Styling';
+import styled from 'styled-components';
+import {Devices} from '../Responsive';
 
 const Close = styled.div`
     font-family: 'Helvetica', 'Arial', sans-serif;
@@ -23,8 +23,12 @@ const ModalBox = styled.div`
     height: 100vh;
     z-index: 1000;
     background: white;
-    overflow: hidden;
+    overflow-y: auto;
     display: ${props => props.open ? "block" : "none"};
+    
+    @media  ${Devices.md}{
+        overflow: hidden;
+      }
 `
 //display: ${props => props.open === true ? "inline-block" : "none"};
 const Modal = (props) => {

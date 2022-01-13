@@ -21,7 +21,7 @@ const Title_Paragraph = (props) => {
           flexDirection="column"
           alignItems="center"
           padding_tablet="0 4em"
-          padding="0 2em"
+          padding="0 10px"
         >
           {/*<H2 margin="0 0 15px 0" fontSize="15px" lineHeight="19px" fontWeight="900">{title}</H2>*/}
           <H2 
@@ -34,7 +34,8 @@ const Title_Paragraph = (props) => {
             color="#3A3A3A"
             width="100%"
             margin="0 0 15px 0"
-            style={{fontStyle: "normal", textTransform: "uppercase"}}
+            textTransform="uppercase"
+            style={{fontStyle: "normal"}}
           >
             {props.title}
           </H2>
@@ -44,6 +45,8 @@ const Title_Paragraph = (props) => {
             fontWeight="normal"
             fontSize="15px"
             lineHeight="22px"
+            padding="0"
+            padding_tablet="0 14%"
             letterSpacing="0.05em"
             color="#3A3A3A"
             width="100%"
@@ -124,13 +127,10 @@ const Images_Centered = (props) => {
 
       {props.images.map((l, i) => {
         return (
-          <Div margin="0 20px 40px 20px"
-          // columnGap={i >= 4 ? "": ""}
-          // margin_tablet={`0 calc(${i % 2 === 1 ? `${120}px`: "30px"}) 30px calc(${i % 2 === 1 ? `${120}px`: "30px"})`}
-
-          margin_tablet={`0 ${i >= 4 ? '32px': "42px"} 30px ${i >= 4 ? '32px': "42px"}`}
-
-          // margin_tablet="0 61px 40px 0"
+          <Div
+            key={`${i}-${l.name}`}
+            margin="0 20px 40px 20px"
+            margin_tablet={`0 ${i >= 4 ? '32px': "42px"} 30px ${i >= 4 ? '32px': "42px"}`}
           >
             <GatsbyImage
               key={i}
@@ -150,14 +150,15 @@ const Images_Centered = (props) => {
 
 //Imagenes con propiedad featured==true
 const Images_Featured = (props) => {
+  const imagesFiltered = props.images.filter(f => f.featured === true)
   return (
     <>
-      <GridContainer columns_tablet="3" padding_tablet={props.paddingFeatured || "0"}>
-        {(props.featuredImages ? props.featuredImages : props.images.filter(f => f.featured === true)).map((m, i) => {
+      <GridContainer justifyItems="center" style={{justifyItems: 'center'}} justifyContentChild="center" columns_tablet={imagesFiltered.length <= 4 ? imagesFiltered.length : '3'} padding_tablet={props.paddingFeatured || "0"}>
+        {(props.featuredImages ? props.featuredImages : imagesFiltered).map((m, i) => {
           return (
             <GatsbyImage
               key={i}
-              style={{height: "55px", minWidth: "100px", margin: "23px 15px"}}
+              style={{height: "55px", minWidth: "100px", width: "200px", margin: "23px 15px"}}
               imgStyle={{objectFit: "contain"}}
               alt={m.name}
               image={getImage(m.image.childImageSharp.gatsbyImageData)}
@@ -179,13 +180,14 @@ const Images_Featured = (props) => {
 
 
 //Punto de entrada al componente
-const OurPartners = ({title, paragraph, margin, padding, paddingFeatured, background, link, showFeatured, featuredImages, images, withoutLine, slider, marquee, ...rest}) => {
+const OurPartners = ({title, borderBottom, paragraph, margin, padding, paddingFeatured, background, link, showFeatured, featuredImages, images, withoutLine, slider, marquee, ...rest}) => {
 
 
   let FragmentStyle = {
     background: background,
-    margin: `${margin ? margin : "40px 0 0px 0"}`,
-    padding: `${padding ? padding : "75px 0 75px 0"}`,
+    margin: `${margin || "40px 0 0 0"}`,
+    padding: `${padding || "75px 0"}`,
+    borderBottom: borderBottom,
   }
 
 

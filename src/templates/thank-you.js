@@ -5,6 +5,7 @@ import {H1, H2, H3, H4, Paragraph} from '../components/Heading'
 import {Button, Colors, Anchor, RoundImage} from '../components/Styling'
 import Icon from '../components/Icon';
 import {SessionContext} from '../session.js'
+import {isCustomBarActive} from '../actions';
 import Link from 'gatsby-link'
 import LazyLoad from 'react-lazyload';
 
@@ -50,7 +51,7 @@ const ThankYou = (props) => {
         <Icon icon="landingCircles/smCircle-mustard" style={{zIndex: 2, position: "absolute", right: "299px", top: "122px"}} />
       </Div>
       
-      <Div flexDirection="column" background={Colors.lightYellow} padding="68px 0" height="auto" margin="80px 0 0 0">
+      <Div flexDirection="column" background={Colors.lightYellow} padding="68px 0" height="auto" margin={isCustomBarActive(session) ? "140px 0 0 0" : "80px 0 0 0"}>
         <H1
           type="h1"
           zIndex="5"
@@ -82,11 +83,13 @@ const ThankYou = (props) => {
                 key={i}
                 cursor="pointer"
                 to={ln.link}
-                textAlign="left"
                 fontSize="13px"
-                lineHeight="22px"
                 fontWeight="400"
-                textTransform="uppercase"
+                style={{
+                  textTransform: "uppercase",
+                  lineHeight: "22px",
+                  textAlign: "left"
+                }}
                 color={Colors.black}
               >
                 {ln.icon && (
@@ -113,86 +116,85 @@ const ThankYou = (props) => {
         {
           blog_posts.map((item, i) => {
             return (
-            <>
               <Div key={i} flexDirection="Column" margin="0 0 87px 0">
                   {
-                      item.node.frontmatter.image !== "" && (
+                    item.node.frontmatter.image !== "" && (
                       <Link to={`/${pageContext.lang}/${item.node.frontmatter.cluster}/${item.node.frontmatter.slug}`}>
-                          <LazyLoad height={10} scroll={true} once={true}>
-
+                        <LazyLoad height={10} scroll={true} once={true}>
                           <RoundImage
-                              url={item.node.frontmatter.image !== null ? item.node.frontmatter.image :  yml.banner.no_image}
-                              bsize="cover"
-                              border="0px"
-                              position="center"
-                              width="100%"
-                              height="329px"
+                            url={item.node.frontmatter.image !== null ? item.node.frontmatter.image :  yml.banner.no_image}
+                            bsize="cover"
+                            border="0px"
+                            position="center"
+                            width="100%"
+                            height="329px"
                           />
-                          </LazyLoad>
+                        </LazyLoad>
                       </Link>
-                      )
+                    )
                   }
 
                   {/* Boton */}
                   <Div flexDirection_md="row" flexDirection="column" justifyContent="left">
-                      <Link to={`/${pageContext.lang}/${item.node.frontmatter.cluster}/${item.node.frontmatter.slug}`}>
-                          <Button
-                              variant="outline"
-                              border={`1px solid ${Colors.darkGray}`}
-                              color={Colors.darkGray}
-                              font='"Lato", sans-serif'
-                              margin="20px 10px 20px 0"
-                              pointer
-                              textColor={Colors.darkGray}
-                              fontSize={"13px"}>
-                              {item.node.frontmatter.cluster?.replace(/-|_/g,' ') || "4Geeks"}
-                          </Button>
-                      </Link>
+                    <Link to={`/${pageContext.lang}/${item.node.frontmatter.cluster}/${item.node.frontmatter.slug}`}>
+                      <Button
+                        variant="outline"
+                        border={`1px solid ${Colors.darkGray}`}
+                        color={Colors.darkGray}
+                        font='"Lato", sans-serif'
+                        margin="20px 10px 20px 0"
+                        pointer
+                        textColor={Colors.darkGray}
+                        fontSize={"13px"}>
+                        {item.node.frontmatter.cluster?.replace(/-|_/g,' ') || "4Geeks"}
+                      </Button>
+                    </Link>
                   </Div>
 
                   {/* Titulo */}
                   <Div>
-                      <Link to={`/${pageContext.lang}/${item.node.frontmatter.cluster}/${item.node.frontmatter.slug}`}>
-                          <H4
-                              textAlign="left"
-                              align_sm="left"
-                              margin="0 0 30px 0"
-                              fs_xs="20px"
-                              fs_sm="24px"
-                              fs_md="16px"
-                              fs_lg="20px"
-                              fontSize="22px"
-                          >
-                              {item.node.frontmatter.title}
-                          </H4>
-                      </Link>
+                    <Link to={`/${pageContext.lang}/${item.node.frontmatter.cluster}/${item.node.frontmatter.slug}`}>
+                      <H4
+                        textAlign="left"
+                        align_sm="left"
+                        margin="0 0 30px 0"
+                        fs_xs="20px"
+                        fs_sm="24px"
+                        fs_md="16px"
+                        fs_lg="20px"
+                        fontSize="22px"
+                      >
+                        {item.node.frontmatter.title}
+                      </H4>
+                    </Link>
                   </Div>
 
                   {/* Comentario acerca del post */}
                   <Div>
-                      <Paragraph fontWeight="300"
-                          fontSize="15px"
-                          color="#3A3A3A"
-                          textAlign="left"
-                          margin="0 0 15px 0">
-                          {item.node.frontmatter.excerpt}
-                      </Paragraph>
+                    <Paragraph
+                      fontWeight="300"
+                      fontSize="15px"
+                      color="#3A3A3A"
+                      textAlign="left"
+                      margin="0 0 15px 0">
+                      {item.node.frontmatter.excerpt}
+                    </Paragraph>
                   </Div>
 
                   {/* Link de leer articulo */}
                   <Div>
-                      <Paragraph fontSize="13px"
-                          color="#0097cd"
-                          margin="0 0 0 0"
-                          textAlign="left">
-                          <Link to={`/${pageContext.lang}/${item.node.frontmatter.cluster}/${item.node.frontmatter.slug}`}>
-                              {`Read more >`}
-                          </Link>
-                      </Paragraph>
+                    <Paragraph
+                      fontSize="13px"
+                      color="#0097cd"
+                      margin="0 0 0 0"
+                      textAlign="left"
+                    >
+                      <Link to={`/${pageContext.lang}/${item.node.frontmatter.cluster}/${item.node.frontmatter.slug}`}>
+                          {`Read more >`}
+                      </Link>
+                    </Paragraph>
                   </Div>
-
               </Div>
-              </>
           )}
           )}
           </GridContainer>

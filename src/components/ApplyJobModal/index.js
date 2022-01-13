@@ -197,7 +197,7 @@ const ApplyJobModal = (props) => {
                         setFormStatus({ status: 'idle', msg: 'Resquest' });
                       }
                     }}
-                    value={formData.full_name.value}
+                    value={formData.full_name.value || ""}
                     errorMsg={findElement("full_name", "error")}
                     required={findElement("full_name", "required")}
                   />
@@ -216,7 +216,7 @@ const ApplyJobModal = (props) => {
                         setFormStatus({ status: 'idle', msg: 'Resquest' });
                       }
                     }}
-                    value={formData.location.value}
+                    value={formData.location.value || ""}
                     errorMsg={findElement("location", "error")}
                     required={findElement("location", "required")}
                   />
@@ -235,7 +235,7 @@ const ApplyJobModal = (props) => {
                           setFormStatus({ status: 'idle', msg: 'Resquest' });
                         }
                       }}
-                      value={formData.email.value}
+                      value={formData.email.value || ""}
                       errorMsg={findElement("email", "error")}
                       required={findElement("email", "required")}
                     />
@@ -254,7 +254,7 @@ const ApplyJobModal = (props) => {
                           setFormStatus({ status: 'idle', msg: 'Resquest' });
                         }
                       }}
-                      value={formData.phone.value}
+                      value={formData.phone.value || ""}
                       errorMsg={findElement("phone", "error")}
                       required={findElement("phone", "required")}
                     />
@@ -274,7 +274,7 @@ const ApplyJobModal = (props) => {
                         setFormStatus({ status: 'idle', msg: 'Resquest' });
                       }
                     }}
-                    value={formData.resume.value}
+                    value={formData.resume.value || ""}
                     errorMsg="Please send your resume file"
                     required
                   />
@@ -293,7 +293,7 @@ const ApplyJobModal = (props) => {
                         setFormStatus({ status: 'idle', msg: 'Resquest' });
                       }
                     }}
-                    value={formData.linkedin.value}
+                    value={formData.linkedin.value || ""}
                   />
 
                   <Input
@@ -310,7 +310,7 @@ const ApplyJobModal = (props) => {
                         setFormStatus({ status: 'idle', msg: 'Resquest' });
                       }
                     }}
-                    value={formData.website.value}
+                    value={formData.website.value || ""}
                   />
                   <Button
                     height="40px"

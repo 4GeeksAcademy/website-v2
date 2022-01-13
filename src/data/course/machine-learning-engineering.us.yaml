@@ -44,7 +44,8 @@ badges:
   paragraph: "4Geeks Academy is the place where developers grow and thrive. We are licensed by the USA F. Dep. of Education. Chosen as one of the top 35 bootcamps of the world and top coding bootcamp in Miami according to SwitchUp. Recognized as the top 10 coding bootcamps in the United States according to Newsweek."
 
 upcoming:
-  no_dates_message: "There are currently no upcoming dates for this program"  
+  no_dates_message: "There are currently no upcoming dates for this program"
+  actionMessage: "Let me know when dates are available"
 
 ## PROGRAM DETAILS
 details:
@@ -56,12 +57,16 @@ details:
       list:
         - label: "Duration"
           content:  "15 Weeks"
+          icon: "calendar"
         - label: "Classes"
           content: "3 classes weekly"
+          icon: "book"
         - label: "Certificate"
           content: ""
+          icon: "certificate"
         - label: "Requisites"
           content: "Have a background in math, data, statistics or programming"
+          icon: "contract-checked"
   heading: Machine Learning Engineering Syllabus
   weeks: 15
   weeks_label: "weeks"

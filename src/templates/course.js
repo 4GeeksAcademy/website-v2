@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import {Link} from "gatsby";
+import {isCustomBarActive} from '../actions';
 import BaseRender from './_baseLayout'
 import {Container, Header, Column, Wrapper, WrapperImage, Divider, Sidebar, Div, GridContainer} from '../components/Sections'
 import {Title, H1, H2, H3, H4, H5, Span, Paragraph} from '../components/Heading'
@@ -54,6 +55,9 @@ const Program = ({data, pageContext, yml}) => {
   return (<>
 
     <Header
+      margin={isCustomBarActive(session) ? "120px 0 0 0" : ""}
+      paragraphMargin="26px 0"
+      paragraphMargin_Tablet="26px 22%"
       seo_title={yml.seo_title}
       title={yml.header.title}
       paragraph={yml.header.paragraph}
@@ -119,11 +123,12 @@ const Program = ({data, pageContext, yml}) => {
     <GridContainer padding_tablet="0" margin_tablet="90px 0 62px 0" margin="57px 0">
       <Div height="5px" background="#EBEBEB"></Div>
     </GridContainer>
-    <UpcomingDates lang={pageContext.lang} message={courseDetails.upcoming.no_dates_message} />
+    <UpcomingDates lang={pageContext.lang} message={courseDetails.upcoming.no_dates_message} actionMessage={courseDetails.upcoming.actionMessage} />
     <GridContainer padding_tablet="0" margin_tablet="0 0 62px 0">
       <Div height="1px" background="#EBEBEB"></Div>
     </GridContainer>
     <PricesAndPayment
+      background={`linear-gradient(to bottom, ${Colors.white} 50%, ${Colors.lightYellow2} 50%)`}
       type={pageContext.slug}
       lang={pageContext.lang}
       session={session}
@@ -265,6 +270,7 @@ export const query = graphql`
             }
             upcoming{
               no_dates_message
+              actionMessage
             }
             credentials{
               heading

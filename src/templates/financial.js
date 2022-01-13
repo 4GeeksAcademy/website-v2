@@ -1,7 +1,8 @@
 import React from 'react';
 import { Colors} from '../components/Styling';
 import BaseRender from './_baseLayout';
-import {SessionContext} from '../session.js'
+import {SessionContext} from '../session'
+import {isCustomBarActive} from '../actions';
 
 // components
 import FinancialFilter from '../components/FinancialFilter';
@@ -12,7 +13,7 @@ import {Div} from '../components/Sections'
 const SVGBubblesLeft = () => 
     <svg style={{top: "75px", left: "75px", position: "absolute"}} width="205" height="286" viewBox="0 0 205 286" fill="none" xmlns="https:://www.w3.org/2000/svg">
       <circle cx="191.5" cy="59.5" r="13.5" fill="#CD0000"/>
-      <circle cx="8.5" cy="8.5" r="8.5" fill="#FFB718" fill-opacity="0.2"/>
+      <circle cx="8.5" cy="8.5" r="8.5" fill="#FFB718" fillOpacity="0.2"/>
       <circle cx="40.5" cy="63.5" r="8.5" fill="white"/>
       <circle cx="8.5" cy="43.5" r="8.5" fill="black"/>
       <circle cx="40.5" cy="98.5" r="8.5" fill="black"/>
@@ -58,30 +59,30 @@ const Financial = (props) => {
           <SVGBubblesRight />
       </Div>
       <Header
-          background={Colors.lightBlue2}
-          fontSize="40px"
-          seo_title={yml.seo_title}
-          title={yml.header.title}
-          paragraph={yml.header.paragraph}
-          padding_tablet="72px 0 15px 0"
-          padding="72px 0 15px 0"  
-      >
-      </Header>
+        margin={isCustomBarActive(session) ? "120px 0 0 0" : ""}
+        background={Colors.lightBlue2}
+        fontSize="40px"
+        seo_title={yml.seo_title}
+        title={yml.header.title}
+        paragraph={yml.header.paragraph}
+        padding_tablet="72px 0 15px 0"
+        padding="72px 0 15px 0"  
+      />
       <FinancialFilter
-          button_text={yml.syllabus_button_text}
-          program={yml.label.program.title}
-          programClosedLabel={yml.label.program.closedLabel}
-          modality={yml.label.modality.title}
-          modalityClosedLabel={yml.label.modality.closedLabel}
-          campus={yml.label.campus.title}
-          campusClosedLabel={yml.label.campus.closedLabel}
-          // openedLabel={yml.prices.opened_label}
-          session={session}
-          // closedLabel={yml.prices.closed_label}
-          type={pageContext.slug}
-          lang={pageContext.lang}
-          locations={data.allLocationYaml.edges}
-        />
+        button_text={yml.syllabus_button_text}
+        program={yml.label.program.title}
+        programClosedLabel={yml.label.program.closedLabel}
+        modality={yml.label.modality.title}
+        modalityClosedLabel={yml.label.modality.closedLabel}
+        campus={yml.label.campus.title}
+        campusClosedLabel={yml.label.campus.closedLabel}
+        // openedLabel={yml.prices.opened_label}
+        session={session}
+        // closedLabel={yml.prices.closed_label}
+        type={pageContext.slug}
+        lang={pageContext.lang}
+        locations={data.allLocationYaml.edges}
+      />
     </>
   )
 };
@@ -281,6 +282,20 @@ export const query = graphql`
                       heading_two
                     }
                   }
+                  scholarship {
+                    header {
+                      sub_heading
+                      heading_one
+                      heading_two
+                    }
+                    content {
+                      price
+                      price_info
+                    }
+                    button {
+                      button_text
+                    }
+                  }
                 }
                 part_time {
                   slug
@@ -329,6 +344,20 @@ export const query = graphql`
                       heading_one
                       sub_heading
                       heading_two
+                    }
+                  }
+                  scholarship {
+                    header {
+                      sub_heading
+                      heading_one
+                      heading_two
+                    }
+                    content {
+                      price
+                      price_info
+                    }
+                    button {
+                      button_text
                     }
                   }
                 }

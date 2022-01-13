@@ -1,15 +1,17 @@
 import React, {useCallback, useState} from 'react';
 import {graphql} from 'gatsby'
-import {Grid, Div, Header, GridContainer} from '../components/Sections'
+import {Div, Header, GridContainer} from '../components/Sections'
 import {H2, H3, H4, Paragraph} from '../components/Heading'
 import {Colors, Button} from '../components/Styling'
 import {Charts} from '../components/Chart'
 import BaseRender from './_baseLayout'
-import ChooseProgram from '../components/ChooseProgram'
 import { StyledBackgroundSection } from '../components/Styling';
 import Modal from '../components/Modal';
 import LeadForm from '../components/LeadForm';
 import {outcomesReport} from "../actions";
+import {SessionContext} from '../session'
+import {isCustomBarActive} from '../actions';
+import ScrollSpy from "../components/ScrollSpy"
 
 const SVGImage = () =>
 <svg width="510" height="295" viewBox="0 0 510 295" fill="none" xmlns="https:://www.w3.org/2000/svg">
@@ -18,19 +20,19 @@ const SVGImage = () =>
 <circle cx="58" cy="194" r="58" fill="#FFB718"/>
 <circle cx="228" cy="128" r="14" fill="#FFB718"/>
 <circle cx="177.5" cy="55.5" r="26.5" fill="#0097CD"/>
-<circle cx="316.5" cy="8.5" r="8.5" fill="#FFB718" fill-opacity="0.2"/>
-<circle cx="348.5" cy="63.5" r="8.5" fill="#FFB718" fill-opacity="0.2"/>
-<circle cx="426.5" cy="27.5" r="8.5" transform="rotate(90 426.5 27.5)" fill="#FFB718" fill-opacity="0.2"/>
+<circle cx="316.5" cy="8.5" r="8.5" fill="#FFB718" fillOpacity="0.2"/>
+<circle cx="348.5" cy="63.5" r="8.5" fill="#FFB718" fillOpacity="0.2"/>
+<circle cx="426.5" cy="27.5" r="8.5" transform="rotate(90 426.5 27.5)" fill="#FFB718" fillOpacity="0.2"/>
 <circle cx="316.5" cy="43.5" r="8.5" fill="black"/>
 <circle cx="348.5" cy="98.5" r="8.5" fill="black"/>
 <circle cx="500.5" cy="276.5" r="8.5" transform="rotate(90 500.5 276.5)" fill="black"/>
-<circle cx="316.5" cy="98.5" r="8.5" fill="#FFB718" fill-opacity="0.2"/>
-<circle cx="348.5" cy="141.5" r="8.5" fill="#FFB718" fill-opacity="0.2"/>
-<circle cx="348.5" cy="27.5" r="8.5" transform="rotate(90 348.5 27.5)" fill="#FFB718" fill-opacity="0.2"/>
-<circle cx="316.5" cy="141.5" r="8.5" fill="#FFB718" fill-opacity="0.2"/>
-<circle cx="348.5" cy="178.5" r="8.5" fill="#FFB718" fill-opacity="0.2"/>
+<circle cx="316.5" cy="98.5" r="8.5" fill="#FFB718" fillOpacity="0.2"/>
+<circle cx="348.5" cy="141.5" r="8.5" fill="#FFB718" fillOpacity="0.2"/>
+<circle cx="348.5" cy="27.5" r="8.5" transform="rotate(90 348.5 27.5)" fill="#FFB718" fillOpacity="0.2"/>
+<circle cx="316.5" cy="141.5" r="8.5" fill="#FFB718" fillOpacity="0.2"/>
+<circle cx="348.5" cy="178.5" r="8.5" fill="#FFB718" fillOpacity="0.2"/>
 <circle cx="316.5" cy="243.5" r="8.5" fill="#0097CD"/>
-<circle cx="348.5" cy="277.5" r="8.5" fill="#FFB718" fill-opacity="0.2"/>
+<circle cx="348.5" cy="277.5" r="8.5" fill="#FFB718" fillOpacity="0.2"/>
 <rect x="398" y="76" width="77" height="11" rx="5.5" transform="rotate(90 398 76)" fill="black"/>
 <rect x="278" y="209" width="77" height="11" rx="5.5" transform="rotate(90 278 209)" fill="black"/>
 <rect x="183" y="209" width="77" height="11" rx="5.5" transform="rotate(90 183 209)" fill="black"/>
@@ -40,8 +42,8 @@ const SVGImage = () =>
 <circle cx="392.5" cy="17.5" r="13.5" fill="#CD0000"/>
 </svg>
 
-
 const Outcomes = ({data, pageContext, yml}) => {
+    const {session} = React.useContext(SessionContext);
     const [open, setOpen] = useState(false);
     const [active, setActive] = useState(false);
 
@@ -53,55 +55,11 @@ const Outcomes = ({data, pageContext, yml}) => {
     setOpen(false);
     };
 
-    // Create and Gets Ref for each property by title
-    let findMappedRef = yml.sections.reduce((acc, section) =>{
-        acc[section.title] = React.createRef();
-        return acc;
-    }, {});
-
-    const ExecuteScroll = React.forwardRef((props, ref) => {
-
-        // selectedButton for each Ref properties from Button
-        let selectedButton = useCallback(() => props.onSelectedRef(props.keyToScroll), [props.keyToScroll])
-        
-        // Gets the container title reference to Enable autoScroll <Div ref={findMappedRef[section.title]}>
-        let executeScroll= (e, ref) =>{
-            e.preventDefault();
-            window.scrollTo({
-              top: ref.current?.offsetTop - 30,
-              behavior: "smooth"
-            })
-        }
-
-        let executeFunctions = (e, ref) => {
-            executeScroll(e, ref)
-            selectedButton()
-        }
-        return (
-            <Div 
-                flexDirection="column"
-                isActive={props.isActive}
-                borderLeftActive="5px solid black"
-                backgroundActive="#F5F5F5"
-                borderLeft="5px solid white" 
-                padding_tablet="5px 10px 5px 20px"
-            >
-                <Paragraph
-                    cursor="pointer"
-                    key={props.keyToScroll}
-                    fontSize="13"
-                    onClick={(e) => executeFunctions(e, props.actionRef)}
-                    transitionSec="3"
-                    isActive={props.isActive}
-                    textAlign="center"
-                    textAlign_tablet="left"
-                    >
-                    {props.title.toUpperCase()}
-                </Paragraph>
-            </Div>
-        ) 
-      })
-
+    const convertToSlug = (convertText) => {
+        return convertText.toLowerCase()
+            .replace(/ /g, '-')
+            .replace(/[^\w-]+/g, '');
+      }
 
     return (
         <Div padding="0 0 50px 0" flexDirection="column">
@@ -115,18 +73,56 @@ const Outcomes = ({data, pageContext, yml}) => {
                 svg_image={<SVGImage />}
                 background={Colors.lightYellow}
             />
+            <Div
+                display="flex"
+                display_tablet="none"
+                width="auto"
+                margin="0 0 0 -17px"
+                background={Colors.white}
+                style={{
+                borderBottom: "1px solid #EBEBEB",
+                overflowX: "auto",
+                zIndex: "999",
+                position:"sticky",
+                top: `${isCustomBarActive(session) ? "50px": "0"}`,
+                }}
+                padding="0 35px"
+                alignItems="center"
+                flexDirection="row"
+                gap="40px"
+                width="100%"
+                height="70px"
+                className="scroll-spy-container"
+            >
+                <ScrollSpy offsetTop={140} autoScrollOffsetTop={-140}>
+                    {yml.sections.filter(i => i.title !== "").map((m) => (
+                        <button 
+                            key={convertToSlug(m.title)}
+                            width="auto"
+                            padding="0 20px"
+                            href={`#${convertToSlug(m.title)}`}
+                            ref={React.createRef()}
+                        >
+    
+                            <Paragraph textTransform="uppercase" width="max-content">
+                                {m.title}
+                            </Paragraph>
+                        </button>
+                    ))}
+                </ScrollSpy>
+            </Div>
 
             <GridContainer columns="12" padding="0 17px" padding_tablet="0 65px 0 0 " >
                 <Div gridArea="1/2/1/12" flexDirection="column"  >
                     {yml.sections.filter(section => section.title !== "").map((section, i) => {
                         return (
-                            <>
-                                <Div key={i}  ref={findMappedRef[section.title]}>
-                                    <H2 type="h2" padding="10px 0" margin="54px 0 0 0 " textAlign="left" >{section.title}</H2>
+                            <React.Fragment key={i}>
+                                <Div>
+                                    <H2 id={convertToSlug(section.title)} type="h2" padding="10px 0" margin="54px 0 0 0 " textAlign="left" >{section.title}</H2>
                                 </Div>
                                 <Div style={{margin: "20px 0", height: "1px", background: "#c4c4c4"}} />
                                 {section.paragraph.split("\n").map((m, i) =>
-                                    <Paragraph letterSpacing="0.05em" key={i} textAlign="left" margin="10px 0" >{m}</Paragraph>
+                                    <Paragraph key={i} letterSpacing="0.05em" textAlign="left" margin="10px 0" >{m}</Paragraph>
                                 )}
                                 <GridContainer justifyContent="between" gridGap_tablet="30px" containerColumns_tablet={`0fr repeat(12, 1fr) 1fr`} columns_tablet={Array.isArray(section.stats) && section.stats.length} margin="41px 0 0 0">
                                     {section.stats.map((m, i) => {
@@ -149,18 +145,6 @@ const Outcomes = ({data, pageContext, yml}) => {
                                                     Array.isArray(m.image_section) && m.image_section.map((m, i) => {
                                                         return (
                                                             <React.Fragment key={i}>
-                                                                {/*
-                                                                // probably it's not necesary, it returns warning on SSR
-                                                                
-                                                                <Img
-                                                                    style={{height: "100%"}}
-                                                                    imgStyle={{objectFit: "contain"}}
-                                                                    // loading="eager"
-                                                                    style={{margin: "38px 0"}}
-                                                                    // fadeIn={false}
-                                                                    alt={section.title}
-                                                                    fluid={m.image.childImageSharp.fluid}
-                                                                /> */}
                                                                 <StyledBackgroundSection
                                                                     margin="30px 0"
                                                                     minHeight={`100px`}
@@ -192,25 +176,36 @@ const Outcomes = ({data, pageContext, yml}) => {
                                         )
                                     })
                                 }
-                            </>)
+                            </React.Fragment>)
                     })}
                 </Div>
                 <Div gridArea="1/9/1/13" gridColumn_tablet="1 ​/ span 1" margin="54px 0 0 0" display="none" display_md="flex" style={{position: "relative"}}>
-                    <Div flexDirection="column" position={!open ? "sticky" : "inherit"} style={{boxShadow: "0px 2px 5px rgba(0, 0, 0, 0.1)", top: "85px"}} borderRadius="3px" border={`1px solid #e5e5e5`} width="266px" height="fit-content">
-                        <Div margin="25px 0px 0" flexDirection="column" justifyContent="space-around" gap="8px">
-                        {
-                            yml.sections.filter(i => i.title !== "").map((m, i) => {
+                    <Div flexDirection="column" position={!open ? "sticky" : "inherit"} style={{boxShadow: "0px 2px 5px rgba(0, 0, 0, 0.1)", top: `${isCustomBarActive(session) ? "150px": "90px"}`}} borderRadius="3px" border={`1px solid #e5e5e5`} width="266px" height="fit-content">
+                        <Div className="container-sidebar-content" margin="25px 0px 0" flexDirection="column" justifyContent="space-around" gap="8px">
+                            <ScrollSpy offsetTop={120} autoScrollOffsetTop={-120}>
+                            {
+                                yml.sections.filter(i => i.title !== "").map((m, i) => {
                                 return (
-                                    <ExecuteScroll 
-                                        keyToScroll={i} 
-                                        title={m.title} 
-                                        actionRef={findMappedRef[m.title]}
-                                        onSelectedRef={setActive} 
-                                        isActive={active === i}
-                                    />
+                                    <button
+                                        key={convertToSlug(m.title)}
+                                        href={`#${convertToSlug(m.title)}`}
+                                        ref={React.createRef()}
+                                    >
+                                        <Paragraph
+                                            cursor="pointer"
+                                            fontSize="13"
+                                            transitionSec="3"
+                                            textAlign="center"
+                                            textAlign_tablet="left"
+                                            textTransform="uppercase"
+                                        >
+                                            {m.title}
+                                        </Paragraph>
+                                    </button>
                                     )
                                 })
                             }
+                            </ScrollSpy>
                         </Div>
 
                         <Button alignSelf="center" onClick={handleOpen} variant="full" width="80%" width_tablet="fit-content" color={Colors.blue} padding="0 16%" margin="20px 0 25px 0" textColor="white">{yml.download.button_text}</Button>

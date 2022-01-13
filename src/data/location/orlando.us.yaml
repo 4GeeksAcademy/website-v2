@@ -33,6 +33,7 @@ news:
   title: "4Geeks Academy Orlando has been reviewed in:"
 upcoming:
   no_dates_message: "There are currently no upcoming dates for this campus"
+  actionMessage: "Let me know when dates are available"
 button_header:
   button_text: See Programs
   button_link: "#programs"
@@ -42,6 +43,13 @@ button:
   syllabus_submit_text: "DOWNLOAD"
   apply_button_link: "/apply"
   cohort_more_details_text: "DETAILS"
+
+custom_bar:
+  active: false
+  message: Lorem ipsum dot simet mosd ei
+  button: 
+    label: "Read More"
+    path: "#" #string (can be inline path using #, relative path or absolute path)
 
 info_box:
   heading: "Find us in Orlando"

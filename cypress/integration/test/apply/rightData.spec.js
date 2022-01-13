@@ -17,7 +17,7 @@ context("Test Apply page with correct data", () => {
   
 
       cy.get("[data-cy=first_name]")
-        .clear().click()
+        .clear({force: true}).click({force: true})
         .type(firstName)
         .should("have.css", "border-color", "rgb(0, 0, 0)"); // focus the form
     });
@@ -33,17 +33,17 @@ context("Test Apply page with correct data", () => {
       }).as('postForm')
 
       cy.get("[data-cy=email]")
-        .clear().click()
+        .clear({force: true}).click({force: true})
         .type(email)
         .should("have.css", "border-color", "rgb(0, 0, 0)");
 
       cy.get("[data-cy=phone]")
-        .clear().click()
+        .clear({force: true}).click({force: true})
         .type(phone)
         .should("have.css", "border-color", "rgb(0, 0, 0)");
 
       cy.get("[data-cy=dropdown_program_selector]")
-        .click().wait(500)
+        .click().wait(1500)
         .get("#react-select-2-option-0").click()
 
       cy.get("[data-cy=dropdown_academy_selector]")
@@ -57,12 +57,13 @@ context("Test Apply page with correct data", () => {
     cy.log("**_____ Verifying Interception _____**")
     cy.wait('@postForm');
     // it verify if the response has been intercepted and changed
-    cy.get('@postForm').then(xhr => {
-      console.log("Response Intercepted:::",xhr)
+    cy.get('@postForm').then(({ request, response }) => {
+      console.log("Response Intercepted:::",response)
+      console.log("Request Intercepted:::",request)
       // expect(xhr.response.statusCode).to.equal(201)
-      expect(xhr.response.body.first_name).to.equal('Rowan')
-      expect(xhr.response.body.email).to.equal('mark@outlook.com')
-      expect(xhr.response.body.phone).to.equal('1234567890')
+      expect(response.body.first_name).to.equal(request.body.first_name)
+      expect(response.body.email).to.equal(request.body.email)
+      expect(response.body.phone).to.equal(request.body.phone)
     })
   })
 

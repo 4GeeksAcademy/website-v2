@@ -7,8 +7,9 @@ import dayjs from "dayjs"
 import Select from '../Select'
 import 'dayjs/locale/de'
 import Icon from '../Icon';
-import LazyLoad from 'react-lazyload';
-import { getCohorts } from "../../actions"
+import styled from 'styled-components';
+import {Input} from "../Form"
+import { getCohorts, newsletterSignup } from "../../actions"
 import {SessionContext} from '../../session'
 
 const info = {
@@ -52,7 +53,14 @@ let modality = {
     part_time: "Full Stack Developer - Part Time"
 };
 
-const UpcomingDates = ({id, style, lang, location, message}) => {
+const Form = styled.form`
+    margin: 0 11px 0 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+`;
+
+const UpcomingDates = ({id, style, lang, location, message, actionMessage}) => {
     const dataQuery = useStaticQuery(graphql`
     {
       allUpcomingDatesYaml {
@@ -95,8 +103,17 @@ const UpcomingDates = ({id, style, lang, location, message}) => {
     const [data, setData] = useState({
         cohorts: {catalog: [], all: [], filtered: []}
     });
+    const [showForm, setShowForm] = useState(false);
     const [academy, setAcademy] = useState(null)
     const [filterType, setFilterType] = useState({label: "Upcoming Courses and Events", value: "cohorts"});
+    
+
+    const [formStatus, setFormStatus] = useState({status: "idle", msg: "Resquest"});
+    const [formData, setVal] = useState({
+        email: {value: '', valid: false},
+        consent: {value: true, valid: true},
+    });
+    
     let content = dataQuery.allUpcomingDatesYaml.edges.find(({node}) => node.fields.lang === lang);
     if (content) content = content.node;
     else return null;
@@ -125,6 +142,26 @@ const UpcomingDates = ({id, style, lang, location, message}) => {
         getData();
     }, []);
 
+    const formIsValid = (formData = null) => {
+        if (!formData) return null;
+        for (let key in formData) {
+            if (!formData[key].valid) return false;
+        }
+        return true;
+    }
+
+    const emailFormContent = {
+        heading: lang === 'us'
+            ? 'Send your email to notify you when there is a date available for this campus'
+            : 'Indicanos tu mail para avisarte cuando haya una fecha disponible para este campus',
+        buttonText: lang === 'us'
+            ? 'Let me know when there is a date'
+            : 'Avisenme cuando haya una fecha',
+        successfulText: lang === 'us'
+            ? 'Thanks for subscribing! We will notify you when there is a date available for this campus.'
+            : '¡Listo! Te avisaremos cuando haya una fecha disponible para este campus'
+    }
+
     useEffect(() => {
         if (session && Array.isArray(session.locations)) {
             const _data = {
@@ -142,12 +179,13 @@ const UpcomingDates = ({id, style, lang, location, message}) => {
     return (
         <GridContainer id={id} style={style} margin_tablet="0 0 48px 0">
             <Div flexDirection="column">
-                <Div padding="0 0 30px 0" style={{borderBottom: "1px solid black"}} justifyContent_md="between" flexDirection="column" flexDirection_tablet="row" alignItems_tablet="center">
+                <Div padding="0 0 30px 0" gap="15px" style={{borderBottom: "1px solid black"}} justifyContent_md="between" flexDirection="column" flexDirection_tablet="row" alignItems_tablet="center">
                     <H3 textAlign="left" width="188px">Next Dates</H3>
                     {!location &&
                         <Select
                             // margin="0 10px 0 0"
                             top="40px"
+                            padding="4px 10px"
                             left="20px"
                             width="300px"
                             maxWidth="100%"
@@ -245,10 +283,79 @@ const UpcomingDates = ({id, style, lang, location, message}) => {
                     )
                 })
                     :
-                    <Div flexDirection="column" justifyContent="center" alignItems="center" padding_tablet="90px 0">
+                    <>
+                    <Div display={showForm ? "none" : "flex"} padding="70px 0" flexDirection="column" justifyContent="center" alignItems="center" padding_tablet="90px 0">
                         <Icon icon="agenda" />
                         {message && <Paragraph margin="25px 0 0 0">{message}</Paragraph>}
+                        {actionMessage && <Paragraph color={Colors.blue} onClick={() => setShowForm(true)} width="auto" cursor="pointer" margin="10px 0 0 0" fontWeight="700">{actionMessage}</Paragraph>}
                     </Div>
+                    <Div padding="70px 10%" padding_tablet="90px 32%" display={showForm ? "flex" : "none"} flexDirection="column">
+                    {formStatus.status === "thank-you" ?
+                        <Div alignItems="center" flexDirection="column"><Icon icon="success" width="80px" height="80px"/> <H4 fontSize="15px" lineHeight="22px" margin="25px 0 10px 10px" align="center">{emailFormContent.successfulText}</H4></Div>
+                        : <>
+                            <H4 margin="0 0 25px 0" textAlign="left" display="block" display_tablet="block">{emailFormContent.heading}</H4>
+                            <Div justifyContent="center" width="100%">
+                                <Form onSubmit={(e) => {
+                                    e.preventDefault();
+                                    if (formStatus.status === "error") {
+                                        setFormStatus({status: "idle", msg: "Resquest"})
+                                    }
+                                    if (!formIsValid(formData)) {
+                                        setFormStatus({status: "error", msg: "There are some errors in your form"});
+                                    }
+                                    else {
+                                        setFormStatus({status: "loading", msg: "Loading..."});
+                                        newsletterSignup(formData, session)
+                                            .then(data => {
+                                                if (data.error !== false && data.error !== undefined) {
+                                                    setFormStatus({status: "error", msg: "Fix errors"});
+                                                }
+                                                else {
+                                                    setFormStatus({status: "thank-you", msg: "Thank you"});
+                                                }
+                                            })
+                                            .catch(error => {
+                                                console.log("error", error);
+                                                setFormStatus({status: "error", msg: error.message || error});
+                                            })
+                                    }
+                                }}>
+                                    <Input type="email" className="form-control" width="100%" placeholder="E-mail *"
+                                        borderRadius="3px"
+                                        bgColor={Colors.white}
+                                        margin="0"
+                                        onChange={(value, valid) => {
+                                            setVal({...formData, email: {value, valid}})
+                                            if (formStatus.status === "error") {
+                                                setFormStatus({status: "idle", msg: "Resquest"})
+                                            }
+                                        }}
+                                        value={formData.email.value}
+                                        errorMsg="Please specify a valid email"
+                                        required
+                                    />
+                                    {/* <button type="submit">{formStatus.status === "loading" ? "Loading..." : "text"}</button> */}
+                                    <Button
+                                        height="40px"
+                                        background={Colors.blue}
+                                        // margin="0 0 0 10px"
+                                        type="submit"
+                                        fontWeight="700"
+                                        justifyContent="center"
+                                        margin="35px 0 0 0"
+                                        width="100%"
+                                        fontSize="14px"
+                                        variant="full"
+                                        borderRadius="3px"
+                                        color={formStatus.status === "loading" ? Colors.darkGray : Colors.blue}
+                                        textColor={Colors.white}
+                                        disabled={formStatus.status === "loading" ? true : false}
+                                    >{formStatus.status === "loading" ? "Loading..." : emailFormContent.buttonText}   
+                                    </Button>
+                                </Form>
+                            </Div></>}
+                    </Div>
+                    </>
                 }
                 {Array.isArray(data.cohorts.filtered) && data.cohorts.filtered.length > 0 && <Link to={content.footer.button_link}><Paragraph margin="20px 0" color={Colors.blue}>{content.footer.button_text}</Paragraph></Link>}
             </Div>

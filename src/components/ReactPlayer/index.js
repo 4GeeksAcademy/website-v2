@@ -87,8 +87,7 @@ const Image = styled.div`
 `
 
 const Player = ({id, onPlay, onPause, onEnd, onError, onStateChange, onPlaybackRateChange,
-  onPlaybackQualityChange, imageSize, playerVars, noCookies, style, className,
-  thumb, left_tablet, right_tablet, With_Modal, switched, ...rest}) => {
+  onPlaybackQualityChange, imageSize, playerVars, noCookies, style, className, thumb, left_tablet, right_tablet, With_Modal, imageWidth, imageWidth_tablet, switched, ...rest}) => {
 
   const [showVideo, setShowVideo] = React.useState(false);
   const [vid, setVid] = React.useState({});
@@ -156,8 +155,7 @@ const Player = ({id, onPlay, onPause, onEnd, onError, onStateChange, onPlaybackR
           borderRadius={style.borderRadius}
           videoId={yt_parser(id)}
           id={`a-${id} do-not-delete-this-hack`}
-          // onReady={e => e.target.playVideo()}
-          onReady={e => setVid(e.target)}
+          onReady={e => e.target.pauseVideo()}
           onPlay={onPlay}
           onPause={onPause}
           onEnd={onEnd}
@@ -178,6 +176,8 @@ const Player = ({id, onPlay, onPause, onEnd, onError, onStateChange, onPlaybackR
       </>
     ) : (
       <Image
+        width={imageWidth}
+        width_tablet={imageWidth_tablet || "100%"}
         borderRadius="3px"
       >
         {id && <Play onClick={() => setShowVideo(true)} right_tablet={right_tablet} left_tablet={left_tablet} aria-label="Play Video" />}
@@ -267,12 +267,12 @@ const Play = styled.button`
   border-radius: 3px;
   color: ${props => props.white};
   font-size: 1em;
-  height: 44px;
+  height: 36px;
   padding: 0;
   text-align: center;
   text-indent: 0.1em;
   transition: all 150ms ease-out;
-  width: 44px;
+  width: 36px;
   position: absolute !important;
   top: 50%;
   left: 50%;
@@ -298,7 +298,7 @@ const Play = styled.button`
     border-width: 1em 0 1em 1.732em;
     border-color: transparent transparent transparent rgba(255, 255, 255, 1);
     content: " ";
-    font-size: 0.75em;
+    font-size: 0.45em;
     height: 0;
     margin: -1em 0 0 -0.75em;
     top: 50%;
@@ -316,6 +316,12 @@ const Play = styled.button`
     left: ${props => props.left_tablet};
   }
   @media  ${Devices.md}{
+    height: 44px;
+    width: 44px;
+
+    &:after {
+      font-size: 0.75em;
+    }
   }
   @media  ${Devices.lg}{
   }
