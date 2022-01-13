@@ -14,7 +14,7 @@ background-color: ${Colors.lightRed};
 `
 
 const PhoneInput = ({
-  defaultMask = '+999 999 999 999 999',
+  defaultMask,
   phoneFormValues,
   prefix = '+',
   containerStyle,
@@ -53,23 +53,15 @@ const PhoneInput = ({
   let highlightCountryIndex = 0;
 
   const getCountryPhoneMask= () => {
-    /*
-      maskList={{
-        us: '+9 (999) 999-9999',
-        cl: '+999 9999 9999'}}
-    */
     const maskList = [
       {us: `+${selectedCountry.dialCode || '1'} (999) 999-9999`},
       {cl: `+${selectedCountry.dialCode || '99'}9 9999 9999`},
       {default: defaultMask || `+${selectedCountry.dialCode} 999 999 999 999`},
     ];
     const getMask = maskList.find(code => code[selectedCountry.iso2] || code['default'])
-    return getMask[selectedCountry.iso2]
+    const mask = getMask[selectedCountry.iso2] || getMask['default'];
+    return mask
   }
-
-  // TODO: onclick outside de la bandera
-  // important: y no permitir letras en phone input
-  // email deve aceptar 2 extensiones
 
   const rawCountries = JSON.parse(JSON.stringify(countriesList));
   let hiddenAreaCodes = [];
