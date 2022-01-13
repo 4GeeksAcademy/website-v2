@@ -72,7 +72,7 @@ const ProgramDetails = (props) => {
                                     {/* Icon here */}
                                     {m.icon && <Icon icon={m.icon} width="32px" height="32px" />}
                                     <H4 type="h4" fontWeight="700" textAlign="left" >
-                                        {`${m.label}`}
+                                        {`${m.label}: `}
                                     </H4>
                                 </Div>
                                 <Div flexDirection={m.link && "column"} >
