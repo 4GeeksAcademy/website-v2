@@ -11,7 +11,7 @@ cluster: "trends-and-tech"
 post_format: ["Image"]
 post_translations: ["pll_5703862f49f64"]
 status: "published"
-featured: "false"
+featured: false
 
 ---
 

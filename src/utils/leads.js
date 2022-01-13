@@ -17,7 +17,7 @@ export const save_form = async (formData=null, tags=[], automations=[], session=
             return process.env.GATSBY_BREATHECODE_HOST
         }
     }
-
+    console.log("formData", formData.utm_language || session.language)
     const resp = await fetch(`${getEnvironmentAPI()}/marketing/lead`, {
         headers: new Headers({'content-type': 'application/json'}),
         method: "POST",
@@ -27,7 +27,7 @@ export const save_form = async (formData=null, tags=[], automations=[], session=
             tags: tags.join(","), 
             automations: automations.join(","), 
             utm_language: formData.utm_language || session.language,
-            language: session.language,
+            language: formData.utm_language || session.language,
             latitude: session.latitude,
             longitude: session.longitude,
             browser_lang: session.browserLang,

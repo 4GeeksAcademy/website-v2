@@ -1,15 +1,18 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React from 'react';
 import { graphql, Link } from 'gatsby';
-import Icon from '../new_components/Icon';
-import ApplyJobModal from '../new_components/ApplyJobModal';
-import { GridContainer, Div } from '../new_components/Sections';
-import { H1, H4, Paragraph } from '../new_components/Heading';
-import { Button, Colors } from '../new_components/Styling';
+import {SessionContext} from '../session'
+import {isCustomBarActive} from '../actions';
+import Icon from '../components/Icon';
+import ApplyJobModal from '../components/ApplyJobModal';
+import { GridContainer, Div } from '../components/Sections';
+import { H1, H4, Paragraph } from '../components/Heading';
+import { Button, Colors } from '../components/Styling';
 import BaseRender from './_baseLayout';
-import {Alert, Input} from "../new_components/Form/index";
+import {Alert} from "../components/Form/index";
 
 const Job = ({ data, pageContext, yml }) => {
   const [open, setOpen] = React.useState(false);
+  const {session} = React.useContext(SessionContext);
   const { lang } = pageContext;
 
   const handleOpen = () => {
@@ -24,13 +27,12 @@ const Job = ({ data, pageContext, yml }) => {
       <GridContainer
         github="/components/job"
         columns_tablet="12"
-        margin_tablet="70px 0 0 0"
-        margin="70px 0 0 0"
+        margin={isCustomBarActive(session) ? "120px 0 24px 0" : "70px 0 0 0"}
         padding="30px 15px 0 15px"
         padding_tablet="30px 0 0 0"
       >
         <Div flexDirection="column" gridColumn_tablet=" 2 / 12">
-        {yml.open ? <Alert color="green" margin="0" padding="5px 0 0 0">{data.allJobAlertYaml.edges[0].node.message.accepting}</Alert>
+        {yml.meta_info.open ? <Alert color="green" margin="0" padding="5px 0 0 0">{data.allJobAlertYaml.edges[0].node.message.accepting}</Alert>
          : <Alert color="red" margin="0" padding="5px 0 0 0">{data.allJobAlertYaml.edges[0].node.message.no_accepting}</Alert>}
           <Link
             style={{ margin: '20px 0', width: 'fit-content' }}
@@ -56,7 +58,7 @@ const Job = ({ data, pageContext, yml }) => {
             >
               {yml.banner_heading}
             </H1>
-            {yml.open ? <Button
+            {yml.meta_info.open ? <Button
               onClick={handleOpen}
               variant="full"
               width="130px"
@@ -66,7 +68,6 @@ const Job = ({ data, pageContext, yml }) => {
               >
               {yml.button_text}
             </Button> : ""}
-            {/* <Button onClick={() => {setForm(!form), setButtonToggle(!buttonToggle)}} width="200px" color={Colors.blue} textColor={Colors.white}>APPLY NOW</Button> */}
           </Div>
           <ApplyJobModal
             aria-labelledby="simple-modal-title"
@@ -82,7 +83,7 @@ const Job = ({ data, pageContext, yml }) => {
 
           <Div flexDirection="column">
             {yml.content.map((m, i) => (
-              <>
+              <React.Fragment key={`${i}-${m.label}`}>
                 <H4
                   textAlign="left"
                   fontSize="22px"
@@ -110,7 +111,7 @@ const Job = ({ data, pageContext, yml }) => {
                     </li>
                   ))}
                 </ul>
-              </>
+              </React.Fragment>
             ))}
           </Div>
           <Paragraph
@@ -137,9 +138,9 @@ export const query = graphql`
             description
             image
             keywords
+            open
           }
           banner_heading
-          open
           link_back
           banner_image
           button_text

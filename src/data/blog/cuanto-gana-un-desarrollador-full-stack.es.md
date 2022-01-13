@@ -9,7 +9,7 @@ image: "https://github.com/marcelovaldebenito/website-v2/blob/master/static/imag
 image_alt: "desarrollador full stack chileno programando"
 cluster: "full-stack"
 status: "published"
-featured: "true"
+featured: true
 
 ---
 

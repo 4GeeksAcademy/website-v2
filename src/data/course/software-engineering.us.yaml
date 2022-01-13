@@ -46,7 +46,8 @@ badges:
   paragraph: "4Geeks Academy is the place where developers grow and thrive. We are licensed by the USA F. Dep. of Education. Chosen as one of the top 35 bootcamps of the world and top coding bootcamp in Miami according to SwitchUp. Recognized as the top 10 coding bootcamps in the United States according to Newsweek."
 
 upcoming:
-  no_dates_message: "There are currently no upcoming dates for this program"  
+  no_dates_message: "There are currently no upcoming dates for this program"
+  actionMessage: "Let me know when dates are available"
 
 button:
   syllabus_heading: "Download Syllabus"
@@ -62,12 +63,16 @@ details:
       list:
         - label: "Duration"
           content:  "16 Weeks"
+          icon: "calendar"
         - label: "Classes"
           content: "Online, 3 Classes weekly"
+          icon: "book"
         - label: "Certificate"
           content: ""
+          icon: "certificate"
         - label: "Requisites"
           content: "1-year experience as Software Developer"
+          icon: "contract-checked"
   heading: Software Engineering Syllabus
   weeks: 16
   sub_heading: "Master exactly what is required to be a real Software Engineer."

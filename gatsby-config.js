@@ -14,7 +14,7 @@ module.exports = {
     },
     defaultKeywords: {
       "us": ["coding bootcamp", "coding classes", "learn to code", "programming classes", "miami coding bootcamp", "soding school", "learn python", "python classes", "learn javascript", "learn node", "learn programming", "become a developer", "time to code", "4geeks academy", "coding bootcamp online"],
-      "es": ["coding bootcamp", "curso de programacion", "curso de informatica", "escuela de codigo", "miami coding bootcamp", "escuela de programacion", "grado medio informatica", "grado medio progamacion", "informatica", "bootcamp de informatica", "estudios de informatica", "estudios de programacion", "coding bootcamp online", "aprender a programar online", "cursos de programción online"],
+      "es": ["coding bootcamp", "curso de programacion", "curso de informatica", "escuela de codigo", "miami coding bootcamp", "escuela de programacion", "grado medio informatica", "grado medio programación", "informatica", "bootcamp de informatica", "estudios de informatica", "estudios de programacion", "coding bootcamp online", "aprender a programar online", "cursos de programción online"],
     },
     defaultImage: "/images/4geeks-main.jpg",
     social: {
@@ -121,7 +121,7 @@ module.exports = {
         background_color: '#ffffff',
         theme_color: '#744C9E',
         display: 'standalone',
-        icon: 'src/assets/logos/icon.png',
+        icon: 'src/assets/logos/favicon.png',
       },
     }, {
       resolve: 'gatsby-source-filesystem',

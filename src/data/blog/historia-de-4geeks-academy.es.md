@@ -9,7 +9,7 @@ image: ""
 image_alt: ""
 cluster: "tendencias-y-tecnologia"
 status: "published"
-featured: "false"
+featured: false
 
 ---
 

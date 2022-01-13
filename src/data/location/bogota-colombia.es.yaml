@@ -25,10 +25,17 @@ button_header:
 button:
   syllabus_button_text: "DESCARGAR PROGRAMA" # <-- this will show everywhere in the website
   apply_button_text: "APLICAR" # <-- this will show everywhere in the website
-
   syllabus_submit_text: "DESCARGAR"
   apply_button_link: "/aplica"
   cohort_more_details_text: "DETALLES"
+
+custom_bar:
+  active: false
+  message: Lorem ipsum dot simet mosd ei
+  button: 
+    label: "Read More"
+    path: "#" #string (can be inline path using #, relative path or absolute path)
+
 badges:
   title: ""
   paragraph: "Únete a uno de los coding bootcamps y comunidades de programadores más grandes del mundo, mejora tus habilidades de código o 
@@ -38,6 +45,7 @@ news:
   title: "4Geeks Academy Colombia en las noticias..."
 upcoming:
   no_dates_message: "Actualmente no hay próximas fechas para este campus"
+  actionMessage: "Avisenme fechas disponibles"
 
 info_box:
   heading: "Encuéntranos en Colombia"

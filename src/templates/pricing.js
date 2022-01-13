@@ -1,16 +1,16 @@
 import React, {useState, useContext} from 'react';
-import {Div, Container, Divider, Wrapper, WrapperImage} from "../new_components/Sections";
-import {Title, H2, H5, Paragraph} from '../new_components/Heading';
-import {Button, Colors, StyledBackgroundSection} from '../new_components/Styling';
-import PricesAndPayment from '../new_components/PricesAndPayment';
+import {Div, Container, Divider, Wrapper, WrapperImage} from "../components/Sections";
+import {Title, H2, H5, Paragraph} from '../components/Heading';
+import {Button, Colors, StyledBackgroundSection} from '../components/Styling';
+import PricesAndPayment from '../components/PricesAndPayment';
 import BaseRender from './_baseLayout';
 import {openGuidebook} from "../actions";
 import {SessionContext} from '../session.js'
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
-// new_components
-// import PricesAndPayment from '../new_components/PricesAndPayment';
-import { Header } from '../new_components/Sections'
+// components
+// import PricesAndPayment from '../components/PricesAndPayment';
+import { Header } from '../components/Sections'
 
 const Pricing = (props) => {
   const {session} = React.useContext(SessionContext);
@@ -335,6 +335,20 @@ export const query = graphql`
                       sub_heading
                       heading_one
                       heading_two
+                    }
+                  }
+                  scholarship {
+                    header {
+                      sub_heading
+                      heading_one
+                      heading_two
+                    }
+                    content {
+                      price
+                      price_info
+                    }
+                    button {
+                      button_text
                     }
                   }
                 }

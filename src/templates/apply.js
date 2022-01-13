@@ -1,14 +1,15 @@
 import React, {useState, useContext, useEffect} from 'react';
 import {navigate} from 'gatsby';
-import {Div, GridContainer, Header, Grid} from '../new_components/Sections'
-import {H1, H3, Paragraph} from '../new_components/Heading'
-import {Colors, Button} from '../new_components/Styling'
-import {Input, Alert} from '../new_components/Form'
-import {SelectRaw} from '../new_components/Select'
+import {Div, GridContainer, Header, Grid} from '../components/Sections'
+import {H1, H3, Paragraph} from '../components/Heading'
+import {Colors, Button} from '../components/Styling'
+import {Input, Alert} from '../components/Form'
+import {SelectRaw} from '../components/Select'
 import BaseRender from './_baseLayout'
 import {SessionContext} from '../session.js'
-import {Circle} from '../new_components/BackgroundDrawing'
+import {Circle} from '../components/BackgroundDrawing'
 import {apply, tagManager} from "../actions"
+import PhoneInput from '../components/LeadForm/PhoneInput';
 
 const us = {
     "(In-person and from home available)": "(In-person and from home available)",
@@ -45,6 +46,9 @@ const Apply = (props) => {
         label: p.text,
         value: p.bc_slug
     }))
+
+    const locationContext = session && session.location
+
     const locations = session && session.locations && session.locations
         .filter(l => !l.active_campaign_location_slug.includes("online"))
         .sort((a,b) =>  a.meta_info.position > b.meta_info.position ? 1 : -1)
@@ -91,7 +95,6 @@ const Apply = (props) => {
     let privacy = data.privacy.edges.find(({node}) => node.fields.lang === pageContext.lang);
     if (privacy) privacy = privacy.node;
     return (
-
         <>
             <Header
                 padding="0 10px"
@@ -142,7 +145,6 @@ const Apply = (props) => {
                                     }
                                     else {
                                         setFormStatus({status: "thank-you", msg: "Thank you"});
-                                        // console.log("Thank you");
                                         if (!session || !session.utm || !session.utm.utm_test) navigate(`${pageContext.lang === 'us' ? '/us/thank-you' : '/es/gracias'}`);
                                         else console.log("Lead success, but no redirection because of testing purposes")
                                     }
@@ -168,7 +170,7 @@ const Apply = (props) => {
                                         setFormStatus({status: "idle", msg: "Resquest"})
                                     }
                                 }}
-                                value={formData.first_name.value}
+                                value={formData.first_name.value || ""}
                             />
                         </Div>
                         <Grid gridTemplateColumns_tablet="repeat(12, 1fr)" margin_tablet="0 0 23px 0" gridGap="0" gridGap_tablet="15px">
@@ -186,11 +188,19 @@ const Apply = (props) => {
                                             setFormStatus({status: "idle", msg: "Resquest"})
                                         }
                                     }}
-                                    value={formData.email.value}
+                                    value={formData.email.value || ""}
                                 />
                             </Div>
                             <Div gridColumn_tablet="7 / 13">
-                                <Input
+                                <PhoneInput
+                                    data-cy="phone"
+                                    setVal={setVal}
+                                    formData={formData}
+                                    phoneFormValues={formData['phone']}
+                                    errorMsg="Please specify a valid phone number"
+                                    sessionContextLocation={locationContext}
+                                />
+                                {/* <Input
                                     data-cy="phone"
                                     border="1px solid hsl(0,0%,80%)"
                                     bgColor={Colors.white}
@@ -203,15 +213,15 @@ const Apply = (props) => {
                                             setFormStatus({status: "idle", msg: "Resquest"})
                                         }
                                     }}
-                                    value={formData.phone.value}
-                                />
+                                    value={formData.phone.value || ""}
+                                /> */}
                             </Div>
                         </Grid>
                         <Div data-cy="dropdown_program_selector" margin_tablet="0 0 23px 0">
                             <SelectRaw
                                 bgColor={Colors.white}
                                 options={programs}
-                                value={formData.course.value}
+                                value={formData.course.value || ""}
                                 defaultValue={formData.course.value}
                                 placeholder={yml.left.course_title.open}
                                 onChange={(value, valid) => setVal({...formData, course: {value, valid}})}
@@ -233,7 +243,7 @@ const Apply = (props) => {
                             You have applied a referral code to this form
                         </Alert>}
                             <Input border="1px solid hsl(0,0%,80%)" bgColor={Colors.white} type="text" className="form-control" placeholder={yml.left.referral_section.placeholder}
-                                value={formData.referral_key.value}
+                                value={formData.referral_key.value || ""}
                                 onChange={(value, valid) => setVal({...formData, referral_key: {value, valid}})}
                             />
                         {session && session.location && location.gdpr_compliant &&

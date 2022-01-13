@@ -25,6 +25,13 @@ button:
   cohort_more_details_text: "DETALLES"
   apply_button_link: "/aplica"
 
+custom_bar:
+  active: false
+  message: Lorem ipsum dot simet mosd ei
+  button: 
+    label: "Read More"
+    path: "#" #string (can be inline path using #, relative path or absolute path)
+
 badges:
   title: ""
   paragraph: "4Geeks Academy es el lugar donde los desarrolladores crecen y prosperan.
@@ -40,6 +47,7 @@ news:
   title: "4Geeks Academy Orlando en las noticias..."
 upcoming:
   no_dates_message: "Actualmente no hay próximas fechas para este campus"
+  actionMessage: "Avisenme fechas disponibles"
 
 info_box:
   heading: "Encuéntranos en Orlando"

@@ -2,18 +2,21 @@ import React, {useState} from 'react';
 import {graphql} from 'gatsby'
 import Link from 'gatsby-link'
 import Layout from '../global/Layout';
-import {Div, Divider} from '../new_components/Sections'
-import {H2, H3, H4, Title, Separator, Paragraph} from '../new_components/Heading'
-import {Colors, Button, StyledBackgroundSection} from '../new_components/Styling'
-import Card from '../new_components/Card'
+import {isCustomBarActive} from '../actions';
+import {Div, Divider} from '../components/Sections'
+import {H2, H3, H4, Title, Separator, Paragraph} from '../components/Heading'
+import {Colors, Button, StyledBackgroundSection} from '../components/Styling'
+import Card from '../components/Card'
 import BaseRender from './_baseLayout'
-import AlumniProjects from '../new_components/AlumniProjects'
+import AlumniProjects from '../components/AlumniProjects'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import {SessionContext} from '../session'
 
 const Graduates = ({data, pageContext, yml}) => {
+  const {session} = React.useContext(SessionContext);
   return (
       <Div 
-        margin="70px 0"
+        margin={isCustomBarActive(session) ? "120px 0 24px 0" : "70px 0"}
         padding="60px 0"
         padding_tablet="60px 100px"
         flexDirection="column"
@@ -25,7 +28,7 @@ const Graduates = ({data, pageContext, yml}) => {
           paragraph={yml.banner.sub_heading}
           paragraphColor={Colors.darkGray}
         />
-        <AlumniProjects lang={data.allAlumniProjectsYaml.edges} showThumbs="true" playerHeight="500px" />
+        <AlumniProjects containerStyle={{margin: "30px 0"}} lang={data.allAlumniProjectsYaml.edges} showThumbs="true" playerHeight="500px" />
       
         <Divider height="150px" />
       <Div

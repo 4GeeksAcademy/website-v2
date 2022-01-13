@@ -1,9 +1,9 @@
 import React from 'react';
 import BaseRender from './_baseLayout';
 
-// new_components
-import {Div, GridContainer} from "../new_components/Sections";
-import {H1, H2, H4, Paragraph} from '../new_components/Heading'
+// components
+import {Div, GridContainer} from "../components/Sections";
+import {H1, H2, H4, Paragraph} from '../components/Heading'
 
 const Cookies = (props) => {
   const {data, pageContext, yml} = props;
@@ -33,12 +33,12 @@ const Cookies = (props) => {
           <Div flexDirection="column">
             {yml.sections.map((section, i) => {
               return (
-                <>
+                <React.Fragment key={i}>
                   <H4 type="h3" fontSize="22px" key={i} fontWeight="bold" borderBottom="1px solid #C4C4C4" margin="0 0 15px 0" padding="74px 0 20px 0">{section.title}</H4>
                   {section.text.split("\n").map((m, i) =>
-                    <Paragraph letterSpacing="0.05em" textAlign="left" key={i} align="left" align_sm="left" margin="15px 0" dangerouslySetInnerHTML={{__html: m}}></Paragraph>
+                    <Paragraph key={i} letterSpacing="0.05em" textAlign="left" key={i} align="left" align_sm="left" margin="15px 0" dangerouslySetInnerHTML={{__html: m}}></Paragraph>
                   )}
-                </>
+                </React.Fragment>
               )
             })}
           </Div>

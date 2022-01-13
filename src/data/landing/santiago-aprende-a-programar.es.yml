@@ -75,7 +75,7 @@ follow_bar:
 
 badges:
   position: 1
-  heading: "4Geeks Academy cuenta con premios y reconocimientos de validan su excelencia"
+  heading: "4Geeks Academy cuenta con premios y reconocimientos que validan su excelencia"
 
 about4Geeks:
   position: 2
@@ -153,7 +153,7 @@ components:
   - name: python_y_javascript
     position: 6
     layout: two_column_right
-    background: "veryLightBlue2" # Name of the color(from new_components/Styling/index.js) or color code ex: #C9F9F9
+    background: "veryLightBlue2" # Name of the color(from components/Styling/index.js) or color code ex: #C9F9F9
     image:
       src: "/images/why-4geeks/python-image.png"
       # /static/images/why-4geeks/python-image.png

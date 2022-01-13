@@ -1,21 +1,24 @@
 import React, {useState} from 'react';
-import {Button, Colors, RoundImage} from '../new_components/Styling';
+import {isCustomBarActive} from '../actions';
+import {SessionContext} from '../session'
 import BaseRender from './_baseLayout';
 
-// new_components
-import {Div, GridContainer} from "../new_components/Sections";
-import {H1, H2, H4, Paragraph} from '../new_components/Heading'
+// components
+import {Div, GridContainer} from "../components/Sections";
+import {H1, H2, H4, Paragraph} from '../components/Heading'
 
 
 const Privacy = (props) => {
   const {data, pageContext, yml} = props;
+  const {session} = React.useContext(SessionContext);
   return (
     <>
       <GridContainer
         github="/components/privacy"
         columns_tablet="12"
-        margin_tablet="120px 0 0 0"
-        margin="35px 0 0 0"
+        // margin_tablet="120px 0 0 0"
+        margin={isCustomBarActive(session) ? '160px 0 0 0' : '120px 0 0 0'}
+        // margin="35px 0 0 0"
 
       >
         <Div flexDirection="column" gridColumn_tablet=" 2 / 12">
@@ -32,14 +35,15 @@ const Privacy = (props) => {
           </H2>
           <Paragraph borderLeft="4px solid" padding="0 0 0 15px" letterSpacing="0.05em" textAlign="left" align="left" align_sm="left" margin="65px 0 0 0" >{yml.header.sub_heading}</Paragraph>
           <Div flexDirection="column">
-            {yml.sections.map((section, i) => {
+            {yml.sections.map((section, index) => {
               return (
-                <>
-                  <H4 fontSize="22px" key={i} fontWeight="bold" borderBottom="1px solid #C4C4C4" margin="0 0 15px 0" padding="74px 0 20px 0">{section.title}</H4>
+                <React.Fragment key={index}>
+                  <H4 fontSize="22px" fontWeight="bold" borderBottom="1px solid #C4C4C4" margin="0 0 15px 0" padding="74px 0 20px 0">{section.title}</H4>
                   {section.text.split("\n").map((m, i) =>
-                    <Paragraph letterSpacing="0.05em" textAlign="left" key={i} align="left" align_sm="left" margin="15px 0" dangerouslySetInnerHTML={{__html: m}}></Paragraph>
+                    <Paragraph key={i} letterSpacing="0.05em" textAlign="left" align="left" align_sm="left" margin="15px 0" dangerouslySetInnerHTML={{__html: m}}></Paragraph>
                   )}
-                </>)
+                </React.Fragment>
+              )
             })}
           </Div>
           <Paragraph letterSpacing="0.05em" margin="45px 0 0 0" dangerouslySetInnerHTML={{__html: yml.date_release}}></Paragraph>

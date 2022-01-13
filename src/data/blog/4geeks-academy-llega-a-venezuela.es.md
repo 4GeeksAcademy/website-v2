@@ -9,7 +9,7 @@ description: "Conoce los detalles de la llegada de 4Geeks Academy a Venezuela"
 image: "https://4GeeksAcademy.com/images/4geeks-main.jpg"
 image_alt: ""
 status: "published"
-featured: "true"
+featured: false
 cluster: "tendencias-y-tecnologia"
 
 ---

@@ -360,6 +360,7 @@ const createPagesfromYml = async ({graphql, actions}) => {
 
         const _targetPath = node.fields.slug === "index" ? "/" : node.fields.pagePath;
         console.log(`Creating page ${node.fields.slug === "index" ? "/" : node.fields.pagePath} in ${node.fields.lang}`);
+        if(node.fields.slug.includes("carrera-de-programacion")) console.log(node.fields)
         createPage({
             path: _targetPath,
             component: path.resolve(`./src/templates/${node.fields.defaultTemplate}.js`),

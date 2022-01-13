@@ -9,7 +9,7 @@ image: "https://storage.googleapis.com/4geeks-academy-website/blog/2016/03/jobin
 image_alt: ""
 cluster: "career-growth"
 status: "published"
-featured: "false"
+featured: false
 
 ---
 

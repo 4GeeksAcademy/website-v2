@@ -8,7 +8,7 @@ title: "The coding bootcamp syllabus matters"
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2017/11/POST-TECNOLOGIA-01.jpg"
 image_alt: ""
 status: "published"
-featured: "false"
+featured: false
 cluster: "coding-bootcamps"
 
 ---

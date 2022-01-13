@@ -1,21 +1,24 @@
 import React, {useContext} from 'react'
 import {Link} from 'gatsby'
-import {H1, Paragraph} from '../new_components/Heading'
-import {RoundImage, Colors, Button} from '../new_components/Styling'
+import {H1, Paragraph} from '../components/Heading'
+import {RoundImage, Colors, Button} from '../components/Styling'
 import Layout from '../global/Layout'
 import LazyLoad from 'react-lazyload';
 import twitterUser from '../utils/twitter'
-// import Icon from '../new_components/Icon'
+// import Icon from '../components/Icon'
 // import {TwitterFollowButton} from 'react-twitter-embed';
-import CallToAction from '../new_components/CallToAction'
+import {isCustomBarActive} from '../actions';
+import {SessionContext} from '../session'
+import CallToAction from '../components/CallToAction'
 import "../assets/css/single-post.css"
 import rehypeReact from "rehype-react"
 
-//FROM new_components
-import {GridContainer, Grid, Div, Header, Row, Column} from '../new_components/Sections'
+//FROM components
+import {GridContainer, Grid, Div, Header, Row, Column} from '../components/Sections'
 
 export default function Template (props) {
   const {data, pageContext} = props;
+  const {session} = React.useContext(SessionContext);
   const post = props.data.markdownRemark;
   const allowed = [`${post.frontmatter.author ? post.frontmatter.author.toLowerCase() : ""}`];
   const filtered = Object.keys(twitterUser)
@@ -96,7 +99,7 @@ export default function Template (props) {
       <Layout type="post" seo={data.markdownRemark.frontmatter} context={pageContext}>
 
         {/* Container */}
-        <GridContainer columns_tablet="1" gridColumn_tablet="4 / -4" columns="1" margin="90px 0 0 0">
+        <GridContainer columns_tablet="1" gridColumn_tablet="4 / -4" columns="1" margin={`${isCustomBarActive(session) ? "140px 0 0 0": "90px 0 0 0"}`}>
 
           {/* Top cluster */}
           <Div justifyContent="center">
