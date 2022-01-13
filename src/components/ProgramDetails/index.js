@@ -145,7 +145,7 @@ const ProgramDetails = (props) => {
                         <Icon icon="laptop" width="52px" height="39px" />
                         <Div flexDirection="column" margin="0 0 0 15px">
                             <H3 textAlign="left">{props.details.details_modules[selected.index].title}</H3>
-                            {props.details.details_modules[selected.index].projects.split('\\n').map((d, i) =>
+                            {props.details.details_modules[selected.index].description.split('\\n').map((d, i) =>
                                 <Paragraph
                                     key={i}
                                     textAlign="left"
@@ -163,7 +163,7 @@ const ProgramDetails = (props) => {
                             </Div>
                             <Div flexDirection="column" margin="0 0 0 15px">
                                 <H3 textAlign="left">{strings[lang]["Projects"]}</H3>
-                                {props.details.details_modules[selected.index].description.split('\\n').map((d, i) =>
+                                {props.details.details_modules[selected.index].projects.split('\\n').map((d, i) =>
                                     <Paragraph
                                         key={i}
                                         textAlign="left"
