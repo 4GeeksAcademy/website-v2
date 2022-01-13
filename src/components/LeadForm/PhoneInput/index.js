@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import countriesList from './countriesList';
 import InputMask from 'react-input-mask'
 import styled from 'styled-components';
@@ -45,6 +45,7 @@ const PhoneInput = ({
     countryCode: '1',
     dialCode: '1',
   });
+  const dropdownMenuRef = useRef();
   const [validStatus, setValidStatus] = useState({valid: true});
   const regex = {
     phone: /^(?!(\d{2,})\1+)(?!(\d+)\2{3,})(\+\d{1,3})?(\d{8,10})$/,
@@ -65,6 +66,10 @@ const PhoneInput = ({
     const getMask = maskList.find(code => code[selectedCountry.iso2] || code['default'])
     return getMask[selectedCountry.iso2]
   }
+
+  // TODO: onclick outside de la bandera
+  // important: y no permitir letras en phone input
+  // email deve aceptar 2 extensiones
 
   const rawCountries = JSON.parse(JSON.stringify(countriesList));
   let hiddenAreaCodes = [];
@@ -133,6 +138,21 @@ const PhoneInput = ({
     const { currentTarget: { value: searchValue } } = e;
     setSearchValue(searchValue)
   }
+
+  React.useEffect(() => {
+    const checkIfClickedOutside = e => {
+      // If the menu is open and the clicked target is not within the menu,
+      // then close the menu
+      if (showDropdown && dropdownMenuRef.current && !dropdownMenuRef.current.contains(e.target)) {
+        setShowDropdown(false)
+      }
+    }
+    document.addEventListener("mousedown", checkIfClickedOutside)
+    return () => {
+      // Cleanup the event listener
+      document.removeEventListener("mousedown", checkIfClickedOutside)
+    }
+  }, [showDropdown])
 
   const handleFlagDropdownClick = (e) => {
     e.preventDefault();
@@ -244,6 +264,7 @@ const PhoneInput = ({
       /> */}
 
       <div
+        ref={dropdownMenuRef}
         className={`flag-dropdown ${showDropdown ? 'open' : ''} ${!validStatus.valid ? 'invalid' : ''}`}
         style={buttonStyle}
       >
