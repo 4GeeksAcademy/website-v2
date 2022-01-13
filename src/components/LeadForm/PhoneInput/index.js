@@ -194,8 +194,8 @@ const PhoneInput = ({
     setPhoneNumber(prefixCode + input)
 
     const cleanedPhoneInput = `+${(prefixCode + input).match(/\d+/g).join('')}`
-    isValid = regex.phone.test(cleanedPhoneInput);
 
+    isValid = regex.phone.test(cleanedPhoneInput);
     if (isValid !== validStatus) {
       setValidStatus({
           valid: isValid,
