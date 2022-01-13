@@ -1,23 +1,24 @@
 import React,  {useState, useEffect} from 'react';
 import Link from 'gatsby-link'
-import {GridContainer, Header, Div} from '../new_components/Sections'
-import {Button, Colors} from '../new_components/Styling'
-import ProgramDetails from '../new_components/ProgramDetails';
-import ProgramDetailsMobile from '../new_components/ProgramDetailsMobile';
-import TechsWeTeach from '../new_components/TechsWeTeach';
-import GeeksInfo from '../new_components/GeeksInfo';
-import OurPartners from '../new_components/OurPartners';
+import {GridContainer, Header, Div} from '../components/Sections'
+import {isCustomBarActive} from '../actions';
+import {Button, Colors} from '../components/Styling'
+import ProgramDetails from '../components/ProgramDetails';
+import ProgramDetailsMobile from '../components/ProgramDetailsMobile';
+import TechsWeTeach from '../components/TechsWeTeach';
+import GeeksInfo from '../components/GeeksInfo';
+import OurPartners from '../components/OurPartners';
 import BaseRender from './_baseLayout'
-import Modal from '../new_components/Modal';
-import LeadForm from '../new_components/LeadForm';
+import Modal from '../components/Modal';
+import LeadForm from '../components/LeadForm';
 import {requestSyllabus} from "../actions";
 import {SessionContext} from '../session'
-import {Circle} from '../new_components/BackgroundDrawing'
-import Icon from '../new_components/Icon'
-import Testimonials from '../new_components/Testimonials';
-import Badges from '../new_components/Badges';
-import PricesAndPayment from '../new_components/PricesAndPayment';
-import Instructors from '../new_components/Instructors';
+import {Circle} from '../components/BackgroundDrawing'
+import Icon from '../components/Icon'
+import Testimonials from '../components/Testimonials';
+import Badges from '../components/Badges';
+import PricesAndPayment from '../components/PricesAndPayment';
+import Instructors from '../components/Instructors';
 
 
 
@@ -54,6 +55,7 @@ const Program = ({data, pageContext, yml}) => {
 
   return (<>
     <Header
+      margin={isCustomBarActive(session) ? "120px 0 0 0" : ""}
       seo_title={yml.seo_title}
       title={yml.header.title}
       paragraph={yml.header.paragraph}
@@ -115,10 +117,6 @@ const Program = ({data, pageContext, yml}) => {
       <Badges lang={pageContext.lang} short_link={true} paragraph={yml.badges.paragraph && yml.badges.paragraph} />
     </Header>
 
-    {/* 
-    this is the one used in home
-    <OurPartners images={hiring.partners.images} marquee title={hiring.partners.tagline} paragraph={hiring.partners.sub_heading} />
-    */}
     <OurPartners background={Colors.verylightGray} images={hiring.partners.images} marquee title={hiring.partners.tagline} paragraph={hiring.partners.sub_heading}></OurPartners>
     <ProgramDetails details={courseDetails.details} lang={pageContext.lang} course={program_type} background={Colors.white} />
     <ProgramDetailsMobile details={courseDetails.details} lang={pageContext.lang} course={program_type} />

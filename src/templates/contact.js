@@ -2,14 +2,15 @@ import React, {useState, useContext, useEffect} from 'react';
 import BaseRender from './_baseLayout';
 import {SessionContext} from '../session.js';
 import {contactUs} from '../actions.js';
-import Icon from '../new_components/Icon';
+import Icon from '../components/Icon';
 import Link from 'gatsby-link'
+import {isCustomBarActive} from '../actions';
 
 // New components
-import {Colors, Button} from '../new_components/Styling'
-import {Input, Alert, TextArea} from '../new_components/Form';
-import {H1, H2, H3, Paragraph} from '../new_components/Heading'
-import { HR, Grid, Div, Old_Grid} from '../new_components/Sections'
+import {Colors, Button} from '../components/Styling'
+import {Input, Alert, TextArea} from '../components/Form';
+import {H1, H2, H3, Paragraph} from '../components/Heading'
+import { HR, Grid, Div, Old_Grid} from '../components/Sections'
 
 
 const Contact = (props) => {
@@ -69,7 +70,7 @@ const Contact = (props) => {
                 <Icon icon="landingCircles/mdCircle-blue" width="67px" height="67px" style={{zIndex: 2, position: "absolute", right: "116px", top: "169px"}} />
                 <Icon icon="landingCircles/smCircle-mustard" style={{zIndex: 2, position: "absolute", right: "299px", top: "122px"}} />
             </Div>
-            <Div margin="64px 0" justifyContent="center" variant="fluid" padding_md="17px 8px 40px 8px">
+            <Div margin={isCustomBarActive(session) ? "130px 0 64px 0" : "64px 0"} justifyContent="center" variant="fluid" padding_md="17px 8px 40px 8px">
             <Div
                 paddingRight="0px"
                 paddingLeft="0px"

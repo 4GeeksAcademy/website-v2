@@ -1,24 +1,27 @@
 import React, {useState, useEffect, useRef, Suspense, lazy} from 'react';
-import ChooseProgram from '../new_components/ChooseProgram'
-import Badges from '../new_components/Badges'
-import Loc from '../new_components/Loc'
-import OurPartners from '../new_components/OurPartners'
-import ChooseYourProgram from '../new_components/ChooseYourProgram'
-import UpcomingDates from '../new_components/UpcomingDates'
-import Staff from '../new_components/Staff';
+import ChooseProgram from '../components/ChooseProgram'
+import Badges from '../components/Badges'
+import Loc from '../components/Loc'
+import OurPartners from '../components/OurPartners'
+import {isCustomBarActive} from '../actions';
+import ChooseYourProgram from '../components/ChooseYourProgram'
+import UpcomingDates from '../components/UpcomingDates'
+import Staff from '../components/Staff';
 import 'dayjs/locale/de'
-import {Div, GridContainerWithImage, GridContainer} from '../new_components/Sections'
-import {H1, H2, Paragraph} from '../new_components/Heading'
-import {Colors, StyledBackgroundSection} from '../new_components/Styling'
+import {Div, GridContainerWithImage, GridContainer} from '../components/Sections'
+import {H1, H2, Paragraph} from '../components/Heading'
+import {Colors, StyledBackgroundSection} from '../components/Styling'
 import BaseRender from './_baseLayout'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
-import Icon from '../new_components/Icon'
+import Icon from '../components/Icon'
+import {SessionContext} from '../session'
 
-const MapFrame = lazy(() => import('../new_components/MapFrame'));
+const MapFrame = lazy(() => import('../components/MapFrame'));
 
 const Location = ({data, pageContext, yml}) => {
   const {lang} = pageContext;
+  const {session} = React.useContext(SessionContext);
   const hiring = data.allPartnerYaml.edges[0].node;
   const images = data.allLocationYaml.edges[0].node;
   const [cohorts, setCohorts] = React.useState([]);
@@ -51,7 +54,7 @@ const Location = ({data, pageContext, yml}) => {
     })
   }
   return (<>
-    <GridContainerWithImage padding="75px 0 0 0" padding_tablet="0 0 20px 0" columns_tablet="14" margin="70px 0 0 0" margin_tablet="100px 0 0 0">
+    <GridContainerWithImage padding="75px 0 0 0" padding_tablet="0 0 20px 0" columns_tablet="14" margin={isCustomBarActive(session) ? "130px 0 24px 0" : "70px 0"}>
       <Div flexDirection="column" alignItems="center" alignItems_tablet="start" justifyContent_tablet="start" padding_tablet="70px 0 0 0" gridColumn_tablet="1 / 7">
         <H1 type="h1" textAlign_tablet="left" margin="0 0 11px 0" color="#606060">{yml.seo_title}</H1>
         <H2 textAlign_tablet="left" fontSize="50px" lineHeight="60px">{`${yml.header.tagline}`}</H2>
@@ -135,12 +138,9 @@ const Location = ({data, pageContext, yml}) => {
         {yml.images_box.images.map((m, i) => {
           return (
             <GatsbyImage
-              style={{gridArea: `image${i+1}`}}
-              
+              style={{gridArea: `image${i+1}`, borderRadius: "3px"}}
               key={i}
-              borderRadius="3px"
               image={getImage(m.path.childImageSharp.gatsbyImageData)}
-              bgSize={`cover`}
               alt={m.alt}
             />)
         })}
@@ -148,25 +148,27 @@ const Location = ({data, pageContext, yml}) => {
     }
     <OurPartners images={hiring.partners.images} showFeatured marquee title={hiring.partners.tagline} paragraph={hiring.partners.sub_heading}></OurPartners>
     <ChooseYourProgram chooseProgramRef={chooseProgramRef} lang={pageContext.lang} programs={data.allChooseYourProgramYaml.edges[0].node.programs} />
-    <UpcomingDates lang={pageContext.lang} location={yml.breathecode_location_slug} message={yml.upcoming.no_dates_message} />
+    <UpcomingDates lang={pageContext.lang} location={yml.breathecode_location_slug} message={yml.upcoming.no_dates_message} actionMessage={yml.upcoming.actionMessage}/>
     <Loc lang={pageContext.lang} locations={data.test.edges} />
     <Staff lang={pageContext.lang} />
 
     {/* IFRAME map */}
     <Div>
-      {
-        !ready ? null : (
-          <Suspense fallback={() => 'loading'}>
-            {yml.info_box.iframeMapUrl === "" ? null 
-            : (
-              <MapFrame 
-                src={ready ? yml.info_box.iframeMapUrl : "about:blank"} 
-                width="100%" 
-                height="492px" 
-              />
-            )}
-          </Suspense>
-        )
+      {    
+        !ready 
+          ? <H1>Loading Map...</H1>
+          : (
+            <Suspense fallback={<H1>Loading Map...</H1>}>
+              {yml.info_box.iframeMapUrl === "" ? null
+              : (
+                <MapFrame 
+                  src={ready ? yml.info_box.iframeMapUrl : "about:blank"} 
+                  width="100%" 
+                  height="492px" 
+                />
+              )}
+            </Suspense>
+          )
       }
     </Div>
 
@@ -222,6 +224,7 @@ export const query = graphql`
           }
           upcoming{
             no_dates_message
+            actionMessage
           }
           info_box{
               heading

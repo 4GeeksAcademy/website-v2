@@ -1,17 +1,17 @@
 import React, {useState, useEffect, useContext} from 'react';
-import {Header, Div, GridContainer} from '../new_components/Sections'
-import {H3, H4, Paragraph} from '../new_components/Heading'
-import {Colors, Button, Img, Anchor} from '../new_components/Styling'
-// import Icon from '../new_components/Icon'
-import Select from '../new_components/Select'
-// import UpcomingDates from '../new_components/UpcomingDates'
+import {Header, Div, GridContainer} from '../components/Sections'
+import {H3, H4, Paragraph} from '../components/Heading'
+import {Colors, Button, Img, Anchor} from '../components/Styling'
+// import Icon from '../components/Icon'
+import Select from '../components/Select'
+// import UpcomingDates from '../components/UpcomingDates'
 import {getCohorts, getEvents} from "../actions"
 import BaseRender from './_baseLayout'
 import dayjs from "dayjs"
 import 'dayjs/locale/de'
 import LazyLoad from 'react-lazyload';
 import {Link} from 'gatsby'
-import {Circle} from '../new_components/BackgroundDrawing'
+import {Circle} from '../components/BackgroundDrawing'
 import {SessionContext} from '../session'
 
 
@@ -74,7 +74,6 @@ const Calendar = (props) => {
   let content = data.allPageYaml.edges[0].node
   const [academy, setAcademy] = useState(null)
   const [filterType, setFilterType] = useState(pageContext.lang == "us" ? {label: "Upcoming Courses and Events", value: "cohorts"} : {label: "Próximos Cursos y Eventos", value: "cohorts"});
-  
 
   useEffect(() => {
     const getData = async () => {
@@ -121,7 +120,6 @@ const Calendar = (props) => {
     }
   }, [session]);
 
-  console.log("datas", datas)
   return (
     <>
       <Header
@@ -163,7 +161,10 @@ const Calendar = (props) => {
             <Select
               // margin="0 10px 0 0"
               top="40px"
+              padding="4px 10px"
               left="20px"
+              padding="4px 10px"
+              margin="0 0 22px 0"
               width="300px"
               maxWidth="100%"
               shadow="0px 0px 6px 2px rgba(0, 0, 0, 0.2)"

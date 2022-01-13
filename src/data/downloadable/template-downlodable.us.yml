@@ -11,7 +11,7 @@ meta_info:
   redirects: [""] # <--- URL redirections to avoid 404 errors
 
   automation: downloadable # optional, lead as "null" if you don't know, it can be more than one (comma separated)
-  tag: request_more_info # mandatory: at lease one tag (comma separated)
+  tag: request_downloadable # mandatory: at lease one tag (comma separated)
   current_download: "python-guide"
 
 navbar:
@@ -31,9 +31,11 @@ form:
 
 # jumbotron on the top (cannot be commented out)
 header_data:
+  background: "#FFF1D1"
   tagline: Aprende a programar
   sub_heading: in only 16 weeks (part-time)
   partner_url: "../../../static/images/partner/landing-jobs.png" #display a logo of the partner
+  badge: "../../../static/images/badges/switchup.png"
   image: "../../../static/images/4geeks-main.jpg"
   image_filter: brightness(0.4) #0 is dark, 1 is bright
 
@@ -66,6 +68,26 @@ follow_bar:
 #
 # ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇ 
 #
+rating_reviews:
+  position: 1
+  heading: "One of the Top Coding Courses in the World"
+  rating_list:
+    - alt: "Career Karma"
+      image: "../../../static/images/badges/career-karma.png"
+      rating: 4.86
+      url: ""
+    - alt: "Switchup"
+      image: "../../../static/images/badges/switchup-img.png"
+      rating: 4.86
+      url: ""
+    - alt: "Coruse Report"
+      image: "../../../static/images/badges/course-report.png"
+      rating: 4.86
+      url: ""
+    - alt: "Google"
+      image: "../../../static/images/badges/google.png"
+      rating: 4.86
+      url: ""
 
 in_the_news:
   position: 1
@@ -84,11 +106,13 @@ geeks_vs_others:
   position: 3
   heading: "¿Qué hace a 4Geeks Academy exitoso?"
   paragraph: ""
+  sub_heading: "lorem ipsum dot simet"
   total_rows: 5
 
 program_details:
   position: 4
   heading: "Lo que aprenderás"
+  background: "#FFFFFF"
   sub_heading: "Las tecnologias más buscadas en el mercado laboral"
 
 about4Geeks:
@@ -211,18 +235,10 @@ components:
         image:
           style: '{ "height": "80px", "backgroundSize": "contain", "margin": "20px 0 20px 0" }'
           src: "/images/isa/isa6.png"
-  - name: first_syllabus_form
-    position: 4
-    layout: syllabus
-    button:
-      text: "Instant Download"
-    heading:
-      text: "Download the course syllabus"
-      #xl      lg     md     sm    xs
-      font_size: ["40px", "40px", "40px", "40px", "40px"]
   - name: more_testimonials
     position: 8
     layout: two_column_left 
+    background: "#FFFFFF"
     image: 
       style: "{}"
       src: "https://storage.googleapis.com/4geeks-academy-website/landing-pictures/testimonials.webp"
@@ -318,5 +334,3 @@ iconogram:
     title: Do an online interview with our admissions team 
   - icon: "terminal"
     title: Get the result, book your spot and start coding
-
-    # NOTE: Ahora solo falta hacer la funcionalidad de guia-de-python en downloadable folder

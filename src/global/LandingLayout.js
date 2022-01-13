@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {Navbar} from '../new_components/NavbarDesktop';
-import {NavbarMobile} from '../new_components/NavbarMobile';
-import Footer from '../new_components/Footer';
-import LandingFooter from '../new_components/Footer/landing';
+import {Navbar} from '../components/NavbarDesktop';
+import {NavbarMobile} from '../components/NavbarMobile';
+import Footer from '../components/Footer';
+import LandingFooter from '../components/Footer/landing';
 import {SessionContext} from '../session';
 import '../assets/css/style.css';
 import {StaticQuery, graphql} from 'gatsby';
@@ -26,6 +26,14 @@ const Layout = ({children, seo, context, landingFooter, landingNavbar}) => {
               }
               button {
                 apply_button_text
+              }
+              custom_bar {
+                active
+                message
+                button {
+                  label
+                  path
+                }
               }
             }
           }

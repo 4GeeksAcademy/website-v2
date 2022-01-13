@@ -2,11 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import '../assets/css/style.css';
 import '../assets/css/utils.css';
-import {Navbar} from '../new_components/NavbarDesktop';
-import {NavbarMobile} from '../new_components/NavbarMobile';
+import '../assets/css/PhoneInput/flags.css';
+import '../assets/css/PhoneInput/index.css';
+import {Navbar} from '../components/NavbarDesktop';
+import {NavbarMobile} from '../components/NavbarMobile';
 import {StaticQuery, graphql} from 'gatsby';
-import Footer from '../new_components/Footer';
+import Footer from '../components/Footer';
 import CookieBot from "react-cookiebot";
+import CustomBar from '../components/CustomBar';
 
 import GlobalStyle from './GlobalStyle';
 import SEO from './SEO';
@@ -35,6 +38,14 @@ const Layout = ({children, seo, context}) => {
               }
               button {
                 apply_button_text
+              }
+              custom_bar {
+                active
+                message
+                button {
+                  label
+                  path
+                }
               }
             }
           }

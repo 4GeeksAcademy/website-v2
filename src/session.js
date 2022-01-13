@@ -39,6 +39,9 @@ export default ({children}) => {
                   apply_button_text
                   syllabus_button_text
                 }
+                custom_bar {
+                  active
+                }
               }
             }
             nodes{

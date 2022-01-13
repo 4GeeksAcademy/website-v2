@@ -1,12 +1,12 @@
 import React, {useState} from 'react'
 import Link from 'gatsby-link'
 import {navigate} from 'gatsby'
-import {H1, H2, H3, H4, Title, Separator, Paragraph, Span} from '../new_components/Heading'
-import {Button, RoundImage, Colors, StyledBackgroundSection} from '../new_components/Styling'
+import {H1, H2, H3, H4, Title, Separator, Paragraph, Span} from '../components/Heading'
+import {Button, RoundImage, Colors, StyledBackgroundSection} from '../components/Styling'
 import LazyLoad from 'react-lazyload';
 import BaseBlogRender from './_baseBlogLayout'
 import twitterUser from '../utils/twitter'
-import {GridContainer, Div, GridContainerWithImage} from '../new_components/Sections'
+import {GridContainer, Div, GridContainerWithImage} from '../components/Sections'
 
 //Functional Component: Blog
 const Blog = ({data, pageContext, yml}) => {
@@ -39,88 +39,83 @@ const Blog = ({data, pageContext, yml}) => {
     //Post - Returns one card by item
     const Post = (item, i) => {
         return (
-            <>
-                {/* Imagen */}
-                <Div key={i} flexDirection="Column" margin="0 0 87px 0">
-                    {
-                        item.node.frontmatter.image !== "" && (
-                        <Link to={`/${pageContext.lang}/${item.node.frontmatter.cluster}/${item.node.frontmatter.slug}`}>
-                            <LazyLoad height={10} scroll={true} once={true}>
+            <Div key={`${i}-${item.node.frontmatter.title}`} flexDirection="Column" margin="0 0 87px 0">
+                {
+                    item.node.frontmatter.image !== "" && (
+                    <Link to={`/${pageContext.lang}/${item.node.frontmatter.cluster}/${item.node.frontmatter.slug}`}>
+                        <LazyLoad height={10} scroll={true} once={true}>
 
-                            <RoundImage
-                                url={item.node.frontmatter.image !== null ? item.node.frontmatter.image :  yml.banner.no_image}
-                                bsize="cover"
-                                border="0px"
-                                position="center"
-                                width="100%"
-                                height="329px"
-                            />
-                            </LazyLoad>
-                        </Link>
-                        )
-                    }
+                        <RoundImage
+                            url={item.node.frontmatter.image !== null ? item.node.frontmatter.image :  yml.banner.no_image}
+                            bsize="cover"
+                            border="0px"
+                            position="center"
+                            width="100%"
+                            height="329px"
+                        />
+                        </LazyLoad>
+                    </Link>
+                    )
+                }
 
-                    {/* Boton */}
-                    <Div flexDirection_md="row" flexDirection="column" justifyContent="left">
-                        <Link to={`/${pageContext.lang}/${item.node.frontmatter.cluster}/${item.node.frontmatter.slug}`}>
-                            <Button
-                                variant="outline"
-                                border={`1px solid ${Colors.darkGray}`}
-                                color={Colors.darkGray}
-                                font='"Lato", sans-serif'
-                                margin="20px 10px 20px 0"
-                                pointer
-                                textColor={Colors.darkGray}
-                                fontSize={"13px"}>
-                                {item.node.frontmatter.cluster?.replace(/-|_/g,' ') || "4Geeks"}
-                            </Button>
-                        </Link>
-                    </Div>
-
-                    {/* Titulo */}
-                    <Div>
-                        <Link to={`/${pageContext.lang}/${item.node.frontmatter.cluster}/${item.node.frontmatter.slug}`}>
-                            <H4
-                                textAlign="left"
-                                align_sm="left"
-                                margin="0 0 30px 0"
-                                fs_xs="20px"
-                                fs_sm="24px"
-                                fs_md="16px"
-                                fs_lg="20px"
-                                fontSize="22px"
-                            >
-                                {item.node.frontmatter.title}
-                            </H4>
-                        </Link>
-                    </Div>
-
-                    {/* Comentario acerca del post */}
-                    <Div>
-                        <Paragraph fontWeight="300"
-                            fontSize="15px"
-                            color="#3A3A3A"
-                            textAlign="left"
-                            margin="0 0 15px 0">
-                            {item.node.frontmatter.excerpt}
-                        </Paragraph>
-                    </Div>
-
-                    {/* Link de leer articulo */}
-                    <Div>
-                        <Paragraph fontSize="13px"
-                            color="#0097cd"
-                            margin="0 0 0 0"
-                            textAlign="left">
-                            <Link to={`/${pageContext.lang}/${item.node.frontmatter.cluster}/${item.node.frontmatter.slug}`}>
-                                {`Read more >`}
-                            </Link>
-                        </Paragraph>
-                    </Div>
-
+                {/* Boton */}
+                <Div flexDirection_md="row" flexDirection="column" justifyContent="left">
+                    <Link to={`/${pageContext.lang}/${item.node.frontmatter.cluster}/${item.node.frontmatter.slug}`}>
+                        <Button
+                            variant="outline"
+                            border={`1px solid ${Colors.darkGray}`}
+                            color={Colors.darkGray}
+                            font='"Lato", sans-serif'
+                            margin="20px 10px 20px 0"
+                            pointer
+                            textColor={Colors.darkGray}
+                            fontSize={"13px"}>
+                            {item.node.frontmatter.cluster?.replace(/-|_/g,' ') || "4Geeks"}
+                        </Button>
+                    </Link>
                 </Div>
 
-            </>
+                {/* Titulo */}
+                <Div>
+                    <Link to={`/${pageContext.lang}/${item.node.frontmatter.cluster}/${item.node.frontmatter.slug}`}>
+                        <H4
+                            textAlign="left"
+                            align_sm="left"
+                            margin="0 0 30px 0"
+                            fs_xs="20px"
+                            fs_sm="24px"
+                            fs_md="16px"
+                            fs_lg="20px"
+                            fontSize="22px"
+                        >
+                            {item.node.frontmatter.title}
+                        </H4>
+                    </Link>
+                </Div>
+
+                {/* Comentario acerca del post */}
+                <Div>
+                    <Paragraph fontWeight="300"
+                        fontSize="15px"
+                        color="#3A3A3A"
+                        textAlign="left"
+                        margin="0 0 15px 0">
+                        {item.node.frontmatter.excerpt}
+                    </Paragraph>
+                </Div>
+
+                {/* Link de leer articulo */}
+                <Div>
+                    <Paragraph fontSize="13px"
+                        color="#0097cd"
+                        margin="0 0 0 0"
+                        textAlign="left">
+                        <Link to={`/${pageContext.lang}/${item.node.frontmatter.cluster}/${item.node.frontmatter.slug}`}>
+                            {`Read more >`}
+                        </Link>
+                    </Paragraph>
+                </Div>
+            </Div>
         )
     }
 
@@ -153,22 +148,21 @@ const Blog = ({data, pageContext, yml}) => {
                         {
                             yml.topics.map((topic, i) => {
 
-                                return <>
-                                    <Link to={`/${pageContext.lang}/${langSwitcher[pageContext.lang]}/${topic}`}>
-                                        <Button
-                                            variant="outline"
-                                            border={`1px solid ${Colors.darkGray}`}
-                                            color={Colors.darkGray}
-                                            font='"Lato", sans-serif'
-                                            margin="20px 10px 0 0"
-                                            pointer
-                                            textColor={Colors.darkGray}
-                                            fontSize={"13px"}
-                                        >
-                                            {topic.replace(/-|_/g,' ')}
-                                        </Button>
-                                    </Link>
-                                </>
+                                return (
+                                <Link key={`${i}-${topic}`} to={`/${pageContext.lang}/${langSwitcher[pageContext.lang]}/${topic}`}>
+                                    <Button
+                                        variant="outline"
+                                        border={`1px solid ${Colors.darkGray}`}
+                                        color={Colors.darkGray}
+                                        font='"Lato", sans-serif'
+                                        margin="20px 10px 0 0"
+                                        pointer
+                                        textColor={Colors.darkGray}
+                                        fontSize={"13px"}
+                                    >
+                                        {topic.replace(/-|_/g,' ')}
+                                    </Button>
+                                </Link>)
                             })
                         }
                     </Div>
@@ -179,32 +173,6 @@ const Blog = ({data, pageContext, yml}) => {
         )
     }
     //---------------------------------------------------
-
-    //Navigate to UI Posts by Tag 
-    const getPostsByCluster = (cluster) => {
-
-        // 'es' or 'us'
-        let lang = pageContext.lang;
-
-        navigate('/' + lang + '//' + cluster);
-
-    }
-
-    //Take date
-    //Returns yyyy-mm-dd
-    const GetFormattedDate = (date) => {
-        var d = new Date(date),
-            month = '' + (d.getMonth() + 1),
-            day = '' + d.getDate(),
-            year = d.getFullYear();
-
-        if (month.length < 2)
-            month = '0' + month;
-        if (day.length < 2)
-            day = '0' + day;
-
-        return [year, month, day].join('-');
-    }
 
     //Create matrix of matrixes
     //Fill matrix with data from arr
@@ -222,129 +190,9 @@ const Blog = ({data, pageContext, yml}) => {
         return posts;
     }
 
-    //Draw circles arund banner image_alt
-    //Not in use
-    function Circles () {
-        {
-            //Dibuja objetos (circulos y ractangulos) de colores alrededor de la imágen del banner
-            //Cada elemento dibujado toma sus propiedades CSS de un array
-            //Aplicando por cada objeto el CSS de Figma.
-            //Se identifica cada objeto con el mismo ID de Figma
-            //TODO Faltan objetos por añadir al array, pero contiene la logica a utilizar para dibujarlos
-
-            return (
-                <>
-                    {
-                        [
-                            {
-                                //Rectangle 173
-                                position: 'absolute',
-                                width: '96px',
-                                height: '13px',
-                                left: '1132px',
-                                top: '486px',
-                                background: '#000000',
-                                borderRadius: '10px',
-                                zIndex: '999',
-                            },
-                            {
-                                //Rectangle 174
-                                position: 'absolute',
-                                width: '150px',
-                                height: '13px',
-                                left: '1254px',
-                                top: '486px',
-                                background: '#000000',
-                                borderRadius: '10px',
-                                zIndex: '999',
-                            },
-                            {
-                                //Rectangle 284
-                                position: 'absolute',
-                                width: '82px',
-                                height: '11px',
-                                left: '628px',
-                                top: '219px',
-                                background: '#000000',
-                                borderRadius: '10px',
-                                zIndex: '999',
-                            },
-                            {
-                                //Elipse 7
-                                position: 'absolute',
-                                width: '229px',
-                                height: '230px',
-                                left: '1163px',
-                                top: '348px',
-                                background: 'rgba(255, 183, 24, 0.2)',
-                                borderRadius: '50%',
-                            },
-                            {
-                                //Elipse 22
-                                position: 'absolute',
-                                width: '21px',
-                                height: '21px',
-                                left: '1278px',
-                                top: '370px',
-                                background: '#CD0000',
-                                borderRadius: '50%',
-                            },
-                            {
-                                //Elipse 26
-                                position: 'absolute',
-                                width: '162px',
-                                height: '163px',
-                                left: '686px',
-                                top: '145px',
-                                background: '#0097CD',
-                                borderRadius: '50%',
-                                zIndex: '100',
-                            },
-                            {
-                                //Elipse 38
-                                position: 'absolute',
-                                width: '22px',
-                                height: '21px',
-                                left: '744px',
-                                top: '394px',
-                                background: '#000000',
-                                borderRadius: '50%',
-                                transform: 'rotate(90deg)',
-                            },
-                            {
-                                //Elipse 40
-                                position: 'absolute',
-                                width: '21px',
-                                height: '22px',
-                                left: '723px',
-                                top: '345px',
-                                background: '#F5F5F5',
-                                borderRadius: '50%',
-                            },
-                            {
-                                //Elipse 42
-                                position: 'absolute',
-                                width: '83px',
-                                height: '82px',
-                                left: '901px',
-                                top: '89px',
-                                background: 'rgba(255, 183, 24, 0.2)',
-                                borderRadius: '50%',
-                            }
-                        ].map((ostyle, i) => {
-                            return <div style={ostyle}></div>
-                        })
-                    }
-                </>
-            )
-        }
-
-    }
-
-    //----------------------------------------------
-
     //Posts data & context
     const blog_posts = OrganizeColumns(data.featured.edges);
+    console.log("blog_posts", blog_posts);
     const story_posts = OrganizeColumns(data.posts.edges.filter(post => post.node.frontmatter.status === "published"));
     data.pageContext = pageContext
 
@@ -380,7 +228,7 @@ const Blog = ({data, pageContext, yml}) => {
                     })
                 }
                 {
-                    blog_posts[1].map((item, i) => {
+                    blog_posts[2].map((item, i) => {
                         return Post(item, i)
                     })
                 }
