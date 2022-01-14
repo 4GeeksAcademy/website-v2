@@ -33,7 +33,7 @@ button:
   cohort_more_details_text: "DETAILS"
 
 custom_bar:
-  active: true
+  active: false
   message: ¡Este es el bootcamp de programación de <a class="customBar-link" href="https://4geeksacademy.co" taget="_blank" rel="noopener noreferrer nofollow">4Geeks Academy</a> en Santiago de Chile!
   button: 
     label: ""

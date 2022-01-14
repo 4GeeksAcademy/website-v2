@@ -3,7 +3,7 @@ meta_info:
 
   # This will show on social media when shared
   title: "Coding Course On-line and In-person, learn to code and get a better professional career"
-  description: "Coding has become an essencial knowledge for every career, take coding course and learn to code and have a better life."
+  description: "Coding has become an essencial knowledge for every career, take 4Geeks Academy coding course and learn to code and have a better life."
   image: "/images/bg/main-bg.jpg"
   keywords: "Coding Course, Coding Bootcamp, Coding Classes, Learn to code, 4Geeks Academy"
 
@@ -22,21 +22,21 @@ form:
   # posible fields: "first_name", "last_name", "full_name", "phone", "email"
   # always the first_name, email and phone will be mandatory if added.
   fields: ["full_name", "phone", "email"]
-  heading: "Lorem Ipsum is simply dummy text of the printing "
-  motivation: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's"
+  heading: "Join our award-winning web development course"
+  motivation: "Fill out the form to receive details and options related to financing your tuition"
   button_label: Get more info today
   redirect: null #you can redirect to another url or entirely diffrent website
 
 apply_schollarship: # form that is displayed at the end of the landing
-  # title: "Apoyo Profesional Ilimitado"
+  # title: "Get more info about this award-winning development course"
   imageSide: "right"
   image: "../../../static/images/comunity-support.png"
 
 # jumbotron on the top (cannot be commented out)
 header_data:
   background: "#FFF1D1"
-  tagline: Become a web developer in as 16 weeks through work on real project and mentorship by ezperienced professionals
-  sub_heading: "86% of our graduates have already started their future-proof, tech careers with on overage entry salary of $50.000"
+  tagline: Become a web developer in a few as 16 weeks through work on real projects and mentorship by experienced professionals
+  sub_heading: "86% of our graduates have already started their future-proof, tech careers with an average entry salary of $50,000/yr"
   badge: "../../../static/images/badges/switchup.png"
   image_filter: brightness(0.3)
 
@@ -46,9 +46,9 @@ features:
   #                                         up   left down  right
   styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
   bullets:
-   - Junior developers make avg $55k per year in Florida. 
+   - Tailor-made career support, our goal is to get you a job in tech. 
    - No previous experience or coding skills required.
-   - Part-Time focused No need to stop your life.
+   - Part-Time focused. No need to stop your life.
   
 short_badges:
   - name: "Premios Excelencia Educativa"
@@ -92,7 +92,7 @@ rating_reviews:
       image: "../../../static/images/badges/switchup-img.png"
       rating: 4.86
       url: ""
-    - alt: "Coruse Report"
+    - alt: "Course Report"
       image: "../../../static/images/badges/course-report.png"
       rating: 4.35
       url: ""
@@ -103,7 +103,7 @@ rating_reviews:
   
 badges:
   position: 2
-  heading: "4Geeks Academy has awards and recognitions that validate it's excellence"
+  heading: "4Geeks Academy has awards and recognitions that validate its excellence"
 
 program_details:
   position: 2
@@ -118,13 +118,13 @@ why_python:
 
 geeks_vs_others:
   position: 4
-  heading: "Compare 4geeks to other bootcamps"
+  heading: "Compare 4Geeks to other bootcamps"
   # sub_heading: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
   total_rows: 5
 
 why_4geeks:
   position: 5
-  heading: "Why choosing 4Geeks Academy"
+  heading: "Why 4Geeks Academy"
   sub_heading: " "
 
 who_is_hiring:
@@ -147,11 +147,13 @@ components:
       src: "/images/why-4geeks/python-image.png"
     heading:
       text:
-        "Python y Javascript"
+        "Learn Python, Javascript, and more"
         #           xl      lg      md      sm      xs
       font_size: ["50px", "50px", "50px", "50px", "50px"]
     content:
-      text: "Nuestros programa está basado en el uso de Python y Javascript. La razón? En el mercado laboral JavaScript tiene 26 veces más vacantes de trabajo que Ruby on Rails y  Python tiene 10 veces más trabajos que node.js.
+      text: "Python and JavaScript are among the best-paid career positions in the US. 
       
-      Otras herramientas que también aprenderás a usar en nuestro programa son: GitHub, CSS3, HTML5, Flask, etc."
+      There are more 26X job opportunities in Javascript vs. Ruby on Rails, and 10X jobs in Python vs. node.js. 
+      
+      You will also learn: GitHub, CSS3, HTML5, Flask, etc."
       font_size: ["16px"]
