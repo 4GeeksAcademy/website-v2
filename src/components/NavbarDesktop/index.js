@@ -173,11 +173,9 @@ export const Navbar = ({lang, currentURL, menu, open, button, onToggle, language
       }
     }
   `)
-    const parsedUrl = typeof window !== 'undefined' ? new URL(window.location.href) : '';
-    const isTestMode = parsedUrl.searchParams.get('test') === 'true';
+    const parsedUrl = typeof window !== 'undefined' ? new URL(window.location.href) : false;
+    const isTestMode = parsedUrl ? parsedUrl.searchParams.get('test') === 'true' : false;
     const isContentBarActive = contentBar.active && isTestMode || contentBar.active && !isDevelopment();
-    console.log("parsedUrl.searchParams", parsedUrl)
-    console.log('isTestMode', isTestMode)
     return (
         <>
             <CustomBar isContentBarActive={isContentBarActive} contentBar={contentBar}/>

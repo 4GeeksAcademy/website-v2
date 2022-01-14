@@ -6,15 +6,6 @@ import {SessionContext} from '../../session';
 
 const CustomBar = ({isContentBarActive, contentBar}) => {
 
-  //This Function prevents troubles when component renders during cypress test process
-  const isDevelopment = () => {
-    if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
-      return true
-      // dev code
-    }
-    return false
-  }
-
   return (
     <>
       <Div display={isContentBarActive ? 'flex' : 'none'} style={{top: "0px"}} width="100%" height="auto" minHeight="50px" padding="10px 20px" alignItems="center" background="#0097CD" position="fixed" zIndex="99">
