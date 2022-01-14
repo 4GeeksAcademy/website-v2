@@ -114,7 +114,7 @@ export const Navbar = ({lang, currentURL, menu, open, button, onToggle, language
         hovered: false,
         itemIndex: null
     })
-
+    
     //This Function prevents troubles when component renders during cypress test process
     const isDevelopment = () => {
         if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
@@ -173,10 +173,15 @@ export const Navbar = ({lang, currentURL, menu, open, button, onToggle, language
       }
     }
   `)
+    const parsedUrl = typeof window !== 'undefined' ? new URL(window.location.href) : '';
+    const isTestMode = parsedUrl.searchParams.get('test') === 'true';
+    const isContentBarActive = contentBar.active && isTestMode || contentBar.active && !isDevelopment();
+    console.log("parsedUrl.searchParams", parsedUrl)
+    console.log('isTestMode', isTestMode)
     return (
         <>
-            <CustomBar contentBar={contentBar}/>
-            <Nav display_md="flex" display="none" style={{top: `${(contentBar.active && !isDevelopment()) ? '50px' : '0px'}`}}>
+            <CustomBar isContentBarActive={isContentBarActive} contentBar={contentBar}/>
+            <Nav display_md="flex" display="none" style={{top: `${isContentBarActive ? '50px' : '0px'}`}}>
                 <Link to={lang == "es" ? "/es/inicio" : "/"}>
                     <GatsbyImage
                         // fadeIn={false}

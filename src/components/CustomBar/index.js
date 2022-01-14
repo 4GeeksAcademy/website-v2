@@ -4,7 +4,7 @@ import {Colors, Button, Link} from '../Styling'
 import {Div} from '../Sections'
 import {SessionContext} from '../../session';
 
-const CustomBar = ({contentBar}) => {
+const CustomBar = ({isContentBarActive, contentBar}) => {
 
   //This Function prevents troubles when component renders during cypress test process
   const isDevelopment = () => {
@@ -17,7 +17,7 @@ const CustomBar = ({contentBar}) => {
 
   return (
     <>
-      <Div display={(contentBar.active && !isDevelopment()) ? 'flex' : 'none'} style={{top: "0px"}} width="100%" height="auto" minHeight="50px" padding="10px 20px" alignItems="center" background="#0097CD" position="fixed" zIndex="99">
+      <Div display={isContentBarActive ? 'flex' : 'none'} style={{top: "0px"}} width="100%" height="auto" minHeight="50px" padding="10px 20px" alignItems="center" background="#0097CD" position="fixed" zIndex="99">
         {
           contentBar.message && (
             <Paragraph
@@ -35,7 +35,7 @@ const CustomBar = ({contentBar}) => {
           contentBar.button?.label !== undefined && contentBar.button?.label !== "" && (
             <Div alignItems="center" justifyContent="between">
                 <Link to={contentBar.button.path || "#"}>
-                  <Button variant="full" width="100%" width_tablet="max-content" color={Colors.black} textColor={Colors.white}>
+                  <Button variant="full" style={{height: "34px", padding: "16px 20px"}} width="100%" width_tablet="max-content" color={Colors.black} textColor={Colors.white}>
                     {contentBar.button.label}
                   </Button>
                 </Link>
