@@ -25,8 +25,8 @@ button:
   cohort_more_details_text: "DETALLES"
 
 custom_bar:
-  active: false
-  message: Lorem ipsum dot simet mosd ei
+  active: true
+  message: 4Geeks ofrece becas, ayudas al estudio y financiación a tu medida. <a class="customBar-link" href="https://4geeksacademy.com/es/aplica" taget="_blank" rel="noopener noreferrer nofollow">¡Solicita tu plaza!</a>
   button: 
     label: "Read More"
     path: "#" #string (can be inline path using #, relative path or absolute path)
