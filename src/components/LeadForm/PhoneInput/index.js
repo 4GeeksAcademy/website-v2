@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import countriesList from './countriesList';
 import InputMask from 'react-input-mask'
 import styled from 'styled-components';
@@ -14,7 +14,7 @@ background-color: ${Colors.lightRed};
 `
 
 const PhoneInput = ({
-  defaultMask = '+999 999 999 999 999',
+  defaultMask,
   phoneFormValues,
   prefix = '+',
   containerStyle,
@@ -45,6 +45,7 @@ const PhoneInput = ({
     countryCode: '1',
     dialCode: '1',
   });
+  const dropdownMenuRef = useRef();
   const [validStatus, setValidStatus] = useState({valid: true});
   const regex = {
     phone: /^(?!(\d{2,})\1+)(?!(\d+)\2{3,})(\+\d{1,3})?(\d{8,10})$/,
@@ -52,18 +53,14 @@ const PhoneInput = ({
   let highlightCountryIndex = 0;
 
   const getCountryPhoneMask= () => {
-    /*
-      maskList={{
-        us: '+9 (999) 999-9999',
-        cl: '+999 9999 9999'}}
-    */
     const maskList = [
-      {us: `+${selectedCountry.dialCode || '1'}\(999) 999-9999`},
+      {us: `+${selectedCountry.dialCode || '1'} (999) 999-9999`},
       {cl: `+${selectedCountry.dialCode || '99'}9 9999 9999`},
       {default: defaultMask || `+${selectedCountry.dialCode} 999 999 999 999`},
     ];
     const getMask = maskList.find(code => code[selectedCountry.iso2] || code['default'])
-    return getMask[selectedCountry.iso2]
+    const mask = getMask[selectedCountry.iso2] || getMask['default'];
+    return mask
   }
 
   const rawCountries = JSON.parse(JSON.stringify(countriesList));
@@ -134,6 +131,21 @@ const PhoneInput = ({
     setSearchValue(searchValue)
   }
 
+  React.useEffect(() => {
+    const checkIfClickedOutside = e => {
+      // If the menu is open and the clicked target is not within the menu,
+      // then close the menu
+      if (showDropdown && dropdownMenuRef.current && !dropdownMenuRef.current.contains(e.target)) {
+        setShowDropdown(false)
+      }
+    }
+    document.addEventListener("mousedown", checkIfClickedOutside)
+    return () => {
+      // Cleanup the event listener
+      document.removeEventListener("mousedown", checkIfClickedOutside)
+    }
+  }, [showDropdown])
+
   const handleFlagDropdownClick = (e) => {
     e.preventDefault();
     setShowDropdown(!showDropdown);
@@ -182,8 +194,8 @@ const PhoneInput = ({
     setPhoneNumber(prefixCode + input)
 
     const cleanedPhoneInput = `+${(prefixCode + input).match(/\d+/g).join('')}`
-    isValid = regex.phone.test(cleanedPhoneInput);
 
+    isValid = regex.phone.test(cleanedPhoneInput);
     if (isValid !== validStatus) {
       setValidStatus({
           valid: isValid,
@@ -244,6 +256,7 @@ const PhoneInput = ({
       /> */}
 
       <div
+        ref={dropdownMenuRef}
         className={`flag-dropdown ${showDropdown ? 'open' : ''} ${!validStatus.valid ? 'invalid' : ''}`}
         style={buttonStyle}
       >
