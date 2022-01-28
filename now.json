@@ -11,6 +11,10 @@
         {
           "key" : "X-Frame-Options",
           "value" : "ALLOW-FROM https://careerkarma.com"
+        },
+        {
+          "key" : "Content-Security-Policy",
+          "value" : "frame-ancestors 'self' https://careerkarma.com https://iframetester.com;"
         }
       ]
     }
