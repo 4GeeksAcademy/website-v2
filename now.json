@@ -9,11 +9,11 @@
           "value": "public, max-age=31536000, immutable"
         },
         {
-          "key" : "X-Frame-Options",
+          "key" : "x-frame-options",
           "value" : "ALLOW-FROM https://careerkarma.com"
         },
         {
-          "key" : "Content-Security-Policy",
+          "key" : "content-security-policy",
           "value" : "frame-ancestors 'self' https://careerkarma.com https://iframetester.com;"
         }
       ]
