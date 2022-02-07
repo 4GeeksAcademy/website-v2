@@ -1,7 +1,7 @@
 ---
 author: "4GeeksAcademy"
 date: "2021-10-28T20:44:51+00:00"
-excerpt: "Este artículo trata sobre:¿Qué es la I.A.? ¿Cuánto está creciendo? ¿Cuáles son las grandes inversiones en el mercado? ¿Cuánto es la demanda de trabajo para el puesto? ¿Por qué? Salario promedio anual, el futuro."
+excerpt: "¿Qué es la I.A.? ¿Cuáles son las grandes inversiones en el mercado? ¿Cuánto es la demanda de trabajo para el puesto? Salario promedio anual, el futuro."
 slug: "Todo-lo-que-necesitas-saber-sobre-Inteligencia-Artificial"
 title: "Todo lo que necesitas saber sobre Inteligencia Artificial"
 image: "https://images.unsplash.com/photo-1507146153580-69a1fe6d8aa1?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80"
