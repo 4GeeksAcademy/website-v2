@@ -72,7 +72,7 @@
     "gatsby-transformer-sharp": "^2.12.1",
     "gatsby-transformer-yaml": "^2.2.15",
     "lazysizes": "^5.2.2",
-    "node-fetch": "^2.6.1",
+    "node-fetch": "^2.6.7",
     "prismjs": "^1.25.0",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
