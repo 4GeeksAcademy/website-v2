@@ -33,9 +33,9 @@ button:
 custom_bar:
   active: true
   message: <a class="customBar-link" href="https://wa.me/+584242443542" taget="_blank" rel="noopener noreferrer nofollow">Pregunta</a> por los próximos programas de Full-Stack Web Development en Caracas que inician 14/03 y 18/04
-  button: false
-    label: "Read More"
-    path: "#" #string (can be inline path using #, relative path or absolute path)
+#   button:
+#     label: "Read More"
+#     path: "#" #string (can be inline path using #, relative path or absolute path)
 
 badges:
   title: ""
