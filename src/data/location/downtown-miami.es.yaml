@@ -26,9 +26,9 @@ button:
 custom_bar:
   active: true
   message: Potencia tu carrera a través del código. <a class="customBar-link" href="https://4geeksacademy.com/es/aplica" taget="_blank" rel="noopener noreferrer nofollow">Registration</a> Próximas fechas | 03/07 Full-Stack | 03/28 ML + AI!
-  button: false
-    label: "Read More"
-    path: "#" #string (can be inline path using #, relative path or absolute path)
+#   button:
+#     label: "Read More"
+#     path: "#" #string (can be inline path using #, relative path or absolute path)
 
 badges:
   title: ""
