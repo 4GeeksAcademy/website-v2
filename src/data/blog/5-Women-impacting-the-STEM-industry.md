@@ -6,7 +6,7 @@ slug: "5-Women-impacting-the-STEM-industry!"
 title: "5 Women impacting the STEM industry!"
 image: "https://breathecode.herokuapp.com/v1/media/file/diana-ma-png?"
 image_alt: ""
-cluster: "learn-to-code"
+cluster: "trends-and-tech"
 status: "published"
 featured: true
 
