@@ -29,7 +29,7 @@ I did a Master's in applied statistics at NYU. While I was there, the director o
 
 There are only a handful of women working in basketball statistics and we desperately need more — the best way to get involved is to use publicly available data to solve a sports problem you’re interested in and try to attend sports conferences to build a network. You could even get hired based on some visualization you post on NBA analytics Twitter! There’s no fixed formula to work in sports analytics — the only necessary ingredient is to always be curious."
 
-**M’benda N’dour, Full Stack Software Developer 💻 **
+**M’benda N’dour, Full Stack Software Developer 💻**
 
 ![](https://breathecode.herokuapp.com/v1/media/file/mbenda-ndour-jpeg?)
 
@@ -46,7 +46,7 @@ These early impressions ultimately shaped my first mixed reality (MR) work, Micr
 In one of my experiments, the visitor could carry around a window through which eventually they would see their kid or partner. Some people started crying because it felt so intense to not only see but touch somebody in what you thought was your isolated VR world — to see the virtual mix with the physical reality.
 I want to study to better understand our multimodal perception of reality, and our relation to physical objects. Like babies that put everything into their mouth, I believe helps us re-discover the phenomenon of reality."
 
-**Roshena MacPherson, Ground Software Lead 🚀 **
+**Roshena MacPherson, Ground Software Lead 🚀**
 
 ![](https://breathecode.herokuapp.com/v1/media/file/roshena-macpherson-jpeg?) 
 
