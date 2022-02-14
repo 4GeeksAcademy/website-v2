@@ -123,8 +123,8 @@ prices:
           heading_one: "FULL-TIME"
           sub_heading: ""
         content:
-          price: "Pay upfront and get a discount or ask for a 2 payment options"
-          price_info: ""
+          price: "USD$ 3,600"
+          price_info: "Un solo pago"
         button:
           button_text: "APLICAR AHORA"
 
@@ -135,8 +135,8 @@ prices:
           heading_one: "PART-TIME"
           sub_heading: ""
         content:
-          price: "Pay upfront and get a discount or ask for a 3 - 4 payment options"
-          price_info: ""
+          price: "USD$ 170"
+          price_info: "24 meses/cuotas"
         button:
           button_text: "APLICAR AHORA"
 
