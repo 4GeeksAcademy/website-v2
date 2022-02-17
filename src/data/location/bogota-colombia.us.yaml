@@ -128,7 +128,7 @@ prices:
           heading_one: "PART-TIME"
           sub_heading: "Ask about scholarships and discounts"
         content:
-          price: "US $3,750"
+          price: "US $3,600"
           price_info: "single payment"
         button:
           button_text: "APPLY NOW"
@@ -140,7 +140,7 @@ prices:
           heading_one: "Payment Plan"
           sub_heading: "Extended"
         content:
-          price: "US $800"
+          price: "US $170"
           price_info: "5 months"
         button:
           button_text: "APPLY NOW"
@@ -219,7 +219,7 @@ longitude: "-56.216998"
 address: ""
 zip_code: ""
 state: ""
-phone: "(571) 580-6848"
+phone: "(57) 300 7282898"
 country: "Colombia"
 socials:
   - name: "Facebook"
