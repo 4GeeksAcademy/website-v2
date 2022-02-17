@@ -125,7 +125,7 @@ prices:
           heading_one: "PART-TIME"
           sub_heading: "Pregunta por las Becas disponibles"
         content:
-          price: "USD $3,750"
+          price: "USD $3,600"
           price_info: "Un Pago"
         button:
           button_text: "Aplica YA"
@@ -137,8 +137,8 @@ prices:
           heading_one: "En cuotas"
           sub_heading: "Plan de Pagos"
         content:
-          price: "USD $800"
-          price_info: "5 cuotas/meses"
+          price: "USD $170"
+          price_info: "24 cuotas/meses"
         button:
           button_text: "Aplica YA"
 
@@ -216,7 +216,7 @@ longitude: "-56.216998"
 address: ""
 zip_code: ""
 state: ""
-phone: "(571) 580-6848"
+phone: "(57) 300 7282898"
 country: "Colombia"
 socials:
   - name: "Facebook"
