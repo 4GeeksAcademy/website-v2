@@ -16,7 +16,7 @@ meta_info:
   utm_course: ["full-stack", "machine-learning-engineering"]
   utm_location: downtown-miami
   automation: strong # comma separated, "soft" is the default value
-  tag: website-lead # comma separated, "request_more_info" is default value
+  tag: website-lead,blacks-in-technology # comma separated, "request_more_info" is default value
 
 navbar:
   buttonText: "Apply now"
