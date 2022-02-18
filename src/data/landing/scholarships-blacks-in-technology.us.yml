@@ -1,7 +1,7 @@
 meta_info:
   slug: scholarships-blacks-in-technology # <--- URL 4geeksacademy.com/us/landing/example
 
-  visibility: "unlisted" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
+  visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   # This will show on social media when shared
   title: "Elevate your career with Blacks In Technology and 4Geeks Academy Scolarship!"
   description: "Thanks to Blacks In Technology we are giving away $30,000 in scolarships to celebrate black history month. Any african descent person can apply!"
@@ -15,8 +15,8 @@ meta_info:
   # this UTM fields will be also included in the CRM contact
   utm_course: ["full-stack", "machine-learning-engineering"]
   utm_location: downtown-miami
-  automation: strong #optional, this is the default value
-  tag: website-lead #optional, this is the default value
+  automation: strong # comma separated, "soft" is the default value
+  tag: website-lead # comma separated, "request_more_info" is default value
 
 navbar:
   buttonText: "Apply now"
@@ -33,28 +33,31 @@ form:
 
 # jumbotron on the top (cannot be commented out)
 header_data:
-  tagline: $30k+ in scholarships
+  tagline: "$30k+ in scholarships"
+  tagline_color: "white"
   sub_heading: ""
-  partner_url: "https://foundation.blacksintechnology.net"
-  image: "https://breathecode.herokuapp.com/v1/media/file/bit-foundation-logo-png"
+  partner_logo_url: "../../../static/images/partner/bit-logo.png" # optional
+  # background_image: "../../../static/images/Happy-People-Landing-4Geeks-ES.jpg" # optional
+  background: "black" #background property, it can be a hex color
   image_filter: brightness(0.4)
 
 features:
   marginTop: 20px #<-- separation between tagline and the bullets
 
   #                                         up   left down  right
-  styles: '{ "fontSize": "15px", "margin": "10px 0px 10px 0px" }'
-  text: Landing Jobs is offering more than €1,000,000 in Scholarships to study Web Development or AI at 4Geeks Academy. The minimum scholarship is 30% and they will be awarded based on the results of the selection process. Whether you want to start your career as a Junior programmer or upskill  and become a Senior Developer, don't miss out on this amazing opportunity.
+  styles: '{ "fontSize": "15px", "margin": "10px 0px 10px 0px", "color": "white" }'
+  text: BIT is offering more than $30k in scholarships to study Web Development or AI at 4Geeks Academy. 8 scholaships will be awarded based on the results of the selection process. Whether you want to start your career as a Junior programmer or upskill and become a Senior Developer or AI/ML Engineer, don't miss out on this amazing opportunity.
   bullets:
-    - 300 scholarships in total, most of them greater than 50%
-    - Ful-Stack Developer (Level 1) and AI/Machine Learning programs
-    - Full-Time and Part-Time modality
+    - 8 scholarships in total
+    - Ful-Stack Developer and AI/Machine Learning courses
+    - Part-Time modality
+    - You must be of african descent to apply
 
 follow_bar:
   position: "top" # top, bottom, hidden
   content:
     text: "Apply for a scholarship now. \n Financing options available."
-    text_mobile: "Landing Jobs scholarships . \n Payment plans available"
+    text_mobile: "Blacks In Tech scholarships . \n Payment plans available"
     # devices:   XL      LG    MD      SM    XS
     font_size: ["25px", "25px", "25px", "18px", "4.3vw"]
   button:

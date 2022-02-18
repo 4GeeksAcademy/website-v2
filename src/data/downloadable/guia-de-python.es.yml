@@ -31,8 +31,8 @@ navbar:
 header_data:
   tagline: "Amazing Python:\nGuía rápida para principiantes"
   sub_heading: ""
-  partner_url: "../../../static/images/techs/python-logo.png"
-  image: "../../../static/images/program-bg.png"
+  partner_logo_url: "../../../static/images/techs/python-logo.png"
+  background_image: "../../../static/images/program-bg.png"
   image_filter: brightness(0.4)
 
 features:
