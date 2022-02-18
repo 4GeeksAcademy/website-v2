@@ -168,7 +168,7 @@ prices:
           heading_two: "(OUT OF POCKET)"
           sub_heading: "and enjoy the best Price in town"
         content:
-          price: "$9,499.00"
+          price: "$9,999.00"
           price_info: "Single payment. Get a 10% Discount!"
         button:
           button_text: "Apply Now"
@@ -262,7 +262,7 @@ prices:
           heading_two: "(OUT OF POCKET)"
           sub_heading: "and enjoy the Best Price in town"
         content:
-          price: "$7,499.00"
+          price: "$8,999.00"
           price_info: "Single payment. Get a 10% Discount!"
         button:
           button_text: "Apply Now"
