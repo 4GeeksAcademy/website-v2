@@ -27,7 +27,8 @@ form:
   # posible fields: "first_name", "last_name", "full_name", "phone", "email"
   # always the first_name, email and phone will be mandatory if added.
   fields: ["full_name", "phone", "email"]
-  heading: "Apply now"
+  heading: "Celebrating Black History Month"
+  motivation: "Apply and receive a scholarship to learn how to code"
   button_label: Apply now
   redirect: "https://marketing892162.typeform.com/to/I8gW3RMs" #you can redirect to another url or entirely diffrent website
 
@@ -37,6 +38,7 @@ header_data:
   tagline_color: "white"
   sub_heading: ""
   partner_logo_url: "../../../static/images/partner/bit-logo.png" # optional
+  badge: "../../../static/images/badges/switchup.png"
   # background_image: "../../../static/images/Happy-People-Landing-4Geeks-ES.jpg" # optional
   background: "black" #background property, it can be a hex color
   image_filter: brightness(0.4)
@@ -49,9 +51,22 @@ features:
   text: BIT is offering more than $30k in scholarships to study Web Development or AI at 4Geeks Academy. 8 scholaships will be awarded based on the results of the selection process. Whether you want to start your career as a Junior programmer or upskill and become a Senior Developer or AI/ML Engineer, don't miss out on this amazing opportunity.
   bullets:
     - 8 scholarships in total
-    - Ful-Stack Developer and AI/Machine Learning courses
-    - Part-Time modality
-    - You must be of african descent to apply
+    - Access to the largest community of black technologists
+    - Part-time Ful-Stack Developer and AI/Machine Learning courses
+
+short_badges:
+  - name: "Premios Excelencia Educativa"
+    url: ""
+    image: "../../../static/images/badges/exelencia-educativa-es.png"
+    alt: "Mejor centro de Coding Bootcamp"
+  - name: "Newsweek"
+    url: ""
+    image: "../../../static/images/badges/newsweek-es.png"
+    alt: "Top Coding Bootcamps Newsweek"
+  - name: "Switchup"
+    url: ""
+    image: "../../../static/images/badges/reviews.png"
+    alt: "Best cooding bootcamp Switchup 2021"  
 
 follow_bar:
   position: "top" # top, bottom, hidden
@@ -94,7 +109,7 @@ iconogram:
   position: 3
   icons:
   - icon: "touch"
-    title: Apply for your scholarship before October 8th, 2021
+    title: Apply for your scholarship before March 31st, 2022
   - icon: "receive_mail"
     title: You will receive an email with all the information and a logic test 
   - icon: "talk"
@@ -139,6 +154,12 @@ choose_your_program:
     text_link: Apply for a scholarship
     link: "#"
 
+geeks_vs_others:
+  position: 4
+  heading: "Compare 4Geeks to other bootcamps"
+  # sub_heading: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
+  total_rows: 5
+
 
 why_4geeks:
   position: 7
@@ -154,21 +175,30 @@ apply_schollarship: # form that is displayed at the end of the landing
   image: "../../../static/images/comunity-support.png"
 
 # Possible layours: [two_column_left_image, two_column_right_image]
+
 components:
-  - name: python_y_javascript
+  - name: blacks_in_technolgy
     position: 6
     layout: two_column_right
     background: "veryLightBlue2" # Name of the color(from components/Styling/index.js) or color code ex: #C9F9F9
     image:
-      src: "/images/why-4geeks/python-image.png"
-      # /static/images/why-4geeks/python-image.png
+      src: "/images/landing/affrican_person_small.jpeg"
     # video: "B01-eTfgqqc"
     heading:
       text:
-        "Python and Javascript"
+        "Blacks In Technology Foundation"
         #           xl      lg      md      sm      xs
-      font_size: ["50px", "50px", "50px", "50px", "50px"]
+      font_size: ["40px", "40px", "40px", "40px", "40px"]
+    sub_heading: 
+      text: "Access to the largest community of black technologists"
+      font_size: ["18px", "18px", "18px", "18px", "18px"]
     content:
-      text: "Our programs are based on the use of Python and Javascript. The reason? In the job market JavaScript has 26 times more job openings than Ruby on Rails. Python has 10 times more jobs than node.js.
-      Other tools that you will also learn to use in our programs are: GitHub, Git, Redux, Amazon Web Services, etc."
+      text: "<h4>CAREER SUPPORT</h4>
+Job boards, mentorships, and strategic partnerships give members an upper hand in their job search and career advancement goals.
+
+<h4>NETWORKING</h4>
+Professional and social events connect our community. Virtual and physical events are core to the BIT mission.
+
+<h4>TECH RESOURCES</h4>
+Through our relationships, the BIT Foundation offers discounts on technical training, and events and conferences."
       font_size: ["16px"]
