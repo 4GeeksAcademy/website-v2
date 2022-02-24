@@ -1,19 +1,19 @@
 meta_info:
-  slug: programming-course-from-scratch
+  slug: coding-bootcamp
   title: ""
-  description: ""
-  image: null
+  description: "Learn to code at one of the most awarded coding bootcamps in the world. No previous coding skills. Code with your classmates, join the community and get career support for life."
+  image: "https://breathecode.herokuapp.com/v1/media/file/4geeks-feb-14th-113-jpeg?width=600"
   visibility: "visible"
-  template: "programming-course"
-  keywords: ""
-  redirects: []
+  template: "coding-bootcamp"
+  keywords: "coding bootcamp, full stack coding bootcamp, full-stack coding bootcamp, online coding bootcamo, remote coding bootcamp"
+  redirects: ["/programming-course-from-scratch", "/coding-bootcamps"]
 
-seo_title: "programming course"
+seo_title: "coding bootcamp"
 header:
-  title: "Programming course from scratch"
+  title: "Start a coding career"
   image: "../../../static/images/bg/python-image.png"
   image_alt: "Python image"
-  paragraph: "The thought of learning to code from scratch can be overwhelming. Prior knowledge is not the most important thing to successfully complete a programming course from scratch, the most important thing is the determination to succeed."
+  paragraph: "Learn to code at one of the most awarded coding bootcamps in the world, start with no previous coding skills, develop your first apps with your classmates, join the community and get unlimited career support for life."
 
 button:
   syllabus_heading: "Download Syllabus"
@@ -40,20 +40,17 @@ credentials:
 details:
   about:
     title: "About the program"
-    sub_title: "To become a full stack developer you do not need experience, 
-      but time and dedication.
+    sub_title: "The human brain absobres 80% faster when it practices every day, a coding bootcamp is the perfect learning vehicle for a fast career transition into coding.
       
-      Upon completion of a course like 4Geeks, a graduate of the academy will have 
-      job opportunities in the technology sector, can become a freelance programmer, 
-      better understand programming to manage her current career or launch her startup in 
-      the technological world."
+      Upon completion of our coding bootcamp, graduates will have the coding skills needed to developer real life applications, 
+      job opportunities in the technology sector, and lifetime access to technical and career support at one of the biggest coding communities in the world."
     list:
       - label: "Duration"
         content:  "16 Weeks"
       - label: "Classes"
         content: "3 Classes weekly"
       - label: "Out of class"
-        content: "All the time you need to complete the proposed projects in the Full Stack Developer course"
+        content: "You are required to work at least 9 additional hours on your own time to finish the coding bootcamp"
 
   heading: PROGRAM DETAILS FULL-TIME
   weeks: 9
