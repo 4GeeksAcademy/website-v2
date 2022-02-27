@@ -270,7 +270,8 @@ const Landing = (props) => {
                                 isActive
                                 style={JSON.parse(yml.features.styles)}
                                 margin="7px 0"
-                                padding="0px 0px"
+                                padding_tablet="0px 0px"
+                                padding="0px 20px"
                                 // textShadow="0px 0px 4px black"
                                 textAlign="left"
                                 color={Colors.white}
@@ -289,6 +290,9 @@ const Landing = (props) => {
                                 className="set-overflow"
                                 margin="25px 0 0 0"
                                 padding="24px 0 0 0"
+                                maxWidth="100vw"
+                                gap="40px"
+                                overflowX="auto"
                                 justifyContent="between"
                                 // justifyContent="center"
                                 // alignItems="center"
