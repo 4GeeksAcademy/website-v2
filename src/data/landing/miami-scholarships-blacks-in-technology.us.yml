@@ -57,15 +57,15 @@ features:
 short_badges:
   - name: "Premios Excelencia Educativa"
     url: ""
-    image: "../../../static/images/badges/exelencia-educativa-es.png"
+    image: "../../../static/images/badges/exelencia-educativa-es_black.png"
     alt: "Mejor centro de Coding Bootcamp"
   - name: "Newsweek"
     url: ""
-    image: "../../../static/images/badges/newsweek-es.png"
+    image: "../../../static/images/badges/newsweek-es_black.png"
     alt: "Top Coding Bootcamps Newsweek"
   - name: "Switchup"
     url: ""
-    image: "../../../static/images/badges/reviews.png"
+    image: "../../../static/images/badges/reviews_black.png"
     alt: "Best cooding bootcamp Switchup 2021"  
 
 follow_bar:
@@ -86,24 +86,26 @@ follow_bar:
 #
 # ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇
 #
-badges:
-  position: 1 # It's the position of the component that will be rendered first
-  heading: "4Geeks Academy has awards and recognitions that validate it's excellence"
-
-about4Geeks:
-  position: 2
-  heading: Flexible and intensive education
-  sub_heading: "More than 400 hours of practical learning (exercises, projects). You will be able to improve your skills in order to face interviews and different selection processes that will allow you to find a job as a Junior or Senior Developer."
-  list:
-    - title: "Lifetime Career Support"
-    - title: "Financial options to complement your scholarship"
-    - title: "Ratio 1:5 teacher student. Unlimited 1 on 1 mentoring"
-    - title: "Preparation for interviews and selection processes"
-  paragraph: ""
-  button_text: "Apply for a scholarship"
-  button_link: "#" # accepts url: relative(/us/apply), absolute(https://google.com) or component id(#componentName)
-  image: "../../../static/images/bg/community.png"
-  image_mobile: "../../../static/images/bg/community.png"
+rating_reviews:
+  position: 1
+  heading: "Top rated on all available review sites"
+  rating_list:
+    - alt: "Career Karma"
+      image: "../../../static/images/badges/career-karma.png"
+      rating: 4.89
+      url: ""
+    - alt: "Switchup"
+      image: "../../../static/images/badges/switchup-img.png"
+      rating: 4.86
+      url: ""
+    - alt: "Course Report"
+      image: "../../../static/images/badges/course-report.png"
+      rating: 4.84
+      url: ""
+    - alt: "Google"
+      image: "../../../static/images/badges/google.png"
+      rating: 5
+      url: ""
 
 iconogram:
   position: 3

@@ -82,11 +82,11 @@ follow_bar:
 #
 rating_reviews:
   position: 1
-  heading: "Read about us in the media..."
+  heading: "Top rated on all available review sites"
   rating_list:
     - alt: "Career Karma"
       image: "../../../static/images/badges/career-karma.png"
-      rating: 3.86
+      rating: 4.89
       url: ""
     - alt: "Switchup"
       image: "../../../static/images/badges/switchup-img.png"
@@ -94,7 +94,7 @@ rating_reviews:
       url: ""
     - alt: "Course Report"
       image: "../../../static/images/badges/course-report.png"
-      rating: 4.35
+      rating: 4.84
       url: ""
     - alt: "Google"
       image: "../../../static/images/badges/google.png"
