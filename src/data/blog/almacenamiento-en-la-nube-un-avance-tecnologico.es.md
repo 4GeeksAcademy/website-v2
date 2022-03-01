@@ -5,7 +5,7 @@ excerpt: "En los últimos años, en el mundo tech, las nubes han reemplazado a l
 slug: "almacenamiento-en-la-nube"
 template: "post"
 title: "Almacenamiento en la nube, un avance tecnológico increíble"
-image: "https://drive.google.com/uc?export=view&id=1FpfWoHi91ZOi6630u8pQeFAQADIO9_aC"
+image: "https://lh6.googleusercontent.com/dKx5GKrOX73JZcrmvlNy1gemVpTtQhYRcAzhEPpNOuK4fnnIsOjjz39P9f47qCNNwPsouAdWqRx-sor7SojTyEqOrn3J0w1-_HwaQ3XMvw9ez4cKojGa8a_W7O2sqvIBBYheswdy"
 image_alt: "Almacenamiento en la nube, un avance tecnológico increíble"
 cluster: "tendencias-y-tecnologia"
 status: "published"
@@ -57,8 +57,6 @@ Resulta que una gran parte del negocio de Amazon es su almacenamiento en la nube
 Para los amantes de Apple, **Apple iCloud** es su mejor opción, ya que posee una perfecta integración con los productos Apple, realiza copias de seguridad automáticas. Sus desventajas es que posee apenas 5GB en su versión gratuita, donde la mayoría de dicha memoria es utilizada en los productos de iCloud. Otro aspecto a mejorar es que no posee sincronización selectiva, un punto clave para tomar la decisión de si utilizar o no esta nube.
 
 También existen otras nubes como: pCloud, Mega, Tresorit, Internxt, Media Fire, entre otras, las cuales también son muy buenas opciones, solo es cuestión de investigar y escoger la mejor para ti.
-
-![https://lh6.googleusercontent.com/dKx5GKrOX73JZcrmvlNy1gemVpTtQhYRcAzhEPpNOuK4fnnIsOjjz39P9f47qCNNwPsouAdWqRx-sor7SojTyEqOrn3J0w1-_HwaQ3XMvw9ez4cKojGa8a_W7O2sqvIBBYheswdy](https://lh6.googleusercontent.com/dKx5GKrOX73JZcrmvlNy1gemVpTtQhYRcAzhEPpNOuK4fnnIsOjjz39P9f47qCNNwPsouAdWqRx-sor7SojTyEqOrn3J0w1-_HwaQ3XMvw9ez4cKojGa8a_W7O2sqvIBBYheswdy)
 
 Luego de leer este artículo, no te quedará duda de que lo mejor que puedes hacer es comenzar a trabajar en la nube ¿Verdad que sí?
 
