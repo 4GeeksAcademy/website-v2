@@ -1,7 +1,7 @@
 meta_info:
   slug: coding-bootcamp
   title: ""
-  description: "One of the most awarded coding bootcamps in the world. No previous coding skills required. Code with your classmates, join the community and get career support for life."
+  description: "One of the most awarded coding bootcamps. No previous coding skills required. Code with others, join the community and get career support for life."
   image: "https://breathecode.herokuapp.com/v1/media/file/4geeks-feb-14th-113-jpeg?width=600"
   visibility: "visible"
   template: "coding-bootcamp"
