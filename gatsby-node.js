@@ -198,12 +198,17 @@ const createBlog = async ({actions, graphql}) => {
     // Eliminate duplicate clusters
     Object.keys(clusters).forEach(lang => clusters[lang] = clusters[lang].filter((value, index) => clusters[lang].indexOf(value) === index))
     // Make clusters pages
+    const langSwitcher = {
+        es: "blog-en-espanol",
+        us: "blog"
+    }
+    console.log(langSwitcher[lang], 'langSwitcher[lang]');
     Object.keys(clusters).forEach(lang => 
         clusters[lang].forEach(cluster => {
             let file_name = `clusters.${lang}`
             let type = "page";
             createPage({
-                path: `/${lang}/blog/${cluster}/`,
+                path: `/${lang}/${langSwitcher[lang]}/${cluster}/`,
                 component: clusterTemplate,
                 context: {
                     cluster,
