@@ -202,7 +202,6 @@ const createBlog = async ({actions, graphql}) => {
         es: "blog-en-espanol",
         us: "blog"
     }
-    console.log(langSwitcher[lang], 'langSwitcher[lang]');
     Object.keys(clusters).forEach(lang => 
         clusters[lang].forEach(cluster => {
             let file_name = `clusters.${lang}`
