@@ -7,7 +7,7 @@ slug: "5-mujeres-impactando-la-industria-tech"
 title: "5 mujeres impactando la industria tech"
 image: "https://breathecode.herokuapp.com/v1/media/file/diana-ma-png?"
 image_alt: ""
-cluster: "tendencias-y-tecnologia-"
+cluster: "tendencias-y-tecnologia"
 status: "published"
 featured: true
 
