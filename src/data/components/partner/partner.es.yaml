@@ -76,6 +76,11 @@ partners:
       # locations: ["miami-downtown"]
       image: "../../../../static/images/partner/coinet.jpg"
       featured: false
+    - name: "Jooble"
+      # locations: ["madrid-spain"]
+      image: "../../../../static/images/partner/jooble.png"
+      featured: false
+      
 coding:
   tagline: "Actores globales en el mundo de la codificación"
   sub_heading: "Estamos inmersos en el ecosistema de codificación al asociarnos con actores tecnológicos globales que nos ayuda a organizar o participar en iniciativas para impactar aún más la industria de la codificación"
