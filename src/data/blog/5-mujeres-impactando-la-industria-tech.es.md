@@ -1,8 +1,7 @@
 ---
 author: "4GeeksAcademy"
 date: "2022-03-06T20:44:51+00:00"
-excerpt: "En esta publicación de blog, hablaremos sobre el impacto actual de las mujeres en la industria STEM, sus historias personales, áreas de especialización y logros.
-"
+excerpt: "Hablaremos sobre el impacto actual de las mujeres en la industria STEM, sus historias personales, áreas de especialización y logros."
 slug: "5-mujeres-impactando-la-industria-tech"
 title: "5 mujeres impactando la industria tech"
 image: "https://breathecode.herokuapp.com/v1/media/file/diana-ma-png?"
