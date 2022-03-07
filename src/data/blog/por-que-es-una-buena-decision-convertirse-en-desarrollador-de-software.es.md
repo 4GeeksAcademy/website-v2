@@ -5,7 +5,7 @@ slug: "por-que-es-una-buena-decision-convertirse-en-desarrollador-de-software"
 title: "¿Por qué es una buena decisión convertirse en Desarrollador de Software?"
 image: "https://breathecode.herokuapp.com/v1/media/file/blog-preview-png?"
 image_alt: ""
-cluster: "aprende-a-programar"
+cluster: "aprender-a-programar"
 status: "published"
 featured: true
 
