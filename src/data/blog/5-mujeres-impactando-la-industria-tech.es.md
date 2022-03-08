@@ -71,6 +71,5 @@ Con mi canal, quería decir: 'Oye, también hacemos esto'. La gente me envía me
 Desde la inclusión hasta la innovación, estas son las historias del día a día que inspiran a nuestra generación, ¿puede identificarse con alguna de estas historias? ¿Te apasiona la ciencia y cambiar el mundo? Nos sentimos orgullosos de educar a las grandes niñas y mujeres de la industria STEM del mañana en el desarrollo de software y el aprendizaje automático.
 
 
-You can get to know more about the stories of our women graduates on our websiteand YouTube channel . If you feel inspired by them, remember you could become a tech professional too, it only takes a quick look into our 4Geeks Academy programs.
 Conoce más sobre las historias de nuestras mujeres graduadas en nuestro website [click here](https://4geeksacademy.com/us/testimonials) y canal de YouTube . Si te sientes inspirad@ por ellas, recuerda que también puedes convertirte en un profesional de la tecnología, solo necesita un vistazo rápido a nuestros programas de 4Geeks Academy.
 
