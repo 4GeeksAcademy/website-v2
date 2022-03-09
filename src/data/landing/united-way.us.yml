@@ -1,0 +1,98 @@
+meta_info:
+  slug: united-way # <--- URL 4geeksacademy.com/us/landing/example
+
+  # This will show on social media when shared
+  title: "United Way"
+  description: "United Way Miami"
+  image: "/images/bg/main-bg.jpg"
+  keywords: "Coding Classes, Learn to code, 4Geeks Academy"
+
+  template: "landing_a" # <--- choose your landing template
+  redirects: # <--- URL redirections to avoid 404 errors
+    ["/landing/united-way"]
+
+  # Set a particular course or location to the landing page
+  # this UTM fields will be also included in the CRM contact
+  utm_course: ["full-stack"]
+  utm_location: downtown-miami
+  automation: soft # comma separated, "soft" is the default value
+  tag: request_more_info # comma separated, "request_more_info" is the default value
+
+form:
+  # posible fields: "first_name", "last_name", "full_name", "phone", "email"
+  # always the first_name, email and phone will be mandatory if added.
+  fields: ["full_name", "phone", "email"]
+  heading: "Get more information, and change your life!"
+  motivation: "ENROLL NOW and change your life."
+  button_label: Get more information
+  redirect: null #you can redirect to another url or entirely diffrent website
+
+header_data:
+  tagline: United way
+  sub_heading: "United way"
+  image: "../../../static/images/4geeks-main.jpg"
+  image_filter: brightness(0.3)
+
+features:
+  marginTop: 0px #<-- separation between tagline and the bullets
+
+  #                                         up   left down  right
+  styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
+  bullets:
+    - No previous experience or coding skills required.
+    - Part-Time or Full-Time Schedules Available.
+    - Get lifetime access to our mentors and Career Growth Support (Your first Job in Tech is our goal).
+    - Junior developers make avg $55k per year in Florida.
+
+follow_bar:
+  position: "top" # top, bottom, hidden
+  content:
+    text: "Get $1,500 off if you enroll with our Labor Day Deal."
+    text_mobile: "ENROLL NOW and get $1,500 off when you use our code LABOR in our apply form"
+    # devices:   XL      LG    MD      SM    XS
+    font_size: ["25px", "25px", "25px", "20px", "18px"]
+  button:
+    text: "Get more information"
+    path: "#top"
+  phone:
+    text: "Call "
+
+header:
+  title: "We want to Partner Up"
+  image: "../../../static/images/partner/partnership-image.png"
+  image_alt: "Partnership header"
+  paragraph: "At 4Geeks we believe in the power of collaboration and the positive impact that creates an active community. We are constantly looking for more ways to bring talent and organization that can help and join us in our vision to create the most relevant career-boosting community for future and present coders."
+  button: HAZTE HIRING PARTNER
+
+badges:
+  position: 6
+  heading: "4Geeks Academy has awards and recognitions that validate it's excellence"
+
+components:
+  - name: united
+    position: 2
+    layout: two_column_right
+    proportions: [6, 6]
+    background: "veryLightBlue2"
+    image:
+      style: '{ "backgroundSize": "contain" }'
+      src: "/images/badges/switchup.png"
+      link: "https://www.switchup.org/bootcamps/4geeks-academy"
+    video: "SixRm6R8rc0"
+    heading:
+      text: "Brought to you by united way"
+      font_size: ["40px", "40px", "40px", "40px", "40px"]
+    content:
+      text: "United way advances the common good in communities accross the world. Focused on the education, income and health - thebuilding blocks for a good quality of life."
+      font_size: ["16px"]
+  - name: working_in_tech
+    position: 7
+    proportions: [4, 8]
+    layout: two_column_left
+    image:
+      src: "https://storage.googleapis.com/4geeks-academy-website/landing-pictures/testimonials.webp"
+    heading:
+      text:
+        "86% of our graduates are now working in the field with an average entry salary of $50,000/yr."
+        #           xl      lg     md     sm    xs
+      font_size: ["40px", "34px"]
