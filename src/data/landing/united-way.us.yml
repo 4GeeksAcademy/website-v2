@@ -4,7 +4,7 @@ meta_info:
   # This will show on social media when shared
   title: "United Way"
   description: "United Way Miami"
-  image: "/images/bg/main-bg.jpg"
+  image: "public/images/UWM_Pantone_2021 2.png"
   keywords: "Coding Classes, Learn to code, 4Geeks Academy"
 
   template: "landing_a" # <--- choose your landing template
@@ -57,13 +57,6 @@ follow_bar:
   phone:
     text: "Call "
 
-header:
-  title: "We want to Partner Up"
-  image: "../../../static/images/partner/partnership-image.png"
-  image_alt: "Partnership header"
-  paragraph: "At 4Geeks we believe in the power of collaboration and the positive impact that creates an active community. We are constantly looking for more ways to bring talent and organization that can help and join us in our vision to create the most relevant career-boosting community for future and present coders."
-  button: HAZTE HIRING PARTNER
-
 badges:
   position: 6
   heading: "4Geeks Academy has awards and recognitions that validate it's excellence"
@@ -76,9 +69,7 @@ components:
     background: "veryLightBlue2"
     image:
       style: '{ "backgroundSize": "contain" }'
-      src: "/images/badges/switchup.png"
-      link: "https://www.switchup.org/bootcamps/4geeks-academy"
-    video: "SixRm6R8rc0"
+      src: "/images/UWM_Pantone_2021_2.png"
     heading:
       text: "Brought to you by united way"
       font_size: ["40px", "40px", "40px", "40px", "40px"]
