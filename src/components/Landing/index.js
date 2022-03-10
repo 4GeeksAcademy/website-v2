@@ -158,6 +158,20 @@ TwoColumn.defaultProps = {
     right: null,
 }
 
+export const MultiColumns = ({heading, subheading, columns}) => {
+    const [left_size, right_size] = proportions ? proportions : [];
+    const size = columns / 12;
+
+    return <Div flexDirection="column" gap="0px" flexDirection_tablet="row" m_sm="0px 0px 100px 0">
+        {columns.map((column)=>{
+            <Div flexDirection="column" size_tablet={left_size || 6} size={size} maxHeight="300px" textAlign="center">
+                <Side {...column} />
+            </Div>
+        })}
+        
+    </Div>
+}
+
 export const SingleColumn = ({column}) => {
     return <Div flexDirection="row" m_sm="0px 0px 100px 0">
         <Div flexDirection="column" size={12} size_sm="12" align_sm="center">
