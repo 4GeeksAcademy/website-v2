@@ -135,6 +135,30 @@ Coding makes you a more flexible job candidate in a rapidly-shifting digital eco
     position: 7
     layout: geeksInfo
 
+  - name: why4geeks
+    position: 5
+    layout: two_column_left
+    proportions: [6, 6]
+    image:
+      style: '{ "backgroundSize": "contain" }'
+      src: "/images/landing/Group_193.png"
+    heading:
+      text: "Why 4Geeks Academy?"
+      font_size: ["30px", "30px", "30px", "30px", "30px"]
+    sub_heading:
+      text: "Software development is one of the more sought-after professionals out there. Learning to code will give you access to:"
+      font_size: ["16px", "16px", "16px", "16px", "16px"]
+    content:
+      font_size: ["16px"]
+      text: "A Coding bootcamp provide great software development education to start a coding career and 4Geeks Academy is the place where developers grow and thrive. We are specialists of code.
+4Geeks Academy was born in 2015. Today 4Geeks has +7 campus spread over the United States, Latin America and Europe. We count with +1500 graduates and tons of things to be proud of.
+While Coding bootcamps usually are very intensive experiences that would be difficult to maintain while raising a child or while working a full-time job. 
+Our program at 4Geeks Academy is more flexible and doable for anyone, even for moms or any other working person.
+This part-time 16-week syllabus is made to teach you both: 
+The most wanted and the highest-paid technologies today."
+
+      
+
   # - name: testimonials
   #   position: 8
   #   layout: testimonials
