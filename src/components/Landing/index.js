@@ -201,7 +201,6 @@ const Side = ({
                         fontSize={c_xl || "16px"}
                         fontSize_sm={c_sm}
                         fonSize_md={c_md}
-                        fontSize_sm={c_sm}
                         fontSize_xs={c_xs}
                         fontHeight="30px"
                     >
@@ -273,13 +272,18 @@ TwoColumn.defaultProps = {
 };
 
 export const MultiColumns = ({ heading, sub_heading, end_paragraph, button, columns }) => {
+    const size = 4;
     const [h_xl, h_lg, h_md, h_sm, h_xs] = heading ? heading.font_size : [];
     const [sh_xl, sh_lg, sh_md, sh_sm, sh_xs] =
         sub_heading && Array.isArray(sub_heading.font_size)
             ? sub_heading.font_size
             : [];
+    const [p_xl, p_lg, p_md, p_sm, p_xs] =
+        end_paragraph && Array.isArray(end_paragraph.font_size)
+            ? end_paragraph.font_size
+            : [];
     return (
-        <GridContainer margin="0 0 20px 0" >
+        // <GridContainer margin="0 0 20px 0" >
 
         <Div
           display="flex"
@@ -287,6 +291,7 @@ export const MultiColumns = ({ heading, sub_heading, end_paragraph, button, colu
           alignItems="center"
           padding_tablet="0 4em"
           padding="0 10px"
+          width="100%"
           style={{textAlign:'center'}}
         >
           {heading && (
@@ -325,10 +330,10 @@ export const MultiColumns = ({ heading, sub_heading, end_paragraph, button, colu
                 <Paragraph
                     padding={end_paragraph ? "0" : "20px"}
                     margin="0"
-                    fontSize={sh_xl || "16px"}
-                    fontSize_sm={sh_sm}
-                    fonSize_md={sh_md}
-                    fontSize_xs={sh_xs}
+                    fontSize={p_xl || "16px"}
+                    fontSize_sm={p_sm}
+                    fonSize_md={p_md}
+                    fontSize_xs={p_xs}
                     fontHeight="30px"
                     style={{textAlign:'center'}}
                 >
@@ -338,14 +343,14 @@ export const MultiColumns = ({ heading, sub_heading, end_paragraph, button, colu
             {button && (
                 <Button
                     outline
-                    width="250px"
+                    // width="250px"
                     colorHoverText={Colors.blue}
                     lineHeight="26px"
                     textColor={Colors.black}
                     padding="0"
                     padding_tablet="0"
                     fontSize="15px"
-                    textAlign="left"
+                    // textAlign="left"
                     margin="2rem 0"
                     // padding=".35rem.85rem"
                     onClick={() => {
@@ -367,7 +372,7 @@ export const MultiColumns = ({ heading, sub_heading, end_paragraph, button, colu
             </Div> */}
         </Div>
 
-      </GridContainer>
+    //   </GridContainer>
 
     )
 }
@@ -400,7 +405,7 @@ TwoColumn.defaultProps = {
 
 export const Columns = ({ columns, proportions }) => {
     return (
-        <Div flexDirection="row" m_sm="0px 0px 100px 0">
+        <Div flexDirection="row" m_sm="0px 0px 100px 0" justifyContent="around" width="100%">
             {columns.map((c, index) => (
                 <Div
                     key={index}
@@ -798,7 +803,9 @@ export const landingSections = {
         );
     },
 
-    testimonials: ({ session, data, pageContext, yml, index }) => (
+    testimonials: ({ session, data, pageContext, yml, index }) => {
+        console.log("testimonials_data:::", data);
+        return(
         <Div
             id="testimonials"
             key={index}
@@ -810,7 +817,7 @@ export const landingSections = {
         >
             <TestimonialsCarrousel lang={data.allTestimonialsYaml.edges} />
         </Div>
-    ),
+    )},
 
     geeksInfo: ({ session, data, pageContext, yml, index }) => (
         <Div
@@ -976,7 +983,7 @@ export const landingSections = {
         );
     },
     multi_column: ({ session, data, pageContext, yml, index }) => {
-
+        console.log(yml);
         return (
             <Div
                 id="multi_column"
@@ -991,7 +998,7 @@ export const landingSections = {
                     heading={yml.heading}
                     sub_heading={yml.sub_heading}
                     columns={yml.columns}
-                    end_paragraph={yml.end_paragraph}
+                    end_paragraph={yml.content}
                     button={yml.button}
                 />
             </Div>

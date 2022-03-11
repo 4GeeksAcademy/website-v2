@@ -80,41 +80,41 @@ components:
   - name: elegibility
     position: 3
     layout: multi_column
-
     heading:
       text: "Elegibility in this program"
       font_size: ["30px", "30px", "30px", "30px", "30px"]
-
+    content:
+      text: "learn more about eligibility conditions and apply"
+      font_size: ["16px", "16px", "16px", "16px", "16px"]
     sub_heading:
       text: "You may qualify if you are a Miami resident and belong to one of these groups:"
       font_size: ["16px", "16px", "16px", "16px", "16px"]
-
     button:
       text: "Review Conditions"
       color: null
       path: "https://www.switchup.org/bootcamps/4geeks-academy"
-    end_paragraph:
-      text: "hahaha"
-      font_size: ["16px", "16px", "16px", "16px", "16px"]
     columns:
       - image:
-          src: "/images/landing/UWM_Pantone_2021_2.png"
+          style: '{ "backgroundSize": "cover", "minHeight": "200px" }'
+          src: "/images/landing/of_color.png"
         content: 
-          text: "LOW-INCOME PEOPLE OF COLOR"
+          text: "LOW-INCOMEPEOPLE <br> OF COLOR"
           font_size: ["16px"]
-        size: [4,4,4,4]
+        size: [3,3,3,3]
       - image:
-          src: "/images/landing/UWM_Pantone_2021_2.png"
+          style: '{ "backgroundSize": "cover" }'
+          src: "/images/landing/veteran.png"
         content: 
-          text: "LOW-INCOME VETERANS"
+          text: "LOW-INCOME <br> VETERANS"
           font_size: ["16px"]
-        size: [4,4,4,4]
+        size: [3,3,3,3]
       - image:
-          src: "/images/landing/UWM_Pantone_2021_2.png"
+          style: '{ "backgroundSize": "cover" }'
+          src: "/images/landing/image_259.png"
         content: 
           text: "LOW-INCOME SINGLE FEMALE HEADS OF HOUSE HOLD"
           font_size: ["16px"]
-        size: [4,4,4,4]
+        size: [3,3,3,3]
 
   - name: coding
     position: 4
@@ -123,7 +123,7 @@ components:
     background: "rgba(255, 183, 24, 0.2)"
     image:
       style: '{ "backgroundSize": "contain" }'
-      src: "/images/landing/Group_193.png"
+      src: "/images/landing/Group_194.png"
     heading:
       text: "Why Coding?"
       font_size: ["40px", "40px", "40px", "40px", "40px"]
@@ -151,7 +151,7 @@ Coding makes you a more flexible job candidate in a rapidly-shifting digital eco
     proportions: [5, 7]
     image:
       style: '{ "backgroundSize": "contain" }'
-      src: "/images/landing/Group_193.png"
+      src: "/images/landing/group_4.png"
     heading:
       text: "Why 4Geeks Academy?"
       font_size: ["30px", "30px", "30px", "30px", "30px"]
@@ -166,7 +166,7 @@ Coding makes you a more flexible job candidate in a rapidly-shifting digital eco
         <br>
         <p>Wile Coding bootcamps usually are very intensive experiences that would be difficult to maintain while raising a child or while working a full-time job.</p>
         <br>
-        <p><span>Our program at 4Geeks Academy</span> is more flexible and doable for anyone, even for moms or any other working person.</p>
+        <p><span style={{background:'rgb(255, 183, 24)'}}>Our program at 4Geeks Academy</span> is more flexible and doable for anyone, even for moms or any other working person.</p>
         <br>
         <p>This part-time 16-week syllabus is made to teach you both: 
         The most wanted and the highest-paid technologies today.</p>
@@ -208,7 +208,7 @@ Coding makes you a more flexible job candidate in a rapidly-shifting digital eco
     proportions: [6, 6]
     image:
       style: '{ "backgroundSize": "contain" }'
-      src: "/images/landing/Group_193.png"
+      src: "/images/landing/temp4.png"
     heading:
       text: "Pay when you get a job!"
       font_size: ["30px", "30px", "30px", "30px", "30px"]
@@ -220,11 +220,7 @@ Coding makes you a more flexible job candidate in a rapidly-shifting digital eco
       color: "blue"
       background: "blue"
       path: "https://www.switchup.org/bootcamps/4geeks-academy"
-    # content:
-    #   text: 
-    #     "Lorem Ipsum"
-    #   font_size: ["16px"]
 
-  # - name: testimonials
-  #   position: 9
-  #   layout: testimonials
+  - name: testimonials
+    position: 9
+    layout: testimonials

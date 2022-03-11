@@ -1197,6 +1197,7 @@ export const query = graphql`
                         student_name
                         testimonial_date
                         hidden
+                        include_in_marquee
                         student_thumb {
                             childImageSharp {
                                 gatsbyImageData(
