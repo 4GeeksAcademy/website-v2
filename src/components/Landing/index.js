@@ -272,7 +272,7 @@ TwoColumn.defaultProps = {
     right: null,
 };
 
-export const MultiColumns = ({ heading, sub_heading, columns }) => {
+export const MultiColumns = ({ heading, sub_heading, end_paragraph, button, columns }) => {
     const [h_xl, h_lg, h_md, h_sm, h_xs] = heading ? heading.font_size : [];
     const [sh_xl, sh_lg, sh_md, sh_sm, sh_xs] =
         sub_heading && Array.isArray(sub_heading.font_size)
@@ -321,6 +321,42 @@ export const MultiColumns = ({ heading, sub_heading, columns }) => {
             <Columns 
                 columns={columns}
             />
+            {end_paragraph && (
+                <Paragraph
+                    padding={end_paragraph ? "0" : "20px"}
+                    margin="0"
+                    fontSize={sh_xl || "16px"}
+                    fontSize_sm={sh_sm}
+                    fonSize_md={sh_md}
+                    fontSize_xs={sh_xs}
+                    fontHeight="30px"
+                    style={{textAlign:'center'}}
+                >
+                    {end_paragraph.text}
+                </Paragraph>
+            )}
+            {button && (
+                <Button
+                    outline
+                    width="250px"
+                    colorHoverText={Colors.blue}
+                    lineHeight="26px"
+                    textColor={Colors.black}
+                    padding="0"
+                    padding_tablet="0"
+                    fontSize="15px"
+                    textAlign="left"
+                    margin="2rem 0"
+                    // padding=".35rem.85rem"
+                    onClick={() => {
+                        if (button.path && button.path.indexOf("http") > -1)
+                            window.open(button.path);
+                        else navigate(button.path);
+                    }}
+                >
+                    {button.text}
+                </Button>
+            )}
           {/* <Div flexDirection="column" gap="0px" flexDirection_tablet="row" m_sm="0px 0px 100px 0">
                 {columns.map((column) => {
                     <Div flexDirection="column" size={size} maxHeight="300px" textAlign="center">
@@ -339,6 +375,8 @@ export const MultiColumns = ({ heading, sub_heading, columns }) => {
 MultiColumns.defaultProps = {
     heading: null, 
     sub_heading: null,
+    end_paragraph: null, 
+    button: null,
     columns: [],
 };
 
@@ -953,6 +991,8 @@ export const landingSections = {
                     heading={yml.heading}
                     sub_heading={yml.sub_heading}
                     columns={yml.columns}
+                    end_paragraph={yml.end_paragraph}
+                    button={yml.button}
                 />
             </Div>
         );

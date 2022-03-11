@@ -80,11 +80,21 @@ components:
   - name: elegibility
     position: 3
     layout: multi_column
+
     heading:
       text: "Elegibility in this program"
       font_size: ["30px", "30px", "30px", "30px", "30px"]
+
     sub_heading:
       text: "You may qualify if you are a Miami resident and belong to one of these groups:"
+      font_size: ["16px", "16px", "16px", "16px", "16px"]
+
+    button:
+      text: "Review Conditions"
+      color: null
+      path: "https://www.switchup.org/bootcamps/4geeks-academy"
+    end_paragraph:
+      text: "hahaha"
       font_size: ["16px", "16px", "16px", "16px", "16px"]
     columns:
       - image:
@@ -138,7 +148,7 @@ Coding makes you a more flexible job candidate in a rapidly-shifting digital eco
   - name: why4geeks
     position: 5
     layout: two_column_left
-    proportions: [6, 6]
+    proportions: [5, 7]
     image:
       style: '{ "backgroundSize": "contain" }'
       src: "/images/landing/Group_193.png"
@@ -146,19 +156,75 @@ Coding makes you a more flexible job candidate in a rapidly-shifting digital eco
       text: "Why 4Geeks Academy?"
       font_size: ["30px", "30px", "30px", "30px", "30px"]
     sub_heading:
-      text: "Software development is one of the more sought-after professionals out there. Learning to code will give you access to:"
+      text: "A Coding bootcamp provide great software development education to start a coding career and 4Geeks Academy is the place where developers grow and thrive. We are specialists of code."
       font_size: ["16px", "16px", "16px", "16px", "16px"]
     content:
       font_size: ["16px"]
-      text: "A Coding bootcamp provide great software development education to start a coding career and 4Geeks Academy is the place where developers grow and thrive. We are specialists of code.
-4Geeks Academy was born in 2015. Today 4Geeks has +7 campus spread over the United States, Latin America and Europe. We count with +1500 graduates and tons of things to be proud of.
-While Coding bootcamps usually are very intensive experiences that would be difficult to maintain while raising a child or while working a full-time job. 
-Our program at 4Geeks Academy is more flexible and doable for anyone, even for moms or any other working person.
-This part-time 16-week syllabus is made to teach you both: 
-The most wanted and the highest-paid technologies today."
-
-      
+      text: 
+        "
+        <p>4Geeks Academy was born in 2015. Today 4Geeks has +7 campus spread over the United States, Latin America and Europe. We count with +1500 graduates and tons of things to be proud of.</p>
+        <br>
+        <p>Wile Coding bootcamps usually are very intensive experiences that would be difficult to maintain while raising a child or while working a full-time job.</p>
+        <br>
+        <p><span>Our program at 4Geeks Academy</span> is more flexible and doable for anyone, even for moms or any other working person.</p>
+        <br>
+        <p>This part-time 16-week syllabus is made to teach you both: 
+        The most wanted and the highest-paid technologies today.</p>
+        <br>
+        <h2>Let's break down obstacles to a new career</h2>
+        <h2>Let's tackle together the tech talent imbalance</h2>
+        "
+  - name: pay
+    position: 8
+    background: "veryLightBlue2"
+    layout: two_column_right
+    proportions: [6, 6]
+    image:
+      style: '{ "backgroundSize": "contain" }'
+      src: "/static/images/staff/luisa.png"
+    video: "https://www.youtube.com/watch?v=MBXqEnhodx0"
+    heading:
+      text: "Pay when you get a job!"
+      font_size: ["30px", "30px", "30px", "30px", "30px"]
+    sub_heading:
+      text: "Don't pay tuition upfront:"
+      font_size: ["16px", "16px", "16px", "16px", "16px"]
+    button:
+      text: "Review Conditions"
+      color: null
+      path: "https://www.switchup.org/bootcamps/4geeks-academy"
+    content:
+      text: 
+        "<h2>1. ENROLL THE PROGRAM</h2>
+        <h2>2. LEARN TO CODE</h2>
+        <h2>3. GRADUATE</h2>
+        <h2>4. GET A JOB</h2>
+        <h2>5. PAY FOR YOUR EDUCATION</h2>"
+      font_size: ["16px"]
+  - name: lorem
+    position: 10
+    background: "veryLightBlue2"
+    layout: two_column_right
+    proportions: [6, 6]
+    image:
+      style: '{ "backgroundSize": "contain" }'
+      src: "/images/landing/Group_193.png"
+    heading:
+      text: "Pay when you get a job!"
+      font_size: ["30px", "30px", "30px", "30px", "30px"]
+    sub_heading:
+      text: "Don't pay tuition upfront:"
+      font_size: ["16px", "16px", "16px", "16px", "16px"]
+    button:
+      text: "APPLY NOW"
+      color: "blue"
+      background: "blue"
+      path: "https://www.switchup.org/bootcamps/4geeks-academy"
+    # content:
+    #   text: 
+    #     "Lorem Ipsum"
+    #   font_size: ["16px"]
 
   # - name: testimonials
-  #   position: 8
+  #   position: 9
   #   layout: testimonials
