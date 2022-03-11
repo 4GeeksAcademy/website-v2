@@ -51,7 +51,8 @@ walk(`${__dirname}/../data/blog`, async function (err, files) {
         try {
             const content = loadMD(_path)
             const regxUrl = /(?:https?|ftp|mailto):[\n\S]+/g;
-            const regxExtension = /^[^.]+$|\.(?!(png|jpg|pdf)$)([^.]+$)/
+            const regxExtension = /^[^.]+$|\.(?!(png|jpg|pdf)$)([^.]+$)/;
+            const regexSlug = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
             
             const links = markdownLinkExtractor(content.body, false);
             links.forEach(link => {
@@ -96,6 +97,7 @@ walk(`${__dirname}/../data/blog`, async function (err, files) {
             front_matter_fields.forEach((m) => {
                 let authors_verifying = autor_keys.find(el => el === frontmatter["author"])
                 if(!meta_keys.includes(m["key"])) fail(`Missing prop ${m["key"]} on frontmatter on ${_path}`)
+                if(!regexSlug.test(frontmatter.slug)) fail(`\n\nslug must be in lowercase, without accents or symbols (?, @, &, etc...) issued in ${_path}\n`)
                 
                 // Pretty log
                 if(authors_verifying === undefined) throw Error(`${`\nProblem found in: ${_path}`.red}\n\n${`Missing author on file, please make if match from this list:`.red} \n\n${autor_keys.map(el => `${el.green}\n`)} \n`)

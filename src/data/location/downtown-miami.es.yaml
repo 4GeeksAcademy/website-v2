@@ -24,11 +24,11 @@ button:
   apply_button_link: "/aplica"
 
 custom_bar:
-  active: false
-  message: Lorem ipsum dot simet mosd ei
-  button: 
-    label: "Read More"
-    path: "#" #string (can be inline path using #, relative path or absolute path)
+  active: true
+  message: Potencia tu carrera a través del código. <a class="customBar-link" href="https://4geeksacademy.com/es/aplica" taget="_blank" rel="noopener noreferrer nofollow">Registration</a> Próximas fechas | 03/07 Full-Stack | 03/28 ML + AI!
+#   button:
+#     label: "Read More"
+#     path: "#" #string (can be inline path using #, relative path or absolute path)
 
 badges:
   title: ""
@@ -154,7 +154,7 @@ prices:
           heading_two: "(OUT OF POCKET)"
           sub_heading: "y disfruta el mejor precio de la ciudad"
         content:
-          price: "$9,499.00"
+          price: "$9,999.00"
           price_info: "una sola quota"
         button:
           button_text: "APLICA"
@@ -247,7 +247,7 @@ prices:
           heading_two: "(OUT OF POCKET)"
           sub_heading: "y disfruta el mejor precio de la ciudad"
         content:
-          price: "$7,499.00"
+          price: "$8,999.00"
           price_info: "una sola quota"
         button:
           button_text: "Aplicar Ahora"

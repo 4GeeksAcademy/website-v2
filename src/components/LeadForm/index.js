@@ -72,7 +72,7 @@ const clean = (fields, data) => {
     return cleanedData;
 }
 
-const LeadForm = ({enableAreaCodes=true, marginButton, marginButton_tablet, background, margin, margin_tablet, justifyContentButton, buttonWidth_tablet, titleTextAlign, buttonBorderRadius, d_sm, fields, thankyou, heading, redirect, formHandler, data, handleClose, style, sendLabel, lang, motivation, layout, inputBgColor, landingTemplate, selectProgram, textPadding, textPadding_tablet, titleMargin, titleMargin_tablet, headerImage}) => {
+const LeadForm = ({marginButton, marginButton_tablet, background, margin, margin_tablet, justifyContentButton, buttonWidth_tablet, titleTextAlign, buttonBorderRadius, d_sm, fields, thankyou, heading, redirect, formHandler, data, handleClose, style, sendLabel, lang, motivation, layout, inputBgColor, landingTemplate, selectProgram, textPadding, textPadding_tablet, titleMargin, titleMargin_tablet, headerImage}) => {
     const _query = useStaticQuery(graphql`
     query newLeadFormQuery {
         allPageYaml(filter: { fields: { file_name: { regex: "/privacy-policy/" }}}) {
@@ -233,7 +233,6 @@ const LeadForm = ({enableAreaCodes=true, marginButton, marginButton_tablet, back
                                 key={i}
                                 data-cy="phone"
                                 formData={formData}
-                                enableAreaCodes={enableAreaCodes}
                                 setVal={setVal}
                                 phoneFormValues={formData['phone']}
                                 errorMsg={_field.error}
