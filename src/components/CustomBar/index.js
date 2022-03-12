@@ -7,8 +7,8 @@ import {SessionContext} from '../../session';
 const CustomBar = ({isContentBarActive, contentBar}) => {
 
   return (
-    <>
-      <Div display={isContentBarActive ? 'flex' : 'none'} style={{top: "0px"}} width="100%" height="auto" minHeight="50px" padding="10px 20px" alignItems="center" background="#0097CD" position="fixed" zIndex="99">
+
+      <Div id="custom-bar" display={isContentBarActive ? 'flex' : 'none'} style={{top: "0px"}} width="100%" height="auto" minHeight="50px" padding="10px 20px" alignItems="center" background="#0097CD" position="fixed" zIndex="99">
         {
           contentBar.message && (
             <Paragraph
@@ -34,7 +34,7 @@ const CustomBar = ({isContentBarActive, contentBar}) => {
           )
         }
       </Div>
-    </>
+
   )
 }
 
