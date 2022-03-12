@@ -27,7 +27,7 @@ button:
 
 custom_bar:
   active: true
-  message: 4Geeks offers scholarships and financing tailored to your needs. <a class="customBar-link" href="https://4geeksacademy.com/us/apply?utm_source=website&utm_medium=custom_bar&utm_campaign=custom_bar_madrid">¡Apply now!</a>
+  message: 4Geeks offers scholarships and financing tailored to your needs. <a class="customBar-link" href="/us/apply">¡Apply now!</a>
  #  button: 
  #    label: ""
  #   path: "#" #string (can be inline path using #, relative path or absolute path)
