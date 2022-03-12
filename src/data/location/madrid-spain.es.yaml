@@ -27,7 +27,7 @@ button:
 
 custom_bar:
   active: true
-  message: 4Geeks ofrece becas, ayudas al estudio y financiación a tu medida. <a class="customBar-link" href="https://4geeksacademy.com/es/aplica?utm_source=website&utm_medium=custom_bar&utm_campaign=custom_bar_madrid">¡Solicita tu plaza!</a>
+  message: 4Geeks ofrece becas, ayudas al estudio y financiación a tu medida. <a class="customBar-link" href="/es/aplica">¡Solicita tu plaza!</a>
  # button: 
  #   label: ""
  #   path: "#" #string (can be inline path using #, relative path or absolute path)
