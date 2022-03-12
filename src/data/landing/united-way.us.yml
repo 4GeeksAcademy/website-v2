@@ -84,15 +84,18 @@ components:
       text: "Elegibility in this program"
       font_size: ["30px", "30px", "30px", "30px", "30px"]
     content:
+      style: '{ "background": "black", "color": "white" }'
       text: "learn more about eligibility conditions and apply"
       font_size: ["16px", "16px", "16px", "16px", "16px"]
     sub_heading:
-      text: "You may qualify if you are a Miami resident and belong to one of these groups:"
+      text: |
+        You may qualify if you are a <strong style="font-weight: bold;">Miami resident</strong> and belong to one of these groups:
       font_size: ["16px", "16px", "16px", "16px", "16px"]
     button:
-      text: "Review Conditions"
-      color: null
+      text: "APPLY NOW"
+      color: "white"
       path: "https://www.switchup.org/bootcamps/4geeks-academy"
+      background: "black"
     columns:
       - image:
           style: '{ "backgroundSize": "cover", "minHeight": "200px" }'
@@ -131,16 +134,16 @@ components:
       text: "Software development is one of the more sought-after professionals out there. Learning to code will give you access to:"
       font_size: ["16px", "16px", "16px", "16px", "16px"]
     content:
-      text: "<h4> > MORE JOB OPPORTUNITIES</h4>
-The demand for programmers will keep increasing over the decade. 
-
-      <h4> > HIGHER INCOME</h4>
-Careers that involve coding skills tend to come with above-average salaries.
-
-      <h4> > CAREER FLEXIBILITY</h4>
-Coding makes you a more flexible job candidate in a rapidly-shifting digital economy."
       font_size: ["16px"]
-
+      text: |
+        <h4><strong style="font-weight: bold;"> > MORE JOB OPPORTUNITIES </strong></h4>
+        <p>The demand for programmers will keep increasing over the decade.</p>
+        <br>
+        <h4><strong style="font-weight: bold;"> > HIGHER INCOME </strong></h4>
+        <p>Careers that involve coding skills tend to come with above-average salaries.</p>
+        <br>
+        <h4><strong style="font-weight: bold;"> > CAREER FLEXIBILITY </strong></h4>
+        <p>Coding makes you a more flexible job candidate in a rapidly-shifting digital economy.</p>
   - name: geeksinfo
     position: 7
     layout: geeksInfo
@@ -160,20 +163,18 @@ Coding makes you a more flexible job candidate in a rapidly-shifting digital eco
       font_size: ["16px", "16px", "16px", "16px", "16px"]
     content:
       font_size: ["16px"]
-      text: 
-        "
+      text: |
         <p>4Geeks Academy was born in 2015. Today 4Geeks has +7 campus spread over the United States, Latin America and Europe. We count with +1500 graduates and tons of things to be proud of.</p>
         <br>
         <p>Wile Coding bootcamps usually are very intensive experiences that would be difficult to maintain while raising a child or while working a full-time job.</p>
         <br>
-        <p><span style={{background:'rgb(255, 183, 24)'}}>Our program at 4Geeks Academy</span> is more flexible and doable for anyone, even for moms or any other working person.</p>
+        <p><span style="background: rgb(255, 183, 24);font-weight: bold;">Our program at 4Geeks Academy</span> is more flexible and doable for anyone, even for moms or any other working person.</p>
         <br>
-        <p>This part-time 16-week syllabus is made to teach you both: 
+        <p>This <strong style="font-weight: bold;font-size:20px;">part-time 16-week</strong> syllabus is made to teach you both: 
         The most wanted and the highest-paid technologies today.</p>
         <br>
-        <h2>Let's break down obstacles to a new career</h2>
-        <h2>Let's tackle together the tech talent imbalance</h2>
-        "
+        <h2><strong style="font-weight: bold;font-size:20px;color:black;">Let's break down obstacles to a new career</strong></h2>
+        <h2><strong style="font-weight: bold;font-size:20px;color:black;">Let's tackle together the tech talent imbalance</strong></h2>      
   - name: pay
     position: 8
     background: "veryLightBlue2"
@@ -194,12 +195,12 @@ Coding makes you a more flexible job candidate in a rapidly-shifting digital eco
       color: null
       path: "https://www.switchup.org/bootcamps/4geeks-academy"
     content:
-      text: 
-        "<h2>1. ENROLL THE PROGRAM</h2>
-        <h2>2. LEARN TO CODE</h2>
-        <h2>3. GRADUATE</h2>
-        <h2>4. GET A JOB</h2>
-        <h2>5. PAY FOR YOUR EDUCATION</h2>"
+      text: |
+        <h2><strong style="font-weight: bold;">1. ENROLL THE PROGRAM</strong></h2>
+        <h2><strong style="font-weight: bold;">2. LEARN TO CODE</strong></h2>
+        <h2><strong style="font-weight: bold;">3. GRADUATE</strong></h2>
+        <h2><strong style="font-weight: bold;">4. GET A JOB</strong></h2>
+        <h2><strong style="font-weight: bold;">5. PAY FOR YOUR EDUCATION</strong></h2>
       font_size: ["16px"]
   - name: lorem
     position: 10
@@ -223,4 +224,4 @@ Coding makes you a more flexible job candidate in a rapidly-shifting digital eco
 
   - name: testimonials
     position: 9
-    layout: testimonials
+    layout: testimonials_new

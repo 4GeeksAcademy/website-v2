@@ -11,6 +11,7 @@ import TestimonialsCarrousel from "../Testimonials";
 import With4Geeks from "../With4Geeks";
 // import WhyPython from '../WhyPython';
 import AlumniProjects from "../AlumniProjects";
+import {SuccessStories} from "../../templates/success-stories";
 import GeeksVsOthers from "../GeeksVsOthers";
 import GeeksInfo from "../GeeksInfo";
 import ProgramDetails from "../ProgramDetails";
@@ -110,7 +111,6 @@ const Side = ({
                     fontSize_md={h_md || "40px"}
                     fontSize_sm={h_sm}
                     margin="30px 0 20px 0"
-                    type="h1"
                 >
                     {heading.text}
                 </H2>
@@ -123,7 +123,6 @@ const Side = ({
                     fontSize={sh_xl || "16px"}
                     fontSize_sm={sh_sm}
                     fonSize_md={sh_md}
-                    fontSize_sm={sh_sm}
                     fontSize_xs={sh_xs}
                     fontHeight="30px"
                 >
@@ -185,7 +184,6 @@ const Side = ({
                     fontSize={c_xl || "16px"}
                     fontSize_sm={c_sm}
                     fonSize_md={c_md}
-                    fontSize_sm={c_sm}
                     fontSize_xs={c_xs}
                     fontHeight="30px"
                     dangerouslySetInnerHTML={{ __html: content.text }}
@@ -309,10 +307,10 @@ export const MultiColumns = ({ heading, sub_heading, end_paragraph, button, colu
                     {heading.text}
                 </H2>
             )}
-            {sub_heading && (
+            {/* {sub_heading && (
                 <Paragraph
                     padding={heading ? "0" : "20px"}
-                    margin="0"
+                    margin="15px 0"
                     fontSize={sh_xl || "16px"}
                     fontSize_sm={sh_sm}
                     fonSize_md={sh_md}
@@ -322,19 +320,46 @@ export const MultiColumns = ({ heading, sub_heading, end_paragraph, button, colu
                 >
                     {sub_heading.text}
                 </Paragraph>
-            )}
+            )} */}
+            {sub_heading && /<\/?[a-z0-9]+>/g.test(sub_heading.text) ? (
+                <Paragraph
+                    padding={heading ? "0" : "20px"}
+                    margin="15px 0"
+                    fontSize={sh_xl || "16px"}
+                    fontSize_sm={sh_sm}
+                    fonSize_md={sh_md}
+                    fontSize_xs={sh_xs}
+                    fontHeight="30px"
+                    style={{textAlign:'center'}}
+                    dangerouslySetInnerHTML={{ __html: sub_heading.text }}
+                />
+            ) : sub_heading ? (
+                <Paragraph
+                    padding={heading ? "0" : "20px"}
+                    margin="15px 0"
+                    fontSize={sh_xl || "16px"}
+                    fontSize_sm={sh_sm}
+                    fonSize_md={sh_md}
+                    fontSize_xs={sh_xs}
+                    fontHeight="30px"
+                    style={{textAlign:'center'}}
+                >
+                    {sub_heading.text}
+                </Paragraph>
+            ) : null}
             <Columns 
                 columns={columns}
             />
             {end_paragraph && (
                 <Paragraph
                     padding={end_paragraph ? "0" : "20px"}
-                    margin="0"
+                    margin="15px 0"
                     fontSize={p_xl || "16px"}
                     fontSize_sm={p_sm}
                     fonSize_md={p_md}
                     fontSize_xs={p_xs}
                     fontHeight="30px"
+                    lineHeight="19px"
                     style={{textAlign:'center'}}
                 >
                     {end_paragraph.text}
@@ -346,13 +371,16 @@ export const MultiColumns = ({ heading, sub_heading, end_paragraph, button, colu
                     // width="250px"
                     colorHoverText={Colors.blue}
                     lineHeight="26px"
-                    textColor={Colors.black}
+                    textColor={Colors[button.color] || button.color}
+                    color={Colors[button.color] || button.color}
                     padding="0"
                     padding_tablet="0"
                     fontSize="15px"
+                    style={button.style ? JSON.parse(button.style) : null}
+                    background={Colors[button.background] || button.background}
                     // textAlign="left"
                     margin="2rem 0"
-                    // padding=".35rem.85rem"
+                    padding=".35rem.85rem"
                     onClick={() => {
                         if (button.path && button.path.indexOf("http") > -1)
                             window.open(button.path);
@@ -436,6 +464,8 @@ export const Columns = ({ columns, proportions }) => {
                     ></Img>
                     <Paragraph
                         lineHeight="30px"
+                        fontWeight="700"
+                        color="black"
                         dangerouslySetInnerHTML={{ __html: c.content.text }}
                     />
                 </Div>
@@ -804,7 +834,6 @@ export const landingSections = {
     },
 
     testimonials: ({ session, data, pageContext, yml, index }) => {
-        console.log("testimonials_data:::", data);
         return(
         <Div
             id="testimonials"
@@ -830,6 +859,20 @@ export const landingSections = {
             p_xs="0"
         >
             <GeeksInfo lang={pageContext.lang} />
+        </Div>
+    ),
+
+    testimonials_new: ({ session, data, pageContext, yml, index }) => (
+        <Div
+            id="testimonials_new"
+            key={index}
+            flexDirection="column"
+            // margin="50px"
+            // margin_tablet="100px"
+            m_sm="0"
+            p_xs="0"
+        >
+            <SuccessStories pageContext={pageContext} data={data} yml={yml} />
         </Div>
     ),
 

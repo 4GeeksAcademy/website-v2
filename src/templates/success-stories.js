@@ -151,14 +151,14 @@ const SuccessStories = (props) => {
     let testimonials = data.allTestimonialsYaml.edges[0].node
     return (
         <>
-            <Header
+            {yml.header && <Header
                 seo_title={yml.seo_title}
                 title={yml.header.title}
                 paragraph={yml.header.paragraph}
                 padding_tablet="72px 0 40px 0"
                 padding="66px 17px 85px 0"
             >
-            </Header>
+            </Header>}
             <GridContainer variant="fixed" padding_tablet="0" columns_tablet="12">
                 {/* <Grid height="auto" columns="1" rows="1" columns_tablet="12" gridGap="11px"> */}
                 {
@@ -286,3 +286,5 @@ query SuccessQuery($file_name: String!, $lang: String!) {
 }
 `;
 export default BaseRender(SuccessStories);
+
+export { SuccessStories }

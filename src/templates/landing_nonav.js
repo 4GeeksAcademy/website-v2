@@ -768,6 +768,7 @@ export const query = graphql`
                             text
                             color
                             path
+                            background
                         }
                         heading {
                             text
