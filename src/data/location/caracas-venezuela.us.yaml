@@ -27,7 +27,7 @@ button:
 
 custom_bar:
   active: true
-  message: 25% OFF for women this March! <a class="customBar-link" href="https://4geeksacademy.com/es/aplica?utm_source=website&utm_medium=custom_bar&utm_campaign=custom_bar_ve_es" taget="_blank" rel="noopener noreferrer nofollow">Apply</a> and become a Full-Stack Developer in 16 weeks!
+  message: 25% OFF for women this March! <a class="customBar-link" href="/apply" taget="_blank" rel="noopener noreferrer nofollow">Apply</a> and become a Full-Stack Developer in 16 weeks!
   # button: 
   #  label: "Read More"
   #  path: "#" #string (can be inline path using #, relative path or absolute path)
