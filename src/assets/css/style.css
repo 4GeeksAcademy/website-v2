@@ -20,10 +20,10 @@ html, body
     scroll-padding: 10%; */
 }
 
-a.customBar-link{
+#custom-bar a{
     color: #00a0da;
     border-radius: 4px;
-    padding: 0 4px;
+    padding: 4px;
     background: #fffaf0;
 }
 
