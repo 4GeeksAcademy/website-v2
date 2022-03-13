@@ -52,7 +52,7 @@ button:
 
 custom_bar:
   active: true
-  message: Change your life with Code. <a class="customBar-link" href="/us/apply">Apply</a> Upcoming programs: May 28 ML+AI | May 2 Full-Stack!
+  message: 'Change your life with Code. <a class="customBar-link" href="/us/apply">Apply</a> Upcoming programs: May 28 ML+AI | May 2 Full-Stack!'
 # button: 
 #   label: "Read More"
 #   path: "#" #string (can be inline path using #, relative path or absolute path)
