@@ -31,7 +31,6 @@ const PhoneInput = ({
   searchPlaceholder = 'search',
   autocompleteSearch = false,
   searchNotFound = 'No entries to show',
-  enableAreaCodes = false,
   sessionContextLocation,
   errorMsg = 'Please specify a valid phone number'
 }) => {
@@ -66,9 +65,6 @@ const PhoneInput = ({
   const rawCountries = JSON.parse(JSON.stringify(countriesList));
   let hiddenAreaCodes = [];
 
-  let enableAllCodes;
-  if (enableAreaCodes === true) { enableAllCodes = true }
-  else { enableAllCodes = false }
   const initializedCountries = [].concat(...rawCountries.map((country) => {
     const countryItem = {
       name: country[0],
@@ -93,13 +89,8 @@ const PhoneInput = ({
 
     if (areaItems.length > 0) {
       countryItem.mainCode = true;
-      if (enableAllCodes || (enableAreaCodes.constructor.name === 'Array' && enableAreaCodes.includes(country[2]))) {
-        countryItem.hasAreaCodes = true;
-        return [countryItem, ...areaItems];
-      } else {
-        hiddenAreaCodes = hiddenAreaCodes.concat(areaItems);
-        return [countryItem];
-      }
+      hiddenAreaCodes = hiddenAreaCodes.concat(areaItems);
+      return [countryItem];
     }
 
     return [countryItem];

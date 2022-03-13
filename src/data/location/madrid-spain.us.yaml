@@ -26,10 +26,10 @@ button:
   cohort_more_details_text: "DETAILS"
 
 custom_bar:
-  active: false
-  message: Lorem ipsum dot simet mosd ei
+  active: true
+  message: 4Geeks offers scholarships and financing tailored to your needs. <a class="customBar-link" href="https://4geeksacademy.com/us/apply/" taget="_blank" rel="noopener noreferrer nofollow">¡Apply now!</a>
   button: 
-    label: "Read More"
+    label: ""
     path: "#" #string (can be inline path using #, relative path or absolute path)
 
 badges:

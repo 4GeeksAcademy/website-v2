@@ -57,6 +57,10 @@ partners:
       # locations: ["madrid-spain"]
       image: "../../../../static/images/partner/Neo9.png"
       featured: false
+    - name: "Jooble"
+      # locations: ["madrid-spain"]
+      image: "../../../../static/images/partner/jooble.png"
+      featured: false      
     - name: "KPMG"
       # locations: ["madrid-spain"]
       image: "../../../../static/images/partner/kpmg-logo1.png"
@@ -204,16 +208,16 @@ work_together:
   title: "How to work together"
   description: "4Geeks Academy is an awarded global coding academy that will allow you to focus in one or more of the following areas:"
   image_list:
-    - alt: "person 1"
-      image: "../../../../static/images/instructors/example.png"
-    - alt: "person 2"
-      image: "../../../../static/images/instructors/example.png"
-    - alt: "person 3"
-      image: "../../../../static/images/instructors/example.png"
-    - alt: "person 4"
-      image: "../../../../static/images/instructors/example.png"
-    - alt: "person 5"
-      image: "../../../../static/images/instructors/example.png"
+    - alt: "4Geeks Academy Student"
+      image: "../../../../static/images/students/student1.jpg"
+    - alt: "4Geeks Academy Student"
+      image: "../../../../static/images/students/student2.jpg"
+    - alt: "4Geeks Academy Student"
+      image: "../../../../static/images/students/student3.jpg"
+    - alt: "4Geeks Academy Student"
+      image: "../../../../static/images/students/student4.jpg"
+    - alt: "4Geeks Academy Student"
+      image: "../../../../static/images/students/student5.jpg"
   features:
     - title: "Reskilling and Upskilling"
       icon: "screen"

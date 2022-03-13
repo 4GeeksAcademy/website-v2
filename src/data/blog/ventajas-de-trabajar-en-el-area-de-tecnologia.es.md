@@ -2,7 +2,7 @@
 author: "4GeeksAcademy"
 date: "2021-12-15T12:18:12+00:00"
 excerpt: "Desde el 2020 la vida laboral ha cambiado mucho, en especial, el área de la tecnología se ha visto enormemente beneficiada, acá verás algunas razones."
-slug: "ventajas-de-trabajar-en-tecnología"
+slug: "ventajas-de-trabajar-en-tecnologia"
 template: "post"
 title: "Ventajas de trabajar en el área de tecnología"
 image: "https://drive.google.com/uc?export=view&id=1Wh5H7h2dNx8bUaNXwTZlAm1xN2LBps1n"

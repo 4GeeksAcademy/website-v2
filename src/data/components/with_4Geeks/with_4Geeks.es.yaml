@@ -42,7 +42,7 @@ with:
     image: ../../../../static/images/staff/joao.png
     alt: ""
     video: "https://www.youtube.com/watch?v=PWkgaAT8pHg" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
-    location: ["downtown-miami"]
+    location: ["all", "downtown-miami"]
     # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     icon: address
     footer:

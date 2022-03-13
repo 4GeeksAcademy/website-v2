@@ -9,7 +9,7 @@ meta_info:
   redirects: ["/es/machine-learning"]
 
 header:
-  title: "Conviertete en un Ingeniero de Inteligencia Artificial"
+  title: "Conviértete en un Ingeniero de Inteligencia Artificial"
   paragraph: "Conviértete en uno de los profesionales mejor pagados del mundo."
   image: "../../../static/images/bg/apple-building.jpg"
   image_alt: "apple-building"
@@ -148,12 +148,12 @@ details:
       step: 0.1
 
 syllabus:
-  heading: Descarga toda la infomación sobre este programa
+  heading: Descarga toda la información sobre este programa
   button_label: Descargar
 
 potential_companies:
   tagline: "Entrénate para destacar en las compañías más exigentes"
-  sub_heading: "Dá un salto a tu carrera y trabaja en las mejores empresas"
+  sub_heading: "Da un salto a tu carrera y trabaja en las mejores empresas"
   companies:
     - name: "Facebook"
       image: "../../../static/images/partner/facebook.png"

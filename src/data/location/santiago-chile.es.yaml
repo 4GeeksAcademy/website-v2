@@ -95,18 +95,25 @@ prices:
           price_info: "hasta pagarlo todo, sólo si consigues trabajo en tech"
           logo: ""
         button:
-          button_text: "APLICAR AHORA"
+          button_text: "POSTULAR"
 
       ## USE THIS SECTION TO CHANGE THE SLIDER FINANCIAL OPTIONS IN THE CENTER BOX
       center_section:
         header:
           heading_one: "Plan de Pagos Extendido"
-          sub_heading: "sin intereses"
+          sub_heading: "desde 133.000 mensual"
         plans:
+          - months: "18"
+            monthsInfo: "Financiados"
+            payment: "132.725 CLP"
+            paymentInfo: "mensual + 597.264 matrícula"
+            provider: "Flevo"
+            logo: "/images/flevo.png"
+            message: ""
           - months: "12"
             monthsInfo: "Financiados"
-            payment: "184.000 CLP"
-            paymentInfo: "mensual + 552.000 matrícula"
+            payment: "189.520 CLP"
+            paymentInfo: "mensual + 568.560 matrícula"
             provider: "Flevo"
             logo: "/images/flevo.png"
             message: ""
@@ -125,20 +132,20 @@ prices:
             logo: "/images/flevo.png"
             message: ""
         button:
-          button_text: "APLICAR AHORA"
+          button_text: "POSTULAR"
       ## RIGHT BOX SECTION
       ## CHANGE HERE THE INFO IN THE RIGHT BOX
       right_section:
         header:
-          heading_one: "PAGO DE CONTADO"
+          heading_one: "PAGO AL CONTADO"
           heading_two: "DESDE EL DíA 1"
-          sub_heading: "el mejor precio de la ciudad"
+          sub_heading: ""
         content:
           price: "2.760.000 CLP"
-          price_info: "una sola cuota"
+          price_info: "un solo pago"
           logo: ""
         button:
-          button_text: "APLICAR AHORA"
+          button_text: "POSTULAR"
 
     ## *****************
     ## PART-TIME SECTION
@@ -151,51 +158,65 @@ prices:
       ## CHANGE HERE THE INFO IN THE LEFT BOX
       left_section:
         header:
-          heading_one: "FINANCIAMIENTO"
-          heading_two: "SIN INTERES"
-          sub_heading: "y disfruta de mejores precios"
+          heading_one: "PAGO FRACCIONADO"
+          heading_two: "SIN INTERÉS"
+          sub_heading: ""
         content:
-          price: "Hasta 12 cuotas sin interés"
+          price: "Hasta 3 cuotas"
           price_info: ""
-          logo: "/images/flevo.png"
+          logo: ""
         button:
-          button_text: "APLICAR AHORA"
+          button_text: "POSTULAR"
 
       ## USE THIS SECTION TO CHANGE THE SLIDER FINANCIAL OPTIONS IN THE CENTERED BOX
       center_section:
         header:
           heading_one: "Plan de Pagos Extendido"
-          sub_heading: "y disfruta de mejores precios"
+          sub_heading: "desde 116.135 mensual"
         plans:
+          - months: "18 m"
+            monthsInfo: "Financiados"
+            payment: "116.135 CLP"
+            paymentInfo: "mensual + 522.606 matrícula"
+            provider: "Flevo"
+            logo: "/images/flevo.png"
+            message: ""
           - months: "12 m"
             monthsInfo: "Financiados"
-            payment: "184.311 CLP"
-            paymentInfo: "mensual + 362.250 depósito"
-            provider: "Quotanda"
-            logo: "/images/quotanda-logo.png"
+            payment: "165.830 CLP"
+            paymentInfo: "mensual + 497.490 matrícula"
+            provider: "Flevo"
+            logo: "/images/flevo.png"
+            message: ""
+          - months: "9 m"
+            monthsInfo: "Financiados"
+            payment: "214.667 CLP"
+            paymentInfo: "mensual + 483.000 matrícula"
+            provider: "Flevo"
+            logo: "/images/flevo.png"
             message: ""
           - months: "6 m"
             monthsInfo: "Financiados"
-            payment: "356.231 CLP"
-            paymentInfo: "mensual + 362.250 depósito"
-            provider: "Quotanda"
-            logo: "/images/quotanda-logo.png"
+            payment: "322.000 CLP"
+            paymentInfo: "mensual + 483.000 matrícula"
+            provider: "Flevo"
+            logo: "/images/flevo.png"
             message: ""
         button:
-          button_text: "APLICAR AHORA"
+          button_text: "POSTULAR"
       ## RIGHT BOX SECTION
       ## CHANGE HERE THE INFO IN THE RIGHT BOX
       right_section:
         header:
-          heading_one: "PAGO DE CONTADO"
+          heading_one: "PAGO AL CONTADO"
           heading_two: "DESDE EL DíA 1"
-          sub_heading: "y disfruta de mejores precios de Chile"
+          sub_heading: ""
         content:
           price: "2.415.000 CLP"
-          price_info: "una sola cuota"
+          price_info: "un solo pago"
           logo: ""
         button:
-          button_text: "APLICAR AHORA"
+          button_text: "POSTULAR"
   
   software_engineering:
     part_time:

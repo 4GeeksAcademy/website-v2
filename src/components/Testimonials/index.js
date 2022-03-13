@@ -10,7 +10,8 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 const Testimonials = (props) => {
     let testimonialsArray = props.lang[0].node;
-    let testimonialsFiltered = testimonialsArray.testimonials.filter(item => item.hidden !== true && item.include_in_marquee === true)
+    let testimonialsFiltered = testimonialsArray.testimonials.filter(item => item.hidden !== true || item.include_in_marquee === true)
+
     return (
 
         <Fragment github="/components/testimonials">
