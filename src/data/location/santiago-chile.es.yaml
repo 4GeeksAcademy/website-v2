@@ -32,10 +32,10 @@ button:
 
 custom_bar:
   active: true
-  message: ¡Este es el bootcamp de programación de <a class="customBar-link" href="https://4geeksacademy.co" taget="_blank" rel="noopener noreferrer nofollow">4Geeks Academy</a> en Santiago de Chile!
-  button: 
-    label: ""
-    path: "#" #string (can be inline path using #, relative path or absolute path)
+  message: <a class="customBar-link" href="/es/aplica>Apunta</a> a la próxima cohorte para convertirte en Full-Stack Developer
+  # button: 
+   # label: ""
+    # bath: "#" #string (can be inline path using #, relative path or absolute path)
 
 info_box:
   heading: "Encuéntranos en Santiago de Chile"
