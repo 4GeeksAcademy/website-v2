@@ -1,7 +1,7 @@
 import React from "react";
 import { GridContainerWithImage, Div, GridContainer } from "../Sections";
 import { H2, H5, H4, Paragraph } from "../Heading";
-import { Colors, Img, Button, StyledBackgroundSection } from "../Styling";
+import { Colors, Img, Button, StyledBackgroundSection, Link } from "../Styling";
 import Badges from "../Badges";
 import News from "../News";
 import { navigate } from "gatsby";
@@ -33,11 +33,20 @@ const Title = ({ id, title, paragraph }) => {
         </GridContainer>
     );
 };
+const linkRegex = new RegExp("(tel:|http)");
+const isWindow = window !== undefined ? true : false;
 
-const smartRedirecting = (e) => {
+const smartRedirecting = (e, path) => {
     e.preventDefault();
-    console.log(e);
-    console.log(e.target.tagName, 'target');
+    if(isWindow && e.target.tagName === "A"){
+        console.log("REDIRECTING");
+        if (linkRegex.test(path)) {
+            window.open(path, '_blank').focus();
+            return
+        }
+        const redirect = isWindow ? window.location.href=path : null
+        return redirect
+    }
 }
 
 const Side = ({
@@ -313,20 +322,7 @@ export const MultiColumns = ({ heading, sub_heading, end_paragraph, button, colu
                     {heading.text}
                 </H2>
             )}
-            {/* {sub_heading && (
-                <Paragraph
-                    padding={heading ? "0" : "20px"}
-                    margin="15px 0"
-                    fontSize={sh_xl || "16px"}
-                    fontSize_sm={sh_sm}
-                    fonSize_md={sh_md}
-                    fontSize_xs={sh_xs}
-                    fontHeight="30px"
-                    style={{textAlign:'center'}}
-                >
-                    {sub_heading.text}
-                </Paragraph>
-            )} */}
+
             {sub_heading && /<\/?[a-z0-9]+>/g.test(sub_heading.text) ? (
                 <Paragraph
                     padding={heading ? "0" : "20px"}
@@ -368,7 +364,7 @@ export const MultiColumns = ({ heading, sub_heading, end_paragraph, button, colu
                     lineHeight="19px"
                     style={{textAlign:'center'}}
                     dangerouslySetInnerHTML={{ __html: end_paragraph.text }}
-                    onClick={(e)=>{smartRedirecting(e);}}
+                    onClick={(e)=>{smartRedirecting(e, end_paragraph.path);}}
                 
                 />
             )}
@@ -1032,7 +1028,7 @@ export const landingSections = {
         );
     },
     multi_column: ({ session, data, pageContext, yml, index }) => {
-        console.log(yml);
+
         return (
             <Div
                 id="multi_column"

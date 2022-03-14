@@ -783,6 +783,18 @@ export const query = graphql`
                         content {
                             text
                             font_size
+                            path
+                        }
+                        columns {
+                            size
+                            content {
+                                text
+                                font_size
+                            }
+                            image {
+                                src
+                                style
+                            }
                         }
                     }
                     header_data {

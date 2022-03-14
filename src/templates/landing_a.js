@@ -780,6 +780,7 @@ export const query = graphql`
                         content {
                             text
                             font_size
+                            path
                         }
                         columns {
                             size

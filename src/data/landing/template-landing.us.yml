@@ -182,6 +182,7 @@ components:
     content: 
       text: "Mentoría como nunca antes. Decenas de Instructores, en varios idiomas, todos los días, a cualquier hora. Estaremos contigo todo el tiempo, aun cuando hayas conseguido trabajo. Una vez eres parte de 4Geeks, estaremos para siempre contigo."
       font_size: ["16px"]
+      path: ""
   - name: divider_one
     position: 10
     layout: divider 

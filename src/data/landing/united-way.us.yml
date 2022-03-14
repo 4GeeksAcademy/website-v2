@@ -4,10 +4,12 @@ meta_info:
   # This will show on social media when shared
   title: "United Way"
   description: "United Way Miami"
-  image: "public/images/UWM_Pantone_2021 2.png"
+  visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
+  # This will show on social media when shared
+  image: "public/images/landing/UWM_Pantone_2021_2.png"
   keywords: "Coding Classes, Learn to code, 4Geeks Academy"
 
-  template: "landing_a" # <--- choose your landing template
+  template: "landing_nonav" # <--- choose your landing template
   redirects: # <--- URL redirections to avoid 404 errors
     ["/landing/united-way"]
 
@@ -17,6 +19,11 @@ meta_info:
   utm_location: downtown-miami
   automation: strong # comma separated, "soft" is the default value
   tag: request_more_info # comma separated, "request_more_info" is the default value
+
+navbar:
+  buttonText: "Apply now"
+  buttonUrl: "#bottom" # url accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
+  logoUrl: "#"
 
 form:
   # posible fields: "first_name", "last_name", "full_name", "phone", "email"
@@ -28,21 +35,20 @@ form:
   redirect: null #you can redirect to another url or entirely diffrent website
 
 header_data:
-  tagline: United way
-  sub_heading: "United way"
-  image: "../../../static/images/4geeks-main.jpg"
+  tagline: "United way"
+  tagline_color: "black"
+  sub_heading: "Get Coding Education"
+  image: "../../../static/images/landing/UWM_Pantone_2021_2.png"
   image_filter: brightness(0.3)
+  partner_logo_url: "../../../static/images/landing/UWM_Pantone_2021_2.png" # optional
+  # background_image: "../../../static/images/Happy-People-Landing-4Geeks-ES.jpg" # optional
+  background: "white" #background property, it can be a hex color
 
 features:
   marginTop: 0px #<-- separation between tagline and the bullets
-
+  text: BIT is offering more than $30k in scholarships to study Web Development or AI at 4Geeks Academy. 8 scholaships will be awarded based on the results of the selection process. Whether you want to start your career as a Junior programmer or upskill and become a Senior Developer or AI/ML Engineer, don't miss out on this amazing opportunity.
   #                                         up   left down  right
   styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
-  bullets:
-    - No previous experience or coding skills required.
-    - Part-Time or Full-Time Schedules Available.
-    - Get lifetime access to our mentors and Career Growth Support (Your first Job in Tech is our goal).
-    - Junior developers make avg $55k per year in Florida.
 
 follow_bar:
   position: "top" # top, bottom, hidden
@@ -87,6 +93,7 @@ components:
       text: | 
         learn more about <a style="color: rgb(0, 160, 218); cursor:pointer;">eligibility conditions</a> and apply
       font_size: ["16px", "16px", "16px", "16px", "16px"]
+      path: "#top"
     sub_heading:
       text: |
         You may qualify if you are a <strong style="font-weight: bold;">Miami resident</strong> and belong to one of these groups:
