@@ -21,7 +21,7 @@ meta_info:
 form:
   # posible fields: "first_name", "last_name", "full_name", "phone", "email"
   # always the first_name, email and phone will be mandatory if added.
-  fields: ["full_name", "phone", "email"]
+  fields: ["email"]
   heading: "Get more information, and change your life!"
   motivation: "ENROLL NOW and change your life."
   button_label: Get more information
@@ -84,8 +84,8 @@ components:
       text: "Elegibility in this program"
       font_size: ["30px", "30px", "30px", "30px", "30px"]
     content:
-      style: '{ "background": "black", "color": "white" }'
-      text: "learn more about eligibility conditions and apply"
+      text: | 
+        learn more about <a style="color: rgb(0, 160, 218); cursor:pointer;">eligibility conditions</a> and apply
       font_size: ["16px", "16px", "16px", "16px", "16px"]
     sub_heading:
       text: |

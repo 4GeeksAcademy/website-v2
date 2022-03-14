@@ -34,6 +34,12 @@ const Title = ({ id, title, paragraph }) => {
     );
 };
 
+const smartRedirecting = (e) => {
+    e.preventDefault();
+    console.log(e);
+    console.log(e.target.tagName, 'target');
+}
+
 const Side = ({
     video,
     image,
@@ -361,9 +367,10 @@ export const MultiColumns = ({ heading, sub_heading, end_paragraph, button, colu
                     fontHeight="30px"
                     lineHeight="19px"
                     style={{textAlign:'center'}}
-                >
-                    {end_paragraph.text}
-                </Paragraph>
+                    dangerouslySetInnerHTML={{ __html: end_paragraph.text }}
+                    onClick={(e)=>{smartRedirecting(e);}}
+                
+                />
             )}
             {button && (
                 <Button
@@ -373,7 +380,6 @@ export const MultiColumns = ({ heading, sub_heading, end_paragraph, button, colu
                     lineHeight="26px"
                     textColor={Colors[button.color] || button.color}
                     color={Colors[button.color] || button.color}
-                    padding="0"
                     padding_tablet="0"
                     fontSize="15px"
                     style={button.style ? JSON.parse(button.style) : null}
