@@ -225,16 +225,18 @@ const Side = ({
             {button && (
                 <Button
                     outline
-                    width="250px"
-                    colorHoverText={Colors.blue}
+                    // width="250px"
+                    colorHoverText={button.hover_color || Colors.blue}
+                    background={Colors[button.background] || button.background}
                     lineHeight="26px"
                     textColor={Colors.black}
+                    color={Colors[button.color] || button.color}
                     padding="0"
                     padding_tablet="0"
                     fontSize="15px"
                     textAlign="left"
                     margin="2rem 0"
-                    // padding=".35rem.85rem"
+                    padding=".35rem.85rem"
                     onClick={() => {
                         if (button.path && button.path.indexOf("http") > -1)
                             window.open(button.path);
@@ -1049,49 +1051,6 @@ export const landingSections = {
             </Div>
         );
     },
-    // multi_column: ({ session, data, pageContext, yml, location, index }) => {
-    //     let dataYml =
-    //         data.allLandingYaml.edges.length !== 0 &&
-    //         data.allLandingYaml.edges[0].node?.multi_column !== null
-    //             ? data.allLandingYaml.edges
-    //             : data.allDownloadableYaml.edges;
-
-    //     const multi = data.allPartnerYaml.edges[0].node;
-    //     let landingMulti = dataYml[0].node?.multi_column;
-
-    //     return (
-    //         <Div
-    //             id="multi_column"
-    //             key={index}
-    //             flexDirection="column"
-    //             margin="40px 0"
-    //             margin_tablet="40px 50px 100px"
-    //             m_sm="0"
-    //             p_xs="0"
-    //         >
-    //             <MultiColumns
-    //                 images={multi.partners.images}
-    //                 margin="0"
-    //                 padding="0 ​0 75px 0"
-    //                 marquee
-    //                 paddingFeatured="0 0 70px 0"
-    //                 featuredImages={landingMulti?.featured}
-    //                 showFeatured
-    //                 withoutLine
-    //                 title={
-    //                     landingMulti
-    //                         ? landingMulti.heading
-    //                         : multi.partners.tagline
-    //                 }
-    //                 paragraph={
-    //                     landingMulti
-    //                         ? landingMulti.sub_heading
-    //                         : multi.partners.sub_heading
-    //                 }
-    //             />
-    //         </Div>
-    //     );
-    // },
     single_column: ({ session, data, pageContext, yml, index }) => (
         <Div
             id="single_column"
