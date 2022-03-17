@@ -9,12 +9,12 @@ import {
     Div,
     GridContainer,
 } from "../components/Sections";
-import { Colors, StyledBackgroundSection } from "../components/Styling";
+import { Colors, StyledBackgroundSection, Img, Button } from "../components/Styling";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
-import LandingNavbar from "../components/NavbarDesktop/landing";
 import BaseRender from "./_baseLandingLayout";
 import { processFormEntry } from "../actions";
 import { SessionContext } from "../session.js";
+import LandingNavbar from "../components/NavbarDesktop/landing";
 import LandingContainer from "../components/LandingContainer";
 
 const Landing = (props) => {
@@ -43,7 +43,7 @@ const Landing = (props) => {
     }, [yml]);
     useEffect(() => {
         if (yml.meta_info && yml.meta_info.utm_location)
-            setLocation(yml.meta_info.utm_location || null);
+            setLocation(yml.meta_info?.utm_location);
 
         const urlParams = new URLSearchParams(window.location.search);
         const _inLoc = urlParams.get("in") || null;
@@ -63,7 +63,7 @@ const Landing = (props) => {
         },
         utm_location: {
             type: "hidden",
-            value: yml.meta_info.utm_location || null,
+            value: yml.meta_info?.utm_location,
             valid: true,
         },
         utm_language: { type: "hidden", value: pageContext.lang, valid: true },
@@ -103,7 +103,7 @@ const Landing = (props) => {
             />
             <FollowBar
                 position={yml.follow_bar.position}
-                showOnScrollPosition={12400}
+                showOnScrollPosition={400}
                 buttonText={yml.follow_bar.button.text}
                 phone={
                     yml.follow_bar.phone.number ||
@@ -139,12 +139,12 @@ const Landing = (props) => {
                             ))}
                 </Paragraph>
             </FollowBar>
-
             <LandingContainer
                 filter={yml.header_data.image_filter}
                 image={
-                    yml.header_data?.image &&
-                    yml.header_data.image.childImageSharp.gatsbyImageData
+                    yml.header_data?.background_image &&
+                    yml.header_data.background_image.childImageSharp
+                        .gatsbyImageData
                 }
                 badge={
                     yml.header_data?.badge &&
@@ -153,11 +153,9 @@ const Landing = (props) => {
                 background={yml.header_data.background || Colors.white}
             >
                 <GridContainer
-                    padding="0"
-                    padding="95px 0 35px 0"
                     containerGridGap="0"
                     containerColumns_tablet="repeat(1,0fr)"
-                    padding_tablet="72px 0 35px 0"
+                    padding_tablet="70px 0 40px 0"
                     columns_tablet="2"
                 >
                     <Div
@@ -171,16 +169,16 @@ const Landing = (props) => {
                         alignItems_tablet="flex-start"
                         // borderRadius="0 0 0 1.25rem"
                         margin="0 0 35px auto"
-                        padding={`40px 0 0 0`}
+                        padding={`80px 0 0 0`}
                         height="auto"
-                        padding_tablet={`40px 0 0 20px`}
+                        padding_tablet={`80px 0 0 20px`}
                     >
                         {yml.header_data.partner_logo_url && (
                             <>
                                 <Div
-                                    width="242px"
+                                    width="auto"
                                     flexDirection_tablet="column"
-                                    height="auto"
+                                    height="70"
                                     padding="0 0 25px 0"
                                 >
                                     <GatsbyImage
@@ -209,15 +207,15 @@ const Landing = (props) => {
                             variant="main"
                             lineHeight="40px"
                             margin="20px 0"
-                            fontWeight="700"
-                            padding="0 10px 0 0px"
+                            padding="0 10px 0 0"
                             color={
+                                yml.header_data.tagline_color ||
                                 yml.header_data.background
                                     ? Colors.black
                                     : Colors.white
                             }
-                            fontSize="22px"
-                            fontSize_tablet="22px"
+                            fontSize="38px"
+                            fontSize_tablet="42px"
                             fontWeight="bolder"
                             textAlign="center"
                             textAlign_tablet="left"
@@ -241,6 +239,7 @@ const Landing = (props) => {
                                 margin_tablet="0px 0px 40px 0px"
                                 margin="0 0 20px 30px"
                                 maxWidth="350px"
+                                // textShadow="0px 0px 4px black"
                             >
                                 {yml.header_data.sub_heading}
                             </H2>
@@ -249,11 +248,12 @@ const Landing = (props) => {
                             yml.features.bullets.map((f, i) => (
                                 <Paragraph
                                     key={i}
+                                    // isActive
                                     style={JSON.parse(yml.features.styles)}
                                     margin="7px 0"
                                     padding="0px 20px"
                                     fontWeight="400"
-                                    // textShadow="1px 0px #898a8b"
+                                    // textShadow="0px 0px 4px black"
                                     textAlign="left"
                                     color={
                                         yml.header_data.background
@@ -274,26 +274,50 @@ const Landing = (props) => {
                                 padding="0px 20px"
                                 // textShadow="0px 0px 4px black"
                                 textAlign="left"
-                                color={Colors.white}
+                                color={
+                                    yml.header_data.background
+                                        ? Colors.black
+                                        : Colors.white
+                                }
+                                dangerouslySetInnerHTML={{ __html: yml.features.text }}
+                            />
+                        )}
+                        {yml.features.button && (
+                            <Button
+                                outline
+                                // width="250px"
+                                colorHoverText={yml.features.button.hover_color || Colors.blue}
+                                lineHeight="26px"
+                                textColor={Colors[yml.features.button.color] || yml.features.button.color}
+                                color={Colors[yml.features.button.color] || yml.features.button.color}
+                                padding_tablet="0"
+                                fontSize="15px"
+                                style={yml.features.button.style ? JSON.parse(yml.features.button.style) : null}
+                                background={Colors[yml.features.button.background] || yml.features.button.background}
+                                // textAlign="left"
+                                margin="2rem 0"
+                                padding=".35rem.85rem"
+                                onClick={() => {
+                                    if (yml.features.button.path && yml.features.button.path.indexOf("http") > -1)
+                                        window.open(yml.features.button.path);
+                                    else navigate(yml.features.button.path);
+                                }}
                             >
-                                {yml.features.text}
-                            </Paragraph>
+                                {yml.features.button.text}
+                            </Button>
                         )}
                         {yml.short_badges && (
                             <Div
                                 // className="badge-slider hideOverflowX__"
                                 display="flex"
-                                borderTop="1px solid #A4A4A4"
                                 flexDirection="row"
-                                width="320px"
-                                width_tablet="100%"
-                                className="set-overflow"
+                                width="100%"
                                 margin="25px 0 0 0"
                                 padding="24px 0 0 0"
+                                justifyContent="between"
                                 maxWidth="100vw"
                                 gap="40px"
                                 overflowX="auto"
-                                justifyContent="between"
                                 // justifyContent="center"
                                 // alignItems="center"
                             >
@@ -340,34 +364,24 @@ const Landing = (props) => {
                         textAlign_sm="center"
                         margin_md="0 auto 0 70px"
                     >
-                        <LeadForm
-                            headerImage={
-                                yml.header_data.badge &&
-                                yml.header_data.badge.childImageSharp
-                                    .gatsbyImageData
+                        <Img
+                            src={yml.header_data.right_image.src}
+                            style={
+                                yml.header_data.right_image.style ? JSON.parse(yml.header_data.right_image.style) 
+                                : null
                             }
-                            background={Colors.white}
-                            margin_tablet="18px 38px"
-                            selectProgram={programs}
-                            margin="18px 10px"
-                            style={{ marginTop: "50px", minHeight: "350px" }}
-                            formHandler={processFormEntry}
-                            heading={yml.form.heading}
-                            motivation={yml.form.motivation}
-                            sendLabel={yml.form.button_label}
-                            redirect={yml.form.redirect}
-                            inputBgColor="#FFFFFF"
-                            layout="block"
-                            lang={pageContext.lang}
-                            fields={yml.form.fields}
-                            data={preData}
-                            justifyContentButton="center"
-                            marginButton="15px auto 30px auto"
-                            marginButton_tablet="15px 0 30px auto"
+                            // borderRadius={"1.25rem"}
+                            // className="pointer"
+                            alt={"4Geeks Academy Section"}
+                            margin="auto"
+                            width={"100%"}
+                            height={"100%"}
+                            backgroundSize={`contain`}
                         />
                     </Div>
                 </GridContainer>
             </LandingContainer>
+
             {Object.keys(components)
                 .filter(
                     (name) =>
@@ -385,7 +399,7 @@ const Landing = (props) => {
                         yml: components[name],
                         session,
                         course: yml.meta_info?.utm_course,
-                        location: components.meta_info.utm_location,
+                        location: components.meta_info?.utm_location,
                         index: index,
                     });
                 })}
@@ -393,7 +407,7 @@ const Landing = (props) => {
             <GridContainerWithImage
                 id="bottom"
                 background="#F9F9F9"
-                imageSide={applySchollarship?.imageSide || "right"}
+                imageSide={applySchollarship?.imageSide}
                 padding="0"
                 padding_tablet="80px 0 90px 0"
                 columns_tablet="14"
@@ -433,18 +447,16 @@ const Landing = (props) => {
                             textPadding_tablet="6px 0px 20px 0px"
                             textPadding="6px 0px 20px 0px"
                             selectProgram={programs}
-                            margin="18px 30px"
                             layout="block"
                             background="#F9F9F9"
                             margin="0"
-                            style={{ minHeight: "350px" }}
                             formHandler={processFormEntry}
                             heading={yml.form.heading}
+                            style={{ minHeight: "350px" }}
                             motivation={yml.form.motivation}
                             sendLabel={yml.form.button_label}
                             redirect={yml.form.redirect}
                             inputBgColor="#FFFFFF"
-                            layout="block"
                             lang={pageContext.lang}
                             fields={yml.form.fields}
                             data={preData}
@@ -472,7 +484,7 @@ const Landing = (props) => {
                                 display_md="flex"
                                 style={{
                                     position: "absolute",
-                                    background: "#FFB718",
+                                    background: Colors.yellow,
                                     width: "280px",
                                     height: "480px",
                                     bottom: "-10px",
@@ -488,11 +500,11 @@ const Landing = (props) => {
                                 display_md="flex"
                                 style={{
                                     position: "absolute",
-                                    background: "#F5F5F5",
+                                    background: Colors.lightBlue,
                                     width: "101%",
                                     height: "282px",
-                                    top: "-25px",
-                                    left: "30px",
+                                    top: "40px",
+                                    left: "-30px",
                                     borderRadius: "3px",
                                 }}
                             />
@@ -518,7 +530,7 @@ const Landing = (props) => {
     );
 };
 export const query = graphql`
-    query LandingAQuery(
+    query LandingNoformQuery(
         $file_name: String!
         $lang: String!
         $utm_course: String
@@ -759,8 +771,8 @@ export const query = graphql`
                     components {
                         name
                         position
-                        swipable
                         background
+                        swipable
                         proportions
                         layout
                         image {
@@ -786,6 +798,7 @@ export const query = graphql`
                             font_size
                         }
                         bullets
+                        background
                         content {
                             text
                             font_size
@@ -806,24 +819,32 @@ export const query = graphql`
                     header_data {
                         background
                         tagline
+                        tagline_color
                         sub_heading
                         image_filter
+                        right_image {
+                            style
+                            src
+                        }
                         partner_logo_url {
                             childImageSharp {
                                 gatsbyImageData(
                                     layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                                    width: 500
+                                    height: 70
                                     placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                                 )
                             }
                         }
-                        image {
+                        background_image {
                             childImageSharp {
                                 gatsbyImageData(
                                     layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
                                     width: 1000
                                     placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                                 )
+                                # fluid(maxWidth: 1000){
+                                #   ...GatsbyImageSharpFluid_withWebp
+                                # }
                             }
                         }
                         badge {
@@ -1173,6 +1194,14 @@ export const query = graphql`
                         sub_heading
                     }
                     details {
+                        heading
+                        sub_heading
+                        left_labels {
+                            description
+                            projects
+                            duration
+                            skills
+                        }
                         about {
                             title
                             sub_title
@@ -1183,13 +1212,6 @@ export const query = graphql`
                                 link_text
                                 icon
                             }
-                        }
-                        sub_heading
-                        left_labels {
-                            description
-                            projects
-                            duration
-                            skills
                         }
                         details_modules {
                             title
@@ -1216,7 +1238,6 @@ export const query = graphql`
                             childImageSharp {
                                 gatsbyImageData(
                                     layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                                    width: 200
                                     height: 200
                                     placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                                 )

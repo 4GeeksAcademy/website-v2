@@ -785,6 +785,7 @@ export const query = graphql`
                         name
                         position
                         background
+                        swipable
                         proportions
                         layout
                         image {
