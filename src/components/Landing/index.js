@@ -1,7 +1,7 @@
 import React from "react";
 import { GridContainerWithImage, Div, GridContainer } from "../Sections";
 import { H2, H5, H4, Paragraph } from "../Heading";
-import { Colors, Img, Button, StyledBackgroundSection } from "../Styling";
+import { Colors, Img, Button, StyledBackgroundSection, Link } from "../Styling";
 import Badges from "../Badges";
 import News from "../News";
 import { navigate } from "gatsby";
@@ -33,6 +33,21 @@ const Title = ({ id, title, paragraph }) => {
         </GridContainer>
     );
 };
+const linkRegex = new RegExp("(tel:|http)");
+const isWindow = window !== undefined ? true : false;
+
+const smartRedirecting = (e, path) => {
+    e.preventDefault();
+    if(isWindow && e.target.tagName === "A"){
+        console.log("REDIRECTING");
+        if (linkRegex.test(path)) {
+            window.open(path, '_blank').focus();
+            return
+        }
+        const redirect = isWindow ? window.location.href=path : null
+        return redirect
+    }
+}
 
 const Side = ({
     video,
@@ -210,16 +225,18 @@ const Side = ({
             {button && (
                 <Button
                     outline
-                    width="250px"
-                    colorHoverText={Colors.blue}
+                    // width="250px"
+                    colorHoverText={button.hover_color || Colors.blue}
+                    background={Colors[button.background] || button.background}
                     lineHeight="26px"
                     textColor={Colors.black}
-                    padding="0"
+                    color={Colors[button.color] || button.color}
+                    // padding="0"
                     padding_tablet="0"
                     fontSize="15px"
                     textAlign="left"
                     margin="2rem 0"
-                    // padding=".35rem.85rem"
+                    padding=".35rem.85rem"
                     onClick={() => {
                         if (button.path && button.path.indexOf("http") > -1)
                             window.open(button.path);
@@ -307,20 +324,7 @@ export const MultiColumns = ({ heading, sub_heading, end_paragraph, button, colu
                     {heading.text}
                 </H2>
             )}
-            {/* {sub_heading && (
-                <Paragraph
-                    padding={heading ? "0" : "20px"}
-                    margin="15px 0"
-                    fontSize={sh_xl || "16px"}
-                    fontSize_sm={sh_sm}
-                    fonSize_md={sh_md}
-                    fontSize_xs={sh_xs}
-                    fontHeight="30px"
-                    style={{textAlign:'center'}}
-                >
-                    {sub_heading.text}
-                </Paragraph>
-            )} */}
+
             {sub_heading && /<\/?[a-z0-9]+>/g.test(sub_heading.text) ? (
                 <Paragraph
                     padding={heading ? "0" : "20px"}
@@ -361,9 +365,10 @@ export const MultiColumns = ({ heading, sub_heading, end_paragraph, button, colu
                     fontHeight="30px"
                     lineHeight="19px"
                     style={{textAlign:'center'}}
-                >
-                    {end_paragraph.text}
-                </Paragraph>
+                    dangerouslySetInnerHTML={{ __html: end_paragraph.text }}
+                    onClick={(e)=>{smartRedirecting(e, end_paragraph.path);}}
+                
+                />
             )}
             {button && (
                 <Button
@@ -373,7 +378,6 @@ export const MultiColumns = ({ heading, sub_heading, end_paragraph, button, colu
                     lineHeight="26px"
                     textColor={Colors[button.color] || button.color}
                     color={Colors[button.color] || button.color}
-                    padding="0"
                     padding_tablet="0"
                     fontSize="15px"
                     style={button.style ? JSON.parse(button.style) : null}
@@ -1026,7 +1030,7 @@ export const landingSections = {
         );
     },
     multi_column: ({ session, data, pageContext, yml, index }) => {
-        console.log(yml);
+
         return (
             <Div
                 id="multi_column"
@@ -1047,49 +1051,6 @@ export const landingSections = {
             </Div>
         );
     },
-    // multi_column: ({ session, data, pageContext, yml, location, index }) => {
-    //     let dataYml =
-    //         data.allLandingYaml.edges.length !== 0 &&
-    //         data.allLandingYaml.edges[0].node?.multi_column !== null
-    //             ? data.allLandingYaml.edges
-    //             : data.allDownloadableYaml.edges;
-
-    //     const multi = data.allPartnerYaml.edges[0].node;
-    //     let landingMulti = dataYml[0].node?.multi_column;
-
-    //     return (
-    //         <Div
-    //             id="multi_column"
-    //             key={index}
-    //             flexDirection="column"
-    //             margin="40px 0"
-    //             margin_tablet="40px 50px 100px"
-    //             m_sm="0"
-    //             p_xs="0"
-    //         >
-    //             <MultiColumns
-    //                 images={multi.partners.images}
-    //                 margin="0"
-    //                 padding="0 ​0 75px 0"
-    //                 marquee
-    //                 paddingFeatured="0 0 70px 0"
-    //                 featuredImages={landingMulti?.featured}
-    //                 showFeatured
-    //                 withoutLine
-    //                 title={
-    //                     landingMulti
-    //                         ? landingMulti.heading
-    //                         : multi.partners.tagline
-    //                 }
-    //                 paragraph={
-    //                     landingMulti
-    //                         ? landingMulti.sub_heading
-    //                         : multi.partners.sub_heading
-    //                 }
-    //             />
-    //         </Div>
-    //     );
-    // },
     single_column: ({ session, data, pageContext, yml, index }) => (
         <Div
             id="single_column"

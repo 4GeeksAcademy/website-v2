@@ -4,10 +4,12 @@ meta_info:
   # This will show on social media when shared
   title: "United Way"
   description: "United Way Miami"
-  image: "public/images/UWM_Pantone_2021 2.png"
+  visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
+  # This will show on social media when shared
+  image: "public/images/landing/UWM_Pantone_2021_2.png"
   keywords: "Coding Classes, Learn to code, 4Geeks Academy"
 
-  template: "landing_a" # <--- choose your landing template
+  template: "landing_nonav" # <--- choose your landing template
   redirects: # <--- URL redirections to avoid 404 errors
     ["/landing/united-way"]
 
@@ -18,31 +20,46 @@ meta_info:
   automation: strong # comma separated, "soft" is the default value
   tag: request_more_info # comma separated, "request_more_info" is the default value
 
+navbar:
+  buttonText: "Apply now"
+  buttonUrl: "#bottom" # url accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
+  logoUrl: "#"
+
 form:
   # posible fields: "first_name", "last_name", "full_name", "phone", "email"
   # always the first_name, email and phone will be mandatory if added.
-  fields: ["full_name", "phone", "email"]
+  fields: ["email"]
   heading: "Get more information, and change your life!"
   motivation: "ENROLL NOW and change your life."
   button_label: Get more information
   redirect: null #you can redirect to another url or entirely diffrent website
 
 header_data:
-  tagline: United way
-  sub_heading: "United way"
-  image: "../../../static/images/4geeks-main.jpg"
+  tagline: "Debug Access to a better future"
+  tagline_color: "black"
+  sub_heading: "Get Coding Education"
+  image: "../../../static/images/landing/UWM_Pantone_2021_2.png"
   image_filter: brightness(0.3)
+  partner_logo_url: "../../../static/images/landing/UWM_Pantone_2021_2.png" # optional
+  # background_image: "../../../static/images/Happy-People-Landing-4Geeks-ES.jpg" # optional
+  background: "white" #background property, it can be a hex color
 
 features:
   marginTop: 0px #<-- separation between tagline and the bullets
-
-  #                                         up   left down  right
-  styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
-  bullets:
-    - No previous experience or coding skills required.
-    - Part-Time or Full-Time Schedules Available.
-    - Get lifetime access to our mentors and Career Growth Support (Your first Job in Tech is our goal).
-    - Junior developers make avg $55k per year in Florida.
+  text: |
+    <p>United Way Miami and 4Geeks Academy are excited to announce a new coding scholarship.</p>
+    <p>Learn to code, pay when you get a job, and lead a more meaningful life.</p>
+    <hr style="margin: 15px 0;">
+    <span style="background: rgb(255, 183, 24);font-weight: bold;">Now open and accepting applications!</span>
+    <p>Applications open in XX and are due XX</p>
+    <p>The recipients will be announced on XX</p>
+  styles: '{ "color": "gray", "fontWeight":"500" }'
+  button:
+      text: "APPLY NOW"
+      color: "white"
+      path: "https://www.switchup.org/bootcamps/4geeks-academy"
+      background: "blue"
+      hover_color: "white"
 
 follow_bar:
   position: "top" # top, bottom, hidden
@@ -84,9 +101,10 @@ components:
       text: "Elegibility in this program"
       font_size: ["30px", "30px", "30px", "30px", "30px"]
     content:
-      style: '{ "background": "black", "color": "white" }'
-      text: "learn more about eligibility conditions and apply"
+      text: | 
+        learn more about <a style="color: rgb(0, 160, 218); cursor:pointer;">eligibility conditions</a> and apply
       font_size: ["16px", "16px", "16px", "16px", "16px"]
+      path: "#bottom"
     sub_heading:
       text: |
         You may qualify if you are a <strong style="font-weight: bold;">Miami resident</strong> and belong to one of these groups:
@@ -211,15 +229,16 @@ components:
       style: '{ "backgroundSize": "contain" }'
       src: "/images/landing/temp4.png"
     heading:
-      text: "Pay when you get a job!"
+      text: "Lorem Ipsum"
       font_size: ["30px", "30px", "30px", "30px", "30px"]
     sub_heading:
-      text: "Don't pay tuition upfront:"
+      text: "Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum "
       font_size: ["16px", "16px", "16px", "16px", "16px"]
     button:
       text: "APPLY NOW"
-      color: "blue"
+      color: "white"
       background: "blue"
+      hover_color: "white"
       path: "https://www.switchup.org/bootcamps/4geeks-academy"
 
   - name: testimonials

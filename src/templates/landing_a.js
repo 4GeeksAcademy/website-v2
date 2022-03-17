@@ -598,6 +598,13 @@ export const query = graphql`
                         text
                         bullets
                         styles
+                        button {
+                            text
+                            path
+                            background
+                            color
+                            hover_color
+                        }
                     }
                     badges {
                         position
@@ -767,6 +774,7 @@ export const query = graphql`
                             color
                             path
                             background
+                            hover_color
                         }
                         heading {
                             text
@@ -780,6 +788,7 @@ export const query = graphql`
                         content {
                             text
                             font_size
+                            path
                         }
                         columns {
                             size

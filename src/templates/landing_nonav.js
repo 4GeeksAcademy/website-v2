@@ -9,7 +9,7 @@ import {
     Div,
     GridContainer,
 } from "../components/Sections";
-import { Colors, StyledBackgroundSection } from "../components/Styling";
+import { Colors, StyledBackgroundSection, Button } from "../components/Styling";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import BaseRender from "./_baseLandingLayout";
 import { processFormEntry } from "../actions";
@@ -211,7 +211,7 @@ const Landing = (props) => {
                             margin="20px 0"
                             padding="0 10px 0 0"
                             color={
-                                yml.header_data.tagline_color |
+                                yml.header_data.tagline_color ||
                                 yml.header_data.background
                                     ? Colors.black
                                     : Colors.white
@@ -281,9 +281,32 @@ const Landing = (props) => {
                                         ? Colors.black
                                         : Colors.white
                                 }
+                                dangerouslySetInnerHTML={{ __html: yml.features.text }}
+                            />
+                        )}
+                        {yml.features.button && (
+                            <Button
+                                outline
+                                // width="250px"
+                                colorHoverText={yml.features.button.hover_color || Colors.blue}
+                                lineHeight="26px"
+                                textColor={Colors[yml.features.button.color] || yml.features.button.color}
+                                color={Colors[yml.features.button.color] || yml.features.button.color}
+                                padding_tablet="0"
+                                fontSize="15px"
+                                style={yml.features.button.style ? JSON.parse(yml.features.button.style) : null}
+                                background={Colors[yml.features.button.background] || yml.features.button.background}
+                                // textAlign="left"
+                                margin="2rem 0"
+                                padding=".35rem.85rem"
+                                onClick={() => {
+                                    if (yml.features.button.path && yml.features.button.path.indexOf("http") > -1)
+                                        window.open(yml.features.button.path);
+                                    else navigate(yml.features.button.path);
+                                }}
                             >
-                                {yml.features.text}
-                            </Paragraph>
+                                {yml.features.button.text}
+                            </Button>
                         )}
                         {yml.short_badges && (
                             <Div
@@ -600,6 +623,13 @@ export const query = graphql`
                         text
                         bullets
                         styles
+                        button {
+                            text
+                            path
+                            background
+                            color
+                            hover_color
+                        }
                     }
                     badges {
                         position
@@ -769,6 +799,7 @@ export const query = graphql`
                             color
                             path
                             background
+                            hover_color
                         }
                         heading {
                             text
@@ -783,6 +814,18 @@ export const query = graphql`
                         content {
                             text
                             font_size
+                            path
+                        }
+                        columns {
+                            size
+                            content {
+                                text
+                                font_size
+                            }
+                            image {
+                                src
+                                style
+                            }
                         }
                     }
                     header_data {
