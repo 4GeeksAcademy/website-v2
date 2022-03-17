@@ -445,7 +445,7 @@ TwoColumn.defaultProps = {
 export const Columns = ({ columns, proportions, swipable }) => {
     console.log(swipable, 'swipable');
     return swipable ? (
-        <Div minWidth="110%" className="badge-slider hideOverflowX__" flexDirection="row" m_sm="0px 0px 100px 0" justifyContent="between">
+        <Div width="100%" className="badge-slider hideOverflowX__" flexDirection="row" m_sm="0px 0px 100px 0" justifyContent="between">
             {columns.map((c, index) => (
                 <Div
                     key={index}
