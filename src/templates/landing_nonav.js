@@ -416,7 +416,7 @@ const Landing = (props) => {
                         index: index,
                     });
                 })}
-
+            <div id="bottom"></div>
             <GridContainerWithImage
                 id="bottom"
                 background="#F9F9F9"

@@ -38,7 +38,7 @@ header_data:
   tagline: "Debug Access to a better future"
   tagline_color: "black"
   sub_heading: "Get Coding Education"
-  image: "../../../static/images/landing/uwm_pantone_2021_2.png"
+  # image: "../../../static/images/landing/uwm_pantone_2021_2.png"
   image_filter: brightness(0.3)
   partner_logo_url: "../../../static/images/landing/uwm_pantone_2021_2.png" # optional
   # background_image: "../../../static/images/Happy-People-Landing-4Geeks-ES.jpg" # optional
@@ -108,7 +108,7 @@ components:
       text: | 
         learn more about <a style="color: rgb(0, 160, 218); cursor:pointer;">eligibility conditions</a> and apply
       font_size: ["16px", "16px", "16px", "16px", "16px"]
-      path: "/bit"
+      path: "#bottom"
     sub_heading:
       text: |
         You may qualify if you are a <strong style="font-weight: bold;">Miami resident</strong> and belong to one of these groups:
@@ -148,7 +148,7 @@ components:
     background: "rgba(255, 183, 24, 0.2)"
     image:
       style: '{ "backgroundSize": "contain" }'
-      src: "/images/landing/Group_194.png"
+      src: "/images/landing/group_194.png"
     heading:
       text: "Why Coding?"
       font_size: ["40px", "40px", "40px", "40px", "40px"]
@@ -228,3 +228,4 @@ components:
   - name: testimonials
     position: 9
     layout: testimonials_new
+    filter_indexes: [6,7,8]

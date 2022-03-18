@@ -227,6 +227,10 @@ components:
       text:
         "Tipos de datos con súperpoderes:"
       font_size: ["15px"]
+  - name: testimonials
+    position: 15
+    layout: testimonials_new
+    filter_indexes: [3,4,5]
 
     bullets:
       - Número

@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import { graphql, navigate } from "gatsby";
 import { landingSections } from "../components/Landing";
 import FollowBar from "../components/FollowBar";
-import LeadForm from "../components/LeadForm";
 import { H1, H2, H4, Paragraph, Span } from "../components/Heading";
 import {
     GridContainerWithImage,
@@ -403,8 +402,9 @@ const Landing = (props) => {
                         index: index,
                     });
                 })}
+            <div id="bottom"></div>
 
-            <GridContainerWithImage
+            {/* <GridContainerWithImage
                 id="bottom"
                 background="#F9F9F9"
                 imageSide={applySchollarship?.imageSide}
@@ -478,7 +478,7 @@ const Landing = (props) => {
                 >
                     {applySchollarship?.imageSide === "right" ? (
                         <>
-                            {/* <Div display="none" display_md="flex" style={{position: "absolute", background: "#F5F5F5", width: "101%", height: "282px", top: "-25px", left: "-35px", borderRadius: "3px"}}/> */}
+
                             <Div
                                 display="none"
                                 display_md="flex"
@@ -512,7 +512,6 @@ const Landing = (props) => {
                     )}
                     <StyledBackgroundSection
                         height={`450px`}
-                        // width={`85%`}
                         borderRadius={`3px`}
                         image={
                             applySchollarship
@@ -525,7 +524,7 @@ const Landing = (props) => {
                         alt="geekforce image"
                     />
                 </Div>
-            </GridContainerWithImage>
+            </GridContainerWithImage> */}
         </>
     );
 };
@@ -775,6 +774,7 @@ export const query = graphql`
                         swipable
                         proportions
                         layout
+                        filter_indexes
                         image {
                             src
                             style

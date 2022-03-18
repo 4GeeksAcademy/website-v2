@@ -11,7 +11,7 @@ import TestimonialsCarrousel from "../Testimonials";
 import With4Geeks from "../With4Geeks";
 // import WhyPython from '../WhyPython';
 import AlumniProjects from "../AlumniProjects";
-import {SuccessStories} from "../../templates/success-stories";
+import { SuccessStories } from "../../templates/success-stories";
 import GeeksVsOthers from "../GeeksVsOthers";
 import GeeksInfo from "../GeeksInfo";
 import ProgramDetails from "../ProgramDetails";
@@ -293,7 +293,6 @@ TwoColumn.defaultProps = {
 };
 
 export const MultiColumns = ({ heading, sub_heading, end_paragraph, button, columns, swipable }) => {
-    console.log(swipable, 'swipeable multic');
     const [h_xl, h_lg, h_md, h_sm, h_xs] = heading ? heading.font_size : [];
     const [sh_xl, sh_lg, sh_md, sh_sm, sh_xs] =
         sub_heading && Array.isArray(sub_heading.font_size)
@@ -443,7 +442,6 @@ TwoColumn.defaultProps = {
 };
 
 export const Columns = ({ columns, proportions, swipable }) => {
-    console.log(swipable, 'swipable');
     return swipable ? (
         <Div width="100%" className="badge-slider hideOverflowX__" flexDirection="row" m_sm="0px 0px 100px 0" justifyContent="between">
             {columns.map((c, index) => (
@@ -935,7 +933,7 @@ export const landingSections = {
             id="testimonials_new"
             key={index}
             flexDirection="column"
-            // margin="50px"
+            margin="30px 0 0 0"
             // margin_tablet="100px"
             m_sm="0"
             p_xs="0"
@@ -1094,7 +1092,6 @@ export const landingSections = {
         );
     },
     multi_column: ({ session, data, pageContext, yml, index }) => {
-        console.log(yml, 'yml');
         return (
             <Div
                 id="multi_column"

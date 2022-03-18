@@ -389,7 +389,7 @@ const Landing = (props) => {
                         index: index,
                     });
                 })}
-
+            <div id="bottom"></div>
             <GridContainerWithImage
                 id="bottom"
                 background="#F9F9F9"
@@ -763,6 +763,7 @@ export const query = graphql`
                         background
                         proportions
                         layout
+                        filter_indexes
                         image {
                             src
                             style
