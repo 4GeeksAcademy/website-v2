@@ -702,6 +702,7 @@ export const query = graphql`
                                 }
                             }
                             featured
+                            link
                         }
                         tagline
                         sub_heading

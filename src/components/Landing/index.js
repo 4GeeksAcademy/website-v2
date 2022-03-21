@@ -36,22 +36,17 @@ const Title = ({ id, title, paragraph }) => {
 
 const isWindow = window !== undefined ? true : false;
 
-const smartRedirecting = (e, path) => {
+export const smartRedirecting = (e, path) => {
     e.preventDefault();
-    const linkRegex = new RegExp("(tel:|http)");
+    const linkRegex = new RegExp("(http)");
     
-    if(isWindow && e.target.tagName === "A"){
+    if(isWindow){
         console.log("REDIRECTING");
         if (linkRegex.test(path)) {
             window.open(path, '_blank').focus();
             return
         }
         navigate(path);
-
-        // window.location.href = path
-
-        // const redirect = isWindow ? window.location.href=path : null
-        // return redirect
     }
 }
 
@@ -303,7 +298,6 @@ export const MultiColumns = ({ heading, sub_heading, end_paragraph, button, colu
             ? end_paragraph.font_size
             : [];
     return (
-        // <GridContainer margin="0 0 20px 0" >
 
         <Div
           display="flex"
@@ -372,7 +366,9 @@ export const MultiColumns = ({ heading, sub_heading, end_paragraph, button, colu
                     lineHeight="19px"
                     style={{textAlign:'center'}}
                     dangerouslySetInnerHTML={{ __html: end_paragraph.text }}
-                    onClick={(e)=>{smartRedirecting(e, end_paragraph.path);}}
+                    onClick={(e)=>{
+                        if(e.target.tagName === "A") smartRedirecting(e, end_paragraph.path);
+                    }}
                 
                 />
             )}
@@ -400,17 +396,9 @@ export const MultiColumns = ({ heading, sub_heading, end_paragraph, button, colu
                     {button.text}
                 </Button>
             )}
-          {/* <Div flexDirection="column" gap="0px" flexDirection_tablet="row" m_sm="0px 0px 100px 0">
-                {columns.map((column) => {
-                    <Div flexDirection="column" size={size} maxHeight="300px" textAlign="center">
-                        <Side {...column} />
-                    </Div>
-                })}
 
-            </Div> */}
         </Div>
 
-    //   </GridContainer>
 
     )
 }
@@ -497,18 +485,6 @@ export const Columns = ({ columns, proportions, swipable }) => {
                         size_xs={c.size[3]}
                         textAlign={c.align}
                     >
-                        {/* <GatsbyImage
-                        style={c.image.style ? JSON.parse(c.image.style) : null}
-                        imgStyle={{ objectFit: "contain" }}
-                        loading="eager"
-                        // draggable={false}
-                        // fadeIn={false}
-                        alt={"item.alt"}
-                        image={getImage(
-                            c.image.src
-                        )}
-                    // fluid={l.image.childImageSharp.fluid}
-                    /> */}
                         <Img
                             src={c.image.src}
                             onClick={() => {
