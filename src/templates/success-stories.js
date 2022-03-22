@@ -84,7 +84,7 @@ const TestimonialCard = ({highlighted, featured, height, height_tablet, studentR
                     </Div>
                 </>
             }
-            <Paragraph style={{position: "absolute", bottom: "20px", left: "21px"}} textAlign="left" margin="12px 0 0 0" color={Colors.blue}>View Review</Paragraph>
+            {/* <Paragraph style={{position: "absolute", bottom: "20px", left: "21px"}} textAlign="left" margin="12px 0 0 0" color={Colors.blue}>View Review</Paragraph> */}
 
         </Div>
     )
