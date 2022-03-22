@@ -11,7 +11,7 @@ import TestimonialsCarrousel from "../Testimonials";
 import With4Geeks from "../With4Geeks";
 // import WhyPython from '../WhyPython';
 import AlumniProjects from "../AlumniProjects";
-import {SuccessStories} from "../../templates/success-stories";
+import { SuccessStories } from "../../templates/success-stories";
 import GeeksVsOthers from "../GeeksVsOthers";
 import GeeksInfo from "../GeeksInfo";
 import ProgramDetails from "../ProgramDetails";
@@ -33,19 +33,20 @@ const Title = ({ id, title, paragraph }) => {
         </GridContainer>
     );
 };
-const linkRegex = new RegExp("(tel:|http)");
-const isWindow = window !== undefined ? true : false;
 
-const smartRedirecting = (e, path) => {
+const isWindow = () => window !== undefined ? true : false;
+
+export const smartRedirecting = (e, path) => {
     e.preventDefault();
-    if(isWindow && e.target.tagName === "A"){
+    const linkRegex = new RegExp("(http)");
+    
+    if(isWindow()){
         console.log("REDIRECTING");
         if (linkRegex.test(path)) {
             window.open(path, '_blank').focus();
             return
         }
-        const redirect = isWindow ? window.location.href=path : null
-        return redirect
+        navigate(path);
     }
 }
 
@@ -286,8 +287,7 @@ TwoColumn.defaultProps = {
     right: null,
 };
 
-export const MultiColumns = ({ heading, sub_heading, end_paragraph, button, columns }) => {
-    const size = 4;
+export const MultiColumns = ({ heading, sub_heading, end_paragraph, button, columns, swipable }) => {
     const [h_xl, h_lg, h_md, h_sm, h_xs] = heading ? heading.font_size : [];
     const [sh_xl, sh_lg, sh_md, sh_sm, sh_xs] =
         sub_heading && Array.isArray(sub_heading.font_size)
@@ -298,7 +298,6 @@ export const MultiColumns = ({ heading, sub_heading, end_paragraph, button, colu
             ? end_paragraph.font_size
             : [];
     return (
-        // <GridContainer margin="0 0 20px 0" >
 
         <Div
           display="flex"
@@ -352,6 +351,7 @@ export const MultiColumns = ({ heading, sub_heading, end_paragraph, button, colu
                 </Paragraph>
             ) : null}
             <Columns 
+                swipable={swipable}
                 columns={columns}
             />
             {end_paragraph && (
@@ -366,7 +366,9 @@ export const MultiColumns = ({ heading, sub_heading, end_paragraph, button, colu
                     lineHeight="19px"
                     style={{textAlign:'center'}}
                     dangerouslySetInnerHTML={{ __html: end_paragraph.text }}
-                    onClick={(e)=>{smartRedirecting(e, end_paragraph.path);}}
+                    onClick={(e)=>{
+                        if(e.target.tagName === "A") smartRedirecting(e, end_paragraph.path);
+                    }}
                 
                 />
             )}
@@ -394,17 +396,9 @@ export const MultiColumns = ({ heading, sub_heading, end_paragraph, button, colu
                     {button.text}
                 </Button>
             )}
-          {/* <Div flexDirection="column" gap="0px" flexDirection_tablet="row" m_sm="0px 0px 100px 0">
-                {columns.map((column) => {
-                    <Div flexDirection="column" size={size} maxHeight="300px" textAlign="center">
-                        <Side {...column} />
-                    </Div>
-                })}
 
-            </Div> */}
         </Div>
 
-    //   </GridContainer>
 
     )
 }
@@ -435,9 +429,9 @@ TwoColumn.defaultProps = {
     column: null,
 };
 
-export const Columns = ({ columns, proportions }) => {
-    return (
-        <Div flexDirection="row" m_sm="0px 0px 100px 0" justifyContent="around" width="100%">
+export const Columns = ({ columns, proportions, swipable }) => {
+    return swipable ? (
+        <Div width="100%" className="badge-slider hideOverflowX__" flexDirection="row" m_sm="0px 0px 100px 0" justifyContent="between">
             {columns.map((c, index) => (
                 <Div
                     key={index}
@@ -446,7 +440,10 @@ export const Columns = ({ columns, proportions }) => {
                     size_sm={c.size[2]}
                     size_xs={c.size[3]}
                     textAlign={c.align}
+                    minWidth="250px"
+                    margin="0 15px"
                 >
+                    
                     <Img
                         src={c.image.src}
                         onClick={() => {
@@ -465,7 +462,9 @@ export const Columns = ({ columns, proportions }) => {
                         width="100%"
                         h_sm="250px"
                         backgroundSize={`cover`}
-                    ></Img>
+                    />
+                    
+                    {/* <div style={{background:"red", width:"250px", height:"250px"}}></div> */}
                     <Paragraph
                         lineHeight="30px"
                         fontWeight="700"
@@ -475,7 +474,46 @@ export const Columns = ({ columns, proportions }) => {
                 </Div>
             ))}
         </Div>
-    );
+    ) : (
+            <Div flexDirection="row" m_sm="0px 0px 100px 0" justifyContent="around" width="100%" flexWrap="wrap">
+                {columns.map((c, index) => (
+                    <Div
+                        key={index}
+                        flexDirection="column"
+                        size={c.size[0]}
+                        size_sm={c.size[2]}
+                        size_xs={c.size[3]}
+                        textAlign={c.align}
+                    >
+                        <Img
+                            src={c.image.src}
+                            onClick={() => {
+                                if (c.image.link) {
+                                    if (c.image.link.indexOf("http") > -1)
+                                        window.open(c.image.link);
+                                    else navigate(c.image.link);
+                                }
+                            }}
+                            style={c.image.style ? JSON.parse(c.image.style) : null}
+                            borderRadius={"1.25rem"}
+                            className="pointer"
+                            alt={"4Geeks Academy Section"}
+                            margin="auto"
+                            height="100%"
+                            width="100%"
+                            h_sm="250px"
+                            backgroundSize={`cover`}
+                        />
+                        <Paragraph
+                            lineHeight="30px"
+                            fontWeight="700"
+                            color="black"
+                            dangerouslySetInnerHTML={{ __html: c.content.text }}
+                        />
+                    </Div>
+                ))}
+            </Div>
+        );
 };
 Columns.defaultProps = {
     columns: [],
@@ -871,7 +909,7 @@ export const landingSections = {
             id="testimonials_new"
             key={index}
             flexDirection="column"
-            // margin="50px"
+            margin="30px 0 0 0"
             // margin_tablet="100px"
             m_sm="0"
             p_xs="0"
@@ -1030,7 +1068,6 @@ export const landingSections = {
         );
     },
     multi_column: ({ session, data, pageContext, yml, index }) => {
-
         return (
             <Div
                 id="multi_column"
@@ -1047,6 +1084,7 @@ export const landingSections = {
                     columns={yml.columns}
                     end_paragraph={yml.content}
                     button={yml.button}
+                    swipable={yml.swipable}
                 />
             </Div>
         );

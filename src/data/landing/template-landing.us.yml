@@ -172,6 +172,7 @@ components:
   - name: more_testimonials
     position: 9
     layout: two_column_left 
+    swipable: False
     background: "#FFFFFF"
     image: 
       style: "{}"
@@ -184,6 +185,8 @@ components:
     button: 
       text: "Ver testimoniales"
       color: pink
+      hover_color: "black"
+      background: "blue"
       path: "https://www.youtube.com/watch?v=plwPwyrxX84"
     content: 
       text: "Mentoría como nunca antes. Decenas de Instructores, en varios idiomas, todos los días, a cualquier hora. Estaremos contigo todo el tiempo, aun cuando hayas conseguido trabajo. Una vez eres parte de 4Geeks, estaremos para siempre contigo."
@@ -224,6 +227,10 @@ components:
       text:
         "Tipos de datos con súperpoderes:"
       font_size: ["15px"]
+  - name: testimonials
+    position: 15
+    layout: testimonials_new
+    filter_indexes: [3,4,5]
 
     bullets:
       - Número

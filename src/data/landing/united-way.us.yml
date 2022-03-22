@@ -6,10 +6,10 @@ meta_info:
   description: "United Way Miami"
   visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   # This will show on social media when shared
-  image: "public/images/landing/UWM_Pantone_2021_2.png"
+  image: "public/images/landing/uwm_pantone_2021_2.png"
   keywords: "Coding Classes, Learn to code, 4Geeks Academy"
 
-  template: "landing_nonav" # <--- choose your landing template
+  template: "landing_noform" # <--- choose your landing template
   redirects: # <--- URL redirections to avoid 404 errors
     ["/landing/united-way"]
 
@@ -38,11 +38,14 @@ header_data:
   tagline: "Debug Access to a better future"
   tagline_color: "black"
   sub_heading: "Get Coding Education"
-  image: "../../../static/images/landing/UWM_Pantone_2021_2.png"
+  # image: "../../../static/images/landing/uwm_pantone_2021_2.png"
   image_filter: brightness(0.3)
-  partner_logo_url: "../../../static/images/landing/UWM_Pantone_2021_2.png" # optional
+  partner_logo_url: "../../../static/images/landing/uwm_pantone_2021_2.png" # optional
   # background_image: "../../../static/images/Happy-People-Landing-4Geeks-ES.jpg" # optional
   background: "white" #background property, it can be a hex color
+  right_image: 
+    style: '{ "backgroundSize": "contain" }'
+    src: "/images/landing/veteran.png"
 
 features:
   marginTop: 0px #<-- separation between tagline and the bullets
@@ -85,8 +88,8 @@ components:
     proportions: [6, 6]
     background: "veryLightBlue2"
     image:
-      style: '{ "backgroundSize": "contain" }'
-      src: "/images/landing/UWM_Pantone_2021_2.png"
+      style: '{ "backgroundSize": "contain", "maxHeight": "270px" }'
+      src: "/images/landing/uwm_pantone_2021_2.png"
     heading:
       text: "Brought to you by united way"
       font_size: ["40px", "40px", "40px", "40px", "40px"]
@@ -97,6 +100,7 @@ components:
   - name: elegibility
     position: 3
     layout: multi_column
+    swipable: True
     heading:
       text: "Elegibility in this program"
       font_size: ["30px", "30px", "30px", "30px", "30px"]
@@ -116,21 +120,21 @@ components:
       background: "black"
     columns:
       - image:
-          style: '{ "backgroundSize": "cover", "minHeight": "200px" }'
+          style: '{ "backgroundSize": "cover", "minHeight": "200px", "borderRadius": "80px" }'
           src: "/images/landing/of_color.png"
         content: 
           text: "LOW-INCOMEPEOPLE <br> OF COLOR"
           font_size: ["16px"]
         size: [3,3,3,3]
       - image:
-          style: '{ "backgroundSize": "cover" }'
+          style: '{ "backgroundSize": "cover", "borderRadius": "80px" }'
           src: "/images/landing/veteran.png"
         content: 
           text: "LOW-INCOME <br> VETERANS"
           font_size: ["16px"]
         size: [3,3,3,3]
       - image:
-          style: '{ "backgroundSize": "cover" }'
+          style: '{ "backgroundSize": "cover", "borderRadius": "80px" }'
           src: "/images/landing/image_259.png"
         content: 
           text: "LOW-INCOME SINGLE FEMALE HEADS OF HOUSE HOLD"
@@ -144,7 +148,7 @@ components:
     background: "rgba(255, 183, 24, 0.2)"
     image:
       style: '{ "backgroundSize": "contain" }'
-      src: "/images/landing/Group_194.png"
+      src: "/images/landing/group_194.png"
     heading:
       text: "Why Coding?"
       font_size: ["40px", "40px", "40px", "40px", "40px"]
@@ -220,27 +224,8 @@ components:
         <h2><strong style="font-weight: bold;">4. GET A JOB</strong></h2>
         <h2><strong style="font-weight: bold;">5. PAY FOR YOUR EDUCATION</strong></h2>
       font_size: ["16px"]
-  - name: lorem
-    position: 10
-    background: "veryLightBlue2"
-    layout: two_column_right
-    proportions: [6, 6]
-    image:
-      style: '{ "backgroundSize": "contain" }'
-      src: "/images/landing/temp4.png"
-    heading:
-      text: "Lorem Ipsum"
-      font_size: ["30px", "30px", "30px", "30px", "30px"]
-    sub_heading:
-      text: "Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum "
-      font_size: ["16px", "16px", "16px", "16px", "16px"]
-    button:
-      text: "APPLY NOW"
-      color: "white"
-      background: "blue"
-      hover_color: "white"
-      path: "https://www.switchup.org/bootcamps/4geeks-academy"
 
   - name: testimonials
     position: 9
     layout: testimonials_new
+    filter_indexes: [6,7,8]

@@ -2,14 +2,13 @@ import React, { useEffect } from "react";
 import { graphql, navigate } from "gatsby";
 import { landingSections } from "../components/Landing";
 import FollowBar from "../components/FollowBar";
-import LeadForm from "../components/LeadForm";
 import { H1, H2, H4, Paragraph, Span } from "../components/Heading";
 import {
     GridContainerWithImage,
     Div,
     GridContainer,
 } from "../components/Sections";
-import { Colors, StyledBackgroundSection, Button } from "../components/Styling";
+import { Colors, StyledBackgroundSection, Img, Button } from "../components/Styling";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import BaseRender from "./_baseLandingLayout";
 import { processFormEntry } from "../actions";
@@ -153,10 +152,8 @@ const Landing = (props) => {
                 background={yml.header_data.background || Colors.white}
             >
                 <GridContainer
-                    padding="0"
                     containerGridGap="0"
                     containerColumns_tablet="repeat(1,0fr)"
-                    padding="95px 0 35px 0"
                     padding_tablet="70px 0 40px 0"
                     columns_tablet="2"
                 >
@@ -366,30 +363,19 @@ const Landing = (props) => {
                         textAlign_sm="center"
                         margin_md="0 auto 0 70px"
                     >
-                        <LeadForm
-                            headerImage={
-                                yml.header_data.badge &&
-                                yml.header_data.badge.childImageSharp
-                                    .gatsbyImageData
+                        <Img
+                            src={yml.header_data.right_image.src}
+                            style={
+                                yml.header_data.right_image.style ? JSON.parse(yml.header_data.right_image.style) 
+                                : null
                             }
-                            background={Colors.white}
-                            margin_tablet="18px 38px"
-                            margin="18px 10px"
-                            style={{ marginTop: "50px", minHeight: "350px" }}
-                            selectProgram={programs}
-                            formHandler={processFormEntry}
-                            heading={yml.form.heading}
-                            motivation={yml.form.motivation}
-                            sendLabel={yml.form.button_label}
-                            redirect={yml.form.redirect}
-                            inputBgColor="#FFFFFF"
-                            layout="block"
-                            lang={pageContext.lang}
-                            fields={yml.form.fields}
-                            data={preData}
-                            justifyContentButton="center"
-                            marginButton="15px auto 30px auto"
-                            marginButton_tablet="15px 0 30px auto"
+                            // borderRadius={"1.25rem"}
+                            // className="pointer"
+                            alt={"4Geeks Academy Section"}
+                            margin="auto"
+                            width={"100%"}
+                            height={"100%"}
+                            backgroundSize={`contain`}
                         />
                     </Div>
                 </GridContainer>
@@ -417,7 +403,8 @@ const Landing = (props) => {
                     });
                 })}
             <div id="bottom"></div>
-            <GridContainerWithImage
+
+            {/* <GridContainerWithImage
                 id="bottom"
                 background="#F9F9F9"
                 imageSide={applySchollarship?.imageSide}
@@ -491,7 +478,7 @@ const Landing = (props) => {
                 >
                     {applySchollarship?.imageSide === "right" ? (
                         <>
-                            {/* <Div display="none" display_md="flex" style={{position: "absolute", background: "#F5F5F5", width: "101%", height: "282px", top: "-25px", left: "-35px", borderRadius: "3px"}}/> */}
+
                             <Div
                                 display="none"
                                 display_md="flex"
@@ -525,7 +512,6 @@ const Landing = (props) => {
                     )}
                     <StyledBackgroundSection
                         height={`450px`}
-                        // width={`85%`}
                         borderRadius={`3px`}
                         image={
                             applySchollarship
@@ -538,12 +524,12 @@ const Landing = (props) => {
                         alt="geekforce image"
                     />
                 </Div>
-            </GridContainerWithImage>
+            </GridContainerWithImage> */}
         </>
     );
 };
 export const query = graphql`
-    query LandingNonavQuery(
+    query LandingNoformQuery(
         $file_name: String!
         $lang: String!
         $utm_course: String
@@ -788,6 +774,7 @@ export const query = graphql`
                         swipable
                         proportions
                         layout
+                        filter_indexes
                         image {
                             src
                             style
@@ -835,6 +822,10 @@ export const query = graphql`
                         tagline_color
                         sub_heading
                         image_filter
+                        right_image {
+                            style
+                            src
+                        }
                         partner_logo_url {
                             childImageSharp {
                                 gatsbyImageData(

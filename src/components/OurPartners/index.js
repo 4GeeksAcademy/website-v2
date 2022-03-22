@@ -3,6 +3,7 @@ import {Div, Grid, GridContainer} from '../Sections'
 import {Colors, StyledBackgroundSection} from '../Styling';
 import {H2, H3, H4, Title, Paragraph} from '../Heading'
 import Link from 'gatsby-link'
+import { smartRedirecting } from '../Landing'
 import Card from '../Card';
 import Fragment from "../Fragment"
 import Marquee from '../Marquee';
@@ -88,9 +89,7 @@ const Images_With_Slider = (props) => {
 
 //Images in marquee
 const Images_With_Marquee = (props) => {
-
   let imgs = [];
-
   props.images.map((l, i) => {
     imgs.push(
       <GatsbyImage
@@ -100,6 +99,9 @@ const Images_With_Marquee = (props) => {
         objectFit="contain"
         alt={l.name}
         image={getImage(l.image.childImageSharp.gatsbyImageData)}
+        onClick={(e)=>{
+          if(l.link) smartRedirecting(e, l.link)
+        }}
         // fluid={l.image.childImageSharp.fluid}
       />
     );

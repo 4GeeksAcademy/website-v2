@@ -389,7 +389,7 @@ const Landing = (props) => {
                         index: index,
                     });
                 })}
-
+            <div id="bottom"></div>
             <GridContainerWithImage
                 id="bottom"
                 background="#F9F9F9"
@@ -759,9 +759,11 @@ export const query = graphql`
                     components {
                         name
                         position
+                        swipable
                         background
                         proportions
                         layout
+                        filter_indexes
                         image {
                             src
                             style
@@ -1287,6 +1289,7 @@ export const query = graphql`
                         footer_link
                         images {
                             name
+                            link
                             image {
                                 childImageSharp {
                                     gatsbyImageData(
