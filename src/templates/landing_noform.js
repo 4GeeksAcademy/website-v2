@@ -352,6 +352,7 @@ const Landing = (props) => {
                     </Div>
                     <Div
                         flexDirection="column"
+                        justifyContent="center"
                         size="12"
                         size_tablet="10"
                         width="100%"
@@ -363,7 +364,15 @@ const Landing = (props) => {
                         textAlign_sm="center"
                         margin_md="0 auto 0 70px"
                     >
-                        <Img
+                        <GatsbyImage
+                            loading="eager"
+                            imgStyle={{ objectFit: "contain" }}
+                            image={getImage(
+                                yml.header_data.right_image.childImageSharp.gatsbyImageData
+                            )}
+                            alt="4Geeks Logo"
+                        />
+                        {/* <Img
                             src={yml.header_data.right_image.src}
                             style={
                                 yml.header_data.right_image.style ? JSON.parse(yml.header_data.right_image.style) 
@@ -376,7 +385,7 @@ const Landing = (props) => {
                             width={"100%"}
                             height={"100%"}
                             backgroundSize={`contain`}
-                        />
+                        /> */}
                     </Div>
                 </GridContainer>
             </LandingContainer>
@@ -705,8 +714,13 @@ export const query = graphql`
                         sub_heading
                         image_filter
                         right_image {
-                            style
-                            src
+                            childImageSharp {
+                                gatsbyImageData(
+                                    layout: FULL_WIDTH # --> CONSTRAINED || FIXED || FULL_WIDTH
+                                    quality: 100
+                                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                                )
+                            }
                         }
                         partner_logo_url {
                             childImageSharp {

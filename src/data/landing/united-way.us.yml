@@ -43,9 +43,10 @@ header_data:
   partner_logo_url: "../../../static/images/landing/uwm_pantone_2021_2.png" # optional
   # background_image: "../../../static/images/Happy-People-Landing-4Geeks-ES.jpg" # optional
   background: "white" #background property, it can be a hex color
-  right_image: 
-    style: '{ "backgroundSize": "contain" }'
-    src: "/images/landing/veteran.png"
+  right_image: "../../../static/images/landing/veteran.png"
+  # right_image: 
+  #   style: '{ "backgroundSize": "contain" }'
+  #   src: "/images/landing/veteran.png"
 
 features:
   marginTop: 0px #<-- separation between tagline and the bullets

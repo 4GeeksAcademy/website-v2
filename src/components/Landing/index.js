@@ -443,7 +443,7 @@ export const Columns = ({ columns, proportions, swipable }) => {
                     size_xs={c.size[3]}
                     textAlign={c.align}
                     minWidth="250px"
-                    margin="0 15px"
+                    margin="25px 0 0 0"
                 >
                     
                     <Img
@@ -468,9 +468,10 @@ export const Columns = ({ columns, proportions, swipable }) => {
                     
                     {/* <div style={{background:"red", width:"250px", height:"250px"}}></div> */}
                     <Paragraph
-                        lineHeight="30px"
+                        // lineHeight="30px"
                         // fontWeight="700"
                         color="black"
+                        margin="25px 0 0 0"
                         style={c.content.style ? JSON.parse(c.content.style) : null}
                         dangerouslySetInnerHTML={{ __html: c.content.text }}
                     />
