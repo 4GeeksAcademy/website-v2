@@ -34,13 +34,13 @@ const Title = ({ id, title, paragraph }) => {
     );
 };
 
-const isWindow = window !== undefined ? true : false;
+const isWindow = () => window !== undefined ? true : false;
 
 export const smartRedirecting = (e, path) => {
     e.preventDefault();
     const linkRegex = new RegExp("(http)");
     
-    if(isWindow){
+    if(isWindow()){
         console.log("REDIRECTING");
         if (linkRegex.test(path)) {
             window.open(path, '_blank').focus();
