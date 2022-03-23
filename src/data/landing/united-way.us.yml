@@ -275,6 +275,7 @@ components:
       text: "APPLY NOW"
       color: "white"
       background: "blue"
+      hover_color: "white"
       path: "https://www.switchup.org/bootcamps/4geeks-academy"
 
   - name: united
