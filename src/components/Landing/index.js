@@ -1,7 +1,7 @@
 import React from "react";
 import { GridContainerWithImage, Div, GridContainer } from "../Sections";
 import { H2, H5, H4, Paragraph } from "../Heading";
-import { Colors, Img, Button, StyledBackgroundSection } from "../Styling";
+import { Colors, Img, Button, StyledBackgroundSection, Link } from "../Styling";
 import Badges from "../Badges";
 import News from "../News";
 import { navigate } from "gatsby";
@@ -11,7 +11,9 @@ import TestimonialsCarrousel from "../Testimonials";
 import With4Geeks from "../With4Geeks";
 // import WhyPython from '../WhyPython';
 import AlumniProjects from "../AlumniProjects";
+import { SuccessStories } from "../../templates/success-stories";
 import GeeksVsOthers from "../GeeksVsOthers";
+import GeeksInfo from "../GeeksInfo";
 import ProgramDetails from "../ProgramDetails";
 import ProgramDetailsMobile from "../ProgramDetailsMobile";
 import LeadForm from "../LeadForm";
@@ -31,6 +33,22 @@ const Title = ({ id, title, paragraph }) => {
         </GridContainer>
     );
 };
+
+const isWindow = () => window !== undefined ? true : false;
+
+export const smartRedirecting = (e, path) => {
+    e.preventDefault();
+    const linkRegex = new RegExp("(http)");
+    
+    if(isWindow()){
+        console.log("REDIRECTING");
+        if (linkRegex.test(path)) {
+            window.open(path, '_blank').focus();
+            return
+        }
+        navigate(path);
+    }
+}
 
 const Side = ({
     video,
@@ -109,7 +127,6 @@ const Side = ({
                     fontSize_md={h_md || "40px"}
                     fontSize_sm={h_sm}
                     margin="30px 0 20px 0"
-                    type="h1"
                 >
                     {heading.text}
                 </H2>
@@ -122,7 +139,6 @@ const Side = ({
                     fontSize={sh_xl || "16px"}
                     fontSize_sm={sh_sm}
                     fonSize_md={sh_md}
-                    fontSize_sm={sh_sm}
                     fontSize_xs={sh_xs}
                     fontHeight="30px"
                 >
@@ -184,7 +200,6 @@ const Side = ({
                     fontSize={c_xl || "16px"}
                     fontSize_sm={c_sm}
                     fonSize_md={c_md}
-                    fontSize_sm={c_sm}
                     fontSize_xs={c_xs}
                     fontHeight="30px"
                     dangerouslySetInnerHTML={{ __html: content.text }}
@@ -200,7 +215,6 @@ const Side = ({
                         fontSize={c_xl || "16px"}
                         fontSize_sm={c_sm}
                         fonSize_md={c_md}
-                        fontSize_sm={c_sm}
                         fontSize_xs={c_xs}
                         fontHeight="30px"
                     >
@@ -212,16 +226,18 @@ const Side = ({
             {button && (
                 <Button
                     outline
-                    width="250px"
-                    colorHoverText={Colors.blue}
+                    // width="250px"
+                    colorHoverText={button.hover_color || Colors.blue}
+                    background={Colors[button.background] || button.background}
                     lineHeight="26px"
                     textColor={Colors.black}
-                    padding="0"
+                    color={Colors[button.color] || button.color}
+                    // padding="0"
                     padding_tablet="0"
                     fontSize="15px"
                     textAlign="left"
                     margin="2rem 0"
-                    // padding=".35rem.85rem"
+                    padding=".35rem.85rem"
                     onClick={() => {
                         if (button.path && button.path.indexOf("http") > -1)
                             window.open(button.path);
@@ -271,6 +287,132 @@ TwoColumn.defaultProps = {
     right: null,
 };
 
+export const MultiColumns = ({ heading, sub_heading, end_paragraph, button, columns, swipable }) => {
+    const [h_xl, h_lg, h_md, h_sm, h_xs] = heading ? heading.font_size : [];
+    const [sh_xl, sh_lg, sh_md, sh_sm, sh_xs] =
+        sub_heading && Array.isArray(sub_heading.font_size)
+            ? sub_heading.font_size
+            : [];
+    const [p_xl, p_lg, p_md, p_sm, p_xs] =
+        end_paragraph && Array.isArray(end_paragraph.font_size)
+            ? end_paragraph.font_size
+            : [];
+    return (
+
+        <Div
+          display="flex"
+          flexDirection="column"
+          alignItems="center"
+          padding_tablet="0 4em"
+          padding="0 10px"
+          width="100%"
+          style={{textAlign:'center'}}
+        >
+          {heading && (
+                <H2
+                    type="h2"
+                    lineHeight="38px"
+                    lineHeight_tablet="38px"
+                    fontSize={h_xs || "30px"}
+                    fs_xl={h_xl}
+                    fontSize_md={h_md || "40px"}
+                    fontSize_sm={h_sm}
+                    margin="30px 0 20px 0"
+                    style={{textAlign:'center'}}
+                >
+                    {heading.text}
+                </H2>
+            )}
+
+            {sub_heading && /<\/?[a-z0-9]+>/g.test(sub_heading.text) ? (
+                <Paragraph
+                    padding={heading ? "0" : "20px"}
+                    margin="15px 0"
+                    fontSize={sh_xl || "16px"}
+                    fontSize_sm={sh_sm}
+                    fonSize_md={sh_md}
+                    fontSize_xs={sh_xs}
+                    fontHeight="30px"
+                    style={sub_heading.style ? JSON.parse(sub_heading.style) : null}
+                    // style={{textAlign:'center'}}
+                    dangerouslySetInnerHTML={{ __html: sub_heading.text }}
+                />
+            ) : sub_heading ? (
+                <Paragraph
+                    padding={heading ? "0" : "20px"}
+                    margin="15px 0"
+                    fontSize={sh_xl || "16px"}
+                    fontSize_sm={sh_sm}
+                    fonSize_md={sh_md}
+                    fontSize_xs={sh_xs}
+                    fontHeight="30px"
+                    style={sub_heading.style ? JSON.parse(sub_heading.style) : null}
+                    // style={{textAlign:'center'}}
+                >
+                    {sub_heading.text}
+                </Paragraph>
+            ) : null}
+            <Columns 
+                swipable={swipable}
+                columns={columns}
+            />
+            {end_paragraph && (
+                <Paragraph
+                    padding={end_paragraph ? "0" : "20px"}
+                    margin="15px 0"
+                    fontSize={p_xl || "16px"}
+                    fontSize_sm={p_sm}
+                    fonSize_md={p_md}
+                    fontSize_xs={p_xs}
+                    fontHeight="30px"
+                    lineHeight="19px"
+                    style={{textAlign:'center'}}
+                    dangerouslySetInnerHTML={{ __html: end_paragraph.text }}
+                    onClick={(e)=>{
+                        if(e.target.tagName === "A") smartRedirecting(e, end_paragraph.path);
+                    }}
+                
+                />
+            )}
+            {button && (
+                <Button
+                    outline
+                    // width="250px"
+                    colorHoverText={Colors.blue}
+                    lineHeight="26px"
+                    textColor={Colors[button.color] || button.color}
+                    color={Colors[button.color] || button.color}
+                    padding_tablet="0"
+                    fontSize="15px"
+                    style={button.style ? JSON.parse(button.style) : null}
+                    background={Colors[button.background] || button.background}
+                    // textAlign="left"
+                    margin="2rem 0"
+                    padding=".35rem.85rem"
+                    onClick={() => {
+                        if (button.path && button.path.indexOf("http") > -1)
+                            window.open(button.path);
+                        else navigate(button.path);
+                    }}
+                >
+                    {button.text}
+                </Button>
+            )}
+
+        </Div>
+
+
+    )
+}
+
+MultiColumns.defaultProps = {
+    heading: null, 
+    sub_heading: null,
+    end_paragraph: null, 
+    button: null,
+    columns: [],
+};
+
 export const SingleColumn = ({ column }) => {
     return (
         <Div flexDirection="row" m_sm="0px 0px 100px 0">
@@ -289,9 +431,9 @@ TwoColumn.defaultProps = {
     column: null,
 };
 
-export const Columns = ({ columns, proportions }) => {
-    return (
-        <Div flexDirection="row" m_sm="0px 0px 100px 0">
+export const Columns = ({ columns, proportions, swipable }) => {
+    return swipable ? (
+        <Div width="100%" className="badge-slider hideOverflowX__" flexDirection="row" m_sm="0px 0px 100px 0" justifyContent="between">
             {columns.map((c, index) => (
                 <Div
                     key={index}
@@ -300,7 +442,10 @@ export const Columns = ({ columns, proportions }) => {
                     size_sm={c.size[2]}
                     size_xs={c.size[3]}
                     textAlign={c.align}
+                    minWidth="250px"
+                    margin="25px 0 0 0"
                 >
+                    
                     <Img
                         src={c.image.src}
                         onClick={() => {
@@ -311,7 +456,7 @@ export const Columns = ({ columns, proportions }) => {
                             }
                         }}
                         style={c.image.style ? JSON.parse(c.image.style) : null}
-                        borderRadius={"1.25rem"}
+                        // borderRadius={"1.25rem"}
                         className="pointer"
                         alt={"4Geeks Academy Section"}
                         margin="auto"
@@ -319,15 +464,60 @@ export const Columns = ({ columns, proportions }) => {
                         width="100%"
                         h_sm="250px"
                         backgroundSize={`cover`}
-                    ></Img>
+                    />
+                    
+                    {/* <div style={{background:"red", width:"250px", height:"250px"}}></div> */}
                     <Paragraph
-                        lineHeight="30px"
+                        // lineHeight="30px"
+                        // fontWeight="700"
+                        color="black"
+                        margin="25px 0 0 0"
+                        style={c.content.style ? JSON.parse(c.content.style) : null}
                         dangerouslySetInnerHTML={{ __html: c.content.text }}
                     />
                 </Div>
             ))}
         </Div>
-    );
+    ) : (
+            <Div flexDirection="row" m_sm="0px 0px 100px 0" justifyContent="around" width="100%" flexWrap="wrap">
+                {columns.map((c, index) => (
+                    <Div
+                        key={index}
+                        flexDirection="column"
+                        size={c.size[0]}
+                        size_sm={c.size[2]}
+                        size_xs={c.size[3]}
+                        textAlign={c.align}
+                    >
+                        <Img
+                            src={c.image.src}
+                            onClick={() => {
+                                if (c.image.link) {
+                                    if (c.image.link.indexOf("http") > -1)
+                                        window.open(c.image.link);
+                                    else navigate(c.image.link);
+                                }
+                            }}
+                            style={c.image.style ? JSON.parse(c.image.style) : null}
+                            borderRadius={"1.25rem"}
+                            className="pointer"
+                            alt={"4Geeks Academy Section"}
+                            margin="auto"
+                            height="100%"
+                            width="100%"
+                            h_sm="250px"
+                            backgroundSize={`cover`}
+                        />
+                        <Paragraph
+                            lineHeight="30px"
+                            fontWeight="700"
+                            color="black"
+                            dangerouslySetInnerHTML={{ __html: c.content.text }}
+                        />
+                    </Div>
+                ))}
+            </Div>
+        );
 };
 Columns.defaultProps = {
     columns: [],
@@ -689,7 +879,8 @@ export const landingSections = {
         );
     },
 
-    testimonials: ({ session, data, pageContext, yml, index }) => (
+    testimonials: ({ session, data, pageContext, yml, index }) => {
+        return(
         <Div
             id="testimonials"
             key={index}
@@ -700,6 +891,34 @@ export const landingSections = {
             p_xs="0"
         >
             <TestimonialsCarrousel lang={data.allTestimonialsYaml.edges} />
+        </Div>
+    )},
+
+    geeksInfo: ({ session, data, pageContext, yml, index }) => (
+        <Div
+            id="geeksInfo"
+            key={index}
+            flexDirection="column"
+            // margin="50px"
+            margin_tablet="100px"
+            m_sm="0"
+            p_xs="0"
+        >
+            <GeeksInfo lang={pageContext.lang} />
+        </Div>
+    ),
+
+    testimonials_new: ({ session, data, pageContext, yml, index }) => (
+        <Div
+            id="testimonials_new"
+            key={index}
+            flexDirection="column"
+            margin="30px 0 0 0"
+            // margin_tablet="100px"
+            m_sm="0"
+            p_xs="0"
+        >
+            <SuccessStories pageContext={pageContext} data={data} yml={yml} />
         </Div>
     ),
 
@@ -848,6 +1067,28 @@ export const landingSections = {
                     }}
                     right={{ image: yml.image, video: yml.video }}
                     proportions={yml.proportions}
+                />
+            </Div>
+        );
+    },
+    multi_column: ({ session, data, pageContext, yml, index }) => {
+        return (
+            <Div
+                id="multi_column"
+                key={index}
+                background={Colors[yml.background] || yml.background}
+                flexDirection="column"
+                padding="0 0 50px 0"
+                padding_tablet="6%"
+                margin="0"
+            >
+                <MultiColumns
+                    heading={yml.heading}
+                    sub_heading={yml.sub_heading}
+                    columns={yml.columns}
+                    end_paragraph={yml.content}
+                    button={yml.button}
+                    swipable={yml.swipable}
                 />
             </Div>
         );

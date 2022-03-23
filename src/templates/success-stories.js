@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {Header, GridContainer, Container, Div, Grid} from "../components/Sections";
 import {Title, H1, H2, H3, H4, H5, Paragraph} from '../components/Heading';
 import {Button, Colors, StyledBackgroundSection} from '../components/Styling';
@@ -8,7 +8,7 @@ import BaseRender from './_baseLayout';
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 
-const TestimonialCard = ({highlighted, featured, height, height_tablet, studentRating, className, background, image, video, name, short_content, description, gridAreaPosition, gridRowPosition}) => {
+const TestimonialCard = ({highlighted, featured, height, height_tablet, studentRating, className, background, image, video, name, short_content, description, gridAreaPosition, gridRowPosition, gridAreaPosition_tablet, gridRowPosition_tablet}) => {
 
     const StarRating = ({totalStars}) => {
         return (
@@ -84,7 +84,7 @@ const TestimonialCard = ({highlighted, featured, height, height_tablet, studentR
                     </Div>
                 </>
             }
-            <Paragraph style={{position: "absolute", bottom: "20px", left: "21px"}} textAlign="left" margin="12px 0 0 0" color={Colors.blue}>View Review</Paragraph>
+            {/* <Paragraph style={{position: "absolute", bottom: "20px", left: "21px"}} textAlign="left" margin="12px 0 0 0" color={Colors.blue}>View Review</Paragraph> */}
 
         </Div>
     )
@@ -107,7 +107,7 @@ const featuredPositions = [{
 const defaultPositions = [
     {
         position: "1 / 5",
-        row_position: "1 / 4",
+        // row_position: "1 / 4",
         height: "378px",
         height_tablet: "100%",
         size: "small",
@@ -115,7 +115,7 @@ const defaultPositions = [
     },
     {
         position: "5 / 9",
-        row_position: "1 / 4",
+        // row_position: "1 / 4",
         height: "378px",
         height_tablet: "100%",
         size: "small",
@@ -123,23 +123,23 @@ const defaultPositions = [
     },
     {
         position: "9 / 13",
-        row_position: "1 / 6",
+        // row_position: "1 / 6",
         height: "auto",
-        height_tablet: "",
+        height_tablet: "430px",
         size: "big",
         className: "react-player-testimonials-big "
     },
     {
-        position: "1 / 9",
-        row_position: "4 / 7",
+        position: "1 / 5",
+        // row_position: "4 / 7",
         height: "378px",
         height_tablet: "507px",
         size: "big",
         className: "react-player-testimonials-big"
     },
     {
-        position: "9 / 13",
-        row_position: "6 / 9",
+        position: "5 / 9",
+        // row_position: "4 / 7",
         height: "378px",
         height_tablet: "auto",
         size: "small",
@@ -149,16 +149,28 @@ const defaultPositions = [
 const SuccessStories = (props) => {
     const {data, pageContext, yml} = props;
     let testimonials = data.allTestimonialsYaml.edges[0].node
+
+    useEffect(()=>{
+        if(yml.filter_indexes){
+            testimonials.testimonials = data.allTestimonialsYaml.edges[0].node.testimonials.filter((num,ind) => yml.filter_indexes.includes(ind));
+            console.log(testimonials.testimonials, 'testimonials.testimonials');
+        }
+    }, []);
+    
+    
+    // console.log(yml, 'testimonials yml');
+    // console.log(testimonials, 'testimonials');
+    // console.log(testimonials.testimonials.filter((num,ind) => yml.filter_indexes.includes(ind)), 'filter');
     return (
         <>
-            <Header
+            {yml.header && <Header
                 seo_title={yml.seo_title}
                 title={yml.header.title}
                 paragraph={yml.header.paragraph}
                 padding_tablet="72px 0 40px 0"
                 padding="66px 17px 85px 0"
             >
-            </Header>
+            </Header>}
             <GridContainer variant="fixed" padding_tablet="0" columns_tablet="12">
                 {/* <Grid height="auto" columns="1" rows="1" columns_tablet="12" gridGap="11px"> */}
                 {
@@ -183,10 +195,12 @@ const SuccessStories = (props) => {
                 }
                 {/* </Grid> */}
             </GridContainer >
-            <GridContainer variant="fixed" margin_tablet="30px 0" margin="30px 0" padding_tablet="0">
-                <Div height="7px" background={Colors.lightGray} />
-            </GridContainer>
-            <GridContainer columns_tablet="12" gridTemplateRows_tablet="9, 1fr" height_tablet="auto" height="auto">
+            {yml.header && 
+                <GridContainer variant="fixed" margin_tablet="30px 0" margin="30px 0" padding_tablet="0">
+                    <Div height="7px" background={Colors.lightGray} />
+                </GridContainer>
+            }
+            <GridContainer variant="fixed" columns_tablet="12" height_tablet="auto" height="auto" margin={"0 0 30px 0"}>
                 {
                     Array.isArray(testimonials.testimonials) && testimonials.testimonials.filter(f => f.hidden == false).map((m, i) => {
                         return (
@@ -206,6 +220,7 @@ const SuccessStories = (props) => {
                                 video={m.student_video}
                                 gridAreaPosition={defaultPositions[i]['position']}
                                 gridRowPosition={defaultPositions[i]['row_position']}
+
                             />
                         )
                     })
@@ -286,3 +301,5 @@ query SuccessQuery($file_name: String!, $lang: String!) {
 }
 `;
 export default BaseRender(SuccessStories);
+
+export { SuccessStories }

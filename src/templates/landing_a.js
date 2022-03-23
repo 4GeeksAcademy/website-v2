@@ -389,7 +389,7 @@ const Landing = (props) => {
                         index: index,
                     });
                 })}
-
+            <div id="bottom"></div>
             <GridContainerWithImage
                 id="bottom"
                 background="#F9F9F9"
@@ -598,6 +598,13 @@ export const query = graphql`
                         text
                         bullets
                         styles
+                        button {
+                            text
+                            path
+                            background
+                            color
+                            hover_color
+                        }
                     }
                     badges {
                         position
@@ -752,9 +759,11 @@ export const query = graphql`
                     components {
                         name
                         position
+                        swipable
                         background
                         proportions
                         layout
+                        filter_indexes
                         image {
                             src
                             style
@@ -766,6 +775,8 @@ export const query = graphql`
                             text
                             color
                             path
+                            background
+                            hover_color
                         }
                         heading {
                             text
@@ -779,6 +790,7 @@ export const query = graphql`
                         content {
                             text
                             font_size
+                            path
                         }
                         columns {
                             size
@@ -1200,6 +1212,7 @@ export const query = graphql`
                         student_name
                         testimonial_date
                         hidden
+                        include_in_marquee
                         student_thumb {
                             childImageSharp {
                                 gatsbyImageData(
@@ -1276,6 +1289,7 @@ export const query = graphql`
                         footer_link
                         images {
                             name
+                            link
                             image {
                                 childImageSharp {
                                     gatsbyImageData(

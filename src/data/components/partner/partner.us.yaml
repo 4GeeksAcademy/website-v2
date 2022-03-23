@@ -18,6 +18,7 @@ partners:
       #courses: ["machine-learning"]
       image: "../../../../static/images/partner/microsoft.png"
       featured: true
+      link: "https://microsoft.com"
     - name: "Google Developers"
       image: "../../../../static/images/coding/google-developers.png"
       featured: true
