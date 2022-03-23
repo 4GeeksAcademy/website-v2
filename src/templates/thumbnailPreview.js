@@ -12,7 +12,7 @@ export default function Template(props) {
   const post = props.data.markdownRemark;
 
   const Div = styled.div`
-  background: url('/images/bg/random-bg${Math.floor(Math.random() * 5) + 1}.png');
+  background: url('/images/bg/random-bg${Math.floor(Math.random() * 4) + 1}.png');
   background-repeat: no-repeat;
   background-size: cover;
   height:100vh;
