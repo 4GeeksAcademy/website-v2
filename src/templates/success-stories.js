@@ -25,15 +25,16 @@ const TestimonialCard = ({highlighted, featured, height, height_tablet, studentR
         <Div
             flexDirection="column"
             position="relative"
-            height={height}
-            height_tablet={height_tablet}
+            // height={height}
+            // height_tablet={height_tablet}
             background={background}
             borderRadius="3px"
-            gridColumn_tablet={gridAreaPosition}
-            gridRow_tablet={gridRowPosition}
-            padding="20px 20px 0 20px"
+            // gridColumn_tablet={gridAreaPosition}
+            // gridRow_tablet={gridRowPosition}
+            padding="20px"
             border={`1px solid ${Colors.lightGray}`}
             boxShadow={`0px 2px 5px rgba(0, 0, 0, 0.1)`}
+            style={{breakInside: 'avoid', marginBottom:'1em'}}
         >
             <Div>
                 <GatsbyImage
@@ -68,18 +69,20 @@ const TestimonialCard = ({highlighted, featured, height, height_tablet, studentR
                         // padding="19px 0 0 25px"
                         padding_tablet="0"
                         width="100%"
+                        style={{breakInside: 'avoid'}}
                         // height_tablet="310px"
-                        alignSelf="baseline"
+                        // alignSelf="baseline"
                     >
                         <ReactPlayer
                             With_Modal={true}
-                            className={className}
+                            // className={className}
+                            className={"react-player-testimonials-small"}
                             thumb={image}
                             id={video && video}
                             width='100%'
                             width_tablet="100%"
-                            height={"82px"}
-
+                            // height={"82px"}
+                            style={{breakInside: 'avoid'}}
                         />
                     </Div>
                 </>
@@ -171,8 +174,8 @@ const SuccessStories = (props) => {
                 padding="66px 17px 85px 0"
             >
             </Header>}
-            <GridContainer variant="fixed" padding_tablet="0" columns_tablet="12">
-                {/* <Grid height="auto" columns="1" rows="1" columns_tablet="12" gridGap="11px"> */}
+            {/* <GridContainer variant="fixed" padding_tablet="0" columns_tablet="12">
+                
                 {
                     Array.isArray(testimonials.testimonials) && testimonials.testimonials.filter(f => f.featured == true && f.hidden == false).map((m, i) => {
                         return (
@@ -193,14 +196,52 @@ const SuccessStories = (props) => {
                         )
                     })
                 }
-                {/* </Grid> */}
+                
             </GridContainer >
             {yml.header && 
                 <GridContainer variant="fixed" margin_tablet="30px 0" margin="30px 0" padding_tablet="0">
                     <Div height="7px" background={Colors.lightGray} />
                 </GridContainer>
-            }
+            } */}
+            <Div
+                display="column"
+                columns="3"
+                columnCount="3"
+                gap="1em"
+                style={{gridAutoFlow:'dense'}}
+                padding="0 10%"
+                columnCount_sm="1"
+                columnCount_xs="1"
+                columnCount_tablet="3"
+            >
+                {
+                    Array.isArray(testimonials.testimonials) && testimonials.testimonials.filter(f => f.hidden == false).map((m, i) => {
+                        return (
+                            i < 9 &&
+                            <TestimonialCard
+                                key={i}
+                                // className={defaultPositions[i]['className']}
+                                studentRating={m.rating}
+                                image={m.student_thumb}
+
+                                // height={defaultPositions[i]['height']}
+                                // height_tablet={defaultPositions[i]['height_tablet']}
+                                background={m.highlighted && Colors.darkYellow}
+                                name={m.student_name}
+                                short_content={m.short_content}
+                                // description={defaultPositions[i]['size'] == "small" && m.content.length > 300 ? m.content.substring(0, 300) + "..." : m.content}
+                                description={m.content.length > 500 ? m.content.substring(0, 500) + "..." : m.content}
+                                video={m.student_video}
+                                // gridAreaPosition={defaultPositions[i]['position']}
+                                // gridRowPosition={defaultPositions[i]['row_position']}
+
+                            />
+                        )
+                    })
+                }
+            </Div>
             <GridContainer variant="fixed" columns_tablet="12" height_tablet="auto" height="auto" margin={"0 0 30px 0"}>
+                
                 {
                     Array.isArray(testimonials.testimonials) && testimonials.testimonials.filter(f => f.hidden == false).map((m, i) => {
                         return (
@@ -226,11 +267,6 @@ const SuccessStories = (props) => {
                     })
                 }
 
-                {/* <Div gridColumn_tablet="1 / 5" gridRow_tablet="1 / 4" background={Colors.lightGray}>test</Div>
-                <Div gridColumn_tablet="5 / 9" gridRow_tablet="1 / 4" background={Colors.lightGray}>test</Div>
-                <Div gridColumn_tablet="9 / 13" gridRow_tablet="1 / 6" background={Colors.lightGray}>test</Div>
-                <Div gridColumn_tablet="1 / 9" gridRow_tablet="4 / 7" background={Colors.lightGray}>test</Div>
-                <Div gridColumn_tablet="9 / 13" gridRow_tablet="6 / 9" background={Colors.lightGray}>test</Div> */}
             </GridContainer>
 
         </>
