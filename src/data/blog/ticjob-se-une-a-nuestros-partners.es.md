@@ -26,4 +26,4 @@ Actualmente, tratan de ofrecer a sus más de **800.000 candidatos** una cobertur
 
 Para celebrar el inicio de esta relación **hemos preparado [3 premios](https://ticjob.es/esp/trabajo/desarrollador-programador-fullstack-beca-100/46577) exclusivos para poder estudiar nuestro programa Full-stack con una beca del 100%** (y otra del 80%) a partir del próximo Julio, y que así, el componente económico no sea un obstáculo para **lanzar tu carrera tecnológica**. 
 
-<call-to-action button_text="Regístrate" button_link="#" background="rgba(0, 151, 205, 0.15)" title="Para conocer todos los detalles del acuerdo y apuntaros a las becas podéis visitar" text="El registro termina el 31 de Mayo"></call-to-action>
+<call-to-action button_text="Regístrate" button_link="https://blog.ticjob.es/presentamos-a-nuestro-nuevo-partner-4geeks-academy/" background="rgba(0, 151, 205, 0.15)" title="Para conocer todos los detalles del acuerdo y apuntaros a las becas podéis visitar" text="El registro termina el 31 de Mayo"></call-to-action>
