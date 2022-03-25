@@ -43,7 +43,7 @@ header_data:
   partner_logo_url: "../../../static/images/landing/uwm_pantone_2021_2.png" # optional
   # background_image: "../../../static/images/Happy-People-Landing-4Geeks-ES.jpg" # optional
   background: "white" #background property, it can be a hex color
-  right_image: "../../../static/images/landing/veteran.png"
+  right_image: "../../../static/images/landing/header_united_way.png"
   # right_image: 
   #   style: '{ "backgroundSize": "contain" }'
   #   src: "/images/landing/veteran.png"
@@ -140,6 +140,7 @@ components:
     button:
       text: "APPLY NOW"
       color: "white"
+      hover_color: "white"
       path: "https://www.switchup.org/bootcamps/4geeks-academy"
       background: "black"
     columns:

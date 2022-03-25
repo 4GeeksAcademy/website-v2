@@ -378,7 +378,7 @@ export const MultiColumns = ({ heading, sub_heading, end_paragraph, button, colu
                 <Button
                     outline
                     // width="250px"
-                    colorHoverText={Colors.blue}
+                    colorHoverText={button.hover_color || Colors.blue}
                     lineHeight="26px"
                     textColor={Colors[button.color] || button.color}
                     color={Colors[button.color] || button.color}

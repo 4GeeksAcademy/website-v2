@@ -87,7 +87,14 @@ const TestimonialCard = ({highlighted, featured, height, height_tablet, studentR
                     </Div>
                 </>
             }
-            {/* <Paragraph style={{position: "absolute", bottom: "20px", left: "21px"}} textAlign="left" margin="12px 0 0 0" color={Colors.blue}>View Review</Paragraph> */}
+            <Paragraph 
+                // style={{position: "absolute", bottom: "20px", left: "21px"}} 
+                textAlign="left" 
+                margin="12px 0 0 0" 
+                color={Colors.blue}
+            >
+                    View Review
+            </Paragraph>
 
         </Div>
     )
@@ -151,6 +158,7 @@ const defaultPositions = [
 ]
 const SuccessStories = (props) => {
     const {data, pageContext, yml} = props;
+    console.log(yml, 'yml');
     let testimonials = data.allTestimonialsYaml.edges[0].node
 
     useEffect(()=>{
@@ -174,6 +182,38 @@ const SuccessStories = (props) => {
                 padding="66px 17px 85px 0"
             >
             </Header>}
+            {yml.images && (
+                <Div
+                display="flex"
+                flexDirection="row"
+                borderRadius="3px"
+                style={{flexWrap: "wrap"}}
+                // columnGap="70px"
+                justifyContent="center"
+                background={Colors.white}
+                padding="25px 0 0 0"
+                margin="0 0 50px 0" >
+          
+                {yml.images.map((l, i) => {
+                  return (
+                    <Div
+                      key={`${i}-${l.name}`}
+                      margin="0 20px 40px 20px"
+                      margin_tablet={`0 ${i >= 4 ? '30px': "30px"} 30px ${i >= 4 ? '30px': "30px"}`}
+                    >
+                      <GatsbyImage
+                        key={i}
+                        style={{height: "60px", minWidth: "90px"}}
+                        imgStyle={{objectFit: "contain"}}
+                        alt={l.name}
+                        fluid={l.image.childImageSharp.fluid}
+                        image={getImage(l.image.childImageSharp.gatsbyImageData)}
+                      />
+                    </Div>
+                  )
+                })}
+              </Div>
+            )}
             {/* <GridContainer variant="fixed" padding_tablet="0" columns_tablet="12">
                 
                 {
@@ -209,7 +249,7 @@ const SuccessStories = (props) => {
                 columnCount="3"
                 gap="1em"
                 style={{gridAutoFlow:'dense'}}
-                padding="0 10%"
+                padding="0 10% 10% 10%"
                 columnCount_sm="1"
                 columnCount_xs="1"
                 columnCount_tablet="3"
@@ -240,7 +280,7 @@ const SuccessStories = (props) => {
                     })
                 }
             </Div>
-            <GridContainer variant="fixed" columns_tablet="12" height_tablet="auto" height="auto" margin={"0 0 30px 0"}>
+            {/* <GridContainer variant="fixed" columns_tablet="12" height_tablet="auto" height="auto" margin={"0 0 30px 0"}>
                 
                 {
                     Array.isArray(testimonials.testimonials) && testimonials.testimonials.filter(f => f.hidden == false).map((m, i) => {
@@ -267,7 +307,7 @@ const SuccessStories = (props) => {
                     })
                 }
 
-            </GridContainer>
+            </GridContainer> */}
 
         </>
     )
@@ -287,6 +327,21 @@ query SuccessQuery($file_name: String!, $lang: String!) {
                 header{
                     title
                     paragraph   
+                }
+                images{
+                    name
+                    image {
+                        childImageSharp {
+                            gatsbyImageData(
+                                layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                                width: 150
+                                placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                            )
+                            # fluid(maxWidth: 150){
+                            #   ...GatsbyImageSharpFluid_withWebp
+                            # }
+                        }
+                    }
                 }
             }
         }
