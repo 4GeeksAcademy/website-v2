@@ -146,7 +146,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-sitemap`,
       options: {
-        exclude: [`/admin`, `/tags`, `/edit`, `/landings`],
+        exclude: [`/admin`, `/tags`, `/edit`, `/landings`, '/preview'],
         // output: `/some-other-sitemap.xml`,
         query: `
         {
