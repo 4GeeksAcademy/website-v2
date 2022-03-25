@@ -158,7 +158,7 @@ module.exports = {
             allSitePage(
               filter: {
                 context: {visibility: {nin: ["hidden", "unlisted"]}}
-                nodes: { path: { regex: "^((?!/preview).)*$" } }
+                nodes: { path: { regex: "/^((?!\/preview).)*$/" } }
               }
             ) {
                 nodes {
