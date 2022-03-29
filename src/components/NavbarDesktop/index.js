@@ -216,16 +216,27 @@ export const Navbar = ({lang, currentURL, menu, open, button, onToggle, language
 
 
 export const MegaMenu = ({status, setStatus, menu}) => {
+    console.log('in the mega menu');
+    let campusIndex = menu.map((e) => e.name).indexOf('Campus');
+    const [activeOpt, setActiveOpt] = useState({
+        ...menu[campusIndex].sub_menu.links[0]
+    });
+    console.log(menu);
+    const activeStyles = {
+        color: 'black',
+        padding: '10px',
+        borderLeft: `5px solid ${Colors.blue}`,
+    }
     return (
         <>
             {status.toggle && status.itemIndex !== null && status.itemIndex !== menu.length - 1 &&
                 <MegaMenuContainer
-                    onMouseLeave={() => {
-                        setStatus({...status, hovered: false});
-                        setTimeout(() => {
-                            setStatus(_status => ({..._status, toggle: _status.hovered}));
-                        }, 300)
-                    }}
+                    // onMouseLeave={() => {
+                    //     setStatus({...status, hovered: false});
+                    //     setTimeout(() => {
+                    //         setStatus(_status => ({..._status, toggle: _status.hovered}));
+                    //     }, 300)
+                    // }}
                     background="white" transform={MegaMenuPositions[status.itemIndex].transform} width={MegaMenuPositions[status.itemIndex].width} padding_tablet="30px 30px 45px 30px" position="absolute" top="100px" left={status.itemIndex == 0 ? "0" : MegaMenuPositions[status.itemIndex].left} zIndex_tablet="1" borderRadius="3px" minWidth_tablet={status.itemIndex == 0 ? "100%" : "432px"} maxWidth_tablet="100%" minHeight_tablet="347px" boxShadow_tablet="0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" boxShadow="0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" >
                     <Triangle left={MegaMenuPositions[status.itemIndex].leftTriangle} />
                     <Grid gridTemplateColumns_tablet="repeat(12, 1fr)" gridTemplateRows="2" width="100%">
@@ -238,14 +249,64 @@ export const MegaMenu = ({status, setStatus, menu}) => {
                                     <Paragraph
                                         textAlign="left"
                                         color={Colors.darkGray}
-                                        key={i}                        >
+                                        key={i}
+                                    >
                                         {d}
                                     </Paragraph>
                                 )}
                             </Div>
                         </Div>
                         <Div gridArea_tablet="2/1/2/13" >
-                            <Grid gridTemplateColumns_tablet={`repeat(${menu[status.itemIndex].sub_menu.links.length}, 1fr)`} width="100%">
+                            <Div
+                                id="menu-container"
+                            >
+                                <Div
+                                    id="options-container"
+                                    flexDirection="column"
+                                >
+                                    {/* <Div className="option-card" style={activeStyles}>
+                                        <H3 textAlign="left" fontSize="15px" lineHeight="22px" fontWeight="900" margin="0 0 5px 0">Online</H3>
+                                    </Div> */}
+                                    {Array.isArray(menu[status.itemIndex].sub_menu.links) && menu[status.itemIndex].sub_menu.links.map((m,i)=>
+                                        <Button 
+                                            color={activeOpt.title === m.title ? Colors.black :  Colors.gray}
+                                            borderLeft={activeOpt.title === m.title ? `5px solid ${Colors.blue}` :  null}
+                                            borderRadius="none" 
+                                            padding="10px"
+                                            onClick={()=>{
+                                                setActiveOpt({...m});
+                                            }}
+                                            // style={activeStyles}
+                                        >
+                                            {m.title}
+                                        </Button>
+                                    )}
+
+                                </Div>
+                                <Div
+                                    id="links-container"
+                                    flexDirection="column"
+                                    flexWrap="wrap"
+                                >
+                                    {activeOpt.sub_links != undefined && Array.isArray(activeOpt.sub_links) && activeOpt.sub_links.map((l, i) => {
+                                        return (
+                                            <Link to={l.link_to} key={i}>
+                                                <Div
+                                                    margin="2px 0"
+                                                    padding="10px 0 10px 18px"
+                                                    backgroundHover={`#E6F5FB`}
+                                                    borderRadius="3px"
+                                                    alignItems="baseline">
+                                                    <H3 textAlign="left" width="fit-content" fontSize="15px" lineHeight="20px" fontWeight="400" margin="0 5px 0 0">
+                                                        {l.title}
+                                                    </H3>
+                                                    <Icon icon="arrow-right" color="#A4A4A4" width="8px" height="8px" />
+                                                </Div></Link>
+                                        )
+                                    })}
+                                </Div>
+                            </Div>
+                            {/* <Grid gridTemplateColumns_tablet={`repeat(${menu[status.itemIndex].sub_menu.links.length}, 1fr)`} width="100%">
                                 {Array.isArray(menu[status.itemIndex].sub_menu.links) && menu[status.itemIndex].sub_menu.links.map((m, i) => {
                                     return (
                                         <Div flexDirection="column" key={i}>
@@ -296,7 +357,7 @@ export const MegaMenu = ({status, setStatus, menu}) => {
                                         </Div>
                                     )
                                 })}
-                            </Grid>
+                            </Grid> */}
                         </Div>
                     </Grid>
                 </MegaMenuContainer>

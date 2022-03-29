@@ -325,6 +325,10 @@ export const Button = styled(SmartButton)`
     color: ${props => props.color};
     background: ${props => props.background};
     border: ${props => props.border};
+    border-left: ${props => props.borderLeft};
+    border-top: ${props => props.borderTop};
+    border-bottom: ${props => props.borderBottom};
+    border-right: ${props => props.borderRight};
     height: 40px;
     cursor: pointer;
     text-align: ${props => props.textAlign || "center"};
