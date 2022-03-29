@@ -89,4 +89,4 @@ Fuente: LinkedIn
 
 Así que tengo dos preguntas para ti, ¿te apasiona resolver problemas, el pensamiento lógico y la tecnología? ¿Está buscando un nuevo comienzo en tu carrera o una actualización de tu carrera actual?
 
-<call-to-action button_text="Ver programa" button_link="/es/inicio" background="rgba(0, 151, 205, 0.15)" title="Impulsa tu carrera, gracias a la programación" text="Te invitamos a impulsa tu carrera, aprendiendo a programar con nuestro Programa Full Stack Developer."></call-to-action>
+<call-to-action button_text="Ver programa" button_link="/es/curso-de-programacion-desde-cero" background="rgba(0, 151, 205, 0.15)" title="Impulsa tu carrera, gracias a la programación" text="Te invitamos a impulsa tu carrera, aprendiendo a programar con nuestro Programa Full Stack Developer."></call-to-action>
