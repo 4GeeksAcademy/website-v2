@@ -22,27 +22,22 @@ partners:
     - name: "Google Developers"
       image: "../../../../static/images/coding/google-developers.png"
       featured: true
-      link: "https://microsoft.com"
     - name: "Boats Group"
       locations: ["miami-downtown"]
       image: "../../../../static/images/partner/boats.jpg"
       featured: false
-      link: "https://microsoft.com"
     - name: "Facebook"
       #locations: ["miami-downtown"]
       image: "../../../../static/images/partner/facebook.png"
       featured: true
-      link: "https://microsoft.com"
     - name: "Ebay"
       #locations: ["madrid-spain"]
       image: "../../../../static/images/partner/ebay.png"
       featured: false
-      link: "https://microsoft.com"
     - name: "National Geographic"
       #locations: ["miami-downtown"]
       image: "../../../../static/images/partner/natgeo.png"
       featured: true
-      link: "https://microsoft.com"
     - name: "Evernote"
       #locations: ["miami-downtown"]
       image: "../../../../static/images/partner/evernote.png"
@@ -59,7 +54,6 @@ partners:
       # locations: ["madrid-spain"]
       image: "../../../../static/images/partner/uber.png"
       featured: false
-      link: "https://microsoft.com"
     - name: "Neo9"
       # locations: ["madrid-spain"]
       image: "../../../../static/images/partner/Neo9.png"

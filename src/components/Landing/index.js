@@ -333,7 +333,8 @@ export const MultiColumns = ({ heading, sub_heading, end_paragraph, button, colu
                     fonSize_md={sh_md}
                     fontSize_xs={sh_xs}
                     fontHeight="30px"
-                    style={{textAlign:'center'}}
+                    style={sub_heading.style ? JSON.parse(sub_heading.style) : null}
+                    // style={{textAlign:'center'}}
                     dangerouslySetInnerHTML={{ __html: sub_heading.text }}
                 />
             ) : sub_heading ? (
@@ -345,7 +346,8 @@ export const MultiColumns = ({ heading, sub_heading, end_paragraph, button, colu
                     fonSize_md={sh_md}
                     fontSize_xs={sh_xs}
                     fontHeight="30px"
-                    style={{textAlign:'center'}}
+                    style={sub_heading.style ? JSON.parse(sub_heading.style) : null}
+                    // style={{textAlign:'center'}}
                 >
                     {sub_heading.text}
                 </Paragraph>
@@ -376,7 +378,7 @@ export const MultiColumns = ({ heading, sub_heading, end_paragraph, button, colu
                 <Button
                     outline
                     // width="250px"
-                    colorHoverText={Colors.blue}
+                    colorHoverText={button.hover_color || Colors.blue}
                     lineHeight="26px"
                     textColor={Colors[button.color] || button.color}
                     color={Colors[button.color] || button.color}
@@ -441,7 +443,7 @@ export const Columns = ({ columns, proportions, swipable }) => {
                     size_xs={c.size[3]}
                     textAlign={c.align}
                     minWidth="250px"
-                    margin="0 15px"
+                    margin="25px 0 0 0"
                 >
                     
                     <Img
@@ -454,7 +456,7 @@ export const Columns = ({ columns, proportions, swipable }) => {
                             }
                         }}
                         style={c.image.style ? JSON.parse(c.image.style) : null}
-                        borderRadius={"1.25rem"}
+                        // borderRadius={"1.25rem"}
                         className="pointer"
                         alt={"4Geeks Academy Section"}
                         margin="auto"
@@ -466,9 +468,11 @@ export const Columns = ({ columns, proportions, swipable }) => {
                     
                     {/* <div style={{background:"red", width:"250px", height:"250px"}}></div> */}
                     <Paragraph
-                        lineHeight="30px"
-                        fontWeight="700"
+                        // lineHeight="30px"
+                        // fontWeight="700"
                         color="black"
+                        margin="25px 0 0 0"
+                        style={c.content.style ? JSON.parse(c.content.style) : null}
                         dangerouslySetInnerHTML={{ __html: c.content.text }}
                     />
                 </Div>

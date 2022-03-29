@@ -352,6 +352,7 @@ const Landing = (props) => {
                     </Div>
                     <Div
                         flexDirection="column"
+                        justifyContent="center"
                         size="12"
                         size_tablet="10"
                         width="100%"
@@ -363,7 +364,15 @@ const Landing = (props) => {
                         textAlign_sm="center"
                         margin_md="0 auto 0 70px"
                     >
-                        <Img
+                        <GatsbyImage
+                            loading="eager"
+                            imgStyle={{ objectFit: "contain" }}
+                            image={getImage(
+                                yml.header_data.right_image.childImageSharp.gatsbyImageData
+                            )}
+                            alt="4Geeks Logo"
+                        />
+                        {/* <Img
                             src={yml.header_data.right_image.src}
                             style={
                                 yml.header_data.right_image.style ? JSON.parse(yml.header_data.right_image.style) 
@@ -376,7 +385,7 @@ const Landing = (props) => {
                             width={"100%"}
                             height={"100%"}
                             backgroundSize={`contain`}
-                        />
+                        /> */}
                     </Div>
                 </GridContainer>
             </LandingContainer>
@@ -404,127 +413,7 @@ const Landing = (props) => {
                 })}
             <div id="bottom"></div>
 
-            {/* <GridContainerWithImage
-                id="bottom"
-                background="#F9F9F9"
-                imageSide={applySchollarship?.imageSide}
-                padding="0"
-                padding_tablet="80px 0 90px 0"
-                columns_tablet="14"
-                margin="0"
-                margin_tablet="0"
-            >
-                <Div
-                    flexDirection="column"
-                    margin="0"
-                    justifyContent_tablet="start"
-                    padding="0"
-                    padding_tablet="0 30px"
-                    gridArea_tablet={
-                        applySchollarship?.imageSide === "right"
-                            ? "1/1/1/6"
-                            : "1/7/1/13"
-                    }
-                    // gridArea_tablet="1/1/1/6"
-                >
-                    <Div
-                        flexDirection="column"
-                        size="12"
-                        size_tablet="12"
-                        width="100%"
-                        width_tablet="100%"
-                        // size_lg="4"
-                        // size_sm="6"
-                        // size_xs="12"
-                        margin="0"
-                        textAlign_sm="center"
-                        // margin_md="0 auto 0 70px"
-                    >
-                        <LeadForm
-                            landingTemplate
-                            titleMargin="20px 0px 15px 0px"
-                            titleMargin_tablet="20px 0px 15px 0px"
-                            textPadding_tablet="6px 0px 20px 0px"
-                            textPadding="6px 0px 20px 0px"
-                            selectProgram={programs}
-                            layout="block"
-                            background="#F9F9F9"
-                            margin="0"
-                            formHandler={processFormEntry}
-                            heading={yml.form.heading}
-                            style={{ minHeight: "350px" }}
-                            motivation={yml.form.motivation}
-                            sendLabel={yml.form.button_label}
-                            redirect={yml.form.redirect}
-                            inputBgColor="#FFFFFF"
-                            lang={pageContext.lang}
-                            fields={yml.form.fields}
-                            data={preData}
-                            justifyContentButton="center"
-                            marginButton="15px auto 30px auto"
-                            marginButton_tablet="15px 0 30px auto"
-                        />
-                    </Div>
-                </Div>
-                <Div
-                    height="auto"
-                    width="100%"
-                    gridArea_tablet={
-                        applySchollarship?.imageSide === "right"
-                            ? "1/7/1/13"
-                            : "1/1/1/6"
-                    }
-                    style={{ position: "relative" }}
-                >
-                    {applySchollarship?.imageSide === "right" ? (
-                        <>
-
-                            <Div
-                                display="none"
-                                display_md="flex"
-                                style={{
-                                    position: "absolute",
-                                    background: Colors.yellow,
-                                    width: "280px",
-                                    height: "480px",
-                                    bottom: "-10px",
-                                    right: "-16px",
-                                    borderRadius: "3px",
-                                }}
-                            />
-                        </>
-                    ) : (
-                        <>
-                            <Div
-                                display="none"
-                                display_md="flex"
-                                style={{
-                                    position: "absolute",
-                                    background: Colors.lightBlue,
-                                    width: "101%",
-                                    height: "282px",
-                                    top: "40px",
-                                    left: "-30px",
-                                    borderRadius: "3px",
-                                }}
-                            />
-                        </>
-                    )}
-                    <StyledBackgroundSection
-                        height={`450px`}
-                        borderRadius={`3px`}
-                        image={
-                            applySchollarship
-                                ? applySchollarship?.image.childImageSharp
-                                      .gatsbyImageData
-                                : data.allPageYaml.edges[0].node.list[0].image
-                                      .childImageSharp.gatsbyImageData
-                        }
-                        bgSize={`contain`}
-                        alt="geekforce image"
-                    />
-                </Div>
-            </GridContainerWithImage> */}
+            
         </>
     );
 };
@@ -796,6 +685,7 @@ export const query = graphql`
                         sub_heading {
                             text
                             font_size
+                            style
                         }
                         bullets
                         background
@@ -809,6 +699,7 @@ export const query = graphql`
                             content {
                                 text
                                 font_size
+                                style
                             }
                             image {
                                 src
@@ -823,8 +714,13 @@ export const query = graphql`
                         sub_heading
                         image_filter
                         right_image {
-                            style
-                            src
+                            childImageSharp {
+                                gatsbyImageData(
+                                    layout: FULL_WIDTH # --> CONSTRAINED || FIXED || FULL_WIDTH
+                                    quality: 100
+                                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                                )
+                            }
                         }
                         partner_logo_url {
                             childImageSharp {

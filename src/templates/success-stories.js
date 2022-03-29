@@ -25,15 +25,16 @@ const TestimonialCard = ({highlighted, featured, height, height_tablet, studentR
         <Div
             flexDirection="column"
             position="relative"
-            height={height}
-            height_tablet={height_tablet}
+            // height={height}
+            // height_tablet={height_tablet}
             background={background}
             borderRadius="3px"
-            gridColumn_tablet={gridAreaPosition}
-            gridRow_tablet={gridRowPosition}
-            padding="20px 20px 0 20px"
+            // gridColumn_tablet={gridAreaPosition}
+            // gridRow_tablet={gridRowPosition}
+            padding="20px"
             border={`1px solid ${Colors.lightGray}`}
             boxShadow={`0px 2px 5px rgba(0, 0, 0, 0.1)`}
+            style={{breakInside: 'avoid', marginBottom:'1em'}}
         >
             <Div>
                 <GatsbyImage
@@ -68,23 +69,32 @@ const TestimonialCard = ({highlighted, featured, height, height_tablet, studentR
                         // padding="19px 0 0 25px"
                         padding_tablet="0"
                         width="100%"
+                        style={{breakInside: 'avoid'}}
                         // height_tablet="310px"
-                        alignSelf="baseline"
+                        // alignSelf="baseline"
                     >
                         <ReactPlayer
                             With_Modal={true}
-                            className={className}
+                            // className={className}
+                            className={"react-player-testimonials-small"}
                             thumb={image}
                             id={video && video}
                             width='100%'
                             width_tablet="100%"
-                            height={"82px"}
-
+                            // height={"82px"}
+                            style={{breakInside: 'avoid'}}
                         />
                     </Div>
                 </>
             }
-            <Paragraph style={{position: "absolute", bottom: "20px", left: "21px"}} textAlign="left" margin="12px 0 0 0" color={Colors.blue}>View Review</Paragraph>
+            <Paragraph 
+                // style={{position: "absolute", bottom: "20px", left: "21px"}} 
+                textAlign="left" 
+                margin="12px 0 0 0" 
+                color={Colors.blue}
+            >
+                    View Review
+            </Paragraph>
 
         </Div>
     )
@@ -148,6 +158,7 @@ const defaultPositions = [
 ]
 const SuccessStories = (props) => {
     const {data, pageContext, yml} = props;
+    console.log(yml, 'yml');
     let testimonials = data.allTestimonialsYaml.edges[0].node
 
     useEffect(()=>{
@@ -171,8 +182,40 @@ const SuccessStories = (props) => {
                 padding="66px 17px 85px 0"
             >
             </Header>}
-            <GridContainer variant="fixed" padding_tablet="0" columns_tablet="12">
-                {/* <Grid height="auto" columns="1" rows="1" columns_tablet="12" gridGap="11px"> */}
+            {yml.images && (
+                <Div
+                display="flex"
+                flexDirection="row"
+                borderRadius="3px"
+                style={{flexWrap: "wrap"}}
+                // columnGap="70px"
+                justifyContent="center"
+                background={Colors.white}
+                padding="25px 0 0 0"
+                margin="0 0 50px 0" >
+          
+                {yml.images.map((l, i) => {
+                  return (
+                    <Div
+                      key={`${i}-${l.name}`}
+                      margin="0 20px 40px 20px"
+                      margin_tablet={`0 ${i >= 4 ? '30px': "30px"} 30px ${i >= 4 ? '30px': "30px"}`}
+                    >
+                      <GatsbyImage
+                        key={i}
+                        style={{height: "60px", minWidth: "90px"}}
+                        imgStyle={{objectFit: "contain"}}
+                        alt={l.name}
+                        fluid={l.image.childImageSharp.fluid}
+                        image={getImage(l.image.childImageSharp.gatsbyImageData)}
+                      />
+                    </Div>
+                  )
+                })}
+              </Div>
+            )}
+            {/* <GridContainer variant="fixed" padding_tablet="0" columns_tablet="12">
+                
                 {
                     Array.isArray(testimonials.testimonials) && testimonials.testimonials.filter(f => f.featured == true && f.hidden == false).map((m, i) => {
                         return (
@@ -193,14 +236,52 @@ const SuccessStories = (props) => {
                         )
                     })
                 }
-                {/* </Grid> */}
+                
             </GridContainer >
             {yml.header && 
                 <GridContainer variant="fixed" margin_tablet="30px 0" margin="30px 0" padding_tablet="0">
                     <Div height="7px" background={Colors.lightGray} />
                 </GridContainer>
-            }
-            <GridContainer variant="fixed" columns_tablet="12" height_tablet="auto" height="auto" margin={"0 0 30px 0"}>
+            } */}
+            <Div
+                display="column"
+                columns="3"
+                columnCount="3"
+                gap="1em"
+                style={{gridAutoFlow:'dense'}}
+                padding="0 10% 10% 10%"
+                columnCount_sm="1"
+                columnCount_xs="1"
+                columnCount_tablet="3"
+            >
+                {
+                    Array.isArray(testimonials.testimonials) && testimonials.testimonials.filter(f => f.hidden == false).map((m, i) => {
+                        return (
+                            i < 9 &&
+                            <TestimonialCard
+                                key={i}
+                                // className={defaultPositions[i]['className']}
+                                studentRating={m.rating}
+                                image={m.student_thumb}
+
+                                // height={defaultPositions[i]['height']}
+                                // height_tablet={defaultPositions[i]['height_tablet']}
+                                background={m.highlighted && Colors.darkYellow}
+                                name={m.student_name}
+                                short_content={m.short_content}
+                                // description={defaultPositions[i]['size'] == "small" && m.content.length > 300 ? m.content.substring(0, 300) + "..." : m.content}
+                                description={m.content.length > 500 ? m.content.substring(0, 500) + "..." : m.content}
+                                video={m.student_video}
+                                // gridAreaPosition={defaultPositions[i]['position']}
+                                // gridRowPosition={defaultPositions[i]['row_position']}
+
+                            />
+                        )
+                    })
+                }
+            </Div>
+            {/* <GridContainer variant="fixed" columns_tablet="12" height_tablet="auto" height="auto" margin={"0 0 30px 0"}>
+                
                 {
                     Array.isArray(testimonials.testimonials) && testimonials.testimonials.filter(f => f.hidden == false).map((m, i) => {
                         return (
@@ -226,12 +307,7 @@ const SuccessStories = (props) => {
                     })
                 }
 
-                {/* <Div gridColumn_tablet="1 / 5" gridRow_tablet="1 / 4" background={Colors.lightGray}>test</Div>
-                <Div gridColumn_tablet="5 / 9" gridRow_tablet="1 / 4" background={Colors.lightGray}>test</Div>
-                <Div gridColumn_tablet="9 / 13" gridRow_tablet="1 / 6" background={Colors.lightGray}>test</Div>
-                <Div gridColumn_tablet="1 / 9" gridRow_tablet="4 / 7" background={Colors.lightGray}>test</Div>
-                <Div gridColumn_tablet="9 / 13" gridRow_tablet="6 / 9" background={Colors.lightGray}>test</Div> */}
-            </GridContainer>
+            </GridContainer> */}
 
         </>
     )
@@ -251,6 +327,21 @@ query SuccessQuery($file_name: String!, $lang: String!) {
                 header{
                     title
                     paragraph   
+                }
+                images{
+                    name
+                    image {
+                        childImageSharp {
+                            gatsbyImageData(
+                                layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                                width: 150
+                                placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                            )
+                            # fluid(maxWidth: 150){
+                            #   ...GatsbyImageSharpFluid_withWebp
+                            # }
+                        }
+                    }
                 }
             }
         }
