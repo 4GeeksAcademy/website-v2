@@ -146,7 +146,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-sitemap`,
       options: {
-        exclude: [`/admin`, `/tags`, `/edit`, `/landings`],
+        exclude: [`/admin`, `/tags`, `/edit`, `/landings`, `/preview`],
         // output: `/some-other-sitemap.xml`,
         query: `
         {
@@ -156,7 +156,10 @@ module.exports = {
                 }
             }
             allSitePage(
-              filter: {context: {visibility: {nin: ["hidden", "unlisted"]}}}
+              filter: {
+                context: {visibility: {nin: ["hidden", "unlisted"]}}
+                path: { regex: "/^((?!\/preview).)*$/" }
+              }
             ) {
                 nodes {
                     path
