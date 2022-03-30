@@ -132,7 +132,7 @@ components:
       text: | 
         learn more about <a style="color: rgb(0, 160, 218); cursor:pointer;">eligibility conditions</a> and apply
       font_size: ["16px", "16px", "16px", "16px", "16px"]
-      path: "#bottom"
+      path: "https://www.switchup.org/bootcamps/4geeks-academy"
     sub_heading:
       text: |
         You may qualify if you are a <strong style="font-weight: bold;">Miami resident</strong> and belong to one of these groups:

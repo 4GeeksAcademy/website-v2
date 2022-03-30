@@ -3,7 +3,7 @@ import {Div, Grid, GridContainer} from '../Sections'
 import {Colors, StyledBackgroundSection} from '../Styling';
 import {H2, H3, H4, Title, Paragraph} from '../Heading'
 import Link from 'gatsby-link'
-import { smartRedirecting } from '../Landing'
+import { smartRedirecting } from '../../actions'
 import Card from '../Card';
 import Fragment from "../Fragment"
 import Marquee from '../Marquee';
@@ -92,23 +92,30 @@ const Images_With_Marquee = (props) => {
   let imgs = [];
   props.images.map((l, i) => {
     imgs.push(
-      <GatsbyImage
+      l.link ? <a src={l.link}><GatsbyImage
         key={i}
-        style={{minWidth: "120px", border: 0}}
+        style={{ minWidth: "120px", border: 0, cursor:'pointer' }}
         height="80px"
         objectFit="contain"
         alt={l.name}
         image={getImage(l.image.childImageSharp.gatsbyImageData)}
-        onClick={(e)=>{
-          if(l.link) smartRedirecting(e, l.link)
+        onClick={(e) => {
+          if (l.link) smartRedirecting(e, l.link)
         }}
-        // fluid={l.image.childImageSharp.fluid}
+      /></a> : <GatsbyImage
+        key={i}
+        style={{ minWidth: "120px", border: 0 }}
+        height="80px"
+        objectFit="contain"
+        alt={l.name}
+        image={getImage(l.image.childImageSharp.gatsbyImageData)}
+      // fluid={l.image.childImageSharp.fluid}
       />
     );
   });
 
   return (
-    <Marquee config={{duration: 180, images: imgs, }} />
+    <Marquee config={{ duration: 180, images: imgs, }} />
   )
 }
 
