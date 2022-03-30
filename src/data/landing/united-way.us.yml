@@ -256,7 +256,12 @@ components:
   - name: testimonials
     position: 9
     layout: testimonials_new
-    filter_indexes: [6,7,8]
+    # filter_indexes: [6,7,8]
+    filter_indexes: ['azu-bota','nai-kali','cha-fabr']
+      # - "azu-bota"
+      # - "nai-kali"
+      # - "cha-fabr"
+    # ["azu-bota","nai-kali","cha-fabr"]
 
   - name: better-future
     position: 10

@@ -230,7 +230,7 @@ components:
   - name: testimonials
     position: 15
     layout: testimonials_new
-    filter_indexes: [3,4,5]
+    filter_indexes: ['azu-bota','nai-kali','cha-fabr']
 
     bullets:
       - Número
