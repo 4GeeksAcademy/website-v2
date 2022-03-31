@@ -35,9 +35,9 @@ form:
   redirect: null #you can redirect to another url or entirely diffrent website
 
 header_data:
-  tagline: "Debug Access to a better future"
+  tagline: "Become a Software Developer and take control of your Future"
   tagline_color: "black"
-  sub_heading: "Get Coding Education"
+  sub_heading: "Learn the skills and get a Job in the field"
   # image: "../../../static/images/landing/uwm_pantone_2021_2.png"
   image_filter: brightness(0.3)
   partner_logo_url: "../../../static/images/landing/uwm_pantone_2021_2.png" # optional
@@ -51,7 +51,7 @@ header_data:
 features:
   marginTop: 0px #<-- separation between tagline and the bullets
   text: |
-    <p>United Way Miami and 4Geeks Academy are excited to announce a new coding scholarship.</p>
+    <p>United Way Miami , Social Finance and 4Geeks Academy are excited to announce a new coding Program that will allow more people get the top education needed to land a job in Tech through Income Sharing Agreements.</p>
     <p>Learn to code, pay when you get a job, and lead a more meaningful life.</p>
     <hr style="margin: 15px 0;">
     <span style="background: rgb(255, 183, 24);font-weight: bold;">Now open and accepting applications!</span>
@@ -135,7 +135,7 @@ components:
       path: "#bottom"
     sub_heading:
       text: |
-        You may qualify if you are a <strong style="font-weight: bold;">Miami resident</strong> and belong to one of these groups:
+        Open to anyone meeting the criteria (see below). Preference will be given to individuals that identify as a member of the priority population (Veteran, people of color, single mother head of household) <strong style="font-weight: bold;">Miami resident</strong> and belong to one of these groups:
       font_size: ["16px", "16px", "16px", "16px", "16px"]
     button:
       text: "APPLY NOW"
