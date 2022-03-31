@@ -162,8 +162,72 @@ export const NavbarMobile = ({lang, menu, open, button, onToggle, languageButton
     )
 }
 
+const CampusMenu = ({status, setStatus, menu}) => {
+
+    let campusIndex = menu.map((e) => e.name).indexOf('Campus');
+    const [activeOpt, setActiveOpt] = useState({
+        ...menu[campusIndex].sub_menu.links[0]
+    });
+
+    return (
+        <>
+            <Div
+                id="menu-container"
+                width="100%"
+                flexDirection="column"
+            >
+                <Div
+                    id="options-container"
+                    justifyContent="center"
+                >
+                    {Array.isArray(menu[status.itemIndex].sub_menu.links) && menu[status.itemIndex].sub_menu.links.map((m, i) =>
+                        <Button
+                            color={activeOpt.title === m.title ? Colors.black : Colors.gray}
+                            borderBottom={activeOpt.title === m.title ? `5px solid ${Colors.blue}` : null}
+                            borderRadius="none"
+                            padding="10px"
+                            onClick={() => {
+                                setActiveOpt({ ...m });
+                            }}
+                        >
+                            {m.title}
+                        </Button>
+                    )}
+
+                </Div>
+                <Div
+                    id="links-container"
+                    flexDirection="column"
+                    flexWrap="wrap"
+                    maxHeight="400px"
+                >
+                    {activeOpt.sub_links != undefined && Array.isArray(activeOpt.sub_links) && activeOpt.sub_links.map((l, i) => {
+                        return (
+                            <Link to={l.link_to} key={i}>
+                                <Div
+                                    margin="2px 10px 2px 0"
+                                    padding="10px 0 10px 18px"
+                                    backgroundHover={`#E6F5FB`}
+                                    borderRadius="3px"
+                                    alignItems="baseline"
+                                    maxWidth="50%"
+                                >
+                                    <H3 textAlign="left" width="fit-content" fontSize="15px" lineHeight="20px" fontWeight="400" margin="0 5px 0 0">
+                                        {l.title}
+                                    </H3>
+                                    <Icon icon="arrow-right" color="#A4A4A4" width="8px" height="8px" />
+                                </Div></Link>
+                        )
+                    })}
+                </Div>
+            </Div>
+        </>
+    )
+}
+
 
 export const MegaMenu = ({status, setStatus, menu, languageButton, currentURL, session}) => {
+    console.log('in the mobile megamenu');
     return (
         <>
             {status.toggle &&
@@ -229,7 +293,14 @@ export const MegaMenu = ({status, setStatus, menu, languageButton, currentURL, s
                         )}
                     </Menu>}
                     <Div flexDirection="column" padding="24px 17px">
-                        {status.itemIndex != null && status.itemIndex != menu.length - 1 &&
+                        {status.itemIndex != null && menu[status.itemIndex].name === 'Campus' &&
+                            <CampusMenu
+                                status={status}
+                                setStatus={setStatus}
+                                menu={menu}
+                            />
+                        }
+                        {status.itemIndex != null && menu[status.itemIndex].name !== 'Campus' && status.itemIndex != menu.length - 1 &&
                             <>
                                 {Array.isArray(menu[status.itemIndex].sub_menu.links) && menu[status.itemIndex].sub_menu.links.map((m, i) => {
                                     return (

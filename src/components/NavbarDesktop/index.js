@@ -297,12 +297,12 @@ export const MegaMenu = ({status, setStatus, menu}) => {
         <>
             {status.toggle && status.itemIndex !== null && status.itemIndex !== menu.length - 1 &&
                 <MegaMenuContainer
-                    // onMouseLeave={() => {
-                    //     setStatus({...status, hovered: false});
-                    //     setTimeout(() => {
-                    //         setStatus(_status => ({..._status, toggle: _status.hovered}));
-                    //     }, 300)
-                    // }}
+                    onMouseLeave={() => {
+                        setStatus({...status, hovered: false});
+                        setTimeout(() => {
+                            setStatus(_status => ({..._status, toggle: _status.hovered}));
+                        }, 300)
+                    }}
                     display="block" maxHeight="500px" background="white" transform={MegaMenuPositions[status.itemIndex].transform} width={MegaMenuPositions[status.itemIndex].width} padding_tablet="30px 30px 45px 30px" position="absolute" top="100px" left={status.itemIndex == 0 ? "0" : MegaMenuPositions[status.itemIndex].left} zIndex_tablet="1" borderRadius="3px" minWidth_tablet={status.itemIndex == 0 ? "100%" : "432px"} maxWidth_tablet="100%" minHeight_tablet="347px" boxShadow_tablet="0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" boxShadow="0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" >
                     <Triangle left={MegaMenuPositions[status.itemIndex].leftTriangle} />
                     <Grid gridTemplateColumns_tablet="repeat(12, 1fr)" gridTemplateRows="2" width="100%">
