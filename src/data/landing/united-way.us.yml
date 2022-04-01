@@ -46,7 +46,7 @@ header_data:
   right_image: "../../../static/images/landing/header_united_way.png"
   # right_image: 
   #   style: '{ "backgroundSize": "contain" }'
-  #   src: "/images/landing/veteran.png"
+  #   src: "/images/landing/header_united_way.png"
 
 features:
   marginTop: 0px #<-- separation between tagline and the bullets
@@ -55,8 +55,8 @@ features:
     <p>Learn to code, pay when you get a job, and lead a more meaningful life.</p>
     <hr style="margin: 15px 0;">
     <span style="background: rgb(255, 183, 24);font-weight: bold;">Now open and accepting applications!</span>
-    <p>Applications open in XX and are due XX</p>
-    <p>The recipients will be announced on XX</p>
+    <p>Applications will be open until May 31st, 2022</p>
+    <p>Only 100 Open spots available</p>
   styles: '{ "color": "gray", "fontWeight":"500" }'
   button:
       text: "APPLY NOW"
