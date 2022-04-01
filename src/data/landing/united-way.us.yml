@@ -68,13 +68,13 @@ features:
 follow_bar:
   position: "top" # top, bottom, hidden
   content:
-    text: "Get $1,500 off if you enroll with our Labor Day Deal."
-    text_mobile: "ENROLL NOW and get $1,500 off when you use our code LABOR in our apply form"
+    text: "Pay when you get a Job. No Upfront Payment"
+    text_mobile: "Pay when you get a Job. No Upfront Payment"
     # devices:   XL      LG    MD      SM    XS
     font_size: ["25px", "25px", "25px", "20px", "18px"]
   button:
-    text: "Get more information"
-    path: "#top"
+    text: "Apply Now"
+    path: "https://marketing892162.typeform.com/to/ti4UAUrh"
   phone:
     text: "Call "
 
@@ -246,7 +246,7 @@ components:
       path: "https://www.switchup.org/bootcamps/4geeks-academy"
     content:
       text: |
-        <h2><strong style="font-weight: bold;">1. Enroll and Join the Program</strong></h2>
+        <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">1. Enroll and Join the Program</strong></h2>
         <h2><strong style="font-weight: bold;">2. Get the skills of a software Developer</strong></h2>
         <h2><strong style="font-weight: bold;">3. Graduate and complete your Projects</strong></h2>
         <h2><strong style="font-weight: bold;">4. Get a Job</strong></h2>
