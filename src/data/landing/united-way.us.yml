@@ -162,7 +162,7 @@ components:
         size: [3,3,3,3]
       - image:
           style: '{ "backgroundSize": "cover", "borderRadius": "80px" }'
-          src: "/images/landing/image_259.png"
+          src: "/images/landing/mom-household.png"
         content: 
           text: "LOW-INCOME SINGLE FEMALE HEADS OF HOUSE HOLD"
           style: '{ "fontWeight": "700" }'
