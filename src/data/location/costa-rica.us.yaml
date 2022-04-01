@@ -8,6 +8,7 @@ meta_info:
   # it will not show up on the applications forms
   unlisted: false
   redirects: ["/us/location/costa-rica", "/location/costa-rica"]
+  region: "america"
 
 seo_title: "Coding Bootcamp Costa Rica"
 header:

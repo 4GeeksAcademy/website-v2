@@ -35,6 +35,7 @@ const SVGBubblesRight = () =>
 
 const Home = (props) => {
   const {data, pageContext, yml} = props;
+  console.log(yml, 'yml home');
   const hiring = data.allPartnerYaml.edges[0].node;
   const {session} = React.useContext(SessionContext);
   const [city, setCity] = useState("")
@@ -211,6 +212,11 @@ export const query = graphql`
                 heading
                 sub_heading
                 image
+                regions{
+                  name
+                  title
+                  content
+                }
             }
             alumni_header{
                 heading
@@ -346,8 +352,10 @@ export const query = graphql`
                 position
                 image
                 keywords
+                region
               }
               seo_title
+              online_available
               header{
                 sub_heading
                 tagline

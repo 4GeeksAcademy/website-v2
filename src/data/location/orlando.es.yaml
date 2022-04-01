@@ -8,6 +8,7 @@ meta_info:
   redirects: [
   #  "/es/location/orlando-usa"
   ]
+  region: "america"
 
 seo_title: "Bootcamp de Programación en Orlando"
 header:
