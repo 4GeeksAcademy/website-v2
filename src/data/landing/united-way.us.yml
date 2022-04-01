@@ -238,19 +238,19 @@ components:
       text: "Pay when you get a job!"
       font_size: ["30px", "30px", "30px", "30px", "30px"]
     sub_heading:
-      text: "Don't pay tuition upfront:"
-      font_size: ["16px", "16px", "16px", "16px", "16px"]
+      text: "There is no Payment upfront. Actually, there is only a payment if you get a Job for more than $35k 9p/year)."
+      font_size: ["18px", "18px", "18px", "18px", "18px"]
     button:
       text: "Review Conditions"
       color: null
       path: "https://www.switchup.org/bootcamps/4geeks-academy"
     content:
       text: |
-        <h2><strong style="font-weight: bold;">1. ENROLL THE PROGRAM</strong></h2>
-        <h2><strong style="font-weight: bold;">2. LEARN TO CODE</strong></h2>
-        <h2><strong style="font-weight: bold;">3. GRADUATE</strong></h2>
-        <h2><strong style="font-weight: bold;">4. GET A JOB</strong></h2>
-        <h2><strong style="font-weight: bold;">5. PAY FOR YOUR EDUCATION</strong></h2>
+        <h2><strong style="font-weight: bold;">1. Enroll and Join the Program</strong></h2>
+        <h2><strong style="font-weight: bold;">2. Get the skills of a software Developer</strong></h2>
+        <h2><strong style="font-weight: bold;">3. Graduate and complete your Projects</strong></h2>
+        <h2><strong style="font-weight: bold;">4. Get a Job</strong></h2>
+        <h2><strong style="font-weight: bold;">5. Pay for the program</strong></h2>
       font_size: ["16px"]
 
   - name: testimonials
