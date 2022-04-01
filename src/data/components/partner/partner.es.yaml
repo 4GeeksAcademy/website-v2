@@ -16,10 +16,12 @@ partners:
       #locations: ["madrid-spain"]
       image: "../../../../static/images/partner/microsoft.png"
       featured: true
+      link: "https://microsoft.com"
     - name: "Evernote"
       #locations: ["madrid-spain"]
       image: "../../../../static/images/partner/evernote.png"
       featured: false
+      link: "https://evernote.com/intl/es"
     - name: "Facebook"
       #locations: ["madrid-spain"]
       image: "../../../../static/images/partner/facebook.png"

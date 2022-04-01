@@ -40,6 +40,7 @@ testimonials:
     linkedin_image: "../../../../static/images/linkedin.png"
 
   - student_name: "Azul Botaya"
+    slug: "azu-bota"
     featured: false
     highlighted: true
     testimonial_date: ""
@@ -63,6 +64,7 @@ testimonials:
       I now have all kinds of new tools I learned there along the way, 
       and there is a new comfort in knowing that I can always go back and keep growing at 4Geeks.
   - student_name: "Naila Kaliyeva"
+    slug: "nai-kali"
     featured: false
     highlighted: false
     testimonial_date: ""
@@ -98,6 +100,7 @@ testimonials:
   #     for a coding school in Miami and I found the best one: 4Geeks Academy. And thanks to
   #     the Income Sharing Agreement, I could enroll right away and pay once I found a job.
   - student_name: "Charles Fabricius"
+    slug: "cha-fabr"
     featured: true
     highlighted: true
     testimonial_date: ""
