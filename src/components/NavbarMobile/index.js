@@ -227,7 +227,7 @@ const CampusMenu = ({status, setStatus, menu}) => {
 
 
 export const MegaMenu = ({status, setStatus, menu, languageButton, currentURL, session}) => {
-    console.log('in the mobile megamenu');
+
     return (
         <>
             {status.toggle &&

@@ -11,7 +11,7 @@ import Credentials from '../components/Credentials'
 import ChooseProgram from '../components/ChooseProgram'
 import BaseRender from './_baseLayout'
 import {SessionContext} from '../session.js'
-import Loc from '../components/Loc';
+import Loc from '../components/Loc/new_locations';
 import Badges from '../components/Badges';
 import With4Geeks from '../components/With4Geeks';
 import About4Geeks from '../components/About4Geeks';
@@ -128,7 +128,13 @@ const Home = (props) => {
       <ChooseYourProgram chooseProgramRef={chooseProgramRef} lang={pageContext.lang} programs={data.allChooseYourProgramYaml.edges[0].node.programs} title={yml.choose_program.title} paragraph={yml.choose_program.paragraph} />
       <OurPartners images={hiring.partners.images} marquee title={hiring.partners.tagline} paragraph={hiring.partners.sub_heading} />
 
-      <Loc lang={pageContext.lang} locations={data.allLocationYaml.edges} title={yml.locations.heading} paragraph={yml.locations.sub_heading} />
+      <Loc 
+        lang={pageContext.lang} 
+        locations={data.allLocationYaml.edges} 
+        title={yml.locations.heading} 
+        paragraph={yml.locations.sub_heading} 
+        image={yml.locations.image}
+      />
     </>
   )
 };
@@ -204,6 +210,7 @@ export const query = graphql`
             locations{
                 heading
                 sub_heading
+                image
             }
             alumni_header{
                 heading

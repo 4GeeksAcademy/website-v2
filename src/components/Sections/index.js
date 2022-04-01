@@ -190,6 +190,7 @@ export const Div = styled.div`
 
     &:hover { 
         background: ${props => props.backgroundHover};
+        border-bottom: ${props => props.borderBottomHover};
     }
     @media ${Devices.xxs}{
 

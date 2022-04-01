@@ -215,17 +215,12 @@ export const Navbar = ({lang, currentURL, menu, open, button, onToggle, language
 }
 
 const CampusMenu = ({status, setStatus, menu}) => {
-    console.log('in the mega menu');
+
     let campusIndex = menu.map((e) => e.name).indexOf('Campus');
     const [activeOpt, setActiveOpt] = useState({
         ...menu[campusIndex].sub_menu.links[0]
     });
-    console.log(menu);
-    const activeStyles = {
-        color: 'black',
-        padding: '10px',
-        borderLeft: `5px solid ${Colors.blue}`,
-    }
+
     return (
         <>
             <Div
@@ -282,17 +277,8 @@ const CampusMenu = ({status, setStatus, menu}) => {
 }
 
 export const MegaMenu = ({status, setStatus, menu}) => {
-    console.log('in the mega menu');
-    let campusIndex = menu.map((e) => e.name).indexOf('Campus');
-    const [activeOpt, setActiveOpt] = useState({
-        ...menu[campusIndex].sub_menu.links[0]
-    });
-    console.log(menu);
-    const activeStyles = {
-        color: 'black',
-        padding: '10px',
-        borderLeft: `5px solid ${Colors.blue}`,
-    }
+
+
     return (
         <>
             {status.toggle && status.itemIndex !== null && status.itemIndex !== menu.length - 1 &&
