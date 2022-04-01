@@ -293,7 +293,7 @@ components:
       style: '{ "backgroundSize": "contain", "maxHeight": "270px" }'
       src: "/images/landing/united-way-two.png"
     heading:
-      text: "Brought to you by united way"
+      text: "Brought to you by united way + Social Finance + 4Geeks Academy"
       font_size: ["40px", "40px", "40px", "40px", "40px"]
     content:
       text: "United way advances the common good in communities accross the world. Focused on the education, income and health - thebuilding blocks for a good quality of life."
