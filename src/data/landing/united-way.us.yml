@@ -232,7 +232,7 @@ components:
     image:
       style: '{ "backgroundSize": "contain" }'
       src: "/static/images/staff/luisa.png"
-    video: "https://www.youtube.com/watch?v=MBXqEnhodx0"
+    video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
     heading:
       text: "Pay when you get a job!"
       font_size: ["30px", "30px", "30px", "30px", "30px"]
