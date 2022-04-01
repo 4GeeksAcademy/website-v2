@@ -46,7 +46,7 @@ header_data:
   right_image: "../../../static/images/landing/header_united_way.png"
   # right_image: 
   #   style: '{ "backgroundSize": "contain" }'
-  #   src: "/images/landing/veteran.png"
+  #   src: "/images/landing/header_united_way.png"
 
 features:
   marginTop: 0px #<-- separation between tagline and the bullets
@@ -55,8 +55,8 @@ features:
     <p>Learn to code, pay when you get a job, and lead a more meaningful life.</p>
     <hr style="margin: 15px 0;">
     <span style="background: rgb(255, 183, 24);font-weight: bold;">Now open and accepting applications!</span>
-    <p>Applications open in XX and are due XX</p>
-    <p>The recipients will be announced on XX</p>
+    <p>Applications will be open until May 31st, 2022</p>
+    <p>Only 100 Open spots available</p>
   styles: '{ "color": "gray", "fontWeight":"500" }'
   button:
       text: "APPLY NOW"
@@ -154,7 +154,7 @@ components:
         size: [3,3,3,3]
       - image:
           style: '{ "backgroundSize": "cover", "borderRadius": "80px" }'
-          src: "/images/landing/veteran.png"
+          src: "/images/landing/veteran2.png"
         content: 
           text: "LOW-INCOME <br> VETERANS"
           style: '{ "fontWeight": "700" }'
@@ -238,19 +238,19 @@ components:
       text: "Pay when you get a job!"
       font_size: ["30px", "30px", "30px", "30px", "30px"]
     sub_heading:
-      text: "Don't pay tuition upfront:"
-      font_size: ["16px", "16px", "16px", "16px", "16px"]
+      text: "There is no Payment upfront. Actually, there is only a payment if you get a Job for more than $35k 9p/year)."
+      font_size: ["18px", "18px", "18px", "18px", "18px"]
     button:
       text: "Review Conditions"
       color: null
       path: "https://www.switchup.org/bootcamps/4geeks-academy"
     content:
       text: |
-        <h2><strong style="font-weight: bold;">1. ENROLL THE PROGRAM</strong></h2>
-        <h2><strong style="font-weight: bold;">2. LEARN TO CODE</strong></h2>
-        <h2><strong style="font-weight: bold;">3. GRADUATE</strong></h2>
-        <h2><strong style="font-weight: bold;">4. GET A JOB</strong></h2>
-        <h2><strong style="font-weight: bold;">5. PAY FOR YOUR EDUCATION</strong></h2>
+        <h2><strong style="font-weight: bold;">1. Enroll and Join the Program</strong></h2>
+        <h2><strong style="font-weight: bold;">2. Get the skills of a software Developer</strong></h2>
+        <h2><strong style="font-weight: bold;">3. Graduate and complete your Projects</strong></h2>
+        <h2><strong style="font-weight: bold;">4. Get a Job</strong></h2>
+        <h2><strong style="font-weight: bold;">5. Pay for the program</strong></h2>
       font_size: ["16px"]
 
   - name: testimonials
