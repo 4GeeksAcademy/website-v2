@@ -237,7 +237,7 @@ components:
       text: "Pay when you get a job!"
       font_size: ["30px", "30px", "30px", "30px", "30px"]
     sub_heading:
-      text: "There is no Payment upfront. Actually, there is only a payment if you get a Job for more than $35k 9p/year)."
+      text: "There is no Payment upfront. Actually, payments will start only after you get a job where you can make more than $35k (p/year)."
       font_size: ["18px", "18px", "18px", "18px", "18px"]
     button:
       text: "Review Conditions"
