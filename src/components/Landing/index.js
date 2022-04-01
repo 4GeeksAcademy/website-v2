@@ -24,6 +24,7 @@ import Icon from "../Icon";
 import ChooseYourProgram from "../ChooseYourProgram";
 import StarRating from "../StarRating";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import { smartRedirecting } from "../../actions";
 
 const Title = ({ id, title, paragraph }) => {
     return (
@@ -33,22 +34,6 @@ const Title = ({ id, title, paragraph }) => {
         </GridContainer>
     );
 };
-
-const isWindow = () => window !== undefined ? true : false;
-
-export const smartRedirecting = (e, path) => {
-    e.preventDefault();
-    const linkRegex = new RegExp("(http)");
-    
-    if(isWindow()){
-        console.log("REDIRECTING");
-        if (linkRegex.test(path)) {
-            window.open(path, '_blank').focus();
-            return
-        }
-        navigate(path);
-    }
-}
 
 const Side = ({
     video,
@@ -378,7 +363,7 @@ export const MultiColumns = ({ heading, sub_heading, end_paragraph, button, colu
                 <Button
                     outline
                     // width="250px"
-                    colorHoverText={Colors.blue}
+                    colorHoverText={button.hover_color || Colors.blue}
                     lineHeight="26px"
                     textColor={Colors[button.color] || button.color}
                     color={Colors[button.color] || button.color}

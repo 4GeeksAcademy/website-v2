@@ -43,7 +43,7 @@ header_data:
   partner_logo_url: "../../../static/images/landing/uwm_pantone_2021_2.png" # optional
   # background_image: "../../../static/images/Happy-People-Landing-4Geeks-ES.jpg" # optional
   background: "white" #background property, it can be a hex color
-  right_image: "../../../static/images/landing/veteran.png"
+  right_image: "../../../static/images/landing/header_united_way.png"
   # right_image: 
   #   style: '{ "backgroundSize": "contain" }'
   #   src: "/images/landing/veteran.png"
@@ -132,7 +132,7 @@ components:
       text: | 
         learn more about <a style="color: rgb(0, 160, 218); cursor:pointer;">eligibility conditions</a> and apply
       font_size: ["16px", "16px", "16px", "16px", "16px"]
-      path: "#bottom"
+      path: "https://www.switchup.org/bootcamps/4geeks-academy"
     sub_heading:
       text: |
         Open to anyone meeting the criteria (see below). Preference will be given to individuals that identify as a member of the priority population (Veteran, people of color, single mother head of household) <strong style="font-weight: bold;">Miami resident</strong> and belong to one of these groups:
@@ -140,6 +140,7 @@ components:
     button:
       text: "APPLY NOW"
       color: "white"
+      hover_color: "white"
       path: "https://www.switchup.org/bootcamps/4geeks-academy"
       background: "black"
     columns:
@@ -255,7 +256,12 @@ components:
   - name: testimonials
     position: 9
     layout: testimonials_new
-    filter_indexes: [6,7,8]
+    # filter_indexes: [6,7,8]
+    filter_indexes: ['azu-bota','nai-kali','cha-fabr']
+      # - "azu-bota"
+      # - "nai-kali"
+      # - "cha-fabr"
+    # ["azu-bota","nai-kali","cha-fabr"]
 
   - name: better-future
     position: 10

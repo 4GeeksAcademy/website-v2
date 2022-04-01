@@ -59,9 +59,10 @@ partners:
       image: "../../../../static/images/partner/Neo9.png"
       featured: false
     - name: "Jooble"
-      # locations: ["madrid-spain"]
+      locations: ["madrid-spain"]
       image: "../../../../static/images/partner/jooble.png"
-      featured: false      
+      featured: false
+      link: "https://es.jooble.org"  
     - name: "KPMG"
       # locations: ["madrid-spain"]
       image: "../../../../static/images/partner/kpmg-logo1.png"

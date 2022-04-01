@@ -1,7 +1,5 @@
 import React from 'react'
 import LazyLoad from 'react-lazyload';
-// import Icon from '../components/Icon'
-// import {TwitterFollowButton} from 'react-twitter-embed';
 import "../assets/css/single-post.css"
 import styled from 'styled-components';
 import { H1 } from "../components/Heading";
@@ -12,7 +10,7 @@ export default function Template(props) {
   const post = props.data.markdownRemark;
 
   const Div = styled.div`
-  background: url('/images/bg/random-bg${Math.floor(Math.random() * 5) + 1}.png');
+  background: url('/images/bg/random-bg${Math.floor(Math.random() * 4) + 1}.png');
   background-repeat: no-repeat;
   background-size: cover;
   height:100vh;
@@ -29,9 +27,11 @@ export default function Template(props) {
           <H1
             type="h1"
             fontSize="40px"
-            width="auto"
+            width="90%"
             fontWeight="bold"
             textAlign="center"
+            margin="0 auto"
+            lineHeight="normal"
           >
             {post.frontmatter.title}
           </H1>
