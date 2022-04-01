@@ -190,91 +190,148 @@ const Loc = ({locations, title, image, paragraph, lang}) => {
             <Paragraph>{paragraph}</Paragraph>
           </Div>
         </GridContainer>}
+      <Div
+        id="locations-container"
+        padding="0 10% 10% 10%"
+        flexDirection_tablet="row"
+        flexDirection_sm="column"
+        flexDirection_xs="column"
+      >
+        {image &&
+          <Div
+            id="img-container"
+            width_tablet="20%"
+            width_xs="100%"
+            margin_tablet="0 20px 0 0"
+            margin_xs="0 0 20px 0"
+          // height="100%"
+          >
+            <Img
+              src={image}
+              // borderRadius={"1.25rem"}
+              borderRadius={"3px"}
+              // className="pointer"
+              alt={"4Geeks Academy Section"}
+              margin="auto"
+              width="100%"
+              height="100%"
+              minHeight_tablet="none"
+              minHeight_sm="100px"
+              backgroundSize={`cover`}
+            />
+          </Div>}
         <Div
-            id="locations-container"
-            padding="0 10% 10% 10%"
+          id="menu-container"
+          width_tablet="80%"
+          width_xs="100%"
+          display="block"
         >
-            {image && 
+          <Paragraph
+            textAlign="left"
+            color={Colors.darkGray}
+            margin="0 0 10px 0"
+          >
+            {`Escoge una región`}
+          </Paragraph>
+          <Div
+            id="selectors-container"
+            flexDirection_tablet="row"
+            flexDirection_xs="column"
+            width_xs="100%"
+          >
             <Div
-              id="img-container"
-              width="20%"
-              margin="0 20px 0 0"
-              // height="100%"
-            >
-                  <Img
-                      src={image}
-                      // borderRadius={"1.25rem"}
-                      borderRadius={"3px"}
-                      // className="pointer"
-                      alt={"4Geeks Academy Section"}
-                      margin="auto"
-                      width="100%"
-                      height="100%"
-                      backgroundSize={`cover`}
-                  />
-            </Div>}
-            <Div
-                id="menu-container"
-                width="80%"
-            >
-                <Div
-                    id="options-container"
-                    flexDirection="column"
-                    width="33%"
+            id="options-container"
+            flexDirection_tablet="column"
+            justifyContent_tablet="start"
+            flexDirection_xs="row"
+            justifyContent_xs="between"
+            width_tablet="33%"
+            width_xs="100%"
+          >
+            {fakeYml.map((m, i) =>
+              <Div
+                color={activeOpt.title === m.title ? Colors.black : Colors.gray}
+                borderLeft_tablet={activeOpt.title === m.title ? `5px solid ${Colors.blue}` : null}
+                borderBottom_tablet={'none'}
+                borderLeft_xs={'none'}
+                borderBottom_xs={activeOpt.title === m.title ? `5px solid ${Colors.blue}` : null}
+                borderRadius="none"
+                padding="10px"
+                onClick={() => {
+                  setActiveOpt({ ...m });
+                }}
+                style={{ cursor: 'pointer' }}
+                display="block"
+              >
+                <H3
+                  textAlign="left"
+                  fontSize="20px"
+                  color={activeOpt.title === m.title ? Colors.black : Colors.gray}
                 >
-                    {fakeYml.map((m, i) =>
-                        <Div
-                            color={activeOpt.title === m.title ? Colors.black : Colors.gray}
-                            borderLeft={activeOpt.title === m.title ? `5px solid ${Colors.blue}` : null}
-                            borderRadius="none"
-                            padding="10px"
-                            onClick={() => {
-                                setActiveOpt({ ...m });
-                            }}
-                            style={{cursor:'pointer'}}
-                            display="block"
-                        >
-                            <H3
-                              textAlign="left"
-                              fontSize="20px"
-                              color={activeOpt.title === m.title ? Colors.black : Colors.gray}
-                            >
-                              {m.title}
-                            </H3>
-                            <Paragraph
-                              textAlign="left"
-                              color={activeOpt.title === m.title ? Colors.black : Colors.gray}
-                            >
-                              {m.content}
-                            </Paragraph>
-                        </Div>
-                    )}
+                  {m.title}
+                </H3>
+                <Paragraph
+                  textAlign="left"
+                  display_tablet="block"
+                  display_xs="none"
+                  display_sm="none"
+                  color={activeOpt.title === m.title ? Colors.black : Colors.gray}
+                >
+                  {m.content}
+                </Paragraph>
+              </Div>
+            )}
 
-                </Div>
-                <Div
-                    id="links-container"
-                    flexDirection="column"
-                    flexWrap="wrap"
-                    maxHeight="330px"
-                >
-                    {activeOpt.sub_links != undefined && Array.isArray(activeOpt.sub_links) && activeOpt.sub_links.map((l, i) => {
-                        return (
-                            <Link to={l.link_to} key={i}>
-                                <Div
-                                    margin="2px 10px 2px 60px"
-                                    padding="10px 0 0 0"
-                                    borderBottomHover="2px solid black"
-                                    alignItems="baseline"
-                                >
-                                    <H3 textAlign="left" width="fit-content" fontSize="15px" lineHeight="20px" fontWeight="400" margin="0 5px 0 0">
-                                        {l.title}
-                                    </H3>
-                                </Div></Link>
-                        )
-                    })}
-                </Div>
-            </Div>
+          </Div>
+          <Paragraph
+            display_tablet="none"
+            display_xs="block"
+            textAlign="left"
+            color={Colors.darkGray}
+            margin="10px 0"
+          >
+            {activeOpt.content}
+          </Paragraph>
+          <Div
+            id="links-container"
+            flexDirection="column"
+            width_tablet="67%"
+            width_xs="100%"
+            flexWrap="wrap"
+            // maxHeight="330px"
+            // minHeight="330px"
+            height="330px"
+            alignContent_tablet="flex-start"
+            alignContent_xs="space-between"
+          >
+            {activeOpt.sub_links != undefined && Array.isArray(activeOpt.sub_links) && activeOpt.sub_links.map((l, i) => {
+              return (
+                <Link to={l.link_to} key={i}>
+                  <Div
+                    margin_tablet="2px 10px 2px 60px"
+                    margin_xs="2px 10px"
+                    padding="10px 0 0 0"
+                    alignItems="baseline"
+                  >
+                    <H3 
+                      textAlign="left" 
+                      width="fit-content" 
+                      fontSize="15px" 
+                      lineHeight="20px" 
+                      fontWeight="400" 
+                      margin="0 5px 0 0"
+                      borderBottomHover="2px solid black"
+                    >
+                      {l.title}
+                    </H3>
+                  </Div></Link>
+              )
+            })}
+          </Div>
         </Div>
+          </Div>
+          
+      </Div>
       {/* <GridContainer columns="1" columns_sm="2" columns_tablet="3" gridGap="0" columnGap="15px" margin="0 0 50px 0" margin_tablet="0 0 70px 0">
         {loc !== null &&
           loc.map((item, i) => {

@@ -45,6 +45,7 @@ const BaseHeading = styled(Heading)`
   &:hover{
     background-color: ${props => props.bgHover || props.bg};
     color: ${props => props.colorHover};
+    border-bottom: ${props => props.borderBottomHover};
   }
   @media ${Devices.xxs}{
 
@@ -193,7 +194,8 @@ export const Paragraph = styled.p`
   @media ${Devices.xxs}{
   }
   @media ${Devices.xs}{
-      padding: ${props => props.padding_xs}
+      padding: ${props => props.padding_xs};
+      display: ${props => props.display_xs};
   }
   @media  ${Devices.sm}{
       width: ${props => props.width_sm};

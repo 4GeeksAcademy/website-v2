@@ -198,7 +198,17 @@ export const Div = styled.div`
     @media ${Devices.xs}{
         padding: ${props => props.padding_xs};
         column-count: ${props => props.columnCount_xs};
-        
+        flex-direction: ${props => props.flexDirection_xs};
+        width: ${props => props.width_xs};
+        margin: ${props => props.margin_xs};
+        display: ${props => props.display_xs};
+        justify-content: ${props => justifyContentOptions[props.justifyContent_xs]};
+        border: ${props => props.border_xs};
+        border-top: ${props => props.borderTop_xs};
+        border-right: ${props => props.borderRight_xs};
+        border-bottom: ${props => props.borderBottom_xs};
+        border-left: ${props => props.borderLeft_xs};
+        align-content: ${props => props.alignContent_xs};
     }
     @media  ${Devices.sm}{
         padding: ${props => props.padding_sm};
@@ -206,7 +216,8 @@ export const Div = styled.div`
         height: ${props => props.height_sm};
         display: ${props => props.display};
         column-count: ${props => props.columnCount_sm};
-        
+        flex-direction: ${props => props.flexDirection_sm};
+        display: ${props => props.display_sm};
     }
     @media  ${Devices.tablet}{
         flex: ${props => props.flex_tablet || props.size_tablet ? `0 0 ${(props.size_tablet / 12) * 100}%` : null};
@@ -219,6 +230,7 @@ export const Div = styled.div`
         background: ${props => props.background_tablet};
         display: ${props => props.display_tablet};
         flex-direction: ${props => props.flexDirection_tablet};
+        align-content: ${props => props.alignContent_tablet};
         height: ${props => props.height_tablet};
         align-items: ${props => props.alignItems_tablet};
         padding: ${props => props.padding_tablet};
