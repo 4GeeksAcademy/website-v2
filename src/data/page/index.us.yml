@@ -57,6 +57,7 @@ locations:
   heading: "OUR LOCATIONS"
   sub_heading: "We have carefully chosen our Locations and Campuses. We are bringing you an experience that you will never forget."
   image: "/images/locations/locations_image.png"
+  choose: "Choose a region"
   regions:
     - name: "online"
       title: "Online"

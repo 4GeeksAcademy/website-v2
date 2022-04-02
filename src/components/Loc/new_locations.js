@@ -1,16 +1,16 @@
 import React, {useState, useContext, useEffect} from 'react';
 import {useStaticQuery, graphql} from 'gatsby';
-import {Title, H1, H2, H3, H4, Span, Paragraph, Separator} from '../Heading';
+import {Title, H1, H2, H3, H4, Span, Paragraph} from '../Heading';
 import {GridContainer, Grid, Div} from '../Sections'
-import {Img, Button, Colors, RoundImage, StyledBackgroundSection} from '../Styling'
-import Icon from "../Icon"
-import dayjs from "dayjs"
-import 'dayjs/locale/de'
+import {Img, Colors} from '../Styling'
+
 import { getCohorts } from "../../actions"
 import {SessionContext} from '../../session.js'
 import Link from 'gatsby-link'
 
-const Loc = ({locations, title, image, paragraph, lang}) => {
+const Loc = ({lang, yml}) => {
+  const { title, image, paragraph, choose, regions } = yml
+  console.log(regions, 'regions');
   const data = useStaticQuery(graphql`
     {
       allLocYaml {
@@ -28,150 +28,11 @@ const Loc = ({locations, title, image, paragraph, lang}) => {
   let content = data.allLocYaml.edges.find(({node}) => node.fields.lang === lang);
   if (content) content = content.node;
   else return null;
-  const {session} = useContext(SessionContext);
-  const [index, setIndex] = useState(null);
-  const [status, setStatus] = useState({toggle: false, hovered: false})
-  const [datas, setData] = useState({
-    cohorts: {catalog: [], all: [], filtered: []}
-  });
-
-  const fakeYml = [{
-    title: "Online",
-    content: "With the online modality you have access to our physical locations worldwide",
-    sub_links: [
-        {
-            title: "Miami, USA",
-            link_to: "/us/coding-campus/coding-bootcamp-miami"
-        },
-        {
-            title: "Chile",
-            link_to: "/us/coding-campus/coding-bootcamp-santiago"
-        },
-        {
-            title: "Argentina",
-            link_to: "/us/coding-campus/coding-bootcamp-argentina"
-        },
-        {
-            title: "Bolivia",
-            link_to: "/us/coding-campus/coding-bootcamp-bolivia"
-        },
-        {
-          title: "Miami, USA",
-          link_to: "/us/coding-campus/coding-bootcamp-miami"
-      },
-      {
-          title: "Chile",
-          link_to: "/us/coding-campus/coding-bootcamp-santiago"
-      },
-      {
-          title: "Argentina",
-          link_to: "/us/coding-campus/coding-bootcamp-argentina"
-      },
-      {
-          title: "Bolivia",
-          link_to: "/us/coding-campus/coding-bootcamp-bolivia"
-      },
-      {
-        title: "Miami, USA",
-        link_to: "/us/coding-campus/coding-bootcamp-miami"
-    },
-    {
-        title: "Chile",
-        link_to: "/us/coding-campus/coding-bootcamp-santiago"
-    },
-    {
-        title: "Argentina",
-        link_to: "/us/coding-campus/coding-bootcamp-argentina"
-    },
-    {
-        title: "Bolivia",
-        link_to: "/us/coding-campus/coding-bootcamp-bolivia"
-    },
-    {
-      title: "Miami, USA",
-      link_to: "/us/coding-campus/coding-bootcamp-miami"
-  },
-  {
-      title: "Chile",
-      link_to: "/us/coding-campus/coding-bootcamp-santiago"
-  },
-  {
-      title: "Argentina",
-      link_to: "/us/coding-campus/coding-bootcamp-argentina"
-  },
-  {
-      title: "Bolivia",
-      link_to: "/us/coding-campus/coding-bootcamp-bolivia"
-  },
-    ]
-},
-{
-  title: "America",
-  content: "With the online modality you have access to our physical locations worldwide",
-  sub_links: [
-      {
-          title: "Miami, USA",
-          link_to: "/us/coding-campus/coding-bootcamp-miami"
-      },
-      {
-          title: "Chile",
-          link_to: "/us/coding-campus/coding-bootcamp-santiago"
-      },
-      {
-          title: "Argentina",
-          link_to: "/us/coding-campus/coding-bootcamp-argentina"
-      },
-      {
-          title: "Bolivia",
-          link_to: "/us/coding-campus/coding-bootcamp-bolivia"
-      },
-  ]
-},
-{
-  title: "Europe",
-  content: "With the online modality you have access to our physical locations worldwide",
-  sub_links: [
-      {
-          title: "Miami, USA",
-          link_to: "/us/coding-campus/coding-bootcamp-miami"
-      },
-      {
-          title: "Chile",
-          link_to: "/us/coding-campus/coding-bootcamp-santiago"
-      },
-      {
-          title: "Argentina",
-          link_to: "/us/coding-campus/coding-bootcamp-argentina"
-      },
-      {
-          title: "Bolivia",
-          link_to: "/us/coding-campus/coding-bootcamp-bolivia"
-      },
-  ]
-}];
 
   const [activeOpt, setActiveOpt] = useState({
-    ...fakeYml[0]
+    ...regions[0]
   });
-  console.log('IN THE NEW LOC');
-  console.log(locations, 'locations');
 
-  useEffect(() => {
-    const getData = async () => {
-      const cohorts = await getCohorts();
-      let _types = []
-      setData(oldData => ({
-        cohorts: {catalog: oldData.cohorts.catalog, all: cohorts, filtered: cohorts}
-      }))
-    }
-    getData();
-  }, []);
-  let loc = locations.filter(l => l.node.meta_info.unlisted != true).sort((a, b) => a.node.meta_info.position > b.node.meta_info.position ? 1 : -1)
-  const nextDate = (location) => {
-    let cohort = datas.cohorts.all.find(item => item.academy.slug === location.node.breathecode_location_slug)
-    let onlineCohort = datas.cohorts.all.find(item => item.academy.slug === "online")
-    return cohort || onlineCohort
-  }
   return (
     <>
       {title &&
@@ -226,13 +87,13 @@ const Loc = ({locations, title, image, paragraph, lang}) => {
           width_xs="100%"
           display="block"
         >
-          <Paragraph
+          {choose && <Paragraph
             textAlign="left"
             color={Colors.darkGray}
             margin="0 0 10px 0"
           >
-            {`Escoge una región`}
-          </Paragraph>
+            {choose}
+          </Paragraph>}
           <Div
             id="selectors-container"
             flexDirection_tablet="row"
@@ -248,7 +109,7 @@ const Loc = ({locations, title, image, paragraph, lang}) => {
             width_tablet="33%"
             width_xs="100%"
           >
-            {fakeYml.map((m, i) =>
+            {regions.map((m, i) =>
               <Div
                 color={activeOpt.title === m.title ? Colors.black : Colors.gray}
                 borderLeft_tablet={activeOpt.title === m.title ? `5px solid ${Colors.blue}` : null}
@@ -306,7 +167,7 @@ const Loc = ({locations, title, image, paragraph, lang}) => {
           >
             {activeOpt.sub_links != undefined && Array.isArray(activeOpt.sub_links) && activeOpt.sub_links.map((l, i) => {
               return (
-                <Link to={l.link_to} key={i}>
+                <Link to={`/${lang}/coding-campus/${l.node.meta_info.slug}`} key={i}>
                   <Div
                     margin_tablet="2px 10px 2px 60px"
                     margin_xs="2px 10px"
@@ -322,7 +183,7 @@ const Loc = ({locations, title, image, paragraph, lang}) => {
                       margin="0 5px 0 0"
                       borderBottomHover="2px solid black"
                     >
-                      {l.title}
+                      {l.node.name}
                     </H3>
                   </Div></Link>
               )
@@ -332,51 +193,6 @@ const Loc = ({locations, title, image, paragraph, lang}) => {
           </Div>
           
       </Div>
-      {/* <GridContainer columns="1" columns_sm="2" columns_tablet="3" gridGap="0" columnGap="15px" margin="0 0 50px 0" margin_tablet="0 0 70px 0">
-        {loc !== null &&
-          loc.map((item, i) => {
-            const next = nextDate(item);
-            let stringDate = "";
-            if(next !== undefined && next.kickoff_date){
-              stringDate = dayjs(next.kickoff_date).locale(lang).format("ddd DD MMM YYYY");
-              stringDate = stringDate[0].toUpperCase() + stringDate.substr(1,2) + "." + stringDate.substr(3);
-            }
-            return (
-              <Div
-                onMouseOver={() => setIndex(i)}
-                key={i}
-                style={{
-                  borderBottom: `1px solid ${Colors.lightGray}`,
-                  position: "relative",
-                  transition: "background 0.3s ease, border-left 0.3s ease",
-                  borderLeft: `${index === i ? "10px solid" + Colors.yellow : "0"}`,
-                }}
-                display="flex"
-                flexDirection="row"
-                justifyContent="between"
-                // height="207px"
-                height="auto"
-                padding="30px 24px"
-                background={index === i ? Colors.verylightGray : Colors.white}
-              >
-                <H3
-                  textAlign="left"
-                >{item.node.name}
-                  <Span animated color={Colors.yellow}>_</Span>
-                </H3>
-                <Link to={`/${lang}/coding-campus/${item.node.meta_info.slug}`}>
-                  <Icon 
-                    // style={{position: "absolute", bottom: "18px", right: "18px"}}
-                    icon="arrowright" 
-                    height="32px"
-                    width="32px"
-                  />
-                </Link>
-              </Div>
-            )
-          })
-        }
-      </GridContainer> */}
     </>
   )
 };

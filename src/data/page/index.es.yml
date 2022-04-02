@@ -57,6 +57,7 @@ locations:
   heading: "NUESTRAS SEDES"
   image: "/images/locations/locations_image.png"
   sub_heading: "Con +7 sedes (y creciendo), 4Geeks es una de las escuelas y comunidades de programadores más grandes del mundo"
+  choose: "Escoge una región"
   regions:
     - name: "online"
       title: "Online"
