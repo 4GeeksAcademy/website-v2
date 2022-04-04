@@ -66,8 +66,8 @@ navbar:
           sub_links:
             - title: "Alumni & Projects"
               link_to: "/us/students-and-projects"
-            # - title: "Testimonials"
-            #   link_to: "/us/testimonials"
+            - title: "Testimonials"
+              link_to: "/us/testimonials"
   - name: "The Academy"
     link: "/us/the-academy"
     sub_menu:
