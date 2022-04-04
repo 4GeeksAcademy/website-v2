@@ -98,6 +98,7 @@ const createBlog = async ({actions, graphql}) => {
         createRedirect(args);
     }
     const clusterTemplate = path.resolve("src/templates/clusters.js");
+    const thumbnailTemplate = path.resolve("src/templates/thumbnailPreview.js");
     const result = await graphql(`
     {
         allMarkdownRemark(sort: {fields: frontmatter___date, order: DESC}){
@@ -198,12 +199,16 @@ const createBlog = async ({actions, graphql}) => {
     // Eliminate duplicate clusters
     Object.keys(clusters).forEach(lang => clusters[lang] = clusters[lang].filter((value, index) => clusters[lang].indexOf(value) === index))
     // Make clusters pages
+    const langSwitcher = {
+        es: "blog-en-espanol",
+        us: "blog"
+    }
     Object.keys(clusters).forEach(lang => 
         clusters[lang].forEach(cluster => {
             let file_name = `clusters.${lang}`
             let type = "page";
             createPage({
-                path: `/${lang}/blog/${cluster}/`,
+                path: `/${lang}/${langSwitcher[lang]}/${cluster}/`,
                 component: clusterTemplate,
                 context: {
                     cluster,
@@ -214,6 +219,28 @@ const createBlog = async ({actions, graphql}) => {
             });
         })
     )
+
+    posts.forEach(({ node }) => {
+        Object.keys(clusters).forEach(lang => 
+            clusters[lang].forEach(cluster => {
+                let file_name = `clusters.${lang}`
+                let type = "page";
+                createPage({
+                    path: `/${lang}/${cluster}/${node.fields.slug}/preview`,
+                    component: thumbnailTemplate,
+                    context: {
+                        ...node.fields,
+                        cluster,
+                        file_name,
+                        lang,
+                        type
+                    },
+                });
+            })
+        )
+    });
+
+    
     
     return true;
 }

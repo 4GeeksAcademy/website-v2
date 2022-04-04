@@ -49,6 +49,12 @@ features:
     - Un Desarrollador en Madrid hace €25mil anual
     - Hay más vacantes que en cualquier otra industria
     - Impulsa tu Carrera y hazte programador de software
+  button:
+      text: "APPLY NOW"
+      color: "white"
+      path: "https://www.switchup.org/bootcamps/4geeks-academy"
+      background: "blue"
+      hover_color: "black"
 
 follow_bar:
   position: "top" # top, bottom, hidden
@@ -166,6 +172,7 @@ components:
   - name: more_testimonials
     position: 9
     layout: two_column_left 
+    swipable: False
     background: "#FFFFFF"
     image: 
       style: "{}"
@@ -178,10 +185,13 @@ components:
     button: 
       text: "Ver testimoniales"
       color: pink
+      hover_color: "black"
+      background: "blue"
       path: "https://www.youtube.com/watch?v=plwPwyrxX84"
     content: 
       text: "Mentoría como nunca antes. Decenas de Instructores, en varios idiomas, todos los días, a cualquier hora. Estaremos contigo todo el tiempo, aun cuando hayas conseguido trabajo. Una vez eres parte de 4Geeks, estaremos para siempre contigo."
       font_size: ["16px"]
+      path: ""
   - name: divider_one
     position: 10
     layout: divider 
@@ -217,6 +227,10 @@ components:
       text:
         "Tipos de datos con súperpoderes:"
       font_size: ["15px"]
+  - name: testimonials
+    position: 15
+    layout: testimonials_new
+    filter_indexes: ['azu-bota','nai-kali','cha-fabr']
 
     bullets:
       - Número

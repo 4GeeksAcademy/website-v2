@@ -195,6 +195,7 @@ export const Div = styled.div`
     }
     @media ${Devices.xs}{
         padding: ${props => props.padding_xs};
+        column-count: ${props => props.columnCount_xs};
         
     }
     @media  ${Devices.sm}{
@@ -202,6 +203,7 @@ export const Div = styled.div`
         justify-content: ${props => justifyContentOptions[props.justifyContent_sm]};
         height: ${props => props.height_sm};
         display: ${props => props.display};
+        column-count: ${props => props.columnCount_sm};
         
     }
     @media  ${Devices.tablet}{

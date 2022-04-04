@@ -16,10 +16,12 @@ partners:
       #locations: ["madrid-spain"]
       image: "../../../../static/images/partner/microsoft.png"
       featured: true
+      link: "https://microsoft.com"
     - name: "Evernote"
       #locations: ["madrid-spain"]
       image: "../../../../static/images/partner/evernote.png"
       featured: false
+      link: "https://evernote.com/intl/es"
     - name: "Facebook"
       #locations: ["madrid-spain"]
       image: "../../../../static/images/partner/facebook.png"
@@ -77,9 +79,10 @@ partners:
       image: "../../../../static/images/partner/coinet.jpg"
       featured: false
     - name: "Jooble"
-      # locations: ["madrid-spain"]
+      locations: ["madrid-spain"]
       image: "../../../../static/images/partner/jooble.png"
       featured: false
+      link: "https://es.jooble.org"
       
 coding:
   tagline: "Actores globales en el mundo de la codificación"

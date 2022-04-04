@@ -18,6 +18,7 @@ partners:
       #courses: ["machine-learning"]
       image: "../../../../static/images/partner/microsoft.png"
       featured: true
+      link: "https://microsoft.com"
     - name: "Google Developers"
       image: "../../../../static/images/coding/google-developers.png"
       featured: true
@@ -58,9 +59,10 @@ partners:
       image: "../../../../static/images/partner/Neo9.png"
       featured: false
     - name: "Jooble"
-      # locations: ["madrid-spain"]
+      locations: ["madrid-spain"]
       image: "../../../../static/images/partner/jooble.png"
-      featured: false      
+      featured: false
+      link: "https://es.jooble.org"  
     - name: "KPMG"
       # locations: ["madrid-spain"]
       image: "../../../../static/images/partner/kpmg-logo1.png"

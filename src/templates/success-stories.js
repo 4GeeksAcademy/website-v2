@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {Header, GridContainer, Container, Div, Grid} from "../components/Sections";
 import {Title, H1, H2, H3, H4, H5, Paragraph} from '../components/Heading';
 import {Button, Colors, StyledBackgroundSection} from '../components/Styling';
@@ -8,7 +8,7 @@ import BaseRender from './_baseLayout';
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 
-const TestimonialCard = ({highlighted, featured, height, height_tablet, studentRating, className, background, image, video, name, short_content, description, gridAreaPosition, gridRowPosition}) => {
+const TestimonialCard = ({highlighted, featured, height, height_tablet, studentRating, className, background, image, video, name, short_content, description, gridAreaPosition, gridRowPosition, gridAreaPosition_tablet, gridRowPosition_tablet}) => {
 
     const StarRating = ({totalStars}) => {
         return (
@@ -25,15 +25,16 @@ const TestimonialCard = ({highlighted, featured, height, height_tablet, studentR
         <Div
             flexDirection="column"
             position="relative"
-            height={height}
-            height_tablet={height_tablet}
+            // height={height}
+            // height_tablet={height_tablet}
             background={background}
             borderRadius="3px"
-            gridColumn_tablet={gridAreaPosition}
-            gridRow_tablet={gridRowPosition}
-            padding="20px 20px 0 20px"
+            // gridColumn_tablet={gridAreaPosition}
+            // gridRow_tablet={gridRowPosition}
+            padding="20px"
             border={`1px solid ${Colors.lightGray}`}
             boxShadow={`0px 2px 5px rgba(0, 0, 0, 0.1)`}
+            style={{breakInside: 'avoid', marginBottom:'1em'}}
         >
             <Div>
                 <GatsbyImage
@@ -68,156 +69,121 @@ const TestimonialCard = ({highlighted, featured, height, height_tablet, studentR
                         // padding="19px 0 0 25px"
                         padding_tablet="0"
                         width="100%"
+                        style={{breakInside: 'avoid'}}
                         // height_tablet="310px"
-                        alignSelf="baseline"
+                        // alignSelf="baseline"
                     >
                         <ReactPlayer
                             With_Modal={true}
-                            className={className}
+                            // className={className}
+                            className={"react-player-testimonials-small"}
                             thumb={image}
                             id={video && video}
                             width='100%'
                             width_tablet="100%"
-                            height={"82px"}
-
+                            // height={"82px"}
+                            style={{breakInside: 'avoid'}}
                         />
                     </Div>
                 </>
             }
-            <Paragraph style={{position: "absolute", bottom: "20px", left: "21px"}} textAlign="left" margin="12px 0 0 0" color={Colors.blue}>View Review</Paragraph>
+            {/* <Paragraph 
+                // style={{position: "absolute", bottom: "20px", left: "21px"}} 
+                textAlign="left" 
+                margin="12px 0 0 0" 
+                color={Colors.blue}
+            >
+                    View Review
+            </Paragraph> */}
 
         </Div>
     )
 }
-const featuredPositions = [{
-    position: "1 / 5",
-    height: "378px",
-    height_tablet: "",
-    size: "small",
-    className: "react-player-testimonials-small "
-},
-{
-    position: "5 / 13",
-    height: "378px",
-    height_tablet: "",
-    size: "big",
-    className: "react-player-testimonials-big "
-}]
 
-const defaultPositions = [
-    {
-        position: "1 / 5",
-        row_position: "1 / 4",
-        height: "378px",
-        height_tablet: "100%",
-        size: "small",
-        className: "react-player-testimonials-small "
-    },
-    {
-        position: "5 / 9",
-        row_position: "1 / 4",
-        height: "378px",
-        height_tablet: "100%",
-        size: "small",
-        className: "react-player-testimonials-small"
-    },
-    {
-        position: "9 / 13",
-        row_position: "1 / 6",
-        height: "auto",
-        height_tablet: "",
-        size: "big",
-        className: "react-player-testimonials-big "
-    },
-    {
-        position: "1 / 9",
-        row_position: "4 / 7",
-        height: "378px",
-        height_tablet: "507px",
-        size: "big",
-        className: "react-player-testimonials-big"
-    },
-    {
-        position: "9 / 13",
-        row_position: "6 / 9",
-        height: "378px",
-        height_tablet: "auto",
-        size: "small",
-        className: "react-player-testimonials-small"
-    },
-]
 const SuccessStories = (props) => {
     const {data, pageContext, yml} = props;
     let testimonials = data.allTestimonialsYaml.edges[0].node
+
+    useEffect(()=>{
+        if(yml.filter_indexes){
+            testimonials.testimonials = data.allTestimonialsYaml.edges[0].node.testimonials.filter((testimonial) => yml.filter_indexes.includes(testimonial.slug));
+        }
+    }, []);
+    
     return (
         <>
-            <Header
+            {yml.header && <Header
                 seo_title={yml.seo_title}
                 title={yml.header.title}
                 paragraph={yml.header.paragraph}
                 padding_tablet="72px 0 40px 0"
                 padding="66px 17px 85px 0"
             >
-            </Header>
-            <GridContainer variant="fixed" padding_tablet="0" columns_tablet="12">
-                {/* <Grid height="auto" columns="1" rows="1" columns_tablet="12" gridGap="11px"> */}
-                {
-                    Array.isArray(testimonials.testimonials) && testimonials.testimonials.filter(f => f.featured == true && f.hidden == false).map((m, i) => {
-                        return (
-                            i < 2 &&
-                            <TestimonialCard
-                                key={i}
-                                height="507px"
-                                studentRating={m.rating}
-                                className={featuredPositions[i]['className']}
-                                image={m.student_thumb}
-                                background={m.highlighted && Colors.darkYellow}
-                                name={m.student_name}
-                                short_content={m.short_content}
-                                description={featuredPositions[i]['size'] == "small" && m.content.length > 300 ? m.content.substring(0, 300) + "..." : m.content}
-                                video={m.student_video}
-                                gridAreaPosition={featuredPositions[i]['position']}
-                            />
-                        )
-                    })
-                }
-                {/* </Grid> */}
-            </GridContainer >
-            <GridContainer variant="fixed" margin_tablet="30px 0" margin="30px 0" padding_tablet="0">
-                <Div height="7px" background={Colors.lightGray} />
-            </GridContainer>
-            <GridContainer columns_tablet="12" gridTemplateRows_tablet="9, 1fr" height_tablet="auto" height="auto">
+            </Header>}
+            {yml.images && (
+                <Div
+                display="flex"
+                flexDirection="row"
+                borderRadius="3px"
+                style={{flexWrap: "wrap"}}
+                // columnGap="70px"
+                justifyContent="center"
+                background={Colors.white}
+                padding="25px 0 0 0"
+                margin="0 0 50px 0" >
+          
+                {yml.images.map((l, i) => {
+                  return (
+                    <Div
+                      key={`${i}-${l.name}`}
+                      margin="0 20px 40px 20px"
+                      margin_tablet={`0 ${i >= 4 ? '30px': "30px"} 30px ${i >= 4 ? '30px': "30px"}`}
+                    >
+                      <GatsbyImage
+                        key={i}
+                        style={{height: "60px", minWidth: "90px"}}
+                        imgStyle={{objectFit: "contain"}}
+                        alt={l.name}
+                        fluid={l.image.childImageSharp.fluid}
+                        image={getImage(l.image.childImageSharp.gatsbyImageData)}
+                      />
+                    </Div>
+                  )
+                })}
+              </Div>
+            )}
+
+            <Div
+                display="column"
+                columns="3"
+                columnCount="3"
+                gap="1em"
+                style={{gridAutoFlow:'dense'}}
+                padding="0 10% 10% 10%"
+                columnCount_sm="1"
+                columnCount_xs="1"
+                columnCount_tablet="3"
+            >
                 {
                     Array.isArray(testimonials.testimonials) && testimonials.testimonials.filter(f => f.hidden == false).map((m, i) => {
                         return (
-                            i < 5 &&
+                            i < 9 &&
                             <TestimonialCard
                                 key={i}
-                                className={defaultPositions[i]['className']}
                                 studentRating={m.rating}
                                 image={m.student_thumb}
-
-                                height={defaultPositions[i]['height']}
-                                height_tablet={defaultPositions[i]['height_tablet']}
                                 background={m.highlighted && Colors.darkYellow}
                                 name={m.student_name}
                                 short_content={m.short_content}
-                                description={defaultPositions[i]['size'] == "small" && m.content.length > 300 ? m.content.substring(0, 300) + "..." : m.content}
+                                
+                                description={m.content.length > 500 ? m.content.substring(0, 500) + "..." : m.content}
                                 video={m.student_video}
-                                gridAreaPosition={defaultPositions[i]['position']}
-                                gridRowPosition={defaultPositions[i]['row_position']}
+
                             />
                         )
                     })
                 }
-
-                {/* <Div gridColumn_tablet="1 / 5" gridRow_tablet="1 / 4" background={Colors.lightGray}>test</Div>
-                <Div gridColumn_tablet="5 / 9" gridRow_tablet="1 / 4" background={Colors.lightGray}>test</Div>
-                <Div gridColumn_tablet="9 / 13" gridRow_tablet="1 / 6" background={Colors.lightGray}>test</Div>
-                <Div gridColumn_tablet="1 / 9" gridRow_tablet="4 / 7" background={Colors.lightGray}>test</Div>
-                <Div gridColumn_tablet="9 / 13" gridRow_tablet="6 / 9" background={Colors.lightGray}>test</Div> */}
-            </GridContainer>
-
+            </Div>
         </>
     )
 };
@@ -237,6 +203,21 @@ query SuccessQuery($file_name: String!, $lang: String!) {
                     title
                     paragraph   
                 }
+                images{
+                    name
+                    image {
+                        childImageSharp {
+                            gatsbyImageData(
+                                layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                                width: 150
+                                placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                            )
+                            # fluid(maxWidth: 150){
+                            #   ...GatsbyImageSharpFluid_withWebp
+                            # }
+                        }
+                    }
+                }
             }
         }
     }
@@ -248,6 +229,7 @@ query SuccessQuery($file_name: String!, $lang: String!) {
                 button_link
                 testimonials {
                     student_name
+                    slug
                     featured
                     highlighted
                     testimonial_date
@@ -286,3 +268,5 @@ query SuccessQuery($file_name: String!, $lang: String!) {
 }
 `;
 export default BaseRender(SuccessStories);
+
+export { SuccessStories }
