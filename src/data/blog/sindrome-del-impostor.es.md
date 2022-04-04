@@ -1,11 +1,11 @@
 ---
 author: "4GeeksAcademy"
-date: "2022-04-01T12:00:12+00:00"
+date: "2022-04-04T12:00:12+00:00"
 excerpt: "El síndrome del impostor es un fenómeno psicológico que nos afecta a todos, en especial a los programadores, aprende con nosotros como reconocerlo y afrontarlo."
 slug: "sindrome-del-impostor"
 template: "post"
 title: "Síndrome del Impostor: El peor enemigo de todo programador junior"
-image: "https://imagenes.20minutos.es/files/image_656_370/uploads/imagenes/2021/09/29/asi-es-vivir-con-el-sindrome-del-impostor.jpeg"
+image: "https://breathecode.herokuapp.com/v1/media/file/sindrome-del-impostor-2-jpg?"
 image_alt: "Síndrome del Impostor: El peor enemigo de todo programador junior"
 cluster: "desarrollo-profesional"
 status: "published"
@@ -20,7 +20,7 @@ El síndrome del impostor no es más que un fenómeno psicológico en el que la 
 
 Como programadores o estudiantes de programación nos vemos expuestos a una autocrítica muy fuerte, ya que pensamos que es una carrera que pocos pueden lograr, como dicen por ahí: “No cualquiera es programador”, y la verdad es que eso es un grave error. En los últimos años, en 4Geeks Academy hemos demostrado que cualquiera puede ser programador, tan solo debe tener dedicación y constancia para lograrlo. Particularmente, en nuestra academia hemos formado un sinfín de programadores, los cuales la mayoría son profesionales de distintas disciplinas, desde abogados hasta farmacéuticos, demostrando así que, quien lo quiere, puede.
 
-![https://images.app.goo.gl/zt7dQ8mMJ3q6X3mb7](https://blog.sarenet.es/wp-content/uploads/2017/05/work-2005640_1280-1024x683.jpg)
+![https://images.app.goo.gl/zt7dQ8mMJ3q6X3mb7](../../../static/images/blog/sindrome-del-impostor.jpg)
 
 ## Ahora pasemos a la pregunta importante: ¿Cómo podemos superar el síndrome del impostor?
 
