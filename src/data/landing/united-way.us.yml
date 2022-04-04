@@ -60,7 +60,7 @@ features:
   button:
       text: "APPLY NOW"
       color: "white"
-      path: "https://www.switchup.org/bootcamps/4geeks-academy"
+      path: "https://marketing892162.typeform.com/to/ti4UAUrh"
       background: "blue"
       hover_color: "white"
 
@@ -131,7 +131,7 @@ components:
       text: | 
         learn more about <a style="color: rgb(0, 160, 218); cursor:pointer;">eligibility conditions</a> and apply
       font_size: ["16px", "16px", "16px", "16px", "16px"]
-      path: "https://www.switchup.org/bootcamps/4geeks-academy"
+      path: "https://marketing892162.typeform.com/to/ti4UAUrh"
     sub_heading:
       text: |
         <strong style="font-weight: bold;"> Every Miami Resident is invited to apply </strong>. You also need to be a Citizen, permanent resident or DACA. You should not have accounts in collection greater than $5k. Preference will be given to one of these groups:
@@ -140,7 +140,7 @@ components:
       text: "APPLY NOW"
       color: "white"
       hover_color: "white"
-      path: "https://www.switchup.org/bootcamps/4geeks-academy"
+      path: "https://marketing892162.typeform.com/to/ti4UAUrh"
       background: "black"
     columns:
       - image:
@@ -232,7 +232,7 @@ components:
     image:
       style: '{ "backgroundSize": "contain" }'
       src: "/static/images/staff/luisa.png"
-    video: "https://www.youtube.com/watch?v=MBXqEnhodx0"
+    video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
     heading:
       text: "Pay when you get a job!"
       font_size: ["30px", "30px", "30px", "30px", "30px"]
@@ -242,7 +242,7 @@ components:
     button:
       text: "Review Conditions"
       color: null
-      path: "https://www.switchup.org/bootcamps/4geeks-academy"
+      path: "https://marketing892162.typeform.com/to/ti4UAUrh"
     content:
       text: |
         <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">1. Enroll and Join the Program</strong></h2>
@@ -281,7 +281,7 @@ components:
       color: "white"
       background: "blue"
       hover_color: "white"
-      path: "https://www.switchup.org/bootcamps/4geeks-academy"
+      path: "https://marketing892162.typeform.com/to/ti4UAUrh"
 
   - name: united
     position: 11
