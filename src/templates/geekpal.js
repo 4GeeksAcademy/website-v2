@@ -270,6 +270,7 @@ export const query = graphql`
           partners {
             images {
               name
+              link
               image {
                 childImageSharp {
                   gatsbyImageData(

@@ -254,6 +254,7 @@ export const query = graphql`
                 footer_link
                 images {
                   name
+                  link
                   locations
                   image {
                     childImageSharp {

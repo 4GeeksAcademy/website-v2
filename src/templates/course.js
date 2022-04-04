@@ -422,6 +422,7 @@ export const query = graphql`
               footer_link
               images {
                 name
+                link
                 image {
                   childImageSharp {
                     gatsbyImageData(
