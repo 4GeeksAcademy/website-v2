@@ -3,7 +3,7 @@ import {Div, Grid, GridContainer} from '../Sections'
 import {Colors, StyledBackgroundSection} from '../Styling';
 import {H2, H3, H4, Title, Paragraph} from '../Heading'
 import Link from 'gatsby-link'
-import { smartRedirecting } from '../../actions'
+import { smartRedirecting } from "../../utils/utils.js";
 import Card from '../Card';
 import Fragment from "../Fragment"
 import Marquee from '../Marquee';
@@ -92,7 +92,7 @@ const Images_With_Marquee = (props) => {
   let imgs = [];
   props.images.map((l, i) => {
     imgs.push(
-      l.link ? <a src={l.link}><GatsbyImage
+      l.link ? <a href={l.link} rel="nofollow" ><GatsbyImage
         key={i}
         style={{ minWidth: "120px", border: 0, cursor:'pointer' }}
         height="80px"

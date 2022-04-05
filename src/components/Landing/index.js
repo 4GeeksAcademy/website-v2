@@ -24,7 +24,7 @@ import Icon from "../Icon";
 import ChooseYourProgram from "../ChooseYourProgram";
 import StarRating from "../StarRating";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
-import { smartRedirecting } from "../../actions";
+import { smartRedirecting } from "../../utils/utils.js";
 
 const Title = ({ id, title, paragraph }) => {
     return (

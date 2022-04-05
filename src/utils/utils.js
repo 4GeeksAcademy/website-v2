@@ -1,4 +1,21 @@
+import { navigate } from "gatsby";
 
+const isWindow = () => window !== undefined ? true : false;
+
+export const smartRedirecting = (e, path) => {
+    e.preventDefault();
+    const linkRegex = new RegExp("(http)");
+    
+    if(isWindow()){
+        console.log("REDIRECTING");
+        if (linkRegex.test(path)) {
+            // window.open(path, '_blank').focus();
+            window.open(path, '_blank').opener = null;
+            return
+        }
+        navigate(path);
+    }
+}
 
 export const parseQueryString = (queryString) => {
     var query = {};

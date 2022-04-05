@@ -20,23 +20,6 @@ export const defaultSession = {
     }
 };
 
-const isWindow = () => window !== undefined ? true : false;
-
-export const smartRedirecting = (e, path) => {
-    e.preventDefault();
-    const linkRegex = new RegExp("(http)");
-    
-    if(isWindow()){
-        console.log("REDIRECTING");
-        if (linkRegex.test(path)) {
-            // window.open(path, '_blank').focus();
-            window.open(path, '_blank').opener = null;
-            return
-        }
-        navigate(path);
-    }
-}
-
 export const isCustomBarActive = (session) => {
     if(session && session.location){
         return session.location.custom_bar.active
