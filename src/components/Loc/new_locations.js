@@ -9,8 +9,8 @@ import {SessionContext} from '../../session.js'
 import Link from 'gatsby-link'
 
 const Loc = ({lang, yml}) => {
-  const { title, image, paragraph, choose, regions } = yml
-  console.log(regions, 'regions');
+  const { heading, image, sub_heading, choose, regions } = yml
+
   const data = useStaticQuery(graphql`
     {
       allLocYaml {
@@ -35,7 +35,7 @@ const Loc = ({lang, yml}) => {
 
   return (
     <>
-      {title &&
+      {heading &&
         <GridContainer
           margin_tablet="0 0 35px 0"
           margin="0 0 32px 0"
@@ -47,10 +47,11 @@ const Loc = ({lang, yml}) => {
             flexDirection="column"
             alignItems="center"
           >
-            <H2 margin="0 0 15px 0" fontSize="15px" lineHeight="19px" fontWeight="900">{title}</H2>
-            <Paragraph>{paragraph}</Paragraph>
+            <H2 margin="0 0 15px 0" fontSize="15px" lineHeight="19px" fontWeight="900">{heading}</H2>
+            <Paragraph>{sub_heading}</Paragraph>
           </Div>
         </GridContainer>}
+      <hr style={{margin: 'auto', width:'80%', marginBottom:'20px', border: `1px solid ${Colors.verylightGray}`}} />     
       <Div
         id="locations-container"
         padding="0 10% 10% 10%"
