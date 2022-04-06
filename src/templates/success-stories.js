@@ -8,7 +8,18 @@ import BaseRender from './_baseLayout';
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 
-const TestimonialCard = ({highlighted, featured, height, height_tablet, studentRating, className, background, image, video, name, short_content, description, gridAreaPosition, gridRowPosition, gridAreaPosition_tablet, gridRowPosition_tablet}) => {
+const TestimonialCard = ({lang, highlighted, featured, height, height_tablet, studentRating, className, background, image, video, name, short_content, description, gridAreaPosition, gridRowPosition, gridAreaPosition_tablet, gridRowPosition_tablet}) => {
+    const [isExpanded, setIsExpanded] = useState(false);
+    
+    const readMoreValues = {
+        'es': 'Leer más',
+        'us': 'Read more'
+    };
+
+    const readLessValues = {
+        'es': 'Leer menos',
+        'us': 'Read less'
+    };
 
     const StarRating = ({totalStars}) => {
         return (
@@ -62,7 +73,7 @@ const TestimonialCard = ({highlighted, featured, height, height_tablet, studentR
             <Div margin="30px 0 17px 0">
                 <StarRating totalStars={studentRating} />
             </Div>
-            {!video && <Paragraph textAlign="left" >{description}</Paragraph>}
+            {!video && <Paragraph textAlign="left" >{description.length > 500 && !isExpanded ? description.substring(0, 500) + "..." : description}</Paragraph>}
             {video &&
                 <>
                     <Div
@@ -87,14 +98,18 @@ const TestimonialCard = ({highlighted, featured, height, height_tablet, studentR
                     </Div>
                 </>
             }
-            {/* <Paragraph 
+            {description.length > 500 && <Paragraph 
                 // style={{position: "absolute", bottom: "20px", left: "21px"}} 
                 textAlign="left" 
                 margin="12px 0 0 0" 
                 color={Colors.blue}
+                style={{cursor: "pointer"}} 
+                onClick={()=>{
+                    setIsExpanded(!isExpanded);
+                }}
             >
-                    View Review
-            </Paragraph> */}
+                {!isExpanded? readMoreValues[lang] : readLessValues[lang]}
+            </Paragraph>}
 
         </Div>
     )
@@ -102,11 +117,25 @@ const TestimonialCard = ({highlighted, featured, height, height_tablet, studentR
 
 const SuccessStories = (props) => {
     const {data, pageContext, yml} = props;
-    let testimonials = data.allTestimonialsYaml.edges[0].node
+    // let testimonials = data.allTestimonialsYaml.edges[0].node.testimonials
+
+    const [testimonials, setTestimonials] = useState([]);
 
     useEffect(()=>{
+        data.allTestimonialsYaml.edges[0].node.testimonials.forEach((testim, ind, arr)=>{
+            arr[ind].isExpanded = false;
+        });
         if(yml.filter_indexes){
-            testimonials.testimonials = data.allTestimonialsYaml.edges[0].node.testimonials.filter((testimonial) => yml.filter_indexes.includes(testimonial.slug));
+            setTestimonials([
+                ...data.allTestimonialsYaml.edges[0].node.testimonials.filter((testimonial) => yml.filter_indexes.includes(testimonial.slug) && testimonial.hidden == false)
+                ]
+            );
+            // testimonials = data.allTestimonialsYaml.edges[0].node.testimonials.filter((testimonial) => yml.filter_indexes.includes(testimonial.slug) && testimonial.hidden === false);
+        } else {
+            setTestimonials( [
+                    ...data.allTestimonialsYaml.edges[0].node.testimonials.filter(f => f.hidden == false)
+                ]
+            );
         }
     }, []);
     
@@ -165,7 +194,7 @@ const SuccessStories = (props) => {
                 columnCount_tablet="3"
             >
                 {
-                    Array.isArray(testimonials.testimonials) && testimonials.testimonials.filter(f => f.hidden == false).map((m, i) => {
+                    testimonials.map((m, i) => {
                         return (
                             i < 9 &&
                             <TestimonialCard
@@ -175,10 +204,10 @@ const SuccessStories = (props) => {
                                 background={m.highlighted && Colors.darkYellow}
                                 name={m.student_name}
                                 short_content={m.short_content}
-                                
-                                description={m.content.length > 500 ? m.content.substring(0, 500) + "..." : m.content}
+                                // description={m.content.length > 500 && !m.isExpanded ? m.content.substring(0, 500) + "..." : m.content}
+                                description={m.content}
                                 video={m.student_video}
-
+                                lang={pageContext.lang}
                             />
                         )
                     })
