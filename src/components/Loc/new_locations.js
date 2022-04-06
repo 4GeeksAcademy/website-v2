@@ -62,7 +62,8 @@ const Loc = ({lang, yml}) => {
         {image &&
           <Div
             id="img-container"
-            width_tablet="20%"
+            width_tablet="30%"
+            maxWidth_tablet="270px"
             width_xs="100%"
             margin_tablet="0 20px 0 0"
             margin_xs="0 0 20px 0"
@@ -84,9 +85,10 @@ const Loc = ({lang, yml}) => {
           </Div>}
         <Div
           id="menu-container"
-          width_tablet="80%"
+          width_tablet="70%"
           width_xs="100%"
           display="block"
+          // flexShrink_tablet="0"
         >
           {choose && <Paragraph
             textAlign="left"
@@ -100,6 +102,7 @@ const Loc = ({lang, yml}) => {
             flexDirection_tablet="row"
             flexDirection_xs="column"
             width_xs="100%"
+            // flexShrink_tablet="0"
           >
             <Div
             id="options-container"
@@ -156,6 +159,7 @@ const Loc = ({lang, yml}) => {
           </Paragraph>
           <Div
             id="links-container"
+            // flexShrink_tablet="0"
             flexDirection="column"
             width_tablet="67%"
             width_xs="100%"
@@ -171,7 +175,7 @@ const Loc = ({lang, yml}) => {
                 <Link to={`/${lang}/coding-campus/${l.node.meta_info.slug}`} key={i}>
                   <Div
                     margin_tablet="2px 10px 2px 60px"
-                    margin_xs="2px 10px"
+                    margin_xs="2px 0"
                     padding="10px 0 0 0"
                     alignItems="baseline"
                   >

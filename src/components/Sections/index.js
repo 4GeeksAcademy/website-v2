@@ -223,6 +223,7 @@ export const Div = styled.div`
         flex: ${props => props.flex_tablet || props.size_tablet ? `0 0 ${(props.size_tablet / 12) * 100}%` : null};
         flex-flow: ${props => props.flexFlow_tablet};
         max-width: ${props => props.size_tablet ? `${(props.size_tablet / 12) * 100}%` : null};
+        max-width: ${props => props.maxWidth_tablet ? props.maxWidth_tablet : props.size_tablet ? `${(props.size_tablet / 12) * 100}%` : null};
         align-self: ${props => props.alignSelf_tablet};
         gap: ${props => props => props.gap_tablet};
         column-count: ${props => props.columnCount_tablet};
@@ -240,6 +241,7 @@ export const Div = styled.div`
         min-height: ${props => props.minHeight_tablet};
         height: ${props => props.height_tablet};
         flex: ${props => props.flex_tablet};
+        flex-shrink: ${props => props.flexShrink_tablet ? props.flexShrink_tablet : 1};
         border: ${props => props.border_tablet};
         border-top: ${props => props.borderTop_tablet};
         border-right: ${props => props.borderRight_tablet};
