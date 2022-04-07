@@ -26,12 +26,9 @@ const locations_fields = [
   { key: "longitude", type: "string", mandatory: true },
 ];
 
-const regionLists = [
-  'america',
-  'europe'
-]
+const regionLists = ["america", "europe"];
 
-let allLocations = {}
+let allLocations = {};
 
 walk(`${__dirname}/../data/location`, async (err, files) => {
   const academySlug = [];
@@ -83,8 +80,17 @@ walk(`${__dirname}/../data/location`, async (err, files) => {
       const location = doc.yaml;
       const meta_keys = Object.keys(location);
 
-      if(location.meta_info.region && !regionLists.includes(location.meta_info.region) ) {
-        fail(`Region ${location.meta_info.region} is not included, should be one of this: ${regionLists.map((reg)=> reg)}`);
+      if (
+        location.meta_info.region &&
+        !regionLists.includes(location.meta_info.region)
+      ) {
+        fail(
+          `Region ${
+            location.meta_info.region
+          } is not included, should be one of this: ${regionLists.map(
+            (reg) => reg
+          )}`
+        );
       }
       if (location.images_box.images !== null) {
         for (let i = 0; i < location.images_box.images.length; i++) {
