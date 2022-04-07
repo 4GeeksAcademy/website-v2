@@ -1,9 +1,8 @@
-import React from 'react';
-import {storiesOf} from '@storybook/react';
+import React from "react";
+import { storiesOf } from "@storybook/react";
 
-import { Title } from '.';
+import { Title } from ".";
 
-storiesOf('Title', module)
-    .add('Default', () => (
-        <Title>Full Stack Web Development</Title>
-    ));
+storiesOf("Title", module).add("Default", () => (
+  <Title>Full Stack Web Development</Title>
+));

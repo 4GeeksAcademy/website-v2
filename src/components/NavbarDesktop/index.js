@@ -165,7 +165,6 @@ export const Navbar = ({lang, currentURL, menu, open, button, onToggle, language
             width: 125
             placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
           )
-
         #   fixed(width: 125) {
         #     ...GatsbyImageSharpFixed
         #   } 

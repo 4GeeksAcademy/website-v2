@@ -2,7 +2,7 @@ const fs = require("fs");
 const { walk, loadYML, fail, success, loadMD } = require("../test/_utils");
 
 const onCreateRedirectsData = () => {
-  console.log('🔧 Creating Dictionary of Redirects...')
+  console.log("🔧 Creating Dictionary of Redirects...");
   let redirectsDict = [];
 
   //NOTE: ----------------- PAGE REDIRECTS -----------------
@@ -10,14 +10,14 @@ const onCreateRedirectsData = () => {
     if (err) fail("Error reding the Page files: ", err);
     const _files = files.filter(
       (f) =>
-        (f.indexOf('.yml') > 1 || f.indexOf('.yaml') > 1) &&
-        f.indexOf('test.us.yml') === -1
+        (f.indexOf(".yml") > 1 || f.indexOf(".yaml") > 1) &&
+        f.indexOf("test.us.yml") === -1
     );
     for (let i = 0; i < _files.length; i++) {
       const _path = _files[i];
       const doc = loadYML(_path);
-      const redirects = doc.yaml.meta_info.redirects
-      redirectsDict.push(...redirects)
+      const redirects = doc.yaml.meta_info.redirects;
+      redirectsDict.push(...redirects);
     }
 
     //NOTE: ----------------- COURSE REDIRECTS -----------------
@@ -26,8 +26,8 @@ const onCreateRedirectsData = () => {
       for (let i = 0; i < files.length; i++) {
         const _path = files[i];
         const doc = loadYML(_path);
-        const redirects = doc.yaml.meta_info.redirects
-        redirectsDict.push(...redirects)
+        const redirects = doc.yaml.meta_info.redirects;
+        redirectsDict.push(...redirects);
       }
 
       //NOTE: ----------------- LANDING REDIRECTS -----------------
@@ -35,14 +35,14 @@ const onCreateRedirectsData = () => {
         if (err) fail("Error reding the Landing files: ", err);
         const _files = files.filter(
           (f) =>
-            (f.indexOf('.yml') > 1 || f.indexOf('.yaml') > 1) &&
-            f.indexOf('template.us.yml') === -1
+            (f.indexOf(".yml") > 1 || f.indexOf(".yaml") > 1) &&
+            f.indexOf("template.us.yml") === -1
         );
         for (let i = 0; i < _files.length; i++) {
           const _path = _files[i];
           const doc = loadYML(_path);
-          const redirects = doc.yaml.meta_info.redirects
-          redirectsDict.push(...redirects)
+          const redirects = doc.yaml.meta_info.redirects;
+          redirectsDict.push(...redirects);
         }
 
         //NOTE: ----------------- JOB REDIRECTS -----------------
@@ -51,29 +51,35 @@ const onCreateRedirectsData = () => {
           for (let i = 0; i < files.length; i++) {
             const _path = files[i];
             const doc = loadYML(_path);
-            const redirects = doc.yaml.meta_info.redirects
-            redirectsDict.push(...redirects)
+            const redirects = doc.yaml.meta_info.redirects;
+            redirectsDict.push(...redirects);
           }
 
-        //NOTE: ----------------- LOCATION REDIRECTS -----------------
+          //NOTE: ----------------- LOCATION REDIRECTS -----------------
           walk(`${__dirname}/../data/location`, (err, files) => {
             if (err) fail("Error reding the location files: ", err);
             for (let i = 0; i < files.length; i++) {
               const _path = files[i];
               const doc = loadYML(_path);
-              const redirects = doc.yaml.meta_info.redirects
-              redirectsDict.push(...redirects)
+              const redirects = doc.yaml.meta_info.redirects;
+              redirectsDict.push(...redirects);
             }
-            const reducedRedirects = redirectsDict.filter((item, index) => redirectsDict.indexOf(item) === index);
+            const reducedRedirects = redirectsDict.filter(
+              (item, index) => redirectsDict.indexOf(item) === index
+            );
 
-            fs.writeFile(`${__dirname}/dictionaries/redirects.json`,
+            fs.writeFile(
+              `${__dirname}/dictionaries/redirects.json`,
               JSON.stringify(reducedRedirects),
               (err) => {
                 if (err) return console.log(err);
-                success(`\✅ DICTIONARY: Redirects created => ${__dirname}/dictionaries/redirects.json\n`);
-            });
+                success(
+                  `\✅ DICTIONARY: Redirects created => ${__dirname}/dictionaries/redirects.json\n`
+                );
+              }
+            );
           });
-        })
+        });
       });
     });
   });

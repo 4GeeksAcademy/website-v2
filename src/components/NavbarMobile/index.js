@@ -131,7 +131,6 @@ export const NavbarMobile = ({lang, menu, open, button, onToggle, languageButton
             width: 125
             placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
           )
-
         #   fixed(width: 125) {
         #     ...GatsbyImageSharpFixed
         #   } 

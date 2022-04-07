@@ -115,7 +115,6 @@ export const RoundImage = styled.div`
         css`
         transform: translateY(-${props => props.up});
     `}
-
     @media ${Break.lg}{
         width: ${props => props.w_lg};
         height: ${props => props.h_lg};
@@ -230,7 +229,6 @@ export const StyledBackgroundSection = styled(BackgroundSection)`
         background-position: ${props => props.backgroundPosition} !important;
     }
     @media ${Devices.xxs}{
-
     }
     @media ${Devices.xs}{
         
@@ -251,13 +249,10 @@ export const StyledBackgroundSection = styled(BackgroundSection)`
         width: ${props => props.width_md};
     }
     @media  ${Devices.lg}{
-
     }
     @media  ${Devices.xl}{
-
     }
     @media  ${Devices.xxl}{
-
     }
     `
 // @media ${Break.lg}{
@@ -345,7 +340,6 @@ export const Button = styled(SmartButton)`
     justify-self: ${props => props.justifySelf};
     justify-content: ${props => props.justifyContent};
     box-shadow: ${props => props.boxShadow};
-
     &:hover {
         background-color: ${props => props.colorHover};
         color: ${props => props.colorHoverText};
@@ -465,7 +459,6 @@ export const Anchor = styled(StyledLink)`
     text-decoration: underline;
   }
     @media ${Devices.xxs}{
-
     }
     @media ${Devices.xs}{
         
@@ -478,18 +471,13 @@ export const Anchor = styled(StyledLink)`
         
     }
     @media  ${Devices.md}{
-
     }
     @media  ${Devices.lg}{
-
     }
     @media  ${Devices.xl}{
-
     }
     @media  ${Devices.xxl}{
-
     }
-
 `
 //   @media ${Break.lg}{
 //     text-align: ${props => props.align_lg};

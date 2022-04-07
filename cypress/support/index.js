@@ -14,16 +14,15 @@
 // ***********************************************************
 
 // Import commands.js using ES2015 syntax:
-import './commands'
+import "./commands";
 // const options = {
 //   // Log console output only
 //   collectTypes: ["cons:log", "cons:info", "cons:warn", "cons:error"],
 // };
-require('cypress-terminal-report/src/installLogsCollector')();
-Cypress.on('uncaught:exception', (err, runnable) => {
-
-  return false
-})
+require("cypress-terminal-report/src/installLogsCollector")();
+Cypress.on("uncaught:exception", (err, runnable) => {
+  return false;
+});
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')

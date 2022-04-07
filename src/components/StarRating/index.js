@@ -1,14 +1,14 @@
-import React from 'react';
-import { Div } from '../Sections';
+import React from "react";
+import { Div } from "../Sections";
 
 const StarRating = ({ rating = 0 }) => {
   const getRate = (index, rate) => {
     if (Math.round(rate) === index && rate % 1 !== 0) {
-      return 'middle';
+      return "middle";
     } else if (index <= rate) {
-      return 'on';
+      return "on";
     }
-    return 'off';
+    return "off";
   };
   return (
     <Div

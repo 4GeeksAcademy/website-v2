@@ -1,8 +1,22 @@
-import React from 'react';
-export default props =>
-    <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="https://www.w3.org/2000/svg">
-        <path d="M11 1L6 6L1 1" stroke="#606060" strokeWidth="2" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
-    </svg>
+import React from "react";
+export default (props) => (
+  <svg
+    width="12"
+    height="7"
+    viewBox="0 0 12 7"
+    fill="none"
+    xmlns="https://www.w3.org/2000/svg"
+  >
+    <path
+      d="M11 1L6 6L1 1"
+      stroke="#606060"
+      strokeWidth="2"
+      strokeMiterlimit="10"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
 
 // export default props =>
 //     <svg className={props.className} style={props.style} width={props.width} height={props.height} viewBox="0 0 31 32" fill="none" xmlns="https://www.w3.org/2000/svg">
@@ -16,6 +30,3 @@ export default props =>
 //             </clipPath>
 //         </defs>
 //     </svg>
-
-
-

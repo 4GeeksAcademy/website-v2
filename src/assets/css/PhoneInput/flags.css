@@ -1,5 +1,5 @@
 .react-tel-input {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 15px;
   position: relative;
   width: 100%;
@@ -20,243 +20,723 @@
   visibility: hidden;
 }
 
-.react-tel-input .flag.ad { background-position: -48px -24px; }
-.react-tel-input .flag.ae { background-position: -72px -24px; }
-.react-tel-input .flag.af { background-position: -96px -24px; }
-.react-tel-input .flag.ag { background-position: -120px -24px; }
-.react-tel-input .flag.ai { background-position: -144px -24px; }
-.react-tel-input .flag.al { background-position: -168px -24px; }
-.react-tel-input .flag.am { background-position: -192px -24px; }
-.react-tel-input .flag.an { background-position: -216px -24px; }
-.react-tel-input .flag.ao { background-position: -240px -24px; }
-.react-tel-input .flag.aq { background-position: -264px -24px; }
-.react-tel-input .flag.ar { background-position: -288px -24px; }
-.react-tel-input .flag.as { background-position: -312px -24px; }
-.react-tel-input .flag.at { background-position: -336px -24px; }
-.react-tel-input .flag.au { background-position: -360px -24px; }
-.react-tel-input .flag.aw { background-position: -384px -24px; }
-.react-tel-input .flag.ax { background-position: -0px -48px; }
-.react-tel-input .flag.az { background-position: -24px -48px; }
-.react-tel-input .flag.ba { background-position: -48px -48px; }
-.react-tel-input .flag.bb { background-position: -72px -48px; }
-.react-tel-input .flag.bd { background-position: -96px -48px; }
-.react-tel-input .flag.be { background-position: -120px -48px; }
-.react-tel-input .flag.bf { background-position: -144px -48px; }
-.react-tel-input .flag.bg { background-position: -168px -48px; }
-.react-tel-input .flag.bh { background-position: -192px -48px; }
-.react-tel-input .flag.bi { background-position: -216px -48px; }
-.react-tel-input .flag.bj { background-position: -240px -48px; }
-.react-tel-input .flag.bl { background-position: -264px -48px; }
-.react-tel-input .flag.bm { background-position: -288px -48px; }
-.react-tel-input .flag.bn { background-position: -312px -48px; }
-.react-tel-input .flag.bo { background-position: -336px -48px; }
-.react-tel-input .flag.br { background-position: -360px -48px; }
-.react-tel-input .flag.bs { background-position: -384px -48px; }
-.react-tel-input .flag.bt { background-position: -0px -72px; }
-.react-tel-input .flag.bw { background-position: -24px -72px; }
-.react-tel-input .flag.by { background-position: -48px -72px; }
-.react-tel-input .flag.bz { background-position: -72px -72px; }
-.react-tel-input .flag.ca { background-position: -96px -72px; }
-.react-tel-input .flag.cc { background-position: -120px -72px; }
-.react-tel-input .flag.cd { background-position: -144px -72px; }
-.react-tel-input .flag.cf { background-position: -168px -72px; }
-.react-tel-input .flag.cg { background-position: -192px -72px; }
-.react-tel-input .flag.ch { background-position: -216px -72px; }
-.react-tel-input .flag.ci { background-position: -240px -72px; }
-.react-tel-input .flag.ck { background-position: -264px -72px; }
-.react-tel-input .flag.cl { background-position: -288px -72px; }
-.react-tel-input .flag.cm { background-position: -312px -72px; }
-.react-tel-input .flag.cn { background-position: -336px -72px; }
-.react-tel-input .flag.co { background-position: -360px -72px; }
-.react-tel-input .flag.cr { background-position: -384px -72px; }
-.react-tel-input .flag.cu { background-position: -0px -96px; }
-.react-tel-input .flag.cv { background-position: -24px -96px; }
-.react-tel-input .flag.cw { background-position: -48px -96px; }
-.react-tel-input .flag.cx { background-position: -72px -96px; }
-.react-tel-input .flag.cy { background-position: -96px -96px; }
-.react-tel-input .flag.cz { background-position: -120px -96px; }
-.react-tel-input .flag.de { background-position: -144px -96px; }
-.react-tel-input .flag.dj { background-position: -168px -96px; }
-.react-tel-input .flag.dk { background-position: -192px -96px; }
-.react-tel-input .flag.dm { background-position: -216px -96px; }
-.react-tel-input .flag.do { background-position: -240px -96px; }
-.react-tel-input .flag.dz { background-position: -264px -96px; }
-.react-tel-input .flag.ec { background-position: -288px -96px; }
-.react-tel-input .flag.ee { background-position: -312px -96px; }
-.react-tel-input .flag.eg { background-position: -336px -96px; }
-.react-tel-input .flag.eh { background-position: -360px -96px; }
-.react-tel-input .flag.er { background-position: -384px -96px; }
-.react-tel-input .flag.es { background-position: -0px -120px; }
-.react-tel-input .flag.et { background-position: -24px -120px; }
-.react-tel-input .flag.eu { background-position: -48px -120px; }
-.react-tel-input .flag.fi { background-position: -72px -120px; }
-.react-tel-input .flag.fj { background-position: -96px -120px; }
-.react-tel-input .flag.fk { background-position: -120px -120px; }
-.react-tel-input .flag.fm { background-position: -144px -120px; }
-.react-tel-input .flag.fo { background-position: -168px -120px; }
-.react-tel-input .flag.fr { background-position: -192px -120px; }
-.react-tel-input .flag.ga { background-position: -216px -120px; }
-.react-tel-input .flag.gb { background-position: -240px -120px; }
-.react-tel-input .flag.gd { background-position: -264px -120px; }
-.react-tel-input .flag.ge { background-position: -288px -120px; }
-.react-tel-input .flag.gg { background-position: -312px -120px; }
-.react-tel-input .flag.gh { background-position: -336px -120px; }
-.react-tel-input .flag.gi { background-position: -360px -120px; }
-.react-tel-input .flag.gl { background-position: -384px -120px; }
-.react-tel-input .flag.gm { background-position: -0px -144px; }
-.react-tel-input .flag.gn { background-position: -24px -144px; }
-.react-tel-input .flag.gq { background-position: -48px -144px; }
-.react-tel-input .flag.gr { background-position: -72px -144px; }
-.react-tel-input .flag.gs { background-position: -96px -144px; }
-.react-tel-input .flag.gt { background-position: -120px -144px; }
-.react-tel-input .flag.gu { background-position: -144px -144px; }
-.react-tel-input .flag.gw { background-position: -168px -144px; }
-.react-tel-input .flag.gy { background-position: -192px -144px; }
-.react-tel-input .flag.hk { background-position: -216px -144px; }
-.react-tel-input .flag.hn { background-position: -240px -144px; }
-.react-tel-input .flag.hr { background-position: -264px -144px; }
-.react-tel-input .flag.ht { background-position: -288px -144px; }
-.react-tel-input .flag.hu { background-position: -312px -144px; }
-.react-tel-input .flag.ic { background-position: -336px -144px; }
-.react-tel-input .flag.id { background-position: -360px -144px; }
-.react-tel-input .flag.ie { background-position: -384px -144px; }
-.react-tel-input .flag.il { background-position: -0px -168px; }
-.react-tel-input .flag.im { background-position: -24px -168px; }
-.react-tel-input .flag.in { background-position: -48px -168px; }
-.react-tel-input .flag.iq { background-position: -72px -168px; }
-.react-tel-input .flag.ir { background-position: -96px -168px; }
-.react-tel-input .flag.is { background-position: -120px -168px; }
-.react-tel-input .flag.it { background-position: -144px -168px; }
-.react-tel-input .flag.je { background-position: -168px -168px; }
-.react-tel-input .flag.jm { background-position: -192px -168px; }
-.react-tel-input .flag.jo { background-position: -216px -168px; }
-.react-tel-input .flag.jp { background-position: -240px -168px; }
-.react-tel-input .flag.ke { background-position: -264px -168px; }
-.react-tel-input .flag.kg { background-position: -288px -168px; }
-.react-tel-input .flag.kh { background-position: -312px -168px; }
-.react-tel-input .flag.ki { background-position: -336px -168px; }
-.react-tel-input .flag.km { background-position: -360px -168px; }
-.react-tel-input .flag.kn { background-position: -384px -168px; }
-.react-tel-input .flag.kp { background-position: -0px -192px; }
-.react-tel-input .flag.kr { background-position: -24px -192px; }
-.react-tel-input .flag.kw { background-position: -48px -192px; }
-.react-tel-input .flag.ky { background-position: -72px -192px; }
-.react-tel-input .flag.kz { background-position: -96px -192px; }
-.react-tel-input .flag.la { background-position: -120px -192px; }
-.react-tel-input .flag.lb { background-position: -144px -192px; }
-.react-tel-input .flag.lc { background-position: -168px -192px; }
-.react-tel-input .flag.li { background-position: -192px -192px; }
-.react-tel-input .flag.lk { background-position: -216px -192px; }
-.react-tel-input .flag.lr { background-position: -240px -192px; }
-.react-tel-input .flag.ls { background-position: -264px -192px; }
-.react-tel-input .flag.lt { background-position: -288px -192px; }
-.react-tel-input .flag.lu { background-position: -312px -192px; }
-.react-tel-input .flag.lv { background-position: -336px -192px; }
-.react-tel-input .flag.ly { background-position: -360px -192px; }
-.react-tel-input .flag.ma { background-position: -384px -192px; }
-.react-tel-input .flag.mc { background-position: -0px -216px; }
-.react-tel-input .flag.md { background-position: -24px -216px; }
-.react-tel-input .flag.me { background-position: -48px -216px; }
-.react-tel-input .flag.mf { background-position: -72px -216px; }
-.react-tel-input .flag.mg { background-position: -96px -216px; }
-.react-tel-input .flag.mh { background-position: -120px -216px; }
-.react-tel-input .flag.mk { background-position: -144px -216px; }
-.react-tel-input .flag.ml { background-position: -168px -216px; }
-.react-tel-input .flag.mm { background-position: -192px -216px; }
-.react-tel-input .flag.mn { background-position: -216px -216px; }
-.react-tel-input .flag.mo { background-position: -240px -216px; }
-.react-tel-input .flag.mp { background-position: -264px -216px; }
-.react-tel-input .flag.mq { background-position: -288px -216px; }
-.react-tel-input .flag.mr { background-position: -312px -216px; }
-.react-tel-input .flag.ms { background-position: -336px -216px; }
-.react-tel-input .flag.mt { background-position: -360px -216px; }
-.react-tel-input .flag.mu { background-position: -384px -216px; }
-.react-tel-input .flag.mv { background-position: -0px -240px; }
-.react-tel-input .flag.mw { background-position: -24px -240px; }
-.react-tel-input .flag.mx { background-position: -48px -240px; }
-.react-tel-input .flag.my { background-position: -72px -240px; }
-.react-tel-input .flag.mz { background-position: -96px -240px; }
-.react-tel-input .flag.na { background-position: -120px -240px; }
-.react-tel-input .flag.nc { background-position: -144px -240px; }
-.react-tel-input .flag.ne { background-position: -168px -240px; }
-.react-tel-input .flag.nf { background-position: -192px -240px; }
-.react-tel-input .flag.ng { background-position: -216px -240px; }
-.react-tel-input .flag.ni { background-position: -240px -240px; }
-.react-tel-input .flag.nl { background-position: -264px -240px; }
-.react-tel-input .flag.no { background-position: -288px -240px; }
-.react-tel-input .flag.np { background-position: -312px -240px; }
-.react-tel-input .flag.nr { background-position: -336px -240px; }
-.react-tel-input .flag.nu { background-position: -360px -240px; }
-.react-tel-input .flag.nz { background-position: -384px -240px; }
-.react-tel-input .flag.om { background-position: -0px -264px; }
-.react-tel-input .flag.pa { background-position: -24px -264px; }
-.react-tel-input .flag.pe { background-position: -48px -264px; }
-.react-tel-input .flag.pf { background-position: -72px -264px; }
-.react-tel-input .flag.pg { background-position: -96px -264px; }
-.react-tel-input .flag.ph { background-position: -120px -264px; }
-.react-tel-input .flag.pk { background-position: -192px -264px; }
-.react-tel-input .flag.pl { background-position: -216px -264px; }
-.react-tel-input .flag.pn { background-position: -240px -264px; }
-.react-tel-input .flag.pr { background-position: -264px -264px; }
-.react-tel-input .flag.ps { background-position: -288px -264px; }
-.react-tel-input .flag.pt { background-position: -312px -264px; }
-.react-tel-input .flag.pw { background-position: -336px -264px; }
-.react-tel-input .flag.py { background-position: -360px -264px; }
-.react-tel-input .flag.qa { background-position: -384px -264px; }
-.react-tel-input .flag.ro { background-position: -0px -288px; }
-.react-tel-input .flag.rs { background-position: -24px -288px; }
-.react-tel-input .flag.ru { background-position: -48px -288px; }
-.react-tel-input .flag.rw { background-position: -72px -288px; }
-.react-tel-input .flag.sa { background-position: -96px -288px; }
-.react-tel-input .flag.sb { background-position: -120px -288px; }
-.react-tel-input .flag.sc { background-position: -144px -288px; }
-.react-tel-input .flag.sd { background-position: -168px -288px; }
-.react-tel-input .flag.se { background-position: -192px -288px; }
-.react-tel-input .flag.sg { background-position: -216px -288px; }
-.react-tel-input .flag.sh { background-position: -240px -288px; }
-.react-tel-input .flag.si { background-position: -264px -288px; }
-.react-tel-input .flag.sk { background-position: -288px -288px; }
-.react-tel-input .flag.sl { background-position: -312px -288px; }
-.react-tel-input .flag.sm { background-position: -336px -288px; }
-.react-tel-input .flag.sn { background-position: -360px -288px; }
-.react-tel-input .flag.so { background-position: -384px -288px; }
-.react-tel-input .flag.sr { background-position: -0px -312px; }
-.react-tel-input .flag.ss { background-position: -24px -312px; }
-.react-tel-input .flag.st { background-position: -48px -312px; }
-.react-tel-input .flag.sv { background-position: -72px -312px; }
-.react-tel-input .flag.sy { background-position: -96px -312px; }
-.react-tel-input .flag.sz { background-position: -120px -312px; }
-.react-tel-input .flag.tc { background-position: -144px -312px; }
-.react-tel-input .flag.td { background-position: -168px -312px; }
-.react-tel-input .flag.tf { background-position: -192px -312px; }
-.react-tel-input .flag.tg { background-position: -216px -312px; }
-.react-tel-input .flag.th { background-position: -240px -312px; }
-.react-tel-input .flag.tj { background-position: -264px -312px; }
-.react-tel-input .flag.tk { background-position: -288px -312px; }
-.react-tel-input .flag.tl { background-position: -312px -312px; }
-.react-tel-input .flag.tm { background-position: -336px -312px; }
-.react-tel-input .flag.tn { background-position: -360px -312px; }
-.react-tel-input .flag.to { background-position: -384px -312px; }
-.react-tel-input .flag.tr { background-position: -0px -336px; }
-.react-tel-input .flag.tt { background-position: -24px -336px; }
-.react-tel-input .flag.tv { background-position: -48px -336px; }
-.react-tel-input .flag.tw { background-position: -72px -336px; }
-.react-tel-input .flag.tz { background-position: -96px -336px; }
-.react-tel-input .flag.ua { background-position: -120px -336px; }
-.react-tel-input .flag.ug { background-position: -144px -336px; }
-.react-tel-input .flag.us { background-position: -168px -336px; }
-.react-tel-input .flag.uy { background-position: -192px -336px; }
-.react-tel-input .flag.uz { background-position: -216px -336px; }
-.react-tel-input .flag.va { background-position: -240px -336px; }
-.react-tel-input .flag.vc { background-position: -264px -336px; }
-.react-tel-input .flag.ve { background-position: -288px -336px; }
-.react-tel-input .flag.vg { background-position: -312px -336px; }
-.react-tel-input .flag.vi { background-position: -336px -336px; }
-.react-tel-input .flag.vn { background-position: -360px -336px; }
-.react-tel-input .flag.vu { background-position: -384px -336px; }
-.react-tel-input .flag.wf { background-position: -0px -360px; }
-.react-tel-input .flag.ws { background-position: -24px -360px; }
-.react-tel-input .flag.ye { background-position: -48px -360px; }
-.react-tel-input .flag.za { background-position: -96px -360px; }
-.react-tel-input .flag.zm { background-position: -120px -360px; }
-.react-tel-input .flag.zw { background-position: -144px -360px; }
+.react-tel-input .flag.ad {
+  background-position: -48px -24px;
+}
+.react-tel-input .flag.ae {
+  background-position: -72px -24px;
+}
+.react-tel-input .flag.af {
+  background-position: -96px -24px;
+}
+.react-tel-input .flag.ag {
+  background-position: -120px -24px;
+}
+.react-tel-input .flag.ai {
+  background-position: -144px -24px;
+}
+.react-tel-input .flag.al {
+  background-position: -168px -24px;
+}
+.react-tel-input .flag.am {
+  background-position: -192px -24px;
+}
+.react-tel-input .flag.an {
+  background-position: -216px -24px;
+}
+.react-tel-input .flag.ao {
+  background-position: -240px -24px;
+}
+.react-tel-input .flag.aq {
+  background-position: -264px -24px;
+}
+.react-tel-input .flag.ar {
+  background-position: -288px -24px;
+}
+.react-tel-input .flag.as {
+  background-position: -312px -24px;
+}
+.react-tel-input .flag.at {
+  background-position: -336px -24px;
+}
+.react-tel-input .flag.au {
+  background-position: -360px -24px;
+}
+.react-tel-input .flag.aw {
+  background-position: -384px -24px;
+}
+.react-tel-input .flag.ax {
+  background-position: -0px -48px;
+}
+.react-tel-input .flag.az {
+  background-position: -24px -48px;
+}
+.react-tel-input .flag.ba {
+  background-position: -48px -48px;
+}
+.react-tel-input .flag.bb {
+  background-position: -72px -48px;
+}
+.react-tel-input .flag.bd {
+  background-position: -96px -48px;
+}
+.react-tel-input .flag.be {
+  background-position: -120px -48px;
+}
+.react-tel-input .flag.bf {
+  background-position: -144px -48px;
+}
+.react-tel-input .flag.bg {
+  background-position: -168px -48px;
+}
+.react-tel-input .flag.bh {
+  background-position: -192px -48px;
+}
+.react-tel-input .flag.bi {
+  background-position: -216px -48px;
+}
+.react-tel-input .flag.bj {
+  background-position: -240px -48px;
+}
+.react-tel-input .flag.bl {
+  background-position: -264px -48px;
+}
+.react-tel-input .flag.bm {
+  background-position: -288px -48px;
+}
+.react-tel-input .flag.bn {
+  background-position: -312px -48px;
+}
+.react-tel-input .flag.bo {
+  background-position: -336px -48px;
+}
+.react-tel-input .flag.br {
+  background-position: -360px -48px;
+}
+.react-tel-input .flag.bs {
+  background-position: -384px -48px;
+}
+.react-tel-input .flag.bt {
+  background-position: -0px -72px;
+}
+.react-tel-input .flag.bw {
+  background-position: -24px -72px;
+}
+.react-tel-input .flag.by {
+  background-position: -48px -72px;
+}
+.react-tel-input .flag.bz {
+  background-position: -72px -72px;
+}
+.react-tel-input .flag.ca {
+  background-position: -96px -72px;
+}
+.react-tel-input .flag.cc {
+  background-position: -120px -72px;
+}
+.react-tel-input .flag.cd {
+  background-position: -144px -72px;
+}
+.react-tel-input .flag.cf {
+  background-position: -168px -72px;
+}
+.react-tel-input .flag.cg {
+  background-position: -192px -72px;
+}
+.react-tel-input .flag.ch {
+  background-position: -216px -72px;
+}
+.react-tel-input .flag.ci {
+  background-position: -240px -72px;
+}
+.react-tel-input .flag.ck {
+  background-position: -264px -72px;
+}
+.react-tel-input .flag.cl {
+  background-position: -288px -72px;
+}
+.react-tel-input .flag.cm {
+  background-position: -312px -72px;
+}
+.react-tel-input .flag.cn {
+  background-position: -336px -72px;
+}
+.react-tel-input .flag.co {
+  background-position: -360px -72px;
+}
+.react-tel-input .flag.cr {
+  background-position: -384px -72px;
+}
+.react-tel-input .flag.cu {
+  background-position: -0px -96px;
+}
+.react-tel-input .flag.cv {
+  background-position: -24px -96px;
+}
+.react-tel-input .flag.cw {
+  background-position: -48px -96px;
+}
+.react-tel-input .flag.cx {
+  background-position: -72px -96px;
+}
+.react-tel-input .flag.cy {
+  background-position: -96px -96px;
+}
+.react-tel-input .flag.cz {
+  background-position: -120px -96px;
+}
+.react-tel-input .flag.de {
+  background-position: -144px -96px;
+}
+.react-tel-input .flag.dj {
+  background-position: -168px -96px;
+}
+.react-tel-input .flag.dk {
+  background-position: -192px -96px;
+}
+.react-tel-input .flag.dm {
+  background-position: -216px -96px;
+}
+.react-tel-input .flag.do {
+  background-position: -240px -96px;
+}
+.react-tel-input .flag.dz {
+  background-position: -264px -96px;
+}
+.react-tel-input .flag.ec {
+  background-position: -288px -96px;
+}
+.react-tel-input .flag.ee {
+  background-position: -312px -96px;
+}
+.react-tel-input .flag.eg {
+  background-position: -336px -96px;
+}
+.react-tel-input .flag.eh {
+  background-position: -360px -96px;
+}
+.react-tel-input .flag.er {
+  background-position: -384px -96px;
+}
+.react-tel-input .flag.es {
+  background-position: -0px -120px;
+}
+.react-tel-input .flag.et {
+  background-position: -24px -120px;
+}
+.react-tel-input .flag.eu {
+  background-position: -48px -120px;
+}
+.react-tel-input .flag.fi {
+  background-position: -72px -120px;
+}
+.react-tel-input .flag.fj {
+  background-position: -96px -120px;
+}
+.react-tel-input .flag.fk {
+  background-position: -120px -120px;
+}
+.react-tel-input .flag.fm {
+  background-position: -144px -120px;
+}
+.react-tel-input .flag.fo {
+  background-position: -168px -120px;
+}
+.react-tel-input .flag.fr {
+  background-position: -192px -120px;
+}
+.react-tel-input .flag.ga {
+  background-position: -216px -120px;
+}
+.react-tel-input .flag.gb {
+  background-position: -240px -120px;
+}
+.react-tel-input .flag.gd {
+  background-position: -264px -120px;
+}
+.react-tel-input .flag.ge {
+  background-position: -288px -120px;
+}
+.react-tel-input .flag.gg {
+  background-position: -312px -120px;
+}
+.react-tel-input .flag.gh {
+  background-position: -336px -120px;
+}
+.react-tel-input .flag.gi {
+  background-position: -360px -120px;
+}
+.react-tel-input .flag.gl {
+  background-position: -384px -120px;
+}
+.react-tel-input .flag.gm {
+  background-position: -0px -144px;
+}
+.react-tel-input .flag.gn {
+  background-position: -24px -144px;
+}
+.react-tel-input .flag.gq {
+  background-position: -48px -144px;
+}
+.react-tel-input .flag.gr {
+  background-position: -72px -144px;
+}
+.react-tel-input .flag.gs {
+  background-position: -96px -144px;
+}
+.react-tel-input .flag.gt {
+  background-position: -120px -144px;
+}
+.react-tel-input .flag.gu {
+  background-position: -144px -144px;
+}
+.react-tel-input .flag.gw {
+  background-position: -168px -144px;
+}
+.react-tel-input .flag.gy {
+  background-position: -192px -144px;
+}
+.react-tel-input .flag.hk {
+  background-position: -216px -144px;
+}
+.react-tel-input .flag.hn {
+  background-position: -240px -144px;
+}
+.react-tel-input .flag.hr {
+  background-position: -264px -144px;
+}
+.react-tel-input .flag.ht {
+  background-position: -288px -144px;
+}
+.react-tel-input .flag.hu {
+  background-position: -312px -144px;
+}
+.react-tel-input .flag.ic {
+  background-position: -336px -144px;
+}
+.react-tel-input .flag.id {
+  background-position: -360px -144px;
+}
+.react-tel-input .flag.ie {
+  background-position: -384px -144px;
+}
+.react-tel-input .flag.il {
+  background-position: -0px -168px;
+}
+.react-tel-input .flag.im {
+  background-position: -24px -168px;
+}
+.react-tel-input .flag.in {
+  background-position: -48px -168px;
+}
+.react-tel-input .flag.iq {
+  background-position: -72px -168px;
+}
+.react-tel-input .flag.ir {
+  background-position: -96px -168px;
+}
+.react-tel-input .flag.is {
+  background-position: -120px -168px;
+}
+.react-tel-input .flag.it {
+  background-position: -144px -168px;
+}
+.react-tel-input .flag.je {
+  background-position: -168px -168px;
+}
+.react-tel-input .flag.jm {
+  background-position: -192px -168px;
+}
+.react-tel-input .flag.jo {
+  background-position: -216px -168px;
+}
+.react-tel-input .flag.jp {
+  background-position: -240px -168px;
+}
+.react-tel-input .flag.ke {
+  background-position: -264px -168px;
+}
+.react-tel-input .flag.kg {
+  background-position: -288px -168px;
+}
+.react-tel-input .flag.kh {
+  background-position: -312px -168px;
+}
+.react-tel-input .flag.ki {
+  background-position: -336px -168px;
+}
+.react-tel-input .flag.km {
+  background-position: -360px -168px;
+}
+.react-tel-input .flag.kn {
+  background-position: -384px -168px;
+}
+.react-tel-input .flag.kp {
+  background-position: -0px -192px;
+}
+.react-tel-input .flag.kr {
+  background-position: -24px -192px;
+}
+.react-tel-input .flag.kw {
+  background-position: -48px -192px;
+}
+.react-tel-input .flag.ky {
+  background-position: -72px -192px;
+}
+.react-tel-input .flag.kz {
+  background-position: -96px -192px;
+}
+.react-tel-input .flag.la {
+  background-position: -120px -192px;
+}
+.react-tel-input .flag.lb {
+  background-position: -144px -192px;
+}
+.react-tel-input .flag.lc {
+  background-position: -168px -192px;
+}
+.react-tel-input .flag.li {
+  background-position: -192px -192px;
+}
+.react-tel-input .flag.lk {
+  background-position: -216px -192px;
+}
+.react-tel-input .flag.lr {
+  background-position: -240px -192px;
+}
+.react-tel-input .flag.ls {
+  background-position: -264px -192px;
+}
+.react-tel-input .flag.lt {
+  background-position: -288px -192px;
+}
+.react-tel-input .flag.lu {
+  background-position: -312px -192px;
+}
+.react-tel-input .flag.lv {
+  background-position: -336px -192px;
+}
+.react-tel-input .flag.ly {
+  background-position: -360px -192px;
+}
+.react-tel-input .flag.ma {
+  background-position: -384px -192px;
+}
+.react-tel-input .flag.mc {
+  background-position: -0px -216px;
+}
+.react-tel-input .flag.md {
+  background-position: -24px -216px;
+}
+.react-tel-input .flag.me {
+  background-position: -48px -216px;
+}
+.react-tel-input .flag.mf {
+  background-position: -72px -216px;
+}
+.react-tel-input .flag.mg {
+  background-position: -96px -216px;
+}
+.react-tel-input .flag.mh {
+  background-position: -120px -216px;
+}
+.react-tel-input .flag.mk {
+  background-position: -144px -216px;
+}
+.react-tel-input .flag.ml {
+  background-position: -168px -216px;
+}
+.react-tel-input .flag.mm {
+  background-position: -192px -216px;
+}
+.react-tel-input .flag.mn {
+  background-position: -216px -216px;
+}
+.react-tel-input .flag.mo {
+  background-position: -240px -216px;
+}
+.react-tel-input .flag.mp {
+  background-position: -264px -216px;
+}
+.react-tel-input .flag.mq {
+  background-position: -288px -216px;
+}
+.react-tel-input .flag.mr {
+  background-position: -312px -216px;
+}
+.react-tel-input .flag.ms {
+  background-position: -336px -216px;
+}
+.react-tel-input .flag.mt {
+  background-position: -360px -216px;
+}
+.react-tel-input .flag.mu {
+  background-position: -384px -216px;
+}
+.react-tel-input .flag.mv {
+  background-position: -0px -240px;
+}
+.react-tel-input .flag.mw {
+  background-position: -24px -240px;
+}
+.react-tel-input .flag.mx {
+  background-position: -48px -240px;
+}
+.react-tel-input .flag.my {
+  background-position: -72px -240px;
+}
+.react-tel-input .flag.mz {
+  background-position: -96px -240px;
+}
+.react-tel-input .flag.na {
+  background-position: -120px -240px;
+}
+.react-tel-input .flag.nc {
+  background-position: -144px -240px;
+}
+.react-tel-input .flag.ne {
+  background-position: -168px -240px;
+}
+.react-tel-input .flag.nf {
+  background-position: -192px -240px;
+}
+.react-tel-input .flag.ng {
+  background-position: -216px -240px;
+}
+.react-tel-input .flag.ni {
+  background-position: -240px -240px;
+}
+.react-tel-input .flag.nl {
+  background-position: -264px -240px;
+}
+.react-tel-input .flag.no {
+  background-position: -288px -240px;
+}
+.react-tel-input .flag.np {
+  background-position: -312px -240px;
+}
+.react-tel-input .flag.nr {
+  background-position: -336px -240px;
+}
+.react-tel-input .flag.nu {
+  background-position: -360px -240px;
+}
+.react-tel-input .flag.nz {
+  background-position: -384px -240px;
+}
+.react-tel-input .flag.om {
+  background-position: -0px -264px;
+}
+.react-tel-input .flag.pa {
+  background-position: -24px -264px;
+}
+.react-tel-input .flag.pe {
+  background-position: -48px -264px;
+}
+.react-tel-input .flag.pf {
+  background-position: -72px -264px;
+}
+.react-tel-input .flag.pg {
+  background-position: -96px -264px;
+}
+.react-tel-input .flag.ph {
+  background-position: -120px -264px;
+}
+.react-tel-input .flag.pk {
+  background-position: -192px -264px;
+}
+.react-tel-input .flag.pl {
+  background-position: -216px -264px;
+}
+.react-tel-input .flag.pn {
+  background-position: -240px -264px;
+}
+.react-tel-input .flag.pr {
+  background-position: -264px -264px;
+}
+.react-tel-input .flag.ps {
+  background-position: -288px -264px;
+}
+.react-tel-input .flag.pt {
+  background-position: -312px -264px;
+}
+.react-tel-input .flag.pw {
+  background-position: -336px -264px;
+}
+.react-tel-input .flag.py {
+  background-position: -360px -264px;
+}
+.react-tel-input .flag.qa {
+  background-position: -384px -264px;
+}
+.react-tel-input .flag.ro {
+  background-position: -0px -288px;
+}
+.react-tel-input .flag.rs {
+  background-position: -24px -288px;
+}
+.react-tel-input .flag.ru {
+  background-position: -48px -288px;
+}
+.react-tel-input .flag.rw {
+  background-position: -72px -288px;
+}
+.react-tel-input .flag.sa {
+  background-position: -96px -288px;
+}
+.react-tel-input .flag.sb {
+  background-position: -120px -288px;
+}
+.react-tel-input .flag.sc {
+  background-position: -144px -288px;
+}
+.react-tel-input .flag.sd {
+  background-position: -168px -288px;
+}
+.react-tel-input .flag.se {
+  background-position: -192px -288px;
+}
+.react-tel-input .flag.sg {
+  background-position: -216px -288px;
+}
+.react-tel-input .flag.sh {
+  background-position: -240px -288px;
+}
+.react-tel-input .flag.si {
+  background-position: -264px -288px;
+}
+.react-tel-input .flag.sk {
+  background-position: -288px -288px;
+}
+.react-tel-input .flag.sl {
+  background-position: -312px -288px;
+}
+.react-tel-input .flag.sm {
+  background-position: -336px -288px;
+}
+.react-tel-input .flag.sn {
+  background-position: -360px -288px;
+}
+.react-tel-input .flag.so {
+  background-position: -384px -288px;
+}
+.react-tel-input .flag.sr {
+  background-position: -0px -312px;
+}
+.react-tel-input .flag.ss {
+  background-position: -24px -312px;
+}
+.react-tel-input .flag.st {
+  background-position: -48px -312px;
+}
+.react-tel-input .flag.sv {
+  background-position: -72px -312px;
+}
+.react-tel-input .flag.sy {
+  background-position: -96px -312px;
+}
+.react-tel-input .flag.sz {
+  background-position: -120px -312px;
+}
+.react-tel-input .flag.tc {
+  background-position: -144px -312px;
+}
+.react-tel-input .flag.td {
+  background-position: -168px -312px;
+}
+.react-tel-input .flag.tf {
+  background-position: -192px -312px;
+}
+.react-tel-input .flag.tg {
+  background-position: -216px -312px;
+}
+.react-tel-input .flag.th {
+  background-position: -240px -312px;
+}
+.react-tel-input .flag.tj {
+  background-position: -264px -312px;
+}
+.react-tel-input .flag.tk {
+  background-position: -288px -312px;
+}
+.react-tel-input .flag.tl {
+  background-position: -312px -312px;
+}
+.react-tel-input .flag.tm {
+  background-position: -336px -312px;
+}
+.react-tel-input .flag.tn {
+  background-position: -360px -312px;
+}
+.react-tel-input .flag.to {
+  background-position: -384px -312px;
+}
+.react-tel-input .flag.tr {
+  background-position: -0px -336px;
+}
+.react-tel-input .flag.tt {
+  background-position: -24px -336px;
+}
+.react-tel-input .flag.tv {
+  background-position: -48px -336px;
+}
+.react-tel-input .flag.tw {
+  background-position: -72px -336px;
+}
+.react-tel-input .flag.tz {
+  background-position: -96px -336px;
+}
+.react-tel-input .flag.ua {
+  background-position: -120px -336px;
+}
+.react-tel-input .flag.ug {
+  background-position: -144px -336px;
+}
+.react-tel-input .flag.us {
+  background-position: -168px -336px;
+}
+.react-tel-input .flag.uy {
+  background-position: -192px -336px;
+}
+.react-tel-input .flag.uz {
+  background-position: -216px -336px;
+}
+.react-tel-input .flag.va {
+  background-position: -240px -336px;
+}
+.react-tel-input .flag.vc {
+  background-position: -264px -336px;
+}
+.react-tel-input .flag.ve {
+  background-position: -288px -336px;
+}
+.react-tel-input .flag.vg {
+  background-position: -312px -336px;
+}
+.react-tel-input .flag.vi {
+  background-position: -336px -336px;
+}
+.react-tel-input .flag.vn {
+  background-position: -360px -336px;
+}
+.react-tel-input .flag.vu {
+  background-position: -384px -336px;
+}
+.react-tel-input .flag.wf {
+  background-position: -0px -360px;
+}
+.react-tel-input .flag.ws {
+  background-position: -24px -360px;
+}
+.react-tel-input .flag.ye {
+  background-position: -48px -360px;
+}
+.react-tel-input .flag.za {
+  background-position: -96px -360px;
+}
+.react-tel-input .flag.zm {
+  background-position: -120px -360px;
+}
+.react-tel-input .flag.zw {
+  background-position: -144px -360px;
+}

@@ -130,7 +130,7 @@ export const HR = styled.hr`
 export const Div = styled.div`
     flex: ${props => props.flex || props.size ? `0 0 ${(props.size / 12) * 100}%` : null};
     max-width: ${props => props.size ? `${(props.size / 12) * 100}%` : props.maxWidth || null};
-    max-height: ${props => props.maxHeight};
+    max-height: ${props => props.maxHeight ? props.maxHeight : 'none'};
     overflow-x: ${props => props.overflowX};
     grid-area: ${props => props.gridArea};
     place-self: ${props => props.placeSelf};
@@ -187,13 +187,11 @@ export const Div = styled.div`
         left: ${props => props.leftAfter};
         right: ${props => props.rightAfter};
     }
-
     &:hover { 
         background: ${props => props.backgroundHover};
         border-bottom: ${props => props.borderBottomHover};
     }
     @media ${Devices.xxs}{
-
     }
     @media ${Devices.xs}{
         padding: ${props => props.padding_xs};
@@ -288,10 +286,8 @@ export const Div = styled.div`
         padding: ${props => props.padding_lg};
     }
     @media  ${Devices.xl}{
-
     }
     @media  ${Devices.xxl}{
-
     }
 `
 
@@ -359,7 +355,6 @@ export const Old_Grid = styled.div`
     background: ${props => props.background};
     padding: ${props => props.padding};
     margin: ${props => props.margin};
-
     @media ${Devices.xxs}{
         grid-template-columns: ${props => props.columns_xxs ? `repeat(${props.columns_xxs}, 1fr)` : null};
     }
@@ -445,13 +440,11 @@ export const Row = styled(Div)`
     margin-bottom: ${props => props.marginBottom};
     justify-content: ${props => props.justifyContent};
     padding: ${props => props.padding};
-
     &:hover { 
         background: ${props => props.backgroundHover};
         margin: ${props => props.marginHover};
         border-radius: ${props => props.borderRadiusHover};
     }
-
     @media  ${Break.sm}{
         width: ${props => props.width_sm};
         display: ${props => props.display_sm};
@@ -483,7 +476,6 @@ export const Column = styled(Div)`
     display: ${props => props.display};
     flex: 0 0 ${props => (props.size / 12) * 100}%;
     max-width: ${props => (props.size / 12) * 100}%;
-
     ${props => props.masonry && 'display: inline-block;'}
     border-radius: ${props => props.borderRadius};
        

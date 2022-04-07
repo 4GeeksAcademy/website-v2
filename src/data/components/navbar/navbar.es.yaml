@@ -69,7 +69,7 @@ navbar:
               link_to: "/es/alumnos-y-proyectos"
             # - title: "Testimonios"
             #   link_to: "/es/testimonios"
-  
+
   - name: "Academia"
     link: "/es/sobre-la-academia"
     sub_menu:
@@ -90,7 +90,7 @@ navbar:
               link_to: "/es/alianzas"
             - title: "Trabaja con Nosotros"
               link_to: "/es/empleo"
-  
+
   - name: "Campus"
     link: "/partners"
     sub_menu:
@@ -160,8 +160,8 @@ navbar:
             - title: "Uruguay"
               link_to: "/us/coding-campus/coding-bootcamp-uruguay"
             - title: "Venezuela"
-              link_to: "/us/coding-campus/coding-bootcamp-caracas"
-  
+              link_to: "/es/coding-campus/bootcamp-programacion-venezuela"
+
   - name: "Próximas Fechas"
     link: "/es/proximas-fechas"
 

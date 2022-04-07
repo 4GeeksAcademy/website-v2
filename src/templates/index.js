@@ -274,6 +274,7 @@ export const query = graphql`
                 images {
                   name
                   locations
+                  link
                   image {
                     childImageSharp {
                       gatsbyImageData(
@@ -281,7 +282,6 @@ export const query = graphql`
                         width: 150
                         placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                       )
-
                     }
                   }
                   featured
@@ -399,7 +399,6 @@ export const query = graphql`
                       width: 800
                       placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                     )
-
                     # fluid(maxWidth: 800){
                     #   ...GatsbyImageSharpFluid_withWebp
                     # }
