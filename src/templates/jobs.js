@@ -1,12 +1,12 @@
-import React from 'react';
-import {Header} from '../components/Sections'
-import BaseRender from './_baseLayout'
-import JobInfo from '../components/JobInfo'
-import {isCustomBarActive} from '../actions';
-import {SessionContext} from '../session'
+import React from "react";
+import { Header } from "../components/Sections";
+import BaseRender from "./_baseLayout";
+import JobInfo from "../components/JobInfo";
+import { isCustomBarActive } from "../actions";
+import { SessionContext } from "../session";
 
-const Jobs = ({data, pageContext, yml}) => {
-  const {session} = React.useContext(SessionContext);
+const Jobs = ({ data, pageContext, yml }) => {
+  const { session } = React.useContext(SessionContext);
   return (
     <>
       <Header
@@ -17,17 +17,17 @@ const Jobs = ({data, pageContext, yml}) => {
         padding_tablet="72px 0 40px 0"
       />
       <JobInfo />
-
     </>
-  )
+  );
 };
 export const query = graphql`
   query JobsQuery($file_name: String!, $lang: String!) {
-    allPageYaml(filter: { fields: { file_name: { eq: $file_name }, lang: { eq: $lang }}}) {
-      edges{
-        node{
-          
-          meta_info{
+    allPageYaml(
+      filter: { fields: { file_name: { eq: $file_name }, lang: { eq: $lang } } }
+    ) {
+      edges {
+        node {
+          meta_info {
             slug
             title
             description
@@ -35,10 +35,10 @@ export const query = graphql`
             keywords
           }
           seo_title
-          header{
+          header {
             title
             paragraph
-            image{
+            image {
               childImageSharp {
                 gatsbyImageData(
                   layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
@@ -49,7 +49,7 @@ export const query = graphql`
                 #   ...GatsbyImageSharpFluid_withWebp
                 # }
               }
-            } 
+            }
           }
         }
       }
@@ -58,8 +58,8 @@ export const query = graphql`
 `;
 export default BaseRender(Jobs);
 
-
-{/* <WrapperImage
+{
+  /* <WrapperImage
 
 imageData={yml.header.image && yml.header.image.childImageSharp.fluid}
 className={`img-header`}
@@ -156,4 +156,5 @@ github={`/page/jobs.${pageContext.lang}.yml`}
 </Row>
 </Wrapper>
 
-<Divider height="480px" /> */}
+<Divider height="480px" /> */
+}

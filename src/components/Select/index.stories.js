@@ -1,9 +1,6 @@
-import React from 'react';
-import {storiesOf} from '@storybook/react';
+import React from "react";
+import { storiesOf } from "@storybook/react";
 
-import ChooseProgram from '.';
+import ChooseProgram from ".";
 
-storiesOf('ChooseProgram', module)
-    .add('Default', () => (
-        <ChooseProgram />
-    ));
+storiesOf("ChooseProgram", module).add("Default", () => <ChooseProgram />);

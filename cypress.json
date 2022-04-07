@@ -2,6 +2,6 @@
   "baseUrl": "http://localhost:8000",
   "video": false,
   "screenshotOnRunFailure": false,
-  "watchForFileChanges":	true,
+  "watchForFileChanges": true,
   "chromeWebSecurity": false
 }

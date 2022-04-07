@@ -1,7 +1,7 @@
 ## STAFF MEMEBERS INFO
 
 # Current campus locations:
-# ['santiago-chile', 'bogota-colombia', 'quito-ecuador', 'panamacity-panama', 
+# ['santiago-chile', 'bogota-colombia', 'quito-ecuador', 'panamacity-panama',
 #  'orlando', 'montevideo-uruguay', 'mexicocity-mexico', 'maracaibo-venezuela',
 #  'madrid-spain', 'lapaz-bolivia', 'europe', 'downtown-miami', 'costa-rica',
 #  'caracas-venezuela', 'buenosaires-argentina']
@@ -26,7 +26,7 @@ staff:
       - Soccer
     coding_skills:
       - Javascript
-    location: ['all']
+    location: ["all"]
   - name: "Marcelo"
     last_name: "Ricigliano"
     nick_name: ""
@@ -44,7 +44,7 @@ staff:
       - Juventus
     coding_skills:
       - Javascript
-    location: ['all']
+    location: ["all"]
   - name: "James"
     last_name: "Walters"
     nick_name: ""
@@ -120,7 +120,7 @@ staff:
       - Travel
     coding_skills:
       - Javascript
-    location: ['all']
+    location: ["all"]
   - name: "Ana Belen "
     last_name: "Salas"
     nick_name: ""
@@ -137,7 +137,7 @@ staff:
       - Music
     coding_skills:
       - Excel
-    location: ['']
+    location: [""]
   - name: "Mafe"
     last_name: "Castro"
     nick_name: ""
