@@ -33,7 +33,7 @@ import Credentials from "../components/Credentials";
 import ChooseProgram from "../components/ChooseProgram";
 import BaseRender from "./_baseLayout";
 import { SessionContext } from "../session.js";
-import Loc from "../components/Loc";
+import Loc from "../components/Loc/new_locations";
 import Badges from "../components/Badges";
 import With4Geeks from "../components/With4Geeks";
 import About4Geeks from "../components/About4Geeks";
@@ -71,6 +71,19 @@ const SVGBubblesRight = () => (
 
 const Home = (props) => {
   const { data, pageContext, yml } = props;
+
+  yml.locations.regions.forEach((reg, ind, arr) => {
+    if (arr[ind].name === "online") {
+      arr[ind].sub_links = data.allLocationYaml.edges.filter(
+        (loc) => loc.node.online_available || loc.node.online_available === null
+      );
+    } else {
+      arr[ind].sub_links = data.allLocationYaml.edges.filter(
+        (loc) => loc.node.meta_info.region === reg.name
+      );
+    }
+  });
+
   const hiring = data.allPartnerYaml.edges[0].node;
   const { session } = React.useContext(SessionContext);
   const [city, setCity] = useState("");
@@ -251,12 +264,7 @@ const Home = (props) => {
         paragraph={hiring.partners.sub_heading}
       />
 
-      <Loc
-        lang={pageContext.lang}
-        locations={data.allLocationYaml.edges}
-        title={yml.locations.heading}
-        paragraph={yml.locations.sub_heading}
-      />
+      <Loc lang={pageContext.lang} yml={yml.locations} />
     </>
   );
 };
@@ -333,6 +341,13 @@ export const query = graphql`
           locations {
             heading
             sub_heading
+            image
+            choose
+            regions {
+              name
+              title
+              content
+            }
           }
           alumni_header {
             heading
@@ -383,8 +398,8 @@ export const query = graphql`
             footer_link
             images {
               name
-              link
               locations
+              link
               image {
                 childImageSharp {
                   gatsbyImageData(
@@ -468,8 +483,10 @@ export const query = graphql`
             position
             image
             keywords
+            region
           }
           seo_title
+          online_available
           header {
             sub_heading
             tagline
@@ -507,7 +524,6 @@ export const query = graphql`
                   width: 800
                   placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                 )
-
                 # fluid(maxWidth: 800){
                 #   ...GatsbyImageSharpFluid_withWebp
                 # }

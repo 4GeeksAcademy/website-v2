@@ -174,7 +174,6 @@ export const Navbar = ({
             width: 125
             placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
           )
-
           #   fixed(width: 125) {
           #     ...GatsbyImageSharpFixed
           #   }
@@ -277,6 +276,79 @@ export const Navbar = ({
   );
 };
 
+const CampusMenu = ({ status, setStatus, menu }) => {
+  let campusIndex = menu.map((e) => e.name).indexOf("Campus");
+  const [activeOpt, setActiveOpt] = useState({
+    ...menu[campusIndex].sub_menu.links[0],
+  });
+
+  return (
+    <>
+      <Div id="menu-container" width="100%">
+        <Div id="options-container" flexDirection="column" width="33%">
+          {Array.isArray(menu[status.itemIndex].sub_menu.links) &&
+            menu[status.itemIndex].sub_menu.links.map((m, i) => (
+              <Button
+                color={activeOpt.title === m.title ? Colors.black : Colors.gray}
+                borderLeft={
+                  activeOpt.title === m.title
+                    ? `5px solid ${Colors.blue}`
+                    : null
+                }
+                borderRadius="none"
+                padding="10px"
+                onClick={() => {
+                  setActiveOpt({ ...m });
+                }}
+              >
+                {m.title}
+              </Button>
+            ))}
+        </Div>
+        <Div
+          id="links-container"
+          flexDirection="column"
+          flexWrap="wrap"
+          maxHeight="330px"
+        >
+          {activeOpt.sub_links != undefined &&
+            Array.isArray(activeOpt.sub_links) &&
+            activeOpt.sub_links.map((l, i) => {
+              return (
+                <Link to={l.link_to} key={i}>
+                  <Div
+                    margin="2px 10px 2px 0"
+                    padding="10px 0 10px 18px"
+                    backgroundHover={`#E6F5FB`}
+                    borderRadius="3px"
+                    alignItems="baseline"
+                  >
+                    <H3
+                      textAlign="left"
+                      width="fit-content"
+                      fontSize="15px"
+                      lineHeight="20px"
+                      fontWeight="400"
+                      margin="0 5px 0 0"
+                    >
+                      {l.title}
+                    </H3>
+                    <Icon
+                      icon="arrow-right"
+                      color="#A4A4A4"
+                      width="8px"
+                      height="8px"
+                    />
+                  </Div>
+                </Link>
+              );
+            })}
+        </Div>
+      </Div>
+    </>
+  );
+};
+
 export const MegaMenu = ({ status, setStatus, menu }) => {
   return (
     <>
@@ -293,6 +365,8 @@ export const MegaMenu = ({ status, setStatus, menu }) => {
                 }));
               }, 300);
             }}
+            display="block"
+            maxHeight="500px"
             background="white"
             transform={MegaMenuPositions[status.itemIndex].transform}
             width={MegaMenuPositions[status.itemIndex].width}
@@ -377,6 +451,7 @@ export const MegaMenu = ({ status, setStatus, menu }) => {
                     ))}
                 </Div>
               </Div>
+
               <Div gridArea_tablet="2/1/2/13">
                 <Grid
                   gridTemplateColumns_tablet={`repeat(${
@@ -384,7 +459,8 @@ export const MegaMenu = ({ status, setStatus, menu }) => {
                   }, 1fr)`}
                   width="100%"
                 >
-                  {Array.isArray(menu[status.itemIndex].sub_menu.links) &&
+                  {menu[status.itemIndex].name !== "Campus" &&
+                    Array.isArray(menu[status.itemIndex].sub_menu.links) &&
                     menu[status.itemIndex].sub_menu.links.map((m, i) => {
                       return (
                         <Div flexDirection="column" key={i}>
@@ -479,6 +555,9 @@ export const MegaMenu = ({ status, setStatus, menu }) => {
                 </Grid>
               </Div>
             </Grid>
+            {menu[status.itemIndex].name === "Campus" && (
+              <CampusMenu status={status} setStatus={setStatus} menu={menu} />
+            )}
           </MegaMenuContainer>
         )}
     </>

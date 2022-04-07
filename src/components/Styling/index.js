@@ -116,7 +116,6 @@ export const RoundImage = styled.div`
     css`
       transform: translateY(-${(props) => props.up});
     `}
-
   @media ${Break.lg} {
     width: ${(props) => props.w_lg};
     height: ${(props) => props.h_lg};
@@ -171,8 +170,10 @@ const StyledImage = styled.div`
   background-color: ${(props) => props.backgroundColor};
   width: ${(props) => props.width};
   height: ${(props) => props.height};
+  min-height: ${(props) => props.minHeight};
   @media ${Break.sm} {
     height: ${(props) => props.h_sm};
+    min-height: ${(props) => props.minHeight_sm};
     width: ${(props) => props.w_sm};
   }
 `;
@@ -337,6 +338,10 @@ export const Button = styled(SmartButton)`
   color: ${(props) => props.color};
   background: ${(props) => props.background};
   border: ${(props) => props.border};
+  border-left: ${(props) => props.borderLeft};
+  border-top: ${(props) => props.borderTop};
+  border-bottom: ${(props) => props.borderBottom};
+  border-right: ${(props) => props.borderRight};
   height: 40px;
   cursor: pointer;
   text-align: ${(props) => props.textAlign || "center"};
@@ -351,7 +356,6 @@ export const Button = styled(SmartButton)`
   justify-self: ${(props) => props.justifySelf};
   justify-content: ${(props) => props.justifyContent};
   box-shadow: ${(props) => props.boxShadow};
-
   &:hover {
     background-color: ${(props) => props.colorHover};
     color: ${(props) => props.colorHoverText};

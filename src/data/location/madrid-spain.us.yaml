@@ -6,6 +6,7 @@ meta_info:
   image: ""
   keywords: "Coding Bootcamp, Madrid"
   redirects: ["/location/madrid", "/us/location/madrid-spain"]
+  region: "europe"
 
 seo_title: "Coding Bootcamp Madrid"
 header:

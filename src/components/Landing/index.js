@@ -249,7 +249,7 @@ export const TwoColumn = ({ left, right, proportions }) => {
         flexDirection="column"
         size_tablet={left_size || 6}
         size="12"
-        maxHeight="300px"
+        // maxHeight="300px"
         textAlign="center"
       >
         <Side {...left} />

@@ -122,6 +122,7 @@ export const Div = styled.div`
     props.flex || props.size ? `0 0 ${(props.size / 12) * 100}%` : null};
   max-width: ${(props) =>
     props.size ? `${(props.size / 12) * 100}%` : props.maxWidth || null};
+  max-height: ${(props) => (props.maxHeight ? props.maxHeight : "none")};
   overflow-x: ${(props) => props.overflowX};
   grid-area: ${(props) => props.gridArea};
   place-self: ${(props) => props.placeSelf};
@@ -181,15 +182,27 @@ export const Div = styled.div`
     left: ${(props) => props.leftAfter};
     right: ${(props) => props.rightAfter};
   }
-
   &:hover {
     background: ${(props) => props.backgroundHover};
+    border-bottom: ${(props) => props.borderBottomHover};
   }
   @media ${Devices.xxs} {
   }
   @media ${Devices.xs} {
     padding: ${(props) => props.padding_xs};
     column-count: ${(props) => props.columnCount_xs};
+    flex-direction: ${(props) => props.flexDirection_xs};
+    width: ${(props) => props.width_xs};
+    margin: ${(props) => props.margin_xs};
+    display: ${(props) => props.display_xs};
+    justify-content: ${(props) =>
+      justifyContentOptions[props.justifyContent_xs]};
+    border: ${(props) => props.border_xs};
+    border-top: ${(props) => props.borderTop_xs};
+    border-right: ${(props) => props.borderRight_xs};
+    border-bottom: ${(props) => props.borderBottom_xs};
+    border-left: ${(props) => props.borderLeft_xs};
+    align-content: ${(props) => props.alignContent_xs};
   }
   @media ${Devices.sm} {
     padding: ${(props) => props.padding_sm};
@@ -198,6 +211,8 @@ export const Div = styled.div`
     height: ${(props) => props.height_sm};
     display: ${(props) => props.display};
     column-count: ${(props) => props.columnCount_sm};
+    flex-direction: ${(props) => props.flexDirection_sm};
+    display: ${(props) => props.display_sm};
   }
   @media ${Devices.tablet} {
     flex: ${(props) =>
@@ -207,6 +222,12 @@ export const Div = styled.div`
     flex-flow: ${(props) => props.flexFlow_tablet};
     max-width: ${(props) =>
       props.size_tablet ? `${(props.size_tablet / 12) * 100}%` : null};
+    max-width: ${(props) =>
+      props.maxWidth_tablet
+        ? props.maxWidth_tablet
+        : props.size_tablet
+        ? `${(props.size_tablet / 12) * 100}%`
+        : null};
     align-self: ${(props) => props.alignSelf_tablet};
     gap: ${(props) => (props) => props.gap_tablet};
     column-count: ${(props) => props.columnCount_tablet};
@@ -214,6 +235,7 @@ export const Div = styled.div`
     background: ${(props) => props.background_tablet};
     display: ${(props) => props.display_tablet};
     flex-direction: ${(props) => props.flexDirection_tablet};
+    align-content: ${(props) => props.alignContent_tablet};
     height: ${(props) => props.height_tablet};
     align-items: ${(props) => props.alignItems_tablet};
     padding: ${(props) => props.padding_tablet};
@@ -223,6 +245,8 @@ export const Div = styled.div`
     min-height: ${(props) => props.minHeight_tablet};
     height: ${(props) => props.height_tablet};
     flex: ${(props) => props.flex_tablet};
+    flex-shrink: ${(props) =>
+      props.flexShrink_tablet ? props.flexShrink_tablet : 1};
     border: ${(props) => props.border_tablet};
     border-top: ${(props) => props.borderTop_tablet};
     border-right: ${(props) => props.borderRight_tablet};
@@ -362,7 +386,6 @@ export const Old_Grid = styled.div`
   background: ${(props) => props.background};
   padding: ${(props) => props.padding};
   margin: ${(props) => props.margin};
-
   @media ${Devices.xxs} {
     grid-template-columns: ${(props) =>
       props.columns_xxs ? `repeat(${props.columns_xxs}, 1fr)` : null};
@@ -680,13 +703,11 @@ export const Row = styled(Div)`
   margin-bottom: ${(props) => props.marginBottom};
   justify-content: ${(props) => props.justifyContent};
   padding: ${(props) => props.padding};
-
   &:hover {
     background: ${(props) => props.backgroundHover};
     margin: ${(props) => props.marginHover};
     border-radius: ${(props) => props.borderRadiusHover};
   }
-
   @media ${Break.sm} {
     width: ${(props) => props.width_sm};
     display: ${(props) => props.display_sm};
@@ -717,7 +738,6 @@ export const Column = styled(Div)`
   display: ${(props) => props.display};
   flex: 0 0 ${(props) => (props.size / 12) * 100}%;
   max-width: ${(props) => (props.size / 12) * 100}%;
-
   ${(props) => props.masonry && "display: inline-block;"}
   border-radius: ${(props) => props.borderRadius};
 
