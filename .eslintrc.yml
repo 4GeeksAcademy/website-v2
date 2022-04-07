@@ -1,10 +1,17 @@
 ---
-extends: airbnb
+extends: 
+  - airbnb
+  - prettier
 parser: babel-eslint
 env:
   browser: true
   node: true
+pluggins:
+  - react
+  - react-hooks
+  - prettier
 rules:
+  prettier/prittier: error
   no-underscore-dangle: 0
   no-plusplus: 0
   no-multi-assign: 0

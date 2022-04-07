@@ -81,7 +81,7 @@ footer:
     items:
       - name: "4GEEKS PARA EMPRESAS"
         link: "/es/alianzas"
-        
+
 socials:
   - name: "Github"
     icon: "github"

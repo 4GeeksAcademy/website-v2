@@ -18,7 +18,7 @@ staff:
       - Soccer
     coding_skills:
       - Javascript
-    location: ['all', 'downtown-miami']
+    location: ["all", "downtown-miami"]
   - name: "Marcelo"
     last_name: "Ricigliano"
     nick_name: "MRicigliano"
@@ -36,7 +36,7 @@ staff:
       - Juventus
     coding_skills:
       - Javascript
-    location: ['all', 'downtown-miami']
+    location: ["all", "downtown-miami"]
   - name: "James"
     last_name: "Walters"
     nick_name: ""

@@ -1,7 +1,7 @@
-import React, { useEffect } from 'react';
+import React, { useEffect } from "react";
 
 const ScrollSpy = ({
-  className = 'active',
+  className = "active",
   offsetTop = 0,
   autoScrollOffsetTop = 0,
   offsetLeft = 0,
@@ -15,19 +15,19 @@ const ScrollSpy = ({
   useEffect(() => {
     viewportWidth = window.innerWidth;
 
-    if(typeof document !== "undefined" && viewportWidth <= 768) {
-      scrollSpyNavContainer = document.querySelector('.scroll-spy-container')
+    if (typeof document !== "undefined" && viewportWidth <= 768) {
+      scrollSpyNavContainer = document.querySelector(".scroll-spy-container");
     }
-  })
+  });
 
   const handleAutoNavScroll = () => {
-    if(scrollSpyNavContainer !== null) {
+    if (scrollSpyNavContainer !== null) {
       scrollSpyNavContainer.scrollTo({
-        left: (scrollSpyNavContainer.children.item(currentChild).offsetLeft) - 25,
-        behavior: 'smooth',
-      })
+        left: scrollSpyNavContainer.children.item(currentChild).offsetLeft - 25,
+        behavior: "smooth",
+      });
     }
-  }
+  };
 
   useEffect(() => {
     const sourceElements = [];
@@ -50,14 +50,15 @@ const ScrollSpy = ({
     };
 
     const isBetween = (curr, next, value) => {
-      if(next !== undefined) {
+      if (next !== undefined) {
         return value >= Math.min(curr, next) && value < Math.max(curr, next);
       }
-      return value >= curr
+      return value >= curr;
     };
 
     const onScrollHandler = throttle(() => {
-      const scrollElement = document.scrollingElement || document.documentElement;
+      const scrollElement =
+        document.scrollingElement || document.documentElement;
 
       const center = {
         x: scrollElement.scrollLeft + window.innerWidth / 2,
@@ -72,8 +73,11 @@ const ScrollSpy = ({
           center.x >= target.offsetLeft &&
           center.x < target.offsetLeft + target.offsetWidth;
 
-        const visibleVertical =
-          isBetween(target.offsetTop, targetElements[i + 1]?.offsetTop, center.y);
+        const visibleVertical = isBetween(
+          target.offsetTop,
+          targetElements[i + 1]?.offsetTop,
+          center.y
+        );
 
         if (visibleVertical && visibleHorizontal) {
           source.classList.add(className);
@@ -91,19 +95,20 @@ const ScrollSpy = ({
       const href = el.props && el.props.href;
       const self = el.ref && el.ref.current;
 
-      if (!self || !href || href.charAt(0) !== '#') {
+      if (!self || !href || href.charAt(0) !== "#") {
         return false;
       }
 
-      self.addEventListener('click', (e) => {
-        if(targetElement !== undefined || targetElement !== null) {
+      self.addEventListener("click", (e) => {
+        if (targetElement !== undefined || targetElement !== null) {
           window.scrollTo({
             top: targetElement?.offsetTop + autoScrollOffsetTop,
-          })
+          });
         }
-        return null
-      })
-      const targetElement = href === '#' ? document.body : document.querySelector(href);
+        return null;
+      });
+      const targetElement =
+        href === "#" ? document.body : document.querySelector(href);
 
       if (targetElement) {
         targetElements.push(targetElement);
@@ -114,15 +119,23 @@ const ScrollSpy = ({
     });
 
     if (targetElements.length) {
-      const ScrollEvent = new Event('scroll');
-      window.addEventListener('scroll', onScrollHandler, { passive: true });
+      const ScrollEvent = new Event("scroll");
+      window.addEventListener("scroll", onScrollHandler, { passive: true });
       window.dispatchEvent(ScrollEvent);
     }
 
     return () => {
-      window.removeEventListener('scroll', onScrollHandler);
+      window.removeEventListener("scroll", onScrollHandler);
     };
-  }, [children, className, duration, offsetTop, autoScrollOffsetTop, offsetLeft, handleAutoNavScroll]);
+  }, [
+    children,
+    className,
+    duration,
+    offsetTop,
+    autoScrollOffsetTop,
+    offsetLeft,
+    handleAutoNavScroll,
+  ]);
 
   return <>{children}</>;
 };

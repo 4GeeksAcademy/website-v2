@@ -1,9 +1,6 @@
-import React from 'react';
-import {storiesOf} from '@storybook/react';
+import React from "react";
+import { storiesOf } from "@storybook/react";
 
-import Why4Geeks from '.';
+import Why4Geeks from ".";
 
-storiesOf('Why4Geeks', module)
-    .add('Default', () => (
-        <Why4Geeks />
-    ));
+storiesOf("Why4Geeks", module).add("Default", () => <Why4Geeks />);

@@ -1,18 +1,17 @@
-import React from 'react';
-import styled from 'styled-components';
-import { Div, GridContainer } from '../Sections';
-import { Colors, RoundImage, Anchor } from '../Styling';
-import { H4 } from '../Heading';
-import {Link} from 'gatsby';
-import { Devices } from '../Responsive';
-import {SessionContext} from '../../session';
-import Icon from '../Icon';
+import React from "react";
+import styled from "styled-components";
+import { Div, GridContainer } from "../Sections";
+import { Colors, RoundImage, Anchor } from "../Styling";
+import { H4 } from "../Heading";
+import { Link } from "gatsby";
+import { Devices } from "../Responsive";
+import { SessionContext } from "../../session";
+import Icon from "../Icon";
 
 const LandingFooter = ({ yml }) => {
+  const { session } = React.useContext(SessionContext);
+  let socials = session && session.location ? session.location.socials : [];
 
-  const {session} = React.useContext(SessionContext);
-  let socials = session && session.location ? session.location.socials : []
- 
   return (
     <>
       <GridContainer margin="44px 0" margin_tablet="0 0 40px 0">
@@ -61,38 +60,33 @@ const LandingFooter = ({ yml }) => {
             {yml.newsletter.heading}
           </H4>
           <Div>
-            {   
-              socials?.map((ln, i) => (
-                <Anchor
-                  key={i}
-                  cursor="pointer"
-                  to={ln.link}
-                  textAlign="left"
-                  margin="0 0 5px 0"
-                  fontSize="13px"
-                  lineHeight="22px"
-                  fontWeight="400"
-                  textTransform="uppercase"
-                  color={Colors.black}
-                >
-                  {ln.icon && (
-                    <Icon
-                      icon={ln.icon}
-                      style={{ margin: '0 15px 0 0' }}
-                      color={Colors.black}
-                      fill={Colors.black}
-                      height="32px"
-                      width="32px"
-                    />
-                  )}
-                </Anchor>
-              )
-            )}
+            {socials?.map((ln, i) => (
+              <Anchor
+                key={i}
+                cursor="pointer"
+                to={ln.link}
+                textAlign="left"
+                margin="0 0 5px 0"
+                fontSize="13px"
+                lineHeight="22px"
+                fontWeight="400"
+                textTransform="uppercase"
+                color={Colors.black}
+              >
+                {ln.icon && (
+                  <Icon
+                    icon={ln.icon}
+                    style={{ margin: "0 15px 0 0" }}
+                    color={Colors.black}
+                    fill={Colors.black}
+                    height="32px"
+                    width="32px"
+                  />
+                )}
+              </Anchor>
+            ))}
           </Div>
         </Div>
-
-
-
       </GridContainer>
       <GridContainer
         columns_tablet="12"
@@ -109,9 +103,8 @@ const LandingFooter = ({ yml }) => {
           width_tablet="100%"
           height_tablet="100%"
         >
-          {
-            yml.policy 
-            && yml.policy.map((item, i) => (
+          {yml.policy &&
+            yml.policy.map((item, i) => (
               <Link key={i} to={item.link}>
                 <H4
                   border={i % 2 == 1 && "1px solid"}
@@ -126,8 +119,7 @@ const LandingFooter = ({ yml }) => {
                   {item.name}
                 </H4>
               </Link>
-            ))
-          }
+            ))}
         </Div>
 
         <Div
