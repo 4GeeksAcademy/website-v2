@@ -6,32 +6,23 @@ import { SessionContext } from "../../session";
 
 const CustomBar = ({ isContentBarActive, contentBar }) => {
   return (
-    <>
-      <Div
-        display={isContentBarActive ? "flex" : "none"}
-        style={{ top: "0px" }}
-        width="100%"
-        height="auto"
-        minHeight="50px"
-        padding="10px 20px"
-        alignItems="center"
-        background="#0097CD"
-        position="fixed"
-        zIndex="99"
-      >
-        {contentBar.message && (
-          <Paragraph
-            dangerouslySetInnerHTML={{ __html: contentBar.message }}
-            color={Colors.white}
-            textAlign="center"
-            padding="0 10px"
-            padding_tablet="0 12%"
-            fontSize="15px"
-            lineHeight="22px"
-          />
-        )}
-        {contentBar.button?.label !== undefined &&
-          contentBar.button?.label !== "" && (
+
+      <Div id="custom-bar" display={isContentBarActive ? 'flex' : 'none'} style={{top: "0px"}} width="100%" height="auto" minHeight="50px" padding="10px 20px" alignItems="center" background="#0097CD" position="fixed" zIndex="99">
+        {
+          contentBar.message && (
+            <Paragraph
+              dangerouslySetInnerHTML={{__html: contentBar.message}}
+              color={Colors.white}
+              textAlign="center"
+              padding="0 10px"
+              padding_tablet="0 12%"
+              fontSize="15px"
+              lineHeight="22px"
+            />
+          )
+        }
+        {
+          contentBar.button?.label !== undefined && contentBar.button?.label !== "" && (
             <Div alignItems="center" justifyContent="between">
               <Link to={contentBar.button.path || "#"}>
                 <Button
@@ -48,8 +39,8 @@ const CustomBar = ({ isContentBarActive, contentBar }) => {
             </Div>
           )}
       </Div>
-    </>
-  );
-};
+
+  )
+}
 
 export default CustomBar;

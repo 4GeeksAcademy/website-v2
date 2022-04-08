@@ -67,9 +67,9 @@ navbar:
           sub_links:
             - title: "Alumnos y Proyectos"
               link_to: "/es/alumnos-y-proyectos"
-            # - title: "Testimonios"
-            #   link_to: "/es/testimonios"
-
+            - title: "Testimonios"
+              link_to: "/es/testimonios"
+  
   - name: "Academia"
     link: "/es/sobre-la-academia"
     sub_menu:
