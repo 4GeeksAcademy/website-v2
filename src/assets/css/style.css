@@ -20,11 +20,11 @@ body {
     scroll-padding: 10%; */
 }
 
-#custom-bar a{
-    color: #00a0da;
-    border-radius: 4px;
-    padding: 4px;
-    background: #fffaf0;
+#custom-bar a {
+  color: #00a0da;
+  border-radius: 4px;
+  padding: 4px;
+  background: #fffaf0;
 }
 
 /* adds three dots to text when reaches the end of line */
