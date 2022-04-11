@@ -4,12 +4,12 @@
 
 partners:
   tagline: "WHO IS HIRING OUR STUDENTS"
-  sub_heading:
-    "Thanks to our growing list of partners, we have local and international job offers for our
+  sub_heading: |
+    Thanks to our growing list of partners, we have local and international job offers for our
     students on a daily basis. Together with our GeekFORCE (Career Support) service, we are happy to have
     ~86% of our students hired within 100 days or less from Graduation Day. Companies that hire our students
-    are impressed with their skills. “I'm impressed with the level of understanding 4Geeks students have, my
-    hire ended becoming team leader” - CodeNinjas"
+    are impressed with their skills. "I'm impressed with the level of understanding 4Geeks students have, my
+    hire ended becoming team leader" - CodeNinjas
   footer_tagline: "438 COMPANIES"
   footer_button: "Review our latest hirings"
   footer_link: "/partners"
@@ -253,7 +253,8 @@ benefits_and_charts:
     title: "The numbers"
     list:
       - icon: "chart-62"
-        description: "62% of executives “believe they will need to retrain or replace more than a quarter of their workforce between now and 2023 due to advancing automation and digitization. A 2018 study by McKinsey report."
+        description: |
+          62% of executives "believe they will need to retrain or replace more than a quarter of their workforce between now and 2023 due to advancing automation and digitization." A 2018 study by McKinsey report.
       - icon: "job"
         description: "According to a 2016 study by the Society for Human Resource Management, it costs an average of $4,129 to hire a new employee, and it takes an average of 42 days to find a new hire."
       - icon: "notes-2"

@@ -115,8 +115,9 @@ sticky_nav:
 
 what_will_you_learn:
   heading: "¿Qué aprenderás en el curso?"
-  sub_title: "Aprender a programar se trata también de desarrollar la lógica y entender cómo “piensa” 
-    una computadora, cómo “hablan”, cómo engranan y se entienden los elementos de una aplicación entre sí.
+  sub_title: |
+    Aprender a programar se trata también de desarrollar la lógica y entender cómo "piensa" 
+    una computadora, cómo "hablan", cómo engranan y se entienden los elementos de una aplicación entre sí.
 
     Desarrollar la habilidad de programar va de la mano con la creatividad y la búsqueda de soluciones 
     a problemas.  Programar significa solucionar problemas a través de ciertas herramientas con las que 
@@ -126,7 +127,7 @@ what_will_you_learn:
     de front-end, back-end, base de datos, manejo de procesos distribuidos y despliegue a 
     distintas plataformas web. Obtendrás las habilidades y conocimientos para crear un sitio 
     web sumergiéndote en las mejores prácticas del diseño web responsivo, trabajando con diversos lenguajes.
-  "
+  
   image: "../../../static/images/learn_to_code.png"
   image_alt: "Qué aprenderás en el curso"
 
@@ -139,9 +140,10 @@ content_with_subtitle_and_image:
         Full-Stack, tanto front-end como back-end. y  ¿Qué significa todo esto? 
         Entonces debes conocer estos términos:"
     - label: "Stack"
-      content:  "La traducción de stack es “pila de cosas”, en este caso sería la pila completa 
+      content: |
+        La traducción de stack es "pila de cosas", en este caso sería la pila completa 
         de aplicaciones que se comunican entre entre sí, para que puedan ejecutar, en conjunto, 
-        una acción solicitada por el usuario/cliente"
+        una acción solicitada por el usuario/cliente
     - label: "Front-end"
       content: "Es todo lo que el usuario (o el lado del cliente) puede ver y con lo que puede 
         interactuar."

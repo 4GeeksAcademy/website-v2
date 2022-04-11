@@ -15,7 +15,8 @@ header:
   alt: ""
 sections:
   - title: "INFORMACIÓN SOBRE COOKIES"
-    text: "Debido a la entrada en vigor de la referente modificación de la “Ley de Servicios de la Sociedad de la Información” (LSSICE) establecida por el Real Decreto 13/2012, es de obligación obtener el consentimiento expreso del usuario de todas las páginas web que usan cookies prescindibles, antes de que éste navegue por ellas.  "
+    text: |
+      Debido a la entrada en vigor de la referente modificación de la "Ley de Servicios de la Sociedad de la Información" (LSSICE) establecida por el Real Decreto 13/2012, es de obligación obtener el consentimiento expreso del usuario de todas las páginas web que usan cookies prescindibles, antes de que éste navegue por ellas.
   - title: "¿QUÉ SON LAS COOKIES?"
     text: "Las cookies y otras tecnologías similares tales como local shared objects, flash cookies o píxeles, son herramientas empleadas por los servidores Web para almacenar y recuperar información acerca de sus visitantes, así como para ofrecer un correcto funcionamiento del sitio.
     

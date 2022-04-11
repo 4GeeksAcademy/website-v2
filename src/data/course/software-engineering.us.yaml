@@ -20,7 +20,8 @@ header:
   title: "Senior Software Engineer"
   image: "../../../static/images/bg/apple-building.jpg"
   image_alt: "apple-building"
-  paragraph: "Get the skills to meet the global demand for problem solvers and logical thinkers who drive the world to real change and impact. Learn ”Modern Web Applications” or “Cloud Based Applications” used only by Fortune 500. Land yourself a real software engineering job or create the next tech unicorn."
+  paragraph: |
+    Get the skills to meet the global demand for problem solvers and logical thinkers who drive the world to real change and impact. Learn "Modern Web Applications" or "Cloud Based Applications" used only by Fortune 500. Land yourself a real software engineering job or create the next tech unicorn.
 
 course_instructors: 
   header:
