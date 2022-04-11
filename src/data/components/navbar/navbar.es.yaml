@@ -19,7 +19,7 @@ navbar:
 
         - title: "Software Engineer"
           level: "Nivel 2"
-          icon: "fullstack"
+          icon: "software"
           paragraph: "Desarrolla más habilidades adentrándote en el mundo de computación y aplicaciones nativas de la nube."
           buttons:
             - text: "Ver Programa"
@@ -27,7 +27,7 @@ navbar:
 
         - title: "AI/Machine Learning Engineering"
           level: "Online"
-          icon: "fullstack"
+          icon: "machine"
           paragraph: "Conoce las herramientas necesarias para mejorar tus habilidades y ser parte del futuro de la Inteligencia Artificial"
           buttons:
             - text: "Ver Programa"
@@ -67,9 +67,9 @@ navbar:
           sub_links:
             - title: "Alumnos y Proyectos"
               link_to: "/es/alumnos-y-proyectos"
-            # - title: "Testimonios"
-            #   link_to: "/es/testimonios"
-
+            - title: "Testimonios"
+              link_to: "/es/testimonios"
+  
   - name: "Academia"
     link: "/es/sobre-la-academia"
     sub_menu:
@@ -133,8 +133,6 @@ navbar:
           sub_links:
             - title: "Miami, USA"
               link_to: "/es/coding-campus/bootcamp-programacion-miami"
-            - title: "Madrid, España"
-              link_to: "/es/coding-campus/bootcamp-programacion-madrid"
             - title: "Chile"
               link_to: "/es/coding-campus/bootcamp-programacion-santiago"
             - title: "Argentina"
@@ -147,20 +145,8 @@ navbar:
               link_to: "/es/coding-campus/bootcamp-programacion-costa-rica"
         - title: "Europa"
           sub_links:
-            - title: "Orlando, USA"
-              link_to: "/us/coding-campus/coding-bootcamp-orlando"
-            - title: "Colombia"
-              link_to: "/us/coding-campus/coding-bootcamp-colombia"
-            - title: "Mexico"
-              link_to: "/us/coding-campus/coding-bootcamp-mexico"
-            - title: "Ecuador"
-              link_to: "/us/coding-campus/coding-bootcamp-ecuador"
-            - title: "Panama"
-              link_to: "/us/coding-campus/coding-bootcamp-panama"
-            - title: "Uruguay"
-              link_to: "/us/coding-campus/coding-bootcamp-uruguay"
-            - title: "Venezuela"
-              link_to: "/es/coding-campus/bootcamp-programacion-venezuela"
+            - title: "Madrid, España"
+              link_to: "/es/coding-campus/bootcamp-programacion-madrid"
 
   - name: "Próximas Fechas"
     link: "/es/proximas-fechas"

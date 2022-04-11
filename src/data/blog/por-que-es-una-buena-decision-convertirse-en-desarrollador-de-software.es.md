@@ -16,7 +16,7 @@ featured: true
 **Lo básico**
 Si te encanta resolver problemas a través del pensamiento analítico y disfrutas de un buen desafío, convertirte en desarrollador de software podría llegar a ser un camino muy gratificante para ti. Esta carrera también requiere un gran espíritu por la innovación y actualización constante de tus habilidades, ya que la tecnología se encuentra en constante cambio debido a su rápido crecimiento. 
 
-![]((https://breathecode.herokuapp.com/v1/media/file/carrera-de-programacion-png?)
+![](https://breathecode.herokuapp.com/v1/media/file/carrera-de-programacion-png?)
 
 Básicamente, un desarrollador de software es un profesional que crea sistemas de software y aplicaciones para un dispositivo hardware, con el fin de resolver problemas de la vida cotidiana. Los desarrolladores de software son responsables de la creación, mantenimiento, y mejora de productos digitales.
 
@@ -89,4 +89,4 @@ Fuente: LinkedIn
 
 Así que tengo dos preguntas para ti, ¿te apasiona resolver problemas, el pensamiento lógico y la tecnología? ¿Está buscando un nuevo comienzo en tu carrera o una actualización de tu carrera actual?
 
-En ese caso, [click aquí](https://4geeksacademy.com/es/inicio) y consulta nuestros programas y certificaciones (:
+<call-to-action button_text="Ver programa" button_link="/es/curso-de-programacion-desde-cero" background="rgba(0, 151, 205, 0.15)" title="Impulsa tu carrera, gracias a la programación" text="Te invitamos a impulsa tu carrera, aprendiendo a programar con nuestro Programa Full Stack Developer."></call-to-action>

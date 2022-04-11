@@ -93,6 +93,7 @@ const Loc = ({ lang, yml }) => {
               minHeight_tablet="none"
               minHeight_sm="100px"
               backgroundSize={`cover`}
+              style={{ imageRendering: "crisp-edges" }}
             />
           </Div>
         )}

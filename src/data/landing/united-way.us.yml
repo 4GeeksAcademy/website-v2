@@ -35,9 +35,9 @@ form:
   redirect: null #you can redirect to another url or entirely diffrent website
 
 header_data:
-  tagline: "Debug Access to a better future"
+  tagline: "Become a Software Developer and take control of your Future"
   tagline_color: "black"
-  sub_heading: "Get Coding Education"
+  sub_heading: "Learn the skills and get a Job in the field"
   # image: "../../../static/images/landing/uwm_pantone_2021_2.png"
   image_filter: brightness(0.3)
   partner_logo_url: "../../../static/images/landing/uwm_pantone_2021_2.png" # optional
@@ -46,35 +46,34 @@ header_data:
   right_image: "../../../static/images/landing/header_united_way.png"
   # right_image: 
   #   style: '{ "backgroundSize": "contain" }'
-  #   src: "/images/landing/veteran.png"
+  #   src: "/images/landing/header_united_way.png"
 
 features:
   marginTop: 0px #<-- separation between tagline and the bullets
   text: |
-    <p>United Way Miami and 4Geeks Academy are excited to announce a new coding scholarship.</p>
-    <p>Learn to code, pay when you get a job, and lead a more meaningful life.</p>
+    <p>United Way Miami , Social Finance and 4Geeks Academy are excited to announce a new coding Program that will allow more people get the top education needed to land a job in Tech through Income Sharing Agreements.</p>
     <hr style="margin: 15px 0;">
     <span style="background: rgb(255, 183, 24);font-weight: bold;">Now open and accepting applications!</span>
-    <p>Applications open in XX and are due XX</p>
-    <p>The recipients will be announced on XX</p>
+    <p>Applications will be open until May 31st, 2022</p>
+    <p>Only 100 Open spots available</p>
   styles: '{ "color": "gray", "fontWeight":"500" }'
   button:
       text: "APPLY NOW"
       color: "white"
-      path: "https://www.switchup.org/bootcamps/4geeks-academy"
+      path: "https://marketing892162.typeform.com/to/ti4UAUrh"
       background: "blue"
       hover_color: "white"
 
 follow_bar:
   position: "top" # top, bottom, hidden
   content:
-    text: "Get $1,500 off if you enroll with our Labor Day Deal."
-    text_mobile: "ENROLL NOW and get $1,500 off when you use our code LABOR in our apply form"
+    text: "Pay when you get a Job. No Upfront Payment"
+    text_mobile: "Pay when you get a Job. No Upfront Payment"
     # devices:   XL      LG    MD      SM    XS
     font_size: ["25px", "25px", "25px", "20px", "18px"]
   button:
-    text: "Get more information"
-    path: "#top"
+    text: "Apply Now"
+    path: "https://marketing892162.typeform.com/to/ti4UAUrh"
   phone:
     text: "Call "
 
@@ -132,16 +131,16 @@ components:
       text: | 
         learn more about <a style="color: rgb(0, 160, 218); cursor:pointer;">eligibility conditions</a> and apply
       font_size: ["16px", "16px", "16px", "16px", "16px"]
-      path: "https://www.switchup.org/bootcamps/4geeks-academy"
+      path: "https://marketing892162.typeform.com/to/ti4UAUrh"
     sub_heading:
       text: |
-        You may qualify if you are a <strong style="font-weight: bold;">Miami resident</strong> and belong to one of these groups:
+        <strong style="font-weight: bold;"> Every Miami Resident is invited to apply </strong>. You also need to be a Citizen, permanent resident or DACA. You should not have accounts in collection greater than $5k. Preference will be given to one of these groups:
       font_size: ["16px", "16px", "16px", "16px", "16px"]
     button:
       text: "APPLY NOW"
       color: "white"
       hover_color: "white"
-      path: "https://www.switchup.org/bootcamps/4geeks-academy"
+      path: "https://marketing892162.typeform.com/to/ti4UAUrh"
       background: "black"
     columns:
       - image:
@@ -154,7 +153,7 @@ components:
         size: [3,3,3,3]
       - image:
           style: '{ "backgroundSize": "cover", "borderRadius": "80px" }'
-          src: "/images/landing/veteran.png"
+          src: "/images/landing/veteran2.png"
         content: 
           text: "LOW-INCOME <br> VETERANS"
           style: '{ "fontWeight": "700" }'
@@ -162,7 +161,7 @@ components:
         size: [3,3,3,3]
       - image:
           style: '{ "backgroundSize": "cover", "borderRadius": "80px" }'
-          src: "/images/landing/image_259.png"
+          src: "/images/landing/mom-household.png"
         content: 
           text: "LOW-INCOME SINGLE FEMALE HEADS OF HOUSE HOLD"
           style: '{ "fontWeight": "700" }'
@@ -233,24 +232,24 @@ components:
     image:
       style: '{ "backgroundSize": "contain" }'
       src: "/static/images/staff/luisa.png"
-    video: "https://www.youtube.com/watch?v=MBXqEnhodx0"
+    video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
     heading:
       text: "Pay when you get a job!"
       font_size: ["30px", "30px", "30px", "30px", "30px"]
     sub_heading:
-      text: "Don't pay tuition upfront:"
-      font_size: ["16px", "16px", "16px", "16px", "16px"]
+      text: "There is no Payment upfront. Actually, payments will start only after you get a job where you can make more than $35k (p/year)."
+      font_size: ["18px", "18px", "18px", "18px", "18px"]
     button:
       text: "Review Conditions"
       color: null
-      path: "https://www.switchup.org/bootcamps/4geeks-academy"
+      path: "https://marketing892162.typeform.com/to/ti4UAUrh"
     content:
       text: |
-        <h2><strong style="font-weight: bold;">1. ENROLL THE PROGRAM</strong></h2>
-        <h2><strong style="font-weight: bold;">2. LEARN TO CODE</strong></h2>
-        <h2><strong style="font-weight: bold;">3. GRADUATE</strong></h2>
-        <h2><strong style="font-weight: bold;">4. GET A JOB</strong></h2>
-        <h2><strong style="font-weight: bold;">5. PAY FOR YOUR EDUCATION</strong></h2>
+        <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">1. Enroll and Join the Program</strong></h2>
+        <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">2. Get the skills of a software Developer</strong></h2>
+        <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">3. Graduate and complete your Projects</strong></h2>
+        <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">4. Get a Job</strong></h2>
+        <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">5. Pay for the program</strong></h2>
       font_size: ["16px"]
 
   - name: testimonials
@@ -275,14 +274,14 @@ components:
       text: "Ready to start your journey to a better future?"
       font_size: ["40px", "40px", "40px", "40px", "40px"]
     content:
-      text: "A total of $750,000 in scholarships is avaliable. We are now accepting applications."
+      text: "A total of 100 students will be chosen for phase 1. We are now accepting applications."
       font_size: ["16px"]
     button:
       text: "APPLY NOW"
       color: "white"
       background: "blue"
       hover_color: "white"
-      path: "https://www.switchup.org/bootcamps/4geeks-academy"
+      path: "https://marketing892162.typeform.com/to/ti4UAUrh"
 
   - name: united
     position: 11
@@ -293,7 +292,7 @@ components:
       style: '{ "backgroundSize": "contain", "maxHeight": "270px" }'
       src: "/images/landing/united-way-two.png"
     heading:
-      text: "Brought to you by united way"
+      text: "Brought to you by united way + Social Finance + 4Geeks Academy"
       font_size: ["40px", "40px", "40px", "40px", "40px"]
     content:
       text: "United way advances the common good in communities accross the world. Focused on the education, income and health - thebuilding blocks for a good quality of life."

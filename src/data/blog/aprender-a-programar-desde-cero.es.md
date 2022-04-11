@@ -86,6 +86,9 @@ No nos engañemos, programar no es fácil. Las continuas innovaciones simplifica
 
 No importa si estudias un curso de programación o si ya tienes varios años de experiencia trabajando como desarrollador, en la comunidad de desarrolladores encontrarás tanto recursos como oportunidades de interacción para resolver dudas y problemas con tu código. Cuando aprendes a programar es inevitable usar los recursos disponibles gracias a las comunidades de desarrolladores, y lo ideal es que seas parte activa de la comunidad, no solamente a través del aprendizaje sino también a través de la colaboración, de compartir tu conocimiento y experiencias con otros, ¡sin importar el tiempo de experiencia que tengas en el área!
 
+<call-to-action button_text="Ver programa" button_link="/es/curso-de-programacion-desde-cero" background="rgba(0, 151, 205, 0.15)" title="Impulsa tu carrera, gracias a la programación" text="Te invitamos a impulsar tu carrera, aprendiendo a programar con nuestro Programa Full-Stack Developer."></call-to-action>
+
+
 ## ¿Qué lenguajes de programación deberías aprender?
 
 Una de las grandes comunidades de programadores, StackOverflow, realiza todos los años una encuesta entre sus miembros. En esta encuesta se puede conocer según los encuestados, entre otros aspectos: cuáles son tecnologías más populares, cuáles son las preferidas y temidas, con cuáles han trabajado y quieren trabajar, y qué remuneraciones están ligadas a diferentes tecnologías.
