@@ -40,11 +40,11 @@ walk(`${__dirname}/../data/`, async function (err, files) {
 
     const data = fs.readFileSync(_path, "utf8");
 
-      if(data.includes('“') || data.includes('”')){
-        console.log(`invalid quotes at ${_path}`);
-        fail(`We found some weird quotes " that usually come from copy & pasting content from the 
+    if (data.includes("“") || data.includes("”")) {
+      console.log(`invalid quotes at ${_path}`);
+      fail(`We found some weird quotes " that usually come from copy & pasting content from the 
         internet, please make sure to fix them to standard double quotes at ${_path}`);
-      }
+    }
 
     if (doc.type == "page") {
       if (doc.yaml.meta_info === undefined)
