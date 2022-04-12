@@ -20,10 +20,10 @@ faq:
   - topic: "Preguntas Frecuentes sobre 4Geeks"
     questions:
       - question: "¿Por qué 4Geeks Academy?"
-        answer: |-
-          "Bueno, es un poco extraño hablar mucho sobre uno mismo ... pero, está bien, ¡ya que lo preguntaste! 
+        answer: |
+          Bueno, es un poco extraño hablar mucho sobre uno mismo ... pero, está bien, ¡ya que lo preguntaste! 
           Ofrecemos una metodología única en la que mejoraremos tu capacidades generales; te formaremos y convertiremos en un desarrollador de software. Estamos constantemente brindando nuevos enfoques innovadores para enseñar programación que no muchas otras organizaciones educativas están haciendo. 
-          “Breathe Coding" (respirar código). Ese es nuestro lema, porque entendemos que, para convertirse en desarrollador, uno tiene que ser parte de la cultura de la programación. Hemos hecho que el aprendizaje sea divertido y hemos dominado el arte de mostrar cómo las habilidades de programación pueden encajar en la vida cotidiana."
+          "Breathe Coding" (respirar código). Ese es nuestro lema, porque entendemos que, para convertirse en desarrollador, uno tiene que ser parte de la cultura de la programación. Hemos hecho que el aprendizaje sea divertido y hemos dominado el arte de mostrar cómo las habilidades de programación pueden encajar en la vida cotidiana.
       - question: "¿4Geeks es una institución académica certificada?"
         answer: "¡Sin lugar a dudas! Estamos certificados por la Comisión de Educación Independiente del Departamento de Educación de Florida en Estados Unidos."
       - question: "¿Por qué nuestros campus?"
@@ -60,16 +60,18 @@ faq:
   - topic: "Preguntas Frecuentes sobre Programas"
     questions:
       - question: "¿Cuántas horas a la semana necesito tener disponibles?"
-        answer: |-
-          "Para convertirte en el mejor developer posible debes dedicar tiempo, no hay otra manera, en nuestro programa “part-time” tendrás clases 3 horas 3 días a la semana, y debes dedicar en total unas 20-24 horas de estudio semanal. En el caso del programa a tiempo completo, que son 8 horas de clases al día, con dedicar en total unas 48 horas a la semana es suficiente."
-      - question: "¿Por qué “Part-time?” ¿Cómo funciona?"
+        answer: |
+          Para convertirte en el mejor developer posible debes dedicar tiempo, no hay otra manera, en nuestro programa "part-time" tendrás clases 3 horas 3 días a la semana, y debes dedicar en total unas 20-24 horas de estudio semanal. En el caso del programa a tiempo completo, que son 8 horas de clases al día, con dedicar en total unas 48 horas a la semana es suficiente.
+      - question: |
+          ¿Por qué "Part-time?"" ¿Cómo funciona?
         answer: |-
           "Creemos que el futuro de la educación es el 'tiempo parcial'. Lo que ofrecemos es una educación combinada que aprovecha dos formatos probados: formación a tiempo parcial y aula invertida. La metodología tiene una combinación de los siguientes cuatro pilares: 
           Aula invertida: la teoría se imparte a través de videos, animación, imágenes e infografías. El tiempo de clase se usa para debatir, crear y construir proyectos, y ser mentorizado para resolver muchos ejercicios prácticos. 
           Mentorías personalizadas: cada estudiante tiene la oportunidad de tener conversaciones privadas con un mentor principal de manera regular. 
           Proporción de mentor-estudiante 1: 6 (en promedio): Un entorno cercano y personalizado  brinda a nuestra academia la oportunidad de adaptarse al ritmo particular de cada estudiante. 
           Árbol de talentos: el plan de estudios traza 44 habilidades en las que los estudiantes ganan puntos por cada habilidad aprendida de una manera lúdica."
-      - question: "¿Por qué “Full-time?” ¿Cómo funciona?"
+      - question: |
+          ¿Por qué "Full-time?" ¿Cómo funciona?
         answer: |-
           "También ofrecemos formación a tiempo completo, entendemos que si buscas un curso full-time es porque no tienes que renunciar a tu empleo y que lejos de frenarte profesionalmente, ¡impulsará tu carrera!. La metodología, que además de ser super inmersiva, tiene una combinación de los siguientes cuatro pilares: 
           Aula invertida: la teoría se imparte a través de videos, animación, imágenes e infografías. El tiempo de clase se usa para debatir, crear y construir proyectos, y ser mentorizado para resolver muchos ejercicios prácticos. 
@@ -116,9 +118,9 @@ faq:
         answer: |-
           "No. Solo necesitas querer aprender. La programación debe existir en alguna parte de tu cuerpo, ¡y la encontraremos! Si ya sabes cómo abrir un navegador y revisar tu Facebook, ¡entonces estaremos bien!"
       - question: "¿Me gradúo como 'Senior Developer?'"
-        answer: |-
-          "No. Por favor, no corras antes de aprender a caminar. La programación es como la vida: si eres bueno en eso, aprenderás más rápido, pero no al instante. Obtendrás la experiencia de ver todos los detalles una vez hayas dominado el arte.
-          Hacer nuestro programa Full Stack significa que tu vida tendrá una nueva habilidad, pero también desarrollará una nueva forma de "pensar". Te gradúas como “Desarrollador Junior”, pero como un “Desarrollador Junior” REALMENTE BUENO, ¡no como uno más en el grupo!"
+        answer: |
+          No. Por favor, no corras antes de aprender a caminar. La programación es como la vida: si eres bueno en eso, aprenderás más rápido, pero no al instante. Obtendrás la experiencia de ver todos los detalles una vez hayas dominado el arte.
+          Hacer nuestro programa Full Stack significa que tu vida tendrá una nueva habilidad, pero también desarrollará una nueva forma de "pensar". Te gradúas como "Desarrollador Junior", pero como un "Desarrollador Junior" REALMENTE BUENO, ¡no como uno más en el grupo!
       - question: "¿Cómo es el mercado para las empresas que buscan desarrolladores?"
         answer: |-
           " De acuerdo a estimaciones del IDC entre 2020 y 2025 se necesitarán sumar 10.5 millones de profesionales en el área de tecnología en todo el mundo. Por el momento hay más de 1.4 millones de puestos de trabajo de programación abiertos solo en los Estados Unidos y se espera que este número siga creciendo para el 2021;  en España, durante la pandemia, se crearon 1.500 ofertas como programador junior en tan solo una de las webs para búsqueda de empleo y por otro lado en Latinoamérica se necesitarán alrededor de 1.2millones de profesionales para disminuir la brecha. Por lo tanto el mercado para las empresas que buscan desarrolladores seguirá creciendo a un paso acelerado para poder cumplir con la alta demanda."

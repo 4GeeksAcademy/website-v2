@@ -38,6 +38,14 @@ walk(`${__dirname}/../data/`, async function (err, files) {
     if (!doc || !doc.yaml) fail("Invalid YML syntax for " + _path);
     if (!doc.lang) fail("Missing language on yml file name for " + _path);
 
+    const data = fs.readFileSync(_path, "utf8");
+
+    if (data.includes("“") || data.includes("”")) {
+      console.log(`invalid quotes at ${_path}`);
+      fail(`We found some weird quotes " that usually come from copy & pasting content from the 
+        internet, please make sure to fix them to standard double quotes at ${_path}`);
+    }
+
     if (doc.type == "page") {
       if (doc.yaml.meta_info === undefined)
         fail("Page is missing meta_info: " + _path);
