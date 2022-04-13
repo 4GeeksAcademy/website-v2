@@ -64,6 +64,8 @@ Aquí hay una lista de las profesiones tecnológicas que incluyen Python en su c
 
 Es importante destacar que el salario anual cambia según cada país, pero esta lista es un buen lugar para comenzar.
 
+<call-to-action button_text="Ver programa" button_link="/es/curso-de-programacion-desde-cero" background="rgba(0, 151, 205, 0.15)" title="Aprende los lenguajes de programación más demandados en la industria" text="Te invitamos a impulsar tu carrera, aprendiendo a programar con nuestro Programa Full Stack Developer."></call-to-action>
+
 **COMPAÑÍAS**
 
 Según [365 Data Science](https://365datascience.com/) y [La Vanguardia,](https://www.lavanguardia.com/) estas son las principales empresas con el mayor número de ofertas de trabajo para profesionales en la industria tecnológica en España y USA:
