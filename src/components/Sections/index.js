@@ -193,6 +193,7 @@ export const Div = styled.div`
     column-count: ${(props) => props.columnCount_xs};
     flex-direction: ${(props) => props.flexDirection_xs};
     width: ${(props) => props.width_xs};
+    max-width: ${(props) => props.maxWidth_xs};
     margin: ${(props) => props.margin_xs};
     display: ${(props) => props.display_xs};
     justify-content: ${(props) =>
