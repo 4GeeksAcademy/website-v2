@@ -83,11 +83,11 @@ const Home = (props) => {
       );
     }
 
-    arr[ind].sub_links.sort((a,b) => {
-      if ( a.node.meta_info.position < b.node.meta_info.position ){
+    arr[ind].sub_links.sort((a, b) => {
+      if (a.node.meta_info.position < b.node.meta_info.position) {
         return -1;
       }
-      if ( a.node.meta_info.position > b.node.meta_info.position ){
+      if (a.node.meta_info.position > b.node.meta_info.position) {
         return 1;
       }
       return 0;
