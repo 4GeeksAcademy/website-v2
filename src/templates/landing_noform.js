@@ -255,9 +255,16 @@ const Landing = (props) => {
                 </Paragraph>
               ))}
             {yml.features.text && (
-              <Paragraph
-                isActive
-                style={JSON.parse(yml.features.styles)}
+              <Div
+                // isActive
+                style={{
+                  fontWeight: '400',
+                  fontFamily: 'Lato, sans-serif',
+                  lineHeight: '22px',
+                  fontSize: '15px',
+                  ...JSON.parse(yml.features.styles)
+                }}
+                display="block"
                 margin="7px 0"
                 padding_tablet="0px 0px"
                 padding="0px 20px"
