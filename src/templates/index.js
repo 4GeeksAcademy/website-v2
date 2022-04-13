@@ -82,6 +82,16 @@ const Home = (props) => {
         (loc) => loc.node.meta_info.region === reg.name
       );
     }
+
+    arr[ind].sub_links.sort((a,b) => {
+      if ( a.node.meta_info.position < b.node.meta_info.position ){
+        return -1;
+      }
+      if ( a.node.meta_info.position > b.node.meta_info.position ){
+        return 1;
+      }
+      return 0;
+    });
   });
 
   const hiring = data.allPartnerYaml.edges[0].node;
