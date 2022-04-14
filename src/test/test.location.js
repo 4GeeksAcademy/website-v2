@@ -20,7 +20,7 @@ const content_fields = [
 
 const onlineSlugs = [
   "europe",
-  "online"
+  "online",
   // "bootcamp-programacion-europa-online",
   // "europe-online-coding-bootcamp",
   // "online-bootcamp-programacion",
