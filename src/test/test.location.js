@@ -19,10 +19,12 @@ const content_fields = [
 ];
 
 const onlineSlugs = [
-  "bootcamp-programacion-europa-online",
-  "europe-online-coding-bootcamp",
-  "online-bootcamp-programacion",
-  "online-coding-bootcamp",
+  "europe",
+  "online"
+  // "bootcamp-programacion-europa-online",
+  // "europe-online-coding-bootcamp",
+  // "online-bootcamp-programacion",
+  // "online-coding-bootcamp",
 ];
 
 const locations_fields = [
@@ -164,7 +166,7 @@ walk(`${__dirname}/../data/location`, async (err, files) => {
             allLocations["us"][slug]["yaml"][field["key"]];
           const path = allLocations["es"][slug].filePath;
           if (
-            onlineSlugs.includes(slug) &&
+            !onlineSlugs.includes(slug) &&
             location_fields_es !== location_fields_us
           ) {
             fail(
