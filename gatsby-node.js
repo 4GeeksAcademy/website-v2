@@ -459,8 +459,8 @@ const createPagesfromYml = async ({ graphql, actions }) => {
         node.fields.slug === "index" ? "/" : node.fields.pagePath
       } in ${node.fields.lang}`
     );
-    if (node.fields.slug.includes("carrera-de-programacion"))
-      console.log(node.fields);
+    // if (node.fields.slug.includes("carrera-de-programacion"))
+    //   console.log(node.fields);
     createPage({
       path: _targetPath,
       component: path.resolve(
