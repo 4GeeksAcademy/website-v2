@@ -49,6 +49,7 @@ walk(`${__dirname}/../data/blog/`, async function (err, files) {
       hasRedirect.destination = `/${doc.lang}/${doc.attributes.cluster}/${doc.name}`;
     }
   }
+  console.log('vercel');
   console.log(vercel);
 
   const fileContent = JSON.stringify(vercel, null, 2);
