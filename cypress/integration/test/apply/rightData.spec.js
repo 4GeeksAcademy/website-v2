@@ -44,8 +44,6 @@ context("Test Apply page with correct data", () => {
       cy.get("[data-cy=dropdown_program_selector]")
         .click({ force: true })
         .wait(1500)
-        .get("#react-select-2-option-0")
-        .click({ force: true });
 
       cy.get("[data-cy=dropdown_academy_selector]")
         .click()
