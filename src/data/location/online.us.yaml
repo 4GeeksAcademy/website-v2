@@ -1,7 +1,7 @@
 meta_info:
   slug: "online-coding-bootcamp"
   title: "Online Coding Bootcamps"
-  position: 30
+  position: 102
   description: "Discover here all the online coding bootcamps taught by 4geeks Academy. Sign up today!"
   image: ""
   keywords: "null"
@@ -256,8 +256,8 @@ breathecode_location_slug: "online"
 gdpr_compliant: true # do we need to ask for permision?
 in_person_available: false # important to accept in-person applicants
 
-city: "Online"
-name: "Online/Remote"
+city: "Rest of Latam"
+name: "Rest of Latam Online/Remote"
 latitude: "10000.760158"
 longitude: "-800000.200154"
 phone: "+1 (786) 416-6640"

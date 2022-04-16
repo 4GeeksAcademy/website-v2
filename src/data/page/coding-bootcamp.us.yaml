@@ -96,8 +96,9 @@ sticky_nav:
 
 what_will_you_learn:
   heading: "What will you learn in this course?"
-  sub_title: "Learning to program is also about developing logic and understanding how a computer “thinks”, 
-    how they “speak”, how the elements of an application mesh and understand each other.
+  sub_title: |
+    Learning to program is also about developing logic and understanding how a computer "thinks", 
+    how they "speak", how the elements of an application mesh and understand each other.
 
     Developing the ability to program goes hand in hand with creativity and the search for 
     solutions to problems. Programming means solving problems through certain tools with which 
@@ -107,7 +108,7 @@ what_will_you_learn:
     front-end, back-end, database, distributed process management and deployment to different web 
     platforms. You will gain the skills and knowledge to create a website by immersing yourself in the 
     best practices of responsive web design, working with various languages.
-  "
+  
   image: "../../../static/images/learn_to_code.png"
   image_alt: "What will you learn in this course"
 
@@ -119,9 +120,10 @@ content_with_subtitle_and_image:
     - content: "A full stack developer is a developer who has mastered Full-Stack technology, 
         both front-end and back-end. And what does all this mean? So you should know these terms:"
     - label: "Stack"
-      content: "Stack translation is “stack of things“, in this case it would be the complete 
+      content: |
+        Stack translation is "stack of things", in this case it would be the complete 
         stack of applications that communicate with each other, so that they can execute, 
-        together, an action requested by the user/client"
+        together, an action requested by the user/client
 
     - label: "Front-end"
       content: "It's everything the user (or client side) can see and interact with."

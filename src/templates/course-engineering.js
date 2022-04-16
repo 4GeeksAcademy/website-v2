@@ -1,36 +1,35 @@
-import React,  {useState, useEffect} from 'react';
-import Link from 'gatsby-link'
-import {GridContainer, Header, Div} from '../components/Sections'
-import {isCustomBarActive} from '../actions';
-import {Button, Colors} from '../components/Styling'
-import ProgramDetails from '../components/ProgramDetails';
-import ProgramDetailsMobile from '../components/ProgramDetailsMobile';
-import TechsWeTeach from '../components/TechsWeTeach';
-import GeeksInfo from '../components/GeeksInfo';
-import OurPartners from '../components/OurPartners';
-import BaseRender from './_baseLayout'
-import Modal from '../components/Modal';
-import LeadForm from '../components/LeadForm';
-import {requestSyllabus} from "../actions";
-import {SessionContext} from '../session'
-import {Circle} from '../components/BackgroundDrawing'
-import Icon from '../components/Icon'
-import Testimonials from '../components/Testimonials';
-import Badges from '../components/Badges';
-import PricesAndPayment from '../components/PricesAndPayment';
-import Instructors from '../components/Instructors';
+import React, { useState, useEffect } from "react";
+import Link from "gatsby-link";
+import { GridContainer, Header, Div } from "../components/Sections";
+import { isCustomBarActive } from "../actions";
+import { Button, Colors } from "../components/Styling";
+import ProgramDetails from "../components/ProgramDetails";
+import ProgramDetailsMobile from "../components/ProgramDetailsMobile";
+import TechsWeTeach from "../components/TechsWeTeach";
+import GeeksInfo from "../components/GeeksInfo";
+import OurPartners from "../components/OurPartners";
+import BaseRender from "./_baseLayout";
+import Modal from "../components/Modal";
+import LeadForm from "../components/LeadForm";
+import { requestSyllabus } from "../actions";
+import { SessionContext } from "../session";
+import { Circle } from "../components/BackgroundDrawing";
+import Icon from "../components/Icon";
+import Testimonials from "../components/Testimonials";
+import Badges from "../components/Badges";
+import PricesAndPayment from "../components/PricesAndPayment";
+import Instructors from "../components/Instructors";
 
-
-
-const Program = ({data, pageContext, yml}) => {
-
-  const {session} = React.useContext(SessionContext);
+const Program = ({ data, pageContext, yml }) => {
+  const { session } = React.useContext(SessionContext);
   const courseDetails = data.allCourseYaml.edges[0].node;
   const geek = data.allCourseYaml.edges[0].node;
   const [open, setOpen] = React.useState(false);
 
-  const course_type = "software_engineering"
-  const program_type = yml.meta_info.slug.includes("full-time") ? "full_time" : "part_time"
+  const course_type = "software_engineering";
+  const program_type = yml.meta_info.slug.includes("full-time")
+    ? "full_time"
+    : "part_time";
   const handleOpen = () => {
     setOpen(true);
   };
@@ -43,130 +42,407 @@ const Program = ({data, pageContext, yml}) => {
 
   const [applyButtonText, setApplyButtonText] = useState("");
   let city = session && session.location ? session.location.city : [];
-  let currentLocation = data.allLocationYaml.edges.find(loc => loc.node?.city === city);
+  let currentLocation = data.allLocationYaml.edges.find(
+    (loc) => loc.node?.city === city
+  );
 
-  useEffect( () => {
-    if (currentLocation !== undefined){
-      setApplyButtonText(currentLocation.node.button.apply_button_text)
+  useEffect(() => {
+    if (currentLocation !== undefined) {
+      setApplyButtonText(currentLocation.node.button.apply_button_text);
     }
-  }, [currentLocation])
+  }, [currentLocation]);
 
   const syllabus_button_text = yml.button.syllabus_heading;
 
-  return (<>
-    <Header
-      margin={isCustomBarActive(session) ? "120px 0 0 0" : ""}
-      seo_title={yml.seo_title}
-      title={yml.header.title}
-      paragraph={yml.header.paragraph}
-      padding_tablet="72px 0 40px 0"
-      position="relative"
-    >
-      <Circle color="yellow" width="17px" height="17px" top="0" left="74px" zIndex="1" display="none" display_tablet="inline" opacity="0.2" />
-      <Circle color="grey" width="17px" height="17px" top="0" left="106px" zIndex="1" display="none" display_tablet="inline" />
-      <Circle color="black" width="17px" height="17px" top="32px" left="106px" zIndex="1" display="none" display_tablet="inline" />
-      <Circle color="black" width="17px" height="17px" top="32px" left="74px" zIndex="1" display="none" display_tablet="inline" />
-      <Circle color="grey" width="17px" height="17px" top="67px" left="74px" zIndex="1" display="none" display_tablet="inline" />
-      <Circle color="grey" width="17px" height="17px" top="102px" left="74px" zIndex="1" display="none" display_tablet="inline" />
-      <Circle color="grey" width="17px" height="17px" top="137px" left="106px" zIndex="1" display="none" display_tablet="inline" />
-      <Circle color="grey" width="17px" height="17px" top="172px" left="106px" zIndex="1" display="none" display_tablet="inline" />
-      <Circle color="blue" width="17px" height="17px" top="216px" left="74px" zIndex="1" display="none" display_tablet="inline" />
-      <Circle color="grey" width="17px" height="17px" top="271px" left="106px" zIndex="1" display="none" display_tablet="inline" />
-      <Circle color="red" width="27px" height="27px" top="222px" left="278px" zIndex="1" display="none" display_tablet="inline" />
-      <Circle color="yellow" width="250px" height="250px" bottom="20px" right="-68px" opacity="0.2" zIndex="1" display="none" display_tablet="inline" />
-      <Circle color="grey" width="17px" height="17px" top="120px" right="50px" zIndex="1" display="none" display_tablet="inline" />
-      <Circle color="black" width="17px" height="17px" top="120px" right="89px" zIndex="1" display="none" display_tablet="inline" />
-      <Circle color="grey" width="17px" height="17px" top="120px" right="128px" zIndex="1" display="none" display_tablet="inline" />
-      <Circle color="black" width="119px" height="11px" border="10px" bottom="115px" right="40px" zIndex="1" display="none" display_tablet="inline" />
-      <Circle color="black" width="77px" height="11px" border="10px" bottom="115px" right="175px" zIndex="1" display="none" display_tablet="inline" />
-      <Circle color="yellow" width="116px" height="116px" bottom="50px" left="-58px" zIndex="1" display="none" display_tablet="inline" />
-      <Circle color="yellow" width="116px" height="116px" bottom="200px" left="-90px" zIndex="1" display="inline" display_tablet="none" />
-      <Circle color="yellow" width="21px" height="21px" top="10px" right="320px" zIndex="1" display="none" display_tablet="inline" />
-      <Circle color="blue" width="57px" height="57px" top="32px" right="61px" display="none" display_tablet="inline" />
-      <Circle color="yellow" width="160px" height="160px" top="0" right="-120px" opacity="0.2" display="inline" display_tablet="none" />
-      <Circle color="red" width="25px" height="25px" top="60px" right="30px" display="inline" display_tablet="none" />
-      <Div flexDirection_tablet="row" flexDirection="column" alignItems="center" justifyContent="center" margin_tablet="0 0 50px 0">
-        <Link to={yml.button.apply_button_link}
-          state={{course: yml.meta_info.bc_slug}}
-        >
-          <Button variant="full" justifyContent="center" width="200px" width_tablet="fit-content" color={Colors.blue} margin_tablet="10px 24px 10px 0" textColor="white">{applyButtonText}</Button>
-        </Link>
-        <Button onClick={handleOpen} width="200px" width_tablet="fit-content" variant="outline" icon={<Icon icon="download" stroke={Colors.black} style={{marginRight: "10px"}} width="46px" height="46px" />} color={Colors.black} margin="10px 0 50px 0" margin_tablet="0" textColor={Colors.black}>{syllabus_button_text}</Button>
-        {/* <Button onClick={handleOpen} variant="outline" width="200px" color={Colors.black} margin="10px 0 58px 0" textColor={Colors.black}>{syllabus_button_text}</Button> */}
-        {/* <Button onClick={handleOpen} variant="outline" icon={<Icon icon="download" stroke={Colors.black} style={{marginRight: "10px"}} width="46px" height="46px" />} color={Colors.black} margin="10px 0 50px 0" margin_tablet="0" textColor={Colors.black}>{syllabus_button_text}</Button> */}
-      </Div>
-      <Modal
-        aria-labelledby="simple-modal-title"
-        aria-describedby="simple-modal-description"
-        open={open}
-        onClose={handleClose}
+  return (
+    <>
+      <Header
+        margin={isCustomBarActive(session) ? "120px 0 0 0" : ""}
+        seo_title={yml.seo_title}
+        title={yml.header.title}
+        paragraph={yml.header.paragraph}
+        padding_tablet="72px 0 40px 0"
+        position="relative"
       >
-        <LeadForm
-          style={{marginTop: "50px"}}
-          heading={yml.button.syllabus_heading}
-          motivation={yml.button.syllabus_motivation}
-          sendLabel={syllabus_button_text}
-          formHandler={requestSyllabus}
-          handleClose={handleClose}
-          lang={pageContext.lang}
-          data={{
-            course: {type: "hidden", value: yml.meta_info.bc_slug, valid: true}
-          }}
+        <Circle
+          color="yellow"
+          width="17px"
+          height="17px"
+          top="0"
+          left="74px"
+          zIndex="1"
+          display="none"
+          display_tablet="inline"
+          opacity="0.2"
         />
-      </Modal>
-      <Badges lang={pageContext.lang} short_link={true} paragraph={yml.badges.paragraph && yml.badges.paragraph} />
-    </Header>
+        <Circle
+          color="grey"
+          width="17px"
+          height="17px"
+          top="0"
+          left="106px"
+          zIndex="1"
+          display="none"
+          display_tablet="inline"
+        />
+        <Circle
+          color="black"
+          width="17px"
+          height="17px"
+          top="32px"
+          left="106px"
+          zIndex="1"
+          display="none"
+          display_tablet="inline"
+        />
+        <Circle
+          color="black"
+          width="17px"
+          height="17px"
+          top="32px"
+          left="74px"
+          zIndex="1"
+          display="none"
+          display_tablet="inline"
+        />
+        <Circle
+          color="grey"
+          width="17px"
+          height="17px"
+          top="67px"
+          left="74px"
+          zIndex="1"
+          display="none"
+          display_tablet="inline"
+        />
+        <Circle
+          color="grey"
+          width="17px"
+          height="17px"
+          top="102px"
+          left="74px"
+          zIndex="1"
+          display="none"
+          display_tablet="inline"
+        />
+        <Circle
+          color="grey"
+          width="17px"
+          height="17px"
+          top="137px"
+          left="106px"
+          zIndex="1"
+          display="none"
+          display_tablet="inline"
+        />
+        <Circle
+          color="grey"
+          width="17px"
+          height="17px"
+          top="172px"
+          left="106px"
+          zIndex="1"
+          display="none"
+          display_tablet="inline"
+        />
+        <Circle
+          color="blue"
+          width="17px"
+          height="17px"
+          top="216px"
+          left="74px"
+          zIndex="1"
+          display="none"
+          display_tablet="inline"
+        />
+        <Circle
+          color="grey"
+          width="17px"
+          height="17px"
+          top="271px"
+          left="106px"
+          zIndex="1"
+          display="none"
+          display_tablet="inline"
+        />
+        <Circle
+          color="red"
+          width="27px"
+          height="27px"
+          top="222px"
+          left="278px"
+          zIndex="1"
+          display="none"
+          display_tablet="inline"
+        />
+        <Circle
+          color="yellow"
+          width="250px"
+          height="250px"
+          bottom="20px"
+          right="-68px"
+          opacity="0.2"
+          zIndex="1"
+          display="none"
+          display_tablet="inline"
+        />
+        <Circle
+          color="grey"
+          width="17px"
+          height="17px"
+          top="120px"
+          right="50px"
+          zIndex="1"
+          display="none"
+          display_tablet="inline"
+        />
+        <Circle
+          color="black"
+          width="17px"
+          height="17px"
+          top="120px"
+          right="89px"
+          zIndex="1"
+          display="none"
+          display_tablet="inline"
+        />
+        <Circle
+          color="grey"
+          width="17px"
+          height="17px"
+          top="120px"
+          right="128px"
+          zIndex="1"
+          display="none"
+          display_tablet="inline"
+        />
+        <Circle
+          color="black"
+          width="119px"
+          height="11px"
+          border="10px"
+          bottom="115px"
+          right="40px"
+          zIndex="1"
+          display="none"
+          display_tablet="inline"
+        />
+        <Circle
+          color="black"
+          width="77px"
+          height="11px"
+          border="10px"
+          bottom="115px"
+          right="175px"
+          zIndex="1"
+          display="none"
+          display_tablet="inline"
+        />
+        <Circle
+          color="yellow"
+          width="116px"
+          height="116px"
+          bottom="50px"
+          left="-58px"
+          zIndex="1"
+          display="none"
+          display_tablet="inline"
+        />
+        <Circle
+          color="yellow"
+          width="116px"
+          height="116px"
+          bottom="200px"
+          left="-90px"
+          zIndex="1"
+          display="inline"
+          display_tablet="none"
+        />
+        <Circle
+          color="yellow"
+          width="21px"
+          height="21px"
+          top="10px"
+          right="320px"
+          zIndex="1"
+          display="none"
+          display_tablet="inline"
+        />
+        <Circle
+          color="blue"
+          width="57px"
+          height="57px"
+          top="32px"
+          right="61px"
+          display="none"
+          display_tablet="inline"
+        />
+        <Circle
+          color="yellow"
+          width="160px"
+          height="160px"
+          top="0"
+          right="-120px"
+          opacity="0.2"
+          display="inline"
+          display_tablet="none"
+        />
+        <Circle
+          color="red"
+          width="25px"
+          height="25px"
+          top="60px"
+          right="30px"
+          display="inline"
+          display_tablet="none"
+        />
+        <Div
+          flexDirection_tablet="row"
+          flexDirection="column"
+          alignItems="center"
+          justifyContent="center"
+          margin_tablet="0 0 50px 0"
+        >
+          <Link
+            to={yml.button.apply_button_link}
+            state={{ course: yml.meta_info.bc_slug }}
+          >
+            <Button
+              variant="full"
+              justifyContent="center"
+              width="200px"
+              width_tablet="fit-content"
+              color={Colors.blue}
+              margin_tablet="10px 24px 10px 0"
+              textColor="white"
+            >
+              {applyButtonText}
+            </Button>
+          </Link>
+          <Button
+            onClick={handleOpen}
+            width="200px"
+            width_tablet="fit-content"
+            variant="outline"
+            icon={
+              <Icon
+                icon="download"
+                stroke={Colors.black}
+                style={{ marginRight: "10px" }}
+                width="46px"
+                height="46px"
+              />
+            }
+            color={Colors.black}
+            margin="10px 0 50px 0"
+            margin_tablet="0"
+            textColor={Colors.black}
+          >
+            {syllabus_button_text}
+          </Button>
+          {/* <Button onClick={handleOpen} variant="outline" width="200px" color={Colors.black} margin="10px 0 58px 0" textColor={Colors.black}>{syllabus_button_text}</Button> */}
+          {/* <Button onClick={handleOpen} variant="outline" icon={<Icon icon="download" stroke={Colors.black} style={{marginRight: "10px"}} width="46px" height="46px" />} color={Colors.black} margin="10px 0 50px 0" margin_tablet="0" textColor={Colors.black}>{syllabus_button_text}</Button> */}
+        </Div>
+        <Modal
+          aria-labelledby="simple-modal-title"
+          aria-describedby="simple-modal-description"
+          open={open}
+          onClose={handleClose}
+        >
+          <LeadForm
+            style={{ marginTop: "50px" }}
+            heading={yml.button.syllabus_heading}
+            motivation={yml.button.syllabus_motivation}
+            sendLabel={syllabus_button_text}
+            formHandler={requestSyllabus}
+            handleClose={handleClose}
+            lang={pageContext.lang}
+            data={{
+              course: {
+                type: "hidden",
+                value: yml.meta_info.bc_slug,
+                valid: true,
+              },
+            }}
+          />
+        </Modal>
+        <Badges
+          lang={pageContext.lang}
+          short_link={true}
+          paragraph={yml.badges.paragraph && yml.badges.paragraph}
+        />
+      </Header>
 
-    <OurPartners background={Colors.verylightGray} images={hiring.partners.images} marquee title={hiring.partners.tagline} paragraph={hiring.partners.sub_heading}></OurPartners>
-    <ProgramDetails details={courseDetails.details} lang={pageContext.lang} course={program_type} background={Colors.white} />
-    <ProgramDetailsMobile details={courseDetails.details} lang={pageContext.lang} course={program_type} />
-    <TechsWeTeach lang={pageContext.lang} data={data.allSoftwareEngineeringTechsYaml}/>
-    <GeeksInfo lang={pageContext.lang} />
+      <OurPartners
+        background={Colors.verylightGray}
+        images={hiring.partners.images}
+        marquee
+        title={hiring.partners.tagline}
+        paragraph={hiring.partners.sub_heading}
+      ></OurPartners>
+      <ProgramDetails
+        details={courseDetails.details}
+        lang={pageContext.lang}
+        course={program_type}
+        background={Colors.white}
+      />
+      <ProgramDetailsMobile
+        details={courseDetails.details}
+        lang={pageContext.lang}
+        course={program_type}
+      />
+      <TechsWeTeach
+        lang={pageContext.lang}
+        data={data.allSoftwareEngineeringTechsYaml}
+      />
+      <GeeksInfo lang={pageContext.lang} />
 
-    <GridContainer padding_tablet="0" margin_tablet="0 0 62px 0">
-      <Div height="1px" background="#EBEBEB"></Div>
-    </GridContainer>
-    
-    {/* <Instructors lang={courseDetails.course_instructors}/> */}
-    <PricesAndPayment
-      type={pageContext.slug}
-      lang={pageContext.lang}
-      session={session}
-      locations={data.allLocationYaml.edges}
-      programType={program_type}
-      courseType={course_type}
-      title={yml.prices.heading}
-      paragraph={yml.prices.sub_heading}
-    />
+      <GridContainer padding_tablet="0" margin_tablet="0 0 62px 0">
+        <Div height="1px" background="#EBEBEB"></Div>
+      </GridContainer>
 
-    <Testimonials lang={data.allTestimonialsYaml.edges} />
-    <OurPartners images={hiring.partners.images} marquee></OurPartners>
-  </>
-  )
-};  
+      {/* <Instructors lang={courseDetails.course_instructors}/> */}
+      <PricesAndPayment
+        type={pageContext.slug}
+        lang={pageContext.lang}
+        session={session}
+        locations={data.allLocationYaml.edges}
+        programType={program_type}
+        courseType={course_type}
+        title={yml.prices.heading}
+        paragraph={yml.prices.sub_heading}
+      />
+
+      <Testimonials lang={data.allTestimonialsYaml.edges} />
+      <OurPartners images={hiring.partners.images} marquee></OurPartners>
+    </>
+  );
+};
 
 export const query = graphql`
   query CourseEngineeringQuery($file_name: String!, $lang: String!) {
-    allSoftwareEngineeringTechsYaml(filter: { fields: { lang: { eq: $lang }}}) {
+    allSoftwareEngineeringTechsYaml(
+      filter: { fields: { lang: { eq: $lang } } }
+    ) {
       edges {
         node {
           title
           sub_title
-          image{
-              childImageSharp {
-                gatsbyImageData(
-                  layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                  width: 390
-                  height: 289
-                  placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
-                )
-                # fluid(maxHeight: 289, maxWidth: 390){
-                #   ...GatsbyImageSharpFluid_withWebp
-                # }
-              }
+          image {
+            childImageSharp {
+              gatsbyImageData(
+                layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                width: 390
+                height: 289
+                placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+              )
+              # fluid(maxHeight: 289, maxWidth: 390){
+              #   ...GatsbyImageSharpFluid_withWebp
+              # }
+            }
           }
           tech_list {
-            image{
+            image {
               childImageSharp {
                 gatsbyImageData(
                   layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
@@ -187,9 +463,11 @@ export const query = graphql`
         }
       }
     }
-    allCourseYaml(filter: { fields: { file_name: { eq: $file_name }, lang: { eq: $lang }}}) {
-      edges{
-        node{
+    allCourseYaml(
+      filter: { fields: { file_name: { eq: $file_name }, lang: { eq: $lang } } }
+    ) {
+      edges {
+        node {
           seo_title
           course_instructors {
             header {
@@ -204,231 +482,237 @@ export const query = graphql`
               sub_title
               image {
                 childImageSharp {
-                  gatsbyImageData(layout: CONSTRAINED width: 500 placeholder: NONE quality: 100 breakpoints:	[200, 340, 420, 490])
+                  gatsbyImageData(
+                    layout: CONSTRAINED
+                    width: 500
+                    placeholder: NONE
+                    quality: 100
+                    breakpoints: [200, 340, 420, 490]
+                  )
                 }
               }
             }
           }
-          header{
+          header {
+            title
+            paragraph
+            image_alt
+            image {
+              childImageSharp {
+                gatsbyImageData(
+                  layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                  width: 500
+                  placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                  quality: 100
+                  breakpoints: [200, 340, 520, 890]
+                )
+              }
+            }
+          }
+          button {
+            syllabus_heading
+            syllabus_motivation
+            apply_button_link
+          }
+          meta_info {
+            title
+            description
+            image
+            keywords
+            slug
+            bc_slug
+          }
+          geek_data {
+            heading
+            geek_force
+            geek_pal
+          }
+          badges {
+            paragraph
+          }
+          credentials {
+            heading
+            paragraph
+          }
+          details {
+            about {
               title
-              paragraph
-              image_alt
-              image{
+              sub_title
+              list {
+                label
+                content
+              }
+            }
+            heading
+            sub_heading
+            left_labels {
+              description
+              projects
+              duration
+              skills
+            }
+            details_modules {
+              title
+              projects
+              slug
+              module_name
+              duration
+              description
+              step
+            }
+          }
+          syllabus {
+            heading
+            button_label
+          }
+          potential_companies {
+            tagline
+            sub_heading
+            companies {
+              name
+              image {
                 childImageSharp {
                   gatsbyImageData(
-                      layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                      width: 500
-                      placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
-                      quality: 100
-                      breakpoints:	[200, 340, 520, 890]
-                  )
-                }
-              } 
-            }
-            button{
-              syllabus_heading
-              syllabus_motivation
-              apply_button_link
-            }
-            meta_info{
-                title
-                description
-                image
-                keywords
-                slug
-                bc_slug
-            }
-            geek_data {
-              heading
-              geek_force
-              geek_pal
-            }
-            badges{
-              paragraph
-            }
-            credentials{
-              heading
-              paragraph
-            }
-            details {
-              about{
-                title
-                sub_title
-                list{
-                  label
-                  content
-                }
-              }
-              heading
-              sub_heading
-              left_labels{
-                description
-                projects
-                duration
-                skills
-              }
-              details_modules {
-                title
-                projects
-                slug
-                module_name
-                duration
-                description
-                step
-              }
-            }
-            syllabus{
-              heading
-              button_label
-            }
-            potential_companies{
-              tagline
-              sub_heading
-              companies{
-                name
-                image{
-                  childImageSharp {
-
-                    gatsbyImageData(
                     layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
                     width: 100
                     placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                   )
 
-                    # fluid(maxWidth: 100){
-                    #   ...GatsbyImageSharpFluid_withWebp
-                    # }
-                  }
+                  # fluid(maxWidth: 100){
+                  #   ...GatsbyImageSharpFluid_withWebp
+                  # }
                 }
               }
             }
-            geeks_vs_others{
-              heading
-              sub_heading
-              sub_heading_link
           }
-            prices{
-              heading
-              sub_heading
+          geeks_vs_others {
+            heading
+            sub_heading
+            sub_heading_link
+          }
+          prices {
+            heading
+            sub_heading
+          }
+          typical {
+            heading
+            sub_heading
+            schedule {
+              title
+              time
+              icon
+              content
             }
-            typical{
-              heading
-              sub_heading
-              schedule{
-                title
-                time
-                icon
-                content
-              }
-            }
-            alumni{
-              heading
-              sub_heading
-            }
-            sidebar{
-              membership
-              program
-              geeks_vs_other
-              pricing
-              alumni
-            }
+          }
+          alumni {
+            heading
+            sub_heading
+          }
+          sidebar {
+            membership
+            program
+            geeks_vs_other
+            pricing
+            alumni
+          }
         }
       }
     }
 
-    allPartnerYaml(filter: { fields: { lang: { eq: $lang }}}) {
+    allPartnerYaml(filter: { fields: { lang: { eq: $lang } } }) {
       edges {
-          node {
-            partners {
-              tagline
-              sub_heading
-              footer_tagline
-              footer_button
-              footer_link
-              images {
-                name
-                image {
-                  childImageSharp {
-                    gatsbyImageData(
-                      layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                      width: 150
-                      placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
-                    )
+        node {
+          partners {
+            tagline
+            sub_heading
+            footer_tagline
+            footer_button
+            footer_link
+            images {
+              name
+              link
+              image {
+                childImageSharp {
+                  gatsbyImageData(
+                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                    width: 150
+                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                  )
 
-                    # fluid(maxWidth: 150){
-                    #   ...GatsbyImageSharpFluid_withWebp
-                    # }
-                  }
+                  # fluid(maxWidth: 150){
+                  #   ...GatsbyImageSharpFluid_withWebp
+                  # }
                 }
-                featured
               }
+              featured
             }
-            coding {
-              images {
-                name
-                image {
-                  childImageSharp {
-                    gatsbyImageData(
-                      layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                      width: 100
-                      placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
-                    )
+          }
+          coding {
+            images {
+              name
+              image {
+                childImageSharp {
+                  gatsbyImageData(
+                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                    width: 100
+                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                  )
 
-                    # fluid(maxWidth: 100){
-                    #   ...GatsbyImageSharpFluid_withWebp
-                    # }
-                  }
+                  # fluid(maxWidth: 100){
+                  #   ...GatsbyImageSharpFluid_withWebp
+                  # }
                 }
-                featured
               }
-              tagline
-              sub_heading
+              featured
             }
-            influencers {
-              images {
-                name
-                image {
-                  childImageSharp {
-                    gatsbyImageData(
-                      layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                      width: 100
-                      placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
-                    )
-                    # fluid(maxWidth: 100){
-                    #   ...GatsbyImageSharpFluid_withWebp
-                    # }
-                  }
+            tagline
+            sub_heading
+          }
+          influencers {
+            images {
+              name
+              image {
+                childImageSharp {
+                  gatsbyImageData(
+                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                    width: 100
+                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                  )
+                  # fluid(maxWidth: 100){
+                  #   ...GatsbyImageSharpFluid_withWebp
+                  # }
                 }
-                featured
               }
-              tagline
-              sub_heading
+              featured
             }
-            financials {
-              images {
-                name
-                image {
-                  childImageSharp {
-                    gatsbyImageData(
-                      layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                      width: 100
-                      placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
-                    )
+            tagline
+            sub_heading
+          }
+          financials {
+            images {
+              name
+              image {
+                childImageSharp {
+                  gatsbyImageData(
+                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                    width: 100
+                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                  )
 
-                    # fluid(maxWidth: 100){
-                    #   ...GatsbyImageSharpFluid_withWebp
-                    # }
-                  }
+                  # fluid(maxWidth: 100){
+                  #   ...GatsbyImageSharpFluid_withWebp
+                  # }
                 }
-                featured
               }
-              tagline
-              sub_heading
+              featured
             }
+            tagline
+            sub_heading
           }
         }
       }
-    allTestimonialsYaml(filter: { fields: { lang: { eq: $lang }}}) {
+    }
+    allTestimonialsYaml(filter: { fields: { lang: { eq: $lang } } }) {
       edges {
         node {
           heading
@@ -441,7 +725,7 @@ export const query = graphql`
             hidden
             linkedin_url
             linkedin_text
-            linkedin_image{
+            linkedin_image {
               childImageSharp {
                 gatsbyImageData(
                   layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
@@ -454,7 +738,7 @@ export const query = graphql`
                 # }
               }
             }
-            student_thumb{
+            student_thumb {
               childImageSharp {
                 gatsbyImageData(
                   layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
@@ -474,50 +758,50 @@ export const query = graphql`
         }
       }
     }
-    allAlumniProjectsYaml(filter: { fields: { lang: { eq: $lang }}}){
+    allAlumniProjectsYaml(filter: { fields: { lang: { eq: $lang } } }) {
       edges {
         node {
-          header{
+          header {
             tagline
             sub_heading
           }
           projects {
-              project_name
-              slug
-              project_image {
-                childImageSharp {
-                  gatsbyImageData(
-                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                    width: 800
-                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
-                  )
+            project_name
+            slug
+            project_image {
+              childImageSharp {
+                gatsbyImageData(
+                  layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                  width: 800
+                  placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                )
 
-                  # fluid(maxWidth: 800){
-                  #   ...GatsbyImageSharpFluid_withWebp
-                  # }
-                }
-              } 
-              project_content
-              project_video
-              live_link
-              github_repo
-              alumni {
-                first_name
-                last_name
-                job_title
-                github
-                linkedin
-                twitter
+                # fluid(maxWidth: 800){
+                #   ...GatsbyImageSharpFluid_withWebp
+                # }
               }
             }
-          button_section{
+            project_content
+            project_video
+            live_link
+            github_repo
+            alumni {
+              first_name
+              last_name
+              job_title
+              github
+              linkedin
+              twitter
+            }
+          }
+          button_section {
             button_text
             button_link
           }
         }
       }
     }
-    allCredentialsYaml(filter: { fields: { lang: { eq: $lang }}}) {
+    allCredentialsYaml(filter: { fields: { lang: { eq: $lang } } }) {
       edges {
         node {
           credentials {
@@ -528,7 +812,12 @@ export const query = graphql`
         }
       }
     }
-    allLocationYaml(filter: {fields: { lang: {eq: $lang}}, meta_info: { unlisted: {ne: true }}}){
+    allLocationYaml(
+      filter: {
+        fields: { lang: { eq: $lang } }
+        meta_info: { unlisted: { ne: true } }
+      }
+    ) {
       edges {
         node {
           id
@@ -539,7 +828,7 @@ export const query = graphql`
           financials_max_months
           active_campaign_location_slug
           breathecode_location_slug
-          fields{
+          fields {
             lang
           }
           button {
@@ -554,25 +843,25 @@ export const query = graphql`
             keywords
             redirects
           }
-          header{
+          header {
             sub_heading
             tagline
             alt
             image {
               childImageSharp {
                 gatsbyImageData(
-                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                    width: 800
-                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                  layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                  width: 800
+                  placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                 )
 
                 # fluid(maxWidth: 800){
                 #   ...GatsbyImageSharpFluid_withWebp
                 # }
               }
-            } 
+            }
           }
-          
+
           prices {
             software_engineering {
               part_time {

@@ -1,9 +1,8 @@
-import React from 'react';
-import {storiesOf} from '@storybook/react';
+import React from "react";
+import { storiesOf } from "@storybook/react";
 
-import PricesAndPayment from '.';
+import PricesAndPayment from ".";
 
-storiesOf('PricesAndPayment', module)
-    .add('Default', () => (
-        <PricesAndPayment lang={"us"} />
-    ));
+storiesOf("PricesAndPayment", module).add("Default", () => (
+  <PricesAndPayment lang={"us"} />
+));

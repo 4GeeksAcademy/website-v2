@@ -1,6 +1,6 @@
 const fs = require("fs");
 const { walk, loadYML, fail, success } = require("../test/_utils");
-const file = require('./dictionaries/pages.json');
+const file = require("./dictionaries/pages.json");
 
 let toKeyValue = (array) => {
   return Object.fromEntries(array);
@@ -18,14 +18,13 @@ const onCreateLangSwitcherData = () => {
 
   // ----------------- PAGE DICTIONARY -----------------
   walk(`${__dirname}/../data/page`, (err, files) => {
-    
     let page_ES_US = [];
     let page_US_ES = [];
     if (err) fail("Error reding the Page files: ", err);
     const _files = files.filter(
       (f) =>
-        (f.indexOf('.yml') > 1 || f.indexOf('.yaml') > 1) &&
-        f.indexOf('test.us.yml') === -1
+        (f.indexOf(".yml") > 1 || f.indexOf(".yaml") > 1) &&
+        f.indexOf("test.us.yml") === -1
     );
 
     for (let i = 0; i < _files.length; i++) {
@@ -115,15 +114,18 @@ const onCreateLangSwitcherData = () => {
 
         Location_ES_US.push(...Location_US_ES);
         All_dictionary.push(toKeyValue(Location_ES_US));
-        
+
         file.yml = All_dictionary;
-        fs.writeFile(`${__dirname}/dictionaries/pages.json`,
+        fs.writeFile(
+          `${__dirname}/dictionaries/pages.json`,
           JSON.stringify(file),
           (err) => {
             if (err) return console.log(err);
-            success(`\✅ DICTIONARY: Pages created => ${__dirname}/dictionaries/pages.json\n`);
-        });
-
+            success(
+              `\✅ DICTIONARY: Pages created => ${__dirname}/dictionaries/pages.json\n`
+            );
+          }
+        );
       });
     });
   });

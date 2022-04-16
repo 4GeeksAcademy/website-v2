@@ -8,6 +8,7 @@ meta_info:
   # it will not show up on the applications forms
   unlisted: false
   redirects: ["/us/uruguay", "/uruguay"]
+  region: "america"
 
 seo_title: "Coding Bootcamp Uruguay"
 header:

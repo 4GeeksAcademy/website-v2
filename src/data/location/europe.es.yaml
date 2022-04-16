@@ -2,10 +2,11 @@ meta_info:
   slug: "bootcamp-programacion-europa-online"
   title: "Bootcamps de Programación Online en Europa"
   description: "Descubre aquí todos los bootcamps de programación online impartidos por 4geeks Academy en europa. ¡Regístrate hoy!"
-  position: 21
+  position: 101
   image: "https://storage.cloud.google.com/4geeks-academy-website/online-es.png"
   keywords: "null"
   redirects: ["/location/remoto", "/remoto", "/es/location/enlinea-remoto"]
+  # region: "europe"
 
 seo_title: "Coding Bootcamp Remoto Europa"
 header:
@@ -303,8 +304,8 @@ breathecode_location_slug: "europe"
 gdpr_compliant: true # do we need to ask for permision?
 in_person_available: false # important to accept in-person applicants
 
-city: "Europe/Online"
-name: "Online/Remoto"
+city: "Resto de Europa"
+name: "Resto de Europa"
 latitude: "45.764042"
 longitude: "4.835659"
 address: "Calle Edison, 3"

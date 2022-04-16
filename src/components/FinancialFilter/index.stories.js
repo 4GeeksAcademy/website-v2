@@ -1,9 +1,8 @@
-import React from 'react';
-import {storiesOf} from '@storybook/react';
+import React from "react";
+import { storiesOf } from "@storybook/react";
 
-import FinancialFilter from '.';
+import FinancialFilter from ".";
 
-storiesOf('FinancialFilter', module)
-    .add('Default', () => (
-        <FinancialFilter lang={"us"} />
-    ));
+storiesOf("FinancialFilter", module).add("Default", () => (
+  <FinancialFilter lang={"us"} />
+));

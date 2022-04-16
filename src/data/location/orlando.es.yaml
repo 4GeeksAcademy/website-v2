@@ -8,6 +8,7 @@ meta_info:
   redirects: [
   #  "/es/location/orlando-usa"
   ]
+  region: "america"
 
 seo_title: "Bootcamp de Programación en Orlando"
 header:
@@ -60,7 +61,8 @@ info_box:
   alt: ""
 images_box:
   heading: "Qué deberías saber acerca de esta ubicacion: "
-  content: "Orlando es una de las ciudades de mayor crecimiento tecnólogico, únete al Bootcamp de Programación part-time numero uno de la ciudad y la mayor comunidad de desarrolladores. \\n El Career Support y Student Support es de por vida.Estamos ubicados a corta distancia de la estación de metro y a tan solo 5 minutos de Brickell, una de las áreas más activas de la ciudad. Nuestra oficina está abierta 24/7 durante la semana y los sábados hacemos los famosos “Findes de Programación”, donde los estudiantes y otros programadores se juntan a programar con pizzas y tragos! Además, contamos con parqueo gratuito para los estudiantes!"
+  content: |
+    Orlando es una de las ciudades de mayor crecimiento tecnólogico, únete al Bootcamp de Programación part-time numero uno de la ciudad y la mayor comunidad de desarrolladores. \\n El Career Support y Student Support es de por vida.Estamos ubicados a corta distancia de la estación de metro y a tan solo 5 minutos de Brickell, una de las áreas más activas de la ciudad. Nuestra oficina está abierta 24/7 durante la semana y los sábados hacemos los famosos "Findes de Programación", donde los estudiantes y otros programadores se juntan a programar con pizzas y tragos! Además, contamos con parqueo gratuito para los estudiantes!
   images:
     - path: "../../../static/images/locations/miami-loc.jpg"
       alt: "4Geeks miami sunset"

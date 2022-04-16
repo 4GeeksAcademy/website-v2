@@ -1,20 +1,20 @@
-import React from 'react';
-import {GridContainer, Div, Grid, Header} from '../components/Sections';
-import {H2, H3, Paragraph, } from '../components/Heading'
-import {Colors, StyledBackgroundSection} from '../components/Styling'
-import {isCustomBarActive} from '../actions';
-import session, {SessionContext} from '../session'
-import Badges from '../components/Badges'
-import OurPartners from '../components/OurPartners'
-import Credentials from '../components/Credentials'
-import BaseRender from './_baseLayout'
-import Staff from '../components/Staff';
-import Icon from '../components/Icon'
-import {Circle} from '../components/BackgroundDrawing'
+import React from "react";
+import { GridContainer, Div, Grid, Header } from "../components/Sections";
+import { H2, H3, Paragraph } from "../components/Heading";
+import { Colors, StyledBackgroundSection } from "../components/Styling";
+import { isCustomBarActive } from "../actions";
+import session, { SessionContext } from "../session";
+import Badges from "../components/Badges";
+import OurPartners from "../components/OurPartners";
+import Credentials from "../components/Credentials";
+import BaseRender from "./_baseLayout";
+import Staff from "../components/Staff";
+import Icon from "../components/Icon";
+import { Circle } from "../components/BackgroundDrawing";
 
 const Why = (props) => {
-  const {data, pageContext, yml} = props;
-  const {session} = React.useContext(SessionContext);
+  const { data, pageContext, yml } = props;
+  const { session } = React.useContext(SessionContext);
   const cornerstones = yml.cornerstones;
   const hiring = data.allPartnerYaml.edges[0].node;
   const partnersData = data.allPartnerYaml.edges[0].node;
@@ -63,13 +63,7 @@ const Why = (props) => {
           right="120px"
           zIndex="-1"
         />
-        <Circle
-          color="blue"
-          width="9px"
-          height="9px"
-          top="100px"
-          left="10%"
-        />
+        <Circle color="blue" width="9px" height="9px" top="100px" left="10%" />
 
         <Circle
           color="blue"
@@ -91,61 +85,87 @@ const Why = (props) => {
         </Div>
       </Grid>
 
-      <Badges 
-      lang={pageContext.lang} paragraph={yml.badges.paragraph} 
-      background={Colors.lightYellow} 
-      link padding="58px 17px" padding_tablet="70px 0" 
-      paddingText="0 0 0.5em 0" paddingText_tablet="0 0 1.6em 0"
+      <Badges
+        lang={pageContext.lang}
+        paragraph={yml.badges.paragraph}
+        background={Colors.lightYellow}
+        link
+        padding="58px 17px"
+        padding_tablet="70px 0"
+        paddingText="0 0 0.5em 0"
+        paddingText_tablet="0 0 1.6em 0"
       />
-      
-      
-      <GridContainer height="auto" columns_tablet="2" padding="0" margin_tablet="0 0 88px 0">
-        <Div flexDirection="column" justifyContent_tablet="start" padding="41px 17px 0 17px" padding_tablet="56px 0 0 0" >
-          <H2 textAlign="left" margin="0 0 15px 0">{yml.what_is_4geeks.title}</H2>
 
-          {yml.what_is_4geeks.paragraph.split("\n").map((paragraph, index) =>
-            <Paragraph key={index} textAlign="left" margin="0 0 15px 0" >{paragraph}</Paragraph>
-          )}
+      <GridContainer
+        height="auto"
+        columns_tablet="2"
+        padding="0"
+        margin_tablet="0 0 88px 0"
+      >
+        <Div
+          flexDirection="column"
+          justifyContent_tablet="start"
+          padding="41px 17px 0 17px"
+          padding_tablet="56px 0 0 0"
+        >
+          <H2 textAlign="left" margin="0 0 15px 0">
+            {yml.what_is_4geeks.title}
+          </H2>
+
+          {yml.what_is_4geeks.paragraph.split("\n").map((paragraph, index) => (
+            <Paragraph key={index} textAlign="left" margin="0 0 15px 0">
+              {paragraph}
+            </Paragraph>
+          ))}
         </Div>
-        <Div width_tablet="331px" justifySelf_tablet="end" padding_tablet="56px 0 0 0" >
+        <Div
+          width_tablet="331px"
+          justifySelf_tablet="end"
+          padding_tablet="56px 0 0 0"
+        >
           <StyledBackgroundSection
             height={`390px`}
             width="100%"
-            image={yml.what_is_4geeks.image && yml.what_is_4geeks.image.childImageSharp.gatsbyImageData}
+            image={
+              yml.what_is_4geeks.image &&
+              yml.what_is_4geeks.image.childImageSharp.gatsbyImageData
+            }
             bgSize={`cover`}
             alt={yml.what_is_4geeks.image_alt}
           />
         </Div>
-      </GridContainer >
+      </GridContainer>
       <Credentials lang={data.allCredentialsYaml.edges} />
       <GridContainer margin="0 0 40px 0" padding="0">
-        <Div flexDirection="column" >
-          <H2 >{cornerstones.title}</H2>
+        <Div flexDirection="column">
+          <H2>{cornerstones.title}</H2>
         </Div>
       </GridContainer>
-      <GridContainer padding="0 17px" height="auto" columns_tablet="2" margin_tablet="0 0 51px 0" margin="0 0 20px 0">
-
-        {
-          Array.isArray(cornerstones.cornerstones_list) 
-            && cornerstones.cornerstones_list.map((m, i) => (
-              <Div key={i} margin="0 0 40px 0">
-                <Div><Icon icon={m.icon} width="43px" height="34px" /></Div>
-                <Div flexDirection="column" margin="0 0 0 15px">
-                  <H3 textAlign="left" margin="0 0 20px 0">{m.title}</H3>
-                  {m.content.split('\\n').map((d, i) =>
-                    <Paragraph
-                      key={i}
-                      textAlign="left"
-                      color={Colors.darkGray}
-                    >
-                      {d}
-                    </Paragraph>
-                  )}
-                </Div>
+      <GridContainer
+        padding="0 17px"
+        height="auto"
+        columns_tablet="2"
+        margin_tablet="0 0 51px 0"
+        margin="0 0 20px 0"
+      >
+        {Array.isArray(cornerstones.cornerstones_list) &&
+          cornerstones.cornerstones_list.map((m, i) => (
+            <Div key={i} margin="0 0 40px 0">
+              <Div>
+                <Icon icon={m.icon} width="43px" height="34px" />
               </Div>
-            )
-          )
-        }
+              <Div flexDirection="column" margin="0 0 0 15px">
+                <H3 textAlign="left" margin="0 0 20px 0">
+                  {m.title}
+                </H3>
+                {m.content.split("\\n").map((d, i) => (
+                  <Paragraph key={i} textAlign="left" color={Colors.darkGray}>
+                    {d}
+                  </Paragraph>
+                ))}
+              </Div>
+            </Div>
+          ))}
       </GridContainer>
       <GridContainer margin_tablet="0 0 76px 0" margin="0 0 65px 0">
         <Div height="5px" background={Colors.verylightGray}></Div>
@@ -161,285 +181,287 @@ const Why = (props) => {
       />
       <Staff lang={pageContext.lang} />
     </>
-  )
+  );
 };
 
 export const query = graphql`
   query AboutQuery($file_name: String!, $lang: String!) {
-    allPageYaml(filter: { fields: { file_name: { eq: $file_name }, lang: { eq: $lang }}}) {
-      edges{
-        node{
-            meta_info{
-                title
-                description
-                image
-                keywords
+    allPageYaml(
+      filter: { fields: { file_name: { eq: $file_name }, lang: { eq: $lang } } }
+    ) {
+      edges {
+        node {
+          meta_info {
+            title
+            description
+            image
+            keywords
+          }
+          seo_title
+          header {
+            title
+            paragraph
+            image {
+              childImageSharp {
+                gatsbyImageData(
+                  layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                  width: 1200
+                  quality: 100
+                  placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                  breakpoints: [200, 340, 520, 890]
+                )
+                # fluid(maxWidth: 1200, quality: 100, srcSetBreakpoints: [ 200, 340, 520, 890 ]){
+                #   ...GatsbyImageSharpFluid_withWebp
+                # }
+              }
             }
-            seo_title
-            header{
-              title
-              paragraph
-              image{
+          }
+          badges {
+            paragraph
+          }
+          what_is_4geeks {
+            title
+            paragraph
+            image {
+              childImageSharp {
+                gatsbyImageData(
+                  layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                  width: 500
+                  quality: 100
+                  placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                  breakpoints: [200, 340, 520, 890]
+                )
+                # fluid(maxWidth: 500, quality: 100, srcSetBreakpoints: [ 200, 340, 520, 890 ]){
+                #   ...GatsbyImageSharpFluid_withWebp
+                # }
+              }
+            }
+            image_alt
+          }
+          education {
+            left_box {
+              heading
+              image {
                 childImageSharp {
                   gatsbyImageData(
                     layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                    width: 1200
-                    quality: 100
+                    width: 300
+                    # height: 60
                     placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
-                    breakpoints:	[200, 340, 520, 890]
                   )
-                  # fluid(maxWidth: 1200, quality: 100, srcSetBreakpoints: [ 200, 340, 520, 890 ]){
+                  # fluid(maxWidth: 300){
+                  #   ...GatsbyImageSharpFluid_withWebp
+                  # }
+                  # fixed(width: 300, height: 60) {
+                  #   ...GatsbyImageSharpFixed
+                  # }
+                }
+              }
+              alt
+            }
+            center_box {
+              heading
+              image {
+                childImageSharp {
+                  gatsbyImageData(
+                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                    width: 300
+                    # height: 60
+                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                  )
+                  # fluid(maxWidth: 300){
+                  #   ...GatsbyImageSharpFluid_withWebp
+                  # }
+                  # fixed(width: 300, height: 60) {
+                  #   ...GatsbyImageSharpFixed
+                  # }
+                }
+              }
+              alt
+            }
+            right_box {
+              heading
+              image {
+                childImageSharp {
+                  gatsbyImageData(
+                    layout: FIXED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                    width: 300
+                    height: 60
+                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                  )
+                  # fluid(maxWidth: 300){
+                  #   ...GatsbyImageSharpFluid_withWebp
+                  # }
+                  # fixed(width: 300, height: 60) {
+                  #   ...GatsbyImageSharpFixed
+                  # }
+                }
+              }
+              alt
+            }
+          }
+          outcomes {
+            heading
+            sub_heading
+            image
+            left {
+              title
+              content
+              sub_content
+              bottom_message
+            }
+            right {
+              chart_one {
+                title
+                data
+              }
+              chart_two {
+                title
+                data
+              }
+              chart_three {
+                title
+                data
+              }
+            }
+          }
+          cornerstones {
+            title
+            paragraph
+            cornerstones_list {
+              content
+              icon
+              title
+            }
+          }
+          staff {
+            heading
+            sub_heading
+          }
+          story {
+            heading
+            sub_heading_one
+            button
+            button_link
+            image {
+              childImageSharp {
+                gatsbyImageData(
+                  layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                  width: 1600
+                  quality: 100
+                  placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                )
+                # fluid(maxWidth: 1600, quality: 100){
+                #   ...GatsbyImageSharpFluid_withWebp
+                # }
+              }
+            }
+          }
+          posts {
+            heading
+            sub_heading
+          }
+        }
+      }
+    }
+    allCredentialsYaml(filter: { fields: { lang: { eq: $lang } } }) {
+      edges {
+        node {
+          credentials {
+            title
+            icon
+            value
+          }
+        }
+      }
+    }
+    allPartnerYaml(filter: { fields: { lang: { eq: $lang } } }) {
+      edges {
+        node {
+          partners {
+            images {
+              name
+              link
+              image {
+                childImageSharp {
+                  gatsbyImageData(
+                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                    width: 100
+                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                  )
+                  # fluid(maxWidth: 100){
                   #   ...GatsbyImageSharpFluid_withWebp
                   # }
                 }
               }
+              featured
             }
-            badges{
-              paragraph
-            }
-            what_is_4geeks{
-              title
-                paragraph
-                image{
-                    childImageSharp {
-                      gatsbyImageData(
-                        layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                        width: 500
-                        quality: 100
-                        placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
-                        breakpoints:	[200, 340, 520, 890]
-                      )
-                      # fluid(maxWidth: 500, quality: 100, srcSetBreakpoints: [ 200, 340, 520, 890 ]){
-                      #   ...GatsbyImageSharpFluid_withWebp
-                      # }
-                    }
-                  }
-                image_alt
-            }
-            education{
-                left_box{
-                    heading
-                    image {
-                      childImageSharp {
-                        gatsbyImageData(
-                          layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                          width: 300
-                          # height: 60
-                          placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
-                        )
-                        # fluid(maxWidth: 300){
-                        #   ...GatsbyImageSharpFluid_withWebp
-                        # }
-                        # fixed(width: 300, height: 60) {
-                        #   ...GatsbyImageSharpFixed
-                        # }
-                      }
-                    }
-                    alt
+            tagline
+            sub_heading
+          }
+          coding {
+            images {
+              name
+              image {
+                childImageSharp {
+                  gatsbyImageData(
+                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                    width: 100
+                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                  )
+                  # fluid(maxWidth: 100){
+                  #   ...GatsbyImageSharpFluid_withWebp
+                  # }
                 }
-                center_box{
-                    heading
-                    image {
-                      childImageSharp {
-                        gatsbyImageData(
-                          layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                          width: 300
-                          # height: 60
-                          placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
-                        )
-                        # fluid(maxWidth: 300){
-                        #   ...GatsbyImageSharpFluid_withWebp
-                        # }
-                        # fixed(width: 300, height: 60) {
-                        #   ...GatsbyImageSharpFixed
-                        # }
-                      }
-                    }
-                    alt
+              }
+              featured
+            }
+            tagline
+            sub_heading
+          }
+          influencers {
+            images {
+              name
+              image {
+                childImageSharp {
+                  gatsbyImageData(
+                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                    width: 100
+                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                  )
+                  # fluid(maxWidth: 100){
+                  #   ...GatsbyImageSharpFluid_withWebp
+                  # }
                 }
-                right_box{
-                    heading
-                    image {
-                      childImageSharp {
-                        gatsbyImageData(
-                          layout: FIXED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                          width: 300
-                          height: 60
-                          placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
-                        )
-                        # fluid(maxWidth: 300){
-                        #   ...GatsbyImageSharpFluid_withWebp
-                        # }
-                        # fixed(width: 300, height: 60) {
-                        #   ...GatsbyImageSharpFixed
-                        # }
-                      }
-                    }
-                    alt
+              }
+              featured
+            }
+            tagline
+            sub_heading
+          }
+          financials {
+            images {
+              name
+              image {
+                childImageSharp {
+                  gatsbyImageData(
+                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                    width: 100
+                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                  )
+                  # fluid(maxWidth: 100){
+                  #   ...GatsbyImageSharpFluid_withWebp
+                  # }
                 }
+              }
+              featured
             }
-            outcomes{
-                heading
-                sub_heading
-                image
-                left{
-                    title
-                    content
-                    sub_content
-                    bottom_message
-                }
-                right{
-                    chart_one{
-                        title
-                        data
-                    }
-                    chart_two{
-                        title
-                        data
-                    }
-                    chart_three{
-                        title
-                        data
-                    }
-                    
-                }
-            }
-            cornerstones {
-                title
-                paragraph
-                cornerstones_list {
-                  content
-                  icon
-                  title
-                }
-            }
-            staff{
-                heading
-                sub_heading
-            }
-            story{
-                heading
-                sub_heading_one
-                button
-                button_link
-                image{
-                  childImageSharp {
-                    gatsbyImageData(
-                      layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                      width: 1600
-                      quality: 100
-                      placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
-                    )
-                    # fluid(maxWidth: 1600, quality: 100){
-                    #   ...GatsbyImageSharpFluid_withWebp
-                    # }
-                  }
-                } 
-            }
-            posts{
-                heading
-                sub_heading
-            }
+            tagline
+            sub_heading
+          }
         }
       }
     }
-    allCredentialsYaml(filter: { fields: { lang: { eq: $lang }}}) {
-        edges {
-          node {
-            credentials {
-              title
-              icon
-              value
-            }
-          }
-        }
-      }
-      allPartnerYaml(filter: { fields: { lang: { eq: $lang }}}) {
-        edges {
-            node {
-              partners {
-                images {
-                  name
-                  image {
-                    childImageSharp {
-                      gatsbyImageData(
-                        layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                        width: 100
-                        placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
-                      )
-                      # fluid(maxWidth: 100){
-                      #   ...GatsbyImageSharpFluid_withWebp
-                      # }
-                    }
-                  }
-                  featured
-                }
-                tagline
-                sub_heading
-              }
-              coding {
-                images {
-                  name
-                  image {
-                    childImageSharp {
-                      gatsbyImageData(
-                        layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                        width: 100
-                        placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
-                      )
-                      # fluid(maxWidth: 100){
-                      #   ...GatsbyImageSharpFluid_withWebp
-                      # }
-                    }
-                  }
-                  featured
-                }
-                tagline
-                sub_heading
-              }
-              influencers {
-                images {
-                  name
-                  image {
-                    childImageSharp {
-                      gatsbyImageData(
-                        layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                        width: 100
-                        placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
-                      )
-                      # fluid(maxWidth: 100){
-                      #   ...GatsbyImageSharpFluid_withWebp
-                      # }
-                    }
-                  }
-                  featured
-                }
-                tagline
-                sub_heading
-              }
-              financials {
-                images {
-                  name
-                  image {
-                    childImageSharp {
-                      gatsbyImageData(
-                        layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                        width: 100
-                        placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
-                      )
-                      # fluid(maxWidth: 100){
-                      #   ...GatsbyImageSharpFluid_withWebp
-                      # }
-                    }
-                  }
-                  featured
-                }
-                tagline
-                sub_heading
-              }
-            }
-          }
-        }
   }
 `;
 

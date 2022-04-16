@@ -1,8 +1,8 @@
-import React from 'react';
-import { configure, addDecorator } from '@storybook/react';
-import { action } from '@storybook/addon-actions';
-import styled from 'styled-components';
-import GlobalStyle from '../src/global/GlobalStyle';
+import React from "react";
+import { configure, addDecorator } from "@storybook/react";
+import { action } from "@storybook/addon-actions";
+import styled from "styled-components";
+import GlobalStyle from "../src/global/GlobalStyle";
 
 const Wrapper = styled.div`
   display: flex;
@@ -12,7 +12,7 @@ const Wrapper = styled.div`
   justify-content: center;
 `;
 
-const Decorator = storyFn => (
+const Decorator = (storyFn) => (
   <Wrapper>
     <GlobalStyle />
     {storyFn()}
@@ -22,19 +22,19 @@ const Decorator = storyFn => (
 addDecorator(Decorator);
 
 global.___loader = {
-  enqueue: () => { },
-  hovering: () => { },
+  enqueue: () => {},
+  hovering: () => {},
 };
 
-global.__PATH_PREFIX__ = '';
+global.__PATH_PREFIX__ = "";
 window.___navigate = (pathname) => {
-  action('NavigateTo:')(pathname);
+  action("NavigateTo:")(pathname);
 };
 
-const req = require.context('../src/components', true, /\.stories\.js$/);
+const req = require.context("../src/components", true, /\.stories\.js$/);
 
 function loadStories() {
-  req.keys().forEach(filename => req(filename));
+  req.keys().forEach((filename) => req(filename));
 }
 
 configure(loadStories, module);

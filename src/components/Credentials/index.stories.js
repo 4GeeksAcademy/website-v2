@@ -1,9 +1,6 @@
-import React from 'react';
-import {storiesOf} from '@storybook/react';
+import React from "react";
+import { storiesOf } from "@storybook/react";
 
-import Credentials from '.';
+import Credentials from ".";
 
-storiesOf('Credentials', module)
-    .add('Default', () => (
-        <Credentials />
-    ));
+storiesOf("Credentials", module).add("Default", () => <Credentials />);

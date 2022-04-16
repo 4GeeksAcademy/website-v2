@@ -1,13 +1,22 @@
-import React, {useState, useEffect} from 'react';
-import styled from 'styled-components';
-import {useStaticQuery, graphql} from 'gatsby';
-import {GridContainerWithImage, Grid, Div, GridContainer} from '../Sections'
-import {H1, H2, H3, H4, H5, Title, Separator, Span, Paragraph} from '../Heading';
-import {Colors, RoundImage, StyledBackgroundSection} from '../Styling';
-import Icon from '../Icon';
+import React, { useState, useEffect } from "react";
+import styled from "styled-components";
+import { useStaticQuery, graphql } from "gatsby";
+import { GridContainerWithImage, Grid, Div, GridContainer } from "../Sections";
+import {
+  H1,
+  H2,
+  H3,
+  H4,
+  H5,
+  Title,
+  Separator,
+  Span,
+  Paragraph,
+} from "../Heading";
+import { Colors, RoundImage, StyledBackgroundSection } from "../Styling";
+import Icon from "../Icon";
 
-
-const GeeksInfo = ({lang}) => {
+const GeeksInfo = ({ lang }) => {
   const data = useStaticQuery(graphql`
     {
       allGeeksInfoYaml {
@@ -15,7 +24,7 @@ const GeeksInfo = ({lang}) => {
           node {
             heading
             sub_heading
-            header{
+            header {
               image
               image_link
             }
@@ -25,58 +34,85 @@ const GeeksInfo = ({lang}) => {
             }
             paragraph
             image1 {
-                childImageSharp {
-                  gatsbyImageData(
-                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                    width: 800
-                    quality: 100
-                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
-                  )
-                  # fluid(maxWidth: 800, quality: 100){
-                  #   ...GatsbyImageSharpFluid_withWebp
-                  # }
-                }
+              childImageSharp {
+                gatsbyImageData(
+                  layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                  width: 800
+                  quality: 100
+                  placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                )
+                # fluid(maxWidth: 800, quality: 100){
+                #   ...GatsbyImageSharpFluid_withWebp
+                # }
               }
+            }
             image2 {
-                childImageSharp {
-                  gatsbyImageData(
-                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                    width: 800
-                    quality: 100
-                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
-                  )
-                  # fluid(maxWidth: 800, quality: 100){
-                  #   ...GatsbyImageSharpFluid_withWebp
-                  # }
-                }
+              childImageSharp {
+                gatsbyImageData(
+                  layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                  width: 800
+                  quality: 100
+                  placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                )
+                # fluid(maxWidth: 800, quality: 100){
+                #   ...GatsbyImageSharpFluid_withWebp
+                # }
               }
-              fields {
-                lang
-              }
+            }
+            fields {
+              lang
+            }
           }
         }
       }
     }
-  `)
-  let content = data.allGeeksInfoYaml.edges.find(({node}) => node.fields.lang === lang);
+  `);
+  let content = data.allGeeksInfoYaml.edges.find(
+    ({ node }) => node.fields.lang === lang
+  );
   if (content) content = content.node;
   else return null;
   return (
     <>
       <GridContainer>
-        <H2
-          margin_tablet="76px 0"
-          margin="0 0 27px 0"
-          margin_md="0 0 76px 0"
-        >
+        <H2 margin_tablet="76px 0" margin="0 0 27px 0" margin_md="0 0 76px 0">
           {content.heading}
         </H2>
       </GridContainer>
-      <GridContainerWithImage imageSide="left" columns_tablet="2" >
+      <GridContainerWithImage imageSide="left" columns_tablet="2">
         {/* <Grid columns_md="2" gridGap_md="50px"> */}
-        <Div style={{position: "relative"}} height="468px" padding="0 38px 23px 25px" gridColumn_tablet="1 / 8">
-          <Div display="none" display_md="flex" style={{position: "absolute", background: "#F5F5F5", width: "101%", height: "282px", top: "0", left: "-60px", borderRadius: "3px"}}></Div>
-          <Div display="none" display_md="flex" style={{position: "absolute", background: "#FFB718", width: "256px", height: "256px", bottom: "18px", right: "75px", borderRadius: "3px"}}></Div>
+        <Div
+          style={{ position: "relative" }}
+          height="468px"
+          padding="0 38px 23px 25px"
+          gridColumn_tablet="1 / 8"
+        >
+          <Div
+            display="none"
+            display_md="flex"
+            style={{
+              position: "absolute",
+              background: "#F5F5F5",
+              width: "101%",
+              height: "282px",
+              top: "0",
+              left: "-60px",
+              borderRadius: "3px",
+            }}
+          ></Div>
+          <Div
+            display="none"
+            display_md="flex"
+            style={{
+              position: "absolute",
+              background: "#FFB718",
+              width: "256px",
+              height: "256px",
+              bottom: "18px",
+              right: "75px",
+              borderRadius: "3px",
+            }}
+          ></Div>
           <StyledBackgroundSection
             className={`image`}
             height={`412px`}
@@ -85,52 +121,68 @@ const GeeksInfo = ({lang}) => {
             alt="Cnn Logo"
             borderRadius={`0 0 0 3px`}
           />
-
         </Div>
         <Div flexDirection="column" gridColumn_tablet="9 / 15">
-          <Div margin="0 0 30px 0" justifyContent="center" justifyContent_md="start">
-            {Array.isArray(content.header) && content.header.map((m, i) => {
-              return (
-                <RoundImage key={i} url={m.image} bsize="contain" height="20px" width="130px" position="left" />
-              )
-            })}
+          <Div
+            margin="0 0 30px 0"
+            justifyContent="center"
+            justifyContent_md="start"
+          >
+            {Array.isArray(content.header) &&
+              content.header.map((m, i) => {
+                return (
+                  <RoundImage
+                    key={i}
+                    url={m.image}
+                    bsize="contain"
+                    height="20px"
+                    width="130px"
+                    position="left"
+                  />
+                );
+              })}
             {/* <RoundImage url={i.footer.image} bsize="contain" height="20px" position="left" /> */}
           </Div>
-          {Array.isArray(content.list) && content.list.map((m, i) => {
-            return (
-              <React.Fragment key={`${i}-${m.title}`}>
-                <H4 textAlign="left" margin="0" fontWeight="900" textTransform="uppercase">{m.title}</H4>
-                {m.sub_title.split("\n").map((m, i) =>
-                  <Paragraph
-                    key={i}
+          {Array.isArray(content.list) &&
+            content.list.map((m, i) => {
+              return (
+                <React.Fragment key={`${i}-${m.title}`}>
+                  <H4
                     textAlign="left"
-                    margin="0 0 20px 0"
-                    fontSize="15px"
-                    lineHeight="26px"
+                    margin="0"
+                    fontWeight="900"
+                    textTransform="uppercase"
                   >
-                    {m}
-                  </Paragraph>
-                )}
-              </React.Fragment>
-            )
-          })}
+                    {m.title}
+                  </H4>
+                  {m.sub_title.split("\n").map((m, i) => (
+                    <Paragraph
+                      key={i}
+                      textAlign="left"
+                      margin="0 0 20px 0"
+                      fontSize="15px"
+                      lineHeight="26px"
+                    >
+                      {m}
+                    </Paragraph>
+                  ))}
+                </React.Fragment>
+              );
+            })}
           <Paragraph
-            dangerouslySetInnerHTML={{__html: content.paragraph}}
+            dangerouslySetInnerHTML={{ __html: content.paragraph }}
             margin="0"
             padding="18px 0"
             color={Colors.darkGray}
             textAlign="left"
             fontSize="15px"
             lineHeight="22px"
-            style={{borderTop: `1px solid ${Colors.lightGray}`}}
+            style={{ borderTop: `1px solid ${Colors.lightGray}` }}
           ></Paragraph>
         </Div>
       </GridContainerWithImage>
     </>
-
-  )
+  );
 };
 
 export default GeeksInfo;
-
-

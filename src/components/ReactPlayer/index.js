@@ -1,101 +1,110 @@
-import React, { useEffect } from "react"
-import styled from "styled-components"
-import YouTube from "react-youtube"
-import PropTypes from "prop-types"
+import React, { useEffect } from "react";
+import styled from "styled-components";
+import YouTube from "react-youtube";
+import PropTypes from "prop-types";
 // import GImage from "gatsby-image"
-import {Devices} from '../Responsive'
-import Modal from '../Modal'
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { Devices } from "../Responsive";
+import Modal from "../Modal";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 const VideoWrapper = styled.section`
   position: relative;
-  width: ${props => props.width || "640px"};
-  height: ${props => props.height || "auto"};
+  width: ${(props) => props.width || "640px"};
+  height: ${(props) => props.height || "auto"};
   margin: auto;
-  @media ${Devices.xxs}{
-
+  @media ${Devices.xxs} {
   }
-  @media ${Devices.xs}{
-
+  @media ${Devices.xs} {
   }
-  @media  ${Devices.sm}{
-
+  @media ${Devices.sm} {
   }
-  @media  ${Devices.tablet}{
-    width: ${props => props.width_tablet};
-    height: ${props => props.height_tablet};
+  @media ${Devices.tablet} {
+    width: ${(props) => props.width_tablet};
+    height: ${(props) => props.height_tablet};
   }
-  @media  ${Devices.md}{
-    width: ${props => props.width_md};
-    height: ${props => props.height_md};
+  @media ${Devices.md} {
+    width: ${(props) => props.width_md};
+    height: ${(props) => props.height_md};
   }
-  @media  ${Devices.lg}{
-
+  @media ${Devices.lg} {
   }
-  @media  ${Devices.xl}{
-
+  @media ${Devices.xl} {
   }
-  @media  ${Devices.xxl}{
-
+  @media ${Devices.xxl} {
   }
-`
+`;
 
 const Iframe = styled(YouTube)`
   padding: 0;
-  border-radius: ${props => props.borderRadius || "auto"};
-  height: ${props => props.height};
-`
+  border-radius: ${(props) => props.borderRadius || "auto"};
+  height: ${(props) => props.height};
+`;
 
 const Thumbnail = styled.img`
   display: block;
   object-fit: cover;
-`
+`;
 
 const Image = styled.div`
   position: relative;
   margin: auto;
-  height: ${props => props.height || "auto"};
-  width: ${props => props.width || "100%"};
-  box-shadow: ${props => props.shadow};
-  border-radius: ${props => props.borderRadius || "1.25rem"};
-  @media ${Devices.xxs}{
-
+  height: ${(props) => props.height || "auto"};
+  width: ${(props) => props.width || "100%"};
+  box-shadow: ${(props) => props.shadow};
+  border-radius: ${(props) => props.borderRadius || "1.25rem"};
+  @media ${Devices.xxs} {
   }
-  @media ${Devices.xs}{
-
+  @media ${Devices.xs} {
   }
-  @media  ${Devices.sm}{
-
+  @media ${Devices.sm} {
   }
-  @media  ${Devices.tablet}{
-    width: ${props => props.width_tablet};
-    height: ${props => props.height_tablet};
+  @media ${Devices.tablet} {
+    width: ${(props) => props.width_tablet};
+    height: ${(props) => props.height_tablet};
   }
-  @media  ${Devices.md}{
-    width: ${props => props.width_md};
-    height: ${props => props.height_md};
+  @media ${Devices.md} {
+    width: ${(props) => props.width_md};
+    height: ${(props) => props.height_md};
   }
-  @media  ${Devices.lg}{
-
+  @media ${Devices.lg} {
   }
-  @media  ${Devices.xl}{
-
+  @media ${Devices.xl} {
   }
-  @media  ${Devices.xxl}{
-
+  @media ${Devices.xxl} {
   }
-`
+`;
 
-const Player = ({id, onPlay, onPause, onEnd, onError, onStateChange, onPlaybackRateChange,
-  onPlaybackQualityChange, imageSize, playerVars, noCookies, style, className, thumb, left_tablet, right_tablet, With_Modal, imageWidth, imageWidth_tablet, switched, ...rest}) => {
-
+const Player = ({
+  id,
+  onPlay,
+  onPause,
+  onEnd,
+  onError,
+  onStateChange,
+  onPlaybackRateChange,
+  onPlaybackQualityChange,
+  imageSize,
+  playerVars,
+  noCookies,
+  style,
+  className,
+  thumb,
+  left_tablet,
+  right_tablet,
+  With_Modal,
+  imageWidth,
+  imageWidth_tablet,
+  switched,
+  ...rest
+}) => {
   const [showVideo, setShowVideo] = React.useState(false);
   const [vid, setVid] = React.useState({});
 
-  function yt_parser (url) {
-    let regExpUrl = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#&?]*).*/;
+  function yt_parser(url) {
+    let regExpUrl =
+      /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#&?]*).*/;
     let match = url.match(regExpUrl);
-    return (match && match[7].length == 11) ? match[7] : url;
+    return match && match[7].length == 11 ? match[7] : url;
   }
 
   const validImageSizes = [
@@ -103,35 +112,61 @@ const Player = ({id, onPlay, onPause, onEnd, onError, onStateChange, onPlaybackR
     "hqdefault",
     "mqdefault",
     "sddefault",
-    "maxresdefault"
-  ]
+    "maxresdefault",
+  ];
 
-  const image = () => validImageSizes.includes(imageSize) ? imageSize : "default"
+  const image = () =>
+    validImageSizes.includes(imageSize) ? imageSize : "default";
 
   // With_Modal
 
-
-  useEffect(()=>{
-    console.log(vid)
-    if(vid.pauseVideo){
+  useEffect(() => {
+    console.log(vid);
+    if (vid.pauseVideo) {
       vid.pauseVideo();
     }
-    
   }, [switched]);
 
-
-  return <VideoWrapper {...rest} style={style}>
-    {showVideo ? (
-      <>
-        {With_Modal ? (
-
-          <Modal boxPadding="80px 5%" open={showVideo} onClose={() => setShowVideo(false)}>
+  return (
+    <VideoWrapper {...rest} style={style}>
+      {showVideo ? (
+        <>
+          {With_Modal ? (
+            <Modal
+              boxPadding="80px 5%"
+              open={showVideo}
+              onClose={() => setShowVideo(false)}
+            >
+              <Iframe
+                borderRadius={style.borderRadius}
+                videoId={yt_parser(id)}
+                id={`a-${id} do-not-delete-this-hack`}
+                // onReady={e => e.target.playVideo()}
+                onReady={(e) => setVid(e.target)}
+                onPlay={onPlay}
+                onPause={onPause}
+                onEnd={onEnd}
+                onError={onError}
+                onStateChange={onStateChange}
+                onPlaybackRateChange={onPlaybackRateChange}
+                onPlaybackQualityChange={onPlaybackQualityChange}
+                opts={{
+                  // padding: "125px 0 0",
+                  width: "100%",
+                  height: `675px`,
+                  host: noCookies
+                    ? "https://www.youtube-nocookie.com"
+                    : "https://www.youtube.com",
+                  ...playerVars,
+                }}
+              />
+            </Modal>
+          ) : (
             <Iframe
               borderRadius={style.borderRadius}
               videoId={yt_parser(id)}
               id={`a-${id} do-not-delete-this-hack`}
-              // onReady={e => e.target.playVideo()}
-              onReady={e => setVid(e.target)}
+              onReady={(e) => e.target.pauseVideo()}
               onPlay={onPlay}
               onPause={onPause}
               onEnd={onEnd}
@@ -140,94 +175,81 @@ const Player = ({id, onPlay, onPause, onEnd, onError, onStateChange, onPlaybackR
               onPlaybackRateChange={onPlaybackRateChange}
               onPlaybackQualityChange={onPlaybackQualityChange}
               opts={{
-                // padding: "125px 0 0",
                 width: "100%",
-                height: `675px`,
+                height: `${style.height}`,
                 host: noCookies
                   ? "https://www.youtube-nocookie.com"
                   : "https://www.youtube.com",
-                ...playerVars
+                ...playerVars,
               }}
             />
-          </Modal>
-
-        ) : (<Iframe
-          borderRadius={style.borderRadius}
-          videoId={yt_parser(id)}
-          id={`a-${id} do-not-delete-this-hack`}
-          onReady={e => e.target.pauseVideo()}
-          onPlay={onPlay}
-          onPause={onPause}
-          onEnd={onEnd}
-          onError={onError}
-          onStateChange={onStateChange}
-          onPlaybackRateChange={onPlaybackRateChange}
-          onPlaybackQualityChange={onPlaybackQualityChange}
-          opts={{
-            width: "100%",
-            height: `${style.height}`,
-            host: noCookies
-              ? "https://www.youtube-nocookie.com"
-              : "https://www.youtube.com",
-            ...playerVars
-          }}
-        />)
-        }
-      </>
-    ) : (
-      <Image
-        width={imageWidth}
-        width_tablet={imageWidth_tablet || "100%"}
-        borderRadius="3px"
-      >
-        {id && <Play onClick={() => setShowVideo(true)} right_tablet={right_tablet} left_tablet={left_tablet} aria-label="Play Video" />}
-        {thumb && thumb.childImageSharp ?
-          <GatsbyImage
-            className={className}
-            onClick={() => setShowVideo(true)}
-            // fluid={thumb.childImageSharp.fluid}
-            image={getImage(thumb.childImageSharp.gatsbyImageData)}
-            alt="Video"
-            style={{
-              height: `${style.height}` || "100%",
-              width: `${style.width}` || "100%",
-              borderRadius: `${style.borderRadius}` || "auto",
-            }}
-          />
-          :
-          <Thumbnail
-            className={className}
-            onClick={() => setShowVideo(true)}
-            src={thumb && thumb.replace("/static", "") || `https://img.youtube.com/vi/${id}/${image()}.jpg`}
-            alt="Video"
-            style={{
-              height: `${style.height}` || "100%",
-              width: `${style.width}` || "100%",
-              borderRadius: `${style.borderRadius}` || "auto",
-            }}
-          />
-        }
-      </Image>
-    )}
-  </VideoWrapper>
-}
+          )}
+        </>
+      ) : (
+        <Image
+          width={imageWidth}
+          width_tablet={imageWidth_tablet || "100%"}
+          borderRadius="3px"
+        >
+          {id && (
+            <Play
+              onClick={() => setShowVideo(true)}
+              right_tablet={right_tablet}
+              left_tablet={left_tablet}
+              aria-label="Play Video"
+            />
+          )}
+          {thumb && thumb.childImageSharp ? (
+            <GatsbyImage
+              className={className}
+              onClick={() => setShowVideo(true)}
+              // fluid={thumb.childImageSharp.fluid}
+              image={getImage(thumb.childImageSharp.gatsbyImageData)}
+              alt="Video"
+              style={{
+                height: `${style.height}` || "100%",
+                width: `${style.width}` || "100%",
+                borderRadius: `${style.borderRadius}` || "auto",
+              }}
+            />
+          ) : (
+            <Thumbnail
+              className={className}
+              onClick={() => setShowVideo(true)}
+              src={
+                (thumb && thumb.replace("/static", "")) ||
+                `https://img.youtube.com/vi/${id}/${image()}.jpg`
+              }
+              alt="Video"
+              style={{
+                height: `${style.height}` || "100%",
+                width: `${style.width}` || "100%",
+                borderRadius: `${style.borderRadius}` || "auto",
+              }}
+            />
+          )}
+        </Image>
+      )}
+    </VideoWrapper>
+  );
+};
 
 export default Player;
 
 Player.defaultProps = {
-  onPlay: () => { },
-  onPause: () => { },
-  onEnd: () => { },
-  onError: () => { },
-  onStateChange: () => { },
-  onPlaybackRateChange: () => { },
-  onPlaybackQualityChange: () => { },
+  onPlay: () => {},
+  onPause: () => {},
+  onEnd: () => {},
+  onError: () => {},
+  onStateChange: () => {},
+  onPlaybackRateChange: () => {},
+  onPlaybackQualityChange: () => {},
   imageSize: "default",
   playerVars: {},
   noCookies: false,
   thumb: null,
-  style: {}
-}
+  style: {},
+};
 
 Player.propTypes = {
   /** ID of the youtube video to play . */
@@ -258,14 +280,14 @@ Player.propTypes = {
     "hqdefault",
     "mqdefault",
     "sddefault",
-    "maxresdefault"
-  ])
-}
+    "maxresdefault",
+  ]),
+};
 
 const Play = styled.button`
   background: rgba(0, 0, 0, 0.7);
   border-radius: 3px;
-  color: ${props => props.white};
+  color: ${(props) => props.white};
   font-size: 1em;
   height: 36px;
   padding: 0;
@@ -305,17 +327,17 @@ const Play = styled.button`
     position: absolute;
     width: 0;
   }
-  @media ${Devices.xxs}{
+  @media ${Devices.xxs} {
   }
-  @media ${Devices.xs}{
+  @media ${Devices.xs} {
   }
-  @media  ${Devices.sm}{
+  @media ${Devices.sm} {
   }
-  @media  ${Devices.tablet}{
-    right: ${props => props.right_tablet};
-    left: ${props => props.left_tablet};
+  @media ${Devices.tablet} {
+    right: ${(props) => props.right_tablet};
+    left: ${(props) => props.left_tablet};
   }
-  @media  ${Devices.md}{
+  @media ${Devices.md} {
     height: 44px;
     width: 44px;
 
@@ -323,10 +345,10 @@ const Play = styled.button`
       font-size: 0.75em;
     }
   }
-  @media  ${Devices.lg}{
+  @media ${Devices.lg} {
   }
-  @media  ${Devices.xl}{
+  @media ${Devices.xl} {
   }
-  @media  ${Devices.xxl}{
+  @media ${Devices.xxl} {
   }
-`
+`;

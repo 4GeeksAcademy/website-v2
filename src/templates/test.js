@@ -1,19 +1,17 @@
-import React from 'react';
-import Layout from '../global/Layout';
+import React from "react";
+import Layout from "../global/Layout";
 const Test = () => (
   <Layout
     seo={{
-      slug: 'test',
-      title: '4Geeks Academy - Test Page',
-      description: '4Geeks Academy - Testr Page ',
+      slug: "test",
+      title: "4Geeks Academy - Test Page",
+      description: "4Geeks Academy - Testr Page ",
       image: "",
-      keywords: []
+      keywords: [],
     }}
     context={{
-      lang: "us"
+      lang: "us",
     }}
-  >
-
-  </Layout>
+  ></Layout>
 );
 export default Test;
