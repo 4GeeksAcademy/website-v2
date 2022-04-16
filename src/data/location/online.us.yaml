@@ -12,6 +12,7 @@ meta_info:
       "/online",
       "/us/location/online-remote",
     ]
+  region: "america"
 
 seo_title: "Online Coding Bootcamp"
 header:
@@ -256,8 +257,8 @@ breathecode_location_slug: "online"
 gdpr_compliant: true # do we need to ask for permision?
 in_person_available: false # important to accept in-person applicants
 
-city: "Rest of Latam"
-name: "Rest of Latam"
+city: "Rest of America"
+name: "Rest of America"
 latitude: "10000.760158"
 longitude: "-800000.200154"
 phone: "+1 (786) 416-6640"
