@@ -58,7 +58,6 @@ const Apply = (props) => {
     session &&
     session.locations &&
     session.locations
-      .filter((l) => !l.active_campaign_location_slug.includes("online"))
       .sort((a, b) => (a.meta_info.position > b.meta_info.position ? 1 : -1))
       .map((m) => ({
         label:
