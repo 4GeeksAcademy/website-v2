@@ -305,7 +305,7 @@ gdpr_compliant: true # do we need to ask for permision?
 in_person_available: false # important to accept in-person applicants
 
 city: "Resto de Europa"
-name: "Resto de Europa Online/Remoto"
+name: "Resto de Europa"
 latitude: "45.764042"
 longitude: "4.835659"
 address: "Calle Edison, 3"
