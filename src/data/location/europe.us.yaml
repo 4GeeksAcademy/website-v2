@@ -258,7 +258,7 @@ gdpr_compliant: true # do we need to ask for permision?
 in_person_available: false # important to accept in-person applicants
 
 city: "Rest of Europe"
-name: "Rest of Europe Online/Remote"
+name: "Rest of Europe"
 phone: "+34 910 86 69 83"
 latitude: "45.764042"
 longitude: "4.835659"
