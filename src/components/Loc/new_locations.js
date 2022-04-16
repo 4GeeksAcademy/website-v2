@@ -203,15 +203,18 @@ const Loc = ({ lang, yml }) => {
                 Array.isArray(activeOpt.sub_links) &&
                 activeOpt.sub_links.map((l, i) => {
                   return (
-                    <Link
-                      to={`/${lang}/coding-campus/${l.node.meta_info.slug}`}
-                      key={i}
+                    <Div
+                      margin_tablet="2px 10px 2px 60px"
+                      margin_xs="2px 0"
+                      padding="10px 0 0 0"
+                      alignItems="baseline"
+                      maxWidth_tablet="none"
+                      maxWidth_xs="50%"
                     >
-                      <Div
-                        margin_tablet="2px 10px 2px 60px"
-                        margin_xs="2px 0"
-                        padding="10px 0 0 0"
-                        alignItems="baseline"
+                      <Link
+                        to={`/${lang}/coding-campus/${l.node.meta_info.slug}`}
+                        key={i}
+                        // style={{maxWidth:'50%'}}
                       >
                         <H3
                           textAlign="left"
@@ -224,8 +227,8 @@ const Loc = ({ lang, yml }) => {
                         >
                           {l.node.name}
                         </H3>
-                      </Div>
-                    </Link>
+                      </Link>
+                    </Div>
                   );
                 })}
             </Div>

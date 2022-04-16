@@ -254,10 +254,17 @@ const Landing = (props) => {
                   {f}
                 </Paragraph>
               ))}
-            {yml.features.text && (
-              <Paragraph
-                isActive
-                style={JSON.parse(yml.features.styles)}
+            {yml.features.text && /<\/?[a-z0-9]+>/g.test(yml.features.text) ? (
+              <Div
+                // isActive
+                style={{
+                  fontWeight: "400",
+                  fontFamily: "Lato, sans-serif",
+                  lineHeight: "22px",
+                  fontSize: "15px",
+                  ...JSON.parse(yml.features.styles),
+                }}
+                display="block"
                 margin="7px 0"
                 padding_tablet="0px 0px"
                 padding="0px 20px"
@@ -266,6 +273,25 @@ const Landing = (props) => {
                 color={yml.header_data.background ? Colors.black : Colors.white}
                 dangerouslySetInnerHTML={{ __html: yml.features.text }}
               />
+            ) : (
+              yml.features.text && (
+                <Paragraph
+                  isActive
+                  style={JSON.parse(yml.features.styles)}
+                  display="block"
+                  margin="7px 0"
+                  padding_tablet="0px 0px"
+                  padding="0px 20px"
+                  // textShadow="0px 0px 4px black"
+                  textAlign="left"
+                  color={
+                    yml.header_data.background ? Colors.black : Colors.white
+                  }
+                  // dangerouslySetInnerHTML={{ __html: yml.features.text }}
+                >
+                  {yml.features.text}
+                </Paragraph>
+              )
             )}
             {yml.features.button && (
               <Button

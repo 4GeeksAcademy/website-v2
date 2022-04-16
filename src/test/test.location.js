@@ -18,6 +18,15 @@ const content_fields = [
   { key: "breathecode_location_slug", type: "string", mandatory: true },
 ];
 
+const onlineSlugs = [
+  "europe",
+  "online",
+  // "bootcamp-programacion-europa-online",
+  // "europe-online-coding-bootcamp",
+  // "online-bootcamp-programacion",
+  // "online-coding-bootcamp",
+];
+
 const locations_fields = [
   { key: "active_campaign_location_slug", type: "string", mandatory: true },
   { key: "city", type: "string", mandatory: true },
@@ -156,7 +165,10 @@ walk(`${__dirname}/../data/location`, async (err, files) => {
           const location_fields_us =
             allLocations["us"][slug]["yaml"][field["key"]];
           const path = allLocations["es"][slug].filePath;
-          if (location_fields_es !== location_fields_us) {
+          if (
+            !onlineSlugs.includes(slug) &&
+            location_fields_es !== location_fields_us
+          ) {
             fail(
               `❌ ERROR: key ${field["key"].yellow} trying match ${location_fields_es.yellow} with ${location_fields_us.yellow} in ${path}.yaml\n`
             );

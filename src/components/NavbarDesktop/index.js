@@ -317,7 +317,7 @@ const CampusMenu = ({ status, setStatus, menu }) => {
               return (
                 <Link to={l.link_to} key={i}>
                   <Div
-                    margin="2px 10px 2px 0"
+                    margin="2px 5px 2px 0"
                     padding="10px 0 10px 18px"
                     backgroundHover={`#E6F5FB`}
                     borderRadius="3px"

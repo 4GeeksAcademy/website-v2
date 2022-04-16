@@ -235,7 +235,11 @@ const CampusMenu = ({ status, setStatus, menu }) => {
   return (
     <>
       <Div id="menu-container" width="100%" flexDirection="column">
-        <Div id="options-container" justifyContent="center">
+        <Div
+          id="options-container"
+          justifyContent_tablet="center"
+          justifyContent_xs="between"
+        >
           {Array.isArray(menu[status.itemIndex].sub_menu.links) &&
             menu[status.itemIndex].sub_menu.links.map((m, i) => (
               <Button
@@ -265,14 +269,14 @@ const CampusMenu = ({ status, setStatus, menu }) => {
             Array.isArray(activeOpt.sub_links) &&
             activeOpt.sub_links.map((l, i) => {
               return (
-                <Link to={l.link_to} key={i}>
+                <Link to={l.link_to} key={i} style={{ maxWidth: "50%" }}>
                   <Div
-                    margin="2px 10px 2px 0"
+                    margin="2px 5px 2px 0"
                     padding="10px 0 10px 18px"
                     backgroundHover={`#E6F5FB`}
                     borderRadius="3px"
                     alignItems="baseline"
-                    maxWidth="50%"
+                    // maxWidth="50%"
                   >
                     <H3
                       textAlign="left"
@@ -280,7 +284,7 @@ const CampusMenu = ({ status, setStatus, menu }) => {
                       fontSize="15px"
                       lineHeight="20px"
                       fontWeight="400"
-                      margin="0 5px 0 0"
+                      // margin="0 5px 0 0"
                     >
                       {l.title}
                     </H3>
