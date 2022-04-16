@@ -72,6 +72,12 @@ module.exports = {
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     {
+      resolve: "gatsby-plugin-remove-console",
+      options: {
+        exclude: ["error", "warn"], // <- will be removed all console calls except these
+      },
+    },
+    {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [

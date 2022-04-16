@@ -42,10 +42,8 @@ context("Test Apply page with correct data", () => {
         .should("have.css", "border-color", "rgb(0, 0, 0)");
 
       cy.get("[data-cy=dropdown_program_selector]")
-        .click()
+        .click({ force: true })
         .wait(1500)
-        .get("#react-select-2-option-0")
-        .click();
 
       cy.get("[data-cy=dropdown_academy_selector]")
         .click()
