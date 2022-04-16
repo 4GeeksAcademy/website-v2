@@ -257,7 +257,7 @@ gdpr_compliant: true # do we need to ask for permision?
 in_person_available: false # important to accept in-person applicants
 
 city: "Rest of Latam"
-name: "Rest of Latam Online/Remote"
+name: "Rest of Latam"
 latitude: "10000.760158"
 longitude: "-800000.200154"
 phone: "+1 (786) 416-6640"
