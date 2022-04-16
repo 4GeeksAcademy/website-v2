@@ -137,7 +137,6 @@ const Calendar = (props) => {
                 label: l.name,
                 value: l.breathecode_location_slug,
               }))
-              .filter((l) => !l.value.includes("online"))
           ),
         },
       };
