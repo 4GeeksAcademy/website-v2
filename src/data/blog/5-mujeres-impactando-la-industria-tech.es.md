@@ -30,6 +30,8 @@ Hice una maestría en estadística aplicada en NYU. Mientras estaba allí, el di
 
 Solo hay un puñado de mujeres que trabajan en estadísticas de baloncesto y necesitamos desesperadamente más: la mejor manera de involucrarse es usar datos disponibles públicamente para resolver un problema deportivo que le interese e intentar asistir a conferencias deportivas para construir una red. ¡Incluso podría ser contratado en función de alguna visualización que publique en Twitter de análisis de la NBA! No existe una fórmula fija para trabajar en el análisis deportivo; el único ingrediente necesario es tener siempre curiosidad."
 
+<call-to-action button_text="Ver programa" button_link="/es/coding-bootcamps/full-stack-part-time" background="rgba(0, 151, 205, 0.15)" title="Impulsa tu carrera, gracias a la programación" text="Te invitamos a impulsar tu carrera, aprendiendo a programar con nuestro Programa Full Stack Developer."></call-to-action>
+
 
 **M’benda N’dour, Full Stack Software Developer 💻**
 
