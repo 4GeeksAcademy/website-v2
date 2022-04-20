@@ -33,9 +33,9 @@ button:
 
 custom_bar:
   active: true
-  message: <a class="customBar-link" href="/es/aplica>Apunta</a> a la próxima cohorte para convertirte en Full-Stack Developer
+  message: '¿Quisieras tu primer trabajo como programador? ¡Conviértete en Full Stack Developer y consíguelo!" <a class="customBar-link" href="/es/aplica" taget="_blank" rel="noopener noreferrer nofollow">Postula ahora</a>'
   # button: 
-   # label: ""
+    label: "Conoce más"
     # bath: "#" #string (can be inline path using #, relative path or absolute path)
 
 info_box:
