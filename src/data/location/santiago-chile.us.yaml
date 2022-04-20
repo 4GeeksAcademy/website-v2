@@ -35,7 +35,7 @@ button:
 
 custom_bar:
   active: true
-  message: Become a full stack developer and find a job in just 16 weeks <a class="customBar-link" href="/us/apply">Apply now!</a>
+  message: Would you like your first job as a full stack devoloper? Become one and get hired! <a class="customBar-link" href="/us/apply">Apply now!</a>
   # button: 
     # label: ""
     # path: "#" #string (can be inline path using #, relative path or absolute path)
