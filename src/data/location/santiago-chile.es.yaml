@@ -34,10 +34,7 @@ button:
 custom_bar:
   active: true
   message: '¿Quisieras tu primer trabajo como programador? ¡Conviértete en Full Stack Developer y consíguelo!" <a class="customBar-link" href="/es/aplica" taget="_blank" rel="noopener noreferrer nofollow">Postula ahora</a>'
-  # button: 
-    label: "Conoce más"
-    # path: "#" #string (can be inline path using #, relative path or absolute path)
-
+  
 info_box:
   heading: "Encuéntranos en Santiago de Chile"
   address: "Av. Manquehue Sur 350, Oficina 110, Las Condes, Región Metropolitana, Chile"
