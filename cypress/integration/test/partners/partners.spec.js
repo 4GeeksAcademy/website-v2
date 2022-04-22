@@ -20,13 +20,13 @@ context("Test Contact page with correct data", () => {
           .should("have.css", "border-color", "rgb(0, 0, 0)"); // focus the form
 
         cy.get("[data-cy=email]")
-          .type(email)
+          .type(email, { force: true })
           .should("have.css", "border-color", "rgb(0, 0, 0)");
 
         cy.get("[data-cy=phone]").type("{movetoend}" + phone);
 
         cy.get("[data-cy=client_comments]")
-          .type(comment)
+          .type(comment, { force: true })
           .should("have.css", "border-color", "rgb(0, 0, 0)");
       });
     });

@@ -39,7 +39,7 @@ context("Test Contact page with correct data", () => {
     });
 
     cy.log("**_____ Submit Form _____**");
-    cy.get('Button[type="submit"]').contains("Send").click().wait(2500);
+    cy.get('Button[type="submit"]').contains("Send").click({ force: true }).wait(2500);
 
     cy.log("**_____ Verifying Interception API _____**");
     cy.wait("@postContact");
