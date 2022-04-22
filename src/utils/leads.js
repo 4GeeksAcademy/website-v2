@@ -34,6 +34,7 @@ export const save_form = async (
       language: formData.utm_language || session.language,
       latitude: session.latitude,
       longitude: session.longitude,
+      referral_key: formData.referral_code || session.referral_code,
       browser_lang: session.browserLang,
       city: session.location.city,
       location:
