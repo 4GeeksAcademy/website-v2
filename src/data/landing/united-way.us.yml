@@ -35,9 +35,9 @@ form:
   redirect: null #you can redirect to another url or entirely diffrent website
 
 header_data:
-  tagline: "Take control of your future. Learn a new skill"
+  tagline: "Take control of your future. Learn a new skill."
   tagline_color: "black"
-  sub_heading: "Receive high-quality coding education with no upfront costs"
+  sub_heading: "Receive high-quality coding education with no upfront costs."
   # image: "../../../static/images/landing/uwm_pantone_2021_2.png"
   image_filter: brightness(0.3)
   partner_logo_url: "../../../static/images/landing/uwm_pantone_2021_2.png" # optional
@@ -51,7 +51,7 @@ header_data:
 features:
   marginTop: 0px #<-- separation between tagline and the bullets
   text: |
-    <p>United Way Miami Workforce Project is an exciting new coding program made possible by the collaboration of United Way Miami, Social Financing and 4Geeks that allows you to get the top education to land a new to land a job in the field of technology through Income Sharing Agreements.</p>
+    <p> <strong style="font-weight: bold;">United Way Miami Workforce Project</strong> is an exciting new coding program made possible by the collaboration of United Way Miami, Social Financing and 4Geeks that allows you to get the top education to land a new to land a job in the field of technology through Income Sharing Agreements.</p>
     <hr style="margin: 15px 0;">
     <span style="background: rgb(255, 183, 24);font-weight: bold;">Now open and accepting applications!</span>
     <p>Applications will be open until May 31st, 2022</p>
@@ -93,7 +93,7 @@ components:
     sub_heading:
       text: |
         <strong style="font-weight: bold;">61% of HR proffesionals</strong> reported that finding
-        qualified developers would present their biggest recruitment challenge of 2021. Avg job offers attract 250 CV'S.
+        qualified developers would present their biggest recruitment challenge of 2021. Avg job offers attract 250 Resumes.
         <strong style="font-weight: bold;">Only 5 of them end up in an interview.</strong>
       font_size: ["16px", "16px", "16px", "16px", "16px"]
       style: '{ "textAlign": "center", "width": "60%" }'
@@ -102,7 +102,7 @@ components:
           style: '{ "backgroundSize": "contain", "height": "130px" }'
           src: "/images/landing/graduated-icon.png"
         content: 
-          text: "Every Miami-Dade Resident is invited to apply. Need to be a U.S. Citizen or Consideration of Deferred Action for Childhood Arrivals (DACA). The team will approve your application upon confirmation of meeting the requirements."
+          text: "Every Miami-Dade Resident is invited to apply. Need to be a U.S. Citizen or Consideration of Deferred Action for Childhood Arrivals (DACA). The team will review and approve your application upon confirmation of meeting the requirements."
           font_size: ["16px"]
         size: [3,3,3,3]
       - image:
@@ -125,16 +125,18 @@ components:
     layout: multi_column
     swipable: True
     heading:
-      text: "Elegibility in this program"
+      text: "Elegibility in this Program"
       font_size: ["30px", "30px", "30px", "30px", "30px"]
     content:
       text: | 
-        learn more about <a style="color: rgb(0, 160, 218); cursor:pointer;">eligibility conditions</a> and apply
+         <br>
+         <br>
+        Leearn more about <a style="color: rgb(0, 160, 218); cursor:pointer;">eligibility conditions</a> and apply
       font_size: ["16px", "16px", "16px", "16px", "16px"]
       path: "https://marketing892162.typeform.com/to/ti4UAUrh"
     sub_heading:
       text: |
-        <strong style="font-weight: bold;"> Every Miami Resident is invited to apply </strong>. You also need to be a Citizen, permanent resident or DACA. You should not have accounts in collection greater than $5k. Preference will be given to one of these groups:
+        <strong style="font-weight: bold;"> Every Miami Resident is invited to apply </strong>. You also need to be a Citizen, permanent resident or DACA. You should not have accounts in collection greater than $5,000. Preference will be given to one of these groups:
       font_size: ["16px", "16px", "16px", "16px", "16px"]
     button:
       text: "APPLY NOW"
@@ -177,7 +179,7 @@ components:
       style: '{ "backgroundSize": "contain" }'
       src: "/images/landing/group_194.png"
     heading:
-      text: "Why Coding?"
+      text: "Why coding?"
       font_size: ["40px", "40px", "40px", "40px", "40px"]
     sub_heading:
       text: "Software development is one of the more sought-after professionals out there. Learning to code will give you access to:"
@@ -222,8 +224,8 @@ components:
         <p>This <strong style="font-weight: bold;font-size:20px;">part-time 16-week</strong> syllabus is made to teach you both: 
         The most wanted and the highest-paid technologies today.</p>
         <br>
-        <h2><strong style="font-weight: bold;font-size:20px;color:black;">Let's break down obstacles to a new career</strong></h2>
-        <h2><strong style="font-weight: bold;font-size:20px;color:black;">Let's tackle together the tech talent imbalance</strong></h2>      
+        <h2><strong style="font-weight: bold;font-size:20px;color:black;">Break down obstacles to a new career,</strong></h2>
+        <h2><strong style="font-weight: bold;font-size:20px;color:black;">Let's tackle together the tech talent imbalance.</strong></h2>      
   - name: pay
     position: 8
     background: "veryLightBlue2"
@@ -249,7 +251,7 @@ components:
         <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">2. Get the skills of a software Developer</strong></h2>
         <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">3. Graduate and complete your projects</strong></h2>
         <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">4. Get a Job</strong></h2>
-        <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">5. Pay back for the program</strong></h2>
+        <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">5. Pay back after you get a new job</strong></h2>
       font_size: ["16px"]
 
   - name: testimonials
