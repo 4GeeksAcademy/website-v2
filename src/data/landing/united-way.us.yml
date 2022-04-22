@@ -55,7 +55,7 @@ features:
     <hr style="margin: 15px 0;">
     <span style="background: rgb(255, 183, 24);font-weight: bold;">Now open and accepting applications!</span>
     <p>Applications will be open until May 31st, 2022</p>
-    <p>Only 100 Open spots available</p>
+    <p>Only 100 spots available</p>
   styles: '{ "color": "gray", "fontWeight":"500" }'
   button:
       text: "APPLY NOW"
@@ -91,9 +91,9 @@ components:
       text: "How it Works"
       font_size: ["30px", "30px", "30px", "30px", "30px"]
     sub_heading:
-      text: |
-        <strong style="font-weight: bold;">61% of HR proffesionals</strong> reported that finding
-        qualified developers would present their biggest recruitment challenge of 2021. Avg job offers attract 250 Resumes.
+      text: 
+        According to the U.S. Bureau of Labor Statistics, 
+        <strong style="font-weight: bold;">software developers in the U.S. have a higher than average job outlook and earn a median salary of $110,140 a year</strong>. 
         <strong style="font-weight: bold;">Only 5 of them end up in an interview.</strong>
       font_size: ["16px", "16px", "16px", "16px", "16px"]
       style: '{ "textAlign": "center", "width": "60%" }'
