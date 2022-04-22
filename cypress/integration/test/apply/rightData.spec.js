@@ -1,6 +1,6 @@
 context("Test Apply page with correct data", () => {
   it('Visit the Apply page with path "/us/apply"', () => {
-    cy.visit("/us/apply").wait(3500);
+    cy.visit("/us/apply").wait(5000);
   });
 
   it("Call the form and fill with right values", () => {
@@ -41,15 +41,17 @@ context("Test Apply page with correct data", () => {
         .type(phone)
         .should("have.css", "border-color", "rgb(0, 0, 0)");
 
-      cy.get("[data-cy=dropdown_program_selector]")
-        .click({ force: true })
-        .wait(1500)
+        
+        cy.get("[data-cy=dropdown_program_selector]").click().wait(2000).type("level 1 {enter}")
+        // .click({ force: true })
+        // .wait(1500)
 
-      cy.get("[data-cy=dropdown_academy_selector]")
-        .click()
-        .wait(2500)
-        .get("#react-select-3-option-1")
-        .click();
+      cy.get("[data-cy=dropdown_academy_selector]").click().wait(2000).type("miami {enter}")
+        // .wait(5000)
+        // .click({ force: true })
+        // .wait(3500)
+        // .get("#react-select-3-option-1")
+        // .click();
     });
 
     cy.get('Button[type="submit"]').contains("APPLY").click().wait(2500);
