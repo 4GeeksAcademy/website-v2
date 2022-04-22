@@ -18,22 +18,22 @@ context("Test Contact page with correct data", () => {
       }).as("postContact");
 
       cy.get("[data-cy=first_name]")
-        .clear()
+        .clear({ force: true })
         .type(firstName)
         .should("have.css", "border-color", "rgb(0, 0, 0)"); // focus the form
 
       cy.get("[data-cy=last_name]")
-        .clear()
+        .clear({ force: true })
         .type(lastName)
         .should("have.css", "border-color", "rgb(0, 0, 0)");
 
       cy.get("[data-cy=email]")
-        .clear()
+        .clear({ force: true })
         .type(email)
         .should("have.css", "border-color", "rgb(0, 0, 0)");
 
       cy.get("[data-cy=comment]")
-        .clear()
+        .clear({ force: true })
         .type(comment)
         .should("have.css", "border-color", "rgb(0, 0, 0)");
     });

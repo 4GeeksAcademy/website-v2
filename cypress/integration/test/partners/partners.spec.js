@@ -1,6 +1,6 @@
 context("Test Contact page with correct data", () => {
   it('Visit the Partners page with path "/us/partners"', () => {
-    cy.visit("/us/partners").wait(3500);
+    cy.visit("/us/partners").wait(4500);
   });
 
   it("Call the form and fill with right values", () => {
@@ -16,7 +16,7 @@ context("Test Contact page with correct data", () => {
         cy.intercept("POST", "**/marketing/lead").as("post_partner");
 
         cy.get("[data-cy=full_name]")
-          .type(`${firstName} ${lastName}`)
+          .type(`${firstName} ${lastName}`, { force: true })
           .should("have.css", "border-color", "rgb(0, 0, 0)"); // focus the form
 
         cy.get("[data-cy=email]")

@@ -8,20 +8,20 @@ context("Test Apply page with wrong data", () => {
     cy.fixture("/contact/wrong.json").each((wrong) => {
       const { firstName } = wrong;
 
-      cy.get("[data-cy=first_name]").clear().type(firstName);
+      cy.get("[data-cy=first_name]").clear({ force: true }).type(firstName);
     });
 
     cy.fixture("/apply/form_values/wrong.json").each((wrong) => {
       const { email, phone } = wrong;
 
       cy.get("[data-cy=email]")
-        .clear()
+        .clear({ force: true })
         .type(email)
         .should("have.css", "background-color", "rgb(250, 240, 240)"); // reject input color
       cy.get("span").contains("Please specify a valid email");
 
       cy.get("[data-cy=phone]")
-        .clear()
+        .clear({ force: true })
         .type(phone)
         .should("have.css", "background-color", "rgb(250, 240, 240)"); // reject input color
       cy.get("span").contains("Please specify a valid phone number");
@@ -40,7 +40,7 @@ context("Test Apply page with wrong data", () => {
   });
 
   it("Shouldn't submit the form", () => {
-    cy.get('Button[type="submit"]').contains("APPLY").click();
+    cy.get('Button[type="submit"]').contains("APPLY").click({ force: true });
     cy.get("[data-cy=alertText]"); // Alert after submit
   });
 });
