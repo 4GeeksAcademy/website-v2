@@ -7,7 +7,7 @@ meta_info:
   image: "/images/bg/main-bg.jpg"
   keywords: "Clase de programación, Clase de python, clase de javascript, Clase de informática, Coding Bootcamp, 4Geeks Academy"
 
-  template: "landing_a" # <--- choose your landing template
+  template: "landing_nonav" # <--- choose your landing template
   redirects: # <--- URL redirections to avoid 404 errors
     ["/landing/clases-de-programacion-santiago"]
 
@@ -18,20 +18,31 @@ meta_info:
   automation: soft # comma separated, "soft" is the default value
   tag: request_more_info # comma separated, "request_more_info" is the default value
 
+navbar:
+  buttonText: "Postular"
+  buttonUrl: "#bottom" # url accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
+  logoUrl: "#"
+
 form:
   # posible fields: "first_name", "last_name", "full_name", "phone", "email"
   # always the first_name, email and phone will be mandatory if added.
   fields: ["full_name", "phone", "email"]
   heading: "Conoce más información"
-  motivation: "Llena el formulario y te enviaremos la info en menos de 5 min"
+  motivation: "Completa el formulario y te enviaremos la información en unos minutos a tu correo electrónico."
   button_label: Obtener malla y más información
-  redirect: null #you can redirect to another url or entirely diffrent website
+  redirect: "/es/gracias/?lang=es"  #you can redirect to another url or entirely diffrent website
+
+apply_schollarship: # form that is displayed at the end of the landing
+  # title: "Get more info about this award-winning development course"
+  imageSide: "right"
+  image: "../../../static/images/comunity-support.png"
 
 # jumbotron on the top (cannot be commented out)
 header_data:
-  tagline: Clases de programación
-  sub_heading: "Aprende a programar y consigue trabajo como desarrollador"
-  image: "../../../static/images/4geeks-main.jpg"
+  background: "#FFF1D1"
+  tagline: Clases de Programación Web
+  sub_heading: "Aprende a programar desde cero y consigue trabajo como Full Stack Developer Junior"
+  badge: "../../../static/images/badges/switchup.png"
   image_filter: brightness(0.3)
 
 features:
@@ -41,17 +52,31 @@ features:
   styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
   bullets:
     - No se requiere experiencia previa
-    - Horarios part-time y full-time. Online o Presencial
-    - Mentorias y career support de por vida
-    - Un desarrollador junior hace $900.000 CLP al mes
+    - Horarios part-time y full-time
+    - Mentorías y career support de por vida
+    - Un desarrollador Jr puede ganar hasta $900.000 CLP al mes
+
+short_badges:
+  - name: "Premios Excelencia Educativa"
+    url: ""
+    image: "../../../static/images/badges/exelencia-educativa-es.png"
+    alt: "Mejor centro de Coding Bootcamp"
+  - name: "Newsweek"
+    url: ""
+    image: "../../../static/images/badges/newsweek-es.png"
+    alt: "Top Coding Bootcamps Newsweek"
+  - name: "Switchup"
+    url: ""
+    image: "../../../static/images/badges/reviews.png"
+    alt: "Best coding bootcamp Switchup 2021" 
 
 follow_bar:
   position: "top" # top, bottom, hidden
   content:
-    text: "Desde 184.311 CLP al mes."
-    text_mobile: "Desde 184.311 CLP al mes."
+    text: "Puedes llamarnos o enviarnos un mensaje por WhatsApp"
+    text_mobile: "Puedes llamarnos o enviarnos un mensaje por WhatsApp"
     # devices:    XL      LG      MD      SM       XS
-    font_size: ["25px", "25px", "25px", "20px", "18px"]
+    font_size: ["25px", "25px", "25px", "18px", "4.3vw"]
   button:
     text: "Obtener más información"
     path: "#top"
@@ -62,87 +87,113 @@ follow_bar:
 # ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇
 #
 
-in_the_news:
+rating_reviews:
   position: 1
-  heading: "Lee sobre 4Geeks en los medios..."
-  filter: ["CNN Español", "La Tercera", "Las Ultimas Noticias", "Emol"]
-
-badges:
-  position: 2
-  heading: "Este es el lugar para impulsar tu carrera aprendiendo a programar. Estamos muy orgullosos de nuestros programas y metodología para capacitar a los desarrolladores en solo unos meses y ayudarlos a impulsar sus carreras profesionales."
+  heading: "Lee acerca de nosotros"
+  rating_list:
+    - alt: "Career Karma"
+      image: "../../../static/images/badges/career-karma.png"
+      rating: 4.8
+      url: "https://careerkarma.com/schools/4geeks-academy/"
+    - alt: "Switchup"
+      image: "../../../static/images/badges/switchup-img.png"
+      rating: 4.89
+      url: "https://www.switchup.org/bootcamps/4geeks-academy"
+    - alt: "Course Report"
+      image: "../../../static/images/badges/course-report.png"
+      rating: 4.84
+      url: "https://www.coursereport.com/schools/4geeks-academy"
+    - alt: "Google"
+      image: "../../../static/images/badges/google.png"
+      rating: 4.9
+      url: ""
 
 program_details:
-  position: 3
+  position: 2
   heading: "Domina Python, JS y React"
-  sub_heading: "Clases de programación sobre las tecnologías más usadas del mundo"
-
-why_python:
-  position: 4
-  heading: "¿Por qué Python y React.js?" # optional or set to white space to hide
-  sub_heading: "Javascript es 26 veces más buscado que Ruby On Rails. Python es 10 veces más buscado que Node.js" # optional or set to white space to hide
-
-geeks_vs_others:
-  position: 6
-  heading: "¿Qué hace a 4Geeks Academy tan exitoso?"
-  paragraph: ""
-  total_rows: 5
+  sub_heading: "Un bootcamp de programación sobre las tecnologías más usadas del mundo"
 
 why_4geeks:
   position: 7
-  heading: "Por qué 4Geeks"
+  heading: "¿Por qué 4Geeks?"
   sub_heading: " "
 
 who_is_hiring:
   position: 8
   limit: 4
   heading: "¿Quién contrata a nuestros alumnos?"
-  sub_heading: "Nuestros partners de contratación crecen todos los días, con más de 150 aliados a nivel global y decenas de vacantes activas en nuestras bolsas de empleo."
-
-alumni_projects:
-  position: 9
-  heading: "Así podría ser tu proyecto final"
-  sub_heading: "Proyectos hechos por graduados de la academia"
+  sub_heading: "Nos encanta ver crecer a nuestros estudiantes, es por eso que nos esforzamos cada día por tener más aliados, para que puedas trabajar en empresas que te ayuden a seguir creciendo profesionalmente."
 
 # Possible layours: [two_column_left_image, two_column_right_image]
 components:
-  - name: top_coding_bootcamp
-    position: 5
-    layout: two_column_left
-    proportions: [4, 8]
+  - name: geeksinfo
+    position: 3
+    layout: geeksInfo
+  - name: coding
+    position: 6
+    layout: two_column_right
+    proportions: [6, 6]
+    background: "rgba(255, 183, 24, 0.2)"
     image:
       style: '{ "backgroundSize": "contain" }'
-      src: "/images/badges/switchup.png"
-      link: "https://www.switchup.org/bootcamps/4geeks-academy"
-    button:
-      text: "Leer testimoniales"
-      color: null
-      path: "https://www.switchup.org/bootcamps/4geeks-academy"
+      src: "/images/landing/group_194.png"
     heading:
-      text:
-        "Hemos sido nombrados uno de los TOP coding bootcamps en el mundo"
-        #xl      lg     md     sm    xs
-      font_size: ["40px", "40px", "40px", "40px", "40px"]
-  - name: first_syllabus_form
-    position: 4
-    layout: syllabus
-    button:
-      text: "Descarga Instantánea"
-    heading:
-      text: "Descarga la Malla Educativa"
-      #xl      lg     md     sm    xs
-      font_size: ["40px", "40px", "40px", "40px", "40px"]
-  - name: working_as_software_developers
-    position: 8
-    proportions: [4, 8]
-    layout: two_column_left
+      text: "Membresías"
+      font_size: ["50px", "50px", "50px", "50px", "50px"]
+    sub_heading:
+      text: 
+      font_size: ["16px", "16px", "16px", "16px", "16px"]
+    content:
+      font_size: ["16px"]
+      text: |
+        <img src="/images/geekpal.png">
+        <br>
+        <p>GeekPAL es una membresía instantánea que obtienes cuando te conviertes en estudiante de 4Geeks Academy. Te garantiza que no volverás a programar solo. Con GeekPAL contará con un compañero por el resto de su vida, sí, incluso después de graduarse. Si te quedas atascado, siempre habrá un mentor disponible para que puedas obtener ayuda con tu código</p>
+        <br>
+        <br>
+        <img src="/images/geekforce.png">
+        <p>GeekForce es el proceso colectivo de apoyo profesional del Bootcamp. La 'fuerza' significa empoderamiento profesional y es una membresía de por vida. Brinda asistencia para la colocación laboral del estudiante y para que se prepare para conseguir un trabajo en tecnología.</p>
+  - name: python_y_javascript
+    position: 3
+    layout: two_column_right
+    background: "veryLightBlue2" # Name of the color(from components/Styling/index.js) or color code ex: #C9F9F9
     image:
-      src: "https://storage.googleapis.com/4geeks-academy-website/landing-pictures/testimonials.webp"
+      src: "/images/why-4geeks/python-image.png"
     heading:
       text:
-        "89% de nuestros graduados ya trabajan como desarrolladores de software."
-        #           xl      lg     md     sm    xs
-      font_size: ["40px", "34px"]
-# why_python:
-#   position: 7
-#   heading: "¿Por qué enseñamos Python?" # optional or set to white space to hide
-#   sub_heading: " " # optional or set to white space to hide
+        "Python y Javascript"
+        #           xl      lg      md      sm      xs
+      font_size: ["50px", "50px", "50px", "50px", "50px"]
+    content:
+      text: "Nuestro programa está basado en el uso de Python y Javascript. ¿La razón? En el mercado laboral JavaScript tiene 26 veces más vacantes de trabajo que Ruby on Rails y Python te permite acceder a distintas áreas del mundo de la programación.
+      
+      Otras herramientas que también aprenderás a usar en nuestro programa son: HTML5, CSS3, React, Flask, etc."
+      font_size: ["16px"]
+
+choose_your_program:
+  position: 5
+  title: Nuestras Modalidades
+  paragraph: Programa Full Stack Developer en Modalidad Part Time y Full Time
+  programs:
+  - title: "Part Time"
+    sub_title: "16 semanas"
+    icon: "fullstack"
+    description: |
+      De cero a tener tu primer trabajo como Full Stack Developer, con una duración de 16 semanas, con clases 3 veces por semana, compatible con horario laboral o de estudios. 
+
+      Precio: 2.415.000 CLP
+    
+    text_link: Obtener más información
+    link: "#top" # moves to start position
+    
+  - title: "Full Time"
+    sub_title: "9 semanas"
+    icon: "fullstack"
+    description: |
+      Programa intensivo de 9 semanas, con clases de lunes a viernes durante todo el día, para vivir una experiencia inmersiva en el mundo del código.
+
+      Precio: 2.760.000 CLP
+      
+    text_link: Obtener más información
+    link: "#top"
+
