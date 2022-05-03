@@ -14,7 +14,7 @@ status: "published"
 
 # Juegos gratis para practicar tus habilidades de programación
 
-![coding games.jpg](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/5b80f239-38e7-4f47-b04c-566e01690a5f/coding_games.jpg)
+![coding-games.jpg](../../../static/images/blog/coding-games.jpg)
 
 ¿Cómo alimentar tu motivación al aprender a programar? sabemos que a pesar que nos gustaría que nuestro proceso de aprendizaje sea una línea recta ascendente↗️, a veces puede ser más como una montaña rusa🎢  afortunadamente tenemos algunos insights de experiencia para mantenerte motivado en tu camino.  
 
@@ -26,36 +26,26 @@ Una manera divertida de practicar tus hábilidades de programación es jugando a
 
 Aquí te dejamos nuestro top 5 de juegos gratis en los que puedes practicar tus habilidades de programación: 
 
-1) [**CSS Dinner:](https://flukeout.github.io/)** este es un juego en el que prácticamente estás aprendiendo y practicando cómo usar diferentes selectores de CSS, tiene 32 niveles diferentes, uno para casi todos los selectores que hay, y el objetivo es averiguar cómo seleccionar los elementos que están en la mesa, por ejemplo, en la imagen de abajo puedes ver dos platos blancos sobre la mesa, por lo que tienes que seleccionarlos correctamente.
+**1) [CSS Dinner:](https://flukeout.github.io/)** este es un juego en el que prácticamente estás aprendiendo y practicando cómo usar diferentes selectores de CSS, tiene 32 niveles diferentes, uno para casi todos los selectores que hay, y el objetivo es averiguar cómo seleccionar los elementos que están en la mesa, por ejemplo, en la imagen de abajo puedes ver dos platos blancos sobre la mesa, por lo que tienes que seleccionarlos correctamente.
 
- 
+ ![CSS.png](../../../static/images/blog/CSS.png)
 
-![CSS.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/71054db2-61ee-44e2-aed4-c497f306d230/CSS.png)
+**2) [SQL Murder Mystery:](https://mystery.knightlab.com/)** si te gustan los rompecabezas y los juegos de resolución de misterios, este te gustará mucho. SQL Murder Mystery es un juego en el que puedes aprender conceptos y comandos de SQL, y si ya tienes experiencia con SQL, es básicamente un divertido juego de misterio en el que usas múltiples “queries” para encontrar información de la escena del crimen y descubrir quién es el criminal. Si eres nuevo en SQL, este juego te dará el dominio que estás buscando.
 
-[(photo link)](https://flukeout.github.io/)
+![SQL.png](../../../static/images/blog/SQL.png)
 
-2) [**SQL Murder Mystery:](https://mystery.knightlab.com/)** si te gustan los rompecabezas y los juegos de resolución de misterios, este te gustará mucho. SQL Murder Mystery es un juego en el que puedes aprender conceptos y comandos de SQL, y si ya tienes experiencia con SQL, es básicamente un divertido juego de misterio en el que usas múltiples “queries” para encontrar información de la escena del crimen y descubrir quién es el criminal. Si eres nuevo en SQL, este juego te dará el dominio que estás buscando.
+**3) [Elevator Saga:](https://play.elevatorsaga.com/)** este juego, como su nombre lo indica, se trata de programar ascensores y funciona con JavaScript. Elevator saga te da diferentes retos y tu trabajo es programar un ascensor para transportar personas, para poder pasar los niveles tienes que transportar cierta cantidad de pasajeros en cierto tiempo. Es un juego basado en la eficiencia, para ver cuan eficiente estás transportando personas y qué tan rápido lo haces mientras crea scripts con JavaScript. 
 
-![SQL.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d6bced59-e7fd-4eb2-8eaf-de4be9e73be1/SQL.png)
+![JavaScript.png](../../../static/images/blog/JavaScript.png)
 
-[**(photo link)](https://mystery.knightlab.com/)** 
 
-3) [**Elevator Saga:](https://play.elevatorsaga.com/)** este juego, como su nombre lo indica, se trata de programar ascensores y funciona con JavaScript. Elevator saga te da diferentes retos y tu trabajo es programar un ascensor para transportar personas, para poder pasar los niveles tienes que transportar cierta cantidad de pasajeros en cierto tiempo. Es un juego basado en la eficiencia, para ver cuan eficiente estás transportando personas y qué tan rápido lo haces mientras crea scripts con JavaScript. 
 
-![JavaScript.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/97313587-fd0c-4e9c-ba3c-976d7e8dde65/JavaScript.png)
+**4) [CSS Battle:](https://cssbattle.dev/)** crea píxeles perfectos para replicar objetivos usando HTML y CSS. Lucha con jugadores de todo el mundo para llegar a lo más alto de la clasificación. Este juego es para principiantes, intermedios, e incluso expertos en CSS.
 
-**[(photo link)](https://play.elevatorsaga.com/)**
+![CSS-game.png](../../../static/images/blog/CSS-game.png)
 
-4) [**CSS Battle:](https://cssbattle.dev/)** crea píxeles perfectos para replicar objetivos usando HTML y CSS. Lucha con jugadores de todo el mundo para llegar a lo más alto de la clasificación. Este juego es para principiantes, intermedios, e incluso expertos en CSS.
+**5) [Code Wars:](https://www.codewars.com/)** desafíate a ti mismo con pequeños ejercicios llamados "kata". Cada kata está elaborado por la comunidad para ayudarlo a fortalecer diferentes habilidades de programación. Domina el idioma de tu elección, o aprende cualquiera de los más de 55 lenguajes de programación soportados en el juego. Python, JavaScript, y más.
 
-![CSS game .png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/740abce9-df65-4cf2-a9c6-ef4ffe51a131/CSS_game_.png)
-
-[**(photo link)**](https://www.sarthakbatra.com/blog/getting-started-with-css-battle/) 
-
-5) [**Code Wars:](https://www.codewars.com/)** desafíate a ti mismo con pequeños ejercicios llamados "kata". Cada kata está elaborado por la comunidad para ayudarlo a fortalecer diferentes habilidades de programación. Domina el idioma de tu elección, o aprende cualquiera de los más de 55 lenguajes de programación soportados en el juego. Python, JavaScript, y más.
-
-![coding.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/b99c32a3-24ff-49b6-8099-5c8483302a84/coding.png)
-
-[**(photo link)](https://www.codewars.com/)** 
+![coding.png](../../../static/images/blog/coding.png)
 
 Esperamos que disfrutes estos juegos tanto como nosotros, y te ayuden a fortalecer tus habilidades de programación. Si estás buscando iniciar una carrera como Full-Stack Software Developer o Machine Learning Engineer, nuestro Coding Bootcamp te ayudará a despegar en estos y otros lenguajes de programación, para conocer más sobre nuestros programas [haz click aquí.](https://4geeksacademy.com/)
