@@ -56,7 +56,7 @@ const Landing = (props) => {
     course: {
       type: "hidden",
       value:
-        programs.length <= 1 ? programs[0].value : yml.meta_info?.utm_course,
+        programs.length === 1 ? programs[0].value : yml.meta_info?.utm_course,
       valid: true,
     },
     utm_location: {
