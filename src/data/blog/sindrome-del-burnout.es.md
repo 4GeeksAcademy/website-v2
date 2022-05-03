@@ -1,12 +1,12 @@
 ---
 author: "4GeeksAcademy"
 date: "2022-05-03T12:00:12+00:00"
-excerpt: "El Síndrome del Burnout es una realidad y afecta mucho a los profesionales, en especial a los programadores, revisa esta entrada y verás cómo identificarlo y como combatirlo."
+excerpt: "El Síndrome de Burnout es una realidad y afecta mucho a los profesionales, en especial a los programadores, revisa esta entrada y verás cómo identificarlo y como combatirlo."
 slug: "sindrome-del-burnout"
 template: "post"
-title: "Síndrome del Burnout en programadores ¿Cómo afecta y cómo afrontarlo?"
+title: "Síndrome de Burnout en programadores ¿Cómo afecta y cómo afrontarlo?"
 image: "https://factorcapitalhumano.com/wp-content/uploads/2019/05/Burnout-laboral-e1558985212623.jpg"
-image_alt: "Síndrome del Burnout en programadores ¿Cómo afecta y cómo afrontarlo?"
+image_alt: "Síndrome de Burnout en programadores ¿Cómo afecta y cómo afrontarlo?"
 cluster: "desarrollo-profesional"
 status: "published"
 
@@ -15,7 +15,7 @@ status: "published"
 
 ![tristeza-intensamente-burnout-programadores-síndrome](https://i.pinimg.com/originals/1a/e9/e9/1ae9e93623ff5731791fc38bce89655d.gif)
 
-La respuesta a esto es sencilla, puedes estar sufriendo el Síndrome del Burnout, pero te preguntarás ¿qué es eso?
+La respuesta a esto es sencilla, puedes estar sufriendo el Síndrome de Burnout, pero te preguntarás ¿qué es eso?
 
 Este síndrome no es más que un colapso físico y emocional que sufren las personas debido a exceso de carga laboral y de estrés.  Es un síndrome que no solo te afecta a nivel laboral, sino que también te satura a nivel personal, te hace dudar de ti mismo, tener problemas con tu autoestima y sin duda, te genera un sentimiento de insatisfacción increíble y lo peor es que, nada te calma, ¿te sientes identificado?
 
@@ -76,7 +76,7 @@ También es importante resaltar que, según las estadísticas los profesionales 
 5. Nunca descartes la posibilidad de cambiar de proyecto, a veces tenemos que sentarnos a pensar y entender que es lo que verdaderamente queremos, aquí es importante hacernos preguntas como: ¿De verdad me gusta este proyecto, qué me motiva a hacerlo (además del dinero, por supuesto)?, no todo es dinero y muchas veces es bueno apostar a nuestra salud mental.
 6. Haz tareas rutinarias y tenlas planificadas, ya que el realizar cosas tan sencillas como probar el código y documentación de partes del código, te harán sentir más útil y productivo en tu día.
 
-No olvides que tu salud mental es importante querido dev, esperamos que todas estas herramientas te sean bastante útiles y que no vuelvas a sufrir del Síndrome del Burnout más nunca.
+No olvides que tu salud mental es importante querido dev, esperamos que todas estas herramientas te sean bastante útiles y que no vuelvas a sufrir del Síndrome de Burnout más nunca.
 
 Recuerda…
 
