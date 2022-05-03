@@ -15,13 +15,13 @@ status: "published"
 
 ![tristeza-intensamente-burnout-programadores-síndrome](https://i.pinimg.com/originals/1a/e9/e9/1ae9e93623ff5731791fc38bce89655d.gif)
 
-La respuesta  a esto es sencilla, puedes estar sufriendo el Síndrome del Burnout, pero te preguntarás ¿qué es eso?
+La respuesta a esto es sencilla, puedes estar sufriendo el Síndrome del Burnout, pero te preguntarás ¿qué es eso?
 
 Este síndrome no es más que un colapso físico y emocional que sufren las personas debido a exceso de carga laboral y de estrés.  Es un síndrome que no solo te afecta a nivel laboral, sino que también te satura a nivel personal, te hace dudar de ti mismo, tener problemas con tu autoestima y sin duda, te genera un sentimiento de insatisfacción increíble y lo peor es que, nada te calma, ¿te sientes identificado?
 
 En el caso de los programadores, el Síndrome de Burnout es muy común, ya que, suelen trabajar homeoffice, por lo que se sienten solos, pasan largas jornadas laborales frente a las computadoras, inclusive de madrugada y además, suelen tener sobre sus hombros un gran peso, pues muchas de las solicitudes que les hacen tienen gran complejidad y son de mucha importancia para las empresas a las cuales les trabajan.
 
-**Ahora bien ¿Cómo puedes identificar si estás sufriendo de este síndrome o no?**
+## Ahora bien ¿Cómo puedes identificar si estás sufriendo de este síndrome o no?
 
 ![bob-esponja-preocupado-burnout](https://i.pinimg.com/originals/1f/3c/d9/1f3cd9860a956a1e4a265b780d3963a9.gif)
 
@@ -35,13 +35,12 @@ A continuación, vamos a dejarte algunos de los síntomas más comunes, para que
 
 ![enfado-molesto-intensamente](https://c.tenor.com/lTe5PjawzRAAAAAC/furia-intensamente.gif)
 
-1. **Aislamiento y soledad:** Te has acostumbrado tanto a trabajar desde casa, que no buscas compartir con otras personas, pero en el fondo te sientes solo y triste.
-2. **Dejas de disfrutar de las cosas que solías amar:** Nada de lo que te gusta hacer te levanta el ánimo, sales a disfrutar de esa buena caminata que tanto te gustaba, conoces sitios nuevos, vas a realizar tu deporte favorito y te sigues sintiendo desanimado.
-3. **Piensas en el inicio de la semana y te genera ansiedad:** Con tan solo pensar en lo que tienes que hacer en la semana próxima ya quieres salir corriendo, te sientes agotado y muy agobiado mentalmente. Esta señal indica que el Síndrome de Burnout está muy arraigado a tu vida ¡Ten cuidado!
+6. **Aislamiento y soledad:** Te has acostumbrado tanto a trabajar desde casa, que no buscas compartir con otras personas, pero en el fondo te sientes solo y triste.
+7. **Dejas de disfrutar de las cosas que solías amar:** Nada de lo que te gusta hacer te levanta el ánimo, sales a disfrutar de esa buena caminata que tanto te gustaba, conoces sitios nuevos, vas a realizar tu deporte favorito y te sigues sintiendo desanimado.
+8. **Piensas en el inicio de la semana y te genera ansiedad:** Con tan solo pensar en lo que tienes que hacer en la semana próxima ya quieres salir corriendo, te sientes agotado y muy agobiado mentalmente. Esta señal indica que el Síndrome de Burnout está muy arraigado a tu vida ¡Ten cuidado!
 
 Luego de leer esta lista ¿Te sentiste identificado con algunos o con todos estos síntomas? Efectivamente, sufres del Síndrome de Burnout y ahora la pregunta del millón es…
-
-**¿Cómo puedo combatirlo?**
+## ¿Cómo puedo combatirlo?
 
 ![intensamente-alegría-emociones](https://thumbs.gfycat.com/HarmfulActiveHog-size_restricted.gif)
 
@@ -58,15 +57,15 @@ No es tarea sencilla, pero tampoco imposible, en principio lo primero que debe h
 
 ![ejercicios-winnie-pooh](https://c.tenor.com/HOeD2HXNGZwAAAAC/ejercicio-excercise.gif)
 
-1. Duermen tus 8 horas diarias, existen mitos que dicen que los buenos programadores no descansan, no te dejes llevar por eso ¡Cuida tu salud mental, descansar es vital!
-2. Sal con tus amigos y familia, no pierdas conexión con ellos, una salida los viernes y/o fines de semana te reconfortará.
-3. Realizar pausas saludables en tu lugar de trabajo y en la rutina diaria. Párate de la mesa, aléjate de la PC, estírate, camina, conversa con alguien y verás como te sientes más aliviado.
-4. Reforzar la autoestima con algo que desees, comprarte algo que necesites, cómete ese plato que tanto deseas ¡No todo es pagar cuentas!
-5. No dejes que el [Síndrome del Impostor](https://4geeksacademy.com/es/desarrollo-profesional/sindrome-del-impostor) te abrume, recuerda las capacidades que tienes como programador y como persona ¡Tú puedes!
+9. Duermen tus 8 horas diarias, existen mitos que dicen que los buenos programadores no descansan, no te dejes llevar por eso ¡Cuida tu salud mental, descansar es vital!
+10. Sal con tus amigos y familia, no pierdas conexión con ellos, una salida los viernes y/o fines de semana te reconfortará.
+11. Realizar pausas saludables en tu lugar de trabajo y en la rutina diaria. Párate de la mesa, aléjate de la PC, estírate, camina, conversa con alguien y verás como te sientes más aliviado.
+12. Reforzar la autoestima con algo que desees, comprarte algo que necesites, cómete ese plato que tanto deseas ¡No todo es pagar cuentas!
+13. No dejes que el [Síndrome del Impostor](https://4geeksacademy.com/es/desarrollo-profesional/sindrome-del-impostor) te abrume, recuerda las capacidades que tienes como programador y como persona ¡Tú puedes!
 
 También es importante resaltar que, según las estadísticas los profesionales que más sufren del Síndrome de Burnout son los programadores, así que, además de lo dicho anteriormente, también queremos dejarte unos consejos especiales para ti.
 
-**¿Cómo un programador puede combatir este síndrome de una forma más efectiva?**
+## ¿Cómo un programador puede combatir este síndrome de una forma más efectiva? 
 
 ![bob-esponja-programador-programación-caos](https://c.tenor.com/tWD3GjJcoHgAAAAC/spongebob-computer.gif)
 
