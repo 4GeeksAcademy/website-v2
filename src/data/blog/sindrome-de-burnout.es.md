@@ -1,7 +1,7 @@
 ---
 author: "4GeeksAcademy"
 date: "2022-05-03T12:00:12+00:00"
-excerpt: "El Síndrome de Burnout es una realidad y afecta mucho a los profesionales, en especial a los programadores, revisa esta entrada y verás cómo identificarlo y como combatirlo."
+excerpt: "El Síndrome de Burnout es una realidad y afecta mucho a los profesionales, en especial a los programadores, lee este blog y verás cómo identificarlo y combatirlo."
 slug: "sindrome-del-burnout"
 template: "post"
 title: "Síndrome de Burnout en programadores ¿Cómo afecta y cómo afrontarlo?"
