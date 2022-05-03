@@ -12,7 +12,7 @@ status: "published"
 
 ---
 
-#Juegos gratis para practicar tus habilidades de programación
+# Juegos gratis para practicar tus habilidades de programación
 
 ![coding games.jpg](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/5b80f239-38e7-4f47-b04c-566e01690a5f/coding_games.jpg)
 
