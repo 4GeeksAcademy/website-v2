@@ -4,11 +4,12 @@
 
 partners:
   tagline: "WHO IS HIRING OUR STUDENTS"
-  sub_heading: "Thanks to our growing list of partners, we have local and international job offers for our 
-    students on a daily basis. Together with our GeekFORCE (Career Support) service, we are happy to have 
-    ~86% of our students hired within 100 days or less from Graduation Day. Companies that hire our students 
-    are impressed with their skills. “I'm impressed with the level of understanding 4Geeks students have, my 
-    hire ended becoming team leader” - CodeNinjas"
+  sub_heading: |
+    Thanks to our growing list of partners, we have local and international job offers for our
+    students on a daily basis. Together with our GeekFORCE (Career Support) service, we are happy to have
+    ~86% of our students hired within 100 days or less from Graduation Day. Companies that hire our students
+    are impressed with their skills. "I'm impressed with the level of understanding 4Geeks students have, my
+    hire ended becoming team leader" - CodeNinjas
   footer_tagline: "438 COMPANIES"
   footer_button: "Review our latest hirings"
   footer_link: "/partners"
@@ -18,6 +19,7 @@ partners:
       #courses: ["machine-learning"]
       image: "../../../../static/images/partner/microsoft.png"
       featured: true
+      link: "https://microsoft.com"
     - name: "Google Developers"
       image: "../../../../static/images/coding/google-developers.png"
       featured: true
@@ -57,6 +59,11 @@ partners:
       # locations: ["madrid-spain"]
       image: "../../../../static/images/partner/Neo9.png"
       featured: false
+    - name: "Jooble"
+      locations: ["madrid-spain"]
+      image: "../../../../static/images/partner/jooble.png"
+      featured: false
+      link: "https://es.jooble.org"
     - name: "KPMG"
       # locations: ["madrid-spain"]
       image: "../../../../static/images/partner/kpmg-logo1.png"
@@ -199,7 +206,6 @@ financials:
       image: "../../../../static/images/ascent_logo.jpg"
       featured: false
 
-
 work_together:
   title: "How to work together"
   description: "4Geeks Academy is an awarded global coding academy that will allow you to focus in one or more of the following areas:"
@@ -243,11 +249,12 @@ benefits_and_charts:
     - Establish your brand as a strong leader in the tech industry.
     - Community Building.
 
-  charts: 
+  charts:
     title: "The numbers"
     list:
       - icon: "chart-62"
-        description: "62% of executives “believe they will need to retrain or replace more than a quarter of their workforce between now and 2023 due to advancing automation and digitization. A 2018 study by McKinsey report."
+        description: |
+          62% of executives "believe they will need to retrain or replace more than a quarter of their workforce between now and 2023 due to advancing automation and digitization." A 2018 study by McKinsey report.
       - icon: "job"
         description: "According to a 2016 study by the Society for Human Resource Management, it costs an average of $4,129 to hire a new employee, and it takes an average of 42 days to find a new hire."
       - icon: "notes-2"
@@ -257,7 +264,8 @@ benefits_and_charts:
 
 partners_in_education:
   title: "Partners in education"
-  description : "At 4Geeks Academy we are committed to delivering a high-quality programming training program, supported with a system of unlimited mentorships, to help reduce the gap between job opportunities and talent with tools created to help take on those challenges.
+  description:
+    "At 4Geeks Academy we are committed to delivering a high-quality programming training program, supported with a system of unlimited mentorships, to help reduce the gap between job opportunities and talent with tools created to help take on those challenges.
 
     To achieve this we have partnered with amazing educational institutions that help us reach these goals. Together we have managed to graduate over 300 students from all over the globe and continue to strive to graduate more students."
   image_list:

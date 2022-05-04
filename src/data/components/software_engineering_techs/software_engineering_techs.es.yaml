@@ -1,15 +1,15 @@
 title: "¿Por qué Java?"
-sub_title: "
-● Java es el lenguaje principal para desarrollar aplicaciones de software modernas en casi todas los las empresas
-\n
-● Los ingenieros de software de Java obtienen un 30% mas de ingresos
-\n
-● Hay más vacantes en Java que en cualquier otro idioma
-\n
-● Java es el idioma más utilizado del mundo
-\n
-Según “indeed“ las ofertas de trabajo en septiembre del 2020 hay alrededor de 31.000 puestos de trabajo para desarrolladores de Java
-"
+sub_title: |
+  ● Java es el lenguaje principal para desarrollar aplicaciones de software modernas en casi todas los las empresas
+  \n
+  ● Los ingenieros de software de Java obtienen un 30% mas de ingresos
+  \n
+  ● Hay más vacantes en Java que en cualquier otro idioma
+  \n
+  ● Java es el idioma más utilizado del mundo
+  \n
+  Según "indeed" las ofertas de trabajo en septiembre del 2020 hay alrededor de 31.000 puestos de trabajo para desarrolladores de Java
+
 
 image: "../../../../static/images/techs/java-tech.png"
 tech_list: 

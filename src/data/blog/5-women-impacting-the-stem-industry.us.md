@@ -2,7 +2,7 @@
 author: "4GeeksAcademy"
 date: "2022-02-10T20:44:51+00:00"
 excerpt: "In this blogpost we will be talking about today’s impact of women in the STEM industry, their personal stories, areas of expertise and achievements."
-slug: "5-Women-impacting-the-STEM-industry!"
+slug: "5-women-impacting-the-stem-industry"
 title: "5 Women impacting the STEM industry!"
 image: "https://breathecode.herokuapp.com/v1/media/file/diana-ma-png?"
 image_alt: ""

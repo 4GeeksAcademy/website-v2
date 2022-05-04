@@ -1,9 +1,6 @@
-import React from 'react';
-import {storiesOf} from '@storybook/react';
+import React from "react";
+import { storiesOf } from "@storybook/react";
 
-import Locations from '.';
+import Locations from ".";
 
-storiesOf('Locations', module)
-    .add('Default', () => (
-        <Locations />
-    ));
+storiesOf("Locations", module).add("Default", () => <Locations />);

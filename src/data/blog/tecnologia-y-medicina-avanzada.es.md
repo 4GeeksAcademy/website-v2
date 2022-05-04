@@ -2,7 +2,7 @@
 author: "4GeeksAcademy"
 date: "2021-11-03T12:18:12+00:00"
 excerpt: "En los últimos años, la medicina y la tecnología han formado una alianza increíble y estratégica que ha revolucionado el mundo, te invitamos a conocer cómo"
-slug: "tecnología-y-medicina-avanzada"
+slug: "tecnologia-y-medicina-avanzada"
 template: "post"
 title: "Tecnología y medicina avanzada: Una alianza estratégica"
 image: "https://drive.google.com/uc?export=view&id=1tSU89FvlbIvGr8ChE9X6t9_BmsltQIjB"

@@ -1,0 +1,299 @@
+meta_info:
+  slug: united-way # <--- URL 4geeksacademy.com/us/landing/example
+
+  # This will show on social media when shared
+  title: "United Way"
+  description: "United Way Miami"
+  visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
+  # This will show on social media when shared
+  image: "public/images/landing/uwm_pantone_2021_2.png"
+  keywords: "Coding Classes, Learn to code, 4Geeks Academy"
+
+  template: "landing_noform" # <--- choose your landing template
+  redirects: # <--- URL redirections to avoid 404 errors
+    ["/landing/united-way"]
+
+  # Set a particular course or location to the landing page
+  # this UTM fields will be also included in the CRM contact
+  utm_course: ["full-stack"]
+  utm_location: downtown-miami
+  automation: strong # comma separated, "soft" is the default value
+  tag: request_more_info # comma separated, "request_more_info" is the default value
+
+navbar:
+  buttonText: "Apply now"
+  buttonUrl: "#bottom" # url accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
+  logoUrl: "#"
+
+form:
+  # posible fields: "first_name", "last_name", "full_name", "phone", "email"
+  # always the first_name, email and phone will be mandatory if added.
+  fields: ["email"]
+  heading: "Get more information, and change your life!"
+  motivation: "ENROLL NOW and change your life."
+  button_label: Get more information
+  redirect: null #you can redirect to another url or entirely diffrent website
+
+header_data:
+  tagline: "Take control of your future. Learn a new skill"
+  tagline_color: "black"
+  sub_heading: "Receive high-quality coding education with no upfront costs"
+  # image: "../../../static/images/landing/uwm_pantone_2021_2.png"
+  image_filter: brightness(0.3)
+  partner_logo_url: "../../../static/images/landing/uwm_pantone_2021_2.png" # optional
+  # background_image: "../../../static/images/Happy-People-Landing-4Geeks-ES.jpg" # optional
+  background: "white" #background property, it can be a hex color
+  right_image: "../../../static/images/landing/header_united_way.png"
+  # right_image: 
+  #   style: '{ "backgroundSize": "contain" }'
+  #   src: "/images/landing/header_united_way.png"
+
+features:
+  marginTop: 0px #<-- separation between tagline and the bullets
+  text: |
+    <p>United Way Miami Workforce Project is an exciting new coding program made possible by the collaboration of United Way Miami, Social Financing and 4Geeks that allows you to get the top education to land a new to land a job in the field of technology through Income Sharing Agreements.</p>
+    <hr style="margin: 15px 0;">
+    <span style="background: rgb(255, 183, 24);font-weight: bold;">Now open and accepting applications!</span>
+    <p>Applications will be open until May 31st, 2022</p>
+    <p>Only 100 Open spots available</p>
+  styles: '{ "color": "gray", "fontWeight":"500" }'
+  button:
+      text: "APPLY NOW"
+      color: "white"
+      path: "https://marketing892162.typeform.com/to/ti4UAUrh"
+      background: "blue"
+      hover_color: "white"
+
+follow_bar:
+  position: "top" # top, bottom, hidden
+  content:
+    text: "Pay when you get a Job. No Upfront Payment"
+    text_mobile: "Pay when you get a Job. No Upfront Payment"
+    # devices:   XL      LG    MD      SM    XS
+    font_size: ["25px", "25px", "25px", "20px", "18px"]
+  button:
+    text: "Apply Now"
+    path: "https://marketing892162.typeform.com/to/ti4UAUrh"
+  phone:
+    text: "Call "
+
+badges:
+  position: 6
+  heading: "4Geeks Academy has awards and recognitions that validate it's excellence"
+
+components:
+  - name: how-it-works
+    position: 3
+    background: "veryLightBlue2"
+    layout: multi_column
+    swipable: True
+    heading:
+      text: "How it Works"
+      font_size: ["30px", "30px", "30px", "30px", "30px"]
+    sub_heading:
+      text: |
+        <strong style="font-weight: bold;">61% of HR proffesionals</strong> reported that finding
+        qualified developers would present their biggest recruitment challenge of 2021. Avg job offers attract 250 CV'S.
+        <strong style="font-weight: bold;">Only 5 of them end up in an interview.</strong>
+      font_size: ["16px", "16px", "16px", "16px", "16px"]
+      style: '{ "textAlign": "center", "width": "60%" }'
+    columns:
+      - image:
+          style: '{ "backgroundSize": "contain", "height": "130px" }'
+          src: "/images/landing/graduated-icon.png"
+        content: 
+          text: "Every Miami-Dade Resident is invited to apply. Need to be a U.S. Citizen or Consideration of Deferred Action for Childhood Arrivals (DACA). The team will approve your application upon confirmation of meeting the requirements."
+          font_size: ["16px"]
+        size: [3,3,3,3]
+      - image:
+          style: '{ "backgroundSize": "contain", "height": "130px" }'
+          src: "/images/landing/pc-icon.png"
+        content: 
+          text: "4Geeks will deliver the Full-Stack Software Dev Programs and we'll work together to help you get a better job after graduation"
+          font_size: ["16px"]
+        size: [3,3,3,3]
+      - image:
+          style: '{ "backgroundSize": "contain", "height": "130px" }'
+          src: "/images/landing/cicle-icon.png"
+        content: 
+          text: "Student will only need to pay after getting a job where you make more than $35,000 annually!"
+          font_size: ["16px"]
+        size: [3,3,3,3]
+
+  - name: elegibility
+    position: 3
+    layout: multi_column
+    swipable: True
+    heading:
+      text: "Elegibility in this program"
+      font_size: ["30px", "30px", "30px", "30px", "30px"]
+    content:
+      text: | 
+        learn more about <a style="color: rgb(0, 160, 218); cursor:pointer;">eligibility conditions</a> and apply
+      font_size: ["16px", "16px", "16px", "16px", "16px"]
+      path: "https://marketing892162.typeform.com/to/ti4UAUrh"
+    sub_heading:
+      text: |
+        <strong style="font-weight: bold;"> Every Miami Resident is invited to apply </strong>. You also need to be a Citizen, permanent resident or DACA. You should not have accounts in collection greater than $5k. Preference will be given to one of these groups:
+      font_size: ["16px", "16px", "16px", "16px", "16px"]
+    button:
+      text: "APPLY NOW"
+      color: "white"
+      hover_color: "white"
+      path: "https://marketing892162.typeform.com/to/ti4UAUrh"
+      background: "black"
+    columns:
+      - image:
+          style: '{ "backgroundSize": "cover", "minHeight": "230px", "borderRadius": "80px" }'
+          src: "/images/landing/of_color.png"
+        content: 
+          text: "LOW-INCOME PEOPLE <br> OF COLOR"
+          style: '{ "fontWeight": "700" }'
+          font_size: ["16px"]
+        size: [3,3,3,3]
+      - image:
+          style: '{ "backgroundSize": "cover", "borderRadius": "80px" }'
+          src: "/images/landing/veteran2.png"
+        content: 
+          text: "LOW-INCOME <br> VETERANS"
+          style: '{ "fontWeight": "700" }'
+          font_size: ["16px"]
+        size: [3,3,3,3]
+      - image:
+          style: '{ "backgroundSize": "cover", "borderRadius": "80px" }'
+          src: "/images/landing/mom-household.png"
+        content: 
+          text: "LOW-INCOME SINGLE FEMALE HEADS OF HOUSE HOLD"
+          style: '{ "fontWeight": "700" }'
+          font_size: ["16px"]
+        size: [3,3,3,3]
+
+  - name: coding
+    position: 4
+    layout: two_column_right
+    proportions: [6, 6]
+    background: "rgba(255, 183, 24, 0.2)"
+    image:
+      style: '{ "backgroundSize": "contain" }'
+      src: "/images/landing/group_194.png"
+    heading:
+      text: "Why Coding?"
+      font_size: ["40px", "40px", "40px", "40px", "40px"]
+    sub_heading:
+      text: "Software development is one of the more sought-after professionals out there. Learning to code will give you access to:"
+      font_size: ["16px", "16px", "16px", "16px", "16px"]
+    content:
+      font_size: ["16px"]
+      text: |
+        <h4><strong style="font-weight: bold;"> > MORE JOB OPPORTUNITIES </strong></h4>
+        <p>The demand for programmers will keep increasing over the decade.</p>
+        <br>
+        <h4><strong style="font-weight: bold;"> > HIGHER INCOME </strong></h4>
+        <p>Careers that involve coding skills tend to come with above-average salaries.</p>
+        <br>
+        <h4><strong style="font-weight: bold;"> > CAREER FLEXIBILITY </strong></h4>
+        <p>Coding makes you a more flexible job candidate in a rapidly-shifting digital economy.</p>
+  - name: geeksinfo
+    position: 7
+    layout: geeksInfo
+
+  - name: why4geeks
+    position: 5
+    layout: two_column_left
+    proportions: [5, 7]
+    image:
+      style: '{ "backgroundSize": "contain" }'
+      src: "/images/landing/group_4.png"
+    heading:
+      text: "Why 4Geeks Academy?"
+      font_size: ["30px", "30px", "30px", "30px", "30px"]
+    sub_heading:
+      text: "A Coding bootcamp provide great software development education to start a coding career and 4Geeks Academy is the place where developers grow and thrive. We are specialists of code."
+      font_size: ["16px", "16px", "16px", "16px", "16px"]
+    content:
+      font_size: ["16px"]
+      text: |
+        <p>4Geeks Academy was born in 2015. Today 4Geeks has +7 campus spread over the United States, Latin America and Europe. We count with +1500 graduates and tons of things to be proud of.</p>
+        <br>
+        <p>Wile Coding bootcamps usually are very intensive experiences that would be difficult to maintain while raising a child or while working a full-time job.</p>
+        <br>
+        <p><span style="background: rgb(255, 183, 24);font-weight: bold;">Our program at 4Geeks Academy</span> is more flexible and doable for anyone, even for moms or any other working person.</p>
+        <br>
+        <p>This <strong style="font-weight: bold;font-size:20px;">part-time 16-week</strong> syllabus is made to teach you both: 
+        The most wanted and the highest-paid technologies today.</p>
+        <br>
+        <h2><strong style="font-weight: bold;font-size:20px;color:black;">Let's break down obstacles to a new career</strong></h2>
+        <h2><strong style="font-weight: bold;font-size:20px;color:black;">Let's tackle together the tech talent imbalance</strong></h2>      
+  - name: pay
+    position: 8
+    background: "veryLightBlue2"
+    layout: two_column_right
+    proportions: [6, 6]
+    image:
+      style: '{ "backgroundSize": "contain" }'
+      src: "/static/images/staff/luisa.png"
+    video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
+    heading:
+      text: "Pay back when you get a job!"
+      font_size: ["30px", "30px", "30px", "30px", "30px"]
+    sub_heading:
+      text: "There is no payment upfront. Actually, payments will start only after you get a job where you can make more than $35,000 annually."
+      font_size: ["18px", "18px", "18px", "18px", "18px"]
+    button:
+      text: "Review Conditions"
+      color: null
+      path: "https://marketing892162.typeform.com/to/ti4UAUrh"
+    content:
+      text: |
+        <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">1. Enroll and join the program</strong></h2>
+        <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">2. Get the skills of a software Developer</strong></h2>
+        <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">3. Graduate and complete your projects</strong></h2>
+        <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">4. Get a Job</strong></h2>
+        <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">5. Pay back for the program</strong></h2>
+      font_size: ["16px"]
+
+  - name: testimonials
+    position: 9
+    layout: testimonials_new
+    # filter_indexes: [6,7,8]
+    filter_indexes: ['azu-bota','nai-kali','cha-fabr']
+      # - "azu-bota"
+      # - "nai-kali"
+      # - "cha-fabr"
+    # ["azu-bota","nai-kali","cha-fabr"]
+
+  - name: better-future
+    position: 10
+    layout: two_column_right
+    proportions: [6, 6]
+    background: "#F5F5F5"
+    image:
+      style: '{ "backgroundSize": "contain" }'
+      src: "/images/landing/temp4.png"
+    heading:
+      text: "Ready to start your journey to a better future?"
+      font_size: ["40px", "40px", "40px", "40px", "40px"]
+    content:
+      text: "A total of 100 students will be chosen for phase 1. We are now accepting applications."
+      font_size: ["16px"]
+    button:
+      text: "APPLY NOW"
+      color: "white"
+      background: "blue"
+      hover_color: "white"
+      path: "https://marketing892162.typeform.com/to/ti4UAUrh"
+
+  - name: united
+    position: 11
+    layout: two_column_right
+    proportions: [6, 6]
+    background: "veryLightBlue2"
+    image:
+      style: '{ "backgroundSize": "contain", "maxHeight": "270px" }'
+      src: "/images/landing/united-way-two.png"
+    heading:
+      text: "Brought to you by United Way Miami + Social Finance + 4Geeks Academy"
+      font_size: ["40px", "40px", "40px", "40px", "40px"]
+    content:
+      text: "United Way Miami advances the common good in communities across Miami-Dade. Focused on the education, financial stability and health - the building blocks for a good quality of life."
+      font_size: ["16px"]

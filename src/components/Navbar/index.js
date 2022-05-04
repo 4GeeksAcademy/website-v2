@@ -1,51 +1,50 @@
-import React, {useEffect, useState} from 'react';
-import styled, {css} from 'styled-components';
-import {useStaticQuery, graphql} from 'gatsby';
-import {Break} from '../Responsive';
-import {SessionContext} from '../../session';
-import ChooseProgram from '../ChooseProgram'
-import Card from '../Card'
-import {Colors, Button, Anchor, Link} from '../Styling';
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import React, { useEffect, useState } from "react";
+import styled, { css } from "styled-components";
+import { useStaticQuery, graphql } from "gatsby";
+import { Break } from "../Responsive";
+import { SessionContext } from "../../session";
+import ChooseProgram from "../ChooseProgram";
+import Card from "../Card";
+import { Colors, Button, Anchor, Link } from "../Styling";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
-// const MegaMenuContainer = 
+// const MegaMenuContainer =
 
 export const NavBar = styled.nav`
-    background-color: ${props => props.open ? "white" : null};
-    align-items: center;
-    height: 55px;
-    z-index: 999;
-    @media ${Break.sm}{
-      height: ${props => props.open ? "100vh" : null};
-      position: fixed;
-      width: 100%;
-    }
-    @media ${Break.xs}{
-      height: ${props => props.open ? "100vh" : null};
-      position: fixed;
-      width: 100%;
-    }
-`
+  background-color: ${(props) => (props.open ? "white" : null)};
+  align-items: center;
+  height: 55px;
+  z-index: 999;
+  @media ${Break.sm} {
+    height: ${(props) => (props.open ? "100vh" : null)};
+    position: fixed;
+    width: 100%;
+  }
+  @media ${Break.xs} {
+    height: ${(props) => (props.open ? "100vh" : null)};
+    position: fixed;
+    width: 100%;
+  }
+`;
 export const Nav = styled.ul`
-    display: flex;
-    
-`
+  display: flex;
+`;
 export const NavItem = styled.li`
-    text-transform: uppercase;
-    margin: 0 .5rem;
-    text-align: center;
-    font-family: lato, sans-serif;
-    font-size: 12px;
-    @media ${Break.md}{
-      font-size: ${props => props.fontSize || "10px"};
-    }
-    @media ${Break.sm}{
-      font-size: 16px;
-    }
-    @media ${Break.xs}{
-      font-size: 16px;
-    }
-`
+  text-transform: uppercase;
+  margin: 0 0.5rem;
+  text-align: center;
+  font-family: lato, sans-serif;
+  font-size: 12px;
+  @media ${Break.md} {
+    font-size: ${(props) => props.fontSize || "10px"};
+  }
+  @media ${Break.sm} {
+    font-size: 16px;
+  }
+  @media ${Break.xs} {
+    font-size: 16px;
+  }
+`;
 
 const StyledBurger = styled.div`
   width: 2rem;
@@ -58,19 +57,19 @@ const StyledBurger = styled.div`
   div {
     width: 2rem;
     height: 0.25rem;
-    background-color: ${({open}) => open ? '#ccc' : '#333'};
+    background-color: ${({ open }) => (open ? "#ccc" : "#333")};
     border-radius: 10px;
     transform-origin: 1px;
     transition: all 0.3s linear;
     &:nth-child(1) {
-      transform: ${({open}) => open ? 'rotate(45deg)' : 'rotate(0)'};
+      transform: ${({ open }) => (open ? "rotate(45deg)" : "rotate(0)")};
     }
     &:nth-child(2) {
-      transform: ${({open}) => open ? 'translateX(100%)' : 'translateX(0)'};
-      opacity: ${({open}) => open ? 0 : 1};
+      transform: ${({ open }) => (open ? "translateX(100%)" : "translateX(0)")};
+      opacity: ${({ open }) => (open ? 0 : 1)};
     }
     &:nth-child(3) {
-      transform: ${({open}) => open ? 'rotate(-45deg)' : 'rotate(0)'};
+      transform: ${({ open }) => (open ? "rotate(-45deg)" : "rotate(0)")};
     }
   }
   @media ${Break.sm} {
@@ -86,30 +85,31 @@ const StyledBurger = styled.div`
   div {
     width: 2rem;
     height: 0.25rem;
-    background-color: ${({open}) => open ? '#ccc' : '#333'};
+    background-color: ${({ open }) => (open ? "#ccc" : "#333")};
     border-radius: 10px;
     transform-origin: 1px;
     transition: all 0.3s linear;
     &:nth-child(1) {
-      transform: ${({open}) => open ? 'rotate(45deg)' : 'rotate(0)'};
+      transform: ${({ open }) => (open ? "rotate(45deg)" : "rotate(0)")};
     }
     &:nth-child(2) {
-      transform: ${({open}) => open ? 'translateX(100%)' : 'translateX(0)'};
-      opacity: ${({open}) => open ? 0 : 1};
+      transform: ${({ open }) => (open ? "translateX(100%)" : "translateX(0)")};
+      opacity: ${({ open }) => (open ? 0 : 1)};
     }
     &:nth-child(3) {
-      transform: ${({open}) => open ? 'rotate(-45deg)' : 'rotate(0)'};
+      transform: ${({ open }) => (open ? "rotate(-45deg)" : "rotate(0)")};
     }
   }
 `;
 
 export const Burger = (props) => {
-  const {session} = React.useContext(SessionContext);
-  const [open, setOpen] = React.useState(false)
-  const handleToggle = () => setOpen(!open)
+  const { session } = React.useContext(SessionContext);
+  const [open, setOpen] = React.useState(false);
+  const handleToggle = () => setOpen(!open);
 
   let _btnInfo = {};
-  if (session && session.location) _btnInfo = {...props.button, ...session.location.button};
+  if (session && session.location)
+    _btnInfo = { ...props.button, ...session.location.button };
 
   return (
     <NavBar open={open}>
@@ -118,25 +118,32 @@ export const Burger = (props) => {
         <div />
         <div />
       </StyledBurger>
-      <RightNav onLocationChange={(slug) => props.onLocationChange(slug)} lang={props.lang} open={open} onToggle={handleToggle} menu={props.menu} button={_btnInfo} />
+      <RightNav
+        onLocationChange={(slug) => props.onLocationChange(slug)}
+        lang={props.lang}
+        open={open}
+        onToggle={handleToggle}
+        menu={props.menu}
+        button={_btnInfo}
+      />
     </NavBar>
-  )
-}
+  );
+};
 export default Burger;
 const ButtonStyle = styled.div`
-    display: flex;
-    flex-flow: row nowrap;
-    border: 1px solid;
-    background-color:white;
-    color: black;
-    @media ${Break.sm} {
-      position: fixed;
-      top: 0;
-      right: 0;
-      z-index: 19;
-      transform: ${({open}) => open ? 'translateX(0)' : 'translateX(100%)'};
-    }
-`
+  display: flex;
+  flex-flow: row nowrap;
+  border: 1px solid;
+  background-color: white;
+  color: black;
+  @media ${Break.sm} {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 19;
+    transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
+  }
+`;
 const Div = styled.div`
   display: flex;
   flex-flow: row nowrap;
@@ -144,15 +151,15 @@ const Div = styled.div`
   padding: 0 2rem;
   align-items: center;
   @media ${Break.sm} {
-    display:${({open}) => open ? '' : 'none'};
+    display: ${({ open }) => (open ? "" : "none")};
     flex-flow: column nowrap;
     background-color: white;
     position: sticky;
     z-index: 19;
-    transform: ${({open}) => open ? 'translateX(0)' : 'translateX(100%)'};
+    transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
     top: 0;
     right: 0;
-    height: ${({open}) => open ? '50vh' : '0'};
+    height: ${({ open }) => (open ? "50vh" : "0")};
     width: 100%;
     padding: 0.5rem;
     transition: transform 0.3s ease-in-out;
@@ -161,15 +168,15 @@ const Div = styled.div`
     }
   }
   @media ${Break.xs} {
-    display:${({open}) => open ? '' : 'none'};
+    display: ${({ open }) => (open ? "" : "none")};
     flex-flow: column nowrap;
     background-color: white;
     position: sticky;
     z-index: 19;
-    transform: ${({open}) => open ? 'translateX(0)' : 'translateX(100%)'};
+    transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
     top: 0;
     right: 0;
-    height: ${({open}) => open ? '50vh' : '0'};
+    height: ${({ open }) => (open ? "50vh" : "0")};
     width: 100%;
     padding: 0.5rem;
     transition: transform 0.3s ease-in-out;
@@ -177,7 +184,7 @@ const Div = styled.div`
       color: #fff;
     }
   }
-`
+`;
 const Ul = styled.ul`
   list-style: none;
   display: flex;
@@ -208,19 +215,26 @@ const Ul = styled.ul`
   }
 `;
 
-export const RightNav = ({lang, menu, open, button, onToggle, onLocationChange}) => {
+export const RightNav = ({
+  lang,
+  menu,
+  open,
+  button,
+  onToggle,
+  onLocationChange,
+}) => {
   const data = useStaticQuery(graphql`
     query {
       allChooseProgramYaml {
         edges {
           node {
-            programs{
-                text
-                link
-                location_bc_slug
-                schedule
+            programs {
+              text
+              link
+              location_bc_slug
+              schedule
             }
-            fields{
+            fields {
               lang
             }
             open_button_text
@@ -238,49 +252,76 @@ export const RightNav = ({lang, menu, open, button, onToggle, onLocationChange})
 
           # fixed(width: 75) {
           #   ...GatsbyImageSharpFixed
-          # } 
+          # }
         }
       }
     }
-  `)
-  const content = data.allChooseProgramYaml.edges.find(({node}) => node.fields.lang === lang);
+  `);
+  const content = data.allChooseProgramYaml.edges.find(
+    ({ node }) => node.fields.lang === lang
+  );
   return (
     <Div open={open}>
-      <Link to={'/'}>
+      <Link to={"/"}>
         <GatsbyImage
           // fadeIn={false}
           loading="eager"
-          fixed={data.file.childImageSharp.fixed} 
+          fixed={data.file.childImageSharp.fixed}
           image={getImage(data.file.childImageSharp.gatsbyImageData)}
           alt="4Geeks Logo"
         />
       </Link>
       <Ul open={open}>
-        {menu && menu.map((item, index) =>
-          (item.name === "The Programs" || item.name === "Programas") ?
-            <ChooseProgram
-              key={index}
-              left="15px"
-              programs={content.node.programs}
-              marginTop="-3px"
-              borderRadius="0 .75rem .75rem .75rem"
-              openLabel={content.node.close_button_text}
-              onLocationChange={(slug) => onLocationChange(slug)}
-              closeLabel={content.node.open_button_text}
-              selector={({status, setStatus}) =>
-                !status.toggle ?
-                  <NavItem onClick={() => setStatus({toggle: !status.toggle})}>{item.name}</NavItem>
-                  :
-                  <Card shadow borders="1.25rem 1.25rem 0 0">
-                    <NavItem onClick={() => setStatus({toggle: !status.toggle})}>{item.name}</NavItem>
-                  </Card>
-              }
-            />
-            :
-            <NavItem fs_sm="18px" key={index}><Anchor onClick={onToggle} to={item.link} key={index}>{item.name}</Anchor></NavItem>
-        )}
+        {menu &&
+          menu.map((item, index) =>
+            item.name === "The Programs" || item.name === "Programas" ? (
+              <ChooseProgram
+                key={index}
+                left="15px"
+                programs={content.node.programs}
+                marginTop="-3px"
+                borderRadius="0 .75rem .75rem .75rem"
+                openLabel={content.node.close_button_text}
+                onLocationChange={(slug) => onLocationChange(slug)}
+                closeLabel={content.node.open_button_text}
+                selector={({ status, setStatus }) =>
+                  !status.toggle ? (
+                    <NavItem
+                      onClick={() => setStatus({ toggle: !status.toggle })}
+                    >
+                      {item.name}
+                    </NavItem>
+                  ) : (
+                    <Card shadow borders="1.25rem 1.25rem 0 0">
+                      <NavItem
+                        onClick={() => setStatus({ toggle: !status.toggle })}
+                      >
+                        {item.name}
+                      </NavItem>
+                    </Card>
+                  )
+                }
+              />
+            ) : (
+              <NavItem fs_sm="18px" key={index}>
+                <Anchor onClick={onToggle} to={item.link} key={index}>
+                  {item.name}
+                </Anchor>
+              </NavItem>
+            )
+          )}
       </Ul>
-      <Link onClick={onToggle} to={button.button_link || "#"}><Button m_xs="10px 0" m_sm="10px 0" width="175px" color={Colors.red} textColor={Colors.white}>{button.apply_button_text || "Apply Now"}</Button></Link>
+      <Link onClick={onToggle} to={button.button_link || "#"}>
+        <Button
+          m_xs="10px 0"
+          m_sm="10px 0"
+          width="175px"
+          color={Colors.red}
+          textColor={Colors.white}
+        >
+          {button.apply_button_text || "Apply Now"}
+        </Button>
+      </Link>
     </Div>
-  )
-}
+  );
+};

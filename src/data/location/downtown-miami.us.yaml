@@ -15,6 +15,7 @@ meta_info:
       "/coding-campus/coding-bootcamp-miami",
       "/us/coding-bootcamp-miami",
     ]
+  region: "america"
 
 seo_title: "Coding Bootcamp in Miami"
 header:
@@ -51,11 +52,11 @@ button:
   cohort_more_details_text: "DETAILS"
 
 custom_bar:
-  active: false
-  message: Lorem ipsum dot simet mosd ei
-  button: 
-    label: "Read More"
-    path: "#" #string (can be inline path using #, relative path or absolute path)
+  active: true
+  message: 'Change your life with Code. <a class="customBar-link" href="/us/apply">Apply</a> Upcoming programs: May 28 ML+AI | May 2 Full-Stack!'
+# button: 
+#   label: "Read More"
+#   path: "#" #string (can be inline path using #, relative path or absolute path)
 
 info_box:
   heading: "Find us in Miami"

@@ -56,6 +56,19 @@ join_geeks:
 locations:
   heading: "OUR LOCATIONS"
   sub_heading: "We have carefully chosen our Locations and Campuses. We are bringing you an experience that you will never forget."
+  image: "/images/locations/image-sedes.jpg"
+  choose: "Choose a region"
+  regions:
+    - name: "online"
+      title: "Online"
+      content: "With the online modality you have access to our physical locations worldwide"
+    - name: "america"
+      title: "America"
+      content: "All our campuses in America have face-to-face and online modalities"
+    - name: "europe"
+      title: "Europe"
+      content: "All our campuses in Europe have face-to-face and online modalities"
+
 
 ## ALUMNI SECTION
 alumni_header:

@@ -2,10 +2,11 @@ meta_info:
   slug: "online-bootcamp-programacion"
   title: "Bootcamps de Programación Online"
   description: "Descubre aquí todos los bootcamps de programación online impartidos por 4geeks Academy. ¡Regístrate hoy!"
-  position: 30
+  position: 102
   image: "https://storage.cloud.google.com/4geeks-academy-website/online-es.png"
   keywords: "null"
   redirects: ["/location/remoto", "/remoto", "/es/location/enlinea-remoto"]
+  region: "america"
 
 seo_title: "Coding Bootcamp Remoto"
 header:
@@ -303,8 +304,8 @@ breathecode_location_slug: "online"
 gdpr_compliant: true # do we need to ask for permision?
 in_person_available: false # important to accept in-person applicants
 
-city: "Online"
-name: "Online/Remoto"
+city: "Resto de América"
+name: "Resto de América"
 latitude: "10000.760158"
 longitude: "-800000.200154"
 address: "1801 SW 18th Road"

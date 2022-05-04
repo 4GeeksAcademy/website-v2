@@ -1,11 +1,25 @@
 ## DATA TO CHANGE THE IMAGES IN THE NEWS SECTION IN THE HOME PAGE
 news:
   - name: "Newsweek"
-    location: ["downtown-miami", "online", "madrid-spain", "costa-rica", "caracas-venezuela"]
+    location:
+      [
+        "downtown-miami",
+        "online",
+        "madrid-spain",
+        "costa-rica",
+        "caracas-venezuela",
+      ]
     url: "https://www.newsweek.com/insights/coding-career-and-you-top-coding-schools-2017/4geeks-academy"
     image: "../../../../static/images/news/newsweek_grey.png"
   - name: "CNN Español"
-    location: ["santiago-chile", "online", "downtown-miami", "costa-rica", "caracas-venezuela"]
+    location:
+      [
+        "santiago-chile",
+        "online",
+        "downtown-miami",
+        "costa-rica",
+        "caracas-venezuela",
+      ]
     url: "https://www.facebook.com/4GeeksAcademyCL/videos/492034597993382/"
     image: "../../../../static/images/news/cnn-chile_grey.png"
   - name: "NBC"

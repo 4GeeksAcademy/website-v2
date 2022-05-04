@@ -39,6 +39,8 @@ Las Universidades pueden proveer graduados con una fuerte base computacional per
 
 En respuesta a esta situación, han surgido diversas academias, _bootcamps_ que pueden proveer en menor tiempo estos profesionales quienes estarán más que capacitados para insertarse en el campo laboral.
 
+<call-to-action button_text="Ver programa" button_link="/es/curso-de-programacion-desde-cero" background="rgba(0, 151, 205, 0.15)" title="Impulsa tu carrera, gracias a la programación" text="Te invitamos a impulsa tu carrera, aprendiendo a programar con nuestro Programa Full Stack Developer."></call-to-action>
+
 De acuerdo a un artículo publicado por [La Nación de Argentina](https://www.lanacion.com.ar/1293995-la-argentina-con-deficit-de-ingenieros), Raffaella Temporitti, gerente de Recursos Humanos de IBM, detalla: "También puede observarse que las nuevas generaciones quieren insertarse más rápido en el mercado laboral, ganar un buen salario y hacer una carrera profesional, y por eso comienzan a optar por carreras más cortas y sin tanto requerimiento de estudios".
 
 Según el documento desarrollado por la CAF; en el 2013 “Hacia La Trasformación Digital de América Latina”, existe una recomendación para los países de la región de desarrollar toda una plataforma tecnológica para el desarrollo cultural, social, económico, donde se entiende como una piedra estratégica fundamental el desarrollo de capital humano para hacer crecer la región, lo que esto se traduce en un impacto en línea general Latinoamérica y la **aparici****ó****n de necesidades de desarrolladores para el uso de la tecnolog****í****a** no solamente en el ámbito de empresas privadas sino en el ámbito gubernamental.

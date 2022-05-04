@@ -1,7 +1,7 @@
 meta_info:
   slug: "europe-online-coding-bootcamp"
   title: "Online Coding Bootcamps in Europe"
-  position: 21
+  position: 101
   description: "Discover here all the online coding bootcamps taught by 4geeks Academy. Sign up today!"
   image: ""
   keywords: "null"
@@ -12,6 +12,7 @@ meta_info:
       "/online",
       "/us/location/online-remote",
     ]
+  region: "europe"
 
 seo_title: "Online Coding Bootcamp Europe"
 header:
@@ -256,8 +257,8 @@ breathecode_location_slug: "europe"
 gdpr_compliant: true # do we need to ask for permision?
 in_person_available: false # important to accept in-person applicants
 
-city: "Europe/Online"
-name: "Europe Online/Remote"
+city: "Rest of Europe"
+name: "Rest of Europe"
 phone: "+34 910 86 69 83"
 latitude: "45.764042"
 longitude: "4.835659"

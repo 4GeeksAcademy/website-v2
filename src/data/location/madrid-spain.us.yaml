@@ -6,6 +6,7 @@ meta_info:
   image: ""
   keywords: "Coding Bootcamp, Madrid"
   redirects: ["/location/madrid", "/us/location/madrid-spain"]
+  region: "europe"
 
 seo_title: "Coding Bootcamp Madrid"
 header:
@@ -27,10 +28,10 @@ button:
 
 custom_bar:
   active: true
-  message: 4Geeks offers scholarships and financing tailored to your needs. <a class="customBar-link" href="https://4geeksacademy.com/us/apply/" taget="_blank" rel="noopener noreferrer nofollow">¡Apply now!</a>
-  button: 
-    label: ""
-    path: "#" #string (can be inline path using #, relative path or absolute path)
+  message: 4Geeks offers scholarships and financing tailored to your needs. <a class="customBar-link" href="/us/apply">¡Apply now!</a>
+ #  button: 
+ #    label: ""
+ #   path: "#" #string (can be inline path using #, relative path or absolute path)
 
 badges:
   title: ""

@@ -2,7 +2,7 @@
 author: "4GeeksAcademy"
 date: "2021-10-28T20:44:51+00:00"
 excerpt: "This article is about: What is AI? how much is growing? Market Opportunities"
-slug: "All-you-need-to-know-about-Artificial-Intelligence"
+slug: "all-you-need-to-know-about-artificial-intelligence"
 title: "All you need to know about Artificial Intelligence"
 image: "https://images.unsplash.com/photo-1507146153580-69a1fe6d8aa1?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80"
 image_alt: ""

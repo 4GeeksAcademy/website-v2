@@ -8,6 +8,7 @@ meta_info:
   unlisted: false
   keywords: "Coding Bootcamp Campus Costa Rica"
   redirects: ["/es/location/costa-rica-san-jose"]
+  region: "america"
 
 seo_title: "Aprende a programar en Costa Rica"
 header:
@@ -52,7 +53,7 @@ info_box:
   contact_heading: "Escríbenos al Whatsapp"
   phone: Llámanos +57 300 7282898
   whatsapp: +57 300 7282898
-  whatsapp_link: “https://wa.me/+573007282898”
+  whatsapp_link: "https://wa.me/+573007282898"
   email: latam@4GeeksAcademy.com
 
 images_box:

@@ -1,15 +1,15 @@
 title: "¿Why Java?"
-sub_title: "
-● Java is the main language to develop modern software applications in almost every company
-\n
-● Java Software Engineers make 30% more money
-\n
-● There are more job openings in Java than in any other language
-\n
-● Java is the most used language in the world
-\n
-According to job postings on “indeed” In September 2020 there are about 31.000 job openings for Java developers
-"
+sub_title: |
+  ● Java is the main language to develop modern software applications in almost every company
+  \n
+  ● Java Software Engineers make 30% more money
+  \n
+  ● There are more job openings in Java than in any other language
+  \n
+  ● Java is the most used language in the world
+  \n
+  According to job postings on "indeed" In September 2020 there are about 31.000 job openings for Java developers
+
 
 image: "../../../../static/images/techs/java-tech.png"
 tech_list: 

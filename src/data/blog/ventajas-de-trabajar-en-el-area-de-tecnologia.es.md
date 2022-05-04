@@ -2,7 +2,7 @@
 author: "4GeeksAcademy"
 date: "2021-12-15T12:18:12+00:00"
 excerpt: "Desde el 2020 la vida laboral ha cambiado mucho, en especial, el área de la tecnología se ha visto enormemente beneficiada, acá verás algunas razones."
-slug: "ventajas-de-trabajar-en-tecnología"
+slug: "ventajas-de-trabajar-en-tecnologia"
 template: "post"
 title: "Ventajas de trabajar en el área de tecnología"
 image: "https://drive.google.com/uc?export=view&id=1Wh5H7h2dNx8bUaNXwTZlAm1xN2LBps1n"
@@ -57,5 +57,8 @@ Ahora, más allá de los requerimientos a nivel técnico, también se requieren 
 - Mantenerse actualizado y a la vanguardia en la evolución de los lenguajes de software y de programación.
 
 Como verás, para ser programador se necesitan muchas cualidades, no obstante, al trabajar en el área de la tecnología también tiene sus grandes ventajas, así que, las preguntas que te debes hacerte son: ¿Cumples con esas cualidades? ¿Viste lo ventajoso qué puede ser convertirte en programador? ¿Te atreverías a asumir el reto? Si tu respuesta es afirmativa, entonces ¿Qué esperas para comenzar? Nuestro bootcamp puede ser una excelente opción para ti.
+
+<call-to-action button_text="Ver programa" button_link="/es/curso-de-programacion-desde-cero" background="rgba(0, 151, 205, 0.15)" title="Impulsa tu carrera, gracias a la programación" text="Te invitamos a impulsa tu carrera, aprendiendo a programar con nuestro Programa Full Stack Developer."></call-to-action>
+
 
 ![blog_3.jpg](../../../static/images/blog/blog_3.jpg)

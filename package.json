@@ -19,7 +19,8 @@
     "eslint"
   ],
   "pre-commit": [
-    "test"
+    "test",
+    "format"
   ],
   "scripts": {
     "start": "gatsby develop -H 0.0.0.0 -o",
@@ -33,7 +34,8 @@
     "cy:run": "cypress run",
     "open:e2e": "START_SERVER_AND_TEST_INSECURE=1 start-server-and-test start http://localhost:8000 cy:open",
     "run:e2e": "START_SERVER_AND_TEST_INSECURE=1 start-server-and-test start http://localhost:8000 cy:run",
-    "cy:clean": "cypress cache clear"
+    "cy:clean": "cypress cache clear",
+    "format": "prettier --write ."
   },
   "dependencies": {
     "@loadable/component": "^5.13.2",
@@ -52,6 +54,7 @@
     "gatsby-plugin-offline": "^3.0.2",
     "gatsby-plugin-react-helmet": "^3.1.22",
     "gatsby-plugin-react-svg": "^3.0.0",
+    "gatsby-plugin-remove-console": "^0.0.2",
     "gatsby-plugin-robots-txt": "^1.5.1",
     "gatsby-plugin-rollbar": "^1.1.0",
     "gatsby-plugin-root-import": "^2.0.5",
@@ -107,15 +110,19 @@
     "@storybook/addon-notes": "^5.1.11",
     "@storybook/addons": "^5.1.11",
     "@storybook/react": "^5.1.11",
+    "babel-eslint": "^10.1.0",
     "babel-plugin-styled-components": "^1.10.6",
+    "babel-plugin-transform-remove-console": "^6.9.4",
     "colors": "^1.4.0",
     "cypress": "^8.0.0",
     "cypress-terminal-report": "^3.2.2",
     "dotenv": "^8.2.0",
     "eslint": "^6.3.0",
     "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.14.3",
     "front-matter": "^4.0.2",
     "gatsby-plugin-webpack-size": "^1.0.0",
@@ -123,6 +130,7 @@
     "js-yaml": "^3.13.1",
     "markdown-link-extractor": "^1.3.0",
     "pre-commit": "^1.2.2",
+    "prettier": "^2.6.2",
     "simple-git": "^2.2.0",
     "start-server-and-test": "^1.13.1",
     "yaml": "^1.7.2",

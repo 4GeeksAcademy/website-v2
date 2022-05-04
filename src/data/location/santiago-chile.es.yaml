@@ -12,6 +12,7 @@ meta_info:
       "/es/location/santiago-chile-es",
       "/es/location/santiago-de-chile-es"
     ]
+  region: "america"
 
 seo_title: "Coding Bootcamp en Santiago de Chile"
 header:
@@ -32,11 +33,8 @@ button:
 
 custom_bar:
   active: true
-  message: ¡Este es el bootcamp de programación de <a class="customBar-link" href="https://4geeksacademy.co" taget="_blank" rel="noopener noreferrer nofollow">4Geeks Academy</a> en Santiago de Chile!
-  button: 
-    label: ""
-    path: "#" #string (can be inline path using #, relative path or absolute path)
-
+  message: '¿Quisieras tu primer trabajo como programador? ¡Conviértete en Full Stack Developer y consíguelo!" <a class="customBar-link" href="/es/aplica" taget="_blank" rel="noopener noreferrer nofollow">Postula ahora</a>'
+  
 info_box:
   heading: "Encuéntranos en Santiago de Chile"
   address: "Av. Manquehue Sur 350, Oficina 110, Las Condes, Región Metropolitana, Chile"

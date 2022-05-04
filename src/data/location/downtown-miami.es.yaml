@@ -6,6 +6,7 @@ meta_info:
   image: ""
   keywords: "null"
   redirects: ["/es/location/downtown-miami-usa"]
+  region: "america"
 
 seo_title: "Bootcamp de Programación en Miami"
 header:
@@ -25,7 +26,7 @@ button:
 
 custom_bar:
   active: true
-  message: Potencia tu carrera a través del código. <a class="customBar-link" href="https://4geeksacademy.com/es/aplica" taget="_blank" rel="noopener noreferrer nofollow">Registration</a> Próximas fechas | 03/07 Full-Stack | 03/28 ML + AI!
+  message: 'Potencia tu carrera a través del código. <a class="customBar-link" href="/es/aplica">Aplica</a> Próximas fechas: 03/02 Full-Stack | 03/28 ML + AI!'
 #   button:
 #     label: "Read More"
 #     path: "#" #string (can be inline path using #, relative path or absolute path)
@@ -58,7 +59,8 @@ info_box:
   alt: ""
 images_box:
   heading: "Qué deberías saber acerca de esta ubicacion: "
-  content: "Miami es una de las ciudades de mayor crecimiento tecnólogico, únete al Bootcamp de Programación part-time numero uno de la ciudad y la mayor comunidad de desarrolladores. \n El Career Support y Student Support es de por vida.Estamos ubicados a corta distancia de la estación de metro y a tan solo 5 minutos de Brickell, una de las áreas más activas de la ciudad. Nuestra oficina está abierta 24/7 durante la semana y los sábados hacemos los famosos “Findes de Programación”, donde los estudiantes y otros programadores se juntan a programar con pizzas y tragos! Además, contamos con parqueo gratuito para los estudiantes!"
+  content: |
+    Miami es una de las ciudades de mayor crecimiento tecnólogico, únete al Bootcamp de Programación part-time numero uno de la ciudad y la mayor comunidad de desarrolladores. \n El Career Support y Student Support es de por vida.Estamos ubicados a corta distancia de la estación de metro y a tan solo 5 minutos de Brickell, una de las áreas más activas de la ciudad. Nuestra oficina está abierta 24/7 durante la semana y los sábados hacemos los famosos "Findes de Programación", donde los estudiantes y otros programadores se juntan a programar con pizzas y tragos! Además, contamos con parqueo gratuito para los estudiantes!
   images:
     - path: "../../../static/images/locations/miami-loc.jpg"
       alt: "miami-sunset"

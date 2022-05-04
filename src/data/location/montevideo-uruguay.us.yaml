@@ -8,6 +8,7 @@ meta_info:
   # it will not show up on the applications forms
   unlisted: false
   redirects: ["/us/uruguay", "/uruguay"]
+  region: "america"
 
 seo_title: "Coding Bootcamp Uruguay"
 header:
@@ -58,7 +59,7 @@ info_box:
   contact_heading: "Contacts"
   phone: Llámanos +57 300 7282898
   whatsapp: +57 300 7282898
-  whatsapp_link: “https://wa.me/+573007282898”
+  whatsapp_link: "https://wa.me/+573007282898"
   email: latam@4GeeksAcademy.com
 
 images_box:

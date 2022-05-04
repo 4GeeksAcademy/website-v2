@@ -12,6 +12,7 @@ meta_info:
       "/es/location/impact-hub-caracas",
       "/es/location/caracas-venezuela",
     ]
+  region: "america"
 
 seo_title: "4Geeks Academy Caracas"
 header:
@@ -32,7 +33,7 @@ button:
 
 custom_bar:
   active: true
-  message: <a class="customBar-link" href="https://wa.me/+584242443542" taget="_blank" rel="noopener noreferrer nofollow">Pregunta</a> por los próximos programas de Full-Stack Web Development en Caracas que inician 14/03 y 18/04
+  message: 25% OFF en el mes de la mujer! <a class="customBar-link" href="/es/aplica" taget="_blank" rel="noopener noreferrer nofollow">Aplica</a> y conviértete en Full-Stack Developer.
 #   button:
 #     label: "Read More"
 #     path: "#" #string (can be inline path using #, relative path or absolute path)
@@ -107,7 +108,7 @@ prices:
           heading_two: "A CONVENIR"
           sub_heading: "Pregunta por precios y modalidades de pago"
         content:
-          price: "?"
+          price: "Hasta 12 meses para pagar"
           price_info: "Por favor contáctanos para más información acerca de precios, descuentos y modalidades de pago."
         button:
           button_text: "APLICAR AHORA"
@@ -155,7 +156,7 @@ prices:
           heading_two: ""
           sub_heading: ""
         content:
-          price: "La modalidad Part-Time no está disponible"
+          price: "Programa no disponible"
           price_info: "Caracas - Venezuela"
         button:
           button_text: "Aplicar a otros cursos"
@@ -170,7 +171,7 @@ prices:
           heading_two: ""
           sub_heading: ""
         content:
-          price: "La modalidad Full-Time no está disponible"
+          price: "Programa no disponible"
           price_info: "Caracas - Venezuela"
         button:
           button_text: "Aplicar a otros cursos"
@@ -186,7 +187,7 @@ prices:
           heading_two: ""
           sub_heading: ""
         content:
-          price: "La modalidad Part-Time no esta disponible"
+          price: "Programa no disponible"
           price_info: "Caracas - Venezuela"
         button:
           button_text: "Aplicar a otros cursos"
@@ -201,7 +202,7 @@ prices:
           heading_two: ""
           sub_heading: ""
         content:
-          price: "La modalidad Full-Time no esta disponible"
+          price: "Programa no disponible"
           price_info: "Caracas - Venezuela"
         button:
           button_text: "Aplicar a otros cursos"

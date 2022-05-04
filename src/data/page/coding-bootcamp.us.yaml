@@ -1,7 +1,7 @@
 meta_info:
   slug: coding-bootcamp
   title: ""
-  description: "One of the most awarded coding bootcamps in the world. No previous coding skills. Code with your classmates, join the community and get career support for life."
+  description: "One of the most awarded coding bootcamps. No previous coding skills required. Code with others, join the community and get career support for life."
   image: "https://breathecode.herokuapp.com/v1/media/file/4geeks-feb-14th-113-jpeg?width=600"
   visibility: "visible"
   template: "coding-bootcamp"
@@ -10,10 +10,10 @@ meta_info:
 
 seo_title: "coding bootcamp"
 header:
-  title: "Start a coding career"
+  title: "Join a Coding Bootcamp. Start a New Career."
   image: "../../../static/images/bg/python-image.png"
   image_alt: "Python image"
-  paragraph: "Learn to code at one of the most awarded coding bootcamps in the world, start with no previous coding skills, develop your first apps with your classmates, join the community and get unlimited career support for life."
+  paragraph: "Learn to code at one of the most awarded coding bootcamps in the world. Online or in-person. No coding skills required. Join a glogal coding community and get unlimited coding and career support, for life."
 
 button:
   syllabus_heading: "Download Syllabus"
@@ -40,15 +40,15 @@ credentials:
 details:
   about:
     title: "About the program"
-    sub_title: "The human brain absobres 80% faster when it practices every day, a coding bootcamp is the perfect learning vehicle for a fast career transition into coding.
+    sub_title: "The human brain absorbes 80% faster with daily practice. A coding bootcamp is the perfect learning vehicle for a fast career transition into coding.
       
-      Upon completion of our coding bootcamp, graduates will have the coding skills needed to developer real life applications, 
+      Upon completion of coding bootcamp, graduates will have the coding skills needed to develop real-life applications, 
       job opportunities in the technology sector, and lifetime access to technical and career support at one of the biggest coding communities in the world."
     list:
       - label: "Duration"
-        content:  "16 Weeks"
+        content:  "16 weeks"
       - label: "Classes"
-        content: "3 Classes weekly"
+        content: "3 classes weekly"
       - label: "Out of class"
         content: "You are required to work at least 9 additional hours on your own time to finish the coding bootcamp"
 
@@ -96,8 +96,9 @@ sticky_nav:
 
 what_will_you_learn:
   heading: "What will you learn in this course?"
-  sub_title: "Learning to program is also about developing logic and understanding how a computer “thinks”, 
-    how they “speak”, how the elements of an application mesh and understand each other.
+  sub_title: |
+    Learning to program is also about developing logic and understanding how a computer "thinks", 
+    how they "speak", how the elements of an application mesh and understand each other.
 
     Developing the ability to program goes hand in hand with creativity and the search for 
     solutions to problems. Programming means solving problems through certain tools with which 
@@ -107,7 +108,7 @@ what_will_you_learn:
     front-end, back-end, database, distributed process management and deployment to different web 
     platforms. You will gain the skills and knowledge to create a website by immersing yourself in the 
     best practices of responsive web design, working with various languages.
-  "
+  
   image: "../../../static/images/learn_to_code.png"
   image_alt: "What will you learn in this course"
 
@@ -119,9 +120,10 @@ content_with_subtitle_and_image:
     - content: "A full stack developer is a developer who has mastered Full-Stack technology, 
         both front-end and back-end. And what does all this mean? So you should know these terms:"
     - label: "Stack"
-      content: "Stack translation is “stack of things“, in this case it would be the complete 
+      content: |
+        Stack translation is "stack of things", in this case it would be the complete 
         stack of applications that communicate with each other, so that they can execute, 
-        together, an action requested by the user/client"
+        together, an action requested by the user/client
 
     - label: "Front-end"
       content: "It's everything the user (or client side) can see and interact with."
@@ -146,14 +148,19 @@ content_with_subtitle_and_image:
 tools_and_tech:
   - topic: "Herramientas y lenguajes de programación que aprenderás"
     list:
-      - title: "Html"
+      - title: "HTML"
         image: "../../../static/images/techs/html.png"
         description: |-
-          "lorem ipsum dolor sit amet, congue, sed"
-      - title: "Css"
+          "In general terms, HTML is the language that allows building the structure of a web page. 
+          HTML tells the browser how to display content (images and text) of a website. 
+          HTML is a markup language that is used to format the information."
+      - title: "CSS"
         image: "../../../static/images/techs/css.png"
         description: |-
-          "Lorem ipsum dolor sit amet, con"
+          "CSS describes how HTML elements should be displayed on the screen. 
+          CSS separates, distributes content, and shapes its presentation on a web page. 
+          CSS is what makes a website responsive, also is what helps defining the style of the entire page 
+          -it avoids the work of creating styles page by page."
       - title: "Python"
         image: "../../../static/images/techs/python.png"
         description: |-
@@ -163,26 +170,34 @@ tools_and_tech:
       - title: "React.js"
         image: "../../../static/images/techs/react.png"
         description: |-
-          "Lorem ipsum dolor sit amet, con"
+          "React is a JavaScript library developed by the Facebook technology team to develop user interfaces. 
+          React works with components, which are self-contained pieces of user interface. 
+          Components are independent and can be reused to create complex interfaces. Since its launch in 2013, 
+          it has become one of the most used front-end technologies today"
       - title: "DOM"
         image: "../../../static/images/techs/dom.png"
         description: |-
-          "Lorem ipsum dolor sit amet, con"
+          "The DOM (Document Object Model) is the data representation of the objects that make up a document on the web. 
+          It works as an interface that allows browsing the document structure generated by the browser. 
+          Through the DOM you can add, modify, or delete elements and content."
       - title: "SQL"
         image: "../../../static/images/techs/sql.png"
         description: |-
-          "Lorem ipsum dolor sit amet, con"
+          "It is the standard language for relational database management. SQL is used to communicate with a database. 
+          Through SQL you can obtain and update information from a database. "
       - title: "Flask"
         image: "../../../static/images/techs/flask.png"
         description: |-
-          "Lorem ipsum dolor sit amet, con"
+          "Flask is a framework written in Python. A web application framework, is a set of pre-built libraries, features, 
+          and modules that allow developers to write code without worrying about programming details. 
+          Frameworks enable agile application development."
 
 what_includes:
   - title: "What includes?"
-    description: "To become a programmer it is not only necessary to have knowledge of tools and languages, 
-      but it is also important to have help when you have doubts, overcome the frustrations of 
-      learning to program and have company in your introduction into the world of work as a Jr. 
-      developer. traditional web programming course you will receive technical training, but you 
+    description: "To become a programmer it is not only necessary to have knowledge of tools and languages. 
+      It is also important to have help to clear doubts, and have company to overcome the frustrations of 
+      learning to program and to introduce you to the world of work as a Jr. 
+      developer. In a ttraditional web programming course you will receive technical training, but you 
       will not necessarily have access to other benefits that will make you a comprehensive full 
       stack developer."
     list:
@@ -196,7 +211,7 @@ what_includes:
         icon: "hierarchy"
         description: "You'll find more teachers on 4Geeks than the industry average."
 
-      - title: "> Response time"
+      - title: "> Response Time"
         icon: "chronometer"
         description: "Don't get stuck with your code, it won't take you more than 15 minutes for an 
           instructor to help you through any of our community channels."
@@ -214,8 +229,7 @@ what_includes:
 
       - title: "> Access to the Platform for Lessons, Exercises and Community Channels"
         icon: "notes-2"
-        description: "Based on each job opportunity, you will receive coaching in skills in addition to 
-          those related to programming.
+        description: "Based on each job opportunity, you will receive coaching in skills other than programming.
           We will help you perfect your professional profile. You will have personalized advice with 
           our experts to improve your CV, Linkedin, GitHub and Portfolio.
           We will conduct mock interviews to assess your strengths and weaknesses to create a stronger 

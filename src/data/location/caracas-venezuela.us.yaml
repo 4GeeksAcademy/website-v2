@@ -7,6 +7,7 @@ meta_info:
   keywords: ""
   redirects:
     ["/impact-hub", "/location/impact-hub", "/us/location/caracas-venezuela-en"]
+  region: "america"
 
 seo_title: "4Geeks Academy Caracas"
 header:
@@ -27,10 +28,10 @@ button:
 
 custom_bar:
   active: true
-  message: <a class="customBar-link" href="https://wa.me/+584242443542" taget="_blank" rel="noopener noreferrer nofollow">Contact us</a> and apply for the upcoming Full-Stack Web Development program in Caracas
-  button: 
-    label: "Read More"
-    path: "#" #string (can be inline path using #, relative path or absolute path)
+  message: 25% OFF for women this March! <a class="customBar-link" href="/apply" taget="_blank" rel="noopener noreferrer nofollow">Apply</a> and become a Full-Stack Developer in 16 weeks!
+  # button: 
+  #  label: "Read More"
+  #  path: "#" #string (can be inline path using #, relative path or absolute path)
 
 badges:
   title: ""
@@ -92,12 +93,12 @@ prices:
       ## CHANGE HERE THE INFO IN THE LEFT BOX
       left_section:
         header:
-          heading_one: "PAY ONLY AFTER"
-          heading_two: "YOU GET A JOB"
-          sub_heading: "with the Income Sharing Agreement (ISA)"
+          heading_one: "PAY IN MONTHLY"
+          heading_two: "INSTALLMENTS"
+          sub_heading: "Contact us for details"
         content:
-          price: "9% of Salary"
-          price_info: "until fully paid, and only if you get the job"
+          price: "Contact us for details"
+          price_info: "Up to 12 months"
         button:
           button_text: "APPLY NOW"
 
@@ -109,7 +110,7 @@ prices:
           heading_two: "(OUT OF POCKET)"
           sub_heading: "Know about different payment options"
         content:
-          price: "?"
+          price: "Contact us for details"
           price_info: "Contact us for more information about prices and financing options."
         button:
           button_text: "APPLY NOW"
@@ -126,7 +127,7 @@ prices:
         header:
           heading_one: "MONTHLY PAYMENTS"
           heading_two: "DETAILS"
-          sub_heading: "Pay in 4 monthly installments"
+          sub_heading: "Pay in monthly installments"
         content:
           price: "Contact us"
           price_info: "Ask for applicable discounts"
@@ -141,7 +142,7 @@ prices:
           heading_two: "(OUT OF POCKET)"
           sub_heading: "Save and pay upfront "
         content:
-          price: "?"
+          price: "Contact us for details"
           price_info: "Contact us for more information about prices and financing options."
         button:
           button_text: "APPLY NOW"
@@ -157,10 +158,10 @@ prices:
           heading_two: ""
           sub_heading: ""
         content:
-          price: "Part-Time modality is not available"
+          price: "Program not availablee"
           price_info: "Caracas - Venezuela"
         button:
-          button_text: "Apply another courses"
+          button_text: "Apply to other courses"
 
     full_time:
       slug: "full_time"
@@ -172,10 +173,10 @@ prices:
           heading_two: ""
           sub_heading: ""
         content:
-          price: "Full-Time modality is not available"
+          price: "Program not available"
           price_info: "Caracas - Venezuela"
         button:
-          button_text: "Apply another courses"
+          button_text: "Apply to other courses"
 
   machine_learning:
     part_time:
@@ -188,7 +189,7 @@ prices:
           heading_two: ""
           sub_heading: ""
         content:
-          price: "Part-Time modality is not available"
+          price: "Program not available"
           price_info: "Caracas - Venezuela"
         button:
           button_text: "Apply another courses"
@@ -203,7 +204,7 @@ prices:
           heading_two: ""
           sub_heading: ""
         content:
-          price: "Full-Time modality is not available"
+          price: "Program not avaible"
           price_info: "Caracas - Venezuela"
         button:
           button_text: "Apply another courses"

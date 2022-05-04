@@ -1,106 +1,105 @@
-const path = require('path');
+const path = require("path");
 const moment = require("moment");
-const fs = require('fs');
-const mime = require('mime-types')
-const axios = require('axios');
-const fm = require('front-matter');
-const { SSL_OP_SSLEAY_080_CLIENT_DH_BUG } = require('constants');
+const fs = require("fs");
+const mime = require("mime-types");
+const axios = require("axios");
+const fm = require("front-matter");
+const { SSL_OP_SSLEAY_080_CLIENT_DH_BUG } = require("constants");
 
-const walkAsync = (path) => new Promise((resolve, reject) => {
-    walk(path, function(err, list){
+const walkAsync = (path) =>
+  new Promise((resolve, reject) => {
+    walk(path, function (err, list) {
       if (err) return reject(err);
       else resolve(list);
-    })
-});
+    });
+  });
 
-const walk = function(dir, done) {
-    var results = [];
-    fs.readdir(dir, function(err, list) {
-      if (err) return done(err);
-      var pending = list.length;
-      if (!pending) return done(null, results);
-      list.forEach(function(file) {
-        file = path.resolve(dir, file);
-        fs.stat(file, function(err, stat) {
-          if (err) return done(err);
+const walk = function (dir, done) {
+  var results = [];
+  fs.readdir(dir, function (err, list) {
+    if (err) return done(err);
+    var pending = list.length;
+    if (!pending) return done(null, results);
+    list.forEach(function (file) {
+      file = path.resolve(dir, file);
+      fs.stat(file, function (err, stat) {
+        if (err) return done(err);
 
-          if (stat && stat.isDirectory()) {
-            walk(file, function(err, res) {
-              if (err) return done(err);
+        if (stat && stat.isDirectory()) {
+          walk(file, function (err, res) {
+            if (err) return done(err);
 
-              results = results.concat(res);
-              if (!--pending) done(null, results);
-            });
-          } else {
-            results.push(file);
+            results = results.concat(res);
             if (!--pending) done(null, results);
-          }
-        });
+          });
+        } else {
+          results.push(file);
+          if (!--pending) done(null, results);
+        }
       });
     });
-  };
-
+  });
+};
 
 let names = [];
 const getContentName = (_path) => {
-  return path.basename(_path);;
-}
+  return path.basename(_path);
+};
 const indexContent = (allContent) => ({
-    names, 
-    posts: allContent.map(l => {
-        const file = getContentName(l);
-        if(!file){
-          console.log("Ignoring blog post: Bad path format "+l);
-          return null;
-        }
+  names,
+  posts: allContent.map((l) => {
+    const file = getContentName(l);
+    if (!file) {
+      console.log("Ignoring blog post: Bad path format " + l);
+      return null;
+    }
 
-        names.push(file);
-        const [ originalSlug, lang ] = file.split('.');
-        const content = fs.readFileSync(l, 'utf8');
-        let front_matter = fm(content);
-        const result = {
-            path: l,
-            content,
-            front_matter,
-            originalSlug,
-            slug: front_matter.slug || originalSlug,
-            lang: lang || "undefined",
-            fileName: file,
-        }
-        return result;
-    })
+    names.push(file);
+    const [originalSlug, lang] = file.split(".");
+    const content = fs.readFileSync(l, "utf8");
+    let front_matter = fm(content);
+    const result = {
+      path: l,
+      content,
+      front_matter,
+      originalSlug,
+      slug: front_matter.slug || originalSlug,
+      lang: lang || "undefined",
+      fileName: file,
+    };
+    return result;
+  }),
 });
 
 const regex = {
-  relative_images: /!\[.*\]\((\.\/.*\.[a-zA-Z0-9]{2,3})/gm, 
+  relative_images: /!\[.*\]\((\.\/.*\.[a-zA-Z0-9]{2,3})/gm,
   external_images: /!\[.*\]\(https?:\/(\/{1}[^/)]+)+\/?\)/gm,
   url: /(https?:\/\/[a-zA-Z_\-.\/0-9]+)/gm,
-  uploadcare: /https:\/\/ucarecdn.com\/(?:.*\/)*([a-zA-Z_\-.\/0-9]+)/gm
-}
+  uploadcare: /https:\/\/ucarecdn.com\/(?:.*\/)*([a-zA-Z_\-.\/0-9]+)/gm,
+};
 
 const getFM = (content) => {
   return fm(content);
-}
+};
 const findInFile = (types, content) => {
   const validTypes = Object.keys(regex);
-  if(!Array.isArray(types)) types = [types];
-  
-  let findings = {}
-  
-  types.forEach(type => {
-    if(!validTypes.includes(type)) throw Error("Invalid type: "+type)
+  if (!Array.isArray(types)) types = [types];
+
+  let findings = {};
+
+  types.forEach((type) => {
+    if (!validTypes.includes(type)) throw Error("Invalid type: " + type);
     else findings[type] = {};
   });
 
-  types.forEach(type => {
-
+  types.forEach((type) => {
     let count = 0;
     while ((m = regex[type].exec(content)) !== null) {
       // This is necessary to avoid infinite loops with zero-width matches
       if (m.index === regex.lastIndex) {
-          regex.lastIndex++;
+        regex.lastIndex++;
       }
-      
+
       // The result can be accessed through the `m`-variable.
       // m.forEach((match, groupIndex) => values.push(match));
       const txt = m[0];
@@ -108,104 +107,120 @@ const findInFile = (types, content) => {
 
       findings[type][m[0]] = m[1];
     }
-  })
+  });
 
   return findings;
-}
+};
 
 const download = async (url, image_path) => {
-
-  const response =  await axios({
+  const response = await axios({
     url,
-    responseType: 'stream',
-  })
-  
-  const extension = mime.extension(response.headers['content-type']) 
-  if(!image_path.includes("."+extension)) image_path = image_path + "." + extension;
-  
-  if(fs.existsSync(image_path)){
-    console.log(`Ignoring: Image ${image_path} already exists`)
+    responseType: "stream",
+  });
+
+  const extension = mime.extension(response.headers["content-type"]);
+  if (!image_path.includes("." + extension))
+    image_path = image_path + "." + extension;
+
+  if (fs.existsSync(image_path)) {
+    console.log(`Ignoring: Image ${image_path} already exists`);
     return false;
   }
-  
-  if(response.status != 200){
-    console.log(`Ignoring: ${url} because its not a 200 request`)
+
+  if (response.status != 200) {
+    console.log(`Ignoring: ${url} because its not a 200 request`);
     return false;
-  }
-  else{
+  } else {
     return new Promise((resolve, reject) => {
-      console.log("Downloading ", image_path, response.headers['content-type'])
+      console.log("Downloading ", image_path, response.headers["content-type"]);
       response.data
         .pipe(fs.createWriteStream(image_path))
-        .on('finish', () => resolve())
-        .on('error', e => reject(e));
-    })
-  } 
-}
+        .on("finish", () => resolve())
+        .on("error", (e) => reject(e));
+    });
+  }
+};
 
-const updateContent = (lesson, newContent=null) => {
-  if(!newContent && newContent == "") return false;
-  const  { content, path, front_matter } = lesson;
+const updateContent = (lesson, newContent = null) => {
+  if (!newContent && newContent == "") return false;
+  const { content, path, front_matter } = lesson;
   return fs.writeFileSync(path, newContent);
-}
+};
 
 const sanitize = (lesson) => {
-  const  { content, path, front_matter } = lesson;
-  const { slug, title, date, tags, status, authors, subtitle, ...rest } = front_matter.attributes;
+  const { content, path, front_matter } = lesson;
+  const { slug, title, date, tags, status, authors, subtitle, ...rest } =
+    front_matter.attributes;
 
-  let clean = {}
+  let clean = {};
 
   // local images use cover_local instead of cover
-  if(rest.cover && rest.cover.indexOf("../") > -1){
+  if (rest.cover && rest.cover.indexOf("../") > -1) {
     clean.cover_local = rest.cover;
     clean.cover = null;
   }
 
   // date format must be 2020-10-19T12:36:31-04:00
-  clean.date = moment(date).format()
+  clean.date = moment(date).format();
 
   return clean;
-}
+};
 
-const updateFrontMatter = (post, data, conditions={}, test=false) => {
+const updateFrontMatter = (post, data, conditions = {}, test = false) => {
+  const { content, path, front_matter } = post;
 
-  const  { content, path, front_matter } = post;
-
-  if(typeof(front_matter.attributes.status)==="undefined" || front_matter.attributes.status === null) 
+  if (
+    typeof front_matter.attributes.status === "undefined" ||
+    front_matter.attributes.status === null
+  )
     front_matter.attributes.status = "published";
-  
+
   // WARNING! clean up UNDEFINED data, if its null it well not be cleaned, only undefined
-  Object.keys(data).forEach(key => data[key] === undefined && delete data[key] )
-  
+  Object.keys(data).forEach(
+    (key) => data[key] === undefined && delete data[key]
+  );
+
   let attributes = { ...front_matter.attributes, ...data };
 
-  delete attributes.lang
-  delete attributes.link
-  delete attributes.categories
-  delete attributes.tags
-  delete attributes.layout
-  delete attributes.comments
-  
+  delete attributes.lang;
+  delete attributes.link;
+  delete attributes.categories;
+  delete attributes.tags;
+  delete attributes.layout;
+  delete attributes.comments;
+
   // deleting null attributes on front-matters
-  Object.keys(attributes).forEach(key => attributes[key] === null && delete attributes[key] )
+  Object.keys(attributes).forEach(
+    (key) => attributes[key] === null && delete attributes[key]
+  );
 
   const newContent = `---
 ${Object.keys(attributes).reduce((total, key) => {
-  if(Array.isArray(attributes[key])) return total+`${key}: [${attributes[key].map(i => `"${i}"`).join(",")}]\n`
-  else return total+`${key}: "${attributes[key]}"\n`
-},"")}
+  if (Array.isArray(attributes[key]))
+    return (
+      total + `${key}: [${attributes[key].map((i) => `"${i}"`).join(",")}]\n`
+    );
+  else return total + `${key}: "${attributes[key]}"\n`;
+}, "")}
 ---
 
 ${front_matter.body}`;
 
-  if(test === false){
-      console.log("Updating "+path+ " ...")
-      fs.writeFileSync(path, newContent);
-      console.log("Post updated "+post.slug)
-  }
-  else console.log("TEST: Post updated "+path+ " with: ", newContent)
-}
+  if (test === false) {
+    console.log("Updating " + path + " ...");
+    fs.writeFileSync(path, newContent);
+    console.log("Post updated " + post.slug);
+  } else console.log("TEST: Post updated " + path + " with: ", newContent);
+};
 
 module.exports = {
-  walk, indexContent, findInFile, download, updateContent, walkAsync, updateFrontMatter, getFM, sanitize
-}
+  walk,
+  indexContent,
+  findInFile,
+  download,
+  updateContent,
+  walkAsync,
+  updateFrontMatter,
+  getFM,
+  sanitize,
+};
