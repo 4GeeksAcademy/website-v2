@@ -2,7 +2,7 @@
 author: "anzolagi"
 date: "2022-05-05T05:29:14+00:00"
 excerpt: "Here is our top 5 games you can play to practice your programming skills."
-slug: "Free-games-to-practice-your-programming-skills"
+slug: "free-games-to-practice-your-programming-skills"
 template: "post" # post or landing_post
 title: "BOOTCAMP GRADUATES SALARIES 2019 EDITION"
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2019/03/MAIN-BLOG-1024x270.jpg"
