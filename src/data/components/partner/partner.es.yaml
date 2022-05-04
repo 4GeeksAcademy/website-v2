@@ -82,6 +82,7 @@ partners:
       locations: ["madrid-spain"]
       image: "../../../../static/images/partner/jooble.png"
       featured: false
+      follow: true
       link: "https://es.jooble.org"
       
 coding:

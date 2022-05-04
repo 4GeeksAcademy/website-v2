@@ -55,7 +55,7 @@ join_geeks:
 ## LOCATIONS SECTION
 locations:
   heading: "NUESTRAS SEDES"
-  image: "/images/locations/locations_image.png"
+  image: "/images/locations/image-sedes.jpg"
   sub_heading: "Con +7 sedes (y creciendo), 4Geeks es una de las escuelas y comunidades de programadores más grandes del mundo"
   choose: "Escoge una región"
   regions:
