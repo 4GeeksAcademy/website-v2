@@ -23,6 +23,7 @@ walk(`${__dirname}/../data/landing`, async (err, files) => {
     "full-stack",
     "software-engineering",
     "machine-learning",
+    "node-js",
   ];
 
   const _files = files.filter(
