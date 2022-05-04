@@ -7,7 +7,7 @@ template: "post" # post or landing_post
 title: "BOOTCAMP GRADUATES SALARIES 2019 EDITION"
 image: "https://storage.googleapis.com/4geeks-academy-website/blog/2019/03/MAIN-BLOG-1024x270.jpg"
 image_alt: "coding-games"
-cluster: "career-growth"
+cluster: "aprender-a-programar"
 status: "published"
 
 ---
