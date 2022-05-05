@@ -4,6 +4,7 @@ meta_info:
   bc_slug: "full-stack"
   description: "Master the coding fundamentals and develop real life applications. Get career support and mentoring for life."
   image: ""
+  visibility: "visible"
   keywords: ""
   redirects:
     [
