@@ -231,6 +231,7 @@ export const RightNav = ({
             programs {
               text
               link
+              visibility
               location_bc_slug
               schedule
             }

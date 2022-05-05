@@ -315,6 +315,7 @@ const createEntityPagesfromYml = async (
                 meta_info {
                     slug
                     redirects
+                    visibility
                     template
                     ${extraFieldsQuery}
                 }

@@ -82,7 +82,7 @@ const getClosestLoc = (locations, lat, lon) => {
   let location = null;
   for (var i = 0; i < locations.length; i++) {
     // ignore unlisted locations on the ymls
-    if (locations[i].meta_info.unlisted === true) continue;
+    if (locations[i].meta_info.visibility === "unlisted") continue;
 
     tempLocation = distance(
       locations[i].latitude,
@@ -202,7 +202,7 @@ export const initSession = async (locationsArray, storedSession, seed = {}) => {
     locations: locations
       .filter((l) => {
         // filter inlisted locations
-        if (l.meta_info.unlisted) return false;
+        if (l.meta_info.visibility === "unlisted") return false;
         return true;
       })
       .sort((a, b) => (a.meta_info.position > b.meta_info.position ? 1 : -1)),

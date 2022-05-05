@@ -30,6 +30,7 @@ const BaseRender =
     if (pageContext.type === "landing") {
       filteredPrograms =
         data.allChooseProgramYaml.edges[0].node.programs.filter((course_el) => {
+          if (course_el.visibility === "hidden") return false;
           return (
             utm_course.filter((array_el) => {
               return course_el.bc_slug === array_el;

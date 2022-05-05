@@ -256,7 +256,7 @@ export const postQuery = graphql`
         author
         date
         excerpt
-        unlisted
+        visibility
         image
         cluster
       }

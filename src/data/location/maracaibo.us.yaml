@@ -8,7 +8,7 @@ meta_info:
   # will be last in the priority of location
   position: 41
   # it will not show up on the applications forms
-  unlisted: true
+  visibility: "unlisted"
   redirects: ["/us/location/maracaibo", "/location/maracaibo"]
   region: "america"
 

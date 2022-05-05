@@ -694,6 +694,7 @@ export const landingSections = {
   syllabus: ({ session, data, pageContext, yml, course, location, index }) => {
     const filteredPrograms =
       data.allChooseProgramYaml.edges[0].node.programs.filter((course_el) => {
+        if (course_el.visibility === "hidden") return false;
         return (
           course.filter((array_el) => {
             return course_el.bc_slug === array_el;

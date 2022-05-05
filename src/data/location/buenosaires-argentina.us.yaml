@@ -6,7 +6,7 @@ meta_info:
   image: ""
   keywords: ""
   # it will not show up on the applications forms
-  unlisted: false
+  visibility: "visible"
   redirects: ["/us/argentina", "/argentina", "/us/coding-campus/coding-bootcamp-argentina"]
   region: "america"
 

@@ -5,7 +5,7 @@ meta_info:
   description: "Conoce aquí todo sobre nuestro campus de bootcamp de programación en Bolivia, La Paz de 4Geeks Academy"
   image: ""
   # it will not show up on the applications forms
-  unlisted: false
+  visibility: "visible"
   keywords: "Coding Bootcamp Campus Bolivia"
   redirects: ["/es/coding-campus/bootcamp-programacion-bolivia"]
   region: "america"

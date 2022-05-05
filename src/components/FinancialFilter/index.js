@@ -119,7 +119,7 @@ const FinancialFilter = (props) => {
       props.locations
         .filter(
           (l) =>
-            l.node.meta_info.unlisted != true &&
+            l.node.meta_info.visibility === "visible" &&
             !l.node.meta_info.slug.includes("online")
         )
         .sort((a, b) =>
