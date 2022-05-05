@@ -37,7 +37,7 @@ form:
 header_data:
   tagline: "Take control of your future. Learn a new skill."
   tagline_color: "black"
-  sub_heading: "Receive high-quality coding education with no upfront costs."
+  sub_heading: "Enroll in high-quality coding education with no upfront costs."
   # image: "../../../static/images/landing/uwm_pantone_2021_2.png"
   image_filter: brightness(0.3)
   partner_logo_url: "../../../static/images/landing/uwm_pantone_2021_2.png" # optional
@@ -50,12 +50,7 @@ header_data:
 
 features:
   marginTop: 0px #<-- separation between tagline and the bullets
-  text: |
-    <p> <strong style="font-weight: bold;">United Way Miami Workforce Project</strong> is an exciting new coding program made possible by the collaboration of United Way Miami, Social Financing and 4Geeks that allows you to get the top education to land a new to land a job in the field of technology through Income Sharing Agreements.</p>
-    <hr style="margin: 15px 0;">
-    <span style="background: rgb(255, 183, 24);font-weight: bold;">Now open and accepting applications!</span>
-    <p>Applications will be open until May 31st, 2022</p>
-    <p>Only 100 spots available</p>
+  text: '<p> <strong style="font-weight: bold;">United Way Miami Workforce Project</strong> is an exciting new coding program made possible by the collaboration of United Way Miami, Social Financing and 4Geeks that allows you to get the top education to land a new to land a job in the field of technology through Income Sharing Agreements.</p> <hr style="margin: 15px 0;"> <span style="background: rgb(255, 183, 24);font-weight: bold;">Now open and accepting applications!</span> <p>Applications will be open until May 31st, 2022</p><p>Only 100 spots available</p>'
   styles: '{ "color": "gray", "fontWeight":"500" }'
   button:
       text: "APPLY NOW"
@@ -99,21 +94,21 @@ components:
           style: '{ "backgroundSize": "contain", "height": "130px" }'
           src: "/images/landing/graduated-icon.png"
         content: 
-          text: "Every Miami-Dade Resident is invited to apply. Need to be a U.S. Citizen or Consideration of Deferred Action for Childhood Arrivals (DACA). The team will review and approve your application upon confirmation of meeting the requirements."
+          text: "Apply and, if meeting the program requirements (below), you will be accepted into the United Way Miami Workforce Program."
           font_size: ["16px"]
         size: [3,3,3,3]
       - image:
           style: '{ "backgroundSize": "contain", "height": "130px" }'
           src: "/images/landing/pc-icon.png"
         content: 
-          text: "4Geeks will deliver the Full-Stack Software Dev Programs and we'll work together to help you get a better job after graduation"
+          text: "Once accepted, applicants (now Students) enroll in the 4Geeks Full-Stack Software Development Program. 4Geeks provides quality training and offers wraparound supports—like resume and career coaching—to help participants find jobs after graduating."
           font_size: ["16px"]
         size: [3,3,3,3]
       - image:
           style: '{ "backgroundSize": "contain", "height": "130px" }'
           src: "/images/landing/cicle-icon.png"
         content: 
-          text: "Student will only need to pay after getting a job where you make more than $35,000 annually!"
+          text: "Participants will pay program costs after they start jobs making more than $35,000 a year. Participants who don't find a job and keep jobs with salaries below $35,000 pay nothing"
           font_size: ["16px"]
         size: [3,3,3,3]
 
@@ -122,17 +117,14 @@ components:
     layout: multi_column
     swipable: True
     heading:
-      text: "Elegibility in this Program"
+      text: "Program Elegibility"
       font_size: ["30px", "30px", "30px", "30px", "30px"]
     content:
-      text: | 
-         <br/>
-         <br/> Leearn more about <a style="color: rgb(0, 160, 218); cursor:pointer;">eligibility conditions</a> and apply
+      text: '<br/> <br/> Leearn more about <a style="color: rgb(0, 160, 218); cursor:pointer;">eligibility conditions</a> and apply'
       font_size: ["16px", "16px", "16px", "16px", "16px"]
       path: "https://marketing892162.typeform.com/to/ti4UAUrh"
     sub_heading:
-      text: |
-        <strong style="font-weight: bold;"> Every Miami Resident is invited to apply </strong>. You also need to be a Citizen, permanent resident or DACA. You should not have accounts in collection greater than $5,000. Preference will be given to one of these groups:
+      text: '<strong style="font-weight: bold;"> Every Miami Resident with an annual income below $X (confirming this number) who is a citizen, permanent resident, or DACA recipient is invited to apply. People of color, veterans, and single female heads of household are encouraged to apply.'
       font_size: ["16px", "16px", "16px", "16px", "16px"]
     button:
       text: "APPLY NOW"
@@ -178,19 +170,19 @@ components:
       text: "Why coding?"
       font_size: ["40px", "40px", "40px", "40px", "40px"]
     sub_heading:
-      text: "Software development is one of the more sought-after professionals out there. Learning to code will give you access to:"
+      text: "Learning to code will give you access to:"
       font_size: ["16px", "16px", "16px", "16px", "16px"]
     content:
       font_size: ["16px"]
       text: |
-        <h4><strong style="font-weight: bold;"> > MORE JOB OPPORTUNITIES </strong></h4>
-        <p>The demand for programmers will keep increasing over the decade.</p>
+        <h4><strong style="font-weight: bold;"> > JOB OPPORTUNITIES </strong></h4>
+        <p>Computer programmers are in high demand—and the demand for programmers will keep increasing over the decade.</p>
         <br>
-        <h4><strong style="font-weight: bold;"> > HIGHER INCOME </strong></h4>
-        <p>Careers that involve coding skills tend to come with above-average salaries.</p>
+        <h4><strong style="font-weight: bold;"> > BETTER PAY </strong></h4>
+        <p>Starting salary for a Jr. Software Developer in Miami is $48,000.</p>
         <br>
         <h4><strong style="font-weight: bold;"> > CAREER FLEXIBILITY </strong></h4>
-        <p>Coding makes you a more flexible job candidate in a rapidly-shifting digital economy.</p>
+        <p>Coding skills prepare you for a variety of jobs in the rapidly-shifting digital economy.</p>
   - name: geeksinfo
     position: 7
     layout: geeksInfo
@@ -206,22 +198,19 @@ components:
       text: "Why 4Geeks Academy?"
       font_size: ["30px", "30px", "30px", "30px", "30px"]
     sub_heading:
-      text: "A Coding bootcamp provide great software development education to start a coding career and 4Geeks Academy is the place where developers grow and thrive. We are specialists of code."
+      text: "Students and alumni from 4Geeks Academy grow and thrive."
       font_size: ["16px", "16px", "16px", "16px", "16px"]
     content:
       font_size: ["16px"]
       text: |
-        <p>4Geeks Academy was born in 2015. Today 4Geeks has +7 campus spread over the United States, Latin America and Europe. We count with +1500 graduates and tons of things to be proud of.</p>
+        <p>Founded in 2015, we are specialist of code. We have +7 campus spread over the United States, Latin America and Europe. Over 2500 students have graduated from our programs with valuable coding skills.</p>
         <br>
-        <p>Wile Coding bootcamps usually are very intensive experiences that would be difficult to maintain while raising a child or while working a full-time job.</p>
+        <p><span style="background: rgb(255, 183, 24);font-weight: bold;">Our coding bootcamps are designed to be flexible so that anyone, even learners raising children or working full-time, can enroll and succeed.</p>
         <br>
-        <p><span style="background: rgb(255, 183, 24);font-weight: bold;">Our program at 4Geeks Academy</span> is more flexible and doable for anyone, even for moms or any other working person.</p>
+        <p>This <strong style="font-weight: bold;font-size:20px;">part-time 16-week</strong>, 16-week course will teach you the skills you need to succeed as a software developer." </p>
         <br>
-        <p>This <strong style="font-weight: bold;font-size:20px;">part-time 16-week</strong> syllabus is made to teach you both: 
-        The most wanted and the highest-paid technologies today.</p>
-        <br>
-        <h2><strong style="font-weight: bold;font-size:20px;color:black;">Break down obstacles to a new career,</strong></h2>
-        <h2><strong style="font-weight: bold;font-size:20px;color:black;">Let's tackle together the tech talent imbalance.</strong></h2>      
+        <h2><strong style="font-weight: bold;font-size:20px;color:black;">Are you ready to break down obstacles and start a new career?,</strong></h2>
+    
   - name: pay
     position: 8
     background: "veryLightBlue2"
@@ -235,7 +224,7 @@ components:
       text: "Pay back when you get a job!"
       font_size: ["30px", "30px", "30px", "30px", "30px"]
     sub_heading:
-      text: "There is no payment upfront. Actually, payments will start only after you get a job where you can make more than $35,000 annually."
+      text: "There are no upfront payments for participants. Payments start only if you get a job earning more than $35,000 annually. Participants who don’t find and keep jobs with salaries above $35,000 pay nothing."
       font_size: ["18px", "18px", "18px", "18px", "18px"]
     button:
       text: "Review Conditions"
@@ -244,10 +233,10 @@ components:
     content:
       text: |
         <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">1. Enroll and join the program</strong></h2>
-        <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">2. Get the skills of a software Developer</strong></h2>
+        <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">2. Learn software development skills</strong></h2>
         <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">3. Graduate and complete your projects</strong></h2>
-        <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">4. Get a Job</strong></h2>
-        <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">5. Pay back after you get a new job</strong></h2>
+        <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">4. Land a job</strong></h2>
+        <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">5. Pay back after for the program</strong></h2>
       font_size: ["16px"]
 
   - name: testimonials
@@ -272,7 +261,7 @@ components:
       text: "Ready to start your journey to a better future?"
       font_size: ["40px", "40px", "40px", "40px", "40px"]
     content:
-      text: "A total of 100 students will be chosen for phase 1. We are now accepting applications."
+      text: "A total of 100 students will be accepted into the program."
       font_size: ["16px"]
     button:
       text: "APPLY NOW"
@@ -290,8 +279,8 @@ components:
       style: '{ "backgroundSize": "contain", "maxHeight": "270px" }'
       src: "/images/landing/united-way-two.png"
     heading:
-      text: "Brought to you by United Way Miami + Social Finance + 4Geeks Academy"
+      text: "The United Way Miami Workforce Project is a partnership of United Way Miami, 4Geeks Academy, and Social Finance. Brought to you by United Way Miami + Social Finance + 4Geeks Academy"
       font_size: ["40px", "40px", "40px", "40px", "40px"]
     content:
-      text: "United Way Miami advances the common good in communities across Miami-Dade. Focused on the education, financial stability and health - the building blocks for a good quality of life."
+      text: "United Way Miami advances the common good in communities across Miami-Dade. Focused on education, financial stability and health - we invest in the building blocks for a good quality of life."
       font_size: ["16px"]
