@@ -91,9 +91,7 @@ components:
       text: "How it Works"
       font_size: ["30px", "30px", "30px", "30px", "30px"]
     sub_heading:
-      text: 
-        According to the U.S. Bureau of Labor Statistics, <strong style="font-weight: bold;">software developers in the U.S. have a higher than average job outlook and earn a median salary of $110,140 a year</strong>. 
-        <strong style="font-weight: bold;">Only 5 of them end up in an interview.</strong>
+      text: 'According to the U.S. Bureau of Labor Statistics, <strong style="font-weight: bold;">software developers in the U.S. have a higher than average job outlook and earn a median salary of $110,140 a year</strong>. <strong style="font-weight: bold;">Only 5 of them end up in an interview.</strong>'
       font_size: ["16px", "16px", "16px", "16px", "16px"]
       style: '{ "textAlign": "center", "width": "60%" }'
     columns:
