@@ -50,12 +50,7 @@ header_data:
 
 features:
   marginTop: 0px #<-- separation between tagline and the bullets
-  text: |
-    <p> <strong style="font-weight: bold;">United Way Miami Workforce Project</strong> is an exciting new coding program made possible by the collaboration of United Way Miami, Social Financing and 4Geeks that allows you to get the top education to land a new to land a job in the field of technology through Income Sharing Agreements.</p>
-    <hr style="margin: 15px 0;">
-    <span style="background: rgb(255, 183, 24);font-weight: bold;">Now open and accepting applications!</span>
-    <p>Applications will be open until May 31st, 2022</p>
-    <p>Only 100 spots available</p>
+  text: '<p> <strong style="font-weight: bold;">United Way Miami Workforce Project</strong> is an exciting new coding program made possible by the collaboration of United Way Miami, Social Financing and 4Geeks that allows you to get the top education to land a new to land a job in the field of technology through Income Sharing Agreements.</p> <hr style="margin: 15px 0;"> <span style="background: rgb(255, 183, 24);font-weight: bold;">Now open and accepting applications!</span> <p>Applications will be open until May 31st, 2022</p><p>Only 100 spots available</p>'
   styles: '{ "color": "gray", "fontWeight":"500" }'
   button:
       text: "APPLY NOW"
@@ -91,9 +86,7 @@ components:
       text: "How it Works"
       font_size: ["30px", "30px", "30px", "30px", "30px"]
     sub_heading:
-      text: 
-        According to the U.S. Bureau of Labor Statistics, <strong style="font-weight: bold;">software developers in the U.S. have a higher than average job outlook and earn a median salary of $110,140 a year</strong>. 
-        <strong style="font-weight: bold;">Only 5 of them end up in an interview.</strong>
+      text: 'According to the U.S. Bureau of Labor Statistics, <strong style="font-weight: bold;">software developers in the U.S. have a higher than average job outlook and earn a median salary of $110,140 a year</strong>. <strong style="font-weight: bold;">Only 5 of them end up in an interview.</strong>'
       font_size: ["16px", "16px", "16px", "16px", "16px"]
       style: '{ "textAlign": "center", "width": "60%" }'
     columns:
@@ -127,14 +120,11 @@ components:
       text: "Program Elegibility"
       font_size: ["30px", "30px", "30px", "30px", "30px"]
     content:
-      text: | 
-         <br/>
-         <br/> Leearn more about <a style="color: rgb(0, 160, 218); cursor:pointer;">eligibility conditions</a> and apply
+      text: '<br/> <br/> Leearn more about <a style="color: rgb(0, 160, 218); cursor:pointer;">eligibility conditions</a> and apply'
       font_size: ["16px", "16px", "16px", "16px", "16px"]
       path: "https://marketing892162.typeform.com/to/ti4UAUrh"
     sub_heading:
-      text: |
-        <strong style="font-weight: bold;"> Every Miami Resident with an annual income below $X (confirming this number) who is a citizen, permanent resident, or DACA recipient is invited to apply. People of color, veterans, and single female heads of household are encouraged to apply."
+      text: '<strong style="font-weight: bold;"> Every Miami Resident with an annual income below $X (confirming this number) who is a citizen, permanent resident, or DACA recipient is invited to apply. People of color, veterans, and single female heads of household are encouraged to apply.'
       font_size: ["16px", "16px", "16px", "16px", "16px"]
     button:
       text: "APPLY NOW"
@@ -289,8 +279,7 @@ components:
       style: '{ "backgroundSize": "contain", "maxHeight": "270px" }'
       src: "/images/landing/united-way-two.png"
     heading:
-      text: "The United Way Miami Workforce Project is a partnership of United Way Miami, 4Geeks Academy, and Social Finance. 
-Brought to you by United Way Miami + Social Finance + 4Geeks Academy"
+      text: "The United Way Miami Workforce Project is a partnership of United Way Miami, 4Geeks Academy, and Social Finance. Brought to you by United Way Miami + Social Finance + 4Geeks Academy"
       font_size: ["40px", "40px", "40px", "40px", "40px"]
     content:
       text: "United Way Miami advances the common good in communities across Miami-Dade. Focused on education, financial stability and health - we invest in the building blocks for a good quality of life."
