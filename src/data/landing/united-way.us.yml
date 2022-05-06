@@ -124,7 +124,7 @@ components:
       font_size: ["16px", "16px", "16px", "16px", "16px"]
       path: "https://marketing892162.typeform.com/to/ti4UAUrh"
     sub_heading:
-      text: '<strong style="font-weight: bold;"> Every Miami Resident with an annual income below $X (confirming this number) who is a citizen, permanent resident, or DACA recipient is invited to apply. People of color, veterans, and single female heads of household are encouraged to apply.'
+      text: "Every Miami Resident with an annual income below $35,000 annually, who is a citizen, permanent resident, or DACA recipient is invited to apply. People of color, veterans, and single female heads of household are encouraged to apply."
       font_size: ["16px", "16px", "16px", "16px", "16px"]
     button:
       text: "APPLY NOW"
@@ -236,7 +236,7 @@ components:
         <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">2. Learn software development skills</strong></h2>
         <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">3. Graduate and complete your projects</strong></h2>
         <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">4. Land a job</strong></h2>
-        <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">5. Pay back after for the program</strong></h2>
+        <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">5. Pay back for the program after you start making more than $35,000</strong></h2>
       font_size: ["16px"]
 
   - name: testimonials
@@ -279,7 +279,7 @@ components:
       style: '{ "backgroundSize": "contain", "maxHeight": "270px" }'
       src: "/images/landing/united-way-two.png"
     heading:
-      text: "The United Way Miami Workforce Project is a partnership of United Way Miami, 4Geeks Academy, and Social Finance. Brought to you by United Way Miami + Social Finance + 4Geeks Academy"
+      text: "The United Way Miami Workforce Project is a partnership of United Way Miami, 4Geeks Academy, and Social Finance."
       font_size: ["40px", "40px", "40px", "40px", "40px"]
     content:
       text: "United Way Miami advances the common good in communities across Miami-Dade. Focused on education, financial stability and health - we invest in the building blocks for a good quality of life."
