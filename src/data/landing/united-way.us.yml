@@ -122,7 +122,7 @@ components:
     content:
       text: '<br/> <br/> Learn more about <a style="color: rgb(0, 160, 218); cursor:pointer;">eligibility conditions</a> and apply'
       font_size: ["16px", "16px", "16px", "16px", "16px"]
-      path: "https://marketing892162.typeform.com/to/ti4UAUrh"
+      path: "https://storage.googleapis.com/media-breathecode/4cb23380484f3271319753963ced52c38902d2a48d220bf14ae380932ad67834"
     sub_heading:
       text: "Every Miami Resident with an annual income below $35,000 annually, who is a citizen, permanent resident, or DACA recipient is invited to apply. People of color, veterans, and single female heads of household are encouraged to apply."
       font_size: ["16px", "16px", "16px", "16px", "16px"]
