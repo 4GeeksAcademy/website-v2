@@ -120,7 +120,7 @@ components:
       text: "Program Elegibility"
       font_size: ["30px", "30px", "30px", "30px", "30px"]
     content:
-      text: '<br/> <br/> Leearn more about <a style="color: rgb(0, 160, 218); cursor:pointer;">eligibility conditions</a> and apply'
+      text: '<br/> <br/> Learn more about <a style="color: rgb(0, 160, 218); cursor:pointer;">eligibility conditions</a> and apply'
       font_size: ["16px", "16px", "16px", "16px", "16px"]
       path: "https://marketing892162.typeform.com/to/ti4UAUrh"
     sub_heading:
