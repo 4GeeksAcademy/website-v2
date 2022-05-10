@@ -63,6 +63,8 @@ partners:
       locations: ["madrid-spain"]
       image: "../../../../static/images/partner/jooble.png"
       featured: false
+      #if follow is equal to false then it will add the nofollow attribute
+      follow: true
       link: "https://es.jooble.org"
     - name: "KPMG"
       # locations: ["madrid-spain"]
