@@ -413,6 +413,7 @@ const LeadForm = ({
                   <PhoneInput
                     key={i}
                     data-cy="phone"
+                    id="phone"
                     formData={formData}
                     setVal={setVal}
                     phoneFormValues={formData["phone"]}
