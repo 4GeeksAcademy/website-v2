@@ -480,6 +480,7 @@ const Apply = (props) => {
                 value={formData.course.value || ""}
                 defaultValue={formData.course.value}
                 placeholder={yml.left.course_title.open}
+                inputId={"dropdown_program_selector"}
                 onChange={(value, valid) =>
                   setVal({ ...formData, course: { value, valid } })
                 }
@@ -497,6 +498,7 @@ const Apply = (props) => {
                   (el) => el.value === formData.location.value
                 )}
                 placeholder={yml.left.locations_title}
+                inputId={"dropdown_academy_selector"}
                 onChange={(value, valid) => {
                   setVal({ ...formData, location: { value, valid } });
                 }}

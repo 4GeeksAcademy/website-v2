@@ -42,11 +42,11 @@ context("Test Apply page with correct data", () => {
         .should("have.css", "border-color", "rgb(0, 0, 0)");
 
         
-        cy.get("#react-select-2-input").click({ force: true }).wait(2000).type("level 1 {enter}", { force: true })
+        cy.get("#dropdown_program_selector").click({ force: true }).wait(2000).type("level 1 {enter}", { force: true })
         // .click({ force: true })
         // .wait(1500)
 
-      cy.get("#react-select-3-input").click({ force: true }).wait(2000).type("miami {enter}", { force: true })
+      cy.get("#dropdown_academy_selector").click({ force: true }).wait(2000).type("miami {enter}", { force: true })
         // .wait(5000)
         // .click({ force: true })
         // .wait(3500)
