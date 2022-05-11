@@ -381,6 +381,7 @@ const LeadForm = ({
                     {_field.name !== "phone" && (
                       <Input
                         data-cy={f}
+                        id={f}
                         bgColor={inputBgColor || "#FFFFFF"}
                         type={_field.type}
                         className="form-control"

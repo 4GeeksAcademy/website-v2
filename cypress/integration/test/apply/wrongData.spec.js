@@ -26,10 +26,10 @@ context("Test Apply page with wrong data", () => {
         .should("have.css", "background-color", "rgb(250, 240, 240)"); // reject input color
       cy.get("span").contains("Please specify a valid phone number");
     });
-    cy.get("[data-cy=dropdown_program_selector]").click({ force: true }).wait(2000).type("level 1 {enter}", { force: true })
+    cy.get("#dropdown_program_selector").click({ force: true }).wait(2000).type("level 1 {enter}", { force: true })
        
 
-    cy.get("[data-cy=dropdown_academy_selector]").click({ force: true }).wait(2000).type("miami {enter}", { force: true })
+    cy.get("#dropdown_academy_selector").click({ force: true }).wait(2000).type("miami {enter}", { force: true })
   });
 
   it("Shouldn't submit the form", () => {
