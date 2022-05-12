@@ -23,7 +23,7 @@ context("Test Contact page with correct data", () => {
           .type(email, { force: true })
           .should("have.css", "border-color", "rgb(0, 0, 0)");
 
-        cy.get("#phone").type("{movetoend}" + phone);
+        cy.get("#phone").type("{movetoend}" + phone, { force: true });
 
         cy.get("[data-cy=client_comments]")
           .type(comment, { force: true })
