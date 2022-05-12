@@ -91,7 +91,7 @@ const Images_With_Marquee = (props) => {
   let imgs = [];
   props.images.map((l, i) => {
     let follow = l.follow;
-    if(typeof l.follow === "string" && l.follow === "false") follow = false;
+    if (typeof l.follow === "string" && l.follow === "false") follow = false;
     imgs.push(
       l.link ? (
         <a href={l.link} rel={!follow ? "nofollow" : ""}>
