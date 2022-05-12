@@ -50,7 +50,8 @@ header_data:
 
 features:
   marginTop: 0px #<-- separation between tagline and the bullets
-  text: '<p> <strong style="font-weight: bold;">United Way Miami Workforce Project</strong> is an exciting new coding program made possible by the collaboration of United Way Miami, Social Financing and 4Geeks that allows you to get the top education to land a new to land a job in the field of technology through Income Sharing Agreements.</p> <hr style="margin: 15px 0;"> <span style="background: rgb(255, 183, 24);font-weight: bold;">Now open and accepting applications!</span> <p>Applications will be open until May 31st, 2022</p><p>Only 100 spots available</p>'
+  text: '<p> <strong style="font-weight: bold;">The United Way Miami Workforce Project</strong> is an exciting new training program made possible by United Way Miami, 4Geeks Academy, and Social Finance.
+  </p> <hr style="margin: 15px 0;"> <span style="background: rgb(255, 183, 24);font-weight: bold;">Now open and accepting applications!</span> <p>Applications will be open until May 31st, 2022</p><p>Only 100 spots available</p>'
   styles: '{ "color": "gray", "fontWeight":"500" }'
   button:
       text: "APPLY NOW"
@@ -83,10 +84,10 @@ components:
     layout: multi_column
     swipable: True
     heading:
-      text: "How it Works"
+      text: "How It Works"
       font_size: ["30px", "30px", "30px", "30px", "30px"]
     sub_heading:
-      text: 'According to the U.S. Bureau of Labor Statistics, <strong style="font-weight: bold;">software developers in the U.S. have a higher than average job outlook and earn a median salary of $110,140 a year</strong>. <strong style="font-weight: bold;">Only 5 of them end up in an interview.</strong>'
+      text: 'According to the U.S. Bureau of Labor Statistics, <strong style="font-weight: bold;">software developers in the U.S. have a higher than average job outlook and earn a median salary of $110,140 a year</strong>.'
       font_size: ["16px", "16px", "16px", "16px", "16px"]
       style: '{ "textAlign": "center", "width": "60%" }'
     columns:
@@ -94,21 +95,21 @@ components:
           style: '{ "backgroundSize": "contain", "height": "130px" }'
           src: "/images/landing/graduated-icon.png"
         content: 
-          text: "Apply and, if meeting the program requirements (below), you will be accepted into the United Way Miami Workforce Program."
+          text: "Apply to the United Way Miami Workforce Program to jumpstart your career in coding."
           font_size: ["16px"]
         size: [3,3,3,3]
       - image:
           style: '{ "backgroundSize": "contain", "height": "130px" }'
           src: "/images/landing/pc-icon.png"
         content: 
-          text: "Once accepted, applicants (now Students) enroll in the 4Geeks Full-Stack Software Development Program. 4Geeks provides quality training and offers wraparound supports—like resume and career coaching—to help participants find jobs after graduating."
+          text: "Once accepted, students enroll in the 4Geeks Full-Stack Software Development Program. 4Geeks provides quality training and offers wraparound supports—like resume review and career coaching—to help participants find jobs after graduating."
           font_size: ["16px"]
         size: [3,3,3,3]
       - image:
           style: '{ "backgroundSize": "contain", "height": "130px" }'
           src: "/images/landing/cicle-icon.png"
         content: 
-          text: "Participants will pay program costs after they start jobs making more than $35,000 a year. Participants who don't find a job and keep jobs with salaries below $35,000 pay nothing"
+          text: "Participants pay program costs after they start jobs making more than $35,000 a year. Participants who don't find a job or keep jobs with salaries above $35,000 pay nothing"
           font_size: ["16px"]
         size: [3,3,3,3]
 
@@ -122,9 +123,9 @@ components:
     content:
       text: '<br/> <br/> Learn more about <a style="color: rgb(0, 160, 218); cursor:pointer;">eligibility conditions</a> and apply'
       font_size: ["16px", "16px", "16px", "16px", "16px"]
-      path: "https://storage.googleapis.com/media-breathecode/4cb23380484f3271319753963ced52c38902d2a48d220bf14ae380932ad67834"
+      path: "https://storage.googleapis.com/media-breathecode/d876c431bdf4367823794cea78762a413cf0651ac247638a2741f5b935b724b5"
     sub_heading:
-      text: "Every Miami Resident with an annual income below $35,000 annually, who is a citizen, permanent resident, or DACA recipient is invited to apply. People of color, veterans, and single female heads of household are encouraged to apply."
+      text: "Any Miami resident with an annual income below the Area Median Income, who is a citizen, permanent resident, or DACA recipient is invited to apply. <strong style="font-weight: bold;"> People of color, veterans, and single female heads of household </strong> are encouraged to apply."
       font_size: ["16px", "16px", "16px", "16px", "16px"]
     button:
       text: "APPLY NOW"
@@ -207,7 +208,7 @@ components:
         <br>
         <p><span style="background: rgb(255, 183, 24);font-weight: bold;">Our coding bootcamps are designed to be flexible so that anyone, even learners raising children or working full-time, can enroll and succeed.</p>
         <br>
-        <p>This <strong style="font-weight: bold;font-size:20px;">part-time 16-week</strong>, 16-week course will teach you the skills you need to succeed as a software developer." </p>
+        <p>This <strong style="font-weight: bold;font-size:20px;">part-time 16-week</strong> program will teach you the skills you need to succeed as a software developer." </p>
         <br>
         <h2><strong style="font-weight: bold;font-size:20px;color:black;">Are you ready to break down obstacles and start a new career?,</strong></h2>
     
@@ -232,7 +233,7 @@ components:
       path: "https://marketing892162.typeform.com/to/ti4UAUrh"
     content:
       text: |
-        <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">1. Enroll and join the program</strong></h2>
+        <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">1. Enroll in the program</strong></h2>
         <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">2. Learn software development skills</strong></h2>
         <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">3. Graduate and complete your projects</strong></h2>
         <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">4. Land a job</strong></h2>
@@ -279,7 +280,7 @@ components:
       style: '{ "backgroundSize": "contain", "maxHeight": "270px" }'
       src: "/images/landing/united-way-two.png"
     heading:
-      text: "The United Way Miami Workforce Project is a partnership of United Way Miami, 4Geeks Academy, and Social Finance."
+      text: "The United Way Miami Workforce Project is a partnership between United Way Miami, 4Geeks Academy, and Social Finance."
       font_size: ["40px", "40px", "40px", "40px", "40px"]
     content:
       text: "United Way Miami advances the common good in communities across Miami-Dade. Focused on education, financial stability and health - we invest in the building blocks for a good quality of life."
