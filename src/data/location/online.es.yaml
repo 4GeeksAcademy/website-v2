@@ -304,7 +304,7 @@ gdpr_compliant: true # do we need to ask for permision?
 in_person_available: false # important to accept in-person applicants
 
 city: "Resto de LATAM"
-name: "Resto de LATAM Online/Remoto"
+name: "Resto de LATAM"
 latitude: "10000.760158"
 longitude: "-800000.200154"
 address: "1801 SW 18th Road"

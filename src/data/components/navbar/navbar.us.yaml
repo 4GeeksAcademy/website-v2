@@ -136,8 +136,6 @@ navbar:
               link_to: "/us/coding-campus/coding-bootcamp-argentina"
             - title: "Bolivia"
               link_to: "/us/coding-campus/coding-bootcamp-bolivia"
-            - title: "Europe"
-              link_to: "/us/coding-campus/europe-online-coding-bootcamp"
             - title: "Costa Rica"
               link_to: "/us/coding-campus/coding-bootcamp-costa-rica"
             - title: "Orlando, USA"
@@ -159,6 +157,8 @@ navbar:
           sub_links:
             - title: "Madrid, Spain"
               link_to: "/us/coding-campus/coding-bootcamp-madrid"
+            - title: "Rest of Europe"
+              link_to: "/us/coding-campus/europe-online-coding-bootcamp"
   - name: "Upcoming Dates"
     link: "/us/next-dates"
 
