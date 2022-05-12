@@ -16,8 +16,12 @@ export const save_form = async (
   if (typeof formData !== "object") throw Error("Missing formData");
   const getEnvironmentAPI = () => {
     if (process.env.NODE_ENV === "development") {
+      console.log("development");
+      console.log(process.env.GATSBY_BREATHECODE_TEST);
       return process.env.GATSBY_BREATHECODE_TEST;
     } else {
+      console.log("host");
+      console.log(process.env.GATSBY_BREATHECODE_HOST);
       return process.env.GATSBY_BREATHECODE_HOST;
     }
   };
