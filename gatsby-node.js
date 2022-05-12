@@ -8,8 +8,6 @@ var ymls = [];
 
 const saveRedirectLogs = () => {
   console.log("Saving redirect log");
-  console.log("process.env.GATSBY_BREATHECODE_TEST");
-  console.log(process.env.GATSBY_BREATHECODE_TEST);
   fs.writeFile(
     "./public/redirects.log",
     JSON.stringify(redirects, null, 1),
