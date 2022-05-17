@@ -472,13 +472,14 @@ const Apply = (props) => {
                                 /> */}
               </Div>
             </Grid>
-            <Div data-cy="dropdown_program_selector" margin_tablet="0 0 23px 0">
+            <Div data-cy="dropdown_program_selector" tabindex="1" margin_tablet="0 0 23px 0">
               <SelectRaw
                 bgColor={Colors.white}
                 options={programs}
                 value={formData.course.value || ""}
                 defaultValue={formData.course.value}
                 placeholder={yml.left.course_title.open}
+                inputId={"dropdown_program_selector"}
                 onChange={(value, valid) =>
                   setVal({ ...formData, course: { value, valid } })
                 }
@@ -487,14 +488,16 @@ const Apply = (props) => {
             {formStatus.status === "error" && !formData.location.valid && (
               <Alert color="red">Please pick a location</Alert>
             )}
-            <Div data-cy="dropdown_academy_selector" margin_tablet="0 0 23px 0">
+            <Div data-cy="dropdown_academy_selector" tabindex="1" contenteditable="true" margin_tablet="0 0 23px 0">
               <SelectRaw
+                tabindex="1"
                 bgColor={Colors.black}
                 options={locations && locations}
                 value={locations?.find(
                   (el) => el.value === formData.location.value
                 )}
                 placeholder={yml.left.locations_title}
+                inputId={"dropdown_academy_selector"}
                 onChange={(value, valid) => {
                   setVal({ ...formData, location: { value, valid } });
                 }}

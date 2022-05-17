@@ -159,6 +159,7 @@ export const SelectRaw = ({ onChange, ...rest }) => {
   return (
     <Select
       className="react-select-wrapper"
+      data-cy="react_select_wrapper"
       styles={customStyles}
       {...rest}
       onChange={(opt) => {

@@ -13,7 +13,7 @@ jobs:
     name: Test with Server
     runs-on: ubuntu-latest
     env: # environment variable
-      GATSBY_BREATHECODE_HOST: https://breathecode-cypress.herokuapp.com/v1
+      GATSBY_BREATHECODE_HOST: https://breathecode-test.herokuapp.com/v1
     strategy:
       matrix:
         node: [14.x]
