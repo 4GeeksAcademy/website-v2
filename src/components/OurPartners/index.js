@@ -90,9 +90,11 @@ const Images_With_Slider = (props) => {
 const Images_With_Marquee = (props) => {
   let imgs = [];
   props.images.map((l, i) => {
+    let follow = l.follow;
+    if (typeof l.follow === "string" && l.follow === "false") follow = false;
     imgs.push(
       l.link ? (
-        <a href={l.link} rel={!l.follow ? "nofollow" : ""}>
+        <a href={l.link} rel={!follow ? "nofollow" : ""}>
           <GatsbyImage
             key={i}
             style={{ minWidth: "120px", border: 0, cursor: "pointer" }}

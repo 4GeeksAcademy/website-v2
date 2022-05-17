@@ -132,11 +132,10 @@ const Calendar = (props) => {
         cohorts: {
           ...datas.cohorts,
           catalog: [{ label: "All Locations", value: null }].concat(
-            session.locations
-              .map((l) => ({
-                label: l.name,
-                value: l.breathecode_location_slug,
-              }))
+            session.locations.map((l) => ({
+              label: l.name,
+              value: l.breathecode_location_slug,
+            }))
           ),
         },
       };
