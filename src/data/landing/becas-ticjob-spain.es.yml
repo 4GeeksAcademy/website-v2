@@ -35,7 +35,7 @@ form:
 header_data:
   tagline: "+300.000€ en Becas"
   sub_heading: ""
-  partner_logo_url: "../../../static/images/partner/new_logo_ticjob.png"
+  partner_logo_url: "../../../static/images/partner/logo-ticjob-blanco.png"
   background_image: "../../../static/images/bg/community.png"
   image_filter: brightness(0.3)
 
