@@ -4,6 +4,7 @@ meta_info:
   description: "Conviérte en un Ingeniero de Software y obtén un trabajo de clase mundial con 4Geeks Academy"
   bc_slug: "software-engineering"
   image: ""
+  visibility: "visible"
   template: "course-engineering"
   keywords: ""
   redirects: ["/ingenieria-software", "/es/software-engineering", "/es/course/ingenieria-software"]

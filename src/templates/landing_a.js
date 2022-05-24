@@ -1284,6 +1284,7 @@ export const query = graphql`
             text
             link
             bc_slug
+            visibility
             location_bc_slug
             schedule
           }

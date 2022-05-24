@@ -45,12 +45,12 @@ const Apply = (props) => {
     referral_key: { value: null, valid: true },
     course: { value: null, valid: false },
   });
-  const programs = data.allChooseProgramYaml.edges[0].node.programs.map(
-    (p) => ({
+  const programs = data.allChooseProgramYaml.edges[0].node.programs
+    .filter((p) => !["unlisted", "hidden"].includes(p.visibility))
+    .map((p) => ({
       label: p.text,
       value: p.bc_slug,
-    })
-  );
+    }));
 
   const locationContext = session && session.location;
 
@@ -472,7 +472,11 @@ const Apply = (props) => {
                                 /> */}
               </Div>
             </Grid>
-            <Div data-cy="dropdown_program_selector" tabindex="1" margin_tablet="0 0 23px 0">
+            <Div
+              data-cy="dropdown_program_selector"
+              tabindex="1"
+              margin_tablet="0 0 23px 0"
+            >
               <SelectRaw
                 bgColor={Colors.white}
                 options={programs}
@@ -488,7 +492,12 @@ const Apply = (props) => {
             {formStatus.status === "error" && !formData.location.valid && (
               <Alert color="red">Please pick a location</Alert>
             )}
-            <Div data-cy="dropdown_academy_selector" tabindex="1" contenteditable="true" margin_tablet="0 0 23px 0">
+            <Div
+              data-cy="dropdown_academy_selector"
+              tabindex="1"
+              contenteditable="true"
+              margin_tablet="0 0 23px 0"
+            >
               <SelectRaw
                 tabindex="1"
                 bgColor={Colors.black}
@@ -733,6 +742,7 @@ export const query = graphql`
             text
             link
             bc_slug
+            visibility
             location_bc_slug
             schedule
           }

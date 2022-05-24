@@ -6,7 +6,7 @@ meta_info:
   image: ""
   keywords: ""
   # it will not show up on the applications forms
-  unlisted: false
+  visibility: "visible"
   redirects: ["/us/mexico", "/mexico"]
   region: "america"
 
@@ -28,11 +28,11 @@ button:
   cohort_more_details_text: "DETAILS"
 
 custom_bar:
-  active: false
-  message: Lorem ipsum dot simet mosd ei
-  button: 
-    label: "Read More"
-    path: "#" #string (can be inline path using #, relative path or absolute path)
+  active: true
+  message: Become a fullstack developer, and get lifetime mentoring starting at $150 per month
+#  button: 
+#    label: "Read More"
+#    path: "#" #string (can be inline path using #, relative path or absolute path)
 
 badges:
   title: ""

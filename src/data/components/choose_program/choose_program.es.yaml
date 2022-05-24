@@ -1,18 +1,27 @@
 programs:
   - text: "Nivel 1: Full-Stack Developer"
     bc_slug: full-stack
+    visibility: "visible"
     location_bc_slug: null #<--- puedes cambiar la location cuando hagan click
     schedule: "Horario Part-Time and Full-Time"
     link: "/es/coding-bootcamps/full-stack-part-time"
   - text: "Nivel 2: Ingeniero de Software"
     bc_slug: software-engineering
+    visibility: "visible"
     location_bc_slug: null
     schedule: "Horario Part-Time únicamente"
     link: "/es/coding-bootcamps/ingenieria-de-software-programacion"
   - text: "Machine Learning Engineering"
     bc_slug: "machine-learning-engineering"
+    visibility: "visible"
     location_bc_slug: online
     schedule: "Part-Time - Online"
     link: "/es/coding-bootcamps/curso-inteligencia-artificial"
+  - text: "Node.js Desarrollo Backend"
+    bc_slug: "node-js"
+    location_bc_slug: null
+    schedule: "Part-Time - Online"
+    visibility: "unlisted"
+    link: "/es/coding-bootcamps/curso-de-node-js-backend"
 open_button_text: "SELECCIONAR PROGRAMA"
 close_button_text: "Close"

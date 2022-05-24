@@ -156,6 +156,7 @@ export const Navbar = ({
             programs {
               text
               link
+              visibility
               location_bc_slug
               schedule
             }

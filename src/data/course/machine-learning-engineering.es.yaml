@@ -4,6 +4,7 @@ meta_info:
   description: "Nuestro nuevo curso de Inteligencia Artificial y Machine Learning, te ayudará a dominar las técnicas de codificación."
   bc_slug: "machine-learning-engineering"
   image: ""
+  visibility: "visible"
   template: "course-machine-learning"
   keywords: ""
   redirects: ["/es/machine-learning"]

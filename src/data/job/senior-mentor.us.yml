@@ -1,6 +1,7 @@
 meta_info:
   slug: "coding-instructor"
   title: "Coding Instructor"
+  visibility: "visible"
   description: "The brightest minds have always taken time taught what they know, become a coding teacher at 4Geeks Academy."
   template: "job" # js component that will be handling the rendering
   open: true #if true, this job will be accepting candidates

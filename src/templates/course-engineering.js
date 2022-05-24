@@ -816,7 +816,7 @@ export const query = graphql`
     allLocationYaml(
       filter: {
         fields: { lang: { eq: $lang } }
-        meta_info: { unlisted: { ne: true } }
+        meta_info: { visibility: { nin: ["hidden", "unlisted"] } }
       }
     ) {
       edges {
@@ -840,7 +840,7 @@ export const query = graphql`
             description
             image
             position
-            unlisted
+            visibility
             keywords
             redirects
           }

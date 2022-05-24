@@ -4,6 +4,7 @@ meta_info:
   description: "Our new course: Machine Learning Engineering, will help you master advanced coding techniques and get hired by the biggest tech companies"
   bc_slug: "machine-learning-engineering"
   image: ""
+  visibility: "visible"
   template: "course-machine-learning"
   keywords: ""
   redirects: ["/us/machine-learning"]

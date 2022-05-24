@@ -109,30 +109,34 @@ const ChooseProgram = (props) => {
           shadow="0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)"
         >
           {Array.isArray(props.programs) &&
-            props.programs.map((item, index) => {
-              return (
-                <Button
-                  width={props.width}
-                  key={index}
-                  font='"Lato", sans-serif'
-                  colorHover={Colors.lightBlue}
-                  onClick={() => {
-                    if (item.location_bc_slug)
-                      setLocation(item.location_bc_slug);
-                    navigate(item.link);
-                  }}
-                  textColor={Colors.gray}
-                  fontSize={"16px"}
-                  borderRadius="3px"
-                  padding="10px"
-                >
-                  {item.text}
-                  {item.schedule && item.schedule != "" && (
-                    <Schedule>{item.schedule}</Schedule>
-                  )}
-                </Button>
-              );
-            })}
+            props.programs
+              .filter(
+                (item) => !["unlisted", "hidden"].includes(item.visibility)
+              )
+              .map((item, index) => {
+                return (
+                  <Button
+                    width={props.width}
+                    key={index}
+                    font='"Lato", sans-serif'
+                    colorHover={Colors.lightBlue}
+                    onClick={() => {
+                      if (item.location_bc_slug)
+                        setLocation(item.location_bc_slug);
+                      navigate(item.link);
+                    }}
+                    textColor={Colors.gray}
+                    fontSize={"16px"}
+                    borderRadius="3px"
+                    padding="10px"
+                  >
+                    {item.text}
+                    {item.schedule && item.schedule != "" && (
+                      <Schedule>{item.schedule}</Schedule>
+                    )}
+                  </Button>
+                );
+              })}
         </Row>
       )}
     </ChooseWrap>

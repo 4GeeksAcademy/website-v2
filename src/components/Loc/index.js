@@ -56,7 +56,9 @@ const Loc = ({ locations, title, paragraph, lang }) => {
     getData();
   }, []);
   let loc = locations
-    .filter((l) => l.node.meta_info.unlisted != true)
+    .filter(
+      (l) => !["unlisted", "hidden"].includes(l.node.meta_info.visibility)
+    )
     .sort((a, b) =>
       a.node.meta_info.position > b.node.meta_info.position ? 1 : -1
     );

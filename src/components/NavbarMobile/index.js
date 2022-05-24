@@ -154,6 +154,7 @@ export const NavbarMobile = ({
             programs {
               text
               link
+              visibility
               location_bc_slug
               schedule
             }

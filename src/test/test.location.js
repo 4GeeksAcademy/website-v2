@@ -86,6 +86,9 @@ walk(`${__dirname}/../data/location`, async (err, files) => {
     if (slugs.length === _files.length) checkForLanguages(slugs, "location");
 
     try {
+      if (!doc || doc === undefined)
+        fail(`Impossible to load YML file for ${_slug}`);
+
       const location = doc.yaml;
       const meta_keys = Object.keys(location);
 

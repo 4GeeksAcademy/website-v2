@@ -28,7 +28,7 @@ button:
 
 custom_bar:
   active: true
-  message: 25% OFF for women this March! <a class="customBar-link" href="/apply" taget="_blank" rel="noopener noreferrer nofollow">Apply</a> and become a Full-Stack Developer in 16 weeks!
+  message: Become a fullstack developer, get lifetime career and coding mentorship.
   # button: 
   #  label: "Read More"
   #  path: "#" #string (can be inline path using #, relative path or absolute path)
