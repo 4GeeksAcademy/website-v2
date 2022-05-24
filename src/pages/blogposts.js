@@ -105,7 +105,6 @@ const BlogPosts = () => (
                   <th scope="col">Title</th>
                   <th scope="col">Topic Cluster</th>
                   <th scope="col">Status</th>
-                  {/* <th scope="col">template</th> */}
                 </tr>
               </thead>
               <tbody>
@@ -116,15 +115,8 @@ const BlogPosts = () => (
                         <Anchor
                           to={`/${node.fields.slug}`}
                         >
-                          {node.frontmatter.title}
+                          {`[${node.fields.lang}] ${node.frontmatter.title}`}
                         </Anchor>
-                        {/* {" - "}
-                        <a
-                          target="_blank"
-                          href={`https://github.com/4GeeksAcademy/website-v2/blob/master/src/data/landing/`}
-                        >
-                          edit
-                        </a> */}
                       </td>
                       <td>{node.frontmatter.cluster}</td>
                       <td>{node.frontmatter.status}</td>
