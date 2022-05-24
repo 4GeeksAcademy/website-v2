@@ -31,11 +31,11 @@ button:
   cohort_more_details_text: "DETALLES"
 
 custom_bar:
-  active: false
-  message: Lorem ipsum dot simet mosd ei
-  button: 
-    label: "Read More"
-    path: "#" #string (can be inline path using #, relative path or absolute path)
+  active: true
+  message: Conviértete en programador por aprox. COP 600.000 al mes
+#  button: 
+#    label: "Read More"
+#    path: "#" #string (can be inline path using #, relative path or absolute path)
 
 badges:
   title: ""
