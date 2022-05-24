@@ -3,10 +3,10 @@ meta_info:
 
   visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   # This will show on social media when shared
-  title: "¡Obtén tu beca ahora!"
-  description: "La programación se ha convertido en un conocimiento escencial para tu éxito profesional, aprende a programar con 4Geeks Academy"
+  title: "500.000€ en becas ¡Aplica ahora!"
+  description: "Aprende a programar en 4Geeks Academy a un precio imbatible. Becas superiores al 40%. ¡Lanza tu carrera!"
   image: "/images/bg/remote.jpeg"
-  keywords: "Aprende a programar, 4Geeks academy, aprende programación, aprende ingeniería informática"
+  keywords: "Aprende a programar, 4Geeks academy, aprende programación, aprende ingeniería informática, aprende Inteligencia Artificial, aprende Data Science, aprende Machine Learning, ticjob"
 
   template: "landing_nonav" # <--- choose your landing template
   redirects: ["/landing/becas-ticjob-españa"] # <--- URL redirections to avoid 404 errors
@@ -33,37 +33,37 @@ form:
 
 # jumbotron on the top (cannot be commented out)
 header_data:
-  tagline: "+300.000€ en Becas"
+  tagline: "+500.000€ en Becas"
   sub_heading: ""
   partner_logo_url: "../../../static/images/partner/logo-ticjob-blanco.png"
   background_image: "../../../static/images/bg/community.png"
-  image_filter: brightness(0.3)
+  image_filter: brightness(0.2)
 
 features:
   marginTop: 0px #<-- separation between tagline and the bullets
 
   #                                         up   left down  right
-  styles: '{ "fontSize": "16.5px", "line-height": "1.8", "margin": "10px 0px 10px 0px", "letter-spacing": ".5px" }'
-  text: Ticjob ofrece más de 300.000€ en Becas a sus usuarios para formación intensiva en 4Geeks Academy. No te quedes atrás, actualiza tus conocimientos o refuerza tu perfil estudiando Desarrollo Web o Inteligencia Artificial. Impulsarás tu carrera junto a una de las mejores comunidades de desarrolladores del mundo.  Como mínimo se te descontarán 1.100€ dependiendo de tu proceso de selección.  ¿Listo para unirte y cambiar tu vida?
+  styles: '{ "fontSize": "16.5px", "line-height": "2", "margin": "10px 0px 10px 0px", "letter-spacing": ".5px" }'
+  text: Ticjob ofrece más de 500.000€ en Becas a sus usuarios para formación intensiva en 4Geeks Academy. No te quedes atrás, actualiza tus conocimientos o refuerza tu perfil estudiando Desarrollo Web o Inteligencia Artificial. Impulsarás tu carrera junto a una de las mejores comunidades de Desarrolladores del mundo. Como mínimo se te descontarán 2.200€ dependiendo de tu proceso de selección.  ¿Listo para unirte y reinventar tu futuro?
   bullets:
-    - 110 becas en total, la mayoría superiores al 40%  
-    - Programas Full-Stack y AI/Machine Learning (avanzado)
+    - +150 becas, la mayoría superiores al 40%  
+    - Programas Full-Stack (desde 0) y AI/Machine Learning (avanzado)
     - Formato part-time (16 semanas)
 
 follow_bar:
   position: "top" # top, bottom, hidden
   content:
     text: "Solicita tu beca Ticjob ahora. \n Planes de pago de hasta 24 meses."
-    text_mobile: "Becas de Ticjob. \n Plan de pago de 24 m."
+    text_mobile: "Becas Ticjob. \n Plan de pago de hasta 24 m."
     # devices:    XL      LG      MD      SM      XS
     font_size: ["24px", "24px", "24px", "18px", "4.3vw"]
   button:
-    text: "Aplica ahora"
+    text: "Aplica ya"
     path: "#top" #top, #bottom, #anotherComponentId
     # ├──if path is empty("") it point to top per default ("#" -> points to top)
     # └── path accepts: relative(/example/path), absolute(https://google.com) or id(#idName)
   phone:
-    text: "Llama"
+    text: "Llama "
     number: null # change only if need to customize
 
 #
@@ -76,12 +76,12 @@ badges:
 about4Geeks:
   position: 2
   heading: ¿Qué hace a 4Geeks diferente? 
-  sub_heading: "Educación flexible e intensiva basada en metodologías disruptivas y eficaces como flipped classroom o learning by doing. +400 horas de aprendizaje práctico (ejercicios, proyectos). Te prepararemos para afrontar procesos de selección y encontrar un nuevo trabajo en tecnología."
+  sub_heading: "Educación flexible e intensiva basada en metodologías disruptivas y eficaces como flipped classroom o learning by doing. +400 horas de aprendizaje práctico (ejercicios, proyectos). Te acompañaremos y prepararemos para afrontar procesos de selección y encontrar un nuevo trabajo en tecnología."
   list:
-    - title: "GeekPal:  Mentorías 1:1 ilimitadas (live support)"
-    - title: "Grupos reducidos. Ratio 1:7 profesor alumno."
-    - title: " GeekForce: Apoyo profesional de por vida"
-    - title: "Acceso 24/7 a nuestra plataforma y comunidad"
+    - title: "GeekPal:  Mentorías 1:1 (live support) ilimitadas y de por vida."
+    - title: "Grupos reducidos (máximo 14 personas). Ratio 1:7 profesor alumno."
+    - title: " GeekForce: Apoyo profesional para siempre."
+    - title: "Acceso 24/7 a nuestra plataforma de aprendizaje y comunidad de +3000 Developers."
   paragraph: ""
   button_text: "Aplica ahora"
   button_link: "#" # accepts url: relative(/us/apply), absolute(https://google.com) or component id(#componentName)
@@ -92,7 +92,7 @@ iconogram:
   position: 3
   icons:
   - icon: "touch"
-    title: completa el formulario antes del 24 de junio
+    title: completa el formulario antes del 1 de julio
   - icon: "receive_mail"
     title: recibirás un correo electrónico con toda la información para avanzar en el proceso
   - icon: "talk"
@@ -103,7 +103,7 @@ iconogram:
 who_is_hiring:
   position: 4
   heading: "DÓNDE TRABAJAN NUESTROS ESTUDIANTES"
-  sub_heading: "Consigue un trabajo en menos de 3 meses gracias a nuestra creciente red de más de 500 socios de contratación. Accede a ofertas nacionales e internacionales y a una comunidad de más de 3500 graduados"
+  sub_heading: "Consigue un trabajo en menos de 3 meses gracias a nuestra creciente red de más de 500 socios de contratación. Accede a ofertas nacionales e internacionales y a una comunidad de más de 3500 graduados."
   featured:
     - name: "Facebook"
       image: "../../../static/images/partner/facebook.png"
@@ -115,7 +115,7 @@ who_is_hiring:
 choose_your_program:
   position: 5
   title: Nuestros Programas
-  paragraph: Programas en formato part-time con clases en vivo impartidas por profesionales de la programación del mundo real y diseñados pensando en lo que las empresas demandan
+  paragraph: Programas en formato part-time con clases en vivo impartidas por profesionales de la programación del mundo real y diseñados pensando en lo que las empresas demandan.
   programs:
   - title: "Full-Stack Developer"
     sub_title: "Nivel 1"
@@ -159,8 +159,8 @@ components:
     content:
       text: "Nuestros programas están basados en el uso de Phyton y Javascript. ¿La razón? En el mercado laboral JavaScript tiene 26 veces más vacantes de trabajo que Ruby on Rails. Python tiene 10 veces más oportunidades que Node.JS. Además, están entre las carreras mejor pagadas en todo el mundo.
              
-             Otras herramientas que también aprenderás a usar en nuestros programas son: GitHub, Git, React, Amazon Web Services, Pandas, Maptolib, Plotly, etc."
-      font_size: ["16px"]
+             Otras herramientas que también aprenderás a usar en nuestros programas son: GitHub, Git, React, Amazon Web Services, Pandas, Matplotlib, Plotly, etc."
+      font_size: ["17px"]
 
 why_4geeks:
   position: 7
