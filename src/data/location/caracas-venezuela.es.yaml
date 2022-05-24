@@ -33,7 +33,7 @@ button:
 
 custom_bar:
   active: true
-  message: 25% OFF en el mes de la mujer! <a class="customBar-link" href="/es/aplica" taget="_blank" rel="noopener noreferrer nofollow">Aplica</a> y conviértete en Full-Stack Developer.
+  message: Aplica y conviértete en Full-Stack Developer
 #   button:
 #     label: "Read More"
 #     path: "#" #string (can be inline path using #, relative path or absolute path)
