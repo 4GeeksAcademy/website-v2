@@ -29,11 +29,11 @@ button:
   cohort_more_details_text: "DETALLES"
 
 custom_bar:
-  active: false
-  message: Lorem ipsum dot simet mosd ei
-  button: 
-    label: "Read More"
-    path: "#" #string (can be inline path using #, relative path or absolute path)
+  active: true
+  message: Conviértete en programador. Recibe mentoría de código y de carrera de por vida. Paga desde $150 al mes.
+  # button: 
+    # label: "Read More"
+    # path: "#" #string (can be inline path using #, relative path or absolute path)
 
 badges:
   title: ""
