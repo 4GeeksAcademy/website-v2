@@ -125,7 +125,8 @@ components:
       font_size: ["16px", "16px", "16px", "16px", "16px"]
       path: "https://storage.googleapis.com/media-breathecode/d876c431bdf4367823794cea78762a413cf0651ac247638a2741f5b935b724b5"
     sub_heading:
-      text: "Any Miami resident with an annual income below the Area Median Income, who is a citizen, permanent resident, or DACA recipient is invited to apply. <strong style="font-weight: bold;"> People of color, veterans, and single female heads of household </strong> are encouraged to apply."
+      text: |
+        Any Miami resident with an annual income below the Area Median Income, who is a citizen, permanent resident, or DACA recipient is invited to apply. <strong style="font-weight: bold;"> People of color, veterans, and single female heads of household </strong> are encouraged to apply.
       font_size: ["16px", "16px", "16px", "16px", "16px"]
     button:
       text: "APPLY NOW"
