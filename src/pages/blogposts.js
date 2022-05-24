@@ -53,33 +53,33 @@ const BlogPosts = () => (
     query={graphql`
       query BlogpostsQuery {
         allMarkdownRemark(sort: { fields: frontmatter___date, order: DESC }) {
-            edges {
-              node {
-                html
-                id
-                frontmatter {
-                  title
-                  slug
-                  template
-                  author
-                  date
-                  status
-                  featured
-                  cluster
-                }
-                excerpt
-                fields {
-                  lang
-                  slug
-                  file_name
-                  defaultTemplate
-                  type
-                  pagePath
-                  filePath
-                }
+          edges {
+            node {
+              html
+              id
+              frontmatter {
+                title
+                slug
+                template
+                author
+                date
+                status
+                featured
+                cluster
+              }
+              excerpt
+              fields {
+                lang
+                slug
+                file_name
+                defaultTemplate
+                type
+                pagePath
+                filePath
               }
             }
           }
+        }
       }
     `}
     render={(data) => {
@@ -112,9 +112,7 @@ const BlogPosts = () => (
                   posts.map(({ node }) => (
                     <tr>
                       <td>
-                        <Anchor
-                          to={`/${node.fields.slug}`}
-                        >
+                        <Anchor to={`/${node.fields.slug}`}>
                           {`[${node.fields.lang}] ${node.frontmatter.title}`}
                         </Anchor>
                       </td>

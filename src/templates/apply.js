@@ -472,7 +472,11 @@ const Apply = (props) => {
                                 /> */}
               </Div>
             </Grid>
-            <Div data-cy="dropdown_program_selector" tabindex="1" margin_tablet="0 0 23px 0">
+            <Div
+              data-cy="dropdown_program_selector"
+              tabindex="1"
+              margin_tablet="0 0 23px 0"
+            >
               <SelectRaw
                 bgColor={Colors.white}
                 options={programs}
@@ -488,7 +492,12 @@ const Apply = (props) => {
             {formStatus.status === "error" && !formData.location.valid && (
               <Alert color="red">Please pick a location</Alert>
             )}
-            <Div data-cy="dropdown_academy_selector" tabindex="1" contenteditable="true" margin_tablet="0 0 23px 0">
+            <Div
+              data-cy="dropdown_academy_selector"
+              tabindex="1"
+              contenteditable="true"
+              margin_tablet="0 0 23px 0"
+            >
               <SelectRaw
                 tabindex="1"
                 bgColor={Colors.black}
