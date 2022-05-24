@@ -4,6 +4,7 @@ meta_info:
   description: ""
   bc_slug: "full-stack-ft"
   image: ""
+  visibility: "visible"
   keywords: ""
   redirects:
     [

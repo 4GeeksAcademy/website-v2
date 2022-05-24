@@ -372,7 +372,7 @@ export const query = graphql`
             slug
             title
             description
-            unlisted
+            visibility
             position
             image
             keywords
@@ -560,6 +560,7 @@ export const query = graphql`
           programs {
             text
             link
+            visibility
             location_bc_slug
             schedule
           }

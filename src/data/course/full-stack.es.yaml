@@ -4,6 +4,7 @@ meta_info:
   description: "Full stack part time es un coding bootcamp a nivel mundial que se especializa en la programación e informatica, no tienes que dejar tu trabajo para aprender"
   bc_slug: "full-stack"
   image: ""
+  visibility: "visible"
   keywords: "Bootcamp, Full Stack, part time"
   redirects:
     [

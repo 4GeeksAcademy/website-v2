@@ -51,6 +51,7 @@ const LandingNavbar = ({ lang, onToggle, buttonUrl, logoUrl, buttonText }) => {
             programs {
               text
               link
+              visibility
               location_bc_slug
               schedule
             }

@@ -45,12 +45,12 @@ const Apply = (props) => {
     referral_key: { value: null, valid: true },
     course: { value: null, valid: false },
   });
-  const programs = data.allChooseProgramYaml.edges[0].node.programs.map(
-    (p) => ({
+  const programs = data.allChooseProgramYaml.edges[0].node.programs
+    .filter((p) => !["unlisted", "hidden"].includes(p.visibility))
+    .map((p) => ({
       label: p.text,
       value: p.bc_slug,
-    })
-  );
+    }));
 
   const locationContext = session && session.location;
 
@@ -742,6 +742,7 @@ export const query = graphql`
             text
             link
             bc_slug
+            visibility
             location_bc_slug
             schedule
           }

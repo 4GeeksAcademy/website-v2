@@ -38,7 +38,7 @@ export default ({ children }) => {
             online_available
             meta_info {
               slug
-              unlisted
+              visibility
               position
             }
             button {

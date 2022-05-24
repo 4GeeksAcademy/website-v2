@@ -37,7 +37,6 @@ const SEO = (props) => (
         author,
         context,
         keywords,
-        unlisted,
         visibility,
       } = props;
       const { lang, type, pagePath } = context;
@@ -58,10 +57,9 @@ const SEO = (props) => (
               content={description || excerpt || defaultDescription[lang]}
             />
             <meta name="keywords" content={_keywords} />
-            {(unlisted === true ||
-              ["hidden", "unlisted"].includes(
-                context.visibility || visibility
-              )) && <meta name="robots" content="noindex" />}
+            {["hidden", "unlisted"].includes(
+              context.visibility || visibility
+            ) && <meta name="robots" content="noindex" />}
             <meta name="image" content={previewImage} />
             {type === "blog" ? (
               <meta property="og:type" content="article" />
