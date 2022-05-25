@@ -410,6 +410,7 @@ export const query = graphql`
               name
               locations
               link
+              follow
               image {
                 childImageSharp {
                   gatsbyImageData(

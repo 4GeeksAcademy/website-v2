@@ -28,6 +28,7 @@ const PhoneInput = ({
   searchClass = "",
   disableSearchIcon = false,
   searchStyle,
+  id,
   searchPlaceholder = "search",
   autocompleteSearch = false,
   searchNotFound = "No entries to show",
@@ -263,6 +264,7 @@ const PhoneInput = ({
         onChange={(e) => handlePhoneInput(e)}
         value={phoneNumber}
         type="phone"
+        id={id ? id : "phone"}
         // mask="+1\(999) 999-9999"/
         mask={getCountryPhoneMask()}
         maskChar=""
