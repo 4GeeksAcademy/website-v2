@@ -95,7 +95,7 @@ components:
           style: '{ "backgroundSize": "contain", "height": "130px" }'
           src: "/images/landing/graduated-icon.png"
         content: 
-          text: "Apply to the United Way Miami Workforce Program to jumpstart your career in coding."
+          text: "Apply to the United Way Miami Workforce Project to jumpstart your career in coding."
           font_size: ["16px"]
         size: [3,3,3,3]
       - image:
@@ -123,7 +123,7 @@ components:
     content:
       text: '<br/> <br/> Learn more about <a style="color: rgb(0, 160, 218); cursor:pointer;">eligibility conditions</a> and apply'
       font_size: ["16px", "16px", "16px", "16px", "16px"]
-      path: "https://storage.googleapis.com/media-breathecode/d876c431bdf4367823794cea78762a413cf0651ac247638a2741f5b935b724b5"
+      path: "https://storage.googleapis.com/media-breathecode/5417725a6ca51c9a7019e9e2fe479df979a0b55570a6592ee28797aba81bb478"
     sub_heading:
       text: |
         Any Miami-Dade resident with an annual household income below the Area Median Income, who is a citizen, permanent resident, or DACA recipient is invited to apply. <strong style="font-weight: bold;"> People of color, veterans, and single female heads of household </strong> are encouraged to apply.
@@ -286,3 +286,7 @@ components:
     content:
       text: "United Way Miami envisions a thriving and equitable community where all people have access to quality education and the opportunity to lead healthy and financially secure lives – the building blocks of a thriving community."
       font_size: ["16px"]
+    content:
+      text: "Social Finance is a national impact finance and advisory nonprofit. We work with the public, private, and social sectors to create partnerships and investments that measurably improve lives. Learn more at socialfinance.org."
+      font_size: ["16px"]
+
