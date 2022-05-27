@@ -52,7 +52,7 @@ button:
   cohort_more_details_text: "DETAILS"
 
 custom_bar:
-  active: true
+  active: false
   message: 'Change your life with Code. <a class="customBar-link" href="/us/apply">Apply</a> Upcoming programs: May 28 ML+AI | May 2 Full-Stack!'
 # button: 
 #   label: "Read More"
