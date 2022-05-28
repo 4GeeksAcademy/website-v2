@@ -1,5 +1,5 @@
 meta_info:
-  slug: becas-ticjob-españa # <--- URL 4geeksacademy.com/us/landing/example
+  slug: becas-ticjob-espana # <--- URL 4geeksacademy.com/us/landing/example
 
   visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   # This will show on social media when shared
@@ -168,7 +168,7 @@ why_4geeks:
   sub_heading: ""
   footer:
     text: "Ver opciones de financiación"
-    text_link: "https://storage.googleapis.com/4geeks-academy-website/syllabus/europe/Gu%C3%ADa-de-Pagos-Becas-Landing-Jobs.pdf"
+    text_link: "https://storage.googleapis.com/4geeks-academy-website/syllabus/madrid-spain/guia-de-pagos/Guia-de-Pagos-Becas-Ticjob.pdf"
 
 apply_schollarship: # form that is displayed at the end of the landing
   # title: "Apoyo Profesional Ilimitado"
