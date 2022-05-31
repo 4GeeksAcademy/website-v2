@@ -39,6 +39,30 @@ testimonials:
     student_thumb: "../../../../static/images/testimonials/florencia-viera.jpeg"
     linkedin_image: "../../../../static/images/linkedin.png"
 
+    - student_name: "Naila Kaliyeva"
+    slug: "nai-kali"
+    featured: false
+    highlighted: false
+    testimonial_date: ""
+    rating: 5
+    source_link: ""
+    student_thumb: "../../../../static/images/testimonials/naila-kaliyeva.jpg"
+    student_video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    hidden: false
+    linkedin_url: "https://www.linkedin.com/in/naila-kaliyeva-a8863a181/"
+    linkedin_text: "Linkedin Profile"
+    linkedin_image: "../../../../static/images/linkedin.png"
+    source_url: ""
+    source_url_text: ""
+    short_content: "Full Stack Developer in Facebook"
+    content: |
+      I love 4Geeks Academy's approach to teaching students. There are always at least three tutors who will 
+      make sure you master your skills and will not give up on you if there's something 
+      you don't understand. They never leave my questions unanswered, regardless of how obvious 
+      they may seem..and the atmosphere in the school is very warm.
+      I'm grateful to you guys for providing 24 hour access to school, 
+      so we can work any time that is convenient for us. Thank you, 4Geeks!!!
   - student_name: "Azul Botaya"
     slug: "azu-bota"
     featured: false
@@ -63,30 +87,6 @@ testimonials:
       within a perfect part-time cohort. 
       I now have all kinds of new tools I learned there along the way, 
       and there is a new comfort in knowing that I can always go back and keep growing at 4Geeks.
-  - student_name: "Naila Kaliyeva"
-    slug: "nai-kali"
-    featured: false
-    highlighted: false
-    testimonial_date: ""
-    rating: 5
-    source_link: ""
-    student_thumb: "../../../../static/images/testimonials/naila-kaliyeva.jpg"
-    student_video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
-    # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
-    hidden: false
-    linkedin_url: "https://www.linkedin.com/in/naila-kaliyeva-a8863a181/"
-    linkedin_text: "Linkedin Profile"
-    linkedin_image: "../../../../static/images/linkedin.png"
-    source_url: ""
-    source_url_text: ""
-    short_content: "Full Stack Developer in Facebook"
-    content: |
-      I love 4Geeks Academy's approach to teaching students. There are always at least three tutors who will 
-      make sure you master your skills and will not give up on you if there's something 
-      you don't understand. They never leave my questions unanswered, regardless of how obvious 
-      they may seem..and the atmosphere in the school is very warm.
-      I'm grateful to you guys for providing 24 hour access to school, 
-      so we can work any time that is convenient for us. Thank you, 4Geeks!!!
   # - student_name: "Samir Benzada"
   #   testimonial_date: ""
   #   student_thumb: "../../../../static/images/testimonials/samir-benzada.jpg"
