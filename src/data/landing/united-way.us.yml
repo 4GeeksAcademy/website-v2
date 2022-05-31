@@ -284,9 +284,8 @@ components:
       text: "The United Way Miami Workforce Project is a partnership between United Way Miami, 4Geeks Academy, and Social Finance."
       font_size: ["40px", "40px", "40px", "40px", "40px"]
     content:
-      text: "United Way Miami envisions a thriving and equitable community where all people have access to quality education and the opportunity to lead healthy and financially secure lives – the building blocks of a thriving community."
-      font_size: ["16px"]
-    content:
-      text: "Social Finance is a national impact finance and advisory nonprofit. We work with the public, private, and social sectors to create partnerships and investments that measurably improve lives. Learn more at socialfinance.org."
+      text: |
+        <p>United Way Miami envisions a thriving and equitable community where all people have access to quality education and the opportunity to lead healthy and financially secure lives – the building blocks of a thriving community.</p>
+        <p>Social Finance is a national impact finance and advisory nonprofit. We work with the public, private, and social sectors to create partnerships and investments that measurably improve lives. Learn more at socialfinance.org.</p>
       font_size: ["16px"]
 
