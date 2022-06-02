@@ -39,7 +39,7 @@ testimonials:
     student_thumb: "../../../../static/images/testimonials/florencia-viera.jpeg"
     linkedin_image: "../../../../static/images/linkedin.png"
 
-    - student_name: "Naila Kaliyeva"
+  - student_name: "Naila Kaliyeva"
     slug: "nai-kali"
     featured: false
     highlighted: false
