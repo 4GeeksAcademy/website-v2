@@ -28,7 +28,7 @@ button:
 
 custom_bar:
   active: false
-  message: 'Próximas fechas: 03/02 Full-Stack | 03/28 Machine Learning! <a class="customBar-link" href="/us/apply" taget="_blank" rel="noopener noreferrer nofollow">Aplica</a>'
+  message: 'Próximas fechas: 06/27 Full-Stack | 07/11 Machine Learning! <a class="customBar-link" href="/us/apply" taget="_blank" rel="noopener noreferrer nofollow">Aplica</a>'
   button: 
     label: "Read More"
     path: "#" #string (can be inline path using #, relative path or absolute path)
