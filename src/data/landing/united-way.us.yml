@@ -22,7 +22,7 @@ meta_info:
 
 navbar:
   buttonText: "Apply now"
-  buttonUrl: "#bottom" # url accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
+  buttonUrl: "https://marketing892162.typeform.com/to/ti4UAUrh" # url accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
   logoUrl: "#"
 
 form:
