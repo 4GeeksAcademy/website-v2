@@ -247,6 +247,7 @@ export const query = graphql`
             keywords
             position
             redirects
+            visibility
           }
           header {
             sub_heading
