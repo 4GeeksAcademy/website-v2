@@ -40,8 +40,8 @@ apply_schollarship: # form that is displayed at the end of the landing
 # jumbotron on the top (cannot be commented out)
 header_data:
   background: "#FFF1D1"
-  tagline: Learn to code this SUMMER and get a $2,000 discount. Work on real projects and get mentorship by experienced professionals.
-  sub_heading: "Learn to code this summer. Don't wait to future-proof your career. Start this program in July and get $2,000 OFF of regular tuition"
+  tagline: Learn to code this SUMMER and get a $2,000 discount. 
+  sub_heading: "Start this program in July 25th and get $2,000 OFF your regular tuition"
   badge: "../../../static/images/badges/switchup.png"
   image_filter: brightness(0.3)
 
