@@ -9,9 +9,9 @@ meta_info:
 
   template: "landing_a" # <--- choose your landing template
   redirects: # <--- URL redirections to avoid 404 errors
-    ["/us/coding-bootcamps/part-time-full-stack-developer"]
+    ["/landing/summer-discount"]
 
-  # Set a particular course or location to the landing page
+    # Set a particular course or location to the landing page
   # this UTM fields will be also included in the CRM contact
   utm_course: ["full-stack"]
   utm_location: downtown-miami
