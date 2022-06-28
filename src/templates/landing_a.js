@@ -163,8 +163,8 @@ const Landing = (props) => {
             alignItems="center"
             alignItems_tablet="flex-start"
             // borderRadius="0 0 0 1.25rem"
-            margin="0 0 35px auto"
-            padding={`40px 0 0 0`}
+            margin="0 0 0 auto"
+            // padding={`40px 0 0 0`}
             height="auto"
             padding_tablet={`40px 0 0 20px`}
           >
