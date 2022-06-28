@@ -52,8 +52,8 @@ button:
   cohort_more_details_text: "DETAILS"
 
 custom_bar:
-  active: true
-  message: 'Change your life with Code. <a class="customBar-link" href="/us/apply">Apply</a> Upcoming programs: May 28 ML+AI | May 2 Full-Stack!'
+  active: false
+  message: 'Change your life with Code. <a class="customBar-link" href="/us/apply">Apply</a> Upcoming programs: June 6 Full-Stack | July 7 ML+AI!'
 # button: 
 #   label: "Read More"
 #   path: "#" #string (can be inline path using #, relative path or absolute path)
@@ -275,10 +275,9 @@ prices:
           sub_heading: ""
         content:
           price: "$4,499.00"
-          price_info: "una sola cuota, con el mejor precio del mercado"
+          price_info: "Best pricing in town!"
         button:
-          button_text: "APLICAR AHORA"
-
+          button_text: "GET IT NOW"
   software_engineering:
     # slug: "software-engineering"
     # duration: "16 Weeks"

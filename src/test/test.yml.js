@@ -11,6 +11,20 @@ const metas = [
   { key: "redirects", type: "array" },
 ];
 
+function linesOf(text, substring){
+  var line = 0, matchedChars = 0;
+  let lines = [];
+
+  for (var i = 0; i < text.length; i++) {
+    text[i] === substring[matchedChars] ? matchedChars++ : matchedChars = 0;
+
+    if (matchedChars === substring.length) lines.push(line+1);                  
+    if (text[i] === '\n') line++;
+  }
+
+  return  lines;
+}
+
 walk(`${__dirname}/../data/`, async function (err, files) {
   if (err) fail("Error reding the YML files: ", err);
 
@@ -40,10 +54,16 @@ walk(`${__dirname}/../data/`, async function (err, files) {
 
     const data = fs.readFileSync(_path, "utf8");
 
-    if (data.includes("“") || data.includes("”")) {
-      console.log(`invalid quotes at ${_path}`);
-      fail(`We found some weird quotes " that usually come from copy & pasting content from the 
-        internet, please make sure to fix them to standard double quotes at ${_path}`);
+    const foundLeftQuotes = linesOf(data, "“");
+    const foundRightQuotes = linesOf(data, "”");
+    if (foundLeftQuotes.length > 0 || foundRightQuotes.length > 0) {
+
+      let lines = ""
+      if(foundLeftQuotes.length > 0) lines = foundLeftQuotes.join(",");
+      if(foundRightQuotes.length > 0) lines = (lines.length > 0 ? "," : "")+foundRightQuotes.join(",");
+      
+      fail(`We found some weird quotes “” that usually come from copy & pasting content from the internet. 
+Please make sure to fix them to standard double " or single ' quotes:  \nLine numbers: ${lines}\nFile ${_path}.`);
     }
 
     if (doc.type == "page") {

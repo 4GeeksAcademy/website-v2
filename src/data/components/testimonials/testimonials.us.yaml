@@ -39,30 +39,6 @@ testimonials:
     student_thumb: "../../../../static/images/testimonials/florencia-viera.jpeg"
     linkedin_image: "../../../../static/images/linkedin.png"
 
-  - student_name: "Azul Botaya"
-    slug: "azu-bota"
-    featured: false
-    highlighted: true
-    testimonial_date: ""
-    rating: 5
-    student_thumb: "../../../../static/images/testimonials/azul-botaya.jpg"
-    student_video: "" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
-    # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
-    hidden: false
-    linkedin_url: "https://www.linkedin.com/in/azul-botaya-31669b151/"
-    linkedin_text: ""
-    linkedin_image: "../../../../static/images/linkedin.png"
-    source_url: ""
-    source_url_text: ""
-    short_content: "Full Stack Developer in Facebook"
-    content: |
-      I felt lost in my career and could not see clear goals for myself anymore.  I came across 
-      this great opportunity to join this community of knowledge and, to top it all off, great humans!
-      I found myself able to commit to something very interesting with endless options 
-      to create my career as a graphic designer more powerful without having to stop what I was doing 
-      within a perfect part-time cohort. 
-      I now have all kinds of new tools I learned there along the way, 
-      and there is a new comfort in knowing that I can always go back and keep growing at 4Geeks.
   - student_name: "Naila Kaliyeva"
     slug: "nai-kali"
     featured: false
@@ -87,6 +63,30 @@ testimonials:
       they may seem..and the atmosphere in the school is very warm.
       I'm grateful to you guys for providing 24 hour access to school, 
       so we can work any time that is convenient for us. Thank you, 4Geeks!!!
+  - student_name: "Azul Botaya"
+    slug: "azu-bota"
+    featured: false
+    highlighted: true
+    testimonial_date: ""
+    rating: 5
+    student_thumb: "../../../../static/images/testimonials/azul-botaya.jpg"
+    student_video: "" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    hidden: false
+    linkedin_url: "https://www.linkedin.com/in/azul-botaya-31669b151/"
+    linkedin_text: ""
+    linkedin_image: "../../../../static/images/linkedin.png"
+    source_url: ""
+    source_url_text: ""
+    short_content: "Full Stack Developer in Facebook"
+    content: |
+      I felt lost in my career and could not see clear goals for myself anymore.  I came across 
+      this great opportunity to join this community of knowledge and, to top it all off, great humans!
+      I found myself able to commit to something very interesting with endless options 
+      to create my career as a graphic designer more powerful without having to stop what I was doing 
+      within a perfect part-time cohort. 
+      I now have all kinds of new tools I learned there along the way, 
+      and there is a new comfort in knowing that I can always go back and keep growing at 4Geeks.
   # - student_name: "Samir Benzada"
   #   testimonial_date: ""
   #   student_thumb: "../../../../static/images/testimonials/samir-benzada.jpg"

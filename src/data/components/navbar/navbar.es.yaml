@@ -130,7 +130,7 @@ navbar:
             - title: "Otra locación en America"
               link_to: "/es/coding-campus/online-bootcamp-programacion"
             - title: "Otra locación en Europa"
-              link_to: "/es/coding-campus/bootcamp-programacion-europa-online"
+              link_to: "/es/coding-campus/europe-online-coding-bootcamp"
         - title: "America"
           sub_links:
             - title: "Miami, USA"

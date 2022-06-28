@@ -45,7 +45,6 @@ features:
     - Part-Time focused. No need to stop your oife. Online or in our beautiful campus in Miami.
     - Get lifetime access to our mentors and Career Growth Support (Your first Job in Tech is our goal).
 
-
 follow_bar:
   position: "top" # top, bottom, hidden
   content:
@@ -139,13 +138,13 @@ components:
       src: "https://storage.googleapis.com/4geeks-academy-website/landing-pictures/testimonials.webp"
 
     heading:
-      text: "86% of our graduates are now working in the field with an average entry salary of $50,000/yr"
+      text:
+        "86% of our graduates are now working in the field with an average entry salary of $50,000/yr"
         #           xl      lg      md      sm      xs
       font_size: ["40px", "34px"]
     # content:
     #   text:
     #     "86% of our graduates are now working in the field with an average entry salary of $50,000/yr"
-
 # why_python:
 #   position: 7
 #   heading: "¿Porqué enseñamos Python?" # optional or set to white space to hide
