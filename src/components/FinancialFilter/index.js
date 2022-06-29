@@ -78,6 +78,14 @@ const modalityArray = [
   },
 ];
 
+const customStyles = {
+  menu: (provided, state) => ({
+    ...provided,
+    // maxHeight: '100px',
+    height: 10,
+  }),
+}
+
 const FinancialFilter = (props) => {
   const data = useStaticQuery(graphql`
     query FinancialFilter {
@@ -218,6 +226,8 @@ const FinancialFilter = (props) => {
           {!props.course && (
             <Select
               margin="0 20px 0 10px"
+              maxMenuHeight={100}
+              styles={customStyles}
               textAlign="left"
               label={props.campus}
               top="40px"

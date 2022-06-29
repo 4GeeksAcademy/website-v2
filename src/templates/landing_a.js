@@ -202,6 +202,7 @@ const Landing = (props) => {
               variant="main"
               lineHeight="40px"
               margin="20px 0"
+              margin_xs="10px 0"
               fontWeight="700"
               padding="0 10px 0 0px"
               color={yml.header_data.background ? Colors.black : Colors.white}
@@ -331,7 +332,9 @@ const Landing = (props) => {
               margin_tablet="18px 38px"
               selectProgram={programs}
               margin="18px 10px"
-              style={{ marginTop: "50px", minHeight: "350px" }}
+              marginTop="50px !important"
+              marginTop_xs="20px !important"
+              style={{ minHeight: "350px" }}
               formHandler={processFormEntry}
               heading={yml.form.heading}
               motivation={yml.form.motivation}
