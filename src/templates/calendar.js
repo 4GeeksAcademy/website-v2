@@ -610,6 +610,7 @@ const Calendar = (props) => {
           columns_tablet="1"
           margin="30px 0"
           margin_tablet="48px 0 38px 0"
+          id="upcoming-events"
         >
           <H3 textAlign="left">{yml.events.title}</H3>
         </GridContainer>
