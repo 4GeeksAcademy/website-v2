@@ -123,6 +123,7 @@ export const Div = styled.div`
   max-width: ${(props) =>
     props.size ? `${(props.size / 12) * 100}%` : props.maxWidth || null};
   max-height: ${(props) => (props.maxHeight ? props.maxHeight : "none")};
+  overflow: ${(props) => props.overflow};
   overflow-x: ${(props) => props.overflowX};
   grid-area: ${(props) => props.gridArea};
   place-self: ${(props) => props.placeSelf};
