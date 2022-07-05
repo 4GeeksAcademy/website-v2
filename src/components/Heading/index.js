@@ -54,9 +54,11 @@ const BaseHeading = styled(Heading)`
   @media ${Devices.xxs} {
   }
   @media ${Devices.xs} {
+    margin: ${(props) => props.margin_xs};
   }
   @media ${Devices.sm} {
     text-align: ${(props) => props.textAlign_sm};
+    margin: ${(props) => props.margin_sm};
   }
   @media ${Devices.tablet} {
     text-align: ${(props) => props.textAlign_tablet};
