@@ -165,6 +165,7 @@ const Landing = (props) => {
             // borderRadius="0 0 0 1.25rem"
             margin="0 0 0 auto"
             // padding={`40px 0 0 0`}
+            padding_xs="0 10px"
             height="auto"
             padding_tablet={`40px 0 0 20px`}
           >
@@ -332,8 +333,8 @@ const Landing = (props) => {
               margin_tablet="18px 38px"
               selectProgram={programs}
               margin="18px 10px"
-              marginTop="50px !important"
-              marginTop_xs="20px !important"
+              marginTop_tablet="50px"
+              // marginTop_xs="20px"
               style={{ minHeight: "350px" }}
               formHandler={processFormEntry}
               heading={yml.form.heading}

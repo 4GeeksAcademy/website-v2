@@ -35,6 +35,7 @@ const Form = styled.form`
   }
   @media ${Devices.tablet} {
     margin: ${(props) => props.margin_tablet};
+    margin-top: ${(props) => props.marginTop_tablet};
     width: 100%;
   }
   @media ${Devices.xs} {
@@ -139,6 +140,7 @@ const LeadForm = ({
   background,
   margin,
   marginTop,
+  marginTop_tablet,
   marginTop_xs,
   margin_tablet,
   justifyContentButton,
@@ -258,6 +260,7 @@ const LeadForm = ({
       background={background}
       margin_tablet={margin_tablet}
       marginTop={marginTop}
+      marginTop_tablet={marginTop_tablet}
       marginTop_xs={marginTop_xs}
       d_sm={d_sm}
       style={style}
