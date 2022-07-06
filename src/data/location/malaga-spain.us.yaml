@@ -1,0 +1,329 @@
+meta_info:
+  slug: "coding-bootcamp-malaga-spain"
+  title: "Coding Bootcamp Málaga, Spain with 4Geeks Academy"
+  position: 20
+  description: "Know here all about our coding bootcamp campus in Málaga, Spain with 4Geeks Academy"
+  image: ""
+  keywords: "Coding Bootcamp, Málaga"
+  redirects: ["/location/barcelona", "/us/location/barcelona-spain"]
+  region: "europe"
+
+seo_title: "Coding Bootcamp Málaga"
+header:
+  tagline: "4Geeks Academy in Málaga" 
+  sub_heading: ""
+  paragraph: ""
+  image: "../../../static/images/locations/madrid-home.png"
+  alt: ""
+button_header:
+  button_text: See Programs
+  button_link: "#programs"
+button:
+  syllabus_button_text: "DOWNLOAD SYLLABUS" # <-- this will show everywhere in the website
+  apply_button_text: "APPLY NOW" # <-- this will show everywhere in the website
+
+  syllabus_submit_text: "DOWNLOAD"
+  apply_button_link: "/apply"
+  cohort_more_details_text: "DETAILS"
+
+custom_bar:
+  active: true
+  message: 4Geeks offers scholarships and financing tailored to your needs. <a class="customBar-link" href="/us/apply">¡Apply now!</a>
+ #  button: 
+ #    label: ""
+ #   path: "#" #string (can be inline path using #, relative path or absolute path)
+
+badges:
+  title: ""
+  paragraph: "4Geeks Academy is the place where developers grow and thrive.
+ 
+We are licensed by the USA F. Dep. of Education.
+  
+Chosen as one of the top 35 coding bootcamps of the world and the top coding bootcamp in Spain according to Premios Excelencia Educativa.
+
+4Geeks Academy has been recognized as one of the top 10 coding bootcamps in the United States according to Newsweek.
+
+A community built for developers ."
+
+news:
+  title: "4Geeks Academy Málaga on the news..."
+
+info_box:
+  heading: "Find us in Málaga, Spain."
+  address: ""
+  iframeMapUrl: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1247.1075965710384!2d-3.6808452145265083!3d40.43988879999685!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb1a742c609c68c4b!2s4Geeks%20Academy!5e0!3m2!1ses-419!2scl!4v1621006660711!5m2!1ses-419!2scl"
+  contact_heading: "Contacts"
+  phone: "+34 910 86 69 83"
+  email: "es@4geeksacademy.com"
+  image: "../../../static/images/locations/madrid-map.png"
+  map_url: "https://www.google.com/maps/place/4Geeks+Academy/@40.4396216,-3.6808932,15z/data=!4m2!3m1!1s0x0:0xb1a742c609c68c4b?sa=X&ved=2ahUKEwjspv__4-zrAhXEY98KHa3RBpYQ_BIwCnoECBkQCA"
+  alt: ""
+
+upcoming:
+  no_dates_message: "There are currently no upcoming dates for this campus"
+  actionMessage: "Let me know when dates are available"
+
+images_box:
+  heading: "What you should know about this location: "
+  content: "Málaga is the city that attracts the most capital for the technological and innovative ecosystem. Learn programming and be part of the best Coding Bootcamp in Spain. Just 2 min. away from the subway, the office is located in one of Málaga's most active areas. Open to students 12 hrs a day and with our famous 'Coding Weekends' on Saturdays where students come to receive senior coaching, hang out and eat pizza!"
+  images:
+    - path: "../../../static/images/locations/madrid-loc.jpg"
+      alt: "españa barcelona"
+    - path: "../../../static/images/locations/madrid-1.jpeg"
+      alt: "4Geeeks España location"
+    - path: "../../../static/images/locations/madrid-5.jpeg"
+      alt: "4Geeeks España lab"
+    - path: "../../../static/images/locations/madrid-3.png"
+      alt: "4Geeeks España lab"
+    - path: "../../../static/images/locations/madrid-2.png"
+      alt: "4Geeeks España lab"
+
+## PRICES SECTION
+## MADRID HAS 3 BOXES:
+## LEFT     BOX => PART-TIME
+## CENTER   BOX => FINANCIAL SLIDER OPTIONS
+## RIGHT    BOX => FULL-TIME
+hasFinancialsOption: false
+# financials_max_months: ["6 mo", "12 mo"]
+financials_max_months: ["3 mo", "6 mo", "12 mo", "18 mo", "21 mo", "24 mo"]
+prices:
+  full_stack:
+    full_time:
+      ## GENERAL INFO
+      slug: "full-time"
+      duration: "9 Weeks"
+
+      ## LEFT BOX SECTION FULL-TIME
+      ## CHANGE HERE THE INFO IN THE LEFT BOX
+      left_section:
+        header:
+          heading_one: "UP-FRONT"
+          heading_two: "(out of pocket)"
+          sub_heading: "Ask for scholarships and discounts"
+        content:
+          price: "5.999,00€"
+          price_info: "single payment"
+
+      ## USE THIS SECTION TO CHANGE THE SLIDER FINANCIAL OPTIONS IN THE CENTER BOX
+      center_section:
+        header:
+          heading_one: "Extended"
+          heading_two: "Payment Plan"
+          sub_heading: "Get the best price in Spain"
+        plans:
+          - months: "24 mo"
+            payment: "251,56€"
+            paymentInfo: "per month + 600€ up-front"
+            provider: "Zank"
+            logo: "/images/zank.png"
+            message: "Ask about our scholarships compatible with financing plans"
+          - months: "21 mo"
+            payment: "274,03€"
+            paymentInfo: "per month + 600€ up-front"
+            provider: "Quotanda"
+            logo: "/images/quotanda-logo.png"
+            message: "Ask about our scholarships compatible with financing plans"
+          - months: "18 mo"
+            payment: "326,68€"
+            paymentInfo: "per month + 600€ up-front"
+            provider: "Zank"
+            logo: "/images/zank.png"
+            message: "Ask about our scholarships compatible with financing plans"
+          - months: "12 mo"
+            payment: "477,14€"
+            paymentInfo: "per month + 600€ up-front"
+            provider: "Zank"
+            logo: "/images/zank.png"
+            message: "Ask about our scholarships compatible with financing plans"
+          - months: "6 mo"
+            payment: "928,96€"
+            paymentInfo: "per month + 600€ up-front"
+            provider: "Zank"
+            logo: "/images/zank.png"
+            message: "Ask about our scholarships compatible with financing plans"
+          - months: "3 mo"
+            payment: "2.000€"
+            paymentInfo: "3 free-interest installments"
+            provider: "4Geeks"
+            logo:
+            message: "Ask about our scholarships compatible with financing plans"
+        button:
+          button_text: "APPLY NOW"
+      ## RIGHT BOX SECTION
+      ## CHANGE HERE THE INFO IN THE RIGHT BOX
+      right_section:
+        header:
+          heading_one: "PAY ONLY"
+          heading_two: "WHEN YOU GET A JOB"
+          sub_heading: "Income Share Agreement (ISA) with Student Finance"
+        content:
+          price: "160€"
+          price_info: "from 160€ per month"
+        button:
+          button_text: "APPLY NOW"
+    ## *****************
+    ## PART-TIME SECTION
+    ## *****************
+    part_time:
+      slug: "part-time"
+      duration: "16 Weeks"
+
+      ## LEFT BOX SECTION PART-TIME
+      ## CHANGE HERE THE INFO IN THE LEFT BOX
+      left_section:
+        header:
+          heading_one: "PART-TIME"
+          sub_heading: "Ask about scholarships and discounts"
+        content:
+          price: "5.499,00€"
+          price_info: "single payment"
+        button:
+          button_text: "APPLY NOW"
+
+      ## USE THIS SECTION TO CHANGE THE SLIDER FINANCIAL OPTIONS IN THE CENTERED BOX
+      center_section:
+        header:
+          heading_one: "Extended"
+          heading_two: "Payment Plan"
+          sub_heading: "Get the best prices in Spain"
+        plans:
+          - months: "24 mo"
+            payment: "223,98€"
+            paymentInfo: "per month + 500€ up-front"
+            provider: "Quotanda"
+            logo: "/images/quotanda-logo.png"
+            message: "Ask about our scholarships compatible with financing plans"
+          - months: "18 mo"
+            payment: "302,18€"
+            paymentInfo: "per month + 500€ up-front"
+            provider: "Zank"
+            logo: "https://www.zank.com.es/img/logozankgris.svg"
+            message: "Ask about our scholarships compatible with financing plans"
+          - months: "12 mo"
+            payment: "432,90€"
+            paymentInfo: "per month + 500€ up-front"
+            provider: "Quotanda"
+            logo: "/images/quotanda-logo.png"
+            message: "Ask about our scholarships compatible with financing plans"
+          - months: "6 mo"
+            payment: "816,15€"
+            paymentInfo: "per month + 500€ up-front"
+            provider: "Zank"
+            logo: "https://www.zank.com.es/img/logozankgris.svg"
+            message: "Ask about our scholarships compatible with financing plans"
+        button:
+          button_text: "APPLY NOW"
+      ## RIGHT BOX SECTION
+      ## CHANGE HERE THE INFO IN THE RIGHT BOX
+      right_section:
+        header:
+          heading_one: "Scholarships"
+          heading_two: "and Financing plans"
+          sub_heading: "Financial aid options available, up to 100% of tuition!"
+        content:
+          price: "5.999,00 €"
+          price_info: "3 free-interest installments"
+        button:
+          button_text: "APPLY NOW"
+
+  software_engineering:
+    part_time:
+      slug: "part_time"
+      duration: "?"
+
+      left_section:
+        header:
+          heading_one: "Software Engineering"
+          heading_two: ""
+          sub_heading: ""
+        content:
+          price: "Part-Time modality is not available"
+          price_info: "Málaga - Spain"
+        button:
+          button_text: "Aplly another courses"
+
+    full_time:
+      slug: "full_time"
+      duration: "?"
+
+      left_section:
+        header:
+          heading_one: "Software Engineering"
+          heading_two: ""
+          sub_heading: ""
+        content:
+          price: "Full-Time modality is not available"
+          price_info: "Málaga - Spain"
+        button:
+          button_text: "Apply another courses"
+
+  machine_learning:
+    part_time:
+      slug: "part_time"
+      duration: "16 Weeks"
+
+      left_section:
+        header:
+          heading_one: "Machine Learning"
+          heading_two: ""
+          sub_heading: ""
+        content:
+          price: "Part-Time modality is not available"
+          price_info: "Málaga - Spain"
+        button:
+          button_text: "Aplly another courses"
+
+    full_time:
+      slug: "full_time"
+      duration: "?"
+
+      left_section:
+        header:
+          heading_one: "Machine Learning"
+          heading_two: ""
+          sub_heading: ""
+        content:
+          price: "Full-Time modality is not available"
+          price_info: "Málaga - Spain"
+        button:
+          button_text: "Apply another courses"
+
+
+active_campaign_location_slug: "malaga-spain"
+breathecode_location_slug: "malaga-spain"
+gdpr_compliant: true # do we need to ask for permision?
+in_person_available: true # important to accept in-person applicants
+city: "Málaga"
+name: "Málaga, Spain"
+latitude: "40.439769"
+longitude: "-3.680207"
+phone: "+34 910 86 69 83"
+address: ""
+zip_code: ""
+state: "Málaga"
+country: "Spain"
+socials:
+  - name: "Facebook"
+    icon: "facebook"
+    link: "https://www.facebook.com/4geeksacademyes"
+  - name: "Twitter"
+    icon: "twitter"
+    link: "https://www.twitter.com/4geeksacademyes"
+  - name: "Instagram"
+    icon: "instagram"
+    link: "https://www.instagram.com/4geeksacademyes"
+  - name: "Meetup"
+    icon: "meetup"
+    link: "https://www.meetup.com/4geeks-academy-madrid"
+courses:
+  - "Full-Time"
+  - "Part-Time"
+flag_icon: ""
+location_map: ""
+location_phone_number: ""
+location_office_image: ""
+location_office_image2: ""
+location_office_image3: ""
+should_know: ""
+value: "Málaga"
+defaultLanguage: "es" # All lead marketing communications will arrive on this language
