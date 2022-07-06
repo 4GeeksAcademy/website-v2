@@ -6,7 +6,7 @@ meta_info:
   image: "https://storage.googleapis.com/4geeks-academy-website/madrid-es.png"
   keywords: "Coding bootcamp Málaga"
   redirects:
-    ["malaga", "/es/location/malaga-spain/", "/es/location/malaga-espana"]
+    ["/malaga", "/es/location/malaga-spain/", "/es/location/malaga-espana"]
   region: "europe"
 
 seo_title: "4Geeks Academy Málaga, España"
@@ -60,16 +60,16 @@ images_box:
   heading: "Qué deberías saber sobre esta ubicación: "
   content: "4Geeks Málaga es un proyecto que funciona principalmente Online, luego de un proyecto increíble desarrollado por el Banco Interamericano de Desarrollo y el Ministerio de Ciencia, Información y Telecomunicaciones."
   images:
-    - path: "../../../static/images/locations/madrid-loc.jpg"
-      alt: "españa madrid"
-    - path: "../../../static/images/locations/madrid-1.jpeg"
-      alt: "4Geeeks España location"
-    - path: "../../../static/images/locations/madrid-5.jpeg"
-      alt: "4Geeeks España lab"
+    - path: "../../../static/images/locations/remote.jpeg"
+      alt: "Coding Bootcamp Remoto"
     - path: "../../../static/images/locations/madrid-3.png"
       alt: "4Geeeks España lab"
     - path: "../../../static/images/locations/madrid-2.png"
       alt: "4Geeeks España lab"
+    - path: "../../../static/images/locations/miami-people.jpeg"
+      alt: "4Geeeks miami day"
+    - path: "../../../static/images/locations/miami-old2.jpg"
+      alt: "4Geeeks miami lab"
 
 ## PRICES SECTION
 ## MADRID HAS 3 BOXES:

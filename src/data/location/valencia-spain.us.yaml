@@ -67,16 +67,16 @@ images_box:
   heading: "What you should know about this location: "
   content: "Valencia is the city that attracts the most capital for the technological and innovative ecosystem. Learn programming and be part of the best Coding Bootcamp in Spain. Just 2 min. away from the subway, the office is located in one of Valencia's most active areas. Open to students 12 hrs a day and with our famous 'Coding Weekends' on Saturdays where students come to receive senior coaching, hang out and eat pizza!"
   images:
-    - path: "../../../static/images/locations/madrid-loc.jpg"
-      alt: "españa valencia"
-    - path: "../../../static/images/locations/madrid-1.jpeg"
-      alt: "4Geeeks España location"
-    - path: "../../../static/images/locations/madrid-5.jpeg"
-      alt: "4Geeeks España lab"
+    - path: "../../../static/images/locations/remote.jpeg"
+      alt: "Remote Coding Bootcamp"
     - path: "../../../static/images/locations/madrid-3.png"
       alt: "4Geeeks España lab"
     - path: "../../../static/images/locations/madrid-2.png"
       alt: "4Geeeks España lab"
+    - path: "../../../static/images/locations/miami-people.jpeg"
+      alt: "4Geeeks miami day"
+    - path: "../../../static/images/locations/miami-old2.jpg"
+      alt: "4Geeeks miami lab"
 
 ## PRICES SECTION
 ## MADRID HAS 3 BOXES:
