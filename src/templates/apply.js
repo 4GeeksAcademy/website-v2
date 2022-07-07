@@ -54,10 +54,10 @@ const Apply = (props) => {
 
   const [regionVal, setRegionVal] = useState(null);
   const regions = [
-    {label: 'Latin America', value: 'latam' },
-    {label: 'USA & Canada', value: 'usa-canada' },
-    {label: 'Europe', value: 'europe' },
-    {label: 'Rest of the world', value: 'online' },
+    { label: "Latin America", value: "latam" },
+    { label: "USA & Canada", value: "usa-canada" },
+    { label: "Europe", value: "europe" },
+    { label: "Rest of the world", value: "online" },
   ];
 
   const locationContext = session && session.location;
