@@ -1,21 +1,21 @@
 meta_info:
-  slug: "coding-bootcamp-lisboa-portugal"
-  title: "Coding Bootcamp in Lisboa, Portugal"
+  slug: "coding-bootcamp-berlin-germany"
+  title: "Coding Bootcamp in Berlin, Germany"
   position: 101
-  description: "Discover all coding bootcamps taught by 4Geeks Academy at Lisboa, Portugal. Sign up today!"
+  description: "Discover all coding bootcamps taught by 4Geeks Academy at Berlin, Germany. Sign up today!"
   image: ""
   keywords: "null"
   redirects:
     [
-      "/location/lisboa-portugal",
-      "/lisboa",
-      "/us/location/lisboa-portugal",
+      "/location/berlin-germany",
+      "/berlin",
+      "/us/location/berlin-germany",
     ]
   region: "europe"
 
-seo_title: "Coding Bootcamp Lisboa, Portugal"
+seo_title: "Coding Bootcamp Berlin, Germany"
 header:
-  tagline: "Learn To Code in Lisboa, Portugal"
+  tagline: "Learn To Code in Berlin, Germany"
   paragraph: "Learning online is hard: Lucky for you, we offer: unlimited support, amazing content and lifetime career support. \\n Yes, it really is available for the rest of your life."
   image: "../../../static/images/locations/online-home.png"
   alt: ""
@@ -49,13 +49,13 @@ Chosen as one of the top 35 coding bootcamps of the world and the top coding boo
 
 A community built for developers ."
 news:
-  title: "4Geeks Academy Lisboa in the news..."
+  title: "4Geeks Academy Berlin in the news..."
 upcoming:
   no_dates_message: "There are currently no upcoming dates for this campus"
   actionMessage: "Let me know when dates are available"
 
 info_box:
-  heading: "Find us in Lisboa, Portugal"
+  heading: "Find us in Berlin, Germany"
   address: ""
   iframeMapUrl: ""
   contact_heading: "Contacts"
@@ -259,20 +259,20 @@ prices:
         button:
           button_text: "Apply another courses"
 
-active_campaign_location_slug: "lisboa-portugal"
-breathecode_location_slug: "lisboa-portugal"
+active_campaign_location_slug: "berlin-germany"
+breathecode_location_slug: "berlin-germany"
 gdpr_compliant: true # do we need to ask for permision?
 in_person_available: false # important to accept in-person applicants
 
-city: "Lisboa"
-name: "Lisboa, Portugal"
+city: "Berlin"
+name: "Berlin, Germany"
 phone: "+34 910 86 69 83"
-latitude: "38.725750"
-longitude: "-9.149020"
-address: "" # Praça Marquês de Pombal 14, 1250-162 Lisboa, Portugal
+latitude: "52.479230"
+longitude: "13.433960"
+address: "" # Rollbergstraße 28A, 12053 Berlin, Alemania
 zip_code: ""
-state: "Lisboa"
-country: "Portugal"
+state: "Berlin"
+country: "Germany"
 
 socials:
   - name: "Facebook"
@@ -293,5 +293,5 @@ courses:
   - "Part-Time"
 flag_icon: ""
 should_know: ""
-value: "Lisboa"
+value: "Berlin"
 defaultLanguage: "us" # All lead marketing communications will arrive on this language

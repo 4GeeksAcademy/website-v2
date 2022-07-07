@@ -290,10 +290,10 @@ in_person_available: true # important to accept in-person applicants
 
 city: "Málaga"
 name: "Málaga, España"
-latitude: "40.439769"
-longitude: "-3.680207"
+latitude: "36.728080"
+longitude: "-4.373340"
 phone: "+34 910 86 69 83"
-address: ""
+address: "" # Calle Fernández Shaw, 88, 29018 Málaga, España
 zip_code: ""
 state: "Málaga"
 country: "España"
