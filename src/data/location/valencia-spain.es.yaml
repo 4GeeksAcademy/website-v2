@@ -290,10 +290,10 @@ in_person_available: true # important to accept in-person applicants
 
 city: "Valencia"
 name: "Valencia, España"
-latitude: "40.439769"
-longitude: "-3.680207"
+latitude: "39.470300"
+longitude: "-0.375570"
 phone: "+34 910 86 69 83"
-address: ""
+address: "" # Carrer de les Barques, 2, 46002 Valencia, España
 zip_code: ""
 state: "Valencia"
 country: "España"

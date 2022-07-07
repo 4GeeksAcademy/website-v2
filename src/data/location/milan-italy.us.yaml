@@ -1,21 +1,22 @@
 meta_info:
-  slug: "coding-bootcamp-lisboa-portugal"
-  title: "Coding Bootcamp in Lisboa, Portugal"
+  slug: "coding-bootcamp-milano-italy"
+  title: "Coding Bootcamp in Milano, Italy"
   position: 101
-  description: "Discover all coding bootcamps taught by 4Geeks Academy at Lisboa, Portugal. Sign up today!"
+  description: "Discover all coding bootcamps taught by 4Geeks Academy at Milano, Italy. Sign up today!"
   image: ""
   keywords: "null"
   redirects:
     [
-      "/location/lisboa-portugal",
-      "/lisboa",
-      "/us/location/lisboa-portugal",
+      "/location/milano-italy",
+      "/milan",
+      "/milano",
+      "/us/location/milano-italy",
     ]
   region: "europe"
 
-seo_title: "Coding Bootcamp Lisboa, Portugal"
+seo_title: "Coding Bootcamp Milano, Italy"
 header:
-  tagline: "Learn To Code in Lisboa, Portugal"
+  tagline: "Learn To Code in Milano, Italy"
   paragraph: "Learning online is hard: Lucky for you, we offer: unlimited support, amazing content and lifetime career support. \\n Yes, it really is available for the rest of your life."
   image: "../../../static/images/locations/online-home.png"
   alt: ""
@@ -49,13 +50,13 @@ Chosen as one of the top 35 coding bootcamps of the world and the top coding boo
 
 A community built for developers ."
 news:
-  title: "4Geeks Academy Lisboa in the news..."
+  title: "4Geeks Academy Milano in the news..."
 upcoming:
   no_dates_message: "There are currently no upcoming dates for this campus"
   actionMessage: "Let me know when dates are available"
 
 info_box:
-  heading: "Find us in Lisboa, Portugal"
+  heading: "Find us in Milano, Italy"
   address: ""
   iframeMapUrl: ""
   contact_heading: "Contacts"
@@ -259,20 +260,20 @@ prices:
         button:
           button_text: "Apply another courses"
 
-active_campaign_location_slug: "lisboa-portugal"
-breathecode_location_slug: "lisboa-portugal"
+active_campaign_location_slug: "milan-italy"
+breathecode_location_slug: "milan-italy"
 gdpr_compliant: true # do we need to ask for permision?
 in_person_available: false # important to accept in-person applicants
 
-city: "Lisboa"
-name: "Lisboa, Portugal"
+city: "Milan"
+name: "Milano, Italy"
 phone: "+34 910 86 69 83"
-latitude: "38.725750"
-longitude: "-9.149020"
-address: "" # Praça Marquês de Pombal 14, 1250-162 Lisboa, Portugal
+latitude: "45.482650"
+longitude: "9.200590"
+address: "" # Via Vittor Pisani, 15, 20124 Milano ML, Italia
 zip_code: ""
-state: "Lisboa"
-country: "Portugal"
+state: "Milano"
+country: "Italy"
 
 socials:
   - name: "Facebook"
@@ -293,5 +294,5 @@ courses:
   - "Part-Time"
 flag_icon: ""
 should_know: ""
-value: "Lisboa"
+value: "Milan"
 defaultLanguage: "us" # All lead marketing communications will arrive on this language
