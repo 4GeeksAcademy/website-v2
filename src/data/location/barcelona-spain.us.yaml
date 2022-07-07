@@ -295,10 +295,10 @@ gdpr_compliant: true # do we need to ask for permision?
 in_person_available: true # important to accept in-person applicants
 city: "Barcelona"
 name: "Barcelona, Spain"
-latitude: "40.439769"
-longitude: "-3.680207"
+latitude: "41.390260"
+longitude: "2.176680"
 phone: "+34 910 86 69 83"
-address: ""
+address: "" # Ronda de Sant Pere, 52, 08010, Barcelona, España
 zip_code: ""
 state: "Barcelona"
 country: "Spain"

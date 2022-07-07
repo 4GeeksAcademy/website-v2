@@ -1,16 +1,16 @@
 meta_info:
-  slug: "bootcamp-programacion-lisboa-portugal"
-  title: "Bootcamp de Programación en Lisboa"
-  description: "Descubre todos los bootcamps de programación online impartidos por 4Geeks Academy en Lisboa, Portugal. ¡Regístrate hoy!"
+  slug: "bootcamp-programacion-roma-italia"
+  title: "Bootcamp de Programación en Roma, Italia"
+  description: "Descubre todos los bootcamps de programación online impartidos por 4Geeks Academy en Roma, Italia. ¡Regístrate hoy!"
   position: 101
   image: "https://storage.cloud.google.com/4geeks-academy-website/online-es.png"
   keywords: "null"
-  redirects: ["/es/location/lisboa-portugal"]
+  redirects: ["/es/location/roma-italia"]
   region: "europe"
 
-seo_title: "Coding Bootcamp Lisboa, Portugal"
+seo_title: "Coding Bootcamp Roma, Italia"
 header:
-  tagline: "Aprende a programar en Lisboa desde casa"
+  tagline: "Aprende a programar en Roma desde casa"
   paragraph: "Aprender a programar online es difcíl, únete a la comunidad de programadores mas grande del mundo y recibe soporte para aprender y para conseguir trabajo de por vida"
   image: "../../../static/images/locations/online-home.png"
   alt: ""
@@ -44,14 +44,14 @@ Elegido como uno de los 35 mejores bootcamps de codificación del mundo y el mej
 
 Una comunidad construida para desarrolladores."
 news:
-  title: "4Geeks Academy Lisboa en las noticias..."
+  title: "4Geeks Academy Roma en las noticias..."
 upcoming:
   no_dates_message: "Actualmente no hay próximas fechas para este campus"
   actionMessage: "Avisenme fechas disponibles"
 
 info_box:
-  heading: "Encuéntranos en Lisboa"
-  address: "Actualmente sólo estamos enseñando remotamente en Lisboa"
+  heading: "Encuéntranos en Roma"
+  address: "Actualmente sólo estamos enseñando remotamente en Roma"
   contact_heading: "Contacts"
   phone: "+34 910 86 69 83"
   email: "europe@4GeeksAcademy.com"
@@ -307,20 +307,20 @@ prices:
         button:
           button_text: "Aplicar a otros cursos"
 
-active_campaign_location_slug: "lisboa-portugal"
-breathecode_location_slug: "lisboa-portugal"
+active_campaign_location_slug: "rome-italy"
+breathecode_location_slug: "rome-italy"
 gdpr_compliant: true # do we need to ask for permision?
 in_person_available: false # important to accept in-person applicants
 
-city: "Lisboa"
-name: "Lisboa, Portugal"
-latitude: "38.725750"
-longitude: "-9.149020"
-address: "" # Praça Marquês de Pombal 14, 1250-162 Lisboa, Portugal
+city: "Rome"
+name: "Roma, Italia"
+latitude: "41.898580"
+longitude: "12.491700"
+address: "" # Via Palermo, 41, 00184 Roma RM, Italia
 zip_code: ""
 phone: "+34 910 86 69 83"
-state: "Lisboa"
-country: "Portugal"
+state: "Roma"
+country: "Italia"
 
 socials:
   - name: "Facebook"
@@ -346,5 +346,5 @@ location_office_image: ""
 location_office_image2: ""
 location_office_image3: ""
 should_know: ""
-value: "Lisboa"
+value: "Rome"
 defaultLanguage: "us" # All lead marketing communications will arrive on this language
