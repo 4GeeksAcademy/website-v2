@@ -1,22 +1,21 @@
 meta_info:
-  slug: "online-coding-bootcamp"
-  title: "Online Coding Bootcamps"
-  position: 102
-  description: "Discover here all the online coding bootcamps taught by 4Geeks Academy. Sign up today!"
+  slug: "coding-bootcamp-lisboa-portugal"
+  title: "Coding Bootcamp in Lisboa, Portugal"
+  position: 101
+  description: "Discover all coding bootcamps taught by 4Geeks Academy at Lisboa, Portugal. Sign up today!"
   image: ""
   keywords: "null"
   redirects:
     [
-      "/location/online",
-      "/location/remote",
-      "/online",
-      "/us/location/online-remote",
+      "/location/lisboa-portugal",
+      "/lisboa",
+      "/us/location/lisboa-portugal",
     ]
-  region: "america"
+  region: "europe"
 
-seo_title: "Online Coding Bootcamp"
+seo_title: "Coding Bootcamp Lisboa, Portugal"
 header:
-  tagline: "Learn To Code Online"
+  tagline: "Learn To Code in Lisboa, Portugal"
   paragraph: "Learning online is hard: Lucky for you, we offer: unlimited support, amazing content and lifetime career support. \\n Yes, it really is available for the rest of your life."
   image: "../../../static/images/locations/online-home.png"
   alt: ""
@@ -32,11 +31,11 @@ button:
   cohort_more_details_text: "DETAILS"
 
 custom_bar:
-  active: false
-  message: Lorem ipsum dot simet mosd ei
-  button: 
-    label: "Read More"
-    path: "#" #string (can be inline path using #, relative path or absolute path)
+  active: true
+  message: 4Geeks offers scholarships and financing tailored to your needs. <a class="customBar-link" href="/us/apply" rel="noopener noreferrer nofollow">¡Apply now!</a>
+#   button: 
+#     label: "Read More"
+#     path: "#" #string (can be inline path using #, relative path or absolute path)
 
 badges:
   title: ""
@@ -50,18 +49,18 @@ Chosen as one of the top 35 coding bootcamps of the world and the top coding boo
 
 A community built for developers ."
 news:
-  title: "4Geeks Academy in the news..."
+  title: "4Geeks Academy Lisboa in the news..."
 upcoming:
   no_dates_message: "There are currently no upcoming dates for this campus"
   actionMessage: "Let me know when dates are available"
 
 info_box:
-  heading: "Find us Online"
-  address: "1801 SW 3rd Ave #100, Miami, FL 33129"
+  heading: "Find us in Lisboa, Portugal"
+  address: ""
   iframeMapUrl: ""
   contact_heading: "Contacts"
-  phone: "(786) 416-6640"
-  email: "info@4GeeksAcademy.com"
+  phone: "+34 910 86 69 83"
+  email: "europe@4GeeksAcademy.com"
   image: "../../../static/images/locations/remote.jpeg"
   alt: ""
 images_box:
@@ -260,20 +259,20 @@ prices:
         button:
           button_text: "Apply another courses"
 
-active_campaign_location_slug: "online"
-breathecode_location_slug: "online"
+active_campaign_location_slug: "lisboa-portugal"
+breathecode_location_slug: "lisboa-portugal"
 gdpr_compliant: true # do we need to ask for permision?
 in_person_available: false # important to accept in-person applicants
 
-city: "Rest of America"
-name: "Rest of America"
-latitude: "10000.760158"
-longitude: "-800000.200154"
-phone: "+1 (786) 416-6640"
-address: "1801 SW 18th Road"
-zip_code: "33130"
-state: ""
-country: "Remote"
+city: "Lisboa"
+name: "Lisboa, Portugal"
+phone: "+34 910 86 69 83"
+latitude: "45.764042"
+longitude: "4.835659"
+address: ""
+zip_code: ""
+state: "Lisboa"
+country: "Portugal"
 
 socials:
   - name: "Facebook"
@@ -285,16 +284,14 @@ socials:
   - name: "Instagram"
     icon: "instagram"
     link: "https://www.instagram.com/4geeksacademy"
+  - name: "Meetup"
+    icon: "meetup"
+    link: "https://www.meetup.com/4geeks-academy"
 
 courses:
   - "Full-Time"
   - "Part-Time"
 flag_icon: ""
-location_map: ""
-location_phone_number: ""
-location_office_image: ""
-location_office_image2: ""
-location_office_image3: ""
 should_know: ""
-value: "Miami"
+value: "Lisboa"
 defaultLanguage: "us" # All lead marketing communications will arrive on this language
