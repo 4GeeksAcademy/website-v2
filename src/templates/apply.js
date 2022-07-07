@@ -77,7 +77,7 @@ const Apply = (props) => {
             ? trans[pageContext.lang]["(In-person and from home available)"]
             : trans[pageContext.lang]["(From home until further notice)"]),
         value: m.active_campaign_location_slug,
-        region: m.meta_info.region
+        region: m.meta_info.region,
       }));
 
   React.useEffect(() => {
@@ -521,26 +521,34 @@ const Apply = (props) => {
             {formStatus.status === "error" && !formData.location.valid && (
               <Alert color="red">Please pick a location</Alert>
             )}
-            {regionVal && <Div
-              data-cy="dropdown_academy_selector"
-              tabindex="1"
-              contenteditable="true"
-              margin_tablet="0 0 23px 0"
-            >
-              <SelectRaw
+            {regionVal && (
+              <Div
+                data-cy="dropdown_academy_selector"
                 tabindex="1"
-                bgColor={Colors.black}
-                options={regionVal === 'online' ? locations : locations?.filter((academy) => academy.region === regionVal)}
-                value={locations?.find(
-                  (el) => el.value === formData.location.value
-                )}
-                placeholder={yml.left.locations_title}
-                inputId={"dropdown_academy_selector"}
-                onChange={(value, valid) => {
-                  setVal({ ...formData, location: { value, valid } });
-                }}
-              />
-            </Div>}
+                contenteditable="true"
+                margin_tablet="0 0 23px 0"
+              >
+                <SelectRaw
+                  tabindex="1"
+                  bgColor={Colors.black}
+                  options={
+                    regionVal === "online"
+                      ? locations
+                      : locations?.filter(
+                          (academy) => academy.region === regionVal
+                        )
+                  }
+                  value={locations?.find(
+                    (el) => el.value === formData.location.value
+                  )}
+                  placeholder={yml.left.locations_title}
+                  inputId={"dropdown_academy_selector"}
+                  onChange={(value, valid) => {
+                    setVal({ ...formData, location: { value, valid } });
+                  }}
+                />
+              </Div>
+            )}
             {formData.referral_key.value &&
               formData.referral_key.value != "" && (
                 <Alert color="blue">

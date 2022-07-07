@@ -252,7 +252,11 @@ const Home = (props) => {
         paragraph={hiring.partners.sub_heading}
       />
 
-      <Loc lang={pageContext.lang} yml={yml.locations} allLocationYaml={data.allLocationYaml} />
+      <Loc
+        lang={pageContext.lang}
+        yml={yml.locations}
+        allLocationYaml={data.allLocationYaml}
+      />
     </>
   );
 };
