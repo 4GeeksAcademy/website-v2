@@ -520,7 +520,7 @@ const Apply = (props) => {
             {formStatus.status === "error" && !formData.location.valid && (
               <Alert color="red">Please pick a location</Alert>
             )}
-            <Div
+            {regionVal && <Div
               data-cy="dropdown_academy_selector"
               tabindex="1"
               contenteditable="true"
@@ -539,7 +539,7 @@ const Apply = (props) => {
                   setVal({ ...formData, location: { value, valid } });
                 }}
               />
-            </Div>
+            </Div>}
             {formData.referral_key.value &&
               formData.referral_key.value != "" && (
                 <Alert color="blue">

@@ -40,6 +40,7 @@ export default ({ children }) => {
               slug
               visibility
               position
+              region
             }
             button {
               apply_button_text
