@@ -8,9 +8,34 @@ import { getCohorts } from "../../actions";
 import { SessionContext } from "../../session.js";
 import Link from "gatsby-link";
 
-const Loc = ({ lang, yml }) => {
+const Loc = ({ lang, yml, allLocationYaml }) => {
   const { heading, image, sub_heading, choose, regions } = yml;
 
+  useEffect(()=>{
+    regions.forEach((reg, ind, arr) => {
+      if (arr[ind].name === "online") {
+        arr[ind].sub_links = allLocationYaml.edges.filter(
+          (loc) => loc.node.online_available || loc.node.online_available === null
+        );
+      } else {
+        arr[ind].sub_links = allLocationYaml.edges.filter(
+          (loc) => loc.node.meta_info.region === reg.name
+        );
+      }
+  
+      arr[ind].sub_links.sort((a, b) => {
+        if (a.node.meta_info.position < b.node.meta_info.position) {
+          return -1;
+        }
+        if (a.node.meta_info.position > b.node.meta_info.position) {
+          return 1;
+        }
+        return 0;
+      });
+    });
+    setActiveOpt({...regions[0]});
+  },[]);
+  
   const data = useStaticQuery(graphql`
     {
       allLocYaml {

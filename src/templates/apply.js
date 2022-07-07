@@ -77,6 +77,7 @@ const Apply = (props) => {
             ? trans[pageContext.lang]["(In-person and from home available)"]
             : trans[pageContext.lang]["(From home until further notice)"]),
         value: m.active_campaign_location_slug,
+        region: m.meta_info.region
       }));
 
   React.useEffect(() => {
@@ -529,7 +530,7 @@ const Apply = (props) => {
               <SelectRaw
                 tabindex="1"
                 bgColor={Colors.black}
-                options={locations && locations}
+                options={regionVal === 'online' ? locations : locations?.filter((academy) => academy.region === regionVal)}
                 value={locations?.find(
                   (el) => el.value === formData.location.value
                 )}

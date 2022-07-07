@@ -7,7 +7,7 @@ meta_info:
   # it will not show up on the applications forms
   visibility: "visible"
   keywords: "Coding Bootcamp Campus Colombia"
-  region: "america"
+  region: "latam"
   redirects: [
     # WARN: This specific slug, does not allow to change language
     # "/es/coding-campus/bootcamp-programacion-colombia"
