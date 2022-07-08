@@ -33,7 +33,7 @@ import Credentials from "../components/Credentials";
 import ChooseProgram from "../components/ChooseProgram";
 import BaseRender from "./_baseLayout";
 import { SessionContext } from "../session.js";
-import Loc from "../components/Loc/new_locations";
+import Loc from "../components/Loc";
 import Badges from "../components/Badges";
 import With4Geeks from "../components/With4Geeks";
 import About4Geeks from "../components/About4Geeks";
