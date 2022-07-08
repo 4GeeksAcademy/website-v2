@@ -562,7 +562,9 @@ export const query = graphql`
       }
     }
     allPageYaml(
-      filter: { fields: { slug: { in: ["index", "inicio"] }, lang: { eq: $lang } } }
+      filter: {
+        fields: { slug: { in: ["index", "inicio"] }, lang: { eq: $lang } }
+      }
     ) {
       edges {
         node {

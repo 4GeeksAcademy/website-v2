@@ -20,8 +20,11 @@ const Loc = ({ lang, yml, allLocationYaml }) => {
         );
       } else {
         arr[ind].sub_links = allLocationYaml.edges.filter(
-          (loc) => loc.node.meta_info.region === reg.name || (
-            reg.name === 'america' && (loc.node.meta_info.region === 'usa-canada' || loc.node.meta_info.region === 'latam'))
+          (loc) =>
+            loc.node.meta_info.region === reg.name ||
+            (reg.name === "america" &&
+              (loc.node.meta_info.region === "usa-canada" ||
+                loc.node.meta_info.region === "latam"))
         );
       }
 
