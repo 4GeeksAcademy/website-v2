@@ -357,6 +357,9 @@ const Program = ({ data, pageContext, yml }) => {
             formHandler={requestSyllabus}
             handleClose={handleClose}
             lang={pageContext.lang}
+            redirect={pageContext.lang === "us"
+            ? "/us/thank-you"
+            : "/es/gracias"}
             data={{
               course: {
                 type: "hidden",
