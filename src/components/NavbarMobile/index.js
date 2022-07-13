@@ -240,11 +240,13 @@ const CampusMenu = ({ status, setStatus, menu }) => {
           id="options-container"
           justifyContent_tablet="center"
           justifyContent_xs="between"
+          textAlign="center"
         >
           {Array.isArray(menu[status.itemIndex].sub_menu.links) &&
             menu[status.itemIndex].sub_menu.links.map((m, i) => (
               <Button
                 color={activeOpt.title === m.title ? Colors.black : Colors.gray}
+                width="33%"
                 borderBottom={
                   activeOpt.title === m.title
                     ? `5px solid ${Colors.blue}`
@@ -252,6 +254,7 @@ const CampusMenu = ({ status, setStatus, menu }) => {
                 }
                 borderRadius="none"
                 padding="10px"
+                display="inline-block"
                 onClick={() => {
                   setActiveOpt({ ...m });
                 }}
@@ -265,23 +268,32 @@ const CampusMenu = ({ status, setStatus, menu }) => {
           flexDirection="column"
           flexWrap="wrap"
           maxHeight="400px"
+          alignContent="flex-start"
+          overflowWrap="break-word"
         >
           {activeOpt.sub_links != undefined &&
             Array.isArray(activeOpt.sub_links) &&
             activeOpt.sub_links.map((l, i) => {
               return (
-                <Link to={l.link_to} key={i} style={{ maxWidth: "50%" }}>
+                <Link to={l.link_to} key={i} style={{ maxWidth: '150px' }}>
                   <Div
-                    margin="2px 5px 2px 0"
+                    margin_tablet="2px 50px 2px 0"
+                    margin_sm="2px 30px 2px 0"
+                    margin_xs="2px 10px 2px 0"
+                    margin_xxs="2px 5px 2px 0"
                     padding="10px 0 10px 18px"
+                    padding_xs="10px 0 10px 0"
                     backgroundHover={`#E6F5FB`}
                     borderRadius="3px"
                     alignItems="baseline"
+                    // width_tablet="20%"
+                    // width_xs="30%"
                     // maxWidth="50%"
                   >
                     <H3
                       textAlign="left"
                       width="fit-content"
+                      // maxWidth="200px"
                       fontSize="15px"
                       lineHeight="20px"
                       fontWeight="400"
@@ -317,12 +329,12 @@ export const MegaMenu = ({
     <>
       {status.toggle && (
         <MegaMenuContainer
-          onMouseLeave={() => {
-            setStatus({ ...status, hovered: false });
-            setTimeout(() => {
-              setStatus((_status) => ({ ..._status, toggle: _status.hovered }));
-            }, 300);
-          }}
+          // onMouseLeave={() => {
+          //   setStatus({ ...status, hovered: false });
+          //   setTimeout(() => {
+          //     setStatus((_status) => ({ ..._status, toggle: _status.hovered }));
+          //   }, 300);
+          // }}
           flexDirection="column"
           position="absolute"
           background={Colors.white}

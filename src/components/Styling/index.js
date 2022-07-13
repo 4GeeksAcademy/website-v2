@@ -363,6 +363,8 @@ export const Button = styled(SmartButton)`
   @media ${Devices.xxs} {
   }
   @media ${Devices.xs} {
+    width: ${(props) => props.width_xs};
+    text-align: ${(props) => props.textAlign_xs || "center"};
   }
   @media ${Devices.sm} {
     width: ${(props) => props.width_sm};

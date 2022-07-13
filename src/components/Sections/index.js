@@ -124,6 +124,7 @@ export const Div = styled.div`
     props.size ? `${(props.size / 12) * 100}%` : props.maxWidth || null};
   max-height: ${(props) => (props.maxHeight ? props.maxHeight : "none")};
   overflow: ${(props) => props.overflow};
+  overflow-wrap: ${(props) => props.overflowWrap};
   overflow-x: ${(props) => props.overflowX};
   grid-area: ${(props) => props.gridArea};
   place-self: ${(props) => props.placeSelf};
@@ -188,6 +189,7 @@ export const Div = styled.div`
     border-bottom: ${(props) => props.borderBottomHover};
   }
   @media ${Devices.xxs} {
+    margin: ${(props) => props.margin_xxs};
   }
   @media ${Devices.xs} {
     padding: ${(props) => props.padding_xs};
@@ -211,6 +213,7 @@ export const Div = styled.div`
     justify-content: ${(props) =>
       justifyContentOptions[props.justifyContent_sm]};
     height: ${(props) => props.height_sm};
+    margin: ${(props) => props.margin_sm};
     display: ${(props) => props.display};
     column-count: ${(props) => props.columnCount_sm};
     flex-direction: ${(props) => props.flexDirection_sm};
