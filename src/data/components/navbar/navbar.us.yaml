@@ -122,7 +122,7 @@ navbar:
             - title: "Venezuela"
               link_to: "/us/coding-campus/coding-bootcamp-caracas"
             - title: "Other location in America"
-              link_to: "/us/coding-campus/coding-bootcamp-caracas"
+              link_to: "/us/coding-campus/online-coding-bootcamp"
             - title: "Other location in Europe"
               link_to: "/us/coding-campus/coding-bootcamp-caracas"
         - title: "America"
@@ -152,6 +152,8 @@ navbar:
               link_to: "/us/coding-campus/coding-bootcamp-uruguay"
             - title: "Venezuela"
               link_to: "/us/coding-campus/coding-bootcamp-caracas"
+            - title: "Rest of America"
+              link_to: "/es/coding-campus/online-bootcamp-programacion"
         - title: "Europa"
           content: "With the online modality you have access to our physical locations worldwide"
           sub_links:
