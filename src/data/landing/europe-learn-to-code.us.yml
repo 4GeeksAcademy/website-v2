@@ -27,14 +27,14 @@ form:
   # posible fields: "first_name", "last_name", "full_name", "phone", "email"
   # always the first_name, email and phone will be mandatory if added.
   fields: ["full_name", "phone", "email"]
-  heading: "Apply now"
+  heading: "Apply for a scholarship now"
   button_label: Apply now
   redirect: "/us/thank-you" #you can redirect to another url or entirely diffrent website
 
 # jumbotron on the top (cannot be commented out)
 header_data:
   tagline: Learn To Code
-  sub_heading: "Become a software developer and get a job in tech"
+  sub_heading: "Become a software developer and get a job in tech in one of the best coding bootcamps around the world."
   background_image: "../../../static/images/Happy-People-Landing-4Geeks-ES.jpg"
   image_filter: brightness(0.4)
 
@@ -46,7 +46,7 @@ features:
   bullets:
     - No previous experience or coding skills required.
     - Part-Time focused. No need to stop your life.
-    - Lifetime access to our mentors and Career Growth Support (Your first Job in Tech is our goal.
+    - Lifetime and unlimited mentorships and career support. (Your first Job in Tech is our goal).
 
 follow_bar:
   position: "top" # top, bottom, hidden
