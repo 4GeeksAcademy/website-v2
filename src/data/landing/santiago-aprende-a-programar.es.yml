@@ -7,7 +7,7 @@ meta_info:
   image: "/images/bg/main-bg.jpg"
   keywords: "Aprende a programar, aprende programación, Aprende a codificar, Aprende python y javascript, Curso de Informática, Coding Bootcamp, 4Geeks Academy"
 
-  template: "landing_nonav" # <--- choose your landing template
+  template: "landing_a" # <--- choose your landing template
   redirects: # <--- URL redirections to avoid 404 errors
     ["/landing/aprende-a-programar-santiago"]
 
@@ -35,9 +35,10 @@ form:
 
 # jumbotron on the top (cannot be commented out)
 header_data:
-  tagline: Aprende a programar
+  background: "#FFF1D1"
+  tagline: Aprende a programar 
   sub_heading: ""
-  image: "../../../static/images/4geeks-main.jpg"
+  badge: "../../../static/images/badges/switchup.png"
   image_filter: brightness(0.3)
 
 features:
@@ -54,8 +55,8 @@ features:
 follow_bar:
   position: "top" # top, bottom, hidden
   content:
-    text: "Financiamiento sin interés. \n Plan de pago a 12 cuotas."
-    text_mobile: "Financiamiento sin interés. \n Hasta 12 cuotas."
+    text: "Financiamiento sin interés. \n Plan de pago a 9 cuotas."
+    text_mobile: "Financiamiento sin interés. \n Hasta 9 cuotas."
     # devices:    XL      LG      MD      SM       XS
     font_size: ["25px", "25px", "25px", "18px", "4.3vw"]
   button:
@@ -83,7 +84,7 @@ about4Geeks:
   sub_heading: "Una comunidad de más de 4000 estudiantes, profesores, partners y exalumnos, conectados por medio de Slack, GitHub, Social Media y BreatheCode (nuestra plataforma educacional)"
   list:
     - title: "Apoyo Profesional para siempre"
-    - title: "Financiamiento a 12 meses sin interés"
+    - title: "Financiamiento hasta 18 meses"
     - title: "Mentorias 1:1 ilimitadas"
     - title: "Preparación para Entrevistas personalizada"
   paragraph: ""
@@ -131,15 +132,15 @@ choose_your_program:
     
     text_link: Postula
     link: "#"
-  - title: "Ingeniero de Software"
+  - title: "NodeJs Back End Development"
     sub_title: "Nivel 2"
     icon: "software"
     description: |
-      Profundizamos a un nivel avanzado principios específicos de desarrollo, llevando tu carrera a otro nivel.
-      
-      Desarrolla más habilidades adentrándote en el mundo de computación y aplicaciones nativas de la nube. Aprende las habilidades que el 90% de las empresas Fortune 500 están buscando.
+      Este programa de estudio te permitirá trabajar y desarrollar el back-end de software y aplicaciones web, utilizando uno de los lenguajes de programacion más demandados en el mundo, Javascript.
+
+      Aprenderás a crear tu ambiente de trabajo y realizar las configuraciones pertinentes para poder trabajar con el stack más solicitado de NodeJs
     
-    text_link: Próximamente
+    text_link: Postula
     link: "#"
     
 

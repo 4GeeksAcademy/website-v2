@@ -15,7 +15,7 @@ meta_info:
   # this UTM fields will be also included in the CRM contact
   utm_course: ["full-stack"]
   utm_location: santiago-chile
-  automation: soft # comma separated, "soft" is the default value
+  automation: strong # comma separated, "soft" is the default value
   tag: request_more_info # comma separated, "request_more_info" is the default value
 
 form:
@@ -24,8 +24,14 @@ form:
   fields: ["full_name", "phone", "email"]
   heading: "Conoce más información"
   motivation: "Completa el formulario y te enviaremos la información en menos de 5 min a tu correo electrónico."
-  button_label: Obtener malla y más información
+  button_label: Obtener más información
   redirect: "/es/gracias/?lang=es"  #you can redirect to another url or entirely diffrent website
+
+navbar:
+  buttonText: "Postular"
+  buttonUrl: "#bottom" # url accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
+  logoUrl: "#"
+
 
 apply_schollarship: # form that is displayed at the end of the landing
   # title: "Get more info about this award-winning development course"
@@ -63,7 +69,7 @@ short_badges:
   - name: "Switchup"
     url: ""
     image: "../../../static/images/badges/reviews.png"
-    alt: "Best cooding bootcamp Switchup 2021" 
+    alt: "Best coding bootcamp Switchup 2021" 
 
 follow_bar:
   position: "top" # top, bottom, hidden
