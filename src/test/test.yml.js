@@ -11,18 +11,19 @@ const metas = [
   { key: "redirects", type: "array" },
 ];
 
-function linesOf(text, substring){
-  var line = 0, matchedChars = 0;
+function linesOf(text, substring) {
+  var line = 0,
+    matchedChars = 0;
   let lines = [];
 
   for (var i = 0; i < text.length; i++) {
-    text[i] === substring[matchedChars] ? matchedChars++ : matchedChars = 0;
+    text[i] === substring[matchedChars] ? matchedChars++ : (matchedChars = 0);
 
-    if (matchedChars === substring.length) lines.push(line+1);                  
-    if (text[i] === '\n') line++;
+    if (matchedChars === substring.length) lines.push(line + 1);
+    if (text[i] === "\n") line++;
   }
 
-  return  lines;
+  return lines;
 }
 
 walk(`${__dirname}/../data/`, async function (err, files) {
@@ -57,11 +58,11 @@ walk(`${__dirname}/../data/`, async function (err, files) {
     const foundLeftQuotes = linesOf(data, "“");
     const foundRightQuotes = linesOf(data, "”");
     if (foundLeftQuotes.length > 0 || foundRightQuotes.length > 0) {
+      let lines = "";
+      if (foundLeftQuotes.length > 0) lines = foundLeftQuotes.join(",");
+      if (foundRightQuotes.length > 0)
+        lines = (lines.length > 0 ? "," : "") + foundRightQuotes.join(",");
 
-      let lines = ""
-      if(foundLeftQuotes.length > 0) lines = foundLeftQuotes.join(",");
-      if(foundRightQuotes.length > 0) lines = (lines.length > 0 ? "," : "")+foundRightQuotes.join(",");
-      
       fail(`We found some weird quotes “” that usually come from copy & pasting content from the internet. 
 Please make sure to fix them to standard double " or single ' quotes:  \nLine numbers: ${lines}\nFile ${_path}.`);
     }
