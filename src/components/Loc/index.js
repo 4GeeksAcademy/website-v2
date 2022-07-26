@@ -20,16 +20,21 @@ const Loc = ({ lang, yml, allLocationYaml }) => {
 
   useEffect(() => {
     regions.forEach((reg, ind, arr) => {
-      if (arr[ind].name === "online") {
-        arr[ind].sub_links = allLocationYaml.edges.filter(
-          (loc) =>
-            loc.node.online_available || loc.node.online_available === null
-        );
-      } else {
-        arr[ind].sub_links = allLocationYaml.edges.filter(
-          (loc) => loc.node.meta_info.region === reg.name
-        );
-      }
+      arr[ind].sub_links = allLocationYaml.edges.filter(
+        (loc) => loc.node.meta_info.region === reg.name && (
+          loc.node.meta_info.visibility === null || loc.node.meta_info.visibility !== 'unlisted'
+        )
+      );
+      // if (arr[ind].name === "online") {
+      //   arr[ind].sub_links = allLocationYaml.edges.filter(
+      //     (loc) =>
+      //       loc.node.online_available || loc.node.online_available === null
+      //   );
+      // } else {
+      //   arr[ind].sub_links = allLocationYaml.edges.filter(
+      //     (loc) => loc.node.meta_info.region === reg.name
+      //   );
+      // }
 
       arr[ind].sub_links.sort((a, b) => {
         if (a.node.meta_info.position < b.node.meta_info.position) {
@@ -127,7 +132,7 @@ const Loc = ({ lang, yml, allLocationYaml }) => {
                 >
                   <H3
                     textAlign="left"
-                    // width="fit-content"
+                    width="fit-content"
                     maxWidth_xs="135px"
                     fontSize="15px"
                     lineHeight="20px"
@@ -142,6 +147,7 @@ const Loc = ({ lang, yml, allLocationYaml }) => {
                       color={Colors.blue}
                       width="10px"
                       height="10px"
+                      style={{ marginLeft: '5px' }}
                     />
                   </H3>
                 </Link>
@@ -176,10 +182,13 @@ const Loc = ({ lang, yml, allLocationYaml }) => {
       <Div
         id="locations-container"
         padding="0 10%"
+        // padding="0 0 5% 0"
         flexDirection_tablet="row"
         flexDirection_sm="column"
         flexDirection_xs="column"
         margin="0 0 20px 0"
+        // margin="auto"
+        // width="70%"
         height="100%"
         maxHeight="none"
       >
@@ -189,7 +198,7 @@ const Loc = ({ lang, yml, allLocationYaml }) => {
           display_sm="flex"
           flexDirection="column"
           width_tablet="40%"
-          maxWidth_tablet="270px"
+          // maxWidth_tablet="270px"
           width_xs="100%"
           margin_tablet="0 20px 0 0"
           margin_xs="0 0 20px 0"
@@ -204,12 +213,14 @@ const Loc = ({ lang, yml, allLocationYaml }) => {
           </H3>
           {sub_title_image && /<\/?[a-z0-9]+>/g.test(sub_title_image) ? (
             <Div
-              margin="0 0 10px 0"
+              display="block"
+              margin="0 0 20px 0"
               textAlign="left"
               color={Colors.black}
               style={{ 
                 fontFamily: 'Lato, sans-serif',
-                fontWeight: '700'
+                fontWeight: '700',
+                lineHeight: '18px'
               }}
               // fontWeight="700"
               dangerouslySetInnerHTML={{ __html: sub_title_image }}
@@ -217,7 +228,7 @@ const Loc = ({ lang, yml, allLocationYaml }) => {
           ) : (
             sub_title_image && (
               <Paragraph
-                margin="0 0 10px 0"
+                margin="0 0 20px 0"
                 textAlign="left"
                 color={Colors.black}
                 fontWeight="700"
@@ -282,7 +293,7 @@ const Loc = ({ lang, yml, allLocationYaml }) => {
                   <Link
                     to={`/${lang}/coding-campus/${l.node.meta_info.slug}`}
                     key={i}
-                    style={{ marginBottom: "8px" }}
+                    style={{ marginBottom: '8px', width: 'fit-content' }}
                   >
                     <H3
                       textAlign="left"
@@ -300,6 +311,7 @@ const Loc = ({ lang, yml, allLocationYaml }) => {
                         color={Colors.blue}
                         width="10px"
                         height="10px"
+                        style={{ marginLeft: '5px' }}
                       />
                     </H3>
                   </Link>
