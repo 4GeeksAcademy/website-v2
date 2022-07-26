@@ -1,15 +1,14 @@
-import React, { useState, useContext, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import { Title, H1, H2, H3, H4, Span, Paragraph } from "../Heading";
 import { GridContainer, Grid, Div } from "../Sections";
 import { Img, Colors } from "../Styling";
+import Icon from "../Icon";
 
-import { getCohorts } from "../../actions";
-import { SessionContext } from "../../session.js";
 import Link from "gatsby-link";
 
 const Loc = ({ lang, yml, allLocationYaml }) => {
-  const { heading, image, sub_heading, choose, regions } = yml;
+  const { heading, image, sub_heading, choose, regions, title_image, sub_title_image } = yml;
 
   useEffect(() => {
     regions.forEach((reg, ind, arr) => {
@@ -20,11 +19,7 @@ const Loc = ({ lang, yml, allLocationYaml }) => {
         );
       } else {
         arr[ind].sub_links = allLocationYaml.edges.filter(
-          (loc) =>
-            loc.node.meta_info.region === reg.name ||
-            (reg.name === "america" &&
-              (loc.node.meta_info.region === "usa-canada" ||
-                loc.node.meta_info.region === "latam"))
+          (loc) => loc.node.meta_info.region === reg.name
         );
       }
 
@@ -86,55 +81,98 @@ const Loc = ({ lang, yml, allLocationYaml }) => {
           </Div>
         </GridContainer>
       )}
-      <hr
+      {/* <hr
         style={{
           margin: "auto",
           width: "80%",
           marginBottom: "20px",
           border: `1px solid ${Colors.verylightGray}`,
         }}
-      />
+      /> */}
       <Div
         id="locations-container"
-        padding="0 10% 10% 10%"
+        padding="0 10%"
         flexDirection_tablet="row"
         flexDirection_sm="column"
         flexDirection_xs="column"
+        margin="0 0 20px 0"
+        height="100%"
+        maxHeight="none"
       >
-        {image && (
-          <Div
-            id="img-container"
-            width_tablet="30%"
-            maxWidth_tablet="270px"
-            width_xs="100%"
-            margin_tablet="0 20px 0 0"
-            margin_xs="0 0 20px 0"
-            // height="100%"
+        <Div
+          id="text-and-image-container"
+          display="block"
+          display_sm="flex"
+          flexDirection="column"
+          width_tablet="40%"
+          maxWidth_tablet="270px"
+          width_xs="100%"
+          margin_tablet="0 10px 0 0"
+          margin_xs="0 0 20px 0"
+        >
+          <H3 
+            textAlign="left" 
+            color={Colors.blue}
+            width="100%"
+            margin="0 0 10px 0"
           >
-            <Img
-              src={image}
-              // borderRadius={"1.25rem"}
-              borderRadius={"3px"}
-              // className="pointer"
-              alt={"4Geeks Academy Section"}
-              margin="auto"
-              width="100%"
+            {title_image}
+          </H3>
+          <Paragraph 
+            margin="0 0 10px 0" 
+            textAlign="left" 
+            color={Colors.black}
+            fontWeight="700"
+          >
+            {sub_title_image}
+          </Paragraph>
+          {image && (
+            // <Img
+            //   src={image}
+            //   // borderRadius={"1.25rem"}
+            //   borderRadius={"3px"}
+            //   // className="pointer"
+            //   alt={"4Geeks Academy Section"}
+            //   margin="auto"
+            //   width="100%"
+            //   height="100%"
+            //   maxHeight="300px"
+            //   minHeight_tablet="none"
+            //   minHeight_sm="200px"
+            //   backgroundSize="cover"
+            //   order_sm="-1"
+            // />
+            <Div
+              id="img-container"
               height="100%"
-              minHeight_tablet="none"
-              minHeight_sm="100px"
-              backgroundSize={`cover`}
-              style={{ imageRendering: "crisp-edges" }}
-            />
-          </Div>
-        )}
+              order_sm="-1"
+              margin_sm="0 0 20px 0"
+            >
+              <Img
+                src={image}
+                // borderRadius={"1.25rem"}
+                borderRadius={"3px"}
+                // className="pointer"
+                alt={"4Geeks Academy Section"}
+                margin="auto"
+                width="100%"
+                height="100%"
+                maxHeight="300px"
+                minHeight_tablet="none"
+                minHeight_sm="200px"
+                backgroundSize="cover"
+              />
+            </Div>
+          )}
+        </Div>
         <Div
           id="menu-container"
-          width_tablet="70%"
+          width_tablet="60%"
           width_xs="100%"
           display="block"
           // flexShrink_tablet="0"
         >
-          {choose && (
+          {/* {choose && (
             <Paragraph
               textAlign="left"
               color={Colors.darkGray}
@@ -142,15 +180,17 @@ const Loc = ({ lang, yml, allLocationYaml }) => {
             >
               {choose}
             </Paragraph>
-          )}
-          <Div
+          )} */}
+          {/* <Div
             id="selectors-container"
             flexDirection_tablet="row"
             flexDirection_xs="column"
+            flexShrink_tablet="0"
             width_xs="100%"
+            height="100%"
             // flexShrink_tablet="0"
-          >
-            <Div
+          > */}
+            {/* <Div
               id="options-container"
               flexDirection_tablet="column"
               justifyContent_tablet="start"
@@ -206,8 +246,8 @@ const Loc = ({ lang, yml, allLocationYaml }) => {
                   </Paragraph>
                 </Div>
               ))}
-            </Div>
-            <Paragraph
+            </Div> */}
+            {/* <Paragraph
               display_tablet="none"
               display_xs="block"
               textAlign="left"
@@ -215,21 +255,56 @@ const Loc = ({ lang, yml, allLocationYaml }) => {
               margin="10px 0"
             >
               {activeOpt.content}
-            </Paragraph>
+            </Paragraph> */}
             <Div
               id="links-container"
-              // flexShrink_tablet="0"
-              flexDirection="column"
-              width_tablet="67%"
+              flexShrink_tablet="0"
+              // flexDirection="column"
+              width_tablet="100%"
               width_xs="100%"
-              flexWrap="wrap"
               // maxHeight="330px"
               // minHeight="330px"
-              height="330px"
-              alignContent_tablet="flex-start"
-              alignContent_xs="space-between"
+              justifyContent="around"
+              flexWrap="nowrap"
             >
-              {activeOpt.sub_links != undefined &&
+              {regions?.map((region) => (
+                <Div
+                  flexDirection="column"
+                  height="100%"
+                  flexGrow="1"
+                  margin="0 0 0 5px"
+                >
+                  <H3 textAlign="left" margin="0 0 15px 0">
+                    {region.title}
+                  </H3>
+                  {region.sub_links?.map((l,i) => (
+                    <Link
+                      to={`/${lang}/coding-campus/${l.node.meta_info.slug}`}
+                      key={i}
+                      style={{marginBottom:'10px'}}
+                    >
+                      <H3
+                        textAlign="left"
+                        width="fit-content"
+                        fontSize="15px"
+                        lineHeight="20px"
+                        fontWeight="400"
+                        margin="0 5px 0 0"
+                        borderBottomHover="2px solid black"
+                      >
+                        {l.node.name}
+                        <Icon
+                          icon="arrow-right"
+                          color={Colors.blue}
+                          width="10px"
+                          height="10px"
+                        />
+                      </H3>
+                    </Link>
+                  ))}
+                </Div>
+              ))}
+              {/* {activeOpt.sub_links != undefined &&
                 Array.isArray(activeOpt.sub_links) &&
                 activeOpt.sub_links.map((l, i) => {
                   return (
@@ -260,9 +335,9 @@ const Loc = ({ lang, yml, allLocationYaml }) => {
                       </Link>
                     </Div>
                   );
-                })}
+                })} */}
             </Div>
-          </Div>
+          {/* </Div> */}
         </Div>
       </Div>
     </>

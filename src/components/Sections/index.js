@@ -159,11 +159,13 @@ export const Div = styled.div`
   border-bottom: ${(props) => props.borderBottom};
   border-right: ${(props) => props.borderRight};
   justify-content: ${(props) => justifyContentOptions[props.justifyContent]};
+  order: ${(props) => props.order};
   text-align: ${(props) => props.textAlign};
   justify-self: ${(props) => props.justifySelf};
   box-shadow: ${(props) =>
     props.isActive ? props.boxShadowActive : props.boxShadow};
   flex-wrap: ${(props) => props.flexWrap || "nowrap"};
+  flex-grow: ${(props) => props.flexGrow || "0"};
   align-content: ${(props) => props.alignContent};
   align: ${(props) => props.align};
   cursor: ${(props) => props.cursor};
@@ -215,6 +217,8 @@ export const Div = styled.div`
     column-count: ${(props) => props.columnCount_sm};
     flex-direction: ${(props) => props.flexDirection_sm};
     display: ${(props) => props.display_sm};
+    order: ${(props) => props.order_sm};
+    margin: ${(props) => props.margin_sm};
   }
   @media ${Devices.tablet} {
     flex: ${(props) =>

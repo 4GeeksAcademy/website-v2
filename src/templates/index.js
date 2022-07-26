@@ -333,6 +333,8 @@ export const query = graphql`
           locations {
             heading
             sub_heading
+            title_image
+            sub_title_image
             image
             choose
             regions {
