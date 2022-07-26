@@ -235,6 +235,7 @@ export const Div = styled.div`
         ? `${(props.size_tablet / 12) * 100}%`
         : null};
     align-self: ${(props) => props.alignSelf_tablet};
+    order: ${(props) => props.order_tablet};
     gap: ${(props) => (props) => props.gap_tablet};
     column-count: ${(props) => props.columnCount_tablet};
     place-self: ${(props) => props.placeSelf_tablet};

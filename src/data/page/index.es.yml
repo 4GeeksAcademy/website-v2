@@ -58,7 +58,7 @@ locations:
   image: "/images/locations/locations_image.png"
   sub_heading: "Con +7 sedes (y creciendo), 4Geeks es una de las escuelas y comunidades de programadores más grandes del mundo"
   title_image: "Todo es 100% en vivo."
-  sub_title_image: "Y cada campus es Online, Híbrido o Presencial. Tu elige y nosotros te entregamos"
+  sub_title_image: '<p>Y cada campus es <span style="color: #0097CF;">Online, Híbrido o Presencial.</span> Tu elige y nosotros te entregamos</p>'
   choose: "Escoge una región"
   regions:
     - name: "usa-canada"
