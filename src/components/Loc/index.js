@@ -8,7 +8,15 @@ import Icon from "../Icon";
 import Link from "gatsby-link";
 
 const Loc = ({ lang, yml, allLocationYaml }) => {
-  const { heading, image, sub_heading, choose, regions, title_image, sub_title_image } = yml;
+  const {
+    heading,
+    image,
+    sub_heading,
+    choose,
+    regions,
+    title_image,
+    sub_title_image,
+  } = yml;
 
   useEffect(() => {
     regions.forEach((reg, ind, arr) => {
@@ -110,17 +118,17 @@ const Loc = ({ lang, yml, allLocationYaml }) => {
           margin_tablet="0 10px 0 0"
           margin_xs="0 0 20px 0"
         >
-          <H3 
-            textAlign="left" 
+          <H3
+            textAlign="left"
             color={Colors.blue}
             width="100%"
             margin="0 0 10px 0"
           >
             {title_image}
           </H3>
-          <Paragraph 
-            margin="0 0 10px 0" 
-            textAlign="left" 
+          <Paragraph
+            margin="0 0 10px 0"
+            textAlign="left"
             color={Colors.black}
             fontWeight="700"
           >
@@ -190,7 +198,7 @@ const Loc = ({ lang, yml, allLocationYaml }) => {
             height="100%"
             // flexShrink_tablet="0"
           > */}
-            {/* <Div
+          {/* <Div
               id="options-container"
               flexDirection_tablet="column"
               justifyContent_tablet="start"
@@ -247,7 +255,7 @@ const Loc = ({ lang, yml, allLocationYaml }) => {
                 </Div>
               ))}
             </Div> */}
-            {/* <Paragraph
+          {/* <Paragraph
               display_tablet="none"
               display_xs="block"
               textAlign="left"
@@ -256,55 +264,55 @@ const Loc = ({ lang, yml, allLocationYaml }) => {
             >
               {activeOpt.content}
             </Paragraph> */}
-            <Div
-              id="links-container"
-              flexShrink_tablet="0"
-              // flexDirection="column"
-              width_tablet="100%"
-              width_xs="100%"
-              // maxHeight="330px"
-              // minHeight="330px"
-              justifyContent="around"
-              flexWrap="nowrap"
-            >
-              {regions?.map((region) => (
-                <Div
-                  flexDirection="column"
-                  height="100%"
-                  flexGrow="1"
-                  margin="0 0 0 5px"
-                >
-                  <H3 textAlign="left" margin="0 0 15px 0">
-                    {region.title}
-                  </H3>
-                  {region.sub_links?.map((l,i) => (
-                    <Link
-                      to={`/${lang}/coding-campus/${l.node.meta_info.slug}`}
-                      key={i}
-                      style={{marginBottom:'10px'}}
+          <Div
+            id="links-container"
+            flexShrink_tablet="0"
+            // flexDirection="column"
+            width_tablet="100%"
+            width_xs="100%"
+            // maxHeight="330px"
+            // minHeight="330px"
+            justifyContent="around"
+            flexWrap="nowrap"
+          >
+            {regions?.map((region) => (
+              <Div
+                flexDirection="column"
+                height="100%"
+                flexGrow="1"
+                margin="0 0 0 5px"
+              >
+                <H3 textAlign="left" margin="0 0 15px 0">
+                  {region.title}
+                </H3>
+                {region.sub_links?.map((l, i) => (
+                  <Link
+                    to={`/${lang}/coding-campus/${l.node.meta_info.slug}`}
+                    key={i}
+                    style={{ marginBottom: "10px" }}
+                  >
+                    <H3
+                      textAlign="left"
+                      width="fit-content"
+                      fontSize="15px"
+                      lineHeight="20px"
+                      fontWeight="400"
+                      margin="0 5px 0 0"
+                      borderBottomHover="2px solid black"
                     >
-                      <H3
-                        textAlign="left"
-                        width="fit-content"
-                        fontSize="15px"
-                        lineHeight="20px"
-                        fontWeight="400"
-                        margin="0 5px 0 0"
-                        borderBottomHover="2px solid black"
-                      >
-                        {l.node.name}
-                        <Icon
-                          icon="arrow-right"
-                          color={Colors.blue}
-                          width="10px"
-                          height="10px"
-                        />
-                      </H3>
-                    </Link>
-                  ))}
-                </Div>
-              ))}
-              {/* {activeOpt.sub_links != undefined &&
+                      {l.node.name}
+                      <Icon
+                        icon="arrow-right"
+                        color={Colors.blue}
+                        width="10px"
+                        height="10px"
+                      />
+                    </H3>
+                  </Link>
+                ))}
+              </Div>
+            ))}
+            {/* {activeOpt.sub_links != undefined &&
                 Array.isArray(activeOpt.sub_links) &&
                 activeOpt.sub_links.map((l, i) => {
                   return (
@@ -336,7 +344,7 @@ const Loc = ({ lang, yml, allLocationYaml }) => {
                     </Div>
                   );
                 })} */}
-            </Div>
+          </Div>
           {/* </Div> */}
         </Div>
       </Div>
