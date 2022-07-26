@@ -21,9 +21,10 @@ const Loc = ({ lang, yml, allLocationYaml }) => {
   useEffect(() => {
     regions.forEach((reg, ind, arr) => {
       arr[ind].sub_links = allLocationYaml.edges.filter(
-        (loc) => loc.node.meta_info.region === reg.name && (
-          loc.node.meta_info.visibility === null || loc.node.meta_info.visibility !== 'unlisted'
-        )
+        (loc) =>
+          loc.node.meta_info.region === reg.name &&
+          (loc.node.meta_info.visibility === null ||
+            loc.node.meta_info.visibility !== "unlisted")
       );
       // if (arr[ind].name === "online") {
       //   arr[ind].sub_links = allLocationYaml.edges.filter(
@@ -84,9 +85,7 @@ const Loc = ({ lang, yml, allLocationYaml }) => {
         <Div id="responsive-options-selector">
           {regions.map((m, i) => (
             <Div
-              color={
-                activeOpt.title === m.title ? Colors.black : Colors.gray
-              }
+              color={activeOpt.title === m.title ? Colors.black : Colors.gray}
               borderBottom={
                 activeOpt.title === m.title
                   ? `5px solid ${Colors.blue}`
@@ -105,9 +104,7 @@ const Loc = ({ lang, yml, allLocationYaml }) => {
               <H3
                 textAlign="center"
                 fontSize="20px"
-                color={
-                  activeOpt.title === m.title ? Colors.black : Colors.gray
-                }
+                color={activeOpt.title === m.title ? Colors.black : Colors.gray}
               >
                 {m.title}
               </H3>
@@ -147,7 +144,7 @@ const Loc = ({ lang, yml, allLocationYaml }) => {
                       color={Colors.blue}
                       width="10px"
                       height="10px"
-                      style={{ marginLeft: '5px' }}
+                      style={{ marginLeft: "5px" }}
                     />
                   </H3>
                 </Link>
@@ -155,8 +152,8 @@ const Loc = ({ lang, yml, allLocationYaml }) => {
             })}
         </Div>
       </Div>
-    )
-  }
+    );
+  };
 
   return (
     <>
@@ -217,10 +214,10 @@ const Loc = ({ lang, yml, allLocationYaml }) => {
               margin="0 0 20px 0"
               textAlign="left"
               color={Colors.black}
-              style={{ 
-                fontFamily: 'Lato, sans-serif',
-                fontWeight: '700',
-                lineHeight: '18px'
+              style={{
+                fontFamily: "Lato, sans-serif",
+                fontWeight: "700",
+                lineHeight: "18px",
               }}
               // fontWeight="700"
               dangerouslySetInnerHTML={{ __html: sub_title_image }}
@@ -293,7 +290,7 @@ const Loc = ({ lang, yml, allLocationYaml }) => {
                   <Link
                     to={`/${lang}/coding-campus/${l.node.meta_info.slug}`}
                     key={i}
-                    style={{ marginBottom: '8px', width: 'fit-content' }}
+                    style={{ marginBottom: "8px", width: "fit-content" }}
                   >
                     <H3
                       textAlign="left"
@@ -311,7 +308,7 @@ const Loc = ({ lang, yml, allLocationYaml }) => {
                         color={Colors.blue}
                         width="10px"
                         height="10px"
-                        style={{ marginLeft: '5px' }}
+                        style={{ marginLeft: "5px" }}
                       />
                     </H3>
                   </Link>
