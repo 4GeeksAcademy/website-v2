@@ -201,6 +201,7 @@ export const Div = styled.div`
     display: ${(props) => props.display_xs};
     justify-content: ${(props) =>
       justifyContentOptions[props.justifyContent_xs]};
+    order: ${(props) => props.order_xs};
     border: ${(props) => props.border_xs};
     border-top: ${(props) => props.borderTop_xs};
     border-right: ${(props) => props.borderRight_xs};

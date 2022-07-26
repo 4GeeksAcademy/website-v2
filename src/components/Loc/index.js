@@ -253,7 +253,7 @@ const Loc = ({ lang, yml, allLocationYaml }) => {
                 height="100%"
                 maxHeight="300px"
                 minHeight_tablet="none"
-                minHeight_sm="200px"
+                minHeight_xs="200px"
                 backgroundSize="cover"
               />
             </Div>
