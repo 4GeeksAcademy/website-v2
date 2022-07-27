@@ -33,7 +33,7 @@ import Credentials from "../components/Credentials";
 import ChooseProgram from "../components/ChooseProgram";
 import BaseRender from "./_baseLayout";
 import { SessionContext } from "../session.js";
-import Loc from "../components/Loc/new_locations";
+import Loc from "../components/Loc";
 import Badges from "../components/Badges";
 import With4Geeks from "../components/With4Geeks";
 import About4Geeks from "../components/About4Geeks";
@@ -71,28 +71,6 @@ const SVGBubblesRight = () => (
 
 const Home = (props) => {
   const { data, pageContext, yml } = props;
-
-  yml.locations.regions.forEach((reg, ind, arr) => {
-    if (arr[ind].name === "online") {
-      arr[ind].sub_links = data.allLocationYaml.edges.filter(
-        (loc) => loc.node.online_available || loc.node.online_available === null
-      );
-    } else {
-      arr[ind].sub_links = data.allLocationYaml.edges.filter(
-        (loc) => loc.node.meta_info.region === reg.name
-      );
-    }
-
-    arr[ind].sub_links.sort((a, b) => {
-      if (a.node.meta_info.position < b.node.meta_info.position) {
-        return -1;
-      }
-      if (a.node.meta_info.position > b.node.meta_info.position) {
-        return 1;
-      }
-      return 0;
-    });
-  });
 
   const hiring = data.allPartnerYaml.edges[0].node;
   const { session } = React.useContext(SessionContext);
@@ -274,7 +252,11 @@ const Home = (props) => {
         paragraph={hiring.partners.sub_heading}
       />
 
-      <Loc lang={pageContext.lang} yml={yml.locations} />
+      <Loc
+        lang={pageContext.lang}
+        yml={yml.locations}
+        allLocationYaml={data.allLocationYaml}
+      />
     </>
   );
 };
@@ -351,6 +333,8 @@ export const query = graphql`
           locations {
             heading
             sub_heading
+            title_image
+            sub_title_image
             image
             choose
             regions {

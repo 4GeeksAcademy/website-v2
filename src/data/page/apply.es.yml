@@ -25,6 +25,7 @@ left:
     email: "Email"
     phone: "Móvil"
   locations_title: "Selecciona una sede donde estudiar"
+  regions_title: "Selecciona una región"
   course_title:
     open: "¿Qué programa quisieras estudiar?"
     close: "Selecciona un programa"

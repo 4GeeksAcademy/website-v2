@@ -26,6 +26,7 @@ const BaseHeading = styled(Heading)`
   display: ${(props) => props.display || "block"};
   float: ${(props) => props.float || "none"};
   width: ${(props) => props.width || "100%"};
+  max-width: ${(props) => props.maxWidth};
   font-family: "Lato", sans-serif;
   letter-spacing: ${(props) => props.letterSpacing};
   font-weight: ${(props) => props.fontWeight};
@@ -54,9 +55,12 @@ const BaseHeading = styled(Heading)`
   @media ${Devices.xxs} {
   }
   @media ${Devices.xs} {
+    margin: ${(props) => props.margin_xs};
+    max-width: ${(props) => props.maxWidth_xs};
   }
   @media ${Devices.sm} {
     text-align: ${(props) => props.textAlign_sm};
+    margin: ${(props) => props.margin_sm};
   }
   @media ${Devices.tablet} {
     text-align: ${(props) => props.textAlign_tablet};

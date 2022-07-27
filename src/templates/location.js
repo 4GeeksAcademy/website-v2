@@ -24,6 +24,7 @@ import { SessionContext } from "../session";
 const MapFrame = lazy(() => import("../components/MapFrame"));
 
 const Location = ({ data, pageContext, yml }) => {
+  const locationYml = data.allPageYaml.edges[0].node.locations;
   const { lang } = pageContext;
   const { session } = React.useContext(SessionContext);
   const hiring = data.allPartnerYaml.edges[0].node;
@@ -234,7 +235,12 @@ const Location = ({ data, pageContext, yml }) => {
         message={yml.upcoming.no_dates_message}
         actionMessage={yml.upcoming.actionMessage}
       />
-      <Loc lang={pageContext.lang} locations={data.test.edges} />
+      {/* <Loc lang={pageContext.lang} locations={data.test.edges} /> */}
+      <Loc
+        lang={pageContext.lang}
+        yml={locationYml}
+        allLocationYaml={data.test}
+      />
       <Staff lang={pageContext.lang} />
 
       {/* IFRAME map */}
@@ -376,8 +382,10 @@ export const query = graphql`
             position
             image
             keywords
+            region
           }
           seo_title
+          online_available
           active_campaign_location_slug
           breathecode_location_slug
           header {
@@ -553,7 +561,29 @@ export const query = graphql`
         }
       }
     }
-
+    allPageYaml(
+      filter: {
+        fields: { slug: { in: ["index", "inicio"] }, lang: { eq: $lang } }
+      }
+    ) {
+      edges {
+        node {
+          locations {
+            heading
+            sub_heading
+            title_image
+            sub_title_image
+            image
+            choose
+            regions {
+              name
+              title
+              content
+            }
+          }
+        }
+      }
+    }
     allChooseProgramYaml(filter: { fields: { lang: { eq: $lang } } }) {
       edges {
         node {

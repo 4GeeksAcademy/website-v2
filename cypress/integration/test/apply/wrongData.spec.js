@@ -31,6 +31,12 @@ context("Test Apply page with wrong data", () => {
       .wait(2000)
       .type("level 1 {enter}", { force: true });
 
+    cy.get("#dropdown_region_selector")
+      .click({ force: true })
+      .wait(2000)
+      .type("usa {enter}", { force: true })
+      .wait(2000);
+
     cy.get("#dropdown_academy_selector")
       .click({ force: true })
       .wait(2000)

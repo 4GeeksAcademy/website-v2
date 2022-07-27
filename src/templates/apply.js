@@ -52,6 +52,14 @@ const Apply = (props) => {
       value: p.bc_slug,
     }));
 
+  const [regionVal, setRegionVal] = useState(null);
+  const regions = [
+    { label: "Latin America", value: "latam" },
+    { label: "USA & Canada", value: "usa-canada" },
+    { label: "Europe", value: "europe" },
+    { label: "Rest of the world", value: "online" },
+  ];
+
   const locationContext = session && session.location;
 
   const locations =
@@ -69,6 +77,7 @@ const Apply = (props) => {
             ? trans[pageContext.lang]["(In-person and from home available)"]
             : trans[pageContext.lang]["(From home until further notice)"]),
         value: m.active_campaign_location_slug,
+        region: m.meta_info.region,
       }));
 
   React.useEffect(() => {
@@ -489,11 +498,8 @@ const Apply = (props) => {
                 }
               />
             </Div>
-            {formStatus.status === "error" && !formData.location.valid && (
-              <Alert color="red">Please pick a location</Alert>
-            )}
             <Div
-              data-cy="dropdown_academy_selector"
+              data-cy="dropdown_region_selector"
               tabindex="1"
               contenteditable="true"
               margin_tablet="0 0 23px 0"
@@ -501,17 +507,48 @@ const Apply = (props) => {
               <SelectRaw
                 tabindex="1"
                 bgColor={Colors.black}
-                options={locations && locations}
-                value={locations?.find(
-                  (el) => el.value === formData.location.value
-                )}
-                placeholder={yml.left.locations_title}
-                inputId={"dropdown_academy_selector"}
-                onChange={(value, valid) => {
-                  setVal({ ...formData, location: { value, valid } });
+                options={regions}
+                // value={locations?.find(
+                //   (el) => el.value === formData.location.value
+                // )}
+                placeholder={yml.left.regions_title}
+                inputId={"dropdown_region_selector"}
+                onChange={(value) => {
+                  setRegionVal(value.value);
                 }}
               />
             </Div>
+            {formStatus.status === "error" && !formData.location.valid && (
+              <Alert color="red">Please pick a location</Alert>
+            )}
+            {regionVal && (
+              <Div
+                data-cy="dropdown_academy_selector"
+                tabindex="1"
+                contenteditable="true"
+                margin_tablet="0 0 23px 0"
+              >
+                <SelectRaw
+                  tabindex="1"
+                  bgColor={Colors.black}
+                  options={
+                    regionVal === "online"
+                      ? locations
+                      : locations?.filter(
+                          (academy) => academy.region === regionVal
+                        )
+                  }
+                  value={locations?.find(
+                    (el) => el.value === formData.location.value
+                  )}
+                  placeholder={yml.left.locations_title}
+                  inputId={"dropdown_academy_selector"}
+                  onChange={(value, valid) => {
+                    setVal({ ...formData, location: { value, valid } });
+                  }}
+                />
+              </Div>
+            )}
             {formData.referral_key.value &&
               formData.referral_key.value != "" && (
                 <Alert color="blue">
@@ -673,6 +710,7 @@ export const query = graphql`
           left {
             heading
             locations_title
+            regions_title
             course_title {
               open
               close

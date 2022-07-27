@@ -123,6 +123,7 @@ export const Div = styled.div`
   max-width: ${(props) =>
     props.size ? `${(props.size / 12) * 100}%` : props.maxWidth || null};
   max-height: ${(props) => (props.maxHeight ? props.maxHeight : "none")};
+  overflow: ${(props) => props.overflow};
   overflow-x: ${(props) => props.overflowX};
   grid-area: ${(props) => props.gridArea};
   place-self: ${(props) => props.placeSelf};
@@ -158,11 +159,13 @@ export const Div = styled.div`
   border-bottom: ${(props) => props.borderBottom};
   border-right: ${(props) => props.borderRight};
   justify-content: ${(props) => justifyContentOptions[props.justifyContent]};
+  order: ${(props) => props.order};
   text-align: ${(props) => props.textAlign};
   justify-self: ${(props) => props.justifySelf};
   box-shadow: ${(props) =>
     props.isActive ? props.boxShadowActive : props.boxShadow};
   flex-wrap: ${(props) => props.flexWrap || "nowrap"};
+  flex-grow: ${(props) => props.flexGrow || "0"};
   align-content: ${(props) => props.alignContent};
   align: ${(props) => props.align};
   cursor: ${(props) => props.cursor};
@@ -198,6 +201,7 @@ export const Div = styled.div`
     display: ${(props) => props.display_xs};
     justify-content: ${(props) =>
       justifyContentOptions[props.justifyContent_xs]};
+    order: ${(props) => props.order_xs};
     border: ${(props) => props.border_xs};
     border-top: ${(props) => props.borderTop_xs};
     border-right: ${(props) => props.borderRight_xs};
@@ -214,6 +218,8 @@ export const Div = styled.div`
     column-count: ${(props) => props.columnCount_sm};
     flex-direction: ${(props) => props.flexDirection_sm};
     display: ${(props) => props.display_sm};
+    order: ${(props) => props.order_sm};
+    margin: ${(props) => props.margin_sm};
   }
   @media ${Devices.tablet} {
     flex: ${(props) =>
@@ -230,6 +236,7 @@ export const Div = styled.div`
         ? `${(props.size_tablet / 12) * 100}%`
         : null};
     align-self: ${(props) => props.alignSelf_tablet};
+    order: ${(props) => props.order_tablet};
     gap: ${(props) => (props) => props.gap_tablet};
     column-count: ${(props) => props.columnCount_tablet};
     place-self: ${(props) => props.placeSelf_tablet};

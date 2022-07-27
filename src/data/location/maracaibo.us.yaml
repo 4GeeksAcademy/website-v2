@@ -10,7 +10,7 @@ meta_info:
   # it will not show up on the applications forms
   visibility: "unlisted"
   redirects: ["/us/location/maracaibo", "/location/maracaibo"]
-  region: "america"
+  region: "latam"
 
 seo_title: "4Geeks Academy Maracaibo"
 header:

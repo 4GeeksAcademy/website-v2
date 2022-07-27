@@ -8,7 +8,7 @@ meta_info:
   # it will not show up on the applications forms
   visibility: "visible"
   redirects: ["/us/argentina", "/argentina", "/us/coding-campus/coding-bootcamp-argentina"]
-  region: "america"
+  region: "latam"
 
 seo_title: "Coding Bootcamp Argentina"
 header:
