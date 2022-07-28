@@ -16,7 +16,7 @@ seo_title: "Coding Bootcamp in Toronto, Canada"
 header:
   tagline: "4Geeks Academy in Toronto, Canada"
   paragraph: ""
-  image: "../../../static/images/locations/miami-home.png"
+  image: "../../../static/images/locations/toronto-header.png"
   alt: "4Geeks Academy online and in-person coding bootcamp in Toronto, Canada"
 
 badges:
@@ -454,7 +454,7 @@ gdpr_compliant: false # do we need to ask for permision?
 in_person_available: true # important to accept in-person applicants
 
 city: "Toronto"
-name: "Toronto, USA"
+name: "Toronto, Canada"
 latitude: "28.538336"
 longitude: "-81.379234"
 phone: "+1 (786) 416-6640"
