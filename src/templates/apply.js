@@ -459,7 +459,7 @@ const Apply = (props) => {
                   value={formData.email.value || ""}
                 />
               </Div>
-              <Div gridColumn_tablet="7 / 13">
+              <Div display_xs="block" display_tablet="flex" gridColumn_tablet="7 / 13" position="relative">
                 <PhoneInput
                   data-cy="phone"
                   setVal={setVal}
@@ -471,11 +471,23 @@ const Apply = (props) => {
                   setShowPhoneWarning={setShowPhoneWarning}
                 />
                 {showPhoneWarning && (
-                  <Tooltip text={yml.left.form_section.phone_warning}>
-                    <span>
-                      <Icon icon="warning" />
-                    </span>
-                  </Tooltip>
+                  <Div
+                    position_tablet="absolute"
+                    position_sm="static"
+                    left="105%"
+                    top="10px"
+                  >
+                    <Tooltip 
+                      text={yml.left.form_section.phone_warning}
+                      background="#FFB718"
+                      color="#936500"
+                      left="150%"
+                    >
+                      <span>
+                        <Icon icon="warning" />
+                      </span>
+                    </Tooltip>
+                  </Div>
                 )}
                 {/* <Input
                                     data-cy="phone"
@@ -557,10 +569,6 @@ const Apply = (props) => {
                   placeholder={yml.left.locations_title}
                   inputId={"dropdown_academy_selector"}
                   onChange={(value, valid) => {
-                    console.log("value");
-                    console.log(value);
-                    console.log("locations");
-                    console.log(locations);
                     setVal({ ...formData, location: { value, valid } });
                   }}
                 />
