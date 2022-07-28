@@ -470,15 +470,13 @@ const Apply = (props) => {
                   campusDial={formData?.location.value}
                   setShowPhoneWarning={setShowPhoneWarning}
                 />
-                {showPhoneWarning && (<Tooltip
-                  text={yml.left.form_section.phone_warning}
-                >
-                  <span>
-                    <Icon
-                      icon="warning"
-                    />
-                  </span>
-                </Tooltip>)}
+                {showPhoneWarning && (
+                  <Tooltip text={yml.left.form_section.phone_warning}>
+                    <span>
+                      <Icon icon="warning" />
+                    </span>
+                  </Tooltip>
+                )}
                 {/* <Input
                                     data-cy="phone"
                                     border="1px solid hsl(0,0%,80%)"
@@ -559,9 +557,9 @@ const Apply = (props) => {
                   placeholder={yml.left.locations_title}
                   inputId={"dropdown_academy_selector"}
                   onChange={(value, valid) => {
-                    console.log('value');
+                    console.log("value");
                     console.log(value);
-                    console.log('locations');
+                    console.log("locations");
                     console.log(locations);
                     setVal({ ...formData, location: { value, valid } });
                   }}
