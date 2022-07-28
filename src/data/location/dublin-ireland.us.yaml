@@ -12,6 +12,7 @@ meta_info:
       "/us/location/dublin-ireland",
     ]
   region: "europe"
+  dialCode: "353"
 
 seo_title: "Coding Bootcamp Dublin, Ireland"
 header:

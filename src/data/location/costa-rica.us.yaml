@@ -9,6 +9,7 @@ meta_info:
   visibility: "visible"
   redirects: ["/us/location/costa-rica", "/location/costa-rica"]
   region: "latam"
+  dialCode: "506"
 
 seo_title: "Coding Bootcamp Costa Rica"
 header:

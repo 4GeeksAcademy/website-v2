@@ -12,6 +12,7 @@ meta_info:
       "/us/location/hamburg-germany",
     ]
   region: "europe"
+  dialCode: "49"
 
 seo_title: "Coding Bootcamp Hamburg, Germany"
 header:

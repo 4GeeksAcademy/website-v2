@@ -7,6 +7,7 @@ meta_info:
   keywords: "Coding Bootcamp, Barcelona"
   redirects: ["/location/barcelona", "/us/location/barcelona-spain"]
   region: "europe"
+  dialCode: "34"
 
 seo_title: "Coding Bootcamp Barcelona"
 header:

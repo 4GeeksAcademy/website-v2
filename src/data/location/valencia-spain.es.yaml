@@ -8,6 +8,7 @@ meta_info:
   redirects:
     ["valencia", "/es/location/valencia-spain/", "/es/location/valencia-espana"]
   region: "europe"
+  dialCode: "34"
 
 seo_title: "4Geeks Academy Valencia, España"
 header:

@@ -12,6 +12,7 @@ meta_info:
       "/us/location/rome-italy",
     ]
   region: "europe"
+  dialCode: "39"
 
 seo_title: "Coding Bootcamp Rome, Italy"
 header:

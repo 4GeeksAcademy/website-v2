@@ -9,6 +9,7 @@ meta_info:
   #  "/es/location/toronto-usa"
   ]
   region: "usa-canada"
+  dialCode: "1"
 
 seo_title: "Bootcamp de Programación en Toronto"
 header:

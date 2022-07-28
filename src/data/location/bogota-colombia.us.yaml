@@ -9,6 +9,7 @@ meta_info:
   visibility: "visible"
   redirects: ["/us/colombia", "/colombia"]
   region: "latam"
+  dialCode: "57"
 
 seo_title: "Coding Bootcamp Colombia"
 header:

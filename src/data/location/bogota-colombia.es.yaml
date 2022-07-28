@@ -12,6 +12,7 @@ meta_info:
     # WARN: This specific slug, does not allow to change language
     # "/es/coding-campus/bootcamp-programacion-colombia"
     ]
+  dialCode: "57"
 
 seo_title: "Aprende a programar en Colombia"
 header:

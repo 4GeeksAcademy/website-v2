@@ -9,6 +9,7 @@ meta_info:
   visibility: "visible"
   redirects: ["/us/bolivia", "/bolivia"]
   region: "latam"
+  dialCode: "591"
 
 seo_title: "Coding Bootcamp Bolivia"
 header:

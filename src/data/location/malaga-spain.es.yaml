@@ -8,6 +8,7 @@ meta_info:
   redirects:
     ["/malaga", "/es/location/malaga-spain/", "/es/location/malaga-espana"]
   region: "europe"
+  dialCode: "34"
 
 seo_title: "4Geeks Academy Málaga, España"
 header:

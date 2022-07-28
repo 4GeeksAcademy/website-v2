@@ -41,6 +41,7 @@ export default ({ children }) => {
               visibility
               position
               region
+              dialCode
             }
             button {
               apply_button_text

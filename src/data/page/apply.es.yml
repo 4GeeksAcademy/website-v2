@@ -24,6 +24,7 @@ left:
     last_name: Apellidos
     email: "Email"
     phone: "Móvil"
+    phone_warning: "El código de país de su número de teléfono es de un país diferente al del campus al que está aplicando"
   locations_title: "Selecciona una sede donde estudiar"
   regions_title: "Selecciona una región"
   course_title:

@@ -10,6 +10,8 @@ import { SessionContext } from "../session.js";
 import { Circle } from "../components/BackgroundDrawing";
 import { apply, tagManager } from "../actions";
 import PhoneInput from "../components/LeadForm/PhoneInput";
+import Icon from "../components/Icon";
+import Tooltip from "../components/Tooltip";
 
 const us = {
   "(In-person and from home available)": "(In-person and from home available)",
@@ -53,6 +55,7 @@ const Apply = (props) => {
     }));
 
   const [regionVal, setRegionVal] = useState(null);
+  const [showPhoneWarning, setShowPhoneWarning] = useState(false);
   const regions = [
     { label: "Latin America", value: "latam" },
     { label: "USA & Canada", value: "usa-canada" },
@@ -78,6 +81,7 @@ const Apply = (props) => {
             : trans[pageContext.lang]["(From home until further notice)"]),
         value: m.active_campaign_location_slug,
         region: m.meta_info.region,
+        dialCode: m.meta_info.dialCode,
       }));
 
   React.useEffect(() => {
@@ -463,7 +467,18 @@ const Apply = (props) => {
                   phoneFormValues={formData["phone"]}
                   errorMsg="Please specify a valid phone number"
                   sessionContextLocation={locationContext}
+                  campusDial={formData?.location.value}
+                  setShowPhoneWarning={setShowPhoneWarning}
                 />
+                {showPhoneWarning && (<Tooltip
+                  text={yml.left.form_section.phone_warning}
+                >
+                  <span>
+                    <Icon
+                      icon="warning"
+                    />
+                  </span>
+                </Tooltip>)}
                 {/* <Input
                                     data-cy="phone"
                                     border="1px solid hsl(0,0%,80%)"
@@ -544,6 +559,10 @@ const Apply = (props) => {
                   placeholder={yml.left.locations_title}
                   inputId={"dropdown_academy_selector"}
                   onChange={(value, valid) => {
+                    console.log('value');
+                    console.log(value);
+                    console.log('locations');
+                    console.log(locations);
                     setVal({ ...formData, location: { value, valid } });
                   }}
                 />
@@ -724,6 +743,7 @@ export const query = graphql`
               last_name
               email
               phone
+              phone_warning
             }
             referral_section {
               placeholder

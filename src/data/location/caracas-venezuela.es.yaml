@@ -13,6 +13,7 @@ meta_info:
       "/es/location/caracas-venezuela",
     ]
   region: "latam"
+  dialCode: "58"
 
 seo_title: "4Geeks Academy Caracas"
 header:

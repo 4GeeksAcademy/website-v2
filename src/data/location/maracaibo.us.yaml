@@ -11,6 +11,7 @@ meta_info:
   visibility: "unlisted"
   redirects: ["/us/location/maracaibo", "/location/maracaibo"]
   region: "latam"
+  dialCode: "58"
 
 seo_title: "4Geeks Academy Maracaibo"
 header:

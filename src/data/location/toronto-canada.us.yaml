@@ -10,6 +10,7 @@ meta_info:
       "/toronto",
     ]
   region: "usa-canada"
+  dialCode: "1"
 
 seo_title: "Coding Bootcamp in Toronto, Canada"
 header:

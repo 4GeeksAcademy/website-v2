@@ -9,6 +9,7 @@ meta_info:
   visibility: "visible"
   redirects: ["/us/mexico", "/mexico"]
   region: "latam"
+  dialCode: "52"
 
 seo_title: "Coding Bootcamp Mexico"
 header:
