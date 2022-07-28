@@ -459,7 +459,12 @@ const Apply = (props) => {
                   value={formData.email.value || ""}
                 />
               </Div>
-              <Div display_xs="block" display_tablet="flex" gridColumn_tablet="7 / 13" position="relative">
+              <Div
+                display_xs="block"
+                display_tablet="flex"
+                gridColumn_tablet="7 / 13"
+                position="relative"
+              >
                 <PhoneInput
                   data-cy="phone"
                   setVal={setVal}
@@ -477,7 +482,7 @@ const Apply = (props) => {
                     left="105%"
                     top="10px"
                   >
-                    <Tooltip 
+                    <Tooltip
                       text={yml.left.form_section.phone_warning}
                       background="#FFB718"
                       color="#936500"

@@ -2,15 +2,14 @@ import React from "react";
 import styled from "styled-components";
 
 const Tooltip = (props) => {
-
   const TooltipContainer = styled.div`
     position: relative;
     display: inline-block;
     .tooltiptext {
       visibility: hidden;
       width: 190px;
-      background-color: ${props.background || 'black'};
-      color: ${props.color || '#fff'};
+      background-color: ${props.background || "black"};
+      color: ${props.color || "#fff"};
       text-align: center;
       padding: 7px;
       border-radius: 6px;
@@ -33,7 +32,8 @@ const Tooltip = (props) => {
       margin-top: -5px;
       border-width: 5px;
       border-style: solid;
-      border-color: transparent ${props.background || 'black'} transparent transparent;
+      border-color: transparent ${props.background || "black"} transparent
+        transparent;
     }
 
     &:hover {
@@ -46,7 +46,9 @@ const Tooltip = (props) => {
   return (
     <TooltipContainer className="tooltip">
       {props.children}
-      <span class="tooltiptext" style={{ ...props.styles }}>{props.text}</span>
+      <span class="tooltiptext" style={{ ...props.styles }}>
+        {props.text}
+      </span>
     </TooltipContainer>
   );
 };
