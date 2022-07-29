@@ -202,6 +202,7 @@ export const Paragraph = styled.p`
   @media ${Devices.xs} {
     padding: ${(props) => props.padding_xs};
     display: ${(props) => props.display_xs};
+    margin: ${(props) => props.margin_xs};
   }
   @media ${Devices.sm} {
     width: ${(props) => props.width_sm};
