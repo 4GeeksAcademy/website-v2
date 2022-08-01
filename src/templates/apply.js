@@ -16,10 +16,18 @@ import Tooltip from "../components/Tooltip";
 const us = {
   "(In-person and from home available)": "(In-person and from home available)",
   "(From home until further notice)": "(From home until further notice)",
+  "Europe": "Europe",
+  "Latin America": "Latin America",
+  "USA & Canada": "USA & Canada",
+  "Rest of the world": "Rest of the world"
 };
 const es = {
   "(In-person and from home available)": "(Presencial o desde casa)",
   "(From home until further notice)": "(Desde casa hasta nuevo aviso)",
+  "Europe": "Europa",
+  "Latin America": "Latinoamérica",
+  "USA & Canada": "USA & Canada",
+  "Rest of the world": "Resto del mundo"
 };
 const trans = { us, es };
 
@@ -57,10 +65,10 @@ const Apply = (props) => {
   const [regionVal, setRegionVal] = useState(null);
   const [showPhoneWarning, setShowPhoneWarning] = useState(false);
   const regions = [
-    { label: "Latin America", value: "latam" },
-    { label: "USA & Canada", value: "usa-canada" },
-    { label: "Europe", value: "europe" },
-    { label: "Rest of the world", value: "online" },
+    { label: trans[pageContext.lang]["Latin America"], value: "latam" },
+    { label: trans[pageContext.lang]["USA & Canada"], value: "usa-canada" },
+    { label: trans[pageContext.lang]["Europe"], value: "europe" },
+    { label: trans[pageContext.lang]["Rest of the world"], value: "online" },
   ];
 
   const locationContext = session && session.location;
@@ -475,7 +483,7 @@ const Apply = (props) => {
                   campusDial={formData?.location.value}
                   setShowPhoneWarning={setShowPhoneWarning}
                 />
-                {showPhoneWarning && regionVal !== 'online' && (
+                {showPhoneWarning && regionVal !== "online" && (
                   <Div
                     position_tablet="absolute"
                     position_sm="static"
@@ -545,7 +553,10 @@ const Apply = (props) => {
                 inputId={"dropdown_region_selector"}
                 onChange={(value) => {
                   setRegionVal(value.value);
-                  setVal({ ...formData, location: { value: "", valid: false } });
+                  setVal({
+                    ...formData,
+                    location: { value: "", valid: false },
+                  });
                 }}
               />
             </Div>
@@ -564,12 +575,14 @@ const Apply = (props) => {
                   bgColor={Colors.black}
                   options={
                     regionVal === "online"
-                      ? [{
-                        dialCode: null,
-                        label: "Online",
-                        region: "online",
-                        value: "online"
-                      }]
+                      ? [
+                          {
+                            dialCode: null,
+                            label: "Online",
+                            region: "online",
+                            value: "online",
+                          },
+                        ]
                       : locations?.filter(
                           (academy) => academy.region === regionVal
                         )
