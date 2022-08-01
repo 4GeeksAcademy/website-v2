@@ -475,7 +475,7 @@ const Apply = (props) => {
                   campusDial={formData?.location.value}
                   setShowPhoneWarning={setShowPhoneWarning}
                 />
-                {showPhoneWarning && (
+                {showPhoneWarning && regionVal !== 'online' && (
                   <Div
                     position_tablet="absolute"
                     position_sm="static"
@@ -545,6 +545,7 @@ const Apply = (props) => {
                 inputId={"dropdown_region_selector"}
                 onChange={(value) => {
                   setRegionVal(value.value);
+                  setVal({ ...formData, location: { value: "", valid: false } });
                 }}
               />
             </Div>
@@ -563,14 +564,17 @@ const Apply = (props) => {
                   bgColor={Colors.black}
                   options={
                     regionVal === "online"
-                      ? locations
+                      ? [{
+                        dialCode: null,
+                        label: "Online",
+                        region: "online",
+                        value: "online"
+                      }]
                       : locations?.filter(
                           (academy) => academy.region === regionVal
                         )
                   }
-                  value={locations?.find(
-                    (el) => el.value === formData.location.value
-                  )}
+                  value={formData.location.value}
                   placeholder={yml.left.locations_title}
                   inputId={"dropdown_academy_selector"}
                   onChange={(value, valid) => {
