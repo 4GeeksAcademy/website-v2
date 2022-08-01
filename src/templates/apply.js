@@ -16,18 +16,18 @@ import Tooltip from "../components/Tooltip";
 const us = {
   "(In-person and from home available)": "(In-person and from home available)",
   "(From home until further notice)": "(From home until further notice)",
-  "Europe": "Europe",
+  Europe: "Europe",
   "Latin America": "Latin America",
   "USA & Canada": "USA & Canada",
-  "Rest of the world": "Rest of the world"
+  "Rest of the world": "Rest of the world",
 };
 const es = {
   "(In-person and from home available)": "(Presencial o desde casa)",
   "(From home until further notice)": "(Desde casa hasta nuevo aviso)",
-  "Europe": "Europa",
+  Europe: "Europa",
   "Latin America": "Latinoamérica",
   "USA & Canada": "USA & Canada",
-  "Rest of the world": "Resto del mundo"
+  "Rest of the world": "Resto del mundo",
 };
 const trans = { us, es };
 
