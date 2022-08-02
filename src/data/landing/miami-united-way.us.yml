@@ -123,7 +123,7 @@ components:
     content:
       text: '<br/> <br/> Learn more about <a style="color: rgb(0, 160, 218); cursor:pointer;">eligibility conditions</a> and apply'
       font_size: ["16px", "16px", "16px", "16px", "16px"]
-      path: "https://storage.googleapis.com/4geeks-academy-website/PDF%20and%20Docs/United%20Way%20Miami%20Workforce%20Project%20Criteria%20and%20ISA%20Terms_v2.pdf"
+      path: "https://storage.googleapis.com/media-breathecode/bc38ffebe9e56f8cd62e10d5d0839f98d7528c4fe7756456630588d2c2048a2a"
     sub_heading:
       text: |
         Any Miami-Dade resident with an annual household income below the Area Median Income, who is a citizen, permanent resident, or DACA recipient is invited to apply. <strong style="font-weight: bold;"> People of color, veterans, and single female heads of household </strong> are encouraged to apply.
@@ -231,7 +231,7 @@ components:
     button:
       text: "Review Conditions"
       color: null
-      path: "https://storage.googleapis.com/4geeks-academy-website/PDF%20and%20Docs/United%20Way%20Miami%20Workforce%20Project%20Criteria%20and%20ISA%20Terms_v2.pdf"
+      path: "https://storage.googleapis.com/media-breathecode/bc38ffebe9e56f8cd62e10d5d0839f98d7528c4fe7756456630588d2c2048a2a"
     content:
       text: |
         <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">1. Enroll in the program.</strong></h2>
