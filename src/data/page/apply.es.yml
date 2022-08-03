@@ -25,6 +25,11 @@ left:
     email: "Email"
     phone: "Móvil"
     phone_warning: "¡Oye! Notamos que tu número de teléfono no es del mismo campus que seleccionó. No hay problema. Solo queríamos avisarte."
+    modal:
+      title: "REVISA TU CAMPUS"
+      text: "El código de país de su número de teléfono es de un país diferente al del campus al que está solicitando ingreso, ¿está seguro de que desea continuar con la solicitud?"
+      left_button: "ESCOGER OTRO CAMPUS"
+      right_button: "ESTA BIEN, APLICAR A"
   locations_title: "Selecciona una sede donde estudiar"
   regions_title: "Selecciona una región"
   course_title:
