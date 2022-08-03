@@ -24,7 +24,7 @@ left:
     last_name: Apellidos
     email: "Email"
     phone: "Móvil"
-    phone_warning: "¡Oye! Notamos que tu número de teléfono no es del mismo campus que seleccionó. No hay problema. Solo queríamos avisarte."
+    phone_warning: "¡Oye! Notamos que tu número de teléfono no es del mismo país que el campus que seleccionaste. No hay problema. Solo queríamos avisarte que estas dándote de alta para otro país."
   locations_title: "Selecciona una sede donde estudiar"
   regions_title: "Selecciona una región"
   course_title:
