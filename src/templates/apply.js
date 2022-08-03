@@ -162,10 +162,7 @@ const Apply = (props) => {
           setFormStatus({ status: "thank-you", msg: "Thank you" });
           if (!session || !session.utm || !session.utm.utm_test)
             navigate(
-              `${pageContext.lang === "us"
-                ? "/us/thank-you"
-                : "/es/gracias"
-              }`
+              `${pageContext.lang === "us" ? "/us/thank-you" : "/es/gracias"}`
             );
           else
             console.log(
@@ -180,7 +177,7 @@ const Apply = (props) => {
           msg: error.message || error,
         });
       });
-  }
+  };
   return (
     <>
       <Header
@@ -476,9 +473,7 @@ const Apply = (props) => {
                   value={formData.email.value || ""}
                 />
               </Div>
-              <Div
-                gridColumn_tablet="7 / 13"
-              >
+              <Div gridColumn_tablet="7 / 13">
                 <PhoneInput
                   data-cy="phone"
                   setVal={setVal}
@@ -681,15 +676,10 @@ const Apply = (props) => {
               title={yml.left.form_section.modal.title}
               padding="20px 10px"
             >
-              <Paragraph
-                fontSize="14px"
-                lineHeight="24px"
-              >
+              <Paragraph fontSize="14px" lineHeight="24px">
                 {yml.left.form_section.modal.text}
               </Paragraph>
-              <Div
-                justifyContent="between"
-              >
+              <Div justifyContent="between">
                 <Button
                   variant="full"
                   margin="2rem 0 0 0"
@@ -711,11 +701,9 @@ const Apply = (props) => {
                 >
                   {formStatus.status === "loading"
                     ? "Loading..."
-                    : `${yml.left.form_section.modal.right_button} ${formData?.location?.value?.country}`
-                  }
+                    : `${yml.left.form_section.modal.right_button} ${formData?.location?.value?.country}`}
                 </Button>
               </Div>
-
             </Modal>
           </form>
         </Div>

@@ -275,7 +275,7 @@ const CampusMenu = ({ status, setStatus, menu }) => {
             Array.isArray(activeOpt.sub_links) &&
             activeOpt.sub_links.map((l, i) => {
               return (
-                <Link to={l.link_to} key={i} style={{ maxWidth: '150px' }}>
+                <Link to={l.link_to} key={i} style={{ maxWidth: "150px" }}>
                   <Div
                     margin_tablet="2px 50px 2px 0"
                     margin_sm="2px 30px 2px 0"
