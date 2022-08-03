@@ -12,12 +12,14 @@ meta_info:
       "/us/location/lisboa-portugal",
     ]
   region: "europe"
+  dialCode: "351"
+
 
 seo_title: "Coding Bootcamp Lisboa, Portugal"
 header:
   tagline: "Learn To Code in Lisboa, Portugal"
   paragraph: "Learning online is hard: Lucky for you, we offer: unlimited support, amazing content and lifetime career support. \\n Yes, it really is available for the rest of your life."
-  image: "../../../static/images/locations/online-home.png"
+  image: "../../../static/images/locations/lisboa-portugal-header.png"
   alt: ""
 
 button_header:

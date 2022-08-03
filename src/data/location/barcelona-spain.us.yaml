@@ -7,13 +7,14 @@ meta_info:
   keywords: "Coding Bootcamp, Barcelona"
   redirects: ["/location/barcelona", "/us/location/barcelona-spain"]
   region: "europe"
+  dialCode: "34"
 
 seo_title: "Coding Bootcamp Barcelona"
 header:
   tagline: "4Geeks Academy in Barcelona" 
   sub_heading: ""
   paragraph: ""
-  image: "../../../static/images/locations/madrid-home.png"
+  image: "../../../static/images/locations/barcelona-spain-header.png"
   alt: ""
 button_header:
   button_text: See Programs

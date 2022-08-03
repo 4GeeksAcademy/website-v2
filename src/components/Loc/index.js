@@ -192,7 +192,7 @@ const Loc = ({ lang, yml, allLocationYaml }) => {
         <Div
           id="text-and-image-container"
           display="block"
-          display_sm="flex"
+          display_xs="flex"
           flexDirection="column"
           width_tablet="40%"
           // maxWidth_tablet="270px"
@@ -211,7 +211,8 @@ const Loc = ({ lang, yml, allLocationYaml }) => {
           {sub_title_image && /<\/?[a-z0-9]+>/g.test(sub_title_image) ? (
             <Div
               display="block"
-              margin="0 0 20px 0"
+              margin_tablet="0 0 20px 0"
+              marginxs="0 0 5px 0"
               textAlign="left"
               color={Colors.black}
               style={{
@@ -225,7 +226,8 @@ const Loc = ({ lang, yml, allLocationYaml }) => {
           ) : (
             sub_title_image && (
               <Paragraph
-                margin="0 0 20px 0"
+                margin_tablet="0 0 20px 0"
+                marginxs="0 0 5px 0"
                 textAlign="left"
                 color={Colors.black}
                 fontWeight="700"
@@ -238,9 +240,11 @@ const Loc = ({ lang, yml, allLocationYaml }) => {
             <Div
               id="img-container"
               height="100%"
-              order_sm="-1"
+              height_xs="300px"
+              order_xs="-1"
               order_tablet="0"
-              margin_sm="0 0 20px 0"
+              margin_tablet="0"
+              margin_xs="0 0 20px 0"
             >
               <Img
                 src={image}

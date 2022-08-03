@@ -8,12 +8,13 @@ meta_info:
   redirects:
     ["barcelona", "/es/location/barcelona-spain/", "/es/location/barcelona-espana"]
   region: "europe"
+  dialCode: "34"
 
 seo_title: "4Geeks Academy Barcelona, España"
 header:
   tagline: "4Geeks Academy en Barcelona"
   paragraph: ""
-  image: "../../../static/images/locations/madrid-home.png"
+  image: "../../../static/images/locations/barcelona-spain-header.png"
   alt: ""
 button_header:
   button_text: Ver Programas

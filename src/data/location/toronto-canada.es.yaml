@@ -9,12 +9,13 @@ meta_info:
   #  "/es/location/toronto-usa"
   ]
   region: "usa-canada"
+  dialCode: "1"
 
 seo_title: "Bootcamp de Programación en Toronto"
 header:
   tagline: "4Geeks Academy en Toronto"
   paragraph: ""
-  image: "../../../static/images/locations/miami-home.png"
+  image: "../../../static/images/locations/toronto-header.png"
   alt: "4Geeks Academy modalidad online y presencial en Toronto, Canada"
 button_header:
   button_text: Ver Programas

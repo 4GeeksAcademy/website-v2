@@ -10,14 +10,24 @@ import { SessionContext } from "../session.js";
 import { Circle } from "../components/BackgroundDrawing";
 import { apply, tagManager } from "../actions";
 import PhoneInput from "../components/LeadForm/PhoneInput";
+import Icon from "../components/Icon";
+import Modal from "../components/Modal";
 
 const us = {
   "(In-person and from home available)": "(In-person and from home available)",
   "(From home until further notice)": "(From home until further notice)",
+  Europe: "Europe",
+  "Latin America": "Latin America",
+  "USA & Canada": "USA & Canada",
+  "Rest of the world": "Rest of the world",
 };
 const es = {
   "(In-person and from home available)": "(Presencial o desde casa)",
   "(From home until further notice)": "(Desde casa hasta nuevo aviso)",
+  Europe: "Europa",
+  "Latin America": "Latinoamérica",
+  "USA & Canada": "USA & Canada",
+  "Rest of the world": "Resto del mundo",
 };
 const trans = { us, es };
 
@@ -53,11 +63,12 @@ const Apply = (props) => {
     }));
 
   const [regionVal, setRegionVal] = useState(null);
+  const [showPhoneWarning, setShowPhoneWarning] = useState(false);
   const regions = [
-    { label: "Latin America", value: "latam" },
-    { label: "USA & Canada", value: "usa-canada" },
-    { label: "Europe", value: "europe" },
-    { label: "Rest of the world", value: "online" },
+    { label: trans[pageContext.lang]["Latin America"], value: "latam" },
+    { label: trans[pageContext.lang]["USA & Canada"], value: "usa-canada" },
+    { label: trans[pageContext.lang]["Europe"], value: "europe" },
+    { label: trans[pageContext.lang]["Rest of the world"], value: "online" },
   ];
 
   const locationContext = session && session.location;
@@ -78,6 +89,7 @@ const Apply = (props) => {
             : trans[pageContext.lang]["(From home until further notice)"]),
         value: m.active_campaign_location_slug,
         region: m.meta_info.region,
+        dialCode: m.meta_info.dialCode,
       }));
 
   React.useEffect(() => {
@@ -455,7 +467,9 @@ const Apply = (props) => {
                   value={formData.email.value || ""}
                 />
               </Div>
-              <Div gridColumn_tablet="7 / 13">
+              <Div
+                gridColumn_tablet="7 / 13"
+              >
                 <PhoneInput
                   data-cy="phone"
                   setVal={setVal}
@@ -463,6 +477,8 @@ const Apply = (props) => {
                   phoneFormValues={formData["phone"]}
                   errorMsg="Please specify a valid phone number"
                   sessionContextLocation={locationContext}
+                  campusDial={formData?.location.value}
+                  setShowPhoneWarning={setShowPhoneWarning}
                 />
                 {/* <Input
                                     data-cy="phone"
@@ -502,7 +518,7 @@ const Apply = (props) => {
               data-cy="dropdown_region_selector"
               tabindex="1"
               contenteditable="true"
-              margin_tablet="0 0 23px 0"
+              margin_tablet="0 0 12px 0"
             >
               <SelectRaw
                 tabindex="1"
@@ -515,32 +531,57 @@ const Apply = (props) => {
                 inputId={"dropdown_region_selector"}
                 onChange={(value) => {
                   setRegionVal(value.value);
+                  setVal({
+                    ...formData,
+                    location: { value: "", valid: false },
+                  });
                 }}
               />
             </Div>
             {formStatus.status === "error" && !formData.location.valid && (
               <Alert color="red">Please pick a location</Alert>
             )}
+            {showPhoneWarning && regionVal !== "online" && (
+              <Div
+                background="rgba(0, 151, 205, 0.19)"
+                borderRadius="2px"
+                padding="5px 10px"
+              >
+                <Paragraph
+                  fontSize="10px"
+                  lineHeight="12px"
+                  color="#000"
+                  textAlign="left"
+                >
+                  {yml.left.form_section.phone_warning}
+                </Paragraph>
+              </Div>
+            )}
             {regionVal && (
               <Div
                 data-cy="dropdown_academy_selector"
                 tabindex="1"
                 contenteditable="true"
-                margin_tablet="0 0 23px 0"
+                margin_tablet="11px 0 23px 0"
               >
                 <SelectRaw
                   tabindex="1"
                   bgColor={Colors.black}
                   options={
                     regionVal === "online"
-                      ? locations
+                      ? [
+                          {
+                            dialCode: null,
+                            label: "Online",
+                            region: "online",
+                            value: "online",
+                          },
+                        ]
                       : locations?.filter(
                           (academy) => academy.region === regionVal
                         )
                   }
-                  value={locations?.find(
-                    (el) => el.value === formData.location.value
-                  )}
+                  value={formData.location.value}
                   placeholder={yml.left.locations_title}
                   inputId={"dropdown_academy_selector"}
                   onChange={(value, valid) => {
@@ -724,6 +765,7 @@ export const query = graphql`
               last_name
               email
               phone
+              phone_warning
             }
             referral_section {
               placeholder

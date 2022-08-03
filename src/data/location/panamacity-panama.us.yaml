@@ -9,6 +9,7 @@ meta_info:
   visibility: "visible"
   redirects: ["/us/panama", "/panama"]
   region: "latam"
+  dialCode: "507"
 
 seo_title: "Coding Bootcamp Panama"
 header:
