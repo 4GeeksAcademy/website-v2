@@ -206,7 +206,8 @@ const Landing = (props) => {
               margin_xs="10px 0"
               fontWeight="700"
               padding="0 10px 0 0px"
-              color={yml.header_data.background ? Colors.black : Colors.white}
+              color={yml.header_data.color ? yml.header_data.color : 
+                yml.header_data.background ? Colors.black : Colors.white}
               fontSize="22px"
               fontSize_tablet="22px"
               fontWeight="bolder"
@@ -1061,6 +1062,8 @@ export const query = graphql`
           }
           header_data {
             tagline
+            background
+            color
             sub_heading
             image_filter
             partner_logo_url {
