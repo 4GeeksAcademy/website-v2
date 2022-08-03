@@ -467,9 +467,7 @@ const Apply = (props) => {
                   value={formData.email.value || ""}
                 />
               </Div>
-              <Div
-                gridColumn_tablet="7 / 13"
-              >
+              <Div gridColumn_tablet="7 / 13">
                 <PhoneInput
                   data-cy="phone"
                   setVal={setVal}
