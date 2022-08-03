@@ -24,7 +24,7 @@ left:
     last_name: "Last Name"
     email: "Email"
     phone: "Phone"
-    phone_warning: "Your phone number country code is from a different country than the campus to which you are applying to"
+    phone_warning: "Hey! We noticed that your phone number is not from the same campus you selected. No problem. We just wanted to let you know."
   locations_title: "Select one of our campus"
   regions_title: "Select one region"
   course_title:

@@ -11,7 +11,7 @@ import { Circle } from "../components/BackgroundDrawing";
 import { apply, tagManager } from "../actions";
 import PhoneInput from "../components/LeadForm/PhoneInput";
 import Icon from "../components/Icon";
-import Tooltip from "../components/Tooltip";
+import Modal from "../components/Modal";
 
 const us = {
   "(In-person and from home available)": "(In-person and from home available)",
@@ -468,10 +468,7 @@ const Apply = (props) => {
                 />
               </Div>
               <Div
-                display_xs="block"
-                display_tablet="flex"
                 gridColumn_tablet="7 / 13"
-                position="relative"
               >
                 <PhoneInput
                   data-cy="phone"
@@ -483,25 +480,6 @@ const Apply = (props) => {
                   campusDial={formData?.location.value}
                   setShowPhoneWarning={setShowPhoneWarning}
                 />
-                {showPhoneWarning && regionVal !== "online" && (
-                  <Div
-                    position_tablet="absolute"
-                    position_sm="static"
-                    left="105%"
-                    top="10px"
-                  >
-                    <Tooltip
-                      text={yml.left.form_section.phone_warning}
-                      background="#FFB718"
-                      color="#936500"
-                      left="150%"
-                    >
-                      <span>
-                        <Icon icon="warning" />
-                      </span>
-                    </Tooltip>
-                  </Div>
-                )}
                 {/* <Input
                                     data-cy="phone"
                                     border="1px solid hsl(0,0%,80%)"
@@ -540,7 +518,7 @@ const Apply = (props) => {
               data-cy="dropdown_region_selector"
               tabindex="1"
               contenteditable="true"
-              margin_tablet="0 0 23px 0"
+              margin_tablet="0 0 12px 0"
             >
               <SelectRaw
                 tabindex="1"
@@ -563,12 +541,28 @@ const Apply = (props) => {
             {formStatus.status === "error" && !formData.location.valid && (
               <Alert color="red">Please pick a location</Alert>
             )}
+            {showPhoneWarning && regionVal !== "online" && (
+              <Div
+                background="rgba(0, 151, 205, 0.19)"
+                borderRadius="2px"
+                padding="5px 10px"
+              >
+                <Paragraph
+                  fontSize="10px"
+                  lineHeight="12px"
+                  color="#000"
+                  textAlign="left"
+                >
+                  {yml.left.form_section.phone_warning}
+                </Paragraph>
+              </Div>
+            )}
             {regionVal && (
               <Div
                 data-cy="dropdown_academy_selector"
                 tabindex="1"
                 contenteditable="true"
-                margin_tablet="0 0 23px 0"
+                margin_tablet="11px 0 23px 0"
               >
                 <SelectRaw
                   tabindex="1"
