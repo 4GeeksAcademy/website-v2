@@ -9,7 +9,8 @@ meta_info:
     [
       "/orlando",
     ]
-  region: "america"
+  region: "usa-canada"
+  dialCode: "1"
 
 seo_title: "Coding Bootcamp in Orlando"
 header:

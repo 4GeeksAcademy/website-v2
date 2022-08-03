@@ -24,7 +24,9 @@ left:
     last_name: Apellidos
     email: "Email"
     phone: "Móvil"
+    phone_warning: "¡Oye! Notamos que tu número de teléfono no es del mismo campus que seleccionó. No hay problema. Solo queríamos avisarte."
   locations_title: "Selecciona una sede donde estudiar"
+  regions_title: "Selecciona una región"
   course_title:
     open: "¿Qué programa quisieras estudiar?"
     close: "Selecciona un programa"

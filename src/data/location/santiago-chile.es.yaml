@@ -12,7 +12,8 @@ meta_info:
       "/es/location/santiago-chile-es",
       "/es/location/santiago-de-chile-es"
     ]
-  region: "america"
+  region: "latam"
+  dialCode: "56"
 
 seo_title: "Coding Bootcamp en Santiago de Chile"
 header:

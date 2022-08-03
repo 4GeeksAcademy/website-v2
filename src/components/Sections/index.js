@@ -144,6 +144,8 @@ export const Div = styled.div`
   min-width: ${(props) => props.minWidth};
   min-height: ${(props) => props.minHeight};
   position: ${(props) => props.position};
+  top: ${(props) => props.top};
+  left: ${(props) => props.left};
   display: ${(props) => props.display || "flex"};
   flex-direction: ${(props) => props.flexDirection || "row"};
   direction: ${(props) => props.direction};
@@ -160,11 +162,13 @@ export const Div = styled.div`
   border-bottom: ${(props) => props.borderBottom};
   border-right: ${(props) => props.borderRight};
   justify-content: ${(props) => justifyContentOptions[props.justifyContent]};
+  order: ${(props) => props.order};
   text-align: ${(props) => props.textAlign};
   justify-self: ${(props) => props.justifySelf};
   box-shadow: ${(props) =>
     props.isActive ? props.boxShadowActive : props.boxShadow};
   flex-wrap: ${(props) => props.flexWrap || "nowrap"};
+  flex-grow: ${(props) => props.flexGrow || "0"};
   align-content: ${(props) => props.alignContent};
   align: ${(props) => props.align};
   cursor: ${(props) => props.cursor};
@@ -197,10 +201,13 @@ export const Div = styled.div`
     flex-direction: ${(props) => props.flexDirection_xs};
     width: ${(props) => props.width_xs};
     max-width: ${(props) => props.maxWidth_xs};
+    height: ${(props) => props.height_xs};
+    order: ${(props) => props.order_xs};
     margin: ${(props) => props.margin_xs};
     display: ${(props) => props.display_xs};
     justify-content: ${(props) =>
       justifyContentOptions[props.justifyContent_xs]};
+    order: ${(props) => props.order_xs};
     border: ${(props) => props.border_xs};
     border-top: ${(props) => props.borderTop_xs};
     border-right: ${(props) => props.borderRight_xs};
@@ -213,11 +220,14 @@ export const Div = styled.div`
     justify-content: ${(props) =>
       justifyContentOptions[props.justifyContent_sm]};
     height: ${(props) => props.height_sm};
+    position: ${(props) => props.position_sm};
     margin: ${(props) => props.margin_sm};
     display: ${(props) => props.display};
     column-count: ${(props) => props.columnCount_sm};
     flex-direction: ${(props) => props.flexDirection_sm};
     display: ${(props) => props.display_sm};
+    order: ${(props) => props.order_sm};
+    margin: ${(props) => props.margin_sm};
   }
   @media ${Devices.tablet} {
     flex: ${(props) =>
@@ -234,11 +244,13 @@ export const Div = styled.div`
         ? `${(props.size_tablet / 12) * 100}%`
         : null};
     align-self: ${(props) => props.alignSelf_tablet};
+    order: ${(props) => props.order_tablet};
     gap: ${(props) => (props) => props.gap_tablet};
     column-count: ${(props) => props.columnCount_tablet};
     place-self: ${(props) => props.placeSelf_tablet};
     background: ${(props) => props.background_tablet};
     display: ${(props) => props.display_tablet};
+    position: ${(props) => props.position_tablet};
     flex-direction: ${(props) => props.flexDirection_tablet};
     align-content: ${(props) => props.alignContent_tablet};
     height: ${(props) => props.height_tablet};

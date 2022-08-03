@@ -26,6 +26,7 @@ const BaseHeading = styled(Heading)`
   display: ${(props) => props.display || "block"};
   float: ${(props) => props.float || "none"};
   width: ${(props) => props.width || "100%"};
+  max-width: ${(props) => props.maxWidth};
   font-family: "Lato", sans-serif;
   letter-spacing: ${(props) => props.letterSpacing};
   font-weight: ${(props) => props.fontWeight};
@@ -55,6 +56,7 @@ const BaseHeading = styled(Heading)`
   }
   @media ${Devices.xs} {
     margin: ${(props) => props.margin_xs};
+    max-width: ${(props) => props.maxWidth_xs};
   }
   @media ${Devices.sm} {
     text-align: ${(props) => props.textAlign_sm};
@@ -200,6 +202,7 @@ export const Paragraph = styled.p`
   @media ${Devices.xs} {
     padding: ${(props) => props.padding_xs};
     display: ${(props) => props.display_xs};
+    margin: ${(props) => props.margin_xs};
   }
   @media ${Devices.sm} {
     width: ${(props) => props.width_sm};

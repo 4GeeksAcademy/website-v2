@@ -171,6 +171,7 @@ const StyledImage = styled.div`
   width: ${(props) => props.width};
   height: ${(props) => props.height};
   min-height: ${(props) => props.minHeight};
+  max-height: ${(props) => (props.maxHeight ? props.maxHeight : "none")};
   @media ${Break.sm} {
     height: ${(props) => props.h_sm};
     min-height: ${(props) => props.minHeight_sm};

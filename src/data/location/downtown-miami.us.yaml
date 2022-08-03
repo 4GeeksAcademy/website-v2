@@ -15,7 +15,8 @@ meta_info:
       "/coding-campus/coding-bootcamp-miami",
       "/us/coding-bootcamp-miami",
     ]
-  region: "america"
+  region: "usa-canada"
+  dialCode: "1"
 
 seo_title: "Coding Bootcamp in Miami"
 header:

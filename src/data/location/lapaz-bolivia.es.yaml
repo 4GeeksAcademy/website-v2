@@ -8,7 +8,8 @@ meta_info:
   visibility: "visible"
   keywords: "Coding Bootcamp Campus Bolivia"
   redirects: ["/es/coding-campus/bootcamp-programacion-bolivia"]
-  region: "america"
+  region: "latam"
+  dialCode: "591"
 
 seo_title: "Aprende a programar en Bolivia"
 header:

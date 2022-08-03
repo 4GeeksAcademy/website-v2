@@ -7,7 +7,8 @@ meta_info:
   keywords: ""
   redirects:
     ["/impact-hub", "/location/impact-hub", "/us/location/caracas-venezuela-en"]
-  region: "america"
+  region: "latam"
+  dialCode: "58"
 
 seo_title: "4Geeks Academy Caracas"
 header:
