@@ -173,11 +173,7 @@ const Loc = ({ lang, yml, allLocationYaml }) => {
             >
               {heading}
             </H2>
-            <Paragraph
-              fontSize="16px"
-              lineHeight="24px"
-              color={Colors.black}
-            >
+            <Paragraph fontSize="16px" lineHeight="24px" color={Colors.black}>
               {sub_heading}
             </Paragraph>
           </Div>
