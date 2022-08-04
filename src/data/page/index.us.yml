@@ -54,11 +54,11 @@ join_geeks:
 
 ## LOCATIONS SECTION
 locations:
-  heading: "OUR LOCATIONS"
-  sub_heading: "We have carefully chosen our Locations and Campuses. We are bringing you an experience that you will never forget."
-  title_image: "Everything is 100% Live."
+  heading: "LOCATIONS: ONLINE OR IN-PERSON"
+  sub_heading: "Whether you are joining Online or in-person, you will have real and instant interaction with your teacher, mentor and classmates, to work on projects, exercises, materials, lectures, and everything you need to become a skillful Professional."
+  title_image: "Online, Hybrid or In-person. "
   sub_title_image: | 
-    <p>And every campus is <span style="color: #0097CF;">Online, Hybrid or In-person.</span> <br> You chose and we deliver</p>
+    <p>Live classroom environment, unlimited 1-1 <br /> menthorships, cohort based and real time.</p>
   image: "/images/locations/locations_image.png"
   choose: "Choose a region"
   regions:

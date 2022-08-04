@@ -54,11 +54,12 @@ join_geeks:
 
 ## LOCATIONS SECTION
 locations:
-  heading: "NUESTRAS SEDES"
+  heading: "SEDES: EN LÍNEA O EN PERSONA"
   image: "/images/locations/locations_image.png"
-  sub_heading: "Con +7 sedes (y creciendo), 4Geeks es una de las escuelas y comunidades de programadores más grandes del mundo"
-  title_image: "Todo es 100% en vivo."
-  sub_title_image: '<p>Y cada campus es <span style="color: #0097CF;">Online, Híbrido o Presencial.</span> <br> Tu elige y nosotros te entregamos</p>'
+  sub_heading: "Ya sea que se una en línea o en persona, tendrá una interacción real e instantánea con su maestro, mentor y compañeros de clase para trabajar en proyectos, ejercicios, materiales, conferencias y todo lo que necesita para convertirse en un profesional hábil."
+  title_image: "Online, Híbrido o Presencial."
+  sub_title_image: |
+    <p>Entorno de aula en vivo, tutoría 1-1 ilimitada,<br> basada en cohortes y en tiempo real.</p>
   choose: "Escoge una región"
   regions:
     - name: "usa-canada"

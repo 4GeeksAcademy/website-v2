@@ -160,19 +160,26 @@ const Loc = ({ lang, yml, allLocationYaml }) => {
       {heading && (
         <GridContainer
           margin_tablet="0 0 35px 0"
+          margin_xs="0 0 15px 0"
           margin="0 0 32px 0"
           gridGap="17px"
         >
           <Div display="flex" flexDirection="column" alignItems="center">
             <H2
-              margin="0 0 15px 0"
-              fontSize="15px"
-              lineHeight="19px"
-              fontWeight="900"
+              margin="0 0 25px 0"
+              fontSize="26px"
+              lineHeight="31.2px"
+              // fontWeight="900"
             >
               {heading}
             </H2>
-            <Paragraph>{sub_heading}</Paragraph>
+            <Paragraph
+              fontSize="16px"
+              lineHeight="24px"
+              color={Colors.black}
+            >
+              {sub_heading}
+            </Paragraph>
           </Div>
         </GridContainer>
       )}
@@ -194,6 +201,7 @@ const Loc = ({ lang, yml, allLocationYaml }) => {
           display="block"
           display_xs="flex"
           flexDirection="column"
+          width_md="45%"
           width_tablet="40%"
           // maxWidth_tablet="270px"
           width_xs="100%"
@@ -214,11 +222,13 @@ const Loc = ({ lang, yml, allLocationYaml }) => {
               margin_tablet="0 0 20px 0"
               marginxs="0 0 5px 0"
               textAlign="left"
-              color={Colors.black}
+              color={Colors.darkGray2}
               style={{
                 fontFamily: "Lato, sans-serif",
                 fontWeight: "700",
-                lineHeight: "18px",
+                fontSize: "18px",
+                lineHeight: "22px",
+                color: Colors.darkGray2,
               }}
               // fontWeight="700"
               dangerouslySetInnerHTML={{ __html: sub_title_image }}
@@ -226,11 +236,13 @@ const Loc = ({ lang, yml, allLocationYaml }) => {
           ) : (
             sub_title_image && (
               <Paragraph
-                margin_tablet="0 0 20px 0"
+                margin_tablet="0 0 5px 0"
                 marginxs="0 0 5px 0"
                 textAlign="left"
-                color={Colors.black}
+                color={Colors.darkGray2}
                 fontWeight="700"
+                fontSize="18px"
+                lineHeight="22px"
               >
                 {sub_title_image}
               </Paragraph>
@@ -240,7 +252,7 @@ const Loc = ({ lang, yml, allLocationYaml }) => {
             <Div
               id="img-container"
               height="100%"
-              height_xs="300px"
+              height_xs="200px"
               order_xs="-1"
               order_tablet="0"
               margin_tablet="0"
@@ -258,7 +270,7 @@ const Loc = ({ lang, yml, allLocationYaml }) => {
                 maxHeight="300px"
                 minHeight_tablet="none"
                 minHeight_xs="200px"
-                backgroundSize="cover"
+                backgroundSize="contain"
               />
             </Div>
           )}
@@ -266,6 +278,7 @@ const Loc = ({ lang, yml, allLocationYaml }) => {
         <ResponsiveMenu />
         <Div
           id="menu-container"
+          width_md="55%"
           width_tablet="60%"
           width_xs="100%"
           display_tablet="block"
@@ -287,7 +300,7 @@ const Loc = ({ lang, yml, allLocationYaml }) => {
                 flexGrow="1"
                 margin="0 0 0 5px"
               >
-                <H3 textAlign="left" margin="0 0 15px 0">
+                <H3 textAlign="left" margin="0 0 15px 0" fontSize="18px">
                   {region.title}
                 </H3>
                 {region.sub_links?.map((l, i) => (
