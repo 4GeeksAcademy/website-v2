@@ -1,22 +1,22 @@
 meta_info:
-  slug: "bootcamp-programacion-bolivia"
-  title: "Bootcamp Programación Bolivia"
-  position: 37
-  description: "Conoce aquí todo sobre nuestro campus de bootcamp de programación en Bolivia, La Paz de 4Geeks Academy"
+  slug: "bootcamp-programacion-lima-peru"
+  title: "Bootcamp Programación Lima, Perú"
+  position: 36
+  description: "Conoce aquí todo sobre nuestro campus de bootcamp de programación en Lima, Perú de 4Geeks Academy"
   image: ""
   # it will not show up on the applications forms
   visibility: "visible"
-  keywords: "Coding Bootcamp Campus Bolivia"
-  redirects: ["/es/coding-campus/bootcamp-programacion-bolivia"]
+  keywords: "Coding Bootcamp Campus Lima, Peru"
+  redirects: ["/coding-campus/bootcamp-programacion-lima-peru"]
   region: "latam"
-  dialCode: "591"
+  dialCode: "593"
 
-seo_title: "Coding bootcamp en Bolivia"
+seo_title: "Coding Bootcamp Perú"
 header:
-  tagline: "Aprende a programar en Bolivia"
-  paragraph: "Únete a uno de los coding bootcamps y comunidades de programadores más grandes del mundo, mejora tus habilidades de código o aprende a programar desde cero y recibe soporte técnico y profesional de por vida."
-  image: "../../../static/images/locations/bolivia-header.png"
-  alt: "4Geeks Academy, aprende a programar en modalidad online en Bolivia"
+  tagline: "Aprender a programar en Lima, Perú"
+  paragraph: "Únete a uno de los coding bootcamps y comunidades de programadores más grandes del mundo, mejora tus habilidades de codigo o aprende a programar desde cero y recibe soporte técnico y profesional de por vida."
+  image: "../../../static/images/locations/ecuador-header.png"
+  alt: ""
 
 button_header:
   button_text: Ver Programas
@@ -38,17 +38,17 @@ custom_bar:
 
 badges:
   title: ""
-  paragraph: "Únete a uno de los coding bootcamps y comunidades de programadores más grandes del mundo, mejora tus habilidades de código o 
+  paragraph: "Únete a uno de los coding bootcamps y comunidades de programadores más grandes del mundo, mejora tus habilidades de codigo o 
   
   aprende a programar desde cero y recibe soporte técnico y profesional de por vida."
 news:
-  title: "4Geeks Academy Bolivia en las noticias..."
+  title: "4Geeks Academy Perú en las noticias..."
 upcoming:
   no_dates_message: "Actualmente no hay próximas fechas para este campus"
   actionMessage: "Avisenme fechas disponibles"
 
 info_box:
-  heading: "Encuéntranos en Bolivia"
+  heading: "Encuéntranos en Perú"
   address: ""
   iframeMapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1126.521243034489!2d-80.20142868794088!3d25.759937884725943!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b153865e526d%3A0xf884fb3f86a9c7db!2s4Geeks%20Academy!5e0!3m2!1ses-419!2scl!4v1621010581768!5m2!1ses-419!2scl"
   contact_heading: "Escríbenos al Whatsapp"
@@ -58,15 +58,15 @@ info_box:
   email: latam@4GeeksAcademy.com
 
 images_box:
-  heading: "Lo que deberías saber sobre nuestra sede en Bolivia: "
-  content: "4Geeks Bolivia es un proyecto que funciona principalmente Online, luego de un proyecto increíble desarrollado por el Banco Interamericano de Desarrollo y el Ministerio de Ciencia, Información y Telecomunicaciones."
+  heading: "What you should know about this location: "
+  content: "4Geeks Perú es un proyecto que funciona principalmente Online, luego de un proyecto increíble desarrollado por el Banco Interamericano de Desarrollo y el Ministerio de Ciencia, Información y Telecomunicaciones."
   images: null
     # - path: "../../../static/images/locations/mcbo-chinita.jpeg"
     #   alt: "mcbo-chinita"
     # - path: "../../../static/images/locations/mcbo-loc.jpg"
-    #   alt: "4Geeeks Bolivia Location"
+    #   alt: "4Geeeks Ecuador Location"
     # - path: "../../../static/images/locations/mcbo-loc-2.png"
-    #   alt: "4Geeeks Bolivia lab"
+    #   alt: "4Geeeks Ecuador lab"
 
 ## START FROM HERE - DON'T CHANGE ANYTHING ABOVE
 ## HEADING SECTION
@@ -153,8 +153,8 @@ prices:
           heading_two: ""
           sub_heading: ""
         content:
-          price: "La modaliad Part-Time no está disponible"
-          price_info: "La Paz - Bolivia"
+          price: "La modaliad Part-Time no esta disponible"
+          price_info: "Lima - Perú"
         button:
           button_text: "Aplicar a otros cursos"
 
@@ -169,7 +169,7 @@ prices:
           sub_heading: ""
         content:
           price: "La modaliad Full-Time no esta disponible"
-          price_info: "La Paz - Bolivia"
+          price_info: "Lima - Perú"
         button:
           button_text: "Aplicar a otros cursos"
 
@@ -184,8 +184,8 @@ prices:
           heading_two: ""
           sub_heading: ""
         content:
-          price: "La modaliad Part-Time no está disponible"
-          price_info: "La Paz - Bolivia"
+          price: "La modaliad Part-Time no esta disponible"
+          price_info: "Lima - Perú"
         button:
           button_text: "Aplicar a otros cursos"
 
@@ -199,24 +199,24 @@ prices:
           heading_two: ""
           sub_heading: ""
         content:
-          price: "La modaliad Full-Time no está disponible"
-          price_info: "La Paz - Bolivia"
+          price: "La modaliad Full-Time no esta disponible"
+          price_info: "Lima - Perú"
         button:
           button_text: "Aplicar a otros cursos"
 
-active_campaign_location_slug: "lapaz-bolivia"
-breathecode_location_slug: "lapaz-bolivia"
+active_campaign_location_slug: "lima-peru"
+breathecode_location_slug: "lima-peru"
 gdpr_compliant: false # do we need to ask for permision?
 in_person_available: false # important to accept in-person applicants
 
-city: "La Paz"
-name: "Bolivia"
+city: "Lima"
+name: "Peru"
 latitude: "-34.098799"
 longitude: "-56.216998"
 address: ""
 zip_code: ""
 state: ""
-country: "Bolivia"
+country: "Peru"
 socials:
   - name: "Facebook"
     icon: "facebook"
@@ -237,5 +237,5 @@ location_office_image: ""
 location_office_image2: ""
 location_office_image3: ""
 should_know: ""
-value: "Bolivia"
+value: "Peru"
 defaultLanguage: "es" # All lead marketing communications will arrive on this language

@@ -129,6 +129,8 @@ navbar:
               link_to: "/es/coding-campus/bootcamp-programacion-uruguay"
             - title: "Venezuela"
               link_to: "/es/coding-campus/bootcamp-programacion-venezuela"
+            - title: "Peru"
+              link_to: "/es/coding-campus/bootcamp-programacion-lima-peru"
             - title: "Otra locación en America"
               link_to: "/es/coding-campus/online-bootcamp-programacion"
         - title: "Europa"

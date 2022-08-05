@@ -9,9 +9,10 @@ meta_info:
   keywords: ""
   redirects: ["/us/machine-learning"]
 
+seo_title: "become a machine learning engineer"
 header:
-  title: "Become a Machine Learning Engineer"
-  paragraph: "Become one of the highest paid professionals in the world"
+  title: "Machine Learning Engineer"
+  paragraph: "Become one of the highest paid professionals in the world in just a few months"
   image: "../../../static/images/bg/circles.jpg"
   image_alt: "circles"
 
@@ -27,19 +28,26 @@ course_instructors:
     paragraph: ""
 
   instructors:
-    # - name: "Roldolfo Campos"
-    #   sub_title: "Co fundador de 4geeks y director de educación"
-    #   image: "../../../static/images/instructors/example.png"
-    #   bio: "Currently working as a Senior Solutions Architect at VMware, Rodolfo Campos is a Software Engineer with 17 years of experience in Linux, Java, SQL, Blockchain, etc. Master in Computer Science and passionate about Big Data and Entrepreneurship."
-    #   github: ""
-    #   linkedin: "https://www.linkedin.com/"
+    - name: "Sayyed Nezhadi"
+      sub_title: "PhD in Artificial Intelligence from Toronto University"
+      image: "../../../static/images/instructors/sayyed.jpeg"
+      bio: "25+ years of experience in delivering complex AI-enabled solutions and digital architectures for large enterprises. PhD in Artificial Intelligence from the Toronto University, and and certificates in Big Data Analytics and Big Data from Hardvard and MIT respectively."
+      github: "https://github.com/snezhadi"
+      linkedin: "https://www.linkedin.com/in/sayyednezhadi"
 
-    # - name: "Gabriel Salinas"
-    #   sub_title: "Sophisticated Software Systems Engineer"
-    #   image: "../../../static/images/instructors/example.png"
-    #   bio: "Currently working as a Senior Solutions Architect at VMware"
-    #   github: ""
-    #   linkedin: "https://www.linkedin.com/"
+    - name: "Francesco Pugliese"
+      sub_title: "Computer Scientist and PhD in Robotics & Artificial Intelligence"
+      image: "../../../static/images/instructors/fpugliese.jpeg"
+      bio: "Deeply specialized in Deep Learning, Neural Networks and Evolutionary Robotics; Francesco has a 20+ experience working on Robotics Research topics with several publications; He its currently working as Machine and Deep Learning Scientist at ISTAT (Italy National Institute of Statistic)."
+      github: "https://github.com/neural1977"
+      linkedin: "https://www.linkedin.com/in/francescopugliese77"
+
+    - name: "Manuel Mena"
+      sub_title: "Senior Data Scientist | AI & Machine Learning"
+      image: "../../../static/images/instructors/manu-mena.jpeg"
+      bio: "Computer Scientist from the Georgia Institute of Technology with 5+ years of experience in the field of Machine Learning and Business Intelligence applied to commercial strategy, designing data workflows, testing experiments and delivering data science solutions. Experience leading teams in financial, market research and automotive industries. Proficient in R, Python, AWS and PostgreSQL."
+      github: "https://github.com/alexismenanieves"
+      linkedin: "https://www.linkedin.com/in/alexismena/"
 
 badges:
   paragraph: "4Geeks Academy is the place where developers grow and thrive. We are licensed by the USA F. Dep. of Education. Chosen as one of the top 35 bootcamps of the world and top coding bootcamp in Miami according to SwitchUp. Recognized as the top 10 coding bootcamps in the United States according to Newsweek."
