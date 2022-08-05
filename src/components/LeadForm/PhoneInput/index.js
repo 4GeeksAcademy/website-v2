@@ -132,12 +132,13 @@ const PhoneInput = ({
 
   React.useEffect(() => {
     if (
+      setShowPhoneWarning &&
       campusDial &&
       campusDial !== "" &&
       campusDial.dialCode !== selectedCountry.dialCode
     )
       setShowPhoneWarning(true);
-    else setShowPhoneWarning(false);
+    else if(setShowPhoneWarning) setShowPhoneWarning(false);
   }, [campusDial, selectedCountry]);
 
   const handleSearchChange = (e) => {

@@ -1,33 +1,32 @@
 meta_info:
-  slug: "bootcamp-programacion-bolivia"
-  title: "Bootcamp Programación Bolivia"
-  position: 37
-  description: "Conoce aquí todo sobre nuestro campus de bootcamp de programación en Bolivia, La Paz de 4Geeks Academy"
+  slug: "coding-bootcamp-lima-peru"
+  title: "4Geeks Academy in Lima, Peru"
+  position: 36
+  description: "Get to know here all about our coding bootcamp campus in Lima, Peru at 4Geeks Academy"
   image: ""
+  keywords: ""
   # it will not show up on the applications forms
   visibility: "visible"
-  keywords: "Coding Bootcamp Campus Bolivia"
-  redirects: ["/es/coding-campus/bootcamp-programacion-bolivia"]
+  redirects: ["/us/peru", "/peru"]
   region: "latam"
-  dialCode: "591"
+  dialCode: "593"
 
-seo_title: "Coding bootcamp en Bolivia"
+seo_title: "Coding Bootcamp Lima, Peru"
 header:
-  tagline: "Aprende a programar en Bolivia"
-  paragraph: "Únete a uno de los coding bootcamps y comunidades de programadores más grandes del mundo, mejora tus habilidades de código o aprende a programar desde cero y recibe soporte técnico y profesional de por vida."
-  image: "../../../static/images/locations/bolivia-header.png"
-  alt: "4Geeks Academy, aprende a programar en modalidad online en Bolivia"
-
+  tagline: "Learn to code in Lima, Peru"
+  paragraph: "Lifetime Coding Mentorship, Career Support and a tech driven developer community. \\n The number one coding bootcamp in Lima, Peru with over 1,000 graduates"
+  image: "../../../static/images/locations/ecuador-header.png"
+  alt: ""
 button_header:
-  button_text: Ver Programas
+  button_text: See Programs
   button_link: "#programs"
 button:
-  syllabus_button_text: "DESCARGAR PROGRAMA" # <-- this will show everywhere in the website
-  apply_button_text: "APLICAR" # <-- this will show everywhere in the website
+  syllabus_button_text: "DOWNLOAD SYLLABUS" # <-- this will show everywhere in the website
+  apply_button_text: "APPLY NOW" # <-- this will show everywhere in the website
 
-  syllabus_submit_text: "DESCARGAR"
-  apply_button_link: "/aplica"
-  cohort_more_details_text: "DETALLES"
+  syllabus_submit_text: "DOWNLOAD"
+  apply_button_link: "/apply"
+  cohort_more_details_text: "DETAILS"
 
 custom_bar:
   active: false
@@ -38,40 +37,45 @@ custom_bar:
 
 badges:
   title: ""
-  paragraph: "Únete a uno de los coding bootcamps y comunidades de programadores más grandes del mundo, mejora tus habilidades de código o 
+  paragraph: "
+4Geeks Academy is the place where developers grow and thrive.
+ 
+We are licensed by the USA F. Dep. of Education.
   
-  aprende a programar desde cero y recibe soporte técnico y profesional de por vida."
+Chosen as one of the top 35 coding bootcamps of the world and the top coding bootcamp in Miami according to SwitchUp.
+
+4Geeks Academy has been recognized as one of the top 10 coding bootcamps in the United States according to Newsweek.
+
+A community built for developers ."
 news:
-  title: "4Geeks Academy Bolivia en las noticias..."
+  title: "4Geeks Academy Peru in the news..."
 upcoming:
-  no_dates_message: "Actualmente no hay próximas fechas para este campus"
-  actionMessage: "Avisenme fechas disponibles"
+  no_dates_message: "There are currently no upcoming dates for this campus"
+  actionMessage: "Let me know when dates are available"
 
 info_box:
-  heading: "Encuéntranos en Bolivia"
-  address: ""
+  heading: "Find us in Ecuador"
+  address: "Only remotely in Peru"
   iframeMapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1126.521243034489!2d-80.20142868794088!3d25.759937884725943!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b153865e526d%3A0xf884fb3f86a9c7db!2s4Geeks%20Academy!5e0!3m2!1ses-419!2scl!4v1621010581768!5m2!1ses-419!2scl"
-  contact_heading: "Escríbenos al Whatsapp"
+  contact_heading: "Contacts"
   phone: Llámanos +57 300 7282898
   whatsapp: +57 300 7282898
   whatsapp_link: "https://wa.me/+573007282898"
   email: latam@4GeeksAcademy.com
 
 images_box:
-  heading: "Lo que deberías saber sobre nuestra sede en Bolivia: "
-  content: "4Geeks Bolivia es un proyecto que funciona principalmente Online, luego de un proyecto increíble desarrollado por el Banco Interamericano de Desarrollo y el Ministerio de Ciencia, Información y Telecomunicaciones."
+  heading: "What you should know about this location: "
+  content: "4Geeks Academy classes in Peru are only being taught online until further notice; Any 4Geeks in-person campus is always located in very centric locations with nearby subway or public transportation systems at the most popular areas of the city."
   images: null
     # - path: "../../../static/images/locations/mcbo-chinita.jpeg"
     #   alt: "mcbo-chinita"
     # - path: "../../../static/images/locations/mcbo-loc.jpg"
-    #   alt: "4Geeeks Bolivia Location"
-    # - path: "../../../static/images/locations/mcbo-loc-2.png"
-    #   alt: "4Geeeks Bolivia lab"
+    #   alt: "4Geeeks Maracaibo Location"
 
 ## START FROM HERE - DON'T CHANGE ANYTHING ABOVE
 ## HEADING SECTION
 heading_section:
-  heading: "PRECIO Y FINANCIACIÓN"
+  heading: "PRICING AND FINANCING"
   sub_heading: ""
 
 ## PRICES SECTION
@@ -80,7 +84,7 @@ heading_section:
 ## RIGHT BOX => FULL-TIME
 ## CARACAS AT THE MOMENT HAS NO FINANCIAL OPTIONS SET
 hasFinancialsOption: false
-financials_max_months:
+financials_max_months: ["1 mo", "2 mo", "3 mo", "4 mo"]
 prices:
   full_stack:
     full_time:
@@ -95,22 +99,23 @@ prices:
           heading_one: "FULL-TIME"
           sub_heading: ""
         content:
-          price: "Pregunta por las becas o Paga por adelantado y recibe un plan de pagos de 3-4 meses"
-          price_info:
+          price: "Only part-time programs are being offered at the moment"
+          price_info: ""
         button:
-          button_text: "APLICAR AHORA"
+          button_text: "APPLY NOW"
 
       ## RIGHT BOX SECTION
       ## CHANGE HERE THE INFO IN THE RIGHT BOX
       right_section:
         header:
-          heading_one: "PART-TIME"
-          sub_heading: ""
+          heading_one: "PAY ONLY"
+          heading_two: "WHEN YOU GET A JOB"
+          sub_heading: "Income Share Agreement (ISA) with Student Finance"
         content:
-          price: "Pregunta por las becas o Paga por adelantado y recibe un plan de pagos de 3-4 meses"
+          price: "Only part-time programs are being offered at the moment"
           price_info: ""
         button:
-          button_text: "APLICAR AHORA"
+          button_text: "APPLY NOW"
     ## *****************
     ## PART-TIME SECTION
     ## *****************
@@ -122,25 +127,25 @@ prices:
       ## CHANGE HERE THE INFO IN THE LEFT BOX
       left_section:
         header:
-          heading_one: "FULL-TIME"
-          sub_heading: ""
+          heading_one: "PART-TIME"
+          sub_heading: "Ask about scholarships and discounts"
         content:
-          price: "Pay upfront and get a discount or ask for a 2 payment options"
-          price_info: ""
+          price: "US $4,000"
+          price_info: "single payment"
         button:
-          button_text: "APLICAR AHORA"
+          button_text: "APPLY NOW"
 
       ## RIGHT BOX SECTION
       ## CHANGE HERE THE INFO IN THE RIGHT BOX
       right_section:
         header:
-          heading_one: "PART-TIME"
-          sub_heading: ""
+          heading_one: "Extended"
+          sub_heading: "Payment Plan"
         content:
-          price: "Pay upfront and get a discount or ask for a 3 - 4 payment options"
-          price_info: ""
+          price: "US $800"
+          price_info: "4 months"
         button:
-          button_text: "APLICAR AHORA"
+          button_text: "APPLY NOW"
 
   software_engineering:
     part_time:
@@ -153,10 +158,10 @@ prices:
           heading_two: ""
           sub_heading: ""
         content:
-          price: "La modaliad Part-Time no está disponible"
-          price_info: "La Paz - Bolivia"
+          price: "Part-Time modality is not available"
+          price_info: "Lima - Peru"
         button:
-          button_text: "Aplicar a otros cursos"
+          button_text: "Apply another courses"
 
     full_time:
       slug: "full_time"
@@ -168,15 +173,15 @@ prices:
           heading_two: ""
           sub_heading: ""
         content:
-          price: "La modaliad Full-Time no esta disponible"
-          price_info: "La Paz - Bolivia"
+          price: "Full-Time modality is not available"
+          price_info: "Lima - Peru"
         button:
-          button_text: "Aplicar a otros cursos"
+          button_text: "Apply another courses"
 
   machine_learning:
     part_time:
       slug: "part_time"
-      duration: "?"
+      duration: "16 Weeks"
 
       left_section:
         header:
@@ -184,10 +189,10 @@ prices:
           heading_two: ""
           sub_heading: ""
         content:
-          price: "La modaliad Part-Time no está disponible"
-          price_info: "La Paz - Bolivia"
+          price: "Part-Time modality is not available"
+          price_info: "Lima - Peru"
         button:
-          button_text: "Aplicar a otros cursos"
+          button_text: "Apply another courses"
 
     full_time:
       slug: "full_time"
@@ -199,24 +204,24 @@ prices:
           heading_two: ""
           sub_heading: ""
         content:
-          price: "La modaliad Full-Time no está disponible"
-          price_info: "La Paz - Bolivia"
+          price: "Full-Time modality is not available"
+          price_info: "Lima - Peru"
         button:
-          button_text: "Aplicar a otros cursos"
+          button_text: "Apply another courses"
 
-active_campaign_location_slug: "lapaz-bolivia"
-breathecode_location_slug: "lapaz-bolivia"
+active_campaign_location_slug: "lima-peru"
+breathecode_location_slug: "lima-peru"
 gdpr_compliant: false # do we need to ask for permision?
 in_person_available: false # important to accept in-person applicants
 
-city: "La Paz"
-name: "Bolivia"
+city: "Lima"
+name: "Peru"
 latitude: "-34.098799"
 longitude: "-56.216998"
 address: ""
 zip_code: ""
 state: ""
-country: "Bolivia"
+country: "Peru"
 socials:
   - name: "Facebook"
     icon: "facebook"
@@ -230,6 +235,7 @@ socials:
 courses:
   - "Full-Time"
   - "Part-Time"
+
 flag_icon: ""
 location_map: ""
 location_phone_number: ""
@@ -237,5 +243,5 @@ location_office_image: ""
 location_office_image2: ""
 location_office_image3: ""
 should_know: ""
-value: "Bolivia"
+value: "Peru"
 defaultLanguage: "es" # All lead marketing communications will arrive on this language

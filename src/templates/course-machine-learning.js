@@ -411,16 +411,15 @@ const Program = ({ data, pageContext, yml }) => {
         lang={pageContext.lang}
         course={program_type}
       />
-      <TechsWeTeach
+      <Instructors lang={courseDetails.course_instructors}/>
+      {/* <TechsWeTeach
         lang={pageContext.lang}
         data={data.allMachineLearningTechsYaml}
-      />
+      /> */}
       <GeeksInfo lang={pageContext.lang} />
       <GridContainer padding_tablet="0" margin_tablet="0 0 62px 0">
         <Div height="1px" background="#EBEBEB"></Div>
       </GridContainer>
-
-      {/* <Instructors lang={courseDetails.course_instructors}/> */}
       <PricesAndPayment
         type={pageContext.slug}
         lang={pageContext.lang}
