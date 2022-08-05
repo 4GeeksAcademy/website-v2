@@ -51,12 +51,12 @@ button:
   apply_button_link: "/apply"
   cohort_more_details_text: "DETAILS"
 
-# custom_bar:
-#   active: false
-#   message: 'Change your life with Code. <a class="customBar-link" href="/us/apply">Apply</a> Upcoming programs: June 6 Full-Stack | July 7 ML+AI!'
-# button: 
-#   label: "Read More"
-#   path: "#" #string (can be inline path using #, relative path or absolute path)
+custom_bar:
+  active: false
+  message: 'Change your life with Code. <a class="customBar-link" href="/us/apply">Apply</a> Upcoming programs: June 6 Full-Stack | July 7 ML+AI!'
+button: 
+  label: "Read More"
+  path: "#" #string (can be inline path using #, relative path or absolute path)
 
 info_box:
   heading: "Find us in Miami"
