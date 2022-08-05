@@ -138,7 +138,7 @@ const PhoneInput = ({
       campusDial.dialCode !== selectedCountry.dialCode
     )
       setShowPhoneWarning(true);
-    else if(setShowPhoneWarning) setShowPhoneWarning(false);
+    else if (setShowPhoneWarning) setShowPhoneWarning(false);
   }, [campusDial, selectedCountry]);
 
   const handleSearchChange = (e) => {
