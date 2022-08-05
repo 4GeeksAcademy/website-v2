@@ -366,15 +366,20 @@ export const Button = styled(SmartButton)`
   @media ${Devices.xs} {
     width: ${(props) => props.width_xs};
     text-align: ${(props) => props.textAlign_xs || "center"};
+    padding: ${(props) => props.padding_xs || "12px 24px"};
+    max-width: ${(props) => props.maxWidth_xs};
   }
   @media ${Devices.sm} {
     width: ${(props) => props.width_sm};
+    max-width: ${(props) => props.maxWidth_sm};
     margin: ${(props) => props.margin_sm};
     font-size: ${(props) => props.fontSize_sm};
   }
   @media ${Devices.tablet} {
     width: ${(props) => props.width_tablet};
     margin: ${(props) => props.margin_tablet};
+    padding: ${(props) => props.padding_tablet || "12px 24px"};
+    max-width: ${(props) => props.maxWidth_tablet};
   }
   @media ${Devices.md} {
     width: ${(props) => props.width_md};

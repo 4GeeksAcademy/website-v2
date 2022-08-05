@@ -685,7 +685,11 @@ const Apply = (props) => {
                   margin="2rem 0 0 0"
                   color={Colors.blue}
                   textColor={Colors.white}
-                  padding=".40rem 2.1rem"
+                  padding_tablet=".40rem 2.1rem"
+                  padding_xs=".40rem 1rem"
+                  maxWidth_tablet="none"
+                  maxWidth_sm="160px"
+                  maxWidth_xs="125px"
                   disabled={formStatus.status === "loading" ? true : false}
                   onClick={() => setShowModal(false)}
                 >
@@ -695,9 +699,16 @@ const Apply = (props) => {
                   variant="outline"
                   margin="2rem 0 0 0"
                   color={Colors.blue}
-                  padding=".40rem 2.1rem"
+                  padding_tablet=".40rem 2.1rem"
+                  padding_xs=".40rem 1rem"
+                  maxWidth_tablet="none"
+                  maxWidth_sm="160px"
+                  maxWidth_xs="125px"
                   disabled={formStatus.status === "loading" ? true : false}
-                  onClick={() => submitForm()}
+                  onClick={() => {
+                    setShowModal(false);
+                    submitForm();
+                  }}
                 >
                   {formStatus.status === "loading"
                     ? "Loading..."

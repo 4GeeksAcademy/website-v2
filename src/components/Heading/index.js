@@ -57,6 +57,7 @@ const BaseHeading = styled(Heading)`
   @media ${Devices.xs} {
     margin: ${(props) => props.margin_xs};
     max-width: ${(props) => props.maxWidth_xs};
+    font-size: ${(props) => props.fontSize_xs};
   }
   @media ${Devices.sm} {
     text-align: ${(props) => props.textAlign_sm};

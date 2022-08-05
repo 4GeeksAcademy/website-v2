@@ -20,7 +20,10 @@ const Modal = ({
           <ModalContainer>
             {showHeader && (
               <ModalHeader>
-                <H3>{title}</H3>
+                <H3
+                  fontSize_tablet="22px"
+                  fontSize_xs="16px"
+                >{title}</H3>
               </ModalHeader>
             )}
             <CloseButton onClick={onClose}>
