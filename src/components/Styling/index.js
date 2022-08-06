@@ -229,6 +229,7 @@ export const StyledBackgroundSection = styled(BackgroundSection)`
   height: ${(props) => props.height};
   max-width: ${(props) => props.maxWidth};
   min-height: ${(props) => props.minHeight};
+  flex-shrink: ${(props) => props.flexShrink};
   &:before,
   &:after {
     min-height: ${(props) => props.minHeight};

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { GridContainer, GridContainerWithImage, Div, Grid } from "../Sections";
 import PropTypes from "prop-types";
 import { H2, H3, H4, Paragraph } from "../Heading";
-import { Colors, StyledBackgroundSection, Span } from "../Styling";
+import { Img, Colors, StyledBackgroundSection, Span } from "../Styling";
 import Icon from "../Icon";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -100,6 +100,53 @@ const Instructors = ({
         <Slider {...settings}>
           {instructors?.map((item, index) => {
             return (
+              <Div
+                className="instructor-container"
+                display="block"
+                // width="70%"
+                // margin="auto"
+                padding="0 25%"
+              >
+                <Div
+                  className="instructor-presentation"
+                  background="#FAF9E3"
+                  padding="10px"
+                >
+                  <StyledBackgroundSection
+                    image={item.image.childImageSharp.gatsbyImageData}
+                    // borderRadius={"1.25rem"}
+                    // className="pointer"
+                    alt={"4Geeks Academy Section"}
+                    margin="0 10px 0 0"
+                    borderRadius="12px"
+                    width="140px"
+                    height="140px"
+                    backgroundSize="contain"
+                    flexShrink="0"
+                  />
+                  <Div
+                    className="instructor-header"
+                    display="block"
+                  >
+                    <H3
+                      type="h3"
+                      textAlign="left"
+                    >
+                      {item.name}
+                    </H3>
+                    <Paragraph
+                      // width="90%"
+                      fontSize="15px"
+                      textAlign="left"
+                      fontWeight="bold"
+                      // padding="0 0 26px 0"
+                    >
+                      {item.sub_title.toUpperCase()}
+                    </Paragraph>
+                  </Div>
+                </Div>
+                 
+              {/*
               <GridContainerWithImage
                 background={Colors.verylightGray}
                 imageSide="left"
@@ -207,6 +254,8 @@ const Instructors = ({
                   </Div>
                 </Div>
               </GridContainerWithImage>
+              */}
+              </Div>
             );
           })}
         </Slider>
