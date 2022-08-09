@@ -10,7 +10,6 @@ import { SessionContext } from "../session.js";
 import { Circle } from "../components/BackgroundDrawing";
 import { apply, tagManager } from "../actions";
 import PhoneInput from "../components/LeadForm/PhoneInput";
-import Icon from "../components/Icon";
 import Modal from "../components/Modal_v2";
 
 const us = {
@@ -686,10 +685,10 @@ const Apply = (props) => {
                   color={Colors.blue}
                   textColor={Colors.white}
                   padding_tablet=".40rem 2.1rem"
-                  padding_xs=".40rem 1rem"
+                  padding=".40rem .7rem"
                   maxWidth_tablet="none"
                   maxWidth_sm="160px"
-                  maxWidth_xs="125px"
+                  maxWidth="125px"
                   disabled={formStatus.status === "loading" ? true : false}
                   onClick={() => setShowModal(false)}
                 >
@@ -700,10 +699,10 @@ const Apply = (props) => {
                   margin="2rem 0 0 0"
                   color={Colors.blue}
                   padding_tablet=".40rem 2.1rem"
-                  padding_xs=".40rem 1rem"
+                  padding=".40rem .7rem"
                   maxWidth_tablet="none"
                   maxWidth_sm="160px"
-                  maxWidth_xs="125px"
+                  maxWidth="125px"
                   disabled={formStatus.status === "loading" ? true : false}
                   onClick={() => {
                     setShowModal(false);

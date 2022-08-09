@@ -411,7 +411,7 @@ const Program = ({ data, pageContext, yml }) => {
         lang={pageContext.lang}
         course={program_type}
       />
-      <Instructors lang={courseDetails.course_instructors} />
+      <Instructors lang={{...courseDetails.course_instructors, lang: pageContext.lang}} />
       {/* <TechsWeTeach
         lang={pageContext.lang}
         data={data.allMachineLearningTechsYaml}
@@ -492,6 +492,8 @@ export const query = graphql`
             instructors {
               name
               bio
+              job
+              degree
               github
               linkedin
               sub_title

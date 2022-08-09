@@ -42,6 +42,7 @@ export const Colors = {
   veryLightBlue: "#C7F3FD",
   veryLightBlue2: "#E3F9FE",
   gray: "#898a8b",
+  gray3: "#828282",
   verylightGray: "#F5F5F5",
   lightGray: "#ebebeb",
   lightGreen: "#c4f7b7",
@@ -243,12 +244,15 @@ export const StyledBackgroundSection = styled(BackgroundSection)`
   @media ${Devices.xxs} {
   }
   @media ${Devices.xs} {
+    height: ${(props) => props.height_xs};
+    width: ${(props) => props.width_xs || "100%"};
   }
   @media ${Devices.sm} {
   }
   @media ${Devices.tablet} {
     border-radius: ${(props) => props.borderRadius_tablet};
     height: ${(props) => props.height_tablet};
+    width: ${(props) => props.width_tablet || "100%"};
     &:before,
     &:after {
       border-radius: ${(props) => props.borderRadius_tablet};
@@ -334,6 +338,11 @@ export const Button = styled(SmartButton)`
   margin: ${(props) => props.margin};
   border-radius: ${(props) => props.borderRadius};
   position: ${(props) => props.position};
+  z-index: ${(props) => props.zIndex};
+  top: ${(props) => props.top};
+  bottom: ${(props) => props.bottom};
+  left: ${(props) => props.left};
+  right: ${(props) => props.right};
   display: ${(props) => props.display};
   padding: ${(props) => props.padding || "12px 24px"};
   transform: ${(props) => props.transform};
@@ -344,7 +353,7 @@ export const Button = styled(SmartButton)`
   border-top: ${(props) => props.borderTop};
   border-bottom: ${(props) => props.borderBottom};
   border-right: ${(props) => props.borderRight};
-  height: 40px;
+  height: ${(props) => props.height || "40px"};
   cursor: pointer;
   text-align: ${(props) => props.textAlign || "center"};
   letter-spacing: ${(props) => props.letterSpacing || "0px"};
@@ -366,26 +375,45 @@ export const Button = styled(SmartButton)`
   }
   @media ${Devices.xs} {
     width: ${(props) => props.width_xs};
+    height: ${(props) => props.height_xs || "40px"};
     text-align: ${(props) => props.textAlign_xs || "center"};
     padding: ${(props) => props.padding_xs || "12px 24px"};
     max-width: ${(props) => props.maxWidth_xs};
+    top: ${(props) => props.top_xs};
+    bottom: ${(props) => props.bottom_xs};
+    left: ${(props) => props.left_xs};
+    right: ${(props) => props.right_xs};
   }
   @media ${Devices.sm} {
     width: ${(props) => props.width_sm};
+    height: ${(props) => props.height_sm || "40px"};
     max-width: ${(props) => props.maxWidth_sm};
     margin: ${(props) => props.margin_sm};
     font-size: ${(props) => props.fontSize_sm};
+    top: ${(props) => props.top_sm};
+    bottom: ${(props) => props.bottom_sm};
+    left: ${(props) => props.left_sm};
+    right: ${(props) => props.right_sm};
   }
   @media ${Devices.tablet} {
     width: ${(props) => props.width_tablet};
+    height: ${(props) => props.height_tablet || "40px"};
     margin: ${(props) => props.margin_tablet};
     padding: ${(props) => props.padding_tablet || "12px 24px"};
     max-width: ${(props) => props.maxWidth_tablet};
+    top: ${(props) => props.top_tablet};
+    bottom: ${(props) => props.bottom_tablet};
+    left: ${(props) => props.left_tablet};
+    right: ${(props) => props.right_tablet};
   }
   @media ${Devices.md} {
     width: ${(props) => props.width_md};
     font-size: ${(props) => props.fontSize_md};
     margin: ${(props) => props.margin_md};
+    top: ${(props) => props.top_md};
+    bottom: ${(props) => props.bottom_md};
+    left: ${(props) => props.left_md};
+    right: ${(props) => props.right_md};
   }
   @media ${Devices.lg} {
     font-size: ${(props) => props.fontSize_lg};

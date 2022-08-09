@@ -80,7 +80,7 @@ const Loc = ({ lang, yml, allLocationYaml }) => {
         id="responsive-options-container"
         width="100%"
         display_tablet="none"
-        display_xs="block"
+        display="block"
       >
         <Div id="responsive-options-selector">
           {regions.map((m, i) => (
@@ -113,8 +113,8 @@ const Loc = ({ lang, yml, allLocationYaml }) => {
         </Div>
         <Div
           flexDirection="column"
-          padding="20px 20px 0 20px"
-          padding_xs="20px 0 0 0"
+          padding_sm="20px 20px 0 20px"
+          padding="20px 0 0 0"
           flexWrap="wrap"
           maxHeight="300px"
         >
@@ -130,7 +130,7 @@ const Loc = ({ lang, yml, allLocationYaml }) => {
                   <H3
                     textAlign="left"
                     width="fit-content"
-                    maxWidth_xs="135px"
+                    maxWidth="135px"
                     fontSize="15px"
                     lineHeight="20px"
                     fontWeight="400"
@@ -161,7 +161,7 @@ const Loc = ({ lang, yml, allLocationYaml }) => {
         <GridContainer
           margin_tablet="0 0 35px 0"
           margin_xs="0 0 15px 0"
-          margin="0 0 32px 0"
+          margin="0 0 10px 0"
           gridGap="17px"
         >
           <Div display="flex" flexDirection="column" alignItems="center">
@@ -186,6 +186,7 @@ const Loc = ({ lang, yml, allLocationYaml }) => {
         flexDirection_tablet="row"
         flexDirection_sm="column"
         flexDirection_xs="column"
+        flexDirection="column"
         margin="0 0 20px 0"
         // margin="auto"
         // width="70%"
@@ -194,13 +195,13 @@ const Loc = ({ lang, yml, allLocationYaml }) => {
       >
         <Div
           id="text-and-image-container"
-          display="block"
-          display_xs="flex"
+          display_tablet="block"
+          display="flex"
           flexDirection="column"
           width_md="45%"
           width_tablet="40%"
           // maxWidth_tablet="270px"
-          width_xs="100%"
+          width="100%"
           margin_tablet="0 20px 0 0"
           margin_xs="0 0 20px 0"
         >
@@ -247,9 +248,9 @@ const Loc = ({ lang, yml, allLocationYaml }) => {
           {image && (
             <Div
               id="img-container"
-              height="100%"
-              height_xs="200px"
-              order_xs="-1"
+              height_tablet="100%"
+              height="200px"
+              order="-1"
               order_tablet="0"
               margin_tablet="0"
               margin_xs="0 0 20px 0"
@@ -265,7 +266,7 @@ const Loc = ({ lang, yml, allLocationYaml }) => {
                 height="100%"
                 maxHeight="300px"
                 minHeight_tablet="none"
-                minHeight_xs="200px"
+                minHeight="200px"
                 backgroundSize="contain"
               />
             </Div>
@@ -276,9 +277,9 @@ const Loc = ({ lang, yml, allLocationYaml }) => {
           id="menu-container"
           width_md="55%"
           width_tablet="60%"
-          width_xs="100%"
+          width="100%"
           display_tablet="block"
-          display_xs="none"
+          display="none"
         >
           <Div
             id="links-container"

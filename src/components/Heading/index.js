@@ -204,6 +204,9 @@ export const Paragraph = styled.p`
     padding: ${(props) => props.padding_xs};
     display: ${(props) => props.display_xs};
     margin: ${(props) => props.margin_xs};
+    font-size: ${(props) => props.fontSize_xs};
+    font-weight: ${(props) =>
+      props.isActive ? "bold" : props.fontWeight_xs || "400"};
   }
   @media ${Devices.sm} {
     width: ${(props) => props.width_sm};
@@ -214,6 +217,8 @@ export const Paragraph = styled.p`
     justify-content: ${(props) => props.justifyContent_tablet};
     width: ${(props) => props.width_tablet};
     font-size: ${(props) => props.fontSize_tablet};
+    font-weight: ${(props) =>
+      props.isActive ? "bold" : props.fontWeight_tablet || "400"};
     text-align: ${(props) => props.textAlign_tablet};
     align-self: ${(props) => props.alignSelf_tablet};
     padding: ${(props) => props.padding_tablet};

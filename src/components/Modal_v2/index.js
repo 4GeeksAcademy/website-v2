@@ -20,7 +20,7 @@ const Modal = ({
           <ModalContainer>
             {showHeader && (
               <ModalHeader>
-                <H3 fontSize_tablet="22px" fontSize_xs="16px">
+                <H3 fontSize_tablet="22px" fontSize_xs="16px" fontSize="11px">
                   {title}
                 </H3>
               </ModalHeader>
@@ -94,5 +94,9 @@ const CloseButton = styled.button`
   svg {
     width: 100%;
     height: 100%;
+  }
+  @media (max-width: 320px){
+    width: 9px;
+    height: 9px;
   }
 `;
