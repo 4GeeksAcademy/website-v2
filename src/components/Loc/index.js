@@ -125,11 +125,11 @@ const Loc = ({ lang, yml, allLocationYaml }) => {
                 <Link
                   to={`/${lang}/coding-campus/${l.node.meta_info.slug}`}
                   key={i}
-                  style={{ 
-                    marginBottom: "8px", 
+                  style={{
+                    marginBottom: "8px",
                     width: "fit-content",
                     display: "flex",
-                    alignItems: "center"
+                    alignItems: "center",
                   }}
                 >
                   <H3
@@ -312,11 +312,11 @@ const Loc = ({ lang, yml, allLocationYaml }) => {
                   <Link
                     to={`/${lang}/coding-campus/${l.node.meta_info.slug}`}
                     key={i}
-                    style={{ 
-                      marginBottom: "8px", 
+                    style={{
+                      marginBottom: "8px",
                       width: "fit-content",
                       display: "flex",
-                      alignItems: "center"
+                      alignItems: "center",
                     }}
                   >
                     <H3

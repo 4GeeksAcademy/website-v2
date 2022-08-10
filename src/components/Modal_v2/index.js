@@ -95,7 +95,7 @@ const CloseButton = styled.button`
     width: 100%;
     height: 100%;
   }
-  @media (max-width: 320px){
+  @media (max-width: 320px) {
     width: 9px;
     height: 9px;
   }

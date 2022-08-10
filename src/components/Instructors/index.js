@@ -22,9 +22,9 @@ const Instructors = ({
   // const [value, setValue] = useState(0);
 
   const about = {
-    'us': 'ABOUT',
-    'es': 'ACERCA DE'
-  }
+    us: "ABOUT",
+    es: "ACERCA DE",
+  };
 
   const sliderRef = useRef();
 
@@ -120,7 +120,7 @@ const Instructors = ({
         height_tablet="35px"
         onClick={() => sliderRef.current.slickPrev()}
       >
-        <Icon width="100%" height="100%" icon="arrowleft"/>
+        <Icon width="100%" height="100%" icon="arrowleft" />
       </Button>
       <Button
         variant="empty"
@@ -139,7 +139,7 @@ const Instructors = ({
         height_tablet="35px"
         onClick={() => sliderRef.current.slickNext()}
       >
-        <Icon width="100%" height="100%" icon="arrow-right"/>
+        <Icon width="100%" height="100%" icon="arrow-right" />
       </Button>
       {instructors?.length >= 1 ? (
         <Slider {...settings} ref={sliderRef}>
@@ -181,10 +181,7 @@ const Instructors = ({
                       backgroundSize="contain"
                       flexShrink="0"
                     />
-                    <Div
-                      className="instructor-header"
-                      display="block"
-                    >
+                    <Div className="instructor-header" display="block">
                       <H3
                         type="h3"
                         textAlign="left"
@@ -210,38 +207,50 @@ const Instructors = ({
                       >
                         {item.sub_title}
                       </Paragraph>
-                      {item.job && <Paragraph
-                        fontSize="15px"
-                        textAlign="left"
-                        fontWeight="500"
-                        color={Colors.black}
-                        letterSpacing="0.05em"
-                        lineHeight="19px"
-                        margin="0 0 10px 0"
-                        display_tablet="block"
-                        display="none"
-                      >
-                        <Icon style={{ verticalAlign: 'bottom' }} icon="briefcase" />
-                        {'  '}
-                        {item.job}
-                      </Paragraph>}
-                      {item.degree && <Paragraph
-                        fontSize="15px"
-                        textAlign="left"
-                        fontWeight="500"
-                        color={Colors.black}
-                        letterSpacing="0.05em"
-                        lineHeight="19px"
-                        margin="0 0 10px 0"
-                        display_tablet="block"
-                        display="none"
-                      >
-                        <Icon width="20" height="19" fill={Colors.black} style={{ verticalAlign: 'bottom' }} icon="graduation" />
-                        {'  '}
-                        {item.degree}
-                      </Paragraph>}
+                      {item.job && (
+                        <Paragraph
+                          fontSize="15px"
+                          textAlign="left"
+                          fontWeight="500"
+                          color={Colors.black}
+                          letterSpacing="0.05em"
+                          lineHeight="19px"
+                          margin="0 0 10px 0"
+                          display_tablet="block"
+                          display="none"
+                        >
+                          <Icon
+                            style={{ verticalAlign: "bottom" }}
+                            icon="briefcase"
+                          />
+                          {"  "}
+                          {item.job}
+                        </Paragraph>
+                      )}
+                      {item.degree && (
+                        <Paragraph
+                          fontSize="15px"
+                          textAlign="left"
+                          fontWeight="500"
+                          color={Colors.black}
+                          letterSpacing="0.05em"
+                          lineHeight="19px"
+                          margin="0 0 10px 0"
+                          display_tablet="block"
+                          display="none"
+                        >
+                          <Icon
+                            width="20"
+                            height="19"
+                            fill={Colors.black}
+                            style={{ verticalAlign: "bottom" }}
+                            icon="graduation"
+                          />
+                          {"  "}
+                          {item.degree}
+                        </Paragraph>
+                      )}
                     </Div>
-
                   </Div>
                   <Div
                     display="block"
@@ -250,36 +259,48 @@ const Instructors = ({
                     display_xs="block"
                     margin="10px 0 0 0"
                   >
-                    {item.job && <Paragraph
-                      width="100%"
-                      fontSize="15px"
-                      textAlign="left"
-                      fontWeight="500"
-                      color={Colors.black}
-                      letterSpacing="0.05em"
-                      lineHeight="19px"
-                      margin="0 0 10px 0"
-                    >
-                      <Icon style={{ verticalAlign: 'bottom' }} icon="briefcase" />
-                      {'  '}
-                      {item.job}
-                    </Paragraph>}
-                    {item.degree && <Paragraph
-                      width="100%"
-                      fontSize="15px"
-                      textAlign="left"
-                      fontWeight="500"
-                      color={Colors.black}
-                      letterSpacing="0.05em"
-                      lineHeight="19px"
-                      margin="0 0 10px 0"
-                    >
-                      <Icon width="20" height="19" fill={Colors.black} style={{ verticalAlign: 'bottom' }} icon="graduation" />
-                      {'  '}
-                      {item.degree}
-                    </Paragraph>}
+                    {item.job && (
+                      <Paragraph
+                        width="100%"
+                        fontSize="15px"
+                        textAlign="left"
+                        fontWeight="500"
+                        color={Colors.black}
+                        letterSpacing="0.05em"
+                        lineHeight="19px"
+                        margin="0 0 10px 0"
+                      >
+                        <Icon
+                          style={{ verticalAlign: "bottom" }}
+                          icon="briefcase"
+                        />
+                        {"  "}
+                        {item.job}
+                      </Paragraph>
+                    )}
+                    {item.degree && (
+                      <Paragraph
+                        width="100%"
+                        fontSize="15px"
+                        textAlign="left"
+                        fontWeight="500"
+                        color={Colors.black}
+                        letterSpacing="0.05em"
+                        lineHeight="19px"
+                        margin="0 0 10px 0"
+                      >
+                        <Icon
+                          width="20"
+                          height="19"
+                          fill={Colors.black}
+                          style={{ verticalAlign: "bottom" }}
+                          icon="graduation"
+                        />
+                        {"  "}
+                        {item.degree}
+                      </Paragraph>
+                    )}
                   </Div>
-
                 </Div>
                 <Div
                   display="block"
@@ -289,11 +310,7 @@ const Instructors = ({
                   padding_tablet="20px"
                   borderRadius="0px 0px 10px 10px"
                 >
-                  <H4
-                    textAlign="left"
-                    fontWeight="700"
-                    margin="0 0 10px 0"
-                  >
+                  <H4 textAlign="left" fontWeight="700" margin="0 0 10px 0">
                     {about[lang.lang]}
                   </H4>
                   <Paragraph
@@ -306,10 +323,7 @@ const Instructors = ({
                   >
                     {item.bio}
                   </Paragraph>
-                  <Div
-                    className="social-container"
-                    alignItems="center"
-                  >
+                  <Div className="social-container" alignItems="center">
                     <Div
                       width_tablet="22px"
                       height_tablet="22px"
@@ -324,7 +338,10 @@ const Instructors = ({
                           target="_blank"
                           href={item.linkedin}
                           rel="noopener noreferrer nofollow"
-                          style={{ width: "fit-content", verticalAlign: "middle" }}
+                          style={{
+                            width: "fit-content",
+                            verticalAlign: "middle",
+                          }}
                         >
                           <Icon
                             icon="linkedin"
@@ -358,7 +375,6 @@ const Instructors = ({
                         </a>
                       )}
                     </Div>
-
                   </Div>
                 </Div>
               </Div>
