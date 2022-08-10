@@ -252,6 +252,7 @@ export const Div = styled.div`
     display: ${(props) => props.display_tablet};
     position: ${(props) => props.position_tablet};
     flex-direction: ${(props) => props.flexDirection_tablet};
+    text-align: ${(props) => props.textAlign_tablet};
     align-content: ${(props) => props.alignContent_tablet};
     height: ${(props) => props.height_tablet};
     align-items: ${(props) => props.alignItems_tablet};

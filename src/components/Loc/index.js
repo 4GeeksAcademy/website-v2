@@ -112,11 +112,11 @@ const Loc = ({ lang, yml, allLocationYaml }) => {
           ))}
         </Div>
         <Div
-          flexDirection="column"
           padding_sm="20px 20px 0 20px"
           padding="20px 0 0 0"
+          flexDirection="column"
           flexWrap="wrap"
-          maxHeight="300px"
+          maxHeight="350px"
         >
           {activeOpt.sub_links != undefined &&
             Array.isArray(activeOpt.sub_links) &&
@@ -125,28 +125,33 @@ const Loc = ({ lang, yml, allLocationYaml }) => {
                 <Link
                   to={`/${lang}/coding-campus/${l.node.meta_info.slug}`}
                   key={i}
-                  style={{ marginBottom: "8px" }}
+                  style={{ 
+                    marginBottom: "8px", 
+                    width: "fit-content",
+                    display: "flex",
+                    alignItems: "center"
+                  }}
                 >
                   <H3
                     textAlign="left"
                     width="fit-content"
-                    maxWidth="135px"
+                    // maxWidth="135px"
                     fontSize="15px"
                     lineHeight="20px"
                     fontWeight="400"
-                    margin="0 5px 0 0"
+                    // margin="0 5px 0 0"
                     border="2px solid transparent"
                     borderBottomHover="2px solid black"
                   >
                     {l.node.name}
-                    <Icon
-                      icon="arrow-right"
-                      color={Colors.blue}
-                      width="10px"
-                      height="10px"
-                      style={{ marginLeft: "5px" }}
-                    />
                   </H3>
+                  <Icon
+                    icon="arrow-right"
+                    color={Colors.blue}
+                    width="10px"
+                    height="10px"
+                    style={{ marginLeft: "5px" }}
+                  />
                 </Link>
               );
             })}
@@ -182,6 +187,8 @@ const Loc = ({ lang, yml, allLocationYaml }) => {
       <Div
         id="locations-container"
         padding="0 10%"
+        padding_md="0 10%"
+        padding_tablet="0 7%"
         // padding="0 0 5% 0"
         flexDirection_tablet="row"
         flexDirection_sm="column"
@@ -206,7 +213,7 @@ const Loc = ({ lang, yml, allLocationYaml }) => {
           margin_xs="0 0 20px 0"
         >
           <H3
-            textAlign="left"
+            textAlign_tablet="left"
             color={Colors.blue}
             width="100%"
             margin="0 0 10px 0"
@@ -218,7 +225,8 @@ const Loc = ({ lang, yml, allLocationYaml }) => {
               display="block"
               margin_tablet="0 0 20px 0"
               marginxs="0 0 5px 0"
-              textAlign="left"
+              textAlign_tablet="left"
+              textAlign="center"
               color={Colors.darkGray2}
               style={{
                 fontFamily: "Lato, sans-serif",
@@ -235,7 +243,7 @@ const Loc = ({ lang, yml, allLocationYaml }) => {
               <Paragraph
                 margin_tablet="0 0 5px 0"
                 marginxs="0 0 5px 0"
-                textAlign="left"
+                textAlign_tablet="left"
                 color={Colors.darkGray2}
                 fontWeight="700"
                 fontSize="18px"
@@ -304,7 +312,12 @@ const Loc = ({ lang, yml, allLocationYaml }) => {
                   <Link
                     to={`/${lang}/coding-campus/${l.node.meta_info.slug}`}
                     key={i}
-                    style={{ marginBottom: "8px", width: "fit-content" }}
+                    style={{ 
+                      marginBottom: "8px", 
+                      width: "fit-content",
+                      display: "flex",
+                      alignItems: "center"
+                    }}
                   >
                     <H3
                       textAlign="left"
@@ -312,19 +325,20 @@ const Loc = ({ lang, yml, allLocationYaml }) => {
                       fontSize="15px"
                       lineHeight="20px"
                       fontWeight="400"
-                      margin="0 5px 0 0"
+                      // margin="0 5px 0 0"
                       border="2px solid transparent"
                       borderBottomHover="2px solid black"
+                      minWidth="max-content"
                     >
                       {l.node.name}
-                      <Icon
-                        icon="arrow-right"
-                        color={Colors.blue}
-                        width="10px"
-                        height="10px"
-                        style={{ marginLeft: "5px" }}
-                      />
                     </H3>
+                    <Icon
+                      icon="arrow-right"
+                      color={Colors.blue}
+                      width="10px"
+                      height="10px"
+                      style={{ marginLeft: "5px", marginRight: "5px" }}
+                    />
                   </Link>
                 ))}
               </Div>

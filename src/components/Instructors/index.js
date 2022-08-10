@@ -158,7 +158,8 @@ const Instructors = ({
                 <Div
                   className="instructor-presentation"
                   background="#FAF9E3"
-                  padding="20px"
+                  padding="12px"
+                  padding_tablet="20px"
                   display="block"
                   borderRadius="10px 10px 0px 0px"
                 >
@@ -168,7 +169,8 @@ const Instructors = ({
                       // borderRadius={"1.25rem"}
                       // className="pointer"
                       alt={"4Geeks Academy Section"}
-                      margin="0 20px 0 0"
+                      margin="0 10px 0 0"
+                      margin_tablet="0 20px 0 0"
                       borderRadius="12px"
                       width_tablet="140px"
                       height_tablet="140px"
@@ -203,8 +205,10 @@ const Instructors = ({
                         color={Colors.darkGray}
                         margin="0 0 15px 0"
                         letterSpacing="0.05em"
+                        textTransform_sm="uppercase"
+                        textTransform="none"
                       >
-                        {item.sub_title.toUpperCase()}
+                        {item.sub_title}
                       </Paragraph>
                       {item.job && <Paragraph
                         fontSize="15px"
@@ -281,7 +285,8 @@ const Instructors = ({
                   display="block"
                   className="instructor-about"
                   background={Colors.white}
-                  padding="20px"
+                  padding="12px"
+                  padding_tablet="20px"
                   borderRadius="0px 0px 10px 10px"
                 >
                   <H4
