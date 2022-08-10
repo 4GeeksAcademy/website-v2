@@ -377,6 +377,9 @@ const Program = ({ data, pageContext, yml }) => {
             formHandler={requestSyllabus}
             handleClose={handleClose}
             lang={pageContext.lang}
+            redirect={
+              pageContext.lang === "us" ? "/us/thank-you" : "/es/gracias"
+            }
             data={{
               course: {
                 type: "hidden",
@@ -408,16 +411,17 @@ const Program = ({ data, pageContext, yml }) => {
         lang={pageContext.lang}
         course={program_type}
       />
-      <TechsWeTeach
+      <Instructors
+        lang={{ ...courseDetails.course_instructors, lang: pageContext.lang }}
+      />
+      {/* <TechsWeTeach
         lang={pageContext.lang}
         data={data.allMachineLearningTechsYaml}
-      />
+      /> */}
       <GeeksInfo lang={pageContext.lang} />
       <GridContainer padding_tablet="0" margin_tablet="0 0 62px 0">
         <Div height="1px" background="#EBEBEB"></Div>
       </GridContainer>
-
-      {/* <Instructors lang={courseDetails.course_instructors}/> */}
       <PricesAndPayment
         type={pageContext.slug}
         lang={pageContext.lang}
@@ -490,6 +494,8 @@ export const query = graphql`
             instructors {
               name
               bio
+              job
+              degree
               github
               linkedin
               sub_title

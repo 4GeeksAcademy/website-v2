@@ -79,6 +79,8 @@ const SmartSelect = (props) => {
           border="1px solid #EBEBEB"
           boxShadow="0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"
           background={Colors.white}
+          maxHeight={props.maxHeight || "300px"}
+          overflow="auto"
           width="100%"
         >
           {Array.isArray(props.options) &&

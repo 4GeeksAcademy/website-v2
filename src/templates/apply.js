@@ -10,14 +10,23 @@ import { SessionContext } from "../session.js";
 import { Circle } from "../components/BackgroundDrawing";
 import { apply, tagManager } from "../actions";
 import PhoneInput from "../components/LeadForm/PhoneInput";
+import Modal from "../components/Modal_v2";
 
 const us = {
   "(In-person and from home available)": "(In-person and from home available)",
   "(From home until further notice)": "(From home until further notice)",
+  Europe: "Europe",
+  "Latin America": "Latin America",
+  "USA & Canada": "USA & Canada",
+  "Rest of the world": "Rest of the world",
 };
 const es = {
   "(In-person and from home available)": "(Presencial o desde casa)",
   "(From home until further notice)": "(Desde casa hasta nuevo aviso)",
+  Europe: "Europa",
+  "Latin America": "Latinoamérica",
+  "USA & Canada": "USA & Canada",
+  "Rest of the world": "Resto del mundo",
 };
 const trans = { us, es };
 
@@ -52,6 +61,16 @@ const Apply = (props) => {
       value: p.bc_slug,
     }));
 
+  const [regionVal, setRegionVal] = useState(null);
+  const [showPhoneWarning, setShowPhoneWarning] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+  const regions = [
+    { label: trans[pageContext.lang]["Latin America"], value: "latam" },
+    { label: trans[pageContext.lang]["USA & Canada"], value: "usa-canada" },
+    { label: trans[pageContext.lang]["Europe"], value: "europe" },
+    { label: trans[pageContext.lang]["Rest of the world"], value: "online" },
+  ];
+
   const locationContext = session && session.location;
 
   const locations =
@@ -69,6 +88,9 @@ const Apply = (props) => {
             ? trans[pageContext.lang]["(In-person and from home available)"]
             : trans[pageContext.lang]["(From home until further notice)"]),
         value: m.active_campaign_location_slug,
+        region: m.meta_info.region,
+        dialCode: m.meta_info.dialCode,
+        country: m.country,
       }));
 
   React.useEffect(() => {
@@ -121,6 +143,40 @@ const Apply = (props) => {
     ({ node }) => node.fields.lang === pageContext.lang
   );
   if (privacy) privacy = privacy.node;
+
+  const submitForm = () => {
+    setFormStatus({ status: "loading", msg: "Loading..." });
+    apply(
+      {
+        ...formData,
+        course: formData.course.value,
+        location: formData.location.value,
+      },
+      session
+    )
+      .then((data) => {
+        if (typeof data.error !== "undefined") {
+          setFormStatus({ status: "error", msg: "Fix errors" });
+        } else {
+          setFormStatus({ status: "thank-you", msg: "Thank you" });
+          if (!session || !session.utm || !session.utm.utm_test)
+            navigate(
+              `${pageContext.lang === "us" ? "/us/thank-you" : "/es/gracias"}`
+            );
+          else
+            console.log(
+              "Lead success, but no redirection because of testing purposes"
+            );
+        }
+      })
+      .catch((error) => {
+        console.log("error", error);
+        setFormStatus({
+          status: "error",
+          msg: error.message || error,
+        });
+      });
+  };
   return (
     <>
       <Header
@@ -363,41 +419,11 @@ const Apply = (props) => {
                   msg: "There are some errors in your form: " + valid,
                 });
               } else {
-                setFormStatus({ status: "loading", msg: "Loading..." });
-                apply(
-                  {
-                    ...formData,
-                    course: formData.course.value,
-                    location: formData.location.value,
-                  },
-                  session
-                )
-                  .then((data) => {
-                    if (typeof data.error !== "undefined") {
-                      setFormStatus({ status: "error", msg: "Fix errors" });
-                    } else {
-                      setFormStatus({ status: "thank-you", msg: "Thank you" });
-                      if (!session || !session.utm || !session.utm.utm_test)
-                        navigate(
-                          `${
-                            pageContext.lang === "us"
-                              ? "/us/thank-you"
-                              : "/es/gracias"
-                          }`
-                        );
-                      else
-                        console.log(
-                          "Lead success, but no redirection because of testing purposes"
-                        );
-                    }
-                  })
-                  .catch((error) => {
-                    console.log("error", error);
-                    setFormStatus({
-                      status: "error",
-                      msg: error.message || error,
-                    });
-                  });
+                if (showPhoneWarning && regionVal !== "online") {
+                  setShowModal(true);
+                } else {
+                  submitForm();
+                }
               }
             }}
           >
@@ -454,6 +480,8 @@ const Apply = (props) => {
                   phoneFormValues={formData["phone"]}
                   errorMsg="Please specify a valid phone number"
                   sessionContextLocation={locationContext}
+                  campusDial={formData?.location.value}
+                  setShowPhoneWarning={setShowPhoneWarning}
                 />
                 {/* <Input
                                     data-cy="phone"
@@ -489,29 +517,82 @@ const Apply = (props) => {
                 }
               />
             </Div>
-            {formStatus.status === "error" && !formData.location.valid && (
-              <Alert color="red">Please pick a location</Alert>
-            )}
             <Div
-              data-cy="dropdown_academy_selector"
+              data-cy="dropdown_region_selector"
               tabindex="1"
               contenteditable="true"
-              margin_tablet="0 0 23px 0"
+              margin_tablet="0 0 12px 0"
             >
               <SelectRaw
                 tabindex="1"
                 bgColor={Colors.black}
-                options={locations && locations}
-                value={locations?.find(
-                  (el) => el.value === formData.location.value
-                )}
-                placeholder={yml.left.locations_title}
-                inputId={"dropdown_academy_selector"}
-                onChange={(value, valid) => {
-                  setVal({ ...formData, location: { value, valid } });
+                options={regions}
+                // value={locations?.find(
+                //   (el) => el.value === formData.location.value
+                // )}
+                placeholder={yml.left.regions_title}
+                inputId={"dropdown_region_selector"}
+                onChange={(value) => {
+                  setRegionVal(value.value);
+                  setVal({
+                    ...formData,
+                    location: { value: "", valid: false },
+                  });
                 }}
               />
             </Div>
+            {formStatus.status === "error" && !formData.location.valid && (
+              <Alert color="red">Please pick a location</Alert>
+            )}
+            {showPhoneWarning && regionVal !== "online" && (
+              <Div
+                background="rgba(0, 151, 205, 0.19)"
+                borderRadius="2px"
+                padding="5px 10px"
+              >
+                <Paragraph
+                  fontSize="10px"
+                  lineHeight="12px"
+                  color="#000"
+                  textAlign="left"
+                >
+                  {yml.left.form_section.phone_warning}
+                </Paragraph>
+              </Div>
+            )}
+            {regionVal && (
+              <Div
+                data-cy="dropdown_academy_selector"
+                tabindex="1"
+                contenteditable="true"
+                margin_tablet="11px 0 23px 0"
+              >
+                <SelectRaw
+                  tabindex="1"
+                  bgColor={Colors.black}
+                  options={
+                    regionVal === "online"
+                      ? [
+                          {
+                            dialCode: null,
+                            label: "Online",
+                            region: "online",
+                            value: "online",
+                          },
+                        ]
+                      : locations?.filter(
+                          (academy) => academy.region === regionVal
+                        )
+                  }
+                  value={formData.location.value}
+                  placeholder={yml.left.locations_title}
+                  inputId={"dropdown_academy_selector"}
+                  onChange={(value, valid) => {
+                    setVal({ ...formData, location: { value, valid } });
+                  }}
+                />
+              </Div>
+            )}
             {formData.referral_key.value &&
               formData.referral_key.value != "" && (
                 <Alert color="blue">
@@ -587,6 +668,53 @@ const Apply = (props) => {
                   : yml.left.button.button_text}
               </Button>
             </Div>
+            <Modal
+              show={showModal}
+              onClose={() => setShowModal(false)}
+              showHeader={true}
+              title={yml.left.form_section.modal.title}
+              padding="20px 10px"
+            >
+              <Paragraph fontSize="14px" lineHeight="24px">
+                {yml.left.form_section.modal.text}
+              </Paragraph>
+              <Div justifyContent="between">
+                <Button
+                  variant="full"
+                  margin="2rem 0 0 0"
+                  color={Colors.blue}
+                  textColor={Colors.white}
+                  padding_tablet=".40rem 2.1rem"
+                  padding=".40rem .7rem"
+                  maxWidth_tablet="none"
+                  maxWidth_sm="160px"
+                  maxWidth="125px"
+                  disabled={formStatus.status === "loading" ? true : false}
+                  onClick={() => setShowModal(false)}
+                >
+                  {yml.left.form_section.modal.left_button}
+                </Button>
+                <Button
+                  variant="outline"
+                  margin="2rem 0 0 0"
+                  color={Colors.blue}
+                  padding_tablet=".40rem 2.1rem"
+                  padding=".40rem .7rem"
+                  maxWidth_tablet="none"
+                  maxWidth_sm="160px"
+                  maxWidth="125px"
+                  disabled={formStatus.status === "loading" ? true : false}
+                  onClick={() => {
+                    setShowModal(false);
+                    submitForm();
+                  }}
+                >
+                  {formStatus.status === "loading"
+                    ? "Loading..."
+                    : `${yml.left.form_section.modal.right_button} ${formData?.location?.value?.country}`}
+                </Button>
+              </Div>
+            </Modal>
           </form>
         </Div>
 
@@ -673,6 +801,7 @@ export const query = graphql`
           left {
             heading
             locations_title
+            regions_title
             course_title {
               open
               close
@@ -686,6 +815,13 @@ export const query = graphql`
               last_name
               email
               phone
+              phone_warning
+              modal {
+                title
+                text
+                left_button
+                right_button
+              }
             }
             referral_section {
               placeholder

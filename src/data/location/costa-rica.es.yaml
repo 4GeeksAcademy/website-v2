@@ -8,7 +8,8 @@ meta_info:
   visibility: "visible"
   keywords: "Coding Bootcamp Campus Costa Rica"
   redirects: ["/es/location/costa-rica-san-jose"]
-  region: "america"
+  region: "latam"
+  dialCode: "506"
 
 seo_title: "Aprende a programar en Costa Rica"
 header:

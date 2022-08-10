@@ -8,7 +8,8 @@ meta_info:
   visibility: "visible"
   keywords: "Coding Bootcamp Campus Uruguay"
   redirects: ["/coding-campus/bootcamp-programacion-uruguay"]
-  region: "america"
+  region: "latam"
+  dialCode: "598"
 
 seo_title: "Aprende a programar en Uruguay"
 header:

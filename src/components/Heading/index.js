@@ -26,6 +26,8 @@ const BaseHeading = styled(Heading)`
   display: ${(props) => props.display || "block"};
   float: ${(props) => props.float || "none"};
   width: ${(props) => props.width || "100%"};
+  max-width: ${(props) => props.maxWidth};
+  min-width: ${(props) => props.minWidth};
   font-family: "Lato", sans-serif;
   letter-spacing: ${(props) => props.letterSpacing};
   font-weight: ${(props) => props.fontWeight};
@@ -54,9 +56,13 @@ const BaseHeading = styled(Heading)`
   @media ${Devices.xxs} {
   }
   @media ${Devices.xs} {
+    margin: ${(props) => props.margin_xs};
+    max-width: ${(props) => props.maxWidth_xs};
+    font-size: ${(props) => props.fontSize_xs};
   }
   @media ${Devices.sm} {
     text-align: ${(props) => props.textAlign_sm};
+    margin: ${(props) => props.margin_sm};
   }
   @media ${Devices.tablet} {
     text-align: ${(props) => props.textAlign_tablet};
@@ -198,20 +204,28 @@ export const Paragraph = styled.p`
   @media ${Devices.xs} {
     padding: ${(props) => props.padding_xs};
     display: ${(props) => props.display_xs};
+    margin: ${(props) => props.margin_xs};
+    font-size: ${(props) => props.fontSize_xs};
+    font-weight: ${(props) =>
+      props.isActive ? "bold" : props.fontWeight_xs || "400"};
   }
   @media ${Devices.sm} {
     width: ${(props) => props.width_sm};
     padding: ${(props) => props.padding_sm};
+    text-transform: ${(props) => props.textTransform_sm};
   }
   @media ${Devices.tablet} {
     display: ${(props) => props.display_tablet};
     justify-content: ${(props) => props.justifyContent_tablet};
     width: ${(props) => props.width_tablet};
     font-size: ${(props) => props.fontSize_tablet};
+    font-weight: ${(props) =>
+      props.isActive ? "bold" : props.fontWeight_tablet || "400"};
     text-align: ${(props) => props.textAlign_tablet};
     align-self: ${(props) => props.alignSelf_tablet};
     padding: ${(props) => props.padding_tablet};
     margin: ${(props) => props.margin_tablet};
+    text-transform: ${(props) => props.textTransform_tablet};
   }
   @media ${Devices.md} {
     text-align: ${(props) => props.textAlign_md};

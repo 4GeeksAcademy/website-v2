@@ -6,7 +6,7 @@ export default (props) => (
     width={props.width}
     height={props.height}
     viewBox="0 0 67 46"
-    fill="none"
+    fill={props.fill || "none"}
     xmlns="https://www.w3.org/2000/svg"
   >
     <path

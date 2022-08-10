@@ -12,7 +12,8 @@ meta_info:
       "/es/location/impact-hub-caracas",
       "/es/location/caracas-venezuela",
     ]
-  region: "america"
+  region: "latam"
+  dialCode: "58"
 
 seo_title: "4Geeks Academy Caracas"
 header:
