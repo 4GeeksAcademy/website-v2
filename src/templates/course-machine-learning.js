@@ -411,7 +411,9 @@ const Program = ({ data, pageContext, yml }) => {
         lang={pageContext.lang}
         course={program_type}
       />
-      <Instructors lang={{...courseDetails.course_instructors, lang: pageContext.lang}} />
+      <Instructors
+        lang={{ ...courseDetails.course_instructors, lang: pageContext.lang }}
+      />
       {/* <TechsWeTeach
         lang={pageContext.lang}
         data={data.allMachineLearningTechsYaml}

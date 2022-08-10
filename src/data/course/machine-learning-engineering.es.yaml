@@ -27,19 +27,30 @@ course_instructors:
     paragraph: ""
 
   instructors:
-    # - name: "Roldolfo Campos"
-    #   sub_title: "Co fundador de 4geeks y director de educación"
-    #   image: "../../../static/images/instructors/example.png"
-    #   bio: "Currently working as a Senior Solutions Architect at VMware, Rodolfo Campos is a Software Engineer with 17 years of experience in Linux, Java, SQL, Blockchain, etc. Master in Computer Science and passionate about Big Data and Entrepreneurship."
-    #   github: ""
-    #   linkedin: "https://www.linkedin.com/"
+    - name: "Sayyed Nezhadi"
+      sub_title: "Doctorado en Inteligencia Artificial de la Universidad de Toronto"
+      degree: "Doctorado en Inteligencia Artificial"
+      image: "../../../static/images/instructors/sayyed.jpeg"
+      bio: "Más de 25 años de experiencia en la entrega de soluciones complejas habilitadas para IA y arquitecturas digitales para grandes empresas. PhD en Inteligencia Artificial de la Universidad de Toronto, y certificados en Big Data Analytics y Big Data de Hardvard y MIT respectivamente."
+      github: "https://github.com/snezhadi"
+      linkedin: "https://www.linkedin.com/in/sayyednezhadi"
 
-    # - name: "Gabriel Salinas"
-    #   sub_title: "Sophisticated Software Systems Engineer"
-    #   image: "../../../static/images/instructors/example.png"
-    #   bio: "Currently working as a Senior Solutions Architect at VMware"
-    #   github: ""
-    #   linkedin: "https://www.linkedin.com/"
+    - name: "Francesco Pugliese"
+      sub_title: "Científico de datos y Doctorado en Robótica e Inteligencia Artificial"
+      job: "Científico de Machine y Deep Learning en ISTAT (Instituto Nacional de Estadística de Italia)."
+      degree: "Doctorado en Robótica e Inteligencia Artificial"
+      image: "../../../static/images/instructors/fpugliese.jpeg"
+      bio: "Profundamente especializado en Deep Learning, Redes Neuronales y Robótica Evolutiva; Francesco tiene más de 20 años de experiencia trabajando en temas de investigación de robótica con varias publicaciones; Actualmente trabaja como científico de Machine y Deep Learning en ISTAT (Instituto Nacional de Estadística de Italia)."
+      github: "https://github.com/neural1977"
+      linkedin: "https://www.linkedin.com/in/francescopugliese77"
+
+    - name: "Manuel Mena"
+      sub_title: "Científico de datos sénior | IA y aprendizaje automático"
+      job: "Científico de datos del Instituto de Tecnología de Georgia"
+      image: "../../../static/images/instructors/manu-mena.jpeg"
+      bio: "Científico de datos del Instituto de Tecnología de Georgia con más de 5 años de experiencia en el campo de Machine Learning y Business Intelligence aplicado a estrategia comercial, diseño de flujos de trabajo de datos, pruebas de experimentos y entrega de soluciones de ciencia de datos. Experiencia liderando equipos en industrias financieras, de investigación de mercado y automotriz. Competente en R, Python, AWS y PostgreSQL."
+      github: "https://github.com/alexismenanieves"
+      linkedin: "https://www.linkedin.com/in/alexismena/"
 
 badges:
   paragraph: "4Geeks Academy es el lugar donde los desarrolladores crecen y prosperan. Estamos autorizados por el Departamento de Educación de Florida. Elegido como uno de los 35 mejores bootcamps del mundo y el mejor bootcamp de codificación en Miami según SwitchUp. Reconocido como los 10 mejores bootcamps de codificación en los Estados Unidos según Newsweek.."
@@ -73,10 +84,10 @@ teacher:
 details:
   about:
       title: "Sobre este programa"
-      sub_title: "Reciba entrenamiento por un reconocido experto en I.A; explora los fundamentos del aprendizaje automático y el aprendizaje profundo con algunas de las tecnologías más poderosas que realmente escalan la inteligencia para los negocios.
-      Practique con escenarios comerciales de la vida real típicos en los negocios y revise algunas de las herramientas utilizadas en la industria.
-      Elabora estrategias y desarrolla tu A.I. siguiendo el desarrollo del ciclo de vida de principio a fin, incluida la implementación en producción y mantenimiento con Privacidad, Seguridad y Ética.
-      "
+      sub_title: |
+        Reciba entrenamiento por un reconocido experto en I.A; explora los fundamentos del aprendizaje automático y el aprendizaje profundo con algunas de las tecnologías más poderosas que realmente escalan la inteligencia para los negocios.
+        Practique con escenarios comerciales de la vida real típicos en los negocios y revise algunas de las herramientas utilizadas en la industria.
+        Elabora estrategias y desarrolla tu A.I. siguiendo el desarrollo del ciclo de vida de principio a fin, incluida la implementación en producción y mantenimiento con Privacidad, Seguridad y Ética.
       list:
         - label: "Duración"
           content:  "15 semanas"
