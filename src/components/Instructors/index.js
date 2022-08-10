@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { GridContainer, GridContainerWithImage, Div, Grid } from "../Sections";
 import PropTypes from "prop-types";
 import { H2, H3, H4, Paragraph } from "../Heading";
-import { Colors, StyledBackgroundSection, Span } from "../Styling";
+import { Img, Colors, StyledBackgroundSection, Button } from "../Styling";
 import Icon from "../Icon";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -20,6 +20,13 @@ const Instructors = ({
     lang.instructors?.slice(0, limit || lang.instructors?.length)
   );
   // const [value, setValue] = useState(0);
+
+  const about = {
+    'us': 'ABOUT',
+    'es': 'ACERCA DE'
+  }
+
+  const sliderRef = useRef();
 
   const CustomNextArrow = (props) => {
     const { className, style, onClick } = props;
@@ -79,6 +86,7 @@ const Instructors = ({
       background={Colors.verylightGray}
       padding="73px 0 60px 0"
       padding_tablet="73px 0 60px 0"
+      position="relative"
     >
       <Div display="flex" flexDirection="column" alignItems="center">
         {/* <H1 type="h1">{lang[0].node.seo_title}</H1> */}
@@ -95,118 +103,260 @@ const Instructors = ({
         </H2>
         <Paragraph>{lang.header.paragraph}</Paragraph>
       </Div>
-
+      <Button
+        variant="empty"
+        padding="0"
+        padding_xs="0"
+        padding_tablet="0"
+        position="absolute"
+        zIndex="99"
+        top="50%"
+        left="5%"
+        left_md="20%"
+        left_tablet="15%"
+        width="12px"
+        height="20px"
+        width_tablet="21px"
+        height_tablet="35px"
+        onClick={() => sliderRef.current.slickPrev()}
+      >
+        <Icon width="100%" height="100%" icon="arrowleft"/>
+      </Button>
+      <Button
+        variant="empty"
+        padding="0"
+        padding_xs="0"
+        padding_tablet="0"
+        position="absolute"
+        zIndex="99"
+        top="50%"
+        right="5%"
+        right_md="20%"
+        right_tablet="15%"
+        width="12px"
+        height="20px"
+        width_tablet="21px"
+        height_tablet="35px"
+        onClick={() => sliderRef.current.slickNext()}
+      >
+        <Icon width="100%" height="100%" icon="arrow-right"/>
+      </Button>
       {instructors?.length >= 1 ? (
-        <Slider {...settings}>
+        <Slider {...settings} ref={sliderRef}>
           {instructors?.map((item, index) => {
             return (
-              <GridContainerWithImage
-                background={Colors.verylightGray}
-                imageSide="left"
-                columns_tablet="14"
-                gridGap_tablet="0"
-                padding_tablet="0 0 36px 0"
-                padding="0 0 50px 0"
+              <Div
+                className="instructor-container"
+                display="block"
+                // width="70%"
+                // margin="auto"
+                padding="0 10%"
+                padding_md="0 25%"
+                padding_tablet="0 20%"
+                padding_xs="0 10%"
               >
                 <Div
-                  height_tablet="auto"
-                  padding="0"
-                  padding_tablet="17px 51px"
-                  gridColumn_tablet="1 / 8"
+                  className="instructor-presentation"
+                  background="#FAF9E3"
+                  padding="20px"
+                  display="block"
+                  borderRadius="10px 10px 0px 0px"
                 >
-                  <StyledBackgroundSection
-                    height={`300px`}
-                    width={`400px`}
-                    image={item.image.childImageSharp.gatsbyImageData}
-                    bgSize={`cover`}
-                    alt="Cnn Logo"
-                  />
+                  <Div className="picture-and-heading">
+                    <StyledBackgroundSection
+                      image={item.image.childImageSharp.gatsbyImageData}
+                      // borderRadius={"1.25rem"}
+                      // className="pointer"
+                      alt={"4Geeks Academy Section"}
+                      margin="0 20px 0 0"
+                      borderRadius="12px"
+                      width_tablet="140px"
+                      height_tablet="140px"
+                      width_xs="100px"
+                      height_xs="100px"
+                      width="100px"
+                      height="100px"
+                      backgroundSize="contain"
+                      flexShrink="0"
+                    />
+                    <Div
+                      className="instructor-header"
+                      display="block"
+                    >
+                      <H3
+                        type="h3"
+                        textAlign="left"
+                        margin="0 0 10px 0"
+                        fontSize_tablet="22px"
+                        fontSize="18px"
+                      >
+                        {item.name}
+                      </H3>
+                      <Paragraph
+                        // width="90%"
+                        textAlign="left"
+                        fontSize_tablet="15px"
+                        fontWeight_tablet="900"
+                        fontSize="14px"
+                        fontWeight="700"
+                        lineHeight="19px"
+                        color={Colors.darkGray}
+                        margin="0 0 15px 0"
+                        letterSpacing="0.05em"
+                      >
+                        {item.sub_title.toUpperCase()}
+                      </Paragraph>
+                      {item.job && <Paragraph
+                        fontSize="15px"
+                        textAlign="left"
+                        fontWeight="500"
+                        color={Colors.black}
+                        letterSpacing="0.05em"
+                        lineHeight="19px"
+                        margin="0 0 10px 0"
+                        display_tablet="block"
+                        display="none"
+                      >
+                        <Icon style={{ verticalAlign: 'bottom' }} icon="briefcase" />
+                        {'  '}
+                        {item.job}
+                      </Paragraph>}
+                      {item.degree && <Paragraph
+                        fontSize="15px"
+                        textAlign="left"
+                        fontWeight="500"
+                        color={Colors.black}
+                        letterSpacing="0.05em"
+                        lineHeight="19px"
+                        margin="0 0 10px 0"
+                        display_tablet="block"
+                        display="none"
+                      >
+                        <Icon width="20" height="19" fill={Colors.black} style={{ verticalAlign: 'bottom' }} icon="graduation" />
+                        {'  '}
+                        {item.degree}
+                      </Paragraph>}
+                    </Div>
+
+                  </Div>
+                  <Div
+                    display="block"
+                    className="responsive-degree-and-job"
+                    display_tablet="none"
+                    display_xs="block"
+                    margin="10px 0 0 0"
+                  >
+                    {item.job && <Paragraph
+                      width="100%"
+                      fontSize="15px"
+                      textAlign="left"
+                      fontWeight="500"
+                      color={Colors.black}
+                      letterSpacing="0.05em"
+                      lineHeight="19px"
+                      margin="0 0 10px 0"
+                    >
+                      <Icon style={{ verticalAlign: 'bottom' }} icon="briefcase" />
+                      {'  '}
+                      {item.job}
+                    </Paragraph>}
+                    {item.degree && <Paragraph
+                      width="100%"
+                      fontSize="15px"
+                      textAlign="left"
+                      fontWeight="500"
+                      color={Colors.black}
+                      letterSpacing="0.05em"
+                      lineHeight="19px"
+                      margin="0 0 10px 0"
+                    >
+                      <Icon width="20" height="19" fill={Colors.black} style={{ verticalAlign: 'bottom' }} icon="graduation" />
+                      {'  '}
+                      {item.degree}
+                    </Paragraph>}
+                  </Div>
+
                 </Div>
                 <Div
-                  alignSelf="center"
-                  alignSelf_tablet="flex-start"
-                  flexDirection="column"
-                  gridColumn_tablet="8 / 15 "
+                  display="block"
+                  className="instructor-about"
+                  background={Colors.white}
+                  padding="20px"
+                  borderRadius="0px 0px 10px 10px"
                 >
-                  <H3
-                    width="85%"
-                    width_tablet="100%"
-                    alignSelf="center"
-                    alignSelf_tablet="inherit"
-                    type="h3"
-                    textAlign="left"
-                    margin={`10px 0`}
-                  >
-                    {`> ${item.name}`}
-                  </H3>
                   <H4
-                    width="85%"
-                    width_tablet="100%"
-                    alignSelf="center"
-                    alignSelf_tablet="inherit"
-                    fontSize="15px"
-                    type="h4"
                     textAlign="left"
-                    fontWeight="bold"
-                    padding="0 0 26px 0"
+                    fontWeight="700"
+                    margin="0 0 10px 0"
                   >
-                    {`${item.sub_title.toUpperCase()}`}
+                    {about[lang.lang]}
                   </H4>
-
                   <Paragraph
-                    margin_tablet="0"
-                    margin=""
-                    alignSelf="center"
-                    alignSelf_tablet="inherit"
-                    textAlign="center"
+                    textAlign="left"
+                    color={Colors.gray3}
                     lineHeight="26px"
-                    width="90%"
-                    width_tablet="100%"
-                    padding="0 40px 0 0"
-                    padding_tablet="0"
-                    color={Colors.black}
-                    textAlign_tablet="left"
+                    margin="0 0 20px 0"
+                    fontSize_tablet="15px"
+                    fontSize_xs="12px"
                   >
                     {item.bio}
                   </Paragraph>
                   <Div
-                    flexDirection="column"
-                    margin="40px 35px 0"
-                    margin_tablet="40px 0 0 0"
+                    className="social-container"
+                    alignItems="center"
                   >
-                    {item.github != "" && (
-                      <a
-                        target="_blank"
-                        href={item.github}
-                        rel="noopener noreferrer nofollow"
-                        style={{ width: "fit-content" }}
-                      >
-                        <Icon
-                          icon="github"
-                          width="22"
-                          color={Colors.black}
-                          fill={Colors.black}
-                        />
-                      </a>
-                    )}
-                    {item.linkedin != "" && (
-                      <a
-                        target="_blank"
-                        href={item.linkedin}
-                        rel="noopener noreferrer nofollow"
-                        style={{ width: "fit-content" }}
-                      >
-                        <Icon
-                          icon="linkedin"
-                          width="22"
-                          color={Colors.blue}
-                          fill={Colors.blue}
-                        />
-                      </a>
-                    )}
+                    <Div
+                      width_tablet="22px"
+                      height_tablet="22px"
+                      margin="0 15px 0 0"
+                      width="37px"
+                      height="37px"
+                      flexDirection="column"
+                      justifyContent="center"
+                    >
+                      {item.linkedin != "" && (
+                        <a
+                          target="_blank"
+                          href={item.linkedin}
+                          rel="noopener noreferrer nofollow"
+                          style={{ width: "fit-content", verticalAlign: "middle" }}
+                        >
+                          <Icon
+                            icon="linkedin"
+                            width="100%"
+                            color={Colors.blue}
+                            fill={Colors.blue}
+                          />
+                        </a>
+                      )}
+                    </Div>
+
+                    <Div
+                      width_tablet="25px"
+                      height_tablet="25px"
+                      width="40px"
+                      height="40px"
+                    >
+                      {item.github != "" && (
+                        <a
+                          target="_blank"
+                          href={item.github}
+                          rel="noopener noreferrer nofollow"
+                          style={{ width: "fit-content" }}
+                        >
+                          <Icon
+                            icon="github"
+                            width="100%"
+                            color={Colors.black}
+                            fill={Colors.black}
+                          />
+                        </a>
+                      )}
+                    </Div>
+
                   </Div>
                 </Div>
-              </GridContainerWithImage>
+              </Div>
             );
           })}
         </Slider>

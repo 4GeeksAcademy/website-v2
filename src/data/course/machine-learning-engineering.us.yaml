@@ -28,6 +28,14 @@ course_instructors:
     paragraph: ""
 
   instructors:
+    - name: "Roldolfo Campos"
+      sub_title: "Co fundador de 4geeks y director de educación"
+      job: "Senior java developer at Globant"
+      degree: "PhD in Computer Robotics"
+      image: "../../../static/images/instructors/example.png"
+      bio: "Currently working as a Senior Solutions Architect at VMware, Rodolfo Campos is a Software Engineer with 17 years of experience in Linux, Java, SQL, Blockchain, etc. Master in Computer Science and passionate about Big Data and Entrepreneurship."
+      github: "https://github.com/"
+      linkedin: "https://www.linkedin.com/"
     - name: "Sayyed Nezhadi"
       sub_title: "PhD in Artificial Intelligence from Toronto University"
       image: "../../../static/images/instructors/sayyed.jpeg"

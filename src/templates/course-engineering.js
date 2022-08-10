@@ -404,7 +404,7 @@ const Program = ({ data, pageContext, yml }) => {
         <Div height="1px" background="#EBEBEB"></Div>
       </GridContainer>
 
-      {/* <Instructors lang={courseDetails.course_instructors}/> */}
+      {/* <Instructors lang={{...courseDetails.course_instructors, lang: pageContext.lang}}/> */}
       <PricesAndPayment
         type={pageContext.slug}
         lang={pageContext.lang}
@@ -480,6 +480,8 @@ export const query = graphql`
             instructors {
               name
               bio
+              job
+              degree
               github
               linkedin
               sub_title

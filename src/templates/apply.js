@@ -10,8 +10,7 @@ import { SessionContext } from "../session.js";
 import { Circle } from "../components/BackgroundDrawing";
 import { apply, tagManager } from "../actions";
 import PhoneInput from "../components/LeadForm/PhoneInput";
-import Icon from "../components/Icon";
-import Modal from "../components/Modal";
+import Modal from "../components/Modal_v2";
 
 const us = {
   "(In-person and from home available)": "(In-person and from home available)",
@@ -64,6 +63,7 @@ const Apply = (props) => {
 
   const [regionVal, setRegionVal] = useState(null);
   const [showPhoneWarning, setShowPhoneWarning] = useState(false);
+  const [showModal, setShowModal] = useState(false);
   const regions = [
     { label: trans[pageContext.lang]["Latin America"], value: "latam" },
     { label: trans[pageContext.lang]["USA & Canada"], value: "usa-canada" },
@@ -90,6 +90,7 @@ const Apply = (props) => {
         value: m.active_campaign_location_slug,
         region: m.meta_info.region,
         dialCode: m.meta_info.dialCode,
+        country: m.country,
       }));
 
   React.useEffect(() => {
@@ -142,6 +143,40 @@ const Apply = (props) => {
     ({ node }) => node.fields.lang === pageContext.lang
   );
   if (privacy) privacy = privacy.node;
+
+  const submitForm = () => {
+    setFormStatus({ status: "loading", msg: "Loading..." });
+    apply(
+      {
+        ...formData,
+        course: formData.course.value,
+        location: formData.location.value,
+      },
+      session
+    )
+      .then((data) => {
+        if (typeof data.error !== "undefined") {
+          setFormStatus({ status: "error", msg: "Fix errors" });
+        } else {
+          setFormStatus({ status: "thank-you", msg: "Thank you" });
+          if (!session || !session.utm || !session.utm.utm_test)
+            navigate(
+              `${pageContext.lang === "us" ? "/us/thank-you" : "/es/gracias"}`
+            );
+          else
+            console.log(
+              "Lead success, but no redirection because of testing purposes"
+            );
+        }
+      })
+      .catch((error) => {
+        console.log("error", error);
+        setFormStatus({
+          status: "error",
+          msg: error.message || error,
+        });
+      });
+  };
   return (
     <>
       <Header
@@ -384,41 +419,11 @@ const Apply = (props) => {
                   msg: "There are some errors in your form: " + valid,
                 });
               } else {
-                setFormStatus({ status: "loading", msg: "Loading..." });
-                apply(
-                  {
-                    ...formData,
-                    course: formData.course.value,
-                    location: formData.location.value,
-                  },
-                  session
-                )
-                  .then((data) => {
-                    if (typeof data.error !== "undefined") {
-                      setFormStatus({ status: "error", msg: "Fix errors" });
-                    } else {
-                      setFormStatus({ status: "thank-you", msg: "Thank you" });
-                      if (!session || !session.utm || !session.utm.utm_test)
-                        navigate(
-                          `${
-                            pageContext.lang === "us"
-                              ? "/us/thank-you"
-                              : "/es/gracias"
-                          }`
-                        );
-                      else
-                        console.log(
-                          "Lead success, but no redirection because of testing purposes"
-                        );
-                    }
-                  })
-                  .catch((error) => {
-                    console.log("error", error);
-                    setFormStatus({
-                      status: "error",
-                      msg: error.message || error,
-                    });
-                  });
+                if (showPhoneWarning && regionVal !== "online") {
+                  setShowModal(true);
+                } else {
+                  submitForm();
+                }
               }
             }}
           >
@@ -663,6 +668,53 @@ const Apply = (props) => {
                   : yml.left.button.button_text}
               </Button>
             </Div>
+            <Modal
+              show={showModal}
+              onClose={() => setShowModal(false)}
+              showHeader={true}
+              title={yml.left.form_section.modal.title}
+              padding="20px 10px"
+            >
+              <Paragraph fontSize="14px" lineHeight="24px">
+                {yml.left.form_section.modal.text}
+              </Paragraph>
+              <Div justifyContent="between">
+                <Button
+                  variant="full"
+                  margin="2rem 0 0 0"
+                  color={Colors.blue}
+                  textColor={Colors.white}
+                  padding_tablet=".40rem 2.1rem"
+                  padding=".40rem .7rem"
+                  maxWidth_tablet="none"
+                  maxWidth_sm="160px"
+                  maxWidth="125px"
+                  disabled={formStatus.status === "loading" ? true : false}
+                  onClick={() => setShowModal(false)}
+                >
+                  {yml.left.form_section.modal.left_button}
+                </Button>
+                <Button
+                  variant="outline"
+                  margin="2rem 0 0 0"
+                  color={Colors.blue}
+                  padding_tablet=".40rem 2.1rem"
+                  padding=".40rem .7rem"
+                  maxWidth_tablet="none"
+                  maxWidth_sm="160px"
+                  maxWidth="125px"
+                  disabled={formStatus.status === "loading" ? true : false}
+                  onClick={() => {
+                    setShowModal(false);
+                    submitForm();
+                  }}
+                >
+                  {formStatus.status === "loading"
+                    ? "Loading..."
+                    : `${yml.left.form_section.modal.right_button} ${formData?.location?.value?.country}`}
+                </Button>
+              </Div>
+            </Modal>
           </form>
         </Div>
 
@@ -764,6 +816,12 @@ export const query = graphql`
               email
               phone
               phone_warning
+              modal {
+                title
+                text
+                left_button
+                right_button
+              }
             }
             referral_section {
               placeholder

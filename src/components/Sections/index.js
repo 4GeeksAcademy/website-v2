@@ -222,7 +222,7 @@ export const Div = styled.div`
     height: ${(props) => props.height_sm};
     position: ${(props) => props.position_sm};
     margin: ${(props) => props.margin_sm};
-    display: ${(props) => props.display};
+    display: ${(props) => props.display_sm};
     column-count: ${(props) => props.columnCount_sm};
     flex-direction: ${(props) => props.flexDirection_sm};
     display: ${(props) => props.display_sm};
@@ -575,6 +575,7 @@ export const GridContainer = ({
   columns_tablet,
   margin,
   margin_tablet,
+  margin_xs,
   margin_md,
   padding,
   padding_tablet,
@@ -616,6 +617,7 @@ export const GridContainer = ({
       height_tablet={height_tablet}
       margin={margin}
       margin_tablet={margin_tablet}
+      margin_xs={margin_xs}
       margin_md={margin_md}
       padding={padding || "0 17px"}
       padding_tablet={padding_tablet || "0"}
