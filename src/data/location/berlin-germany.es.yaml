@@ -1,11 +1,11 @@
 meta_info:
-  slug: "bootcamp-programacion-berlin-germany"
+  slug: "bootcamp-programacion-berlin-alemania"
   title: "Bootcamp de Programación en Berlín, Alemania"
   description: "Descubre todos los bootcamps de programación online impartidos por 4Geeks Academy en Berlín, Alemania. ¡Regístrate hoy!"
   position: 101
   image: "https://storage.cloud.google.com/4geeks-academy-website/online-es.png"
   keywords: "null"
-  redirects: ["/es/location/berlin-germany"]
+  redirects: ["/es/location/berlin-alemania"]
   region: "europe"
   dialCode: "49"
 
