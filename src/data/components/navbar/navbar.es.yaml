@@ -140,7 +140,7 @@ navbar:
             - title: "Barcelona, España"
               link_to: "/es/coding-campus/bootcamp-programacion-barcelona-espana"
             - title: "Málaga, España"
-              link_to: "/es/coding-campus/bootcamp-programacion-malga-espana"
+              link_to: "/es/coding-campus/bootcamp-programacion-malaga-espana"
             - title: "Valencia, España"
               link_to: "/es/coding-campus/bootcamp-programacion-valencia-espana"
             - title: "Lisboa, Portugal"
