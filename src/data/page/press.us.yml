@@ -21,15 +21,15 @@ content:
       logo: "../../../static/images/news/newsweek.png"
       location: ["downtown-miami", "online", "madrid-spain"]
       image: "../../../static/images/news/newsWeek-TopCodingSchools-2017.png"
-      title: "Interview / 4Geeks Academy on CNN Chile"
-      text: "Thanks to our friends at CNN Chile for being present at our event and publishing such good material about the future in education that we offer to the Santiago community through our #Bootcamp de #Programming program."
+      title: "Top Coding Bootcamps"
+      text: "Ranked one of the top coding bootcamps in a US-based study published by Newsweek highlighting our part-time based education and 4 cornerstones that make 4Geeks a successful coding school"
       textUrl: "Read Article"
       url: "https://www.newsweek.com/insights/coding-career-and-you-top-coding-schools-2017/4geeks-academy"
     - name: "CNN Español"
       logo: "../../../static/images/news/cnn-chile.png"
       location: ["santiago-chile", "online", "downtown-miami"]
       image: "../../../static/images/news/4GA-CNN-Chile.png"
-      title: "Student With Autism Learns to Code"
+      title: "4Geeks in Chile"
       text: "Thanks to our friends at CNN Chile for being present at our event and publishing such good material about the future in education that we offer to the Santiago community through our #Bootcamp de #Programming program."
       textUrl: "See Interview"
       url: "https://www.facebook.com/4GeeksAcademyCL/videos/492034597993382/"
