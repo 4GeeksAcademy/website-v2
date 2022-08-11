@@ -17,9 +17,17 @@ content:
   heading: "Read about this coding bootcamp in the news..."
   limit: 4
   news:
+    - name: "Forbes"
+      logo: "../../../static/images/news/forbes.png"
+#      location: ["downtown-miami", "online", "madrid-spain"]
+      image: "../../../static/images/partner/forbes-coder.jpeg"
+      title: "Web Development Coding Bootcamp"
+      text: "On a research made and published by Forbes while specified all the possible ways you can become a web developer in the USA."
+      textUrl: "Read Article"
+      url: "https://www.forbes.com/advisor/education/what-is-web-development"
     - name: "Newsweek"
       logo: "../../../static/images/news/newsweek.png"
-      location: ["downtown-miami", "online", "madrid-spain"]
+#      location: ["downtown-miami", "online", "madrid-spain"]
       image: "../../../static/images/news/newsWeek-TopCodingSchools-2017.png"
       title: "Top Coding Bootcamps"
       text: "Ranked one of the top coding bootcamps in a US-based study published by Newsweek highlighting our part-time based education and 4 cornerstones that make 4Geeks a successful coding school"
@@ -27,15 +35,23 @@ content:
       url: "https://www.newsweek.com/insights/coding-career-and-you-top-coding-schools-2017/4geeks-academy"
     - name: "CNN Español"
       logo: "../../../static/images/news/cnn-chile.png"
-      location: ["santiago-chile", "online", "downtown-miami"]
+      location: ["santiago-chile", "online", "downtown-miami", "bogota-colombia", "mexicocity-mexico", "costa-rica", "lima-peru", "buenosaires-argentina", "lapaz-bolivia", "montevideo-uruguay", "quito-ecuador"]
       image: "../../../static/images/news/4GA-CNN-Chile.png"
       title: "4Geeks in Chile"
       text: "Thanks to our friends at CNN Chile for being present at our event and publishing such good material about the future in education that we offer to the Santiago community through our #Bootcamp de #Programming program."
       textUrl: "See Interview"
       url: "https://www.facebook.com/4GeeksAcademyCL/videos/492034597993382/"
+    - name: "Miami Herald"
+      logo: "../../../static/images/news/miami-herald.png"
+      location: ["santiago-chile", "online", "downtown-miami", "bogota-colombia", "mexicocity-mexico", "costa-rica", "lima-peru", "buenosaires-argentina", "lapaz-bolivia", "montevideo-uruguay", "quito-ecuador"]
+      image: "../../../static/images/partner/united-way-schoolarship.jpeg"
+      title: "Learn to Code Scholarships"
+      text: "After a lot of hard word we were able to partner with United Way to offer 100 schollarships in minority populations to become a software engineer or software developer"
+      textUrl: "See Interview"
+      url: "https://www.miamiherald.com/news/business/article263937731.html"
     - name: "NBC"
       logo: "../../../static/images/news/nbc.png"
-      location: ["downtown-miami"]
+      location: ["downtown-miami", "orlando"]
       image: "../../../static/images/news/4GA-NBC-student-autism.png"
       title: "Student With Autism Learns to Code"
       text: "Victor Fitchhorn, who has autism, is learning how to code at Miami-based 4Geeks Academy, a coding bootcamp. NBC 6’s Ari Odzer reports."
@@ -43,7 +59,7 @@ content:
       url: "https://www.nbcmiami.com/on-air/as-seen-on/students-with-autism-learn-to-code_miami/159640/"
     - name: "La Razón"
       logo: "../../../static/images/news/larazon.png"
-      location: ["madrid-spain"]
+      location: ["madrid-spain", "barcelona-spain", "valencia-spain", "malaga-spain"]
       image: "../../../static/images/news/newsWeek-TopCodingSchools-2017.png"
       title: "Supporting each other when learning how to code"
       text: "In the middle of the COVID-19 crisis, we decided to increase our scholarship programs in Spain exponentially, receiving great recognition from the local and international press."
