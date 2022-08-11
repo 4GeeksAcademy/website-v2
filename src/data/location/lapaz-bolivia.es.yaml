@@ -8,11 +8,12 @@ meta_info:
   visibility: "visible"
   keywords: "Coding Bootcamp Campus Bolivia"
   redirects: ["/es/coding-campus/bootcamp-programacion-bolivia"]
-  region: "america"
+  region: "latam"
+  dialCode: "591"
 
-seo_title: "Aprende a programar en Bolivia"
+seo_title: "Coding bootcamp en Bolivia"
 header:
-  tagline: "4Geeks Academy en Bolivia"
+  tagline: "Aprende a programar en Bolivia"
   paragraph: "Únete a uno de los coding bootcamps y comunidades de programadores más grandes del mundo, mejora tus habilidades de código o aprende a programar desde cero y recibe soporte técnico y profesional de por vida."
   image: "../../../static/images/locations/bolivia-header.png"
   alt: "4Geeks Academy, aprende a programar en modalidad online en Bolivia"

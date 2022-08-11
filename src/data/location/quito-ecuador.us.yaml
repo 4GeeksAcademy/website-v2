@@ -8,7 +8,8 @@ meta_info:
   # it will not show up on the applications forms
   visibility: "visible"
   redirects: ["/us/ecuador", "/ecuador"]
-  region: "america"
+  region: "latam"
+  dialCode: "593"
 
 seo_title: "Coding Bootcamp Ecuador"
 header:

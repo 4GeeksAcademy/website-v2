@@ -1,6 +1,6 @@
 ---
 author: "4GeeksAcademy"
-date: "2022-25-10T20:44:51+00:00"
+date: "2022-10-25T20:44:51+00:00"
 excerpt: "*Is it a good choice to become a soft dev? *What does a Software Dev do? do? *earnings *2022 market demand."
 slug: "why-is-it-a-good-choice-to-become-a-software-developer"
 title: "Why is it a good choice to become a Software Developer?"

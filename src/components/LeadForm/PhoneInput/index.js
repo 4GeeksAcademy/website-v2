@@ -33,6 +33,8 @@ const PhoneInput = ({
   autocompleteSearch = false,
   searchNotFound = "No entries to show",
   sessionContextLocation,
+  campusDial,
+  setShowPhoneWarning,
   errorMsg = "Please specify a valid phone number",
 }) => {
   const [showDropdown, setShowDropdown] = useState(false);
@@ -127,6 +129,17 @@ const PhoneInput = ({
     const prefixCode = prefix + selectedCountry.dialCode;
     setPhoneNumber(prefixCode);
   }, [selectedCountry]);
+
+  React.useEffect(() => {
+    if (
+      setShowPhoneWarning &&
+      campusDial &&
+      campusDial !== "" &&
+      campusDial.dialCode !== selectedCountry.dialCode
+    )
+      setShowPhoneWarning(true);
+    else if (setShowPhoneWarning) setShowPhoneWarning(false);
+  }, [campusDial, selectedCountry]);
 
   const handleSearchChange = (e) => {
     const {

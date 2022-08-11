@@ -93,12 +93,15 @@ const SmartSelect = (props) => {
         //     shadow={props.shadow}
         // >
         <Div
+          id="option-wrapper"
           flexDirection="column"
           zIndex="1"
           position="absolute"
           width="100%"
           // padding_tablet="0 28px 0 0"
           border="1px solid black"
+          maxHeight={props.maxHeight || "300px"}
+          overflow="auto"
           // border_tablet="0"
           // background = ""
         >

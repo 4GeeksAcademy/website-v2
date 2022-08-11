@@ -8,7 +8,8 @@ meta_info:
   # it will not show up on the applications forms
   visibility: "visible"
   redirects: ["/us/uruguay", "/uruguay"]
-  region: "america"
+  region: "latam"
+  dialCode: "598"
 
 seo_title: "Coding Bootcamp Uruguay"
 header:

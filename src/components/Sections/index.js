@@ -123,6 +123,8 @@ export const Div = styled.div`
   max-width: ${(props) =>
     props.size ? `${(props.size / 12) * 100}%` : props.maxWidth || null};
   max-height: ${(props) => (props.maxHeight ? props.maxHeight : "none")};
+  overflow: ${(props) => props.overflow};
+  overflow-wrap: ${(props) => props.overflowWrap};
   overflow-x: ${(props) => props.overflowX};
   grid-area: ${(props) => props.gridArea};
   place-self: ${(props) => props.placeSelf};
@@ -142,6 +144,8 @@ export const Div = styled.div`
   min-width: ${(props) => props.minWidth};
   min-height: ${(props) => props.minHeight};
   position: ${(props) => props.position};
+  top: ${(props) => props.top};
+  left: ${(props) => props.left};
   display: ${(props) => props.display || "flex"};
   flex-direction: ${(props) => props.flexDirection || "row"};
   direction: ${(props) => props.direction};
@@ -158,11 +162,13 @@ export const Div = styled.div`
   border-bottom: ${(props) => props.borderBottom};
   border-right: ${(props) => props.borderRight};
   justify-content: ${(props) => justifyContentOptions[props.justifyContent]};
+  order: ${(props) => props.order};
   text-align: ${(props) => props.textAlign};
   justify-self: ${(props) => props.justifySelf};
   box-shadow: ${(props) =>
     props.isActive ? props.boxShadowActive : props.boxShadow};
   flex-wrap: ${(props) => props.flexWrap || "nowrap"};
+  flex-grow: ${(props) => props.flexGrow || "0"};
   align-content: ${(props) => props.alignContent};
   align: ${(props) => props.align};
   cursor: ${(props) => props.cursor};
@@ -187,6 +193,7 @@ export const Div = styled.div`
     border-bottom: ${(props) => props.borderBottomHover};
   }
   @media ${Devices.xxs} {
+    margin: ${(props) => props.margin_xxs};
   }
   @media ${Devices.xs} {
     padding: ${(props) => props.padding_xs};
@@ -194,10 +201,13 @@ export const Div = styled.div`
     flex-direction: ${(props) => props.flexDirection_xs};
     width: ${(props) => props.width_xs};
     max-width: ${(props) => props.maxWidth_xs};
+    height: ${(props) => props.height_xs};
+    order: ${(props) => props.order_xs};
     margin: ${(props) => props.margin_xs};
     display: ${(props) => props.display_xs};
     justify-content: ${(props) =>
       justifyContentOptions[props.justifyContent_xs]};
+    order: ${(props) => props.order_xs};
     border: ${(props) => props.border_xs};
     border-top: ${(props) => props.borderTop_xs};
     border-right: ${(props) => props.borderRight_xs};
@@ -210,10 +220,14 @@ export const Div = styled.div`
     justify-content: ${(props) =>
       justifyContentOptions[props.justifyContent_sm]};
     height: ${(props) => props.height_sm};
-    display: ${(props) => props.display};
+    position: ${(props) => props.position_sm};
+    margin: ${(props) => props.margin_sm};
+    display: ${(props) => props.display_sm};
     column-count: ${(props) => props.columnCount_sm};
     flex-direction: ${(props) => props.flexDirection_sm};
     display: ${(props) => props.display_sm};
+    order: ${(props) => props.order_sm};
+    margin: ${(props) => props.margin_sm};
   }
   @media ${Devices.tablet} {
     flex: ${(props) =>
@@ -230,12 +244,15 @@ export const Div = styled.div`
         ? `${(props.size_tablet / 12) * 100}%`
         : null};
     align-self: ${(props) => props.alignSelf_tablet};
+    order: ${(props) => props.order_tablet};
     gap: ${(props) => (props) => props.gap_tablet};
     column-count: ${(props) => props.columnCount_tablet};
     place-self: ${(props) => props.placeSelf_tablet};
     background: ${(props) => props.background_tablet};
     display: ${(props) => props.display_tablet};
+    position: ${(props) => props.position_tablet};
     flex-direction: ${(props) => props.flexDirection_tablet};
+    text-align: ${(props) => props.textAlign_tablet};
     align-content: ${(props) => props.alignContent_tablet};
     height: ${(props) => props.height_tablet};
     align-items: ${(props) => props.alignItems_tablet};
@@ -559,6 +576,7 @@ export const GridContainer = ({
   columns_tablet,
   margin,
   margin_tablet,
+  margin_xs,
   margin_md,
   padding,
   padding_tablet,
@@ -600,6 +618,7 @@ export const GridContainer = ({
       height_tablet={height_tablet}
       margin={margin}
       margin_tablet={margin_tablet}
+      margin_xs={margin_xs}
       margin_md={margin_md}
       padding={padding || "0 17px"}
       padding_tablet={padding_tablet || "0"}

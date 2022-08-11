@@ -40,6 +40,8 @@ export default ({ children }) => {
               slug
               visibility
               position
+              region
+              dialCode
             }
             button {
               apply_button_text

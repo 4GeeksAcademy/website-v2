@@ -1,7 +1,7 @@
 meta_info:
   slug: "europe-online-coding-bootcamp"
   title: "Online Coding Bootcamps in Europe"
-  position: 101
+  position: 1001
   description: "Discover here all the online coding bootcamps taught by 4geeks Academy. Sign up today!"
   image: ""
   keywords: "null"
@@ -71,6 +71,14 @@ images_box:
   images:
     - path: "../../../static/images/locations/remote.jpeg"
       alt: "Remote Coding Bootcamp"
+    - path: "../../../static/images/locations/madrid-3.png"
+      alt: "4Geeeks España lab"
+    - path: "../../../static/images/locations/madrid-2.png"
+      alt: "4Geeeks España lab"
+    - path: "../../../static/images/locations/miami-people.jpeg"
+      alt: "4Geeeks miami day"
+    - path: "../../../static/images/locations/miami-old2.jpg"
+      alt: "4Geeeks miami lab"
 
 ## HEADING SECTION
 

@@ -8,13 +8,14 @@ meta_info:
   redirects: [
   #  "/es/location/orlando-usa"
   ]
-  region: "america"
+  region: "usa-canada"
+  dialCode: "1"
 
 seo_title: "Bootcamp de Programación en Orlando"
 header:
   tagline: "4Geeks Academy en Orlando"
   paragraph: ""
-  image: "../../../static/images/locations/miami-home.png"
+  image: "../../../static/images/locations/orlando-header.png"
   alt: "4Geeks Academy modalidad online y presencial en Orlando, Florida"
 button_header:
   button_text: Ver Programas

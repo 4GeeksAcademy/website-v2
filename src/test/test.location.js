@@ -35,7 +35,7 @@ const locations_fields = [
   { key: "longitude", type: "string", mandatory: true },
 ];
 
-const regionLists = ["america", "europe"];
+const regionLists = ["latam", "usa-canada", "europe"];
 
 let allLocations = {};
 

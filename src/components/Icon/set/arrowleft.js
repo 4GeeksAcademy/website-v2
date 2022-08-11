@@ -4,8 +4,8 @@ export default (props) => (
   <svg
     onClick={props.onClick}
     style={props.style}
-    width="9"
-    height="15"
+    width={props.width || "9"}
+    height={props.height || "15"}
     viewBox="0 0 9 15"
     fill="none"
     xmlns="https://www.w3.org/2000/svg"
