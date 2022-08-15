@@ -28,12 +28,12 @@ sections:
     Since 2017 we have been growing really fast. We have graduated over 700 students across 6 different campus and more than 15 on going programs.
     "
     stats: 
-      - stat: "+ 700"
+      - stat: "+2500"
         content: "Graduates"
-      - stat: "2 Languages"
+      - stat: "2 Languages: Eng and Esp"
         content: "Syllabus and Programs"
-      - stat: "5 Cities"
-        content: "Miami, Madrid, Santiago de Chile, Caracas and more to come"
+      - stat: "+10 Cities"
+        content: "Miami, Orlando, Toronto, Madrid, Santiago de Chile, Caracas, Bogotá, Berlín, and Costa Rica, Uruguay and more to come"
     sub_sections:
       - title: ""
         content: "This report is meant to show our outcomes, achievements and what we consider needs to be improved. It's our story and our way to let you know that we are working harder every time in order to get better." 
@@ -43,17 +43,17 @@ sections:
             
   - title: "Student Facts"
     ref: "student_facts"
-    paragraph: "Here are the results of 4GA operations (excluding programs launched together with Miami Dade College) from March 2018 to March 2020.
+    paragraph: "Here are the results of 4GA operations (excluding programs launched together with Miami Dade College) from March 202 to March 2022.
 
     The programs included are the Full-Stack Software Development Program taught through Part-time and Full-Time methodologies.
     "
     stats: 
-      - stat: "210"
+      - stat: "325"
         content: "Students considered for
         the purpose of this Report"
-      - stat: "80%"
+      - stat: "90%"
         content: "Our students choose Part-time
-        Programs. Ony 20% pursue a
+        Programs. Ony 10% pursue a
         Full-Time program."
     sub_sections:
       - title: "PART - TIME"
@@ -73,7 +73,7 @@ sections:
     paragraph: "Our students normally need around 100 days after graduation in order to land a job in the field. We have had students landing a job even before finishing the program, or within the next 15 days from Pitch Day. The average is 94 days.
     "
     stats: 
-      - stat: "86%"
+      - stat: "84%"
         content: "Job Placement Ratio
         onsidering those with more than 90 days since graduation"
       - stat: "11%"
@@ -97,11 +97,11 @@ sections:
     ref: ""
     paragraph: ""
     stats: 
-      - stat: "72 Days"
+      - stat: "84 Days"
         content: "The average amount of time that our students needed to get their first job"
-      - stat: "$42K"
+      - stat: "$48K"
         content: "Average income of 4GA Graduates"
-      - stat: "22% Salary Increase"
+      - stat: "24% Salary Increase"
         content: "After taking the program at 4Geeks Academy."
     sub_sections:
       - title: "HOW TO FIND A JOB"
@@ -133,14 +133,14 @@ charts:
     - title: "gender"
       data:
         - [Task, Gender]
-        - [Female, "21"]
-        - [Male, "79"]
+        - [Female, "24"]
+        - [Male, "76"]
     - title: "nationality"
       data:
         - [Task, Nationality]
         - [North America, "60"]
         - [Asia, "1"]
-        - [Europe, "5"]
+        - [Europe, "25"]
         - [Lat.Am., "34"]
         
 download:

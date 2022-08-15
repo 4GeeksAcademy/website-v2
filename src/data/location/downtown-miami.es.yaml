@@ -28,9 +28,9 @@ button:
 custom_bar:
   active: false
   message: 'Potencia tu carrera a través del código. <a class="customBar-link" href="/es/aplica">Aplica</a> Próximas fechas: 06/27 Full-Stack | 07/11 ML + AI!'
-#   button:
-#     label: "Read More"
-#     path: "#" #string (can be inline path using #, relative path or absolute path)
+  button:
+    label: "Read More"
+    path: "#" #string (can be inline path using #, relative path or absolute path)
 
 badges:
   title: ""
