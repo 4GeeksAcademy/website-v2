@@ -1,24 +1,25 @@
 meta_info:
-  slug: "coding-bootcamp-munchen-germany"
-  title: "Coding Bootcamp in München, Germany"
+  slug: "coding-bootcamp-munich-germany"
+  title: "Coding Bootcamp in Munich, Germany"
   position: 101
-  description: "Discover all coding bootcamps taught by 4Geeks Academy at München, Germany. Sign up today!"
+  description: "Discover all coding bootcamps taught by 4Geeks Academy at Munich, Germany. Sign up today!"
   image: ""
   keywords: "null"
   redirects:
     [
-      "/location/munchen-germany",
-      "/munchen",
-      "/us/location/munchen-germany",
+      "/location/munich-germany",
+      "/us/coding-campus/coding-bootcamp-munchen-germany",
+      "/munich",
+      "/us/location/munich-germany",
     ]
   region: "europe"
   dialCode: "49"
 
-seo_title: "Coding Bootcamp München, Germany"
+seo_title: "Coding Bootcamp Munich, Germany"
 header:
-  tagline: "Learn To Code in München, Germany"
+  tagline: "Learn To Code in Munich, Germany"
   paragraph: "Learning online is hard: Lucky for you, we offer: unlimited support, amazing content and lifetime career support. \\n Yes, it really is available for the rest of your life."
-  image: "../../../static/images/locations/munchen-header.png"
+  image: "../../../static/images/locations/munich-header.png"
   alt: ""
 
 button_header:
@@ -50,13 +51,13 @@ Chosen as one of the top 35 coding bootcamps of the world and the top coding boo
 
 A community built for developers ."
 news:
-  title: "4Geeks Academy München in the news..."
+  title: "4Geeks Academy Munich in the news..."
 upcoming:
   no_dates_message: "There are currently no upcoming dates for this campus"
   actionMessage: "Let me know when dates are available"
 
 info_box:
-  heading: "Find us in München, Germany"
+  heading: "Find us in Munich, Germany"
   address: ""
   iframeMapUrl: ""
   contact_heading: "Contacts"
@@ -260,17 +261,17 @@ prices:
         button:
           button_text: "Apply another courses"
 
-active_campaign_location_slug: "munchen-germany"
-breathecode_location_slug: "munchen-germany"
+active_campaign_location_slug: "munich-germany"
+breathecode_location_slug: "munich-germany"
 gdpr_compliant: true # do we need to ask for permision?
 in_person_available: false # important to accept in-person applicants
 
 city: "Munich"
-name: "München, Germany"
+name: "Munich, Germany"
 phone: "+34 910 86 69 83"
 latitude: "48.145100"
 longitude: "11.575870"
-address: "" # Oskar-von-Miller-Ring 20, 80333 München, Alemania
+address: "" # Oskar-von-Miller-Ring 20, 80333 Munich, Alemania
 zip_code: ""
 state: "Munich"
 country: "Germany"
