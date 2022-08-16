@@ -191,6 +191,10 @@ financials:
   tagline: "Partners making education possible"
   sub_heading: "We are making a huge effort to make premium coding education accessible to everyone."
   images:
+    - name: "ASOTTTECH"
+      image: "../../../../static/images/partner/assotech.png"
+      featured: false
+      locations: ["madrid-spain", "barcelona-spain", "malaga-spain", "valencia-spain"]
     - name: "Quotanda"
       image: "../../../../static/images/quotanda-logo.png"
       featured: false
