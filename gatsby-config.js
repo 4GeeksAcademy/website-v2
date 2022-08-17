@@ -78,7 +78,7 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-load-script',
+      resolve: "gatsby-plugin-load-script",
       options: {
         src: `https://www.google.com/recaptcha/api.js?render=${process.env.GOOGLE_CAPTCHA_KEY}`,
       },
