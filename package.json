@@ -48,6 +48,7 @@
     "gatsby-plugin-gdpr-cookies": "^1.0.7",
     "gatsby-plugin-google-tagmanager": "^2.1.25",
     "gatsby-plugin-image": "^1.6.0",
+    "gatsby-plugin-load-script": "^1.1.0",
     "gatsby-plugin-loadable-components-ssr": "^2.1.0",
     "gatsby-plugin-manifest": "^2.2.14",
     "gatsby-plugin-meta-redirect": "^1.1.1",

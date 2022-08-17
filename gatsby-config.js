@@ -78,6 +78,12 @@ module.exports = {
       },
     },
     {
+      resolve: 'gatsby-plugin-load-script',
+      options: {
+        src: `https://www.google.com/recaptcha/api.js?render=${process.env.GOOGLE_CAPTCHA_KEY}`,
+      },
+    },
+    {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [

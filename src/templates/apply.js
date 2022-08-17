@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from "react";
+import React, { useState, useContext } from "react";
 import { navigate } from "gatsby";
 import { Div, GridContainer, Header, Grid } from "../components/Sections";
 import { H1, H3, Paragraph } from "../components/Heading";
@@ -72,7 +72,6 @@ const Apply = (props) => {
   ];
 
   const locationContext = session && session.location;
-
   const locations =
     session &&
     session.locations &&
