@@ -191,8 +191,10 @@ export const apply = async (data, session) => {
   //       token = result;
   //     });
   // });
-  const action = 'submit';
-  const token = await grecaptcha.execute(process.env.GOOGLE_CAPTCHA_KEY, { action });
+  const action = "submit";
+  const token = await grecaptcha.execute(process.env.GOOGLE_CAPTCHA_KEY, {
+    action,
+  });
   if (!session || !session.utm || !session.utm.utm_test)
     return await save_form(
       body,
@@ -200,7 +202,7 @@ export const apply = async (data, session) => {
       [automation.value || automation],
       session,
       token,
-      action,
+      action
     );
   return true;
 };

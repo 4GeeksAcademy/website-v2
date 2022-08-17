@@ -90,11 +90,7 @@ const Instructors = ({
         position="relative"
       >
         <Div display="flex" flexDirection="column" alignItems="center">
-          <H2
-            type="h2"
-            padding="0 0 35px 0"
-            margin="0 0 15px 0"
-          >
+          <H2 type="h2" padding="0 0 35px 0" margin="0 0 15px 0">
             {lang.header.title}
           </H2>
           <Paragraph>{lang.header.paragraph}</Paragraph>
