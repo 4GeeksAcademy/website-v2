@@ -8,6 +8,7 @@ Use the following code to include in between paragraphs a call to action to a pa
 
 AS you can see, you need to specify carefully the following properties:
 
+| Property              | Description                                                                   |
 | --------------------- | ----------------------------------------------------------------------------- |
 | button_text           | The label of the button, for example "Ver programa"                           |
 | button_link           | The relative (or absolute) URL we are taking the readers to                   |
