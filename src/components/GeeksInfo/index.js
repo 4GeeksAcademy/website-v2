@@ -75,7 +75,7 @@ const GeeksInfo = ({ lang }) => {
   return (
     <>
       <GridContainer>
-        <H2 margin_tablet="76px 0" margin="0 0 27px 0" margin_md="0 0 76px 0">
+        <H2 padding="50px 0 0 0" margin_tablet="76px 0" margin="0 0 27px 0" margin_md="0 0 76px 0">
           {content.heading}
         </H2>
       </GridContainer>

@@ -183,29 +183,24 @@ export const apply = async (data, session) => {
   const tag = body.tag || "website-lead";
   const automation = body.automation || "strong";
   //                                                                                      tag           automation
-  grecaptcha.ready(() => {
-    grecaptcha
-      .execute(process.env.GOOGLE_CAPTCHA_KEY, { action: "submit" })
-      .then(async (token) => {
-        console.log("EVALUATE TOKEN");
-        // const result = await fetch('https://www.google.com/recaptcha/api/siteverify',
-        //   {
-        //     method: 'POST',
-        //     body: JSON.stringify({
-        //       secret: process.env.GOOGLE_CAPTCHA_KEY,
-        //       response: token,
-        //     })
-        //   }
-        // );
-        console.log(token);
-      });
-  });
+  // grecaptcha.ready(() => {
+  //   grecaptcha
+  //     .execute(process.env.GOOGLE_CAPTCHA_KEY, { action: "submit" })
+  //     .then((result) => {
+  //       console.log(result);
+  //       token = result;
+  //     });
+  // });
+  const action = 'submit';
+  const token = await grecaptcha.execute(process.env.GOOGLE_CAPTCHA_KEY, { action });
   if (!session || !session.utm || !session.utm.utm_test)
     return await save_form(
       body,
       [tag.value || tag],
       [automation.value || automation],
-      session
+      session,
+      token,
+      action,
     );
   return true;
 };
