@@ -16,6 +16,11 @@ AS you can see, you need to specify carefully the following properties:
 | title                 | Short motivation to the user, what clicking on the button?                    |
 | text                  | Elaborate more on the incentives for the user to click on the box.            |
 
+## Example
+
+- This is an article with a CTA box in it: [4Geeks Academy llega a Venezuela](https://4geeksacademy.com/es/tendencias-y-tecnologia/4geeks-academy-llega-a-venezuela)
+- This is [the article markdown](https://github.com/4GeeksAcademy/website-v2/blob/master/src/data/blog/4geeks-academy-llega-a-venezuela.es.md).
+
 ## This is how the CTA box would look like:
 
 <img width="1416" alt="Screen Shot 2022-08-17 at 3 48 03 PM" src="https://user-images.githubusercontent.com/426452/185229419-a6e85996-e5d9-4ac7-a689-a77074265dca.png">
