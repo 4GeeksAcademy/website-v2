@@ -455,8 +455,8 @@ in_person_available: true # important to accept in-person applicants
 
 city: "Toronto"
 name: "Toronto, Canada"
-latitude: "28.538336"
-longitude: "-81.379234"
+latitude: "43.650688"
+longitude: "-79.391747"
 phone: "+1 (786) 416-6640"
 address: ""
 zip_code: ""
