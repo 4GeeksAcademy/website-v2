@@ -216,8 +216,8 @@ in_person_available: false # important to accept in-person applicants
 
 city: "Bogotá"
 name: "Colombia"
-latitude: "-34.098799"
-longitude: "-56.216998"
+latitude: "4.578820"
+longitude: "-74.250510"
 address: ""
 zip_code: ""
 state: ""
