@@ -215,9 +215,9 @@ in_person_available: false # important to accept in-person applicants
 
 city: "Buenos Aires"
 name: "Argentina"
-latitude: "-34.608535"
-longitude: "-58.435355"
-address: ""
+latitude: "-34.597080"
+longitude: "-58.376740"
+address: ""#Maipú 939, C1006 CABA, Argentina
 zip_code: ""
 state: ""
 country: "Argentina"
