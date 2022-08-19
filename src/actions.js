@@ -182,15 +182,6 @@ export const apply = async (data, session) => {
 
   const tag = body.tag || "website-lead";
   const automation = body.automation || "strong";
-  //                                                                                      tag           automation
-  // grecaptcha.ready(() => {
-  //   grecaptcha
-  //     .execute(process.env.GOOGLE_CAPTCHA_KEY, { action: "submit" })
-  //     .then((result) => {
-  //       console.log(result);
-  //       token = result;
-  //     });
-  // });
   const action = "submit";
   const token = await grecaptcha.execute(process.env.GOOGLE_CAPTCHA_KEY, {
     action,
