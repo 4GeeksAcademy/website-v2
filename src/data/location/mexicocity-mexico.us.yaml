@@ -216,9 +216,9 @@ in_person_available: false # important to accept in-person applicants
 
 city: "Mexico City"
 name: "Mexico"
-latitude: "21.295452"
-longitude: "-100.810747"
-address: ""
+latitude: "19.428560" 
+longitude: "-99.159580"
+address: ""#Hamburgo 26, Juárez, Cuauhtémoc, 06600 Ciudad de México, CDMX, Mexico
 zip_code: ""
 state: ""
 country: "Mexico"
