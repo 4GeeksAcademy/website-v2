@@ -95,11 +95,11 @@ details:
         - label: "Clases"
           content: "3 Clases semanales"
           icon: "book"
-        - label: "Certificados"
-          content: ""
+        - label: "Tamaño de la clase"
+          content: "12 personas máx"
           icon: "certificate"
         - label: "Requisitos"
-          content: "Tener experiencia en matemáticas, datos, estadística o programación."
+          content: "No se necesita experiencia previa"
           icon: "contract-checked"
   heading: DETALLES DEL PROGRAMA
   weeks: 15

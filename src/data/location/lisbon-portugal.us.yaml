@@ -1,25 +1,25 @@
 meta_info:
-  slug: "coding-bootcamp-lisboa-portugal"
-  title: "Coding Bootcamp in Lisboa, Portugal"
+  slug: "coding-bootcamp-lisbon-portugal"
+  title: "Coding Bootcamp in Lisbon, Portugal"
   position: 101
-  description: "Discover all coding bootcamps taught by 4Geeks Academy at Lisboa, Portugal. Sign up today!"
+  description: "Discover all coding bootcamps taught by 4Geeks Academy at Lisbon, Portugal. Sign up today!"
   image: ""
   keywords: "null"
   redirects:
     [
-      "/location/lisboa-portugal",
-      "/lisboa",
-      "/us/location/lisboa-portugal",
+      "/us/coding-campus/coding-bootcamp-lisbon-portugal",
+      "/lisbon",
+      "/us/location/lisbon-portugal",
     ]
   region: "europe"
   dialCode: "351"
 
 
-seo_title: "Coding Bootcamp Lisboa, Portugal"
+seo_title: "Coding Bootcamp Lisbon, Portugal"
 header:
-  tagline: "Learn To Code in Lisboa, Portugal"
+  tagline: "Learn To Code in Lisbon, Portugal"
   paragraph: "Learning online is hard: Lucky for you, we offer: unlimited support, amazing content and lifetime career support. \\n Yes, it really is available for the rest of your life."
-  image: "../../../static/images/locations/lisboa-portugal-header.png"
+  image: "../../../static/images/locations/lisbon-portugal-header.png"
   alt: ""
 
 button_header:
@@ -51,13 +51,13 @@ Chosen as one of the top 35 coding bootcamps of the world and the top coding boo
 
 A community built for developers ."
 news:
-  title: "4Geeks Academy Lisboa in the news..."
+  title: "4Geeks Academy Lisbon in the news..."
 upcoming:
   no_dates_message: "There are currently no upcoming dates for this campus"
   actionMessage: "Let me know when dates are available"
 
 info_box:
-  heading: "Find us in Lisboa, Portugal"
+  heading: "Find us in Lisbon, Portugal"
   address: ""
   iframeMapUrl: ""
   contact_heading: "Contacts"
@@ -261,19 +261,19 @@ prices:
         button:
           button_text: "Apply another courses"
 
-active_campaign_location_slug: "lisboa-portugal"
-breathecode_location_slug: "lisboa-portugal"
+active_campaign_location_slug: "lisbon-portugal"
+breathecode_location_slug: "lisbon-portugal"
 gdpr_compliant: true # do we need to ask for permision?
 in_person_available: false # important to accept in-person applicants
 
-city: "Lisboa"
-name: "Lisboa, Portugal"
+city: "Lisbon"
+name: "Lisbon, Portugal"
 phone: "+34 910 86 69 83"
 latitude: "38.725750"
 longitude: "-9.149020"
-address: "" # Praça Marquês de Pombal 14, 1250-162 Lisboa, Portugal
+address: "" # Praça Marquês de Pombal 14, 1250-162 Lisbon, Portugal
 zip_code: ""
-state: "Lisboa"
+state: "Lisbon"
 country: "Portugal"
 
 socials:
@@ -295,5 +295,5 @@ courses:
   - "Part-Time"
 flag_icon: ""
 should_know: ""
-value: "Lisboa"
+value: "Lisbon"
 defaultLanguage: "us" # All lead marketing communications will arrive on this language

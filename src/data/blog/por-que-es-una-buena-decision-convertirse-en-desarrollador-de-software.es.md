@@ -28,8 +28,6 @@ Básicamente, un desarrollador de software es un profesional que crea sistemas d
 - Consultar con clientes, ingenieros, especialistas en seguridad y otras partes interesadas.
 - Presentar nuevas funciones a las partes interesadas y a los clientes internos.
  
-Fuente: Coursera
-
 
 Is it a good choice to become a Software Developer in 2022?
 
@@ -85,7 +83,6 @@ Si aún tiene dudas, resumimos aquí un perfil de habilidades generales que requ
 - IDEs
 - Bases de datos
 
-Fuente: LinkedIn
 
 Así que tengo dos preguntas para ti, ¿te apasiona resolver problemas, el pensamiento lógico y la tecnología? ¿Está buscando un nuevo comienzo en tu carrera o una actualización de tu carrera actual?
 
