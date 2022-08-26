@@ -156,9 +156,7 @@ const PricesAndPayments = (props) => {
               l.node.meta_info.visibility === "visible") &&
             !l.node.meta_info.slug.includes("online")
         )
-        .sort((a, b) =>
-          a.node.name > b.node.name ? 1 : -1
-        )
+        .sort((a, b) => (a.node.name > b.node.name ? 1 : -1))
     );
     if (session && session.location) {
       const _loc = props.locations.find(
@@ -252,13 +250,13 @@ const PricesAndPayments = (props) => {
                   onChange={(opt) =>
                     setCurrentLocation(
                       locations.find(
-                        (l) => l.node.active_campaign_location_slug === opt.value
+                        (l) =>
+                          l.node.active_campaign_location_slug === opt.value
                       ).node
                     )
                   }
                 />
               </Div>
-              
             )
             // </GridContainer>
           }
