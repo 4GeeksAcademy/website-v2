@@ -20,7 +20,7 @@
   ],
   "pre-commit": [
     "test",
-    "node ./src/utils/makePagesDictionary.js && node ./src/utils/makePostsDictionary.js && node ./src/utils/makeRedirectsDictionary.js",
+    "makeDictionaries",
     "format"
   ],
   "scripts": {
@@ -29,6 +29,7 @@
     "start:storybook": "start-storybook -p 9000 -c .storybook",
     "build": "npm run test && gatsby build",
     "build:gatsby": "gatsby build",
+    "makeDictionaries": "node ./src/utils/makePagesDictionary.js && node ./src/utils/makePostsDictionary.js && node ./src/utils/makeRedirectsDictionary.js",
     "serve": "gatsby serve -o -p 8080",
     "clean": "gatsby clean",
     "cy:open": "cypress open",
