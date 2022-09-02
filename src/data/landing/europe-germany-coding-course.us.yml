@@ -1,5 +1,5 @@
 meta_info:
-  slug: europe-portugal-coding-course # <--- URL 4geeksacademy.com/us/landing/example
+  slug: europe-germany-coding-course # <--- URL 4geeksacademy.com/us/landing/example
 
   # This will show on social media when shared
   title: "Coding Course On-line and In-person, learn to code and get a better professional career"
@@ -9,7 +9,7 @@ meta_info:
 
   template: "landing_a" # <--- choose your landing template
   redirects: # <--- URL redirections to avoid 404 errors
-    ["/landing/europe-portugal-coding-course"]
+    ["/landing/europe-germany-coding-course"]
 
   # Set a particular course or location to the landing page
   # this UTM fields will be also included in the CRM contact
