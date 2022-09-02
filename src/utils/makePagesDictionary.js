@@ -6,10 +6,16 @@ let toKeyValue = (array) => {
   return Object.fromEntries(array);
 };
 
+const sortFunction = (a, b) => {
+  if (a[0] === b[0]) {
+    return 0;
+  }
+  else {
+    return (a[0] < b[0]) ? -1 : 1;
+  }
+}
+
 const onCreateLangSwitcherData = () => {
-  let arraySlug = [];
-  let langES = [];
-  let langUS = [];
   let All_dictionary = [];
   let slugType = {
     location: "coding-campus",
@@ -18,6 +24,8 @@ const onCreateLangSwitcherData = () => {
 
   // ----------------- PAGE DICTIONARY -----------------
   walk(`${__dirname}/../data/page`, (err, files) => {
+    let page_langES = [];
+    let page_langUS = [];
     let page_ES_US = [];
     let page_US_ES = [];
     if (err) fail("Error reding the Page files: ", err);
@@ -32,23 +40,25 @@ const onCreateLangSwitcherData = () => {
       const doc = loadYML(_path);
       const lang = doc.lang;
       const slug = doc.yaml.meta_info.slug;
-      arraySlug.push([`/${lang}/${slug}`]);
-    }
-    for (let l = 0; l < arraySlug.length; l++) {
-      if (l % 2 == 0) {
-        langES.push(arraySlug[l]);
-      }
-      if (l % 2 == 1) {
-        langUS.push(arraySlug[l]);
-      }
-    }
-    for (let z = 0; z < langES.length; z++) {
-      page_ES_US.push(langES[z].concat(langUS[z]));
-      page_US_ES.push(langUS[z].concat(langES[z]));
+      if (lang === 'es') page_langES.push([_path,`/${lang}/${slug}`]);
+      else page_langUS.push([_path,`/${lang}/${slug}`]);
     }
 
-    Object.fromEntries(page_ES_US);
-    Object.fromEntries(page_US_ES);
+    page_langES.sort(sortFunction);
+    page_langUS.sort(sortFunction);
+
+    page_langES = page_langES.map((val) => {
+      return val.slice(1);
+    });
+
+    page_langUS = page_langUS.map((val) => {
+      return val.slice(1);
+    });
+
+    for (let z = 0; z < page_langES.length; z++) {
+      page_ES_US.push(page_langES[z].concat(page_langUS[z]));
+      page_US_ES.push(page_langUS[z].concat(page_langES[z]));
+    }
 
     page_ES_US.push(...page_US_ES);
 
@@ -56,35 +66,40 @@ const onCreateLangSwitcherData = () => {
     walk(`${__dirname}/../data/course`, (err, files) => {
       let course_ES_US = [];
       let course_US_ES = [];
+      let course_langES = [];
+      let course_langUS = [];
       if (err) fail("Error reding the COURSE files: ", err);
       for (let i = 0; i < files.length; i++) {
         const _path = files[i];
         const doc = loadYML(_path);
         const lang = doc.lang;
         const slug = doc.yaml.meta_info.slug;
-        arraySlug.push([`/${lang}/${slugType["course"]}/${slug}`]);
-      }
-      for (let l = 0; l < arraySlug.length; l++) {
-        if (l % 2 == 0) {
-          langES.push(arraySlug[l]);
-        }
-        if (l % 2 == 1) {
-          langUS.push(arraySlug[l]);
-        }
+        if (lang === 'es') course_langES.push([_path,`/${lang}/${slugType["course"]}/${slug}`]);
+        else course_langUS.push([_path,`/${lang}/${slugType["course"]}/${slug}`]);
       }
 
-      for (let z = 0; z < langES.length; z++) {
-        course_ES_US.push(langES[z].concat(langUS[z]));
-        course_US_ES.push(langUS[z].concat(langES[z]));
-      }
+      course_langES.sort(sortFunction);
+      course_langUS.sort(sortFunction);
 
-      Object.fromEntries(course_ES_US);
-      Object.fromEntries(course_US_ES);
+      course_langES = course_langES.map((val) => {
+        return val.slice(1);
+      });
+
+      course_langUS = course_langUS.map((val) => {
+        return val.slice(1);
+      });
+
+      for (let z = 0; z < course_langES.length; z++) {
+        course_ES_US.push(course_langES[z].concat(course_langUS[z]));
+        course_US_ES.push(course_langUS[z].concat(course_langES[z]));
+      }
 
       course_ES_US.push(...course_US_ES);
 
       // ----------------- LOCATION DICTIONARY -----------------
       walk(`${__dirname}/../data/location`, (err, files) => {
+        let Location_langES = [];
+        let Location_langUS = [];
         let Location_ES_US = [];
         let Location_US_ES = [];
         if (err) fail("Error reding the location files: ", err);
@@ -93,26 +108,32 @@ const onCreateLangSwitcherData = () => {
           const doc = loadYML(_path);
           const lang = doc.lang;
           const slug = doc.yaml.meta_info.slug;
-          arraySlug.push([`/${lang}/${slugType["location"]}/${slug}`]);
-        }
-        for (let l = 0; l < arraySlug.length; l++) {
-          if (l % 2 == 0) {
-            langES.push(arraySlug[l]);
-          }
-          if (l % 2 == 1) {
-            langUS.push(arraySlug[l]);
-          }
+          if (lang === 'es') Location_langES.push([_path,`/${lang}/${slugType["location"]}/${slug}`]);
+          else Location_langUS.push([_path,`/${lang}/${slugType["location"]}/${slug}`]);
         }
 
-        for (let z = 0; z < langES.length; z++) {
-          Location_ES_US.push(langES[z].concat(langUS[z]));
-          Location_US_ES.push(langUS[z].concat(langES[z]));
+        Location_langES.sort(sortFunction);
+        Location_langUS.sort(sortFunction);
+
+        Location_langES = Location_langES.map((val) => {
+          return val.slice(1);
+        });
+
+        Location_langUS = Location_langUS.map((val) => {
+          return val.slice(1);
+        });
+
+        for (let z = 0; z < Location_langES.length; z++) {
+          Location_ES_US.push(Location_langES[z].concat(Location_langUS[z]));
+          Location_US_ES.push(Location_langUS[z].concat(Location_langES[z]));
         }
 
-        Object.fromEntries(Location_ES_US);
-        Object.fromEntries(Location_US_ES);
-
-        Location_ES_US.push(...Location_US_ES);
+        Location_ES_US = [
+          ...Location_ES_US,
+          ...Location_US_ES,
+          ...course_ES_US,
+          ...page_ES_US,
+        ];
         All_dictionary.push(toKeyValue(Location_ES_US));
 
         file.yml = All_dictionary;
