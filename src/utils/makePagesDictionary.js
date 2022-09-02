@@ -9,11 +9,10 @@ let toKeyValue = (array) => {
 const sortFunction = (a, b) => {
   if (a[0] === b[0]) {
     return 0;
+  } else {
+    return a[0] < b[0] ? -1 : 1;
   }
-  else {
-    return (a[0] < b[0]) ? -1 : 1;
-  }
-}
+};
 
 const onCreateLangSwitcherData = () => {
   let All_dictionary = [];
@@ -40,8 +39,8 @@ const onCreateLangSwitcherData = () => {
       const doc = loadYML(_path);
       const lang = doc.lang;
       const slug = doc.yaml.meta_info.slug;
-      if (lang === 'es') page_langES.push([_path,`/${lang}/${slug}`]);
-      else page_langUS.push([_path,`/${lang}/${slug}`]);
+      if (lang === "es") page_langES.push([_path, `/${lang}/${slug}`]);
+      else page_langUS.push([_path, `/${lang}/${slug}`]);
     }
 
     page_langES.sort(sortFunction);
@@ -74,8 +73,10 @@ const onCreateLangSwitcherData = () => {
         const doc = loadYML(_path);
         const lang = doc.lang;
         const slug = doc.yaml.meta_info.slug;
-        if (lang === 'es') course_langES.push([_path,`/${lang}/${slugType["course"]}/${slug}`]);
-        else course_langUS.push([_path,`/${lang}/${slugType["course"]}/${slug}`]);
+        if (lang === "es")
+          course_langES.push([_path, `/${lang}/${slugType["course"]}/${slug}`]);
+        else
+          course_langUS.push([_path, `/${lang}/${slugType["course"]}/${slug}`]);
       }
 
       course_langES.sort(sortFunction);
@@ -108,8 +109,16 @@ const onCreateLangSwitcherData = () => {
           const doc = loadYML(_path);
           const lang = doc.lang;
           const slug = doc.yaml.meta_info.slug;
-          if (lang === 'es') Location_langES.push([_path,`/${lang}/${slugType["location"]}/${slug}`]);
-          else Location_langUS.push([_path,`/${lang}/${slugType["location"]}/${slug}`]);
+          if (lang === "es")
+            Location_langES.push([
+              _path,
+              `/${lang}/${slugType["location"]}/${slug}`,
+            ]);
+          else
+            Location_langUS.push([
+              _path,
+              `/${lang}/${slugType["location"]}/${slug}`,
+            ]);
         }
 
         Location_langES.sort(sortFunction);
