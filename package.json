@@ -20,14 +20,16 @@
   ],
   "pre-commit": [
     "test",
+    "makeDictionaries",
     "format"
   ],
   "scripts": {
     "start": "gatsby develop -H 0.0.0.0 -o",
     "test": "node --experimental-modules ./src/test/test.yml.js && node ./src/test/test.seo.js && node ./src/test/test.blog.js && node ./src/test/test.course.js && node ./src/test/test.landing.js && node ./src/test/test.location.js && node ./src/test/test.downloadable.js",
     "start:storybook": "start-storybook -p 9000 -c .storybook",
-    "build": "npm run test && node ./src/utils/makePagesDictionary.js && node ./src/utils/makePostsDictionary.js && node ./src/utils/makeRedirectsDictionary.js && gatsby build",
+    "build": "npm run test && gatsby build",
     "build:gatsby": "gatsby build",
+    "makeDictionaries": "node ./src/utils/makePagesDictionary.js && node ./src/utils/makePostsDictionary.js && node ./src/utils/makeRedirectsDictionary.js",
     "serve": "gatsby serve -o -p 8080",
     "clean": "gatsby clean",
     "cy:open": "cypress open",
@@ -48,6 +50,7 @@
     "gatsby-plugin-gdpr-cookies": "^1.0.7",
     "gatsby-plugin-google-tagmanager": "^2.1.25",
     "gatsby-plugin-image": "^1.6.0",
+    "gatsby-plugin-load-script": "^1.1.0",
     "gatsby-plugin-loadable-components-ssr": "^2.1.0",
     "gatsby-plugin-manifest": "^2.2.14",
     "gatsby-plugin-meta-redirect": "^1.1.1",

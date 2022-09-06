@@ -5,7 +5,7 @@ import Icon from "../Icon";
 import { Link } from "../Styling/index";
 import { GridContainer, Grid, Div } from "../Sections";
 import Card from "../Card";
-import Select from "../Select";
+import Select, { SelectRaw } from "../Select";
 import { H2, H3, H4, H5, Paragraph, Title } from "../Heading";
 import { Button, Colors, Circle, RoundImage } from "../Styling";
 import { SessionContext } from "../../session";
@@ -156,9 +156,7 @@ const PricesAndPayments = (props) => {
               l.node.meta_info.visibility === "visible") &&
             !l.node.meta_info.slug.includes("online")
         )
-        .sort((a, b) =>
-          a.node.meta_info.position > b.node.meta_info.position ? 1 : -1
-        )
+        .sort((a, b) => (a.node.name > b.node.name ? 1 : -1))
     );
     if (session && session.location) {
       const _loc = props.locations.find(
@@ -237,29 +235,28 @@ const PricesAndPayments = (props) => {
           {
             course && (
               // <GridContainer>
-              <Select
-                top="40px"
-                left="20px"
-                width="fit-content"
-                options={locations.map((l) => ({
-                  label: l.node.name,
-                  value: l.node.active_campaign_location_slug,
-                }))}
-                openLabel={
-                  !currentLocation ? "Pick a campus" : currentLocation.name
-                }
-                closeLabel={
-                  !currentLocation ? "Pick a campus" : currentLocation.name
-                }
-                onSelect={(opt) =>
-                  setCurrentLocation(
-                    locations.find(
-                      (l) => l.node.active_campaign_location_slug === opt.value
-                    ).node
-                  )
-                }
-                topLabel={info.top_label}
-              />
+              <Div width="320px">
+                <SelectRaw
+                  bgColor={Colors.white}
+                  options={locations.map((l) => ({
+                    label: l.node.name,
+                    value: l.node.active_campaign_location_slug,
+                  }))}
+                  placeholder={info.top_label}
+                  value={{
+                    label: currentLocation?.name,
+                    value: currentLocation?.active_campaign_location_slug,
+                  }}
+                  onChange={(opt) =>
+                    setCurrentLocation(
+                      locations.find(
+                        (l) =>
+                          l.node.active_campaign_location_slug === opt.value
+                      ).node
+                    )
+                  }
+                />
+              </Div>
             )
             // </GridContainer>
           }
