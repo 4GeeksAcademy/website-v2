@@ -17,7 +17,7 @@ JavaScript sigue siendo el lenguaje más usado por programadores a nivel global.
 
 Los frameworks son la mejor herramienta para agilizar la escritura eficiente del código en JavaScript y otros lenguajes. Para ahorrar tiempo y mejorar la calidad del código es crucial tener a la mano módulos de código pre-escritos, plantillas de componentes, bloques estandarizados, entre otros elementos.
 
-Para los novatos de la programación son recomendables los bootcamps de alto calibre como el de 4Geeks Academy  que certifica a sus estudiantes como programadores en 4 meses, los prepara para entrevistas de trabajo y además los ayudan a conseguir empleos como los que se ofrecen en Talent Tech para desarrolladores de software a través de TECLA dándoles acceso a oportunidades laborales donde pueden poner en práctica sus conocimientos en empresas que buscan nuevos talentos para trabajar en USA y Canadá.
+Para los novatos de la programación son recomendables los bootcamps de alto calibre como el de [4Geeks Academy](https://4geeksacademy.com/es/coding-campus/bootcamp-programacion-santiago)  que certifica a sus estudiantes como programadores en 4 meses, los prepara para entrevistas de trabajo y además los ayudan a conseguir empleos como los que se ofrecen en Talent Tech para desarrolladores de software a través de [TECLA](https://www.tecla.io/talent) dándoles acceso a oportunidades laborales donde pueden poner en práctica sus conocimientos en empresas que buscan nuevos talentos para trabajar en USA y Canadá.
 
 
 ¿Cuáles son los mejores frameworks para frontend que puede usar cualquier desarrollador profesional al momento de iniciar un proyecto?
