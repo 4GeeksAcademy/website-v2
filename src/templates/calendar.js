@@ -116,7 +116,9 @@ const Calendar = (props) => {
       }
       setData((oldData) => {
         console.log(oldData);
-        let defaultValue = oldData.cohorts.catalog.find((opt) => opt.value?.includes('miami'));
+        let defaultValue = oldData.cohorts.catalog.find((opt) =>
+          opt.value?.includes("miami")
+        );
         setAcademy(defaultValue);
         return {
           events: { catalog: _types, all: events, filtered: events },
@@ -125,7 +127,7 @@ const Calendar = (props) => {
             all: cohorts,
             filtered: cohorts,
           },
-        }
+        };
       });
     };
     getData();
@@ -354,43 +356,46 @@ const Calendar = (props) => {
             {/* <Button outline width="100%" width_md="314px" color={Colors.black} margin="19px 0 10px 0" textColor="white">APPLY NOW</Button> */}
             <Div width="320px">
               <SelectRaw
-              bgColor={Colors.white}
-              options={datas.cohorts.catalog.sort((a, b) => {
-                if ( a.label < b.label ){
-                  return -1;
+                bgColor={Colors.white}
+                options={datas.cohorts.catalog.sort((a, b) => {
+                  if (a.label < b.label) {
+                    return -1;
+                  }
+                  if (a.label > b.label) {
+                    return 1;
+                  }
+                  return 0;
+                })}
+                placeholder={
+                  pageContext.lang == "us"
+                    ? "Select one academy"
+                    : "Escoge una academia"
                 }
-                if ( a.label > b.label ){
-                  return 1;
-                }
-                return 0;
-              })}
-              placeholder={pageContext.lang == "us" ? "Select one academy" : "Escoge una academia"}
-              value={academy}
-              onChange={(opt) => {
-                setAcademy(opt);
+                value={academy}
+                onChange={(opt) => {
+                  setAcademy(opt);
 
-                let filtered =
-                  opt.label !== "All Locations"
-                    ? datas[filterType.value].all.filter(
-                        (elm) => elm.academy.slug === opt.value
-                      )
-                    : datas[filterType.value].all;
-                // if no cohorts on location, try to include online
-                if (filtered.length === 0)
-                  filtered = datas[filterType.value].all.filter(
-                    (elm) => elm.academy.slug === "online"
-                  );
+                  let filtered =
+                    opt.label !== "All Locations"
+                      ? datas[filterType.value].all.filter(
+                          (elm) => elm.academy.slug === opt.value
+                        )
+                      : datas[filterType.value].all;
+                  // if no cohorts on location, try to include online
+                  if (filtered.length === 0)
+                    filtered = datas[filterType.value].all.filter(
+                      (elm) => elm.academy.slug === "online"
+                    );
 
-                setData({
-                  ...datas,
-                  [filterType.value]: {
-                    ...datas[filterType.value],
-                    filtered,
-                  },
-                });
-              }
-              }
-            />
+                  setData({
+                    ...datas,
+                    [filterType.value]: {
+                      ...datas[filterType.value],
+                      filtered,
+                    },
+                  });
+                }}
+              />
             </Div>
           </Div>
           {Array.isArray(datas.cohorts.filtered) &&

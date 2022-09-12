@@ -116,13 +116,12 @@ const FinancialFilter = (props) => {
 
   useEffect(() => {
     setLocations(
-      props.locations
-        .filter(
-          (l) =>
-            (l.node.meta_info.visibility !== undefined ||
-              l.node.meta_info.visibility === "visible") &&
-            !l.node.meta_info.slug.includes("online")
-        )
+      props.locations.filter(
+        (l) =>
+          (l.node.meta_info.visibility !== undefined ||
+            l.node.meta_info.visibility === "visible") &&
+          !l.node.meta_info.slug.includes("online")
+      )
     );
     if (session && session.location) {
       const _loc = props.locations.find(
@@ -201,20 +200,21 @@ const FinancialFilter = (props) => {
             />
           )}
           {!props.course && (
-
             <SelectRaw
-              options={locations.map((l) => ({
-                label: l.node.name,
-                value: l.node.active_campaign_location_slug,
-              })).sort((a, b) => {
-                if ( a.label < b.label ){
-                  return -1;
-                }
-                if ( a.label > b.label ){
-                  return 1;
-                }
-                return 0;
-              })}
+              options={locations
+                .map((l) => ({
+                  label: l.node.name,
+                  value: l.node.active_campaign_location_slug,
+                }))
+                .sort((a, b) => {
+                  if (a.label < b.label) {
+                    return -1;
+                  }
+                  if (a.label > b.label) {
+                    return 1;
+                  }
+                  return 0;
+                })}
               placeholder={props.campus}
               value={{
                 label: currentLocation.name,
@@ -225,7 +225,8 @@ const FinancialFilter = (props) => {
                   locations.find(
                     (l) => l.node.active_campaign_location_slug === opt.value
                   ).node
-              )}
+                )
+              }
             />
           )}
         </Grid>
