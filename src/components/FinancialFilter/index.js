@@ -2,7 +2,7 @@ import React, { useState, useContext, useEffect } from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import { Link } from "../Styling/index";
 import { GridContainer, Grid, Div } from "../Sections";
-import Select from "../SelectV2";
+import { SelectRaw } from "../Select";
 import { H2, H3, Paragraph } from "../Heading";
 import { Button, Colors } from "../Styling";
 import { SessionContext } from "../../session";
@@ -116,16 +116,12 @@ const FinancialFilter = (props) => {
 
   useEffect(() => {
     setLocations(
-      props.locations
-        .filter(
-          (l) =>
-            (l.node.meta_info.visibility !== undefined ||
-              l.node.meta_info.visibility === "visible") &&
-            !l.node.meta_info.slug.includes("online")
-        )
-        .sort((a, b) =>
-          a.node.meta_info.position > b.node.meta_info.position ? 1 : -1
-        )
+      props.locations.filter(
+        (l) =>
+          (l.node.meta_info.visibility !== undefined ||
+            l.node.meta_info.visibility === "visible") &&
+          !l.node.meta_info.slug.includes("online")
+      )
     );
     if (session && session.location) {
       const _loc = props.locations.find(
@@ -188,63 +184,49 @@ const FinancialFilter = (props) => {
           alignItems="center"
         >
           {!props.course && (
-            <Select
-              margin="0 20px 0 10px"
-              textAlign="left"
-              label={props.program}
-              top="40px"
-              left="20px"
-              width="fit-content"
+            <SelectRaw
               options={courseArray}
-              openLabel={course ? course.label : props.programClosedLabel}
-              closeLabel={course ? course.label : props.programClosedLabel}
-              onSelect={(opt) => setCourse(opt)}
+              placeholder={props.program}
+              value={course}
+              onChange={(opt) => setCourse(opt)}
             />
           )}
           {props.modality && (
-            <Select
-              margin="0 20px 0 10px"
-              textAlign="left"
-              label={props.modality}
-              top="40px"
-              left="20px"
-              width="fit-content"
+            <SelectRaw
               options={modalityArray}
-              openLabel={modality ? modality.label : props.modalityClosedLabel}
-              closeLabel={modality ? modality.label : props.modalityClosedLabel}
-              onSelect={(opt) => setModality(opt)}
+              placeholder={props.modality}
+              value={modality}
+              onChange={(opt) => setModality(opt)}
             />
           )}
           {!props.course && (
-            <Select
-              margin="0 20px 0 10px"
-              textAlign="left"
-              label={props.campus}
-              top="40px"
-              left="20px"
-              width="fit-content"
-              options={locations.map((l) => ({
-                label: l.node.name,
-                value: l.node.active_campaign_location_slug,
-              }))}
-              openLabel={
-                !currentLocation
-                  ? "Pick a city"
-                  : currentLocation.city + ". " + currentLocation.country
-              }
-              closeLabel={
-                !currentLocation
-                  ? props.campusClosedLabel
-                  : currentLocation.city + ". " + currentLocation.country
-              }
-              onSelect={(opt) =>
+            <SelectRaw
+              options={locations
+                .map((l) => ({
+                  label: l.node.name,
+                  value: l.node.active_campaign_location_slug,
+                }))
+                .sort((a, b) => {
+                  if (a.label < b.label) {
+                    return -1;
+                  }
+                  if (a.label > b.label) {
+                    return 1;
+                  }
+                  return 0;
+                })}
+              placeholder={props.campus}
+              value={{
+                label: currentLocation.name,
+                value: currentLocation.active_campaign_location_slug,
+              }}
+              onChange={(opt) =>
                 setCurrentLocation(
                   locations.find(
                     (l) => l.node.active_campaign_location_slug === opt.value
                   ).node
                 )
               }
-              topLabel={info.top_label}
             />
           )}
         </Grid>
