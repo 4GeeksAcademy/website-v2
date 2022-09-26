@@ -21,7 +21,9 @@ import Fragment from "../Fragment";
 const JobInfo = () => {
   const data = useStaticQuery(graphql`
     query myNewJobsQuery {
-      allJobYaml {
+      allJobYaml (
+        filter: { meta_info: { open: { ne: false } }  }
+      ){
         edges {
           node {
             banner_heading
