@@ -12,7 +12,7 @@ staff:
     linkdin: "https://www.linkedin.com/in/alesanchezr/"
     twitter: "https://twitter.com/alesanchezr"
     website: "https://alesanchezr.com"
-    image: "../../../../static/images/staff/alejandro.png"
+    image: "https://breathecode.herokuapp.com/v1/media/file/alejandro-jpg?width=400"
     age: 34
     interests:
       - Soccer
