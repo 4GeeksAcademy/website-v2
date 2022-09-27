@@ -155,6 +155,8 @@ export const initSession = async (locationsArray, storedSession, seed = {}) => {
       );
       let data = (await response.json()) || null;
       if (data && data.location) {
+        console.log('data.location');
+        console.log(data.location);
         latitude = data.location.lat;
         longitude = data.location.lng;
         location = getClosestLoc(
