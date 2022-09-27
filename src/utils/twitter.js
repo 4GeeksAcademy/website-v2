@@ -55,5 +55,5 @@ module.exports = {
     name: "Patricia Nouel",
     avatar: "/images/staff/patricia-nouel.jpg",
     username: "Pattynouel",
-  }
+  },
 };
