@@ -127,19 +127,19 @@ export const initSession = async (locationsArray, storedSession, seed = {}) => {
   // remove undefineds from the seed utm's to avoid overriding the originals with undefined
   Object.keys(utm).forEach((key) => utm[key] === undefined && delete utm[key]);
 
-  if (location) {
-    location = locations.find((l) => l.breathecode_location_slug === location);
-    if (!location) location = null;
-    console.log("Hardcoded location", location);
-  } else if (storedSession && storedSession.location != null) {
-    location = locations.find(
-      (l) =>
-        l.breathecode_location_slug ===
-        storedSession.location.breathecode_location_slug
-    );
-    latitude = location.latitude;
-    longitude = location.longitude;
-  }
+  // if (location) {
+  //   location = locations.find((l) => l.breathecode_location_slug === location);
+  //   if (!location) location = null;
+  //   console.log("Hardcoded location", location);
+  // } else if (storedSession && storedSession.location != null) {
+  //   location = locations.find(
+  //     (l) =>
+  //       l.breathecode_location_slug ===
+  //       storedSession.location.breathecode_location_slug
+  //   );
+  //   latitude = location.latitude;
+  //   longitude = location.longitude;
+  // }
 
   if (location === null) {
     console.log("Calculating nearest location because it was null...");
@@ -153,10 +153,22 @@ export const initSession = async (locationsArray, storedSession, seed = {}) => {
           method: "POST",
         }
       );
+
       let data = (await response.json()) || null;
+      console.log(data);
       if (data && data.location) {
         console.log('data.location');
         console.log(data.location);
+        const responseGC = await fetch(
+          `https://maps.googleapis.com/maps/api/geocode/json?latlng=${data.location.lat},${data.location.lng}&key=${GOOGLE_KEY}`,
+          {
+            method: "POST",
+          }
+        );
+
+        let dataGC = (await responseGC.json()) || null;
+        console.log('dataGC');
+        console.log(dataGC);
         latitude = data.location.lat;
         longitude = data.location.lng;
         location = getClosestLoc(
