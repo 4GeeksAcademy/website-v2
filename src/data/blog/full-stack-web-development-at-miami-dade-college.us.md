@@ -9,7 +9,7 @@ image: "https://4GeeksAcademy.com/wp-content/uploads/2017/08/Miami-Dade.jpg"
 image_alt: ""
 cluster: "full-stack-developer"
 status: "published"
-featured: "false"
+featured: false
 
 ---
 

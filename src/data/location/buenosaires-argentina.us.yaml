@@ -6,8 +6,10 @@ meta_info:
   image: ""
   keywords: ""
   # it will not show up on the applications forms
-  unlisted: false
+  visibility: "visible"
   redirects: ["/us/argentina", "/argentina", "/us/coding-campus/coding-bootcamp-argentina"]
+  region: "latam"
+  dialCode: "54"
 
 seo_title: "Coding Bootcamp Argentina"
 header:
@@ -25,6 +27,14 @@ button:
   syllabus_submit_text: "DOWNLOAD"
   apply_button_link: "/apply"
   cohort_more_details_text: "DETAILS"
+
+custom_bar:
+  active: true
+  message: Become a fullstack developer, and get lifetime mentoring starting at $150 per month
+  # button: 
+  #  label: "Read More"
+  #  path: "#" #string (can be inline path using #, relative path or absolute path)
+
 badges:
   title: ""
   paragraph: "
@@ -41,14 +51,17 @@ news:
   title: "4Geeks Academy Argentina in the news..."
 upcoming:
   no_dates_message: "There are currently no upcoming dates for this campus"
+  actionMessage: "Let me know when dates are available"
 
 info_box:
   heading: "Find us in Argentina"
   address: "Only remotely in Argentina"
   iframeMapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1126.521243034489!2d-80.20142868794088!3d25.759937884725943!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b153865e526d%3A0xf884fb3f86a9c7db!2s4Geeks%20Academy!5e0!3m2!1ses-419!2scl!4v1621010581768!5m2!1ses-419!2scl"
   contact_heading: "Contacts"
-  phone: "(506) 8692 8372"
-  email: "info@4GeeksAcademy.com"
+  phone: Llámanos +57 300 7282898
+  whatsapp: +57 300 7282898
+  whatsapp_link: "https://wa.me/+573007282898"
+  email: latam@4GeeksAcademy.com
 
 images_box:
   heading: "What you should know about this location: "
@@ -129,8 +142,8 @@ prices:
           heading_one: "Extended"
           sub_heading: "Payment Plan"
         content:
-          price: "US $800"
-          price_info: "4 months"
+          price: "US $170"
+          price_info: "24 months"
         button:
           button_text: "APPLY NOW"
 

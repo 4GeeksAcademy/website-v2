@@ -3,6 +3,7 @@ meta_info:
   title: ""
   description: ""
   image: ""
+  visibility: "visible"
   bc_slug: "full-stack-ft"
   keywords: ""
   redirects:
@@ -53,7 +54,8 @@ badges:
   paragraph: "4Geeks Academy es el lugar donde los desarrolladores crecen y prosperan. Estamos autorizados por el Departamento de Educación de Florida. Elegido como uno de los 35 mejores bootcamps del mundo y el mejor bootcamp de codificación en Miami según SwitchUp. Reconocido como los 10 mejores bootcamps de codificación en los Estados Unidos según Newsweek.."
 
 upcoming:
-  no_dates_message: "Actualmente no hay próximas fechas para este programa"  
+  no_dates_message: "Actualmente no hay próximas fechas para este programa"
+  actionMessage: "Avisenme fechas disponibles"
   
 credentials:
   heading: "RESULTADOS"
@@ -75,14 +77,19 @@ details:
       list:
         - label: "Duración"
           content:  "9 semanas"
+          icon: "calendar"
         - label: "Clases"
           content: "De Lunes a Viernes"
+          icon: "book"
         - label: "Certificados"
           content: "Nuestros certificados son  reconocidos por múltiples instuticiones."
           link_text: "Ver ejemplo"
           link: "https://certificate.breatheco.de/4ae7a46bba78dc19b823e124fea120c17b45e044"
+          icon: "certificate"
         - label: "Requisitos"
           content: "Tan solo necesitas un ordenador y una conexión a internet"
+          icon: "contract-checked"
+          
   heading: DETALLES DEL PROGRAMA FULL-TIME
   weeks: 9
   sub_heading: "Proyectos de la vida real y exactamente lo que buscan las empresas"
@@ -212,7 +219,9 @@ typical:
 ## ALUMNI SECTION
 alumni:
   heading: "Conoce a los graduados y sus proyectos"
-  sub_heading: "Tú también podrás hacer proyectos como estos cuando seas programador"
+  sub_heading: "La última fase del curso debes construir un proyecto final que tu mismo escogeras, 
+    puede ser un emprendimiento o trabajarás directamente en un proyecto de la vida real en 
+    colaboración con nuestros hiring partners."
 
 ## SIDEBAR
 sidebar:

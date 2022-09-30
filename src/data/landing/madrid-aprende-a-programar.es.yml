@@ -14,8 +14,8 @@ meta_info:
   # this UTM fields will be also included in the CRM contact
   utm_course: ["full-stack"]
   utm_location: madrid-spain
-  automation: soft #optional, this is the default value
-  tag: request_more_info #optional, this is the default value
+  automation: soft # comma separated, "soft" is the default value
+  tag: request_more_info # comma separated, "request_more_info" is the default value
 
 form:
   # posible fields: "first_name", "last_name", "full_name", "phone", "email"
@@ -29,8 +29,8 @@ form:
 header_data:
   tagline: Aprende a programar
   sub_heading: " "
-  # scholarship: "../../../static/images/partner/microsoft.png"
-  image: "../../../static/images/Happy-People-Landing-4Geeks-ES.jpg"
+  # partner_logo_url: "../../../static/images/partner/microsoft.png"
+  background_image: "../../../static/images/Happy-People-Landing-4Geeks-ES.jpg"
   image_filter: brightness(0.4)
 
 features:
@@ -66,7 +66,7 @@ in_the_news:
 
 badges:
   position: 6
-  heading: " "
+  heading: "Premios y reconocimientos que validan nuestra excelencia"
 
 program_details:
   position: 3

@@ -1,0 +1,362 @@
+meta_info:
+  slug: curso-de-programacion-desde-cero
+  title: ""
+  description: ""
+  visibility: "visible"
+  image: null
+  keywords: ""
+  redirects: []
+
+seo_title: "curso-de-programacion"
+
+header:
+  title: "Curso de programación desde cero"
+  image: "../../../static/images/bg/python-image.png"
+  image_alt: "Python image"
+  paragraph: "La idea de aprender a programar desde cero puede ser abrumadora. El conocimiento previo no es lo más importante para completar con éxito un curso de programación desde cero, lo más importanta es la determinación de alcanzar el éxito."
+button:
+  syllabus_heading: "Descargar Detalles del Curso"
+  syllabus_btn_label: "Descarga Instantánea"
+  syllabus_motivation: "En 2 min. recibirás en tu buzón de correo un PDF con información muy detallada sobre nuestra metodología, tecnologías, financiación e información del curso."
+  apply_button_link: "/es/aplica"
+
+course_instructors: 
+  header:
+    title: "Conoce a nuestros instructores"
+    paragraph: ""
+
+  instructors:
+    - name: "Roldolfo Campos"
+      sub_title: "Co fundador de 4geeks y director de educación"
+      image: "../../../static/images/instructors/example.png"
+      bio: "Currently working as a Senior Solutions Architect at VMware, Rodolfo Campos is a Software Engineer with 17 years of experience in Linux, Java, SQL, Blockchain, etc. Master in Computer Science and passionate about Big Data and Entrepreneurship."
+      github: ""
+      linkedin: "https://www.linkedin.com/"
+
+    - name: "Gabriel Salinas"
+      sub_title: "Sophisticated Software Systems Engineer"
+      image: "../../../static/images/instructors/example.png"
+      bio: "Currently working as a Senior Solutions Architect at VMware"
+      github: ""
+      linkedin: "https://www.linkedin.com/"
+
+badges:
+  paragraph: "4Geeks Academy es el lugar donde los desarrolladores crecen y prosperan. Estamos autorizados por el Departamento de Educación de Florida. Elegido como uno de los 35 mejores bootcamps del mundo y el mejor bootcamp de codificación en Miami según SwitchUp. Reconocido como los 10 mejores bootcamps de codificación en los Estados Unidos según Newsweek.."
+
+upcoming:
+  no_dates_message: "Actualmente no hay próximas fechas para este programa"  
+  
+credentials:
+  heading: "RESULTADOS"
+  paragraph: "Nuestros resultados hablan por sí solos"
+
+## PROGRAM DETAILS
+details:
+  about:
+    title: "Acerca del programa"
+    sub_title: "Para convertirse en un full stack developer no hace falta experiencia, 
+      sino tiempo y dedicación.
+
+      Al culminar un curso como el de 4Geeks, un graduado de la academia tendrá 
+      oportunidades de conseguir empleo en el sector de tecnología, podrá convertirse 
+      en programador freelance, entender mejor la programación para gestionar su carrera 
+      actual o para lanzar su emprendimiento del mundo tech.
+    "
+    list:
+      - label: "Duración"
+        content:  "16 semanas"
+      - label: "Clases"
+        content: "3 Veces a la semana"
+      - label: "Fuera de clases"
+        content: "Todo el tiempo que necesites para completar los proyectos planteados
+        en el curso de Full Stack Developer"
+
+  heading: DETALLES DEL PROGRAMA FULL-TIME
+  weeks: 9
+  sub_heading: "Proyectos de la vida real y exactamente lo que buscan las empresas"
+  left_labels:
+    description: "DESCRIPCIÓN:"
+    projects: "PROYECTOS:"
+    duration: "DURACIÓN:"
+    skills: "Skills / Semanas:"
+  details_modules:
+    - module_name: "PREWORK"
+      title: "PREWORK"
+      description: "Empezando por lo básico: HTML5 + CSS3 + Javascript. Revisamos los fundamentos de la codificación y nos aseguramos de que todos estamos en la misma página."
+      projects: "CSS Postcard, Versión mínima de Instagram, etc."
+      slug: "prework"
+      duration: "1 sem"
+      step: 0
+    - module_name: "FUNDAMENTOS"
+      title: "Aprende a programar"
+      description: "Piensa como un ordenador: Controla el flujo de tu código, crea algoritmos, haz un bucle, usa condicionales y usa/mezcla JavaScript con HTML5 y CSS3 para lanzar tu primer sitio web interactivo."
+      projects: "Pequeños juegos y sitios web interactivos."
+      slug: "fundamentos"
+      duration: "2 sem"
+      step: 3.4
+
+sticky_nav:
+  - title: "Acerca de"
+    href: "#about_the_program"
+  - title: "Qué Aprenderás"
+    href: "#what_will_you_learn"
+  - title: "Qué significa"
+    href: "#what_does_it_mean_full_stack_developer"
+  - title: "Herramientas y lenguajes"
+    href: "#tools_and_tech"
+  - title: "Qué incluye?"
+    href: "#what_includes"
+  - title: "Fechas"
+    href: "#upcoming_dates"
+  - title: "Precios"
+    href: "#prices_and_payment"
+  - title: "Alumnos"
+    href: "#testimonials"
+
+what_will_you_learn:
+  heading: "¿Qué aprenderás en el curso?"
+  sub_title: |
+    Aprender a programar se trata también de desarrollar la lógica y entender cómo "piensa" 
+    una computadora, cómo "hablan", cómo engranan y se entienden los elementos de una aplicación entre sí.
+
+    Desarrollar la habilidad de programar va de la mano con la creatividad y la búsqueda de soluciones 
+    a problemas.  Programar significa solucionar problemas a través de ciertas herramientas con las que 
+    se crean instrucciones para que situaciones o problemas sean resueltos de forma sistemática por un software. 
+
+    En resumen, en este curso aprenderás una nueva forma de pensar. Desarrollarás una base sólida 
+    de front-end, back-end, base de datos, manejo de procesos distribuidos y despliegue a 
+    distintas plataformas web. Obtendrás las habilidades y conocimientos para crear un sitio 
+    web sumergiéndote en las mejores prácticas del diseño web responsivo, trabajando con diversos lenguajes.
+  
+  image: "../../../static/images/learn_to_code.png"
+  image_alt: "Qué aprenderás en el curso"
+
+content_with_subtitle_and_image:
+  heading: "¿Qué significa ser Full Stack Developer?"
+  image: "../../../static/images/person-thinking.png"
+  image_alt: "Qué significa ser Full Stack Developer"
+  list:
+    - content: "Un full stack developer es un desarrollador que domina la tecnología 
+        Full-Stack, tanto front-end como back-end. y  ¿Qué significa todo esto? 
+        Entonces debes conocer estos términos:"
+    - label: "Stack"
+      content: |
+        La traducción de stack es "pila de cosas", en este caso sería la pila completa 
+        de aplicaciones que se comunican entre entre sí, para que puedan ejecutar, en conjunto, 
+        una acción solicitada por el usuario/cliente
+    - label: "Front-end"
+      content: "Es todo lo que el usuario (o el lado del cliente) puede ver y con lo que puede 
+        interactuar."
+    - label: "Backend"
+      content: "Es la arquitectura interna del sitio, es todo lo que ocurre del lado del 
+        servidor. No es visible al usuario pero es la parte que procesa la información que 
+        se recibe del front-end."
+    - content: "De esta manera, un full stack developer conoce toda la cadena de un sistema o aplicación. 
+        El trabajo de estos desarrolladores es lograr que los componentes de un sistema se comuniquen entre sí 
+        para lograr que un programa solucione el problema para el cual fue creado.
+
+        En un curso de programación en el que te convertirás en full-stack developer, aprenderás 
+        sobre el front-end, el back-end, y lo que está en el medio, podemos decir que las APIs 
+        son parte de lo que está en el medio.
+
+        Las API’s son módulos que hacen posible que dos conjuntos de software distintos se comuniquen 
+        e interactúen entre sí.  
+
+        Al convertirte en un full stack developer estos términos no serán ajenos a tí y <strong>¡Vivirás con 
+        ellos para crear cosas increíbles!</strong>"
+
+tools_and_tech:
+  - topic: "Herramientas y lenguajes de programación que aprenderás"
+    list:
+      - title: "Html"
+        image: "../../../static/images/techs/html.png"
+        description: |-
+          "HTML5 es la quinta versión de HTML. En términos generales, HTML, es el lenguaje que permite construir la estructura de una página web. 
+          HTML le dice al navegador cómo mostrar el contenido (imágenes y texto) de un website. 
+          Aunque podemos decir que HTML es un lenguaje, no es un lenguaje de programación. 
+          La verdad es que hay lenguajes de programación, de scripting (secuencia de comandos) y de markup. 
+          HTML es un lenguaje de markup que se usa para darle forma a la información que se presenta en una vista del website. 
+
+          HTML5 tiene varias ventajas que no aplican para HTML. Por ejemplo: 
+
+          Es más amigable para navegación en el celular
+          Ayuda a crear páginas más dinámicas porque funciona con audio y video 
+          Tiene múltiples opciones de almacenamiento (no solo en el caché del navegador)
+          Es más leniente con los errores de sintaxis en el código.
+          
+          Existen varias otras ventajas más técnicas que aprenderás en el camino a convertirte en full stack developer en el curso online de 4Geeks Academy."
+      - title: "CSS"
+        image: "../../../static/images/techs/css.png"
+        description: |-
+          "CSS describe cómo los elementos de HTML deben ser mostrados en la pantalla. 
+          CSS separa, distribuye contenido y da forma a la presentación del mismo en una página web. 
+          CSS es lo que permite que un website sea responsivo (que se adapte a cualquier pantalla), 
+          y además de esta propiedad tiene como beneficio que ayuda a definir el estilo de toda  la página -evita el trabajo de crear estilos página por página. "
+      - title: "Python"
+        image: "../../../static/images/techs/python.png"
+        description: |-
+          "Python es el lenguaje de más rápido crecimiento en el mundo, es el idioma principal en 
+          prácticamente todas las industrias. Junto con React.js y Javascript, enseñamos la pila de 
+          tecnologías más deseada que las empresas desean en la actualidad."
+      - title: "React.js"
+        image: "../../../static/images/techs/react.png"
+        description: |-
+          "Es una librería JavaScript desarrollada por el equipo de tecnología de Facebook para desarrollar interfaces de usuario. 
+          En este contexto librería,  es un archivo con instrucciones para agregarle funcionalidades y efectos a un website.  
+          Desde su lanzamiento en 2013 se ha convertido hoy en día en una de las tecnologías front-end más utilizadas. 
+          React funciona con componentes, los cuales son piezas independientes de interfaz de usuario. 
+          Éstos son independientes y pueden ser reutilizados para crear interfaces complejas."
+      - title: "DOM"
+        image: "../../../static/images/techs/dom.png"
+        description: |-
+          "El DOM (Modelo de Objetos de Documento) es la representación de datos de los objetos que componen la estructura y el contenido de un documento en la web,
+          por lo tanto funciona como una interfaz que permite navegar por la estructura de documentos que genera el navegador, 
+          y a través de él se puede añadir, modificar, o eliminar elementos y contenido."
+      - title: "SQL"
+        image: "../../../static/images/techs/sql.png"
+        description: |-
+          "Es el lenguaje estándar para la gestión de bases relacionales. 
+          SQL se usa para comunicarse con una base de datos. 
+          A través de SQL se puede obtener y actualizar información de una base de datos."
+      - title: "Flask"
+        image: "../../../static/images/techs/flask.png"
+        description: |-
+          "Flask es un framework escrito en Python. 
+          Un framework, o un framework para aplicaciones web es un conjunto de librerías, funcionalidades y módulos 
+          ya creados que permiten que los desarrolladores escriban código sin preocuparse por detalles en la programación. 
+          Un framework permite el desarrollo ágil de aplicaciones."
+
+what_includes:
+  - title: "¿Qué incluye?"
+    description: "Para convertirse en programador no sólo es necesario el conocimiento de herramientas 
+      y lenguajes, sino que también es importante contar con ayuda cuando tienes dudas, 
+      superar las frustraciones de aprender a programar y tener compañía en tu introducción 
+      en el mundo laboral como desarrollador Jr. En un curso de programación web tradicional 
+      recibirás la formación técnica, pero no necesariamente tendrás acceso a otros beneficios 
+      que te harán un full  stack developer integral."
+    list:
+      - title: "> Todas las Mentorías que Necesitas"
+        icon: "chat-2"
+        description: "En línea y en persona, por el resto de tu vida, incluso para aclarar dudas de tu código 
+          relacionadas a tu trabajo. Ajustamos las sesiones según tu calendario, te aseguramos que 
+          tienes la oportunidad de una mentoría constante siempre que la necesites."
+
+      - title: "> Proporción Profesor: Estudiante 1:5"
+        icon: "hierarchy"
+        description: "Encontrarás más profesores en 4Geeks que el promedio de la industria."
+
+      - title: "> Tiempo de Respuesta"
+        icon: "chronometer"
+        description: "No te quedes atascado con tu código, no te llevará más de 15 minutos para que 
+          un instructor te ayude a través de alguno de los canales de nuestra comunidad."
+
+      - title: "> Instructores con Clases en Vivo"
+        icon: "instructor"
+        description: "Las clases 4Geeks son totalmente en vivo. Estar conectado con instructores y 
+          compañeros hace la experiencia más enriquecedora."
+
+      - title: "> Acceso a Plataforma de Lecciones, Ejercicios y Canales de la Comunidad"
+        icon: "screen"
+        description: "Al ser estudiante en 4Geeks tendrás acceso a la plataforma oficinal de clases 
+          y pertenecerás a una comunidad formada exclusivamente por alumnos, graduados, instructores 
+          y personal de la academia listo para ayudar."
+
+      - title: "> Acceso a Plataforma de Lecciones, Ejercicios y Canales de la Comunidad"
+        icon: "notes-2"
+        description: "Basado en cada oportunidad laboral, recibirás coaching en habilidades además 
+          de las relacionadas a programar. 
+          Te ayudaremos a perfeccionar tu perfil profesional. Contarás con la asesoría personalizada 
+          con nuestros expertos para mejorar tu CV, Linkedin, GitHub y Portafolio.
+          Realizaremos simulacros de entrevistas para evaluar tus fortalezas y debilidades para crear 
+          un perfil más fuerte antes de las entrevistas reales. Cada vez que tenga una entrevista, practicaremos 
+          el uso de diferentes tecnologías. Tenemos nuestro propio grupo de ejercicios autocalificados, por lo 
+          que puede practicar hasta que domine las habilidades para obtener el trabajo que desea."
+
+
+syllabus:
+  heading: Descarga toda la infomación sobre este programa
+  button_label: Descargar
+
+## 4GEEKS VS OTHERS SECTION
+geeks_vs_others:
+  heading: "EN NÚMEROS: 4 GEEKS VS OTROS"
+  sub_heading: ""
+  sub_heading_link: ""
+
+## GEEK PAL AND GEEK FORCE BOXES
+geek_data:
+  heading: ¡Career Support de por vida!
+  geek_pal:
+    - Un profesor cada cinco estudiantes (1:5).
+    - Sesiones ilimitadas de tutoría por demanda, en persona o en línea.
+    - Miles de ejercicios autoevaluados.
+    - Tutoriales interactivos y autoevaluados.
+    - Soluciones en video para una retroalimentación instantánea.
+    - Chat de apoyo en línea al menos 12 horas al día.
+    - Transmisión en línea de las clases.
+  geek_force:
+    - Construcción de CV y LinkedIn.
+    - Construcción del perfil de Github y portafolio desde el dia 1.
+    - Career Week para dedicación exclusiva a tu perfil profesional.
+    - Preparación de simulación de entrevistas.
+    - Sesión de preparación de entrevistas personalizadas para trabajos específicos.
+    - Entrenamiento de marca personal.
+    - Prácticas y ejercicios de programación posteriores a la graduación.
+    - Coaching SEMANAL hasta que consigas trabajo.
+
+## PRICES AND PAYMENTS SECTION
+prices:
+  heading: "PRECIOS Y PAGOS"
+  sub_heading: ""
+  selector:
+    top_label: Sede
+    placeholder: Selecciona una sede
+  button:
+    text: Ver planes / precios
+    link: ""
+# TYPICAL DAY SECTION
+typical:
+  heading: "Un día típico en la academia"
+  sub_heading: ""
+  schedule:
+    - title: "Meditación"
+      time: "8:30 AM"
+      icon: users
+      content: "Empezamos a las 9 am pero vas a pasar muchas horas programando, tu cuerpo necesita relajarse, estirarse y prepararse para otro día de aprendizaje"
+      step: 0
+    - title: "Setup y café"
+      time: "8:45 AM"
+      icon: coffee
+      content: "Empezamos en 15 minutos, tómate una café, ¡recarga tus energías y prepárate para aprender!"
+      step: 1
+    - title: "Revisión del día anterior"
+      time: "9:00 AM"
+      icon: laptopcode
+      content: "Revisión de las actividades del día anterior o del fin de semana, preguntas y respuestas. Breve resumen de lo que hemos abordado."
+      step: 2
+    - title: "Clase del día"
+      time: "10:00 AM"
+      icon: teacher
+      content: "Incremental: cada mañana, los mentores presentarán un pequeño conjunto de nuevos conceptos y técnicas que te ayudarán en el camino."
+      step: 3
+    - title: "¡Hora de la comida!"
+      time: "01:00 PM"
+      icon: utensils
+      content: "Recarga tus baterías mientras conoces a tus compañeros, prepárate para pasar el resto del día practicando, resolviendo ejercicios y proyectos de la vida real."
+      step: 4
+    - title: "Ejercicios y Proyectos"
+      time: "2:00 PM"
+      icon: laptop
+      content: "Afrontarás constantemente nuevos retos con proyectos de la vida real y ejercicios."
+      step: 5
+    - title: "Trabajos colaborativos"
+      time: "5:00 PM"
+      icon: usergroup
+      content: "Todos los estudiantes programarán en una sola pantalla, discutirán enfoques, estrategias y entregarán sus proyectos."
+      step: 6
+## ALUMNI SECTION
+alumni:
+  heading: "Conoce a los graduados y sus proyectos"
+  sub_heading: "La última fase del curso debes construir un proyecto final que tu mismo escogeras, 
+    puede ser un emprendimiento o trabajarás directamente en un proyecto de la vida real en 
+    colaboración con nuestros hiring partners."

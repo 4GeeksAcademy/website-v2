@@ -1,4 +1,4 @@
-title: Elige tu programa 
+title: Elige tu programa
 paragraph: Contamos con programas que combinan clases prácticas dictadas por expertos
 
 programs:
@@ -6,17 +6,19 @@ programs:
     sub_title: "Level 1"
     icon: "fullstack"
     description: "Aprende las habilidades más solicitadas con instructores apasionados y un plan de estudios práctico para ayudarte a encontrar un trabajo de programación como desarrollador Jr."
+    description_mobile: "Online, presencial y flexible"
     link: "/es/coding-bootcamps/full-stack-part-time"
-    
+
   - title: "Software Engineer"
     sub_title: "Level 2"
     icon: "software"
     description: " Desarrolla más habilidades adentrándote en el mundo de computación y aplicaciones nativas de la nube. Aprende las habilidades que el 90% de las empresas Fortune 500 están buscando."
+    description_mobile: "Online, presencial y flexible"
     link: "/es/coding-bootcamps/ingenieria-de-software-programacion"
-    
+
   - title: "AI/Machine Learning Engineering"
     sub_title: "Online"
     icon: "machine"
     description: "Conoce las herramientas necesarias para mejorar tus habilidades y ser parte del futuro de la Inteligencia Artificial."
+    description_mobile: "Online, presencial y flexible"
     link: "/es/coding-bootcamps/curso-inteligencia-artificial"
-

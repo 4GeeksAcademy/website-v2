@@ -9,7 +9,7 @@ image: "https://storage.googleapis.com/4geeks-academy-website/blog/2019/11/JSand
 image_alt: ""
 cluster: "aprender-a-programar"
 status: "published"
-featured: "false"
+featured: false
 
 ---
 

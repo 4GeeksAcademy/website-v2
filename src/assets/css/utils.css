@@ -1,23 +1,41 @@
-.pointer{cursor: pointer; }
+.pointer {
+  cursor: pointer;
+}
 
-.d-none{ display: none !important;}
-.d-block{ display: block !important;}
+.d-none {
+  display: none !important;
+}
+.d-block {
+  display: block !important;
+}
 @media (max-width: 576px) {
-    .d-xs-none{ display: none !important; }
-    .d-xs-block{ display: block !important; }
+  .d-xs-none {
+    display: none !important;
+  }
+  .d-xs-block {
+    display: block !important;
+  }
 }
 @media (max-width: 768px) {
-    .d-sm-none{ display: none !important; }
-    .d-sm-block{ display: block !important; }
+  .d-sm-none {
+    display: none !important;
+  }
+  .d-sm-block {
+    display: block !important;
+  }
 }
-.w-100{ width: 100%; }
-.m-0{ margin: 0; }
+.w-100 {
+  width: 100%;
+}
+.m-0 {
+  margin: 0;
+}
 
-.no-wrap{
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
+.no-wrap {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
-.capitalize{
-    text-transform: capitalize;
+.capitalize {
+  text-transform: capitalize;
 }

@@ -4,6 +4,7 @@ meta_info:
   description: "Conviérte en un Ingeniero de Software y obtén un trabajo de clase mundial con 4Geeks Academy"
   bc_slug: "software-engineering"
   image: ""
+  visibility: "visible"
   template: "course-engineering"
   keywords: ""
   redirects: ["/ingenieria-software", "/es/software-engineering", "/es/course/ingenieria-software"]
@@ -40,7 +41,8 @@ badges:
   paragraph: "4Geeks Academy es el lugar donde los desarrolladores crecen y prosperan. Estamos autorizados por el Departamento de Educación de Florida. Elegido como uno de los 35 mejores bootcamps del mundo y el mejor bootcamp de codificación en Miami según SwitchUp. Reconocido como los 10 mejores bootcamps de codificación en los Estados Unidos según Newsweek."
 
 upcoming:
-  no_dates_message: "Actualmente no hay próximas fechas para este programa"  
+  no_dates_message: "Actualmente no hay próximas fechas para este programa"
+  actionMessage: "Avisenme fechas disponibles"
 
 button:
   syllabus_heading: "Descargar Detalles del Curso"
@@ -62,12 +64,16 @@ details:
       list:
         - label: "Duración"
           content:  "16 semanas"
+          icon: "calendar"
         - label: "Clases"
           content: "3 Clases semanales"
+          icon: "book"
         - label: "Certificado"
           content: ""
+          icon: "certificate"
         - label: "Requisitos"
           content: "Experiencia de 1 año como desarrollador de software"
+          icon: "contract-checked"
   heading: DETALLES DEL PROGRAMA
   weeks: 16
   sub_heading: "Part Time"

@@ -1,4 +1,11 @@
 ## STAFF MEMEBERS INFO
+
+# Current campus locations:
+# ['santiago-chile', 'bogota-colombia', 'quito-ecuador', 'panamacity-panama',
+#  'orlando', 'montevideo-uruguay', 'mexicocity-mexico', 'maracaibo-venezuela',
+#  'madrid-spain', 'lapaz-bolivia', 'europe', 'downtown-miami', 'costa-rica',
+#  'caracas-venezuela', 'buenosaires-argentina']
+
 heading: "Staff"
 sub_heading: "Personal apasionado, comprometido. Aportan una actitud alegre de ayudar y brindan todo el apoyo que necesitas para aprender a programar y ganar confianza mientras lo haces."
 
@@ -19,7 +26,7 @@ staff:
       - Soccer
     coding_skills:
       - Javascript
-    location: ""
+    location: ["all"]
   - name: "Marcelo"
     last_name: "Ricigliano"
     nick_name: ""
@@ -37,7 +44,7 @@ staff:
       - Juventus
     coding_skills:
       - Javascript
-    location: ""
+    location: ["all"]
   - name: "James"
     last_name: "Walters"
     nick_name: ""
@@ -55,7 +62,7 @@ staff:
       - Juventus
     coding_skills:
       - Javascript
-    location: ""
+    location: []
   - name: "Daniel"
     last_name: "Chang"
     nick_name: ""
@@ -76,7 +83,7 @@ staff:
     coding_skills:
       - Javascript
       - Python
-    location: ""
+    location: []
   # - name: "Patricia"
   #   last_name: "Ayuso"
   #   nick_name: ""
@@ -93,7 +100,7 @@ staff:
   #     - Music
   #   coding_skills:
   #     - Excel
-  #   location: ""
+  #   location: ['all']
   - name: "Paolo"
     last_name: "Lucano"
     nick_name: "Pluco"
@@ -113,7 +120,7 @@ staff:
       - Travel
     coding_skills:
       - Javascript
-    location: ""
+    location: ["all"]
   - name: "Ana Belen "
     last_name: "Salas"
     nick_name: ""
@@ -130,7 +137,7 @@ staff:
       - Music
     coding_skills:
       - Excel
-    location: ""
+    location: [""]
   - name: "Mafe"
     last_name: "Castro"
     nick_name: ""
@@ -147,7 +154,7 @@ staff:
       - Fashion Design
     coding_skills:
       - Bootstrap
-    location: ""
+    location: []
   - name: "Nacho"
     last_name: "Cordoba"
     nick_name: "Nacho"
@@ -166,4 +173,4 @@ staff:
       - Music
     coding_skills:
       - Javascript and Python
-    location: ""
+    location: []

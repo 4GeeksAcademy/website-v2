@@ -13,3 +13,13 @@ header:
   paragraph: "Learning to code can lead to different paths. Our graduates enrolled with one goal: to change their futures. Here are some of our alumni who made the decision to boost their careers."
   image: "../../../static/images/locations/caracas-loc-2.jpeg"
   image_alt: ""
+
+images:
+  - name: "Facebook"
+    image: "../../../static/images/partner/facebook.png"
+  - name: "Microsoft"
+    image: "../../../static/images/partner/microsoft.png"
+  - name: "Apple"
+    image: "../../../static/images/partner/apple.png"
+  - name: "Facebook"
+    image: "../../../static/images/partner/facebook.png"

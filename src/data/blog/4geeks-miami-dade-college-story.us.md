@@ -9,7 +9,6 @@ image: "https://4GeeksAcademy.com/wp-content/uploads/2018/11/Massive-Cyber-Monda
 image_alt: ""
 cluster: "trends-and-tech"
 status: "published"
-featured: "true"
 
 ---
 

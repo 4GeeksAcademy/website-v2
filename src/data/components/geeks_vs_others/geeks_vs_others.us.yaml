@@ -23,7 +23,8 @@ info:
   - features: "Questions Response Time"
     at4_Geeks: "15 min"
     industry_average: "Not measured"
-    why_important: "Getting stuck is the 1st reason that leads to both frustration and to loss of motivation. That is why we have created the “15 min rule” to keep you going. Someone will always be available to help you."
+    why_important: |
+      Getting stuck is the 1st reason that leads to both frustration and to loss of motivation. That is why we have created the "15 min rule" to keep you going. Someone will always be available to help you.
     icon: "clock"
 
   - features: "Mentoring 1-on-1"

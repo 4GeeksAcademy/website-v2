@@ -15,13 +15,13 @@ meta_info:
   # this UTM fields will be also included in the CRM contact
   utm_course: ["full-stack", "machine-learning-engineering"]
   utm_location: europe
-  automation: strong #optional, this is the default value
-  tag: website-lead #optional, this is the default value
+  automation: strong # comma separated, "soft" is the default value
+  tag: website-lead # comma separated, "request_more_info" is the default value
 
 navbar:
   logoUrl: "#" # relative(/apply), absolute(https://google.com) or id(#componentName)
   buttonText: "Solicita tu beca"
-  buttonUrl: "#bottom" # url accepts: relative(/apply), absolute(https://google.com) or id(#componentName)
+  buttonUrl: "#bottom" # url accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
 
 form:
   # posible fields: "first_name", "last_name", "full_name", "phone", "email"
@@ -35,8 +35,8 @@ form:
 header_data:
   tagline: +1.000.000€ in scholarshipsh
   sub_heading: ""
-  scholarship: "../../../static/images/partner/landing-jobs.png"
-  image: "../../../static/images/Happy-People-Landing-4Geeks-ES.jpg"
+  partner_logo_url: "../../../static/images/partner/landing-jobs.png"
+  background_image: "../../../static/images/Happy-People-Landing-4Geeks-ES.jpg"
   image_filter: brightness(0.4)
 
 features:
@@ -70,7 +70,7 @@ follow_bar:
 #
 badges:
   position: 1 # It's the position of the component that will be rendered first
-  heading: "4Geeks Academy cuenta con premios y reconocimientos de validan su excelencia"
+  heading: "4Geeks Academy cuenta con premios y reconocimientos que validan su excelencia"
 
 about4Geeks:
   position: 2
@@ -156,7 +156,7 @@ components:
   - name: python_y_javascript
     position: 6
     layout: two_column_right
-    background: "veryLightBlue2" # Name of the color(from new_components/Styling/index.js) or color code ex: #C9F9F9
+    background: "veryLightBlue2" # Name of the color(from components/Styling/index.js) or color code ex: #C9F9F9
     image:
       src: "/images/why-4geeks/python-image.png"
       # /static/images/why-4geeks/python-image.png

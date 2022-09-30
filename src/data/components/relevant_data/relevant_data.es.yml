@@ -1,0 +1,21 @@
+rating_reviews:
+  position: 1
+  heading: "Read about us in the media..."
+  rating_list:
+    - alt: "Career Karma"
+      image: "../../../static/images/badges/career-karma.png"
+      rating: 3.86
+      url: ""
+    - alt: "Switchup"
+      image: "../../../static/images/badges/switchup-img.png"
+      rating: 4.86
+      url: ""
+    - alt: "Coruse Report"
+      image: "../../../static/images/badges/course-report.png"
+      rating: 4.35
+      url: ""
+    - alt: "Google"
+      image: "../../../static/images/badges/google.png"
+      rating: 5
+      url: ""
+    # mas...

@@ -1,11 +1,13 @@
 meta_info:
-  slug: "lead-instructor"
-  title: "Lead Instructor"
-  description: null
+  slug: "coding-instructor"
+  title: "Coding Instructor"
+  visibility: "visible"
+  description: "The brightest minds have always taken time taught what they know, become a coding teacher at 4Geeks Academy."
   template: "job" # js component that will be handling the rendering
-  image: null
-  keywords: ""
-  redirects: ["senior-mentor"]
+  open: true #if true, this job will be accepting candidates
+  image: "https://storage.googleapis.com/media-breathecode/59c3afdc064670e4d0062a42cd4bf954d1b9c93720500d4fdce265b4792538ab"
+  keywords: "coding mentor jobs, coding teacher jobs, 4 Geeks Academy jobs, 4Geeks Academy Jobs, 4Geeks jobs, coding instructor"
+  redirects: []
 
 ## BANNER INFO
 banner_heading: "Lead Instructor"
@@ -13,29 +15,36 @@ banner_sub_heading: ""
 banner_image: "/images/bg/pricing-bg.jpg"
 link_back: "/us/jobs"
 cities:
-  - Miami
-  - Santiago de Chile
-  - Caracas
-  - Maracaibo
+  - Classes are Online/remote
+  - USA
+  - Spain
+  - Europe
+  - LATAM
+
 button_text: "APPLY NOW"
 ## JOB MAIN SECTION INFO
 title: "What could be more important for a coding academy than having great teachers?"
-description: "The brightest minds have always taken time taught what they know, it's a great way to give back and also keep learning new developments or event create new ways of doing things. At 4Geeks we want to have the best minds mentoring to our students. That is why we are committed to supporting our teachers in their professional life, promoting their personal branding and projects in any space that the academy has available."
+description: "At 4Geeks we want to have the best minds mentoring to our students. That is why we are committed to supporting our teachers in their professional life, promoting their personal branding and projects in any space that the academy has available."
 
 content:
   - label: "Responsabilities"
     list:
-      - "1. "
-      - "2. "
+      - "The Lead Instructor is responsible for leading the classes within the classroom."
+      - "1. Set the rhythm of the class, put the pressure and deadlines on the students and make sure your cohort is on schedule "
+      - "2. Prepare your classes and make sure the projects, instructions, and exercises are properly explained and followed by the students."
+      - "3. Identifying areas of improvement on the syllabus, tutorials, exercises or projects."
+      - "4. Make sure students are not stuck for a long period of time (minutes instead of hours or days)."
+      - "5. Leading the teacher assistants in helping you with answering questions and reviewing the exercises."
   - label: "Technical requirements"
     list:
-      - "1. "
-      - "2. "
-  - label: "Teaching experience required"
+      - "1. You must be a senior developer with years of experience."
+      - "2. Advanced understanding of HTML and CSS: CSS Selectors, Pseudo-selectors and Specificity, Display, Position, Flex, Bootstrap, etc."
+      - "3. Deep understanding of Javascript ES2017 concepts: Looping with or without mutations (for, while, forEach, map, reduce, etc.), Classes vs Functions, Data Structures, Object Literals, Events, working with the DOM."
+      - "4. Experience with React.js: The majority of the front-end coding is based on React.js, you need to understand Flux, Context API, Component Lifecycle, etc."
+      - "5. API consumption: Use of fetch, consuming REST API's, async/await, Promises, JSON, serialization, etc."
+      - "6. Python and Django knowledge: Develop API's with django-rest or Flask framework."
+
+  - label: "Schedule"
     list:
-      - "1. "
-      - "2. "
-  - label: "Perks about the Job"
-    list:
-      - "1. "
-      - "2. "
+      - "1. Part time: 3 classes weekly, 9 hours per week, 16 weeks. Monday, Wednesday, and Friday from 6:00 pm to 9:00 pm (It depends on the time zone of each country)"
+      - "2. Full time: 4 classes weekly, 9 weeks"

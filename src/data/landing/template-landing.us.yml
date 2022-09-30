@@ -1,0 +1,294 @@
+meta_info:
+  slug: example # <--- URL 4geeksacademy.com/us/landing/example
+
+  
+  title: "" # This will show the browser tab title
+  description: "" # under 255 characters, will show on social media when shared
+  image: "" # description will show on social media when shared
+  keywords: "" # SEO optimized keywords
+  visibility: "hidden" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
+  template: "landing_a" # <--- choose your landing template
+  redirects: [""] # <--- URL redirections to avoid 404 errors
+  
+  # this UTM fields will be included in the CRM
+  # utm_course available ["full-stack", "software-engineering", "machine-learning-engineering"]
+  utm_course: ["full-stack"] 
+  utm_location: madrid-spain
+  automation: soft # comma separated, "soft" is the default value
+  tag: request_more_info # comma separated, "request_more_info" is the default value
+
+navbar:
+  logoUrl: "#"
+  buttonText: "Solicitar" # this modifies the button text in the navbar
+  buttonUrl: "#bottom" #accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
+
+form:
+  # posible fields: "first_name", "last_name", "full_name", "phone", "email"
+  # always the first_name, email and phone will be mandatory if added.
+  fields: ["full_name", "phone", "email"]
+  heading: "Request more info."
+  motivation: "" # < -- subtitle ideal to movitate people on filling the form
+  button_label: SEND
+  redirect: "https://google.com" #you can redirect to another url or entirely diffrent website
+
+# jumbotron on the top (cannot be commented out)
+header_data:
+  background: "#FFF1D1"
+  tagline: Become a web developer in as 16 weeks through work on real project and mentorship by ezperienced professionals
+  sub_heading: "86% of our graduates have already started their future-proof, tech careers with on overage entry salary of $50.000"
+  image: "../../../static/images/4geeks-main.jpg"
+  badge: "../../../static/images/badges/switchup.png" #Tmage on the right side of the form
+  image_filter: brightness(0.4) #0 is dark, 1 is bright
+
+features:
+  marginTop: 20px #<-- separation between tagline and the bullets
+
+  #                                         up   left down  right
+  styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
+  bullets:
+    - Un Desarrollador en Madrid hace €25mil anual
+    - Hay más vacantes que en cualquier otra industria
+    - Impulsa tu Carrera y hazte programador de software
+  button:
+      text: "APPLY NOW"
+      color: "white"
+      path: "https://www.switchup.org/bootcamps/4geeks-academy"
+      background: "blue"
+      hover_color: "black"
+
+follow_bar:
+  position: "top" # top, bottom, hidden
+  content:
+    text: "Solicita una beca de hasta 2.750 euros. \n Planes de pago de hasta 24 meses."
+    text_mobile: "Becas de €2.750 . \n Plan de pago de 24 m. \n ¡Últimas plazas!"
+    # devices:   XL      LG    MD      SM    XS
+    font_size: ["25px", "25px", "25px", "18px", "4.3vw"]
+  button:
+    text: "Más información"
+    path: "#bottom" # #top, #bottom, #anotherComponentId
+    # ├──if path is empty("") it point to top per default
+    # └── path accepts: relative(/example/path), absolute(https://google.com) or id(#idName)
+  phone:
+    text: "Llama "
+    number: "+1 (786) 416-6640" # you can set your own phone number, or leave it false to use the utm_location number
+
+short_badges:
+  - name: "Premios Excelencia Educativa"
+    url: ""
+    image: "../../../static/images/badges/exelencia-educativa-es.png"
+    alt: "Mejor centro de Coding Bootcamp"
+  - name: "Newsweek"
+    url: ""
+    image: "../../../static/images/badges/newsweek-es.png"
+    alt: "Top Coding Bootcamps Newsweek"
+  - name: "Switchup"
+    url: ""
+    image: "../../../static/images/badges/reviews.png"
+    alt: "Best cooding bootcamp Switchup 2021"
+
+
+#
+# ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇ 
+#
+
+rating_reviews:
+  position: 0
+  rating_list:
+    - alt: "Career Karma"
+      image: "../../../static/images/badges/career-karma.png"
+      rating: 4.86
+      url: ""
+    - alt: "Switchup"
+      image: "../../../static/images/badges/switchup-img.png"
+      rating: 4.86
+      url: ""
+    - alt: "Coruse Report"
+      image: "../../../static/images/badges/course-report.png"
+      rating: 4.86
+      url: ""
+    - alt: "Google"
+      image: "../../../static/images/badges/google.png"
+      rating: 4.86
+      url: ""
+
+in_the_news:
+  position: 1
+  heading: "4Geeks en los medios"
+  filter: ["CNN Español","La Tercera","Las Ultimas Noticias","Emol"] # remove this filter property if you don't want to filter the news logos
+
+why_4geeks:
+  position: 2
+  heading: "Porqué 4Geeks"
+  sub_heading: "Porque somos los mejores"
+  footer:
+    text: "Ver opciones de financiación"
+    text_link: "#"
+
+geeks_vs_others:
+  position: 3
+  heading: "¿Qué hace a 4Geeks Academy exitoso?"
+  paragraph: ""
+  sub_heading: "lorem ipsum dot simet"
+  total_rows: 5
+
+program_details:
+  position: 4
+  heading: "Lo que aprenderás"
+  background: "#FFFFFF"
+  sub_heading: "Las tecnologias más buscadas en el mercado laboral"
+
+alumni_projects:
+  position: 5
+  heading: "Alumnos"
+  sub_heading: "Lo que aprenderás"
+
+who_is_hiring:
+  position: 6
+  limit: 4
+  heading: "Who is hiring"
+  sub_heading: "These comanies are hiring"
+
+badges:
+  position: 7
+  heading: "4Geeks Academy has awards and recognitions that validate it's excellence"
+
+apply_schollarship: # form that is displayed at the end of the landing
+  # title: "Apoyo Profesional Ilimitado"
+  imageSide: "right"
+  image: "../../../static/images/comunity-support.png"
+
+
+# Possible layours: [two_column_left, two_column_right]
+components:
+  - name: first_syllabus_form
+    position: 8
+    layout: syllabus
+    button:
+      text: "Instant Download"
+    heading:
+      text: "Download the course syllabus"
+      #xl      lg     md     sm    xs
+      font_size: ["40px", "40px", "40px", "40px", "40px"]
+  - name: more_testimonials
+    position: 9
+    layout: two_column_left 
+    swipable: False
+    background: "#FFFFFF"
+    image: 
+      style: "{}"
+      src: "https://storage.googleapis.com/4geeks-academy-website/landing-pictures/testimonials.webp"
+      link: "https://google.com" # take uses somewhere when they click on the image
+    heading: 
+      text: "Escúchalo de nuestros alumnos"
+                  #xl      lg     md     sm    xs
+      font_size: ["40px","34px","34px","25px", "20px"]
+    button: 
+      text: "Ver testimoniales"
+      color: pink
+      hover_color: "black"
+      background: "blue"
+      path: "https://www.youtube.com/watch?v=plwPwyrxX84"
+    content: 
+      text: "Mentoría como nunca antes. Decenas de Instructores, en varios idiomas, todos los días, a cualquier hora. Estaremos contigo todo el tiempo, aun cuando hayas conseguido trabajo. Una vez eres parte de 4Geeks, estaremos para siempre contigo."
+      font_size: ["16px"]
+      path: ""
+  - name: divider_one
+    position: 10
+    layout: divider 
+    height: ["50px","50px","50px","50px","50px"]
+  - name: some_id
+    position: 11
+    layout: two_column_right 
+    image: 
+      style: "{}"
+      src: "../../../static/images/projects/ims.jpg"
+      link: "https://google.com" # take uses somewhere when they click on the image
+    video: "plwPwyrxX84" #youtube id
+    heading: 
+      text: "Todo lo hacemos con pasión y con la mirada puesta en tu desarrollo profesional."
+                  #xl      lg     md     sm    xs
+      font_size: ["40px","34px","34px","25px", "20px"]
+    content: 
+      text: " "
+      font_size: ["16px"]
+  - name: some_other_id
+    position: 12
+    layout: single_column 
+    image: 
+      style: '{"height": ["400px", "400px", "400px", "300px", "200px"], "background-size": "contain"  }'
+      src: "../../../static/images/projects/ims.jpg"
+      link: "https://google.com" # take uses somewhere when they click on the image
+    video: "plwPwyrxX84" #youtube id
+    heading: 
+      text: "Todo lo hacemos con pasión y con la mirada puesta en tu desarrollo profesional."
+      #             xl     lg     md     sm      xs
+      font_size: ["40px","34px","34px","25px", "20px"]
+    sub_heading:
+      text:
+        "Tipos de datos con súperpoderes:"
+      font_size: ["15px"]
+  - name: testimonials
+    position: 15
+    layout: testimonials_new
+    filter_indexes: ['azu-bota','nai-kali','cha-fabr']
+
+    bullets:
+      - Número
+      - String
+      - Boolean
+      - Iterables
+      - Dictionary
+      - Lista
+      - Tupla
+      - Rango
+      - Set & Frozenset
+      - Tabla Hash
+
+    content: 
+      text: " "
+      font_size: ["16px"]
+
+why_python:
+  position: 13
+  heading: "¿Porqué enseñamos Python?" # optional or set to white space to hide
+  sub_heading: " " # optional or set to white space to hide
+
+choose_your_program:
+  position: 5
+  title: Our Programs____Landing
+  paragraph: Programs in Full-Time or Part-Time modality with live classes taught by experts
+  programs:
+  - title: "Full Stack Developer"
+    sub_title: "Level 1"
+    icon: "fullstack"
+    description: |
+      From 0 to becoming a Full-Stack Jr. programmer, you will work with HTML5, CSS3, Bootstrap, JS, Reactjs, SQL, Python, Flask, REST API's, etc. to design and create responsive websites. You'll gain a solid foundation of front, back, database, distributed processes, and deployment with passionate instructors and an up-to-date, hands-on syllabus.
+      Available Part-Time or Full-Time mode. Download <a href=https://storage.googleapis.com/4geeks-academy-website/syllabus/europe/Syllabus%20Europe%20EN.pdf target=_blank>"here the syllabus"</a>.  
+    
+    text_link: Apply for a scholarship
+    link: "#" # moves to start position
+    
+  - title: "AI & Machine Learning"
+    sub_title: "Developers and STEM Profiles"
+    icon: "machine"
+    description: |
+      Get trained by a renowned expert in A.I.; explore Machine Learning's fundamentals and Deep Learning with some of the most powerful technologies that truly scale intelligence for business. Practice with real-life business scenarios typical in business and review some of the tools used in the industry. Strategize and develop your A.I. following the lifecycle development from start to end, including deployment into production and maintenance with Privacy, Security, and Ethics. 
+      Download <a href=https://storage.googleapis.com/4geeks-academy-website/syllabus/europe/Syllabus%20Europe%20EN.pdf target=_blank>"here the syllabus"</a>. 
+      
+
+    text_link: Apply for a scholarship
+    link: "#"
+
+testimonial:
+  position: 14
+  heading: "Lo que dicen nuestros alumnos"
+  sub_heading: "Descúbrelo tú mismo"
+  students:
+  - name: Guensie Grecy
+    sub_heading: From lawyer to software developer
+    comment: I was a lawyer for 6 years and I decided to change my career. I attended 4Geeks Academy, a coding bootcamp, that was last year (2018), I graduated in August, and after graduating in October, I was able to get a job as a web developer. I had no background whatsoever in coding. I didn’t know anything about anything computer-technology wise, so that’s an encouragement because it’s possible!
+    video: https://www.youtube.com/watch?v=SixRm6R8rc0
+  - name: Jordan Aguiriano 
+    sub_heading: Previously a Nurse, now a software developer
+    comment: For me the most amazing thing about 4Geeks was the syllabus, the fact that you guys teach exactly what the market is looking for.
+    video: https://www.youtube.com/watch?v=LvnxLyqaQDo

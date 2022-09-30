@@ -4,7 +4,10 @@
 
 partners:
   tagline: "QUIÉN CONTRATA A NUESTROS ESTUDIANTES"
-  sub_heading: "Gracias a nuestra creciente red de Aliados podemos contar con ofertas constantes a nivel nacional e internacional. Gracias a esto y a nuestro servicio de GeekFORCE (Apoyo a tu desarrollo Profesional) es que logramos que el ~89% de nuestros alumnos consigan trabajo dentro de los siguientes 100 días o menos desde su graduación."
+  sub_heading: "Gracias a nuestra creciente lista de aliados, tenemos ofertas de trabajo locales e internacionales para nuestros estudiantes a diario.
+
+  Junto con nuestro servicio GeekFORCE (Career Support), nos complace tener ~ 86% de nuestros estudiantes contratados dentro de los 100 días o menos desde el día de graduación.
+  "
   footer_tagline: 438 EMPRESAS
   footer_button: Revisa nuestra lista de aliados
   footer_link: "/es/aliados"
@@ -13,10 +16,12 @@ partners:
       #locations: ["madrid-spain"]
       image: "../../../../static/images/partner/microsoft.png"
       featured: true
+      link: "https://microsoft.com"
     - name: "Evernote"
       #locations: ["madrid-spain"]
       image: "../../../../static/images/partner/evernote.png"
       featured: false
+      link: "https://evernote.com/intl/es"
     - name: "Facebook"
       #locations: ["madrid-spain"]
       image: "../../../../static/images/partner/facebook.png"
@@ -73,16 +78,24 @@ partners:
       # locations: ["miami-downtown"]
       image: "../../../../static/images/partner/coinet.jpg"
       featured: false
+    - name: "Jooble"
+      locations: ["madrid-spain"]
+      image: "../../../../static/images/partner/jooble.png"
+      featured: false
+      #if follow is equal to false then it will add the nofollow attribute
+      follow: true
+      link: "https://es.jooble.org"
+      
 coding:
-  tagline: "LAS COMPAÑÍAS CONFÍAN Y CONTRATAN A NUESTROS ESTUDIANTES"
-  sub_heading: "Organizamos y/o participamos activamente en las mayores iniciativas de programación."
+  tagline: "Actores globales en el mundo de la codificación"
+  sub_heading: "Estamos inmersos en el ecosistema de codificación al asociarnos con actores tecnológicos globales que nos ayuda a organizar o participar en iniciativas para impactar aún más la industria de la codificación"
   images:
     - name: "Google Developers"
       image: "../../../../static/images/coding/google-developers.png"
       featured: true
       #locations: ["madrid-spain"]
     - name: "Facebook Developer Circle"
-      image: "../../../../static/images/coding/developer-circles.png"
+      image: "../../../../static/images/coding/developer-circles-2.png"
       featured: true
       #locations: ["madrid-spain"]
     - name: "Bloktech"
@@ -115,7 +128,7 @@ influencers:
       featured: false
       #locations: ["madrid-spain"]
     - name: "Facebook Developer Circle"
-      image: "../../../../static/images/coding/developer-circles.png"
+      image: "../../../../static/images/coding/developer-circles-2.png"
       featured: false
       #locations: ["madrid-spain"]
     - name: "Startup"
@@ -152,22 +165,93 @@ influencers:
       #locations: ["madrid-spain"]
 
 financials:
-  tagline: "INMERSOS EN EL ECOSISTEMA DE PROGRAMACIÓN DE LA CIUDAD"
+  tagline: "Socios que hacen posible la educación"
   sub_heading: "Organizamos y/o participamos activamente en las mayores iniciativas de programación."
   images:
     - name: "Quotanda"
       image: "../../../../static/images/quotanda-logo.png"
       featured: false
-      #locations: ["madrid-spain"]
+      #locations: ["miami-downtown"]
+    - name: "Leif"
+      image: "../../../../static/images/leif_main.png"
+      featured: false
+    - name: "Flevo"
+      image: "../../../../static/images/flevo.png"
+      featured: false
     - name: "Climb"
       image: "../../../../static/images/climb-logo.png"
       featured: false
-      #locations: ["madrid-spain"]
-    - name: "Skill Fund"
-      image: "../../../../static/images/skill-logo.png"
+    - name: "Ascent"
+      image: "../../../../static/images/ascent_logo.jpg"
       featured: false
-      #locations: ["madrid-spain"]
-    - name: "Zank"
-      image: "../../../../static/images/zank.png"
-      featured: false
-      #locations: ["madrid-spain"]
+
+work_together:
+  title: "¿Cómo podemos trabajar juntos?"
+  description: "4Geeks Academy es una academia de programación premiada globalment lo cual te permitirá concentrarte en una o más de las siguientes áreas:"
+  image_list:
+    - alt: "Estudiante 4Geeks Academy"
+      image: "../../../../static/images/students/student1.jpg"
+    - alt: "Estudiante 4Geeks Academy"
+      image: "../../../../static/images/students/student2.jpg"
+    - alt: "Estudiante 4Geeks Academy"
+      image: "../../../../static/images/students/student3.jpg"
+    - alt: "Estudiante 4Geeks Academy"
+      image: "../../../../static/images/students/student4.jpg"
+    - alt: "Estudiante 4Geeks Academy"
+      image: "../../../../static/images/students/student5.jpg"
+  features:
+    - title: "Capacitación profesional"
+      icon: "screen"
+      description: "Invierte en tu propio talento. Crezcan juntos y convierte a tu equipo en el futuro de tu empresa."
+
+    - title: "Impacto en la comunidad"
+      icon: "community"
+      description: "¡Tengamos un impacto significativo en la diversidad, reduzcamos la brecha tecnológica y empoderemos a personas de todos los ámbitos de la vida!"
+   
+    - title: "Difusión"
+      icon: "chat-2"
+      description: "¡Únete a nuestra comunidad global de oradores expertos de 4Geeks Academy y se parte de eventos innovadores!"
+   
+    - title: "Reclutamiento"
+      icon: "notes-2"
+      description: "Somos tu partner de referencia  para candidatos, te ofrecemes un flujo constante de candidatos de alta calidad con nuestra increíble cartera de talentos."
+
+benefits_and_charts:
+  title: "Forma parte de nuestra red de socios"
+  description: "Estos son algunos de los beneficios:"
+  bullets:
+    - Acceso a una gran reserva de talento único y de alta calidad.
+    - Aumente la retención laboral con programas de reciclaje.
+    - Cerrar la brecha tecnológica dentro de la comunidad.
+    - Llenar las vacantes de trabajo de tecnología.
+    - Aumente el conocimiento y el valor de la marca con el taller patrocinios y oportunidades para hablar.
+    - Establezca su marca como un líder sólido en la industria de la tecnología.
+    - Construcción comunitaria.
+
+  charts:
+    title: "Los números"
+    list:
+      - icon: "chart-62"
+        description: |
+          El 62% de los ejecutivos "cree que necesitarán volver a capacitar o reemplazar a más de una cuarta parte de su fuerza laboral de aquí a 2023 debido al avance de la automatización y la digitalización" Un estudio de 2018 del informe McKinsey.
+      - icon: "job"
+        description: "Según un estudio de 2016 realizado por la Society for Human Resource Management, cuesta un promedio de $ 4,129 contratar a un nuevo empleado, y se tarda un promedio de 42 días en encontrar un nuevo empleado."
+      - icon: "notes-2"
+        description: "Los bootcamps de programación y las universidades  tienen un porcentaje casi idéntico de exalumnos empleados"
+      - icon: "chart-72"
+        description: "72% de los empleadores dicen que contratar a alguien egresado de un Bootcamp es más o menos lo mismo que un graduado universitario"
+
+partners_in_education:
+  title: "Aliados en educación"
+  description : "En 4Geeks Academy estamos comprometidos a brindar un programa de alta calidad, respaldado por un sistema de mentores ilimitados, para ayudar a reducir la brecha entre las oportunidades laborales y el talento con herramientas creadas para ayudar a enfrentar esos desafíos.
+
+    Para lograr esto, nos hemos asociado con increíbles instituciones educativas que nos ayudan a alcanzar estos objetivos. Juntos hemos logrado graduar a más de 300 estudiantes de todo el mundo y seguimos esforzándonos por graduar a más estudiantes."
+  image_list:
+    - alt: "UTEC"
+      image: "../../../../static/images/education/UTEC.png"
+    - alt: "IESA"
+      image: "../../../../static/images/education/IESA.png"
+    - alt: "Miami Dade College"
+      image: "../../../../static/images/education/MDC_Blue.png"
+    - alt: "Inter-American Development Bank"
+      image: "../../../../static/images/education/IDB-logo.png"

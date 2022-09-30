@@ -5,12 +5,14 @@ meta_info:
   description: "Conoce aquí todo sobre nuestro campus de bootcamp de programación en Colombia, Bogotá de 4Geeks Academy"
   image: ""
   # it will not show up on the applications forms
-  unlisted: false
+  visibility: "visible"
   keywords: "Coding Bootcamp Campus Colombia"
+  region: "latam"
   redirects: [
     # WARN: This specific slug, does not allow to change language
     # "/es/coding-campus/bootcamp-programacion-colombia"
     ]
+  dialCode: "57"
 
 seo_title: "Aprende a programar en Colombia"
 header:
@@ -25,10 +27,17 @@ button_header:
 button:
   syllabus_button_text: "DESCARGAR PROGRAMA" # <-- this will show everywhere in the website
   apply_button_text: "APLICAR" # <-- this will show everywhere in the website
-
   syllabus_submit_text: "DESCARGAR"
   apply_button_link: "/aplica"
   cohort_more_details_text: "DETALLES"
+
+custom_bar:
+  active: true
+  message: Conviértete en programador por aprox. COP 600.000 al mes
+#  button: 
+#    label: "Read More"
+#    path: "#" #string (can be inline path using #, relative path or absolute path)
+
 badges:
   title: ""
   paragraph: "Únete a uno de los coding bootcamps y comunidades de programadores más grandes del mundo, mejora tus habilidades de código o 
@@ -38,14 +47,17 @@ news:
   title: "4Geeks Academy Colombia en las noticias..."
 upcoming:
   no_dates_message: "Actualmente no hay próximas fechas para este campus"
+  actionMessage: "Avisenme fechas disponibles"
 
 info_box:
   heading: "Encuéntranos en Colombia"
   address: ""
   iframeMapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1126.521243034489!2d-80.20142868794088!3d25.759937884725943!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b153865e526d%3A0xf884fb3f86a9c7db!2s4Geeks%20Academy!5e0!3m2!1ses-419!2scl!4v1621010581768!5m2!1ses-419!2scl"
   contact_heading: "Escríbenos al Whatsapp"
-  phone: "(571) 580-6848"
-  email: "info@4GeeksAcademy.com"
+  phone: Llámanos +57 300 7282898
+  whatsapp: +57 300 7282898
+  whatsapp_link: "https://wa.me/+573007282898"
+  email: colombia@4GeeksAcademy.com
 
 images_box:
   heading: "Lo que deberías saber sobre nuestra sede en Colombia: "
@@ -115,7 +127,7 @@ prices:
           heading_one: "PART-TIME"
           sub_heading: "Pregunta por las Becas disponibles"
         content:
-          price: "USD $3,750"
+          price: "USD $3,600"
           price_info: "Un Pago"
         button:
           button_text: "Aplica YA"
@@ -127,8 +139,8 @@ prices:
           heading_one: "En cuotas"
           sub_heading: "Plan de Pagos"
         content:
-          price: "USD $800"
-          price_info: "5 cuotas/meses"
+          price: "USD $170"
+          price_info: "24 cuotas/meses"
         button:
           button_text: "Aplica YA"
 
@@ -201,12 +213,12 @@ in_person_available: false # important to accept in-person applicants
 
 city: "Bogotá"
 name: "Colombia"
-latitude: "-34.098799"
-longitude: "-56.216998"
-address: ""
+latitude: "4.578820"
+longitude: "-74.250510"
+address: ""#Cra. 13 #90-17, Bogotá
 zip_code: ""
 state: ""
-phone: "(571) 580-6848"
+phone: "(57) 300 7282898"
 country: "Colombia"
 socials:
   - name: "Facebook"

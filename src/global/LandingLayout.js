@@ -1,137 +1,150 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import {Navbar} from '../new_components/NavbarDesktop';
-import {NavbarMobile} from '../new_components/NavbarMobile';
-import Footer from '../new_components/Footer';
-import LandingFooter from '../new_components/Footer/landing';
-import {SessionContext} from '../session';
-import '../assets/css/style.css';
-import {StaticQuery, graphql} from 'gatsby';
-import GlobalStyle from './GlobalStyle';
-import SEO from './SEO';
+import React from "react";
+import PropTypes from "prop-types";
+import { Navbar } from "../components/NavbarDesktop";
+import { NavbarMobile } from "../components/NavbarMobile";
+import Footer from "../components/Footer";
+import LandingFooter from "../components/Footer/landing";
+import { SessionContext } from "../session";
+import "../assets/css/style.css";
+import { StaticQuery, graphql } from "gatsby";
+import GlobalStyle from "./GlobalStyle";
+import SEO from "./SEO";
 
-const Layout = ({children, seo, context, landingFooter, landingNavbar}) => {
-  const {session} = React.useContext(SessionContext);
+const Layout = ({ children, seo, context, landingFooter, landingNavbar }) => {
+  const { session } = React.useContext(SessionContext);
 
   return (
     <StaticQuery
       query={graphql`
-      query LandingLayoutQuery($lang: String) {
-        allLocationYaml(filter: { fields: {lang: { eq: $lang }}}) {
-          edges{
-            node{
-              city
-              fields {
-                lang
-              }
-              button {
-                apply_button_text
-              }
-            }
-          }
-        }
-        allFooterYaml {
-          edges {
-            node {
-              newsletter{
-                heading
-                paragraph
-                button_text
-                thankyou
-              }
-              footer {
-                heading
-                width
-                items {
-                  name
-                  link
+        query LandingLayoutQuery($lang: String) {
+          allLocationYaml(filter: { fields: { lang: { eq: $lang } } }) {
+            edges {
+              node {
+                city
+                fields {
+                  lang
                 }
-              }
-              socials{
-                name
-                icon
-                link
-              }
-              policy{
-                name
-                link
-              }
-              fields {
-                lang
-              }
-            }
-          }
-
-        }
-        allNavbarYaml{
-          edges {
-            node {
-              navbar {
-                name
-                link
-                sub_menu{
-                  icon
-                  title
-                  link
-                  paragraph
-                  links{
-                    title
-                    level
-                    paragraph
-                    icon
-                    buttons{
-                      text
-                      link
-                    }
-                    sub_links{
-                      title
-                      link_to
-                    }
+                button {
+                  apply_button_text
+                }
+                custom_bar {
+                  active
+                  message
+                  button {
+                    label
+                    path
                   }
                 }
               }
-              language_button{
-                text
-                link
-              }
-              button {
-                apply_button_text
-                button_link
-                button_type
-                button_color_text
-                button_background_color
-                next_cohort
-                other_dates
-              }
-              fields {
-                lang
+            }
+          }
+          allFooterYaml {
+            edges {
+              node {
+                newsletter {
+                  heading
+                  paragraph
+                  button_text
+                  thankyou
+                }
+                footer {
+                  heading
+                  width
+                  items {
+                    name
+                    link
+                  }
+                }
+                socials {
+                  name
+                  icon
+                  link
+                }
+                policy {
+                  name
+                  link
+                }
+                fields {
+                  lang
+                }
               }
             }
           }
-        }  
+          allNavbarYaml {
+            edges {
+              node {
+                navbar {
+                  name
+                  link
+                  sub_menu {
+                    icon
+                    title
+                    link
+                    paragraph
+                    links {
+                      title
+                      level
+                      paragraph
+                      icon
+                      buttons {
+                        text
+                        link
+                      }
+                      sub_links {
+                        title
+                        link_to
+                      }
+                    }
+                  }
+                }
+                language_button {
+                  text
+                  link
+                }
+                button {
+                  apply_button_text
+                  button_link
+                  button_type
+                  button_color_text
+                  button_background_color
+                  next_cohort
+                  other_dates
+                }
+                fields {
+                  lang
+                }
+              }
+            }
+          }
           cookiebotYaml {
             domain_ID {
               id
             }
           }
-      }
-    `}
+        }
+      `}
       render={(data) => {
-        let myFooter = data.allFooterYaml.edges.find(item => item.node.fields.lang === context.lang)
-        let myNavbar = data.allNavbarYaml.edges.find(item => item.node.fields.lang === context.lang)
-        let myLocations = data.allLocationYaml.edges.filter(item => item.node.fields.lang === context.lang)
+        let myFooter = data.allFooterYaml.edges.find(
+          (item) => item.node.fields.lang === context.lang
+        );
+        let myNavbar = data.allNavbarYaml.edges.find(
+          (item) => item.node.fields.lang === context.lang
+        );
+        let myLocations = data.allLocationYaml.edges.filter(
+          (item) => item.node.fields.lang === context.lang
+        );
 
-        if (!myNavbar || myNavbar == undefined) throw Error("Navbar not found, yml is missing language information?")
+        if (!myNavbar || myNavbar == undefined)
+          throw Error("Navbar not found, yml is missing language information?");
         let _btnInfo = myNavbar.node.button;
-        if (session && session.location) _btnInfo = {..._btnInfo, ...session.location.button};
+        if (session && session.location)
+          _btnInfo = { ..._btnInfo, ...session.location.button };
 
         return (
           <>
             <SEO {...seo} context={context} />
-          {
-            landingNavbar === true 
-            ? null
-            : <>    
+            {landingNavbar === true ? null : (
+              <>
                 <Navbar
                   locationCity={myLocations}
                   onLocationChange={(slug) => setLocation(slug)}
@@ -149,28 +162,29 @@ const Layout = ({children, seo, context, landingFooter, landingNavbar}) => {
                   lang={context.lang}
                 />
               </>
-          }
+            )}
             <GlobalStyle />
-            <>
-              {children}
-            </>
+            <>{children}</>
 
-            {
-              landingFooter === true
-              ? <LandingFooter contenxt={context} yml={myFooter.node} session={session} />
-              : <Footer yml={myFooter.node} session={session} />
-            }
+            {landingFooter === true ? (
+              <LandingFooter
+                contenxt={context}
+                yml={myFooter.node}
+                session={session}
+              />
+            ) : (
+              <Footer yml={myFooter.node} session={session} />
+            )}
           </>
-        )
+        );
       }}
     />
-  )
+  );
 };
-
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-  seo: PropTypes.object
+  seo: PropTypes.object,
 };
 
 export default Layout;

@@ -1,0 +1,176 @@
+meta_info:
+  slug: becas-ticjob-espana # <--- URL 4geeksacademy.com/us/landing/example
+
+  visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
+  # This will show on social media when shared
+  title: "500.000€ en becas ¡Aplica ahora!"
+  description: "Aprende a programar en 4Geeks Academy a un precio imbatible. Becas superiores al 40%. ¡Lanza tu carrera!"
+  image: "/images/bg/remote.jpeg"
+  keywords: "Aprende a programar, 4Geeks academy, aprende programación, aprende ingeniería informática, aprende Inteligencia Artificial, aprende Data Science, aprende Machine Learning, ticjob"
+
+  template: "landing_nonav" # <--- choose your landing template
+  redirects: ["/landing/becas-ticjob-españa"] # <--- URL redirections to avoid 404 errors
+
+  # Set a particular course or location to the landing page
+  # this UTM fields will be also included in the CRM contact
+  utm_course: ["full-stack", "machine-learning-engineering"]
+  utm_location: madrid-spain
+  automation: strong # comma separated, "soft" is the default value
+  tag: website-lead # comma separated, "request_more_info" is the default value
+
+navbar:
+  logoUrl: "#" # relative(/apply), absolute(https://google.com) or id(#componentName)
+  buttonText: "Aplica ahora"
+  buttonUrl: "#bottom" # url accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
+
+form:
+  # posible fields: "first_name", "last_name", "full_name", "phone", "email"
+  # always the first_name, email and phone will be mandatory if added.
+  fields: ["full_name", "phone", "email"]
+  heading: "Solicita tu beca"
+  button_label: Aplica ahora
+  redirect: "/es/gracias" #you can redirect to another url or entirely diffrent website
+
+# jumbotron on the top (cannot be commented out)
+header_data:
+  tagline: "+500.000€ en Becas"
+  sub_heading: ""
+  partner_logo_url: "../../../static/images/partner/logo-ticjob-blanco.png"
+  background_image: "../../../static/images/bg/community.png"
+  image_filter: brightness(0.2)
+
+features:
+  marginTop: 0px #<-- separation between tagline and the bullets
+
+  #                                         up   left down  right
+  styles: '{ "fontSize": "16.5px", "line-height": "2", "margin": "10px 0px 10px 0px", "letter-spacing": ".5px" }'
+  text: Ticjob ofrece más de 500.000€ en Becas a sus usuarios para formación intensiva en 4Geeks Academy. No te quedes atrás, actualiza tus conocimientos o refuerza tu perfil estudiando Desarrollo Web o Inteligencia Artificial. Impulsarás tu carrera junto a una de las mejores comunidades de Desarrolladores del mundo. Como mínimo se te descontarán 2.200€ dependiendo de tu proceso de selección.  ¿Listo para unirte y reinventar tu futuro?
+  bullets:
+    - +150 becas, la mayoría superiores al 40%  
+    - Programas Full-Stack (desde 0) y AI/Machine Learning (avanzado)
+    - Formato part-time (16 semanas)
+
+follow_bar:
+  position: "top" # top, bottom, hidden
+  content:
+    text: "Solicita tu beca Ticjob ahora. \n Planes de pago de hasta 24 meses."
+    text_mobile: "Becas Ticjob. \n Plan de pago de hasta 24 m."
+    # devices:    XL      LG      MD      SM      XS
+    font_size: ["24px", "24px", "24px", "18px", "4.3vw"]
+  button:
+    text: "Aplica ya"
+    path: "#top" #top, #bottom, #anotherComponentId
+    # ├──if path is empty("") it point to top per default ("#" -> points to top)
+    # └── path accepts: relative(/example/path), absolute(https://google.com) or id(#idName)
+  phone:
+    text: "Llama "
+    number: null # change only if need to customize
+
+#
+# ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇
+#
+badges:
+  position: 1 # It's the position of the component that will be rendered first
+  heading: "4Geeks Academy es una de las mejores escuelas de programación del mundo. Avalan su excelencia diferentes premios y el reconocimiento de sus alumnos"
+
+about4Geeks:
+  position: 2
+  heading: ¿Qué hace a 4Geeks diferente? 
+  sub_heading: "Educación flexible e intensiva basada en metodologías disruptivas y eficaces como flipped classroom o learning by doing. +400 horas de aprendizaje práctico (ejercicios, proyectos). Te acompañaremos y prepararemos para afrontar procesos de selección y encontrar un nuevo trabajo en tecnología."
+  list:
+    - title: "GeekPal:  Mentorías 1:1 (live support) ilimitadas y de por vida."
+    - title: "Grupos reducidos (máximo 14 personas). Ratio 1:7 profesor alumno."
+    - title: " GeekForce: Apoyo profesional para siempre."
+    - title: "Acceso 24/7 a nuestra plataforma de aprendizaje y comunidad de +3000 Developers."
+  paragraph: ""
+  button_text: "Aplica ahora"
+  button_link: "#" # accepts url: relative(/us/apply), absolute(https://google.com) or component id(#componentName)
+  image: "../../../static/images/bg/remote.jpeg"
+  image_mobile: "../../../static/images/bg/remote.jpeg"
+
+iconogram:
+  position: 3
+  icons:
+  - icon: "touch"
+    title: completa el formulario antes del 1 de julio
+  - icon: "receive_mail"
+    title: recibirás un correo electrónico con toda la información para avanzar en el proceso
+  - icon: "talk"
+    title: haz una entrevista personal con el equipo de admisiones
+  - icon: "terminal"
+    title: recibe los resultados en 3 días y reserva tu plaza
+
+who_is_hiring:
+  position: 4
+  heading: "DÓNDE TRABAJAN NUESTROS ESTUDIANTES"
+  sub_heading: "Consigue un trabajo en menos de 3 meses gracias a nuestra creciente red de más de 500 socios de contratación. Accede a ofertas nacionales e internacionales y a una comunidad de más de 3500 graduados."
+  featured:
+    - name: "Facebook"
+      image: "../../../static/images/partner/facebook.png"
+    - name: "Microsoft"
+      image: "../../../static/images/partner/microsoft.png"
+    - name: "Apple"
+      image: "../../../static/images/partner/apple.png"
+
+choose_your_program:
+  position: 5
+  title: Nuestros Programas
+  paragraph: Programas en formato part-time con clases en vivo impartidas por profesionales de la programación del mundo real y diseñados pensando en lo que las empresas demandan.
+  programs:
+  - title: "Full-Stack Developer"
+    sub_title: "Nivel 1"
+    icon: "fullstack"
+    description: |
+      Desde 0 hasta convertirte en Programador Full-Stack Jr. Trabajarás con HTML5, CSS3, Bootstrap, JS, ReactJS, SQL, Python, Flask, REST API's, etc. para diseñar y crear webs responsive. Obtendrás una sólida base de front, back, bbdd, procesos distribuidos y despliegue a producción con instructores apasionados y un plan de estudios práctico y actualizado.
+
+      Disponible en modalidad part time.
+
+      Descarga aquí el <a href=https://storage.googleapis.com/4geeks-academy-website/syllabus/madrid-spain/Syllabus-Full-Stack-AI-ML-2022-Espa%C3%B1a.pdf target=_blank>programa de estudios</a>.
+    
+    text_link: Aplica ahora
+    link: "#" # moves to start position
+    
+  - title: "AI & Machine Learning"
+    sub_title: "Developers y perfiles STEM"
+    icon: "machine"
+    description: |
+      Explora los fundamentos de Machine Learning y Deep Learning con algunas de las tecnologías más poderosas  para escalar la inteligencia en los negocios. 
+       Practica con escenarios y casos reales y maneja las herramientas más utilizadas en la industria. Crea estrategías, implementa y manten en producción tus modelos de IA con privacidad, seguridad y ética. Conviértete en uno de los profesionales mejor pagados del sector. 
+      
+       Disponible en modalidad part-time. Descarga aquí el <a href=https://storage.googleapis.com/4geeks-academy-website/syllabus/madrid-spain/Syllabus-Full-Stack-AI-ML-2022-Espa%C3%B1a.pdf target=_blank>programa de estudios</a>.
+    text_link: Aplica ahora
+    link: "#"
+
+# Possible layouts: [two_column_left_image, two_column_right_image]
+components:
+  - name: python_y_javascript
+    position: 6
+    layout: two_column_right
+    background: "veryLightBlue2" # Name of the color(from components/Styling/index.js) or color code ex: #C9F9F9
+    image:
+      src: "/images/why-4geeks/python-image.png"
+      # /static/images/why-4geeks/python-image.png
+    # video: "B01-eTfgqqc"
+    heading:
+      text:
+        "Python y Javascript"
+        #           xl      lg      md      sm      xs
+      font_size: ["50px", "50px", "50px", "50px", "50px"]
+    content:
+      text: "Nuestros programas están basados en el uso de Phyton y Javascript. ¿La razón? En el mercado laboral JavaScript tiene 26 veces más vacantes de trabajo que Ruby on Rails. Python tiene 10 veces más oportunidades que Node.JS. Además, están entre las carreras mejor pagadas en todo el mundo.
+             
+             Otras herramientas que también aprenderás a usar en nuestros programas son: GitHub, Git, React, Amazon Web Services, Pandas, Matplotlib, Plotly, etc."
+      font_size: ["17px"]
+
+why_4geeks:
+  position: 7
+  heading: "Qué opina nuestra comunidad Geek"
+  sub_heading: ""
+  footer:
+    text: "Ver opciones de financiación"
+    text_link: "https://storage.googleapis.com/4geeks-academy-website/syllabus/madrid-spain/guia-de-pagos/Guia-de-Pagos-Becas-Ticjob.pdf"
+
+apply_schollarship: # form that is displayed at the end of the landing
+  # title: "Apoyo Profesional Ilimitado"
+  imageSide: "right"
+  image: "../../../static/images/comunity-support.png"

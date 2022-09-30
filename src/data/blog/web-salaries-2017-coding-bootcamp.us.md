@@ -10,7 +10,7 @@ image_alt: ""
 cluster: "coding-bootcamps"
 post_translations: ["pll_5703862f49f64"]
 status: "published"
-featured: "false"
+featured: false
 
 ---
 

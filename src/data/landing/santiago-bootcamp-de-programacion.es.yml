@@ -3,7 +3,7 @@ meta_info:
 
   # This will show on social media when shared
   title: "Bootcamp de programación en Santiago de Chile, aprende a programar en 9 o 16 sem y consigue trabajo como programador."
-  description: "La programación es escencial para tu éxito profesional, únete a 4Geeks Academy, el bootcamp de programación número uno de Chile."
+  description: "La programación es esencial para tu éxito profesional, únete a 4Geeks Academy, el bootcamp de programación número uno de Chile."
   image: "/images/bg/main-bg.jpg"
   keywords: "Bootcamp de Programación, Bootcamp de Codigo, Bootcamp de python, Bootcamp de React y Javascript, Bootcamp de Informática, Coding Bootcamp, 4Geeks Academy"
 
@@ -15,23 +15,35 @@ meta_info:
   # this UTM fields will be also included in the CRM contact
   utm_course: ["full-stack"]
   utm_location: santiago-chile
-  automation: soft #optional, this is the default value
-  tag: request_more_info #optional, this is the default value
+  automation: soft # comma separated, "soft" is the default value
+  tag: request_more_info # comma separated, "request_more_info" is the default value
 
 form:
   # posible fields: "first_name", "last_name", "full_name", "phone", "email"
   # always the first_name, email and phone will be mandatory if added.
   fields: ["full_name", "phone", "email"]
   heading: "Conoce más información"
-  motivation: "Llena el formulario y te enviaremos la info en menos de 5 min"
-  button_label: Obtener malla y más información
-  redirect: null #you can redirect to another url or entirely diffrent website
+  motivation: "Completa el formulario y te enviaremos la información en menos de 5 min a tu correo electrónico."
+  button_label: Obtener más información
+  redirect: "/es/gracias/?lang=es"  #you can redirect to another url or entirely diffrent website
+
+navbar:
+  buttonText: "Postular"
+  buttonUrl: "#bottom" # url accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
+  logoUrl: "#"
+
+
+apply_schollarship: # form that is displayed at the end of the landing
+  # title: "Get more info about this award-winning development course"
+  imageSide: "right"
+  image: "../../../static/images/comunity-support.png"
 
 # jumbotron on the top (cannot be commented out)
 header_data:
-  tagline: Bootcamp de programación
-  sub_heading: "Aprende a programar y consigue trabajo como desarrollador"
-  image: "../../../static/images/4geeks-main.jpg"
+  background: "#FFF1D1"
+  tagline: Conviértete en Desarrollador Web en 16 semanas trabajando en proyectos reales y con mentores profesionales. 
+  sub_heading: ""
+  badge: "../../../static/images/badges/switchup.png"
   image_filter: brightness(0.3)
 
 features:
@@ -40,18 +52,32 @@ features:
   #                                         up   left down  right
   styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
   bullets:
-    - No se requiere experiencia previa
-    - Horarios part-time y full-time. Online o Presencial
-    - Mentorias y career support de por vida
-    - Un desarrollador junior hace $900.000 CLP al mes
+    - De cero a programador en 16 semanas
+    - Mentorías y career support de por vida
+    - ¿Estudias o trabajas? Tienes la opción del horario Part Time
+    - Un desarrollador Jr puede ganar hasta $900.000 CLP al mes
+
+short_badges:
+  - name: "Premios Excelencia Educativa"
+    url: ""
+    image: "../../../static/images/badges/exelencia-educativa-es.png"
+    alt: "Mejor centro de Coding Bootcamp"
+  - name: "Newsweek"
+    url: ""
+    image: "../../../static/images/badges/newsweek-es.png"
+    alt: "Top Coding Bootcamps Newsweek"
+  - name: "Switchup"
+    url: ""
+    image: "../../../static/images/badges/reviews.png"
+    alt: "Best coding bootcamp Switchup 2021" 
 
 follow_bar:
   position: "top" # top, bottom, hidden
   content:
-    text: "Desde 184.311 CLP al mes."
-    text_mobile: "Desde 184.311 CLP al mes."
+    text: "Financiamiento sin interés. \n Plan de pago a 12 cuotas."
+    text_mobile: "Financiamiento sin interés. \n Hasta 12 cuotas."
     # devices:    XL      LG      MD      SM       XS
-    font_size: ["25px", "25px", "25px", "20px", "18px"]
+    font_size: ["25px", "25px", "25px", "18px", "4.3vw"]
   button:
     text: "Obtener más información"
     path: "#top"
@@ -62,24 +88,48 @@ follow_bar:
 # ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇
 #
 
-in_the_news:
+rating_reviews:
   position: 1
-  heading: "Lee sobre 4Geeks en los medios..."
-  filter: ["CNN Español", "La Tercera", "Las Ultimas Noticias", "Emol"]
+  heading: "Lee acerca de nosotros"
+  rating_list:
+    - alt: "Career Karma"
+      image: "../../../static/images/badges/career-karma.png"
+      rating: 4.8
+      url: "https://careerkarma.com/schools/4geeks-academy/"
+    - alt: "Switchup"
+      image: "../../../static/images/badges/switchup-img.png"
+      rating: 4.89
+      url: "https://www.switchup.org/bootcamps/4geeks-academy"
+    - alt: "Course Report"
+      image: "../../../static/images/badges/course-report.png"
+      rating: 4.84
+      url: "https://www.coursereport.com/schools/4geeks-academy"
+    - alt: "Google"
+      image: "../../../static/images/badges/google.png"
+      rating: 4.9
+      url: ""
 
 badges:
   position: 2
-  heading: " "
+  heading: "4Geeks Academy cuenta con premios y reconocimientos que validan su excelencia"
 
 program_details:
   position: 3
+  background: "#FFFFFF"
   heading: "Domina Python, JS y React"
   sub_heading: "Un curso de programación sobre las tecnologías más usadas del mundo"
 
-why_python:
+iconogram:
   position: 4
-  heading: "¿Por qué Python y React.js?" # optional or set to white space to hide
-  sub_heading: "Javascript es 26 veces más buscado que Ruby On Rails. Python es 10 veces más buscado que Node.js" # optional or set to white space to hide
+  icons:
+  - icon: "touch" 
+    title: Solicita información
+  - icon: "receive_mail"
+    title: Recibe un correo electrónico con los detalles
+  - icon: "talk"
+    title: Haz una entrevista con nuestro equipo
+  - icon: "terminal"
+    title: Aprende a programar con nosotros
 
 geeks_vs_others:
   position: 6
@@ -96,53 +146,27 @@ who_is_hiring:
   position: 8
   limit: 4
   heading: "¿Quién contrata a nuestros alumnos?"
-  sub_heading: "Nuestros partners de contratación crecen todos los días, con más de 150 aliados a nivel global y decenas de vacantes activas en nuestras bolsas de empleo."
+  sub_heading: "Nos encanta ver crecer a nuestros estudiantes, es por eso que nos esforzamos cada día por tener más aliados, para que puedas trabajar en empresas que te ayuden a seguir creciendo profesionalmente."
 
 alumni_projects:
   position: 9
   heading: "Así podría ser tu proyecto final del curso"
-  sub_heading: "Proyectos hechos por graduados de la academia"
+  sub_heading: "Proyectos hechos por estudiantes de la academia"
 
-# Possible layours: [two_column_left_image, two_column_right_image]
 components:
-  - name: top_coding_bootcamp
+  - name: python_y_javascript
     position: 5
-    layout: two_column_left
-    proportions: [4, 8]
+    layout: two_column_right
+    background: "veryLightBlue2" # Name of the color(from components/Styling/index.js) or color code ex: #C9F9F9
     image:
-      style: '{ "backgroundSize": "contain" }'
-      src: "/images/badges/switchup.png"
-      link: "https://www.switchup.org/bootcamps/4geeks-academy"
-    button:
-      text: "Leer testimoniales"
-      color: null
-      path: "https://www.switchup.org/bootcamps/4geeks-academy"
+      src: "/images/why-4geeks/python-image.png"
     heading:
       text:
-        "Hemos sido nombrados uno de los TOP coding bootcamps en el mundo"
-        #xl      lg     md     sm    xs
-      font_size: ["40px", "40px", "40px", "40px", "40px"]
-  - name: first_syllabus_form
-    position: 4
-    layout: syllabus
-    button:
-      text: "Descarga Instantánea"
-    heading:
-      text: "Descarga la Malla Educativa"
-      #xl      lg     md     sm    xs
-      font_size: ["40px", "40px", "40px", "40px", "40px"]
-  - name: working_as_software_developers
-    position: 8
-    proportions: [4, 8]
-    layout: two_column_left
-    image:
-      src: "https://storage.googleapis.com/4geeks-academy-website/landing-pictures/testimonials.webp"
-    heading:
-      text:
-        "89% de nuestros graduados ya trabajan como desarrolladores de software."
-        #xl      lg     md     sm    xs
-      font_size: ["40px", "34px"]
-# why_python:
-#   position: 7
-#   heading: "¿Por qué enseñamos Python?" # optional or set to white space to hide
-#   sub_heading: " " # optional or set to white space to hide
+        "Python y Javascript"
+        #           xl      lg      md      sm      xs
+      font_size: ["50px", "50px", "50px", "50px", "50px"]
+    content:
+      text: "Nuestro programa está basado en el uso de Python y Javascript. ¿La razón? En el mercado laboral JavaScript tiene 26 veces más vacantes de trabajo que Ruby on Rails y Python te permite acceder a distintas áreas del mundo de la programación.
+      
+      Otras herramientas que también aprenderás a usar en nuestro programa son: HTML5, CSS3, React, Flask, etc."
+      font_size: ["16px"]

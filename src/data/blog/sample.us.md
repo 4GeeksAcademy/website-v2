@@ -9,8 +9,8 @@ image_alt: ""
 excerpt: "Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vivamus sagittis lacus vel augue laoreet."
 intro: "Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.Aenean lacinia bibendum nulla sed consectetur. Donec sed odio dui."
 status: "published"
-featured: "true"
-unlisted: "true"
+featured: true
+visibility: "unlisted"
 cluster: "learn-to-code" # topic clusters, each of them has a landing page
 redirects: [
     #"/some/blog/path"

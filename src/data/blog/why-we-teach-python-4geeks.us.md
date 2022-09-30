@@ -9,7 +9,7 @@ image: "https://storage.googleapis.com/4geeks-academy-website/blog/2019/03/Scree
 image_alt: ""
 cluster: "coding-bootcamps"
 status: "published"
-featured: "true"
+featured: true
 
 ---
 

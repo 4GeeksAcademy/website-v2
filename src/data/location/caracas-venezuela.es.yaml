@@ -1,6 +1,6 @@
 meta_info:
-  slug: "bootcamp-programacion-caracas"
-  title: "Coding Bootcamp Caracas"
+  slug: "bootcamp-programacion-caracas-venezuela"
+  title: "Coding Bootcamp Caracas, Venezuela"
   description: "Conoce aquí todo sobre nuestro campus de bootcamp de programación de 4Geeks Academy en Caracas, Venezuela"
   position: 40
   image: "https://storage.googleapis.com/4geeks-academy-website/caracas-es.png"
@@ -10,8 +10,12 @@ meta_info:
       "/venezuela",
       "/caracas",
       "/es/location/impact-hub-caracas",
+      "/es/coding-campus/bootcamp-programacion-venezuela",
       "/es/location/caracas-venezuela",
+      "/es/coding-campus/bootcamp-programacion-caracas"
     ]
+  region: "latam"
+  dialCode: "58"
 
 seo_title: "4Geeks Academy Caracas"
 header:
@@ -29,6 +33,14 @@ button:
   syllabus_submit_text: "DESCARGAR"
   apply_button_link: "/aplica"
   cohort_more_details_text: "DETALLES"
+
+custom_bar:
+  active: true
+  message: Aplica y conviértete en Full-Stack Developer
+#   button:
+#     label: "Read More"
+#     path: "#" #string (can be inline path using #, relative path or absolute path)
+
 badges:
   title: ""
   paragraph: "Únete a uno de los coding bootcamps y comunidades de programadores más grandes del mundo, mejora tus habilidades de código o 
@@ -38,13 +50,14 @@ news:
   title: "4Geeks Academy Caracas en las noticias..."
 upcoming:
   no_dates_message: "Actualmente no hay próximas fechas para este campus"
+  actionMessage: "Avisenme fechas disponibles"
 
 info_box:
   heading: "Encuéntranos en Caracas"
   address: "Centro Financiero Madrid, Nivel Mezzanina Calle Madrid Municipio Baruta Distrito Capital, 1080, Miranda, Venezuela"
   contact_heading: "Contacts"
   whatsapp: " +58424-244-3542"
-  phone: "(786) 416-6640"
+  phone: "+58 424 244-3542"
   email: "info@4GeeksAcademy.com"
   image: "../../../static/images/locations/caracas-map.png"
   alt: ""
@@ -96,10 +109,10 @@ prices:
         header:
           heading_one: "PAGO FRACCIONADO"
           heading_two: "A CONVENIR"
-          sub_heading: "pregunta por nuestras becase, financiamientos y precios"
+          sub_heading: "Pregunta por precios y modalidades de pago"
         content:
-          price: "?"
-          price_info: "Por favor contáctanos para más información acerca de precios, descuentos y becas."
+          price: "Hasta 12 meses para pagar"
+          price_info: "Por favor contáctanos para más información acerca de precios, descuentos y modalidades de pago."
         button:
           button_text: "APLICAR AHORA"
     ## *****************
@@ -118,7 +131,7 @@ prices:
           sub_heading: "Recibe descuento si pagas upfront"
         content:
           price: "Según modalidad"
-          price_info: "Pregunta por facilidades de pago para la próxima cohorte"
+          price_info: "Pregunta por modalidades de pago para la próxima cohorte"
         button:
           button_text: "APLICAR AHORA"
 
@@ -128,10 +141,10 @@ prices:
         header:
           heading_one: "PAGO FRACCIONADO"
           heading_two: "A CONVENIR"
-          sub_heading: "pregunta por nuestras becase, financiamientos y precios"
+          sub_heading: "Pregunta por precios y modalidades de pago"
         content:
           price: "?"
-          price_info: "Por favor contáctanos para más información acerca de precios, descuentos y becas."
+          price_info: "Por favor contáctanos para más información acerca de precios, descuentos y modalidades de pago."
         button:
           button_text: "APLICAR AHORA"
 
@@ -146,7 +159,7 @@ prices:
           heading_two: ""
           sub_heading: ""
         content:
-          price: "La modalidad Part-Time no esta disponible"
+          price: "Programa no disponible"
           price_info: "Caracas - Venezuela"
         button:
           button_text: "Aplicar a otros cursos"
@@ -161,7 +174,7 @@ prices:
           heading_two: ""
           sub_heading: ""
         content:
-          price: "La modalidad Full-Time no esta disponible"
+          price: "Programa no disponible"
           price_info: "Caracas - Venezuela"
         button:
           button_text: "Aplicar a otros cursos"
@@ -177,7 +190,7 @@ prices:
           heading_two: ""
           sub_heading: ""
         content:
-          price: "La modalidad Part-Time no esta disponible"
+          price: "Programa no disponible"
           price_info: "Caracas - Venezuela"
         button:
           button_text: "Aplicar a otros cursos"
@@ -192,7 +205,7 @@ prices:
           heading_two: ""
           sub_heading: ""
         content:
-          price: "La modalidad Full-Time no esta disponible"
+          price: "Programa no disponible"
           price_info: "Caracas - Venezuela"
         button:
           button_text: "Aplicar a otros cursos"
@@ -205,12 +218,12 @@ in_person_available: true # important to accept in-person applicants
 
 city: "Caracas"
 name: "Venezuela"
-latitude: "10.484845"
-longitude: "-66.826593"
-address: "Sede Principal de El Nacional."
-iframeMapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d980.8012226679697!2d-66.827591170803!3d10.48450831824653!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c2a5836b8efe439%3A0x575c78dd416e7ef7!2s4Geeks%20Academy%20Venezuela!5e0!3m2!1ses-419!2scl!4v1621008667701!5m2!1ses-419!2scl"
+latitude: "10.484237234498359"
+longitude: "-66.860851629031"
+address: "Nest Coworking"
+iframeMapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3923.2121354418296!2d-66.86310468456094!3d10.48393656738948!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c2a5836b8efe439%3A0x575c78dd416e7ef7!2s4Geeks%20Academy%20Venezuela!5e0!3m2!1sen!2sve!4v1642190228489!5m2!1sen!2sve"
 zip_code: ""
-state: "Los Cortijos de Lourdes"
+state: "Miranda"
 country: "Venezuela"
 socials:
   - name: "Facebook"

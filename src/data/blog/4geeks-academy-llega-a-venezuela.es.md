@@ -9,7 +9,7 @@ description: "Conoce los detalles de la llegada de 4Geeks Academy a Venezuela"
 image: "https://4GeeksAcademy.com/images/4geeks-main.jpg"
 image_alt: ""
 status: "published"
-featured: "true"
+featured: false
 cluster: "tendencias-y-tecnologia"
 
 ---
@@ -33,6 +33,8 @@ Estudiar en 4Geeks Academy, amplía las posibilidades de los desarrolladores par
 Para Marco, la demanda ha aumentado porque “también hay un crecimiento de parte de las empresas y organismos en la necesidad de automatizar sus procesos, entendiendo que llevarlos a un ambiente web les permite la atención de los mismos sin la obligatoriedad de una ubicación física específica, lo que incrementa la velocidad de respuesta y la efectividad en la atención de las situaciones”.
 
 “A pesar de los esfuerzos de nuestras universidades e institutos por mantener currículos académicos vigentes, las tecnologías web llevan una evolución muy acelerada, lo que hace que los espacios de educación y capacitación tradicionales queden rezagados. Es allí donde 4Geeks Academy cumple un papel esencial, ya que cubre las necesidades inmediatas de capacitación técnica en tecnologías web de punta, permitiendo una rápida inserción laboral y una pronta atención a las necesidades técnicas que el mercado necesita”, enfatiza Marco Gómez.
+
+<call-to-action button_text="Ver programa" button_link="/es/coding-bootcamps/full-stack-part-time" background="rgba(0, 151, 205, 0.15)" title="Impulsa tu carrera, gracias a la programación" text="Te invitamos a impulsa tu carrera, aprendiendo a programar con nuestro Programa Full Stack Developer."></call-to-action>
 
 **El Curso**
 

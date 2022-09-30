@@ -1,0 +1,487 @@
+meta_info:
+  slug: "coding-bootcamp-toronto-canada"
+  title: "Toronto Coding Bootcamp in Canada"
+  position: 2
+  description: "Get to know here all about our coding bootcamp campus in Toronto, Canada of 4Geeks Academy"
+  image: ""
+  keywords: "null"
+  redirects:
+    [
+      "/toronto",
+    ]
+  region: "usa-canada"
+  dialCode: "1"
+
+seo_title: "Coding Bootcamp in Toronto, Canada"
+header:
+  tagline: "4Geeks Academy in Toronto, Canada"
+  paragraph: ""
+  image: "../../../static/images/locations/toronto-header.png"
+  alt: "4Geeks Academy online and in-person coding bootcamp in Toronto, Canada"
+
+badges:
+  title: ""
+  paragraph: "4Geeks Academy is the place where developers grow and thrive.
+ 
+We are licensed by the USA F. Dep. of Education.
+  
+Chosen as one of the top 35 coding bootcamps of the world and the top coding bootcamp in the world according to SwitchUp and Course Report.
+
+4Geeks Academy has been recognized as one of the top 10 coding bootcamps in the United States according to Newsweek.
+
+
+A community built for developers."
+news:
+  title: "4Geeks Academy Toronto has been reviewed in:"
+upcoming:
+  no_dates_message: "There are currently no upcoming dates for this campus"
+  actionMessage: "Let me know when dates are available"
+button_header:
+  button_text: See Programs
+  button_link: "#programs"
+button:
+  syllabus_button_text: "DOWNLOAD SYLLABUS" # <-- this will show everywhere in the website
+  apply_button_text: "APPLY NOW" # <-- this will show everywhere in the website
+  syllabus_submit_text: "DOWNLOAD"
+  apply_button_link: "/apply"
+  cohort_more_details_text: "DETAILS"
+
+custom_bar:
+  active: true
+  message: 'NOW open: 06/27 Full-Stack | 07/11 Machine Learning! <a class="customBar-link" href="/us/apply" taget="_blank" rel="noopener noreferrer nofollow">Apply</a>'
+  button: 
+    label: "Read More"
+    path: "#" #string (can be inline path using #, relative path or absolute path)
+
+info_box:
+  heading: "Find us in Toronto"
+  address: ""
+  iframeMapUrl: ""
+  contact_heading: "Contacts"
+  phone: "(786) 416-6640"
+  email: "info@4GeeksAcademy.com"
+  image: "../../../static/images/locations/miami-map.png"
+  alt: ""
+images_box:
+  heading: "What you should know about this location: "
+  content: "Toronto is one of the fastest growing tech ecosystems in the world. Join the #1 part-time Coding Bootcamp in Toronto and become part of the best place to learn to code in Canada. \\n Career Support and Mentorship for our students is for life. The office is open office hours during the week and on Saturday we host our famous 'Coding Weekends' when students and other developers gather to code all day with mentors, pizzas and drinks on the house!"
+  images:
+    - path: "../../../static/images/locations/remote.jpeg"
+      alt: "Remote Coding Bootcamp"
+    - path: "../../../static/images/locations/madrid-3.png"
+      alt: "4Geeeks España lab"
+    - path: "../../../static/images/locations/madrid-2.png"
+      alt: "4Geeeks España lab"
+    - path: "../../../static/images/locations/miami-people.jpeg"
+      alt: "4Geeeks miami day"
+    - path: "../../../static/images/locations/miami-old2.jpg"
+      alt: "4Geeeks miami lab"
+
+## HEADING SECTION
+
+## PRICES SECTION
+## MIAMI HAS 3 BOXES:
+## LEFT     BOX => UPFRONT OPTION
+## CENTER   BOX => FINANCIAL SLIDER OPTIONS
+## RIGHT    BOX => ISA - INCOMING SHARING AGREEMENT
+hasFinancialsOption: true
+prices:
+  full_stack:
+    full_time:
+      ## GENERAL INFO
+      slug: "full-time"
+      duration: "9 Weeks"
+      schedule: "full-time"
+      ## LEFT BOX SECTION FULL-TIME
+      ## CHANGE HERE THE INFO IN THE LEFT BOX
+      left_section:
+        header:
+          heading_one: "PAY ONLY AFTER"
+          heading_two: "YOU GET A JOB"
+          sub_heading: "and talk about the Income Sharing Agreement (ISA)"
+        content:
+          price: "9% of salary"
+          price_info: "Once you get a Job and for 4 years or until you reach 1.5 Rev Cap"
+        button:
+          button_text: "Apply Now"
+
+      ## USE THIS SECTION TO CHANGE THE SLIDER FINANCIAL OPTIONS IN THE CENTER BOX
+      center_section:
+        header:
+          heading_one: "EXTENDED"
+          heading_two: "PAYMENT PLAN"
+          sub_heading: "and enjoy the best Price in town"
+        plans:
+          - months: "60"
+            monthsInfo: "Financed"
+            payment: "$214.74"
+            paymentInfo: "per month + $0 deposit"
+            provider: "Skills Fund - Climb"
+            logo: "/images/climb-and-skillfund.png"
+            message: "We have partnered with Skills Fund and Climb in order to offer you the best payment options in town"
+          - months: "42"
+            monthsInfo: "Financed"
+            payment: "$314.10"
+            paymentInfo: "per month + $0 deposit"
+            provider: "Climb"
+            logo: "/images/climb-logo.png"
+            message: "Thanks to our partnership with Climb we have managed to create the most flexible payment plan in town"
+          - months: "36"
+            monthsInfo: "Financed"
+            payment: "$314.10"
+            paymentInfo: "per month + $0 deposit"
+            provider: "Skills Fund"
+            logo: "/images/skill-logo.png"
+            message: "Thanks to our partnership with Skills Fund we have managed to create a new special payment plan"
+          - months: "24"
+            monthsInfo: "Financed"
+            payment: "$408.06"
+            paymentInfo: "per month + 1,500 deposit"
+            provider: "Quotanda"
+            logo: "/images/quotanda-logo.png"
+            message: "Thanks to our partnership with Quotanda we have managed to create the most flexible payment plan in town"
+          - months: "12"
+            monthsInfo: "Financed"
+            payment: "$755.13"
+            paymentInfo: "per month + 1,500 deposit"
+            provider: "Quotanda"
+            logo: "/images/quotanda-logo.png"
+            message: "Thanks to our partnership with Quotanda we have managed to create the most flexible payment plan in town"
+          - months: "6"
+            monthsInfo: "Financed"
+            payment: "$1,449.73"
+            paymentInfo: "per month + 1,500 deposit"
+            provider: "Quotanda"
+            logo: "/images/quotanda-logo.png"
+            message: "Thanks to our partnership with Quotanda we have managed to create the most flexible payment plan in town"
+        button:
+          button_text: "Apply Now"
+      ## RIGHT BOX SECTION
+      ## CHANGE HERE THE INFO IN THE RIGHT BOX
+      right_section:
+        header:
+          heading_one: "PAY UPFRONT"
+          heading_two: "(OUT OF POCKET)"
+          sub_heading: "and enjoy the best Price in town"
+        content:
+          price: "$9,999.00"
+          price_info: "Single payment. Get a 10% Discount!"
+        button:
+          button_text: "Apply Now"
+    ## *****************
+    ## PART-TIME SECTION
+    ## *****************
+    part_time:
+      slug: "part-time"
+      duration: "16 Weeks"
+
+      ## LEFT BOX SECTION PART-TIME
+      ## CHANGE HERE THE INFO IN THE LEFT BOX
+      left_section:
+        header:
+          heading_one: "PAY ONLY AFTER"
+          heading_two: "YOU GET A JOB"
+          sub_heading: "Let's talk about the Income Sharing Agreement (ISA)"
+        content:
+          price: "9% of salary"
+          price_info: "Once you get a Job and up to 1.5 Cap"
+        button:
+          button_text: "Apply Now"
+
+      ## USE THIS SECTION TO CHANGE THE SLIDER FINANCIAL OPTIONS IN THE CENTERED BOX
+      center_section:
+        header:
+          heading_one: "EXTENDED"
+          heading_two: "PAYMENT PLAN"
+          sub_heading: "and enjoy the Best Price in town"
+        plans:
+          - months: "60 mo"
+            monthsInfo: "Financed"
+            payment: "$169.53"
+            paymentInfo: "per month + $0 deposit"
+            provider: "Skills Fund - Climb"
+            logo: "/images/skill-logo.png"
+            message: "We have partnered with Skills Fund and Climb in order to offer you the best payment options in town"
+          - months: "42 mo"
+            monthsInfo: "Financed"
+            payment: "$314.10"
+            paymentInfo: "per month + $0 deposit"
+            provider: "Climb"
+            logo: "/images/climb-logo.png"
+            message: "Thanks to our partnership with Quotanda we have managed to create the most flexible payment plan in town"
+          - months: "36 mo"
+            monthsInfo: "Financed"
+            payment: "$247.97"
+            paymentInfo: "per month + $0 deposit"
+            provider: "Skills Fund"
+            logo: "/images/skill-logo.png"
+            message: "Thanks to our partnership with Skills Fund we have managed to create a new special payment plan"
+          - months: "24 mo"
+            monthsInfo: "Financed"
+            payment: "$312.04"
+            paymentInfo: "per month + 1,500 deposit"
+            provider: "Quotanda"
+            logo: "/images/quotanda-logo.png"
+            message: "Thanks to our partnership with Quotanda we have managed to create the most flexible payment plan in town"
+          - months: "12 mo"
+            monthsInfo: "Financed"
+            payment: "$577.43"
+            paymentInfo: "per month + 1,500 deposit"
+            provider: "Quotanda"
+            logo: "/images/quotanda-logo.png"
+            message: "Thanks to our partnership with Quotanda we have managed to create the most flexible payment plan in town"
+          - months: "6 mo"
+            monthsInfo: "Financed"
+            payment: "$1,108.58"
+            paymentInfo: "per month + 1,500 deposit"
+            provider: "Quotanda"
+            logo: "/images/quotanda-logo.png"
+            message: "Thanks to our partnership with Quotanda we have managed to create the most flexible payment plan in town"
+        button:
+          button_text: "Apply Now"
+      ## RIGHT BOX SECTION
+      ## CHANGE HERE THE INFO IN THE RIGHT BOX
+      right_section:
+        header:
+          heading_one: "PAY UPFRONT"
+          heading_two: "(OUT OF POCKET)"
+          sub_heading: "and enjoy the Best Price in town"
+        content:
+          price: "$8,999.00"
+          price_info: "Single payment. Get a 10% Discount!"
+        button:
+          button_text: "Apply Now"
+
+  software_engineering:
+    # slug: "software-engineering"
+    # duration: "16 Weeks"
+    part_time:
+      slug: "part-time"
+      duration: "16 Weeks"
+
+      ## LEFT BOX SECTION PART-TIME
+      ## CHANGE HERE THE INFO IN THE LEFT BOX
+      left_section:
+        header:
+          heading_one: "PAY ONLY AFTER"
+          heading_two: "YOU GET A JOB"
+          sub_heading: "and talk about the Income Sharing Agreement (ISA)"
+        content:
+          price: "9% of salary"
+          price_info: "Once you get a Job and for 4 years or until you reach 1.5 Rev Cap"
+        button:
+          button_text: "Apply Now"
+
+      ## USE THIS SECTION TO CHANGE THE SLIDER FINANCIAL OPTIONS IN THE CENTERED BOX
+      center_section:
+        header:
+          heading_one: "EXTENDED"
+          heading_two: "PAYMENT PLAN"
+          sub_heading: "and enjoy the best pricing in town"
+        plans:
+          - months: "60 mo"
+            monthsInfo: "Financed"
+            payment: "$269.53"
+            paymentInfo: "per month + $0 deposit"
+            provider: "Skills Fund - Climb"
+            logo: "/images/skill-logo.png"
+            message: "We have partened with Skills Fund and Climb in order to offer you the best payment options in town"
+          - months: "42 mo"
+            monthsInfo: "Financed"
+            payment: "$384.10"
+            paymentInfo: "per month + $0 deposit"
+            provider: "Climb"
+            logo: "/images/climb-logo.png"
+            message: "Thanks to our partnership with Quotanda we have managed to create the most flexible payment plan in town"
+          - months: "36 mo"
+            monthsInfo: "Financed"
+            payment: "$447.97"
+            paymentInfo: "per month + $0 deposit"
+            provider: "Skills Fund"
+            logo: "/images/skill-logo.png"
+            message: "Thanks to our partnership with Skills Fund we have managed to create a new special payment plan"
+          - months: "24 mo"
+            monthsInfo: "Financed"
+            payment: "$612.04"
+            paymentInfo: "per month + 1,500 deposit"
+            provider: "Quotanda"
+            logo: "/images/quotanda-logo.png"
+            message: "Thanks to our partnership with Quotanda we have managed to create the most flexible payment plan in town"
+          - months: "12 mo"
+            monthsInfo: "Financed"
+            payment: "$1277.43"
+            paymentInfo: "per month + 1,500 deposit"
+            provider: "Quotanda"
+            logo: "/images/quotanda-logo.png"
+            message: "Thanks to our partnership with Quotanda we have managed to create the most flexible payment plan in town"
+          - months: "6 mo"
+            monthsInfo: "Financed"
+            payment: "$2,508.58"
+            paymentInfo: "per month + 1,500 deposit"
+            provider: "Quotanda"
+            logo: "/images/quotanda-logo.png"
+            message: "Thanks to our partnership with Quotanda we have managed to create the most flexible payment plan in town"
+        button:
+          button_text: "Apply Now"
+      ## RIGHT BOX SECTION
+      ## CHANGE HERE THE INFO IN THE RIGHT BOX
+      right_section:
+        header:
+          heading_one: "PAY UPFRONT"
+          heading_two: "(OUT OF POCKET)"
+          sub_heading: "and enjoy the best pricing in town"
+        content:
+          price: "$11,499.00"
+          price_info: "single payment"
+        button:
+          button_text: "Apply Now"
+
+    full_time:
+      slug: "full_time"
+      duration: "?"
+
+      left_section:
+        header:
+          heading_one: "Software Engineering"
+          heading_two: ""
+          sub_heading: ""
+        content:
+          price: "Full-Time modality is not available"
+          price_info: "Orlando"
+        button:
+          button_text: "Apply another courses"
+
+  machine_learning:
+    part_time:
+      slug: "part_time"
+      duration: "18 Weeks"
+
+      ## LEFT BOX SECTION PART-TIME
+      ## CHANGE HERE THE INFO IN THE LEFT BOX
+      left_section:
+        header:
+          heading_one: "PAY ONLY AFTER"
+          heading_two: "YOU GET A JOB"
+          sub_heading: "and talk about the Income Sharing Agreement (ISA)"
+        content:
+          price: "9% of salary"
+          price_info: "Once you get a Job and for 4 years or until you reach 1.5 Rev Cap"
+        button:
+          button_text: "Apply Now"
+
+      ## USE THIS SECTION TO CHANGE THE SLIDER FINANCIAL OPTIONS IN THE CENTERED BOX
+      center_section:
+        header:
+          heading_one: "EXTENDED"
+          heading_two: "PAYMENT PLAN"
+          sub_heading: "and enjoy the best pricing in town"
+        plans:
+          - months: "60 mo"
+            monthsInfo: "Financed"
+            payment: "$339.53"
+            paymentInfo: "per month + $0 deposit"
+            provider: "Skills Fund - Climb"
+            logo: "/images/skill-logo.png"
+            message: "We have partened with Skills Fund and Climb in order to offer you the best payment options in town"
+          - months: "42 mo"
+            monthsInfo: "Financed"
+            payment: "$549.10"
+            paymentInfo: "per month + $0 deposit"
+            provider: "Climb"
+            logo: "/images/climb-logo.png"
+            message: "Thanks to our partnership with Quotanda we have managed to create the most flexible payment plan in town"
+          - months: "36 mo"
+            monthsInfo: "Financed"
+            payment: "$649.9"
+            paymentInfo: "per month + $0 deposit"
+            provider: "Skills Fund"
+            logo: "/images/skill-logo.png"
+            message: "Thanks to our partnership with Skills Fund we have managed to create a new special payment plan"
+          - months: "24 mo"
+            monthsInfo: "Financed"
+            payment: "$912.04"
+            paymentInfo: "per month + 1,500 deposit"
+            provider: "Quotanda"
+            logo: "/images/quotanda-logo.png"
+            message: "Thanks to our partnership with Quotanda we have managed to create the most flexible payment plan in town"
+          - months: "12 mo"
+            monthsInfo: "Financed"
+            payment: "$1377.43"
+            paymentInfo: "per month + 1,500 deposit"
+            provider: "Quotanda"
+            logo: "/images/quotanda-logo.png"
+            message: "Thanks to our partnership with Quotanda we have managed to create the most flexible payment plan in town"
+          - months: "6 mo"
+            monthsInfo: "Financed"
+            payment: "$2,908.58"
+            paymentInfo: "per month + 1,500 deposit"
+            provider: "Quotanda"
+            logo: "/images/quotanda-logo.png"
+            message: "Thanks to our partnership with Quotanda we have managed to create the most flexible payment plan in town"
+        button:
+          button_text: "Apply Now"
+      ## RIGHT BOX SECTION
+      ## CHANGE HERE THE INFO IN THE RIGHT BOX
+      right_section:
+        header:
+          heading_one: "PAY UPFRONT"
+          heading_two: "(OUT OF POCKET)"
+          sub_heading: "And enjoy the best pricing in town. Member of 4Geeks? Ask for Member DISCOUNTS!"
+        content:
+          price: "$13,499.00"
+          price_info: "single payment"
+        button:
+          button_text: "Apply Now"
+
+    full_time:
+      slug: "full_time"
+      duration: "?"
+
+      left_section:
+        header:
+          heading_one: "Machine Learning"
+          heading_two: ""
+          sub_heading: ""
+        content:
+          price: "Full-Time modality is not available"
+          price_info: "Orlando"
+        button:
+          button_text: "Apply another courses"
+
+active_campaign_location_slug: "toronto-canada"
+breathecode_location_slug: "toronto-canada"
+gdpr_compliant: false # do we need to ask for permision?
+in_person_available: true # important to accept in-person applicants
+
+city: "Toronto"
+name: "Toronto, Canada"
+latitude: "43.650688"
+longitude: "-79.391747"
+phone: "+1 (786) 416-6640"
+address: ""
+zip_code: ""
+state: "Ontario"
+country: "Canada"
+socials:
+  - name: "Facebook"
+    icon: "facebook"
+    link: "https://www.facebook.com/4geeksacademy"
+  - name: "Twitter"
+    icon: "twitter"
+    link: "https://www.twitter.com/4geeksacademy"
+  - name: "Instagram"
+    icon: "instagram"
+    link: "https://www.instagram.com/4geeksacademy"
+  - name: "Meetup"
+    icon: "meetup"
+    link: "https://www.meetup.com/4geeks-academy"
+courses:
+  - "Full-Time"
+  - "Part-Time"
+flag_icon: ""
+value: "Toronto"
+defaultLanguage: "us" # All lead marketing communications will arrive on this language
+
+documents:
+  payment_guidebook:
+    url: "https://storage.googleapis.com/4geeks-academy-website/blog/2017/10/4GA-Payment-Guidebook-2.pdf"

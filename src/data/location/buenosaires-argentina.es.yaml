@@ -5,13 +5,15 @@ meta_info:
   description: "Conoce aquí todo sobre nuestro campus de bootcamp de programación en Argentina, Buenos Aires de 4Geeks Academy aquí"
   image: ""
   # it will not show up on the applications forms
-  unlisted: false
+  visibility: "visible"
   keywords: "Coding Bootcamp Campus Argentina"
   redirects: [
     # WARN: This specific slug, does not allow to change language
     # "/es/coding-campus/bootcamp-programacion-argentina"
     /es/coding-campus/bootcamp-programacion-argentina
     ]
+  region: "latam"
+  dialCode: "54"
 
 seo_title: "Aprende a programar en Argentina"
 header:
@@ -30,6 +32,14 @@ button:
   syllabus_submit_text: "DESCARGAR"
   apply_button_link: "/aplica"
   cohort_more_details_text: "DETALLES"
+
+custom_bar:
+  active: true
+  message: Conviértete en programador. Recibe mentoría de código y de carrera de por vida. Paga desde $150 al mes.
+  # button: 
+    # label: "Read More"
+    # path: "#" #string (can be inline path using #, relative path or absolute path)
+
 badges:
   title: ""
   paragraph: "Únete a uno de los coding bootcamps y comunidades de programadores más grandes del mundo, mejora tus habilidades de código o 
@@ -39,14 +49,17 @@ news:
   title: "4Geeks Academy Argentina en las noticias..."
 upcoming:
   no_dates_message: "Actualmente no hay próximas fechas para este campus"
+  actionMessage: "Avisenme fechas disponibles"
 
 info_box:
   heading: "Encuéntranos en Argentina"
   address: ""
   iframeMapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1126.521243034489!2d-80.20142868794088!3d25.759937884725943!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b153865e526d%3A0xf884fb3f86a9c7db!2s4Geeks%20Academy!5e0!3m2!1ses-419!2scl!4v1621010581768!5m2!1ses-419!2scl"
   contact_heading: "Escríbenos al Whatsapp"
-  phone: "(506) 8692 8372"
-  email: "info@4GeeksAcademy.com"
+  phone: Llámanos +57 300 7282898
+  whatsapp: +57 300 7282898
+  whatsapp_link: "https://wa.me/+573007282898"
+  email: latam@4GeeksAcademy.com
 
 images_box:
   heading: "Lo que deberías saber sobre nuestra sede en Argentina: "
@@ -113,25 +126,25 @@ prices:
       ## CHANGE HERE THE INFO IN THE LEFT BOX
       left_section:
         header:
-          heading_one: "FULL-TIME"
-          sub_heading: ""
+          heading_one: "PART-TIME"
+          sub_heading: "Pregunta por las becas y descuentos"
         content:
-          price: "Pay upfront and get a discount or ask for a 2 payment options"
-          price_info: ""
+          price: "US $3,600"
+          price_info: "Un pago"
         button:
-          button_text: "APLICAR AHORA"
+          button_text: "APPLY NOW"
 
       ## RIGHT BOX SECTION
       ## CHANGE HERE THE INFO IN THE RIGHT BOX
       right_section:
         header:
-          heading_one: "PART-TIME"
-          sub_heading: ""
+          heading_one: "Plan de pagos"
+          sub_heading: "Extendido"
         content:
-          price: "Pay upfront and get a discount or ask for a 3 - 4 payment options"
-          price_info: ""
+          price: "US $170"
+          price_info: "24 meses/cuotas"
         button:
-          button_text: "APLICAR AHORA"
+          button_text: "Aplica YA"
 
   software_engineering:
     part_time:

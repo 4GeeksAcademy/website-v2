@@ -9,7 +9,7 @@ image: "https://storage.googleapis.com/4geeks-academy-website/blog/2016/01/launc
 image_alt: ""
 cluster: "trends-and-tech"
 status: "published"
-featured: "false"
+featured: false
 
 ---
 

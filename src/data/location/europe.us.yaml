@@ -1,7 +1,7 @@
 meta_info:
   slug: "europe-online-coding-bootcamp"
   title: "Online Coding Bootcamps in Europe"
-  position: 21
+  position: 1001
   description: "Discover here all the online coding bootcamps taught by 4geeks Academy. Sign up today!"
   image: ""
   keywords: "null"
@@ -12,6 +12,7 @@ meta_info:
       "/online",
       "/us/location/online-remote",
     ]
+  region: "europe"
 
 seo_title: "Online Coding Bootcamp Europe"
 header:
@@ -29,6 +30,14 @@ button:
   syllabus_submit_text: "DOWNLOAD"
   apply_button_link: "/apply"
   cohort_more_details_text: "DETAILS"
+
+custom_bar:
+  active: true
+  message: 4Geeks offers scholarships and financing tailored to your needs. <a class="customBar-link" href="/us/apply" rel="noopener noreferrer nofollow">¡Apply now!</a>
+#   button: 
+#     label: "Read More"
+#     path: "#" #string (can be inline path using #, relative path or absolute path)
+
 badges:
   title: ""
   paragraph: "4Geeks Academy is the place where developers grow and thrive.
@@ -44,6 +53,7 @@ news:
   title: "4Geeks Academy in the news..."
 upcoming:
   no_dates_message: "There are currently no upcoming dates for this campus"
+  actionMessage: "Let me know when dates are available"
 
 info_box:
   heading: "Find us Online"
@@ -61,6 +71,14 @@ images_box:
   images:
     - path: "../../../static/images/locations/remote.jpeg"
       alt: "Remote Coding Bootcamp"
+    - path: "../../../static/images/locations/madrid-3.png"
+      alt: "4Geeeks España lab"
+    - path: "../../../static/images/locations/madrid-2.png"
+      alt: "4Geeeks España lab"
+    - path: "../../../static/images/locations/miami-people.jpeg"
+      alt: "4Geeeks miami day"
+    - path: "../../../static/images/locations/miami-old2.jpg"
+      alt: "4Geeeks miami lab"
 
 ## HEADING SECTION
 
@@ -247,8 +265,8 @@ breathecode_location_slug: "europe"
 gdpr_compliant: true # do we need to ask for permision?
 in_person_available: false # important to accept in-person applicants
 
-city: "Europe/Online"
-name: "Europe Online/Remote"
+city: "Rest of Europe"
+name: "Rest of Europe"
 phone: "+34 910 86 69 83"
 latitude: "45.764042"
 longitude: "4.835659"

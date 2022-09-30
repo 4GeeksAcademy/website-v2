@@ -1,0 +1,336 @@
+meta_info:
+  slug: example-downloadable # <--- URL 4geeksacademy.com/us/landing/example
+
+  # This will show on social media when shared
+  title: ""
+  description: ""
+  image: "/images/bg/remote.jpeg"
+  keywords: ""
+  visibility: "hidden" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
+  template: "landing_a" # <--- choose your landing template
+  redirects: [""] # <--- URL redirections to avoid 404 errors
+
+  automation: downloadable # optional, lead as "null" if you don't know, it can be more than one (comma separated)
+  tag: request_downloadable # mandatory: at lease one tag (comma separated)
+  current_download: "python-guide"
+
+navbar:
+  logoUrl: "#"
+  buttonText: "Solicitar" # this modifies the button text in the navbar
+  buttonUrl: "#bottom"
+# └── url accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
+
+form:
+  # posible fields: "first_name", "last_name", "full_name", "phone", "email"
+  # always the first_name, email and phone will be mandatory if added.
+  fields: ["full_name", "phone", "email"]
+  heading: "Request more info."
+  motivation: "" # < -- subtitle ideal to movitate people on filling the form
+  button_label: SEND
+  redirect: "https://google.com" #you can redirect to another url or entirely diffrent website
+
+# jumbotron on the top (cannot be commented out)
+header_data:
+  background: "#FFF1D1"
+  tagline: Aprende a programar
+  sub_heading: in only 16 weeks (part-time)
+  partner_logo_url: "../../../static/images/partner/landing-jobs.png" #display a logo of the partner
+  badge: "../../../static/images/badges/switchup.png"
+  image: "../../../static/images/4geeks-main.jpg"
+  image_filter: brightness(0.4) #0 is dark, 1 is bright
+
+features:
+  marginTop: 20px #<-- separation between tagline and the bullets
+  #                                         up   left down  right
+  styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
+  text: Landing Jobs is offering more than €1,000,000 in Scholarships to study Web Development at 4Geeks Academy. The minimum scholarship is 30% and they will be awarded based on the results of the selection process. Whether you want to start your career as a Junior programmer or upskill  and become a Senior Developer, don't miss out on this amazing opportunity.
+  bullets:
+    - Un Desarrollador en Madrid hace €25mil anual
+    - Hay más vacantes que en cualquier otra industria
+    - Impulsa tu Carrera y hazte programador de software
+
+follow_bar:
+  position: "top" # top, bottom, hidden
+  content:
+    text: "Solicita una beca de hasta 2.750 euros. \n Planes de pago de hasta 24 meses."
+    text_mobile: "Becas de €2.750 . \n Plan de pago de 24 m. \n ¡Últimas plazas!"
+    # devices:   XL      LG    MD      SM    XS
+    font_size: ["25px", "25px", "25px", "18px", "4.3vw"]
+  button:
+    text: "Más información"
+    path: "#bottom" # #top, #bottom, #anotherComponentId
+    # ├──if path is empty("") it point to top per default
+    # └── path accepts: relative(/example/path), absolute(https://google.com) or id(#idName)
+  phone:
+    text: "Llama "
+    number: "+1 (786) 416-6640" # you can set your own phone number, or leave it false to use the utm_location number
+
+#
+# ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇ 
+#
+rating_reviews:
+  position: 1
+  heading: "One of the Top Coding Courses in the World"
+  rating_list:
+    - alt: "Career Karma"
+      image: "../../../static/images/badges/career-karma.png"
+      rating: 4.86
+      url: ""
+    - alt: "Switchup"
+      image: "../../../static/images/badges/switchup-img.png"
+      rating: 4.86
+      url: ""
+    - alt: "Coruse Report"
+      image: "../../../static/images/badges/course-report.png"
+      rating: 4.86
+      url: ""
+    - alt: "Google"
+      image: "../../../static/images/badges/google.png"
+      rating: 4.86
+      url: ""
+
+in_the_news:
+  position: 1
+  heading: "4Geeks en los medios"
+  filter: ["CNN Español","La Tercera","Las Ultimas Noticias","Emol"] # remove this filter property if you don't want to filter the news logos
+
+why_4geeks:
+  position: 2
+  heading: "Porqué 4Geeks"
+  sub_heading: "Porque somos los mejores"
+  footer:
+    text: "Ver opciones de financiación"
+    text_link: "#"
+
+geeks_vs_others:
+  position: 3
+  heading: "¿Qué hace a 4Geeks Academy exitoso?"
+  paragraph: ""
+  sub_heading: "lorem ipsum dot simet"
+  total_rows: 5
+
+program_details:
+  position: 4
+  heading: "Lo que aprenderás"
+  background: "#FFFFFF"
+  sub_heading: "Las tecnologias más buscadas en el mercado laboral"
+
+about4Geeks:
+  position: 2
+  heading: Flexible and intensive education
+  sub_heading: "More than 400 hours of practical learning (exercises, projects). You will be able to improve your skills in order to face interviews and different selection processes that will allow you to find a job as a Junior or Senior Developer."
+  list:
+    - title: "Lifetime Career Support"
+    - title: "Financial options to complement your scholarship"
+    - title: "Ratio 1:5 teacher student. Unlimited 1 on 1 mentoring"
+    - title: "Preparation for interviews and selection processes"
+  paragraph: ""
+  button_text: "Apply for a scholarship"
+  button_link: "#" # accepts url: relative(/us/apply), absolute(https://google.com) or component id(#componentName)
+  image: "../../../static/images/bg/community.png"
+  image_mobile: "../../../static/images/bg/community.png"
+
+alumni_projects:
+  position: 5
+  heading: "Alumnos"
+  sub_heading: "Lo que aprenderás"
+
+who_is_hiring:
+  limit: 4
+  position: 4
+  heading: "OUR STUDENTS WORK AT"
+  sub_heading: "Get a job in less than 3 months thanks to our growing network of more than 500 technology companies. Access to national and international offers and a community of more than 2000 graduates"
+  featured:
+    - name: "Facebook"
+      image: "../../../static/images/partner/facebook.png"
+    - name: "Microsoft"
+      image: "../../../static/images/partner/microsoft.png"
+    - name: "Apple"
+      image: "../../../static/images/partner/apple.png"
+
+choose_your_program:
+  position: 5
+  title: Our Programs____Downloadable
+  paragraph: Programs in Full-Time or Part-Time modality with live classes taught by experts
+  programs:
+  - title: "Full Stack Developer"
+    sub_title: "Level 1"
+    icon: "fullstack"
+    description: |
+      From 0 to becoming a Full-Stack Jr. programmer, you will work with HTML5, CSS3, Bootstrap, JS, Reactjs, SQL, Python, Flask, REST API's, etc. to design and create responsive websites. You'll gain a solid foundation of front, back, database, distributed processes, and deployment with passionate instructors and an up-to-date, hands-on syllabus.
+      Available Part-Time or Full-Time mode. Download <a href=https://storage.googleapis.com/4geeks-academy-website/syllabus/europe/Syllabus%20Europe%20EN.pdf target=_blank>"here the syllabus"</a>.  
+    
+    text_link: Apply for a scholarship
+    link: "#" # moves to start position
+    
+  - title: "AI & Machine Learning"
+    sub_title: "Developers and STEM Profiles"
+    icon: "machine"
+    description: |
+      Get trained by a renowned expert in A.I.; explore Machine Learning's fundamentals and Deep Learning with some of the most powerful technologies that truly scale intelligence for business. Practice with real-life business scenarios typical in business and review some of the tools used in the industry. Strategize and develop your A.I. following the lifecycle development from start to end, including deployment into production and maintenance with Privacy, Security, and Ethics. 
+      Download <a href=https://storage.googleapis.com/4geeks-academy-website/syllabus/europe/Syllabus%20Europe%20EN.pdf target=_blank>"here the syllabus"</a>. 
+      
+
+    text_link: Apply for a scholarship
+    link: "#"
+
+badges:
+  position: 3
+  heading: ""
+
+apply_schollarship: # form that is displayed at the end of the landing
+  # title: "Apoyo Profesional Ilimitado"
+  imageSide: "right"
+  image: "../../../static/images/comunity-support.png"
+
+
+# Possible layours: [two_column_left, two_column_right]
+components:
+  - name: isa_explanation
+    position: 2
+    layout: columns
+    proportions: [3, 2]
+    heading:
+      text: "How it Works"
+    columns:
+      - size: [4, 4, 6, 6]
+        content:
+          text: "Coding First: Focus on your education and not in the cost of the program."
+          font_size: ["40px", "34px", "34px", "25px", "20px"]
+        image:
+          style: '{ "height": "80px", "backgroundSize": "contain", "margin": "20px 0 20px 0" }'
+          src: "/images/isa/isa1.png"
+      - size: [4, 4, 6, 6]
+        content:
+          text: "Lowest Rate in USA: 9% of your future Income will be shared with 4Geeks"
+          font_size: ["40px", "34px", "34px", "25px", "20px"]
+        image:
+          style: '{ "height": "80px", "backgroundSize": "contain", "margin": "20px 0 20px 0" }'
+          src: "/images/isa/isa2.png"
+      - size: [4, 4, 6, 6]
+        content:
+          text: "Time Frame: You will have -at least- 48 months to meet the revenue cap"
+          font_size: ["40px", "34px", "34px", "25px", "20px"]
+        image:
+          style: '{ "height": "80px", "backgroundSize": "contain", "margin": "20px 0 20px 0" }'
+          src: "/images/isa/isa3.png"
+      - size: [4, 4, 6, 6]
+        content:
+          text: "Revenue Cap: 4Geeks  caps total payment at 1.5x the tuition cost."
+          font_size: ["40px", "34px", "34px", "25px", "20px"]
+        image:
+          style: '{ "height": "80px", "backgroundSize": "contain", "margin": "20px 0 20px 0" }'
+          src: "/images/isa/isa4.jpg"
+      - size: [4, 4, 6, 6]
+        content:
+          text: "Minimum Wage: You will start paying once you hit the $35k a year wage. Get ready for more!"
+          font_size: ["40px", "34px", "34px", "25px", "20px"]
+        image:
+          style: '{ "height": "80px", "backgroundSize": "contain", "margin": "20px 0 20px 0" }'
+          src: "/images/isa/isa5.png"
+      - size: [4, 4, 6, 6]
+        content:
+          text: "Admissions Requirements: You have to be fully committed, agree to a Full Disclosure and get ready for an amazing career."
+          font_size: ["40px", "34px", "34px", "25px", "20px"]
+        image:
+          style: '{ "height": "80px", "backgroundSize": "contain", "margin": "20px 0 20px 0" }'
+          src: "/images/isa/isa6.png"
+  - name: more_testimonials
+    position: 8
+    layout: two_column_left 
+    background: "#FFFFFF"
+    image: 
+      style: "{}"
+      src: "https://storage.googleapis.com/4geeks-academy-website/landing-pictures/testimonials.webp"
+      link: "https://google.com" # take uses somewhere when they click on the image
+    heading: 
+      text: "Escúchalo de nuestros alumnos"
+                  #xl      lg     md     sm    xs
+      font_size: ["40px","34px","34px","25px", "20px"]
+    button: 
+      text: "Ver testimoniales"
+      color: pink
+      path: "https://www.youtube.com/watch?v=plwPwyrxX84"
+    content: 
+      text: "Mentoría como nunca antes. Decenas de Instructores, en varios idiomas, todos los días, a cualquier hora. Estaremos contigo todo el tiempo, aun cuando hayas conseguido trabajo. Una vez eres parte de 4Geeks, estaremos para siempre contigo."
+      font_size: ["16px"]
+  - name: divider_one
+    position: 9
+    layout: divider 
+    height: ["50px","50px","50px","50px","50px"]
+  - name: some_id
+    position: 10
+    layout: two_column_right 
+    image: 
+      style: "{}"
+      src: "../../../static/images/projects/ims.jpg"
+      link: "https://google.com" # take uses somewhere when they click on the image
+    video: "plwPwyrxX84" #youtube id
+    heading: 
+      text: "Todo lo hacemos con pasión y con la mirada puesta en tu desarrollo profesional."
+                  #xl      lg     md     sm    xs
+      font_size: ["40px","34px","34px","25px", "20px"]
+    sub_heading:
+      text:
+        "Tipos de datos con súperpoderes:"
+      font_size: ["15px"]
+    bullets:
+      - Número
+      - String
+      - Boolean
+      - Iterables
+      - Dictionary
+      - Lista
+      - Tupla
+      - Rango
+      - Set & Frozenset
+      - Tabla Hash
+    content: 
+      text: " "
+      font_size: ["16px"]
+  - name: some_other_id
+    position: 10
+    layout: single_column 
+    image: 
+      style: '{"height": ["400px", "400px", "400px", "300px", "200px"], "background-size": "contain"  }'
+      src: "../../../static/images/projects/ims.jpg"
+      link: "https://google.com" # take uses somewhere when they click on the image
+    video: "plwPwyrxX84" #youtube id
+    heading: 
+      text: "Todo lo hacemos con pasión y con la mirada puesta en tu desarrollo profesional."
+      #             xl     lg     md     sm      xs
+      font_size: ["40px","34px","34px","25px", "20px"]
+    content: 
+      text: " "
+      font_size: ["16px"]
+
+why_python:
+  position: 7
+  heading: "¿Porqué enseñamos Python?" # optional or set to white space to hide
+  sub_heading: " " # optional or set to white space to hide
+
+testimonial:
+  position: 8
+  heading: "Lo que dicen nuestros alumnos"
+  sub_heading: "Descúbrelo tú mismo"
+  students:
+  - name: Guensie Grecy
+    sub_heading: From lawyer to software developer
+    comment: I was a lawyer for 6 years and I decided to change my career. I attended 4Geeks Academy, a coding bootcamp, that was last year (2018), I graduated in August, and after graduating in October, I was able to get a job as a web developer. I had no background whatsoever in coding. I didn’t know anything about anything computer-technology wise, so that’s an encouragement because it’s possible!
+    video: https://www.youtube.com/watch?v=SixRm6R8rc0
+  - name: Jordan Aguiriano 
+    sub_heading: Previously a Nurse, now a software developer
+    comment: For me the most amazing thing about 4Geeks was the syllabus, the fact that you guys teach exactly what the market is looking for.
+    video: https://www.youtube.com/watch?v=LvnxLyqaQDo
+
+iconogram:
+  position: 3
+  icons:
+  - icon: "touch"
+    title: Apply for your scholarship before October 8th, 2021
+  - icon: "receive_mail"
+    title: You will receive an email with all the information and a logic test 
+  - icon: "talk"
+    title: Do an online interview with our admissions team 
+  - icon: "terminal"
+    title: Get the result, book your spot and start coding

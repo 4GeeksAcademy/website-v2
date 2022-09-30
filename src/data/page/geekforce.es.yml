@@ -20,7 +20,7 @@ geekForce:
     image: ../../../static/images/staff/hernan.png
 
 icons:
-  - icon: "contract"
+  - icon: "contract-checked"
     title: "86% de nuestros alumnos contratados"
   - icon: "job"
     title: "SOPORTE LABORAL POST PROGRAMA"

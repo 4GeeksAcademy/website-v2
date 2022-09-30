@@ -1,0 +1,351 @@
+meta_info:
+  slug: "bootcamp-programacion-lisboa-portugal"
+  title: "Bootcamp de Programación en Lisboa"
+  description: "Descubre todos los bootcamps de programación online impartidos por 4Geeks Academy en Lisboa, Portugal. ¡Regístrate hoy!"
+  position: 101
+  image: "https://storage.cloud.google.com/4geeks-academy-website/online-es.png"
+  keywords: "null"
+  redirects: ["/es/location/lisboa-portugal"]
+  region: "europe"
+  dialCode: "351"
+
+seo_title: "Coding Bootcamp Lisboa, Portugal"
+header:
+  tagline: "Aprende a programar en Lisboa desde casa"
+  paragraph: "Aprender a programar online es difcíl, únete a la comunidad de programadores mas grande del mundo y recibe soporte para aprender y para conseguir trabajo de por vida"
+  image: "../../../static/images/locations/lisbon-portugal-header.png"
+  alt: ""
+button_header:
+  button_text: Ver Programas
+  button_link: "#programs"
+button:
+  syllabus_button_text: "DESCARGAR CURRÍCULO" # <-- this will show everywhere in the website
+  apply_button_text: "APLICA YA" # <-- this will show everywhere in the website
+
+  syllabus_submit_text: "DESCARGAR"
+  apply_button_link: "/aplica"
+  cohort_more_details_text: "DETALLES"
+
+custom_bar:
+  active: true
+  message: 4Geeks ofrece becas, ayudas al estudio y financiación a tu medida. <a class="customBar-link" href="/es/aplica" rel="noopener noreferrer nofollow">¡Solicita tu plaza!</a>
+#   button: 
+#     label: "Read More"
+#     path: "#" #string (can be inline path using #, relative path or absolute path)
+
+badges:
+  title: ""
+  paragraph: "4Geeks Academy es el lugar donde los desarrolladores crecen y prosperan.
+ 
+Estamos autorizados por el Departamento de Educación de Florida.
+  
+Elegido como uno de los 35 mejores bootcamps de codificación del mundo y el mejor bootcamp de codificación en Miami según SwitchUp.
+
+4Geeks Academy ha sido reconocida como uno de los 10 mejores bootcamps de codificación en los Estados Unidos según Newsweek.
+
+Una comunidad construida para desarrolladores."
+news:
+  title: "4Geeks Academy Lisboa en las noticias..."
+upcoming:
+  no_dates_message: "Actualmente no hay próximas fechas para este campus"
+  actionMessage: "Avisenme fechas disponibles"
+
+info_box:
+  heading: "Encuéntranos en Lisboa"
+  address: "Actualmente sólo estamos enseñando remotamente en Lisboa"
+  contact_heading: "Contacts"
+  phone: "+34 910 86 69 83"
+  email: "europe@4GeeksAcademy.com"
+  image: "../../../static/images/locations/remote.jpeg"
+  alt: ""
+
+images_box:
+  heading: "Qué debes saber acerca de esta ubicación: "
+  content: "Cuando aprendes a programar online no solamente tienes acceso a nuestra plataforma, tambien tendrás disponible cualquiera de nuestras locaciones a nivel mundial."
+  images:
+    - path: "../../../static/images/locations/remote.jpeg"
+      alt: "Coding Bootcamp Remoto"
+    - path: "../../../static/images/locations/madrid-3.png"
+      alt: "4Geeeks España lab"
+    - path: "../../../static/images/locations/madrid-2.png"
+      alt: "4Geeeks España lab"
+    - path: "../../../static/images/locations/miami-people.jpeg"
+      alt: "4Geeeks miami day"
+    - path: "../../../static/images/locations/miami-old2.jpg"
+      alt: "4Geeeks miami lab"
+
+## HEADING SECTION
+
+## PRICES SECTION
+## MIAMI HAS 3 BOXES:
+## LEFT     BOX => UPFRONT OPTION
+## CENTER   BOX => FINANCIAL SLIDER OPTIONS
+## RIGHT    BOX => ISA - INCOMING SHARING AGREEMENT
+hasFinancialsOption: true
+financials_max_months: ["60 mo", "42 mo", "36 mo", "24 mo", "12 mo", "6 mo"]
+prices:
+  full_stack:
+    full_time:
+      ## GENERAL INFO
+      slug: "full-time"
+      duration: "9 Weeks"
+
+      ## LEFT BOX SECTION FULL-TIME
+      ## CHANGE HERE THE INFO IN THE LEFT BOX
+      left_section:
+        header:
+          heading_one: "PAGA SÓLO DESPUÉS"
+          heading_two: "DE CONSEGUIR TRABAJO"
+          sub_heading: "y hablemos del Income Share Agreement"
+        content:
+          price: "9% del salario"
+          price_info: "hasta pagarlo completo, sólo si consigues trabajo en tech"
+
+      ## USE THIS SECTION TO CHANGE THE SLIDER FINANCIAL OPTIONS IN THE CENTER BOX
+      center_section:
+        header:
+          heading_one: "Plan de Pagos Extendidos"
+          # heading_two: "PAYMENT PLAN"
+          sub_heading: "y disfruta el mejor precio de la ciudad"
+        plans:
+          - months: "60 meses"
+            monthsInfo: "Financiados"
+            payment: "$214.74"
+            paymentInfo: "por mes + $0 deposit"
+            provider: "Skill Fund - Climb"
+            logo: "/images/skill-logo.png"
+            message: "Gracias a Skills Fund y Climb hemos podido ofrecerte el plan de pago más bajo de la ciudad"
+          - months: "42 meses"
+            monthsInfo: "Financiados"
+            payment: "$314.10"
+            paymentInfo: "por mes + $0 deposit"
+            provider: "Climb"
+            logo: "/images/climb-logo.png"
+            message: "Gracias a un partnership con Climb hemos logrado ofrecer este plan de pago"
+          - months: "36 meses"
+            monthsInfo: "Financiados"
+            payment: "$314.10"
+            paymentInfo: "por mes + $0 deposit"
+            provider: "Skill Fund"
+            logo: "/images/skill-logo.png"
+            message: "Gracias a nuestro partnership con Skills Fund podemos ofrecer un nuevo plan de pago"
+          - months: "24 meses"
+            monthsInfo: "Financiados"
+            payment: "$408.06"
+            paymentInfo: "por mes + 1,500 deposit"
+            provider: "Quotanda"
+            logo: "/images/quotanda-logo.png"
+            message: "Gracias a nuestro partnership con Quotanda hemos logrado crear el plan de pago mas flexible de la ciudad"
+          - months: "12 meses"
+            monthsInfo: "Financiados"
+            payment: "$755.13"
+            paymentInfo: "mensual + 1,500 deposit"
+            provider: "Quotanda"
+            logo: "/images/quotanda-logo.png"
+            message: "Gracias a nuestro partnership con Quotanda hemos logrado crear el plan de pago mas flexible de la ciudad"
+          - months: "6 meses"
+            monthsInfo: "Financiados"
+            payment: "$1,449.73"
+            paymentInfo: "por mes + 1,500 deposit"
+            provider: "Quotanda"
+            logo: "/images/quotanda-logo.png"
+            message: "Gracias a nuestro partnership con Quotanda hemos logrado crear el plan de pago mas flexible de la ciudad"
+        button:
+          button_text: "APLICAR AHORA"
+      ## RIGHT BOX SECTION
+      ## CHANGE HERE THE INFO IN THE RIGHT BOX
+      right_section:
+        header:
+          heading_one: DE CONTADO
+          heading_two: "(OUT OF POCKET)"
+          sub_heading: "y disfruta el mejor precio de la ciudad"
+        content:
+          price: "$9,499.00"
+          price_info: "una sola quota"
+        button:
+          button_text: "APLICAR AHORA"
+    ## *****************
+    ## PART-TIME SECTION
+    ## *****************
+    part_time:
+      slug: "part-time"
+      duration: "16 Weeks"
+
+      ## LEFT BOX SECTION PART-TIME
+      ## CHANGE HERE THE INFO IN THE LEFT BOX
+      left_section:
+        header:
+          heading_one: "PAGA SÓLO DESPUÉS"
+          heading_two: "DE CONSEGUIR TRABAJO"
+          sub_heading: "y hablemos del Income Share Agreement"
+        content:
+          price: "9% del salario"
+          price_info: "hasta pagarlo completo, sólo si consigues trabajo en tech"
+
+      ## USE THIS SECTION TO CHANGE THE SLIDER FINANCIAL OPTIONS IN THE CENTERED BOX
+      center_section:
+        header:
+          heading_one: "Plan de Pagos Extendidos"
+          # heading_two: "PAYMENT PLAN"
+          sub_heading: "y disfruta el mejor precio de la ciudad"
+        plans:
+          - months: "60 meses"
+            monthsInfo: "Financiados"
+            payment: "$169.53"
+            paymentInfo: "por mes + $0 deposit"
+            provider: "Skill Fund - Climb"
+            logo: "/images/skill-logo.png"
+            message: "Gracias a Skills Fund y Climb hemos podido ofrecerte el plan de pago más bajo de la ciudad"
+          - months: "42 meses"
+            monthsInfo: "Financiados"
+            payment: "$314.10"
+            paymentInfo: "por mes + $0 deposit"
+            provider: "Climb"
+            logo: "/images/climb-logo.png"
+            message: "Gracias a nuestro partnership con Quotanda hemos logrado crear el plan de pago mas flexible de la ciudad"
+          - months: "36 meses"
+            monthsInfo: "Financiados"
+            payment: "$247.97"
+            paymentInfo: "por mes + $0 deposit"
+            provider: "Skill Fund"
+            logo: "/images/skill-logo.png"
+            message: "Gracias a nuestro partnership con Skills Fund podemos ofrecer un nuevo plan de pago"
+          - months: "24 meses"
+            monthsInfo: "Financiados"
+            payment: "$312.04"
+            paymentInfo: "por mes + 1,500 deposit"
+            provider: "Quotanda"
+            logo: "/images/quotanda-logo.png"
+            message: "Gracias a nuestro partnership con Quotanda hemos logrado crear el plan de pago mas flexible de la ciudad"
+          - months: "12 meses"
+            monthsInfo: "Financiados"
+            payment: "$577.43"
+            paymentInfo: "mensual + 1,500 deposit"
+            provider: "Quotanda"
+            logo: "/images/quotanda-logo.png"
+            message: "Gracias a nuestro partnership con Quotanda hemos logrado crear el plan de pago mas flexible de la ciudad"
+          - months: "6 meses"
+            monthsInfo: "Financiados"
+            payment: "$1,108.58"
+            paymentInfo: "por mes + 1,500 deposit"
+            provider: "Quotanda"
+            logo: "/images/quotanda-logo.png"
+            message: "Gracias a nuestro partnership con Quotanda hemos logrado crear el plan de pago mas flexible de la ciudad"
+        button:
+          button_text: "APLICAR AHORA"
+      ## RIGHT BOX SECTION
+      ## CHANGE HERE THE INFO IN THE RIGHT BOX
+      right_section:
+        header:
+          heading_one: DE CONTADO
+          heading_two: "(OUT OF POCKET)"
+          sub_heading: "y disfruta el mejor precio de la ciudad"
+        content:
+          price: "$7,499.00"
+          price_info: "una sola quota"
+        button:
+          button_text: "APLICAR AHORA"
+
+  software_engineering:
+    part_time:
+      slug: "part_time"
+      duration: "?"
+
+      left_section:
+        header:
+          heading_one: "Software Engineering"
+          heading_two: ""
+          sub_heading: ""
+        content:
+          price: "La modalidad Part-Time no esta disponible"
+          price_info: "Online"
+        button:
+          button_text: "Aplicar a otros cursos"
+
+    full_time:
+      slug: "full_time"
+      duration: "?"
+
+      left_section:
+        header:
+          heading_one: "Software Engineering"
+          heading_two: ""
+          sub_heading: ""
+        content:
+          price: "La modalidad Full-Time no esta disponible"
+          price_info: "Online"
+        button:
+          button_text: "Aplicar a otros cursos"
+
+  machine_learning:
+    part_time:
+      slug: "part_time"
+      duration: "?"
+
+      left_section:
+        header:
+          heading_one: "Machine Learning"
+          heading_two: ""
+          sub_heading: ""
+        content:
+          price: "La modalidad Part-Time no esta disponible"
+          price_info: "Online"
+        button:
+          button_text: "Aplicar a otros cursos"
+
+    full_time:
+      slug: "full_time"
+      duration: "?"
+
+      left_section:
+        header:
+          heading_one: "Machine Learning"
+          heading_two: ""
+          sub_heading: ""
+        content:
+          price: "La modalidad Full-Time no esta disponible"
+          price_info: "Online"
+        button:
+          button_text: "Aplicar a otros cursos"
+
+active_campaign_location_slug: "lisbon-portugal"
+breathecode_location_slug: "lisbon-portugal"
+gdpr_compliant: true # do we need to ask for permision?
+in_person_available: false # important to accept in-person applicants
+
+city: "Lisbon"
+name: "Lisboa, Portugal"
+latitude: "38.725750"
+longitude: "-9.149020"
+address: "" # Praça Marquês de Pombal 14, 1250-162 Lisboa, Portugal
+zip_code: ""
+phone: "+34 910 86 69 83"
+state: "Lisbon"
+country: "Portugal"
+
+socials:
+  - name: "Facebook"
+    icon: "facebook"
+    link: "https://www.facebook.com/4geeksacademyes"
+  - name: "Twitter"
+    icon: "twitter"
+    link: "https://www.twitter.com/4geeksacademyes"
+  - name: "Instagram"
+    icon: "instagram"
+    link: "https://www.instagram.com/4geeksacademyes"
+  - name: "Meetup"
+    icon: "meetup"
+    link: "https://www.meetup.com/4geeks-academy"
+
+courses:
+  - "Full-Time"
+  - "Part-Time"
+flag_icon: ""
+location_map: ""
+location_phone_number: ""
+location_office_image: ""
+location_office_image2: ""
+location_office_image3: ""
+should_know: ""
+value: "Lisbon"
+defaultLanguage: "us" # All lead marketing communications will arrive on this language

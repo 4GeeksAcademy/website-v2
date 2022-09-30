@@ -6,8 +6,10 @@ meta_info:
   image: ""
   keywords: ""
   # it will not show up on the applications forms
-  unlisted: false
+  visibility: "visible"
   redirects: ["/us/location/costa-rica", "/location/costa-rica"]
+  region: "latam"
+  dialCode: "506"
 
 seo_title: "Coding Bootcamp Costa Rica"
 header:
@@ -25,6 +27,14 @@ button:
   syllabus_submit_text: "DOWNLOAD"
   apply_button_link: "/apply"
   cohort_more_details_text: "DETAILS"
+
+custom_bar:
+  active: true
+  message: Become a fullstack developer, and get lifetime mentoring starting at $150 per month
+#  button: 
+ #   label: "Read More"
+ #   path: "#" #string (can be inline path using #, relative path or absolute path)
+
 badges:
   title: ""
   paragraph: "
@@ -41,14 +51,17 @@ news:
   title: "4Geeks Academy Costa Rica in the news..."
 upcoming:
   no_dates_message: "There are currently no upcoming dates for this campus"
+  actionMessage: "Let me know when dates are available"
 
 info_box:
   heading: "Find us in Costa Rica"
   address: "Only remotely in Costa Rica"
   iframeMapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1113.9468207368486!2d-84.05324642641304!3d9.926577771692926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0e47a42cec70b%3A0x63f6a801c5a73b61!2s4Geeks%20Costa%20Rica!5e0!3m2!1ses-419!2scl!4v1621010232303!5m2!1ses-419!2scl"
   contact_heading: "Contacts"
-  phone: "(506) 8692 8372"
-  email: "info@4GeeksAcademy.com"
+  phone: Call +57 300 7282898
+  whatsapp: +57 300 7282898
+  whatsapp_link: "https://wa.me/+573007282898"
+  email: puravida@4GeeksAcademy.com
 
 images_box:
   heading: "What you should know about this location: "

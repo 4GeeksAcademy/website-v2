@@ -39,30 +39,8 @@ testimonials:
     student_thumb: "../../../../static/images/testimonials/florencia-viera.jpeg"
     linkedin_image: "../../../../static/images/linkedin.png"
 
-  - student_name: "Azul Botaya"
-    featured: false
-    highlighted: true
-    testimonial_date: ""
-    rating: 5
-    student_thumb: "../../../../static/images/testimonials/azul-botaya.jpg"
-    student_video: "" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
-    # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
-    hidden: false
-    linkedin_url: "https://www.linkedin.com/in/azul-botaya-31669b151/"
-    linkedin_text: ""
-    linkedin_image: "../../../../static/images/linkedin.png"
-    source_url: ""
-    source_url_text: ""
-    short_content: "Full Stack Developer in Facebook"
-    content: |
-      I felt lost in my career and could not see clear goals for myself anymore.  I came across 
-      this great opportunity to join this community of knowledge and, to top it all off, great humans!
-      I found myself able to commit to something very interesting with endless options 
-      to create my career as a graphic designer more powerful without having to stop what I was doing 
-      within a perfect part-time cohort. 
-      I now have all kinds of new tools I learned there along the way, 
-      and there is a new comfort in knowing that I can always go back and keep growing at 4Geeks.
   - student_name: "Naila Kaliyeva"
+    slug: "nai-kali"
     featured: false
     highlighted: false
     testimonial_date: ""
@@ -77,7 +55,7 @@ testimonials:
     linkedin_image: "../../../../static/images/linkedin.png"
     source_url: ""
     source_url_text: ""
-    short_content: "Full Stack Developer in Facebook"
+    short_content: "Full Stack Developer"
     content: |
       I love 4Geeks Academy's approach to teaching students. There are always at least three tutors who will 
       make sure you master your skills and will not give up on you if there's something 
@@ -85,6 +63,30 @@ testimonials:
       they may seem..and the atmosphere in the school is very warm.
       I'm grateful to you guys for providing 24 hour access to school, 
       so we can work any time that is convenient for us. Thank you, 4Geeks!!!
+  - student_name: "Azul Botaya"
+    slug: "azu-bota"
+    featured: false
+    highlighted: true
+    testimonial_date: ""
+    rating: 5
+    student_thumb: "../../../../static/images/testimonials/azul-botaya.jpg"
+    student_video: "" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    hidden: false
+    linkedin_url: "https://www.linkedin.com/in/azul-botaya-31669b151/"
+    linkedin_text: ""
+    linkedin_image: "../../../../static/images/linkedin.png"
+    source_url: ""
+    source_url_text: ""
+    short_content: "Full Stack Developer"
+    content: |
+      I felt lost in my career and could not see clear goals for myself anymore.  I came across 
+      this great opportunity to join this community of knowledge and, to top it all off, great humans!
+      I found myself able to commit to something very interesting with endless options 
+      to create my career as a graphic designer more powerful without having to stop what I was doing 
+      within a perfect part-time cohort. 
+      I now have all kinds of new tools I learned there along the way, 
+      and there is a new comfort in knowing that I can always go back and keep growing at 4Geeks.
   # - student_name: "Samir Benzada"
   #   testimonial_date: ""
   #   student_thumb: "../../../../static/images/testimonials/samir-benzada.jpg"
@@ -98,6 +100,7 @@ testimonials:
   #     for a coding school in Miami and I found the best one: 4Geeks Academy. And thanks to
   #     the Income Sharing Agreement, I could enroll right away and pay once I found a job.
   - student_name: "Charles Fabricius"
+    slug: "cha-fabr"
     featured: true
     highlighted: true
     testimonial_date: ""
@@ -111,7 +114,7 @@ testimonials:
     linkedin_image: "../../../../static/images/linkedin.png"
     source_url: ""
     source_url_text: ""
-    short_content: "Full Stack Developer in Facebook"
+    short_content: "Full Stack Developer"
     content: |
       Overall just a great group of people with a common goal. I came into 4Geeks with little 
       to no knowledge about coding and after 16 weeks I was building projects I could have never 
@@ -134,7 +137,7 @@ testimonials:
     linkedin_image: "../../../../static/images/linkedin.png"
     source_url: ""
     source_url_text: ""
-    short_content: "Full Stack Developer in Facebook"
+    short_content: "Full Stack Developer"
     content: |
       I highly recommend this coding boot camp!!!! Before 4Geeks I never had any experience with 
       code - I didn't know where to start. Within 10 weeks I was able to grasp the core concepts 
@@ -154,7 +157,7 @@ testimonials:
     linkedin_image: "../../../../static/images/linkedin.png"
     source_url: ""
     source_url_text: ""
-    short_content: "Full Stack Developer in Facebook"
+    short_content: "Full Stack Developer"
     content: |
       This program was definitely one of the hardest things I've done in my life. It was 16 weeks of 
       constant work and practice. All things in life worth having is not going to be easily obtained. 
@@ -173,7 +176,7 @@ testimonials:
     linkedin_image: "../../../../static/images/linkedin.png"
     source_url: ""
     source_url_text: ""
-    short_content: "Full Stack Developer in Facebook"
+    short_content: "Full Stack Developer"
     content: |
       Now I think that I can actually know how to solve the issues that I face when I’m coding and 
       the professors have been a great help along the process. I would recommend this Bootcamp to 
@@ -216,7 +219,7 @@ testimonials:
     linkedin_url: "https://www.linkedin.com/in/jordan-aguiriano/"
     linkedin_text: "Linkedin Profile"
     linkedin_image: "../../../../static/images/linkedin.png"
-    short_content: "Full Stack Developer in Facebook"
+    short_content: "Full Stack Developer"
     content: ""
   - student_name: "Gabriela"
     featured: false
@@ -232,7 +235,7 @@ testimonials:
     linkedin_url: "https://www.linkedin.com/in/gabriela-rodriguez-2b5235187/"
     linkedin_text: "Linkedin Profile"
     linkedin_image: "../../../../static/images/linkedin.png"
-    short_content: "Full Stack Developer in Facebook"
+    short_content: "Full Stack Developer"
     content: ""
   - student_name: "Guensie Grecy"
     include_in_marquee: true

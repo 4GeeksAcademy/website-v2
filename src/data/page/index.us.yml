@@ -19,11 +19,11 @@ news:
 button:
   button_text: See Programs
   button_link: "#programs"
-## BADGES SECTION /new_components/Badges
+## BADGES SECTION /components/Badges
 badges:
   paragraph: "This is the place to boost your career by learning to code. We are very proud of our programs and methodology to train developers in just a few months and help them boost their professional careers."
 
-## CHOOSE YOUR PROGRAM /new_components/ChooseYourProgram
+## CHOOSE YOUR PROGRAM /components/ChooseYourProgram
 choose_program:
   title: Choose your program
   paragraph: Follow the path towards a life-changing experience. Become the developer that builds the next culture-shifting web app.
@@ -54,8 +54,24 @@ join_geeks:
 
 ## LOCATIONS SECTION
 locations:
-  heading: "OUR LOCATIONS"
-  sub_heading: "We have carefully chosen our Locations and Campuses. We are bringing you an experience that you will never forget."
+  heading: "LOCATIONS: ONLINE OR IN-PERSON"
+  sub_heading: "Whether you are joining Online or in-person, you will have real and instant interaction with your teacher, mentor and classmates, to work on projects, exercises, materials, lectures, and everything you need to become a skillful Professional."
+  title_image: "Online, Hybrid or In-person. "
+  sub_title_image: | 
+    <p>Live classroom environment, unlimited 1-1 <br /> menthorships, cohort based and real time.</p>
+  image: "/images/locations/locations_image.png"
+  choose: "Choose a region"
+  regions:
+    - name: "usa-canada"
+      title: "US & Canada"
+      content: "With the online modality you have access to our physical locations worldwide"
+    - name: "europe"
+      title: "Europe"
+      content: "All our campuses in Europe have face-to-face and online modalities"
+    - name: "latam"
+      title: "LATAM"
+      content: "All our campuses in America have face-to-face and online modalities"
+
 
 ## ALUMNI SECTION
 alumni_header:

@@ -39,6 +39,8 @@ footer:
         link: "/us/coding-bootcamps/software-engineer-bootcamp"
       - name: "AI/Machine Learning Engineering"
         link: "/us/coding-bootcamps/machine-learning-engineering"
+      - name: "Coding Bootcamp"
+        link: "/us/coding-bootcamp"
   - column_four:
     width: 2
     heading: "LOCATIONS"

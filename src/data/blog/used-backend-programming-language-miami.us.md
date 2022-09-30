@@ -9,7 +9,7 @@ image: "https://4GeeksAcademy.com/wp-content/uploads/2017/08/Python.jpg"
 image_alt: ""
 cluster: "learn-to-code"
 status: "published"
-featured: "false"
+featured: false
 
 ---
 

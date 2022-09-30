@@ -1,9 +1,11 @@
 meta_info:
     slug: career-support-coordinator
+    visibility: "hidden"
     title: "Career Support Coordinator at 4Geeks Academy"
     description: "Learn about the career support coordinator requirements at 4Geeks Academy"
     image: ""
     keywords: ""
+    open: false #if true, this job will be accepting candidates
     redirects: ["/career"]
 
 seo_title: ""

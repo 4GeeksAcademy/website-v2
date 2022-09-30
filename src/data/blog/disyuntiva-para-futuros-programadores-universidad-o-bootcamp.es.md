@@ -9,7 +9,7 @@ image: "https://camo.githubusercontent.com/78510e7fca5ea47b77a49f114843ede99c5f7
 image_alt: ""
 cluster: "aprender-a-programar"
 status: "published"
-featured: "false"
+featured: false
 
 ---
 
@@ -38,6 +38,8 @@ En ese mismo [reportaje](https://www.latercera.com/noticia/negocios/2013/03/655-
 Las Universidades pueden proveer graduados con una fuerte base computacional pero, muchas veces, descontextualizados debido a que la tecnología está en constante cambio y evolución.
 
 En respuesta a esta situación, han surgido diversas academias, _bootcamps_ que pueden proveer en menor tiempo estos profesionales quienes estarán más que capacitados para insertarse en el campo laboral.
+
+<call-to-action button_text="Ver programa" button_link="/es/curso-de-programacion-desde-cero" background="rgba(0, 151, 205, 0.15)" title="Impulsa tu carrera, gracias a la programación" text="Te invitamos a impulsa tu carrera, aprendiendo a programar con nuestro Programa Full Stack Developer."></call-to-action>
 
 De acuerdo a un artículo publicado por [La Nación de Argentina](https://www.lanacion.com.ar/1293995-la-argentina-con-deficit-de-ingenieros), Raffaella Temporitti, gerente de Recursos Humanos de IBM, detalla: "También puede observarse que las nuevas generaciones quieren insertarse más rápido en el mercado laboral, ganar un buen salario y hacer una carrera profesional, y por eso comienzan a optar por carreras más cortas y sin tanto requerimiento de estudios".
 

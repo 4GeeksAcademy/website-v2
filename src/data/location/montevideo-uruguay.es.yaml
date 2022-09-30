@@ -5,9 +5,11 @@ meta_info:
   description: "Conoce aquí todo sobre nuestro campus de bootcamp de programación en Uruguay, Monte Video de 4Geeks Academy"
   image: ""
   # it will not show up on the applications forms
-  unlisted: false
+  visibility: "visible"
   keywords: "Coding Bootcamp Campus Uruguay"
   redirects: ["/coding-campus/bootcamp-programacion-uruguay"]
+  region: "latam"
+  dialCode: "598"
 
 seo_title: "Aprende a programar en Uruguay"
 header:
@@ -26,6 +28,14 @@ button:
   syllabus_submit_text: "DESCARGAR"
   apply_button_link: "/aplica"
   cohort_more_details_text: "DETALLES"
+
+custom_bar:
+  active: false
+  message: Lorem ipsum dot simet mosd ei
+  button: 
+    label: "Read More"
+    path: "#" #string (can be inline path using #, relative path or absolute path)
+
 badges:
   title: ""
   paragraph: "Únete a uno de los coding bootcamps y comunidades de programadores más grandes del mundo, mejora tus habilidades de codigo o 
@@ -35,14 +45,17 @@ news:
   title: "4Geeks Academy Uruguay en las noticias..."
 upcoming:
   no_dates_message: "Actualmente no hay próximas fechas para este campus"
+  actionMessage: "Avisenme fechas disponibles"
 
 info_box:
   heading: "Encuéntranos en Uruguay"
   address: ""
   iframeMapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1126.521243034489!2d-80.20142868794088!3d25.759937884725943!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b153865e526d%3A0xf884fb3f86a9c7db!2s4Geeks%20Academy!5e0!3m2!1ses-419!2scl!4v1621010581768!5m2!1ses-419!2scl"
   contact_heading: "Escríbenos al Whatsapp"
-  phone: "(506) 8692 8372"
-  email: "info@4GeeksAcademy.com"
+  phone: Llámanos +57 300 7282898
+  whatsapp: +57 300 7282898
+  whatsapp_link: "https://wa.me/+573007282898"
+  email: latam@4GeeksAcademy.com
 
 images_box:
   heading: "What you should know about this location: "
@@ -198,9 +211,9 @@ in_person_available: false # important to accept in-person applicants
 
 city: "Monte Video"
 name: "Uruguay"
-latitude: "-34.098799"
-longitude: "-56.216998"
-address: ""
+latitude: "-34.902225"
+longitude: "-56.196542"
+address: ""#Paysandú 941, 11100 Montevideo, Departamento de Montevideo, Uruguay
 zip_code: ""
 state: ""
 country: "Uruguay"

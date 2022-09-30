@@ -9,12 +9,14 @@ meta_info:
     [
       "/orlando",
     ]
+  region: "usa-canada"
+  dialCode: "1"
 
 seo_title: "Coding Bootcamp in Orlando"
 header:
   tagline: "4Geeks Academy in Orlando"
   paragraph: ""
-  image: "../../../static/images/locations/miami-home.png"
+  image: "../../../static/images/locations/orlando-header.png"
   alt: "4Geeks Academy online and in-person coding bootcamp in Orlando, Florida"
 
 badges:
@@ -33,6 +35,7 @@ news:
   title: "4Geeks Academy Orlando has been reviewed in:"
 upcoming:
   no_dates_message: "There are currently no upcoming dates for this campus"
+  actionMessage: "Let me know when dates are available"
 button_header:
   button_text: See Programs
   button_link: "#programs"
@@ -42,6 +45,13 @@ button:
   syllabus_submit_text: "DOWNLOAD"
   apply_button_link: "/apply"
   cohort_more_details_text: "DETAILS"
+
+custom_bar:
+  active: false
+  message: 'NOW open: 06/27 Full-Stack | 07/11 Machine Learning! <a class="customBar-link" href="/us/apply" taget="_blank" rel="noopener noreferrer nofollow">Apply</a>'
+  button: 
+    label: "Read More"
+    path: "#" #string (can be inline path using #, relative path or absolute path)
 
 info_box:
   heading: "Find us in Orlando"
@@ -154,7 +164,7 @@ prices:
           heading_two: "(OUT OF POCKET)"
           sub_heading: "and enjoy the best Price in town"
         content:
-          price: "$9,499.00"
+          price: "$9,999.00"
           price_info: "Single payment. Get a 10% Discount!"
         button:
           button_text: "Apply Now"
@@ -237,7 +247,7 @@ prices:
           heading_two: "(OUT OF POCKET)"
           sub_heading: "and enjoy the Best Price in town"
         content:
-          price: "$7,499.00"
+          price: "$8,999.00"
           price_info: "Single payment. Get a 10% Discount!"
         button:
           button_text: "Apply Now"

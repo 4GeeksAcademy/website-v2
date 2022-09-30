@@ -1,41 +1,43 @@
-import React, {useState} from 'react';
-import {Header, Column, Wrapper, Divider, Div} from '../new_components/Sections'
-import GeeksVsOthers from '../new_components/GeeksVsOthers'
-import BaseRender from './_baseLayout'
-import {graphql} from 'gatsby'
+import React, { useState } from "react";
+import { isCustomBarActive } from "../actions";
+import { Header, Column, Wrapper, Divider, Div } from "../components/Sections";
+import GeeksVsOthers from "../components/GeeksVsOthers";
+import BaseRender from "./_baseLayout";
+import { graphql } from "gatsby";
+import { SessionContext } from "../session";
 
 const View = (props) => {
-  const {data, pageContext, yml} = props;
+  const { data, pageContext, yml } = props;
+  const { session } = React.useContext(SessionContext);
   return (
     <>
       <Header
+        margin={isCustomBarActive(session) ? "120px 0 40px 0" : "70px 0 40px 0"}
         seo_title={yml.seo_title}
         title={yml.header.title}
         paragraph={yml.header.paragraph}
-        padding_tablet="72px 0 40px 0"
-        padding="66px 17px 85px 0"
-      >
-      </Header>
+      ></Header>
       <GeeksVsOthers lang={pageContext.lang} link={false} />
     </>
-  )
+  );
 };
 export const query = graphql`
   query GeeksQuery($file_name: String!, $lang: String!) {
-    allPageYaml(filter: { fields: { file_name: { eq: $file_name }, lang: { eq: $lang }}}) {
-      edges{
-        node{
-            meta_info{
-                title
-                description
-                image
-                keywords
-            }
-            seo_title
-          header{
-              title
-              paragraph
-              
+    allPageYaml(
+      filter: { fields: { file_name: { eq: $file_name }, lang: { eq: $lang } } }
+    ) {
+      edges {
+        node {
+          meta_info {
+            title
+            description
+            image
+            keywords
+          }
+          seo_title
+          header {
+            title
+            paragraph
           }
         }
       }

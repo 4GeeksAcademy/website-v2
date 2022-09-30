@@ -4,7 +4,12 @@
 
 partners:
   tagline: "WHO IS HIRING OUR STUDENTS"
-  sub_heading: "Thanks to our growing list of partners, we have local and international job offers for our students on a daily basis. Together with our GeekFORCE (Career Support) service, we are happy to have ~89% of our students hired within 100 days or less from Graduation Day."
+  sub_heading: |
+    Thanks to our growing list of partners, we have local and international job offers for our
+    students on a daily basis. Together with our GeekFORCE (Career Support) service, we are happy to have
+    ~86% of our students hired within 100 days or less from Graduation Day. Companies that hire our students
+    are impressed with their skills. "I'm impressed with the level of understanding 4Geeks students have, my
+    hire ended becoming team leader" - CodeNinjas
   footer_tagline: "438 COMPANIES"
   footer_button: "Review our latest hirings"
   footer_link: "/partners"
@@ -13,6 +18,10 @@ partners:
       #locations: ["miami-downtown"]
       #courses: ["machine-learning"]
       image: "../../../../static/images/partner/microsoft.png"
+      featured: true
+      link: "https://microsoft.com"
+    - name: "Google Developers"
+      image: "../../../../static/images/coding/google-developers.png"
       featured: true
     - name: "Boats Group"
       locations: ["miami-downtown"]
@@ -25,11 +34,11 @@ partners:
     - name: "Ebay"
       #locations: ["madrid-spain"]
       image: "../../../../static/images/partner/ebay.png"
-      featured: true
+      featured: false
     - name: "National Geographic"
       #locations: ["miami-downtown"]
       image: "../../../../static/images/partner/natgeo.png"
-      featured: false
+      featured: true
     - name: "Evernote"
       #locations: ["miami-downtown"]
       image: "../../../../static/images/partner/evernote.png"
@@ -50,6 +59,13 @@ partners:
       # locations: ["madrid-spain"]
       image: "../../../../static/images/partner/Neo9.png"
       featured: false
+    - name: "Jooble"
+      locations: ["madrid-spain"]
+      image: "../../../../static/images/partner/jooble.png"
+      featured: false
+      # avoid using "" for the value of follow and use only true or false
+      follow: true
+      link: "https://es.jooble.org"
     - name: "KPMG"
       # locations: ["madrid-spain"]
       image: "../../../../static/images/partner/kpmg-logo1.png"
@@ -106,15 +122,15 @@ partners:
       featured: false
 
 coding:
-  tagline: "IMMERSED IN THE CODING ECOSYSTEM"
-  sub_heading: "We actively organize and/or participate in the biggest coding initiatives."
+  tagline: "Global Actors in the Coding World"
+  sub_heading: "We are immersed in the coding ecosystem partnering with global tech actors that helps us organize or participate in initiatives to further impact the coding industry"
   images:
     - name: "Google Developers"
       image: "../../../../static/images/coding/google-developers.png"
       featured: true
       #locations: ["miami-downtown"]
     - name: "Facebook Developer Circle"
-      image: "../../../../static/images/coding/developer-circles.png"
+      image: "../../../../static/images/coding/developer-circles-2.png"
       featured: true
       #locations: ["miami-downtown"]
     - name: "Bloktech"
@@ -147,7 +163,7 @@ influencers:
       featured: false
       #locations: ["miami-downtown"]
     - name: "Facebook Developer Circle"
-      image: "../../../../static/images/coding/developer-circles.png"
+      image: "../../../../static/images/coding/developer-circles-2.png"
       featured: false
       #locations: ["miami-downtown"]
     - name: "Startup"
@@ -172,22 +188,98 @@ influencers:
       #locations: ["miami-downtown"]
 
 financials:
-  tagline: "FINANCIAL PARTNERS"
+  tagline: "Partners making education possible"
   sub_heading: "We are making a huge effort to make premium coding education accessible to everyone."
   images:
+    - name: "ASOTTTECH"
+      image: "../../../../static/images/partner/assotech.png"
+      featured: false
+      locations: ["madrid-spain", "barcelona-spain", "malaga-spain", "valencia-spain"]
     - name: "Quotanda"
       image: "../../../../static/images/quotanda-logo.png"
       featured: false
       #locations: ["miami-downtown"]
+    - name: "Leif"
+      image: "../../../../static/images/leif_main.png"
+      featured: false
+    - name: "Flevo"
+      image: "../../../../static/images/flevo.png"
+      featured: false
     - name: "Climb"
       image: "../../../../static/images/climb-logo.png"
       featured: false
-      #locations: ["miami-downtown"]
-    - name: "Skills Fund"
-      image: "../../../../static/images/skill-logo.png"
+    - name: "Ascent"
+      image: "../../../../static/images/ascent_logo.jpg"
       featured: false
-      #locations: ["miami-downtown"]
-    - name: "Zank"
-      image: "../../../../static/images/zank.png"
-      featured: false
-      #locations: ["miami-downtown"]
+
+work_together:
+  title: "How to work together"
+  description: "4Geeks Academy is an awarded global coding academy that will allow you to focus in one or more of the following areas:"
+  image_list:
+    - alt: "4Geeks Academy Student"
+      image: "../../../../static/images/students/student1.jpg"
+    - alt: "4Geeks Academy Student"
+      image: "../../../../static/images/students/student2.jpg"
+    - alt: "4Geeks Academy Student"
+      image: "../../../../static/images/students/student3.jpg"
+    - alt: "4Geeks Academy Student"
+      image: "../../../../static/images/students/student4.jpg"
+    - alt: "4Geeks Academy Student"
+      image: "../../../../static/images/students/student5.jpg"
+  features:
+    - title: "Reskilling and Upskilling"
+      icon: "screen"
+      description: "Invest in your own talent. Grow together and make them part of your future."
+
+    - title: "Community Impact"
+      icon: "community"
+      description: "Make a meaningful impact on diversity, reduce the tech gap and empower people from all walks of life!"
+
+    - title: "Outreach"
+      icon: "chat-2"
+      description: "Join 4Geeks Academy’s global community of expert speakers and be part of innovative events!"
+
+    - title: "Reclutamiento"
+      icon: "notes-2"
+      description: "Your go-to partner for tech candidates, have a constant flow of high- quality candidates with our amazing talent pipeline!"
+
+benefits_and_charts:
+  title: "Become part of our Partnership Network"
+  description: "These are some of the benefits:"
+  bullets:
+    - Access to a big pool of high quality and unique talent.
+    - Increase job retention with reskilling programs.
+    - Bridge the tech gap within the community.
+    - Fill tech job openings.
+    - Increase brand awareness and value with workshop sponsorships and speaking opportunities.
+    - Establish your brand as a strong leader in the tech industry.
+    - Community Building.
+
+  charts:
+    title: "The numbers"
+    list:
+      - icon: "chart-62"
+        description: |
+          62% of executives "believe they will need to retrain or replace more than a quarter of their workforce between now and 2023 due to advancing automation and digitization." A 2018 study by McKinsey report.
+      - icon: "job"
+        description: "According to a 2016 study by the Society for Human Resource Management, it costs an average of $4,129 to hire a new employee, and it takes an average of 42 days to find a new hire."
+      - icon: "notes-2"
+        description: "Coding bootcamps and 4-year colleges have nearly identical percentage of alumni employed"
+      - icon: "chart-72"
+        description: "72% of employers say that hiring from a Bootcamp is pretty much the same than a College Graduate"
+
+partners_in_education:
+  title: "Partners in education"
+  description:
+    "At 4Geeks Academy we are committed to delivering a high-quality programming training program, supported with a system of unlimited mentorships, to help reduce the gap between job opportunities and talent with tools created to help take on those challenges.
+
+    To achieve this we have partnered with amazing educational institutions that help us reach these goals. Together we have managed to graduate over 300 students from all over the globe and continue to strive to graduate more students."
+  image_list:
+    - alt: "UTEC"
+      image: "../../../../static/images/education/UTEC.png"
+    - alt: "IESA"
+      image: "../../../../static/images/education/IESA.png"
+    - alt: "Miami Dade College"
+      image: "../../../../static/images/education/MDC_Blue.png"
+    - alt: "Inter-American Development Bank"
+      image: "../../../../static/images/education/IDB-logo.png"

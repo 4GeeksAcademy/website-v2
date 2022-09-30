@@ -9,7 +9,7 @@ image: "https://storage.googleapis.com/4geeks-academy-website/blog/2017/09/Scree
 image_alt: ""
 cluster: "trends-and-tech"
 status: "published"
-featured: "true"
+featured: true
 
 ---
 

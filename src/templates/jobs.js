@@ -1,34 +1,33 @@
-import React, {useState} from 'react';
-import Layout from '../global/Layout';
-import styled, {css, keyframes} from 'styled-components';
-import {Div, Header, Wrapper, WrapperImage, Divider} from '../new_components/Sections'
-import {H2, H3, Title, Separator, Paragraph} from '../new_components/Heading'
-import {Colors, Button, StyledBackgroundSection} from '../new_components/Styling'
-import BaseRender from './_baseLayout'
-import JobInfo from '../new_components/JobInfo'
-import Link from 'gatsby-link'
+import React from "react";
+import { Header } from "../components/Sections";
+import BaseRender from "./_baseLayout";
+import JobInfo from "../components/JobInfo";
+import { isCustomBarActive } from "../actions";
+import { SessionContext } from "../session";
 
-const Jobs = ({data, pageContext, yml}) => {
+const Jobs = ({ data, pageContext, yml }) => {
+  const { session } = React.useContext(SessionContext);
   return (
     <>
       <Header
         seo_title={yml.seo_title}
         title={yml.header.title}
+        margin={isCustomBarActive(session) ? "120px 0 0 0" : "70px 0 0 0"}
         paragraph={yml.header.paragraph}
         padding_tablet="72px 0 40px 0"
       />
       <JobInfo />
-
     </>
-  )
+  );
 };
 export const query = graphql`
   query JobsQuery($file_name: String!, $lang: String!) {
-    allPageYaml(filter: { fields: { file_name: { eq: $file_name }, lang: { eq: $lang }}}) {
-      edges{
-        node{
-          
-          meta_info{
+    allPageYaml(
+      filter: { fields: { file_name: { eq: $file_name }, lang: { eq: $lang } } }
+    ) {
+      edges {
+        node {
+          meta_info {
             slug
             title
             description
@@ -36,10 +35,10 @@ export const query = graphql`
             keywords
           }
           seo_title
-          header{
+          header {
             title
             paragraph
-            image{
+            image {
               childImageSharp {
                 gatsbyImageData(
                   layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
@@ -50,7 +49,7 @@ export const query = graphql`
                 #   ...GatsbyImageSharpFluid_withWebp
                 # }
               }
-            } 
+            }
           }
         }
       }
@@ -59,8 +58,8 @@ export const query = graphql`
 `;
 export default BaseRender(Jobs);
 
-
-{/* <WrapperImage
+{
+  /* <WrapperImage
 
 imageData={yml.header.image && yml.header.image.childImageSharp.fluid}
 className={`img-header`}
@@ -157,4 +156,5 @@ github={`/page/jobs.${pageContext.lang}.yml`}
 </Row>
 </Wrapper>
 
-<Divider height="480px" /> */}
+<Divider height="480px" /> */
+}

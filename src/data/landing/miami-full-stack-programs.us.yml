@@ -14,8 +14,8 @@ meta_info:
   # this UTM fields will be also included in the CRM contact
   utm_course: ["full-stack"]
   utm_location: downtown-miami
-  automation: soft #optional, this is the default value
-  tag: request_more_info #optional, this is the default value
+  automation: soft # comma separated, "soft" is the default value
+  tag: request_more_info # comma separated, "request_more_info" is the default value
 
 form:
   # posible fields: "first_name", "last_name", "full_name", "phone", "email"
@@ -67,7 +67,7 @@ in_the_news:
 
 badges:
   position: 5
-  heading: " "
+  heading: "4Geeks Academy has awards and recognitions that validate it's excellence"
 
 program_details:
   position: 3

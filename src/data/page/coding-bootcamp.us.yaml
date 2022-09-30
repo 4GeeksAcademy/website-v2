@@ -1,0 +1,322 @@
+meta_info:
+  slug: coding-bootcamp
+  title: ""
+  description: "One of the most awarded coding bootcamps. No previous coding skills required. Code with others, join the community and get career support for life."
+  image: "https://breathecode.herokuapp.com/v1/media/file/4geeks-feb-14th-113-jpeg?width=600"
+  visibility: "visible"
+  template: "coding-bootcamp"
+  keywords: "coding bootcamp, full stack coding bootcamp, full-stack coding bootcamp, online coding bootcamo, remote coding bootcamp"
+  redirects: ["/programming-course-from-scratch", "/coding-bootcamps"]
+
+seo_title: "coding bootcamp"
+header:
+  title: "Join a Coding Bootcamp. Start a New Career."
+  image: "../../../static/images/bg/python-image.png"
+  image_alt: "Python image"
+  paragraph: "Learn to code at one of the most awarded coding bootcamps in the world. Online or in-person. No coding skills required. Join a glogal coding community and get unlimited coding and career support, for life."
+
+button:
+  syllabus_heading: "Download Syllabus"
+  syllabus_btn_label: "Instant Download"
+  syllabus_motivation: "Get it in just a few seconds"
+  apply_button_link: "/us/apply"
+
+course_instructors: 
+  header:
+    title: "Meet our instructors"
+    paragraph: ""
+
+badges:
+  paragraph: "4Geeks Academy is the place where developers grow and thrive. We are licensed by the USA F. Dep. of Education. Chosen as one of the top 35 bootcamps of the world and top coding bootcamp in Miami according to SwitchUp. Recognized as the top 10 coding bootcamps in the United States according to Newsweek."
+
+upcoming:
+  no_dates_message: "There are currently no upcoming dates for this program"  
+
+credentials:
+  heading: "This Program By The Numbers"
+  paragraph: "Our results speak for themselves"
+
+## PROGRAM DETAILS
+details:
+  about:
+    title: "About the program"
+    sub_title: "The human brain absorbes 80% faster with daily practice. A coding bootcamp is the perfect learning vehicle for a fast career transition into coding.
+      
+      Upon completion of coding bootcamp, graduates will have the coding skills needed to develop real-life applications, 
+      job opportunities in the technology sector, and lifetime access to technical and career support at one of the biggest coding communities in the world."
+    list:
+      - label: "Duration"
+        content:  "16 weeks"
+      - label: "Classes"
+        content: "3 classes weekly"
+      - label: "Out of class"
+        content: "You are required to work at least 9 additional hours on your own time to finish the coding bootcamp"
+
+  heading: PROGRAM DETAILS FULL-TIME
+  weeks: 9
+  sub_heading: "Hands-on learning through real-life projects. Master the 3 most used languages in the world: Master Python, JS and React."
+  left_labels:
+    description: "DESCRIPTION:"
+    projects: "PROJECTS:"
+    duration: "DURATION:"
+    skills: "Skills / Weeks:"
+  details_modules:
+    - module_name: "PREWORK"
+      title: "Prework"
+      description: "Starting with the basics: HTML5 + CSS3 + Javascript. We review the basics of coding and make sure we are all on the same page."
+      projects: "CSS Postcard, Minimal Instagram Version, etc."
+      slug: "prework"
+      duration: "~60 hours"
+      step: 0
+    - module_name: "FOUNDATIONS"
+      title: "Learn To Code"
+      description: "Think like a computer: Control the flow of your code, code algorithms, loop, use conditionals, webpack, the command line, GIT, etc."
+      projects: "Instagram Application, Memory Card Game, Tic Tac Toe, Flappy Bird, etc."
+      slug: "foundations"
+      duration: "3.5 wks"
+      step: 3.5
+
+sticky_nav:
+  - title: "About"
+    href: "#about_the_program"
+  - title: "What will you learn"
+    href: "#what_will_you_learn"
+  - title: "What does it mean"
+    href: "#what_does_it_mean_full_stack_developer"
+  - title: "Tools and languages"
+    href: "#tools_and_tech"
+  - title: "What includes?"
+    href: "#what_includes"
+  - title: "Dates"
+    href: "#upcoming_dates"
+  - title: "Prices"
+    href: "#prices_and_payment"
+  - title: "Students"
+    href: "#testimonials"
+
+what_will_you_learn:
+  heading: "What will you learn in this course?"
+  sub_title: |
+    Learning to program is also about developing logic and understanding how a computer "thinks", 
+    how they "speak", how the elements of an application mesh and understand each other.
+
+    Developing the ability to program goes hand in hand with creativity and the search for 
+    solutions to problems. Programming means solving problems through certain tools with which 
+    instructions are created so that situations or problems are systematically solved by software.
+
+    In short, in this course you will learn a new way of thinking. You will develop a solid base of 
+    front-end, back-end, database, distributed process management and deployment to different web 
+    platforms. You will gain the skills and knowledge to create a website by immersing yourself in the 
+    best practices of responsive web design, working with various languages.
+  
+  image: "../../../static/images/learn_to_code.png"
+  image_alt: "What will you learn in this course"
+
+content_with_subtitle_and_image:
+  heading: "What does it mean to be a Full Stack Developer?"
+  image: "../../../static/images/person-thinking.png"
+  image_alt: "What does it mean to be a Full Stack Developer"
+  list:
+    - content: "A full stack developer is a developer who has mastered Full-Stack technology, 
+        both front-end and back-end. And what does all this mean? So you should know these terms:"
+    - label: "Stack"
+      content: |
+        Stack translation is "stack of things", in this case it would be the complete 
+        stack of applications that communicate with each other, so that they can execute, 
+        together, an action requested by the user/client
+
+    - label: "Front-end"
+      content: "It's everything the user (or client side) can see and interact with."
+    - label: "Backend"
+      content: "It is the internal architecture of the site, it is everything that happens on the 
+        server side. It is not visible to the user but it is the part that processes the information 
+        received from the front-end."
+    - content: "In this way, a full stack developer knows the entire chain of a system or application. 
+        The job of these developers is to get the components of a system to communicate with each other 
+        to get a program to solve the problem for which it was created.
+
+        In a programming course in which you will become a full-stack developer, you will learn 
+        about the front-end, the back-end, and what is in between, we can say that APIs are part of 
+        what is in between.
+
+        APIs are modules that make it possible for two different sets of software to communicate 
+        and interact with each other.
+
+        By becoming a full stack developer these terms will not be foreign to you and <strong>you will live 
+        with them to create incredible things!</strong>"
+
+tools_and_tech:
+  - topic: "Herramientas y lenguajes de programación que aprenderás"
+    list:
+      - title: "HTML"
+        image: "../../../static/images/techs/html.png"
+        description: |-
+          "In general terms, HTML is the language that allows building the structure of a web page. 
+          HTML tells the browser how to display content (images and text) of a website. 
+          HTML is a markup language that is used to format the information."
+      - title: "CSS"
+        image: "../../../static/images/techs/css.png"
+        description: |-
+          "CSS describes how HTML elements should be displayed on the screen. 
+          CSS separates, distributes content, and shapes its presentation on a web page. 
+          CSS is what makes a website responsive, also is what helps defining the style of the entire page 
+          -it avoids the work of creating styles page by page."
+      - title: "Python"
+        image: "../../../static/images/techs/python.png"
+        description: |-
+          "Python is the fastest growing language in the world, it is the primary language in virtually 
+          every industry. Together with React.js and Javascript, we teach the most desired stack of 
+          techonolgies companies want today."
+      - title: "React.js"
+        image: "../../../static/images/techs/react.png"
+        description: |-
+          "React is a JavaScript library developed by the Facebook technology team to develop user interfaces. 
+          React works with components, which are self-contained pieces of user interface. 
+          Components are independent and can be reused to create complex interfaces. Since its launch in 2013, 
+          it has become one of the most used front-end technologies today"
+      - title: "DOM"
+        image: "../../../static/images/techs/dom.png"
+        description: |-
+          "The DOM (Document Object Model) is the data representation of the objects that make up a document on the web. 
+          It works as an interface that allows browsing the document structure generated by the browser. 
+          Through the DOM you can add, modify, or delete elements and content."
+      - title: "SQL"
+        image: "../../../static/images/techs/sql.png"
+        description: |-
+          "It is the standard language for relational database management. SQL is used to communicate with a database. 
+          Through SQL you can obtain and update information from a database. "
+      - title: "Flask"
+        image: "../../../static/images/techs/flask.png"
+        description: |-
+          "Flask is a framework written in Python. A web application framework, is a set of pre-built libraries, features, 
+          and modules that allow developers to write code without worrying about programming details. 
+          Frameworks enable agile application development."
+
+what_includes:
+  - title: "What includes?"
+    description: "To become a programmer it is not only necessary to have knowledge of tools and languages. 
+      It is also important to have help to clear doubts, and have company to overcome the frustrations of 
+      learning to program and to introduce you to the world of work as a Jr. 
+      developer. In a ttraditional web programming course you will receive technical training, but you 
+      will not necessarily have access to other benefits that will make you a comprehensive full 
+      stack developer."
+    list:
+      - title: "> All the Mentoring You Need"
+        icon: "chat-2"
+        description: "Online and in person, for the rest of your life, even to clarify doubts about 
+          your code related to your work. We adjust the sessions according to your calendar, we 
+          assure you that you have the opportunity for constant mentoring whenever you need it."
+
+      - title: "> Teacher:Student Ratio 1:5"
+        icon: "hierarchy"
+        description: "You'll find more teachers on 4Geeks than the industry average."
+
+      - title: "> Response Time"
+        icon: "chronometer"
+        description: "Don't get stuck with your code, it won't take you more than 15 minutes for an 
+          instructor to help you through any of our community channels."
+
+      - title: "> Instructors with Live Classes"
+        icon: "instructor"
+        description: "The 4Geeks classes are totally live. Being connected with instructors and 
+          peers makes the experience more enriching."
+
+      - title: "> Access to the Platform for Lessons, Exercises and Community Channels"
+        icon: "screen"
+        description: "As a student at 4Geeks you will have access to the official class platform and you 
+          will belong to a community made up exclusively of students, graduates, instructors and academy 
+          staff ready to help."
+
+      - title: "> Access to the Platform for Lessons, Exercises and Community Channels"
+        icon: "notes-2"
+        description: "Based on each job opportunity, you will receive coaching in skills other than programming.
+          We will help you perfect your professional profile. You will have personalized advice with 
+          our experts to improve your CV, Linkedin, GitHub and Portfolio.
+          We will conduct mock interviews to assess your strengths and weaknesses to create a stronger 
+          profile before the actual interviews. Every time you have an interview, we will practice 
+          using different technologies. We have our own set of self-rated exercises, so you can practice 
+          until you have mastered the skills to get the job you want."
+
+syllabus:
+  heading: Get all the information about the syllabus
+  button_label: Download
+
+## 4GEEKS VS OTHERS SECTION
+geeks_vs_others:
+  heading: "WHAT MAKES THIS PROGRAM STAND OUT?"
+  sub_heading: "Compare with other schools"
+  sub_heading_link: ""
+## GEEK PAL AND GEEK FORCE BOXES
+geek_data:
+  heading: "And enjoy Career Support... for Life!"
+  geek_pal:
+    - One teacher every five students (1:5).
+    - Unlimited on-demand in-person or online mentoring sessions.
+    - Thousands of auto-graded exercises.
+    - Interactive and auto-graded tutorials.
+    - Video solutions for instant feedback.
+    - Online support chat 12 hours a day.
+    - Online streaming of classes.
+  geek_force:
+    - Resume building.
+    - Github profile building.
+    - Mock interview preparation.
+    - Customized interview preparation session for targeted jobs.
+    - Personal Branding coaching.
+    - Post-graduation coding practices and exercises.
+
+## PRICES AND PAYMENTS SECTION
+prices:
+  heading: "PRICES AND PAYMENTS"
+  sub_heading: ""
+  selector:
+    top_label: Location
+    placeholder: Select a location
+  button:
+    text: Check Prices and Plans
+    link: ""
+## TYPICAL DAY SECTION
+typical:
+  heading: "TYPICAL DAY AT THE ACADEMY"
+  sub_heading: ""
+  schedule:
+    - title: "Meditation"
+      time: "8:00 AM"
+      icon: users
+      content: "You will spend hundreds of hours coding; your body needs to relax, stretch and get ready for a thrilling day!"
+      step: 0
+    - title: "Setup and coffee"
+      time: "8:45 AM"
+      icon: coffee
+      content: "The bootcamp starts at 9:00 AM, so have some coffee to recharge your energy and get ready to learn!"
+      step: 1
+    - title: "Review Last Day"
+      time: "9:00 AM"
+      icon: laptopcode
+      content: "Review last day & weekend activities, Q&A. Overall briefing of what we have addressed."
+      step: 2
+    - title: "Lesson Time"
+      time: "10:00 AM"
+      icon: teacher
+      content: "Incremental: Each morning mentors will introduce a small set of new concepts and techniques that will help you along the way."
+      step: 3
+    - title: "Lunch Time"
+      time: "12:40 PM"
+      icon: utensils
+      content: "Recharge your batteries, get ready to spend the rest of the day practicing, solving challenges and projects."
+      step: 4
+    - title: "Projects and Exercises"
+      time: "2:00 PM"
+      icon: laptop
+      content: "You will be continuously challenged with real-life projects and exercises to deliver."
+      step: 5
+    - title: "Collaborative Coding"
+      time: "5:00 PM"
+      icon: usergroup
+      content: "All students will code on a single screen, discuss approaches and strategies, and deliver the projects."
+      step: 6
+
+## ALUMNI SECTION
+alumni:
+  heading: "Meet Our Alumni and Their Projects"
+  sub_heading: "The last phase of the course you must build a final project that you will choose yourself, it can be an undertaking or you will work directly on a real life project in collaboration with our hiring partners"

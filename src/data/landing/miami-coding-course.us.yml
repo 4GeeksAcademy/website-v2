@@ -3,7 +3,7 @@ meta_info:
 
   # This will show on social media when shared
   title: "Coding Course On-line and In-person, learn to code and get a better professional career"
-  description: "Coding has become an essencial knowledge for every career, take coding course and learn to code and have a better life."
+  description: "Coding has become an essencial knowledge for every career, take 4Geeks Academy coding course and learn to code and have a better life."
   image: "/images/bg/main-bg.jpg"
   keywords: "Coding Course, Coding Bootcamp, Coding Classes, Learn to code, 4Geeks Academy"
 
@@ -15,23 +15,29 @@ meta_info:
   # this UTM fields will be also included in the CRM contact
   utm_course: ["full-stack"]
   utm_location: downtown-miami
-  automation: soft #optional, this is the default value
-  tag: request_more_info #optional, this is the default value
+  automation: soft # comma separated, "soft" is the default value
+  tag: request_more_info # comma separated, "request_more_info" is the default value
 
 form:
   # posible fields: "first_name", "last_name", "full_name", "phone", "email"
   # always the first_name, email and phone will be mandatory if added.
   fields: ["full_name", "phone", "email"]
-  heading: "Get more information"
-  motivation: "Get a PDF and email in just 5 minutes"
-  button_label: Get more information
+  heading: "Join our award-winning web development course"
+  motivation: "Fill out the form to receive details and options related to financing your tuition"
+  button_label: Get more info today
   redirect: null #you can redirect to another url or entirely diffrent website
+
+apply_schollarship: # form that is displayed at the end of the landing
+  # title: "Get more info about this award-winning development course"
+  imageSide: "right"
+  image: "../../../static/images/comunity-support.png"
 
 # jumbotron on the top (cannot be commented out)
 header_data:
-  tagline: Coding Course
-  sub_heading: "Learn to code and become a web developer"
-  image: "../../../static/images/4geeks-main.jpg"
+  background: "#FFF1D1"
+  tagline: Become a web developer in a few as 16 weeks through work on real projects and mentorship by experienced professionals
+  sub_heading: "86% of our graduates have already started their future-proof, tech careers with an average entry salary of $50,000/yr"
+  badge: "../../../static/images/badges/switchup.png"
   image_filter: brightness(0.3)
 
 features:
@@ -40,11 +46,23 @@ features:
   #                                         up   left down  right
   styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
   bullets:
-   - Junior developers make avg $55k per year in Florida. 
+   - Tailor-made career support, our goal is to get you a job in tech. 
    - No previous experience or coding skills required.
-   - Part-Time focused No need to stop your life.
-   - Get lifetime access to our mentors and Career Growth Support (Your first Job in Tech is our goal).
-   
+   - Part-Time focused. No need to stop your life.
+  
+short_badges:
+  - name: "Premios Excelencia Educativa"
+    url: ""
+    image: "../../../static/images/badges/exelencia-educativa-es.png"
+    alt: "Mejor centro de Coding Bootcamp"
+  - name: "Newsweek"
+    url: ""
+    image: "../../../static/images/badges/newsweek-es.png"
+    alt: "Top Coding Bootcamps Newsweek"
+  - name: "Switchup"
+    url: ""
+    image: "../../../static/images/badges/reviews.png"
+    alt: "Best cooding bootcamp Switchup 2021"   
 
 follow_bar:
   position: "top" # top, bottom, hidden
@@ -62,87 +80,80 @@ follow_bar:
 #
 # ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇
 #
-
-in_the_news:
+rating_reviews:
   position: 1
-  heading: "Read about us in the media..."
-
+  heading: "Top rated on all available review sites"
+  rating_list:
+    - alt: "Career Karma"
+      image: "../../../static/images/badges/career-karma.png"
+      rating: 4.89
+      url: ""
+    - alt: "Switchup"
+      image: "../../../static/images/badges/switchup-img.png"
+      rating: 4.86
+      url: ""
+    - alt: "Course Report"
+      image: "../../../static/images/badges/course-report.png"
+      rating: 4.84
+      url: ""
+    - alt: "Google"
+      image: "../../../static/images/badges/google.png"
+      rating: 5
+      url: ""
+  
 badges:
   position: 2
-  heading: " "
+  heading: "4Geeks Academy has awards and recognitions that validate its excellence"
 
 program_details:
-  position: 3
-  heading: "Master Python, JS and React"
-  sub_heading: "The 3 most used languages in the world"
+  position: 2
+  background: "#FFFFFF"
+  heading: "Program details"
+  sub_heading: "Real life projects and exactly what companies are looking for"
 
 why_python:
-  position: 4
+  position: 3
   heading: "Why Python and React.js" # optional or set to white space to hide
   sub_heading: "JavaScript has 26x's more job vacancies than Ruby On Rails. Python has 10x's more job vacancies than Node.js" # optional or set to white space to hide
 
 geeks_vs_others:
-  position: 5
-  heading: "What made us so successfull?"
-  paragraph: ""
+  position: 4
+  heading: "Compare 4Geeks to other bootcamps"
+  # sub_heading: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
   total_rows: 5
 
 why_4geeks:
-  position: 6
-  heading: "Why choosing 4Geeks Academy"
+  position: 5
+  heading: "Why 4Geeks Academy"
   sub_heading: " "
 
 who_is_hiring:
-  position: 7
+  position: 6
   limit: 4
   heading: "Who is hiring our students?"
   sub_heading: "500+ hiring partners, and 50+ job openings right now for software development"
 
 alumni_projects:
-  position: 8
+  position: 7
   heading: "Projects you will be able to make"
   sub_heading: "Take a look at our previous student projects"
 
-# Possible layours: [two_column_left_image, two_column_right_image]
 components:
-  - name: first_syllabus_form
-    position: 4
-    layout: syllabus
-    button:
-      text: "Instant Download"
-    heading:
-      text: "Download the course syllabus"
-      #xl      lg     md     sm    xs
-      font_size: ["40px", "40px", "40px", "40px", "40px"]
-  - name: top_coding_bootcamp
-    position: 4
-    layout: two_column_left
-    proportions: [4, 8]
+  - name: python_y_javascript
+    position: 3
+    layout: two_column_right
+    background: "veryLightBlue2" # Name of the color(from components/Styling/index.js) or color code ex: #C9F9F9
     image:
-      style: '{ "backgroundSize": "contain" }'
-      src: "/images/badges/switchup.png"
-      link: "https://www.switchup.org/bootcamps/4geeks-academy"
-    button:
-      text: "Read testimonials"
-      color: null
-      path: "https://www.switchup.org/bootcamps/4geeks-academy"
+      src: "/images/why-4geeks/python-image.png"
     heading:
       text:
-        "We have been awarded one of the TOP coding courses in the World"
-        #xl      lg     md     sm    xs
-      font_size: ["40px", "40px", "40px", "40px", "40px"]
-  - name: working_as_software_developers
-    position: 7
-    proportions: [4, 8]
-    layout: two_column_left
-    image:
-      src: "https://storage.googleapis.com/4geeks-academy-website/landing-pictures/testimonials.webp"
-    heading:
-      text:
-        "86% of our graduates are now working in the field with an average entry salary of $50,000/yr"
-        #           xl      lg     md     sm    xs
-      font_size: ["40px", "34px"]
-# why_python:
-#   position: 7
-#   heading: "¿Porqué enseñamos Python?" # optional or set to white space to hide
-#   sub_heading: " " # optional or set to white space to hide
+        "Learn Python, Javascript, and more"
+        #           xl      lg      md      sm      xs
+      font_size: ["50px", "50px", "50px", "50px", "50px"]
+    content:
+      text: "Python and JavaScript are among the best-paid career positions in the US. 
+      
+      There are more 26X job opportunities in Javascript vs. Ruby on Rails, and 10X jobs in Python vs. node.js. 
+      
+      You will also learn: GitHub, CSS3, HTML5, Flask, etc."
+      font_size: ["16px"]

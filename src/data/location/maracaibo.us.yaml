@@ -8,8 +8,10 @@ meta_info:
   # will be last in the priority of location
   position: 41
   # it will not show up on the applications forms
-  unlisted: true
+  visibility: "unlisted"
   redirects: ["/us/location/maracaibo", "/location/maracaibo"]
+  region: "latam"
+  dialCode: "58"
 
 seo_title: "4Geeks Academy Maracaibo"
 header:
@@ -27,6 +29,14 @@ button:
   syllabus_submit_text: "DOWNLOAD"
   apply_button_link: "/apply"
   cohort_more_details_text: "DETAILS"
+
+custom_bar:
+  active: false
+  message: Lorem ipsum dot simet mosd ei
+  button: 
+    label: "Read More"
+    path: "#" #string (can be inline path using #, relative path or absolute path)
+
 badges:
   title: ""
   paragraph: "4Geeks Academy is the place where developers grow and thrive.
@@ -43,6 +53,7 @@ news:
 
 upcoming:
   no_dates_message: "There are currently no upcoming dates for this campus"
+  actionMessage: "Let me know when dates are available"
 
 info_box:
   heading: "Find us in Maracaibo"

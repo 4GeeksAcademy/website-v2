@@ -7,6 +7,8 @@ meta_info:
   keywords: ""
   redirects:
     ["/impact-hub", "/location/impact-hub", "/us/location/caracas-venezuela-en"]
+  region: "latam"
+  dialCode: "58"
 
 seo_title: "4Geeks Academy Caracas"
 header:
@@ -24,6 +26,14 @@ button:
   syllabus_submit_text: "DOWNLOAD"
   apply_button_link: "/apply"
   cohort_more_details_text: "DETAILS"
+
+custom_bar:
+  active: true
+  message: Become a fullstack developer, get lifetime career and coding mentorship.
+  # button: 
+  #  label: "Read More"
+  #  path: "#" #string (can be inline path using #, relative path or absolute path)
+
 badges:
   title: ""
   paragraph: "4Geeks Academy is the place where developers grow and thrive.
@@ -41,13 +51,13 @@ news:
 
 upcoming:
   no_dates_message: "There are currently no upcoming dates for this campus"
+  actionMessage: "Let me know when dates are available"
 info_box:
   heading: "Find us in Caracas"
   address: "Centro Financiero Madrid, Nivel Mezzanina Calle Madrid Municipio Baruta Distrito Capital, 1080, Miranda, Venezuela"
-  iframeMapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d980.8012226679697!2d-66.827591170803!3d10.48450831824653!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c2a5836b8efe439%3A0x575c78dd416e7ef7!2s4Geeks%20Academy%20Venezuela!5e0!3m2!1ses-419!2scl!4v1621008667701!5m2!1ses-419!2scl"
   contact_heading: "Contacts"
   whatsapp: "+58 424-244-3542"
-  phone: "(786) 416-6640"
+  phone: "+58 424 244-3542"
   email: "info@4GeeksAcademy.com"
   image: "../../../static/images/locations/caracas-map.png"
   alt: ""
@@ -84,12 +94,12 @@ prices:
       ## CHANGE HERE THE INFO IN THE LEFT BOX
       left_section:
         header:
-          heading_one: "PAY ONLY AFTER"
-          heading_two: "YOU GET A JOB"
-          sub_heading: "with the Income Sharing Agreement (ISA)"
+          heading_one: "PAY IN MONTHLY"
+          heading_two: "INSTALLMENTS"
+          sub_heading: "Contact us for details"
         content:
-          price: "9% of Salary"
-          price_info: "until fully paid, and only if you get the job"
+          price: "Contact us for details"
+          price_info: "Up to 12 months"
         button:
           button_text: "APPLY NOW"
 
@@ -99,10 +109,10 @@ prices:
         header:
           heading_one: "PAY UPFRONT"
           heading_two: "(OUT OF POCKET)"
-          sub_heading: "ask for our financing and scollarships"
+          sub_heading: "Know about different payment options"
         content:
-          price: "?"
-          price_info: "please contact us for more information about prices, scolarships and financing options."
+          price: "Contact us for details"
+          price_info: "Contact us for more information about prices and financing options."
         button:
           button_text: "APPLY NOW"
     ## *****************
@@ -116,12 +126,12 @@ prices:
       ## CHANGE HERE THE INFO IN THE LEFT BOX
       left_section:
         header:
-          heading_one: "PAY ONLY AFTER"
-          heading_two: "YOU GET A JOB"
-          sub_heading: "with the Income Sharing Agreement (ISA)"
+          heading_one: "MONTHLY PAYMENTS"
+          heading_two: "DETAILS"
+          sub_heading: "Pay in monthly installments"
         content:
-          price: "9% of Salary"
-          price_info: "until fully paid, and only if you get the job"
+          price: "Contact us"
+          price_info: "Ask for applicable discounts"
         button:
           button_text: "APPLY NOW"
 
@@ -131,10 +141,10 @@ prices:
         header:
           heading_one: "PAY UPFRONT"
           heading_two: "(OUT OF POCKET)"
-          sub_heading: " "
+          sub_heading: "Save and pay upfront "
         content:
-          price: "?"
-          price_info: "please contact us for more information about prices, scolarships and financing options."
+          price: "Contact us for details"
+          price_info: "Contact us for more information about prices and financing options."
         button:
           button_text: "APPLY NOW"
 
@@ -149,10 +159,10 @@ prices:
           heading_two: ""
           sub_heading: ""
         content:
-          price: "Part-Time modality is not available"
+          price: "Program not availablee"
           price_info: "Caracas - Venezuela"
         button:
-          button_text: "Apply another courses"
+          button_text: "Apply to other courses"
 
     full_time:
       slug: "full_time"
@@ -164,10 +174,10 @@ prices:
           heading_two: ""
           sub_heading: ""
         content:
-          price: "Full-Time modality is not available"
+          price: "Program not available"
           price_info: "Caracas - Venezuela"
         button:
-          button_text: "Apply another courses"
+          button_text: "Apply to other courses"
 
   machine_learning:
     part_time:
@@ -180,7 +190,7 @@ prices:
           heading_two: ""
           sub_heading: ""
         content:
-          price: "Part-Time modality is not available"
+          price: "Program not available"
           price_info: "Caracas - Venezuela"
         button:
           button_text: "Apply another courses"
@@ -195,7 +205,7 @@ prices:
           heading_two: ""
           sub_heading: ""
         content:
-          price: "Full-Time modality is not available"
+          price: "Program not avaible"
           price_info: "Caracas - Venezuela"
         button:
           button_text: "Apply another courses"
@@ -208,11 +218,12 @@ in_person_available: true # important to accept in-person applicants
 
 city: "Caracas"
 name: "Venezuela"
-latitude: "10.484845"
-longitude: "-66.826593"
-address: "Sede Principal de El Nacional."
+latitude: "10.484237234498359"
+longitude: "-66.860851629031"
+iframeMapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3923.2121354418296!2d-66.86310468456094!3d10.48393656738948!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c2a5836b8efe439%3A0x575c78dd416e7ef7!2s4Geeks%20Academy%20Venezuela!5e0!3m2!1sen!2sve!4v1642190228489!5m2!1sen!2sve"
+address: "Nest Coworking"
 zip_code: ""
-state: "Los Cortijos de Lourdes"
+state: "Miranda"
 country: "Venezuela"
 socials:
   - name: "Facebook"

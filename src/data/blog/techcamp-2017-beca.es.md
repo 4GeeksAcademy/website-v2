@@ -9,7 +9,6 @@ image: "https://storage.googleapis.com/4geeks-academy-website/blog/2017/07/ISA-B
 image_alt: ""
 cluster: "tendencias-y-tecnologia"
 status: "published"
-featured: "true"
 
 ---
 

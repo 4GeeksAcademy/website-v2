@@ -7,6 +7,8 @@ meta_info:
   keywords: "Coding bootcamp Madrid"
   redirects:
     ["madrid", "/es/location/madrid-spain/", "/es/location/madrid-espana"]
+  region: "europe"
+  dialCode: "34"
 
 seo_title: "4Geeks Academy Madrid, España"
 header:
@@ -24,6 +26,13 @@ button:
   syllabus_submit_text: "DESCARGAR"
   cohort_more_details_text: "DETALLES"
   apply_button_link: "/aplica"
+
+custom_bar:
+  active: true
+  message: 4Geeks ofrece becas, ayudas al estudio y financiación a tu medida. <a class="customBar-link" href="/es/aplica">¡Solicita tu plaza!</a>
+ # button: 
+ #   label: ""
+ #   path: "#" #string (can be inline path using #, relative path or absolute path)
 
 info_box:
   heading: "Encuéntranos en Madrid"
@@ -46,6 +55,7 @@ news:
 
 upcoming:
   no_dates_message: "Actualmente no hay próximas fechas para este campus"
+  actionMessage: "Avisenme fechas disponibles"
 
 images_box:
   heading: "Qué deberías saber sobre esta ubicación: "

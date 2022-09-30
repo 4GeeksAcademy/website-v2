@@ -18,7 +18,7 @@ staff:
       - Soccer
     coding_skills:
       - Javascript
-    location: ""
+    location: ["all", "downtown-miami"]
   - name: "Marcelo"
     last_name: "Ricigliano"
     nick_name: "MRicigliano"
@@ -36,7 +36,7 @@ staff:
       - Juventus
     coding_skills:
       - Javascript
-    location: ""
+    location: ["all", "downtown-miami"]
   - name: "James"
     last_name: "Walters"
     nick_name: ""
@@ -54,7 +54,7 @@ staff:
       - Juventus
     coding_skills:
       - Javascript
-    location: ""
+    location: []
   - name: "Daniel"
     last_name: "Chang"
     nick_name: ""
@@ -75,7 +75,7 @@ staff:
     coding_skills:
       - Javascript
       - Python
-    location: ""
+    location: []
   # - name: "Patricia"
   #   last_name: "Ayuso"
   #   nick_name: ""
@@ -92,7 +92,7 @@ staff:
   #     - Music
   #   coding_skills:
   #     - Excel
-  #   location: ""
+  #   location: ['downtown-miami']
   - name: "Paolo"
     last_name: "Lucano"
     nick_name: "Pluco"
@@ -112,7 +112,7 @@ staff:
       - Travel
     coding_skills:
       - Javascript
-    location: ""
+    location: []
   - name: "Steven"
     last_name: "Granger"
     nick_name: ""
@@ -132,7 +132,7 @@ staff:
       - Travel
     coding_skills:
       - Javascript
-    location: ""
+    location: []
   - name: "Ana Belen"
     last_name: "Salas"
     nick_name: ""
@@ -149,7 +149,7 @@ staff:
       - Music
     coding_skills:
       - Excel
-    location: ""
+    location: []
   - name: "Mafe"
     last_name: "Castro"
     nick_name: ""
@@ -166,7 +166,7 @@ staff:
       - Fashion Design
     coding_skills:
       - Bootstrap
-    location: ""
+    location: []
   - name: "Nacho"
     last_name: "Cordoba"
     nick_name: "Nacho"
@@ -185,4 +185,4 @@ staff:
       - Music
     coding_skills:
       - Javascript and Python
-    location: ""
+    location: []

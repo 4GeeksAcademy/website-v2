@@ -8,7 +8,7 @@ image: "https://storage.googleapis.com/4geeks-academy-website/blog/2019/06/GUENS
 image_alt: ""
 cluster: "career-growth"
 status: "published"
-featured: "true"
+featured: true
 
 ---
 

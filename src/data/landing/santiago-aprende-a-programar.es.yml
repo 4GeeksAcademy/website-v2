@@ -15,23 +15,30 @@ meta_info:
   # this UTM fields will be also included in the CRM contact
   utm_course: ["full-stack"]
   utm_location: santiago-chile
-  automation: soft #optional, this is the default value
-  tag: request_more_info #optional, this is the default value
+  automation: soft # comma separated, "soft" is the default value
+  tag: request_more_info # comma separated, "request_more_info" is the default value
+
+navbar:
+  logoUrl: "#"
+  buttonText: "Postula"
+  # url accepts: relative(/apply), absolute(https://google.com) or id(#componentName)
+  buttonUrl: "#bottom" # [#top, #bottom or another #componentId]
 
 form:
   # posible fields: "first_name", "last_name", "full_name", "phone", "email"
   # always the first_name, email and phone will be mandatory if added.
   fields: ["full_name", "phone", "email"]
   heading: "Conoce más información"
-  motivation: "Llena el formulario y te enviaremos la info en menos de 5 min"
+  motivation: "Llena el formulario y te enviaremos la información en menos de 5 min"
   button_label: Obtener malla y más información
-  redirect: null #you can redirect to another url or entirely diffrent website
+  redirect: "/es/gracias/?lang=es" #you can redirect to another url or entirely diffrent website
 
 # jumbotron on the top (cannot be commented out)
 header_data:
-  tagline: Aprende a programar
-  sub_heading: "Desde cero hasta conseguir trabajo como desarrollador"
-  image: "../../../static/images/4geeks-main.jpg"
+  background: "#FFF1D1"
+  tagline: Aprende a programar 
+  sub_heading: ""
+  badge: "../../../static/images/badges/switchup.png"
   image_filter: brightness(0.3)
 
 features:
@@ -40,20 +47,20 @@ features:
   #                                         up   left down  right
   styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
   bullets:
-    - No se requiere experiencia previa
-    - Horarios part-time y full-time. Online o Presencial
-    - Mentorías y career support de por vida
-    - Un desarrollador jr. hace $900.000 CLP al mes
+    - No requieres experiencia previa.
+    - Tenemos horarios part time y full time.
+    - La tecnología es el futuro, y tu puedes ser parte de ello. 
+    - Nuestro objetivo es que consigas empleo en los primeros 90 días. 
 
 follow_bar:
   position: "top" # top, bottom, hidden
   content:
-    text: "Desde 184.311 CLP al mes."
-    text_mobile: "Desde 184.311 CLP al mes."
+    text: "Financiamiento sin interés. \n Plan de pago a 9 cuotas."
+    text_mobile: "Financiamiento sin interés. \n Hasta 9 cuotas."
     # devices:    XL      LG      MD      SM       XS
-    font_size: ["25px", "25px", "25px", "20px", "18px"]
+    font_size: ["25px", "25px", "25px", "18px", "4.3vw"]
   button:
-    text: "Obtener más información"
+    text: "Más Información"
     path: "#top"
   phone:
     text: "Llama "
@@ -62,51 +69,108 @@ follow_bar:
 # ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇
 #
 
-in_the_news:
-  position: 1
-  heading: "Lee sobre 4Geeks en los medios..."
-  filter: ["CNN Español", "La Tercera", "Las Ultimas Noticias", "Emol"]
+# in_the_news:
+#  position: 1
+#  heading: "Lee sobre 4Geeks en los medios..."
+#  filter: ["CNN Español", "La Tercera", "Las Ultimas Noticias", "Emol"]
 
 badges:
+  position: 1
+  heading: "4Geeks Academy cuenta con premios y reconocimientos que validan su excelencia"
+
+about4Geeks:
   position: 2
-  heading: " "
+  heading: Aprende a programar desde cero con 4Geeks
+  sub_heading: "Una comunidad de más de 4000 estudiantes, profesores, partners y exalumnos, conectados por medio de Slack, GitHub, Social Media y BreatheCode (nuestra plataforma educacional)"
+  list:
+    - title: "Apoyo Profesional para siempre"
+    - title: "Financiamiento hasta 18 meses"
+    - title: "Mentorias 1:1 ilimitadas"
+    - title: "Preparación para Entrevistas personalizada"
+  paragraph: ""
+  button_text: "Postula"
+  button_link: "/es/aplica"
+  image: "../../../static/images/bg/community.png"
+  image_mobile: "../../../static/images/bg/community.png"
 
-program_details:
+iconogram:
   position: 3
-  heading: "Domina Python, JS y React"
-  sub_heading: "Aprende a programar con las tecnologías más usadas del mundo"
+  icons:
+  - icon: "touch" 
+    title: Postula al programa 
+  - icon: "receive_mail"
+    title: Recibe un correo electrónico con la información
+  - icon: "talk"
+    title: Haz una entrevista con nuestro equipo
+  - icon: "terminal"
+    title: Aprende a programar con nosotros
 
-why_python:
+who_is_hiring:
   position: 4
-  heading: "¿Por qué Python y React.js?" # optional or set to white space to hide
-  sub_heading: "Javascript es 26 veces más buscado que Ruby On Rails. Python es 10 veces más buscado que Node.js" # optional or set to white space to hide
+  heading: "DÓNDE TRABAJAN NUESTROS ESTUDIANTES"
+  sub_heading: "Nos encanta ver crecer a nuestros estudiantes, es por eso que nos esforzamos cada día por tener más aliados, para que puedas trabajar en empresas que te ayuden a seguir creciendo profesionalmente."
+  featured:
+    - name: "Facebook"
+      image: "../../../static/images/partner/facebook.png"
+    - name: "Microsoft"
+      image: "../../../static/images/partner/microsoft.png"
+    - name: "Apple"
+      image: "../../../static/images/partner/apple.png"
 
-geeks_vs_others:
-  position: 6
-  heading: "¿Por qué somos tan exitosos?"
-  paragraph: "Exactamente lo que necesitas para aprender a programar rápido y exitosamente"
-  total_rows: 5
+choose_your_program:
+  position: 5
+  title: Nuestros Programas
+  paragraph: Contamos con programas que combinan clases prácticas dictadas por expertos
+  programs:
+  - title: "Full Stack Developer"
+    sub_title: "Nivel 1"
+    icon: "fullstack"
+    description: |
+      Aprende desde cero, empezando por lo básico: HTML + CSS3 + Javascript.
+      
+      Aprende las habilidades más solicitadas con instructores apasionados y un plan de estudios práctico para ayudarte a encontrar un trabajo de programación como desarrollador Jr.
+    
+    text_link: Postula
+    link: "#"
+  - title: "NodeJs Back End Development"
+    sub_title: "Nivel 2"
+    icon: "software"
+    description: |
+      Este programa de estudio te permitirá trabajar y desarrollar el back-end de software y aplicaciones web, utilizando uno de los lenguajes de programacion más demandados en el mundo, Javascript.
+
+      Aprenderás a crear tu ambiente de trabajo y realizar las configuraciones pertinentes para poder trabajar con el stack más solicitado de NodeJs
+    
+    text_link: Postula
+    link: "#"
+    
 
 why_4geeks:
   position: 7
-  heading: "Por qué 4Geeks"
+  heading: "Escúchalo de nuestros alumnos"
   sub_heading: " "
-
-who_is_hiring:
-  position: 8
-  limit: 4
-  heading: "¿Quién contrata a nuestros alumnos?"
-  sub_heading: "Nuestros partners de contratación crecen todos los días, con más de 150 aliados a nivel global y decenas de vacantes activas en nuestras bolsas de empleo."
-
-alumni_projects:
-  position: 9
-  heading: "Así podría ser tu proyecto final del curso"
-  sub_heading: "Proyectos hechos por graduados de la academia"
 
 # Possible layours: [two_column_left_image, two_column_right_image]
 components:
+  - name: python_y_javascript
+    position: 6
+    layout: two_column_right
+    background: "veryLightBlue2" # Name of the color(from components/Styling/index.js) or color code ex: #C9F9F9
+    image:
+      src: "/images/why-4geeks/python-image.png"
+      # /static/images/why-4geeks/python-image.png
+    # video: "B01-eTfgqqc"
+    heading:
+      text:
+        "Python y Javascript"
+        #           xl      lg      md      sm      xs
+      font_size: ["50px", "50px", "50px", "50px", "50px"]
+    content:
+      text: "Nuestros programa está basado en el uso de Python y Javascript. ¿La razón? En el mercado laboral JavaScript tiene 26 veces más vacantes de trabajo que Ruby on Rails y  Python tiene 10 veces más trabajos que node.js.
+      
+      Otras herramientas que también aprenderás a usar en nuestro programa son: GitHub, CSS3, HTML5, Flask, etc."
+      font_size: ["16px"]
   - name: top_coding_bootcamp
-    position: 5
+    position: 8
     layout: two_column_left
     proportions: [4, 8]
     image:
@@ -122,26 +186,7 @@ components:
         "Hemos sido nombrados uno de los TOP coding bootcamps en el mundo"
         #xl      lg     md     sm    xs
       font_size: ["40px", "40px", "40px", "40px", "40px"]
-  - name: first_syllabus_form
-    position: 4
-    layout: syllabus
-    button:
-      text: "Descarga Instantánea"
-    heading:
-      text: "Descarga la Malla Educativa"
-      #xl      lg     md     sm    xs
-      font_size: ["40px", "40px", "40px", "40px", "40px"]
-  - name: working_as_software_developers
-    position: 8
-    proportions: [4, 8]
-    layout: two_column_left
-    image:
-      src: "https://storage.googleapis.com/4geeks-academy-website/landing-pictures/testimonials.webp"
-    heading:
-      text:
-        "89% de nuestros graduados ya trabajan como desarrolladores de software."
-        #xl      lg     md     sm    xs
-      font_size: ["40px", "34px"]
+
 # why_python:
 #   position: 7
 #   heading: "¿Por qué enseñamos Python?" # optional or set to white space to hide

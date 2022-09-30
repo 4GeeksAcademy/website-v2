@@ -4,6 +4,7 @@ meta_info:
   description: ""
   bc_slug: "full-stack-ft"
   image: ""
+  visibility: "visible"
   keywords: ""
   redirects:
     [
@@ -53,7 +54,8 @@ badges:
   paragraph: "4Geeks Academy is the place where developers grow and thrive. We are licensed by the USA F. Dep. of Education. Chosen as one of the top 35 bootcamps of the world and top coding bootcamp in Miami according to SwitchUp. Recognized as the top 10 coding bootcamps in the United States according to Newsweek."
 
 upcoming:
-  no_dates_message: "There are currently no upcoming dates for this program"  
+  no_dates_message: "There are currently no upcoming dates for this program"
+  actionMessage: "Let me know when dates are available"
 
 credentials:
   heading: "This Program By The Numbers"
@@ -76,14 +78,18 @@ details:
       list:
         - label: "Duration"
           content:  "9 Weeks"
+          icon: "calendar"
         - label: "Classes"
           content: "4 Classes weekly"
+          icon: "book"
         - label: "Certificate"
           content: "Full-Stack Developer"
           link_text: "See example"
           link: "https://certificate.breatheco.de/4ae7a46bba78dc19b823e124fea120c17b45e044"
+          icon: "certificate"
         - label: "Requisites"
           content: "No previous coding skills required, no advanced Math required, logical thinking recommended."
+          icon: "contract-checked"
   heading: PROGRAM DETAILS FULL-TIME
   weeks: 9
   sub_heading: "Hands-on learning through real-life projects. Master the 3 most used languages in the world: Master Python, JS and React."
@@ -211,7 +217,7 @@ typical:
 ## ALUMNI SECTION
 alumni:
   heading: "Meet Our Alumni and Their Projects"
-  sub_heading: "Get to know our graduates and some of the projects they built during the program"
+  sub_heading: "The last phase of the course you must build a final project that you will choose yourself, it can be an undertaking or you will work directly on a real life project in collaboration with our hiring partners"
 
 ## SIDEBAR
 sidebar:

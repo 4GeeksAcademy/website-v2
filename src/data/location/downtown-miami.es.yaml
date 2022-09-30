@@ -6,6 +6,8 @@ meta_info:
   image: ""
   keywords: "null"
   redirects: ["/es/location/downtown-miami-usa"]
+  region: "usa-canada"
+  dialCode: "1"
 
 seo_title: "Bootcamp de Programación en Miami"
 header:
@@ -23,6 +25,13 @@ button:
   cohort_more_details_text: "DETALLES"
   apply_button_link: "/aplica"
 
+custom_bar:
+  active: false
+  message: 'Potencia tu carrera a través del código. <a class="customBar-link" href="/es/aplica">Aplica</a> Próximas fechas: 06/27 Full-Stack | 07/11 ML + AI!'
+  button:
+    label: "Read More"
+    path: "#" #string (can be inline path using #, relative path or absolute path)
+
 badges:
   title: ""
   paragraph: "4Geeks Academy es el lugar donde los desarrolladores crecen y prosperan.
@@ -38,6 +47,7 @@ news:
   title: "4Geeks Academy Miami en las noticias..."
 upcoming:
   no_dates_message: "Actualmente no hay próximas fechas para este campus"
+  actionMessage: "Avisenme fechas disponibles"
 
 info_box:
   heading: "Encuéntranos en Miami"
@@ -50,7 +60,8 @@ info_box:
   alt: ""
 images_box:
   heading: "Qué deberías saber acerca de esta ubicacion: "
-  content: "Miami es una de las ciudades de mayor crecimiento tecnólogico, únete al Bootcamp de Programación part-time numero uno de la ciudad y la mayor comunidad de desarrolladores. \n El Career Support y Student Support es de por vida.Estamos ubicados a corta distancia de la estación de metro y a tan solo 5 minutos de Brickell, una de las áreas más activas de la ciudad. Nuestra oficina está abierta 24/7 durante la semana y los sábados hacemos los famosos “Findes de Programación”, donde los estudiantes y otros programadores se juntan a programar con pizzas y tragos! Además, contamos con parqueo gratuito para los estudiantes!"
+  content: |
+    Miami es una de las ciudades de mayor crecimiento tecnólogico, únete al Bootcamp de Programación part-time numero uno de la ciudad y la mayor comunidad de desarrolladores. \n El Career Support y Student Support es de por vida.Estamos ubicados a corta distancia de la estación de metro y a tan solo 5 minutos de Brickell, una de las áreas más activas de la ciudad. Nuestra oficina está abierta 24/7 durante la semana y los sábados hacemos los famosos "Findes de Programación", donde los estudiantes y otros programadores se juntan a programar con pizzas y tragos! Además, contamos con parqueo gratuito para los estudiantes!
   images:
     - path: "../../../static/images/locations/miami-loc.jpg"
       alt: "miami-sunset"
@@ -146,10 +157,20 @@ prices:
           heading_two: "(OUT OF POCKET)"
           sub_heading: "y disfruta el mejor precio de la ciudad"
         content:
-          price: "$9,499.00"
+          price: "$9,999.00"
           price_info: "una sola quota"
         button:
           button_text: "APLICA"
+      scholarship:
+        header:
+          heading_one: Scholorships
+          heading_two: ""
+          sub_heading: ""
+        content:
+          price: "$4,499.00"
+          price_info: "una sola cuota, con el mejor precio del mercado"
+        button:
+          button_text: "APLICAR AHORA"
     ## *****************
     ## PART-TIME SECTION
     ## *****************
@@ -229,10 +250,21 @@ prices:
           heading_two: "(OUT OF POCKET)"
           sub_heading: "y disfruta el mejor precio de la ciudad"
         content:
-          price: "$7,499.00"
+          price: "$8,999.00"
           price_info: "una sola quota"
         button:
           button_text: "Aplicar Ahora"
+
+      scholarship:
+        header:
+          heading_one: Scholorships
+          heading_two: ""
+          sub_heading: ""
+        content:
+          price: "$4,499.00"
+          price_info: "una sola cuota, con el mejor precio del mercado"
+        button:
+          button_text: "APLICAR AHORA"
 
   software_engineering:
     # slug: "software-engineering"
@@ -434,6 +466,7 @@ active_campaign_location_slug: "downtown-miami"
 breathecode_location_slug: "downtown-miami"
 gdpr_compliant: false # do we need to ask for permision?
 in_person_available: true # important to accept in-person applicants
+online_available: false # important to accept online-only applicants
 
 city: "Miami"
 name: "Miami, USA"

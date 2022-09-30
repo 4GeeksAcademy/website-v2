@@ -1,0 +1,157 @@
+meta_info:
+  slug: curso-de-programacion # <--- URL 4geeksacademy.com/us/landing/example
+
+  # This will show on social media when shared
+  title: "Curso de programación en remoto y presencial, aprende a programar e impulsa tu carrera profesional"
+  description: "La programación es el nuevo lenguaje universal, únete a nuestro programa y aprende lo que las empresas necesitan."
+  image: "/images/bg/main-bg.jpg"
+  keywords: "Curso de programación, Bootcamp, Clases de programación, Aprende a programar, 4Geeks Academy"
+
+  template: "landing_a" # <--- choose your landing template
+  redirects: # <--- URL redirections to avoid 404 errors
+    ["/landing/coding-course"]
+
+  # Set a particular course or location to the landing page
+  # this UTM fields will be also included in the CRM contact
+  utm_course: ["full-stack"]
+  utm_location: madrid-spain
+  automation: soft # comma separated, "soft" is the default value
+  tag: request_more_info # comma separated, "request_more_info" is the default value
+
+form:
+  # posible fields: "first_name", "last_name", "full_name", "phone", "email"
+  # always the first_name, email and phone will be mandatory if added.
+  fields: ["full_name", "phone", "email"]
+  heading: "Solicita tu beca"
+  motivation: "Conviértete en Full-Stack Developer con financiación a tu medida, becas y ayuda al estudio."
+  button_label: Solicita una beca
+  redirect: null #you can redirect to another url or entirely diffrent website
+
+apply_schollarship: # form that is displayed at the end of the landing
+  # title: "Apoyo Profesional Ilimitado"
+  imageSide: "right"
+  image: "../../../static/images/comunity-support.png"
+
+# jumbotron on the top (cannot be commented out)
+header_data:
+  background: "#FFF1D1"
+  tagline: Conviértete en Full-Stack Developer en 16 semanas. Desarrolla proyectos reales y recibe mentorías de programadores senior.
+  sub_heading: "El 86% de nuestros alumnos ya han empezado su carrera en el sector tech con un salario medio de 22.000€ al año."
+  badge: "../../../static/images/badges/switchup.png"
+  image_filter: brightness(0.3)
+
+features:
+  marginTop: 0px #<-- separation between tagline and the bullets
+
+  #                                         up   left down  right
+  styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
+  bullets:
+   - Aprende las tecnologías que demandan las empresas. 
+   - Clases reducidas, presenciales o en remoto, y con acompañamiento de por vida.
+   - No se necesita experiencia previa, ¡empieza desde cero!
+  
+short_badges:
+  - name: "Premios Excelencia Educativa"
+    url: ""
+    image: "../../../static/images/badges/exelencia-educativa-es.png"
+    alt: "Mejor centro de Coding Bootcamp"
+  - name: "Newsweek"
+    url: ""
+    image: "../../../static/images/badges/newsweek-es.png"
+    alt: "Top Coding Bootcamps Newsweek"
+  - name: "Switchup"
+    url: ""
+    image: "../../../static/images/badges/reviews.png"
+    alt: "Best cooding bootcamp Switchup 2021"   
+
+follow_bar:
+  position: "top" # top, bottom, hidden
+  content:
+    text: "You don't have to pay anything until \n you get a job in tech. Starting at $135/mo."
+    text_mobile: "As low as $135/mo. \n Don't pay anything until you get a job in tech"
+    # devices:   XL      LG    MD      SM    XS
+    font_size: ["25px", "25px", "25px", "20px", "18px"]
+  button:
+    text: "Get more information"
+    path: "#top"
+  phone:
+    text: "Call "
+
+#
+# ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇
+#
+rating_reviews:
+  position: 1
+  heading: "Lo que opinan de 4Geeks Academy..."
+  rating_list:
+    - alt: "Career Karma"
+      image: "../../../static/images/badges/career-karma.png"
+      rating: 4.80
+      url: ""
+    - alt: "Switchup"
+      image: "../../../static/images/badges/switchup-img.png"
+      rating: 4.89
+      url: ""
+    - alt: "Coruse Report"
+      image: "../../../static/images/badges/course-report.png"
+      rating: 4.84
+      url: ""
+    - alt: "Google"
+      image: "../../../static/images/badges/google.png"
+      rating: 5
+      url: ""
+  
+badges:
+  position: 2
+  heading: "4Geeks Academy tiene premios y reconocimientos que validan su excelencia"
+
+program_details:
+  position: 2
+  background: "#FFFFFF"
+  heading: "Detalles del programa"
+  sub_heading: "Aprende las tecnologías que demandan las empresas"
+
+why_python:
+  position: 3
+  heading: "¿Por qué Python y React?" # optional or set to white space to hide
+  sub_heading: "JavaScript tiene 26 veces más vacantes que Ruby On Rails. Python tiene 10 veces más vacantes que Node.js" # optional or set to white space to hide
+
+geeks_vs_others:
+  position: 4
+  heading: "¿Por qué 4Geeks Academy es único?"
+  # sub_heading: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
+  total_rows: 5
+
+why_4geeks:
+  position: 5
+  heading: "¿Por qué debes estudiar en 4Geeks Academy?"
+  sub_heading: " "
+
+who_is_hiring:
+  position: 6
+  limit: 4
+  heading: "Empresas que contratan a nuestros estudiantes"
+  sub_heading: "Más de 500 partners y más de 150 vacantes abiertas como Full-Stack Developer"
+
+#alumni_projects:
+#  position: 7
+#  heading: "Proyectos que serás capaz de realizar"
+#  sub_heading: "Take a look at our previous student projects"
+
+components:
+  - name: python_y_javascript
+    position: 3
+    layout: two_column_right
+    background: "veryLightBlue2" # Name of the color(from components/Styling/index.js) or color code ex: #C9F9F9
+    image:
+      src: "/images/why-4geeks/python-image.png"
+    heading:
+      text:
+        "Python y Javascript"
+        #           xl      lg      md      sm      xs
+      font_size: ["50px", "50px", "50px", "50px", "50px"]
+    content:
+      text: "Nuestro programa está basado en el uso de Python y Javascript. ¿La razón? En el mercado laboral JavaScript tiene 26 veces más vacantes de trabajo que Ruby on Rails y  Python tiene 10 veces más trabajos que node.js.
+      
+      Otras herramientas que también aprenderás a usar en nuestro programa son: GitHub, CSS3, HTML5, Flask, PostgreSQL, etc."
+      font_size: ["16px"]

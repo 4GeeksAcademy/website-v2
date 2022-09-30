@@ -15,8 +15,8 @@ meta_info:
   # this UTM fields will be also included in the CRM contact
   utm_course: ["full-stack"]
   utm_location: downtown-miami
-  automation: soft #optional, this is the default value
-  tag: request_more_info #optional, this is the default value
+  automation: soft # comma separated, "soft" is the default value
+  tag: request_more_info # comma separated, "request_more_info" is the default value
 
 form:
   # posible fields: "first_name", "last_name", "full_name", "phone", "email"
@@ -45,7 +45,6 @@ features:
     - Part-Time focused. No need to stop your oife. Online or in our beautiful campus in Miami.
     - Get lifetime access to our mentors and Career Growth Support (Your first Job in Tech is our goal).
 
-
 follow_bar:
   position: "top" # top, bottom, hidden
   content:
@@ -69,7 +68,7 @@ in_the_news:
 
 badges:
   position: 2
-  heading: " "
+  heading: "4Geeks Academy has awards and recognitions that validate it's excellence"
 
 program_details:
   position: 3
@@ -139,13 +138,13 @@ components:
       src: "https://storage.googleapis.com/4geeks-academy-website/landing-pictures/testimonials.webp"
 
     heading:
-      text: "86% of our graduates are now working in the field with an average entry salary of $50,000/yr"
+      text:
+        "86% of our graduates are now working in the field with an average entry salary of $50,000/yr"
         #           xl      lg      md      sm      xs
       font_size: ["40px", "34px"]
     # content:
     #   text:
     #     "86% of our graduates are now working in the field with an average entry salary of $50,000/yr"
-
 # why_python:
 #   position: 7
 #   heading: "¿Porqué enseñamos Python?" # optional or set to white space to hide

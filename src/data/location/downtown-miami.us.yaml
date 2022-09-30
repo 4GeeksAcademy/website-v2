@@ -15,13 +15,15 @@ meta_info:
       "/coding-campus/coding-bootcamp-miami",
       "/us/coding-bootcamp-miami",
     ]
+  region: "usa-canada"
+  dialCode: "1"
 
 seo_title: "Coding Bootcamp in Miami"
 header:
   tagline: "4Geeks Academy in Miami"
   paragraph: ""
   image: "../../../static/images/locations/miami-home.png"
-  alt: "4Geeks Academy online and in-person coding bootcamp in Miami, Florida"
+  alt: "4Geeks Academy live coding bootcamp in Miami, Florida"
 
 badges:
   title: ""
@@ -39,6 +41,7 @@ news:
   title: "4Geeks Academy Miami has been reviewed in:"
 upcoming:
   no_dates_message: "There are currently no upcoming dates for this campus"
+  actionMessage: "Let me know when dates are available"
 button_header:
   button_text: See Programs
   button_link: "#programs"
@@ -48,6 +51,13 @@ button:
   syllabus_submit_text: "DOWNLOAD"
   apply_button_link: "/apply"
   cohort_more_details_text: "DETAILS"
+
+custom_bar:
+  active: false
+  message: 'Change your life with Code. <a class="customBar-link" href="/us/apply">Apply</a> Upcoming programs: June 6 Full-Stack | July 7 ML+AI!'
+  button: 
+    label: "Read More"
+    path: "#" #string (can be inline path using #, relative path or absolute path)
 
 info_box:
   heading: "Find us in Miami"
@@ -160,10 +170,21 @@ prices:
           heading_two: "(OUT OF POCKET)"
           sub_heading: "and enjoy the best Price in town"
         content:
-          price: "$9,499.00"
+          price: "$9,999.00"
           price_info: "Single payment. Get a 10% Discount!"
         button:
           button_text: "Apply Now"
+
+      scholarship:
+        header:
+          heading_one: Scholorships
+          heading_two: ""
+          sub_heading: ""
+        content:
+          price: "$4,499.00"
+          price_info: "Single payment, with the best price on the market"
+        button:
+          button_text: "APPLY NOW"
     ## *****************
     ## PART-TIME SECTION
     ## *****************
@@ -243,11 +264,21 @@ prices:
           heading_two: "(OUT OF POCKET)"
           sub_heading: "and enjoy the Best Price in town"
         content:
-          price: "$7,499.00"
+          price: "$8,999.00"
           price_info: "Single payment. Get a 10% Discount!"
         button:
           button_text: "Apply Now"
 
+      scholarship:
+        header:
+          heading_one: Scholorships
+          heading_two: ""
+          sub_heading: ""
+        content:
+          price: "$4,499.00"
+          price_info: "Best pricing in town!"
+        button:
+          button_text: "GET IT NOW"
   software_engineering:
     # slug: "software-engineering"
     # duration: "16 Weeks"
@@ -448,6 +479,7 @@ active_campaign_location_slug: "downtown-miami"
 breathecode_location_slug: "downtown-miami"
 gdpr_compliant: false # do we need to ask for permision?
 in_person_available: true # important to accept in-person applicants
+online_available: false # important to accept online-only applicants
 
 city: "Miami"
 name: "Miami, USA"

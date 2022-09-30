@@ -1,8 +1,10 @@
 meta_info:
   slug: communications-and-public-relations
   title: "Communications and Public Relations"
+  visibility: "hidden"
   description: "We are very proud of our syllabus, methodology and outcomes. But we want more people talking about it, at the epicenter of the city's tech ecosystem."
   image: null
+  open: false #if true, this job will be accepting candidates
   keywords: ""
   redirects: []
 

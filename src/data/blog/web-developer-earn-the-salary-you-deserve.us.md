@@ -9,7 +9,7 @@ image: "https://github.com/4geeksacademy/website-v2/blob/master/static/images/bl
 image_alt: ""
 cluster: "career-growth"
 status: "published"
-featured: "false"
+featured: false
 
 ---
 

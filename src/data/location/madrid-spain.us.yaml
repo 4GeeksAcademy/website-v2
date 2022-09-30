@@ -6,6 +6,8 @@ meta_info:
   image: ""
   keywords: "Coding Bootcamp, Madrid"
   redirects: ["/location/madrid", "/us/location/madrid-spain"]
+  region: "europe"
+  dialCode: "34"
 
 seo_title: "Coding Bootcamp Madrid"
 header:
@@ -24,6 +26,14 @@ button:
   syllabus_submit_text: "DOWNLOAD"
   apply_button_link: "/apply"
   cohort_more_details_text: "DETAILS"
+
+custom_bar:
+  active: true
+  message: 4Geeks offers scholarships and financing tailored to your needs. <a class="customBar-link" href="/us/apply">¡Apply now!</a>
+ #  button: 
+ #    label: ""
+ #   path: "#" #string (can be inline path using #, relative path or absolute path)
+
 badges:
   title: ""
   paragraph: "4Geeks Academy is the place where developers grow and thrive.
@@ -45,13 +55,14 @@ info_box:
   iframeMapUrl: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1247.1075965710384!2d-3.6808452145265083!3d40.43988879999685!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb1a742c609c68c4b!2s4Geeks%20Academy!5e0!3m2!1ses-419!2scl!4v1621006660711!5m2!1ses-419!2scl"
   contact_heading: "Contacts"
   phone: "+34 910 86 69 83"
-  email: "madrid@4GeeksAcademy.com"
+  email: "es@4geeksacademy.com"
   image: "../../../static/images/locations/madrid-map.png"
   map_url: "https://www.google.com/maps/place/4Geeks+Academy/@40.4396216,-3.6808932,15z/data=!4m2!3m1!1s0x0:0xb1a742c609c68c4b?sa=X&ved=2ahUKEwjspv__4-zrAhXEY98KHa3RBpYQ_BIwCnoECBkQCA"
   alt: ""
 
 upcoming:
   no_dates_message: "There are currently no upcoming dates for this campus"
+  actionMessage: "Let me know when dates are available"
 
 images_box:
   heading: "What you should know about this location: "
