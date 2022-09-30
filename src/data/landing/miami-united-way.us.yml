@@ -51,7 +51,7 @@ header_data:
 features:
   marginTop: 0px #<-- separation between tagline and the bullets
   text: '<p> <strong style="font-weight: bold;">The United Way Miami Workforce Project</strong> is an exciting new training program made possible by United Way Miami, 4Geeks Academy, and Social Finance.
-  </p> <hr style="margin: 15px 0;"> <span style="background: rgb(255, 183, 24);font-weight: bold;">Now open and accepting applications!</span> <p>Applications will be open until August 31st, 2022</p><p>Only 100 spots available</p>'
+  </p> <hr style="margin: 15px 0;"> <span style="background: rgb(255, 183, 24);font-weight: bold;">Now open and accepting applications!</span> <p>Applications will be open until September 30th, 2022</p><p>Only 100 spots available</p>'
   styles: '{ "color": "gray", "fontWeight":"500" }'
   button:
       text: "APPLY NOW"
@@ -209,7 +209,7 @@ components:
         <br>
         <p><span style="background: rgb(255, 183, 24);font-weight: bold;">Our coding bootcamps are designed to be flexible so that anyone, even learners raising children or working full-time, can enroll and succeed.</p>
         <br>
-        <p>These <strong style="font-weight: bold;font-size:20px;">programs (Part-time -16 weeks long-- or Full-Time -10 weeks long-)</strong> will teach you the skills you need to succeed as a software developer. </p>
+        <p>These <strong style="font-weight: bold;font-size:20px;">programs (Part-time -16 weeks long- or Full-Time -9 weeks long-)</strong> will teach you the skills you need to succeed as a software developer. </p>
         <br>
         <h2><strong style="font-weight: bold;font-size:20px;color:black;">Are you ready to break down obstacles and start a new career?</strong></h2>
     

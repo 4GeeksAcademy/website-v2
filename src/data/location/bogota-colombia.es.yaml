@@ -213,9 +213,9 @@ in_person_available: false # important to accept in-person applicants
 
 city: "Bogotá"
 name: "Colombia"
-latitude: "-34.098799"
-longitude: "-56.216998"
-address: ""
+latitude: "4.578820"
+longitude: "-74.250510"
+address: ""#Cra. 13 #90-17, Bogotá
 zip_code: ""
 state: ""
 phone: "(57) 300 7282898"
