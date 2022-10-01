@@ -1,4 +1,5 @@
 import { defaultSession, locByLanguage } from "./actions";
+import countriesList from "./components/LeadForm/PhoneInput/countriesList";
 const dictionaryOf = require("./utils/dictionaries/pages.json");
 
 const GOOGLE_KEY = "AIzaSyB6NEbEyhDU_U1z_XoyRwEu0Rc1XXeZK6c";
@@ -99,6 +100,19 @@ const getClosestLoc = (locations, lat, lon) => {
   return location;
 };
 
+const getRegion = (shortName, regions) => {
+  const country = countriesList.filter((c) => c.includes(shortName.toLowerCase()));
+  const latamValues = ['central-america', 'south-america'];
+  console.log('country');
+  console.log(country);
+  console.log(country[0][1]);
+  if (country[0][1].some(i => latamValues.includes(i))) return 'latam';
+  else if (country[0][1].includes('america')) return 'usa-canada';
+  const region = regions.filter((reg) => country[0][1].includes(reg));
+  return region.length === 1 ? region[0] : null;
+  
+}
+
 export const initSession = async (locationsArray, storedSession, seed = {}) => {
   var v4 = null;
   var latitude = null;
@@ -159,20 +173,61 @@ export const initSession = async (locationsArray, storedSession, seed = {}) => {
       if (data && data.location) {
         console.log('data.location');
         console.log(data.location);
+        const lang = {
+          us: "en",
+          es: "es"
+        };
+
         const responseGC = await fetch(
-          `https://maps.googleapis.com/maps/api/geocode/json?latlng=${data.location.lat},${data.location.lng}&key=${GOOGLE_KEY}`,
+          `https://maps.googleapis.com/maps/api/geocode/json?latlng=${data.location.lat},${data.location.lng}&key=${GOOGLE_KEY}&language=${lang[languageToFilter]}`,
           {
             method: "POST",
           }
         );
-
+        
+        let geoCode = null;
+        let filteredLocations = [];
         let dataGC = (await responseGC.json()) || null;
         console.log('dataGC');
         console.log(dataGC);
+        if (dataGC.results) {
+          geoCode = {};
+          dataGC.results[0].address_components.map((comp) => {
+            if (comp.types.includes('locality')) geoCode.city = comp.long_name;
+            if (comp.types.includes('country')) {
+              geoCode.country = comp.long_name;
+              geoCode.countryShort = comp.short_name;
+            }
+          });
+          console.log('geoCode');
+          console.log(geoCode);
+          console.log('locations');
+          console.log(locations);
+          const locsInCountry = locations.filter((location) => location.country === geoCode.country);
+          console.log('locsInCountry');
+          console.log(locsInCountry);
+          if (locsInCountry.length !== 0) {
+            const campus = locsInCountry.filter((location) => location.city === geoCode.city);
+            if (campus) {
+              location = campus;
+            }
+            else filteredLocations = locsInCountry;
+          } else {
+            const regions = [...new Set(locations.map(item => item.meta_info.region))];
+            console.log('regions');
+            console.log(regions);
+            const region = getRegion(geoCode.countryShort, regions);
+            console.log('region');
+            console.log(region);
+            if (region) {
+              filteredLocations = locations.filter((location) => location.meta_info.region === region);
+            }
+          }
+        }
         latitude = data.location.lat;
         longitude = data.location.lng;
         location = getClosestLoc(
-          locations,
+          filteredLocations.length !== 0 ? filteredLocations : locations,
           data.location.lat,
           data.location.lng
         );
