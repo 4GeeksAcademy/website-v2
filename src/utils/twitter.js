@@ -49,4 +49,11 @@ module.exports = {
     avatar: "",
     username: "",
   },
+
+  Pattynouel: {
+    bio: "Content Growth @ 4Geeks Academy",
+    name: "Patricia Nouel",
+    avatar: "/images/staff/patricia-nouel.jpg",
+    username: "Pattynouel",
+  },
 };

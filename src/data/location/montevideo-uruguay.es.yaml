@@ -211,9 +211,9 @@ in_person_available: false # important to accept in-person applicants
 
 city: "Monte Video"
 name: "Uruguay"
-latitude: "-34.098799"
-longitude: "-56.216998"
-address: ""
+latitude: "-34.902225"
+longitude: "-56.196542"
+address: ""#Paysandú 941, 11100 Montevideo, Departamento de Montevideo, Uruguay
 zip_code: ""
 state: ""
 country: "Uruguay"

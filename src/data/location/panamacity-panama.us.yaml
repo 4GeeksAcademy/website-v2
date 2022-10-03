@@ -216,9 +216,9 @@ in_person_available: false # important to accept in-person applicants
 
 city: "Panama City"
 name: "Panama"
-latitude: "-34.098799"
-longitude: "-56.216998"
-address: ""
+latitude: "8.984428"
+longitude: "-79.515742"
+address: ""#Torre Inteligente Credi Corp Bank. Pisos 31, Oficina 3101, C. 50, Panamá, Panama
 zip_code: ""
 state: ""
 country: "Panama"

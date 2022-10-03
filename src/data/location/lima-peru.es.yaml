@@ -211,8 +211,8 @@ in_person_available: false # important to accept in-person applicants
 
 city: "Lima"
 name: "Peru"
-latitude: "-34.098799"
-longitude: "-56.216998"
+latitude: "-12.102370"
+longitude: "-77.021510"
 address: ""
 zip_code: ""
 state: ""

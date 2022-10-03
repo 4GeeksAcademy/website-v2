@@ -216,8 +216,8 @@ in_person_available: false # important to accept in-person applicants
 
 city: "Quito"
 name: "Ecuador"
-latitude: "-34.098799"
-longitude: "-56.216998"
+latitude: "-0.175030"
+longitude: "-78.483460"
 address: ""
 zip_code: ""
 state: ""

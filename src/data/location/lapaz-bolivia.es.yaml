@@ -211,8 +211,8 @@ in_person_available: false # important to accept in-person applicants
 
 city: "La Paz"
 name: "Bolivia"
-latitude: "-34.098799"
-longitude: "-56.216998"
+latitude: "-16.537920"
+longitude: "-68.077790"
 address: ""
 zip_code: ""
 state: ""
