@@ -101,16 +101,17 @@ const getClosestLoc = (locations, lat, lon) => {
 };
 
 const getRegion = (shortName, regions) => {
-  const country = countriesList.filter((c) => c.includes(shortName.toLowerCase()));
-  const latamValues = ['central-america', 'south-america', 'carribean'];
+  const country = countriesList.filter((c) =>
+    c.includes(shortName.toLowerCase())
+  );
+  const latamValues = ["central-america", "south-america", "carribean"];
 
-  if (country[0][1].some(i => latamValues.includes(i))) return 'latam';
-  else if (country[0][1].includes('america')) return 'usa-canada';
+  if (country[0][1].some((i) => latamValues.includes(i))) return "latam";
+  else if (country[0][1].includes("america")) return "usa-canada";
 
   const region = regions.filter((reg) => country[0][1].includes(reg));
   return region.length === 1 ? region[0] : null;
-  
-}
+};
 
 export const initSession = async (locationsArray, storedSession, seed = {}) => {
   var v4 = null;
@@ -171,7 +172,7 @@ export const initSession = async (locationsArray, storedSession, seed = {}) => {
       if (data && data.location) {
         const lang = {
           us: "en",
-          es: "es"
+          es: "es",
         };
 
         const responseGC = await fetch(
@@ -180,7 +181,7 @@ export const initSession = async (locationsArray, storedSession, seed = {}) => {
             method: "POST",
           }
         );
-        
+
         let geoCode = null;
         let filteredLocations = [];
         let dataGC = (await responseGC.json()) || null;
@@ -189,30 +190,39 @@ export const initSession = async (locationsArray, storedSession, seed = {}) => {
           geoCode = {};
           // get country and city from geocoding
           dataGC.results[0].address_components.map((comp) => {
-            if (comp.types.includes('locality')) geoCode.city = comp.long_name;
-            if (comp.types.includes('country')) {
+            if (comp.types.includes("locality")) geoCode.city = comp.long_name;
+            if (comp.types.includes("country")) {
               geoCode.country = comp.long_name;
               geoCode.countryShort = comp.short_name;
             }
           });
 
           // Check if we have locations in user's country
-          const locsInCountry = locations.filter((location) => location.country_shortname === geoCode.countryShort.toLowerCase());
+          const locsInCountry = locations.filter(
+            (location) =>
+              location.country_shortname === geoCode.countryShort.toLowerCase()
+          );
 
           if (locsInCountry.length !== 0) {
-            const campus = locsInCountry.find((location) => location.city === geoCode.city);
+            const campus = locsInCountry.find(
+              (location) => location.city === geoCode.city
+            );
 
-            if (campus) location = campus;        
+            if (campus) location = campus;
             else filteredLocations = locsInCountry;
-          
           } else {
             // If there are no locations in the user's country, we get the locations from its region
-            const regions = [...new Set(locations.map(item => item.meta_info.region))];
+            const regions = [
+              ...new Set(locations.map((item) => item.meta_info.region)),
+            ];
             const region = getRegion(geoCode.countryShort, regions);
-            if (region) filteredLocations = locations.filter((location) => location.meta_info.region === region);
+            if (region)
+              filteredLocations = locations.filter(
+                (location) => location.meta_info.region === region
+              );
           }
         }
-        if (!location){
+        if (!location) {
           latitude = data.location.lat;
           longitude = data.location.lng;
           // Filtered locations are used to filter from the locations in the user's country or region
