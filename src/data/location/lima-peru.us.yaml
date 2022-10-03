@@ -222,6 +222,7 @@ address: ""
 zip_code: ""
 state: ""
 country: "Peru"
+country_shortname: "pe"
 socials:
   - name: "Facebook"
     icon: "facebook"

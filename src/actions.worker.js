@@ -102,12 +102,11 @@ const getClosestLoc = (locations, lat, lon) => {
 
 const getRegion = (shortName, regions) => {
   const country = countriesList.filter((c) => c.includes(shortName.toLowerCase()));
-  const latamValues = ['central-america', 'south-america'];
-  console.log('country');
-  console.log(country);
-  console.log(country[0][1]);
+  const latamValues = ['central-america', 'south-america', 'carribean'];
+
   if (country[0][1].some(i => latamValues.includes(i))) return 'latam';
   else if (country[0][1].includes('america')) return 'usa-canada';
+
   const region = regions.filter((reg) => country[0][1].includes(reg));
   return region.length === 1 ? region[0] : null;
   
@@ -141,19 +140,19 @@ export const initSession = async (locationsArray, storedSession, seed = {}) => {
   // remove undefineds from the seed utm's to avoid overriding the originals with undefined
   Object.keys(utm).forEach((key) => utm[key] === undefined && delete utm[key]);
 
-  // if (location) {
-  //   location = locations.find((l) => l.breathecode_location_slug === location);
-  //   if (!location) location = null;
-  //   console.log("Hardcoded location", location);
-  // } else if (storedSession && storedSession.location != null) {
-  //   location = locations.find(
-  //     (l) =>
-  //       l.breathecode_location_slug ===
-  //       storedSession.location.breathecode_location_slug
-  //   );
-  //   latitude = location.latitude;
-  //   longitude = location.longitude;
-  // }
+  if (location) {
+    location = locations.find((l) => l.breathecode_location_slug === location);
+    if (!location) location = null;
+    console.log("Hardcoded location", location);
+  } else if (storedSession && storedSession.location != null) {
+    location = locations.find(
+      (l) =>
+        l.breathecode_location_slug ===
+        storedSession.location.breathecode_location_slug
+    );
+    latitude = location.latitude;
+    longitude = location.longitude;
+  }
 
   if (location === null) {
     console.log("Calculating nearest location because it was null...");
@@ -169,10 +168,7 @@ export const initSession = async (locationsArray, storedSession, seed = {}) => {
       );
 
       let data = (await response.json()) || null;
-      console.log(data);
       if (data && data.location) {
-        console.log('data.location');
-        console.log(data.location);
         const lang = {
           us: "en",
           es: "es"
@@ -188,10 +184,10 @@ export const initSession = async (locationsArray, storedSession, seed = {}) => {
         let geoCode = null;
         let filteredLocations = [];
         let dataGC = (await responseGC.json()) || null;
-        console.log('dataGC');
-        console.log(dataGC);
+
         if (dataGC.results) {
           geoCode = {};
+          // get country and city from geocoding
           dataGC.results[0].address_components.map((comp) => {
             if (comp.types.includes('locality')) geoCode.city = comp.long_name;
             if (comp.types.includes('country')) {
@@ -199,38 +195,33 @@ export const initSession = async (locationsArray, storedSession, seed = {}) => {
               geoCode.countryShort = comp.short_name;
             }
           });
-          console.log('geoCode');
-          console.log(geoCode);
-          console.log('locations');
-          console.log(locations);
-          const locsInCountry = locations.filter((location) => location.country === geoCode.country);
-          console.log('locsInCountry');
-          console.log(locsInCountry);
+
+          // Check if we have locations in user's country
+          const locsInCountry = locations.filter((location) => location.country_shortname === geoCode.countryShort.toLowerCase());
+
           if (locsInCountry.length !== 0) {
-            const campus = locsInCountry.filter((location) => location.city === geoCode.city);
-            if (campus) {
-              location = campus;
-            }
+            const campus = locsInCountry.find((location) => location.city === geoCode.city);
+
+            if (campus) location = campus;        
             else filteredLocations = locsInCountry;
+          
           } else {
+            // If there are no locations in the user's country, we get the locations from its region
             const regions = [...new Set(locations.map(item => item.meta_info.region))];
-            console.log('regions');
-            console.log(regions);
             const region = getRegion(geoCode.countryShort, regions);
-            console.log('region');
-            console.log(region);
-            if (region) {
-              filteredLocations = locations.filter((location) => location.meta_info.region === region);
-            }
+            if (region) filteredLocations = locations.filter((location) => location.meta_info.region === region);
           }
         }
-        latitude = data.location.lat;
-        longitude = data.location.lng;
-        location = getClosestLoc(
-          filteredLocations.length !== 0 ? filteredLocations : locations,
-          data.location.lat,
-          data.location.lng
-        );
+        if (!location){
+          latitude = data.location.lat;
+          longitude = data.location.lng;
+          // Filtered locations are used to filter from the locations in the user's country or region
+          location = getClosestLoc(
+            filteredLocations.length !== 0 ? filteredLocations : locations,
+            data.location.lat,
+            data.location.lng
+          );
+        }
       } else throw Error("Error when connecting to Google Geolocation API");
     } catch (e) {
       console.log("Error retrieving IP information: ", e);

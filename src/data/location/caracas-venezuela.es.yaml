@@ -223,6 +223,7 @@ iframeMapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3923.212135
 zip_code: ""
 state: "Miranda"
 country: "Venezuela"
+country_shortname: "ve"
 socials:
   - name: "Facebook"
     icon: "facebook"

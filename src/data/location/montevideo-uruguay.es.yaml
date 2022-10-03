@@ -217,6 +217,7 @@ address: ""
 zip_code: ""
 state: ""
 country: "Uruguay"
+country_shortname: "uy"
 socials:
   - name: "Facebook"
     icon: "facebook"

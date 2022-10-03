@@ -490,6 +490,7 @@ address: "1801 SW 3rd Ave #100"
 zip_code: "33130"
 state: "Florida"
 country: "USA"
+country_shortname: "us"
 socials:
   - name: "Facebook"
     icon: "facebook"

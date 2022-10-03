@@ -30,6 +30,7 @@ export default ({ children }) => {
               link
             }
             country
+            country_shortname
             defaultLanguage
             breathecode_location_slug
             active_campaign_location_slug

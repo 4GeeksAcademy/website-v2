@@ -222,6 +222,7 @@ address: ""
 zip_code: ""
 state: ""
 country: "Panama"
+country_shortname: "pa"
 socials:
   - name: "Facebook"
     icon: "facebook"

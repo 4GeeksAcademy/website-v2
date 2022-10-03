@@ -457,6 +457,7 @@ phone: "+1 (786) 416-6640"
 zip_code: ""
 state: "Ontario"
 country: "Canada"
+country_shortname: "ca"
 socials:
   - name: "Facebook"
     icon: "facebook"

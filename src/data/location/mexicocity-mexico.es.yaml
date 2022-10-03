@@ -217,6 +217,7 @@ zip_code: ""
 state: ""
 phone: "(571) 580-6848"
 country: "Mexico"
+country_shortname: "mx"
 socials:
   - name: "Facebook"
     icon: "facebook"

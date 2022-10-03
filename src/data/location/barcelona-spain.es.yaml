@@ -298,6 +298,7 @@ address: "" # Ronda de Sant Pere, 52, 08010, Barcelona, España
 zip_code: ""
 state: "Barcelona"
 country: "España"
+country_shortname: "es"
 socials:
   - name: "Facebook"
     icon: "facebook"

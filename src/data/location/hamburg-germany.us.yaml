@@ -274,6 +274,7 @@ address: "" # Schomburgstraße 50, 22767 Hamburg, Alemania
 zip_code: ""
 state: "Hamburg"
 country: "Germany"
+country_shortname: "de"
 
 socials:
   - name: "Facebook"
