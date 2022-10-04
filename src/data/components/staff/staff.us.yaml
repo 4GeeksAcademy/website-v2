@@ -73,7 +73,7 @@ staff:
     coding_skills:
       - Javascript and Python
     location: ["madrid-spain", "barcelona-spain"]
-    - name: ""
+  - name: ""
     last_name: ""
     nick_name: ""
     slug: ""

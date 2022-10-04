@@ -275,6 +275,7 @@ address: "" # Praça Marquês de Pombal 14, 1250-162 Lisbon, Portugal
 zip_code: ""
 state: "Lisbon"
 country: "Portugal"
+country_shortname: "pt"
 
 socials:
   - name: "Facebook"

@@ -202,6 +202,7 @@ address: ""
 zip_code: ""
 state: ""
 country: "Venezuela"
+country_shortname: "ve"
 socials:
   - name: "Facebook"
     icon: "facebook"

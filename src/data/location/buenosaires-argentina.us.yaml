@@ -222,6 +222,7 @@ address: ""
 zip_code: ""
 state: ""
 country: "Argentina"
+country_shortname: "ar"
 socials:
   - name: "Facebook"
     icon: "facebook"

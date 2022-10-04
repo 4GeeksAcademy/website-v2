@@ -225,6 +225,7 @@ address: "Nest Coworking"
 zip_code: ""
 state: "Miranda"
 country: "Venezuela"
+country_shortname: "ve"
 socials:
   - name: "Facebook"
     icon: "facebook"

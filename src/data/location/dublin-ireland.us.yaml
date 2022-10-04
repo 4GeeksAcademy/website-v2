@@ -274,6 +274,7 @@ address: "" #36 Dame St, Dublin, D02 EF64, Irlanda
 zip_code: ""
 state: "Dublin"
 country: "Ireland"
+country_shortname: "ie"
 
 socials:
   - name: "Facebook"
