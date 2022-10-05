@@ -303,6 +303,7 @@ address: "" # Carrer de les Barques, 2, 46002 Valencia, España
 zip_code: ""
 state: "Valencia"
 country: "Spain"
+country_shortname: "es"
 socials:
   - name: "Facebook"
     icon: "facebook"

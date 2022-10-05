@@ -275,6 +275,7 @@ address: "" # Via Vittor Pisani, 15, 20124 Milano ML, Italia
 zip_code: ""
 state: "Milano"
 country: "Italy"
+country_shortname: "it"
 
 socials:
   - name: "Facebook"

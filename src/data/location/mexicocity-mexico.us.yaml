@@ -222,6 +222,7 @@ address: ""
 zip_code: ""
 state: ""
 country: "Mexico"
+country_shortname: "mx"
 phone: "(571) 580-6848"
 socials:
   - name: "Facebook"

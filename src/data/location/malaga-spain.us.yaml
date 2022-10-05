@@ -303,6 +303,7 @@ address: "" # Calle Fernández Shaw, 88, 29018 Málaga, España
 zip_code: ""
 state: "Málaga"
 country: "Spain"
+country_shortname: "es"
 socials:
   - name: "Facebook"
     icon: "facebook"

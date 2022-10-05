@@ -322,6 +322,7 @@ zip_code: ""
 phone: "+34 910 86 69 83"
 state: "Roma"
 country: "Italia"
+country_shortname: "it"
 
 socials:
   - name: "Facebook"

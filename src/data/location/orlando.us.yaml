@@ -462,6 +462,7 @@ address: "37 N Orange Ave"
 zip_code: "32801"
 state: "Florida"
 country: "USA"
+country_shortname: "us"
 socials:
   - name: "Facebook"
     icon: "facebook"
