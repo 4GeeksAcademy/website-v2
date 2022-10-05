@@ -217,6 +217,7 @@ address: ""#Torre Inteligente Credi Corp Bank. Pisos 31, Oficina 3101, C. 50, Pa
 zip_code: ""
 state: ""
 country: "Panamá"
+country_shortname: "pa"
 socials:
   - name: "Facebook"
     icon: "facebook"

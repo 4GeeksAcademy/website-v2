@@ -7,7 +7,7 @@ meta_info:
   # it will not show up on the applications forms
   visibility: "visible"
   keywords: "Coding Bootcamp Campus Bolivia"
-  redirects: ["/es/coding-campus/bootcamp-programacion-bolivia"]
+  redirects: ["/es/bolivia"]
   region: "latam"
   dialCode: "591"
 
@@ -217,6 +217,7 @@ address: ""
 zip_code: ""
 state: ""
 country: "Bolivia"
+country_shortname: "bo"
 socials:
   - name: "Facebook"
     icon: "facebook"

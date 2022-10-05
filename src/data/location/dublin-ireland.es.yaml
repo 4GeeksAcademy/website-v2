@@ -322,6 +322,7 @@ zip_code: ""
 phone: "+34 910 86 69 83"
 state: "Dublin"
 country: "Ireland"
+country_shortname: "ie"
 
 socials:
   - name: "Facebook"

@@ -20,7 +20,7 @@ content:
     - name: "Forbes"
       logo: "../../../static/images/news/forbes.png"
 #      location: ["downtown-miami", "online", "madrid-spain"]
-      image: "../../../static/images/partner/forbes-coder.jpeg"
+      image: "../../../static/images/partner/forbes-coder.jpg"
       title: "Web Development Coding Bootcamp"
       text: "On a research made and published by Forbes while specified all the possible ways you can become a web developer in the USA."
       textUrl: "Read Article"

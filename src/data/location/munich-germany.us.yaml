@@ -275,6 +275,7 @@ address: "" # Oskar-von-Miller-Ring 20, 80333 Munich, Alemania
 zip_code: ""
 state: "Munich"
 country: "Germany"
+country_shortname: "de"
 
 socials:
   - name: "Facebook"

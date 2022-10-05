@@ -298,6 +298,7 @@ address: "Calle de Edison 3"
 zip_code: "28006"
 state: "Madrid"
 country: "España"
+country_shortname: "es"
 socials:
   - name: "Facebook"
     icon: "facebook"

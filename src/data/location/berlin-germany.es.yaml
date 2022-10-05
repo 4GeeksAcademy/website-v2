@@ -322,6 +322,7 @@ zip_code: ""
 phone: "+34 910 86 69 83"
 state: "Berlin"
 country: "Alemania"
+country_shortname: "de"
 
 socials:
   - name: "Facebook"

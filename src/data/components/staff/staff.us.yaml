@@ -6,7 +6,7 @@ staff:
     last_name: "Sanchez"
     nick_name: "Alesanchezr"
     slug: "alejandro-sanchez"
-    job_title: "Co-funder - Director"
+    job_title: "Co-Founder - Director"
     bio: "22 yrs coding, Software Engineer."
     github: "https://github.com/alesanchezr"
     linkdin: "https://www.linkedin.com/in/alesanchezr/"
@@ -104,4 +104,42 @@ staff:
       - Fashion Design
     coding_skills:
       - Bootstrap
-    location: []
+    location: ["downtown-miami"]
+  - name: "Nacho"
+    last_name: "Cordoba"
+    nick_name: "Nacho"
+    slug: "nacho-cordoba"
+    job_title: "Lead Mentor"
+    bio: "Over 12 years of experience in Coding, and more than 4 teaching Coding in the US campus."
+    github: "https://github.com/nachovz"
+    linkdin: "https://www.linkedin.com/in/nachovz/en-us/"
+    twitter: ""
+    website: ""
+    image: "../../../../static/images/staff/nacho.jpg"
+    age: 42
+    interests:
+      - Board Games
+      - Soccer
+      - Music
+    coding_skills:
+      - Javascript and Python
+    location: ["madrid-spain", "barcelona-spain"]
+  - name: ""
+    last_name: ""
+    nick_name: ""
+    slug: ""
+    job_title: ""
+    bio: "Over 12 years of experience in Coding, and more than 4 teaching Coding in the US campus."
+    github: "https://github.com/nachovz"
+    linkdin: "https://www.linkedin.com/in/nachovz/en-us/"
+    twitter: ""
+    website: ""
+    image: "../../../../static/images/staff/nacho.jpg"
+    age: 42
+    interests:
+      - Board Games
+      - Soccer
+      - Music
+    coding_skills:
+      - Javascript and Python
+    location: ["madrid-spain", "barcelona-spain"]

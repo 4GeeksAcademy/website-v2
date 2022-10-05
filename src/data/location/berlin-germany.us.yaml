@@ -274,6 +274,7 @@ address: "" # Rollbergstraße 28A, 12053 Berlin, Alemania
 zip_code: ""
 state: "Berlin"
 country: "Germany"
+country_shortname: "de"
 
 socials:
   - name: "Facebook"
