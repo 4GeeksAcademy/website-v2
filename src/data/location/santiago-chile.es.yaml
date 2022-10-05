@@ -34,7 +34,7 @@ button:
 
 custom_bar:
   active: true
-  message: '¿Quisieras tu primer trabajo como programador? ¡Conviértete en Full Stack Developer y consíguelo!" <a class="customBar-link" href="/es/aplica" taget="_blank" rel="noopener noreferrer nofollow">Postula ahora</a>'
+  message: '¿Quisieras tu primer trabajo como developer? ¡Conviértete en Full Stack Developer y consíguelo! <a class="customBar-link" href="/es/aplica" taget="_blank" rel="noopener noreferrer nofollow">Postula ahora</a>'
   
 info_box:
   heading: "Encuéntranos en Santiago de Chile"
