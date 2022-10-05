@@ -18,7 +18,7 @@ staff:
       - Soccer
     coding_skills:
       - Javascript
-    location: ["all", "downtown-miami"]
+    location: ["all"]
   - name: "Marcelo"
     last_name: "Ricigliano"
     nick_name: "MRicigliano"
@@ -29,14 +29,14 @@ staff:
     linkdin: "https://www.linkedin.com/in/marcelo-ricigliano-32440379/"
     twitter: "https://twitter.com/MRiciglianoC"
     website: ""
-    image: "../../../../static/images/staff/marceloricigliano.png"
+    image: "../../../../static/images/staff/marceloricigliano.jpg"
     age: 33
     interests:
       - Soccer
       - Juventus
     coding_skills:
       - Javascript
-    location: ["all", "downtown-miami"]
+    location: ["all"]
   - name: "Alissa"
     last_name: "Landra"
     nick_name: ""
@@ -53,7 +53,7 @@ staff:
       - Education
     coding_skills:
       - 
-    location: []
+    location: ["all"]
   - name: "Victor"
     last_name: "Gomez"
     nick_name: ""
@@ -64,30 +64,13 @@ staff:
     linkdin: "https://www.linkedin.com/in/victormgomezp/"
     twitter: ""
     website: ""
-    image: "../../../../static/images/staff/victorgomez.jpeg"
+    image: "../../../../static/images/staff/victorgomez.jpg"
     age: 
     interests:
       - 
     coding_skills:
       - 
-    location: []
-  - name: ""
-    last_name: ""
-    nick_name: ""
-    slug: ""
-    job_title: ""
-    bio: ""
-    github: ""
-    linkdin: ""
-    twitter: ""
-    website: ""
-    image: "../../../../static/images/staff/.jpeg"
-    age: 
-    interests:
-      - 
-    coding_skills:
-      - 
-    location: []
+    location: ["all"]
   - name: "Maria Fernanda"
     last_name: "Castro"
     nick_name: ""
@@ -104,7 +87,7 @@ staff:
       - Fashion Design
     coding_skills:
       - Bootstrap
-    location: ["downtown-miami"]
+    location: ["all"]
   - name: "Nacho"
     last_name: "Cordoba"
     nick_name: "Nacho"
@@ -123,23 +106,4 @@ staff:
       - Music
     coding_skills:
       - Javascript and Python
-    location: ["madrid-spain", "barcelona-spain"]
-  - name: ""
-    last_name: ""
-    nick_name: ""
-    slug: ""
-    job_title: ""
-    bio: "Over 12 years of experience in Coding, and more than 4 teaching Coding in the US campus."
-    github: "https://github.com/nachovz"
-    linkdin: "https://www.linkedin.com/in/nachovz/en-us/"
-    twitter: ""
-    website: ""
-    image: "../../../../static/images/staff/nacho.jpg"
-    age: 42
-    interests:
-      - Board Games
-      - Soccer
-      - Music
-    coding_skills:
-      - Javascript and Python
-    location: ["madrid-spain", "barcelona-spain"]
+    location: ["all"]
