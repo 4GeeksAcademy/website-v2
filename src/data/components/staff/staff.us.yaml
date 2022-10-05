@@ -12,7 +12,7 @@ staff:
     linkdin: "https://www.linkedin.com/in/alesanchezr/"
     twitter: "https://twitter.com/alesanchezr"
     website: "https://alesanchezr.com"
-    image: "../../../../static/images/staff/ale-staff.jpeg"
+    image: "../../../../static/images/staff/alejandrosanchez.jpg"
     age: 34
     interests:
       - Soccer
@@ -29,7 +29,7 @@ staff:
     linkdin: "https://www.linkedin.com/in/marcelo-ricigliano-32440379/"
     twitter: "https://twitter.com/MRiciglianoC"
     website: ""
-    image: "../../../../static/images/staff/marcelo.png"
+    image: "../../../../static/images/staff/marceloricigliano.png"
     age: 33
     interests:
       - Soccer
@@ -37,7 +37,58 @@ staff:
     coding_skills:
       - Javascript
     location: ["all", "downtown-miami"]
-  - name: "Mafe"
+  - name: "Alissa"
+    last_name: "Landra"
+    nick_name: ""
+    slug: 
+    job_title: "Florida Manager"
+    github: ""
+    bio: "I graduated from the AACSB Accredited State University of New York at Plattsburgh School of Business and Economics with a BA in Marketing & Business Administration with honors."
+    linkdin: "https://www.linkedin.com/in/alissalandra/"
+    twitter: ""
+    website: ""
+    image: "../../../../static/images/staff/alissalandra.jpg"
+    age: 
+    interests:
+      - Education
+    coding_skills:
+      - 
+    location: []
+  - name: "Victor"
+    last_name: "Gomez"
+    nick_name: ""
+    slug: ""
+    job_title: "Country manager Spain"
+    bio: " Industrial Engineer, EAE Business School Master of Business Administration - MBA and now an Entrepreneur"
+    github: ""
+    linkdin: "https://www.linkedin.com/in/victormgomezp/"
+    twitter: ""
+    website: ""
+    image: "../../../../static/images/staff/victorgomez.jpeg"
+    age: 
+    interests:
+      - 
+    coding_skills:
+      - 
+    location: []
+  - name: ""
+    last_name: ""
+    nick_name: ""
+    slug: ""
+    job_title: ""
+    bio: ""
+    github: ""
+    linkdin: ""
+    twitter: ""
+    website: ""
+    image: "../../../../static/images/staff/.jpeg"
+    age: 
+    interests:
+      - 
+    coding_skills:
+      - 
+    location: []
+  - name: "Maria Fernanda"
     last_name: "Castro"
     nick_name: ""
     slug: "mafe-castrp"
