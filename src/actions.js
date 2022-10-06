@@ -6,11 +6,11 @@ const getToken = async (action) => {
     token = await grecaptcha.execute(process.env.GOOGLE_CAPTCHA_KEY, {
       action,
     });
-  } catch(e) {
+  } catch (e) {
     console.log(e);
   }
   return token;
-}
+};
 
 export const defaultSession = {
   v6: null,
@@ -194,7 +194,7 @@ export const apply = async (data, session) => {
 
   const tag = body.tag || "website-lead";
   const automation = body.automation || "strong";
-  
+
   const action = "submit";
   let token = await getToken(action);
 
@@ -219,7 +219,7 @@ export const requestSyllabus = async (data, session) => {
   const tag = body.tag || "request_more_info";
   const automation = body.automation || "soft";
   const action = "submit";
-  let token = await getToken(action);                                                                                    
+  let token = await getToken(action);
   //tag                automation
   if (!session || !session.utm || !session.utm.utm_test)
     return await save_form(
