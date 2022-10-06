@@ -183,16 +183,16 @@ export const apply = async (data, session) => {
   const tag = body.tag || "website-lead";
   const automation = body.automation || "strong";
   const action = "submit";
-  const token = await grecaptcha.execute(process.env.GOOGLE_CAPTCHA_KEY, {
-    action,
-  });
+  // const token = await grecaptcha.execute(process.env.GOOGLE_CAPTCHA_KEY, {
+  //   action,
+  // });
   if (!session || !session.utm || !session.utm.utm_test)
     return await save_form(
       body,
       [tag.value || tag],
       [automation.value || automation],
       session,
-      token,
+      // token,
       action
     );
   return true;
@@ -207,9 +207,9 @@ export const requestSyllabus = async (data, session) => {
   const tag = body.tag || "request_more_info";
   const automation = body.automation || "soft";
   const action = "submit";
-  const token = await grecaptcha.execute(process.env.GOOGLE_CAPTCHA_KEY, {
-    action,
-  });
+  // const token = await grecaptcha.execute(process.env.GOOGLE_CAPTCHA_KEY, {
+  //   action,
+  // });
   //                                                                                      tag                automation
   if (!session || !session.utm || !session.utm.utm_test)
     return await save_form(
@@ -217,7 +217,7 @@ export const requestSyllabus = async (data, session) => {
       [tag.value || tag],
       [automation.value || automation],
       session,
-      token,
+      // token,
       action
     );
   return true;
@@ -232,9 +232,9 @@ export const beHiringPartner = async (data, session) => {
   let body = {};
   for (let key in data) body[key] = data[key].value;
   const action = "submit";
-  const token = await grecaptcha.execute(process.env.GOOGLE_CAPTCHA_KEY, {
-    action,
-  });
+  // const token = await grecaptcha.execute(process.env.GOOGLE_CAPTCHA_KEY, {
+  //   action,
+  // });
   //                                                                                      tag                automation
   if (!session || !session.utm || !session.utm.utm_test)
     return await save_form(
@@ -242,7 +242,7 @@ export const beHiringPartner = async (data, session) => {
       ["hiring-partner"],
       ["hiring-partner"],
       session,
-      token,
+      // token,
       action
     );
   return true;
@@ -344,9 +344,9 @@ export const processFormEntry = async (data, session) => {
   const tag = body.tag || "request_more_info";
   const automation = body.automation || "soft";
   const action = "submit";
-  const token = await grecaptcha.execute(process.env.GOOGLE_CAPTCHA_KEY, {
-    action,
-  });
+  // const token = await grecaptcha.execute(process.env.GOOGLE_CAPTCHA_KEY, {
+  //   action,
+  // });
 
   //                                                                                      tag                automation
   if (!session || !session.utm || !session.utm.utm_test)
@@ -355,7 +355,7 @@ export const processFormEntry = async (data, session) => {
       [tag.value || tag],
       [automation.value || automation],
       session,
-      token,
+      // token,
       action
     );
   return true;
