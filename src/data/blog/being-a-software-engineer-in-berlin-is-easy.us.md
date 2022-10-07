@@ -7,7 +7,7 @@ template: "landing_post"
 title: "Being a Software Engineer in Berlin is easy"
 image: ""
 image_alt: "Being a Software Engineer in Berlin is easy"
-cluster: "sotfware-engineer"
+cluster: "learn-to-code"
 status: "published"
 
 ---
