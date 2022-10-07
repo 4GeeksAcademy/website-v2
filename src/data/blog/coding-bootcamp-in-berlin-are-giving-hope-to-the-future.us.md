@@ -11,8 +11,6 @@ status: "published"
 
 ---
 
-# **Coding Bootcamp in Berlin are giving hope about the future!**
-
 Around the world, people are worried if their salaries are going to be enough at the end of the month thanks to the economic crisis affecting the worldwide economy, and while each country finds a way out of inflation and the lack of job opportunities.
 
 Germany is in the middle of its digital transformation; individuals are looking to prepare themselves by changing to careers in technology in different **coding bootcamp in Berlin**.
