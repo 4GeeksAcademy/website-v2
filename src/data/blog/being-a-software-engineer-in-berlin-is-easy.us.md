@@ -12,8 +12,6 @@ status: "published"
 
 ---
 
-# Being a Software Engineer in Berlin is easy
-
 Germany is one of the best countries in Europe to work in as a **Software Engineer in Berlin**.
 
 Berlin is a kind of German development hub. There are a lot of different institutes, production organizations, research centers, and companies that make this city predisposed to growth and development in the context of high technology.
