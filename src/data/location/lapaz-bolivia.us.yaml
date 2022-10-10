@@ -222,6 +222,7 @@ address: ""
 zip_code: ""
 state: ""
 country: "Bolivia"
+country_shortname: "bo"
 socials:
   - name: "Facebook"
     icon: "facebook"

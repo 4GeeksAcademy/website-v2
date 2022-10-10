@@ -224,6 +224,7 @@ zip_code: ""
 state: ""
 phone: "(57) 300 7282898"
 country: "Colombia"
+country_shortname: "co"
 socials:
   - name: "Facebook"
     icon: "facebook"

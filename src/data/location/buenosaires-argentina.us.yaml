@@ -222,6 +222,7 @@ address: ""#Maipú 939, C1006 CABA, Argentina
 zip_code: ""
 state: ""
 country: "Argentina"
+country_shortname: "ar"
 socials:
   - name: "Facebook"
     icon: "facebook"

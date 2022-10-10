@@ -222,6 +222,7 @@ address: ""#Hamburgo 26, Juárez, Cuauhtémoc, 06600 Ciudad de México, CDMX, Me
 zip_code: ""
 state: ""
 country: "Mexico"
+country_shortname: "mx"
 phone: "(571) 580-6848"
 socials:
   - name: "Facebook"

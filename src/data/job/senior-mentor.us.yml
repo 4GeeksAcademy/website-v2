@@ -15,12 +15,10 @@ banner_sub_heading: ""
 banner_image: "/images/bg/pricing-bg.jpg"
 link_back: "/us/jobs"
 cities:
-  - Miami
-  - Santiago de Chile
-  - Caracas
-  - Orlando
+  - Classes are Online/remote
+  - USA
   - Spain
-  - Europa
+  - Europe
   - LATAM
 
 button_text: "APPLY NOW"

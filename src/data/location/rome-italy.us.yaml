@@ -274,6 +274,7 @@ address: "" # Via Palermo, 41, 00184 Roma RM, Italia
 zip_code: ""
 state: "Rome"
 country: "Italy"
+country_shortname: "it"
 
 socials:
   - name: "Facebook"

@@ -90,17 +90,8 @@ const Instructors = ({
         position="relative"
       >
         <Div display="flex" flexDirection="column" alignItems="center">
-          {/* <H1 type="h1">{lang[0].node.seo_title}</H1> */}
-          <H2
-            type="h2"
-            fontSize="15px"
-            lineHeight="19px"
-            padding="0 0 35px 0"
-            letterSpacing="0.05em"
-            margin="0 0 15px 0"
-            fontWeight="900"
-          >
-            {lang.header.title.toUpperCase()}
+          <H2 type="h2" padding="0 0 35px 0" margin="0 0 15px 0">
+            {lang.header.title}
           </H2>
           <Paragraph>{lang.header.paragraph}</Paragraph>
         </Div>

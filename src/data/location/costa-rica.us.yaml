@@ -221,6 +221,7 @@ address: ""
 zip_code: ""
 state: ""
 country: "Costa Rica"
+country_shortname: "cr"
 socials:
   - name: "Facebook"
     icon: "facebook"

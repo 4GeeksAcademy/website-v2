@@ -217,6 +217,7 @@ address: ""#Paysandú 941, 11100 Montevideo, Departamento de Montevideo, Uruguay
 zip_code: ""
 state: ""
 country: "Uruguay"
+country_shortname: "uy"
 socials:
   - name: "Facebook"
     icon: "facebook"

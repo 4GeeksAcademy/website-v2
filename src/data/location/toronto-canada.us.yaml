@@ -462,6 +462,7 @@ address: ""
 zip_code: ""
 state: "Ontario"
 country: "Canada"
+country_shortname: "ca"
 socials:
   - name: "Facebook"
     icon: "facebook"
