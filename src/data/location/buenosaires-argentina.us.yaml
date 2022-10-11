@@ -3,7 +3,7 @@ meta_info:
   title: "4Geeks Academy in Argentina, Buenos Aires"
   position: 33
   description: "Get to know here all about our coding bootcamp campus in Argentina, Buenos Aires of 4Geeks Academy"
-  image: ""
+  image: "/images/og-preview/buenosaires-argentina.us.png"
   keywords: ""
   # it will not show up on the applications forms
   visibility: "visible"
@@ -216,9 +216,9 @@ in_person_available: false # important to accept in-person applicants
 
 city: "Buenos Aires"
 name: "Argentina"
-latitude: "-34.608535"
-longitude: "-58.435355"
-address: ""
+latitude: "-34.597080"
+longitude: "-58.376740"
+address: ""#Maipú 939, C1006 CABA, Argentina
 zip_code: ""
 state: ""
 country: "Argentina"

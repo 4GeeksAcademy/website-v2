@@ -3,7 +3,7 @@ meta_info:
   title: "Bootcamps de Programación Online en Europa"
   description: "Descubre aquí todos los bootcamps de programación online impartidos por 4geeks Academy en europa. ¡Regístrate hoy!"
   position: 101
-  image: "https://storage.cloud.google.com/4geeks-academy-website/online-es.png"
+  image: "/images/og-preview/online.es.png"
   keywords: "null"
   redirects: ["/location/remoto", "/remoto", "/es/location/enlinea-remoto"]
   region: "europe"

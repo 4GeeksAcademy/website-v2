@@ -3,7 +3,7 @@ meta_info:
   title: "Bootcamp de Programación en Hamburgo, Alemania"
   description: "Descubre todos los bootcamps de programación online impartidos por 4Geeks Academy en Hamburgo, Alemania. ¡Regístrate hoy!"
   position: 101
-  image: "https://storage.cloud.google.com/4geeks-academy-website/online-es.png"
+  image: "/images/og-preview/hamburg-germany.es.png"
   keywords: "null"
   redirects: ["/es/location/hamburg-germany"]
   region: "europe"

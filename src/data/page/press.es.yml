@@ -1,10 +1,10 @@
 meta_info:
   slug: prensa
-  title: ""
+  title: "Menciones en medios y prensa"
   visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
-  description: null
-  image: null
-  keywords: ""
+  description: "Recopilación de algunas de las noticias y menciones en prensa en los últimos años"
+  image: "/images/og-preview/press.es.png"
+  keywords: "4Geeks Academy en la prensa"
   redirects: []
 
 seo_title: "Prensa"

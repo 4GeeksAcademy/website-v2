@@ -3,7 +3,7 @@ meta_info:
   title: "Bootcamp Programación Panamá"
   position: 35
   description: "Conoce aquí todo sobre nuestro campus de bootcamp de programación en Panamá, Panama City de 4Geeks Academy"
-  image: ""
+  image: "/images/og-preview/panamacity-panama.es.png"
   # it will not show up on the applications forms
   visibility: "visible"
   keywords: "Coding Bootcamp Campus Panamá"

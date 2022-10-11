@@ -3,7 +3,7 @@ meta_info:
   position: 20
   title: "Bootcamp Programación Santiago de Chile"
   description: "Conoce aquí todo sobre nuestro campus de bootcamp de programación en Santiago de Chile de 4Geeks Academy aquí"
-  image: "https://storage.googleapis.com/4geeks-academy-website/santiago-es.png"
+  image: "/images/og-preview/santiago-chile.es.png"
   keywords: "Coding Bootcamp Santiago"
   redirects:
     [

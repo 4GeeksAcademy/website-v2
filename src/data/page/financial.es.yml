@@ -1,10 +1,10 @@
 meta_info:
   slug: financiacion
-  title: ""
-  description: null
+  title: "Financiación y formas de pago en 4Geeks Academy"
+  description: "Descubre todas las becas disponibles y formas de pago disponibles en 4Geeks Academy."
   visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
-  image: null
-  keywords: ""
+  image: "/images/og-preview/finantial.es.png"
+  keywords: "Financiacion 4Geeks Academy, Financiamiento 4Geeks Academy"
   redirects: ["/financiacion"]
 
 ## BANNER - HEADER

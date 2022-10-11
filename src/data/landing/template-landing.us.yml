@@ -3,7 +3,7 @@ meta_info:
 
   
   title: "" # This will show the browser tab title
-  description: "" # under 255 characters, will show on social media when shared
+  description: "just a template for landings" # under 255 characters, will show on social media when shared
   image: "" # description will show on social media when shared
   keywords: "" # SEO optimized keywords
   visibility: "hidden" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
