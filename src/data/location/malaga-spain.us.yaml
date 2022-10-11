@@ -3,8 +3,8 @@ meta_info:
   title: "Coding Bootcamp Málaga, Spain with 4Geeks Academy"
   position: 20
   description: "Know here all about our coding bootcamp campus in Málaga, Spain with 4Geeks Academy"
-  image: ""
-  keywords: "Coding Bootcamp, Málaga"
+  image: "/images/og-preview/malaga-spain.us.png"
+  keywords: "Coding Bootcamp Malaga"
   redirects: ["/location/malaga", "/us/location/malaga-spain"]
   region: "europe"
   dialCode: "34"

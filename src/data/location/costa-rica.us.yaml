@@ -3,7 +3,7 @@ meta_info:
   title: "4Geeks Academy Costa Rica"
   position: 34
   description: "Get to know here all about our coding bootcamp campus in Costa Rica, San José of 4Geeks Academy"
-  image: ""
+  image: "/images/og-preview/costa-rica.us.png"
   keywords: ""
   # it will not show up on the applications forms
   visibility: "visible"

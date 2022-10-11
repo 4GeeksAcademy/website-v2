@@ -107,10 +107,10 @@ walk(`${__dirname}/../data/`, function (err, files) {
         doc.yaml.meta_info.description === undefined ||
         !doc.yaml.meta_info.description
       )
-        warn("YML is missing description: " + _path);
+        fail("YML is missing description: " + _path);
       else {
         if (duplicateDescriptions[doc.yaml.meta_info.description] !== undefined)
-          warn(
+          fail(
             `Duplicate yml description between these two: \n ${_path.red} \n ${
               duplicateDescriptions[doc.yaml.meta_info.description].red
             }`
@@ -120,7 +120,7 @@ walk(`${__dirname}/../data/`, function (err, files) {
 
       try {
         validateObjectProperties(doc.yaml, {
-          alt: (val) => {
+          image: (val) => {
             if (!val || val === "") throw Error("Missing image alt");
           },
         });

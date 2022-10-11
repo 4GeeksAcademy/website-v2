@@ -3,7 +3,7 @@ meta_info:
   title: "Bootcamp Programación Costa Rica"
   position: 34
   description: "Conoce aquí todo sobre nuestro campus de bootcamp de programación en Costa Rica, San Jose de 4Geeks Academy aquí"
-  image: ""
+  image: "/images/og-preview/costa-rica.es.png"
   # it will not show up on the applications forms
   visibility: "visible"
   keywords: "Coding Bootcamp Campus Costa Rica"

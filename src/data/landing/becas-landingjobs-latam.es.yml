@@ -4,7 +4,7 @@ meta_info:
   visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   # This will show on social media when shared
   title: "¡Obtén tu beca!"
-  description: "La programación se ha convertido en un conocimiento escencial para tu éxito profesional, aprende a programar con 4Geeks Academy"
+  description: "Landing Jobs y 4Geeks se unen para ofrecer más de 1.000.000€ en Becas para estudiar Desarrollo Web o Machine Learning en LATAM"
   image: "/images/bg/remote.jpeg"
   keywords: "Aprende a programar, 4Geeks academy, aprende programacion, aprende ingenieria informatica"
 

@@ -3,7 +3,7 @@ meta_info:
   title: "Bootcamp Programación Mexico"
   position: 32
   description: "Conoce aquí todo sobre nuestro campus de bootcamp de programación en Mexico, Mexico City de 4Geeks Academy"
-  image: ""
+  image: "/images/og-preview/mexicocity-mexico.es.png"
   # it will not show up on the applications forms
   visibility: "visible"
   keywords: "Coding Bootcamp Campus Mexico"
@@ -210,9 +210,9 @@ in_person_available: false # important to accept in-person applicants
 
 city: "Mexico City"
 name: "Mexico"
-latitude: "21.295452"
-longitude: "-100.810747"
-address: ""
+latitude: "19.428560"
+longitude: "-99.159580"
+address: ""#Hamburgo 26, Juárez, Cuauhtémoc, 06600 Ciudad de México, CDMX, Mexico
 zip_code: ""
 state: ""
 phone: "(571) 580-6848"
