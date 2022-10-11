@@ -3,7 +3,7 @@ meta_info:
   title: "Bootcamp Programación Argentina"
   position: 33
   description: "Conoce aquí todo sobre nuestro campus de bootcamp de programación en Argentina, Buenos Aires de 4Geeks Academy aquí"
-  image: ""
+  image: "/images/og-preview/buenosaires-argentina.es.png"
   # it will not show up on the applications forms
   visibility: "visible"
   keywords: "Coding Bootcamp Campus Argentina"

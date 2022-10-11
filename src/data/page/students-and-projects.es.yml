@@ -1,7 +1,7 @@
 meta_info:
   slug: alumnos-y-proyectos
-  title: ""
-  description: null
+  title: "Alumnos y proyectos graduados 4Geeks"
+  description: "Descubre algunas de las historias y proyectos de nuestros graduados."
   image: null
   visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   keywords: ""

@@ -1,10 +1,10 @@
 meta_info:
   slug: press
-  title: ""
+  title: "4Geeks Academy on the news"
   visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
-  description: null
-  image: null
-  keywords: ""
+  description: "Compilation of some of the news and media mentions in the past couple of years"
+  image: "/images/og-preview/press.us.png"
+  keywords: "4Geeks academy News"
   redirects: []
 
 seo_title: "Press"

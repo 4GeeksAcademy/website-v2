@@ -1,8 +1,8 @@
 meta_info:
   slug: coding-bootcamp
-  title: ""
-  description: "One of the most awarded coding bootcamps. No previous coding skills required. Code with others, join the community and get career support for life."
-  image: "https://breathecode.herokuapp.com/v1/media/file/4geeks-feb-14th-113-jpeg?width=600"
+  title: "Coding Bootcamp with Mentorhip set for life"
+  description: "All the details you need about the coding bootcamp. Code with others and get career support for life."
+  image: "/images/og-preview/coding-bootcamp.us.png"
   visibility: "visible"
   template: "coding-bootcamp"
   keywords: "coding bootcamp, full stack coding bootcamp, full-stack coding bootcamp, online coding bootcamo, remote coding bootcamp"

@@ -117,19 +117,19 @@ walk(`${__dirname}/../data/location`, async (err, files) => {
       }
 
       //NOTE: warn if location not have any image
-      if (
-        location.images_box.images?.length < 5 ||
-        location.images_box.images?.length === undefined
-      ) {
-        console.log("\nlocation needs images as soon as possible".yellow);
-        console.log(
-          "Images count:",
-          location.images_box.images?.length,
-          "\npath: ",
-          _path,
-          "\n"
-        );
-      }
+      // if (
+      //   location.images_box.images?.length < 5 ||
+      //   location.images_box.images?.length === undefined
+      // ) {
+      //   console.log("\nlocation needs images as soon as possible".yellow);
+      //   console.log(
+      //     "Images count:",
+      //     location.images_box.images?.length,
+      //     "\npath: ",
+      //     _path,
+      //     "\n"
+      //   );
+      // }
 
       content_fields.forEach((obj) => {
         let slugMatch = academySlug.some(
