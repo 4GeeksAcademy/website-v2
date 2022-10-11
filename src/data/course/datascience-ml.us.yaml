@@ -3,9 +3,9 @@ meta_info:
   title: "Become a AI Machine Learning Engineer at 4Geeks Academy"
   description: "With no previous knowledge required, start a career with your first job as a datascientist and build your first ML models."
   bc_slug: "datascience-ml"
+  template: "course-datascience"
   image: "/images/og-preview/datascience-ml.es.png"
   visibility: "hidden"
-  template: "course-datascience"
   keywords: ""
   redirects: ["/us/datascience"]
 

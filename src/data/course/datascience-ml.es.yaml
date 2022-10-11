@@ -3,9 +3,9 @@ meta_info:
   title: "Estudia Data Science y Machine Learning en 4Geeks Academy"
   description: "Sin conocimientos previos, empieza una careera en el mundo de data science y escribe tus primeros modelos de machine learning"
   bc_slug: "datascience-ml"
+  template: "course-datascience"
   image: "/images/og-preview/datascience-ml.es.png"
   visibility: "hidden"
-  template: "course-datascience"
   keywords: ""
   redirects: ["/es/datascience"]
 

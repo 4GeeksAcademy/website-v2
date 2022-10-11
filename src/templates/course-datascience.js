@@ -439,7 +439,7 @@ const Program = ({ data, pageContext, yml }) => {
 };
 
 export const query = graphql`
-  query CourseMachineLearningQuery($file_name: String!, $lang: String!) {
+  query CourseDataScienceQuery($file_name: String!, $lang: String!) {
     allMachineLearningTechsYaml(filter: { fields: { lang: { eq: $lang } } }) {
       edges {
         node {

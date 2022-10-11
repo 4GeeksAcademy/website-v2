@@ -3,9 +3,9 @@ meta_info:
   title: "Estudia Machine Learning en 4Geeks Academy"
   description: "Nuestro nuevo curso de Inteligencia Artificial y Machine Learning, te ayudará a dominar las técnicas de codificación."
   bc_slug: "machine-learning-engineering"
+  template: "course-machine-learning"
   image: ""
   visibility: "visible"
-  template: "course-machine-learning"
   keywords: ""
   redirects: ["/es/machine-learning"]
 

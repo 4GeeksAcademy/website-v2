@@ -1,0 +1,21 @@
+meta_info:
+  slug: categoria
+  title: ""
+  visibility: "hidden" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
+  description: "cluster español"
+  image: null
+  keywords: ""
+  redirects: []
+
+seo_title: "blog"
+header:
+  title: "Blog"
+  paragraph: "Resources and news for both potential and current software builders."
+  image: "../../../static/images/blog/Blog-header.png"
+  image_alt: ""
+
+sidebar:
+  title: "Artículos Destacados"
+
+about:
+  heading: "Publicaciones etiquetadas con"

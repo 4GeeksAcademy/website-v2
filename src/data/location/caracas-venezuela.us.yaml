@@ -5,6 +5,7 @@ meta_info:
   description: "Get to know here all about our coding bootcamp campus in Caracas, Venezuela of 4Geeks Academy"
   image: "/images/og-preview/caracas-venezuela.us.png"
   keywords: ""
+  template: "location"
   redirects:
     ["/impact-hub", "/location/impact-hub", "/us/location/caracas-venezuela-en"]
   region: "latam"

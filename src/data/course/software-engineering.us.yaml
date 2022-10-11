@@ -3,9 +3,9 @@ meta_info:
   title: "Become a Software Engineer at 4Geeks Academy"
   description: "Our new course: Software Engineering, will help you master advanced coding techniques and get hired by the biggest tech companies"
   bc_slug: "software-engineering"
+  template: "course-engineering"
   image: ""
   visibility: "visible"
-  template: "course-engineering"
   keywords: ""
   redirects: [
     "/software-engineering", 
