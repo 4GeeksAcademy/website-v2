@@ -3,7 +3,8 @@ meta_info:
   title: "Coding Bootcamp Caracas, Venezuela"
   description: "Conoce aquí todo sobre nuestro campus de bootcamp de programación de 4Geeks Academy en Caracas, Venezuela"
   position: 40
-  image: "https://storage.googleapis.com/4geeks-academy-website/caracas-es.png"
+  template: "location"
+  image: "/images/og-preview/caracas-venezuela.es.png"
   keywords: "Coding Bootcamp Caracas"
   redirects:
     [

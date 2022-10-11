@@ -3,9 +3,9 @@
 
 meta_info:
   slug: outcomes
-  title: ""
+  title: "Outcomes Report"
   visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
-  description: null
+  description: "Outcomes, achievements and what we consider needs to be improved. Our way to let you know that we are working harder every time in order to get better."
   image: null
   keywords: ""
   redirects: ["/us/outcomes"]

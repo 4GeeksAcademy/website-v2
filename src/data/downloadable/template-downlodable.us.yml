@@ -2,8 +2,8 @@ meta_info:
   slug: example-downloadable # <--- URL 4geeksacademy.com/us/landing/example
 
   # This will show on social media when shared
-  title: ""
-  description: ""
+  title: "just a template"
+  description: "just a template"
   image: "/images/bg/remote.jpeg"
   keywords: ""
   visibility: "hidden" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
