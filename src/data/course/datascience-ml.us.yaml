@@ -4,7 +4,7 @@ meta_info:
   description: "With no previous knowledge required, start a career with your first job as a datascientist and build your first ML models."
   bc_slug: "datascience-ml"
   image: "/images/og-preview/datascience-ml.es.png"
-  visibility: "visible"
+  visibility: "hidden"
   template: "course-datascience"
   keywords: ""
   redirects: ["/us/datascience"]

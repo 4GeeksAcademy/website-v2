@@ -4,7 +4,7 @@ meta_info:
   description: "Sin conocimientos previos, empieza una careera en el mundo de data science y escribe tus primeros modelos de machine learning"
   bc_slug: "datascience-ml"
   image: "/images/og-preview/datascience-ml.es.png"
-  visibility: "visible"
+  visibility: "hidden"
   template: "course-datascience"
   keywords: ""
   redirects: ["/es/datascience"]
