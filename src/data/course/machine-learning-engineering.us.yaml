@@ -3,9 +3,9 @@ meta_info:
   title: "Become a AI Machine Learning Engineer at 4Geeks Academy"
   description: "Our new course: Machine Learning Engineering, will help you master advanced coding techniques and get hired by the biggest tech companies"
   bc_slug: "machine-learning-engineering"
+  template: "course-machine-learning"
   image: ""
   visibility: "visible"
-  template: "course-machine-learning"
   keywords: ""
   redirects: ["/us/machine-learning"]
 

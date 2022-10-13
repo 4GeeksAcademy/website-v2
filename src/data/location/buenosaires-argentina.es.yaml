@@ -3,7 +3,7 @@ meta_info:
   title: "Bootcamp Programación Argentina"
   position: 33
   description: "Conoce aquí todo sobre nuestro campus de bootcamp de programación en Argentina, Buenos Aires de 4Geeks Academy aquí"
-  image: ""
+  image: "/images/og-preview/buenosaires-argentina.es.png"
   # it will not show up on the applications forms
   visibility: "visible"
   keywords: "Coding Bootcamp Campus Argentina"
@@ -215,9 +215,9 @@ in_person_available: false # important to accept in-person applicants
 
 city: "Buenos Aires"
 name: "Argentina"
-latitude: "-34.608535"
-longitude: "-58.435355"
-address: ""
+latitude: "-34.597080"
+longitude: "-58.376740"
+address: ""#Maipú 939, C1006 CABA, Argentina
 zip_code: ""
 state: ""
 country: "Argentina"

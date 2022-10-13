@@ -2,7 +2,7 @@ meta_info:
   slug: categoria
   title: ""
   visibility: "hidden" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
-  description: null
+  description: "cluster español"
   image: null
   keywords: ""
   redirects: []

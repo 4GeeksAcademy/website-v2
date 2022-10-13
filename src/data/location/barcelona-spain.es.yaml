@@ -3,7 +3,7 @@ meta_info:
   position: 20
   title: "Boootcamp Programación Barcelona"
   description: "Conoce aquí todo sobre nuestro campus de bootcamp de programación de 4Geek Academy en Barcelona, España"
-  image: "https://storage.googleapis.com/4geeks-academy-website/madrid-es.png"
+  image: "/images/og-preview/barcelona-spain.es.png"
   keywords: "Coding bootcamp Barcelona"
   redirects:
     ["barcelona", "/es/location/barcelona-spain/", "/es/location/barcelona-espana"]

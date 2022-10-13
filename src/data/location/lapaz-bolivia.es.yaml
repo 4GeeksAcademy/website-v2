@@ -3,7 +3,7 @@ meta_info:
   title: "Bootcamp Programación Bolivia"
   position: 37
   description: "Conoce aquí todo sobre nuestro campus de bootcamp de programación en Bolivia, La Paz de 4Geeks Academy"
-  image: ""
+  image: "/images/og-preview/lapaz-bolivia.es.png"
   # it will not show up on the applications forms
   visibility: "visible"
   keywords: "Coding Bootcamp Campus Bolivia"

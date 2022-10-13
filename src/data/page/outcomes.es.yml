@@ -3,9 +3,9 @@
 
 meta_info:
   slug: resultados
-  title: ""
+  title: "Informe de Resultados"
   visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
-  description: null
+  description: "Resultados, logros y lo que consideramos que debe mejorarse. Nuestra manera de hacerle saber que cada vez trabajamos más duro para mejorar."
   image: null
   keywords: ""
   redirects: ["/es/resultados"]
