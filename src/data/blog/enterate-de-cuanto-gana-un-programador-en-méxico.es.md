@@ -48,15 +48,15 @@ Tipos de programadores y salarios
 La red social LinkedIn presentó un ranking de las compañías que impulsan el éxito profesional a largo plazo de sus empleados. Podemos contar varias empresas que ofrecen  estilo y ofertas relacionadas sobre la programación. Excelente oportunidad para : 
 1-IBM: El gigante de la tecnología tiene 8,910 colaboradores en México y los perfiles más buscados son: desarrollador de aplicaciones, ingeniero de software y director de proyecto. Entre las habilidades más valoradas por la empresa se encuentran el manejo de Docker, Node.js y Java.
 2- General Electric: La empresa tiene alrededor de 2,240 trabajadores en México y entre sus vacantes más demandadas se encuentran los ingenieros de software, especialistas en finanzas e ingenieros de diseño. Entre las habilidades más valoradas por la compañía están: NX Unigraphics, Lean Six Sigma y dimensionamiento geométrico.
-3-Intel Corporation: La empresa tiene 2100 empleados en las principales ubicaciones en México: Zapopan, Guadalajara, Ciudad de México. Habilidades más valoradas: SystemVerilog, arquitectura informática, depuración de programas | Perfiles más demandados:  ingeniero de validación, ingeniero de software, ingeniero de validación de sistemas. 
+3-Intel Corporation: La empresa tiene 2100 empleados en las principales ubicaciones en México: Zapopan, Guadalajara, Ciudad de México. Habilidades más valoradas: SystemVerilog, arquitectura informática, depuración de programas | Perfiles más demandados: ingeniero de validación, ingeniero de software, ingeniero de validación de sistemas. 
 Las empresas que no se quedan atrás Procter & Gamble (P&G), Johnson Controls, Stallantis, Scotiabank, PespiCo, Walmart, Schneider Electric, Heineken, Samsung, Intel, Siemens, Eli Lilly and Company, Basf, Cemex y Coppel son las marcas que conforman el resto de la lista de las 25 mejores empresas para trabajar y hacer carrera en México.
 
 ### ¿Qué puedo hacer para ganar como programador en México?
  
 En 4Geeks Academy puedes aprender a programar estando en México y tener la oportunidad de ver clases en vivo, mentorías ilimitadas y para toda la vida Part-time, flexible y pertenecer a una de las comunidades de devs más grandes del mundo, también podrás contar con servicios de Career Support personalizados, individuales y de por vida.
-Nuestra egresada  [ Silvina Angüilla](https://www.linkedin.com/in/silvina-anguilla/) quien es QA Analyst en Tata Consultancy Services gracias a nuestro programa GeekFORCE permitiendo la inserción laboral inmediata luego de finalizar el bootcamp. 
+Nuestra egresada  [Silvina Angüilla](https://www.linkedin.com/in/silvina-anguilla/) quien es QA Analyst en Tata Consultancy Services gracias a nuestro programa GeekFORCE permitiendo la inserción laboral inmediata luego de finalizar el bootcamp. 
 
- ![Egresada Silvina Angüilla ](file:///C:/Users/admin/Downloads/Semana%202%20Agosto%20(5).jpg)
+ ![Egresada Silvina Angüilla](file:///C:/Users/admin/Downloads/Semana%202%20Agosto%20(5).jpg)
 
 Ahora que ya sabes cuánto gana un programador en México, la ventaja más importante que  entiende ser programador es tener un salario por encima de la media y una demanda laboral estable. Culturalmente hablando, ser desarrollador es una profesión que conlleva bastante reputación en muchas empresas.     
 
