@@ -40,12 +40,12 @@ export const joinQS = (obj) => {
 
 export const transferQuerystrings = (url, utmSession) => {
   const index = url.indexOf("?");
-  let params = {}
+  let params = {};
   let origin = url;
   if (index !== -1) {
     origin = url.slice(0, index);
     const queryStryng = url.slice(index + 1);
-    params = parseQueryString(queryStryng)
+    params = parseQueryString(queryStryng);
   }
   return `${origin}?${joinQS({ ...params, ...utmSession })}`;
 };

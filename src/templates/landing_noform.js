@@ -93,7 +93,8 @@ const Landing = (props) => {
             : "Solicita una plaza"
         }
         buttonUrl={
-          yml.navbar?.buttonUrl && transferQuerystrings(yml.navbar.buttonUrl, utm)
+          yml.navbar?.buttonUrl &&
+          transferQuerystrings(yml.navbar.buttonUrl, utm)
         }
         logoUrl={yml.navbar?.logoUrl}
         lang={pageContext.lang}
