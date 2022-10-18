@@ -14,6 +14,7 @@ banner_heading: "Lead Instructor"
 banner_sub_heading: ""
 banner_image: "/images/bg/pricing-bg.jpg"
 link_back: "/us/jobs"
+button_url: "https://www.google.com?utm=campaignmadrid"
 cities:
   - Classes are Online/remote
   - USA
