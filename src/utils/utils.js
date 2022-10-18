@@ -28,3 +28,24 @@ export const parseQueryString = (queryString) => {
   }
   return query;
 };
+
+export const joinQS = (obj) => {
+  let str = [];
+  for (let p in obj)
+    if (obj.hasOwnProperty(p)) {
+      str.push(`${encodeURIComponent(p)}=${encodeURIComponent(obj[p])}`);
+    }
+  return str.join("&");
+};
+
+export const transferQuerystrings = (url, utmSession) => {
+  const index = url.indexOf("?");
+  let params = {}
+  let origin = url;
+  if (index !== -1) {
+    origin = url.slice(0, index);
+    const queryStryng = url.slice(index + 1);
+    params = parseQueryString(queryStryng)
+  }
+  return `${origin}?${joinQS({ ...params, ...utmSession })}`;
+};

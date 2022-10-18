@@ -10,28 +10,7 @@ import BaseRender from "./_baseLandingLayout";
 import { SessionContext } from "../session.js";
 import LandingNavbar from "../components/NavbarDesktop/landing";
 import LandingContainer from "../components/LandingContainer";
-
-const getQueryParams = (url) => {
-  const index = url.indexOf("?");
-  if (index === -1) return { params: {}, origin: url };
-  const origin = url.slice(0, index);
-  const paramArr = url.slice(index + 1).split("&");
-  const params = {};
-  paramArr.map((param) => {
-    const [key, val] = param.split("=");
-    params[key] = decodeURIComponent(val);
-  });
-  return { params, origin };
-};
-
-const joinQS = (obj) => {
-  let str = [];
-  for (let p in obj)
-    if (obj.hasOwnProperty(p)) {
-      str.push(`${encodeURIComponent(p)}=${encodeURIComponent(obj[p])}`);
-    }
-  return str.join("&");
-};
+import { transferQuerystrings } from "../utils/utils.js";
 
 const Landing = (props) => {
   const { session, setLocation } = React.useContext(SessionContext);
@@ -103,11 +82,6 @@ const Landing = (props) => {
 
   const utm = session && session.utm;
 
-  const transferQuerystrings = (url) => {
-    const { params, origin } = getQueryParams(url);
-    return `${origin}?${joinQS({ ...params, ...utm })}`;
-  };
-
   return (
     <>
       <LandingNavbar
@@ -119,7 +93,7 @@ const Landing = (props) => {
             : "Solicita una plaza"
         }
         buttonUrl={
-          yml.navbar?.buttonUrl && transferQuerystrings(yml.navbar.buttonUrl)
+          yml.navbar?.buttonUrl && transferQuerystrings(yml.navbar.buttonUrl, utm)
         }
         logoUrl={yml.navbar?.logoUrl}
         lang={pageContext.lang}
