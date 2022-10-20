@@ -100,7 +100,7 @@ const ProgramDetails = (props) => {
             </Paragraph>
           ))}
         </Div>
-        <Div flexDirection="column" justifyContent="between">
+        <Div flexDirection="column" justifyContent="start">
           {Array.isArray(props.details.about?.list) &&
             props.details.about?.list.map((m, i) => {
               return (
