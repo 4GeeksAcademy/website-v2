@@ -2,24 +2,15 @@ import React, { useEffect } from "react";
 import { graphql, navigate } from "gatsby";
 import { landingSections } from "../components/Landing";
 import FollowBar from "../components/FollowBar";
-import { H1, H2, H4, Paragraph, Span } from "../components/Heading";
-import {
-  GridContainerWithImage,
-  Div,
-  GridContainer,
-} from "../components/Sections";
-import {
-  Colors,
-  StyledBackgroundSection,
-  Img,
-  Button,
-} from "../components/Styling";
+import { H1, H2, Paragraph } from "../components/Heading";
+import { Div, GridContainer } from "../components/Sections";
+import { Colors, Button } from "../components/Styling";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import BaseRender from "./_baseLandingLayout";
-import { processFormEntry } from "../actions";
 import { SessionContext } from "../session.js";
 import LandingNavbar from "../components/NavbarDesktop/landing";
 import LandingContainer from "../components/LandingContainer";
+import { transferQuerystrings } from "../utils/utils.js";
 
 const Landing = (props) => {
   const { session, setLocation } = React.useContext(SessionContext);
@@ -89,6 +80,8 @@ const Landing = (props) => {
       (l) => l.breathecode_location_slug === yml.meta_info.utm_location
     );
 
+  const utm = session && session.utm;
+
   return (
     <>
       <LandingNavbar
@@ -99,7 +92,10 @@ const Landing = (props) => {
             ? "Apply"
             : "Solicita una plaza"
         }
-        buttonUrl={yml.navbar?.buttonUrl}
+        buttonUrl={
+          yml.navbar?.buttonUrl &&
+          transferQuerystrings(yml.navbar.buttonUrl, utm)
+        }
         logoUrl={yml.navbar?.logoUrl}
         lang={pageContext.lang}
       />
