@@ -320,7 +320,9 @@ const Landing = (props) => {
                     yml.features.button.path &&
                     yml.features.button.path.indexOf("http") > -1
                   )
-                    window.open(transferQuerystrings(yml.features.button.path, utm));
+                    window.open(
+                      transferQuerystrings(yml.features.button.path, utm)
+                    );
                   else navigate(yml.features.button.path);
                 }}
               >
