@@ -11,8 +11,8 @@ meta_info:
 
 seo_title: "curso datascience and machine learning"
 header:
-  title: "Conviértete en un Ingeniero de Inteligencia Artificial"
-  paragraph: "Conviértete en uno de los profesionales mejor pagados del mundo."
+  title: "Conviértete en un Ingeniero de DataScience y M.L."
+  paragraph: "Una de las profesiones mejor pagados del mundo."
   image: "../../../static/images/bg/apple-building.jpg"
   image_alt: "apple-building"
 
@@ -86,12 +86,13 @@ details:
   about:
       title: "Sobre este programa"
       sub_title: |
-        Reciba entrenamiento por un reconocido experto en I.A; explora los fundamentos del aprendizaje automático y el aprendizaje profundo con algunas de las tecnologías más poderosas que realmente escalan la inteligencia para los negocios.
+        Aprende Python, SQL, Google Data Studio, Streamlit y Estadística para formar parte de un equipo técnico en cualquier compañía y convertirte en analista de datos.
+        Crea tus propios modelos predictivos con Python usando vecinos cercanos, árboles de decisión y otros algoritmos. 
         Practique con escenarios comerciales de la vida real típicos en los negocios y revise algunas de las herramientas utilizadas en la industria.
-        Elabora estrategias y desarrolla tu A.I. siguiendo el desarrollo del ciclo de vida de principio a fin, incluida la implementación en producción y mantenimiento con Privacidad, Seguridad y Ética.
+        Elabora estrategias y desarrolla tu A.I. siguiendo el desarrollo del ciclo de vida de principio a fin, incluida la implementación en producción y mantenimiento de tu solución.
       list:
         - label: "Duración"
-          content:  "15 semanas"
+          content:  "18 semanas"
           icon: "calendar"
         - label: "Clases"
           content: "3 Clases semanales"
@@ -102,11 +103,12 @@ details:
         - label: "Requisitos"
           content: "No se necesita experiencia previa"
           icon: "contract-checked"
+
   heading: DETALLES DEL PROGRAMA
   weeks: 15
   facts:
     - label: "Duración"
-      value: "15 semanas"
+      value: "18 semanas"
     - label: "Compromiso"
       value: "20 hrs/sem. (Lun - Mie - Vie)"
     - label: "Certificado"
@@ -116,8 +118,8 @@ details:
     - label: "Tamaño Clase"
       value: "Sólo 12 personas"
     - label: "Horas totales"
-      value: "360"
-  sub_heading: "Comienza con Python y Data Science, Machine Learning, Deep Learning y mantenga un entorno de producción en I.A."
+      value: "162"
+  sub_heading: "Comienza de cero con Python, profundiza en Data Science, modela y predice con Machine Learning y despliega tu aplicación"
   left_labels:
     description: "DESCRIPCIÓN:"
     projects: "PROYECTOS:"
@@ -126,28 +128,49 @@ details:
   details_modules:
     - module_name: "Python"
       title: "Introducción a Python"
-      description: "Empezando por un prework de 2 semánas, entra en el mundo de la programación con Python & Algoritmos; Este modulo te ayudará a preparate a programar y desarrollar diferentes modelos de entrenamiento de Inteligencias Artificials y evaluaciones para próximos pasos. "
-      projects: "Recolecta, almacena y mide con Numpy, Pandas, Matplotlib, etc."
+      description: "Empezando por un prework de 2 semánas donde aprenderás or repasaras como construir algoritmos con Python utilizando functiones, condicionales, etc. Una buena base de python es importante para poder desarrollar tus recolecciones de datos consultado API's o haciendo Web Scrapping; Tambien sentarás las bases para limpiar tus datos utilizando la libreria Pandas y Numpy. Estas dos librerias constituyen la base sobre la que esta construida toda la industria de datascience."
+      projects: "Micro ejercicios con autocorrecciones sobre algoritmos y la utilizacion de Pandas, Numpy y Matplotlib."
       slug: "python-intro"
       duration: "2 weeks"
       step: 2
-    - module_name: "Data"
-      title: "Data Science para IA"
-      description: "No solamente vamos a entrenarte en Data Science, te vamos a preparar para Data Science en la era de la inteligencia artificial apalancandote de Python; Análisis de Datos & Visualizaciones, Manejos de Bases de datos y Workflows, Aplicaciónes de Algebra Lineal con Inferencia estadística y modelado. Terminarás este modulo entregando un proyecto completo donde tengas que aplicar limpieza, análisis y modelos de predicción en sets de datos reales."
-      projects: "Cargado de data estructurada y no-estructurada a partir de diferentes fuentes (E.j: SQL, Web Scraping, test files), explorado y limpieza de datos, visualizacion de datos, pruebas estadísticas, etc."
-      slug: "advanced-algorithms"
-      duration: "4 wks"
-      step: 4
-    - module_name: "Machine L."
+    - module_name: "Fundamentos"
+      title: "Estadistica y Algebra Lineal con Python"
+      description: "Siempre con un enfoque muy práctico y programando en python vamos a revisar y aplicar los conceptos de Algebra Lineal mas utilizandos en datascience y ML. Matrices y Vectores, F(x) y la relacion entre variables. Tambien revisaremos y programaremos en python los conceptos probabilisticos mas utilizados para entender describir los datos con tendencias centrales, desviacion estandar, media y mediana. Por ultimo calcularemos probabilidades de que un evento o dato ocurra, una habilidad muy importante para poder desarrollar nuestros modelos y predicciones mas adelante."
+      projects: "Una lista de problemas con soluciones en los diferentes temas vistos en el modulo, siempre aplicando a casos reales con utilidad para tu futura careera profesional"
+      slug: "datascience-fundamentals"
+      duration: "2 wks"
+      step: 2
+    - module_name: "Recolecta"
+      title: "Recolecta y Almacena Datos"
+      description: "Probablemente la etapa mas larga de todos los projectos de datascience es recolectar -y limpiar- los datos. En este módulo te enseñaremos a utilizar python para conectarte a bases de datos SQL, aprenderas la syntaxis de SQL para consultar y manipular esos datos, carga y descarga de archivos estaticos CSV, JSON y YML (los tres formatos más utilizados). Aprenderas a conectarte con API's o descargar datos de paginas que no cuentan con una API utilizando web scrapping. Almacenaras todos los datos de forma ordenada y coherente en una base de datos."
+      projects: "Cargado de data estructurada y no-estructurada a partir de diferentes fuentes (E.j: SQL, Web Scraping, test files) y conectándote al API de Twitter."
+      slug: "datacollection"
+      duration: "2 wks"
+      step: 2
+    - module_name: "Manipula"
+      title: "Manipulación de datos con Python"
+      description: "Una vez que tus datos han sido recolectados es necesario entender su estructura, profundidad y errores. Empezaremos enseñandote las tecnicas de visualizacion de datos para entender la muestra y desarrollar las diferentes estrategias para limiar y mejorar tu dataset: Ingeniería de Features, Outliers, Datos Faltántes, Feature encoding, Feature Scaling. \n Aprende a desarrollar reportes en Google DataStudio con graficos avanzados y KPI's en una de las herramientas de datawarehousing mas utilizadas del mercado."
+      projects: "Explora el dataset de propiedades de Airbnb y publica un reporte en la nube de Google DataStudio."
+      slug: "data-analysis"
+      duration: "3 wks"
+      step: 3
+    - module_name: "Modela"
       title: "Machine Learning Práctico"
       description: "Uno de los aspectos más importantes del desarrollo de inteligencia artificial es entender cómo preparar, publicar y manejar las soluciones en un ambiente de producción. Vamos a llevarte de la mano desarrollando una estrategia para seguir el ciclo de desarrollo y publicación completo (Machine Learning Ops) asi como su privacidad, seguridad y etica. Tu proyecto final sera publicar una Inteligencia Artificial en producción."
-      projects: "Construye estructuras de datos, publica modelos de Inteligencia Artificial localmente y en AWS"
+      projects: "Construye estructuras de datos, publica modelos de Inteligencia Artificial localmente y en la nube"
       slug: "machine-learning"
-      duration: "6 wks"
-      step: 6
-    - module_name: "Despliegue"
+      duration: "4 wks"
+      step: 4
+    - module_name: "Despliega"
       title: "I.A. en producción"
       description: "Uno de los aspectos más importantes al desarrollar una Inteligencia Artificial es entender cómo preparar, desplegar y mantener una solución en un ambiente de produccíon. Te llevaremos de la mano durante todo el ciclo de desarrollo de software detrás de la solución. Machine Learning Operations (MLOps), así como privacidad, seguridad y ética. Tu proyecto final será desplegar una Inteligencia en producción."
+      projects: "Construyendo arquitecturas de datos, desplegando I.A. en produccion localmente y en la nube, monitoreando y manteniendo los modelos."
+      slug: "quality-deploy"
+      duration: "1 wks"
+      step: 1
+    - module_name: "Projecto Final"
+      title: "Elige un problema y resuelvelo con I.A."
+      description: "Trabajarás en equipo para escojer un problema real, recolectar los datos necesarios para resolverlo con una prediccion, realizar un analysis exploratorio con varias visualizaciones que permitan entender los datos, limpiar el dataset para poder utilizarlo correctamente y seleccionar un par de modelos para realizar una prediccion. Luego evaluarás la effectividad de tus modelos utilizando las tecnicas vistas durante el curso. Por ultimo pondras tu modelo en produccion utilizando Streamlit o Google DataStudio."
       projects: "Construyendo arquitecturas de datos, desplegando I.A. en produccion localmente y en la nube, monitoreando y manteniendo los modelos."
       slug: "quality-deploy"
       duration: "3 wks"

@@ -9,11 +9,14 @@ import { H1, H4, Paragraph } from "../components/Heading";
 import { Button, Colors } from "../components/Styling";
 import BaseRender from "./_baseLayout";
 import { Alert } from "../components/Form/index";
+import { transferQuerystrings } from "../utils/utils.js";
 
 const Job = ({ data, pageContext, yml }) => {
   const [open, setOpen] = React.useState(false);
   const { session } = React.useContext(SessionContext);
   const { lang } = pageContext;
+
+  const utm = session && session.utm;
 
   const handleOpen = () => {
     setOpen(true);
@@ -70,16 +73,18 @@ const Job = ({ data, pageContext, yml }) => {
             {yml.banner_heading}
           </H1>
           {yml.meta_info.open ? (
-            <Button
-              onClick={handleOpen}
-              variant="full"
-              width="130px"
-              justifyContent="center"
-              color={Colors.blue}
-              textColor={Colors.white}
-            >
-              {yml.button_text}
-            </Button>
+            <Link target="_blank" to={transferQuerystrings(yml.button_url, utm)}>
+              <Button
+                // onClick={handleOpen}
+                variant="full"
+                width="130px"
+                justifyContent="center"
+                color={Colors.blue}
+                textColor={Colors.white}
+              >
+                {yml.button_text}
+              </Button>
+            </Link>
           ) : (
             ""
           )}
@@ -159,6 +164,7 @@ export const query = graphql`
           link_back
           banner_image
           button_text
+          button_url
           cities
           title
           description

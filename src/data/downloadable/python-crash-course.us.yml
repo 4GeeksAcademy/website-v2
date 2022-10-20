@@ -100,7 +100,7 @@ components:
     position: 3
     layout: two_column_right
     image:
-      src: "/images/downloadable/python-crash-course.png"
+      src: "/images/downloadable/python-crash-course-pdf.png"
     heading:
       text:
         "Topics covered"

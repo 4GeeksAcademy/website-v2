@@ -51,7 +51,7 @@ header_data:
 features:
   marginTop: 0px #<-- separation between tagline and the bullets
   text: '<p> <strong style="font-weight: bold;">The United Way Miami Workforce Project</strong> is an exciting new training program made possible by United Way Miami, 4Geeks Academy, and Social Finance.
-  </p> <hr style="margin: 15px 0;"> <span style="background: rgb(255, 183, 24);font-weight: bold;">Now open and accepting applications!</span> <p>Applications will be open until September 30th, 2022</p><p>Only 100 spots available</p>'
+  </p> <hr style="margin: 15px 0;"> <span style="background: rgb(255, 183, 24);font-weight: bold;">Now open and accepting applications!</span> <p>Applications will be open until October 31st, 2022</p><p>Only 100 spots available</p>'
   styles: '{ "color": "gray", "fontWeight":"500" }'
   button:
       text: "APPLY NOW"
