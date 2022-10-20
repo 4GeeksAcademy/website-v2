@@ -14,7 +14,7 @@ featured: "true"
 ---
 # CÓMO PAGAR UN BOOTCAMP DE PROGRAMACIÓN
 
-Desde el comienzo de 4Geeks, la dinámica de nuestra propuesta ha estado enfocada en dos asuntos verticales, tanto para el negocio, como para nuestros estudiantes: (1i) cómo hacer un programa enfocado en habilidades que le permita nuestros graduados conseguir trabajo después del Bootcamp. Valga aquí el acento en el hecho que consiste en focalizar la intención en el resultado del programa orientado al efectivo logro de conseguir un trabajo vinculado con lo ocurrido en el programa de 4Geeks. (ii) cómo lograr que la oferta económica atienda la expectativa y definitiva capacidad de pago de nuestra audiencia. 
+Desde el comienzo de 4Geeks, la dinámica de nuestra propuesta ha estado enfocada en dos asuntos verticales, tanto para el negocio, como para nuestros estudiantes: (i) cómo hacer un programa enfocado en habilidades que le permita a nuestros graduados conseguir trabajo después del Bootcamp. Valga aquí el acento en el hecho que consiste en focalizar la intención en el resultado del programa orientado al efectivo logro de conseguir un trabajo vinculado con lo ocurrido en el programa de 4Geeks. (ii) cómo lograr que la oferta económica atienda la expectativa y definitiva capacidad de pago de nuestra audiencia. 
 
 4Geeks es un programa orientado a colaborar (canal) en el hecho del desarollo de las capacidades de los graduados para que ocurra un cambio/aceleración de tu carrera profesional. No es exclusivo, pero sí insistente. De allí que cómo pagar el Bootcamp sea tan determinante. Toda vez que si no logramos habilitar el programa para la mayor cantidad de personas, no estaríamos siendo coherentes con nuestra visión. 
 
