@@ -395,11 +395,6 @@ const Program = ({ data, pageContext, yml }) => {
           paragraph={yml.badges.paragraph && yml.badges.paragraph}
         />
       </Header>
-      <OurPartners
-        background={Colors.verylightGray}
-        images={hiring.partners.images}
-        marquee
-      ></OurPartners>
       <ProgramDetails
         details={courseDetails.details}
         lang={pageContext.lang}

@@ -7,6 +7,15 @@ navbar:
       paragraph: "Haz el cambio de carrera que siempre quisiste. Mientras buscas cambiar, encontrar un trabajo mejor o avanzar en el actual. Aprende a codificar en 4Geeks Academy."
 
       links:
+
+        - title: "Data Science y Machine Learning"
+          level: "Desde cero"
+          icon: "machine"
+          paragraph: "Conoce las herramientas necesarias para mejorar tus habilidades y ser parte del futuro de la Inteligencia Artificial"
+          buttons:
+            - text: "Ver Programa"
+              link: "/es/coding-bootcamps/curso-datascience-machine-learning"
+              
         - title: "Full Stack Developer"
           level: "Nivel 1"
           icon: "fullstack"
@@ -24,14 +33,6 @@ navbar:
           buttons:
             - text: "Ver Programa"
               link: "/es/coding-bootcamps/ingenieria-de-software-programacion"
-
-        - title: "AI/Machine Learning Engineering"
-          level: "Online"
-          icon: "machine"
-          paragraph: "Conoce las herramientas necesarias para mejorar tus habilidades y ser parte del futuro de la Inteligencia Artificial"
-          buttons:
-            - text: "Ver Programa"
-              link: "/es/coding-bootcamps/curso-inteligencia-artificial"
 
   - name: "Porqué 4Geeks"
     link: "/es/porque-4geeks"
