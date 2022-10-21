@@ -11,7 +11,7 @@ header:
   title: ""
   image: "../../../static/images/bg/companies-bg.jpg"
   image_alt: ""
-  paragraph: "GeekPAL es una membresía instantánea que obtienes cuando te conviertes en estudiante de 4Geeks Academy. Le garantiza que no volverá a codificar solo. Con GeekPAL contará con A PAL por el resto de su vida, sí, incluso después de graduarse. <span style = 'font-weight: bold'> Si te quedas atascado, siempre habrá un mentor disponible para que puedas obtener ayuda con tu código. </span>"
+  paragraph: "GeekPAL es una membresía instantánea que obtienes cuando te conviertes en estudiante de 4Geeks Academy. Te garantiza que no volverás a codificar solo. Con GeekPAL contarás con un mentor por el resto de su vida. Sí!, incluso después de graduarte. <span style = 'font-weight: bold'> Si te quedas atascado, siempre habrá un mentor disponible para que puedas obtener ayuda con tu código. </span>"
   image_logo: "/images/geekpal.png"
 
 geekPal:
