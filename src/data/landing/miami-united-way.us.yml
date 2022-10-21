@@ -7,9 +7,9 @@ meta_info:
   visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   # This will show on social media when shared
   image: "public/images/landing/uwm_pantone_2021_2.png"
-  keywords: "Coding Classes, Learn to code, 4Geeks Academy"
+  keywords: "Coding Classes, Learn to code, Miami, 4Geeks Academy"
 
-  template: "landing_noform" # <--- choose your landing template
+  template: "landing_a" # <--- choose your landing template
   redirects: # <--- URL redirections to avoid 404 errors
     ["/landing/united-way"]
 
@@ -18,31 +18,29 @@ meta_info:
   utm_course: ["full-stack"]
   utm_location: downtown-miami
   automation: strong # comma separated, "soft" is the default value
-  tag: request_more_info # comma separated, "request_more_info" is the default value
-
-navbar:
-  buttonText: "Apply now"
-  buttonUrl: "https://marketing892162.typeform.com/to/ti4UAUrh" # url accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
-  logoUrl: "#"
+  tag: website-lead # comma separated, "request_more_info" is the default value
 
 form:
   # posible fields: "first_name", "last_name", "full_name", "phone", "email"
   # always the first_name, email and phone will be mandatory if added.
-  fields: ["email"]
-  heading: "Get more information, and change your life!"
-  motivation: "ENROLL NOW and change your life."
-  button_label: Get more information
-  redirect: null #you can redirect to another url or entirely diffrent website
+  fields: ["full_name", "phone", "email"]
+  heading: "Apply to 4Geeks"
+  motivation: "Join our community (+3000 people already), become a developer and change your life"
+  button_label: Apply Now
+  redirect: "/us/thank-you/?lang=us"  #you can redirect to another url or entirely diffrent website
+  
+navbar:
+  buttonText: "Apply now"
+  buttonUrl: "#top" # url accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
+  logoUrl: "#"
 
 header_data:
+  background: "#FFF1D1"
   tagline: "Take control of your future. Learn a new skill."
   tagline_color: "black"
-  sub_heading: "Enroll in high-quality coding education with no upfront costs."
-  # image: "../../../static/images/landing/uwm_pantone_2021_2.png"
+  sub_heading: "Become a Software Developer with no upfront costs. Also, you might get up to $400 a week for living stipends (while taking the program)"
+  badge: "../../../static/images/badges/switchup.png"
   image_filter: brightness(0.3)
-  partner_logo_url: "../../../static/images/landing/uwm_pantone_2021_2.png" # optional
-  # background_image: "../../../static/images/Happy-People-Landing-4Geeks-ES.jpg" # optional
-  background: "white" #background property, it can be a hex color
   right_image: "../../../static/images/landing/header_united_way.png"
   # right_image: 
   #   style: '{ "backgroundSize": "contain" }'
@@ -53,12 +51,20 @@ features:
   text: '<p> <strong style="font-weight: bold;">The United Way Miami Workforce Project</strong> is an exciting new training program made possible by United Way Miami, 4Geeks Academy, and Social Finance.
   </p> <hr style="margin: 15px 0;"> <span style="background: rgb(255, 183, 24);font-weight: bold;">Now open and accepting applications!</span> <p>Applications will be open until October 31st, 2022</p><p>Only 100 spots available</p>'
   styles: '{ "color": "gray", "fontWeight":"500" }'
-  button:
-      text: "APPLY NOW"
-      color: "white"
-      path: "https://marketing892162.typeform.com/to/ti4UAUrh"
-      background: "blue"
-      hover_color: "white"
+  
+ short_badges:
+  - name: "Premios Excelencia Educativa"
+    url: ""
+    image: "../../../static/images/badges/exelencia-educativa-es.png"
+    alt: "Mejor centro de Coding Bootcamp"
+  - name: "Newsweek"
+    url: ""
+    image: "../../../static/images/badges/newsweek-es.png"
+    alt: "Top Coding Bootcamps Newsweek"
+  - name: "Switchup"
+    url: ""
+    image: "../../../static/images/badges/reviews.png"
+    alt: "Best coding bootcamp Switchup 2021" 
 
 follow_bar:
   position: "top" # top, bottom, hidden
@@ -69,13 +75,10 @@ follow_bar:
     font_size: ["25px", "25px", "25px", "20px", "18px"]
   button:
     text: "Apply Now"
-    path: "https://marketing892162.typeform.com/to/ti4UAUrh"
+    path: "#top"
   phone:
     text: "Call "
 
-badges:
-  position: 6
-  heading: "4Geeks Academy has awards and recognitions that validate its excellence"
 
 components:
   - name: how-it-works
@@ -132,7 +135,7 @@ components:
       text: "APPLY NOW"
       color: "white"
       hover_color: "white"
-      path: "https://marketing892162.typeform.com/to/ti4UAUrh"
+      path: "#top"
       background: "black"
     columns:
       - image:
@@ -270,7 +273,7 @@ components:
       color: "white"
       background: "blue"
       hover_color: "white"
-      path: "https://marketing892162.typeform.com/to/ti4UAUrh"
+      path: "#top"
 
   - name: united
     position: 11
