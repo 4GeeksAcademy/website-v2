@@ -9,7 +9,7 @@ image: "https://breathecode.herokuapp.com/v1/media/file/bootcamp-pagar-png?"
 image_alt: ""
 cluster: "coding-bootcamps"
 status: "published"
-featured: "true"
+featured: true
 
 ---
 # CÓMO PAGAR UN BOOTCAMP DE PROGRAMACIÓN
