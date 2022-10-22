@@ -52,7 +52,7 @@ features:
   </p> <hr style="margin: 15px 0;"> <span style="background: rgb(255, 183, 24);font-weight: bold;">Now open and accepting applications!</span> <p>Applications will be open until October 31st, 2022</p><p>Only 100 spots available</p>'
   styles: '{ "color": "gray", "fontWeight":"500" }'
   
- short_badges:
+short_badges:
   - name: "Premios Excelencia Educativa"
     url: ""
     image: "../../../static/images/badges/exelencia-educativa-es.png"
