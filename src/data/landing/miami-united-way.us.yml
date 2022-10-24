@@ -47,8 +47,8 @@ header_data:
   #   src: "/images/landing/header_united_way.png"
 
 features:
-  marginTop: 10px #<-- separation between tagline and the bullets
-  text: '<p> <strong style="font-weight: bold;">The United Way Miami Workforce Project</strong> is an exciting new training program made possible by United Way Miami, 4Geeks Academy, and Social Finance.</p>'
+  marginTop: 0px #<-- separation between tagline and the bullets
+  text: '<p style="margin-top: 10px"> <strong style="font-weight: bold;">The United Way Miami Workforce Project</strong> is an exciting new training program made possible by United Way Miami, 4Geeks Academy, and Social Finance.</p>'
   bullets:
     - "Get up to $6400 for living stipends to pay your regular costs while taking the program"
     - "100 Spots Available. Only 80 left!" 
