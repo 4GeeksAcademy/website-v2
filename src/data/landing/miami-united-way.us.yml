@@ -38,7 +38,7 @@ header_data:
   background: "#FFF1D1"
   tagline: "Become a Software Developer with no upfront costs"
   tagline_color: "black"
-  sub_heading: " "
+  sub_heading: ""
   badge: "../../../static/images/badges/switchup.png"
   image_filter: brightness(0.3)
   right_image: "../../../static/images/landing/header_united_way.png"
