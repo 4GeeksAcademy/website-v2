@@ -74,7 +74,6 @@ const Program = ({ data, pageContext, yml }) => {
 
   const syllabus_button_text = yml.button.syllabus_heading;
 
-  console.log('course');
   return (
     <>
       <Header

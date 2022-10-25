@@ -11,43 +11,26 @@ import { Button, Colors, Circle, RoundImage } from "../Styling";
 import { SessionContext } from "../../session";
 import Fragment from "../Fragment";
 
-const PricingCard = ({
-  data,
-  info,
-  ...props
-}) => {
+const PricingCard = ({ data, info, ...props }) => {
   const { recomended, first_line, second_line } = data;
   return (
     <Div display="block" minWidth="300px">
       {recomended && (
-        <Div
-          background={Colors.blue}
-          borderRadius="4px 4px 0 0"
-        >
-          <Paragraph color={Colors.white}>
-            {info.recomended}
-          </Paragraph>
+        <Div background={Colors.blue} borderRadius="4px 4px 0 0">
+          <Paragraph color={Colors.white}>{info.recomended}</Paragraph>
         </Div>
       )}
       <Div
         border={`2px solid ${recomended ? Colors.black : Colors.blue}`}
-        borderRadius_tablet={recomended ? '0 0 4px 4px' : '4px'}
+        borderRadius_tablet={recomended ? "0 0 4px 4px" : "4px"}
         borderRadius_sm="4px"
         background={recomended ? Colors.black : Colors.white}
         padding="15px 12px"
       >
-        <Div
-          className="price-section"
-        >
-          <Div
-            display="block"
-          >
-            <Paragraph>
-              {first_line}
-            </Paragraph>
-            <Paragraph>
-              {second_line}
-            </Paragraph>
+        <Div className="price-section">
+          <Div display="block">
+            <Paragraph>{first_line}</Paragraph>
+            <Paragraph>{second_line}</Paragraph>
           </Div>
         </Div>
       </Div>
@@ -80,28 +63,32 @@ const modalityArray = [
   },
 ];
 
-const plans = [{
-  recomended: true,
-  first_line: 'Scolarship',
-  second_line: 'Pay today',
-  price: '4999'
-},{
-  recomended: false,
-  first_line: 'Scolarship',
-  second_line: 'Pay today',
-  price: '4999'
-
-},{
-  recomended: false,
-  first_line: 'Scolarship',
-  second_line: 'Pay today',
-  price: '4999'
-},{
-  recomended: false,
-  first_line: 'Scolarship',
-  second_line: 'Pay today',
-  price: '4999'
-}];
+const plans = [
+  {
+    recomended: true,
+    first_line: "Scolarship",
+    second_line: "Pay today",
+    price: "4999",
+  },
+  {
+    recomended: false,
+    first_line: "Scolarship",
+    second_line: "Pay today",
+    price: "4999",
+  },
+  {
+    recomended: false,
+    first_line: "Scolarship",
+    second_line: "Pay today",
+    price: "4999",
+  },
+  {
+    recomended: false,
+    first_line: "Scolarship",
+    second_line: "Pay today",
+    price: "4999",
+  },
+];
 
 const PricesAndPaymentsV2 = (props) => {
   const data = useStaticQuery(graphql`
@@ -266,9 +253,7 @@ const PricesAndPaymentsV2 = (props) => {
           </Link>
         </Div>
       </GridContainer>
-      <Div
-        display="block"
-      >
+      <Div display="block">
         <Div
           id="chart-section"
           background="#000"
@@ -286,12 +271,15 @@ const PricesAndPaymentsV2 = (props) => {
           >
             4Geeks: When Payment stops being a Concern
           </H3>
-          <Div id="chart-container" margin="15px 0" borderRadius="4px" background="#101010" width="350px" height="256px"></Div>
           <Div
-            id="legend"
-            flexWrap="wrap"
-            justifyContent="between"
-          >
+            id="chart-container"
+            margin="15px 0"
+            borderRadius="4px"
+            background="#101010"
+            width="350px"
+            height="256px"
+          ></Div>
+          <Div id="legend" flexWrap="wrap" justifyContent="between">
             <Div
               width="100%"
               border="1px solid #FFF"
@@ -299,12 +287,17 @@ const PricesAndPaymentsV2 = (props) => {
               className="info"
               margin="0 0 4% 0"
             >
-              <Div flexShrink_tablet="0" borderRadius="4px 0px 0px 4px" height="100%" width="19.39px" background={Colors.blue} />
               <Div
-                padding="10px"
-                display="block"
-              >
-                <H5 textAlign="left" color={Colors.blue}>76%</H5>
+                flexShrink_tablet="0"
+                borderRadius="4px 0px 0px 4px"
+                height="100%"
+                width="19.39px"
+                background={Colors.blue}
+              />
+              <Div padding="10px" display="block">
+                <H5 textAlign="left" color={Colors.blue}>
+                  76%
+                </H5>
                 <Paragraph
                   fontWeight_tablet="700"
                   fontSize="16px"
@@ -313,7 +306,8 @@ const PricesAndPaymentsV2 = (props) => {
                   textAlign="left"
                   opacity="1"
                 >
-                  of our graduates received a full or partial scholarship thanks to our thorough payment options.
+                  of our graduates received a full or partial scholarship thanks
+                  to our thorough payment options.
                 </Paragraph>
               </Div>
             </Div>
@@ -323,12 +317,17 @@ const PricesAndPaymentsV2 = (props) => {
               borderRadius="4px"
               className="info"
             >
-              <Div flexShrink_tablet="0" borderRadius="4px 0px 0px 4px" height="100%" width="19.39px" background={Colors.white} />
               <Div
-                padding="5px"
-                display="block"
-              >
-                <H5 margin="0 0 5px 0"  textAlign="left" color={Colors.white}>46%</H5>
+                flexShrink_tablet="0"
+                borderRadius="4px 0px 0px 4px"
+                height="100%"
+                width="19.39px"
+                background={Colors.white}
+              />
+              <Div padding="5px" display="block">
+                <H5 margin="0 0 5px 0" textAlign="left" color={Colors.white}>
+                  46%
+                </H5>
                 <Paragraph
                   fontWeight_tablet="700"
                   fontSize="12px"
@@ -347,12 +346,17 @@ const PricesAndPaymentsV2 = (props) => {
               borderRadius="4px"
               className="info"
             >
-              <Div flexShrink_tablet="0" borderRadius="4px 0px 0px 4px" height="100%" width="19.39px" background={Colors.yellow} />
               <Div
-                padding="5px"
-                display="block"
-              >
-                <H5 margin="0 0 5px 0" textAlign="left" color={Colors.white}>24%</H5>
+                flexShrink_tablet="0"
+                borderRadius="4px 0px 0px 4px"
+                height="100%"
+                width="19.39px"
+                background={Colors.yellow}
+              />
+              <Div padding="5px" display="block">
+                <H5 margin="0 0 5px 0" textAlign="left" color={Colors.white}>
+                  24%
+                </H5>
                 <Paragraph
                   fontWeight_tablet="700"
                   fontSize="12px"
@@ -385,12 +389,13 @@ const PricesAndPaymentsV2 = (props) => {
           >
             {info.select}
           </H3>
-          <Div className="cards-container" flexWrap="wrap" justifyContent="between">
-            {plans.map(plan => (
-              <PricingCard 
-                data={plan}
-                info={info}
-              />
+          <Div
+            className="cards-container"
+            flexWrap="wrap"
+            justifyContent="between"
+          >
+            {plans.map((plan) => (
+              <PricingCard data={plan} info={info} />
             ))}
           </Div>
         </Div>
