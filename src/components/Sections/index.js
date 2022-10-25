@@ -228,6 +228,7 @@ export const Div = styled.div`
     display: ${(props) => props.display_sm};
     order: ${(props) => props.order_sm};
     margin: ${(props) => props.margin_sm};
+    border-radius: ${(props) => props.borderRadius_sm};
   }
   @media ${Devices.tablet} {
     flex: ${(props) =>
@@ -269,6 +270,7 @@ export const Div = styled.div`
     border-top: ${(props) => props.borderTop_tablet};
     border-right: ${(props) => props.borderRight_tablet};
     border-bottom: ${(props) => props.borderBottom_tablet};
+    border-radius: ${(props) => props.borderRadius_tablet};
     box-shadow: ${(props) => props.boxShadow_tablet};
     border-left: ${(props) => props.borderLeft_tablet};
     transform: ${(props) => props.transform_tablet};

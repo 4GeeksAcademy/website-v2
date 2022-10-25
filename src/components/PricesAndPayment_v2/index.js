@@ -13,75 +13,43 @@ import Fragment from "../Fragment";
 
 const PricingCard = ({
   data,
-  lang,
-  children,
-  price,
-  color,
-  background,
-  transform_tablet,
-  priceInfo,
-  applyLabel,
-  border,
-  borderLeft,
-  borderRight,
-  borderRight_tablet,
-  borderLeft_tablet,
+  info,
+  ...props
 }) => {
-  const { header, button } = data;
+  const { recomended, first_line, second_line } = data;
   return (
-    <Div
-      flexDirection="column"
-      padding="30px"
-      margin="5px 0"
-      height="fit-content"
-      background={background}
-      transform_tablet={transform_tablet}
-      style={{ border: "1px solid" }}
-      borderLeft={borderLeft}
-      borderRight={borderRight}
-      borderLeft_tablet={borderLeft_tablet}
-      borderRight_tablet={borderRight_tablet}
-    >
-      <H2 color={color} lineHeight="30px">
-        {header.heading_one}
-      </H2>
-      <H3 color={color} lineHeight="30px">
-        {header.heading_two}
-      </H3>
-      <Paragraph padding="20px" color={color || Colors.gray}>
-        {header.sub_heading}
-      </Paragraph>
-      <H3
-        margin="20px 0 0"
-        fontSize="25px"
-        fs_lg="20px"
-        color={color}
-        textAlign="center"
+    <Div display="block" minWidth="300px">
+      {recomended && (
+        <Div
+          background={Colors.blue}
+          borderRadius="4px 4px 0 0"
+        >
+          <Paragraph color={Colors.white}>
+            {info.recomended}
+          </Paragraph>
+        </Div>
+      )}
+      <Div
+        border={`2px solid ${recomended ? Colors.black : Colors.blue}`}
+        borderRadius_tablet={recomended ? '0 0 4px 4px' : '4px'}
+        borderRadius_sm="4px"
+        background={recomended ? Colors.black : Colors.white}
+        padding="15px 12px"
       >
-        {price}
-      </H3>
-      <Paragraph
-        align="center"
-        margin="5px 0 10px 0"
-        fontSize="12px"
-        color={color || Colors.gray}
-      >
-        {priceInfo}
-      </Paragraph>
-      {/* <Div display="block" margin="0 -35px">{children}</Div> */}
-      <Div display="block">{children}</Div>
-      <Div margin="40px 0 0 0" justifyContent="center" image="no">
-        <Link to={`/${lang}/apply`}>
-          <Button
-            variant="full"
-            width="100%"
-            color={Colors.blue}
-            textColor={Colors.white}
-            fontSize="16px"
+        <Div
+          className="price-section"
+        >
+          <Div
+            display="block"
           >
-            {applyLabel}
-          </Button>
-        </Link>
+            <Paragraph>
+              {first_line}
+            </Paragraph>
+            <Paragraph>
+              {second_line}
+            </Paragraph>
+          </Div>
+        </Div>
       </Div>
     </Div>
   );
@@ -112,7 +80,30 @@ const modalityArray = [
   },
 ];
 
-const PricesAndPayments = (props) => {
+const plans = [{
+  recomended: true,
+  first_line: 'Scolarship',
+  second_line: 'Pay today',
+  price: '4999'
+},{
+  recomended: false,
+  first_line: 'Scolarship',
+  second_line: 'Pay today',
+  price: '4999'
+
+},{
+  recomended: false,
+  first_line: 'Scolarship',
+  second_line: 'Pay today',
+  price: '4999'
+},{
+  recomended: false,
+  first_line: 'Scolarship',
+  second_line: 'Pay today',
+  price: '4999'
+}];
+
+const PricesAndPaymentsV2 = (props) => {
   const data = useStaticQuery(graphql`
     query PricesAndPaymentsV2 {
       content: allPricesAndPaymentYaml {
@@ -125,6 +116,8 @@ const PricesAndPayments = (props) => {
             pricing_error
             get_notified
             top_label
+            select
+            recomended
             button {
               button_text
               button_link
@@ -273,116 +266,135 @@ const PricesAndPayments = (props) => {
           </Link>
         </Div>
       </GridContainer>
-
-      {!prices ? (
-        <Paragraph margin="10px 0px" align="center" fontSize="18px">
-          {info.pricing_error} {course.label}, {currentLocation.city}. <br />{" "}
-          {info.pricing_error_contact}
-        </Paragraph>
-      ) : (
-        <GridContainer
-          columns_tablet={
-            Boolean(prices.left_section) +
-            Boolean(prices.center_section) +
-            Boolean(prices.right_section)
-          }
-          gridGap_tablet="0"
-          padding_tablet="0"
+      <Div
+        display="block"
+      >
+        <Div
+          id="chart-section"
+          background="#000"
+          padding="20px 14px"
+          borderRadius="4px"
+          maxWidth="385px"
+          margin="auto"
+          display="block"
         >
-          {prices.left_section && (
-            <PricingCard
-              lang={props.lang}
-              background={Colors.white}
-              transform_tablet="translateY(10%)"
-              price={prices.left_section.content.price}
-              priceInfo={prices.left_section.content.price_info}
-              data={prices.left_section}
-              applyLabel={apply_button_text}
-              border="1px solid black"
-              borderRight_tablet="none"
+          <H3
+            color={Colors.blue}
+            margin="auto"
+            fontSize="26px"
+            lineHeight="31.2px"
+          >
+            4Geeks: When Payment stops being a Concern
+          </H3>
+          <Div id="chart-container" margin="15px 0" borderRadius="4px" background="#101010" width="350px" height="256px"></Div>
+          <Div
+            id="legend"
+            flexWrap="wrap"
+            justifyContent="between"
+          >
+            <Div
+              width="100%"
+              border="1px solid #FFF"
+              borderRadius="4px"
+              className="info"
+              margin="0 0 4% 0"
             >
-              {prices.left_section?.content?.logo && (
-                <Div margin="10px 0 0 0" display="flex">
-                  <img
-                    style={{ margin: "auto", height: "20px" }}
-                    src={prices.left_section?.content?.logo}
-                  />
-                </Div>
-              )}
-            </PricingCard>
-          )}
-          {prices.center_section && Array.isArray(prices.center_section.plans) && (
-            <PricingCard
-              lang={props.lang}
-              color="white"
-              background="black"
-              price={prices.center_section.plans[activeStep]?.payment}
-              priceInfo={prices.center_section.plans[activeStep]?.paymentInfo}
-              applyLabel={apply_button_text}
-              data={prices.center_section}
-            >
-              <StepperContainer>
-                <StepConnector>
-                  <FillerStyles
-                    completed={
-                      (activeStep * 100) /
-                      (prices.center_section.plans.length - 1)
-                    }
-                  />
-                </StepConnector>
-                {Array.isArray(prices.center_section.plans) &&
-                  prices.center_section.plans
-                    .map((p) => p.months)
-                    .map((label, index) => (
-                      <StepperCircle
-                        key={label}
-                        onMouseOver={() => setActiveStep(index)}
-                        background={
-                          index <= activeStep ? Colors.yellow : Colors.black
-                        }
-                      >
-                        <StepLabel
-                          color={
-                            index == activeStep ? Colors.yellow : Colors.white
-                          }
-                        >
-                          {label}
-                        </StepLabel>
-                      </StepperCircle>
-                    ))}
-              </StepperContainer>
-              <Div margin="0 0 40px 0" display="flex">
-                <img
-                  style={{ margin: "auto", height: "20px" }}
-                  src={prices.center_section.plans[activeStep].logo}
-                />
+              <Div flexShrink_tablet="0" borderRadius="4px 0px 0px 4px" height="100%" width="19.39px" background={Colors.blue} />
+              <Div
+                padding="10px"
+                display="block"
+              >
+                <H5 textAlign="left" color={Colors.blue}>76%</H5>
+                <Paragraph
+                  fontWeight_tablet="700"
+                  fontSize="16px"
+                  lineHeight="19px"
+                  color="#FFF"
+                  textAlign="left"
+                  opacity="1"
+                >
+                  of our graduates received a full or partial scholarship thanks to our thorough payment options.
+                </Paragraph>
               </Div>
-            </PricingCard>
-          )}
-          {prices.right_section && (
-            <PricingCard
-              lang={props.lang}
-              background={Colors.white}
-              transform_tablet="translateY(10%)"
-              price={prices.right_section.content.price}
-              priceInfo={prices.right_section.content.price_info}
-              applyLabel={apply_button_text}
-              data={prices.right_section}
-              border="1px solid black"
-              borderLeft_tablet="none"
+            </Div>
+            <Div
+              width="48%"
+              border="1px solid #FFF"
+              borderRadius="4px"
+              className="info"
             >
-              {prices.right_section?.content?.logo && (
-                <Div margin="10px 0 0 0" display="flex">
-                  <img
-                    style={{ margin: "auto", height: "20px" }}
-                    src={prices.right_section?.content?.logo}
-                  />
-                </Div>
-              )}
-            </PricingCard>
-          )}
-        </GridContainer>
-      )}
+              <Div flexShrink_tablet="0" borderRadius="4px 0px 0px 4px" height="100%" width="19.39px" background={Colors.white} />
+              <Div
+                padding="5px"
+                display="block"
+              >
+                <H5 margin="0 0 5px 0"  textAlign="left" color={Colors.white}>46%</H5>
+                <Paragraph
+                  fontWeight_tablet="700"
+                  fontSize="12px"
+                  color="#FFF"
+                  textAlign="left"
+                  opacity="1"
+                  lineHeight="14.4px"
+                >
+                  of our students are women
+                </Paragraph>
+              </Div>
+            </Div>
+            <Div
+              width="48%"
+              border="1px solid #FFF"
+              borderRadius="4px"
+              className="info"
+            >
+              <Div flexShrink_tablet="0" borderRadius="4px 0px 0px 4px" height="100%" width="19.39px" background={Colors.yellow} />
+              <Div
+                padding="5px"
+                display="block"
+              >
+                <H5 margin="0 0 5px 0" textAlign="left" color={Colors.white}>24%</H5>
+                <Paragraph
+                  fontWeight_tablet="700"
+                  fontSize="12px"
+                  color="#FFF"
+                  textAlign="left"
+                  opacity="1"
+                  lineHeight="14.4px"
+                >
+                  of our students are part of the Afro-descendants community
+                </Paragraph>
+              </Div>
+            </Div>
+          </Div>
+        </Div>
+        <Div
+          borderRadius="4px"
+          border="1px solid #000"
+          background="#FFF"
+          padding_tablet="38px"
+          width="60%"
+          margin="10px auto"
+          display="block"
+        >
+          <H3
+            fontSize="24px"
+            lineHeight="29px"
+            textAlign="left"
+            width="100%"
+            margin="0 0 20px 0"
+          >
+            {info.select}
+          </H3>
+          <Div className="cards-container" flexWrap="wrap" justifyContent="between">
+            {plans.map(plan => (
+              <PricingCard 
+                data={plan}
+                info={info}
+              />
+            ))}
+          </Div>
+        </Div>
+      </Div>
       <GridContainer
         columns_tablet="12"
         gridGap="0"
@@ -421,7 +433,7 @@ const PricesAndPayments = (props) => {
     </Div>
   );
 };
-export default PricesAndPayments;
+export default PricesAndPaymentsV2;
 const StepperContainer = styled.div`
   width: 100%;
   padding: 25px 0;

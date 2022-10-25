@@ -2,6 +2,8 @@ pricing_error: Prices are currently not available for
 pricing_error_contact: For more information please contact us at info@4geeksacademy.com
 get_notified: Promotions and scolarships are always available, apply to talk to one of our career advisors
 top_label: location
+recomended: Recomended
+select: Select the plan that best suits you
 button:
   button_text: See plans and prices
   button_link: "/us/financials"

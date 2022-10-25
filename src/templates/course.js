@@ -28,7 +28,7 @@ import { requestSyllabus } from "../actions";
 import { SessionContext } from "../session";
 import ProgramDetails from "../components/ProgramDetails";
 import ProgramDetailsMobile from "../components/ProgramDetailsMobile";
-import PricesAndPayment from "../components/PricesAndPayment";
+import PricesAndPayment from "../components/PricesAndPayment_v2";
 import Modal from "../components/Modal";
 import LeadForm from "../components/LeadForm";
 import AlumniProjects from "../components/AlumniProjects";
@@ -74,6 +74,7 @@ const Program = ({ data, pageContext, yml }) => {
 
   const syllabus_button_text = yml.button.syllabus_heading;
 
+  console.log('course');
   return (
     <>
       <Header
