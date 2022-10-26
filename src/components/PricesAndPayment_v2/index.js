@@ -7,7 +7,7 @@ import { GridContainer, Grid, Div } from "../Sections";
 import Card from "../Card";
 import Select, { SelectRaw } from "../Select";
 import { H2, H3, H4, H5, Paragraph, Title } from "../Heading";
-import { Button, Colors, Circle, RoundImage } from "../Styling";
+import { Button, Colors, Circle, RoundImage, Img } from "../Styling";
 import { SessionContext } from "../../session";
 import Fragment from "../Fragment";
 
@@ -105,6 +105,29 @@ const PricingCard = ({ data, info, ...props }) => {
               ))}
           </Div>
         </Div>
+        {data.icons && data.icons.length !== 0 && (
+          <Div
+            className="icons"
+            background={recomended ? Colors.white : Colors.verylightGray}
+            padding="4px 7px"
+            borderRadius="26px"
+            width="fit-content"
+            alignItems="center"
+            margin="15px 0 0 0"
+          >
+            {data.icons.map((icon) => (
+              <Img
+                src={icon}
+                alt="4Geeks Academy Icon"
+                backgroundSize="contain"
+                height="17px"
+                minWidth="30px"
+                width="auto"
+                margin="0 5px"
+              />
+            ))}
+          </Div>
+        )}
       </Div>
     </Div>
   );
@@ -145,7 +168,9 @@ const plans = [
       "You’re saving $4000 USD ",
       "9% of your salary until paid in full, only if you get a job in tech.",
     ],
-    icons: [],
+    icons: [
+      '/images/landing/uwm_pantone_2021_2.png'
+    ],
   },
   {
     recomended: false,
@@ -156,7 +181,11 @@ const plans = [
       "With $400 p/ week living stipends",
       "9% of your salary until paid in full, only if you get a job in tech.",
     ],
-    icons: [],
+    icons: [
+      '/images/ascent_logo.jpg',
+      '/images/climb-logo.png',
+      '/images/quotanda-logo.png'
+    ],
   },
   {
     recomended: false,
@@ -167,7 +196,11 @@ const plans = [
       "With $400 p/ week living stipends",
       "9% of your salary until paid in full, only if you get a job in tech.",
     ],
-    icons: [],
+    icons: [
+      '/images/ascent_logo.jpg',
+      '/images/climb-logo.png',
+      '/images/quotanda-logo.png'
+    ],
   },
   {
     recomended: false,
