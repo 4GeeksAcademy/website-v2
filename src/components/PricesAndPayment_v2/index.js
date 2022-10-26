@@ -63,16 +63,12 @@ const PricingCard = ({ data, info, ...props }) => {
               color={recomended ? Colors.white : Colors.black}
               opacity="1"
             >
-              <span style={{fontSize: '36px'}}>{data.price}</span>
-              {' '}USD
+              <span style={{ fontSize: "36px" }}>{data.price}</span> USD
             </Paragraph>
           </Div>
         </Div>
         <Div className="expandable" display="block" margin="10px 0 0 0">
-          <Button 
-            onClick={() => setIsOpen(!isOpen)}
-            margin="auto"
-          >
+          <Button onClick={() => setIsOpen(!isOpen)} margin="auto">
             <Icon
               icon={isOpen ? "angleup" : "angledown"}
               width="24px"
@@ -81,31 +77,32 @@ const PricingCard = ({ data, info, ...props }) => {
               fill={Colors.blue}
             />
           </Button>
-          
-          <hr style={{ color: '#A4A4A4' }} />
+
+          <hr style={{ color: "#A4A4A4" }} />
 
           <Div className="bullets" display={isOpen ? "block" : "none"}>
-            {data.bullets && data.bullets.map((bullet) => (
-              <Div alignItems="center" margin="10px 0 0 0">
-                <Icon
-                  icon="check"
-                  width="17px"
-                  height="17px"
-                  style={{ marginRight: '10px' }}
-                  color={recomended ? Colors.white : Colors.black}
-                  fill={recomended ? Colors.white : Colors.black}
-                />
-                <Paragraph
-                  lineHeight="19px"
-                  fontWeight_tablet="500"
-                  color={recomended ? Colors.white : Colors.black}
-                  opacity="1"
-                  textAlign="left"
-                >
-                  {bullet}
-                </Paragraph>
-              </Div>
-            ))}
+            {data.bullets &&
+              data.bullets.map((bullet) => (
+                <Div alignItems="center" margin="10px 0 0 0">
+                  <Icon
+                    icon="check"
+                    width="17px"
+                    height="17px"
+                    style={{ marginRight: "10px" }}
+                    color={recomended ? Colors.white : Colors.black}
+                    fill={recomended ? Colors.white : Colors.black}
+                  />
+                  <Paragraph
+                    lineHeight="19px"
+                    fontWeight_tablet="500"
+                    color={recomended ? Colors.white : Colors.black}
+                    opacity="1"
+                    textAlign="left"
+                  >
+                    {bullet}
+                  </Paragraph>
+                </Div>
+              ))}
           </Div>
         </Div>
       </Div>
@@ -145,10 +142,10 @@ const plans = [
     second_line: "Pay today",
     price: "$4999",
     bullets: [
-      'You’re saving $4000 USD ',
-      '9% of your salary until paid in full, only if you get a job in tech.'
+      "You’re saving $4000 USD ",
+      "9% of your salary until paid in full, only if you get a job in tech.",
     ],
-    icons: []
+    icons: [],
   },
   {
     recomended: false,
@@ -156,10 +153,10 @@ const plans = [
     second_line: "24 months payment",
     price: "$310",
     bullets: [
-      'With $400 p/ week living stipends',
-      '9% of your salary until paid in full, only if you get a job in tech.'
+      "With $400 p/ week living stipends",
+      "9% of your salary until paid in full, only if you get a job in tech.",
     ],
-    icons: []
+    icons: [],
   },
   {
     recomended: false,
@@ -167,19 +164,17 @@ const plans = [
     second_line: "Pay after you get a job",
     price: "$0",
     bullets: [
-      'With $400 p/ week living stipends',
-      '9% of your salary until paid in full, only if you get a job in tech.'
+      "With $400 p/ week living stipends",
+      "9% of your salary until paid in full, only if you get a job in tech.",
     ],
-    icons: []
+    icons: [],
   },
   {
     recomended: false,
     first_line: "Full Payment",
     second_line: "Pay today",
     price: "$8099",
-    bullets: [
-      'You’re saving $1000 USD '
-    ],
+    bullets: ["You’re saving $1000 USD "],
   },
 ];
 
