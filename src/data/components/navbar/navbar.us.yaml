@@ -6,13 +6,13 @@ navbar:
       title: "Programs"
       paragraph: "Make the career change you’ve always wanted. From zero to coding in weeks and specialized in the most wanted technologies int he market."
       links:
-        - title: "Coding Bootcamp"
+        - title: "Full Stack Coding Bootcamp"
           level: " "
           icon: "fullstack"
           paragraph: "Become a Full Stack software developer using Python, React and Javascript. The most in-demand skills. Find a job as a developer."
           buttons:
             - text: "View program"
-              link: "/us/coding-bootcamp"
+              link: "/us/coding-bootcamps/part-time-full-stack-developer"
 
         - title: "Data Science and ML"
           level: " "

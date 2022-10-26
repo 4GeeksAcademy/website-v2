@@ -73,7 +73,10 @@ const Job = ({ data, pageContext, yml }) => {
             {yml.banner_heading}
           </H1>
           {yml.meta_info.open ? (
-            <Link target="_blank" to={transferQuerystrings(yml.button_url, utm)}>
+            <Link
+              target="_blank"
+              to={transferQuerystrings(yml.button_url, utm)}
+            >
               <Button
                 // onClick={handleOpen}
                 variant="full"

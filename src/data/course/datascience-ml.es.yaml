@@ -54,7 +54,7 @@ course_instructors:
       linkedin: "https://www.linkedin.com/in/alexismena/"
 
 badges:
-  paragraph: "4Geeks Academy es el lugar donde los desarrolladores crecen y prosperan. Autorizados por el Departamento de Educación de USA, Florida. Premios Excelencia Educativa en España, elegidos como uno de los top 35 <a href='/es/curso-de-programacion-desde-cero'>cursos de programacion</a> del mundo, el mejor de Miami según SwitchUp y de los 10 mejores cursos de programación en los Estados Unidos según Newsweek:"
+  paragraph: "Gracias a un enfoque hacia la codificación nuestros programas han sido galardonados como TOP en <a href='/es/premios'>España, USA y otros paises.</a>. Nuestro certificados estan avalados por el Dep. de Educación de USA en Florida."
 
 upcoming:
   no_dates_message: "Actualmente no hay próximas fechas para este programa"
@@ -87,8 +87,8 @@ details:
       title: "Sobre este programa"
       sub_title: |
         Aprende Python, SQL, Google Data Studio, Streamlit y Estadística para formar parte de un equipo técnico en cualquier compañía y convertirte en analista de datos.
-        Crea tus propios modelos predictivos con Python usando vecinos cercanos, árboles de decisión y otros algoritmos. 
-        Practique con escenarios comerciales de la vida real típicos en los negocios y revise algunas de las herramientas utilizadas en la industria.
+        Crea tus propios modelos predictivos con Python, Pandas, Numpy, etc. Utiliza algoritmos predicivos como vecinos cercanos, árboles de decisión, entre otros muchos. 
+        Practica con escenarios comerciales de la vida real típicos en los negocios y revise algunas de las herramientas utilizadas en la industria.
         Elabora estrategias y desarrolla tu A.I. siguiendo el desarrollo del ciclo de vida de principio a fin, incluida la implementación en producción y mantenimiento de tu solución.
       list:
         - label: "Duración"
@@ -98,7 +98,11 @@ details:
           content: "3 Clases semanales"
           icon: "book"
         - label: "Tamaño de la clase"
-          content: "12 personas máx"
+          content: "14 personas máx"
+        - label: "Certificado"
+          content: "Nuestros certificados son  reconocidos por múltiples instuticiones."
+          link_text: "Ver ejemplo"
+          link: "https://certificate.4geeks.com/44c61b294a248f91088f5355aea09606126795e3"
           icon: "certificate"
         - label: "Requisitos"
           content: "No se necesita experiencia previa"
@@ -112,7 +116,10 @@ details:
     - label: "Compromiso"
       value: "20 hrs/sem. (Lun - Mie - Vie)"
     - label: "Certificado"
-      value: "Machine Learning Engineer"
+      content: "Nuestros certificados son reconocidos por múltiples instuticiones."
+      link_text: "Ver ejemplo"
+      link: "https://certificate.4geeks.com/44c61b294a248f91088f5355aea09606126795e3"
+      icon: "certificate"
     - label: "Horario"
       value: "Online / Remoto"
     - label: "Tamaño Clase"
@@ -135,21 +142,21 @@ details:
       step: 2
     - module_name: "Fundamentos"
       title: "Estadistica y Algebra Lineal con Python"
-      description: "Siempre con un enfoque muy práctico y programando en python vamos a revisar y aplicar los conceptos de Algebra Lineal mas utilizandos en datascience y ML. Matrices y Vectores, F(x) y la relacion entre variables. Tambien revisaremos y programaremos en python los conceptos probabilisticos mas utilizados para entender describir los datos con tendencias centrales, desviacion estandar, media y mediana. Por ultimo calcularemos probabilidades de que un evento o dato ocurra, una habilidad muy importante para poder desarrollar nuestros modelos y predicciones mas adelante."
+      description: "Siempre con un enfoque muy práctico y programando en python vamos a revisar y aplicar los conceptos de Algebra Lineal más utilizandos en datascience y ML. Matrices y Vectores, F(x) y la relacion entre variables. Tambien revisaremos y programaremos en python los conceptos probabilisticos más utilizados para entender describir los datos con tendencias centrales, desviacion estandar, media y mediana. Por ultimo calcularemos probabilidades de que un evento o dato ocurra, una habilidad muy importante para poder desarrollar nuestros modelos y predicciones más adelante."
       projects: "Una lista de problemas con soluciones en los diferentes temas vistos en el modulo, siempre aplicando a casos reales con utilidad para tu futura careera profesional"
       slug: "datascience-fundamentals"
       duration: "2 wks"
       step: 2
     - module_name: "Recolecta"
       title: "Recolecta y Almacena Datos"
-      description: "Probablemente la etapa mas larga de todos los projectos de datascience es recolectar -y limpiar- los datos. En este módulo te enseñaremos a utilizar python para conectarte a bases de datos SQL, aprenderas la syntaxis de SQL para consultar y manipular esos datos, carga y descarga de archivos estaticos CSV, JSON y YML (los tres formatos más utilizados). Aprenderas a conectarte con API's o descargar datos de paginas que no cuentan con una API utilizando web scrapping. Almacenaras todos los datos de forma ordenada y coherente en una base de datos."
+      description: "Probablemente la etapa más larga de todos los projectos de datascience es recolectar -y limpiar- los datos. En este módulo te enseñaremos a utilizar python para conectarte a bases de datos SQL, aprenderas la syntaxis de SQL para consultar y manipular esos datos, carga y descarga de archivos estaticos CSV, JSON y YML (los tres formatos más utilizados). Aprenderas a conectarte con API's o descargar datos de paginas que no cuentan con una API utilizando web scrapping. Almacenaras todos los datos de forma ordenada y coherente en una base de datos."
       projects: "Cargado de data estructurada y no-estructurada a partir de diferentes fuentes (E.j: SQL, Web Scraping, test files) y conectándote al API de Twitter."
       slug: "datacollection"
       duration: "2 wks"
       step: 2
     - module_name: "Manipula"
       title: "Manipulación de datos con Python"
-      description: "Una vez que tus datos han sido recolectados es necesario entender su estructura, profundidad y errores. Empezaremos enseñandote las tecnicas de visualizacion de datos para entender la muestra y desarrollar las diferentes estrategias para limiar y mejorar tu dataset: Ingeniería de Features, Outliers, Datos Faltántes, Feature encoding, Feature Scaling. \n Aprende a desarrollar reportes en Google DataStudio con graficos avanzados y KPI's en una de las herramientas de datawarehousing mas utilizadas del mercado."
+      description: "Una vez que tus datos han sido recolectados es necesario entender su estructura, profundidad y errores. Empezaremos enseñandote las tecnicas de visualizacion de datos para entender la muestra y desarrollar las diferentes estrategias para limiar y mejorar tu dataset: Ingeniería de Features, Outliers, Datos Faltántes, Feature encoding, Feature Scaling. \n Aprende a desarrollar reportes en Google DataStudio con graficos avanzados y KPI's en una de las herramientas de datawarehousing más utilizadas del mercado."
       projects: "Explora el dataset de propiedades de Airbnb y publica un reporte en la nube de Google DataStudio."
       slug: "data-analysis"
       duration: "3 wks"

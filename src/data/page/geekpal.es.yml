@@ -11,7 +11,12 @@ header:
   title: ""
   image: "../../../static/images/bg/companies-bg.jpg"
   image_alt: ""
-  paragraph: "GeekPAL es una membresía instantánea que obtienes cuando te conviertes en estudiante de 4Geeks Academy. Te garantiza que no volverás a codificar solo. Con GeekPAL contarás con un mentor por el resto de su vida. Sí!, incluso después de graduarte. <span style = 'font-weight: bold'> Si te quedas atascado, siempre habrá un mentor disponible para que puedas obtener ayuda con tu código. </span>"
+  paragraph: "GeekPAL es una membresía instantánea que obtienes cuando te conviertes en estudiante de 4Geeks Academy. 
+  <ul>
+    <li>- No volverás a codificar sólo. </li>
+    <li>- Cuenta mentores por el resto de su vida. </li>
+    <li>- Incluso después de graduarte.</li>
+  </ul>"
   image_logo: "/images/geekpal.png"
 
 geekPal:
@@ -52,8 +57,8 @@ list:
     image: "../../../static/images/comunity-support.png"
     position: "right"
     sub:
-      - title: "✔ Breathe Code"
-        text: "Es una comunidad creada para acelerar la forma en que los desarrolladores junior aprenden y evolucionan utilizando la tecnología. BreatheCode te da acceso a muchos recursos para mejorar tus habilidades, pero también puedes contribuir para ayudar a otros con su código. "
+      - title: "✔ 4Geeks.com"
+        text: "Es una comunidad creada para acelerar la forma en que los desarrolladores junior aprenden y evolucionan utilizando la tecnología. <a href='https://4geeks.com'>4Geeks.com</a> te da acceso a muchos recursos para mejorar tus habilidades, pero también puedes contribuir para ayudar a otros con su código. "
       - title: "✔ Comunidad Slack"
         text: "Nuestra comunidad internacional de más de 
         <span style='font-weight: bold'> 2100 personas</span>, que te brindará todo el apoyo que necesites."

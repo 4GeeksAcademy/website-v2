@@ -8,6 +8,14 @@ navbar:
 
       links:
 
+        - title: "Full Stack Developer"
+          level: "Desde cero"
+          icon: "fullstack"
+          paragraph: "Convierte en un programador que utiliza las tecnologias más búscadas, mentoria personalizada y un plan de estudios y career support para conseguir tu primer trabajo."
+          buttons:
+            - text: "Ver programa"
+              link: "/es/coding-bootcamps/full-stack-part-time"
+
         - title: "Data Science y Machine Learning"
           level: "Desde cero"
           icon: "machine"
@@ -16,21 +24,13 @@ navbar:
             - text: "Ver Programa"
               link: "/es/coding-bootcamps/curso-datascience-machine-learning"
               
-        - title: "Full Stack Developer"
+        - title: "Blockchain y Web3"
           level: "Desde cero"
-          icon: "fullstack"
-          paragraph: "Convierte en un programador que utiliza las tecnologias mas búscadas, mentoria personalizada y un plan de estudios y career support para conseguir tu primer trabajo."
-          buttons:
-            - text: "Ver programa"
-              link: "/es/coding-bootcamp"
-
-        - title: "Cloud Computing Engineer"
-          level: "Nivel 2"
           icon: "software"
-          paragraph: "Desarrolla aplicaciones y arquitecturas en la nube listas para escalar a millones de usuarios. Conviértete en el desarrollador senior que las empresas de Forbes 500 están buscando."
+          paragraph: "Construye applicaciones en la Web3 utilizando Solidity y Etherium Blockchain. Obtén un trabajo como desarrolaldor de blockchain."
           buttons:
-            - text: "Ver Programa"
-              link: "/es/coding-bootcamps/ingenieria-de-software-programacion"
+            - text: "Registro temprano"
+              link: "#"
 
   - name: "Porqué 4Geeks"
     link: "/es/porque-4geeks"

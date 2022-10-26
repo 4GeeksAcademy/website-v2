@@ -457,6 +457,10 @@ export const query = graphql`
         node {
           title
           sub_title
+          button {
+            label
+            url
+          }
           image {
             childImageSharp {
               gatsbyImageData(

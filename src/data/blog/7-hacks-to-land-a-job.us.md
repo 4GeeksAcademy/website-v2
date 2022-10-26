@@ -77,7 +77,7 @@ Guensie provides great tips about networking (we added the last one):
   * **Build a profile (and be active) in LinkedIn:** It is a great way to see who's working at companies where you want to work at and reach out to them. Do your research and don’t be shy to get in touch with your network, whether it's 'Hey I see you work at ABC company and that you're doing XYZ and I'm very interested in that' and reach out that way.
 
  	
-  * **Contribute to Open Source projects: **We encourage our students of being part of the developer's community by making contributions to open source projects [even through our educational platform Breathe Code](https://www.breatheco.de/contributing).
+  * **Contribute to Open Source projects: **We encourage our students of being part of the developer's community by making contributions to open source projects [even through our educational platform 4Geeks.com](https://www.breatheco.de/contributing).
 
 
 She also states the following: Do not wait to start networking when you're ready to apply to a job. Start networking when you're learning. Build strong relationships so by the time that you're ready to apply for the job, you already have strong relationships with different people that might help you get in the industry or that you can also learn from.
