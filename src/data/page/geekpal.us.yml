@@ -11,7 +11,12 @@ header:
   title: ""
   image: "../../../static/images/bg/companies-bg.jpg"
   image_alt: ""
-  paragraph: "GeekPAL is an instant membership you get when you become a student at 4Geeks Academy. It guarantees you will not code alone ever again. With GeekPAL you will count with A PAL for the rest of your life -yes, even after graduation. <span style='font-weight: bold'>If you get stuck, there will always be a mentor available so you can get help with your code.</span>"
+  paragraph: "GeekPAL is an instant membership you get when you become a student at 4Geeks Academy. 
+  <ul>
+    <li>- Don't code alone ever again.</li> 
+    <li>- Have mentors for the rest of your life.</li> 
+    <li>- Even after graduation.</li>
+  </ul>"
   image_logo: "/images/geekpal.png"
 
 # Introduction Video here
@@ -54,8 +59,8 @@ list:
     image: "../../../static/images/comunity-support.png"
     position: "right"
     sub:
-      - title: "✔ BreatheCode"
-        text: "Is a community created to accelerate the way junior developers learn and evolve using technology. BreatheCode gives you access to many resources to improve your skills, but also you can contribute to help others with their code."
+      - title: "✔ 4Geeks.com"
+        text: "Is a community created to accelerate the way junior developers learn and evolve using technology. <a href='https://4geeks.com'>4Geeks.com</a> gives you access to many resources to improve your skills, but also you can contribute to help others with their code."
       - title: "✔ Slack Community"
         text: "Our international community of more than 
         <span style='font-weight: bold'> 2100 people</span>, who will provide you with all the support you need."

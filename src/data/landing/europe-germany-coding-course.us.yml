@@ -147,7 +147,7 @@ components:
       src: "/images/why-4geeks/python-image.png"
     heading:
       text:
-        "Learn Python, Javascript, and more"
+        "You need to learn at least Python and Javascript"
         #           xl      lg      md      sm      xs
       font_size: ["50px", "50px", "50px", "50px", "50px"]
     content:

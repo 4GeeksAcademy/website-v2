@@ -9,8 +9,9 @@ sub_title: |
   ● Java is the most used language in the world
   
   According to job postings on "Indeed" In September 2022 there are about 72,000 job openings for Java developers
-
-
+button:
+  label: Learn more about why we teach python at 4Geeks
+  url: "/why-we-teach-python-4geeks"
 image: "../../../../static/images/techs/java-tech.png"
 tech_list: 
   - image: "../../../../static/images/techs/bootstrap.png"
