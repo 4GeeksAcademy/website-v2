@@ -12,12 +12,20 @@ import { SessionContext } from "../../session";
 import Fragment from "../Fragment";
 
 const PricingCard = ({ data, info, ...props }) => {
+  const [isOpen, setIsOpen] = useState(true);
   const { recomended, first_line, second_line } = data;
   return (
-    <Div display="block" minWidth="300px">
+    <Div display="block" width="320px" margin="0 0 15px 0">
       {recomended && (
         <Div background={Colors.blue} borderRadius="4px 4px 0 0">
-          <Paragraph color={Colors.white}>{info.recomended}</Paragraph>
+          <Paragraph
+            color={Colors.white}
+            fontWeight_tablet="700"
+            fontSize="1"
+            opacity="1"
+          >
+            {info.recomended}
+          </Paragraph>
         </Div>
       )}
       <Div
@@ -26,11 +34,78 @@ const PricingCard = ({ data, info, ...props }) => {
         borderRadius_sm="4px"
         background={recomended ? Colors.black : Colors.white}
         padding="15px 12px"
+        display="block"
       >
-        <Div className="price-section">
+        <Div className="price-section" justifyContent="between" width="100%">
           <Div display="block">
-            <Paragraph>{first_line}</Paragraph>
-            <Paragraph>{second_line}</Paragraph>
+            <Paragraph
+              lineHeight="14px"
+              fontWeight_tablet="700"
+              color={recomended ? Colors.white : Colors.black}
+              opacity="1"
+              textAlign="left"
+              margin="0 0 5px 0"
+            >
+              {first_line}
+            </Paragraph>
+            <Paragraph
+              lineHeight="14px"
+              color={recomended ? Colors.white : Colors.black}
+              opacity="1"
+              textAlign="left"
+            >
+              {second_line}
+            </Paragraph>
+          </Div>
+          <Div className="price-container">
+            <Paragraph
+              fontWeight_tablet="700"
+              color={recomended ? Colors.white : Colors.black}
+              opacity="1"
+            >
+              <span style={{fontSize: '36px'}}>{data.price}</span>
+              {' '}USD
+            </Paragraph>
+          </Div>
+        </Div>
+        <Div className="expandable" display="block" margin="10px 0 0 0">
+          <Button 
+            onClick={() => setIsOpen(!isOpen)}
+            margin="auto"
+          >
+            <Icon
+              icon={isOpen ? "angleup" : "angledown"}
+              width="24px"
+              height="24px"
+              color={Colors.blue}
+              fill={Colors.blue}
+            />
+          </Button>
+          
+          <hr style={{ color: '#A4A4A4' }} />
+
+          <Div className="bullets" display={isOpen ? "block" : "none"}>
+            {data.bullets && data.bullets.map((bullet) => (
+              <Div alignItems="center" margin="10px 0 0 0">
+                <Icon
+                  icon="check"
+                  width="17px"
+                  height="17px"
+                  style={{ marginRight: '10px' }}
+                  color={recomended ? Colors.white : Colors.black}
+                  fill={recomended ? Colors.white : Colors.black}
+                />
+                <Paragraph
+                  lineHeight="19px"
+                  fontWeight_tablet="500"
+                  color={recomended ? Colors.white : Colors.black}
+                  opacity="1"
+                  textAlign="left"
+                >
+                  {bullet}
+                </Paragraph>
+              </Div>
+            ))}
           </Div>
         </Div>
       </Div>
@@ -68,25 +143,43 @@ const plans = [
     recomended: true,
     first_line: "Scolarship",
     second_line: "Pay today",
-    price: "4999",
+    price: "$4999",
+    bullets: [
+      'You’re saving $4000 USD ',
+      '9% of your salary until paid in full, only if you get a job in tech.'
+    ],
+    icons: []
   },
   {
     recomended: false,
-    first_line: "Scolarship",
-    second_line: "Pay today",
-    price: "4999",
+    first_line: "Financed",
+    second_line: "24 months payment",
+    price: "$310",
+    bullets: [
+      'With $400 p/ week living stipends',
+      '9% of your salary until paid in full, only if you get a job in tech.'
+    ],
+    icons: []
   },
   {
     recomended: false,
-    first_line: "Scolarship",
-    second_line: "Pay today",
-    price: "4999",
+    first_line: "Income Share Agreement",
+    second_line: "Pay after you get a job",
+    price: "$0",
+    bullets: [
+      'With $400 p/ week living stipends',
+      '9% of your salary until paid in full, only if you get a job in tech.'
+    ],
+    icons: []
   },
   {
     recomended: false,
-    first_line: "Scolarship",
+    first_line: "Full Payment",
     second_line: "Pay today",
-    price: "4999",
+    price: "$8099",
+    bullets: [
+      'You’re saving $1000 USD '
+    ],
   },
 ];
 
