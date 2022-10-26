@@ -54,14 +54,11 @@ const TechsWeTeach = ({ lang, data }) => {
               {m}
             </Paragraph>
           ))}
-          {content.button &&
-            <Anchor 
-              to={content.button.url}
-              color={Colors.blue}
-            >
+          {content.button && (
+            <Anchor to={content.button.url} color={Colors.blue}>
               {content.button.label}
             </Anchor>
-          }
+          )}
         </Div>
         <Div padding="20px 0 0 0" padding_md="45px 0 0 0">
           <StyledBackgroundSection
