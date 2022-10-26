@@ -109,7 +109,7 @@ Having a proprietary and tailor-made Academic platform actually plays a very imp
 
 **IronHack** has an online platform for currently enrolled students to complete work prior to their starting date, and also for students currently enrolled in one of their programs. Students get to keep their login information as long as they like after graduation.
 
-On the other hand, **4Geeks** has developed Breathe Code, a platform aimed to train their students with the best tools (every possible tool) to assure the outcome: full-stack software developers. There are more than 1,000 exercises across all the technologies covered and more than 50 projects of which you can choose to do a handful. Once graduated, the student becomes part of the community and will have access (forever) to the content, the instructors, the locations, and the network.
+On the other hand, **4Geeks** has developed 4Geeks.com, a platform aimed to train their students with the best tools (every possible tool) to assure the outcome: full-stack software developers. There are more than 1,000 exercises across all the technologies covered and more than 50 projects of which you can choose to do a handful. Once graduated, the student becomes part of the community and will have access (forever) to the content, the instructors, the locations, and the network.
 
 **HOW RELIABLE IS A BOOTCAMP?**
 

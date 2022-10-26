@@ -51,7 +51,7 @@ course_instructors:
   #     linkedin: "https://www.linkedin.com/"
 
 badges:
-  paragraph: "4Geeks Academy is the place where developers grow and thrive. We are licensed by the USA F. Dep. of Education. Chosen as one of the top 35 bootcamps of the world and top coding bootcamp in Miami according to SwitchUp. Recognized as the top 10 coding bootcamps in the United States according to Newsweek."
+  paragraph: "4Geeks Academy only focuses in coding skills, the defacto <a href='/us/coding-bootcamp'>coding bootcamp</a>. We are licensed by the USA F. Dep. of Education. Chosen as one of the top 35 bootcamps of the world and top coding bootcamp in Miami according to SwitchUp. Recognized as the top 10 coding bootcamps in the United States according to Newsweek.."
 
 upcoming:
   no_dates_message: "There are currently no upcoming dates for this program"

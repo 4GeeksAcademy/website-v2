@@ -23,7 +23,7 @@ Please make sure you are familiar with these technologies:
 Gatsby: The website is built using [gatsby](https://www.gatsbyjs.com/), strongly recomended to do the gatsby quick-start if you haven't work with it already.
 Styled Components: Instead of CSS we decided to use StyledComponent and we are really happy so far, please get familiar with it.
 
-> Sidenote: BreatheCode API: We are also connecting to the breathecode APi to retrieve the latest academy events and upcoming cohorts.
+> Sidenote: 4Geeks.com API: We are also connecting to the 4Geeks.com APi to retrieve the latest academy events and upcoming cohorts.
 
 ## Installation
 
