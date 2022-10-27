@@ -174,9 +174,7 @@ const plans = [
       "You’re saving $4000 USD ",
       "9% of your salary until paid in full, only if you get a job in tech.",
     ],
-    icons: [
-      '/images/landing/uwm_pantone_2021_2.png'
-    ],
+    icons: ["/images/landing/uwm_pantone_2021_2.png"],
   },
   {
     recomended: false,
@@ -188,9 +186,9 @@ const plans = [
       "9% of your salary until paid in full, only if you get a job in tech.",
     ],
     icons: [
-      '/images/ascent_logo.jpg',
-      '/images/climb-logo.png',
-      '/images/quotanda-logo.png'
+      "/images/ascent_logo.jpg",
+      "/images/climb-logo.png",
+      "/images/quotanda-logo.png",
     ],
   },
   {
@@ -203,9 +201,9 @@ const plans = [
       "9% of your salary until paid in full, only if you get a job in tech.",
     ],
     icons: [
-      '/images/ascent_logo.jpg',
-      '/images/climb-logo.png',
-      '/images/quotanda-logo.png'
+      "/images/ascent_logo.jpg",
+      "/images/climb-logo.png",
+      "/images/quotanda-logo.png",
     ],
   },
   {
@@ -420,10 +418,7 @@ const PricesAndPaymentsV2 = (props) => {
             flexDirection="column"
             justifyContent="center"
           >
-            <Icon
-              icon="payments_chart"
-              style={{ margin: 'auto' }}
-            />
+            <Icon icon="payments_chart" style={{ margin: "auto" }} />
           </Div>
           <Div id="legend" flexWrap="wrap" justifyContent="between">
             <Div
