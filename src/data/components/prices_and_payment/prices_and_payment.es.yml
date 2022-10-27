@@ -4,6 +4,15 @@ get_notified: Pregunta por nuestras Becas. Siempre estamos trabajando y aliándo
 top_label: sede
 recomended: Recomendado
 select: Selecciona el plan que mejor se ajusta a ti
+chart_section:
+  title: '4Geeks: Cuando pagar deja de ser una preocupación'
+  legend:
+    - percentage: '76%'
+      description: 'de nuestros graduados recibió una beca total o parcial gracias a nuestras opciones de pago integrales.'
+    - percentage: '46%'
+      description: 'de nuestros estudiantes son mujeres'
+    - percentage: '24%'
+      description: 'de nuestros estudiantes son parte de la comunidad afrodescendiente'
 button:
   button_text: See plans and prices
   button_link: "/es/financiacion"

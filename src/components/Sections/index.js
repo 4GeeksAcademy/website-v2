@@ -229,6 +229,8 @@ export const Div = styled.div`
     order: ${(props) => props.order_sm};
     margin: ${(props) => props.margin_sm};
     border-radius: ${(props) => props.borderRadius_sm};
+    max-width: ${(props) => props.maxWidth_sm};
+    width: ${(props) => props.width_sm};
   }
   @media ${Devices.tablet} {
     flex: ${(props) =>
@@ -309,6 +311,7 @@ export const Div = styled.div`
     place-items: ${(props) => props.placeItems_md};
     grid-column: ${(props) => props.gridColumn_md};
     grid-row: ${(props) => props.gridRow_md};
+    position: ${(props) => props.position_md};
   }
   @media ${Devices.lg} {
     display: ${(props) => props.display_lg};

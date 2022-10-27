@@ -11,13 +11,18 @@ import { Button, Colors, Circle, RoundImage, Img } from "../Styling";
 import { SessionContext } from "../../session";
 import Fragment from "../Fragment";
 
-const PricingCard = ({ data, info, ...props }) => {
+const PricingCard = ({ data, info }) => {
   const [isOpen, setIsOpen] = useState(true);
-  const { recomended, first_line, second_line } = data;
+  const { recomended, scholarship, payment_time } = data;
   return (
-    <Div display="block" width="320px" margin="0 0 15px 0">
+    <Div display="block" width="320px" margin_xs="0 5px 15px 0">
       {recomended && (
-        <Div background={Colors.blue} borderRadius="4px 4px 0 0">
+        <Div
+          // display_xs="none"
+          // display_tablet="block"
+          background={Colors.blue}
+          borderRadius="4px 4px 0 0"
+        >
           <Paragraph
             color={Colors.white}
             fontWeight_tablet="700"
@@ -30,8 +35,9 @@ const PricingCard = ({ data, info, ...props }) => {
       )}
       <Div
         border={`2px solid ${recomended ? Colors.black : Colors.blue}`}
-        borderRadius_tablet={recomended ? "0 0 4px 4px" : "4px"}
-        borderRadius_sm="4px"
+        // borderRadius_tablet={recomended ? "0 0 4px 4px" : "4px"}
+        // borderRadius_sm="4px"
+        borderRadius={recomended ? "0 0 4px 4px" : "4px"}
         background={recomended ? Colors.black : Colors.white}
         padding="15px 12px"
         display="block"
@@ -46,7 +52,7 @@ const PricingCard = ({ data, info, ...props }) => {
               textAlign="left"
               margin="0 0 5px 0"
             >
-              {first_line}
+              {scholarship}
             </Paragraph>
             <Paragraph
               lineHeight="14px"
@@ -54,7 +60,7 @@ const PricingCard = ({ data, info, ...props }) => {
               opacity="1"
               textAlign="left"
             >
-              {second_line}
+              {payment_time}
             </Paragraph>
           </Div>
           <Div className="price-container">
@@ -161,8 +167,8 @@ const modalityArray = [
 const plans = [
   {
     recomended: true,
-    first_line: "Scolarship",
-    second_line: "Pay today",
+    scholarship: "Scolarship",
+    payment_time: "Pay today",
     price: "$4999",
     bullets: [
       "You’re saving $4000 USD ",
@@ -174,8 +180,8 @@ const plans = [
   },
   {
     recomended: false,
-    first_line: "Financed",
-    second_line: "24 months payment",
+    scholarship: "Financed",
+    payment_time: "24 months payment",
     price: "$310",
     bullets: [
       "With $400 p/ week living stipends",
@@ -189,8 +195,8 @@ const plans = [
   },
   {
     recomended: false,
-    first_line: "Income Share Agreement",
-    second_line: "Pay after you get a job",
+    scholarship: "Income Share Agreement",
+    payment_time: "Pay after you get a job",
     price: "$0",
     bullets: [
       "With $400 p/ week living stipends",
@@ -204,8 +210,8 @@ const plans = [
   },
   {
     recomended: false,
-    first_line: "Full Payment",
-    second_line: "Pay today",
+    scholarship: "Full Payment",
+    payment_time: "Pay today",
     price: "$8099",
     bullets: ["You’re saving $1000 USD "],
   },
@@ -226,6 +232,13 @@ const PricesAndPaymentsV2 = (props) => {
             top_label
             select
             recomended
+            chart_section {
+              title
+              legend {
+                percentage
+                description
+              }
+            }
             button {
               button_text
               button_link
@@ -374,15 +387,20 @@ const PricesAndPaymentsV2 = (props) => {
           </Link>
         </Div>
       </GridContainer>
-      <Div display="block">
+      <Div display="block" position="relative">
         <Div
           id="chart-section"
           background="#000"
           padding="20px 14px"
           borderRadius="4px"
-          maxWidth="385px"
+          maxWidth_sm="385px"
+          width_xs="80%"
           margin="auto"
           display="block"
+          position_sm="static"
+          position_md="absolute"
+          left="6%"
+          top="-2%"
         >
           <H3
             color={Colors.blue}
@@ -390,16 +408,23 @@ const PricesAndPaymentsV2 = (props) => {
             fontSize="26px"
             lineHeight="31.2px"
           >
-            4Geeks: When Payment stops being a Concern
+            {info.chart_section.title}
           </H3>
           <Div
             id="chart-container"
             margin="15px 0"
             borderRadius="4px"
             background="#101010"
-            width="350px"
+            width="100%"
             height="256px"
-          ></Div>
+            flexDirection="column"
+            justifyContent="center"
+          >
+            <Icon
+              icon="payments_chart"
+              style={{ margin: 'auto' }}
+            />
+          </Div>
           <Div id="legend" flexWrap="wrap" justifyContent="between">
             <Div
               width="100%"
@@ -496,15 +521,18 @@ const PricesAndPaymentsV2 = (props) => {
           borderRadius="4px"
           border="1px solid #000"
           background="#FFF"
-          padding_tablet="38px"
-          width="60%"
-          margin="10px auto"
+          padding_xs="18px 15px"
+          padding_sm="38px"
+          width_tablet="60%"
+          width_xs="80%"
+          margin_md="0 0 0 35%"
+          margin_xs="20px auto"
           display="block"
         >
           <H3
             fontSize="24px"
             lineHeight="29px"
-            textAlign="left"
+            textAlign="center"
             width="100%"
             margin="0 0 20px 0"
           >
@@ -513,12 +541,26 @@ const PricesAndPaymentsV2 = (props) => {
           <Div
             className="cards-container"
             flexWrap="wrap"
-            justifyContent="between"
+            justifyContent="evenly"
           >
             {plans.map((plan) => (
               <PricingCard data={plan} info={info} />
             ))}
           </Div>
+          <Link to={`/${props.lang}/apply`}>
+            <Button
+              variant="full"
+              width="70%"
+              color={Colors.black}
+              textColor={Colors.white}
+              fontSize="16px"
+              margin="auto"
+              textAlign="center"
+              display="block"
+            >
+              APPLY
+            </Button>
+          </Link>
         </Div>
       </Div>
       <GridContainer

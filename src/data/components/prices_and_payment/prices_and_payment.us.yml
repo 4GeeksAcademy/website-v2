@@ -4,6 +4,16 @@ get_notified: Promotions and scolarships are always available, apply to talk to 
 top_label: location
 recomended: Recomended
 select: Select the plan that best suits you
+chart_section:
+  title: '4Geeks: When Payment stops being a Concern'
+  legend:
+    - percentage: '76%'
+      description: 'of our graduates received a full or partial scholarship thanks to our thorough payment options.'
+    - percentage: '46%'
+      description: 'of our students are women'
+    - percentage: '24%'
+      description: 'of our students are part of the Afro-descendants community'
+
 button:
   button_text: See plans and prices
   button_link: "/us/financials"
