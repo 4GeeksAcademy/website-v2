@@ -4,14 +4,21 @@ get_notified: Promotions and scolarships are always available, apply to talk to 
 top_label: location
 recomended: Recomended
 select: Select the plan that best suits you
+apply_button: 
+  label: APPLY NOW
+  link: /us/apply
+not_available: Program not available
 chart_section:
   title: '4Geeks: When Payment stops being a Concern'
   legend:
     - percentage: '76%'
+      color: '#00A0DA'
       description: 'of our graduates received a full or partial scholarship thanks to our thorough payment options.'
     - percentage: '46%'
+      color: '#FFF'
       description: 'of our students are women'
     - percentage: '24%'
+      color: '#FFC718'
       description: 'of our students are part of the Afro-descendants community'
 
 button:

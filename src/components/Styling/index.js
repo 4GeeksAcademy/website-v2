@@ -326,6 +326,7 @@ const SmartButton = ({ children, onClick, type, icon, ...rest }) => {
       onClick={(e) => onClick && onClick(e)}
       className={rest.className}
       style={{ ...rest.style, ...styles }}
+      {...rest}
     >
       {icon}
       {children}
@@ -356,7 +357,7 @@ export const Button = styled(SmartButton)`
   border-bottom: ${(props) => props.borderBottom};
   border-right: ${(props) => props.borderRight};
   height: ${(props) => props.height || "40px"};
-  cursor: pointer;
+  cursor: ${(props) => props.cursor || "pointer"};
   text-align: ${(props) => props.textAlign || "center"};
   letter-spacing: ${(props) => props.letterSpacing || "0px"};
   line-height: ${(props) => props.lineHeight};

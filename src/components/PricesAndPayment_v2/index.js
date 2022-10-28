@@ -11,11 +11,22 @@ import { Button, Colors, Circle, RoundImage, Img } from "../Styling";
 import { SessionContext } from "../../session";
 import Fragment from "../Fragment";
 
-const PricingCard = ({ data, info }) => {
+const PricingCard = ({ data, info, selectedPlan, setSelectedPlan, session, setSession }) => {
   const [isOpen, setIsOpen] = useState(true);
-  const { recomended, scholarship, payment_time } = data;
+  const { recomended, scholarship, payment_time, slug } = data;
+  const isSelected = selectedPlan === slug;
   return (
-    <Div display="block" width="320px" margin_xs="0 5px 15px 0">
+    <Div
+      cursor="pointer"
+      display="block"
+      width="320px"
+      margin_xs="0 5px 15px 0"
+      onClick={() => {
+        setSelectedPlan(slug);
+        // setSession({ ...session, financing_plan: slug });
+      }}
+      height="fit-content"
+    >
       {recomended && (
         <Div
           // display_xs="none"
@@ -34,11 +45,11 @@ const PricingCard = ({ data, info }) => {
         </Div>
       )}
       <Div
-        border={`2px solid ${recomended ? Colors.black : Colors.blue}`}
+        border={`2px solid ${isSelected ? Colors.black : Colors.blue}`}
         // borderRadius_tablet={recomended ? "0 0 4px 4px" : "4px"}
         // borderRadius_sm="4px"
         borderRadius={recomended ? "0 0 4px 4px" : "4px"}
-        background={recomended ? Colors.black : Colors.white}
+        background={isSelected ? Colors.black : Colors.white}
         padding="15px 12px"
         display="block"
       >
@@ -47,7 +58,7 @@ const PricingCard = ({ data, info }) => {
             <Paragraph
               lineHeight="14px"
               fontWeight_tablet="700"
-              color={recomended ? Colors.white : Colors.black}
+              color={isSelected ? Colors.white : Colors.black}
               opacity="1"
               textAlign="left"
               margin="0 0 5px 0"
@@ -56,7 +67,7 @@ const PricingCard = ({ data, info }) => {
             </Paragraph>
             <Paragraph
               lineHeight="14px"
-              color={recomended ? Colors.white : Colors.black}
+              color={isSelected ? Colors.white : Colors.black}
               opacity="1"
               textAlign="left"
             >
@@ -66,7 +77,7 @@ const PricingCard = ({ data, info }) => {
           <Div className="price-container">
             <Paragraph
               fontWeight_tablet="700"
-              color={recomended ? Colors.white : Colors.black}
+              color={isSelected ? Colors.white : Colors.black}
               opacity="1"
             >
               <span style={{ fontSize: "36px" }}>{data.price}</span> USD
@@ -95,13 +106,13 @@ const PricingCard = ({ data, info }) => {
                     width="17px"
                     height="17px"
                     style={{ marginRight: "10px" }}
-                    color={recomended ? Colors.white : Colors.black}
-                    fill={recomended ? Colors.white : Colors.black}
+                    color={isSelected ? Colors.white : Colors.black}
+                    fill={isSelected ? Colors.white : Colors.black}
                   />
                   <Paragraph
                     lineHeight="19px"
                     fontWeight_tablet="500"
-                    color={recomended ? Colors.white : Colors.black}
+                    color={isSelected ? Colors.white : Colors.black}
                     opacity="1"
                     textAlign="left"
                   >
@@ -114,7 +125,7 @@ const PricingCard = ({ data, info }) => {
         {data.icons && data.icons.length !== 0 && (
           <Div
             className="icons"
-            background={recomended ? Colors.white : Colors.verylightGray}
+            background={isSelected ? Colors.white : Colors.verylightGray}
             padding="4px 7px"
             borderRadius="26px"
             width="fit-content"
@@ -166,6 +177,7 @@ const modalityArray = [
 
 const plans = [
   {
+    slug: '0',
     recomended: true,
     scholarship: "Scolarship",
     payment_time: "Pay today",
@@ -177,6 +189,7 @@ const plans = [
     icons: ["/images/landing/uwm_pantone_2021_2.png"],
   },
   {
+    slug: '1',
     recomended: false,
     scholarship: "Financed",
     payment_time: "24 months payment",
@@ -192,6 +205,7 @@ const plans = [
     ],
   },
   {
+    slug: '2',
     recomended: false,
     scholarship: "Income Share Agreement",
     payment_time: "Pay after you get a job",
@@ -207,6 +221,7 @@ const plans = [
     ],
   },
   {
+    slug: '3',
     recomended: false,
     scholarship: "Full Payment",
     payment_time: "Pay today",
@@ -230,10 +245,16 @@ const PricesAndPaymentsV2 = (props) => {
             top_label
             select
             recomended
+            not_available
+            apply_button{
+              label
+              link
+            }
             chart_section {
               title
               legend {
                 percentage
+                color
                 description
               }
             }
@@ -252,11 +273,11 @@ const PricesAndPaymentsV2 = (props) => {
   if (info) info = info.node;
 
   const { session, setSession } = useContext(SessionContext);
-  const [activeStep, setActiveStep] = useState(0);
   const [currentLocation, setCurrentLocation] = useState(false);
   const [course, setCourse] = useState(false);
   const [modality, setModality] = useState(false);
   const [locations, setLocations] = useState(false);
+  const [selectedPlan, setSelectedPlan] = useState(null);
 
   // const steps = props.details.details_modules.reduce((total, current, i) => [...total, (total[i - 1] || 0) + current.step], [])
   useEffect(() => {
@@ -279,6 +300,14 @@ const PricesAndPaymentsV2 = (props) => {
       setCurrentLocation(_loc ? _loc.node : null);
     }
   }, [session, props.locations]);
+
+  useEffect(() => {
+    if (selectedPlan){
+      setSelectedPlan(null);
+      // setSession({ ...session, financing_plan: null });
+    }
+  }, [currentLocation]);
+
   // sync property course
   useEffect(
     () => (
@@ -299,7 +328,7 @@ const PricesAndPaymentsV2 = (props) => {
   let prices =
     !course && !modality
       ? {}
-      : currentLocation.prices[course?.value][modality?.value];
+      : currentLocation.prices[course?.value][modality?.value].plans;
 
   const apply_button_text =
     session && session.location
@@ -385,7 +414,7 @@ const PricesAndPaymentsV2 = (props) => {
           </Link>
         </Div>
       </GridContainer>
-      <Div display="block" position="relative">
+      <Div display="block" position="relative" minHeight_tablet="600px">
         <Div
           id="chart-section"
           background="#000"
@@ -421,95 +450,38 @@ const PricesAndPaymentsV2 = (props) => {
             <Icon icon="payments_chart" style={{ margin: "auto" }} />
           </Div>
           <Div id="legend" flexWrap="wrap" justifyContent="between">
-            <Div
-              width="100%"
-              border="1px solid #FFF"
-              borderRadius="4px"
-              className="info"
-              margin="0 0 4% 0"
-            >
+            {info.chart_section && Array.isArray(info.chart_section.legend) && info.chart_section.legend.map((item, i) => ( 
               <Div
-                flexShrink_tablet="0"
-                borderRadius="4px 0px 0px 4px"
-                height="100%"
-                width="19.39px"
-                background={Colors.blue}
-              />
-              <Div padding="10px" display="block">
-                <H5 textAlign="left" color={Colors.blue}>
-                  76%
-                </H5>
-                <Paragraph
-                  fontWeight_tablet="700"
-                  fontSize="16px"
-                  lineHeight="19px"
-                  color="#FFF"
-                  textAlign="left"
-                  opacity="1"
-                >
-                  of our graduates received a full or partial scholarship thanks
-                  to our thorough payment options.
-                </Paragraph>
+                width={i === 0 ? "100%" : "48%"}
+                border="1px solid #FFF"
+                borderRadius="4px"
+                className="info"
+                margin="0 0 4% 0"
+              >
+                <Div
+                  flexShrink_tablet="0"
+                  borderRadius="4px 0px 0px 4px"
+                  height="100%"
+                  width="19.39px"
+                  background={item.color}
+                />
+                <Div padding={i === 0 ? "10px" : "5px"} display="block">
+                  <H5 margin={i !== 0 && "0 0 10px 0"} textAlign="left" color={i === 0 ? item.color : Colors.white}>
+                    {item.percentage}
+                  </H5>
+                  <Paragraph
+                    fontWeight_tablet="700"
+                    fontSize={i === 0 ? "16px" : "12px"}
+                    lineHeight={i === 0 ? "19px" : "14.4px"}
+                    color="#FFF"
+                    textAlign="left"
+                    opacity="1"
+                  >
+                    {item.description}
+                  </Paragraph>
+                </Div>
               </Div>
-            </Div>
-            <Div
-              width="48%"
-              border="1px solid #FFF"
-              borderRadius="4px"
-              className="info"
-            >
-              <Div
-                flexShrink_tablet="0"
-                borderRadius="4px 0px 0px 4px"
-                height="100%"
-                width="19.39px"
-                background={Colors.white}
-              />
-              <Div padding="5px" display="block">
-                <H5 margin="0 0 5px 0" textAlign="left" color={Colors.white}>
-                  46%
-                </H5>
-                <Paragraph
-                  fontWeight_tablet="700"
-                  fontSize="12px"
-                  color="#FFF"
-                  textAlign="left"
-                  opacity="1"
-                  lineHeight="14.4px"
-                >
-                  of our students are women
-                </Paragraph>
-              </Div>
-            </Div>
-            <Div
-              width="48%"
-              border="1px solid #FFF"
-              borderRadius="4px"
-              className="info"
-            >
-              <Div
-                flexShrink_tablet="0"
-                borderRadius="4px 0px 0px 4px"
-                height="100%"
-                width="19.39px"
-                background={Colors.yellow}
-              />
-              <Div padding="5px" display="block">
-                <H5 margin="0 0 5px 0" textAlign="left" color={Colors.white}>
-                  24%
-                </H5>
-                <Paragraph
-                  fontWeight_tablet="700"
-                  fontSize="12px"
-                  color="#FFF"
-                  textAlign="left"
-                  opacity="1"
-                  lineHeight="14.4px"
-                >
-                  of our students are part of the Afro-descendants community
-                </Paragraph>
-              </Div>
-            </Div>
+            ))}     
           </Div>
         </Div>
         <Div
@@ -531,31 +503,43 @@ const PricesAndPaymentsV2 = (props) => {
             width="100%"
             margin="0 0 20px 0"
           >
-            {info.select}
+            {prices && prices.length !== 0 ? info.select : info.not_available}
           </H3>
           <Div
             className="cards-container"
             flexWrap="wrap"
             justifyContent="evenly"
           >
-            {plans.map((plan) => (
-              <PricingCard data={plan} info={info} />
+            {prices && prices.map((plan) => (
+              <PricingCard
+                data={plan}
+                info={info}
+                selectedPlan={selectedPlan}
+                setSelectedPlan={setSelectedPlan}
+                session={session}
+                setSession={setSession}
+              />
             ))}
           </Div>
-          <Link to={`/${props.lang}/apply`}>
-            <Button
-              variant="full"
-              width="70%"
-              color={Colors.black}
-              textColor={Colors.white}
-              fontSize="16px"
-              margin="auto"
-              textAlign="center"
-              display="block"
-            >
-              APPLY
-            </Button>
-          </Link>
+          {prices && prices.length !== 0 && (
+            <Link style={{ display: 'block', margin: 'auto', width: '70%', cursor: selectedPlan === null && 'default' }} to={info.apply_button.link}>
+              <Button
+                variant="full"
+                width="100%"
+                color={selectedPlan === null ? '#C4C4C4' :Colors.black}
+                textColor={Colors.white}
+                fontSize="16px"
+                margin="auto"
+                textAlign="center"
+                display="block"
+                cursor={selectedPlan === null ? 'default' : 'pointer'}
+                disabled={selectedPlan === null ? true : false}
+                onClick={() => setSession({...session, financing_plan: selectedPlan})}
+              >
+                {info.apply_button.label}
+              </Button>
+            </Link>
+          )}
         </Div>
       </Div>
       <GridContainer

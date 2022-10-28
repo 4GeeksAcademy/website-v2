@@ -845,6 +845,15 @@ export const query = graphql`
           prices {
             full_stack {
               full_time {
+                plans {
+                  slug
+                  recomended
+                  scholarship
+                  payment_time
+                  price
+                  bullets
+                  icons
+                }
                 center_section {
                   button {
                     button_text
@@ -896,6 +905,15 @@ export const query = graphql`
                 }
               }
               part_time {
+                plans {
+                  slug
+                  recomended
+                  scholarship
+                  payment_time
+                  price
+                  bullets
+                  icons
+                }
                 center_section {
                   button {
                     button_text

@@ -21,6 +21,7 @@ export const defaultSession = {
   course_type: "Part-Time",
   email: null,
   location: null,
+  financing_plan: null,
   language: "en",
   utm: {
     gclid: undefined,
