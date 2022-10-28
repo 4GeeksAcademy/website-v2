@@ -1,15 +1,12 @@
-import React, { useState, useContext, useEffect, useRef } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { useStaticQuery, graphql } from "gatsby";
-import styled from "styled-components";
 import Icon from "../Icon";
 import { Link } from "../Styling/index";
-import { GridContainer, Grid, Div } from "../Sections";
-import Card from "../Card";
+import { GridContainer, Div } from "../Sections";
 import Select, { SelectRaw } from "../Select";
-import { H2, H3, H4, H5, Paragraph, Title } from "../Heading";
-import { Button, Colors, Circle, RoundImage, Img } from "../Styling";
+import { H2, H3, H4, H5, Paragraph } from "../Heading";
+import { Button, Colors, RoundImage, Img } from "../Styling";
 import { SessionContext } from "../../session";
-import Fragment from "../Fragment";
 
 const PricingCard = ({
   data,
@@ -182,61 +179,6 @@ const modalityArray = [
   },
 ];
 
-const plans = [
-  {
-    slug: "0",
-    recomended: true,
-    scholarship: "Scolarship",
-    payment_time: "Pay today",
-    price: "$4999",
-    bullets: [
-      "You’re saving $4000 USD ",
-      "9% of your salary until paid in full, only if you get a job in tech.",
-    ],
-    icons: ["/images/landing/uwm_pantone_2021_2.png"],
-  },
-  {
-    slug: "1",
-    recomended: false,
-    scholarship: "Financed",
-    payment_time: "24 months payment",
-    price: "$310",
-    bullets: [
-      "With $400 p/ week living stipends",
-      "9% of your salary until paid in full, only if you get a job in tech.",
-    ],
-    icons: [
-      "/images/ascent_logo.jpg",
-      "/images/climb-logo.png",
-      "/images/quotanda-logo.png",
-    ],
-  },
-  {
-    slug: "2",
-    recomended: false,
-    scholarship: "Income Share Agreement",
-    payment_time: "Pay after you get a job",
-    price: "$0",
-    bullets: [
-      "With $400 p/ week living stipends",
-      "9% of your salary until paid in full, only if you get a job in tech.",
-    ],
-    icons: [
-      "/images/ascent_logo.jpg",
-      "/images/climb-logo.png",
-      "/images/quotanda-logo.png",
-    ],
-  },
-  {
-    slug: "3",
-    recomended: false,
-    scholarship: "Full Payment",
-    payment_time: "Pay today",
-    price: "$8099",
-    bullets: ["You’re saving $1000 USD "],
-  },
-];
-
 const PricesAndPaymentsV2 = (props) => {
   const data = useStaticQuery(graphql`
     query PricesAndPaymentsV2 {
@@ -337,10 +279,6 @@ const PricesAndPaymentsV2 = (props) => {
       ? {}
       : currentLocation.prices[course?.value][modality?.value].plans;
 
-  const apply_button_text =
-    session && session.location
-      ? session.location.button.apply_button_text
-      : "Apply";
   return (
     <Div
       id="prices_and_payment"
@@ -605,44 +543,3 @@ const PricesAndPaymentsV2 = (props) => {
   );
 };
 export default PricesAndPaymentsV2;
-const StepperContainer = styled.div`
-  width: 100%;
-  padding: 25px 0;
-  display: flex;
-  justify-content: space-between;
-  position: relative;
-  margin: 0 0 20px 0;
-`;
-const StepLabel = styled.div`
-  color: ${(props) => props.color};
-  width: 100px;
-  font-family: "Lato", sans-serif;
-  font-size: 8px;
-  position: absolute;
-  top: 20px;
-`;
-const StepConnector = styled.div`
-  position: absolute;
-  top: 32px;
-  height: 1px;
-  width: 100%;
-  background-color: ${Colors.yellow};
-`;
-const FillerStyles = styled.div`
-  height: 2px;
-  width: ${(props) => props.completed}%;
-  background-color: ${Colors.yellow};
-  border-radius: inherit;
-  text-align: right;
-  transform: translateY(-50%);
-`;
-const StepperCircle = styled.div`
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  background-color: ${(props) => props.background};
-  border: 1px solid ${Colors.yellow};
-  cursor: pointer;
-  position: relative;
-  z-index: 1;
-`;

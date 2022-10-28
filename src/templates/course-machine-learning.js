@@ -26,7 +26,7 @@ import { requestSyllabus } from "../actions";
 import { SessionContext } from "../session";
 import Testimonials from "../components/Testimonials";
 import Badges from "../components/Badges";
-import PricesAndPayment from "../components/PricesAndPayment";
+import PricesAndPayment from "../components/PricesAndPayment_v2";
 import { Circle } from "../components/BackgroundDrawing";
 import LeadForm from "../components/LeadForm";
 import Modal from "../components/Modal";
@@ -902,6 +902,15 @@ export const query = graphql`
           prices {
             machine_learning {
               part_time {
+                plans {
+                  slug
+                  recomended
+                  scholarship
+                  payment_time
+                  price
+                  bullets
+                  icons
+                }
                 slug
                 duration
                 left_section {
@@ -953,6 +962,15 @@ export const query = graphql`
                 }
               }
               full_time {
+                plans {
+                  slug
+                  recomended
+                  scholarship
+                  payment_time
+                  price
+                  bullets
+                  icons
+                }
                 slug
                 left_section {
                   header {

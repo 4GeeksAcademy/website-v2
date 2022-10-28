@@ -8,7 +8,7 @@ import {
 } from "../components/Sections";
 import { Title, H2, H5, Paragraph } from "../components/Heading";
 import { Button, Colors, StyledBackgroundSection } from "../components/Styling";
-import PricesAndPayment from "../components/PricesAndPayment";
+import PricesAndPayment from "../components/PricesAndPayment_v2";
 import BaseRender from "./_baseLayout";
 import { openGuidebook } from "../actions";
 import { SessionContext } from "../session.js";
@@ -333,6 +333,15 @@ export const query = graphql`
           prices {
             full_stack {
               full_time {
+                plans {
+                  slug
+                  recomended
+                  scholarship
+                  payment_time
+                  price
+                  bullets
+                  icons
+                }
                 slug
                 center_section {
                   button {
@@ -397,6 +406,15 @@ export const query = graphql`
                 }
               }
               part_time {
+                plans {
+                  slug
+                  recomended
+                  scholarship
+                  payment_time
+                  price
+                  bullets
+                  icons
+                }
                 slug
                 center_section {
                   button {
@@ -449,6 +467,15 @@ export const query = graphql`
             }
             software_engineering {
               part_time {
+                plans {
+                  slug
+                  recomended
+                  scholarship
+                  payment_time
+                  price
+                  bullets
+                  icons
+                }
                 slug
                 center_section {
                   button {

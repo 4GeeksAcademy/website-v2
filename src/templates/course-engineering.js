@@ -17,7 +17,7 @@ import { Circle } from "../components/BackgroundDrawing";
 import Icon from "../components/Icon";
 import Testimonials from "../components/Testimonials";
 import Badges from "../components/Badges";
-import PricesAndPayment from "../components/PricesAndPayment";
+import PricesAndPayment from "../components/PricesAndPayment_v2";
 import Instructors from "../components/Instructors";
 
 const Program = ({ data, pageContext, yml }) => {
@@ -871,6 +871,15 @@ export const query = graphql`
           prices {
             software_engineering {
               part_time {
+                plans {
+                  slug
+                  recomended
+                  scholarship
+                  payment_time
+                  price
+                  bullets
+                  icons
+                }
                 center_section {
                   button {
                     button_text
