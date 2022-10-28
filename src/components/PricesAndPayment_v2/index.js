@@ -11,7 +11,14 @@ import { Button, Colors, Circle, RoundImage, Img } from "../Styling";
 import { SessionContext } from "../../session";
 import Fragment from "../Fragment";
 
-const PricingCard = ({ data, info, selectedPlan, setSelectedPlan, session, setSession }) => {
+const PricingCard = ({
+  data,
+  info,
+  selectedPlan,
+  setSelectedPlan,
+  session,
+  setSession,
+}) => {
   const [isOpen, setIsOpen] = useState(true);
   const { recomended, scholarship, payment_time, slug } = data;
   const isSelected = selectedPlan === slug;
@@ -177,7 +184,7 @@ const modalityArray = [
 
 const plans = [
   {
-    slug: '0',
+    slug: "0",
     recomended: true,
     scholarship: "Scolarship",
     payment_time: "Pay today",
@@ -189,7 +196,7 @@ const plans = [
     icons: ["/images/landing/uwm_pantone_2021_2.png"],
   },
   {
-    slug: '1',
+    slug: "1",
     recomended: false,
     scholarship: "Financed",
     payment_time: "24 months payment",
@@ -205,7 +212,7 @@ const plans = [
     ],
   },
   {
-    slug: '2',
+    slug: "2",
     recomended: false,
     scholarship: "Income Share Agreement",
     payment_time: "Pay after you get a job",
@@ -221,7 +228,7 @@ const plans = [
     ],
   },
   {
-    slug: '3',
+    slug: "3",
     recomended: false,
     scholarship: "Full Payment",
     payment_time: "Pay today",
@@ -246,7 +253,7 @@ const PricesAndPaymentsV2 = (props) => {
             select
             recomended
             not_available
-            apply_button{
+            apply_button {
               label
               link
             }
@@ -302,7 +309,7 @@ const PricesAndPaymentsV2 = (props) => {
   }, [session, props.locations]);
 
   useEffect(() => {
-    if (selectedPlan){
+    if (selectedPlan) {
       setSelectedPlan(null);
       // setSession({ ...session, financing_plan: null });
     }
@@ -450,38 +457,44 @@ const PricesAndPaymentsV2 = (props) => {
             <Icon icon="payments_chart" style={{ margin: "auto" }} />
           </Div>
           <Div id="legend" flexWrap="wrap" justifyContent="between">
-            {info.chart_section && Array.isArray(info.chart_section.legend) && info.chart_section.legend.map((item, i) => ( 
-              <Div
-                width={i === 0 ? "100%" : "48%"}
-                border="1px solid #FFF"
-                borderRadius="4px"
-                className="info"
-                margin="0 0 4% 0"
-              >
+            {info.chart_section &&
+              Array.isArray(info.chart_section.legend) &&
+              info.chart_section.legend.map((item, i) => (
                 <Div
-                  flexShrink_tablet="0"
-                  borderRadius="4px 0px 0px 4px"
-                  height="100%"
-                  width="19.39px"
-                  background={item.color}
-                />
-                <Div padding={i === 0 ? "10px" : "5px"} display="block">
-                  <H5 margin={i !== 0 && "0 0 10px 0"} textAlign="left" color={i === 0 ? item.color : Colors.white}>
-                    {item.percentage}
-                  </H5>
-                  <Paragraph
-                    fontWeight_tablet="700"
-                    fontSize={i === 0 ? "16px" : "12px"}
-                    lineHeight={i === 0 ? "19px" : "14.4px"}
-                    color="#FFF"
-                    textAlign="left"
-                    opacity="1"
-                  >
-                    {item.description}
-                  </Paragraph>
+                  width={i === 0 ? "100%" : "48%"}
+                  border="1px solid #FFF"
+                  borderRadius="4px"
+                  className="info"
+                  margin="0 0 4% 0"
+                >
+                  <Div
+                    flexShrink_tablet="0"
+                    borderRadius="4px 0px 0px 4px"
+                    height="100%"
+                    width="19.39px"
+                    background={item.color}
+                  />
+                  <Div padding={i === 0 ? "10px" : "5px"} display="block">
+                    <H5
+                      margin={i !== 0 && "0 0 10px 0"}
+                      textAlign="left"
+                      color={i === 0 ? item.color : Colors.white}
+                    >
+                      {item.percentage}
+                    </H5>
+                    <Paragraph
+                      fontWeight_tablet="700"
+                      fontSize={i === 0 ? "16px" : "12px"}
+                      lineHeight={i === 0 ? "19px" : "14.4px"}
+                      color="#FFF"
+                      textAlign="left"
+                      opacity="1"
+                    >
+                      {item.description}
+                    </Paragraph>
+                  </Div>
                 </Div>
-              </Div>
-            ))}     
+              ))}
           </Div>
         </Div>
         <Div
@@ -510,31 +523,42 @@ const PricesAndPaymentsV2 = (props) => {
             flexWrap="wrap"
             justifyContent="evenly"
           >
-            {prices && prices.map((plan) => (
-              <PricingCard
-                data={plan}
-                info={info}
-                selectedPlan={selectedPlan}
-                setSelectedPlan={setSelectedPlan}
-                session={session}
-                setSession={setSession}
-              />
-            ))}
+            {prices &&
+              prices.map((plan) => (
+                <PricingCard
+                  data={plan}
+                  info={info}
+                  selectedPlan={selectedPlan}
+                  setSelectedPlan={setSelectedPlan}
+                  session={session}
+                  setSession={setSession}
+                />
+              ))}
           </Div>
           {prices && prices.length !== 0 && (
-            <Link style={{ display: 'block', margin: 'auto', width: '70%', cursor: selectedPlan === null && 'default' }} to={info.apply_button.link}>
+            <Link
+              style={{
+                display: "block",
+                margin: "auto",
+                width: "70%",
+                cursor: selectedPlan === null && "default",
+              }}
+              to={info.apply_button.link}
+            >
               <Button
                 variant="full"
                 width="100%"
-                color={selectedPlan === null ? '#C4C4C4' :Colors.black}
+                color={selectedPlan === null ? "#C4C4C4" : Colors.black}
                 textColor={Colors.white}
                 fontSize="16px"
                 margin="auto"
                 textAlign="center"
                 display="block"
-                cursor={selectedPlan === null ? 'default' : 'pointer'}
+                cursor={selectedPlan === null ? "default" : "pointer"}
                 disabled={selectedPlan === null ? true : false}
-                onClick={() => setSession({...session, financing_plan: selectedPlan})}
+                onClick={() =>
+                  setSession({ ...session, financing_plan: selectedPlan })
+                }
               >
                 {info.apply_button.label}
               </Button>
