@@ -20,7 +20,7 @@ import {
   Span,
   Paragraph,
 } from "../Heading";
-import { Colors, StyledBackgroundSection } from "../Styling";
+import { Colors, StyledBackgroundSection, Anchor } from "../Styling";
 import Icon from "../Icon";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import Marquee_v2 from "../Marquee_v2";
@@ -54,6 +54,11 @@ const TechsWeTeach = ({ lang, data }) => {
               {m}
             </Paragraph>
           ))}
+          {content.button && (
+            <Anchor to={content.button.url} color={Colors.blue}>
+              {content.button.label}
+            </Anchor>
+          )}
         </Div>
         <Div padding="20px 0 0 0" padding_md="45px 0 0 0">
           <StyledBackgroundSection

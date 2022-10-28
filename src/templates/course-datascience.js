@@ -440,6 +440,10 @@ export const query = graphql`
         node {
           title
           sub_title
+          button {
+            label
+            url
+          }
           image {
             childImageSharp {
               gatsbyImageData(
@@ -559,6 +563,8 @@ export const query = graphql`
               list {
                 label
                 content
+                link
+                link_text
               }
             }
             heading

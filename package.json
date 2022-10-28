@@ -5,7 +5,7 @@
   "author": "Marko Radak <mail@markoradak.com>",
   "license": "MIT",
   "engines": {
-    "node": ">=0.12"
+    "node": ">=16"
   },
   "repository": {
     "type": "git",

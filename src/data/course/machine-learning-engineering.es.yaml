@@ -53,7 +53,7 @@ course_instructors:
       linkedin: "https://www.linkedin.com/in/alexismena/"
 
 badges:
-  paragraph: "4Geeks Academy es el lugar donde los desarrolladores crecen y prosperan. Estamos autorizados por el Departamento de Educación de Florida. Elegido como uno de los 35 mejores bootcamps del mundo y el mejor bootcamp de codificación en Miami según SwitchUp. Reconocido como los 10 mejores bootcamps de codificación en los Estados Unidos según Newsweek.."
+  paragraph: "4Geeks Academy es el lugar donde los desarrolladores crecen y prosperan. Estamos autorizados por el Departamento de Educación de Florida. Elegido como uno de los top 35 <a href='/es/curso-de-programacion-desde-cero'>cursos de programacion</a> del mundo, el mejor de Miami según SwitchUp y de los 10 mejores cursos de programación en los Estados Unidos según Newsweek:"
 
 upcoming:
   no_dates_message: "Actualmente no hay próximas fechas para este programa"
@@ -96,7 +96,11 @@ details:
           content: "3 Clases semanales"
           icon: "book"
         - label: "Tamaño de la clase"
-          content: "12 personas máx"
+          content: "14 personas máx"
+        - label: "Certificado"
+          content: "Nuestros certificados son  reconocidos por múltiples instuticiones."
+          link_text: "Ver ejemplo"
+          link: "https://certificate.4geeks.com/44c61b294a248f91088f5355aea09606126795e3"
           icon: "certificate"
         - label: "Requisitos"
           content: "No se necesita experiencia previa"

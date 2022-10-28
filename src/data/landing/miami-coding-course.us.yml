@@ -147,13 +147,11 @@ components:
       src: "/images/why-4geeks/python-image.png"
     heading:
       text:
-        "Learn Python, Javascript, and more"
+        "You need to learn at least Python and Javascript"
         #           xl      lg      md      sm      xs
       font_size: ["50px", "50px", "50px", "50px", "50px"]
     content:
       text: "Python and JavaScript are among the best-paid career positions in the US. 
-      
       There are more 26X job opportunities in Javascript vs. Ruby on Rails, and 10X jobs in Python vs. node.js. 
-      
       You will also learn: GitHub, CSS3, HTML5, Flask, etc."
       font_size: ["16px"]
