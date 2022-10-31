@@ -95,7 +95,7 @@ details:
           content: "Tan solo necesitas un ordenador y una conexión a internet"
           icon: "contract-checked"
   heading: DETALLES DEL PROGRAMA PART-TIME
-  weeks: 16
+  weeks: 18
   sub_heading: "Proyectos de la vida real y exactamente lo que buscan las empresas"
   left_labels:
     description: "DESCRIPCION:"
@@ -139,7 +139,7 @@ details:
       projects: "Durante esta fase tendrás que diseñar, programar, probar y publicar tu propia aplicación web completa."
       slug: "aplicacion-avanzada"
       duration: "6 sem"
-      step: 5.9
+      step: 7.9
     - module_name: "DE POR VIDA"
       title: "De por vida"
       description: "Sigue recibiendo la ayuda de la academia de por vida, acceso a los contenidos, soporte profesional (career support). Recibe incluso ayuda durante el inicio de tu nuevo trabajo, nunca más estarás sólo."
