@@ -38,6 +38,7 @@ const formIsValid = (formData = null) => {
   return true;
 };
 const Apply = (props) => {
+  window.captchakey = process.env.GOOGLE_CAPTCHA_KEY;
   const { data, pageContext, yml } = props;
   const { session } = useContext(SessionContext);
   const [formStatus, setFormStatus] = useState({
