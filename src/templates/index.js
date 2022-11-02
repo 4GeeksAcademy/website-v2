@@ -120,7 +120,11 @@ const Home = (props) => {
         <SVGBubblesLeft />
         <SVGBubblesRight />
       </Div>
-      <Div display="block" margin="72px 0 72px 0" margin_tablet="72px 0 108px 0">
+      <Div
+        display="block"
+        margin="72px 0 72px 0"
+        margin_tablet="72px 0 108px 0"
+      >
         <GridContainerWithImage
           padding="65px 0 0 20px"
           padding_tablet="0"
@@ -139,11 +143,7 @@ const Home = (props) => {
             width="75px"
             height="70px"
           >
-            <Icon
-              icon="logo-badge"
-              width="100%"
-              height="100%"
-            />
+            <Icon icon="logo-badge" width="100%" height="100%" />
           </Div>
           <Div
             flexDirection="column"
@@ -244,9 +244,13 @@ const Home = (props) => {
               bgSize="contain"
             />
           </Div>
-
         </GridContainerWithImage>
-        <Div margin="10px auto" margin_tablet="auto" width="90%" className="badge-slider hideOverflowX__">
+        <Div
+          margin="10px auto"
+          margin_tablet="auto"
+          width="90%"
+          className="badge-slider hideOverflowX__"
+        >
           <News
             lang={pageContext.lang}
             limit={yml.news.limit}
@@ -256,7 +260,6 @@ const Home = (props) => {
             justifyContent="between"
           />
         </Div>
-        
       </Div>
       <Testimonials lang={data.allTestimonialsYaml.edges} />
       <Badges
