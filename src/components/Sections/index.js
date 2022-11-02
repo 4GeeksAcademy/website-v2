@@ -145,6 +145,7 @@ export const Div = styled.div`
   min-height: ${(props) => props.minHeight};
   position: ${(props) => props.position};
   top: ${(props) => props.top};
+  right: ${(props) => props.right};
   left: ${(props) => props.left};
   display: ${(props) => props.display || "flex"};
   flex-direction: ${(props) => props.flexDirection || "row"};
@@ -214,6 +215,8 @@ export const Div = styled.div`
     border-bottom: ${(props) => props.borderBottom_xs};
     border-left: ${(props) => props.borderLeft_xs};
     align-content: ${(props) => props.alignContent_xs};
+    top: ${(props) => props.top_xs};
+    right: ${(props) => props.right_xs};
   }
   @media ${Devices.sm} {
     padding: ${(props) => props.padding_sm};
@@ -228,6 +231,8 @@ export const Div = styled.div`
     display: ${(props) => props.display_sm};
     order: ${(props) => props.order_sm};
     margin: ${(props) => props.margin_sm};
+    top: ${(props) => props.top_sm};
+    right: ${(props) => props.right_sm};
   }
   @media ${Devices.tablet} {
     flex: ${(props) =>
@@ -267,6 +272,8 @@ export const Div = styled.div`
       props.flexShrink_tablet ? props.flexShrink_tablet : 1};
     border: ${(props) => props.border_tablet};
     border-top: ${(props) => props.borderTop_tablet};
+    top: ${(props) => props.top_tablet};
+    right: ${(props) => props.right_tablet};
     border-right: ${(props) => props.borderRight_tablet};
     border-bottom: ${(props) => props.borderBottom_tablet};
     box-shadow: ${(props) => props.boxShadow_tablet};

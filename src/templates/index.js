@@ -120,96 +120,144 @@ const Home = (props) => {
         <SVGBubblesLeft />
         <SVGBubblesRight />
       </Div>
-      <GridContainerWithImage
-        padding="65px 5px 0 5px"
-        padding_tablet="0"
-        columns_tablet="2"
-        margin="72px 0 72px 0"
-        margin_tablet="72px 0 108px 0"
-      >
-        <Div
-          flexDirection="column"
-          justifyContent_tablet="evenly"
-          alignItems="center"
-          alignItems_tablet="start"
+      <Div display="block" margin="72px 0 72px 0" margin_tablet="72px 0 108px 0">
+        <GridContainerWithImage
+          padding="65px 0 0 20px"
+          padding_tablet="0"
+          columns_tablet="2"
+          position="relative"
         >
           <Div
+            position="absolute"
+            zIndex="5"
+            right_tablet="5%"
+            top_tablet="55%"
+            right="5%"
+            top="90px"
+            width_tablet="160px"
+            height_tablet="152px"
+            width="75px"
+            height="70px"
+          >
+            <Icon
+              icon="logo-badge"
+              width="100%"
+              height="100%"
+            />
+          </Div>
+          <Div
             flexDirection="column"
+            justifyContent_tablet="evenly"
             alignItems="center"
             alignItems_tablet="start"
           >
-            {/* <CityH1 yml={yml} /> */}
-            <H1
-              type="h1"
-              textAlign_md="left"
-              textShadow="none"
-              fontSize="13px"
-              color="#606060"
+            <Div
+              flexDirection="column"
+              // alignItems="center"
+              alignItems="start"
+              padding_tablet="0"
+              // padding="0 20px"
+              margin_tablet="0"
+              margin_sm="0 0 20px 0"
             >
-              {city} {yml.header_data.tagline}
-            </H1>
-            <H2
-              type="h2"
-              textAlign_tablet="left"
-              padding="0"
-              padding_md="0px 34% 0 0"
-              fontSize="40px"
-              fontSize_tablet="50px"
-              margin="20px 0 0 0"
-              lineHeight="60px"
-            >{`${yml.header_data.title}`}</H2>
-            <Paragraph
-              textAlign_tablet="left"
-              margin="26px 0 35px 0"
-              padding="0"
-              padding_tablet="0 34% 0 0"
-            >
-              {yml.header_data.sub_heading}{" "}
-            </Paragraph>
-            <ChooseProgram
-              buttonJustifyContent="center"
-              buttonPadding="10px 0"
-              width="175px"
-              goTo={goToChooseProgram}
-              right="15px"
-              top="40px"
-              textAlign="center"
-              textAlign_tablet="left"
-              openLabel={
-                pageContext.lang === "es"
-                  ? buttonProgram["es"]
-                  : buttonProgram["en"]
+              {/* <CityH1 yml={yml} /> */}
+              <H1
+                type="h1"
+                textAlign="left"
+                textShadow="none"
+                fontSize="13px"
+                color="#606060"
+              >
+                {city} {yml.header_data.tagline}
+              </H1>
+              <H2
+                type="h2"
+                textAlign="left"
+                // padding_tablet="0"
+                // padding_md="0px 34% 0 0"
+                fontSize="40px"
+                fontSize_tablet="50px"
+                margin="20px 0 0 0"
+                lineHeight_xs="38px"
+                lineHeight_tablet="60px"
+                width_tablet="100%"
+                width_xs="80%"
+              >{`${yml.header_data.title}`}</H2>
+              <Div display="block" margin="20px 0">
+                {yml.header_data.bullets.map((bullet) => (
+                  <Div alignItems="center" margin="0 0 15px 0">
+                    <Icon
+                      icon="check-circle"
+                      style={{ marginRight: "10px" }}
+                      fill={Colors.blue}
+                    />
+                    <Paragraph
+                      textAlign="left"
+                      // padding="0"
+                      padding="0 20% 0 0"
+                      color={Colors.black}
+                      fontSize="16px"
+                    >
+                      {bullet}{" "}
+                    </Paragraph>
+                  </Div>
+                ))}
+              </Div>
+              <Div width="100%" justifyContent="start">
+                <Button
+                  variant="full"
+                  justifyContent="center"
+                  width="140px"
+                  width_tablet="fit-content"
+                  color={Colors.blue}
+                  margin="0 10px 0 0"
+                  textColor="white"
+                  onClick={goToChooseProgram}
+                >
+                  {yml.header_data.join_button_text}
+                </Button>
+                <Button
+                  variant="outline"
+                  justifyContent="center"
+                  // width="200px"
+                  width_tablet="fit-content"
+                  color={Colors.blue}
+                  margin="0 0 0 10px"
+                  textColor={Colors.blue}
+                >
+                  {yml.header_data.free_button_text}
+                </Button>
+              </Div>
+            </Div>
+          </Div>
+          <Div display="flex" height="auto" width="100%">
+            <StyledBackgroundSection
+              // height={`723px`}
+              height_tablet="723px"
+              height="390px"
+              width="100%"
+              image={
+                yml.header_data.image &&
+                yml.header_data.image.childImageSharp.gatsbyImageData
               }
-              closeLabel={
-                pageContext.lang === "es"
-                  ? buttonProgram["es"]
-                  : buttonProgram["en"]
-              }
+              alt="Hero image"
+              bgSize="contain"
             />
           </Div>
 
+        </GridContainerWithImage>
+        <Div margin="10px auto" margin_tablet="auto" width="90%" className="badge-slider hideOverflowX__">
           <News
             lang={pageContext.lang}
             limit={yml.news.limit}
-            width={`17%`}
-            height="40px"
-            justifyContent="center"
+            // width={`17%`}
+            height="45px"
+            margin="0"
+            justifyContent="between"
           />
         </Div>
-        <Div display="none" display_tablet="flex" height="auto" width="100%">
-          <StyledBackgroundSection
-            height={`723px`}
-            width="100%"
-            image={
-              yml.header_data.image &&
-              yml.header_data.image.childImageSharp.gatsbyImageData
-            }
-            alt="Hero image"
-            bgSize={`contain`}
-          />
-        </Div>
-      </GridContainerWithImage>
-
+        
+      </Div>
       <Testimonials lang={data.allTestimonialsYaml.edges} />
       <Badges
         lang={pageContext.lang}
@@ -279,6 +327,9 @@ export const query = graphql`
             tagline
             title
             sub_heading
+            bullets
+            join_button_text
+            free_button_text
             image {
               childImageSharp {
                 gatsbyImageData(

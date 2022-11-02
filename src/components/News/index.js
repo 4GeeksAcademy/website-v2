@@ -25,6 +25,7 @@ export default ({
   maxWidth,
   overflowX,
   justifySelf,
+  justifyContent,
   imgPadding,
 }) => {
   const data = useStaticQuery(graphql`
@@ -88,8 +89,9 @@ export default ({
       gap="20px"
       height="auto"
       overflowX={overflowX || "auto"}
-      justifyContent="around"
-      justifyContent_tablet="around"
+      justifyContent={justifyContent || "around"}
+      justifyContent_tablet={justifyContent || "around"}
+      className="badge-slider hideOverflowX__"
     >
       {Array.isArray(locationNews) &&
         locationNews.map((l, i) => {
