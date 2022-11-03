@@ -1,8 +1,8 @@
 const path = require("path");
 const fs = require("fs");
 const YAML = require("yaml");
-const frontmatter = require('frontmatter');
-const API = require("./src/utils/api")
+const frontmatter = require("frontmatter");
+const API = require("./src/utils/api");
 const { createFilePath } = require(`gatsby-source-filesystem`);
 
 var redirects = [];
@@ -142,46 +142,41 @@ const createBlog = async ({ actions }) => {
 
   let posts = await API.getPosts();
 
-  console.log(`${posts.length} posts found`)
-  for(let post of posts){
-
+  console.log(`${posts.length} posts found`);
+  for (let post of posts) {
     post.content = await API.getContent(post.slug);
-    if(!post.content || post.content === undefined){
-      throw Error(`Error fetching content for post ${post.content}`)
+    if (!post.content || post.content === undefined) {
+      throw Error(`Error fetching content for post ${post.content}`);
     }
     post.fm = frontmatter(post.content);
-    if(!post.fm || post.fm == undefined){
-      throw new Error(`Missing frontmatter for post ${post.slug}`)
-    } 
-    else{
+    if (!post.fm || post.fm == undefined) {
+      throw new Error(`Missing frontmatter for post ${post.slug}`);
+    } else {
       post.fm = post.fm.data;
     }
-    
+
     const postTemplate = path.resolve(
       `src/templates/${post.fm.template || "post"}.js`
     );
-    
+
     // if a blog post has the "landing_cluster" template its not a real blog post, its more like a landing page meant as a topic cluster
     // and it will not follow the same URL structure, landing_cluster's have a very unique URL.
     const postPath = `${post.lang}/${post.fm.cluster}/${post.slug}`;
     console.log(`Creating post ${postPath}`);
     createPage({
-      path:
-        post.fm.template != "landing_cluster"
-          ? postPath
-          : `/${post.slug}`,
+      path: post.fm.template != "landing_cluster" ? postPath : `/${post.slug}`,
       component: postTemplate,
       context: {
         // createNodeField({ node, name: `pagePath`, value: meta.pagePath });
         // createNodeField({ node, name: `filePath`, value: url });
         lang: post.lang,
         slug: post.slug,
-        file_name: new URL(post.readme_url).pathname.split('/').pop(),
+        file_name: new URL(post.readme_url).pathname.split("/").pop(),
         defaultTemplate: postTemplate,
         type: post.clusters.length > 0 ? post.clusters[0] : "post",
       },
     });
-    
+
     if (post.fm.template != "landing_cluster") {
       // the old website had the blog posts with this path '/post-name' and we want now '/<lang>/<cluster>/post-name'
       _createRedirect({
@@ -207,11 +202,9 @@ const createBlog = async ({ actions }) => {
     es: [],
   };
   // Iterate through each post, putting all found tags into `tags`
-  posts.forEach(post => {
+  posts.forEach((post) => {
     if (post.fm.cluster)
-      clusters[post.lang] = clusters[post.lang].concat(
-        post.fm.cluster
-      );
+      clusters[post.lang] = clusters[post.lang].concat(post.fm.cluster);
   });
   // Eliminate duplicate clusters
   Object.keys(clusters).forEach(
@@ -242,7 +235,7 @@ const createBlog = async ({ actions }) => {
     })
   );
 
-  posts.forEach(post => {
+  posts.forEach((post) => {
     Object.keys(clusters).forEach((lang) =>
       clusters[lang].forEach((cluster) => {
         let file_name = `clusters.${lang}`;
