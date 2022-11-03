@@ -13,6 +13,8 @@ const PricingCard = ({
   info,
   selectedPlan,
   setSelectedPlan,
+  index,
+  plansLength,
   session,
   setSession,
 }) => {
@@ -24,7 +26,10 @@ const PricingCard = ({
       cursor="pointer"
       display="block"
       width="320px"
-      margin_xs="0 5px 15px 0"
+      width_tablet={plansLength % 2 !== 0 && index === 0 ? "100%" : "49%"}
+      minWidth_tablet="240px"
+      margin_xs="0 0 15px 0"
+      margin_tablet="0 5px 15px 0"
       onClick={() => {
         setSelectedPlan(slug);
         // setSession({ ...session, financing_plan: slug });
@@ -78,7 +83,7 @@ const PricingCard = ({
               {payment_time}
             </Paragraph>
           </Div>
-          <Div className="price-container">
+          <Div className="price-container" flexShrink_tablet="0">
             <Paragraph
               fontWeight_tablet="700"
               color={isSelected ? Colors.white : Colors.black}
@@ -296,7 +301,7 @@ const PricesAndPaymentsV2 = (props) => {
           <Paragraph>{props.paragraph}</Paragraph>
         </Div>
       </GridContainer>
-      <GridContainer margin="0 0 70px 0" margin_tablet="0 0 70px 0">
+      <GridContainer margin="0 0 70px 0" margin_tablet="0 0 50px 0" margin_xs="0 0 30px 0">
         <Div
           flexDirection_tablet="row"
           flexDirection="column"
@@ -359,7 +364,7 @@ const PricesAndPaymentsV2 = (props) => {
           </Link>
         </Div>
       </GridContainer>
-      <Div display="block" position="relative" minHeight_tablet="600px">
+      <Div display="block" position="relative" minHeight_tablet="600px" padding_md="20px">
         <Div
           id="chart-section"
           background="#000"
@@ -371,7 +376,9 @@ const PricesAndPaymentsV2 = (props) => {
           display="block"
           position_sm="static"
           position_md="absolute"
-          left="6%"
+          // left="6%"
+          left="50px"
+          left_lg="150px"
           top="-2%"
         >
           <H3
@@ -441,9 +448,17 @@ const PricesAndPaymentsV2 = (props) => {
           background="#FFF"
           padding_xs="18px 15px"
           padding_sm="38px"
-          width_tablet="60%"
+          // width_md="740px"
+          maxWidth_lg="800px"
+          minWidth_lg="700px"
+          maxWidth_md="740px"
+          minWidth_md="580px"
+          width_md="auto"
+          // width_tablet="80%"
           width_xs="80%"
-          margin_md="0 0 0 35%"
+          margin_lg="0 0 0 500px"
+          margin_md="0 0 0 400px"
+          // margin_md="0 0 0 30%"
           margin_xs="20px auto"
           display="block"
         >
@@ -459,10 +474,11 @@ const PricesAndPaymentsV2 = (props) => {
           <Div
             className="cards-container"
             flexWrap="wrap"
-            justifyContent="evenly"
+            justifyContent_tablet="between"
+            justifyContent_xs="evenly"
           >
             {prices &&
-              prices.map((plan) => (
+              prices.map((plan, index) => (
                 <PricingCard
                   data={plan}
                   info={info}
@@ -470,6 +486,8 @@ const PricesAndPaymentsV2 = (props) => {
                   setSelectedPlan={setSelectedPlan}
                   session={session}
                   setSession={setSession}
+                  index={index}
+                  plansLength={prices.length}
                 />
               ))}
           </Div>
@@ -481,7 +499,7 @@ const PricesAndPaymentsV2 = (props) => {
                 width: "70%",
                 cursor: selectedPlan === null && "default",
               }}
-              to={info.apply_button.link}
+              to={`${info.apply_button.link}?utm_plan=${selectedPlan}`}
             >
               <Button
                 variant="full"
@@ -494,9 +512,9 @@ const PricesAndPaymentsV2 = (props) => {
                 display="block"
                 cursor={selectedPlan === null ? "default" : "pointer"}
                 disabled={selectedPlan === null ? true : false}
-                onClick={() =>
-                  setSession({ ...session, financing_plan: selectedPlan })
-                }
+                // onClick={() =>
+                //   setSession({ ...session, financing_plan: selectedPlan })
+                // }
               >
                 {info.apply_button.label}
               </Button>

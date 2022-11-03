@@ -291,8 +291,8 @@ export const Div = styled.div`
     flex: ${(props) =>
       props.size_md ? `0 0 ${(props.size_md / 12) * 100}%` : null};
     max-width: ${(props) =>
-      props.size_md ? `${(props.size_md / 12) * 100}%` : null};
-    min-width: ${(props) => props.minWidth_lg};
+      props.maxWidth_md ? props.maxWidth_md : props.size_md ? `${(props.size_md / 12) * 100}%` : null};
+    min-width: ${(props) => props.minWidth_md};
     grid-area: ${(props) => props.gridArea_md};
     display: ${(props) => props.display_md};
     flex-direction: ${(props) => props.flexDirection_md};
@@ -318,6 +318,11 @@ export const Div = styled.div`
     justifycontent: ${(props) =>
       justifyContentOptions[props.justifyContent_lg]};
     padding: ${(props) => props.padding_lg};
+    max-width: ${(props) => props.maxWidth_lg };
+    min-width: ${(props) => props.minWidth_lg};
+    left: ${(props) => props.left_lg};
+    margin: ${(props) => props.margin_lg};
+
   }
   @media ${Devices.xl} {
   }

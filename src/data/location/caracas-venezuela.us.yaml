@@ -178,18 +178,18 @@ prices:
             - "9% of your salary until paid in full, only if you get a job in tech."
           icons: 
             - "/images/landing/uwm_pantone_2021_2.png"
-        - slug: 'plan-2'
-          recomended: false
-          scholarship: "Financed"
-          payment_time: "24 months payment"
-          price: "$310"
-          bullets: 
-            - "With $400 p/ week living stipends"
-            - "9% of your salary until paid in full, only if you get a job in tech."
-          icons: 
-            - "/images/ascent_logo.jpg"
-            - "/images/climb-logo.png"
-            - "/images/quotanda-logo.png"
+        # - slug: 'plan-2'
+        #   recomended: false
+        #   scholarship: "Financed"
+        #   payment_time: "24 months payment"
+        #   price: "$310"
+        #   bullets: 
+        #     - "With $400 p/ week living stipends"
+        #     - "9% of your salary until paid in full, only if you get a job in tech."
+        #   icons: 
+        #     - "/images/ascent_logo.jpg"
+        #     - "/images/climb-logo.png"
+        #     - "/images/quotanda-logo.png"
         - slug: 'plan-3'
           recomended: false
           scholarship: "Income Share Agreement"
