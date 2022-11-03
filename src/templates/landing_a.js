@@ -272,13 +272,13 @@ const Landing = (props) => {
             )}
             {yml.short_badges && (
               <Div
-                // className="badge-slider hideOverflowX__"
+                className="badge-slider hideOverflowX__"
                 display="flex"
                 borderTop="1px solid #A4A4A4"
                 flexDirection="row"
-                width="320px"
+                width="100%"
                 width_tablet="100%"
-                className="set-overflow"
+                // className="set-overflow"
                 margin="25px 0 0 0"
                 padding="24px 0 0 0"
                 maxWidth="100vw"

@@ -217,7 +217,7 @@ const Side = ({
           textColor={Colors.black}
           color={Colors[button.color] || button.color}
           // padding="0"
-          padding_tablet="0"
+          // padding_tablet="0"
           fontSize="15px"
           textAlign="left"
           margin="2rem 0"
@@ -369,7 +369,7 @@ export const MultiColumns = ({
           lineHeight="26px"
           textColor={Colors[button.color] || button.color}
           color={Colors[button.color] || button.color}
-          padding_tablet="0"
+          // padding_tablet="0"
           fontSize="15px"
           style={button.style ? JSON.parse(button.style) : null}
           background={Colors[button.background] || button.background}
@@ -428,7 +428,7 @@ export const Columns = ({ columns, proportions, swipable }) => {
           size_xs={c.size[3]}
           textAlign={c.align}
           minWidth="250px"
-          margin="25px 0 0 0"
+          margin="25px 15px 0 15px"
         >
           <Img
             src={c.image.src}
