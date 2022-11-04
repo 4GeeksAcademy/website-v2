@@ -40,6 +40,7 @@ import About4Geeks from "../components/About4Geeks";
 import OurPartners from "../components/OurPartners";
 import ChooseYourProgram from "../components/ChooseYourProgram";
 import Testimonials from "../components/Testimonials";
+import ReactPlayer from "../components/ReactPlayer";
 
 const SVGBubblesLeft = () => (
   <svg
@@ -231,18 +232,43 @@ const Home = (props) => {
             </Div>
           </Div>
           <Div display="flex" height="auto" width="100%">
-            <StyledBackgroundSection
-              // height={`723px`}
-              height_tablet="723px"
-              height="390px"
-              width="100%"
-              image={
-                yml.header_data.image &&
-                yml.header_data.image.childImageSharp.gatsbyImageData
-              }
-              alt="Hero image"
-              bgSize="contain"
-            />
+            {yml.header_data.video ? (
+              <Div
+                height_tablet="723px"
+                height="390px"
+                width="100%"
+                className="wrapper-container"
+                position="static"
+                padding_tablet="30px"
+              >
+                <Div height="100%" width="100%" borderRadius="11px">
+                  <ReactPlayer
+                    thumb={yml.header_data.video.thumb}
+                    id={yml.header_data.video.path}
+                    height="100%"
+                    imageHeight="100%"
+                    videoHeight="100%"
+                    style={{
+                      width: "100%",
+                      height: "100%"
+                    }}
+                  />
+                </Div>
+              </Div>
+            ) : (
+              <StyledBackgroundSection
+                // height={`723px`}
+                height_tablet="723px"
+                height="390px"
+                width="100%"
+                image={
+                  yml.header_data.image &&
+                  yml.header_data.image.childImageSharp.gatsbyImageData
+                }
+                alt="Hero image"
+                bgSize="contain"
+              />
+            )}
           </Div>
         </GridContainerWithImage>
         <Div
@@ -333,6 +359,21 @@ export const query = graphql`
             bullets
             join_button_text
             free_button_text
+            video {
+              path
+              thumb {
+                childImageSharp {
+                  gatsbyImageData(
+                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                    width: 150
+                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                  )
+                  # fluid(maxWidth: 150){
+                  #   ...GatsbyImageSharpFluid_withWebp
+                  # }
+                }
+              }
+            }
             image {
               childImageSharp {
                 gatsbyImageData(

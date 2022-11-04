@@ -17,7 +17,9 @@ header_data:
     - Learn everywhere, all the time, you choose the methodology.
   join_button_text: JOIN A PROGRAM
   free_button_text: FREE TRIAL
-
+  video:
+    thumb: "../../../static/images/bg/video-thumb.png"
+    path: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
   image: "../../../static/images/bg/new-main-home-bg.png"
 
 news:

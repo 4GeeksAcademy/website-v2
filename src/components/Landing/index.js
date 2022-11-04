@@ -735,13 +735,13 @@ export const landingSections = {
           </H5>
           <LeadForm
             landingTemplate
-            layout="block"
+            // layout="block"
             background={Colors.verylightGray}
             margin="0"
             marginButton={`15px 0 30px auto`}
             buttonBorderRadius="3px"
             justifyContentButton="center"
-            inputBgColor="#F9F9F9"
+            // inputBgColor="#F9F9F9"
             selectProgram={programs}
             inputBgColor={Colors.white}
             layout="flex"

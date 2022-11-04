@@ -11,6 +11,7 @@ header_data:
   tagline: Coding Bootcamp
   title: "Impulsa tu carrera gracias a la programación"
   sub_heading: "Únete a miles de graduados que viven como programadores, trabajan en grandes empresas y forman parte de una de las comunidades de programación más grandes del mundo."
+  # video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
   image: "../../../static/images/bg/new-main-home-bg.png"
   bullets:
     - Tutoría de codificación de por vida, asistencia profesional interminable y una comunidad de desarrolladores impulsada por la tecnología.
