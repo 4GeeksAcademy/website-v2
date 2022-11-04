@@ -176,7 +176,7 @@ const Player = ({
               onStateChange={onStateChange}
               onPlaybackRateChange={onPlaybackRateChange}
               onPlaybackQualityChange={onPlaybackQualityChange}
-              height={videoHeight}
+              // height={videoHeight}
               opts={{
                 width: "100%",
                 height: `${style.height}`,
