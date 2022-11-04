@@ -37,7 +37,7 @@ const VideoWrapper = styled.section`
 const Iframe = styled(YouTube)`
   padding: 0;
   border-radius: ${(props) => props.borderRadius || "auto"};
-  height: ${(props) => props.height || '100%'};
+  height: ${(props) => props.height || "100%"};
 `;
 
 const Thumbnail = styled.img`
