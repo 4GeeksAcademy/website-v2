@@ -157,6 +157,9 @@ export const Div = styled.div`
   border-radius: ${(props) => props.borderRadius};
   background: ${(props) =>
     props.isActive ? props.backgroundActive : props.background};
+  background-image: url(${(props) => props.bgImage});
+  background-size: ${(props) => props.bgSize};
+  background-repeat: ${(props) => props.bgRepeat};
   border-left: ${(props) =>
     props.isActive ? props.borderLeftActive : props.borderLeft};
   border-top: ${(props) => props.borderTop};
@@ -233,6 +236,7 @@ export const Div = styled.div`
     margin: ${(props) => props.margin_sm};
     top: ${(props) => props.top_sm};
     right: ${(props) => props.right_sm};
+    width: ${(props) => props.width_sm};
   }
   @media ${Devices.tablet} {
     flex: ${(props) =>

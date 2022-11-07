@@ -127,7 +127,7 @@ const Home = (props) => {
         margin_tablet="72px 0 108px 0"
       >
         <GridContainerWithImage
-          padding="65px 0 0 20px"
+          padding="65px 0 0 0"
           padding_tablet="0"
           columns_tablet="2"
           position="relative"
@@ -135,9 +135,9 @@ const Home = (props) => {
           <Div
             position="absolute"
             zIndex="5"
-            right_tablet="5%"
-            top_tablet="55%"
+            right_tablet={yml.header_data.video ? "40%" :"5%"}
             right="5%"
+            top_tablet={yml.header_data.video ? "15%" : "55%"}
             top="90px"
             width_tablet="160px"
             height_tablet="152px"
@@ -151,13 +151,12 @@ const Home = (props) => {
             justifyContent_tablet="evenly"
             alignItems="center"
             alignItems_tablet="start"
+            padding="0 0 0 20px"
           >
             <Div
               flexDirection="column"
-              // alignItems="center"
               alignItems="start"
               padding_tablet="0"
-              // padding="0 20px"
               margin_tablet="0"
               margin_sm="0 0 20px 0"
             >
@@ -174,8 +173,6 @@ const Home = (props) => {
               <H2
                 type="h2"
                 textAlign="left"
-                // padding_tablet="0"
-                // padding_md="0px 34% 0 0"
                 fontSize="40px"
                 fontSize_tablet="50px"
                 margin="20px 0 0 0"
@@ -194,7 +191,6 @@ const Home = (props) => {
                     />
                     <Paragraph
                       textAlign="left"
-                      // padding="0"
                       padding="0 20% 0 0"
                       color={Colors.black}
                       fontSize="16px"
@@ -235,13 +231,24 @@ const Home = (props) => {
             {yml.header_data.video ? (
               <Div
                 height_tablet="723px"
-                height="390px"
                 width="100%"
                 className="wrapper-container"
                 position="static"
-                padding_tablet="30px"
+                padding_tablet="150px 10px 0 20px"
+                padding="0"
+                // bgImage="/images/bg/video-bg.png"
+                bgSize="auto"
+                bgRepeat="no-repeat"
               >
-                <Div height="100%" width="100%" borderRadius="11px">
+                <Div
+                  width="90%"
+                  width_sm="335px"
+                  width_tablet="368px"
+                  height="427px"
+                  height_tablet="469px"
+                  margin_tablet="0"
+                  margin="auto"
+                >
                   <ReactPlayer
                     thumb={yml.header_data.video.thumb}
                     id={yml.header_data.video.path}
@@ -251,13 +258,13 @@ const Home = (props) => {
                     style={{
                       width: "100%",
                       height: "100%",
+                      borderRadius: "11px",
                     }}
                   />
                 </Div>
               </Div>
             ) : (
               <StyledBackgroundSection
-                // height={`723px`}
                 height_tablet="723px"
                 height="390px"
                 width="100%"
@@ -365,7 +372,8 @@ export const query = graphql`
                 childImageSharp {
                   gatsbyImageData(
                     layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                    width: 150
+                    width: 500
+                    quality: 100
                     placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                   )
                   # fluid(maxWidth: 150){
