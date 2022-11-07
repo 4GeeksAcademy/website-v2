@@ -135,7 +135,7 @@ const Home = (props) => {
           <Div
             position="absolute"
             zIndex="5"
-            right_tablet={yml.header_data.video ? "40%" :"5%"}
+            right_tablet={yml.header_data.video ? "40%" : "5%"}
             right="5%"
             top_tablet={yml.header_data.video ? "15%" : "55%"}
             top="90px"
