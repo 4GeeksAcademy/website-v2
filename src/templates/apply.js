@@ -1,6 +1,5 @@
 import React, { useState, useContext } from "react";
 import { navigate } from "gatsby";
-import { useLocation } from "@reach/router";
 import { Div, GridContainer, Header, Grid } from "../components/Sections";
 import { H1, H3, Paragraph } from "../components/Heading";
 import { Colors, Button } from "../components/Styling";
@@ -65,7 +64,6 @@ const Apply = (props) => {
   const [regionVal, setRegionVal] = useState(null);
   const [showPhoneWarning, setShowPhoneWarning] = useState(false);
   const [showModal, setShowModal] = useState(false);
-  const searchLocation = useLocation();
 
   const regions = [
     { label: trans[pageContext.lang]["Latin America"], value: "latam" },
@@ -148,16 +146,13 @@ const Apply = (props) => {
 
   const submitForm = () => {
     setFormStatus({ status: "loading", msg: "Loading..." });
-    const params = new URLSearchParams(searchLocation.search);
-    const utm_plan = params.get("utm_plan");
-    // setSession({ ...session, utm: { ...session.utm, utm_plan } });
     apply(
       {
         ...formData,
         course: formData.course.value,
         location: formData.location.value,
       },
-      { ...session, utm: { ...session.utm, utm_plan } }
+      session
     )
       .then((data) => {
         if (typeof data.error !== "undefined") {
