@@ -88,7 +88,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 // Create all the pages needed
 exports.createPages = async (params) =>
   (await createEditPage(params)) &&
-  (await createBlog(params)) &&
+  // (await createBlog(params)) &&
   (await createPagesfromYml(params)) &&
   //also for the custom post types
   (await createEntityPagesfromYml("Course", params)) &&
