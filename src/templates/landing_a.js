@@ -277,7 +277,7 @@ const Landing = (props) => {
                 reversed={false}
                 containerstyle={{
                   height: "160px",
-                  width: "100%"
+                  width: "100%",
                 }}
               >
                 <Div
@@ -300,7 +300,8 @@ const Landing = (props) => {
                           alt={l.alt}
                           // fluid={l.image != null && l.image.childImageSharp.fluid}
                           image={getImage(
-                            l.image != null && l.image.childImageSharp.gatsbyImageData
+                            l.image != null &&
+                              l.image.childImageSharp.gatsbyImageData
                           )}
                         />
                       );
