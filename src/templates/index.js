@@ -233,13 +233,43 @@ const Home = (props) => {
                 height_tablet="723px"
                 width="100%"
                 className="wrapper-container"
-                position="static"
+                position="relative"
                 padding_tablet="150px 10px 0 20px"
                 padding="0"
-                // bgImage="/images/bg/video-bg.png"
-                bgSize="auto"
-                bgRepeat="no-repeat"
               >
+                <Circle
+                  color="black"
+                  width="119px"
+                  height="11px"
+                  border="10px"
+                  bottom="60px"
+                  right="-30px"
+                  zIndex="1"
+                  display="none"
+                  display_tablet="inline"
+                />
+                <Circle
+                  color="black"
+                  width="50px"
+                  height="11px"
+                  border="10px"
+                  bottom="60px"
+                  right="100px"
+                  zIndex="1"
+                  display="none"
+                  display_tablet="inline"
+                />
+                <Circle
+                  color="yellow"
+                  opacity="0.2"
+                  width="200px"
+                  height="200px"
+                  bottom="100px"
+                  right="-80px"
+                  zIndex="1"
+                  display="none"
+                  display_tablet="inline"
+                />
                 <Div
                   width="90%"
                   width_sm="335px"
@@ -248,6 +278,7 @@ const Home = (props) => {
                   height_tablet="469px"
                   margin_tablet="0"
                   margin="auto"
+                  zIndex="2"
                 >
                   <ReactPlayer
                     thumb={yml.header_data.video.thumb}
