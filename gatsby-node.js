@@ -1,6 +1,8 @@
 const path = require("path");
 const fs = require("fs");
 const YAML = require("yaml");
+const frontmatter = require("frontmatter");
+const API = require("./src/utils/api");
 const { createFilePath } = require(`gatsby-source-filesystem`);
 
 var redirects = [];
@@ -86,7 +88,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 // Create all the pages needed
 exports.createPages = async (params) =>
   (await createEditPage(params)) &&
-  (await createBlog(params)) &&
+  // (await createBlog(params)) &&
   (await createPagesfromYml(params)) &&
   //also for the custom post types
   (await createEntityPagesfromYml("Course", params)) &&
@@ -129,7 +131,7 @@ const createEditPage = async ({ actions, graphql }) => {
   return true;
 };
 
-const createBlog = async ({ actions, graphql }) => {
+const createBlog = async ({ actions }) => {
   const { createPage, createRedirect } = actions;
   const _createRedirect = (args) => {
     redirects.push(`Redirect from ${args.fromPath} to ${args.toPath}`);
@@ -137,100 +139,62 @@ const createBlog = async ({ actions, graphql }) => {
   };
   const clusterTemplate = path.resolve("src/templates/clusters.js");
   const thumbnailTemplate = path.resolve("src/templates/thumbnailPreview.js");
-  const result = await graphql(`
-    {
-      allMarkdownRemark(sort: { fields: frontmatter___date, order: DESC }) {
-        edges {
-          node {
-            html
-            id
-            frontmatter {
-              title
-              slug
-              template
-              author
-              date
-              status
-              featured
-              cluster
-            }
-            excerpt
-            fields {
-              lang
-              slug
-              file_name
-              defaultTemplate
-              type
-              pagePath
-              filePath
-            }
-          }
-        }
-      }
+
+  let posts = await API.getPosts();
+
+  console.log(`${posts.length} posts found`);
+  for (let post of posts) {
+    post.content = await API.getContent(post.slug);
+    if (!post.content || post.content === undefined) {
+      throw Error(`Error fetching content for post ${post.content}`);
     }
-  `);
-  if (result.errors) throw new Error(result.errors);
+    post.fm = frontmatter(post.content);
+    if (!post.fm || post.fm == undefined) {
+      throw new Error(`Missing frontmatter for post ${post.slug}`);
+    } else {
+      post.fm = post.fm.data;
+    }
 
-  const posts = result.data.allMarkdownRemark.edges;
-
-  posts.forEach(({ node }) => {
     const postTemplate = path.resolve(
-      `src/templates/${node.frontmatter.template || "post"}.js`
+      `src/templates/${post.fm.template || "post"}.js`
     );
-    console.log(`Creating post ${node.fields.pagePath}`);
 
     // if a blog post has the "landing_cluster" template its not a real blog post, its more like a landing page meant as a topic cluster
     // and it will not follow the same URL structure, landing_cluster's have a very unique URL.
+    const postPath = `${post.lang}/${post.fm.cluster}/${post.slug}`;
+    console.log(`Creating post ${postPath}`);
     createPage({
-      path:
-        node.frontmatter.template != "landing_cluster"
-          ? node.fields.pagePath
-          : `/${node.fields.slug}`,
+      path: post.fm.template != "landing_cluster" ? postPath : `/${post.slug}`,
       component: postTemplate,
       context: {
-        ...node.fields,
+        // createNodeField({ node, name: `pagePath`, value: meta.pagePath });
+        // createNodeField({ node, name: `filePath`, value: url });
+        lang: post.lang,
+        slug: post.slug,
+        file_name: new URL(post.readme_url).pathname.split("/").pop(),
+        defaultTemplate: postTemplate,
+        type: post.clusters.length > 0 ? post.clusters[0] : "post",
       },
     });
 
-    if (node.frontmatter.template != "landing_cluster") {
+    if (post.fm.template != "landing_cluster") {
       // the old website had the blog posts with this path '/post-name' and we want now '/<lang>/<cluster>/post-name'
       _createRedirect({
-        fromPath: `/${node.fields.slug}`,
-        toPath: node.fields.pagePath,
+        fromPath: `/${post.slug}`,
+        toPath: postPath,
         redirectInBrowser: true,
         isPermanent: true,
       });
 
-      console.log(`Redirect for post /us/post/${node.fields.slug}`);
+      console.log(`Redirect for post /us/post/${post.slug}`);
       _createRedirect({
-        fromPath: `/us/post/${node.fields.slug}`,
-        toPath: node.fields.pagePath,
+        fromPath: `/us/post/${post.slug}`,
+        toPath: postPath,
         redirectInBrowser: true,
         isPermanent: true,
       });
     }
-  });
-
-  // Read redirect property from front-matter
-  posts.forEach(({ node }) => {
-    if (node.frontmatter.redirects) {
-      node.frontmatter.redirects.forEach((path) => {
-        if (typeof path !== "string")
-          throw new Error(
-            `The path in ${node.frontmatter.slug} is not a string: ${path}`
-          );
-        if (!path || path === "") return;
-        path = path[0] !== "/" ? "/" + path : path; //and forward slash at the beginning of path
-        console.log(`Additional redirect ${path} => ${node.fields.pagePath}`);
-        _createRedirect({
-          fromPath: path,
-          toPath: node.fields.pagePath,
-          redirectInBrowser: true,
-          isPermanent: true,
-        });
-      });
-    }
-  });
+  }
 
   // CLUSTERS:
   let clusters = {
@@ -238,11 +202,9 @@ const createBlog = async ({ actions, graphql }) => {
     es: [],
   };
   // Iterate through each post, putting all found tags into `tags`
-  posts.forEach(({ node }) => {
-    if (node.frontmatter.cluster)
-      clusters[node.fields.lang] = clusters[node.fields.lang].concat(
-        node.frontmatter.cluster
-      );
+  posts.forEach((post) => {
+    if (post.fm.cluster)
+      clusters[post.lang] = clusters[post.lang].concat(post.fm.cluster);
   });
   // Eliminate duplicate clusters
   Object.keys(clusters).forEach(
@@ -273,16 +235,16 @@ const createBlog = async ({ actions, graphql }) => {
     })
   );
 
-  posts.forEach(({ node }) => {
+  posts.forEach((post) => {
     Object.keys(clusters).forEach((lang) =>
       clusters[lang].forEach((cluster) => {
         let file_name = `clusters.${lang}`;
         let type = "page";
         createPage({
-          path: `/${lang}/${cluster}/${node.fields.slug}/preview`,
+          path: `/${lang}/${cluster}/${post.slug}/preview`,
           component: thumbnailTemplate,
           context: {
-            ...node.fields,
+            ...post,
             cluster,
             file_name,
             lang,
