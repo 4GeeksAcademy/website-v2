@@ -79,6 +79,7 @@ const Home = (props) => {
   const { session } = React.useContext(SessionContext);
   const [city, setCity] = useState("");
 
+  //
   // const city = session && session.location ? "" : "Miami";
 
   React.useEffect(() => {
