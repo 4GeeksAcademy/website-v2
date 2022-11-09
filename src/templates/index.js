@@ -418,7 +418,7 @@ export const query = graphql`
               childImageSharp {
                 gatsbyImageData(
                   layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                  width: 500
+                  width: 700
                   quality: 100
                   placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                   breakpoints: [200, 340, 520, 890]
