@@ -173,6 +173,8 @@ const StyledImage = styled.div`
   height: ${(props) => props.height};
   min-height: ${(props) => props.minHeight};
   max-height: ${(props) => (props.maxHeight ? props.maxHeight : "none")};
+  min-width: ${(props) => props.minWidth};
+  margin: ${(props) => props.margin};
   @media ${Break.sm} {
     height: ${(props) => props.h_sm};
     min-height: ${(props) => props.minHeight_sm};
@@ -324,6 +326,7 @@ const SmartButton = ({ children, onClick, type, icon, ...rest }) => {
       onClick={(e) => onClick && onClick(e)}
       className={rest.className}
       style={{ ...rest.style, ...styles }}
+      {...rest}
     >
       {icon}
       {children}
@@ -354,7 +357,7 @@ export const Button = styled(SmartButton)`
   border-bottom: ${(props) => props.borderBottom};
   border-right: ${(props) => props.borderRight};
   height: ${(props) => props.height || "40px"};
-  cursor: pointer;
+  cursor: ${(props) => props.cursor || "pointer"};
   text-align: ${(props) => props.textAlign || "center"};
   letter-spacing: ${(props) => props.letterSpacing || "0px"};
   line-height: ${(props) => props.lineHeight};

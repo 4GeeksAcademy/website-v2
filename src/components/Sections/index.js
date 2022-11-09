@@ -228,6 +228,9 @@ export const Div = styled.div`
     display: ${(props) => props.display_sm};
     order: ${(props) => props.order_sm};
     margin: ${(props) => props.margin_sm};
+    border-radius: ${(props) => props.borderRadius_sm};
+    max-width: ${(props) => props.maxWidth_sm};
+    width: ${(props) => props.width_sm};
   }
   @media ${Devices.tablet} {
     flex: ${(props) =>
@@ -269,6 +272,7 @@ export const Div = styled.div`
     border-top: ${(props) => props.borderTop_tablet};
     border-right: ${(props) => props.borderRight_tablet};
     border-bottom: ${(props) => props.borderBottom_tablet};
+    border-radius: ${(props) => props.borderRadius_tablet};
     box-shadow: ${(props) => props.boxShadow_tablet};
     border-left: ${(props) => props.borderLeft_tablet};
     transform: ${(props) => props.transform_tablet};
@@ -287,8 +291,8 @@ export const Div = styled.div`
     flex: ${(props) =>
       props.size_md ? `0 0 ${(props.size_md / 12) * 100}%` : null};
     max-width: ${(props) =>
-      props.size_md ? `${(props.size_md / 12) * 100}%` : null};
-    min-width: ${(props) => props.minWidth_lg};
+      props.maxWidth_md ? props.maxWidth_md : props.size_md ? `${(props.size_md / 12) * 100}%` : null};
+    min-width: ${(props) => props.minWidth_md};
     grid-area: ${(props) => props.gridArea_md};
     display: ${(props) => props.display_md};
     flex-direction: ${(props) => props.flexDirection_md};
@@ -307,12 +311,18 @@ export const Div = styled.div`
     place-items: ${(props) => props.placeItems_md};
     grid-column: ${(props) => props.gridColumn_md};
     grid-row: ${(props) => props.gridRow_md};
+    position: ${(props) => props.position_md};
   }
   @media ${Devices.lg} {
     display: ${(props) => props.display_lg};
     justifycontent: ${(props) =>
       justifyContentOptions[props.justifyContent_lg]};
     padding: ${(props) => props.padding_lg};
+    max-width: ${(props) => props.maxWidth_lg };
+    min-width: ${(props) => props.minWidth_lg};
+    left: ${(props) => props.left_lg};
+    margin: ${(props) => props.margin_lg};
+
   }
   @media ${Devices.xl} {
   }

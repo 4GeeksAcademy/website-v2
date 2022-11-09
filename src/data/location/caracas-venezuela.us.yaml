@@ -93,6 +93,48 @@ prices:
 
       ## LEFT BOX SECTION FULL-TIME
       ## CHANGE HERE THE INFO IN THE LEFT BOX
+      plans:
+        - slug: 'plan-1'
+          recomended: true
+          scholarship: "Scolarship"
+          payment_time: "Pay today"
+          price: "$4999"
+          bullets: 
+            - "You’re saving $4000 USD "
+            - "9% of your salary until paid in full, only if you get a job in tech."
+          icons: 
+            - "/images/landing/uwm_pantone_2021_2.png"
+        - slug: 'plan-2'
+          recomended: false
+          scholarship: "Financed"
+          payment_time: "24 months payment"
+          price: "$310"
+          bullets: 
+            - "With $400 p/ week living stipends"
+            - "9% of your salary until paid in full, only if you get a job in tech."
+          icons: 
+            - "/images/ascent_logo.jpg"
+            - "/images/climb-logo.png"
+            - "/images/quotanda-logo.png"
+        - slug: 'plan-3'
+          recomended: false
+          scholarship: "Income Share Agreement"
+          payment_time: "Pay after you get a job"
+          price: "$0"
+          bullets: 
+            - "With $400 p/ week living stipends"
+            - "9% of your salary until paid in full, only if you get a job in tech."
+          icons: 
+            - "/images/ascent_logo.jpg"
+            - "/images/climb-logo.png"
+            - "/images/quotanda-logo.png"
+        - slug: 'plan-4'
+          recomended: false
+          scholarship: "Full Payment"
+          payment_time: "Pay today"
+          price: "$8099"
+          bullets: 
+            - "You’re saving $1000 USD"
       left_section:
         header:
           heading_one: "PAY IN MONTHLY"
@@ -125,6 +167,48 @@ prices:
 
       ## LEFT BOX SECTION PART-TIME
       ## CHANGE HERE THE INFO IN THE LEFT BOX
+      plans:
+        - slug: 'plan-1'
+          recomended: true
+          scholarship: "Scolarship"
+          payment_time: "Pay today"
+          price: "$4999"
+          bullets: 
+            - "You’re saving $4000 USD "
+            - "9% of your salary until paid in full, only if you get a job in tech."
+          icons: 
+            - "/images/landing/uwm_pantone_2021_2.png"
+        # - slug: 'plan-2'
+        #   recomended: false
+        #   scholarship: "Financed"
+        #   payment_time: "24 months payment"
+        #   price: "$310"
+        #   bullets: 
+        #     - "With $400 p/ week living stipends"
+        #     - "9% of your salary until paid in full, only if you get a job in tech."
+        #   icons: 
+        #     - "/images/ascent_logo.jpg"
+        #     - "/images/climb-logo.png"
+        #     - "/images/quotanda-logo.png"
+        - slug: 'plan-3'
+          recomended: false
+          scholarship: "Income Share Agreement"
+          payment_time: "Pay after you get a job"
+          price: "$0"
+          bullets: 
+            - "With $400 p/ week living stipends"
+            - "9% of your salary until paid in full, only if you get a job in tech."
+          icons: 
+            - "/images/ascent_logo.jpg"
+            - "/images/climb-logo.png"
+            - "/images/quotanda-logo.png"
+        - slug: 'plan-4'
+          recomended: false
+          scholarship: "Full Payment"
+          payment_time: "Pay today"
+          price: "$8099"
+          bullets: 
+            - "You’re saving $1000 USD"
       left_section:
         header:
           heading_one: "MONTHLY PAYMENTS"
@@ -154,6 +238,48 @@ prices:
       slug: "part_time"
       duration: "?"
 
+      plans:
+        - slug: 'plan-1'
+          recomended: true
+          scholarship: "Scolarship"
+          payment_time: "Pay today"
+          price: "$4999"
+          bullets: 
+            - "You’re saving $4000 USD "
+            - "9% of your salary until paid in full, only if you get a job in tech."
+          icons: 
+            - "/images/landing/uwm_pantone_2021_2.png"
+        - slug: 'plan-2'
+          recomended: false
+          scholarship: "Financed"
+          payment_time: "24 months payment"
+          price: "$310"
+          bullets: 
+            - "With $400 p/ week living stipends"
+            - "9% of your salary until paid in full, only if you get a job in tech."
+          icons: 
+            - "/images/ascent_logo.jpg"
+            - "/images/climb-logo.png"
+            - "/images/quotanda-logo.png"
+        - slug: 'plan-3'
+          recomended: false
+          scholarship: "Income Share Agreement"
+          payment_time: "Pay after you get a job"
+          price: "$0"
+          bullets: 
+            - "With $400 p/ week living stipends"
+            - "9% of your salary until paid in full, only if you get a job in tech."
+          icons: 
+            - "/images/ascent_logo.jpg"
+            - "/images/climb-logo.png"
+            - "/images/quotanda-logo.png"
+        - slug: 'plan-4'
+          recomended: false
+          scholarship: "Full Payment"
+          payment_time: "Pay today"
+          price: "$8099"
+          bullets: 
+            - "You’re saving $1000 USD"
       left_section:
         header:
           heading_one: "Software Engineering"
@@ -185,6 +311,48 @@ prices:
       slug: "part_time"
       duration: "16 Weeks"
 
+      plans:
+        - slug: 'plan-1'
+          recomended: true
+          scholarship: "Scolarship"
+          payment_time: "Pay today"
+          price: "$4999"
+          bullets: 
+            - "You’re saving $4000 USD "
+            - "9% of your salary until paid in full, only if you get a job in tech."
+          icons: 
+            - "/images/landing/uwm_pantone_2021_2.png"
+        - slug: 'plan-2'
+          recomended: false
+          scholarship: "Financed"
+          payment_time: "24 months payment"
+          price: "$310"
+          bullets: 
+            - "With $400 p/ week living stipends"
+            - "9% of your salary until paid in full, only if you get a job in tech."
+          icons: 
+            - "/images/ascent_logo.jpg"
+            - "/images/climb-logo.png"
+            - "/images/quotanda-logo.png"
+        - slug: 'plan-3'
+          recomended: false
+          scholarship: "Income Share Agreement"
+          payment_time: "Pay after you get a job"
+          price: "$0"
+          bullets: 
+            - "With $400 p/ week living stipends"
+            - "9% of your salary until paid in full, only if you get a job in tech."
+          icons: 
+            - "/images/ascent_logo.jpg"
+            - "/images/climb-logo.png"
+            - "/images/quotanda-logo.png"
+        - slug: 'plan-4'
+          recomended: false
+          scholarship: "Full Payment"
+          payment_time: "Pay today"
+          price: "$8099"
+          bullets: 
+            - "You’re saving $1000 USD"
       left_section:
         header:
           heading_one: "Machine Learning"
@@ -200,6 +368,48 @@ prices:
       slug: "full_time"
       duration: "?"
 
+      plans:
+        - slug: 'plan-1'
+          recomended: true
+          scholarship: "Scolarship"
+          payment_time: "Pay today"
+          price: "$4999"
+          bullets: 
+            - "You’re saving $4000 USD "
+            - "9% of your salary until paid in full, only if you get a job in tech."
+          icons: 
+            - "/images/landing/uwm_pantone_2021_2.png"
+        - slug: 'plan-2'
+          recomended: false
+          scholarship: "Financed"
+          payment_time: "24 months payment"
+          price: "$310"
+          bullets: 
+            - "With $400 p/ week living stipends"
+            - "9% of your salary until paid in full, only if you get a job in tech."
+          icons: 
+            - "/images/ascent_logo.jpg"
+            - "/images/climb-logo.png"
+            - "/images/quotanda-logo.png"
+        - slug: 'plan-3'
+          recomended: false
+          scholarship: "Income Share Agreement"
+          payment_time: "Pay after you get a job"
+          price: "$0"
+          bullets: 
+            - "With $400 p/ week living stipends"
+            - "9% of your salary until paid in full, only if you get a job in tech."
+          icons: 
+            - "/images/ascent_logo.jpg"
+            - "/images/climb-logo.png"
+            - "/images/quotanda-logo.png"
+        - slug: 'plan-4'
+          recomended: false
+          scholarship: "Full Payment"
+          payment_time: "Pay today"
+          price: "$8099"
+          bullets: 
+            - "You’re saving $1000 USD"
       left_section:
         header:
           heading_one: "Machine Learning"

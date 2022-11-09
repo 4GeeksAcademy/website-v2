@@ -28,7 +28,7 @@ import { requestSyllabus } from "../actions";
 import { SessionContext } from "../session";
 import ProgramDetails from "../components/ProgramDetails";
 import ProgramDetailsMobile from "../components/ProgramDetailsMobile";
-import PricesAndPayment from "../components/PricesAndPayment";
+import PricesAndPayment from "../components/PricesAndPayment_v2";
 import Modal from "../components/Modal";
 import LeadForm from "../components/LeadForm";
 import AlumniProjects from "../components/AlumniProjects";
@@ -849,6 +849,15 @@ export const query = graphql`
           prices {
             full_stack {
               full_time {
+                plans {
+                  slug
+                  recomended
+                  scholarship
+                  payment_time
+                  price
+                  bullets
+                  icons
+                }
                 center_section {
                   button {
                     button_text
@@ -900,6 +909,15 @@ export const query = graphql`
                 }
               }
               part_time {
+                plans {
+                  slug
+                  recomended
+                  scholarship
+                  payment_time
+                  price
+                  bullets
+                  icons
+                }
                 center_section {
                   button {
                     button_text
