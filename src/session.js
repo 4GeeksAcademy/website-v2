@@ -81,6 +81,9 @@ export default ({ children }) => {
         utm_campaign: urlParams.get("utm_campaign") || undefined,
         utm_content: urlParams.get("utm_content") || undefined,
         utm_source: urlParams.get("utm_source") || undefined,
+        utm_plan: urlParams.get("utm_plan") || undefined,
+        utm_placement: urlParams.get("utm_placement") || undefined,
+        utm_term: urlParams.get("utm_term") || undefined,
         referral_code: urlParams.get("referral_code") || undefined,
         utm_test: urlParams.get("utm_test") || undefined,
         language:

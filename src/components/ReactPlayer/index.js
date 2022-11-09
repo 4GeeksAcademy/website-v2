@@ -123,7 +123,6 @@ const Player = ({
   // With_Modal
 
   useEffect(() => {
-    console.log(vid);
     if (vid.pauseVideo) {
       vid.pauseVideo();
     }

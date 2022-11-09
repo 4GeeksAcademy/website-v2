@@ -22,7 +22,7 @@ import { Button, Colors, StyledBackgroundSection } from "../components/Styling";
 import { isCustomBarActive } from "../actions";
 import { SessionContext } from "../session";
 import ProgramDetails from "../components/ProgramDetails";
-import PricesAndPayment from "../components/PricesAndPayment";
+import PricesAndPayment from "../components/PricesAndPayment_v2";
 import UpcomingDates from "../components/UpcomingDates";
 import GeeksInfo from "../components/GeeksInfo";
 import Testimonials from "../components/Testimonials";
@@ -1036,6 +1036,15 @@ export const query = graphql`
           prices {
             full_stack {
               full_time {
+                plans {
+                  slug
+                  recomended
+                  scholarship
+                  payment_time
+                  price
+                  bullets
+                  icons
+                }
                 center_section {
                   button {
                     button_text
@@ -1087,6 +1096,15 @@ export const query = graphql`
                 }
               }
               part_time {
+                plans {
+                  slug
+                  recomended
+                  scholarship
+                  payment_time
+                  price
+                  bullets
+                  icons
+                }
                 center_section {
                   button {
                     button_text

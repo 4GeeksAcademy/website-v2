@@ -128,7 +128,7 @@ const Home = (props) => {
         margin_tablet="72px 0 108px 0"
       >
         <GridContainerWithImage
-          padding="65px 0 0 0"
+          padding="30px 0 0 0"
           padding_tablet="0"
           columns_tablet="2"
           position="relative"
@@ -142,8 +142,8 @@ const Home = (props) => {
             top="90px"
             width_tablet="160px"
             height_tablet="152px"
-            width="75px"
-            height="70px"
+            width="100px"
+            height="100px"
           >
             <Icon icon="logo-badge" width="100%" height="100%" />
           </Div>
@@ -298,6 +298,8 @@ const Home = (props) => {
             ) : (
               <StyledBackgroundSection
                 height_tablet="723px"
+                display_tablet="block"
+                display="none"
                 height="390px"
                 width="100%"
                 image={

@@ -2,6 +2,24 @@ pricing_error: En este momento no estan disponibles los precios para
 pricing_error_contact: Para más información por favor contáctanos a info@4geeksacademy.com.
 get_notified: Pregunta por nuestras Becas. Siempre estamos trabajando y aliándonos para poder ofrecerte mejores opciones. Contáctanos para más información.
 top_label: sede
+recomended: Recomendado
+select: Selecciona el plan que mejor se ajusta a ti
+apply_button: 
+  label: APLICAR
+  link: /es/aplica
+not_available: Programa no disponible
+chart_section:
+  title: '4Geeks: Cuando pagar deja de ser una preocupación'
+  legend:
+    - percentage: '76%'
+      color: '#00A0DA'
+      description: 'de nuestros graduados recibió una beca total o parcial gracias a nuestras opciones de pago integrales.'
+    - percentage: '46%'
+      color: '#FFF'
+      description: 'de nuestros estudiantes son mujeres'
+    - percentage: '24%'
+      color: '#FFC718'
+      description: 'de nuestros estudiantes son parte de la comunidad afrodescendiente'
 button:
   button_text: See plans and prices
   button_link: "/es/financiacion"
