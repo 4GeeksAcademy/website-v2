@@ -301,7 +301,11 @@ const PricesAndPaymentsV2 = (props) => {
           <Paragraph>{props.paragraph}</Paragraph>
         </Div>
       </GridContainer>
-      <GridContainer margin="0 0 70px 0" margin_tablet="0 0 50px 0" margin_xs="0 0 30px 0">
+      <GridContainer
+        margin="0 0 70px 0"
+        margin_tablet="0 0 50px 0"
+        margin_xs="0 0 30px 0"
+      >
         <Div
           flexDirection_tablet="row"
           flexDirection="column"
@@ -364,7 +368,12 @@ const PricesAndPaymentsV2 = (props) => {
           </Link>
         </Div>
       </GridContainer>
-      <Div display="block" position="relative" minHeight_tablet="600px" padding_md="20px">
+      <Div
+        display="block"
+        position="relative"
+        minHeight_tablet="600px"
+        padding_md="20px"
+      >
         <Div
           id="chart-section"
           background="#000"

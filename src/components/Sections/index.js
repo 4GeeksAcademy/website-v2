@@ -145,6 +145,7 @@ export const Div = styled.div`
   min-height: ${(props) => props.minHeight};
   position: ${(props) => props.position};
   top: ${(props) => props.top};
+  right: ${(props) => props.right};
   left: ${(props) => props.left};
   display: ${(props) => props.display || "flex"};
   flex-direction: ${(props) => props.flexDirection || "row"};
@@ -156,6 +157,9 @@ export const Div = styled.div`
   border-radius: ${(props) => props.borderRadius};
   background: ${(props) =>
     props.isActive ? props.backgroundActive : props.background};
+  background-image: url(${(props) => props.bgImage});
+  background-size: ${(props) => props.bgSize};
+  background-repeat: ${(props) => props.bgRepeat};
   border-left: ${(props) =>
     props.isActive ? props.borderLeftActive : props.borderLeft};
   border-top: ${(props) => props.borderTop};
@@ -214,6 +218,8 @@ export const Div = styled.div`
     border-bottom: ${(props) => props.borderBottom_xs};
     border-left: ${(props) => props.borderLeft_xs};
     align-content: ${(props) => props.alignContent_xs};
+    top: ${(props) => props.top_xs};
+    right: ${(props) => props.right_xs};
   }
   @media ${Devices.sm} {
     padding: ${(props) => props.padding_sm};
@@ -228,6 +234,8 @@ export const Div = styled.div`
     display: ${(props) => props.display_sm};
     order: ${(props) => props.order_sm};
     margin: ${(props) => props.margin_sm};
+    top: ${(props) => props.top_sm};
+    right: ${(props) => props.right_sm};
     border-radius: ${(props) => props.borderRadius_sm};
     max-width: ${(props) => props.maxWidth_sm};
     width: ${(props) => props.width_sm};
@@ -270,6 +278,8 @@ export const Div = styled.div`
       props.flexShrink_tablet ? props.flexShrink_tablet : 1};
     border: ${(props) => props.border_tablet};
     border-top: ${(props) => props.borderTop_tablet};
+    top: ${(props) => props.top_tablet};
+    right: ${(props) => props.right_tablet};
     border-right: ${(props) => props.borderRight_tablet};
     border-bottom: ${(props) => props.borderBottom_tablet};
     border-radius: ${(props) => props.borderRadius_tablet};
@@ -291,7 +301,11 @@ export const Div = styled.div`
     flex: ${(props) =>
       props.size_md ? `0 0 ${(props.size_md / 12) * 100}%` : null};
     max-width: ${(props) =>
-      props.maxWidth_md ? props.maxWidth_md : props.size_md ? `${(props.size_md / 12) * 100}%` : null};
+      props.maxWidth_md
+        ? props.maxWidth_md
+        : props.size_md
+        ? `${(props.size_md / 12) * 100}%`
+        : null};
     min-width: ${(props) => props.minWidth_md};
     grid-area: ${(props) => props.gridArea_md};
     display: ${(props) => props.display_md};
@@ -318,11 +332,10 @@ export const Div = styled.div`
     justifycontent: ${(props) =>
       justifyContentOptions[props.justifyContent_lg]};
     padding: ${(props) => props.padding_lg};
-    max-width: ${(props) => props.maxWidth_lg };
+    max-width: ${(props) => props.maxWidth_lg};
     min-width: ${(props) => props.minWidth_lg};
     left: ${(props) => props.left_lg};
     margin: ${(props) => props.margin_lg};
-
   }
   @media ${Devices.xl} {
   }

@@ -233,6 +233,7 @@ export const StyledBackgroundSection = styled(BackgroundSection)`
   max-width: ${(props) => props.maxWidth};
   min-height: ${(props) => props.minHeight};
   flex-shrink: ${(props) => props.flexShrink};
+  display: ${(props) => props.display};
   &:before,
   &:after {
     min-height: ${(props) => props.minHeight};
@@ -255,6 +256,7 @@ export const StyledBackgroundSection = styled(BackgroundSection)`
     border-radius: ${(props) => props.borderRadius_tablet};
     height: ${(props) => props.height_tablet};
     width: ${(props) => props.width_tablet || "100%"};
+    display: ${(props) => props.display_tablet};
     &:before,
     &:after {
       border-radius: ${(props) => props.borderRadius_tablet};

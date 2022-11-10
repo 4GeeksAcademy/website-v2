@@ -85,7 +85,6 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
   }
 };
 
-
 //
 // Create all the pages needed
 exports.createPages = async (params) =>
