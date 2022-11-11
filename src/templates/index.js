@@ -40,7 +40,6 @@ import About4Geeks from "../components/About4Geeks";
 import OurPartners from "../components/OurPartners";
 import ChooseYourProgram from "../components/ChooseYourProgram";
 import Testimonials from "../components/Testimonials";
-import ReactPlayer from "../components/ReactPlayer";
 
 const SVGBubblesLeft = () => (
   <svg
@@ -281,17 +280,12 @@ const Home = (props) => {
                   margin="auto"
                   zIndex="2"
                 >
-                  <ReactPlayer
-                    thumb={yml.header_data.video.thumb}
-                    id={yml.header_data.video.path}
+                  <iframe
+                    src={yml.header_data.video}
+                    allow="camera *; microphone *; autoplay *; encrypted-media *; fullscreen *; display-capture *;"
+                    width="100%"
                     height="100%"
-                    imageHeight="100%"
-                    videoHeight="100%"
-                    style={{
-                      width: "100%",
-                      height: "100%",
-                      borderRadius: "11px",
-                    }}
+                    style={{border: 'none', borderRadius: '24px'}}
                   />
                 </Div>
               </Div>
@@ -400,22 +394,7 @@ export const query = graphql`
             bullets
             join_button_text
             free_button_text
-            video {
-              path
-              thumb {
-                childImageSharp {
-                  gatsbyImageData(
-                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                    width: 500
-                    quality: 100
-                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
-                  )
-                  # fluid(maxWidth: 150){
-                  #   ...GatsbyImageSharpFluid_withWebp
-                  # }
-                }
-              }
-            }
+            video
             image {
               childImageSharp {
                 gatsbyImageData(
