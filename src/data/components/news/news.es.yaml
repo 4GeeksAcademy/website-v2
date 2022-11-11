@@ -75,3 +75,43 @@ news:
     location: ["el-nacional"]
     url: "https://www.analitica.com/emprendimiento/noti-tips/4geeks-academy-una-academia-para-desarrolladores-web/"
     image: "../../../../static/images/news/analitica_grey.png"
+  - name: "Berliner Kurier"
+    location: ["downtown-miami"]
+    url: "https://www.berliner-kurier.de/berlin/vom-pizzaboten-zum-it-ueberflieger-wie-jose-im-berliner-it-bootcamp-durchstartete-li.271508"
+    image: "../../../../static/images/news/berliner-kurier.png"
+  - name: "Cosmopolitan"
+    location: ["downtown-miami"]
+    url: "https://www.cosmopolitan.com/es/consejos-planes/trabajo-estudios/g40240978/carreras-universitarias-mas-salidas/"
+    image: "../../../../static/images/news/cosmopolitan.png"
+  - name: "Diario ABC"
+    location: ["downtown-miami"]
+    url: "https://www.abc.es/economia/abci-fuga-trabajadores-digitales-aqui-distinto-espana-valoran-mas-capacidad-experiencia-202206112253_noticia.html"
+    image: "../../../../static/images/news/diario-abc.png"
+  - name: "Diario Las Americas"
+    location: ["downtown-miami"]
+    url: "https://www.diariolasamericas.com/economia/4geeks-academy-la-escuela-que-ensena-aprender-programacion-y-desarrollo-software-n4173792"
+    image: "../../../../static/images/news/diario-las-americas.png"
+  - name: "Emprendedores"
+    location: ["downtown-miami"]
+    url: "https://www.emprendedores.es/ideas-de-negocio/4-geeks-academy/"
+    image: "../../../../static/images/news/emprendedores.png"
+  - name: "Forbes"
+    location: ["downtown-miami"]
+    url: "https://www.forbes.com/advisor/education/become-a-web-developer/"
+    image: "../../../../static/images/news/forbes.png"
+  - name: "La Vanguardia"
+    location: ["downtown-miami"]
+    url: "https://www.lavanguardia.com/vida/formacion/20220128/8018044/que-es-bootcamp-puedes-convertirte-programador-16-semanas-mgt.html"
+    image: "../../../../static/images/news/la-vanguardia.png"
+  - name: "Refresh Miami"
+    location: ["downtown-miami"]
+    url: "https://refreshmiami.com/4geeks-academy-aims-to-help-make-miami-a-top-spot-for-ai-innovation/"
+    image: "../../../../static/images/news/refresh-miami.png"
+  - name: "South Florida Business Journal"
+    location: ["downtown-miami"]
+    url: "https://www.bizjournals.com/southflorida/news/2022/07/29/meet-the-40-under-40-class-of-2022.html"
+    image: "../../../../static/images/news/south-florida-business-journal.png"
+  - name: "The Miami Herald"
+    location: ["downtown-miami"]
+    url: "https://www.miamiherald.com/news/business/article263937731.html"
+    image: "../../../../static/images/news/the-miami-herald.png"
