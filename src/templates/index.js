@@ -285,7 +285,7 @@ const Home = (props) => {
                     allow="camera *; microphone *; autoplay *; encrypted-media *; fullscreen *; display-capture *;"
                     width="100%"
                     height="100%"
-                    style={{border: 'none', borderRadius: '24px'}}
+                    style={{ border: "none", borderRadius: "24px" }}
                   />
                 </Div>
               </Div>
