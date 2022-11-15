@@ -17,9 +17,9 @@ header_data:
     - Learn everywhere, all the time, you choose the methodology.
   join_button_text: JOIN A PROGRAM
   free_button_text: FREE TRIAL
-  video:
-    thumb: "../../../static/images/bg/video-thumb.png"
-    path: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
+  #If it doesn't have a video it will show the image
+  #It must be a video from videoaks
+  video: "https://www.videoask.com/fm984j5nz"
   image: "../../../static/images/bg/new-main-home-bg.png"
 
 news:
