@@ -1,8 +1,7 @@
 ## DATA TO CHANGE THE IMAGES IN THE NEWS SECTION IN THE HOME PAGE
 news:
   - name: "CNN"
-    location:
-      ["santiago-chile", "online", "downtown-miami", "caracas-venezuela"]
+    location: ["santiago-chile", "online", "downtown-miami", "caracas-venezuela"]
     url: "https://www.facebook.com/4GeeksAcademyCL/videos/492034597993382/"
     image: "../../../../static/images/news/cnn.png"
   - name: "NBC"
