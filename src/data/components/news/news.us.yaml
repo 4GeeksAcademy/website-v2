@@ -1,5 +1,34 @@
 ## DATA TO CHANGE THE IMAGES IN THE NEWS SECTION IN THE HOME PAGE
 news:
+  - name: "CNN"
+    location:
+      ["santiago-chile", "online", "downtown-miami", "caracas-venezuela"]
+    url: "https://www.facebook.com/4GeeksAcademyCL/videos/492034597993382/"
+    image: "../../../../static/images/news/cnn.png"
+  - name: "NBC"
+    location: ["downtown-miami"]
+    url: "https://www.nbcmiami.com/on-air/as-seen-on/students-with-autism-learn-to-code_miami/159640/"
+    image: "../../../../static/images/news/nbc_grey.png"
+  - name: "Forbes"
+    location: ["downtown-miami"]
+    url: "https://www.forbes.com/advisor/education/become-a-web-developer/"
+    image: "../../../../static/images/news/forbes.png"
+  - name: "ABC"
+    location: ["downtown-miami"]
+    url: "https://www.abc.es/economia/abci-fuga-trabajadores-digitales-aqui-distinto-espana-valoran-mas-capacidad-experiencia-202206112253_noticia.html"
+    image: "../../../../static/images/news/diario-abc.png"
+  - name: "The Miami Herald"
+    location: ["downtown-miami"]
+    url: "https://www.miamiherald.com/news/business/article263937731.html"
+    image: "../../../../static/images/news/the-miami-herald.png"
+  - name: "South Florida Business Journal"
+    location: ["downtown-miami"]
+    url: "https://www.bizjournals.com/southflorida/news/2022/07/29/meet-the-40-under-40-class-of-2022.html"
+    image: "../../../../static/images/news/south-florida-business-journal.png"
+  - name: "Refresh Miami"
+    location: ["downtown-miami"]
+    url: "https://refreshmiami.com/4geeks-academy-aims-to-help-make-miami-a-top-spot-for-ai-innovation/"
+    image: "../../../../static/images/news/refresh-miami.png"
   - name: "Newsweek"
     location:
       [
@@ -11,15 +40,26 @@ news:
       ]
     url: "https://www.newsweek.com/insights/coding-career-and-you-top-coding-schools-2017/4geeks-academy"
     image: "../../../../static/images/news/newsweek_grey.png"
-  - name: "CNN Español"
-    location:
-      ["santiago-chile", "online", "downtown-miami", "caracas-venezuela"]
-    url: "https://www.facebook.com/4GeeksAcademyCL/videos/492034597993382/"
-    image: "../../../../static/images/news/cnn-chile_grey.png"
-  - name: "NBC"
+  - name: "Berliner Kurier"
     location: ["downtown-miami"]
-    url: "https://www.nbcmiami.com/on-air/as-seen-on/students-with-autism-learn-to-code_miami/159640/"
-    image: "../../../../static/images/news/nbc_grey.png"
+    url: "https://www.berliner-kurier.de/berlin/vom-pizzaboten-zum-it-ueberflieger-wie-jose-im-berliner-it-bootcamp-durchstartete-li.271508"
+    image: "../../../../static/images/news/berliner-kurier.png"
+  - name: "Las Americas"
+    location: ["downtown-miami"]
+    url: "https://www.diariolasamericas.com/economia/4geeks-academy-la-escuela-que-ensena-aprender-programacion-y-desarrollo-software-n4173792"
+    image: "../../../../static/images/news/diario-las-americas.png"
+  - name: "Emprendedores"
+    location: ["downtown-miami"]
+    url: "https://www.emprendedores.es/ideas-de-negocio/4-geeks-academy/"
+    image: "../../../../static/images/news/emprendedores.png"
+  - name: "La Vanguardia"
+    location: ["downtown-miami"]
+    url: "https://www.lavanguardia.com/vida/formacion/20220128/8018044/que-es-bootcamp-puedes-convertirte-programador-16-semanas-mgt.html"
+    image: "../../../../static/images/news/la-vanguardia.png"
+  - name: "Cosmopolitan"
+    location: ["downtown-miami"]
+    url: "https://www.cosmopolitan.com/es/consejos-planes/trabajo-estudios/g40240978/carreras-universitarias-mas-salidas/"
+    image: "../../../../static/images/news/cosmopolitan.png"
   - name: "La Razón"
     location: ["madrid-spain"]
     image: "../../../../static/images/news/larazon_grey.png"
@@ -53,7 +93,7 @@ news:
     url: "https://www.emol.com/noticias/Economia/2019/02/15/937929/Pueden-ganar-1-millon-sin-tener-experiencia-y-hay-deficit-de-expertos-El-perfil-de-los-programadores-en-Chile.html"
     image: "../../../../static/images/news/logo_emol_grey.png"
   - name: "El Nuevo Herald"
-    location: ["downtown-miami", "online", "caracas-venezuela", "costa-rica"]
+    location: ["online", "caracas-venezuela", "costa-rica"]
     url: "https://www.elnuevoherald.com/noticias/finanzas/acceso-miami/article228797629.html"
     image: "../../../../static/images/news/elnuevoherald_grey.png"
   - name: "El Universal Venezuela"
@@ -68,43 +108,3 @@ news:
     location: ["caracas-venezuela"]
     url: "https://www.analitica.com/emprendimiento/noti-tips/4geeks-academy-una-academia-para-desarrolladores-web/"
     image: "../../../../static/images/news/analitica_grey.png"
-  - name: "Berliner Kurier"
-    location: ["downtown-miami"]
-    url: "https://www.berliner-kurier.de/berlin/vom-pizzaboten-zum-it-ueberflieger-wie-jose-im-berliner-it-bootcamp-durchstartete-li.271508"
-    image: "../../../../static/images/news/berliner-kurier.png"
-  - name: "Cosmopolitan"
-    location: ["downtown-miami"]
-    url: "https://www.cosmopolitan.com/es/consejos-planes/trabajo-estudios/g40240978/carreras-universitarias-mas-salidas/"
-    image: "../../../../static/images/news/cosmopolitan.png"
-  - name: "Diario ABC"
-    location: ["downtown-miami"]
-    url: "https://www.abc.es/economia/abci-fuga-trabajadores-digitales-aqui-distinto-espana-valoran-mas-capacidad-experiencia-202206112253_noticia.html"
-    image: "../../../../static/images/news/diario-abc.png"
-  - name: "Diario Las Americas"
-    location: ["downtown-miami"]
-    url: "https://www.diariolasamericas.com/economia/4geeks-academy-la-escuela-que-ensena-aprender-programacion-y-desarrollo-software-n4173792"
-    image: "../../../../static/images/news/diario-las-americas.png"
-  - name: "Emprendedores"
-    location: ["downtown-miami"]
-    url: "https://www.emprendedores.es/ideas-de-negocio/4-geeks-academy/"
-    image: "../../../../static/images/news/emprendedores.png"
-  - name: "Forbes"
-    location: ["downtown-miami"]
-    url: "https://www.forbes.com/advisor/education/become-a-web-developer/"
-    image: "../../../../static/images/news/forbes.png"
-  - name: "La Vanguardia"
-    location: ["downtown-miami"]
-    url: "https://www.lavanguardia.com/vida/formacion/20220128/8018044/que-es-bootcamp-puedes-convertirte-programador-16-semanas-mgt.html"
-    image: "../../../../static/images/news/la-vanguardia.png"
-  - name: "Refresh Miami"
-    location: ["downtown-miami"]
-    url: "https://refreshmiami.com/4geeks-academy-aims-to-help-make-miami-a-top-spot-for-ai-innovation/"
-    image: "../../../../static/images/news/refresh-miami.png"
-  - name: "South Florida Business Journal"
-    location: ["downtown-miami"]
-    url: "https://www.bizjournals.com/southflorida/news/2022/07/29/meet-the-40-under-40-class-of-2022.html"
-    image: "../../../../static/images/news/south-florida-business-journal.png"
-  - name: "The Miami Herald"
-    location: ["downtown-miami"]
-    url: "https://www.miamiherald.com/news/business/article263937731.html"
-    image: "../../../../static/images/news/the-miami-herald.png"
