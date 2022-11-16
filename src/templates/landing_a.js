@@ -16,6 +16,7 @@ import BaseRender from "./_baseLandingLayout";
 import { processFormEntry } from "../actions";
 import { SessionContext } from "../session.js";
 import LandingContainer from "../components/LandingContainer";
+import Marquee_v2 from "../components/Marquee_v2";
 
 const Landing = (props) => {
   const { session, setLocation } = React.useContext(SessionContext);
@@ -271,50 +272,42 @@ const Landing = (props) => {
               </Paragraph>
             )}
             {yml.short_badges && (
-              <Div
-                // className="badge-slider hideOverflowX__"
-                display="flex"
-                borderTop="1px solid #A4A4A4"
-                flexDirection="row"
-                width="320px"
-                width_tablet="100%"
-                className="set-overflow"
-                margin="25px 0 0 0"
-                padding="24px 0 0 0"
-                maxWidth="100vw"
-                gap="40px"
-                overflowX="auto"
-                justifyContent="between"
-                // justifyContent="center"
-                // alignItems="center"
+              <Marquee_v2
+                speed={1.5}
+                reversed={false}
+                containerstyle={{
+                  height: "160px",
+                  width: "100%",
+                }}
               >
-                {yml.short_badges.map((l, i) => {
-                  return (
-                    i <= 3 && (
-                      <React.Fragment key={i}>
+                <Div
+                  className="badge-slider"
+                  justifyContent="center"
+                  padding="44px 0"
+                >
+                  {Array.isArray(yml.short_badges) &&
+                    yml.short_badges.map((l, i) => {
+                      return (
                         <GatsbyImage
+                          key={i}
+                          draggable={false}
                           style={{
                             height: "65px",
                             minWidth: "165px",
                             width: "165px",
                           }}
-                          imgStyle={{
-                            objectFit: "contain",
-                          }}
-                          loading="eager"
-                          // draggable={false}
-                          // fadeIn={false}
-                          alt={l.name}
+                          imgStyle={{ objectFit: "contain" }}
+                          alt={l.alt}
+                          // fluid={l.image != null && l.image.childImageSharp.fluid}
                           image={getImage(
-                            l.image.childImageSharp.gatsbyImageData
+                            l.image != null &&
+                              l.image.childImageSharp.gatsbyImageData
                           )}
-                          // fluid={l.image.childImageSharp.fluid}
                         />
-                      </React.Fragment>
-                    )
-                  );
-                })}
-              </Div>
+                      );
+                    })}
+                </Div>
+              </Marquee_v2>
             )}
           </Div>
           <Div

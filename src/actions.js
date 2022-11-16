@@ -28,6 +28,9 @@ export const defaultSession = {
     utm_source: undefined,
     utm_medium: undefined,
     utm_content: undefined,
+    utm_plan: undefined,
+    utm_placement: undefined,
+    utm_term: undefined,
     referral_code: undefined,
   },
 };
@@ -196,6 +199,8 @@ export const apply = async (data, session) => {
   const automation = body.automation || "strong";
 
   const action = "submit";
+  console.log("process.env.GOOGLE_CAPTCHA_KEY");
+  console.log(process.env.GOOGLE_CAPTCHA_KEY);
   let token = await getToken(action);
 
   if (!session || !session.utm || !session.utm.utm_test)

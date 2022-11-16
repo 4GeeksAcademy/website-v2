@@ -301,7 +301,7 @@ const Landing = (props) => {
                 color={
                   Colors[yml.features.button.color] || yml.features.button.color
                 }
-                padding_tablet="0"
+                // padding_tablet="0"
                 fontSize="15px"
                 style={
                   yml.features.button.style

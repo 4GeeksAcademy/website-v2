@@ -37,7 +37,7 @@ const VideoWrapper = styled.section`
 const Iframe = styled(YouTube)`
   padding: 0;
   border-radius: ${(props) => props.borderRadius || "auto"};
-  height: ${(props) => props.height};
+  height: ${(props) => props.height || "100%"};
 `;
 
 const Thumbnail = styled.img`
@@ -94,6 +94,8 @@ const Player = ({
   With_Modal,
   imageWidth,
   imageWidth_tablet,
+  imageHeight,
+  videoHeight,
   switched,
   ...rest
 }) => {
@@ -121,7 +123,6 @@ const Player = ({
   // With_Modal
 
   useEffect(() => {
-    console.log(vid);
     if (vid.pauseVideo) {
       vid.pauseVideo();
     }
@@ -174,6 +175,7 @@ const Player = ({
               onStateChange={onStateChange}
               onPlaybackRateChange={onPlaybackRateChange}
               onPlaybackQualityChange={onPlaybackQualityChange}
+              // height={videoHeight}
               opts={{
                 width: "100%",
                 height: `${style.height}`,
@@ -190,6 +192,7 @@ const Player = ({
           width={imageWidth}
           width_tablet={imageWidth_tablet || "100%"}
           borderRadius="3px"
+          height={imageHeight}
         >
           {id && (
             <Play
