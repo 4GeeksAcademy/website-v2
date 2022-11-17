@@ -18,23 +18,30 @@ const MegaMenuContainer = styled(Div)`
   bottom: ${(props) => props.bottom};
   left: ${(props) => props.left};
   transform: ${(props) => props.transform};
+  /* .menu-item {
+    &:hover{
+      .megamenu-container{
+        display: block;
+      }
+    }
+  } */
 `;
 
 const Triangle = styled.div`
   position: absolute;
   width: 0;
   height: 0;
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
-  border-bottom: 20px solid white;
-  top: -20px;
+  border-left: 40px solid transparent;
+  border-right: 40px solid transparent;
+  border-bottom: 60px solid white;
+  top: -55px;
   left: ${(props) => props.left};
 `;
 const MegaMenuPositions = [
   {
     top: "",
     left: "",
-    leftTriangle: "30%",
+    leftTriangle: "23%",
     width: "100%",
     margin: "0 0 50px 0",
   },
@@ -104,6 +111,11 @@ const MenuItem = styled.li`
   margin: 0 0.5rem;
   text-align: center;
   font-family: lato, sans-serif;
+  &:hover{
+    .megamenu-container{
+      display: block;
+    }
+  }
 `;
 
 export const Navbar = ({
@@ -223,6 +235,7 @@ export const Navbar = ({
                       itemIndex: index,
                     })
                   }
+                  className="menu-item"
                 >
                   <H3
                     type="h3"
@@ -238,10 +251,21 @@ export const Navbar = ({
                     )}
                   </H3>
                   {index !== menu.length - 1 && <Icon icon="arrowdown" />}
+                  <MegaMenu
+                    key={item.name}
+                    index={index}
+                    status={{
+                      ...status,
+                      toggle: !status.toggle,
+                      itemIndex: index,
+                    }}
+                    setStatus={setStatus}
+                    menu={menu} 
+                  />
                 </MenuItem>
               );
             })}
-          <MegaMenu status={status} setStatus={setStatus} menu={menu} />
+          {/* <MegaMenu status={status} setStatus={setStatus} menu={menu} /> */}
         </Menu>
         <Div alignItems="center" justifyContent="between">
           <Link
@@ -350,13 +374,14 @@ const CampusMenu = ({ status, setStatus, menu }) => {
   );
 };
 
-export const MegaMenu = ({ status, setStatus, menu }) => {
+export const MegaMenu = ({ status, setStatus, menu, index }) => {
   return (
     <>
-      {status.toggle &&
+      {
         status.itemIndex !== null &&
         status.itemIndex !== menu.length - 1 && (
           <MegaMenuContainer
+            className="megamenu-container"
             onMouseLeave={() => {
               setStatus({ ...status, hovered: false });
               setTimeout(() => {
@@ -366,7 +391,8 @@ export const MegaMenu = ({ status, setStatus, menu }) => {
                 }));
               }, 300);
             }}
-            display="block"
+            display={index === 0 ? "block" : "none"}
+            // display="none"
             maxHeight="500px"
             background="white"
             transform={MegaMenuPositions[status.itemIndex].transform}
