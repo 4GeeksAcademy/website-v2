@@ -200,7 +200,7 @@ const ProgramDetails = (props) => {
               />
             </ContainerStyle>
             <Div margin="50px 0">
-              <Icon icon="laptop" width="52px" height="39px" />
+              <Icon style={{ flexShrink: 0 }} icon="laptop" width="52px" height="39px" />
               <Div flexDirection="column" margin="0 0 0 15px">
                 <H3 textAlign="left">
                   {props.details.details_modules[selected.index].title}
