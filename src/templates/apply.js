@@ -46,7 +46,7 @@ const Apply = (props) => {
   }
 
   const { data, pageContext, yml } = props;
-  const { session } = useContext(SessionContext);
+  const { session, setSession } = useContext(SessionContext);
   const [formStatus, setFormStatus] = useState({
     status: "idle",
     msg: "Apply",
@@ -71,6 +71,7 @@ const Apply = (props) => {
   const [regionVal, setRegionVal] = useState(null);
   const [showPhoneWarning, setShowPhoneWarning] = useState(false);
   const [showModal, setShowModal] = useState(false);
+
   const regions = [
     { label: trans[pageContext.lang]["Latin America"], value: "latam" },
     { label: trans[pageContext.lang]["USA & Canada"], value: "usa-canada" },

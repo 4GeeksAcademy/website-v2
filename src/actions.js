@@ -28,6 +28,9 @@ export const defaultSession = {
     utm_source: undefined,
     utm_medium: undefined,
     utm_content: undefined,
+    utm_plan: undefined,
+    utm_placement: undefined,
+    utm_term: undefined,
     referral_code: undefined,
   },
 };

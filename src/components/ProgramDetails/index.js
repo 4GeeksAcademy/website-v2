@@ -137,14 +137,6 @@ const ProgramDetails = (props) => {
             })}
         </Div>
       </GridContainer>
-      <GridContainer>
-        <Div
-          height="7px"
-          background="#F5F5F5"
-          margin="30px 0"
-          margin_tablet="40px 0"
-        />
-      </GridContainer>
       {props.withoutAnimation !== true && (
         <GridContainer
           padding_tablet="0"

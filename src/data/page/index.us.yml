@@ -11,11 +11,20 @@ header_data:
   tagline: Coding Bootcamp
   title: Empower Your Life With Coding Skills
   sub_heading: Lifetime Coding Mentorship, endless Career Support, and a tech-driven community of developers.
-  image: "../../../static/images/bg/main-home-bg.png"
+  bullets:
+    - Lifetime Coding Mentorship, endless Career Support, and a tech-driven community of developers.
+    - 'Job Guarantee: get a job within the next 6 months upon graduation or money back'
+    - Learn everywhere, all the time, you choose the methodology.
+  join_button_text: JOIN A PROGRAM
+  free_button_text: FREE TRIAL
+  #If it doesn't have a video it will show the image
+  #It must be a video from videoaks
+  video: "https://www.videoask.com/fm984j5nz"
+  image: "../../../static/images/bg/new-main-home-bg.png"
 
 news:
   heading: "Read about this coding bootcamp in the news..."
-  limit: 4
+  limit: 7
 button:
   button_text: See Programs
   button_link: "#programs"
