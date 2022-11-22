@@ -9,6 +9,7 @@ image: "https://storage.googleapis.com/4geeks-academy-website/blog/2019/03/MAIN-
 image_alt: ""
 cluster: "full-stack"
 status: "published"
+visibility: "unlisted"
 featured: true # featured must be a boolean value
 
 ---
