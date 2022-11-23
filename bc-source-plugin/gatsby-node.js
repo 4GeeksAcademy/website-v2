@@ -33,7 +33,7 @@ exports.sourceNodes = async (
       template: content.data.template || "post",
       author: post.authors_username,
       date: post.updated_at,
-      excerpt: post.description || '',
+      excerpt: post.description || "",
       cluster:
         Array.isArray(post.clusters) && post.clusters.length > 0
           ? post.clusters[0]
