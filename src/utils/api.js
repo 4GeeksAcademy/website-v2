@@ -17,7 +17,8 @@ const options = {
 const getAllAssets = async () => {
   try {
     const _resp = await axios.get(
-      GATSBY_BREATHECODE_HOST + `/registry/academy/asset?category=blog-es,blog-us`,
+      GATSBY_BREATHECODE_HOST +
+        `/registry/academy/asset?category=blog-es,blog-us`,
       options
     );
     if (_resp.status != 200) {
@@ -26,8 +27,11 @@ const getAllAssets = async () => {
     }
     return _resp.data;
   } catch (e) {
-    console.log("Error fetching blogposts from the breathecode API: ", e)
-    logger.error("Error fetching blogposts from the breathecode API: ", e.toString());
+    console.log("Error fetching blogposts from the breathecode API: ", e);
+    logger.error(
+      "Error fetching blogposts from the breathecode API: ",
+      e.toString()
+    );
     return [];
   }
 };
@@ -44,10 +48,9 @@ const getSingleAsset = async (slug) => {
       throw new Error(_resp.data);
     }
     return _resp.data.map(async (a) => {
-      try{
+      try {
         a.content = await getContent(a.slug);
-      }
-      catch(e){
+      } catch (e) {
         a.content = `<p>Error fetching content</p>`;
       }
       return a;
@@ -61,7 +64,7 @@ const getSingleAsset = async (slug) => {
 const getContent = async (slug) => {
   logger.debug(`Fetching markdown for article: ${slug}`);
 
-  if(!slug || typeof(slug) === 'undefined') return null;
+  if (!slug || typeof slug === "undefined") return null;
   try {
     const _resp = await axios.get(
       GATSBY_BREATHECODE_HOST + `/registry/asset/${slug}.raw`,

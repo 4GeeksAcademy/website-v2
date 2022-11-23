@@ -2,7 +2,7 @@ const path = require("path");
 const fs = require("fs");
 const YAML = require("yaml");
 const { createFilePath } = require(`gatsby-source-filesystem`);
-const bcSourcePlugin = require(`./bc-source-plugin/gatsby-node.js`)
+const bcSourcePlugin = require(`./bc-source-plugin/gatsby-node.js`);
 
 var redirects = [];
 var ymls = [];
@@ -21,13 +21,19 @@ const saveRedirectLogs = () => {
   return true;
 };
 
-exports.sourceNodes = ({ actions, createNodeId, createContentDigest }, config) => {
-  bcSourcePlugin.sourceNodes({ actions, createNodeId, createContentDigest }, config);
-}
+exports.sourceNodes = (
+  { actions, createNodeId, createContentDigest },
+  config
+) => {
+  bcSourcePlugin.sourceNodes(
+    { actions, createNodeId, createContentDigest },
+    config
+  );
+};
 
 exports.onCreateNode = ({ node, getNode, actions, ...rest }) => {
   const { createNodeField } = actions;
-  
+
   // custom post types for the website
   if (
     [
@@ -70,19 +76,18 @@ exports.onCreateNode = ({ node, getNode, actions, ...rest }) => {
       "With4GeeksYaml",
     ].includes(node.internal.type)
   ) {
-
     let url = null;
-    if(node.internal.type == 'MarkdownRemark') url = `/data/blog/${node.id}.md`
+    if (node.internal.type == "MarkdownRemark")
+      url = `/data/blog/${node.slug}.md`;
     else url = createFilePath({ node, getNode });
 
     const meta = getMetaFromPath({ url, ...node });
-    
-    if(node.internal.type == 'MarkdownRemark'){
-      if(!node.frontmatter){
-        console.log(`Node ${node.slug} has not frontmatter`)
-      }
-      else{
-        console.log(`frontmatter found for`,meta)
+
+    if (node.internal.type == "MarkdownRemark") {
+      if (!node.frontmatter) {
+        console.log(`Node ${node.slug} has not frontmatter`);
+      } else {
+        console.log(`No frontmatter found for`, meta.slug);
       }
     }
 
@@ -162,7 +167,7 @@ const createBlog = async ({ actions, graphql }) => {
           node {
             html
             id
-            frontmatter{
+            frontmatter {
               excerpt
               title
               slug
