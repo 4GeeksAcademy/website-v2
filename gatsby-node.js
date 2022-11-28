@@ -1,7 +1,7 @@
 const path = require("path");
 const fs = require("fs");
 const YAML = require("yaml");
-const logger = require("./src/utils/log")
+const logger = require("./src/utils/log");
 const { createFilePath } = require(`gatsby-source-filesystem`);
 const bcSourcePlugin = require(`./bc-source-plugin/gatsby-node.js`);
 
@@ -78,17 +78,17 @@ exports.onCreateNode = ({ node, getNode, actions, ...rest }) => {
     ].includes(node.internal.type)
   ) {
     let url = null;
-    if (node.internal.type == "MarkdownRemark"){
-      const slug = node.frontmatter?.slug.replace(/\.[a-z]{2,2}/, "")
-      url = `/data/blog/${slug}.${node.frontmatter?.lang || 'us'}/`;
+    if (node.internal.type == "MarkdownRemark") {
+      const slug = node.frontmatter?.slug.replace(/\.[a-z]{2,2}/, "");
+      url = `/data/blog/${slug}.${node.frontmatter?.lang || "us"}/`;
       logger.debug(`${node.frontmatter != undefined} .... ${url}`);
-    }
-    else url = createFilePath({ node, getNode });
+    } else url = createFilePath({ node, getNode });
 
     const meta = getMetaFromPath({ url, ...node });
 
     if (node.internal.type == "MarkdownRemark") {
-      if (!node.frontmatter) logger.error(`Node ${node.slug} has no frontmatter`)
+      if (!node.frontmatter)
+        logger.error(`Node ${node.slug} has no frontmatter`);
     }
 
     // add properties to the graph
@@ -263,7 +263,7 @@ const createBlog = async ({ actions, graphql }) => {
 
   // Iterate through each post, putting all found tags into `tags`
   posts.forEach(({ node }) => {
-    if (node.frontmatter?.cluster){
+    if (node.frontmatter?.cluster) {
       //logger.debug(`${node.fields.slug}.${node.fields.lang} -> ${node.frontmatter.cluster}`)
       clusters[node.fields.lang] = clusters[node.fields.lang].concat(
         node.frontmatter.cluster
@@ -271,7 +271,7 @@ const createBlog = async ({ actions, graphql }) => {
     }
   });
 
-  logger.debug(clusters)
+  logger.debug(clusters);
   // Eliminate duplicate clusters
   Object.keys(clusters).forEach(
     (lang) =>
@@ -616,7 +616,7 @@ const getMetaFromPath = ({ url, meta_info, frontmatter }) => {
       : "post";
   const type = frontmatter ? _cluster : m[1];
 
-  logger.debug(`${url} === lang: ${m[3]}`)
+  logger.debug(`${url} === lang: ${m[3]}`);
   const lang = m[3] || "us";
   const customSlug =
     meta_info !== undefined && typeof meta_info.slug === "string";
