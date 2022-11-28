@@ -12,11 +12,7 @@ const onCreateBlogLangSwitcher = async () => {
   let posts = [];
 
   try {
-    const resp = await API.getAllAssets();
-    if (resp.status != 200) {
-      fail(`Error reading the location files with code ${resp.status}`);
-      return;
-    } else posts = resp.data;
+    posts = await API.getAllAssets();
   } catch (err) {
     fail("Error reading the location files: ", err);
     return;
