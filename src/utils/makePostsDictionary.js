@@ -10,27 +10,24 @@ const onCreateBlogLangSwitcher = async () => {
   const langUS = [];
   const All_dictionary = [];
   let posts = [];
-  
-  try{
+
+  try {
     const resp = await API.getAllAssets();
     if (resp.status != 200) {
-      fail("Error reading the location files: ", await resp.data);
+      fail(`Error reading the location files with code ${resp.status}`);
       return;
-    }
-    else posts = resp.data;
-  }
-  catch(err){
+    } else posts = resp.data;
+  } catch (err) {
     fail("Error reading the location files: ", err);
     return;
   }
-  
-  
+
   const blog_ES_US = [];
   const blog_US_ES = [];
   for (let i = 0; i < posts.length; i++) {
     const post = posts[i];
     const lang = post.lang;
-    const cluster = post.clusters.length > 0 ? post.clusters[0] : '';
+    const cluster = post.clusters.length > 0 ? post.clusters[0] : "";
     const slug = post.slug;
     if (lang === "es") langES.push([`/${lang}/${cluster}/${slug}`]);
     else langUS.push([`/${lang}/${cluster}/${slug}`]);
