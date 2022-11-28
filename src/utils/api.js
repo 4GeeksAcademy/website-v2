@@ -1,4 +1,5 @@
 const axios = require("axios");
+const logger = require("./log");
 
 const {
   GATSBY_BREATHECODE_HOST,
@@ -13,36 +14,71 @@ const options = {
   },
 };
 
-const getPosts = async () => {
-  const result = await axios.get(
-    GATSBY_BREATHECODE_HOST +
-      "/registry/academy/asset?category=blog-es,blog-us",
-    options
-  );
-  if (result.status != 200) {
-    console.log(result.data);
-    throw new Error("Error fetching blog posts from blog at 4Geeks.com");
+const getAllAssets = async () => {
+  try {
+    const _resp = await axios.get(
+      GATSBY_BREATHECODE_HOST +
+        `/registry/academy/asset?category=blog-es,blog-us`,
+      options
+    );
+    if (_resp.status != 200) {
+      logger.error(`Status: ${_resp.status}`);
+      throw new Error(_resp.data);
+    }
+    return _resp.data;
+  } catch (e) {
+    console.log("Error fetching blogposts from the breathecode API: ", e);
+    logger.error(
+      "Error fetching blogposts from the breathecode API: ",
+      e.toString()
+    );
+    return [];
   }
+};
 
-  return result.data;
+const getSingleAsset = async (slug) => {
+  try {
+    logger.debug(`Fetching article: ${slug}`);
+    const _resp = await axios.get(
+      GATSBY_BREATHECODE_HOST + `/registry/asset/${slug}`,
+      options
+    );
+    if (_resp.status != 200) {
+      logger.error(_resp.data);
+      throw new Error(_resp.data);
+    }
+    return _resp.data.map(async (a) => {
+      try {
+        a.content = await getContent(a.slug);
+      } catch (e) {
+        a.content = `<p>Error fetching content</p>`;
+      }
+      return a;
+    });
+  } catch (e) {
+    logger.error("Error: ", e.toString());
+    return false;
+  }
 };
 
 const getContent = async (slug) => {
+  logger.debug(`Fetching markdown for article: ${slug}`);
+
+  if (!slug || typeof slug === "undefined") return null;
   try {
-    console.log(`Fetching lesson: ${slug}`);
     const _resp = await axios.get(
       GATSBY_BREATHECODE_HOST + `/registry/asset/${slug}.raw`,
       options
     );
     if (_resp.status != 200) {
-      console.error(_resp.data);
+      logger.error(_resp.data);
       throw new Error(_resp.data);
     }
     return _resp.data;
   } catch (e) {
-    console.error("Error: ", e.toString());
+    logger.error("Error: ", e.toString());
     return false;
   }
 };
 
-module.exports = { getPosts, getContent };
+module.exports = { getContent, getSingleAsset, getAllAssets };
