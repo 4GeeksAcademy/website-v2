@@ -88,17 +88,9 @@ module.exports = {
       options: {
         plugins: [
           {
-            resolve: `gatsby-remark-images`,
-            options: {
-              maxWidth: 800,
-              loading: "lazy",
-            },
-          },
-          {
             resolve: "gatsby-remark-component",
             options: { components: ["button", "call-to-action"] },
           },
-          `gatsby-remark-lazy-load`,
           {
             resolve: "gatsby-remark-external-links",
             options: {
@@ -121,7 +113,6 @@ module.exports = {
         ],
       },
     },
-    // 'gatsby-plugin-force-trailing-slashes',
     "gatsby-plugin-loadable-components-ssr",
     {
       resolve: "gatsby-plugin-rollbar",
