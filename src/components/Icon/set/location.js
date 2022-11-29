@@ -13,5 +13,4 @@ export default (props) => (
       fill={props.color || "black"}
     />
   </svg>
-
 );

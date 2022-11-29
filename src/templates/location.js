@@ -76,28 +76,17 @@ const Location = ({ data, pageContext, yml }) => {
           padding="0 25px"
           gridColumn_tablet="1 / 7"
         >
-          <H1
-            type="h1"
-            textAlign="left"
-            margin="0 0 11px 0"
-            color="#606060"
-          >
+          <H1 type="h1" textAlign="left" margin="0 0 11px 0" color="#606060">
             {yml.seo_title}
           </H1>
-          <H2
-            textAlign="left"
-            fontSize="50px"
-            lineHeight="60px"
-          >
+          <H2 textAlign="left" fontSize="50px" lineHeight="60px">
             {`${yml.header.tagline}`}
           </H2>
-          <H3
-            textAlign="left"
-            type="h3"
-            margin="15px 0 25px 0"
-          >
+          <H3 textAlign="left" type="h3" margin="15px 0 25px 0">
             {yml.header.sub_header}
-            <span style={{ color: Colors.blue }}>{yml.header.sub_header_highlighted}</span>
+            <span style={{ color: Colors.blue }}>
+              {yml.header.sub_header_highlighted}
+            </span>
           </H3>
           <ChooseProgram
             goTo={goToChooseProgram}
@@ -115,7 +104,10 @@ const Location = ({ data, pageContext, yml }) => {
             margin="15px 0 0 0"
             margin_tablet="26px 0 0 0"
           >
-            <Icon icon="location" style={{ marginRight: "10px", flexShrink: 0 }} />
+            <Icon
+              icon="location"
+              style={{ marginRight: "10px", flexShrink: 0 }}
+            />
             <Paragraph
               textAlign="left"
               opacity="1"
@@ -126,14 +118,21 @@ const Location = ({ data, pageContext, yml }) => {
               {yml.info_box.address}
               <Link
                 target="_blank"
-                to={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(yml.info_box.address)}`}
+                to={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+                  yml.info_box.address
+                )}`}
                 style={{ marginLeft: "5px", display: "inline" }}
               >
                 {yml.info_box.watch_on_maps}
               </Link>
             </Paragraph>
           </Div>
-          <Div display_tablet="flex" display="block" margin_tablet="0" margin="0 0 20px 0">
+          <Div
+            display_tablet="flex"
+            display="block"
+            margin_tablet="0"
+            margin="0 0 20px 0"
+          >
             <Paragraph
               textAlign_tablet="left"
               margin="15px 10px 0 0"
@@ -146,7 +145,10 @@ const Location = ({ data, pageContext, yml }) => {
               maxWidth="155px"
               flexShrink="0"
             >
-              <Icon icon="phone" style={{ marginRight: "10px", flexShrink: 0 }} />
+              <Icon
+                icon="phone"
+                style={{ marginRight: "10px", flexShrink: 0 }}
+              />
               {yml.phone}
             </Paragraph>
             <Paragraph
@@ -159,11 +161,14 @@ const Location = ({ data, pageContext, yml }) => {
               fontWeight="700"
               lineHeight="22px"
             >
-              <Icon icon="mail" style={{ marginRight: "10px", flexShrink: 0 }} />
+              <Icon
+                icon="mail"
+                style={{ marginRight: "10px", flexShrink: 0 }}
+              />
               {yml.info_box.email}
             </Paragraph>
           </Div>
-          
+
           {/* <Paragraph textAlign_tablet="left">{yml.info_box.phone} </Paragraph>
           {yml.info_box.whatsapp && (
             <Paragraph
