@@ -112,21 +112,42 @@ details:
       slug: "python-intro"
       duration: "2 wks"
       step: 2
-    - module_name: "Data"
+    - module_name: "Fundamentals"
+      title: "Statistics and Lineal Algebra with Python"
+      description: "Use python to write code that reviews and applies the most used Lineal Algebra concepts, Matrix and Vectors, F(x), and the relation functions have between variables. We will also be coding the most used concepts in probabilities understanding core trends, standard deviation, mean median and mode. Finally, we will calculate the probability of an event happening: This is a very important skill used to build prediction models that we will be using further along."
+      projects: "We will provide you with a list of real life problems and solutions for the different concepts, you will use python to solve them."
+      slug: "datascience-fundamentals"
+      duration: "2 wks"
+      step: 2
+    - module_name: "Collect"
       title: "Data Science for AI"
       description: "We don’t simply train you in Data Science, we prepare you for Data Science in the Age of AI. Leveraging Python, we take you through Data Analysis & Visualizations, Database Management & Workflow, Applied Linear Algebra with Statistical Inference and Modeling. You’ll end this module by delivering a complete project where you need to apply data cleaning, data analysis, and prediction models on real-world datasets."
       projects: "Loading structured and unstructured data from different sources (e.g. SQL, Web Scraping, text files), exploring data, cleaning data, transforming data, visualizing data, analyzing and extracting insights, and inferential and test statistics."
       slug: "data-science"
-      duration: "4 wks"
-      step: 4
-    - module_name: "Machine L."
+      duration: "2 wks"
+      step: 2
+    - module_name: "Clean"
+      title: "Data Science for AI"
+      description: "We don’t simply train you in Data Science, we prepare you for Data Science in the Age of AI. Leveraging Python, we take you through Data Analysis & Visualizations, Database Management & Workflow, Applied Linear Algebra with Statistical Inference and Modeling. You’ll end this module by delivering a complete project where you need to apply data cleaning, data analysis, and prediction models on real-world datasets."
+      projects: "Loading structured and unstructured data from different sources (e.g. SQL, Web Scraping, text files), exploring data, cleaning data, transforming data, visualizing data, analyzing and extracting insights, and inferential and test statistics."
+      slug: "data-science"
+      duration: "2 wks"
+      step: 2
+    - module_name: "Model"
       title: "Practical Machine Learning"
       description: "On a nearly weekly basis, you will be taking a deep dive into all the major subjects of Machine Learning. We start you with Machine Learning with Python, then take you through Supervised Learning, Training & Evaluation of ML Models, Unsupervised Learning, in addition to Ensemble Learning. To wrap up the module, you’ll be developing an end-to-end project that compares different Machine Learning models on a real-world dataset"
       projects: "Selecting a problem that can be solved with ML, defining the ML type (regression, classification, or unsupervised learning), load data, pre-process data (handling missing data, encoding categorical features), create pipelines, splitting data for test and training, train multiple models, dealing with overfitting issue, compare models and select the best model using cross-validation, analyzing the results."
       slug: "machine-learning"
-      duration: "6 wks"
-      step: 6
+      duration: "4 wks"
+      step: 4
     - module_name: "Deploy & Maint."
+      title: "A.I. In Production"
+      description: "One of the most important aspects of developing Artificial Intelligence solutions is understanding how to prepare, deploy, and manage the solution in a Production Environment. We walk you through developing an AI Strategy, Machine Learning Lifecycle of development and deployment, Machine Learning Operations (MLOps), as well as Privacy, Security, and Ethics. Your final project will be to deploy your AI solution into production."
+      projects: "Building data architectures, deploying AI models into production both on-premiss and on cloud, monitoring and maintenance of the models"
+      slug: "quality-deploy"
+      duration: "1 wks"
+      step: 1
+    - module_name: "Final Project"
       title: "A.I. In Production"
       description: "One of the most important aspects of developing Artificial Intelligence solutions is understanding how to prepare, deploy, and manage the solution in a Production Environment. We walk you through developing an AI Strategy, Machine Learning Lifecycle of development and deployment, Machine Learning Operations (MLOps), as well as Privacy, Security, and Ethics. Your final project will be to deploy your AI solution into production."
       projects: "Building data architectures, deploying AI models into production both on-premiss and on cloud, monitoring and maintenance of the models"

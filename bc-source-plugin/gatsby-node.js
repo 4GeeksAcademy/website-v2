@@ -1,6 +1,7 @@
 const API = require("../src/utils/api");
 const matter = require("gray-matter");
 const POST_NODE_TYPE = "Post";
+const logger = require("../src/utils/log");
 
 const {
   GATSBY_BREATHECODE_HOST,
@@ -20,8 +21,20 @@ exports.sourceNodes = async (
     en: "trends-and-tech",
   };
 
+  // let posts = await cache.get(`blog_posts`);
+  // if(!Array.isArray(posts)){
+  //   posts = await API.getAllAssets();
+  //   await cache.set(`blog_posts`, posts)
+  // }
   const posts = await API.getAllAssets();
-  posts.forEach(async (post) => {
+
+  logger.debug(
+    `${posts.length} posts found, starting to parse them into markdown remark nodes`
+  );
+
+  for (let i = 0; i < posts.length; i++) {
+    let post = posts[i];
+
     let content = await API.getContent(post.slug);
     content = matter(content);
 
@@ -34,7 +47,7 @@ exports.sourceNodes = async (
       visibility: post.visibility.toLowerCase(),
       template: content.data.template || "post",
       author: post.authors_username,
-      date: post.updated_at,
+      date: post.updated_at.substring(0, 10),
       excerpt: post.description || "",
       cluster:
         Array.isArray(post.clusters) && post.clusters.length > 0
@@ -42,20 +55,25 @@ exports.sourceNodes = async (
           : defaultCluster[post.lang],
     };
 
-    content = matter.stringify(content.content || content, frontMatter);
+    const newContent = matter.stringify(
+      content.content || content,
+      frontMatter
+    );
 
     createNode({
-      ...post,
-      frontMatter,
+      // slug: post.slug,
+      frontmatter: frontMatter,
       id: createNodeId(`${POST_NODE_TYPE}-${post.id}`), // hashes the inputs into an ID
       parent: null,
       children: [],
       internal: {
-        content,
+        content: newContent,
         type: POST_NODE_TYPE,
         mediaType: "text/markdown",
         contentDigest: createContentDigest(post),
       },
     });
-  });
+  }
+
+  return true;
 };
