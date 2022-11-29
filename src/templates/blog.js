@@ -218,7 +218,7 @@ const Blog = ({ data, pageContext, yml }) => {
             padding="45px 0px 40px 0px"
             style={{ zIndex: 1, flexWrap: "wrap" }}
           >
-            {yml.topics.map((topic, i) => {
+            {pageContext.clusters?.map((topic, i) => {
               return (
                 <Link
                   key={`${i}-${topic}`}
