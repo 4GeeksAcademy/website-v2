@@ -12,7 +12,7 @@ const levels = {
 };
 
 const logger = winston.createLogger({
-  level: "debug",
+  // level: "debug",
   format: winston.format.json(),
 
   defaultMeta: { service: "user-service" },
@@ -30,6 +30,10 @@ const logger = winston.createLogger({
       dirname,
       filename: "debug.log",
       level: "debug",
+    }),
+    new winston.transports.File({
+      dirname,
+      filename: "combined.log",
     }),
   ],
 });
