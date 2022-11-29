@@ -267,9 +267,8 @@ const Landing = (props) => {
                 // textShadow="0px 0px 4px black"
                 textAlign="left"
                 color={Colors.white}
-              >
-                {yml.features.text}
-              </Paragraph>
+                dangerouslySetInnerHTML={{ __html: yml.features.text }}
+              />
             )}
             {yml.short_badges && (
               <Marquee_v2
