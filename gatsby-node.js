@@ -29,7 +29,7 @@ exports.sourceNodes = async (
   return await bcSourcePlugin.sourceNodes(
     { actions, createNodeId, createContentDigest },
     config
-    );  
+  );
 };
 exports.onCreateNode = ({ node, getNode, actions, ...rest }) => {
   const { createNodeField } = actions;
@@ -78,13 +78,10 @@ exports.onCreateNode = ({ node, getNode, actions, ...rest }) => {
   ) {
     let url = null;
     if (node.internal.type == "MarkdownRemark") {
-      
-      console.log("frontmatter", node.frontmatter)
       // skip without formatting
-      if(!node.frontmatter){
-        logger.error("Missing frontmatter on node: "+node.id)
-      };
-
+      if (!node.frontmatter) {
+        logger.error("Missing frontmatter on node: " + node.id);
+      }
 
       const slug = node.frontmatter.slug.replace(/\.[a-z]{2,2}/, "");
       url = `/data/blog/${slug}.${node.frontmatter.lang || "us"}/`;
@@ -101,9 +98,8 @@ exports.onCreateNode = ({ node, getNode, actions, ...rest }) => {
       createNodeField({ node, name: `pagePath`, value: meta.pagePath });
       createNodeField({ node, name: `filePath`, value: url });
       ymls.push(meta);
-    }
-    else{
-      logger.error("No meta could be generated for "+url)
+    } else {
+      logger.error("No meta could be generated for " + url);
     }
   }
 
@@ -202,8 +198,8 @@ const createBlog = async ({ actions, graphql }) => {
       }
     }
   `);
-  if (result.errors){
-    logger.error(result.errors)
+  if (result.errors) {
+    logger.error(result.errors);
     throw new Error(result.errors);
   }
 

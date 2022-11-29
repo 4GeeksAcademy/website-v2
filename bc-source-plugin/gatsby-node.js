@@ -13,7 +13,6 @@ exports.sourceNodes = async (
   { actions, createNodeId, createContentDigest },
   config
 ) => {
-
   const { createNode } = actions;
   // let clusters = {};
   const defaultCluster = {
@@ -29,9 +28,11 @@ exports.sourceNodes = async (
   // }
   const posts = await API.getAllAssets();
 
-  logger.debug(`${posts.length} posts found, starting to parse them into markdown remark nodes`)
+  logger.debug(
+    `${posts.length} posts found, starting to parse them into markdown remark nodes`
+  );
 
-  for(let i = 0; i < posts.length; i++){
+  for (let i = 0; i < posts.length; i++) {
     let post = posts[i];
 
     let content = await API.getContent(post.slug);
@@ -46,7 +47,7 @@ exports.sourceNodes = async (
       visibility: post.visibility.toLowerCase(),
       template: content.data.template || "post",
       author: post.authors_username,
-      date: post.updated_at.substring(0,10),
+      date: post.updated_at.substring(0, 10),
       excerpt: post.description || "",
       cluster:
         Array.isArray(post.clusters) && post.clusters.length > 0
@@ -54,7 +55,10 @@ exports.sourceNodes = async (
           : defaultCluster[post.lang],
     };
 
-    const newContent = matter.stringify(content.content || content, frontMatter);
+    const newContent = matter.stringify(
+      content.content || content,
+      frontMatter
+    );
 
     createNode({
       // slug: post.slug,
@@ -69,8 +73,7 @@ exports.sourceNodes = async (
         contentDigest: createContentDigest(post),
       },
     });
-  };
+  }
 
   return true;
-
 };
