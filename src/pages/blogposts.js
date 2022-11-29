@@ -66,8 +66,8 @@ const BlogPosts = () => (
                 status
                 featured
                 cluster
+                excerpt
               }
-              excerpt
               fields {
                 lang
                 slug
