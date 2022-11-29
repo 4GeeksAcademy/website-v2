@@ -8,12 +8,13 @@ import ChooseYourProgram from "../components/ChooseYourProgram";
 import UpcomingDates from "../components/UpcomingDates";
 import Staff from "../components/Staff";
 import "dayjs/locale/de";
+import Link from "gatsby-link";
 import {
   Div,
   GridContainerWithImage,
   GridContainer,
 } from "../components/Sections";
-import { H1, H2, Paragraph } from "../components/Heading";
+import { H1, H2, H3, Paragraph } from "../components/Heading";
 import { Colors, StyledBackgroundSection } from "../components/Styling";
 import BaseRender from "./_baseLayout";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
@@ -63,36 +64,107 @@ const Location = ({ data, pageContext, yml }) => {
   return (
     <>
       <GridContainerWithImage
-        padding="75px 0 0 0"
+        padding="0"
         padding_tablet="0 0 20px 0"
         columns_tablet="14"
-        margin={isCustomBarActive(session) ? "130px 0 24px 0" : "70px 0"}
+        margin={isCustomBarActive(session) ? "70px 0 24px 0" : "70px 0"}
       >
         <Div
           flexDirection="column"
-          alignItems="center"
-          alignItems_tablet="start"
           justifyContent_tablet="start"
           padding_tablet="70px 0 0 0"
+          padding="0 25px"
           gridColumn_tablet="1 / 7"
         >
           <H1
             type="h1"
-            textAlign_tablet="left"
+            textAlign="left"
             margin="0 0 11px 0"
             color="#606060"
           >
             {yml.seo_title}
           </H1>
           <H2
-            textAlign_tablet="left"
+            textAlign="left"
             fontSize="50px"
             lineHeight="60px"
-          >{`${yml.header.tagline}`}</H2>
-          <Paragraph textAlign_tablet="left" margin="26px 0">
-            {yml.info_box.address}{" "}
-          </Paragraph>
-          <Paragraph textAlign_tablet="left">{yml.info_box.phone} </Paragraph>
+          >
+            {`${yml.header.tagline}`}
+          </H2>
+          <H3
+            textAlign="left"
+            type="h3"
+            margin="15px 0 25px 0"
+          >
+            {yml.header.sub_header}
+            <span style={{ color: Colors.blue }}>{yml.header.sub_header_highlighted}</span>
+          </H3>
+          <ChooseProgram
+            goTo={goToChooseProgram}
+            right="15px"
+            top="40px"
+            textAlign="center"
+            textAlign_tablet="left"
+            openLabel={data.allChooseProgramYaml.edges[0].node.open_button_text}
+            closeLabel={
+              data.allChooseProgramYaml.edges[0].node.open_button_text
+            }
+          />
+          <Div
+            alignItems="flex-start"
+            margin="15px 0 0 0"
+            margin_tablet="26px 0 0 0"
+          >
+            <Icon icon="location" style={{ marginRight: "10px", flexShrink: 0 }} />
+            <Paragraph
+              textAlign="left"
+              opacity="1"
+              fontWeight="700"
+              lineHeight="22px"
+              width="100%"
+            >
+              {yml.info_box.address}
+              <Link
+                target="_blank"
+                to={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(yml.info_box.address)}`}
+                style={{ marginLeft: "5px", display: "inline" }}
+              >
+                {yml.info_box.watch_on_maps}
+              </Link>
+            </Paragraph>
+          </Div>
+          <Div display_tablet="flex" display="block" margin_tablet="0" margin="0 0 20px 0">
+            <Paragraph
+              textAlign_tablet="left"
+              margin="15px 10px 0 0"
+              margin_tablet="26px 10px 0 0"
+              opacity="1"
+              display="flex"
+              alignItems="center"
+              fontWeight="700"
+              lineHeight="22px"
+              maxWidth="155px"
+              flexShrink="0"
+            >
+              <Icon icon="phone" style={{ marginRight: "10px", flexShrink: 0 }} />
+              {yml.phone}
+            </Paragraph>
+            <Paragraph
+              textAlign_tablet="left"
+              margin="15px 0 0 0"
+              margin_tablet="26px 0 0 0"
+              opacity="1"
+              display="flex"
+              alignItems="center"
+              fontWeight="700"
+              lineHeight="22px"
+            >
+              <Icon icon="mail" style={{ marginRight: "10px", flexShrink: 0 }} />
+              {yml.info_box.email}
+            </Paragraph>
+          </Div>
+          
+          {/* <Paragraph textAlign_tablet="left">{yml.info_box.phone} </Paragraph>
           {yml.info_box.whatsapp && (
             <Paragraph
               justifyContent="center"
@@ -127,18 +199,7 @@ const Location = ({ data, pageContext, yml }) => {
           )}
           <Paragraph textAlign_tablet="left" margin="0 0 30px 0">
             {yml.info_box.email}{" "}
-          </Paragraph>
-          <ChooseProgram
-            goTo={goToChooseProgram}
-            right="15px"
-            top="40px"
-            textAlign="center"
-            textAlign_tablet="left"
-            openLabel={data.allChooseProgramYaml.edges[0].node.open_button_text}
-            closeLabel={
-              data.allChooseProgramYaml.edges[0].node.open_button_text
-            }
-          />
+          </Paragraph> */}
         </Div>
         <Div
           height="auto"
@@ -147,9 +208,11 @@ const Location = ({ data, pageContext, yml }) => {
           style={{ position: "relative" }}
         >
           <StyledBackgroundSection
-            height={`495px`}
+            height_tablet="495px"
+            height_sm="280px"
+            height="180px"
             image={yml.header.image.childImageSharp.gatsbyImageData}
-            bgSize={`contain`}
+            bgSize="contain"
             alt={yml.header.alt}
           />
         </Div>
@@ -274,10 +337,15 @@ export const query = graphql`
           active_campaign_location_slug
           name
           breathecode_location_slug
+          latitude
+          longitude
+          phone
           header {
             tagline
             paragraph
             sub_heading
+            sub_header
+            sub_header_highlighted
             image {
               childImageSharp {
                 gatsbyImageData(
@@ -325,6 +393,7 @@ export const query = graphql`
             contact_heading
             whatsapp
             whatsapp_link
+            watch_on_maps
             image {
               childImageSharp {
                 gatsbyImageData(
