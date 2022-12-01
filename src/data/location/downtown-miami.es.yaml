@@ -77,10 +77,7 @@ images_box:
     - path: "../../../static/images/locations/miami-old2.jpg"
       alt: "4Geeeks miami lab"
 
-## HEADING SECTION
-hasFinancialsOption: true
-# financials_max_months: ["6 mo", "12 mo", "24 mo", "36 mo", "42 mo", "60 mo"]
-financials_max_months: ["60 mo", "42 mo", "36 mo", "24 mo", "12 mo", "6 mo"]
+## PRICES SECTION
 prices:
   full_stack:
     full_time:
@@ -97,7 +94,7 @@ prices:
           payment_time: "Pay today"
           price: "$4999"
           bullets: 
-            - "You’re saving $4000 USD "
+            - "You're saving $4000 USD "
             - "9% of your salary until paid in full, only if you get a job in tech."
           icons: 
             - "/images/landing/uwm_pantone_2021_2.png"
@@ -131,91 +128,8 @@ prices:
           payment_time: "Pay today"
           price: "$8099"
           bullets: 
-            - "You’re saving $1000 USD"
-      left_section:
-        header:
-          heading_one: "PAGAS SÓLO DESPUÉS"
-          heading_two: "DE CONSEGUIR TRABAJO"
-          sub_heading: "y hablemos del Income Share Agreement"
-        content:
-          price: "9% del salario"
-          price_info: "hasta pagarlo completo, sólo si consigues trabajo en tech"
-        button:
-          button_text: "APLICA"
+            - "You're saving $1000 USD"
 
-        ## USE THIS SECTION TO CHANGE THE SLIDER FINANCIAL OPTIONS IN THE CENTER BOX
-      center_section:
-        header:
-          heading_one: "Plan de Pagos Extendidos"
-          # heading_two: "PAYMENT PLAN"
-          sub_heading: "y disfruta el mejor precio de la ciudad"
-        plans:
-          - months: "60 months"
-            monthsInfo: "Financiados"
-            payment: "$214.74"
-            paymentInfo: "por mes + $0 deposit"
-            provider: "Skill Fund - Climb"
-            logo: "/images/climb-and-skillfund.png"
-            message: "Gracias a Skills Fund y Climb hemos podido ofrecerte el plan de pago más bajo de la ciudad"
-          - months: "42 months"
-            monthsInfo: "Financiados"
-            payment: "$314.10"
-            paymentInfo: "por mes + $0 deposit"
-            provider: "Climb"
-            logo: "/images/climb-logo.png"
-            message: "Thanks to our partnership with Climb we have managed to create the most flexible placement plan in town"
-          - months: "36 months"
-            monthsInfo: "Financiados"
-            payment: "$314.10"
-            paymentInfo: "por mes + $0 deposit"
-            provider: "Skill Fund"
-            logo: "/images/skill-logo.png"
-            message: "Gracias a nuestro partnership con Skills Fund podemos ofrecer un nuevo plan de pago"
-          - months: "24 months"
-            monthsInfo: "Financiados"
-            payment: "$408.06"
-            paymentInfo: "por mes + 1,500 deposit"
-            provider: "Quotanda"
-            logo: "/images/quotanda-logo.png"
-            message: "Gracias a nuestro partnership con Quotanda hemos logrado crear el plan de pago más flexible de la ciudad"
-          - months: "12 months"
-            monthsInfo: "Financiados"
-            payment: "$755.13"
-            paymentInfo: "por mes + 1,500 deposit"
-            provider: "Quotanda"
-            logo: "/images/quotanda-logo.png"
-            message: "Gracias a nuestro partnership con Quotanda hemos logrado crear el plan de pago más flexible de la ciudad"
-          - months: "6 months"
-            monthsInfo: "Financiados"
-            payment: "$1,449.73"
-            paymentInfo: "por mes + 1,500 deposit"
-            provider: "Quotanda"
-            logo: "/images/quotanda-logo.png"
-            message: "Gracias a nuestro partnership con Quotanda hemos logrado crear el plan de pago más flexible de la ciudad"
-        button:
-          button_text: "APLICA"
-      ## RIGHT BOX SECTION
-      ## CHANGE HERE THE INFO IN THE RIGHT BOX
-      right_section:
-        header:
-          heading_one: DE CONTADO
-          heading_two: "(OUT OF POCKET)"
-          sub_heading: "y disfruta el mejor precio de la ciudad"
-        content:
-          price: "$9,999.00"
-          price_info: "una sola quota"
-        button:
-          button_text: "APLICA"
-      scholarship:
-        header:
-          heading_one: Scholarships
-          heading_two: ""
-          sub_heading: ""
-        content:
-          price: "$4,499.00"
-          price_info: "una sola cuota, con el mejor precio del mercado"
-        button:
-          button_text: "APLICAR AHORA"
     ## *****************
     ## PART-TIME SECTION
     ## *****************
@@ -223,8 +137,6 @@ prices:
       slug: "part-time"
       duration: "16 Weeks"
 
-      ## LEFT BOX SECTION PART-TIME
-      ## CHANGE HERE THE INFO IN THE LEFT BOX
       plans:
         - slug: 'plan-1'
           recomended: true
@@ -232,7 +144,7 @@ prices:
           payment_time: "Pay today"
           price: "$4999"
           bullets: 
-            - "You’re saving $4000 USD "
+            - "You're saving $4000 USD "
             - "9% of your salary until paid in full, only if you get a job in tech."
           icons: 
             - "/images/landing/uwm_pantone_2021_2.png"
@@ -266,288 +178,199 @@ prices:
           payment_time: "Pay today"
           price: "$8099"
           bullets: 
-            - "You’re saving $1000 USD"
-      left_section:
-        header:
-          heading_one: "PAGAS SÓLO DESPUÉS"
-          heading_two: "DE CONSEGUIR TRABAJO"
-          sub_heading: "y hablemos del Income Share Agreement"
-        content:
-          price: "9% del salario"
-          price_info: "hasta pagarlo completo, sólo si consigues trabajo en tech"
-        button:
-          button_text: "APLICA"
-
-      ## USE THIS SECTION TO CHANGE THE SLIDER FINANCIAL OPTIONS IN THE CENTERED BOX
-      center_section:
-        header:
-          heading_one: "Plan de Pagos Extendidos"
-          # heading_two: "PAYMENT PLAN"
-          sub_heading: "y disfruta el mejor precio de la ciudad"
-        plans:
-          - months: "60 meses"
-            monthsInfo: "Financiados"
-            payment: "$169.53"
-            paymentInfo: "por mes + $0 deposit"
-            provider: "Skill Fund - Climb"
-            logo: "/images/skill-logo.png"
-            message: "Gracias a Skills Fund y Climb hemos podido ofrecerte el plan de pago más bajo de la ciudad"
-          - months: "42 meses"
-            monthsInfo: "Financiados"
-            payment: "$314.10"
-            paymentInfo: "por mes + $0 deposit"
-            provider: "Climb"
-            logo: "/images/climb-logo.png"
-            message: "Gracias a nuestro partnership con Quotanda hemos logrado crear el plan de pago más flexible de la ciudad"
-          - months: "36 meses"
-            monthsInfo: "Financiados"
-            payment: "$247.97"
-            paymentInfo: "por mes + $0 deposit"
-            provider: "Skill Fund"
-            logo: "/images/skill-logo.png"
-            message: "Gracias a nuestro partnership con Skills Fund podemos ofrecer un nuevo plan de pago"
-          - months: "24 meses"
-            monthsInfo: "Financiados"
-            payment: "$312.04"
-            paymentInfo: "por mes + 1,500 deposit"
-            provider: "Quotanda"
-            logo: "/images/quotanda-logo.png"
-            message: "Gracias a nuestro partnership con Quotanda hemos logrado crear el plan de pago más flexible de la ciudad"
-          - months: "12 meses"
-            monthsInfo: "Financiados"
-            payment: "$577.43"
-            paymentInfo: "por mes + 1,500 deposit"
-            provider: "Quotanda"
-            logo: "/images/quotanda-logo.png"
-            message: "Gracias a nuestro partnership con Quotanda hemos logrado crear el plan de pago más flexible de la ciudad"
-          - months: "6 meses"
-            monthsInfo: "Financiados"
-            payment: "$1,108.58"
-            paymentInfo: "por mes + 1,500 deposit"
-            provider: "Quotanda"
-            logo: "/images/quotanda-logo.png"
-            message: "Gracias a nuestro partnership con Quotanda hemos logrado crear el plan de pago más flexible de la ciudad"
-        button:
-          button_text: "Aplicar Ahora"
-      ## RIGHT BOX SECTION
-      ## CHANGE HERE THE INFO IN THE RIGHT BOX
-      right_section:
-        header:
-          heading_one: DE CONTADO
-          heading_two: "(OUT OF POCKET)"
-          sub_heading: "y disfruta el mejor precio de la ciudad"
-        content:
-          price: "$8,999.00"
-          price_info: "una sola quota"
-        button:
-          button_text: "Aplicar Ahora"
-
-      scholarship:
-        header:
-          heading_one: Scholorships
-          heading_two: ""
-          sub_heading: ""
-        content:
-          price: "$4,499.00"
-          price_info: "una sola cuota, con el mejor precio del mercado"
-        button:
-          button_text: "APLICAR AHORA"
+            - "You're saving $1000 USD"
 
   software_engineering:
-    # slug: "software-engineering"
-    # duration: "16 Weeks"
+
     part_time:
-      slug: "part_time"
+      slug: "part-time"
       duration: "16 Weeks"
 
-      ## LEFT BOX SECTION PART-TIME
-      ## CHANGE HERE THE INFO IN THE LEFT BOX
-      left_section:
-        header:
-          heading_one: "PAGA SÓLO DESPUÉS"
-          heading_two: "DE CONSEGUIR TRABAJO"
-          sub_heading: "y solamente mientras tengas trabajo"
-        content:
-          price: "9% de tu salario"
-          price_info: "hasta pagarlo completo, sólo si consigues trabajo en tech"
-        button:
-          button_text: "Aplicar Ahora"
+      plans:
+        - slug: 'plan-1'
+          recomended: true
+          scholarship: "Scolarship"
+          payment_time: "Pay today"
+          price: "$4999"
+          bullets: 
+            - "You're saving $4000 USD "
+            - "9% of your salary until paid in full, only if you get a job in tech."
+          icons: 
+            - "/images/landing/uwm_pantone_2021_2.png"
+        - slug: 'plan-2'
+          recomended: false
+          scholarship: "Financed"
+          payment_time: "24 months payment"
+          price: "$310"
+          bullets: 
+            - "With $400 p/ week living stipends"
+            - "9% of your salary until paid in full, only if you get a job in tech."
+          icons: 
+            - "/images/ascent_logo.jpg"
+            - "/images/climb-logo.png"
+            - "/images/quotanda-logo.png"
+        - slug: 'plan-3'
+          recomended: false
+          scholarship: "Income Share Agreement"
+          payment_time: "Pay after you get a job"
+          price: "$0"
+          bullets: 
+            - "With $400 p/ week living stipends"
+            - "9% of your salary until paid in full, only if you get a job in tech."
+          icons: 
+            - "/images/ascent_logo.jpg"
+            - "/images/climb-logo.png"
+            - "/images/quotanda-logo.png"
+        - slug: 'plan-4'
+          recomended: false
+          scholarship: "Full Payment"
+          payment_time: "Pay today"
+          price: "$8099"
+          bullets: 
+            - "You're saving $1000 USD"
 
-      ## USE THIS SECTION TO CHANGE THE SLIDER FINANCIAL OPTIONS IN THE CENTERED BOX
-      center_section:
-        header:
-          heading_one: "Plan de Pagos Extendidos"
-          # heading_two: "PAYMENT PLAN"
-          sub_heading: "paga en cuotas financiadas"
-        plans:
-          - months: "60 meses"
-            monthsInfo: "Financiados"
-            payment: "$269.53"
-            paymentInfo: "por mes + $0 deposito"
-            provider: "Skill Fund - Climb"
-            logo: "/images/skill-logo.png"
-            message: "Gracias a Skills Fund y Climb hemos podido ofrecerte el plan de pago más bajo de la ciudad"
-          - months: "42 meses"
-            monthsInfo: "Financiados"
-            payment: "$384.10"
-            paymentInfo: "por mes + $0 deposito"
-            provider: "Climb"
-            logo: "/images/climb-logo.png"
-            message: "Gracias a nuestro partnership con Quotanda hemos logrado crear el plan de pago más flexible de la ciudad"
-          - months: "36 meses"
-            monthsInfo: "Financiados"
-            payment: "$447.97"
-            paymentInfo: "por mes + $0 deposito"
-            provider: "Skill Fund"
-            logo: "/images/skill-logo.png"
-            message: "Gracias a nuestro partnership con Skills Fund podemos ofrecer un nuevo plan de pago"
-          - months: "24 meses"
-            monthsInfo: "Financiados"
-            payment: "$612.04"
-            paymentInfo: "por mes + 1,500 deposito"
-            provider: "Quotanda"
-            logo: "/images/quotanda-logo.png"
-            message: "Gracias a nuestro partnership con Quotanda hemos logrado crear el plan de pago más flexible de la ciudad"
-          - months: "12 meses"
-            monthsInfo: "Financiados"
-            payment: "$1277.43"
-            paymentInfo: "por mes + 1,500 deposito"
-            provider: "Quotanda"
-            logo: "/images/quotanda-logo.png"
-            message: "Gracias a nuestro partnership con Quotanda hemos logrado crear el plan de pago más flexible de la ciudad"
-          - months: "6 meses"
-            monthsInfo: "Financiados"
-            payment: "$2,508.58"
-            paymentInfo: "por mes + 1,500 deposito"
-            provider: "Quotanda"
-            logo: "/images/quotanda-logo.png"
-            message: "Gracias a nuestro partnership con Quotanda hemos logrado crear el plan de pago más flexible de la ciudad"
-        button:
-          button_text: "Aplicar Ahora"
-      ## RIGHT BOX SECTION
-      ## CHANGE HERE THE INFO IN THE RIGHT BOX
-      right_section:
-        header:
-          heading_one: "DE CONTADO"
-          heading_two: "(OUT OF POCKET)"
-          sub_heading: "el mejor precio de la ciudad"
-        content:
-          price: "$13,499.00"
-          price_info: "un sólo pago"
-        button:
-          button_text: "Aplicar Ahora"
 
     full_time:
       slug: "full_time"
       duration: "?"
 
-      left_section:
-        header:
-          heading_one: "Software Engineering"
-          heading_two: ""
-          sub_heading: ""
-        content:
-          price: "La modaliad Full-Time no esta disponible"
-          price_info: "Santiago - Chile"
-        button:
-          button_text: "Aplicar a otros cursos"
+      plans:
+        - slug: 'plan-1'
+          recomended: true
+          scholarship: "Scolarship"
+          payment_time: "Pay today"
+          price: "$4999"
+          bullets: 
+            - "You're saving $4000 USD "
+            - "9% of your salary until paid in full, only if you get a job in tech."
+          icons: 
+            - "/images/landing/uwm_pantone_2021_2.png"
+        - slug: 'plan-2'
+          recomended: false
+          scholarship: "Financed"
+          payment_time: "24 months payment"
+          price: "$310"
+          bullets: 
+            - "With $400 p/ week living stipends"
+            - "9% of your salary until paid in full, only if you get a job in tech."
+          icons: 
+            - "/images/ascent_logo.jpg"
+            - "/images/climb-logo.png"
+            - "/images/quotanda-logo.png"
+        - slug: 'plan-3'
+          recomended: false
+          scholarship: "Income Share Agreement"
+          payment_time: "Pay after you get a job"
+          price: "$0"
+          bullets: 
+            - "With $400 p/ week living stipends"
+            - "9% of your salary until paid in full, only if you get a job in tech."
+          icons: 
+            - "/images/ascent_logo.jpg"
+            - "/images/climb-logo.png"
+            - "/images/quotanda-logo.png"
+        - slug: 'plan-4'
+          recomended: false
+          scholarship: "Full Payment"
+          payment_time: "Pay today"
+          price: "$8099"
+          bullets: 
+            - "You're saving $1000 USD"
 
   machine_learning:
     part_time:
       slug: "part_time"
       duration: "18 Weeks"
 
-      ## LEFT BOX SECTION PART-TIME
-      ## CHANGE HERE THE INFO IN THE LEFT BOX
-      left_section:
-        header:
-          heading_one: "PAGAS SÓLO DESPUÉS"
-          heading_two: "DE CONSEGUIR TRABAJO"
-          sub_heading: "y solamente mientras tengas trabajo"
-        content:
-          price: "9% de tu salario"
-          price_info: "hasta pagarlo completo, sólo si consigues trabajo en tech"
-        button:
-          button_text: "Aplicar Ahora"
-
-      ## USE THIS SECTION TO CHANGE THE SLIDER FINANCIAL OPTIONS IN THE CENTERED BOX
-      center_section:
-        header:
-          heading_one: "EXTENDED"
-          heading_two: "PAYMENT PLAN"
-          sub_heading: "paga en cuotas financiadas"
-        plans:
-          - months: "60 mo"
-            monthsInfo: "Financiados"
-            payment: "$269.53"
-            paymentInfo: "mensual + $0 deposito"
-            provider: "Skill Fund - Climb"
-            logo: "/images/skill-logo.png"
-            message: "Gracias a Skills Fund y Climb hemos podido ofrecerte el plan de pago más bajo de la ciudad"
-          - months: "42 mo"
-            monthsInfo: "Financiados"
-            payment: "$384.10"
-            paymentInfo: "mensual + $0 deposito"
-            provider: "Climb"
-            logo: "/images/climb-logo.png"
-            message: "Gracias a nuestro partnership con Quotanda hemos logrado crear el plan de pago más flexible de la ciudad"
-          - months: "36 mo"
-            monthsInfo: "Financiados"
-            payment: "$447.97"
-            paymentInfo: "mensual + $0 deposito"
-            provider: "Skill Fund"
-            logo: "/images/skill-logo.png"
-            message: "Gracias a nuestro partnership con Skills Fund podemos ofrecer un nuevo plan de pago"
-          - months: "24 mo"
-            monthsInfo: "Financiados"
-            payment: "$612.04"
-            paymentInfo: "mensual + 1,500 deposito"
-            provider: "Quotanda"
-            logo: "/images/quotanda-logo.png"
-            message: "Gracias a nuestro partnership con Quotanda hemos logrado crear el plan de pago más flexible de la ciudad"
-          - months: "12 mo"
-            monthsInfo: "Financiados"
-            payment: "$1277.43"
-            paymentInfo: "mensual + 1,500 deposito"
-            provider: "Quotanda"
-            logo: "/images/quotanda-logo.png"
-            message: "Gracias a nuestro partnership con Quotanda hemos logrado crear el plan de pago más flexible de la ciudad"
-          - months: "6 mo"
-            monthsInfo: "Financiados"
-            payment: "$2,508.58"
-            paymentInfo: "mensual + 1,500 deposito"
-            provider: "Quotanda"
-            logo: "/images/quotanda-logo.png"
-            message: "Gracias a nuestro partnership con Quotanda hemos logrado crear el plan de pago más flexible de la ciudad"
-        button:
-          button_text: "Aplicar Ahora"
-      ## RIGHT BOX SECTION
-      ## CHANGE HERE THE INFO IN THE RIGHT BOX
-      right_section:
-        header:
-          heading_one: "DE CONTADO"
-          heading_two: "(OUT OF POCKET)"
-          sub_heading: "el mejor precio de la ciudad"
-        content:
-          price: "$11,499.00"
-          price_info: "un sólo pago"
-        button:
-          button_text: "Aplicar Ahora"
+      plans:
+        - slug: 'plan-1'
+          recomended: true
+          scholarship: "Scolarship"
+          payment_time: "Pay today"
+          price: "$4999"
+          bullets: 
+            - "You're saving $4000 USD "
+            - "9% of your salary until paid in full, only if you get a job in tech."
+          icons: 
+            - "/images/landing/uwm_pantone_2021_2.png"
+        - slug: 'plan-2'
+          recomended: false
+          scholarship: "Financed"
+          payment_time: "24 months payment"
+          price: "$310"
+          bullets: 
+            - "With $400 p/ week living stipends"
+            - "9% of your salary until paid in full, only if you get a job in tech."
+          icons: 
+            - "/images/ascent_logo.jpg"
+            - "/images/climb-logo.png"
+            - "/images/quotanda-logo.png"
+        - slug: 'plan-3'
+          recomended: false
+          scholarship: "Income Share Agreement"
+          payment_time: "Pay after you get a job"
+          price: "$0"
+          bullets: 
+            - "With $400 p/ week living stipends"
+            - "9% of your salary until paid in full, only if you get a job in tech."
+          icons: 
+            - "/images/ascent_logo.jpg"
+            - "/images/climb-logo.png"
+            - "/images/quotanda-logo.png"
+        - slug: 'plan-4'
+          recomended: false
+          scholarship: "Full Payment"
+          payment_time: "Pay today"
+          price: "$8099"
+          bullets: 
+            - "You're saving $1000 USD"
 
     full_time:
       slug: "full_time"
       duration: "?"
 
-      left_section:
-        header:
-          heading_one: "Machine Learning"
-          heading_two: ""
-          sub_heading: ""
-        content:
-          price: "La modalidad Full-Time no esta disponible"
-          price_info: "Santiago - Chile"
-        button:
-          button_text: "Aplicar a otros cursos"
+      plans:
+        - slug: 'plan-1'
+          recomended: true
+          scholarship: "Scolarship"
+          payment_time: "Pay today"
+          price: "$4999"
+          bullets: 
+            - "You're saving $4000 USD "
+            - "9% of your salary until paid in full, only if you get a job in tech."
+          icons: 
+            - "/images/landing/uwm_pantone_2021_2.png"
+        - slug: 'plan-2'
+          recomended: false
+          scholarship: "Financed"
+          payment_time: "24 months payment"
+          price: "$310"
+          bullets: 
+            - "With $400 p/ week living stipends"
+            - "9% of your salary until paid in full, only if you get a job in tech."
+          icons: 
+            - "/images/ascent_logo.jpg"
+            - "/images/climb-logo.png"
+            - "/images/quotanda-logo.png"
+        - slug: 'plan-3'
+          recomended: false
+          scholarship: "Income Share Agreement"
+          payment_time: "Pay after you get a job"
+          price: "$0"
+          bullets: 
+            - "With $400 p/ week living stipends"
+            - "9% of your salary until paid in full, only if you get a job in tech."
+          icons: 
+            - "/images/ascent_logo.jpg"
+            - "/images/climb-logo.png"
+            - "/images/quotanda-logo.png"
+        - slug: 'plan-4'
+          recomended: false
+          scholarship: "Full Payment"
+          payment_time: "Pay today"
+          price: "$8099"
+          bullets: 
+            - "You're saving $1000 USD"
 
 active_campaign_location_slug: "downtown-miami"
 breathecode_location_slug: "downtown-miami"

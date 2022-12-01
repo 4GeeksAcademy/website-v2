@@ -54,7 +54,7 @@ content:
       location: ["downtown-miami", "orlando"]
       image: "../../../static/images/news/4GA-NBC-student-autism.png"
       title: "Student With Autism Learns to Code"
-      text: "Victor Fitchhorn, who has autism, is learning how to code at Miami-based 4Geeks Academy, a coding bootcamp. NBC 6’s Ari Odzer reports."
+      text: "Victor Fitchhorn, who has autism, is learning how to code at Miami-based 4Geeks Academy, a coding bootcamp. NBC 6's Ari Odzer reports."
       textUrl: "Watch Video"
       url: "https://www.nbcmiami.com/on-air/as-seen-on/students-with-autism-learn-to-code_miami/159640/"
     - name: "La Razón"
