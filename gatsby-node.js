@@ -26,7 +26,6 @@ exports.sourceNodes = async (
   { actions, createNodeId, createContentDigest },
   config
 ) => {
-
   return await bcSourcePlugin.sourceNodes(
     { actions, createNodeId, createContentDigest },
     config
@@ -160,7 +159,6 @@ let clusters = {
 };
 
 const createBlog = async ({ actions, graphql }) => {
-
   const { createPage, createRedirect } = actions;
   const _createRedirect = (args) => {
     redirects.push(`Redirect from ${args.fromPath} to ${args.toPath}`);

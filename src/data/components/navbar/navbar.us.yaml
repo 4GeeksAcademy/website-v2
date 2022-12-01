@@ -4,7 +4,7 @@ navbar:
     sub_menu:
       icon: ""
       title: "Programs"
-      paragraph: "Make the career change you’ve always wanted. From zero to coding in weeks and specialized in the most wanted technologies int he market."
+      paragraph: "Make the career change you've always wanted. From zero to coding in weeks and specialized in the most wanted technologies int he market."
       links:
         - title: "Full Stack Coding Bootcamp"
           level: " "

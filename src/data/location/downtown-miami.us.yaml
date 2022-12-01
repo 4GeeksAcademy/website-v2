@@ -83,8 +83,7 @@ images_box:
     - path: "../../../static/images/locations/miami-old2.jpg"
       alt: "4Geeeks miami lab"
 
-
-hasFinancialsOption: true
+# PRICES SECTION
 prices:
   full_stack:
     full_time:
@@ -101,7 +100,7 @@ prices:
           payment_time: "Pay today"
           price: "$4999"
           bullets: 
-            - "You’re saving $4000 USD "
+            - "You're saving $4000 USD "
             - "9% of your salary until paid in full, only if you get a job in tech."
           icons: 
             - "/images/landing/uwm_pantone_2021_2.png"
@@ -135,18 +134,8 @@ prices:
           payment_time: "Pay today"
           price: "$8099"
           bullets: 
-            - "You’re saving $1000 USD"
+            - "You're saving $1000 USD"
 
-      scholarship:
-        header:
-          heading_one: Scholarships
-          heading_two: ""
-          sub_heading: ""
-        content:
-          price: "$4,499.00"
-          price_info: "Single payment, with the best price on the market"
-        button:
-          button_text: "APPLY NOW"
     ## *****************
     ## PART-TIME SECTION
     ## *****************
@@ -161,7 +150,7 @@ prices:
           payment_time: "Pay today"
           price: "$4999"
           bullets: 
-            - "You’re saving $4000 USD "
+            - "You're saving $4000 USD "
             - "9% of your salary until paid in full, only if you get a job in tech."
           icons: 
             - "/images/landing/uwm_pantone_2021_2.png"
@@ -195,18 +184,7 @@ prices:
           payment_time: "Pay today"
           price: "$8099"
           bullets: 
-            - "You’re saving $1000 USD"
-
-      scholarship:
-        header:
-          heading_one: Scholarships
-          heading_two: ""
-          sub_heading: ""
-        content:
-          price: "$4,499.00"
-          price_info: "Best pricing in town!"
-        button:
-          button_text: "GET IT NOW"
+            - "You're saving $1000 USD"
 
   software_engineering:
 
@@ -221,7 +199,7 @@ prices:
           payment_time: "Pay today"
           price: "$4999"
           bullets: 
-            - "You’re saving $4000 USD "
+            - "You're saving $4000 USD "
             - "9% of your salary until paid in full, only if you get a job in tech."
           icons: 
             - "/images/landing/uwm_pantone_2021_2.png"
@@ -255,7 +233,7 @@ prices:
           payment_time: "Pay today"
           price: "$8099"
           bullets: 
-            - "You’re saving $1000 USD"
+            - "You're saving $1000 USD"
 
 
     full_time:
@@ -269,7 +247,7 @@ prices:
           payment_time: "Pay today"
           price: "$4999"
           bullets: 
-            - "You’re saving $4000 USD "
+            - "You're saving $4000 USD "
             - "9% of your salary until paid in full, only if you get a job in tech."
           icons: 
             - "/images/landing/uwm_pantone_2021_2.png"
@@ -303,7 +281,7 @@ prices:
           payment_time: "Pay today"
           price: "$8099"
           bullets: 
-            - "You’re saving $1000 USD"
+            - "You're saving $1000 USD"
 
   machine_learning:
     part_time:
@@ -317,7 +295,7 @@ prices:
           payment_time: "Pay today"
           price: "$4999"
           bullets: 
-            - "You’re saving $4000 USD "
+            - "You're saving $4000 USD "
             - "9% of your salary until paid in full, only if you get a job in tech."
           icons: 
             - "/images/landing/uwm_pantone_2021_2.png"
@@ -351,7 +329,7 @@ prices:
           payment_time: "Pay today"
           price: "$8099"
           bullets: 
-            - "You’re saving $1000 USD"
+            - "You're saving $1000 USD"
 
     full_time:
       slug: "full_time"
@@ -364,7 +342,7 @@ prices:
           payment_time: "Pay today"
           price: "$4999"
           bullets: 
-            - "You’re saving $4000 USD "
+            - "You're saving $4000 USD "
             - "9% of your salary until paid in full, only if you get a job in tech."
           icons: 
             - "/images/landing/uwm_pantone_2021_2.png"
@@ -398,7 +376,7 @@ prices:
           payment_time: "Pay today"
           price: "$8099"
           bullets: 
-            - "You’re saving $1000 USD"
+            - "You're saving $1000 USD"
 
 active_campaign_location_slug: "downtown-miami"
 breathecode_location_slug: "downtown-miami"

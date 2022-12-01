@@ -18,8 +18,8 @@ const PricingCard = ({
   session,
   setSession,
 }) => {
+
   const [isOpen, setIsOpen] = useState(true);
-  const { recomended, scholarship, payment_time, slug } = data;
   const isSelected = selectedPlan === slug;
   return (
     <Div
