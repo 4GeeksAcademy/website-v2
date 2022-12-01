@@ -27,7 +27,7 @@ const getAllAssets = async () => {
     }
     return _resp.data;
   } catch (e) {
-    console.log("Error fetching blogposts from the breathecode API: ", e);
+    console.log("Error fetching blogposts from the breathecode API: ", e.toString());
     logger.error(
       "Error fetching blogposts from the breathecode API: ",
       e.toString()
