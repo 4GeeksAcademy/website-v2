@@ -838,6 +838,7 @@ export const query = graphql`
           breathecode_location_slug
           fields {
             lang
+            file_name
           }
           button {
             apply_button_text

@@ -20,6 +20,7 @@ const PricingCard = ({
 }) => {
 
   const [isOpen, setIsOpen] = useState(true);
+  const { recomended, scholarship, payment_time, slug } = data;
   const isSelected = selectedPlan === slug;
   return (
     <Div
@@ -186,7 +187,7 @@ const modalityArray = [
 
 const PricesAndPaymentsV2 = (props) => {
   const data = useStaticQuery(graphql`
-    query PricesAndPaymentsV2 {
+    query PricesAndPaymentsV2{
       content: allPricesAndPaymentYaml {
         edges {
           node {
@@ -219,8 +220,40 @@ const PricesAndPaymentsV2 = (props) => {
           }
         }
       }
+      allPlansYaml{
+        edges {
+          node {
+            full_time{
+              slug
+              academies
+              recomended
+              scholarship
+              payment_time
+              price
+              bullets
+              icons
+            }
+            part_time{
+              slug
+              academies
+              recomended
+              scholarship
+              payment_time
+              price
+              bullets
+              icons
+            }
+            fields {
+              lang
+              file_name
+            }
+          }
+        }
+      }
     }
   `);
+  console.log('data');
+  console.log(data);
   let info = data.content.edges.find(
     ({ node }) => node.fields.lang === props.lang
   );
@@ -232,6 +265,14 @@ const PricesAndPaymentsV2 = (props) => {
   const [modality, setModality] = useState(false);
   const [locations, setLocations] = useState(false);
   const [selectedPlan, setSelectedPlan] = useState(null);
+  const [plans, setPlans] = useState([]);
+
+  console.log('courseType');
+  console.log(props.courseType);
+  const currentPlan = data.allPlansYaml.edges.filter(({ node }) => node.fields.lang === props.lang)
+  .find((p) => p.node.fields.file_name.includes(props.courseType.replaceAll('_', '-')));
+  console.log('currentPlan');
+  console.log(currentPlan);
 
   // const steps = props.details.details_modules.reduce((total, current, i) => [...total, (total[i - 1] || 0) + current.step], [])
   useEffect(() => {

@@ -63,6 +63,7 @@ exports.onCreateNode = ({ node, getNode, actions, ...rest }) => {
       "StaffYaml",
       "ProgramSvgYaml",
       "PricesAndPaymentYaml",
+      "PlansYaml",
       "WhyPythonYaml",
       "ChooseYourProgramYaml",
       "About4GeeksYaml",
