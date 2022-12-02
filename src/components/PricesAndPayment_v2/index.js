@@ -270,7 +270,7 @@ const PricesAndPaymentsV2 = (props) => {
   console.log('courseType');
   console.log(props.courseType);
   const currentPlan = data.allPlansYaml.edges.filter(({ node }) => node.fields.lang === props.lang)
-  .find((p) => p.node.fields.file_name.includes(props.courseType.replaceAll('_', '-')));
+  .find((p) => p.node.fields.file_name.includes(props.courseType.replaceAll('_', '-'))).node[props.programType];
   console.log('currentPlan');
   console.log(currentPlan);
 
@@ -527,8 +527,8 @@ const PricesAndPaymentsV2 = (props) => {
             justifyContent_tablet="between"
             justifyContent_xs="evenly"
           >
-            {prices &&
-              prices.map((plan, index) => (
+            {currentPlan &&
+              currentPlan.map((plan, index) => (
                 <PricingCard
                   data={plan}
                   info={info}
@@ -537,11 +537,11 @@ const PricesAndPaymentsV2 = (props) => {
                   session={session}
                   setSession={setSession}
                   index={index}
-                  plansLength={prices.length}
+                  plansLength={currentPlan.length}
                 />
               ))}
           </Div>
-          {prices && prices.length !== 0 && (
+          {currentPlan && currentPlan.length !== 0 && (
             <Link
               style={{
                 display: "block",
