@@ -261,8 +261,8 @@ const PricesAndPaymentsV2 = (props) => {
     return data.allPlansYaml.edges
       .filter(({ node }) => node.fields.lang === props.lang)
       .find((p) =>
-        p.node.fields.file_name.includes(props.courseType.replaceAll("_", "-"))
-      ).node[props.programType];
+        p.node.fields.file_name.includes(props.courseType?.replaceAll("_", "-"))
+      )?.node[props.programType];
   };
 
   const { session, setSession } = useContext(SessionContext);
