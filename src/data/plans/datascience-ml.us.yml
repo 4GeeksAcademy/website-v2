@@ -1,3 +1,5 @@
+meta_info:
+  name: full-stack
 full_time:
   - slug: 'plan-1'
     academies: ['downtown-miami', 'orlando']
