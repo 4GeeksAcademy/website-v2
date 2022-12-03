@@ -252,12 +252,16 @@ const PricesAndPaymentsV2 = (props) => {
       }
     }
   `);
-  console.log('data');
-  console.log(data);
+
   let info = data.content.edges.find(
     ({ node }) => node.fields.lang === props.lang
   );
   if (info) info = info.node;
+
+  const getCurrentPlans = () => {
+    return data.allPlansYaml.edges.filter(({ node }) => node.fields.lang === props.lang)
+    .find((p) => p.node.fields.file_name.includes(props.courseType.replaceAll('_', '-'))).node[props.programType];
+  }
 
   const { session, setSession } = useContext(SessionContext);
   const [currentLocation, setCurrentLocation] = useState(false);
@@ -265,14 +269,9 @@ const PricesAndPaymentsV2 = (props) => {
   const [modality, setModality] = useState(false);
   const [locations, setLocations] = useState(false);
   const [selectedPlan, setSelectedPlan] = useState(null);
-  const [plans, setPlans] = useState([]);
+  const [currentPlans] = useState(getCurrentPlans);
 
-  console.log('courseType');
-  console.log(props.courseType);
-  const currentPlan = data.allPlansYaml.edges.filter(({ node }) => node.fields.lang === props.lang)
-  .find((p) => p.node.fields.file_name.includes(props.courseType.replaceAll('_', '-'))).node[props.programType];
-  console.log('currentPlan');
-  console.log(currentPlan);
+  const availablePlans = currentPlans && currentLocation ? currentPlans.filter((plan) => plan.academies.includes(currentLocation.fields.file_name.slice(0, -3))) : [];
 
   // const steps = props.details.details_modules.reduce((total, current, i) => [...total, (total[i - 1] || 0) + current.step], [])
   useEffect(() => {
@@ -319,11 +318,6 @@ const PricesAndPaymentsV2 = (props) => {
         {info.pricing_error_contact}
       </Paragraph>
     );
-
-  let prices =
-    !course && !modality
-      ? {}
-      : currentLocation.prices[course?.value][modality?.value].plans;
 
   return (
     <Div
@@ -519,7 +513,7 @@ const PricesAndPaymentsV2 = (props) => {
             width="100%"
             margin="0 0 20px 0"
           >
-            {prices && prices.length !== 0 ? info.select : info.not_available}
+            {availablePlans && availablePlans.length !== 0 ? info.select : info.not_available}
           </H3>
           <Div
             className="cards-container"
@@ -527,8 +521,8 @@ const PricesAndPaymentsV2 = (props) => {
             justifyContent_tablet="between"
             justifyContent_xs="evenly"
           >
-            {currentPlan &&
-              currentPlan.map((plan, index) => (
+            {availablePlans &&
+              availablePlans.filter((plan) => plan.academies.includes(currentLocation.fields.file_name.slice(0, -3))).map((plan, index) => (
                 <PricingCard
                   data={plan}
                   info={info}
@@ -537,11 +531,11 @@ const PricesAndPaymentsV2 = (props) => {
                   session={session}
                   setSession={setSession}
                   index={index}
-                  plansLength={currentPlan.length}
+                  plansLength={availablePlans.length}
                 />
               ))}
           </Div>
-          {currentPlan && currentPlan.length !== 0 && (
+          {availablePlans && availablePlans.length !== 0 && (
             <Link
               style={{
                 display: "block",
@@ -562,9 +556,9 @@ const PricesAndPaymentsV2 = (props) => {
                 display="block"
                 cursor={selectedPlan === null ? "default" : "pointer"}
                 disabled={selectedPlan === null ? true : false}
-                // onClick={() =>
-                //   setSession({ ...session, financing_plan: selectedPlan })
-                // }
+                onClick={() =>
+                  setSession({ ...session, utm: { ...session.utm, utm_plan: selectedPlan } })
+                }
               >
                 {info.apply_button.label}
               </Button>
