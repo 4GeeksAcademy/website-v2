@@ -18,7 +18,6 @@ const PricingCard = ({
   session,
   setSession,
 }) => {
-
   const [isOpen, setIsOpen] = useState(true);
   const { recomended, scholarship, payment_time, slug } = data;
   const isSelected = selectedPlan === slug;
@@ -187,7 +186,7 @@ const modalityArray = [
 
 const PricesAndPaymentsV2 = (props) => {
   const data = useStaticQuery(graphql`
-    query PricesAndPaymentsV2{
+    query PricesAndPaymentsV2 {
       content: allPricesAndPaymentYaml {
         edges {
           node {
@@ -220,10 +219,10 @@ const PricesAndPaymentsV2 = (props) => {
           }
         }
       }
-      allPlansYaml{
+      allPlansYaml {
         edges {
           node {
-            full_time{
+            full_time {
               slug
               academies
               recomended
@@ -233,7 +232,7 @@ const PricesAndPaymentsV2 = (props) => {
               bullets
               icons
             }
-            part_time{
+            part_time {
               slug
               academies
               recomended
@@ -259,9 +258,12 @@ const PricesAndPaymentsV2 = (props) => {
   if (info) info = info.node;
 
   const getCurrentPlans = () => {
-    return data.allPlansYaml.edges.filter(({ node }) => node.fields.lang === props.lang)
-    .find((p) => p.node.fields.file_name.includes(props.courseType.replaceAll('_', '-'))).node[props.programType];
-  }
+    return data.allPlansYaml.edges
+      .filter(({ node }) => node.fields.lang === props.lang)
+      .find((p) =>
+        p.node.fields.file_name.includes(props.courseType.replaceAll("_", "-"))
+      ).node[props.programType];
+  };
 
   const { session, setSession } = useContext(SessionContext);
   const [currentLocation, setCurrentLocation] = useState(false);
@@ -271,7 +273,12 @@ const PricesAndPaymentsV2 = (props) => {
   const [selectedPlan, setSelectedPlan] = useState(null);
   const [currentPlans] = useState(getCurrentPlans);
 
-  const availablePlans = currentPlans && currentLocation ? currentPlans.filter((plan) => plan.academies.includes(currentLocation.fields.file_name.slice(0, -3))) : [];
+  const availablePlans =
+    currentPlans && currentLocation
+      ? currentPlans.filter((plan) =>
+          plan.academies.includes(currentLocation.fields.file_name.slice(0, -3))
+        )
+      : [];
 
   // const steps = props.details.details_modules.reduce((total, current, i) => [...total, (total[i - 1] || 0) + current.step], [])
   useEffect(() => {
@@ -513,7 +520,9 @@ const PricesAndPaymentsV2 = (props) => {
             width="100%"
             margin="0 0 20px 0"
           >
-            {availablePlans && availablePlans.length !== 0 ? info.select : info.not_available}
+            {availablePlans && availablePlans.length !== 0
+              ? info.select
+              : info.not_available}
           </H3>
           <Div
             className="cards-container"
@@ -522,18 +531,24 @@ const PricesAndPaymentsV2 = (props) => {
             justifyContent_xs="evenly"
           >
             {availablePlans &&
-              availablePlans.filter((plan) => plan.academies.includes(currentLocation.fields.file_name.slice(0, -3))).map((plan, index) => (
-                <PricingCard
-                  data={plan}
-                  info={info}
-                  selectedPlan={selectedPlan}
-                  setSelectedPlan={setSelectedPlan}
-                  session={session}
-                  setSession={setSession}
-                  index={index}
-                  plansLength={availablePlans.length}
-                />
-              ))}
+              availablePlans
+                .filter((plan) =>
+                  plan.academies.includes(
+                    currentLocation.fields.file_name.slice(0, -3)
+                  )
+                )
+                .map((plan, index) => (
+                  <PricingCard
+                    data={plan}
+                    info={info}
+                    selectedPlan={selectedPlan}
+                    setSelectedPlan={setSelectedPlan}
+                    session={session}
+                    setSession={setSession}
+                    index={index}
+                    plansLength={availablePlans.length}
+                  />
+                ))}
           </Div>
           {availablePlans && availablePlans.length !== 0 && (
             <Link
@@ -557,7 +572,10 @@ const PricesAndPaymentsV2 = (props) => {
                 cursor={selectedPlan === null ? "default" : "pointer"}
                 disabled={selectedPlan === null ? true : false}
                 onClick={() =>
-                  setSession({ ...session, utm: { ...session.utm, utm_plan: selectedPlan } })
+                  setSession({
+                    ...session,
+                    utm: { ...session.utm, utm_plan: selectedPlan },
+                  })
                 }
               >
                 {info.apply_button.label}
