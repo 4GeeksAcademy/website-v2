@@ -162,8 +162,8 @@ details:
       step: 3
     - module_name: "Modela"
       title: "Machine Learning Práctico"
-      description: "Uno de los aspectos más importantes del desarrollo de Machine Learning es entender cómo preparar, publicar y manejar las soluciones en un ambiente de producción. Vamos a llevarte de la mano desarrollando una estrategia para seguir el ciclo de desarrollo y publicación completo (Machine Learning Ops) así como su privacidad, seguridad y ética. Tu proyecto final será analizar, depurar y estructurar datos de un problema real y crear un modelo predictivo con Machine Learning."
-      projects: "Construye un modelo predictivo con Machine Learning"
+      description: "Uno a uno iremos revisando los algoritmos y modelos predictivos mas utilizados en la industria: Supervisados y No Supervisados. Cada modelo vendrá con un caso práctico para ser solucionado utilizando Python: Regresión Lineal, Regresión Logística, Árboles de Decisión, Random Forest, Bayes, Support Vector Machine, NLP, KNN, Time Series, NN y otros."
+      projects: "Predice el costo del seguro médico, Clasifica pacientes si tienen diabetes o no, Análisis de sentimiento de reviews en Google Play Store, Detecta Email Spam, Agrupa casas basado en coordenadas e ingreso medio, Detecta anomalias en el uso de un CPU, Clasifica Imágenes, etc."
       slug: "machine-learning"
       duration: "4 wks"
       step: 4

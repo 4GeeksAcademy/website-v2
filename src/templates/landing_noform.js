@@ -108,7 +108,7 @@ const Landing = (props) => {
           (landingLocation && landingLocation.phone)
         }
         phoneText={yml.follow_bar.phone.text}
-        link={yml.follow_bar.button.path}
+        link={transferQuerystrings(yml.follow_bar.button.path, utm)}
       >
         <Paragraph
           margin="0"
@@ -320,7 +320,9 @@ const Landing = (props) => {
                     yml.features.button.path &&
                     yml.features.button.path.indexOf("http") > -1
                   )
-                    window.open(yml.features.button.path);
+                    window.open(
+                      transferQuerystrings(yml.features.button.path, utm)
+                    );
                   else navigate(yml.features.button.path);
                 }}
               >

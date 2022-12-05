@@ -5,7 +5,7 @@
   "author": "Marko Radak <mail@markoradak.com>",
   "license": "MIT",
   "engines": {
-    "node": ">=16"
+    "node": "16.x"
   },
   "repository": {
     "type": "git",
@@ -24,10 +24,11 @@
   ],
   "scripts": {
     "start": "gatsby develop -H 0.0.0.0 -o",
-    "test": "node --experimental-modules ./src/test/test.yml.js && node ./src/test/test.seo.js && node ./src/test/test.blog.js && node ./src/test/test.course.js && node ./src/test/test.landing.js && node ./src/test/test.location.js && node ./src/test/test.downloadable.js",
+    "test": "node --experimental-modules ./src/test/test.yml.js && node ./src/test/test.seo.js && node ./src/test/test.course.js && node ./src/test/test.landing.js && node ./src/test/test.location.js && node ./src/test/test.downloadable.js",
     "start:storybook": "start-storybook -p 9000 -c .storybook",
     "build": "npm run test && node ./src/utils/makePagesDictionary.js && node ./src/utils/makePostsDictionary.js && node ./src/utils/makeRedirectsDictionary.js && gatsby build",
     "build:gatsby": "gatsby build",
+    "makeDictionaries": "node ./src/utils/makePagesDictionary.js && node ./src/utils/makeRedirectsDictionary.js",
     "serve": "gatsby serve -o -p 8080",
     "clean": "gatsby clean",
     "cy:open": "cypress open",
@@ -136,6 +137,7 @@
     "prettier": "^2.6.2",
     "simple-git": "^2.2.0",
     "start-server-and-test": "^1.13.1",
+    "winston": "^3.8.2",
     "yaml": "^1.7.2",
     "yarn-run-all": "^3.1.1"
   }
