@@ -1,6 +1,13 @@
+meta_info:
+  slug: datascience-es
+  title: full-stack
+  description: "datascience-es"
+  image: ""
+  keywords: ""
+  redirects: []
 full_time:
   - slug: 'plan-1'
-    academies: ['miami-downtown', 'orlando']
+    academies: ['downtown-miami', 'orlando']
     recomended: true
     scholarship: "Scolarship"
     payment_time: "Pay today"
@@ -11,7 +18,7 @@ full_time:
     icons: 
       - "/images/landing/uwm_pantone_2021_2.png"
   - slug: 'plan-2'
-    academies: ['miami-downtown', 'orlando']
+    academies: ['downtown-miami', 'orlando']
     recomended: false
     scholarship: "Financed"
     payment_time: "24 months payment"
@@ -24,7 +31,7 @@ full_time:
       - "/images/climb-logo.png"
       - "/images/quotanda-logo.png"
   - slug: 'plan-3'
-    academies: ['miami-downtown', 'orlando']
+    academies: ['downtown-miami', 'orlando']
     recomended: false
     scholarship: "Income Share Agreement"
     payment_time: "Pay after you get a job"
@@ -37,7 +44,7 @@ full_time:
       - "/images/climb-logo.png"
       - "/images/quotanda-logo.png"
   - slug: 'plan-4'
-    academies: ['miami-downtown', 'orlando']
+    academies: ['downtown-miami', 'orlando']
     recomended: false
     scholarship: "Full Payment"
     payment_time: "Pay today"
@@ -47,7 +54,7 @@ full_time:
 
 part_time:
   - slug: 'plan-1'
-    academies: ['miami-downtown', 'orlando']
+    academies: ['downtown-miami', 'orlando']
     recomended: true
     scholarship: "Scolarship"
     payment_time: "Pay today"
@@ -58,7 +65,7 @@ part_time:
     icons: 
       - "/images/landing/uwm_pantone_2021_2.png"
   - slug: 'plan-2'
-    academies: ['miami-downtown', 'orlando']
+    academies: ['downtown-miami', 'orlando']
     recomended: false
     scholarship: "Financed"
     payment_time: "24 months payment"
@@ -71,7 +78,7 @@ part_time:
       - "/images/climb-logo.png"
       - "/images/quotanda-logo.png"
   - slug: 'plan-3'
-    academies: ['miami-downtown', 'orlando']
+    academies: ['downtown-miami', 'orlando']
     recomended: false
     scholarship: "Income Share Agreement"
     payment_time: "Pay after you get a job"
@@ -85,7 +92,7 @@ part_time:
       - "/images/quotanda-logo.png"
   - slug: 'plan-4'
     recomended: false
-    academies: ['miami-downtown', 'orlando']
+    academies: ['downtown-miami', 'orlando']
     scholarship: "Full Payment"
     payment_time: "Pay today"
     price: "$8099"
