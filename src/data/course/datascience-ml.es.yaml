@@ -1,7 +1,7 @@
 meta_info:
   slug: curso-datascience-machine-learning
   title: "Estudia Data Science y Machine Learning en 4Geeks Academy"
-  description: "Sin conocimientos previos, empieza una careera en el mundo de data science y escribe tus primeros modelos de machine learning"
+  description: "Sin conocimientos previos, empieza una careera en el mundo del Data Science y escribe tus primeros modelos de Machine Learning"
   bc_slug: "datascience-ml"
   template: "course-datascience"
   image: "/images/og-preview/datascience-ml.es.png"
@@ -9,17 +9,17 @@ meta_info:
   keywords: ""
   redirects: ["/es/datascience"]
 
-seo_title: "curso datascience and machine learning"
+seo_title: "Curso DataScience and Machine Learning"
 header:
-  title: "Conviértete en un Ingeniero de DataScience y M.L."
-  paragraph: "Una de las profesiones mejor pagados del mundo."
+  title: "Conviértete en un Ingeniero de DataScience y Machine Learning"
+  paragraph: "Una de las profesiones mejor pagadas del mundo."
   image: "../../../static/images/bg/apple-building.jpg"
   image_alt: "apple-building"
 
 button:
   syllabus_heading: "Descargar Detalles del Curso"
   syllabus_btn_label: "Descarga Instantánea"
-  syllabus_motivation: "En 2 min. recibirás en tu buzón de correo un PDF con información muy detallada sobre nuestra metodología, tecnologías, financiación e información del curso."
+  syllabus_motivation: "En 2 min. recibirás en tu buzón de correo un PDF con información muy detallada sobre nuestra metodología, tecnologías, becas, financiación e información del curso."
   apply_button_link: "/es/aplica"
 
 course_instructors: 
@@ -37,16 +37,16 @@ course_instructors:
       linkedin: "https://www.linkedin.com/in/sayyednezhadi"
 
     - name: "Francesco Pugliese"
-      sub_title: "Científico de datos y Doctorado en Robótica e Inteligencia Artificial"
+      sub_title: "Científico de datos y Doctor en Robótica e Inteligencia Artificial"
       job: "Científico de Machine y Deep Learning en ISTAT (Instituto Nacional de Estadística de Italia)."
       degree: "Doctorado en Robótica e Inteligencia Artificial"
       image: "../../../static/images/instructors/fpugliese.jpeg"
-      bio: "Profundamente especializado en Deep Learning, Redes Neuronales y Robótica Evolutiva; Francesco tiene más de 20 años de experiencia trabajando en temas de investigación de robótica con varias publicaciones; Actualmente trabaja como científico de Machine y Deep Learning en ISTAT (Instituto Nacional de Estadística de Italia)."
+      bio: "Profundamente especializado en Deep Learning, Redes Neuronales y Robótica Evolutiva; Francesco tiene más de 20 años de experiencia trabajando en investigación temas de robótica con varias publicaciones; Actualmente trabaja como científico de Machine y Deep Learning en ISTAT (Instituto Nacional de Estadística de Italia)."
       github: "https://github.com/neural1977"
       linkedin: "https://www.linkedin.com/in/francescopugliese77"
 
     - name: "Manuel Mena"
-      sub_title: "Científico de datos sénior | IA y aprendizaje automático"
+      sub_title: "Científico de datos sénior, IA y machine learning"
       job: "Científico de datos del Instituto de Tecnología de Georgia"
       image: "../../../static/images/instructors/manu-mena.jpeg"
       bio: "Científico de datos del Instituto de Tecnología de Georgia con más de 5 años de experiencia en el campo de Machine Learning y Business Intelligence aplicado a estrategia comercial, diseño de flujos de trabajo de datos, pruebas de experimentos y entrega de soluciones de ciencia de datos. Experiencia liderando equipos en industrias financieras, de investigación de mercado y automotriz. Competente en R, Python, AWS y PostgreSQL."
@@ -54,11 +54,11 @@ course_instructors:
       linkedin: "https://www.linkedin.com/in/alexismena/"
 
 badges:
-  paragraph: "Gracias a un enfoque hacia la codificación nuestros programas han sido galardonados como TOP en <a href='/es/premios'>España, USA y otros paises.</a>. Nuestro certificados estan avalados por el Dep. de Educación de USA en Florida."
+  paragraph: "Gracias a un enfoque hacia la codificación nuestros programas han sido galardonados como TOP en <a href='/es/premios'>España, USA y otros países.</a> Nuestros certificados estan avalados por el Departamento de Educación de Estado Unidos en Florida."
 
 upcoming:
   no_dates_message: "Actualmente no hay próximas fechas para este programa"
-  actionMessage: "Avisenme fechas disponibles"
+  actionMessage: "Avisadme de fechas disponibles"
 
 credentials:
   heading: "Nuestros números hablan por sí solos"
@@ -66,11 +66,10 @@ credentials:
 
 description:
   heading: "Sobre este curso"
-  sub_heading: "Preparate para la era de I.A."
+  sub_heading: "Preparate para la era de la Ciencia de Datos."
   content: >
-    Entrénate con un experto reconocido de Inteligencia Artificial; Explora los fundamentos de Machine Learning y Deep Learning con algunas de las tecnologías más poderosas que realmente pueden escalar I.A. en las empresas.\n
-    Practica con escenarios típicos en empresas de la vida real y revisa algunas de las herramientas utilizadas en la industria. \n
-    Construye estrategias y desarrolla tu inteligencia artificial siguiendo el ciclo de vida de desarrollo, incluyendo la publicación a producción y mantenimiento con privacidad, seguridad y ética.
+    Entrénate con expertos del Data Science, Machine Learning e Inteligencia Artificial; Aprende Data Science desde las bases, recolecta, manipula y modela datos. Crea modelos de Machine Learning y iníciate en el Deep Learning.\n
+    Practica con escenarios típicos en empresas de la vida real y utiliza algunas de las herramientas más utilizadas en la industria. \n
 
 teacher:
   greeting: "Conoce a tu profesor"
@@ -86,10 +85,10 @@ details:
   about:
       title: "Sobre este programa"
       sub_title: |
-        Aprende Python, SQL, Google Data Studio, Streamlit y Estadística para formar parte de un equipo técnico en cualquier compañía y convertirte en analista de datos.
+        Aprende Python, SQL, Looker (Google Data Studio), Streamlit y Estadísticas para convertirte en analista de datos y formar parte de un equipo técnico en cualquier compañía.
         Crea tus propios modelos predictivos con Python, Pandas, Numpy, etc. Utiliza algoritmos predicivos como vecinos cercanos, árboles de decisión, entre otros muchos. 
         Practica con escenarios comerciales de la vida real típicos en los negocios y revise algunas de las herramientas utilizadas en la industria.
-        Elabora estrategias y desarrolla tu A.I. siguiendo el desarrollo del ciclo de vida de principio a fin, incluida la implementación en producción y mantenimiento de tu solución.
+        
       list:
         - label: "Duración"
           content:  "18 semanas"
@@ -100,7 +99,7 @@ details:
         - label: "Tamaño de la clase"
           content: "14 personas máx"
         - label: "Certificado"
-          content: "Nuestros certificados son  reconocidos por múltiples instuticiones."
+          content: "Nuestros certificados son reconocidos por múltiples instuticiones."
           link_text: "Ver ejemplo"
           link: "https://certificate.4geeks.com/44c61b294a248f91088f5355aea09606126795e3"
           icon: "certificate"
@@ -109,7 +108,7 @@ details:
           icon: "contract-checked"
 
   heading: DETALLES DEL PROGRAMA
-  weeks: 15
+  weeks: 18
   facts:
     - label: "Duración"
       value: "18 semanas"
@@ -123,7 +122,7 @@ details:
     - label: "Horario"
       value: "Online / Remoto"
     - label: "Tamaño Clase"
-      value: "Sólo 12 personas"
+      value: "Sólo 14 personas"
     - label: "Horas totales"
       value: "162"
   sub_heading: "Comienza de cero con Python, profundiza en Data Science, modela y predice con Machine Learning y despliega tu aplicación"
@@ -135,28 +134,28 @@ details:
   details_modules:
     - module_name: "Python"
       title: "Introducción a Python"
-      description: "Empezando por un prework de 2 semánas donde aprenderás or repasaras como construir algoritmos con Python utilizando functiones, condicionales, etc. Una buena base de python es importante para poder desarrollar tus recolecciones de datos consultado API's o haciendo Web Scrapping; Tambien sentarás las bases para limpiar tus datos utilizando la libreria Pandas y Numpy. Estas dos librerias constituyen la base sobre la que esta construida toda la industria de datascience."
+      description: "Empezaremos con un prework de 2 semanas donde aprenderás o repasarás cómo construir algoritmos con Python utilizando funciones, condicionales, etc. Una buena base de Python es importante para poder desarrollar tus recolecciones de datos consultado API's o haciendo Web Scrapping; Tambien obtendrás las bases para depurar tus datos utilizando las librerías Pandas y Numpy. Estas dos librerías constituyen la base sobre la que esta construida toda la industria de DataScience."
       projects: "Micro ejercicios con autocorrecciones sobre algoritmos y la utilizacion de Pandas, Numpy y Matplotlib."
       slug: "python-intro"
       duration: "2 weeks"
       step: 2
     - module_name: "Fundamentos"
       title: "Estadistica y Algebra Lineal con Python"
-      description: "Siempre con un enfoque muy práctico y programando en python vamos a revisar y aplicar los conceptos de Algebra Lineal más utilizandos en datascience y ML. Matrices y Vectores, F(x) y la relacion entre variables. Tambien revisaremos y programaremos en python los conceptos probabilisticos más utilizados para entender describir los datos con tendencias centrales, desviacion estandar, media y mediana. Por ultimo calcularemos probabilidades de que un evento o dato ocurra, una habilidad muy importante para poder desarrollar nuestros modelos y predicciones más adelante."
-      projects: "Una lista de problemas con soluciones en los diferentes temas vistos en el modulo, siempre aplicando a casos reales con utilidad para tu futura careera profesional"
+      description: "Siempre con un enfoque muy práctico y programando en Python, vamos a aplicar los conceptos de Algebra Lineal más utilizandos en DataScience y Machine Learning. Matrices y Vectores, Funciones F(X) y relaciones entre variables. También programaremos en Python los conceptos probabilisticos más utilizados: tendencias centrales, desviación estándar, medias y medianas. Por último calcularemos probabilidades de que un evento o dato ocurra, una habilidad muy importante para poder desarrollar modelos y predicciones."
+      projects: "Para aplicar lo aprendido trabajaremos con casos reales enfocados en el mundo laboral."
       slug: "datascience-fundamentals"
       duration: "2 wks"
       step: 2
     - module_name: "Recolecta"
       title: "Recolecta y Almacena Datos"
-      description: "Probablemente la etapa más larga de todos los projectos de datascience es recolectar -y limpiar- los datos. En este módulo te enseñaremos a utilizar python para conectarte a bases de datos SQL, aprenderas la syntaxis de SQL para consultar y manipular esos datos, carga y descarga de archivos estaticos CSV, JSON y YML (los tres formatos más utilizados). Aprenderas a conectarte con API's o descargar datos de paginas que no cuentan con una API utilizando web scrapping. Almacenaras todos los datos de forma ordenada y coherente en una base de datos."
-      projects: "Cargado de data estructurada y no-estructurada a partir de diferentes fuentes (E.j: SQL, Web Scraping, test files) y conectándote al API de Twitter."
+      description: "Probablemente la etapa más larga de todos los proyectos de DataScience es recolectar (y limpiar) los datos. En este módulo te trabajarás con Python para conectarte a bases de datos SQL, aprenderás la syntaxis de SQL para consultar y manipular esos datos, cargar y descargar archivos estáticos CSV, JSON entre otros más utilizados en la industria. Aprenderás a conectarte con API's o descargar datos de páginas que no cuentan con una API utilizando web scrapping. Almacenarás todos los datos de forma ordenada y coherente en una base de datos."
+      projects: "Carga de data estructurada y no-estructurada a partir de diferentes fuentes (E.j: SQL, Web Scraping, test files) y conectándote al API de Twitter."
       slug: "datacollection"
       duration: "2 wks"
       step: 2
     - module_name: "Manipula"
       title: "Manipulación de datos con Python"
-      description: "Una vez que tus datos han sido recolectados es necesario entender su estructura, profundidad y errores. Empezaremos enseñandote las tecnicas de visualizacion de datos para entender la muestra y desarrollar las diferentes estrategias para limiar y mejorar tu dataset: Ingeniería de Features, Outliers, Datos Faltántes, Feature encoding, Feature Scaling. \n Aprende a desarrollar reportes en Google DataStudio con graficos avanzados y KPI's en una de las herramientas de datawarehousing más utilizadas del mercado."
+      description: "Una vez que tus datos han sido recolectados es necesario entender su estructura, profundidad y depurar errores. Empezaremos enseñándote las técnicas de visualización de datos para entender la muestra y desarrollar las diferentes estrategias para limiar y mejorar tu dataset: Ingeniería de Features, Outliers, Datos Faltántes, Feature encoding, Feature Scaling. \n Aprende a desarrollar reportes en Looker (Google DataStudio) con gráficos avanzados y KPI's en una de las herramientas de datawarehousing más utilizadas del mercado."
       projects: "Explora el dataset de propiedades de Airbnb y publica un reporte en la nube de Google DataStudio."
       slug: "data-analysis"
       duration: "3 wks"
@@ -191,7 +190,7 @@ details:
       step: 0.1
 
 syllabus:
-  heading: Descarga toda la información sobre este programa
+  heading: Descarga toda la información acerca este programa
   button_label: Descargar
 
 potential_companies:
