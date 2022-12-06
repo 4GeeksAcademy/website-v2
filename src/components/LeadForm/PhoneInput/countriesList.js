@@ -170,7 +170,7 @@ const countriesList = [
     "506",
     "....-....",
   ],
-  ["Côte d’Ivoire", ["africa"], "ci", "225", ".. .. .. .."],
+  ["Côte d'Ivoire", ["africa"], "ci", "225", ".. .. .. .."],
   ["Croatia", ["europe", "eu-union", "ex-yugos"], "hr", "385"],
   ["Cuba", ["america", "carribean"], "cu", "53"],
   ["Curaçao", ["america", "carribean"], "cw", "599", "", 0],

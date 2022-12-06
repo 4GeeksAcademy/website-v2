@@ -834,12 +834,11 @@ export const query = graphql`
           city
           country
           name
-          hasFinancialsOption
-          financials_max_months
           active_campaign_location_slug
           breathecode_location_slug
           fields {
             lang
+            file_name
           }
           button {
             apply_button_text
@@ -872,68 +871,6 @@ export const query = graphql`
             }
           }
 
-          prices {
-            software_engineering {
-              part_time {
-                plans {
-                  slug
-                  recomended
-                  scholarship
-                  payment_time
-                  price
-                  bullets
-                  icons
-                }
-                center_section {
-                  button {
-                    button_text
-                  }
-                  header {
-                    heading_two
-                    sub_heading
-                    heading_one
-                  }
-                  plans {
-                    months
-                    monthsInfo
-                    payment
-                    paymentInfo
-                    provider
-                    logo
-                    message
-                  }
-                }
-                left_section {
-                  button {
-                    button_text
-                  }
-                  content {
-                    price
-                    price_info
-                  }
-                  header {
-                    heading_one
-                    sub_heading
-                    heading_two
-                  }
-                }
-                right_section {
-                  button {
-                    button_text
-                  }
-                  content {
-                    price
-                    price_info
-                  }
-                  header {
-                    heading_one
-                    sub_heading
-                    heading_two
-                  }
-                }
-              }
-            }
-          }
         }
       }
     }

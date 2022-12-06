@@ -614,16 +614,6 @@ export const query = graphql`
               }
             }
           }
-          prices {
-            full_stack {
-              full_time {
-                slug
-              }
-              part_time {
-                slug
-              }
-            }
-          }
           info_box {
             heading
             address

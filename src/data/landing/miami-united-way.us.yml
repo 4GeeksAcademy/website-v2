@@ -232,7 +232,7 @@ components:
       text: "Pay back when you get a job!"
       font_size: ["30px", "30px", "30px", "30px", "30px"]
     sub_heading:
-      text: "There are no upfront payments for participants. Payments start only if you get a job earning more than $35,000 annually. Participants who don’t find and keep jobs with salaries above $35,000 pay nothing."
+      text: "There are no upfront payments for participants. Payments start only if you get a job earning more than $35,000 annually. Participants who don't find and keep jobs with salaries above $35,000 pay nothing."
       font_size: ["18px", "18px", "18px", "18px", "18px"]
     button:
       text: "Review Conditions"

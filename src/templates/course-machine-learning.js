@@ -871,12 +871,11 @@ export const query = graphql`
           city
           country
           name
-          hasFinancialsOption
-          financials_max_months
           active_campaign_location_slug
           breathecode_location_slug
           fields {
             lang
+            file_name
           }
           button {
             apply_button_text
@@ -905,96 +904,6 @@ export const query = graphql`
             }
           }
 
-          prices {
-            machine_learning {
-              part_time {
-                plans {
-                  slug
-                  recomended
-                  scholarship
-                  payment_time
-                  price
-                  bullets
-                  icons
-                }
-                slug
-                duration
-                left_section {
-                  header {
-                    heading_one
-                    sub_heading
-                    heading_two
-                  }
-                  content {
-                    price
-                    price_info
-                  }
-                  button {
-                    button_text
-                  }
-                }
-                center_section {
-                  header {
-                    heading_two
-                    sub_heading
-                    heading_one
-                  }
-                  plans {
-                    months
-                    monthsInfo
-                    payment
-                    paymentInfo
-                    provider
-                    logo
-                    message
-                  }
-                  button {
-                    button_text
-                  }
-                }
-                right_section {
-                  button {
-                    button_text
-                  }
-                  content {
-                    price
-                    price_info
-                  }
-                  header {
-                    heading_one
-                    sub_heading
-                    heading_two
-                  }
-                }
-              }
-              full_time {
-                plans {
-                  slug
-                  recomended
-                  scholarship
-                  payment_time
-                  price
-                  bullets
-                  icons
-                }
-                slug
-                left_section {
-                  header {
-                    heading_one
-                    sub_heading
-                    heading_two
-                  }
-                  content {
-                    price
-                    price_info
-                  }
-                  button {
-                    button_text
-                  }
-                }
-              }
-            }
-          }
         }
       }
     }
