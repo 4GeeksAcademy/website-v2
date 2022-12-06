@@ -870,7 +870,6 @@ export const query = graphql`
               }
             }
           }
-
         }
       }
     }

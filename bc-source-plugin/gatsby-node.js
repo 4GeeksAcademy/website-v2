@@ -36,6 +36,11 @@ exports.sourceNodes = async (
     let post = posts[i];
 
     let content = await API.getContent(post.slug);
+    if(!content){
+      logger.error(`Skipping blog post ${post.slug} because it was imposible to fetch markdown content`)
+      continue;
+    }
+
     content = matter(content);
 
     const frontMatter = {
