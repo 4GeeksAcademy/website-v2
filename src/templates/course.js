@@ -844,33 +844,6 @@ export const query = graphql`
               }
             }
           }
-
-          prices {
-            full_stack {
-              full_time {
-                plans {
-                  slug
-                  recomended
-                  scholarship
-                  payment_time
-                  price
-                  bullets
-                  icons
-                }
-              }
-              part_time {
-                plans {
-                  slug
-                  recomended
-                  scholarship
-                  payment_time
-                  price
-                  bullets
-                  icons
-                }
-              }
-            }
-          }
         }
       }
     }

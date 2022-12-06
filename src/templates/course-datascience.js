@@ -899,35 +899,6 @@ export const query = graphql`
             }
           }
 
-          prices {
-            machine_learning {
-              part_time {
-                plans {
-                  slug
-                  recomended
-                  scholarship
-                  payment_time
-                  price
-                  bullets
-                  icons
-                }
-                slug
-                duration
-              }
-              full_time {
-                plans {
-                  slug
-                  recomended
-                  scholarship
-                  payment_time
-                  price
-                  bullets
-                  icons
-                }
-                slug
-              }
-            }
-          }
         }
       }
     }

@@ -318,14 +318,6 @@ const PricesAndPaymentsV2 = (props) => {
     [props.courseType, props.programType]
   );
 
-  if (!currentLocation || !currentLocation.prices)
-    return (
-      <Paragraph margin="10px 0px" align="center" fontSize="18px">
-        {info.pricing_error} {currentLocation && currentLocation.city}. <br />{" "}
-        {info.pricing_error_contact}
-      </Paragraph>
-    );
-
   return (
     <Div
       id="prices_and_payment"

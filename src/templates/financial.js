@@ -265,33 +265,6 @@ export const query = graphql`
               }
             }
           }
-          prices {
-            full_stack {
-              full_time {
-                slug
-              }
-              part_time {
-                slug
-              }
-            }
-            software_engineering {
-              part_time {
-                slug
-              }
-              full_time {
-                slug
-              }
-            }
-            machine_learning {
-              part_time {
-                slug
-                duration
-              }
-              full_time {
-                slug
-              }
-            }
-          }
           documents {
             payment_guidebook {
               url

@@ -871,21 +871,6 @@ export const query = graphql`
             }
           }
 
-          prices {
-            software_engineering {
-              part_time {
-                plans {
-                  slug
-                  recomended
-                  scholarship
-                  payment_time
-                  price
-                  bullets
-                  icons
-                }
-              }
-            }
-          }
         }
       }
     }

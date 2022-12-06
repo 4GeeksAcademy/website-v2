@@ -329,48 +329,6 @@ export const query = graphql`
               }
             }
           }
-          prices {
-            full_stack {
-              full_time {
-                plans {
-                  slug
-                  recomended
-                  scholarship
-                  payment_time
-                  price
-                  bullets
-                  icons
-                }
-                slug
-              }
-              part_time {
-                plans {
-                  slug
-                  recomended
-                  scholarship
-                  payment_time
-                  price
-                  bullets
-                  icons
-                }
-                slug
-              }
-            }
-            software_engineering {
-              part_time {
-                plans {
-                  slug
-                  recomended
-                  scholarship
-                  payment_time
-                  price
-                  bullets
-                  icons
-                }
-                slug
-              }
-            }
-          }
           documents {
             payment_guidebook {
               url
