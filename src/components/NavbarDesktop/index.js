@@ -18,13 +18,6 @@ const MegaMenuContainer = styled(Div)`
   bottom: ${(props) => props.bottom};
   left: ${(props) => props.left};
   transform: ${(props) => props.transform};
-  /* .menu-item {
-    &:hover{
-      .megamenu-container{
-        display: block;
-      }
-    }
-  } */
 `;
 
 const Triangle = styled.div`
@@ -113,6 +106,7 @@ const MenuItem = styled.li`
   font-family: lato, sans-serif;
   &:hover {
     .megamenu-container {
+      text-transform: initial;
       display: block;
     }
   }

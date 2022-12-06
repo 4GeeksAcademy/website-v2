@@ -7,6 +7,7 @@ meta_info:
   image: "https://storage.googleapis.com/4geeks-academy-website/website-preview.png"
   keywords: "Coding Bootcamp Miami, Learn to code miami, learn to code, coding bootcamp, Miami Coding Bootcamp, Learn Code Miami, Learn python, Coding Bootcamp Madrid, Coding Bootcamp Spain, Coding Bootcamp españa"
   redirects: ["/home", "/us/home", "/us/index", "/en/home", "/us"]
+
 header_data:
   tagline: Coding Bootcamp
   title: Empower Your Life With Coding Skills
@@ -19,7 +20,8 @@ header_data:
   free_button_text: FREE TRIAL
   #If it doesn't have a video it will show the image
   #It must be a video from videoaks
-  video: "https://www.videoask.com/fm984j5nz"
+  # video: "https://www.videoask.com/fm984j5nz"
+  video: ""
   image: "../../../static/images/bg/new-main-home-bg.png"
 
 news:

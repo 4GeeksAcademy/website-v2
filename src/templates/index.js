@@ -228,7 +228,7 @@ const Home = (props) => {
             </Div>
           </Div>
           <Div display="flex" height="auto" width="100%">
-            {yml.header_data.video ? (
+            {(yml.header_data.video && yml.header_data.video!="") ? (
               <Div
                 height_tablet="723px"
                 width="100%"
