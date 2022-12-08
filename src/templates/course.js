@@ -28,7 +28,7 @@ import { requestSyllabus } from "../actions";
 import { SessionContext } from "../session";
 import ProgramDetails from "../components/ProgramDetails";
 import ProgramDetailsMobile from "../components/ProgramDetailsMobile";
-import PricesAndPayment from "../components/PricesAndPayment";
+import PricesAndPayment from "../components/PricesAndPayment_v2";
 import Modal from "../components/Modal";
 import LeadForm from "../components/LeadForm";
 import AlumniProjects from "../components/AlumniProjects";
@@ -457,6 +457,10 @@ export const query = graphql`
         node {
           title
           sub_title
+          button {
+            label
+            url
+          }
           image {
             childImageSharp {
               gatsbyImageData(
@@ -808,12 +812,11 @@ export const query = graphql`
           city
           country
           name
-          hasFinancialsOption
-          financials_max_months
           active_campaign_location_slug
           breathecode_location_slug
           fields {
             lang
+            file_name
           }
           button {
             apply_button_text
@@ -838,113 +841,6 @@ export const query = graphql`
                   width: 800
                   placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                 )
-              }
-            }
-          }
-
-          prices {
-            full_stack {
-              full_time {
-                center_section {
-                  button {
-                    button_text
-                  }
-                  header {
-                    sub_heading
-                    heading_one
-                    heading_two
-                  }
-                  plans {
-                    months
-                    monthsInfo
-                    payment
-                    paymentInfo
-                    provider
-                    logo
-                    message
-                  }
-                }
-                left_section {
-                  button {
-                    button_text
-                  }
-                  content {
-                    price
-                    price_info
-                    logo
-                  }
-                  header {
-                    heading_one
-                    heading_two
-                    sub_heading
-                  }
-                }
-                right_section {
-                  button {
-                    button_text
-                  }
-                  content {
-                    price
-                    price_info
-                    logo
-                  }
-                  header {
-                    sub_heading
-                    heading_one
-                    heading_two
-                  }
-                }
-              }
-              part_time {
-                center_section {
-                  button {
-                    button_text
-                  }
-                  header {
-                    heading_two
-                    sub_heading
-                    heading_one
-                  }
-                  plans {
-                    months
-                    monthsInfo
-                    payment
-                    paymentInfo
-                    provider
-                    logo
-                    message
-                  }
-                }
-                left_section {
-                  button {
-                    button_text
-                  }
-                  content {
-                    price
-                    price_info
-                    logo
-                  }
-                  header {
-                    heading_one
-                    sub_heading
-                    heading_two
-                  }
-                }
-                right_section {
-                  button {
-                    button_text
-                  }
-                  content {
-                    price
-                    price_info
-                    logo
-                  }
-                  header {
-                    heading_one
-                    sub_heading
-                    heading_two
-                  }
-                }
               }
             }
           }

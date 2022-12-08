@@ -17,7 +17,7 @@ import { Circle } from "../components/BackgroundDrawing";
 import Icon from "../components/Icon";
 import Testimonials from "../components/Testimonials";
 import Badges from "../components/Badges";
-import PricesAndPayment from "../components/PricesAndPayment";
+import PricesAndPayment from "../components/PricesAndPayment_v2";
 import Instructors from "../components/Instructors";
 
 const Program = ({ data, pageContext, yml }) => {
@@ -431,6 +431,10 @@ export const query = graphql`
         node {
           title
           sub_title
+          button {
+            label
+            url
+          }
           image {
             childImageSharp {
               gatsbyImageData(
@@ -830,12 +834,11 @@ export const query = graphql`
           city
           country
           name
-          hasFinancialsOption
-          financials_max_months
           active_campaign_location_slug
           breathecode_location_slug
           fields {
             lang
+            file_name
           }
           button {
             apply_button_text
@@ -864,60 +867,6 @@ export const query = graphql`
                 # fluid(maxWidth: 800){
                 #   ...GatsbyImageSharpFluid_withWebp
                 # }
-              }
-            }
-          }
-
-          prices {
-            software_engineering {
-              part_time {
-                center_section {
-                  button {
-                    button_text
-                  }
-                  header {
-                    heading_two
-                    sub_heading
-                    heading_one
-                  }
-                  plans {
-                    months
-                    monthsInfo
-                    payment
-                    paymentInfo
-                    provider
-                    logo
-                    message
-                  }
-                }
-                left_section {
-                  button {
-                    button_text
-                  }
-                  content {
-                    price
-                    price_info
-                  }
-                  header {
-                    heading_one
-                    sub_heading
-                    heading_two
-                  }
-                }
-                right_section {
-                  button {
-                    button_text
-                  }
-                  content {
-                    price
-                    price_info
-                  }
-                  header {
-                    heading_one
-                    sub_heading
-                    heading_two
-                  }
-                }
               }
             }
           }

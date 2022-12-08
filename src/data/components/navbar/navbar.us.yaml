@@ -4,33 +4,31 @@ navbar:
     sub_menu:
       icon: ""
       title: "Programs"
-      paragraph: "Make the career change you’ve always wanted. Whereas you are looking to pivot, find a better job or advance in your current one. Learn to Code at 4Geeks Academy."
+      paragraph: "Make the career change you've always wanted. From zero to coding in weeks and specialized in the most wanted technologies int he market."
       links:
-        - title: "Full Stack Developer"
-          level: "Level 1"
+        - title: "Full Stack Coding Bootcamp"
+          level: " "
           icon: "fullstack"
-          paragraph: "Learn the most in-demand skills and find a job as a Jr. Developer."
-          buttons:
-            - text: "Part Time"
-              link: "/us/coding-bootcamps/part-time-full-stack-developer"
-            - text: "Full Time"
-              link: "/us/coding-bootcamps/full-time-full-stack-developer"
-
-        - title: "Software Engineer"
-          level: "Level 2"
-          icon: "software"
-          paragraph: "Dive deep into Computer Science and Cloud Native Applications."
-          buttons:
-            - text: "View Program"
-              link: "/us/coding-bootcamps/software-engineer-bootcamp"
-
-        - title: "AI/Machine Learning Engineering"
-          level: "Online"
-          icon: "machine"
-          paragraph: "Develop the necessary tools to upskill for the future of AI work."
+          paragraph: "Become a Full Stack software developer using Python, React and Javascript. The most in-demand skills. Find a job as a developer."
           buttons:
             - text: "View program"
-              link: "/us/coding-bootcamps/machine-learning-engineering"
+              link: "/us/coding-bootcamps/part-time-full-stack-developer"
+
+        - title: "Data Science and ML"
+          level: " "
+          icon: "machine"
+          paragraph: "Learn Python to collect and manage data. Create models and solve problems using Machine Learning, Deep Learning and AI."
+          buttons:
+            - text: "View program"
+              link: "/us/coding-bootcamps/datascience-machine-learning"
+
+        - title: "Blockchain and Web3"
+          level: " "
+          icon: "software"
+          paragraph: "Build applications for the Web3 with Solidity and Blockchain. Get a job as a blockchain developer and help build tomorrows web."
+          buttons:
+            - text: "Comming Soon"
+              link: "#"
 
   - name: "Why 4Geeks"
     link: "/why-4geeks"

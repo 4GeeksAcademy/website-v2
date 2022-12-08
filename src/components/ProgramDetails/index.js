@@ -100,7 +100,7 @@ const ProgramDetails = (props) => {
             </Paragraph>
           ))}
         </Div>
-        <Div flexDirection="column" justifyContent="between">
+        <Div flexDirection="column" justifyContent="start">
           {Array.isArray(props.details.about?.list) &&
             props.details.about?.list.map((m, i) => {
               return (
@@ -136,14 +136,6 @@ const ProgramDetails = (props) => {
               );
             })}
         </Div>
-      </GridContainer>
-      <GridContainer>
-        <Div
-          height="7px"
-          background="#F5F5F5"
-          margin="30px 0"
-          margin_tablet="40px 0"
-        />
       </GridContainer>
       {props.withoutAnimation !== true && (
         <GridContainer
@@ -208,7 +200,12 @@ const ProgramDetails = (props) => {
               />
             </ContainerStyle>
             <Div margin="50px 0">
-              <Icon icon="laptop" width="52px" height="39px" />
+              <Icon
+                style={{ flexShrink: 0 }}
+                icon="laptop"
+                width="52px"
+                height="39px"
+              />
               <Div flexDirection="column" margin="0 0 0 15px">
                 <H3 textAlign="left">
                   {props.details.details_modules[selected.index].title}

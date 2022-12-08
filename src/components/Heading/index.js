@@ -59,10 +59,13 @@ const BaseHeading = styled(Heading)`
     margin: ${(props) => props.margin_xs};
     max-width: ${(props) => props.maxWidth_xs};
     font-size: ${(props) => props.fontSize_xs};
+    line-height: ${(props) => props.lineHeight_xs};
+    width: ${(props) => props.width_xs};
   }
   @media ${Devices.sm} {
     text-align: ${(props) => props.textAlign_sm};
     margin: ${(props) => props.margin_sm};
+    width: ${(props) => props.width_sm};
   }
   @media ${Devices.tablet} {
     text-align: ${(props) => props.textAlign_tablet};

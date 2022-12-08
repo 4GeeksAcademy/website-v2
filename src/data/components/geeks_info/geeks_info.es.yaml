@@ -14,6 +14,6 @@ list:
     sub_title: "Encontrarás más profesores en 4Geeks que el promedio de la industria."
   - title: ">  Soporte profesional a la medida"
     sub_title: "Basado en cada oportunidad laboral"
-paragraph: "<a href='/es/geeks-vs-otros'><span class='span-blue'>Compare 4Geeks</span></a> with other bootcamps."
+paragraph: "<a href='/es/geeks-vs-otros'><span class='span-blue'>Compara 4Geeks</span></a> con otras academias."
 image1: "../../../../static/images/bg/community.png"
 image2: "../../../../static/images/bg/community.png"

@@ -24,7 +24,7 @@ import Icon from "../Icon";
 import ChooseYourProgram from "../ChooseYourProgram";
 import StarRating from "../StarRating";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
-import { smartRedirecting } from "../../utils/utils.js";
+import { smartRedirecting, transferQuerystrings } from "../../utils/utils.js";
 
 const Title = ({ id, title, paragraph }) => {
   return (
@@ -43,7 +43,9 @@ const Side = ({
   content,
   button,
   bullets,
+  session,
 }) => {
+  const utm = session && session.utm;
   if (video)
     return (
       <ReactPlayer
@@ -217,14 +219,14 @@ const Side = ({
           textColor={Colors.black}
           color={Colors[button.color] || button.color}
           // padding="0"
-          padding_tablet="0"
+          // padding_tablet="0"
           fontSize="15px"
           textAlign="left"
           margin="2rem 0"
           padding=".35rem.85rem"
           onClick={() => {
             if (button.path && button.path.indexOf("http") > -1)
-              window.open(button.path);
+              window.open(transferQuerystrings(button.path, utm));
             else navigate(button.path);
           }}
         >
@@ -235,7 +237,7 @@ const Side = ({
   );
 };
 
-export const TwoColumn = ({ left, right, proportions }) => {
+export const TwoColumn = ({ left, right, proportions, session }) => {
   const [left_size, right_size] = proportions ? proportions : [];
 
   return (
@@ -252,7 +254,7 @@ export const TwoColumn = ({ left, right, proportions }) => {
         // maxHeight="300px"
         textAlign="center"
       >
-        <Side {...left} />
+        <Side session={session} {...left} />
       </Div>
       <Div
         flexDirection="column"
@@ -260,7 +262,7 @@ export const TwoColumn = ({ left, right, proportions }) => {
         size="12"
         textAlign="center"
       >
-        <Side {...right} />
+        <Side session={session} {...right} />
       </Div>
     </Div>
   );
@@ -278,7 +280,9 @@ export const MultiColumns = ({
   button,
   columns,
   swipable,
+  session,
 }) => {
+  const utm = session && session.utm;
   const [h_xl, h_lg, h_md, h_sm, h_xs] = heading ? heading.font_size : [];
   const [sh_xl, sh_lg, sh_md, sh_sm, sh_xs] =
     sub_heading && Array.isArray(sub_heading.font_size)
@@ -369,7 +373,7 @@ export const MultiColumns = ({
           lineHeight="26px"
           textColor={Colors[button.color] || button.color}
           color={Colors[button.color] || button.color}
-          padding_tablet="0"
+          // padding_tablet="0"
           fontSize="15px"
           style={button.style ? JSON.parse(button.style) : null}
           background={Colors[button.background] || button.background}
@@ -378,7 +382,7 @@ export const MultiColumns = ({
           padding=".35rem.85rem"
           onClick={() => {
             if (button.path && button.path.indexOf("http") > -1)
-              window.open(button.path);
+              window.open(transferQuerystrings(button.path, utm));
             else navigate(button.path);
           }}
         >
@@ -428,7 +432,7 @@ export const Columns = ({ columns, proportions, swipable }) => {
           size_xs={c.size[3]}
           textAlign={c.align}
           minWidth="250px"
-          margin="25px 0 0 0"
+          margin="25px 15px 0 15px"
         >
           <Img
             src={c.image.src}
@@ -735,13 +739,13 @@ export const landingSections = {
           </H5>
           <LeadForm
             landingTemplate
-            layout="block"
+            // layout="block"
             background={Colors.verylightGray}
             margin="0"
             marginButton={`15px 0 30px auto`}
             buttonBorderRadius="3px"
             justifyContentButton="center"
-            inputBgColor="#F9F9F9"
+            // inputBgColor="#F9F9F9"
             selectProgram={programs}
             inputBgColor={Colors.white}
             layout="flex"
@@ -998,6 +1002,7 @@ export const landingSections = {
           button: yml.button,
         }}
         proportions={yml.proportions}
+        session={session}
       />
     </Div>
   ),
@@ -1022,6 +1027,7 @@ export const landingSections = {
           }}
           right={{ image: yml.image, video: yml.video }}
           proportions={yml.proportions}
+          session={session}
         />
       </Div>
     );
@@ -1044,6 +1050,7 @@ export const landingSections = {
           end_paragraph={yml.content}
           button={yml.button}
           swipable={yml.swipable}
+          session={session}
         />
       </Div>
     );

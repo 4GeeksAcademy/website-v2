@@ -26,7 +26,7 @@ import { requestSyllabus } from "../actions";
 import { SessionContext } from "../session";
 import Testimonials from "../components/Testimonials";
 import Badges from "../components/Badges";
-import PricesAndPayment from "../components/PricesAndPayment";
+import PricesAndPayment from "../components/PricesAndPayment_v2";
 import { Circle } from "../components/BackgroundDrawing";
 import LeadForm from "../components/LeadForm";
 import Modal from "../components/Modal";
@@ -445,6 +445,10 @@ export const query = graphql`
         node {
           title
           sub_title
+          button {
+            label
+            url
+          }
           image {
             childImageSharp {
               gatsbyImageData(
@@ -564,6 +568,8 @@ export const query = graphql`
               list {
                 label
                 content
+                link
+                link_text
               }
             }
             heading
@@ -865,12 +871,11 @@ export const query = graphql`
           city
           country
           name
-          hasFinancialsOption
-          financials_max_months
           active_campaign_location_slug
           breathecode_location_slug
           fields {
             lang
+            file_name
           }
           button {
             apply_button_text
@@ -895,79 +900,6 @@ export const query = graphql`
                   width: 800
                   placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                 )
-              }
-            }
-          }
-
-          prices {
-            machine_learning {
-              part_time {
-                slug
-                duration
-                left_section {
-                  header {
-                    heading_one
-                    sub_heading
-                    heading_two
-                  }
-                  content {
-                    price
-                    price_info
-                  }
-                  button {
-                    button_text
-                  }
-                }
-                center_section {
-                  header {
-                    heading_two
-                    sub_heading
-                    heading_one
-                  }
-                  plans {
-                    months
-                    monthsInfo
-                    payment
-                    paymentInfo
-                    provider
-                    logo
-                    message
-                  }
-                  button {
-                    button_text
-                  }
-                }
-                right_section {
-                  button {
-                    button_text
-                  }
-                  content {
-                    price
-                    price_info
-                  }
-                  header {
-                    heading_one
-                    sub_heading
-                    heading_two
-                  }
-                }
-              }
-              full_time {
-                slug
-                left_section {
-                  header {
-                    heading_one
-                    sub_heading
-                    heading_two
-                  }
-                  content {
-                    price
-                    price_info
-                  }
-                  button {
-                    button_text
-                  }
-                }
               }
             }
           }

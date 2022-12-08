@@ -1,7 +1,9 @@
 const path = require("path");
 const fs = require("fs");
 const YAML = require("yaml");
+const logger = require("./src/utils/log");
 const { createFilePath } = require(`gatsby-source-filesystem`);
+const bcSourcePlugin = require(`./bc-source-plugin/gatsby-node.js`);
 
 var redirects = [];
 var ymls = [];
@@ -9,21 +11,30 @@ var ymls = [];
 const saveRedirectLogs = () => {
   console.log("Saving redirect log");
   fs.writeFile(
-    "./public/redirects.log",
+    "./logs/redirects.log",
     JSON.stringify(redirects, null, 1),
     function (err) {
       if (err) return console.log(err);
-      console.log("Created redirects file");
+      else console.log("Created redirects file");
     }
   );
 
   return true;
 };
 
-exports.onCreateNode = ({ node, getNode, actions }) => {
+exports.sourceNodes = async (
+  { actions, createNodeId, createContentDigest },
+  config
+) => {
+  return await bcSourcePlugin.sourceNodes(
+    { actions, createNodeId, createContentDigest },
+    config
+  );
+};
+exports.onCreateNode = ({ node, getNode, actions, ...rest }) => {
   const { createNodeField } = actions;
 
-  // curstom post types for the website
+  // custom post types for the website
   if (
     [
       "MarkdownRemark",
@@ -52,6 +63,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
       "StaffYaml",
       "ProgramSvgYaml",
       "PricesAndPaymentYaml",
+      "PlansYaml",
       "WhyPythonYaml",
       "ChooseYourProgramYaml",
       "About4GeeksYaml",
@@ -65,11 +77,19 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
       "With4GeeksYaml",
     ].includes(node.internal.type)
   ) {
-    const url = createFilePath({ node, getNode });
+    let url = null;
+    if (node.internal.type == "MarkdownRemark") {
+      // skip without formatting
+      if (!node.frontmatter) {
+        logger.error("Missing frontmatter on node: " + node.id);
+      }
+
+      const slug = node.frontmatter.slug.replace(/\.[a-z]{2,2}/, "");
+      url = `/data/blog/${slug}.${node.frontmatter.lang || "us"}/`;
+    } else url = createFilePath({ node, getNode });
+
     const meta = getMetaFromPath({ url, ...node });
 
-    // add properties to the graph
-    // if (node.internal.type.includes("Choose")) console.log(`Found meta for ${node.internal.type}`, meta)
     if (meta) {
       createNodeField({ node, name: `lang`, value: meta.lang });
       createNodeField({ node, name: `slug`, value: meta.slug });
@@ -79,8 +99,12 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
       createNodeField({ node, name: `pagePath`, value: meta.pagePath });
       createNodeField({ node, name: `filePath`, value: url });
       ymls.push(meta);
+    } else {
+      logger.error("No meta could be generated for " + url);
     }
   }
+
+  return node;
 };
 
 // Create all the pages needed
@@ -129,6 +153,12 @@ const createEditPage = async ({ actions, graphql }) => {
   return true;
 };
 
+// CLUSTERS:
+let clusters = {
+  us: [],
+  es: [],
+};
+
 const createBlog = async ({ actions, graphql }) => {
   const { createPage, createRedirect } = actions;
   const _createRedirect = (args) => {
@@ -145,6 +175,7 @@ const createBlog = async ({ actions, graphql }) => {
             html
             id
             frontmatter {
+              excerpt
               title
               slug
               template
@@ -154,7 +185,6 @@ const createBlog = async ({ actions, graphql }) => {
               featured
               cluster
             }
-            excerpt
             fields {
               lang
               slug
@@ -169,7 +199,10 @@ const createBlog = async ({ actions, graphql }) => {
       }
     }
   `);
-  if (result.errors) throw new Error(result.errors);
+  if (result.errors) {
+    logger.error(result.errors);
+    throw new Error(result.errors);
+  }
 
   const posts = result.data.allMarkdownRemark.edges;
 
@@ -177,7 +210,6 @@ const createBlog = async ({ actions, graphql }) => {
     const postTemplate = path.resolve(
       `src/templates/${node.frontmatter.template || "post"}.js`
     );
-    console.log(`Creating post ${node.fields.pagePath}`);
 
     // if a blog post has the "landing_cluster" template its not a real blog post, its more like a landing page meant as a topic cluster
     // and it will not follow the same URL structure, landing_cluster's have a very unique URL.
@@ -201,7 +233,7 @@ const createBlog = async ({ actions, graphql }) => {
         isPermanent: true,
       });
 
-      console.log(`Redirect for post /us/post/${node.fields.slug}`);
+      logger.debug(`Redirect for post /us/post/${node.fields.slug}`);
       _createRedirect({
         fromPath: `/us/post/${node.fields.slug}`,
         toPath: node.fields.pagePath,
@@ -221,7 +253,7 @@ const createBlog = async ({ actions, graphql }) => {
           );
         if (!path || path === "") return;
         path = path[0] !== "/" ? "/" + path : path; //and forward slash at the beginning of path
-        console.log(`Additional redirect ${path} => ${node.fields.pagePath}`);
+        logger.debug(`Additional redirect ${path} => ${node.fields.pagePath}`);
         _createRedirect({
           fromPath: path,
           toPath: node.fields.pagePath,
@@ -232,18 +264,15 @@ const createBlog = async ({ actions, graphql }) => {
     }
   });
 
-  // CLUSTERS:
-  let clusters = {
-    us: [],
-    es: [],
-  };
   // Iterate through each post, putting all found tags into `tags`
   posts.forEach(({ node }) => {
-    if (node.frontmatter.cluster)
+    if (node.frontmatter?.cluster) {
       clusters[node.fields.lang] = clusters[node.fields.lang].concat(
         node.frontmatter.cluster
       );
+    }
   });
+
   // Eliminate duplicate clusters
   Object.keys(clusters).forEach(
     (lang) =>
@@ -336,7 +365,7 @@ const createEntityPagesfromYml = async (
 
   const translations = buildTranslations(result.data[`all${entity}Yaml`]);
   result.data[`all${entity}Yaml`].edges.forEach(({ node }) => {
-    console.log(
+    logger.debug(
       `Creating entity ${entity} ${
         node.fields.slug === "index" ? "/" : node.fields.pagePath
       } with template ${
@@ -397,7 +426,7 @@ const createEntityPagesfromYml = async (
           );
         if (path === "") return;
         path = path[0] !== "/" ? "/" + path : path; //and forward slash at the beginning of path
-        console.log(`Additional redirect ${path} => ${node.fields.pagePath}`);
+        logger.debug(`Additional redirect ${path} => ${node.fields.pagePath}`);
         _createRedirect({
           fromPath: path,
           toPath: node.fields.pagePath,
@@ -415,7 +444,7 @@ const createPagesfromYml = async ({ graphql, actions }) => {
   const { createPage, createRedirect } = actions;
   const _createRedirect = (args) => {
     redirects.push(`Redirect from ${args.fromPath} to ${args.toPath}`);
-    console.log(`Redirect from ${args.fromPath} to ${args.toPath}`);
+    logger.debug(`Redirect from ${args.fromPath} to ${args.toPath}`);
     createRedirect(args);
   };
   const result = await graphql(`
@@ -455,13 +484,12 @@ const createPagesfromYml = async ({ graphql, actions }) => {
 
     const _targetPath =
       node.fields.slug === "index" ? "/" : node.fields.pagePath;
-    console.log(
+    logger.debug(
       `Creating page ${
         node.fields.slug === "index" ? "/" : node.fields.pagePath
       } in ${node.fields.lang}`
     );
-    // if (node.fields.slug.includes("carrera-de-programacion"))
-    //   console.log(node.fields);
+
     createPage({
       path: _targetPath,
       component: path.resolve(
@@ -471,6 +499,7 @@ const createPagesfromYml = async ({ graphql, actions }) => {
         ...node.fields,
         ...node.meta_info,
         translations: translations[node.fields.defaultTemplate],
+        clusters: clusters[node.fields.lang],
       },
     });
 

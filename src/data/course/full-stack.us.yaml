@@ -59,7 +59,7 @@ course_instructors:
       linkedin: "https://www.linkedin.com/"
 
 badges:
-  paragraph: "4Geeks Academy is the place where developers grow and thrive. We are licensed by the USA F. Dep. of Education. Chosen as one of the top 35 bootcamps of the world and top coding bootcamp in Miami according to SwitchUp. Recognized as the top 10 coding bootcamps in the United States according to Newsweek.."
+  paragraph: "4Geeks Academy only focuses in coding skills, the defacto <a href='/us/coding-bootcamp'>coding bootcamp</a>. We are licensed by the USA F. Dep. of Education. Chosen as one of the top 35 bootcamps of the world and top coding bootcamp in Miami according to SwitchUp. Recognized as the top 10 coding bootcamps in the United States according to Newsweek.."
 
 upcoming:
   no_dates_message: "There are currently no upcoming dates for this program"
@@ -84,7 +84,7 @@ details:
       You will re-shape your mind to embrace new logical, developmental and researching skills."
       list:
         - label: "Duration"
-          content:  "16 Weeks"
+          content:  "16+2 Weeks"
           icon: "calendar"
         - label: "Classes"
           content: "3 classes weekly"
@@ -99,7 +99,7 @@ details:
           icon: "contract-checked"
          
   heading: Program Details Part-Time
-  weeks: 16
+  weeks: 18
   sub_heading: "Hands-on learning through real-life projects. /n Master the 3 most used languages in the world: Master Python, JS and React."
   left_labels:
     description: "DESCRIPTION:"
@@ -141,7 +141,7 @@ details:
       projects: "During this phase you will have to design, code, test, and publish your own entire web application."
       slug: "advanced-application"
       duration: "6 weeks"
-      step: 6
+      step: 8
     - module_name: "LIFELONG SUPPORT"
       title: "Lifelong Support"
       description: "Keep practicing with the academy's help - we will be coaching you for life.  Build your Resume, Github, LinkedIn.  We will help you apply for jobs and continue to support you once you have found a job"

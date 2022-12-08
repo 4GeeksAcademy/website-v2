@@ -7,31 +7,30 @@ navbar:
       paragraph: "Haz el cambio de carrera que siempre quisiste. Mientras buscas cambiar, encontrar un trabajo mejor o avanzar en el actual. Aprende a codificar en 4Geeks Academy."
 
       links:
+
         - title: "Full Stack Developer"
-          level: "Nivel 1"
+          level: "Desde cero"
           icon: "fullstack"
-          paragraph: "Aprende las habilidades más solicitadas con instructores apasionados y un plan de estudios práctico para ayudarte a encontrar un trabajo de programación como desarrollador Jr. "
+          paragraph: "Convierte en un programador que utiliza las tecnologias más búscadas, mentoria personalizada y un plan de estudios y career support para conseguir tu primer trabajo."
           buttons:
-            - text: "Part Time"
+            - text: "Ver programa"
               link: "/es/coding-bootcamps/full-stack-part-time"
-            - text: "Full Time"
-              link: "/es/coding-bootcamps/full-stack-full-time"
 
-        - title: "Software Engineer"
-          level: "Nivel 2"
-          icon: "software"
-          paragraph: "Desarrolla más habilidades adentrándote en el mundo de computación y aplicaciones nativas de la nube."
-          buttons:
-            - text: "Ver Programa"
-              link: "/es/coding-bootcamps/ingenieria-de-software-programacion"
-
-        - title: "AI/Machine Learning Engineering"
-          level: "Online"
+        - title: "Data Science y Machine Learning"
+          level: "Desde cero"
           icon: "machine"
-          paragraph: "Conoce las herramientas necesarias para mejorar tus habilidades y ser parte del futuro de la Inteligencia Artificial"
+          paragraph: "Conviértete en un científico de datos, desarrolla modelos de predicción y uneté a una de las profesiones mejores pagadas del mundo."
           buttons:
             - text: "Ver Programa"
-              link: "/es/coding-bootcamps/curso-inteligencia-artificial"
+              link: "/es/coding-bootcamps/curso-datascience-machine-learning"
+              
+        - title: "Blockchain y Web3"
+          level: "Desde cero"
+          icon: "software"
+          paragraph: "Construye applicaciones en la Web3 utilizando Solidity y Etherium Blockchain. Obtén un trabajo como desarrolaldor de blockchain."
+          buttons:
+            - text: "Registro temprano"
+              link: "#"
 
   - name: "Porqué 4Geeks"
     link: "/es/porque-4geeks"

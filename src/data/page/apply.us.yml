@@ -29,7 +29,7 @@ left:
       title: "CHECK YOUR CAMPUS"
       text: "Your phone number country code is from a different country than the campus to which you are applying to, are you sure you want to continue applying?"
       left_button: "PICK ANOTHER CAMPUS"
-      right_button: "IT’S OK, APPLY TO"
+      right_button: "IT'S OK, APPLY TO"
   locations_title: "Select one of our campus"
   regions_title: "Select one region"
   course_title:
