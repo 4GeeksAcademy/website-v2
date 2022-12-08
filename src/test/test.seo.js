@@ -20,8 +20,8 @@ const metas = [
 ];
 
 const emptyImgAlt = (val, breathecrumb) => {
-  if (!val || val === "") throw Error("Missing image alt at "+breathecrumb);
-}
+  if (!val || val === "") throw Error("Missing image alt at " + breathecrumb);
+};
 
 let duplicateDescriptions = {};
 walk(`${__dirname}/../data/`, function (err, files) {

@@ -21,26 +21,26 @@ const metas = [
 
 const mustHaveAcademies = (val) => {
   if (!Array.isArray(val))
-    throw Error(`academies property should be an array and its a ${typeof(val)}`);
+    throw Error(
+      `academies property should be an array and its a ${typeof val}`
+    );
   else if (val.length == 0)
     throw Error(
       "Pricing plan has no academies assigned, comment the plan instead of leaving the academies array empty"
     );
 };
 const validateEmptyPlan = (val) => {
-
-  if(val.slug == undefined) throw Error(
-    "Pricing plan missing slug"
-  );
+  if (val.slug == undefined) throw Error("Pricing plan missing slug");
 
   if (!Array.isArray(val.bullets))
-    throw Error(`bullets property should exist and be array and its ${typeof(val.bullets)}`);
+    throw Error(
+      `bullets property should exist and be array and its ${typeof val.bullets}`
+    );
   else if (val.bullets.length == 0)
     throw Error(
       "Pricing plan bullets are missing, please add at least one bullet"
     );
 };
-
 
 let duplicateDescriptions = {};
 walk(`${__dirname}/../data/plans/`, function (err, files) {
@@ -54,8 +54,8 @@ walk(`${__dirname}/../data/plans/`, function (err, files) {
   _files.forEach((_path) => {
     const doc = loadYML(_path);
     langs[doc.lang] = true;
-    if(!slugs[doc.name]) slugs[doc.name] = {};
-    if(!slugs[doc.name][doc.lang]) slugs[doc.name][doc.lang] = {};
+    if (!slugs[doc.name]) slugs[doc.name] = {};
+    if (!slugs[doc.name][doc.lang]) slugs[doc.name][doc.lang] = {};
 
     const yml = doc && doc.yaml;
     if (!yml) fail("Invalid YML syntax for " + _path);
@@ -66,7 +66,6 @@ walk(`${__dirname}/../data/plans/`, function (err, files) {
     else {
       // look for duplicated slugs
       try {
-
         const validateSlug = (val, breadcrumbPath) => {
           // if(slugs[doc.name][doc.lang][val]) throw Error(`Plan slug ${val} already found for ${slugs[doc.name][doc.lang][val]} (please remove duplicate)`)
           // else slugs[doc.name][doc.lang][val] = breadcrumbPath;
@@ -87,14 +86,19 @@ walk(`${__dirname}/../data/plans/`, function (err, files) {
     }
   });
 
-  for(let course in slugs){
-    for(let lang in langs){
-      if(!slugs[course][lang]) fail(`Missing pricing plans for ${course} in language: ${lang}, maybe you want to create a ./src/data/plans/${course}.${lang}.yml file`)
-      for(let planName in slugs[course][lang]){
-        for(let otherLang in langs){
-          if(!slugs[course][otherLang][planName])
-            fail(`Pricing plan ${planName} is missing a "${otherLang}" translation for the course ${course}.\nTo fix this, open the ./src/data/plans/${course}.${lang}.yml file and add a plan with slug "${planName}"`);
-        } 
+  for (let course in slugs) {
+    for (let lang in langs) {
+      if (!slugs[course][lang])
+        fail(
+          `Missing pricing plans for ${course} in language: ${lang}, maybe you want to create a ./src/data/plans/${course}.${lang}.yml file`
+        );
+      for (let planName in slugs[course][lang]) {
+        for (let otherLang in langs) {
+          if (!slugs[course][otherLang][planName])
+            fail(
+              `Pricing plan ${planName} is missing a "${otherLang}" translation for the course ${course}.\nTo fix this, open the ./src/data/plans/${course}.${lang}.yml file and add a plan with slug "${planName}"`
+            );
+        }
       }
     }
   }
