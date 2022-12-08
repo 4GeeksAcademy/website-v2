@@ -23,8 +23,7 @@ let duplicateDescriptions = {};
 walk(`${__dirname}/../data/plans/`, function (err, files) {
   if (err) fail("Error reding the YML files: ", err);
   const _files = files.filter(
-    (f) =>
-      (f.indexOf(".yml") > 1 || f.indexOf(".yaml") > 1)
+    (f) => f.indexOf(".yml") > 1 || f.indexOf(".yaml") > 1
   );
 
   let slugs = {};
@@ -41,8 +40,12 @@ walk(`${__dirname}/../data/plans/`, function (err, files) {
       try {
         validateObjectProperties(doc.yaml, {
           academies: (val) => {
-            if (!Array.isArray(val)) throw Error("academies property should be an array");
-            else if (val.length) throw Error("Pricing plan has no academies assigned, comment the plan instead of leaving the academies array empty");
+            if (!Array.isArray(val))
+              throw Error("academies property should be an array");
+            else if (val.length)
+              throw Error(
+                "Pricing plan has no academies assigned, comment the plan instead of leaving the academies array empty"
+              );
           },
         });
       } catch (error) {

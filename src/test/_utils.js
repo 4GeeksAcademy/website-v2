@@ -22,7 +22,7 @@ const validateObjectProperties = (obj, validations) => {
   for (prop in obj) {
     breadcrumb.push(prop);
     const breadcrumbPath = breadcrumb.join(".");
-    console.log("validating "+breadcrumbPath, typeof obj[prop])
+    // console.log("validating " + breadcrumbPath, typeof obj[prop]);
     if (typeof obj[prop] == "object") {
       validateObjectProperties(obj[prop], validations);
     } else {

@@ -26,7 +26,8 @@ walk(`${__dirname}/../data/`, function (err, files) {
     (f) =>
       (f.indexOf(".yml") > 1 || f.indexOf(".yaml") > 1) &&
       f.indexOf("additional-redirects.yml") === -1 &&
-      f.indexOf("/components/") === -1 && f.indexOf("/plans/") === -1 && // ignore components
+      f.indexOf("/components/") === -1 &&
+      f.indexOf("/plans/") === -1 && // ignore components
       f.indexOf("call-to-actions.yml") === -1
   );
 
