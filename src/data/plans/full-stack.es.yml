@@ -1,12 +1,5 @@
-meta_info:
-  slug: full-stack-es
-  title: full-stack
-  description: "full-stack-es"
-  image: ""
-  keywords: ""
-  redirects: []
 full_time:
-  - slug: 'plan-1'
+  - slug: 'usa-clark-scholarship-ft'
     academies: ['downtown-miami', 'orlando']
     recomended: true
     scholarship: "Scolarship"
@@ -17,7 +10,7 @@ full_time:
       - "9% of your salary until paid in full, only if you get a job in tech."
     icons: 
       - "/images/landing/uwm_pantone_2021_2.png"
-  - slug: 'plan-2'
+  - slug: 'usa-financed-ft'
     academies: ['downtown-miami', 'orlando']
     recomended: false
     scholarship: "Financed"
@@ -30,7 +23,7 @@ full_time:
       - "/images/ascent_logo.jpg"
       - "/images/climb-logo.png"
       - "/images/quotanda-logo.png"
-  - slug: 'plan-3'
+  - slug: 'usa-isa-ft'
     academies: ['downtown-miami', 'orlando']
     recomended: false
     scholarship: "Income Share Agreement"
@@ -43,7 +36,7 @@ full_time:
       - "/images/ascent_logo.jpg"
       - "/images/climb-logo.png"
       - "/images/quotanda-logo.png"
-  - slug: 'plan-4'
+  - slug: 'usa-upfront-ft'
     academies: ['downtown-miami', 'orlando']
     recomended: false
     scholarship: "Full Payment"
@@ -53,7 +46,7 @@ full_time:
       - "You're saving $1000 USD"
 
 part_time:
-  - slug: 'plan-1'
+  - slug: 'usa-clark-scholarship-pt'
     academies: ['downtown-miami', 'orlando']
     recomended: true
     scholarship: "Scolarship"
@@ -64,7 +57,7 @@ part_time:
       - "9% of your salary until paid in full, only if you get a job in tech."
     icons: 
       - "/images/landing/uwm_pantone_2021_2.png"
-  - slug: 'plan-2'
+  - slug: 'usa-financed-pt'
     academies: ['downtown-miami', 'orlando']
     recomended: false
     scholarship: "Financed"
@@ -77,7 +70,7 @@ part_time:
       - "/images/ascent_logo.jpg"
       - "/images/climb-logo.png"
       - "/images/quotanda-logo.png"
-  - slug: 'plan-3'
+  - slug: 'usa-isa-pt'
     academies: ['downtown-miami', 'orlando']
     recomended: false
     scholarship: "Income Share Agreement"
@@ -90,7 +83,7 @@ part_time:
       - "/images/ascent_logo.jpg"
       - "/images/climb-logo.png"
       - "/images/quotanda-logo.png"
-  - slug: 'plan-4'
+  - slug: 'usa-upfront-pt'
     recomended: false
     academies: ['downtown-miami', 'orlando']
     scholarship: "Full Payment"

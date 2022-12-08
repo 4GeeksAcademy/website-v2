@@ -13,7 +13,6 @@ const SEO = (props) => (
           defaultTitle,
           titleTemplate,
           defaultDescription,
-          defaultKeywords,
           siteUrl,
           defaultImage,
           social: {
@@ -36,14 +35,10 @@ const SEO = (props) => (
         social,
         author,
         context,
-        keywords,
         visibility,
       } = props;
       const { lang, type, pagePath } = context;
       const url = `${siteUrl}${pagePath || "/"}`;
-      const _keywords = keywords
-        ? keywords + [].join(",")
-        : defaultKeywords[lang].join(",");
       const previewImage = `${
         RegExp("http").test(image || defaultImage) ? "" : siteUrl
       }${image || defaultImage}`;
@@ -51,12 +46,11 @@ const SEO = (props) => (
         <>
           <Helmet title={title || defaultTitle} titleTemplate={titleTemplate}>
             <html lang={langCountries[lang]} />
-            {/* <link rel="canonical" href={`${siteUrl}${pagePath}`} /> */}
+            <link rel="canonical" href={`${siteUrl}${pagePath}`} />
             <meta
               name="description"
               content={description || excerpt || defaultDescription[lang]}
             />
-            <meta name="keywords" content={_keywords} />
             {["hidden", "unlisted"].includes(
               context.visibility || visibility
             ) && <meta name="robots" content="noindex" />}
@@ -139,10 +133,6 @@ const query = graphql`
         defaultTitle
         titleTemplate
         defaultDescription {
-          es
-          us
-        }
-        defaultKeywords {
           es
           us
         }
