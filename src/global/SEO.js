@@ -51,7 +51,7 @@ const SEO = (props) => (
         <>
           <Helmet title={title || defaultTitle} titleTemplate={titleTemplate}>
             <html lang={langCountries[lang]} />
-            {/* <link rel="canonical" href={`${siteUrl}${pagePath}`} /> */}
+            <link rel="canonical" href={`${siteUrl}${pagePath}`} />
             <meta
               name="description"
               content={description || excerpt || defaultDescription[lang]}
