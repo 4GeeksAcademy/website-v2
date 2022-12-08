@@ -1,0 +1,202 @@
+meta_info:
+  slug: summer-discount # <--- URL 4geeksacademy.com/us/landing/example
+
+  # This will show on social media when shared
+  title: "Get a Scholarship and join our software development program now. It's LIVE, on-line (or in-person if you want as well). Learn to code and launch your career in Tech"
+  description: "Coding has become an essencial skills for every career, enroll in 4Geeks Academy coding program and learn to code to have a better life."
+  image: "/images/bg/main-bg.jpg"
+  keywords: "Scholarships for coding program, coding course, Financial aid Coding Classes, Learn to code with a scholarship"
+
+  template: "landing_a" # <--- choose your landing template
+  redirects: [] # <--- URL redirections to avoid 404 errors
+
+    # Set a particular course or location to the landing page
+  # this UTM fields will be also included in the CRM contact
+  utm_course: ["full-stack"]
+  utm_location: downtown-miami
+  automation: soft # comma separated, "soft" is the default value
+  tag: request_more_info # comma separated, "request_more_info" is the default value
+
+navbar:
+  logoUrl: "#" # relative(/apply), absolute(https://google.com) or id(#componentName)
+  buttonText: "Get More Info"
+  buttonUrl: "#bottom" # url accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
+
+form:
+  # posible fields: "first_name", "last_name", "full_name", "phone", "email"
+  # always the first_name, email and phone will be mandatory if added.
+  fields: ["full_name", "phone", "email"]
+  heading: "Join our award-winning Coding Program"
+  motivation: "Fill out the form and get the Schiolarship towards your tuition at 4Geeks. Only 85 seats remain available"
+  button_label: Get more info Now
+  redirect: null #you can redirect to another url or entirely diffrent website
+
+apply_schollarship: # form that is displayed at the end of the landing
+  # title: "Get more info about this award-winning development course"
+  imageSide: "right"
+  image: "../../../static/images/comunity-support.png"
+
+# jumbotron on the top (cannot be commented out)
+header_data:
+  background: "#FFF1D1"
+  tagline: Learn to code and get a $4,000 Scholarship. 
+  sub_heading: "YES! $4k off and your coding program for less than $6k"
+  badge: "../../../static/images/badges/switchup.png"
+  image_filter: brightness(0.3)
+
+features:
+  marginTop: 0px #<-- separation between tagline and the bullets
+
+  #                                         up   left down  right
+  styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
+  bullets:
+   - The average Coding Program in USA is ~15k
+   - Get a Job in Tech. Make more tha 60k a year! 
+   - No previous experience or coding skills required.
+   - Part-time focused. No need to stop your life.
+   - Enrollment Open. Only less than 85 seats remaining. Available Nationwide
+   - Call now 786-416-6640 and say that you want to get the Clark Scholarship
+  
+short_badges:
+  - name: "Premios Excelencia Educativa"
+    url: ""
+    image: "../../../static/images/badges/exelencia-educativa.png"
+    alt: "Mejor centro de Coding Bootcamp"
+  - name: "Newsweek"
+    url: ""
+    image: "../../../static/images/badges/newsweek.png"
+    alt: "Top Coding Bootcamps Newsweek"
+  - name: "Switchup"
+    url: ""
+    image: "../../../static/images/badges/reviews.png"
+    alt: "Best coding bootcamp Switchup 2021"   
+
+follow_bar:
+  position: "top" # top, bottom, hidden
+  content:
+    text: "The avg. salary for a Full Stack Developer \n is $65K per year. Contact us and get more info."
+    text_mobile: "Contact us and get more info"
+    # devices:   XL      LG    MD      SM    XS
+    font_size: ["25px", "25px", "25px", "20px", "18px"]
+  button:
+    text: "Get $4k OFF tuition"
+    path: "#top"
+  phone:
+    text: "Call "
+
+#
+# ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇
+#
+rating_reviews:
+  position: 1
+  heading: "Top rated on all available review sites"
+  rating_list:
+    - alt: "Career Karma"
+      image: "../../../static/images/badges/career-karma.png"
+      rating: 4.89
+      url: ""
+    - alt: "Switchup"
+      image: "../../../static/images/badges/switchup-img.png"
+      rating: 4.91
+      url: ""
+    - alt: "Course Report"
+      image: "../../../static/images/badges/course-report.png"
+      rating: 4.84
+      url: ""
+    - alt: "Google"
+      image: "../../../static/images/badges/google.png"
+      rating: 5
+      url: ""
+
+program_details:
+  position: 3
+  background: "#FFFFFF"
+  heading: "Program details"
+  sub_heading: "Real-life projects and exactly what companies are looking for"
+
+iconogram:
+  position: 2
+  icons:
+  - icon: "touch" 
+    title: Request Info
+  - icon: "receive_mail"
+    title: Receive an email with details
+  - icon: "talk"
+    title: Talk to Admissions
+  - icon: "terminal"
+    title: Learn to Code
+
+
+How it works:
+  position: 4
+  background: "veryLightBlue2"
+  layout: two_column_right
+  proportions: [6, 6]
+  image:
+    style: '{ "backgroundSize": "contain" }'
+    src: "/static/images/landing/_CU_Horiz_Red_LG.png"
+  heading:
+    text: "How it works"
+    font_size: ["30px", "30px", "30px", "30px", "30px"]
+  sub_heading:
+    text: "Thanks to the partnership with Clark University, 4Geeks Academy is now offering the possibility to join our Coding program with a scholarship equal to $4000. You just need to consider the following:"
+    font_size: ["18px", "18px", "18px", "18px", "18px"]
+  button:
+    text: "Apply here"
+    color: null
+    path: "https://tqaclark.agsprime.net/one_workforce/self_registration_module/participant_self_registration_form?EDIT_MODE=false&staff_organization_id=6329D58D569BD902D19F1E8C"
+  content:
+    text: |
+      <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">1. Apply and ask for the Clark Scholarship fund.</strong></h2>
+      <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">2. Show/provide proof of working permit in the US.</strong></h2>
+      <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">3. If you are unemployed, that's good here. But if you are underpaid or need a new job or a new salary, you also are subject to receive the Scholarship.</strong></h2>
+      <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">4. Complete the program.</strong></h2>
+      <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">5. Let's start together to find a job. Your success will open more doors to upcoming students.</strong></h2>
+    font_size: ["16px"]
+
+why_python:
+  position: 5
+  heading: "Why Python and React.js" # optional or set to white space to hide
+  sub_heading: "JavaScript has 26x's more job vacancies than Ruby On Rails. Python has 10x's more job vacancies than Node.js" # optional or set to white space to hide
+
+geeks_vs_others:
+  position: 6
+  heading: "Compare 4Geeks to other bootcamps"
+  # sub_heading: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
+  total_rows: 5
+
+why_4geeks:
+  position: 7
+  heading: "Why 4Geeks Academy"
+  sub_heading: ""
+
+badges:
+  position: 8
+  heading: "4Geeks Academy has awards and recognitions that validate its excellence"
+
+who_is_hiring:
+  position: 9
+  limit: 4
+  heading: "Who is hiring our students?"
+  sub_heading: "500+ hiring partners, and 50+ job openings right now for software development"
+
+# alumni_projects:
+#  position: 10
+#  heading: "Projects you will be able to make"
+#  sub_heading: "Take a look at our previous student projects"
+
+components:
+  - name: python_y_javascript
+    position: 11
+    layout: two_column_right
+    background: "veryLightBlue2" # Name of the color(from components/Styling/index.js) or color code ex: #C9F9F9
+    image:
+      src: "/images/why-4geeks/python-image.png"
+    heading:
+      text:
+        "Learn Python, Javascript, and more"
+        #           xl      lg      md      sm      xs
+      font_size: ["50px", "50px", "50px", "50px", "50px"]
+    content:
+      text: "Learn the highest paid and in demand technologies that enable you to create amazing software, apps and websites."
+      font_size: ["16px"]

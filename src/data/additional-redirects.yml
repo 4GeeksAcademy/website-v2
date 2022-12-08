@@ -14,3 +14,8 @@ redirects:
     toPath: "https://www.notion.so/4geeksacademy/Talent-Pipeline-4Geeks-Academy-ef91aba17f9c4964bf7972396d190bdf"
     #redirectInBrowser: true
     isPermanent: false # if permanent google will erase the original url from its results
+    
+  - fromPath: "/us/blog/aprender-a-programar"
+    toPath: "/es/blog-en-espanol/aprender-a-programar"
+    #redirectInBrowser: true
+    isPermanent: true # if permanent google will erase the original url from its results
