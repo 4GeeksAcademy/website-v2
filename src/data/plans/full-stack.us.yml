@@ -91,3 +91,120 @@ part_time:
     price: "$8099"
     bullets: 
       - "You're saving $1000 USD"
+
+  - slug: 'spain-scholarships-fs-pt'
+    academies: ['barcelona-spain','madrid-spain', 'malaga-spain', 'valencia-spain']
+    recomended: true
+    scholarship: "Scholarships available"
+    payment_time: ""
+    price: "~€175 / month"
+    bullets:
+      - "Tailor-made financing plans, with or without interest, from 4 to 30 installments"
+      - "Scholarships available up to €1600. From €4700 instead of €6300"     
+    icons: 
+      - "/images/zank.png"
+      - "/images/sequra.png"
+      - "/images/nemuru.png"
+      - "/images/quotanda-logo.png"
+
+  - slug: 'spain-upfront-fs-pt'
+    academies: ['barcelona-spain','madrid-spain', 'malaga-spain', 'valencia-spain']
+    recomended: false
+    scholarship: "Pay upfront"
+    payment_time: "And get a discount"
+    price: "€4500*"
+    bullets:
+      - "Pay with wire transfer, credit or debit card, Paypal, Bitcoin or Ethereum"
+      - "*Discount up to €1800. From €4500 instead of €6300"     
+    icons: 
+      - "/images/visa-mastercard.png"    
+      - "/images/bitcoin_logo.png"  
+      - "/images/ethereum.png"    
+
+  - slug: 'spain-isa-fs-pt'
+    academies: ['barcelona-spain','madrid-spain', 'malaga-spain', 'valencia-spain']
+    recomended: true
+    scholarship: "Income Share Agreemen (ISA)"
+    payment_time: "Pay only when you work"
+    price: "€0*"
+    bullets: 
+      - "You will only have to pay when your income is greater than €16000 per year"
+      - "*Pay a small part of your salary when you find a job"
+    icons: 
+      - "/images/bcas.png" 
+
+  - slug: 'north-europe-scholarships-fs-pt'
+    academies: ['berlin-germany','dublin-ireland', 'europe','hamburg-germany','munich-germany']
+    recomended: true
+    scholarship: "Scholarships available"
+    payment_time: ""
+    price: "~€175 / month"
+    bullets:
+      - "Tailor-made financing plans, with or without interest, from 4 to 30 installments"
+      - "Scholarships available up to €1600. From €4700 instead of €6300"     
+    icons: 
+      - "/images/quotanda-logo.png"
+
+  - slug: 'north-europe-upfront-fs-pt'
+    academies: ['berlin-germany','dublin-ireland', 'europe','hamburg-germany','munich-germany']
+    recomended: false
+    scholarship: "Pay upfront"
+    payment_time: "And get a discount"
+    price: "€4850*"
+    bullets:
+      - "Pay with wire transfer, credit or debit card, Paypal, Bitcoin or Ethereum"
+      - "*Discount up to €1450. From €4850 instead of €6300"     
+    icons: 
+      - "/images/visa-mastercard.png"    
+      - "/images/bitcoin_logo.png"  
+      - "/images/ethereum.png"    
+                       
+  - slug: 'north-europe-isa-fs-pt'
+    academies: ['berlin-germany','dublin-ireland', 'europe','hamburg-germany', 'munich-germany']
+    recomended: true
+    scholarship: "Income Share Agreemen (ISA)"
+    payment_time: "Pay only when find a job"
+    price: "€0*"
+    bullets: 
+      - "You will only have to pay when your income is greater than €22000 per year"
+      - "*Pay a small part of your salary when you find a job"
+    icons: 
+      - "/images/stepex.png"     
+
+  - slug: 'south-europe-scholarships-fs-pt'
+    academies: ['lisbon-portugal','milan-italy','rome-italy']
+    recomended: true
+    scholarship: "Scholarships available"
+    payment_time: ""
+    price: "~€150 / month"
+    bullets:
+      - "Tailor-made financing plans, with or without interest, from 4 to 30 installments"
+      - "Scholarships available up to €2300. From €4000 instead of €6300"     
+    icons: 
+      - "/images/quotanda-logo.png"
+
+  - slug: 'south-europe-upfront-fs-pt'
+    academies: ['lisbon-portugal','milan-italy','rome-italy']
+    recomended: false
+    scholarship: "Pay upfront"
+    payment_time: "And get a discount"
+    price: "€3850*"
+    bullets:
+      - "Pay with wire transfer, credit or debit card, Paypal, Bitcoin or Ethereum"
+      - "*Discount up to €2450. From €3850 instead of €6300"     
+    icons: 
+      - "/images/visa-mastercard.png"    
+      - "/images/bitcoin_logo.png"  
+      - "/images/ethereum.png"
+
+  - slug: 'south-europe-isa-fs-pt'
+    academies: ['lisbon-portugal','milan-italy','rome-italy']
+    recomended: true
+    scholarship: "Income Share Agreemen (ISA)"
+    payment_time: "Pay only when find a job"
+    price: "€0*"
+    bullets: 
+      - "You will only have to pay when your income is greater than €16000 per year"
+      - "*Pay a small part of your salary when you find a job"
+    icons: 
+      - "/images/stepex.png"     

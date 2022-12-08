@@ -1,11 +1,3 @@
-meta_info:
-  slug: software-engineering-us
-  title: full-stack
-  description: "software-engineering-us"
-  image: ""
-  keywords: ""
-  redirects: []
-
 full_time:
   - slug: 'plan-1'
     academies: ['downtown-miami', 'orlando']
