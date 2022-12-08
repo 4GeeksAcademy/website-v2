@@ -1,7 +1,7 @@
 meta_info:
   slug: curso-datascience-machine-learning
   title: "Estudia Data Science y Machine Learning en 4Geeks Academy"
-  description: "Sin conocimientos previos, empieza una careera en el mundo del Data Science y escribe tus primeros modelos de Machine Learning"
+  description: "Sin conocimientos previos, empieza una carrera en el mundo del Data Science y escribe tus primeros modelos de Machine Learning"
   bc_slug: "datascience-ml"
   template: "course-datascience"
   image: "/images/og-preview/datascience-ml.es.png"
@@ -9,9 +9,9 @@ meta_info:
   keywords: ""
   redirects: ["/es/datascience"]
 
-seo_title: "Curso DataScience and Machine Learning"
+seo_title: "Curso Data Science and Machine Learning"
 header:
-  title: "Conviértete en un Ingeniero de DataScience y Machine Learning"
+  title: "Conviértete en un ingeniero de Data Science y Machine Learning"
   paragraph: "Una de las profesiones mejor pagadas del mundo."
   image: "../../../static/images/bg/apple-building.jpg"
   image_alt: "apple-building"
@@ -54,7 +54,7 @@ course_instructors:
       linkedin: "https://www.linkedin.com/in/alexismena/"
 
 badges:
-  paragraph: "Gracias a un enfoque hacia la codificación nuestros programas han sido galardonados como TOP en <a href='/es/premios'>España, USA y otros países.</a> Nuestros certificados estan avalados por el Departamento de Educación de Estado Unidos en Florida."
+  paragraph: "Gracias a un enfoque hacia la programación nuestros programas han sido galardonados como TOP en <a href='/es/premios'>España, USA y otros países.</a> Nuestros certificados estan avalados por el Departamento de Educación de Estado Unidos en Florida."
 
 upcoming:
   no_dates_message: "Actualmente no hay próximas fechas para este programa"
@@ -77,7 +77,7 @@ teacher:
   picture: ../../../static/images/staff/sayyed.jpeg
   linkedin: https://www.linkedin.com/in/sayyednezhadi/
   bio: >
-    Enfocado en guidar algunas de las empresas más grandes del mundo hacia la adopción de la inteligencia artificial (Enterprise AI). Estrategia y ejecución exitosa de más de 1200 proyectos a gran escala, sirviendo más de 350 clientes alrededor del mundo.
+    Enfocado en guiar a algunas de las empresas más grandes del mundo hacia la adopción de la inteligencia artificial (Enterprise AI). Estrategia y ejecución exitosa de más de 1200 proyectos a gran escala, sirviendo a más de 350 clientes alrededor del mundo.
 
 
 ## PROGRAM DETAILS
@@ -86,12 +86,12 @@ details:
       title: "Sobre este programa"
       sub_title: |
         Aprende Python, SQL, Looker (Google Data Studio), Streamlit y Estadísticas para convertirte en analista de datos y formar parte de un equipo técnico en cualquier compañía.
-        Crea tus propios modelos predictivos con Python, Pandas, Numpy, etc. Utiliza algoritmos predicivos como vecinos cercanos, árboles de decisión, entre otros muchos. 
-        Practica con escenarios comerciales de la vida real típicos en los negocios y revise algunas de las herramientas utilizadas en la industria.
+        Crea tus propios modelos predictivos con Python, Pandas, Numpy, etc. Utiliza algoritmos predictivos como vecinos cercanos, árboles de decisión, entre otros muchos. Y emplea algoritmos de aprendizaje supervisado y no supervisado. 
+        Practica con escenarios comerciales de la vida real, típicos en los negocios y aprende a utilizar algunas de las herramientas utilizadas en la industria.
         
       list:
         - label: "Duración"
-          content:  "18 semanas"
+          content:  "16 semanas"
           icon: "calendar"
         - label: "Clases"
           content: "3 Clases semanales"
@@ -108,7 +108,7 @@ details:
           icon: "contract-checked"
 
   heading: DETALLES DEL PROGRAMA
-  weeks: 18
+  weeks: 116
   facts:
     - label: "Duración"
       value: "18 semanas"
@@ -124,8 +124,8 @@ details:
     - label: "Tamaño Clase"
       value: "Sólo 14 personas"
     - label: "Horas totales"
-      value: "162"
-  sub_heading: "Comienza de cero con Python, profundiza en Data Science, modela y predice con Machine Learning y despliega tu aplicación"
+      value: "320"
+  sub_heading: "Comienza de cero con Python, profundiza en Ciencia de DAtos, modela y predice con Aprendizaje de Máquina y despliega tu aplicación"
   left_labels:
     description: "DESCRIPCIÓN:"
     projects: "PROYECTOS:"
@@ -141,15 +141,15 @@ details:
       step: 2
     - module_name: "Fundamentos"
       title: "Estadistica y Algebra Lineal con Python"
-      description: "Siempre con un enfoque muy práctico y programando en Python, vamos a aplicar los conceptos de Algebra Lineal más utilizandos en DataScience y Machine Learning. Matrices y Vectores, Funciones F(X) y relaciones entre variables. También programaremos en Python los conceptos probabilisticos más utilizados: tendencias centrales, desviación estándar, medias y medianas. Por último calcularemos probabilidades de que un evento o dato ocurra, una habilidad muy importante para poder desarrollar modelos y predicciones."
+      description: "Siempre con un enfoque muy práctico y programando en Python, vamos a aplicar los conceptos de Algebra Lineal más utilizandos en DataScience y Machine Learning. Matrices y Vectores, Funciones F(x) y relaciones entre variables. También programaremos en Python los conceptos probabilisticos más utilizados: tendencias centrales, desviación estándar, medias y medianas. Por último, calcularemos probabilidades de que un evento o dato ocurra, una habilidad muy importante para poder desarrollar modelos y predicciones."
       projects: "Para aplicar lo aprendido trabajaremos con casos reales enfocados en el mundo laboral."
       slug: "datascience-fundamentals"
       duration: "2 wks"
       step: 2
     - module_name: "Recolecta"
       title: "Recolecta y Almacena Datos"
-      description: "Probablemente la etapa más larga de todos los proyectos de DataScience es recolectar (y limpiar) los datos. En este módulo te trabajarás con Python para conectarte a bases de datos SQL, aprenderás la syntaxis de SQL para consultar y manipular esos datos, cargar y descargar archivos estáticos CSV, JSON entre otros más utilizados en la industria. Aprenderás a conectarte con API's o descargar datos de páginas que no cuentan con una API utilizando web scrapping. Almacenarás todos los datos de forma ordenada y coherente en una base de datos."
-      projects: "Carga de data estructurada y no-estructurada a partir de diferentes fuentes (E.j: SQL, Web Scraping, test files) y conectándote al API de Twitter."
+      description: "Probablemente la etapa más larga de todos los proyectos de Data Science es recolectar (y limpiar) los datos. En este módulo trabajarás con Python para conectarte a bases de datos SQL, aprenderás la sintaxis de SQL para consultar y manipular esos datos, cargar y descargar archivos estáticos CSV, JSON entre otros más utilizados en la industria. Aprenderás a conectarte con API's o descargar datos de páginas que no cuentan con una API utilizando web scraping. Almacenarás todos los datos de forma ordenada y coherente en una base de datos."
+      projects: "Carga de data estructurada y no-estructurada, a partir de diferentes fuentes (E.j: SQL, Web Scraping, ficheros de prueba) y conectándote a la API de Twitter."
       slug: "datacollection"
       duration: "2 wks"
       step: 2
@@ -175,9 +175,9 @@ details:
       duration: "1 wks"
       step: 1
     - module_name: "Projecto Final"
-      title: "Elige un problema y resuelvelo con I.A."
-      description: "Trabajarás en equipo para escojer un problema real, recolectar los datos necesarios para resolverlo con una prediccion, realizar un analysis exploratorio con varias visualizaciones que permitan entender los datos, limpiar el dataset para poder utilizarlo correctamente y seleccionar un par de modelos para realizar una prediccion. Luego evaluarás la effectividad de tus modelos utilizando las tecnicas vistas durante el curso. Por ultimo pondras tu modelo en produccion utilizando Streamlit o Google DataStudio."
-      projects: "Construyendo arquitecturas de datos, desplegando I.A. en produccion localmente y en la nube, monitoreando y manteniendo los modelos."
+      title: "Elige un problema y resuelvelo con Machine Learning"
+      description: "Trabajarás en equipo para escojer un problema real, recolectar los datos necesarios para resolverlo con una prediccion, realizar un análisis exploratorio con varias visualizaciones que permitan entender los datos, limpiar el dataset para poder utilizarlo correctamente y seleccionar un par de modelos para realizar una prediccion. Luego evaluarás la effectividad de tus modelos utilizando las técnicas vistas durante el curso. Por último, pondrás tu modelo en produccion utilizando Streamlit o Google DataStudio."
+      projects: "Construyendo arquitecturas de datos, desplegando la aplicaicón de Machine Learning localmente y en la nube, monitoreando y manteniendo los modelos."
       slug: "quality-deploy"
       duration: "3 wks"
       step: 2.9
@@ -231,7 +231,7 @@ geeks_vs_others:
 geek_data:
   heading: ¡Para que te contraten empresas de Fortune 500!
   geek_pal:
-    - Un profesor cada cinco estudiantes (1:5).
+    - Un profesor cada cinco estudiantes (1:7).
     - Sesiones ilimitadas de tutoría 1-1 por demanda, en persona o en línea.
     - Miles de ejercicios interactivos y autoevaluados.
     - Soluciones en video para una retroalimentación instantánea.
