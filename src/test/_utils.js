@@ -21,23 +21,22 @@ let breadcrumb = [];
 const validateObjectProperties = (obj, validations) => {
   for (prop in obj) {
     breadcrumb.push(prop);
-    const breadcrumbPath = breadcrumb.join(".");
-    // console.log("validating " + breadcrumbPath, typeof obj[prop]);
-    if (typeof obj[prop] == "object") {
-      validateObjectProperties(obj[prop], validations);
-    } else {
-      try {
-        if (validations[prop] && !isFunction(validations[prop])) {
-          breadcrumb = [];
-          throw Error(
-            `Object property validation for prop ${breadcrumbPath} should be a funcion`
-          );
-        } else if (validations[prop]) validations[prop](obj[prop]);
-      } catch (error) {
+    const breadcrumbPath = breadcrumb.join(".").replace(/\.\d([\.$])?/gm, "[]$1");
+    // console.log(`Validating ${breadcrumbPath}`);
+    try {
+      if (validations[breadcrumbPath] && !isFunction(validations[breadcrumbPath])) {
         breadcrumb = [];
-        throw { message: error.message, path: breadcrumbPath };
+        throw Error(
+          `Object property validation for prop ${breadcrumbPath} should be a funcion`
+        );
+      } else if (validations[breadcrumbPath]){
+        validations[breadcrumbPath](obj[prop], breadcrumbPath);
       }
+    } catch (error) {
+      breadcrumb = [];
+      throw { message: error.message, path: breadcrumbPath };
     }
+    if (typeof obj[prop] == "object") validateObjectProperties(obj[prop], validations);
     breadcrumb.pop();
   }
 };

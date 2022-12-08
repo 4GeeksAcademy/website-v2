@@ -19,6 +19,10 @@ const metas = [
   { key: "redirects", type: "array" },
 ];
 
+const emptyImgAlt = (val, breathecrumb) => {
+  if (!val || val === "") throw Error("Missing image alt at "+breathecrumb);
+}
+
 let duplicateDescriptions = {};
 walk(`${__dirname}/../data/`, function (err, files) {
   if (err) fail("Error reding the YML files: ", err);
@@ -121,9 +125,10 @@ walk(`${__dirname}/../data/`, function (err, files) {
 
       try {
         validateObjectProperties(doc.yaml, {
-          image: (val) => {
-            if (!val || val === "") throw Error("Missing image alt");
-          },
+          "python_banner.image_alt": emptyImgAlt,
+          "community_banner.image_alt": emptyImgAlt,
+          "header.image_alt": emptyImgAlt,
+          "what_is_4geeks.image_alt": emptyImgAlt,
         });
       } catch (error) {
         warn(`${error.message} in ${error.path} for file: \n ${_path}`);

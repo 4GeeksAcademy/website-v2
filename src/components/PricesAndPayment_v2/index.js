@@ -89,7 +89,7 @@ const PricingCard = ({
               color={isSelected ? Colors.white : Colors.black}
               opacity="1"
             >
-              <span style={{ fontSize: "36px" }}>{data.price}</span> USD
+              <span style={{ fontSize: "36px" }}>{data.price}</span>
             </Paragraph>
           </Div>
         </Div>
