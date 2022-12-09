@@ -1,47 +1,45 @@
 full_time:
   - slug: 'usa-clark-scholarship-ft'
-    academies: ['downtown-miami', 'orlando']
+    academies: ['downtown-miami', 'orlando','toronto-canada']
     recomended: true
     scholarship: "Scolarship"
-    payment_time: "Pay today"
-    price: "$4999"
+    payment_time: "There is nothing like this"
+    price: "$7999"
     bullets: 
       - "You're saving $4000 USD "
-      - "9% of your salary until paid in full, only if you get a job in tech."
+      - "Regular tuition is $11999. Avg tuition in the US is $15k."
     icons: 
       - "/images/landing/uwm_pantone_2021_2.png"
   - slug: 'usa-financed-ft'
-    academies: ['downtown-miami', 'orlando']
+    academies: ['downtown-miami', 'orlando','toronto-canada']
     recomended: false
     scholarship: "Financed"
     payment_time: "24 months payment"
-    price: "$310"
+    price: "~$250 per month"
     bullets: 
-      - "With $400 p/ week living stipends"
-      - "9% of your salary until paid in full, only if you get a job in tech."
+      - "Several partners offering loans and payment plans"
+      - "You can get a partial scholarship and the remaining balance with a payment plan"
     icons: 
       - "/images/ascent_logo.jpg"
       - "/images/climb-logo.png"
       - "/images/quotanda-logo.png"
   - slug: 'usa-isa-ft'
-    academies: ['downtown-miami', 'orlando']
+    academies: ['downtown-miami', 'orlando','toronto-canada']
     recomended: false
     scholarship: "Income Share Agreement"
-    payment_time: "Pay after you get a job"
+    payment_time: "Pay only when you get a job. Ask for living stipends."
     price: "$0"
     bullets: 
-      - "With $400 p/ week living stipends"
+      - "Get $400 p/ week living stipends"
       - "9% of your salary until paid in full, only if you get a job in tech."
     icons: 
-      - "/images/ascent_logo.jpg"
-      - "/images/climb-logo.png"
-      - "/images/quotanda-logo.png"
+      - "/images/landing/uwm_pantone_2021_2.png"
   - slug: 'usa-upfront-ft'
-    academies: ['downtown-miami', 'orlando']
+    academies: ['downtown-miami', 'orlando','toronto-canada']
     recomended: false
     scholarship: "Full Payment"
     payment_time: "Pay today"
-    price: "$8099"
+    price: "$10999"
     bullets: 
       - "You're saving $1000 USD"
 
@@ -77,92 +75,50 @@ full_time:
     bullets: 
       - "*You pay 16% of your salary when you get a job until you paid in full"
       - "Only if you get a job in tech" 
-    # icons:
-    #   - "/images/flevo.png"
-  - slug: 'spain-scholarships-fs-ft'
-    academies: ['barcelona-spain','madrid-spain', 'malaga-spain', 'valencia-spain']
-    recomended: true
-    scholarship: "Scholarship available"
-    payment_time: ""
-    price: "~175 € / mo."
-    bullets:
-      - "Customized financing, without interests, from 4 to 30 months."
-      - "Scholarships from 1.600 €. To 4.700 € instead of 6.300 €"     
     icons: 
-      - "/images/zank.png"
-      - "/images/sequra.png"
-      - "/images/nemuru.png"
-
-  - slug: 'spain-upfront-fs-ft'
-    academies: ['barcelona-spain','madrid-spain', 'malaga-spain', 'valencia-spain']
-    recomended: false
-    scholarship: "Pay Upfront"
-    payment_time: "And get a better price"
-    price: "4.500 €*"
-    bullets:
-      - "*Save up to 1.800 €. From 4.500 € instead of 6.300 €"     
-      - "Pay from your bank account, credit or debit card, Paypal, Bitcoin or Ethereum"
-    icons: 
-      - "/images/visa-mastercard.png"    
-      - "/images/bitcoin_logo.png"  
-      - "/images/ethereum.png"    
-
-  - slug: 'spain-isa-fs-ft'
-    academies: ['barcelona-spain','madrid-spain', 'malaga-spain', 'valencia-spain']
-    recomended: true
-    scholarship: "Income Share Agreement (ISA)"
-    payment_time: "Don't pay until you get a job"
-    price: "0 €*"
-    bullets: 
-      - "Only start paying if your income exceeds 16.000 € / year."
-      - "*Pay only a small portion of your job salary"
-    icons: 
-      - "/images/bcas.png"   
 
 part_time:
   - slug: 'usa-clark-scholarship-pt'
-    academies: ['downtown-miami', 'orlando']
+    academies: ['downtown-miami', 'orlando','toronto-canada']
     recomended: true
     scholarship: "Scolarship"
-    payment_time: "Pay today"
-    price: "$4999"
+    payment_time: "There is nothing like this"
+    price: "$5999"
     bullets: 
-      - "You're saving $4000 USD "
-      - "9% of your salary until paid in full, only if you get a job in tech."
+      - "You're saving $4000 USD. Thanks to Clark University Support Fund"
+      - "You have to be underemployed or unemployed, and provide a US Work permit."
     icons: 
       - "/images/landing/uwm_pantone_2021_2.png"
   - slug: 'usa-financed-pt'
-    academies: ['downtown-miami', 'orlando']
+    academies: ['downtown-miami', 'orlando','toronto-canada']
     recomended: false
     scholarship: "Financed"
     payment_time: "24 months payment"
-    price: "$310"
+    price: "~$150 p/month"
     bullets: 
-      - "With $400 p/ week living stipends"
-      - "9% of your salary until paid in full, only if you get a job in tech."
+      - "Several partners offering loans and payment plans"
+      - "You can get a partial scholarship and the remaining balance with a payment plan"
     icons: 
       - "/images/ascent_logo.jpg"
       - "/images/climb-logo.png"
       - "/images/quotanda-logo.png"
-  - slug: 'usa-isa-pt'
-    academies: ['downtown-miami', 'orlando']
+  - slug: 'us-isa-pt'
+    academies: ['downtown-miami', 'orlando','toronto-canada']
     recomended: false
     scholarship: "Income Share Agreement"
-    payment_time: "Pay after you get a job"
+    payment_time: "Get weekly living stipends. Pay after you get a job"
     price: "$0"
     bullets: 
       - "With $400 p/ week living stipends"
       - "9% of your salary until paid in full, only if you get a job in tech."
     icons: 
-      - "/images/ascent_logo.jpg"
-      - "/images/climb-logo.png"
-      - "/images/quotanda-logo.png"
+      - "/images/landing/uwm_pantone_2021_2.png""
   - slug: 'usa-upfront-pt'
     recomended: false
-    academies: ['downtown-miami', 'orlando']
+    academies: ['downtown-miami', 'orlando','toronto-canada']
     scholarship: "Full Payment"
     payment_time: "Pay today"
-    price: "$8099"
+    price: "$8999"
     bullets: 
       - "You're saving $1000 USD"
 
