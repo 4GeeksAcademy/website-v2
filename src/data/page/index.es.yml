@@ -1,8 +1,8 @@
 meta_info:
   slug: inicio
   visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
-  title: "4Geeks Academy - Coding Bootcamp Miami, España, Chile y Venezuela"
-  description: "El #1 part-time coding bootcamp, 1000+ graduados y soporte de por vida. Coding Bootcamp en Miami, España, Chile y Venezuela."
+  title: "4Geeks Academy - Coding Bootcamp Miami, España, Portugal, Alemania Chile y Venezuela"
+  description: "El #1 part-time coding bootcamp, 3000+ graduados y soporte de por vida. Coding Bootcamp en Miami, España, Portugal, Alemania, Chile y Venezuela."
   image: "https://storage.googleapis.com/4geeks-academy-website/website-preview.png"
   keywords: "Coding Bootcamp, Coding Bootcamp Miami, Coding Bootcamp España, Coding Bootcamp Chile, Aprende a programar, aprender programación, aprende computación"
   redirects: ["/es/home", "/es/inicio", "/es"]
@@ -43,7 +43,7 @@ choose_program:
 
 ## 4GEEKS VS OTHERS SECTION
 geeks_vs_others:
-  heading: "¿Qué have que este programa destaque?"
+  heading: "¿Qué hace que este programa destaque?"
   sub_heading: "En pocas palabras, la forma más simple de comparar coding bootcamps"
   sub_heading_link: "geeks-vs-others"
 
@@ -65,7 +65,7 @@ join_geeks:
 locations:
   heading: "SEDES: EN LÍNEA O EN PERSONA"
   image: "/images/locations/locations_image.png"
-  sub_heading: "Ya sea que se una en línea o en persona, tendrá una interacción real e instantánea con su maestro, mentor y compañeros de clase para trabajar en proyectos, ejercicios, materiales, conferencias y todo lo que necesita para convertirse en un profesional hábil."
+  sub_heading: "Sea online o presencial, tendrás una interacción real e instantánea con tus profesores, mentores y compañeros de clase para trabajar en ejercicios o proyectos y tendrás acceso a materiales, conferencias y todo lo que necesitas para convertirte en un profesional de la programación."
   title_image: "Online, Híbrido o Presencial."
   sub_title_image: |
     <p>Entorno de aula en vivo, tutoría 1-1 ilimitada,<br> basada en cohortes y en tiempo real.</p>
