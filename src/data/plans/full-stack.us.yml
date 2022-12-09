@@ -150,10 +150,10 @@ part_time:
     recomended: false
     scholarship: "Pay upfront"
     payment_time: "And get a discount"
-    price: "€4850*"
+    price: "€4600*"
     bullets:
       - "Pay with wire transfer, credit or debit card, Paypal, Bitcoin or Ethereum"
-      - "*Discount up to €1450. From €4850 instead of €6300"     
+      - "*Discount up to €1700. From €4600 instead of €6300"     
     icons: 
       - "/images/visa-mastercard.png"    
       - "/images/bitcoin_logo.png"  

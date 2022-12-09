@@ -132,7 +132,7 @@ part_time:
     bullets: 
       - "You're saving $1000 USD"
 
-  - slug: 'spain-becas-fs-pt'
+  - slug: 'spain-scholarships-fs-pt'
     academies: ['barcelona-spain', 'madrid-spain', 'malaga-spain', 'valencia-spain']
     recomended: true
     scholarship: "Becas disponibles"
@@ -147,7 +147,7 @@ part_time:
       - "/images/nemuru.png"
       - "/images/quotanda-logo.png"
 
-  - slug: 'spain-contado-fs-pt'
+  - slug: 'spain-upfront-fs-pt'
     academies: ['barcelona-spain', 'madrid-spain', 'malaga-spain', 'valencia-spain']
     recomended: false
     scholarship: "Paga de contado"
@@ -173,37 +173,72 @@ part_time:
     icons: 
       - "/images/bcas.png" 
 
-  - slug: 'europe-becas-fs-pt'
-    academies: ['berlin-germany', 'dublin-ireland', 'europe', 'hamburg-germany', 'lisbon-portugal', 'milan-italy', 'munich-germany', 'rome-italy']
+  - slug: 'north-europe-scholarships-fs-pt'
+    academies: ['berlin-germany','dublin-ireland', 'europe','hamburg-germany','munich-germany']
     recomended: true
     scholarship: "Becas disponibles"
     payment_time: ""
     price: "~175 € al mes"
     bullets:
       - "Financiación a tu medida, con o sin intereses, desde 4 hasta 30 meses"
-      - "Becas disponibles de hasta 1.600 €. Desde 4.700 € en vez de 6.300 €"     
+      - "Becas disponibles de hasta 1.600 €. Desde 4.700 € en vez de 6.300 €"      
     icons: 
-      - "/images/zank.png"
-      - "/images/sequra.png"
-      - "/images/nemuru.png"
       - "/images/quotanda-logo.png"
 
-  - slug: 'europe-contado-fs-pt'
-    academies: ['berlin-germany','dublin-ireland', 'europe','hamburg-germany', 'lisbon-portugal','milan-italy', 'munich-germany', 'rome-italy']
+  - slug: 'north-europe-upfront-fs-pt'
+    academies: ['berlin-germany','dublin-ireland', 'europe','hamburg-germany','munich-germany']
     recomended: false
     scholarship: "Paga de contado"
     payment_time: "Y obtén un descuento"
-    price: "4.500 €*"
+    price: "4.600 €*"
     bullets:
       - "Paga con trasnferencia bancaria, tarjeta de crédito o débito, Paypal, Bitcoin o Ethereum"
-      - "*Descuento de hasta 1.800 €. Desde 4.500 € en vez de 6.300 €"     
+      - "*Descuento de hasta 1.700 €. Desde 4.600 € en vez de 6.300 €"     
     icons: 
       - "/images/visa-mastercard.png"    
       - "/images/bitcoin_logo.png"  
       - "/images/ethereum.png"    
                        
-  - slug: 'europe-isa-fs-pt'
-    academies: ['berlin-germany','dublin-ireland', 'europe','hamburg-germany', 'lisbon-portugal','milan-italy', 'munich-germany', 'rome-italy']
+  - slug: 'north-europe-isa-fs-pt'
+    academies: ['berlin-germany','dublin-ireland', 'europe','hamburg-germany', 'munich-germany']
+    recomended: true
+    scholarship: "Acuerdo de Ingresos Comparsidos (ISA)"
+    payment_time: "Paga sólo cuando trabajes"
+    price: "0 €*"
+    bullets: 
+      - "Solo tendrás que pagar cuando tus ingresos sean superiores a 22.000 € al año"
+      - "*Paga una pequeña parte de tu salario cuando encuentres trabajo"
+    icons: 
+      - "/images/stepex.png"     
+
+  - slug: 'south-europe-scholarships-fs-pt'
+    academies: ['lisbon-portugal','milan-italy','rome-italy']
+    recomended: true
+    scholarship: "Becas disponibles"
+    payment_time: ""
+    price: "~150 € al mes"
+    bullets:
+      - "Financiación a tu medida, con o sin intereses, desde 4 hasta 30 meses"
+      - "Becas disponibles de hasta 2.300 €. Desde 4.000 € en vez de 6.300 €"     
+    icons: 
+      - "/images/quotanda-logo.png"
+
+  - slug: 'south-europe-upfront-fs-pt'
+    academies: ['lisbon-portugal','milan-italy','rome-italy']
+    recomended: false
+    scholarship: "Paga de contado"
+    payment_time: "Y obtén un descuento"
+    price: "3.850 €*"
+    bullets:
+      - "Paga con trasnferencia bancaria, tarjeta de crédito o débito, Paypal, Bitcoin o Ethereum"
+      - "*Descuento de hasta 2.450 €. Desde 3.850 € en vez de 6.300 €"
+    icons: 
+      - "/images/visa-mastercard.png"    
+      - "/images/bitcoin_logo.png"  
+      - "/images/ethereum.png"
+
+  - slug: 'south-europe-isa-fs-pt'
+    academies: ['lisbon-portugal','milan-italy','rome-italy']
     recomended: true
     scholarship: "Acuerdo de Ingresos Comparsidos (ISA)"
     payment_time: "Paga sólo cuando trabajes"
