@@ -45,7 +45,7 @@ full_time:
     bullets: 
       - "You're saving $1000 USD"
 
-  - slug: 'spain-becas-fs-ft'
+  - slug: 'spain-scholarships-fs-ft'
     academies: ['barcelona-spain','madrid-spain', 'malaga-spain', 'valencia-spain']
     recomended: true
     scholarship: "Becas disponibles"
@@ -59,7 +59,7 @@ full_time:
       - "/images/sequra.png"
       - "/images/nemuru.png"
 
-  - slug: 'spain-contado-fs-ft'
+  - slug: 'spain-upfront-fs-ft'
     academies: ['barcelona-spain','madrid-spain', 'malaga-spain', 'valencia-spain']
     recomended: false
     scholarship: "Paga de contado"

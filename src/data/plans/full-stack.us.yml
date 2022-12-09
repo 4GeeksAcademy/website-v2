@@ -77,7 +77,47 @@ full_time:
     bullets: 
       - "*You pay 16% of your salary when you get a job until you paid in full"
       - "Only if you get a job in tech" 
+    # icons:
+    #   - "/images/flevo.png"
+  - slug: 'spain-scholarships-fs-ft'
+    academies: ['barcelona-spain','madrid-spain', 'malaga-spain', 'valencia-spain']
+    recomended: true
+    scholarship: "Scholarship available"
+    payment_time: ""
+    price: "~175 € / mo."
+    bullets:
+      - "Customized financing, without interests, from 4 to 30 months."
+      - "Scholarships from 1.600 €. To 4.700 € instead of 6.300 €"     
     icons: 
+      - "/images/zank.png"
+      - "/images/sequra.png"
+      - "/images/nemuru.png"
+
+  - slug: 'spain-upfront-fs-ft'
+    academies: ['barcelona-spain','madrid-spain', 'malaga-spain', 'valencia-spain']
+    recomended: false
+    scholarship: "Pay Upfront"
+    payment_time: "And get a better price"
+    price: "4.500 €*"
+    bullets:
+      - "*Save up to 1.800 €. From 4.500 € instead of 6.300 €"     
+      - "Pay from your bank account, credit or debit card, Paypal, Bitcoin or Ethereum"
+    icons: 
+      - "/images/visa-mastercard.png"    
+      - "/images/bitcoin_logo.png"  
+      - "/images/ethereum.png"    
+
+  - slug: 'spain-isa-fs-ft'
+    academies: ['barcelona-spain','madrid-spain', 'malaga-spain', 'valencia-spain']
+    recomended: true
+    scholarship: "Income Share Agreement (ISA)"
+    payment_time: "Don't pay until you get a job"
+    price: "0 €*"
+    bullets: 
+      - "Only start paying if your income exceeds 16.000 € / year."
+      - "*Pay only a small portion of your job salary"
+    icons: 
+      - "/images/bcas.png"   
 
 part_time:
   - slug: 'usa-clark-scholarship-pt'
@@ -104,7 +144,7 @@ part_time:
       - "/images/ascent_logo.jpg"
       - "/images/climb-logo.png"
       - "/images/quotanda-logo.png"
-  - slug: 'us-isa-pt'
+  - slug: 'usa-isa-pt'
     academies: ['downtown-miami', 'orlando']
     recomended: false
     scholarship: "Income Share Agreement"
