@@ -318,5 +318,43 @@ part_time:
       - "Hasta 3 cuotas"   
     icons: 
 
+- slug: 'latam-trabajo-garantizado-fs-pt'
+    academies: ['montevideo-uruguay','bogota-colombia', 'costa-rica', 'mexicocity-mexico','quito-ecuador', 'panamacity-panama', 'buenosaires-argentina','lima-peru','lapaz-bolivia']
+    recomended: true
+    scholarship: "Trabajo Garantizado"
+    payment_time: "Como ningún otro Bootcampm en Latam"
+    price: "$4000"
+    bullets:
+      - "Planes de pago disponibles de hasta 24 meses"
+      - "Conseguirás trabajo dentro de los siguientes 6 meses después de Graduarte"     
+    icons: 
+      - "/images/quotanda-logo.png"
+
+  - slug: 'latam-upfront-fs-pt'
+    academies: ['montevideo-uruguay','bogota-colombia', 'costa-rica', 'mexicocity-mexico','quito-ecuador', 'panamacity-panama', 'buenosaires-argentina','lima-peru','lapaz-bolivia']
+    recomended: false
+    scholarship: "Paga de contado"
+    payment_time: "Y obtén un descuento"
+    price: "$3000"
+    bullets:
+      - "Paga con transferencia bancaria, tarjeta de crédito o débito, Paypal, Bitcoin o Ethereum"
+      - "Tendrás acceso a todo el programa y a todo el Sistema de Career Support de 4Geeks"     
+    icons: 
+      - "/images/visa-mastercard.png"    
+      - "/images/bitcoin_logo.png"  
+      - "/images/ethereum.png"    
+
+  - slug: 'latam-solo-programa-pt'
+    academies: ['montevideo-uruguay','bogota-colombia', 'costa-rica', 'mexicocity-mexico','quito-ecuador', 'panamacity-panama', 'buenosaires-argentina','lima-peru','lapaz-bolivia']
+    recomended: true
+    scholarship: "Programa Full-Stack Solamente"
+    payment_time: "Se trata de las habilidades como programador web"
+    price: "$2000"
+    bullets: 
+      - "Tendrás acceso totoal y para siempre al programa Full-stackSolo tendrás que pagar cuando tus ingresos sean superiores a 16.000 € al año"
+      - "Puedes aplicar planes de pago de 12 o 24 meses"
+    icons: 
+      - "/images/bcas.png" 
+
 
  
