@@ -38,7 +38,7 @@ const Program = ({ data, pageContext, yml }) => {
   const geek = data.allCourseYaml.edges[0].node;
   const [open, setOpen] = React.useState(false);
 
-  const course_type = "machine_learning";
+  const course_type = "datascience-ml";
   const program_type = yml.meta_info.slug.includes("full-time")
     ? "full_time"
     : "part_time";
