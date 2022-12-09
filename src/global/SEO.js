@@ -6,12 +6,12 @@ import SchemaOrg from "./SchemaOrg.js";
 
 const getCanonical = (path) => {
   const mapping = {
-    "us/index": ""
-  }
+    "us/index": "",
+  };
 
-  if(typeof(mapping[path]) === "string") return mapping[path];
+  if (typeof mapping[path] === "string") return mapping[path];
   else return path;
-}
+};
 
 const SEO = (props) => (
   <StaticQuery
@@ -52,13 +52,27 @@ const SEO = (props) => (
         RegExp("http").test(image || defaultImage) ? "" : siteUrl
       }${image || defaultImage}`;
 
-      const hreflangs = translations == undefined ? [] : Object.keys(translations).filter(t => t!=lang).map(t => ({ lang: t, path: translations[t] }));
+      const hreflangs =
+        translations == undefined
+          ? []
+          : Object.keys(translations)
+              .filter((t) => t != lang)
+              .map((t) => ({ lang: t, path: translations[t] }));
       return (
         <>
           <Helmet title={title || defaultTitle} titleTemplate={titleTemplate}>
             <html lang={langCountries[lang]} />
-            <link rel="canonical" href={`${siteUrl}${getCanonical(pagePath)}`} />
-            {hreflangs.map(h => <link rel="alternate" hreflang={langCountries[h.lang]} href={`${siteUrl}${getCanonical(h.path)}`} />)}
+            <link
+              rel="canonical"
+              href={`${siteUrl}${getCanonical(pagePath)}`}
+            />
+            {hreflangs.map((h) => (
+              <link
+                rel="alternate"
+                hreflang={langCountries[h.lang]}
+                href={`${siteUrl}${getCanonical(h.path)}`}
+              />
+            ))}
             <meta
               name="description"
               content={description || excerpt || defaultDescription[lang]}

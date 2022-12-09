@@ -167,7 +167,7 @@ part_time:
     recomended: true
     scholarship: "Scholarships available"
     payment_time: ""
-    price: "~€175 / month"
+    price: "~€175 / mo."
     bullets:
       - "Tailor-made financing plans, with or without interest, from 4 to 30 installments"
       - "Scholarships available up to €1600. From €4700 instead of €6300"     
@@ -208,7 +208,7 @@ part_time:
     recomended: true
     scholarship: "Scholarships available"
     payment_time: ""
-    price: "~€175 / month"
+    price: "~€175 / mo."
     bullets:
       - "Tailor-made financing plans, with or without interest, from 4 to 30 installments"
       - "Scholarships available up to €1600. From €4700 instead of €6300"     
@@ -246,7 +246,7 @@ part_time:
     recomended: true
     scholarship: "Scholarships available"
     payment_time: ""
-    price: "~€150 / month"
+    price: "~€150 / mo."
     bullets:
       - "Tailor-made financing plans, with or without interest, from 4 to 30 installments"
       - "Scholarships available up to €2300. From €4000 instead of €6300"     
