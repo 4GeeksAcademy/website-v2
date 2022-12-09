@@ -172,6 +172,10 @@ const courseArray = [
     value: "machine_learning",
     label: "Machine Learning",
   },
+  {
+    value: "datascience-ml",
+    label: "Datascience & Machine Learning",
+  },
 ];
 const modalityArray = [
   {
