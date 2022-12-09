@@ -11,7 +11,7 @@ meta_info:
 
 seo_title: "datascience and machine learning bootcamp"
 header:
-  title: "Machine Learning Engineer"
+  title: "Datascience and Machine Learning Engineer"
   paragraph: "Become one of the highest paid professionals in the world in just a few months"
   image: "../../../static/images/bg/circles.jpg"
   image_alt: "circles"
@@ -65,9 +65,13 @@ details:
   about:
       title: "About this course"
       sub_title: |
-        Get trained by a renowned expert in A.I. Adoption; explore Machine Learning's fundamentals and Deep Learning with some of the most powerful technologies that truly scale intelligence for business.
-        Practice with real-life business scenarios typical in business and review some of the tools used in the industry. 
-        Strategize and develop your A.I. following the lifecycle development from start to end, including deployment into production and maintenance with Privacy, Security, and Ethics.
+        Learn Python, SQL Looker (Google Data Studio), Streamlit and Statistics to become a data analist and take part in any data-oriented team at any company.
+
+        Create your own precticive models using Python, Pandas, Numpy, etc. Use algorithms like Close Neighbors, Decision Trees and others. Use supervised and un-supervised learning.
+
+        Practice with real life cases, typical professional challenges you will do inside your future employer. Learn to use the most popular tools in the industry.
+
+        Strategize and develop your A.I. following the lifecycle development from start to end, including deployment into production and maintenance with Privacy and Security.
       list:
         - label: "Duration"
           content:  "16 weeks"
