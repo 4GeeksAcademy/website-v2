@@ -60,25 +60,12 @@ upcoming:
   no_dates_message: "Actualmente no hay próximas fechas para este programa"
   actionMessage: "Avisadme de fechas disponibles"
 
-credentials:
-  heading: "Nuestros números hablan por sí solos"
-  paragraph: ""
-
-description:
-  heading: "Sobre este curso"
-  sub_heading: "Prepárate para la era de la Ciencia de Datos."
-  content: >
-    Entrénate con expertos en Data Science, Machine Learning e Inteligencia Artificial. Aprende Data Science desde las bases, recolecta, manipula y modela datos. Crea modelos de Machine Learning e iníciate en el Deep Learning.\n
-    Practica con escenarios típicos de empresas de la vida real y conoce algunas de las herramientas más utilizadas en la industria. \n
-
-teacher:
-  greeting: "Conoce a tu profesor"
-  full_name: "Sayyed H. Nezhadi"
-  picture: ../../../static/images/staff/sayyed.jpeg
-  linkedin: https://www.linkedin.com/in/sayyednezhadi/
-  bio: >
-    Enfocado en guiar a algunas de las empresas más grandes del mundo hacia la adopción de la inteligencia artificial (Enterprise AI). Estrategia y ejecución exitosa de más de 1200 proyectos a gran escala, sirviendo a más de 350 clientes alrededor del mundo.
-
+# description:
+#   heading: "Sobre este curso"
+#   sub_heading: "Prepárate para la era de la Ciencia de Datos."
+#   content: >
+#     Entrénate con expertos en Data Science, Machine Learning e Inteligencia Artificial. Aprende Data Science desde las bases, recolecta, manipula y modela datos. Crea modelos de Machine Learning e iníciate en el Deep Learning.\n
+#     Practica con escenarios típicos de empresas de la vida real y conoce algunas de las herramientas más utilizadas en la industria. \n
 
 ## PROGRAM DETAILS
 details:
@@ -91,7 +78,7 @@ details:
         
       list:
         - label: "Duración"
-          content:  "18 semanas"
+          content:  "16 semanas"
           icon: "calendar"
         - label: "Clases"
           content: "3 Clases semanales"
@@ -179,8 +166,8 @@ details:
       description: "Trabajarás en equipo para escojer un problema real, recolectar los datos necesarios para resolverlo con una prediccion, realizar un análisis exploratorio con varias visualizaciones que permitan entender los datos, limpiar el dataset para poder utilizarlo correctamente y seleccionar un par de modelos para realizar una prediccion. Luego evaluarás la effectividad de tus modelos utilizando las técnicas vistas durante el curso. Por último, pondrás tu modelo en produccion utilizando Streamlit o Google DataStudio."
       projects: "Construyendo arquitecturas de datos, desplegando la aplicaicón de Machine Learning localmente y en la nube, monitoreando y manteniendo los modelos."
       slug: "quality-deploy"
-      duration: "3 sem"
-      step: 2.9
+      duration: "2 sem"
+      step: 1.9
     - module_name: "DE POR VIDA"
       title: "De por vida"
       description: "Sigue recibiendo la ayuda de la academia de por vida, accesso a los contenidos, soporte professional (career support). Recibe incluso ayuda durante el inicio de tu nuevo trabajo, nunca más estarás sólo."

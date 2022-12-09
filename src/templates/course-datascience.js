@@ -552,10 +552,6 @@ export const query = graphql`
           badges {
             paragraph
           }
-          credentials {
-            heading
-            paragraph
-          }
           details {
             about {
               title
@@ -592,25 +588,6 @@ export const query = graphql`
           syllabus {
             heading
             button_label
-          }
-          teacher {
-            picture {
-              childImageSharp {
-                gatsbyImageData(
-                  layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                  width: 500
-                  placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
-                )
-
-                # fluid(maxWidth: 500){
-                #   ...GatsbyImageSharpFluid_withWebp
-                # }
-              }
-            }
-            greeting
-            linkedin
-            full_name
-            bio
           }
           potential_companies {
             tagline

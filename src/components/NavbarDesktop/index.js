@@ -30,8 +30,8 @@ const Triangle = styled.div`
   border-bottom: 60px solid white;
   top: 10px;
   left: 0px;
-  &::before{
-    content: ' ';
+  &::before {
+    content: " ";
     display: block;
     position: relative;
     height: 40px;
@@ -87,7 +87,7 @@ const MenuItem = styled.li`
       text-transform: initial;
       display: block;
     }
-    .triangle{
+    .triangle {
       display: block;
       z-index: 2;
     }
@@ -213,7 +213,9 @@ export const Navbar = ({
                   }
                   className="menu-item"
                 >
-                  <div style={{ position: "relative" }}><Triangle className="triangle" /></div>
+                  <div style={{ position: "relative" }}>
+                    <Triangle className="triangle" />
+                  </div>
                   <H3
                     type="h3"
                     margin="0 5px 0 0"
@@ -228,16 +230,16 @@ export const Navbar = ({
                     )}
                   </H3>
                   {index !== menu.length - 1 && <Icon icon="arrowdown" />}
-                    <MegaMenu
-                      key={item.name}
-                      status={{
-                        ...status,
-                        toggle: !status.toggle,
-                        itemIndex: index,
-                      }}
-                      setStatus={setStatus}
-                      menu={menu}
-                    />
+                  <MegaMenu
+                    key={item.name}
+                    status={{
+                      ...status,
+                      toggle: !status.toggle,
+                      itemIndex: index,
+                    }}
+                    setStatus={setStatus}
+                    menu={menu}
+                  />
                 </MenuItem>
               );
             })}

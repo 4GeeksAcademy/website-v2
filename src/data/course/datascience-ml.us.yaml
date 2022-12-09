@@ -70,33 +70,40 @@ details:
         Strategize and develop your A.I. following the lifecycle development from start to end, including deployment into production and maintenance with Privacy, Security, and Ethics.
       list:
         - label: "Duration"
-          content:  "15 weeks"
+          content:  "16 weeks"
           icon: "calendar"
         - label: "Classes"
           content: "3 classes weekly"
           icon: "book"
         - label: "Class size"
           content: "12 people max"
+        - label: "Certificate"
+          content: "Our certificates are recognized by multiple organizations."
+          link_text: "See example"
+          link: "https://certificate.4geeks.com/44c61b294a248f91088f5355aea09606126795e3"
           icon: "certificate"
         - label: "Requisites"
           content: "No previous experience needed"
           icon: "contract-checked"
   heading: Machine Learning Engineering Syllabus
-  weeks: 15
+  weeks: 16
   weeks_label: "weeks"
   facts:
     - label: "Duration"
-      value: "15 weeks"
-    - label: "Classes"
+      value: "16 weeks"
+    - label: "Commitment"
       value: "20 hrs (Mon - Wed - Fri)"
     - label: "Certificate"
-      value: "Machine Learning Engineer"
+      content: "Our certificates are recognized by multiple organizations."
+      link_text: "See example"
+      link: "https://certificate.4geeks.com/44c61b294a248f91088f5355aea09606126795e3"
+      icon: "certificate"
     - label: Delivery
       value: "Online / Remote"
     - label: Classroom Size
       value: "12 People Max"
     - label: Total Hours
-      value: "360"
+      value: "320"
   sub_heading: "Start with Python and Data Science, Machine Learning, Deep Learning and maintaining a production environment in A.I."
   left_labels:
     description: "DESCRIPTION:"
@@ -131,8 +138,8 @@ details:
       description: "We don't simply train you in Data Science, we prepare you for Data Science in the Age of AI. Leveraging Python, we take you through Data Analysis & Visualizations, Database Management & Workflow, Applied Linear Algebra with Statistical Inference and Modeling. You'll end this module by delivering a complete project where you need to apply data cleaning, data analysis, and prediction models on real-world datasets."
       projects: "Loading structured and unstructured data from different sources (e.g. SQL, Web Scraping, text files), exploring data, cleaning data, transforming data, visualizing data, analyzing and extracting insights, and inferential and test statistics."
       slug: "data-science"
-      duration: "2 wks"
-      step: 2
+      duration: "3 wks"
+      step: 3
     - module_name: "Model"
       title: "Practical Machine Learning"
       description: "On a nearly weekly basis, you will be taking a deep dive into all the major subjects of Machine Learning. We start you with Machine Learning with Python, then take you through Supervised Learning, Training & Evaluation of ML Models, Unsupervised Learning, in addition to Ensemble Learning. To wrap up the module, you'll be developing an end-to-end project that compares different Machine Learning models on a real-world dataset"
@@ -152,8 +159,8 @@ details:
       description: "One of the most important aspects of developing Artificial Intelligence solutions is understanding how to prepare, deploy, and manage the solution in a Production Environment. We walk you through developing an AI Strategy, Machine Learning Lifecycle of development and deployment, Machine Learning Operations (MLOps), as well as Privacy, Security, and Ethics. Your final project will be to deploy your AI solution into production."
       projects: "Building data architectures, deploying AI models into production both on-premiss and on cloud, monitoring and maintenance of the models"
       slug: "quality-deploy"
-      duration: "3 wks"
-      step: 2.9
+      duration: "2 wks"
+      step: 1.9
     - module_name: "LIFELONG"
       title: "Lifelong Support"
       description: "Keep practicing with the academy's help - we will be coaching you for life. We will help you apply for jobs and continue to support you once you find a job in A.I."
@@ -161,14 +168,6 @@ details:
       slug: "lifelong-learning"
       duration: "forever"
       step: 0.1
-
-teacher:
-  greeting: Meet your teacher
-  full_name: Sayyed H. Nezhadi
-  picture: ../../../static/images/staff/sayyed.jpeg
-  linkedin: https://www.linkedin.com/in/sayyednezhadi/
-  bio: >
-    His focus is on guiding some of the biggest companies in the world adopting Artificial Intelligence (Enterprise AI) through deep understanding of both digital architecture and AI. Successfully carried out over 1200 big-scale projects servicing over 350 clients around the globe.
 
 syllabus:
   heading: Get all the information about the syllabus
