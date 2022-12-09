@@ -142,7 +142,7 @@ part_time:
       - "/images/ascent_logo.jpg"
       - "/images/climb-logo.png"
       - "/images/quotanda-logo.png"
-  - slug: 'us-isa-pt'
+  - slug: 'usa-isa-pt'
     academies: ['downtown-miami', 'orlando','toronto-canada']
     recomended: false
     scholarship: "Income Share Agreement"
