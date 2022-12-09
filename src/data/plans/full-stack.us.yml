@@ -112,7 +112,7 @@ part_time:
       - "With $400 p/ week living stipends"
       - "9% of your salary until paid in full, only if you get a job in tech."
     icons: 
-      - "/images/landing/uwm_pantone_2021_2.png""
+      - "/images/landing/uwm_pantone_2021_2.png"
   - slug: 'usa-upfront-pt'
     recomended: false
     academies: ['downtown-miami', 'orlando','toronto-canada']
@@ -274,7 +274,7 @@ part_time:
       - "Up to 3 installments"   
     icons: 
     
-      - slug: 'latam-job-guarantee-fs-pt'
+  - slug: 'latam-job-guarantee-fs-pt'
     academies: ['montevideo-uruguay','bogota-colombia', 'costa-rica', 'mexicocity-mexico','quito-ecuador', 'panamacity-panama', 'buenosaires-argentina','lima-peru','lapaz-bolivia']
     recomended: true
     scholarship: "Job Gurantee"

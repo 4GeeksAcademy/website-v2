@@ -505,7 +505,7 @@ const PricesAndPaymentsV2 = (props) => {
           margin_xs="20px auto"
           display="block"
         >
-          {availablePlans && availablePlans.length !== 0 ? 
+          {availablePlans && availablePlans.length !== 0 ? (
             <H3
               fontSize="24px"
               lineHeight="29px"
@@ -515,9 +515,14 @@ const PricesAndPaymentsV2 = (props) => {
             >
               {info.select}
             </H3>
-            : 
-            <Div fontSize="25px" display="block" textAlign="center" dangerouslySetInnerHTML={{ __html: info.not_available }} />
-          }
+          ) : (
+            <Div
+              fontSize="25px"
+              display="block"
+              textAlign="center"
+              dangerouslySetInnerHTML={{ __html: info.not_available }}
+            />
+          )}
           <Div
             className="cards-container"
             flexWrap="wrap"
