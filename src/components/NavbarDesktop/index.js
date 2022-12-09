@@ -217,7 +217,6 @@ export const Navbar = ({
                     <Triangle className="triangle" />
                   </div>
                   <H3
-                    type="h3"
                     margin="0 5px 0 0"
                     fontSize="13px"
                     lineHeight="16px"
@@ -426,7 +425,6 @@ export const MegaMenu = ({ status, setStatus, menu }) => {
                     </Div>
                   </Link>
                 )}
-                {/* <H3 textAlign="left" fontSize="15px" lineHeight="22px" fontWeight="900" margin="0 0 5px 0">{status.itemIndex != null && menu[status.itemIndex].sub_menu.title}</H3> */}
                 {menu[status.itemIndex].sub_menu.paragraph
                   .split("\n")
                   .map((d, i) => (

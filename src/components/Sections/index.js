@@ -179,6 +179,7 @@ export const Div = styled.div`
   transform: ${(props) => props.transform};
   z-index: ${(props) => props.zIndex};
   place-items: ${(props) => props.placeItems};
+  font-size: ${(props) => props.fontSize};
   &:after {
     content: ${(props) => props.contentAfter};
     display: ${(props) => props.displayAfter || "block"};

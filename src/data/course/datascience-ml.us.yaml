@@ -66,11 +66,8 @@ details:
       title: "About this course"
       sub_title: |
         Learn Python, SQL Looker (Google Data Studio), Streamlit and Statistics to become a data analist and take part in any data-oriented team at any company.
-
         Create your own precticive models using Python, Pandas, Numpy, etc. Use algorithms like Close Neighbors, Decision Trees and others. Use supervised and un-supervised learning.
-
         Practice with real life cases, typical professional challenges you will do inside your future employer. Learn to use the most popular tools in the industry.
-
         Strategize and develop your A.I. following the lifecycle development from start to end, including deployment into production and maintenance with Privacy and Security.
       list:
         - label: "Duration"
@@ -151,7 +148,7 @@ details:
       slug: "machine-learning"
       duration: "4 wks"
       step: 4
-    - module_name: "Deploy & Maint."
+    - module_name: "Deploy"
       title: "A.I. In Production"
       description: "One of the most important aspects of developing Artificial Intelligence solutions is understanding how to prepare, deploy, and manage the solution in a Production Environment. We walk you through developing an AI Strategy, Machine Learning Lifecycle of development and deployment, Machine Learning Operations (MLOps), as well as Privacy, Security, and Ethics. Your final project will be to deploy your machine learning model into production."
       projects: "Building data architectures, deploying AI models into production both on-premiss and on cloud, monitoring and maintenance of the models"
