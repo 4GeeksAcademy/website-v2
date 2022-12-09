@@ -144,6 +144,7 @@ part_time:
       - "/images/ascent_logo.jpg"
       - "/images/climb-logo.png"
       - "/images/quotanda-logo.png"
+      
   - slug: 'usa-isa-pt'
     academies: ['downtown-miami', 'orlando']
     recomended: false
