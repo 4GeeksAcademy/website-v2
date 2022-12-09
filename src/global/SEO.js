@@ -4,6 +4,15 @@ import PropTypes from "prop-types";
 import { StaticQuery, graphql } from "gatsby";
 import SchemaOrg from "./SchemaOrg.js";
 
+const getCanonical = (path) => {
+  const mapping = {
+    "us/index": ""
+  }
+
+  if(typeof(mapping[path]) === "string") return mapping[path];
+  else return path;
+}
+
 const SEO = (props) => (
   <StaticQuery
     query={query}
@@ -37,16 +46,19 @@ const SEO = (props) => (
         context,
         visibility,
       } = props;
-      const { lang, type, pagePath } = context;
+      const { lang, type, pagePath, translations } = context;
       const url = `${siteUrl}${pagePath || "/"}`;
       const previewImage = `${
         RegExp("http").test(image || defaultImage) ? "" : siteUrl
       }${image || defaultImage}`;
+
+      const hreflangs = translations == undefined ? [] : Object.keys(translations).filter(t => t!=lang).map(t => ({ lang: t, path: translations[t] }));
       return (
         <>
           <Helmet title={title || defaultTitle} titleTemplate={titleTemplate}>
             <html lang={langCountries[lang]} />
-            <link rel="canonical" href={`${siteUrl}${pagePath}`} />
+            <link rel="canonical" href={`${siteUrl}${getCanonical(pagePath)}`} />
+            {hreflangs.map(h => <link rel="alternate" hreflang={langCountries[h.lang]} href={`${siteUrl}${getCanonical(h.path)}`} />)}
             <meta
               name="description"
               content={description || excerpt || defaultDescription[lang]}
