@@ -45,6 +45,40 @@ full_time:
     bullets: 
       - "You're saving $1000 USD"
 
+  - slug: 'chile-contado-fs-ft'
+    academies: ['santiago-chile']
+    recomended: true
+    scholarship: "Pay Upfront"
+    payment_time: "And get a discount"
+    price: "2.760.000 CLP"
+    bullets:
+      - "Pay with bank transfer, credit or debit card"    
+    icons: 
+      - "/images/visa-mastercard.png"    
+
+  - slug: 'chile-fs-ft'
+    academies: ['santiago-chile']
+    recomended: false
+    scholarship: "Financed"
+    payment_time: "18 months payment"
+    price: "~135.240 CLP"
+    bullets:
+      - "Tailor-made financing, with or without interest, from 6 to 18 months"  
+      - "Tuition is paid" 
+    icons: 
+      - "/images/flevo.png"
+                       
+  - slug: 'chile-isa-fs-ft'
+    academies: ['santiago-chile']
+    recomended: false
+    scholarship: "Income Share Agreement (ISA)"
+    payment_time: ""
+    price: "0 CLP*"
+    bullets: 
+      - "*You pay 16% of your salary when you get a job until you paid in full"
+      - "Only if you get a job in tech" 
+    icons: 
+
 part_time:
   - slug: 'usa-clark-scholarship-pt'
     academies: ['downtown-miami', 'orlando']
@@ -208,3 +242,38 @@ part_time:
       - "*Pay a small part of your salary when you find a job"
     icons: 
       - "/images/stepex.png"     
+ 
+  - slug: 'chile-contado-fs-pt'
+    academies: ['santiago-chile']
+    recomended: true
+    scholarship: "Pay Upfront"
+    payment_time: "And get a discount"
+    price: "2.415.000 CLP*"
+    bullets:
+      - "Pay with bank transfer, credit or debit card"    
+      - "*Price without discount applied"
+    icons: 
+      - "/images/visa-mastercard.png"   
+
+  - slug: 'chile-fs-pt'
+    academies: ['santiago-chile']
+    recomended: false
+    scholarship: "Financed"
+    payment_time: "18 months payment"
+    price: "~118.335 CLP"
+    bullets:
+      - "Tailor-made financing, with or without interest, from 6 to 18 months"  
+      - "Tuition is paid" 
+    icons: 
+      - "/images/flevo.png"
+
+  - slug: 'chile-fraccionado-fs-pt'
+    academies: ['santiago-chile']
+    recomended: false
+    scholarship: "Installment payment"
+    payment_time: "Without interest"
+    price: "2.415.000 CLP"
+    bullets:
+      - "Pay with bank transfer" 
+      - "Up to 3 installments"   
+    icons: 

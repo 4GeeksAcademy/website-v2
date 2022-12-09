@@ -85,6 +85,40 @@ full_time:
     icons: 
       - "/images/bcas.png"   
 
+  - slug: 'chile-contado-fs-ft'
+    academies: ['santiago-chile']
+    recomended: true
+    scholarship: "Paga al contado"
+    payment_time: "Y obtén un descuento"
+    price: "2.760.000 CLP"
+    bullets:
+      - "Paga con transferencia bancaria, tarjeta de crédito o débito"    
+    icons: 
+      - "/images/visa-mastercard.png"    
+
+  - slug: 'chile-fs-ft'
+    academies: ['santiago-chile']
+    recomended: false
+    scholarship: "Cuotas desde"
+    payment_time: ""
+    price: "~135.240 CLP"
+    bullets:
+      - "Financimiento a tu medida, con o sin intereses, desde 6 hasta 18 meses"  
+      - "Se paga matrícula " 
+    icons: 
+      - "/images/flevo.png"
+                       
+  - slug: 'chile-isa-fs-ft'
+    academies: ['santiago-chile']
+    recomended: false
+    scholarship: "Acuerdo de Ingresos Compartidos (ISA)"
+    payment_time: ""
+    price: "0 CLP*"
+    bullets: 
+      - "*Pagas el 16% de tu salario cuando consigas empleo hasta pagarlo todo"
+      - "Sólo si consigues trabajo en el área de técnología" 
+    icons: 
+
 part_time:
   - slug: 'usa-clark-scholarship-pt'
     academies: ['downtown-miami', 'orlando']
@@ -154,7 +188,7 @@ part_time:
     payment_time: "Y obtén un descuento"
     price: "4.500 €*"
     bullets:
-      - "Paga con trasnferencia bancaria, tarjeta de crédito o débito, Paypal, Bitcoin o Ethereum"
+      - "Paga con transferencia bancaria, tarjeta de crédito o débito, Paypal, Bitcoin o Ethereum"
       - "*Descuento de hasta 1.800 €. Desde 4.500 € en vez de 6.300 €"     
     icons: 
       - "/images/visa-mastercard.png"    
@@ -164,7 +198,7 @@ part_time:
   - slug: 'spain-isa-fs-pt'
     academies: ['barcelona-spain', 'madrid-spain', 'malaga-spain', 'valencia-spain']
     recomended: true
-    scholarship: "Acuerdo de Ingresos Comparsidos (ISA)"
+    scholarship: "Acuerdo de Ingresos Compartidos (ISA)"
     payment_time: "Paga sólo cuando trabajes"
     price: "0 €*"
     bullets: 
@@ -213,3 +247,41 @@ part_time:
       - "*Paga una pequeña parte de tu salario cuando encuentres trabajo"
     icons: 
       - "/images/stepex.png"     
+
+  - slug: 'chile-contado-fs-pt'
+    academies: ['santiago-chile']
+    recomended: true
+    scholarship: "Paga al contado"
+    payment_time: "Y obtén un descuento"
+    price: "2.415.000 CLP*"
+    bullets:
+      - "Paga con transferencia bancaria, tarjeta de crédito o débito"    
+      - "*Precio sin descuento aplicado"
+    icons: 
+      - "/images/visa-mastercard.png"   
+
+  - slug: 'chile-fs-pt'
+    academies: ['santiago-chile']
+    recomended: false
+    scholarship: "Cuotas desde"
+    payment_time: ""
+    price: "~118.335 CLP"
+    bullets:
+      - "Financiamiento a tu medida, con o sin intereses, desde 6 hasta 18 meses"  
+      - "Se paga matrícula" 
+    icons: 
+      - "/images/flevo.png"
+
+  - slug: 'chile-fraccionado-fs-pt'
+    academies: ['santiago-chile']
+    recomended: false
+    scholarship: "Pago fraccionado"
+    payment_time: "Sin interés"
+    price: "2.415.000 CLP"
+    bullets:
+      - "Paga con transferencia bancaria" 
+      - "Hasta 3 cuotas"   
+    icons: 
+
+
+ 
