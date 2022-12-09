@@ -318,8 +318,8 @@ part_time:
     academies: ['montevideo-uruguay','bogota-colombia', 'costa-rica', 'mexicocity-mexico','quito-ecuador', 'panamacity-panama', 'buenosaires-argentina','lima-peru','lapaz-bolivia']
     recomended: true
     scholarship: "Job Gurantee"
-    payment_time: ""
-    price: "$4000"
+    payment_time: "Get a job or get your money back"
+    price: "USD $4000"
     bullets:
       - "Payment plans available across latam"
       - "You will get a job within the next 6 moinths after graduation"     
@@ -331,7 +331,7 @@ part_time:
     recomended: false
     scholarship: "Pay upfront"
     payment_time: "And get a discount"
-    price: "3000"
+    price: "USD $3000"
     bullets:
       - "Pay with wire transfer, credit or debit card, Paypal, Bitcoin or Ethereum"
       - "Get acess to the full program and our entire Career Support Plan"     
@@ -345,7 +345,7 @@ part_time:
     recomended: true
     scholarship: "Only Pay for the Program"
     payment_time: "Focus on your skills only"
-    price: "$2000"
+    price: "USD $2000"
     bullets: 
       - "You will only focus on getting the coding skills"
     icons: 
