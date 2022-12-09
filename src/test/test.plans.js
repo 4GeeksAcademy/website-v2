@@ -96,7 +96,7 @@ walk(`${__dirname}/../data/plans/`, function (err, files) {
         for (let otherLang in langs) {
           if (!slugs[course][otherLang][planName])
             fail(
-              `Pricing plan ${planName} is missing a "${otherLang}" translation for the course ${course}.\nTo fix this, open the ./src/data/plans/${course}.${lang}.yml file and add a plan with slug "${planName}"`
+              `Pricing plan ${planName} is missing a "${otherLang}" translation for the course ${course}.\nTo fix this, open the ./src/data/plans/${course}.${otherLang}.yml file and add a plan with slug "${planName}"`
             );
         }
       }
