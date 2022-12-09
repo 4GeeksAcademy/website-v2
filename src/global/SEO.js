@@ -94,6 +94,7 @@ const SEO = (props) => (
             />
             <meta property="og:image" content={previewImage} />
             <meta name="twitter:card" content={previewImage} />
+            <meta name="twitter:site" content={`${siteUrl}${getCanonical(pagePath)}`} />
             <meta
               name="twitter:creator"
               content={social.twitterUsername || defaultTwitterUsername}
