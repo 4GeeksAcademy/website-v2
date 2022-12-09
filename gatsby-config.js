@@ -182,7 +182,7 @@ module.exports = {
       options: {
         env: {
           production: {
-            sitemap: `${process.env.VERCEL_URL}/sitemap.xml`,
+            sitemap: `https://4geeksacademy.com/sitemap.xml`,
             policy:
               robots !== "hidden"
                 ? [{ userAgent: "*" }]
