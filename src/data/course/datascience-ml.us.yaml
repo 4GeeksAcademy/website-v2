@@ -11,7 +11,7 @@ meta_info:
 
 seo_title: "datascience and machine learning bootcamp"
 header:
-  title: "Machine Learning Engineer"
+  title: "Datascience and Machine Learning Engineer"
   paragraph: "Become one of the highest paid professionals in the world in just a few months"
   image: "../../../static/images/bg/circles.jpg"
   image_alt: "circles"
@@ -65,38 +65,46 @@ details:
   about:
       title: "About this course"
       sub_title: |
-        Get trained by a renowned expert in A.I. Adoption; explore Machine Learning's fundamentals and Deep Learning with some of the most powerful technologies that truly scale intelligence for business.
-        Practice with real-life business scenarios typical in business and review some of the tools used in the industry. 
-        Strategize and develop your A.I. following the lifecycle development from start to end, including deployment into production and maintenance with Privacy, Security, and Ethics.
+        Learn Python, SQL Looker (Google Data Studio), Streamlit and Statistics to become a data analist and take part in any data-oriented team at any company.
+        Create your own precticive models using Python, Pandas, Numpy, etc. Use algorithms like Close Neighbors, Decision Trees and others. Use supervised and un-supervised learning.
+        Practice with real life cases, typical professional challenges you will do inside your future employer. Learn to use the most popular tools in the industry.
+        Strategize and develop your A.I. following the lifecycle development from start to end, including deployment into production and maintenance with Privacy and Security.
       list:
         - label: "Duration"
-          content:  "15 weeks"
+          content:  "16 weeks"
           icon: "calendar"
         - label: "Classes"
           content: "3 classes weekly"
           icon: "book"
         - label: "Class size"
           content: "12 people max"
+        - label: "Certificate"
+          content: "Our certificates are recognized by multiple organizations."
+          link_text: "See example"
+          link: "https://certificate.4geeks.com/44c61b294a248f91088f5355aea09606126795e3"
           icon: "certificate"
         - label: "Requisites"
           content: "No previous experience needed"
           icon: "contract-checked"
   heading: Machine Learning Engineering Syllabus
-  weeks: 15
+  weeks: 16
   weeks_label: "weeks"
   facts:
     - label: "Duration"
-      value: "15 weeks"
-    - label: "Classes"
+      value: "16 weeks"
+    - label: "Commitment"
       value: "20 hrs (Mon - Wed - Fri)"
     - label: "Certificate"
-      value: "Machine Learning Engineer"
+      content: "Our certificates are recognized by multiple organizations."
+      link_text: "See example"
+      link: "https://certificate.4geeks.com/44c61b294a248f91088f5355aea09606126795e3"
+      icon: "certificate"
     - label: Delivery
       value: "Online / Remote"
     - label: Classroom Size
       value: "12 People Max"
     - label: Total Hours
-      value: "360"
+      value: "320"
   sub_heading: "Start with Python and Data Science, Machine Learning, Deep Learning and maintaining a production environment in A.I."
   left_labels:
     description: "DESCRIPTION:"
@@ -120,40 +128,40 @@ details:
       duration: "2 wks"
       step: 2
     - module_name: "Collect"
-      title: "Data Science for AI"
-      description: "We don't simply train you in Data Science, we prepare you for Data Science in the Age of AI. Leveraging Python, we take you through Data Analysis & Visualizations, Database Management & Workflow, Applied Linear Algebra with Statistical Inference and Modeling. You'll end this module by delivering a complete project where you need to apply data cleaning, data analysis, and prediction models on real-world datasets."
-      projects: "Loading structured and unstructured data from different sources (e.g. SQL, Web Scraping, text files), exploring data, cleaning data, transforming data, visualizing data, analyzing and extracting insights, and inferential and test statistics."
+      title: "Collect and store data"
+      description: "Probably longest step in most professional projects is collecting and cleaning the data. In this module you use Python and connect to a SQL Database, learn the SQL Sintax to query and manipulate that date, upload and download static files (CSV, JSON, etc.). Learn how to connect with API's or scrape websites that don't have available API's. Store the data in an organized way."
+      projects: "Loading structured and unstructured data from different sources (e.g. SQL, Web Scraping, text files) and connect with the Twitter API."
       slug: "data-science"
       duration: "2 wks"
       step: 2
     - module_name: "Clean"
-      title: "Data Science for AI"
-      description: "We don't simply train you in Data Science, we prepare you for Data Science in the Age of AI. Leveraging Python, we take you through Data Analysis & Visualizations, Database Management & Workflow, Applied Linear Algebra with Statistical Inference and Modeling. You'll end this module by delivering a complete project where you need to apply data cleaning, data analysis, and prediction models on real-world datasets."
-      projects: "Loading structured and unstructured data from different sources (e.g. SQL, Web Scraping, text files), exploring data, cleaning data, transforming data, visualizing data, analyzing and extracting insights, and inferential and test statistics."
-      slug: "data-science"
-      duration: "2 wks"
-      step: 2
+      title: "Manipulate data with Python"
+      description: "Once you data has been stored, its necesary to undestand it. We will start with simple visualization techniques for better understanding of some samples and developing the different strategies to clean and optimize your dataset: Feature Engineering, Outliers, Missing Data, Feature encoding, Feature Scaling. \n Learn how to develop reports using Looker (Google DataStudio) with advanced graphs, filters and other dashboard elements and KPI's, one of the most popular datawarehousing tools in the market."
+      projects: "Explor the Airbnb dataset and publish a report using Google Cloud and Looker Studio."
+      slug: "data-analysis"
+      duration: "3 wks"
+      step: 3
     - module_name: "Model"
       title: "Practical Machine Learning"
-      description: "On a nearly weekly basis, you will be taking a deep dive into all the major subjects of Machine Learning. We start you with Machine Learning with Python, then take you through Supervised Learning, Training & Evaluation of ML Models, Unsupervised Learning, in addition to Ensemble Learning. To wrap up the module, you'll be developing an end-to-end project that compares different Machine Learning models on a real-world dataset"
-      projects: "Selecting a problem that can be solved with ML, defining the ML type (regression, classification, or unsupervised learning), load data, pre-process data (handling missing data, encoding categorical features), create pipelines, splitting data for test and training, train multiple models, dealing with overfitting issue, compare models and select the best model using cross-validation, analyzing the results."
+      description: "One by one we will be reviewing the most used algorithms and predictive models: Supervised and not Supervised. Every model will be used to fix a problem using Python: Lineal Regresion, Logistic Regresion, Decision Trees, Random Forest, Bayes, Support Vector Machine, NLP, KNN, Time Series, NN and others."
+      projects: "Predict medical insurance costs, classify patients based on diabetes. Sentiment Analysis on Google Play Store reviews. Email Spam Detector. Group houses based on geolocation or avg income. Classify images and more."
       slug: "machine-learning"
       duration: "4 wks"
       step: 4
-    - module_name: "Deploy & Maint."
+    - module_name: "Deploy"
       title: "A.I. In Production"
-      description: "One of the most important aspects of developing Artificial Intelligence solutions is understanding how to prepare, deploy, and manage the solution in a Production Environment. We walk you through developing an AI Strategy, Machine Learning Lifecycle of development and deployment, Machine Learning Operations (MLOps), as well as Privacy, Security, and Ethics. Your final project will be to deploy your AI solution into production."
+      description: "One of the most important aspects of developing Artificial Intelligence solutions is understanding how to prepare, deploy, and manage the solution in a Production Environment. We walk you through developing an AI Strategy, Machine Learning Lifecycle of development and deployment, Machine Learning Operations (MLOps), as well as Privacy, Security, and Ethics. Your final project will be to deploy your machine learning model into production."
       projects: "Building data architectures, deploying AI models into production both on-premiss and on cloud, monitoring and maintenance of the models"
       slug: "quality-deploy"
       duration: "1 wks"
       step: 1
     - module_name: "Final Project"
-      title: "A.I. In Production"
-      description: "One of the most important aspects of developing Artificial Intelligence solutions is understanding how to prepare, deploy, and manage the solution in a Production Environment. We walk you through developing an AI Strategy, Machine Learning Lifecycle of development and deployment, Machine Learning Operations (MLOps), as well as Privacy, Security, and Ethics. Your final project will be to deploy your AI solution into production."
+      title: "Choose a problem and fix it with Machine Learning"
+      description: "Work in a team to choose a real life problem, start collecting the data needed to predict, make an exploratory analysis using several ways of visualizing data in order to understand it. Clean your dataset and optimized for your prediction needs, choose two models and start predicting. Evaluate how effective your models were by using the different techniques we saw in class. Deploy in production using Streamlit o Looker (Google DataStudio)."
       projects: "Building data architectures, deploying AI models into production both on-premiss and on cloud, monitoring and maintenance of the models"
       slug: "quality-deploy"
-      duration: "3 wks"
-      step: 2.9
+      duration: "2 wks"
+      step: 1.9
     - module_name: "LIFELONG"
       title: "Lifelong Support"
       description: "Keep practicing with the academy's help - we will be coaching you for life. We will help you apply for jobs and continue to support you once you find a job in A.I."
@@ -161,14 +169,6 @@ details:
       slug: "lifelong-learning"
       duration: "forever"
       step: 0.1
-
-teacher:
-  greeting: Meet your teacher
-  full_name: Sayyed H. Nezhadi
-  picture: ../../../static/images/staff/sayyed.jpeg
-  linkedin: https://www.linkedin.com/in/sayyednezhadi/
-  bio: >
-    His focus is on guiding some of the biggest companies in the world adopting Artificial Intelligence (Enterprise AI) through deep understanding of both digital architecture and AI. Successfully carried out over 1200 big-scale projects servicing over 350 clients around the globe.
 
 syllabus:
   heading: Get all the information about the syllabus

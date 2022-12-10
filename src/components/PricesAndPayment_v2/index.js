@@ -89,7 +89,7 @@ const PricingCard = ({
               color={isSelected ? Colors.white : Colors.black}
               opacity="1"
             >
-              <span style={{ fontSize: "36px" }}>{data.price}</span> USD
+              <span style={{ fontSize: "36px" }}>{data.price}</span>
             </Paragraph>
           </Div>
         </Div>
@@ -171,6 +171,10 @@ const courseArray = [
   {
     value: "machine_learning",
     label: "Machine Learning",
+  },
+  {
+    value: "datascience-ml",
+    label: "Datascience & Machine Learning",
   },
 ];
 const modalityArray = [
@@ -505,17 +509,24 @@ const PricesAndPaymentsV2 = (props) => {
           margin_xs="20px auto"
           display="block"
         >
-          <H3
-            fontSize="24px"
-            lineHeight="29px"
-            textAlign="center"
-            width="100%"
-            margin="0 0 20px 0"
-          >
-            {availablePlans && availablePlans.length !== 0
-              ? info.select
-              : info.not_available}
-          </H3>
+          {availablePlans && availablePlans.length !== 0 ? (
+            <H3
+              fontSize="24px"
+              lineHeight="29px"
+              textAlign="center"
+              width="100%"
+              margin="0 0 20px 0"
+            >
+              {info.select}
+            </H3>
+          ) : (
+            <Div
+              fontSize="25px"
+              display="block"
+              textAlign="center"
+              dangerouslySetInnerHTML={{ __html: info.not_available }}
+            />
+          )}
           <Div
             className="cards-container"
             flexWrap="wrap"
@@ -550,25 +561,29 @@ const PricesAndPaymentsV2 = (props) => {
                 width: "70%",
                 cursor: selectedPlan === null && "default",
               }}
-              to={`${info.apply_button.link}?utm_plan=${selectedPlan}`}
+              to={`${info.apply_button.link}${
+                selectedPlan ? `?utm_plan=${selectedPlan}` : ""
+              }`}
             >
               <Button
                 variant="full"
                 width="100%"
-                color={selectedPlan === null ? "#C4C4C4" : Colors.black}
+                color={Colors.black}
                 textColor={Colors.white}
                 fontSize="16px"
                 margin="auto"
                 textAlign="center"
                 display="block"
-                cursor={selectedPlan === null ? "default" : "pointer"}
-                disabled={selectedPlan === null ? true : false}
-                onClick={() =>
-                  setSession({
-                    ...session,
-                    utm: { ...session.utm, utm_plan: selectedPlan },
-                  })
-                }
+                // cursor={selectedPlan === null ? "default" : "pointer"}
+                // disabled={selectedPlan === null ? true : false}
+                onClick={() => {
+                  if (selectedPlan) {
+                    setSession({
+                      ...session,
+                      utm: { ...session.utm, utm_plan: selectedPlan },
+                    });
+                  }
+                }}
               >
                 {info.apply_button.label}
               </Button>

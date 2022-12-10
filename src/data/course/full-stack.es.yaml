@@ -1,7 +1,7 @@
 meta_info:
   slug: full-stack-part-time
-  title: "Bootcamp Full Stack part time de 4Geeks Academy"
-  description: "Full stack part time es un coding bootcamp a nivel mundial que se especializa en la programación e informatica, no tienes que dejar tu trabajo para aprender"
+  title: "Conviértete en Desarrollador Full Stack en 4Geeks Academy"
+  description: "El Full Stack es un coding bootcamp reconocido a nivel mundial para convertirte en programador. Trabajo Garantizado."
   image: "/images/og-preview/full-stack.es.png"
   bc_slug: "full-stack"
   visibility: "visible"
@@ -27,7 +27,7 @@ seo_title: "Coding Bootcamp"
 header:
   title: "Full Stack Developer"
   image: "../../../static/images/bg/program-bg.png"
-  image_alt: ""
+  image_alt: "Programa"
   paragraph: "De cero a tener tu primer trabajo como programador, aprende todo lo necesario, recibe soporte de por vida y consigue un trabajo después de 16 semanas de estudio."
 
 button:
@@ -61,7 +61,7 @@ badges:
 
 upcoming:
   no_dates_message: "Actualmente no hay próximas fechas para este programa"  
-  actionMessage: "Avisenme fechas disponibles"
+  actionMessage: "Avísame cuando haya fechas disponibles"
 
 credentials:
   heading: "RESULTADOS"
@@ -73,15 +73,15 @@ details:
       sub_title: "En esta carrera te desarrollarás desde cero como Full Stack Developer.       
       Aprenderás a crear un sitio web sumergiéndote en las mejores prácticas del       
       diseño web responsive, trabajando con diversos lenguajes. Obtedrás una       
-      sólida base de front end, back end, base de datos, manejo de procesos       
-      distribuidos y despliegue a distintas plataformas web.
+      sólida base de frontend, backend, base de datos, manejo de procesos       
+      distribuídos y despliegue en plataformas web.
 
       Al finalizar este programa, contarás con los conocimientos para       
       desempeñarte como Full Stack Developer. 
     "
       list:
         - label: "Duración"
-          content:  "16 semanas"
+          content:  "18 semanas"
           icon: "calendar"
         - label: "Clases"
           content: "3 Clases semanales"
@@ -131,14 +131,14 @@ details:
       description: "Enfocado principalmente en Python, Flask y SQL construirás tus propias APIs e interactuarás con otras APIs muy conocidas como Google, Twillio, Facebook, Stripe y más!"
       projects: "Clon de Coursera, Clon de Instagram, Clon de Youtube, etc."
       slug: "web-development"
-      duration: "2 sem"
+      duration: "3 sem"
       step: 2
     - module_name: "APPS AVANZADAS"
       title: "Apps Avanzadas"
       description: "Python, Flask, REST API's, Bases de datos, SQL, Patrón MVC, Publica tu sitio web, etc."
       projects: "Durante esta fase tendrás que diseñar, programar, probar y publicar tu propia aplicación web completa."
       slug: "aplicacion-avanzada"
-      duration: "6 sem"
+      duration: "7 sem"
       step: 7.9
     - module_name: "DE POR VIDA"
       title: "De por vida"
@@ -167,7 +167,7 @@ geek_data:
   heading: ¡Career Support de por vida!
   geek_pal:
     - Aprenderas Python, Javascript y React. Los Lenguajes más buscados.
-    - Un profesor cada cinco estudiantes (1:5).
+    - Un profesor cada siete estudiantes (1:7).
     - Sesiones ilimitadas de tutoría 1-1 por demanda, en persona o en línea.
     - Miles de ejercicios interactivos y autoevaluados.
     - Soluciones en video para una retroalimentación instantánea.
@@ -197,7 +197,7 @@ prices:
 ## ALUMNI SECTION
 alumni:
   heading: "Conoce a los graduados y sus proyectos"
-  sub_heading: "La última fase del curso debes construir un proyecto final que tu mismo escogeras, 
+  sub_heading: "La última fase del curso debes construir un proyecto final que tú mismo escogerás, 
     puede ser un emprendimiento o trabajarás directamente en un proyecto de la vida real en 
     colaboración con nuestros hiring partners."
 

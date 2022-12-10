@@ -130,6 +130,7 @@ const Home = (props) => {
           padding="30px 0 0 0"
           padding_tablet="0"
           columns_tablet="2"
+          margin_tablet="30px 0 20px 0"
           position="relative"
         >
           <Div
@@ -137,7 +138,7 @@ const Home = (props) => {
             zIndex="5"
             right_tablet={yml.header_data.video ? "40%" : "5%"}
             right="5%"
-            top_tablet={yml.header_data.video ? "15%" : "55%"}
+            top_tablet={yml.header_data.video ? "1%" : "55%"}
             top="90px"
             width_tablet="160px"
             height_tablet="152px"
@@ -148,7 +149,7 @@ const Home = (props) => {
           </Div>
           <Div
             flexDirection="column"
-            justifyContent_tablet="evenly"
+            // justifyContent_tablet="evenly"
             alignItems="center"
             alignItems_tablet="start"
             padding="0 0 0 20px"
@@ -213,7 +214,7 @@ const Home = (props) => {
                 >
                   {yml.header_data.join_button_text}
                 </Button>
-                <Button
+                {/* <Button
                   variant="outline"
                   justifyContent="center"
                   // width="200px"
@@ -223,18 +224,18 @@ const Home = (props) => {
                   textColor={Colors.blue}
                 >
                   {yml.header_data.free_button_text}
-                </Button>
+                </Button> */}
               </Div>
             </Div>
           </Div>
           <Div display="flex" height="auto" width="100%">
-            {yml.header_data.video ? (
+            {yml.header_data.video && yml.header_data.video != "" ? (
               <Div
-                height_tablet="723px"
+                height_tablet="623px"
                 width="100%"
                 className="wrapper-container"
                 position="relative"
-                padding_tablet="150px 10px 0 20px"
+                padding_tablet="50px 10px 0 20px"
                 padding="0"
               >
                 <Circle
@@ -291,7 +292,7 @@ const Home = (props) => {
               </Div>
             ) : (
               <StyledBackgroundSection
-                height_tablet="723px"
+                height_tablet="623px"
                 display_tablet="block"
                 display="none"
                 height="390px"
