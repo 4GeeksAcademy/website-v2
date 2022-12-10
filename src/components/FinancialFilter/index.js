@@ -9,21 +9,17 @@ import { SessionContext } from "../../session";
 
 const PricingCard = ({
   data,
-  lang,
   children,
-  price,
   color,
   background,
   transform_tablet,
-  priceInfo,
-  applyLabel,
   border,
   borderLeft,
   borderRight,
   borderRight_tablet,
   borderLeft_tablet,
 }) => {
-  const { header, button } = data;
+  const { header } = data;
   return (
     <Div
       flexDirection="column"
@@ -38,16 +34,18 @@ const PricingCard = ({
       borderLeft_tablet={borderLeft_tablet}
       borderRight_tablet={borderRight_tablet}
     >
-      <H2
-        type="h2"
-        margin="0 0 30px 0"
-        fontSize="22px"
-        color={color}
-        lineHeight="30px"
-        textAlign="left"
-      >
-        {header.heading_one} {header.heading_two}
-      </H2>
+      {header && (
+        <H2
+          type="h2"
+          margin="0 0 30px 0"
+          fontSize="22px"
+          color={color}
+          lineHeight="30px"
+          textAlign="left"
+        >
+          {header.heading_one} {header.heading_two}
+        </H2>
+      )}
       <Div display="block">{children}</Div>
     </Div>
   );
@@ -99,6 +97,36 @@ const FinancialFilter = (props) => {
           }
         }
       }
+      allPlansYaml {
+        edges {
+          node {
+            full_time {
+              slug
+              academies
+              recomended
+              scholarship
+              payment_time
+              price
+              bullets
+              icons
+            }
+            part_time {
+              slug
+              academies
+              recomended
+              scholarship
+              payment_time
+              price
+              bullets
+              icons
+            }
+            fields {
+              lang
+              file_name
+            }
+          }
+        }
+      }
     }
   `);
   let info = data.content.edges.find(
@@ -107,12 +135,19 @@ const FinancialFilter = (props) => {
   if (info) info = info.node;
 
   const { session, setSession } = useContext(SessionContext);
-  const [activeStep, setActiveStep] = useState(0);
   const [currentLocation, setCurrentLocation] = useState(false);
   const [course, setCourse] = useState(false);
   const [locations, setLocations] = useState(false);
   const [modality, setModality] = useState(false);
   const [prices, setPrices] = useState();
+
+  const getCurrentPlans = () => {
+    return data.allPlansYaml.edges
+      .filter(({ node }) => node.fields.lang === props.lang)
+      .find((p) =>
+        p.node.fields.file_name.includes(course?.value.replaceAll("_", "-"))
+      )?.node[modality?.value];
+  };
 
   useEffect(() => {
     setLocations(
@@ -135,11 +170,12 @@ const FinancialFilter = (props) => {
 
   useEffect(() => {
     modality && course && currentLocation
-      ? setPrices(currentLocation.prices[course.value][modality.value])
+      ? setPrices(getCurrentPlans().filter((plan) =>
+      plan.academies.includes(currentLocation.fields.file_name.slice(0, -3))))
       : console.log("modality", modality);
   }, [modality, course, currentLocation]);
 
-  if (!currentLocation || !currentLocation.prices)
+  if (!currentLocation)
     return (
       <Paragraph margin="10px 0px" align="center" fontSize="18px">
         {info.loading}
@@ -232,19 +268,12 @@ const FinancialFilter = (props) => {
         </Grid>
       </GridContainer>
 
-      {!prices ? (
+      {!prices || prices.length === 0 ? (
         <>
-          {!prices ? (
-            <Paragraph margin="10px 0px" align="center" fontSize="18px">
-              {" "}
-              Please select a course to see more information
-            </Paragraph>
-          ) : (
-            <Paragraph margin="10px 0px" align="center" fontSize="18px">
-              {info.pricing_error} {course?.label}, {currentLocation.city}.{" "}
-              <br /> {info.pricing_error_contact}
-            </Paragraph>
-          )}
+          <Paragraph margin="10px 0px" align="center" fontSize="18px">
+            {info.pricing_error} {course?.label}, {currentLocation.city}.{" "}
+            <br /> {info.pricing_error_contact}
+          </Paragraph>
         </>
       ) : (
         <GridContainer
@@ -256,17 +285,15 @@ const FinancialFilter = (props) => {
           gridGap_tablet="0"
           padding_tablet="4.5rem 16px"
         >
-          {prices?.center_section &&
-            Array.isArray(prices?.center_section.plans) && (
+          {prices &&
+            Array.isArray(prices) && (
               <PricingCard
                 color="black"
                 background={Colors.white}
-                price={prices.center_section.plans[activeStep].payment}
-                priceInfo={prices.center_section.plans[activeStep].paymentInfo}
-                data={prices.center_section}
+                data={{}}
               >
-                {Array.isArray(prices.center_section.plans) &&
-                  prices.center_section.plans.map((label, index) => (
+                {Array.isArray(prices) &&
+                  prices.map((label, index) => (
                     <GridContainer
                       key={index}
                       containerColumns_tablet="0fr repeat(12, 1fr) 0fr"
@@ -275,7 +302,7 @@ const FinancialFilter = (props) => {
                       shadow_tablet={Colors.shadow}
                       padding="20px"
                       height="100%"
-                      height_tablet="122px"
+                      minHeight_tablet="122px"
                       columns_tablet="4"
                     >
                       <Div
@@ -284,10 +311,12 @@ const FinancialFilter = (props) => {
                         placeItems="center"
                         display="flex"
                       >
-                        <img
-                          style={{ margin: "auto", height: "25px" }}
-                          src={label.logo}
-                        />
+                        {label.icons?.map((logo) => (
+                          <img
+                            style={{ margin: "auto 5px", height: "25px" }}
+                            src={logo}
+                          />
+                        )) }
                       </Div>
                       <Div
                         margin="10px 0px"
@@ -301,7 +330,7 @@ const FinancialFilter = (props) => {
                           lineHeight="36px"
                           fontSize="30px"
                         >
-                          {label.months}
+                          {label.scholarship}
                         </Paragraph>
                         <H3
                           type="h3"
@@ -313,7 +342,7 @@ const FinancialFilter = (props) => {
                           lineHeight="24px"
                           letterSpacing="0.05em"
                         >
-                          {label.monthsInfo}
+                          {label.payment_time}
                         </H3>
                       </Div>
                       <Div
@@ -328,7 +357,7 @@ const FinancialFilter = (props) => {
                           lineHeight="36px"
                           fontSize="30px"
                         >
-                          {label.payment}
+                          {label.price}
                         </Paragraph>
                         <H3
                           type="h3"
@@ -340,7 +369,7 @@ const FinancialFilter = (props) => {
                           lineHeight="24px"
                           letterSpacing="0.05em"
                         >
-                          {label.paymentInfo}
+                          {label.payment_time}
                         </H3>
                       </Div>
                       <Div
@@ -349,15 +378,21 @@ const FinancialFilter = (props) => {
                         placeItems="center"
                         image="no"
                       >
-                        <Link to={`/${props.lang}/apply`}>
+                        <Link to={`/${props.lang}/apply?utm_plan=${label.slug}`}>
                           <Button
                             variant="full"
                             height="40px"
                             color={Colors.blue}
                             textColor={Colors.white}
                             fontSize="16px"
+                            onClick={() =>
+                              setSession({
+                                ...session,
+                                utm: { ...session.utm, utm_plan: label.slug },
+                              })
+                            }
                           >
-                            {prices?.center_section?.button?.button_text ||
+                            {info?.apply_button?.label ||
                               "APPLY"}
                           </Button>
                         </Link>
@@ -367,223 +402,6 @@ const FinancialFilter = (props) => {
               </PricingCard>
             )}
 
-          {prices.left_section && (
-            <PricingCard
-              color="black"
-              background={Colors.white}
-              data={prices.left_section}
-            >
-              {prices.left_section.content && (
-                <GridContainer
-                  containerColumns_tablet="0fr repeat(12, 1fr) 0fr"
-                  margin="0 0 20px 0"
-                  shadow="0px 0px 16px rgba(0, 0, 0, 0.15)"
-                  padding="20px"
-                  height="100%"
-                  height_tablet="122px"
-                  columns_tablet="2"
-                >
-                  <Div
-                    margin="10px 0px"
-                    margin_tablet="10px 30px"
-                    width="100%"
-                    justifyContent="center"
-                    placeItems="center"
-                    flexDirection="column"
-                    display="flex"
-                  >
-                    <Paragraph
-                      textAlign_tablet="left"
-                      fontWeight="700"
-                      lineHeight="36px"
-                      fontSize="30px"
-                    >
-                      {prices.left_section.content.price}
-                    </Paragraph>
-
-                    <H3
-                      type="h3"
-                      alignSelf_tablet="flex-start"
-                      alignSelf="center"
-                      fontWeight="400"
-                      color="#A4A4A4"
-                      width="fit-content"
-                      padding="0 5px"
-                      fontSize="15px"
-                      lineHeight="24px"
-                      letterSpacing="0.05em"
-                    >
-                      {prices.left_section.content.price_info}
-                    </H3>
-                  </Div>
-                  <Div
-                    margin="10px 0px"
-                    justifyContent="center"
-                    margin_tablet=" 0 10% 0 auto "
-                    placeItems="center"
-                    image="no"
-                  >
-                    <Link to={`/${props.lang}/apply`}>
-                      <Button
-                        variant="full"
-                        height="40px"
-                        color={Colors.blue}
-                        textColor={Colors.white}
-                        fontSize="16px"
-                      >
-                        {prices?.left_section?.button?.button_text || "APPLY"}
-                      </Button>
-                    </Link>
-                  </Div>
-                </GridContainer>
-              )}
-            </PricingCard>
-          )}
-
-          {prices.right_section && (
-            <PricingCard
-              color="black"
-              background={Colors.white}
-              data={prices.right_section}
-            >
-              {prices.right_section.content && (
-                <GridContainer
-                  containerColumns_tablet="0fr repeat(12, 1fr) 0fr"
-                  margin="0 0 20px 0"
-                  shadow="0px 0px 16px rgba(0, 0, 0, 0.15)"
-                  padding="20px"
-                  height="100%"
-                  height_tablet="122px"
-                  columns_tablet="2"
-                >
-                  <Div
-                    margin="10px 0px"
-                    margin_tablet="10px 30px"
-                    width="100%"
-                    justifyContent="center"
-                    placeItems="center"
-                    flexDirection="column"
-                    display="flex"
-                  >
-                    <Paragraph
-                      textAlign_tablet="left"
-                      fontWeight="700"
-                      lineHeight="36px"
-                      fontSize="30px"
-                    >
-                      {prices.right_section.content.price}
-                    </Paragraph>
-
-                    <H3
-                      type="h3"
-                      alignSelf_tablet="flex-start"
-                      alignSelf="center"
-                      fontWeight="400"
-                      color="#A4A4A4"
-                      width="fit-content"
-                      padding="0 5px"
-                      fontSize="15px"
-                      lineHeight="24px"
-                      letterSpacing="0.05em"
-                    >
-                      {prices.right_section.content.price_info}
-                    </H3>
-                  </Div>
-                  <Div
-                    margin="10px 0px"
-                    justifyContent="center"
-                    margin_tablet=" 0 10% 0 auto "
-                    placeItems="center"
-                    image="no"
-                  >
-                    <Link to={`/${props.lang}/apply`}>
-                      <Button
-                        variant="full"
-                        height="40px"
-                        color={Colors.blue}
-                        textColor={Colors.white}
-                        fontSize="16px"
-                      >
-                        {prices.right_section.button?.button_text || "APPLY"}
-                      </Button>
-                    </Link>
-                  </Div>
-                </GridContainer>
-              )}
-            </PricingCard>
-          )}
-          {prices.scholarship && (
-            <PricingCard
-              color="black"
-              background={Colors.white}
-              data={prices.scholarship}
-            >
-              {prices.scholarship.content && (
-                <GridContainer
-                  containerColumns_tablet="0fr repeat(12, 1fr) 0fr"
-                  margin="0 0 20px 0"
-                  shadow="0px 0px 16px rgba(0, 0, 0, 0.15)"
-                  padding="20px"
-                  height="100%"
-                  height_tablet="122px"
-                  columns_tablet="2"
-                >
-                  <Div
-                    margin="10px 0px"
-                    margin_tablet="10px 30px"
-                    width="100%"
-                    justifyContent="center"
-                    placeItems="center"
-                    flexDirection="column"
-                    display="flex"
-                  >
-                    <Paragraph
-                      textAlign_tablet="left"
-                      fontWeight="700"
-                      lineHeight="36px"
-                      fontSize="30px"
-                    >
-                      {prices.scholarship.content.price}
-                    </Paragraph>
-
-                    <H3
-                      type="h3"
-                      alignSelf_tablet="flex-start"
-                      alignSelf="center"
-                      fontWeight="400"
-                      color="#A4A4A4"
-                      width="fit-content"
-                      padding="0 5px"
-                      fontSize="15px"
-                      lineHeight="24px"
-                      letterSpacing="0.05em"
-                    >
-                      {prices.scholarship.content.price_info}
-                    </H3>
-                  </Div>
-                  <Div
-                    margin="10px 0px"
-                    justifyContent="center"
-                    margin_tablet=" 0 10% 0 auto "
-                    placeItems="center"
-                    image="no"
-                  >
-                    <Link to={`/${props.lang}/apply`}>
-                      <Button
-                        variant="full"
-                        height="40px"
-                        color={Colors.blue}
-                        textColor={Colors.white}
-                        fontSize="16px"
-                      >
-                        {prices.scholarship.button?.button_text || "APPLY"}
-                      </Button>
-                    </Link>
-                  </Div>
-                </GridContainer>
-              )}
-            </PricingCard>
-          )}
         </GridContainer>
       )}
     </Div>
