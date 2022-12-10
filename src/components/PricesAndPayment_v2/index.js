@@ -561,7 +561,9 @@ const PricesAndPaymentsV2 = (props) => {
                 width: "70%",
                 cursor: selectedPlan === null && "default",
               }}
-              to={`${info.apply_button.link}${selectedPlan ? `?utm_plan=${selectedPlan}` : ''}`}
+              to={`${info.apply_button.link}${
+                selectedPlan ? `?utm_plan=${selectedPlan}` : ""
+              }`}
             >
               <Button
                 variant="full"
@@ -574,12 +576,12 @@ const PricesAndPaymentsV2 = (props) => {
                 display="block"
                 // cursor={selectedPlan === null ? "default" : "pointer"}
                 // disabled={selectedPlan === null ? true : false}
-                onClick={() =>{
+                onClick={() => {
                   if (selectedPlan) {
                     setSession({
                       ...session,
                       utm: { ...session.utm, utm_plan: selectedPlan },
-                    })
+                    });
                   }
                 }}
               >

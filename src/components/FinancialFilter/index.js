@@ -170,8 +170,13 @@ const FinancialFilter = (props) => {
 
   useEffect(() => {
     modality && course && currentLocation
-      ? setPrices(getCurrentPlans().filter((plan) =>
-      plan.academies.includes(currentLocation.fields.file_name.slice(0, -3))))
+      ? setPrices(
+          getCurrentPlans().filter((plan) =>
+            plan.academies.includes(
+              currentLocation.fields.file_name.slice(0, -3)
+            )
+          )
+        )
       : console.log("modality", modality);
   }, [modality, course, currentLocation]);
 
@@ -271,8 +276,8 @@ const FinancialFilter = (props) => {
       {!prices || prices.length === 0 ? (
         <>
           <Paragraph margin="10px 0px" align="center" fontSize="18px">
-            {info.pricing_error} {course?.label}, {currentLocation.city}.{" "}
-            <br /> {info.pricing_error_contact}
+            {info.pricing_error} {course?.label}, {currentLocation.city}. <br />{" "}
+            {info.pricing_error_contact}
           </Paragraph>
         </>
       ) : (
@@ -285,123 +290,116 @@ const FinancialFilter = (props) => {
           gridGap_tablet="0"
           padding_tablet="4.5rem 16px"
         >
-          {prices &&
-            Array.isArray(prices) && (
-              <PricingCard
-                color="black"
-                background={Colors.white}
-                data={{}}
-              >
-                {Array.isArray(prices) &&
-                  prices.map((label, index) => (
-                    <GridContainer
-                      key={index}
-                      containerColumns_tablet="0fr repeat(12, 1fr) 0fr"
-                      margin="0 0 20px 0"
-                      shadow={Colors.shadow}
-                      shadow_tablet={Colors.shadow}
-                      padding="20px"
-                      height="100%"
-                      minHeight_tablet="122px"
-                      columns_tablet="4"
+          {prices && Array.isArray(prices) && (
+            <PricingCard color="black" background={Colors.white} data={{}}>
+              {Array.isArray(prices) &&
+                prices.map((label, index) => (
+                  <GridContainer
+                    key={index}
+                    containerColumns_tablet="0fr repeat(12, 1fr) 0fr"
+                    margin="0 0 20px 0"
+                    shadow={Colors.shadow}
+                    shadow_tablet={Colors.shadow}
+                    padding="20px"
+                    height="100%"
+                    minHeight_tablet="122px"
+                    columns_tablet="4"
+                  >
+                    <Div
+                      margin="10px 0px"
+                      justifyContent="center"
+                      placeItems="center"
+                      display="flex"
                     >
-                      <Div
-                        margin="10px 0px"
-                        justifyContent="center"
-                        placeItems="center"
-                        display="flex"
+                      {label.icons?.map((logo) => (
+                        <img
+                          style={{ margin: "auto 5px", height: "25px" }}
+                          src={logo}
+                        />
+                      ))}
+                    </Div>
+                    <Div
+                      margin="10px 0px"
+                      justifyContent="center"
+                      placeItems="center"
+                      flexDirection="column"
+                      display="flex"
+                    >
+                      <Paragraph
+                        fontWeight="700"
+                        lineHeight="36px"
+                        fontSize="30px"
                       >
-                        {label.icons?.map((logo) => (
-                          <img
-                            style={{ margin: "auto 5px", height: "25px" }}
-                            src={logo}
-                          />
-                        )) }
-                      </Div>
-                      <Div
-                        margin="10px 0px"
-                        justifyContent="center"
-                        placeItems="center"
-                        flexDirection="column"
-                        display="flex"
+                        {label.scholarship}
+                      </Paragraph>
+                      <H3
+                        type="h3"
+                        fontWeight="400"
+                        color="#A4A4A4"
+                        width="fit-content"
+                        padding="0 5px"
+                        fontSize="15px"
+                        lineHeight="24px"
+                        letterSpacing="0.05em"
                       >
-                        <Paragraph
-                          fontWeight="700"
-                          lineHeight="36px"
-                          fontSize="30px"
-                        >
-                          {label.scholarship}
-                        </Paragraph>
-                        <H3
-                          type="h3"
-                          fontWeight="400"
-                          color="#A4A4A4"
-                          width="fit-content"
-                          padding="0 5px"
-                          fontSize="15px"
-                          lineHeight="24px"
-                          letterSpacing="0.05em"
-                        >
-                          {label.payment_time}
-                        </H3>
-                      </Div>
-                      <Div
-                        margin="10px 0px"
-                        justifyContent="center"
-                        placeItems="center"
-                        flexDirection="column"
-                        display="flex"
+                        {label.payment_time}
+                      </H3>
+                    </Div>
+                    <Div
+                      margin="10px 0px"
+                      justifyContent="center"
+                      placeItems="center"
+                      flexDirection="column"
+                      display="flex"
+                    >
+                      <Paragraph
+                        fontWeight="700"
+                        lineHeight="36px"
+                        fontSize="30px"
                       >
-                        <Paragraph
-                          fontWeight="700"
-                          lineHeight="36px"
-                          fontSize="30px"
-                        >
-                          {label.price}
-                        </Paragraph>
-                        <H3
-                          type="h3"
-                          fontWeight="400"
-                          color="#A4A4A4"
-                          width="fit-content"
-                          padding="0 5px"
-                          fontSize="15px"
-                          lineHeight="24px"
-                          letterSpacing="0.05em"
-                        >
-                          {label.payment_time}
-                        </H3>
-                      </Div>
-                      <Div
-                        margin="10px 0px"
-                        justifyContent="center"
-                        placeItems="center"
-                        image="no"
+                        {label.price}
+                      </Paragraph>
+                      <H3
+                        type="h3"
+                        fontWeight="400"
+                        color="#A4A4A4"
+                        width="fit-content"
+                        padding="0 5px"
+                        fontSize="15px"
+                        lineHeight="24px"
+                        letterSpacing="0.05em"
                       >
-                        <Link to={`/${props.lang}/apply?utm_plan=${label.slug}`}>
-                          <Button
-                            variant="full"
-                            height="40px"
-                            color={Colors.blue}
-                            textColor={Colors.white}
-                            fontSize="16px"
-                            onClick={() =>
-                              setSession({
-                                ...session,
-                                utm: { ...session.utm, utm_plan: label.slug },
-                              })
-                            }
-                          >
-                            {info?.apply_button?.label ||
-                              "APPLY"}
-                          </Button>
-                        </Link>
-                      </Div>
-                    </GridContainer>
-                  ))}
-              </PricingCard>
-            )}
-
+                        {label.payment_time}
+                      </H3>
+                    </Div>
+                    <Div
+                      margin="10px 0px"
+                      justifyContent="center"
+                      placeItems="center"
+                      image="no"
+                    >
+                      <Link to={`/${props.lang}/apply?utm_plan=${label.slug}`}>
+                        <Button
+                          variant="full"
+                          height="40px"
+                          color={Colors.blue}
+                          textColor={Colors.white}
+                          fontSize="16px"
+                          onClick={() =>
+                            setSession({
+                              ...session,
+                              utm: { ...session.utm, utm_plan: label.slug },
+                            })
+                          }
+                        >
+                          {info?.apply_button?.label || "APPLY"}
+                        </Button>
+                      </Link>
+                    </Div>
+                  </GridContainer>
+                ))}
+            </PricingCard>
+          )}
         </GridContainer>
       )}
     </Div>
