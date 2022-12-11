@@ -236,6 +236,7 @@ export const query = graphql`
           breathecode_location_slug
           fields {
             lang
+            file_name
           }
           meta_info {
             slug
