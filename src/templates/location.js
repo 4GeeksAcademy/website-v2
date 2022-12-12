@@ -99,34 +99,36 @@ const Location = ({ data, pageContext, yml }) => {
               data.allChooseProgramYaml.edges[0].node.open_button_text
             }
           />
-          <Div
-            alignItems="flex-start"
-            margin="15px 0 0 0"
-            margin_tablet="26px 0 0 0"
-          >
-            <Icon
-              icon="location"
-              style={{ marginRight: "10px", flexShrink: 0 }}
-            />
-            <Paragraph
-              textAlign="left"
-              opacity="1"
-              fontWeight="700"
-              lineHeight="22px"
-              width="100%"
+          {yml.info_box.address && (
+            <Div
+              alignItems="flex-start"
+              margin="15px 0 0 0"
+              margin_tablet="26px 0 0 0"
             >
-              {yml.info_box.address}
-              <Link
-                target="_blank"
-                to={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
-                  yml.info_box.address
-                )}`}
-                style={{ marginLeft: "5px", display: "inline" }}
+              <Icon
+                icon="location"
+                style={{ marginRight: "10px", flexShrink: 0 }}
+              />
+              <Paragraph
+                textAlign="left"
+                opacity="1"
+                fontWeight="700"
+                lineHeight="22px"
+                width="100%"
               >
-                {yml.info_box.watch_on_maps}
-              </Link>
-            </Paragraph>
-          </Div>
+                {yml.info_box.address}
+                <Link
+                  target="_blank"
+                  to={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+                    yml.info_box.address
+                  )}`}
+                  style={{ marginLeft: "5px", display: "inline" }}
+                >
+                  {yml.info_box.open_on_maps}
+                </Link>
+              </Paragraph>
+            </Div>
+          )}
           <Div
             display_tablet="flex"
             display="block"
@@ -398,7 +400,7 @@ export const query = graphql`
             contact_heading
             whatsapp
             whatsapp_link
-            watch_on_maps
+            open_on_maps
             image {
               childImageSharp {
                 gatsbyImageData(
