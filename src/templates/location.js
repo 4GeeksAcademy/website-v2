@@ -135,40 +135,44 @@ const Location = ({ data, pageContext, yml }) => {
             margin_tablet="0"
             margin="0 0 20px 0"
           >
-            <Paragraph
-              textAlign_tablet="left"
-              margin="15px 10px 0 0"
-              margin_tablet="26px 10px 0 0"
-              opacity="1"
-              display="flex"
-              alignItems="center"
-              fontWeight="700"
-              lineHeight="22px"
-              maxWidth="155px"
-              flexShrink="0"
-            >
-              <Icon
-                icon="phone"
-                style={{ marginRight: "10px", flexShrink: 0 }}
-              />
-              {yml.phone}
-            </Paragraph>
-            <Paragraph
-              textAlign_tablet="left"
-              margin="15px 0 0 0"
-              margin_tablet="26px 0 0 0"
-              opacity="1"
-              display="flex"
-              alignItems="center"
-              fontWeight="700"
-              lineHeight="22px"
-            >
-              <Icon
-                icon="mail"
-                style={{ marginRight: "10px", flexShrink: 0 }}
-              />
-              {yml.info_box.email}
-            </Paragraph>
+            {yml.phone && (
+              <Paragraph
+                textAlign_tablet="left"
+                margin="15px 10px 0 0"
+                margin_tablet="26px 10px 0 0"
+                opacity="1"
+                display="flex"
+                alignItems="center"
+                fontWeight="700"
+                lineHeight="22px"
+                maxWidth="155px"
+                flexShrink="0"
+              >
+                <Icon
+                  icon="phone"
+                  style={{ marginRight: "10px", flexShrink: 0 }}
+                />
+                {yml.phone}
+              </Paragraph>
+            )}
+            {yml.info_box.email && (
+              <Paragraph
+                textAlign_tablet="left"
+                margin="15px 0 0 0"
+                margin_tablet="26px 0 0 0"
+                opacity="1"
+                display="flex"
+                alignItems="center"
+                fontWeight="700"
+                lineHeight="22px"
+              >
+                <Icon
+                  icon="mail"
+                  style={{ marginRight: "10px", flexShrink: 0 }}
+                />
+                {yml.info_box.email}
+              </Paragraph>
+            )}
           </Div>
 
           {/* <Paragraph textAlign_tablet="left">{yml.info_box.phone} </Paragraph>
