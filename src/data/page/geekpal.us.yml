@@ -14,6 +14,8 @@ header:
   paragraph: "GeekPAL is an instant membership you get when you become a student at 4Geeks Academy. It guarantees you will not code alone ever again. With GeekPAL you will count with A PAL for the rest of your life -yes, even after graduation. <span style='font-weight: bold'>If you get stuck, there will always be a mentor available so you can get help with your code.</span>"
   image_logo: "/images/geekpal.png"
 
+seo_title: "Geekpal"
+
 # Introduction Video here
 geekPal:
   - videoId: "MBXqEnhodx0"
