@@ -301,6 +301,7 @@ export const query = graphql`
           breathecode_location_slug
           fields {
             lang
+            file_name
           }
           meta_info {
             slug
@@ -325,48 +326,6 @@ export const query = graphql`
                 # fluid(maxWidth: 1200, quality: 100){
                 #   ...GatsbyImageSharpFluid_withWebp
                 # }
-              }
-            }
-          }
-          prices {
-            full_stack {
-              full_time {
-                plans {
-                  slug
-                  recomended
-                  scholarship
-                  payment_time
-                  price
-                  bullets
-                  icons
-                }
-                slug
-              }
-              part_time {
-                plans {
-                  slug
-                  recomended
-                  scholarship
-                  payment_time
-                  price
-                  bullets
-                  icons
-                }
-                slug
-              }
-            }
-            software_engineering {
-              part_time {
-                plans {
-                  slug
-                  recomended
-                  scholarship
-                  payment_time
-                  price
-                  bullets
-                  icons
-                }
-                slug
               }
             }
           }

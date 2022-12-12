@@ -18,8 +18,8 @@ const PricingCard = ({
   session,
   setSession,
 }) => {
-
   const [isOpen, setIsOpen] = useState(true);
+  const { recomended, scholarship, payment_time, slug } = data;
   const isSelected = selectedPlan === slug;
   return (
     <Div
@@ -89,7 +89,7 @@ const PricingCard = ({
               color={isSelected ? Colors.white : Colors.black}
               opacity="1"
             >
-              <span style={{ fontSize: "36px" }}>{data.price}</span> USD
+              <span style={{ fontSize: "36px" }}>{data.price}</span>
             </Paragraph>
           </Div>
         </Div>
@@ -172,6 +172,10 @@ const courseArray = [
     value: "machine_learning",
     label: "Machine Learning",
   },
+  {
+    value: "datascience-ml",
+    label: "Datascience & Machine Learning",
+  },
 ];
 const modalityArray = [
   {
@@ -219,12 +223,51 @@ const PricesAndPaymentsV2 = (props) => {
           }
         }
       }
+      allPlansYaml {
+        edges {
+          node {
+            full_time {
+              slug
+              academies
+              recomended
+              scholarship
+              payment_time
+              price
+              bullets
+              icons
+            }
+            part_time {
+              slug
+              academies
+              recomended
+              scholarship
+              payment_time
+              price
+              bullets
+              icons
+            }
+            fields {
+              lang
+              file_name
+            }
+          }
+        }
+      }
     }
   `);
+
   let info = data.content.edges.find(
     ({ node }) => node.fields.lang === props.lang
   );
   if (info) info = info.node;
+
+  const getCurrentPlans = () => {
+    return data.allPlansYaml.edges
+      .filter(({ node }) => node.fields.lang === props.lang)
+      .find((p) =>
+        p.node.fields.file_name.includes(props.courseType?.replaceAll("_", "-"))
+      )?.node[props.programType];
+  };
 
   const { session, setSession } = useContext(SessionContext);
   const [currentLocation, setCurrentLocation] = useState(false);
@@ -232,6 +275,14 @@ const PricesAndPaymentsV2 = (props) => {
   const [modality, setModality] = useState(false);
   const [locations, setLocations] = useState(false);
   const [selectedPlan, setSelectedPlan] = useState(null);
+  const [currentPlans] = useState(getCurrentPlans);
+
+  const availablePlans =
+    currentPlans && currentLocation
+      ? currentPlans.filter((plan) =>
+          plan.academies.includes(currentLocation.fields.file_name.slice(0, -3))
+        )
+      : [];
 
   // const steps = props.details.details_modules.reduce((total, current, i) => [...total, (total[i - 1] || 0) + current.step], [])
   useEffect(() => {
@@ -270,19 +321,6 @@ const PricesAndPaymentsV2 = (props) => {
     ),
     [props.courseType, props.programType]
   );
-
-  if (!currentLocation || !currentLocation.prices)
-    return (
-      <Paragraph margin="10px 0px" align="center" fontSize="18px">
-        {info.pricing_error} {currentLocation && currentLocation.city}. <br />{" "}
-        {info.pricing_error_contact}
-      </Paragraph>
-    );
-
-  let prices =
-    !course && !modality
-      ? {}
-      : currentLocation.prices[course?.value][modality?.value].plans;
 
   return (
     <Div
@@ -471,36 +509,51 @@ const PricesAndPaymentsV2 = (props) => {
           margin_xs="20px auto"
           display="block"
         >
-          <H3
-            fontSize="24px"
-            lineHeight="29px"
-            textAlign="center"
-            width="100%"
-            margin="0 0 20px 0"
-          >
-            {prices && prices.length !== 0 ? info.select : info.not_available}
-          </H3>
+          {availablePlans && availablePlans.length !== 0 ? (
+            <H3
+              fontSize="24px"
+              lineHeight="29px"
+              textAlign="center"
+              width="100%"
+              margin="0 0 20px 0"
+            >
+              {info.select}
+            </H3>
+          ) : (
+            <Div
+              fontSize="25px"
+              display="block"
+              textAlign="center"
+              dangerouslySetInnerHTML={{ __html: info.not_available }}
+            />
+          )}
           <Div
             className="cards-container"
             flexWrap="wrap"
             justifyContent_tablet="between"
             justifyContent_xs="evenly"
           >
-            {prices &&
-              prices.map((plan, index) => (
-                <PricingCard
-                  data={plan}
-                  info={info}
-                  selectedPlan={selectedPlan}
-                  setSelectedPlan={setSelectedPlan}
-                  session={session}
-                  setSession={setSession}
-                  index={index}
-                  plansLength={prices.length}
-                />
-              ))}
+            {availablePlans &&
+              availablePlans
+                .filter((plan) =>
+                  plan.academies.includes(
+                    currentLocation.fields.file_name.slice(0, -3)
+                  )
+                )
+                .map((plan, index) => (
+                  <PricingCard
+                    data={plan}
+                    info={info}
+                    selectedPlan={selectedPlan}
+                    setSelectedPlan={setSelectedPlan}
+                    session={session}
+                    setSession={setSession}
+                    index={index}
+                    plansLength={availablePlans.length}
+                  />
+                ))}
           </Div>
-          {prices && prices.length !== 0 && (
+          {availablePlans && availablePlans.length !== 0 && (
             <Link
               style={{
                 display: "block",
@@ -508,22 +561,29 @@ const PricesAndPaymentsV2 = (props) => {
                 width: "70%",
                 cursor: selectedPlan === null && "default",
               }}
-              to={`${info.apply_button.link}?utm_plan=${selectedPlan}`}
+              to={`${info.apply_button.link}${
+                selectedPlan ? `?utm_plan=${selectedPlan}` : ""
+              }`}
             >
               <Button
                 variant="full"
                 width="100%"
-                color={selectedPlan === null ? "#C4C4C4" : Colors.black}
+                color={Colors.black}
                 textColor={Colors.white}
                 fontSize="16px"
                 margin="auto"
                 textAlign="center"
                 display="block"
-                cursor={selectedPlan === null ? "default" : "pointer"}
-                disabled={selectedPlan === null ? true : false}
-                // onClick={() =>
-                //   setSession({ ...session, financing_plan: selectedPlan })
-                // }
+                // cursor={selectedPlan === null ? "default" : "pointer"}
+                // disabled={selectedPlan === null ? true : false}
+                onClick={() => {
+                  if (selectedPlan) {
+                    setSession({
+                      ...session,
+                      utm: { ...session.utm, utm_plan: selectedPlan },
+                    });
+                  }
+                }}
               >
                 {info.apply_button.label}
               </Button>

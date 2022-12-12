@@ -838,6 +838,7 @@ export const query = graphql`
           breathecode_location_slug
           fields {
             lang
+            file_name
           }
           button {
             apply_button_text
@@ -866,22 +867,6 @@ export const query = graphql`
                 # fluid(maxWidth: 800){
                 #   ...GatsbyImageSharpFluid_withWebp
                 # }
-              }
-            }
-          }
-
-          prices {
-            software_engineering {
-              part_time {
-                plans {
-                  slug
-                  recomended
-                  scholarship
-                  payment_time
-                  price
-                  bullets
-                  icons
-                }
               }
             }
           }

@@ -7,7 +7,7 @@ select: Select the plan that best suits you
 apply_button: 
   label: APPLY NOW
   link: /us/apply
-not_available: Program not available
+not_available: '<p>No payment information has been found for this location and program.</p> Please apply for more information or <a class="faq-link" href="/us/contact" rel="noopener noreferrer nofollow">send us a message.</a>'
 chart_section:
   title: '4Geeks: When Payment stops being a Concern'
   legend:

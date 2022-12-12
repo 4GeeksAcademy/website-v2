@@ -13,42 +13,6 @@ module.exports = {
       us: "4Geeks Academy is a world-wide leading coding school focused specially in part-time studies, you don't have to quite your job to become a web developer. Career support for life, coding mentoring for life. We have Miami Coding bootcamps; in Madrid, Spain; Santiago de Chile and Caracas, Venezuela. ",
       es: "4Geeks Academy es un coding bootcamp a nivel mundial que se especializa en la programación e informatica, en estudios principalmente part-time donde no tienes que dejar tu trabajo para aprender a programar.",
     },
-    defaultKeywords: {
-      us: [
-        "coding bootcamp",
-        "coding classes",
-        "learn to code",
-        "programming classes",
-        "miami coding bootcamp",
-        "soding school",
-        "learn python",
-        "python classes",
-        "learn javascript",
-        "learn node",
-        "learn programming",
-        "become a developer",
-        "time to code",
-        "4geeks academy",
-        "coding bootcamp online",
-      ],
-      es: [
-        "coding bootcamp",
-        "curso de programacion",
-        "curso de informatica",
-        "escuela de codigo",
-        "miami coding bootcamp",
-        "escuela de programacion",
-        "grado medio informatica",
-        "grado medio programación",
-        "informatica",
-        "bootcamp de informatica",
-        "estudios de informatica",
-        "estudios de programacion",
-        "coding bootcamp online",
-        "aprender a programar online",
-        "cursos de programción online",
-      ],
-    },
     defaultImage: "/images/4geeks-main.jpg",
     social: {
       defaultTwitterUsername: "@4geeksacademy",
@@ -218,6 +182,7 @@ module.exports = {
       options: {
         env: {
           production: {
+            sitemap: `https://4geeksacademy.com/sitemap.xml`,
             policy:
               robots !== "hidden"
                 ? [{ userAgent: "*" }]

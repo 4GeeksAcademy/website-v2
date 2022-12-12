@@ -1,6 +1,6 @@
 full_time:
   - slug: 'plan-1'
-    academies: ['miami-downtown', 'orlando']
+    academies: ['downtown-miami', 'orlando']
     recomended: true
     scholarship: "Scolarship"
     payment_time: "Pay today"
@@ -11,7 +11,7 @@ full_time:
     icons: 
       - "/images/landing/uwm_pantone_2021_2.png"
   - slug: 'plan-2'
-    academies: ['miami-downtown', 'orlando']
+    academies: ['downtown-miami', 'orlando']
     recomended: false
     scholarship: "Financed"
     payment_time: "24 months payment"
@@ -24,7 +24,7 @@ full_time:
       - "/images/climb-logo.png"
       - "/images/quotanda-logo.png"
   - slug: 'plan-3'
-    academies: ['miami-downtown', 'orlando']
+    academies: ['downtown-miami', 'orlando']
     recomended: false
     scholarship: "Income Share Agreement"
     payment_time: "Pay after you get a job"
@@ -37,7 +37,7 @@ full_time:
       - "/images/climb-logo.png"
       - "/images/quotanda-logo.png"
   - slug: 'plan-4'
-    academies: ['miami-downtown', 'orlando']
+    academies: ['downtown-miami', 'orlando']
     recomended: false
     scholarship: "Full Payment"
     payment_time: "Pay today"
@@ -47,7 +47,7 @@ full_time:
 
 part_time:
   - slug: 'plan-1'
-    academies: ['miami-downtown', 'orlando']
+    academies: ['downtown-miami', 'orlando']
     recomended: true
     scholarship: "Scolarship"
     payment_time: "Pay today"
@@ -58,7 +58,7 @@ part_time:
     icons: 
       - "/images/landing/uwm_pantone_2021_2.png"
   - slug: 'plan-2'
-    academies: ['miami-downtown', 'orlando']
+    academies: ['downtown-miami', 'orlando']
     recomended: false
     scholarship: "Financed"
     payment_time: "24 months payment"
@@ -71,7 +71,7 @@ part_time:
       - "/images/climb-logo.png"
       - "/images/quotanda-logo.png"
   - slug: 'plan-3'
-    academies: ['miami-downtown', 'orlando']
+    academies: ['downtown-miami', 'orlando']
     recomended: false
     scholarship: "Income Share Agreement"
     payment_time: "Pay after you get a job"
@@ -85,9 +85,126 @@ part_time:
       - "/images/quotanda-logo.png"
   - slug: 'plan-4'
     recomended: false
-    academies: ['miami-downtown', 'orlando']
+    academies: ['downtown-miami', 'orlando']
     scholarship: "Full Payment"
     payment_time: "Pay today"
     price: "$8099"
     bullets: 
       - "You're saving $1000 USD"
+
+  - slug: 'spain-scholarships-ds-pt'
+    academies: ['barcelona-spain','madrid-spain', 'malaga-spain', 'valencia-spain']
+    recomended: true
+    scholarship: "Scholarships available"
+    payment_time: ""
+    price: "~€200 / mo."
+    bullets:
+      - "Tailor-made financing plans, with or without interest, from 4 to 30 installments"
+      - "Scholarships available up to €2500. From €5300 instead of €7800"     
+    icons: 
+      - "/images/zank.png"
+      - "/images/sequra.png"
+      - "/images/nemuru.png"
+      - "/images/quotanda-logo.png"
+
+  - slug: 'spain-upfront-ds-pt'
+    academies: ['barcelona-spain','madrid-spain', 'malaga-spain', 'valencia-spain']
+    recomended: false
+    scholarship: "Pay upfront"
+    payment_time: "And get a discount"
+    price: "€4950*"
+    bullets:
+      - "Pay with wire transfer, credit or debit card, Paypal, Bitcoin or Ethereum"
+      - "*Discount up to €2850. From €4950 instead of €7800"     
+    icons: 
+      - "/images/visa-mastercard.png"    
+      - "/images/bitcoin_logo.png"  
+      - "/images/ethereum.png"    
+
+  - slug: 'spain-isa-ds-pt'
+    academies: ['barcelona-spain','madrid-spain', 'malaga-spain', 'valencia-spain']
+    recomended: true
+    scholarship: "Income Share Agreemen (ISA)"
+    payment_time: "Pay only when you work"
+    price: "€0*"
+    bullets: 
+      - "You will only have to pay when your income is greater than €16000 per year"
+      - "*Pay a small part of your salary when you find a job"
+    icons: 
+      - "/images/bcas.png" 
+
+  - slug: 'north-europe-scholarships-ds-pt'
+    academies: ['berlin-germany','dublin-ireland', 'europe','hamburg-germany','munich-germany']
+    recomended: true
+    scholarship: "Scholarships available"
+    payment_time: ""
+    price: "~€200 / mo."
+    bullets:
+      - "Tailor-made financing plans, with or without interest, from 4 to 30 installments"
+      - "Scholarships available up to €2500. From €5300 instead of €7800"     
+    icons: 
+      - "/images/quotanda-logo.png"
+
+  - slug: 'north-europe-upfront-ds-pt'
+    academies: ['berlin-germany','dublin-ireland', 'europe','hamburg-germany','munich-germany']
+    recomended: false
+    scholarship: "Pay upfront"
+    payment_time: "And get a discount"
+    price: "€5000*"
+    bullets:
+      - "Pay with wire transfer, credit or debit card, Paypal, Bitcoin or Ethereum"
+      - "*Discount up to €2800. From €5000 instead of €7800"     
+    icons: 
+      - "/images/visa-mastercard.png"    
+      - "/images/bitcoin_logo.png"  
+      - "/images/ethereum.png"    
+                       
+  - slug: 'north-europe-isa-ds-pt'
+    academies: ['berlin-germany','dublin-ireland', 'europe','hamburg-germany', 'munich-germany']
+    recomended: true
+    scholarship: "Income Share Agreemen (ISA)"
+    payment_time: "Pay only when find a job"
+    price: "€0*"
+    bullets: 
+      - "You will only have to pay when your income is greater than €22000 per year"
+      - "*Pay a small part of your salary when you find a job"
+    icons: 
+      - "/images/stepex.png"     
+
+  - slug: 'south-europe-scholarships-ds-pt'
+    academies: ['lisbon-portugal','milan-italy','rome-italy']
+    recomended: true
+    scholarship: "Scholarships available"
+    payment_time: ""
+    price: "~€200 / mo."
+    bullets:
+      - "Tailor-made financing plans, with or without interest, from 4 to 30 installments"
+      - "Scholarships available up to €2800. From €5000 instead of €7800"     
+    icons: 
+      - "/images/quotanda-logo.png"
+
+  - slug: 'south-europe-upfront-ds-pt'
+    academies: ['lisbon-portugal','milan-italy','rome-italy']
+    recomended: false
+    scholarship: "Pay upfront"
+    payment_time: "And get a discount"
+    price: "€4500*"
+    bullets:
+      - "Pay with wire transfer, credit or debit card, Paypal, Bitcoin or Ethereum"
+      - "*Discount up to €3300. From €4500 instead of €7800"     
+    icons: 
+      - "/images/visa-mastercard.png"    
+      - "/images/bitcoin_logo.png"  
+      - "/images/ethereum.png"
+
+  - slug: 'south-europe-isa-ds-pt'
+    academies: ['lisbon-portugal','milan-italy','rome-italy']
+    recomended: true
+    scholarship: "Income Share Agreemen (ISA)"
+    payment_time: "Pay only when find a job"
+    price: "€0*"
+    bullets: 
+      - "You will only have to pay when your income is greater than €16000 per year"
+      - "*Pay a small part of your salary when you find a job"
+    icons: 
+      - "/images/stepex.png"     

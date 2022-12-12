@@ -13,63 +13,34 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import CustomBar from "../CustomBar";
 
 const MegaMenuContainer = styled(Div)`
-  top: ${(props) => props.top};
-  right: ${(props) => props.right};
-  bottom: ${(props) => props.bottom};
-  left: ${(props) => props.left};
-  transform: ${(props) => props.transform};
-  /* .menu-item {
-    &:hover{
-      .megamenu-container{
-        display: block;
-      }
-    }
-  } */
+  top: 70px;
+  left: 50%;
+  width: ${(props) => props.width || "90vw"};
+  transform: translate(-50%);
+  max-width: 950px;
 `;
 
 const Triangle = styled.div`
   position: absolute;
+  display: none;
   width: 0;
   height: 0;
   border-left: 50px solid transparent;
   border-right: 50px solid transparent;
   border-bottom: 60px solid white;
-  top: -40px;
-  left: ${(props) => props.left};
+  top: 10px;
+  left: 0px;
+  &::before {
+    content: " ";
+    display: block;
+    position: relative;
+    height: 40px;
+    width: 94px;
+    top: -15px;
+    transform: translateX(-50%);
+  }
 `;
-const MegaMenuPositions = [
-  {
-    top: "",
-    left: "",
-    leftTriangle: "23%",
-    width: "100%",
-    margin: "0 0 50px 0",
-  },
-  {
-    top: "",
-    left: "50%",
-    leftTriangle: "31%",
-    transform: "translateX(-480px)",
-    width: "815px",
-    margin: "10px",
-  },
-  {
-    top: "",
-    left: "50%",
-    leftTriangle: "23%",
-    transform: "translateX(-200px)",
-    width: "377px",
-    margin: "0",
-  },
-  {
-    top: "",
-    left: "50%",
-    leftTriangle: "26%",
-    transform: "translateX(-150px)",
-    width: "610px",
-    margin: "10px",
-  },
-];
+
 const Nav = styled.nav`
   height: 71px;
   display: ${(props) => props.display};
@@ -113,7 +84,12 @@ const MenuItem = styled.li`
   font-family: lato, sans-serif;
   &:hover {
     .megamenu-container {
+      text-transform: initial;
       display: block;
+    }
+    .triangle {
+      display: block;
+      z-index: 2;
     }
   }
 `;
@@ -237,8 +213,10 @@ export const Navbar = ({
                   }
                   className="menu-item"
                 >
+                  <div style={{ position: "relative" }}>
+                    <Triangle className="triangle" />
+                  </div>
                   <H3
-                    type="h3"
                     margin="0 5px 0 0"
                     fontSize="13px"
                     lineHeight="16px"
@@ -391,25 +369,13 @@ export const MegaMenu = ({ status, setStatus, menu }) => {
           display="none"
           maxHeight="500px"
           background="white"
-          transform={MegaMenuPositions[status.itemIndex].transform}
-          width={MegaMenuPositions[status.itemIndex].width}
           padding_tablet="30px 30px 45px 30px"
           position="absolute"
-          top="80px"
-          left={
-            status.itemIndex == 0
-              ? "0"
-              : MegaMenuPositions[status.itemIndex].left
-          }
-          zIndex_tablet="1"
           borderRadius="3px"
-          minWidth_tablet={status.itemIndex == 0 ? "100%" : "432px"}
-          maxWidth_tablet="100%"
           minHeight_tablet="347px"
           boxShadow_tablet="0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"
           boxShadow="0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"
         >
-          <Triangle left={MegaMenuPositions[status.itemIndex].leftTriangle} />
           <Grid
             gridTemplateColumns_tablet="repeat(12, 1fr)"
             gridTemplateRows="2"
@@ -419,7 +385,6 @@ export const MegaMenu = ({ status, setStatus, menu }) => {
               borderBottom_tablet="1px solid #EBEBEB"
               gridArea_tablet="1/1/1/13"
               padding="0 0 27px 0"
-              margin={MegaMenuPositions[status.itemIndex].margin}
             >
               {menu[status.itemIndex].sub_menu.icon && (
                 <Div margin="0 15px 0 0">
@@ -460,7 +425,6 @@ export const MegaMenu = ({ status, setStatus, menu }) => {
                     </Div>
                   </Link>
                 )}
-                {/* <H3 textAlign="left" fontSize="15px" lineHeight="22px" fontWeight="900" margin="0 0 5px 0">{status.itemIndex != null && menu[status.itemIndex].sub_menu.title}</H3> */}
                 {menu[status.itemIndex].sub_menu.paragraph
                   .split("\n")
                   .map((d, i) => (
