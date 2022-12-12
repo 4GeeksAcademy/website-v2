@@ -166,7 +166,6 @@ const createBlog = async ({ actions, graphql }) => {
     createRedirect(args);
   };
   const clusterTemplate = path.resolve("src/templates/clusters.js");
-  const thumbnailTemplate = path.resolve("src/templates/thumbnailPreview.js");
   const result = await graphql(`
     {
       allMarkdownRemark(sort: { fields: frontmatter___date, order: DESC }) {
@@ -301,26 +300,6 @@ const createBlog = async ({ actions, graphql }) => {
       });
     })
   );
-
-  posts.forEach(({ node }) => {
-    Object.keys(clusters).forEach((lang) =>
-      clusters[lang].forEach((cluster) => {
-        let file_name = `clusters.${lang}`;
-        let type = "page";
-        createPage({
-          path: `/${lang}/${cluster}/${node.fields.slug}/preview`,
-          component: thumbnailTemplate,
-          context: {
-            ...node.fields,
-            cluster,
-            file_name,
-            lang,
-            type,
-          },
-        });
-      })
-    );
-  });
 
   return true;
 };

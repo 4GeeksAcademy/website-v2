@@ -214,7 +214,7 @@ const Home = (props) => {
                 >
                   {yml.header_data.join_button_text}
                 </Button>
-                <Button
+                {/* <Button
                   variant="outline"
                   justifyContent="center"
                   // width="200px"
@@ -224,7 +224,7 @@ const Home = (props) => {
                   textColor={Colors.blue}
                 >
                   {yml.header_data.free_button_text}
-                </Button>
+                </Button> */}
               </Div>
             </Div>
           </Div>

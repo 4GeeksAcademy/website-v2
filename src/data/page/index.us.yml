@@ -3,7 +3,7 @@ meta_info:
   visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   canonical: "/"
   title: "Miami Coding Bootcamp, Madrid España, Santiago de Chile"
-  description: "The #1 Top coding bootcamp with over 1,000 graduates and life-long career support. USA, Spain, Chile, Venezuela and Costa Rica Coding Bootcamp."
+  description: "The #1 Top coding bootcamp with over 3,000 graduates and life-long career support. USA, Spain, Portugal, Germany, Chile and Venezuela Bootcamp."
   image: "https://storage.googleapis.com/4geeks-academy-website/website-preview.png"
   keywords: "Coding Bootcamp Miami, Learn to code miami, learn to code, coding bootcamp, Miami Coding Bootcamp, Learn Code Miami, Learn python, Coding Bootcamp Madrid, Coding Bootcamp Spain, Coding Bootcamp españa"
   redirects: ["/home", "/us/home", "/us/index", "/en/home", "/us"]
@@ -14,7 +14,7 @@ header_data:
   sub_heading: Lifetime Coding Mentorship, endless Career Support, and a tech-driven community of developers.
   bullets:
     - Lifetime Coding Mentorship, endless Career Support, and a tech-driven community of developers.
-    - 'Job Guarantee: get a job within the next 6 months upon graduation or money back'
+    - 'Job Guarantee: get a job within the next 6 months upon graduation or money back, conditions apply.'
     - Learn everywhere, all the time, you choose the methodology.
   join_button_text: JOIN A PROGRAM
   free_button_text: FREE TRIAL

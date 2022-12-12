@@ -1,12 +1,5 @@
-meta_info:
-  slug: full-stack-es
-  title: full-stack
-  description: "full-stack-es"
-  image: ""
-  keywords: ""
-  redirects: []
 full_time:
-  - slug: 'plan-1'
+  - slug: 'usa-clark-scholarship-ft'
     academies: ['downtown-miami', 'orlando']
     recomended: true
     scholarship: "Scolarship"
@@ -17,7 +10,7 @@ full_time:
       - "9% of your salary until paid in full, only if you get a job in tech."
     icons: 
       - "/images/landing/uwm_pantone_2021_2.png"
-  - slug: 'plan-2'
+  - slug: 'usa-financed-ft'
     academies: ['downtown-miami', 'orlando']
     recomended: false
     scholarship: "Financed"
@@ -30,7 +23,7 @@ full_time:
       - "/images/ascent_logo.jpg"
       - "/images/climb-logo.png"
       - "/images/quotanda-logo.png"
-  - slug: 'plan-3'
+  - slug: 'usa-isa-ft'
     academies: ['downtown-miami', 'orlando']
     recomended: false
     scholarship: "Income Share Agreement"
@@ -43,7 +36,7 @@ full_time:
       - "/images/ascent_logo.jpg"
       - "/images/climb-logo.png"
       - "/images/quotanda-logo.png"
-  - slug: 'plan-4'
+  - slug: 'usa-upfront-ft'
     academies: ['downtown-miami', 'orlando']
     recomended: false
     scholarship: "Full Payment"
@@ -52,8 +45,82 @@ full_time:
     bullets: 
       - "You're saving $1000 USD"
 
+  - slug: 'spain-scholarships-fs-ft'
+    academies: ['barcelona-spain','madrid-spain', 'malaga-spain', 'valencia-spain']
+    recomended: true
+    scholarship: "Becas disponibles"
+    payment_time: ""
+    price: "~175 € al mes"
+    bullets:
+      - "Financiación a tu medida, con o sin intereses, desde 4 hasta 30 meses"
+      - "Becas disponibles de hasta 1.600 €. Desde 4.700 € en vez de 6.300 €"     
+    icons: 
+      - "/images/zank.png"
+      - "/images/sequra.png"
+      - "/images/nemuru.png"
+
+  - slug: 'spain-upfront-fs-ft'
+    academies: ['barcelona-spain','madrid-spain', 'malaga-spain', 'valencia-spain']
+    recomended: false
+    scholarship: "Paga de contado"
+    payment_time: "Y obtén un descuento"
+    price: "4.500 €*"
+    bullets:
+      - "Paga con trasnferencia bancaria, tarjeta de crédito o débito, Paypal, Bitcoin o Ethereum"
+      - "*Descuento de hasta 1.800 €. Desde 4.500 € en vez de 6.300 €"     
+    icons: 
+      - "/images/visa-mastercard.png"    
+      - "/images/bitcoin_logo.png"  
+      - "/images/ethereum.png"    
+                       
+  - slug: 'spain-isa-fs-ft'
+    academies: ['barcelona-spain','madrid-spain', 'malaga-spain', 'valencia-spain']
+    recomended: true
+    scholarship: "Acuerdo de Ingresos Comparsidos (ISA)"
+    payment_time: "Paga sólo cuando trabajes"
+    price: "0 €*"
+    bullets: 
+      - "Solo tendrás que pagar cuando tus ingresos sean superiores a 16.000 € al año"
+      - "*Paga una pequeña parte de tu salario cuando encuentres trabajo"
+    icons: 
+      - "/images/bcas.png"   
+
+  - slug: 'chile-contado-fs-ft'
+    academies: ['santiago-chile']
+    recomended: true
+    scholarship: "Paga al contado"
+    payment_time: "Y obtén un descuento"
+    price: "2.760.000 CLP"
+    bullets:
+      - "Paga con transferencia bancaria, tarjeta de crédito o débito"    
+    icons: 
+      - "/images/visa-mastercard.png"    
+
+  - slug: 'chile-fs-ft'
+    academies: ['santiago-chile']
+    recomended: false
+    scholarship: "Cuotas desde"
+    payment_time: ""
+    price: "~135.240 CLP"
+    bullets:
+      - "Financimiento a tu medida, con o sin intereses, desde 6 hasta 18 meses"  
+      - "Se paga matrícula " 
+    icons: 
+      - "/images/flevo.png"
+                       
+  - slug: 'chile-isa-fs-ft'
+    academies: ['santiago-chile']
+    recomended: false
+    scholarship: "Acuerdo de Ingresos Compartidos (ISA)"
+    payment_time: ""
+    price: "0 CLP*"
+    bullets: 
+      - "*Pagas el 16% de tu salario cuando consigas empleo hasta pagarlo todo"
+      - "Sólo si consigues trabajo en el área de técnología" 
+    icons: 
+
 part_time:
-  - slug: 'plan-1'
+  - slug: 'usa-clark-scholarship-pt'
     academies: ['downtown-miami', 'orlando']
     recomended: true
     scholarship: "Scolarship"
@@ -64,7 +131,7 @@ part_time:
       - "9% of your salary until paid in full, only if you get a job in tech."
     icons: 
       - "/images/landing/uwm_pantone_2021_2.png"
-  - slug: 'plan-2'
+  - slug: 'usa-financed-pt'
     academies: ['downtown-miami', 'orlando']
     recomended: false
     scholarship: "Financed"
@@ -77,7 +144,8 @@ part_time:
       - "/images/ascent_logo.jpg"
       - "/images/climb-logo.png"
       - "/images/quotanda-logo.png"
-  - slug: 'plan-3'
+
+  - slug: 'usa-isa-pt'
     academies: ['downtown-miami', 'orlando']
     recomended: false
     scholarship: "Income Share Agreement"
@@ -90,7 +158,7 @@ part_time:
       - "/images/ascent_logo.jpg"
       - "/images/climb-logo.png"
       - "/images/quotanda-logo.png"
-  - slug: 'plan-4'
+  - slug: 'usa-upfront-pt'
     recomended: false
     academies: ['downtown-miami', 'orlando']
     scholarship: "Full Payment"
@@ -98,3 +166,197 @@ part_time:
     price: "$8099"
     bullets: 
       - "You're saving $1000 USD"
+
+  - slug: 'spain-scholarships-fs-pt'
+    academies: ['barcelona-spain', 'madrid-spain', 'malaga-spain', 'valencia-spain']
+    recomended: true
+    scholarship: "Becas disponibles"
+    payment_time: ""
+    price: "~175 € al mes"
+    bullets:
+      - "Financiación a tu medida, con o sin intereses, desde 4 hasta 30 meses"
+      - "Becas disponibles de hasta 1.600 €. Desde 4.700 € en vez de 6.300 €"     
+    icons: 
+      - "/images/zank.png"
+      - "/images/sequra.png"
+      - "/images/nemuru.png"
+      - "/images/quotanda-logo.png"
+
+  - slug: 'spain-upfront-fs-pt'
+    academies: ['barcelona-spain', 'madrid-spain', 'malaga-spain', 'valencia-spain']
+    recomended: false
+    scholarship: "Paga de contado"
+    payment_time: "Y obtén un descuento"
+    price: "4.500 €*"
+    bullets:
+      - "Paga con transferencia bancaria, tarjeta de crédito o débito, Paypal, Bitcoin o Ethereum"
+      - "*Descuento de hasta 1.800 €. Desde 4.500 € en vez de 6.300 €"     
+    icons: 
+      - "/images/visa-mastercard.png"    
+      - "/images/bitcoin_logo.png"  
+      - "/images/ethereum.png"    
+
+  - slug: 'spain-isa-fs-pt'
+    academies: ['barcelona-spain', 'madrid-spain', 'malaga-spain', 'valencia-spain']
+    recomended: true
+    scholarship: "Acuerdo de Ingresos Compartidos (ISA)"
+    payment_time: "Paga sólo cuando trabajes"
+    price: "0 €*"
+    bullets: 
+      - "Solo tendrás que pagar cuando tus ingresos sean superiores a 16.000 € al año"
+      - "*Paga una pequeña parte de tu salario cuando encuentres trabajo"
+    icons: 
+      - "/images/bcas.png" 
+
+  - slug: 'north-europe-scholarships-fs-pt'
+    academies: ['berlin-germany','dublin-ireland', 'europe','hamburg-germany','munich-germany']
+    recomended: true
+    scholarship: "Becas disponibles"
+    payment_time: ""
+    price: "~175 € al mes"
+    bullets:
+      - "Financiación a tu medida, con o sin intereses, desde 4 hasta 30 meses"
+      - "Becas disponibles de hasta 1.600 €. Desde 4.700 € en vez de 6.300 €"      
+    icons: 
+      - "/images/quotanda-logo.png"
+
+  - slug: 'north-europe-upfront-fs-pt'
+    academies: ['berlin-germany','dublin-ireland', 'europe','hamburg-germany','munich-germany']
+    recomended: false
+    scholarship: "Paga de contado"
+    payment_time: "Y obtén un descuento"
+    price: "4.600 €*"
+    bullets:
+      - "Paga con trasnferencia bancaria, tarjeta de crédito o débito, Paypal, Bitcoin o Ethereum"
+      - "*Descuento de hasta 1.700 €. Desde 4.600 € en vez de 6.300 €"     
+    icons: 
+      - "/images/visa-mastercard.png"    
+      - "/images/bitcoin_logo.png"  
+      - "/images/ethereum.png"    
+                       
+  - slug: 'north-europe-isa-fs-pt'
+    academies: ['berlin-germany','dublin-ireland', 'europe','hamburg-germany', 'munich-germany']
+    recomended: true
+    scholarship: "Acuerdo de Ingresos Comparsidos (ISA)"
+    payment_time: "Paga sólo cuando trabajes"
+    price: "0 €*"
+    bullets: 
+      - "Solo tendrás que pagar cuando tus ingresos sean superiores a 22.000 € al año"
+      - "*Paga una pequeña parte de tu salario cuando encuentres trabajo"
+    icons: 
+      - "/images/stepex.png"     
+
+  - slug: 'south-europe-scholarships-fs-pt'
+    academies: ['lisbon-portugal','milan-italy','rome-italy']
+    recomended: true
+    scholarship: "Becas disponibles"
+    payment_time: ""
+    price: "~150 € al mes"
+    bullets:
+      - "Financiación a tu medida, con o sin intereses, desde 4 hasta 30 meses"
+      - "Becas disponibles de hasta 2.300 €. Desde 4.000 € en vez de 6.300 €"     
+    icons: 
+      - "/images/quotanda-logo.png"
+
+  - slug: 'south-europe-upfront-fs-pt'
+    academies: ['lisbon-portugal','milan-italy','rome-italy']
+    recomended: false
+    scholarship: "Paga de contado"
+    payment_time: "Y obtén un descuento"
+    price: "3.850 €*"
+    bullets:
+      - "Paga con trasnferencia bancaria, tarjeta de crédito o débito, Paypal, Bitcoin o Ethereum"
+      - "*Descuento de hasta 2.450 €. Desde 3.850 € en vez de 6.300 €"
+    icons: 
+      - "/images/visa-mastercard.png"    
+      - "/images/bitcoin_logo.png"  
+      - "/images/ethereum.png"
+
+  - slug: 'south-europe-isa-fs-pt'
+    academies: ['lisbon-portugal','milan-italy','rome-italy']
+    recomended: true
+    scholarship: "Acuerdo de Ingresos Comparsidos (ISA)"
+    payment_time: "Paga sólo cuando trabajes"
+    price: "0 €*"
+    bullets: 
+      - "Solo tendrás que pagar cuando tus ingresos sean superiores a 16.000 € al año"
+      - "*Paga una pequeña parte de tu salario cuando encuentres trabajo"
+    icons: 
+      - "/images/stepex.png"     
+
+  - slug: 'chile-contado-fs-pt'
+    academies: ['santiago-chile']
+    recomended: true
+    scholarship: "Paga al contado"
+    payment_time: "Y obtén un descuento"
+    price: "2.415.000 CLP*"
+    bullets:
+      - "Paga con transferencia bancaria, tarjeta de crédito o débito"    
+      - "*Precio sin descuento aplicado"
+    icons: 
+      - "/images/visa-mastercard.png"   
+
+  - slug: 'chile-fs-pt'
+    academies: ['santiago-chile']
+    recomended: false
+    scholarship: "Cuotas desde"
+    payment_time: ""
+    price: "~118.335 CLP"
+    bullets:
+      - "Financiamiento a tu medida, con o sin intereses, desde 6 hasta 18 meses"  
+      - "Se paga matrícula" 
+    icons: 
+      - "/images/flevo.png"
+
+  - slug: 'chile-fraccionado-fs-pt'
+    academies: ['santiago-chile']
+    recomended: false
+    scholarship: "Pago fraccionado"
+    payment_time: "Sin interés"
+    price: "2.415.000 CLP"
+    bullets:
+      - "Paga con transferencia bancaria" 
+      - "Hasta 3 cuotas"   
+    icons: 
+
+  - slug: 'latam-trabajo-garantizado-fs-pt'
+    academies: ['montevideo-uruguay','bogota-colombia', 'costa-rica', 'mexicocity-mexico','quito-ecuador', 'panamacity-panama', 'buenosaires-argentina','lima-peru','lapaz-bolivia']
+    recomended: true
+    scholarship: "Trabajo Garantizado"
+    payment_time: "Como ningún otro Bootcampm en Latam"
+    price: "USD $4000"
+    bullets:
+      - "Planes de pago disponibles de hasta 24 meses"
+      - "Conseguirás trabajo dentro de los siguientes 6 meses después de Graduarte."     
+      - "Sigue nuestro proceso y obtendros un trabajo o recibe tu dinero de vuelta."     
+    icons: 
+      - "/images/quotanda-logo.png"
+
+  - slug: 'latam-upfront-fs-pt'
+    academies: ['montevideo-uruguay','bogota-colombia', 'costa-rica', 'mexicocity-mexico','quito-ecuador', 'panamacity-panama', 'buenosaires-argentina','lima-peru','lapaz-bolivia']
+    recomended: false
+    scholarship: "Paga de contado"
+    payment_time: "Y obtén un mejor precio"
+    price: "USD $3000"
+    bullets:
+      - "Paga con transferencia bancaria, tarjeta de crédito o débito, Paypal, Bitcoin o Ethereum"
+      - "Tendrás acceso a todo el programa y a todo el Sistema de Career Support de 4Geeks"     
+    icons: 
+      - "/images/visa-mastercard.png"    
+      - "/images/bitcoin_logo.png"  
+      - "/images/ethereum.png"    
+
+  - slug: 'latam-solo-programa-pt'
+    academies: ['montevideo-uruguay','bogota-colombia', 'costa-rica', 'mexicocity-mexico','quito-ecuador', 'panamacity-panama', 'buenosaires-argentina','lima-peru','lapaz-bolivia']
+    recomended: true
+    scholarship: "Programa Full-Stack Solamente"
+    payment_time: "Enfocate en obtener habilidades"
+    price: "USD $2000"
+    bullets: 
+      - "Tendrás acceso total y para siempre al programa Full-stack."
+      - "Puedes aplicar planes de pago de 12 o 24 meses."
+    icons: 
+      - "/images/bcas.png" 
+
+
+ 

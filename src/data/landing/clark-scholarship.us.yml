@@ -1,5 +1,5 @@
 meta_info:
-  slug: summer-discount # <--- URL 4geeksacademy.com/us/landing/example
+  slug: clark-scholarship # <--- URL 4geeksacademy.com/us/landing/example
 
   # This will show on social media when shared
   title: "Get a Scholarship and join our software development program now. It's LIVE, on-line (or in-person if you want as well). Learn to code and launch your career in Tech"
@@ -178,7 +178,7 @@ who_is_hiring:
   position: 9
   limit: 4
   heading: "Who is hiring our students?"
-  sub_heading: "500+ hiring partners, and 50+ job openings right now for software development"
+  sub_heading: "550+ hiring partners, and 50+ job openings right now for software development"
 
 # alumni_projects:
 #  position: 10
