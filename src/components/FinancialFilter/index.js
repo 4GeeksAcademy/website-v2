@@ -57,12 +57,12 @@ const courseArray = [
     label: "Full Stack Developer",
   },
   {
-    value: "software_engineering",
-    label: "Software Engineering",
+    value: "blockchain",
+    label: "Blockchain",
   },
   {
-    value: "machine_learning",
-    label: "Machine Learning",
+    value: "datascience-ml",
+    label: "Data Science ML",
   },
 ];
 const modalityArray = [
@@ -145,7 +145,7 @@ const FinancialFilter = (props) => {
     return data.allPlansYaml.edges
       .filter(({ node }) => node.fields.lang === props.lang)
       .find((p) =>
-        p.node.fields.file_name.includes(course?.value.replaceAll("_", "-"))
+        p.node.fields.file_name.includes(course?.value?.replaceAll("_", "-"))
       )?.node[modality?.value];
   };
 
@@ -169,15 +169,19 @@ const FinancialFilter = (props) => {
   }, [session, props.locations]);
 
   useEffect(() => {
-    modality && course && currentLocation
-      ? setPrices(
-          getCurrentPlans().filter((plan) =>
-            plan.academies.includes(
-              currentLocation.fields.file_name.slice(0, -3)
-            )
+    const currentPlans = getCurrentPlans();
+    if(modality && course && currentLocation && currentPlans){
+      setPrices(
+        currentPlans.filter((plan) =>
+          plan.academies.includes(
+            currentLocation.fields.file_name.slice(0, -3)
           )
         )
-      : console.log("modality", modality);
+      )
+    } else {
+      setPrices(null);
+      console.log("modality", modality);
+    }
   }, [modality, course, currentLocation]);
 
   if (!currentLocation)
@@ -215,6 +219,8 @@ const FinancialFilter = (props) => {
         <Grid
           gridTemplateColumns_tablet="repeat(3, 1fr)"
           display="inline-flex"
+          width="200px"
+          width_tablet="auto"
           gridGap_tablet="20px"
           gridGap="8px"
           justifySelf="center"
