@@ -170,14 +170,12 @@ const FinancialFilter = (props) => {
 
   useEffect(() => {
     const currentPlans = getCurrentPlans();
-    if(modality && course && currentLocation && currentPlans){
+    if (modality && course && currentLocation && currentPlans) {
       setPrices(
         currentPlans.filter((plan) =>
-          plan.academies.includes(
-            currentLocation.fields.file_name.slice(0, -3)
-          )
+          plan.academies.includes(currentLocation.fields.file_name.slice(0, -3))
         )
-      )
+      );
     } else {
       setPrices(null);
       console.log("modality", modality);
