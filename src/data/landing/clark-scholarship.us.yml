@@ -39,8 +39,7 @@ apply_schollarship: # form that is displayed at the end of the landing
 # jumbotron on the top (cannot be commented out)
 header_data:
   background: "#FFF1D1"
-  tagline: Learn to code and get a $4,000 Scholarship. 
-  sub_heading: "YES! $4k off and your coding program for less than $6k"
+  tagline: Learn to code and get a $4,000 Scholarship 
   badge: "../../../static/images/badges/switchup.png"
   image_filter: brightness(0.3)
 
@@ -50,8 +49,7 @@ features:
   #                                         up   left down  right
   styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
   bullets:
-   - The average Coding Program in USA is ~15k
-   - Get a Job in Tech. Make more tha 60k a year! 
+   - Pay less than $6k and get a Job paying more than 60k a year! 
    - No previous experience or coding skills required.
    - Part-time focused. No need to stop your life.
    - Enrollment Open. Only less than 85 seats remaining. Available Nationwide
@@ -127,14 +125,14 @@ iconogram:
     title: Learn to Code
 
 
-How it works:
+how_it_works:
   position: 4
   background: "veryLightBlue2"
   layout: two_column_right
   proportions: [6, 6]
   image:
     style: '{ "backgroundSize": "contain" }'
-    src: "/static/images/landing/_CU_Horiz_Red_LG.png"
+    src: "../../../static/images/landing/_CU_Horiz_Red_LG.png"
   heading:
     text: "How it works"
     font_size: ["30px", "30px", "30px", "30px", "30px"]
