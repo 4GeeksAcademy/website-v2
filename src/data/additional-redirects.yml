@@ -20,40 +20,70 @@ redirects:
     #redirectInBrowser: true
     isPermanent: true # if permanent google will erase the original url from its results
     
-  - fromPath: "https://4geeksacademy.com/us/trends-and-tech/truth-behind-part-time-education"
-    toPath: "https://4geeksacademy.com/us/coding-bootcamp/truth-behind-part-time-education"
+  - fromPath: "/us/trends-and-tech/truth-behind-part-time-education"
+    toPath: "/us/coding-bootcamp/truth-behind-part-time-education"
     #redirectInBrowser: true
     isPermanent: true # if permanent google will erase the original url from its results
 
-  - fromPath: "https://4geeksacademy.com/us/learn-to-code/turnaround-education-traditions-4geeks-academy"
-    toPath: "https://4geeksacademy.com/us/trends-and-tech/turnaround-education-traditions-4geeks-academy"
+  - fromPath: "/us/learn-to-code/turnaround-education-traditions-4geeks-academy"
+    toPath: "/us/trends-and-tech/turnaround-education-traditions-4geeks-academy"
     #redirectInBrowser: true
     isPermanent: true # if permanent google will erase the original url from its results
     
+  - fromPath: "/us/coding-bootcamps/pay-tuition-4geeks"
+    toPath: "/us/trends-and-tech/pay-tuition-4geeks"
+    #redirectInBrowser: true
+    isPermanent: true # if permanent google will erase the original url from its results 
+    
+  - fromPath: "/us/coding-bootcamps/choosing-coding-bootcamp"
+    toPath: "/us/trends-and-tech/choosing-coding-bootcamp"
+    #redirectInBrowser: true
+    isPermanent: true # if permanent google will erase the original url from its results  
+    
+  - fromPath: "/us/coding-bootcamps/web-salaries-2017-coding-bootcamp"
+    toPath: "/us/full-stack-developer/web-salaries-2017-coding-bootcamp"
+    #redirectInBrowser: true
+    isPermanent: true # if permanent google will erase the original url from its results 
+    
+  - fromPath: "/us/coding-bootcamps/part-time-bootcamps"
+    toPath: "/us/coding-bootcamp/part-time-bootcamps"
+    #redirectInBrowser: true
+    isPermanent: true # if permanent google will erase the original url from its results 
+    
+  - fromPath: "/us/coding-bootcamps/coding-bootcamp-syllabus-matters"
+    toPath: "/us/trends-and-tech/coding-bootcamp-syllabus-matters"
+    #redirectInBrowser: true
+    isPermanent: true # if permanent google will erase the original url from its results 
+    
+  - fromPath: "/us/coding-bootcamps/wyncode-ironhack-and-4geeks-academy-comparison"
+    toPath: "/us/trends-and-tech/wyncode-ironhack-and-4geeks-academy-comparison"
+    #redirectInBrowser: true
+    isPermanent: true # if permanent google will erase the original url from its results 
+    
+  - fromPath: "/us/software-engineer-salary/todo-lo-que-necesitas-saber-sobre-inteligencia-artificial"
+    toPath: "/es/software-engineer-salary/todo-lo-que-necesitas-saber-sobre-inteligencia-artificial"
+    #redirectInBrowser: true
+    isPermanent: true # if permanent google will erase the original url from its results 
+    
+  - fromPath: "/us/coding-bootcamps/why-we-teach-python-4geeks"
+    toPath: "/us/python-bootcamp/why-we-teach-python-4geeks"
+    #redirectInBrowser: true
+    isPermanent: true # if permanent google will erase the original url from its results 
+    
+  - fromPath: "/us/learn-to-code/rip-ruby-on-rails"
+    toPath: "/us/trends-and-tech/rip-ruby-on-rails"
+    #redirectInBrowser: true
+    isPermanent: true # if permanent google will erase the original url from its results 
+    
+  - fromPath: "/us/learn-to-code/feelings-learning-coding"
+    toPath: "/us/trends-and-tech/feelings-learning-coding"
+    #redirectInBrowser: true
+    isPermanent: true # if permanent google will erase the original url from its results 
+        
   - fromPath: "https://4geeksacademy.com/static/images/blog/statista.png"
     toPath: "https://4geeksacademy.com/"
     #redirectInBrowser: true
     isPermanent: true # if permanent google will erase the original url from its results
-    
-  - fromPath: "https://4geeksacademy.com/us/coding-bootcamps/pay-tuition-4geeks"
-    toPath: "https://4geeksacademy.com/us/trends-and-tech/pay-tuition-4geeks"
-    #redirectInBrowser: true
-    isPermanent: true # if permanent google will erase the original url from its results 
-    
-  - fromPath: "https://4geeksacademy.com/us/coding-bootcamps/choosing-coding-bootcamp"
-    toPath: "https://4geeksacademy.com/us/trends-and-tech/choosing-coding-bootcamp"
-    #redirectInBrowser: true
-    isPermanent: true # if permanent google will erase the original url from its results  
-    
-  - fromPath: "https://4geeksacademy.com/us/coding-bootcamps/web-salaries-2017-coding-bootcamp"
-    toPath: "https://4geeksacademy.com/us/full-stack-developer/web-salaries-2017-coding-bootcamp"
-    #redirectInBrowser: true
-    isPermanent: true # if permanent google will erase the original url from its results 
-    
-  - fromPath: "https://4geeksacademy.com/us/coding-bootcamps/part-time-bootcamps"
-    toPath: "https://4geeksacademy.com/us/coding-bootcamp/part-time-bootcamps"
-    #redirectInBrowser: true
-    isPermanent: true # if permanent google will erase the original url from its results 
     
   - fromPath: "https://4geeksacademy.com/static/images/blog/coding-games.jpg"
     toPath: "https://4geeksacademy.com/"
@@ -65,18 +95,8 @@ redirects:
     #redirectInBrowser: true
     isPermanent: true # if permanent google will erase the original url from its results 
     
-  - fromPath: "https://4geeksacademy.com/us/coding-bootcamps/coding-bootcamp-syllabus-matters"
-    toPath: "https://4geeksacademy.com/us/trends-and-tech/coding-bootcamp-syllabus-matters"
-    #redirectInBrowser: true
-    isPermanent: true # if permanent google will erase the original url from its results 
-    
   - fromPath: "https://4geeksacademy.com/static/images/blog/CSS-game.png"
     toPath: "https://4geeksacademy.com/"
-    #redirectInBrowser: true
-    isPermanent: true # if permanent google will erase the original url from its results 
-    
-  - fromPath: "https://4geeksacademy.com/us/coding-bootcamps/wyncode-ironhack-and-4geeks-academy-comparison"
-    toPath: "https://4geeksacademy.com/us/trends-and-tech/wyncode-ironhack-and-4geeks-academy-comparison"
     #redirectInBrowser: true
     isPermanent: true # if permanent google will erase the original url from its results 
     
@@ -99,24 +119,3 @@ redirects:
     toPath: "https://4geeksacademy.com/"
     #redirectInBrowser: true
     isPermanent: true # if permanent google will erase the original url from its results 
-    
-  - fromPath: "https://4geeksacademy.com/us/software-engineer-salary/todo-lo-que-necesitas-saber-sobre-inteligencia-artificial"
-    toPath: "https://4geeksacademy.com/es/software-engineer-salary/todo-lo-que-necesitas-saber-sobre-inteligencia-artificial"
-    #redirectInBrowser: true
-    isPermanent: true # if permanent google will erase the original url from its results 
-    
-  - fromPath: "https://4geeksacademy.com/us/coding-bootcamps/why-we-teach-python-4geeks"
-    toPath: "https://4geeksacademy.com/us/python-bootcamp/why-we-teach-python-4geeks"
-    #redirectInBrowser: true
-    isPermanent: true # if permanent google will erase the original url from its results 
-    
-  - fromPath: "https://4geeksacademy.com/us/learn-to-code/rip-ruby-on-rails"
-    toPath: "https://4geeksacademy.com/us/trends-and-tech/rip-ruby-on-rails"
-    #redirectInBrowser: true
-    isPermanent: true # if permanent google will erase the original url from its results 
-    
-  - fromPath: "https://4geeksacademy.com/us/learn-to-code/feelings-learning-coding"
-    toPath: "https://4geeksacademy.com/us/trends-and-tech/feelings-learning-coding"
-    #redirectInBrowser: true
-    isPermanent: true # if permanent google will erase the original url from its results 
-    
