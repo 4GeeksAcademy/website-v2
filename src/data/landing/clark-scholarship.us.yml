@@ -157,7 +157,7 @@ who_is_hiring:
 #  sub_heading: "Take a look at our previous student projects"
 
 components:
-  - name: how_it_works:
+  - name: how_it_works
     position: 4
     background: "veryLightBlue2"
     layout: two_column_right
