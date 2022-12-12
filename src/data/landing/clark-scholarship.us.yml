@@ -127,7 +127,7 @@ iconogram:
     title: Learn to Code
 
 
-How it works:
+how_it_works:
   position: 4
   background: "veryLightBlue2"
   layout: two_column_right
