@@ -179,6 +179,7 @@ export const Div = styled.div`
   transform: ${(props) => props.transform};
   z-index: ${(props) => props.zIndex};
   place-items: ${(props) => props.placeItems};
+  font-size: ${(props) => props.fontSize};
   &:after {
     content: ${(props) => props.contentAfter};
     display: ${(props) => props.displayAfter || "block"};
@@ -348,6 +349,7 @@ export const Grid = styled(Div)`
   overflow: ${(props) => props.overflow};
   display: ${(props) => props.display || "grid"};
   direction: ${(props) => props.direction};
+  width: ${(props) => props.width};
 
   grid-template-columns: ${(props) =>
     props.gridTemplateColumns
@@ -381,6 +383,7 @@ export const Grid = styled(Div)`
     margin: ${(props) => props.margin_tablet};
     border-radius: ${(props) => props.borderRadius_tablet};
     display: ${(props) => props.display_tablet || "grid"};
+    width: ${(props) => props.width_tablet};
     grid-template-columns: ${(props) =>
       props.gridTemplateColumns_tablet
         ? `${props.gridTemplateColumns_tablet}`
@@ -595,6 +598,8 @@ export const GridContainer = ({
   gridTemplateRows_tablet,
   height,
   height_tablet,
+  minHeight,
+  minHeight_tablet,
   columns,
   columns_tablet,
   margin,
@@ -639,6 +644,8 @@ export const GridContainer = ({
       borderTop={borderTop}
       height={height}
       height_tablet={height_tablet}
+      minHeight={minHeight}
+      minHeight_tablet={minHeight_tablet}
       margin={margin}
       margin_tablet={margin_tablet}
       margin_xs={margin_xs}

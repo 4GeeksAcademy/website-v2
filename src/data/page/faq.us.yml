@@ -43,7 +43,7 @@ faq:
           "Once you start the admissions process, you will receive and email from one of our student counselors. We will guide you through the whole process. Simply reply to our email and we will set up a call at your convenience. After the phone call, you will be invited to an interview online or personal. 
           If you wish you can visit our campus to get to know the team and the location. During the meeting you will be able to let us know why you want to become a developer."
       - question: "¿Do I need to have my own laptop?"
-        answer: "The simple and quick answer is YES! You will need to bring your computer to class, we don’t require a specific operating system because the classes and exercises are uploaded to the cloud."
+        answer: "The simple and quick answer is YES! You will need to bring your computer to class, we don't require a specific operating system because the classes and exercises are uploaded to the cloud."
       - question: "How do I pay for my tuition?"
         answer: |-
           "You have several options, our prices vary depending on the country you are locating, nonetheless there are no other fees or hidden charges. 
@@ -58,7 +58,7 @@ faq:
 
   - topic: "Frequently Asked Questions about Programs"
     questions:
-      - question: "¿How many hours do I need to have available?"
+      - question: "How many hours do I need to have available?"
         answer: |-
           "In order to become the best software developer possible you will have to commit a certain number of hours, there is no other way, in our Part-Time program you will have classes 3 hours a day, 3 times a week, and you will need to dedicate about 20-24 hours to study. On the other hand, if you are taking our Full-Time program, it will be 8 hour classes each day and if you dedicate about 48 hours to study a week it will be enough."
       - question: |
@@ -71,7 +71,7 @@ faq:
           Talent Tree - The curriculum charts 44 skills in which students earn points for each skill learned in a playful way."
       - question: "Why 'Full-time'? How does it work?"
         answer: |-
-          "We also offer Full-Time, we understand that if you are looking for a full-time program it’s because you don’t have to quit your job and that instead of slowing down your career it's actually boosting it!.
+          "We also offer Full-Time, we understand that if you are looking for a full-time program it's because you don't have to quit your job and that instead of slowing down your career it's actually boosting it!.
           This methodology, apart from being immersive, has a combination of 4 pillars: 
           Flipped Classroom: The theory is taught through videos, animation, images, and infographics. Class time is used to discuss, create and build projects, and to be mentored to solve many practical exercises.
           One on one mentorships:each student has the opportunity to have private conversations with a lead mentor on a regular basis. 
@@ -115,10 +115,10 @@ faq:
           <a class="faq-link" href="/us/trends-and-tech/dont-teach-nodejs-full-stack-development-program">Here</a> you can find a great argument as to why we are not teaching Node JS.
       - question: "Do I need to have previous experience in programming to join the bootcamp?"
         answer: |-
-          "No. You just need to want to learn. Coding must exist in some part of your body and we will find it! If you already know how to open your browser and check facebook then we’ll be fine!"
+          "No. You just need to want to learn. Coding must exist in some part of your body and we will find it! If you already know how to open your browser and check facebook then we'll be fine!"
       - question: "Do I graduate as a 'Senior Developer?'"
         answer: |
-          No. Please, don’t run before you learn how to walk. Coding is just like life, if you are good at it you will learn faster, but you will not learn instantly.You will get the experience to see all the details once you have mastered the art. Taking our Full-Stack program means that your life will have a new skill, but you will also develop a brand new way of thinking. You will graduate as a Junior Developer bur as a REALLY GOOD "Junior Developer", not just another one in the bunch.
+          No. Please, don't run before you learn how to walk. Coding is just like life, if you are good at it you will learn faster, but you will not learn instantly.You will get the experience to see all the details once you have mastered the art. Taking our Full-Stack program means that your life will have a new skill, but you will also develop a brand new way of thinking. You will graduate as a Junior Developer bur as a REALLY GOOD "Junior Developer", not just another one in the bunch.
       - question: "What is the market like for companies seeking developers?"
         answer: |-
           "Taking into account estimations made by the IDB between 2020 and 2025 there will be a need for 10.5million professionals in the tech industry around the world. At the moment there are more than 1.4 millions job openings for programming in the US and this number is expected to increase by 2021; in Spain, during the pandemic, 1.500 job openings were created from programming in only one of the job search platforms, on the other hand in Latin America they will need around 1.2million tech professional to help reduce the gap. Therefore, the market for companies seeking to hire programmers is going to continue to grow at a rapid pace in order to keep up with the large demand."

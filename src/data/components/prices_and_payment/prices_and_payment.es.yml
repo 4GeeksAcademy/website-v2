@@ -7,7 +7,7 @@ select: Selecciona el plan que mejor se ajusta a ti
 apply_button: 
   label: APLICAR
   link: /es/aplica
-not_available: Programa no disponible
+not_available: '<p>No se ha encontrado information de pago para este programa en este país.</p> Para conocer más le invitamos a aplicar al programa y sera contactado por uno de nuestros asesores vocacionales o <a class="faq-link" href="/es/contactanos" rel="noopener noreferrer nofollow">envíenos un mensaje.</a>'
 chart_section:
   title: '4Geeks: Cuando pagar deja de ser una preocupación'
   legend:

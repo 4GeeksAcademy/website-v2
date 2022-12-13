@@ -38,7 +38,7 @@ const Program = ({ data, pageContext, yml }) => {
   const geek = data.allCourseYaml.edges[0].node;
   const [open, setOpen] = React.useState(false);
 
-  const course_type = "machine_learning";
+  const course_type = "datascience-ml";
   const program_type = yml.meta_info.slug.includes("full-time")
     ? "full_time"
     : "part_time";
@@ -552,10 +552,6 @@ export const query = graphql`
           badges {
             paragraph
           }
-          credentials {
-            heading
-            paragraph
-          }
           details {
             about {
               title
@@ -592,25 +588,6 @@ export const query = graphql`
           syllabus {
             heading
             button_label
-          }
-          teacher {
-            picture {
-              childImageSharp {
-                gatsbyImageData(
-                  layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                  width: 500
-                  placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
-                )
-
-                # fluid(maxWidth: 500){
-                #   ...GatsbyImageSharpFluid_withWebp
-                # }
-              }
-            }
-            greeting
-            linkedin
-            full_name
-            bio
           }
           potential_companies {
             tagline
@@ -866,12 +843,11 @@ export const query = graphql`
           city
           country
           name
-          hasFinancialsOption
-          financials_max_months
           active_campaign_location_slug
           breathecode_location_slug
           fields {
             lang
+            file_name
           }
           button {
             apply_button_text
@@ -896,97 +872,6 @@ export const query = graphql`
                   width: 800
                   placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                 )
-              }
-            }
-          }
-
-          prices {
-            machine_learning {
-              part_time {
-                plans {
-                  slug
-                  recomended
-                  scholarship
-                  payment_time
-                  price
-                  bullets
-                  icons
-                }
-                slug
-                duration
-                left_section {
-                  header {
-                    heading_one
-                    sub_heading
-                    heading_two
-                  }
-                  content {
-                    price
-                    price_info
-                  }
-                  button {
-                    button_text
-                  }
-                }
-                center_section {
-                  header {
-                    heading_two
-                    sub_heading
-                    heading_one
-                  }
-                  plans {
-                    months
-                    monthsInfo
-                    payment
-                    paymentInfo
-                    provider
-                    logo
-                    message
-                  }
-                  button {
-                    button_text
-                  }
-                }
-                right_section {
-                  button {
-                    button_text
-                  }
-                  content {
-                    price
-                    price_info
-                  }
-                  header {
-                    heading_one
-                    sub_heading
-                    heading_two
-                  }
-                }
-              }
-              full_time {
-                plans {
-                  slug
-                  recomended
-                  scholarship
-                  payment_time
-                  price
-                  bullets
-                  icons
-                }
-                slug
-                left_section {
-                  header {
-                    heading_one
-                    sub_heading
-                    heading_two
-                  }
-                  content {
-                    price
-                    price_info
-                  }
-                  button {
-                    button_text
-                  }
-                }
               }
             }
           }
