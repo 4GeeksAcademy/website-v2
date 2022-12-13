@@ -43,6 +43,8 @@ const isBrowser = typeof window !== "undefined";
 const Apply = (props) => {
   console.error("process.env.GOOGLE_CAPTCHA_KEY");
   console.error(process.env.GOOGLE_CAPTCHA_KEY);
+  console.error("process.env.GATSBY_BLOG_ACADEMY_ID");
+  console.error(process.env.GATSBY_BLOG_ACADEMY_ID);
   if (isBrowser) {
     window.captchakey = process.env.GOOGLE_CAPTCHA_KEY;
     localStorage.setItem("GOOGLE_CAPTCHA_KEY", process.env.GOOGLE_CAPTCHA_KEY);
