@@ -38,8 +38,6 @@ const formIsValid = (formData = null) => {
   return true;
 };
 
-const isBrowser = typeof window !== "undefined";
-
 const Apply = (props) => {
   const { data, pageContext, yml } = props;
   const { session, setSession } = useContext(SessionContext);
