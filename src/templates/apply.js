@@ -46,6 +46,7 @@ const Apply = (props) => {
   if (isBrowser) {
     window.captchakey = process.env.GOOGLE_CAPTCHA_KEY;
     localStorage.setItem("GOOGLE_CAPTCHA_KEY", process.env.GOOGLE_CAPTCHA_KEY);
+    localStorage.setItem("GATSBY_EDIT_MODE", process.env.GATSBY_EDIT_MODE);
   }
 
   const { data, pageContext, yml } = props;
