@@ -76,7 +76,7 @@ full_time:
   - slug: 'spain-isa-fs-ft'
     academies: ['barcelona-spain','madrid-spain', 'malaga-spain', 'valencia-spain']
     recomended: true
-    scholarship: "Acuerdo de Ingresos Comparsidos (ISA)"
+    scholarship: "Acuerdo de Ingresos Compartidos (ISA)"
     payment_time: "Paga sólo cuando trabajes"
     price: "0 €*"
     bullets: 
@@ -237,7 +237,7 @@ part_time:
   - slug: 'north-europe-isa-fs-pt'
     academies: ['berlin-germany','dublin-ireland', 'europe','hamburg-germany', 'munich-germany']
     recomended: true
-    scholarship: "Acuerdo de Ingresos Comparsidos (ISA)"
+    scholarship: "Acuerdo de Ingresos Compartidos (ISA)"
     payment_time: "Paga sólo cuando trabajes"
     price: "0 €*"
     bullets: 
@@ -275,7 +275,7 @@ part_time:
   - slug: 'south-europe-isa-fs-pt'
     academies: ['lisbon-portugal','milan-italy','rome-italy']
     recomended: true
-    scholarship: "Acuerdo de Ingresos Comparsidos (ISA)"
+    scholarship: "Acuerdo de Ingresos Compartidos (ISA)"
     payment_time: "Paga sólo cuando trabajes"
     price: "0 €*"
     bullets: 
