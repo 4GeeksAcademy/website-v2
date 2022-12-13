@@ -38,7 +38,7 @@ const formIsValid = (formData = null) => {
   return true;
 };
 
-const isBrowser = typeof window !== "undefined"
+const isBrowser = typeof window !== "undefined";
 
 const Apply = (props) => {
   if (isBrowser) {
