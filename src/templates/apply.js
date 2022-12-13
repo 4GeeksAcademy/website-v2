@@ -41,16 +41,6 @@ const formIsValid = (formData = null) => {
 const isBrowser = typeof window !== "undefined";
 
 const Apply = (props) => {
-  console.error("process.env.GATSBY_CAPTCHA_KEY");
-  console.error(process.env.GATSBY_CAPTCHA_KEY);
-  console.error("process.env.GATSBY_BLOG_ACADEMY_ID");
-  console.error(process.env.GATSBY_BLOG_ACADEMY_ID);
-  if (isBrowser) {
-    window.captchakey = process.env.GATSBY_CAPTCHA_KEY;
-    localStorage.setItem("GATSBY_CAPTCHA_KEY", process.env.GATSBY_CAPTCHA_KEY);
-    localStorage.setItem("GATSBY_EDIT_MODE", process.env.GATSBY_EDIT_MODE);
-  }
-
   const { data, pageContext, yml } = props;
   const { session, setSession } = useContext(SessionContext);
   const [formStatus, setFormStatus] = useState({
