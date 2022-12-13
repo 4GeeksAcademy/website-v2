@@ -178,6 +178,7 @@ export const Paragraph = styled.p`
   margin: ${(props) => props.margin || "0"};
   font-size: ${(props) => props.fontSize};
   flex-direction: ${(props) => props.flexDirection};
+  flex-shrink: ${(props) => props.flexShrink};
   font-family: ${(props) => props.fontFamily};
   font-weight: ${(props) =>
     props.isActive ? "bold" : props.fontWeight || "400"};
