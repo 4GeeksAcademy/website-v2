@@ -164,7 +164,7 @@ components:
     proportions: [6, 6]
     image:
       style: '{ "backgroundSize": "contain" }'
-      src: "../../../static/images/landing/_CU_Horiz_Red_LG.png"
+      src: "/images/landing/_CU_Horiz_Red_LG.png"
     heading:
       text: "How it works"
       font_size: ["30px", "30px", "30px", "30px", "30px"]
