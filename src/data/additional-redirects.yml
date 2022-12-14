@@ -79,42 +79,7 @@ redirects:
     toPath: "/us/trends-and-tech/feelings-learning-coding"
     #redirectInBrowser: true
     isPermanent: true # if permanent google will erase the original url from its results 
-        
-  - fromPath: "https://4geeksacademy.com/static/images/blog/statista.png"
-    toPath: "https://4geeksacademy.com/"
-    #redirectInBrowser: true
-    isPermanent: true # if permanent google will erase the original url from its results
-    
-  - fromPath: "https://4geeksacademy.com/static/images/blog/coding-games.jpg"
-    toPath: "https://4geeksacademy.com/"
-    #redirectInBrowser: true
-    isPermanent: true # if permanent google will erase the original url from its results 
-    
-  - fromPath: "https://4geeksacademy.com/static/images/blog/CSS.png"
-    toPath: "https://4geeksacademy.com/"
-    #redirectInBrowser: true
-    isPermanent: true # if permanent google will erase the original url from its results 
-    
-  - fromPath: "https://4geeksacademy.com/static/images/blog/CSS-game.png"
-    toPath: "https://4geeksacademy.com/"
-    #redirectInBrowser: true
-    isPermanent: true # if permanent google will erase the original url from its results 
-    
-  - fromPath: "https://4geeksacademy.com/static/images/blog/JavaScript.png"
-    toPath: "https://4geeksacademy.com/"
-    #redirectInBrowser: true
-    isPermanent: true # if permanent google will erase the original url from its results 
-    
-  - fromPath: "https://4geeksacademy.com/static/images/blog/coding.png"
-    toPath: "https://4geeksacademy.com/"
-    #redirectInBrowser: true
-    isPermanent: true # if permanent google will erase the original url from its results 
-    
-  - fromPath: "https://4geeksacademy.com/static/images/blog/SQL.png"
-    toPath: "https://4geeksacademy.com/"
-    #redirectInBrowser: true
-    isPermanent: true # if permanent google will erase the original url from its results 
-    
+           
   - fromPath: "https://4geeksacademy.com/us/trends-and-tech/4geeks-academy-history"
     toPath: "https://4geeksacademy.com/"
     #redirectInBrowser: true
