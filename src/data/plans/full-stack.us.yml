@@ -2,7 +2,7 @@ full_time:
   - slug: 'usa-clark-scholarship-ft'
     academies: ['downtown-miami', 'orlando','toronto-canada']
     recomended: true
-    scholarship: "Scolarship"
+    scholarship: "Scholarship"
     payment_time: "There is nothing like this"
     price: "$7999"
     bullets: 
