@@ -1,0 +1,15 @@
+meta_info:
+  slug: trends-and-tech-es
+  title: "Aplica a 4Geeks Academy Bootcamp"
+  visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
+  description: "Apca a uno de los mejores bootcamps de código del mundo, online o en una de nuestras sedes: Miami, Santiago de Chile, Madrid, Costa Rica, Maracaibo y Caracas"
+  image: "https://4geeks-academy-main.s3-us-west-2.amazonaws.com/PresentacionBienvenidaEstudiante1.jpg"
+  keywords: "Aplica a 4Geeks Academy Bootcamp"
+  redirects: []
+
+seo_title: "Trends and Technology"
+header:
+    title: Próximos programas y Eventos de 4GEEKS ACADEMY
+    paragraph: "Ajusta los filtros a los eventos de los cursos que más te interesan"
+    image: ""
+    image_alt: ""
