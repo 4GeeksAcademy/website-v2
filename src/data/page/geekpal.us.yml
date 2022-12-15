@@ -19,6 +19,8 @@ header:
   </ul>"
   image_logo: "/images/geekpal.png"
 
+seo_title: "Geekpal"
+
 # Introduction Video here
 geekPal:
   - videoId: "MBXqEnhodx0"
