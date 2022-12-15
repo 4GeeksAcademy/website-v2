@@ -97,6 +97,9 @@ details:
         - label: "Requisites"
           content: "No previous coding skills required, no advanced Math required, logical thinking recommended."
           icon: "contract-checked"
+        - label: "Language"
+          content: "4Geeks students can decide between English and Spanish to consume the syllabus and content. The master classes are taught in the language of the campus you choose."
+          icon: "contract-checked"
          
   heading: Program Details Part-Time
   weeks: 18
