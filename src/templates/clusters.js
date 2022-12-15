@@ -31,7 +31,9 @@ import BaseBlogRender from "./_baseBlogLayout";
 import Link from "gatsby-link";
 
 const Tags = ({ pageContext, data, yml }) => {
-  const cluster = data.allClusterYaml.edges.find((c) => c.node.meta_info.slug === pageContext.cluster)?.node;
+  const cluster = data.allClusterYaml.edges.find(
+    (c) => c.node.meta_info.slug === pageContext.cluster
+  )?.node;
   const { edges, totalCount } = data.allMarkdownRemark;
   function GetFormattedDate(date) {
     var d = new Date(date),
