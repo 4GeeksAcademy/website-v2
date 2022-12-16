@@ -20,6 +20,7 @@ import { Circle } from "../components/BackgroundDrawing";
 import Modal from "../components/Modal";
 import { SessionContext } from "../session";
 import LeadForm from "../components/LeadForm/index.js";
+import CarouselPartners from "../components/CarouselPartners";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 function rand() {
@@ -280,7 +281,7 @@ const Partners = (props) => {
                 >
                   <Div
                     flexDirection="column"
-                    alignSelf="center"
+                    // alignSelf="center"
                     alignSelf="flex-start"
                     padding="22px 10px 20px 0"
                   >

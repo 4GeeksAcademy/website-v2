@@ -12,7 +12,7 @@ meta_info:
 seo_title: "Bootcamp de Programación en Miami"
 header:
   tagline: "4Geeks Academy en Miami"
-  sub_header: "Todos los programas son enseñados"
+  sub_header: "Todos los programas son enseñados "
   sub_header_highlighted: "Online, Híbirda o En Persona."
   paragraph: ""
   image: "../../../static/images/locations/miami-home.png"
