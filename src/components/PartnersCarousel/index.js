@@ -19,12 +19,10 @@ const PartnerCard = ({ partner, linkText }) => {
       border="1px solid #7E8F9A"
       padding="10px"
     >
-      <H3 margin="0 0 5px 0">{partner.fist_name} {partner.last_name}</H3>
-      <H4
-        color={Colors.darkGray}
-        fontWeight="700"
-        margin="0 0 10px 0"
-      >
+      <H3 margin="0 0 5px 0">
+        {partner.fist_name} {partner.last_name}
+      </H3>
+      <H4 color={Colors.darkGray} fontWeight="700" margin="0 0 10px 0">
         {partner.sub_header}
       </H4>
       <Paragraph margin="0 0 10px 0" fontWeight="500" fontWeight_tablet="500">
@@ -43,11 +41,12 @@ const PartnerCard = ({ partner, linkText }) => {
         <Img
           src="/images/linkedin.png"
           onClick={() => {
-            if (partner.linkedin.indexOf("http") > -1) window.open(partner.linkedin);
+            if (partner.linkedin.indexOf("http") > -1)
+              window.open(partner.linkedin);
             else navigate(partner.linkedin);
           }}
           style={{
-            cursor: 'pointer'
+            cursor: "pointer",
           }}
           alt="Linkedin profile"
           // margin="auto"
@@ -55,26 +54,26 @@ const PartnerCard = ({ partner, linkText }) => {
           width="80px"
           backgroundSize="contain"
         />
-        <Icon icon="pdf"/>
+        <Icon icon="pdf" />
       </Div>
-
     </Div>
   );
-}
+};
 
 const PartnersCarousel = ({ data }) => {
   const partner = {
-    fist_name: 'Jane',
-    last_name: 'Doe',
-    sub_header: 'CEO @ Globant',
-    paragraph: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur molestie massa et iaculis elementum. Aliquam pellentesque tincidunt dolor.',
-    linkedin: 'https://www.linkedin.com'
-  }
+    fist_name: "Jane",
+    last_name: "Doe",
+    sub_header: "CEO @ Globant",
+    paragraph:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur molestie massa et iaculis elementum. Aliquam pellentesque tincidunt dolor.",
+    linkedin: "https://www.linkedin.com",
+  };
   return (
     <Div justifyContent="center">
       <PartnerCard partner={partner} linkText={data.see_full} />
     </Div>
-  )
+  );
 };
 
 export default PartnersCarousel;
