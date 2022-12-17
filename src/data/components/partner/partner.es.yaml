@@ -255,3 +255,16 @@ partners_in_education:
       image: "../../../../static/images/education/MDC_Blue.png"
     - alt: "Inter-American Development Bank"
       image: "../../../../static/images/education/IDB-logo.png"
+
+partners_carousel:
+  title: "Lo que dicen nuestros socios"
+  see_full: "Ver artículo completo aquí."
+  description: "These are some of the benefits:"
+  bullets:
+    - Access to a big pool of high quality and unique talent.
+    - Increase job retention with reskilling programs.
+    - Bridge the tech gap within the community.
+    - Fill tech job openings.
+    - Increase brand awareness and value with workshop sponsorships and speaking opportunities.
+    - Establish your brand as a strong leader in the tech industry.
+    - Community Building.
