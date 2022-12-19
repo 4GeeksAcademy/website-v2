@@ -71,13 +71,12 @@ const PartnerCard = ({ partner, linkText }) => {
           width="80px"
           backgroundSize="contain"
         />
-        <Div onClick={() => console.log('howdie')}>
+        <Div onClick={() => console.log("howdie")}>
           <Icon
-            style={{ marginLeft: '0 0 0 15px', cursor: 'pointer' }}
+            style={{ marginLeft: "0 0 0 15px", cursor: "pointer" }}
             icon="pdf"
           />
         </Div>
-
       </Div>
     </Div>
   );
@@ -101,11 +100,7 @@ const PartnersCarousel = ({ data }) => {
   };
 
   return (
-    <Div
-      padding="30px"
-      width="100%"
-      display="block"
-    >
+    <Div padding="30px" width="100%" display="block">
       <H2
         type="h2"
         fontSize="30px"
@@ -122,7 +117,6 @@ const PartnersCarousel = ({ data }) => {
         ))}
       </Slider>
     </Div>
-
   );
 };
 
