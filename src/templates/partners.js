@@ -788,6 +788,23 @@ export const query = graphql`
           partners_carousel {
             title
             see_full
+            partners {
+              fist_name
+              last_name
+              sub_header
+              alt
+              image {
+                childImageSharp {
+                  gatsbyImageData(
+                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                    quality: 100
+                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                  )
+                }
+              }
+              paragraph
+              linkedin
+            }
           }
         }
       }

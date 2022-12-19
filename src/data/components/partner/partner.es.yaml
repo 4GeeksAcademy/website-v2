@@ -259,12 +259,52 @@ partners_in_education:
 partners_carousel:
   title: "Lo que dicen nuestros socios"
   see_full: "Ver artículo completo aquí."
-  description: "These are some of the benefits:"
-  bullets:
-    - Access to a big pool of high quality and unique talent.
-    - Increase job retention with reskilling programs.
-    - Bridge the tech gap within the community.
-    - Fill tech job openings.
-    - Increase brand awareness and value with workshop sponsorships and speaking opportunities.
-    - Establish your brand as a strong leader in the tech industry.
-    - Community Building.
+  partners:
+    - fist_name: "Jane"
+      last_name: "Doe"
+      sub_header: "CEO @ Globant"
+      alt: "4Geeks Academy Partner"
+      image: "../../../../static/images/students/student1.jpg"
+      paragraph: |
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur molestie massa et iaculis elementum. Aliquam pellentesque tincidunt dolor.,"
+      linkedin: "https://www.linkedin.com"
+    - fist_name: "Jane"
+      last_name: "Doe"
+      sub_header: "CEO @ Globant"
+      alt: "4Geeks Academy Partner"
+      image: "../../../../static/images/students/student1.jpg"
+      paragraph: |
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur molestie massa et iaculis elementum. Aliquam pellentesque tincidunt dolor.,"
+      linkedin: "https://www.linkedin.com"
+    - fist_name: "Jane"
+      last_name: "Doe"
+      sub_header: "CEO @ Globant"
+      alt: "4Geeks Academy Partner"
+      image: "../../../../static/images/students/student1.jpg"
+      paragraph: |
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur molestie massa et iaculis elementum. Aliquam pellentesque tincidunt dolor.,"
+      linkedin: "https://www.linkedin.com"
+    - fist_name: "Jane"
+      last_name: "Doe"
+      sub_header: "CEO @ Globant"
+      alt: "4Geeks Academy Partner"
+      image: "../../../../static/images/students/student1.jpg"
+      paragraph: |
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur molestie massa et iaculis elementum. Aliquam pellentesque tincidunt dolor.,"
+      linkedin: "https://www.linkedin.com"
+    - fist_name: "Jane"
+      last_name: "Doe"
+      sub_header: "CEO @ Globant"
+      alt: "4Geeks Academy Partner"
+      image: "../../../../static/images/students/student1.jpg"
+      paragraph: |
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur molestie massa et iaculis elementum. Aliquam pellentesque tincidunt dolor.,"
+      linkedin: "https://www.linkedin.com"
+    - fist_name: "Jane"
+      last_name: "Doe"
+      sub_header: "CEO @ Globant"
+      alt: "4Geeks Academy Partner"
+      image: "../../../../static/images/students/student1.jpg"
+      paragraph: |
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur molestie massa et iaculis elementum. Aliquam pellentesque tincidunt dolor.,"
+      linkedin: "https://www.linkedin.com"
