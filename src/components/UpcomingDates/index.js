@@ -220,7 +220,7 @@ const UpcomingDates = ({
           alignItems_tablet="center"
         >
           <H3 textAlign="left" width="188px">
-            Next Dates
+            {content.title}
           </H3>
           {!location && (
             <Select
