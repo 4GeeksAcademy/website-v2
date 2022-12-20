@@ -74,6 +74,10 @@ details:
         - label: "Requisitos"
           content: "Experiencia de 1 año como desarrollador de software"
           icon: "contract-checked"
+        - label: "Idioma"
+          content: "Puedes elegir entre inglés y español para consumir el plan de estudios y el contenido. Las clases se imparten en el idioma oficial de tú campus."
+          icon: "contract-checked"
+          
   heading: DETALLES DEL PROGRAMA
   weeks: 16
   sub_heading: "Part Time"

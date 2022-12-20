@@ -95,8 +95,9 @@ details:
           content: "Tan solo necesitas un ordenador y una conexión a internet"
           icon: "contract-checked"
         - label: "Idioma"
-          content: "Los estudiantes de 4Geeks pueden elegir entre inglés y español para consumir el plan de estudios y el contenido. Las clases se imparten en el idioma del campus que elijas."
+          content: "Puedes elegir entre inglés y español para consumir el plan de estudios y el contenido. Las clases se imparten en el idioma oficial de tú campus."
           icon: "contract-checked"
+          
   heading: DETALLES DEL PROGRAMA PART-TIME
   weeks: 18
   sub_heading: "Proyectos de la vida real y exactamente lo que buscan las empresas"

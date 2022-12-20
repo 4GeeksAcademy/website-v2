@@ -93,7 +93,10 @@ details:
         - label: "Requisitos"
           content: "No se necesita experiencia previa"
           icon: "contract-checked"
-
+        - label: "Idioma"
+          content: "Puedes elegir entre inglés y español para consumir el plan de estudios y el contenido. Las clases se imparten en el idioma oficial de tú campus."
+          icon: "contract-checked"
+          
   heading: DETALLES DEL PROGRAMA
   weeks: 16
   facts:

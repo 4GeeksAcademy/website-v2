@@ -75,6 +75,10 @@ details:
         - label: "Requisites"
           content: "1-year experience as Software Developer"
           icon: "contract-checked"
+        - label: "Language"
+          content: "You can decide between English and Spanish to consume the syllabus and content. Live classes are taught in the language of your campus."
+          icon: "contract-checked"
+          
   heading: Software Engineering Syllabus
   weeks: 16
   sub_heading: "Master exactly what is required to be a real Software Engineer."
