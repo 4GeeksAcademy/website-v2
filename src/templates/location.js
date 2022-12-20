@@ -129,7 +129,6 @@ const Location = ({ data, pageContext, yml }) => {
                   )}`}
                   style={{ marginLeft: "5px", display: "inline" }}
                 >
-                  {/* {yml.info_box.open_on_maps} */}
                   {open[lang]}
                 </Link>
               </Paragraph>
