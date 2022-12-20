@@ -3,7 +3,7 @@ import { save_form } from "./utils/leads";
 const getToken = async (action) => {
   let token = null;
   try {
-    token = await grecaptcha.execute(process.env.GOOGLE_CAPTCHA_KEY, {
+    token = await grecaptcha.execute(process.env.GATSBY_CAPTCHA_KEY, {
       action,
     });
   } catch (e) {
@@ -199,8 +199,6 @@ export const apply = async (data, session) => {
   const automation = body.automation || "strong";
 
   const action = "submit";
-  console.log("process.env.GOOGLE_CAPTCHA_KEY");
-  console.log(process.env.GOOGLE_CAPTCHA_KEY);
   let token = await getToken(action);
 
   if (!session || !session.utm || !session.utm.utm_test)

@@ -37,6 +37,7 @@ const formIsValid = (formData = null) => {
   }
   return true;
 };
+
 const Apply = (props) => {
   const { data, pageContext, yml } = props;
   const { session, setSession } = useContext(SessionContext);

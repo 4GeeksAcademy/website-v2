@@ -70,8 +70,6 @@ const SVGBubblesRight = () => (
 );
 
 const Home = (props) => {
-  console.log("process.env.GOOGLE_CAPTCHA_KEY");
-  console.log(process.env.GOOGLE_CAPTCHA_KEY);
   const { data, pageContext, yml } = props;
 
   const hiring = data.allPartnerYaml.edges[0].node;
