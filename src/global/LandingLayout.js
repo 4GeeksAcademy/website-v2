@@ -81,6 +81,7 @@ const Layout = ({ children, seo, context, landingFooter, landingNavbar }) => {
                     title
                     link
                     paragraph
+                    width
                     links {
                       title
                       level

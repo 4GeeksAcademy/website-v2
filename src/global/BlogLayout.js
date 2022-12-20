@@ -99,6 +99,7 @@ const BlogLayout = ({ children, seo, context }) => {
                     icon
                     title
                     paragraph
+                    width
                     links {
                       title
                       level
