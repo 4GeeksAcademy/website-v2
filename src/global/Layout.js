@@ -93,6 +93,7 @@ const Layout = ({ children, seo, context }) => {
                     title
                     link
                     paragraph
+                    width
                     links {
                       title
                       level

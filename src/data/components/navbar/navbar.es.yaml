@@ -5,12 +5,12 @@ navbar:
       icon: ""
       title: "Programas"
       paragraph: "Haz el cambio de carrera que siempre quisiste. Mientras buscas cambiar, encontrar un trabajo mejor o avanzar en el actual. Aprende a codificar en 4Geeks Academy."
-
+      width: "950px"
       links:
 
         - title: "Full Stack Developer"
           level: "Desde cero"
-          icon: "fullstack"
+          icon: "fullstack_2"
           paragraph: "Convierte en un programador que utiliza las tecnologias más búscadas, mentoria personalizada y un plan de estudios y career support para conseguir tu primer trabajo."
           buttons:
             - text: "Ver programa"
@@ -18,7 +18,7 @@ navbar:
 
         - title: "Data Science y Machine Learning"
           level: "Desde cero"
-          icon: "machine"
+          icon: "machine_2"
           paragraph: "Conviértete en un científico de datos, desarrolla modelos de predicción y uneté a una de las profesiones mejores pagadas del mundo."
           buttons:
             - text: "Ver Programa"
@@ -26,7 +26,7 @@ navbar:
               
         - title: "Blockchain y Web3"
           level: "Desde cero"
-          icon: "software"
+          icon: "blockchain"
           paragraph: "Construye applicaciones en la Web3 utilizando Solidity y Etherium Blockchain. Obtén un trabajo como desarrolaldor de blockchain."
           buttons:
             - text: "Registro temprano"
@@ -39,6 +39,7 @@ navbar:
       title: "Porqué 4Geeks Academy"
       link: "/es/porque-4geeks"
       paragraph: "Este es el lugar para impulsar tu carrera aprendiendo a codificar. Piensa de manera diferente, ten más confianza en ti mismo, da vida a tus ideas y gana más dinero."
+      width: "950px"
       links:
         - title: "Acompañamiento"
           sub_links:
@@ -75,7 +76,7 @@ navbar:
       icon: "hat"
       title: "Academia"
       paragraph: "Estamos constantemente fortaleciendo nuestro ecosistema para aprender y evolucionar juntos, usando tecnología y usando código."
-
+      width: "500px"
       links:
         - title: ""
           sub_links:
@@ -96,7 +97,7 @@ navbar:
       icon: "campus"
       title: "Nuestros Campus"
       paragraph: "Aprende en persona o elije un programa completamente remoto. Inscríbete y forma parte de una comunidad de programación global."
-
+      width: "550px"
       links:
         - title: "US & Canada"
           sub_links:

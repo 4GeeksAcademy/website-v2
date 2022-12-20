@@ -5,10 +5,11 @@ navbar:
       icon: ""
       title: "Programs"
       paragraph: "Make the career change you've always wanted. From zero to coding in weeks and specialized in the most wanted technologies int he market."
+      width: "950px"
       links:
         - title: "Full Stack Coding Bootcamp"
           level: " "
-          icon: "fullstack"
+          icon: "fullstack_2"
           paragraph: "Become a Full Stack software developer using Python, React and Javascript. The most in-demand skills. Find a job as a developer."
           buttons:
             - text: "View program"
@@ -16,7 +17,7 @@ navbar:
 
         - title: "Data Science and ML"
           level: " "
-          icon: "machine"
+          icon: "machine_2"
           paragraph: "Learn Python to collect and manage data. Create models and solve problems using Machine Learning, Deep Learning and AI."
           buttons:
             - text: "View program"
@@ -24,7 +25,7 @@ navbar:
 
         - title: "Blockchain and Web3"
           level: " "
-          icon: "software"
+          icon: "blockchain"
           paragraph: "Build applications for the Web3 with Solidity and Blockchain. Get a job as a blockchain developer and help build tomorrows web."
           buttons:
             - text: "Comming Soon"
@@ -37,6 +38,7 @@ navbar:
       title: "Why 4Geeks Academy"
       paragraph: "This is the place to boost your career by learning to code. Think differently, become more self-confident, bring your ideas to life and make more money."
       link: "/us/why-4geeks"
+      width: "950px"
       links:
         - title: "Support"
           sub_links:
@@ -72,6 +74,7 @@ navbar:
       icon: "hat"
       title: "The Academy"
       paragraph: "We are constantly strengthening our ecosystem to learn and evolve together, using technology, using code."
+      width: "500px"
       links:
         - title: ""
           sub_links:
@@ -91,6 +94,7 @@ navbar:
       icon: "campus"
       title: "Our Campus"
       paragraph: "Learn in-person or choose a fully-remote program. Enroll and become part of a global coding community."
+      width: "550px"
       links:
         - title: "US & Canada"
           content: "With the online modality you have access to our physical locations worldwide"
