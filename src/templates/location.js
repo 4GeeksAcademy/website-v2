@@ -61,6 +61,11 @@ const Location = ({ data, pageContext, yml }) => {
       behavior: "smooth",
     });
   };
+
+  const open = {
+    us: "Open on Maps",
+    es: "Abrir en Mpas",
+  };
   return (
     <>
       <GridContainerWithImage
@@ -124,7 +129,7 @@ const Location = ({ data, pageContext, yml }) => {
                   )}`}
                   style={{ marginLeft: "5px", display: "inline" }}
                 >
-                  {yml.info_box.open_on_maps}
+                  {open[lang]}
                 </Link>
               </Paragraph>
             </Div>
