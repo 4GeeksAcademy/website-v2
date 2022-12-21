@@ -80,7 +80,48 @@ redirects:
     #redirectInBrowser: true
     isPermanent: true # if permanent google will erase the original url from its results 
            
-  - fromPath: "https://4geeksacademy.com/us/trends-and-tech/4geeks-academy-history"
-    toPath: "https://4geeksacademy.com/"
+  - fromPath: "/us/trends-and-tech/4geeks-academy-history"
+    toPath: "/"
     #redirectInBrowser: true
     isPermanent: true # if permanent google will erase the original url from its results 
+    
+  - fromPath: "/us/aprender-a-programar/facilidades-y-dificultades-para-aprender-a-programar"
+    toPath: "/es/aprender-a-programar/facilidades-y-dificultades-para-aprender-a-programar"
+    #redirectInBrowser: true
+    isPermanent: true # if permanent google will erase the original url from its results 
+    
+  - fromPath: "/us/aprender-a-programar/python-uno-de-los-lenguajes-de-programacion-mas-demandados"
+    toPath: "/es/aprender-a-programar/python-uno-de-los-lenguajes-de-programacion-mas-demandados"
+    #redirectInBrowser: true
+    isPermanent: true # if permanent google will erase the original url from its results 
+    
+  - fromPath: "/us/aprender-a-programar/ventajas-de-trabajar-en-tecnologia"
+    toPath: "/es/aprender-a-programar/ventajas-de-trabajar-en-tecnologia"
+    #redirectInBrowser: true
+    isPermanent: true # if permanent google will erase the original url from its results 
+    
+  - fromPath: "/us/aprender-a-programar/juegos-gratis-para-practicar-tus-habilidades-de-programacion"
+    toPath: "/es/aprender-a-programar/juegos-gratis-para-practicar-tus-habilidades-de-programacion"
+    #redirectInBrowser: true
+    isPermanent: true # if permanent google will erase the original url from its results 
+    
+  - fromPath: "/us/aprender-a-programar/nodejs-el-camino-hacia-el-exito-de-la-programacion-back-end"
+    toPath: "/es/aprender-a-programar/nodejs-el-camino-hacia-el-exito-de-la-programacion-back-end"
+    #redirectInBrowser: true
+    isPermanent: true # if permanent google will erase the original url from its results 
+    
+  - fromPath: "/us/aprender-a-programar/los-5-frameworks-fundamentales-para-frontend"
+    toPath: "/es/aprender-a-programar/los-5-frameworks-fundamentales-para-frontend"
+    #redirectInBrowser: true
+    isPermanent: true # if permanent google will erase the original url from its results 
+    
+  - fromPath: "/es/software-engineer-salary/software-engineer-salary"
+    toPath: "/us/software-engineer-salary/software-engineer-salary"
+    #redirectInBrowser: true
+    isPermanent: true # if permanent google will erase the original url from its results 
+    
+  - fromPath: "/es/full-stack/que-es-full-stack"
+    toPath: "/es/tendencias-y-tecnologia/que-es-full-stack"
+    #redirectInBrowser: true
+    isPermanent: true # if permanent google will erase the original url from its results 
+
