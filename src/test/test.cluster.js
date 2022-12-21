@@ -43,6 +43,8 @@ const validateEmptyPlan = (val) => {
 };
 
 const validateEmpty = (val, breathecrumb) => {
+  console.log('val');
+  console.log(val);
   if (!val || val === "") throw Error("Missing value" + breathecrumb);
 };
 

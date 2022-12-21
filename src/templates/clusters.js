@@ -104,9 +104,9 @@ const Tags = ({ pageContext, data, yml }) => {
             height="450px"
             width="100%"
             image={
-              cluster?.header?.image ? 
-              cluster.header.image.childImageSharp.gatsbyImageData :
-              yml.header.image.childImageSharp.gatsbyImageData
+              cluster?.header?.image
+                ? cluster.header.image.childImageSharp.gatsbyImageData
+                : yml.header.image.childImageSharp.gatsbyImageData
             }
             bgSize="contain"
             alt={cluster?.header.image_alt || yml.header.alt}
