@@ -120,6 +120,43 @@ full_time:
     icons: 
     - "/images/lumni.png"
 
+  - slug: 'venezuela-scholarship-pt'
+    academies: ['caracas-venezuela']
+    recomended: true
+    scholarship: "Paga de Contado"
+    payment_time: "Pay early and get 30% off."
+    price: "$1300*"
+    bullets: 
+      - "Pay early and save up to $500"
+      - "Pay with debit, credit or wire transfer."
+    # icons: 
+    #   - "/images/landing/uwm_pantone_2021_2.png"
+
+  - slug: 'venezuela-financed-pt'
+    academies: ['caracas-venezuela']
+    recomended: false
+    scholarship: "Financed"
+    payment_time: "12 months"
+    price: "~$200 / mo."
+    bullets: 
+      - "Financing in 2, 3 or up to 12 months."
+      - "Get interview with Flevo for fast financing approval."
+      - "Prices may vary depending on the length of your financing period."
+    icons: 
+      - "/images/flevo.png"
+
+  - slug: 'venezuela-laptop-pt'
+    academies: ['caracas-venezuela']
+    recomended: false
+    scholarship: "Includes a new laptop"
+    payment_time: "Special offer with laptop included"
+    price: "~$1600"
+    bullets: 
+      - "Pay early and save up to $500."
+      - "Keep the laptop once you finish the program."
+    # icons: 
+    #   - "/images/laptp.jpg"
+
 part_time:
   - slug: 'usa-clark-scholarship-pt'
     academies: ['downtown-miami', 'orlando','toronto-canada']
@@ -354,3 +391,40 @@ part_time:
       - "You will only focus on getting the coding skills"
     icons: 
       - "/images/bcas.png" 
+
+  - slug: 'venezuela-scholarship-pt'
+    academies: ['caracas-venezuela']
+    recomended: true
+    scholarship: "Paga de Contado"
+    payment_time: "Pay early and get 30% off."
+    price: "$1300*"
+    bullets: 
+      - "Pay early and save up to $500"
+      - "Pay with debit, credit or wire transfer."
+    # icons: 
+    #   - "/images/landing/uwm_pantone_2021_2.png"
+
+  - slug: 'venezuela-financed-pt'
+    academies: ['caracas-venezuela']
+    recomended: false
+    scholarship: "Financed"
+    payment_time: "12 months"
+    price: "~$200 / mo."
+    bullets: 
+      - "Financing in 2, 3 or up to 12 months."
+      - "Get interview with Flevo for fast financing approval."
+      - "Prices may vary depending on the length of your financing period."
+    icons: 
+      - "/images/flevo.png"
+
+  - slug: 'venezuela-laptop-pt'
+    academies: ['caracas-venezuela']
+    recomended: false
+    scholarship: "Includes a new laptop"
+    payment_time: "Special offer with laptop included"
+    price: "~$1600"
+    bullets: 
+      - "Pay early and save up to $500."
+      - "Keep the laptop once you finish the program."
+    # icons: 
+    #   - "/images/laptp.jpg"
