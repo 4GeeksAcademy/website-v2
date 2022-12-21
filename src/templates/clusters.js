@@ -78,7 +78,7 @@ const Tags = ({ pageContext, data, yml }) => {
           gridColumn_tablet="1 / 7"
         >
           <H1 textAlign_tablet="left" margin="0 0 11px 0" color="#606060">
-            {cluster?.seo_title}
+            {cluster?.seo_title || yml.seo_title}
           </H1>
           <H2
             textAlign_tablet="left"
@@ -86,10 +86,10 @@ const Tags = ({ pageContext, data, yml }) => {
             lineHeight="60px"
             textTransform="capitalize"
           >
-            {cluster?.header?.title}
+            {cluster?.header?.title || clusterTitle}
           </H2>
           <Paragraph textAlign_tablet="left" margin="26px 0">
-            {cluster?.header?.paragraph}
+            {cluster?.header?.paragraph || yml.header.paragraph}
           </Paragraph>
         </Div>
         <Div
@@ -104,11 +104,12 @@ const Tags = ({ pageContext, data, yml }) => {
             height="450px"
             width="100%"
             image={
-              cluster?.header?.image &&
-              cluster.header.image.childImageSharp.gatsbyImageData
+              cluster?.header?.image ? 
+              cluster.header.image.childImageSharp.gatsbyImageData :
+              yml.header.image.childImageSharp.gatsbyImageData
             }
             bgSize="contain"
-            alt={cluster?.header.image_alt}
+            alt={cluster?.header.image_alt || yml.header.alt}
           />
         </Div>
       </GridContainerWithImage>
