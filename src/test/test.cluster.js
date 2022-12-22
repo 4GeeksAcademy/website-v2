@@ -14,11 +14,14 @@ const {
 const API = require("../utils/api");
 
 const validateEmptyHeader = (val, breathecrumb) => {
-  
-  if (!val.title || val.title === "") throw Error("Missing title " + breathecrumb);
-  if (!val.paragraph || val.paragraph === "") throw Error("Missing paragraph " + breathecrumb);
-  if (!val.image || val.image === "") throw Error("Missing image " + breathecrumb);
-  if (!val.image_alt || val.image_alt === "") throw Error("Missing image_alt " + breathecrumb);
+  if (!val.title || val.title === "")
+    throw Error("Missing title " + breathecrumb);
+  if (!val.paragraph || val.paragraph === "")
+    throw Error("Missing paragraph " + breathecrumb);
+  if (!val.image || val.image === "")
+    throw Error("Missing image " + breathecrumb);
+  if (!val.image_alt || val.image_alt === "")
+    throw Error("Missing image_alt " + breathecrumb);
 };
 
 walk(`${__dirname}/../data/cluster/`, async function (err, files) {
@@ -27,10 +30,10 @@ walk(`${__dirname}/../data/cluster/`, async function (err, files) {
     (f) => f.indexOf(".yml") > 1 || f.indexOf(".yaml") > 1
   );
   let clusters;
-  try{
-    clusters = await API.getAllClusters('https://breathecode.herokuapp.com/v1');
-  } catch (e){
-    console.log('could not retrieve clusters: ', e);
+  try {
+    clusters = await API.getAllClusters("https://breathecode.herokuapp.com/v1");
+  } catch (e) {
+    console.log("could not retrieve clusters: ", e);
   }
 
   let langs = {};
@@ -44,12 +47,12 @@ walk(`${__dirname}/../data/cluster/`, async function (err, files) {
     if (!yml) fail("Invalid YML syntax for " + _path);
     else {
       try {
-
         if (!yml.header) fail("Missing Header in " + _path);
-        if (!yml.seo_title || yml.seo_title === '') fail("Missing seo_title in " + _path);
+        if (!yml.seo_title || yml.seo_title === "")
+          fail("Missing seo_title in " + _path);
 
         validateObjectProperties(yml, {
-          "header": validateEmptyHeader,
+          header: validateEmptyHeader,
         });
       } catch (error) {
         fail(`${error.message} in ${error.path} for file: \n ${_path}`);
@@ -58,7 +61,8 @@ walk(`${__dirname}/../data/cluster/`, async function (err, files) {
   });
 
   clusters.map((cluster) => {
-    if (!slugs.includes(cluster.slug)) warn(`Cluster ${cluster.slug} does not have a YML File`);
+    if (!slugs.includes(cluster.slug))
+      warn(`Cluster ${cluster.slug} does not have a YML File`);
   });
 
   success("All the culters are OK!");

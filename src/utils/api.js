@@ -41,7 +41,8 @@ const getAllAssets = async () => {
 
 const getAllClusters = async (host) => {
   try {
-    const _resp = await axios.get(`${host}/registry/academy/keywordcluster`,
+    const _resp = await axios.get(
+      `${host}/registry/academy/keywordcluster`,
       options
     );
     if (_resp.status != 200) {
