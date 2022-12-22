@@ -463,9 +463,7 @@ const createPagesfromYml = async ({ graphql, actions }) => {
 
     const _targetPath = node.fields.pagePath;
     logger.debug(
-      `Creating page ${
-        node.fields.slug === "index" ? "/" : node.fields.pagePath
-      } in ${node.fields.lang}`
+      `Creating page ${node.fields.pagePath} in ${node.fields.lang}`
     );
 
     createPage({
