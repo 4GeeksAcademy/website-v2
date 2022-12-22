@@ -89,8 +89,14 @@ const Home = (props) => {
     )
       navigate("/es/inicio");
 
-    if (session?.language && window && window.location.pathname === '/') 
-      navigate(`${props.pathContext.translations[session.language === 'en' ? 'us' : session.language]}`);
+    if (session?.language && window && window.location.pathname === "/")
+      navigate(
+        `${
+          props.pathContext.translations[
+            session.language === "en" ? "us" : session.language
+          ]
+        }`
+      );
 
     // It returns the 4Geeks Academy campus closest to the user's country
     setCity(session.location ? session.location.city : "");

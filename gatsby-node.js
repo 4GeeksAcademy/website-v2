@@ -495,9 +495,8 @@ const createPagesfromYml = async ({ graphql, actions }) => {
       });
 
       if (node.fields.slug === "index") {
-
         createPage({
-          path: '/',
+          path: "/",
           component: path.resolve(
             `./src/templates/${node.fields.defaultTemplate}.js`
           ),
