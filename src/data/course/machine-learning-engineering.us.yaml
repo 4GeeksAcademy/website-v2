@@ -118,7 +118,7 @@ details:
       step: 2
     - module_name: "Data"
       title: "Data Science for AI"
-      description: "We don't simply train you in Data Science, we prepare you for Data Science in the Age of AI. Leveraging Python, we take you through Data Analysis & Visualizations, Database Management & Workflow, Applied Linear Algebra with Statistical Inference and Modeling. You'll end this module by delivering a complete project where you need to apply data cleaning, data analysis, and prediction models on real-world datasets."
+      description: "We don't simply train you in Data Science, we prepare you for Data Science in the Age of AI. Leveraging Python, we take you through Data Analysis & Visualizations, Database Management & Workflow, Applied Linear Álgebra with Statistical Inference and Modeling. You'll end this module by delivering a complete project where you need to apply data cleaning, data analysis, and prediction models on real-world datasets."
       projects: "Loading structured and unstructured data from different sources (e.g. SQL, Web Scraping, text files), exploring data, cleaning data, transforming data, visualizing data, analyzing and extracting insights, and inferential and test statistics."
       slug: "data-science"
       duration: "4 wks"
