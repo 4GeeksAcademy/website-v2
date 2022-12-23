@@ -345,9 +345,7 @@ const createEntityPagesfromYml = async (
   const translations = buildTranslations(result.data[`all${entity}Yaml`]);
   result.data[`all${entity}Yaml`].edges.forEach(({ node }) => {
     logger.debug(
-      `Creating entity ${entity} ${
-        node.fields.slug === "index" ? "/" : node.fields.pagePath
-      } with template ${
+      `Creating entity ${entity} ${node.fields.pagePath} with template ${
         node.meta_info.template || node.fields.defaultTemplate
       }.js`
     );
