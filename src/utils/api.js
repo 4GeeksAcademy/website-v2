@@ -39,6 +39,30 @@ const getAllAssets = async () => {
   }
 };
 
+const getAllClusters = async (host) => {
+  try {
+    const _resp = await axios.get(
+      `${host}/registry/academy/keywordcluster`,
+      options
+    );
+    if (_resp.status != 200) {
+      logger.error(`Status: ${_resp.status}`);
+      throw new Error(_resp.data);
+    }
+    return _resp.data;
+  } catch (e) {
+    console.log(
+      "Error fetching clusters from the breathecode API: ",
+      e.toString()
+    );
+    logger.error(
+      "Error fetching clusters from the breathecode API: ",
+      e.toString()
+    );
+    return [];
+  }
+};
+
 const getSingleAsset = async (slug) => {
   try {
     logger.debug(`Fetching article: ${slug}`);
@@ -84,4 +108,4 @@ const getContent = async (slug) => {
   }
 };
 
-module.exports = { getContent, getSingleAsset, getAllAssets };
+module.exports = { getContent, getSingleAsset, getAllAssets, getAllClusters };
