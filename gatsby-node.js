@@ -461,12 +461,9 @@ const createPagesfromYml = async ({ graphql, actions }) => {
     // ignore pages with visibility hidden
     if (node.fields.visibility == "hidden") continue;
 
-    const _targetPath =
-      node.fields.slug === "index" ? "/" : node.fields.pagePath;
+    const _targetPath = node.fields.pagePath;
     logger.debug(
-      `Creating page ${
-        node.fields.slug === "index" ? "/" : node.fields.pagePath
-      } in ${node.fields.lang}`
+      `Creating page ${node.fields.pagePath} in ${node.fields.lang}`
     );
 
     createPage({
@@ -498,8 +495,28 @@ const createPagesfromYml = async ({ graphql, actions }) => {
       });
 
       if (node.fields.slug === "index") {
+        createPage({
+          path: "/",
+          component: path.resolve(
+            `./src/templates/${node.fields.defaultTemplate}.js`
+          ),
+          context: {
+            ...node.fields,
+            ...node.meta_info,
+            translations: translations[node.fields.defaultTemplate],
+            clusters: clusters[node.fields.lang],
+          },
+        });
+
         _createRedirect({
           fromPath: "/en",
+          toPath: _targetPath,
+          // redirectInBrowser: true,
+          isPermanent: true,
+        });
+
+        _createRedirect({
+          fromPath: "/",
           toPath: _targetPath,
           // redirectInBrowser: true,
           isPermanent: true,
