@@ -52,18 +52,18 @@ const SEO = (props) => (
         RegExp("http").test(image || defaultImage) ? "" : siteUrl
       }${image || defaultImage}`;
 
-      console.log('translations');
+      console.log("translations");
       console.log(translations);
-      console.log('props');
+      console.log("props");
       console.log(props);
-      
+
       const hreflangs =
         translations == undefined
           ? []
           : Object.keys(translations)
               .filter((t) => t != lang)
               .map((t) => ({ lang: t, path: translations[t] }));
-      console.log('hreflangs');
+      console.log("hreflangs");
       console.log(hreflangs);
       return (
         <>
@@ -76,7 +76,11 @@ const SEO = (props) => (
             {hreflangs.map((h) => (
               <link
                 rel="alternate"
-                hrefLang={type === 'location' ? `${langCountries[h.lang]}-${h.lang}` : langCountries[h.lang]}
+                hrefLang={
+                  type === "location"
+                    ? `${langCountries[h.lang]}-${h.lang}`
+                    : langCountries[h.lang]
+                }
                 href={`${siteUrl}${getCanonical(h.path)}`}
               />
             ))}
