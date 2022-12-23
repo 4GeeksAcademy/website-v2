@@ -140,7 +140,7 @@ details:
       step: 2
     - module_name: "Data"
       title: "Data Science para IA"
-      description: "No solamente vamos a entrenarte en Data Science, te vamos a preparar para Data Science en la era de la inteligencia artificial apalancandote de Python; Análisis de Datos & Visualizaciones, Manejos de Bases de datos y Workflows, Aplicaciónes de Algebra Lineal con Inferencia estadística y modelado. Terminarás este modulo entregando un proyecto completo donde tengas que aplicar limpieza, análisis y modelos de predicción en sets de datos reales."
+      description: "No solamente vamos a entrenarte en Data Science, te vamos a preparar para Data Science en la era de la inteligencia artificial apalancandote de Python; Análisis de Datos & Visualizaciones, Manejos de Bases de datos y Workflows, Aplicaciónes de Álgebra Lineal con Inferencia estadística y modelado. Terminarás este modulo entregando un proyecto completo donde tengas que aplicar limpieza, análisis y modelos de predicción en sets de datos reales."
       projects: "Cargado de data estructurada y no-estructurada a partir de diferentes fuentes (E.j: SQL, Web Scraping, test files), explorado y limpieza de datos, visualizacion de datos, pruebas estadísticas, etc."
       slug: "advanced-algorithms"
       duration: "4 wks"
