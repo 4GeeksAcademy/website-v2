@@ -92,7 +92,7 @@ const Home = (props) => {
     if (session?.language && window && window.location.pathname === "/")
       navigate(
         `${
-          props.pathContext.translations[
+          props.pageContext.translations[
             session.language === "en" ? "us" : session.language
           ]
         }`
