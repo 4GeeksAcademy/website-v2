@@ -14,6 +14,8 @@ meta_info:
 seo_title: "Bootcamp de Programación en Orlando"
 header:
   tagline: "4Geeks Academy en Orlando"
+  sub_header: "Todos los programas son enseñados "
+  sub_header_highlighted: "Online, Híbirda o En Persona."
   paragraph: ""
   image: "../../../static/images/locations/orlando-header.png"
   alt: "4Geeks Academy modalidad online y presencial en Orlando, Florida"

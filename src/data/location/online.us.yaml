@@ -17,6 +17,8 @@ meta_info:
 seo_title: "Online Coding Bootcamp"
 header:
   tagline: "Learn To Code Online"
+  sub_header: "All programs are taught "
+  sub_header_highlighted: "Online, Hybrid or In-person."
   paragraph: "Learning online is hard: Lucky for you, we offer: unlimited support, amazing content and lifetime career support. \\n Yes, it really is available for the rest of your life."
   image: "../../../static/images/locations/online-home.png"
   alt: ""

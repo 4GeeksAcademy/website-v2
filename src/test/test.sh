@@ -7,4 +7,5 @@ node ./src/test/test.course.js &&
 node ./src/test/test.landing.js && 
 node ./src/test/test.location.js && 
 node ./src/test/test.downloadable.js &&
+node ./src/test/test.cluster.js &&
 true

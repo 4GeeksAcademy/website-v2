@@ -97,7 +97,7 @@ navbar:
       icon: "campus"
       title: "Nuestros Campus"
       paragraph: "Aprende en persona o elije un programa completamente remoto. Inscríbete y forma parte de una comunidad de programación global."
-      width: "550px"
+      width: "610px"
       links:
         - title: "US & Canada"
           sub_links:

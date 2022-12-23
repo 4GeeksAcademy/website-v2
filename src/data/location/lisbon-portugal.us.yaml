@@ -18,6 +18,8 @@ meta_info:
 seo_title: "Coding Bootcamp Lisbon, Portugal"
 header:
   tagline: "Learn To Code in Lisbon, Portugal"
+  sub_header: "All programs are taught "
+  sub_header_highlighted: "Online, Hybrid or In-person."
   paragraph: "Learning online is hard: Lucky for you, we offer: unlimited support, amazing content and lifetime career support. \\n Yes, it really is available for the rest of your life."
   image: "../../../static/images/locations/lisbon-portugal-header.png"
   alt: ""

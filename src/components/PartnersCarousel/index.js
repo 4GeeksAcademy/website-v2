@@ -100,7 +100,7 @@ const PartnersCarousel = ({ data }) => {
   };
 
   return (
-    <Div padding="30px" width="100%" display="block">
+    <Div padding="30px 30px 45px 30px" width="100%" display="block">
       <H2
         type="h2"
         fontSize="30px"

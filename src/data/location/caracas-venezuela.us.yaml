@@ -14,6 +14,8 @@ meta_info:
 seo_title: "4Geeks Academy Caracas"
 header:
   tagline: "4Geeks Academy in Caracas"
+  sub_header: "All programs are taught "
+  sub_header_highlighted: "Online, Hybrid or In-person."
   paragraph: ""
   image: "../../../static/images/locations/caracas-home.png"
   alt: "4Geeks Academy online and in-person coding bootcamp in Caracas, Venezuela"

@@ -31,6 +31,9 @@ import BaseBlogRender from "./_baseBlogLayout";
 import Link from "gatsby-link";
 
 const Tags = ({ pageContext, data, yml }) => {
+  const cluster = data.allClusterYaml.edges.find(
+    (c) => c.node.meta_info.slug === pageContext.cluster
+  )?.node;
   const { edges, totalCount } = data.allMarkdownRemark;
   function GetFormattedDate(date) {
     var d = new Date(date),
@@ -75,16 +78,18 @@ const Tags = ({ pageContext, data, yml }) => {
           gridColumn_tablet="1 / 7"
         >
           <H1 textAlign_tablet="left" margin="0 0 11px 0" color="#606060">
-            {yml.seo_title}
+            {cluster?.seo_title || yml.seo_title}
           </H1>
           <H2
             textAlign_tablet="left"
             fontSize="50px"
             lineHeight="60px"
             textTransform="capitalize"
-          >{`${clusterTitle}`}</H2>
+          >
+            {cluster?.header?.title || clusterTitle}
+          </H2>
           <Paragraph textAlign_tablet="left" margin="26px 0">
-            {yml.header.paragraph}{" "}
+            {cluster?.header?.paragraph || yml.header.paragraph}
           </Paragraph>
         </Div>
         <Div
@@ -99,11 +104,12 @@ const Tags = ({ pageContext, data, yml }) => {
             height="450px"
             width="100%"
             image={
-              yml.header.image &&
-              yml.header.image.childImageSharp.gatsbyImageData
+              cluster?.header?.image
+                ? cluster.header.image.childImageSharp.gatsbyImageData
+                : yml.header.image.childImageSharp.gatsbyImageData
             }
-            bgSize={`contain`}
-            alt={yml.header.alt}
+            bgSize="contain"
+            alt={cluster?.header.image_alt || yml.header.alt}
           />
         </Div>
       </GridContainerWithImage>
@@ -322,6 +328,36 @@ export const pageQuery = graphql`
             featured
             status
             cluster
+          }
+        }
+      }
+    }
+    allClusterYaml {
+      edges {
+        node {
+          seo_title
+          meta_info {
+            slug
+            title
+            visibility
+            description
+            image
+            keywords
+          }
+          header {
+            title
+            paragraph
+            image {
+              childImageSharp {
+                gatsbyImageData(
+                  layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                  width: 1500
+                  quality: 100
+                  placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                )
+              }
+            }
+            image_alt
           }
         }
       }

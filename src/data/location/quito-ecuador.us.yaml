@@ -14,6 +14,8 @@ meta_info:
 seo_title: "Coding Bootcamp Ecuador"
 header:
   tagline: "4Geeks Academy in Ecuador"
+  sub_header: "All programs are taught "
+  sub_header_highlighted: "Online, Hybrid or In-person."
   paragraph: "Lifetime Coding Mentorship, Career Support and a tech driven developer community. \\n The number one coding bootcamp in Ecuador with over 1,000 graduates"
   image: "../../../static/images/locations/ecuador-header.png"
   alt: ""
