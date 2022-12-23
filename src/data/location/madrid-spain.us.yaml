@@ -12,6 +12,8 @@ meta_info:
 seo_title: "Coding Bootcamp Madrid"
 header:
   tagline: "4Geeks Academy in Madrid" 
+  sub_header: "All programs are taught "
+  sub_header_highlighted: "Online, Hybrid or In-person."
   sub_heading: ""
   paragraph: ""
   image: "../../../static/images/locations/madrid-home.png"
