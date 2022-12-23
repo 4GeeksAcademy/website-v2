@@ -78,7 +78,7 @@ details:
         
       list:
         - label: "Duración"
-          content:  "16 semanas"
+          content:  "18 semanas"
           icon: "calendar"
         - label: "Clases"
           content: "3 Clases semanales"
@@ -95,7 +95,7 @@ details:
           icon: "contract-checked"
 
   heading: DETALLES DEL PROGRAMA
-  weeks: 16
+  weeks: 18
   facts:
     - label: "Duración"
       value: "16 semanas"

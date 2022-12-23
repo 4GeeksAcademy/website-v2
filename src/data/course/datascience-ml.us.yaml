@@ -71,7 +71,7 @@ details:
         Strategize and develop your A.I. following the lifecycle development from start to end, including deployment into production and maintenance with Privacy and Security.
       list:
         - label: "Duration"
-          content:  "16 weeks"
+          content:  "18 Weeks"
           icon: "calendar"
         - label: "Classes"
           content: "3 classes weekly"
@@ -87,7 +87,7 @@ details:
           content: "No previous experience needed"
           icon: "contract-checked"
   heading: Machine Learning Engineering Syllabus
-  weeks: 16
+  weeks: 18
   weeks_label: "weeks"
   facts:
     - label: "Duration"
