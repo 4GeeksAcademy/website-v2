@@ -21,7 +21,7 @@ const Layout = ({ children, seo, context, landingFooter, landingNavbar }) => {
             edges {
               node {
                 city
-                meta_info{
+                meta_info {
                   slug
                 }
                 fields {
@@ -147,7 +147,7 @@ const Layout = ({ children, seo, context, landingFooter, landingNavbar }) => {
 
         return (
           <>
-            <SEO {...seo} context={{...context, locations: myLocations}} />
+            <SEO {...seo} context={{ ...context, locations: myLocations }} />
             {landingNavbar === true ? null : (
               <>
                 <Navbar

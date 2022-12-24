@@ -29,7 +29,7 @@ const BlogLayout = ({ children, seo, context }) => {
             edges {
               node {
                 city
-                meta_info{
+                meta_info {
                   slug
                 }
                 fields {
@@ -175,7 +175,7 @@ const BlogLayout = ({ children, seo, context }) => {
                 </button>
               </div>
             )}
-            <SEO {...seo} context={{...context, locations: myLocations}} />
+            <SEO {...seo} context={{ ...context, locations: myLocations }} />
             {myNavbar && (
               <>
                 <Navbar
