@@ -52,25 +52,19 @@ const SEO = (props) => (
         RegExp("http").test(image || defaultImage) ? "" : siteUrl
       }${image || defaultImage}`;
 
-      console.log("translations");
-      console.log(translations);
-      console.log("props");
-      console.log(props);
-
       const currentLocation = locations.find(
         ({ node }) => node.meta_info.slug === context.slug
       );
 
       const getCountryLang = (lang) => {
         if (!currentLocation) return lang;
-        // if (currentLocation.node.fields.lang === lang)
         const countryLang =
           langCountries[currentLocation.node.country_shortname];
         if (lang === countryLang)
           return `${lang}-${currentLocation.node.country_shortname}`;
         if (langCountries[lang] === countryLang)
           return `${langCountries[lang]}-${currentLocation.node.country_shortname}`;
-        return langCountries[lang] ? `${langCountries[lang]}-${lang}` : lang;
+        return langCountries[lang] || lang;
       };
 
       const hreflangs =
@@ -83,11 +77,7 @@ const SEO = (props) => (
                 path: translations[t],
                 countryLang: getCountryLang(t),
               }));
-      console.log("hreflangs");
-      console.log(hreflangs);
-      console.log(
-        locations.find(({ node }) => node.meta_info.slug === context.slug)
-      );
+
       return (
         <>
           <Helmet title={title || defaultTitle} titleTemplate={titleTemplate}>
@@ -222,6 +212,13 @@ const langCountries = {
   mx: "es",
   es: "es",
   ve: "es",
+  pe: "es",
+  pa: "es",
+  ar: "es",
+  bo: "es",
+  uy: "es",
+  ec: "es",
+  cr: "es",
   co: "es",
   fr: "fr",
   it: "it",
