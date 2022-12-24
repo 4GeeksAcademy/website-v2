@@ -159,7 +159,7 @@ details:
       step: 4
     - module_name: "Despliega"
       title: "Machine Learning en producción"
-      description: "Uno de los aspectos más importantes al desarrollar una Inteligencia Artificial es entender cómo preparar, desplegar y mantener una solución en un ambiente de produccíon. Te llevaremos de la mano durante todo el ciclo de desarrollo de software detrás de la solución. Machine Learning Operations (MLOps), así como privacidad, seguridad y ética. Tu proyecto final será desplegar tu aplicaicón de Machine Learning en producción."
+      description: "Uno de los aspectos más importantes al desarrollar una Inteligencia Artificial es entender cómo preparar, desplegar y mantener una solución en un ambiente de producción. Te llevaremos de la mano durante todo el ciclo de desarrollo de software detrás de la solución. Machine Learning Operations (MLOps), así como privacidad, seguridad y ética. Tu proyecto final será desplegar tu aplicaicón de Machine Learning en producción."
       projects: "Construyendo arquitecturas de datos, desplegando I.A. en produccion localmente y en la nube, monitoreando y manteniendo los modelos."
       slug: "quality-deploy"
       duration: "1 week"
