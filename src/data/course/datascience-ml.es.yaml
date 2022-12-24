@@ -145,7 +145,7 @@ details:
       step: 2
     - module_name: "Manipula"
       title: "Manipulación de datos con Python"
-      description: "Una vez que tus datos han sido recolectados es necesario entender su estructura, profundidad y depurar errores. Empezaremos enseñándote las técnicas de visualización de datos para entender la muestra y desarrollar las diferentes estrategias para limiar y mejorar tu dataset: Ingeniería de Features, Outliers, Datos Faltántes, Feature encoding, Feature Scaling. \n Aprende a desarrollar reportes en Looker (Google DataStudio) con gráficos avanzados y KPI's en una de las herramientas de datawarehousing más utilizadas del mercado."
+      description: "Una vez que tus datos han sido recolectados es necesario entender su estructura, profundidad y depurar errores. Empezaremos enseñándote las técnicas de visualización de datos para entender la muestra y desarrollar las diferentes estrategias para limpiar y mejorar tu dataset: Ingeniería de Features, Outliers, Datos Faltántes, Feature encoding, Feature Scaling. \n Aprende a desarrollar reportes en Looker (Google DataStudio) con gráficos avanzados y KPI's en una de las herramientas de datawarehousing más utilizadas del mercado."
       projects: "Explora el dataset de propiedades de Airbnb y publica un reporte en la nube de Google DataStudio."
       slug: "data-analysis"
       duration: "3 sem"
