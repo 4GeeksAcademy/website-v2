@@ -1,7 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import PropTypes from "prop-types";
-import { StaticQuery, graphql } from "gatsby";
+import { StaticQuery, graphql, } from "gatsby";
 import SchemaOrg from "./SchemaOrg.js";
 
 const getCanonical = (path) => {
@@ -46,7 +46,7 @@ const SEO = (props) => (
         context,
         visibility,
       } = props;
-      const { lang, type, pagePath, translations } = context;
+      const { lang, type, pagePath, translations, locations } = context;
       const url = `${siteUrl}${pagePath || "/"}`;
       const previewImage = `${
         RegExp("http").test(image || defaultImage) ? "" : siteUrl
@@ -57,14 +57,26 @@ const SEO = (props) => (
       console.log("props");
       console.log(props);
 
+      const currentLocation = locations.find(({ node }) => node.meta_info.slug === context.slug);
+
+      const getCountryLang = (lang) => {
+        if (!currentLocation) return lang;
+        // if (currentLocation.node.fields.lang === lang)
+        const countryLang = langCountries[currentLocation.node.country_shortname];
+        if (lang === countryLang) return `${lang}-${currentLocation.node.country_shortname}`;
+        if (langCountries[lang] === countryLang) return `${langCountries[lang]}-${currentLocation.node.country_shortname}`;
+        return langCountries[lang] ? `${langCountries[lang]}-${lang}` : lang
+      };
+
       const hreflangs =
         translations == undefined
           ? []
           : Object.keys(translations)
               .filter((t) => t != lang)
-              .map((t) => ({ lang: t, path: translations[t] }));
+              .map((t) => ({ lang: t, path: translations[t], countryLang: getCountryLang(t) }));
       console.log("hreflangs");
       console.log(hreflangs);
+      console.log(locations.find(({ node }) => node.meta_info.slug === context.slug));
       return (
         <>
           <Helmet title={title || defaultTitle} titleTemplate={titleTemplate}>
@@ -78,7 +90,7 @@ const SEO = (props) => (
                 rel="alternate"
                 hrefLang={
                   type === "location"
-                    ? `${langCountries[h.lang]}-${h.lang}`
+                    ? h.countryLang
                     : langCountries[h.lang]
                 }
                 href={`${siteUrl}${getCanonical(h.path)}`}
@@ -168,7 +180,7 @@ SEO.defaultProps = {
 };
 
 const query = graphql`
-  query SEO {
+  query SEO{
     site {
       siteMetadata {
         defaultTitle

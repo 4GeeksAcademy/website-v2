@@ -358,8 +358,6 @@ const createEntityPagesfromYml = async (
           l.node.fields.file_name.includes(node.fields.file_name.slice(0, -2))
         ),
       });
-      console.log(node.fields.pagePath);
-      console.log(translations);
     }
 
     createPage({
