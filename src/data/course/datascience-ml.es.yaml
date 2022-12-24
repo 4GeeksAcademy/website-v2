@@ -153,7 +153,7 @@ details:
     - module_name: "Modela"
       title: "Machine Learning Práctico"
       description: "Uno a uno iremos revisando los algoritmos y modelos predictivos mas utilizados en la industria: Supervisados y No Supervisados. Cada modelo vendrá con un caso práctico para ser solucionado utilizando Python: Regresión Lineal, Regresión Logística, Árboles de Decisión, Random Forest, Bayes, Support Vector Machine, NLP, KNN, Time Series, NN y otros."
-      projects: "Predice el costo del seguro médico, Clasifica pacientes si tienen diabetes o no, Análisis de sentimiento de reviews en Google Play Store, Detecta Email Spam, Agrupa casas basado en coordenadas e ingreso medio, Detecta anomalias en el uso de un CPU, Clasifica Imágenes, etc."
+      projects: "Predice el costo del seguro médico, Clasifica pacientes si tienen diabetes o no, Análisis de sentimiento de reviews en Google Play Store, Detecta Email Spam, Agrupa casos basado en coordenadas e ingreso medio, Detecta anomalias en el uso de un CPU, Clasifica Imágenes, etc."
       slug: "machine-learning"
       duration: "4 sem"
       step: 4
