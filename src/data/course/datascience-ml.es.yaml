@@ -166,15 +166,15 @@ details:
       step: 1
     - module_name: "Projecto Final"
       title: "Elige un problema y resuelvelo con Machine Learning"
-      description: "Trabajarás en equipo para escojer un problema real, recolectar los datos necesarios para resolverlo con una prediccion, realizar un análisis exploratorio con varias visualizaciones que permitan entender los datos, limpiar el dataset para poder utilizarlo correctamente y seleccionar un par de modelos para realizar una prediccion. Luego evaluarás la effectividad de tus modelos utilizando las técnicas vistas durante el curso. Por último, pondrás tu modelo en produccion utilizando Streamlit o Google DataStudio."
+      description: "Trabajarás en equipo para escojer un problema real, recolectar los datos necesarios para resolverlo con una prediccion, realizar un análisis exploratorio con varias visualizaciones que permitan entender los datos, limpiar el dataset para poder utilizarlo correctamente y seleccionar un par de modelos para realizar una prediccion. Luego evaluarás la efectividad de tus modelos utilizando las técnicas vistas durante el curso. Por último, pondrás tu modelo en produccion utilizando Streamlit o Google DataStudio."
       projects: "Construyendo arquitecturas de datos, desplegando la aplicación de Machine Learning localmente y en la nube, monitoreando y manteniendo los modelos."
       slug: "quality-deploy"
       duration: "2 sem"
       step: 1.9
     - module_name: "DE POR VIDA"
       title: "De por vida"
-      description: "Sigue recibiendo la ayuda de la academia de por vida, accesso a los contenidos, soporte professional (career support). Recibe incluso ayuda durante el inicio de tu nuevo trabajo, nunca más estarás sólo."
-      projects: "Consegurás trabajo, empezarás a ganar más dinero pero continuarás aprendiendo hasta convertirte en Ingeniero Senior en Inteligencia Artificial."
+      description: "Sigue recibiendo la ayuda de la academia de por vida, acceso a los contenidos, soporte profesional (career support). Recibe incluso ayuda durante el inicio de tu nuevo trabajo, nunca más estarás sólo."
+      projects: "Conseguirás trabajo, empezarás a ganar más dinero pero continuarás aprendiendo hasta convertirte en Ingeniero Senior en Inteligencia Artificial."
       slug: "lifelong-learning"
       duration: "para siempre"
       step: 0.1
