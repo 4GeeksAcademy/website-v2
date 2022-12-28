@@ -1,15 +1,15 @@
 meta_info:
-  slug: clases-de-programacion-santiago # <--- URL 4geeksacademy.com/us/landing/example
+  slug: alianza-banco-ripley # <--- URL 4geeksacademy.com/us/landing/example
 
   # This will show on social media when shared
-  title: "Clases de programación en Santiago de Chile, aprende a programar en 9 o 16 sem y consigue trabajo como programador."
-  description: "El más galardonado curso de programacion en Santiago, Chile. Con 4Geeks te convertiras en programador en unos pocos meses."
+  title: "Clases de programación en Santiago de Chile, aprende a programar en 9 o 18 sem y consigue trabajo como programador."
+  description: "El más galardonado curso de programacion en Santiago, Chile. Con 4Geeks te convertirás en programador en unos pocos meses."
   image: "/images/bg/main-bg.jpg"
-  keywords: "Clase de programación, Clase de python, clase de javascript, Clase de informática, Coding Bootcamp, 4Geeks Academy"
+  keywords: "Bootcamp de programación, Bootcamp de python, Bootcamp de javascript, Bootcamp de informática, Bootcamp, 4Geeks Academy"
 
   template: "landing_nonav" # <--- choose your landing template
   redirects: # <--- URL redirections to avoid 404 errors
-    ["/landing/clases-de-programacion-santiago"]
+    ["/landing/alianza-banco-ripley"]
 
   # Set a particular course or location to the landing page
   # this UTM fields will be also included in the CRM contact
@@ -40,7 +40,7 @@ apply_schollarship: # form that is displayed at the end of the landing
 # jumbotron on the top (cannot be commented out)
 header_data:
   background: "#FFF1D1"
-  tagline: Clases de Programación Web
+  tagline: Bootcamp de Programación Web
   sub_heading: "Aprende a programar desde cero y consigue trabajo como Full Stack Developer Junior"
   badge: "../../../static/images/badges/switchup.png"
   image_filter: brightness(0.3)
@@ -141,7 +141,7 @@ components:
         <p>GeekForce es el proceso colectivo de apoyo profesional del Bootcamp. La 'fuerza' significa empoderamiento profesional y es una membresía de por vida. Brinda asistencia para la colocación laboral del estudiante y para que se prepare para conseguir un trabajo en tecnología.</p>
   - name: python_y_javascript
     position: 3
-    layout: two_column_right
+    layout: two_column_left
     background: "veryLightBlue2" # Name of the color(from components/Styling/index.js) or color code ex: #C9F9F9
     image:
       src: "/images/why-4geeks/python-image.png"
@@ -166,9 +166,6 @@ choose_your_program:
     icon: "fullstack"
     description: |
       De cero a tener tu primer trabajo como Full Stack Developer, con una duración de 18 semanas, con clases 3 veces por semana, compatible con horario laboral o de estudios. 
-
-      Precio: 3.450.000 CLP
-    
     text_link: Obtener más información
     link: "#top" # moves to start position
     
@@ -177,9 +174,5 @@ choose_your_program:
     icon: "fullstack"
     description: |
       Programa intensivo de 9 semanas, con clases de lunes a viernes durante todo el día, para vivir una experiencia inmersiva en el mundo del código.
-
-      Precio: 3.800.000 CLP
-      
     text_link: Obtener más información
     link: "#top"
-
