@@ -21,12 +21,16 @@ const Layout = ({ children, seo, context, landingFooter, landingNavbar }) => {
             edges {
               node {
                 city
+                meta_info {
+                  slug
+                }
                 fields {
                   lang
                 }
                 button {
                   apply_button_text
                 }
+                country_shortname
                 custom_bar {
                   active
                   message
@@ -143,7 +147,7 @@ const Layout = ({ children, seo, context, landingFooter, landingNavbar }) => {
 
         return (
           <>
-            <SEO {...seo} context={context} />
+            <SEO {...seo} context={{ ...context, locations: myLocations }} />
             {landingNavbar === true ? null : (
               <>
                 <Navbar

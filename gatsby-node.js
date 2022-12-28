@@ -341,8 +341,10 @@ const createEntityPagesfromYml = async (
           }
         }`);
   if (result.errors) throw new Error(result.errors);
+  let translations;
+  if (entity !== "Location")
+    translations = buildTranslations(result.data[`all${entity}Yaml`]);
 
-  const translations = buildTranslations(result.data[`all${entity}Yaml`]);
   result.data[`all${entity}Yaml`].edges.forEach(({ node }) => {
     logger.debug(
       `Creating entity ${entity} ${node.fields.pagePath} with template ${
@@ -350,6 +352,14 @@ const createEntityPagesfromYml = async (
       }.js`
     );
     const _extraContext = extraContext ? extraContext(node) : {};
+    if (entity === "Location") {
+      translations = buildTranslations({
+        edges: result.data[`all${entity}Yaml`].edges.filter((l) =>
+          l.node.fields.file_name.includes(node.fields.file_name.slice(0, -2))
+        ),
+      });
+    }
+
     createPage({
       path: node.fields.pagePath,
       component: path.resolve(
