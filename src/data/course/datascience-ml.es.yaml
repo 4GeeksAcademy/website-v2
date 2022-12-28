@@ -131,7 +131,7 @@ details:
       step: 2
     - module_name: "Fundamentos"
       title: "Estadística y Algebra Lineal con Python"
-      description: "Siempre con un enfoque muy práctico y programando en Python, vamos a aplicar los conceptos de Algebra Lineal más utilizados en Data Science y Machine Learning. Matrices y Vectores, Funciones F(x) y relaciones entre variables. También programaremos en Python los conceptos probabilisticos más utilizados: tendencias centrales, desviación estándar, medias y medianas. Por último, calcularemos probabilidades de que un evento o dato ocurra, una habilidad muy importante para poder desarrollar modelos y predicciones."
+      description: "Siempre con un enfoque muy práctico y programando en Python, vamos a aplicar los conceptos de Algebra Lineal más utilizados en Data Science y Machine Learning. Matrices y Vectores, Funciones F(x) y relaciones entre variables. También programaremos en Python los conceptos probabilísticos más utilizados: tendencias centrales, desviación estándar, medias y medianas. Por último, calcularemos probabilidades de que un evento o dato ocurra, una habilidad muy importante para poder desarrollar modelos y predicciones."
       projects: "Para aplicar lo aprendido trabajaremos con casos reales enfocados en el mundo laboral."
       slug: "datascience-fundamentals"
       duration: "2 sem"
