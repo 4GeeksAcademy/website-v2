@@ -173,7 +173,7 @@ details:
       step: 1.9
     - module_name: "DE POR VIDA"
       title: "De por vida"
-      description: "Sigue recibiendo la ayuda de la academia de por vida, accesso a los contenidos, soporte professional (career support). Recibe incluso ayuda durante el inicio de tu nuevo trabajo, nunca más estarás sólo."
+      description: "Sigue recibiendo la ayuda de la academia de por vida, acceso a los contenidos, soporte profesional (career support). Recibe incluso ayuda durante el inicio de tu nuevo trabajo, nunca más estarás sólo."
       projects: "Conseguirás trabajo, empezarás a ganar más dinero pero continuarás aprendiendo hasta convertirte en Ingeniero Senior en Inteligencia Artificial."
       slug: "lifelong-learning"
       duration: "para siempre"
