@@ -25,14 +25,13 @@ export const save_form = async (
   };
 
   const getReferralKey = () => {
-    let referral_key = formData.referral_code || session.referral_code;
+    let referral_key = formData.referral_code || session.utm?.referral_code;
     if (!referral_key) {
-      referral_key = formData.referral_key || session.referral_key;
+      referral_key = formData.referral_key || session.utm?.referral_key;
     }
     return referral_key;
   }
-  console.log("formData", formData);
-  console.log("session", session);
+
   const resp = await fetch(`${getEnvironmentAPI()}/marketing/lead`, {
     headers: new Headers({ "content-type": "application/json" }),
     method: "POST",
