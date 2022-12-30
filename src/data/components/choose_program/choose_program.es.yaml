@@ -11,12 +11,12 @@ programs:
     location_bc_slug: null
     schedule: "Horario Part-Time únicamente"
     link: "/es/coding-bootcamps/ingenieria-de-software-programacion"
-  - text: "Machine Learning Engineering"
-    bc_slug: "machine-learning-engineering"
+  - text: "Datascience - Machine Learning"
+    bc_slug: "datascience-ml"
+    location_bc_slug: null
+    schedule: "Horario Part-Time"
     visibility: "visible"
-    location_bc_slug: online
-    schedule: "Part-Time - Online"
-    link: "/es/coding-bootcamps/curso-inteligencia-artificial"
+    link: "/us/coding-bootcamps/datascience-machine-learning"
   - text: "Node.js Desarrollo Backend"
     bc_slug: "node-js"
     location_bc_slug: null
