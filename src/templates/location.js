@@ -163,9 +163,11 @@ const Location = ({ data, pageContext, yml }) => {
                     target="_blank"
                     rel="noopener noreferrer nofollow"
                   >
-                  {yml.info_box.whatsapp}
-                </a>
-                ) : yml.phone}
+                    {yml.info_box.whatsapp}
+                  </a>
+                ) : (
+                  yml.phone
+                )}
               </Paragraph>
             )}
             {yml.info_box.email && (
