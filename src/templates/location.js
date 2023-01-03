@@ -78,7 +78,7 @@ const Location = ({ data, pageContext, yml }) => {
           flexDirection="column"
           justifyContent_tablet="start"
           padding_tablet="70px 0 0 0"
-          padding="0 25px"
+          padding={isCustomBarActive(session) ? "70px 25px 0 25px" : "0 25px"}
           gridColumn_tablet="1 / 7"
         >
           <H1 type="h1" textAlign="left" margin="0 0 11px 0" color="#606060">

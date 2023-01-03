@@ -94,6 +94,21 @@ const MenuItem = styled.li`
   }
 `;
 
+const parsedUrl =
+    typeof window !== "undefined" ? new URL(window.location.href) : false;
+export const isTestMode = parsedUrl
+  ? parsedUrl.searchParams.get("test") === "true"
+  : false;
+
+//This Function prevents troubles when component renders during cypress test process
+export const isDevelopment = () => {
+  if (!process.env.NODE_ENV || process.env.NODE_ENV === "development") {
+    return true;
+    // dev code
+  }
+  return false;
+};
+
 export const Navbar = ({
   lang,
   currentURL,
@@ -111,15 +126,6 @@ export const Navbar = ({
     hovered: false,
     itemIndex: null,
   });
-
-  //This Function prevents troubles when component renders during cypress test process
-  const isDevelopment = () => {
-    if (!process.env.NODE_ENV || process.env.NODE_ENV === "development") {
-      return true;
-      // dev code
-    }
-    return false;
-  };
 
   let city = session && session.location ? session.location.city : [];
   let currentLocation = locationCity ? locationCity : [];
@@ -170,11 +176,7 @@ export const Navbar = ({
       }
     }
   `);
-  const parsedUrl =
-    typeof window !== "undefined" ? new URL(window.location.href) : false;
-  const isTestMode = parsedUrl
-    ? parsedUrl.searchParams.get("test") === "true"
-    : false;
+  
   const isContentBarActive =
     (contentBar.active && isTestMode) ||
     (contentBar.active && !isDevelopment());
