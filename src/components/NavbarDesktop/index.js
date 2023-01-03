@@ -95,7 +95,7 @@ const MenuItem = styled.li`
 `;
 
 const parsedUrl =
-    typeof window !== "undefined" ? new URL(window.location.href) : false;
+  typeof window !== "undefined" ? new URL(window.location.href) : false;
 export const isTestMode = parsedUrl
   ? parsedUrl.searchParams.get("test") === "true"
   : false;
@@ -176,7 +176,7 @@ export const Navbar = ({
       }
     }
   `);
-  
+
   const isContentBarActive =
     (contentBar.active && isTestMode) ||
     (contentBar.active && !isDevelopment());

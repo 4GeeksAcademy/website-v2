@@ -136,7 +136,9 @@ const Home = (props) => {
       <Div
         display="block"
         margin="72px 0 72px 0"
-        margin_tablet={isContentBarActive ? "120px 0 108px 0" : "72px 0 108px 0"}
+        margin_tablet={
+          isContentBarActive ? "120px 0 108px 0" : "72px 0 108px 0"
+        }
       >
         <GridContainerWithImage
           padding="30px 0 0 0"
