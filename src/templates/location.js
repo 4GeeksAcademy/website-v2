@@ -140,7 +140,7 @@ const Location = ({ data, pageContext, yml }) => {
             margin_tablet="0"
             margin="0 0 20px 0"
           >
-            {yml.phone && (
+            {(yml.phone || yml.info_box.whatsapp) && (
               <Paragraph
                 textAlign_tablet="left"
                 margin="15px 10px 0 0"
@@ -157,7 +157,15 @@ const Location = ({ data, pageContext, yml }) => {
                   icon="phone"
                   style={{ marginRight: "10px", flexShrink: 0 }}
                 />
-                {yml.phone}
+                {yml.info_box.whatsapp ? (
+                  <a
+                    href={yml.info_box.whatsapp_link}
+                    target="_blank"
+                    rel="noopener noreferrer nofollow"
+                  >
+                  {yml.info_box.whatsapp}
+                </a>
+                ) : yml.phone}
               </Paragraph>
             )}
             {yml.info_box.email && (
