@@ -135,7 +135,7 @@ const Home = (props) => {
       </Div>
       <Div
         display="block"
-        margin={isContentBarActive ? "110px 0 72px 0" :"72px 0 72px 0"}
+        margin={isContentBarActive ? "110px 0 72px 0" : "72px 0 72px 0"}
         margin_tablet={
           isContentBarActive ? "120px 0 108px 0" : "72px 0 108px 0"
         }
