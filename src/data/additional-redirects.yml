@@ -139,3 +139,8 @@ redirects:
     toPath: "/es/aprender-a-programar/disyuntiva-para-futuros-programadores-universidad-o-bootcamp"
     #redirectInBrowser: true
     isPermanent: true # if permanent google will erase the original url from its results 
+
+  - fromPath: "/us/aprender-a-programar/aprender-a-programar-desde-cero"
+    toPath: "/es/aprender-a-programar/aprender-a-programar-desde-cero"
+    #redirectInBrowser: true
+    isPermanent: true # if permanent google will erase the original url from its results 
