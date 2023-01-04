@@ -64,7 +64,7 @@ details:
       Develop distributed highly scalable cloud applications used only by Fortune 500. Land yourself a real software engineering job or create the next tech unicorn."
       list:
         - label: "Duration"
-          content:  "16 Weeks"
+          content:  "18 Weeks"
           icon: "calendar"
         - label: "Classes"
           content: "Online, 3 Classes weekly"
@@ -80,7 +80,7 @@ details:
           icon: "contract-checked"
           
   heading: Software Engineering Syllabus
-  weeks: 16
+  weeks: 18
   sub_heading: "Master exactly what is required to be a real Software Engineer."
   left_labels:
     description: "DESCRIPTION:"

@@ -21,6 +21,6 @@ chart_section:
       color: '#FFC718'
       description: 'de nuestros estudiantes son parte de la comunidad afrodescendiente'
 button:
-  button_text: See plans and prices
+  button_text: Ver planes y precios
   button_link: "/es/financiacion"
 loading: Cargando Recursos...

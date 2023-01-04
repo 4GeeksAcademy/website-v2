@@ -32,8 +32,8 @@ cohorts:
         program_label: program
         location_label: location
         duration_label: duration
-        duration_weeks: 16 weeks
-        duration_part_time: 16 weeks
+        duration_weeks: 18 Weeks
+        duration_part_time: 18 Weeks
         duration_full_time: 9 weeks
         button_text: apply now
         button_link: "/us/apply"

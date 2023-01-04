@@ -70,8 +70,6 @@ const SVGBubblesRight = () => (
 );
 
 const Home = (props) => {
-  console.log("process.env.GOOGLE_CAPTCHA_KEY");
-  console.log(process.env.GOOGLE_CAPTCHA_KEY);
   const { data, pageContext, yml } = props;
 
   const hiring = data.allPartnerYaml.edges[0].node;
@@ -90,6 +88,15 @@ const Home = (props) => {
       !RegExp("/es/inicio").test(window.location.href)
     )
       navigate("/es/inicio");
+
+    if (session?.language && window && window.location.pathname === "/")
+      navigate(
+        `${
+          props.pageContext.translations[
+            session.language === "en" ? "us" : session.language
+          ]
+        }`
+      );
 
     // It returns the 4Geeks Academy campus closest to the user's country
     setCity(session.location ? session.location.city : "");

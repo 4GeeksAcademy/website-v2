@@ -20,6 +20,7 @@ import { Circle } from "../components/BackgroundDrawing";
 import Modal from "../components/Modal";
 import { SessionContext } from "../session";
 import LeadForm from "../components/LeadForm/index.js";
+import PartnersCarousel from "../components/PartnersCarousel";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 function rand() {
@@ -105,7 +106,7 @@ const Partners = (props) => {
           />
         </Div>
       </GridContainer>
-
+      <PartnersCarousel data={partnersData.partners_carousel} />
       <GridContainer
         // padding="10rem 0 4rem"
         // padding_tablet="10rem 0 4rem"
@@ -280,7 +281,7 @@ const Partners = (props) => {
                 >
                   <Div
                     flexDirection="column"
-                    alignSelf="center"
+                    // alignSelf="center"
                     alignSelf="flex-start"
                     padding="22px 10px 20px 0"
                   >
@@ -782,6 +783,27 @@ export const query = graphql`
                   )
                 }
               }
+            }
+          }
+          partners_carousel {
+            title
+            see_full
+            partners {
+              fist_name
+              last_name
+              sub_header
+              alt
+              image {
+                childImageSharp {
+                  gatsbyImageData(
+                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                    quality: 100
+                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                  )
+                }
+              }
+              paragraph
+              linkedin
             }
           }
         }

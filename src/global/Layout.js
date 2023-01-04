@@ -33,12 +33,16 @@ const Layout = ({ children, seo, context }) => {
             edges {
               node {
                 city
+                meta_info {
+                  slug
+                }
                 fields {
                   lang
                 }
                 button {
                   apply_button_text
                 }
+                country_shortname
                 custom_bar {
                   active
                   message
@@ -93,6 +97,7 @@ const Layout = ({ children, seo, context }) => {
                     title
                     link
                     paragraph
+                    width
                     links {
                       title
                       level
@@ -166,7 +171,7 @@ const Layout = ({ children, seo, context }) => {
                 </button>
               </div>
             )}
-            <SEO {...seo} context={context} />
+            <SEO {...seo} context={{ ...context, locations: myLocations }} />
             <Navbar
               locationCity={myLocations}
               currentURL={context.pagePath}

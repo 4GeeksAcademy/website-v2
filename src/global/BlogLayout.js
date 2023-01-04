@@ -29,12 +29,16 @@ const BlogLayout = ({ children, seo, context }) => {
             edges {
               node {
                 city
+                meta_info {
+                  slug
+                }
                 fields {
                   lang
                 }
                 button {
                   apply_button_text
                 }
+                country_shortname
                 custom_bar {
                   active
                   message
@@ -99,6 +103,7 @@ const BlogLayout = ({ children, seo, context }) => {
                     icon
                     title
                     paragraph
+                    width
                     links {
                       title
                       level
@@ -170,7 +175,7 @@ const BlogLayout = ({ children, seo, context }) => {
                 </button>
               </div>
             )}
-            <SEO {...seo} context={context} />
+            <SEO {...seo} context={{ ...context, locations: myLocations }} />
             {myNavbar && (
               <>
                 <Navbar

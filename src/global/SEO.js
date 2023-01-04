@@ -46,18 +46,38 @@ const SEO = (props) => (
         context,
         visibility,
       } = props;
-      const { lang, type, pagePath, translations } = context;
+      const { lang, type, pagePath, translations, locations } = context;
       const url = `${siteUrl}${pagePath || "/"}`;
       const previewImage = `${
         RegExp("http").test(image || defaultImage) ? "" : siteUrl
       }${image || defaultImage}`;
+
+      const currentLocation = locations.find(
+        ({ node }) => node.meta_info.slug === context.slug
+      );
+
+      const getCountryLang = (lang) => {
+        if (!currentLocation) return lang;
+        const countryLang =
+          langCountries[currentLocation.node.country_shortname];
+        if (lang === countryLang)
+          return `${lang}-${currentLocation.node.country_shortname}`;
+        if (langCountries[lang] === countryLang)
+          return `${langCountries[lang]}-${currentLocation.node.country_shortname}`;
+        return langCountries[lang] || lang;
+      };
 
       const hreflangs =
         translations == undefined
           ? []
           : Object.keys(translations)
               .filter((t) => t != lang)
-              .map((t) => ({ lang: t, path: translations[t] }));
+              .map((t) => ({
+                lang: t,
+                path: translations[t],
+                countryLang: getCountryLang(t),
+              }));
+
       return (
         <>
           <Helmet title={title || defaultTitle} titleTemplate={titleTemplate}>
@@ -69,7 +89,9 @@ const SEO = (props) => (
             {hreflangs.map((h) => (
               <link
                 rel="alternate"
-                hreflang={langCountries[h.lang]}
+                hrefLang={
+                  type === "location" ? h.countryLang : langCountries[h.lang]
+                }
                 href={`${siteUrl}${getCanonical(h.path)}`}
               />
             ))}
@@ -190,6 +212,13 @@ const langCountries = {
   mx: "es",
   es: "es",
   ve: "es",
+  pe: "es",
+  pa: "es",
+  ar: "es",
+  bo: "es",
+  uy: "es",
+  ec: "es",
+  cr: "es",
   co: "es",
   fr: "fr",
   it: "it",

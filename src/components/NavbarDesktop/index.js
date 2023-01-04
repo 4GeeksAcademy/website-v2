@@ -366,6 +366,7 @@ export const MegaMenu = ({ status, setStatus, menu }) => {
               }));
             }, 300);
           }}
+          width={menu[status.itemIndex].sub_menu.width}
           display="none"
           maxHeight="500px"
           background="white"

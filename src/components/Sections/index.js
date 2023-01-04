@@ -173,6 +173,7 @@ export const Div = styled.div`
     props.isActive ? props.boxShadowActive : props.boxShadow};
   flex-wrap: ${(props) => props.flexWrap || "nowrap"};
   flex-grow: ${(props) => props.flexGrow || "0"};
+  flex-shrink: ${(props) => props.flexShrink};
   align-content: ${(props) => props.alignContent};
   align: ${(props) => props.align};
   cursor: ${(props) => props.cursor};
