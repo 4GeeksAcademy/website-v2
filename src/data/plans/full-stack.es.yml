@@ -90,9 +90,11 @@ full_time:
     recomended: true
     scholarship: "Paga al contado"
     payment_time: "Y obtén un descuento"
-    price: "2.760.000 CLP"
+    price: "3.800.000* CLP"
     bullets:
       - "Paga con transferencia bancaria, tarjeta de crédito o débito"    
+      - "*Precio sin descuento aplicado"
+      - "*Precio varía según modalidad escogida y membresías incluidas"
     icons: 
       - "/images/visa-mastercard.png"    
 
@@ -101,10 +103,10 @@ full_time:
     recomended: false
     scholarship: "Cuotas desde"
     payment_time: ""
-    price: "~135.240 CLP"
+    price: "~184.000 CLP"
     bullets:
-      - "Financimiento a tu medida, con o sin intereses, desde 6 hasta 18 meses"  
-      - "Se paga matrícula " 
+      - "Financimiento a tu medida desde 6 hasta 18 meses"  
+      - "Se debe pagar un anticipo correspondiente al 20% del valor del programa" 
     icons: 
       - "/images/flevo.png"
                        
@@ -118,6 +120,45 @@ full_time:
       - "*Pagas el 16% de tu salario cuando consigas empleo hasta pagarlo todo"
       - "Sólo si consigues trabajo en el área de técnología" 
     icons: 
+    - "/images/lumni.png"
+
+  - slug: 'venezuela-scholarship-pt'
+    academies: ['caracas-venezuela']
+    recomended: true
+    scholarship: "Paga de Contado"
+    payment_time: "Descuento especial por pago temprano"
+    price: "$1300*"
+    bullets: 
+      - "Ahorra $500 de la matrícula"
+      - "Al menos 20 días antes del inicio del programa"
+      - "Paga con transferencia bancaria, tarjeta de crédito o débito"
+    # icons: 
+    #   - "/images/landing/uwm_pantone_2021_2.png"
+
+  - slug: 'venezuela-financed-pt'
+    academies: ['caracas-venezuela']
+    recomended: false
+    scholarship: "Financiamiento"
+    payment_time: "Hasta 12 meses"
+    price: "~$200/mes"
+    bullets: 
+      - "Paga en dos, tres o hasta 12 partes."
+      - "Asiste a una entrevista con Flevo y obtén financiamiento rápidamente."
+      - "El valor del programa se modifica con la modalidad de financiamiento."
+    icons: 
+      - "/images/flevo.png"
+
+  - slug: 'venezuela-laptop-pt'
+    academies: ['caracas-venezuela']
+    recomended: false
+    scholarship: "Incluye laptop para programar"
+    payment_time: "Oferta especial con equipo incluido"
+    price: "~$1600"
+    bullets: 
+      - "El equipo es totalmente tuyo para lo que requieras"
+      - "Paga temprano y ahorra hasta $500"
+    # icons: 
+    #   - "/images/laptp.jpg"
 
 part_time:
   - slug: 'usa-clark-scholarship-pt'
@@ -284,15 +325,16 @@ part_time:
     icons: 
       - "/images/stepex.png"     
 
-  - slug: 'chile-contado-fs-pt'
+  - slug: 'chile-geekforce-fs-pt'
     academies: ['santiago-chile']
     recomended: true
     scholarship: "Paga al contado"
     payment_time: "Y obtén un descuento"
-    price: "2.415.000 CLP*"
+    price: "3.450.000 CLP*"
     bullets:
       - "Paga con transferencia bancaria, tarjeta de crédito o débito"    
       - "*Precio sin descuento aplicado"
+      - "Tendrás acceso a todo el programa y a todo el Sistema de Apoyo Laboral de 4Geeks"
     icons: 
       - "/images/visa-mastercard.png"   
 
@@ -301,22 +343,22 @@ part_time:
     recomended: false
     scholarship: "Cuotas desde"
     payment_time: ""
-    price: "~118.335 CLP"
+    price: "~168.000 CLP"
     bullets:
-      - "Financiamiento a tu medida, con o sin intereses, desde 6 hasta 18 meses"  
-      - "Se paga matrícula" 
+      - "Financiamiento a tu medida desde 6 hasta 18 meses"  
+      - "Se debe pagar un anticipo correspondiente al 20% del valor del programa" 
     icons: 
       - "/images/flevo.png"
 
-  - slug: 'chile-fraccionado-fs-pt'
+  - slug: 'chile-solo-fs-pt'
     academies: ['santiago-chile']
     recomended: false
-    scholarship: "Pago fraccionado"
-    payment_time: "Sin interés"
-    price: "2.415.000 CLP"
+    scholarship: "Programa"
+    payment_time: "Full Stack Solamente"
+    price: "2.700.000 CLP"
     bullets:
-      - "Paga con transferencia bancaria" 
-      - "Hasta 3 cuotas"   
+      - "Tendrás acceso total y para siempre al programa Full-Stack"
+      - "No incluye acceso a todo el Sistema de Apoyo Laboral de 4Geeks"
     icons: 
 
   - slug: 'latam-trabajo-garantizado-fs-pt'
@@ -358,4 +400,40 @@ part_time:
     icons: 
       - "/images/bcas.png" 
 
- 
+  - slug: 'venezuela-scholarship-pt'
+    academies: ['caracas-venezuela']
+    recomended: true
+    scholarship: "Paga de Contado"
+    payment_time: "Descuento especial por pago temprano"
+    price: "$1300*"
+    bullets: 
+      - "Ahorra $500 de la matrícula"
+      - "Al menos 20 días antes del inicio del programa"
+      - "Paga con transferencia bancaria, tarjeta de crédito o débito"
+    # icons: 
+    #   - "/images/landing/uwm_pantone_2021_2.png"
+
+  - slug: 'venezuela-financed-pt'
+    academies: ['caracas-venezuela']
+    recomended: false
+    scholarship: "Financiamiento"
+    payment_time: "Hasta 12 meses"
+    price: "~$200/mes"
+    bullets: 
+      - "Paga en dos, tres o hasta 12 partes."
+      - "Asiste a una entrevista con Flevo y obtén financiamiento rápidamente."
+      - "El valor del programa se modifica con la modalidad de financiamiento."
+    icons: 
+      - "/images/flevo.png"
+
+  - slug: 'venezuela-laptop-pt'
+    academies: ['caracas-venezuela']
+    recomended: false
+    scholarship: "Incluye laptop para programar"
+    payment_time: "Oferta especial con equipo incluido"
+    price: "~$1600"
+    bullets: 
+      - "El equipo es totalmente tuyo para lo que requieras"
+      - "Paga temprano y ahorra hasta $500"
+    # icons: 
+    #   - "/images/laptp.jpg"

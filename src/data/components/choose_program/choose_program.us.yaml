@@ -11,12 +11,12 @@ programs:
     visibility: "visible"
     schedule: "Part-Time - Online/In-person"
     link: "/us/coding-bootcamps/software-engineer-bootcamp"
-  - text: "Machine Learning Engineering"
-    bc_slug: "machine-learning-engineering"
+  - text: "Datascience - Machine Learning"
+    bc_slug: "datascience-ml"
     location_bc_slug: null
     schedule: "Part-Time - Online"
     visibility: "visible"
-    link: "/us/coding-bootcamps/machine-learning-engineering"
+    link: "/us/coding-bootcamps/datascience-machine-learning"
   - text: "Node.js Backend Development"
     bc_slug: "node-js"
     location_bc_slug: null

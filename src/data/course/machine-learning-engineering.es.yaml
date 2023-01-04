@@ -21,7 +21,7 @@ button:
   syllabus_motivation: "En 2 min. recibirás en tu buzón de correo un PDF con información muy detallada sobre nuestra metodología, tecnologías, financiación e información del curso."
   apply_button_link: "/es/aplica"
 
-course_instructors: 
+course_instructors:
   header:
     title: "Conoce a nuestros instructores"
     paragraph: ""
@@ -79,32 +79,35 @@ teacher:
   bio: >
     Enfocado en guidar algunas de las empresas más grandes del mundo hacia la adopción de la inteligencia artificial (Enterprise AI). Estrategia y ejecución exitosa de más de 1200 proyectos a gran escala, sirviendo más de 350 clientes alrededor del mundo.
 
-
 ## PROGRAM DETAILS
 details:
   about:
-      title: "Sobre este programa"
-      sub_title: |
-        Reciba entrenamiento por un reconocido experto en I.A; explora los fundamentos del aprendizaje automático y el aprendizaje profundo con algunas de las tecnologías más poderosas que realmente escalan la inteligencia para los negocios.
-        Practique con escenarios comerciales de la vida real típicos en los negocios y revise algunas de las herramientas utilizadas en la industria.
-        Elabora estrategias y desarrolla tu A.I. siguiendo el desarrollo del ciclo de vida de principio a fin, incluida la implementación en producción y mantenimiento con Privacidad, Seguridad y Ética.
-      list:
-        - label: "Duración"
-          content:  "15 semanas"
-          icon: "calendar"
-        - label: "Clases"
-          content: "3 Clases semanales"
-          icon: "book"
-        - label: "Tamaño de la clase"
-          content: "14 personas máx"
-        - label: "Certificado"
-          content: "Nuestros certificados son  reconocidos por múltiples instuticiones."
-          link_text: "Ver ejemplo"
-          link: "https://certificate.4geeks.com/44c61b294a248f91088f5355aea09606126795e3"
-          icon: "certificate"
-        - label: "Requisitos"
-          content: "No se necesita experiencia previa"
-          icon: "contract-checked"
+    title: "Sobre este programa"
+    sub_title: |
+      Reciba entrenamiento por un reconocido experto en I.A; explora los fundamentos del aprendizaje automático y el aprendizaje profundo con algunas de las tecnologías más poderosas que realmente escalan la inteligencia para los negocios.
+      Practique con escenarios comerciales de la vida real típicos en los negocios y revise algunas de las herramientas utilizadas en la industria.
+      Elabora estrategias y desarrolla tu A.I. siguiendo el desarrollo del ciclo de vida de principio a fin, incluida la implementación en producción y mantenimiento con Privacidad, Seguridad y Ética.
+    list:
+      - label: "Duración"
+        content: "15 semanas"
+        icon: "calendar"
+      - label: "Clases"
+        content: "3 Clases semanales"
+        icon: "book"
+      - label: "Tamaño de la clase"
+        content: "14 personas máx"
+      - label: "Certificado"
+        content: "Nuestros certificados son  reconocidos por múltiples instuticiones."
+        link_text: "Ver ejemplo"
+        link: "https://certificate.4geeks.com/44c61b294a248f91088f5355aea09606126795e3"
+        icon: "certificate"
+      - label: "Requisitos"
+        content: "No se necesita experiencia previa"
+        icon: "contract-checked"
+      - label: "Idioma"
+        content: "Puedes elegir entre inglés y español para consumir el plan de estudios y el contenido. Las clases se imparten en el idioma oficial de tú campus."
+        icon: "contract-checked"
+
   heading: DETALLES DEL PROGRAMA
   weeks: 15
   facts:
@@ -136,7 +139,7 @@ details:
       step: 2
     - module_name: "Data"
       title: "Data Science para IA"
-      description: "No solamente vamos a entrenarte en Data Science, te vamos a preparar para Data Science en la era de la inteligencia artificial apalancandote de Python; Análisis de Datos & Visualizaciones, Manejos de Bases de datos y Workflows, Aplicaciónes de Algebra Lineal con Inferencia estadística y modelado. Terminarás este modulo entregando un proyecto completo donde tengas que aplicar limpieza, análisis y modelos de predicción en sets de datos reales."
+      description: "No solamente vamos a entrenarte en Data Science, te vamos a preparar para Data Science en la era de la inteligencia artificial apalancandote de Python; Análisis de Datos & Visualizaciones, Manejos de Bases de datos y Workflows, Aplicaciónes de Álgebra Lineal con Inferencia estadística y modelado. Terminarás este modulo entregando un proyecto completo donde tengas que aplicar limpieza, análisis y modelos de predicción en sets de datos reales."
       projects: "Cargado de data estructurada y no-estructurada a partir de diferentes fuentes (E.j: SQL, Web Scraping, test files), explorado y limpieza de datos, visualizacion de datos, pruebas estadísticas, etc."
       slug: "advanced-algorithms"
       duration: "4 wks"
@@ -150,15 +153,15 @@ details:
       step: 6
     - module_name: "Despliegue"
       title: "I.A. en producción"
-      description: "Uno de los aspectos más importantes al desarrollar una Inteligencia Artificial es entender cómo preparar, desplegar y mantener una solución en un ambiente de produccíon. Te llevaremos de la mano durante todo el ciclo de desarrollo de software detrás de la solución. Machine Learning Operations (MLOps), así como privacidad, seguridad y ética. Tu proyecto final será desplegar una Inteligencia en producción."
+      description: "Uno de los aspectos más importantes al desarrollar una Inteligencia Artificial es entender cómo preparar, desplegar y mantener una solución en un ambiente de producción. Te llevaremos de la mano durante todo el ciclo de desarrollo de software detrás de la solución. Machine Learning Operations (MLOps), así como privacidad, seguridad y ética. Tu proyecto final será desplegar una Inteligencia en producción."
       projects: "Construyendo arquitecturas de datos, desplegando I.A. en produccion localmente y en la nube, monitoreando y manteniendo los modelos."
       slug: "quality-deploy"
       duration: "3 wks"
       step: 2.9
     - module_name: "DE POR VIDA"
       title: "De por vida"
-      description: "Sigue recibiendo la ayuda de la academia de por vida, accesso a los contenidos, soporte professional (career support). Recibe incluso ayuda durante el inicio de tu nuevo trabajo, nunca más estarás sólo."
-      projects: "Consegurás trabajo, empezarás a ganar más dinero pero continuarás aprendiendo hasta convertirte en Ingeniero Senior en Inteligencia Artificial."
+      description: "Sigue recibiendo la ayuda de la academia de por vida, acceso a los contenidos, soporte profesional (career support). Recibe incluso ayuda durante el inicio de tu nuevo trabajo, nunca más estarás sólo."
+      projects: "Consegirás trabajo, empezarás a ganar más dinero pero continuarás aprendiendo hasta convertirte en Ingeniero Senior en Inteligencia Artificial."
       slug: "lifelong-learning"
       duration: "para siempre"
       step: 0.1

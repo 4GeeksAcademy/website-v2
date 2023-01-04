@@ -23,7 +23,15 @@ export const save_form = async (
       return process.env.GATSBY_BREATHECODE_HOST;
     }
   };
-  console.log("formData", formData.utm_language || session.language);
+
+  const getReferralKey = () => {
+    let referral_key = formData.referral_code || session.utm?.referral_code;
+    if (!referral_key) {
+      referral_key = formData.referral_key || session.utm?.referral_key;
+    }
+    return referral_key;
+  }
+
   const resp = await fetch(`${getEnvironmentAPI()}/marketing/lead`, {
     headers: new Headers({ "content-type": "application/json" }),
     method: "POST",
@@ -38,11 +46,7 @@ export const save_form = async (
       language: formData.utm_language || session.language,
       latitude: session.latitude,
       longitude: session.longitude,
-      referral_key:
-        formData.referral_code ||
-        session.referral_code ||
-        formData.referral_key ||
-        session.referral_key,
+      referral_key: getReferralKey(),
       browser_lang: session.browserLang,
       city: session.location.city,
       location:
