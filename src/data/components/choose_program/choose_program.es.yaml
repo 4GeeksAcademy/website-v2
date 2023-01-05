@@ -2,7 +2,7 @@ programs:
   - text: "Nivel 1: Full-Stack Developer"
     bc_slug: full-stack
     visibility: "visible"
-    location_bc_slug: null #<--- puedes cambiar la location cuando hagan click
+    location_bc_slug: "" #<--- puedes cambiar la location cuando hagan click
     schedule: "Horario Part-Time and Full-Time"
     link: "/es/coding-bootcamps/full-stack-part-time"
   - text: "Nivel 2: Ingeniero de Software"
