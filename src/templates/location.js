@@ -78,7 +78,7 @@ const Location = ({ data, pageContext, yml }) => {
           flexDirection="column"
           justifyContent_tablet="start"
           padding_tablet="70px 0 0 0"
-          padding="0 25px"
+          padding={isCustomBarActive(session) ? "70px 25px 0 25px" : "0 25px"}
           gridColumn_tablet="1 / 7"
         >
           <H1 type="h1" textAlign="left" margin="0 0 11px 0" color="#606060">
@@ -140,7 +140,7 @@ const Location = ({ data, pageContext, yml }) => {
             margin_tablet="0"
             margin="0 0 20px 0"
           >
-            {yml.phone && (
+            {(yml.phone || yml.info_box.whatsapp) && (
               <Paragraph
                 textAlign_tablet="left"
                 margin="15px 10px 0 0"
@@ -157,7 +157,17 @@ const Location = ({ data, pageContext, yml }) => {
                   icon="phone"
                   style={{ marginRight: "10px", flexShrink: 0 }}
                 />
-                {yml.phone}
+                {yml.info_box.whatsapp ? (
+                  <a
+                    href={yml.info_box.whatsapp_link}
+                    target="_blank"
+                    rel="noopener noreferrer nofollow"
+                  >
+                    {yml.info_box.whatsapp}
+                  </a>
+                ) : (
+                  yml.phone
+                )}
               </Paragraph>
             )}
             {yml.info_box.email && (

@@ -40,6 +40,7 @@ import About4Geeks from "../components/About4Geeks";
 import OurPartners from "../components/OurPartners";
 import ChooseYourProgram from "../components/ChooseYourProgram";
 import Testimonials from "../components/Testimonials";
+import { isDevelopment, isTestMode } from "../components/NavbarDesktop";
 
 const SVGBubblesLeft = () => (
   <svg
@@ -116,6 +117,10 @@ const Home = (props) => {
     en: "CHOOSE PROGRAM",
   };
 
+  const isContentBarActive =
+    (session?.location?.custom_bar.active && isTestMode) ||
+    (session?.location?.custom_bar.active && !isDevelopment());
+
   return (
     <>
       <Div
@@ -130,8 +135,10 @@ const Home = (props) => {
       </Div>
       <Div
         display="block"
-        margin="72px 0 72px 0"
-        margin_tablet="72px 0 108px 0"
+        margin={isContentBarActive ? "110px 0 72px 0" : "72px 0 72px 0"}
+        margin_tablet={
+          isContentBarActive ? "120px 0 108px 0" : "72px 0 108px 0"
+        }
       >
         <GridContainerWithImage
           padding="30px 0 0 0"
