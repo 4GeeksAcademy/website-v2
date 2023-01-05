@@ -185,7 +185,7 @@ geek_data:
 ## PRICES AND PAYMENTS SECTION
 prices:
   heading: "Prices and Payments"
-  sub_heading: "Selecciona la sede o modalidad de tu curso para ver los precios y planes de pago"
+  sub_heading: "Select the venue or modality of your course to see the prices and payment plans"
   selector:
     top_label: Location
     placeholder: Select a location
