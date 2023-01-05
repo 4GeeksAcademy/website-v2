@@ -149,3 +149,23 @@ redirects:
     toPath: "/es/tendencias-y-tecnologia/sindrome-del-impostor"
     #redirectInBrowser: true
     isPermanent: true # if permanent google will erase the original url from its results 
+
+  - fromPath: "/us/learn-to-code/hacks-learn-to-code"
+    toPath: "/us/trends-and-tech/hacks-learn-to-code"
+    #redirectInBrowser: true
+    isPermanent: true # if permanent google will erase the original url from its results 
+
+  - fromPath: "/us/career-growth/wages-report-2018-1"
+    toPath: "/us/full-stack-developer/wages-report-2018-1"
+    #redirectInBrowser: true
+    isPermanent: true # if permanent google will erase the original url from its results 
+
+  - fromPath: "/us/coding-bootcamps/internships-bootcamps-2021"
+    toPath: "/us/full-stack-developer/internships-bootcamps-2021"
+    #redirectInBrowser: true
+    isPermanent: true # if permanent google will erase the original url from its results 
+
+  - fromPath: "/us/career-growth/7-hacks-to-land-a-job"
+    toPath: "/us/trends-and-tech/7-hacks-to-land-a-job"
+    #redirectInBrowser: true
+    isPermanent: true # if permanent google will erase the original url from its results 
