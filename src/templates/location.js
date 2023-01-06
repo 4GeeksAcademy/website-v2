@@ -157,7 +157,7 @@ const Location = ({ data, pageContext, yml }) => {
                   icon="phone"
                   style={{ marginRight: "10px", flexShrink: 0 }}
                 />
-                {yml.info_box.whatsapp ? (
+                {yml.info_box.whatsapp && yml.info_box.whatsapp_link ? (
                   <a
                     href={yml.info_box.whatsapp_link}
                     target="_blank"
@@ -166,7 +166,7 @@ const Location = ({ data, pageContext, yml }) => {
                     {yml.info_box.whatsapp}
                   </a>
                 ) : (
-                  yml.phone
+                  yml.phone || yml.info_box.whatsapp
                 )}
               </Paragraph>
             )}
