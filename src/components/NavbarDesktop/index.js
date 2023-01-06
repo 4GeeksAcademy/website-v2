@@ -243,8 +243,8 @@ export const Navbar = ({
                       }}
                       setStatus={setStatus}
                       menu={menu}
-                    />)
-                  }
+                    />
+                  )}
                 </MenuItem>
               );
             })}
