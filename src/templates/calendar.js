@@ -346,12 +346,7 @@ const Calendar = (props) => {
             flexDirection_tablet="row"
             alignItems_tablet="center"
           >
-            <H3
-              type="h3"
-              textAlign="left"
-              padding="25px 0"
-              width="300px"
-            >
+            <H3 type="h3" textAlign="left" padding="25px 0" width="300px">
               {yml.cohorts.title}
             </H3>
             {/* <Button outline width="100%" width_md="314px" color={Colors.black} margin="19px 0 10px 0" textColor="white">APPLY NOW</Button> */}
