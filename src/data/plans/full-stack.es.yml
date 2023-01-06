@@ -2,7 +2,7 @@ full_time:
   - slug: 'usa-clark-scholarship-ft'
     academies: ['downtown-miami', 'orlando']
     recomended: true
-    scholarship: "Scolarship"
+    scholarship: "Scholarship"
     payment_time: "Pay today"
     price: "$4999"
     bullets: 
@@ -66,7 +66,7 @@ full_time:
     payment_time: "Y obtén un descuento"
     price: "4.500 €*"
     bullets:
-      - "Paga con trasnferencia bancaria, tarjeta de crédito o débito, Paypal, Bitcoin o Ethereum"
+      - "Paga con transferencia bancaria, tarjeta de crédito o débito, Paypal, Bitcoin o Ethereum"
       - "*Descuento de hasta 1.800 €. Desde 4.500 € en vez de 6.300 €"     
     icons: 
       - "/images/visa-mastercard.png"    
@@ -268,7 +268,7 @@ part_time:
     payment_time: "Y obtén un descuento"
     price: "4.600 €*"
     bullets:
-      - "Paga con trasnferencia bancaria, tarjeta de crédito o débito, Paypal, Bitcoin o Ethereum"
+      - "Paga con transferencia bancaria, tarjeta de crédito o débito, Paypal, Bitcoin o Ethereum"
       - "*Descuento de hasta 1.700 €. Desde 4.600 € en vez de 6.300 €"     
     icons: 
       - "/images/visa-mastercard.png"    
@@ -306,7 +306,7 @@ part_time:
     payment_time: "Y obtén un descuento"
     price: "3.850 €*"
     bullets:
-      - "Paga con trasnferencia bancaria, tarjeta de crédito o débito, Paypal, Bitcoin o Ethereum"
+      - "Paga con transferencia bancaria, tarjeta de crédito o débito, Paypal, Bitcoin o Ethereum"
       - "*Descuento de hasta 2.450 €. Desde 3.850 € en vez de 6.300 €"
     icons: 
       - "/images/visa-mastercard.png"    
@@ -392,7 +392,7 @@ part_time:
     academies: ['montevideo-uruguay','bogota-colombia', 'costa-rica', 'mexicocity-mexico','quito-ecuador', 'panamacity-panama', 'buenosaires-argentina','lima-peru','lapaz-bolivia']
     recomended: true
     scholarship: "Programa Full-Stack Solamente"
-    payment_time: "Enfocate en obtener habilidades"
+    payment_time: "Enfócate en obtener habilidades"
     price: "USD $2000"
     bullets: 
       - "Tendrás acceso total y para siempre al programa Full-stack."
