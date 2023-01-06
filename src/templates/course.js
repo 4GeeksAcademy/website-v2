@@ -447,7 +447,7 @@ const Program = ({ data, pageContext, yml }) => {
         margin="45px 0 0 0"
       />
       <OurPartners images={hiring.partners.images} marquee></OurPartners>
-      <CourseBlogs lang={lang} posts={data.allMarkdownRemark.edges} />
+      <CourseBlogs lang={pageContext.lang} posts={data.allMarkdownRemark.edges} />
     </>
   );
 };
@@ -499,7 +499,7 @@ export const query = graphql`
       }
     }
     allMarkdownRemark(
-      limit: 2000
+      limit: 4
       sort: { fields: [frontmatter___date], order: DESC }
       filter: { frontmatter: { cluster: { in: $related_clusters } } }
     ) {
