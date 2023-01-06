@@ -1,16 +1,7 @@
 import React, { useState } from "react";
 import Link from "gatsby-link";
 import { navigate, useStaticQuery, graphql } from "gatsby";
-import {
-  H1,
-  H2,
-  H3,
-  H4,
-  Title,
-  Separator,
-  Paragraph,
-  Span,
-} from "../Heading";
+import { H1, H2, H3, H4, Title, Separator, Paragraph, Span } from "../Heading";
 import {
   Button,
   RoundImage,
@@ -19,13 +10,9 @@ import {
 } from "../Styling";
 import LazyLoad from "react-lazyload";
 import twitterUser from "../../utils/twitter";
-import {
-  GridContainer,
-  Div,
-  GridContainerWithImage,
-} from "../Sections";
+import { GridContainer, Div, GridContainerWithImage } from "../Sections";
 
-const Post = ({item, i, lang}) => {
+const Post = ({ item, i, lang }) => {
   return (
     <Div
       key={`${i}-${item.node.frontmatter.title}`}
@@ -100,14 +87,16 @@ const CourseBlogs = ({ posts, lang }) => {
       padding_tablet="10px 40px"
       padding="10px 60px"
     >
-      <H3 textAlign="left" margin="0 0 20px 0">{title[lang]}</H3>
+      <H3 textAlign="left" margin="0 0 20px 0">
+        {title[lang]}
+      </H3>
       <Div justifyContent="between">
         {posts.map((item, i) => (
           <Post item={item} i={i} lang={lang} />
         ))}
       </Div>
     </Div>
-  )
-}
+  );
+};
 
 export default CourseBlogs;

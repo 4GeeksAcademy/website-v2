@@ -447,13 +447,20 @@ const Program = ({ data, pageContext, yml }) => {
         margin="45px 0 0 0"
       />
       <OurPartners images={hiring.partners.images} marquee></OurPartners>
-      <CourseBlogs lang={pageContext.lang} posts={data.allMarkdownRemark.edges} />
+      <CourseBlogs
+        lang={pageContext.lang}
+        posts={data.allMarkdownRemark.edges}
+      />
     </>
   );
 };
 
 export const query = graphql`
-  query CourseQuery($file_name: String!, $lang: String!, $related_clusters: [String]) {
+  query CourseQuery(
+    $file_name: String!
+    $lang: String!
+    $related_clusters: [String]
+  ) {
     allFullStackTechsYaml(filter: { fields: { lang: { eq: $lang } } }) {
       edges {
         node {
