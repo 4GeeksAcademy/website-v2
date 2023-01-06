@@ -1,31 +1,26 @@
-import React, { useState } from "react";
+import React from "react";
 import Link from "gatsby-link";
-import { navigate, useStaticQuery, graphql } from "gatsby";
-import { H1, H2, H3, H4, Title, Separator, Paragraph, Span } from "../Heading";
+import { H3, H4, Paragraph, } from "../Heading";
 import {
-  Button,
   RoundImage,
-  Colors,
-  StyledBackgroundSection,
 } from "../Styling";
 import LazyLoad from "react-lazyload";
-import twitterUser from "../../utils/twitter";
-import { GridContainer, Div, GridContainerWithImage } from "../Sections";
+import { Div } from "../Sections";
 
 const Post = ({ item, i, lang }) => {
   return (
     <Link
-          to={`/${lang}/${item.node.frontmatter.cluster}/${item.node.frontmatter.slug}`}
-        >
-    <Div
-      key={`${i}-${item.node.frontmatter.title}`}
-      flexDirection="Column"
-      margin_tablet="0 10px"
-      margin="0  0 20px 0"
-      width_tablet="200px"
-      width="80%"
+      to={`/${lang}/${item.node.frontmatter.cluster}/${item.node.frontmatter.slug}`}
     >
-      {item.node.frontmatter.image !== "" && (
+      <Div
+        key={`${i}-${item.node.frontmatter.title}`}
+        flexDirection="Column"
+        margin_tablet="0 10px"
+        margin="0  0 20px 0"
+        width_tablet="200px"
+        width="80%"
+      >
+        {item.node.frontmatter.image !== "" && (
           <LazyLoad height={10} scroll={true} once={true}>
             <RoundImage
               url={
@@ -41,13 +36,10 @@ const Post = ({ item, i, lang }) => {
               margin="0 0 10px 0"
             />
           </LazyLoad>
-      )}
+        )}
 
-      {/* Titulo */}
-      <Div>
-        {/* <Link
-          to={`/${lang}/${item.node.frontmatter.cluster}/${item.node.frontmatter.slug}`}
-        > */}
+        {/* Titulo */}
+        <Div>
           <H4
             textAlign="left"
             align_sm="left"
@@ -57,22 +49,21 @@ const Post = ({ item, i, lang }) => {
           >
             {item.node.frontmatter.title}
           </H4>
-        {/* </Link> */}
-      </Div>
+        </Div>
 
-      {/* Comentario acerca del post */}
-      <Div>
-        <Paragraph
-          fontWeight="300"
-          fontSize="15px"
-          color="#000"
-          textAlign="left"
-          margin="0 0 15px 0"
-        >
-          {item.node.frontmatter.excerpt}
-        </Paragraph>
+        {/* Comentario acerca del post */}
+        <Div>
+          <Paragraph
+            fontWeight="300"
+            fontSize="15px"
+            color="#000"
+            textAlign="left"
+            margin="0 0 15px 0"
+          >
+            {item.node.frontmatter.excerpt}
+          </Paragraph>
+        </Div>
       </Div>
-    </Div>
     </Link>
   );
 };
