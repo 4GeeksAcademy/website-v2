@@ -444,7 +444,11 @@ const Program = ({ data, pageContext, yml }) => {
 };
 
 export const query = graphql`
-  query CourseMachineLearningQuery($file_name: String!, $lang: String!, $related_clusters: [String]) {
+  query CourseMachineLearningQuery(
+    $file_name: String!
+    $lang: String!
+    $related_clusters: [String]
+  ) {
     allMachineLearningTechsYaml(filter: { fields: { lang: { eq: $lang } } }) {
       edges {
         node {

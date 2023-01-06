@@ -1,9 +1,7 @@
 import React from "react";
 import Link from "gatsby-link";
-import { H3, H4, Paragraph, } from "../Heading";
-import {
-  RoundImage,
-} from "../Styling";
+import { H3, H4, Paragraph } from "../Heading";
+import { RoundImage } from "../Styling";
 import LazyLoad from "react-lazyload";
 import { Div } from "../Sections";
 
@@ -83,7 +81,11 @@ const CourseBlogs = ({ posts, lang }) => {
       <H3 textAlign_tablet="left" margin="0 0 20px 0">
         {title[lang]}
       </H3>
-      <Div justifyContent_tablet="between" justifyContent="center" flexWrap="wrap">
+      <Div
+        justifyContent_tablet="between"
+        justifyContent="center"
+        flexWrap="wrap"
+      >
         {posts.map((item, i) => (
           <Post item={item} i={i} lang={lang} />
         ))}
