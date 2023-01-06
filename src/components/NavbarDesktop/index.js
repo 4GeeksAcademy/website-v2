@@ -363,15 +363,6 @@ export const MegaMenu = ({ status, setStatus, menu }) => {
       {status.itemIndex !== null && status.itemIndex !== menu.length - 1 && (
         <MegaMenuContainer
           className="megamenu-container"
-          onMouseLeave={() => {
-            setStatus({ ...status, hovered: false });
-            setTimeout(() => {
-              setStatus((_status) => ({
-                ..._status,
-                toggle: _status.hovered,
-              }));
-            }, 300);
-          }}
           width={menu[status.itemIndex].sub_menu.width}
           display="none"
           maxHeight="500px"

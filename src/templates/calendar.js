@@ -125,7 +125,10 @@ const Calendar = (props) => {
           cohorts: {
             catalog: oldData.cohorts.catalog,
             all: cohorts,
-            filtered: cohorts,
+            filtered: defaultValue ? cohorts.filter(
+              (elm) => elm.academy.slug === defaultValue.value
+            )
+          : cohorts,
           },
         };
       });
