@@ -39,6 +39,7 @@ import UpcomingDates from "../components/UpcomingDates";
 import GeeksInfo from "../components/GeeksInfo";
 import Testimonials from "../components/Testimonials";
 import OurPartners from "../components/OurPartners";
+import CourseBlogs from "../components/CourseBlogs";
 import Icon from "../components/Icon";
 
 const Program = ({ data, pageContext, yml }) => {
@@ -446,12 +447,13 @@ const Program = ({ data, pageContext, yml }) => {
         margin="45px 0 0 0"
       />
       <OurPartners images={hiring.partners.images} marquee></OurPartners>
+      <CourseBlogs lang={lang} posts={data.allMarkdownRemark.edges} />
     </>
   );
 };
 
 export const query = graphql`
-  query CourseQuery($file_name: String!, $lang: String!) {
+  query CourseQuery($file_name: String!, $lang: String!, $related_clusters: [String]) {
     allFullStackTechsYaml(filter: { fields: { lang: { eq: $lang } } }) {
       edges {
         node {
@@ -492,6 +494,32 @@ export const query = graphql`
           }
           fields {
             lang
+          }
+        }
+      }
+    }
+    allMarkdownRemark(
+      limit: 2000
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: { frontmatter: { cluster: { in: $related_clusters } } }
+    ) {
+      totalCount
+      edges {
+        node {
+          fields {
+            slug
+            type
+          }
+          frontmatter {
+            author
+            date
+            image
+            slug
+            title
+            excerpt
+            featured
+            status
+            cluster
           }
         }
       }

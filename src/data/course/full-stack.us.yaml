@@ -6,6 +6,7 @@ meta_info:
   image: "/images/og-preview/full-stack.us.png"
   visibility: "visible"
   keywords: ""
+  related_clusters: ["trends-and-tech"]
   redirects:
     [
       "/part-time",

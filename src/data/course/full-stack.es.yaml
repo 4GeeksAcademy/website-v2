@@ -6,6 +6,7 @@ meta_info:
   bc_slug: "full-stack"
   visibility: "visible"
   keywords: "Bootcamp, Full Stack, part time"
+  related_clusters: ["trends-and-tech"]
   redirects:
     [
       "/part-time",
