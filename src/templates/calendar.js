@@ -349,7 +349,6 @@ const Calendar = (props) => {
             <H3
               type="h3"
               textAlign="left"
-              width="100%"
               padding="25px 0"
               width="300px"
             >
