@@ -14,16 +14,18 @@ import { GridContainer, Div, GridContainerWithImage } from "../Sections";
 
 const Post = ({ item, i, lang }) => {
   return (
+    <Link
+          to={`/${lang}/${item.node.frontmatter.cluster}/${item.node.frontmatter.slug}`}
+        >
     <Div
       key={`${i}-${item.node.frontmatter.title}`}
       flexDirection="Column"
-      margin="0 10px"
-      width="200px"
+      margin_tablet="0 10px"
+      margin="0  0 20px 0"
+      width_tablet="200px"
+      width="80%"
     >
       {item.node.frontmatter.image !== "" && (
-        <Link
-          to={`/${lang}/${item.node.frontmatter.cluster}/${item.node.frontmatter.slug}`}
-        >
           <LazyLoad height={10} scroll={true} once={true}>
             <RoundImage
               url={
@@ -39,14 +41,13 @@ const Post = ({ item, i, lang }) => {
               margin="0 0 10px 0"
             />
           </LazyLoad>
-        </Link>
       )}
 
       {/* Titulo */}
       <Div>
-        <Link
+        {/* <Link
           to={`/${lang}/${item.node.frontmatter.cluster}/${item.node.frontmatter.slug}`}
-        >
+        > */}
           <H4
             textAlign="left"
             align_sm="left"
@@ -56,7 +57,7 @@ const Post = ({ item, i, lang }) => {
           >
             {item.node.frontmatter.title}
           </H4>
-        </Link>
+        {/* </Link> */}
       </Div>
 
       {/* Comentario acerca del post */}
@@ -72,6 +73,7 @@ const Post = ({ item, i, lang }) => {
         </Paragraph>
       </Div>
     </Div>
+    </Link>
   );
 };
 
@@ -83,14 +85,14 @@ const CourseBlogs = ({ posts, lang }) => {
   return (
     <Div
       display="block"
-      padding_md="10px 90px"
+      padding_md="10px 90px 30px 90px"
       padding_tablet="10px 40px"
-      padding="10px 60px"
+      padding="10px 20px"
     >
-      <H3 textAlign="left" margin="0 0 20px 0">
+      <H3 textAlign_tablet="left" margin="0 0 20px 0">
         {title[lang]}
       </H3>
-      <Div justifyContent="between">
+      <Div justifyContent_tablet="between" justifyContent="center" flexWrap="wrap">
         {posts.map((item, i) => (
           <Post item={item} i={i} lang={lang} />
         ))}

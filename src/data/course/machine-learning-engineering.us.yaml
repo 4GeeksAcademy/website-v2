@@ -8,6 +8,7 @@ meta_info:
   visibility: "visible"
   keywords: ""
   redirects: ["/us/machine-learning"]
+  related_clusters: ["trends-and-tech"]
 
 seo_title: "become a machine learning engineer"
 header:
