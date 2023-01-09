@@ -169,3 +169,8 @@ redirects:
     toPath: "/us/trends-and-tech/7-hacks-to-land-a-job"
     #redirectInBrowser: true
     isPermanent: true # if permanent google will erase the original url from its results 
+
+  - fromPath: "/us/coding-bootcamp/how-to-pay-a-bootcamp-2022"
+    toPath: "/us/coding-bootcamp/how-to-pay-for-a-coding-bootcamp-2022"
+    #redirectInBrowser: true
+    isPermanent: true # if permanent google will erase the original url from its results 
