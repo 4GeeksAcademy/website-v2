@@ -1,12 +1,14 @@
 meta_info:
   slug: faq
-  title: "frequently asked questions Bootcamps and 4Geeks Academy"
-  description: "Know the frequently asked questions about bootcamps and 4Geeks Academy"
+  title: "Frequently Asked Questions Bootcamps and 4Geeks Academy"
+  description: "Get answers to all of your questions about 4geeks Academy and our programs with our FAQ section. From admissions to course offerings, we've got you covered."
   visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   image: ""
   keywords: "frequently asked questions Bootcamps and 4Geeks Academy"
   redirects: [/us/faq]
+  
 seo_title: 4Geeks Academy
+
 banner:
   tagline: Frequently Asked Questions
   sub_heading: "Do you have any questions? We may have already answered it in this section. If your question is not there, we invite you to "

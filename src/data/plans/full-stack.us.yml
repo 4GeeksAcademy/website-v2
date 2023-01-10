@@ -88,9 +88,11 @@ full_time:
     recomended: true
     scholarship: "Pay Upfront"
     payment_time: "And get a discount"
-    price: "2.760.000 CLP"
+    price: "3.800.000 CLP"
     bullets:
-      - "Pay with bank transfer, credit or debit card"    
+      - "Pay with bank transfer, credit or debit card"
+      - "*Price without discount applied"  
+      - "*Price varies according to the chosen modality and memberships included" 
     icons: 
       - "/images/visa-mastercard.png"    
 
@@ -99,10 +101,10 @@ full_time:
     recomended: false
     scholarship: "Financed"
     payment_time: "18 months payment"
-    price: "~135.240 CLP"
+    price: "~184.000 CLP"
     bullets:
-      - "Tailor-made financing, with or without interest, from 6 to 18 months"  
-      - "Tuition is paid" 
+      - "Tailor-made financing from 6 to 18 months"  
+      - "An advance payment corresponding to 20% of the value of the program must be paid" 
     icons: 
       - "/images/flevo.png"
                        
@@ -116,6 +118,44 @@ full_time:
       - "*You pay 16% of your salary when you get a job until you paid in full"
       - "Only if you get a job in tech" 
     icons: 
+    - "/images/lumni.png"
+
+  - slug: 'venezuela-scholarship-pt'
+    academies: ['caracas-venezuela']
+    recomended: true
+    scholarship: "Paga de Contado"
+    payment_time: "Pay early and get 30% off."
+    price: "$1300*"
+    bullets: 
+      - "Pay early and save up to $500"
+      - "Pay with debit, credit or wire transfer."
+    # icons: 
+    #   - "/images/landing/uwm_pantone_2021_2.png"
+
+  - slug: 'venezuela-financed-pt'
+    academies: ['caracas-venezuela']
+    recomended: false
+    scholarship: "Financed"
+    payment_time: "12 months"
+    price: "~$200 / mo."
+    bullets: 
+      - "Financing in 2, 3 or up to 12 months."
+      - "Get interview with Flevo for fast financing approval."
+      - "Prices may vary depending on the length of your financing period."
+    icons: 
+      - "/images/flevo.png"
+
+  - slug: 'venezuela-laptop-pt'
+    academies: ['caracas-venezuela']
+    recomended: false
+    scholarship: "Includes a new laptop"
+    payment_time: "Special offer with laptop included"
+    price: "~$1600"
+    bullets: 
+      - "Pay early and save up to $500."
+      - "Keep the laptop once you finish the program."
+    # icons: 
+    #   - "/images/laptp.jpg"
 
 part_time:
   - slug: 'usa-clark-scholarship-pt'
@@ -279,15 +319,16 @@ part_time:
     icons: 
       - "/images/stepex.png"     
  
-  - slug: 'chile-contado-fs-pt'
+  - slug: 'chile-geekforce-fs-pt'
     academies: ['santiago-chile']
     recomended: true
     scholarship: "Pay Upfront"
     payment_time: "And get a discount"
-    price: "2.415.000 CLP*"
+    price: "3.450.000 CLP*"
     bullets:
       - "Pay with bank transfer, credit or debit card"    
       - "*Price without discount applied"
+      - "*You will have access to the entire program and the entire 4Geeks Career Support System"
     icons: 
       - "/images/visa-mastercard.png"   
 
@@ -296,22 +337,22 @@ part_time:
     recomended: false
     scholarship: "Financed"
     payment_time: "18 months payment"
-    price: "~118.335 CLP"
+    price: "~168.000 CLP"
     bullets:
-      - "Tailor-made financing, with or without interest, from 6 to 18 months"  
-      - "Tuition is paid" 
+      - "Tailor-made financing from 6 to 18 months"  
+      - "An advance payment corresponding to 20% of the value of the program must be paid" 
     icons: 
       - "/images/flevo.png"
 
-  - slug: 'chile-fraccionado-fs-pt'
+  - slug: 'chile-solo-fs-pt'
     academies: ['santiago-chile']
     recomended: false
-    scholarship: "Installment payment"
-    payment_time: "Without interest"
-    price: "2.415.000 CLP"
+    scholarship: "Full Stack"
+    payment_time: "Program Only"
+    price: "2.700.000 CLP"
     bullets:
-      - "Pay with bank transfer" 
-      - "Up to 3 installments"   
+      - "You will have full and forever access to the Full-Stack program" 
+      - "Does not include access to the entire 4Geeks Career Support System"   
     icons: 
     
   - slug: 'latam-job-guarantee-fs-pt'
@@ -350,3 +391,40 @@ part_time:
       - "You will only focus on getting the coding skills"
     icons: 
       - "/images/bcas.png" 
+
+  - slug: 'venezuela-scholarship-pt'
+    academies: ['caracas-venezuela']
+    recomended: true
+    scholarship: "Paga de Contado"
+    payment_time: "Pay early and get 30% off."
+    price: "$1300*"
+    bullets: 
+      - "Pay early and save up to $500"
+      - "Pay with debit, credit or wire transfer."
+    # icons: 
+    #   - "/images/landing/uwm_pantone_2021_2.png"
+
+  - slug: 'venezuela-financed-pt'
+    academies: ['caracas-venezuela']
+    recomended: false
+    scholarship: "Financed"
+    payment_time: "12 months"
+    price: "~$200 / mo."
+    bullets: 
+      - "Financing in 2, 3 or up to 12 months."
+      - "Get interview with Flevo for fast financing approval."
+      - "Prices may vary depending on the length of your financing period."
+    icons: 
+      - "/images/flevo.png"
+
+  - slug: 'venezuela-laptop-pt'
+    academies: ['caracas-venezuela']
+    recomended: false
+    scholarship: "Includes a new laptop"
+    payment_time: "Special offer with laptop included"
+    price: "~$1600"
+    bullets: 
+      - "Pay early and save up to $500."
+      - "Keep the laptop once you finish the program."
+    # icons: 
+    #   - "/images/laptp.jpg"

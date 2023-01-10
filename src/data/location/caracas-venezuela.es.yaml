@@ -66,7 +66,7 @@ info_box:
   alt: ""
 images_box:
   heading: "Lo que deberías saber de Caracas: "
-  content: "Caracas se encuentra como uno de las ciudades con mayor emprendimiento tecnológico, con grandes oportunidades de crecer tanto dentro como fuera del país. Se ha convertido en una oportunidad para que las PYME puedan avanzar de manera rápida. A pocos metros del metro, en Chacao, el mejor municipio de la ciudad y en una de las torres más emblemáticas. Tendrás accesso a internet de alta velocidad y una oficina de primer nivel."
+  content: "Caracas se encuentra como uno de las ciudades con mayor emprendimiento tecnológico, con grandes oportunidades de crecer tanto dentro como fuera del país. Se ha convertido en una oportunidad para que las PYME puedan avanzar de manera rápida. A pocos metros del metro, en Chacao, el mejor municipio de la ciudad y en una de las torres más emblemáticas. Tendrás acceso a internet de alta velocidad y una oficina de primer nivel."
   images:
     - path: "../../../static/images/locations/caracas-loc.jpg"
       alt: "caracas-loc"

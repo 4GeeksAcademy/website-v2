@@ -22,7 +22,7 @@ button:
   syllabus_motivation: "En 2 min. recibirás en tu buzón de correo un PDF con información muy detallada sobre nuestra metodología, tecnologías, becas, financiación e información del curso."
   apply_button_link: "/es/aplica"
 
-course_instructors: 
+course_instructors:
   header:
     title: "Conoce a nuestros instructores"
     paragraph: ""
@@ -127,8 +127,8 @@ details:
       duration: "2 sem"
       step: 2
     - module_name: "Fundamentos"
-      title: "Estadística y Algebra Lineal con Python"
-      description: "Siempre con un enfoque muy práctico y programando en Python, vamos a aplicar los conceptos de Algebra Lineal más utilizados en Data Science y Machine Learning. Matrices y Vectores, Funciones F(x) y relaciones entre variables. También programaremos en Python los conceptos probabilisticos más utilizados: tendencias centrales, desviación estándar, medias y medianas. Por último, calcularemos probabilidades de que un evento o dato ocurra, una habilidad muy importante para poder desarrollar modelos y predicciones."
+      title: "Estadística y Álgebra Lineal con Python"
+      description: "Siempre con un enfoque muy práctico y programando en Python, vamos a aplicar los conceptos de Álgebra Lineal más utilizados en Data Science y Machine Learning. Matrices y Vectores, Funciones F(x) y relaciones entre variables. También programaremos en Python los conceptos probabilísticos más utilizados: tendencias centrales, desviación estándar, medias y medianas. Por último, calcularemos probabilidades de que un evento o dato ocurra, una habilidad muy importante para poder desarrollar modelos y predicciones."
       projects: "Para aplicar lo aprendido trabajaremos con casos reales enfocados en el mundo laboral."
       slug: "datascience-fundamentals"
       duration: "2 sem"
@@ -142,7 +142,7 @@ details:
       step: 2
     - module_name: "Manipula"
       title: "Manipulación de datos con Python"
-      description: "Una vez que tus datos han sido recolectados es necesario entender su estructura, profundidad y depurar errores. Empezaremos enseñándote las técnicas de visualización de datos para entender la muestra y desarrollar las diferentes estrategias para limiar y mejorar tu dataset: Ingeniería de Features, Outliers, Datos Faltántes, Feature encoding, Feature Scaling. \n Aprende a desarrollar reportes en Looker (Google DataStudio) con gráficos avanzados y KPI's en una de las herramientas de datawarehousing más utilizadas del mercado."
+      description: "Una vez que tus datos han sido recolectados es necesario entender su estructura, profundidad y depurar errores. Empezaremos enseñándote las técnicas de visualización de datos para entender la muestra y desarrollar las diferentes estrategias para limpiar y mejorar tu dataset: Ingeniería de Features, Outliers, Datos Faltántes, Feature encoding, Feature Scaling. \n Aprende a desarrollar reportes en Looker (Google DataStudio) con gráficos avanzados y KPI's en una de las herramientas de datawarehousing más utilizadas del mercado."
       projects: "Explora el dataset de propiedades de Airbnb y publica un reporte en la nube de Google DataStudio."
       slug: "data-analysis"
       duration: "3 sem"
@@ -150,28 +150,28 @@ details:
     - module_name: "Modela"
       title: "Machine Learning Práctico"
       description: "Uno a uno iremos revisando los algoritmos y modelos predictivos mas utilizados en la industria: Supervisados y No Supervisados. Cada modelo vendrá con un caso práctico para ser solucionado utilizando Python: Regresión Lineal, Regresión Logística, Árboles de Decisión, Random Forest, Bayes, Support Vector Machine, NLP, KNN, Time Series, NN y otros."
-      projects: "Predice el costo del seguro médico, Clasifica pacientes si tienen diabetes o no, Análisis de sentimiento de reviews en Google Play Store, Detecta Email Spam, Agrupa casas basado en coordenadas e ingreso medio, Detecta anomalias en el uso de un CPU, Clasifica Imágenes, etc."
+      projects: "Predice el costo del seguro médico, Clasifica pacientes si tienen diabetes o no, Análisis de sentimiento de reviews en Google Play Store, Detecta Email Spam, Agrupa casos basado en coordenadas e ingreso medio, Detecta anomalias en el uso de un CPU, Clasifica Imágenes, etc."
       slug: "machine-learning"
       duration: "4 sem"
       step: 4
     - module_name: "Despliega"
       title: "Machine Learning en producción"
-      description: "Uno de los aspectos más importantes al desarrollar una Inteligencia Artificial es entender cómo preparar, desplegar y mantener una solución en un ambiente de produccíon. Te llevaremos de la mano durante todo el ciclo de desarrollo de software detrás de la solución. Machine Learning Operations (MLOps), así como privacidad, seguridad y ética. Tu proyecto final será desplegar tu aplicaicón de Machine Learning en producción."
+      description: "Uno de los aspectos más importantes al desarrollar una Inteligencia Artificial es entender cómo preparar, desplegar y mantener una solución en un ambiente de producción. Te llevaremos de la mano durante todo el ciclo de desarrollo de software detrás de la solución. Machine Learning Operations (MLOps), así como privacidad, seguridad y ética. Tu proyecto final será desplegar tu aplicación de Machine Learning en producción."
       projects: "Construyendo arquitecturas de datos, desplegando I.A. en produccion localmente y en la nube, monitoreando y manteniendo los modelos."
       slug: "quality-deploy"
       duration: "1 week"
       step: 1
     - module_name: "Projecto Final"
-      title: "Elige un problema y resuelvelo con Machine Learning"
-      description: "Trabajarás en equipo para escojer un problema real, recolectar los datos necesarios para resolverlo con una prediccion, realizar un análisis exploratorio con varias visualizaciones que permitan entender los datos, limpiar el dataset para poder utilizarlo correctamente y seleccionar un par de modelos para realizar una prediccion. Luego evaluarás la effectividad de tus modelos utilizando las técnicas vistas durante el curso. Por último, pondrás tu modelo en produccion utilizando Streamlit o Google DataStudio."
-      projects: "Construyendo arquitecturas de datos, desplegando la aplicaicón de Machine Learning localmente y en la nube, monitoreando y manteniendo los modelos."
+      title: "Elige un problema y resuélvelo con Machine Learning"
+      description: "Trabajarás en equipo para escoger un problema real, recolectar los datos necesarios para resolverlo con una predicción, realizar un análisis exploratorio con varias visualizaciones que permitan entender los datos, limpiar el dataset para poder utilizarlo correctamente y seleccionar un par de modelos para realizar una predicción. Luego evaluarás la efectividad de tus modelos utilizando las técnicas vistas durante el curso. Por último, pondrás tu modelo en produccion utilizando Streamlit o Google DataStudio."
+      projects: "Construyendo arquitecturas de datos, desplegando la aplicación de Machine Learning localmente y en la nube, monitoreando y manteniendo los modelos."
       slug: "quality-deploy"
       duration: "2 sem"
       step: 1.9
     - module_name: "DE POR VIDA"
       title: "De por vida"
-      description: "Sigue recibiendo la ayuda de la academia de por vida, accesso a los contenidos, soporte professional (career support). Recibe incluso ayuda durante el inicio de tu nuevo trabajo, nunca más estarás sólo."
-      projects: "Consegurás trabajo, empezarás a ganar más dinero pero continuarás aprendiendo hasta convertirte en Ingeniero Senior en Inteligencia Artificial."
+      description: "Sigue recibiendo la ayuda de la academia de por vida, acceso a los contenidos, soporte profesional (career support). Recibe incluso ayuda durante el inicio de tu nuevo trabajo, nunca más estarás sólo."
+      projects: "Conseguirás trabajo, empezarás a ganar más dinero pero continuarás aprendiendo hasta convertirte en Ingeniero Senior en Inteligencia Artificial."
       slug: "lifelong-learning"
       duration: "para siempre"
       step: 0.1
