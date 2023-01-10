@@ -215,9 +215,11 @@ export const Navbar = ({
                   }
                   className="menu-item"
                 >
-                  <div style={{ position: "relative" }}>
-                    <Triangle className="triangle" />
-                  </div>
+                  {item.sub_menu && (
+                    <div style={{ position: "relative" }}>
+                      <Triangle className="triangle" />
+                    </div>
+                  )}
                   <H3
                     margin="0 5px 0 0"
                     fontSize="13px"
@@ -231,16 +233,18 @@ export const Navbar = ({
                     )}
                   </H3>
                   {index !== menu.length - 1 && <Icon icon="arrowdown" />}
-                  <MegaMenu
-                    key={item.name}
-                    status={{
-                      ...status,
-                      toggle: !status.toggle,
-                      itemIndex: index,
-                    }}
-                    setStatus={setStatus}
-                    menu={menu}
-                  />
+                  {item.sub_menu && (
+                    <MegaMenu
+                      key={item.name}
+                      status={{
+                        ...status,
+                        toggle: !status.toggle,
+                        itemIndex: index,
+                      }}
+                      setStatus={setStatus}
+                      menu={menu}
+                    />
+                  )}
                 </MenuItem>
               );
             })}
@@ -359,15 +363,6 @@ export const MegaMenu = ({ status, setStatus, menu }) => {
       {status.itemIndex !== null && status.itemIndex !== menu.length - 1 && (
         <MegaMenuContainer
           className="megamenu-container"
-          onMouseLeave={() => {
-            setStatus({ ...status, hovered: false });
-            setTimeout(() => {
-              setStatus((_status) => ({
-                ..._status,
-                toggle: _status.hovered,
-              }));
-            }, 300);
-          }}
           width={menu[status.itemIndex].sub_menu.width}
           display="none"
           maxHeight="500px"

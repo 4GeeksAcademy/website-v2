@@ -122,15 +122,17 @@ const Location = ({ data, pageContext, yml }) => {
                 width="100%"
               >
                 {yml.info_box.address}
-                <Link
-                  target="_blank"
-                  to={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
-                    yml.info_box.address
-                  )}`}
-                  style={{ marginLeft: "5px", display: "inline" }}
-                >
-                  {open[lang]}
-                </Link>
+                {!yml.info_box.address.includes('Only remotely') && (
+                  <Link
+                    target="_blank"
+                    to={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+                      yml.info_box.address
+                    )}`}
+                    style={{ marginLeft: "5px", display: "inline" }}
+                  >
+                    {open[lang]}
+                  </Link>
+                )}
               </Paragraph>
             </Div>
           )}
@@ -157,7 +159,7 @@ const Location = ({ data, pageContext, yml }) => {
                   icon="phone"
                   style={{ marginRight: "10px", flexShrink: 0 }}
                 />
-                {yml.info_box.whatsapp ? (
+                {yml.info_box.whatsapp && yml.info_box.whatsapp_link ? (
                   <a
                     href={yml.info_box.whatsapp_link}
                     target="_blank"
@@ -166,7 +168,7 @@ const Location = ({ data, pageContext, yml }) => {
                     {yml.info_box.whatsapp}
                   </a>
                 ) : (
-                  yml.phone
+                  yml.phone || yml.info_box.whatsapp
                 )}
               </Paragraph>
             )}
