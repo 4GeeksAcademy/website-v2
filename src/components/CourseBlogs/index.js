@@ -71,26 +71,28 @@ const CourseBlogs = ({ posts, lang }) => {
     us: "Related Articles",
     es: "Artículos Relacionados",
   };
-  return posts.length > 0 && (
-    <Div
-      display="block"
-      padding_md="10px 90px 30px 90px"
-      padding_tablet="10px 40px"
-      padding="10px 20px"
-    >
-      <H3 textAlign_tablet="left" margin="0 0 20px 0">
-        {title[lang]}
-      </H3>
+  return (
+    posts.length > 0 && (
       <Div
-        justifyContent_tablet="between"
-        justifyContent="center"
-        flexWrap="wrap"
+        display="block"
+        padding_md="10px 90px 30px 90px"
+        padding_tablet="10px 40px"
+        padding="10px 20px"
       >
-        {posts.map((item, i) => (
-          <Post item={item} i={i} lang={lang} />
-        ))}
+        <H3 textAlign_tablet="left" margin="0 0 20px 0">
+          {title[lang]}
+        </H3>
+        <Div
+          justifyContent_tablet="between"
+          justifyContent="center"
+          flexWrap="wrap"
+        >
+          {posts.map((item, i) => (
+            <Post item={item} i={i} lang={lang} />
+          ))}
+        </Div>
       </Div>
-    </Div>
+    )
   );
 };
 
