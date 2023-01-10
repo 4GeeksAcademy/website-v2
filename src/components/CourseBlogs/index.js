@@ -71,6 +71,8 @@ const CourseBlogs = ({ posts, lang }) => {
     us: "Related Articles",
     es: "Artículos Relacionados",
   };
+  //t
+  
   return (
     posts.length > 0 && (
       <Div
