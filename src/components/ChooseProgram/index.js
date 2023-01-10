@@ -121,7 +121,7 @@ const ChooseProgram = (props) => {
                     font='"Lato", sans-serif'
                     colorHover={Colors.lightBlue}
                     onClick={() => {
-                      if (item.location_bc_slug)
+                      if (item.location_bc_slug && item.location_bc_slug != "")
                         setLocation(item.location_bc_slug);
                       navigate(item.link);
                     }}
