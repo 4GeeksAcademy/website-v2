@@ -1,7 +1,7 @@
 programs:
   - text: "Level 1: Full-Stack Developer"
     bc_slug: "full-stack"
-    location_bc_slug: null #<-- you can change location when user clicks on this link
+    location_bc_slug: "" #<-- you can change location when user clicks on this link
     visibility: "visible"
     schedule: "Part-Time/Full-Time - Online/In-person"
     link: "/us/coding-bootcamps/part-time-full-stack-developer"
