@@ -8,6 +8,7 @@ meta_info:
   visibility: "hidden"
   keywords: ""
   redirects: ["/us/datascience"]
+  related_clusters: ["trends-and-tech"]
 
 seo_title: "datascience and machine learning bootcamp"
 header:

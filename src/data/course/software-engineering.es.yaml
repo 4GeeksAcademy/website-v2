@@ -8,6 +8,7 @@ meta_info:
   visibility: "visible"
   keywords: ""
   redirects: ["/ingenieria-software", "/es/software-engineering", "/es/course/ingenieria-software"]
+  related_clusters: ["trends-and-tech"]
 
 seo_title: "Cooding Bootcamp"
 header:

@@ -8,6 +8,7 @@ meta_info:
   visibility: "hidden"
   keywords: ""
   redirects: ["/es/datascience"]
+  related_clusters: ["trends-and-tech"]
 
 seo_title: "Curso Data Science and Machine Learning"
 header:

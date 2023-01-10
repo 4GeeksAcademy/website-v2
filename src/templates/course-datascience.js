@@ -31,6 +31,7 @@ import { Circle } from "../components/BackgroundDrawing";
 import LeadForm from "../components/LeadForm";
 import Modal from "../components/Modal";
 import Instructors from "../components/Instructors";
+import CourseBlogs from "../components/CourseBlogs";
 
 const Program = ({ data, pageContext, yml }) => {
   const { session } = React.useContext(SessionContext);
@@ -429,12 +430,20 @@ const Program = ({ data, pageContext, yml }) => {
       />
       <Testimonials lang={data.allTestimonialsYaml.edges} />
       <OurPartners images={hiring.partners.images} marquee></OurPartners>
+      <CourseBlogs
+        lang={pageContext.lang}
+        posts={data.allMarkdownRemark.edges}
+      />
     </>
   );
 };
 
 export const query = graphql`
-  query CourseDataScienceQuery($file_name: String!, $lang: String!) {
+  query CourseDataScienceQuery(
+    $file_name: String!
+    $lang: String!
+    $related_clusters: [String]
+  ) {
     allMachineLearningTechsYaml(filter: { fields: { lang: { eq: $lang } } }) {
       edges {
         node {
@@ -475,6 +484,32 @@ export const query = graphql`
           }
           fields {
             lang
+          }
+        }
+      }
+    }
+    allMarkdownRemark(
+      limit: 4
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: { frontmatter: { cluster: { in: $related_clusters } } }
+    ) {
+      totalCount
+      edges {
+        node {
+          fields {
+            slug
+            type
+          }
+          frontmatter {
+            author
+            date
+            image
+            slug
+            title
+            excerpt
+            featured
+            status
+            cluster
           }
         }
       }

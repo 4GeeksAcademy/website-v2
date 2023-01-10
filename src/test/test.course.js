@@ -9,6 +9,12 @@ const {
 } = require("./_utils");
 const front_matter_fields = [
   { key: "bc_slug", type: "string", mandatory: true },
+  {
+    key: "related_clusters",
+    type: "array",
+    mandatory: true,
+    allowEmpty: false,
+  },
 ];
 
 walk(`${__dirname}/../data/course`, async (err, files) => {
@@ -74,6 +80,18 @@ walk(`${__dirname}/../data/course`, async (err, files) => {
                 } on ${_path} expected: ${
                   course.meta_info[obj["key"]].yellow
                 } ${"to match with".red} ${_slug.green} \n\n`
+              );
+          } else if (obj["type"] === "array") {
+            if (!Array.isArray(course.meta_info[obj["key"]]))
+              fail(
+                `\n\nInvalid mandatory prop ${
+                  obj["key"]
+                } on ${_path}. expected: array of string. found: ${typeof course
+                  .meta_info[obj["key"]]} \n\n`
+              );
+            if (!obj.allowEmpty && course.meta_info[obj["key"]].length === 0)
+              fail(
+                `\n\nInvalid mandatory prop ${obj["key"]} on ${_path}. ${obj["key"]} must not be empty \n\n`
               );
           }
         }

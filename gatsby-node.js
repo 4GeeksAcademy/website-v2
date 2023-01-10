@@ -113,7 +113,7 @@ exports.createPages = async (params) =>
   (await createBlog(params)) &&
   (await createPagesfromYml(params)) &&
   //also for the custom post types
-  (await createEntityPagesfromYml("Course", params)) &&
+  (await createEntityPagesfromYml("Course", params, ["related_clusters"])) &&
   (await createEntityPagesfromYml("Location", params)) &&
   (await createEntityPagesfromYml("Job", params)) &&
   (await createEntityPagesfromYml(
@@ -360,6 +360,8 @@ const createEntityPagesfromYml = async (
           l.node.fields.file_name.includes(node.fields.file_name.slice(0, -2))
         ),
       });
+    } else if (entity === "Course") {
+      _extraContext.related_clusters = node.meta_info.related_clusters;
     }
 
     createPage({
