@@ -71,7 +71,7 @@ const CourseBlogs = ({ posts, lang }) => {
     us: "Related Articles",
     es: "Artículos Relacionados",
   };
-  return (
+  return posts.length > 0 && (
     <Div
       display="block"
       padding_md="10px 90px 30px 90px"
