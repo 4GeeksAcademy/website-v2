@@ -170,7 +170,8 @@ module.exports = {
                   path
               }
           }
-          // allClusterPage(
+        }`,
+        // allClusterPage(
           //   filter: {
           //     context: {
           //       visibility: {nin: ["hidden", "unlisted"]}
@@ -194,7 +195,6 @@ module.exports = {
           //         path
           //     }
           // }
-        }`,
         // The filepath and name to Index Sitemap. Defaults to '/sitemap.xml'.
         mapping: {
           // Each data type can be mapped to a predefined sitemap
