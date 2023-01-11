@@ -14,7 +14,6 @@ const Post = ({ item, i, lang }) => {
       margin_sm="0  10px 20px 10px"
       margin="0  0 20px 0"
       width_tablet="200px"
-      // alignItems="center"
       width="80%"
       maxWidth="300px"
     >
@@ -85,7 +84,13 @@ const CourseBlogs = ({ posts, lang }) => {
         padding_tablet="10px 40px"
         padding="10px 20px"
       >
-        <H3 textAlign_lg="center" textAlign_tablet="left" margin="0 0 20px 0">
+        <H3
+          textAlign_lg="center"
+          textAlign_tablet="left"
+          margin="0 0 20px 0"
+          fontSize_lg="30px"
+          margin_lg="0 0 40px 0"
+        >
           {title[lang]}
         </H3>
         <Div

@@ -87,6 +87,8 @@ const BaseHeading = styled(Heading)`
   }
   @media ${Devices.lg} {
     text-align: ${(props) => props.textAlign_lg};
+    font-size: ${(props) => props.fontSize_lg};
+    margin: ${(props) => props.margin_lg};
   }
   @media ${Devices.xl} {
   }
