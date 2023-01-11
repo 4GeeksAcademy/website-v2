@@ -145,37 +145,72 @@ module.exports = {
     "gatsby-remark-reading-time",
     // 'gatsby-plugin-meta-redirect',
     {
-      resolve: `gatsby-plugin-sitemap`,
+      resolve: `gatsby-plugin-advanced-sitemap`,
       options: {
-        exclude: [`/admin`, `/tags`, `/edit`, `/landings`, `/preview`],
-        // output: `/some-other-sitemap.xml`,
+        exclude: [`/admin`, `/tags`, `/edit`, `/landings`],
+        // output: "/custom-sitemap.xml",
+        // 1 query for each data type
         query: `
         {
-            site {
-                siteMetadata {
-                    siteUrl
-                }
+          site {
+            siteMetadata {
+                siteUrl
             }
-            allSitePage(
-              filter: {
-                context: {visibility: {nin: ["hidden", "unlisted"]}}
-                path: { regex: "/^((?!\/preview).)*$/" }
+          }
+          allSitePage(
+            filter: {
+              context: {
+                visibility: {nin: ["hidden", "unlisted"]}
+                filePath: { regex: "/^((?!\/data\/blog\/).)*$/" }
               }
-            ) {
-                nodes {
-                    path
-                }
+              path: { regex: "/^((?!\/blog\/).)*$/" }
             }
+          ) {
+              nodes {
+                  path
+              }
+          }
+          allClusterPage(
+            filter: {
+              context: {
+                visibility: {nin: ["hidden", "unlisted"]}
+              }
+              path: { regex: "/.*(\/blog\/).*/" }
+            }
+          ) {
+              nodes {
+                  path
+              }
+          }
+          allBlogsPage(
+            filter: {
+              context: {
+                visibility: {nin: ["hidden", "unlisted"]}
+                filePath: { regex: "/.*(\/data\/blog\/).*/" }
+              }
+            }
+          ) {
+              nodes {
+                  path
+              }
+          }
         }`,
-        // serialize: ({ site, allSitePage }) =>
-        //     allSitePage.nodes.map(node => {
-        //         return {
-        //             url: `${site.siteMetadata.siteUrl}${node.path}`,
-        //             changefreq: `daily`,
-        //             priority: 0.7,
-        //         }
-        //     })
-      },
+        // The filepath and name to Index Sitemap. Defaults to '/sitemap.xml'.
+        mapping: {
+          // Each data type can be mapped to a predefined sitemap
+          // Routes can be grouped in one of: posts, tags, authors, pages, or a custom name
+          // The default sitemap - if none is passed - will be pages
+          allSitePage: {
+            sitemap: `page-sitemap`,
+          },
+          allClusterPage: {
+            sitemap: `category-sitemap`,
+          },
+          allBlogsPage: {
+            sitemap: `post-sitemap`,
+          },
+        },
+      }
     },
     {
       resolve: "gatsby-plugin-robots-txt",
