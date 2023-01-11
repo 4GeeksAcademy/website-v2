@@ -91,7 +91,7 @@ details:
           icon: "contract-checked"
           
   heading: Machine Learning Engineering Syllabus
-  weeks: 18
+  weeks: 16
   weeks_label: "weeks"
   facts:
     - label: "Duration"
