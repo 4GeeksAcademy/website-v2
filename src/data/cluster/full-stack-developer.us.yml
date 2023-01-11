@@ -4,7 +4,7 @@ meta_info:
   visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   description: "Learn from the experts at 4Geeks Academy and become a Full Stack Developer. Stay current with the latest technology trends and best practices through our blog."
   image: ""
-  keywords: ""
+  keywords: "Full Stack Developer"
   redirects: []
 
 seo_title: "Full Stack Developer"
