@@ -73,7 +73,7 @@
     "gatsby-remark-lazy-load": "^1.0.2",
     "gatsby-remark-reading-time": "^1.1.0",
     "gatsby-source-filesystem": "^2.1.21",
-    "gatsby-transformer-remark": "^2.6.32",
+    "gatsby-transformer-remark": "^5.25.1",
     "gatsby-transformer-sharp": "^2.12.1",
     "gatsby-transformer-yaml": "^2.2.15",
     "lazysizes": "^5.2.2",
