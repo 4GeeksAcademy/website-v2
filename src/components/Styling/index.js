@@ -140,6 +140,7 @@ export const RoundImage = styled.div`
 
   @media ${Devices.tablet} {
     width: ${(props) => props.width_tablet};
+    height: ${(props) => props.height_tablet};
   }
   @media ${Devices.md} {
     width: ${(props) => props.width_md};

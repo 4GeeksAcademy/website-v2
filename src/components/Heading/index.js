@@ -86,6 +86,7 @@ const BaseHeading = styled(Heading)`
     padding: ${(props) => props.padding_md};
   }
   @media ${Devices.lg} {
+    text-align: ${(props) => props.textAlign_lg};
   }
   @media ${Devices.xl} {
   }

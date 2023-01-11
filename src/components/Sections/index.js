@@ -331,7 +331,7 @@ export const Div = styled.div`
   }
   @media ${Devices.lg} {
     display: ${(props) => props.display_lg};
-    justifycontent: ${(props) =>
+    justify-content: ${(props) =>
       justifyContentOptions[props.justifyContent_lg]};
     padding: ${(props) => props.padding_lg};
     max-width: ${(props) => props.maxWidth_lg};
