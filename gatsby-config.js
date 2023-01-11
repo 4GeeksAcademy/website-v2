@@ -161,39 +161,39 @@ module.exports = {
             filter: {
               context: {
                 visibility: {nin: ["hidden", "unlisted"]}
-                filePath: { regex: "/^((?!\/data\/blog\/).)*$/" }
+                // filePath: { regex: "/^((?!\/data\/blog\/).)*$/" }
               }
-              path: { regex: "/^((?!\/blog\/).)*$/" }
+              // path: { regex: "/^((?!\/blog\/).)*$/" }
             }
           ) {
               nodes {
                   path
               }
           }
-          allClusterPage(
-            filter: {
-              context: {
-                visibility: {nin: ["hidden", "unlisted"]}
-              }
-              path: { regex: "/.*(\/blog\/).*/" }
-            }
-          ) {
-              nodes {
-                  path
-              }
-          }
-          allBlogsPage(
-            filter: {
-              context: {
-                visibility: {nin: ["hidden", "unlisted"]}
-                filePath: { regex: "/.*(\/data\/blog\/).*/" }
-              }
-            }
-          ) {
-              nodes {
-                  path
-              }
-          }
+          // allClusterPage(
+          //   filter: {
+          //     context: {
+          //       visibility: {nin: ["hidden", "unlisted"]}
+          //     }
+          //     path: { regex: "/.*(\/blog\/).*/" }
+          //   }
+          // ) {
+          //     nodes {
+          //         path
+          //     }
+          // }
+          // allBlogsPage(
+          //   filter: {
+          //     context: {
+          //       visibility: {nin: ["hidden", "unlisted"]}
+          //       filePath: { regex: "/.*(\/data\/blog\/).*/" }
+          //     }
+          //   }
+          // ) {
+          //     nodes {
+          //         path
+          //     }
+          // }
         }`,
         // The filepath and name to Index Sitemap. Defaults to '/sitemap.xml'.
         mapping: {
@@ -203,14 +203,14 @@ module.exports = {
           allSitePage: {
             sitemap: `page-sitemap`,
           },
-          allClusterPage: {
-            sitemap: `category-sitemap`,
-          },
-          allBlogsPage: {
-            sitemap: `post-sitemap`,
-          },
+          // allClusterPage: {
+          //   sitemap: `category-sitemap`,
+          // },
+          // allBlogsPage: {
+          //   sitemap: `post-sitemap`,
+          // },
         },
-      }
+      },
     },
     {
       resolve: "gatsby-plugin-robots-txt",
