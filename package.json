@@ -62,7 +62,6 @@
     "gatsby-plugin-rollbar": "^1.1.0",
     "gatsby-plugin-root-import": "^2.0.5",
     "gatsby-plugin-sharp": "^2.14.4",
-    "gatsby-plugin-sitemap": "^2.2.27",
     "gatsby-plugin-styled-components": "^3.1.4",
     "gatsby-plugin-web-font-loader": "^1.0.4",
     "gatsby-plugin-zeit-now": "^0.2.0",
