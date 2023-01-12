@@ -177,12 +177,7 @@ const ChartSection = ({ info, mobile }) => (
     // left_lg="150px"
     top="-2%"
   >
-    <H3
-      color={Colors.blue}
-      margin="auto"
-      fontSize="26px"
-      lineHeight="31.2px"
-    >
+    <H3 color={Colors.blue} margin="auto" fontSize="26px" lineHeight="31.2px">
       {info.chart_section.title}
     </H3>
     <Div
@@ -361,8 +356,8 @@ const PricesAndPaymentsV2 = (props) => {
   const availablePlans =
     currentPlans && currentLocation
       ? currentPlans.filter((plan) =>
-        plan.academies.includes(currentLocation.fields.file_name.slice(0, -3))
-      )
+          plan.academies.includes(currentLocation.fields.file_name.slice(0, -3))
+        )
       : [];
 
   // const steps = props.details.details_modules.reduce((total, current, i) => [...total, (total[i - 1] || 0) + current.step], [])
@@ -493,7 +488,7 @@ const PricesAndPaymentsV2 = (props) => {
         minHeight_tablet="600px"
         padding_md="20px"
       >
-        <ChartSection info={info} mobile/>
+        <ChartSection info={info} mobile />
         <Div
           borderRadius="4px"
           border="1px solid #000"
@@ -568,8 +563,9 @@ const PricesAndPaymentsV2 = (props) => {
                 width: "70%",
                 cursor: selectedPlan === null && "default",
               }}
-              to={`${info.apply_button.link}${selectedPlan ? `?utm_plan=${selectedPlan}` : ""
-                }`}
+              to={`${info.apply_button.link}${
+                selectedPlan ? `?utm_plan=${selectedPlan}` : ""
+              }`}
             >
               <Button
                 variant="full"
