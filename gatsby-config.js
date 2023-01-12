@@ -152,11 +152,6 @@ module.exports = {
         // 1 query for each data type
         query: `
         {
-          site {
-            siteMetadata {
-                siteUrl
-            }
-          }
           allSitePage(
             filter: {
               context: {
