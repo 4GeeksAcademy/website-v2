@@ -161,7 +161,7 @@ const PricingCard = ({
 
 const ChartSection = ({ info, mobile }) => (
   <Div
-    id="chart-section"
+    className="chart-section"
     background="#000"
     padding="20px 14px"
     borderRadius="4px"
@@ -515,84 +515,7 @@ const PricesAndPaymentsV2 = (props) => {
           display="block"
           position="relative"
         >
-          <Div
-            id="chart-section"
-            background="#000"
-            padding="20px 14px"
-            borderRadius="4px"
-            maxWidth_sm="385px"
-            width_xs="80%"
-            margin="auto"
-            display="none"
-            display_md="block"
-            position_sm="static"
-            position_md="absolute"
-            // left="6%"
-            left="-360px"
-            // left_lg="150px"
-            top="-2%"
-          >
-            <H3
-              color={Colors.blue}
-              margin="auto"
-              fontSize="26px"
-              lineHeight="31.2px"
-            >
-              {info.chart_section.title}
-            </H3>
-            <Div
-              id="chart-image"
-              margin="15px 0"
-              borderRadius="4px"
-              background="#101010"
-              width="100%"
-              height="256px"
-              flexDirection="column"
-              justifyContent="center"
-            >
-              <Icon icon="payments_chart" style={{ margin: "auto" }} />
-            </Div>
-            <Div id="legend" flexWrap="wrap" justifyContent="between">
-              {info.chart_section &&
-                Array.isArray(info.chart_section.legend) &&
-                info.chart_section.legend.map((item, i) => (
-                  <Div
-                    width={i === 0 ? "100%" : "48%"}
-                    border="1px solid #FFF"
-                    borderRadius="4px"
-                    className="info"
-                    margin="0 0 4% 0"
-                  >
-                    <Div
-                      flexShrink_tablet="0"
-                      borderRadius="4px 0px 0px 4px"
-                      height="100%"
-                      width="19.39px"
-                      background={item.color}
-                    />
-                    <Div padding={i === 0 ? "10px" : "5px"} display="block">
-                      <H5
-                        margin={i !== 0 && "0 0 10px 0"}
-                        textAlign="left"
-                        color={i === 0 ? item.color : Colors.white}
-                      >
-                        {item.percentage}
-                      </H5>
-                      <Paragraph
-                        fontWeight_tablet="700"
-                        fontSize={i === 0 ? "16px" : "12px"}
-                        lineHeight={i === 0 ? "19px" : "14.4px"}
-                        color="#FFF"
-                        textAlign="left"
-                        opacity="1"
-                      >
-                        {item.description}
-                      </Paragraph>
-                    </Div>
-                  </Div>
-                ))}
-            </Div>
-          </Div>
+          <ChartSection info={info} mobile={false} />
           {availablePlans && availablePlans.length !== 0 ? (
             <H3
               fontSize="24px"
