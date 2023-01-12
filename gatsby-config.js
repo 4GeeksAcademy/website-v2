@@ -204,9 +204,12 @@ module.exports = {
           allSitePage: {
             sitemap: `page-sitemap`,
           },
-          // allClusterPage: {
-          //   sitemap: `category-sitemap`,
-          // },
+          allClusterPage: {
+            sitemap: `category-sitemap`,
+            serializer: (edges) => {
+              return edges.filter(({ node }) => !node.slug.contains('/blog/'))
+          }
+          },
           // allBlogsPage: {
           //   sitemap: `post-sitemap`,
           // },
