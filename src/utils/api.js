@@ -25,6 +25,11 @@ const getAllAssets = async () => {
       logger.error(`Status: ${_resp.status}`);
       throw new Error(_resp.data);
     }
+    else{
+      console.log(
+        "Successfully fetched blogposts from the breathecode API"
+      );
+    }
     return _resp.data;
   } catch (e) {
     console.log(
