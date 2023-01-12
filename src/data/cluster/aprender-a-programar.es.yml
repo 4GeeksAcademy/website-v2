@@ -1,0 +1,15 @@
+meta_info:
+  slug: aprender-a-programar
+  title: "Aprende a programar con el blog de 4GeeksAcademy: Consejos, recursos y tendencias"
+  visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
+  description: "Aprende a programar con 4Geeks Academy. Descubre las últimas tendencias y mejores prácticas de la industria a través de nuestro blog."
+  image: ""
+  keywords: "Aprender A Programar"
+  redirects: []
+
+seo_title: "Aprender A Programar"
+header:
+    title: Aprender A Programar - Blog
+    paragraph: "¡Bienvenido a la sección "Aprender a Programar" del blog de 4Geeks Academy! Aquí encontrarás una gran cantidad de información y recursos para ayudarte a comenzar tu viaje en el emocionante mundo de la programación. Aprenderás sobre los conceptos básicos de la programación, los lenguajes más populares y cómo elegir el curso adecuado para ti. Pero eso no es todo, también te guiaremos en tu camino para mejorar tus habilidades, aprender las últimas tecnologías y avanzar en tu carrera como programador."
+    image: ""
+    image_alt: ""
