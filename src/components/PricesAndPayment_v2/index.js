@@ -159,6 +159,87 @@ const PricingCard = ({
   );
 };
 
+const ChartSection = ({ info, mobile }) => (
+  <Div
+    id="chart-section"
+    background="#000"
+    padding="20px 14px"
+    borderRadius="4px"
+    maxWidth_sm="385px"
+    width_xs="80%"
+    margin="auto"
+    display={mobile ? "block" : "none"}
+    display_md={mobile ? "none" : "block"}
+    position_sm="static"
+    position_md="absolute"
+    // left="6%"
+    left="-360px"
+    // left_lg="150px"
+    top="-2%"
+  >
+    <H3
+      color={Colors.blue}
+      margin="auto"
+      fontSize="26px"
+      lineHeight="31.2px"
+    >
+      {info.chart_section.title}
+    </H3>
+    <Div
+      id="chart-image"
+      margin="15px 0"
+      borderRadius="4px"
+      background="#101010"
+      width="100%"
+      height="256px"
+      flexDirection="column"
+      justifyContent="center"
+    >
+      <Icon icon="payments_chart" style={{ margin: "auto" }} />
+    </Div>
+    <Div id="legend" flexWrap="wrap" justifyContent="between">
+      {info.chart_section &&
+        Array.isArray(info.chart_section.legend) &&
+        info.chart_section.legend.map((item, i) => (
+          <Div
+            width={i === 0 ? "100%" : "48%"}
+            border="1px solid #FFF"
+            borderRadius="4px"
+            className="info"
+            margin="0 0 4% 0"
+          >
+            <Div
+              flexShrink_tablet="0"
+              borderRadius="4px 0px 0px 4px"
+              height="100%"
+              width="19.39px"
+              background={item.color}
+            />
+            <Div padding={i === 0 ? "10px" : "5px"} display="block">
+              <H5
+                margin={i !== 0 && "0 0 10px 0"}
+                textAlign="left"
+                color={i === 0 ? item.color : Colors.white}
+              >
+                {item.percentage}
+              </H5>
+              <Paragraph
+                fontWeight_tablet="700"
+                fontSize={i === 0 ? "16px" : "12px"}
+                lineHeight={i === 0 ? "19px" : "14.4px"}
+                color="#FFF"
+                textAlign="left"
+                opacity="1"
+              >
+                {item.description}
+              </Paragraph>
+            </Div>
+          </Div>
+        ))}
+    </Div>
+  </Div>
+);
+
 const courseArray = [
   {
     value: "full_stack",
@@ -280,8 +361,8 @@ const PricesAndPaymentsV2 = (props) => {
   const availablePlans =
     currentPlans && currentLocation
       ? currentPlans.filter((plan) =>
-          plan.academies.includes(currentLocation.fields.file_name.slice(0, -3))
-        )
+        plan.academies.includes(currentLocation.fields.file_name.slice(0, -3))
+      )
       : [];
 
   // const steps = props.details.details_modules.reduce((total, current, i) => [...total, (total[i - 1] || 0) + current.step], [])
@@ -408,87 +489,11 @@ const PricesAndPaymentsV2 = (props) => {
       </GridContainer>
       <Div
         display="block"
-        position="relative"
+        // position="relative"
         minHeight_tablet="600px"
         padding_md="20px"
       >
-        <Div
-          id="chart-section"
-          background="#000"
-          padding="20px 14px"
-          borderRadius="4px"
-          maxWidth_sm="385px"
-          width_xs="80%"
-          margin="auto"
-          display="block"
-          position_sm="static"
-          position_md="absolute"
-          // left="6%"
-          left="50px"
-          left_lg="150px"
-          top="-2%"
-        >
-          <H3
-            color={Colors.blue}
-            margin="auto"
-            fontSize="26px"
-            lineHeight="31.2px"
-          >
-            {info.chart_section.title}
-          </H3>
-          <Div
-            id="chart-container"
-            margin="15px 0"
-            borderRadius="4px"
-            background="#101010"
-            width="100%"
-            height="256px"
-            flexDirection="column"
-            justifyContent="center"
-          >
-            <Icon icon="payments_chart" style={{ margin: "auto" }} />
-          </Div>
-          <Div id="legend" flexWrap="wrap" justifyContent="between">
-            {info.chart_section &&
-              Array.isArray(info.chart_section.legend) &&
-              info.chart_section.legend.map((item, i) => (
-                <Div
-                  width={i === 0 ? "100%" : "48%"}
-                  border="1px solid #FFF"
-                  borderRadius="4px"
-                  className="info"
-                  margin="0 0 4% 0"
-                >
-                  <Div
-                    flexShrink_tablet="0"
-                    borderRadius="4px 0px 0px 4px"
-                    height="100%"
-                    width="19.39px"
-                    background={item.color}
-                  />
-                  <Div padding={i === 0 ? "10px" : "5px"} display="block">
-                    <H5
-                      margin={i !== 0 && "0 0 10px 0"}
-                      textAlign="left"
-                      color={i === 0 ? item.color : Colors.white}
-                    >
-                      {item.percentage}
-                    </H5>
-                    <Paragraph
-                      fontWeight_tablet="700"
-                      fontSize={i === 0 ? "16px" : "12px"}
-                      lineHeight={i === 0 ? "19px" : "14.4px"}
-                      color="#FFF"
-                      textAlign="left"
-                      opacity="1"
-                    >
-                      {item.description}
-                    </Paragraph>
-                  </Div>
-                </Div>
-              ))}
-          </Div>
-        </Div>
+        <ChartSection info={info} mobile/>
         <Div
           borderRadius="4px"
           border="1px solid #000"
@@ -496,19 +501,98 @@ const PricesAndPaymentsV2 = (props) => {
           padding_xs="18px 15px"
           padding_sm="38px"
           // width_md="740px"
-          maxWidth_lg="800px"
-          minWidth_lg="700px"
-          maxWidth_md="740px"
+          // maxWidth_lg="800px"
+          // minWidth_lg="700px"
+          maxWidth_md="700px"
           minWidth_md="580px"
           width_md="auto"
           // width_tablet="80%"
           width_xs="80%"
-          margin_lg="0 0 0 500px"
+          margin_lg="auto"
           margin_md="0 0 0 400px"
           // margin_md="0 0 0 30%"
           margin_xs="20px auto"
           display="block"
+          position="relative"
         >
+          <Div
+            id="chart-section"
+            background="#000"
+            padding="20px 14px"
+            borderRadius="4px"
+            maxWidth_sm="385px"
+            width_xs="80%"
+            margin="auto"
+            display="none"
+            display_md="block"
+            position_sm="static"
+            position_md="absolute"
+            // left="6%"
+            left="-360px"
+            // left_lg="150px"
+            top="-2%"
+          >
+            <H3
+              color={Colors.blue}
+              margin="auto"
+              fontSize="26px"
+              lineHeight="31.2px"
+            >
+              {info.chart_section.title}
+            </H3>
+            <Div
+              id="chart-image"
+              margin="15px 0"
+              borderRadius="4px"
+              background="#101010"
+              width="100%"
+              height="256px"
+              flexDirection="column"
+              justifyContent="center"
+            >
+              <Icon icon="payments_chart" style={{ margin: "auto" }} />
+            </Div>
+            <Div id="legend" flexWrap="wrap" justifyContent="between">
+              {info.chart_section &&
+                Array.isArray(info.chart_section.legend) &&
+                info.chart_section.legend.map((item, i) => (
+                  <Div
+                    width={i === 0 ? "100%" : "48%"}
+                    border="1px solid #FFF"
+                    borderRadius="4px"
+                    className="info"
+                    margin="0 0 4% 0"
+                  >
+                    <Div
+                      flexShrink_tablet="0"
+                      borderRadius="4px 0px 0px 4px"
+                      height="100%"
+                      width="19.39px"
+                      background={item.color}
+                    />
+                    <Div padding={i === 0 ? "10px" : "5px"} display="block">
+                      <H5
+                        margin={i !== 0 && "0 0 10px 0"}
+                        textAlign="left"
+                        color={i === 0 ? item.color : Colors.white}
+                      >
+                        {item.percentage}
+                      </H5>
+                      <Paragraph
+                        fontWeight_tablet="700"
+                        fontSize={i === 0 ? "16px" : "12px"}
+                        lineHeight={i === 0 ? "19px" : "14.4px"}
+                        color="#FFF"
+                        textAlign="left"
+                        opacity="1"
+                      >
+                        {item.description}
+                      </Paragraph>
+                    </Div>
+                  </Div>
+                ))}
+            </Div>
+          </Div>
           {availablePlans && availablePlans.length !== 0 ? (
             <H3
               fontSize="24px"
@@ -561,9 +645,8 @@ const PricesAndPaymentsV2 = (props) => {
                 width: "70%",
                 cursor: selectedPlan === null && "default",
               }}
-              to={`${info.apply_button.link}${
-                selectedPlan ? `?utm_plan=${selectedPlan}` : ""
-              }`}
+              to={`${info.apply_button.link}${selectedPlan ? `?utm_plan=${selectedPlan}` : ""
+                }`}
             >
               <Button
                 variant="full"
