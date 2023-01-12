@@ -161,9 +161,7 @@ module.exports = {
             filter: {
               context: {
                 visibility: {nin: ["hidden", "unlisted"]}
-                // filePath: { regex: "/^((?!\/data\/blog\/).)*$/" }
               }
-              // path: { regex: "/^((?!\/blog\/).)*$/" }
             }
           ) {
               nodes {
@@ -171,30 +169,35 @@ module.exports = {
               }
           }
         }`,
+        // context: {
+        //   visibility: {nin: ["hidden", "unlisted"]}
+        //   filePath: { regex: "/^((?!\/data\/blog\/).)*$/" }
+        // }
+        // path: { regex: "/^((?!\/blog\/).)*$/" }
         // allClusterPage(
-          //   filter: {
-          //     context: {
-          //       visibility: {nin: ["hidden", "unlisted"]}
-          //     }
-          //     path: { regex: "/.*(\/blog\/).*/" }
-          //   }
-          // ) {
-          //     nodes {
-          //         path
-          //     }
-          // }
-          // allBlogsPage(
-          //   filter: {
-          //     context: {
-          //       visibility: {nin: ["hidden", "unlisted"]}
-          //       filePath: { regex: "/.*(\/data\/blog\/).*/" }
-          //     }
-          //   }
-          // ) {
-          //     nodes {
-          //         path
-          //     }
-          // }
+        //   filter: {
+        //     context: {
+        //       visibility: {nin: ["hidden", "unlisted"]}
+        //     }
+        //     path: { regex: "/.*(\/blog\/).*/" }
+        //   }
+        // ) {
+        //     nodes {
+        //         path
+        //     }
+        // }
+        // allBlogsPage(
+        //   filter: {
+        //     context: {
+        //       visibility: {nin: ["hidden", "unlisted"]}
+        //       filePath: { regex: "/.*(\/data\/blog\/).*/" }
+        //     }
+        //   }
+        // ) {
+        //     nodes {
+        //         path
+        //     }
+        // }
         // The filepath and name to Index Sitemap. Defaults to '/sitemap.xml'.
         mapping: {
           // Each data type can be mapped to a predefined sitemap
