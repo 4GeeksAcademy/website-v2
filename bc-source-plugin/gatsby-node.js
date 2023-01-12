@@ -28,7 +28,9 @@ exports.sourceNodes = async (
   // }
   const posts = await API.getAllAssets();
 
-  console.log(`${posts.length} posts found, starting to parse them into markdown remark nodes.`)
+  console.log(
+    `${posts.length} posts found, starting to parse them into markdown remark nodes.`
+  );
   logger.debug(
     `${posts.length} posts found, starting to parse them into markdown remark nodes.`
   );

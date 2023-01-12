@@ -30,7 +30,7 @@ export const save_form = async (
       referral_key = formData.referral_key || session.utm?.referral_key;
     }
     return referral_key;
-  }
+  };
 
   const resp = await fetch(`${getEnvironmentAPI()}/marketing/lead`, {
     headers: new Headers({ "content-type": "application/json" }),

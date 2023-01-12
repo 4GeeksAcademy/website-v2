@@ -24,13 +24,10 @@ const getAllAssets = async () => {
     if (_resp.status != 200) {
       logger.error(`Status: ${_resp.status}`);
       throw new Error(_resp.data);
+    } else {
+      console.log(`Successfully fetched ${_resp.data.count || _resp.data.length} blogposts from the API`);
     }
-    else{
-      console.log(
-        "Successfully fetched blogposts from the breathecode API"
-      );
-    }
-    return _resp.data;
+    return _resp.data.results || _resp.data;
   } catch (e) {
     console.log(
       "Error fetching blogposts from the breathecode API: ",

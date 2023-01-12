@@ -122,7 +122,7 @@ const Location = ({ data, pageContext, yml }) => {
                 width="100%"
               >
                 {yml.info_box.address}
-                {!yml.info_box.address.includes('Only remotely') && (
+                {!yml.info_box.address.includes("Only remotely") && (
                   <Link
                     target="_blank"
                     to={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
