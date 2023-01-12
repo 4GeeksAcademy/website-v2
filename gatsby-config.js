@@ -158,6 +158,7 @@ module.exports = {
                 visibility: {nin: ["hidden", "unlisted"]}
                 filePath: { regex: "/^((?!\/data\/blog\/).)*$/" }
               }
+              path: { regex: "/^((?!\/blog).)*$/" }
             }
           ) {
             edges{
@@ -173,6 +174,21 @@ module.exports = {
                 visibility: {nin: ["hidden", "unlisted"]}
               }
               path: { regex: "/.*(\/blog).*/" }
+            }
+          ) {
+            edges{
+              node {
+                id
+                slug: path
+              }
+            }    
+          }
+          allBlogsPage: allSitePage(
+            filter: {
+              context: {
+                visibility: {nin: ["hidden", "unlisted"]}
+                filePath: { regex: "/.*(\/data\/blog\/).*/" }
+              }
             }
           ) {
             edges{
@@ -222,13 +238,10 @@ module.exports = {
           },
           allClusterPage: {
             sitemap: `category-sitemap`,
-            // serializer: (edges) => {
-            //   return edges.filter(({ node }) => !node.slug.contains("/blog/"));
-            // },
           },
-          // allBlogsPage: {
-          //   sitemap: `post-sitemap`,
-          // },
+          allBlogsPage: {
+            sitemap: `post-sitemap`,
+          },
         },
       },
     },
