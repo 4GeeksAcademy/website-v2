@@ -172,6 +172,7 @@ module.exports = {
               context: {
                 visibility: {nin: ["hidden", "unlisted"]}
               }
+              path: { regex: "/.*(\/blog).*/" }
             }
           ) {
             edges{
