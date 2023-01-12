@@ -166,6 +166,20 @@ module.exports = {
               }
             }    
           }
+          allClusterPage: allSitePage(
+            filter: {
+              context: {
+                visibility: {nin: ["hidden", "unlisted"]}
+              }
+            }
+          ) {
+            edges{
+              node {
+                id
+                slug: path
+              }
+            }    
+          }
         }`,
         // context: {
         //   visibility: {nin: ["hidden", "unlisted"]}
@@ -206,9 +220,9 @@ module.exports = {
           },
           allClusterPage: {
             sitemap: `category-sitemap`,
-            serializer: (edges) => {
-              return edges.filter(({ node }) => !node.slug.contains('/blog/'))
-          }
+            // serializer: (edges) => {
+            //   return edges.filter(({ node }) => !node.slug.contains("/blog/"));
+            // },
           },
           // allBlogsPage: {
           //   sitemap: `post-sitemap`,
