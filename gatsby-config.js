@@ -161,6 +161,7 @@ module.exports = {
           ) {
             edges{
               node {
+                id
                 slug: path
               }
             }    
