@@ -159,9 +159,11 @@ module.exports = {
               }
             }
           ) {
-              nodes {
-                  path
+            edges{
+              node {
+                slug: path
               }
+            }    
           }
         }`,
         // context: {
