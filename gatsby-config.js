@@ -156,6 +156,7 @@ module.exports = {
             filter: {
               context: {
                 visibility: {nin: ["hidden", "unlisted"]}
+                filePath: { regex: "/^((?!\/data\/blog\/).)*$/" }
               }
             }
           ) {
