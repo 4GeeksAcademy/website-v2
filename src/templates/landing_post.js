@@ -188,7 +188,6 @@ export default function Template(props) {
                   className="container-sidebar-content"
                   padding="25px 0"
                   margin="0 0 35px 0"
-                  flexDirection="column"
                   justifyContent="space-around"
                   gap="8px"
                   flexDirection="column"
