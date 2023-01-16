@@ -11,5 +11,5 @@ seo_title: "Python Bootcamp"
 header:
     title: Python Bootcamp - Blog
     paragraph: "Welcome to the Python Bootcamp section of 4Geeks Academy's blog. Here you will find articles about the basics of Python, popular libraries and frameworks, and best practices in Python development. You'll learn about the different types of Python bootcamp, such as online and part-time options, and how to choose the right one for you. Additionally, you'll find articles that cover how to prepare for bootcamp, what to expect from the curriculum and the learning experience. Our goal is to provide you with all the knowledge and resources you need to become a proficient Python developer, and whether you're just starting out or looking to advance your skills, this section will help you achieve your goals."
-    image: ""
-    image_alt: ""
+    image: "../../../static/images/blog/Blog-header.png"
+    image_alt: "python-bootcamp"
