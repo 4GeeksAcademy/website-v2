@@ -11,5 +11,5 @@ seo_title: "Coding Bootcamp"
 header:
     title: Coding Bootcamp - Blog
     paragraph: "Welcome to the Coding Bootcamp section of the 4Geeks Academy blog. Here, you'll find articles on all aspects of coding bootcamps, from what to expect to how to choose the right one for you. Our articles cover the different types of bootcamps available, preparation tips, curriculum and the learning experience. We also share success stories from our alumni and insights from our instructors. Coding Bootcamp is a valuable investment in your future and these articles will provide you with the information you need to make an informed decision. Read through these articles to learn more about coding bootcamps and make the best decision for you."
-    image: ""
-    image_alt: ""
+    image: "../../../static/images/blog/Blog-header.png"
+    image_alt: "coding-bootcamp"
