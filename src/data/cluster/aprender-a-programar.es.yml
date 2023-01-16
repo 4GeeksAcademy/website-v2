@@ -10,6 +10,6 @@ meta_info:
 seo_title: "Aprender A Programar"
 header:
     title: Aprender A Programar - Blog
-    paragraph: "¡Bienvenido a la sección "Aprender a Programar" del blog de 4Geeks Academy! Aquí encontrarás una gran cantidad de información y recursos para ayudarte a comenzar tu viaje en el emocionante mundo de la programación. Aprenderás sobre los conceptos básicos de la programación, los lenguajes más populares y cómo elegir el curso adecuado para ti. Pero eso no es todo, también te guiaremos en tu camino para mejorar tus habilidades, aprender las últimas tecnologías y avanzar en tu carrera como programador."
+    paragraph: "Aquí encontrarás recursos para ayudarte a comenzar tu viaje en el emocionante mundo de la programación. Aprenderás sobre los conceptos básicos de la programación, los lenguajes más populares y cómo elegir el curso adecuado para ti. Pero eso no es todo, también te guiaremos en tu camino para mejorar tus habilidades, aprender las últimas tecnologías y avanzar en tu carrera como programador."
     image: "../../../static/images/blog/Blog-header.png"
     image_alt: "aprender-a-programar"
