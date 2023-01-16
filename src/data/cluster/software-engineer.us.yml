@@ -11,5 +11,5 @@ seo_title: "Software Engineer"
 header:
     title: Software Engineer - Blog
     paragraph: "Welcome to the Software Engineer section of 4Geeks Academy's blog. Here you'll find articles about the latest technologies, best practices, and career insights in the field of software engineering. Topics include software design, development, testing, maintenance, as well as personal development and career growth. You'll learn about the different aspects of software engineering and how to improve your skills, stay updated with the latest technologies, and advance your career. Our goal is to provide you with all the knowledge and resources you need to become a well-rounded software engineer and succeed in the profession, whether you're just starting out or looking to take your skills to the next level."
-    image: ""
-    image_alt: ""
+    image: "../../../static/images/blog/Blog-header.png"
+    image_alt: "software-engineer"
