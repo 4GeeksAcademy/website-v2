@@ -157,7 +157,7 @@ components:
   - name: python_y_javascript
     position: 5
     layout: two_column_right
-    background: "veryLightBlue2" # Name of the color(from components/Styling/index.js) or color code ex: #C9F9F9
+    background: "veryLightBlue2" # Name of the color(from components/Styling/index.js) or color code ex: #C9F9F9 .
     image:
       src: "/images/why-4geeks/python-image.png"
     heading:
