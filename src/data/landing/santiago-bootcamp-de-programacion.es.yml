@@ -41,7 +41,7 @@ apply_schollarship: # form that is displayed at the end of the landing
 # jumbotron on the top (cannot be commented out)
 header_data:
   background: "#FFF1D1"
-  tagline: Conviértete en Desarrollador Web en 16 semanas trabajando en proyectos reales y con mentores profesionales. 
+  tagline: Conviértete en Desarrollador Web en 18 semanas trabajando en proyectos reales y con mentores profesionales. 
   sub_heading: ""
   badge: "../../../static/images/badges/switchup.png"
   image_filter: brightness(0.3)
@@ -52,7 +52,7 @@ features:
   #                                         up   left down  right
   styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
   bullets:
-    - De cero a programador en 16 semanas
+    - De cero a programador en 18 semanas
     - Mentorías y career support de por vida
     - ¿Estudias o trabajas? Tienes la opción del horario Part Time
     - Un desarrollador Jr puede ganar hasta $900.000 CLP al mes
