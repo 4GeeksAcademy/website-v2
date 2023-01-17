@@ -145,7 +145,6 @@ const Landing = (props) => {
         background={yml.header_data.background || Colors.white}
       >
         <GridContainer
-          padding="0"
           containerGridGap="0"
           containerColumns_tablet="repeat(1,0fr)"
           padding="95px 0 35px 0"

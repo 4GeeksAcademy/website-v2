@@ -7,16 +7,18 @@ import { Div } from "../Sections";
 
 const Post = ({ item, i, lang }) => {
   return (
-    <Link
-      to={`/${lang}/${item.node.frontmatter.cluster}/${item.node.frontmatter.slug}`}
+    <Div
+      key={`${i}-${item.node.frontmatter.title}`}
+      flexDirection="Column"
+      margin_tablet="0 10px"
+      margin_sm="0  10px 20px 10px"
+      margin="0  0 20px 0"
+      width_tablet="200px"
+      width="80%"
+      maxWidth="300px"
     >
-      <Div
-        key={`${i}-${item.node.frontmatter.title}`}
-        flexDirection="Column"
-        margin_tablet="0 10px"
-        margin="0  0 20px 0"
-        width_tablet="200px"
-        width="80%"
+      <Link
+        to={`/${lang}/${item.node.frontmatter.cluster}/${item.node.frontmatter.slug}`}
       >
         {item.node.frontmatter.image !== "" && (
           <LazyLoad height={10} scroll={true} once={true}>
@@ -30,7 +32,8 @@ const Post = ({ item, i, lang }) => {
               border="0px"
               position="center"
               width="100%"
-              height="130px"
+              height="200px"
+              height_tablet="130px"
               margin="0 0 10px 0"
             />
           </LazyLoad>
@@ -61,8 +64,8 @@ const Post = ({ item, i, lang }) => {
             {item.node.frontmatter.excerpt}
           </Paragraph>
         </Div>
-      </Div>
-    </Link>
+      </Link>
+    </Div>
   );
 };
 
@@ -81,10 +84,17 @@ const CourseBlogs = ({ posts, lang }) => {
         padding_tablet="10px 40px"
         padding="10px 20px"
       >
-        <H3 textAlign_tablet="left" margin="0 0 20px 0">
+        <H3
+          textAlign_lg="center"
+          textAlign_tablet="left"
+          margin="0 0 20px 0"
+          fontSize_lg="30px"
+          margin_lg="0 0 40px 0"
+        >
           {title[lang]}
         </H3>
         <Div
+          justifyContent_lg="evenly"
           justifyContent_tablet="between"
           justifyContent="center"
           flexWrap="wrap"
