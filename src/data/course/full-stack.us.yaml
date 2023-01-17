@@ -1,8 +1,8 @@
 meta_info:
   slug: part-time-full-stack-developer
-  title: "Become a developer, learn to code and get a job in tech with 4Geeks Academy"
+  title: "Become a Full Stack Developer with 4geeksacademy, master the Skills and Technologies"
   bc_slug: "full-stack"
-  description: "Master the coding fundamentals and develop real life applications. Get career support and mentoring for life."
+  description: "Unlock your full potential and become a Full Stack Developer with 4Geeks Academy. Sign up now and start your journey to success."
   image: "/images/og-preview/full-stack.us.png"
   visibility: "visible"
   keywords: ""
@@ -29,8 +29,8 @@ seo_title: "Cooding Bootcamp"
 header:
   title: "Full Stack Developer"
   image: "../../../static/images/bg/program-bg.png"
-  image_alt: ""
-  paragraph: "From zero to getting paid as a developer, learn the skills of the present and future. \n Boost your professional career and get hired by a tech company."
+  image_alt: "how-to-become-a-full-stack-developer-"
+  paragraph: "From zero to getting paid as a Full Stack Developer, learn the skills of the present and future. \n Boost your professional career and get hired by a tech company."
 
 button:
   syllabus_heading: "Download Syllabus"
@@ -101,7 +101,7 @@ details:
           content: "You can decide between English and Spanish to consume the syllabus and content. Live classes are taught in the language of your campus."
           icon: "contract-checked"
          
-  heading: Program Details Part-Time
+  heading: Program Details Part-Time Full Stack Developer
   weeks: 18
   sub_heading: "Hands-on learning through real-life projects. /n Master the 3 most used languages in the world: Master Python, JS and React."
   left_labels:
