@@ -11,6 +11,13 @@ const front_matter_fields = [
   { key: "utm_location", type: "string", mandatory: true },
 ];
 
+const chooseProgramYml = loadYML(
+  "src/data/components/choose_program/choose_program.us.yaml"
+);
+const programsSlugs = chooseProgramYml.yaml.programs.map(
+  (program) => program.bc_slug
+);
+
 walk(`${__dirname}/../data/landing`, async (err, files) => {
   err && fail("Error reading the YAML files: ", err);
   files.forEach((_path) => {
@@ -67,6 +74,14 @@ walk(`${__dirname}/../data/landing`, async (err, files) => {
           fail(
             `\n${`utm_course`.yellow} ${`expected an array in ${_path}`.red}\n`
           );
+        utm_course.forEach((course) => {
+          if (!programsSlugs.includes(course))
+            fail(
+              `\n${`utm_course: ${course}`.yellow} ${
+                `in ${_path} not present in choose_program data`.red
+              }\n`
+            );
+        });
       });
     } catch (error) {
       console.error(`Error on file: ${_path}`.red);
