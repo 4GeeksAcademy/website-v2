@@ -166,7 +166,5 @@ components:
         #           xl      lg      md      sm      xs
       font_size: ["50px", "50px", "50px", "50px", "50px"]
     content:
-      text: "Nuestro programa está basado en el uso de Python y Javascript. ¿La razón? En el mercado laboral JavaScript tiene 26 veces más vacantes de trabajo que Ruby on Rails y Python te permite acceder a distintas áreas del mundo de la programación.
-      
-      Otras herramientas que también aprenderás a usar en nuestro programa son: HTML5, CSS3, React, Flask, etc."
+      text: "Nuestro programa está basado en el uso de Python y Javascript. ¿La razón? En el mercado laboral JavaScript tiene 26 veces más vacantes de trabajo que Ruby on Rails y Python te permite acceder a distintas áreas del mundo de la programación. Otras herramientas que también aprenderás a usar en nuestro programa son: HTML5, CSS3, React, Flask, etc."
       font_size: ["16px"]
