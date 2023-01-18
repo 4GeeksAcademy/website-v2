@@ -207,3 +207,27 @@ part_time:
       - "*Paga una pequeña parte de tu salario cuando encuentres trabajo"
     icons: 
       - "/images/stepex.png"     
+
+  - slug: 'chile-ds-ml-pt'
+    academies: ['santiago-chile']
+    recomended: true
+    scholarship: "Paga al contado"
+    payment_time: "Y obtén un descuento"
+    price: "4.500.000 CLP*"
+    bullets:
+      - "Paga con transferencia bancaria, tarjeta de crédito o débito"    
+      - "*Precio sin descuento aplicado"
+    icons: 
+      - "/images/visa-mastercard.png"   
+
+  - slug: 'chile-ds-ml-pt'
+    academies: ['santiago-chile']
+    recomended: false
+    scholarship: "Cuotas desde"
+    payment_time: ""
+    price: "~220.500 CLP"
+    bullets:
+      - "Financiamiento a tu medida desde 6 hasta 18 meses"  
+      - "Se debe pagar un anticipo correspondiente al 20% del valor del programa" 
+    icons: 
+      - "/images/flevo.png"
