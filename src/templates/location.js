@@ -178,7 +178,6 @@ const Location = ({ data, pageContext, yml }) => {
                     />
                     {yml.phone || yml.info_box.whatsapp}
                   </>
-                  
                 )}
               </Paragraph>
             )}
