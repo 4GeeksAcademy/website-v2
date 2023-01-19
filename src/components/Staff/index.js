@@ -73,8 +73,8 @@ const Staff = (props) => {
         n.location.includes(sessionLocation)
     );
 
-  console.log("staff", staffFilteredByLocation);
-  console.log("staffList", staffList);
+  // console.log("staff", staffFilteredByLocation);
+  // console.log("staffList", staffList);
   return (
     <Fragment github="/components/staff">
       <GridContainer

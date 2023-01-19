@@ -155,20 +155,30 @@ const Location = ({ data, pageContext, yml }) => {
                 maxWidth="155px"
                 flexShrink="0"
               >
-                <Icon
-                  icon="phone"
-                  style={{ marginRight: "10px", flexShrink: 0 }}
-                />
                 {yml.info_box.whatsapp && yml.info_box.whatsapp_link ? (
-                  <a
-                    href={yml.info_box.whatsapp_link}
-                    target="_blank"
-                    rel="noopener noreferrer nofollow"
-                  >
-                    {yml.info_box.whatsapp}
-                  </a>
+                  <>
+                    <Icon
+                      icon="whatsapp"
+                      width="20px"
+                      style={{ marginRight: "10px", flexShrink: 0 }}
+                    />
+                    <a
+                      href={yml.info_box.whatsapp_link}
+                      target="_blank"
+                      rel="noopener noreferrer nofollow"
+                    >
+                      {yml.info_box.whatsapp}
+                    </a>
+                  </>
                 ) : (
-                  yml.phone || yml.info_box.whatsapp
+                  <>
+                    <Icon
+                      icon="phone"
+                      style={{ marginRight: "10px", flexShrink: 0 }}
+                    />
+                    {yml.phone || yml.info_box.whatsapp}
+                  </>
+                  
                 )}
               </Paragraph>
             )}
