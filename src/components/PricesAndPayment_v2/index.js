@@ -484,31 +484,26 @@ const PricesAndPaymentsV2 = (props) => {
       </GridContainer>
       <Div
         display="block"
-        // position="relative"
         minHeight_tablet="600px"
         padding_md="20px"
       >
-        <ChartSection info={info} mobile />
+        {/* <ChartSection info={info} mobile /> */}
         <Div
           borderRadius="4px"
           border="1px solid #000"
           background="#FFF"
           padding_xs="18px 15px"
           padding_sm="38px"
-          // width_md="740px"
-          // maxWidth_lg="800px"
-          // minWidth_lg="700px"
           maxWidth_md="700px"
           minWidth_md="580px"
           width_md="auto"
-          // width_tablet="80%"
           width_xs="80%"
           margin_lg="auto"
           margin_md="0 0 0 400px"
-          // margin_md="0 0 0 30%"
           margin_xs="20px auto"
           display="block"
           position="relative"
+          transform_lg="translate(50px)"
         >
           <ChartSection info={info} mobile={false} />
           {availablePlans && availablePlans.length !== 0 ? (
