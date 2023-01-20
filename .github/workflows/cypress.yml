@@ -27,7 +27,7 @@ jobs:
         run: npm install
       - name: Running Tests
         # Install NPM dependencies, cache them correctly
-        uses: cypress-io/github-action@v2
+        uses: cypress-io/github-action@v4
         with:
           build: npm run build
           start: npm run serve
