@@ -8,6 +8,11 @@ on:
     branches: 
       - development
       - master
+  pull_request_target:
+    types: [opened]
+    branches: 
+      - development
+      - master
 jobs:
   cypress-test:
     name: Test with Server
