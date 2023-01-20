@@ -482,11 +482,7 @@ const PricesAndPaymentsV2 = (props) => {
           </Link>
         </Div>
       </GridContainer>
-      <Div
-        display="block"
-        minHeight_tablet="600px"
-        padding_md="20px"
-      >
+      <Div display="block" minHeight_tablet="600px" padding_md="20px">
         {/* <ChartSection info={info} mobile /> */}
         <Div
           borderRadius="4px"
