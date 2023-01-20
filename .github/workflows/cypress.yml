@@ -1,7 +1,13 @@
 name: Cypress Test
 on:
-  push: {}
-  pull_request: {}
+  push:
+    branches:
+      - development
+      - master
+  pull_request:
+    branches: 
+      - development
+      - master
 jobs:
   cypress-test:
     name: Test with Server
