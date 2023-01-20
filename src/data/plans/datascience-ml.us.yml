@@ -49,7 +49,7 @@ part_time:
   - slug: 'plan-1'
     academies: ['downtown-miami', 'orlando']
     recomended: true
-    scholarship: "Scolarship"
+    scholarship: "Scholarship"
     payment_time: "Pay today"
     price: "$4999"
     bullets: 
@@ -208,3 +208,26 @@ part_time:
       - "*Pay a small part of your salary when you find a job"
     icons: 
       - "/images/stepex.png"     
+  - slug: 'chile-geekforce-fs-pt'
+    academies: ['santiago-chile']
+    recomended: true
+    scholarship: "Pay Upfront"
+    payment_time: "And get a discount"
+    price: "4.500.000 CLP*"
+    bullets:
+      - "Pay with bank transfer, credit or debit card"    
+      - "*Price without discount applied"
+    icons: 
+      - "/images/visa-mastercard.png"   
+
+  - slug: 'chile-ds-ml-pt'
+    academies: ['santiago-chile']
+    recomended: false
+    scholarship: "Financed"
+    payment_time: "18 months payment"
+    price: "~220.500 CLP"
+    bullets:
+      - "Tailor-made financing from 6 to 18 months"  
+      - "An advance payment corresponding to 20% of the value of the program must be paid" 
+    icons: 
+      - "/images/flevo.png"
