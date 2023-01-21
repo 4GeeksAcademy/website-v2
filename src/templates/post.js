@@ -27,6 +27,8 @@ export default function Template(props) {
   const { data, pageContext } = props;
   const { session } = React.useContext(SessionContext);
   const post = props.data.markdownRemark;
+  const isWindow = () => (window !== undefined ? true : false);
+  const isBrowser = typeof window !== `undefined`;
   const allowed = [
     `${post.frontmatter.author ? post.frontmatter.author.toLowerCase() : ""}`,
   ];
@@ -120,6 +122,24 @@ export default function Template(props) {
 
   //Formatted post date
   let postDate = GetFormattedDate(post.frontmatter.date);
+
+  // element that will be wrapped
+  let el;
+  let wrapper;
+  if (isBrowser) {
+    el = document.querySelector('table');
+    // create wrapper container
+    wrapper = document.createElement('div');
+    wrapper.classList.add("table-container");
+
+    if(el){
+      el.parentNode.insertBefore(wrapper, el);
+
+      // move el into wrapper
+      wrapper.appendChild(el);
+      // insert wrapper before el in the DOM tree
+    }
+  }
 
   return (
     <>
