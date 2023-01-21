@@ -103,7 +103,7 @@
   line-height: 28px;
 }
 
-.table-container{
+.table-container {
   overflow-x: auto;
 }
 
@@ -128,20 +128,20 @@
     white-space: normal;
   }
 
-  .table-container{
+  .table-container {
     max-width: 90%;
     width: 600px;
   }
 }
 
 @media (max-width: 600px) {
-  .table-container{
+  .table-container {
     width: 390px;
   }
 }
 
 @media (max-width: 400px) {
-  .table-container{
+  .table-container {
     width: 300px;
   }
 }

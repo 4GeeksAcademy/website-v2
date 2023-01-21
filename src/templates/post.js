@@ -127,12 +127,12 @@ export default function Template(props) {
   let el;
   let wrapper;
   if (isBrowser) {
-    el = document.querySelector('table');
+    el = document.querySelector("table");
     // create wrapper container
-    wrapper = document.createElement('div');
+    wrapper = document.createElement("div");
     wrapper.classList.add("table-container");
 
-    if(el){
+    if (el) {
       el.parentNode.insertBefore(wrapper, el);
 
       // move el into wrapper
