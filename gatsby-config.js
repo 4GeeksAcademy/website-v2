@@ -48,6 +48,12 @@ module.exports = {
       },
     },
     {
+      resolve: '@mkitio/gatsby-theme-password-protect',
+      options: {
+        password: process.env.NODE_ENV === 'development' ? 'g0Ku' : undefined // delete or `undefined` to disable password protection
+      }
+    },
+    {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
