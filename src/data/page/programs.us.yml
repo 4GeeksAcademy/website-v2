@@ -1,9 +1,9 @@
 meta_info:
-  slug: programOur available coursess
+  slug: programs
   title: "Welcome to our programs"
   description: "Our available courses"
   visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
-  image: "/images/og-preview/finantial.us.png"
+  image: "/images/programs-heading.png"
   keywords: "Programs at 4Geeks Academy"
   redirects: ["/programs"]
 
