@@ -103,6 +103,10 @@
   line-height: 28px;
 }
 
+.table-container {
+  overflow-x: auto;
+}
+
 @media (max-width: 768px) {
   .single-post table:before {
     content: " 👆 ➡ Swipe your finger to scroll the table";
@@ -122,6 +126,23 @@
   }
   .single-post table td:nth-child(1) {
     white-space: normal;
+  }
+
+  .table-container {
+    max-width: 90%;
+    width: 600px;
+  }
+}
+
+@media (max-width: 600px) {
+  .table-container {
+    width: 390px;
+  }
+}
+
+@media (max-width: 400px) {
+  .table-container {
+    width: 300px;
   }
 }
 

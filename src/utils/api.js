@@ -18,14 +18,20 @@ const getAllAssets = async () => {
   try {
     const _resp = await axios.get(
       GATSBY_BREATHECODE_HOST +
-        `/registry/academy/asset?category=blog-es,blog-us`,
+        `/registry/academy/asset?limit=500&offset=0&category=blog-es,blog-us`,
       options
     );
     if (_resp.status != 200) {
       logger.error(`Status: ${_resp.status}`);
       throw new Error(_resp.data);
+    } else {
+      console.log(
+        `Successfully fetched ${
+          _resp.data.count || _resp.data.length
+        } blogposts from the API`
+      );
     }
-    return _resp.data;
+    return _resp.data.results || _resp.data;
   } catch (e) {
     console.log(
       "Error fetching blogposts from the breathecode API: ",
