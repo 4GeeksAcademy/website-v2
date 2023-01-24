@@ -1,9 +1,10 @@
 import React from "react";
-const whatsapp = () => (
+const whatsapp = (props) => (
   <svg
-    height="28px"
+    height={props.height || "28px"}
     viewBox="-1 0 512 512"
-    width="28px"
+    width={props.width || "28px"}
+    style={props.style}
     xmlns="http://www.w3.org/2000/svg"
   >
     <path

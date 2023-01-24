@@ -381,7 +381,7 @@ const Program = ({ data, pageContext, yml }) => {
             {item.list.map((tech, i) => (
               <Card
                 key={`${i}-${tech.title}`}
-                color={buttonToggle && tech.title == toggleIndex}
+                // color={buttonToggle && tech.title == toggleIndex}
                 height="auto"
                 width="100%"
                 borders="0"

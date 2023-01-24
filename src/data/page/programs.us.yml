@@ -1,0 +1,23 @@
+meta_info:
+  slug: programs
+  title: "Welcome to our programs"
+  description: "Our available courses"
+  visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
+  image: "/images/programs-heading.png"
+  keywords: "Programs at 4Geeks Academy"
+  redirects: ["/programs"]
+
+seo_title: "level up as a developer"
+header:
+  title: Welcome to our programs
+  paragraph: Our focus on coding skills, lifetime career and coding support and aggressive scholarship programs allows us to present the best possible offers to become a developer in a matter of weeks.
+  image: "../../../static/images/programs-heading.png"
+  alt: ""
+
+choose_program:
+  title: These are our available courses
+  paragraph: ""
+
+content:
+  title: "All programs are taught "
+  title_highlighted: "Online, Hybrid or In-person." 
