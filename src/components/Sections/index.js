@@ -338,6 +338,7 @@ export const Div = styled.div`
     min-width: ${(props) => props.minWidth_lg};
     left: ${(props) => props.left_lg};
     margin: ${(props) => props.margin_lg};
+    transform: ${(props) => props.transform_lg};
   }
   @media ${Devices.xl} {
   }
