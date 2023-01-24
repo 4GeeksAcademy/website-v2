@@ -1,0 +1,23 @@
+meta_info:
+  slug: programas
+  title: "Bienvenido a nuestros programas"
+  description: "Nuestros cursos disponibles"
+  visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
+  image: "/images/programs-heading.png"
+  keywords: "Programas de 4Geeks Academy"
+  redirects: ["/programas"]
+
+seo_title: "progresa como desarrollador"
+header:
+  title: Bienvenido a nuestros programas
+  paragraph: Nuestro enfoque en las habilidades de codificación, la carrera de por vida y el apoyo a la codificación y los agresivos programas de becas nos permiten presentar las mejores ofertas posibles para convertirnos en desarrolladores en cuestión de semanas.
+  image: "../../../static/images/programs-heading.png"
+  alt: ""
+
+choose_program:
+  title: Estos son nuestros cursos disponibles
+  paragraph: ""
+
+content:
+  title: "Todos los programas son enseñados "
+  title_highlighted: "Online, Híbrida o En Persona." 
