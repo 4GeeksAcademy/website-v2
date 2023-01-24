@@ -1,14 +1,7 @@
 import React from "react";
 import BaseRender from "./_baseLayout";
-import {
-  Div,
-  GridContainerWithImage,
-} from "../components/Sections";
-import {
-  H1,
-  H2,
-  Paragraph,
-} from "../components/Heading";
+import { Div, GridContainerWithImage } from "../components/Sections";
+import { H1, H2, Paragraph } from "../components/Heading";
 import { Colors, StyledBackgroundSection } from "../components/Styling";
 import { isCustomBarActive } from "../actions";
 import { SessionContext } from "../session";
@@ -99,7 +92,7 @@ const Programs = ({ data, pageContext, yml }) => {
         lang={pageContext.lang}
         programs={data.allChooseYourProgramYaml.edges[0].node.programs}
         title={yml.choose_program.title}
-        paragraph={' '}
+        paragraph={" "}
       />
 
       <Div>
@@ -142,7 +135,7 @@ export const query = graphql`
             title
             paragraph
           }
-          content{
+          content {
             title
             title_highlighted
           }

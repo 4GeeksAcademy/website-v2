@@ -151,24 +151,22 @@ const ChooseYourProgram = ({
                     </Link>
                   ))}
                   {program.description &&
-                    program.description
-                      .split("\n")
-                      .map((m, i) => (
-                        <Paragraph
-                          key={i}
-                          letterSpacing="0.05em"
-                          display_tablet="block"
-                          display="none"
-                          // lineHeight="22px"
-                          textAlign="left"
-                          fontSize="15px"
-                          lineHeight="19px"
-                          fontWeight="400"
-                          opacity="1"
-                          margin={i == 0 && "10px 0px 25px 0"}
-                          dangerouslySetInnerHTML={{ __html: m }}
-                        />
-                      ))}
+                    program.description.split("\n").map((m, i) => (
+                      <Paragraph
+                        key={i}
+                        letterSpacing="0.05em"
+                        display_tablet="block"
+                        display="none"
+                        // lineHeight="22px"
+                        textAlign="left"
+                        fontSize="15px"
+                        lineHeight="19px"
+                        fontWeight="400"
+                        opacity="1"
+                        margin={i == 0 && "10px 0px 25px 0"}
+                        dangerouslySetInnerHTML={{ __html: m }}
+                      />
+                    ))}
 
                   {program.description_mobile && (
                     <Paragraph
