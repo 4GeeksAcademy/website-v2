@@ -8,6 +8,7 @@ meta_info:
   visibility: "visible"
   keywords: ""
   redirects: ["/es/machine-learning"]
+  related_clusters: ["trends-and-tech"]
 
 header:
   title: "Conviértete en un Ingeniero de Inteligencia Artificial"

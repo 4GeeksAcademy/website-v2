@@ -50,6 +50,7 @@ exports.sourceNodes = async (
 
     const frontMatter = {
       ...content.data,
+      image: post.preview ? post.preview : content.data.image,
       featured: false,
       slug: post.slug,
       title: post.title,

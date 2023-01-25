@@ -15,6 +15,7 @@ meta_info:
     "/us/coding-bootcamps/software-engineering-coding-bootcamp",
     "/coding-bootcamps/software-engineer-bootcamp"
   ]
+  related_clusters: ["trends-and-tech"]
 
 seo_title: "Cooding Bootcamp"
 header:

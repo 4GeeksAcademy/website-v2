@@ -147,7 +147,6 @@ const Landing = (props) => {
         background={yml.header_data.background || Colors.white}
       >
         <GridContainer
-          padding="0"
           padding="95px 0 35px 0"
           containerGridGap="0"
           containerColumns_tablet="repeat(1,0fr)"
@@ -205,7 +204,6 @@ const Landing = (props) => {
               lineHeight="40px"
               margin="20px 0"
               margin_xs="10px 0"
-              fontWeight="700"
               padding="0 10px 0 0px"
               color={
                 yml.header_data.color
@@ -413,8 +411,6 @@ const Landing = (props) => {
               textPadding_tablet="6px 0px 20px 0px"
               textPadding="6px 0px 20px 0px"
               selectProgram={programs}
-              margin="18px 30px"
-              layout="block"
               background="#F9F9F9"
               margin="0"
               style={{ minHeight: "350px" }}
@@ -1182,6 +1178,7 @@ export const query = graphql`
         node {
           testimonials {
             student_name
+            slug
             testimonial_date
             hidden
             include_in_marquee
