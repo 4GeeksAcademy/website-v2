@@ -185,36 +185,55 @@ const ChooseYourProgram = ({
                     </Paragraph>
                   )}
                 </Div>
-                <Link to={program.link}>
-                  {landingTemplate ? (
+                {!program.comming_soon ? (
+                  <Link to={program.link}>
+                    {landingTemplate ? (
+                      <Button
+                        background={Colors.black}
+                        colorHover={Colors.black}
+                        color={Colors.white}
+                        className="mobile"
+                        style={{
+                          position: "absolute",
+                          bottom: "40px",
+                          left: "46px",
+                        }}
+                        // backgroundColor="#000" width="184" height="40"
+                      >
+                        {program.text_link}
+                      </Button>
+                    ) : (
+                      <Icon
+                        className="mobile"
+                        style={{
+                          position: "absolute",
+                          bottom: "10px",
+                          right: "10px",
+                        }}
+                        icon="arrowright"
+                        height="32px"
+                        width="32px"
+                      />
+                    )}
+                  </Link>
+                ) : (
+                  <Link to={program.link}>
                     <Button
-                      background={Colors.black}
-                      colorHover={Colors.black}
-                      color={Colors.white}
-                      className="mobile"
-                      style={{
-                        position: "absolute",
-                        bottom: "40px",
-                        left: "46px",
-                      }}
-                      // backgroundColor="#000" width="184" height="40"
+                      variant="outline"
+                      color="black"
+                      font='"Lato", sans-serif'
+                      width="fit-content"
+                      margin="20px 10px 0 0"
+                      pointer
+                      textColor={Colors.black}
+                      fontSize={"13px"}
+                      borderRadius="3px"
+                      padding="10px"
                     >
                       {program.text_link}
                     </Button>
-                  ) : (
-                    <Icon
-                      className="mobile"
-                      style={{
-                        position: "absolute",
-                        bottom: "10px",
-                        right: "10px",
-                      }}
-                      icon="arrowright"
-                      height="32px"
-                      width="32px"
-                    />
-                  )}
-                </Link>
+                  </Link>
+                )}
               </Div>
             );
           })}

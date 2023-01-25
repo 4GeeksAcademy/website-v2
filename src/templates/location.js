@@ -562,6 +562,8 @@ export const query = graphql`
             title
             description
             icon
+            comming_soon
+            text_link
           }
         }
       }
