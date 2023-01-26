@@ -18,7 +18,7 @@ const getAllAssets = async () => {
   try {
     const _resp = await axios.get(
       GATSBY_BREATHECODE_HOST +
-        `/registry/academy/asset?limit=500&offset=0&category=blog-es,blog-us`,
+        `/registry/academy/asset?limit=500&offset=0&category=blog-es,blog-us&status=published&visibility=public`,
       options
     );
     if (_resp.status != 200) {
