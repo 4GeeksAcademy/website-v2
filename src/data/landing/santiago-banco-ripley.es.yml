@@ -2,10 +2,12 @@ meta_info:
   slug: alianza-banco-ripley # <--- URL 4geeksacademy.com/us/landing/example
 
   # This will show on social media when shared
-  title: "Clases de programación en Santiago de Chile, aprende a programar en 9 o 18 sem y consigue trabajo como programador."
+  title: "Bootcamp de programación en Santiago de Chile"
   description: "El más galardonado curso de programacion en Santiago, Chile. Con 4Geeks te convertirás en programador en unos pocos meses."
+  visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
+  # This will show on social media when shared
   image: "/images/bg/main-bg.jpg"
-  keywords: "Bootcamp de programación, Bootcamp de python, Bootcamp de javascript, Bootcamp de informática, Bootcamp, 4Geeks Academy"
+  keywords: "Bootcamp de programación, Bootcamp de python, Bootcamp de javascript, Bootcamp de full stack, Bootcamp, 4Geeks Academy"
 
   template: "landing_nonav" # <--- choose your landing template
   redirects: # <--- URL redirections to avoid 404 errors
@@ -15,13 +17,8 @@ meta_info:
   # this UTM fields will be also included in the CRM contact
   utm_course: ["full-stack"]
   utm_location: santiago-chile
-  automation: soft # comma separated, "soft" is the default value
-  tag: request_more_info # comma separated, "request_more_info" is the default value
-
-navbar:
-  buttonText: "Postular"
-  buttonUrl: "#bottom" # url accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
-  logoUrl: "#"
+  automation: strong # comma separated, "soft" is the default value
+  tag: website-lead # comma separated, "request_more_info" is the default value
 
 form:
   # posible fields: "first_name", "last_name", "full_name", "phone", "email"
@@ -32,88 +29,69 @@ form:
   button_label: Obtener malla y más información
   redirect: "/es/gracias/?lang=es"  #you can redirect to another url or entirely diffrent website
 
-apply_schollarship: # form that is displayed at the end of the landing
-  # title: "Get more info about this award-winning development course"
-  imageSide: "right"
-  image: "../../../static/images/comunity-support.png"
+navbar:
+  buttonText: "Postular"
+  buttonUrl: "#bottom" # url accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
+  logoUrl: "#"
 
-# jumbotron on the top (cannot be commented out)
 header_data:
   background: "#FFF1D1"
   tagline: Bootcamp de Programación Web
-  sub_heading: "Aprende a programar desde cero y consigue trabajo como Full Stack Developer Junior"
+  tagline_color: "black"
+  sub_heading: ""
   badge: "../../../static/images/badges/switchup.png"
   image_filter: brightness(0.3)
+  # right_image: "../../../static/images/landing/header_united_way.png"
+  # right_image: 
+  #   style: '{ "backgroundSize": "contain" }'
+  #   src: "/images/landing/header_united_way.png"
 
 features:
   marginTop: 0px #<-- separation between tagline and the bullets
-
-  #                                         up   left down  right
-  styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
+  text: '<span style="margin-top: 10px; display: block; color: black;"> <strong style="font-weight: bold; color:black;">Aprende a programar desde cero</strong> y consigue trabajo como Full Stack Developer Junior</span>'
   bullets:
     - No se requiere experiencia previa
     - Horarios part-time y full-time
     - Mentorías y career support de por vida
     - Un desarrollador Jr puede ganar hasta $900.000 CLP al mes
+  styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
+
+short_badges:
+  - name: "Premios Excelencia Educativa"
+    url: ""
+    image: "../../../static/images/badges/exelencia-educativa-es.png"
+    alt: "Mejor centro de Coding Bootcamp"
+  - name: "Newsweek"
+    url: ""
+    image: "../../../static/images/badges/newsweek-es.png"
+    alt: "Top Coding Bootcamps Newsweek"
+  - name: "Switchup"
+    url: ""
+    image: "../../../static/images/badges/reviews.png"
+    alt: "Best coding bootcamp Switchup 2021" 
 
 follow_bar:
   position: "top" # top, bottom, hidden
   content:
-    text: "Puedes llamarnos o enviarnos un mensaje por WhatsApp"
-    text_mobile: "Puedes llamarnos o enviarnos un mensaje por WhatsApp"
+    text: "Puedes escribirnos un mensaje por WhatsApp o llamarnos y con gusto te ayudaremos"
+    text_mobile: "Puedes enviarnos un mensaje por WhatsApp"
     # devices:    XL      LG      MD      SM       XS
     font_size: ["25px", "25px", "25px", "18px", "4.3vw"]
   button:
-    text: "Obtener más información"
-    path: "#top"
+    text: "Escribir por WhatsApp"
+    path: "https://api.whatsapp.com/send?phone=+56972848039&text=Hola+4Geeks&utm_source=RIPLEY&u[…]aign=RIPLEY&utm_id=RIPLEY&utm_term=RIPLEY&utm_content=RIPLEY"
   phone:
-    text: "Llama "
-
-#
-# ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇
-#
-
-rating_reviews:
-  position: 1
-  heading: "Lee acerca de nosotros"
-  rating_list:
-    - alt: "Career Karma"
-      image: "../../../static/images/badges/career-karma.png"
-      rating: 4.8
-      url: "https://careerkarma.com/schools/4geeks-academy/"
-    - alt: "Switchup"
-      image: "../../../static/images/badges/switchup-img.png"
-      rating: 4.89
-      url: "https://www.switchup.org/bootcamps/4geeks-academy"
-    - alt: "Course Report"
-      image: "../../../static/images/badges/course-report.png"
-      rating: 4.84
-      url: "https://www.coursereport.com/schools/4geeks-academy"
-    - alt: "Google"
-      image: "../../../static/images/badges/google.png"
-      rating: 4.9
-      url: ""
+    text: ""
 
 program_details:
-  position: 2
+  position: 3
   heading: "Domina Python, JS y React"
   sub_heading: "Un bootcamp de programación sobre las tecnologías más usadas del mundo"
-
-why_4geeks:
-  position: 7
-  heading: "¿Por qué 4Geeks?"
-  sub_heading: " "
-
-who_is_hiring:
-  position: 8
-  limit: 4
-  heading: "¿Quién contrata a nuestros alumnos?"
-  sub_heading: "Nos encanta ver crecer a nuestros estudiantes, es por eso que nos esforzamos cada día por tener más aliados, para que puedas trabajar en empresas que te ayuden a seguir creciendo profesionalmente."
 
 # Possible layours: [two_column_left_image, two_column_right_image]
 components:
   - name: geeksinfo
-    position: 3
+    position: 4
     layout: geeksInfo
   - name: coding
     position: 6
@@ -139,6 +117,7 @@ components:
         <br>
         <img src="/images/geekforce.png" style="max-width: 200px;">
         <p>GeekForce es el proceso colectivo de apoyo profesional del Bootcamp. La 'fuerza' significa empoderamiento profesional y es una membresía de por vida. Brinda asistencia para la colocación laboral del estudiante y para que se prepare para conseguir un trabajo en tecnología.</p>
+  
   - name: python_y_javascript
     position: 3
     layout: two_column_left
@@ -147,15 +126,82 @@ components:
       src: "/images/why-4geeks/python-image.png"
     heading:
       text:
-        "Python y Javascript"
+        "Python y JavaScript"
         #           xl      lg      md      sm      xs
       font_size: ["50px", "50px", "50px", "50px", "50px"]
     content:
-      text: "Nuestro programa está basado en el uso de Python y Javascript. ¿La razón? En el mercado laboral JavaScript tiene 26 veces más vacantes de trabajo que Ruby on Rails y Python te permite acceder a distintas áreas del mundo de la programación.
-      
+      text: "Nuestro programa está basado en el uso de Python y JavaScript. ¿La razón? En el mercado laboral JavaScript tiene 26 veces más vacantes de trabajo que Ruby on Rails y Python te permite acceder a distintas áreas del mundo de la programación.
+      <br> 
       Otras herramientas que también aprenderás a usar en nuestro programa son: HTML5, CSS3, React, Flask, etc."
       font_size: ["16px"]
 
+  - name: alianza
+    position: 2
+    layout: two_column_left
+    proportions: [5, 7]
+    image:
+      style: '{ "backgroundSize": "contain" }'
+      src: "/images/landing/telefono_tarjetas.png"
+    heading:
+      text: "Alianza con Banco Ripley"
+      font_size: ["30px", "30px", "30px", "30px", "30px"]
+    sub_heading:
+      text: "En 4Geeks Academy estamos en constante búsqueda de alianzas que nos permitan ofrecer facilidades de pago."
+      font_size: ["16px", "16px", "16px", "16px", "16px"]
+    content:
+      font_size: ["16px"]
+      text: |
+        <p>Es por ello que junto a Banco Ripley, les traemos un descuento especial para todos los clientes del banco que paguen con sus tarjetas.</p>
+        <br>
+        <p><span style="background: rgb(255, 183, 24);font-weight: bold;">Válido para Tarjetas de Crédito y Débito Mastercard Banco Ripley.</p>
+        <br>
+        <p>Aplica exclusivamente para el programa Full Stack Development en su modalidad part time y full time. </p>
+        <br>
+        <h2><strong style="font-weight: bold;font-size:20px;color:black;">¿Te animas a comenzar una nueva carrera?</strong></h2>
+    
+  - name: tarjetas
+    position: 9
+    layout: multi_column
+    swipable: True
+    heading:
+      text: "Con tus Tarjetas de Crédito y Débito Mastercard Banco Ripley"
+      font_size: ["30px", "30px", "30px", "30px", "30px"]
+    sub_heading:
+      text: |
+        Descuento válido por todo el año 2023
+      font_size: ["16px", "16px", "16px", "16px", "16px"]
+    button:
+      text: "Postula Ahora"
+      color: "white"
+      hover_color: "white"
+      path: "#top"
+      background: "black"
+    columns:
+      - image:
+          style: '{ "backgroundSize": "contain" , "minHeight": "250px" }'
+          src: "/images/landing/ripley_credito.png"
+        content: 
+          text: ""
+          style: '{ "fontWeight": "700" }'
+          font_size: ["16px"]
+        size: [3,3,3,3]
+      - image:
+          style: '{ "backgroundSize": "contain" }'
+          src: "/images/landing/logo_banco_morado.png"
+        content: 
+          text: ""
+          style: '{ "fontWeight": "700" }'
+          font_size: ["16px"]
+        size: [3,3,3,3]
+      - image:
+          style: '{ "backgroundSize": "contain" }'
+          src: "/images/landing/ripley_debito.png"
+        content: 
+          text: ""
+          style: '{ "fontWeight": "700" }'
+          font_size: ["16px"]
+        size: [3,3,3,3]
+    
 choose_your_program:
   position: 5
   title: Nuestras Modalidades
@@ -176,3 +222,14 @@ choose_your_program:
       Programa intensivo de 9 semanas, con clases de lunes a viernes durante todo el día, para vivir una experiencia inmersiva en el mundo del código.
     text_link: Obtener más información
     link: "#top"
+
+why_4geeks:
+  position: 7
+  heading: "¿Por qué 4Geeks?"
+  sub_heading: " "
+
+who_is_hiring:
+  position: 8
+  limit: 4
+  heading: "¿Quién contrata a nuestros alumnos?"
+  sub_heading: "Nos encanta ver crecer a nuestros estudiantes, es por eso que nos esforzamos cada día por tener más aliados, para que puedas trabajar en empresas que te ayuden a seguir creciendo profesionalmente."
