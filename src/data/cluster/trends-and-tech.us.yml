@@ -1,15 +1,15 @@
 meta_info:
   slug: trends-and-tech
-  title: "Aplica a 4Geeks Academy Bootcamp"
+  title: "Stay Ahead of the Game with 4GeeksAcademy's Blog: Insights on the Latest Trends and Technologies"
   visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
-  description: "Aa a uno de los mejores bootcamps de código del mundo, online o en una de nuestras sedes: Miami, Santiago de Chile, Madrid, Costa Rica, Maracaibo y Caracas"
-  image: "https://4geeks-academy-main.s3-us-west-2.amazonaws.com/PresentacionBienvenidaEstudiante1.jpg"
-  keywords: "Aplica a 4Geeks Academy Bootcamp"
+  description: "Keep up with the latest Trends and Tech in the industry with 4Geeks Academy's blog. Learn from industry experts and stay ahead of the curve with our insights."
+  image: ""
+  keywords: "Trends and Technology"
   redirects: []
 
 seo_title: "Trends and Technology"
 header:
-    title: Próximos programas y Eventos de 4GEEKS ACADEMY
-    paragraph: "Ajusta los filtros a los eventos de los cursos que más te interesan"
+    title: Trends and Technology - Blog
+    paragraph: "At the Trends and Tech section of 4Geeks Academy's blog you will find articles about the latest trends and technologies in the tech industry, such as Artificial Intelligence, Internet of Things, Cloud Computing and more. You'll learn about how these technologies are affecting and transforming different industries. Additionally, you'll find articles that cover important topics such as how to stay up-to-date with the latest technology, and predictions on how they will shape the future. Our goal is to provide you with all the knowledge and resources you need to stay informed and ahead of the curve in the rapidly-evolving world of technology, whether you are just starting or an experienced professional."
     image: "../../../static/images/blog/Blog-header.png"
-    image_alt: "alt"
+    image_alt: "trends-and-tech"

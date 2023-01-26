@@ -1,0 +1,15 @@
+meta_info:
+  slug: software-engineer-salary
+  title: "Maximize Your Earning Potential as a Software Engineer with 4GeeksAcademy's Salary Insights and Resources"
+  visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
+  description: "Stay informed on the latest Software Engineer Salary trends and best practices with 4Geeks Academy's blog. Learn how to maximize your earning potential in the tech industry."
+  image: ""
+  keywords: "Software Engineer Salary"
+  redirects: []
+
+seo_title: "Software Engineer Salary"
+header:
+    title: Software Engineer Salary - Blog
+    paragraph: "Here you will find articles about average salaries, benefits, and other compensation packages for software engineers. You'll learn about the most in-demand skills, the industries that pay the highest, and how to negotiate a salary. Additionally, you'll find articles that cover factors such as location, experience, and skills that affect software engineer salaries. Our goal is to provide you with all the knowledge and resources you need to understand the software engineer salary landscape and make informed decisions about your compensation. Whether you are a new or experienced software engineer, these articles will help you increase your earning potential and advance in your career."
+    image: "../../../static/images/blog/Blog-header.png"
+    image_alt: "software-engineer-salary"

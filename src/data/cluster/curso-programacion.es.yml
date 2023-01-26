@@ -1,0 +1,15 @@
+meta_info:
+  slug: curso-programacion
+  title: "Domina la programación con 4GeeksAcademy: tendencias, recursos y consejos en nuestra sección de Curso de Programación"
+  visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
+  description: "Mejora tus habilidades en la sección Cursos de Programacion de 4Geeks Academy. Descubre las últimas tendencias y mejores prácticas."
+  image: ""
+  keywords: "Curso Programacion"
+  redirects: []
+
+seo_title: "Curso Programacion"
+header:
+    title: Curso Programacion - Blog
+    paragraph: "En 4Geeks Academy ofrecemos un amplio programa educativo para aquellos interesados en aprender a programar. Como parte de nuestra oferta educativa, ofrecemos cursos de programación que se adaptan a diferentes niveles y habilidades. En esta página, encontrarás una variedad de artículos relacionados con los cursos de programación que ofrecemos, que cubren desde cursos básicos para principiantes hasta cursos avanzados para desarrolladores con experiencia. En estos artículos, encontrarás información valiosa sobre el contenido de los cursos, los objetivos y el currículo, así como consejos y trucos para sacar el máximo provecho de su experiencia de aprendizaje. Estamos comprometidos en proporcionar la mejor educación posible para ayudar a nuestros estudiantes a alcanzar sus metas en el mundo de la programación."
+    image: "../../../static/images/blog/Blog-header.png"
+    image_alt: "curso-programacion"

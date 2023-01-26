@@ -1,0 +1,15 @@
+meta_info:
+  slug: carrera-de-programacion
+  title: "Desarrolla tu carrera en programación con el Blog de Carrera de Programación de 4GeeksAcademy"
+  visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
+  description: "Empieza tu Carrera de Programación con 4Geeks Academy. Descubre las últimas tendencias y mejores prácticas de la industria a través de nuestro blog"
+  image: "https://4geeks-academy-main.s3-us-west-2.amazonaws.com/PresentacionBienvenidaEstudiante1.jpg"
+  keywords: "Carrera De Programacion"
+  redirects: []
+
+seo_title: "Carrera De Programacion"
+header:
+    title: Carrera De Programacion - Blog
+    paragraph: "En 4Geeks Academy estamos comprometidos a ayudar a nuestros estudiantes a alcanzar sus metas en el mundo de la programación. Por eso, en esta página encontrarás una variedad de artículos relacionados con la carrera de programación. Estos artículos abordan temas como las habilidades necesarias para tener éxito en una carrera en programación, las tendencias y tecnologías emergentes en el campo, y cómo prepararse para una carrera en programación. Ofrecemos consejos y trucos para desarrollar sus habilidades y conocimientos en esta emocionante y en constante evolución carrera. Si estás interesado en convertirte en desarrollador o simplemente quieres saber más sobre las oportunidades en el mundo de la programación, les invitamos a explorar todos nuestros artículos en esta página. Estamos comprometidos con proporcionar información valiosa y actualizada para ayudar a nuestros lectores a desarrollar su carrera en programación."
+    image: "../../../static/images/blog/Blog-header.png"
+    image_alt: "carrera-de-programacion"
