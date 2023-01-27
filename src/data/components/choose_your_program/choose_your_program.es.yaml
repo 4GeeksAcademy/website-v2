@@ -22,3 +22,5 @@ programs:
     description: "Construye applicaciones en la Web3 utilizando Solidity y Etherium Blockchain. Obtén un trabajo como desarrolaldor de blockchain."
     description_mobile: "Registro temprano"
     link: "#"
+    text_link: Registro temprano
+    comming_soon: true
