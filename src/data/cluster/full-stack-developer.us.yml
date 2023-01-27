@@ -1,0 +1,15 @@
+meta_info:
+  slug: full-stack-developer
+  title: "Become a Full Stack Developer with 4GeeksAcademy: Tips, Tricks, and Resources from Our Blog"
+  visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
+  description: "Learn from the experts at 4Geeks Academy and become a Full Stack Developer. Stay current with the latest technology trends and best practices through our blog."
+  image: ""
+  keywords: "Full Stack Developer"
+  redirects: []
+
+seo_title: "Full Stack Developer"
+header:
+    title: Full Stack Development
+    paragraph: "Whether you're just starting to explore the world of full stack development or are already well on your way to becoming a professional developer, our articles will provide you with the information and knowledge you need to succeed. With up-to-date statistics and a straightforward, expert-led approach, our articles are the perfect resource for anyone looking to learn more about full stack development. According to a recent industry report, the demand for full stack developers is expected to grow by 28% in the next five years, our goal is to empower you with the knowledge and skills to pursue your passion for full stack development, so take a look at our articles and start exploring today!"
+    image: "../../../static/images/blog/Blog-header.png"
+    image_alt: "full-stack-developer"
