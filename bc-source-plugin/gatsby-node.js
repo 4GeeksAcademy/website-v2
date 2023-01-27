@@ -50,7 +50,7 @@ exports.sourceNodes = async (
 
     const frontMatter = {
       ...content.data,
-      image: post.preview ? post.preview : content.data.image,
+      image: post.preview ? post.preview : content.data.image || null,
       featured: false,
       slug: post.slug,
       title: post.title,
@@ -65,7 +65,6 @@ exports.sourceNodes = async (
           ? post.clusters[0]
           : defaultCluster[post.lang],
     };
-
     const newContent = matter.stringify(
       content.content || content,
       frontMatter
