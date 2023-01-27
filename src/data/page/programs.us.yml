@@ -1,7 +1,7 @@
 meta_info:
   slug: programs
-  title: "Welcome to our programs"
-  description: "Our available courses"
+  title: "Courses and programs taught at 4Geeks Academy"
+  description: "If it's related to coding, 4Geeks Academy teaches it. Discover our course offerings and programs."
   visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   image: "/images/programs-heading.png"
   keywords: "Programs at 4Geeks Academy"
@@ -9,7 +9,7 @@ meta_info:
 
 seo_title: "level up as a developer"
 header:
-  title: Welcome to our programs
+  title: Coding will sets you free
   paragraph: Our focus on coding skills, lifetime career and coding support and aggressive scholarship programs allows us to present the best possible offers to become a developer in a matter of weeks.
   image: "../../../static/images/programs-heading.png"
   alt: ""
