@@ -8,6 +8,7 @@ const CustomBar = ({ isContentBarActive, contentBar }) => {
   return (
     <Div
       id="custom-bar"
+      key="custom-bar"
       display={isContentBarActive ? "flex" : "none"}
       style={{ top: "0px" }}
       width="100%"
