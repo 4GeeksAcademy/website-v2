@@ -10,7 +10,8 @@ const CustomBar = ({ isContentBarActive, contentBar }) => {
       id="custom-bar"
       key="custom-bar"
       display={isContentBarActive ? "flex" : "none"}
-      style={{ top: "0px" }}
+      style={null}
+      top="0px"
       width="100%"
       height="auto"
       minHeight="50px"
