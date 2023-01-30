@@ -54,7 +54,7 @@ module.exports = {
           process.env.VERCEL_ENV === "development" ||
           process.env.VERCEL_ENV === "preview"
             ? "g0Ku"
-            : undefined, // delete or `undefined` to disable password protection
+            : undefined, // delete or `undefined` to disable the password protection
       },
     },
     {
