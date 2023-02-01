@@ -18,7 +18,7 @@ meta_info:
       "/es/course/bootcamp-desarrollo-web-full-stack-full-time",
       "/es/course/desarrollo-web-full-stack-bootcamp-full-time",
     ]
-  related_clusters: ["trends-and-tech"]
+  related_clusters: ["full-stack-developer","trends-and-tech"]
 seo_title: "Coding Bootcamp"
 header:
   title: "Full Stack Developer"
