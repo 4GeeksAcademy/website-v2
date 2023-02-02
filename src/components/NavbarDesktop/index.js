@@ -183,7 +183,11 @@ export const Navbar = ({
   return (
     <>
       {/* The dummy div is set to fool the password-plugin, which is creating a styling bug on the custom-bar */}
-      <Div className="dummy-div" position="absolute" display="none !important" />
+      <Div
+        className="dummy-div"
+        position="absolute"
+        display="none !important"
+      />
       <CustomBar
         isContentBarActive={isContentBarActive}
         contentBar={contentBar}
