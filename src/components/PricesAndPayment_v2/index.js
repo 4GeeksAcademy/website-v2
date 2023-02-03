@@ -469,17 +469,6 @@ const PricesAndPaymentsV2 = (props) => {
             )
             // </GridContainer>
           }
-          <Link to={info.button.button_link}>
-            <Button
-              variant="full"
-              color={Colors.black}
-              margin="25px 0 25px 10px"
-              margin_tablet="0 0 0 10px"
-              textColor={Colors.white}
-            >
-              {info.button.button_text}
-            </Button>
-          </Link>
         </Div>
       </GridContainer>
       <Div display="block" minHeight_tablet="600px" padding_md="20px">
