@@ -264,7 +264,7 @@ const modalityArray = [
 
 const PricesAndPaymentsV2 = (props) => {
   const data = useStaticQuery(graphql`
-    query PricesAndPaymentsV2{
+    query PricesAndPaymentsV2 {
       content: allPricesAndPaymentYaml {
         edges {
           node {
