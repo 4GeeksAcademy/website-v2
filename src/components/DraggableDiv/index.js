@@ -31,24 +31,6 @@ const DraggableDiv = ({ children, ...props }) => {
     console.log(walk);
   };
 
-  // useEffect(() => {
-  //   if (typeof document !== "undefined") {
-  //     if (ref && ref.current) {
-  //       document.addEventListener("mousedown", onMouseDown);
-  //       document.addEventListener("mouseup", onMouseUp);
-  //       document.addEventListener("mousemove", onMouseMove);
-  //       document.addEventListener("mouseleave", onMouseLeave);
-
-  //       return () => {
-  //         document.removeEventListener("mousedown", onMouseDown);
-  //         document.removeEventListener("mouseup", onMouseUp);
-  //         document.removeEventListener("mousemove", onMouseMove);
-  //         document.removeEventListener("mouseleave", onMouseLeave);
-  //       };
-  //     }
-  //   }
-  // });
-
   return (
     <>
       <Div
