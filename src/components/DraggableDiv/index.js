@@ -28,7 +28,6 @@ const DraggableDiv = ({ children, ...props }) => {
     const x = e.pageX - ref.current.offsetLeft;
     const walk = (x - startX) * 3; //scroll-fast
     ref.current.scrollLeft = scrollLeft - walk;
-    console.log(walk);
   };
 
   return (
