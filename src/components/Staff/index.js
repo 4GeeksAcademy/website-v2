@@ -103,7 +103,6 @@ const Staff = (props) => {
         </Div>
         <DraggableDiv
           gridColumn_tablet="1/span 12"
-          className="testimonial-slider"
           height="auto"
           padding="0 17px 59px 17px"
         >
