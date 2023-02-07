@@ -181,10 +181,12 @@ export const Navbar = ({
     (contentBar.active && isTestMode) ||
     (contentBar.active && !isDevelopment());
 
-  const styledDiv = styled.div`
-    &:has(> div) {
-      display: none;
-    }
+  const FakeDiv = styled.div`
+    ${css`
+      div:has(> div) {
+        display: none;
+      }
+    `}
   `;
   return (
     <>
@@ -196,7 +198,7 @@ export const Navbar = ({
         position="absolute"
         display="none !important"
       >
-        <styledDiv></styledDiv>
+        <FakeDiv></FakeDiv>
       </Div>
       <CustomBar
         isContentBarActive={isContentBarActive}
