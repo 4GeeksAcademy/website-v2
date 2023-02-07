@@ -15,8 +15,6 @@ const PricingCard = ({
   setSelectedPlan,
   index,
   plansLength,
-  session,
-  setSession,
 }) => {
   const [isOpen, setIsOpen] = useState(true);
   const { recomended, scholarship, payment_time, slug } = data;
@@ -83,7 +81,7 @@ const PricingCard = ({
               {payment_time}
             </Paragraph>
           </Div>
-          <Div className="price-container" flexShrink_tablet="0">
+          <Div className="price-container">
             <Paragraph
               fontWeight_tablet="700"
               color={isSelected ? Colors.white : Colors.black}
@@ -349,6 +347,7 @@ const PricesAndPaymentsV2 = (props) => {
   const [currentLocation, setCurrentLocation] = useState(false);
   const [course, setCourse] = useState(false);
   const [modality, setModality] = useState(false);
+  const [buttonText, setButtonText] = useState(null);
   const [locations, setLocations] = useState(false);
   const [selectedPlan, setSelectedPlan] = useState(null);
   const [currentPlans] = useState(getCurrentPlans);
@@ -397,6 +396,15 @@ const PricesAndPaymentsV2 = (props) => {
     ),
     [props.courseType, props.programType]
   );
+
+  const city = session && session.location ? session.location.city : [];
+
+  const findCity = props.locations.find((loc) => loc.node?.city === city);
+  useEffect(() => {
+    if (findCity !== undefined && findCity.node) {
+      setButtonText(findCity.node.button.apply_button_text);
+    }
+  }, [findCity]);
 
   return (
     <Div
@@ -528,8 +536,6 @@ const PricesAndPaymentsV2 = (props) => {
                     info={info}
                     selectedPlan={selectedPlan}
                     setSelectedPlan={setSelectedPlan}
-                    session={session}
-                    setSession={setSession}
                     index={index}
                     plansLength={availablePlans.length}
                   />
@@ -567,7 +573,7 @@ const PricesAndPaymentsV2 = (props) => {
                   }
                 }}
               >
-                {info.apply_button.label}
+                {buttonText || info.apply_button.label}
               </Button>
             </Link>
           )}
