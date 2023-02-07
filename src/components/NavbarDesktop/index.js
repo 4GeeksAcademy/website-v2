@@ -184,7 +184,7 @@ export const Navbar = ({
   const FakeDiv = styled.div`
     ${css`
       &:has(> div) {
-        display: none;
+        display: none !important;
       }
     `}
   `;
@@ -198,10 +198,10 @@ export const Navbar = ({
         position="absolute"
         display="none !important"
         style={{
-          display: 'none !important',
-          position: 'absolute !important',
-          height: '0px',
-          width: '0px'
+          display: "none !important",
+          position: "absolute !important",
+          height: "0px",
+          width: "0px",
         }}
       >
         <FakeDiv></FakeDiv>
