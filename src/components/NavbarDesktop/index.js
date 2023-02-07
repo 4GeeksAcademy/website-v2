@@ -182,7 +182,7 @@ export const Navbar = ({
     (contentBar.active && !isDevelopment());
 
   const styledDiv = styled.div`
-    div:has(> div) {
+    :has(> div) {
       display: none;
     }
   `;
