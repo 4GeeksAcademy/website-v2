@@ -207,8 +207,8 @@ export const Navbar = ({
         <FakeDiv
           className="fake"
           css={{
-            '.fake:has(> div)': {
-              display: 'none !important'
+            ".fake:has(> div)": {
+              display: "none !important",
             },
           }}
         ></FakeDiv>
