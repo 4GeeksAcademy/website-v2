@@ -6,6 +6,7 @@ import { Row, GridContainer, Div } from "../Sections";
 import Fragment from "../Fragment";
 import styled from "styled-components";
 import Icon from "../Icon";
+import DraggableDiv from "../DraggableDiv";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { SessionContext } from "../../session";
 
@@ -100,9 +101,8 @@ const Staff = (props) => {
             {props.paragraph || staffList.sub_heading}
           </Paragraph>
         </Div>
-        <Div
+        <DraggableDiv
           gridColumn_tablet="1/span 12"
-          className="testimonial-slider"
           height="auto"
           padding="0 17px 59px 17px"
         >
@@ -156,7 +156,7 @@ const Staff = (props) => {
               </Div>
             );
           })}
-        </Div>
+        </DraggableDiv>
       </GridContainer>
     </Fragment>
   );
