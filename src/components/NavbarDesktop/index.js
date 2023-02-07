@@ -182,10 +182,10 @@ export const Navbar = ({
     (contentBar.active && !isDevelopment());
 
   const styledDiv = styled.div`
-    div:has(> div) { 
-      display:none;
+    div:has(> div) {
+      display: none;
     }
-  `
+  `;
   return (
     <>
       {/* The dummy div is set to fool the password-plugin, which is creating a styling bug on the custom-bar */}
