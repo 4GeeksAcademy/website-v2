@@ -204,14 +204,14 @@ export const Navbar = ({
           width: "0px",
         }}
       >
-        <FakeDiv
+        <div
           className="fake"
           css={{
             ".fake:has(> div)": {
               display: "none !important",
             },
           }}
-        ></FakeDiv>
+        ></div>
       </Div>
       <CustomBar
         isContentBarActive={isContentBarActive}
