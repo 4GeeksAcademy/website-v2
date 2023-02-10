@@ -5,7 +5,7 @@ meta_info:
   bc_slug: "datascience-ml"
   template: "course-datascience"
   image: "/images/og-preview/datascience-ml.es.png"
-  visibility: "hidden"
+  visibility: "visible"
   keywords: ""
   redirects: ["/us/datascience"]
   related_clusters: ["trends-and-tech"]
