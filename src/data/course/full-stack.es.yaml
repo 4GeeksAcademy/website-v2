@@ -1,5 +1,5 @@
 meta_info:
-  slug: full-stack-part-time
+  slug: desarrollador-full-stack
   title: "Conviértete en Desarrollador Full Stack en 4Geeks Academy"
   description: "El Full Stack es un coding bootcamp reconocido a nivel mundial para convertirte en programador. Trabajo Garantizado."
   image: "/images/og-preview/full-stack.es.png"
@@ -15,6 +15,7 @@ meta_info:
       "/es/full-stack",
       "/es/coding-bootcamps/desarrollo-web-full-stack-bootcamp-full-time",
       "/es/coding-bootcamps/desarrollo-web-full-stack",
+      "/es/coding-bootcamps/full-stack-part-time",
       "/es/course/desarrollo-web-full-stack",
       "/es/course/bootcamp-de-desarrollo-web-full-stack-part-time/madrid-espana",
       "/es/course/bootcamp-de-desarrollo-web-full-stack-part-time",
@@ -23,7 +24,7 @@ meta_info:
       "/es/course/desarrollo-web-full-stack-bootcamp-full-time",
       "/introduccion-programacion-codigo",
     ]
-  related_clusters: ["trends-and-tech"]
+  related_clusters: ["desarrollador-full-stack","trends-and-tech"]
 seo_title: "Coding Bootcamp"
 header:
   title: "Full Stack Developer"
