@@ -1,4 +1,6 @@
-.grecaptcha-badge { visibility: hidden; }
+.grecaptcha-badge {
+  visibility: hidden;
+}
 .heading-link.before {
   opacity: 0.6;
   margin: 0 10px;
