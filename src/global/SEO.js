@@ -84,7 +84,7 @@ const SEO = (props) => (
             title={title || defaultTitle}
             titleTemplate={titleTemplate}
             bodyAttributes={{
-              class: `page-${context.slug}`
+              class: `page-${context.slug}`,
             }}
           >
             <html lang={langCountries[lang]} />
