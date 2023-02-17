@@ -63,6 +63,16 @@ export default ({ children }) => {
       }
     }
   `);
+  
+  const getReferral = () => {
+    let alias = ["referral_code", "ref", "referral_key", "referral"]
+    let referral = null;
+    for(let i = 0; i<alias.length;i++){
+      referral = urlParams.get(alias[i]);      
+      if(typeof(referral) == "string" && referral.length > 0) return referral;
+    }
+    return undefined;
+  }
 
   const [session, setSession] = useState(defaultSession);
   //get ip address
@@ -84,7 +94,7 @@ export default ({ children }) => {
         utm_plan: urlParams.get("utm_plan") || undefined,
         utm_placement: urlParams.get("utm_placement") || undefined,
         utm_term: urlParams.get("utm_term") || undefined,
-        referral_code: urlParams.get("referral_code") || undefined,
+        referral_code: getReferral(),
         utm_test: urlParams.get("utm_test") || undefined,
         language:
           urlParams.get("lang") || urlParams.get("language") || undefined,
