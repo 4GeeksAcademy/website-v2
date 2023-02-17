@@ -201,8 +201,8 @@ export const apply = async (data, session) => {
   const action = "submit";
   let token = await getToken(action);
 
-  if (!session || !session.utm || !session.utm.utm_test)
-    return await save_form(
+  if (!session || !session.utm || !session.utm.utm_test){
+    const _data = await save_form(
       body,
       [tag.value || tag],
       [automation.value || automation],
@@ -210,6 +210,10 @@ export const apply = async (data, session) => {
       token,
       action
     );
+    // referral program integration
+    if(_data && body.email) window.fpr("referral",{email: email});
+    return _data;
+  }
   return true;
 };
 
