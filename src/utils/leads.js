@@ -26,9 +26,9 @@ export const save_form = async (
 
   const getReferralKey = () => {
     let referral_key = formData.referral_code || session.utm?.referral_code;
-    if (!referral_key) {
-      referral_key = formData.referral_key || session.utm?.referral_key;
-    }
+    if (!referral_key) referral_key = formData.referral_key || session.utm?.referral_key;
+    if (!referral_key) referral_key = formData.ref || session.utm?.ref;
+
     return referral_key;
   };
 
