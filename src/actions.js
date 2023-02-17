@@ -211,7 +211,7 @@ export const apply = async (data, session) => {
       action
     );
     // referral program integration
-    if(_data && body.email) window.fpr("referral",{email: email});
+    if(_data && body.email) window.fpr("referral",{email: body.email });
     return _data;
   }
   return true;
