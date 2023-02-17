@@ -80,7 +80,13 @@ const SEO = (props) => (
 
       return (
         <>
-          <Helmet title={title || defaultTitle} titleTemplate={titleTemplate}>
+          <Helmet
+            title={title || defaultTitle}
+            titleTemplate={titleTemplate}
+            bodyAttributes={{
+              class: `page-${context.slug}`
+            }}
+          >
             <html lang={langCountries[lang]} />
             <link
               rel="canonical"

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "../assets/css/single-post.css";
 import { Link, useStaticQuery } from "gatsby";
+import { Helmet } from "react-helmet";
 import styled from "styled-components";
 import { H1 } from "../components/Heading";
 
@@ -45,19 +46,21 @@ const ThumbnailPage = () => {
     justify-content: center;
   `;
   return (
-    <Div>
-      <H1
-        type="h1"
-        fontSize="40px"
-        width="90%"
-        fontWeight="bold"
-        textAlign="center"
-        margin="0 auto"
-        lineHeight="normal"
-      >
-        {post && post.frontmatter?.title}
-      </H1>
-    </Div>
+    <body className="page-thumbnail">
+      <Div>
+        <H1
+          type="h1"
+          fontSize="40px"
+          width="90%"
+          fontWeight="bold"
+          textAlign="center"
+          margin="0 auto"
+          lineHeight="normal"
+        >
+          {post && post.frontmatter?.title}
+        </H1>
+      </Div>
+    </body>
   );
 };
 
