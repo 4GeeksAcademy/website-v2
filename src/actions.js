@@ -212,7 +212,11 @@ export const apply = async (data, session) => {
     );
     // referral program integration
     if(_data && typeof(_data.referral_key) == "string" && _data.referral_key.length > 0){
-      if(window && window.fpr) window.fpr("referral",{email: _data.email });
+      if(window && window.fpr){
+        console.log("Triggered referral program action")
+        window.fpr("referral",{email: _data.email });
+      }
+      else console.error("Global object for firstpromoter API not found (referral program)");
     }
     return _data;
   }
