@@ -63,21 +63,20 @@ export default ({ children }) => {
       }
     }
   `);
-  
-  const getReferral = () => {
-    let alias = ["referral_code", "ref", "referral_key", "referral"]
-    let referral = null;
-    for(let i = 0; i<alias.length;i++){
-      referral = urlParams.get(alias[i]);      
-      if(typeof(referral) == "string" && referral.length > 0) return referral;
-    }
-    return undefined;
-  }
 
   const [session, setSession] = useState(defaultSession);
   //get ip address
   useEffect(() => {
     const urlParams = new URLSearchParams(window.location.search);
+    const getReferral = () => {
+      let alias = ["referral_code", "ref", "referral_key", "referral"]
+      let referral = null;
+      for(let i = 0; i<alias.length;i++){
+        referral = urlParams.get(alias[i]);      
+        if(typeof(referral) == "string" && referral.length > 0) return referral;
+      }
+      return undefined;
+    }
     ActionsWorker()
       .initSession(data.allLocationYaml, getStorage("academy_session"), {
         navigator: JSON.stringify(window.navigator),
