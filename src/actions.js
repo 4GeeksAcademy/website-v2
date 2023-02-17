@@ -211,7 +211,9 @@ export const apply = async (data, session) => {
       action
     );
     // referral program integration
-    if(_data && body.email) window.fpr("referral",{email: body.email });
+    if(_data && typeof(_data.referral_key) == "string" && _data.referral_key.length > 0){
+      if(window && window.fpr) window.fpr("referral",{email: _data.email });
+    }
     return _data;
   }
   return true;
