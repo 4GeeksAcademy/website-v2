@@ -46,7 +46,7 @@ const ThumbnailPage = () => {
     justify-content: center;
   `;
   return (
-    <body className="page-thumbnail">
+    /* <body className="page-thumbnail"> */
       <Div>
         <H1
           type="h1"
@@ -60,7 +60,7 @@ const ThumbnailPage = () => {
           {post && post.frontmatter?.title}
         </H1>
       </Div>
-    </body>
+    /* </body> */
   );
 };
 
