@@ -7,6 +7,8 @@ import { H1 } from "../components/Heading";
 //FROM components
 
 const ThumbnailPage = () => {
+  const isWindow = () => (window !== undefined ? true : false);
+
   const data = useStaticQuery(graphql`
     query ThumbnailQuery {
       allMarkdownRemark {
@@ -32,6 +34,7 @@ const ThumbnailPage = () => {
     const posts = data.allMarkdownRemark.edges;
     const _post = posts.find(({ node }) => node.fields.slug == slug);
     if (_post) setPost(_post.node);
+    if (isWindow) document.body.className = "page-thumbnail";
   }, [data]);
 
   const Div = styled.div`
