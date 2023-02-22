@@ -41,7 +41,7 @@ apply_schollarship: # form that is displayed at the end of the landing
 # jumbotron on the top (cannot be commented out)
 header_data:
   background: "#FFF1D1"
-  tagline: Bootcamp de Programación Costa Rica 
+  tagline: Bootcamp de Programación en Costa Rica 
   sub_heading: Aprende a programar desde cero o mejora tus habilidades en programación y recibe soporte técnico y profesional de por vida.
   badge: "../../../static/images/badges/switchup.png"
   image_filter: brightness(0.3)
