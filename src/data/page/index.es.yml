@@ -22,6 +22,9 @@ header_data:
   video: ""
   image: "../../../static/images/bg/new-main-home-bg.png"
 
+schemaOrganization:
+  type: School
+
 why_4geeks:
   heading: Por qué 4Geeks
   sub_heading: ""

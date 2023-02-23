@@ -67,12 +67,41 @@ const SchemaOrg = ({
     },
   ];
 
+  const schemaWebsite = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "4Geeks Academy",
+    url: `https://4geeksacademy.com`,
+  };
+
+  const schemaCourse = {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    name: title,
+    description,
+    "provider": {
+      "@type": "Organization",
+      "name": "4Geeks Academy",
+      "sameAs": "https://4geeksacademy.com/"
+    }
+  };
+
   return (
     <Helmet>
       {/* Schema.org tags */}
       <script type="application/ld+json">
         {JSON.stringify(type === "page" ? page : blog)}
       </script>
+      {type === 'page' && (
+        <script type="application/ld+json">
+          {JSON.stringify(schemaWebsite)}
+        </script>
+      )}
+      {type === 'course' && (
+        <script type="application/ld+json">
+          {JSON.stringify(schemaCourse)}
+        </script>
+      )}
     </Helmet>
   );
 };
