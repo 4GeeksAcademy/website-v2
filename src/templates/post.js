@@ -142,34 +142,34 @@ export default function Template(props) {
   }
 
   const schema = {
-    "@context": "https://schema.org", 
+    "@context": "https://schema.org",
     "@type": "Article",
-    "headline": post.frontmatter.title,
-    "alternativeHeadline": post.frontmatter.title,
-    "image": post.frontmatter.image,
-    "author": post.frontmatter.author, 
+    headline: post.frontmatter.title,
+    alternativeHeadline: post.frontmatter.title,
+    image: post.frontmatter.image,
+    author: post.frontmatter.author,
     // "award": "Best article ever written",
-    "editor": "4Geeks Academy", 
-    "genre": post.frontmatter.cluster.replace(/-|_/g, " "), 
-    // "keywords": "cuanto gana un desarrollador full stack", 
+    editor: "4Geeks Academy",
+    genre: post.frontmatter.cluster.replace(/-|_/g, " "),
+    // "keywords": "cuanto gana un desarrollador full stack",
     // "wordcount": "1161",
-    "publisher": {
+    publisher: {
       "@type": "Organization",
-      "name": "4Geeks Academy",
-      "logo": {
+      name: "4Geeks Academy",
+      logo: {
         "@type": "ImageObject",
-        "url": "https://storage.googleapis.com/media-breathecode/b25a096eb14565c0c5e75d72442f888c17ac06fcfec7282747bf6c87baaf559c"
-      }
+        url: "https://storage.googleapis.com/media-breathecode/b25a096eb14565c0c5e75d72442f888c17ac06fcfec7282747bf6c87baaf559c",
+      },
     },
-    "url": `https://4geeksacademy.com/${pageContext.lang}/${post.frontmatter.cluster}/${post.frontmatter.slug}`,
-      "mainEntityOfPage": {
-      "@type": "WebPage"
+    url: `https://4geeksacademy.com/${pageContext.lang}/${post.frontmatter.cluster}/${post.frontmatter.slug}`,
+    mainEntityOfPage: {
+      "@type": "WebPage",
     },
-    "datePublished": post.frontmatter.date,
-    "dateCreated": post.frontmatter.date,
-    "dateModified": post.frontmatter.date,
+    datePublished: post.frontmatter.date,
+    dateCreated: post.frontmatter.date,
+    dateModified: post.frontmatter.date,
     // "description": "Conoce cuánto gana un desarrollador full stack en Chile en el año 2021"
-  }
+  };
 
   return (
     <>
@@ -317,9 +317,7 @@ export default function Template(props) {
             </Div>
           </Div>
         </GridContainer>
-        <script type="application/ld+json">
-          {JSON.stringify(schema)}
-        </script>
+        <script type="application/ld+json">{JSON.stringify(schema)}</script>
 
         {/* <Div
           flexDirection="column"
