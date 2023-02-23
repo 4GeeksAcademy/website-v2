@@ -92,11 +92,11 @@ const SchemaOrg = ({
       <script type="application/ld+json">
         {JSON.stringify(type === "page" ? page : blog)}
       </script>
-      {type === "page" && (
+      {/* {type === "page" && (
         <script type="application/ld+json">
           {JSON.stringify(schemaWebsite)}
         </script>
-      )}
+      )} */}
       {type === "course" && (
         <script type="application/ld+json">
           {JSON.stringify(schemaCourse)}
