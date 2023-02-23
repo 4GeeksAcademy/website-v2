@@ -79,11 +79,11 @@ const SchemaOrg = ({
     "@type": "Course",
     name: title,
     description,
-    "provider": {
+    provider: {
       "@type": "Organization",
-      "name": "4Geeks Academy",
-      "sameAs": "https://4geeksacademy.com/"
-    }
+      name: "4Geeks Academy",
+      sameAs: "https://4geeksacademy.com/",
+    },
   };
 
   return (
@@ -92,12 +92,12 @@ const SchemaOrg = ({
       <script type="application/ld+json">
         {JSON.stringify(type === "page" ? page : blog)}
       </script>
-      {type === 'page' && (
+      {type === "page" && (
         <script type="application/ld+json">
           {JSON.stringify(schemaWebsite)}
         </script>
       )}
-      {type === 'course' && (
+      {type === "course" && (
         <script type="application/ld+json">
           {JSON.stringify(schemaCourse)}
         </script>

@@ -169,15 +169,13 @@ export default function Template(props) {
     datePublished: post.frontmatter.date,
     dateCreated: post.frontmatter.date,
     dateModified: post.frontmatter.date,
-    "description": post.frontmatter.excerpt
+    description: post.frontmatter.excerpt,
   };
 
   return (
     <>
       <Helmet>
-        <script type="application/ld+json">
-          {JSON.stringify(schema)}
-        </script>
+        <script type="application/ld+json">{JSON.stringify(schema)}</script>
       </Helmet>
       <Layout
         type="post"

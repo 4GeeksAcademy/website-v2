@@ -122,27 +122,25 @@ const Home = (props) => {
     (session?.location?.custom_bar.active && isTestMode) ||
     (session?.location?.custom_bar.active && !isDevelopment());
 
-    const schemaOrg = {
-      "@context": "https://schema.org",
-      "@type": "School",
-      name: "4Geeks Academy",
-      url: `https://4geeksacademy.com`,
-      logo: "https://storage.googleapis.com/media-breathecode/b25a096eb14565c0c5e75d72442f888c17ac06fcfec7282747bf6c87baaf559c",
-      sameAs: [
-        "https://twitter.com/4GeeksAcademy",
-        "https://www.instagram.com/4geeksacademy/",
-        "https://www.facebook.com/4geeksacademy",
-        "https://4geeksacademy.com/",
-        "https://www.youtube.com/@4GeeksAcademy"
-      ]
-    };
+  const schemaOrg = {
+    "@context": "https://schema.org",
+    "@type": "School",
+    name: "4Geeks Academy",
+    url: `https://4geeksacademy.com`,
+    logo: "https://storage.googleapis.com/media-breathecode/b25a096eb14565c0c5e75d72442f888c17ac06fcfec7282747bf6c87baaf559c",
+    sameAs: [
+      "https://twitter.com/4GeeksAcademy",
+      "https://www.instagram.com/4geeksacademy/",
+      "https://www.facebook.com/4geeksacademy",
+      "https://4geeksacademy.com/",
+      "https://www.youtube.com/@4GeeksAcademy",
+    ],
+  };
 
   return (
     <>
       <Helmet>
-        <script type="application/ld+json">
-          {JSON.stringify(schemaOrg)}
-        </script>
+        <script type="application/ld+json">{JSON.stringify(schemaOrg)}</script>
       </Helmet>
       <Div
         display="flex"
@@ -443,7 +441,7 @@ export const query = graphql`
               }
             }
           }
-          schemaOrganization{
+          schemaOrganization {
             type
           }
           news {
