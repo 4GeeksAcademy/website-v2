@@ -107,11 +107,6 @@ const SchemaOrg = ({
           {JSON.stringify(schemaWebsite)}
         </script>
       )} */}
-      {/* {type === "course" && (
-        <script type="application/ld+json">
-          {JSON.stringify(schemaCourse)}
-        </script>
-      )} */}
     </Helmet>
   );
 };
