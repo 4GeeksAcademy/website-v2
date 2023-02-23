@@ -88,12 +88,12 @@ const SchemaOrg = ({
 
   const schemaType = {
     page,
-    course: schemaCourse
-  }
+    course: schemaCourse,
+  };
   const getSchemeType = () => {
-    if (type in schemaType) return schemaType[type]
+    if (type in schemaType) return schemaType[type];
     return blog;
-  }
+  };
 
   return (
     <Helmet>
