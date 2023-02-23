@@ -86,22 +86,32 @@ const SchemaOrg = ({
     },
   };
 
+  const schemaType = {
+    page,
+    course: schemaCourse
+  }
+  const getSchemeType = () => {
+    if (type in schemaType) return schemaType[type]
+    return blog;
+  }
+
   return (
     <Helmet>
       {/* Schema.org tags */}
       <script type="application/ld+json">
-        {JSON.stringify(type === "page" ? page : blog)}
+        {/* {JSON.stringify(type === "page" ? page : blog)} */}
+        {JSON.stringify(getSchemeType())}
       </script>
       {/* {type === "page" && (
         <script type="application/ld+json">
           {JSON.stringify(schemaWebsite)}
         </script>
       )} */}
-      {type === "course" && (
+      {/* {type === "course" && (
         <script type="application/ld+json">
           {JSON.stringify(schemaCourse)}
         </script>
-      )}
+      )} */}
     </Helmet>
   );
 };

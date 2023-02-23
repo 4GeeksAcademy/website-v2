@@ -321,7 +321,6 @@ export default function Template(props) {
             </Div>
           </Div>
         </GridContainer>
-        {/* <script type="application/ld+json">{JSON.stringify(schema)}</script> */}
 
         {/* <Div
           flexDirection="column"
