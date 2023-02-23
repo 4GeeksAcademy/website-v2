@@ -4,6 +4,7 @@ import { H1, Paragraph } from "../components/Heading";
 import { RoundImage, Colors, Button } from "../components/Styling";
 import Layout from "../global/Layout";
 import LazyLoad from "react-lazyload";
+import { Helmet } from "react-helmet";
 import twitterUser from "../utils/twitter";
 // import Icon from '../components/Icon'
 // import {TwitterFollowButton} from 'react-twitter-embed';
@@ -168,11 +169,16 @@ export default function Template(props) {
     datePublished: post.frontmatter.date,
     dateCreated: post.frontmatter.date,
     dateModified: post.frontmatter.date,
-    // "description": "Conoce cuánto gana un desarrollador full stack en Chile en el año 2021"
+    "description": post.frontmatter.excerpt
   };
 
   return (
     <>
+      <Helmet>
+        <script type="application/ld+json">
+          {JSON.stringify(schema)}
+        </script>
+      </Helmet>
       <Layout
         type="post"
         seo={data.markdownRemark.frontmatter}
@@ -317,7 +323,7 @@ export default function Template(props) {
             </Div>
           </Div>
         </GridContainer>
-        <script type="application/ld+json">{JSON.stringify(schema)}</script>
+        {/* <script type="application/ld+json">{JSON.stringify(schema)}</script> */}
 
         {/* <Div
           flexDirection="column"
