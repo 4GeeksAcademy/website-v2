@@ -153,7 +153,7 @@ export default function Template(props) {
     editor: "4Geeks Academy",
     genre: post.frontmatter.cluster.replace(/-|_/g, " "),
     // "keywords": "cuanto gana un desarrollador full stack",
-    // "wordcount": "1161",
+    "wordcount": post.frontmatter.wordcount,
     publisher: {
       "@type": "Organization",
       name: "4Geeks Academy",
@@ -166,9 +166,9 @@ export default function Template(props) {
     mainEntityOfPage: {
       "@type": "WebPage",
     },
-    datePublished: post.frontmatter.date,
+    // datePublished: post.frontmatter.date,
     dateCreated: post.frontmatter.date,
-    dateModified: post.frontmatter.date,
+    // dateModified: post.frontmatter.date,
     description: post.frontmatter.excerpt,
   };
 
@@ -375,6 +375,7 @@ export const postQuery = graphql`
         slug
         title
         author
+        wordcount
         date
         excerpt
         visibility
