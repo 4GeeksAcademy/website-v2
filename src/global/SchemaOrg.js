@@ -99,7 +99,6 @@ const SchemaOrg = ({
     <Helmet>
       {/* Schema.org tags */}
       <script type="application/ld+json">
-        {/* {JSON.stringify(type === "page" ? page : blog)} */}
         {JSON.stringify(getSchemeType())}
       </script>
       {/* {type === "page" && (
