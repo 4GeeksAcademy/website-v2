@@ -153,7 +153,7 @@ export default function Template(props) {
     editor: "4Geeks Academy",
     genre: post.frontmatter.cluster.replace(/-|_/g, " "),
     // "keywords": "cuanto gana un desarrollador full stack",
-    "wordcount": post.frontmatter.wordcount,
+    wordcount: post.frontmatter.wordcount,
     publisher: {
       "@type": "Organization",
       name: "4Geeks Academy",

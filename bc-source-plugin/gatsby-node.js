@@ -48,14 +48,14 @@ exports.sourceNodes = async (
 
     const wordCount = (text) => {
       let count = 0;
-      const split = text.split(' ');
+      const split = text.split(" ");
       for (let i = 0; i < split.length; i++) {
-       if (split[i] != "") {
-        count ++;
-       }
+        if (split[i] != "") {
+          count++;
+        }
       }
       return count;
-    }
+    };
     const count = wordCount(content);
 
     content = matter(content);
