@@ -6,6 +6,8 @@ const BaseRender =
   (Page, options = {}) =>
   (props) => {
     const { data, pageContext } = props;
+    console.log('data');
+    console.log(data);
     let yml = null;
     try {
       yml = data[`all${cap(pageContext.type)}Yaml`].edges[0].node;
@@ -28,15 +30,28 @@ const BaseRender =
     const utm_course = yml.meta_info?.utm_course;
 
     if (pageContext.type === "landing") {
-      filteredPrograms =
-        data.allChooseProgramYaml.edges[0].node.programs.filter((course_el) => {
-          if (course_el.visibility === "hidden") return false;
-          return (
-            utm_course.filter((array_el) => {
-              return course_el.bc_slug === array_el;
-            }).length !== 0
-          );
-        });
+      filteredPrograms = data.allCourseYaml.edges
+        .filter(
+          ({ node }) =>{
+            if (["unlisted", "hidden"].includes(node.meta_info.visibility) || !node.meta_info.show_in_apply) return false;
+            return (
+              utm_course.filter((array_el) => {
+                return node.meta_info.bc_slug === array_el;
+              }).length !== 0
+            );
+          }
+        ).map(({ node }) => ({
+          ...node
+        }));
+      // filteredPrograms =
+      //   data.allChooseProgramYaml.edges[0].node.programs.filter((course_el) => {
+      //     if (course_el.visibility === "hidden") return false;
+      //     return (
+      //       utm_course.filter((array_el) => {
+      //         return course_el.bc_slug === array_el;
+      //       }).length !== 0
+      //     );
+      //   });
       if (filteredPrograms.length == 0) {
         throw new Error(
           "There are not programs to show on this landing page, make sure to include them on meta_info.utm_course array and inside the components.choose_program component YML with the visibility 'visible' or 'unlisted'"

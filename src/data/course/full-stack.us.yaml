@@ -7,6 +7,7 @@ meta_info:
   visibility: "visible"
   keywords: ""
   related_clusters: ["trends-and-tech","full-stack-developer"]
+  show_in_apply: true
   redirects:
     [
       "/part-time",
@@ -26,6 +27,8 @@ meta_info:
       "/course/full-stack-web-development-bootcamp-part-time",
       "/us/course/full-stack-web-development-bootcamp-part-time",
     ]
+apply_form:
+  label: Full Stack Developer
 seo_title: "Cooding Bootcamp"
 header:
   title: "Full Stack Developer"

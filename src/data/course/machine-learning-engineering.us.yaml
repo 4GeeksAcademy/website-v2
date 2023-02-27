@@ -7,8 +7,12 @@ meta_info:
   image: ""
   visibility: "visible"
   keywords: ""
+  show_in_apply: true
   redirects: ["/us/machine-learning"]
   related_clusters: ["trends-and-tech"]
+
+apply_form:
+  label: Machine Learning
 
 seo_title: "become a machine learning engineer"
 header:

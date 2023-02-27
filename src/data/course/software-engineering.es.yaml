@@ -7,8 +7,12 @@ meta_info:
   image: ""
   visibility: "visible"
   keywords: ""
+  show_in_apply: true
   redirects: ["/ingenieria-software", "/es/software-engineering", "/es/course/ingenieria-software"]
   related_clusters: ["trends-and-tech"]
+
+apply_form:
+  label: Ingeniero de Software Senior
 
 seo_title: "Cooding Bootcamp"
 header:

@@ -6,9 +6,13 @@ meta_info:
   template: "course-machine-learning"
   image: ""
   visibility: "visible"
+  show_in_apply: true
   keywords: ""
   redirects: ["/es/machine-learning"]
   related_clusters: ["trends-and-tech"]
+
+apply_form:
+  label: Machine Learning
 
 header:
   title: "Conviértete en un Ingeniero de Inteligencia Artificial"

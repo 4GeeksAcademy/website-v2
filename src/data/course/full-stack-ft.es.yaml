@@ -6,6 +6,7 @@ meta_info:
   visibility: "visible"
   bc_slug: "full-stack-ft"
   keywords: ""
+  show_in_apply: false
   redirects:
     [
       "/curso/full-time",
@@ -19,6 +20,10 @@ meta_info:
       "/es/course/desarrollo-web-full-stack-bootcamp-full-time",
     ]
   related_clusters: ["trends-and-tech"]
+
+apply_form:
+  label: Full Stack Developer
+
 seo_title: "Coding Bootcamp"
 header:
   title: "Full Stack Developer"

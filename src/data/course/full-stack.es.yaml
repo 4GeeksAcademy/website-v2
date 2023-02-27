@@ -6,6 +6,7 @@ meta_info:
   bc_slug: "full-stack"
   visibility: "visible"
   keywords: "Bootcamp, Full Stack, part time"
+  show_in_apply: true
   redirects:
     [
       "/part-time",
@@ -24,6 +25,9 @@ meta_info:
       "/introduccion-programacion-codigo",
     ]
   related_clusters: ["trends-and-tech"]
+
+apply_form:
+  label: Full Stack Developer
 seo_title: "Coding Bootcamp"
 header:
   title: "Full Stack Developer"
