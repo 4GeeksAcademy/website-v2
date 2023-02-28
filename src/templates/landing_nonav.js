@@ -531,9 +531,8 @@ const Landing = (props) => {
 export const query = graphql`
   query LandingNonavQuery(
     $file_name: String!
-    $lang: String!
-  ) # $utm_course: String
-  {
+    $lang: String! # $utm_course: String
+  ) {
     allPageYaml(
       filter: {
         fields: { file_name: { regex: "/geekpal/" }, lang: { eq: $lang } }
