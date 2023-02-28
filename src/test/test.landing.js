@@ -31,6 +31,7 @@ walk(`${__dirname}/../data/landing`, async (err, files) => {
     "software-engineering",
     "machine-learning",
     "node-js",
+    "datascience-ml"
   ];
 
   const _files = files.filter(
