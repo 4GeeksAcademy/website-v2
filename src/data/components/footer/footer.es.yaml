@@ -37,8 +37,8 @@ footer:
     width: 3
     heading: "PROGRAMAS"
     items:
-      - name: "Full Stack Developer"
-        link: "/es/coding-bootcamps/full-stack-part-time"
+      - name: "Desarrollador Full Stack"
+        link: "/es/coding-bootcamps/desarrollador-full-stack"
       - name: "Ingeniero de software"
         link: "/es/coding-bootcamps/ingenieria-de-software-programacion"
       - name: "AI Machine Learning Engineering"

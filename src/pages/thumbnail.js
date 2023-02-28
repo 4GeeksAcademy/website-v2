@@ -2,9 +2,29 @@ import React, { useState, useEffect } from "react";
 import "../assets/css/single-post.css";
 import { Link, useStaticQuery } from "gatsby";
 import styled from "styled-components";
+import axios from "axios";
 import { H1 } from "../components/Heading";
 
-//FROM components
+const options = {
+  headers: {
+    Academy: process.env.GATSBY_BLOG_ACADEMY_ID,
+    Authorization: "Token " + process.env.GATSBY_BLOG_ACADEMY_TOKEN,
+  },
+};
+
+const getPost = async (slug) => {
+  const _resp = await axios.get(
+    process.env.GATSBY_BREATHECODE_HOST + `/registry/asset/${slug}`,
+    options
+  );
+  if (_resp.status != 200) {
+    logger.error(_resp.data);
+    throw new Error(_resp.data);
+  }
+  
+  return _resp.data;
+}
+
 
 const ThumbnailPage = () => {
   const isWindow = () => (window !== undefined ? true : false);
@@ -28,12 +48,16 @@ const ThumbnailPage = () => {
   const [post, setPost] = useState(null);
 
   useEffect(() => {
+  
+
     const params = new URLSearchParams(window.location.search);
     const slug = params.get("slug");
     console.log("looking for slug: " + slug);
     const posts = data.allMarkdownRemark.edges;
     const _post = posts.find(({ node }) => node.fields.slug == slug);
     if (_post) setPost(_post.node);
+    else getPost(slug).then(_p => setPost(_p))
+
     if (isWindow) document.body.className = "page-thumbnail";
   }, [data]);
 
@@ -58,7 +82,7 @@ const ThumbnailPage = () => {
         margin="0 auto"
         lineHeight="normal"
       >
-        {post && post.frontmatter?.title}
+        {post && (post.frontmatter?.title || post.title)}
       </H1>
     </Div>
   );
