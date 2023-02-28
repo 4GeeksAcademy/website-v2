@@ -1,7 +1,7 @@
 meta_info:
   slug: programas
-  title: "Bienvenido a nuestros programas"
-  description: "Nuestros cursos disponibles"
+  title: "Programas y cursos disponibles en 4Geeks Academy"
+  description: "Si algo está relacionado con código, entonces nosotros probablemente lo enseñamos. Conoce nuestros programas."
   visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   image: "/images/programs-heading.png"
   keywords: "Programas de 4Geeks Academy"
@@ -9,8 +9,8 @@ meta_info:
 
 seo_title: "progresa como desarrollador"
 header:
-  title: Bienvenido a nuestros programas
-  paragraph: Nuestro enfoque en las habilidades de codificación, la carrera de por vida y el apoyo a la codificación y los agresivos programas de becas nos permiten presentar las mejores ofertas posibles para convertirnos en desarrolladores en cuestión de semanas.
+  title: El código te hace libre
+  paragraph: Nuestro himno es la programación, ya sea convertirte en ingeniero de software, especialista en data science o blockchain. Soporte de por vida, mentorías ilimitadas y los agresivos programas de becas nos permiten presentar las mejores ofertas posibles para convertirnos en desarrolladores en cuestión de semanas.
   image: "../../../static/images/programs-heading.png"
   alt: ""
 
@@ -20,4 +20,4 @@ choose_program:
 
 content:
   title: "Todos los programas son enseñados "
-  title_highlighted: "Online, Híbrida o En Persona." 
+  title_highlighted: "Online, Híbrido o En Persona." 

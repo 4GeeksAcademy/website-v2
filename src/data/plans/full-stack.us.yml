@@ -161,7 +161,7 @@ part_time:
   - slug: 'usa-clark-scholarship-pt'
     academies: ['downtown-miami', 'orlando','toronto-canada']
     recomended: true
-    scholarship: "Scolarship"
+    scholarship: "Scholarship"
     payment_time: "There is nothing like this"
     price: "$5999"
     bullets: 
@@ -189,7 +189,7 @@ part_time:
     payment_time: "Get weekly living stipends. Pay after you get a job"
     price: "$0"
     bullets: 
-      - "With $400 p/ week living stipends"
+      - "With $400 p/week living stipends"
       - "9% of your salary until paid in full, only if you get a job in tech."
     icons: 
       - "/images/landing/uwm_pantone_2021_2.png"

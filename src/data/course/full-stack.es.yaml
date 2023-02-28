@@ -1,5 +1,5 @@
 meta_info:
-  slug: full-stack-part-time
+  slug: desarrollador-full-stack
   title: "Conviértete en Desarrollador Full Stack en 4Geeks Academy"
   description: "El Full Stack es un coding bootcamp reconocido a nivel mundial para convertirte en programador. Trabajo Garantizado."
   image: "/images/og-preview/full-stack.es.png"
@@ -15,6 +15,7 @@ meta_info:
       "/es/full-stack",
       "/es/coding-bootcamps/desarrollo-web-full-stack-bootcamp-full-time",
       "/es/coding-bootcamps/desarrollo-web-full-stack",
+      "/es/coding-bootcamps/full-stack-part-time",
       "/es/course/desarrollo-web-full-stack",
       "/es/course/bootcamp-de-desarrollo-web-full-stack-part-time/madrid-espana",
       "/es/course/bootcamp-de-desarrollo-web-full-stack-part-time",
@@ -23,7 +24,7 @@ meta_info:
       "/es/course/desarrollo-web-full-stack-bootcamp-full-time",
       "/introduccion-programacion-codigo",
     ]
-  related_clusters: ["trends-and-tech"]
+  related_clusters: ["desarrollador-full-stack"]
 seo_title: "Coding Bootcamp"
 header:
   title: "Full Stack Developer"
@@ -113,7 +114,7 @@ details:
       description: >
         Empezando por lo básico: HTML5 + CSS3 + Javascript. Revisamos los fundamentos de la codificación y nos aseguramos de que todos estamos en la misma página.
         Durante el prework revisarás cómo hacer un website con HTML y CSS, luego desarrollarás varios proyectos y por último te iniciaras en el mundo de Javascript, aprendiendo sobre variables, loops, condicionales, y funciones.
-      projects: "Contruye tu primera página web, y una versión mínima de Instagram."
+      projects: "Construye tu primera página web, y una versión mínima de Instagram."
       slug: "prework"
       duration: "(previo)"
       step: 0

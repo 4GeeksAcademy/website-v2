@@ -201,8 +201,8 @@ export const apply = async (data, session) => {
   const action = "submit";
   let token = await getToken(action);
 
-  if (!session || !session.utm || !session.utm.utm_test)
-    return await save_form(
+  if (!session || !session.utm || !session.utm.utm_test){
+    const _data = await save_form(
       body,
       [tag.value || tag],
       [automation.value || automation],
@@ -210,6 +210,16 @@ export const apply = async (data, session) => {
       token,
       action
     );
+    // referral program integration
+    if(_data && typeof(_data.referral_key) == "string" && _data.referral_key.length > 0){
+      if(window && window.fpr){
+        console.log("Triggered referral program action")
+        window.fpr("referral",{email: _data.email });
+      }
+      else console.error("Global object for firstpromoter API not found (referral program)");
+    }
+    return _data;
+  }
   return true;
 };
 
