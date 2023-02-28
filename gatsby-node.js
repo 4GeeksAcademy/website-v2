@@ -54,7 +54,6 @@ exports.onCreateNode = ({ node, getNode, actions, ...rest }) => {
       "JobAlertYaml",
       "JobYaml",
       "AlumniProjects",
-      "ChooseProgramYaml",
       "TestimonialsYaml",
       "GeeksVsOthersYaml",
       "JobsStatisticsYaml",
@@ -362,7 +361,12 @@ const createEntityPagesfromYml = async (
       });
     } else if (entity === "Course") {
       _extraContext.related_clusters = node.meta_info.related_clusters;
-      if (node.meta_info.visibility === "hidden") return;
+      if (node.meta_info.visibility === "hidden") {
+        console.log(entity);
+        console.log('file name');
+        console.log(node.fields.file_name);
+        return
+      };
     }
 
     createPage({

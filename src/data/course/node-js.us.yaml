@@ -16,3 +16,22 @@ header:
   image: ""
   image_alt: ""
   paragraph: ""
+
+button:
+  syllabus_heading: "Download Syllabus"
+  syllabus_btn_label: "Instant Download"
+  syllabus_motivation: "Get it in just a few seconds"
+  apply_button_link: "/us/apply"
+
+badges:
+  paragraph: ""
+
+prices:
+  heading: "PRICES AND PAYMENTS"
+  sub_heading: ""
+  selector:
+    top_label: Location
+    placeholder: Select a location
+  button:
+    text: Check Prices and Plans
+    link: ""
