@@ -24,9 +24,6 @@ header_data:
   video: ""
   image: "../../../static/images/bg/new-main-home-bg.png"
 
-schemaOrganization:
-  type: School
-
 news:
   heading: "Read about this coding bootcamp in the news..."
   limit: 7
