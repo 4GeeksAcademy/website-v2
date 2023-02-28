@@ -30,17 +30,20 @@ const BaseRender =
 
     if (pageContext.type === "landing") {
       filteredPrograms = data.allCourseYaml.edges
-        .filter(
-          ({ node }) =>{
-            if (["unlisted", "hidden"].includes(node.meta_info.visibility) || !node.meta_info.show_in_apply) return false;
-            return (
-              utm_course.filter((array_el) => {
-                return node.meta_info.bc_slug === array_el;
-              }).length !== 0
-            );
-          }
-        ).map(({ node }) => ({
-          ...node
+        .filter(({ node }) => {
+          if (
+            ["unlisted", "hidden"].includes(node.meta_info.visibility) ||
+            !node.meta_info.show_in_apply
+          )
+            return false;
+          return (
+            utm_course.filter((array_el) => {
+              return node.meta_info.bc_slug === array_el;
+            }).length !== 0
+          );
+        })
+        .map(({ node }) => ({
+          ...node,
         }));
       // filteredPrograms =
       //   data.allChooseProgramYaml.edges[0].node.programs.filter((course_el) => {

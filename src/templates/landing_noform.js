@@ -1094,7 +1094,7 @@ export const query = graphql`
             visibility
             show_in_apply
           }
-          apply_form{
+          apply_form {
             label
           }
           typical {

@@ -58,13 +58,15 @@ const Apply = (props) => {
 
   let programs = data.allCourseYaml.edges
     .filter(
-      ({ node }) => !["unlisted", "hidden"].includes(node.meta_info.visibility) && node.meta_info.show_in_apply
+      ({ node }) =>
+        !["unlisted", "hidden"].includes(node.meta_info.visibility) &&
+        node.meta_info.show_in_apply
     )
     .map(({ node }) => ({
       label: node.apply_form.label,
       value: node.meta_info.bc_slug,
-    }))
-    // .sort((a, b) => a.value.localeCompare(b.value));
+    }));
+  // .sort((a, b) => a.value.localeCompare(b.value));
 
   // const programs = [];
   // for (const item of nonUniqueprograms) {

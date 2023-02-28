@@ -532,8 +532,8 @@ export const query = graphql`
   query LandingNonavQuery(
     $file_name: String!
     $lang: String!
-    # $utm_course: String
-  ) {
+  ) # $utm_course: String
+  {
     allPageYaml(
       filter: {
         fields: { file_name: { regex: "/geekpal/" }, lang: { eq: $lang } }
@@ -1159,11 +1159,7 @@ export const query = graphql`
         }
       }
     }
-    allCourseYaml(
-      filter: {
-        fields: { lang: { eq: $lang } }
-      }
-    ) {
+    allCourseYaml(filter: { fields: { lang: { eq: $lang } } }) {
       edges {
         node {
           meta_info {
@@ -1173,7 +1169,7 @@ export const query = graphql`
             visibility
             show_in_apply
           }
-          apply_form{
+          apply_form {
             label
           }
           typical {
