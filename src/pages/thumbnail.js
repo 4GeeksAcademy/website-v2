@@ -27,6 +27,8 @@ const getPost = async (slug) => {
 
 
 const ThumbnailPage = () => {
+  const isWindow = () => (window !== undefined ? true : false);
+
   const data = useStaticQuery(graphql`
     query ThumbnailQuery {
       allMarkdownRemark {
@@ -56,7 +58,8 @@ const ThumbnailPage = () => {
     if (_post) setPost(_post.node);
     else getPost(slug).then(_p => setPost(_p))
 
-}, [data]);
+    if (isWindow) document.body.className = "page-thumbnail";
+  }, [data]);
 
   const Div = styled.div`
     background: url("/images/bg/random-bg${Math.floor(Math.random() * 4) +
