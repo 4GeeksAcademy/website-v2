@@ -79,7 +79,7 @@ const ThumbnailPage = () => {
         margin="0 auto"
         lineHeight="normal"
       >
-        {post && post.frontmatter?.title}
+        {post && (post.frontmatter?.title || post.title)}
       </H1>
     </Div>
   );
