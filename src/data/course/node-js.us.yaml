@@ -1,0 +1,18 @@
+meta_info:
+  slug: node-js-backend-development
+  title: "Lear About Node-Js backend at 4Geeks Academy"
+  description: "Description of the node-js course"
+  bc_slug: "node-js"
+  template: "course-engineering"
+  image: ""
+  visibility: "hidden"
+  keywords: ""
+  show_in_apply: true
+  redirects: []
+  related_clusters: ["trends-and-tech"]
+
+header:
+  title: "Node Js Backend Development"
+  image: ""
+  image_alt: ""
+  paragraph: ""

@@ -402,7 +402,7 @@ const PricesAndPaymentsV2 = (props) => {
   const findCity = props.locations.find((loc) => loc.node?.city === city);
   useEffect(() => {
     if (findCity !== undefined && findCity.node) {
-      setButtonText(findCity.node.button.apply_button_text);
+      setButtonText(findCity.node.button?.apply_button_text);
     }
   }, [findCity]);
 

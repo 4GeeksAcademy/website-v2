@@ -45,15 +45,6 @@ const BaseRender =
         .map(({ node }) => ({
           ...node,
         }));
-      // filteredPrograms =
-      //   data.allChooseProgramYaml.edges[0].node.programs.filter((course_el) => {
-      //     if (course_el.visibility === "hidden") return false;
-      //     return (
-      //       utm_course.filter((array_el) => {
-      //         return course_el.bc_slug === array_el;
-      //       }).length !== 0
-      //     );
-      //   });
       if (filteredPrograms.length == 0) {
         throw new Error(
           "There are not programs to show on this landing page, make sure to include them on meta_info.utm_course array and inside the components.choose_program component YML with the visibility 'visible' or 'unlisted'"

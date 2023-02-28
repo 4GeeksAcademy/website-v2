@@ -1249,20 +1249,6 @@ export const query = graphql`
         }
       }
     }
-    allChooseProgramYaml(filter: { fields: { lang: { eq: $lang } } }) {
-      edges {
-        node {
-          programs {
-            text
-            link
-            bc_slug
-            visibility
-            location_bc_slug
-            schedule
-          }
-        }
-      }
-    }
   }
 `;
 

@@ -56,7 +56,7 @@ const Apply = (props) => {
     course: { value: null, valid: false },
   });
 
-  let programs = data.allCourseYaml.edges
+  const programs = data.allCourseYaml.edges
     .filter(
       ({ node }) =>
         !["unlisted", "hidden"].includes(node.meta_info.visibility) &&
@@ -899,9 +899,6 @@ export const query = graphql`
           }
           apply_form {
             label
-          }
-          header {
-            title
           }
         }
       }
