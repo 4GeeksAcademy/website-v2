@@ -268,13 +268,13 @@ export const RightNav = ({
   const chooseButton = {
     us: {
       open_button_text: "CHOOSE PROGRAM",
-      close_button_text: "Close"
+      close_button_text: "Close",
     },
     es: {
       open_button_text: "SELECCIONAR PROGRAMA",
-      close_button_text: "Cerrar"
+      close_button_text: "Cerrar",
     },
-  }
+  };
   return (
     <Div open={open}>
       <Link to={"/"}>

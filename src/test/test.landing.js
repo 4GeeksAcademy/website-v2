@@ -16,7 +16,7 @@ async function listDir() {
   try {
     return await fs.promises.readdir(`${__dirname}/../data/course`);
   } catch (err) {
-    console.error('Error occurred while reading directory!', err);
+    console.error("Error occurred while reading directory!", err);
   }
 }
 
@@ -27,7 +27,7 @@ walk(`${__dirname}/../data/landing`, async (err, files) => {
   courseFiles.forEach((_path) => {
     const file = loadYML(`src/data/course/${_path}`);
     coursesYml.push(file.yaml.meta_info.bc_slug);
-    coursesYml = [...new Set(coursesYml)]
+    coursesYml = [...new Set(coursesYml)];
   });
   err && fail("Error reading the YAML files: ", err);
   files.forEach((_path) => {

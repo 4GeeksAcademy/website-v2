@@ -69,8 +69,8 @@ const Location = ({ data, pageContext, yml }) => {
   const chooseButton = {
     us: "CHOOSE PROGRAM",
     es: "SELECCIONAR PROGRAMA",
-  }
-  
+  };
+
   return (
     <>
       <GridContainerWithImage
@@ -105,9 +105,7 @@ const Location = ({ data, pageContext, yml }) => {
             textAlign="center"
             textAlign_tablet="left"
             openLabel={chooseButton[lang]}
-            closeLabel={
-              chooseButton[lang]
-            }
+            closeLabel={chooseButton[lang]}
           />
           {yml.info_box.address && (
             <Div

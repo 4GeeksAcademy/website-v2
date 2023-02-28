@@ -362,7 +362,7 @@ const createEntityPagesfromYml = async (
       });
     } else if (entity === "Course") {
       _extraContext.related_clusters = node.meta_info.related_clusters;
-      if (node.meta_info.visibility === "hidden") return
+      if (node.meta_info.visibility === "hidden") return;
     }
 
     createPage({
