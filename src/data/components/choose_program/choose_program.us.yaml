@@ -12,7 +12,7 @@ programs:
     schedule: "Part-Time - Online/In-person"
     link: "/us/coding-bootcamps/software-engineer-bootcamp"
   - text: ""
-    bc_sluDatascience - Machine Learningg: "datascience-ml"
+    bc_slug: "datascience-ml"
     location_bc_slug: null
     schedule: "Part-Time - Online"
     visibility: "visible"

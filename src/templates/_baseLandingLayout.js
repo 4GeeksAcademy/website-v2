@@ -6,8 +6,7 @@ const BaseRender =
   (Page, options = {}) =>
   (props) => {
     const { data, pageContext } = props;
-    console.log('data');
-    console.log(data);
+
     let yml = null;
     try {
       yml = data[`all${cap(pageContext.type)}Yaml`].edges[0].node;

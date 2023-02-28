@@ -1126,6 +1126,16 @@ export const query = graphql`
     ) {
       edges {
         node {
+          meta_info {
+            slug
+            title
+            bc_slug
+            visibility
+            show_in_apply
+          }
+          apply_form{
+            label
+          }
           typical {
             heading
             sub_heading

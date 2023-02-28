@@ -29,7 +29,7 @@ const Landing = (props) => {
       : data.allDownloadableYaml.edges[0].node?.apply_schollarship;
 
   const programs = filteredPrograms.map((p) => ({
-    label: p.header.title,
+    label: p.apply_form.label,
     value: p.meta_info.bc_slug,
   }));
 
@@ -1173,8 +1173,8 @@ export const query = graphql`
             visibility
             show_in_apply
           }
-          header {
-            title
+          apply_form{
+            label
           }
           typical {
             heading
