@@ -23,14 +23,16 @@ export const save_form = async (
       return process.env.GATSBY_BREATHECODE_HOST;
     }
   };
-
+  
   const getReferralKey = () => {
-    let referral_key = formData.referral_code || session.utm?.referral_code;
-    if (!referral_key) {
-      referral_key = formData.referral_key || session.utm?.referral_key;
+    let alias = ["referral_code", "ref", "referral_key"]
+    let referral = null;
+    for(let i = 0; i<alias.length;i++){
+      referral = formData[alias[i]] || session.utm ? session.utm[alias[i]] : null;      
+      if(typeof(referral) == "string" && referral.length > 0) return referral;
     }
-    return referral_key;
-  };
+    return undefined;
+  }
 
   const resp = await fetch(`${getEnvironmentAPI()}/marketing/lead`, {
     headers: new Headers({ "content-type": "application/json" }),
