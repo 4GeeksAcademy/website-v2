@@ -47,7 +47,7 @@ const BaseRender =
         }));
       if (filteredPrograms.length == 0) {
         throw new Error(
-          "There are not programs to show on this landing page, make sure to include them on meta_info.utm_course array and inside the components.choose_program component YML with the visibility 'visible' or 'unlisted'"
+          "There are not programs to show on this landing page, make sure to include them on meta_info.utm_course array and inside the course folder with the visibility 'visible' or 'unlisted'"
         );
       }
     } else {
