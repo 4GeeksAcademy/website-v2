@@ -11,7 +11,6 @@ const BaseRender =
     try {
       yml = data[`all${cap(pageContext.type)}Yaml`].edges[0].node;
     } catch (err) {
-      // console.error("Props: ", props);
       console.error(
         `There was a problem loading the data for type ${cap(
           pageContext.type
@@ -31,11 +30,6 @@ const BaseRender =
     if (pageContext.type === "landing") {
       filteredPrograms = data.allCourseYaml.edges
         .filter(({ node }) => {
-          if (
-            ["unlisted", "hidden"].includes(node.meta_info.visibility) ||
-            !node.meta_info.show_in_apply
-          )
-            return false;
           return (
             utm_course.filter((array_el) => {
               return node.meta_info.bc_slug === array_el;
@@ -47,7 +41,7 @@ const BaseRender =
         }));
       if (filteredPrograms.length == 0) {
         throw new Error(
-          "There are not programs to show on this landing page, make sure to include them on meta_info.utm_course array and inside the course folder with the visibility 'visible' or 'unlisted'"
+          "There are not programs to show on this landing page, make sure to include them on meta_info.utm_course array"
         );
       }
     } else {
