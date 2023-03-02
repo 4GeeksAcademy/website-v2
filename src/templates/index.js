@@ -441,9 +441,6 @@ export const query = graphql`
               }
             }
           }
-          schemaOrganization {
-            type
-          }
           news {
             limit
             heading

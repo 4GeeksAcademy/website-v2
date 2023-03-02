@@ -174,9 +174,9 @@ export default function Template(props) {
 
   return (
     <>
-      <Helmet>
+      {/* <Helmet>
         <script type="application/ld+json">{JSON.stringify(schema)}</script>
-      </Helmet>
+      </Helmet> */}
       <Layout
         type="post"
         seo={data.markdownRemark.frontmatter}
