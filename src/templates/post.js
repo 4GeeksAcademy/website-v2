@@ -4,7 +4,6 @@ import { H1, Paragraph } from "../components/Heading";
 import { RoundImage, Colors, Button } from "../components/Styling";
 import Layout from "../global/Layout";
 import LazyLoad from "react-lazyload";
-import { Helmet } from "react-helmet";
 import twitterUser from "../utils/twitter";
 // import Icon from '../components/Icon'
 // import {TwitterFollowButton} from 'react-twitter-embed';
@@ -174,9 +173,6 @@ export default function Template(props) {
 
   return (
     <>
-      <Helmet>
-        <script type="application/ld+json">{JSON.stringify(schema)}</script>
-      </Helmet>
       <Layout
         type="post"
         seo={data.markdownRemark.frontmatter}

@@ -20,7 +20,7 @@ const BaseRender = (Page) => (props) => {
   }
 
   return (
-    <Layout type="page" seo={yml.meta_info} context={pageContext}>
+    <Layout type="page" seo={{...yml.meta_info, seo_title: yml.seo_title}} context={pageContext}>
       {/* <StickyBar /> */}
       <Page {...props} yml={yml} />
     </Layout>
