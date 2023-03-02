@@ -78,6 +78,12 @@ const SEO = (props) => (
                 countryLang: getCountryLang(t),
               }));
 
+      const getDescription = () => {
+        // if (props.excerpt !== null && props.excerpt !== undefined) return props.excerpt
+
+        return description || defaultDescription[lang];
+      }
+
       return (
         <>
           <Helmet
@@ -141,7 +147,7 @@ const SEO = (props) => (
             author={author}
             // canonicalUrl=""
             // datePublished={}
-            description={props.excerpt || description || defaultDescription}
+            description={getDescription()}
             image={previewImage}
             type={type}
             title={title || defaultTitle}
