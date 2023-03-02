@@ -141,7 +141,7 @@ const SEO = (props) => (
             author={author}
             // canonicalUrl=""
             // datePublished={}
-            description={description || defaultDescription}
+            description={props.excerpt || description || defaultDescription}
             image={previewImage}
             type={type}
             title={title || defaultTitle}
