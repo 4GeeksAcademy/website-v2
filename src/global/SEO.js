@@ -79,10 +79,10 @@ const SEO = (props) => (
               }));
 
       const getDescription = () => {
-        // if (props.excerpt !== null && props.excerpt !== undefined) return props.excerpt
+        if (props.excerpt !== null && props.excerpt !== undefined) return props.excerpt
 
         return description || defaultDescription[lang];
-      }
+      };
 
       return (
         <>
