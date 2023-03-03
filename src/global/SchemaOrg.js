@@ -118,19 +118,15 @@ const SchemaOrg = ({
           {JSON.stringify(schemaType[type])}
         </script>
       )}
-      {context.defaultTemplate === "index" || type === 'location' && (
-        <script type="application/ld+json">
-          {JSON.stringify(schemaOrg)}
-        </script>
+      {context.defaultTemplate === "index" ||
+        (type === "location" && (
+          <script type="application/ld+json">
+            {JSON.stringify(schemaOrg)}
+          </script>
+        ))}
+      {context.filePath.includes("data/blog/") && (
+        <script type="application/ld+json">{JSON.stringify(blog)}</script>
       )}
-      {context.filePath.includes('data/blog/') && (
-        <script type="application/ld+json">
-          {JSON.stringify(blog)}
-        </script>
-      )}
-      {/* {<script type="application/ld+json">
-        {JSON.stringify(getSchemaType())}
-      </script>} */}
     </Helmet>
   );
 };
