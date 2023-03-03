@@ -12,6 +12,7 @@ const SchemaOrg = ({
   title,
   url,
   seoTitle,
+  context,
 }) => {
   const baseSchema = [
     {
@@ -105,24 +106,31 @@ const SchemaOrg = ({
   const schemaType = {
     page,
     location: page,
+    landing: page,
     course: schemaCourse,
-  };
-  const getSchemeType = () => {
-    if (type in schemaType) return schemaType[type];
-    return blog;
   };
 
   return (
     <Helmet>
       {/* Schema.org tags */}
-      <script type="application/ld+json">
-        {JSON.stringify(getSchemeType())}
-      </script>
-      {/* {type === "page" && (
+      {type in schemaType && (
         <script type="application/ld+json">
-          {JSON.stringify(schemaWebsite)}
+          {JSON.stringify(schemaType[type])}
         </script>
-      )} */}
+      )}
+      {context.defaultTemplate === "index" || type === 'location' && (
+        <script type="application/ld+json">
+          {JSON.stringify(schemaOrg)}
+        </script>
+      )}
+      {context.filePath.includes('data/blog/') && (
+        <script type="application/ld+json">
+          {JSON.stringify(blog)}
+        </script>
+      )}
+      {/* {<script type="application/ld+json">
+        {JSON.stringify(getSchemaType())}
+      </script>} */}
     </Helmet>
   );
 };
