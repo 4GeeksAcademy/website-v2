@@ -124,7 +124,7 @@ const SchemaOrg = ({
             {JSON.stringify(schemaOrg)}
           </script>
         ))}
-      {context.filePath.includes("data/blog/") && (
+      {context.filePath?.includes("data/blog/") && (
         <script type="application/ld+json">{JSON.stringify(blog)}</script>
       )}
     </Helmet>
