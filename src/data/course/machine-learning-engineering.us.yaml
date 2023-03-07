@@ -7,7 +7,7 @@ meta_info:
   image: ""
   visibility: "visible"
   keywords: ""
-  show_in_apply: true
+  show_in_apply: false
   redirects: ["/us/machine-learning"]
   related_clusters: ["trends-and-tech"]
 
