@@ -31,7 +31,6 @@ import { Circle } from "../components/BackgroundDrawing";
 import News from "../components/News";
 import Icon from "../components/Icon";
 import Credentials from "../components/Credentials";
-import ChooseProgram from "../components/ChooseProgram";
 import BaseRender from "./_baseLayout";
 import { SessionContext } from "../session.js";
 import Loc from "../components/Loc";
@@ -800,21 +799,6 @@ export const query = graphql`
               # }
             }
           }
-        }
-      }
-    }
-    allChooseProgramYaml(filter: { fields: { lang: { eq: $lang } } }) {
-      edges {
-        node {
-          programs {
-            text
-            location_bc_slug
-            link
-            visibility
-            schedule
-          }
-          open_button_text
-          close_button_text
         }
       }
     }
