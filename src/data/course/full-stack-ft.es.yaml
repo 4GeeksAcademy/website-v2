@@ -3,7 +3,7 @@ meta_info:
   title: "Full Stack Developer Course, 10 weeks duration on a full-time basis."
   description: "Become a Full Stack Developer in only 10 weeks, study full-time to speed up your learning and turn around your career in the fastest possible way"
   image: "/images/og-preview/full-stack-ft.es.png"
-  visibility: "unlisted"
+  visibility: "visible"
   bc_slug: "full-stack-ft"
   keywords: ""
   show_in_apply: false
