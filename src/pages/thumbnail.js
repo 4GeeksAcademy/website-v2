@@ -21,10 +21,9 @@ const getPost = async (slug) => {
     logger.error(_resp.data);
     throw new Error(_resp.data);
   }
-  
-  return _resp.data;
-}
 
+  return _resp.data;
+};
 
 const ThumbnailPage = () => {
   const isWindow = () => (window !== undefined ? true : false);
@@ -48,15 +47,13 @@ const ThumbnailPage = () => {
   const [post, setPost] = useState(null);
 
   useEffect(() => {
-  
-
     const params = new URLSearchParams(window.location.search);
     const slug = params.get("slug");
     console.log("looking for slug: " + slug);
     const posts = data.allMarkdownRemark.edges;
     const _post = posts.find(({ node }) => node.fields.slug == slug);
     if (_post) setPost(_post.node);
-    else getPost(slug).then(_p => setPost(_p))
+    else getPost(slug).then((_p) => setPost(_p));
 
     if (isWindow) document.body.className = "page-thumbnail";
   }, [data]);

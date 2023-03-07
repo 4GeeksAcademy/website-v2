@@ -1126,6 +1126,16 @@ export const query = graphql`
     ) {
       edges {
         node {
+          meta_info {
+            slug
+            title
+            bc_slug
+            visibility
+            show_in_apply
+          }
+          apply_form {
+            label
+          }
           typical {
             heading
             sub_heading
@@ -1274,20 +1284,6 @@ export const query = graphql`
               }
               featured
             }
-          }
-        }
-      }
-    }
-    allChooseProgramYaml(filter: { fields: { lang: { eq: $lang } } }) {
-      edges {
-        node {
-          programs {
-            text
-            link
-            bc_slug
-            visibility
-            location_bc_slug
-            schedule
           }
         }
       }

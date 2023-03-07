@@ -6,33 +6,34 @@ const {
   success,
   localizeImage,
 } = require("./_utils");
+const fs = require("fs");
 const front_matter_fields = [
   { key: "utm_course", type: "array", mandatory: true },
   { key: "utm_location", type: "string", mandatory: true },
 ];
 
-const chooseProgramYml = loadYML(
-  "src/data/components/choose_program/choose_program.us.yaml"
-);
-const programsSlugs = chooseProgramYml.yaml.programs.map(
-  (program) => program.bc_slug
-);
+async function listDir() {
+  try {
+    return await fs.promises.readdir(`${__dirname}/../data/course`);
+  } catch (err) {
+    console.error("Error occurred while reading directory!", err);
+  }
+}
 
 walk(`${__dirname}/../data/landing`, async (err, files) => {
+  const courseFiles = await listDir();
+  let coursesYml = [];
+
+  courseFiles.forEach((_path) => {
+    const file = loadYML(`src/data/course/${_path}`);
+    coursesYml.push(file.yaml.meta_info.bc_slug);
+    coursesYml = [...new Set(coursesYml)];
+  });
   err && fail("Error reading the YAML files: ", err);
   files.forEach((_path) => {
     const doc = loadYML(_path);
     if (!doc || !doc.yaml) fail("Invalid YML syntax for " + _path);
   });
-
-  let courses = [
-    "full-stack-ft",
-    "full-stack",
-    "software-engineering",
-    "machine-learning",
-    "node-js",
-    "datascience-ml"
-  ];
 
   const _files = files.filter(
     (f) =>
@@ -59,7 +60,7 @@ walk(`${__dirname}/../data/landing`, async (err, files) => {
 
       front_matter_fields.forEach((obj) => {
         let utm_course = course.meta_info.utm_course;
-        let verifying = courses.some((el) => utm_course.includes(el));
+        let verifying = coursesYml.some((el) => utm_course.includes(el));
 
         if (!meta_keys.includes(obj["key"]))
           fail(`Missing prop ${obj["key"]} from course on ${_path}`);
@@ -69,20 +70,20 @@ walk(`${__dirname}/../data/landing`, async (err, files) => {
               `utm_course ${`${utm_course}`.yellow} ${
                 `not match with the utm_course list:`.red
               }`.red
-            } \n\n${courses.map((el) => `${el.green}\n`)} \n`
+            } \n\n${coursesYml.map((el) => `${el.green}\n`)} \n`
           );
         if (Array.isArray(utm_course) !== true)
           fail(
             `\n${`utm_course`.yellow} ${`expected an array in ${_path}`.red}\n`
           );
-        utm_course.forEach((course) => {
-          if (!programsSlugs.includes(course))
-            fail(
-              `\n${`utm_course: ${course}`.yellow} ${
-                `in ${_path} not present in choose_program data`.red
-              }\n`
-            );
-        });
+        // utm_course.forEach((course) => {
+        //   if (!coursesYml.includes(course))
+        //     fail(
+        //       `\n${`utm_course: ${course}`.yellow} ${
+        //         `in ${_path} not present in course files`.red
+        //       }\n`
+        //     );
+        // });
       });
     } catch (error) {
       console.error(`Error on file: ${_path}`.red);

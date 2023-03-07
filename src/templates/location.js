@@ -66,6 +66,11 @@ const Location = ({ data, pageContext, yml }) => {
     us: "Open on Maps",
     es: "Abrir en Mpas",
   };
+  const chooseButton = {
+    us: "CHOOSE PROGRAM",
+    es: "SELECCIONAR PROGRAMA",
+  };
+
   return (
     <>
       <GridContainerWithImage
@@ -99,10 +104,8 @@ const Location = ({ data, pageContext, yml }) => {
             top="40px"
             textAlign="center"
             textAlign_tablet="left"
-            openLabel={data.allChooseProgramYaml.edges[0].node.open_button_text}
-            closeLabel={
-              data.allChooseProgramYaml.edges[0].node.open_button_text
-            }
+            openLabel={chooseButton[lang]}
+            closeLabel={chooseButton[lang]}
           />
           {yml.info_box.address && (
             <Div
@@ -679,21 +682,6 @@ export const query = graphql`
               content
             }
           }
-        }
-      }
-    }
-    allChooseProgramYaml(filter: { fields: { lang: { eq: $lang } } }) {
-      edges {
-        node {
-          programs {
-            text
-            link
-            visibility
-            location_bc_slug
-            schedule
-          }
-          open_button_text
-          close_button_text
         }
       }
     }

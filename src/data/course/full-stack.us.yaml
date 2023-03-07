@@ -6,6 +6,7 @@ meta_info:
   image: "/images/og-preview/full-stack.us.png"
   visibility: "visible"
   keywords: ""
+  show_in_apply: true
   related_clusters: ["full-stack-developer"]
   redirects:
     [
@@ -26,6 +27,8 @@ meta_info:
       "/course/full-stack-web-development-bootcamp-part-time",
       "/us/course/full-stack-web-development-bootcamp-part-time",
     ]
+apply_form:
+  label: Full Stack Developer
 seo_title: "Cooding Bootcamp"
 header:
   title: "Full Stack Developer"

@@ -141,6 +141,36 @@ export default function Template(props) {
     }
   }
 
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: post.frontmatter.title,
+    alternativeHeadline: post.frontmatter.title,
+    image: post.frontmatter.image,
+    author: post.frontmatter.author,
+    // "award": "Best article ever written",
+    editor: "4Geeks Academy",
+    genre: post.frontmatter.cluster.replace(/-|_/g, " "),
+    // "keywords": "cuanto gana un desarrollador full stack",
+    wordcount: post.frontmatter.wordcount,
+    publisher: {
+      "@type": "Organization",
+      name: "4Geeks Academy",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://storage.googleapis.com/media-breathecode/b25a096eb14565c0c5e75d72442f888c17ac06fcfec7282747bf6c87baaf559c",
+      },
+    },
+    url: `https://4geeksacademy.com/${pageContext.lang}/${post.frontmatter.cluster}/${post.frontmatter.slug}`,
+    mainEntityOfPage: {
+      "@type": "WebPage",
+    },
+    // datePublished: post.frontmatter.date,
+    dateCreated: post.frontmatter.date,
+    // dateModified: post.frontmatter.date,
+    description: post.frontmatter.excerpt,
+  };
+
   return (
     <>
       <Layout
@@ -341,6 +371,7 @@ export const postQuery = graphql`
         slug
         title
         author
+        wordcount
         date
         excerpt
         visibility

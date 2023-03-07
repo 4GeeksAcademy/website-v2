@@ -45,6 +45,7 @@ const SEO = (props) => (
         author,
         context,
         visibility,
+        seo_title,
       } = props;
       const { lang, type, pagePath, translations, locations } = context;
       const url = `${siteUrl}${pagePath || "/"}`;
@@ -141,11 +142,15 @@ const SEO = (props) => (
             author={author}
             // canonicalUrl=""
             // datePublished={}
-            description={description || defaultDescription}
+            description={
+              props.excerpt || description || defaultDescription[lang]
+            }
             image={previewImage}
             type={type}
             title={title || defaultTitle}
             url={url}
+            seoTitle={seo_title}
+            context={context}
             organization={{
               url: siteUrl,
               logo: `${siteUrl}/${logo}`,
