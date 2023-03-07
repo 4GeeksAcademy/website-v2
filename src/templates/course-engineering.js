@@ -408,7 +408,6 @@ const Program = ({ data, pageContext, yml }) => {
       <PricesAndPayment
         type={pageContext.slug}
         lang={pageContext.lang}
-        session={session}
         locations={data.allLocationYaml.edges}
         programType={program_type}
         courseType={course_type}

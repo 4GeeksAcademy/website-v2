@@ -29,8 +29,8 @@ const Landing = (props) => {
       : data.allDownloadableYaml.edges[0].node?.apply_schollarship;
 
   const programs = filteredPrograms.map((p) => ({
-    label: p.text,
-    value: p.bc_slug,
+    label: p.apply_form.label,
+    value: p.meta_info.bc_slug,
   }));
 
   useEffect(() => {
@@ -531,8 +531,7 @@ const Landing = (props) => {
 export const query = graphql`
   query LandingNonavQuery(
     $file_name: String!
-    $lang: String!
-    $utm_course: String
+    $lang: String! # $utm_course: String
   ) {
     allPageYaml(
       filter: {
@@ -1159,13 +1158,19 @@ export const query = graphql`
         }
       }
     }
-    allCourseYaml(
-      filter: {
-        fields: { file_name: { eq: $utm_course }, lang: { eq: $lang } }
-      }
-    ) {
+    allCourseYaml(filter: { fields: { lang: { eq: $lang } } }) {
       edges {
         node {
+          meta_info {
+            slug
+            title
+            bc_slug
+            visibility
+            show_in_apply
+          }
+          apply_form {
+            label
+          }
           typical {
             heading
             sub_heading
@@ -1313,20 +1318,6 @@ export const query = graphql`
               }
               featured
             }
-          }
-        }
-      }
-    }
-    allChooseProgramYaml(filter: { fields: { lang: { eq: $lang } } }) {
-      edges {
-        node {
-          programs {
-            text
-            link
-            bc_slug
-            visibility
-            location_bc_slug
-            schedule
           }
         }
       }

@@ -225,21 +225,22 @@ export const RightNav = ({
 }) => {
   const data = useStaticQuery(graphql`
     query {
-      allChooseProgramYaml {
+      allCourseYaml {
         edges {
           node {
-            programs {
-              text
-              link
+            meta_info {
+              slug
+              title
+              bc_slug
               visibility
-              location_bc_slug
-              schedule
+              show_in_apply
+            }
+            apply_form {
+              label
             }
             fields {
               lang
             }
-            open_button_text
-            close_button_text
           }
         }
       }
@@ -258,9 +259,22 @@ export const RightNav = ({
       }
     }
   `);
-  const content = data.allChooseProgramYaml.edges.find(
+
+  // NOTE: This content used to be extracted from choose_program.yml but it was deprecated
+  const content = data.allCourseYaml.edges.filter(
     ({ node }) => node.fields.lang === lang
   );
+
+  const chooseButton = {
+    us: {
+      open_button_text: "CHOOSE PROGRAM",
+      close_button_text: "Close",
+    },
+    es: {
+      open_button_text: "SELECCIONAR PROGRAMA",
+      close_button_text: "Cerrar",
+    },
+  };
   return (
     <Div open={open}>
       <Link to={"/"}>
@@ -279,12 +293,12 @@ export const RightNav = ({
               <ChooseProgram
                 key={index}
                 left="15px"
-                programs={content.node.programs}
+                programs={content?.map(({ node }) => node)}
                 marginTop="-3px"
                 borderRadius="0 .75rem .75rem .75rem"
-                openLabel={content.node.close_button_text}
+                openLabel={chooseButton[lang].close_button_text}
                 onLocationChange={(slug) => onLocationChange(slug)}
-                closeLabel={content.node.open_button_text}
+                closeLabel={chooseButton[lang].open_button_text}
                 selector={({ status, setStatus }) =>
                   !status.toggle ? (
                     <NavItem

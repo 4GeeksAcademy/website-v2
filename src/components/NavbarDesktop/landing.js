@@ -45,24 +45,6 @@ const LandingNavbar = ({ lang, onToggle, buttonUrl, logoUrl, buttonText }) => {
 
   const data = useStaticQuery(graphql`
     query {
-      allChooseProgramYaml {
-        edges {
-          node {
-            programs {
-              text
-              link
-              visibility
-              location_bc_slug
-              schedule
-            }
-            fields {
-              lang
-            }
-            open_button_text
-            close_button_text
-          }
-        }
-      }
       file(relativePath: { eq: "images/4geeks-logo.png" }) {
         childImageSharp {
           gatsbyImageData(

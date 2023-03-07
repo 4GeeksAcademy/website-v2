@@ -428,7 +428,6 @@ const Program = ({ data, pageContext, yml }) => {
         background={`linear-gradient(to bottom, ${Colors.white} 50%, ${Colors.lightYellow2} 50%)`}
         type={pageContext.slug}
         lang={pageContext.lang}
-        session={session}
         locations={data.allLocationYaml.edges}
         programType={program_type}
         courseType={course_type}

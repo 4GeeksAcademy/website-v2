@@ -6,9 +6,13 @@ meta_info:
   template: "course-datascience"
   image: "/images/og-preview/datascience-ml.es.png"
   visibility: "visible"
+  show_in_apply: true
   keywords: ""
   redirects: ["/es/datascience"]
   related_clusters: ["trends-and-tech"]
+
+apply_form:
+  label: Datascience - Machine Learning
 
 seo_title: "Curso Data Science and Machine Learning"
 header:
@@ -79,13 +83,13 @@ details:
         
       list:
         - label: "Duración"
-          content:  "18 semanas"
+          content:  "16 semanas"
           icon: "calendar"
         - label: "Clases"
           content: "3 Clases semanales"
           icon: "book"
         - label: "Tamaño de la clase"
-          content: "14 personas máx"
+          content: "12 personas máx"
         - label: "Certificado"
           content: "Nuestros certificados son reconocidos por múltiples instuticiones."
           link_text: "Ver ejemplo"

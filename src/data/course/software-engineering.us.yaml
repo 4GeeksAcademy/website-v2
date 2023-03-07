@@ -7,6 +7,7 @@ meta_info:
   image: ""
   visibility: "visible"
   keywords: ""
+  show_in_apply: false
   redirects: [
     "/software-engineering", 
     "/us/software-engineering",
@@ -16,6 +17,9 @@ meta_info:
     "/coding-bootcamps/software-engineer-bootcamp"
   ]
   related_clusters: ["trends-and-tech"]
+
+apply_form:
+  label: Senior Software Engineer
 
 seo_title: "Cooding Bootcamp"
 header:
