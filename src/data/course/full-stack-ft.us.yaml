@@ -4,7 +4,7 @@ meta_info:
   description: "Conviértete en Desarrollador Full Stack en tan solo 10 semanas, estudia full-time para acelerar tu aprendizaje y cambia tu vida lo más rápido posible."
   image: "/images/og-preview/full-stack-ft.us.png"
   bc_slug: "full-stack-ft"
-  visibility: "visible"
+  visibility: "unlisted"
   keywords: "Full Sack Developer Full-Time"
   show_in_apply: false
   redirects:
