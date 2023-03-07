@@ -6,7 +6,7 @@ meta_info:
   template: "course-machine-learning"
   image: ""
   visibility: "visible"
-  show_in_apply: true
+  show_in_apply: false
   keywords: ""
   redirects: ["/es/machine-learning"]
   related_clusters: ["trends-and-tech"]
