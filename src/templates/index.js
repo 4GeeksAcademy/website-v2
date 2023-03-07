@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 import { graphql, Link, navigate } from "gatsby";
+import { Helmet } from "react-helmet";
 import {
   H1,
   H2,
@@ -122,6 +123,9 @@ const Home = (props) => {
 
   return (
     <>
+      {/* <Helmet>
+        <script type="application/ld+json">{JSON.stringify(schemaOrg)}</script>
+      </Helmet> */}
       <Div
         display="flex"
         position="absolute"

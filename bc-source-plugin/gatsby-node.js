@@ -46,6 +46,18 @@ exports.sourceNodes = async (
       continue;
     }
 
+    const wordCount = (text) => {
+      let count = 0;
+      const split = text.split(" ");
+      for (let i = 0; i < split.length; i++) {
+        if (split[i] != "") {
+          count++;
+        }
+      }
+      return count;
+    };
+    const count = wordCount(content);
+
     content = matter(content);
 
     const frontMatter = {
@@ -53,6 +65,7 @@ exports.sourceNodes = async (
       image: post.preview ? post.preview : content.data.image || null,
       featured: false,
       slug: post.slug,
+      wordcount: count,
       title: post.title,
       lang: post.lang,
       visibility: post.visibility.toLowerCase(),
