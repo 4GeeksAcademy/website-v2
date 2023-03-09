@@ -207,7 +207,7 @@ what_includes:
           your code related to your work. We adjust the sessions according to your calendar, we 
           assure you that you have the opportunity for constant mentoring whenever you need it."
 
-      - title: "> Teacher:Student Ratio 1:5"
+      - title: "> Teacher:Student Ratio 1:7"
         icon: "hierarchy"
         description: "You'll find more teachers on 4Geeks than the industry average."
 
@@ -250,7 +250,7 @@ geeks_vs_others:
 geek_data:
   heading: "And enjoy Career Support... for Life!"
   geek_pal:
-    - One teacher every five students (1:5).
+    - One teacher every five students (1:7).
     - Unlimited on-demand in-person or online mentoring sessions.
     - Thousands of auto-graded exercises.
     - Interactive and auto-graded tutorials.
