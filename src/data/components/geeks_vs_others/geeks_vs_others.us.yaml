@@ -15,7 +15,7 @@ info:
     icon: "teacher"
 
   - features: "Teacher: Student Ratio"
-    at4_Geeks: "1:5 avg"
+    at4_Geeks: "1:7 avg"
     industry_average: "1:10 avg"
     why_important: "It is really easy to get stuck when you are learning to code: You need personal mentorship. That is why you will find more teachers at 4Geeks than the industry average."
     icon: "glasses"

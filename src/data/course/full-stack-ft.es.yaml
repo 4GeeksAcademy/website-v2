@@ -6,6 +6,7 @@ meta_info:
   visibility: "visible"
   bc_slug: "full-stack-ft"
   keywords: ""
+  show_in_apply: false
   redirects:
     [
       "/curso/full-time",
@@ -18,7 +19,11 @@ meta_info:
       "/es/course/bootcamp-desarrollo-web-full-stack-full-time",
       "/es/course/desarrollo-web-full-stack-bootcamp-full-time",
     ]
-  related_clusters: ["full-stack-developer","trends-and-tech"]
+  related_clusters: ["desarrollador-full-stack","trends-and-tech"]
+
+apply_form:
+  label: Full Stack Developer
+
 seo_title: "Coding Bootcamp"
 header:
   title: "Full Stack Developer"
@@ -153,7 +158,7 @@ geeks_vs_others:
 geek_data:
   heading: ¡Career Support de por vida!
   geek_pal:
-    - Un profesor cada cinco estudiantes (1:5).
+    - Un profesor cada siete estudiantes (1:7).
     - Sesiones ilimitadas de tutoría por demanda, en persona o en línea.
     - Miles de ejercicios autoevaluados.
     - Tutoriales interactivos y autoevaluados.

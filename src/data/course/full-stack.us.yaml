@@ -6,6 +6,7 @@ meta_info:
   image: "/images/og-preview/full-stack.us.png"
   visibility: "visible"
   keywords: ""
+  show_in_apply: true
   related_clusters: ["full-stack-developer"]
   redirects:
     [
@@ -26,6 +27,8 @@ meta_info:
       "/course/full-stack-web-development-bootcamp-part-time",
       "/us/course/full-stack-web-development-bootcamp-part-time",
     ]
+apply_form:
+  label: Full Stack Developer
 seo_title: "Cooding Bootcamp"
 header:
   title: "Full Stack Developer"
@@ -167,7 +170,7 @@ geeks_vs_others:
 geek_data:
   heading: "And enjoy Career Support... for Life!"
   geek_pal:
-    - One teacher every five students (1:5).
+    - One teacher every seven students (1:7).
     - Unlimited on-demand in-person or online mentoring sessions.
     - Thousands of auto-graded exercises.
     - Interactive and auto-graded tutorials.

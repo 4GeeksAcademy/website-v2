@@ -1,0 +1,269 @@
+meta_info:
+  slug: united-way-espana # <--- URL 4geeksacademy.com/us/landing/example
+
+  # This will show on social media when shared
+  title: "United Way España"
+  description: "United Way España"
+  visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
+  # This will show on social media when shared
+  image: "public/images/landing/uwm_pantone_2021_2.png"
+  keywords: "Clases de programacion, aprender a programar, Madrid, 4Geeks Academy"
+
+  template: "landing_a" # <--- choose your landing template
+  redirects: # <--- URL redirections to avoid 404 errors
+    ["/landing/united-way-espana"]
+
+  # Set a particular course or location to the landing page
+  # this UTM fields will be also included in the CRM contact
+  utm_course: ["full-stack"]
+  utm_location: madrid-spain
+  automation: strong # comma separated, "soft" is the default value
+  tag: website-lead # comma separated, "request_more_info" is the default value
+
+form:
+  # posible fields: "first_name", "last_name", "full_name", "phone", "email"
+  # always the first_name, email and phone will be mandatory if added.
+  fields: ["full_name", "phone", "email"]
+  heading: "Impulsa tu carrera"
+  motivation: "Únete a nuestra comunidad de más de 3500 personas. Conviértete en Full-Stack Developer y ¡cambia tu vida!"
+  button_label: Solicita tu plaza
+  redirect: "/es/gracias"  #you can redirect to another url or entirely diffrent website
+  
+navbar:
+  buttonText: "Aplica ahora"
+  buttonUrl: "#top" # url accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
+  logoUrl: "#"
+
+header_data:
+  background: "#FFF1D1"
+  tagline: "Impulsa tu carrera gracias a la programación"
+  tagline_color: "black"
+  sub_heading: ""
+  badge: "../../../static/images/badges/exelencia-educativa-es.png"
+  image_filter: brightness(0.3)
+  right_image: "../../../static/images/landing/header_united_way.png"
+  # right_image: 
+  #   style: '{ "backgroundSize": "contain" }'
+  #   src: "/images/landing/header_united_way.png"
+
+features:
+  marginTop: 0px #<-- separation between tagline and the bullets
+  text: '<span style="margin-top: 10px; display: block;"> <strong style="font-weight: bold;">El Proyecto Social Tech</strong> es en colaboración con United Way España, Bcas y 4Geeks Academy</span>'
+  bullets:
+    - "Obtén una beca y no pagues nada hasta que encuentres trabajo"
+    - "Si estás en el paro o eres migrante, esta beca es para ti" 
+    - "Solo 50 personas serán beneficiadas"
+  styles: '{ "color": "gray", "fontWeight":"500" }'
+  
+short_badges:
+  - name: "Premios Excelencia Educativa"
+    url: ""
+    image: "../../../static/images/badges/exelencia-educativa-es.png"
+    alt: "Mejor centro de Coding Bootcamp"
+  - name: "Newsweek"
+    url: ""
+    image: "../../../static/images/badges/newsweek-es.png"
+    alt: "Top Coding Bootcamps Newsweek"
+  - name: "Switchup"
+    url: ""
+    image: "../../../static/images/badges/reviews.png"
+    alt: "Best coding bootcamp Switchup 2021" 
+
+follow_bar:
+  position: "top" # top, bottom, hidden
+  content:
+    text: "Paga solo cuando consigas trabajo."
+    text_mobile: "Paga solo cuando consigas trabajo."
+    # devices:   XL      LG    MD      SM    XS
+    font_size: ["25px", "25px", "25px", "20px", "18px"]
+  button:
+    text: "Aplica ahora"
+    path: "#top"
+  phone:
+    text: "Call "
+
+
+components:
+  - name: how-it-works
+    position: 3
+    background: "veryLightBlue2"
+    layout: multi_column
+    swipable: True
+    heading:
+      text: "Cómo funciona"
+      font_size: ["30px", "30px", "30px", "30px", "30px"]
+    sub_heading:
+      text: 'La Fundación United Way y 4Geeks Academy España se unen con el objetivo de proporcionar formación digital a través de becas a personas con bajos recursos económicos, para que inicien su carrera profesional en el ámbito de la tecnología, mejorando la inclusión en un sector poco diverso.'
+      font_size: ["16px", "16px", "16px", "16px", "16px"]
+      style: '{ "textAlign": "center", "width": "60%" }'
+    columns:
+      - image:
+          style: '{ "backgroundSize": "contain", "height": "130px" }'
+          src: "/images/landing/graduated-icon.png"
+        content: 
+          text: "Conviértete en Full-Stack Developer aplicando a esta iniciativa impulsada por United Way. ¡Acelera tu carrera!"
+          font_size: ["16px"]
+        size: [3,3,3,3]
+      - image:
+          style: '{ "backgroundSize": "contain", "height": "130px" }'
+          src: "/images/landing/pc-icon.png"
+        content: 
+          text: "Una vez aceptado en el Programa Full-Stack recibirás formación de calidad, mentorías y servicio de carreras para que impulses tu futuro."
+          font_size: ["16px"]
+        size: [3,3,3,3]
+      - image:
+          style: '{ "backgroundSize": "contain", "height": "130px" }'
+          src: "/images/landing/cicle-icon.png"
+        content: 
+          text: "Para ayudar a otros participantes, deberás pagar esta beca solo cuando consigas trabajo, sin intereses y a un precio muy por debajo del mercado."
+          font_size: ["16px"]
+        size: [3,3,3,3]
+
+  - name: a-quien-va-dirigido
+    position: 3
+    layout: two_column_left
+    proportions: [5, 7]
+    image:
+      style: '{ "backgroundSize": "contain" }'
+      src: "/images/landing/GrupoVariasNacionalidades.png"
+    heading:
+      text: "A quién va dirigido"
+      font_size: ["30px", "30px", "30px", "30px", "30px"]
+    sub_heading:
+      text: "Nuestro objetivo es que este proyecto tenga un gran impacto social"
+      font_size: ["16px", "16px", "16px", "16px", "16px"]
+    content:
+      font_size: ["16px"]
+      text: "Toda persona con la motivación y la capacidad de trabajo necesaria para realizar un cambio en su carrera profesional. Personas en riesgo de exclusión social, migrantes, mujeres, desempleados, etc. Para estudiar en 4Geeks no es necesario tener experiencia previa, cualquier persona podría aprender a programar, sin embargo, se evaluarán las habilidades lógicas y tecnológicas, capacidad de aprendizaje y motivaciones, para determinar si tendrán éxito en este tipo de programas de estudios, así como también dentro del mundo tecnológico, como  profesionales. Mira aquí el criterio de elegibilidad"
+
+  - name: coding
+    position: 4
+    layout: two_column_right
+    proportions: [6, 6]
+    background: "rgba(255, 183, 24, 0.2)"
+    image:
+      style: '{ "backgroundSize": "contain" }'
+      src: "/images/landing/group_194.png"
+    heading:
+      text: "Porqué aprender a programar"
+      font_size: ["40px", "40px", "40px", "40px", "40px"]
+    sub_heading:
+      text: "Aprender a programar te dará acceso a"
+      font_size: ["16px", "16px", "16px", "16px", "16px"]
+    content:
+      font_size: ["16px"]
+      text: |
+        <h4><strong style="font-weight: bold;"> > Oportunidades de empleo </strong></h4>
+        <p>El 80% de los trabajos del futuro todavía no se han inventado pero requerirán saber programar.</p>
+        <br>
+        <h4><strong style="font-weight: bold;"> > Mejores salarios </strong></h4>
+        <p>Un programador junior puede ganar en su primer trabajo entre 18.000 € y 24.000 €</p>
+        <br>
+        <h4><strong style="font-weight: bold;"> > Flexibilidad de carrera </strong></h4>
+        <p>Como programador podrás trabajar en diversas áreas. Esta habilidad te abre muchas puertas.</p>
+  - name: geeksinfo
+    position: 7
+    layout: geeksInfo
+
+  - name: why4geeks
+    position: 5
+    layout: two_column_left
+    proportions: [5, 7]
+    image:
+      style: '{ "backgroundSize": "contain" }'
+      src: "/images/landing/group_4.png"
+    heading:
+      text: "Porqué 4Geeks Academy"
+      font_size: ["30px", "30px", "30px", "30px", "30px"]
+    sub_heading:
+      text: "Los estudiantes y ex alumnos de 4Geeks Academy crecen y prosperan."
+      font_size: ["16px", "16px", "16px", "16px", "16px"]
+    content:
+      font_size: ["16px"]
+      text: |
+        <p>Desde 2015 enseñamos en programación. Tenemos 7 campus entre USA, Latinoamérica y Europa. Más de 3500 personas han impulsado su carrera gracias a 4Geeks Academy. </p>
+        <br>
+        <p><span style="background: rgb(255, 183, 24);font-weight: bold;">Hemos sido reconocidos como el Mejor Coding Bootcamp de España (2021, 2022 y 2023) y el Mejor Centro de Formación de España (2023)</p>
+        <br>
+        <p>Formato part-time intensivo de 18 semanas que ha sido reconocido como el Mejor Programa para la Inserción Profesional según los Premios Excelencia Educativa. </p>
+        <br>
+        <h2><strong style="font-weight: bold;font-size:20px;color:black;">¿Estás preparado para derribar obstáculos y empezar una nueva carrera?</strong></h2>
+    
+  - name: pay
+    position: 8
+    background: "veryLightBlue2"
+    layout: two_column_right
+    proportions: [6, 6]
+    image:
+      style: '{ "backgroundSize": "contain" }'
+      src: "/static/images/staff/luisa.png"
+    video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
+    heading:
+      text: "¡Paga solo cuando consigas trabajo!"
+      font_size: ["30px", "30px", "30px", "30px", "30px"]
+    sub_heading:
+      text: "No tienes que pagar absolutamente nada para apuntarte al programa. Solo cuando consigas un trabajo en el que ganes más de 16.000 € al año pagarás tu formación. Sin intereses, sin incrementos, sin trucos. Es el Income Share Agreement (ISA) más económico que conseguirás."
+      font_size: ["18px", "18px", "18px", "18px", "18px"]
+    button:
+      text: "Mira las condiciones aquí"
+      color: null
+      path: "https://storage.googleapis.com/4geeks-academy-website/syllabus/madrid-spain/UnitedWay/Criterios%20de%20elegibilidad%20UWay.docx.pdf"
+    content:
+      text: |
+        <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">1. Apúntate al programa.</strong></h2>
+        <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">2. Aprende a programar.</strong></h2>
+        <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">3. Entrega tu proyecto final.</strong></h2>
+        <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">4. Conviértete en Programador.</strong></h2>
+        <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">5. Consigue un trabajo.</strong></h2>
+        <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">6. Paga solo cuando consigas un trabajo de más de 16.000 € al año ¡sin intereses!</strong></h2>
+      font_size: ["16px"]
+
+  - name: testimonials
+    position: 9
+    layout: testimonials_new
+    # filter_indexes: [6,7,8]
+    filter_indexes: ['azu-bota','nai-kali','cha-fabr']
+      # - "azu-bota"
+      # - "nai-kali"
+      # - "cha-fabr"
+    # ["azu-bota","nai-kali","cha-fabr"]
+
+  - name: better-future
+    position: 10
+    layout: two_column_right
+    proportions: [6, 6]
+    background: "#F5F5F5"
+    image:
+      style: '{ "backgroundSize": "contain" }'
+      src: "/images/landing/temp4.png"
+    heading:
+      text: "¿Preparado para iniciar el camino hacia un mejor futuro?"
+      font_size: ["40px", "40px", "40px", "40px", "40px"]
+    content:
+      text: "Solo 50 estudiantes serán beneficiados por esta iniciativa"
+      font_size: ["16px"]
+    button:
+      text: "Solicita tu Plaza"
+      color: "white"
+      background: "blue"
+      hover_color: "white"
+      path: "#top"
+
+  - name: united
+    position: 11
+    layout: two_column_right
+    proportions: [6, 6]
+    background: "veryLightBlue2"
+    image:
+      style: '{ "backgroundSize": "contain", "maxHeight": "270px" }'
+      src: "/images/landing/Bcas-UnitedWay-Madrid.png"
+    heading:
+      text: "El Proyecto Social Tech es en colaboración con United Way España, Bcas y 4Geeks Academy"
+      font_size: ["40px", "40px", "40px", "40px", "40px"]
+    content:
+      text: |
+        <p>United Way España cree en una comunidad próspera y equitativa donde todas las personas tengan acceso a una educación de calidad y la oportunidad de llevar una vida sana y económicamente segura: los componentes básicos de una comunidad próspera.</p>
+        <br>
+        <p>Bcas es una fintech de caracter social que busca promover una educación equitativa, sostenible y de calidad haciendo que los estudiantes puedan centrarse en su formación sin que el dinero suponga un obstáculo.</p>
+      font_size: ["16px"]
+

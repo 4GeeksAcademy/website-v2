@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 import { graphql, Link, navigate } from "gatsby";
+import { Helmet } from "react-helmet";
 import {
   H1,
   H2,
@@ -30,7 +31,6 @@ import { Circle } from "../components/BackgroundDrawing";
 import News from "../components/News";
 import Icon from "../components/Icon";
 import Credentials from "../components/Credentials";
-import ChooseProgram from "../components/ChooseProgram";
 import BaseRender from "./_baseLayout";
 import { SessionContext } from "../session.js";
 import Loc from "../components/Loc";
@@ -123,6 +123,9 @@ const Home = (props) => {
 
   return (
     <>
+      {/* <Helmet>
+        <script type="application/ld+json">{JSON.stringify(schemaOrg)}</script>
+      </Helmet> */}
       <Div
         display="flex"
         position="absolute"
@@ -796,21 +799,6 @@ export const query = graphql`
               # }
             }
           }
-        }
-      }
-    }
-    allChooseProgramYaml(filter: { fields: { lang: { eq: $lang } } }) {
-      edges {
-        node {
-          programs {
-            text
-            location_bc_slug
-            link
-            visibility
-            schedule
-          }
-          open_button_text
-          close_button_text
         }
       }
     }

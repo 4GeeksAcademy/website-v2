@@ -696,19 +696,26 @@ export const landingSections = {
   },
 
   syllabus: ({ session, data, pageContext, yml, course, location, index }) => {
-    const filteredPrograms =
-      data.allChooseProgramYaml.edges[0].node.programs.filter((course_el) => {
-        if (course_el.visibility === "hidden") return false;
+    const filteredPrograms = data.allCourseYaml.edges
+      .filter(({ node }) => {
+        if (
+          ["unlisted", "hidden"].includes(node.meta_info.visibility) ||
+          !node.meta_info.show_in_apply
+        )
+          return false;
         return (
           course.filter((array_el) => {
-            return course_el.bc_slug === array_el;
+            return node.meta_info.bc_slug === array_el;
           }).length !== 0
         );
-      });
+      })
+      .map(({ node }) => ({
+        ...node,
+      }));
 
     const programs = filteredPrograms.map((p) => ({
-      label: p.text,
-      value: p.bc_slug,
+      label: p.apply_form.label,
+      value: p.meta_info.bc_slug,
     }));
 
     return (

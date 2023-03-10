@@ -143,7 +143,6 @@ const Pricing = (props) => {
         <PricesAndPayment
           shadow="0px 0px 6px 2px rgba(0, 0, 0, 0.2)"
           openedLabel={yml.prices.opened_label}
-          session={session}
           closedLabel={yml.prices.closed_label}
           type={pageContext.slug}
           lang={pageContext.lang}

@@ -55,12 +55,27 @@ const Apply = (props) => {
     referral_key: { value: null, valid: true },
     course: { value: null, valid: false },
   });
-  const programs = data.allChooseProgramYaml.edges[0].node.programs
-    .filter((p) => !["unlisted", "hidden"].includes(p.visibility))
-    .map((p) => ({
-      label: p.text,
-      value: p.bc_slug,
+
+  const programs = data.allCourseYaml.edges
+    .filter(
+      ({ node }) =>
+        !["unlisted", "hidden"].includes(node.meta_info.visibility) &&
+        node.meta_info.show_in_apply
+    )
+    .map(({ node }) => ({
+      label: node.apply_form.label,
+      value: node.meta_info.bc_slug,
     }));
+  // .sort((a, b) => a.value.localeCompare(b.value));
+
+  // const programs = [];
+  // for (const item of nonUniqueprograms) {
+
+  //   const duplicate = programs.find(
+  //     (obj) => item.value.startsWith(obj.value)
+  //   );
+  //   if (!duplicate) programs.push(item);
+  // }
 
   const [regionVal, setRegionVal] = useState(null);
   const [showPhoneWarning, setShowPhoneWarning] = useState(false);
@@ -872,16 +887,18 @@ export const query = graphql`
         }
       }
     }
-    allChooseProgramYaml(filter: { fields: { lang: { eq: $lang } } }) {
+    allCourseYaml(filter: { fields: { lang: { eq: $lang } } }) {
       edges {
         node {
-          programs {
-            text
-            link
+          meta_info {
+            slug
+            title
             bc_slug
             visibility
-            location_bc_slug
-            schedule
+            show_in_apply
+          }
+          apply_form {
+            label
           }
         }
       }

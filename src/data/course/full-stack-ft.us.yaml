@@ -4,8 +4,9 @@ meta_info:
   description: "Conviértete en Desarrollador Full Stack en tan solo 10 semanas, estudia full-time para acelerar tu aprendizaje y cambia tu vida lo más rápido posible."
   image: "/images/og-preview/full-stack-ft.us.png"
   bc_slug: "full-stack-ft"
-  visibility: "visible"
+  visibility: "unlisted"
   keywords: "Full Sack Developer Full-Time"
+  show_in_apply: false
   redirects:
     [
       "/course/full-time",
@@ -17,7 +18,12 @@ meta_info:
       "/us/course/full-stack-web-development-bootcamp-full-time",
       "/course/full-stack-web-development-bootcamp-full-time",
     ]
-  related_clusters: ["desarrollador-full-stack","trends-and-tech"]
+  related_clusters: ["full-stack-developer","trends-and-tech"]
+  
+
+apply_form:
+  label: Full Stack Developer
+  
 seo_title: "Cooding Bootcamp"
 header:
   title: "Full Stack Developer"
@@ -153,7 +159,7 @@ geeks_vs_others:
 geek_data:
   heading: "And enjoy Career Support... for Life!"
   geek_pal:
-    - One teacher every five students (1:5).
+    - One teacher every seven students (1:7).
     - Unlimited on-demand in-person or online mentoring sessions.
     - Thousands of auto-graded exercises.
     - Interactive and auto-graded tutorials.
