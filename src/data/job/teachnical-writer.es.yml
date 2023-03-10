@@ -1,0 +1,41 @@
+meta_info:
+  slug: "redactor-tecnico"
+  title: "Redactor Técnico"
+  visibility: "visible"
+  description: "Trabaja como escritor técnico en 4Geeks. Ayúdanos a construir y crear una lista curada de alta calidad de preguntas técnicas, desafíos, proyectos y ejercicios."
+  template: "job" # js component that will be handling the rendering
+  open: true #if true, this job will be accepting candidates
+  image: "https://storage.googleapis.com/media-breathecode/59c3afdc064670e4d0062a42cd4bf954d1b9c93720500d4fdce265b4792538ab"
+  keywords: ""
+  redirects: []
+
+## BANNER INFO
+banner_heading: "Redactor Técnico"
+banner_sub_heading: ""
+banner_image: "/images/bg/pricing-bg.jpg"
+link_back: "/us/jobs"
+button_url: "https://marketing892162.typeform.com/to/ZrMACSgH"
+cities:
+  - Remote
+
+button_text: "POSTÚLATE"
+## JOB MAIN SECTION INFO
+title: "Ayuda a escribir contenidos para aprender destrezas relacionadas con código"
+description: "Buscamos un redactor técnico responsable de proporcionar respuestas simples y directas a preguntas sobre codificación en lenguaje sencillo en inglés o español, con ejemplos de código. También puede ayudar a escribir instrucciones y soluciones paso a paso para proyectos de codificación, ejercicios y desafíos en este rol."
+
+content:
+  - label: "Responsabilidades"
+    list:
+      - Proporcionar respuestas simples y directas a preguntas sobre codificación en inglés o español con ejemplos de código.
+      - Escribir instrucciones y soluciones paso a paso para proyectos de codificación, ejercicios y desafíos.
+      - Comunicar información técnica compleja a una audiencia no técnica.
+      - Colaborar con desarrolladores para garantizar la precisión y la completitud de la documentación técnica.
+  - label: "Requerimientos Técnicos"
+    list:
+    - Conocimiento de codificación razonable, experiencia en la creación de aplicaciones web, familiaridad con JavaScript o Python, y las funciones típicas que contienen, como la división de cadenas, contención, trabajo con listas, bucles, OOP, bases de datos, rest APIs, etc.
+    - Fuertes habilidades de escritura y capacidad para explicar conceptos técnicos en lenguaje sencillo.
+    - Dominio del inglés o español (fluida en al menos uno).
+
+  - label: "Horario"
+    list:
+      - "Este es un rol freelance, flexible y a tiempo parcial sin un compromiso horario particular."
