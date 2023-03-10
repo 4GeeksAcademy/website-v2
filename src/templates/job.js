@@ -92,6 +92,18 @@ const Job = ({ data, pageContext, yml }) => {
             ""
           )}
         </Div>
+        <Paragraph
+          textAlign="left"
+          margin="10px 0"
+          color={Colors.darkGray}
+          align="left"
+          fontSize="14px"
+        >
+          {yml.description}
+        </Paragraph>
+        <Alert border="1px solid black" margin="0" padding="5px 0 0 0">
+            {yml.title}
+        </Alert>
         <ApplyJobModal
           aria-labelledby="simple-modal-title"
           aria-describedby="simple-modal-description"
@@ -115,7 +127,7 @@ const Job = ({ data, pageContext, yml }) => {
                 fontWeight="700"
                 borderBottom="1px solid #C4C4C4"
                 margin="0 0 15px 0"
-                padding="74px 0 20px 0"
+                padding="34px 0 20px 0"
               >
                 {m.label}
               </H4>

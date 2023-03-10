@@ -18,7 +18,7 @@ import Link from "gatsby-link";
 import Icon from "../Icon";
 import Fragment from "../Fragment";
 
-const JobInfo = () => {
+const JobInfo = ({lang}) => {
   const data = useStaticQuery(graphql`
     query myNewJobsQuery {
       allJobYaml(
@@ -32,12 +32,17 @@ const JobInfo = () => {
               slug
               open
             }
+            fields{
+              lang
+            }
           }
         }
       }
     }
   `);
   let jobs = data.allJobYaml.edges;
+  console.log(jobs);
+  const jobsInLang = jobs?.filter(j => j.node.fields.lang == lang) || []
   return (
     // <Fragment github="/job">
     <GridContainer
@@ -46,8 +51,8 @@ const JobInfo = () => {
       gridGap="10px"
       margin_tablet="0 0 70px 0"
     >
-      {jobs
-        ? jobs.map((item, index) => {
+      {jobsInLang
+        ? jobsInLang.map((item, index) => {
             return (
               <Div
                 key={index}
