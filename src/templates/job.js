@@ -102,7 +102,7 @@ const Job = ({ data, pageContext, yml }) => {
           {yml.description}
         </Paragraph>
         <Alert border="1px solid black" margin="0" padding="5px 0 0 0">
-            {yml.title}
+          {yml.title}
         </Alert>
         <ApplyJobModal
           aria-labelledby="simple-modal-title"
