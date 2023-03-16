@@ -798,13 +798,18 @@ export const landingSections = {
 
   program_details: ({ session, pageContext, yml, data, index }) => {
     const getCourse = () => {
-      const course_bc_slug = data.allLandingYaml.edges[0].node.program_details?.course_bc_slug;
+      const course_bc_slug =
+        data.allLandingYaml.edges[0].node.program_details?.course_bc_slug;
       if (data.allCourseYaml.edges.length > 0) {
-        const singleCourse = data.allCourseYaml.edges.find(({ node }) => node.meta_info.bc_slug === course_bc_slug);
-        return singleCourse ? singleCourse.node : data.allCourseYaml.edges[0].node;
+        const singleCourse = data.allCourseYaml.edges.find(
+          ({ node }) => node.meta_info.bc_slug === course_bc_slug
+        );
+        return singleCourse
+          ? singleCourse.node
+          : data.allCourseYaml.edges[0].node;
       }
       return {};
-    }
+    };
     const course = getCourse();
     return (
       <React.Fragment key={index}>
