@@ -515,6 +515,7 @@ export const query = graphql`
           fields {
             slug
             type
+            pagePath
           }
           frontmatter {
             author
