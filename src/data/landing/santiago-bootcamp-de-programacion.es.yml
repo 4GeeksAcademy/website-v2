@@ -84,7 +84,6 @@ follow_bar:
 #
 
 program_details:
-  course_bc_slug: "full-stack"
   position: 3
   background: "#FFFFFF"
   heading: "Domina Python, JS y React"
