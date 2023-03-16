@@ -17,9 +17,7 @@ const Post = ({ item, i, lang }) => {
       width="80%"
       maxWidth="300px"
     >
-      <Link
-        to={item.node.fields.pagePath}
-      >
+      <Link to={item.node.fields.pagePath}>
         {item.node.frontmatter.image !== "" && (
           <LazyLoad height={10} scroll={true} once={true}>
             <RoundImage
