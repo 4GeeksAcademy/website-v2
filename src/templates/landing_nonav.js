@@ -689,6 +689,7 @@ export const query = graphql`
             }
           }
           program_details {
+            course_bc_slug
             position
             heading
             background
