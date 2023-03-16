@@ -13,5 +13,5 @@ tasks:
       nvm install v14 &&
       nvm alias default v14 && 
       nvm use v14 &&
-      npm install
+      npm install --legacy-peer-deps
     command: npm run start

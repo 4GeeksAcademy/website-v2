@@ -7,6 +7,8 @@ import { SessionContext } from "../session";
 
 const Jobs = ({ data, pageContext, yml }) => {
   const { session } = React.useContext(SessionContext);
+  const { lang } = pageContext;
+
   return (
     <>
       <Header
@@ -16,7 +18,7 @@ const Jobs = ({ data, pageContext, yml }) => {
         paragraph={yml.header.paragraph}
         padding_tablet="72px 0 40px 0"
       />
-      <JobInfo />
+      <JobInfo lang={lang} />
     </>
   );
 };

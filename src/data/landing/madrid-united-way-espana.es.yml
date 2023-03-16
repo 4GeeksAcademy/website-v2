@@ -134,7 +134,7 @@ components:
       font_size: ["16px", "16px", "16px", "16px", "16px"]
     content:
       font_size: ["16px"]
-      text: "Toda persona con la motivación y la capacidad de trabajo necesaria para realizar un cambio en su carrera profesional. Personas en riesgo de exclusión social, migrantes, mujeres, desempleados, etc. Para estudiar en 4Geeks no es necesario tener experiencia previa, cualquier persona podría aprender a programar, sin embargo, se evaluarán las habilidades lógicas y tecnológicas, capacidad de aprendizaje y motivaciones, para determinar si tendrán éxito en este tipo de programas de estudios, así como también dentro del mundo tecnológico, como  profesionales."
+      text: "Toda persona con la motivación y la capacidad de trabajo necesaria para realizar un cambio en su carrera profesional. Personas en riesgo de exclusión social, migrantes, mujeres, desempleados, etc. Para estudiar en 4Geeks no es necesario tener experiencia previa, cualquier persona podría aprender a programar, sin embargo, se evaluarán las habilidades lógicas y tecnológicas, capacidad de aprendizaje y motivaciones, para determinar si tendrán éxito en este tipo de programas de estudios, así como también dentro del mundo tecnológico, como  profesionales. Mira aquí el criterio de elegibilidad"
 
   - name: coding
     position: 4
@@ -207,7 +207,7 @@ components:
     button:
       text: "Mira las condiciones aquí"
       color: null
-      path: "https://storage.googleapis.com/media-breathecode/bc38ffebe9e56f8cd62e10d5d0839f98d7528c4fe7756456630588d2c2048a2a"
+      path: "https://storage.googleapis.com/4geeks-academy-website/syllabus/madrid-spain/UnitedWay/Criterios%20de%20elegibilidad%20UWay.docx.pdf"
     content:
       text: |
         <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">1. Apúntate al programa.</strong></h2>
@@ -243,7 +243,7 @@ components:
       text: "Solo 50 estudiantes serán beneficiados por esta iniciativa"
       font_size: ["16px"]
     button:
-      text: "APPLY NOW"
+      text: "Solicita tu Plaza"
       color: "white"
       background: "blue"
       hover_color: "white"

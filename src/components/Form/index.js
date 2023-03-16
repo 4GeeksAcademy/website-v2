@@ -116,9 +116,11 @@ const colors = {
   red: [Colors.lightRed, Colors.red],
   green: [Colors.lightGreen, Colors.green],
   blue: [Colors.lightBlue, Colors.blue],
+  undefined: [Colors.white, Colors.gray3],
 };
 export const Alert = styled.div`
   background-color: ${(props) => colors[props.color][0]};
+  border: ${(props) => props.border || "none"};
   padding: 10px;
   width: 100%;
   text-align: center;
