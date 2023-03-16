@@ -798,9 +798,10 @@ export const landingSections = {
 
   program_details: ({ session, pageContext, yml, data, index }) => {
     const getCourse = () => {
-      const course_slug =
-        data.allLandingYaml.edges[0].node.meta_info?.utm_course ? 
-          data.allLandingYaml.edges[0].node.meta_info?.utm_course[0] : null;
+      const course_slug = data.allLandingYaml.edges[0].node.meta_info
+        ?.utm_course
+        ? data.allLandingYaml.edges[0].node.meta_info?.utm_course[0]
+        : null;
       if (data.allCourseYaml.edges.length > 0) {
         const singleCourse = data.allCourseYaml.edges.find(
           ({ node }) => node.meta_info.bc_slug === course_slug
