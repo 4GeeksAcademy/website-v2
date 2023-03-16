@@ -29,7 +29,7 @@ meta_info:
     ]
 apply_form:
   label: Full Stack Developer
-seo_title: "Cooding Bootcamp"
+seo_title: "Coding Bootcamp"
 header:
   title: "Full Stack Developer"
   image: "../../../static/images/bg/program-bg.png"
