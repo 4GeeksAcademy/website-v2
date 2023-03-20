@@ -90,11 +90,11 @@ full_time:
     recomended: true
     scholarship: "Paga al contado"
     payment_time: "Y obtén un descuento"
-    price: "3.800.000* CLP"
+    price: "3.040.000* CLP"
     bullets:
+      - "*Precio final con descuento ya aplicado. El descuento es de hasta 760.000 CLP sobre el precio total: 3.800.000 CLP"
       - "Paga con transferencia bancaria, tarjeta de crédito o débito"    
-      - "*Precio sin descuento aplicado"
-      - "*Precio varía según modalidad escogida y membresías incluidas"
+      - "**Precio varía según modalidad escogida y membresías incluidas"
     icons: 
       - "/images/visa-mastercard.png"    
 
@@ -118,7 +118,7 @@ full_time:
     price: "0 CLP*"
     bullets: 
       - "*Pagas el 16% de tu salario cuando consigas empleo hasta pagarlo todo"
-      - "Sólo si consigues trabajo en el área de técnología" 
+      - "Sólo si consigues trabajo en el área de tecnología" 
     icons: 
     - "/images/lumni.png"
 
@@ -330,10 +330,10 @@ part_time:
     recomended: true
     scholarship: "Paga al contado"
     payment_time: "Y obtén un descuento"
-    price: "3.450.000 CLP*"
+    price: "2.760.000 CLP*"
     bullets:
+      - "*Precio final con descuento ya aplicado. El descuento es de hasta 690.000 CLP sobre el precio total: 3.450.000 CLP"
       - "Paga con transferencia bancaria, tarjeta de crédito o débito"    
-      - "*Precio sin descuento aplicado"
       - "Tendrás acceso a todo el programa y a todo el Sistema de Apoyo Laboral de 4Geeks"
     icons: 
       - "/images/visa-mastercard.png"   
@@ -343,21 +343,21 @@ part_time:
     recomended: false
     scholarship: "Cuotas desde"
     payment_time: ""
-    price: "~168.000 CLP"
+    price: "~146.000 CLP"
     bullets:
-      - "Financiamiento a tu medida desde 6 hasta 18 meses"  
-      - "Se debe pagar un anticipo correspondiente al 20% del valor del programa" 
+      - "Financiamiento a tu medida desde 6 hasta 24 meses"  
+      - "Se debe pagar un anticipo correspondiente al 20% del valor total del programa sin descuentos" 
     icons: 
       - "/images/flevo.png"
 
   - slug: 'chile-solo-fs-pt'
     academies: ['santiago-chile']
     recomended: false
-    scholarship: "Programa"
-    payment_time: "Full Stack Solamente"
+    scholarship: "Full Stack"
+    payment_time: "Sin Apoyo Laboral"
     price: "2.700.000 CLP"
     bullets:
-      - "Tendrás acceso total y para siempre al programa Full-Stack"
+      - "Tendrás acceso total y para siempre al programa Full-Stack"    
       - "No incluye acceso a todo el Sistema de Apoyo Laboral de 4Geeks"
     icons: 
 
