@@ -1,0 +1,41 @@
+meta_info:
+  slug: "technical-writter"
+  title: "Technical Writter"
+  visibility: "visible"
+  description: "Work as technical writer at 4Geeks. Help us build and create a high-quality curated list of technical questions, challenges, projects, and exercises."
+  template: "job" # js component that will be handling the rendering
+  open: true #if true, this job will be accepting candidates
+  image: "https://storage.googleapis.com/media-breathecode/59c3afdc064670e4d0062a42cd4bf954d1b9c93720500d4fdce265b4792538ab"
+  keywords: ""
+  redirects: []
+
+## BANNER INFO
+banner_heading: "Technical Writer"
+banner_sub_heading: ""
+banner_image: "/images/bg/pricing-bg.jpg"
+link_back: "/us/jobs"
+button_url: "https://marketing892162.typeform.com/to/ZrMACSgH"
+cities:
+  - Remote
+
+button_text: "APPLY NOW"
+## JOB MAIN SECTION INFO
+title: "Help write one of the most reliable coding related syllabus on earth"
+description: "We are seeking a Technical Writer responsible for providing immediate and straightforward answers to coding questions in plain English or Spanish with code samples. You may also help write instructions and step-by-step solutions for coding projects, exercises, and challenges in this role."
+
+content:
+  - label: "Responsabilities"
+    list:
+      - Provide immediate and straightforward answers to coding questions in plain English or Spanish with code samples.
+      - Write instructions and step-by-step solutions for coding projects, exercises, and challenges.
+      - Communicate complex technical information to a non-technical audience
+      - Collaborate with developers to ensure accuracy and completeness of technical documentation
+  - label: "Technical requirements"
+    list:
+      - Reasonable coding knowledge, experience creating web applications, familiarity with JavaScript or Python, and typical functions they contain like splitting strings, containing, working with lists, looping, OOP, databases, rest APIs, etc.
+      - Strong writing skills and ability to explain technical concepts in simple language
+      - Proficiency in English or Spanish (fluent in at least one)
+
+  - label: "Schedule"
+    list:
+      - "This is a freelance, flexible, and part-time role with no particular hourly commitment"
