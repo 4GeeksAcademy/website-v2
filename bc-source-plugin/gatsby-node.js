@@ -70,7 +70,7 @@ exports.sourceNodes = async (
       lang: post.lang,
       visibility: post.visibility.toLowerCase(),
       template: content.data.template || "post",
-      author: post.authors_username || content.data.author,
+      author: post.authors_username || content.data.author || null,
       date: post.updated_at.substring(0, 10),
       excerpt: post.description || content.data.excerpt || "",
       cluster:
