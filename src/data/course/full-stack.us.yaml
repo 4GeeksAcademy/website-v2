@@ -1,8 +1,8 @@
 meta_info:
   slug: part-time-full-stack-developer
-  title: "Become a Full Stack Developer with 4geeksacademy, master the Skills and Technologies"
+  title: "Full Stack Developer Course by 4 Geeks Academy, master the Skills and Technologies"
   bc_slug: "full-stack"
-  description: "Unlock your full potential and become a Full Stack Developer with 4Geeks Academy. Sign up now and start your journey to success."
+  description: "Enroll in our Full Stack Developer Course and become a web development expert. Learn how to build applications from scratch. Join us today!"
   image: "/images/og-preview/full-stack.us.png"
   visibility: "visible"
   keywords: ""
@@ -29,7 +29,7 @@ meta_info:
     ]
 apply_form:
   label: Full Stack Developer
-seo_title: "Coding Bootcamp"
+seo_title: "Coding Bootcamp - Full Stack Developer Course"
 header:
   title: "Full Stack Developer"
   image: "../../../static/images/bg/program-bg.png"
