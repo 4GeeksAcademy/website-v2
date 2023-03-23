@@ -248,5 +248,15 @@ module.exports = {
         routeChangeEventName: "website-route-change",
       },
     },
+    {
+      resolve: "gatsby-plugin-cookiebot",
+      options: {
+        cookiebotId: "0dd80df5-30f5-4a4e-9410-55e586915d04", // Required. Site's Cookiebot ID.
+        manualMode: true, // Optional. Turns on Cookiebot's manual mode. Defaults to false.
+        blockGtm: false, //  Optional. Skip blocking of GTM. Defaults to true if manualMode is set to true.
+        includeInDevelopment: true, // Optional. Enables plugin in development. Will cause gatsby-plugin-google-tagmanager to thrown an error when pushing to dataLayer. Defaults to false.
+        pluginDebug: true, // Optional. Debug mode for plugin development. Defaults to false.
+      },
+    },
   ],
 };
