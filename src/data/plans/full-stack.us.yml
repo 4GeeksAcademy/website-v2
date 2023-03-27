@@ -358,7 +358,7 @@ part_time:
   - slug: 'latam-job-guarantee-fs-pt'
     academies: ['montevideo-uruguay','bogota-colombia', 'costa-rica', 'mexicocity-mexico','quito-ecuador', 'panamacity-panama', 'buenosaires-argentina','lima-peru','lapaz-bolivia']
     recomended: true
-    scholarship: "Job Gurantee"
+    scholarship: "Job Guarantee"
     payment_time: "Get a job or get your money back"
     price: "USD $4000"
     bullets:
