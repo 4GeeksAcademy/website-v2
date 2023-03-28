@@ -169,7 +169,7 @@ part_time:
       - "Thanks to United Way Miami. Ask for more info now!"
     icons: 
       - "/images/landing/uwm_pantone_2021_2.png"
- - slug: 'usa-clark-scholarship-pt'
+  - slug: 'usa-clark-scholarship-pt'
     academies: ['downtown-miami']
     recomended: true
     scholarship: "Scolarship"
@@ -179,7 +179,7 @@ part_time:
       - "You're saving $4000 USD. Thanks to Clark University TechBoost Fund"
       - "You have to be underemployed or unemployed, and provide a valid US Work permit."
     icons: 
- - slug: 'usa-clark-scholarship-pt'
+  - slug: 'usa-clark-scholarship-pt'
     academies: ['orlando','toronto-canada']
     recomended: true
     scholarship: "Scolarship"
