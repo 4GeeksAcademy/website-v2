@@ -6,7 +6,7 @@ full_time:
     payment_time: "There is nothing like this"
     price: "$7999"
     bullets: 
-      - "You're saving $4000 USD "
+      - "You're saving $4000 USD"
       - "Regular tuition is $11999. Avg tuition in the US is $15k."
     icons: 
       - "/images/landing/uwm_pantone_2021_2.png"
@@ -88,11 +88,11 @@ full_time:
     recomended: true
     scholarship: "Pay Upfront"
     payment_time: "And get a discount"
-    price: "3.040.000 CLP"
+    price: "3.800.000 CLP"
     bullets:
-      - "*Discounts up to 760.000 CLP. Pay 3.040.000 CLP instead of 3.800.000 CLP."  
       - "Pay with bank transfer, credit or debit card"
-      - "**Price varies according to the chosen modality and memberships included" 
+      - "*Price without discount applied"  
+      - "*Price varies according to the chosen modality and memberships included" 
     icons: 
       - "/images/visa-mastercard.png"    
 
@@ -158,19 +158,39 @@ full_time:
     #   - "/images/laptp.jpg"
 
 part_time:
-  - slug: 'usa-clark-scholarship-pt'
-    academies: ['downtown-miami', 'orlando','toronto-canada']
+  - slug: 'miami-uwm-pt'
+    academies: ['downtown-miami']
+    recomended: false
+    scholarship: "No Excuses. No Cost. Really, No Cost if you live or work in Miami"
+    payment_time: "You could even get living stipends if conditions are met. No Repayment."
+    price: "$0"
+    bullets: 
+      - "Living stipends available upon challenges completed"
+      - "Thanks to United Way Miami. Ask for more info now!"
+    icons: 
+      - "/images/landing/uwm_pantone_2021_2.png"
+ - slug: 'usa-clark-scholarship-pt'
+    academies: ['downtown-miami']
     recomended: true
-    scholarship: "Scholarship"
+    scholarship: "Scolarship"
+    payment_time: "If you don't work or live in Miami"
+    price: "$5999"
+    bullets: 
+      - "You're saving $4000 USD. Thanks to Clark University TechBoost Fund"
+      - "You have to be underemployed or unemployed, and provide a valid US Work permit."
+    icons: 
+ - slug: 'usa-clark-scholarship-pt'
+    academies: ['orlando','toronto-canada']
+    recomended: true
+    scholarship: "Scolarship"
     payment_time: "There is nothing like this"
     price: "$5999"
     bullets: 
       - "You're saving $4000 USD. Thanks to Clark University Support Fund"
       - "You have to be underemployed or unemployed, and provide a US Work permit."
     icons: 
-      - "/images/landing/uwm_pantone_2021_2.png"
   - slug: 'usa-financed-pt'
-    academies: ['downtown-miami', 'orlando','toronto-canada']
+    academies: ['orlando','toronto-canada']
     recomended: false
     scholarship: "Financed"
     payment_time: "24 months payment"
@@ -183,19 +203,19 @@ part_time:
       - "/images/climb-logo.png"
       - "/images/quotanda-logo.png"
   - slug: 'usa-isa-pt'
-    academies: ['downtown-miami', 'orlando','toronto-canada']
+    academies: ['orlando','toronto-canada']
     recomended: false
     scholarship: "Income Share Agreement"
-    payment_time: "Get weekly living stipends. Pay after you get a job"
+    payment_time: "Start making payments only when you get a job"
     price: "$0"
     bullets: 
-      - "With $400 p/week living stipends"
-      - "9% of your salary until paid in full, only if you get a job in tech."
+      - "Focus on your career and not how to afford your education"
+      - "9% of your salary until paid in full (1.5x revenue cap), only if you get a job in tech."
     icons: 
       - "/images/landing/uwm_pantone_2021_2.png"
   - slug: 'usa-upfront-pt'
     recomended: false
-    academies: ['downtown-miami', 'orlando','toronto-canada']
+    academies: ['orlando','toronto-canada']
     scholarship: "Full Payment"
     payment_time: "Pay today"
     price: "$8999"
@@ -324,11 +344,11 @@ part_time:
     recomended: true
     scholarship: "Pay Upfront"
     payment_time: "And get a discount"
-    price: "2.760.000 CLP*"
+    price: "3.450.000 CLP*"
     bullets:
-      - "*Discounts up to 690.000 CLP. Pay 2.760.000 CLP instead of 3.450.000 CLP."  
       - "Pay with bank transfer, credit or debit card"    
-      - "You will have access to the entire program and the entire 4Geeks Career Support System"
+      - "*Price without discount applied"
+      - "*You will have access to the entire program and the entire 4Geeks Career Support System"
     icons: 
       - "/images/visa-mastercard.png"   
 
@@ -337,9 +357,9 @@ part_time:
     recomended: false
     scholarship: "Financed"
     payment_time: "18 months payment"
-    price: "~146.000 CLP"
+    price: "~168.000 CLP"
     bullets:
-      - "Tailor-made financing from 6 to 24 months"  
+      - "Tailor-made financing from 6 to 18 months"  
       - "An advance payment corresponding to 20% of the value of the program must be paid" 
     icons: 
       - "/images/flevo.png"
@@ -358,7 +378,7 @@ part_time:
   - slug: 'latam-job-guarantee-fs-pt'
     academies: ['montevideo-uruguay','bogota-colombia', 'costa-rica', 'mexicocity-mexico','quito-ecuador', 'panamacity-panama', 'buenosaires-argentina','lima-peru','lapaz-bolivia']
     recomended: true
-    scholarship: "Job Guarantee"
+    scholarship: "Job Gurantee"
     payment_time: "Get a job or get your money back"
     price: "USD $4000"
     bullets:
