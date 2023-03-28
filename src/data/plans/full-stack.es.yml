@@ -135,6 +135,8 @@ full_time:
     # icons: 
     #   - "/images/landing/uwm_pantone_2021_2.png"
 
+
+
   - slug: 'venezuela-financed-pt'
     academies: ['caracas-venezuela']
     recomended: false
@@ -161,6 +163,19 @@ full_time:
     #   - "/images/laptp.jpg"
 
 part_time:
+
+  - slug: 'miami-uwm-pt'
+    academies: ['downtown-miami']
+    recomended: false
+    scholarship: " No hay excusas. No pages nada si vives o trabajas en Miami"
+    payment_time: "Adicionalmente puedes optar por pagos de tus costos (estipendios) de vida si cumples las condiciones."
+    price: "$0"
+    bullets: 
+      - "Te pagamos tus costos de vida al completar partes del programa"
+      - "En partnership con United Way Miami. Pregúntanos más detalles!"
+    icons: 
+      - "/images/landing/uwm_pantone_2021_2.png"
+
   - slug: 'usa-clark-scholarship-pt'
     academies: ['downtown-miami', 'orlando']
     recomended: true
@@ -170,8 +185,9 @@ part_time:
     bullets: 
       - "You're saving $4000 USD "
       - "9% of your salary until paid in full, only if you get a job in tech."
-    icons: 
-      - "/images/landing/uwm_pantone_2021_2.png"
+    # icons: 
+    #   - "/images/landing/uwm_pantone_2021_2.png"
+
   - slug: 'usa-financed-pt'
     academies: ['downtown-miami', 'orlando']
     recomended: false
@@ -359,7 +375,7 @@ part_time:
     bullets:
       - "Tendrás acceso total y para siempre al programa Full-Stack"    
       - "No incluye acceso a todo el Sistema de Apoyo Laboral de 4Geeks"
-    icons: 
+    # icons: 
 
   - slug: 'latam-trabajo-garantizado-fs-pt'
     academies: ['montevideo-uruguay','bogota-colombia', 'costa-rica', 'mexicocity-mexico','quito-ecuador', 'panamacity-panama', 'buenosaires-argentina','lima-peru','lapaz-bolivia']
