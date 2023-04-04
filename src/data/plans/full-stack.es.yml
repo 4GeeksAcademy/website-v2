@@ -90,11 +90,11 @@ full_time:
     recomended: true
     scholarship: "Paga al contado"
     payment_time: "Y obtén un descuento"
-    price: "3.800.000* CLP"
+    price: "3.040.000* CLP"
     bullets:
+      - "*Precio final con descuento ya aplicado. El descuento es de hasta 760.000 CLP sobre el precio total: 3.800.000 CLP"
       - "Paga con transferencia bancaria, tarjeta de crédito o débito"    
-      - "*Precio sin descuento aplicado"
-      - "*Precio varía según modalidad escogida y membresías incluidas"
+      - "**Precio varía según modalidad escogida y membresías incluidas"
     icons: 
       - "/images/visa-mastercard.png"    
 
@@ -118,7 +118,7 @@ full_time:
     price: "0 CLP*"
     bullets: 
       - "*Pagas el 16% de tu salario cuando consigas empleo hasta pagarlo todo"
-      - "Sólo si consigues trabajo en el área de técnología" 
+      - "Sólo si consigues trabajo en el área de tecnología" 
     icons: 
     - "/images/lumni.png"
 
@@ -134,6 +134,8 @@ full_time:
       - "Paga con transferencia bancaria, tarjeta de crédito o débito"
     # icons: 
     #   - "/images/landing/uwm_pantone_2021_2.png"
+
+
 
   - slug: 'venezuela-financed-pt'
     academies: ['caracas-venezuela']
@@ -161,6 +163,19 @@ full_time:
     #   - "/images/laptp.jpg"
 
 part_time:
+
+  - slug: 'miami-uwm-pt'
+    academies: ['downtown-miami']
+    recomended: false
+    scholarship: " No hay excusas. No pages nada si vives o trabajas en Miami"
+    payment_time: "Adicionalmente puedes optar por pagos de tus costos (estipendios) de vida si cumples las condiciones."
+    price: "$0"
+    bullets: 
+      - "Te pagamos tus costos de vida al completar partes del programa"
+      - "En partnership con United Way Miami. Pregúntanos más detalles!"
+    icons: 
+      - "/images/landing/uwm_pantone_2021_2.png"
+
   - slug: 'usa-clark-scholarship-pt'
     academies: ['downtown-miami', 'orlando']
     recomended: true
@@ -170,8 +185,9 @@ part_time:
     bullets: 
       - "You're saving $4000 USD "
       - "9% of your salary until paid in full, only if you get a job in tech."
-    icons: 
-      - "/images/landing/uwm_pantone_2021_2.png"
+    # icons: 
+    #   - "/images/landing/uwm_pantone_2021_2.png"
+
   - slug: 'usa-financed-pt'
     academies: ['downtown-miami', 'orlando']
     recomended: false
@@ -330,10 +346,10 @@ part_time:
     recomended: true
     scholarship: "Paga al contado"
     payment_time: "Y obtén un descuento"
-    price: "3.450.000 CLP*"
+    price: "2.760.000 CLP*"
     bullets:
+      - "*Precio final con descuento ya aplicado. El descuento es de hasta 690.000 CLP sobre el precio total: 3.450.000 CLP"
       - "Paga con transferencia bancaria, tarjeta de crédito o débito"    
-      - "*Precio sin descuento aplicado"
       - "Tendrás acceso a todo el programa y a todo el Sistema de Apoyo Laboral de 4Geeks"
     icons: 
       - "/images/visa-mastercard.png"   
@@ -343,23 +359,23 @@ part_time:
     recomended: false
     scholarship: "Cuotas desde"
     payment_time: ""
-    price: "~168.000 CLP"
+    price: "~146.000 CLP"
     bullets:
-      - "Financiamiento a tu medida desde 6 hasta 18 meses"  
-      - "Se debe pagar un anticipo correspondiente al 20% del valor del programa" 
+      - "Financiamiento a tu medida desde 6 hasta 24 meses"  
+      - "Se debe pagar un anticipo correspondiente al 20% del valor total del programa sin descuentos" 
     icons: 
       - "/images/flevo.png"
 
   - slug: 'chile-solo-fs-pt'
     academies: ['santiago-chile']
     recomended: false
-    scholarship: "Programa"
-    payment_time: "Full Stack Solamente"
+    scholarship: "Full Stack"
+    payment_time: "Sin Apoyo Laboral"
     price: "2.700.000 CLP"
     bullets:
-      - "Tendrás acceso total y para siempre al programa Full-Stack"
+      - "Tendrás acceso total y para siempre al programa Full-Stack"    
       - "No incluye acceso a todo el Sistema de Apoyo Laboral de 4Geeks"
-    icons: 
+    # icons: 
 
   - slug: 'latam-trabajo-garantizado-fs-pt'
     academies: ['montevideo-uruguay','bogota-colombia', 'costa-rica', 'mexicocity-mexico','quito-ecuador', 'panamacity-panama', 'buenosaires-argentina','lima-peru','lapaz-bolivia']
