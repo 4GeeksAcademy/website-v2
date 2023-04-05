@@ -323,7 +323,7 @@ export const outcomesReport = async (data, session) => {
 export const getCohorts = async (_query = {}) => {
   let query = {
     upcoming: true,
-    never_ends: false,
+    never_ends: "false",
     sort: "kickoff_date",
     ..._query,
     academy: _query.academy ? `online,${_query.academy}` : undefined,
