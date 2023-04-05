@@ -383,6 +383,19 @@ part_time:
       - "Does not include access to the entire 4Geeks Career Support System"   
     # icons: 
     
+  - slug: 'latam-trabajo-garantizado-fs-pt'
+    academies: ['montevideo-uruguay','bogota-colombia', 'costa-rica', 'mexicocity-mexico','quito-ecuador', 'panamacity-panama', 'buenosaires-argentina','lima-peru','lapaz-bolivia']
+    recomended: true
+    scholarship: "Job Guaranteed"
+    payment_time: "Like no other Bootcamp in latam"
+    price: "USD $4000"
+    bullets:
+      - "Planes de pago disponibles de hasta 24 meses"
+      - "You will get a job within the next 6 months after graduation."     
+      - "Follow our process and you will get a job or receive your money back."     
+    icons: 
+      - "/images/quotanda-logo.png"
+
   - slug: 'latam-job-guarantee-fs-pt'
     academies: ['montevideo-uruguay','bogota-colombia', 'costa-rica', 'mexicocity-mexico','quito-ecuador', 'panamacity-panama', 'buenosaires-argentina','lima-peru','lapaz-bolivia']
     recomended: true
@@ -391,9 +404,21 @@ part_time:
     price: "USD $4000"
     bullets:
       - "Payment plans available across latam"
-      - "You will get a job within the next 6 moinths after graduation"     
+      - "You will get a job within the next 6 months after graduation"     
     icons: 
       - "/images/quotanda-logo.png"
+
+  - slug: 'latam-solo-programa-pt'
+    academies: ['montevideo-uruguay','bogota-colombia', 'costa-rica', 'mexicocity-mexico','quito-ecuador', 'panamacity-panama', 'buenosaires-argentina','lima-peru','lapaz-bolivia']
+    recomended: true
+    scholarship: "Full-Stack Program Only"
+    payment_time: "Focus on gaining skills"
+    price: "USD $2000"
+    bullets: 
+      - "Tendrás acceso total y para siempre al programa Full-stack."
+      - "You can apply 12 or 24 month payment plans."
+    icons: 
+      - "/images/bcas.png" 
 
   - slug: 'latam-upfront-fs-pt'
     academies: ['montevideo-uruguay','bogota-colombia', 'costa-rica', 'mexicocity-mexico','quito-ecuador', 'panamacity-panama', 'buenosaires-argentina','lima-peru','lapaz-bolivia']

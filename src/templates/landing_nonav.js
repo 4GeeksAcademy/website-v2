@@ -51,7 +51,7 @@ const Landing = (props) => {
       setInLocation(_inLoc.replace(/^\w/, (c) => c.toUpperCase()) + " ");
   }, []);
 
-  // data sent to the form already prefilled 
+  // data sent to the form already prefilled
   const preData = {
     course: {
       type: "hidden",
