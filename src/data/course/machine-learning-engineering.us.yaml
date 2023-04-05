@@ -1,7 +1,7 @@
 meta_info:
   slug: machine-learning-engineering
-  title: "Become a AI Machine Learning Engineer at 4Geeks Academy"
-  description: "Our new course: Machine Learning Engineering, will help you master advanced coding techniques and get hired by the biggest tech companies"
+  title: "Become an AI master with this Machine Learning Course"
+  description: "Join our comprehensive machine learning course and master the skills to build powerful AI systems. Enroll in our top-rated programming bootcamp now!"
   bc_slug: "machine-learning-engineering"
   template: "course-machine-learning"
   image: ""
@@ -14,7 +14,7 @@ meta_info:
 apply_form:
   label: Machine Learning
 
-seo_title: "become a machine learning engineer"
+seo_title: "Data Science and Machine Learning course"
 header:
   title: "Machine Learning Engineer"
   paragraph: "Become one of the highest paid professionals in the world in just a few months"

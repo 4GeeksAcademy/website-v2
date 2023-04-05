@@ -153,7 +153,15 @@ coding:
       image: "../../../../static/images/coding/worldcamp.png"
       featured: false
       #locations: ["miami-downtown"]
-
+    - name: "Code/Art"
+      image: "../../../../static/images/coding/CodeArt.jpg"
+      featured: false
+      #locations: ["miami-downtown"]
+    - name: "Data Science Salon"
+      image: "../../../../static/images/coding/DataScienceSalonDSS.png"
+      featured: false
+      #locations: ["miami-downtown"]
+      
 influencers:
   tagline: "IN PARTNERSHIP WITH THE CITY'S BIGGEST INFLUENCERS"
   sub_heading: "We actively organize and/or participate in the biggest coding initiatives."
