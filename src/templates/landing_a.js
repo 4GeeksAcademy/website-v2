@@ -30,8 +30,8 @@ const Landing = (props) => {
       : data.allDownloadableYaml.edges[0].node?.apply_schollarship;
 
   const programs = filteredPrograms.map((p) => ({
-    label: p.apply_form.label,
-    value: p.meta_info.bc_slug,
+    label: p.apply_form?.label,
+    value: p.meta_info?.bc_slug,
   }));
 
   useEffect(() => {
