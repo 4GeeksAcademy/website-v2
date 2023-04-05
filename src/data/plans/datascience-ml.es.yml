@@ -218,7 +218,19 @@ part_time:
       - "Paga con transferencia bancaria, tarjeta de crédito o débito"    
       - "*Precio sin descuento aplicado"
     icons: 
-      - "/images/visa-mastercard.png"   
+      - "/images/visa-mastercard.png"
+
+  - slug: 'chile-geekforce-fs-pt'
+    academies: ['santiago-chile']
+    recomended: true
+    scholarship: "Pago de contado"
+    payment_time: "Y obtén un descuento"
+    price: "4.500.000 CLP*"
+    bullets:
+      - "Paga con transferencia bancaria, tarjeta de crédito o débito"    
+      - "*Precio sin descuento aplicado"
+    icons: 
+      - "/images/visa-mastercard.png"    
 
   - slug: 'chile-ds-ml-pt'
     academies: ['santiago-chile']
