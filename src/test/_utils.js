@@ -23,8 +23,7 @@ const validateObjectProperties = (obj, validations) => {
     breadcrumb.push(prop);
     const breadcrumbPath = breadcrumb
       .join(".")
-      .replace(/\.\d([\.$])?/gm, "[]$1");
-    // console.log(`Validating ${breadcrumbPath}`);
+      .replace(/\.\d+([\.$])?/gm, "[]$1");
     try {
       if (
         validations[breadcrumbPath] &&
