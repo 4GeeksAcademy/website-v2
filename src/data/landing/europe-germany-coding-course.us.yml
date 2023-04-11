@@ -35,7 +35,7 @@ apply_schollarship: # form that is displayed at the end of the landing
 # jumbotron on the top (cannot be commented out)
 header_data:
   background: "#FFF1D1"
-  tagline: Become a web developer in a few as 16 weeks through work on real projects and mentorship by experienced professionals
+  tagline: Become a web developer in a few as 18 weeks through work on real projects and mentorship by experienced professionals
   sub_heading: "86% of our graduates have already started their future-proof, tech careers with an average entry salary of $50,000/yr"
   badge: "../../../static/images/badges/switchup.png"
   image_filter: brightness(0.3)
