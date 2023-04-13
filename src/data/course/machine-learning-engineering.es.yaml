@@ -1,7 +1,7 @@
 meta_info:
   slug: curso-inteligencia-artificial
-  title: "Estudia con nosotros tu nuevo curso de Inteligencia Artificial"
-  description: "Nuestro nuevo curso de Inteligencia Artificial y Machine Learning, te ayudará a dominar las técnicas de codificación."
+  title: "Curso de Inteligencia Artificial"
+  description: "Aprende de Inteligencia Artificial y Machine Learning desde cero en una de las escuelas mas reconocidas del mundo."
   bc_slug: "machine-learning-engineering"
   template: "course-machine-learning"
   image: ""
@@ -16,7 +16,7 @@ apply_form:
 
 seo_title: "Curso de Inteligencia Artificial"
 header:
-  title: "Conviértete en un experto con nuestro curso de Inteligencia Artificial"
+  title: "Conviértete en un experto de Inteligencia Artificial"
   paragraph: "Conviértete en uno de los profesionales mejor pagados del mundo."
   image: "../../../static/images/bg/apple-building.jpg"
   image_alt: "apple-building"
