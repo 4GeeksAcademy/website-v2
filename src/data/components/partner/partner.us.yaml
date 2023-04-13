@@ -157,9 +157,13 @@ coding:
       image: "../../../../static/images/coding/CodeArt.jpg"
       featured: false
       #locations: ["miami-downtown"]
+      follow: true
+      link: "https://www.code-art.com"
     - name: "Data Science Salon"
       image: "../../../../static/images/coding/DataScienceSalonDSS.png"
       featured: false
+      link: "https://www.datascience.salon"
+      follow: true
       #locations: ["miami-downtown"]
       
 influencers:
