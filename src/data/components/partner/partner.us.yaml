@@ -165,6 +165,12 @@ coding:
       link: "https://www.datascience.salon"
       follow: true
       #locations: ["miami-downtown"]
+    - name: "Grammerhub"
+      image: "../../../../static/images/coding/grammerhub.png"
+      featured: false
+      link: "https://www.grammerhub.org"
+      follow: true
+      #locations: ["miami-downtown"]
       
 influencers:
   tagline: "IN PARTNERSHIP WITH THE CITY'S BIGGEST INFLUENCERS"
