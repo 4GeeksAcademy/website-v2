@@ -1,0 +1,17 @@
+meta_info:
+  slug: 20-million
+  title: "Courses and programs taught at 4Geeks Academy"
+  description: "If"
+  visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
+  image: "/images/programs-heading.png"
+  keywords: "Programs at 4Geeks Academy"
+  redirects: ["/20-million"]
+
+seo_title: "level up as a developer"
+header:
+  title: +$20 millions in scholarships, and we keep on working
+  paragraph: Solving access to coding education. The next recipient can be you.
+
+button:
+  btn_label: "I want to Contribute"
+  apply_button_link: "/us/apply"
