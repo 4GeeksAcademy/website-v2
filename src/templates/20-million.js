@@ -277,10 +277,7 @@ const TwentyMillion = ({ data, pageContext, yml }) => {
             margin_tablet="0 0 50px 0"
           >
             <Div width="100%" width_tablet="fit-content">
-              <Link
-                to={yml.button.apply_button_link}
-                style={{ width: '100%' }}
-              >
+              <Link to={yml.button.apply_button_link} style={{ width: "100%" }}>
                 <Button
                   variant="full"
                   justifyContent="center"
@@ -308,7 +305,6 @@ const TwentyMillion = ({ data, pageContext, yml }) => {
             </Button>
           </Div>
         </Div>
-
       </Div>
       <OurPartners images={hiring.partners.images} marquee></OurPartners>
       <GeeksInfo lang={pageContext.lang} />
@@ -332,10 +328,7 @@ const TwentyMillion = ({ data, pageContext, yml }) => {
 };
 
 export const query = graphql`
-  query TwentyMillionQuery(
-    $file_name: String!
-    $lang: String!
-  ) {
+  query TwentyMillionQuery($file_name: String!, $lang: String!) {
     allPageYaml(
       filter: { fields: { file_name: { eq: $file_name }, lang: { eq: $lang } } }
     ) {
