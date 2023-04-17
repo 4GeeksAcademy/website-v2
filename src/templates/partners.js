@@ -686,6 +686,8 @@ export const query = graphql`
           coding {
             images {
               name
+              link
+              follow
               image {
                 childImageSharp {
                   gatsbyImageData(
