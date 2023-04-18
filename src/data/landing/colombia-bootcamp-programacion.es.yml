@@ -43,7 +43,7 @@ header_data:
   background: "#FFF1D1"
   tagline: Bootcamp de Programación en Colombia 
   sub_heading: Aprende a programar desde cero o mejora tus habilidades en programación y recibe soporte técnico y profesional de por vida.
-  badge: "../../../static/images/badges/switchup.png"
+  badge: "../../../static/images/badges/Course-Report-Badge-2023.png"
   image_filter: brightness(0.3)
 
 features:
