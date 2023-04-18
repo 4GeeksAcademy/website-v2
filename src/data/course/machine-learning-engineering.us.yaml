@@ -1,7 +1,7 @@
 meta_info:
   slug: machine-learning-engineering
-  title: "Become an AI master with this Machine Learning Engineer Course"
-  description: "Join our comprehensive machine learning engineer course and master the skills to build powerful AI systems. Enroll in our top-rated programming bootcamp now!"
+  title: "Become an AI master with us at our Machine Learning Engineer Bootcamp"
+  description: "Join our comprehensive machine learning engineer bootcamp and master the skills to build powerful AI systems. Enroll in our top-rated programming bootcamp now!"
   bc_slug: "machine-learning-engineering"
   template: "course-machine-learning"
   image: ""
@@ -14,7 +14,7 @@ meta_info:
 apply_form:
   label: Machine Learning
 
-seo_title: "Data Science and Machine Learning Engineer course"
+seo_title: "Data Science and Machine Learning Engineer Bootcamp"
 header:
   title: "Machine Learning Engineer"
   paragraph: "Become one of the highest paid professionals in the world in just a few months with our immersive Machine Learning Course"
