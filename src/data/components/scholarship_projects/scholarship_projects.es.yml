@@ -1,0 +1,54 @@
+title: Fondos en ejecución
+description: Ya conoces a nuestros Geeks, ahora es el momento de que sepas lo que pueden hacer
+project_name: Nombre del proyecto
+project_details: Detalles del proyecto
+total_cost: Costo total
+geeks_benefited: Geeks beneficiados
+institutions: Instituciones que contribuyeron
+press: Referencias de prensa
+see_project: Ver proyecto
+projects:
+  - name: Proyecto
+    image:
+      alt: typing
+      src: '../../../../static/images/Happy-People-Landing-4Geeks-ES.jpg'
+    description: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium.
+    details:
+      cost: 125k
+      geeks_benefited: 32
+    institutions:
+      - name: This is a name
+        logo: '../../../../static/images/Happy-People-Landing-4Geeks-ES.jpg'
+      - name: This is a name
+        logo: '../../../../static/images/Happy-People-Landing-4Geeks-ES.jpg'
+      - name: This is a name
+        logo: '../../../../static/images/Happy-People-Landing-4Geeks-ES.jpg'
+    press:
+      - name: This is a name
+        link: https://www.elnacional.com
+      - name: This is a name
+        link: https://www.elnacional.com
+      - name: This is a name
+        link: https://www.elnacional.com
+  # - name:
+  #   image:
+  #     src: 
+  #     alt:
+  #   description:
+  #   details:
+  #     cost:
+  #     geeks_benefited:
+  #   institutions:
+  #     - name:
+  #       logo:
+  #     - name:
+  #       logo:
+  #     - name:
+  #       logo:
+  #   press:
+  #     - name:
+  #       link:
+  #     - name:
+  #       link:
+  #     - name:
+  #       link:

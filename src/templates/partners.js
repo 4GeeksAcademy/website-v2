@@ -230,6 +230,7 @@ const Partners = (props) => {
       </GridContainer>
 
       <Div
+        className="benefits_and_charts"
         display="flex"
         flexDirection="column"
         gap="50px"

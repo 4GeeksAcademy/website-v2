@@ -39,21 +39,13 @@ import UpcomingDates from "../components/UpcomingDates";
 import GeeksInfo from "../components/GeeksInfo";
 import Testimonials from "../components/Testimonials";
 import OurPartners from "../components/OurPartners";
+import ScholarshipProjects from "../components/ScholarshipProjects";
 import CourseBlogs from "../components/CourseBlogs";
 import Icon from "../components/Icon";
 
 const TwentyMillion = ({ data, pageContext, yml }) => {
   const { session } = React.useContext(SessionContext);
-  const [open, setOpen] = React.useState(false);
   const hiring = data.allPartnerYaml.edges[0].node;
-
-  const handleOpen = () => {
-    setOpen(true);
-  };
-
-  const handleClose = () => {
-    setOpen(false);
-  };
 
   const [applyButtonText, setApplyButtonText] = useState("");
   let city = session && session.location ? session.location.city : [];
@@ -66,8 +58,6 @@ const TwentyMillion = ({ data, pageContext, yml }) => {
       setApplyButtonText(currentLocation.node.button.apply_button_text);
     }
   }, [currentLocation]);
-
-  const syllabus_button_text = yml.button.btn_label;
 
   return (
     <>
@@ -292,7 +282,7 @@ const TwentyMillion = ({ data, pageContext, yml }) => {
               </Link>
             </Div>
             <Button
-              onClick={handleOpen}
+              display="block"
               width="100%"
               width_tablet="fit-content"
               variant="outline"
@@ -300,24 +290,15 @@ const TwentyMillion = ({ data, pageContext, yml }) => {
               margin="10px 0 50px 0"
               margin_tablet="0"
               textColor={Colors.black}
+              textAlign="center"
             >
-              {syllabus_button_text}
+              {yml.button.btn_label}
             </Button>
           </Div>
         </Div>
       </Div>
       <OurPartners images={hiring.partners.images} marquee></OurPartners>
-      <GeeksInfo lang={pageContext.lang} />
-      <GridContainer
-        padding_tablet="0"
-        margin_tablet="90px 0 62px 0"
-        margin="57px 0"
-      >
-        <Div height="5px" background="#EBEBEB"></Div>
-      </GridContainer>
-      <GridContainer padding_tablet="0" margin_tablet="0 0 62px 0">
-        <Div height="1px" background="#EBEBEB"></Div>
-      </GridContainer>
+      <ScholarshipProjects content={data.allScholarshipProjectsYaml.edges[0].node} lang={pageContext.lang} />
       <Testimonials
         lang={data.allTestimonialsYaml.edges}
         margin_tablet="75px 0 0 0"
@@ -342,6 +323,64 @@ export const query = graphql`
           button {
             btn_label
             apply_button_link
+          }
+        }
+      }
+    }
+    allScholarshipProjectsYaml(filter: { fields: { lang: { eq: $lang } } }) {
+      edges {
+        node {
+          title
+          description
+          project_name
+          project_details
+          total_cost
+          geeks_benefited
+          institutions
+          press
+          see_project
+          projects {
+            name
+            image {
+              alt
+              src {
+                childImageSharp {
+                  gatsbyImageData(
+                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                    width: 700
+                    quality: 100
+                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                    breakpoints: [200, 340, 520, 890]
+                  )
+                }
+              }
+            }
+            description
+            details {
+              cost
+              geeks_benefited
+            }
+            institutions {
+              name
+              logo {
+                childImageSharp {
+                  gatsbyImageData(
+                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                    width: 700
+                    quality: 100
+                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                    breakpoints: [200, 340, 520, 890]
+                  )
+                }
+              }
+            }
+            press {
+              name
+              link
+            }
+          }
+          fields {
+            lang
           }
         }
       }
@@ -381,17 +420,6 @@ export const query = graphql`
             content
             source_url
             source_url_text
-          }
-        }
-      }
-    }
-    allCredentialsYaml(filter: { fields: { lang: { eq: $lang } } }) {
-      edges {
-        node {
-          credentials {
-            title
-            icon
-            value
           }
         }
       }
