@@ -2,18 +2,14 @@ import React, { useState, useRef } from "react";
 import Link from "gatsby-link";
 import { Title, H1, H2, H3, H4, Span, Paragraph } from "../Heading";
 import Slider from "react-slick";
-import { GridContainer, Grid, Div, HR, } from "../Sections";
-import {
-  StyledBackgroundSection,
-} from "../Styling";
+import { GridContainer, Grid, Div, HR } from "../Sections";
+import { StyledBackgroundSection } from "../Styling";
 import { Img, Button, Colors } from "../Styling";
 import Icon from "../Icon";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-
 const ScholarshipProjects = ({ content }) => {
-
   const sliderRef = useRef();
 
   const settings = {
@@ -102,48 +98,105 @@ const ScholarshipProjects = ({ content }) => {
                   bgSize="cover"
                 />
               </Div>
-              <Div margin="20px 0 0 0" margin_tablet="0" width_tablet="50%" padding_tablet="15px" display="block">
+              <Div
+                margin="20px 0 0 0"
+                margin_tablet="0"
+                width_tablet="50%"
+                padding_tablet="15px"
+                display="block"
+              >
                 <Div margin="0 0 10px 0" display="block">
-                  <H3 textAlign="left" margin="0 0 10px 0">{project.name}</H3>
-                  <Paragraph color={Colors.black} textAlign="left">{project.description}</Paragraph>
+                  <H3 textAlign="left" margin="0 0 10px 0">
+                    {project.name}
+                  </H3>
+                  <Paragraph color={Colors.black} textAlign="left">
+                    {project.description}
+                  </Paragraph>
                 </Div>
-                <HR
-                  background={Colors.lightGray}
-                  width="100%"
-                  height="1px"
-                />
+                <HR background={Colors.lightGray} width="100%" height="1px" />
                 <Div margin="20px 0 0 0" display="block">
-                  <H4 fontWeight="600" fontSize="16px" textAlign="left" margin="0 0 10px 0">{content.project_details}</H4>
+                  <H4
+                    fontWeight="600"
+                    fontSize="16px"
+                    textAlign="left"
+                    margin="0 0 10px 0"
+                  >
+                    {content.project_details}
+                  </H4>
                   <Div gap="10px">
-                    <Div display="block" padding="10px" background={Colors.black}>
-                      <Paragraph fontSize="12px" textTransform="uppercase" color={Colors.white}>{content.total_cost}</Paragraph>
+                    <Div
+                      display="block"
+                      padding="10px"
+                      background={Colors.black}
+                    >
+                      <Paragraph
+                        fontSize="12px"
+                        textTransform="uppercase"
+                        color={Colors.white}
+                      >
+                        {content.total_cost}
+                      </Paragraph>
                       <HR
                         marginBottom="5px"
                         background={Colors.white}
                         width="100%"
                         height="1px"
                       />
-                      <Paragraph opacity="1" fontWeight="500" color={Colors.white}>{project.details.cost}</Paragraph>
+                      <Paragraph
+                        opacity="1"
+                        fontWeight="500"
+                        color={Colors.white}
+                      >
+                        {project.details.cost}
+                      </Paragraph>
                     </Div>
-                    <Div display="block" padding="10px" background={Colors.black}>
-                      <Paragraph fontSize="12px" textTransform="uppercase" color={Colors.white}>{content.geeks_benefited}</Paragraph>
+                    <Div
+                      display="block"
+                      padding="10px"
+                      background={Colors.black}
+                    >
+                      <Paragraph
+                        fontSize="12px"
+                        textTransform="uppercase"
+                        color={Colors.white}
+                      >
+                        {content.geeks_benefited}
+                      </Paragraph>
                       <HR
                         marginBottom="5px"
                         background={Colors.white}
                         width="100%"
                         height="1px"
                       />
-                      <Paragraph opacity="1" fontWeight="500" color={Colors.white}>{project.details.geeks_benefited}</Paragraph>
+                      <Paragraph
+                        opacity="1"
+                        fontWeight="500"
+                        color={Colors.white}
+                      >
+                        {project.details.geeks_benefited}
+                      </Paragraph>
                     </Div>
                   </Div>
                 </Div>
 
                 <Div margin="20px 0 0 0" display="block">
-                  <H4 fontWeight="600" fontSize="16px" textAlign="left" margin="0 0 10px 0">{content.institutions}</H4>
-                  <Div flexWrap="wrap" gap="10px" gap_tablet="5px" >
+                  <H4
+                    fontWeight="600"
+                    fontSize="16px"
+                    textAlign="left"
+                    margin="0 0 10px 0"
+                  >
+                    {content.institutions}
+                  </H4>
+                  <Div flexWrap="wrap" gap="10px" gap_tablet="5px">
                     {project.institutions.map((institution) => (
                       <Div alignItems="center">
-                        <Div margin="0 5px 0 0" width="31px" flexShrink="0" flexShrink_tablet="0">
+                        <Div
+                          margin="0 5px 0 0"
+                          width="31px"
+                          flexShrink="0"
+                          flexShrink_tablet="0"
+                        >
                           <StyledBackgroundSection
                             height="31px"
                             width="31px"
@@ -164,13 +217,17 @@ const ScholarshipProjects = ({ content }) => {
                 </Div>
 
                 <Div margin="20px 0 0 0" display="block">
-                  <H4 fontWeight="600" fontSize="16px" textAlign="left" margin="0 0 10px 0">{content.press}</H4>
+                  <H4
+                    fontWeight="600"
+                    fontSize="16px"
+                    textAlign="left"
+                    margin="0 0 10px 0"
+                  >
+                    {content.press}
+                  </H4>
                   <Div flexWrap="wrap" gap="10px">
                     {project.press.map((obj) => (
-                      <Link
-                        to={obj.link}
-                        target="_blank"
-                      >
+                      <Link to={obj.link} target="_blank">
                         <Button
                           // width="200px"
                           padding="5px"
@@ -214,12 +271,10 @@ const ScholarshipProjects = ({ content }) => {
                 >
                   {content.see_project}
                 </Button>
-
               </Div>
             </Div>
           </Div>
         ))}
-
       </Slider>
     </Div>
   );
