@@ -1,10 +1,10 @@
-import React, { useState, useRef } from "react";
+import React, { useRef } from "react";
 import Link from "gatsby-link";
-import { Title, H1, H2, H3, H4, Span, Paragraph } from "../Heading";
+import { H2, H3, H4, Paragraph } from "../Heading";
 import Slider from "react-slick";
-import { GridContainer, Grid, Div, HR } from "../Sections";
+import { Div, HR } from "../Sections";
 import { StyledBackgroundSection } from "../Styling";
-import { Img, Button, Colors } from "../Styling";
+import { Button, Colors } from "../Styling";
 import Icon from "../Icon";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -22,8 +22,6 @@ const ScholarshipProjects = ({ content }) => {
     slidesToScroll: 1,
     arrows: false,
   };
-
-  // const project = content?.projects[0];
 
   return (
     <Div display="block" position="relative">

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { Link } from "gatsby";
 import { isCustomBarActive } from "../actions";
 import BaseRender from "./_baseLayout";
@@ -40,14 +40,24 @@ import GeeksInfo from "../components/GeeksInfo";
 import Testimonials from "../components/Testimonials";
 import OurPartners from "../components/OurPartners";
 import ScholarshipProjects from "../components/ScholarshipProjects";
+import BenefitsAndCharts from "../components/BenefitsAndCharts";
 import CourseBlogs from "../components/CourseBlogs";
 import Icon from "../components/Icon";
 
 const TwentyMillion = ({ data, pageContext, yml }) => {
   const { session } = React.useContext(SessionContext);
-  const hiring = data.allPartnerYaml.edges[0].node;
+  const partnersData = data.allPartnerYaml.edges[0].node;
 
   const [applyButtonText, setApplyButtonText] = useState("");
+  const joinPartnersRef = useRef(null);
+  const goToForm = (e) => {
+    e.preventDefault();
+    window.scrollTo({
+      top: joinPartnersRef.current?.offsetTop - 200,
+      behavior: "smooth",
+    });
+  };
+
   let city = session && session.location ? session.location.city : [];
   let currentLocation = data.allLocationYaml.edges.find(
     (loc) => loc.node?.city === city
@@ -297,7 +307,7 @@ const TwentyMillion = ({ data, pageContext, yml }) => {
           </Div>
         </Div>
       </Div>
-      <OurPartners images={hiring.partners.images} marquee></OurPartners>
+      <OurPartners images={partnersData.partners.images} marquee></OurPartners>
       <ScholarshipProjects
         content={data.allScholarshipProjectsYaml.edges[0].node}
         lang={pageContext.lang}
@@ -307,6 +317,7 @@ const TwentyMillion = ({ data, pageContext, yml }) => {
         margin_tablet="75px 0 0 0"
         margin="45px 0 0 0"
       />
+      <BenefitsAndCharts data={partnersData} goToForm={goToForm} />
     </>
   );
 };
@@ -452,56 +463,21 @@ export const query = graphql`
               featured
             }
           }
-          coding {
-            images {
-              name
-              image {
-                childImageSharp {
-                  gatsbyImageData(
-                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                    width: 100
-                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
-                  )
-                }
-              }
-              featured
+          benefits_and_charts {
+            title
+            description
+            bullets
+            button_section {
+              button_text
+              button_link
             }
-            tagline
-            sub_heading
-          }
-          influencers {
-            images {
-              name
-              image {
-                childImageSharp {
-                  gatsbyImageData(
-                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                    width: 100
-                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
-                  )
-                }
+            charts {
+              title
+              list {
+                description
+                icon
               }
-              featured
             }
-            tagline
-            sub_heading
-          }
-          financials {
-            images {
-              name
-              image {
-                childImageSharp {
-                  gatsbyImageData(
-                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                    width: 100
-                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
-                  )
-                }
-              }
-              featured
-            }
-            tagline
-            sub_heading
           }
         }
       }
