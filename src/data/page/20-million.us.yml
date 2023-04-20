@@ -15,3 +15,25 @@ header:
 button:
   btn_label: "I want to Contribute"
   apply_button_link: "/us/apply"
+
+two_column_left:
+  proportions: [6, 6]
+  image:
+    style: '{ "backgroundSize": "contain" }'
+    src: "/images/landing/20-million-column.png"
+  heading:
+    text: "Why are we doing this?"
+    font_size: ["40px", "40px", "40px", "40px", "40px"]
+  sub_heading:
+    text: "62% of the people applying to 4Geeks are rejected due to financial reasons"
+    font_size: ["16px", "16px", "16px", "16px", "16px"]
+  content:
+    font_size: ["16px"]
+    text: |
+      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec,
+  button:
+      text: "JOIN OUR ALLIES"
+      color: "white"
+      background: "blue"
+      hover_color: "white"
+      path: "#top"

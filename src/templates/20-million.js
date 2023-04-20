@@ -40,8 +40,10 @@ import GeeksInfo from "../components/GeeksInfo";
 import Testimonials from "../components/Testimonials";
 import OurPartners from "../components/OurPartners";
 import ScholarshipProjects from "../components/ScholarshipProjects";
+import ScholarshipSuccessCases from "../components/ScholarshipSuccessCases";
 import BenefitsAndCharts from "../components/BenefitsAndCharts";
 import CourseBlogs from "../components/CourseBlogs";
+import { TwoColumn } from "../components/Landing";
 import Icon from "../components/Icon";
 
 const TwentyMillion = ({ data, pageContext, yml }) => {
@@ -68,6 +70,8 @@ const TwentyMillion = ({ data, pageContext, yml }) => {
       setApplyButtonText(currentLocation.node.button.apply_button_text);
     }
   }, [currentLocation]);
+
+  const ymlTwoColumn = yml?.two_column_left
 
   return (
     <>
@@ -318,6 +322,27 @@ const TwentyMillion = ({ data, pageContext, yml }) => {
         margin="45px 0 0 0"
       />
       <BenefitsAndCharts data={partnersData} goToForm={goToForm} />
+      <Div
+        id="two_column_left"
+        flexDirection="column"
+        padding="50px 0 50px 0"
+        padding_tablet="50px 6%"
+        margin="0"
+      >
+        <TwoColumn
+          left={{ image: ymlTwoColumn.image, video: ymlTwoColumn.video }}
+          right={{
+            heading: ymlTwoColumn.heading,
+            sub_heading: ymlTwoColumn.sub_heading,
+            bullets: ymlTwoColumn.bullets,
+            content: ymlTwoColumn.content,
+            button: ymlTwoColumn.button,
+          }}
+          proportions={ymlTwoColumn.proportions}
+          session={session}
+        />
+      </Div>
+      <ScholarshipSuccessCases content={data.allScholarshipSuccessCasesYaml.edges[0].node} />
     </>
   );
 };
@@ -337,6 +362,32 @@ export const query = graphql`
           button {
             btn_label
             apply_button_link
+          }
+          two_column_left {
+            proportions
+            image {
+              style
+              src
+            }
+            heading {
+              text
+              font_size
+            }
+            sub_heading {
+              text
+              font_size
+            }
+            content {
+              text
+              font_size
+            }
+            button {
+              text
+              color
+              background
+              hover_color
+              path
+            }
           }
         }
       }
@@ -395,6 +446,35 @@ export const query = graphql`
           }
           fields {
             lang
+          }
+        }
+      }
+    }
+    allScholarshipSuccessCasesYaml(filter: { fields: { lang: { eq: $lang } } }) {
+      edges {
+        node {
+          title
+          contributor
+          cases {
+            name
+            img {
+              childImageSharp {
+                gatsbyImageData(
+                  layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                  width: 700
+                  quality: 100
+                  placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                  breakpoints: [200, 340, 520, 890]
+                )
+              }
+            }
+            status
+            country {
+              iso
+              name
+            }
+            description
+            achievement
           }
         }
       }
