@@ -71,7 +71,7 @@ const TwentyMillion = ({ data, pageContext, yml }) => {
     }
   }, [currentLocation]);
 
-  const ymlTwoColumn = yml?.two_column_left
+  const ymlTwoColumn = yml?.two_column_left;
 
   return (
     <>
@@ -342,7 +342,9 @@ const TwentyMillion = ({ data, pageContext, yml }) => {
           session={session}
         />
       </Div>
-      <ScholarshipSuccessCases content={data.allScholarshipSuccessCasesYaml.edges[0].node} />
+      <ScholarshipSuccessCases
+        content={data.allScholarshipSuccessCasesYaml.edges[0].node}
+      />
     </>
   );
 };
@@ -450,7 +452,9 @@ export const query = graphql`
         }
       }
     }
-    allScholarshipSuccessCasesYaml(filter: { fields: { lang: { eq: $lang } } }) {
+    allScholarshipSuccessCasesYaml(
+      filter: { fields: { lang: { eq: $lang } } }
+    ) {
       edges {
         node {
           title
