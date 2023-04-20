@@ -1,28 +1,11 @@
 import React, { useRef } from "react";
-import { navigate } from "gatsby";
-import {
-  Column,
-  Row,
-  GridContainer,
-  Header,
-  Div,
-  Grid,
-} from "../Sections";
-import { H1, H2, H3, Paragraph } from "../Heading";
+import { Div } from "../Sections";
+import { H2, H3, Paragraph } from "../Heading";
 import { Button, Colors } from "../Styling";
 import Icon from "../Icon";
 
 const BenefitsAndCharts = (props) => {
   const { data, goToForm } = props;
-  const joinPartnersRef = useRef(null);
-
-  // const goToForm = (e) => {
-  //   e.preventDefault();
-  //   window.scrollTo({
-  //     top: joinPartnersRef.current?.offsetTop - 200,
-  //     behavior: "smooth",
-  //   });
-  // };
 
   const ButtonPartner = () => (
     <Div
@@ -86,8 +69,7 @@ const BenefitsAndCharts = (props) => {
                 <Div
                   key={index}
                   borderBottom={`${
-                    index !==
-                    data.benefits_and_charts.bullets.length - 1
+                    index !== data.benefits_and_charts.bullets.length - 1
                       ? "1px solid #EBEBEB"
                       : "0"
                   }`}
@@ -161,34 +143,32 @@ const BenefitsAndCharts = (props) => {
             </H3>
           </Div>
           <Div flexDirection="column" gap="48px">
-            {data.benefits_and_charts.charts.list.map(
-              (chart, index) => (
+            {data.benefits_and_charts.charts.list.map((chart, index) => (
+              <Div
+                height="auto"
+                key={`${chart.icon}-${index}`}
+                alignItems="center"
+                padding="0 5px 0 20px"
+                padding_tablet="0 5px 0 10px"
+                gap="40px"
+              >
                 <Div
-                  height="auto"
-                  key={`${chart.icon}-${index}`}
-                  alignItems="center"
-                  padding="0 5px 0 20px"
-                  padding_tablet="0 5px 0 10px"
-                  gap="40px"
+                  flexDirection="column"
+                  alignSelf="center"
+                  padding="0 8px 0 0"
                 >
-                  <Div
-                    flexDirection="column"
-                    alignSelf="center"
-                    padding="0 8px 0 0"
-                  >
-                    <Icon icon={chart.icon} width="65px" />
-                  </Div>
-                  <Paragraph
-                    textAlign="left"
-                    fontSize="15px"
-                    fontWeight="400"
-                    lineHeight="22px"
-                  >
-                    {chart.description}
-                  </Paragraph>
+                  <Icon icon={chart.icon} width="65px" />
                 </Div>
-              )
-            )}
+                <Paragraph
+                  textAlign="left"
+                  fontSize="15px"
+                  fontWeight="400"
+                  lineHeight="22px"
+                >
+                  {chart.description}
+                </Paragraph>
+              </Div>
+            ))}
           </Div>
         </Div>
       </Div>
