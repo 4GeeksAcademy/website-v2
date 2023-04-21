@@ -2,15 +2,8 @@ import React, { useEffect, useState, useRef } from "react";
 import { Link } from "gatsby";
 import { isCustomBarActive } from "../actions";
 import BaseRender from "./_baseLayout";
-import {
-  Div,
-  HR,
-  GridContainer,
-} from "../components/Sections";
-import {
-  H2,
-  Paragraph,
-} from "../components/Heading";
+import { Div, HR, GridContainer } from "../components/Sections";
+import { H2, Paragraph } from "../components/Heading";
 import { Button, Colors } from "../components/Styling";
 import { beHiringPartner } from "../actions";
 import { SessionContext } from "../session";

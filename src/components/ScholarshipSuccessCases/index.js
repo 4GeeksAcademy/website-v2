@@ -9,7 +9,6 @@ import Fragment from "../Fragment";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 const ScholarshipSuccessCases = ({ content }) => {
-
   return (
     <Fragment>
       <GridContainer fluid height="520px" display="block" margin="0 0 10px 0">
