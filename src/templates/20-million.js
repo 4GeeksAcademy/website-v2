@@ -477,6 +477,7 @@ export const query = graphql`
               iso
               name
             }
+            contributor
             description
             achievement
           }
