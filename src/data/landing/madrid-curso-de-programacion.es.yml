@@ -35,7 +35,7 @@ apply_schollarship: # form that is displayed at the end of the landing
 # jumbotron on the top (cannot be commented out)
 header_data:
   background: "#FFF1D1"
-  tagline: Conviértete en Full-Stack Developer en 16 semanas. Desarrolla proyectos reales y recibe mentorías de programadores senior.
+  tagline: Conviértete en Full-Stack Developer en 18 semanas. Desarrolla proyectos reales y recibe mentorías de programadores senior.
   sub_heading: "El 86% de nuestros alumnos ya han empezado su carrera en el sector tech con un salario medio de 22.000€ al año."
   badge: "../../../static/images/badges/switchup.png"
   image_filter: brightness(0.3)
