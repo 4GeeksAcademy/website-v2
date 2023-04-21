@@ -1,11 +1,11 @@
 import React, { useRef } from "react";
-import Link from "gatsby-link";
 import { H2, H3, H4, Paragraph } from "../Heading";
 import Slider from "react-slick";
 import { Div, HR } from "../Sections";
 import { StyledBackgroundSection } from "../Styling";
 import { Button, Colors } from "../Styling";
 import Icon from "../Icon";
+import { smartRedirecting } from "../../utils/utils.js";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -225,27 +225,26 @@ const ScholarshipProjects = ({ content }) => {
                   </H4>
                   <Div flexWrap="wrap" gap="10px">
                     {project.press.map((obj) => (
-                      <Link to={obj.link} target="_blank">
-                        <Button
-                          // width="200px"
-                          padding="5px"
-                          padding_xs="5px"
-                          padding_tablet="5px"
-                          width_tablet="fit-content"
-                          variant="outline"
-                          icon={
-                            <Icon
-                              icon="link"
-                              stroke={Colors.black}
-                              style={{ marginRight: "5px" }}
-                            />
-                          }
-                          color={Colors.black}
-                          textColor={Colors.black}
-                        >
-                          {obj.name}
-                        </Button>
-                      </Link>
+                      <Button
+                        // width="200px"
+                        padding="5px"
+                        padding_xs="5px"
+                        padding_tablet="5px"
+                        width_tablet="fit-content"
+                        variant="outline"
+                        onClick={(e) => smartRedirecting(e, obj.link)}
+                        icon={
+                          <Icon
+                            icon="link"
+                            stroke={Colors.black}
+                            style={{ marginRight: "5px" }}
+                          />
+                        }
+                        color={Colors.black}
+                        textColor={Colors.black}
+                      >
+                        {obj.name}
+                      </Button>
                     ))}
                   </Div>
                 </Div>

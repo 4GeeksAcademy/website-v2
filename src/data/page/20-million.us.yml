@@ -29,11 +29,17 @@ two_column_left:
     font_size: ["16px", "16px", "16px", "16px", "16px"]
   content:
     font_size: ["16px"]
-    text: |
-      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec,
+    text: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec,
   button:
       text: "JOIN OUR ALLIES"
       color: "white"
       background: "blue"
       hover_color: "white"
       path: "#top"
+
+form:
+  title: "Become a 4Geeks Partner"
+  paragraph: "Contact us and we'll connect you directly to the right candidates who are graduating from 4Geeks Academy every day.
+  Our graduates succeed at their own businesses, startups and big companies alike.
+
+  Our programs prepare students to work and thrive at any tech and forward-thinking organization."

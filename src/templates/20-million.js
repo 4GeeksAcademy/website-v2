@@ -3,48 +3,25 @@ import { Link } from "gatsby";
 import { isCustomBarActive } from "../actions";
 import BaseRender from "./_baseLayout";
 import {
-  Container,
-  Header,
-  Column,
-  Wrapper,
-  WrapperImage,
-  Divider,
-  Sidebar,
   Div,
+  HR,
   GridContainer,
 } from "../components/Sections";
 import {
-  Title,
-  H1,
   H2,
-  H3,
-  H4,
-  H5,
-  Span,
   Paragraph,
 } from "../components/Heading";
 import { Button, Colors } from "../components/Styling";
-import { requestSyllabus } from "../actions";
+import { beHiringPartner } from "../actions";
 import { SessionContext } from "../session";
-import ProgramDetails from "../components/ProgramDetails";
-import ProgramDetailsMobile from "../components/ProgramDetailsMobile";
-import PricesAndPayment from "../components/PricesAndPayment_v2";
-import Modal from "../components/Modal";
 import LeadForm from "../components/LeadForm";
-import AlumniProjects from "../components/AlumniProjects";
-import Badges from "../components/Badges";
-import TechsWeTeach from "../components/TechsWeTeach";
 import { Circle } from "../components/BackgroundDrawing";
-import UpcomingDates from "../components/UpcomingDates";
-import GeeksInfo from "../components/GeeksInfo";
 import Testimonials from "../components/Testimonials";
 import OurPartners from "../components/OurPartners";
 import ScholarshipProjects from "../components/ScholarshipProjects";
 import ScholarshipSuccessCases from "../components/ScholarshipSuccessCases";
 import BenefitsAndCharts from "../components/BenefitsAndCharts";
-import CourseBlogs from "../components/CourseBlogs";
 import { TwoColumn } from "../components/Landing";
-import Icon from "../components/Icon";
 
 const TwentyMillion = ({ data, pageContext, yml }) => {
   const { session } = React.useContext(SessionContext);
@@ -160,7 +137,7 @@ const TwentyMillion = ({ data, pageContext, yml }) => {
           display="none"
           display_tablet="inline"
         />
-        {/* <Circle
+        <Circle
           color="blue"
           width="30px"
           height="30px"
@@ -169,7 +146,7 @@ const TwentyMillion = ({ data, pageContext, yml }) => {
           zIndex="1"
           display="none"
           display_tablet="inline"
-        /> */}
+        />
         <Circle
           color="white"
           width="17px"
@@ -224,7 +201,7 @@ const TwentyMillion = ({ data, pageContext, yml }) => {
           width="15px"
           height="15px"
           top="92px"
-          left="24px"
+          left="14px"
           zIndex="1"
           display="inline"
           display_tablet="none"
@@ -330,7 +307,7 @@ const TwentyMillion = ({ data, pageContext, yml }) => {
         margin="0"
       >
         <TwoColumn
-          left={{ image: ymlTwoColumn.image, video: ymlTwoColumn.video }}
+          left={{ image: ymlTwoColumn.image }}
           right={{
             heading: ymlTwoColumn.heading,
             sub_heading: ymlTwoColumn.sub_heading,
@@ -345,6 +322,46 @@ const TwentyMillion = ({ data, pageContext, yml }) => {
       <ScholarshipSuccessCases
         content={data.allScholarshipSuccessCasesYaml.edges[0].node}
       />
+      <HR
+        background={Colors.verylightGray}
+        width="100%"
+        height="5px"
+        margin="40px 0"
+      />
+      <GridContainer
+        columns_tablet="12"
+        padding="0 17px 40px 17px"
+        padding_tablet="0"
+        margin_tablet="0 0 81px 0"
+      >
+        <Div
+          ref={joinPartnersRef}
+          gridColumn_tablet="1 / 7"
+          flexDirection="column"
+        >
+          <H2 textAlign_md="left" margin="0 0 30px 0">
+            {yml.form.title}
+          </H2>
+          {yml.form.paragraph.split("\n").map((m, i) => (
+            <Paragraph
+              key={i}
+              margin="7px 0"
+              textAlign_md="left"
+              dangerouslySetInnerHTML={{ __html: m }}
+            />
+          ))}
+        </Div>
+        <Div flexDirection="column" gridColumn_tablet="7 / 13">
+          <LeadForm
+            formHandler={beHiringPartner}
+            // handleClose={handleClose}
+            enableAreaCodes={false}
+            lang={pageContext.lang}
+            inputBgColor={Colors.white}
+            fields={["full_name", "email", "phone"]}
+          />
+        </Div>
+      </GridContainer>
     </>
   );
 };
@@ -390,6 +407,10 @@ export const query = graphql`
               hover_color
               path
             }
+          }
+          form {
+            title
+            paragraph
           }
         }
       }
