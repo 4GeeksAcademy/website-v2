@@ -42,7 +42,7 @@ header_data:
   background: "#FFF1D1"
   tagline: Curso de NodeJS
   sub_heading: "<Continua programando tu historia/> ¡Aprende nuevas tecnologías!"
-  badge: "../../../static/images/badges/switchup.png"
+  badge: "../../../static/images/badges/Course-Report-Badge-2023.png"
   image_filter: brightness(0.3)
 
 features:

@@ -14,7 +14,7 @@ meta_info:
   # Set a particular course or location to the landing page
   # this UTM fields will be also included in the CRM contact
   utm_course: ["full-stack"]
-  utm_location: bogota-colombia
+  utm_location: quito-ecuador
   automation: strong # comma separated, "soft" is the default value
   tag: website-lead # comma separated, "request_more_info" is the default value
 
@@ -43,7 +43,7 @@ header_data:
   background: "#FFF1D1"
   tagline: Bootcamp de Programación en Ecuador 
   sub_heading: Aprende a programar desde cero o mejora tus habilidades en programación y recibe soporte técnico y profesional de por vida.
-  badge: "../../../static/images/badges/switchup.png"
+  badge: "../../../static/images/badges/Course-Report-Badge-2023.png"
   image_filter: brightness(0.3)
 
 features:
@@ -67,8 +67,8 @@ short_badges:
     alt: "Top Coding Bootcamps Newsweek"
   - name: "Switchup"
     url: ""
-    image: "../../../static/images/badges/reviews.png"
-    alt: "Best coding bootcamp Switchup 2021" 
+    image: "../../../static/images/badges/Course-Report-Badge-2023.png"
+    alt: "Best coding bootcamp Course Report 2023" 
 
 follow_bar:
   position: "top" # top, bottom, hidden

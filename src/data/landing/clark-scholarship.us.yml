@@ -40,7 +40,7 @@ apply_schollarship: # form that is displayed at the end of the landing
 header_data:
   background: "#FFF1D1"
   tagline: Learn to code and get a $4,000 Scholarship 
-  badge: "../../../static/images/badges/switchup.png"
+  badge: "../../../static/images/badges/Course-Report-Badge-2023.png"
   image_filter: brightness(0.3)
 
 features:

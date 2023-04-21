@@ -37,7 +37,7 @@ header_data:
   background: "#FFF1D1"
   tagline: Conviértete en Full-Stack Developer en 18 semanas. Desarrolla proyectos reales y recibe mentorías de programadores senior.
   sub_heading: "El 86% de nuestros alumnos ya han empezado su carrera en el sector tech con un salario medio de 22.000€ al año."
-  badge: "../../../static/images/badges/switchup.png"
+  badge: "../../../static/images/badges/Course-Report-Badge-2023.png"
   image_filter: brightness(0.3)
 
 features:
