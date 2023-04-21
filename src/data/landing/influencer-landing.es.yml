@@ -1,0 +1,106 @@
+meta_info:
+  slug: academia-programacion # <--- URL 4geeksacademy.com/es/landing/academia-programacion
+# landing para campañas con influencers
+  visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
+  # This will show on social media when shared
+  title: "Academia de Programación Online"
+  description: "La programación es esencial para tu éxito profesional, únete a 4Geeks Academy, el bootcamp de programación número uno en Latinoamérica."
+  image: "../../../static/images/bg/main-bg.jpg"
+  keywords: "Aprende a programar, 4Geeks academy, aprende programacion, aprende ingenieria informatica, curso programacion"
+
+  template: "landing_a" # <--- choose your landing template
+  redirects: ["/"] # <--- URL redirections to avoid 404 errors
+
+  # Set a particular course or location to the landing page
+  # this UTM fields will be also included in the CRM contact
+  utm_course: ["full-stack"]
+  utm_location: online
+  automation: soft # comma separated, "soft" is the default value
+  tag: request_more_info # comma separated, "request_more_info" is the default value
+
+navbar:
+  logoUrl: "#" # relative(/apply), absolute(https://google.com) or id(#componentName)
+  buttonText: "Obtener más información"
+  buttonUrl: "#bottom" # url accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
+
+form:
+  # posible fields: "first_name", "last_name", "full_name", "phone", "email"
+  # always the first_name, email and phone will be mandatory if added.
+  fields: ["full_name", "phone", "email"]
+  margin_md: "0 auto 0 -30px"
+  heading: "Conoce más información"
+  button_label: Obtener más información
+  redirect: "https://marketing892162.typeform.com/to/XhfwihKQ" #you can redirect to another url or entirely diffrent website
+    
+  # jumbotron on the top (cannot be commented out)
+header_data:
+  background: "#FFF1D1"
+  tagline: ¡Bienvenido a 4Geeks Academy! La academia de programación líder en el mundo.
+  tagline_color: "black"
+  sub_heading: Con más de 7 años de experiencia tenemos presencia en USA, Europa y Latinoamérica. En nuestra academia, te enseñamos habilidades y destrezas relevantes para el futuro
+  background_image: "../../../static/images/bg/main-bg.jpg"
+  #video: "https://www.videoask.com/fm984j5nz"
+  image_filter: brightness(0.4)
+
+features:
+  marginTop: 0px #<-- separation between tagline and the bullets
+  #                                         up   left down  right
+  styles: '{ "fontWeight":"500" , "fontSize": "15px", "margin": "10px 0px 0px 0px" , "color": "darkslategray"}'
+  text: Al aprender a programar con 4Geeks Academy tendrás clases online completamente en vivo, la oportunidad de certificarte internacionalmente en poco tiempo y de conseguir tu primer empleo como programador con nuestro apoyo. Descubre cómo puede ser tu vida como un profesional en programación con 4Geeks Academy, ¡comienza ahora!
+
+short_badges:
+  - name: "Premios Excelencia Educativa"
+    url: ""
+    image: "../../../static/images/badges/exelencia-educativa-es.png"
+    alt: "Mejor centro de Coding Bootcamp"
+  - name: "Newsweek"
+    url: ""
+    image: "../../../static/images/badges/newsweek-es.png"
+    alt: "Top Coding Bootcamps Newsweek"
+  - name: "Switchup"
+    url: ""
+    image: "../../../static/images/badges/Course-Report-Badge-2023.png"
+    alt: "Best coding bootcamp Course Report 2023" 
+
+follow_bar:
+  position: "top" # top, bottom, hidden
+  content:
+    text: "Financiamiento sin interés. \n Plan de pago a 12 cuotas."
+    text_mobile: "Financiamiento sin interés. \n Hasta 12 cuotas."
+    # devices:    XL      LG      MD      SM       XS
+    font_size: ["25px", "25px", "25px", "18px", "4.3vw"]
+  button:
+    text: "Obtener más información"
+    path: "#top"
+  phone:
+    text: "Llama"
+
+#
+# ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇
+#
+
+program_details:
+  position: 1
+  heading: "Domina Python, JS y React"
+  sub_heading: "Un curso de programación sobre las tecnologías más usadas del mundo"
+
+why_4geeks:
+  position: 2
+  heading: "¿Por qué 4Geeks?"
+  sub_heading: " "
+
+geeks_vs_others:
+  position: 3
+  heading: "¿Por qué somos tan exitosos?"
+  paragraph: "Un galardonado curso de programación"
+  total_rows: 5
+
+badges:
+  position: 4
+  heading: "4Geeks Academy cuenta con premios y reconocimientos de validan su excelencia"
+
+who_is_hiring:
+  position: 5
+  limit: 4
+  heading: "¿Quién contrata a nuestros alumnos?"
+  sub_heading: "Nos encanta ver crecer a nuestros estudiantes, es por eso que nos esforzamos cada día por tener más aliados, para que puedas trabajar en empresas que te ayuden a seguir creciendo profesionalmente."
