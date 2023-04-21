@@ -46,16 +46,13 @@ const TwentyMillion = ({ data, pageContext, yml }) => {
   return (
     <>
       <Div
-        padding={
+        margin={
           isCustomBarActive(session)
-            ? "130px 30px 42px 30px"
-            : "90px 30px 42px 30px"
+            ? "40px 0 0 0"
+            : "0"
         }
-        padding_tablet={
-          isCustomBarActive(session)
-            ? "160px 130px 72px 130px"
-            : "120px 130px 72px 130px"
-        }
+        padding="90px 30px 42px 30px"
+        padding_tablet="120px 130px 72px 130px"
         position="relative"
         background={Colors.veryLightBlue2}
         display="block"
