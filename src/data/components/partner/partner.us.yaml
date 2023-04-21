@@ -312,7 +312,7 @@ partners_carousel:
       alt: "4Geeks Academy Partner"
       image: "../../../../static/images/partner/partners_enrique_infanzon.jpg"
       paragraph: |
-        "4Geeks has been a great partner for the last 7 years. We have launched full-stack, web development, and AI programs successfully and we have helped more than 400 students already."
+        "4Geeks has been a great partner of us for the last 7 years. We have launched full-stack, web development, and AI programs successfully and we have helped more than 400 students already."
       linkedin: "https://www.linkedin.com/in/enriqueinfanzon"
     - fist_name: "Antonio"
       last_name: "Delgado"
@@ -320,15 +320,15 @@ partners_carousel:
       alt: "4Geeks Academy Partner"
       image: "../../../../static/images/partner/partners_antonio_delgado.jpg"
       paragraph: |
-        "We have recently launched the Miami Tech Coalition and 4Geeks is again showing up with a program and dedication. that allows everyone involved to rely on their experience and program quality."
+        "We have recently launched the Miami Tech Coalition and 4Geeks is again showing up with a program and dedication that allows everyone involved to rely on their experience and program quality."
       linkedin: "https://www.linkedin.com/in/antoniodelgadofornaguera"
     - fist_name: "Vanessa"
       last_name: "Benavides"
-      sub_header: "VP @ United Way Miami"
+      sub_header: "Vice-President @ United Way Miami"
       alt: "4Geeks Academy Partner"
       image: "../../../../static/images/partner/united_way_mini.PNG"
       paragraph: |
-        "Together we have launched the Miami Workforce Project for the benefit of Miami-Dade County residents and we have created a great and positive impact."
+        "Together with 4Geeks we have succesfully launched the Miami Workforce Project for the benefit of Miami-Dade County residents and we have created a great and positive impact."           
       linkedin: "https://www.linkedin.com/in/vanessa-benavides-2a78849/"
     - fist_name: "Dug"
       last_name: "Jones"
@@ -336,15 +336,15 @@ partners_carousel:
       alt: "4Geeks Academy Partner"
       image: "../../../../static/images/partner/partners_dug_jones.jpg"
       paragraph: |
-        "Clark University and 4Geeks have a solid partnership focused on providing partial scholarships for students unemployed or underemployed, and in less than a year we have exceeded by far the expectation we set at the beginning."
+        "We have a solid partnership focused on providing partial scholarships for students unemployed or underemployed, and we have exceeded by far the expectation we set at the beginning."
       linkedin: "https://www.linkedin.com/in/dugjones/"
     - fist_name: "Juan Carlos"
       last_name: "Navarro"
-      sub_header: "Principal Leader of Science and Technology @ Inter-American Development Bank"
+      sub_header: "Principal Leader of Science and Technology @ IDB"
       alt: "4Geeks Academy Partner"
       image: "../../../../static/images/partner/partners_juancarlos_navarro.jpg"
       paragraph: |
-        "4Geeks has been awarded by the IDB as the Coding School designated to carry on the responsibility of providing top-quality coding programs in Costa Rica and Uruguay. Their job, execution, and quality are extraordinary."
+        "4Geeks has been awarded by the IDB as the Coding School designated to carry on the responsibility of providing top-quality coding programs in Costa Rica and Uruguay."
       linkedin: "https://www.linkedin.com/in/juan-carlos-navarro-08948a8/"
     - fist_name: "Anahí"
       last_name: "Lacava"
@@ -352,6 +352,6 @@ partners_carousel:
       alt: "4Geeks Academy Partner"
       image: "../../../../static/images/partner/partners_anahi_lacava.jpg"
       paragraph: |
-        "Desde 2021 venimos trabajando en programas de desarrollo de software full-stack, en formatos part-time y full-time, así como en el lanzamiento del primer programa de Inteligencia artifical y Machine Learning de toda Latinoamérica. Los resultados y el placement de los graduados ha superado todas los objetivos que nos habíamos trazado al principio."
+        "Desde 2021 venimos trabajando en programas de desarrollo de software full-stack y en el lanzamiento del primer programa de Inteligencia Artificial y Machine Learning de toda Latinoamérica."
       linkedin: "https://www.linkedin.com/in/anah%C3%AD-lacava-melgratti/"
     
