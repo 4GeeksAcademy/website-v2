@@ -8,11 +8,7 @@ import Icon from "../Icon";
 import { smartRedirecting } from "../../utils/utils.js";
 
 const JobGuaranteeSmall = ({ content }) => {
-  return (
-    <Div>
-      {content.title}
-    </Div>
-  );
-}
+  return <Div>{content.title}</Div>;
+};
 
 export default JobGuaranteeSmall;
