@@ -33,7 +33,7 @@ form:
 header_data:
   background: "#FFF1D1"
   tagline: Aprende a programar
-  sub_heading: in only 16 weeks (part-time)
+  sub_heading: in only 18 weeks (part-time)
   partner_logo_url: "../../../static/images/partner/landing-jobs.png" #display a logo of the partner
   badge: "../../../static/images/badges/switchup.png"
   image: "../../../static/images/4geeks-main.jpg"
