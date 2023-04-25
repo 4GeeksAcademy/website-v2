@@ -45,7 +45,7 @@ header_data:
 features:
   marginTop: 0px #<-- separation between tagline and the bullets
   #                                         up   left down  right
-  styles: '{ "fontWeight":"500" , "fontSize": "15px", "margin": "10px 0px 0px 0px" , "color": "darkslategray"}'
+  styles: '{"fontSize": "15px", "margin": "10px 0px 0px 0px" , "color": "darkslategray"}'
   text: Al aprender a programar con 4Geeks Academy tendrás clases online completamente en vivo, la oportunidad de certificarte internacionalmente en poco tiempo y de conseguir tu primer empleo como programador con nuestro apoyo. Descubre cómo puede ser tu vida como un profesional en programación con 4Geeks Academy, ¡comienza ahora!
 
 short_badges:
