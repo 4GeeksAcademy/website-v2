@@ -397,7 +397,9 @@ const Program = ({ data, pageContext, yml }) => {
           paragraph={yml.badges.paragraph && yml.badges.paragraph}
         />
       </Header>
-      <JobGuaranteeSmall content={data.allJobGuaranteeSmallYaml.edges[0].node}/>
+      <JobGuaranteeSmall
+        content={data.allJobGuaranteeSmallYaml.edges[0].node}
+      />
       <OurPartners
         background={Colors.verylightGray}
         images={hiring.partners.images}

@@ -6,14 +6,8 @@ import Icon from "../Icon";
 
 const JobGuaranteeSmall = ({ content }) => {
   return (
-    <Div
-      display="block"
-      padding="20px"
-      background={Colors.lightYellow}
-    >
-      {content.title && (
-        <H2 margin="0 0 30px 0">{content.title}</H2>
-      )}
+    <Div display="block" padding="20px" background={Colors.lightYellow}>
+      {content.title && <H2 margin="0 0 30px 0">{content.title}</H2>}
       <Div justifyContent="around" flexWrap="wrap">
         {content.icons.map((icon) => (
           <Div width="225px" flexDirection="column" alignItems="center">
@@ -34,7 +28,12 @@ const JobGuaranteeSmall = ({ content }) => {
         ))}
       </Div>
       {content.link && (
-        <Paragraph margin="30px 0 0 0" fontSize="18px" color={Colors.black} opacity="1">
+        <Paragraph
+          margin="30px 0 0 0"
+          fontSize="18px"
+          color={Colors.black}
+          opacity="1"
+        >
           <Anchor color={`${Colors.black} !important`} to={content.link.url}>
             {content.link.label}
           </Anchor>

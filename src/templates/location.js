@@ -258,7 +258,9 @@ const Location = ({ data, pageContext, yml }) => {
           />
         </Div>
       </GridContainerWithImage>
-      <JobGuaranteeSmall content={data.allJobGuaranteeSmallYaml.edges[0].node}/>
+      <JobGuaranteeSmall
+        content={data.allJobGuaranteeSmallYaml.edges[0].node}
+      />
 
       <Badges
         lang={pageContext.lang}

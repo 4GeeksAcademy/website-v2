@@ -398,7 +398,9 @@ const Program = ({ data, pageContext, yml }) => {
           paragraph={yml.badges.paragraph}
         />
       </Header>
-      <JobGuaranteeSmall content={data.allJobGuaranteeSmallYaml.edges[0].node}/>
+      <JobGuaranteeSmall
+        content={data.allJobGuaranteeSmallYaml.edges[0].node}
+      />
       <ProgramDetails
         details={courseDetails.details}
         lang={pageContext.lang}
