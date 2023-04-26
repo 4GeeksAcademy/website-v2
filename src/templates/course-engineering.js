@@ -19,6 +19,7 @@ import Testimonials from "../components/Testimonials";
 import Badges from "../components/Badges";
 import PricesAndPayment from "../components/PricesAndPayment_v2";
 import Instructors from "../components/Instructors";
+import JobGuaranteeSmall from "../components/JobGuaranteeSmall";
 
 const Program = ({ data, pageContext, yml }) => {
   const { session } = React.useContext(SessionContext);
@@ -375,7 +376,7 @@ const Program = ({ data, pageContext, yml }) => {
           paragraph={yml.badges.paragraph && yml.badges.paragraph}
         />
       </Header>
-
+      <JobGuaranteeSmall content={data.allJobGuaranteeSmallYaml.edges[0].node}/>
       <OurPartners
         background={Colors.verylightGray}
         images={hiring.partners.images}
@@ -817,6 +818,21 @@ export const query = graphql`
             title
             icon
             value
+          }
+        }
+      }
+    }
+    allJobGuaranteeSmallYaml(filter: { fields: { lang: { eq: $lang } } }) {
+      edges {
+        node {
+          title
+          icons {
+            title
+            icon
+          }
+          link {
+            url
+            label
           }
         }
       }

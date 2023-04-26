@@ -32,6 +32,7 @@ import LeadForm from "../components/LeadForm";
 import Modal from "../components/Modal";
 import Instructors from "../components/Instructors";
 import CourseBlogs from "../components/CourseBlogs";
+import JobGuaranteeSmall from "../components/JobGuaranteeSmall";
 
 const Program = ({ data, pageContext, yml }) => {
   const { session } = React.useContext(SessionContext);
@@ -396,6 +397,7 @@ const Program = ({ data, pageContext, yml }) => {
           paragraph={yml.badges.paragraph && yml.badges.paragraph}
         />
       </Header>
+      <JobGuaranteeSmall content={data.allJobGuaranteeSmallYaml.edges[0].node}/>
       <ProgramDetails
         details={courseDetails.details}
         lang={pageContext.lang}
@@ -862,6 +864,21 @@ export const query = graphql`
             title
             icon
             value
+          }
+        }
+      }
+    }
+    allJobGuaranteeSmallYaml(filter: { fields: { lang: { eq: $lang } } }) {
+      edges {
+        node {
+          title
+          icons {
+            title
+            icon
+          }
+          link {
+            url
+            label
           }
         }
       }

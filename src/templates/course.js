@@ -36,6 +36,7 @@ import Badges from "../components/Badges";
 import TechsWeTeach from "../components/TechsWeTeach";
 import { Circle } from "../components/BackgroundDrawing";
 import UpcomingDates from "../components/UpcomingDates";
+import JobGuaranteeSmall from "../components/JobGuaranteeSmall";
 import GeeksInfo from "../components/GeeksInfo";
 import Testimonials from "../components/Testimonials";
 import OurPartners from "../components/OurPartners";
@@ -397,6 +398,7 @@ const Program = ({ data, pageContext, yml }) => {
           paragraph={yml.badges.paragraph}
         />
       </Header>
+      <JobGuaranteeSmall content={data.allJobGuaranteeSmallYaml.edges[0].node}/>
       <ProgramDetails
         details={courseDetails.details}
         lang={pageContext.lang}
@@ -752,6 +754,21 @@ export const query = graphql`
             title
             icon
             value
+          }
+        }
+      }
+    }
+    allJobGuaranteeSmallYaml(filter: { fields: { lang: { eq: $lang } } }) {
+      edges {
+        node {
+          title
+          icons {
+            title
+            icon
+          }
+          link {
+            url
+            label
           }
         }
       }
