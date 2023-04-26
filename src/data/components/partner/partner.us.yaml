@@ -157,9 +157,19 @@ coding:
       image: "../../../../static/images/coding/CodeArt.jpg"
       featured: false
       #locations: ["miami-downtown"]
+      follow: true
+      link: "https://www.code-art.com"
     - name: "Data Science Salon"
       image: "../../../../static/images/coding/DataScienceSalonDSS.png"
       featured: false
+      link: "https://www.datascience.salon"
+      follow: true
+      #locations: ["miami-downtown"]
+    - name: "Grammerhub"
+      image: "../../../../static/images/coding/grammerhub.png"
+      featured: false
+      link: "https://www.grammerhub.org"
+      follow: true
       #locations: ["miami-downtown"]
       
 influencers:
@@ -254,6 +264,9 @@ work_together:
 benefits_and_charts:
   title: "Become part of our Partnership Network"
   description: "These are some of the benefits:"
+  button_section:
+    button_text: "JOIN OUR PARTNERSHIP NETWORK"
+    button_link: ""
   bullets:
     - Access to a big pool of high quality and unique talent.
     - Increase job retention with reskilling programs.
@@ -294,69 +307,54 @@ partners_in_education:
 
 partners_carousel:
   title: "What our partners say"
-  see_full: "See full article here."
+  see_full: ""
   partners:
-    - fist_name: "Jane"
-      last_name: "Doe"
-      sub_header: "CEO @ Globant"
+    - fist_name: "Enrique"
+      last_name: "Infanzon"
+      sub_header: "Dean Continuing Education @ Miami Dade College"
       alt: "4Geeks Academy Partner"
-      image: "../../../../static/images/students/student1.jpg"
+      image: "../../../../static/images/partner/partners_enrique_infanzon.jpg"
       paragraph: |
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur molestie massa et iaculis elementum. Aliquam pellentesque tincidunt dolor.,"
-      linkedin: "https://www.linkedin.com"
-    - fist_name: "Jane"
-      last_name: "Doe"
-      sub_header: "CEO @ Globant"
+        "4Geeks has been a great partner of us for the last 7 years. We have launched full-stack, web development, and AI programs successfully and we have helped more than 400 students already."
+      linkedin: "https://www.linkedin.com/in/enriqueinfanzon"
+    - fist_name: "Antonio"
+      last_name: "Delgado"
+      sub_header: "VP of Innovation and Technology @ Miami Dade College"
       alt: "4Geeks Academy Partner"
-      image: "../../../../static/images/students/student1.jpg"
+      image: "../../../../static/images/partner/partners_antonio_delgado.jpg"
       paragraph: |
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur molestie massa et iaculis elementum. Aliquam pellentesque tincidunt dolor.,"
-      linkedin: "https://www.linkedin.com"
-    - fist_name: "Jane"
-      last_name: "Doe"
-      sub_header: "CEO @ Globant"
+        "We have recently launched the Miami Tech Coalition and 4Geeks is again showing up with a program and dedication that allows everyone involved to rely on their experience and program quality."
+      linkedin: "https://www.linkedin.com/in/antoniodelgadofornaguera"
+    - fist_name: "Vanessa"
+      last_name: "Benavides"
+      sub_header: "Vice-President @ United Way Miami"
       alt: "4Geeks Academy Partner"
-      image: "../../../../static/images/students/student1.jpg"
+      image: "../../../../static/images/partner/united_way_mini.PNG"
       paragraph: |
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur molestie massa et iaculis elementum. Aliquam pellentesque tincidunt dolor.,"
-      linkedin: "https://www.linkedin.com"
-    - fist_name: "Jane"
-      last_name: "Doe"
-      sub_header: "CEO @ Globant"
+        "Together with 4Geeks we have succesfully launched the Miami Workforce Project for the benefit of Miami-Dade County residents and we have created a great and positive impact."           
+      linkedin: "https://www.linkedin.com/in/vanessa-benavides-2a78849/"
+    - fist_name: "Dug"
+      last_name: "Jones"
+      sub_header: "Program Director for Workforce Grants @ Clark University"
       alt: "4Geeks Academy Partner"
-      image: "../../../../static/images/students/student1.jpg"
+      image: "../../../../static/images/partner/partners_dug_jones.jpg"
       paragraph: |
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur molestie massa et iaculis elementum. Aliquam pellentesque tincidunt dolor.,"
-      linkedin: "https://www.linkedin.com"
-    - fist_name: "Jane"
-      last_name: "Doe"
-      sub_header: "CEO @ Globant"
+        "We have a solid partnership focused on providing partial scholarships for students unemployed or underemployed, and we have exceeded by far the expectation we set at the beginning."
+      linkedin: "https://www.linkedin.com/in/dugjones/"
+    - fist_name: "Juan Carlos"
+      last_name: "Navarro"
+      sub_header: "Principal Leader of Science and Technology @ IDB"
       alt: "4Geeks Academy Partner"
-      image: "../../../../static/images/students/student1.jpg"
+      image: "../../../../static/images/partner/partners_juancarlos_navarro.jpg"
       paragraph: |
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur molestie massa et iaculis elementum. Aliquam pellentesque tincidunt dolor.,"
-      linkedin: "https://www.linkedin.com"
-    - fist_name: "Jane"
-      last_name: "Doe"
-      sub_header: "CEO @ Globant"
+        "4Geeks has been awarded by the IDB as the Coding School designated to carry on the responsibility of providing top-quality coding programs in Costa Rica and Uruguay."
+      linkedin: "https://www.linkedin.com/in/juan-carlos-navarro-08948a8/"
+    - fist_name: "Anahí"
+      last_name: "Lacava"
+      sub_header: "Líder de proyecto Bootcamps en Habilidades Digitales @ UTEC"
       alt: "4Geeks Academy Partner"
-      image: "../../../../static/images/students/student1.jpg"
+      image: "../../../../static/images/partner/partners_anahi_lacava.jpg"
       paragraph: |
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur molestie massa et iaculis elementum. Aliquam pellentesque tincidunt dolor.,"
-      linkedin: "https://www.linkedin.com"
-    - fist_name: "Jane"
-      last_name: "Doe"
-      sub_header: "CEO @ Globant"
-      alt: "4Geeks Academy Partner"
-      image: "../../../../static/images/students/student1.jpg"
-      paragraph: |
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur molestie massa et iaculis elementum. Aliquam pellentesque tincidunt dolor.,"
-      linkedin: "https://www.linkedin.com"
-    - fist_name: "Jane"
-      last_name: "Doe"
-      sub_header: "CEO @ Globant"
-      alt: "4Geeks Academy Partner"
-      image: "../../../../static/images/students/student1.jpg"
-      paragraph: |
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur molestie massa et iaculis elementum. Aliquam pellentesque tincidunt dolor.,"
-      linkedin: "https://www.linkedin.com"
+        "Desde 2021 venimos trabajando en programas de desarrollo de software full-stack y en el lanzamiento del primer programa de Inteligencia Artificial y Machine Learning de toda Latinoamérica."
+      linkedin: "https://www.linkedin.com/in/anah%C3%AD-lacava-melgratti/"
+    

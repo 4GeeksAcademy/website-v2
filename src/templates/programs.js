@@ -13,7 +13,7 @@ const Programs = ({ data, pageContext, yml }) => {
   return (
     <>
       <GridContainerWithImage
-        id="bottom"
+        id="header"
         background={Colors.veryLightBlue2}
         imageSide="right"
         padding={

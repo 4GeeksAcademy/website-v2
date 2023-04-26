@@ -43,7 +43,7 @@ header_data:
   background: "#FFF1D1"
   tagline: Empleo Garantizado en 6 meses con nuestro programa Full-Stack Developer 
   sub_heading: Si no consigues empleo con nuestro Programa te devolvemos tu dinero. Da el paso hoy y Conviértete en Full-Stack Developer.
-  badge: "../../../static/images/badges/switchup.png"
+  badge: "../../../static/images/badges/Course-Report-Badge-2023.png"
   image_filter: brightness(0.3)
 
 features:
@@ -166,7 +166,7 @@ components:
         #           xl      lg      md      sm      xs
       font_size: ["50px", "50px", "50px", "50px", "50px"]
     content:
-      text: "Nuestro programa está basado en el uso de Python y Javascript. ¿La razón? En el mercado laboral JavaScript tiene 26 veces más vacantes de trabajo que Ruby on Rails y Python te permite acceder a distintas áreas del mundo de la programación.
+      text: "Nuestro programa está basado en el uso de Python y Javascript. ¿La razón? En el mercado laboral JavaScript tiene 26 veces más vacantes de trabajo que Ruby on Rails y Python te permite acceder a distintas áreas del mundo de la programación."
       
       Otras herramientas que también aprenderás a usar en nuestro programa son: HTML5, CSS3, React, Flask, etc."
       font_size: ["16px"]

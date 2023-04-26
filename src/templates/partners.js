@@ -21,6 +21,7 @@ import Modal from "../components/Modal";
 import { SessionContext } from "../session";
 import LeadForm from "../components/LeadForm/index.js";
 import PartnersCarousel from "../components/PartnersCarousel";
+import BenefitsAndCharts from "../components/BenefitsAndCharts";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 function rand() {
@@ -106,7 +107,7 @@ const Partners = (props) => {
           />
         </Div>
       </GridContainer>
-      {/* <PartnersCarousel data={partnersData.partners_carousel} /> */}
+      <PartnersCarousel data={partnersData.partners_carousel} />
       <GridContainer
         // padding="10rem 0 4rem"
         // padding_tablet="10rem 0 4rem"
@@ -229,152 +230,7 @@ const Partners = (props) => {
         </Grid>
       </GridContainer>
 
-      <Div
-        display="flex"
-        flexDirection="column"
-        gap="50px"
-        padding="52px 0"
-        flexDirection_tablet="row"
-      >
-        <Div
-          flexDirection="column"
-          flex="1"
-          flex_tablet="1"
-          padding="0 10px"
-          padding_tablet="45px 0 0 14%"
-        >
-          <H2 type="h2" textAlign="left">
-            {partnersData.benefits_and_charts.title}
-          </H2>
-          <Paragraph
-            textAlign="left"
-            fontSize="15px"
-            color="#3A3A3A"
-            padding="20px 0 30px 0"
-            padding_tablet="20px 0 30px 0"
-            letterSpacing="0.05em"
-          >
-            {partnersData.benefits_and_charts.description}
-          </Paragraph>
-
-          {Array.isArray(partnersData.benefits_and_charts.bullets) && (
-            <Div
-              display="flex"
-              flexDirection="column"
-              gridGap="0"
-              padding="0 0 30px 0"
-              padding_tablet="0 0 30px 0"
-            >
-              {partnersData.benefits_and_charts.bullets.map((p, index) => (
-                <Div
-                  key={index}
-                  borderBottom={`${
-                    index !==
-                    partnersData.benefits_and_charts.bullets.length - 1
-                      ? "1px solid #EBEBEB"
-                      : "0"
-                  }`}
-                  height="auto"
-                  alignItems="center"
-                  padding="0"
-                  padding_tablet="0 10% 0 0"
-                >
-                  <Div
-                    flexDirection="column"
-                    // alignSelf="center"
-                    alignSelf="flex-start"
-                    padding="22px 10px 20px 0"
-                  >
-                    <Icon
-                      icon="check"
-                      width="18px"
-                      color={Colors.yellow}
-                      fill={Colors.yellow}
-                    />
-                  </Div>
-                  <H2
-                    type="h3"
-                    padding="20px 0"
-                    textAlign="left"
-                    fontSize="15px"
-                    fontWeight="400"
-                    lineHeight="22px"
-                  >
-                    {p}
-                  </H2>
-                </Div>
-              ))}
-            </Div>
-          )}
-
-          <ButtonPartner />
-        </Div>
-
-        <Div
-          flexDirection="column"
-          flex="1"
-          flex_tablet="1"
-          padding="20px 10px 40px 10px"
-          padding_tablet="4% 10% 2% 6%"
-          background={Colors.lightYellow}
-        >
-          <Div
-            height="auto"
-            alignItems="center"
-            gap="40px"
-            padding="0 5px 0 20px"
-            padding_tablet="0 5px 0 10px"
-          >
-            <Div
-              flexDirection="column"
-              alignSelf="center"
-              padding="0 8px 0 0"
-              style={{ opacity: 0 }}
-            >
-              <Icon icon="job" width="65px" />
-            </Div>
-            <H3
-              type="h3"
-              textAlign="left"
-              fontSize="15px"
-              textTransform="uppercase"
-              letterSpacing="0.05em"
-            >
-              {partnersData.benefits_and_charts.charts.title}
-            </H3>
-          </Div>
-          <Div flexDirection="column" gap="48px">
-            {partnersData.benefits_and_charts.charts.list.map(
-              (chart, index) => (
-                <Div
-                  height="auto"
-                  key={`${chart.icon}-${index}`}
-                  alignItems="center"
-                  padding="0 5px 0 20px"
-                  padding_tablet="0 5px 0 10px"
-                  gap="40px"
-                >
-                  <Div
-                    flexDirection="column"
-                    alignSelf="center"
-                    padding="0 8px 0 0"
-                  >
-                    <Icon icon={chart.icon} width="65px" />
-                  </Div>
-                  <Paragraph
-                    textAlign="left"
-                    fontSize="15px"
-                    fontWeight="400"
-                    lineHeight="22px"
-                  >
-                    {chart.description}
-                  </Paragraph>
-                </Div>
-              )
-            )}
-          </Div>
-        </Div>
-      </Div>
+      <BenefitsAndCharts data={partnersData} goToForm={goToForm} />
 
       <OurPartners
         marquee
@@ -686,6 +542,8 @@ export const query = graphql`
           coding {
             images {
               name
+              link
+              follow
               image {
                 childImageSharp {
                   gatsbyImageData(
@@ -761,6 +619,10 @@ export const query = graphql`
             title
             description
             bullets
+            button_section {
+              button_text
+              button_link
+            }
             charts {
               title
               list {
