@@ -166,7 +166,7 @@ part_time:
 
   - slug: 'miami-uwm-pt'
     academies: ['downtown-miami']
-    recomended: false
+    recomended: true
     scholarship: " No hay excusas. No pages nada si vives o trabajas en Miami"
     payment_time: "Adicionalmente puedes optar por pagos de tus costos (estipendios) de vida si cumples las condiciones."
     price: "$0"
@@ -177,52 +177,64 @@ part_time:
       - "/images/landing/uwm_pantone_2021_2.png"
 
   - slug: 'usa-clark-scholarship-pt'
-    academies: ['downtown-miami', 'orlando']
+    academies: ['orlando']
     recomended: true
-    scholarship: "Scolarship"
-    payment_time: "Pay today"
-    price: "$4999"
+    scholarship: "Beca"
+    payment_time: "Puedes pagar en 3 o 4 partes"
+    price: "$5999"
     bullets: 
-      - "You're saving $4000 USD "
-      - "9% of your salary until paid in full, only if you get a job in tech."
-    # icons: 
-    #   - "/images/landing/uwm_pantone_2021_2.png"
+      - "Ahorras $4000 USD. Gracias al Clark University TechBoost Fund"
+      - "Tienes que estar desempleado o subempleado, y contar con un permiso de trabajo en US válido."
+    icons: 
+      - "/static/images/clarkuniversity.png"
+
+  - slug: 'usa-clark-scholarship-pt-miami'
+    academies: ['downtown-miami']
+    recomended: false
+    scholarship: "Beca"
+    payment_time: "Puedes pagar en 3 o 4 partes"
+    price: "$5999"
+    bullets: 
+      - "Ahorras $4000 USD. Gracias al Clark University TechBoost Fund"
+      - "Tienes que estar desempleado o subempleado, y contar con un permiso de trabajo en US válido."
+    icons: 
+      - "/static/images/clarkuniversity.png"      
 
   - slug: 'usa-financed-pt'
-    academies: ['downtown-miami', 'orlando']
+    academies: ['orlando']
     recomended: false
-    scholarship: "Financed"
-    payment_time: "24 months payment"
-    price: "$310"
+    scholarship: "Financiado"
+    payment_time: "Pagos en 24 meses"
+    price: "~$150p/m"
     bullets: 
-      - "With $400 p/ week living stipends"
-      - "9% of your salary until paid in full, only if you get a job in tech."
+      - "Varios partners ofreciendo préstamos y planes de pago"
+      - "Puedes obtener una beca parcial y el balance restante con un plan de pago"
     icons: 
       - "/images/ascent_logo.jpg"
       - "/images/climb-logo.png"
       - "/images/quotanda-logo.png"
 
-  - slug: 'usa-isa-pt'
-    academies: ['downtown-miami', 'orlando']
-    recomended: false
-    scholarship: "Income Share Agreement"
-    payment_time: "Pay after you get a job"
-    price: "$0"
-    bullets: 
-      - "With $400 p/ week living stipends"
-      - "9% of your salary until paid in full, only if you get a job in tech."
-    icons: 
-      - "/images/ascent_logo.jpg"
-      - "/images/climb-logo.png"
-      - "/images/quotanda-logo.png"
   - slug: 'usa-upfront-pt'
     recomended: false
-    academies: ['downtown-miami', 'orlando']
-    scholarship: "Full Payment"
-    payment_time: "Pay today"
-    price: "$8099"
+    academies: ['orlando']
+    scholarship: "Pago Completo"
+    payment_time: "Paga hoy"
+    price: "$8999"
+    original_price: "$9999"
     bullets: 
-      - "You're saving $1000 USD"
+      - "Ahorras $1000 USD"
+
+  - slug: 'usa-isa-pt'
+    academies: ['orlando']
+    recomended: false
+    scholarship: "Plan de Paga Cuando Consigas Trabajo"
+    payment_time: "Paga después de obtener trabajo"
+    price: "$0"
+    bullets: 
+      - "Con $400 p/ semana en gastos de vida"
+      - "8.5% de tu salario hasta el pago completo, sólo si consigues un trabajo en tech."
+    icons: 
+      - "/static/images/miashare.png"      
 
   - slug: 'spain-scholarships-fs-pt'
     academies: ['barcelona-spain', 'madrid-spain', 'malaga-spain', 'valencia-spain']
