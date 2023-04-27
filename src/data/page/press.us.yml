@@ -15,35 +15,35 @@ header:
 
 content:
   heading: "Read about this coding bootcamp in the news..."
-  limit: 4
+  limit: 7
   news:
     - name: "Forbes"
       logo: "../../../static/images/news/forbes.png"
-#      location: ["downtown-miami", "online", "madrid-spain"]
+      location: ["downtown-miami", "online", "madrid-spain"]
       image: "../../../static/images/partner/forbes-coder.jpg"
       title: "Web Development Coding Bootcamp"
       text: "On a research made and published by Forbes while specified all the possible ways you can become a web developer in the USA."
       textUrl: "Read Article"
       url: "https://www.forbes.com/advisor/education/what-is-web-development"
-    - name: "Newsweek"
-      logo: "../../../static/images/news/newsweek.png"
-#      location: ["downtown-miami", "online", "madrid-spain"]
-      image: "../../../static/images/news/newsWeek-TopCodingSchools-2017.png"
-      title: "Top Coding Bootcamps"
-      text: "Ranked one of the top coding bootcamps in a US-based study published by Newsweek highlighting our part-time based education and 4 cornerstones that make 4Geeks a successful coding school"
+    - name: "BusinessWire"
+      logo: "../../../static/images/news/businesswire.png"
+      #location: ["downtown-miami", "online", "madrid-spain"]
+      image: "../../../static/images/news/businesswire-2021-2025market.jpg"
+      title: "Global Coding Bootcamp Market 2021-2025"
+      text: "The publisher's robust vendor analysis is designed to help clients improve their market position, and in line with this, this report provides a detailed analysis of several leading coding bootcamp market vendors that include 4Geeks Academy LLC"
       textUrl: "Read Article"
-      url: "https://www.newsweek.com/insights/coding-career-and-you-top-coding-schools-2017/4geeks-academy"
-    - name: "CNN Español"
-      logo: "../../../static/images/news/cnn-chile.png"
-      location: ["santiago-chile", "online", "downtown-miami", "bogota-colombia", "mexicocity-mexico", "costa-rica", "lima-peru", "buenosaires-argentina", "lapaz-bolivia", "montevideo-uruguay", "quito-ecuador"]
-      image: "../../../static/images/news/4GA-CNN-Chile.png"
-      title: "4Geeks in Chile"
-      text: "Thanks to our friends at CNN Chile for being present at our event and publishing such good material about the future in education that we offer to the Santiago community through our #Bootcamp de #Programming program."
+      url: "https://www.businesswire.com/news/home/20210519005401/en/Global-Coding-Bootcamp-Market-2021-2025---Low-Cost-of-Bootcamps-and-an-Increase-in-Student-Enrollments-to-Drive-Growth---ResearchAndMarkets.com"
+    - name: "Refresh Miami"
+      logo: "../../../static/images/news/refresh-miami.png"
+      #location: ["santiago-chile", "online", "downtown-miami", "bogota-colombia", "mexicocity-mexico", "costa-rica", "lima-peru", "buenosaires-argentina", "lapaz-bolivia", "montevideo-uruguay", "quito-ecuador"]
+      image: "../../../static/images/news/refresh-miami-2023.jpg"
+      title: "Miami-based coding school 4Geeks is breaking down the barriers to becoming a software developer"
+      text: "Miami-based Marcelo Ricigliano is helping South Floridians hope on these trends and change their lives. Ricigliano is the CEO of coding school 4Geeks Academy, which aims to lower the barrier to entry to tech jobs."
       textUrl: "See Interview"
-      url: "https://www.facebook.com/4GeeksAcademyCL/videos/492034597993382/"
+      url: "https://refreshmiami.com/miami-based-coding-school-4geeks-is-breaking-down-the-barriers-to-becoming-a-software-developer/"
     - name: "Miami Herald"
       logo: "../../../static/images/news/miami-herald.png"
-      location: ["santiago-chile", "online", "downtown-miami", "bogota-colombia", "mexicocity-mexico", "costa-rica", "lima-peru", "buenosaires-argentina", "lapaz-bolivia", "montevideo-uruguay", "quito-ecuador"]
+      #location: ["santiago-chile", "online", "downtown-miami", "bogota-colombia", "mexicocity-mexico", "costa-rica", "lima-peru", "buenosaires-argentina", "lapaz-bolivia", "montevideo-uruguay", "quito-ecuador"]
       image: "../../../static/images/partner/united-way-schoolarship.jpeg"
       title: "Learn to Code Scholarships"
       text: "After a lot of hard word we were able to partner with United Way to offer 100 schollarships in minority populations to become a software engineer or software developer"
@@ -51,17 +51,17 @@ content:
       url: "https://www.miamiherald.com/news/business/article263937731.html"
     - name: "NBC"
       logo: "../../../static/images/news/nbc.png"
-      location: ["downtown-miami", "orlando"]
+      #location: ["downtown-miami", "orlando"]
       image: "../../../static/images/news/4GA-NBC-student-autism.png"
       title: "Student With Autism Learns to Code"
       text: "Victor Fitchhorn, who has autism, is learning how to code at Miami-based 4Geeks Academy, a coding bootcamp. NBC 6's Ari Odzer reports."
       textUrl: "Watch Video"
       url: "https://www.nbcmiami.com/on-air/as-seen-on/students-with-autism-learn-to-code_miami/159640/"
-    - name: "La Razón"
-      logo: "../../../static/images/news/larazon.png"
-      location: ["madrid-spain", "barcelona-spain", "valencia-spain", "malaga-spain"]
+    - name: "Newsweek"
+      logo: "../../../static/images/news/newsweek.png"
+      #location: ["downtown-miami", "online", "madrid-spain"]
       image: "../../../static/images/news/newsWeek-TopCodingSchools-2017.png"
-      title: "Supporting each other when learning how to code"
-      text: "In the middle of the COVID-19 crisis, we decided to increase our scholarship programs in Spain exponentially, receiving great recognition from the local and international press."
-      textUrl: "Read more"
-      url: "https://www.elespanol.com/invertia/disruptores-innovadores/innovadores/20200317/movimiento-solidario-ensenar-programacion-crisis-covid-19/475454655_0.html"
+      title: "A Coding Career and You  - Top Coding Schools 2017"
+      text: "Profundizamos a un nivel avanzado principios específicos de desarrollo, llevando tu carrera a otro nivel."
+      textUrl: "Leer Artículo"
+      url: "https://www.newsweek.com/insights/coding-career-and-you-top-coding-schools-2017/4geeks-academy"

@@ -6,7 +6,7 @@ staff:
     last_name: "Sanchez"
     nick_name: "Alesanchezr"
     slug: "alejandro-sanchez"
-    job_title: "Co-Founder - Director"
+    job_title: "Co-Founder & Technology Director"
     bio: "22 yrs coding, Software Engineer."
     github: "https://github.com/alesanchezr"
     linkdin: "https://www.linkedin.com/in/alesanchezr/"
@@ -24,7 +24,7 @@ staff:
     nick_name: "MRicigliano"
     slug: marcelo-ricigliano
     bio: "Named by Forbes and Newsweek for his Startup achievements. Tech Startup Mentor of Founder Institute, Startup Chile and Impaqto. Sold 2 companies. 4 startup fails. Law and Master degree from Stockholm Universitet."
-    job_title: "Co-Founder - Director"
+    job_title: "Co-founder & CEO"
     github: ""
     linkdin: "https://www.linkedin.com/in/marcelo-ricigliano-32440379/"
     twitter: "https://twitter.com/MRiciglianoC"
@@ -41,7 +41,7 @@ staff:
     last_name: "Landra"
     nick_name: ""
     slug: 
-    job_title: "Florida Manager"
+    job_title: "Partnership & Program Manager"
     github: ""
     bio: "I graduated from the AACSB Accredited State University of New York at Plattsburgh School of Business and Economics with a BA in Marketing & Business Administration with honors."
     linkdin: "https://www.linkedin.com/in/alissalandra/"
@@ -58,7 +58,7 @@ staff:
     last_name: "Gomez"
     nick_name: ""
     slug: ""
-    job_title: "Regional manager Europe"
+    job_title: "Regional Manager Europe"
     bio: " Industrial Engineer, EAE Business School Master of Business Administration - MBA and Entrepreneur. Named as one of the 250 best references in education in Spain"
     github: ""
     linkdin: "https://www.linkedin.com/in/victormgomezp/"
@@ -75,30 +75,30 @@ staff:
     last_name: "Castro"
     nick_name: ""
     slug: "mafe-castrp"
-    job_title: "VP of Growth"
-    bio: "Leading the efforts of our growth Department for our HP operations."
+    job_title: "CMO"
+    bio: "Leading the efforts of our Marketing Department for our HP operations."
     github: ""
     linkdin: "https://www.linkedin.com/in/mafecasvi/"
     twitter: "https://twitter.com/mafecasvi"
     website: ""
-    image: "../../../../static/images/staff/mafe.jpg"
+    image: "../../../../static/images/staff/mariafernanda.jpg"
     age: 35
     interests:
       - Fashion Design
     coding_skills:
       - Bootstrap
     location: ["all"]
-  - name: "Nacho"
-    last_name: "Cordoba"
-    nick_name: "Nacho"
-    slug: "nacho-cordoba"
+  - name: "Pablo"
+    last_name: "Bullor"
+    nick_name: "Pablo"
+    slug: "pablo-bullor"
     job_title: "Lead Mentor"
-    bio: "Over 12 years of experience in Coding, and more than 4 teaching Coding in the US campus."
-    github: "https://github.com/nachovz"
-    linkdin: "https://www.linkedin.com/in/nachovz/en-us/"
+    bio: "Systems Engineer with more than 10 years of experience in IT."
+    github: "https://github.com/pbullor"
+    linkdin: "https://www.linkedin.com/in/pablobullor/"
     twitter: ""
     website: ""
-    image: "../../../../static/images/staff/nacho.jpg"
+    image: "../../../../static/images/staff/pablobullor2.jpg"
     age: 42
     interests:
       - Board Games
@@ -107,3 +107,22 @@ staff:
     coding_skills:
       - Javascript and Python
     location: ["all"]
+  - name: "Macarena"
+    last_name: "Rebolledo"
+    nick_name: "Macarena"
+    slug: "macarena-rebolledo"
+    job_title: "Lead Mentor"
+    bio: ""
+    github: "https://github.com/mojonapower"
+    linkdin: "https://www.linkedin.com/in/mrebolledovaldivia/"
+    twitter: ""
+    website: ""
+    image: "../../../../static/images/staff/macarenarebolledo.jpg"
+    age: 42
+    interests:
+      - Board Games
+      - Soccer
+      - Music
+    coding_skills:
+      - Javascript and Python
+    location: ["all"]    
