@@ -68,16 +68,6 @@ const TwentyMillion = ({ data, pageContext, yml }) => {
           width="17px"
           height="17px"
           top="116px"
-          left="106px"
-          zIndex="1"
-          display="none"
-          display_tablet="inline"
-        />
-        <Circle
-          color="black"
-          width="17px"
-          height="17px"
-          top="116px"
           left="74px"
           zIndex="1"
           display="none"
@@ -89,6 +79,36 @@ const TwentyMillion = ({ data, pageContext, yml }) => {
           height="17px"
           top="172px"
           left="74px"
+          zIndex="1"
+          display="none"
+          display_tablet="inline"
+        />
+        <Circle
+          color="blue"
+          width="17px"
+          height="17px"
+          top="216px"
+          left="74px"
+          zIndex="1"
+          display="none"
+          display_tablet="inline"
+        />
+        <Circle
+          color="white"
+          width="17px"
+          height="17px"
+          top="298px"
+          left="74px"
+          zIndex="1"
+          display="none"
+          display_tablet="inline"
+        />
+        <Circle
+          color="black"
+          width="17px"
+          height="17px"
+          top="116px"
+          left="106px"
           zIndex="1"
           display="none"
           display_tablet="inline"
@@ -114,11 +134,11 @@ const TwentyMillion = ({ data, pageContext, yml }) => {
           display_tablet="inline"
         />
         <Circle
-          color="blue"
+          color="yellow"
           width="17px"
           height="17px"
-          top="216px"
-          left="74px"
+          top="246px"
+          left="106px"
           zIndex="1"
           display="none"
           display_tablet="inline"
@@ -212,14 +232,16 @@ const TwentyMillion = ({ data, pageContext, yml }) => {
           display="inline"
           display_tablet="none"
         />
-        <Div display="block" maxWidth_tablet="725px">
+        <Div display="block">
           <H2
             type="h2"
             textAlign="left"
+            textAlign_tablet="center"
             fontSize="40px"
             fontSize_tablet="50px"
             lineHeight="38px"
             lineHeight_tablet="60px"
+            margin_tablet="0 0 40px 0"
           >
             {yml.header.title}
           </H2>
@@ -231,6 +253,7 @@ const TwentyMillion = ({ data, pageContext, yml }) => {
             width="auto"
             letterSpacing="0.05em"
             textAlign="left"
+            textAlign_tablet="center"
             fontSize="24px"
             lineHeight="28px"
           >
@@ -239,7 +262,8 @@ const TwentyMillion = ({ data, pageContext, yml }) => {
           <Div
             flexDirection_tablet="row"
             flexDirection="column"
-            // justifyContent="center"
+            justifyContent="start"
+            justifyContent_tablet="center"
             alignItems="center"
             margin_tablet="0 0 50px 0"
           >
