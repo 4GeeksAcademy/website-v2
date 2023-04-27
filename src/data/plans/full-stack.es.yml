@@ -45,6 +45,18 @@ full_time:
     bullets: 
       - "You're saving $1000 USD"
 
+  - slug: 'usa-fs-ft'
+    academies: ['downtown-miami']
+    recomended: false
+    scholarship: "Full Scholarship"
+    payment_time: "If you live or work in Miami"
+    price: "$0"
+    bullets:
+      - "Focus on your career and not how to afford your education"
+      - "8.5% of your salary until paid in full (1.5x revenue cap), only if you get a job in tech."
+    icons: 
+      - ""        
+
   - slug: 'spain-scholarships-fs-ft'
     academies: ['barcelona-spain','madrid-spain', 'malaga-spain', 'valencia-spain']
     recomended: true

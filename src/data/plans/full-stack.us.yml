@@ -16,7 +16,7 @@ full_time:
     scholarship: "Financed"
     payment_time: "24 months payment"
     price: "~$250 per month"
-    bullets: 
+    bullets:
       - "Several partners offering loans and payment plans"
       - "You can get a partial scholarship and the remaining balance with a payment plan"
     icons: 
@@ -34,14 +34,19 @@ full_time:
       - "8.5% of your salary until paid in full, only if you get a job in tech."
     icons: 
       - "/images/landing/uwm_pantone_2021_2.png"
+
   - slug: 'usa-fs-ft'
     academies: ['downtown-miami']
     recomended: false
     scholarship: "Full Scholarship"
     payment_time: "If you live or work in Miami"
     price: "$0"
+    bullets:
+      - "Focus on your career and not how to afford your education"
+      - "8.5% of your salary until paid in full (1.5x revenue cap), only if you get a job in tech."
     icons: 
-      - ""    
+      - ""  
+        
   - slug: 'usa-upfront-ft'
     academies: ['downtown-miami', 'orlando','toronto-canada']
     recomended: false
