@@ -1,27 +1,16 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import { useStaticQuery, graphql, Link } from "gatsby";
 import {
   GridContainer,
-  Container,
-  Column,
-  Divider,
-  Grid,
   Div,
 } from "../Sections";
 import {
-  H1,
   H2,
   H3,
   H4,
-  H5,
-  Title,
-  Separator,
-  Span,
   Paragraph,
 } from "../Heading";
-import { Colors, Button, Anchor } from "../Styling";
-import Card from "../Card";
+import { Colors, Anchor } from "../Styling";
 import Icon from "../Icon";
 
 const ContainerStyle = styled.div`
@@ -76,67 +65,6 @@ const ProgramDetails = (props) => {
   }, []);
   return (
     <>
-      <GridContainer
-        id={props.id}
-        columns_tablet="2"
-        background={props.background || Colors.verylightGray}
-        padding_tablet="76px 0"
-        padding="50px 10px"
-        gridGap="50px"
-      >
-        <Div flexDirection="column">
-          <H3 textAlign="left" margin="0 0 20px 0">
-            {props.details.about?.title && props.details.about?.title}
-          </H3>
-          {props.details.about?.sub_title.split("\n").map((m, i) => (
-            <Paragraph
-              key={i}
-              textAlign="left"
-              margin="10px 0 "
-              fontSize="15px"
-              lineHeight="26px"
-            >
-              {m}
-            </Paragraph>
-          ))}
-        </Div>
-        <Div flexDirection="column" justifyContent="start">
-          {Array.isArray(props.details.about?.list) &&
-            props.details.about?.list.map((m, i) => {
-              return (
-                <Div
-                  key={i}
-                  borderBottom="1px solid #ebebeb"
-                  gap_tablet="0"
-                  gap="20px"
-                  padding="15px 0"
-                >
-                  <Div minWidth="120px" minWidth_tablet="32%" gap="15px">
-                    {/* Icon here */}
-                    {m.icon && (
-                      <Icon icon={m.icon} width="32px" height="32px" />
-                    )}
-                    <H4 type="h4" fontWeight="700" textAlign="left">
-                      {`${m.label}: `}
-                    </H4>
-                  </Div>
-                  <Div flexDirection={m.link && "column"}>
-                    <Paragraph textAlign="left">{m.content}</Paragraph>
-                    {m.link && (
-                      <Anchor to={m.link} cursor="pointer">
-                        <Paragraph
-                          textAlign="left"
-                          width="150px"
-                          color={Colors.blue}
-                        >{`${m.link_text}`}</Paragraph>
-                      </Anchor>
-                    )}
-                  </Div>
-                </Div>
-              );
-            })}
-        </Div>
-      </GridContainer>
       {props.withoutAnimation !== true && (
         <GridContainer
           padding_tablet="0"

@@ -3,6 +3,7 @@ import Link from "gatsby-link";
 import { GridContainer, Header, Div } from "../components/Sections";
 import { isCustomBarActive } from "../actions";
 import { Button, Colors } from "../components/Styling";
+import AboutTheProgram from "../components/AboutTheProgram";
 import ProgramDetails from "../components/ProgramDetails";
 import ProgramDetailsMobile from "../components/ProgramDetailsMobile";
 import TechsWeTeach from "../components/TechsWeTeach";
@@ -376,16 +377,21 @@ const Program = ({ data, pageContext, yml }) => {
           paragraph={yml.badges.paragraph && yml.badges.paragraph}
         />
       </Header>
-      <JobGuaranteeSmall
-        content={data.allJobGuaranteeSmallYaml.edges[0].node}
-      />
       <OurPartners
         background={Colors.verylightGray}
         images={hiring.partners.images}
         marquee
         title={hiring.partners.tagline}
         paragraph={hiring.partners.sub_heading}
-      ></OurPartners>
+      />
+      <AboutTheProgram
+        details={courseDetails.details}
+        lang={pageContext.lang}
+        course={program_type}
+      />
+      <JobGuaranteeSmall
+        content={data.allJobGuaranteeSmallYaml.edges[0].node}
+      />
       <ProgramDetails
         details={courseDetails.details}
         lang={pageContext.lang}

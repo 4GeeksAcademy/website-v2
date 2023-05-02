@@ -26,6 +26,7 @@ import {
 import { Button, Colors } from "../components/Styling";
 import { requestSyllabus } from "../actions";
 import { SessionContext } from "../session";
+import AboutTheProgram from "../components/AboutTheProgram";
 import ProgramDetails from "../components/ProgramDetails";
 import ProgramDetailsMobile from "../components/ProgramDetailsMobile";
 import PricesAndPayment from "../components/PricesAndPayment_v2";
@@ -398,6 +399,11 @@ const Program = ({ data, pageContext, yml }) => {
           paragraph={yml.badges.paragraph}
         />
       </Header>
+      <AboutTheProgram
+        details={courseDetails.details}
+        lang={pageContext.lang}
+        course={program_type}
+      />
       <JobGuaranteeSmall
         content={data.allJobGuaranteeSmallYaml.edges[0].node}
       />
