@@ -249,25 +249,28 @@ const ScholarshipProjects = ({ content }) => {
                   </Div>
                 </Div>
 
-                <Button
-                  padding_xs="0"
-                  padding_tablet="0"
-                  padding="0"
-                  margin="25px 0 0 0"
-                  width="fit-content"
-                  variant="empty"
-                  icon={
-                    <Icon
-                      icon="pdf"
-                      stroke={Colors.black}
-                      style={{ marginRight: "5px" }}
-                    />
-                  }
-                  color={`${Colors.black} !important`}
-                  textColor={`${Colors.black} !important`}
-                >
-                  {content.see_project}
-                </Button>
+                {project.pdf && (
+                  <Button
+                    padding_xs="0"
+                    padding_tablet="0"
+                    padding="0"
+                    margin="25px 0 0 0"
+                    width="fit-content"
+                    variant="empty"
+                    onClick={(e) => smartRedirecting(e, project.pdf)}
+                    icon={
+                      <Icon
+                        icon="pdf"
+                        stroke={Colors.black}
+                        style={{ marginRight: "5px" }}
+                      />
+                    }
+                    color={`${Colors.black} !important`}
+                    textColor={`${Colors.black} !important`}
+                  >
+                    {content.see_project}
+                  </Button>
+                )}
               </Div>
             </Div>
           </Div>

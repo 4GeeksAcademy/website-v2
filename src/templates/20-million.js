@@ -476,6 +476,7 @@ export const query = graphql`
               name
               link
             }
+            pdf
           }
           fields {
             lang
