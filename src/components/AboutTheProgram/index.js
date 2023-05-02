@@ -1,14 +1,6 @@
 import React, { useState, useEffect } from "react";
-import {
-  GridContainer,
-  Div,
-} from "../Sections";
-import {
-  H2,
-  H3,
-  H4,
-  Paragraph,
-} from "../Heading";
+import { GridContainer, Div } from "../Sections";
+import { H2, H3, H4, Paragraph } from "../Heading";
 import { Colors, Anchor } from "../Styling";
 import Icon from "../Icon";
 

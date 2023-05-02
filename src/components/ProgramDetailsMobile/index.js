@@ -27,7 +27,12 @@ const ProgramDetailsMobile = (props) => {
   }
   return (
     <>
-      <Grid className="program-details-mobile" padding="50px 10px" padding_tablet="0px" gridGap="0">
+      <Grid
+        className="program-details-mobile"
+        padding="50px 10px"
+        padding_tablet="0px"
+        gridGap="0"
+      >
         {props.details.details_modules.map((item, index) => {
           return (
             <React.Fragment key={index}>
