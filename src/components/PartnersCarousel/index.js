@@ -74,7 +74,7 @@ const PartnerCard = ({ partner, linkText }) => {
           width="80px"
           backgroundSize="contain"
         />
-        {partner.pdf && partner.pdf !== '' && (
+        {partner.pdf && partner.pdf !== "" && (
           <Div onClick={(e) => smartRedirecting(e, partner.pdf)}>
             <Icon
               style={{ marginLeft: "0 0 0 15px", cursor: "pointer" }}
