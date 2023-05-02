@@ -241,7 +241,7 @@ const TwentyMillion = ({ data, pageContext, yml }) => {
             fontSize_tablet="50px"
             lineHeight="38px"
             lineHeight_tablet="60px"
-            margin_tablet="0 0 40px 0"
+            margin_tablet="40px 0 40px 0"
           >
             {yml.header.title}
           </H2>
@@ -298,7 +298,7 @@ const TwentyMillion = ({ data, pageContext, yml }) => {
           </Div>
         </Div>
       </Div>
-      <OurPartners images={partnersData.partners.images} marquee></OurPartners>
+      <OurPartners margin="0" images={partnersData.partners.images} marquee></OurPartners>
       <ScholarshipProjects
         content={data.allScholarshipProjectsYaml.edges[0].node}
         lang={pageContext.lang}
