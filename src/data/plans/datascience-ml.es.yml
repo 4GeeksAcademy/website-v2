@@ -49,48 +49,38 @@ part_time:
   - slug: 'plan-1'
     academies: ['downtown-miami', 'orlando']
     recomended: true
-    scholarship: "Scholarship"
-    payment_time: "Pay today"
-    price: "$4999"
+    scholarship: "Beca"
+    payment_time: "Puedes pagar en 3 o 4 partes"
+    price: "$6999"
+    original_price: "$10999"
     bullets: 
-      - "You're saving $4000 USD "
-      - "9% of your salary until paid in full, only if you get a job in tech."
+      - "Ahorras $4000 USD "
     icons: 
-      - "/images/landing/uwm_pantone_2021_2.png"
+      - "/images/clarkuniversity.png"
+
   - slug: 'plan-2'
     academies: ['downtown-miami', 'orlando']
     recomended: false
-    scholarship: "Financed"
-    payment_time: "24 months payment"
-    price: "$310"
+    scholarship: "Financiado"
+    payment_time: "Pagos en 24 meses"
+    price: "~$250p/m"
     bullets: 
-      - "With $400 p/ week living stipends"
-      - "9% of your salary until paid in full, only if you get a job in tech."
+      - "Varios partners ofreciendo préstamos y planes de pago"
+      - "Puedes obtener una beca parcial y el balance restante con un plan de pago"
     icons: 
       - "/images/ascent_logo.jpg"
       - "/images/climb-logo.png"
       - "/images/quotanda-logo.png"
-  - slug: 'plan-3'
-    academies: ['downtown-miami', 'orlando']
-    recomended: false
-    scholarship: "Income Share Agreement"
-    payment_time: "Pay after you get a job"
-    price: "$0"
-    bullets: 
-      - "With $400 p/ week living stipends"
-      - "9% of your salary until paid in full, only if you get a job in tech."
-    icons: 
-      - "/images/ascent_logo.jpg"
-      - "/images/climb-logo.png"
-      - "/images/quotanda-logo.png"
+
   - slug: 'plan-4'
     recomended: false
     academies: ['downtown-miami', 'orlando']
-    scholarship: "Full Payment"
-    payment_time: "Pay today"
-    price: "$8099"
+    scholarship: "Pago Completo"
+    payment_time: "Paga hoy"
+    price: "$9999"
+    original_price: "$10999"
     bullets: 
-      - "You're saving $1000 USD"
+      - "Ahorras $1000 USD"
 
   - slug: 'spain-scholarships-ds-pt'
     academies: ['barcelona-spain', 'madrid-spain', 'malaga-spain', 'valencia-spain']
