@@ -8,7 +8,12 @@ const JobGuaranteeSmall = ({ content }) => {
   return (
     <Div display="block" padding="20px" background={Colors.lightYellow}>
       {content.title && <H2 margin="0 0 30px 0">{content.title}</H2>}
-      <Div maxWidth="1400px" margin="auto" justifyContent="around" flexWrap="wrap">
+      <Div
+        maxWidth="1400px"
+        margin="auto"
+        justifyContent="around"
+        flexWrap="wrap"
+      >
         {content.icons.map((icon) => (
           <Div width="225px" flexDirection="column" alignItems="center">
             <Icon icon={icon.icon} width="94" height="98" />
