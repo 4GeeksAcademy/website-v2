@@ -666,6 +666,7 @@ export const query = graphql`
               }
               paragraph
               linkedin
+              pdf
             }
           }
         }
