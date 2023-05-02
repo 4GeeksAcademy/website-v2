@@ -16,7 +16,7 @@ full_time:
     scholarship: "Financed"
     payment_time: "24 months payment"
     price: "~$250 per month"
-    bullets: 
+    bullets:
       - "Several partners offering loans and payment plans"
       - "You can get a partial scholarship and the remaining balance with a payment plan"
     icons: 
@@ -31,9 +31,22 @@ full_time:
     price: "$0"
     bullets: 
       - "Get $400 p/ week living stipends"
-      - "9% of your salary until paid in full, only if you get a job in tech."
+      - "8.5% of your salary until paid in full, only if you get a job in tech."
     icons: 
       - "/images/landing/uwm_pantone_2021_2.png"
+
+  - slug: 'usa-fs-ft'
+    academies: ['downtown-miami']
+    recomended: false
+    scholarship: "Full Scholarship"
+    payment_time: "If you live or work in Miami"
+    price: "$0"
+    bullets:
+      - "Focus on your career and not how to afford your education"
+      - "8.5% of your salary until paid in full (1.5x revenue cap), only if you get a job in tech."
+    icons: 
+      - ""  
+        
   - slug: 'usa-upfront-ft'
     academies: ['downtown-miami', 'orlando','toronto-canada']
     recomended: false
@@ -159,24 +172,12 @@ full_time:
 
 part_time:
 
-  - slug: 'usa-isa-pt'
-    academies: ['orlando','toronto-canada']
-    recomended: false
-    scholarship: "Income Share Agreement"
-    payment_time: "Start making payments only when you get a job"
-    price: "$0"
-    bullets: 
-      - "Focus on your career and not how to afford your education"
-      - "9% of your salary until paid in full (1.5x revenue cap), only if you get a job in tech."
-    icons: 
-      - "/images/landing/uwm_pantone_2021_2.png"
-
   - slug: 'usa-financed-pt'
     academies: ['orlando','toronto-canada']
     recomended: false
     scholarship: "Financed"
     payment_time: "24 months payment"
-    price: "~$150 /mo."
+    price: "~$150p/m"
     bullets: 
       - "Several partners offering loans and payment plans"
       - "You can get a partial scholarship and the remaining balance with a payment plan"
@@ -213,8 +214,8 @@ part_time:
 
   - slug: 'miami-uwm-pt'
     academies: ['downtown-miami']
-    recomended: false
-    scholarship: "No Excuses. No Cost. Really, No Cost if you live or work in Miami"
+    recomended: true
+    scholarship: "No Excuses. No Cost if you live or work in Miami"
     payment_time: "You could even get living stipends if conditions are met. No Repayment."
     price: "$0"
     bullets: 
@@ -241,6 +242,7 @@ part_time:
     scholarship: "Full Payment"
     payment_time: "Pay today"
     price: "$8999"
+    original_price: "$9999"
     bullets: 
       - "You're saving $1000 USD"
 
@@ -270,17 +272,42 @@ part_time:
       - "*Pay a small part of your salary when you find a job"
     icons: 
       - "/images/stepex.png"
+      
   - slug: 'usa-clark-scholarship-pt'
-    academies: ['downtown-miami', 'orlando']
+    academies: ['orlando']
     recomended: true
-    scholarship: "Scolarship"
-    payment_time: "If you don't work or live in Miami"
+    scholarship: "Scholarship"
+    payment_time: "You can pay in 3 or 4 parts"
     price: "$5999"
     bullets: 
       - "You're saving $4000 USD. Thanks to Clark University TechBoost Fund"
       - "You have to be underemployed or unemployed, and provide a valid US Work permit."
-    # icons: 
-    #   - "/images/landing/uwm_pantone_2021_2.png"
+    icons: 
+      - "/static/images/clarkuniversity.png"
+    
+  - slug: 'usa-clark-scholarship-pt-miami'
+    academies: ['downtown-miami']
+    recomended: false
+    scholarship: "Scholarship"
+    payment_time: "You can pay in 3 or 4 parts"
+    price: "$5999"
+    bullets: 
+      - "You're saving $4000 USD. Thanks to Clark University TechBoost Fund"
+      - "You have to be underemployed or unemployed, and provide a valid US Work permit."
+    icons: 
+      - "/static/images/clarkuniversity.png"
+
+  - slug: 'usa-isa-pt'
+    academies: ['orlando','toronto-canada']
+    recomended: false
+    scholarship: "Income Share Agreement"
+    payment_time: "Start making payments only when you get a job"
+    price: "$0"
+    bullets: 
+      - "Focus on your career and not how to afford your education"
+      - "8.5% of your salary until paid in full (1.5x revenue cap), only if you get a job in tech."
+    icons: 
+      - "/static/images/miashare.png"      
 
   - slug: 'spain-upfront-fs-pt'
     academies: ['barcelona-spain','madrid-spain', 'malaga-spain', 'valencia-spain']
