@@ -30,8 +30,8 @@ const Landing = (props) => {
       : data.allDownloadableYaml.edges[0].node?.apply_schollarship;
 
   const programs = filteredPrograms.map((p) => ({
-    label: p.text,
-    value: p.bc_slug,
+    label: p.apply_form?.label,
+    value: p.meta_info?.bc_slug,
   }));
 
   useEffect(() => {
@@ -318,7 +318,7 @@ const Landing = (props) => {
             // size_xs="12"
             margin="0"
             textAlign_sm="center"
-            margin_md="0 auto 0 70px"
+            margin_md={yml.form.margin_md || "0 auto 0 70px"}
           >
             <LeadForm
               headerImage={
@@ -560,6 +560,7 @@ export const query = graphql`
             redirect
             fields
             button_label
+            margin_md
           }
           features {
             marginTop

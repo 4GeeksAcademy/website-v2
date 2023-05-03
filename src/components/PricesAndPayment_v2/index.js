@@ -81,13 +81,21 @@ const PricingCard = ({
               {payment_time}
             </Paragraph>
           </Div>
-          <Div className="price-container">
+          <Div className="price-container" display="block">
             <Paragraph
               fontWeight_tablet="700"
               color={isSelected ? Colors.white : Colors.black}
               opacity="1"
             >
               <span style={{ fontSize: "36px" }}>{data.price}</span>
+            </Paragraph>
+            <Paragraph
+              fontWeight_tablet="700"
+              color={isSelected ? Colors.white : Colors.black}
+              opacity="1"
+              textAlign="right"
+            >
+              <s>{data.original_price}</s>
             </Paragraph>
           </Div>
         </Div>
@@ -317,6 +325,7 @@ const PricesAndPaymentsV2 = (props) => {
               scholarship
               payment_time
               price
+              original_price
               bullets
               icons
             }
@@ -354,9 +363,13 @@ const PricesAndPaymentsV2 = (props) => {
 
   const availablePlans =
     currentPlans && currentLocation
-      ? currentPlans.filter((plan) =>
-          plan.academies.includes(currentLocation.fields.file_name.slice(0, -3))
-        )
+      ? currentPlans
+          .filter((plan) =>
+            plan.academies.includes(
+              currentLocation.fields.file_name.slice(0, -3)
+            )
+          )
+          .sort((a) => (a.recomended ? -1 : 1))
       : [];
 
   // const steps = props.details.details_modules.reduce((total, current, i) => [...total, (total[i - 1] || 0) + current.step], [])

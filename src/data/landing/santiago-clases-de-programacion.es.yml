@@ -42,7 +42,7 @@ header_data:
   background: "#FFF1D1"
   tagline: Clases de Programación Web
   sub_heading: "Aprende a programar desde cero y consigue trabajo como Full Stack Developer Junior"
-  badge: "../../../static/images/badges/switchup.png"
+  badge: "../../../static/images/badges/Course-Report-Badge-2023.png"
   image_filter: brightness(0.3)
 
 features:

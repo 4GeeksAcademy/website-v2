@@ -14,13 +14,13 @@ staff:
     last_name: "Sánchez"
     nick_name: "alesanchezr"
     slug: "alejandro-sanchez"
-    job_title: "Co-fundador - Director"
+    job_title: "Co-Fundador & Director de Tecnología"
     bio: "20 enseñando, Ingeniero de SW y Google Embasador"
     github: "https://github.com/alesanchezr"
     linkdin: "https://www.linkedin.com/in/alesanchezr/"
     twitter: "https://twitter.com/alesanchezr"
     website: "https://alesanchezr.com"
-    image: "../../../../static/images/staff/alejandro.png"
+    image: "../../../../static/images/staff/alejandrosanchez.jpg"
     age: 34
     interests:
       - Soccer
@@ -31,13 +31,13 @@ staff:
     last_name: "Ricigliano"
     nick_name: ""
     slug: marcelo-ricigliano
-    job_title: "Co-Fundador - Director"
+    job_title: "Co-Fundador - CEO"
     bio: "Reconocido por Forbes, Newsweek, Switchup, entre otros por los éxitos en las Startups que ha co-fundado. Tech Startup Mentor de Founder Institute, Startup Chile y de Impaqto. Ha vendido 2 Startups. Ha fracasado en 4. Abogado con Postgrado de la Stockholm Universitet."
     github: ""
     linkdin: "https://www.linkedin.com/in/marcelo-ricigliano-32440379/"
     twitter: "https://twitter.com/MRiciglianoC"
     website: ""
-    image: "../../../../static/images/staff/marcelo.png"
+    image: "../../../../static/images/staff/marceloricigliano.jpg"
     age: 33
     interests:
       - Soccer
@@ -49,7 +49,7 @@ staff:
     last_name: "Landra"
     nick_name: ""
     slug: 
-    job_title: "Florida Manager"
+    job_title: "Partnership & Program Manager"
     github: ""
     bio: "Me gradué de la Universidad Estatal Acreditada AACSB de Nueva York en la Escuela de Negocios y Economía de Plattsburgh con una licenciatura en Marketing y Administración de Empresas con honores."
     linkdin: "https://www.linkedin.com/in/alissalandra/"
@@ -66,7 +66,7 @@ staff:
     last_name: "Gómez"
     nick_name: ""
     slug: ""
-    job_title: "Regional manager Europa"
+    job_title: "Regional Manager Europa"
     bio: "Ingeniero Industrial, MBA en EAE Business School y Emprendedor. Elegido como uno de los 250 Mejores Referentes de la Educación en España"
     github: ""
     linkdin: "https://www.linkedin.com/in/victormgomezp/"
@@ -83,30 +83,30 @@ staff:
     last_name: "Castro"
     nick_name: ""
     slug: "mafe-castrp"
-    job_title: "VP of Growth"
-    bio: "Lidera los esfuerzos de nuestro Departamento de Growth para nuestras operaciones en todo el mundo."
+    job_title: "CMO"
+    bio: "Lidera los esfuerzos de nuestro Departamento de Marketing para nuestras operaciones en todo el mundo."
     github: ""
     linkdin: "https://www.linkedin.com/in/mafecasvi/"
     twitter: "https://twitter.com/mafecasvi"
     website: ""
-    image: "../../../../static/images/staff/mafe.jpg"
+    image: "../../../../static/images/staff/mariafernanda.jpg"
     age: 35
     interests:
       - Fashion Design
     coding_skills:
       - Bootstrap
     location: ["all"]
-  - name: "Nacho"
-    last_name: "Cordoba"
-    nick_name: "Nacho"
-    slug: "nacho-cordoba"
-    job_title: "Lead Mentor"
-    bio: "Más de 12 años de experiencia como desarrollador y más de 4 enseñando Programación."
-    github: "https://github.com/nachovz"
-    linkdin: "https://www.linkedin.com/in/nachovz/en-us/"
+  - name: "Pablo"
+    last_name: "Bullor"
+    nick_name: "Pablo"
+    slug: "pablo-bullor"
+    job_title: "Profesor"
+    bio: "Ingeniero de Sistemas con más de 10 años de experiencia en IT."
+    github: "https://github.com/pbullor"
+    linkdin: "https://www.linkedin.com/in/pablobullor/"
     twitter: ""
     website: ""
-    image: "../../../../static/images/staff/nacho.jpg"
+    image: "../../../../static/images/staff/pablobullor2.jpg"
     age: 42
     interests:
       - Board Games
@@ -115,6 +115,25 @@ staff:
     coding_skills:
       - Javascript and Python
     location: ["all"]
+  - name: "Macarena"
+    last_name: "Rebolledo"
+    nick_name: "Macarena"
+    slug: "macarena-rebolledo"
+    job_title: "Profesora"
+    bio: ""
+    github: "https://github.com/mojonapower"
+    linkdin: "https://www.linkedin.com/in/mrebolledovaldivia/"
+    twitter: ""
+    website: ""
+    image: "../../../../static/images/staff/macarenarebolledo.jpg"
+    age: 42
+    interests:
+      - Board Games
+      - Soccer
+      - Music
+    coding_skills:
+      - Javascript and Python
+    location: ["all"]    
 
 
   #- name: "James"

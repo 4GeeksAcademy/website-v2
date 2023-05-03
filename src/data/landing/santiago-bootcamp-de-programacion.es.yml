@@ -39,7 +39,7 @@ header_data:
   tagline: Bootcamp de Programación Web 
   tagline_color: "black"
   sub_heading: ""
-  badge: "../../../static/images/badges/switchup.png"
+  badge: "../../../static/images/badges/Course-Report-Badge-2023.png"
   image_filter: brightness(0.3)
 
 features:

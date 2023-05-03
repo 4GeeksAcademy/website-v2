@@ -106,7 +106,7 @@ const Partners = (props) => {
           />
         </Div>
       </GridContainer>
-      {/* <PartnersCarousel data={partnersData.partners_carousel} /> */}
+      {<PartnersCarousel data={partnersData.partners_carousel} />}
       <GridContainer
         // padding="10rem 0 4rem"
         // padding_tablet="10rem 0 4rem"
@@ -686,6 +686,8 @@ export const query = graphql`
           coding {
             images {
               name
+              link
+              follow
               image {
                 childImageSharp {
                   gatsbyImageData(
@@ -804,6 +806,7 @@ export const query = graphql`
               }
               paragraph
               linkedin
+              pdf
             }
           }
         }
