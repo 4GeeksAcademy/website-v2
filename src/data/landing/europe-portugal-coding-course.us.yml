@@ -35,7 +35,7 @@ apply_schollarship: # form that is displayed at the end of the landing
 # jumbotron on the top (cannot be commented out)
 header_data:
   background: "#FFF1D1"
-  tagline: Become a full-stack developer in 18 weeks through work on real projects and mentorship by experienced professionals. Classes in English
+  tagline: Become a full-stack developer in 18 weeks through work on real projects and mentorship by experienced professionals. Classes are held in English.
   sub_heading: "86% of our graduates have already started their future-proof, tech careers with an average entry salary of 30.000€ per year"
   badge: "../../../static/images/badges/european_excellence_education_black.png"
   image_filter: brightness(0.3)
