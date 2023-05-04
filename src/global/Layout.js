@@ -191,7 +191,7 @@ const Layout = ({ children, seo, context }) => {
               lang={context.lang}
             />
             <GlobalStyle />
-            <CookieBot domainGroupId={data.cookiebotYaml.domain_ID[0].id} />
+            {/* <CookieBot domainGroupId={data.cookiebotYaml.domain_ID[0].id} /> */}
             <>{children}</>
             <Footer yml={myFooter.node} />
           </>

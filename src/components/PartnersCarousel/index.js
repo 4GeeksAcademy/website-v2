@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import Link from "gatsby-link";
 import { navigate } from "gatsby";
+import { smartRedirecting } from "../../utils/utils.js";
 import { Div } from "../Sections";
 import { H2, H3, H4, Paragraph } from "../Heading";
 import { Colors, Img } from "../Styling";
@@ -45,15 +46,17 @@ const PartnerCard = ({ partner, linkText }) => {
       <Paragraph margin="0 0 10px 0" fontWeight="500" fontWeight_tablet="500">
         {partner.paragraph}
       </Paragraph>
-      <Paragraph margin="5px 0 10px 0">
-        <Link
-          // target="_blank"
-          to="#"
-          style={{ display: "inline" }}
-        >
-          {linkText}
-        </Link>
-      </Paragraph>
+      {linkText && (
+        <Paragraph margin="5px 0 10px 0">
+          <Link
+            // target="_blank"
+            to="#"
+            style={{ display: "inline" }}
+          >
+            {linkText}
+          </Link>
+        </Paragraph>
+      )}
       <Div justifyContent="center">
         <Img
           src="/images/linkedin.png"
@@ -71,12 +74,14 @@ const PartnerCard = ({ partner, linkText }) => {
           width="80px"
           backgroundSize="contain"
         />
-        <Div onClick={() => console.log("howdie")}>
-          <Icon
-            style={{ marginLeft: "0 0 0 15px", cursor: "pointer" }}
-            icon="pdf"
-          />
-        </Div>
+        {partner.pdf && partner.pdf !== "" && (
+          <Div onClick={(e) => smartRedirecting(e, partner.pdf)}>
+            <Icon
+              style={{ marginLeft: "0 0 0 15px", cursor: "pointer" }}
+              icon="pdf"
+            />
+          </Div>
+        )}
       </Div>
     </Div>
   );
