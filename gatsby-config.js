@@ -31,6 +31,30 @@ module.exports = {
     },
   },
   plugins: [
+    {
+      resolve: "gatsby-plugin-google-tagmanager",
+      options: {
+        id: "GTM-PGGRR6",
+        // Include GTM in development.
+        // Defaults to false meaning GTM will only be loaded in production.
+        includeInDevelopment: false,
+
+        // datalayer to be set before GTM is loaded
+        // should be an object or a function that is executed in the browser
+        // Defaults to null
+        defaultDataLayer: { platform: "gatsby" },
+        routeChangeEventName: "website-route-change",
+      },
+    },
+    {
+      resolve: "gatsby-plugin-cookiebot",
+      options: {
+        cookiebotId: "0dd80df5-30f5-4a4e-9410-55e586915d04", // Required. Site's Cookiebot ID.
+        manualMode: false, // Optional. Turns on Cookiebot's manual mode. Defaults to false.
+        blockGtm: true, //  Optional. Skip blocking of GTM. Defaults to true if manualMode is set to true.
+        includeInDevelopment: true, // Optional. Enables plugin in development. Will cause gatsby-plugin-google-tagmanager to thrown an error when pushing to dataLayer. Defaults to false.
+      },
+    },
     "gatsby-transformer-yaml",
     `gatsby-plugin-image`,
     "gatsby-plugin-sharp",
@@ -231,31 +255,6 @@ module.exports = {
             policy: [{ userAgent: "*", disallow: ["/"] }],
           },
         },
-      },
-    },
-    {
-      resolve: "gatsby-plugin-google-tagmanager",
-      options: {
-        id: "GTM-PGGRR6",
-        // Include GTM in development.
-        // Defaults to false meaning GTM will only be loaded in production.
-        includeInDevelopment: false,
-
-        // datalayer to be set before GTM is loaded
-        // should be an object or a function that is executed in the browser
-        // Defaults to null
-        defaultDataLayer: { platform: "gatsby" },
-        routeChangeEventName: "website-route-change",
-      },
-    },
-    {
-      resolve: "gatsby-plugin-cookiebot",
-      options: {
-        cookiebotId: "0dd80df5-30f5-4a4e-9410-55e586915d04", // Required. Site's Cookiebot ID.
-        manualMode: true, // Optional. Turns on Cookiebot's manual mode. Defaults to false.
-        blockGtm: false, //  Optional. Skip blocking of GTM. Defaults to true if manualMode is set to true.
-        includeInDevelopment: true, // Optional. Enables plugin in development. Will cause gatsby-plugin-google-tagmanager to thrown an error when pushing to dataLayer. Defaults to false.
-        pluginDebug: true, // Optional. Debug mode for plugin development. Defaults to false.
       },
     },
   ],
