@@ -10,7 +10,8 @@ const DraggableDiv = ({ children, ...props }) => {
 
   const onMouseDown = (e) => {
     setIsDown(true);
-    setStartX(e.pageX - ref.current.offsetLeft);
+    const pageX = e.touches ? e.touches[0].pageX : e.pageX;
+    setStartX(pageX - ref.current.offsetLeft);
     setScrollLeft(ref.current.scrollLeft);
   };
 
@@ -25,7 +26,8 @@ const DraggableDiv = ({ children, ...props }) => {
   const onMouseMove = (e) => {
     if (!isDown) return;
     e.preventDefault();
-    const x = e.pageX - ref.current.offsetLeft;
+    const pageX = e.touches ? e.touches[0].pageX : e.pageX;
+    const x = pageX - ref.current.offsetLeft;
     const walk = (x - startX) * 3; //scroll-fast
     ref.current.scrollLeft = scrollLeft - walk;
   };
@@ -41,16 +43,9 @@ const DraggableDiv = ({ children, ...props }) => {
         onMouseUp={onMouseUp}
         onMouseMove={onMouseMove}
         onMouseLeave={onMouseLeave}
-        display_md="flex"
-        display="none"
-        {...props}
-      >
-        {children}
-      </Div>
-      <Div
-        className="testimonial-slider"
-        display_md="none"
-        display="flex"
+        onTouchStart={onMouseDown}
+        onTouchMove={onMouseMove}
+        onTouchEnd={onMouseLeave}
         {...props}
       >
         {children}

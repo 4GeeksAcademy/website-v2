@@ -8,6 +8,8 @@ const Color = {
   black: "#000000",
   red: "#CD0000",
   yellow: "#FFB718",
+  white: "#FFFFFF",
+  darkGray: "#3A3A3A",
   lightBlue: "#C7F3FD",
 };
 const Figure = styled.div`
