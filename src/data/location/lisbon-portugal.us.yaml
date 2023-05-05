@@ -63,7 +63,7 @@ info_box:
   address: ""
   iframeMapUrl: ""
   contact_heading: "Contacts"
-  phone: "+34 910 86 69 83"
+  phone: "+351 21 020 0785"
   email: "europe@4GeeksAcademy.com"
   image: "../../../static/images/locations/remote.jpeg"
   alt: ""
@@ -91,7 +91,7 @@ in_person_available: false # important to accept in-person applicants
 
 city: "Lisbon"
 name: "Lisbon, Portugal"
-phone: "+34 910 86 69 83"
+phone: "+351 21 020 0785"
 latitude: "38.725750"
 longitude: "-9.149020"
 address: "" # Praça Marquês de Pombal 14, 1250-162 Lisbon, Portugal
