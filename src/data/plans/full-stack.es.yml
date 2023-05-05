@@ -178,9 +178,9 @@ part_time:
 
   - slug: 'miami-uwm-pt'
     academies: ['downtown-miami']
-    recomended: true
-    scholarship: " No hay excusas. No pages nada si vives o trabajas en Miami"
-    payment_time: "Adicionalmente puedes optar por pagos de tus costos (estipendios) de vida si cumples las condiciones."
+    recomended: false
+    scholarship: "Más adelante este año"
+    payment_time: "No hay excusas. No pages nada si vives o trabajas en Miami"
     price: "$0"
     bullets: 
       - "Te pagamos tus costos de vida al completar partes del programa"
@@ -192,7 +192,7 @@ part_time:
     academies: ['orlando']
     recomended: true
     scholarship: "Beca"
-    payment_time: "Puedes pagar en 3 o 4 partes"
+    payment_time: "Paga hoy o en 3 partes"
     price: "$5999"
     bullets: 
       - "Ahorras $4000 USD. Gracias al Clark University TechBoost Fund"
@@ -202,9 +202,9 @@ part_time:
 
   - slug: 'usa-clark-scholarship-pt-miami'
     academies: ['downtown-miami']
-    recomended: false
+    recomended: true
     scholarship: "Beca"
-    payment_time: "Puedes pagar en 3 o 4 partes"
+    payment_time: "Paga hoy o en 3 partes"
     price: "$5999"
     bullets: 
       - "Ahorras $4000 USD. Gracias al Clark University TechBoost Fund"
@@ -213,11 +213,11 @@ part_time:
       - "/static/images/clarkuniversity.png"      
 
   - slug: 'usa-financed-pt'
-    academies: ['orlando']
+    academies: ['orlando','downtown-miami']
     recomended: false
     scholarship: "Financiado"
-    payment_time: "Pagos en 24 meses"
-    price: "~$150p/m"
+    payment_time: "Paga en 3, 4 o 5 años"
+    price: "~$115p/m"
     bullets: 
       - "Varios partners ofreciendo préstamos y planes de pago"
       - "Puedes obtener una beca parcial y el balance restante con un plan de pago"
@@ -235,9 +235,10 @@ part_time:
     original_price: "$9999"
     bullets: 
       - "Ahorras $1000 USD"
+      - "Sólo si la Beca de Clark University no aplica (Desempleado o subempleado)"
 
   - slug: 'usa-isa-pt'
-    academies: ['orlando']
+    academies: ['orlando','downtown-miami']
     recomended: false
     scholarship: "Plan de Paga Cuando Consigas Trabajo"
     payment_time: "Paga después de obtener trabajo"

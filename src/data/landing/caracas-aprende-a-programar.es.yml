@@ -1,0 +1,154 @@
+meta_info:
+  slug: aprende-a-programar-ve # <--- URL 4geeksacademy.com/us/landing/example
+
+  # This will show on social media when shared
+  title: "Impulsa tu carrera profesional, ¡aprende a programar con 4Geeks Academy!"
+  description: "La programación se ha convertido en un conocimiento escencial para tu éxito profesional, aprende a programar con 4Geeks Academy."
+  image: "/images/bg/remote.jpeg"
+  keywords: "Aprende a programar, 4Geeks academy, aprende programacion, aprende ingenieria informatica"
+
+  template: "landing_nonav" # <--- choose your landing template
+  redirects: ["/landing/aprende-programacion-venezuela"] # <--- URL redirections to avoid 404 errors
+
+  # Set a particular course or location to the landing page
+  # this UTM fields will be also included in the CRM contact
+  utm_course: ["full-stack"]
+  utm_location: caracas-venezuela
+  automation: soft # comma separated, "soft" is the default value
+  tag: request_more_info # comma separated, "request_more_info" is the default value
+
+form:
+  # posible fields: "first_name", "last_name", "full_name", "phone", "email"
+  # always the first_name, email and phone will be mandatory if added.
+  fields: ["full_name", "phone", "email"]
+  heading: "Solicita tu Beca"
+  button_label: Enviar
+  redirect: null #you can redirect to another url or entirely diffrent website
+
+# jumbotron on the top (cannot be commented out)
+header_data:
+  tagline: Aprende a programar
+  sub_heading: ""
+  # partner_logo_url: "../../../static/images/partner/microsoft.png"
+  background_image: "../../../static/images/Happy-People-Landing-4Geeks-ES.jpg"
+  image_filter: brightness(0.4)
+
+features:
+  marginTop: 20px #<-- separation between tagline and the bullets
+
+  #                                         up   left down  right
+  styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
+  bullets:
+    - Un desarrollador remoto gana entre $30.000 a $100.000 
+    - ~86% de nuestros graduados consiguen trabajo en menos de 100 días.
+    - Impulsa tu carrera y hazte programador de software
+
+follow_bar:
+  position: "top" # top, bottom, hidden
+  content:
+    text: "Solicita una beca. \n Planes de pago de hasta 24 meses."
+    text_mobile: "Plan de pago de 24 m. \n ¡Últimas plazas!"
+    # devices:   XL      LG    MD      SM    XS
+    font_size: ["25px", "25px", "25px", "18px", "4.3vw"]
+  button:
+    text: "Más información"
+    path: "#top"
+  phone:
+    text: "Llama "
+
+#
+# ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇
+#
+
+badges:
+  position: 6
+  heading: "Premios y reconocimientos que validan nuestra excelencia"
+
+program_details:
+  position: 1
+  heading: "Lo que aprenderás"
+  sub_heading: "Python, Javascript y React son las tecnologías más usadas del mundo"
+
+geeks_vs_others:
+  position: 4
+  heading: "¿Qué hace a 4Geeks Academy tan exitoso?"
+  paragraph: ""
+  total_rows: 5
+
+why_4geeks:
+  position: 5
+  heading: "Porqué 4Geeks"
+  sub_heading: ""
+
+who_is_hiring:
+  position: 6
+  limit: 4
+  heading: "¿Quién contrata a nuestros alumnos?"
+  sub_heading: "Nuestros partners de contratación crecen todos los días, con más de 150 aliados a nivel global y decenas de vacantes activas en nuestras bolsas de empleo."
+
+#alumni_projects:
+# position: 7
+#heading: "Así podría ser tu proyecto final"
+#sub_heading: "Proyectos de antiguos estudiantes"
+
+# Possible layours: [two_column_left_image, two_column_right_image]
+components:
+  - name: first_syllabus_form
+    position: 4
+    layout: syllabus
+    button:
+      text: "Descarga Instantánea"
+    heading:
+      text: "Descarga el Programa de Estudios"
+  - name: top_coding_bootcamp
+    position: 5
+    layout: two_column_left
+    proportions: [4, 8]
+    image:
+      style: '{ "backgroundSize": "contain" }'
+      src: "/static/images/badges/Course-Report-Badge-2023.png"
+      link: "https://www.coursereport.com/schools/4geeks-academy"
+    heading:
+      text:
+        "Hemos sido seleccionados como uno de los mejores bootcamps del mundo"
+        #xl      lg     md     sm    xs
+      font_size: ["40px", "40px", "40px", "40px", "40px"]
+  - name: more_testimonials
+    position: 9
+    layout: two_column_left
+    image:
+      src: "https://storage.googleapis.com/4geeks-academy-website/landing-pictures/testimonials.webp"
+    heading:
+      text: "Escúchalo de nuestros alumnos"
+      #xl      lg     md     sm    xs
+      font_size: ["40px", "34px", "34px", "25px", "20px"]
+    button:
+      text: "Más testimoniales"
+      color: null
+      path: "https://www.youtube.com/watch?v=plwPwyrxX84"
+    content:
+      text: "Mentoría como nunca antes. Decenas de Instructores, en varios idiomas, todos los días, a cualquier hora. Estaremos contigo todo el tiempo, aun cuando hayas conseguido trabajo. Una vez eres parte de 4Geeks, estaremos para siempre contigo."
+      font_size: ["16px"]
+  - name: divider_one
+    position: 9
+    layout: divider
+    height: ["50px", "50px", "50px", "0px", "0px"]
+  - name: some_id
+    position: 7
+    layout: two_column_right
+    image:
+      src: "/images/bg/people_happy.jpg"
+    video: "B01-eTfgqqc"
+    heading:
+      text:
+        "Todo lo hacemos con pasión y con la mirada puesta en tu desarrollo profesional."
+        #xl      lg     md     sm    xs
+      font_size: ["40px", "34px", "34px", "25px", "20px"]
+    # content:
+    #   text: ""
+    #   # font_size: ["16px"]
+
+# why_python:
+#   position: 7
+#   heading: "¿Porqué enseñamos Python?" # optional or set to white space to hide
+#   sub_heading: " " # optional or set to white space to hide
