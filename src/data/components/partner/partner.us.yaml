@@ -264,6 +264,9 @@ work_together:
 benefits_and_charts:
   title: "Become part of our Partnership Network"
   description: "These are some of the benefits:"
+  button_section:
+    button_text: "JOIN OUR PARTNERSHIP NETWORK"
+    button_link: ""
   bullets:
     - Access to a big pool of high quality and unique talent.
     - Increase job retention with reskilling programs.

@@ -145,6 +145,7 @@ export const Div = styled.div`
   min-height: ${(props) => props.minHeight};
   position: ${(props) => props.position};
   top: ${(props) => props.top};
+  bottom: ${(props) => props.bottom};
   right: ${(props) => props.right};
   left: ${(props) => props.left};
   display: ${(props) => props.display || "flex"};
