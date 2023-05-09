@@ -219,6 +219,9 @@ work_together:
 benefits_and_charts:
   title: "Forma parte de nuestra red de socios"
   description: "Estos son algunos de los beneficios:"
+  button_section:
+    button_text: "UNETE A NUESTROS ALIADOS"
+    button_link: ""
   bullets:
     - Acceso a una gran reserva de talento único y de alta calidad.
     - Aumente la retención laboral con programas de reciclaje.

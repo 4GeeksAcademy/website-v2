@@ -26,6 +26,7 @@ import {
 import { Button, Colors } from "../components/Styling";
 import { requestSyllabus } from "../actions";
 import { SessionContext } from "../session";
+import AboutTheProgram from "../components/AboutTheProgram";
 import ProgramDetails from "../components/ProgramDetails";
 import ProgramDetailsMobile from "../components/ProgramDetailsMobile";
 import PricesAndPayment from "../components/PricesAndPayment_v2";
@@ -36,6 +37,7 @@ import Badges from "../components/Badges";
 import TechsWeTeach from "../components/TechsWeTeach";
 import { Circle } from "../components/BackgroundDrawing";
 import UpcomingDates from "../components/UpcomingDates";
+import JobGuaranteeSmall from "../components/JobGuaranteeSmall";
 import GeeksInfo from "../components/GeeksInfo";
 import Testimonials from "../components/Testimonials";
 import OurPartners from "../components/OurPartners";
@@ -397,6 +399,14 @@ const Program = ({ data, pageContext, yml }) => {
           paragraph={yml.badges.paragraph}
         />
       </Header>
+      <AboutTheProgram
+        details={courseDetails.details}
+        lang={pageContext.lang}
+        course={program_type}
+      />
+      <JobGuaranteeSmall
+        content={data.allJobGuaranteeSmallYaml.edges[0].node}
+      />
       <ProgramDetails
         details={courseDetails.details}
         lang={pageContext.lang}
@@ -752,6 +762,21 @@ export const query = graphql`
             title
             icon
             value
+          }
+        }
+      }
+    }
+    allJobGuaranteeSmallYaml(filter: { fields: { lang: { eq: $lang } } }) {
+      edges {
+        node {
+          title
+          icons {
+            title
+            icon
+          }
+          link {
+            url
+            label
           }
         }
       }

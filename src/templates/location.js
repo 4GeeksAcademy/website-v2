@@ -21,6 +21,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import Icon from "../components/Icon";
 import { SessionContext } from "../session";
+import JobGuaranteeSmall from "../components/JobGuaranteeSmall";
 
 const MapFrame = lazy(() => import("../components/MapFrame"));
 
@@ -257,6 +258,9 @@ const Location = ({ data, pageContext, yml }) => {
           />
         </Div>
       </GridContainerWithImage>
+      <JobGuaranteeSmall
+        content={data.allJobGuaranteeSmallYaml.edges[0].node}
+      />
 
       <Badges
         lang={pageContext.lang}
@@ -567,6 +571,21 @@ export const query = graphql`
             icon
             comming_soon
             text_link
+          }
+        }
+      }
+    }
+    allJobGuaranteeSmallYaml(filter: { fields: { lang: { eq: $lang } } }) {
+      edges {
+        node {
+          title
+          icons {
+            title
+            icon
+          }
+          link {
+            url
+            label
           }
         }
       }
