@@ -1,0 +1,40 @@
+meta_info:
+  slug: "redactor-no-tecnico"
+  title: "Redactor No-Técnico"
+  visibility: "visible"
+  description: "Trabaja como escritor no-técnico en 4Geeks. Ayúdanos a crear contenido claro y atractivo acerca de la industria de ed-tech y de 4GeeksAcademy"
+  template: "job" # js component that will be handling the rendering
+  open: true #if true, this job will be accepting candidates
+  image: "https://storage.googleapis.com/media-breathecode/59c3afdc064670e4d0062a42cd4bf954d1b9c93720500d4fdce265b4792538ab"
+  keywords: ""
+  redirects: []
+
+## BANNER INFO
+banner_heading: "Redactor No-Técnico"
+banner_sub_heading: ""
+banner_image: "/images/bg/pricing-bg.jpg"
+link_back: "/us/jobs"
+button_url: "https://marketing892162.typeform.com/to/ywHMe8ff"
+cities:
+  - Remote
+
+button_text: "POSTÚLATE"
+## JOB MAIN SECTION INFO
+title: "Ayudanos a escribir contenido de calidad para fortaceler nuestra presencia online"
+description: "Buscamos un redactor no-técnico responsable de crear contenido, claro, conciso y atractivo para los lectores, acerca de la industria de ed-tech y de 4GeeksAcademy"
+
+content:
+  - label: "Responsabilidades"
+    list:
+      - Escribir artículos para nuestro blog sobre temas específicos relacionados a la industria de ed-tech y a 4GeeksAcademy.
+      - Investigar información acerca de competidores, estudios, artículos relevantes y otra información relevante relacionada a los artículos escritos. 
+      - Asegurarse de seguir las instrucciones para cada artículo y entregarlos en los tiempos acordados.
+  - label: "Requerimientos Técnicos"
+    list:
+    - Entendimiento básico de la industria de ed-tech y de nuestra academia. 
+    - Fuertes habilidades de escritura y capacidad para escribir de manera convincente.
+    - Dominio del inglés o español (fluida en al menos uno).
+
+  - label: "Horario"
+    list:
+      - "Este es un rol freelance, flexible y a tiempo parcial sin un compromiso horario particular."

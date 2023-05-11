@@ -1,0 +1,40 @@
+meta_info:
+  slug: "non-technical-writer"
+  title: "Non-Technical Writer"
+  visibility: "visible"
+  description: "Work as non-technical writer at 4Geeks. Help us build and create clear, concise, and engaging content about the ed-tech industry and our school."
+  template: "job" # js component that will be handling the rendering
+  open: true #if true, this job will be accepting candidates
+  image: "https://storage.googleapis.com/media-breathecode/59c3afdc064670e4d0062a42cd4bf954d1b9c93720500d4fdce265b4792538ab"
+  keywords: ""
+  redirects: []
+
+## BANNER INFO
+banner_heading: "Non-technical Writer"
+banner_sub_heading: ""
+banner_image: "/images/bg/pricing-bg.jpg"
+link_back: "/us/jobs"
+button_url: "https://marketing892162.typeform.com/to/ywHMe8ff"
+cities:
+  - Remote
+
+button_text: "APPLY NOW"
+## JOB MAIN SECTION INFO
+title: "Help us build a strong online presence with quality content"
+description: "We're looking for Non-technical writer's to join our team of freelancers and create clear, concise, and engaging about the ed-tech industry and our school."
+
+content:
+  - label: "Responsabilities"
+    list:
+      - Write compelling blog posts about specific topics related to ed-tech and 4GeeksAcademy.
+      - Investigate competitors, studies, relevant articles and other relevant information related to the posts written. 
+      - Make sure to follow the instructions for each article and deliver them at the agreed times. 
+  - label: "Technical requirements"
+    list:
+      - Reasonable understanding of the ed-tech industry and 4GeeksAcademy.
+      - Strong writing skills and ability to write in a compelling way. 
+      - Proficiency in English or Spanish (fluent in at least one).
+
+  - label: "Schedule"
+    list:
+      - "This is a freelance, flexible, and part-time role with no particular hourly commitment"

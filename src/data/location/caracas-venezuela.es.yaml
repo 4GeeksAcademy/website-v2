@@ -23,10 +23,10 @@ seo_title: "Curso de Informática Caracas"
 header:
   tagline: "4Geeks Academy en Caracas"
   sub_header: "Todos los programas son enseñados "
-  sub_header_highlighted: "Online, Híbrida o En Persona."
+  sub_header_highlighted: "Online"
   paragraph: ""
-  image: "../../../static/images/locations/caracas-home.png"
-  alt: "4Geeks Academy modalidad online y presencial en Caracas, Venezuela"
+  image: "../../../static/images/locations/caracas-home2.png"
+  alt: "4Geeks Academy modalidad online en Caracas, Venezuela"
 button_header:
   button_text: Ver Programas
   button_link: "#programs"
@@ -58,21 +58,21 @@ upcoming:
 
 info_box:
   heading: "Encuéntranos en Caracas"
-  address: "Centro Financiero Madrid, Nivel Mezzanina Calle Madrid Municipio Baruta Distrito Capital, 1080, Miranda, Venezuela"
+  address: "Torre Jalisco, nivel E2, Municipio Baruta Distrito Capital, 1080, Miranda, Venezuela"
   contact_heading: "Contacts"
-  whatsapp: " +58424-244-3542"
+  whatsapp: "+58424-244-3542"
   phone: "+58 424 244-3542"
   email: "info@4GeeksAcademy.com"
   image: "../../../static/images/locations/caracas-map.png"
   alt: ""
 images_box:
   heading: "Lo que deberías saber de Caracas: "
-  content: "Caracas se encuentra como uno de las ciudades con mayor emprendimiento tecnológico, con grandes oportunidades de crecer tanto dentro como fuera del país. Se ha convertido en una oportunidad para que las PYME puedan avanzar de manera rápida. A pocos metros del metro, en Chacao, el mejor municipio de la ciudad y en una de las torres más emblemáticas. Tendrás acceso a internet de alta velocidad y una oficina de primer nivel."
+  content: "Caracas se encuentra como uno de las ciudades con mayor emprendimiento tecnológico, con grandes oportunidades de crecer tanto dentro como fuera del país. Se ha convertido en una oportunidad para que las PYME puedan avanzar de manera rápida. Tendrás acceso a internet de alta velocidad y una oficina de primer nivel."
   images:
-    - path: "../../../static/images/locations/caracas-loc.jpg"
-      alt: "caracas-loc"
-    - path: "../../../static/images/locations/caracas-loc-2.jpeg"
-      alt: "caracas-loc2"
+    - path: "../../../static/images/locations/caracas-graduates.png"
+      alt: "Graduados Caracas"
+    - path: "../../../static/images/locations/caracas-loc-3.png"
+      alt: "4Geeks Caracas Nest"
 
 ## START FROM HERE - DON'T CHANGE ANYTHING ABOVE
 ## HEADING SECTION
