@@ -44,11 +44,11 @@ features:
 
   #                                         up   left down  right
   styles: '{ "fontSize": "15px", "margin": "10px 0px 10px 0px" }'
-  text: Landing Jobs is offering over €500,000 in Scholarships to become a Data Scientist or Machine Learning Engineer at 4Geeks Academy. All scholarships are 50% off and they will be awarded based on the results of the selection process. If you want to advance your career, don't miss out on this amazing opportunity.
+  text: Landing Jobs and 4Geeks have teamed up to offer over €500,000 in scholarships for aspiring Data Scientists and Machine Learning Engineers. Each scholarship covers 50% of the tuition fees and will be awarded based on the results of our selection process. Don't miss this amazing opportunity to advance your career in tech!
   bullets:
-    - Just for May, all of them are 50% off (€3,900) for the Data Science & Machine Learning Program
-    - Part-Time modality, do not quit your life!
-    - Financing methods are available
+    - Only for the month of May, you can get 50% off (€3,900) our Data Science & Machine Learning Program.
+    - Part-time modality, so there’s no need to stop your life!
+    - Additional financing methods are available
 
 follow_bar:
   position: "top" # top, bottom, hidden
