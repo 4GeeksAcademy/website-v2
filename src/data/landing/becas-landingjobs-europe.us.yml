@@ -70,7 +70,7 @@ follow_bar:
 #
 badges:
   position: 1 # It's the position of the component that will be rendered first
-  heading: "4Geeks Academy has awards and recognitions that validate it's excellence"
+  heading: "4Geeks Academy has received numerous awards and recognitions for its excellence"
 
 about4Geeks:
   position: 2
