@@ -1,0 +1,77 @@
+title: Funds in execution
+description: You know our Geeks, now it's time for you to know what they can do
+project_name: Project Name
+project_details: Project details
+total_cost: Total Cost
+geeks_benefited: Geeks benefited
+institutions: Institutions that contibuted
+press: Press refferences
+see_project: See full project
+projects:
+  - name: Project name
+    image:
+      alt: typing
+      src: '../../../../static/images/Happy-People-Landing-4Geeks-ES.jpg'
+    description: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium.
+    details:
+      cost: 125k
+      geeks_benefited: 32
+    institutions:
+      - name: This is a name
+        logo: '../../../../static/images/Happy-People-Landing-4Geeks-ES.jpg'
+      - name: This is a name
+        logo: '../../../../static/images/Happy-People-Landing-4Geeks-ES.jpg'
+      - name: This is a name
+        logo: '../../../../static/images/Happy-People-Landing-4Geeks-ES.jpg'
+    press:
+      - name: This is a name
+        link: https://www.elnacional.com
+      - name: This is a name
+        link: https://www.elnacional.com
+      - name: This is a name
+        link: https://www.elnacional.com
+    pdf: https://www.elnacional.com
+  - name: Second project
+    image:
+      alt: typing
+      src: '../../../../static/images/Happy-People-Landing-4Geeks-ES.jpg'
+    description: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium.
+    details:
+      cost: 125k
+      geeks_benefited: 32
+    institutions:
+      - name: This is a name
+        logo: '../../../../static/images/Happy-People-Landing-4Geeks-ES.jpg'
+      - name: This is a name
+        logo: '../../../../static/images/Happy-People-Landing-4Geeks-ES.jpg'
+      - name: This is a name
+        logo: '../../../../static/images/Happy-People-Landing-4Geeks-ES.jpg'
+    press:
+      - name: This is a name
+        link: https://www.elnacional.com
+      - name: This is a name
+        link: https://www.elnacional.com
+      - name: This is a name
+        link: https://www.elnacional.com
+  # - name:
+  #   image:
+  #     src:
+  #     alt:
+  #   description:
+  #   details:
+  #     cost:
+  #     geeks_benefited:
+  #   institutions:
+  #     - name:
+  #       logo:
+  #     - name:
+  #       logo:
+  #     - name:
+  #       logo:
+  #   press:
+  #     - name:
+  #       link:
+  #     - name:
+  #       link:
+  #     - name:
+  #       link:
