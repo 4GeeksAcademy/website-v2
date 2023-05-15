@@ -574,7 +574,9 @@ export const query = graphql`
       }
     }
     faq: allPageYaml(
-      filter: { fields: { file_name: { regex: "/^faq[.]/g" }, lang: { eq: $lang } } }
+      filter: {
+        fields: { file_name: { regex: "/^faq[.]/g" }, lang: { eq: $lang } }
+      }
     ) {
       edges {
         node {

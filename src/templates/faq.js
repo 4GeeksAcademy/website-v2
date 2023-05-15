@@ -26,9 +26,7 @@ const Faq = (props) => {
       >
         {yml &&
           yml.faq.map((item, i) => {
-            return (
-              <FaqCard item={item} i={i} />
-            );
+            return <FaqCard item={item} i={i} />;
           })}
       </GridContainer>
       <Divider height="50px" />

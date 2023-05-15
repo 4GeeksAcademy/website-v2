@@ -32,10 +32,8 @@ const FaqCard = ({ item, i }) => {
             padding="20px"
             onClick={() =>
               toggleIndex === faq.question
-                ? (setToggleIndex(undefined),
-                  setButtonToggle(!buttonToggle))
-                : (setToggleIndex(faq.question),
-                  setButtonToggle(true))
+                ? (setToggleIndex(undefined), setButtonToggle(!buttonToggle))
+                : (setToggleIndex(faq.question), setButtonToggle(true))
             }
           >
             <Div key={faq.question} display="block" height="100%">
@@ -43,9 +41,7 @@ const FaqCard = ({ item, i }) => {
                 onClick={() => {
                   setButtonToggle(!buttonToggle),
                     setToggleIndex(
-                      toggleIndex != undefined
-                        ? undefined
-                        : faq.question
+                      toggleIndex != undefined ? undefined : faq.question
                     );
                 }}
                 display="flex"
@@ -67,30 +63,26 @@ const FaqCard = ({ item, i }) => {
                   {faq.question}
                 </H4>
                 {buttonToggle === false ? (
-                  toggleIndex != faq.question && (
-                    <Icon icon="plus" width="24" />
-                  )
-                ) : buttonToggle === true &&
-                  toggleIndex === faq.question ? (
+                  toggleIndex != faq.question && <Icon icon="plus" width="24" />
+                ) : buttonToggle === true && toggleIndex === faq.question ? (
                   <Icon icon="minus" width="24" />
                 ) : (
                   <Icon icon="plus" width="24" />
                 )}
               </Div>
               <Div size="12" size_sm="12" alignSelf="center">
-                {buttonToggle === true &&
-                  toggleIndex === faq.question && (
-                    <Paragraph
-                      textAlign="left"
-                      letterSpacing="0.05em"
-                      lineHeight="22px"
-                      fontWeight="normal"
-                      dangerouslySetInnerHTML={{ __html: faq.answer }}
-                      margin={`20px 0 0 0`}
-                      align_sm="left"
-                      fontFamily="Lato, sans-serif"
-                    ></Paragraph>
-                  )}
+                {buttonToggle === true && toggleIndex === faq.question && (
+                  <Paragraph
+                    textAlign="left"
+                    letterSpacing="0.05em"
+                    lineHeight="22px"
+                    fontWeight="normal"
+                    dangerouslySetInnerHTML={{ __html: faq.answer }}
+                    margin={`20px 0 0 0`}
+                    align_sm="left"
+                    fontFamily="Lato, sans-serif"
+                  ></Paragraph>
+                )}
               </Div>
             </Div>
           </Card>
