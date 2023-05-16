@@ -13,7 +13,7 @@ meta_info:
 #   image: "/images/bg/pricing-bg.jpg"
 
 consent:
-  message: By submitting this form, I accept that my data may be used for a quote request and the commercial relationship that may result from it. Check out our complete
+  message: By submitting this form, I accept that my data may be used for a quote request that could result in a commercial relationship. Check out our complete
   link_label: Privacy Policy
   url: /us/privacy-policy
 
