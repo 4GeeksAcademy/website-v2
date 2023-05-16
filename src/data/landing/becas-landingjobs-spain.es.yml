@@ -4,7 +4,7 @@ meta_info:
   visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   # This will show on social media when shared
   title: "¡Obtén tu beca!"
-  description: "Landing Jobs y 4Geeks se unen para ofrecer más de 500.000 € en Becas para que te conviertas en Data Scientist, Data Analyst o Ingeniero de Machine Learning."
+  description: "Landing.Jobs y 4Geeks se unen para ofrecer más de 500.000 € en Becas para que te conviertas en Data Scientist, Data Analyst o Ingeniero de Machine Learning."
   image: "/images/bg/remote.jpeg"
   keywords: "Aprende a programar, 4Geeks academy, aprende programacion, aprende ingenieria informatica"
 
@@ -44,7 +44,7 @@ features:
 
   #                                         up   left down  right
   styles: '{ "fontSize": "15px", "margin": "10px 0px 10px 0px" }'
-  text: Landing Jobs y 4Geeks se unen para ofrecer más de 500.000 € en Becas para convertirte en Data Scientist, Data Analyst o Machine Learning Engineer. Todas las becas son del 50% y se otorgarán en función del resultado del proceso de selección. Si quieres impulsar tu carrera profesiona, ¡no dejes pasar esta oportunidad!
+  text: Landing.Jobs y 4Geeks se unen para ofrecer más de 500.000 € en Becas para convertirte en Data Scientist, Data Analyst o Machine Learning Engineer. Todas las becas son del 50% y se otorgarán en función del resultado del proceso de selección. Si quieres impulsar tu carrera profesiona, ¡no dejes pasar esta oportunidad!
   bullets:
     - Durante Mayo 2023 becas del 50% en el programa Data Science & Machine Learning 
     - Formato Part-Time, ¡no renuncies a tu vida!
@@ -53,8 +53,8 @@ features:
 follow_bar:
   position: "top" # top, bottom, hidden
   content:
-    text: "Solicita tu beca Landing Jobs ya. \n Planes de pago de hasta 24 meses."
-    text_mobile: "Becas de Landing Jobs . \n Plan de pago de 24 m."
+    text: "Solicita tu beca Landing.Jobs ya. \n Planes de pago de hasta 24 meses."
+    text_mobile: "Becas de Landing.Jobs . \n Plan de pago de 24 m."
     # devices:    XL      LG      MD      SM      XS
     font_size: ["25px", "25px", "25px", "18px", "4.3vw"]
   button:

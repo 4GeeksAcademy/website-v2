@@ -4,7 +4,7 @@ meta_info:
   visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   # This will show on social media when shared
   title: "Get your scholarship!"
-  description: "Landing Jobs and 4Geeks get together to offer more than €500,000 in scholarships to become a Data Science and Machine Learning Engineer."
+  description: "Landing.Jobs and 4Geeks get together to offer more than €500,000 in scholarships to become a Data Science and Machine Learning Engineer."
   image: "/images/bg/remote.jpeg"
   keywords: "Learn to code, 4Geeks academy, Learn programming, learn computer engineering"
 
@@ -44,17 +44,17 @@ features:
 
   #                                         up   left down  right
   styles: '{ "fontSize": "15px", "margin": "10px 0px 10px 0px" }'
-  text: Landing Jobs is offering over €500,000 in Scholarships to become a Data Scientist or Machine Learning Engineer at 4Geeks Academy. All scholarships are 50% off and they will be awarded based on the results of the selection process. If you want to advance your career, don't miss out on this amazing opportunity.
+  text: Landing.Jobs and 4Geeks have teamed up to offer over €500,000 in scholarships for aspiring Data Scientists and Machine Learning Engineers. Each scholarship covers 50% of the tuition fees and will be awarded based on the results of our selection process. Don't miss this amazing opportunity to advance your career in tech!
   bullets:
-    - Just for May, all of them are 50% off (€3,900) for the Data Science & Machine Learning Program
-    - Part-Time modality, do not quit your life!
-    - Financing methods are available
+    - Only for the month of May, you can get 50% off (€3,900) our Data Science & Machine Learning Program.
+    - Part-time modality, so there’s no need to stop your life!
+    - Additional financing methods are available
 
 follow_bar:
   position: "top" # top, bottom, hidden
   content:
     text: "Apply for a scholarship now. \n Financing options available."
-    text_mobile: "Landing Jobs scholarships . \n Payment plans available"
+    text_mobile: "Landing.Jobs scholarships . \n Payment plans available"
     # devices:   XL      LG    MD      SM    XS
     font_size: ["25px", "25px", "25px", "18px", "4.3vw"]
   button:
@@ -70,7 +70,7 @@ follow_bar:
 #
 badges:
   position: 1 # It's the position of the component that will be rendered first
-  heading: "4Geeks Academy has awards and recognitions that validate it's excellence"
+  heading: "4Geeks Academy has received numerous awards and recognitions for its excellence"
 
 about4Geeks:
   position: 2
