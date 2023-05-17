@@ -23,14 +23,21 @@ form:
   fields: ["full_name", "phone", "email"]
   heading: "¡Empieza hoy!"
   button_label: Comienza hoy
-  redirect: null #you can redirect to another url or entirely diffrent website
+  redirect: "/es/gracias/?lang=es" #you can redirect to another url or entirely diffrent website
+
+navbar:
+  buttonText: "APLICAR AHORA"
+  buttonUrl: "#bottom" # url accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
+  logoUrl: "#"
 
 # jumbotron on the top (cannot be commented out)
 header_data:
+  background: "#FFF1D1"
   tagline: Cambia tu vida y aprende a programar
   sub_heading: ""
+  badge: "../../../static/images/badges/Course-Report-Badge-2023.png"
   # partner_logo_url: "../../../static/images/partner/microsoft.png"
-  background_image: "../../../static/images/Happy-People-Landing-4Geeks-ES.jpg"
+  # background_image: "../../../static/images/Happy-People-Landing-4Geeks-ES.jpg"
   image_filter: brightness(0.4)
 
 features:
@@ -43,6 +50,20 @@ features:
     - Es una de las industrias donde hay más vacantes actualmente.
     - No necesitas experiencia previa para comenzar
   text: ¡Es el momento de impulsar tu carrera y convertirte en programador!
+
+short_badges:
+  - name: "Premios Excelencia Educativa"
+    url: ""
+    image: "../../../static/images/badges/exelencia-educativa-es.png"
+    alt: "Mejor centro de Coding Bootcamp"
+  - name: "Newsweek"
+    url: ""
+    image: "../../../static/images/badges/newsweek-es.png"
+    alt: "Top Coding Bootcamps Newsweek"
+  - name: "Switchup"
+    url: ""
+    image: "../../../static/images/badges/Course-Report-Badge-2023.png"
+    alt: "Best coding bootcamp Course Report 2023" 
 
 follow_bar:
   position: "top" # top, bottom, hidden
@@ -94,13 +115,6 @@ who_is_hiring:
 
 # Possible layours: [two_column_left_image, two_column_right_image]
 components:
-  - name: first_syllabus_form
-    position: 4
-    layout: syllabus
-    button:
-      text: "Descarga Instantánea"
-    heading:
-      text: "Pregunta por nuestros planes de pago"
   - name: top_coding_bootcamp
     position: 5
     layout: two_column_left
@@ -128,7 +142,7 @@ components:
       color: null
       path: "https://www.youtube.com/watch?v=plwPwyrxX84"
     content:
-      text: "Mi experiencia con 4Geeks ha sido magnífica, me ha encantado. Tengo unos profesores maravillosos y tengo unos compañeros súper geniales. He aprendido bastante sobre HTML, CSS, JavaScript, React y Python. Mis profesores siempre estuvieron atentos a lo que necesitaba. Igual hay una plataforma donde podemos hablar todos los estudiantes de 4Geeks y nos ayudamos entre todos.... ¡Ha sido genial tomar esta decisión!
+      text: "'Mi experiencia con 4Geeks ha sido magnífica, me ha encantado. Tengo unos profesores maravillosos y tengo unos compañeros súper geniales. He aprendido bastante sobre HTML, CSS, JavaScript, React y Python. Mis profesores siempre estuvieron atentos a lo que necesitaba. Igual hay una plataforma donde podemos hablar todos los estudiantes de 4Geeks y nos ayudamos entre todos.... ¡Ha sido genial tomar esta decisión!'
 
 Beatriz Hernández"
       font_size: ["16px"]
