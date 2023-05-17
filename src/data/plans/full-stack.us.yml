@@ -173,11 +173,11 @@ full_time:
 part_time:
 
   - slug: 'usa-financed-pt'
-    academies: ['orlando','toronto-canada']
+    academies: ['orlando','toronto-canada','downtown-miami']
     recomended: false
     scholarship: "Financed"
-    payment_time: "24 months payment"
-    price: "~$150p/m"
+    payment_time: "You can pay in 3, 4 or 5 years"
+    price: "~$115p/m"
     bullets: 
       - "Several partners offering loans and payment plans"
       - "You can get a partial scholarship and the remaining balance with a payment plan"
@@ -214,9 +214,9 @@ part_time:
 
   - slug: 'miami-uwm-pt'
     academies: ['downtown-miami']
-    recomended: true
-    scholarship: "No Excuses. No Cost if you live or work in Miami"
-    payment_time: "You could even get living stipends if conditions are met. No Repayment."
+    recomended: false
+    scholarship: "Later this year"
+    payment_time: "No Excuses. No Cost if you live or work in Miami"
     price: "$0"
     bullets: 
       - "Living stipends available upon challenges completed"
@@ -245,6 +245,7 @@ part_time:
     original_price: "$9999"
     bullets: 
       - "You're saving $1000 USD"
+      - "Only if the Clark University Scholarship doesn't apply (unemployed or underemployed)"
 
   - slug: 'spain-scholarships-fs-pt'
     academies: ['barcelona-spain','madrid-spain', 'malaga-spain', 'valencia-spain']
@@ -277,7 +278,7 @@ part_time:
     academies: ['orlando']
     recomended: true
     scholarship: "Scholarship"
-    payment_time: "You can pay in 3 or 4 parts"
+    payment_time: "Pay today or in 3 parts"
     price: "$5999"
     bullets: 
       - "You're saving $4000 USD. Thanks to Clark University TechBoost Fund"
@@ -287,9 +288,9 @@ part_time:
     
   - slug: 'usa-clark-scholarship-pt-miami'
     academies: ['downtown-miami']
-    recomended: false
+    recomended: true
     scholarship: "Scholarship"
-    payment_time: "You can pay in 3 or 4 parts"
+    payment_time: "Pay today or in 3 parts"
     price: "$5999"
     bullets: 
       - "You're saving $4000 USD. Thanks to Clark University TechBoost Fund"
@@ -298,7 +299,7 @@ part_time:
       - "/static/images/clarkuniversity.png"
 
   - slug: 'usa-isa-pt'
-    academies: ['orlando','toronto-canada']
+    academies: ['orlando','toronto-canada','downtown-miami']
     recomended: false
     scholarship: "Income Share Agreement"
     payment_time: "Start making payments only when you get a job"
