@@ -50,11 +50,11 @@ part_time:
     academies: ['downtown-miami', 'orlando']
     recomended: true
     scholarship: "Scholarship"
-    payment_time: "Pay today"
+    payment_time: "Pay today or in 3 parts"
     price: "$6999"
     original_price: "$10999"
     bullets: 
-      - "You're saving $4000 USD "
+      - "You're saving $4000 USD. Thanks to Clark University TechBoost Fund"
     icons: 
       - "/images/clarkuniversity.png"
 
@@ -62,7 +62,7 @@ part_time:
     academies: ['downtown-miami', 'orlando']
     recomended: false
     scholarship: "Financed"
-    payment_time: "24 months payment"
+    payment_time: "Pay in 3, 4 or 5 years"
     price: "~$250p/m"
     bullets: 
       - "Several partners offering loans and payment plans"
@@ -81,6 +81,7 @@ part_time:
     original_price: "$10999"
     bullets: 
       - "You're saving $1000 USD"
+      - "Only if the Clark University Scholarship doesn't apply (unemployed or underemployed)"
 
   - slug: 'spain-scholarships-ds-pt'
     academies: ['barcelona-spain','madrid-spain', 'malaga-spain', 'valencia-spain']

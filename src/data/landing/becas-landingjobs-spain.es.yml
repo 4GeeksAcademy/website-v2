@@ -4,7 +4,7 @@ meta_info:
   visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   # This will show on social media when shared
   title: "¡Obtén tu beca!"
-  description: "Landing Jobs y 4Geeks se unen para ofrecer más de 1.000.000€ en Becas para estudiar Desarrollo Web o Machine Learning en España."
+  description: "Landing.Jobs y 4Geeks se unen para ofrecer más de 500.000 € en Becas para que te conviertas en Data Scientist, Data Analyst o Ingeniero de Machine Learning."
   image: "/images/bg/remote.jpeg"
   keywords: "Aprende a programar, 4Geeks academy, aprende programacion, aprende ingenieria informatica"
 
@@ -13,8 +13,8 @@ meta_info:
 
   # Set a particular course or location to the landing page
   # this UTM fields will be also included in the CRM contact
-  utm_course: ["full-stack", "datascience-ml"]
-  utm_location: europe
+  utm_course: ["datascience-ml"]
+  utm_location: madrid-spain
   automation: strong # comma separated, "soft" is the default value
   tag: website-lead # comma separated, "request_more_info" is the default value
 
@@ -33,10 +33,10 @@ form:
 
 # jumbotron on the top (cannot be commented out)
 header_data:
-  tagline: +1.000.000€ en becas
+  tagline: +500.000 € en becas
   sub_heading: ""
   partner_logo_url: "../../../static/images/partner/landing-jobs.png"
-  background_image: "../../../static/images/Happy-People-Landing-4Geeks-ES.jpg"
+  background_image: "../../../static/images/PeopleStudying.jpeg"
   image_filter: brightness(0.4)
 
 features:
@@ -44,17 +44,17 @@ features:
 
   #                                         up   left down  right
   styles: '{ "fontSize": "15px", "margin": "10px 0px 10px 0px" }'
-  text: Landing Jobs y 4Geeks se unen para ofrecer más de 1.000.000€ en Becas para estudiar Desarrollo Web o Machine Learning. La beca mínima es de un 30% y se otorgarán en función del resultado del proceso de selección. Si quieres empezar tu carrera como programador junior o impulsarla y convertirte en un desarrollador senior, no dejes pasar esta oportunidad.
+  text: Landing.Jobs y 4Geeks se unen para ofrecer más de 500.000 € en Becas para convertirte en Data Scientist, Data Analyst o Machine Learning Engineer. Todas las becas son del 50% y se otorgarán en función del resultado del proceso de selección. Si quieres impulsar tu carrera profesiona, ¡no dejes pasar esta oportunidad!
   bullets:
-    - 300 becas en total, la mayoría superiores al 50% 
-    - Programas Full-Stack (iniciación) e Inteligencia Artificial
-    - Formato full-time y part-time
+    - Durante Mayo 2023 becas del 50% en el programa Data Science & Machine Learning 
+    - Formato Part-Time, ¡no renuncies a tu vida!
+    - Opciones de financiación para complementar tu beca
 
 follow_bar:
   position: "top" # top, bottom, hidden
   content:
-    text: "Solicita tu beca Landing Jobs ya. \n Planes de pago de hasta 24 meses."
-    text_mobile: "Becas de Landing Jobs . \n Plan de pago de 24 m."
+    text: "Solicita tu beca Landing.Jobs ya. \n Planes de pago de hasta 24 meses."
+    text_mobile: "Becas de Landing.Jobs . \n Plan de pago de 24 m."
     # devices:    XL      LG      MD      SM      XS
     font_size: ["25px", "25px", "25px", "18px", "4.3vw"]
   button:
@@ -76,7 +76,7 @@ badges:
 about4Geeks:
   position: 2
   heading: Educación flexible e intensiva
-  sub_heading: "Más de 400 horas de aprendizaje práctico (ejercicios, proyectos). Mejoraras tus habilidades para poder afrontar procesos de selección y encontrar un trabajo como desarrollador junior o senior."
+  sub_heading: "Más de 320 horas de aprendizaje práctico (ejercicios, proyectos). Mejoraras tus habilidades para poder afrontar procesos de selección y encontrar un trabajo como Data Scientist, Data Analyst o Machine Learning Engineer."
   list:
     - title: "Apoyo Profesional de por vida"
     - title: "Opciones de financiación para complementar tu beca"
@@ -92,9 +92,9 @@ iconogram:
   position: 3
   icons:
   - icon: "touch"
-    title: Solicita tu beca antes del 8 de octubre
+    title: Solicita tu beca antes del 15 de Junio 2023
   - icon: "receive_mail"
-    title: Recibirás un correo electrónico con toda la información y un test de lógica
+    title: Recibirás un correo electrónico con toda la información
   - icon: "talk"
     title: Haz una entrevista online con nuestro equipo de admisiones
   - icon: "terminal"
@@ -103,7 +103,7 @@ iconogram:
 who_is_hiring:
   position: 4
   heading: "DÓNDE TRABAJAN NUESTROS ESTUDIANTES"
-  sub_heading: "Consigue un trabajo en menos de 3 meses gracias a nuestra creciente red de más de 500 empresas tecnológicas. Accede a ofertas nacionales e internacionales y a una comunidad de más de 2000 graduados"
+  sub_heading: "Consigue un trabajo en menos de 3 meses gracias a nuestra creciente red de más de 500 empresas tecnológicas. Accede a ofertas nacionales e internacionales y a una comunidad de más de 3500 graduados"
   featured:
     - name: "Facebook"
       image: "../../../static/images/partner/facebook.png"
@@ -112,34 +112,39 @@ who_is_hiring:
     - name: "Apple"
       image: "../../../static/images/partner/apple.png"
 
-choose_your_program:
+#choose_your_program:
+#  position: 5
+#  title: Nuestros Programas
+#  paragraph: Programas en formato full-time o part-time con clases en vivo dictadas por expertos
+#  programs:
+#  - title: "Full Stack Developer"
+#    sub_title: "Nivel 1"
+#    icon: "fullstack"
+#    description: |
+#      Desde 0 hasta convertirte en programador fullstack Jr. Trabajarás con HTML5, CSS3, Bootstrap, JS, Reactjs, SQL, Python, Flask, REST API's, etc. para diseñar y crear webs responsive. Obtendrás una sólida base de front, back, bbdd, procesos distribuidos y despliegue con instructores apasionados y un plan de estudios práctico y actualizado. 
+#      Disponible en modalidad part time y full time.
+#      Descarga aquí el <a href=https://storage.googleapis.com/4geeks-academy-website/syllabus/europe/Syllabus%20EU%20ES.pdf target=_blank>"programa de estudios"</a>.
+#    
+#    text_link: Solicita tu beca
+#    link: "#" # moves to start position
+#    
+#  - title: "AI & Machine Learning"
+#    sub_title: "Developers y perfiles STEM"
+#    icon: "machine"
+#    description: |
+#      Explora los fundamentos del machine learning y el deep learning con las tecnologías más poderosas que escalan la inteligencia para los negocios. 
+#      Practica con escenarios comerciales de la vida real y maneja las herramientas más utilizadas en la industria. Elabora estrategias y desarrolla tu Inteligencia Artificial, siguiendo el desarrollo del ciclo de vida de principio a fin, incluida la implementación en producción y mantenimiento con Privacidad, Seguridad y Ética. 
+#      
+#      Descarga aquí el <a href=https://storage.googleapis.com/4geeks-academy-website/syllabus/europe/Syllabus%20EU%20ES.pdf target=_blank>"programa de estudios"</a>.
+#
+#    text_link: Solicita tu beca
+#    link: "#"
+
+program_details:
   position: 5
-  title: Nuestros Programas
-  paragraph: Programas en formato full-time o part-time con clases en vivo dictadas por expertos
-  programs:
-  - title: "Full Stack Developer"
-    sub_title: "Nivel 1"
-    icon: "fullstack"
-    description: |
-      Desde 0 hasta convertirte en programador fullstack Jr. Trabajarás con HTML5, CSS3, Bootstrap, JS, Reactjs, SQL, Python, Flask, REST API's, etc. para diseñar y crear webs responsive. Obtendrás una sólida base de front, back, bbdd, procesos distribuidos y despliegue con instructores apasionados y un plan de estudios práctico y actualizado. 
-      Disponible en modalidad part time y full time.
-      Descarga aquí el <a href=https://storage.googleapis.com/4geeks-academy-website/syllabus/europe/Syllabus%20EU%20ES.pdf target=_blank>"programa de estudios"</a>.
-    
-    text_link: Solicita tu beca
-    link: "#" # moves to start position
-    
-  - title: "AI & Machine Learning"
-    sub_title: "Developers y perfiles STEM"
-    icon: "machine"
-    description: |
-      Explora los fundamentos del machine learning y el deep learning con las tecnologías más poderosas que escalan la inteligencia para los negocios. 
-      Practica con escenarios comerciales de la vida real y maneja las herramientas más utilizadas en la industria. Elabora estrategias y desarrolla tu Inteligencia Artificial, siguiendo el desarrollo del ciclo de vida de principio a fin, incluida la implementación en producción y mantenimiento con Privacidad, Seguridad y Ética. 
-      
-      Descarga aquí el <a href=https://storage.googleapis.com/4geeks-academy-website/syllabus/europe/Syllabus%20EU%20ES.pdf target=_blank>"programa de estudios"</a>.
-
-    text_link: Solicita tu beca
-    link: "#"
-
+  background: "#FFFFFF"
+  heading: "Detalles del programa"
+  sub_heading: "Aprende las tecnologías que demandan las empresas"
 
 why_4geeks:
   position: 7
@@ -156,7 +161,7 @@ apply_schollarship: # form that is displayed at the end of the landing
 
 # Possible layours: [two_column_left_image, two_column_right_image]
 components:
-  - name: python_y_javascript
+  - name: Data_Science_y_Machine_Learning
     position: 6
     layout: two_column_right
     background: "veryLightBlue2" # Name of the color(from components/Styling/index.js) or color code ex: #C9F9F9
@@ -166,10 +171,9 @@ components:
     # video: "B01-eTfgqqc"
     heading:
       text:
-        "Python y Javascript"
+        "Data Science"
         #           xl      lg      md      sm      xs
       font_size: ["50px", "50px", "50px", "50px", "50px"]
     content:
-      text: "Nuestros programa están basados en el uso de Python y Javascript. ¿La razón? En el mercado laboral JavaScript tiene 26 veces más puestos de trabajo que Ruby on Rails. Python tiene 10 veces más trabajos que Node.js. 
-        Otras herramientas que también aprenderás a usar en nuestros programas son: GitHub, Git, Redux, Amazon Web Services, etc."
+      text: "Nuestros programa está basado en el uso de Python, el lenguaje de programación más utilizado en el mundo, aprenderás a trabajar con las principales librerías enfocadas en la gestión, análisis y visualización de datos, te convertirás en un experto del Machine Learning y te introducirás en la Inteligencia Artificial, utilizando los modelos más demandados en el mundo como por ejemplo procesamiento de lenguaje natural (chatGPT)"
       font_size: ["16px"]

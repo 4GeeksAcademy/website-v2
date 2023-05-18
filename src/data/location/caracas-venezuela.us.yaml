@@ -15,10 +15,10 @@ seo_title: "4Geeks Academy Caracas"
 header:
   tagline: "4Geeks Academy in Caracas"
   sub_header: "All programs are taught "
-  sub_header_highlighted: "Online, Hybrid or In-person."
+  sub_header_highlighted: "Online"
   paragraph: ""
-  image: "../../../static/images/locations/caracas-home.png"
-  alt: "4Geeks Academy online and in-person coding bootcamp in Caracas, Venezuela"
+  image: "../../../static/images/locations/caracas-home2.png"
+  alt: "4Geeks Academy online coding bootcamp in Caracas, Venezuela"
 button_header:
   button_text: See Programs
   button_link: "#programs"
@@ -57,7 +57,7 @@ upcoming:
   actionMessage: "Let me know when dates are available"
 info_box:
   heading: "Find us in Caracas"
-  address: "Centro Financiero Madrid, Nivel Mezzanina Calle Madrid Municipio Baruta Distrito Capital, 1080, Miranda, Venezuela"
+  address: "Torre Jalisco, nivel E2, Municipio Baruta Distrito Capital, 1080, Miranda, Venezuela"
   contact_heading: "Contacts"
   whatsapp: "+58 424-244-3542"
   phone: "+58 424 244-3542"
@@ -66,12 +66,12 @@ info_box:
   alt: ""
 images_box:
   heading: "What you should know about this location: "
-  content: "Caracas is one of the cities with the greatest technological entrepreneurship, with great opportunities to grow both inside and outside the country. It has become an opportunity for SMEs to move forward quickly A few meters from the metro, in Chacao, the best municipality in the city and in one of the most emblematic towers. You will have high speed internet access and a first class office."
+  content: "Caracas is one of the cities with the greatest technological entrepreneurship, with great opportunities to grow both inside and outside the country. It has become an opportunity for SMEs to move forward quickly. You will have high speed internet access and a first class office."
   images:
-    - path: "../../../static/images/locations/caracas-loc.jpg"
-      alt: "miami-sunset"
-    - path: "../../../static/images/locations/caracas-loc-2.jpeg"
-      alt: "4Geeeks miami location"
+    - path: "../../../static/images/locations/caracas-graduates.png"
+      alt: "Caracas Graduates"
+    - path: "../../../static/images/locations/caracas-loc-3.png"
+      alt: "Caracas Office Jalisco"
 
 ## START FROM HERE - DON'T CHANGE ANYTHING ABOVE
 ## HEADING SECTION
@@ -88,7 +88,7 @@ city: "Caracas"
 name: "Venezuela"
 latitude: "10.484237234498359"
 longitude: "-66.860851629031"
-iframeMapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3923.2121354418296!2d-66.86310468456094!3d10.48393656738948!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c2a5836b8efe439%3A0x575c78dd416e7ef7!2s4Geeks%20Academy%20Venezuela!5e0!3m2!1sen!2sve!4v1642190228489!5m2!1sen!2sve"
+iframeMapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1108.8928285255154!2d-66.86669528967641!3d10.483681158211512!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c2a5971aa19ad4f%3A0x556a0b6ca98045e7!2sTorre%20Jalisco!5e0!3m2!1sen!2sve!4v1683299311406!5m2!1sen!2sve"
 address: "Nest Coworking"
 zip_code: ""
 state: "Miranda"

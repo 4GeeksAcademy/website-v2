@@ -1,0 +1,58 @@
+title: Casos de éxito
+contributor: Colaborador
+
+cases:
+  - name: Name Surname
+    img: "../../../../static/images/testimonials/luisa-glum.jpg"
+    status: Graduado
+    country:
+      iso: ve
+      name: Venezuela
+    contributor: Clark University
+    description: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean m
+    achievement: Obtuvo un aumento del 45% en su salario
+  - name: Name Surname
+    img: "../../../../static/images/testimonials/luisa-glum.jpg"
+    status: Graduado
+    country:
+      iso: ve
+      name: Venezuela
+    contributor: Clark University
+    description: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean m
+    achievement: Obtuvo un aumento del 45% en su salario
+  - name: Name Surname
+    img: "../../../../static/images/testimonials/luisa-glum.jpg"
+    status: Graduado
+    country:
+      iso: ve
+      name: Venezuela
+    contributor: Clark University
+    description: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean m
+    achievement: Obtuvo un aumento del 45% en su salario
+  - name: Name Surname
+    img: "../../../../static/images/testimonials/luisa-glum.jpg"
+    status: Graduado
+    country:
+      iso: ve
+      name: Venezuela
+    contributor: Clark University
+    description: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean m
+    achievement: Obtuvo un aumento del 45% en su salario
+  - name: Name Surname
+    img: "../../../../static/images/testimonials/luisa-glum.jpg"
+    status: Graduado
+    country:
+      iso: ve
+      name: Venezuela
+    contributor: Clark University
+    description: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean m
+    achievement: Obtuvo un aumento del 45% en su salario
+  - name: Name Surname
+    img: "../../../../static/images/testimonials/luisa-glum.jpg"
+    status: Graduado
+    country:
+      iso: ve
+      name: Venezuela
+    contributor: Clark University
+    description: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean m
+    achievement: Obtuvo un aumento del 45% en su salario

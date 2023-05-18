@@ -13,6 +13,7 @@ import {
   Div,
   GridContainerWithImage,
   GridContainer,
+  Divider,
 } from "../components/Sections";
 import { H1, H2, H3, Paragraph } from "../components/Heading";
 import { Colors, StyledBackgroundSection } from "../components/Styling";
@@ -21,6 +22,8 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import Icon from "../components/Icon";
 import { SessionContext } from "../session";
+import JobGuaranteeSmall from "../components/JobGuaranteeSmall";
+import FaqCard from "../components/FaqCard";
 
 const MapFrame = lazy(() => import("../components/MapFrame"));
 
@@ -70,6 +73,8 @@ const Location = ({ data, pageContext, yml }) => {
     us: "CHOOSE PROGRAM",
     es: "SELECCIONAR PROGRAMA",
   };
+
+  const faqs = data.faq.edges[0].node.faq[2];
 
   return (
     <>
@@ -257,6 +262,9 @@ const Location = ({ data, pageContext, yml }) => {
           />
         </Div>
       </GridContainerWithImage>
+      <JobGuaranteeSmall
+        content={data.allJobGuaranteeSmallYaml.edges[0].node}
+      />
 
       <Badges
         lang={pageContext.lang}
@@ -362,6 +370,15 @@ const Location = ({ data, pageContext, yml }) => {
           </Suspense>
         )}
       </Div>
+      <GridContainer
+        padding="0 4%"
+        gridGap="0px"
+        padding_tablet="0 20%"
+        padding_lg="0 26%"
+      >
+        <FaqCard item={faqs} i={2} />
+      </GridContainer>
+      <Divider height="50px" />
     </>
   );
 };
@@ -556,6 +573,26 @@ export const query = graphql`
         }
       }
     }
+    faq: allPageYaml(
+      filter: {
+        fields: { file_name: { regex: "/^faq[.]/g" }, lang: { eq: $lang } }
+      }
+    ) {
+      edges {
+        node {
+          faq {
+            topic
+            questions {
+              question
+              answer
+            }
+          }
+          fields {
+            lang
+          }
+        }
+      }
+    }
     allChooseYourProgramYaml(filter: { fields: { lang: { eq: $lang } } }) {
       edges {
         node {
@@ -567,6 +604,21 @@ export const query = graphql`
             icon
             comming_soon
             text_link
+          }
+        }
+      }
+    }
+    allJobGuaranteeSmallYaml(filter: { fields: { lang: { eq: $lang } } }) {
+      edges {
+        node {
+          title
+          icons {
+            title
+            icon
+          }
+          link {
+            url
+            label
           }
         }
       }

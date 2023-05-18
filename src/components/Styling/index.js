@@ -408,6 +408,7 @@ export const Button = styled(SmartButton)`
     margin: ${(props) => props.margin_tablet};
     padding: ${(props) => props.padding_tablet || "12px 24px"};
     max-width: ${(props) => props.maxWidth_tablet};
+    display: ${(props) => props.display_tablet};
     top: ${(props) => props.top_tablet};
     bottom: ${(props) => props.bottom_tablet};
     left: ${(props) => props.left_tablet};

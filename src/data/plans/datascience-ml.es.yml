@@ -50,7 +50,7 @@ part_time:
     academies: ['downtown-miami', 'orlando']
     recomended: true
     scholarship: "Beca"
-    payment_time: "Puedes pagar en 3 o 4 partes"
+    payment_time: "Paga hoy o en 3 partes"
     price: "$6999"
     original_price: "$10999"
     bullets: 
@@ -62,7 +62,7 @@ part_time:
     academies: ['downtown-miami', 'orlando']
     recomended: false
     scholarship: "Financiado"
-    payment_time: "Pagos en 24 meses"
+    payment_time: "Paga en 3, 4 o 5 años"
     price: "~$250p/m"
     bullets: 
       - "Varios partners ofreciendo préstamos y planes de pago"
@@ -81,6 +81,7 @@ part_time:
     original_price: "$10999"
     bullets: 
       - "Ahorras $1000 USD"
+      - "Sólo si la Beca de Clark University no aplica (Desempleado o subempleado)"
 
   - slug: 'spain-scholarships-ds-pt'
     academies: ['barcelona-spain', 'madrid-spain', 'malaga-spain', 'valencia-spain']
