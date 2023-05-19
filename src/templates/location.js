@@ -384,7 +384,7 @@ const Location = ({ data, pageContext, yml }) => {
 };
 
 export const query = graphql`
-  query LocationQuery($file_name: String!, $lang: String!) {
+  query LocationQuery($file_name: String!, $lang: String!, $related_clusters: [String]) {
     allLocationYaml(
       filter: { fields: { file_name: { eq: $file_name }, lang: { eq: $lang } } }
     ) {
@@ -569,6 +569,33 @@ export const query = graphql`
             }
             content
             heading
+          }
+        }
+      }
+    }
+    allMarkdownRemark(
+      limit: 4
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: { frontmatter: { cluster: { in: $related_clusters } } }
+    ) {
+      totalCount
+      edges {
+        node {
+          fields {
+            slug
+            type
+            pagePath
+          }
+          frontmatter {
+            author
+            date
+            image
+            slug
+            title
+            excerpt
+            featured
+            status
+            cluster
           }
         }
       }

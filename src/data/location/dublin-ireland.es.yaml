@@ -8,6 +8,7 @@ meta_info:
   redirects: ["/es/location/dublin-irlanda"]
   region: "europe"
   dialCode: "353"
+  related_clusters: []
 
 seo_title: "Coding Bootcamp Dublin, Irlanda"
 header:

@@ -9,6 +9,7 @@ meta_info:
     ["/malaga", "/es/location/malaga-spain/", "/es/location/malaga-espana"]
   region: "europe"
   dialCode: "34"
+  related_clusters: []
 
 seo_title: "4Geeks Academy Málaga, España"
 header:

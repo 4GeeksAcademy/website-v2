@@ -116,7 +116,7 @@ exports.createPages = async (params) =>
   (await createPagesfromYml(params)) &&
   //also for the custom post types
   (await createEntityPagesfromYml("Course", params, ["related_clusters"])) &&
-  (await createEntityPagesfromYml("Location", params)) &&
+  (await createEntityPagesfromYml("Location", params, ["related_clusters"])) &&
   (await createEntityPagesfromYml("Job", params)) &&
   (await createEntityPagesfromYml(
     "Downloadable",
@@ -357,6 +357,7 @@ const createEntityPagesfromYml = async (
     );
     const _extraContext = extraContext ? extraContext(node) : {};
     if (entity === "Location") {
+      _extraContext.related_clusters = node.meta_info.related_clusters;
       translations = buildTranslations({
         edges: result.data[`all${entity}Yaml`].edges.filter((l) =>
           l.node.fields.file_name.includes(node.fields.file_name.slice(0, -2))

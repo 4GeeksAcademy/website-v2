@@ -10,6 +10,7 @@ meta_info:
   redirects: ["/us/panama", "/panama"]
   region: "latam"
   dialCode: "507"
+  related_clusters: []
 
 seo_title: "Coding Bootcamp Panama"
 header:

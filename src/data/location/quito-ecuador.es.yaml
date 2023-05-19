@@ -10,6 +10,7 @@ meta_info:
   redirects: ["/coding-campus/bootcamp-programacion-ecuador"]
   region: "latam"
   dialCode: "593"
+  related_clusters: []
 
 seo_title: "Aprende a programar en Ecuador"
 header:

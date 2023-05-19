@@ -8,6 +8,7 @@ meta_info:
   redirects: ["/es/location/milan-italy"]
   region: "europe"
   dialCode: "39"
+  related_clusters: []
 
 seo_title: "Coding Bootcamp Milán, Italia"
 header:

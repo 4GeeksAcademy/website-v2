@@ -18,6 +18,7 @@ meta_info:
     ]
   region: "latam"
   dialCode: "58"
+  related_clusters: []
 
 seo_title: "Curso de Informática Caracas"
 header:
