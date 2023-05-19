@@ -384,7 +384,11 @@ const Location = ({ data, pageContext, yml }) => {
 };
 
 export const query = graphql`
-  query LocationQuery($file_name: String!, $lang: String!, $related_clusters: [String]) {
+  query LocationQuery(
+    $file_name: String!
+    $lang: String!
+    $related_clusters: [String]
+  ) {
     allLocationYaml(
       filter: { fields: { file_name: { eq: $file_name }, lang: { eq: $lang } } }
     ) {
