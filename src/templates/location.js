@@ -262,7 +262,9 @@ const Location = ({ data, pageContext, yml }) => {
           />
         </Div>
       </GridContainerWithImage>
-      {data.allJobGuaranteeSmallYaml.edges[0].node.locations.includes(yml.breathecode_location_slug) && (
+      {data.allJobGuaranteeSmallYaml.edges[0].node.locations.includes(
+        yml.breathecode_location_slug
+      ) && (
         <JobGuaranteeSmall
           content={data.allJobGuaranteeSmallYaml.edges[0].node}
         />
