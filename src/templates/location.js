@@ -74,7 +74,7 @@ const Location = ({ data, pageContext, yml }) => {
     es: "SELECCIONAR PROGRAMA",
   };
 
-  const faqs = data.faq.edges[0].node.faq[2];
+  const faqs = data.allFaqYaml.edges[0].node.faq;
 
   return (
     <>
@@ -262,9 +262,13 @@ const Location = ({ data, pageContext, yml }) => {
           />
         </Div>
       </GridContainerWithImage>
-      <JobGuaranteeSmall
-        content={data.allJobGuaranteeSmallYaml.edges[0].node}
-      />
+      {data.allJobGuaranteeSmallYaml.edges[0].node.locations.includes(
+        yml.breathecode_location_slug
+      ) && (
+        <JobGuaranteeSmall
+          content={data.allJobGuaranteeSmallYaml.edges[0].node}
+        />
+      )}
 
       <Badges
         lang={pageContext.lang}
@@ -376,7 +380,12 @@ const Location = ({ data, pageContext, yml }) => {
         padding_tablet="0 20%"
         padding_lg="0 26%"
       >
-        <FaqCard item={faqs} i={2} />
+        <FaqCard
+          faqs={faqs}
+          topicSlug="enrollment"
+          minPriority="1"
+          // locationSlug={yml.breathecode_location_slug}
+        />
       </GridContainer>
       <Divider height="50px" />
     </>
@@ -604,16 +613,15 @@ export const query = graphql`
         }
       }
     }
-    faq: allPageYaml(
-      filter: {
-        fields: { file_name: { regex: "/^faq[.]/g" }, lang: { eq: $lang } }
-      }
-    ) {
+    allFaqYaml(filter: { fields: { lang: { eq: $lang } } }) {
       edges {
         node {
           faq {
             topic
+            slug
             questions {
+              locations
+              priority
               question
               answer
             }
@@ -643,6 +651,7 @@ export const query = graphql`
       edges {
         node {
           title
+          locations
           icons {
             title
             icon

@@ -1,0 +1,135 @@
+# - topic: "Tema de la pregunta"
+# topic: "Preguntas Frecuentes sobre 4Geeks"
+faq:
+  - topic: "Preguntas Frecuentes sobre 4Geeks"
+    slug: "4geeks"
+    questions:
+      - question: "¿Por qué 4Geeks Academy?"
+        priority: 0
+        locations: ["santiago-chile", "downtown-miami"]
+        answer: |
+          Bueno, es un poco extraño hablar mucho sobre uno mismo ... pero, está bien, ¡ya que lo preguntaste! 
+          Ofrecemos una metodología única en la que mejoraremos tu capacidades generales; te formaremos y convertiremos en un desarrollador de software. Estamos constantemente brindando nuevos enfoques innovadores para enseñar programación que no muchas otras organizaciones educativas están haciendo. 
+          "Breathe Coding" (respirar código). Ese es nuestro lema, porque entendemos que, para convertirse en desarrollador, uno tiene que ser parte de la cultura de la programación. Hemos hecho que el aprendizaje sea divertido y hemos dominado el arte de mostrar cómo las habilidades de programación pueden encajar en la vida cotidiana.
+      - question: "¿4Geeks es una institución académica certificada?"
+        priority: 1
+        answer: "¡Sin lugar a dudas! Estamos certificados por la Comisión de Educación Independiente del Departamento de Educación de Florida en Estados Unidos."
+      - question: "¿Por qué nuestros campus?"
+        priority: 1
+        answer: |-
+          "Cualquiera de ellos será una excelente opción, bien sea en Miami, Madrid, Santiago de Chile, Caracas o San José de Costa Rica, en cualquiera de nuestras ciudades vivirás una excelente experiencia con un ambiente totalmente preparado para la formación y vivir una experiencia única durante tu paso por el bootcamp."
+      - question: "¿Quien es esa cara en el logo?"
+        priority: 3
+        answer: |-
+          "Oh, ¿te refieres a Rigoberto? Él es el corazón y el espíritu de todos los que trabajan para la Academia."
+
+  - topic: "Preguntas Frecuentes sobre Inscripciones"
+    slug: "enrollment"
+    questions:
+      - question: "¿Cómo me inscribo?"
+        priority: 0
+        answer: |-
+          "Para comenzar tu carrera como Desarrollador, solo necesitas hacer clic <a  class="faq-link" href="/es/aplica">aquí</a> y completar un formulario muy simple. Nosotros nos encargaremos del resto".
+      - question: "¿Cuál es el proceso de admisión?"
+        priority: 0
+        answer: |-
+          "Una vez que comiences el proceso de solicitud, recibirás un correo electrónico de uno de nuestros Consejeros Estudiantiles. Te guiaremos durante todo el proceso. Simplemente responde a nuestro correo electrónico y te llamaremos a tu conveniencia. 
+          Después de la llamada telefónica, serás invitado a una reunión personal o por videollamada. Si lo deseas, podrás visitar nuestra ubicación, conocer al equipo y conocernos. Durante la reunión, podrás explicarnos por qué deseas convertirte en desarrollador. Nosotros nos encargaremos de todo."
+      - question: "¿TENGO que traer mi propia laptop/portátil/notebook?"
+        priority: 0
+        answer: "Absolutamente, inequívocamente, la respuesta es: SI. Trae tu computadora/ordenador portátil CADA VEZ.  No requerimos de un sistema operativo específico y, dado que nuestras lecciones y prácticas están en la nube, incluso puedes usar una Chromebook."
+      - question: "¿Cómo pago mi matrícula?"
+        priority: 0
+        answer: |-
+          "Tienes varias opciones. Nuestro precio varía según el país en el que te encuentres, sin embargo, no hay otros costes asociados, cargos ocultos ni nada más. 
+          Además, contamos con increíbles partners para ofrecerte la mejor financiación. Puedes solicitar un plan de 6, 12, 18 o 24 meses (según cada sede) preocúpate solo por obtener la educación que necesitas.
+          El financiamiento está disponible para aquellos que califiquen dondequiera que haya financiamiento disponible.
+          Si te encuentras en Chile o en España, también tenemos a Quotanda como nuestro partner que ofrece varias opciones para hacer posible tu educación.
+          Si necesitas más información no dudes en enviarnos un correo electrónico a: info@4geeksacademy.com "
+      - question: "¿Plan de pago extendido? ¿Cómo funciona? ¿Qué significa eso?"
+        priority: 0
+        answer: |-
+          "El Plan de pago extendido ha sido diseñado específicamente para NUESTROS estudiantes.
+          Puedes solicitar un plan de pago extendido de 6, 12, 18 o 24 meses. Sólo debes pagar un depósito o inicial y firmar el contrato correspondiente para las cuotas que mejor se adapten a tu situación.
+          Si deseas obtener más información sobre este plan, haz clic <a class="faq-link" target="a_blank" rel="noopener noreferrer nofollow"href="https://quotanda.com/es/4geeks/">aquí</a>."
+
+  - topic: "Preguntas Frecuentes sobre Programas"
+    slug: "programs"
+    questions:
+      - question: "¿Cuántas horas a la semana necesito tener disponibles?"
+        priority: 0
+        answer: |
+          Para convertirte en el mejor developer posible debes dedicar tiempo, no hay otra manera, en nuestro programa "part-time" tendrás clases 3 horas 3 días a la semana, y debes dedicar en total unas 20-24 horas de estudio semanal. En el caso del programa a tiempo completo, que son 8 horas de clases al día, con dedicar en total unas 48 horas a la semana es suficiente.
+      - question: |
+          ¿Por qué "Part-time?"" ¿Cómo funciona?
+        priority: 0
+        answer: |-
+          "Creemos que el futuro de la educación es el 'tiempo parcial'. Lo que ofrecemos es una educación combinada que aprovecha dos formatos probados: formación a tiempo parcial y aula invertida. La metodología tiene una combinación de los siguientes cuatro pilares: 
+          Aula invertida: la teoría se imparte a través de videos, animación, imágenes e infografías. El tiempo de clase se usa para debatir, crear y construir proyectos, y ser mentorizado para resolver muchos ejercicios prácticos. 
+          Mentorías personalizadas: cada estudiante tiene la oportunidad de tener conversaciones privadas con un mentor principal de manera regular. 
+          Proporción de mentor-estudiante 1: 6 (en promedio): Un entorno cercano y personalizado  brinda a nuestra academia la oportunidad de adaptarse al ritmo particular de cada estudiante. 
+          Árbol de talentos: el plan de estudios traza 44 habilidades en las que los estudiantes ganan puntos por cada habilidad aprendida de una manera lúdica."
+      - question: |
+          ¿Por qué "Full-time?" ¿Cómo funciona?
+        priority: 0
+        answer: |-
+          "También ofrecemos formación a tiempo completo, entendemos que si buscas un curso full-time es porque no tienes que renunciar a tu empleo y que lejos de frenarte profesionalmente, ¡impulsará tu carrera!. La metodología, que además de ser super inmersiva, tiene una combinación de los siguientes cuatro pilares: 
+          Aula invertida: la teoría se imparte a través de videos, animación, imágenes e infografías. El tiempo de clase se usa para debatir, crear y construir proyectos, y ser mentorizado para resolver muchos ejercicios prácticos. 
+          Mentorías personalizadas: cada estudiante tiene la oportunidad de tener conversaciones privadas con un mentor principal de manera regular. 
+          Proporción de mentor-estudiante 1: 6 (en promedio): Un entorno cercano y personalizado brinda a nuestra academia la oportunidad de adaptarse al ritmo particular de cada estudiante. 
+          Árbol de talentos: el plan de estudios traza 44 habilidades en las que los estudiantes ganan puntos por cada habilidad aprendida de una manera lúdica."
+      - question: "¿Cuál es la diferencia entre el programa Full Stack Development y otros programas más junior como los Website Developer?"
+        priority: 0
+        answer: |-
+          "En el caso de Website Developer, el plan de estudios incluye: HTML, CSS, PHP, JavaScript, WordPress, API y más.
+          Ahora bien, el programa Full Stack Software Development está diseñado en cuatro etapas:
+          Prework + Aprender a programar + Crear sitios web + Crear aplicaciones web
+          Tiene una duración de 18 semanas e incluye más de 300 horas de aprendizaje.
+          El stack de tecnologías aquí son: JavaScript, React, Python, Flask, API, AJAX, SASS, HTML, CSS y más.
+          Te guiaremos y te ayudaremos a encontrar un trabajo después del curso a través de nuestro Programa de Colocación.
+          Tendrás acceso de por vida  a nuestra plataforma de aprendizaje Breatheco.de 
+          Podrás crear y construir sitios web, pero obtendrás las habilidades y herramientas para abordar proyectos más desafiantes como: análisis de datos, aprendizaje automático y realidad aumentada, por nombrar algunos."
+      - question: "¿Cuál es el horario?"
+        priority: 0
+        answer: |-
+          "Los horarios varían según la sede.
+          Part-Time
+          1. España: lunes, miércoles y viernes de 18:30 a 21:30 hrs o martes y jueves de 18:30 a 21:30 hrs y sábados de 10:00 a 13:00 hrs
+          2. Chile y Estados Unidos: lunes, miércoles y viernes de 18:30 a 21:30 hrs o martes y jueves de 18:30 a 21:30 hrs y sábados de 9:00 a 12:00 hrs
+          3. Venezuela: lunes a viernes de 16:00 a 18:00 hrs
+          Full-Time
+          De lunes a viernes de 9:00 a 18:00 hrs."
+      - question: "¿Consigo un trabajo después de completar el programa?"
+        priority: 0
+        answer: |-
+          "Esta es la parte en la que todos prestan atención ... no podemos garantizar que obtendrás un trabajo después de completar nuestro curso. Nadie puede, en realidad. Sin embargo, al inscribirte en nuestro programa, tendrás acceso a nuestros asesores y partners. Serás parte de una nueva red y te ayudaremos y guiaremos a lo largo del proceso de búsqueda de empleo, trabajaremos en tu CV, Linkedin, GitHub y haremos todo lo necesario para que consigas trabajo ".
+
+  - topic: "Preguntas Frecuentes sobre Experiencia"
+    slug: "experience"
+    questions:
+      - question: "¿Por qué Javascript?"
+        priority: 0
+        answer: |-
+          "JavaScript "es dueño" de la web; es el único lenguaje que todos los navegadores web entienden,es el lenguaje de programación más utilizado en el mundo; todos los sitios web lo necesitan, y es el más demandado por las empresas en diez veces el siguiente."
+      - question: "¿Por qué Python?"
+        priority: 0
+        answer: |-
+          "Python es el lenguaje de más rápido crecimiento en los países más ricos. Se usa ampliamente en prácticamente todas las industrias y tiene bibliotecas de alta calidad para todos los campos que crecen para ser 'el futuro': Web, IA, Robótica, Big Data, etc. Según profesores del MIT, es el lenguaje de programación esencial para aprender. Adelante, échale un vistazo <a class="faq-link" target="a_blank" rel="noopener noreferrer nofollow" href="https://www.python.org/">aquí</a>. 
+          Tiene que ser Python. Encontrarás más oportunidades laborales, aprenderás a programar y te ayudará con otros lenguajes y frameworks. ¡Incluso Google aprobó Python y lo ha incorporado en todas partes!"
+      - question: "¿Por qué no Node JS?"
+        priority: 0
+        answer: |-
+          "Node es asombroso. Desafía la forma en que se crea la web. Sin embargo, solo el 0,3% de la web ha adoptado Node JS y su crecimiento se ha ralentizado aún más en los últimos meses. Python, Java, PHP y otros lenguajes similares todavía gobiernan el mundo (y eso no va a cambiar en el corto plazo). 
+          Funcionan de una manera muy diferente a como lo hace Node; nuestro propósito es prepararte para el "mundo real". Capacitamos a nuestros desarrolladores Full-Stack usando / enseñando sólo las tecnologías más estándar y profesionales. <a class="faq-link" href="/us/trends-and-tech/dont-teach-nodejs-full-stack-development-program">Aquí</a> puedes encontrar un gran argumento de por qué no estamos enseñando Node JS."
+      - question: "¿Necesito experiencia previa en programación para inscribirme en el programa?"
+        answer: |-
+          "No. Solo necesitas querer aprender. La programación debe existir en alguna parte de tu cuerpo, ¡y la encontraremos! Si ya sabes cómo abrir un navegador y revisar tu Facebook, ¡entonces estaremos bien!"
+      - question: "¿Me gradúo como 'Senior Developer?'"
+        priority: 0
+        answer: |
+          No. Por favor, no corras antes de aprender a caminar. La programación es como la vida: si eres bueno en eso, aprenderás más rápido, pero no al instante. Obtendrás la experiencia de ver todos los detalles una vez hayas dominado el arte.
+          Hacer nuestro programa Full Stack significa que tu vida tendrá una nueva habilidad, pero también desarrollará una nueva forma de "pensar". Te gradúas como "Desarrollador Junior", pero como un "Desarrollador Junior" REALMENTE BUENO, ¡no como uno más en el grupo!
+      - question: "¿Cómo es el mercado para las empresas que buscan desarrolladores?"
+        priority: 0
+        answer: |-
+          " De acuerdo a estimaciones del IDC entre 2020 y 2025 se necesitarán sumar 10.5 millones de profesionales en el área de tecnología en todo el mundo. Por el momento hay más de 1.4 millones de puestos de trabajo de programación abiertos solo en los Estados Unidos y se espera que este número siga creciendo para el 2021;  en España, durante la pandemia, se crearon 1.500 ofertas como programador junior en tan solo una de las webs para búsqueda de empleo y por otro lado en Latinoamérica se necesitarán alrededor de 1.2millones de profesionales para disminuir la brecha. Por lo tanto el mercado para las empresas que buscan desarrolladores seguirá creciendo a un paso acelerado para poder cumplir con la alta demanda."
