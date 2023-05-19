@@ -1,4 +1,21 @@
 title: Job guarantee commitment
+locations:
+  - "bogota-colombia"
+  - "buenosaires-argentina"
+  - "coding-bootcamp-caracas"
+  - "costa-rica"
+  - "downtown-miami"
+  - "lapaz-bolivia"
+  - "lima-peru"
+  - "mexicocity-mexico"
+  - "montevideo-uruguay"
+  - "online"
+  - "orlando"
+  - "panamacity-panama"
+  - "quito-ecuador"
+  - "rome-italy"
+  - "santiago-chile"
+  - "toronto-canada"
 icons:
   - icon: "graduation-2"
     title: Get a job within 180 days after graduation or get your money back.
