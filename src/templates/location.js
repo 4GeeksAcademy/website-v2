@@ -23,6 +23,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import Icon from "../components/Icon";
 import { SessionContext } from "../session";
 import JobGuaranteeSmall from "../components/JobGuaranteeSmall";
+import CourseBlogs from "../components/CourseBlogs";
 import FaqCard from "../components/FaqCard";
 
 const MapFrame = lazy(() => import("../components/MapFrame"));
@@ -388,6 +389,10 @@ const Location = ({ data, pageContext, yml }) => {
         />
       </GridContainer>
       <Divider height="50px" />
+      <CourseBlogs
+        lang={pageContext.lang}
+        posts={data.allMarkdownRemark.edges}
+      />
     </>
   );
 };
