@@ -14,10 +14,13 @@ meta_info:
 apply_form:
   label: Datascience - Machine Learning
 
-seo_title: "datascience and machine learning bootcamp"
+seo_title: "data science and machine learning bootcamp"
 header:
-  title: "Datascience and Machine Learning Engineer"
-  paragraph: "Become one of the highest paid professionals in the world in just a few months"
+  title: |
+    Become a Data Scientist
+    
+    or Machine Learning Engineer
+  paragraph: "Be ready to enter tech’s highest-paying fields in just 16 weeks!"
   image: "../../../static/images/bg/circles.jpg"
   image_alt: "circles"
 
@@ -59,7 +62,7 @@ course_instructors:
       linkedin: "https://www.linkedin.com/in/alexismena/"
 
 badges:
-  paragraph: "4Geeks Academy is the place where developers grow and thrive, with technical coaching for life. Licensed by the USA F. Dep. of Education. Recognized as the top 10 <a href='/us/coding-bootcamp'>coding bootcamp</a> in the United States according to Newsweek and 1st in Miami according to SwitchUp."
+  paragraph: "Kickstart your career at 4Geeks Academy, where developers grow and thrive. Named the best <a href='/us/coding-bootcamp'>coding bootcamp</a> 2023 by Course Report, best center for coding bootcamps 2023 by Premios de Excelencia Educativa in Spain, listed among the top 10 in the US by Newsweek, and rated 4.92/5 on Switchup. Licensed by the Florida Department of Education, USA."
 
 upcoming:
   no_dates_message: "There are currently no upcoming dates for this program"

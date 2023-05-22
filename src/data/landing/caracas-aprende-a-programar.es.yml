@@ -36,7 +36,6 @@ header_data:
   tagline: Cambia tu vida y aprende a programar
   sub_heading: ""
   badge: "../../../static/images/badges/Course-Report-Badge-2023.png"
-  # partner_logo_url: "../../../static/images/partner/microsoft.png"
   # background_image: "../../../static/images/Happy-People-Landing-4Geeks-ES.jpg"
   image_filter: brightness(0.4)
 
@@ -49,7 +48,7 @@ features:
     - Un Desarrollador Web Junior en Caracas gana aprox. $1.000 mensuales. 
     - Es una de las industrias donde hay más vacantes actualmente.
     - No necesitas experiencia previa para comenzar
-  text: ¡Es el momento de impulsar tu carrera y convertirte en programador!
+  text: "¡Es el momento de impulsar tu carrera y convertirte en programador!"
 
 short_badges:
   - name: "Premios Excelencia Educativa"
@@ -81,6 +80,26 @@ follow_bar:
 #
 # ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇
 #
+rating_reviews:
+  position: 1
+  heading: "Lee acerca de nosotros"
+  rating_list:
+    - alt: "Career Karma"
+      image: "../../../static/images/badges/career-karma.png"
+      rating: 4.8
+      url: "https://careerkarma.com/schools/4geeks-academy/"
+    - alt: "Switchup"
+      image: "../../../static/images/badges/switchup-img.png"
+      rating: 4.89
+      url: "https://www.switchup.org/bootcamps/4geeks-academy"
+    - alt: "Course Report"
+      image: "../../../static/images/badges/course-report.png"
+      rating: 4.84
+      url: "https://www.coursereport.com/schools/4geeks-academy"
+    - alt: "Google"
+      image: "../../../static/images/badges/google.png"
+      rating: 4.9
+      url: ""
 
 badges:
   position: 6
@@ -108,21 +127,17 @@ who_is_hiring:
   heading: "¿Quién contrata a nuestros alumnos?"
   sub_heading: "Nuestros partners de contratación crecen todos los días, con más de 150 aliados a nivel global y decenas de vacantes activas en nuestras bolsas de empleo."
 
-#alumni_projects:
-# position: 7
-#heading: "Así podría ser tu proyecto final"
-#sub_heading: "Proyectos de antiguos estudiantes"
-
-# Possible layours: [two_column_left_image, two_column_right_image]
 components:
+  - name: geeksinfo
+    position: 4
+    layout: geeksInfo
   - name: top_coding_bootcamp
     position: 5
     layout: two_column_left
     proportions: [4, 8]
     image:
       style: '{ "backgroundSize": "contain" }'
-      src: "/static/images/badges/Course-Report-Badge-2023.png"
-      link: "https://www.coursereport.com/schools/4geeks-academy"
+      src: "/images/badges/Course-Report-Badge-2023.png"
     heading:
       text:
         "Tenemos 3 años consecutivos siendo seleccionados como uno de los mejores coding bootcamps del mundo"
@@ -146,24 +161,7 @@ components:
 
 Beatriz Hernández"
       font_size: ["16px"]
-  - name: divider_one
-    position: 9
-    layout: divider
-    height: ["50px", "50px", "50px", "0px", "0px"]
-  - name: some_id
-    position: 7
-    layout: two_column_right
-    image:
-      src: "/images/bg/people_happy.jpg"
-    video: "B01-eTfgqqc"
-    heading:
-      text:
-        "Todo lo hacemos con pasión y con la mirada puesta en tu desarrollo profesional."
-        #xl      lg     md     sm    xs
-      font_size: ["40px", "34px", "34px", "25px", "20px"]
-    # content:
-    #   text: ""
-    #   # font_size: ["16px"]
+
 
 # why_python:
 #   position: 7
