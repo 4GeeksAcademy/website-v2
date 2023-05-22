@@ -1,4 +1,20 @@
 title: Compromiso de garantía de empleo
+locations:
+  - "bogota-colombia"
+  - "buenosaires-argentina"
+  - "coding-bootcamp-caracas"
+  - "costa-rica"
+  - "downtown-miami"
+  - "lapaz-bolivia"
+  - "lima-peru"
+  - "mexicocity-mexico"
+  - "montevideo-uruguay"
+  - "online"
+  - "orlando"
+  - "panamacity-panama"
+  - "quito-ecuador"
+  - "santiago-chile"
+  - "toronto-canada"
 icons:
   - icon: "graduation-2"
     title: Obtenga un trabajo dentro de los 180 días posteriores a la graduación o recupere su dinero.
