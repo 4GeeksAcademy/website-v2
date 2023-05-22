@@ -377,6 +377,7 @@ export const postQuery = graphql`
         visibility
         image
         cluster
+        status
       }
       fields {
         readingTime {

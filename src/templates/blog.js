@@ -80,7 +80,7 @@ const Blog = ({ data, pageContext, yml }) => {
               yml.header.image &&
               yml.header.image.childImageSharp.gatsbyImageData
             }
-            bgSize={`contain`}
+            bgSize="contain"
             alt={yml.header.alt}
           />
         </Div>
@@ -89,7 +89,7 @@ const Blog = ({ data, pageContext, yml }) => {
   };
 
   //Post - Returns one card by item
-  const Post = (item, i) => {
+  const Post = ({ item, i }) => {
     return (
       <Div
         key={`${i}-${item.node.frontmatter.title}`}
@@ -248,56 +248,19 @@ const Blog = ({ data, pageContext, yml }) => {
   };
   //---------------------------------------------------
 
-  //Create matrix of matrixes
-  //Fill matrix with data from arr
-  const OrganizeColumns = (arr) => {
-    let posts = [[], [], []];
-    for (let i = 0; i < arr.length; i += 3) {
-      posts[0].push(arr[i]);
-    }
-    for (let i = 1; i < arr.length; i += 3) {
-      posts[1].push(arr[i]);
-    }
-    for (let i = 2; i < arr.length; i += 3) {
-      posts[2].push(arr[i]);
-    }
-    return posts;
-  };
-
-  //Posts data & context
-  const blog_posts = OrganizeColumns(data.featured.edges);
-  console.log("blog_posts", blog_posts);
-  const story_posts = OrganizeColumns(
-    data.posts.edges.filter(
-      (post) => post.node.frontmatter.status === "published"
-    )
-  );
   data.pageContext = pageContext;
 
   //Render component
   return (
     <>
-      {Banner()}
-      {Topics()}
+      <Banner />
+      <Topics />
 
       {/* Grid with posts (cards) */}
       <GridContainer columns_tablet="3">
-        {blog_posts[0].map((item, i) => {
-          const allowed = [`${item.node.frontmatter.author}`];
-          const filtered = Object.keys(twitterUser)
-            .filter((key) => allowed.includes(key))
-            .reduce((obj, key) => {
-              obj = twitterUser[key];
-            }, {});
-
-          return Post(item, i);
-        })}
-        {blog_posts[1].map((item, i) => {
-          return Post(item, i);
-        })}
-        {blog_posts[2].map((item, i) => {
-          return Post(item, i);
-        })}
+        {data.allMarkdownRemark.edges.map((post, i) => (
+          <Post key={post.node.frontmatter.slug} item={post} i={i} />
+        ))}
       </GridContainer>
     </>
   );
@@ -354,7 +317,7 @@ export const postQuery = graphql`
         }
       }
     }
-    featured: allMarkdownRemark(
+    allMarkdownRemark(
       sort: { fields: frontmatter___date, order: DESC }
       filter: {
         frontmatter: { status: { eq: "published" } }
@@ -373,32 +336,6 @@ export const postQuery = graphql`
             featured
             status
             cluster
-          }
-        }
-      }
-    }
-    posts: allMarkdownRemark(
-      sort: { fields: frontmatter___date, order: DESC }
-      filter: {
-        frontmatter: { status: { eq: "published" } }
-        fields: { lang: { eq: $lang } }
-      }
-    ) {
-      edges {
-        node {
-          frontmatter {
-            author
-            date
-            image
-            title
-            excerpt
-            featured
-            status
-            cluster
-          }
-          fields {
-            lang
-            slug
           }
         }
       }
