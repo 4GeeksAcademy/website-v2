@@ -1,5 +1,5 @@
 import React from "react";
-import { graphql } from 'gatsby';
+import { graphql } from "gatsby";
 import BaseRender from "./_baseLayout";
 import FaqCard from "../components/FaqCard";
 import { Divider, GridContainer, Header } from "../components/Sections";

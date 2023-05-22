@@ -1,5 +1,5 @@
 import React, { useState, useContext, useEffect } from "react";
-import { graphql } from 'gatsby';
+import { graphql } from "gatsby";
 import BaseRender from "./_baseLayout";
 import { SessionContext } from "../session.js";
 import { contactUs } from "../actions.js";

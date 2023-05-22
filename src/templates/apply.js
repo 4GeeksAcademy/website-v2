@@ -1,5 +1,5 @@
 import React, { useState, useContext } from "react";
-import { graphql } from 'gatsby';
+import { graphql } from "gatsby";
 import { navigate } from "gatsby";
 import { Div, GridContainer, Header, Grid } from "../components/Sections";
 import { H1, H3, Paragraph } from "../components/Heading";

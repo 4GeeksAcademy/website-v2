@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import { graphql } from 'gatsby';
+import { graphql } from "gatsby";
 import Link from "gatsby-link";
 import { navigate } from "gatsby";
 import {

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { graphql } from 'gatsby';
+import { graphql } from "gatsby";
 import { Title, H1, H2, H3, H4, H5, Paragraph } from "../components/Heading";
 import BaseRender from "./_baseLayout";
 import Icon from "../components/Icon";

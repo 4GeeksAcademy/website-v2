@@ -1,5 +1,5 @@
 import React, { useEffect, useContext } from "react";
-import { graphql } from 'gatsby';
+import { graphql } from "gatsby";
 import { Paragraph } from "../components/Heading";
 import { RoundImage, Colors, Button, Link } from "../components/Styling";
 import CallToAction from "../components/CallToAction";

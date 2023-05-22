@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { graphql } from 'gatsby';
+import { graphql } from "gatsby";
 import { isCustomBarActive } from "../actions";
 import { SessionContext } from "../session";
 import BaseRender from "./_baseLayout";
