@@ -4,7 +4,7 @@ import FaqCard from "../components/FaqCard";
 import { Divider, GridContainer, Header } from "../components/Sections";
 
 const Faq = (props) => {
-  const { pageContext, yml } = props;
+  const { pageContext, yml, data } = props;
 
   return (
     <>
@@ -24,10 +24,7 @@ const Faq = (props) => {
         padding_lg="0 26%"
         github={`/page/faq.${pageContext.lang}.yml`}
       >
-        {yml &&
-          yml.faq.map((item, i) => {
-            return <FaqCard item={item} i={i} />;
-          })}
+        <FaqCard faqs={data.allFaqYaml.edges[0].node.faq} />
       </GridContainer>
       <Divider height="50px" />
     </>
@@ -66,6 +63,15 @@ export const query = graphql`
               }
             }
           }
+          fields {
+            lang
+          }
+        }
+      }
+    }
+    allFaqYaml(filter: { fields: { lang: { eq: $lang } } }) {
+      edges {
+        node {
           faq {
             topic
             questions {
