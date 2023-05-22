@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { graphql } from 'gatsby';
 import BaseRender from "./_baseLayout";
 import { isCustomBarActive } from "../actions";
 import { SessionContext } from "../session";

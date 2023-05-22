@@ -1,4 +1,5 @@
 import React from "react";
+import { graphql } from 'gatsby';
 import BaseRender from "./_baseLayout";
 import { Div, GridContainerWithImage } from "../components/Sections";
 import { H1, H2, Paragraph } from "../components/Heading";

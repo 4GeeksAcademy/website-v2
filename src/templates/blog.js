@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import Link from "gatsby-link";
-import { navigate } from "gatsby";
+import { graphql } from "gatsby";
 import {
   H1,
   H2,

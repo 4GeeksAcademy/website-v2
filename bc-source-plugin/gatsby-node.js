@@ -35,6 +35,10 @@ exports.sourceNodes = async (
     `${posts.length} posts found, starting to parse them into markdown remark nodes.`
   );
 
+  console.log('FIRST POST');
+  console.log(posts[0]);
+  console.log('status');
+  console.log(posts[0].status);
   for (let i = 0; i < posts.length; i++) {
     let post = posts[i];
 
@@ -59,10 +63,13 @@ exports.sourceNodes = async (
     const count = wordCount(content);
 
     content = matter(content);
+    console.log(i);
+    console.log(post.status ? post.status.toLowerCase() : content.data.status || null);
 
     const frontMatter = {
       ...content.data,
       image: post.preview ? post.preview : content.data.image || null,
+      status: post.status ? post.status.toLowerCase() : content.data.status || null,
       featured: false,
       slug: post.slug,
       wordcount: count,

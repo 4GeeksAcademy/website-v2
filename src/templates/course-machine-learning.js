@@ -1,7 +1,7 @@
-import React, { useState, useEffect, useContext, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import { isCustomBarActive } from "../actions";
 import Link from "gatsby-link";
-import { navigate } from "gatsby";
+import { graphql } from "gatsby";
 import {
   Container,
   GridContainer,

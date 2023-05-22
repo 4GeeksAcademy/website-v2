@@ -1,4 +1,5 @@
 import React from "react";
+import { graphql } from 'gatsby';
 import BaseRender from "./_baseLayout";
 
 // components
@@ -54,7 +55,6 @@ const Cookies = (props) => {
                   </H4>
                   {section.text.split("\n").map((m, i) => (
                     <Paragraph
-                      key={i}
                       letterSpacing="0.05em"
                       textAlign="left"
                       key={i}

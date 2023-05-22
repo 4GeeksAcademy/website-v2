@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { graphql } from 'gatsby';
 import BaseRender from "./_baseLayout";
 import { SessionContext } from "../session";
 
@@ -67,7 +68,6 @@ const GeekForce = (props) => {
             fontSize="22px"
             lineHeight="38px"
             fontWeight="300"
-            textAlign="inherit"
             padding="40px 10px"
             textAlign="center"
             textAlign_md="left"

@@ -1,4 +1,5 @@
 import React from "react";
+import { graphql } from 'gatsby';
 import { Colors } from "../components/Styling";
 import BaseRender from "./_baseLayout";
 import { SessionContext } from "../session";

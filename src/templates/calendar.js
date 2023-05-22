@@ -10,7 +10,7 @@ import BaseRender from "./_baseLayout";
 import dayjs from "dayjs";
 import "dayjs/locale/de";
 import LazyLoad from "react-lazyload";
-import { Link } from "gatsby";
+import { Link, graphql } from "gatsby";
 import { Circle } from "../components/BackgroundDrawing";
 import { SessionContext } from "../session";
 

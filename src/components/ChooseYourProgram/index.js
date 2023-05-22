@@ -1,4 +1,5 @@
-import React, { useEffect, useState, useContext } from "react";
+import React from "react";
+import { graphql } from 'gatsby';
 import PropTypes from "prop-types";
 import { Button, Colors } from "../Styling";
 import { Break } from "../Responsive";

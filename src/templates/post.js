@@ -1,4 +1,5 @@
-import React, { useContext } from "react";
+import React from "react";
+import { graphql } from 'gatsby';
 import { Link } from "gatsby";
 import { H1, Paragraph } from "../components/Heading";
 import { RoundImage, Colors, Button } from "../components/Styling";
