@@ -258,7 +258,7 @@ const Blog = ({ data, pageContext, yml }) => {
 
       {/* Grid with posts (cards) */}
       <GridContainer columns_tablet="3">
-        {data.allMarkdownRemark.edges.map((post, i) => (
+        {data.allMarkdownRemark?.edges?.map((post, i) => (
           <Post key={post.node.frontmatter.slug} item={post} i={i} />
         ))}
       </GridContainer>
