@@ -88,7 +88,6 @@ const SEO = (props) => (
               class: `page-${context.slug}`,
             }}
           >
-            {/* <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="0dd80df5-30f5-4a4e-9410-55e586915d04" data-blockingmode="auto" type="text/javascript"></script> */}
             <html lang={langCountries[lang]} />
             <link
               rel="canonical"
