@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef, Suspense, lazy } from "react";
+import { graphql } from "gatsby";
 import ChooseProgram from "../components/ChooseProgram";
 import Badges from "../components/Badges";
 import Loc from "../components/Loc";

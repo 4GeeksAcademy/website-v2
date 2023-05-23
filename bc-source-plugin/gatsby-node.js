@@ -63,6 +63,9 @@ exports.sourceNodes = async (
     const frontMatter = {
       ...content.data,
       image: post.preview ? post.preview : content.data.image || null,
+      status: post.status
+        ? post.status.toLowerCase()
+        : content.data.status || null,
       featured: false,
       slug: post.slug,
       wordcount: count,

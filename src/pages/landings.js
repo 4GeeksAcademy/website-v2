@@ -1,8 +1,7 @@
 import React from "react";
-import { Link, StaticQuery } from "gatsby";
+import { Link, StaticQuery, graphql } from "gatsby";
 import styled from "styled-components";
 import Layout from "../global/Layout";
-import { Img } from "../components/Styling";
 
 const Heading = styled.h1`
   font-family: "Lato-Bold", sans-serif;

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { graphql } from "gatsby";
 import Link from "gatsby-link";
 import { GridContainer, Header, Div } from "../components/Sections";
 import { isCustomBarActive } from "../actions";

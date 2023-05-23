@@ -6,7 +6,7 @@ import { Colors } from "../Styling";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import Fragment from "../Fragment";
 
-export default ({
+const Badges = ({
   id,
   lang,
   loading,
@@ -129,25 +129,50 @@ export default ({
             })}
           </Div>
         ) : (
-          <Div
-            className="badge-slider hideOverflowX__"
-            // justifyContent="center"
-            // alignItems="center"
-          >
-            {short_link
-              ? content.badges.map((l, i) => {
-                  return (
-                    i < 4 && (
+          <Div width="100%" style={{ overflowX: "auto" }}>
+            <Div
+              className="badge-slider hideOverflowX__"
+              margin="auto"
+              // justifyContent="center"
+              // alignItems="center"
+            >
+              {short_link
+                ? content.badges.map((l, i) => {
+                    return (
+                      i < 4 && (
+                        <GatsbyImage
+                          key={i}
+                          style={{
+                            height: "65px",
+                            minWidth: "80px",
+                            margin: "0 20px",
+                          }}
+                          imgStyle={{ objectFit: "contain" }}
+                          loading="eager"
+                          // draggable={false}
+                          // fadeIn={false}
+                          alt={l.name}
+                          image={getImage(
+                            l.image.childImageSharp.gatsbyImageData
+                          )}
+                          // fluid={l.image.childImageSharp.fluid}
+                        />
+                      )
+                    );
+                  })
+                : content.badges.map((l, i) => {
+                    return (
                       <GatsbyImage
                         key={i}
                         style={{
-                          height: "65px",
-                          minWidth: "80px",
-                          margin: "0 20px",
+                          height: "85px",
+                          // minWidth: "200px",
+                          minWidth: "150px",
+                          margin: "0 24px",
                         }}
                         imgStyle={{ objectFit: "contain" }}
                         loading="eager"
-                        // draggable={false}
+                        draggable={false}
                         // fadeIn={false}
                         alt={l.name}
                         image={getImage(
@@ -155,38 +180,18 @@ export default ({
                         )}
                         // fluid={l.image.childImageSharp.fluid}
                       />
-                    )
-                  );
-                })
-              : content.badges.map((l, i) => {
-                  return (
-                    <GatsbyImage
-                      key={i}
-                      style={{
-                        height: "85px",
-                        // minWidth: "200px",
-                        minWidth: "150px",
-                        margin: "0 24px",
-                      }}
-                      imgStyle={{ objectFit: "contain" }}
-                      loading="eager"
-                      draggable={false}
-                      // fadeIn={false}
-                      alt={l.name}
-                      image={getImage(l.image.childImageSharp.gatsbyImageData)}
-                      // fluid={l.image.childImageSharp.fluid}
-                    />
-                  );
-                })}
+                    );
+                  })}
 
-            {short_link && (
-              <Link to={content.link_to}>
-                <Paragraph
-                  width="150px"
-                  color={Colors.blue}
-                >{`${content.short_link_text} >`}</Paragraph>
-              </Link>
-            )}
+              {short_link && (
+                <Link to={content.link_to}>
+                  <Paragraph
+                    width="150px"
+                    color={Colors.blue}
+                  >{`${content.short_link_text} >`}</Paragraph>
+                </Link>
+              )}
+            </Div>
           </Div>
         )}
 
@@ -203,3 +208,5 @@ export default ({
     </>
   );
 };
+
+export default Badges;

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "../assets/css/single-post.css";
-import { Link, useStaticQuery } from "gatsby";
+import { Link, useStaticQuery, graphql } from "gatsby";
 import styled from "styled-components";
 import axios from "axios";
 import { H1 } from "../components/Heading";

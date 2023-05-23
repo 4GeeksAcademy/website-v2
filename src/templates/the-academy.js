@@ -1,4 +1,5 @@
 import React from "react";
+import { graphql } from "gatsby";
 import { GridContainer, Div, Grid, Header } from "../components/Sections";
 import { H2, H3, Paragraph } from "../components/Heading";
 import { Colors, StyledBackgroundSection } from "../components/Styling";

@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { Link } from "gatsby";
+import React, { useState } from "react";
+import { graphql } from "gatsby";
 import BaseRender from "./_baseLayout";
 import {
   Header,

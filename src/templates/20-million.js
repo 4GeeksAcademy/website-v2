@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
+import { graphql } from "gatsby";
 import { Link } from "gatsby";
 import { isCustomBarActive } from "../actions";
 import BaseRender from "./_baseLayout";
