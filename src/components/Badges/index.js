@@ -129,7 +129,7 @@ const Badges = ({
             })}
           </Div>
         ) : (
-          <Div width="100%" style={{ overflowX: 'auto' }}>
+          <Div width="100%" style={{ overflowX: "auto" }}>
             <Div
               className="badge-slider hideOverflowX__"
               margin="auto"
@@ -175,7 +175,9 @@ const Badges = ({
                         draggable={false}
                         // fadeIn={false}
                         alt={l.name}
-                        image={getImage(l.image.childImageSharp.gatsbyImageData)}
+                        image={getImage(
+                          l.image.childImageSharp.gatsbyImageData
+                        )}
                         // fluid={l.image.childImageSharp.fluid}
                       />
                     );
