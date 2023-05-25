@@ -27,7 +27,6 @@ const BaseRender =
     let filteredPrograms;
     let filteredLocations;
     const utm_course = yml.meta_info?.utm_course;
-    const utm_location = yml.meta_info?.utm_location;
 
     if (pageContext.type === "landing") {
       filteredPrograms = data.allCourseYaml.edges

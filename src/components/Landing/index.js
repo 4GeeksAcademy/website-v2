@@ -718,6 +718,18 @@ export const landingSections = {
       value: p.meta_info.bc_slug,
     }));
 
+    const locations =
+      (session &&
+        session.locations
+          ?.filter((loc) =>
+            location.includes(loc.breathecode_location_slug)
+          )
+          .map((loc) => ({
+            label: loc.name,
+            value: loc.breathecode_location_slug,
+          }))) ||
+      [];
+
     return (
       <GridContainer
         key={index}
@@ -754,6 +766,7 @@ export const landingSections = {
             justifyContentButton="center"
             // inputBgColor="#F9F9F9"
             selectProgram={programs}
+            selectLocation={locations}
             inputBgColor={Colors.white}
             layout="flex"
             lang={pageContext.lang}
@@ -767,7 +780,7 @@ export const landingSections = {
               },
               utm_location: {
                 type: "hidden",
-                value: location,
+                value: locations.length <= 1 ? locations[0]?.value : location,
                 valid: true,
               },
             }}

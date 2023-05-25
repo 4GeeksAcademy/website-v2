@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, StaticQuery, graphql } from "gatsby";
 import styled from "styled-components";
 import Layout from "../global/Layout";
+import Tooltip from "../components/Tooltip";
+import { Input } from "../components/Form";
 
 const Heading = styled.h1`
   font-family: "Lato-Bold", sans-serif;
@@ -70,7 +72,13 @@ const NotFoundPage = () => (
       }
     `}
     render={(data) => {
+      const [filter, setFilter] = useState('');
       const landings = data.allLandingYaml.edges;
+      const filterByLocation = ({ node }) => {
+        if (filter === '') return true;
+        if (node.meta_info.utm_location.some((slug) => slug.includes(filter))) return true;
+        return false;
+      };
       return (
         <Layout
           seo={{
@@ -86,6 +94,18 @@ const NotFoundPage = () => (
         >
           <Div>
             <Heading>Landing Pages</Heading>
+            <Input
+              style={{ maxWidth: '740px' }}
+              margin="20px auto"
+              border="1px solid hsl(0,0%,80%)"
+              borderRadius="3px"
+              type="text"
+              placeholder="Filter by location"
+              onChange={(value) => {
+                setFilter(value);
+              }}
+              value={filter}
+            />
             <Table>
               <thead>
                 <tr>
@@ -97,7 +117,7 @@ const NotFoundPage = () => (
               </thead>
               <tbody>
                 {landings &&
-                  landings.map(({ node }) => (
+                  landings.filter(filterByLocation).map(({ node }) => (
                     <tr>
                       <td>
                         <Anchor
@@ -113,7 +133,17 @@ const NotFoundPage = () => (
                           edit
                         </a>
                       </td>
-                      <td>{node.meta_info.utm_location}</td>
+                      <td>
+                        {node.meta_info.utm_location.length === 1 ? (
+                          node.meta_info.utm_location
+                        ) : (
+                          <Tooltip
+                            text={node.meta_info.utm_location.join(", ")}
+                          >
+                            Many locations
+                          </Tooltip>
+                        )}
+                      </td>
                       <td>
                         {node.meta_info.utm_course.map((s) => (
                           <CourseLabel key={s}>{s}</CourseLabel>
