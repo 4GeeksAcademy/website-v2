@@ -34,11 +34,17 @@ const Landing = (props) => {
     value: p.meta_info?.bc_slug,
   }));
 
-  const locations = session && session.locations?.filter((loc) => yml.meta_info.utm_location.includes(loc.breathecode_location_slug))
-    .map((loc) => ({
-      label: loc.name,
-      value: loc.breathecode_location_slug,
-    })) || [];
+  const locations =
+    (session &&
+      session.locations
+        ?.filter((loc) =>
+          yml.meta_info.utm_location.includes(loc.breathecode_location_slug)
+        )
+        .map((loc) => ({
+          label: loc.name,
+          value: loc.breathecode_location_slug,
+        }))) ||
+    [];
 
   useEffect(() => {
     let _components = {};
@@ -68,7 +74,10 @@ const Landing = (props) => {
     },
     utm_location: {
       type: "hidden",
-      value: locations.length <= 1 ? locations[0]?.value : yml.meta_info.utm_location || null,
+      value:
+        locations.length <= 1
+          ? locations[0]?.value
+          : yml.meta_info.utm_location || null,
       valid: true,
     },
     utm_language: { type: "hidden", value: pageContext.lang, valid: true },

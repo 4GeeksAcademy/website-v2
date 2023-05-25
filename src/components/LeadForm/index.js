@@ -282,7 +282,7 @@ const LeadForm = ({
           formData.course.value.length > 1
         ) {
           setFormStatus({ status: "error", msg: courseSelector.error });
-        }else if (
+        } else if (
           formData.utm_location !== undefined &&
           Array.isArray(formData.utm_location.value) &&
           formData.utm_location.value.length > 1
