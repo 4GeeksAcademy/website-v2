@@ -14,19 +14,9 @@ import { transferQuerystrings } from "../utils/utils.js";
 
 const Landing = (props) => {
   const { session, setLocation } = React.useContext(SessionContext);
-  const { data, pageContext, yml, filteredPrograms } = props;
+  const { pageContext, yml } = props;
   const [components, setComponents] = React.useState({});
   const [inLocation, setInLocation] = React.useState("");
-
-  const applySchollarship =
-    data.allLandingYaml.edges.length !== 0
-      ? data.allLandingYaml.edges[0].node?.apply_schollarship
-      : data.allDownloadableYaml.edges[0].node?.apply_schollarship;
-
-  const programs = filteredPrograms.map((p) => ({
-    label: p.apply_form.label,
-    value: p.meta_info.bc_slug,
-  }));
 
   useEffect(() => {
     let _components = {};
@@ -38,41 +28,13 @@ const Landing = (props) => {
   }, [yml]);
   useEffect(() => {
     if (yml.meta_info && yml.meta_info.utm_location)
-      setLocation(yml.meta_info?.utm_location);
+      setLocation(yml.meta_info?.utm_location[0]);
 
     const urlParams = new URLSearchParams(window.location.search);
     const _inLoc = urlParams.get("in") || null;
     if (_inLoc && _inLoc != "")
       setInLocation(_inLoc.replace(/^\w/, (c) => c.toUpperCase()) + " ");
   }, []);
-
-  // data sent to the form already prefilled
-  const preData = {
-    course: {
-      type: "hidden",
-      value:
-        programs.length <= 1 ? programs[0].value : yml.meta_info?.utm_course,
-      valid: true,
-    },
-    utm_location: {
-      type: "hidden",
-      value: yml.meta_info?.utm_location,
-      valid: true,
-    },
-    utm_language: { type: "hidden", value: pageContext.lang, valid: true },
-    automation: {
-      type: "hidden",
-      value: yml.meta_info.automation,
-      valid: true,
-    },
-    tag: { type: "hidden", value: yml.meta_info.tag, valid: true },
-    current_download: {
-      type: "hidden",
-      value: yml.meta_info.current_download,
-      valid: true,
-    },
-    form_type: { type: "hidden", value: pageContext.type, valid: true },
-  };
 
   const landingLocation =
     session &&

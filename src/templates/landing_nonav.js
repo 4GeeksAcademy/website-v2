@@ -33,6 +33,12 @@ const Landing = (props) => {
     value: p.meta_info.bc_slug,
   }));
 
+  const locations = session && session.locations?.filter((loc) => yml.meta_info.utm_location.includes(loc.breathecode_location_slug))
+    .map((loc) => ({
+      label: loc.name,
+      value: loc.breathecode_location_slug,
+    })) || [];
+
   useEffect(() => {
     let _components = {};
     if (yml.components)
@@ -43,7 +49,7 @@ const Landing = (props) => {
   }, [yml]);
   useEffect(() => {
     if (yml.meta_info && yml.meta_info.utm_location)
-      setLocation(yml.meta_info?.utm_location);
+      setLocation(yml.meta_info?.utm_location[0]);
 
     const urlParams = new URLSearchParams(window.location.search);
     const _inLoc = urlParams.get("in") || null;
@@ -61,7 +67,7 @@ const Landing = (props) => {
     },
     utm_location: {
       type: "hidden",
-      value: yml.meta_info?.utm_location,
+      value: locations.length <= 1 ? locations[0]?.value : yml.meta_info.utm_location || null,
       valid: true,
     },
     utm_language: { type: "hidden", value: pageContext.lang, valid: true },
@@ -369,6 +375,7 @@ const Landing = (props) => {
               margin="18px 10px"
               style={{ marginTop: "50px", minHeight: "350px" }}
               selectProgram={programs}
+              selectLocation={locations}
               formHandler={processFormEntry}
               heading={yml.form.heading}
               motivation={yml.form.motivation}
@@ -449,6 +456,7 @@ const Landing = (props) => {
               textPadding_tablet="6px 0px 20px 0px"
               textPadding="6px 0px 20px 0px"
               selectProgram={programs}
+              selectLocation={locations}
               layout="block"
               background="#F9F9F9"
               margin="0"
