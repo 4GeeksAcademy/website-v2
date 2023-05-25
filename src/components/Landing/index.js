@@ -721,9 +721,7 @@ export const landingSections = {
     const locations =
       (session &&
         session.locations
-          ?.filter((loc) =>
-            location.includes(loc.breathecode_location_slug)
-          )
+          ?.filter((loc) => location.includes(loc.breathecode_location_slug))
           .map((loc) => ({
             label: loc.name,
             value: loc.breathecode_location_slug,

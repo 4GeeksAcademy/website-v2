@@ -23,13 +23,9 @@ async function listDir(dir) {
 
 const validateUtmCourse = (val, courses, _path) => {
   if (!Array.isArray(val))
-    fail(
-      `\n${`utm_course`.yellow} ${`expected an array in ${_path}`.red}\n`
-    )
+    fail(`\n${`utm_course`.yellow} ${`expected an array in ${_path}`.red}\n`);
   if (val.length === 0)
-    fail(
-      `\n${`utm_course`.yellow} ${`must not be empty in ${_path}`.red}\n`
-    )
+    fail(`\n${`utm_course`.yellow} ${`must not be empty in ${_path}`.red}\n`);
   if (!val.every((el) => courses.includes(el)))
     fail(
       `${`\nProblem found in: ${_path}`.red}\n\n${
@@ -42,13 +38,9 @@ const validateUtmCourse = (val, courses, _path) => {
 
 const validateUtmLocation = (val, locations, _path) => {
   if (!Array.isArray(val))
-    fail(
-      `\n${`utm_location`.yellow} ${`expected an array in ${_path}`.red}\n`
-    )
+    fail(`\n${`utm_location`.yellow} ${`expected an array in ${_path}`.red}\n`);
   if (val.length === 0)
-    fail(
-      `\n${`utm_location`.yellow} ${`must not be empty in ${_path}`.red}\n`
-    )
+    fail(`\n${`utm_location`.yellow} ${`must not be empty in ${_path}`.red}\n`);
   if (!val.every((el) => locations.includes(el)))
     fail(
       `${`\nProblem found in: ${_path}`.red}\n\n${
@@ -60,8 +52,8 @@ const validateUtmLocation = (val, locations, _path) => {
 };
 
 walk(`${__dirname}/../data/landing`, async (err, files) => {
-  const courseFiles = await listDir('/../data/course');
-  const locationFiles = await listDir('/../data/location');
+  const courseFiles = await listDir("/../data/course");
+  const locationFiles = await listDir("/../data/location");
   let coursesYml = [];
   let locationsYml = [];
 
@@ -105,9 +97,9 @@ walk(`${__dirname}/../data/landing`, async (err, files) => {
       const meta_keys = Object.keys(landing.meta_info);
 
       validateObjectProperties(landing, {
-        "meta_info": (val) => { 
-          validateUtmCourse(val.utm_course, coursesYml, _path );
-          validateUtmLocation(val.utm_location, locationsYml, _path );
+        meta_info: (val) => {
+          validateUtmCourse(val.utm_course, coursesYml, _path);
+          validateUtmLocation(val.utm_location, locationsYml, _path);
         },
       });
     } catch (error) {

@@ -72,11 +72,12 @@ const NotFoundPage = () => (
       }
     `}
     render={(data) => {
-      const [filter, setFilter] = useState('');
+      const [filter, setFilter] = useState("");
       const landings = data.allLandingYaml.edges;
       const filterByLocation = ({ node }) => {
-        if (filter === '') return true;
-        if (node.meta_info.utm_location.some((slug) => slug.includes(filter))) return true;
+        if (filter === "") return true;
+        if (node.meta_info.utm_location.some((slug) => slug.includes(filter)))
+          return true;
         return false;
       };
       return (
@@ -95,7 +96,7 @@ const NotFoundPage = () => (
           <Div>
             <Heading>Landing Pages</Heading>
             <Input
-              style={{ maxWidth: '740px' }}
+              style={{ maxWidth: "740px" }}
               margin="20px auto"
               border="1px solid hsl(0,0%,80%)"
               borderRadius="3px"
