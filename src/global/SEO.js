@@ -88,6 +88,7 @@ const SEO = (props) => (
               class: `page-${context.slug}`,
             }}
           >
+            <script type="text/javascript" src="ActiveCampaignScript.js" />
             <html lang={langCountries[lang]} />
             <link
               rel="canonical"
