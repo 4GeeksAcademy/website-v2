@@ -13,7 +13,7 @@ meta_info:
   # this UTM fields will be included in the CRM
   # utm_course available ["full-stack", "software-engineering", "machine-learning-engineering"]
   utm_course: ["full-stack"] 
-  utm_location: ["madrid-spain"]
+  utm_location: ["madrid-spain", "santiago-chile"]
   automation: soft # comma separated, "soft" is the default value
   tag: request_more_info # comma separated, "request_more_info" is the default value
 
