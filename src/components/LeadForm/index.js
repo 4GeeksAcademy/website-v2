@@ -163,6 +163,7 @@ const LeadForm = ({
   inputBgColor,
   landingTemplate,
   selectProgram,
+  selectLocation,
   textPadding,
   textPadding_tablet,
   titleMargin,
@@ -224,6 +225,7 @@ const LeadForm = ({
   const [consentValue, setConsentValue] = useState(false);
   const { session } = useContext(SessionContext);
   const courseSelector = yml.form_fields.find((f) => f.name === "course");
+  const locationSelector = yml.form_fields.find((f) => f.name === "location");
   const consentCheckboxField = yml.form_fields.find(
     (f) => f.name === "consent"
   );
@@ -280,6 +282,12 @@ const LeadForm = ({
           formData.course.value.length > 1
         ) {
           setFormStatus({ status: "error", msg: courseSelector.error });
+        } else if (
+          formData.utm_location !== undefined &&
+          Array.isArray(formData.utm_location.value) &&
+          formData.utm_location.value.length > 1
+        ) {
+          setFormStatus({ status: "error", msg: locationSelector.error });
         } else if (
           consentValue === false &&
           session.location?.gdpr_compliant === true
@@ -450,6 +458,27 @@ const LeadForm = ({
                     setVal({
                       ...formData,
                       course: { value: selected.value, valid },
+                    })
+                  }
+                />
+              </Div>
+            )}
+            {selectLocation?.length > 1 && (
+              <Div
+                data-cy="dropdown_location_selector"
+                margin_tablet="0 0 23px 0"
+              >
+                <SelectRaw
+                  style={{
+                    background: "#FFFFFF",
+                  }}
+                  options={selectLocation}
+                  placeholder={locationSelector.place_holder}
+                  valid={true}
+                  onChange={(selected, valid) =>
+                    setVal({
+                      ...formData,
+                      utm_location: { value: selected.value, valid },
                     })
                   }
                 />

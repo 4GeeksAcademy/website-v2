@@ -4,10 +4,12 @@ import styled from "styled-components";
 const Tooltip = (props) => {
   const TooltipContainer = styled.div`
     position: relative;
-    display: inline-block;
+    /* display: inline-block; */
     .tooltiptext {
       visibility: hidden;
-      width: 190px;
+      min-width: ${props.minWidth || "150px"};
+      width: ${props.maxWidth};
+      max-width: ${props.maxWidth || "190px"};
       background-color: ${props.background || "black"};
       color: ${props.color || "#fff"};
       text-align: center;

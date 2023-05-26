@@ -25,6 +25,7 @@ const BaseRender =
       );
     }
     let filteredPrograms;
+    let filteredLocations;
     const utm_course = yml.meta_info?.utm_course;
 
     if (pageContext.type === "landing") {
