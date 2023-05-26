@@ -74,7 +74,9 @@ const RelatedPosts = ({ posts, lang, relatedClusters }) => {
   };
   let articles = [];
   relatedClusters.map((cluster) => {
-    articles = articles.concat(posts.filter(({ node }) => node.frontmatter.cluster === cluster));
+    articles = articles.concat(
+      posts.filter(({ node }) => node.frontmatter.cluster === cluster)
+    );
   });
 
   return (
