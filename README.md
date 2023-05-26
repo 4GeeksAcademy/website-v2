@@ -25,3 +25,5 @@ You can create bloposts redirects:
 ```bash
 $ node ./src/utils/create_redirects.js
 ```
+
+.
