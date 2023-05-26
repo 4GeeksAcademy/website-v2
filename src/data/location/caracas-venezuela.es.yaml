@@ -18,7 +18,7 @@ meta_info:
     ]
   region: "latam"
   dialCode: "58"
-  related_clusters: []
+  related_clusters: ["desarrollador-full-stack"]
 
 seo_title: "Curso de Informática Caracas"
 header:

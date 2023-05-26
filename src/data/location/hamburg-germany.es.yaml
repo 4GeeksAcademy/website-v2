@@ -8,7 +8,7 @@ meta_info:
   redirects: ["/es/location/hamburg-germany"]
   region: "europe"
   dialCode: "49"
-  related_clusters: []
+  related_clusters: ["desarrollador-full-stack"]
 
 seo_title: "Coding Bootcamp Hamburgo, Alemania"
 header:

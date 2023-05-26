@@ -14,7 +14,7 @@ meta_info:
     ]
   region: "latam"
   dialCode: "56"
-  related_clusters: []
+  related_clusters: ["desarrollador-full-stack"]
 
 seo_title: "Coding Bootcamp en Santiago de Chile"
 header:

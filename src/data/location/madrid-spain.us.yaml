@@ -8,7 +8,7 @@ meta_info:
   redirects: ["/location/madrid", "/us/location/madrid-spain"]
   region: "europe"
   dialCode: "34"
-  related_clusters: []
+  related_clusters: ["trends-and-tech"]
 
 seo_title: "Coding Bootcamp Madrid"
 header:

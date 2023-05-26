@@ -8,7 +8,7 @@ meta_info:
   redirects: ["/es/location/downtown-miami-usa"]
   region: "usa-canada"
   dialCode: "1"
-  related_clusters: []
+  related_clusters: ["desarrollador-full-stack"]
 
 seo_title: "Bootcamp de Programación en Miami"
 header:

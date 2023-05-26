@@ -13,7 +13,7 @@ meta_info:
     ]
   region: "europe"
   dialCode: "353"
-  related_clusters: []
+  related_clusters: ["trends-and-tech"]
 
 seo_title: "Coding Bootcamp Dublin, Ireland"
 header:

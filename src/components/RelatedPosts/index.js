@@ -67,15 +67,18 @@ const Post = ({ item, i, lang }) => {
   );
 };
 
-const CourseBlogs = ({ posts, lang }) => {
+const RelatedPosts = ({ posts, lang, relatedClusters }) => {
   const title = {
     us: "Related Articles",
     es: "Artículos Relacionados",
   };
-  //t
+  let articles = [];
+  relatedClusters.map((cluster) => {
+    articles = articles.concat(posts.filter(({ node }) => node.frontmatter.cluster === cluster));
+  });
 
   return (
-    posts.length > 0 && (
+    articles.length > 0 && (
       <Div
         display="block"
         padding_md="10px 90px 30px 90px"
@@ -97,7 +100,7 @@ const CourseBlogs = ({ posts, lang }) => {
           justifyContent="center"
           flexWrap="wrap"
         >
-          {posts.map((item, i) => (
+          {articles.map((item, i) => (
             <Post item={item} i={i} lang={lang} />
           ))}
         </Div>
@@ -106,4 +109,4 @@ const CourseBlogs = ({ posts, lang }) => {
   );
 };
 
-export default CourseBlogs;
+export default RelatedPosts;

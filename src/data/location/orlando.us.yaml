@@ -11,7 +11,7 @@ meta_info:
     ]
   region: "usa-canada"
   dialCode: "1"
-  related_clusters: []
+  related_clusters: ["trends-and-tech"]
 
 seo_title: "Coding Bootcamp in Orlando"
 header:

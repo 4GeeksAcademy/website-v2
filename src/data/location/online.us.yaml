@@ -13,7 +13,7 @@ meta_info:
       "/us/location/online-remote",
     ]
   region: "usa-canada"
-  related_clusters: []
+  related_clusters: ["trends-and-tech"]
 
 seo_title: "Online Coding Bootcamp"
 header:
