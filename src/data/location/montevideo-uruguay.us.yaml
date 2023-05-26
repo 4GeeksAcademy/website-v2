@@ -10,6 +10,7 @@ meta_info:
   redirects: ["/us/uruguay", "/uruguay"]
   region: "latam"
   dialCode: "598"
+  related_clusters: []
 
 seo_title: "Coding Bootcamp Uruguay"
 header:

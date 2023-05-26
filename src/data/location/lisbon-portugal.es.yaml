@@ -8,6 +8,7 @@ meta_info:
   redirects: ["/es/location/lisboa-portugal"]
   region: "europe"
   dialCode: "351"
+  related_clusters: []
 
 seo_title: "Coding Bootcamp Lisboa, Portugal"
 header:
