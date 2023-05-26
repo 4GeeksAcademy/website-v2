@@ -1,4 +1,5 @@
 import React from "react";
+import { graphql } from "gatsby";
 import { Header } from "../components/Sections";
 import BaseRender from "./_baseLayout";
 import JobInfo from "../components/JobInfo";
