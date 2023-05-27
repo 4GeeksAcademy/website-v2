@@ -117,6 +117,7 @@ const clean = (fields, data) => {
     (key) =>
       // i also make sure I don't delete the hidden fields
       key !== "course" &&
+      key !== "utm_location" &&
       cleanedData[key].type !== "hidden" &&
       //clean all the rest of the fields that are no supposed to be sent
       //according to the landing YML data
