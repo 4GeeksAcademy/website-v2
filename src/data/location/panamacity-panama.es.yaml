@@ -10,6 +10,7 @@ meta_info:
   redirects: ["/coding-campus/bootcamp-programacion-panama"]
   region: "latam"
   dialCode: "507"
+  related_clusters: []
 
 seo_title: "Aprende a programar en Panamá"
 header:

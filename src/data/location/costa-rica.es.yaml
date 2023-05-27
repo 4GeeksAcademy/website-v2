@@ -10,6 +10,7 @@ meta_info:
   redirects: ["/es/location/costa-rica-san-jose"]
   region: "latam"
   dialCode: "506"
+  related_clusters: []
 
 seo_title: "Coding Bootcamp Costa Rica"
 header:

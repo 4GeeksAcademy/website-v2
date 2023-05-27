@@ -13,6 +13,7 @@ meta_info:
     ]
   region: "europe"
   dialCode: "49"
+  related_clusters: []
 
 seo_title: "Coding Bootcamp Berlin, Germany"
 header:

@@ -8,6 +8,7 @@ meta_info:
   redirects: ["/location/malaga", "/us/location/malaga-spain"]
   region: "europe"
   dialCode: "34"
+  related_clusters: []
 
 seo_title: "Coding Bootcamp Málaga"
 header:

@@ -8,6 +8,7 @@ meta_info:
   redirects: ["/location/valencia", "/us/location/valencia-spain"]
   region: "europe"
   dialCode: "34"
+  related_clusters: []
 
 seo_title: "Coding Bootcamp Valencia"
 header:

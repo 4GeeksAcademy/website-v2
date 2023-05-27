@@ -8,6 +8,7 @@ meta_info:
   redirects: ["/es/location/munchen-germany"]
   region: "europe"
   dialCode: "49"
+  related_clusters: []
 
 seo_title: "Coding Bootcamp Munich, Alemania"
 header:
