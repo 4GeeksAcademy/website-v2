@@ -11,9 +11,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { useStaticQuery, graphql, navigate } from "gatsby";
 import { SelectRaw } from "../Select";
 import PhoneInput from "./PhoneInput";
-import {
-  locByLanguage,
-} from "../../actions";
+import { locByLanguage } from "../../actions";
 
 const formIsValid = (formData = null) => {
   if (!formData) return null;
@@ -321,7 +319,8 @@ const LeadForm = ({
         if (formStatus.status === "error")
           setFormStatus({ status: "idle", msg: "" });
 
-        if (formData.utm_location?.value) setLocation(formData.utm_location.value);
+        if (formData.utm_location?.value)
+          setLocation(formData.utm_location.value);
         const cleanedData = clean(fields, formData);
 
         if (!formIsValid(cleanedData)) {
@@ -348,8 +347,12 @@ const LeadForm = ({
           const location = locByLanguage(
             _query.allLocationYaml,
             session.language
-          ).find((l) => l.breathecode_location_slug === formData.utm_location?.value);
-          const userSession = formData.utm_location?.value ? { ...session, location } : session;
+          ).find(
+            (l) => l.breathecode_location_slug === formData.utm_location?.value
+          );
+          const userSession = formData.utm_location?.value
+            ? { ...session, location }
+            : session;
           formHandler(cleanedData, userSession)
             .then((data) => {
               if (data && data.error !== false && data.error !== undefined) {
