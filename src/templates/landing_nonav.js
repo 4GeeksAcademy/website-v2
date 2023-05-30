@@ -54,8 +54,8 @@ const Landing = (props) => {
     setComponents({ ...yml, ..._components });
   }, [yml]);
   useEffect(() => {
-    if (yml.meta_info && yml.meta_info.utm_location)
-      setLocation(yml.meta_info?.utm_location[0]);
+    // if (yml.meta_info && yml.meta_info.utm_location)
+    //   setLocation(yml.meta_info?.utm_location[0]);
 
     const urlParams = new URLSearchParams(window.location.search);
     const _inLoc = urlParams.get("in") || null;
