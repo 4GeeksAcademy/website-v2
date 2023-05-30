@@ -11,6 +11,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { useStaticQuery, graphql, navigate } from "gatsby";
 import { SelectRaw } from "../Select";
 import PhoneInput from "./PhoneInput";
+import { locByLanguage } from "../../actions";
 
 const formIsValid = (formData = null) => {
   if (!formData) return null;
@@ -117,6 +118,7 @@ const clean = (fields, data) => {
     (key) =>
       // i also make sure I don't delete the hidden fields
       key !== "course" &&
+      key !== "utm_location" &&
       cleanedData[key].type !== "hidden" &&
       //clean all the rest of the fields that are no supposed to be sent
       //according to the landing YML data
@@ -163,6 +165,7 @@ const LeadForm = ({
   inputBgColor,
   landingTemplate,
   selectProgram,
+  selectLocation,
   textPadding,
   textPadding_tablet,
   titleMargin,
@@ -208,6 +211,51 @@ const LeadForm = ({
           }
         }
       }
+      allLocationYaml {
+        edges {
+          node {
+            city
+            name
+            latitude
+            longitude
+            phone
+            socials {
+              name
+              icon
+              link
+            }
+            country
+            country_shortname
+            defaultLanguage
+            breathecode_location_slug
+            active_campaign_location_slug
+            gdpr_compliant
+            in_person_available
+            online_available
+            meta_info {
+              slug
+              visibility
+              position
+              region
+              dialCode
+            }
+            button {
+              apply_button_text
+              syllabus_button_text
+            }
+            custom_bar {
+              active
+            }
+          }
+        }
+        nodes {
+          fields {
+            file_name
+            lang
+            slug
+          }
+        }
+      }
     }
   `);
 
@@ -222,8 +270,9 @@ const LeadForm = ({
   const [formStatus, setFormStatus] = useState({ status: "idle", msg: "" });
   const [formData, setVal] = useState(_fields);
   const [consentValue, setConsentValue] = useState(false);
-  const { session } = useContext(SessionContext);
+  const { session, setLocation } = useContext(SessionContext);
   const courseSelector = yml.form_fields.find((f) => f.name === "course");
+  const locationSelector = yml.form_fields.find((f) => f.name === "location");
   const consentCheckboxField = yml.form_fields.find(
     (f) => f.name === "consent"
   );
@@ -270,6 +319,8 @@ const LeadForm = ({
         if (formStatus.status === "error")
           setFormStatus({ status: "idle", msg: "" });
 
+        if (formData.utm_location?.value)
+          setLocation(formData.utm_location.value);
         const cleanedData = clean(fields, formData);
 
         if (!formIsValid(cleanedData)) {
@@ -281,13 +332,28 @@ const LeadForm = ({
         ) {
           setFormStatus({ status: "error", msg: courseSelector.error });
         } else if (
+          formData.utm_location !== undefined &&
+          Array.isArray(formData.utm_location.value) &&
+          formData.utm_location.value.length > 1
+        ) {
+          setFormStatus({ status: "error", msg: locationSelector.error });
+        } else if (
           consentValue === false &&
           session.location?.gdpr_compliant === true
         ) {
           setFormStatus({ status: "error", msg: consentCheckboxField.error });
         } else {
           setFormStatus({ status: "loading", msg: yml.messages.loading });
-          formHandler(cleanedData, session)
+          const location = locByLanguage(
+            _query.allLocationYaml,
+            session.language
+          ).find(
+            (l) => l.breathecode_location_slug === formData.utm_location?.value
+          );
+          const userSession = formData.utm_location?.value
+            ? { ...session, location }
+            : session;
+          formHandler(cleanedData, userSession)
             .then((data) => {
               if (data && data.error !== false && data.error !== undefined) {
                 setFormStatus({ status: "error", msg: data.error });
@@ -450,6 +516,27 @@ const LeadForm = ({
                     setVal({
                       ...formData,
                       course: { value: selected.value, valid },
+                    })
+                  }
+                />
+              </Div>
+            )}
+            {selectLocation?.length > 1 && (
+              <Div
+                data-cy="dropdown_location_selector"
+                margin_tablet="0 0 23px 0"
+              >
+                <SelectRaw
+                  style={{
+                    background: "#FFFFFF",
+                  }}
+                  options={selectLocation}
+                  placeholder={locationSelector.place_holder}
+                  valid={true}
+                  onChange={(selected, valid) =>
+                    setVal({
+                      ...formData,
+                      utm_location: { value: selected.value, valid },
                     })
                   }
                 />
