@@ -29,7 +29,7 @@ form:
   heading: "Request more info."
   motivation: "" # < -- subtitle ideal to movitate people on filling the form
   button_label: SEND
-  redirect: "https://google.com" #you can redirect to another url or entirely diffrent website
+  # redirect: "https://google.com" #you can redirect to another url or entirely diffrent website
 
 # jumbotron on the top (cannot be commented out)
 header_data:
