@@ -11,7 +11,6 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { useStaticQuery, graphql, navigate } from "gatsby";
 import { SelectRaw } from "../Select";
 import PhoneInput from "./PhoneInput";
-import { locByLanguage } from "../../actions";
 
 const formIsValid = (formData = null) => {
   if (!formData) return null;
@@ -211,51 +210,6 @@ const LeadForm = ({
           }
         }
       }
-      allLocationYaml {
-        edges {
-          node {
-            city
-            name
-            latitude
-            longitude
-            phone
-            socials {
-              name
-              icon
-              link
-            }
-            country
-            country_shortname
-            defaultLanguage
-            breathecode_location_slug
-            active_campaign_location_slug
-            gdpr_compliant
-            in_person_available
-            online_available
-            meta_info {
-              slug
-              visibility
-              position
-              region
-              dialCode
-            }
-            button {
-              apply_button_text
-              syllabus_button_text
-            }
-            custom_bar {
-              active
-            }
-          }
-        }
-        nodes {
-          fields {
-            file_name
-            lang
-            slug
-          }
-        }
-      }
     }
   `);
 
@@ -319,8 +273,6 @@ const LeadForm = ({
         if (formStatus.status === "error")
           setFormStatus({ status: "idle", msg: "" });
 
-        if (formData.utm_location?.value)
-          setLocation(formData.utm_location.value);
         const cleanedData = clean(fields, formData);
 
         if (!formIsValid(cleanedData)) {
@@ -344,16 +296,7 @@ const LeadForm = ({
           setFormStatus({ status: "error", msg: consentCheckboxField.error });
         } else {
           setFormStatus({ status: "loading", msg: yml.messages.loading });
-          const location = locByLanguage(
-            _query.allLocationYaml,
-            session.language
-          ).find(
-            (l) => l.breathecode_location_slug === formData.utm_location?.value
-          );
-          const userSession = formData.utm_location?.value
-            ? { ...session, location }
-            : session;
-          formHandler(cleanedData, userSession)
+          formHandler(cleanedData, session)
             .then((data) => {
               if (data && data.error !== false && data.error !== undefined) {
                 setFormStatus({ status: "error", msg: data.error });

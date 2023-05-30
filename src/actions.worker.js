@@ -140,6 +140,7 @@ export const initSession = async (locationsArray, storedSession, seed = {}) => {
 
   // remove undefineds from the seed utm's to avoid overriding the originals with undefined
   Object.keys(utm).forEach((key) => utm[key] === undefined && delete utm[key]);
+  let geoCode = null;
 
   if (location) {
     location = locations.find((l) => l.breathecode_location_slug === location);
@@ -182,7 +183,6 @@ export const initSession = async (locationsArray, storedSession, seed = {}) => {
           }
         );
 
-        let geoCode = null;
         let filteredLocations = [];
         let dataGC = (await responseGC.json()) || null;
 
@@ -260,6 +260,8 @@ export const initSession = async (locationsArray, storedSession, seed = {}) => {
     ...storedSession,
     v4,
     location,
+    country : geoCode.country,
+    city : geoCode.city,
     browserLang,
     language,
     latitude,
