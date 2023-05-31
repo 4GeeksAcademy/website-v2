@@ -1,90 +1,82 @@
 import React from "react";
 import styled from "styled-components";
 
-const ToggleSwitch = ({ label, ...rest }) => {
+const ToggleSwitch = ({ value, onChange, ...rest }) => {
   const Container = styled.div`
-    text-align: center;
-    .toggle-switch {
-      position: relative;
-      width: 75px;
-      display: inline-block;
-      text-align: left;
-      top: 8px;
-    }
-    .checkbox {
-      display: none;
-    }
-    .label {
-      display: block;
-      overflow: hidden;
-      cursor: pointer;
-      border: 0 solid #bbb;
-      border-radius: 20px;
-    }
-    .inner {
-      display: block;
-      width: 200%;
-      margin-left: -100%;
-      transition: margin 0.3s ease-in 0s;
-    }
-    .inner:before,
-    .inner:after {
-      float: left;
-      width: 50%;
-      height: 36px;
-      padding: 0;
-      line-height: 36px;
-      color: #fff;
-      font-weight: bold;
-      box-sizing: border-box;
-    }
-    .inner:before {
-      padding-left: 10px;
-      background-color: #060;
-      color: #fff;
-    }
-    .inner:after {
-      padding-right: 10px;
-      background-color: #bbb;
-      color: #fff;
-      text-align: right;
-    }
+    /* The switch - the box around the slider */
     .switch {
-      display: block;
-      width: 24px;
-      margin: 5px;
-      background: #fff;
+      position: relative;
+      display: inline-block;
+      width: 40px;
+      height: 21px;
+    }
+
+    /* Hide default HTML checkbox */
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    /* The slider */
+    .slider {
       position: absolute;
+      cursor: pointer;
       top: 0;
+      left: 0;
+      right: 0;
       bottom: 0;
-      right: 40px;
-      border: 0 solid #bbb;
-      border-radius: 20px;
-      transition: all 0.3s ease-in 0s;
+      background-color: #ccc;
+      -webkit-transition: .4s;
+      transition: .4s;
     }
-    .checkbox:checked + .label .inner {
-      margin-left: 0;
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 13px;
+      width: 13px;
+      left: 4px;
+      bottom: 4px;
+      background-color: white;
+      -webkit-transition: .4s;
+      transition: .4s;
     }
-    .checkbox:checked + .label .switch {
-      right: 0px;
+
+    input:checked + .slider {
+      background-color: #2196F3;
+    }
+
+    input:focus + .slider {
+      box-shadow: 0 0 1px #2196F3;
+    }
+
+    input:checked + .slider:before {
+      -webkit-transform: translateX(20px);
+      -ms-transform: translateX(20px);
+      transform: translateX(20px);
+    }
+
+    /* Rounded sliders */
+    .slider.round {
+      border-radius: 34px;
+    }
+
+    .slider.round:before {
+      border-radius: 50%;
     }
   `;
   return (
     <Container>
-      {label && label}
-      <div className="toggle-switch">
+      <label class="switch">
         <input
           type="checkbox"
-          className="checkbox"
-          name="toggle-switch"
-          id="toggle-switch"
+          value={value}
+          onChange={onChange}
           {...rest}
         />
-        <label className="label" htmlFor="toggle-switch">
-          <span className="inner" />
-          <span className="switch" />
-        </label>
-      </div>
+        <span class="slider round"></span>
+      </label>
     </Container>
   );
 };

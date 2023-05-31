@@ -353,6 +353,7 @@ const PricesAndPayments = (props) => {
   const [buttonText, setButtonText] = useState(null);
   const [locations, setLocations] = useState(false);
   const [selectedPlan, setSelectedPlan] = useState(null);
+  const [jobGuarantee, setJobGuarantee] = useState(false);
   const [currentPlans] = useState(getCurrentPlans);
 
   const availablePlans =
@@ -529,9 +530,10 @@ const PricesAndPayments = (props) => {
                 display="block"
                 background={Colors.veryLightBlue}
                 padding="10px"
+                margin="0 0 20px 0"
               >
-                <Div>
-                  <Toggle />
+                <Div margin="0 0 10px 0">
+                  <Toggle value={jobGuarantee} onChange={(e) => setJobGuarantee(e)} />
                 </Div>
                 <Paragraph textAlign="left" color={Colors.black} opacity="1">
                   {info.job_guarantee.description}
