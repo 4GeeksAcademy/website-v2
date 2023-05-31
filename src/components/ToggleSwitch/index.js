@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-  
+
 const ToggleSwitch = ({ label, ...rest }) => {
   const Container = styled.div`
     text-align: center;
@@ -75,7 +75,7 @@ const ToggleSwitch = ({ label, ...rest }) => {
       <div className="toggle-switch">
         <input
           type="checkbox"
-          className="checkbox" 
+          className="checkbox"
           name="toggle-switch"
           id="toggle-switch"
           {...rest}
@@ -88,5 +88,5 @@ const ToggleSwitch = ({ label, ...rest }) => {
     </Container>
   );
 };
-  
+
 export default ToggleSwitch;

@@ -525,7 +525,11 @@ const PricesAndPayments = (props) => {
               >
                 {info.select}
               </Paragraph>
-              <Div display="block" background={Colors.veryLightBlue} padding="10px">
+              <Div
+                display="block"
+                background={Colors.veryLightBlue}
+                padding="10px"
+              >
                 <Div>
                   <Toggle />
                 </Div>
