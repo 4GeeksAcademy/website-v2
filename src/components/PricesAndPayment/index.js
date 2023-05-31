@@ -165,23 +165,16 @@ const PricingCard = ({
   );
 };
 
-const ChartSection = ({ info, mobile }) => (
+const ChartSection = ({ info }) => (
   <Div
     className="chart-section"
     background="#000"
     padding="20px 14px"
     borderRadius="4px"
-    maxWidth_sm="385px"
+    maxWidth_md="700px"
     width_xs="80%"
     margin="auto"
-    display={mobile ? "block" : "none"}
-    display_md={mobile ? "none" : "block"}
-    position_sm="static"
-    position_md="absolute"
-    // left="6%"
-    left="-360px"
-    // left_lg="150px"
-    top="-2%"
+    display="block"
   >
     <H3 color={Colors.blue} margin="auto" fontSize="26px" lineHeight="31.2px">
       {info.chart_section.title}
@@ -270,9 +263,9 @@ const modalityArray = [
   },
 ];
 
-const PricesAndPaymentsV2 = (props) => {
+const PricesAndPayments = (props) => {
   const data = useStaticQuery(graphql`
-    query PricesAndPaymentsV2 {
+    query PricesAndPayments {
       content: allPricesAndPaymentYaml {
         edges {
           node {
@@ -338,7 +331,6 @@ const PricesAndPaymentsV2 = (props) => {
       }
     }
   `);
-
   let info = data.content.edges.find(
     ({ node }) => node.fields.lang === props.lang
   );
@@ -493,7 +485,7 @@ const PricesAndPaymentsV2 = (props) => {
         </Div>
       </GridContainer>
       <Div display="block" minHeight_tablet="600px" padding_md="20px">
-        {/* <ChartSection info={info} mobile /> */}
+        <ChartSection info={info} />
         <Div
           borderRadius="4px"
           border="1px solid #000"
@@ -504,14 +496,11 @@ const PricesAndPaymentsV2 = (props) => {
           minWidth_md="580px"
           width_md="auto"
           width_xs="80%"
-          margin_lg="auto"
-          margin_md="0 0 0 400px"
+          margin_sm="auto"
           margin_xs="20px auto"
+          margin="20px auto"
           display="block"
-          position="relative"
-          transform_lg="translate(50px)"
         >
-          <ChartSection info={info} mobile={false} />
           {availablePlans && availablePlans.length !== 0 ? (
             <H3
               fontSize="24px"
@@ -630,4 +619,4 @@ const PricesAndPaymentsV2 = (props) => {
     </Div>
   );
 };
-export default PricesAndPaymentsV2;
+export default PricesAndPayments;

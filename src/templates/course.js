@@ -29,7 +29,7 @@ import { SessionContext } from "../session";
 import AboutTheProgram from "../components/AboutTheProgram";
 import ProgramDetails from "../components/ProgramDetails";
 import ProgramDetailsMobile from "../components/ProgramDetailsMobile";
-import PricesAndPayment from "../components/PricesAndPayment_v2";
+import PricesAndPayment from "../components/PricesAndPayment";
 import Modal from "../components/Modal";
 import LeadForm from "../components/LeadForm";
 import AlumniProjects from "../components/AlumniProjects";

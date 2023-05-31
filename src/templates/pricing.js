@@ -9,7 +9,7 @@ import {
 } from "../components/Sections";
 import { Title, H2, H5, Paragraph } from "../components/Heading";
 import { Button, Colors, StyledBackgroundSection } from "../components/Styling";
-import PricesAndPayment from "../components/PricesAndPayment_v2";
+import PricesAndPayment from "../components/PricesAndPayment";
 import BaseRender from "./_baseLayout";
 import { openGuidebook } from "../actions";
 import { SessionContext } from "../session.js";
