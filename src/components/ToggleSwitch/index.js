@@ -27,8 +27,8 @@ const ToggleSwitch = ({ value, onChange, ...rest }) => {
       right: 0;
       bottom: 0;
       background-color: #ccc;
-      -webkit-transition: .4s;
-      transition: .4s;
+      -webkit-transition: 0.4s;
+      transition: 0.4s;
     }
 
     .slider:before {
@@ -39,16 +39,16 @@ const ToggleSwitch = ({ value, onChange, ...rest }) => {
       left: 4px;
       bottom: 4px;
       background-color: white;
-      -webkit-transition: .4s;
-      transition: .4s;
+      -webkit-transition: 0.4s;
+      transition: 0.4s;
     }
 
     input:checked + .slider {
-      background-color: #2196F3;
+      background-color: #2196f3;
     }
 
     input:focus + .slider {
-      box-shadow: 0 0 1px #2196F3;
+      box-shadow: 0 0 1px #2196f3;
     }
 
     input:checked + .slider:before {
@@ -69,12 +69,7 @@ const ToggleSwitch = ({ value, onChange, ...rest }) => {
   return (
     <Container>
       <label class="switch">
-        <input
-          type="checkbox"
-          value={value}
-          onChange={onChange}
-          {...rest}
-        />
+        <input type="checkbox" value={value} onChange={onChange} {...rest} />
         <span class="slider round"></span>
       </label>
     </Container>

@@ -533,7 +533,10 @@ const PricesAndPayments = (props) => {
                 margin="0 0 20px 0"
               >
                 <Div margin="0 0 10px 0">
-                  <Toggle value={jobGuarantee} onChange={(e) => setJobGuarantee(e)} />
+                  <Toggle
+                    value={jobGuarantee}
+                    onChange={(e) => setJobGuarantee(e)}
+                  />
                 </Div>
                 <Paragraph textAlign="left" color={Colors.black} opacity="1">
                   {info.job_guarantee.description}
