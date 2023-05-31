@@ -3,7 +3,11 @@ pricing_error_contact: Para más información por favor contáctanos a info@4gee
 get_notified: Pregunta por nuestras Becas. Siempre estamos trabajando y aliándonos para poder ofrecerte mejores opciones. Contáctanos para más información.
 top_label: sede
 recomended: Recomendado
+plans_title: Planes y precios
 select: Selecciona el plan que mejor se ajusta a ti
+job_guarantee:
+  title:  "Compromiso de Garantía de Empleo:"
+  description:  "Ambos nos comprometemos con tu futura carrera (te devolvemos el dinero si no lo logras)."
 apply_button: 
   label: APLICAR
   link: /es/aplica
@@ -15,10 +19,10 @@ chart_section:
       color: '#00A0DA'
       description: 'de nuestros graduados recibió una beca total o parcial gracias a nuestras opciones de pago integrales.'
     - percentage: '46%'
-      color: '#FFF'
+      color: '#FFB718'
       description: 'de nuestros estudiantes son mujeres'
     - percentage: '24%'
-      color: '#FFC718'
+      color: '#23C520'
       description: 'de nuestros estudiantes son parte de la comunidad afrodescendiente'
 button:
   button_text: Ver planes y precios

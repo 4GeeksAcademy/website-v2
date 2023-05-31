@@ -1,6 +1,7 @@
 import React, { useState, useContext, useEffect } from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import Icon from "../Icon";
+import Toggle from "../ToggleSwitch";
 import { Link } from "../Styling/index";
 import { GridContainer, Div } from "../Sections";
 import Select, { SelectRaw } from "../Select";
@@ -168,68 +169,64 @@ const PricingCard = ({
 const ChartSection = ({ info }) => (
   <Div
     className="chart-section"
-    background="#000"
     padding="20px 14px"
-    borderRadius="4px"
-    maxWidth_md="700px"
+    maxWidth_md="800px"
     width_xs="80%"
     margin="auto"
     display="block"
   >
-    <H3 color={Colors.blue} margin="auto" fontSize="26px" lineHeight="31.2px">
+    <H3 margin="auto" fontSize="26px" lineHeight="31.2px">
       {info.chart_section.title}
     </H3>
-    <Div
-      id="chart-image"
-      margin="15px 0"
-      borderRadius="4px"
-      background="#101010"
-      width="100%"
-      height="256px"
-      flexDirection="column"
-      justifyContent="center"
-    >
-      <Icon icon="payments_chart" style={{ margin: "auto" }} />
-    </Div>
-    <Div id="legend" flexWrap="wrap" justifyContent="between">
-      {info.chart_section &&
-        Array.isArray(info.chart_section.legend) &&
-        info.chart_section.legend.map((item, i) => (
-          <Div
-            width={i === 0 ? "100%" : "48%"}
-            border="1px solid #FFF"
-            borderRadius="4px"
-            className="info"
-            margin="0 0 4% 0"
-          >
+    <Div margin="25px 0 15px 0" gap="10px" flexWrap="wrap" flexWrap_md="nowrap">
+      <Div
+        id="chart-image"
+        width="100%"
+        width_xs="300px"
+        margin="auto"
+        // height="256px"
+      >
+        <Icon icon="payments_chart" style={{ margin: "auto" }} />
+      </Div>
+      <Div id="legend" flexWrap="wrap" justifyContent="between">
+        {info.chart_section &&
+          Array.isArray(info.chart_section.legend) &&
+          info.chart_section.legend.map((item, i) => (
             <Div
-              flexShrink_tablet="0"
-              borderRadius="4px 0px 0px 4px"
-              height="100%"
-              width="19.39px"
-              background={item.color}
-            />
-            <Div padding={i === 0 ? "10px" : "5px"} display="block">
-              <H5
-                margin={i !== 0 && "0 0 10px 0"}
-                textAlign="left"
-                color={i === 0 ? item.color : Colors.white}
-              >
-                {item.percentage}
-              </H5>
-              <Paragraph
-                fontWeight_tablet="700"
-                fontSize={i === 0 ? "16px" : "12px"}
-                lineHeight={i === 0 ? "19px" : "14.4px"}
-                color="#FFF"
-                textAlign="left"
-                opacity="1"
-              >
-                {item.description}
-              </Paragraph>
+              width={i === 0 ? "100%" : "48%"}
+              height="auto"
+              height_sm="128px"
+              border={`1px solid ${item.color}`}
+              className="info"
+              margin="0 0 4% 0"
+            >
+              <Div
+                flexShrink_tablet="0"
+                // height="100%"
+                width="19.39px"
+                background={item.color}
+              />
+              <Div padding="10px" display="block">
+                <H5
+                  margin={i !== 0 && "0 0 10px 0"}
+                  textAlign="left"
+                  color={item.color}
+                >
+                  {item.percentage}
+                </H5>
+                <Paragraph
+                  fontWeight_tablet="700"
+                  fontSize="16px"
+                  lineHeight="19px"
+                  textAlign="left"
+                  opacity="1"
+                >
+                  {item.description}
+                </Paragraph>
+              </Div>
             </Div>
-          </Div>
-        ))}
+          ))}
+      </Div>
     </Div>
   </Div>
 );
@@ -276,7 +273,12 @@ const PricesAndPayments = (props) => {
             pricing_error
             get_notified
             top_label
+            plans_title
             select
+            job_guarantee {
+              title
+              description
+            }
             recomended
             not_available
             apply_button {
@@ -430,7 +432,7 @@ const PricesAndPayments = (props) => {
       </GridContainer>
       <GridContainer
         margin="0 0 70px 0"
-        margin_tablet="0 0 50px 0"
+        margin_tablet="0 0 25px 0"
         margin_xs="0 0 30px 0"
       >
         <Div
@@ -492,7 +494,7 @@ const PricesAndPayments = (props) => {
           background="#FFF"
           padding_xs="18px 15px"
           padding_sm="38px"
-          maxWidth_md="700px"
+          maxWidth_md="800px"
           minWidth_md="580px"
           width_md="auto"
           width_xs="80%"
@@ -502,15 +504,36 @@ const PricesAndPayments = (props) => {
           display="block"
         >
           {availablePlans && availablePlans.length !== 0 ? (
-            <H3
-              fontSize="24px"
-              lineHeight="29px"
-              textAlign="center"
-              width="100%"
-              margin="0 0 20px 0"
-            >
-              {info.select}
-            </H3>
+            <>
+              <H3
+                fontSize="24px"
+                lineHeight="29px"
+                textAlign="center"
+                width="100%"
+                margin="0 0 20px 0"
+              >
+                {info.plans_title}
+              </H3>
+              <Paragraph
+                fontSize="24px"
+                lineHeight="29px"
+                textAlign="center"
+                width="100%"
+                margin="0 0 20px 0"
+                opacity="1"
+                color={Colors.black}
+              >
+                {info.select}
+              </Paragraph>
+              <Div display="block" background={Colors.veryLightBlue} padding="10px">
+                <Div>
+                  <Toggle />
+                </Div>
+                <Paragraph textAlign="left" color={Colors.black} opacity="1">
+                  {info.job_guarantee.description}
+                </Paragraph>
+              </Div>
+            </>
           ) : (
             <Div
               fontSize="25px"
