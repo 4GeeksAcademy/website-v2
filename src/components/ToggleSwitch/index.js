@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const ToggleSwitch = ({ value, onChange, ...rest }) => {
+const ToggleSwitch = ({ isChecked, onChange, ...rest }) => {
   const Container = styled.div`
     /* The switch - the box around the slider */
     .switch {
@@ -68,9 +68,14 @@ const ToggleSwitch = ({ value, onChange, ...rest }) => {
   `;
   return (
     <Container>
-      <label class="switch">
-        <input type="checkbox" value={value} onChange={onChange} {...rest} />
-        <span class="slider round"></span>
+      <label className="switch">
+        <input
+          type="checkbox"
+          checked={isChecked}
+          onChange={onChange}
+          {...rest}
+        />
+        <span className="slider round"></span>
       </label>
     </Container>
   );

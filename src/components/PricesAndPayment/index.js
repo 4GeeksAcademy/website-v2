@@ -534,8 +534,8 @@ const PricesAndPayments = (props) => {
               >
                 <Div margin="0 0 10px 0">
                   <Toggle
-                    value={jobGuarantee}
-                    onChange={(e) => setJobGuarantee(e)}
+                    isChecked={jobGuarantee}
+                    onChange={() => setJobGuarantee(!jobGuarantee)}
                   />
                 </Div>
                 <Paragraph textAlign="left" color={Colors.black} opacity="1">
