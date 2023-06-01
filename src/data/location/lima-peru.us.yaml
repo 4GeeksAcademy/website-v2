@@ -10,7 +10,7 @@ meta_info:
   redirects: ["/us/peru", "/peru"]
   region: "latam"
   dialCode: "593"
-  related_clusters: []
+  related_clusters: ["trends-and-tech"]
 
 seo_title: "Coding Bootcamp Lima, Peru"
 header:

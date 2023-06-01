@@ -10,7 +10,7 @@ meta_info:
   redirects: ["/us/bolivia", "/bolivia"]
   region: "latam"
   dialCode: "591"
-  related_clusters: []
+  related_clusters: ["trends-and-tech"]
 
 seo_title: "Coding Bootcamp Bolivia"
 header:

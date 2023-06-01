@@ -13,7 +13,7 @@ meta_info:
     # "/es/coding-campus/bootcamp-programacion-colombia"
     ]
   dialCode: "57"
-  related_clusters: []
+  related_clusters: ["desarrollador-full-stack"]
 
 seo_title: "Aprende a programar en Colombia"
 header:

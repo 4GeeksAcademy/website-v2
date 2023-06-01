@@ -32,7 +32,7 @@ import { Circle } from "../components/BackgroundDrawing";
 import LeadForm from "../components/LeadForm";
 import Modal from "../components/Modal";
 import Instructors from "../components/Instructors";
-import CourseBlogs from "../components/CourseBlogs";
+import RelatedPosts from "../components/RelatedPosts";
 import JobGuaranteeSmall from "../components/JobGuaranteeSmall";
 
 const Program = ({ data, pageContext, yml }) => {
@@ -444,9 +444,10 @@ const Program = ({ data, pageContext, yml }) => {
       />
       <Testimonials lang={data.allTestimonialsYaml.edges} />
       <OurPartners images={hiring.partners.images} marquee></OurPartners>
-      <CourseBlogs
+      <RelatedPosts
         lang={pageContext.lang}
         posts={data.allMarkdownRemark.edges}
+        relatedClusters={courseDetails.meta_info.related_clusters}
       />
     </>
   );
@@ -593,6 +594,7 @@ export const query = graphql`
             keywords
             slug
             bc_slug
+            related_clusters
           }
           geek_data {
             heading
