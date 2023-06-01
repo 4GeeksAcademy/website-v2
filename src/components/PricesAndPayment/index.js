@@ -24,9 +24,10 @@ const PricingCard = ({
     <Div
       cursor="pointer"
       display="block"
-      width="320px"
-      width_tablet={plansLength % 2 !== 0 && index === 0 ? "100%" : "49%"}
-      minWidth_tablet="240px"
+      width="100%"
+      // width="320px"
+      // width_tablet={plansLength % 2 !== 0 && index === 0 ? "100%" : "49%"}
+      // minWidth_tablet="240px"
       margin_xs="0 0 15px 0"
       margin_tablet="0 5px 15px 0"
       onClick={() => {
@@ -53,11 +54,8 @@ const PricingCard = ({
         </Div>
       )}
       <Div
-        border={`2px solid ${isSelected ? Colors.black : Colors.blue}`}
-        // borderRadius_tablet={recomended ? "0 0 4px 4px" : "4px"}
-        // borderRadius_sm="4px"
+        border={`2px solid ${Colors.blue}`}
         borderRadius={recomended ? "0 0 4px 4px" : "4px"}
-        background={isSelected ? Colors.black : Colors.white}
         padding="15px 12px"
         display="block"
       >
@@ -66,7 +64,7 @@ const PricingCard = ({
             <Paragraph
               lineHeight="14px"
               fontWeight_tablet="700"
-              color={isSelected ? Colors.white : Colors.black}
+              // color={isSelected ? Colors.white : Colors.black}
               opacity="1"
               textAlign="left"
               margin="0 0 5px 0"
@@ -75,7 +73,7 @@ const PricingCard = ({
             </Paragraph>
             <Paragraph
               lineHeight="14px"
-              color={isSelected ? Colors.white : Colors.black}
+              // color={isSelected ? Colors.white : Colors.black}
               opacity="1"
               textAlign="left"
             >
@@ -532,11 +530,19 @@ const PricesAndPayments = (props) => {
                 padding="10px"
                 margin="0 0 20px 0"
               >
-                <Div margin="0 0 10px 0">
+                <Div alignItems="center">
                   <Toggle
                     isChecked={jobGuarantee}
                     onChange={() => setJobGuarantee(!jobGuarantee)}
                   />
+                  <H4
+                    textAlign="left"
+                    fontWeight="700"
+                    fontSize="18px"
+                    margin="0 0 0 10px"
+                  >
+                    {info.job_guarantee.title}
+                  </H4>
                 </Div>
                 <Paragraph textAlign="left" color={Colors.black} opacity="1">
                   {info.job_guarantee.description}
@@ -556,6 +562,7 @@ const PricesAndPayments = (props) => {
             flexWrap="wrap"
             justifyContent_tablet="between"
             justifyContent_xs="evenly"
+            width_tablet="50%"
           >
             {availablePlans &&
               availablePlans
