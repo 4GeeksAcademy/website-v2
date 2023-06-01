@@ -14,7 +14,7 @@ meta_info:
     ]
   region: "europe"
   dialCode: "39"
-  related_clusters: []
+  related_clusters: ["trends-and-tech"]
 
 seo_title: "Coding Bootcamp Milano, Italy"
 header:

@@ -31,15 +31,15 @@ faq:
         answer: |-
           "Para comenzar tu carrera como Desarrollador, solo necesitas hacer clic <a  class="faq-link" href="/es/aplica">aquí</a> y completar un formulario muy simple. Nosotros nos encargaremos del resto".
       - question: "¿Cuál es el proceso de admisión?"
-        priority: 0
+        priority: 1
         answer: |-
           "Una vez que comiences el proceso de solicitud, recibirás un correo electrónico de uno de nuestros Consejeros Estudiantiles. Te guiaremos durante todo el proceso. Simplemente responde a nuestro correo electrónico y te llamaremos a tu conveniencia. 
           Después de la llamada telefónica, serás invitado a una reunión personal o por videollamada. Si lo deseas, podrás visitar nuestra ubicación, conocer al equipo y conocernos. Durante la reunión, podrás explicarnos por qué deseas convertirte en desarrollador. Nosotros nos encargaremos de todo."
       - question: "¿TENGO que traer mi propia laptop/portátil/notebook?"
-        priority: 0
+        priority: 1
         answer: "Absolutamente, inequívocamente, la respuesta es: SI. Trae tu computadora/ordenador portátil CADA VEZ.  No requerimos de un sistema operativo específico y, dado que nuestras lecciones y prácticas están en la nube, incluso puedes usar una Chromebook."
       - question: "¿Cómo pago mi matrícula?"
-        priority: 0
+        priority: 3
         answer: |-
           "Tienes varias opciones. Nuestro precio varía según el país en el que te encuentres, sin embargo, no hay otros costes asociados, cargos ocultos ni nada más. 
           Además, contamos con increíbles partners para ofrecerte la mejor financiación. Puedes solicitar un plan de 6, 12, 18 o 24 meses (según cada sede) preocúpate solo por obtener la educación que necesitas.
