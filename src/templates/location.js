@@ -24,6 +24,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import Icon from "../components/Icon";
 import { SessionContext } from "../session";
 import JobGuaranteeSmall from "../components/JobGuaranteeSmall";
+import CourseBlogs from "../components/CourseBlogs";
 import FaqCard from "../components/FaqCard";
 
 const MapFrame = lazy(() => import("../components/MapFrame"));
@@ -389,12 +390,20 @@ const Location = ({ data, pageContext, yml }) => {
         />
       </GridContainer>
       <Divider height="50px" />
+      <CourseBlogs
+        lang={pageContext.lang}
+        posts={data.allMarkdownRemark.edges}
+      />
     </>
   );
 };
 
 export const query = graphql`
-  query LocationQuery($file_name: String!, $lang: String!) {
+  query LocationQuery(
+    $file_name: String!
+    $lang: String!
+    $related_clusters: [String]
+  ) {
     allLocationYaml(
       filter: { fields: { file_name: { eq: $file_name }, lang: { eq: $lang } } }
     ) {
@@ -579,6 +588,33 @@ export const query = graphql`
             }
             content
             heading
+          }
+        }
+      }
+    }
+    allMarkdownRemark(
+      limit: 4
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: { frontmatter: { cluster: { in: $related_clusters } } }
+    ) {
+      totalCount
+      edges {
+        node {
+          fields {
+            slug
+            type
+            pagePath
+          }
+          frontmatter {
+            author
+            date
+            image
+            slug
+            title
+            excerpt
+            featured
+            status
+            cluster
           }
         }
       }
