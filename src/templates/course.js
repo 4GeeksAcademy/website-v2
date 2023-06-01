@@ -41,7 +41,7 @@ import JobGuaranteeSmall from "../components/JobGuaranteeSmall";
 import GeeksInfo from "../components/GeeksInfo";
 import Testimonials from "../components/Testimonials";
 import OurPartners from "../components/OurPartners";
-import CourseBlogs from "../components/CourseBlogs";
+import RelatedPosts from "../components/RelatedPosts";
 import Icon from "../components/Icon";
 
 const Program = ({ data, pageContext, yml }) => {
@@ -456,9 +456,10 @@ const Program = ({ data, pageContext, yml }) => {
         margin="45px 0 0 0"
       />
       <OurPartners images={hiring.partners.images} marquee></OurPartners>
-      <CourseBlogs
+      <RelatedPosts
         lang={pageContext.lang}
         posts={data.allMarkdownRemark.edges}
+        relatedClusters={courseDetails.meta_info.related_clusters}
       />
     </>
   );
@@ -580,6 +581,7 @@ export const query = graphql`
             keywords
             slug
             bc_slug
+            related_clusters
           }
           geek_data {
             heading

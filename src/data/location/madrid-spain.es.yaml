@@ -9,7 +9,7 @@ meta_info:
     ["madrid", "/es/location/madrid-spain/", "/es/location/madrid-espana"]
   region: "europe"
   dialCode: "34"
-  related_clusters: []
+  related_clusters: ["desarrollador-full-stack"]
 
 seo_title: "4Geeks Academy Madrid, España"
 header:

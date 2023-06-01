@@ -7,7 +7,7 @@ meta_info:
   keywords: "null"
   redirects: ["/location/remoto", "/remoto", "/es/location/enlinea-remoto"]
   region: "europe"
-  related_clusters: []
+  related_clusters: ["desarrollador-full-stack"]
 
 seo_title: "Coding Bootcamp Remoto Europa"
 header:
