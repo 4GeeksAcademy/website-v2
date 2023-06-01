@@ -4,6 +4,7 @@ get_notified: Pregunta por nuestras Becas. Siempre estamos trabajando y aliándo
 top_label: sede
 recomended: Recomendado
 plans_title: Planes y precios
+plan_details: Detalles del plan
 select: Selecciona el plan que mejor se ajusta a ti
 job_guarantee:
   title:  "Compromiso de Garantía de Empleo:"

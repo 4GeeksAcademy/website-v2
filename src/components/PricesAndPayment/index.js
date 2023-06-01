@@ -15,152 +15,159 @@ const PricingCard = ({
   selectedPlan,
   setSelectedPlan,
   index,
-  plansLength,
 }) => {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
   const { recomended, scholarship, payment_time, slug } = data;
   const isSelected = selectedPlan === slug;
   return (
-    <Div
-      cursor="pointer"
-      display="block"
-      width="100%"
-      // width="320px"
-      // width_tablet={plansLength % 2 !== 0 && index === 0 ? "100%" : "49%"}
-      // minWidth_tablet="240px"
-      margin_xs="0 0 15px 0"
-      margin_tablet="0 5px 15px 0"
-      onClick={() => {
-        setSelectedPlan(slug);
-        // setSession({ ...session, financing_plan: slug });
-      }}
-      height="fit-content"
-    >
-      {recomended && (
-        <Div
-          // display_xs="none"
-          // display_tablet="block"
-          background={Colors.blue}
-          borderRadius="4px 4px 0 0"
-        >
-          <Paragraph
-            color={Colors.white}
-            fontWeight_tablet="700"
-            fontSize="1"
-            opacity="1"
-          >
-            {info.recomended}
-          </Paragraph>
-        </Div>
-      )}
+    <>
       <Div
-        border={`2px solid ${Colors.blue}`}
-        borderRadius={recomended ? "0 0 4px 4px" : "4px"}
-        padding="15px 12px"
+        cursor="pointer"
         display="block"
+        width="100%"
+        margin_xs="0 0 15px 0"
+        margin_tablet="0 5px 15px 0"
+        onClick={() => {
+          setSelectedPlan(slug);
+        }}
+        height="fit-content"
       >
-        <Div className="price-section" justifyContent="between" width="100%">
-          <Div display="block">
-            <Paragraph
-              lineHeight="14px"
-              fontWeight_tablet="700"
-              // color={isSelected ? Colors.white : Colors.black}
-              opacity="1"
-              textAlign="left"
-              margin="0 0 5px 0"
-            >
-              {scholarship}
-            </Paragraph>
-            <Paragraph
-              lineHeight="14px"
-              // color={isSelected ? Colors.white : Colors.black}
-              opacity="1"
-              textAlign="left"
-            >
-              {payment_time}
-            </Paragraph>
-          </Div>
-          <Div className="price-container" display="block">
-            <Paragraph
-              fontWeight_tablet="700"
-              color={isSelected ? Colors.white : Colors.black}
-              opacity="1"
-            >
-              <span style={{ fontSize: "36px" }}>{data.price}</span>
-            </Paragraph>
-            <Paragraph
-              fontWeight_tablet="700"
-              color={isSelected ? Colors.white : Colors.black}
-              opacity="1"
-              textAlign="right"
-            >
-              <s>{data.original_price}</s>
-            </Paragraph>
-          </Div>
-        </Div>
-        <Div className="expandable" display="block" margin="10px 0 0 0">
-          <Button onClick={() => setIsOpen(!isOpen)} margin="auto">
-            <Icon
-              icon={isOpen ? "angleup" : "angledown"}
-              width="24px"
-              height="24px"
-              color={Colors.blue}
-              fill={Colors.blue}
-            />
-          </Button>
-
-          <hr style={{ color: "#A4A4A4" }} />
-
-          <Div className="bullets" display={isOpen ? "block" : "none"}>
-            {data.bullets &&
-              data.bullets.map((bullet) => (
-                <Div alignItems="center" margin="10px 0 0 0">
-                  <Icon
-                    icon="check"
-                    width="17px"
-                    height="17px"
-                    style={{ marginRight: "10px" }}
-                    color={isSelected ? Colors.white : Colors.black}
-                    fill={isSelected ? Colors.white : Colors.black}
-                  />
-                  <Paragraph
-                    lineHeight="19px"
-                    fontWeight_tablet="500"
-                    color={isSelected ? Colors.white : Colors.black}
-                    opacity="1"
-                    textAlign="left"
-                  >
-                    {bullet}
-                  </Paragraph>
-                </Div>
-              ))}
-          </Div>
-        </Div>
-        {data.icons && data.icons.length !== 0 && (
+        {recomended && (
           <Div
-            className="icons"
-            background={isSelected ? Colors.white : Colors.verylightGray}
-            padding="4px 7px"
-            borderRadius="26px"
-            width="fit-content"
-            alignItems="center"
-            margin="15px 0 0 0"
+            background={Colors.blue}
+            borderRadius="4px 4px 0 0"
           >
-            {data.icons.map((icon) => (
-              <Img
-                src={icon}
-                alt="4Geeks Academy Icon"
-                backgroundSize="contain"
-                height="17px"
-                minWidth="30px"
-                width="auto"
-                margin="0 5px"
-              />
-            ))}
+            <Paragraph
+              color={Colors.white}
+              fontWeight_tablet="700"
+              fontSize="1"
+              opacity="1"
+            >
+              {info.recomended}
+            </Paragraph>
           </Div>
         )}
+        <Div
+          border={`2px solid ${Colors.blue}`}
+          borderRadius={recomended ? "0 0 4px 4px" : "4px"}
+          padding="15px 12px"
+          display="block"
+        >
+          <Div className="price-section" justifyContent="between" width="100%">
+            <Div alignItems="center">
+              <Div
+                border={`1px solid ${isSelected ? Colors.blue : '#A4A4A4'}`}
+                width="21px"
+                height="21px"
+                borderRadius="15px"
+                background={isSelected ? Colors.blue : Colors.white}
+                margin="0 10px 0 0"
+                padding="3px"
+                flexShrink="0"
+                flexShrink_tablet="0"
+              >
+                {isSelected && (
+                  <Icon
+                    icon="check"
+                    width="14px"
+                    height="14px"
+                    color={Colors.white}
+                    fill={Colors.white}
+                  />
+                )}
+              </Div>
+              <Div display="block">
+                <Paragraph
+                  lineHeight="14px"
+                  fontWeight_tablet="700"
+                  color={Colors.black}
+                  opacity="1"
+                  textAlign="left"
+                  margin="0 0 5px 0"
+                >
+                  {scholarship}
+                </Paragraph>
+                <Paragraph
+                  lineHeight="14px"
+                  color={Colors.black}
+                  opacity="1"
+                  textAlign="left"
+                >
+                  {payment_time}
+                </Paragraph>
+              </Div>
+            </Div>
+            <Div className="price-container" display="block">
+              <Paragraph
+                fontWeight_tablet="700"
+                color={Colors.black}
+                opacity="1"
+              >
+                <span style={{ fontSize: "36px" }}>{data.price}</span>
+              </Paragraph>
+              <Paragraph
+                fontWeight_tablet="700"
+                color={Colors.black}
+                opacity="1"
+                textAlign="right"
+              >
+                <s>{data.original_price}</s>
+              </Paragraph>
+            </Div>
+          </Div>
+
+          {data.icons && data.icons.length !== 0 && (
+            <Div
+              className="icons"
+              background={Colors.verylightGray}
+              padding="4px 7px"
+              borderRadius="26px"
+              width="fit-content"
+              alignItems="center"
+              margin="15px 0 0 0"
+            >
+              {data.icons.map((icon) => (
+                <Img
+                  src={icon}
+                  alt="4Geeks Academy Icon"
+                  backgroundSize="contain"
+                  height="17px"
+                  minWidth="30px"
+                  width="auto"
+                  margin="0 5px"
+                />
+              ))}
+            </Div>
+          )}
+        </Div>
       </Div>
-    </Div>
+      {isSelected && (
+        <Div className="expandable" display="block" display_tablet="none" margin="10px 0 0 0">
+          {data.bullets &&
+            data.bullets.map((bullet) => (
+              <Div alignItems="center" margin="10px 0 0 0">
+                <Icon
+                  icon="check"
+                  width="17px"
+                  height="17px"
+                  style={{ marginRight: "10px" }}
+                  color={Colors.black}
+                  fill={Colors.black}
+                />
+                <Paragraph
+                  lineHeight="19px"
+                  fontWeight_tablet="500"
+                  color={Colors.black}
+                  opacity="1"
+                  textAlign="left"
+                >
+                  {bullet}
+                </Paragraph>
+              </Div>
+            ))}
+        </Div>
+      )}
+    </>
   );
 };
 
@@ -182,7 +189,7 @@ const ChartSection = ({ info }) => (
         width="100%"
         width_xs="300px"
         margin="auto"
-        // height="256px"
+      // height="256px"
       >
         <Icon icon="payments_chart" style={{ margin: "auto" }} />
       </Div>
@@ -272,6 +279,7 @@ const PricesAndPayments = (props) => {
             get_notified
             top_label
             plans_title
+            plan_details
             select
             job_guarantee {
               title
@@ -357,12 +365,12 @@ const PricesAndPayments = (props) => {
   const availablePlans =
     currentPlans && currentLocation
       ? currentPlans
-          .filter((plan) =>
-            plan.academies.includes(
-              currentLocation.fields.file_name.slice(0, -3)
-            )
+        .filter((plan) =>
+          plan.academies.includes(
+            currentLocation.fields.file_name.slice(0, -3)
           )
-          .sort((a) => (a.recomended ? -1 : 1))
+        )
+        .sort((a) => (a.recomended ? -1 : 1))
       : [];
 
   // const steps = props.details.details_modules.reduce((total, current, i) => [...total, (total[i - 1] || 0) + current.step], [])
@@ -388,10 +396,7 @@ const PricesAndPayments = (props) => {
   }, [session, props.locations]);
 
   useEffect(() => {
-    if (selectedPlan) {
-      setSelectedPlan(null);
-      // setSession({ ...session, financing_plan: null });
-    }
+    setSelectedPlan(availablePlans[0]?.slug);
   }, [currentLocation]);
 
   // sync property course
@@ -578,7 +583,6 @@ const PricesAndPayments = (props) => {
                     selectedPlan={selectedPlan}
                     setSelectedPlan={setSelectedPlan}
                     index={index}
-                    plansLength={availablePlans.length}
                   />
                 ))}
           </Div>
@@ -590,9 +594,8 @@ const PricesAndPayments = (props) => {
                 width: "70%",
                 cursor: selectedPlan === null && "default",
               }}
-              to={`${info.apply_button.link}${
-                selectedPlan ? `?utm_plan=${selectedPlan}` : ""
-              }`}
+              to={`${info.apply_button.link}${selectedPlan ? `?utm_plan=${selectedPlan}` : ""
+                }`}
             >
               <Button
                 variant="full"
@@ -603,8 +606,6 @@ const PricesAndPayments = (props) => {
                 margin="auto"
                 textAlign="center"
                 display="block"
-                // cursor={selectedPlan === null ? "default" : "pointer"}
-                // disabled={selectedPlan === null ? true : false}
                 onClick={() => {
                   if (selectedPlan) {
                     setSession({
