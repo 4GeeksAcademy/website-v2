@@ -9,13 +9,7 @@ import { H2, H3, H4, H5, Paragraph } from "../Heading";
 import { Button, Colors, RoundImage, Img } from "../Styling";
 import { SessionContext } from "../../session";
 
-const PricingCard = ({
-  data,
-  info,
-  selectedPlan,
-  setSelectedPlan,
-  index,
-}) => {
+const PricingCard = ({ data, info, selectedPlan, setSelectedPlan, index }) => {
   const [isOpen, setIsOpen] = useState(false);
   const { recomended, scholarship, payment_time, slug } = data;
   const isSelected = selectedPlan === slug;
@@ -33,10 +27,7 @@ const PricingCard = ({
         height="fit-content"
       >
         {recomended && (
-          <Div
-            background={Colors.blue}
-            borderRadius="4px 4px 0 0"
-          >
+          <Div background={Colors.blue} borderRadius="4px 4px 0 0">
             <Paragraph
               color={Colors.white}
               fontWeight_tablet="700"
@@ -56,7 +47,7 @@ const PricingCard = ({
           <Div className="price-section" justifyContent="between" width="100%">
             <Div alignItems="center">
               <Div
-                border={`1px solid ${isSelected ? Colors.blue : '#A4A4A4'}`}
+                border={`1px solid ${isSelected ? Colors.blue : "#A4A4A4"}`}
                 width="21px"
                 height="21px"
                 borderRadius="15px"
@@ -142,7 +133,12 @@ const PricingCard = ({
         </Div>
       </Div>
       {isSelected && (
-        <Div className="expandable" display="block" display_tablet="none" margin="10px 0 0 0">
+        <Div
+          className="expandable"
+          display="block"
+          display_tablet="none"
+          margin="10px 0 0 0"
+        >
           {data.bullets &&
             data.bullets.map((bullet) => (
               <Div alignItems="center" margin="10px 0 0 0">
@@ -189,7 +185,7 @@ const ChartSection = ({ info }) => (
         width="100%"
         width_xs="300px"
         margin="auto"
-      // height="256px"
+        // height="256px"
       >
         <Icon icon="payments_chart" style={{ margin: "auto" }} />
       </Div>
@@ -365,12 +361,12 @@ const PricesAndPayments = (props) => {
   const availablePlans =
     currentPlans && currentLocation
       ? currentPlans
-        .filter((plan) =>
-          plan.academies.includes(
-            currentLocation.fields.file_name.slice(0, -3)
+          .filter((plan) =>
+            plan.academies.includes(
+              currentLocation.fields.file_name.slice(0, -3)
+            )
           )
-        )
-        .sort((a) => (a.recomended ? -1 : 1))
+          .sort((a) => (a.recomended ? -1 : 1))
       : [];
 
   // const steps = props.details.details_modules.reduce((total, current, i) => [...total, (total[i - 1] || 0) + current.step], [])
@@ -594,8 +590,9 @@ const PricesAndPayments = (props) => {
                 width: "70%",
                 cursor: selectedPlan === null && "default",
               }}
-              to={`${info.apply_button.link}${selectedPlan ? `?utm_plan=${selectedPlan}` : ""
-                }`}
+              to={`${info.apply_button.link}${
+                selectedPlan ? `?utm_plan=${selectedPlan}` : ""
+              }`}
             >
               <Button
                 variant="full"
