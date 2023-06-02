@@ -19,8 +19,6 @@ const PricingCard = ({ data, info, selectedPlan, setSelectedPlan, index }) => {
         cursor="pointer"
         display="block"
         width="100%"
-        margin_xs="0 0 15px 0"
-        margin_tablet="0 5px 15px 0"
         onClick={() => {
           setSelectedPlan(slug);
         }}
@@ -413,6 +411,8 @@ const PricesAndPayments = (props) => {
     }
   }, [findCity]);
 
+  const selected = availablePlans.find((plan) => plan.slug === selectedPlan);
+
   return (
     <Div
       id="prices_and_payment"
@@ -558,29 +558,68 @@ const PricesAndPayments = (props) => {
               dangerouslySetInnerHTML={{ __html: info.not_available }}
             />
           )}
-          <Div
-            className="cards-container"
-            flexWrap="wrap"
-            justifyContent_tablet="between"
-            justifyContent_xs="evenly"
-            width_tablet="50%"
-          >
-            {availablePlans &&
-              availablePlans
-                .filter((plan) =>
-                  plan.academies.includes(
-                    currentLocation.fields.file_name.slice(0, -3)
-                  )
-                )
-                .map((plan, index) => (
-                  <PricingCard
-                    data={plan}
-                    info={info}
-                    selectedPlan={selectedPlan}
-                    setSelectedPlan={setSelectedPlan}
-                    index={index}
-                  />
-                ))}
+          <Div gap="10px" margin="0 0 15px 0">
+            {availablePlans && availablePlans.length > 0 && (
+              <Div
+                display="none"
+                display_tablet="block"
+                width="50%"
+                background="#F9F9F9"
+                border="1px solid #EBEBEB"
+                padding="10px"
+              >
+                <H3
+                  textAlign="center"
+                  margin="0 0 20px 0"
+                >
+                  {info.plan_details}
+                </H3>
+                <hr style={{ border: "1px solid #ebebeb" }} />
+                {selected?.bullets &&
+                  selected.bullets.map((bullet) => (
+                    <Div alignItems="center" margin="10px 0 0 0">
+                      <Icon
+                        icon="check"
+                        width="17px"
+                        height="17px"
+                        style={{ marginRight: "10px" }}
+                        color={Colors.blue}
+                        fill={Colors.blue}
+                      />
+                      <Paragraph
+                        lineHeight="19px"
+                        fontWeight="700"
+                        fontWeight_tablet="700"
+                        color={Colors.black}
+                        opacity="1"
+                        textAlign="left"
+                      >
+                        {bullet}
+                      </Paragraph>
+                    </Div>
+                  ))}
+              </Div>
+            )}
+            <Div
+              className="cards-container"
+              flexWrap="wrap"
+              justifyContent_tablet="between"
+              justifyContent_xs="evenly"
+              width_tablet="50%"
+              gap="15px"
+            >
+              {availablePlans &&
+                availablePlans
+                  .map((plan, index) => (
+                    <PricingCard
+                      data={plan}
+                      info={info}
+                      selectedPlan={selectedPlan}
+                      setSelectedPlan={setSelectedPlan}
+                      index={index}
+                    />
+                  ))}
+            </Div>
           </Div>
           {availablePlans && availablePlans.length !== 0 && (
             <Link
