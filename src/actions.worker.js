@@ -118,6 +118,7 @@ export const initSession = async (locationsArray, storedSession, seed = {}) => {
   var latitude = null;
   var longitude = null;
   var langDestination = null;
+  let geoCode = null;
   var pathsDictionary = {
     ...dictionaryOf.yml[0],
     ...dictionaryOf.md[0],
@@ -140,7 +141,6 @@ export const initSession = async (locationsArray, storedSession, seed = {}) => {
 
   // remove undefineds from the seed utm's to avoid overriding the originals with undefined
   Object.keys(utm).forEach((key) => utm[key] === undefined && delete utm[key]);
-  let geoCode = null;
 
   if (location) {
     location = locations.find((l) => l.breathecode_location_slug === location);
@@ -260,8 +260,8 @@ export const initSession = async (locationsArray, storedSession, seed = {}) => {
     ...storedSession,
     v4,
     location,
-    country: geoCode?.country,
-    city: geoCode?.city,
+    country: geoCode && geoCode.country,
+    city: geoCode && geoCode.city,
     browserLang,
     language,
     latitude,
