@@ -568,10 +568,7 @@ const PricesAndPayments = (props) => {
                 border="1px solid #EBEBEB"
                 padding="10px"
               >
-                <H3
-                  textAlign="center"
-                  margin="0 0 20px 0"
-                >
+                <H3 textAlign="center" margin="0 0 20px 0">
                   {info.plan_details}
                 </H3>
                 <hr style={{ border: "1px solid #ebebeb" }} />
@@ -609,16 +606,15 @@ const PricesAndPayments = (props) => {
               gap="15px"
             >
               {availablePlans &&
-                availablePlans
-                  .map((plan, index) => (
-                    <PricingCard
-                      data={plan}
-                      info={info}
-                      selectedPlan={selectedPlan}
-                      setSelectedPlan={setSelectedPlan}
-                      index={index}
-                    />
-                  ))}
+                availablePlans.map((plan, index) => (
+                  <PricingCard
+                    data={plan}
+                    info={info}
+                    selectedPlan={selectedPlan}
+                    setSelectedPlan={setSelectedPlan}
+                    index={index}
+                  />
+                ))}
             </Div>
           </Div>
           {availablePlans && availablePlans.length !== 0 && (
