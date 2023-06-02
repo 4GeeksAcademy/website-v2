@@ -101,7 +101,9 @@ const PricingCard = ({
                 color={Colors.black}
                 opacity="1"
               >
-                <span style={{ fontSize: "36px" }}>{!jobGuarantee ? data.price : data.job_guarantee_price}</span>
+                <span style={{ fontSize: "36px" }}>
+                  {!jobGuarantee ? data.price : data.job_guarantee_price}
+                </span>
               </Paragraph>
               {!jobGuarantee && (
                 <Paragraph
@@ -183,8 +185,9 @@ const PricingCard = ({
               marginTop: "15px",
               display: "block",
             }}
-            to={`${info.apply_button.link}${selectedPlan ? `?utm_plan=${selectedPlan}` : ""
-              }`}
+            to={`${info.apply_button.link}${
+              selectedPlan ? `?utm_plan=${selectedPlan}` : ""
+            }`}
           >
             <Button
               variant="full"
@@ -226,13 +229,18 @@ const ChartSection = ({ info, currentLocation }) => {
       <H3 margin=" 0 auto 10px auto" fontSize="26px" lineHeight="31.2px">
         {info.chart_section.title}
       </H3>
-      <Div margin="25px 0 15px 0" gap="10px" flexWrap="wrap" flexWrap_md="nowrap">
+      <Div
+        margin="25px 0 15px 0"
+        gap="10px"
+        flexWrap="wrap"
+        flexWrap_md="nowrap"
+      >
         <Div
           id="chart-image"
           width="100%"
           width_xs="300px"
           margin="auto"
-        // height="256px"
+          // height="256px"
         >
           <Icon icon="payments_chart" style={{ margin: "auto" }} />
         </Div>
@@ -276,7 +284,7 @@ const ChartSection = ({ info, currentLocation }) => {
         </Div>
       </Div>
     </Div>
-  )
+  );
 };
 
 const courseArray = [
@@ -410,18 +418,19 @@ const PricesAndPayments = (props) => {
   const availablePlans =
     currentPlans && currentLocation
       ? currentPlans
-        .filter((plan) =>
-          plan.academies.includes(
-            currentLocation.fields.file_name.slice(0, -3)
+          .filter((plan) =>
+            plan.academies.includes(
+              currentLocation.fields.file_name.slice(0, -3)
+            )
           )
-        ).filter((plan) => {
-          if (jobGuarantee) {
-            if (plan.job_guarantee_price) return true;
-            return false;
-          }
-          return true;
-        })
-        .sort((a) => (a.recomended ? -1 : 1))
+          .filter((plan) => {
+            if (jobGuarantee) {
+              if (plan.job_guarantee_price) return true;
+              return false;
+            }
+            return true;
+          })
+          .sort((a) => (a.recomended ? -1 : 1))
       : [];
 
   // const steps = props.details.details_modules.reduce((total, current, i) => [...total, (total[i - 1] || 0) + current.step], [])
@@ -687,8 +696,9 @@ const PricesAndPayments = (props) => {
                 style={{
                   display: "block",
                 }}
-                to={`${info.apply_button.link}${selectedPlan ? `?utm_plan=${selectedPlan}` : ""
-                  }`}
+                to={`${info.apply_button.link}${
+                  selectedPlan ? `?utm_plan=${selectedPlan}` : ""
+                }`}
               >
                 <Button
                   variant="full"
