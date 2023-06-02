@@ -177,7 +177,7 @@ const PricingCard = ({
             ))}
           <Link
             style={{
-              marginTop: '15px',
+              marginTop: "15px",
               display: "block",
             }}
             to={`${info.apply_button.link}${
