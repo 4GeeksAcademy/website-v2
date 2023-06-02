@@ -9,7 +9,15 @@ import { H2, H3, H4, H5, Paragraph } from "../Heading";
 import { Button, Colors, RoundImage, Img } from "../Styling";
 import { SessionContext } from "../../session";
 
-const PricingCard = ({ data, info, selectedPlan, setSelectedPlan, index }) => {
+const PricingCard = ({
+  data,
+  info,
+  selectedPlan,
+  setSelectedPlan,
+  buttonText,
+  index,
+}) => {
+  const { session, setSession } = useContext(SessionContext);
   const [isOpen, setIsOpen] = useState(false);
   const { recomended, scholarship, payment_time, slug } = data;
   const isSelected = selectedPlan === slug;
@@ -136,7 +144,14 @@ const PricingCard = ({ data, info, selectedPlan, setSelectedPlan, index }) => {
           display="block"
           display_tablet="none"
           margin="10px 0 0 0"
+          background="#F9F9F9"
+          border="1px solid #EBEBEB"
+          padding="15px 12px"
+          width="100%"
         >
+          <H3 textAlign="center" margin="0 0 15px 0">
+            {info.plan_details}
+          </H3>
           {data.bullets &&
             data.bullets.map((bullet) => (
               <Div alignItems="center" margin="10px 0 0 0">
@@ -145,12 +160,13 @@ const PricingCard = ({ data, info, selectedPlan, setSelectedPlan, index }) => {
                   width="17px"
                   height="17px"
                   style={{ marginRight: "10px" }}
-                  color={Colors.black}
-                  fill={Colors.black}
+                  color={Colors.blue}
+                  fill={Colors.blue}
                 />
                 <Paragraph
                   lineHeight="19px"
-                  fontWeight_tablet="500"
+                  fontWeight="700"
+                  fontWeight_tablet="700"
                   color={Colors.black}
                   opacity="1"
                   textAlign="left"
@@ -159,6 +175,36 @@ const PricingCard = ({ data, info, selectedPlan, setSelectedPlan, index }) => {
                 </Paragraph>
               </Div>
             ))}
+          <Link
+            style={{
+              marginTop: '15px',
+              display: "block",
+            }}
+            to={`${info.apply_button.link}${
+              selectedPlan ? `?utm_plan=${selectedPlan}` : ""
+            }`}
+          >
+            <Button
+              variant="full"
+              width="100%"
+              color={Colors.black}
+              textColor={Colors.white}
+              fontSize="16px"
+              margin="auto"
+              textAlign="center"
+              display="block"
+              onClick={() => {
+                if (selectedPlan) {
+                  setSession({
+                    ...session,
+                    utm: { ...session.utm, utm_plan: selectedPlan },
+                  });
+                }
+              }}
+            >
+              {buttonText || info.apply_button.label}
+            </Button>
+          </Link>
         </Div>
       )}
     </>
@@ -168,13 +214,12 @@ const PricingCard = ({ data, info, selectedPlan, setSelectedPlan, index }) => {
 const ChartSection = ({ info }) => (
   <Div
     className="chart-section"
-    padding="20px 14px"
     maxWidth_md="800px"
     width_xs="80%"
     margin="auto"
     display="block"
   >
-    <H3 margin="auto" fontSize="26px" lineHeight="31.2px">
+    <H3 margin=" 0 auto 10px auto" fontSize="26px" lineHeight="31.2px">
       {info.chart_section.title}
     </H3>
     <Div margin="25px 0 15px 0" gap="10px" flexWrap="wrap" flexWrap_md="nowrap">
@@ -613,43 +658,47 @@ const PricesAndPayments = (props) => {
                     selectedPlan={selectedPlan}
                     setSelectedPlan={setSelectedPlan}
                     index={index}
+                    buttonText={buttonText}
                   />
                 ))}
             </Div>
           </Div>
           {availablePlans && availablePlans.length !== 0 && (
-            <Link
-              style={{
-                display: "block",
-                margin: "auto",
-                width: "70%",
-                cursor: selectedPlan === null && "default",
-              }}
-              to={`${info.apply_button.link}${
-                selectedPlan ? `?utm_plan=${selectedPlan}` : ""
-              }`}
+            <Div
+              display="none"
+              display_tablet="flex"
+              flexDirection="row-reverse"
             >
-              <Button
-                variant="full"
-                width="100%"
-                color={Colors.black}
-                textColor={Colors.white}
-                fontSize="16px"
-                margin="auto"
-                textAlign="center"
-                display="block"
-                onClick={() => {
-                  if (selectedPlan) {
-                    setSession({
-                      ...session,
-                      utm: { ...session.utm, utm_plan: selectedPlan },
-                    });
-                  }
+              <Link
+                style={{
+                  display: "block",
                 }}
+                to={`${info.apply_button.link}${
+                  selectedPlan ? `?utm_plan=${selectedPlan}` : ""
+                }`}
               >
-                {buttonText || info.apply_button.label}
-              </Button>
-            </Link>
+                <Button
+                  variant="full"
+                  width="100%"
+                  color={Colors.black}
+                  textColor={Colors.white}
+                  fontSize="16px"
+                  margin="auto"
+                  textAlign="center"
+                  display="block"
+                  onClick={() => {
+                    if (selectedPlan) {
+                      setSession({
+                        ...session,
+                        utm: { ...session.utm, utm_plan: selectedPlan },
+                      });
+                    }
+                  }}
+                >
+                  {buttonText || info.apply_button.label}
+                </Button>
+              </Link>
+            </Div>
           )}
         </Div>
       </Div>
