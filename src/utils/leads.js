@@ -51,12 +51,12 @@ export const save_form = async (
       longitude: session.longitude,
       referral_key: getReferralKey(),
       browser_lang: session.browserLang,
-      city: session.location.city,
+      city: session.city || session.location.city,
+      country: session.country || session.location.country,
       location:
         formData.utm_location ||
         formData.location ||
         session.location.active_campaign_location_slug,
-      country: session.location.country,
       utm_url: formData.utm_url || window.location.href,
     }),
   });

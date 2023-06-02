@@ -118,6 +118,7 @@ export const initSession = async (locationsArray, storedSession, seed = {}) => {
   var latitude = null;
   var longitude = null;
   var langDestination = null;
+  let geoCode = null;
   var pathsDictionary = {
     ...dictionaryOf.yml[0],
     ...dictionaryOf.md[0],
@@ -182,7 +183,6 @@ export const initSession = async (locationsArray, storedSession, seed = {}) => {
           }
         );
 
-        let geoCode = null;
         let filteredLocations = [];
         let dataGC = (await responseGC.json()) || null;
 
@@ -260,6 +260,8 @@ export const initSession = async (locationsArray, storedSession, seed = {}) => {
     ...storedSession,
     v4,
     location,
+    country: geoCode && geoCode.country,
+    city: geoCode && geoCode.city,
     browserLang,
     language,
     latitude,

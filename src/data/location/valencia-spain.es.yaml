@@ -9,7 +9,7 @@ meta_info:
     ["valencia", "/es/location/valencia-spain/", "/es/location/valencia-espana"]
   region: "europe"
   dialCode: "34"
-  related_clusters: []
+  related_clusters: ["desarrollador-full-stack"]
 
 seo_title: "4Geeks Academy Valencia, España"
 header:
