@@ -894,6 +894,13 @@ export const query = graphql`
               }
             }
           }
+          chart_section {
+            data {
+              percentage
+              color
+              description
+            }
+          }
         }
       }
     }

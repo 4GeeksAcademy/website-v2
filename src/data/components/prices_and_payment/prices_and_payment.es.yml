@@ -15,7 +15,7 @@ apply_button:
 not_available: '<p>No se ha encontrado information de pago para este programa en este país.</p> Para conocer más le invitamos a aplicar al programa y sera contactado por uno de nuestros asesores vocacionales o <a class="faq-link" href="/es/contactanos" rel="noopener noreferrer nofollow">envíenos un mensaje.</a>'
 chart_section:
   title: '4Geeks: Cuando pagar deja de ser una preocupación'
-  legend:
+  data:
     - percentage: '76%'
       color: '#00A0DA'
       description: 'de nuestros graduados recibió una beca total o parcial gracias a nuestras opciones de pago integrales.'

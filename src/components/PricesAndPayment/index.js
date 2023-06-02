@@ -15,6 +15,7 @@ const PricingCard = ({
   selectedPlan,
   setSelectedPlan,
   buttonText,
+  jobGuarantee,
   index,
 }) => {
   const { session, setSession } = useContext(SessionContext);
@@ -100,16 +101,18 @@ const PricingCard = ({
                 color={Colors.black}
                 opacity="1"
               >
-                <span style={{ fontSize: "36px" }}>{data.price}</span>
+                <span style={{ fontSize: "36px" }}>{!jobGuarantee ? data.price : data.job_guarantee_price}</span>
               </Paragraph>
-              <Paragraph
-                fontWeight_tablet="700"
-                color={Colors.black}
-                opacity="1"
-                textAlign="right"
-              >
-                <s>{data.original_price}</s>
-              </Paragraph>
+              {!jobGuarantee && (
+                <Paragraph
+                  fontWeight_tablet="700"
+                  color={Colors.black}
+                  opacity="1"
+                  textAlign="right"
+                >
+                  <s>{data.original_price}</s>
+                </Paragraph>
+              )}
             </Div>
           </Div>
 
@@ -180,9 +183,8 @@ const PricingCard = ({
               marginTop: "15px",
               display: "block",
             }}
-            to={`${info.apply_button.link}${
-              selectedPlan ? `?utm_plan=${selectedPlan}` : ""
-            }`}
+            to={`${info.apply_button.link}${selectedPlan ? `?utm_plan=${selectedPlan}` : ""
+              }`}
           >
             <Button
               variant="full"
@@ -211,69 +213,71 @@ const PricingCard = ({
   );
 };
 
-const ChartSection = ({ info }) => (
-  <Div
-    className="chart-section"
-    maxWidth_md="800px"
-    width_xs="80%"
-    margin="auto"
-    display="block"
-  >
-    <H3 margin=" 0 auto 10px auto" fontSize="26px" lineHeight="31.2px">
-      {info.chart_section.title}
-    </H3>
-    <Div margin="25px 0 15px 0" gap="10px" flexWrap="wrap" flexWrap_md="nowrap">
-      <Div
-        id="chart-image"
-        width="100%"
-        width_xs="300px"
-        margin="auto"
+const ChartSection = ({ info, currentLocation }) => {
+  const statistics = currentLocation?.chart_section || info.chart_section;
+  return (
+    <Div
+      className="chart-section"
+      maxWidth_md="800px"
+      width_xs="80%"
+      margin="auto"
+      display="block"
+    >
+      <H3 margin=" 0 auto 10px auto" fontSize="26px" lineHeight="31.2px">
+        {info.chart_section.title}
+      </H3>
+      <Div margin="25px 0 15px 0" gap="10px" flexWrap="wrap" flexWrap_md="nowrap">
+        <Div
+          id="chart-image"
+          width="100%"
+          width_xs="300px"
+          margin="auto"
         // height="256px"
-      >
-        <Icon icon="payments_chart" style={{ margin: "auto" }} />
-      </Div>
-      <Div id="legend" flexWrap="wrap" justifyContent="between">
-        {info.chart_section &&
-          Array.isArray(info.chart_section.legend) &&
-          info.chart_section.legend.map((item, i) => (
-            <Div
-              width={i === 0 ? "100%" : "48%"}
-              height="auto"
-              height_sm="128px"
-              border={`1px solid ${item.color}`}
-              className="info"
-              margin="0 0 4% 0"
-            >
+        >
+          <Icon icon="payments_chart" style={{ margin: "auto" }} />
+        </Div>
+        <Div id="data" flexWrap="wrap" justifyContent="between">
+          {statistics &&
+            Array.isArray(statistics.data) &&
+            statistics.data.map((item, i) => (
               <Div
-                flexShrink_tablet="0"
-                // height="100%"
-                width="19.39px"
-                background={item.color}
-              />
-              <Div padding="10px" display="block">
-                <H5
-                  margin={i !== 0 && "0 0 10px 0"}
-                  textAlign="left"
-                  color={item.color}
-                >
-                  {item.percentage}
-                </H5>
-                <Paragraph
-                  fontWeight_tablet="700"
-                  fontSize="16px"
-                  lineHeight="19px"
-                  textAlign="left"
-                  opacity="1"
-                >
-                  {item.description}
-                </Paragraph>
+                width={i === 0 ? "100%" : "48%"}
+                height="auto"
+                border={`1px solid ${item.color}`}
+                className="info"
+                margin="0 0 4% 0"
+              >
+                <Div
+                  flexShrink_tablet="0"
+                  // height="100%"
+                  width="19.39px"
+                  background={item.color}
+                />
+                <Div padding="10px" display="block">
+                  <H5
+                    margin={i !== 0 && "0 0 10px 0"}
+                    textAlign="left"
+                    color={item.color}
+                  >
+                    {item.percentage}
+                  </H5>
+                  <Paragraph
+                    fontWeight_tablet="700"
+                    fontSize="16px"
+                    lineHeight="19px"
+                    textAlign="left"
+                    opacity="1"
+                  >
+                    {item.description}
+                  </Paragraph>
+                </Div>
               </Div>
-            </Div>
-          ))}
+            ))}
+        </Div>
       </Div>
     </Div>
-  </Div>
-);
+  )
+};
 
 const courseArray = [
   {
@@ -332,7 +336,7 @@ const PricesAndPayments = (props) => {
             }
             chart_section {
               title
-              legend {
+              data {
                 percentage
                 color
                 description
@@ -355,6 +359,7 @@ const PricesAndPayments = (props) => {
               scholarship
               payment_time
               price
+              job_guarantee_price
               bullets
               icons
             }
@@ -366,6 +371,7 @@ const PricesAndPayments = (props) => {
               payment_time
               price
               original_price
+              job_guarantee_price
               bullets
               icons
             }
@@ -404,12 +410,18 @@ const PricesAndPayments = (props) => {
   const availablePlans =
     currentPlans && currentLocation
       ? currentPlans
-          .filter((plan) =>
-            plan.academies.includes(
-              currentLocation.fields.file_name.slice(0, -3)
-            )
+        .filter((plan) =>
+          plan.academies.includes(
+            currentLocation.fields.file_name.slice(0, -3)
           )
-          .sort((a) => (a.recomended ? -1 : 1))
+        ).filter((plan) => {
+          if (jobGuarantee) {
+            if (plan.job_guarantee_price) return true;
+            return false;
+          }
+          return true;
+        })
+        .sort((a) => (a.recomended ? -1 : 1))
       : [];
 
   // const steps = props.details.details_modules.reduce((total, current, i) => [...total, (total[i - 1] || 0) + current.step], [])
@@ -436,6 +448,7 @@ const PricesAndPayments = (props) => {
 
   useEffect(() => {
     setSelectedPlan(availablePlans[0]?.slug);
+    setJobGuarantee(false);
   }, [currentLocation]);
 
   // sync property course
@@ -532,7 +545,7 @@ const PricesAndPayments = (props) => {
         </Div>
       </GridContainer>
       <Div display="block" minHeight_tablet="600px" padding_md="20px">
-        <ChartSection info={info} />
+        <ChartSection info={info} currentLocation={currentLocation} />
         <Div
           borderRadius="4px"
           border="1px solid #000"
@@ -659,6 +672,7 @@ const PricesAndPayments = (props) => {
                     setSelectedPlan={setSelectedPlan}
                     index={index}
                     buttonText={buttonText}
+                    jobGuarantee={jobGuarantee}
                   />
                 ))}
             </Div>
@@ -673,9 +687,8 @@ const PricesAndPayments = (props) => {
                 style={{
                   display: "block",
                 }}
-                to={`${info.apply_button.link}${
-                  selectedPlan ? `?utm_plan=${selectedPlan}` : ""
-                }`}
+                to={`${info.apply_button.link}${selectedPlan ? `?utm_plan=${selectedPlan}` : ""
+                  }`}
               >
                 <Button
                   variant="full"

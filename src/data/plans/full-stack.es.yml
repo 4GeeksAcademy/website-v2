@@ -140,6 +140,7 @@ full_time:
     scholarship: "Paga de Contado"
     payment_time: "Descuento especial por pago temprano"
     price: "$1300*"
+    job_guarantee_price: "$1400*"
     bullets: 
       - "Ahorra $500 de la matrícula"
       - "Al menos 20 días antes del inicio del programa"
@@ -459,6 +460,7 @@ part_time:
     scholarship: "Paga de Contado"
     payment_time: "Descuento especial por pago temprano"
     price: "$1300*"
+    job_guarantee_price: "$1400*"
     bullets: 
       - "Ahorra $500 de la matrícula"
       - "Al menos 20 días antes del inicio del programa"
