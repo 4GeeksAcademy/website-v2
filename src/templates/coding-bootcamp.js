@@ -565,6 +565,7 @@ const Program = ({ data, pageContext, yml }) => {
         id="upcoming_dates"
         lang={pageContext.lang}
         message={pageDetails.upcoming.no_dates_message}
+        locations={data.allLocationYaml.edges}
       />
       <GridContainer padding_tablet="0" margin_tablet="0 0 62px 0">
         <Div height="1px" background="#EBEBEB"></Div>
@@ -1036,6 +1037,13 @@ export const query = graphql`
               color
               description
             }
+          }
+          button {
+            apply_button_link
+            apply_button_text
+            cohort_more_details_text
+            syllabus_button_text
+            syllabus_submit_text
           }
         }
       }

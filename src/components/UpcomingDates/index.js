@@ -11,6 +11,7 @@ import styled from "styled-components";
 import { Input } from "../Form";
 import { getCohorts, newsletterSignup } from "../../actions";
 import { SessionContext } from "../../session";
+import { node } from "prop-types";
 
 const info = {
   us: {
@@ -29,7 +30,7 @@ const info = {
     "full-stack-ft": "/es/coding-bootcamps/full-stack-full-time",
   },
 };
-const locations = {
+const locationUrls = {
   us: {
     "santiago-chile": "/us/coding-campus/coding-bootcamp-santiago",
     "downtown-miami": "/us/coding-campus/coding-bootcamp-miami",
@@ -68,6 +69,7 @@ const UpcomingDates = ({
   style,
   lang,
   location,
+  locations,
   message,
   actionMessage,
 }) => {
@@ -207,11 +209,8 @@ const UpcomingDates = ({
       setData(_data);
     }
   }, [session]);
-  console.log("buttpon text");
-  console.log(
-    session?.locations?.find((loc) => loc?.city === session.location.city)
-      ?.button.apply_button_text
-  );
+  const buttonText = locations?.find((loc) => loc.node?.city === session?.location?.city)?.node?.button?.apply_button_text;
+
   return (
     <GridContainer id={id} style={style} margin_tablet="0 0 48px 0">
       <Div flexDirection="column">
@@ -354,7 +353,7 @@ const UpcomingDates = ({
                       {content.info.location_label}
                     </H4>
                     <Div>
-                      <Link to={locations[lang][m.academy.slug] || ""}>
+                      <Link to={locationUrls[lang][m.academy.slug] || ""}>
                         <Paragraph textAlign="left" color={Colors.blue}>
                           {m.academy.city.name}
                         </Paragraph>
@@ -365,7 +364,7 @@ const UpcomingDates = ({
                           {locationText[lang]}{" "}
                           <Link
                             color={Colors.blue}
-                            to={locations[lang]["online"] || ""}
+                            to={locationUrls[lang]["online"] || ""}
                           >{`Online`}</Link>
                         </Paragraph>
                       )}
@@ -400,13 +399,13 @@ const UpcomingDates = ({
                         {content.info.location_label}
                       </H4>
                       <Div>
-                        <Link to={locations[lang][m.academy.slug] || ""}>
+                        <Link to={locationUrls[lang][m.academy.slug] || ""}>
                           <Paragraph textAlign="left" color={Colors.blue}>
                             {m.academy.city.name}
                           </Paragraph>
                         </Link>
                         {m.academy.slug != "online" && (
-                          <Link to={locations[lang]["online"] || ""}>
+                          <Link to={locationUrls[lang]["online"] || ""}>
                             <Paragraph
                               textAlign="left"
                               margin="0 0 0 3px"
@@ -438,9 +437,7 @@ const UpcomingDates = ({
                         margin="10px 0"
                         textColor="white"
                       >
-                        {session?.locations?.find(
-                          (loc) => loc.node?.city === session.location?.city
-                        )?.button.apply_button_text || content.info.button_text}
+                        {buttonText || content.info.button_text}
                       </Button>
                     </Link>
                   </Div>
