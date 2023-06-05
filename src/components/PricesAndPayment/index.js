@@ -420,9 +420,7 @@ const PricesAndPayments = (props) => {
     if (currentPlans && currentLocation) {
       return currentPlans
         .filter((plan) =>
-          plan.academies.includes(
-            currentLocation.fields.file_name.slice(0, -3)
-          )
+          plan.academies.includes(currentLocation.fields.file_name.slice(0, -3))
         )
         .filter((plan) => {
           if (jobGuarantee) {
@@ -434,7 +432,7 @@ const PricesAndPayments = (props) => {
         .sort((a) => (a.recomended ? -1 : 1));
     }
     return [];
-  }
+  };
 
   // const steps = props.details.details_modules.reduce((total, current, i) => [...total, (total[i - 1] || 0) + current.step], [])
   useEffect(() => {
@@ -606,7 +604,11 @@ const PricesAndPayments = (props) => {
               fontSize="25px"
               display="block"
               textAlign="center"
-              dangerouslySetInnerHTML={{ __html: jobGuarantee ? info.not_available_job_guarantee : info.not_available }}
+              dangerouslySetInnerHTML={{
+                __html: jobGuarantee
+                  ? info.not_available_job_guarantee
+                  : info.not_available,
+              }}
             />
           )}
           <Div
