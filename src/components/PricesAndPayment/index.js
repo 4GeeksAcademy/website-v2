@@ -19,7 +19,6 @@ const PricingCard = ({
   index,
 }) => {
   const { session, setSession } = useContext(SessionContext);
-  const [isOpen, setIsOpen] = useState(false);
   const { recomended, scholarship, payment_time, slug } = data;
   const isSelected = selectedPlan === slug;
   return (
@@ -338,6 +337,7 @@ const PricesAndPayments = (props) => {
             }
             recomended
             not_available
+            not_available_job_guarantee
             apply_button {
               label
               link
@@ -413,25 +413,28 @@ const PricesAndPayments = (props) => {
   const [locations, setLocations] = useState(false);
   const [selectedPlan, setSelectedPlan] = useState(null);
   const [jobGuarantee, setJobGuarantee] = useState(false);
-  const [currentPlans] = useState(getCurrentPlans);
+  const [currentPlans] = useState(getCurrentPlans());
+  const [availablePlans, setAvailablePlans] = useState([]);
 
-  const availablePlans =
-    currentPlans && currentLocation
-      ? currentPlans
-          .filter((plan) =>
-            plan.academies.includes(
-              currentLocation.fields.file_name.slice(0, -3)
-            )
+  const getAvailablePlans = () => {
+    if (currentPlans && currentLocation) {
+      return currentPlans
+        .filter((plan) =>
+          plan.academies.includes(
+            currentLocation.fields.file_name.slice(0, -3)
           )
-          .filter((plan) => {
-            if (jobGuarantee) {
-              if (plan.job_guarantee_price) return true;
-              return false;
-            }
-            return true;
-          })
-          .sort((a) => (a.recomended ? -1 : 1))
-      : [];
+        )
+        .filter((plan) => {
+          if (jobGuarantee) {
+            if (plan.job_guarantee_price) return true;
+            return false;
+          }
+          return true;
+        })
+        .sort((a) => (a.recomended ? -1 : 1));
+    }
+    return [];
+  }
 
   // const steps = props.details.details_modules.reduce((total, current, i) => [...total, (total[i - 1] || 0) + current.step], [])
   useEffect(() => {
@@ -456,9 +459,14 @@ const PricesAndPayments = (props) => {
   }, [session, props.locations]);
 
   useEffect(() => {
-    setSelectedPlan(availablePlans[0]?.slug);
     setJobGuarantee(false);
   }, [currentLocation]);
+
+  useEffect(() => {
+    const filteredPlans = getAvailablePlans();
+    setAvailablePlans(filteredPlans);
+    setSelectedPlan(filteredPlans[0]?.slug);
+  }, [jobGuarantee, currentLocation]);
 
   // sync property course
   useEffect(
@@ -592,39 +600,39 @@ const PricesAndPayments = (props) => {
               >
                 {info.select}
               </Paragraph>
-              <Div
-                display="block"
-                background={Colors.veryLightBlue}
-                padding="10px"
-                margin="0 0 20px 0"
-              >
-                <Div alignItems="center">
-                  <Toggle
-                    isChecked={jobGuarantee}
-                    onChange={() => setJobGuarantee(!jobGuarantee)}
-                  />
-                  <H4
-                    textAlign="left"
-                    fontWeight="700"
-                    fontSize="18px"
-                    margin="0 0 0 10px"
-                  >
-                    {info.job_guarantee.title}
-                  </H4>
-                </Div>
-                <Paragraph textAlign="left" color={Colors.black} opacity="1">
-                  {info.job_guarantee.description}
-                </Paragraph>
-              </Div>
             </>
           ) : (
             <Div
               fontSize="25px"
               display="block"
               textAlign="center"
-              dangerouslySetInnerHTML={{ __html: info.not_available }}
+              dangerouslySetInnerHTML={{ __html: jobGuarantee ? info.not_available_job_guarantee : info.not_available }}
             />
           )}
+          <Div
+            display="block"
+            background={Colors.veryLightBlue}
+            padding="10px"
+            margin="20px 0 20px 0"
+          >
+            <Div alignItems="center">
+              <Toggle
+                isChecked={jobGuarantee}
+                onChange={() => setJobGuarantee(!jobGuarantee)}
+              />
+              <H4
+                textAlign="left"
+                fontWeight="700"
+                fontSize="18px"
+                margin="0 0 0 10px"
+              >
+                {info.job_guarantee.title}
+              </H4>
+            </Div>
+            <Paragraph textAlign="left" color={Colors.black} opacity="1">
+              {info.job_guarantee.description}
+            </Paragraph>
+          </Div>
           <Div gap="10px" margin="0 0 15px 0">
             {availablePlans && availablePlans.length > 0 && (
               <Div

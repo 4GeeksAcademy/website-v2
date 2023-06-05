@@ -207,6 +207,8 @@ const UpcomingDates = ({
       setData(_data);
     }
   }, [session]);
+  console.log('buttpon text');
+  console.log(session?.locations?.find((loc) => loc?.city === session.location.city)?.button.apply_button_text);
   return (
     <GridContainer id={id} style={style} margin_tablet="0 0 48px 0">
       <Div flexDirection="column">
@@ -433,7 +435,7 @@ const UpcomingDates = ({
                         margin="10px 0"
                         textColor="white"
                       >
-                        {content.info.button_text}
+                        {session?.locations?.find((loc) => loc.node?.city === session.location?.city)?.button.apply_button_text || content.info.button_text}
                       </Button>
                     </Link>
                   </Div>
