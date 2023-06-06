@@ -611,30 +611,32 @@ const PricesAndPayments = (props) => {
               }}
             />
           )}
-          <Div
-            display="block"
-            background={Colors.veryLightBlue}
-            padding="10px"
-            margin="20px 0 20px 0"
-          >
-            <Div alignItems="center">
-              <Toggle
-                isChecked={jobGuarantee}
-                onChange={() => setJobGuarantee(!jobGuarantee)}
-              />
-              <H4
-                textAlign="left"
-                fontWeight="700"
-                fontSize="18px"
-                margin="0 0 0 10px"
-              >
-                {info.job_guarantee.title}
-              </H4>
+          {availablePlans.some((plan) => plan.job_guarantee_price) && (
+            <Div
+              display="block"
+              background={Colors.veryLightBlue}
+              padding="10px"
+              margin="20px 0 20px 0"
+            >
+              <Div alignItems="center">
+                <Toggle
+                  isChecked={jobGuarantee}
+                  onChange={() => setJobGuarantee(!jobGuarantee)}
+                />
+                <H4
+                  textAlign="left"
+                  fontWeight="700"
+                  fontSize="18px"
+                  margin="0 0 0 10px"
+                >
+                  {info.job_guarantee.title}
+                </H4>
+              </Div>
+              <Paragraph textAlign="left" color={Colors.black} opacity="1">
+                {info.job_guarantee.description}
+              </Paragraph>
             </Div>
-            <Paragraph textAlign="left" color={Colors.black} opacity="1">
-              {info.job_guarantee.description}
-            </Paragraph>
-          </Div>
+          )}
           <Div gap="10px" margin="0 0 15px 0">
             {availablePlans && availablePlans.length > 0 && (
               <Div
