@@ -1,0 +1,17 @@
+meta_info:
+  slug: trabajo-garantizado
+  title: "Trabajo garantizado con 4Geeks Academy"
+  description: "Trabajo garantizado con 4Geeks Academy"
+  visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
+  image: "/images/programs-heading.png"
+  keywords: "Trabajo garantizad con 4Geeks Academy"
+  redirects: ["/trabajo-garantizado"]
+
+button:
+  btn_label: "I want to Contribute"
+  apply_button_link: "/us/apply"
+
+seo_title: "Trabajo garantizado"
+header:
+  title: Consigue un trabajo o te devolvemos tu dinero
+  paragraph: Todos estamos contigo. ¡Obtenga un trabajo dentro de los 6 meses posteriores a la graduación o le devolveremos su dinero a su bolsillo!
