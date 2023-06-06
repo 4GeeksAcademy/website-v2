@@ -33,7 +33,7 @@ const PricingCard = ({
         height="fit-content"
       >
         {recomended && (
-          <Div background={Colors.blue} borderRadius="4px 4px 0 0">
+          <Div background={Colors.blue}>
             <Paragraph
               color={Colors.white}
               fontWeight_tablet="700"
@@ -46,7 +46,6 @@ const PricingCard = ({
         )}
         <Div
           border={`2px solid ${Colors.blue}`}
-          borderRadius={recomended ? "0 0 4px 4px" : "4px"}
           padding="15px 12px"
           display="block"
         >
@@ -562,7 +561,6 @@ const PricesAndPayments = (props) => {
       <Div display="block" minHeight_tablet="600px" padding_md="20px">
         <ChartSection info={info} currentLocation={currentLocation} />
         <Div
-          borderRadius="4px"
           border="1px solid #000"
           background="#FFF"
           padding_xs="18px 15px"
