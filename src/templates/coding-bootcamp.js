@@ -22,7 +22,7 @@ import { Button, Colors, StyledBackgroundSection } from "../components/Styling";
 import { isCustomBarActive } from "../actions";
 import { SessionContext } from "../session";
 import ProgramDetails from "../components/ProgramDetails";
-import PricesAndPayment from "../components/PricesAndPayment_v2";
+import PricesAndPayment from "../components/PricesAndPayment";
 import UpcomingDates from "../components/UpcomingDates";
 import GeeksInfo from "../components/GeeksInfo";
 import Testimonials from "../components/Testimonials";
@@ -565,6 +565,7 @@ const Program = ({ data, pageContext, yml }) => {
         id="upcoming_dates"
         lang={pageContext.lang}
         message={pageDetails.upcoming.no_dates_message}
+        locations={data.allLocationYaml.edges}
       />
       <GridContainer padding_tablet="0" margin_tablet="0 0 62px 0">
         <Div height="1px" background="#EBEBEB"></Div>
@@ -1029,6 +1030,20 @@ export const query = graphql`
                 )
               }
             }
+          }
+          chart_section {
+            data {
+              percentage
+              color
+              description
+            }
+          }
+          button {
+            apply_button_link
+            apply_button_text
+            cohort_more_details_text
+            syllabus_button_text
+            syllabus_submit_text
           }
         }
       }

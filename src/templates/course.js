@@ -29,7 +29,7 @@ import { SessionContext } from "../session";
 import AboutTheProgram from "../components/AboutTheProgram";
 import ProgramDetails from "../components/ProgramDetails";
 import ProgramDetailsMobile from "../components/ProgramDetailsMobile";
-import PricesAndPayment from "../components/PricesAndPayment_v2";
+import PricesAndPayment from "../components/PricesAndPayment";
 import Modal from "../components/Modal";
 import LeadForm from "../components/LeadForm";
 import AlumniProjects from "../components/AlumniProjects";
@@ -430,6 +430,7 @@ const Program = ({ data, pageContext, yml }) => {
         lang={pageContext.lang}
         message={courseDetails.upcoming.no_dates_message}
         actionMessage={courseDetails.upcoming.actionMessage}
+        locations={data.allLocationYaml.edges}
       />
       <GridContainer padding_tablet="0" margin_tablet="0 0 62px 0">
         <Div height="1px" background="#EBEBEB"></Div>
@@ -905,6 +906,20 @@ export const query = graphql`
                 )
               }
             }
+          }
+          chart_section {
+            data {
+              percentage
+              color
+              description
+            }
+          }
+          button {
+            apply_button_link
+            apply_button_text
+            cohort_more_details_text
+            syllabus_button_text
+            syllabus_submit_text
           }
         }
       }

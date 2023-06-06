@@ -77,6 +77,17 @@ images_box:
     - path: "../../../static/images/locations/miami-old2.jpg"
       alt: "4Geeeks miami lab"
 
+chart_section:
+  data:
+    - percentage: '78%'
+      color: '#00A0DA'
+      description: 'de los estudiantes no tienen experiencia en programación'
+    - percentage: '88%'
+      color: '#FFB718'
+      description: 'de las subvenciones y becas proporcionadas a través de 4Geeks se centran en ayudar a la diversidad'
+    - percentage: '80%'
+      color: '#23C520'
+      description: 'de los graduados reciben becas parciales o totales'
 
 active_campaign_location_slug: "downtown-miami"
 breathecode_location_slug: "downtown-miami"

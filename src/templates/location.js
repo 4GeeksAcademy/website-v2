@@ -347,6 +347,7 @@ const Location = ({ data, pageContext, yml }) => {
       <UpcomingDates
         lang={pageContext.lang}
         location={yml.breathecode_location_slug}
+        locations={data.allLocationYaml.edges}
         message={yml.upcoming.no_dates_message}
         actionMessage={yml.upcoming.actionMessage}
       />

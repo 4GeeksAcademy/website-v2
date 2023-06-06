@@ -139,6 +139,7 @@ full_time:
     scholarship: "Paga de Contado"
     payment_time: "Pay early and get 30% off."
     price: "$1300*"
+    job_guarantee_price: "$1400*"
     bullets: 
       - "Pay early and save up to $500"
       - "Pay with debit, credit or wire transfer."
@@ -479,6 +480,7 @@ part_time:
     scholarship: "Paga de Contado"
     payment_time: "Pay early and get 30% off."
     price: "$1300*"
+    job_guarantee_price: "$1400*"
     bullets: 
       - "Pay early and save up to $500"
       - "Pay with debit, credit or wire transfer."
