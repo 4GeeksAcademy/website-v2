@@ -1,13 +1,13 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState, useRef, useContext } from "react";
 import { graphql } from "gatsby";
 import { Link } from "gatsby";
-import { isCustomBarActive } from "../actions";
+import { isCustomBarActive, requestSyllabus, beHiringPartner } from "../actions";
 import BaseRender from "./_baseLayout";
 import { Div, HR, GridContainer } from "../components/Sections";
-import { H2, Paragraph } from "../components/Heading";
+import { H2, H3, Paragraph } from "../components/Heading";
 import { Button, Colors } from "../components/Styling";
-import { beHiringPartner } from "../actions";
 import { SessionContext } from "../session";
+import Modal from "../components/Modal";
 import LeadForm from "../components/LeadForm";
 import { Circle } from "../components/BackgroundDrawing";
 import Testimonials from "../components/Testimonials";
@@ -18,11 +18,18 @@ import BenefitsAndCharts from "../components/BenefitsAndCharts";
 import { TwoColumn } from "../components/Landing";
 
 const JobGuarantee = ({ data, pageContext, yml }) => {
-  const { session } = React.useContext(SessionContext);
-  const partnersData = data.allPartnerYaml.edges[0].node;
-
+  const { session } = useContext(SessionContext);
   const [applyButtonText, setApplyButtonText] = useState("");
   const joinPartnersRef = useRef(null);
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
   const goToForm = (e) => {
     e.preventDefault();
     window.scrollTo({
@@ -51,7 +58,6 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
         padding="90px 30px 42px 30px"
         padding_tablet="120px 130px 72px 130px"
         position="relative"
-        // background={Colors.veryLightBlue2}
         display="block"
       >
         <Circle
@@ -250,13 +256,14 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
           <Paragraph
             color="black"
             opacity="1"
-            margin="15px 0"
+            margin="15px auto"
             padding="0"
             width="auto"
             letterSpacing="0.05em"
             textAlign="center"
             fontSize="24px"
             lineHeight="28px"
+            maxWidth="760px"
           >
             {yml.header.paragraph}
           </Paragraph>
@@ -273,9 +280,9 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
                 <Button
                   variant="full"
                   justifyContent="center"
-                  width="100%"
+                  width="200px"
                   width_tablet="fit-content"
-                  color={Colors.black}
+                  color={Colors.blue}
                   margin_tablet="10px 24px 10px 0"
                   textColor="white"
                 >
@@ -288,10 +295,10 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
               width="100%"
               width_tablet="fit-content"
               variant="outline"
-              color={Colors.black}
+              color={Colors.blue}
               margin="10px 0 50px 0"
               margin_tablet="0"
-              textColor={Colors.black}
+              textColor={Colors.blue}
               textAlign="center"
             >
               {yml.button.btn_label}
@@ -299,13 +306,7 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
           </Div>
         </Div>
       </Div>
-      <OurPartners margin="0" images={partnersData.partners.images} marquee />
-      <ScholarshipProjects
-        content={data.allScholarshipProjectsYaml.edges[0].node}
-        lang={pageContext.lang}
-      />
-      <BenefitsAndCharts data={partnersData} goToForm={goToForm} />
-      {/* <Div
+      <Div
         id="two_column_left"
         flexDirection="column"
         padding="50px 0 50px 0"
@@ -313,8 +314,8 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
         margin="0"
       >
         <TwoColumn
-          left={{ image: ymlTwoColumn.image }}
-          right={{
+          right={{ image: ymlTwoColumn.image }}
+          left={{
             heading: ymlTwoColumn.heading,
             sub_heading: ymlTwoColumn.sub_heading,
             bullets: ymlTwoColumn.bullets,
@@ -324,7 +325,23 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
           proportions={ymlTwoColumn.proportions}
           session={session}
         />
-      </Div> */}
+      </Div>
+      <Div
+        id="we-trust"
+        flexDirection="column"
+        padding="50px 0 50px 0"
+        padding_tablet="50px 6%"
+        margin="0"
+      >
+        <Div
+          padding="20px 10px"
+          padding_tablet="30px"
+          margin="0"
+          background={Colors.lightBlue}
+        >
+          <H2 textAlign="left">{yml.we_trust_section.title}</H2>
+        </Div>
+      </Div>
       <ScholarshipSuccessCases
         content={data.allScholarshipSuccessCasesYaml.edges[0].node}
       />
@@ -334,7 +351,7 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
         height="5px"
         margin="40px 0"
       />
-      {/* <GridContainer
+      <GridContainer
         columns_tablet="12"
         padding="0 17px 40px 17px"
         padding_tablet="0"
@@ -367,7 +384,7 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
             fields={["full_name", "email", "phone"]}
           />
         </Div>
-      </GridContainer> */}
+      </GridContainer>
     </>
   );
 };
@@ -388,64 +405,40 @@ export const query = graphql`
             btn_label
             apply_button_link
           }
-        }
-      }
-    }
-    allScholarshipProjectsYaml(filter: { fields: { lang: { eq: $lang } } }) {
-      edges {
-        node {
-          title
-          description
-          project_name
-          project_details
-          total_cost
-          geeks_benefited
-          institutions
-          press
-          see_project
-          projects {
-            name
+          two_column_left {
+            proportions
             image {
-              alt
-              src {
-                childImageSharp {
-                  gatsbyImageData(
-                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                    width: 700
-                    quality: 100
-                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
-                    breakpoints: [200, 340, 520, 890]
-                  )
-                }
-              }
+              style
+              src
             }
-            description
-            details {
-              cost
-              geeks_benefited
+            heading {
+              text
+              font_size
             }
-            institutions {
-              name
-              logo {
-                childImageSharp {
-                  gatsbyImageData(
-                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                    width: 700
-                    quality: 100
-                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
-                    breakpoints: [200, 340, 520, 890]
-                  )
-                }
-              }
+            content {
+              text
+              font_size
             }
-            press {
-              name
-              link
+            button {
+              text
+              color
+              background
+              hover_color
+              path
             }
-            pdf
           }
-          fields {
-            lang
+          we_trust_section {
+            title
+            text
+            boxes {
+              icon
+              title
+              text
+            }
+          }
+          form {
+            title
+            paragraph
           }
         }
       }
@@ -478,50 +471,6 @@ export const query = graphql`
             contributor
             description
             achievement
-          }
-        }
-      }
-    }
-    allPartnerYaml(filter: { fields: { lang: { eq: $lang } } }) {
-      edges {
-        node {
-          partners {
-            tagline
-            sub_heading
-            footer_tagline
-            footer_button
-            footer_link
-            images {
-              name
-              link
-              follow
-              image {
-                childImageSharp {
-                  gatsbyImageData(
-                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                    width: 150
-                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
-                  )
-                }
-              }
-              featured
-            }
-          }
-          benefits_and_charts {
-            title
-            description
-            bullets
-            button_section {
-              button_text
-              button_link
-            }
-            charts {
-              title
-              list {
-                description
-                icon
-              }
-            }
           }
         }
       }

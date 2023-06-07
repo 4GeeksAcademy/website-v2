@@ -8,10 +8,55 @@ meta_info:
   redirects: ["/trabajo-garantizado"]
 
 button:
-  btn_label: "I want to Contribute"
+  btn_label: "SOLICITA UN PLAN DE ESTUDIOS"
   apply_button_link: "/us/apply"
 
 seo_title: "Trabajo garantizado"
 header:
   title: Consigue un trabajo o te devolvemos tu dinero
   paragraph: Todos estamos contigo. ¡Obtenga un trabajo dentro de los 6 meses posteriores a la graduación o le devolveremos su dinero a su bolsillo!
+
+two_column_left:
+  proportions: [6, 6]
+  image:
+    style: '{ "backgroundSize": "contain" }'
+    src: "/images/woman-glasses-laptop.png"
+  heading:
+    text: "Why are we doing this?"
+    font_size: ["30px", "30px", "30px", "30px", "30px"]
+  content:
+    font_size: ["16px"]
+    text: |
+      <p>We are challenging the way education works. It's not only about the skills or the knowledge, it is about the new opportunities we can open and build together for your career</p>
+      <br>
+      <p><span style="color: #0097CD;">✓</span> We <strong style="font-weight: bold;">trust</strong> the program</p>
+      <br>
+      <p><span style="color: #0097CD;">✓</span> We <strong style="font-weight: bold;">trust</strong> the industry</p>
+      <br>
+      <p><span style="color: #0097CD;">✓</span> We <strong style="font-weight: bold;">trust</strong> the process</p>
+      <br>
+      <p><span style="color: #0097CD;">✓</span> Get a job!</p>
+  button:
+      text: "APPLY"
+      color: "white"
+      background: "black"
+      hover_color: "white"
+      path: "#top"
+
+we_trust_section:
+  title: This is why we trust
+  text: |
+    <p>Este es un programa sostenible comprobado, ya funciona y seguirá funcionando.
+    <br>
+    Los números lo respaldan.</p>
+  boxes:
+    - icon: graduation
+      title: 82%
+      text: Colocado
+
+form:
+  title: "Conviértete en Partner de 4Geeks"
+  paragraph: "Contáctenos y lo conectaremos directamente con los candidatos adecuados que se gradúan de 4Geeks Academy todos los días.
+  Nuestros graduados tienen éxito en sus propios negocios, startups y grandes empresas por igual.
+
+  Nuestros programas preparan a los estudiantes para trabajar y prosperar en cualquier organización tecnológica y con visión de futuro."
