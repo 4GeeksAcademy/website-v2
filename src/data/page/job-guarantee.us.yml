@@ -46,13 +46,20 @@ two_column_left:
 we_trust_section:
   title: This is why we trust
   text: |
-    <p>This is a proven sustainable program, it already works and will continue to work. 
+    This is a proven sustainable program, it already works and will continue to work. 
     <br>
-    The numbers back it up.</p>
+    <br>
+    The numbers back it up.
   boxes:
-    - icon: graduation
-      title: 82%
+    - icon: briefcase-2
+      title: "82%"
       text: Placed
+    - icon: chart
+      title: "60K"
+      text: Avg. Income
+    - icon: graduation-2
+      title: "130"
+      text: Days to get a job after graduation
 
 form:
   title: "Become a 4Geeks Partner"
