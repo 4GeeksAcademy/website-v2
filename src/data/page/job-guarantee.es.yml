@@ -44,7 +44,7 @@ two_column_left:
       path: "#top"
 
 we_trust_section:
-  title: This is why we trust
+  title: Por esto confiamos
   text: |
     Este es un programa sostenible comprobado, ya funciona y seguirá funcionando.
     <br>
@@ -60,6 +60,24 @@ we_trust_section:
     - icon: graduation-2
       title: "130"
       text: Días para conseguir un trabajo después de la graduación
+
+how_it_works:
+  title: ¿Cómo funciona?
+  text: El camino a seguir si desea calificar para nuestra función de garantía de empleo. Si cumple y no consigue trabajo en 6 meses, le devolvemos su dinero.
+  steps:
+    - icon: rocket-2
+      title: Inicia el programa
+    - icon: assignment
+      title: Cumple con las asistencias y las asignaciones
+    - icon: folder
+      title: Aprueba el proyecto final
+    - icon: graduation-2
+      title: Graduation
+      highlight: True
+    - icon: handshake
+      title: Complies with career support
+    - icon: briefcase-2
+      title: Get a job in 6 months
 
 form:
   title: "Conviértete en Partner de 4Geeks"

@@ -61,6 +61,24 @@ we_trust_section:
       title: "130"
       text: Days to get a job after graduation
 
+how_it_works:
+  title: How it works?
+  text: The way to go if you want to qualify for our job guarantee feature. If you comply and do not get a job within 6 months, we will give your money back.
+  steps:
+    - icon: rocket-2
+      title: Start the program
+    - icon: assignment
+      title: Complies with assignments and attendances
+    - icon: folder
+      title: Approve the final project
+    - icon: graduation-2
+      title: Graduation
+      highlight: True
+    - icon: handshake
+      title: Complies with career support
+    - icon: briefcase-2
+      title: Get a job in 6 months
+
 form:
   title: "Become a 4Geeks Partner"
   paragraph: "Contact us and we'll connect you directly to the right candidates who are graduating from 4Geeks Academy every day.

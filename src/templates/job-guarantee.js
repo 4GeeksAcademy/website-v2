@@ -5,7 +5,7 @@ import { isCustomBarActive, requestSyllabus, beHiringPartner } from "../actions"
 import BaseRender from "./_baseLayout";
 import { Div, HR, GridContainer } from "../components/Sections";
 import { H2, H3, Paragraph } from "../components/Heading";
-import { Button, Colors } from "../components/Styling";
+import { Button, Colors, ImgV2 } from "../components/Styling";
 import { SessionContext } from "../session";
 import Modal from "../components/Modal";
 import LeadForm from "../components/LeadForm";
@@ -342,7 +342,9 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
           display="block"
         >
           <Div display="block">
-            <H2 textAlign="left" margin="0 0 15px 0">{yml.we_trust_section.title}</H2>
+            <H2 textAlign="left" margin="0 0 15px 0">
+              {yml.we_trust_section.title}
+            </H2>
             <Paragraph
               textAlign="left"
               color={Colors.darkGray}
@@ -376,8 +378,14 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
                 alignItems="center"
                 alignItems_tablet="normal"
               >
-                <Icon icon={box.icon} width="89px" height="89px" color={null}/>
-                <Div margin="0 0 0 15px" margin_tablet="20px 0 0 0" display="flex" flexDirection="column" display_tablet="block">
+                <Icon icon={box.icon} width="89px" height="89px" color={null} />
+                <Div
+                  margin="0 0 0 15px"
+                  margin_tablet="20px 0 0 0"
+                  display="flex"
+                  flexDirection="column"
+                  display_tablet="block"
+                >
                   <H3
                     textAlign="left"
                     fontWeight="900"
@@ -387,13 +395,104 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
                   >
                     {box.title}
                   </H3>
-                  <Paragraph textAlign="left" color="#000" opacity="1" fontSize="18px">
+                  <Paragraph
+                    textAlign="left"
+                    color="#000"
+                    opacity="1"
+                    fontSize="18px"
+                  >
                     {box.text}
                   </Paragraph>
                 </Div>
               </Div>
             ))}
           </Div>
+        </Div>
+      </Div>
+      <Div display="block" margin="0 0 20px 0">
+        <Div display="block" margin="0 auto 40px 0" padding="0 20px">
+          <H2 margin="0 0 15px 0">{yml.how_it_works.title}</H2>
+          <Paragraph color="#000" opacity="1" fontSize="18px">
+            {yml.how_it_works.text}
+          </Paragraph>
+        </Div>
+        <Div
+          margin="auto"
+          width="300px"
+          width_tablet="fit-content"
+          gap_tablet="30px"
+          gap_md="40px"
+          flexDirection="column"
+          flexDirection_tablet="row"
+        >
+          {yml.how_it_works.steps.map((step, i) => (
+            <Div
+              width="100%"
+              width_tablet="90px"
+              width_md="130px"
+              height_tablet="300px"
+              position="relative"
+            >
+              {i !== yml.how_it_works.steps.length - 1 && (
+                <ImgV2
+                  src="/images/dotted-line.png"
+                  position="absolute"
+                  left_tablet="50%"
+                  left="90px"
+                  top_md={i % 2 === 0 ? "30px" : "5px"}
+                  top_tablet="30px"
+                  top="80px"
+                  rotate_tablet={i % 2 !== 0 && "123deg"}
+                  rotate={i % 2 !== 0 && "-45deg"}
+                  alt="Dashed line"
+                  width_tablet="150px"
+                  width_md="200px"
+                  width="150px"
+                  height="69px"
+                  height_tablet="69px"
+                  height_md="119px"
+                  backgroundSize="contain"
+                />
+              )}
+              <Div
+                flexDirection={i % 2 === 0 ? "row" : "row-reverse"}
+                justifyContent="between"
+                justifyContent_tablet="start"
+                flexDirection_tablet="column"
+                alignItems="center"
+                position_tablet="absolute"
+                top={i % 2 !== 0 && "70px"}
+                zIndex="5"
+                width="100%"
+                width_tablet="auto"
+              >
+                <Div
+                  flexDirection="column"
+                  justifyContent="center"
+                  width="120px"
+                  width_tablet="90px"
+                  width_md="120px"
+                  height="120px"
+                  height_tablet="90px"
+                  height_md="120px"
+                  border={`4px solid #FFB718`}
+                  background="#FFF1D1"
+                  borderRadius="60px"
+                >
+                  <Icon
+                    style={{ margin: "auto" }}
+                    color="#FFB718"
+                    icon={step.icon}
+                    width="45px"
+                    height="45px"
+                  />
+                </Div>
+                <Paragraph fontSize={step.highlight ? "20px" : "18px"} color={step.highlight ? "#FFB718" : "#000"} opacity="1" maxWidth="130px" maxWidth_tablet="90px" maxWidth_md="130px">
+                  {`${i + 1}. ${step.title}`}
+                </Paragraph>
+              </Div>
+            </Div>
+          ))}
         </Div>
       </Div>
       <ScholarshipSuccessCases
@@ -488,6 +587,15 @@ export const query = graphql`
               icon
               title
               text
+            }
+          }
+          how_it_works {
+            title
+            text
+            steps {
+              icon
+              title
+              highlight
             }
           }
           form {
