@@ -7,12 +7,10 @@ meta_info:
   keywords: "null"
   redirects:
     [
-      "/locations",
       "/miami",
       "/us/location/downtown-miami",
       "/location/downtown-miami",
       "/us/coding-campus/downtown-miami",
-      "/coding-campus/coding-bootcamp-miami",
       "/us/coding-bootcamp-miami",
     ]
   region: "usa-canada"
