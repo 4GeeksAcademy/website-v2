@@ -1,27 +1,37 @@
 import React, { useEffect, useState, useRef, useContext } from "react";
 import { graphql } from "gatsby";
 import { Link } from "gatsby";
-import { isCustomBarActive, requestSyllabus, beHiringPartner } from "../actions";
+import {
+  isCustomBarActive,
+  requestSyllabus,
+  beHiringPartner,
+} from "../actions";
 import BaseRender from "./_baseLayout";
 import { Div, HR, GridContainer } from "../components/Sections";
-import { H2, H3, Paragraph } from "../components/Heading";
-import { Button, Colors, ImgV2 } from "../components/Styling";
+import { H2, H3, H4, Paragraph } from "../components/Heading";
+import {
+  Button,
+  Colors,
+  Img,
+  ImgV2,
+  StyledBackgroundSection,
+} from "../components/Styling";
 import { SessionContext } from "../session";
 import Modal from "../components/Modal";
 import LeadForm from "../components/LeadForm";
 import { Circle } from "../components/BackgroundDrawing";
-import Testimonials from "../components/Testimonials";
 import Icon from "../components/Icon";
-import OurPartners from "../components/OurPartners";
-import ScholarshipProjects from "../components/ScholarshipProjects";
 import ScholarshipSuccessCases from "../components/ScholarshipSuccessCases";
-import BenefitsAndCharts from "../components/BenefitsAndCharts";
 import { TwoColumn } from "../components/Landing";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const JobGuarantee = ({ data, pageContext, yml }) => {
   const { session } = useContext(SessionContext);
   const [applyButtonText, setApplyButtonText] = useState("");
-  const joinPartnersRef = useRef(null);
+
+  const sliderRef = useRef();
   const [open, setOpen] = useState(false);
   const handleOpen = () => {
     setOpen(true);
@@ -29,14 +39,6 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
 
   const handleClose = () => {
     setOpen(false);
-  };
-
-  const goToForm = (e) => {
-    e.preventDefault();
-    window.scrollTo({
-      top: joinPartnersRef.current?.offsetTop - 200,
-      behavior: "smooth",
-    });
   };
 
   let city = session && session.location ? session.location.city : [];
@@ -50,7 +52,35 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
     }
   }, [currentLocation]);
 
+  const programs = data.allCourseYaml.edges
+    .filter(
+      ({ node }) =>
+        !["unlisted", "hidden"].includes(node.meta_info.visibility) &&
+        node.meta_info.show_in_apply
+    )
+    .map(({ node }) => ({
+      label: node.apply_form.label,
+      value: node.meta_info.bc_slug,
+    }));
+
   const ymlTwoColumn = yml?.two_column_left;
+
+  const settings = {
+    className: "slider variable-width",
+    dots: true,
+    infinite: true,
+    autoplay: false,
+    autoplaySpeed: 6000,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+  };
+
+  const testimonials =
+    data.allTestimonialsYaml.edges[0].node.testimonials.filter((elem) =>
+      yml.successful_stories.testimonials.includes(elem.slug)
+    );
 
   return (
     <>
@@ -292,6 +322,7 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
               </Link>
             </Div>
             <Button
+              onClick={handleOpen}
               display="block"
               width="100%"
               width_tablet="fit-content"
@@ -305,13 +336,40 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
               {yml.button.btn_label}
             </Button>
           </Div>
+          <Modal
+            aria-labelledby="simple-modal-title"
+            aria-describedby="simple-modal-description"
+            open={open}
+            onClose={handleClose}
+          >
+            <LeadForm
+              style={{ marginTop: "50px" }}
+              heading={yml.button.syllabus_heading}
+              motivation={yml.button.syllabus_motivation}
+              sendLabel={yml.button.syllabus_heading}
+              formHandler={requestSyllabus}
+              handleClose={handleClose}
+              lang={pageContext.lang}
+              redirect={
+                pageContext.lang === "us" ? "/us/thank-you" : "/es/gracias"
+              }
+              selectProgram={programs}
+              data={{
+                course: {
+                  type: "hidden",
+                  value: yml.meta_info?.utm_course,
+                  valid: true,
+                },
+              }}
+            />
+          </Modal>
         </Div>
       </Div>
       <Div
         id="two_column_left"
         flexDirection="column"
         padding="0 0 50px 0"
-        padding_tablet="50px 6% 0 6%"
+        padding_tablet="0 6% 0 6%"
         margin="0"
       >
         <TwoColumn
@@ -487,12 +545,149 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
                     height="45px"
                   />
                 </Div>
-                <Paragraph fontSize={step.highlight ? "20px" : "18px"} color={step.highlight ? "#FFB718" : "#000"} opacity="1" maxWidth="130px" maxWidth_tablet="90px" maxWidth_md="130px">
+                <Paragraph
+                  fontSize={step.highlight ? "20px" : "18px"}
+                  color={step.highlight ? "#FFB718" : "#000"}
+                  opacity="1"
+                  maxWidth="130px"
+                  maxWidth_tablet="90px"
+                  maxWidth_md="130px"
+                >
                   {`${i + 1}. ${step.title}`}
                 </Paragraph>
               </Div>
             </Div>
           ))}
+        </Div>
+      </Div>
+      <Div
+        background={Colors.lightGray}
+        padding="30px"
+        padding_tablet="70px"
+        gap="10px"
+        display="block"
+        display_tablet="flex"
+        justifyContent="between"
+      >
+        <Div
+          height_md="299px"
+          flexDirection="column"
+          justifyContent_md="between"
+          width_tablet="300px"
+          width_md="395px"
+          gap="10px"
+          margin="0 0 15px 0"
+          margin_tablet="0"
+        >
+          <Div display="block">
+            <H3 textAlign="left" margin="0 0 10px 0">
+              {yml.successful_stories.title}
+            </H3>
+            <Paragraph
+              color="#000"
+              opacity="1"
+              textAlign="left"
+              fontSize="18px"
+            >
+              {yml.successful_stories.text}
+            </Paragraph>
+          </Div>
+          <Icon icon="longarrow-right" />
+        </Div>
+        <Div display="block" width="100%" width_tablet="400px" width_md="900px">
+          <Slider {...settings} ref={sliderRef}>
+            {testimonials.map((testimonial) => {
+              return (
+                <Div
+                  display="block"
+                  boxShadow_tablet="9px 8px 0px 0px rgba(0,0,0,1)"
+                >
+                  <Div
+                    background={Colors.veryLightBlue}
+                    border="2px solid black"
+                    display="block"
+                    display_md="flex"
+                    height_tablet="548px"
+                    height_md="307px"
+                  >
+                    <StyledBackgroundSection
+                      image={
+                        testimonial.student_thumb.childImageSharp
+                          .gatsbyImageData
+                      }
+                      alt={testimonial.student_name}
+                      width="300px"
+                      width_tablet="100%"
+                      width_md="300px"
+                      height="340px"
+                      height_tablet="240px"
+                      height_md="100%"
+                      backgroundSize="contain"
+                      flexShrink="0"
+                    />
+                    <Div padding="10px" display="block">
+                      <H4 textAlign="left" fontWeight="700">
+                        {testimonial.student_name}
+                      </H4>
+                      <Div gap="10px" alignItems="center" margin="0 0 10px 0">
+                        {testimonial.country && (
+                          <Div>
+                            <Div
+                              className="react-tel-input"
+                              margin="0"
+                              width="25px"
+                            >
+                              <div
+                                className={`flag ${testimonial.country.iso}`}
+                              />
+                            </Div>
+                            <Paragraph
+                              margin="0 0 0 5px"
+                              textAlign="left"
+                              opacity="1"
+                              color={Colors.black}
+                            >
+                              {testimonial.country.name}
+                            </Paragraph>
+                          </Div>
+                        )}
+                        {testimonial.linkedin_url && (
+                          <Img
+                            src="/images/linkedin.png"
+                            onClick={() => {
+                              if (testimonial.linkedin_url.indexOf("http") > -1)
+                                window.open(testimonial.linkedin_url);
+                              else navigate(testimonial.linkedin_url);
+                            }}
+                            style={{
+                              cursor: "pointer",
+                            }}
+                            alt="Linkedin profile"
+                            height="20px"
+                            width="60px"
+                            backgroundSize="contain"
+                          />
+                        )}
+                      </Div>
+                      <HR
+                        background="#A4A4A4"
+                        width="100%"
+                        height="1px"
+                        margin="5px 0"
+                      />
+                      <Paragraph
+                        textAlign="left"
+                        opacity="1"
+                        color={Colors.black}
+                      >
+                        {testimonial.content}
+                      </Paragraph>
+                    </Div>
+                  </Div>
+                </Div>
+              );
+            })}
+          </Slider>
         </Div>
       </Div>
       <ScholarshipSuccessCases
@@ -510,11 +705,7 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
         padding_tablet="0"
         margin_tablet="0 0 81px 0"
       >
-        <Div
-          ref={joinPartnersRef}
-          gridColumn_tablet="1 / 7"
-          flexDirection="column"
-        >
+        <Div gridColumn_tablet="1 / 7" flexDirection="column">
           <H2 textAlign_md="left" margin="0 0 30px 0">
             {yml.form.title}
           </H2>
@@ -549,6 +740,9 @@ export const query = graphql`
     ) {
       edges {
         node {
+          meta_info {
+            utm_course
+          }
           seo_title
           header {
             title
@@ -557,6 +751,8 @@ export const query = graphql`
           button {
             btn_label
             apply_button_link
+            syllabus_heading
+            syllabus_motivation
           }
           two_column_left {
             proportions
@@ -598,9 +794,30 @@ export const query = graphql`
               highlight
             }
           }
+          successful_stories {
+            title
+            text
+            testimonials
+          }
           form {
             title
             paragraph
+          }
+        }
+      }
+    }
+    allCourseYaml(filter: { fields: { lang: { eq: $lang } } }) {
+      edges {
+        node {
+          meta_info {
+            slug
+            title
+            bc_slug
+            visibility
+            show_in_apply
+          }
+          apply_form {
+            label
           }
         }
       }
@@ -680,6 +897,53 @@ export const query = graphql`
                 )
               }
             }
+          }
+        }
+      }
+    }
+    allTestimonialsYaml(filter: { fields: { lang: { eq: $lang } } }) {
+      edges {
+        node {
+          heading
+          button_text
+          button_link
+          testimonials {
+            student_name
+            slug
+            country {
+              iso
+              name
+            }
+            featured
+            highlighted
+            testimonial_date
+            rating
+            hidden
+            linkedin_url
+            linkedin_text
+            linkedin_image {
+              childImageSharp {
+                gatsbyImageData(
+                  layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                  height: 14
+                  placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                )
+              }
+            }
+            student_thumb {
+              childImageSharp {
+                gatsbyImageData(
+                  layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                  width: 800
+                  placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                )
+              }
+            }
+            student_video
+            short_content
+            content
+            source_url
+            source_url_text
           }
         }
       }

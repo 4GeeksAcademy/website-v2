@@ -308,6 +308,7 @@ export const StyledBackgroundSection = styled(BackgroundSection)`
   }
   @media ${Devices.md} {
     width: ${(props) => props.width_md};
+    height: ${(props) => props.height_md};
   }
   @media ${Devices.lg} {
   }

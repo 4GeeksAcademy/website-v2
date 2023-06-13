@@ -6,10 +6,13 @@ meta_info:
   image: "/images/programs-heading.png"
   keywords: "Trabajo garantizad con 4Geeks Academy"
   redirects: ["/trabajo-garantizado"]
+  utm_course: ["full-stack", "datascience-ml"]
 
 button:
+  syllabus_heading: "Descargar Detalles del Curso"
+  syllabus_btn_label: "Descarga Instantánea"
   btn_label: "SOLICITA UN PLAN DE ESTUDIOS"
-  apply_button_link: "/us/apply"
+  syllabus_motivation: "/us/apply"
 
 seo_title: "Trabajo garantizado"
 header:
@@ -78,6 +81,14 @@ how_it_works:
       title: Complies with career support
     - icon: briefcase-2
       title: Get a job in 6 months
+
+successful_stories:
+  title: Historias de éxito
+  text: "Nuestro programa de Garantía de empleo ya está dando resultados positivos. Aquí puedes ver algunos de ellos:"
+  testimonials: 
+    - "nai-kali"
+    - "azu-bota"
+    - "cha-fabr"
 
 form:
   title: "Conviértete en Partner de 4Geeks"

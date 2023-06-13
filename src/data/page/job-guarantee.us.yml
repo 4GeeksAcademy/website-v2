@@ -6,10 +6,13 @@ meta_info:
   image: "/images/programs-heading.png"
   keywords: "Job Guarantee at 4Geeks Academy"
   redirects: ["/job-guarantee"]
+  utm_course: ["full-stack", "datascience-ml"]
 
 button:
   btn_label: "REQUEST A SYLLABUS"
   apply_button_link: "/us/apply"
+  syllabus_heading: "Download Syllabus"
+  syllabus_motivation: "Instant Download"
 
 seo_title: "Job Guarantee"
 header:
@@ -78,6 +81,14 @@ how_it_works:
       title: Complies with career support
     - icon: briefcase-2
       title: Get a job in 6 months
+
+successful_stories:
+  title: Successful stories
+  text: "Our Job guarantee program is already giving positive results. Here you can see some of them:"
+  testimonials: 
+    - "nai-kali"
+    - "azu-bota"
+    - "cha-fabr"
 
 form:
   title: "Become a 4Geeks Partner"
