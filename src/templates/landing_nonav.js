@@ -37,7 +37,7 @@ const Landing = (props) => {
     (session &&
       session.locations
         ?.filter((loc) =>
-          yml.meta_info.utm_location.includes(loc.breathecode_location_slug)
+          yml.meta_info.utm_location?.includes(loc.breathecode_location_slug)
         )
         .map((loc) => ({
           label: loc.name,
