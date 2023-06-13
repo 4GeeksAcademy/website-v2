@@ -90,7 +90,7 @@ const SEO = (props) => (
           >
             <script
               type="text/javascript"
-              src="/public/ActiveCampaignScript.js"
+              src="/ActiveCampaignScript.js"
             />
             <html lang={langCountries[lang]} />
             <link
