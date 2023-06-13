@@ -19,7 +19,7 @@ import { Circle } from "../components/BackgroundDrawing";
 import Icon from "../components/Icon";
 import Testimonials from "../components/Testimonials";
 import Badges from "../components/Badges";
-import PricesAndPayment from "../components/PricesAndPayment_v2";
+import PricesAndPayment from "../components/PricesAndPayment";
 import Instructors from "../components/Instructors";
 import JobGuaranteeSmall from "../components/JobGuaranteeSmall";
 
@@ -892,6 +892,13 @@ export const query = graphql`
                 #   ...GatsbyImageSharpFluid_withWebp
                 # }
               }
+            }
+          }
+          chart_section {
+            data {
+              percentage
+              color
+              description
             }
           }
         }
