@@ -86,7 +86,7 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
     <>
       <Div
         margin={isCustomBarActive(session) ? "40px 0 0 0" : "0"}
-        padding="90px 30px 42px 30px"
+        padding="90px 30px 0 30px"
         padding_tablet="120px 130px 72px 130px"
         position="relative"
         display="block"
@@ -275,10 +275,10 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
             type="h2"
             textAlign="left"
             textAlign_tablet="center"
-            fontSize="40px"
-            fontSize_tablet="50px"
+            fontSize="36px"
+            fontSize_tablet="80px"
             lineHeight="38px"
-            lineHeight_tablet="60px"
+            lineHeight_tablet="87px"
             margin_tablet="40px 0 40px 0"
             textTransform="uppercase"
           >
@@ -311,7 +311,7 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
                 <Button
                   variant="full"
                   justifyContent="center"
-                  width="200px"
+                  width="100%"
                   width_tablet="fit-content"
                   color={Colors.blue}
                   margin_tablet="10px 24px 10px 0"
@@ -328,7 +328,7 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
               width_tablet="fit-content"
               variant="outline"
               color={Colors.blue}
-              margin="10px 0 50px 0"
+              margin="10px 0 0 0"
               margin_tablet="0"
               textColor={Colors.blue}
               textAlign="center"
@@ -370,7 +370,8 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
         flexDirection="column"
         padding="0 0 50px 0"
         padding_tablet="0 6% 0 6%"
-        margin="0"
+        margin="0 auto"
+        maxWidth="1695px"
       >
         <TwoColumn
           right={{ image: ymlTwoColumn.image }}
@@ -387,7 +388,7 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
       </Div>
       <Div
         id="we-trust"
-        flexDirection="column"
+        display="block"
         padding="50px 0 50px 0"
         padding_tablet="50px 6%"
         margin="0"
@@ -395,9 +396,10 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
         <Div
           padding="50px 10px"
           padding_tablet="30px"
-          margin="0"
+          margin="0 auto"
           background={Colors.lightBlue}
           display="block"
+          maxWidth="1300px"
         >
           <Div display="block">
             <H2 textAlign="left" margin="0 0 15px 0">
@@ -567,7 +569,7 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
         gap="10px"
         display="block"
         display_tablet="flex"
-        justifyContent="between"
+        justifyContent="center"
       >
         <Div
           height_md="299px"
@@ -594,7 +596,7 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
           </Div>
           <Icon icon="longarrow-right" />
         </Div>
-        <Div display="block" width="100%" width_tablet="400px" width_md="900px">
+        <Div display="block" width="100%" width_tablet="400px" width_md="fit-content" minWidth_md="700px" maxWidth_md="900px">
           <Slider {...settings} ref={sliderRef}>
             {testimonials.map((testimonial) => {
               return (

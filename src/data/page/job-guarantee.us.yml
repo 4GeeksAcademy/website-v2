@@ -28,7 +28,7 @@ two_column_left:
     text: "Why are we doing this?"
     font_size: ["30px", "30px", "30px", "30px", "30px"]
   content:
-    font_size: ["16px"]
+    font_size: ["24px", "24px", "24px", "18px", "18px"]
     text: |
       <p>We are challenging the way education works. It's not only about the skills or the knowledge, it is about the new opportunities we can open and build together for your career</p>
       <br>
