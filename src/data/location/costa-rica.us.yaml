@@ -7,7 +7,7 @@ meta_info:
   keywords: ""
   # it will not show up on the applications forms
   visibility: "visible"
-  redirects: ["/us/location/costa-rica", "/location/costa-rica"]
+  redirects: []
   region: "latam"
   dialCode: "506"
 
@@ -67,12 +67,18 @@ info_box:
 
 images_box:
   heading: "What you should know about this location: "
-  content: "4Geeks Academy classes in Costa Rica are only being taught online until further notice; Any 4Geeks in-person campus is always located in very centric locations with nearby subway or public transportation systems at the most popular areas of the city."
-  images: null
-    # - path: "../../../static/images/locations/mcbo-chinita.jpeg"
-    #   alt: "mcbo-chinita"
-    # - path: "../../../static/images/locations/mcbo-loc.jpg"
-    #   alt: "4Geeeks Maracaibo Location"
+  content: "Costa Rica offers a supportive environment for startups and entrepreneurs. The country has various incubators, accelerators, and co-working spaces that provide support, mentorship, and resources for startups. Additionally, Costa Rica hosts startup events, hackathons, and networking opportunities that bring together entrepreneurs, investors, and industry experts. The country has a well-educated and skilled workforce, with a focus on technology and engineering. The country's universities and technical institutions offer programs in computer science, software engineering, and other related fields. Additionally, Costa Rica offers coding bootcamps, workshops, and training programs to nurture coding skills and bridge the skills gap in the tech industry."
+  images: 
+    - path: "../../../static/images/locations/costarica-new.png"
+      alt: "Costa Rica city"
+    - path: "../../../static/images/ownpeoplecoding2.jpg"
+      alt: "4Geeks Own People Coding"
+    - path: "../../../static/images/ownmancoding.jpg"
+      alt: "Remote-Coding-Bootcamp"
+    - path: "../../../static/images/locations/miami-old.jpg"
+      alt: "4Geeeks location"
+    - path: "../../../static/images/locations/miami-people.jpeg"
+      alt: "4Geeeks lab"
 
 ## START FROM HERE - DON'T CHANGE ANYTHING ABOVE
 ## HEADING SECTION

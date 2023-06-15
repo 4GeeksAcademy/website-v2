@@ -5,10 +5,7 @@ meta_info:
   description: "Get to know here all about our coding bootcamp campus in Orlando, Florida of 4Geeks Academy"
   image: "/images/og-preview/orlando-usa.us.png"
   keywords: "null"
-  redirects:
-    [
-      "/orlando",
-    ]
+  redirects: []
   region: "usa-canada"
   dialCode: "1"
 
@@ -66,18 +63,18 @@ info_box:
   alt: ""
 images_box:
   heading: "What you should know about this location: "
-  content: "Orlando is one of the fastest growing tech ecosystems in the world. Join the #1 part-time Coding Bootcamp in Orlando and become part of the best place to learn to code in Florida. \\n Career Support and Mentorship for our students is for life. Located in Brickell and 5 mins away from the Metro Mover (subway station). Our place is full of amenities, and close to everything. We have parking (free for students and members of the community), and we have a great terrace! Brickell is one of the most active areas in the city. The office is opened 24/7 during the week and on Saturday we host our famous 'Coding Weekends' when students and other developers gather to code all day with mentors, pizzas and drinks on the house!"
+  content: "The city is well known for its world-famous theme parks and attractions, but it is also home to a vibrant community of techies and visionaries. EA Sport, Siemens, Boing, Disney and many more have HQ there. This is the Orlando tech ecosystem - a cradle of creativity, where ideas gave birth to cutting-edge solutions that would revolutionize the world. Orlando has a thriving ecosystem of technology, innovation, and entrepreneurship. "
   images:
-    - path: "../../../static/images/locations/miami-loc.jpg"
-      alt: "4Geeks Miami Sunset"
-    - path: "../../../static/images/locations/miami-people2.jpeg"
-      alt: "4Geeeks Orlando room"
-    - path: "../../../static/images/locations/miami-people.jpeg"
-      alt: "4Geeeks Orlando day"
+    - path: "../../../static/images/locations/orlando-new.png"
+      alt: "Orlando city"
+    - path: "../../../static/images/ownpeoplecoding2.jpg"
+      alt: "4Geeks Own People Coding"
+    - path: "../../../static/images/ownmancoding.jpg"
+      alt: "Remote-Coding-Bootcamp"
     - path: "../../../static/images/locations/miami-old.jpg"
-      alt: "4Geeeks Orlando location"
-    - path: "../../../static/images/locations/miami-old2.jpg"
-      alt: "4Geeeks Orlando lab"
+      alt: "4Geeeks location"
+    - path: "../../../static/images/locations/miami-people.jpeg"
+      alt: "4Geeeks lab"
 
 ## HEADING SECTION
 

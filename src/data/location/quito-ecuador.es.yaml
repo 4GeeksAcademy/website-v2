@@ -7,7 +7,7 @@ meta_info:
   # it will not show up on the applications forms
   visibility: "visible"
   keywords: "Coding Bootcamp Campus Ecuador"
-  redirects: ["/coding-campus/bootcamp-programacion-ecuador"]
+  redirects: []
   region: "latam"
   dialCode: "593"
 
@@ -62,13 +62,17 @@ info_box:
 images_box:
   heading: "What you should know about this location: "
   content: "4Geeks Ecuador es un proyecto que funciona principalmente Online, luego de un proyecto increíble desarrollado por el Banco Interamericano de Desarrollo y el Ministerio de Ciencia, Información y Telecomunicaciones."
-  images: null
-    # - path: "../../../static/images/locations/mcbo-chinita.jpeg"
-    #   alt: "mcbo-chinita"
-    # - path: "../../../static/images/locations/mcbo-loc.jpg"
-    #   alt: "4Geeeks Ecuador Location"
-    # - path: "../../../static/images/locations/mcbo-loc-2.png"
-    #   alt: "4Geeeks Ecuador lab"
+  images:
+    - path: "../../../static/images/locations/ecuador-new.png"
+      alt: "Quito city"
+    - path: "../../../static/images/ownpeoplecoding2.jpg"
+      alt: "4Geeks Own People Coding"
+    - path: "../../../static/images/ownmancoding.jpg"
+      alt: "Remote-Coding-Bootcamp"
+    - path: "../../../static/images/locations/miami-old.jpg"
+      alt: "4Geeeks location"
+    - path: "../../../static/images/locations/miami-people.jpeg"
+      alt: "4Geeeks lab"
 
 ## START FROM HERE - DON'T CHANGE ANYTHING ABOVE
 ## HEADING SECTION

@@ -5,10 +5,7 @@ meta_info:
   description: "Get to know here all about our coding bootcamp campus in Toronto, Canada of 4Geeks Academy"
   image: "/images/og-preview/toronto-canada.us.png"
   keywords: "null"
-  redirects:
-    [
-      "/toronto",
-    ]
+  redirects: []
   region: "usa-canada"
   dialCode: "1"
 
@@ -62,21 +59,21 @@ info_box:
   contact_heading: "Contacts"
   phone: "(786) 416-6640"
   email: "info@4GeeksAcademy.com"
-  image: "../../../static/images/locations/miami-map.png"
+  image: ""
   alt: ""
 images_box:
   heading: "What you should know about this location: "
-  content: "Toronto is one of the fastest growing tech ecosystems in the world. Join the #1 part-time Coding Bootcamp in Toronto and become part of the best place to learn to code in Canada. \\n Career Support and Mentorship for our students is for life. The office is open office hours during the week and on Saturday we host our famous 'Coding Weekends' when students and other developers gather to code all day with mentors, pizzas and drinks on the house!"
+  content: "The city is a magnet for tech companies and cutting-edge startups, drawing talent and capital from across the globe. Coding occupies a pivotal role within Toronto's tech landscape, acting as the foundation for software development and digital advancement. The demand for coding expertise remains high, leading to the establishment of coding bootcamps, coding schools, and educational institutions throughout the city. Toronto's dedication to cultivating a highly skilled coding workforce has been instrumental in its ongoing success as a premier tech hub."
   images:
-    - path: "../../../static/images/locations/remote.jpeg"
-      alt: "Remote Coding Bootcamp"
-    - path: "../../../static/images/locations/madrid-3.png"
-      alt: "4Geeeks España lab"
-    - path: "../../../static/images/locations/madrid-2.png"
-      alt: "4Geeeks España lab"
+    - path: "../../../static/images/locations/toronto-new.png"
+      alt: "Atlanta city"
+    - path: "../../../static/images/ownpeoplecoding2.jpg"
+      alt: "4Geeks Own People Coding"
+    - path: "../../../static/images/ownmancoding.jpg"
+      alt: "Remote-Coding-Bootcamp"
+    - path: "../../../static/images/locations/miami-old.jpg"
+      alt: "4Geeeks miami location"
     - path: "../../../static/images/locations/miami-people.jpeg"
-      alt: "4Geeeks miami day"
-    - path: "../../../static/images/locations/miami-old2.jpg"
       alt: "4Geeeks miami lab"
 
 active_campaign_location_slug: "toronto-canada"

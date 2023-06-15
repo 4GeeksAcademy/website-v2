@@ -72,6 +72,12 @@ images_box:
       alt: "Caracas Graduates"
     - path: "../../../static/images/locations/caracas-loc-3.png"
       alt: "Caracas Office Jalisco"
+    - path: "../../../static/images/ownpeoplecoding2.jpg"
+      alt: "4Geeks Own People Coding"
+    - path: "../../../static/images/ownmancoding.jpg"
+      alt: "Remote-Coding-Bootcamp"
+    - path: "../../../static/images/locations/caracas-graduates.jpeg"
+      alt: "4Geeeks miami lab"
 
 ## START FROM HERE - DON'T CHANGE ANYTHING ABOVE
 ## HEADING SECTION

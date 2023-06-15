@@ -5,7 +5,7 @@ meta_info:
   description: "Know here all about our coding bootcamp campus in Valencia, Spain of 4Geeks Academy"
   image: "/images/og-preview/valencia-spain.us.png"
   keywords: "Coding Bootcamp, Valencia"
-  redirects: ["/location/valencia", "/us/location/valencia-spain"]
+  redirects: []
   region: "europe"
   dialCode: "34"
 
@@ -68,18 +68,21 @@ upcoming:
 
 images_box:
   heading: "What you should know about this location: "
-  content: "Valencia is the city that attracts the most capital for the technological and innovative ecosystem. Learn programming and be part of the best Coding Bootcamp in Spain. Just 2 min. away from the subway, the office is located in one of Valencia's most active areas. Open to students 12 hrs a day and with our famous 'Coding Weekends' on Saturdays where students come to receive senior coaching, hang out and eat pizza!"
+  content: >
+    Valencia has a strong talent pool, with renowned universities and technical institutes offering programs in technology, engineering, and business. The city attracts both local and international talent, creating a diverse workforce that fuels the tech sector. Valencia also offers coding bootcamps, workshops, and training programs to equip individuals with the skills necessary for the tech industry.
+
+    Valencia is home to a diverse range of startups that are making their mark in various industries. Startups in Valencia focus on areas such as sustainable technologies, smart cities, tourism, and food tech. Notable Valencia-based startups include TypingDNA (behavioral biometrics), EclecticIQ (cybersecurity), and Freshly Cosmetics (natural skincare).
   images:
-    - path: "../../../static/images/locations/remote.jpeg"
-      alt: "Remote Coding Bootcamp"
-    - path: "../../../static/images/locations/madrid-3.png"
-      alt: "4Geeeks España lab"
-    - path: "../../../static/images/locations/madrid-2.png"
-      alt: "4Geeeks España lab"
-    - path: "../../../static/images/locations/miami-people.jpeg"
-      alt: "4Geeeks miami day"
-    - path: "../../../static/images/locations/miami-old2.jpg"
-      alt: "4Geeeks miami lab"
+    - path: "../../../static/images/locations/valencia-new.png"
+      alt: "Valencia city"
+    - path: "../../../static/images/ownpeoplecoding2.jpg"
+      alt: "4Geeks Own People Coding"
+    - path: "../../../static/images/ownmancoding.jpg"
+      alt: "Remote-Coding-Bootcamp"
+    - path: "../../../static/images/locations/-old.jpg"
+      alt: "4Geeeks location"
+    - path: "../../../static/images/locations/-people.jpeg"
+      alt: "4Geeeks lab"
 
 active_campaign_location_slug: "valencia-spain"
 breathecode_location_slug: "valencia-spain"

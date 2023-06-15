@@ -5,8 +5,7 @@ meta_info:
   description: "Conoce aquí todo sobre nuestro campus de bootcamp de programación de 4Geek Academy en Barcelona, España"
   image: "/images/og-preview/barcelona-spain.es.png"
   keywords: "Coding bootcamp Barcelona"
-  redirects:
-    ["barcelona", "/es/location/barcelona-spain/", "/es/location/barcelona-espana"]
+  redirects: []
   region: "europe"
   dialCode: "34"
 
@@ -59,18 +58,18 @@ upcoming:
 
 images_box:
   heading: "Qué deberías saber sobre esta ubicación: "
-  content: "4Geeks Barcelona es un proyecto que funciona principalmente Online, luego de un proyecto increíble desarrollado por el Banco Interamericano de Desarrollo y el Ministerio de Ciencia, Información y Telecomunicaciones."
+  content: "4Geeks Barcelona es un proyecto que funciona principalmente Online, luego de un proyecto increíble desarrollado por el Banco Interamericano de Desarrollo y el Ministerio de Ciencia, Información y Telecomunicaciones. Barcelona tiene un ecosistema tecnológico dinámico y es un centro líder para las startups. La ciudad ha presenciado un rápido crecimiento de la necesidad de conocimientos en programación, a medida que la tecnología desempeña un papel cada vez más integral en diversas industrias. Los bootcamps de programación han surgido como una fuerza impulsora detrás de la promoción del talento en Barcelona, ofreciendo una educación en programación inmersiva y práctica a las personas ansiosas por aprender a programar y dejar su huella en el próspero panorama tecnológico de la ciudad."
   images:
-    - path: "../../../static/images/locations/remote.jpeg"
-      alt: "Remote Coding Bootcamp"
-    - path: "../../../static/images/locations/madrid-3.png"
-      alt: "4Geeeks España lab"
-    - path: "../../../static/images/locations/madrid-2.png"
-      alt: "4Geeeks España lab"
-    - path: "../../../static/images/locations/miami-people.jpeg"
-      alt: "4Geeeks miami day"
-    - path: "../../../static/images/locations/miami-old2.jpg"
-      alt: "4Geeeks miami lab"
+    - path: "../../../static/images/locations/barcelona-new.png"
+      alt: "Barcelona city"
+    - path: "../../../static/images/ownpeoplecoding2.jpg"
+      alt: "4Geeks Own People Coding"
+    - path: "../../../static/images/ownmancoding.jpg"
+      alt: "Remote-Coding-Bootcamp"
+    - path: "../../../static/images/locations/madrid-2.jpg"
+      alt: "4Geeeks Barcelona"
+    - path: "../../../static/images/locations/madrid-3.jpeg"
+      alt: "4Geeeks Barcelona lab"
 
 active_campaign_location_slug: "barcelona-spain"
 breathecode_location_slug: "barcelona-spain"

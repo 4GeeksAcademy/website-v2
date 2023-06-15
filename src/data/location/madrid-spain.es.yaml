@@ -6,7 +6,7 @@ meta_info:
   image: "/images/og-preview/madrid-spain.es.png"
   keywords: "Coding bootcamp Madrid"
   redirects:
-    ["madrid", "/es/location/madrid-spain/", "/es/location/madrid-espana"]
+    ["madrid"]
   region: "europe"
   dialCode: "34"
 

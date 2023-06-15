@@ -5,7 +5,7 @@ meta_info:
   position: 101
   image: "/images/og-preview/munchen-germany.es.png"
   keywords: "null"
-  redirects: ["/es/location/munchen-germany"]
+  redirects: []
   region: "europe"
   dialCode: "49"
 
@@ -63,18 +63,18 @@ info_box:
 
 images_box:
   heading: "Qué debes saber acerca de esta ubicación: "
-  content: "Cuando aprendes a programar online no solamente tienes acceso a nuestra plataforma, tambien tendrás disponible cualquiera de nuestras locaciones a nivel mundial."
+  content: "Munich tiene un ecosistema de startups diverso y dinámico. Las startups en Munich son conocidas por su innovación y enfoque en tecnologías de vanguardia. La ciudad ha visto el surgimiento de startups exitosas en áreas como soluciones de movilidad, fintech, saludtech, ciberseguridad y fabricación digital. Algunas startups destacadas con sede en Munich incluyen Lilium (aviación eléctrica), FlixBus (servicios de movilidad) y Celonis (software de minería de procesos). Munich cuenta con una fuerza laboral altamente capacitada, gracias a sus universidades e instituciones de investigación de renombre. La ciudad atrae a talentos de todo el mundo en campos como ingeniería, ciencias de la computación y negocios. Munich también ofrece bootcamps de codificación, talleres y programas de capacitación para fomentar habilidades de codificación y apoyar el desarrollo de talento tecnológico."
   images:
-    - path: "../../../static/images/locations/remote.jpeg"
-      alt: "Coding Bootcamp Remoto"
-    - path: "../../../static/images/locations/madrid-3.png"
-      alt: "4Geeeks España lab"
-    - path: "../../../static/images/locations/madrid-2.png"
-      alt: "4Geeeks España lab"
+    - path: "../../../static/images/locations/munich-new.png"
+      alt: "Munich city"
+    - path: "../../../static/images/ownpeoplecoding2.jpg"
+      alt: "4Geeks Own People Coding"
+    - path: "../../../static/images/ownmancoding.jpg"
+      alt: "Remote-Coding-Bootcamp"
+    - path: "../../../static/images/locations/miami-old.jpg"
+      alt: "4Geeeks location"
     - path: "../../../static/images/locations/miami-people.jpeg"
-      alt: "4Geeeks miami day"
-    - path: "../../../static/images/locations/miami-old2.jpg"
-      alt: "4Geeeks miami lab"
+      alt: "4Geeeks lab"
 
 ## HEADING SECTION
 

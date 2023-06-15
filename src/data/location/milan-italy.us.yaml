@@ -5,13 +5,7 @@ meta_info:
   description: "Discover all coding bootcamps taught by 4Geeks Academy at Milano, Italy. Sign up today!"
   image: "/images/og-preview/milan-italy.us.png"
   keywords: "null"
-  redirects:
-    [
-      "/location/milano-italy",
-      "/milan",
-      "/milano",
-      "/us/location/milano-italy",
-    ]
+  redirects: []
   region: "europe"
   dialCode: "39"
 
@@ -69,19 +63,18 @@ info_box:
   alt: ""
 images_box:
   heading: "What you should know about this location: "
-  content: >
-    Online real life classes - NOT "Go watch the video and figure it out for yourself": You have unlimited One-on-One mentoring, access to live chat support 12 hours a day, hundreds of interactive exercises and videos, real time streaming classes and our very own social network where our thousands of graduates are actively engaged around the world."
+  content: "Startups in Milan are known for their creativity, innovative ideas, and focus on leveraging technology to disrupt traditional industries. The city has seen the rise of successful startups in various sectors, including digital fashion, food tech, proptech, and smart cities. Notable Milan-based startups include YOOX NET-A-PORTER GROUP, Bending Spoons, and Moovenda. Milan has a rich pool of talent, with renowned universities and technical institutions offering programs in technology, engineering, and design. The city attracts both local and international talent, creating a diverse workforce that fuels the tech sector. Milan also offers coding bootcamps, workshops, and training programs to nurture coding skills and meet the demand for tech talent."
   images:
-    - path: "../../../static/images/locations/remote.jpeg"
-      alt: "Remote Coding Bootcamp"
-    - path: "../../../static/images/locations/madrid-3.png"
-      alt: "4Geeeks España lab"
-    - path: "../../../static/images/locations/madrid-2.png"
-      alt: "4Geeeks España lab"
+    - path: "../../../static/images/locations/milan-new.png"
+      alt: "Milan city"
+    - path: "../../../static/images/ownpeoplecoding2.jpg"
+      alt: "4Geeks Own People Coding"
+    - path: "../../../static/images/ownmancoding.jpg"
+      alt: "Remote-Coding-Bootcamp"
+    - path: "../../../static/images/locations/miami-old.jpg"
+      alt: "4Geeeks location"
     - path: "../../../static/images/locations/miami-people.jpeg"
-      alt: "4Geeeks miami day"
-    - path: "../../../static/images/locations/miami-old2.jpg"
-      alt: "4Geeeks miami lab"
+      alt: "4Geeeks lab"
 
 ## HEADING SECTION
 

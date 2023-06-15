@@ -5,7 +5,7 @@ meta_info:
   position: 101
   image: "/images/og-preview/berlin-germany.es.png"
   keywords: "null"
-  redirects: ["/es/location/berlin-alemania"]
+  redirects: []
   region: "europe"
   dialCode: "49"
 
@@ -63,18 +63,18 @@ info_box:
 
 images_box:
   heading: "Qué debes saber acerca de esta ubicación: "
-  content: "Cuando aprendes a programar online no solamente tienes acceso a nuestra plataforma, tambien tendrás disponible cualquiera de nuestras locaciones a nivel mundial."
+  content: "El ecosistema tecnológico de Berlín ha experimentado una rápida transformación, convirtiendo a la ciudad en un semillero de startups innovadoras. La comunidad de programadores en Berlín ha experimentado una notable expansión, influenciada en gran medida por la creciente demanda de bootcamps de programación. Estos bootcamps han desempeñado un papel crucial en el fomento de una diversa cantera de desarrolladores talentosos y en los logros de la ciudad en el ámbito tecnológico."
   images:
-    - path: "../../../static/images/locations/remote.jpeg"
-      alt: "Coding Bootcamp Remoto"
-    - path: "../../../static/images/locations/madrid-3.png"
-      alt: "4Geeeks España lab"
-    - path: "../../../static/images/locations/madrid-2.png"
-      alt: "4Geeeks España lab"
+    - path: "../../../static/images/locations/berlin-new.png"
+      alt: "Berlin city"
+    - path: "../../../static/images/ownpeoplecoding2.jpg"
+      alt: "4Geeks Own People Coding"
+    - path: "../../../static/images/ownmancoding.jpg"
+      alt: "Remote-Coding-Bootcamp"
+    - path: "../../../static/images/locations/miami-old.jpg"
+      alt: "4Geeeks location"
     - path: "../../../static/images/locations/miami-people.jpeg"
-      alt: "4Geeeks miami day"
-    - path: "../../../static/images/locations/miami-old2.jpg"
-      alt: "4Geeeks miami lab"
+      alt: "4Geeeks lab"
 
 ## HEADING SECTION
 

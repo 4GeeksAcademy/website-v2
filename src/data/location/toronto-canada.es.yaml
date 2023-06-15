@@ -5,9 +5,7 @@ meta_info:
   description: "Conoce aquí todo sobre nuestro campus de bootcamp de programación en Toronto, Canada de 4Geeks Academy"
   image: "/images/og-preview/toronto-canada.es.png"
   keywords: "null"
-  redirects: [
-  #  "/es/location/toronto-usa"
-  ]
+  redirects: []
   region: "usa-canada"
   dialCode: "1"
 
@@ -60,22 +58,22 @@ info_box:
   contact_heading: "Contacts"
   phone: "(786) 416-6640"
   email: "info@4GeeksAcademy.com"
-  image: "../../../static/images/locations/miami-map.png"
+  image: ""
   alt: ""
 images_box:
   heading: "Qué deberías saber acerca de esta ubicacion: "
   content: |
-    Toronto es una de las ciudades de mayor crecimiento tecnólogico, únete al Bootcamp de Programación part-time numero uno de la ciudad y la mayor comunidad de desarrolladores. \\n El Career Support y Student Support es de por vida.Estamos ubicados a corta distancia de la estación de metro y a tan solo 5 minutos de Brickell, una de las áreas más activas de la ciudad. Nuestra oficina está abierta 24/7 durante la semana y los sábados hacemos los famosos "Findes de Programación", donde los estudiantes y otros programadores se juntan a programar con pizzas y tragos! Además, contamos con parqueo gratuito para los estudiantes!
+    La ciudad es un imán para empresas tecnológicas y startups innovadoras que atraen talento y capital de todo el mundo. La codificación ocupa un papel fundamental en el panorama tecnológico de Toronto, sirviendo como base para el desarrollo de software y el avance digital. La demanda de experiencia en codificación sigue siendo alta, lo que ha llevado al establecimiento de bootcamps de codificación, escuelas de codificación e instituciones educativas en toda la ciudad. La dedicación de Toronto para cultivar una fuerza laboral altamente capacitada en codificación ha sido fundamental en su éxito continuo como un centro tecnológico de primer nivel.
   images:
-    - path: "../../../static/images/locations/remote.jpeg"
-      alt: "Remote Coding Bootcamp"
-    - path: "../../../static/images/locations/madrid-3.png"
-      alt: "4Geeeks España lab"
-    - path: "../../../static/images/locations/madrid-2.png"
-      alt: "4Geeeks España lab"
+    - path: "../../../static/images/locations/toronto-new.png"
+      alt: "Atlanta city"
+    - path: "../../../static/images/ownpeoplecoding2.jpg"
+      alt: "4Geeks Own People Coding"
+    - path: "../../../static/images/ownmancoding.jpg"
+      alt: "Remote-Coding-Bootcamp"
+    - path: "../../../static/images/locations/miami-old.jpg"
+      alt: "4Geeeks miami location"
     - path: "../../../static/images/locations/miami-people.jpeg"
-      alt: "4Geeeks miami day"
-    - path: "../../../static/images/locations/miami-old2.jpg"
       alt: "4Geeeks miami lab"
 
 active_campaign_location_slug: "toronto-canada"

@@ -7,7 +7,7 @@ meta_info:
   # it will not show up on the applications forms
   visibility: "visible"
   keywords: "Coding Bootcamp Campus Lima, Peru"
-  redirects: ["/coding-campus/bootcamp-programacion-lima-peru"]
+  redirects: []
   region: "latam"
   dialCode: "593"
 
@@ -61,14 +61,18 @@ info_box:
 
 images_box:
   heading: "What you should know about this location: "
-  content: "4Geeks Perú es un proyecto que funciona principalmente Online, luego de un proyecto increíble desarrollado por el Banco Interamericano de Desarrollo y el Ministerio de Ciencia, Información y Telecomunicaciones."
-  images: null
-    # - path: "../../../static/images/locations/mcbo-chinita.jpeg"
-    #   alt: "mcbo-chinita"
-    # - path: "../../../static/images/locations/mcbo-loc.jpg"
-    #   alt: "4Geeeks Ecuador Location"
-    # - path: "../../../static/images/locations/mcbo-loc-2.png"
-    #   alt: "4Geeeks Ecuador lab"
+  content: "El ecosistema de startups en Perú ha ganado impulso en los últimos años. El país ha visto un aumento en el número de startups innovadoras, muchas de las cuales han atraído inversiones y han ganado reconocimiento tanto a nivel local como internacional. Las startups en Perú se centran en abordar desafíos locales, como la inclusión financiera, la educación y la agricultura sostenible, al mismo tiempo que apuntan a escalar globalmente."
+  images: 
+    - path: "../../../static/images/locations/peru-new.png"
+      alt: "Peru city"
+    - path: "../../../static/images/ownpeoplecoding2.jpg"
+      alt: "4Geeks Own People Coding"
+    - path: "../../../static/images/ownmancoding.jpg"
+      alt: "Remote-Coding-Bootcamp"
+    - path: "../../../static/images/locations/miami-old.jpg"
+      alt: "4Geeeks location"
+    - path: "../../../static/images/locations/miami-people.jpeg"
+      alt: "4Geeeks lab"
 
 ## START FROM HERE - DON'T CHANGE ANYTHING ABOVE
 ## HEADING SECTION

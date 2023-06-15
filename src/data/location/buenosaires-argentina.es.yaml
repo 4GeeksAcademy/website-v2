@@ -7,11 +7,7 @@ meta_info:
   # it will not show up on the applications forms
   visibility: "visible"
   keywords: "Coding Bootcamp Campus Argentina"
-  redirects: [
-    # WARN: This specific slug, does not allow to change language
-    # "/es/coding-campus/bootcamp-programacion-argentina"
-    /es/coding-campus/bootcamp-programacion-argentina
-    ]
+  redirects: []
   region: "latam"
   dialCode: "54"
 
@@ -65,14 +61,18 @@ info_box:
 
 images_box:
   heading: "Lo que deberías saber sobre nuestra sede en Argentina: "
-  content: "4Geeks Argentina es un proyecto que funciona principalmente Online, luego de un proyecto increíble desarrollado por el Banco Interamericano de Desarrollo y el Ministerio de Ciencia, Información y Telecomunicaciones."
-  images: null
-    # - path: "../../../static/images/locations/mcbo-chinita.jpeg"
-    #   alt: "mcbo-chinita"
-    # - path: "../../../static/images/locations/mcbo-loc.jpg"
-    #   alt: "4Geeeks Argentina Location"
-    # - path: "../../../static/images/locations/mcbo-loc-2.png"
-    #   alt: "4Geeeks Argentina lab"
+  content: "Buenos Aires fomenta la innovación y el emprendimiento a través de varias iniciativas y eventos. La ciudad alberga conferencias tecnológicas, competiciones de startups y programas de emprendimiento que brindan oportunidades a las startups para dar a conocer sus ideas, conectarse con inversores y obtener exposición. Además, los programas gubernamentales y organizaciones apoyan el emprendimiento y ofrecen opciones de financiamiento para que las startups aceleren su crecimiento. Buenos Aires presume de un ecosistema de startups vibrante y diverso. Las startups en Buenos Aires han logrado un notable éxito en áreas como el comercio electrónico, la educación tecnológica, agritech y soluciones de movilidad." 
+  images: 
+    - path: "../../../static/images/locations/buenosaires-new.png"
+      alt: "BAires city"
+    - path: "../../../static/images/ownpeoplecoding2.jpg"
+      alt: "4Geeks Own People Coding"
+    - path: "../../../static/images/ownmancoding.jpg"
+      alt: "Remote-Coding-Bootcamp"
+    - path: "../../../static/images/locations/miami-old.jpg"
+      alt: "4Geeeks location"
+    - path: "../../../static/images/locations/miami-people.jpeg"
+      alt: "4Geeeks lab"
 
 ## START FROM HERE - DON'T CHANGE ANYTHING ABOVE
 ## HEADING SECTION
