@@ -24,6 +24,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import Icon from "../components/Icon";
 import { SessionContext } from "../session";
 import JobGuaranteeSmall from "../components/JobGuaranteeSmall";
+import RelatedPosts from "../components/RelatedPosts";
 import FaqCard from "../components/FaqCard";
 
 const MapFrame = lazy(() => import("../components/MapFrame"));
@@ -74,8 +75,6 @@ const Location = ({ data, pageContext, yml }) => {
     us: "CHOOSE PROGRAM",
     es: "SELECCIONAR PROGRAMA",
   };
-
-  const faqs = data.allFaqYaml.edges[0].node.faq;
 
   return (
     <>
@@ -382,19 +381,28 @@ const Location = ({ data, pageContext, yml }) => {
         padding_lg="0 26%"
       >
         <FaqCard
-          faqs={faqs}
+          faqs={data.allFaqYaml.edges[0].node.faq}
           topicSlug="enrollment"
           minPriority="1"
           // locationSlug={yml.breathecode_location_slug}
         />
       </GridContainer>
       <Divider height="50px" />
+      <RelatedPosts
+        lang={pageContext.lang}
+        posts={data.allMarkdownRemark.edges}
+        relatedClusters={yml.meta_info.related_clusters}
+      />
     </>
   );
 };
 
 export const query = graphql`
-  query LocationQuery($file_name: String!, $lang: String!) {
+  query LocationQuery(
+    $file_name: String!
+    $lang: String!
+    $related_clusters: [String]
+  ) {
     allLocationYaml(
       filter: { fields: { file_name: { eq: $file_name }, lang: { eq: $lang } } }
     ) {
@@ -481,6 +489,7 @@ export const query = graphql`
             description
             image
             keywords
+            related_clusters
           }
           images_box {
             heading
@@ -579,6 +588,33 @@ export const query = graphql`
             }
             content
             heading
+          }
+        }
+      }
+    }
+    allMarkdownRemark(
+      limit: 4
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: { frontmatter: { cluster: { in: $related_clusters } } }
+    ) {
+      totalCount
+      edges {
+        node {
+          fields {
+            slug
+            type
+            pagePath
+          }
+          frontmatter {
+            author
+            date
+            image
+            slug
+            title
+            excerpt
+            featured
+            status
+            cluster
           }
         }
       }

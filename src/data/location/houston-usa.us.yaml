@@ -1,0 +1,119 @@
+meta_info:
+  slug: "coding-bootcamp-houston"
+  title: "Houston Coding Bootcamp"
+  position: 1
+  description: "Get to know here all about our coding bootcamp campus in Houston, Texas of 4Geeks Academy"
+  image: "/images/og-preview/downtown-miami.us.png"
+  keywords: "null"
+  redirects: []
+  region: "usa-canada"
+  dialCode: "1"
+
+seo_title: "Coding Bootcamp in Houston"
+header:
+  tagline: "4Geeks Academy in Houston"
+  sub_header: "All programs are taught "
+  sub_header_highlighted: "Online"
+  paragraph: ""
+  image: "../../../static/images/locations/houston-home.png"
+  alt: "4Geeks Academy live coding bootcamp in Houston, Texas"
+
+badges:
+  title: ""
+  paragraph: "4Geeks Academy is the place where developers grow and thrive.
+ 
+We are licensed by the USA F. Dep. of Education.
+  
+Chosen as one of the top 35 coding bootcamps of the world and the top coding bootcamp in Houston according to SwitchUp.
+
+4Geeks Academy has been recognized as one of the top 10 coding bootcamps in the United States according to Newsweek.
+
+
+A community built for developers."
+news:
+  title: "4Geeks Academy Houston has been reviewed in:"
+upcoming:
+  no_dates_message: "There are currently no upcoming dates for this campus"
+  actionMessage: "Let me know when dates are available"
+button_header:
+  button_text: See Programs
+  button_link: "#programs"
+button:
+  syllabus_button_text: "DOWNLOAD SYLLABUS" # <-- this will show everywhere in the website
+  apply_button_text: "APPLY NOW" # <-- this will show everywhere in the website
+  syllabus_submit_text: "DOWNLOAD"
+  apply_button_link: "/apply"
+  cohort_more_details_text: "DETAILS"
+
+custom_bar:
+  active: false
+  message: 'Change your life with Code. <a class="customBar-link" href="/us/apply">Apply</a> Upcoming programs: June 6 Full-Stack | July 7 ML+AI!'
+  button: 
+    label: "Read More"
+    path: "#" #string (can be inline path using #, relative path or absolute path)
+
+info_box:
+  heading: ""
+  address: ""
+  iframeMapUrl: ""
+  open_on_maps: ""
+  contact_heading: "Contacts"
+  phone: "(786) 416-6640"
+  email: "info@4GeeksAcademy.com"
+  image: ""
+  alt: ""
+images_box:
+  heading: "What you should know about this location: "
+  content: "The city has witnessed substantial growth in the demand for coding proficiency, as technology becomes increasingly integrated into diverse sectors. Coding bootcamps have emerged as key contributors to this trend, offering accessible and comprehensive training programs that enable individuals to learn coding and actively participate in Houston's expanding tech community."
+  images:
+    - path: "../../../static/images/locations/houston-new.png"
+      alt: "Houston city"
+    - path: "../../../static/images/ownpeoplecoding2.jpg"
+      alt: "4Geeks Own People Coding"
+    - path: "../../../static/images/ownmancoding.jpg"
+      alt: "Remote-Coding-Bootcamp"
+    - path: "../../../static/images/locations/miami-old.jpg"
+      alt: "4Geeeks location"
+    - path: "../../../static/images/locations/miami-people.jpeg"
+      alt: "4Geeeks lab"
+
+
+active_campaign_location_slug: "houston-usa"
+breathecode_location_slug: "houston-usa"
+gdpr_compliant: false # do we need to ask for permision?
+in_person_available: true # important to accept in-person applicants
+online_available: false # important to accept online-only applicants
+
+city: "Houston"
+name: "Houston, USA"
+latitude: "25.760158"
+longitude: "-80.200154"
+phone: "+1 (786) 416-6640"
+address: "1801 SW 3rd Ave #100"
+zip_code: "33130"
+state: "Texas"
+country: "USA"
+country_shortname: "us"
+socials:
+  - name: "Facebook"
+    icon: "facebook"
+    link: "https://www.facebook.com/4geeksacademy"
+  - name: "Twitter"
+    icon: "twitter"
+    link: "https://www.twitter.com/4geeksacademy"
+  - name: "Instagram"
+    icon: "instagram"
+    link: "https://www.instagram.com/4geeksacademy"
+  - name: "Meetup"
+    icon: "meetup"
+    link: "https://www.meetup.com/4geeks-academy"
+courses:
+  - "Full-Time"
+  - "Part-Time"
+flag_icon: ""
+value: "Houston"
+defaultLanguage: "us" # All lead marketing communications will arrive on this language
+
+documents:
+  payment_guidebook:
+    url: "https://storage.googleapis.com/4geeks-academy-website/blog/2017/10/4GA-Payment-Guidebook-2.pdf"

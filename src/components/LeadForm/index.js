@@ -117,6 +117,7 @@ const clean = (fields, data) => {
     (key) =>
       // i also make sure I don't delete the hidden fields
       key !== "course" &&
+      key !== "utm_location" &&
       cleanedData[key].type !== "hidden" &&
       //clean all the rest of the fields that are no supposed to be sent
       //according to the landing YML data
@@ -223,7 +224,7 @@ const LeadForm = ({
   const [formStatus, setFormStatus] = useState({ status: "idle", msg: "" });
   const [formData, setVal] = useState(_fields);
   const [consentValue, setConsentValue] = useState(false);
-  const { session } = useContext(SessionContext);
+  const { session, setLocation } = useContext(SessionContext);
   const courseSelector = yml.form_fields.find((f) => f.name === "course");
   const locationSelector = yml.form_fields.find((f) => f.name === "location");
   const consentCheckboxField = yml.form_fields.find(

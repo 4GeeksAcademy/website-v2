@@ -38,7 +38,7 @@ const Landing = (props) => {
     (session &&
       session.locations
         ?.filter((loc) =>
-          yml.meta_info.utm_location.includes(loc.breathecode_location_slug)
+          yml.meta_info.utm_location?.includes(loc.breathecode_location_slug)
         )
         .map((loc) => ({
           label: loc.name,
@@ -55,8 +55,8 @@ const Landing = (props) => {
     setComponents({ ...yml, ..._components });
   }, [yml]);
   useEffect(() => {
-    if (yml.meta_info && yml.meta_info.utm_location)
-      setLocation(yml.meta_info.utm_location[0] || null);
+    // if (yml.meta_info && yml.meta_info.utm_location)
+    //   setLocation(yml.meta_info.utm_location[0] || null);
 
     const urlParams = new URLSearchParams(window.location.search);
     const _inLoc = urlParams.get("in") || null;
