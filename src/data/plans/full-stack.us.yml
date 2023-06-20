@@ -61,10 +61,10 @@ full_time:
     recomended: true
     scholarship: "Scholarships Available"
     payment_time: ""
-    price: "~175 € al mes"
+    price: "~€175/mo."
     bullets:
       - "Customized financing without interests. From 4 to 30 months."
-      - "Scholarships available up to 1.600 €. Pay 4.700 € instead of 6.300 €."     
+      - "Scholarships available up to €2,000. Pay €4,700 instead of €6,700. Scholarships subject to availability!"     
     icons: 
       - "/images/zank.png"
       - "/images/sequra.png"
@@ -75,10 +75,10 @@ full_time:
     recomended: false
     scholarship: "Pay Upfront"
     payment_time: "Get a better price"
-    price: "4.500 €*"
+    price: "€4,500*"
     bullets:
       - "Pay using your bank account, credit or debit card, Paypal, Bitcoin or Etherium."
-      - "*Discounts up to 1.800 €. Pay 4.500 € instead of 6.300 €."     
+      - "*Discounts up to €2,200. Pay €4,500 instead of €6,700. Discount subject to availability."     
     icons: 
       - "/images/visa-mastercard.png"    
       - "/images/bitcoin_logo.png"  
@@ -91,8 +91,8 @@ full_time:
     payment_time: "Pay only after you find a job"
     price: "0 €*"
     bullets: 
-      - "Only pay while your job salary is above 16.000 € / year."
-      - "*Pay using a small portion of your salary."
+      - "Only pay while your job salary is above €16,000 / year."
+      - "*Pay using a small portion of your salary. NO INTEREST!"
     icons: 
       - "/images/bcas.png"   
 
@@ -231,8 +231,8 @@ part_time:
     payment_time: "Pay only when you work"
     price: "€0*"
     bullets: 
-      - "You will only have to pay when your income is greater than €16000 per year"
-      - "*Pay a small part of your salary when you find a job"
+      - "You will only have to pay when your income is greater than €16,000 per year"
+      - "*Pay a small part of your salary when you find a job. NO INTEREST!"
     icons: 
       - "/images/bcas.png" 
 
@@ -255,7 +255,7 @@ part_time:
     price: "~€175 / mo."
     bullets:
       - "Tailor-made financing plans, with or without interest, from 4 to 30 installments"
-      - "Scholarships available up to €1600. From €4700 instead of €6300"     
+      - "Scholarships available up to €2,000. From €4,700 instead of €6,700. Scholarships subject to availability."     
     icons: 
       - "/images/zank.png"
       - "/images/sequra.png"
@@ -315,10 +315,10 @@ part_time:
     recomended: false
     scholarship: "Pay upfront"
     payment_time: "And get a discount"
-    price: "€4500*"
+    price: "€4,500*"
     bullets:
       - "Pay with wire transfer, credit or debit card, Paypal, Bitcoin or Ethereum"
-      - "*Discount up to €1800. From €4500 instead of €6300"     
+      - "*Discount up to €2,200. From €4,500 instead of €6,700. Scholarships subject to availability."     
     icons: 
       - "/images/visa-mastercard.png"    
       - "/images/bitcoin_logo.png"  
