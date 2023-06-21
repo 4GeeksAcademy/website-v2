@@ -182,46 +182,6 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
           display_tablet="inline"
         />
         <Circle
-          color="blue"
-          width="30px"
-          height="30px"
-          top="120px"
-          right="83px"
-          zIndex="1"
-          display="none"
-          display_tablet="inline"
-        />
-        <Circle
-          color="grey"
-          width="17px"
-          height="17px"
-          top="170px"
-          right="50px"
-          zIndex="1"
-          display="none"
-          display_tablet="inline"
-        />
-        <Circle
-          color="black"
-          width="17px"
-          height="17px"
-          top="170px"
-          right="89px"
-          zIndex="1"
-          display="none"
-          display_tablet="inline"
-        />
-        <Circle
-          color="grey"
-          width="17px"
-          height="17px"
-          top="170px"
-          right="128px"
-          zIndex="1"
-          display="none"
-          display_tablet="inline"
-        />
-        <Circle
           color="yellow"
           width="21px"
           height="21px"
@@ -232,11 +192,21 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
           display_tablet="inline"
         />
         <Circle
-          color="blue"
-          width="57px"
-          height="57px"
-          top="32px"
-          right="61px"
+          color="yellow"
+          opacity="0.2"
+          width="300px"
+          height="300px"
+          top="100px"
+          right="-40px"
+          display="none"
+          display_tablet="inline"
+        />
+        <Circle
+          color="yellow"
+          width="30px"
+          height="30px"
+          top="370px"
+          right="150px"
           display="none"
           display_tablet="inline"
         />
@@ -270,11 +240,29 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
           display="inline"
           display_tablet="none"
         />
+        <Circle
+          color="yellow"
+          opacity="0.2"
+          width="300px"
+          height="300px"
+          top="150px"
+          right="-220px"
+          display="inline"
+          display_tablet="none"
+        />
+        <Circle
+          color="yellow"
+          width="30px"
+          height="30px"
+          top="370px"
+          right="40px"
+          display="inline"
+          display_tablet="none"
+        />
         <Div display="block">
           <H2
             type="h2"
-            textAlign="left"
-            textAlign_tablet="center"
+            textAlign="center"
             fontSize="36px"
             fontSize_tablet="80px"
             lineHeight="38px"
@@ -292,7 +280,8 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
             width="auto"
             letterSpacing="0.05em"
             textAlign="center"
-            fontSize="24px"
+            fontSize_tablet="24px"
+            fontSize="18px"
             lineHeight="28px"
             maxWidth="760px"
           >
@@ -327,6 +316,7 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
               width="100%"
               width_tablet="fit-content"
               variant="outline"
+              background="#FFF"
               color={Colors.blue}
               margin="10px 0 0 0"
               margin_tablet="0"
@@ -602,10 +592,11 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
               return (
                 <Div
                   display="block"
-                  boxShadow_tablet="9px 8px 0px 0px rgba(0,0,0,1)"
+                  // boxShadow_tablet="9px 8px 0px 0px rgba(0,0,0,1)"
                 >
                   <Div
                     background={Colors.veryLightBlue}
+                    margin="0 5px"
                     border="2px solid black"
                     display="block"
                     display_md="flex"

@@ -349,7 +349,7 @@ export const Small = styled.small`
 const getVariant = (props) => ({
   outline: {
     border: `1px solid ${props.color}`,
-    background: "initial",
+    background: props.background || "initial",
     color: props.color,
     borderRadius: "3px",
   },
