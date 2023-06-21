@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { Link, graphql } from "gatsby";
-import { isCustomBarActive } from "../actions";
 import BaseRender from "./_baseLayout";
 import {
   Container,
@@ -24,7 +23,7 @@ import {
   Paragraph,
 } from "../components/Heading";
 import { Button, Colors } from "../components/Styling";
-import { requestSyllabus } from "../actions";
+import { requestSyllabus, isCustomBarActive } from "../actions";
 import { SessionContext } from "../session";
 import AboutTheProgram from "../components/AboutTheProgram";
 import ProgramDetails from "../components/ProgramDetails";

@@ -184,6 +184,48 @@ const StyledImage = styled.div`
 `;
 export const Img = React.memo(StyledImage);
 
+const StyledImageV2 = styled.div`
+  background-image: url(${(props) => props.src});
+  background-repeat: no-repeat;
+  background-size: ${(props) => props.backgroundSize || "cover"};
+  border-radius: ${(props) => props.borderRadius};
+  background-position: ${(props) => props.position || "center center"};
+  background-color: ${(props) => props.backgroundColor};
+  width: ${(props) => props.width};
+  height: ${(props) => props.height};
+  min-height: ${(props) => props.minHeight};
+  max-height: ${(props) => (props.maxHeight ? props.maxHeight : "none")};
+  min-width: ${(props) => props.minWidth};
+  margin: ${(props) => props.margin};
+  position: ${(props) => props.position};
+  top: ${(props) => props.top};
+  left: ${(props) => props.left};
+  rotate: ${(props) => props.rotate};
+  @media ${Break.xs} {
+    height: ${(props) => props.height_xs};
+    min-height: ${(props) => props.minHeight_xs};
+    width: ${(props) => props.with_xs};
+    top: ${(props) => props.top_xs};
+    left: ${(props) => props.left_xs};
+  }
+  @media ${Devices.tablet} {
+    height: ${(props) => props.height_tablet};
+    min-height: ${(props) => props.minHeight_tablet};
+    width: ${(props) => props.width_tablet};
+    top: ${(props) => props.top_tablet};
+    left: ${(props) => props.left_tablet};
+    rotate: ${(props) => props.rotate_tablet};
+  }
+  @media ${Devices.md} {
+    height: ${(props) => props.height_md};
+    min-height: ${(props) => props.minHeight_md};
+    width: ${(props) => props.width_md};
+    top: ${(props) => props.top_md};
+    left: ${(props) => props.left_md};
+  }
+`;
+export const ImgV2 = React.memo(StyledImageV2);
+
 export const BackgroundSection = ({
   id,
   children,
@@ -266,6 +308,7 @@ export const StyledBackgroundSection = styled(BackgroundSection)`
   }
   @media ${Devices.md} {
     width: ${(props) => props.width_md};
+    height: ${(props) => props.height_md};
   }
   @media ${Devices.lg} {
   }
@@ -306,7 +349,7 @@ export const Small = styled.small`
 const getVariant = (props) => ({
   outline: {
     border: `1px solid ${props.color}`,
-    background: "initial",
+    background: props.background || "initial",
     color: props.color,
     borderRadius: "3px",
   },

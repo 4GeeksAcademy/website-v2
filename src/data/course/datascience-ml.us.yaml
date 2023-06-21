@@ -1,7 +1,7 @@
 meta_info:
   slug: datascience-machine-learning
   title: "Become a AI Machine Learning Engineer at 4Geeks Academy"
-  description: "With no previous knowledge required, start a career with your first job as a datascientist and build your first ML models."
+  description: "With no previous knowledge required, start a career with your first job as a data scientist and build your first ML models."
   bc_slug: "datascience-ml"
   template: "course-datascience"
   image: "/images/og-preview/datascience-ml.es.png"
@@ -14,9 +14,9 @@ meta_info:
 apply_form:
   label: Datascience - Machine Learning
 
-seo_title: "datascience and machine learning bootcamp"
+seo_title: "data science and machine learning bootcamp"
 header:
-  title: "Datascience and Machine Learning Engineer"
+  title: "Data Science and Machine Learning"
   paragraph: "Become one of the highest paid professionals in the world in just a few months"
   image: "../../../static/images/bg/circles.jpg"
   image_alt: "circles"
@@ -70,8 +70,8 @@ details:
   about:
       title: "About this course"
       sub_title: |
-        Learn Python, SQL Looker (Google Data Studio), Streamlit and Statistics to become a data analist and take part in any data-oriented team at any company.
-        Create your own precticive models using Python, Pandas, Numpy, etc. Use algorithms like Close Neighbors, Decision Trees and others. Use supervised and un-supervised learning.
+        Learn Python, SQL Looker (Google Data Studio), Streamlit and Statistics to become a data analyst and take part in any data-oriented team at any company.
+        Create your own predictive models using Python, Pandas, Numpy, etc. Use algorithms like Close Neighbors, Decision Trees and others. Use supervised and un-supervised learning.
         Practice with real life cases, typical professional challenges you will do inside your future employer. Learn to use the most popular tools in the industry.
         Strategize and develop your A.I. following the lifecycle development from start to end, including deployment into production and maintenance with Privacy and Security.
       list:
@@ -130,8 +130,8 @@ details:
       duration: "2 wks"
       step: 2
     - module_name: "Fundamentals"
-      title: "Statistics and Lineal Álgebra with Python"
-      description: "Use python to write code that reviews and applies the most used Lineal Álgebra concepts, Matrix and Vectors, F(x), and the relation functions have between variables. We will also be coding the most used concepts in probabilities understanding core trends, standard deviation, mean median and mode. Finally, we will calculate the probability of an event happening: This is a very important skill used to build prediction models that we will be using further along."
+      title: "Statistics and Linear Algebra with Python"
+      description: "Use python to write code that reviews and applies the most used Linear Algebra concepts, Matrix and Vectors, F(x), and the relation functions have between variables. We will also be coding the most used concepts in probabilities understanding core trends, standard deviation, mean median and mode. Finally, we will calculate the probability of an event happening: This is a very important skill used to build prediction models that we will be using further along."
       projects: "We will provide you with a list of real life problems and solutions for the different concepts, you will use python to solve them."
       slug: "datascience-fundamentals"
       duration: "2 wks"

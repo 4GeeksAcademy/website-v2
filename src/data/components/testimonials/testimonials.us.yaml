@@ -41,6 +41,9 @@ testimonials:
 
   - student_name: "Naila Kaliyeva"
     slug: "nai-kali"
+    country:
+      iso: ve
+      name: Venezuela
     featured: false
     highlighted: false
     testimonial_date: ""
@@ -65,6 +68,9 @@ testimonials:
       so we can work any time that is convenient for us. Thank you, 4Geeks!!!
   - student_name: "Azul Botaya"
     slug: "azu-bota"
+    country:
+      iso: ve
+      name: Venezuela
     featured: false
     highlighted: true
     testimonial_date: ""
@@ -101,6 +107,9 @@ testimonials:
   #     the Income Sharing Agreement, I could enroll right away and pay once I found a job.
   - student_name: "Charles Fabricius"
     slug: "cha-fabr"
+    country:
+      iso: ve
+      name: Venezuela
     featured: true
     highlighted: true
     testimonial_date: ""
