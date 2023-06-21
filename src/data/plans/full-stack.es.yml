@@ -65,7 +65,7 @@ full_time:
     price: "~175 € al mes"
     bullets:
       - "Financiación a tu medida, con o sin intereses, desde 4 hasta 30 meses"
-      - "Becas disponibles de hasta 1.600 €. Desde 4.700 € en vez de 6.300 €"     
+      - "Becas disponibles de hasta 2.000 €. Desde 4.700 € en vez de 6.700 €. ¡Becas sujetas a disponibilidad!"     
     icons: 
       - "/images/zank.png"
       - "/images/sequra.png"
@@ -79,7 +79,7 @@ full_time:
     price: "4.500 €*"
     bullets:
       - "Paga con transferencia bancaria, tarjeta de crédito o débito, Paypal, Bitcoin o Ethereum"
-      - "*Descuento de hasta 1.800 €. Desde 4.500 € en vez de 6.300 €"     
+      - "*Descuento de hasta 2.200 €. Desde 4.500 € en vez de 6.700 €. ¡Descuento sujeto a disponibilidad!"     
     icons: 
       - "/images/visa-mastercard.png"    
       - "/images/bitcoin_logo.png"  
@@ -93,7 +93,7 @@ full_time:
     price: "0 €*"
     bullets: 
       - "Solo tendrás que pagar cuando tus ingresos sean superiores a 16.000 € al año"
-      - "*Paga una pequeña parte de tu salario cuando encuentres trabajo"
+      - "*Paga una pequeña parte de tu salario cuando encuentres trabajo. ¡SIN INTERESES!"
     icons: 
       - "/images/bcas.png"   
 
@@ -257,7 +257,7 @@ part_time:
     price: "~175 € al mes"
     bullets:
       - "Financiación a tu medida, con o sin intereses, desde 4 hasta 30 meses"
-      - "Becas disponibles de hasta 1.600 €. Desde 4.700 € en vez de 6.300 €"     
+      - "Becas disponibles de hasta 2.000 €. Desde 4.700 € en vez de 6.700 €. ¡Becas sujetas a disponibilidad!"     
     icons: 
       - "/images/zank.png"
       - "/images/sequra.png"
@@ -272,7 +272,7 @@ part_time:
     price: "4.500 €*"
     bullets:
       - "Paga con transferencia bancaria, tarjeta de crédito o débito, Paypal, Bitcoin o Ethereum"
-      - "*Descuento de hasta 1.800 €. Desde 4.500 € en vez de 6.300 €"     
+      - "*Descuento de hasta 2.200 €. Desde 4.500 € en vez de 6.700 €. ¡Descuento sujeto a disponibilidad!"     
     icons: 
       - "/images/visa-mastercard.png"    
       - "/images/bitcoin_logo.png"  
@@ -286,7 +286,7 @@ part_time:
     price: "0 €*"
     bullets: 
       - "Solo tendrás que pagar cuando tus ingresos sean superiores a 16.000 € al año"
-      - "*Paga una pequeña parte de tu salario cuando encuentres trabajo"
+      - "*Paga una pequeña parte de tu salario cuando encuentres trabajo. ¡SIN INTERESES!"
     icons: 
       - "/images/bcas.png" 
 

@@ -91,7 +91,7 @@ part_time:
     price: "~€200 / mo."
     bullets:
       - "Tailor-made financing plans, with or without interest, from 4 to 30 installments"
-      - "Scholarships available up to €2500. From €5300 instead of €7800"     
+      - "Scholarships available up to €2500. From €5300 instead of €7800. Scholarships subject to availability!"     
     icons: 
       - "/images/zank.png"
       - "/images/sequra.png"
@@ -106,7 +106,7 @@ part_time:
     price: "€4950*"
     bullets:
       - "Pay with wire transfer, credit or debit card, Paypal, Bitcoin or Ethereum"
-      - "*Discount up to €2850. From €4950 instead of €7800"     
+      - "*Discount up to €2850. From €4950 instead of €7800. Scholarships subject to availability."     
     icons: 
       - "/images/visa-mastercard.png"    
       - "/images/bitcoin_logo.png"  
@@ -120,7 +120,7 @@ part_time:
     price: "€0*"
     bullets: 
       - "You will only have to pay when your income is greater than €16000 per year"
-      - "*Pay a small part of your salary when you find a job"
+      - "*Pay a small part of your salary when you find a job. NO INTEREST!"
     icons: 
       - "/images/bcas.png" 
 

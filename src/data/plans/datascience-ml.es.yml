@@ -91,7 +91,7 @@ part_time:
     price: "~200 € al mes"
     bullets:
       - "Financiación a tu medida, con o sin intereses, desde 4 hasta 30 meses"
-      - "Becas disponibles de hasta 2.500 €. Desde 5.300 € en vez de 7.800 €"     
+      - "Becas disponibles de hasta 2.500 €. Desde 5.300 € en vez de 7.800 €. ¡Becas sujetas a disponibilidad!"     
     icons: 
       - "/images/zank.png"
       - "/images/sequra.png"
@@ -106,7 +106,7 @@ part_time:
     price: "4.950 €*"
     bullets:
       - "Paga con trasnferencia bancaria, tarjeta de crédito o débito, Paypal, Bitcoin o Ethereum"
-      - "*Descuento de hasta 2.850 €. Desde 4.950 € en vez de 7.800 €"     
+      - "*Descuento de hasta 2.850 €. Desde 4.950 € en vez de 7.800 €. ¡Descuento sujeto a disponibilidad!"     
     icons: 
       - "/images/visa-mastercard.png"    
       - "/images/bitcoin_logo.png"  
@@ -120,7 +120,7 @@ part_time:
     price: "0 €*"
     bullets: 
       - "Solo tendrás que pagar cuando tus ingresos sean superiores a 16.000 € al año"
-      - "*Paga una pequeña parte de tu salario cuando encuentres trabajo"
+      - "*Paga una pequeña parte de tu salario cuando encuentres trabajo. ¡SIN INTERESES!"
     icons: 
       - "/images/bcas.png" 
   - slug: 'north-europe-scholarships-ds-pt'
