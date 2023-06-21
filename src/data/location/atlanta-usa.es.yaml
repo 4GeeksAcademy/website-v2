@@ -66,7 +66,7 @@ images_box:
   content: |
     El ecosistema tecnológico de Atlanta florece con más de 850 empresas tecnológicas y más de 70,000 trabajadores de tecnología. Grandes empresas tecnológicas como Google y Facebook han establecido locales atraídos por la diversa fuerza laboral de la ciudad. Mientras Atlanta compite por convertirse en un centro tecnológico, los bootcamps de programación buscan reducir la brecha de habilidades capacitando talento tecnológico para satisfacer la creciente demanda de conocimientos en programación de las empresas tecnológicas en expansión.
   images:
-    - path: "../../../static/images/locations/atlanta-new.png"
+    - path: "../../../static/images/locations/atlanta-new.jpg"
       alt: "Atlanta city"
     - path: "../../../static/images/ownpeoplecoding2.jpg"
       alt: "4Geeks Own People Coding"

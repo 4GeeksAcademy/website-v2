@@ -66,7 +66,7 @@ images_box:
   heading: "What you should know about this location: "
   content: "Atlanta's tech ecosystem is flourishing with over 850 tech companies and 70,000+ tech workers. Major tech firms like Google and Facebook have set up local outposts drawn by the city's diverse talent pool. As Atlanta vies to become a tech hub, coding bootcamps aim to close the skills gap by supplying tech talent to meet the surging demand for coding expertise from expanding tech companies."
   images:
-    - path: "../../../static/images/locations/atlanta-new.png"
+    - path: "../../../static/images/locations/atlanta-new.jpg"
       alt: "Atlanta city"
     - path: "../../../static/images/ownpeoplecoding2.jpg"
       alt: "4Geeks Own People Coding"
