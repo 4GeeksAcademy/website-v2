@@ -518,7 +518,7 @@ export const query = graphql`
     }
     allMarkdownRemark(
       limit: 4
-      sort: { fields: [frontmatter___date], order: DESC }
+      sort:  {frontmatter: {date: DESC}}
       filter: { frontmatter: { cluster: { in: $related_clusters } } }
     ) {
       totalCount
@@ -562,10 +562,6 @@ export const query = graphql`
                   quality: 100
                   breakpoints: [200, 340, 520, 890]
                 )
-
-                # fluid(maxWidth: 500, quality: 100, srcSetBreakpoints: [ 200, 340, 520, 890 ]){
-                #   ...GatsbyImageSharpFluid_withWebp
-                # }
               }
             }
           }

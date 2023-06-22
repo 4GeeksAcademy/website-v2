@@ -58,9 +58,6 @@ export const query = graphql`
                   width: 1200
                   placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                 )
-                # fluid(maxWidth: 1200){
-                #   ...GatsbyImageSharpFluid_withWebp
-                # }
               }
             }
           }

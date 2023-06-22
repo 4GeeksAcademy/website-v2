@@ -595,7 +595,7 @@ export const query = graphql`
     }
     allMarkdownRemark(
       limit: 4
-      sort: { fields: [frontmatter___date], order: DESC }
+      sort:  {frontmatter: {date: DESC}}
       filter: { frontmatter: { cluster: { in: $related_clusters } } }
     ) {
       totalCount

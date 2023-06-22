@@ -64,13 +64,13 @@ module.exports = {
             resolve: "gatsby-remark-component",
             options: { components: ["button", "call-to-action"] },
           },
-          {
-            resolve: "gatsby-remark-external-links",
-            options: {
-              target: "_self",
-              rel: "nofollow",
-            },
-          },
+          // {
+          //   resolve: "gatsby-remark-external-links",
+          //   options: {
+          //     target: "_self",
+          //     rel: "nofollow",
+          //   },
+          // },
           {
             resolve: `gatsby-remark-autolink-headers`,
             options: {

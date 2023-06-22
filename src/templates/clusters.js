@@ -308,7 +308,7 @@ export const pageQuery = graphql`
     }
     allMarkdownRemark(
       limit: 2000
-      sort: { fields: [frontmatter___date], order: DESC }
+      sort:  {frontmatter: {date: DESC}}
       filter: { frontmatter: { cluster: { in: [$cluster] } } }
     ) {
       totalCount

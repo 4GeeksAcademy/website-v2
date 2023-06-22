@@ -318,7 +318,7 @@ export const postQuery = graphql`
       }
     }
     allMarkdownRemark(
-      sort: { fields: frontmatter___date, order: DESC }
+      sort:  {frontmatter: {date: DESC}}
       filter: {
         frontmatter: { status: { eq: "published" } }
         fields: { lang: { eq: $lang } }

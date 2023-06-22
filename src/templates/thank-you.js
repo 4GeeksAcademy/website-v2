@@ -335,9 +335,6 @@ export const query = graphql`
                   quality: 100
                   placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                 )
-                # fluid(maxWidth: 1800, quality: 100){
-                #   ...GatsbyImageSharpFluid_withWebp
-                # }
               }
             }
           }
@@ -357,7 +354,7 @@ export const query = graphql`
     }
     featured: allMarkdownRemark(
       limit: 3
-      sort: { fields: frontmatter___date, order: DESC }
+      sort:  {frontmatter: {date: DESC}}
       filter: {
         frontmatter: { status: { eq: "published" } }
         fields: { lang: { eq: $lang } }
@@ -381,7 +378,7 @@ export const query = graphql`
     }
     posts: allMarkdownRemark(
       limit: 3
-      sort: { fields: frontmatter___date, order: DESC }
+      sort:  {frontmatter: {date: DESC}}
       filter: {
         frontmatter: { status: { eq: "published" } }
         fields: { lang: { eq: $lang } }

@@ -49,7 +49,7 @@ const NotFoundPage = () => (
     query={graphql`
       query DownloadableQuery {
         allDownloadableYaml(
-          sort: { fields: meta_info___current_download, order: ASC }
+          sort: {meta_info: {current_download: ASC}}
         ) {
           edges {
             node {

@@ -171,7 +171,7 @@ const createBlog = async ({ actions, graphql }) => {
   const clusterTemplate = path.resolve("src/templates/clusters.js");
   const result = await graphql(`
     {
-      allMarkdownRemark(sort: { fields: frontmatter___date, order: DESC }) {
+      allMarkdownRemark(sort:  {frontmatter: {date: DESC}}) {
         edges {
           node {
             html
