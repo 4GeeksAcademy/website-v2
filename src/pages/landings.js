@@ -54,7 +54,7 @@ const NotFoundPage = () => (
   <StaticQuery
     query={graphql`
       query LandingQuery {
-        allLandingYaml(sort: {meta_info: {utm_location: ASC}}) {
+        allLandingYaml(sort: { meta_info: { utm_location: ASC } }) {
           edges {
             node {
               meta_info {

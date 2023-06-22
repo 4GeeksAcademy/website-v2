@@ -48,9 +48,7 @@ const NotFoundPage = () => (
   <StaticQuery
     query={graphql`
       query DownloadableQuery {
-        allDownloadableYaml(
-          sort: {meta_info: {current_download: ASC}}
-        ) {
+        allDownloadableYaml(sort: { meta_info: { current_download: ASC } }) {
           edges {
             node {
               meta_info {

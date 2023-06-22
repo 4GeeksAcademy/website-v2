@@ -354,7 +354,7 @@ export const query = graphql`
     }
     featured: allMarkdownRemark(
       limit: 3
-      sort:  {frontmatter: {date: DESC}}
+      sort: { frontmatter: { date: DESC } }
       filter: {
         frontmatter: { status: { eq: "published" } }
         fields: { lang: { eq: $lang } }
@@ -378,7 +378,7 @@ export const query = graphql`
     }
     posts: allMarkdownRemark(
       limit: 3
-      sort:  {frontmatter: {date: DESC}}
+      sort: { frontmatter: { date: DESC } }
       filter: {
         frontmatter: { status: { eq: "published" } }
         fields: { lang: { eq: $lang } }

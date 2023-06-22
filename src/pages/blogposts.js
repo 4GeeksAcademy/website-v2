@@ -52,7 +52,7 @@ const BlogPosts = () => (
   <StaticQuery
     query={graphql`
       query BlogpostsQuery {
-        allMarkdownRemark(sort:  {frontmatter: {date: DESC}}) {
+        allMarkdownRemark(sort: { frontmatter: { date: DESC } }) {
           edges {
             node {
               html
