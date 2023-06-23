@@ -68,7 +68,7 @@ images_box:
   heading: "What you should know about this location: "
   content: "Uruguay tiene un próspero escenario tecnológico con startups innovadoras que perturban industrias tradicionales. Montevideo es un centro prominente de innovación tecnológica. El sector tecnológico abarca fintech, comercio electrónico, saludtech, edtech y agrotech. Algunas startups notables incluyen PedidosYa y dLocal. El país cuenta con un talento habilidoso y diverso con universidades que ofrecen programas tecnológicos y atrae talento local e internacional. Uruguay ofrece iniciativas de financiamiento, incubadoras de negocios, aceleradoras y eventos de networking para apoyar el crecimiento de startups. También hay bootcamps de programación y talleres disponibles para fomentar habilidades de programación y satisfacer la demanda de talento tecnológico."
   images:
-    - path: "../../../static/images/locations/uruguay-new.png"
+    - path: "../../../static/images/locations/uruguay-new.jpg"
       alt: "Uruguay city"
     - path: "../../../static/images/ownpeoplecoding2.jpg"
       alt: "4Geeks Own People Coding"

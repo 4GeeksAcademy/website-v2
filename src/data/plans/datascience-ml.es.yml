@@ -47,7 +47,7 @@ full_time:
 
 part_time:
   - slug: 'plan-1'
-    academies: ['orlando', 'downtown-miami', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'nyc-usa']
+    academies: ['orlando', 'downtown-miami', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa']
     recomended: true
     scholarship: "Beca"
     payment_time: "Paga hoy o en 3 partes"
@@ -59,7 +59,7 @@ part_time:
       - "/images/clarkuniversity.png"
 
   - slug: 'plan-2'
-    academies: ['orlando', 'downtown-miami', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'nyc-usa']
+    academies: ['orlando', 'downtown-miami', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa']
     recomended: false
     scholarship: "Financiado"
     payment_time: "Paga en 3, 4 o 5 años"
@@ -74,7 +74,7 @@ part_time:
 
   - slug: 'plan-4'
     recomended: false
-    academies: ['orlando', 'downtown-miami', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'nyc-usa']
+    academies: ['orlando', 'downtown-miami', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa']
     scholarship: "Pago Completo"
     payment_time: "Paga hoy"
     price: "$9999"

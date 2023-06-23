@@ -81,9 +81,9 @@ images_box:
       alt: "4Geeks Own People Coding"
     - path: "../../../static/images/ownmancoding.jpg"
       alt: "Remote-Coding-Bootcamp"
-    - path: "../../../static/images/locations/-old.jpg"
+    - path: "../../../static/images/locations/miami-old.jpg"
       alt: "4Geeeks location"
-    - path: "../../../static/images/locations/-people.jpeg"
+    - path: "../../../static/images/locations/miami-people.jpeg"
       alt: "4Geeeks lab"
 
 active_campaign_location_slug: "valencia-spain"

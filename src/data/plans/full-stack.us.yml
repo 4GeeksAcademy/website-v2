@@ -173,7 +173,7 @@ full_time:
 part_time:
 
   - slug: 'usa-financed-pt'
-    academies: ['toronto-canada', downtown-miami', 'orlando', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'nyc-usa']
+    academies: ['toronto-canada', downtown-miami', 'orlando', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa']
     recomended: false
     scholarship: "Financed"
     payment_time: "You can pay in 3, 4 or 5 years"
@@ -238,7 +238,7 @@ part_time:
 
   - slug: 'usa-upfront-pt'
     recomended: false
-    academies: ['downtown-miami', 'orlando', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'nyc-usa', 'toronto-canada']
+    academies: ['downtown-miami', 'orlando', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'toronto-canada']
     scholarship: "Full Payment"
     payment_time: "Pay today"
     price: "$8999"
@@ -275,7 +275,7 @@ part_time:
       - "/images/stepex.png"
       
   - slug: 'usa-clark-scholarship-pt'
-    academies: ['orlando', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'nyc-usa']
+    academies: ['orlando', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa']
     recomended: true
     scholarship: "Scholarship"
     payment_time: "Pay today or in 3 parts"
@@ -299,7 +299,7 @@ part_time:
       - "/static/images/clarkuniversity.png"
 
   - slug: 'usa-isa-pt'
-    academies: ['orlando', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'nyc-usa','toronto-canada']
+    academies: ['orlando', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa','toronto-canada']
     recomended: false
     scholarship: "Income Share Agreement"
     payment_time: "Start making payments only when you get a job"

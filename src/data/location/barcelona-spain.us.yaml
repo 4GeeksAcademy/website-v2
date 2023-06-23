@@ -78,9 +78,9 @@ images_box:
       alt: "4Geeks Own People Coding"
     - path: "../../../static/images/ownmancoding.jpg"
       alt: "Remote-Coding-Bootcamp"
-    - path: "../../../static/images/locations/madrid-2.jpg"
+    - path: "../../../static/images/locations/madrid-2.png"
       alt: "4Geeeks location"
-    - path: "../../../static/images/locations/madrid-3.jpeg"
+    - path: "../../../static/images/locations/madrid-3.png"
       alt: "4Geeeks lab"
 
 active_campaign_location_slug: "barcelona-spain"

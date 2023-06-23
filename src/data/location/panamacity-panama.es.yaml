@@ -68,7 +68,7 @@ images_box:
   heading: "What you should know about this location: "
   content: "La creciente escena tecnológica de Panamá ha visto un aumento de startups innovadoras que perturban industrias tradicionales. La Ciudad de Panamá es un centro de innovación tecnológica y emprendimiento, abarcando fintech, comercio electrónico, saludtech, edtech y logística. Algunas startups notables incluyen HUBBO y Tarty. Panamá cuenta con un talento diverso, apoyado por universidades que ofrecen programas tecnológicos, atrayendo talento local e internacional. Los recursos incluyen iniciativas de financiamiento, incubadoras, aceleradoras y eventos de networking. Los bootcamps de codificación y programas de entrenamiento fomentan habilidades de programación y satisfacen la demanda de talento tecnológico."
   images:
-    - path: "../../../static/images/locations/panama-new.png"
+    - path: "../../../static/images/locations/panama-new.jpg"
       alt: "Panama city"
     - path: "../../../static/images/ownpeoplecoding2.jpg"
       alt: "4Geeks Own People Coding"

@@ -70,7 +70,7 @@ images_box:
   heading: "What you should know about this location: "
   content: "Uruguay has a thriving tech scene with innovative startups disrupting traditional industries. Montevideo is a prominent hub for tech innovation. The tech sector spans fintech, e-commerce, healthtech, edtech, and agrotech. Notable startups include PedidosYa and dLocal. The country has a skilled talent pool with universities offering tech programs and attracts local and international talent. Uruguay offers funding initiatives, business incubators, accelerators, and networking events to support startup growth. Coding bootcamps and programming workshops are available to nurture programming skills and meet the demand for tech talent."
   images:
-    - path: "../../../static/images/locations/uruguay-new.png"
+    - path: "../../../static/images/locations/uruguay-new.jpg"
       alt: "Uruguay city"
     - path: "../../../static/images/ownpeoplecoding2.jpg"
       alt: "4Geeks Own People Coding"
