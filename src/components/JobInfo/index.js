@@ -1,11 +1,7 @@
 import React from "react";
 import { useStaticQuery, graphql, Link } from "gatsby";
 import { Div, GridContainer } from "../Sections";
-import {
-  H3,
-  Span,
-  Paragraph,
-} from "../Heading";
+import { H3, Span, Paragraph } from "../Heading";
 import { Colors } from "../Styling";
 // import Link from "gatsby-link";
 import Icon from "../Icon";

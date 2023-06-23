@@ -1,6 +1,11 @@
 import React, { useRef, useState, useEffect } from "react";
 import cx from "classnames";
-import { marquee, reversed, marquee__measure, marquee__overflow } from "../../assets/css/marquee-v2.module.css";
+import {
+  marquee,
+  reversed,
+  marquee__measure,
+  marquee__overflow,
+} from "../../assets/css/marquee-v2.module.css";
 import DragScrollProvider from "../DragScrollProvider";
 import styled, { keyframes } from "styled-components";
 
@@ -71,9 +76,7 @@ export default function Marquee_v2({
       <div ref={ref} className={marquee__measure} aria-hidden>
         {children}
       </div>
-      <DragScrollProvider
-        className={`${marquee__overflow} testimonial-slider`}
-      >
+      <DragScrollProvider className={`${marquee__overflow} testimonial-slider`}>
         <Marquee_elements
           reversed={props.reversed}
           animated={count !== null}

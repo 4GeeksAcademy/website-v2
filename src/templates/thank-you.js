@@ -1,11 +1,7 @@
 import React, { useState, useContext } from "react";
 import { graphql, Link } from "gatsby";
 import BaseRender from "./_baseLayout";
-import {
-  Div,
-  GridContainer,
-  HR,
-} from "../components/Sections";
+import { Div, GridContainer, HR } from "../components/Sections";
 import { H1, H2, H3, H4, Paragraph } from "../components/Heading";
 import { Button, Colors, Anchor, RoundImage } from "../components/Styling";
 import Icon from "../components/Icon";

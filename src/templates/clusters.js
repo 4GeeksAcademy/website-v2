@@ -1,13 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { graphql, Link } from "gatsby";
-import {
-  H1,
-  H2,
-  H3,
-  H4,
-  Paragraph,
-} from "../components/Heading";
+import { H1, H2, H3, H4, Paragraph } from "../components/Heading";
 import {
   Container,
   Row,

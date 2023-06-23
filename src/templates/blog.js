@@ -1,12 +1,7 @@
 import React from "react";
 // import Link from "gatsby-link";
 import { graphql, Link } from "gatsby";
-import {
-  H1,
-  H2,
-  H4,
-  Paragraph,
-} from "../components/Heading";
+import { H1, H2, H4, Paragraph } from "../components/Heading";
 import {
   Button,
   RoundImage,
