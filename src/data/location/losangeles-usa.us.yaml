@@ -60,8 +60,6 @@ info_box:
   contact_heading: "Contacts"
   phone: "(786) 416-6640"
   email: "info@4GeeksAcademy.com"
-  image: ""
-  alt: ""
 images_box:
   heading: "What you should know about this location: "
   content: "LA boasts a flourishing tech ecosystem and a dynamic startup community. The city has witnessed remarkable expansion in its tech industry, where coding and programming have become pivotal. Coding bootcamps, gaining traction among individuals from diverse backgrounds, have become increasingly popular in the region."

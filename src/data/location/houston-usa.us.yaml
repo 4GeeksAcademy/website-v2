@@ -60,8 +60,6 @@ info_box:
   contact_heading: "Contacts"
   phone: "(786) 416-6640"
   email: "info@4GeeksAcademy.com"
-  image: ""
-  alt: ""
 images_box:
   heading: "What you should know about this location: "
   content: "The city has witnessed substantial growth in the demand for coding proficiency, as technology becomes increasingly integrated into diverse sectors. Coding bootcamps have emerged as key contributors to this trend, offering accessible and comprehensive training programs that enable individuals to learn coding and actively participate in Houston's expanding tech community."
