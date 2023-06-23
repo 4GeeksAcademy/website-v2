@@ -10,7 +10,7 @@ import {
   locByLanguage,
 } from "./actions";
 
-import ActionsWorker from "./actions.worker.js";
+import initSession from "./actions.worker.js";
 export const SessionContext = createContext(defaultSession);
 
 export default ({ children }) => {
@@ -77,8 +77,8 @@ export default ({ children }) => {
       }
       return undefined;
     };
-    ActionsWorker()
-      .initSession(data.allLocationYaml, getStorage("academy_session"), {
+    try {
+      const _session = initSession(data.allLocationYaml, getStorage("academy_session"), {
         navigator: JSON.stringify(window.navigator),
         location:
           urlParams.get("location") ||
@@ -98,13 +98,14 @@ export default ({ children }) => {
         language:
           urlParams.get("lang") || urlParams.get("language") || undefined,
       })
-      .then((_session) => {
-        setStorage(_session);
-        setSession(_session);
-        setTagManaerVisitorInfo(_session);
-        dayjs.locale(_session.language == "us" ? "en" : _session.language);
-      })
-      .catch((error) => console.error("Error initilizing session", error));
+      setStorage(_session);
+      setSession(_session);
+      setTagManaerVisitorInfo(_session);
+      dayjs.locale(_session.language == "us" ? "en" : _session.language);
+    } catch (error) {
+      console.error("Error initilizing session", error)
+    }
+    
   }, []);
 
   return (
