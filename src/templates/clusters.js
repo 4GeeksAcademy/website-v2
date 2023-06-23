@@ -1,16 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
 import {
   H1,
   H2,
   H3,
   H4,
-  H5,
-  Title,
-  Separator,
   Paragraph,
-  Span,
 } from "../components/Heading";
 import {
   Container,
@@ -28,7 +24,7 @@ import {
 } from "../components/Styling";
 import LazyLoad from "react-lazyload";
 import BaseBlogRender from "./_baseBlogLayout";
-import Link from "gatsby-link";
+// import Link from "gatsby-link";
 
 const Tags = ({ pageContext, data, yml }) => {
   const cluster = data.allClusterYaml.edges.find(

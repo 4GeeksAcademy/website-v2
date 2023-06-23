@@ -1,22 +1,14 @@
-import React, { useState, useEffect } from "react";
-import { useStaticQuery, graphql } from "gatsby";
-import { Div, GridContainer, Column, Divider } from "../Sections";
+import React from "react";
+import { useStaticQuery, graphql, Link } from "gatsby";
+import { Div, GridContainer } from "../Sections";
 import {
-  H1,
-  H2,
   H3,
-  H4,
-  H5,
-  Title,
-  Separator,
   Span,
   Paragraph,
 } from "../Heading";
 import { Colors } from "../Styling";
-import Card from "../Card";
-import Link from "gatsby-link";
+// import Link from "gatsby-link";
 import Icon from "../Icon";
-import Fragment from "../Fragment";
 
 const JobInfo = ({ lang }) => {
   const data = useStaticQuery(graphql`

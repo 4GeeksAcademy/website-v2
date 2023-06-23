@@ -1,15 +1,11 @@
 import React from "react";
-import Link from "gatsby-link";
-import { graphql } from "gatsby";
+// import Link from "gatsby-link";
+import { graphql, Link } from "gatsby";
 import {
   H1,
   H2,
-  H3,
   H4,
-  Title,
-  Separator,
   Paragraph,
-  Span,
 } from "../components/Heading";
 import {
   Button,

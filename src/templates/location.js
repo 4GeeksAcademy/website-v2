@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef, Suspense, lazy } from "react";
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
 import ChooseProgram from "../components/ChooseProgram";
 import Badges from "../components/Badges";
 import Loc from "../components/Loc";
@@ -9,7 +9,6 @@ import ChooseYourProgram from "../components/ChooseYourProgram";
 import UpcomingDates from "../components/UpcomingDates";
 import Staff from "../components/Staff";
 import "dayjs/locale/de";
-import Link from "gatsby-link";
 import {
   Div,
   GridContainerWithImage,

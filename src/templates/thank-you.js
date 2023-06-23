@@ -1,13 +1,8 @@
 import React, { useState, useContext } from "react";
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
 import BaseRender from "./_baseLayout";
 import {
-  Column,
-  Wrapper,
-  WrapperImage,
-  Divider,
   Div,
-  Row,
   GridContainer,
   HR,
 } from "../components/Sections";
@@ -16,7 +11,6 @@ import { Button, Colors, Anchor, RoundImage } from "../components/Styling";
 import Icon from "../components/Icon";
 import { SessionContext } from "../session.js";
 import { isCustomBarActive } from "../actions";
-import Link from "gatsby-link";
 import LazyLoad from "react-lazyload";
 
 const ThankYou = (props) => {
