@@ -51,15 +51,6 @@ export const query = graphql`
             sub_heading
             sub_heading_contact
             pathContact
-            image {
-              childImageSharp {
-                gatsbyImageData(
-                  layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                  width: 1200
-                  placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
-                )
-              }
-            }
           }
           fields {
             lang

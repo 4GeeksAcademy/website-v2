@@ -1,14 +1,8 @@
-import React, { useEffect, useRef, useState } from "react";
-import styled from "styled-components";
-import { graphql, Link, navigate } from "gatsby";
-import { Helmet } from "react-helmet";
+import React, { useRef, useState } from "react";
+import { graphql, navigate } from "gatsby";
 import {
   H1,
   H2,
-  H3,
-  H4,
-  Title,
-  Separator,
   Paragraph,
   Span,
 } from "../components/Heading";
@@ -25,7 +19,6 @@ import {
   Button,
   Colors,
   StyledBackgroundSection,
-  Anchor,
 } from "../components/Styling";
 import { Circle } from "../components/BackgroundDrawing";
 import News from "../components/News";

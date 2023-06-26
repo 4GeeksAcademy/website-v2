@@ -317,16 +317,6 @@ export const query = graphql`
           banner {
             tagline
             sub_heading
-            image {
-              childImageSharp {
-                gatsbyImageData(
-                  layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                  width: 1800
-                  quality: 100
-                  placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
-                )
-              }
-            }
           }
           content {
             title

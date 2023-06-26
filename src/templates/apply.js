@@ -876,9 +876,6 @@ export const query = graphql`
                 #   fluid(maxWidth: 200){
                 #     ...GatsbyImageSharpFluid_withWebp
                 #   }
-                #   fixed(width: 200, height: 200) {
-                #     ...GatsbyImageSharpFixed
-                #   }
               }
             }
             content

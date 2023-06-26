@@ -275,16 +275,6 @@ export const postQuery = graphql`
           banner {
             tagline
             sub_heading
-            image {
-              childImageSharp {
-                gatsbyImageData(
-                  layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                  width: 400
-                  quality: 100
-                  placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
-                )
-              }
-            }
             no_image
           }
           question

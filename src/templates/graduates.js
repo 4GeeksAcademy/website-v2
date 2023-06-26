@@ -126,18 +126,6 @@ export const query = graphql`
           banner {
             tagline
             sub_heading
-            image {
-              childImageSharp {
-                gatsbyImageData(
-                  layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                  width: 1200
-                  placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
-                )
-                # fluid(maxWidth: 1200){
-                #   ...GatsbyImageSharpFluid_withWebp
-                # }
-              }
-            }
           }
           about {
             heading
