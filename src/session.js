@@ -1,7 +1,7 @@
 import React, { createContext, useState, useEffect } from "react";
 import dayjs from "dayjs";
 import "dayjs/locale/es";
-import { useStaticQuery, graphql, navigate } from "gatsby";
+import { useStaticQuery, graphql } from "gatsby";
 import {
   defaultSession,
   setStorage,
