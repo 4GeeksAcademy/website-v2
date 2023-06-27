@@ -586,7 +586,14 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
           </Div>
           <Icon icon="longarrow-right" />
         </Div>
-        <Div display="block" width="100%" width_tablet="400px" width_md="fit-content" minWidth_md="700px" maxWidth_md="900px">
+        <Div
+          display="block"
+          width="100%"
+          width_tablet="400px"
+          width_md="fit-content"
+          minWidth_md="700px"
+          maxWidth_md="900px"
+        >
           <Slider {...settings} ref={sliderRef}>
             {testimonials.map((testimonial) => {
               return (

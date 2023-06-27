@@ -1,11 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link, graphql } from "gatsby";
 import BaseRender from "./_baseLayout";
-import {
-  Header,
-  Div,
-  GridContainer,
-} from "../components/Sections";
+import { Header, Div, GridContainer } from "../components/Sections";
 import { Button, Colors } from "../components/Styling";
 import { requestSyllabus, isCustomBarActive } from "../actions";
 import { SessionContext } from "../session";

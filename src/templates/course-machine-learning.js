@@ -1,11 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { isCustomBarActive } from "../actions";
 import { graphql, Link } from "gatsby";
-import {
-  GridContainer,
-  Header,
-  Div,
-} from "../components/Sections";
+import { GridContainer, Header, Div } from "../components/Sections";
 import { Button, Colors } from "../components/Styling";
 import AboutTheProgram from "../components/AboutTheProgram";
 import ProgramDetails from "../components/ProgramDetails";
