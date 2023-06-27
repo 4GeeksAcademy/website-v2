@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import styled from "styled-components";
 import YouTube from "react-youtube";
 import PropTypes from "prop-types";
-// import GImage from "gatsby-image"
 import { Devices } from "../Responsive";
 import Modal from "../Modal";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";

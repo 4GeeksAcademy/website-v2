@@ -1,24 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { isCustomBarActive } from "../actions";
-// import Link from "gatsby-link";
 import { graphql, Link } from "gatsby";
 import {
-  Container,
   GridContainer,
-  Row,
-  Column,
-  Wrapper,
-  WrapperImage,
-  Divider,
   Header,
   Div,
 } from "../components/Sections";
-import { H1, H2, Title, Paragraph, H5 } from "../components/Heading";
 import { Button, Colors } from "../components/Styling";
 import AboutTheProgram from "../components/AboutTheProgram";
 import ProgramDetails from "../components/ProgramDetails";
 import ProgramDetailsMobile from "../components/ProgramDetailsMobile";
-import TechsWeTeach from "../components/TechsWeTeach";
 import GeeksInfo from "../components/GeeksInfo";
 import OurPartners from "../components/OurPartners";
 import BaseRender from "./_baseLayout";

@@ -2,26 +2,10 @@ import React, { useEffect, useState } from "react";
 import { Link, graphql } from "gatsby";
 import BaseRender from "./_baseLayout";
 import {
-  Container,
   Header,
-  Column,
-  Wrapper,
-  WrapperImage,
-  Divider,
-  Sidebar,
   Div,
   GridContainer,
 } from "../components/Sections";
-import {
-  Title,
-  H1,
-  H2,
-  H3,
-  H4,
-  H5,
-  Span,
-  Paragraph,
-} from "../components/Heading";
 import { Button, Colors } from "../components/Styling";
 import { requestSyllabus, isCustomBarActive } from "../actions";
 import { SessionContext } from "../session";
