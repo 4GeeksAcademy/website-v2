@@ -1,0 +1,98 @@
+meta_info:
+  slug: trabajo-garantizado
+  title: "Trabajo garantizado con 4Geeks Academy"
+  description: "Trabajo garantizado con 4Geeks Academy"
+  visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
+  image: "/images/programs-heading.png"
+  keywords: "Trabajo garantizad con 4Geeks Academy"
+  redirects: ["/trabajo-garantizado"]
+  utm_course: ["full-stack", "datascience-ml"]
+
+button:
+  syllabus_heading: "Descargar Detalles del Curso"
+  syllabus_btn_label: "Descarga Instantánea"
+  btn_label: "SOLICITA UN PLAN DE ESTUDIOS"
+  syllabus_motivation: "/us/apply"
+
+seo_title: "Trabajo garantizado"
+header:
+  title: Consigue un trabajo o te devolvemos tu dinero
+  paragraph: Todos estamos contigo. ¡Obtenga un trabajo dentro de los 6 meses posteriores a la graduación o le devolveremos su dinero a su bolsillo!
+
+two_column_left:
+  proportions: [6, 6]
+  image:
+    style: '{ "backgroundSize": "contain" }'
+    src: "/images/woman-glasses-laptop.png"
+  heading:
+    text: "Why are we doing this?"
+    font_size: ["30px", "30px", "30px", "30px", "30px"]
+  content:
+    font_size: ["16px"]
+    text: |
+      <p>We are challenging the way education works. It's not only about the skills or the knowledge, it is about the new opportunities we can open and build together for your career</p>
+      <br>
+      <p><span style="color: #0097CD;">✓</span> We <strong style="font-weight: bold;">trust</strong> the program</p>
+      <br>
+      <p><span style="color: #0097CD;">✓</span> We <strong style="font-weight: bold;">trust</strong> the industry</p>
+      <br>
+      <p><span style="color: #0097CD;">✓</span> We <strong style="font-weight: bold;">trust</strong> the process</p>
+      <br>
+      <p><span style="color: #0097CD;">✓</span> Get a job!</p>
+  button:
+      text: "APPLY"
+      color: "white"
+      background: "black"
+      hover_color: "white"
+      path: "#top"
+
+we_trust_section:
+  title: Por esto confiamos
+  text: |
+    Este es un programa sostenible comprobado, ya funciona y seguirá funcionando.
+    <br>
+    <br>
+    Los números lo respaldan.
+  boxes:
+    - icon: briefcase-2
+      title: 82%
+      text: Colocado
+    - icon: chart
+      title: "60K"
+      text: Promedio Ingreso
+    - icon: graduation-2
+      title: "130"
+      text: Días para conseguir un trabajo después de la graduación
+
+how_it_works:
+  title: ¿Cómo funciona?
+  text: El camino a seguir si desea calificar para nuestra función de garantía de empleo. Si cumple y no consigue trabajo en 6 meses, le devolvemos su dinero.
+  steps:
+    - icon: rocket-2
+      title: Inicia el programa
+    - icon: assignment
+      title: Cumple con las asistencias y las asignaciones
+    - icon: folder
+      title: Aprueba el proyecto final
+    - icon: graduation-2
+      title: Graduation
+      highlight: True
+    - icon: handshake
+      title: Complies with career support
+    - icon: briefcase-2
+      title: Get a job in 6 months
+
+successful_stories:
+  title: Historias de éxito
+  text: "Nuestro programa de Garantía de empleo ya está dando resultados positivos. Aquí puedes ver algunos de ellos:"
+  testimonials: 
+    - "nai-kali"
+    - "azu-bota"
+    - "cha-fabr"
+
+form:
+  title: "Conviértete en Partner de 4Geeks"
+  paragraph: "Contáctenos y lo conectaremos directamente con los candidatos adecuados que se gradúan de 4Geeks Academy todos los días.
+  Nuestros graduados tienen éxito en sus propios negocios, startups y grandes empresas por igual.
+
+  Nuestros programas preparan a los estudiantes para trabajar y prosperar en cualquier organización tecnológica y con visión de futuro."
