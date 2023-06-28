@@ -8,6 +8,7 @@ meta_info:
   redirects: []
   region: "usa-canada"
   dialCode: "1"
+  related_clusters: ["trends-and-tech"]
 
 seo_title: "Coding Bootcamp in Atlanta"
 header:
