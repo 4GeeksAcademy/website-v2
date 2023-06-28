@@ -27,7 +27,7 @@ import { requestSyllabus } from "../actions";
 import { SessionContext } from "../session";
 import Testimonials from "../components/Testimonials";
 import Badges from "../components/Badges";
-import PricesAndPayment from "../components/PricesAndPayment_v2";
+import PricesAndPayment from "../components/PricesAndPayment";
 import { Circle } from "../components/BackgroundDrawing";
 import LeadForm from "../components/LeadForm";
 import Modal from "../components/Modal";
@@ -935,6 +935,13 @@ export const query = graphql`
                   placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                 )
               }
+            }
+          }
+          chart_section {
+            data {
+              percentage
+              color
+              description
             }
           }
         }
