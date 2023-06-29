@@ -10,7 +10,7 @@ import {
   locByLanguage,
 } from "./actions";
 
-import initSession from "./actions.worker.js";
+import ActionsWorker from "./actions.worker.js";
 export const SessionContext = createContext(defaultSession);
 
 export default ({ children }) => {
@@ -77,38 +77,34 @@ export default ({ children }) => {
       }
       return undefined;
     };
-    try {
-      const _session = initSession(
-        data.allLocationYaml,
-        getStorage("academy_session"),
-        {
-          navigator: JSON.stringify(window.navigator),
-          location:
-            urlParams.get("location") ||
-            urlParams.get("city") ||
-            urlParams.get("utm_location") ||
-            null,
-          gclid: urlParams.get("gclid") || urlParams.get("fbclid") || undefined,
-          utm_medium: urlParams.get("utm_medium") || undefined,
-          utm_campaign: urlParams.get("utm_campaign") || undefined,
-          utm_content: urlParams.get("utm_content") || undefined,
-          utm_source: urlParams.get("utm_source") || undefined,
-          utm_plan: urlParams.get("utm_plan") || undefined,
-          utm_placement: urlParams.get("utm_placement") || undefined,
-          utm_term: urlParams.get("utm_term") || undefined,
-          referral_code: getReferral(),
-          utm_test: urlParams.get("utm_test") || undefined,
-          language:
-            urlParams.get("lang") || urlParams.get("language") || undefined,
-        }
-      );
-      setStorage(_session);
-      setSession(_session);
-      setTagManaerVisitorInfo(_session);
-      dayjs.locale(_session.language == "us" ? "en" : _session.language);
-    } catch (error) {
-      console.error("Error initilizing session", error);
-    }
+    ActionsWorker()
+      .initSession(data.allLocationYaml, getStorage("academy_session"), {
+        navigator: JSON.stringify(window.navigator),
+        location:
+          urlParams.get("location") ||
+          urlParams.get("city") ||
+          urlParams.get("utm_location") ||
+          null,
+        gclid: urlParams.get("gclid") || urlParams.get("fbclid") || undefined,
+        utm_medium: urlParams.get("utm_medium") || undefined,
+        utm_campaign: urlParams.get("utm_campaign") || undefined,
+        utm_content: urlParams.get("utm_content") || undefined,
+        utm_source: urlParams.get("utm_source") || undefined,
+        utm_plan: urlParams.get("utm_plan") || undefined,
+        utm_placement: urlParams.get("utm_placement") || undefined,
+        utm_term: urlParams.get("utm_term") || undefined,
+        referral_code: getReferral(),
+        utm_test: urlParams.get("utm_test") || undefined,
+        language:
+          urlParams.get("lang") || urlParams.get("language") || undefined,
+      })
+      .then((_session) => {
+        setStorage(_session);
+        setSession(_session);
+        setTagManaerVisitorInfo(_session);
+        dayjs.locale(_session.language == "us" ? "en" : _session.language);
+      })
+      .catch((error) => console.error("Error initilizing session", error));
   }, []);
 
   return (
