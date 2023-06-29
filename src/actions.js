@@ -155,8 +155,9 @@ export function setStorage(value, expires = null) {
 export const setDataLayer = (_data) => {
   if (typeof dataLayer != "undefined") {
     dataLayer.push(_data);
-  } else console.log("TagManager: dataLayer not found while trying to save ", _data);
-}
+  } else
+    console.log("TagManager: dataLayer not found while trying to save ", _data);
+};
 export const setTagManaerVisitorInfo = (session) => {
   if (typeof dataLayer != "undefined") {
     const info = {
@@ -195,7 +196,7 @@ export const apply = async (data, session) => {
   console.log("Apply action called with session: ", session);
   tagManager("student_application");
   let body = {};
-  
+
   Object.keys(data).forEach((key) => {
     if (typeof data[key] === "object") body[key] = data[key].value;
     else body[key] = data[key];
@@ -218,15 +219,18 @@ export const apply = async (data, session) => {
     );
 
     // save conversion info to GTM
-    setDataLayer({  email: _data.email, formentry_id: _data.id, referral_key: _data.referral_key })
-    
+    setDataLayer({
+      email: _data.email,
+      formentry_id: _data.id,
+      referral_key: _data.referral_key,
+    });
+
     // referral program integration
     if (
       _data &&
       typeof _data.referral_key == "string" &&
       _data.referral_key.length > 0
     ) {
-
       // save conversion info to First Promoter API
       if (window && window.fpr) {
         console.log("Triggered referral program action");
@@ -263,7 +267,11 @@ export const requestSyllabus = async (data, session) => {
     );
 
     // save conversion info to GTM
-    setDataLayer({  email: _data.email, formentry_id: _data.id, referral_key: _data.referral_key })
+    setDataLayer({
+      email: _data.email,
+      formentry_id: _data.id,
+      referral_key: _data.referral_key,
+    });
 
     return _data;
   }
@@ -281,8 +289,7 @@ export const beHiringPartner = async (data, session) => {
   for (let key in data) body[key] = data[key].value;
   const action = "submit";
   let token = await getToken(action);
-  if (!session || !session.utm || !session.utm.utm_test){
-
+  if (!session || !session.utm || !session.utm.utm_test) {
     const _data = await save_form(
       body,
       ["hiring-partner"],
@@ -290,9 +297,13 @@ export const beHiringPartner = async (data, session) => {
       session,
       token,
       action
-      );
+    );
 
-    setDataLayer({  email: _data.email, formentry_id: _data.id, referral_key: _data.referral_key })
+    setDataLayer({
+      email: _data.email,
+      formentry_id: _data.id,
+      referral_key: _data.referral_key,
+    });
     return _data;
   }
   return true;
@@ -323,10 +334,18 @@ export const newsletterSignup = async (data, session) => {
   for (let key in data) body[key] = data[key].value;
 
   //                                                                                      tag          automation
-  if (!session || !session.utm || !session.utm.utm_test){
-
-    const _data = await save_form(body, ["newsletter"], ["newsletter"], session);
-    setDataLayer({  email: _data.email, formentry_id: _data.id, referral_key: _data.referral_key });
+  if (!session || !session.utm || !session.utm.utm_test) {
+    const _data = await save_form(
+      body,
+      ["newsletter"],
+      ["newsletter"],
+      session
+    );
+    setDataLayer({
+      email: _data.email,
+      formentry_id: _data.id,
+      referral_key: _data.referral_key,
+    });
     return _data;
   }
   return true;
@@ -338,14 +357,18 @@ export const outcomesReport = async (data, session) => {
   for (let key in data) body[key] = data[key].value;
 
   //                                                                                      tag                automation
-  if (!session || !session.utm || !session.utm.utm_test){
+  if (!session || !session.utm || !session.utm.utm_test) {
     const _data = await save_form(
       body,
       ["download_outcome"],
       ["download_outcome"],
       session
     );
-    setDataLayer({  email: _data.email, formentry_id: _data.id, referral_key: _data.referral_key });
+    setDataLayer({
+      email: _data.email,
+      formentry_id: _data.id,
+      referral_key: _data.referral_key,
+    });
     return _data;
   }
   return true;
