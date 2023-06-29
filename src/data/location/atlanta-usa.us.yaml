@@ -1,0 +1,118 @@
+meta_info:
+  slug: "coding-bootcamp-atlanta"
+  title: "Atlanta Coding Bootcamp"
+  position: 1
+  description: "Get to know here all about our coding bootcamp campus in Atlanta, Georgia of 4Geeks Academy"
+  image: "/images/og-preview/downtown-miami.us.png"
+  keywords: "null"
+  redirects: []
+  region: "usa-canada"
+  dialCode: "1"
+  related_clusters: ["trends-and-tech"]
+
+seo_title: "Coding Bootcamp in Atlanta"
+header:
+  tagline: "4Geeks Academy in Atlanta"
+  sub_header: "All programs are taught "
+  sub_header_highlighted: "Online"
+  paragraph: ""
+  image: "../../../static/images/locations/atlanta-home.png"
+  alt: "4Geeks Academy live coding bootcamp in Atlanta, Georgia"
+
+badges:
+  title: ""
+  paragraph: "4Geeks Academy is the place where developers grow and thrive.
+ 
+We are licensed by the USA F. Dep. of Education.
+  
+Chosen as one of the top 35 coding bootcamps of the world and the top coding bootcamp in Atlanta according to SwitchUp.
+
+4Geeks Academy has been recognized as one of the top 10 coding bootcamps in the United States according to Newsweek.
+
+
+A community built for developers."
+news:
+  title: "4Geeks Academy Atlanta has been reviewed in:"
+upcoming:
+  no_dates_message: "There are currently no upcoming dates for this campus"
+  actionMessage: "Let me know when dates are available"
+button_header:
+  button_text: See Programs
+  button_link: "#programs"
+button:
+  syllabus_button_text: "DOWNLOAD SYLLABUS" # <-- this will show everywhere in the website
+  apply_button_text: "APPLY NOW" # <-- this will show everywhere in the website
+  syllabus_submit_text: "DOWNLOAD"
+  apply_button_link: "/apply"
+  cohort_more_details_text: "DETAILS"
+
+custom_bar:
+  active: false
+  message: 'Change your life with Code. <a class="customBar-link" href="/us/apply">Apply</a> Upcoming programs: June 6 Full-Stack | July 7 ML+AI!'
+  button: 
+    label: "Read More"
+    path: "#" #string (can be inline path using #, relative path or absolute path)
+
+info_box:
+  heading: ""
+  address: ""
+  iframeMapUrl: ""
+  open_on_maps: ""
+  contact_heading: "Contacts"
+  phone: "(786) 416-6640"
+  email: "info@4GeeksAcademy.com"
+images_box:
+  heading: "What you should know about this location: "
+  content: "Atlanta's tech ecosystem is flourishing with over 850 tech companies and 70,000+ tech workers. Major tech firms like Google and Facebook have set up local outposts drawn by the city's diverse talent pool. As Atlanta vies to become a tech hub, coding bootcamps aim to close the skills gap by supplying tech talent to meet the surging demand for coding expertise from expanding tech companies."
+  images:
+    - path: "../../../static/images/locations/atlanta-new.jpg"
+      alt: "Atlanta city"
+    - path: "../../../static/images/ownpeoplecoding2.jpg"
+      alt: "4Geeks Own People Coding"
+    - path: "../../../static/images/ownmancoding.jpg"
+      alt: "Remote-Coding-Bootcamp"
+    - path: "../../../static/images/locations/miami-old.jpg"
+      alt: "4Geeeks miami location"
+    - path: "../../../static/images/locations/miami-people.jpeg"
+      alt: "4Geeeks miami lab"
+
+
+active_campaign_location_slug: "atlanta-usa"
+breathecode_location_slug: "atlanta-usa"
+gdpr_compliant: false # do we need to ask for permision?
+in_person_available: true # important to accept in-person applicants
+online_available: false # important to accept online-only applicants
+
+city: "Atlanta"
+name: "Atlanta, USA"
+latitude: "25.760158"
+longitude: "-80.200154"
+phone: "+1 (786) 416-6640"
+address: ""
+zip_code: ""
+state: "Georgia"
+country: "USA"
+country_shortname: "us"
+socials:
+  - name: "Facebook"
+    icon: "facebook"
+    link: "https://www.facebook.com/4geeksacademy"
+  - name: "Twitter"
+    icon: "twitter"
+    link: "https://www.twitter.com/4geeksacademy"
+  - name: "Instagram"
+    icon: "instagram"
+    link: "https://www.instagram.com/4geeksacademy"
+  - name: "Meetup"
+    icon: "meetup"
+    link: "https://www.meetup.com/4geeks-academy"
+courses:
+  - "Full-Time"
+  - "Part-Time"
+flag_icon: ""
+value: "Atlanta"
+defaultLanguage: "us" # All lead marketing communications will arrive on this language
+
+documents:
+  payment_guidebook:
+    url: "https://storage.googleapis.com/4geeks-academy-website/blog/2017/10/4GA-Payment-Guidebook-2.pdf"

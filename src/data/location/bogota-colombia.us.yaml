@@ -7,7 +7,7 @@ meta_info:
   keywords: ""
   # it will not show up on the applications forms
   visibility: "visible"
-  redirects: ["/us/colombia", "/colombia"]
+  redirects: []
   region: "latam"
   dialCode: "57"
   related_clusters: ["trends-and-tech"]
@@ -68,12 +68,18 @@ info_box:
 
 images_box:
   heading: "What you should know about this location: "
-  content: "4Geeks Academy classes in Colombia are only being taught online until further notice; Any 4Geeks in-person campus is always located in very centric locations with nearby subway or public transportation systems at the most popular areas of the city."
-  images: null
-    # - path: "../../../static/images/locations/mcbo-chinita.jpeg"
-    #   alt: "mcbo-chinita"
-    # - path: "../../../static/images/locations/mcbo-loc.jpg"
-    #   alt: "4Geeeks Maracaibo Location"
+  content: "Bogotá, the capital city of Colombia, has been growing in its tech scene, attracting innovative companies and entrepreneurs. Coding plays a vital role in Bogotá's tech ecosystem, as it is essential for software development and technological innovation. The demand for coding skills is high, and the city offers numerous coding bootcamps, coding schools, and training programs to support individuals in acquiring coding proficiency. Bogotá's thriving tech community and supportive infrastructure make it an ideal environment for aspiring coders and entrepreneurs looking to make their mark in the Colombian tech landscape"
+  images: 
+    - path: "../../../static/images/locations/bogota-new.png"
+      alt: "Bogota city"
+    - path: "../../../static/images/ownpeoplecoding2.jpg"
+      alt: "4Geeks Own People Coding"
+    - path: "../../../static/images/ownmancoding.jpg"
+      alt: "Remote-Coding-Bootcamp"
+    - path: "../../../static/images/locations/miami-old.jpg"
+      alt: "4Geeeks location"
+    - path: "../../../static/images/locations/miami-people.jpeg"
+      alt: "4Geeeks lab"
 
 ## START FROM HERE - DON'T CHANGE ANYTHING ABOVE
 ## HEADING SECTION

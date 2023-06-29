@@ -41,8 +41,8 @@ footer:
         link: "/es/coding-bootcamps/desarrollador-full-stack"
       - name: "Ingeniero de software"
         link: "/es/coding-bootcamps/ingenieria-de-software-programacion"
-      - name: "AI Machine Learning Engineering"
-        link: "/es/coding-bootcamps/curso-inteligencia-artificial"
+      - name: "Data Science y Machine Learning"
+        link: "/es/coding-bootcamps/curso-datascience-machine-learning/"
       - name: "Curso de programación desde cero"
         link: "/es/curso-de-programacion-desde-cero"
   - column_four:

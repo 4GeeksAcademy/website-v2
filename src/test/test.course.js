@@ -39,8 +39,9 @@ walk(`${__dirname}/../data/course`, async (err, files) => {
     let header_image = doc.yaml.header.image;
     localizeImage(header_image, "relative_images", _path, "bg");
 
-    let _slug = await _path.split(".")[0].substr(_path.lastIndexOf("/") + 1);
+    let _slug = await _path.substr(_path.lastIndexOf("/") + 1).split(".")[0];
     slugs.push(_slug);
+    if(!_slug || _slug == "") fail("Empty slug. Error while trying to retreibve the course slug from the path: "+_path)
 
     if (slugs.length === _files.length) {
       let uniq_slug = slugs.filter(
@@ -79,7 +80,7 @@ walk(`${__dirname}/../data/course`, async (err, files) => {
                   obj["key"]
                 } on ${_path} expected: ${
                   course.meta_info[obj["key"]].yellow
-                } ${"to match with".red} ${_slug.green} \n\n`
+                } ${"to match with".red} "${_slug.green}" \n\n`
               );
           } else if (obj["type"] === "array") {
             if (!Array.isArray(course.meta_info[obj["key"]]))
