@@ -210,15 +210,16 @@ export const apply = async (data, session) => {
       token,
       action
     );
+
+    // save conversion info to GTM
+    dataLayer.push({  email: _data.email, formentry_id: _data.id, referral_key: _data.referral_key })
+    
     // referral program integration
     if (
       _data &&
       typeof _data.referral_key == "string" &&
       _data.referral_key.length > 0
     ) {
-
-      // save conversion info to GTM
-      dataLayer.push({  email: _data.email, formentry_id: _data.id, referral_key: _data.referral_key })
 
       // save conversion info to First Promoter API
       if (window && window.fpr) {
@@ -245,8 +246,8 @@ export const requestSyllabus = async (data, session) => {
   const action = "submit";
   let token = await getToken(action);
   //tag                automation
-  if (!session || !session.utm || !session.utm.utm_test)
-    return await save_form(
+  if (!session || !session.utm || !session.utm.utm_test) {
+    const _data = await save_form(
       body,
       [tag.value || tag],
       [automation.value || automation],
@@ -254,6 +255,13 @@ export const requestSyllabus = async (data, session) => {
       token,
       action
     );
+
+    // save conversion info to GTM
+    dataLayer.push({  email: _data.email, formentry_id: _data.id, referral_key: _data.referral_key })
+
+    return _data;
+  }
+
   return true;
 };
 export const openGuidebook = (url) => {
