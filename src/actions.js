@@ -184,7 +184,7 @@ export const setTagManaerVisitorInfo = (session) => {
   } else console.log("TagManager:dataLayer not found");
 };
 
-export function tagManager(eventName, payload={}) {
+export function tagManager(eventName, payload = {}) {
   if (typeof dataLayer != "undefined") {
     dataLayer.push({ event: eventName, ...payload });
     console.log("Event successfully triggered: " + eventName);
@@ -219,11 +219,11 @@ export const apply = async (data, session) => {
     );
 
     // save conversion info to GTM
-    tagManager("student_application",{
-        email: _data.email,
-        formentry_id: _data.id,
-        referral_key: _data.referral_key,
-      });
+    tagManager("student_application", {
+      email: _data.email,
+      formentry_id: _data.id,
+      referral_key: _data.referral_key,
+    });
 
     // referral program integration
     if (
@@ -267,7 +267,7 @@ export const requestSyllabus = async (data, session) => {
     );
 
     // save conversion info to GTM
-    tagManager("request_more_info",{
+    tagManager("request_more_info", {
       email: _data.email,
       formentry_id: _data.id,
       referral_key: _data.referral_key,
@@ -340,7 +340,7 @@ export const newsletterSignup = async (data, session) => {
       ["newsletter"],
       session
     );
-    tagManager("newsletter_signup",{
+    tagManager("newsletter_signup", {
       email: _data.email,
       formentry_id: _data.id,
       referral_key: _data.referral_key,
@@ -421,7 +421,7 @@ export const processFormEntry = async (data, session) => {
   let token = await getToken(action);
 
   //                                                                                      tag                automation
-  if (!session || !session.utm || !session.utm.utm_test){
+  if (!session || !session.utm || !session.utm.utm_test) {
     const _data = await save_form(
       body,
       [tag.value || tag],
@@ -429,18 +429,20 @@ export const processFormEntry = async (data, session) => {
       session,
       token,
       action
+    );
+
+    if (data.form_type.value === "landing") {
+      tagManager("request_more_info", {
+        email: _data.email,
+        formentry_id: _data.id,
+        referral_key: _data.referral_key,
+      });
+    } else
+      console.log(
+        `No tagManager("...") was because type is: ${data.form_type.value}`
       );
 
-      if(data.form_type.value === "landing"){
-        tagManager("request_more_info",{
-          email: _data.email,
-          formentry_id: _data.id,
-          referral_key: _data.referral_key,
-        });
-      }
-      else console.log(`No tagManager("...") was because type is: ${data.form_type.value}`);
-      
-      return _data;
+    return _data;
   }
   return true;
 };
