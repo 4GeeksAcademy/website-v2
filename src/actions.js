@@ -161,6 +161,7 @@ export const setTagManaerVisitorInfo = (session) => {
       language: session.language,
       latitude: session.latitude,
       longitude: session.longitude,
+      utm: session.utm,
     };
     dataLayer.push(info);
     // TODO: THIS BELOW DOEST NOT WORK RIGHT NOW, NEEDS MORE WORK
@@ -189,7 +190,7 @@ export const apply = async (data, session) => {
   console.log("Apply action called with session: ", session);
   tagManager("student_application");
   let body = {};
-  console.log("form data: ", data);
+  
   Object.keys(data).forEach((key) => {
     if (typeof data[key] === "object") body[key] = data[key].value;
     else body[key] = data[key];
