@@ -152,6 +152,11 @@ export function setStorage(value, expires = null) {
   return true;
 }
 
+export const setDataLayer = (_data) => {
+  if (typeof dataLayer != "undefined") {
+    dataLayer.push(_data);
+  } else console.log("TagManager: dataLayer not found while trying to save ", _data);
+}
 export const setTagManaerVisitorInfo = (session) => {
   if (typeof dataLayer != "undefined") {
     const info = {
@@ -213,7 +218,7 @@ export const apply = async (data, session) => {
     );
 
     // save conversion info to GTM
-    dataLayer.push({  email: _data.email, formentry_id: _data.id, referral_key: _data.referral_key })
+    setDataLayer({  email: _data.email, formentry_id: _data.id, referral_key: _data.referral_key })
     
     // referral program integration
     if (
@@ -258,7 +263,7 @@ export const requestSyllabus = async (data, session) => {
     );
 
     // save conversion info to GTM
-    dataLayer.push({  email: _data.email, formentry_id: _data.id, referral_key: _data.referral_key })
+    setDataLayer({  email: _data.email, formentry_id: _data.id, referral_key: _data.referral_key })
 
     return _data;
   }
@@ -276,15 +281,20 @@ export const beHiringPartner = async (data, session) => {
   for (let key in data) body[key] = data[key].value;
   const action = "submit";
   let token = await getToken(action);
-  if (!session || !session.utm || !session.utm.utm_test)
-    return await save_form(
+  if (!session || !session.utm || !session.utm.utm_test){
+
+    const _data = await save_form(
       body,
       ["hiring-partner"],
       ["hiring-partner"],
       session,
       token,
       action
-    );
+      );
+
+    setDataLayer({  email: _data.email, formentry_id: _data.id, referral_key: _data.referral_key })
+    return _data;
+  }
   return true;
 };
 export const applyJob = async (data) => {
@@ -313,8 +323,12 @@ export const newsletterSignup = async (data, session) => {
   for (let key in data) body[key] = data[key].value;
 
   //                                                                                      tag          automation
-  if (!session || !session.utm || !session.utm.utm_test)
-    return await save_form(body, ["newsletter"], ["newsletter"], session);
+  if (!session || !session.utm || !session.utm.utm_test){
+
+    const _data = await save_form(body, ["newsletter"], ["newsletter"], session);
+    setDataLayer({  email: _data.email, formentry_id: _data.id, referral_key: _data.referral_key });
+    return _data;
+  }
   return true;
 };
 
@@ -324,13 +338,16 @@ export const outcomesReport = async (data, session) => {
   for (let key in data) body[key] = data[key].value;
 
   //                                                                                      tag                automation
-  if (!session || !session.utm || !session.utm.utm_test)
-    return await save_form(
+  if (!session || !session.utm || !session.utm.utm_test){
+    const _data = await save_form(
       body,
       ["download_outcome"],
       ["download_outcome"],
       session
     );
+    setDataLayer({  email: _data.email, formentry_id: _data.id, referral_key: _data.referral_key });
+    return _data;
+  }
   return true;
 };
 
