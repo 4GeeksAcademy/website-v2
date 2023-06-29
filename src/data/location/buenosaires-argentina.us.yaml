@@ -7,7 +7,7 @@ meta_info:
   keywords: ""
   # it will not show up on the applications forms
   visibility: "visible"
-  redirects: ["/us/argentina", "/argentina", "/us/coding-campus/coding-bootcamp-argentina"]
+  redirects: []
   region: "latam"
   dialCode: "54"
   related_clusters: ["trends-and-tech"]
@@ -67,13 +67,19 @@ info_box:
   email: latam@4GeeksAcademy.com
 
 images_box:
-  heading: "What you should know about this location: "
-  content: "4Geeks Academy classes in Argentina are only being taught online until further notice; Any 4Geeks in-person campus is always located in very centric locations with nearby subway or public transportation systems at the most popular areas of the city."
-  images: null
-    # - path: "../../../static/images/locations/mcbo-chinita.jpeg"
-    #   alt: "mcbo-chinita"
-    # - path: "../../../static/images/locations/mcbo-loc.jpg"
-    #   alt: "4Geeeks Maracaibo Location"
+  heading: "What you should know about this location:"
+  content: "Buenos Aires encourages innovation and entrepreneurship through various initiatives and events. The city hosts tech conferences, startup competitions, and entrepreneurship programs that provide opportunities for startups to showcase their ideas, connect with investors, and gain exposure. Additionally, government programs and organizations support entrepreneurship and offer funding options for startups to accelerate their growth. Buenos Aires boasts a vibrant and diverse startup ecosystem. The city has seen a surge in the number of startups across different industries, driven by a combination of factors, including access to funding, skilled talent pool, and supportive government initiatives. Startups in Buenos Aires have achieved notable success in areas like e-commerce, edtech, agritech, and mobility solutions. Some well-known startups from Buenos Aires include MercadoLibre (Latin America's largest e-commerce platform), Auth0 (identity verification), and Globant (software development)."
+  images: 
+    - path: "../../../static/images/locations/buenosaires-new.png"
+      alt: "Buenos Aires city"
+    - path: "../../../static/images/ownpeoplecoding2.jpg"
+      alt: "4Geeks Own People Coding"
+    - path: "../../../static/images/ownmancoding.jpg"
+      alt: "Remote-Coding-Bootcamp"
+    - path: "../../../static/images/locations/miami-old.jpg"
+      alt: "4Geeeks location"
+    - path: "../../../static/images/locations/miami-people.jpeg"
+      alt: "4Geeeks lab"
 
 ## START FROM HERE - DON'T CHANGE ANYTHING ABOVE
 ## HEADING SECTION

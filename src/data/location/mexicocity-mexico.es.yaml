@@ -7,7 +7,7 @@ meta_info:
   # it will not show up on the applications forms
   visibility: "visible"
   keywords: "Coding Bootcamp Campus Mexico"
-  redirects: ["/coding-campus/bootcamp-programacion-mexico"]
+  redirects: []
   region: "latam"
   dialCode: "52"
   related_clusters: ["desarrollador-full-stack"]
@@ -65,14 +65,18 @@ info_box:
 
 images_box:
   heading: "What you should know about this location: "
-  content: "4Geeks Mexico es un proyecto que funciona principalmente Online, luego de un proyecto increíble desarrollado por el Banco Interamericano de Desarrollo y el Ministerio de Ciencia, Información y Telecomunicaciones."
-  images: null
-    # - path: "../../../static/images/locations/mcbo-chinita.jpeg"
-    #   alt: "mcbo-chinita"
-    # - path: "../../../static/images/locations/mcbo-loc.jpg"
-    #   alt: "4Geeeks Mexico Location"
-    # - path: "../../../static/images/locations/mcbo-loc-2.png"
-    #   alt: "4Geeeks Mexico lab"
+  content: "El país ha experimentado un aumento en empresas tecnológicas y startups, especialmente en ciudades importantes como Ciudad de México, Guadalajara y Monterrey. Ciudad de México, en particular, se ha convertido en un centro prominente de innovación tecnológica y emprendimiento. El sector tecnológico en México abarca diversas industrias, incluyendo fintech, comercio electrónico, saludtech, edtech y agritech. México ha estado trabajando en crear un ecosistema de apoyo para startups y emprendedores. El gobierno ha introducido iniciativas para facilitar el acceso a financiamiento, proporcionar recursos para el desarrollo de startups y fomentar la innovación. También han surgido incubadoras de negocios, aceleradoras y espacios de trabajo compartido para apoyar el crecimiento de startups en el país. Además, hay eventos, talleres y oportunidades de networking disponibles para conectar a los emprendedores con inversores y mentores."
+  images:
+    - path: "../../../static/images/locations/mexico-new.jpg"
+      alt: "Mexico city"
+    - path: "../../../static/images/ownpeoplecoding2.jpg"
+      alt: "4Geeks Own People Coding"
+    - path: "../../../static/images/ownmancoding.jpg"
+      alt: "Remote-Coding-Bootcamp"
+    - path: "../../../static/images/locations/miami-old.jpg"
+      alt: "4Geeeks location"
+    - path: "../../../static/images/locations/miami-people.jpeg"
+      alt: "4Geeeks lab"
 
 ## START FROM HERE - DON'T CHANGE ANYTHING ABOVE
 ## HEADING SECTION

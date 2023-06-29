@@ -1,6 +1,6 @@
 full_time:
   - slug: 'usa-clark-scholarship-ft'
-    academies: ['downtown-miami', 'orlando']
+    academies: ['downtown-miami', 'orlando', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa']
     recomended: true
     scholarship: "Scholarship"
     payment_time: "Pay today"
@@ -11,7 +11,7 @@ full_time:
     icons: 
       - "/images/landing/uwm_pantone_2021_2.png"
   - slug: 'usa-financed-ft'
-    academies: ['downtown-miami', 'orlando']
+    academies: ['downtown-miami', 'orlando', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa']
     recomended: false
     scholarship: "Financed"
     payment_time: "24 months payment"
@@ -24,7 +24,7 @@ full_time:
       - "/images/climb-logo.png"
       - "/images/quotanda-logo.png"
   - slug: 'usa-isa-ft'
-    academies: ['downtown-miami', 'orlando']
+    academies: ['downtown-miami', 'orlando', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa']
     recomended: false
     scholarship: "Income Share Agreement"
     payment_time: "Pay after you get a job"
@@ -37,7 +37,7 @@ full_time:
       - "/images/climb-logo.png"
       - "/images/quotanda-logo.png"
   - slug: 'usa-upfront-ft'
-    academies: ['downtown-miami', 'orlando']
+    academies: ['downtown-miami', 'orlando', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa']
     recomended: false
     scholarship: "Full Payment"
     payment_time: "Pay today"
@@ -120,7 +120,7 @@ full_time:
       - "Financimiento a tu medida desde 6 hasta 18 meses"  
       - "Se debe pagar un anticipo correspondiente al 20% del valor del programa" 
     icons: 
-      - "/images/flevo.png"
+      - "/images/partner/flevo.png"
                        
   - slug: 'chile-isa-fs-ft'
     academies: ['santiago-chile']
@@ -161,7 +161,7 @@ full_time:
       - "Asiste a una entrevista con Flevo y obtén financiamiento rápidamente."
       - "El valor del programa se modifica con la modalidad de financiamiento."
     icons: 
-      - "/images/flevo.png"
+      - "/images/partner/flevo.png"
 
   - slug: 'venezuela-laptop-pt'
     academies: ['caracas-venezuela']
@@ -202,7 +202,7 @@ part_time:
       - "/static/images/clarkuniversity.png"
 
   - slug: 'usa-clark-scholarship-pt-miami'
-    academies: ['downtown-miami']
+    academies: ['downtown-miami', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa']
     recomended: true
     scholarship: "Beca"
     payment_time: "Paga hoy o en 3 partes"
@@ -214,13 +214,13 @@ part_time:
       - "/static/images/clarkuniversity.png"      
 
   - slug: 'usa-financed-pt'
-    academies: ['orlando','downtown-miami']
+    academies: ['downtown-miami', 'orlando', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa']
     recomended: false
     scholarship: "Financiado"
     payment_time: "Paga en 3, 4 o 5 años"
     price: "~$115p/m"
     bullets: 
-      - "Varios partners ofreciendo préstamos y planes de pago"
+      - "Varios partners ofrecen préstamos y planes de pago"
       - "Puedes obtener una beca parcial y el balance restante con un plan de pago"
     icons: 
       - "/images/ascent_logo.jpg"
@@ -229,7 +229,7 @@ part_time:
 
   - slug: 'usa-upfront-pt'
     recomended: false
-    academies: ['orlando']
+    academies: ['orlando', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa']
     scholarship: "Pago Completo"
     payment_time: "Paga hoy"
     price: "$8999"
@@ -239,7 +239,7 @@ part_time:
       - "Sólo si la Beca de Clark University no aplica (Desempleado o subempleado)"
 
   - slug: 'usa-isa-pt'
-    academies: ['orlando','downtown-miami']
+    academies: ['downtown-miami', 'orlando', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa']
     recomended: false
     scholarship: "Plan de Paga Cuando Consigas Trabajo"
     payment_time: "Paga después de obtener trabajo"
@@ -281,7 +281,7 @@ part_time:
 
   - slug: 'spain-isa-fs-pt'
     academies: ['barcelona-spain', 'madrid-spain', 'malaga-spain', 'valencia-spain']
-    recomended: true
+    recomended: false
     scholarship: "Acuerdo de Ingresos Compartidos (ISA)"
     payment_time: "Paga sólo cuando trabajes"
     price: "0 €*"
@@ -319,7 +319,7 @@ part_time:
                        
   - slug: 'north-europe-isa-fs-pt'
     academies: ['berlin-germany','dublin-ireland', 'europe','hamburg-germany', 'munich-germany']
-    recomended: true
+    recomended: false
     scholarship: "Acuerdo de Ingresos Compartidos (ISA)"
     payment_time: "Paga sólo cuando trabajes"
     price: "0 €*"
@@ -357,7 +357,7 @@ part_time:
 
   - slug: 'south-europe-isa-fs-pt'
     academies: ['lisbon-portugal','milan-italy','rome-italy']
-    recomended: true
+    recomended: false
     scholarship: "Acuerdo de Ingresos Compartidos (ISA)"
     payment_time: "Paga sólo cuando trabajes"
     price: "0 €*"
@@ -369,7 +369,7 @@ part_time:
 
   - slug: 'chile-geekforce-fs-pt'
     academies: ['santiago-chile']
-    recomended: true
+    recomended: false
     scholarship: "Paga al contado"
     payment_time: "Y obtén un descuento"
     price: "2.760.000 CLP*"
@@ -382,15 +382,15 @@ part_time:
 
   - slug: 'chile-fs-pt'
     academies: ['santiago-chile']
-    recomended: false
-    scholarship: "Cuotas desde"
+    recomended: true
+    scholarship: "Cuotas mensuales desde"
     payment_time: ""
     price: "~146.000 CLP"
     bullets:
       - "Financiamiento a tu medida desde 6 hasta 24 meses"  
       - "Se debe pagar un anticipo correspondiente al 20% del valor total del programa sin descuentos" 
     icons: 
-      - "/images/flevo.png"
+      - "/images/partner/flevo.png"
 
   - slug: 'chile-solo-fs-pt'
     academies: ['santiago-chile']
@@ -405,38 +405,41 @@ part_time:
 
   - slug: 'latam-trabajo-garantizado-fs-pt'
     academies: ['montevideo-uruguay','bogota-colombia', 'costa-rica', 'mexicocity-mexico','quito-ecuador', 'panamacity-panama', 'buenosaires-argentina','lima-peru','lapaz-bolivia']
-    recomended: true
+    recomended: false
     scholarship: "Trabajo Garantizado"
-    payment_time: "Como ningún otro Bootcampm en Latam"
-    price: "USD $4000"
-    bullets:
-      - "Planes de pago disponibles de hasta 24 meses"
-      - "Conseguirás trabajo dentro de los siguientes 6 meses después de Graduarte."     
-      - "Sigue nuestro proceso y obtendrás un trabajo o recibe tu dinero de vuelta."     
-    icons: 
-      - "/images/quotanda-logo.png"
-
-  - slug: 'latam-job-guarantee-fs-pt'
-    academies: ['montevideo-uruguay','bogota-colombia', 'costa-rica', 'mexicocity-mexico','quito-ecuador', 'panamacity-panama', 'buenosaires-argentina','lima-peru','lapaz-bolivia']
-    recomended: true
-    scholarship: "Trabajo garantizado"
     payment_time: "Consigues un trabajo o te devolvemos tu dinero"
     price: "USD $4000"
     bullets:
-      - "Planes de pago disponibles en toda latam"
-      - "Conseguirás un trabajo dentro de los próximos 6 meses después de la graduación."     
+      - "Siempre hay un plan de pago disponible para que te unas a 4Geeks Academy"
+      - "Si no encuentras aquí lo que esperas, por favor contáctanos y trataremos de encontrar nuevas formas de ayudarte"     
+      - "Debes elegir si tomarás solo el programa, si también quieres obtener nuestro sistema de Career Support, o si quieres ir a por todo y registrarte con nuestra opción de Trabajo Garantizado"  
+      - "¡Con nuestro Trabajo Garantizado, obtendrás un trabajo en 6 meses o de lo contrario obtendrás tu dinero completo de vuelta!"   
     icons: 
       - "/images/quotanda-logo.png"
+
+  #- slug: 'latam-job-guarantee-fs-pt'
+    #academies: ['montevideo-uruguay','bogota-colombia', 'costa-rica', 'mexicocity-mexico','quito-ecuador', 'panamacity-panama', 'buenosaires-argentina','lima-peru','lapaz-bolivia']
+    #recomended: true
+    #scholarship: "Trabajo garantizado"
+    #payment_time: "Consigues un trabajo o te devolvemos tu dinero"
+    #price: "USD $4000"
+    #bullets:
+    #  - "Planes de pago disponibles en toda latam"
+    #  - "Conseguirás un trabajo dentro de los próximos 6 meses después de la graduación."     
+    #icons: 
+    #  - "/images/quotanda-logo.png"
 
   - slug: 'latam-upfront-fs-pt'
     academies: ['montevideo-uruguay','bogota-colombia', 'costa-rica', 'mexicocity-mexico','quito-ecuador', 'panamacity-panama', 'buenosaires-argentina','lima-peru','lapaz-bolivia']
     recomended: false
-    scholarship: "Paga de contado"
-    payment_time: "Y obtén un mejor precio"
+    scholarship: "Program Full-Stack + Career Support"
+    payment_time: "Te ayudamos a pulir tu perfil profesional"
     price: "USD $3000"
     bullets:
-      - "Paga con transferencia bancaria, tarjeta de crédito o débito, Paypal, Bitcoin o Ethereum"
-      - "Tendrás acceso a todo el programa y a todo el Sistema de Career Support de 4Geeks"     
+      - "Siempre hay un plan de pago disponible para que te unas a 4Geeks Academy"
+      - "Si no encuentras aquí lo que esperas, por favor contáctanos y trataremos de encontrar nuevas formas de ayudarte"     
+      - "Debes elegir si tomarás solo el programa, si también quieres obtener nuestro sistema de Career Support, o si quieres ir a por todo y registrarte con nuestra opción de Trabajo Garantizado"  
+      - "Además del programa Full-Stack, obtén apoyo profesional de por vida de nuestro equipo especializado y acceso permanente a nuestra comunidad en línea de graduados"   
     icons: 
       - "/images/visa-mastercard.png"    
       - "/images/bitcoin_logo.png"  
@@ -445,18 +448,20 @@ part_time:
   - slug: 'latam-solo-programa-pt'
     academies: ['montevideo-uruguay','bogota-colombia', 'costa-rica', 'mexicocity-mexico','quito-ecuador', 'panamacity-panama', 'buenosaires-argentina','lima-peru','lapaz-bolivia']
     recomended: true
-    scholarship: "Programa Full-Stack Solamente"
-    payment_time: "Enfócate en obtener habilidades"
-    price: "USD $2000"
+    scholarship: "Sólo paga el programa"
+    payment_time: "Enfócate en obtener nuevas habilidades. Paga mensualmente."
+    price: "A partir de $90/m"
     bullets: 
-      - "Tendrás acceso total y para siempre al programa Full-stack."
-      - "Puedes aplicar planes de pago de 12 o 24 meses."
+      - "Siempre hay un plan de pago disponible para que te unas a 4Geeks Academy"
+      - "Si no encuentras aquí lo que esperas, por favor contáctanos y trataremos de encontrar nuevas formas de ayudarte"     
+      - "Debes elegir si tomarás solo el programa, si también quieres obtener nuestro sistema de Career Support, o si quieres ir a por todo y registrarte con nuestra opción de Trabajo Garantizado"  
+      - "Pague solamente por el programa Full-Stack si todavía no está interesado en nuestro programa de apoyo profesional y nuestra garantía de empleo."   
     icons: 
-      - "/images/bcas.png" 
+      - "/images/partner/flevo.png" 
 
   - slug: 'venezuela-scholarship-pt'
     academies: ['caracas-venezuela']
-    recomended: true
+    recomended: false
     scholarship: "Paga de Contado"
     payment_time: "Descuento especial por pago temprano"
     price: "$1300*"
@@ -470,27 +475,31 @@ part_time:
   
   - slug: 'latam-probram-only-fs-pt'
     academies: ['montevideo-uruguay','bogota-colombia', 'costa-rica', 'mexicocity-mexico','quito-ecuador', 'panamacity-panama', 'buenosaires-argentina','lima-peru','lapaz-bolivia']
-    recomended: true
-    scholarship: "Paga solo por el programa"
-    payment_time: "Enfócate solo en tus habilidades"
+    recomended: false
+    scholarship: "Sólo el Programa Full-Stack"
+    payment_time: "Enfócate en obtener nuevas habilidades. Paga de contado."
     price: "USD $2000"
     bullets: 
-      - "Solo te concentrarás en obtener las habilidades de programación."
+      - "Siempre hay un plan de pago disponible para que te unas a 4Geeks Academy"
+      - "Si no encuentras aquí lo que esperas, por favor contáctanos y trataremos de encontrar nuevas formas de ayudarte"     
+      - "Debes elegir si tomarás solo el programa, si también quieres obtener nuestro sistema de Career Support, o si quieres ir a por todo y registrarte con nuestra opción de Trabajo Garantizado"  
+      - "Pague solamente por el programa Full-Stack si todavía no está interesado en nuestro programa de apoyo profesional y nuestra garantía de empleo."   
     icons: 
-      - "/images/bcas.png" 
+      - "/images/partner/flevo.png" 
 
   - slug: 'venezuela-financed-pt'
     academies: ['caracas-venezuela']
-    recomended: false
-    scholarship: "Financiamiento"
-    payment_time: "Hasta 12 meses"
-    price: "~$200/mes"
+    recomended: true
+    scholarship: "Sólo el Programa Full-Stack"
+    payment_time: "Enfócate en obtener nuevas habilidades. Paga de contado."
+    price: "A partir de $90/m"
     bullets: 
-      - "Paga en dos, tres o hasta 12 partes."
-      - "Asiste a una entrevista con Flevo y obtén financiamiento rápidamente."
-      - "El valor del programa se modifica con la modalidad de financiamiento."
+      - "Siempre hay un plan de pago disponible para que te unas a 4Geeks Academy"
+      - "Si no encuentras aquí lo que esperas, por favor contáctanos y trataremos de encontrar nuevas formas de ayudarte"     
+      - "Debes elegir si tomarás solo el programa, si también quieres obtener nuestro sistema de Career Support, o si quieres ir a por todo y registrarte con nuestra opción de Trabajo Garantizado"  
+      - "Pague solamente por el programa Full-Stack si todavía no está interesado en nuestro programa de apoyo profesional y nuestra garantía de empleo."   
     icons: 
-      - "/images/flevo.png"
+      - "/images/partner/flevo.png" 
 
   - slug: 'venezuela-laptop-pt'
     academies: ['caracas-venezuela']

@@ -5,12 +5,7 @@ meta_info:
   description: "Discover all coding bootcamps taught by 4Geeks Academy at Lisbon, Portugal. Sign up today!"
   image: "/images/og-preview/lisbon-portugal.es.png"
   keywords: "null"
-  redirects:
-    [
-      # "/us/coding-campus/coding-bootcamp-lisbon-portugal",
-      "/lisbon",
-      "/us/location/lisbon-portugal",
-    ]
+  redirects: []
   region: "europe"
   dialCode: "351"
   related_clusters: ["trends-and-tech"]
@@ -71,19 +66,18 @@ info_box:
   alt: ""
 images_box:
   heading: "What you should know about this location: "
-  content: >
-    Online real life classes - NOT "Go watch the video and figure it out for yourself": You have unlimited One-on-One mentoring, access to live chat support 12 hours a day, hundreds of interactive exercises and videos, real time streaming classes and our very own social network where our thousands of graduates are actively engaged around the world."
+  content: "The city has seen the rise of successful startups that have gained international recognition, such as Unbabel (AI-powered language translation), OutSystems (low-code development platform), and Talkdesk (cloud-based contact center software). Startups in Lisbon benefit from access to funding, incubators, accelerators, and networking events that foster collaboration and growth. Lisbon has a skilled and diverse talent pool, supported by universities and educational institutions offering programs in technology and entrepreneurship. The city attracts talent from both Portugal and abroad, creating a vibrant and dynamic tech workforce. Moreover, coding bootcamps and coding academies are available in Lisbon, providing opportunities for individuals to acquire coding skills and join the growing tech industry."
   images:
-    - path: "../../../static/images/locations/remote.jpeg"
-      alt: "Remote Coding Bootcamp"
-    - path: "../../../static/images/locations/madrid-3.png"
-      alt: "4Geeeks España lab"
-    - path: "../../../static/images/locations/madrid-2.png"
-      alt: "4Geeeks España lab"
+    - path: "../../../static/images/locations/lisboa-new.png"
+      alt: "Lisbon city"
+    - path: "../../../static/images/ownpeoplecoding2.jpg"
+      alt: "4Geeks Own People Coding"
+    - path: "../../../static/images/ownmancoding.jpg"
+      alt: "Remote-Coding-Bootcamp"
+    - path: "../../../static/images/locations/miami-old.jpg"
+      alt: "4Geeeks location"
     - path: "../../../static/images/locations/miami-people.jpeg"
-      alt: "4Geeeks miami day"
-    - path: "../../../static/images/locations/miami-old2.jpg"
-      alt: "4Geeeks miami lab"
+      alt: "4Geeeks lab"
 
 
 active_campaign_location_slug: "lisbon-portugal"

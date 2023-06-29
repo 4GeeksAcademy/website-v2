@@ -5,7 +5,7 @@ meta_info:
   position: 101
   image: "/images/og-preview/rome-italy.es.png"
   keywords: "null"
-  redirects: ["/es/location/roma-italia"]
+  redirects: []
   region: "europe"
   dialCode: "39"
   related_clusters: ["desarrollador-full-stack"]
@@ -62,17 +62,20 @@ info_box:
 
 images_box:
   heading: "Qué debes saber acerca de esta ubicación: "
-  content: "Cuando aprendes a programar online no solamente tienes acceso a nuestra plataforma, tambien tendrás disponible cualquiera de nuestras locaciones a nivel mundial."
+  content: >
+    El gobierno italiano ha implementado iniciativas para apoyar el emprendimiento y la innovación en Roma. Esto incluye incentivos fiscales, subvenciones y oportunidades de financiamiento para startups. Los programas respaldados por el gobierno tienen como objetivo crear un entorno favorable para que las startups prosperen y atraer inversión local e internacional.
+
+    Roma cuenta con una fuerza laboral talentosa, apoyada por universidades e instituciones educativas que ofrecen programas en tecnología, ingeniería y negocios. La ciudad atrae a profesionales y emprendedores habilidosos de diversos orígenes. Además, Roma ofrece bootcamps de codificación, talleres y programas de capacitación para equipar a las personas con las habilidades necesarias para la industria tecnológica.
   images:
-    - path: "../../../static/images/locations/remote.jpeg"
-      alt: "Coding Bootcamp Remoto"
-    - path: "../../../static/images/locations/madrid-3.png"
-      alt: "4Geeeks España lab"
-    - path: "../../../static/images/locations/madrid-2.png"
-      alt: "4Geeeks España lab"
+    - path: "../../../static/images/locations/rome-new.png"
+      alt: "Rome city"
+    - path: "../../../static/images/ownpeoplecoding2.jpg"
+      alt: "4Geeks Own People Coding"
+    - path: "../../../static/images/ownmancoding.jpg"
+      alt: "Remote-Coding-Bootcamp"
+    - path: "../../../static/images/locations/miami-old.jpg"
+      alt: "4Geeeks miami location"
     - path: "../../../static/images/locations/miami-people.jpeg"
-      alt: "4Geeeks miami day"
-    - path: "../../../static/images/locations/miami-old2.jpg"
       alt: "4Geeeks miami lab"
 
 active_campaign_location_slug: "rome-italy"

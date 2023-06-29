@@ -1,0 +1,121 @@
+meta_info:
+  slug: "bootcamp-programacion-chicago"
+  position: 1
+  title: "4Geeks Academy Chicago - Bootcamp de programación en Chicago, aprende a programar en Chicago"
+  description: "Conoce aquí todo sobre nuestro campus de bootcamp de programación en Chicago, Illinois de 4Geeks Academy"
+  image: "/images/og-preview/downtown-miami.es.png"
+  keywords: "null"
+  redirects: []
+  region: "usa-canada"
+  dialCode: "1"
+  related_clusters: ["desarrollador-full-stack"]
+
+seo_title: "Bootcamp de Programación en Chicago"
+header:
+  tagline: "4Geeks Academy en Chicago"
+  sub_header: "Todos los programas son enseñados "
+  sub_header_highlighted: "Online"
+  paragraph: ""
+  image: "../../../static/images/locations/chicago-home.png"
+  alt: "4Geeks Academy modalidad online en Chicago, Illinois"
+button_header:
+  button_text: Ver Programas
+  button_link: "#programs"
+button:
+  syllabus_button_text: "DESCARGAR SYLLABUS" # <-- this will show everywhere in the website
+  apply_button_text: "APLICAR" # <-- this will show everywhere in the website
+  syllabus_submit_text: "DESCARGAR"
+  cohort_more_details_text: "DETALLES"
+  apply_button_link: "/aplica"
+
+custom_bar:
+  active: false
+  message: 'Potencia tu carrera a través del código. <a class="customBar-link" href="/es/aplica">Aplica</a> Próximas fechas: 06/27 Full-Stack | 07/11 ML + AI!'
+  button:
+    label: "Read More"
+    path: "#" #string (can be inline path using #, relative path or absolute path)
+
+badges:
+  title: ""
+  paragraph: "4Geeks Academy es el lugar donde los desarrolladores crecen y prosperan.
+ 
+Estamos autorizados por el Departamento de Educación de Florida.
+  
+Elegido como uno de los 35 mejores bootcamps de codificación del mundo y el mejor bootcamp de codificación en Chicago según SwitchUp.
+
+4Geeks Academy ha sido reconocida como uno de los 10 mejores bootcamps de codificación en los Estados Unidos según Newsweek.
+
+Una comunidad construida para desarrolladores."
+news:
+  title: "4Geeks Academy Chicago en las noticias..."
+upcoming:
+  no_dates_message: "Actualmente no hay próximas fechas para este campus"
+  actionMessage: "Avisenme fechas disponibles"
+
+info_box:
+  heading: ""
+  address: ""
+  iframeMapUrl: ""
+  open_on_maps: "Abrir en Maps."
+  contact_heading: "Contacts"
+  phone: "(786) 416-6640"
+  email: "info@4GeeksAcademy.com"
+images_box:
+  heading: "Qué deberías saber acerca de esta ubicacion: "
+  content: |
+    Chicago es conocida por su vibrante escena tecnológica y su ecosistema de startups floreciente. La ciudad se ha convertido en un imán para innovadores y entusiastas de la tecnología en diferentes industrias. La programación se erige como un pilar vital del panorama tecnológico de Chicago, sirviendo como una habilidad esencial para el desarrollo de software e innovación digital. La demanda de conocimientos en programación sigue siendo alta, motivando el surgimiento de bootcamps de programación, academias de código y programas educativos en toda la ciudad. El compromiso incansable de Chicago para fomentar una comunidad diversa y capacitada en materia de programación ha impulsado su crecimiento como un importante centro tecnológico.
+  images:
+    - path: "../../../static/images/locations/chicago-new.png"
+      alt: "Chicago city"
+    - path: "../../../static/images/ownpeoplecoding2.jpg"
+      alt: "4Geeks Own People Coding"
+    - path: "../../../static/images/ownmancoding.jpg"
+      alt: "Remote-Coding-Bootcamp"
+    - path: "../../../static/images/locations/miami-old.jpg"
+      alt: "4Geeeks location"
+    - path: "../../../static/images/locations/miami-people.jpeg"
+      alt: "4Geeeks lab"
+
+
+
+active_campaign_location_slug: "chicago-usa"
+breathecode_location_slug: "chicago-usa"
+gdpr_compliant: false # do we need to ask for permision?
+in_person_available: true # important to accept in-person applicants
+online_available: false # important to accept online-only applicants
+
+city: "Chicago"
+name: "Chicago, USA"
+latitude: "25.760158"
+longitude: "-80.200154"
+address: ""
+phone: "+1 (786) 416-6640"
+zip_code: ""
+state: "Illinois"
+country: "USA"
+country_shortname: "us"
+socials:
+  - name: "Facebook"
+    icon: "facebook"
+    link: "https://www.facebook.com/4geeksacademy"
+  - name: "Twitter"
+    icon: "twitter"
+    link: "https://www.twitter.com/4geeksacademy"
+  - name: "Instagram"
+    icon: "instagram"
+    link: "https://www.instagram.com/4geeksacademy"
+  - name: "Meetup"
+    icon: "meetup"
+    link: "https://www.meetup.com/4geeks-academy"
+courses:
+  - "Full-Time"
+  - "Part-Time"
+flag_icon: ""
+location_map: ""
+location_phone_number: ""
+location_office_image: ""
+location_office_image2: ""
+location_office_image3: ""
+should_know: ""
+value: "Chicago"
+defaultLanguage: "us" # All lead marketing communications will arrive on this language

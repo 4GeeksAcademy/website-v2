@@ -5,7 +5,7 @@ meta_info:
   position: 101
   image: "/images/og-preview/milan-italy.es.png"
   keywords: "null"
-  redirects: ["/es/location/milan-italy"]
+  redirects: []
   region: "europe"
   dialCode: "39"
   related_clusters: ["desarrollador-full-stack"]
@@ -62,18 +62,18 @@ info_box:
 
 images_box:
   heading: "Qué debes saber acerca de esta ubicación: "
-  content: "Cuando aprendes a programar online no solamente tienes acceso a nuestra plataforma, tambien tendrás disponible cualquiera de nuestras locaciones a nivel mundial."
+  content: "Las startups en Milán son conocidas por su creatividad, ideas innovadoras y enfoque en aprovechar la tecnología para perturbar industrias tradicionales. La ciudad ha visto el surgimiento de startups exitosas en varios sectores, incluyendo la moda digital, la tecnología alimentaria, la propietaria y las ciudades inteligentes. Las startups destacadas con sede en Milán incluyen YOOX NET-A-PORTER GROUP, Bending Spoons y Moovenda. Milán cuenta con una amplia oferta de talentos, con universidades y instituciones técnicas de renombre que ofrecen programas en tecnología, ingeniería y diseño. La ciudad atrae tanto a talentos locales como internacionales, creando una fuerza laboral diversa que impulsa el sector tecnológico. Milán también ofrece bootcamps de programación, talleres y programas de capacitación para fomentar habilidades de programación y satisfacer la demanda de talento tecnológico."
   images:
-    - path: "../../../static/images/locations/remote.jpeg"
-      alt: "Coding Bootcamp Remoto"
-    - path: "../../../static/images/locations/madrid-3.png"
-      alt: "4Geeeks España lab"
-    - path: "../../../static/images/locations/madrid-2.png"
-      alt: "4Geeeks España lab"
+    - path: "../../../static/images/locations/milan-new.png"
+      alt: "Milan city"
+    - path: "../../../static/images/ownpeoplecoding2.jpg"
+      alt: "4Geeks Own People Coding"
+    - path: "../../../static/images/ownmancoding.jpg"
+      alt: "Remote-Coding-Bootcamp"
+    - path: "../../../static/images/locations/miami-old.jpg"
+      alt: "4Geeeks location"
     - path: "../../../static/images/locations/miami-people.jpeg"
-      alt: "4Geeeks miami day"
-    - path: "../../../static/images/locations/miami-old2.jpg"
-      alt: "4Geeeks miami lab"
+      alt: "4Geeeks lab"
 
 ## HEADING SECTION
 
