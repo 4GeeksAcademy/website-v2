@@ -216,6 +216,11 @@ export const apply = async (data, session) => {
       typeof _data.referral_key == "string" &&
       _data.referral_key.length > 0
     ) {
+
+      // save conversion info to GTM
+      dataLayer.push({  email: _data.email, formentry_id: _data.id, referral_key: _data.referral_key })
+
+      // save conversion info to First Promoter API
       if (window && window.fpr) {
         console.log("Triggered referral program action");
         window.fpr("referral", { email: _data.email });
