@@ -175,7 +175,7 @@ module.exports = {
     //             id
     //             slug: path
     //           }
-    //         }    
+    //         }
     //       }
     //       allClusterPage: allSitePage(
     //         filter: {
@@ -190,7 +190,7 @@ module.exports = {
     //             id
     //             slug: path
     //           }
-    //         }    
+    //         }
     //       }
     //       allBlogsPage: allSitePage(
     //         filter: {
@@ -205,7 +205,7 @@ module.exports = {
     //             id
     //             slug: path
     //           }
-    //         }    
+    //         }
     //       }
     //     }`,
     //     // The filepath and name to Index Sitemap. Defaults to '/sitemap.xml'.
