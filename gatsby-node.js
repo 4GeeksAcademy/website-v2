@@ -666,7 +666,7 @@ const buildTranslations = ({ edges }) => {
 };
 
 exports.onCreateWebpackConfig = ({
-  actions: { replaceWebpackConfig },
+  actions: { setWebpackConfig },
   getConfig,
 }) => {
   const config = getConfig();
@@ -678,5 +678,15 @@ exports.onCreateWebpackConfig = ({
 
   config.output.globalObject = "this";
 
-  replaceWebpackConfig(config);
+  setWebpackConfig({
+    ...config,
+        resolve: {
+           alias: {
+              path: require.resolve("path-browserify")
+           },
+           fallback: {
+             fs: false,
+           }
+        }
+      })
 };
