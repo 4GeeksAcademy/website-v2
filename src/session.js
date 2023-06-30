@@ -67,7 +67,7 @@ export default ({ children }) => {
   const [session, setSession] = useState(defaultSession);
   //get ip address
   useEffect(() => {
-    console.log("--- Start of useEffect in Session component  ---");
+    console.error("--- Start of useEffect in Session component  ---");
     const urlParams = new URLSearchParams(window.location.search);
     const getReferral = () => {
       let alias = ["referral_code", "ref", "referral_key", "referral"];
@@ -100,7 +100,7 @@ export default ({ children }) => {
           urlParams.get("lang") || urlParams.get("language") || undefined,
       })
       .then((_session) => {
-        console.log("initSession function resolved");
+        console.error("initSession function resolved");
         setStorage(_session);
         setSession(_session);
         setTagManaerVisitorInfo(_session);
