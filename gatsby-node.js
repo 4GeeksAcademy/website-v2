@@ -680,13 +680,13 @@ exports.onCreateWebpackConfig = ({
 
   setWebpackConfig({
     ...config,
-        resolve: {
-           alias: {
-              path: require.resolve("path-browserify")
-           },
-           fallback: {
-             fs: false,
-           }
-        }
-      })
+    resolve: {
+      alias: {
+        path: require.resolve("path-browserify"),
+      },
+      fallback: {
+        fs: false,
+      },
+    },
+  });
 };
