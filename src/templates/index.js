@@ -64,6 +64,8 @@ const Home = (props) => {
   //
   // const city = session && session.location ? "" : "Miami";
 
+  console.log("Testing console.error");
+  console.error("Testing console.error");
   React.useEffect(() => {
     console.log("HASH: ", window.location);
 
