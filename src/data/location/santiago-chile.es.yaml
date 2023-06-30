@@ -7,9 +7,7 @@ meta_info:
   keywords: "Coding Bootcamp Santiago"
   redirects:
     [
-      "/chile", 
-      "/es/inicio/santiago-de-chile", 
-      "/es/location/santiago-chile-es",
+      "/chile",
       "/es/location/santiago-de-chile-es"
     ]
   region: "latam"

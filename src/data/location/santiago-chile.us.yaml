@@ -74,7 +74,7 @@ upcoming:
 
 images_box:
   heading: "What you should know about this location: "
-  content: "Located in one the best areas of the city - the Financial District. Walking distance from the subway station. The office is open to the students 24/7 every day of the week. On Saturdays we have the famous 'Coding Weekends' where students gather to practice and code during the entire day with mentors available. Pizzas and drinks are on the house!"
+  content: "Chile is positioning itself as one of the countries with the highest digital growth in the coming years, and particularly in Santiago, the trend of bootcamps has been encouraged in recent years, including 4Geeks Academy. We have become a great study opportunity for many Chileans and foreigners who want to change their lives and learn about web development. Located a 10-minute walk from the metro station and situated in the eastern part of the city, this office is ideal for all Santiaguinos who want to become programmers. Recently renovated, with high-speed internet and unlimited access for our students."
   images:
     - path: "../../../static/images/locations/santiago-office-1.jpeg"
       alt: "Santiago Location Image"

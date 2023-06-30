@@ -5,7 +5,7 @@ meta_info:
   description: "Know here all about our coding bootcamp campus in Madrid, Spain of 4Geeks Academy"
   image: "/images/og-preview/madrid-spain.us.png"
   keywords: "Coding Bootcamp, Madrid"
-  redirects: ["/location/madrid", "/us/location/madrid-spain"]
+  redirects: []
   region: "europe"
   dialCode: "34"
   related_clusters: ["trends-and-tech"]

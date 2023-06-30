@@ -5,13 +5,7 @@ meta_info:
   description: "Discover all coding bootcamps taught by 4Geeks Academy at Munich, Germany. Sign up today!"
   image: "/images/og-preview/munchen-germany.us.png"
   keywords: "null"
-  redirects:
-    [
-      "/location/munich-germany",
-      "/us/coding-campus/coding-bootcamp-munchen-germany",
-      "/munich",
-      "/us/location/munich-germany",
-    ]
+  redirects: []
   region: "europe"
   dialCode: "49"
   related_clusters: ["trends-and-tech"]
@@ -71,19 +65,18 @@ info_box:
   alt: ""
 images_box:
   heading: "What you should know about this location: "
-  content: >
-    Online real life classes - NOT "Go watch the video and figure it out for yourself": You have unlimited One-on-One mentoring, access to live chat support 12 hours a day, hundreds of interactive exercises and videos, real time streaming classes and our very own social network where our thousands of graduates are actively engaged around the world."
+  content: "Munich has a diverse and dynamic startup ecosystem. Startups in Munich are known for their innovation and focus on cutting-edge technologies. The city has seen the emergence of successful startups in areas such as mobility solutions, fintech, healthtech, cybersecurity, and digital manufacturing. Notable Munich-based startups include Lilium (electric aviation), FlixBus (mobility services), and Celonis (process mining software). Munich boasts a highly skilled workforce, thanks to its renowned universities and research institutions. The city attracts top talent from around the world in fields such as engineering, computer science, and business. Munich also offers coding bootcamps, workshops, and training programs to nurture coding skills and support the development of tech talent."
   images:
-    - path: "../../../static/images/locations/remote.jpeg"
-      alt: "Remote Coding Bootcamp"
-    - path: "../../../static/images/locations/madrid-3.png"
-      alt: "4Geeeks España lab"
-    - path: "../../../static/images/locations/madrid-2.png"
-      alt: "4Geeeks España lab"
+    - path: "../../../static/images/locations/munich-new.png"
+      alt: "Munich city"
+    - path: "../../../static/images/ownpeoplecoding2.jpg"
+      alt: "4Geeks Own People Coding"
+    - path: "../../../static/images/ownmancoding.jpg"
+      alt: "Remote-Coding-Bootcamp"
+    - path: "../../../static/images/locations/miami-old.jpg"
+      alt: "4Geeeks location"
     - path: "../../../static/images/locations/miami-people.jpeg"
-      alt: "4Geeeks miami day"
-    - path: "../../../static/images/locations/miami-old2.jpg"
-      alt: "4Geeeks miami lab"
+      alt: "4Geeeks lab"
 
 ## HEADING SECTION
 

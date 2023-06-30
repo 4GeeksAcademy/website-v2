@@ -5,7 +5,7 @@ meta_info:
   position: 101
   image: "/images/og-preview/lisbon-portugal.es.png"
   keywords: "null"
-  redirects: ["/es/location/lisboa-portugal"]
+  redirects: []
   region: "europe"
   dialCode: "351"
   related_clusters: ["desarrollador-full-stack"]
@@ -62,18 +62,18 @@ info_box:
 
 images_box:
   heading: "Qué debes saber acerca de esta ubicación: "
-  content: "Cuando aprendes a programar online no solamente tienes acceso a nuestra plataforma, tambien tendrás disponible cualquiera de nuestras locaciones a nivel mundial."
+  content: "La ciudad ha visto el surgimiento de startups exitosas que han ganado reconocimiento internacional, como Unbabel (traducción de idiomas impulsada por inteligencia artificial), OutSystems (plataforma de desarrollo de bajo código) y Talkdesk (software de centro de contacto basado en la nube). Las startups en Lisboa se benefician del acceso a financiamiento, incubadoras, aceleradoras y eventos de networking que fomentan la colaboración y el crecimiento. Lisboa cuenta con un grupo diverso y habilidoso de talentos, respaldado por universidades e instituciones educativas que ofrecen programas en tecnología y emprendimiento. La ciudad atrae talentos tanto de Portugal como del extranjero, lo que crea una fuerza laboral tecnológica vibrante y dinámica. Además, en Lisboa hay bootcamps de programación disponibles, lo que brinda oportunidades para que las personas adquieran habilidades de codificación y se unan a la creciente industria tecnológica."
   images:
-    - path: "../../../static/images/locations/remote.jpeg"
-      alt: "Coding Bootcamp Remoto"
-    - path: "../../../static/images/locations/madrid-3.png"
-      alt: "4Geeeks España lab"
-    - path: "../../../static/images/locations/madrid-2.png"
-      alt: "4Geeeks España lab"
+    - path: "../../../static/images/locations/lisboa-new.png"
+      alt: "Lisbon city"
+    - path: "../../../static/images/ownpeoplecoding2.jpg"
+      alt: "4Geeks Own People Coding"
+    - path: "../../../static/images/ownmancoding.jpg"
+      alt: "Remote-Coding-Bootcamp"
+    - path: "../../../static/images/locations/miami-old.jpg"
+      alt: "4Geeeks location"
     - path: "../../../static/images/locations/miami-people.jpeg"
-      alt: "4Geeeks miami day"
-    - path: "../../../static/images/locations/miami-old2.jpg"
-      alt: "4Geeeks miami lab"
+      alt: "4Geeeks lab"
 
 ## HEADING SECTION
 

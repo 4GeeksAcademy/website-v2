@@ -7,7 +7,7 @@ meta_info:
   # it will not show up on the applications forms
   visibility: "visible"
   keywords: "Coding Bootcamp Campus Uruguay"
-  redirects: ["/coding-campus/bootcamp-programacion-uruguay"]
+  redirects: []
   region: "latam"
   dialCode: "598"
   related_clusters: ["desarrollador-full-stack"]
@@ -66,14 +66,18 @@ info_box:
 
 images_box:
   heading: "What you should know about this location: "
-  content: "4Geeks Uruguay es un proyecto que funciona principalmente Online, luego de un proyecto increíble desarrollado por el Banco Interamericano de Desarrollo y el Ministerio de Ciencia, Información y Telecomunicaciones."
-  images: null
-    # - path: "../../../static/images/locations/mcbo-chinita.jpeg"
-    #   alt: "mcbo-chinita"
-    # - path: "../../../static/images/locations/mcbo-loc.jpg"
-    #   alt: "4Geeeks Uruguay Location"
-    # - path: "../../../static/images/locations/mcbo-loc-2.png"
-    #   alt: "4Geeeks Uruguay lab"
+  content: "Uruguay tiene un próspero escenario tecnológico con startups innovadoras que perturban industrias tradicionales. Montevideo es un centro prominente de innovación tecnológica. El sector tecnológico abarca fintech, comercio electrónico, saludtech, edtech y agrotech. Algunas startups notables incluyen PedidosYa y dLocal. El país cuenta con un talento habilidoso y diverso con universidades que ofrecen programas tecnológicos y atrae talento local e internacional. Uruguay ofrece iniciativas de financiamiento, incubadoras de negocios, aceleradoras y eventos de networking para apoyar el crecimiento de startups. También hay bootcamps de programación y talleres disponibles para fomentar habilidades de programación y satisfacer la demanda de talento tecnológico."
+  images:
+    - path: "../../../static/images/locations/uruguay-new.jpg"
+      alt: "Uruguay city"
+    - path: "../../../static/images/ownpeoplecoding2.jpg"
+      alt: "4Geeks Own People Coding"
+    - path: "../../../static/images/ownmancoding.jpg"
+      alt: "Remote-Coding-Bootcamp"
+    - path: "../../../static/images/locations/miami-old.jpg"
+      alt: "4Geeeks location"
+    - path: "../../../static/images/locations/miami-people.jpeg"
+      alt: "4Geeeks lab"
 
 ## START FROM HERE - DON'T CHANGE ANYTHING ABOVE
 ## HEADING SECTION

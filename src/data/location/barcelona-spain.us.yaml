@@ -5,7 +5,7 @@ meta_info:
   description: "Know here all about our coding bootcamp campus in Barcelona, Spain of 4Geeks Academy"
   image: "/images/og-preview/barcelona-spain.us.png"
   keywords: "Coding Bootcamp, Barcelona"
-  redirects: ["/location/barcelona", "/us/location/barcelona-spain"]
+  redirects: []
   region: "europe"
   dialCode: "34"
   related_clusters: ["trends-and-tech"]
@@ -70,18 +70,18 @@ upcoming:
 
 images_box:
   heading: "What you should know about this location: "
-  content: "Barcelona is the city that attracts the most capital for the technological and innovative ecosystem. Learn programming and be part of the best Coding Bootcamp in Spain. Just 2 min. away from the subway, the office is located in one of Barcelona's most active areas. Open to students 12 hrs a day and with our famous 'Coding Weekends' on Saturdays where students come to receive senior coaching, hang out and eat pizza!"
+  content: "Barcelona has a dynamic tech ecosystem and a leading hub for startups. The city has witnessed a swift rise in the need for coding expertise, as technology plays an increasingly integral role in diverse industries. Coding bootcamps have emerged as a driving force behind talent cultivation in Barcelona, offering immersive and hands-on coding education to individuals eager to learn programming and make their mark in the city's flourishing tech landscape."
   images:
-    - path: "../../../static/images/locations/remote.jpeg"
-      alt: "Remote Coding Bootcamp"
-    - path: "../../../static/images/locations/madrid-3.png"
-      alt: "4Geeeks España lab"
+    - path: "../../../static/images/locations/barcelona-new.png"
+      alt: "Barcelona city"
+    - path: "../../../static/images/ownpeoplecoding2.jpg"
+      alt: "4Geeks Own People Coding"
+    - path: "../../../static/images/ownmancoding.jpg"
+      alt: "Remote-Coding-Bootcamp"
     - path: "../../../static/images/locations/madrid-2.png"
-      alt: "4Geeeks España lab"
-    - path: "../../../static/images/locations/miami-people.jpeg"
-      alt: "4Geeeks miami day"
-    - path: "../../../static/images/locations/miami-old2.jpg"
-      alt: "4Geeeks miami lab"
+      alt: "4Geeeks location"
+    - path: "../../../static/images/locations/madrid-3.png"
+      alt: "4Geeeks lab"
 
 active_campaign_location_slug: "barcelona-spain"
 breathecode_location_slug: "barcelona-spain"
