@@ -114,7 +114,7 @@ const getRegion = (shortName, regions) => {
 };
 
 export const initSession = async (locationsArray, storedSession, seed = {}) => {
-  console.log('function initSession started');
+  console.log("function initSession started");
   var v4 = null;
   var latitude = null;
   var longitude = null;
