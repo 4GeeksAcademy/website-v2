@@ -676,7 +676,7 @@ exports.onCreateWebpackConfig = ({
     use: { loader: "workerize-loader" },
   });
 
-  config.output.globalObject = "this";
+  // config.output.globalObject = "this";
 
   replaceWebpackConfig(config);
 };
