@@ -666,7 +666,7 @@ const buildTranslations = ({ edges }) => {
 };
 
 exports.onCreateWebpackConfig = ({
-  actions: { setWebpackConfig },
+  actions: { replaceWebpackConfig },
   getConfig,
 }) => {
   const config = getConfig();
@@ -678,15 +678,31 @@ exports.onCreateWebpackConfig = ({
 
   config.output.globalObject = "this";
 
-  setWebpackConfig({
-    ...config,
-    resolve: {
-      alias: {
-        path: require.resolve("path-browserify"),
-      },
-      fallback: {
-        fs: false,
-      },
-    },
-  });
+  replaceWebpackConfig(config);
 };
+
+// exports.onCreateWebpackConfig = ({
+//   actions: { setWebpackConfig },
+//   getConfig,
+// }) => {
+//   const config = getConfig();
+
+//   config.module.rules.push({
+//     test: /\.worker\.js$/,
+//     use: { loader: "workerize-loader" },
+//   });
+
+//   config.output.globalObject = "this";
+
+//   setWebpackConfig({
+//     ...config,
+//     resolve: {
+//       alias: {
+//         path: require.resolve("path-browserify"),
+//       },
+//       fallback: {
+//         fs: false,
+//       },
+//     },
+//   });
+// };
