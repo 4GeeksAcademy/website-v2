@@ -10,7 +10,7 @@ meta_info:
 seo_title: "level up as a developer"
 header:
   title: $20+ Millions in scholarships
-  paragraph: Solving access to coding education. The next recipient can be you.
+  paragraph: Solving access to coding education. You can be the next to receive a boost to your future!
 
 button:
   btn_label: "I want to Contribute"
@@ -25,13 +25,13 @@ two_column_left:
     text: "Why are we doing this?"
     font_size: ["40px", "40px", "40px", "40px", "40px"]
   sub_heading:
-    text: "62% of the people applying to 4Geeks are rejected due to financial reasons"
+    text: "68% of the people applying to 4Geeks are rejected due to financial reasons"
     font_size: ["16px", "16px", "16px", "16px", "16px"]
   content:
     font_size: ["16px"]
-    text: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec,
+    text: When we launched 4Geeks back in 2015, we were sure about three main things: a. we anted to have a top quality school where people can get thecoding skills to improve their future. b. We wanted them to be able to get a job after completing the program. c. We wanted to xcreate a strategy where more people can get access to top quality education: hence our tuition and partnerships are all focused on making it possible."
   button:
-      text: "JOIN OUR ALLIES"
+      text: "JOIN US AS A PARTNER"
       color: "white"
       background: "blue"
       hover_color: "white"
@@ -40,6 +40,6 @@ two_column_left:
 form:
   title: "Become a 4Geeks Partner"
   paragraph: "Contact us and we'll connect you directly to the right candidates who are graduating from 4Geeks Academy every day.
-  Our graduates succeed at their own businesses, startups and big companies alike.
+  Our graduates are talented, commited and have gone throiugh many stages of our metholodology: not only hard, skills, or soft, but also, interviews, tech assesments, working in projects and many more features that allow them to get ready for a new chance in our comopany.
 
   Our programs prepare students to work and thrive at any tech and forward-thinking organization."
