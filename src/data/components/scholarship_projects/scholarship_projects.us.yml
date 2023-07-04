@@ -11,7 +11,7 @@ projects:
   - name: Costa Rica-CINDE and 4Geeks Project
     image:
       alt: typing
-      src: '../../../../static/images/Happy-People-Landing-4Geeks-ES.jpg'
+      src: '../../../../static/images/costa rica.jpg'
     description: The Interamerican Development Bank, together with the Ministry for Science, Technology, Telecom and Innovation of Costa Rica, launched a program to invest in Costa Rica talent and help around 250 students to become software developers with skills to get a better job after graduation. 
     details:
       cost: $1.5mm
@@ -31,28 +31,29 @@ projects:
       - name: Cultura Costa Rica
         link: https://www.culturacr.net/4geeks-academy-ofrecera-becas-del-100-para-aprender-programacion/
     pdf: https://storage.googleapis.com/4geeks-academy-website/PDF%20and%20Docs/Costa%20Rica%20CINDE%20and%204Geeks%20(1).pdf
-  - name: Second project
+  - name: UTEC and 4Geeks
     image:
       alt: typing
-      src: '../../../../static/images/Happy-People-Landing-4Geeks-ES.jpg'
-    description: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium.
+      src: '../../../../static/images/montevideo-uruguay.us.jpg'
+    description: This project is the consequence of a combined effort etween UTEC, IDB and 4Geeks to train Uruguayans in Coding and promote the tech driven talent growth in the country. 
     details:
-      cost: 125k
-      geeks_benefited: 32
+      cost: 175k
+      geeks_benefited: 60
     institutions:
-      - name: This is a name
-        logo: '../../../../static/images/Happy-People-Landing-4Geeks-ES.jpg'
-      - name: This is a name
-        logo: '../../../../static/images/Happy-People-Landing-4Geeks-ES.jpg'
-      - name: This is a name
-        logo: '../../../../static/images/Happy-People-Landing-4Geeks-ES.jpg'
+      - name: Interamerican Development Bank
+        logo: https://www.iadb.org/en
+      - name: UTEC
+        logo: https://utec.edu.uy/en/
+      - name: 4Geeks Academy
+        logo: https://www.4geeksacademy.com
     press:
-      - name: This is a name
-        link: https://www.elnacional.com
-      - name: This is a name
-        link: https://www.elnacional.com
-      - name: This is a name
-        link: https://www.elnacional.com
+      - name: El País
+        link: https://www.elpais.com.uy/vida-actual/utec-organiza-el-primer-bootcamp-para-formar-desarrolladores-en-diez-semanas
+      - name: San José Ahora
+        link: https://www.sanjoseahora.com.uy/2022/03/31/utec-san-jose-brindara-un-nuevo-bootcamp-sobre-machine-learning-e-inteligencia-artificial/
+      - name: Marca País
+        link: https://marcapaisuruguay.gub.uy/utec-organiza-el-primer-bootcamp-para-formar-desarrolladores-en-diez-semanas/
+     pdf: https://storage.googleapis.com/4geeks-academy-website/PDF%20and%20Docs/Uruguay%20Projects.pdf
   # - name:
   #   image:
   #     src:
