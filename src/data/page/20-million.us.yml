@@ -29,7 +29,7 @@ two_column_left:
     font_size: ["16px", "16px", "16px", "16px", "16px"]
   content:
     font_size: ["16px"]
-    text: When we launched 4Geeks back in 2015, we were sure about three main things: a. we anted to have a top quality school where people can get thecoding skills to improve their future. b. We wanted them to be able to get a job after completing the program. c. We wanted to xcreate a strategy where more people can get access to top quality education: hence our tuition and partnerships are all focused on making it possible."
+    text: When we launched 4Geeks back in 2015, we were sure about three main things: a. we wanted to have a top quality school where people can get the coding skills to improve their future. b. We wanted them to be able to get a job after completing the program. c. We wanted to create a strategy where more people can get access to top quality education: hence our tuition and partnerships are all focused on making it possible."
   button:
       text: "JOIN US AS A PARTNER"
       color: "white"
