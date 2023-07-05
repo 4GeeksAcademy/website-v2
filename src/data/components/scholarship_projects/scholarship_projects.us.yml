@@ -1,10 +1,10 @@
 title: Funds in excecution
 description: We are going to show you what we have been working during the last few years. We can keep on building something like these together!
 project_name: Costa Rica-CINDE and 4Geeks Project
-project_details: The Interamerican Development Bank, together with the Ministry for Science, Technology, Telecom and Innovation of Costa Rica, launched a program to invest in Costa Rica talent and help around 250 students to become software developers with skills to get a better job after graduation. 
-total_cost: $1.5 mm
-geeks_benefited: 212
-institutions: IDB, MICITT (Costa Rica), and 4Geeks. 
+project_details: Project details
+total_cost: Total Cost
+geeks_benefited: Geeks benefited
+institutions: Institutions that contibuted
 press: Press references
 see_project: See full project
 projects:
@@ -76,4 +76,4 @@ projects:
         link: https://www.sanjoseahora.com.uy/2022/03/31/utec-san-jose-brindara-un-nuevo-bootcamp-sobre-machine-learning-e-inteligencia-artificial/
       - name: Marca País
         link: https://marcapaisuruguay.gub.uy/utec-organiza-el-primer-bootcamp-para-formar-desarrolladores-en-diez-semanas/
-     pdf: https://storage.googleapis.com/4geeks-academy-website/PDF%20and%20Docs/Uruguay%20Projects.pdf
+    pdf: https://storage.googleapis.com/4geeks-academy-website/PDF%20and%20Docs/Uruguay%20Projects.pdf
