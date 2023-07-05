@@ -8,6 +8,30 @@ institutions: IDB, MICITT (Costa Rica), and 4Geeks.
 press: Press references
 see_project: See full project
 projects:
+  - name: United Way Miami and 4Geeks Academy
+    image:
+      alt: typing
+      src: '../../../../static/images/costa rica.jpg'
+    description: The Interamerican Development Bank, together with the Ministry for Science, Technology, Telecom and Innovation of Costa Rica, launched a program to invest in Costa Rica talent and help around 250 students to become software developers with skills to get a better job after graduation. 
+    details:
+      cost: $1.5mm
+      geeks_benefited: 212
+    institutions:
+      - name: Interamerican Development Bank
+        logo: https://www.iadb.org/en
+      - name: MICITT
+        logo: https://www.micitt.go.cr
+      - name: 4Geeks Academy
+        logo: https://www.4geeksacademy.com
+    press:
+      - name: Revista Summa
+        link: https://revistasumma.com/costa-rica-y-bid-lanzan-becas-para-aprender-programacion/
+      - name: IDB Press
+        link: https://blogs.iadb.org/innovacion/es/costa-rica-bootcamps-acelerar-la-creacion-de-talento-digital/
+      - name: Cultura Costa Rica
+        link: https://www.culturacr.net/4geeks-academy-ofrecera-becas-del-100-para-aprender-programacion/
+    pdf: https://storage.googleapis.com/4geeks-academy-website/PDF%20and%20Docs/Costa%20Rica%20CINDE%20and%204Geeks%20(1).pdf
+projects:
   - name: Costa Rica-CINDE and 4Geeks Project
     image:
       alt: typing
