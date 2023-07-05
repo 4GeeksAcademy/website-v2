@@ -680,29 +680,3 @@ exports.onCreateWebpackConfig = ({
 
   replaceWebpackConfig(config);
 };
-
-// exports.onCreateWebpackConfig = ({
-//   actions: { setWebpackConfig },
-//   getConfig,
-// }) => {
-//   const config = getConfig();
-
-//   config.module.rules.push({
-//     test: /\.worker\.js$/,
-//     use: { loader: "workerize-loader" },
-//   });
-
-//   config.output.globalObject = "this";
-
-//   setWebpackConfig({
-//     ...config,
-//     resolve: {
-//       alias: {
-//         path: require.resolve("path-browserify"),
-//       },
-//       fallback: {
-//         fs: false,
-//       },
-//     },
-//   });
-// };

@@ -3,12 +3,6 @@ const matter = require("gray-matter");
 const POST_NODE_TYPE = "Post";
 const logger = require("../src/utils/log");
 
-const {
-  GATSBY_BREATHECODE_HOST,
-  GATSBY_BLOG_ACADEMY_TOKEN,
-  GATSBY_BLOG_ACADEMY_ID,
-} = process.env;
-
 exports.sourceNodes = async (
   { actions, createNodeId, createContentDigest },
   config
