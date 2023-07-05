@@ -83,7 +83,6 @@
     "gatsby-transformer-yaml": "^5.11.0",
     "lazysizes": "^5.2.2",
     "node-fetch": "^2.6.1",
-    "path-browserify": "^1.0.1",
     "prismjs": "^1.25.0",
     "prop-types": "^15.7.2",
     "react": "^18.2.0",
