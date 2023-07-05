@@ -57,7 +57,7 @@ projects:
   - name: UTEC and 4Geeks
     image:
       alt: typing
-      src: '../../../../static/images/montevideo-uruguay.us.jpg'
+      src: '../../../../static/images/montevideo-uruguay.png'
     description: Este proyecto es la consecuencia de un esfuerzo combinado entre UTEC, BID y 4Geeks para capacitar a uruguayos en programación y promover el crecimiento del talento impulsado por la tecnología en el país.
     details:
       cost: 175k
