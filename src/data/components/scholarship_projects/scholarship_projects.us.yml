@@ -31,7 +31,6 @@ projects:
       - name: Cultura Costa Rica
         link: https://www.culturacr.net/4geeks-academy-ofrecera-becas-del-100-para-aprender-programacion/
     pdf: https://storage.googleapis.com/4geeks-academy-website/PDF%20and%20Docs/Costa%20Rica%20CINDE%20and%204Geeks%20(1).pdf
-projects:
   - name: Costa Rica-CINDE and 4Geeks Project
     image:
       alt: typing
@@ -78,25 +77,3 @@ projects:
       - name: Marca País
         link: https://marcapaisuruguay.gub.uy/utec-organiza-el-primer-bootcamp-para-formar-desarrolladores-en-diez-semanas/
      pdf: https://storage.googleapis.com/4geeks-academy-website/PDF%20and%20Docs/Uruguay%20Projects.pdf
-  # - name:
-  #   image:
-  #     src:
-  #     alt:
-  #   description:
-  #   details:
-  #     cost:
-  #     geeks_benefited:
-  #   institutions:
-  #     - name:
-  #       logo:
-  #     - name:
-  #       logo:
-  #     - name:
-  #       logo:
-  #   press:
-  #     - name:
-  #       link:
-  #     - name:
-  #       link:
-  #     - name:
-  #       link:
