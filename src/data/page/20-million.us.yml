@@ -1,45 +1,61 @@
 meta_info:
   slug: 20-million
-  title: "Courses and programs taught at 4Geeks Academy"
-  description: "If"
+  title: Courses and programs taught at 4Geeks Academy
+  description: If
   visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   image: "/images/programs-heading.png"
   keywords: "Programs at 4Geeks Academy"
   redirects: ["/20-million"]
 
-seo_title: "level up as a developer"
+seo_title: Level up as a developer
 header:
   title: $20+ Millions in scholarships
-  paragraph: Solving access to coding education. The next recipient can be you.
+  paragraph: Solving access to coding education. You can be the next to receive a boost to your future!
 
 button:
   btn_label: "I want to Contribute"
-  apply_button_link: "/us/apply"
+  apply_button_link: /us/apply
 
 two_column_left:
-  proportions: [6, 6]
+  proportions:
+    - 6
+    - 6
   image:
-    style: '{ "backgroundSize": "contain" }'
-    src: "/images/landing/20-million-column.png"
+  style: '{ "backgroundSize": "contain" }'
+  src: "../../../../static/images/landing/20-million-column.png"
   heading:
     text: "Why are we doing this?"
-    font_size: ["40px", "40px", "40px", "40px", "40px"]
+    font_size:
+      - 40px
+      - 40px
+      - 40px
+      - 40px
+      - 40px
   sub_heading:
-    text: "62% of the people applying to 4Geeks are rejected due to financial reasons"
-    font_size: ["16px", "16px", "16px", "16px", "16px"]
+    text: 68% of the people applying to 4Geeks are rejected due to financial reasons.
+    font_size:
+      - 16px
+      - 16px
+      - 16px
+      - 16px
+      - 16px
   content:
-    font_size: ["16px"]
-    text: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec,
+    font_size:
+      - 16px
+    text: |
+      When we launched 4Geeks back in 2015, we were sure about three main things:
+      - We wanted to have a top quality school where people can get coding skills to improve their future.
+      - We wanted them to be able to get a job after completing the program.
+      - We wanted to create a strategy where more people can get access to top quality education: hence our tuition and partnerships are all focused on making it possible.
   button:
-      text: "JOIN OUR ALLIES"
-      color: "white"
-      background: "blue"
-      hover_color: "white"
-      path: "#top"
-
+    text: JOIN US AS A PARTNER
+    color: white
+    background: blue
+    hover_color: white
+    path: "#top"
 form:
-  title: "Become a 4Geeks Partner"
-  paragraph: "Contact us and we'll connect you directly to the right candidates who are graduating from 4Geeks Academy every day.
-  Our graduates succeed at their own businesses, startups and big companies alike.
-
-  Our programs prepare students to work and thrive at any tech and forward-thinking organization."
+  title: Become a 4Geeks Partner
+  paragraph: |
+    Contact us and we'll connect you directly to the right candidates who are graduating from 4Geeks Academy every day.
+    - Our graduates are talented, committed and have gone through many stages of our methodology: not only hard, skills, or soft, but also, interviews, tech assesments, working in projects and many more features that allow them to get ready for a new chance in our comopany.
+    - Our programs prepare students to work and thrive at any tech and forward-thinking organization.
