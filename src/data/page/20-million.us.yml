@@ -29,7 +29,7 @@ two_column_left:
     font_size: ["16px", "16px", "16px", "16px", "16px"]
   content:
     font_size: ["16px"]
-    text: When we launched 4Geeks back in 2015, we were sure about three main things: a. we wanted to have a top quality school where people can get the coding skills to improve their future. b. We wanted them to be able to get a job after completing the program. c. We wanted to create a strategy where more people can get access to top quality education: hence our tuition and partnerships are all focused on making it possible."
+    text: When we launched 4Geeks back in 2015, we were sure about three main things: a. We wanted to have a top quality school where people can get coding skills to improve their future. b. We wanted them to be able to get a job after completing the program. c. We wanted to create a strategy where more people can get access to top quality education: hence our tuition and partnerships are all focused on making it possible."
   button:
       text: "JOIN US AS A PARTNER"
       color: "white"
@@ -40,6 +40,6 @@ two_column_left:
 form:
   title: "Become a 4Geeks Partner"
   paragraph: "Contact us and we'll connect you directly to the right candidates who are graduating from 4Geeks Academy every day.
-  Our graduates are talented, commited and have gone throiugh many stages of our metholodology: not only hard, skills, or soft, but also, interviews, tech assesments, working in projects and many more features that allow them to get ready for a new chance in our comopany.
+  Our graduates are talented, committed and have gone through many stages of our methodology: not only hard, skills, or soft, but also, interviews, tech assesments, working in projects and many more features that allow them to get ready for a new chance in our comopany.
 
   Our programs prepare students to work and thrive at any tech and forward-thinking organization."
