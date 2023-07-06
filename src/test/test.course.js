@@ -41,7 +41,11 @@ walk(`${__dirname}/../data/course`, async (err, files) => {
 
     let _slug = await _path.substr(_path.lastIndexOf("/") + 1).split(".")[0];
     slugs.push(_slug);
-    if(!_slug || _slug == "") fail("Empty slug. Error while trying to retreibve the course slug from the path: "+_path)
+    if (!_slug || _slug == "")
+      fail(
+        "Empty slug. Error while trying to retreibve the course slug from the path: " +
+          _path
+      );
 
     if (slugs.length === _files.length) {
       let uniq_slug = slugs.filter(
