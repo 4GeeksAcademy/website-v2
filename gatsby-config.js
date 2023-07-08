@@ -205,8 +205,13 @@ module.exports = {
           allSitePage: {
             sitemap: `page-sitemap`,
             serializer: (edges) => {
-              return edges.filter(({ node }) => node.visibility ? (!node.visibility.includes('unlisted') || !node.visibility.includes('hidden')) : true)
-            }
+              return edges.filter(({ node }) =>
+                node.visibility
+                  ? !node.visibility.includes("unlisted") ||
+                    !node.visibility.includes("hidden")
+                  : true
+              );
+            },
           },
           allClusterPage: {
             sitemap: `category-sitemap`,
