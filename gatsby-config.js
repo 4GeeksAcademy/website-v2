@@ -153,78 +153,70 @@ module.exports = {
     "gatsby-plugin-zeit-now",
     "gatsby-remark-reading-time",
     // 'gatsby-plugin-meta-redirect',
-    // {
-    //   resolve: `gatsby-plugin-advanced-sitemap`,
-    //   options: {
-    //     exclude: [`/admin`, `/tags`, `/edit`, `/landings`],
-    //     // output: "/custom-sitemap.xml",
-    //     // 1 query for each data type
-    //     query: `
-    //     {
-    //       allSitePage(
-    //         filter: {
-    //           context: {
-    //             visibility: {nin: ["hidden", "unlisted"]}
-    //             filePath: { regex: "/^((?!\/data\/blog\/).)*$/" }
-    //           }
-    //           path: { regex: "/^((?!\/blog).)*$/" }
-    //         }
-    //       ) {
-    //         edges{
-    //           node {
-    //             id
-    //             slug: path
-    //           }
-    //         }
-    //       }
-    //       allClusterPage: allSitePage(
-    //         filter: {
-    //           context: {
-    //             visibility: {nin: ["hidden", "unlisted"]}
-    //           }
-    //           path: { regex: "/.*(\/blog).*/" }
-    //         }
-    //       ) {
-    //         edges{
-    //           node {
-    //             id
-    //             slug: path
-    //           }
-    //         }
-    //       }
-    //       allBlogsPage: allSitePage(
-    //         filter: {
-    //           context: {
-    //             visibility: {nin: ["hidden", "unlisted"]}
-    //             filePath: { regex: "/.*(\/data\/blog\/).*/" }
-    //           }
-    //         }
-    //       ) {
-    //         edges{
-    //           node {
-    //             id
-    //             slug: path
-    //           }
-    //         }
-    //       }
-    //     }`,
-    //     // The filepath and name to Index Sitemap. Defaults to '/sitemap.xml'.
-    //     mapping: {
-    //       // Each data type can be mapped to a predefined sitemap
-    //       // Routes can be grouped in one of: posts, tags, authors, pages, or a custom name
-    //       // The default sitemap - if none is passed - will be pages
-    //       allSitePage: {
-    //         sitemap: `page-sitemap`,
-    //       },
-    //       allClusterPage: {
-    //         sitemap: `category-sitemap`,
-    //       },
-    //       allBlogsPage: {
-    //         sitemap: `post-sitemap`,
-    //       },
-    //     },
-    //   },
-    // },
+    {
+      resolve: `gatsby-plugin-advanced-sitemap`,
+      options: {
+        exclude: [`/admin`, `/tags`, `/edit`, `/landings`],
+        // output: "/custom-sitemap.xml",
+        // 1 query for each data type
+        query: `
+        {
+          allSitePage(
+            filter: {
+              path: { regex: "/^((?!\/blog).)*$/" }
+            }
+          ) {
+            edges{
+              node {
+                id
+                pageContext
+                slug: path
+              }
+            }
+          }
+          allClusterPage: allSitePage(
+            filter: {
+              path: { regex: "/.*(\/blog).*/" }
+            }
+          ) {
+            edges{
+              node {
+                id
+                pageContext
+                slug: path
+              }
+            }
+          }
+          allBlogsPage: allSitePage{
+            edges{
+              node {
+                id
+                pageContext
+                slug: path
+              }
+            }
+          }
+        }`,
+        // The filepath and name to Index Sitemap. Defaults to '/sitemap.xml'.
+        mapping: {
+          // Each data type can be mapped to a predefined sitemap
+          // Routes can be grouped in one of: posts, tags, authors, pages, or a custom name
+          // The default sitemap - if none is passed - will be pages
+          allSitePage: {
+            sitemap: `page-sitemap`,
+            serializer: (edges) => {
+              return edges.filter(({ node }) => node.visibility ? (!node.visibility.includes('unlisted') || !node.visibility.includes('hidden')) : true)
+            }
+          },
+          allClusterPage: {
+            sitemap: `category-sitemap`,
+          },
+          allBlogsPage: {
+            sitemap: `post-sitemap`,
+          },
+        },
+      },
+    },
     {
       resolve: "gatsby-plugin-robots-txt",
       options: {
