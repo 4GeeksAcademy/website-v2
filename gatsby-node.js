@@ -377,6 +377,7 @@ const createEntityPagesfromYml = async (
         }.js`
       ),
       context: {
+        ...node.meta_info,
         ...node.fields,
         ..._extraContext,
         translations: translations[node.fields.defaultTemplate],

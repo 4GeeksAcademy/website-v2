@@ -206,9 +206,8 @@ module.exports = {
             sitemap: `page-sitemap`,
             serializer: (edges) => {
               return edges.filter(({ node }) =>
-                node.visibility
-                  ? !node.visibility.includes("unlisted") ||
-                    !node.visibility.includes("hidden")
+                node.pageContext?.visibility
+                  ? !["unlisted", "hidden"].includes(node.pageContext.visibility)
                   : true
               );
             },
