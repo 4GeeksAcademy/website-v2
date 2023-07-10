@@ -11,7 +11,7 @@ projects:
   - name: United Way Miami y 4Geeks Academy
     image:
       alt: typing
-      src: '../../../../static/images/costa-rica.png'
+      src: '../../../../static/images/locations/campuses-header-costa-rica.png'
     description: El Banco Interamericano de Desarrollo, junto con el Ministerio de Ciencia, Tecnología, Telecomunicaciones e Innovación de Costa Rica, lanzó un programa para invertir en el talento de Costa Rica y ayudar a unos 250 estudiantes a convertirse en desarrolladores de software con habilidades para obtener un mejor trabajo después de su graduación.
     details:
       cost: 1.5mm
@@ -34,7 +34,7 @@ projects:
   - name: Proyecto Costa Rica-CINDE y 4Geeks
     image:
       alt: costa-rica-cinde
-      src: '../../../../static/images/costa-rica.png'
+      src: '../../../../static/images/locations/campuses-header-costa-rica.png'
     description: El Banco Interamericano de Desarrollo, junto con el Ministerio de Ciencia, Tecnología, Telecomunicaciones e Innovación de Costa Rica, lanzó un programa para invertir en el talento de Costa Rica y ayudar a unos 250 estudiantes a convertirse en desarrolladores de software con habilidades para obtener un mejor trabajo después de su graduación.
     details:
       cost: 1.5mm
@@ -57,7 +57,7 @@ projects:
   - name: UTEC and 4Geeks
     image:
       alt: typing
-      src: '../../../../static/images/montevideo-uruguay.png'
+      src: '../../../../static/images/locations/campuses-header-uruguay.png'
     description: Este proyecto es la consecuencia de un esfuerzo combinado entre UTEC, BID y 4Geeks para capacitar a uruguayos en programación y promover el crecimiento del talento impulsado por la tecnología en el país.
     details:
       cost: 175k
