@@ -221,7 +221,7 @@ module.exports = {
             sitemap: `post-sitemap`,
             serializer: (edges) => {
               return edges.filter(({ node }) =>
-                node.pageContext.filePath.includes("/data/blog/")
+                node.pageContext?.filePath?.includes("/data/blog/")
               );
             },
           },
