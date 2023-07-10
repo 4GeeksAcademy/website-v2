@@ -29,7 +29,7 @@ cases:
     description: An entrepreneur with a passion for technology is now focusing on the dev side of their endeavour. 
     achievement: She has hired and coordinates a dev team!
   - name: Jorge Martín Coimbra
-    img: "../../../../static/images/students/coimbra.png
+    img: "../../../../static/images/students/coimbra.png"
     status: Graduated
     country:
       iso: uy
