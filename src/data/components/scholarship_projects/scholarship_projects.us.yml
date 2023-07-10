@@ -8,7 +8,7 @@ institutions: Institutions that contibuted
 press: Press references
 see_project: See full project
 projects:
-  - name: United Way Miami and 4Geeks Academy
+  - name: Costa Rica - CINDE & IDB Project 
     image:
       alt: typing
       src: '../../../../static/images/costa rica.jpg'
@@ -31,28 +31,28 @@ projects:
       - name: Cultura Costa Rica
         link: https://www.culturacr.net/4geeks-academy-ofrecera-becas-del-100-para-aprender-programacion/
     pdf: https://storage.googleapis.com/4geeks-academy-website/PDF%20and%20Docs/Costa%20Rica%20CINDE%20and%204Geeks%20(1).pdf
-  - name: Costa Rica-CINDE and 4Geeks Project
+  - name: United Way Miami Workforce Project
     image:
       alt: typing
       src: '../../../../static/images/costa rica.jpg'
-    description: The Interamerican Development Bank, together with the Ministry for Science, Technology, Telecom and Innovation of Costa Rica, launched a program to invest in Costa Rica talent and help around 250 students to become software developers with skills to get a better job after graduation. 
+    description: United Way Miami, in partnership with 4Geeks Academy, has launched the Workforce Project offering top Coding education and Professional growth to help you shape your personal goals. This is the result of a multi-million gift by philanthropist, Mackenzie Scott. 
     details:
-      cost: $1.5mm
-      geeks_benefited: 212
+      cost: $1mm
+      geeks_benefited: 100
     institutions:
-      - name: Interamerican Development Bank
-        logo: https://www.iadb.org/en
-      - name: MICITT
-        logo: https://www.micitt.go.cr
+      - name: United Way Miami
+        logo: https://unitedwaymiami.org
       - name: 4Geeks Academy
-        logo: https://www.4geeksacademy.com
+        logo: https://4geeksacademy.com/us/20-million
+      - name: Social Finance
+        logo: https://socialfinance.org
     press:
-      - name: Revista Summa
-        link: https://revistasumma.com/costa-rica-y-bid-lanzan-becas-para-aprender-programacion/
-      - name: IDB Press
-        link: https://blogs.iadb.org/innovacion/es/costa-rica-bootcamps-acelerar-la-creacion-de-talento-digital/
-      - name: Cultura Costa Rica
-        link: https://www.culturacr.net/4geeks-academy-ofrecera-becas-del-100-para-aprender-programacion/
+      - name: Miami Herald
+        logo: https://www.miamiherald.com/news/business/article263937731.html
+      - name: Refresh Miami
+        logo: https://refreshmiami.com/miami-based-coding-school-4geeks-is-breaking-down-the-barriers-to-becoming-a-software-developer/
+      - name: Social Finance
+        logo: https://socialfinance.org/work/united-way-miami/
     pdf: https://storage.googleapis.com/4geeks-academy-website/PDF%20and%20Docs/Costa%20Rica%20CINDE%20and%204Geeks%20(1).pdf
   - name: UTEC and 4Geeks
     image:
