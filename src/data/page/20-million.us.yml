@@ -1,18 +1,18 @@
 ---
 meta_info:
   slug: 20-million
-  title: Courses and programs taught at 4Geeks Academy
+  title: Coding Programs offered by 4Geeks Academy
   description: If
   visibility: visible
   image: /images/programs-heading.png
   keywords: Programs at 4Geeks Academy
   redirects:
     - /20-million
-seo_title: level up as a developer
+seo_title: Level up as a developer
 header:
   title: $20+ Millions in scholarships
-  paragraph: Solving access to coding education. You can be the next to receive a
-    boost to your future!
+  paragraph: Solving access to coding education. The next recipient can be you.
+
 button:
   btn_label: I want to Contribute
   apply_button_link: /us/apply
@@ -32,7 +32,7 @@ two_column_left:
       - 40px
       - 40px
   sub_heading:
-    text: 68% of the people applying to 4Geeks are rejected due to financial reasons
+    text: 68% of the people applying to 4Geeks are rejected due to financial reasons. We started to fix that in the last few years. Nowadays, 80% of our students get -at least- some financial help and tuition discounts thanks to our partnered/sponsored programs.
     font_size:
       - 16px
       - 16px
@@ -43,14 +43,10 @@ two_column_left:
     font_size:
       - 16px
     text: >
-      When we launched 4Geeks back in 2015, we were sure about three main
-      things:
-
-      - We wanted to have a top quality school where people can get coding skills to improve their future.
-
-      - We wanted them to be able to get a job after completing the program.
-
-      - We wanted to create a strategy where more people can get access to top quality education: hence our tuition and partnerships are all focused on making it possible.
+      When we launched 4Geeks back in 2015, we were sure about three main things:
+        - We wanted to have a top quality school where people can get coding skills to improve their future.
+        - We wanted them to be able to get a job after completing the program.
+        - We wanted to create a strategy where more people can get access to top quality education: hence our tuition and partnerships are all focused on making it possible.
   button:
     text: JOIN US AS A PARTNER
     color: white
@@ -60,8 +56,8 @@ two_column_left:
 form:
   title: Become a 4Geeks Partner
   paragraph: >
-    "Contact us and we'll connect you directly to the right candidates
-    who are graduating from 4Geeks Academy every day."
+    Contact us and we'll connect you directly to the right candidates
+    who are graduating from 4Geeks Academy every day.
 
     - Our graduates are talented, committed and have gone through many stages of our methodology: not only hard, skills, or soft, but also, interviews, tech assesments, working in projects and many more features that allow them to get ready for a new chance in our comopany.
 
