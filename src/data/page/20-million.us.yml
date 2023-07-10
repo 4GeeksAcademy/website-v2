@@ -8,10 +8,11 @@ meta_info:
   keywords: Programs at 4Geeks Academy
   redirects:
     - /20-million
-seo_title: level up as a developer
+seo_title: Level up as a developer
 header:
   title: $20+ Millions in scholarships
-  paragraph: Solving access to coding education. You can be the next to join our sponsored programs.
+  paragraph: Solving access to coding education. The next recipient can be you.
+
 button:
   btn_label: I want to Contribute
   apply_button_link: /us/apply
@@ -55,8 +56,8 @@ two_column_left:
 form:
   title: Become a 4Geeks Partner
   paragraph: >
-    "Contact us and we'll connect you directly to the right candidates
-    who are graduating from 4Geeks Academy every day."
+    Contact us and we'll connect you directly to the right candidates
+    who are graduating from 4Geeks Academy every day.
 
     - Our graduates are talented, committed and have gone through many stages of our methodology: not only hard, skills, or soft, but also, interviews, tech assesments, working in projects and many more features that allow them to get ready for a new chance in our comopany.
 
