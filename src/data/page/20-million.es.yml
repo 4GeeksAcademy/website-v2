@@ -17,30 +17,46 @@ button:
   apply_button_link: "/es/aplica"
 
 two_column_left:
-  proportions: [6, 6]
-  background: "rgba(255, 183, 24, 0.2)"
+  proportions:
+    - 6
+    - 6
   image:
-    style: '{ "backgroundSize": "contain" }'
-    src: "/images/landing/20-million-column.png"
+  style: '{ "backgroundSize": "contain" }'
+  src: "../../../../static/images/landing/20-million-column.png"
   heading:
-    text: "¿Por qué estamos haciendo esto"
-    font_size: ["40px", "40px", "40px", "40px", "40px"]
+    text: "¿Por qué lo hacemos?"
+    font_size:
+      - 40px
+      - 40px
+      - 40px
+      - 40px
+      - 40px
   sub_heading:
-    text: "El 62% de las personas que solicitan 4Geeks son rechazadas por razones financieras"
-    font_size: ["16px", "16px", "16px", "16px", "16px"]
+    text: 68% de las personas que aplican a 4Geeks son rechazados debido a razones financieras.
+    font_size:
+      - 16px
+      - 16px
+      - 16px
+      - 16px
+      - 16px
   content:
-    font_size: ["16px"]
-    text: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec,
+    font_size:
+      - 16px
+    text: |
+      Cuando lanzamos 4Geeks de vuelta en 2015, estabamos seguros de 3 cosas principales:
+      - Queriamos tener una escuela de máxima calidad donde la gente pudiera obtener habilidades de programación para mejorar su futuro.
+      - Queriamos que fuesen capaces de conseguir un trabajo después de completar el programa.
+      - Queriamos crear una estrategia donde más gente pudiera obtener acceso a educación de alta calidad: Por lo que nuestra matrícula y alianzas son todas enfocadas en hacerlo posible.
+
   button:
-      text: "UNETE A NUESTROS ALIADOS"
-      color: "white"
-      background: "blue"
-      hover_color: "white"
-      path: "#top"
-
+    text: ÚNETE COMO PARTNER
+    color: white
+    background: blue
+    hover_color: white
+    path: "#top"
 form:
-  title: "Conviértete en Partner de 4Geeks"
-  paragraph: "Contáctenos y lo conectaremos directamente con los candidatos adecuados que se gradúan de 4Geeks Academy todos los días.
-  Nuestros graduados tienen éxito en sus propios negocios, startups y grandes empresas por igual.
-
-  Nuestros programas preparan a los estudiantes para trabajar y prosperar en cualquier organización tecnológica y con visión de futuro."
+  title: Conviertete en un 4Geeks Partner
+  paragraph: |
+    Contáctanos y te conectaremos directamente con los candidatos ideales que se están graduando diariamente de 4Geeks Academy.
+    - Nuestros graduados son talentosos, comprometidos y han pasado por muchas etapas de nuestra metodología: no solo habilidades duras, técnicas o blandas, sino también entrevistas, evaluaciones tecnológicas, trabajo en proyectos y muchas más características que les permiten estar listos para una nueva oportunidad en nuestra compañía.
+    - Nuestros programas preparan a los estudiantes para trabajar y prosperar en cualquier organización tecnológica y de mentalidad prospectiva.
