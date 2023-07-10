@@ -156,7 +156,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-advanced-sitemap`,
       options: {
-        exclude: [`/admin`, `/tags`, `/edit`, `/landings`, `/offline-plugin-app-shell-fallback`],
+        exclude: [
+          `/admin`,
+          `/tags`,
+          `/edit`,
+          `/landings`,
+          `/offline-plugin-app-shell-fallback`,
+        ],
         // output: "/custom-sitemap.xml",
         // 1 query for each data type
         query: `
