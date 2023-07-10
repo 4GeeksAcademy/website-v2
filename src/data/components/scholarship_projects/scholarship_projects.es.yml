@@ -18,9 +18,9 @@ projects:
       geeks_benefited: 212
     institutions:
       - name: United Way Miami 
-        logo: https://unitedwaymiami.org/united-way-workforce-project/  
+        logo: '../../../static/images/landing/header_united_way.png'  
       - name: 4Geeks Academy
-        logo: https://www.4geeksacademy.com
+        logo: '../../../../static/images/4G_logo_negro.png'
     press:
       - name: Miami Herald
         link: https://www.miamiherald.com/news/business/article263937731.html
@@ -62,11 +62,11 @@ projects:
       geeks_benefited: 60
     institutions:
       - name: Interamerican Development Bank
-        logo: https://www.iadb.org/en
+        logo: '../../../../static/images/partner/iadb.jpg'
       - name: UTEC
-        logo: https://utec.edu.uy/en/
+        logo: '../../../../static/images/partner/UTEC.png'
       - name: 4Geeks Academy
-        logo: https://www.4geeksacademy.com
+        logo: '../../../../static/images/4G_logo_negro.png'
     press:
       - name: El País
         link: https://www.elpais.com.uy/vida-actual/utec-organiza-el-primer-bootcamp-para-formar-desarrolladores-en-diez-semanas
@@ -75,25 +75,3 @@ projects:
       - name: Marca País
         link: https://marcapaisuruguay.gub.uy/utec-organiza-el-primer-bootcamp-para-formar-desarrolladores-en-diez-semanas/
     pdf: https://storage.googleapis.com/4geeks-academy-website/PDF%20and%20Docs/Uruguay%20Projects.pdf
-  # - name:
-  #   image:
-  #     src:
-  #     alt:
-  #   description:
-  #   details:
-  #     cost:
-  #     geeks_benefited:
-  #   institutions:
-  #     - name:
-  #       logo:
-  #     - name:
-  #       logo:
-  #     - name:
-  #       logo:
-  #   press:
-  #     - name:
-  #       link:
-  #     - name:
-  #       link:
-  #     - name:
-  #       link:

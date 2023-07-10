@@ -18,11 +18,11 @@ projects:
       geeks_benefited: 212
     institutions:
       - name: Interamerican Development Bank
-        logo: https://www.iadb.org/en
+        logo: '../../../../static/images/idb-logo.png'
       - name: MICITT
-        logo: https://www.micitt.go.cr
+        logo: '../../../../static/images/micitt-logo.jpg'
       - name: 4Geeks Academy
-        logo: https://www.4geeksacademy.com
+        logo: '../../../../static/images/4G_logo_negro.png'
     press:
       - name: Revista Summa
         link: https://revistasumma.com/costa-rica-y-bid-lanzan-becas-para-aprender-programacion/
@@ -41,9 +41,9 @@ projects:
       geeks_benefited: 100
     institutions:
       - name: United Way Miami 
-        logo: https://unitedwaymiami.org/united-way-workforce-project/  
+        logo: '../../../static/images/landing/header_united_way.png'  
       - name: 4Geeks Academy
-        logo: https://www.4geeksacademy.com
+        logo: '../../../../static/images/4G_logo_negro.png'
     press:
       - name: Miami Herald
         link: https://www.miamiherald.com/news/business/article263937731.html
@@ -62,11 +62,11 @@ projects:
       geeks_benefited: 60
     institutions:
       - name: Interamerican Development Bank
-        logo: https://www.iadb.org/en
+        logo: '../../../../static/images/idb-logo.png'
       - name: UTEC
-        logo: https://utec.edu.uy/en/
+        logo: '../../../../static/images/partner/UTEC.png'
       - name: 4Geeks Academy
-        logo: https://www.4geeksacademy.com
+        logo: '../../../../static/images/4G_logo_negro.png'
     press:
       - name: El País
         link: https://www.elpais.com.uy/vida-actual/utec-organiza-el-primer-bootcamp-para-formar-desarrolladores-en-diez-semanas
