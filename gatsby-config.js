@@ -206,12 +206,13 @@ module.exports = {
             sitemap: `page-sitemap`,
             serializer: (edges) => {
               return edges.filter(({ node }) => {
-                if (node.pageContext.filePath?.includes("/data/blog/")) return false;
+                if (node.pageContext.filePath?.includes("/data/blog/"))
+                  return false;
                 return node.pageContext?.visibility
                   ? !["unlisted", "hidden"].includes(
                       node.pageContext.visibility
                     )
-                  : true
+                  : true;
               });
             },
           },
