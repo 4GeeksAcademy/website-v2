@@ -209,7 +209,7 @@ module.exports = {
                 node.pageContext?.visibility
                   ? !["unlisted", "hidden"].includes(
                       node.pageContext.visibility
-                    )
+                    ) && !node.pageContext.filePath?.includes("/data/blog/")
                   : true
               );
             },
