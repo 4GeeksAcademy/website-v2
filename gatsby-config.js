@@ -207,7 +207,9 @@ module.exports = {
             serializer: (edges) => {
               return edges.filter(({ node }) =>
                 node.pageContext?.visibility
-                  ? !["unlisted", "hidden"].includes(node.pageContext.visibility)
+                  ? !["unlisted", "hidden"].includes(
+                      node.pageContext.visibility
+                    )
                   : true
               );
             },
