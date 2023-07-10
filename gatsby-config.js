@@ -219,6 +219,11 @@ module.exports = {
           },
           allBlogsPage: {
             sitemap: `post-sitemap`,
+            serializer: (edges) => {
+              return edges.filter(({ node }) =>
+                node.pageContext.filePath.includes("/data/blog/")
+              );
+            },
           },
         },
       },
