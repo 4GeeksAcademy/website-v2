@@ -287,4 +287,4 @@ self.onmessage = async (message) => {
   const { locationsArray, storedSession, seed } = message.data;
   const _session = await initSession(locationsArray, storedSession, seed);
   self.postMessage(_session);
-}
+};

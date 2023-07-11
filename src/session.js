@@ -100,9 +100,9 @@ export default ({ children }) => {
         utm_test: urlParams.get("utm_test") || undefined,
         language:
           urlParams.get("lang") || urlParams.get("language") || undefined,
-      }
+      },
     };
-    const worker = new Worker(new URL('./worker.js', import.meta.url));
+    const worker = new Worker(new URL("./worker.js", import.meta.url));
 
     worker.postMessage(message);
     worker.onmessage = (e) => {
