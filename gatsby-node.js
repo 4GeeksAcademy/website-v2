@@ -666,18 +666,22 @@ const buildTranslations = ({ edges }) => {
   return translations;
 };
 
-exports.onCreateWebpackConfig = ({
-  actions: { replaceWebpackConfig },
-  getConfig,
-}) => {
-  const config = getConfig();
+// This section was commented during the migration from GatsbyV2 to GatsbyV5
+// Now the worker is being loded with the webpack 5 native method
 
-  config.module.rules.push({
-    test: /\.worker\.js$/,
-    use: { loader: "workerize-loader" },
-  });
+// exports.onCreateWebpackConfig = ({
+//   actions: { replaceWebpackConfig },
+//   getConfig,
+// }) => {
+//   const config = getConfig();
 
-  // config.output.globalObject = "this";
+//   config.module.rules.push({
+//     test: /\.worker\.js$/,
+//     use: { loader: "workerize-loader" },
+//   });
 
-  replaceWebpackConfig(config);
-};
+//   //This line was commented during the migration from GatsbyV2 to GatsbyV5 because it caused the build product to fail
+//   // config.output.globalObject = "this";
+
+//   replaceWebpackConfig(config);
+// };

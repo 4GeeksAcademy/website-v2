@@ -113,8 +113,8 @@ const getRegion = (shortName, regions) => {
   return region.length === 1 ? region[0] : null;
 };
 
-export const initSession = async (locationsArray, storedSession, seed = {}) => {
-  console.error("function initSession started");
+const initSession = async (locationsArray, storedSession, seed = {}) => {
+  console.log("function initSession started");
   var v4 = null;
   var latitude = null;
   var longitude = null;
@@ -282,3 +282,9 @@ export const initSession = async (locationsArray, storedSession, seed = {}) => {
   };
   return _session;
 };
+
+self.onmessage = async (message) => {
+  const { locationsArray, storedSession, seed } = message.data;
+  const _session = await initSession(locationsArray, storedSession, seed);
+  self.postMessage(_session);
+}

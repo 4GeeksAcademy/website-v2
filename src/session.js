@@ -10,7 +10,7 @@ import {
   locByLanguage,
 } from "./actions";
 
-import ActionsWorker from "./actions.worker.js";
+// import ActionsWorker from "./actions.worker.js";
 export const SessionContext = createContext(defaultSession);
 
 export default ({ children }) => {
@@ -67,7 +67,7 @@ export default ({ children }) => {
   const [session, setSession] = useState(defaultSession);
   //get ip address
   useEffect(() => {
-    console.error("--- Start of useEffect in Session component  ---");
+    console.log("--- Start of useEffect in Session component  ---");
     const urlParams = new URLSearchParams(window.location.search);
     const getReferral = () => {
       let alias = ["referral_code", "ref", "referral_key", "referral"];
@@ -78,8 +78,10 @@ export default ({ children }) => {
       }
       return undefined;
     };
-    ActionsWorker()
-      .initSession(data.allLocationYaml, getStorage("academy_session"), {
+    const message = {
+      locationsArray: data.allLocationYaml,
+      storedSession: getStorage("academy_session"),
+      seed: {
         navigator: JSON.stringify(window.navigator),
         location:
           urlParams.get("location") ||
@@ -98,15 +100,18 @@ export default ({ children }) => {
         utm_test: urlParams.get("utm_test") || undefined,
         language:
           urlParams.get("lang") || urlParams.get("language") || undefined,
-      })
-      .then((_session) => {
-        console.error("initSession function resolved");
-        setStorage(_session);
-        setSession(_session);
-        setTagManaerVisitorInfo(_session);
-        dayjs.locale(_session.language == "us" ? "en" : _session.language);
-      })
-      .catch((error) => console.error("Error initilizing session", error));
+      }
+    };
+    const worker = new Worker(new URL('./worker.js', import.meta.url));
+
+    worker.postMessage(message);
+    worker.onmessage = (e) => {
+      const _session = e.data;
+      setStorage(_session);
+      setSession(_session);
+      setTagManaerVisitorInfo(_session);
+      dayjs.locale(_session.language == "us" ? "en" : _session.language);
+    };
   }, []);
 
   return (
