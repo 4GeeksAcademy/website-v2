@@ -20,9 +20,13 @@ awards_list:
     title: "Florida Department of Education"
     paragraph: "The United States of America ensures education quality thru federal deparments of education, being certified means we have to anually commit and comply with federal and national regulations to ensure academy success and renewed license."
 
-  - image: "../../../static/images/badges/switchup.png"
-    title: "Best Bootcamp according to Switchup 2021"
+  - image: "../../../static/images/badges/switchup-badge-2023.png"
+    title: "Best Bootcamp according to Switchup 2023"
     paragraph: "Not only in Florida, but over each of our campus 4Geeks is constantly keeping a ~5 start rating that makes us one of the top bootcamp in the world"
+
+  - image: "../../../static/images/awards/premios_tecnologia_sigloxxi.png"
+    title: "Winners of the Premios Tecnologia Siglo XXI mention 'Formación'"
+    paragraph: "Our campus in Spain was awarded with the Premio Tecnología Siglo XXI on the 'Formation' category in 2023"
 
   - image: "../../../static/images/badges/newsweek.png"
     title: "Top Coding School according to Newsweek"

@@ -26,8 +26,8 @@ form:
   # posible fields: "first_name", "last_name", "full_name", "phone", "email"
   # always the first_name, email and phone will be mandatory if added.
   fields: ["full_name", "phone", "email"]
-  heading: "Join our award-winning Coding Program"
-  motivation: "Fill out the form and get the Schiolarship towards your tuition at 4Geeks. Only 85 seats remain available"
+  heading: "Join our Award-winning Coding Program"
+  motivation: "Fill out the form and get started!"
   button_label: Get more info Now
   redirect: null #you can redirect to another url or entirely diffrent website
 
@@ -39,7 +39,7 @@ apply_schollarship: # form that is displayed at the end of the landing
 # jumbotron on the top (cannot be commented out)
 header_data:
   background: "#FFF1D1"
-  tagline: Learn to code and get a $4,000 Scholarship 
+  tagline: Get a $4,000 Scholarship and Learn to Code for Less than 6K!
   badge: "../../../static/images/badges/Course-Report-Badge-2023.png"
   image_filter: brightness(0.3)
 
@@ -49,11 +49,11 @@ features:
   #                                         up   left down  right
   styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
   bullets:
-   - Pay less than $6k and get a Job paying more than 60k a year! 
-   - No previous experience or coding skills required
-   - Part-time focused. No need to stop your life
-   - Enrollment Open. Only less than 85 seats remaining. Available Nationwide
-   - Call now 786-416-6640 and say that you want to get the Clark Scholarship
+   - Available nationwide  
+   - Fill out the contact form or call 786-416-6640
+   - Invest less than $6k and gain access to jobs paying more than 60k a year!
+   - Enjoy the full benefits of our bootcamp
+   - Rolling admission. Apply now!
   
 short_badges:
   - name: "Premios Excelencia Educativa"
@@ -116,13 +116,13 @@ iconogram:
   position: 2
   icons:
   - icon: "touch" 
-    title: Request Info
+    title: REQUEST INFO
   - icon: "receive_mail"
-    title: Receive an email with details
+    title: RECEIVE AN E-MAIL WITH THE DETAILS
   - icon: "talk"
-    title: Talk to Admissions
+    title: TALK TO ADMISSIONS
   - icon: "terminal"
-    title: Learn to Code
+    title: LEARN TO CODE
 
 
 why_python:
@@ -169,7 +169,7 @@ components:
       text: "How it works"
       font_size: ["30px", "30px", "30px", "30px", "30px"]
     sub_heading:
-      text: "Thanks to the partnership with Clark University, 4Geeks Academy is now offering the possibility to join our Coding program with a scholarship equal to $4000. You just need to consider the following:"
+      text: "Techboost is a national workforce development program funded by the Department of Labor that is run in alliance with Clark University and selected IT education providers. 4Geeks Academy has been chosen as a partner in the program, making it possible to offer a limited number of $4K scholarships to our bootcamp. We couldn't be prouder to be part of this important initiative!"
       font_size: ["18px", "18px", "18px", "18px", "18px"]
     button:
       text: "Apply here"

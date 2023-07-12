@@ -19,9 +19,13 @@ awards_list:
     title: "Departamento de Education de EEUU"
     paragraph: "Los Estados Unidos de America se aseguran de la calidad de la educación a través de los departamentos de educación a nivel federal. Contar con la certificación significa que estamos comprometidos a cumplir con todas las regulaciones nacionales y estatales y a ser supervisados y auditados anualmente para asegurar el éxito de la academia."
 
-  - image: "../../../static/images/badges/switchup.png"
-    title: "Best Bootcamp for Switchup 2021"
+  - image: "../../../static/images/badges/switchup-badge-2023.png"
+    title: "Best Bootcamp for Switchup 2023"
     paragraph: "No solo en Florida, sino tambien en todos nuestros campus 4Geeks estamos constantemente recibiendo reconocimientos de nuestros alumnos permitiendonos posicionarnos como uno de los top bootcamps a nivel mundial."
+
+  - image: "../../../static/images/awards/premios_tecnologia_sigloxxi.png"
+    title: "Ganadores de los Premios Tecnologia Siglo XXI mención 'Formación'"
+    paragraph: "Nuestro campus de España fue reconocido como ganador de los Premios Tecnología Siglo XXI en la mención Formación en 2023"
 
   - image: "../../../static/images/badges/exelencia-educativa-es.png"
     title: "Mejor Programa Educativo para la Inserción Profesional"

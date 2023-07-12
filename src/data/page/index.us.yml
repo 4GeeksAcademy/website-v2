@@ -32,12 +32,12 @@ button:
   button_link: "#programs"
 ## BADGES SECTION /components/Badges
 badges:
-  paragraph: "This is the place to boost your career by learning to code. We are very proud of our programs and methodology to train developers in just a few months and help them boost their professional careers."
+  paragraph: "Benefit from an expert-designed coding education. Join a recognized academy with prestigious awards and prizes, and kickstart your coding career!"
 
 ## CHOOSE YOUR PROGRAM /components/ChooseYourProgram
 choose_program:
   title: Choose your program
-  paragraph: Follow the path towards a life-changing experience. Become the developer that builds the next culture-shifting web app.
+  paragraph: Find the path that’s right for you
 
 ## 4GEEKS VS OTHERS SECTION
 geeks_vs_others:
@@ -66,10 +66,10 @@ join_geeks:
 ## LOCATIONS SECTION
 locations:
   heading: "LOCATIONS: ONLINE OR IN-PERSON"
-  sub_heading: "Whether you are joining Online or in-person, you will have real and instant interaction with your teacher, mentor and classmates, to work on projects, exercises, materials, lectures, and everything you need to become a skillful Professional."
+  sub_heading: "Whether you decide to enroll in our online or in-person program, you'll enjoy real-time, live interactions with our teachers, mentors, and fellow classmates. Engage in dynamic lectures, hands-on projects, and interactive exercises alongside your cohort, and gain all the knowledge you need to become a highly skilled professional."
   title_image: "Online, Hybrid or In-person. "
   sub_title_image: | 
-    <p>Live classroom environment, unlimited 1-1 <br /> menthorships, cohort based and real time.</p>
+    <p>Immerse in a live classroom environment for cohort-based learning in real-time. <br /> Enjoy unlimited 1-1 mentorships and personalized career guidance.</p>
   image: "/images/locations/locations_image.png"
   choose: "Choose a region"
   regions:
@@ -91,6 +91,6 @@ alumni_header:
 
 ## TESTIMONIAL SECTION
 testimonial_header:
-  heading: "86% get hired in tech jobs after graduation."
+  heading: "81% got hired within 6 months of graduation"
   button_text: "See all testimonials"
   button_link: ""

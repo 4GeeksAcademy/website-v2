@@ -11,7 +11,7 @@ meta_info:
 
   template: "landing_nonav" # <--- choose your landing template
   redirects: # <--- URL redirections to avoid 404 errors
-    ["/landing/alianza-banco-ripley"]
+    []
 
   # Set a particular course or location to the landing page
   # this UTM fields will be also included in the CRM contact
@@ -68,8 +68,8 @@ short_badges:
     alt: "Top Coding Bootcamps Newsweek"
   - name: "Switchup"
     url: ""
-    image: "../../../static/images/badges/reviews.png"
-    alt: "Best coding bootcamp Switchup 2021" 
+    image: "../../../static/images/badges/switchup-badge-2023.png"
+    alt: "Best coding bootcamp Switchup 2023" 
 
 follow_bar:
   position: "top" # top, bottom, hidden
@@ -80,7 +80,7 @@ follow_bar:
     font_size: ["25px", "25px", "25px", "18px", "4.3vw"]
   button:
     text: "Escribir por WhatsApp"
-    path: "https://api.whatsapp.com/send?phone=584242443542&text=Hola+4Geeks&utm_source=TECNO-FINANCIERA&u[…]aign=TECNO-FINANCIERA&utm_id=TECNO-FINANCIERA&utm_term=TECNO-FINANCIERA&utm_content=TECNO-FINANCIERA"
+    path: "https://api.whatsapp.com/send?phone=584241711725&text=Hola+4Geeks&utm_source=TECNO-FINANCIERA&u[…]aign=TECNO-FINANCIERA&utm_id=TECNO-FINANCIERA&utm_term=TECNO-FINANCIERA&utm_content=TECNO-FINANCIERA"
   phone:
     text: ""
 
@@ -140,41 +140,22 @@ components:
       style: '{ "backgroundSize": "contain" }'
       src: "/images/ownpeoplecoding2.jpg"
     heading:
-      text: "La academia de programación número 1 en el mundo"
+      text: "4Geeks Academy & Tecnología Financiera: ¡La alianza que impulsará tu vida profesional!"
       font_size: ["30px", "30px", "30px", "30px", "30px"]
     sub_heading:
-      text: "Con más de 8 años de experiencia, contamos con presencia en diferentes partes del mundo, como Estados Unidos, Europa y Latinoamérica, además de ser acreedores de diferentes premios a nivel mundial."
+      text: "Si formas parte de Tecnología Financiera ahora también podrás ser uno de nuestros geeks.
+
+En 4Geeks Academy sabemos lo que buscas y queremos darte todas las herramientas necesarias para que puedas aprender a programar y logres cambiar tu vida por completo."
       font_size: ["16px", "16px", "16px", "16px", "16px"]
     content:
       font_size: ["16px"]
       text: |
-        <p><span style="font-weight: bold;">En nuestra academia te enseñaremos habilidades relevantes para convertirte en el mejor Full-Stack Developer y que logres explotar tu potencial al máximo, todo esto ¡SIN EXPERIENCIA PREVIA!</p>
+        <p><span style="font-weight: bold;">Aprovecha esta alianza y forma parte de la evolución tecnológica a nivel mundial ¡Comienza HOY!</p>
 
     
 badges:
   position: 3
   heading: "4Geeks Academy cuenta con premios y reconocimientos de validan su excelencia"
-
-choose_your_program:
-  position: 6
-  title: Nuestras Modalidades
-  paragraph: Programa Full Stack Developer en Modalidad Part Time y Full Time
-  programs:
-  - title: "Part Time"
-    sub_title: "18 semanas"
-    icon: "fullstack"
-    description: |
-      De cero a tener tu primer trabajo como Full Stack Developer, con una duración de 18 semanas, con clases 3 veces por semana, compatible con horario laboral o de estudios. 
-    text_link: Obtener más información
-    link: "#top" # moves to start position
-    
-  - title: "Full Time"
-    sub_title: "9 semanas"
-    icon: "fullstack"
-    description: |
-      Programa intensivo de 9 semanas, con clases de lunes a viernes durante todo el día, para vivir una experiencia inmersiva en el mundo del código.
-    text_link: Obtener más información
-    link: "#top"
 
 why_4geeks:
   position: 7
