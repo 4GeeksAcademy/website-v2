@@ -11,7 +11,7 @@ cases:
     description: Loretta joined in 2022 and graduated in 2023. She already found a job within the next few months and has fulfilled the whole circle of skills+job that we all want to complete!
     achievement: She got a 45% increase in her salary
   - name: Rich Akers
-    img: "../../../../static/images/students/akers.jpeg"
+    img: "../../../../static/images/students/Akers.jpeg"
     status: Graduated
     country:
       iso: us

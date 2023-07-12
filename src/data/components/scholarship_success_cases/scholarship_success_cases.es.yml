@@ -2,57 +2,40 @@ title: Casos de éxito
 contributor: Colaborador
 
 cases:
-  - name: Name Surname
-    img: "../../../../static/images/testimonials/luisa-glum.jpg"
+  - name: Loretta Thompson
+    img: "../../../../static/images/students/ttaLoretta.jpeg"
+    status: Graduada
+    country:
+      iso: us
+      name: Estados Unidos
+    contributor: United Way Miami
+    description: Loretta se unió en 2022 y se graduó en 2023. ¡Ya encontró un trabajo en los próximos meses y ha completado todo el ciclo de habilidades + empleo que todos queremos completar!
+    achievement: Consiguió un aumento de 45% de su salario
+  - name: Rich Akers
+    img: "../../../../static/images/students/Akers.jpeg"
     status: Graduado
     country:
-      iso: ve
-      name: Venezuela
+      iso: us
+      name: Estados Unidos
     contributor: Clark University
-    description: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean m
-    achievement: Obtuvo un aumento del 45% en su salario
-  - name: Name Surname
-    img: "../../../../static/images/testimonials/luisa-glum.jpg"
+    description: Richard es un gran desarrollador que acaba de transicionar desde otra área y ahora trabaja como desarrollador web en el área de tecnología.
+    achievement: Consiguió un aumento de 30% de su salario
+  - name: MaiLinh Tran
+    img: "../../../../static/images/students/MaiLinh.png"
+    status: Graduada
+    country:
+      iso: us
+      name: Estados Unidos
+    contributor: Clark University
+    description: Una emprendedora con pasión por la tecnología ahora se centra en el lado del desarrollo de su empresa.
+    achievement: Ella ha contratado y lidera un equipo de desarrollo
+  - name: Jorge Martín Coimbra
+    img: "../../../../static/images/students/coimbra.png"
     status: Graduado
     country:
-      iso: ve
-      name: Venezuela
-    contributor: Clark University
-    description: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean m
-    achievement: Obtuvo un aumento del 45% en su salario
-  - name: Name Surname
-    img: "../../../../static/images/testimonials/luisa-glum.jpg"
-    status: Graduado
-    country:
-      iso: ve
-      name: Venezuela
-    contributor: Clark University
-    description: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean m
-    achievement: Obtuvo un aumento del 45% en su salario
-  - name: Name Surname
-    img: "../../../../static/images/testimonials/luisa-glum.jpg"
-    status: Graduado
-    country:
-      iso: ve
-      name: Venezuela
-    contributor: Clark University
-    description: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean m
-    achievement: Obtuvo un aumento del 45% en su salario
-  - name: Name Surname
-    img: "../../../../static/images/testimonials/luisa-glum.jpg"
-    status: Graduado
-    country:
-      iso: ve
-      name: Venezuela
-    contributor: Clark University
-    description: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean m
-    achievement: Obtuvo un aumento del 45% en su salario
-  - name: Name Surname
-    img: "../../../../static/images/testimonials/luisa-glum.jpg"
-    status: Graduado
-    country:
-      iso: ve
-      name: Venezuela
-    contributor: Clark University
-    description: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean m
-    achievement: Obtuvo un aumento del 45% en su salario
+      iso: uy
+      name: Uruguay
+    contributor: UTEC
+    description: Martín se unió al primer programa que lanzamos junto con UTECn e IDB. Consiguió un trabajo mejor remunerado, una carrera que le apasiona y una nueva vida profesional.
+    achievement: Consiguió un aumento del 100% de su salario
+  

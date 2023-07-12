@@ -11,18 +11,18 @@ projects:
   - name: Costa Rica-CINDE and 4Geeks Project
     image:
       alt: typing
-      src: '../../../../static/images/locations/campuses-header-costa-rica.png'
+      src: "../../../../static/images/locations/campuses-header-costa-rica.png"
     description: The Interamerican Development Bank, together with the Ministry for Science, Technology, Telecom and Innovation of Costa Rica, launched a program to invest in Costa Rica talent and help around 250 students to become software developers with skills to get a better job after graduation. 
     details:
       cost: $1.5mm
       geeks_benefited: 212
     institutions:
       - name: Interamerican Development Bank
-        logo: '../../../../static/images/idb-logo.png'
+        logo: "../../../../static/images/idb-logo.png"
       - name: MICITT
-        logo: '../../../../static/images/micitt-logo.jpg'
+        logo: "../../../../static/images/micitt-logo.jpg"
       - name: 4Geeks Academy
-        logo: '../../../../static/images/4G_logo_negro.png'
+        logo: "../../../../static/images/4G_logo_negro.png"
     press:
       - name: Revista Summa
         link: https://revistasumma.com/costa-rica-y-bid-lanzan-becas-para-aprender-programacion/
@@ -34,16 +34,16 @@ projects:
   - name: United Way Miami and 4Geeks Academy
     image:
       alt: typing
-      src: '../../../../static/images/locations/campuses-header-costa-rica.png'
+      src: "../../../../static/images/united-way-workforce-project.png"
     description: United Way Miami, in partnership with 4Geeks Academy, has launched the Workforce Project offering education and training to help you shape your personal goals. This dynamic program is made possible as a direct result of a multi-million gift by philanthropist, Mackenzie Scott. Through the United Way Miami Workforce Project, you will receive coding training through our partners 4Geeks Academy to provide you with the tools to make career moves that create economic opportunities to help you and your family. If you qualify for the Workforce project*, all upfront costs of training are waived, so you can focus on your future. Best of all you will have the flexibility of enrolling for in-person or remote programs and courses are offered full-time or part-time to meet the demands of your schedule.
     details:
       cost: $1mm
       geeks_benefited: 100
     institutions:
       - name: United Way Miami 
-        logo: '../../../static/images/landing/header_united_way.png'  
+        logo: "../../../static/images/landing/header_united_way.png"  
       - name: 4Geeks Academy
-        logo: '../../../../static/images/4G_logo_negro.png'
+        logo: "../../../../static/images/4G_logo_negro.png"
     press:
       - name: Miami Herald
         link: https://www.miamiherald.com/news/business/article263937731.html
@@ -62,11 +62,11 @@ projects:
       geeks_benefited: 60
     institutions:
       - name: Interamerican Development Bank
-        logo: '../../../../static/images/idb-logo.png'
+        logo: "../../../../static/images/idb-logo.png"
       - name: UTEC
-        logo: '../../../../static/images/partner/UTEC.png'
+        logo: "../../../../static/images/partner/UTEC.png"
       - name: 4Geeks Academy
-        logo: '../../../../static/images/4G_logo_negro.png'
+        logo: "../../../../static/images/4G_logo_negro.png"
     press:
       - name: El País
         link: https://www.elpais.com.uy/vida-actual/utec-organiza-el-primer-bootcamp-para-formar-desarrolladores-en-diez-semanas
