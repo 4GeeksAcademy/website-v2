@@ -11,7 +11,7 @@ import TestimonialsCarrousel from "../Testimonials";
 import With4Geeks from "../With4Geeks";
 // import WhyPython from '../WhyPython';
 import AlumniProjects from "../AlumniProjects";
-import SuccessStories  from "../SuccessStories";
+import SuccessStories from "../SuccessStories";
 import GeeksVsOthers from "../GeeksVsOthers";
 import GeeksInfo from "../GeeksInfo";
 import ProgramDetails from "../ProgramDetails";
@@ -909,7 +909,10 @@ export const landingSections = {
       m_sm="0"
       p_xs="0"
     >
-      <SuccessStories lang={pageContext.lang} filterIndexes={yml.filter_indexes} />
+      <SuccessStories
+        lang={pageContext.lang}
+        filterIndexes={yml.filter_indexes}
+      />
     </Div>
   ),
 

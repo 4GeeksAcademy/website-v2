@@ -177,11 +177,9 @@ const SuccessStoriescomponent = ({ filterIndexes, lang }) => {
   const [testimonials, setTestimonials] = useState([]);
 
   useEffect(() => {
-    filteredData.forEach(
-      (testim, ind, arr) => {
-        arr[ind].isExpanded = false;
-      }
-    );
+    filteredData.forEach((testim, ind, arr) => {
+      arr[ind].isExpanded = false;
+    });
     if (filterIndexes) {
       setTestimonials([
         ...filteredData.filter(
@@ -191,11 +189,7 @@ const SuccessStoriescomponent = ({ filterIndexes, lang }) => {
         ),
       ]);
     } else {
-      setTestimonials([
-        ...filteredData.filter(
-          (f) => f.hidden == false
-        ),
-      ]);
+      setTestimonials([...filteredData.filter((f) => f.hidden == false)]);
     }
   }, []);
   return (

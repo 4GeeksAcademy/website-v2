@@ -1,9 +1,6 @@
 import React from "react";
 import { graphql } from "gatsby";
-import {
-  Header,
-  Div,
-} from "../components/Sections";
+import { Header, Div } from "../components/Sections";
 import { Colors } from "../components/Styling";
 import SuccessStoriesComponent from "../components/SuccessStories";
 import BaseRender from "./_baseLayout";
