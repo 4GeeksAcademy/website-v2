@@ -69,8 +69,8 @@ cases:
     status: Graduated
     country:
       iso: cr
-      name: Costa Rica
-    contributor: CINDE-BID 
+      name: Uruguay
+    contributor: UTEC-BID
     description: Laura is a just extraordinary. From a little town in uruguay with no experience in Coding, she is now a woman head of household, an Instructor and a Program Coordinator.
     achievement: She got a 120% increase in her salary 
  - name: Leandro Matonte
@@ -99,3 +99,12 @@ cases:
       name: Uruguay
     contributor: UTEC-BID
     description: Natia is a philosopher and a software developer. Currently working as a QA Engineer of a huge and successful International firm. 
+- name: Luis Larraburo
+    img: "../../../../static/images/students/LuisLarraburo.jpeg"
+    status: Graduated
+    country:
+      iso: cr
+      name: Costa Rica
+    contributor: CINDE-BID
+    description: Luis is a person who likes challenges and becomes a better version while working on them. Coming to the program without any  previous experience, He is now a software developer working on a tech firm in Costa Rica. provides quality everytime that he is working. 
+    achievement: He got a 50% increase in his salary
