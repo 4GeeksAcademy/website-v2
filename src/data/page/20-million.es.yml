@@ -21,8 +21,8 @@ two_column_left:
     - 6
     - 6
   image:
-  style: '{ "backgroundSize": "contain" }'
-  src: /images/landing/20-million-column.png
+    style: '{ "backgroundSize": "contain" }'
+    src: /images/landing/20-million-column.png
   heading:
     text: ¿Por qué lo hacemos?
     font_size:
