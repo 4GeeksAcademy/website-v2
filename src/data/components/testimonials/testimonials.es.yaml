@@ -39,6 +39,10 @@ testimonials:
     student_thumb: "../../../../static/images/testimonials/florencia-viera.jpeg"
     linkedin_image: "../../../../static/images/linkedin.png"
   - student_name: "Azul Botaya"
+    slug: "azu-bota"
+    country:
+      iso: ve
+      name: Venezuela
     featured: false
     highlighted: false
     testimonial_date: ""
@@ -61,6 +65,10 @@ testimonials:
       No tenía que renunciar a nada. 
       Se que hice un gran grupo y que además podré volver siempre con ellos.
   - student_name: "Naila Kaliyeva"
+    slug: "nai-kali"
+    country:
+      iso: ve
+      name: Venezuela
     featured: false
     highlighted: false
     testimonial_date: ""
@@ -95,6 +103,10 @@ testimonials:
   #     for a coding school in Miami and I found the best one: 4Geeks Academy. And thanks to
   #     the program they offer, the Income Sharing Agreement, I could enroll right away and pay once I get a job
   - student_name: "Charles Fabricius"
+    slug: "cha-fabr"
+    country:
+      iso: ve
+      name: Venezuela
     featured: false
     highlighted: false
     testimonial_date: ""

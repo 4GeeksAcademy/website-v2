@@ -86,6 +86,17 @@ images_box:
     - path: "../../../static/images/locations/miami-old2.jpg"
       alt: "4Geeeks miami lab"
 
+chart_section:
+  data:
+    - percentage: '78%'
+      color: '#00A0DA'
+      description: 'of students have no programming experience'
+    - percentage: '88%'
+      color: '#FFB718'
+      description: 'of the grants and scholarships provided through 4Geeks are focused on helping diversity'
+    - percentage: '80%'
+      color: '#23C520'
+      description: 'of graduates receive partial or full scholarships'
 
 active_campaign_location_slug: "downtown-miami"
 breathecode_location_slug: "downtown-miami"

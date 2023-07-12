@@ -8,6 +8,7 @@ meta_info:
   redirects: []
   region: "usa-canada"
   dialCode: "1"
+  related_clusters: ["desarrollador-full-stack"]
 
 seo_title: "Bootcamp de Programación en Houston"
 header:

@@ -225,6 +225,7 @@ export const Paragraph = styled.p`
     display: ${(props) => props.display_tablet};
     justify-content: ${(props) => props.justifyContent_tablet};
     width: ${(props) => props.width_tablet};
+    max-width: ${(props) => props.maxWidth_tablet};
     font-size: ${(props) => props.fontSize_tablet};
     font-weight: ${(props) =>
       props.isActive ? "bold" : props.fontWeight_tablet || "400"};
@@ -238,6 +239,7 @@ export const Paragraph = styled.p`
     text-align: ${(props) => props.textAlign_md};
     margin: ${(props) => props.margin_md};
     padding: ${(props) => props.padding_md};
+    max-width: ${(props) => props.maxWidth_md};
   }
   @media ${Devices.lg} {
     font-size: ${(props) => props.fontSize_lg};

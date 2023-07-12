@@ -1,94 +1,40 @@
 title: Success cases
 contributor: Contributor
-
 cases:
-  - name: Name Surname
-    img: "../../../../static/images/testimonials/luisa-glum.jpg"
+  - name: Loretta Thompson
+    img: "../../../../static/images/students/ttaLoretta.jpeg"
     status: Graduated
     country:
-      iso: ve
-      name: Venezuela
-    contributor: Clark University
-    description: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean m
-    achievement: He got a 45% increase in his salary
-  - name: Name Surname
-    img: "../../../../static/images/testimonials/luisa-glum.jpg"
+      iso: us
+      name: United States of America
+    contributor: United Way Miami
+    description: Loretta joined in 2022 and graduated in 2023. She already found a job within the next few months and has fulfilled the whole circle of skills+job that we all want to complete!
+    achievement: She got a 45% increase in her salary
+  - name: Rich Akers
+    img: "../../../../static/images/students/akers.jpeg"
     status: Graduated
     country:
-      iso: ve
-      name: Venezuela
+      iso: us
+      name: United States of America
     contributor: Clark University
-    description: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean m
-    achievement: He got a 45% increase in his salary
-  - name: Name Surname
-    img: "../../../../static/images/testimonials/luisa-glum.jpg"
+    description: Richard is a great developer that just transitioned from a different background and is now working as a web dev in the tech field. 
+    achievement: He got a 30% increase in his salary
+  - name: MaiLinh Tran
+    img: "../../../../static/images/students/MaiLinh.png"
     status: Graduated
     country:
-      iso: ve
-      name: Venezuela
+      iso: us
+      name: United Stated of America
     contributor: Clark University
-    description: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean mhgh jhgcfghxg fdxgcpppg
-    achievement: He got a 45% increase in his salary
-  - name: Name Surname
-    img: "../../../../static/images/testimonials/luisa-glum.jpg"
+    description: An entrepreneur with a passion for technology is now focusing on the dev side of their endeavour. 
+    achievement: She has hired and coordinates a dev team!
+  - name: Jorge Martín Coimbra
+    img: "../../../../static/images/students/coimbra.png"
     status: Graduated
     country:
-      iso: ve
-      name: Venezuela
-    contributor: Clark University
-    description: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean m
-    achievement: He got a 45% increase in his salary
-  - name: Name Surname
-    img: "../../../../static/images/testimonials/luisa-glum.jpg"
-    status: Graduated
-    country:
-      iso: ve
-      name: Venezuela
-    contributor: Clark University
-    description: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean m
-    achievement: He got a 45% increase in his salary
-  - name: Name Surname
-    img: "../../../../static/images/testimonials/luisa-glum.jpg"
-    status: Graduated
-    country:
-      iso: ve
-      name: Venezuela
-    contributor: Clark University
-    description: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean m
-    achievement: He got a 45% increase in his salary
-  - name: Name Surname
-    img: "../../../../static/images/testimonials/luisa-glum.jpg"
-    status: Graduated
-    country:
-      iso: ve
-      name: Venezuela
-    contributor: Clark University
-    description: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean m
-    achievement: He got a 45% increase in his salary
-  - name: Name Surname
-    img: "../../../../static/images/testimonials/luisa-glum.jpg"
-    status: Graduated
-    country:
-      iso: ve
-      name: Venezuela
-    contributor: Clark University
-    description: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean m
-    achievement: He got a 45% increase in his salary
-  - name: Name Surname
-    img: "../../../../static/images/testimonials/luisa-glum.jpg"
-    status: Graduated
-    country:
-      iso: ve
-      name: Venezuela
-    contributor: Clark University
-    description: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean m
-    achievement: He got a 45% increase in his salary
-  - name: Name Surname
-    img: "../../../../static/images/testimonials/luisa-glum.jpg"
-    status: Graduated
-    country:
-      iso: ve
-      name: Venezuela
-    contributor: Clark University
-    description: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean m
-    achievement: He got a 45% increase in his salary
+      iso: uy
+      name: Uruguay
+    contributor: UTEC
+    description: Martín joined the first program that we launched together with UTECn and IDB. He got a better paying job, a career that he is passionate about and a new professional life. 
+    achievement: He got a 100% increase in his salary
+  
