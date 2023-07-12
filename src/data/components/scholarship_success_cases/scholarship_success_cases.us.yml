@@ -11,7 +11,7 @@ cases:
     description: Loretta joined in 2022 and graduated in 2023. She already found a job within the next few months and has fulfilled the whole circle of skills+job that we all want to complete!
     achievement: She got a 45% increase in her salary
   - name: Rich Akers
-    img: "../../../../static/images/students/akers.jpeg"
+    img: "../../../../static/images/students/Akers.jpeg"
     status: Graduated
     country:
       iso: us
@@ -36,5 +36,14 @@ cases:
       name: Uruguay
     contributor: UTEC
     description: Martín joined the first program that we launched together with UTECn and IDB. He got a better paying job, a career that he is passionate about and a new professional life. 
+    achievement: He got a 100% increase in his salary
+  - name: Jean St. Cloud
+    img: "../../../../static/images/students/JeanSt.Cloud.jpeg"
+    status: Graduated
+    country:
+      iso: us
+      name: United Stated of America
+    contributor: Clark
+    description: Jean is transitioning from other industries (Music) and is finding his way into Tech. He got it with the support of Clark University and is already performing as a developer and a Mentor.
     achievement: He got a 100% increase in his salary
   
