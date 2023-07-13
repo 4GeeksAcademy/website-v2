@@ -18,7 +18,7 @@ projects:
       geeks_benefited: 212
     institutions:
       - name: United Way Miami 
-        logo: "../../../static/images/landing/header_united_way.png" 
+        logo: "../../../../static/images/landing/header_united_way.png" 
       - name: 4Geeks Academy
         logo: "../../../../static/images/4G_logo_negro.png"
     press:
