@@ -12,7 +12,7 @@ const ScholarshipSuccessCases = ({ content }) => {
   return (
     <Fragment>
       <GridContainer fluid height="520px" display="block" margin="0 0 10px 0">
-        <H2>{content.title}</H2>
+        <H2 margin="30px 0">{content.title}</H2>
         <Marquee_v2
           speed={0.7}
           reversed={false}

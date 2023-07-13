@@ -459,7 +459,7 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
           </Div>
         </Div>
       </Div>
-      <Div display="block" margin="0 0 20px 0">
+      <Div display="block" margin_tablet="0 0 40px 0" margin="0 0 20px 0">
         <Div display="block" margin="0 auto 40px 0" padding="0 20px">
           <H2 margin="0 0 15px 0">{yml.how_it_works.title}</H2>
           <Paragraph color="#000" opacity="1" fontSize="18px">
@@ -555,7 +555,7 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
       <Div
         background={Colors.lightGray}
         padding="30px"
-        padding_tablet="70px"
+        padding_tablet="80px 70px"
         gap="10px"
         display="block"
         display_tablet="flex"

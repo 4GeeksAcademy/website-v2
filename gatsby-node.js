@@ -668,6 +668,7 @@ const buildTranslations = ({ edges }) => {
 
 // This section was commented during the migration from GatsbyV2 to GatsbyV5
 // Now the worker is being loded with the webpack 5 native method
+// Package workerize-loader was uninstalled
 
 // exports.onCreateWebpackConfig = ({
 //   actions: { replaceWebpackConfig },

@@ -107,8 +107,7 @@
     "rehype-react": "^7.0.1",
     "slick-carousel": "^1.8.1",
     "styled-components": "^4.3.2",
-    "styled-reset-advanced": "^1.0.1",
-    "workerize-loader": "^2.0.2"
+    "styled-reset-advanced": "^1.0.1"
   },
   "devDependencies": {
     "@storybook/addon-actions": "^7.0.23",
