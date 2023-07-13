@@ -1,49 +1,136 @@
+---
 title: Success cases
 contributor: Contributor
 cases:
   - name: Loretta Thompson
-    img: "../../../../static/images/students/ttaLoretta.jpeg"
+    img: ../../../../static/images/students/ttaLoretta.jpeg
     status: Graduated
     country:
       iso: us
       name: United States of America
     contributor: United Way Miami
-    description: Loretta joined in 2022 and graduated in 2023. She already found a job within the next few months and has fulfilled the whole circle of skills+job that we all want to complete!
+    description: Loretta joined in 2022 and graduated in 2023. She already found a
+      job within the next few months and has fulfilled the whole circle of
+      skills+job that we all want to complete!
     achievement: She got a 45% increase in her salary
   - name: Rich Akers
-    img: "../../../../static/images/students/Akers.jpeg"
+    img: ../../../../static/images/students/Akers.jpeg
     status: Graduated
     country:
       iso: us
       name: United States of America
     contributor: Clark University
-    description: Richard is a great developer that just transitioned from a different background and is now working as a web dev in the tech field. 
+    description: Richard is a great developer that just transitioned from a
+      different background and is now working as a web dev in the tech field.
     achievement: He got a 30% increase in his salary
   - name: MaiLinh Tran
-    img: "../../../../static/images/students/MaiLinh.png"
+    img: ../../../../static/images/students/MaiLinh.png
     status: Graduated
     country:
       iso: us
       name: United Stated of America
     contributor: Clark University
-    description: An entrepreneur with a passion for technology is now focusing on the dev side of their endeavour. 
-    achievement: She has hired and coordinates a dev team!
+    description: An entrepreneur with a passion for technology is now focusing on
+      the dev side of their endeavour.
+    achievement: She has launched her startup, is capable of hiring new tech talent
+      and coordinates a dev team!
   - name: Jorge Martín Coimbra
-    img: "../../../../static/images/students/coimbra.png"
+    img: ../../../../static/images/students/coimbra.png
     status: Graduated
     country:
       iso: uy
       name: Uruguay
-    contributor: UTEC
-    description: Martín joined the first program that we launched together with UTECn and IDB. He got a better paying job, a career that he is passionate about and a new professional life. 
+    contributor: UTEC-BID
+    description: Martín joined the first program that we launched together with
+      UTECn and IDB. He got a better paying job, a career that he is passionate
+      about and a new professional life.
     achievement: He got a 100% increase in his salary
   - name: Jean St. Cloud
-    img: "../../../../static/images/students/JeanSt.Cloud.jpeg"
+    img: ../../../../static/images/students/JeanSt.Cloud.jpeg
     status: Graduated
     country:
       iso: us
       name: United Stated of America
     contributor: Clark
-    description: Jean is transitioning from other industries (Music) and is finding his way into Tech. He got it with the support of Clark University and is already performing as a developer and a Mentor.
+    description: Jean is transitioning from other industries (Music) and is finding
+      his way into Tech. He got it with the support of Clark University and is
+      already performing as a developer and a Mentor.
     achievement: He got a 100% increase in his salary
-  
+  - name: Alexandra Espinoza
+    img: ../../../../static/images/students/AlexandraEspinoza.jpeg
+    status: Graduated
+    country:
+      iso: cr
+      name: Costa Rica
+    contributor: CINDE-BID
+    description: Alexandra came from a total different background is been a huge
+      revelation for her and everyone around her. She is now a successfull and
+      talented software developer in Costa Rica.
+    achievement: She got a 100% increase in her salary
+  - name: Gabriel Salazar
+    img: ../../../../static/images/students/GabrielSalazar.jpeg
+    status: Graduated
+    country:
+      iso: cr
+      name: Costa Rica
+    contributor: CINDE-BID
+    description: Gabriel was already a suppport specialist at Microsoft and after
+      completing the program he was able to achieve a new position within
+      Microsoft where he is now working as a Software Engineer.
+    achievement: He got a 50% increase in his salary
+  - name: Laura Magallanes
+    img: ../../../../static/images/students/Laura.jpeg
+    status: Graduated
+    country:
+      iso: cr
+      name: Uruguay
+    contributor: UTEC-BID
+    description: Laura is a just extraordinary. From a little town in uruguay with
+      no experience in Coding, she is now a woman head of household, an
+      Instructor and a Program Coordinator.
+    achievement: She got a 120% increase in her salary
+  - name: Leandro Matonte
+    img: ../../../../static/images/students/Leandro.jpeg
+    status: Graduated
+    country:
+      iso: uy
+      name: Uruguay
+    contributor: UTEC-BID
+    description: Leandro has been interested in software and computer science, and
+      he got into the program with the expectation to achieve a better
+      understanding and some coding skills that will help with his decision of
+      being a computer scientist graduate. Now he is a software developer at a
+      tech firm in Uruguay.
+    achievement: He got a 60% increase in his salary
+  - name: Melanie Galaretto
+    img: ../../../../static/images/students/MelamnieGalaretto.jpeg
+    status: Graduated
+    country:
+      iso: uy
+      name: Uruguay
+    contributor: UTEC-BID
+    description: Melanie is young professional that was dreaming to achieve a life
+      that now she owns. She is a resourcefull and committed software developer
+      workjing in a software firm in her home country.
+    achievement: She got a +100% increase in her salary
+  - name: Natia Lombardo
+    img: ../../../../static/images/students/MelamnieGalaretto.jpeg
+    status: Graduated
+    country:
+      iso: uy
+      name: Uruguay
+    contributor: UTEC-BID
+    description: Natia is a philosopher and a software developer. Currently working
+      as a QA Engineer of a huge and successful International firm.
+  - name: Luis Larraburo
+    img: ../../../../static/images/students/LuisLarraburo.jpeg
+    status: Graduated
+    country:
+      iso: cr
+      name: Costa Rica
+    contributor: CINDE-BID
+    description: Luis is a person who likes challenges and becomes a better version
+      while working on them. Coming to the program without any  previous
+      experience, He is now a software developer working on a tech firm in Costa
+      Rica. provides quality everytime that he is working.
+    achievement: He got a 50% increase in his salary
