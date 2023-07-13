@@ -174,3 +174,8 @@ redirects:
     toPath: "/us/coding-bootcamp/how-to-pay-for-a-coding-bootcamp-2022"
     #redirectInBrowser: true
     isPermanent: true # if permanent google will erase the original url from its results 
+
+  - fromPath: "/us/coding-campus/coding-bootcamp-argentina"
+    toPath: "/us/coding-campus/coding-bootcamp-argentina-buenos-aires/"
+    #redirectInBrowser: true
+    isPermanent: true # if permanent google will erase the original url from its results 

@@ -152,6 +152,12 @@ export function setStorage(value, expires = null) {
   return true;
 }
 
+export const setDataLayer = (_data) => {
+  if (typeof dataLayer != "undefined") {
+    dataLayer.push(_data);
+  } else
+    console.log("TagManager: dataLayer not found while trying to save ", _data);
+};
 export const setTagManaerVisitorInfo = (session) => {
   if (typeof dataLayer != "undefined") {
     const info = {
@@ -161,6 +167,7 @@ export const setTagManaerVisitorInfo = (session) => {
       language: session.language,
       latitude: session.latitude,
       longitude: session.longitude,
+      utm: session.utm,
     };
     dataLayer.push(info);
     // TODO: THIS BELOW DOEST NOT WORK RIGHT NOW, NEEDS MORE WORK
@@ -177,9 +184,9 @@ export const setTagManaerVisitorInfo = (session) => {
   } else console.log("TagManager:dataLayer not found");
 };
 
-export function tagManager(eventName) {
+export function tagManager(eventName, payload = {}) {
   if (typeof dataLayer != "undefined") {
-    dataLayer.push({ event: eventName });
+    dataLayer.push({ event: eventName, ...payload });
     console.log("Event successfully triggered: " + eventName);
   } else
     console.log("TagManager:dataLayer not found to trigger event " + eventName);
@@ -187,9 +194,9 @@ export function tagManager(eventName) {
 
 export const apply = async (data, session) => {
   console.log("Apply action called with session: ", session);
-  tagManager("student_application");
+
   let body = {};
-  console.log("form data: ", data);
+
   Object.keys(data).forEach((key) => {
     if (typeof data[key] === "object") body[key] = data[key].value;
     else body[key] = data[key];
@@ -210,12 +217,21 @@ export const apply = async (data, session) => {
       token,
       action
     );
+
+    // save conversion info to GTM
+    tagManager("student_application", {
+      email: _data.email,
+      formentry_id: _data.id,
+      referral_key: _data.referral_key,
+    });
+
     // referral program integration
     if (
       _data &&
       typeof _data.referral_key == "string" &&
       _data.referral_key.length > 0
     ) {
+      // save conversion info to First Promoter API
       if (window && window.fpr) {
         console.log("Triggered referral program action");
         window.fpr("referral", { email: _data.email });
@@ -231,7 +247,7 @@ export const apply = async (data, session) => {
 
 export const requestSyllabus = async (data, session) => {
   console.log("Succesfully requested Syllabus", data);
-  tagManager("request_more_info");
+
   let body = {};
   Object.keys(data).forEach((key) => (body[key] = data[key].value));
 
@@ -240,8 +256,8 @@ export const requestSyllabus = async (data, session) => {
   const action = "submit";
   let token = await getToken(action);
   //tag                automation
-  if (!session || !session.utm || !session.utm.utm_test)
-    return await save_form(
+  if (!session || !session.utm || !session.utm.utm_test) {
+    const _data = await save_form(
       body,
       [tag.value || tag],
       [automation.value || automation],
@@ -249,6 +265,17 @@ export const requestSyllabus = async (data, session) => {
       token,
       action
     );
+
+    // save conversion info to GTM
+    tagManager("request_more_info", {
+      email: _data.email,
+      formentry_id: _data.id,
+      referral_key: _data.referral_key,
+    });
+
+    return _data;
+  }
+
   return true;
 };
 export const openGuidebook = (url) => {
@@ -262,8 +289,8 @@ export const beHiringPartner = async (data, session) => {
   for (let key in data) body[key] = data[key].value;
   const action = "submit";
   let token = await getToken(action);
-  if (!session || !session.utm || !session.utm.utm_test)
-    return await save_form(
+  if (!session || !session.utm || !session.utm.utm_test) {
+    const _data = await save_form(
       body,
       ["hiring-partner"],
       ["hiring-partner"],
@@ -271,6 +298,14 @@ export const beHiringPartner = async (data, session) => {
       token,
       action
     );
+
+    setDataLayer({
+      email: _data.email,
+      formentry_id: _data.id,
+      referral_key: _data.referral_key,
+    });
+    return _data;
+  }
   return true;
 };
 export const applyJob = async (data) => {
@@ -293,14 +328,25 @@ export const contactUs = async (data, session) => {
   return true;
 };
 export const newsletterSignup = async (data, session) => {
-  tagManager("newsletter_signup");
   console.log("Succesfully newsletter signup", data);
   let body = {};
   for (let key in data) body[key] = data[key].value;
 
   //                                                                                      tag          automation
-  if (!session || !session.utm || !session.utm.utm_test)
-    return await save_form(body, ["newsletter"], ["newsletter"], session);
+  if (!session || !session.utm || !session.utm.utm_test) {
+    const _data = await save_form(
+      body,
+      ["newsletter"],
+      ["newsletter"],
+      session
+    );
+    tagManager("newsletter_signup", {
+      email: _data.email,
+      formentry_id: _data.id,
+      referral_key: _data.referral_key,
+    });
+    return _data;
+  }
   return true;
 };
 
@@ -310,13 +356,20 @@ export const outcomesReport = async (data, session) => {
   for (let key in data) body[key] = data[key].value;
 
   //                                                                                      tag                automation
-  if (!session || !session.utm || !session.utm.utm_test)
-    return await save_form(
+  if (!session || !session.utm || !session.utm.utm_test) {
+    const _data = await save_form(
       body,
       ["download_outcome"],
       ["download_outcome"],
       session
     );
+    setDataLayer({
+      email: _data.email,
+      formentry_id: _data.id,
+      referral_key: _data.referral_key,
+    });
+    return _data;
+  }
   return true;
 };
 
@@ -357,12 +410,6 @@ export const getEvents = async (_query = {}) => {
 export const processFormEntry = async (data, session) => {
   console.log("Form was sent successfully", data);
 
-  data.form_type.value === "landing"
-    ? tagManager("request_more_info")
-    : console.log(
-        `No tagManager("...") was because type is: ${data.form_type.value}`
-      );
-
   let body = {};
   Object.keys(data).forEach(
     (key) => key !== "form_type" && (body[key] = data[key].value)
@@ -374,8 +421,8 @@ export const processFormEntry = async (data, session) => {
   let token = await getToken(action);
 
   //                                                                                      tag                automation
-  if (!session || !session.utm || !session.utm.utm_test)
-    return await save_form(
+  if (!session || !session.utm || !session.utm.utm_test) {
+    const _data = await save_form(
       body,
       [tag.value || tag],
       [automation.value || automation],
@@ -383,5 +430,19 @@ export const processFormEntry = async (data, session) => {
       token,
       action
     );
+
+    if (data.form_type.value === "landing") {
+      tagManager("request_more_info", {
+        email: _data.email,
+        formentry_id: _data.id,
+        referral_key: _data.referral_key,
+      });
+    } else
+      console.log(
+        `No tagManager("...") was because type is: ${data.form_type.value}`
+      );
+
+    return _data;
+  }
   return true;
 };
