@@ -34,7 +34,7 @@ projects:
   - name: United Way Miami and 4Geeks Academy
     image:
       alt: typing
-      src: "../../../../static/images/united-way-workforce-project.png"
+      src: "../../../../static/images/united-way-project.png"
     description: United Way Miami, in partnership with 4Geeks Academy, has launched the Workforce Project offering education and training to help you shape your personal goals. This dynamic program is made possible as a direct result of a multi-million gift by philanthropist, Mackenzie Scott. Through the United Way Miami Workforce Project, you will receive coding training through our partners 4Geeks Academy to provide you with the tools to make career moves that create economic opportunities to help you and your family. If you qualify for the Workforce project*, all upfront costs of training are waived, so you can focus on your future. Best of all you will have the flexibility of enrolling for in-person or remote programs and courses are offered full-time or part-time to meet the demands of your schedule.
     details:
       cost: $1mm
