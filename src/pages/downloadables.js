@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, StaticQuery, graphql } from "gatsby";
+import { Link, useStaticQuery, graphql } from "gatsby";
 import styled from "styled-components";
 import Layout from "../global/Layout";
 
@@ -44,72 +44,68 @@ const Table = styled.table`
     background: #fbfbfb;
   }
 `;
-const NotFoundPage = () => (
-  <StaticQuery
-    query={graphql`
-      query DownloadableQuery {
-        allDownloadableYaml(sort: { meta_info: { current_download: ASC } }) {
-          edges {
-            node {
-              meta_info {
-                slug
-                current_download
-                tag
-              }
-              fields {
-                lang
-              }
+const DownloadablesPage = () => {
+  const data = useStaticQuery(graphql`
+    query DownloadableQuery {
+      allDownloadableYaml(sort: { meta_info: { current_download: ASC } }) {
+        edges {
+          node {
+            meta_info {
+              slug
+              current_download
+              tag
+            }
+            fields {
+              lang
             }
           }
         }
       }
-    `}
-    render={(data) => {
-      const downs = data.allDownloadableYaml.edges;
-      return (
-        <Layout
-          seo={{
-            slug: "downloadables",
-            title: "Downloadable Pages - 4Geeks Academy",
-            description: "Downloadable Pages 4Geeks Academy",
-            image: "",
-            keywords: [],
-          }}
-          context={{
-            lang: "us",
-          }}
-        >
-          <Div>
-            <Heading>Downloadables Pages</Heading>
-            <Table>
-              <thead>
+    }
+  `);
+  const downs = data.allDownloadableYaml.edges;
+  return (
+    <Layout
+      seo={{
+        slug: "downloadables",
+        title: "Downloadable Pages - 4Geeks Academy",
+        description: "Downloadable Pages 4Geeks Academy",
+        image: "",
+        keywords: [],
+      }}
+      context={{
+        lang: "us",
+      }}
+    >
+      <Div>
+        <Heading>Downloadables Pages</Heading>
+        <Table>
+          <thead>
+            <tr>
+              <th scope="col">slug</th>
+              <th scope="col">current_download</th>
+              <th scope="col">tag</th>
+            </tr>
+          </thead>
+          <tbody>
+            {downs &&
+              downs.map(({ node }) => (
                 <tr>
-                  <th scope="col">slug</th>
-                  <th scope="col">current_download</th>
-                  <th scope="col">tag</th>
+                  <td>
+                    <Anchor
+                      to={`/${node.fields.lang}/downloadable/${node.meta_info.slug}`}
+                    >
+                      {node.meta_info.slug}
+                    </Anchor>
+                  </td>
+                  <td>{node.meta_info.current_download}</td>
+                  <td>{node.meta_info.tag}</td>
                 </tr>
-              </thead>
-              <tbody>
-                {downs &&
-                  downs.map(({ node }) => (
-                    <tr>
-                      <td>
-                        <Anchor
-                          to={`/${node.fields.lang}/downloadable/${node.meta_info.slug}`}
-                        >
-                          {node.meta_info.slug}
-                        </Anchor>
-                      </td>
-                      <td>{node.meta_info.current_download}</td>
-                      <td>{node.meta_info.tag}</td>
-                    </tr>
-                  ))}
-              </tbody>
-            </Table>
-          </Div>
-        </Layout>
-      );
-    }}
-  />
-);
-export default NotFoundPage;
+              ))}
+          </tbody>
+        </Table>
+      </Div>
+    </Layout>
+  );
+};
+export default DownloadablesPage;
