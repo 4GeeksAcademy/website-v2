@@ -65,13 +65,6 @@ module.exports = {
             options: { components: ["button", "call-to-action"] },
           },
           {
-            resolve: "gatsby-remark-external-links",
-            options: {
-              target: "_self",
-              rel: "nofollow",
-            },
-          },
-          {
             resolve: `gatsby-remark-autolink-headers`,
             options: {
               offsetY: `0`,
@@ -156,56 +149,51 @@ module.exports = {
     {
       resolve: `gatsby-plugin-advanced-sitemap`,
       options: {
-        exclude: [`/admin`, `/tags`, `/edit`, `/landings`],
+        exclude: [
+          `/admin`,
+          `/tags`,
+          `/edit`,
+          `/landings`,
+          `/offline-plugin-app-shell-fallback`,
+        ],
         // output: "/custom-sitemap.xml",
         // 1 query for each data type
         query: `
         {
           allSitePage(
             filter: {
-              context: {
-                visibility: {nin: ["hidden", "unlisted"]}
-                filePath: { regex: "/^((?!\/data\/blog\/).)*$/" }
-              }
               path: { regex: "/^((?!\/blog).)*$/" }
             }
           ) {
             edges{
               node {
                 id
+                pageContext
                 slug: path
               }
-            }    
+            }
           }
           allClusterPage: allSitePage(
             filter: {
-              context: {
-                visibility: {nin: ["hidden", "unlisted"]}
-              }
               path: { regex: "/.*(\/blog).*/" }
             }
           ) {
             edges{
               node {
                 id
+                pageContext
                 slug: path
               }
-            }    
-          }
-          allBlogsPage: allSitePage(
-            filter: {
-              context: {
-                visibility: {nin: ["hidden", "unlisted"]}
-                filePath: { regex: "/.*(\/data\/blog\/).*/" }
-              }
             }
-          ) {
+          }
+          allBlogsPage: allSitePage{
             edges{
               node {
                 id
+                pageContext
                 slug: path
               }
-            }    
+            }
           }
         }`,
         // The filepath and name to Index Sitemap. Defaults to '/sitemap.xml'.
@@ -215,12 +203,28 @@ module.exports = {
           // The default sitemap - if none is passed - will be pages
           allSitePage: {
             sitemap: `page-sitemap`,
+            serializer: (edges) => {
+              return edges.filter(({ node }) => {
+                if (node.pageContext.filePath?.includes("/data/blog/"))
+                  return false;
+                return node.pageContext?.visibility
+                  ? !["unlisted", "hidden"].includes(
+                      node.pageContext.visibility
+                    )
+                  : true;
+              });
+            },
           },
           allClusterPage: {
             sitemap: `category-sitemap`,
           },
           allBlogsPage: {
             sitemap: `post-sitemap`,
+            serializer: (edges) => {
+              return edges.filter(({ node }) =>
+                node.pageContext?.filePath?.includes("/data/blog/")
+              );
+            },
           },
         },
       },

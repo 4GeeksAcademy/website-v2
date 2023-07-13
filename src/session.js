@@ -1,7 +1,7 @@
 import React, { createContext, useState, useEffect } from "react";
 import dayjs from "dayjs";
 import "dayjs/locale/es";
-import { useStaticQuery, graphql, navigate } from "gatsby";
+import { useStaticQuery, graphql } from "gatsby";
 import {
   defaultSession,
   setStorage,
@@ -10,7 +10,7 @@ import {
   locByLanguage,
 } from "./actions";
 
-import ActionsWorker from "./actions.worker.js";
+// import ActionsWorker from "./actions.worker.js";
 export const SessionContext = createContext(defaultSession);
 
 export default ({ children }) => {
@@ -77,8 +77,10 @@ export default ({ children }) => {
       }
       return undefined;
     };
-    ActionsWorker()
-      .initSession(data.allLocationYaml, getStorage("academy_session"), {
+    const message = {
+      locationsArray: data.allLocationYaml,
+      storedSession: getStorage("academy_session"),
+      seed: {
         navigator: JSON.stringify(window.navigator),
         location:
           urlParams.get("location") ||
@@ -97,14 +99,18 @@ export default ({ children }) => {
         utm_test: urlParams.get("utm_test") || undefined,
         language:
           urlParams.get("lang") || urlParams.get("language") || undefined,
-      })
-      .then((_session) => {
-        setStorage(_session);
-        setSession(_session);
-        setTagManaerVisitorInfo(_session);
-        dayjs.locale(_session.language == "us" ? "en" : _session.language);
-      })
-      .catch((error) => console.error("Error initilizing session", error));
+      },
+    };
+    const worker = new Worker(new URL("./worker.js", import.meta.url));
+
+    worker.postMessage(message);
+    worker.onmessage = (e) => {
+      const _session = e.data;
+      setStorage(_session);
+      setSession(_session);
+      setTagManaerVisitorInfo(_session);
+      dayjs.locale(_session.language == "us" ? "en" : _session.language);
+    };
   }, []);
 
   return (

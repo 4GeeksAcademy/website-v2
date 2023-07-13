@@ -1,17 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { graphql } from "gatsby";
-import {
-  H1,
-  H2,
-  H3,
-  H4,
-  H5,
-  Title,
-  Separator,
-  Paragraph,
-  Span,
-} from "../components/Heading";
+import { graphql, Link } from "gatsby";
+import { H1, H2, H3, H4, Paragraph } from "../components/Heading";
 import {
   Container,
   Row,
@@ -28,7 +18,7 @@ import {
 } from "../components/Styling";
 import LazyLoad from "react-lazyload";
 import BaseBlogRender from "./_baseBlogLayout";
-import Link from "gatsby-link";
+// import Link from "gatsby-link";
 
 const Tags = ({ pageContext, data, yml }) => {
   const cluster = data.allClusterYaml.edges.find(
@@ -308,7 +298,7 @@ export const pageQuery = graphql`
     }
     allMarkdownRemark(
       limit: 2000
-      sort: { fields: [frontmatter___date], order: DESC }
+      sort: { frontmatter: { date: DESC } }
       filter: { frontmatter: { cluster: { in: [$cluster] } } }
     ) {
       totalCount

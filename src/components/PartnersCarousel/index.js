@@ -1,6 +1,5 @@
 import React, { useRef } from "react";
-import Link from "gatsby-link";
-import { navigate } from "gatsby";
+import { navigate, Link } from "gatsby";
 import { smartRedirecting } from "../../utils/utils.js";
 import { Div } from "../Sections";
 import { H2, H3, H4, Paragraph } from "../Heading";
