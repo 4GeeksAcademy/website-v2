@@ -11,7 +11,7 @@ projects:
   - name: United Way Miami y 4Geeks Academy
     image:
       alt: typing
-      src: "../../../../static/images/united-way-workforce-project.png"
+      src: "../../../../static/images/united-way-project.png"
     description: United Way Miami, en alianza con 4Geeks Academy, ha lanzado el Workforce Project que ofrece educación y capacitación para ayudarte a dar forma a tus metas personales. Este dinámico programa es posible gracias a un donativo multimillonario de la filántropa, Mackenzie Scott. A través del Workforce Project de United Way Miami, recibirás capacitación en código a través de los socios de 4Geeks Academy para proporcionarte las herramientas para realizar cambios en tu carrera que creen oportunidades económicas para ayudarte a ti y a tu familia. Si calificas para el Workforce Project*, todos los costos iniciales de capacitación son gratuitos, ¡Así que puedes concentrarte en tu futuro! Mejor aún, tendrás la flexibilidad de inscribirte para programas en persona o remotos y los cursos se ofrecen a tiempo completo o a tiempo parcial para satisfacer las demandas de tu horario.
     details:
       cost: 1.5mm
