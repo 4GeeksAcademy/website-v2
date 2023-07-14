@@ -82,7 +82,7 @@ cases:
     img: ../../../../static/images/students/Laura.jpeg
     status: Graduated
     country:
-      iso: cr
+      iso: uy
       name: Uruguay
     contributor: UTEC-BID
     description: Laura is a just extraordinary. From a little town in uruguay with
@@ -114,7 +114,7 @@ cases:
       workjing in a software firm in her home country.
     achievement: She got a +100% increase in her salary
   - name: Natia Lombardo
-    img: ../../../../static/images/students/MelamnieGalaretto.jpeg
+    img: ../../../../static/images/students/NatiaLombardo.jpeg
     status: Graduated
     country:
       iso: uy
