@@ -128,7 +128,6 @@ const ApplyJobModal = (props) => {
                 onClick={onClose}
                 type="button"
                 fontSize="12px"
-                variant="full"
                 borderRadius="3px"
               >
                 {form_data.apply_job.close}
