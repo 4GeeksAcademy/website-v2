@@ -115,6 +115,7 @@ const SEO = (props) => {
         <link rel="canonical" href={`${siteUrl}${getCanonical(pagePath)}`} />
         {hreflangs.map((h) => (
           <link
+            key={`${siteUrl}${getCanonical(h.path)}`}
             rel="alternate"
             hrefLang={
               type === "location" ? h.countryLang : langCountries[h.lang]
