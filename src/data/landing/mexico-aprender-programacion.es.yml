@@ -9,7 +9,7 @@ meta_info:
 
   template: "landing_a" # <--- choose your landing template
   redirects: # <--- URL redirections to avoid 404 errors
-    ["/es/aplica/?lang=es"]
+    ["/landing/mexico"]
 
   # Set a particular course or location to the landing page
   # this UTM fields will be also included in the CRM contact

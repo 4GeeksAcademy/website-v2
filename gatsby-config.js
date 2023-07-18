@@ -30,6 +30,7 @@ module.exports = {
       bing: "",
     },
   },
+  trailingSlash: "never",
   plugins: [
     {
       resolve: "gatsby-plugin-cookiebot",
