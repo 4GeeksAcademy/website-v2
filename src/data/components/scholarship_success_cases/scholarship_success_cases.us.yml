@@ -82,10 +82,10 @@ cases:
     img: ../../../../static/images/students/Laura.jpeg
     status: Graduated
     country:
-      iso: cr
+      iso: uy
       name: Uruguay
     contributor: UTEC-BID
-    description: Laura is a just extraordinary. From a little town in uruguay with
+    description: Laura is just extraordinary. From a little town in Uruguay with
       no experience in Coding, she is now a woman head of household, an
       Instructor and a Program Coordinator.
     achievement: She got a 120% increase in her salary
@@ -96,8 +96,7 @@ cases:
       iso: uy
       name: Uruguay
     contributor: UTEC-BID
-    description: Leandro has been interested in software and computer science, and
-      he got into the program with the expectation to achieve a better
+    description: Leandro got into the program with the expectation to achieve a better
       understanding and some coding skills that will help with his decision of
       being a computer scientist graduate. Now he is a software developer at a
       tech firm in Uruguay.
@@ -114,7 +113,7 @@ cases:
       workjing in a software firm in her home country.
     achievement: She got a +100% increase in her salary
   - name: Natia Lombardo
-    img: ../../../../static/images/students/MelamnieGalaretto.jpeg
+    img: ../../../../static/images/students/NatiaLombardo.jpeg
     status: Graduated
     country:
       iso: uy
@@ -129,8 +128,7 @@ cases:
       iso: cr
       name: Costa Rica
     contributor: CINDE-BID
-    description: Luis is a person who likes challenges and becomes a better version
-      while working on them. Coming to the program without any  previous
+    description: Luis came to the program without any  previous
       experience, He is now a software developer working on a tech firm in Costa
-      Rica. provides quality everytime that he is working.
+      Rica. 
     achievement: He got a 50% increase in his salary
