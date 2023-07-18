@@ -1,5 +1,5 @@
 {
-  "trailingSlash": true,
+  "trailingSlash": false,
   "headers": [
     {
       "source": "/static/(.*)",
