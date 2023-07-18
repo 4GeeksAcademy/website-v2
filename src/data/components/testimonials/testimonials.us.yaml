@@ -42,8 +42,8 @@ testimonials:
   - student_name: "Naila Kaliyeva"
     slug: "nai-kali"
     country:
-      iso: ve
-      name: Venezuela
+      iso: us
+      name: United States of America
     featured: false
     highlighted: false
     testimonial_date: ""
@@ -69,8 +69,8 @@ testimonials:
   - student_name: "Azul Botaya"
     slug: "azu-bota"
     country:
-      iso: ve
-      name: Venezuela
+      iso: us
+      name: United States of America
     featured: false
     highlighted: true
     testimonial_date: ""
@@ -108,8 +108,8 @@ testimonials:
   - student_name: "Charles Fabricius"
     slug: "cha-fabr"
     country:
-      iso: ve
-      name: Venezuela
+      iso: us
+      name: United States of America
     featured: true
     highlighted: true
     testimonial_date: ""

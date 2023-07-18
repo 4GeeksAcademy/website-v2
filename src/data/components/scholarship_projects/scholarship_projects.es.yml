@@ -11,41 +11,39 @@ projects:
   - name: United Way Miami y 4Geeks Academy
     image:
       alt: typing
-      src: '../../../../static/images/costa-rica.png'
-    description: El Banco Interamericano de Desarrollo, junto con el Ministerio de Ciencia, Tecnología, Telecomunicaciones e Innovación de Costa Rica, lanzó un programa para invertir en el talento de Costa Rica y ayudar a unos 250 estudiantes a convertirse en desarrolladores de software con habilidades para obtener un mejor trabajo después de su graduación.
+      src: "../../../../static/images/united-way-project.png"
+    description: United Way Miami, en alianza con 4Geeks Academy, ha lanzado el Workforce Project que ofrece educación y capacitación para ayudarte a dar forma a tus metas personales. Este dinámico programa es posible gracias a un donativo multimillonario de la filántropa, Mackenzie Scott. A través del Workforce Project de United Way Miami, recibirás capacitación en código a través de los socios de 4Geeks Academy para proporcionarte las herramientas para realizar cambios en tu carrera que creen oportunidades económicas para ayudarte a ti y a tu familia. Si calificas para el Workforce Project*, todos los costos iniciales de capacitación son gratuitos, ¡Así que puedes concentrarte en tu futuro! Mejor aún, tendrás la flexibilidad de inscribirte para programas en persona o remotos y los cursos se ofrecen a tiempo completo o a tiempo parcial para satisfacer las demandas de tu horario.
     details:
       cost: 1.5mm
       geeks_benefited: 212
     institutions:
-      - name: Banco Interamericano de Desarrollo
-        logo: '../../../../static/images/idb-logo.png'
-      - name: MICITT
-        logo: '../../../../static/images/micitt-logo.jpg'
+      - name: United Way Miami 
+        logo: "../../../../static/images/landing/header_united_way.png" 
       - name: 4Geeks Academy
-        logo: '../../../../static/images/4G_logo_negro.png'
+        logo: "../../../../static/images/4G_logo_negro.png"
     press:
-      - name: Revista Summa
-        link: https://revistasumma.com/costa-rica-y-bid-lanzan-becas-para-aprender-programacion/
-      - name: IDB Press
-        link: https://blogs.iadb.org/innovacion/es/costa-rica-bootcamps-acelerar-la-creacion-de-talento-digital/
-      - name: Cultura Costa Rica
-        link: https://www.culturacr.net/4geeks-academy-ofrecera-becas-del-100-para-aprender-programacion/
-    pdf: https://storage.googleapis.com/4geeks-academy-website/PDF%20and%20Docs/Costa%20Rica%20CINDE%20and%204Geeks%20(1).pdf
+      - name: Miami Herald
+        link: https://www.miamiherald.com/news/business/article263937731.html
+      - name: Refresh Miami
+        link: https://refreshmiami.com/miami-based-coding-school-4geeks-is-breaking-down-the-barriers-to-becoming-a-software-developer/
+      - name: Social Finance
+        link: https://socialfinance.org/work/united-way-miami/
+    pdf: https://storage.googleapis.com/4geeks-academy-website/PDF%20and%20Docs/UWM%20facts%20.pdf
   - name: Proyecto Costa Rica-CINDE y 4Geeks
     image:
       alt: costa-rica-cinde
-      src: '../../../../static/images/costa-rica.png'
+      src: "../../../../static/images/locations/campuses-header-costa-rica.png"
     description: El Banco Interamericano de Desarrollo, junto con el Ministerio de Ciencia, Tecnología, Telecomunicaciones e Innovación de Costa Rica, lanzó un programa para invertir en el talento de Costa Rica y ayudar a unos 250 estudiantes a convertirse en desarrolladores de software con habilidades para obtener un mejor trabajo después de su graduación.
     details:
       cost: 1.5mm
       geeks_benefited: 212
     institutions:
       - name: Banco Interamericano de Desarrollo
-        logo: '../../../../static/images/idb-logo.png'
+        logo: "../../../../static/images/idb-logo.png"
       - name: MICITT
-        logo: '../../../../static/images/micitt-logo.jpg'
+        logo: "../../../../static/images/micitt-logo.jpg"
       - name: 4Geeks Academy
-        logo: '../../../../static/images/4G_logo_negro.png'
+        logo: "../../../../static/images/4G_logo_negro.png"
     press:
       - name: Revista Summa
         link: https://revistasumma.com/costa-rica-y-bid-lanzan-becas-para-aprender-programacion/
@@ -57,18 +55,18 @@ projects:
   - name: UTEC and 4Geeks
     image:
       alt: typing
-      src: '../../../../static/images/montevideo-uruguay.png'
+      src: "../../../../static/images/locations/campuses-header-uruguay.png"
     description: Este proyecto es la consecuencia de un esfuerzo combinado entre UTEC, BID y 4Geeks para capacitar a uruguayos en programación y promover el crecimiento del talento impulsado por la tecnología en el país.
     details:
       cost: 175k
       geeks_benefited: 60
     institutions:
       - name: Interamerican Development Bank
-        logo: https://www.iadb.org/en
+        logo: "../../../../static/images/partner/iadb.jpg"
       - name: UTEC
-        logo: https://utec.edu.uy/en/
+        logo: "../../../../static/images/partner/UTEC.png"
       - name: 4Geeks Academy
-        logo: https://www.4geeksacademy.com
+        logo: "../../../../static/images/4G_logo_negro.png"
     press:
       - name: El País
         link: https://www.elpais.com.uy/vida-actual/utec-organiza-el-primer-bootcamp-para-formar-desarrolladores-en-diez-semanas
@@ -77,25 +75,3 @@ projects:
       - name: Marca País
         link: https://marcapaisuruguay.gub.uy/utec-organiza-el-primer-bootcamp-para-formar-desarrolladores-en-diez-semanas/
     pdf: https://storage.googleapis.com/4geeks-academy-website/PDF%20and%20Docs/Uruguay%20Projects.pdf
-  # - name:
-  #   image:
-  #     src:
-  #     alt:
-  #   description:
-  #   details:
-  #     cost:
-  #     geeks_benefited:
-  #   institutions:
-  #     - name:
-  #       logo:
-  #     - name:
-  #       logo:
-  #     - name:
-  #       logo:
-  #   press:
-  #     - name:
-  #       link:
-  #     - name:
-  #       link:
-  #     - name:
-  #       link:

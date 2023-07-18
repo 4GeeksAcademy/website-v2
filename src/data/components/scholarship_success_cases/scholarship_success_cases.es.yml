@@ -2,57 +2,110 @@ title: Casos de éxito
 contributor: Colaborador
 
 cases:
-  - name: Name Surname
-    img: "../../../../static/images/testimonials/luisa-glum.jpg"
+  - name: Loretta Thompson
+    img: "../../../../static/images/students/ttaLoretta.jpeg"
+    status: Graduada
+    country:
+      iso: us
+      name: Estados Unidos
+    contributor: United Way Miami
+    description: Loretta se unió en 2022 y se graduó en 2023. ¡Ya encontró un trabajo en los próximos meses y ha completado todo el ciclo de habilidades + empleo que todos queremos completar!
+    achievement: Consiguió un aumento de 45% de su salario
+  - name: Rich Akers
+    img: "../../../../static/images/students/Akers.jpeg"
     status: Graduado
     country:
-      iso: ve
-      name: Venezuela
+      iso: us
+      name: Estados Unidos
     contributor: Clark University
-    description: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean m
-    achievement: Obtuvo un aumento del 45% en su salario
-  - name: Name Surname
-    img: "../../../../static/images/testimonials/luisa-glum.jpg"
+    description: Richard es un gran desarrollador que acaba de transicionar desde otra área y ahora trabaja como desarrollador web en el área de tecnología.
+    achievement: Consiguió un aumento de 30% de su salario
+  - name: MaiLinh Tran
+    img: "../../../../static/images/students/MaiLinh.png"
+    status: Graduada
+    country:
+      iso: us
+      name: Estados Unidos
+    contributor: Clark University
+    description: Una emprendedora con pasión por la tecnología ahora se centra en el lado del desarrollo de su empresa.
+    achievement: Ella ha contratado y lidera un equipo de desarrollo
+  - name: Jorge Martín Coimbra
+    img: "../../../../static/images/students/coimbra.png"
     status: Graduado
     country:
-      iso: ve
-      name: Venezuela
-    contributor: Clark University
-    description: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean m
-    achievement: Obtuvo un aumento del 45% en su salario
-  - name: Name Surname
-    img: "../../../../static/images/testimonials/luisa-glum.jpg"
-    status: Graduado
+      iso: uy
+      name: Uruguay
+    contributor: UTEC
+    description: Martín se unió al primer programa que lanzamos junto con UTECn e IDB. Consiguió un trabajo mejor remunerado, una carrera que le apasiona y una nueva vida profesional.
+    achievement: Consiguió un aumento del 100% de su salario
+  - name: Jean St. Cloud
+    img: ../../../../static/images/students/JeanSt.Cloud.jpeg
+    status: Graduated
     country:
-      iso: ve
-      name: Venezuela
-    contributor: Clark University
-    description: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean m
-    achievement: Obtuvo un aumento del 45% en su salario
-  - name: Name Surname
-    img: "../../../../static/images/testimonials/luisa-glum.jpg"
-    status: Graduado
+      iso: us
+      name: United Stated of America
+    contributor: Clark
+    description: Jean está haciendo la transición de otra industria y se está abriendo camino en el ámbito de la Tecnología. Lo logró con el apoyo de la Universidad Clark y ya se está trabajando como desarrollador y mentor.
+    achievement: Consiguió un aumento del 100% de su salario. 
+  - name: Alexandra Espinoza
+    img: ../../../../static/images/students/AlexandraEspinoza.jpeg
+    status: Graduated
     country:
-      iso: ve
-      name: Venezuela
-    contributor: Clark University
-    description: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean m
-    achievement: Obtuvo un aumento del 45% en su salario
-  - name: Name Surname
-    img: "../../../../static/images/testimonials/luisa-glum.jpg"
-    status: Graduado
+      iso: cr
+      name: Costa Rica
+    contributor: CINDE-BID
+    description: Alexandra vino de un contexto totalmente diferente y ha sido una gran revelación para ella y para todos los que la rodean. Ahora es una exitosa y talentosa desarrolladora de software en Costa Rica.
+    achievement: Consiguió un aumento del 100% de su salario.
+  - name: Gabriel Salazar
+    img: ../../../../static/images/students/GabrielSalazar.jpeg
+    status: Graduated
     country:
-      iso: ve
-      name: Venezuela
-    contributor: Clark University
-    description: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean m
-    achievement: Obtuvo un aumento del 45% en su salario
-  - name: Name Surname
-    img: "../../../../static/images/testimonials/luisa-glum.jpg"
-    status: Graduado
+      iso: cr
+      name: Costa Rica
+    contributor: CINDE-BID
+    description: Gabriel ya era especialista en soporte técnico en Microsoft y después de completar el programa pudo conseguir un nuevo puesto dentro de Microsoft donde ahora trabaja como Ingeniero de Software.
+    achievement: Consiguió un aumento del 50% de su salario.
+  - name: Laura Magallanes
+    img: ../../../../static/images/students/Laura.jpeg
+    status: Graduated
     country:
-      iso: ve
-      name: Venezuela
-    contributor: Clark University
-    description: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean m
-    achievement: Obtuvo un aumento del 45% en su salario
+      iso: uy
+      name: Uruguay
+    contributor: UTEC-BID
+    description: Laura es simplemente extraordinaria. De un pequeño pueblo en Uruguay, sin experiencia en programación, ahora es jefa de hogar, instructora y coordinadora de programas.
+    achievement: Consiguió un aumento del 120% de su salario.
+  - name: Leandro Matonte
+    img: ../../../../static/images/students/Leandro.jpeg
+    status: Graduated
+    country:
+      iso: uy
+      name: Uruguay
+    contributor: UTEC-BID
+    description: Leandro entró al programa con la expectativa de obtener un mejor entendimiento y algunas habilidades de codificación que lo ayudarían con su decisión de ser graduado en ciencias de la computación. Ahora es desarrollador de software en una empresa tecnológica en Uruguay.
+    achievement: Consiguió un aumento del 60% de su salario.
+  - name: Melanie Galaretto
+    img: ../../../../static/images/students/MelamnieGalaretto.jpeg
+    status: Graduated
+    country:
+      iso: uy
+      name: Uruguay
+    contributor: UTEC-BID
+    description: Melanie es una joven profesional que soñaba con alcanzar la vida que ahora posee. Es una desarrolladora de software recursiva y comprometida que trabaja en una empresa de software en su país natal.
+    achievement: Consiguió un aumento del 100% de su salario.
+  - name: Natia Lombardo
+    img: ../../../../static/images/students/NatiaLombardo.jpeg
+    status: Graduated
+    country:
+      iso: uy
+      name: Uruguay
+    contributor: UTEC-BID
+    description: Natia es filósofa y desarrolladora de software. Actualmente trabaja como Ingeniera de QA de una enorme y exitosa empresa internacional.
+  - name: Luis Larraburo
+    img: ../../../../static/images/students/LuisLarraburo.jpeg
+    status: Graduated
+    country:
+      iso: cr
+      name: Costa Rica
+    contributor: CINDE-BID
+    description: Luis llegó al programa sin ninguna experiencia previa. Ahora es desarrollador de software trabajando en una empresa de tecnología en Costa Rica.
+    achievement: Consiguió un aumento del 50% de su salario.
