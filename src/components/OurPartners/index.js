@@ -1,10 +1,9 @@
-import React, { useEffect } from "react";
-import { Div, Grid, GridContainer } from "../Sections";
-import { Colors, StyledBackgroundSection } from "../Styling";
-import { H2, H3, H4, Title, Paragraph } from "../Heading";
-import Link from "gatsby-link";
+import React from "react";
+import { Div, GridContainer } from "../Sections";
+import { Colors } from "../Styling";
+import { H2, Paragraph } from "../Heading";
+import { Link } from "gatsby";
 import { smartRedirecting } from "../../utils/utils.js";
-import Card from "../Card";
 import Fragment from "../Fragment";
 import Marquee from "../Marquee";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";

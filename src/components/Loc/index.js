@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { useStaticQuery, graphql } from "gatsby";
-import { Title, H1, H2, H3, H4, Span, Paragraph } from "../Heading";
-import { GridContainer, Grid, Div } from "../Sections";
+import { useStaticQuery, graphql, Link } from "gatsby";
+import { H2, H3, Paragraph } from "../Heading";
+import { GridContainer, Div } from "../Sections";
 import { Img, Colors } from "../Styling";
 import Icon from "../Icon";
-
-import Link from "gatsby-link";
 
 const Loc = ({ lang, yml, allLocationYaml }) => {
   const {

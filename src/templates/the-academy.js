@@ -250,12 +250,6 @@ export const query = graphql`
                     # height: 60
                     placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                   )
-                  # fluid(maxWidth: 300){
-                  #   ...GatsbyImageSharpFluid_withWebp
-                  # }
-                  # fixed(width: 300, height: 60) {
-                  #   ...GatsbyImageSharpFixed
-                  # }
                 }
               }
               alt
@@ -270,12 +264,6 @@ export const query = graphql`
                     # height: 60
                     placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                   )
-                  # fluid(maxWidth: 300){
-                  #   ...GatsbyImageSharpFluid_withWebp
-                  # }
-                  # fixed(width: 300, height: 60) {
-                  #   ...GatsbyImageSharpFixed
-                  # }
                 }
               }
               alt
@@ -290,12 +278,6 @@ export const query = graphql`
                     height: 60
                     placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                   )
-                  # fluid(maxWidth: 300){
-                  #   ...GatsbyImageSharpFluid_withWebp
-                  # }
-                  # fixed(width: 300, height: 60) {
-                  #   ...GatsbyImageSharpFixed
-                  # }
                 }
               }
               alt

@@ -1,22 +1,12 @@
 import React, { useState, useContext } from "react";
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
 import BaseRender from "./_baseLayout";
-import {
-  Column,
-  Wrapper,
-  WrapperImage,
-  Divider,
-  Div,
-  Row,
-  GridContainer,
-  HR,
-} from "../components/Sections";
+import { Div, GridContainer, HR } from "../components/Sections";
 import { H1, H2, H3, H4, Paragraph } from "../components/Heading";
 import { Button, Colors, Anchor, RoundImage } from "../components/Styling";
 import Icon from "../components/Icon";
 import { SessionContext } from "../session.js";
 import { isCustomBarActive } from "../actions";
-import Link from "gatsby-link";
 import LazyLoad from "react-lazyload";
 
 const ThankYou = (props) => {
@@ -327,19 +317,6 @@ export const query = graphql`
           banner {
             tagline
             sub_heading
-            image {
-              childImageSharp {
-                gatsbyImageData(
-                  layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                  width: 1800
-                  quality: 100
-                  placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
-                )
-                # fluid(maxWidth: 1800, quality: 100){
-                #   ...GatsbyImageSharpFluid_withWebp
-                # }
-              }
-            }
           }
           content {
             title
@@ -357,7 +334,7 @@ export const query = graphql`
     }
     featured: allMarkdownRemark(
       limit: 3
-      sort: { fields: frontmatter___date, order: DESC }
+      sort: { frontmatter: { date: DESC } }
       filter: {
         frontmatter: { status: { eq: "published" } }
         fields: { lang: { eq: $lang } }
@@ -381,7 +358,7 @@ export const query = graphql`
     }
     posts: allMarkdownRemark(
       limit: 3
-      sort: { fields: frontmatter___date, order: DESC }
+      sort: { frontmatter: { date: DESC } }
       filter: {
         frontmatter: { status: { eq: "published" } }
         fields: { lang: { eq: $lang } }

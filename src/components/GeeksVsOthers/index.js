@@ -1,12 +1,9 @@
-import React, { useState } from "react";
-import styled from "styled-components";
-import { useStaticQuery, graphql } from "gatsby";
-import { GridContainer, Container, Column, Grid, Div } from "../Sections";
-import { H2, H3, H4, H5, Title, Paragraph } from "../Heading";
-import { Colors, Button, Tooltip, Span } from "../Styling";
-import Card from "../Card";
-import Icon from "../Icon";
-import Link from "gatsby-link";
+import React from "react";
+import { useStaticQuery, graphql, Link } from "gatsby";
+import { GridContainer, Div } from "../Sections";
+import { H2, H3, Paragraph } from "../Heading";
+import { Colors } from "../Styling";
+// import Link from "gatsby-link";
 import Fragment from "../Fragment";
 
 const GeeksVsOthers = (props) => {
