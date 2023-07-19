@@ -34,7 +34,7 @@ header:
   title: "Full Stack Developer"
   image: "../../../static/images/bg/program-bg.png"
   image_alt: "how-to-become-a-full-stack-developer-"
-  paragraph: "From zero to getting paid as a Full Stack Developer, learn the skills of the present and future. \n Boost your professional career and get hired by a tech company."
+  paragraph: "Go from zero to getting paid as a Full-Stack Developer in just 18 weeks! Master the most sought-after skills, get hired in tech, and give your life a boost!"
 
 button:
   syllabus_heading: "Download Syllabus"
@@ -63,8 +63,7 @@ course_instructors:
       linkedin: "https://www.linkedin.com/"
 
 badges:
-  paragraph: "4Geeks Academy only focuses in coding skills, the defacto <a href='/us/coding-bootcamp'>coding bootcamp</a>. We are licensed by the USA F. Dep. of Education. Chosen as one of the top 35 bootcamps of the world and top coding bootcamp in Miami according to SwitchUp. Recognized as the top 10 coding bootcamps in the United States according to Newsweek.."
-
+  paragraph: "Kickstart your career at 4Geeks Academy, where developers grow and thrive. Named best <a href='/us/coding-bootcamp'>coding bootcamp</a> 2023 by Course Report, best center for coding bootcamps 2023 by Premios de Excelencia Educativa in Spain, listed among the top 10 in the US by Newsweek, and rated 4.92/5 on Switchup. Licensed by the Florida Department of Education, USA."
 upcoming:
   no_dates_message: "There are currently no upcoming dates for this program"
   actionMessage: "Let me know when dates are available"
@@ -77,15 +76,13 @@ credentials:
 details:
   about:
       title: "About the program"
-      sub_title: "Learn the most wanted and highest paid technologies that will help you create amazing websites. 
+      sub_title: "Learn the most sought-after and highest-paid technologies and become a pro at building websites. Python and JavaScript developers are consistently in demand, making them the top programming languages to master in 2023. 
       
-      The tech industry consistently requires Python and JavaScript developers. Both are the most popular programming languages to learn in 2021. 
+      Code in a web development language, learn algorithm scripting and build awesome apps using front-end libraries. Utilize APIs to consume data and enhance your app's functionality. 
       
-      Start coding in a web development language and algorithm scripting. Build awesome apps using a front-end library. Use an API so you can consume data to fill your app.
+      Finalize the program by developing and presenting your own project, gaining game-changing hands-on experience.
       
-      The program will end with the presentation of your final project that will help you get ready for  more web development experiences
-      
-      You will re-shape your mind to embrace new logical, developmental and researching skills."
+      Reshape your mindset and embrace the programming, logic, and research skills to succeed in the tech industry."
       list:
         - label: "Duration"
           content:  "16+2 Weeks"

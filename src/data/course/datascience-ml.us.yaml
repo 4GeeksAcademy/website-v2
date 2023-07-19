@@ -16,8 +16,8 @@ apply_form:
 
 seo_title: "data science and machine learning bootcamp"
 header:
-  title: "Data Science and Machine Learning"
-  paragraph: "Become one of the highest paid professionals in the world in just a few months"
+  title: "Become a Data Scientist or Machine Learning Engineer"
+  paragraph: "Be ready to enter tech’s highest-paying fields in just 16 weeks!"
   image: "../../../static/images/bg/circles.jpg"
   image_alt: "circles"
 
@@ -59,7 +59,7 @@ course_instructors:
       linkedin: "https://www.linkedin.com/in/alexismena/"
 
 badges:
-  paragraph: "4Geeks Academy is the place where developers grow and thrive, with technical coaching for life. Licensed by the USA F. Dep. of Education. Recognized as the top 10 <a href='/us/coding-bootcamp'>coding bootcamp</a> in the United States according to Newsweek and 1st in Miami according to SwitchUp."
+  paragraph: "Kickstart your career at 4Geeks Academy, where developers grow and thrive. Named the best <a href='/us/coding-bootcamp'>coding bootcamp</a> 2023 by Course Report, best center for coding bootcamps 2023 by Premios de Excelencia Educativa in Spain, listed among the top 10 in the US by Newsweek, and rated 4.92/5 on Switchup. Licensed by the Florida Department of Education, USA."
 
 upcoming:
   no_dates_message: "There are currently no upcoming dates for this program"
@@ -68,12 +68,13 @@ upcoming:
 ## PROGRAM DETAILS
 details:
   about:
-      title: "About this course"
+      title: "About Our Data Science & Machine Learning Course"
       sub_title: |
-        Learn Python, SQL Looker (Google Data Studio), Streamlit and Statistics to become a data analyst and take part in any data-oriented team at any company.
-        Create your own predictive models using Python, Pandas, Numpy, etc. Use algorithms like Close Neighbors, Decision Trees and others. Use supervised and un-supervised learning.
-        Practice with real life cases, typical professional challenges you will do inside your future employer. Learn to use the most popular tools in the industry.
-        Strategize and develop your A.I. following the lifecycle development from start to end, including deployment into production and maintenance with Privacy and Security.
+        Learn Python, SQL, Looker (Google Data Studio), Streamlit, and Statistics and become a professional Data Analyst, ready to contribute to any data-driven team at any company.
+        Create predictive models using Python, Pandas, Numpy, and other powerful libraries. Explore algorithms like Close Neighbors, Decision Trees, and more. Work with supervised and unsupervised learning models.
+        Practice solving real-life cases, and learn to tackle the type of challenges you’ll encounter in your career. Master the use of industry-standard tools.
+        Strategize and develop your own A.I. projects, following the complete lifecycle from development to deployment and maintenance, ensuring privacy and security.
+
       list:
         - label: "Duration"
           content:  "16 Weeks"
@@ -95,7 +96,7 @@ details:
           content: "You can decide between English and Spanish to consume the syllabus and content. Live classes are taught in the language of your campus."
           icon: "contract-checked"
           
-  heading: Machine Learning Engineering Syllabus
+  heading: Data Science and Machine Learning Syllabus
   weeks: 16
   weeks_label: "weeks"
   facts:
@@ -114,7 +115,7 @@ details:
       value: "12 People Max"
     - label: Total Hours
       value: "320"
-  sub_heading: "Start with Python and Data Science, Machine Learning, Deep Learning and maintaining a production environment in A.I."
+  sub_heading: "Start with Python, Data Science, Machine Learning, Deep Learning, and the maintenance of a production environment in A.I."
   left_labels:
     description: "DESCRIPTION:"
     projects: "PROJECTS:"

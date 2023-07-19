@@ -1,13 +1,13 @@
-heading: Be part of the tech and coding community
-sub_heading: "Community of 4000+ current students, teachers, partners and alumni, connected to Slack, GitHub, social media and 4Geeks.com (our propietary platform)"
-paragraph: "Belong to a community and network of people who genuinely help each other. Keep lifetime access to our online learning platform and to mentors always ready to help you, even after graduation. 
+heading: Be part of a vibrant community
+sub_heading: "Join our international community of over 4000 students, teachers, partners, and alumni. Connect through various channels like Slack, GitHub, social media, and our exclusive platform 4Geeks.com. Where there’s a geek, there’s a way! What sets us apart:"
+paragraph: "Belong to a community of like-minded people who genuinely support each other. Gain lifetime access to our online learning platform and mentorship services. We’ll always be here for you, even after you graduate. 
 
-<a href='/us/geeks-vs-others'><span class='span-blue'>Compare 4Geeks</span></a> with other bootcamps."
+<a href='/us/geeks-vs-others'><span class='span-blue'>Compare 4Geeks</span></a> to other coding bootcamps."
 list:
-  - title: "Lifelong and highly available Coding Mentorship"
-  - title: "Flexible journey, live and on-demand"
-  - title: "Big community with thousans of devs and partners"
-  - title: "Unlimited and tailor made career support services"
+  - title: "Lifelong and readily available coding mentorship"
+  - title: "Unlimited and personalized career support"
+  - title: "Award-winning syllabus and methodology"
+  - title: "An extensive network of partners in tech"
 button_text: "More about 4Geeks"
 button_link: "/us/why-4geeks"
 image: "../../../../static/images/bg/community.png"

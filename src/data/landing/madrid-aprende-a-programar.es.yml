@@ -8,7 +8,7 @@ meta_info:
   keywords: "Aprende a programar, 4Geeks academy, aprende programacion, aprende ingenieria informatica"
 
   template: "landing_nonav" # <--- choose your landing template
-  redirects: ["/landing/impulsa-tu-carrera"] # <--- URL redirections to avoid 404 errors
+  redirects: [] # <--- URL redirections to avoid 404 errors
 
   # Set a particular course or location to the landing page
   # this UTM fields will be also included in the CRM contact
@@ -27,9 +27,9 @@ form:
 
 # jumbotron on the top (cannot be commented out)
 header_data:
-  tagline: Aprende a programar
+  tagline: Cambia tu vida y aprende a programar
   sub_heading: " "
-  # partner_logo_url: "../../../static/images/partner/microsoft.png"
+  badge: "../../../static/images/badges/Course-Report-Badge-2023.png"
   background_image: "../../../static/images/Happy-People-Landing-4Geeks-ES.jpg"
   image_filter: brightness(0.4)
 
@@ -40,8 +40,9 @@ features:
   styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
   bullets:
     - Un Desarrollador en Madrid gana 24.000€ al año
-    - Hay más vacantes que en cualquier otra industria
-    - Impulsa tu Carrera y hazte programador de software
+    - Es una de las industrias donde hay más vacantes actualmente.
+    - No necesitas experiencia previa para comenzar
+  text: ¡Es el momento de impulsar tu carrera y convertirte en programador!
 
 follow_bar:
   position: "top" # top, bottom, hidden
@@ -60,16 +61,12 @@ follow_bar:
 # ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇
 #
 
-in_the_news:
-  position: 1
-  heading: "4Geeks en los medios"
-
 badges:
   position: 6
   heading: "Premios y reconocimientos que validan nuestra excelencia"
 
 program_details:
-  position: 3
+  position: 1
   heading: "Lo que aprenderás"
   sub_heading: "Python, Javascript y React son las tecnologías más usadas del mundo"
 
@@ -97,24 +94,17 @@ who_is_hiring:
 
 # Possible layours: [two_column_left_image, two_column_right_image]
 components:
-  - name: first_syllabus_form
-    position: 4
-    layout: syllabus
-    button:
-      text: "Descarga Instantánea"
-    heading:
-      text: "Descarga el Programa de Estudios"
   - name: top_coding_bootcamp
     position: 5
     layout: two_column_left
     proportions: [4, 8]
     image:
       style: '{ "backgroundSize": "contain" }'
-      src: "/images/badges/switchup.png"
-      link: "https://www.switchup.org/bootcamps/4geeks-academy"
+      src: "static/images/badges/Course-Report-Badge-2023.png"
+      link: "https://www.coursereport.com/schools/4geeks-academy"
     heading:
       text:
-        "Hemos sido seleccionados como uno de los mejores bootcamps del mundo"
+        "Tenemos 3 años consecutivos siendo seleccionados como uno de los mejores coding bootcamps del mundo"
         #xl      lg     md     sm    xs
       font_size: ["40px", "40px", "40px", "40px", "40px"]
   - name: more_testimonials
@@ -131,7 +121,9 @@ components:
       color: null
       path: "https://www.youtube.com/watch?v=plwPwyrxX84"
     content:
-      text: "Mentoría como nunca antes. Decenas de Instructores, en varios idiomas, todos los días, a cualquier hora. Estaremos contigo todo el tiempo, aun cuando hayas conseguido trabajo. Una vez eres parte de 4Geeks, estaremos para siempre contigo."
+      text: "'Mi experiencia con 4Geeks ha sido magnífica, me ha encantado. Tengo unos profesores maravillosos y tengo unos compañeros súper geniales. He aprendido bastante sobre HTML, CSS, JavaScript, React y Python. Mis profesores siempre estuvieron atentos a lo que necesitaba. Igual hay una plataforma donde podemos hablar todos los estudiantes de 4Geeks y nos ayudamos entre todos.... ¡Ha sido genial tomar esta decisión!'
+
+Beatriz Hernández"
       font_size: ["16px"]
   - name: divider_one
     position: 9
