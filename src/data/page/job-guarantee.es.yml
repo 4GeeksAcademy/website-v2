@@ -16,8 +16,8 @@ button:
 
 seo_title: "Trabajo garantizado"
 header:
-  title: Consigue un trabajo o te devolvemos tu dinero
-  paragraph: Todos estamos contigo ¡Obtén un trabajo dentro de los 6 meses posteriores a tu graduación o te devolveremos tu dinero!
+  title: Consigue trabajo o te devolvemos tu dinero
+  paragraph: Todos estamos contigo ¡Obtén trabajo dentro de los 6 meses posteriores a tu graduación o te devolveremos tu dinero!
 
 two_column_left:
   proportions: [6, 6]
@@ -62,7 +62,7 @@ we_trust_section:
       text: Ingreso Promedio
     - icon: graduation-2
       title: "130"
-      text: Días para conseguir un trabajo después de la graduación
+      text: Días para conseguir trabajo después de la graduación
 
 how_it_works:
   title: ¿Cómo funciona?
