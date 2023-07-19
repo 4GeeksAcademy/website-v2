@@ -1,10 +1,9 @@
 import React, { useState, useContext, useEffect } from "react";
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
 import BaseRender from "./_baseLayout";
 import { SessionContext } from "../session.js";
 import { contactUs } from "../actions.js";
 import Icon from "../components/Icon";
-import Link from "gatsby-link";
 import { isCustomBarActive } from "../actions";
 
 // New components

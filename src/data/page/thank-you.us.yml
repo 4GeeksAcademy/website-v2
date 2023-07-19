@@ -9,7 +9,6 @@ meta_info:
 banner:
   tagline: "Thank You"
   sub_heading: ""
-  image: "../../../static/images/bg/the-academy-bg.jpg"
 content:
   title: "Check your email! :)"
   message: "We have received your application.  Our Geeky Advisor is going to contact you shortly.  Sit tight!

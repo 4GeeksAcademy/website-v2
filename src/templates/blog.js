@@ -1,16 +1,7 @@
 import React from "react";
-import Link from "gatsby-link";
-import { graphql } from "gatsby";
-import {
-  H1,
-  H2,
-  H3,
-  H4,
-  Title,
-  Separator,
-  Paragraph,
-  Span,
-} from "../components/Heading";
+// import Link from "gatsby-link";
+import { graphql, Link } from "gatsby";
+import { H1, H2, H4, Paragraph } from "../components/Heading";
 import {
   Button,
   RoundImage,
@@ -284,16 +275,6 @@ export const postQuery = graphql`
           banner {
             tagline
             sub_heading
-            image {
-              childImageSharp {
-                gatsbyImageData(
-                  layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                  width: 400
-                  quality: 100
-                  placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
-                )
-              }
-            }
             no_image
           }
           question
@@ -318,7 +299,7 @@ export const postQuery = graphql`
       }
     }
     allMarkdownRemark(
-      sort: { fields: frontmatter___date, order: DESC }
+      sort: { frontmatter: { date: DESC } }
       filter: {
         frontmatter: { status: { eq: "published" } }
         fields: { lang: { eq: $lang } }

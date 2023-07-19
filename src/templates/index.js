@@ -1,17 +1,6 @@
-import React, { useEffect, useRef, useState } from "react";
-import styled from "styled-components";
-import { graphql, Link, navigate } from "gatsby";
-import { Helmet } from "react-helmet";
-import {
-  H1,
-  H2,
-  H3,
-  H4,
-  Title,
-  Separator,
-  Paragraph,
-  Span,
-} from "../components/Heading";
+import React, { useRef, useState } from "react";
+import { graphql, navigate } from "gatsby";
+import { H1, H2, Paragraph, Span } from "../components/Heading";
 import {
   Row,
   Column,
@@ -21,12 +10,7 @@ import {
   Div,
   GridContainer,
 } from "../components/Sections";
-import {
-  Button,
-  Colors,
-  StyledBackgroundSection,
-  Anchor,
-} from "../components/Styling";
+import { Button, Colors, StyledBackgroundSection } from "../components/Styling";
 import { Circle } from "../components/BackgroundDrawing";
 import News from "../components/News";
 import Icon from "../components/Icon";

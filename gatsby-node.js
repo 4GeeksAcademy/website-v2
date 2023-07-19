@@ -171,7 +171,7 @@ const createBlog = async ({ actions, graphql }) => {
   const clusterTemplate = path.resolve("src/templates/clusters.js");
   const result = await graphql(`
     {
-      allMarkdownRemark(sort: { fields: frontmatter___date, order: DESC }) {
+      allMarkdownRemark(sort: { frontmatter: { date: DESC } }) {
         edges {
           node {
             html
@@ -377,6 +377,7 @@ const createEntityPagesfromYml = async (
         }.js`
       ),
       context: {
+        ...node.meta_info,
         ...node.fields,
         ..._extraContext,
         translations: translations[node.fields.defaultTemplate],
@@ -665,18 +666,23 @@ const buildTranslations = ({ edges }) => {
   return translations;
 };
 
-exports.onCreateWebpackConfig = ({
-  actions: { replaceWebpackConfig },
-  getConfig,
-}) => {
-  const config = getConfig();
+// This section was commented during the migration from GatsbyV2 to GatsbyV5
+// Now the worker is being loded with the webpack 5 native method
+// Package workerize-loader was uninstalled
 
-  config.module.rules.push({
-    test: /\.worker\.js$/,
-    use: { loader: "workerize-loader" },
-  });
+// exports.onCreateWebpackConfig = ({
+//   actions: { replaceWebpackConfig },
+//   getConfig,
+// }) => {
+//   const config = getConfig();
 
-  config.output.globalObject = "this";
+//   config.module.rules.push({
+//     test: /\.worker\.js$/,
+//     use: { loader: "workerize-loader" },
+//   });
 
-  replaceWebpackConfig(config);
-};
+//   //This line was commented during the migration from GatsbyV2 to GatsbyV5 because it caused the build product to fail
+//   // config.output.globalObject = "this";
+
+//   replaceWebpackConfig(config);
+// };

@@ -41,9 +41,6 @@ const GeeksInfo = ({ lang }) => {
                   quality: 100
                   placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                 )
-                # fluid(maxWidth: 800, quality: 100){
-                #   ...GatsbyImageSharpFluid_withWebp
-                # }
               }
             }
             image2 {
@@ -54,9 +51,6 @@ const GeeksInfo = ({ lang }) => {
                   quality: 100
                   placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                 )
-                # fluid(maxWidth: 800, quality: 100){
-                #   ...GatsbyImageSharpFluid_withWebp
-                # }
               }
             }
             fields {

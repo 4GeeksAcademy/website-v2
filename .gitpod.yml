@@ -10,8 +10,8 @@ ports:
 tasks:
   - init: 
       (cp -n .env.example .env.development || true) && 
-      nvm install v14 &&
-      nvm alias default v14 && 
-      nvm use v14 &&
+      nvm install v18 &&
+      nvm alias default v18 && 
+      nvm use v18 &&
       npm install --legacy-peer-deps
     command: npm run start

@@ -43,10 +43,6 @@ const Badges = ({
                     # More Options
                     # https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-plugin-image/#image-options
                   )
-
-                  # fluid(maxHeight: 120, quality: 100){
-                  #   ...GatsbyImageSharpFluid_withWebp_noBase64
-                  # }
                 }
               }
             }

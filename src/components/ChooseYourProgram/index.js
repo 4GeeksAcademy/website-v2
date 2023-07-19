@@ -1,14 +1,10 @@
 import React from "react";
-import { graphql } from "gatsby";
+import { Link, useStaticQuery, graphql } from "gatsby";
 import PropTypes from "prop-types";
 import { Button, Colors } from "../Styling";
-import { Break } from "../Responsive";
-import { Row, GridContainer, Grid, Div } from "../Sections";
+import { Grid, Div } from "../Sections";
 import { H4, H3, H2, Paragraph } from "../Heading";
-import { navigate, Link, useStaticQuery } from "gatsby";
-import styled from "styled-components";
 import Icon from "../Icon";
-import { SessionContext } from "../../session.js";
 
 const ChooseYourProgram = ({
   lang,
