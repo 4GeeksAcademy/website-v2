@@ -11,14 +11,14 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 const ScholarshipSuccessCases = ({ content }) => {
   return (
     <Fragment>
-      <GridContainer fluid height="520px" display="block" margin="0 0 10px 0">
+      <GridContainer fluid height="590px" display="block" margin="0 0 10px 0">
         <H2 margin="30px 0">{content.title}</H2>
         <Marquee_v2
           speed={0.7}
           reversed={false}
-          containerstyle={{ height: "435px" }}
+          containerstyle={{ height: "500px" }}
         >
-          <Div height="435px">
+          <Div height="500px">
             {content?.cases.map((student, i) => (
               <Div
                 key={`${student.name}-${i}`}
@@ -101,8 +101,8 @@ const ScholarshipSuccessCases = ({ content }) => {
                       color={Colors.black}
                       opacity="1"
                     >
-                      {student.description.length > 120
-                        ? student.description.substring(0, 120) + "..."
+                      {student.description.length > 280
+                        ? student.description.substring(0, 280) + "..."
                         : student.description}
                     </Paragraph>
                   </Div>

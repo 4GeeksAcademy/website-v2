@@ -54,7 +54,7 @@ export default function Template(props) {
         if (tag.tagName === "a") {
           if (
             tag.properties &&
-            (!tag.properties.href.includes("4geeks.com") ||
+            (!tag.properties.href.includes("4geeks.com") &&
               !tag.properties.href.includes("4geeksacademy.com"))
           ) {
             tag.properties.rel = "nofollow";

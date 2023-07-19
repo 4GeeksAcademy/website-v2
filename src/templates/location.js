@@ -338,7 +338,7 @@ const Location = ({ data, pageContext, yml }) => {
         marquee
         title={hiring.partners.tagline}
         paragraph={hiring.partners.sub_heading}
-      ></OurPartners>
+      />
       <ChooseYourProgram
         chooseProgramRef={chooseProgramRef}
         lang={pageContext.lang}
