@@ -10,7 +10,6 @@ meta_info:
 banner:
   tagline: "4Geeks Academy Blog"
   sub_heading: "Recursos y novedades principalmente escritas para nuestra comunidad o personas interesadas en la industria Tech, de las startups y del crecimiento profesional a traves del Coding."
-  image: "../../../static/images/bg/pricing-bg.jpg"
   no_image: "https://i.imgur.com/n3V1Rqq.jpeg"
 
 seo_title: "4Geeks Academy Blog"

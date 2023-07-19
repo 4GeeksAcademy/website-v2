@@ -251,10 +251,6 @@ export const RightNav = ({
             width: 75 # --> maxHeight
             placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
           )
-
-          # fixed(width: 75) {
-          #   ...GatsbyImageSharpFixed
-          # }
         }
       }
     }

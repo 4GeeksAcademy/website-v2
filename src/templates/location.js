@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef, Suspense, lazy } from "react";
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
+import process from "process";
 import ChooseProgram from "../components/ChooseProgram";
 import Badges from "../components/Badges";
 import Loc from "../components/Loc";
@@ -9,7 +10,6 @@ import ChooseYourProgram from "../components/ChooseYourProgram";
 import UpcomingDates from "../components/UpcomingDates";
 import Staff from "../components/Staff";
 import "dayjs/locale/de";
-import Link from "gatsby-link";
 import {
   Div,
   GridContainerWithImage,
@@ -595,7 +595,7 @@ export const query = graphql`
     }
     allMarkdownRemark(
       limit: 4
-      sort: { fields: [frontmatter___date], order: DESC }
+      sort: { frontmatter: { date: DESC } }
       filter: { frontmatter: { cluster: { in: $related_clusters } } }
     ) {
       totalCount
