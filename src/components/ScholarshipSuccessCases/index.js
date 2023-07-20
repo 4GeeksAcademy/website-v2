@@ -10,10 +10,7 @@ const ScholarshipSuccessCases = ({ content }) => {
   return (
     <Div height="590px" display="block" margin="0 0 10px 0">
       <H2 margin="30px 0">{content.title}</H2>
-      <Marquee
-        speed={30}
-        pauseOnHover
-      >
+      <Marquee speed={30} pauseOnHover>
         <Div height="500px">
           {content?.cases.map((student, i) => (
             <Div

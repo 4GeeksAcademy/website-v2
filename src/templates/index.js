@@ -365,10 +365,7 @@ const Home = (props) => {
         paragraph={hiring.partners.sub_heading}
       />
 
-      <Loc
-        lang={pageContext.lang}
-        allLocationYaml={data.allLocationYaml}
-      />
+      <Loc lang={pageContext.lang} allLocationYaml={data.allLocationYaml} />
     </>
   );
 };

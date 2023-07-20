@@ -351,10 +351,7 @@ const Location = ({ data, pageContext, yml }) => {
         actionMessage={yml.upcoming.actionMessage}
       />
       {/* <Loc lang={pageContext.lang} locations={data.test.edges} /> */}
-      <Loc
-        lang={pageContext.lang}
-        allLocationYaml={data.test}
-      />
+      <Loc lang={pageContext.lang} allLocationYaml={data.test} />
       <Staff lang={pageContext.lang} />
 
       {/* IFRAME map */}
