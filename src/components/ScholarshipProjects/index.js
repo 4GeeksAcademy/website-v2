@@ -78,6 +78,7 @@ const ScholarshipProjects = ({ content }) => {
               margin="auto"
               width_tablet="690px"
               width_md="900px"
+              minHeight_tablet="605px"
               border_tablet="1px solid #000000"
               flexDirection_tablet="row"
               flexDirection="column"

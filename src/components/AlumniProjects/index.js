@@ -153,6 +153,7 @@ const AlumniProjects = ({
                     right_tablet="-93px"
                     left_tablet="unset"
                     switched={switched}
+                    videoHeight="500px"
                     style={{
                       width: "100%",
                       height: "500px",

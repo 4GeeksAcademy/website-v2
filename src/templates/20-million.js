@@ -303,7 +303,7 @@ const TwentyMillion = ({ data, pageContext, yml }) => {
         margin="0"
         images={partnersData.partners.images}
         marquee
-      ></OurPartners>
+      />
       <ScholarshipProjects
         content={data.allScholarshipProjectsYaml.edges[0].node}
         lang={pageContext.lang}
