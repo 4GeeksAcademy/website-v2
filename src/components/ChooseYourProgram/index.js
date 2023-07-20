@@ -99,6 +99,8 @@ const ChooseYourProgram = ({
                 alignItems_tablet="flex-end"
                 background="#ffffff"
                 style={{ position: "relative" }}
+                flexWrap_sm="nowrap"
+                flexWrap="wrap"
               >
                 <Div
                   placeSelf_tablet={landingTemplate && "flex-start"}
@@ -126,7 +128,6 @@ const ChooseYourProgram = ({
                   margin="10px 0 0 0"
                   padding={landingTemplate ? "0 0 100px 15px" : "0 0 30px 15px"}
                 >
-                  {/* {program.sub_title.toLowerCase() != "online" &&  */}
                   <H4
                     textTransform="uppercase"
                     textAlign="left"
@@ -138,8 +139,6 @@ const ChooseYourProgram = ({
                   >
                     {program.sub_title}
                   </H4>
-
-                  {/* // } */}
                   {program.title.split("\n").map((m, i) => (
                     <Link key={i} to={program.link}>
                       <H3 textAlign="left" fontSize="22px" lineHeight="26px">
@@ -220,7 +219,6 @@ const ChooseYourProgram = ({
                       color="black"
                       font='"Lato", sans-serif'
                       width="fit-content"
-                      margin="20px 10px 0 0"
                       pointer
                       textColor={Colors.black}
                       fontSize={"13px"}
