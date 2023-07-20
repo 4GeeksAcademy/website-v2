@@ -350,7 +350,6 @@ const Location = ({ data, pageContext, yml }) => {
         message={yml.upcoming.no_dates_message}
         actionMessage={yml.upcoming.actionMessage}
       />
-      {/* <Loc lang={pageContext.lang} locations={data.test.edges} /> */}
       <Loc lang={pageContext.lang} allLocationYaml={data.test} />
       <Staff lang={pageContext.lang} />
 
