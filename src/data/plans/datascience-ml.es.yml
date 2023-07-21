@@ -233,7 +233,7 @@ part_time:
       - "Financiamiento a tu medida desde 6 hasta 18 meses"  
       - "Se debe pagar un anticipo correspondiente al 20% del valor del programa" 
     icons: 
-      - "/images/partner/flevo.png"
+      - "/images/partner/flevo-new.png"
 
   - slug: 'latam-solo-programa-ds'
     academies: ['caracas-venezuela', 'montevideo-uruguay','bogota-colombia', 'costa-rica', 'mexicocity-mexico','quito-ecuador', 'panamacity-panama', 'buenosaires-argentina','lima-peru','lapaz-bolivia']
@@ -247,7 +247,7 @@ part_time:
       - "Debes elegir si tomarás solo el programa, si también quieres obtener nuestro sistema de Career Support, o si quieres ir a por todo y registrarte con nuestra opción de Trabajo Garantizado"  
       - "Pague solamente por el programa de Data Science si todavía no está interesado en nuestro programa de apoyo profesional y nuestra garantía de empleo."   
     icons: 
-      - "/images/partner/flevo.png" 
+      - "/images/partner/flevo-new.png" 
 
   - slug: 'latam-program-only-ds-upfront'
     academies: ['caracas-venezuela', 'montevideo-uruguay','bogota-colombia', 'costa-rica', 'mexicocity-mexico','quito-ecuador', 'panamacity-panama', 'buenosaires-argentina','lima-peru','lapaz-bolivia']
@@ -261,7 +261,7 @@ part_time:
       - "Debes elegir si tomarás solo el programa, si también quieres obtener nuestro sistema de Career Support, o si quieres ir a por todo y registrarte con nuestra opción de Trabajo Garantizado"  
       - "Pague solamente por el programa Science si todavía no está interesado en nuestro programa de apoyo profesional y nuestra garantía de empleo."   
     icons: 
-      - "/images/partner/flevo.png" 
+      - "/images/partner/flevo-new.png" 
 
   - slug: 'latam-upfront-ds-cs'
     academies: ['caracas-venezuela', 'montevideo-uruguay','bogota-colombia', 'costa-rica', 'mexicocity-mexico','quito-ecuador', 'panamacity-panama', 'buenosaires-argentina','lima-peru','lapaz-bolivia']
@@ -275,4 +275,4 @@ part_time:
       - "Debes elegir si tomarás solo el programa, si también quieres obtener nuestro sistema de Career Support, o si quieres ir a por todo y registrarte con nuestra opción de Trabajo Garantizado"  
       - "Además del programa de Data Science, obtén apoyo profesional de por vida de nuestro equipo especializado y acceso permanente a nuestra comunidad en línea de graduados"   
     icons: 
-      - "/images/partner/flevo.png"    
+      - "/images/partner/flevo-new.png"    

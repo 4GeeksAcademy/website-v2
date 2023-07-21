@@ -1,11 +1,9 @@
-import React, { useState } from "react";
-import { graphql } from "gatsby";
-import Link from "gatsby-link";
-import Layout from "../global/Layout";
+import React from "react";
+import { graphql, Link } from "gatsby";
 import { isCustomBarActive } from "../actions";
 import { Div, Divider } from "../components/Sections";
-import { H2, H3, H4, Title, Separator, Paragraph } from "../components/Heading";
-import { Colors, Button, StyledBackgroundSection } from "../components/Styling";
+import { Title, Paragraph } from "../components/Heading";
+import { Colors, StyledBackgroundSection } from "../components/Styling";
 import Card from "../components/Card";
 import BaseRender from "./_baseLayout";
 import AlumniProjects from "../components/AlumniProjects";
@@ -128,18 +126,6 @@ export const query = graphql`
           banner {
             tagline
             sub_heading
-            image {
-              childImageSharp {
-                gatsbyImageData(
-                  layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                  width: 1200
-                  placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
-                )
-                # fluid(maxWidth: 1200){
-                #   ...GatsbyImageSharpFluid_withWebp
-                # }
-              }
-            }
           }
           about {
             heading

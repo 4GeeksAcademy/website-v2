@@ -1,5 +1,5 @@
 import React from "react";
-import Link from "gatsby-link";
+import { Link } from "gatsby";
 import { H3, H4, Paragraph } from "../Heading";
 import { RoundImage } from "../Styling";
 import LazyLoad from "react-lazyload";

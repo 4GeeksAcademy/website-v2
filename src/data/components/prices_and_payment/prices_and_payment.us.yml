@@ -1,6 +1,6 @@
 pricing_error: Prices are currently not available for
 pricing_error_contact: For more information please contact us at info@4geeksacademy.com
-get_notified: Promotions and scolarships are always available, apply to talk to one of our career advisors
+get_notified: Additional promotions and scholarships are always available! Get in touch with one of our career advisors to find out more.
 top_label: location
 recomended: Recommended
 plans_title: Plans and prices
@@ -20,7 +20,7 @@ chart_section:
   data:
     - percentage: '76%'
       color: '#00A0DA'
-      description: 'of our graduates received a full or partial scholarship thanks to our thorough payment options.'
+      description: 'of our graduates received some form of financial support, thanks to our extensive array of options.'
     - percentage: '46%'
       color: '#FFB718'
       description: 'of our students are women'

@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef, Suspense, lazy } from "react";
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
+import process from "process";
 import ChooseProgram from "../components/ChooseProgram";
 import Badges from "../components/Badges";
 import Loc from "../components/Loc";
@@ -9,7 +10,6 @@ import ChooseYourProgram from "../components/ChooseYourProgram";
 import UpcomingDates from "../components/UpcomingDates";
 import Staff from "../components/Staff";
 import "dayjs/locale/de";
-import Link from "gatsby-link";
 import {
   Div,
   GridContainerWithImage,
@@ -30,7 +30,6 @@ import FaqCard from "../components/FaqCard";
 const MapFrame = lazy(() => import("../components/MapFrame"));
 
 const Location = ({ data, pageContext, yml }) => {
-  const locationYml = data.allPageYaml.edges[0].node.locations;
   const { lang } = pageContext;
   const { session } = React.useContext(SessionContext);
   const hiring = data.allPartnerYaml.edges[0].node;
@@ -338,7 +337,7 @@ const Location = ({ data, pageContext, yml }) => {
         marquee
         title={hiring.partners.tagline}
         paragraph={hiring.partners.sub_heading}
-      ></OurPartners>
+      />
       <ChooseYourProgram
         chooseProgramRef={chooseProgramRef}
         lang={pageContext.lang}
@@ -351,12 +350,7 @@ const Location = ({ data, pageContext, yml }) => {
         message={yml.upcoming.no_dates_message}
         actionMessage={yml.upcoming.actionMessage}
       />
-      {/* <Loc lang={pageContext.lang} locations={data.test.edges} /> */}
-      <Loc
-        lang={pageContext.lang}
-        yml={locationYml}
-        allLocationYaml={data.test}
-      />
+      <Loc lang={pageContext.lang} allLocationYaml={data.test} />
       <Staff lang={pageContext.lang} />
 
       {/* IFRAME map */}
@@ -430,9 +424,6 @@ export const query = graphql`
                   quality: 100
                   placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                 )
-                # fluid(maxWidth: 1200, quality: 100){
-                #     ...GatsbyImageSharpFluid_withWebp
-                # }
               }
             }
             alt
@@ -478,9 +469,6 @@ export const query = graphql`
                   quality: 100
                   placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                 )
-                # fluid(maxWidth: 800, quality: 100){
-                #   ...GatsbyImageSharpFluid_withWebp
-                # }
               }
             }
             alt
@@ -504,9 +492,6 @@ export const query = graphql`
                     quality: 100
                     placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                   )
-                  # fluid(maxWidth: 800, quality: 100){
-                  #   ...GatsbyImageSharpFluid_withWebp
-                  # }
                 }
               }
               alt
@@ -546,9 +531,6 @@ export const query = graphql`
                   quality: 100
                   placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                 )
-                # fluid(maxWidth: 800){
-                #   ...GatsbyImageSharpFluid_withWebp
-                # }
               }
             }
           }
@@ -565,9 +547,6 @@ export const query = graphql`
                   width: 800
                   placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                 )
-                # fluid(maxWidth: 800){
-                #   ...GatsbyImageSharpFluid_withWebp
-                # }
               }
             }
           }
@@ -580,9 +559,6 @@ export const query = graphql`
                     width: 100
                     placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                   )
-                  # fluid(maxWidth: 100){
-                  #   ...GatsbyImageSharpFluid_withWebp
-                  # }
                 }
               }
               alt
@@ -595,7 +571,7 @@ export const query = graphql`
     }
     allMarkdownRemark(
       limit: 4
-      sort: { fields: [frontmatter___date], order: DESC }
+      sort: { frontmatter: { date: DESC } }
       filter: { frontmatter: { cluster: { in: $related_clusters } } }
     ) {
       totalCount
@@ -690,9 +666,6 @@ export const query = graphql`
                     width: 150
                     placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                   )
-                  # fluid(maxWidth: 150){
-                  #   ...GatsbyImageSharpFluid_withWebp
-                  # }
                 }
               }
               featured
@@ -708,9 +681,6 @@ export const query = graphql`
                     width: 100
                     placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                   )
-                  # fluid(maxWidth: 100){
-                  #   ...GatsbyImageSharpFluid_withWebp
-                  # }
                 }
               }
               featured
@@ -728,9 +698,6 @@ export const query = graphql`
                     width: 100
                     placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                   )
-                  # fluid(maxWidth: 100){
-                  #   ...GatsbyImageSharpFluid_withWebp
-                  # }
                 }
               }
               featured
@@ -748,38 +715,12 @@ export const query = graphql`
                     width: 100
                     placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                   )
-                  # fluid(maxWidth: 100){
-                  #   ...GatsbyImageSharpFluid_withWebp
-                  # }
                 }
               }
               featured
             }
             tagline
             sub_heading
-          }
-        }
-      }
-    }
-    allPageYaml(
-      filter: {
-        fields: { slug: { in: ["index", "inicio"] }, lang: { eq: $lang } }
-      }
-    ) {
-      edges {
-        node {
-          locations {
-            heading
-            sub_heading
-            title_image
-            sub_title_image
-            image
-            choose
-            regions {
-              name
-              title
-              content
-            }
           }
         }
       }

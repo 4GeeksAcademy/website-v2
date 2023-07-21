@@ -209,9 +209,7 @@ const UpcomingDates = ({
       setData(_data);
     }
   }, [session]);
-  const buttonText = locations?.find(
-    (loc) => loc.node?.city === session?.location?.city
-  )?.node?.button?.apply_button_text;
+  const buttonText = session?.location?.button.apply_button_text;
 
   return (
     <GridContainer id={id} style={style} margin_tablet="0 0 48px 0">

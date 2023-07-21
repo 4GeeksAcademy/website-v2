@@ -1,17 +1,6 @@
-import React, { useEffect, useRef, useState } from "react";
-import styled from "styled-components";
-import { graphql, Link, navigate } from "gatsby";
-import { Helmet } from "react-helmet";
-import {
-  H1,
-  H2,
-  H3,
-  H4,
-  Title,
-  Separator,
-  Paragraph,
-  Span,
-} from "../components/Heading";
+import React, { useRef, useState } from "react";
+import { graphql, navigate } from "gatsby";
+import { H1, H2, Paragraph, Span } from "../components/Heading";
 import {
   Row,
   Column,
@@ -21,12 +10,7 @@ import {
   Div,
   GridContainer,
 } from "../components/Sections";
-import {
-  Button,
-  Colors,
-  StyledBackgroundSection,
-  Anchor,
-} from "../components/Styling";
+import { Button, Colors, StyledBackgroundSection } from "../components/Styling";
 import { Circle } from "../components/BackgroundDrawing";
 import News from "../components/News";
 import Icon from "../components/Icon";
@@ -123,9 +107,6 @@ const Home = (props) => {
 
   return (
     <>
-      {/* <Helmet>
-        <script type="application/ld+json">{JSON.stringify(schemaOrg)}</script>
-      </Helmet> */}
       <Div
         display="flex"
         position="absolute"
@@ -367,7 +348,7 @@ const Home = (props) => {
           session.location &&
           session.location.breathecode_location_slug
         }
-        playerHeight="auto"
+        playerHeight="600px"
         title={true}
       />
       <ChooseYourProgram
@@ -384,11 +365,7 @@ const Home = (props) => {
         paragraph={hiring.partners.sub_heading}
       />
 
-      <Loc
-        lang={pageContext.lang}
-        yml={yml.locations}
-        allLocationYaml={data.allLocationYaml}
-      />
+      <Loc lang={pageContext.lang} allLocationYaml={data.allLocationYaml} />
     </>
   );
 };
@@ -464,19 +441,6 @@ export const query = graphql`
 
               geek_force_heading
               geek_pal_heading
-            }
-          }
-          locations {
-            heading
-            sub_heading
-            title_image
-            sub_title_image
-            image
-            choose
-            regions {
-              name
-              title
-              content
             }
           }
           alumni_header {

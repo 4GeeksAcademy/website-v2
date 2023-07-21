@@ -10,6 +10,7 @@ import Icon from "../Icon";
 import { NavItem } from "../Navbar";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import CustomBar from "../CustomBar";
+import { locByLanguage } from "../../actions";
 
 const MegaMenuContainer = styled(Div)`
   top: 70px;
@@ -150,9 +151,51 @@ export const Navbar = ({
             width: 125
             placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
           )
-          #   fixed(width: 125) {
-          #     ...GatsbyImageSharpFixed
-          #   }
+        }
+      }
+      allLocationYaml {
+        edges {
+          node {
+            city
+            name
+            latitude
+            longitude
+            phone
+            socials {
+              name
+              icon
+              link
+            }
+            country
+            country_shortname
+            defaultLanguage
+            breathecode_location_slug
+            active_campaign_location_slug
+            gdpr_compliant
+            in_person_available
+            online_available
+            meta_info {
+              slug
+              visibility
+              position
+              region
+              dialCode
+            }
+            button {
+              apply_button_text
+              syllabus_button_text
+            }
+            custom_bar {
+              active
+            }
+          }
+        }
+        nodes {
+          fields {
+            file_name
+            lang
+            slug
+          }
         }
       }
     }
@@ -161,6 +204,14 @@ export const Navbar = ({
   const isContentBarActive =
     (contentBar.active && isTestMode) ||
     (contentBar.active && !isDevelopment());
+
+  const langDictionary = {
+    us: "es",
+    es: "us",
+  };
+
+  const locations = locByLanguage(data.allLocationYaml, langDictionary[lang]);
+
   return (
     <>
       <CustomBar
@@ -233,6 +284,13 @@ export const Navbar = ({
         </Menu>
         <Div alignItems="center" justifyContent="between">
           <Link
+            onClick={() =>
+              setSession({
+                ...session,
+                language: langDictionary[lang],
+                locations,
+              })
+            }
             to={
               session && session.pathsDictionary && currentURL
                 ? `${session.pathsDictionary[currentURL] || ""}${
@@ -247,7 +305,7 @@ export const Navbar = ({
               margin="0 50px 0 0"
               fontWeight="400"
               lineHeight="16px"
-            ></Paragraph>
+            />
           </Link>
           <Link onClick={onToggle} to={button.button_link || "#"}>
             <Button

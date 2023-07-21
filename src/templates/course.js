@@ -1,27 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link, graphql } from "gatsby";
 import BaseRender from "./_baseLayout";
-import {
-  Container,
-  Header,
-  Column,
-  Wrapper,
-  WrapperImage,
-  Divider,
-  Sidebar,
-  Div,
-  GridContainer,
-} from "../components/Sections";
-import {
-  Title,
-  H1,
-  H2,
-  H3,
-  H4,
-  H5,
-  Span,
-  Paragraph,
-} from "../components/Heading";
+import { Header, Div, GridContainer } from "../components/Sections";
 import { Button, Colors } from "../components/Styling";
 import { requestSyllabus, isCustomBarActive } from "../actions";
 import { SessionContext } from "../session";
@@ -517,7 +497,7 @@ export const query = graphql`
     }
     allMarkdownRemark(
       limit: 4
-      sort: { fields: [frontmatter___date], order: DESC }
+      sort: { frontmatter: { date: DESC } }
       filter: { frontmatter: { cluster: { in: $related_clusters } } }
     ) {
       totalCount
@@ -561,10 +541,6 @@ export const query = graphql`
                   quality: 100
                   breakpoints: [200, 340, 520, 890]
                 )
-
-                # fluid(maxWidth: 500, quality: 100, srcSetBreakpoints: [ 200, 340, 520, 890 ]){
-                #   ...GatsbyImageSharpFluid_withWebp
-                # }
               }
             }
           }

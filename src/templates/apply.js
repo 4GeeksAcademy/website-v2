@@ -1,8 +1,7 @@
 import React, { useState, useContext } from "react";
-import { graphql } from "gatsby";
-import { navigate } from "gatsby";
+import { graphql, navigate } from "gatsby";
 import { Div, GridContainer, Header, Grid } from "../components/Sections";
-import { H1, H3, Paragraph } from "../components/Heading";
+import { H3, Paragraph } from "../components/Heading";
 import { Colors, Button } from "../components/Styling";
 import { Input, Alert } from "../components/Form";
 import { SelectRaw } from "../components/Select";
@@ -41,14 +40,13 @@ const formIsValid = (formData = null) => {
 
 const Apply = (props) => {
   const { data, pageContext, yml } = props;
-  const { session, setSession } = useContext(SessionContext);
+  const { session } = useContext(SessionContext);
   const [formStatus, setFormStatus] = useState({
     status: "idle",
     msg: "Apply",
   });
   const [formData, setVal] = useState({
     first_name: { value: "", valid: false },
-    // last_name: {value: '', valid: false},
     phone: { value: "", valid: false },
     email: { value: "", valid: false },
     location: { value: "", valid: false },
@@ -67,16 +65,6 @@ const Apply = (props) => {
       label: node.apply_form.label,
       value: node.meta_info.bc_slug,
     }));
-  // .sort((a, b) => a.value.localeCompare(b.value));
-
-  // const programs = [];
-  // for (const item of nonUniqueprograms) {
-
-  //   const duplicate = programs.find(
-  //     (obj) => item.value.startsWith(obj.value)
-  //   );
-  //   if (!duplicate) programs.push(item);
-  // }
 
   const [regionVal, setRegionVal] = useState(null);
   const [showPhoneWarning, setShowPhoneWarning] = useState(false);
@@ -500,21 +488,6 @@ const Apply = (props) => {
                   campusDial={formData?.location.value}
                   setShowPhoneWarning={setShowPhoneWarning}
                 />
-                {/* <Input
-                                    data-cy="phone"
-                                    border="1px solid hsl(0,0%,80%)"
-                                    bgColor={Colors.white}
-                                    type="phone" className="form-control" placeholder={yml.left.form_section.phone}
-                                    errorMsg="Please specify a valid phone number"
-                                    required
-                                    onChange={(value, valid) => {
-                                        setVal({...formData, phone: {value, valid}})
-                                        if (formStatus.status === "error") {
-                                            setFormStatus({status: "idle", msg: "Resquest"})
-                                        }
-                                    }}
-                                    value={formData.phone.value || ""}
-                                /> */}
               </Div>
             </Grid>
             <Div
@@ -762,20 +735,6 @@ const Apply = (props) => {
           })}
         </Div>
       </GridContainer>
-      {/* <GridContainer columns_tablet="12" padding="99px  17px 80px 17px" padding_tablet="0" margin_tablet="0 0 81px 0">
-        <Div ref={joinPartnersRef} gridColumn_tablet="1 / 7" gridRow_tablet="1 / 1" flexDirection="column" >
-          <H2 textAlign_md="left" margin="0 0 30px 0">{`</ ${yml.form.title}`}</H2>
-        </Div>
-        <Div gridColumn_tablet="1 / 7" gridRow_tablet="2 / 2" flexDirection="column" >
-          {yml.form.paragraph.split("\n").map((m, i) =>
-            <Paragraph key={i} margin="7px 0" textAlign_md="left" dangerouslySetInnerHTML={{__html: m}}></Paragraph>
-          )}
-        </Div>
-        <Div justifyContent="center" gridColumn_tablet="8 / 13" gridRow_tablet="2 / 2" margin="0 0 81px 0">
-          <LeadForm formHandler={beHiringPartner} handleClose={handleClose} lang={pageContext.lang} inputBgColor={Colors.white} />
-        </Div>
-
-      </GridContainer> */}
     </>
   );
 };
@@ -852,38 +811,6 @@ export const query = graphql`
           testimonial_header {
             heading
             sub_heading
-          }
-        }
-      }
-    }
-    allTestimonialsYaml(filter: { fields: { lang: { eq: $lang } } }) {
-      edges {
-        node {
-          testimonials {
-            student_name
-            testimonial_date
-            hidden
-            linkedin_url
-            linkedin_text
-            student_thumb {
-              childImageSharp {
-                gatsbyImageData(
-                  layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                  width: 200
-                  placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
-                )
-
-                #   fluid(maxWidth: 200){
-                #     ...GatsbyImageSharpFluid_withWebp
-                #   }
-                #   fixed(width: 200, height: 200) {
-                #     ...GatsbyImageSharpFixed
-                #   }
-              }
-            }
-            content
-            source_url
-            source_url_text
           }
         }
       }

@@ -48,6 +48,23 @@ export default function Template(props) {
     },
   }).Compiler;
 
+  post.htmlAst.children?.forEach((elem) => {
+    if (elem.tagName === "p") {
+      elem.children?.forEach((tag) => {
+        if (tag.tagName === "a") {
+          if (
+            tag.properties &&
+            !tag.properties.href.includes("4geeks.com") &&
+            !tag.properties.href.includes("4geeksacademy.com")
+          ) {
+            tag.properties.rel = "nofollow";
+            tag.properties.target = "_self";
+          }
+        }
+      });
+    }
+  });
+
   const markdownAST = renderAst(post.htmlAst).props.children;
   const sanitizedData = markdownAST?.filter((el) => el.type !== "h1");
 

@@ -221,7 +221,7 @@ part_time:
       - "Tailor-made financing from 6 to 18 months"  
       - "An advance payment corresponding to 20% of the value of the program must be paid" 
     icons: 
-      - "/images/partner/flevo.png"
+      - "/images/partner/flevo-new.png"
 
   - slug: 'latam-solo-programa-ds'
     academies: ['montevideo-uruguay','bogota-colombia', 'costa-rica', 'mexicocity-mexico','quito-ecuador', 'panamacity-panama', 'buenosaires-argentina','lima-peru','lapaz-bolivia']
@@ -235,7 +235,7 @@ part_time:
       - "You need to choose if you are taking just the program, or if you also want to get our Career Support in full, or if you want to go all in and sign up with our Job Guaranteed Feature"  
       - "Pay only for the Data Science program if you are not interested yet in our career support program and our job guarantee"   
     icons: 
-      - "/images/partner/flevo.png" 
+      - "/images/partner/flevo-new.png" 
 
   - slug: 'latam-program-only-ds-upfront'
     academies: ['montevideo-uruguay','bogota-colombia', 'costa-rica', 'mexicocity-mexico','quito-ecuador', 'panamacity-panama', 'buenosaires-argentina','lima-peru','lapaz-bolivia']
@@ -249,7 +249,7 @@ part_time:
       - "You need to choose if you are taking just the program, or if you also want to get our Career Support in full, or if you want to go all in and sign up with our Job Guaranteed Feature"  
       - "Pay only for the Data Science program if you are not interested yet in our career support program and our job guarantee"   
     icons: 
-      - "/images/partner/flevo.png" 
+      - "/images/partner/flevo-new.png" 
 
   - slug: 'latam-upfront-ds-cs'
     academies: ['montevideo-uruguay','bogota-colombia', 'costa-rica', 'mexicocity-mexico','quito-ecuador', 'panamacity-panama', 'buenosaires-argentina','lima-peru','lapaz-bolivia']
@@ -263,4 +263,4 @@ part_time:
       - "You need to choose if you are taking just the program, or if you also want to get our Career Support in full, or if you want to go all in and sign up with our Job Guaranteed Feature"  
       - "Additionally to the Data Science program, get a lifetime of career support from our specialized team and permanent access to our online community of graduates"   
     icons: 
-      - "/images/partner/flevo.png"    
+      - "/images/partner/flevo-new.png"    

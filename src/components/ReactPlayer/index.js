@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import styled from "styled-components";
 import YouTube from "react-youtube";
 import PropTypes from "prop-types";
-// import GImage from "gatsby-image"
 import { Devices } from "../Responsive";
 import Modal from "../Modal";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
@@ -151,6 +150,7 @@ const Player = ({
                 onStateChange={onStateChange}
                 onPlaybackRateChange={onPlaybackRateChange}
                 onPlaybackQualityChange={onPlaybackQualityChange}
+                height={videoHeight}
                 opts={{
                   // padding: "125px 0 0",
                   width: "100%",
@@ -167,7 +167,8 @@ const Player = ({
               borderRadius={style.borderRadius}
               videoId={yt_parser(id)}
               id={`a-${id} do-not-delete-this-hack`}
-              onReady={(e) => e.target.pauseVideo()}
+              // onReady={(e) => e.target.pauseVideo()}
+              onReady={(e) => setVid(e.target)}
               onPlay={onPlay}
               onPause={onPause}
               onEnd={onEnd}
@@ -175,7 +176,7 @@ const Player = ({
               onStateChange={onStateChange}
               onPlaybackRateChange={onPlaybackRateChange}
               onPlaybackQualityChange={onPlaybackQualityChange}
-              // height={videoHeight}
+              height={videoHeight}
               opts={{
                 width: "100%",
                 height: `${style.height}`,
@@ -206,7 +207,6 @@ const Player = ({
             <GatsbyImage
               className={className}
               onClick={() => setShowVideo(true)}
-              // fluid={thumb.childImageSharp.fluid}
               image={getImage(thumb.childImageSharp.gatsbyImageData)}
               alt="Video"
               style={{

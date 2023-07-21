@@ -176,7 +176,7 @@ financials:
       image: "../../../../static/images/leif_main.png"
       featured: false
     - name: "Flevo"
-      image: "../../../../static/images/flevo.png"
+      image: "../../../../static/images/flevo-new.png"
       featured: false
     - name: "Climb"
       image: "../../../../static/images/climb-logo.png"
