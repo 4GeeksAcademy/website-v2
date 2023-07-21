@@ -6,54 +6,22 @@ import { Img, Colors } from "../Styling";
 import Icon from "../Icon";
 
 const Loc = ({ lang, yml, allLocationYaml }) => {
-  const {
-    heading,
-    image,
-    sub_heading,
-    choose,
-    regions,
-    title_image,
-    sub_title_image,
-  } = yml;
-
-  useEffect(() => {
-    regions.forEach((reg, ind, arr) => {
-      arr[ind].sub_links = allLocationYaml.edges.filter(
-        (loc) =>
-          loc.node.meta_info.region === reg.name &&
-          (loc.node.meta_info.visibility === null ||
-            loc.node.meta_info.visibility !== "unlisted")
-      );
-      // if (arr[ind].name === "online") {
-      //   arr[ind].sub_links = allLocationYaml.edges.filter(
-      //     (loc) =>
-      //       loc.node.online_available || loc.node.online_available === null
-      //   );
-      // } else {
-      //   arr[ind].sub_links = allLocationYaml.edges.filter(
-      //     (loc) => loc.node.meta_info.region === reg.name
-      //   );
-      // }
-
-      arr[ind].sub_links.sort((a, b) => {
-        if (a.node.meta_info.position < b.node.meta_info.position) {
-          return -1;
-        }
-        if (a.node.meta_info.position > b.node.meta_info.position) {
-          return 1;
-        }
-        return 0;
-      });
-    });
-    setActiveOpt({ ...regions[0] });
-  }, []);
-
   const data = useStaticQuery(graphql`
     {
       allLocYaml {
         edges {
           node {
-            label
+            heading
+            sub_heading
+            title_image
+            sub_title_image
+            image
+            choose
+            regions {
+              name
+              title
+              content
+            }
             fields {
               lang
             }
@@ -67,6 +35,38 @@ const Loc = ({ lang, yml, allLocationYaml }) => {
   );
   if (content) content = content.node;
   else return null;
+
+  const {
+    heading,
+    image,
+    sub_heading,
+    choose,
+    regions,
+    title_image,
+    sub_title_image,
+  } = content;
+
+  useEffect(() => {
+    regions.forEach((reg, ind, arr) => {
+      arr[ind].sub_links = allLocationYaml.edges.filter(
+        (loc) =>
+          loc.node.meta_info.region === reg.name &&
+          (loc.node.meta_info.visibility === null ||
+            loc.node.meta_info.visibility !== "unlisted")
+      );
+
+      arr[ind].sub_links.sort((a, b) => {
+        if (a.node.meta_info.position < b.node.meta_info.position) {
+          return -1;
+        }
+        if (a.node.meta_info.position > b.node.meta_info.position) {
+          return 1;
+        }
+        return 0;
+      });
+    });
+    setActiveOpt({ ...regions[0] });
+  }, []);
 
   const [activeOpt, setActiveOpt] = useState({
     ...regions[0],

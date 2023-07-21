@@ -1,7 +1,7 @@
 import React from "react";
 import { useStaticQuery, graphql, Link } from "gatsby";
-import { Title, H2, H4, H3, Paragraph } from "../Heading";
-import { Column, Row, Div, Grid, GridContainer } from "../Sections";
+import { H2, H4, H3, Paragraph } from "../Heading";
+import { Div, GridContainer } from "../Sections";
 import { RoundImage, Colors } from "../Styling";
 import ReactPlayer from "../ReactPlayer";
 import Fragment from "../Fragment";
@@ -40,9 +40,6 @@ export default ({
                     quality: 100
                     placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                   )
-                  # fluid(maxWidth: 800, quality: 100){
-                  #   ...GatsbyImageSharpFluid_withWebp
-                  # }
                 }
               }
               alt
@@ -148,7 +145,7 @@ export default ({
                     width="85%"
                     width_tablet="100%"
                     height_tablet="158px"
-                    height={playerHeight || "auto"}
+                    videoHeight={playerHeight}
                   />
                 </Div>
                 <Div

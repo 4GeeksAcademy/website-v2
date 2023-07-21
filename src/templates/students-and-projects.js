@@ -150,6 +150,7 @@ const StudentAndProjects = (props) => {
                     id={l.project_video}
                     thumb={l.project_image}
                     imageSize="maxresdefault"
+                    videoHeight="389px"
                     style={{
                       width: "100%",
                       height: "389px",
@@ -200,9 +201,6 @@ export const query = graphql`
                   width: 800
                   placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                 )
-                # fluid(maxWidth: 800){
-                #   ...GatsbyImageSharpFluid_withWebp
-                # }
               }
             }
             project_content

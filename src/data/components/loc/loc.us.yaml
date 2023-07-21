@@ -1,1 +1,17 @@
-label: Next cohort in this location
+heading: "LOCATIONS: ONLINE OR IN-PERSON"
+sub_heading: "Whether you decide to enroll in our online or in-person program, you'll enjoy real-time, live interactions with our teachers, mentors, and fellow classmates. Engage in dynamic lectures, hands-on projects, and interactive exercises alongside your cohort, and gain all the knowledge you need to become a highly skilled professional."
+title_image: "Online, Hybrid or In-person. "
+sub_title_image: | 
+  <p>Immerse in a live classroom environment for cohort-based learning in real-time. <br /> Enjoy unlimited 1-1 mentorships and personalized career guidance.</p>
+image: "/images/locations/locations_image.png"
+choose: "Choose a region"
+regions:
+  - name: "usa-canada"
+    title: "US & Canada"
+    content: "With the online modality you have access to our physical locations worldwide"
+  - name: "europe"
+    title: "Europe"
+    content: "All our campuses in Europe have face-to-face and online modalities"
+  - name: "latam"
+    title: "LATAM"
+    content: "All our campuses in America have face-to-face and online modalities"

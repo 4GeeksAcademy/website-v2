@@ -234,6 +234,7 @@ export const Div = styled.div`
     display: ${(props) => props.display_sm};
     column-count: ${(props) => props.columnCount_sm};
     flex-direction: ${(props) => props.flexDirection_sm};
+    flex-wrap: ${(props) => props.flexWrap_sm};
     display: ${(props) => props.display_sm};
     order: ${(props) => props.order_sm};
     margin: ${(props) => props.margin_sm};
@@ -279,6 +280,7 @@ export const Div = styled.div`
     flex: ${(props) => props.flex_tablet};
     flex-shrink: ${(props) =>
       props.flexShrink_tablet ? props.flexShrink_tablet : 1};
+    flex-wrap: ${(props) => props.flexWrap_tablet};
     border: ${(props) => props.border_tablet};
     border-top: ${(props) => props.borderTop_tablet};
     top: ${(props) => props.top_tablet};

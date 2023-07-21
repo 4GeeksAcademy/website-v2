@@ -107,9 +107,6 @@ const Home = (props) => {
 
   return (
     <>
-      {/* <Helmet>
-        <script type="application/ld+json">{JSON.stringify(schemaOrg)}</script>
-      </Helmet> */}
       <Div
         display="flex"
         position="absolute"
@@ -351,7 +348,7 @@ const Home = (props) => {
           session.location &&
           session.location.breathecode_location_slug
         }
-        playerHeight="auto"
+        playerHeight="600px"
         title={true}
       />
       <ChooseYourProgram
@@ -368,11 +365,7 @@ const Home = (props) => {
         paragraph={hiring.partners.sub_heading}
       />
 
-      <Loc
-        lang={pageContext.lang}
-        yml={yml.locations}
-        allLocationYaml={data.allLocationYaml}
-      />
+      <Loc lang={pageContext.lang} allLocationYaml={data.allLocationYaml} />
     </>
   );
 };
@@ -448,19 +441,6 @@ export const query = graphql`
 
               geek_force_heading
               geek_pal_heading
-            }
-          }
-          locations {
-            heading
-            sub_heading
-            title_image
-            sub_title_image
-            image
-            choose
-            regions {
-              name
-              title
-              content
             }
           }
           alumni_header {
