@@ -557,7 +557,8 @@ const Calendar = (props) => {
                           margin="10px 0"
                           textColor="white"
                         >
-                          {session?.location?.button.apply_button_text || content.cohorts.info.button_text}
+                          {session?.location?.button.apply_button_text ||
+                            content.cohorts.info.button_text}
                         </Button>
                       </Link>
                     </Div>

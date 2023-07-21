@@ -206,8 +206,8 @@ export const Navbar = ({
     (contentBar.active && !isDevelopment());
 
   const langDictionary = {
-    us: 'es',
-    es: 'us',
+    us: "es",
+    es: "us",
   };
 
   const locations = locByLanguage(data.allLocationYaml, langDictionary[lang]);
@@ -284,11 +284,13 @@ export const Navbar = ({
         </Menu>
         <Div alignItems="center" justifyContent="between">
           <Link
-          onClick={() => setSession({ 
-            ...session, 
-            language: langDictionary[lang],
-            locations,
-          })}
+            onClick={() =>
+              setSession({
+                ...session,
+                language: langDictionary[lang],
+                locations,
+              })
+            }
             to={
               session && session.pathsDictionary && currentURL
                 ? `${session.pathsDictionary[currentURL] || ""}${
