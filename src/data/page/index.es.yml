@@ -5,7 +5,7 @@ meta_info:
   description: "El #1 part-time coding bootcamp, 3000+ graduados y soporte de por vida. Coding Bootcamp en Miami, España, Portugal, Alemania, Chile y Venezuela."
   image: "https://storage.googleapis.com/4geeks-academy-website/website-preview.png"
   keywords: "Coding Bootcamp, Coding Bootcamp Miami, Coding Bootcamp España, Coding Bootcamp Chile, Aprende a programar, aprender programación, aprende computación"
-  redirects: ["/es/home", "/es/inicio", "/es"]
+  redirects: ["/es/home", "/es"]
 
 header_data:
   tagline: Coding Bootcamp
