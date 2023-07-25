@@ -11,7 +11,7 @@ projects:
   - name: Costa Rica-CINDE and 4Geeks Project
     image:
       alt: typing
-      src: "../../../../static/images/locations/campuses-header-costa-rica.png"
+      src: "../../../../static/images/projects/costa-rica.png"
     description: The Interamerican Development Bank, together with the Ministry for Science, Technology, Telecom and Innovation of Costa Rica, launched a program to invest in Costa Rica talent and help around 250 students to become software developers with skills to get a better job after graduation. 
     details:
       cost: $1.5mm
@@ -34,7 +34,7 @@ projects:
   - name: United Way Miami and 4Geeks Academy
     image:
       alt: typing
-      src: "../../../../static/images/united-way-project.png"
+      src: "../../../../static/images/projects/united-way-project.png"
     description: United Way Miami, in partnership with 4Geeks Academy, has launched the Miami Workforce Project offering top quality education and training to Miami-Dade County Residents. This program is a direct result of a multi-million gift by philanthropist, Mackenzie Scott. Selected students will receive coding training with all upfront costs of training waived. 
     details:
       cost: $1mm
@@ -55,7 +55,7 @@ projects:
   - name: UTEC and 4Geeks
     image:
       alt: typing
-      src: "../../../../static/images/locations/campuses-header-uruguay.png"
+      src: "../../../../static/images/projects/uruguay.png"
     description: This project is the consequence of a combined effort etween UTEC, IDB and 4Geeks to train Uruguayans in Coding and promote the tech driven talent growth in the country. 
     details:
       cost: 175k
