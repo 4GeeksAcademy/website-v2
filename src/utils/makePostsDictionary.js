@@ -26,12 +26,27 @@ const onCreateBlogLangSwitcher = async () => {
 
     let translation;
     if (lang === "es") {
-      if ('us' in post.translations) translation = posts.find((obj) => obj.slug === post.translations.us && obj.clusters.length > 0);
-      blog_ES_US.push([`/${lang}/${cluster}/${slug}`, translation ? `/us/${translation.clusters[0]}/${translation.slug}` : "/us/blog"]);
-    }
-    else {
-      if ('es' in post.translations) translation = posts.find((obj) => obj.slug === post.translations.es && obj.clusters.length > 0);
-      blog_US_ES.push([`/${lang}/${cluster}/${slug}`, translation ? `/es/${translation.clusters[0]}/${translation.slug}` : "/es/blog-en-espanol"]);
+      if ("us" in post.translations)
+        translation = posts.find(
+          (obj) => obj.slug === post.translations.us && obj.clusters.length > 0
+        );
+      blog_ES_US.push([
+        `/${lang}/${cluster}/${slug}`,
+        translation
+          ? `/us/${translation.clusters[0]}/${translation.slug}`
+          : "/us/blog",
+      ]);
+    } else {
+      if ("es" in post.translations)
+        translation = posts.find(
+          (obj) => obj.slug === post.translations.es && obj.clusters.length > 0
+        );
+      blog_US_ES.push([
+        `/${lang}/${cluster}/${slug}`,
+        translation
+          ? `/es/${translation.clusters[0]}/${translation.slug}`
+          : "/es/blog-en-espanol",
+      ]);
     }
   }
 
