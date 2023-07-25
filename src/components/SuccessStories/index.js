@@ -98,6 +98,7 @@ const TestimonialCard = ({
               width="100%"
               width_tablet="100%"
               style={{ breakInside: "avoid" }}
+              videoHeight="600px"
             />
           </Div>
         </>
