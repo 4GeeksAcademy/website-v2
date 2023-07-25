@@ -159,36 +159,6 @@ export default function Template(props) {
     }
   }
 
-  const schema = {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    headline: post.frontmatter.title,
-    alternativeHeadline: post.frontmatter.title,
-    image: post.frontmatter.image,
-    author: post.frontmatter.author,
-    // "award": "Best article ever written",
-    editor: "4Geeks Academy",
-    genre: post.frontmatter.cluster.replace(/-|_/g, " "),
-    // "keywords": "cuanto gana un desarrollador full stack",
-    wordcount: post.frontmatter.wordcount,
-    publisher: {
-      "@type": "Organization",
-      name: "4Geeks Academy",
-      logo: {
-        "@type": "ImageObject",
-        url: "https://storage.googleapis.com/media-breathecode/b25a096eb14565c0c5e75d72442f888c17ac06fcfec7282747bf6c87baaf559c",
-      },
-    },
-    url: `https://4geeksacademy.com/${pageContext.lang}/${post.frontmatter.cluster}/${post.frontmatter.slug}`,
-    mainEntityOfPage: {
-      "@type": "WebPage",
-    },
-    // datePublished: post.frontmatter.date,
-    dateCreated: post.frontmatter.date,
-    // dateModified: post.frontmatter.date,
-    description: post.frontmatter.excerpt,
-  };
-
   return (
     <>
       <Layout
@@ -335,47 +305,6 @@ export default function Template(props) {
             </Div>
           </Div>
         </GridContainer>
-
-        {/* <Div
-          flexDirection="column"
-          justifyContent="center"
-          alignItems="center"
-          height="43px"
-          margin="0 0 89px 0"
-          width="100%"
-          width_tablet="100%"
-          height_tablet="100%"
-          borderRadius="3px"
-          gridArea_tablet="1/10/2/13"
-        >
-          <Paragraph
-            color="#3A3A3A"
-            margin="0 0 10px 0"
-            display="none"
-            display_tablet="block"
-            fontWeight="900"
-            fontSize="15px"
-            lineHeight="19px"
-            style={{letterSpacing: "0.05em", textTransform: "uppercase"}}
-          >
-            Compartir Articulo
-            </Paragraph>
-
-          <Div>
-            <Icon icon="twitter"
-              style={{margin: "0 15px 0 0"}}
-              height="32px"
-              width="32px"
-            />
-            <Icon icon="facebook"
-              style={{margin: "0 15px 0 0"}}
-              color={Colors.black}
-              fill={Colors.black}
-              height="32px"
-              width="32px"
-            />
-          </Div>
-        </Div> */}
       </Layout>
     </>
   );
