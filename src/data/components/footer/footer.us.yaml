@@ -97,6 +97,8 @@ footer:
     items:
       - name: "4GEEKS FOR COMPANIES"
         link: "/us/partners"
+      - name: "TALENT"
+        link: "https://4geeksacademy.com/talent"
 
 socials:
   - name: "Github"

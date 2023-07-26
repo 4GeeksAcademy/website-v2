@@ -15,8 +15,8 @@ meta_info:
   # this UTM fields will be also included in the CRM contact
   utm_course: ["full-stack"]
   utm_location: ["santiago-chile","caracas-venezuela","orlando","buenosaires-argentina","bogota-colombia","montevideo-uruguay","mexicocity-mexico","costa-rica","panamacity-panama","quito-ecuador","lima-peru","madrid-spain","downtown-miami"]
-  automation: soft # comma separated, "soft" is the default value
-  tag: request_more_info # comma separated, "request_more_info" is the default value
+  automation: strong # comma separated, "soft" is the default value
+  tag: website-lead # comma separated, "request_more_info" is the default value
 
 navbar:
   logoUrl: "#" # relative(/apply), absolute(https://google.com) or id(#componentName)
@@ -30,7 +30,7 @@ form:
   margin_md: "0 auto 0 -30px"
   heading: "Conoce más información"
   button_label: Obtener más información
-  redirect: "https://marketing892162.typeform.com/to/XhfwihKQ" #you can redirect to another url or entirely diffrent website
+  redirect: "https://marketing892162.typeform.com/to/Ar4zOahX" #you can redirect to another url or entirely diffrent website
     
   # jumbotron on the top (cannot be commented out)
 header_data:

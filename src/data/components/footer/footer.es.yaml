@@ -81,6 +81,8 @@ footer:
     items:
       - name: "4GEEKS PARA EMPRESAS"
         link: "/es/alianzas"
+      - name: "Talento"
+        link: "https://4geeksacademy.com/talent"
 
 socials:
   - name: "Github"

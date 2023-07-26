@@ -10,7 +10,7 @@ meta_info:
 seo_title: "level up as a developer"
 header:
   title: $20+ Millones en becas
-  paragraph: Resolviendo el acceso a la educación de programación. El próximo beneficiario puedes ser tú.
+  paragraph: Impulsando el Futuro de la Educación Tecnológica, Haciendo la Programación Accesible para Todos
 
 button:
   btn_label: "Quiero contribuir"
@@ -24,7 +24,7 @@ two_column_left:
     style: '{ "backgroundSize": "contain" }'
     src: /images/landing/20-million-column.png
   heading:
-    text: ¿Por qué lo hacemos?
+    text: Nuestra misión es hacer que la educación de programación de alta calidad sea asequible.
     font_size:
       - 40px
       - 40px
@@ -32,7 +32,7 @@ two_column_left:
       - 40px
       - 40px
   sub_heading:
-    text: 68% de las personas que aplican a 4Geeks son rechazados debido a razones financieras.
+    text: En el pasado, el 68% de las personas que se inscribían en 4Geeks Academy no podían inscribirse por razones financieras. Concentramos nuestros esfuerzos en bajar las barreras financieras, encontramos socios y patrocinadores que compartían nuestra visión. Hoy, gracias a nuestros esfuerzos conjuntos, el 80% de nuestros estudiantes reciben algún tipo de apoyo financiero, lo que hace que la educación de codificación de alta calidad sea accesible a más personas.
     font_size:
       - 16px
       - 16px
@@ -43,10 +43,10 @@ two_column_left:
     font_size:
       - 16px
     text: |
-      Cuando lanzamos 4Geeks de vuelta en 2015, estabamos seguros de 3 cosas principales:
-      - Queriamos tener una escuela de máxima calidad donde la gente pudiera obtener habilidades de programación para mejorar su futuro.
-      - Queriamos que fuesen capaces de conseguir un trabajo después de completar el programa.
-      - Queriamos crear una estrategia donde más gente pudiera obtener acceso a educación de alta calidad: Por lo que nuestra matrícula y alianzas son todas enfocadas en hacerlo posible.
+      Cuando lanzamos 4Geeks en 2015, teníamos tres objetivos fundamentales
+        - Ser una escuela de alta calidad donde las personas puedan aprender habilidades de codificación y mejorar sus perspectivas futuras.
+        - Ayudar a los graduados a obtener oportunidades de trabajo justo después de completar el programa.
+        - Hacer que nuestra educación de codificación de alta calidad sea accesible a tantas personas como sea posible.
 
   button:
     text: ÚNETE COMO PARTNER
@@ -57,6 +57,6 @@ two_column_left:
 form:
   title: Conviertete en un 4Geeks Partner
   paragraph: |
-    Contáctanos y te conectaremos directamente con los candidatos ideales que se están graduando diariamente de 4Geeks Academy.
+    Gracias a nuestros socios dedicados, estamos convirtiendo nuestros objetivos en realidad. Conviértase en parte de nuestra red y ayude a dar forma al futuro de la educación tecnológica.
     - Nuestros graduados son talentosos, comprometidos y han pasado por muchas etapas de nuestra metodología: no solo habilidades duras, técnicas o blandas, sino también entrevistas, evaluaciones tecnológicas, trabajo en proyectos y muchas más características que les permiten estar listos para una nueva oportunidad en nuestra compañía.
     - Nuestros programas preparan a los estudiantes para trabajar y prosperar en cualquier organización tecnológica y de mentalidad prospectiva.

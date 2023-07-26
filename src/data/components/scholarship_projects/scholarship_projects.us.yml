@@ -1,5 +1,5 @@
-title: Funds in execution
-description: We are going to show you what we have been working during the last few years. We can keep on building something like these together!
+title: Funds in action
+description: Here's a sample of the projects we've been working on over the last few years! Together, we can turn more impactful projects into reality.
 project_name: Costa Rica-CINDE and 4Geeks Project
 project_details: Project details
 total_cost: Total Cost
@@ -12,7 +12,7 @@ projects:
     image:
       alt: typing
       src: "../../../../static/images/projects/costa-rica.png"
-    description: The Interamerican Development Bank, together with the Ministry for Science, Technology, Telecom and Innovation of Costa Rica, launched a program to invest in Costa Rica talent and help around 250 students to become software developers with skills to get a better job after graduation. 
+    description: In collaboration with the Ministry for Science, Technology, Telecommunication and Innovation of Costa Rica, the IDB launched a program to invest in Costa Rica's talent. Together, we’re helping around 250 students become skilled software developers, opening doors to better job opportunities after graduation.
     details:
       cost: $1.5mm
       geeks_benefited: 212
@@ -34,8 +34,8 @@ projects:
   - name: United Way Miami and 4Geeks Academy
     image:
       alt: typing
-      src: "../../../../static/images/projects/united-way-project.png"
-    description: United Way Miami, in partnership with 4Geeks Academy, has launched the Miami Workforce Project offering top quality education and training to Miami-Dade County Residents. This program is a direct result of a multi-million gift by philanthropist, Mackenzie Scott. Selected students will receive coding training with all upfront costs of training waived. 
+      src: "../../../../static/images/projects/united-way.png"
+    description: United Way Miami has partnered with 4Geeks Academy to launch the Miami Workforce Project. This transformative program was created to provide top-quality education and training to Miami-Dade County residents and is made possible by a multi-million gift from philanthropist Mackenzie Scott. Admitted students will receive coding training with no upfront costs.
     details:
       cost: $1mm
       geeks_benefited: 100
@@ -56,7 +56,7 @@ projects:
     image:
       alt: typing
       src: "../../../../static/images/projects/uruguay.png"
-    description: This project is the consequence of a combined effort etween UTEC, IDB and 4Geeks to train Uruguayans in Coding and promote the tech driven talent growth in the country. 
+    description: This project was possible thanks to a combined effort between UTEC, IDB, and 4Geeks. The goal was to train Uruguayans in Coding and leverage tech-driven growth in the country.
     details:
       cost: 175k
       geeks_benefited: 60
