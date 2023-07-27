@@ -224,16 +224,22 @@ const createBlog = async ({ actions, graphql }) => {
       Object.keys(translations).forEach((language) => {
         if (!translations[language]) {
           delete translations[language];
-          return
+          return;
         }
-        if (language === node.fields.lang) translations[language] = node.fields.pagePath;
+        if (language === node.fields.lang)
+          translations[language] = node.fields.pagePath;
         else {
-          const translation = posts.find(({ node }) => node.frontmatter.slug === translations[language])?.node;
-          if (translation) translations[language] = `${translation.fields.lang}/${translation.frontmatter.cluster}/${translation.frontmatter.slug}`;
+          const translation = posts.find(
+            ({ node }) => node.frontmatter.slug === translations[language]
+          )?.node;
+          if (translation)
+            translations[
+              language
+            ] = `${translation.fields.lang}/${translation.frontmatter.cluster}/${translation.frontmatter.slug}`;
         }
       });
     }
-    
+
     createPage({
       path:
         node.frontmatter.template != "landing_cluster"
