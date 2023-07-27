@@ -15,8 +15,8 @@ meta_info:
   # this UTM fields will be also included in the CRM contact
   utm_course: ["full-stack"]
   utm_location: ["caracas-venezuela","santiago-chile","buenosaires-argentina","bogota-colombia","montevideo-uruguay","mexicocity-mexico","costa-rica","panamacity-panama","quito-ecuador","lima-peru","madrid-spain","downtown-miami"]
-  automation: soft # comma separated, "soft" is the default value
-  tag: request_more_info # comma separated, "request_more_info" is the default value
+  automation: strong # comma separated, "soft" is the default value
+  tag: website-lead # comma separated, "request_more_info" is the default value
 
 navbar:
   logoUrl: "#" # relative(/apply), absolute(https://google.com) or id(#componentName)
@@ -49,18 +49,18 @@ features:
   text: Al aprender a programar con 4Geeks Academy tendrás clases online completamente en vivo, la oportunidad de certificarte internacionalmente en poco tiempo y de conseguir tu primer empleo como programador con nuestro apoyo. Descubre cómo puede ser tu vida como un profesional en programación con 4Geeks Academy, ¡comienza ahora!
 
 short_badges:
-  - name: "Premios Excelencia Educativa"
+  - name: "Premios Tecnologia Siglo XXI"
     url: ""
-    image: "../../../static/images/badges/exelencia-educativa-es.png"
+    image: "../../../static/images/awards/premios_tecnologia_sigloxxi.png"
     alt: "Mejor centro de Coding Bootcamp"
-  - name: "Newsweek"
-    url: ""
-    image: "../../../static/images/badges/newsweek-es.png"
-    alt: "Top Coding Bootcamps Newsweek"
-  - name: "Switchup"
+  - name: "Course Report"
     url: ""
     image: "../../../static/images/badges/Course-Report-Badge-2023.png"
-    alt: "Best coding bootcamp Course Report 2023" 
+    alt: "Top Coding Bootcamps Course Report"
+  - name: "Switchup"
+    url: ""
+    image: "../../../static/images/badges/switchup-badge-2023.png"
+    alt: "Best coding bootcamp Switchup 2023"   
 
 follow_bar:
   position: "top" # top, bottom, hidden
@@ -100,7 +100,40 @@ badges:
   heading: "4Geeks Academy cuenta con premios y reconocimientos de validan su excelencia"
 
 who_is_hiring:
-  position: 5
+  position: 6
   limit: 4
   heading: "¿Quién contrata a nuestros alumnos?"
   sub_heading: "Nos encanta ver crecer a nuestros estudiantes, es por eso que nos esforzamos cada día por tener más aliados, para que puedas trabajar en empresas que te ayuden a seguir creciendo profesionalmente."
+
+components:
+  - name: top_coding_bootcamp
+    position: 8
+    layout: two_column_left
+    proportions: [4, 8]
+    image:
+      style: '{ "backgroundSize": "contain" }'
+      src: "/images/badges/Course-Report-Badge-2023.png"
+      link: "https://www.coursereport.com/schools/4geeks-academy"
+    heading:
+      text:
+        "Hemos sido seleccionados entre los mejores Coding Bootcamps del mundo por 3 años consecutivos"
+        #xl      lg     md     sm    xs
+      font_size: ["40px", "40px", "40px", "40px", "40px"]
+  - name: geeksinfo
+    position: 5
+    layout: geeksInfo
+  - name: passion
+    position: 7
+    layout: two_column_right
+    proportions: [6, 6]
+    image:
+      style: '{ "backgroundSize": "contain" }'
+      src: "/images/badges/switchup-badge-2023.png"
+      link: "https://www.switchup.org/bootcamps/4geeks-academy"
+    video: "JLSP_1HYoAg"
+    heading:
+      text: "Nanutria y 4Geeks"
+      font_size: ["40px", "40px", "40px", "40px", "40px"]
+    content:
+      text: "Nanutria tiene todas las características de una persona con la que nos identificamos en 4Geeks. Es Ingeniero, es ingenioso, es talentoso y es constante. Se decidió por la comedia pero mantiene los rasgos de lo que todos queremos poder ser, cada uno en sus áreas. Ahora Nanutria también recomienda 4Geeks Academy"
+      font_size: ["16px"]

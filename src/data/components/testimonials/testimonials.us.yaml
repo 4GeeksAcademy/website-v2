@@ -60,12 +60,12 @@ testimonials:
     source_url_text: ""
     short_content: "Full Stack Developer"
     content: |
-      I love 4Geeks Academy's approach to teaching students. There are always at least three tutors who will 
-      make sure you master your skills and will not give up on you if there's something 
-      you don't understand. They never leave my questions unanswered, regardless of how obvious 
-      they may seem..and the atmosphere in the school is very warm.
-      I'm grateful to you guys for providing 24 hour access to school, 
-      so we can work any time that is convenient for us. Thank you, 4Geeks!!!
+      I love 4Geeks Academy's approach to teaching students. There are always at least three 
+      tutors who will make sure you master your skills and will not give up on you if there's 
+      something you don't understand. They never leave my questions unanswered, regardless
+      of how obvious they may seem..and the atmosphere in the school is very warm. I'm 
+      grateful to you guys for providing 24 hour access to school, so we can work any time that
+      is convenient for us. Thank you, 4Geeks!!!
   - student_name: "Azul Botaya"
     slug: "azu-bota"
     country:
@@ -86,13 +86,13 @@ testimonials:
     source_url_text: ""
     short_content: "Full Stack Developer"
     content: |
-      I felt lost in my career and could not see clear goals for myself anymore.  I came across 
-      this great opportunity to join this community of knowledge and, to top it all off, great humans!
-      I found myself able to commit to something very interesting with endless options 
-      to create my career as a graphic designer more powerful without having to stop what I was doing 
-      within a perfect part-time cohort. 
-      I now have all kinds of new tools I learned there along the way, 
-      and there is a new comfort in knowing that I can always go back and keep growing at 4Geeks.
+      I felt lost in my career and could not see clear goals for myself anymore. I came across 
+      this great opportunity to join this community of knowledge and, to top it all off, great 
+      humans! I found myself able to commit to something very interesting with endless options 
+      to create my career as a graphic designer more powerful without having to stop what I was 
+      doing within a perfect part-time cohort. I now have all kinds of new tools I learned there 
+      along the way, and there is a new comfort in knowing that I can always go back and keep 
+       a new comfort in knowing that I can always go back and keep 
   # - student_name: "Samir Benzada"
   #   testimonial_date: ""
   #   student_thumb: "../../../../static/images/testimonials/samir-benzada.jpg"
@@ -125,12 +125,12 @@ testimonials:
     source_url_text: ""
     short_content: "Full Stack Developer"
     content: |
-      Overall just a great group of people with a common goal. I came into 4Geeks with little 
-      to no knowledge about coding and after 16 weeks I was building projects I could have never 
+      Overall just a great group of people with a common goal. I came into 4Geeks with little to 
+      no knowledge about coding and after 16 weeks I was building projects I could have never 
       imagined I would be able to build. They will provide you with the knowledge and tools to 
-      become a successful developer ready for hire.... Ask as many questions 
-      as you need and they will be happy to help. Not to mention the lifetime support you get 
-      even after completing the Bootcamp.
+      become a successful developer ready for hire.... Ask as many questions as you need and
+      they will be happy to help. Not to mention the lifetime support you get even after 
+      completing the Bootcamp.
 
   - student_name: "Fernando Funez"
     featured: false
