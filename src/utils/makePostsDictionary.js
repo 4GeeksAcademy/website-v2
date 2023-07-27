@@ -26,19 +26,22 @@ const onCreateBlogLangSwitcher = async () => {
   for (let i = 0; i < posts.length; i++) {
     const post = posts[i];
     const lang = post.lang;
-    const cluster = post.clusters.length > 0 ? post.clusters[0] : defaultCluster[lang];
+    const cluster =
+      post.clusters.length > 0 ? post.clusters[0] : defaultCluster[lang];
     const slug = post.slug;
 
     let translation;
     if (lang === "es") {
       if ("us" in post.translations)
-        translation = posts.find(
-          (obj) => obj.slug === post.translations.us
-        );
+        translation = posts.find((obj) => obj.slug === post.translations.us);
       blog_ES_US.push([
         `/${lang}/${cluster}/${slug}`,
         translation
-          ? `/us/${translation.clusters.length > 0 ? translation.clusters[0] : defaultCluster[translation.lang]}/${translation.slug}`
+          ? `/us/${
+              translation.clusters.length > 0
+                ? translation.clusters[0]
+                : defaultCluster[translation.lang]
+            }/${translation.slug}`
           : "/us/blog",
       ]);
     } else {
@@ -49,7 +52,11 @@ const onCreateBlogLangSwitcher = async () => {
       blog_US_ES.push([
         `/${lang}/${cluster}/${slug}`,
         translation
-          ? `/es/${translation.clusters.length > 0 ? translation.clusters[0] : defaultCluster[translation.lang]}/${translation.slug}`
+          ? `/es/${
+              translation.clusters.length > 0
+                ? translation.clusters[0]
+                : defaultCluster[translation.lang]
+            }/${translation.slug}`
           : "/es/blog-en-espanol",
       ]);
     }
