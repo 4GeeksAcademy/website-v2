@@ -104,3 +104,36 @@ who_is_hiring:
   limit: 4
   heading: "¿Quién contrata a nuestros alumnos?"
   sub_heading: "Nos encanta ver crecer a nuestros estudiantes, es por eso que nos esforzamos cada día por tener más aliados, para que puedas trabajar en empresas que te ayuden a seguir creciendo profesionalmente."
+
+components:
+  - name: top_coding_bootcamp
+    position: 8
+    layout: two_column_left
+    proportions: [4, 8]
+    image:
+      style: '{ "backgroundSize": "contain" }'
+      src: "/images/badges/Course-Report-Badge-2023.png"
+      link: "https://www.coursereport.com/schools/4geeks-academy"
+    heading:
+      text:
+        "Hemos sido seleccionados entre los mejores Coding Bootcamps del mundo por 3 años consecutivos"
+        #xl      lg     md     sm    xs
+      font_size: ["40px", "40px", "40px", "40px", "40px"]
+  - name: geeksinfo
+    position: 5
+    layout: geeksInfo
+  - name: passion
+    position: 7
+    layout: two_column_right
+    proportions: [6, 6]
+    image:
+      style: '{ "backgroundSize": "contain" }'
+      src: "/images/badges/switchup-badge-2023.png"
+      link: "https://www.switchup.org/bootcamps/4geeks-academy"
+    video: "JLSP_1HYoAg"
+    heading:
+      text: "Nanutria y 4Geeks"
+      font_size: ["40px", "40px", "40px", "40px", "40px"]
+    content:
+      text: "Nanutria tiene todas las características de una persona con la que nos identificamos en 4Geeks. Es Ingeniero, es ingenioso, es talentoso y es constante. Se decidió por la comedia pero mantiene los rasgos de lo que todos queremos poder ser, cada uno en sus áreas. Ahora Nanutria también recomienda 4Geeks Academy"
+      font_size: ["16px"]
