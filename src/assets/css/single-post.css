@@ -82,7 +82,8 @@
   margin: 25px 30px;
   line-height: 30px;
 }
-.single-post p a {
+.single-post p a,
+.single-post li a{
   color: #0097ce;
   text-decoration: underline;
 }
@@ -135,6 +136,12 @@
   .table-container {
     max-width: 90%;
     width: 600px;
+  }
+}
+
+@media (max-width: 769px) {
+  .table-container {
+    width: 400px;
   }
 }
 

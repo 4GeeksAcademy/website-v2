@@ -48,23 +48,6 @@ export default function Template(props) {
     },
   }).Compiler;
 
-  post.htmlAst.children?.forEach((elem) => {
-    if (elem.tagName === "p") {
-      elem.children?.forEach((tag) => {
-        if (tag.tagName === "a") {
-          if (
-            tag.properties &&
-            !tag.properties.href.includes("4geeks.com") &&
-            !tag.properties.href.includes("4geeksacademy.com")
-          ) {
-            tag.properties.rel = "nofollow";
-            tag.properties.target = "_self";
-          }
-        }
-      });
-    }
-  });
-
   const markdownAST = renderAst(post.htmlAst).props.children;
   const sanitizedData = markdownAST?.filter((el) => el.type !== "h1");
 
@@ -141,22 +124,34 @@ export default function Template(props) {
   //Formatted post date
   let postDate = GetFormattedDate(post.frontmatter.date);
 
-  // element that will be wrapped
-  let el;
-  let wrapper;
   if (isBrowser) {
-    el = document.querySelector("table");
-    // create wrapper container
-    wrapper = document.createElement("div");
-    wrapper.classList.add("table-container");
+    const anchors = document.getElementsByTagName("a");
+    Array.from(anchors).forEach((anchor) => {
+      const linkRegex = new RegExp("(http)");
+      console.log(anchor.href);
+      if (
+        linkRegex.test(anchor.href) && 
+        !anchor.href.includes("4geeks.com") &&
+        !anchor.href.includes("4geeksacademy.com")
+      ) {
+        anchor.rel = "nofollow";
+        anchor.target = "_self";
+      }
+    });
+    const tables = document.getElementsByTagName("table");
+    Array.from(tables).forEach((table) => {
+      let wrapper;
+      wrapper = document.createElement("div");
+      wrapper.classList.add("table-container");
 
-    if (el) {
-      el.parentNode.insertBefore(wrapper, el);
+      if (table) {
+        table.parentNode.insertBefore(wrapper, table);
 
-      // move el into wrapper
-      wrapper.appendChild(el);
-      // insert wrapper before el in the DOM tree
-    }
+        // move el into wrapper
+        wrapper.appendChild(table);
+        // insert wrapper before el in the DOM tree
+      }
+    });
   }
 
   return (
