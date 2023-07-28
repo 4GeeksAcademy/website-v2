@@ -51,6 +51,7 @@ const Side = ({
       <ReactPlayer
         thumb={image && image.src}
         id={video}
+        videoHeight="260px"
         style={{
           width: "100%",
           height: "260px",
