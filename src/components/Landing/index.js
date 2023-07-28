@@ -774,7 +774,8 @@ export const landingSections = {
             data={{
               course: {
                 type: "hidden",
-                value: programs.length === 1 ? programs[0].value : defaultCourse,
+                value:
+                  programs.length === 1 ? programs[0].value : defaultCourse,
                 valid: true,
               },
               utm_location: {

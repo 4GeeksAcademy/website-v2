@@ -24,7 +24,12 @@ const ScholarshipProjects = ({ content, maxWidth }) => {
   };
 
   return (
-    <Div display="block" position="relative" maxWidth={maxWidth || "1366px"} margin="auto">
+    <Div
+      display="block"
+      position="relative"
+      maxWidth={maxWidth || "1366px"}
+      margin="auto"
+    >
       <H2 margin="0 0 10px 0">{content.title}</H2>
       <Paragraph margin="0 0 25px 0">{content.description}</Paragraph>
       <Button

@@ -8,7 +8,12 @@ import Marquee from "react-fast-marquee";
 
 const ScholarshipSuccessCases = ({ content, maxWidth }) => {
   return (
-    <Div height="590px" display="block" margin="0 auto 10px auto" maxWidth={maxWidth || "1366px"}>
+    <Div
+      height="590px"
+      display="block"
+      margin="0 auto 10px auto"
+      maxWidth={maxWidth || "1366px"}
+    >
       <H2 margin="30px 0">{content.title}</H2>
       <Marquee speed={30} pauseOnHover>
         <Div height="500px">
@@ -61,7 +66,11 @@ const ScholarshipSuccessCases = ({ content, maxWidth }) => {
                   </Div>
                 </Div>
                 <Div margin="10px 0 0 0" alignItems="center">
-                  <Div className="react-tel-input" margin="0" style={{ width: "25px" }}>
+                  <Div
+                    className="react-tel-input"
+                    margin="0"
+                    style={{ width: "25px" }}
+                  >
                     <div className={`flag ${student.country.iso}`} />
                   </Div>
                   <Paragraph
