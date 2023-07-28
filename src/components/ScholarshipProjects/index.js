@@ -9,7 +9,7 @@ import { smartRedirecting } from "../../utils/utils.js";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-const ScholarshipProjects = ({ content }) => {
+const ScholarshipProjects = ({ content, maxWidth }) => {
   const sliderRef = useRef();
 
   const settings = {
@@ -24,7 +24,7 @@ const ScholarshipProjects = ({ content }) => {
   };
 
   return (
-    <Div display="block" position="relative">
+    <Div display="block" position="relative" maxWidth={maxWidth || "1366px"} margin="auto">
       <H2 margin="0 0 10px 0">{content.title}</H2>
       <Paragraph margin="0 0 25px 0">{content.description}</Paragraph>
       <Button

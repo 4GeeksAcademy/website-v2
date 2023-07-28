@@ -728,6 +728,7 @@ export const landingSections = {
           }))) ||
       [];
 
+    const defaultCourse = Array.isArray(course) ? course[0] : course;
     return (
       <GridContainer
         key={index}
@@ -773,7 +774,7 @@ export const landingSections = {
             data={{
               course: {
                 type: "hidden",
-                value: programs.length <= 1 ? programs[0].value : course,
+                value: programs.length === 1 ? programs[0].value : defaultCourse,
                 valid: true,
               },
               utm_location: {
