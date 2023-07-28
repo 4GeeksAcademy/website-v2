@@ -84,7 +84,7 @@ export default function Template(props) {
       const linkRegex = new RegExp("(http)");
       console.log(anchor.href);
       if (
-        linkRegex.test(anchor.href) && 
+        linkRegex.test(anchor.href) &&
         !anchor.href.includes("4geeks.com") &&
         !anchor.href.includes("4geeksacademy.com")
       ) {
