@@ -245,7 +245,8 @@ export const TwoColumn = ({ left, right, proportions, session }) => {
   return (
     <Div
       flexDirection="column"
-      gap="0px"
+      gap={left.gap || right.gap || "0px"}
+      gap_tablet={left.gap_tablet || right.gap_tablet || "0px"}
       flexDirection_tablet="row"
       m_sm="0px 0px 100px 0"
     >
