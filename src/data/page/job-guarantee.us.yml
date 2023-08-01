@@ -31,7 +31,7 @@ two_column_left:
     font_size: ["24px", "24px", "24px", "18px", "18px"]
     #Using <p> tags gives <p> inside <p> bug
     text: |
-      We're challenging the traditional education model. It's not just about teaching the relevant skills; it's about the opportunities we’ll create for your career. Together.
+      We’re here to challenge the traditional education model. Our bootcamps go beyond teaching relevant skills; they are designed to launch new, rewarding careers. Together, we’ll shape your future.
       <br>
       <br>
       <span style="color: #0097CD;">✓</span> We <strong style="font-weight: bold;">trust</strong> the effectiveness of the program
@@ -52,15 +52,15 @@ two_column_left:
       path: "#top"
 
 we_trust_section:
-  title: Why should you trust us?
+  title: Why trust us?
   text: |
-    Our program has a proven track record of success and will continue to do so. 
+    A job guarantee seals our commitment to your success! With a proven track record of success, our program will continue to empower future graduates. 
     <br>
     <br>
     The numbers speak for themselves
   boxes:
     - icon: briefcase-2
-      title: "82%"
+      title: "81%"
       text: Job placement rate
     - icon: chart
       title: "60K"

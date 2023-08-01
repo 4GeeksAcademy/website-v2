@@ -264,19 +264,19 @@ work_together:
       description: "Your go-to partner for tech candidates, have a constant flow of high- quality candidates with our amazing talent pipeline!"
 
 benefits_and_charts:
-  title: "Become part of our Partnership Network"
-  description: "These are some of the benefits:"
+  title: "Join us as a Partner"
+  description: "Join our network of partners and gain access to a large pool of skilled talents. As a partner, you will:"
   button_section:
     button_text: "JOIN OUR PARTNERSHIP NETWORK"
     button_link: ""
   bullets:
-    - Access to a big pool of high quality and unique talent.
+    - Access a big pool of high quality and unique talent.
     - Increase job retention with reskilling programs.
-    - Bridge the tech gap within the community.
-    - Fill tech job openings.
-    - Increase brand awareness and value with workshop sponsorships and speaking opportunities.
+    - Help bridge the tech gap within the community.
+    - Fill tech job openings with graduates equipped with the relevant skills.
+    - Enhance brand awareness and value through workshop sponsorships and speaking opportunities.
     - Establish your brand as a strong leader in the tech industry.
-    - Community Building.
+    - Foster community building and collaboration.
 
   charts:
     title: "The numbers"

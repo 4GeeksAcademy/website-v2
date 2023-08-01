@@ -11,7 +11,7 @@ meta_info:
 seo_title: Level up as a developer
 header:
   title: $20+ Million in Scholarships
-  paragraph: Solving access to coding education. The next recipient can be you.
+  paragraph: Fueling the Future of Tech Education, Making Coding Accessible to All.
 
 button:
   btn_label: I want to Contribute
@@ -24,7 +24,7 @@ two_column_left:
     style: '{ "backgroundSize": "contain" }'
     src: /images/landing/20-million-column.png
   heading:
-    text: Why are we doing this?
+    text: Our mission is to make high-quality coding education affordable.
     font_size:
       - 40px
       - 40px
@@ -32,7 +32,7 @@ two_column_left:
       - 40px
       - 40px
   sub_heading:
-    text: 68% of the people applying to 4Geeks are rejected due to financial reasons. We started to fix that in the last few years. Nowadays, 80% of our students get -at least- some financial help and tuition discounts thanks to our partnered/sponsored programs.
+    text: In the past, 68% of the people applying to 4Geeks Academy could not enroll due to financial reasons. We concentrated our efforts on lowering the financial barriers by finding partners and sponsors who shared our vision. Today, thanks to our joint efforts, 80% of our students receive some form of financial support, making top-quality coding education accessible to more individuals.
     font_size:
       - 16px
       - 16px
@@ -42,11 +42,11 @@ two_column_left:
   content:
     font_size:
       - 16px
-    text: >
-      When we launched 4Geeks back in 2015, we were sure about three main things:
-        - We wanted to have a top quality school where people can get coding skills to improve their future.
-        - We wanted them to be able to get a job after completing the program.
-        - We wanted to create a strategy where more people can get access to top quality education: hence our tuition and partnerships are all focused on making it possible.
+    text: |
+      When we launched 4Geeks back in 2015, we had three fundamental goals:
+        - To be a top-quality school where people can learn coding skills and improve their future prospects.
+        - To help graduates secure job opportunities right after completing the program.
+        - To make our high-quality coding education accessible to as many people as possible.
   button:
     text: JOIN US AS A PARTNER
     color: white
@@ -56,9 +56,8 @@ two_column_left:
 form:
   title: Become a 4Geeks Partner
   paragraph: >
-    Contact us and we'll connect you directly to the right candidates
-    who are graduating from 4Geeks Academy every day.
+    Thanks to our dedicated partners, we are turning our goals into reality. Become a part of our network and help shape the future of tech education.
 
     - Our graduates are talented, committed and have gone through many stages of our methodology: not only hard, skills, or soft, but also, interviews, tech assesments, working in projects and many more features that allow them to get ready for a new chance in our comopany.
-
+    
     - Our programs prepare students to work and thrive at any tech and forward-thinking organization.

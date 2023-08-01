@@ -30,7 +30,8 @@ form:
 header_data:
   tagline: Become a Software Developer and Boost your Career in Tech
   sub_heading: "Get a Career in Tech."
-  image: "../../../static/images/4geeks-main.jpg"
+  background: "#FFF1D1"
+  badge: "../../../static/images/badges/Course-Report-Badge-2023.png"
   image_filter: brightness(0.3)
 
 features:
@@ -61,22 +62,39 @@ follow_bar:
 # ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇
 #
 
-in_the_news:
+rating_reviews:
   position: 1
-  heading: "Read about us in the media..."
+  heading: "Top rated on all available review sites"
+  rating_list:
+    - alt: "Career Karma"
+      image: "../../../static/images/badges/career-karma.png"
+      rating: 4.89
+      url: ""
+    - alt: "Switchup"
+      image: "../../../static/images/badges/switchup-img.png"
+      rating: 4.91
+      url: ""
+    - alt: "Course Report"
+      image: "../../../static/images/badges/course-report.png"
+      rating: 4.84
+      url: ""
+    - alt: "Google"
+      image: "../../../static/images/badges/google.png"
+      rating: 5
+      url: ""
 
 badges:
   position: 5
   heading: "4Geeks Academy has awards and recognitions that validate it's excellence"
 
 program_details:
-  position: 3
+  position: 2
   heading: "Master Python, JS and React"
   sub_heading: "The 3 most used languages in the world"
 
 geeks_vs_others:
   position: 6
-  heading: "What made us so successfull?"
+  heading: "What made us so successful?"
   paragraph: ""
   total_rows: 5
 
@@ -98,22 +116,13 @@ alumni_projects:
 
 # Possible layours: [two_column_left_image, two_column_right_image]
 components:
-  - name: first_syllabus_form
-    position: 4
-    layout: syllabus
-    button:
-      text: "Instant Download"
-    heading:
-      text: "Download the course syllabus"
-      #xl      lg     md     sm    xs
-      font_size: ["40px", "40px", "40px", "40px", "40px"]
   - name: passion
     position: 6
     layout: two_column_right
     proportions: [6, 6]
     image:
       style: '{ "backgroundSize": "contain" }'
-      src: "/images/badges/switchup.png"
+      src: "/images/badges/switchup-badge-2023.png"
       link: "https://www.switchup.org/bootcamps/4geeks-academy"
     video: "SixRm6R8rc0"
     heading:
@@ -123,18 +132,21 @@ components:
       text: "Hear it from our graduates"
       font_size: ["16px"]
   - name: top_coding_bootcamp
-    position: 4
+    position: 5
     layout: two_column_left
     proportions: [4, 8]
     image:
       style: '{ "backgroundSize": "contain" }'
-      src: "/images/badges/switchup.png"
-      link: "https://www.switchup.org/bootcamps/4geeks-academy"
+      src: "/images/badges/Course-Report-Badge-2023.png"
+      link: "https://www.coursereport.com/schools/4geeks-academy"
     heading:
       text:
-        "We have been named one of the TOP coding bootcamps in the World"
+        "We have been selected as one of the Top Coding Bootcamps globally for 3 years in a row"
         #xl      lg     md     sm    xs
       font_size: ["40px", "40px", "40px", "40px", "40px"]
+  - name: geeksinfo
+    position: 4
+    layout: geeksInfo
   - name: working_in_tech
     position: 7
     proportions: [4, 8]
