@@ -5,7 +5,7 @@ meta_info:
   visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   image: ""
   keywords: "Preguntas frecuentes bootcamps y 4Geeks Academy"
-  redirects: ["/es/preguntas-frecuentes"]
+  redirects: []
 seo_title: 4Geeks Academy
 banner:
   tagline: Preguntas Frecuentes

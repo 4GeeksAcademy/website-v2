@@ -5,7 +5,7 @@ meta_info:
   image: ""
   visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   keywords: ""
-  redirects: ["/porque-4geeks", "/es/porque-4geeks"]
+  redirects: ["/porque-4geeks"]
 
 seo_title: Coding bootcamp
 
