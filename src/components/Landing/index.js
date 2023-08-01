@@ -44,6 +44,7 @@ const Side = ({
   button,
   bullets,
   session,
+  padding_tablet,
 }) => {
   const utm = session && session.utm;
   if (video)
@@ -101,7 +102,7 @@ const Side = ({
       flexDirection_tablet="column"
       flexDirection="column"
       padding="40px 20px"
-      padding_tablet="36px 72px"
+      padding_tablet={padding_tablet || "36px 72px"}
     >
       {heading && (
         <H2

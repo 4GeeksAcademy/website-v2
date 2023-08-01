@@ -11,8 +11,7 @@ const ScholarshipSuccessCases = ({ content, maxWidth }) => {
     <Div
       height="590px"
       display="block"
-      margin="0 auto 10px auto"
-      maxWidth={maxWidth || "1366px"}
+      margin="0 0 10px 0"
     >
       <H2 margin="30px 0">{content.title}</H2>
       <Marquee speed={30} pauseOnHover>

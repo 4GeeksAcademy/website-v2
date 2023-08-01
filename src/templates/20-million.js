@@ -326,6 +326,7 @@ const TwentyMillion = ({ data, pageContext, yml }) => {
             bullets: ymlTwoColumn.bullets,
             content: ymlTwoColumn.content,
             button: ymlTwoColumn.button,
+            padding_tablet: "36px"
           }}
           proportions={ymlTwoColumn.proportions}
           session={session}
