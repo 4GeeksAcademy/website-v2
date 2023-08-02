@@ -15,7 +15,7 @@ const Color = {
 const Figure = styled.div`
   z-index: ${(props) => props.zIndex || "-1"};
   display: ${(props) => props.display};
-  position: absolute;
+  position: ${(props) => props.zIndex || "absolute"};
   background-color: ${(props) => Color[props.color]};
   width: ${(props) => props.width};
   height: ${(props) => props.height};
@@ -36,6 +36,8 @@ const Figure = styled.div`
     width: ${(props) => props.width_tablet};
     height: ${(props) => props.height_tablet};
     display: ${(props) => props.display_tablet};
+    top: ${(props) => props.top_tablet};
+    left: ${(props) => props.left_tablet};
   }
   @media ${Devices.md} {
     width: ${(props) => props.width_md};
