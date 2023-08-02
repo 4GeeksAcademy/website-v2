@@ -3,7 +3,7 @@
 ## THE HEADINGS ALLOW YOU TO SET DIFFERENT HEADINGS IN "/home" AND "/the-academy" TEMPLATES.
 
 titles:
-  featured: "TÓPICOS"
+  featured: "CARACTERÍSTICAS"
   at_geeks: "EN 4GEEKS"
   average: "PROMEDIO DE LA INDUSTRIA"
 globe_text: ¡Clic aquí!
@@ -14,7 +14,7 @@ info:
     why_important: "Desde el día de tu graduación invitamos a algunos de nuestros hiring partners, después asistirás a nuestro 'Career Week' donde construirás tu CV, LinkedIn, Github y perfil online, asistirás a una entrevista ficticia para diagnosticar tu nivel y luego empezará un seguimiento semanal mientras aplicas a los diferentes trabajos. El soporte nunca termina, incluso recibirás ayuda para desempeñarte mejor en tu trabajo."
     icon: "teacher"
 
-  - features: "Profesor: Estudiante Ratio"
+  - features: "Proporción Profesor: Estudiante"
     at4_Geeks: "1:7 avg"
     industry_average: "1:10 avg"
     why_important: "Es muy fácil sentirse estancado cuando estás aprendiendo a programar. Necesitas atención personal. Es por eso que encontrarás más profesores en 4Geeks que en cualquier otra escuela o coding bootcamp."

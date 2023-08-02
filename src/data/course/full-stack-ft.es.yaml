@@ -124,7 +124,7 @@ details:
       step: 3.4
     - module_name: "LA WEB"
       title: "Desarrollo web"
-      description: "Crea tu primera aplicación con React.js, Patrón MVC, Módulos JS, Bunding, Babel JS, el DOM, Eventos"
+      description: "Crea tu primera aplicación con React.js, Patrón MVC, Módulos JS, Bunding, Babel JS, el DOM, Eventos."
       projects: "Clon de Coursera, clon de Instagram, clon de Youtube, etc."
       slug: "desarrollo-web"
       duration: "4 sem"
