@@ -1,11 +1,7 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import { GridContainerWithImage, Grid, Div, GridContainer } from "../Sections";
-import {
-  H2,
-  H4,
-  Paragraph,
-} from "../Heading";
+import { H2, H4, Paragraph } from "../Heading";
 import { Colors, RoundImage, StyledBackgroundSection } from "../Styling";
 
 const GeeksInfo = ({ lang }) => {
