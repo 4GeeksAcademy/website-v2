@@ -121,7 +121,7 @@ details:
         Durante el prework revisarás cómo hacer un website con HTML y CSS, luego desarrollarás varios proyectos y por último te iniciaras en el mundo de Javascript, aprendiendo sobre variables, loops, condicionales, y funciones.
       projects: "Construye tu primera página web, y una versión mínima de Instagram."
       slug: "prework"
-      duration: "(previo)"
+      duration: "~ 60 horas"
       step: 0
     - module_name: "FUNDAMENTOS"
       title: "Aprende a programar"
@@ -132,14 +132,14 @@ details:
       step: 2
     - module_name: "LA WEB"
       title: "Desarrollo web"
-      description: "Crea tu primera aplicación con React.js, Patrón MVC, Módulos JS, Bundling, Babel JS, el DOM, Eventos"
+      description: "Crea tu primera aplicación con React.js, Patrón MVC, Módulos JS, Bundling, Babel JS, el DOM, Eventos."
       projects: "Clon de Coursera, clon de Instagram, clon de Youtube, etc."
       slug: "desarrollo-web"
       duration: "6 sem"
       step: 6
     - module_name: "API'S"
       title: "Desarrollo de APIs"
-      description: "Enfocado principalmente en Python, Flask y SQL construirás tus propias APIs e interactuarás con otras APIs muy conocidas como Google, Twillio, Facebook, Stripe y más!"
+      description: "Enfocado principalmente en Python, Flask y SQL construirás tus propias APIs e interactuarás con otras APIs muy conocidas como Google, Twillio, Facebook, Stripe ¡Y más!"
       projects: "Clon de Coursera, Clon de Instagram, Clon de Youtube, etc."
       slug: "web-development"
       duration: "3 sem"
