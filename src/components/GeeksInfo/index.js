@@ -1,20 +1,12 @@
-import React, { useState, useEffect } from "react";
-import styled from "styled-components";
+import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import { GridContainerWithImage, Grid, Div, GridContainer } from "../Sections";
 import {
-  H1,
   H2,
-  H3,
   H4,
-  H5,
-  Title,
-  Separator,
-  Span,
   Paragraph,
 } from "../Heading";
 import { Colors, RoundImage, StyledBackgroundSection } from "../Styling";
-import Icon from "../Icon";
 
 const GeeksInfo = ({ lang }) => {
   const data = useStaticQuery(graphql`
@@ -98,7 +90,7 @@ const GeeksInfo = ({ lang }) => {
               left: "-60px",
               borderRadius: "3px",
             }}
-          ></Div>
+          />
           <Div
             display="none"
             display_md="flex"
@@ -111,14 +103,15 @@ const GeeksInfo = ({ lang }) => {
               right: "75px",
               borderRadius: "3px",
             }}
-          ></Div>
+          />
           <StyledBackgroundSection
-            className={`image`}
-            height={`412px`}
+            className="image"
+            height="412px"
             image={content.image1.childImageSharp.gatsbyImageData}
-            bgSize={`contain`}
+            bgSize="contain"
             alt="Cnn Logo"
-            borderRadius={`0 0 0 3px`}
+            borderRadius="0 0 0 3px"
+            style={{ backgroundSize: "contain" }}
           />
         </Div>
         <Div flexDirection="column" gridColumn_tablet="9 / 15">
