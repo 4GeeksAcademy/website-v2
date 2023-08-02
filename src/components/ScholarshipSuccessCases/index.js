@@ -99,16 +99,16 @@ const ScholarshipSuccessCases = ({ content, maxWidth }) => {
                   alignItems="center"
                   width="fit-content"
                   padding="3px 5px"
-                  background={Colors.lightYellow}
+                  background={Colors.veryLightBlue}
                   position="absolute"
                   bottom="17px"
                   right="17px"
                 >
-                  <Icon icon="flag-check" color={Colors.yellow} />
+                  <Icon icon="flag-check" color={Colors.blue} />
                   <Paragraph
                     margin="0 0 0 5px"
                     fontSize="9px"
-                    color={Colors.yellow}
+                    color={Colors.blue}
                   >
                     {student.achievement}
                   </Paragraph>
