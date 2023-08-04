@@ -178,6 +178,8 @@ const Landing = (props) => {
         background={yml.header_data.background || Colors.white}
       >
         <GridContainer
+          style={{maxWidth:"1366px"}}
+          margin="0 auto"
           containerGridGap="0"
           containerColumns_tablet="repeat(1,0fr)"
           padding="95px 0 35px 0"
@@ -251,24 +253,27 @@ const Landing = (props) => {
               {/* <Span animated color={Colors.yellow}>_</Span> */}
             </H1>
             {yml.header_data.sub_heading !== "" && (
-            <H2
-              zIndex="1"
-              type="h2"
-              textAlign="left"
-              fontSize="18px"
-              color={yml.header_data.background ? Colors.black : Colors.white}
-              variant="main"
-              fontWeight="bolder"
-            >
-              {yml.header_data.sub_heading}
-            </H2>
+              <H2
+                zIndex="1"
+                type="h2"
+                textAlign="left"
+                fontSize="18px"
+                color={yml.header_data.background ? Colors.black : Colors.white}
+                variant="main"
+                fontWeight="bolder"
+              >
+                {yml.header_data.sub_heading}
+              </H2>
             )}
             {Array.isArray(yml.features.bullets) &&
               yml.features.bullets.map((f, i) => (
                 <Paragraph
                   zIndex="1"
                   key={i}
-                  style={{...JSON.parse(yml.features.styles), fontWeight: "bolder"}}
+                  style={{
+                    ...JSON.parse(yml.features.styles),
+                    fontWeight: "bolder",
+                  }}
                   margin="7px 0"
                   padding="0px 20px"
                   // textShadow="1px 0px #898a8b"
@@ -279,7 +284,8 @@ const Landing = (props) => {
                 >
                   <Icon
                     style={{
-                      background: bulletIcons[i % bulletIcons.length].background,
+                      background:
+                        bulletIcons[i % bulletIcons.length].background,
                       padding: "5px",
                       transform: bulletIcons[i % bulletIcons.length]?.transform,
                       fontWeight: "bolder",
@@ -390,6 +396,7 @@ const Landing = (props) => {
             )}
           </Div>
           <Div
+            position="relative"
             flexDirection="column"
             size="12"
             size_tablet="10"
@@ -400,11 +407,10 @@ const Landing = (props) => {
             // size_xs="12"
             margin="0"
             textAlign_sm="center"
-            margin_md="0 auto 0 70px"
+            margin_md={yml.form.margin_md || "0 auto 0 70px"}
           >
             <Div
               top="0"
-              right="35%"
               position="absolute"
               display="none"
               display_tablet="block"
@@ -445,24 +451,29 @@ const Landing = (props) => {
               display_tablet="none"
               zIndex="0"
             >
-              <Circle color="lightBlue" width="301px" height="301px" position="unset" />
+              <Circle
+                color="lightBlue"
+                width="301px"
+                height="301px"
+                position="unset"
+              />
               <Div display_tablet="none" margin="100% auto">
                 <Icon
-                  style={{ marginTop: "100%" }}
+                  style={{ marginTop: "90%" }}
                   icon="slash-fill"
                   width="41px"
                   height="111px"
                   color="#C7F3FD"
                 />
                 <Icon
-                  style={{ marginTop: "100%" }}
+                  style={{ marginTop: "90%" }}
                   icon="slash-fill"
                   width="41px"
                   height="111px"
                   color="#020203"
                 />
                 <Icon
-                  style={{ marginTop: "100%" }}
+                  style={{ marginTop: "90%" }}
                   icon="elderly-fill"
                   width="82px"
                   height="112px"
@@ -471,7 +482,7 @@ const Landing = (props) => {
               </Div>
             </Div>
             <LeadForm
-            display="none"
+              landingTemplate
               headerImage={
                 yml.header_data.badge &&
                 yml.header_data.badge.childImageSharp.gatsbyImageData
@@ -487,7 +498,11 @@ const Landing = (props) => {
               margin="18px 10px"
               marginTop_tablet="50px"
               // marginTop_xs="20px"
-              style={{ zIndex: "1", minHeight: "350px", border: "3px solid black" }}
+              style={{
+                zIndex: "1",
+                minHeight: "350px",
+                border: "3px solid black",
+              }}
               formHandler={processFormEntry}
               heading={yml.form.heading}
               motivation={yml.form.motivation}

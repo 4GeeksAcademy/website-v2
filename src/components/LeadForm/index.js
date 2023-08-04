@@ -326,21 +326,23 @@ const LeadForm = ({
     >
       {headerImage && (
         <Div
+          position="absolute"
+          style={{
+            top: 0,
+            right: 50,
+          }}
           width="0px"
           display="none"
           display_tablet="none"
           display_md="flex"
           display_lg="flex"
           flexDirection_tablet="column"
-          padding="0 0 25px 0"
         >
           <GatsbyImage
             loading="eager"
             style={{
               width: "160px",
               height: "130px",
-              position: "absolute",
-              margin: "-44px 0 0 26%",
             }}
             imgStyle={{ objectFit: "contain" }}
             image={getImage(headerImage)}
@@ -382,7 +384,7 @@ const LeadForm = ({
             )}
             {motivation && (
               <Paragraph
-                style={{fontWeight: "700", color: "#000"}}
+                style={{ fontWeight: "700", color: "#000" }}
                 textAlign="left"
                 padding={textPadding || "0px 0px 10px 0px"}
                 padding_tablet={textPadding_tablet || "0px 0px 10px 0px"}
@@ -557,7 +559,7 @@ const LeadForm = ({
                   {formStatus.status === "loading" ? "Loading..." : sendLabel}
                 </Button>
               </Div>
-          )}
+            )}
           </Div>
         </>
       )}
