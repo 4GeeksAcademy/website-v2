@@ -424,26 +424,6 @@ const Landing = (props) => {
                 height="184px"
                 color="#0097CD"
               />
-              <Div display="none" display_tablet="block" margin="100% 0">
-                <Icon
-                  icon="slash-fill"
-                  width="41px"
-                  height="111px"
-                  color="#C7F3FD"
-                />
-                <Icon
-                  icon="slash-fill"
-                  width="41px"
-                  height="111px"
-                  color="#020203"
-                />
-                <Icon
-                  icon="elderly-fill"
-                  width="82px"
-                  height="112px"
-                  color="#FFB718"
-                />
-              </Div>
             </Div>
             <Div
               position="absolute"
@@ -518,6 +498,26 @@ const Landing = (props) => {
               marginButton_tablet="15px 0 30px auto"
               boxShadow="9px 8px 0px 0px rgba(0,0,0,1)"
             />
+            <Div display="none" display_tablet="block" margin="20% 0 0 0">
+                <Icon
+                  icon="slash-fill"
+                  width="41px"
+                  height="111px"
+                  color="#C7F3FD"
+                />
+                <Icon
+                  icon="slash-fill"
+                  width="41px"
+                  height="111px"
+                  color="#020203"
+                />
+                <Icon
+                  icon="elderly-fill"
+                  width="82px"
+                  height="112px"
+                  color="#FFB718"
+                />
+              </Div>
           </Div>
         </GridContainer>
       </LandingContainer>
