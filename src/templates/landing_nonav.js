@@ -178,7 +178,7 @@ const Landing = (props) => {
         background={yml.header_data.background || Colors.white}
       >
         <GridContainer
-          style={{maxWidth:"1366px"}}
+          style={{ maxWidth: "1366px" }}
           margin="0 auto"
           containerGridGap="0"
           containerColumns_tablet="repeat(1,0fr)"
