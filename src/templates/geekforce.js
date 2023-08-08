@@ -121,6 +121,7 @@ const GeekForce = (props) => {
                     id={item.videoId}
                     thumb={item.image}
                     imageSize="maxresdefault"
+                    videoHeight="350px"
                     style={{
                       width: "85%",
                       height: "350px",

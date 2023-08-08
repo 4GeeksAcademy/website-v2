@@ -315,7 +315,8 @@ const TwentyMillion = ({ data, pageContext, yml }) => {
         flexDirection="column"
         padding="50px 0 50px 0"
         padding_tablet="50px 6%"
-        margin="0"
+        margin="auto"
+        maxWidth="1366px"
       >
         <TwoColumn
           left={{ image: ymlTwoColumn.image }}
@@ -325,6 +326,8 @@ const TwentyMillion = ({ data, pageContext, yml }) => {
             bullets: ymlTwoColumn.bullets,
             content: ymlTwoColumn.content,
             button: ymlTwoColumn.button,
+            padding_tablet: "20px",
+            gap_tablet: "40px",
           }}
           proportions={ymlTwoColumn.proportions}
           session={session}
@@ -341,9 +344,11 @@ const TwentyMillion = ({ data, pageContext, yml }) => {
       />
       <GridContainer
         columns_tablet="12"
+        containerColumns_tablet="none"
         padding="0 17px 40px 17px"
         padding_tablet="0"
-        margin_tablet="0 0 81px 0"
+        margin_tablet="0 auto 81px auto"
+        style={{ maxWidth: "1366px" }}
       >
         <Div
           ref={joinPartnersRef}

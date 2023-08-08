@@ -44,6 +44,7 @@ const Side = ({
   button,
   bullets,
   session,
+  padding_tablet,
 }) => {
   const utm = session && session.utm;
   if (video)
@@ -51,9 +52,10 @@ const Side = ({
       <ReactPlayer
         thumb={image && image.src}
         id={video}
+        videoHeight="360px"
         style={{
           width: "100%",
-          height: "260px",
+          height: "360px",
         }}
       />
     );
@@ -100,7 +102,7 @@ const Side = ({
       flexDirection_tablet="column"
       flexDirection="column"
       padding="40px 20px"
-      padding_tablet="36px 72px"
+      padding_tablet={padding_tablet || "36px 72px"}
     >
       {heading && (
         <H2
@@ -243,7 +245,8 @@ export const TwoColumn = ({ left, right, proportions, session }) => {
   return (
     <Div
       flexDirection="column"
-      gap="0px"
+      gap={left.gap || right.gap || "0px"}
+      gap_tablet={left.gap_tablet || right.gap_tablet || "0px"}
       flexDirection_tablet="row"
       m_sm="0px 0px 100px 0"
     >
@@ -728,6 +731,7 @@ export const landingSections = {
           }))) ||
       [];
 
+    const defaultCourse = Array.isArray(course) ? course[0] : course;
     return (
       <GridContainer
         key={index}
@@ -773,7 +777,8 @@ export const landingSections = {
             data={{
               course: {
                 type: "hidden",
-                value: programs.length <= 1 ? programs[0].value : course,
+                value:
+                  programs.length === 1 ? programs[0].value : defaultCourse,
                 valid: true,
               },
               utm_location: {
