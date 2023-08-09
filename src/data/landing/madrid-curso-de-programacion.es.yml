@@ -35,8 +35,8 @@ apply_schollarship: # form that is displayed at the end of the landing
 # jumbotron on the top (cannot be commented out)
 header_data:
   background: "#FFF1D1"
-  tagline: Conviértete en Full-Stack Developer en 18 semanas. Desarrolla proyectos reales y recibe mentorías de programadores senior.
-  sub_heading: "El 86% de nuestros alumnos ya han empezado su carrera en el sector tech con un salario medio de 22.000€ al año."
+  tagline: Conviértete en Full-Stack Developer en 18 semanas
+  sub_heading: "El 86% de nuestros alumnos ya han empezado su carrera en el sector tech con un salario medio de 22.000€ al año. Desarrolla proyectos reales y recibe mentorías de programadores senior."
   badge: "../../../static/images/badges/Course-Report-Badge-2023.png"
   image_filter: brightness(0.3)
 
@@ -51,18 +51,22 @@ features:
    - No se necesita experiencia previa, ¡empieza desde cero!
   
 short_badges:
-  - name: "Premios Excelencia Educativa"
+  - name: "Premios Tecnologia Siglo XXI"
     url: ""
-    image: "../../../static/images/badges/exelencia-educativa-es.png"
+    image: "../../../static/images/awards/premios_tecnologia_sigloxxi.png"
     alt: "Mejor centro de Coding Bootcamp"
-  - name: "Newsweek"
+  - name: "Course Report"
     url: ""
-    image: "../../../static/images/badges/newsweek-es.png"
-    alt: "Top Coding Bootcamps Newsweek"
+    image: "../../../static/images/badges/Course-Report-Badge-2023.png"
+    alt: "Top Coding Bootcamps Course Report"
   - name: "Switchup"
     url: ""
-    image: "../../../static/images/badges/reviews.png"
-    alt: "Best cooding bootcamp Switchup 2021"   
+    image: "../../../static/images/badges/switchup-badge-2023.png"
+    alt: "Best coding bootcamp Switchup 2023"   
+  - name: "Florida Department of Education"
+    url: ""
+    image: "../../../static/images/badges/licensed.png"
+    alt: "Florida Department of Education"
 
 follow_bar:
   position: "top" # top, bottom, hidden
