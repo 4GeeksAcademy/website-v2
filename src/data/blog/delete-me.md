@@ -12,6 +12,9 @@ cluster: "career-growth"
 status: "draft"
 visibility: "hidden"
 featured: true # featured must be a boolean value
+translations: 
+    es: ""
+    us: ""
 
 ---
 

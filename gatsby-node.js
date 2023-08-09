@@ -184,6 +184,10 @@ const createBlog = async ({ actions, graphql }) => {
               author
               date
               status
+              translations {
+                es
+                us
+              }
               featured
               cluster
             }
@@ -215,6 +219,27 @@ const createBlog = async ({ actions, graphql }) => {
 
     // if a blog post has the "landing_cluster" template its not a real blog post, its more like a landing page meant as a topic cluster
     // and it will not follow the same URL structure, landing_cluster's have a very unique URL.
+    const translations = { ...node.frontmatter.translations };
+    if (translations && node.frontmatter.template != "landing_cluster") {
+      Object.keys(translations).forEach((language) => {
+        if (!translations[language]) {
+          delete translations[language];
+          return;
+        }
+        if (language === node.fields.lang)
+          translations[language] = node.fields.pagePath;
+        else {
+          const translation = posts.find(
+            ({ node }) => node.frontmatter.slug === translations[language]
+          )?.node;
+          if (translation)
+            translations[
+              language
+            ] = `${translation.fields.lang}/${translation.frontmatter.cluster}/${translation.frontmatter.slug}`;
+        }
+      });
+    }
+
     createPage({
       path:
         node.frontmatter.template != "landing_cluster"
@@ -223,6 +248,7 @@ const createBlog = async ({ actions, graphql }) => {
       component: postTemplate,
       context: {
         ...node.fields,
+        translations,
       },
     });
 
