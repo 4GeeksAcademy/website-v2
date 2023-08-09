@@ -36,9 +36,9 @@ navbar:
 
 header_data:
   background: "#FFF1D1"
-  tagline: "There are no excuses to enter the tech industry. No cost, ever, for your Coding education. We changed the game."
+  tagline: "There are no excuses to enter the tech industry"
   tagline_color: "black"
-  sub_heading: ""
+  sub_heading: "No cost, ever, for your Coding Education. We changed the game."
   badge: "../../../static/images/badges/Course-Report-Badge-2023.png"
   image_filter: brightness(0.3)
   right_image: "../../../static/images/landing/header_united_way.png"
@@ -57,18 +57,22 @@ features:
   styles: '{ "color": "gray", "fontWeight":"500" }'
   
 short_badges:
-  - name: "Premios Excelencia Educativa"
+  - name: "Premios Tecnologia Siglo XXI"
     url: ""
-    image: "../../../static/images/badges/exelencia-educativa-es.png"
+    image: "../../../static/images/awards/premios_tecnologia_sigloxxi.png"
     alt: "Mejor centro de Coding Bootcamp"
-  - name: "Newsweek"
+  - name: "Course Report"
     url: ""
-    image: "../../../static/images/badges/newsweek-es.png"
-    alt: "Top Coding Bootcamps Newsweek"
+    image: "../../../static/images/badges/Course-Report-Badge-2023.png"
+    alt: "Top Coding Bootcamps Course Report"
   - name: "Switchup"
     url: ""
-    image: "../../../static/images/badges/reviews.png"
-    alt: "Best coding bootcamp Switchup 2021" 
+    image: "../../../static/images/badges/switchup-badge-2023.png"
+    alt: "Best coding bootcamp Switchup 2023"   
+  - name: "Florida Department of Education"
+    url: ""
+    image: "../../../static/images/badges/licensed.png"
+    alt: "Florida Department of Education"
 
 follow_bar:
   position: "top" # top, bottom, hidden

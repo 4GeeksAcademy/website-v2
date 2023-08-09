@@ -28,6 +28,7 @@ full_time:
     recomended: false
     scholarship: "Income Share Agreement"
     payment_time: "Pay after you get a job"
+    job_guarantee_price: "USD $4000"
     price: "$0"
     bullets: 
       - "With $400 p/ week living stipends"
@@ -140,7 +141,6 @@ full_time:
     scholarship: "Paga de Contado"
     payment_time: "Descuento especial por pago temprano"
     price: "$1300*"
-    job_guarantee_price: "$1400*"
     bullets: 
       - "Ahorra $500 de la matrícula"
       - "Al menos 20 días antes del inicio del programa"
@@ -408,6 +408,7 @@ part_time:
     recomended: false
     scholarship: "Trabajo Garantizado"
     payment_time: "Consigues un trabajo o te devolvemos tu dinero"
+    job_guarantee_price: "USD $4000"
     price: "USD $4000"
     bullets:
       - "Siempre hay un plan de pago disponible para que te unas a 4Geeks Academy"
@@ -464,10 +465,10 @@ part_time:
     recomended: false
     scholarship: "Paga de Contado"
     payment_time: "Descuento especial por pago temprano"
-    price: "$1300*"
-    job_guarantee_price: "$1400*"
+    price: "$1750*"
+    original_price: "$2000"
     bullets: 
-      - "Ahorra $500 de la matrícula"
+      - "Ahorra $250 de la matrícula"
       - "Al menos 20 días antes del inicio del programa"
       - "Paga con transferencia bancaria, tarjeta de crédito o débito"
     # icons: 
@@ -490,25 +491,40 @@ part_time:
   - slug: 'venezuela-financed-pt'
     academies: ['caracas-venezuela']
     recomended: true
-    scholarship: "Sólo el Programa Full-Stack"
-    payment_time: "Enfócate en obtener nuevas habilidades. Paga de contado."
-    price: "A partir de $90/m"
+    scholarship: "Financiado"
+    payment_time: "Paga en 12 meses"
+    price: "A partir de $200/m"
     bullets: 
-      - "Siempre hay un plan de pago disponible para que te unas a 4Geeks Academy"
-      - "Si no encuentras aquí lo que esperas, por favor contáctanos y trataremos de encontrar nuevas formas de ayudarte"     
-      - "Debes elegir si tomarás solo el programa, si también quieres obtener nuestro sistema de Career Support, o si quieres ir a por todo y registrarte con nuestra opción de Trabajo Garantizado"  
-      - "Pague solamente por el programa Full-Stack si todavía no está interesado en nuestro programa de apoyo profesional y nuestra garantía de empleo."   
+      - "Paga en 2, 3 o hasta 12 meses"
+      - "Ten una entrevista con Flevo para la rápida aprobación de tu financiamiento"
+      - "Los precios variarán de acuerdo con la duración de tu período de pago"    
     icons: 
-      - "/images/partner/flevo-new.png" 
+      - "/images/partner/flevo.png" 
 
   - slug: 'venezuela-laptop-pt'
     academies: ['caracas-venezuela']
     recomended: false
     scholarship: "Incluye laptop para programar"
     payment_time: "Oferta especial con equipo incluido"
-    price: "~$1600"
+    price: "~$2500"
     bullets: 
+      - "Siempre hay un plan de pago disponible para que te unas a 4Geeks Academy"
+      - "Si no encuentras aquí lo que esperas, por favor contáctanos y trataremos de encontrar nuevas formas de ayudarte"     
       - "El equipo es totalmente tuyo para lo que requieras"
-      - "Paga temprano y ahorra hasta $500"
+      - "Paga con transferencia bancaria, tarjeta de crédito o débito"
     # icons: 
+    #   - "/images/laptp.jpg"
+
+  - slug: 'venezuela-upfront-pt'
+    academies: ['caracas-venezuela']
+    recomended: false
+    scholarship: "Paga en hoy o en 4 partes"
+    payment_time: "Hasta 4 cuotas, sin interés"
+    price: "$2000"
+    bullets: 
+      - "Siempre hay un plan de pago disponible para que te unas a 4Geeks Academy"
+      - "Si no encuentras aquí lo que esperas, por favor contáctanos y trataremos de encontrar nuevas formas de ayudarte"     
+      - "Pay early and save up to $500."
+      - "Paga con transferencia bancaria, tarjeta de crédito o débito"
+    # icons:
     #   - "/images/laptp.jpg"

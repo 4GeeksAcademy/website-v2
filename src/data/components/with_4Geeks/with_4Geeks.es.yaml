@@ -34,7 +34,7 @@ with:
       is_image: false
       image: ""
       image_link: ""
-      text: "Ver Finaciamientos"
+      text: "Ver opciones de financiación"
       text_link: "/es/financiacion"
   - name: "Joao Henrique"
     title: "Siempre tendrás apoyo por parte de la Academia"

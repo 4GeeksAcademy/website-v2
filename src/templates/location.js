@@ -34,7 +34,6 @@ const Location = ({ data, pageContext, yml }) => {
   const { session } = React.useContext(SessionContext);
   const hiring = data.allPartnerYaml.edges[0].node;
   const images = data.allLocationYaml.edges[0].node;
-  const [cohorts, setCohorts] = React.useState([]);
   const [ready, setReady] = useState(false);
 
   useEffect(() => {
@@ -46,17 +45,6 @@ const Location = ({ data, pageContext, yml }) => {
     // setTimeout(() => { setReady(true) }, 3000
   }, []);
   const chooseProgramRef = useRef(null);
-
-  useEffect(() => {
-    const loadCohorts = async () => {
-      const resp = await fetch(
-        `${process.env.GATSBY_BREATHECODE_HOST}/admissions/cohort/all?upcoming=true&academy=online,${yml.breathecode_location_slug}`
-      );
-      const data = await resp.json();
-      setCohorts(data.slice(0, 3));
-    };
-    loadCohorts();
-  }, []);
 
   const goToChooseProgram = (e) => {
     e.preventDefault();

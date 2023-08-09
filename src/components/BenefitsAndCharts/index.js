@@ -35,6 +35,8 @@ const BenefitsAndCharts = (props) => {
         gap="50px"
         padding="52px 0"
         flexDirection_tablet="row"
+        margin="auto"
+        maxWidth={props.maxWidth || "1366px"}
       >
         <Div
           flexDirection="column"

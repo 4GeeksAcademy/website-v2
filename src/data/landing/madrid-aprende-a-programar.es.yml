@@ -39,9 +39,9 @@ features:
   #                                         up   left down  right
   styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
   bullets:
-    - Un Desarrollador en Madrid gana 24.000€ al año
+    - Un Desarrollador en Madrid gana 24.000€ al año.
     - Es una de las industrias donde hay más vacantes actualmente.
-    - No necesitas experiencia previa para comenzar
+    - No necesitas experiencia previa para comenzar.
   text: ¡Es el momento de impulsar tu carrera y convertirte en programador!
 
 follow_bar:
@@ -56,6 +56,24 @@ follow_bar:
     path: "#top"
   phone:
     text: "Llama "
+
+short_badges:
+  - name: "Premios Tecnologia Siglo XXI"
+    url: ""
+    image: "../../../static/images/awards/premios_tecnologia_sigloxxi.png"
+    alt: "Mejor centro de Coding Bootcamp"
+  - name: "Course Report"
+    url: ""
+    image: "../../../static/images/badges/Course-Report-Badge-2023.png"
+    alt: "Top Coding Bootcamps Course Report"
+  - name: "Switchup"
+    url: ""
+    image: "../../../static/images/badges/switchup-badge-2023.png"
+    alt: "Best coding bootcamp Switchup 2023"   
+  - name: "Florida Department of Education"
+    url: ""
+    image: "../../../static/images/badges/licensed.png"
+    alt: "Florida Department of Education"
 
 #
 # ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇
@@ -78,7 +96,7 @@ geeks_vs_others:
 
 why_4geeks:
   position: 5
-  heading: "Porqué 4Geeks"
+  heading: "¿Por qué 4Geeks?"
   sub_heading: ""
 
 who_is_hiring:
@@ -100,11 +118,11 @@ components:
     proportions: [4, 8]
     image:
       style: '{ "backgroundSize": "contain" }'
-      src: "static/images/badges/Course-Report-Badge-2023.png"
+      src: "/images/badges/Course-Report-Badge-2023.png"
       link: "https://www.coursereport.com/schools/4geeks-academy"
     heading:
       text:
-        "Tenemos 3 años consecutivos siendo seleccionados como uno de los mejores coding bootcamps del mundo"
+        "Llevamos 3 años consecutivos siendo seleccionados como uno de los mejores coding bootcamps del mundo"
         #xl      lg     md     sm    xs
       font_size: ["40px", "40px", "40px", "40px", "40px"]
   - name: more_testimonials

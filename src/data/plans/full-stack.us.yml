@@ -28,6 +28,7 @@ full_time:
     recomended: false
     scholarship: "Income Share Agreement"
     payment_time: "Pay only when you get a job. Ask for living stipends."
+    job_guarantee_price: "USD $4000"
     price: "$0"
     bullets: 
       - "Get $400 p/ week living stipends"
@@ -139,7 +140,6 @@ full_time:
     scholarship: "Paga de Contado"
     payment_time: "Pay early and get 30% off."
     price: "$1300*"
-    job_guarantee_price: "$1400*"
     bullets: 
       - "Pay early and save up to $500"
       - "Pay with debit, credit or wire transfer."
@@ -418,6 +418,7 @@ part_time:
     scholarship: "Job Guaranteed"
     payment_time: "Get a job or get your money back"
     price: "USD $4000"
+    job_guarantee_price: "USD $4000"
     bullets:
       - "There is always a payment plan available for you to join 4Geeks Academy"
       - "If you don't find here what you are expecting, please contact us and we will try to find new ways to help"     
@@ -478,17 +479,19 @@ part_time:
       - "You need to choose if you are taking just the program, or if you also want to get our Career Support in full, or if you want to go all in and sign up with our Job Guaranteed Feature"  
       - "Pay only for the Full-Stack program if you are not interested yet in our career support program and our job guarantee"   
     icons: 
-      - "/images/partner/flevo-new.png" 
+      - "/images/partner/flevo.png" 
 
   - slug: 'venezuela-scholarship-pt'
     academies: ['caracas-venezuela']
     recomended: false
     scholarship: "Pay upfront"
-    payment_time: "Pay early and get 30% off."
-    price: "$1300*"
-    job_guarantee_price: "$1400*"
+    payment_time: "Pay early and $250 off"
+    price: "$1750*"
+    original_price: "$2000"
     bullets: 
-      - "Pay early and save up to $500"
+      - "There is always a payment plan available for you to join 4Geeks Academy"
+      - "If you don't find here what you are expecting, please contact us and we will try to find new ways to help"     
+      - "You have to pay least 20 days before the start of the program."
       - "Pay with debit, credit or wire transfer."
     # icons: 
     #   - "/images/landing/uwm_pantone_2021_2.png"
@@ -498,9 +501,24 @@ part_time:
     recomended: false
     scholarship: "Includes a new laptop"
     payment_time: "Special offer with laptop included"
-    price: "~$1600"
+    price: "~$2500"
     bullets: 
-      - "Pay early and save up to $500."
+      - "There is always a payment plan available for you to join 4Geeks Academy"
+      - "If you don't find here what you are expecting, please contact us and we will try to find new ways to help"     
+      - "Pay with debit, credit or wire transfer."
       - "Keep the laptop once you finish the program."
+    # icons:
+    #   - "/images/laptp.jpg"
+
+  - slug: 'venezuela-upfront-pt'
+    academies: ['caracas-venezuela']
+    recomended: false
+    scholarship: "Pay in 4 parts"
+    payment_time: "You can pay today or in 4 parts without interest"
+    price: "~$2000"
+    bullets: 
+      - "There is always a payment plan available for you to join 4Geeks Academy"
+      - "If you don't find here what you are expecting, please contact us and we will try to find new ways to help"     
+      - "Pay with debit, credit or wire transfer."
     # icons:
     #   - "/images/laptp.jpg"
