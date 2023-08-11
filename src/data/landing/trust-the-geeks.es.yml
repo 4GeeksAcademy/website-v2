@@ -119,7 +119,7 @@ badges:
 
 choose_your_program:
   position: 4
-  title: Nuestros programas
+  title: Our programs
   paragraph: Contamos con programas que combinan clases prácticas dictadas por expertos
   programs:
   - title: "Full Stack Developer"

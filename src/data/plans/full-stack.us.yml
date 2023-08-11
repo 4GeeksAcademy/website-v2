@@ -416,14 +416,14 @@ part_time:
     academies: ['montevideo-uruguay','bogota-colombia', 'costa-rica', 'mexicocity-mexico','quito-ecuador', 'panamacity-panama', 'buenosaires-argentina','lima-peru','lapaz-bolivia']
     recomended: false
     scholarship: "Job Guaranteed"
-    payment_time: "Get a job or get your money back"
+    payment_time: "Get hired within 6 months of graduation or your money back"
     price: "USD $4000"
     job_guarantee_price: "USD $4000"
     bullets:
-      - "There is always a payment plan available for you to join 4Geeks Academy"
-      - "If you don't find here what you are expecting, please contact us and we will try to find new ways to help"     
-      - "You need to choose if you are taking just the program, or if you also want to get our Career Support in full, or if you want to go all in and sign up with our Job Guaranteed Feature"  
-      - "With our Job Guarantee, you will get a job within 6 months or else you get your full money back!"   
+      - "We’re fully committed to making our education accessible and offer multiple payment plans and financing options to hold up to our promise."
+      - "You can adapt your learning path to your financial considerations. Choose between joining the Full-stack program only, adding our career support services, or enrolling with a Job Guarantee."     
+      - "We offer a number of full or partial scholarship options that you could be eligible for."  
+      - "Feel free to contact us to explore the possibilities available to you! We're here to find a solution tailored to your needs."   
     icons: 
       - "/images/quotanda-logo.png"
 
@@ -431,12 +431,12 @@ part_time:
     academies: ['montevideo-uruguay','bogota-colombia', 'costa-rica', 'mexicocity-mexico','quito-ecuador', 'panamacity-panama', 'buenosaires-argentina','lima-peru','lapaz-bolivia']
     recomended: true
     scholarship: "Only pay for the program"
-    payment_time: "Focus on gaining skills. Pay monthly."
+    payment_time: "Focus on learning to code. Pay monthly."
     price: "Starting from $90/m"
     bullets: 
-      - "There is always a payment plan available for you to join 4Geeks Academy"
-      - "If you don't find here what you are expecting, please contact us and we will try to find new ways to help"     
-      - "You need to choose if you are taking just the program, or if you also want to get our Career Support in full, or if you want to go all in and sign up with our Job Guaranteed Feature"  
+      - "We’re fully committed to making our education accessible and offer multiple payment plans and financing options to hold up to our promise."
+      - "You can adapt your learning path to your financial considerations. Choose between joining the Full-stack program only, adding our career support services, or enrolling with a Job Guarantee."     
+      - "We offer a number of full or partial scholarship options that you could be eligible for."  
       - "Pay only for the Full-Stack program if you are not interested yet in our career support program and our job guarantee"   
     icons: 
       - "/images/partner/flevo-new.png" 
@@ -445,12 +445,12 @@ part_time:
     academies: ['montevideo-uruguay','bogota-colombia', 'costa-rica', 'mexicocity-mexico','quito-ecuador', 'panamacity-panama', 'buenosaires-argentina','lima-peru','lapaz-bolivia']
     recomended: false
     scholarship: "Full-stack program + Career Support"
-    payment_time: "We help you build your professional profile"
+    payment_time: "Learn to code and get full support building your career"
     price: "USD $3000"
     bullets:
-      - "There is always a payment plan available for you to join 4Geeks Academy"
-      - "If you don't find here what you are expecting, please contact us and we will try to find new ways to help"     
-      - "You need to choose if you are taking just the program, or if you also want to get our Career Support in full, or if you want to go all in and sign up with our Job Guaranteed Feature"  
+      - "We’re fully committed to making our education accessible and offer multiple payment plans and financing options to hold up to our promise."
+      - "You can adapt your learning path to your financial considerations. Choose between joining the Full-stack program only, adding our career support services, or enrolling with a Job Guarantee."     
+      - "We offer a number of full or partial scholarship options that you could be eligible for."  
       - "Additionally to the Full-Stack program, get a lifetime of career support from our specialized team and permanent access to our online community of graduates"   
     icons: 
       - "/images/partner/flevo-new.png"    
@@ -471,12 +471,12 @@ part_time:
     academies: ['montevideo-uruguay','bogota-colombia', 'costa-rica', 'mexicocity-mexico','quito-ecuador', 'panamacity-panama', 'buenosaires-argentina','lima-peru','lapaz-bolivia']
     recomended: false
     scholarship: "Full-Stack Program Only"
-    payment_time: "Focus on gaining skills. Pay upfront."
+    payment_time: "Focus on learning to code. Pay upfront."
     price: "$2000"
     bullets: 
-      - "There is always a payment plan available for you to join 4Geeks Academy"
-      - "If you don't find here what you are expecting, please contact us and we will try to find new ways to help"     
-      - "You need to choose if you are taking just the program, or if you also want to get our Career Support in full, or if you want to go all in and sign up with our Job Guaranteed Feature"  
+      - "We’re fully committed to making our education accessible and offer multiple payment plans and financing options to hold up to our promise."
+      - "You can adapt your learning path to your financial considerations. Choose between joining the Full-stack program only, adding our career support services, or enrolling with a Job Guarantee."     
+      - "We offer a number of full or partial scholarship options that you could be eligible for."  
       - "Pay only for the Full-Stack program if you are not interested yet in our career support program and our job guarantee"   
     icons: 
       - "/images/partner/flevo.png" 

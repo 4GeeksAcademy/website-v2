@@ -227,7 +227,7 @@ part_time:
     academies: ['montevideo-uruguay','bogota-colombia', 'costa-rica', 'mexicocity-mexico','quito-ecuador', 'panamacity-panama', 'buenosaires-argentina','lima-peru','lapaz-bolivia']
     recomended: true
     scholarship: "Only pay for the program"
-    payment_time: "Focus on gaining skills. Pay monthly."
+    payment_time: "Focus on learning to code. Pay monthly."
     price: "Starting from $120/m"
     bullets: 
       - "There is always a payment plan available for you to join 4Geeks Academy"
@@ -241,7 +241,7 @@ part_time:
     academies: ['montevideo-uruguay','bogota-colombia', 'costa-rica', 'mexicocity-mexico','quito-ecuador', 'panamacity-panama', 'buenosaires-argentina','lima-peru','lapaz-bolivia']
     recomended: false
     scholarship: "Data Science Program Only"
-    payment_time: "Focus on gaining skills. Pay upfront."
+    payment_time: "Focus on learning to code. Pay upfront."
     price: "$4000"
     bullets: 
       - "There is always a payment plan available for you to join 4Geeks Academy"
@@ -255,7 +255,7 @@ part_time:
     academies: ['montevideo-uruguay','bogota-colombia', 'costa-rica', 'mexicocity-mexico','quito-ecuador', 'panamacity-panama', 'buenosaires-argentina','lima-peru','lapaz-bolivia']
     recomended: false
     scholarship: "Data Science program + Career Support"
-    payment_time: "We help you build your professional profile"
+    payment_time: "Learn to code and get full support building your career."
     price: "USD $5000"
     bullets:
       - "There is always a payment plan available for you to join 4Geeks Academy"
