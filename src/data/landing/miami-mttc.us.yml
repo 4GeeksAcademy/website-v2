@@ -1,0 +1,327 @@
+meta_info:
+  slug: miami-tech-talent-coalition # <--- URL 4geeksacademy.com/us/landing/example
+
+  # This will show on social media when shared
+  title: "4GeeksAcademy & Miami Tech Talent Coalition"
+  description: "The Miami Tech Talent Coalition is a community forum connecting employers with technology talent and creating a sustainable tech talent pipeline in Miami."
+  visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
+  # This will show on social media when shared
+  image: "public/images/landing/uwm_pantone_2021_2.png"
+  keywords: "Coding Classes, Learn to code, Miami, 4Geeks Academy"
+
+  template: "landing_nonav" # <--- choose your landing template
+  redirects: # <--- URL redirections to avoid 404 errors
+    []
+
+  # Set a particular course or location to the landing page
+  # this UTM fields will be also included in the CRM contact
+  utm_course: ["full-stack"]
+  utm_location: ["downtown-miami"]
+  automation: strong # comma separated, "soft" is the default value
+  tag: website-lead # comma separated, "request_more_info" is the default value
+
+form:
+  # posible fields: "first_name", "last_name", "full_name", "phone", "email"
+  # always the first_name, email and phone will be mandatory if added.
+  fields: ["full_name", "phone", "email"]
+  heading: "Apply to 4Geeks"
+  motivation: "A top quality program at No Cost for you. No excuses. Become a developer and change your life"
+  button_label: Apply Now
+  redirect: "/us/thank-you/?lang=us"  #you can redirect to another url or entirely diffrent website
+
+navbar:
+  buttonText: "Apply now"
+  buttonUrl: "#top" # url accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
+  logoUrl: "#"
+
+header_data:
+  background: "#FFF1D1"
+  tagline: "There are no excuses to enter the tech industry"
+  tagline_color: "black"
+  sub_heading: "No cost, ever, for your Coding Education. We changed the game."
+  badge: "../../../static/images/badges/Course-Report-Badge-2023.png"
+  image_filter: brightness(0.3)
+  right_image: "../../../static/images/landing/header_united_way.png"
+  # right_image: 
+  #   style: '{ "backgroundSize": "contain" }'
+  #   src: "/images/landing/header_united_way.png"
+
+features:
+  marginTop: 0px #<-- separation between tagline and the bullets
+  text: '<span style="margin-top: 10px; display: block;"> <strong style="font-weight: bold;">The United Way Miami Workforce Project</strong> is an exciting new training program made possible by United Way Miami, 4Geeks Academy, and Social Finance.</span>'
+  bullets:
+    - "Become a Software Developer and get a new career"
+    - "Get up to $6400 for living stipends to pay your regular costs while taking the program"
+    - "100 Spots Available. Only 50 left!" 
+    - "Now open and accepting applications!"
+  styles: '{ "color": "gray", "fontWeight":"500" }'
+
+short_badges:
+  - name: "Premios Tecnologia Siglo XXI"
+    url: ""
+    image: "../../../static/images/awards/premios_tecnologia_sigloxxi.png"
+    alt: "Mejor centro de Coding Bootcamp"
+  - name: "Course Report"
+    url: ""
+    image: "../../../static/images/badges/Course-Report-Badge-2023.png"
+    alt: "Top Coding Bootcamps Course Report"
+  - name: "Switchup"
+    url: ""
+    image: "../../../static/images/badges/switchup-badge-2023.png"
+    alt: "Best coding bootcamp Switchup 2023"   
+  - name: "Florida Department of Education"
+    url: ""
+    image: "../../../static/images/badges/licensed.png"
+    alt: "Florida Department of Education"
+
+follow_bar:
+  position: "top" # top, bottom, hidden
+  content:
+    text: "No Costs. No Excuses."
+    text_mobile: "No Costs. No Excuses."
+    # devices:   XL      LG    MD      SM    XS
+    font_size: ["25px", "25px", "25px", "20px", "18px"]
+  button:
+    text: "Apply Now"
+    path: "#top"
+  phone:
+    text: "Call "
+
+choose_your_program:
+  position: 8
+  title: Our Programs
+  paragraph: Programs in Full-Time or Part-Time modality with live classes taught by experts
+  programs:
+  - title: "Full Stack Developer"
+    sub_title: "Level 1"
+    icon: "fullstack"
+    description: |
+      From 0 to becoming a Full-Stack Jr. programmer, you will work with HTML5, CSS3, Bootstrap, JS, Reactjs, SQL, Python, Flask, REST API's, etc. to design and create responsive websites. You'll gain a solid foundation of front, back, database, distributed processes, and deployment with passionate instructors and an up-to-date, hands-on syllabus.
+      Available Part-Time or Full-Time mode. Download <a href=https://storage.googleapis.com/4geeks-academy-website/syllabus/europe/Syllabus%20Europe%20EN.pdf target=_blank>"here the syllabus"</a>.  
+    
+    text_link: Apply now
+    link: "#" # moves to start position
+
+  - title: "AI & Machine Learning"
+    sub_title: "Developers and STEM Profiles"
+    icon: "machine"
+    description: |
+      Get trained by a renowned expert in A.I.; explore Machine Learning's fundamentals and Deep Learning with some of the most powerful technologies that truly scale intelligence for business. Practice with real-life business scenarios typical in business and review some of the tools used in the industry. Strategize and develop your A.I. following the lifecycle development from start to end, including deployment into production and maintenance with Privacy, Security, and Ethics. 
+      Download <a href=https://storage.googleapis.com/4geeks-academy-website/syllabus/europe/Syllabus%20Europe%20EN.pdf target=_blank>"here the syllabus"</a>. 
+      
+    text_link: Apply now
+    link: "#"
+
+
+components:
+  - name: how-it-works
+    position: 3
+    background: "veryLightBlue2"
+    layout: multi_column
+    swipable: True
+    heading:
+      text: "How It Works"
+      font_size: ["30px", "30px", "30px", "30px", "30px"]
+    sub_heading:
+      text: 'According to the U.S. Bureau of Labor Statistics, <strong style="font-weight: bold;">software developers in the U.S. have a higher than average job outlook and earn a median salary of $110,140 a year</strong>. Improve your chances to be one of them.'
+      font_size: ["16px", "16px", "16px", "16px", "16px"]
+      style: '{ "textAlign": "center", "width": "60%" }'
+    columns:
+      - image:
+          style: '{ "backgroundSize": "contain", "height": "130px" }'
+          src: "/images/landing/graduated-icon.png"
+        content: 
+          text: "Apply to the United Way Miami Workforce Project to jumpstart your career in coding."
+          font_size: ["16px"]
+        size: [3,3,3,3]
+      - image:
+          style: '{ "backgroundSize": "contain", "height": "130px" }'
+          src: "/images/landing/pc-icon.png"
+        content: 
+          text: "Once accepted, students enroll in the 4Geeks Full-Stack Software Development Program. 4Geeks provides quality training and offers supporting services —like resume review and career coaching—to help participants find jobs after graduating."
+          font_size: ["16px"]
+        size: [3,3,3,3]
+      - image:
+          style: '{ "backgroundSize": "contain", "height": "130px" }'
+          src: "/images/landing/cicle-icon.png"
+        content: 
+          text: "Participants pay program costs after they start jobs making more than $35,000 a year. Participants who don't find a job or keep jobs with salaries above $35,000 pay nothing."
+          font_size: ["16px"]
+        size: [3,3,3,3]
+
+
+  - name: elegibility
+    position: 3
+    layout: multi_column
+    swipable: True
+    heading:
+      text: "Program Eligibility"
+      font_size: ["30px", "30px", "30px", "30px", "30px"]
+    content:
+      text: '<br/> <br/> Learn more about <a style="color: rgb(0, 160, 218); cursor:pointer;">eligibility conditions</a> and apply'
+      font_size: ["16px", "16px", "16px", "16px", "16px"]
+      path: "https://storage.googleapis.com/media-breathecode/bc38ffebe9e56f8cd62e10d5d0839f98d7528c4fe7756456630588d2c2048a2a"
+    sub_heading:
+      text: |
+        If you work or live in Miami-Dade and have an annual household income below the Area Median Income, who is a citizen, permanent resident, or DACA recipient is invited to apply. <strong style="font-weight: bold;"> People of color, veterans, and single female heads of household </strong> are encouraged to apply.
+      font_size: ["16px", "16px", "16px", "16px", "16px"]
+    button:
+      text: "APPLY NOW"
+      color: "white"
+      hover_color: "white"
+      path: "#top"
+      background: "black"
+    columns:
+      - image:
+          style: '{ "backgroundSize": "cover", "minHeight": "230px", "borderRadius": "80px" }'
+          src: "/images/landing/of_color.png"
+        content: 
+          text: "PEOPLE <br> OF COLOR"
+          style: '{ "fontWeight": "700" }'
+          font_size: ["16px"]
+        size: [3,3,3,3]
+      - image:
+          style: '{ "backgroundSize": "cover", "borderRadius": "80px" }'
+          src: "/images/landing/veteran2.png"
+        content: 
+          text: "VETERANS"
+          style: '{ "fontWeight": "700" }'
+          font_size: ["16px"]
+        size: [3,3,3,3]
+      - image:
+          style: '{ "backgroundSize": "cover", "borderRadius": "80px" }'
+          src: "/images/landing/mom-household.png"
+        content: 
+          text: "SINGLE FEMALE HEADS OF HOUSEHOLD"
+          style: '{ "fontWeight": "700" }'
+          font_size: ["16px"]
+        size: [3,3,3,3]
+
+  - name: coding
+    position: 4
+    layout: two_column_right
+    proportions: [6, 6]
+    background: "rgba(255, 183, 24, 0.2)"
+    image:
+      style: '{ "backgroundSize": "contain" }'
+      src: "/images/landing/group_194.png"
+    heading:
+      text: "Why coding?"
+      font_size: ["40px", "40px", "40px", "40px", "40px"]
+    sub_heading:
+      text: "Learning to code will give you access to:"
+      font_size: ["16px", "16px", "16px", "16px", "16px"]
+    content:
+      font_size: ["16px"]
+      text: |
+        <h4><strong style="font-weight: bold;"> > JOB OPPORTUNITIES </strong></h4>
+        <p>Computer programmers are in high demand—and the demand for programmers will keep increasing over the decade.</p>
+        <br>
+        <h4><strong style="font-weight: bold;"> > BETTER PAY </strong></h4>
+        <p>Starting salary for a Jr. Software Developer in Miami is $48,000.</p>
+        <br>
+        <h4><strong style="font-weight: bold;"> > CAREER FLEXIBILITY </strong></h4>
+        <p>Coding skills prepare you for a variety of jobs in the rapidly-shifting digital economy.</p>
+  - name: geeksinfo
+    position: 7
+    layout: geeksInfo
+
+  - name: why4geeks
+    position: 5
+    layout: two_column_left
+    proportions: [5, 7]
+    image:
+      style: '{ "backgroundSize": "contain" }'
+      src: "/images/landing/group_4.png"
+    heading:
+      text: "Why 4Geeks Academy?"
+      font_size: ["30px", "30px", "30px", "30px", "30px"]
+    sub_heading:
+      text: "Students and alumni from 4Geeks Academy grow and thrive."
+      font_size: ["16px", "16px", "16px", "16px", "16px"]
+    content:
+      font_size: ["16px"]
+      text: |
+        <p>Founded in 2015, we are specialists of code. We have +7 campuses spread over the United States, Latin America and Europe. Over 2,500 students have graduated from our programs with valuable coding skills.</p>
+        <br>
+        <p><span style="background: rgb(255, 183, 24);font-weight: bold;">Our coding bootcamps are designed to be flexible so that anyone, even learners raising children or working full-time, can enroll and succeed.</p>
+        <br>
+        <p>These <strong style="font-weight: bold;font-size:20px;">programs (Part-time -16 weeks long- or Full-Time -9 weeks long-)</strong> will teach you the skills you need to succeed as a software developer. </p>
+        <br>
+        <h2><strong style="font-weight: bold;font-size:20px;color:black;">Are you ready to break down obstacles and start a new career?</strong></h2>
+    
+  - name: pay
+    position: 11
+    background: "veryLightBlue2"
+    layout: two_column_right
+    proportions: [6, 6]
+    image:
+      style: '{ "backgroundSize": "contain" }'
+      src: "/static/images/staff/luisa.png"
+    video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
+    heading:
+      text: "Now you don't need to be worried about payment. Only about your career ahead"
+      font_size: ["30px", "30px", "30px", "30px", "30px"]
+    sub_heading:
+      text: "We changed the game by offering the program with no costs associated. You will need to find a job to make the program worth it, and to keep the program alive for new students."
+      font_size: ["18px", "18px", "18px", "18px", "18px"]
+    button:
+      text: "Review Conditions"
+      color: null
+      path: "https://storage.googleapis.com/media-breathecode/bc38ffebe9e56f8cd62e10d5d0839f98d7528c4fe7756456630588d2c2048a2a"
+    content:
+      text: |
+        <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">1. Enroll in the program.</strong></h2>
+        <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">2. Learn software development skills.</strong></h2>
+        <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">3. Graduate and complete your projects.</strong></h2>
+        <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">4. Land a job.</strong></h2>
+        <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">5. Keep building a career you love.</strong></h2>
+      font_size: ["16px"]
+
+  - name: testimonials
+    position: 9
+    layout: testimonials_new
+    # filter_indexes: [6,7,8]
+    filter_indexes: ['azu-bota','nai-kali','cha-fabr']
+      # - "azu-bota"
+      # - "nai-kali"
+      # - "cha-fabr"
+    # ["azu-bota","nai-kali","cha-fabr"]
+
+  - name: better-future
+    position: 10
+    layout: two_column_right
+    proportions: [6, 6]
+    background: "#F5F5F5"
+    image:
+      style: '{ "backgroundSize": "contain" }'
+      src: "/images/landing/temp4.png"
+    heading:
+      text: "Ready to start your journey to a better future?"
+      font_size: ["40px", "40px", "40px", "40px", "40px"]
+    content:
+      text: "A total of 100 students will be accepted into the program."
+      font_size: ["16px"]
+    button:
+      text: "APPLY NOW"
+      color: "white"
+      background: "blue"
+      hover_color: "white"
+      path: "#top"
+
+  - name: united
+    position: 11
+    layout: two_column_right
+    proportions: [6, 6]
+    background: "veryLightBlue2"
+    image:
+      style: '{ "backgroundSize": "contain", "maxHeight": "270px" }'
+      src: "/images/landing/united-way-two.png"
+    heading:
+      text: "The United Way Miami Workforce Project is a partnership between United Way Miami and 4Geeks Academy."
+      font_size: ["40px", "40px", "40px", "40px", "40px"]
+    content:
+      text: |
+        <p>United Way Miami envisions a thriving and equitable community where all people have access to quality education and the opportunity to lead healthy and financially secure lives – the building blocks of a thriving community.</p>
+        <br> 
+      font_size: ["16px"] 
