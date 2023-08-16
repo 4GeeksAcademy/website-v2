@@ -265,10 +265,10 @@ const initSession = async (locationsArray, storedSession, seed = {}) => {
   );
   academyAlias = await academyAlias.json();
 
-  const academyAliasDictionary = {}
+  const academyAliasDictionary = {};
   academyAlias.map((alias) => {
     const key = alias.slug;
-    academyAliasDictionary[key] = alias.academy.slug
+    academyAliasDictionary[key] = alias.academy.slug;
   });
 
   const _session = {

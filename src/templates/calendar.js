@@ -370,7 +370,8 @@ const Calendar = (props) => {
                 value={academy}
                 onChange={(opt) => {
                   setAcademy(opt);
-                  const academySlug = session.academyAliasDictionary[opt.value] || opt.value
+                  const academySlug =
+                    session.academyAliasDictionary[opt.value] || opt.value;
 
                   let filtered =
                     opt.label !== "All Locations"

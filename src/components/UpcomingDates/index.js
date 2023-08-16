@@ -139,7 +139,9 @@ const UpcomingDates = ({
 
   useEffect(() => {
     const getData = async () => {
-      const academySlug = session.academyAliasDictionary[location] ? session.academyAliasDictionary[location] : location;
+      const academySlug = session.academyAliasDictionary[location]
+        ? session.academyAliasDictionary[location]
+        : location;
       const cohorts = await getCohorts({ academy: academySlug });
       console.log("cohorts upcoming", cohorts);
       let syllabus = [];
