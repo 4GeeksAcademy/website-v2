@@ -1,17 +1,17 @@
 meta_info:
-  slug: united-way # <--- URL 4geeksacademy.com/us/landing/example
+  slug: miami-tech-talent-coalition # <--- URL 4geeksacademy.com/us/landing/example
 
   # This will show on social media when shared
-  title: "United Way"
-  description: "United Way Miami"
+  title: "4GeeksAcademy & Miami Tech Talent Coalition"
+  description: "The Miami Tech Talent Coalition is a community forum connecting employers with technology talent and creating a sustainable tech talent pipeline in Miami."
   visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   # This will show on social media when shared
   image: "public/images/landing/uwm_pantone_2021_2.png"
   keywords: "Coding Classes, Learn to code, Miami, 4Geeks Academy"
 
-  template: "landing_a" # <--- choose your landing template
+  template: "landing_nonav" # <--- choose your landing template
   redirects: # <--- URL redirections to avoid 404 errors
-    ["/landing/united-way"]
+    []
 
   # Set a particular course or location to the landing page
   # this UTM fields will be also included in the CRM contact
@@ -28,7 +28,7 @@ form:
   motivation: "A top quality program at No Cost for you. No excuses. Become a developer and change your life"
   button_label: Apply Now
   redirect: "/us/thank-you/?lang=us"  #you can redirect to another url or entirely diffrent website
-  
+
 navbar:
   buttonText: "Apply now"
   buttonUrl: "#top" # url accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
@@ -55,7 +55,7 @@ features:
     - "100 Spots Available. Only 50 left!" 
     - "Now open and accepting applications!"
   styles: '{ "color": "gray", "fontWeight":"500" }'
-  
+
 short_badges:
   - name: "Premios Tecnologia Siglo XXI"
     url: ""
@@ -86,6 +86,31 @@ follow_bar:
     path: "#top"
   phone:
     text: "Call "
+
+choose_your_program:
+  position: 8
+  title: Our Programs
+  paragraph: Programs in Full-Time or Part-Time modality with live classes taught by experts
+  programs:
+  - title: "Full Stack Developer"
+    sub_title: "Level 1"
+    icon: "fullstack"
+    description: |
+      From 0 to becoming a Full-Stack Jr. programmer, you will work with HTML5, CSS3, Bootstrap, JS, Reactjs, SQL, Python, Flask, REST API's, etc. to design and create responsive websites. You'll gain a solid foundation of front, back, database, distributed processes, and deployment with passionate instructors and an up-to-date, hands-on syllabus.
+      Available Part-Time or Full-Time mode. Download <a href=https://storage.googleapis.com/4geeks-academy-website/syllabus/europe/Syllabus%20Europe%20EN.pdf target=_blank>"here the syllabus"</a>.  
+    
+    text_link: Apply now
+    link: "#" # moves to start position
+
+  - title: "AI & Machine Learning"
+    sub_title: "Developers and STEM Profiles"
+    icon: "machine"
+    description: |
+      Get trained by a renowned expert in A.I.; explore Machine Learning's fundamentals and Deep Learning with some of the most powerful technologies that truly scale intelligence for business. Practice with real-life business scenarios typical in business and review some of the tools used in the industry. Strategize and develop your A.I. following the lifecycle development from start to end, including deployment into production and maintenance with Privacy, Security, and Ethics. 
+      Download <a href=https://storage.googleapis.com/4geeks-academy-website/syllabus/europe/Syllabus%20Europe%20EN.pdf target=_blank>"here the syllabus"</a>. 
+      
+    text_link: Apply now
+    link: "#"
 
 
 components:
@@ -123,6 +148,7 @@ components:
           text: "Participants pay program costs after they start jobs making more than $35,000 a year. Participants who don't find a job or keep jobs with salaries above $35,000 pay nothing."
           font_size: ["16px"]
         size: [3,3,3,3]
+
 
   - name: elegibility
     position: 3
@@ -225,7 +251,7 @@ components:
         <h2><strong style="font-weight: bold;font-size:20px;color:black;">Are you ready to break down obstacles and start a new career?</strong></h2>
     
   - name: pay
-    position: 8
+    position: 11
     background: "veryLightBlue2"
     layout: two_column_right
     proportions: [6, 6]
