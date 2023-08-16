@@ -139,7 +139,8 @@ const UpcomingDates = ({
 
   useEffect(() => {
     const getData = async () => {
-      const cohorts = await getCohorts({ academy: location });
+      const academySlug = session.academyAliasDictionary[location] ? session.academyAliasDictionary[location] : location;
+      const cohorts = await getCohorts({ academy: academySlug });
       console.log("cohorts upcoming", cohorts);
       let syllabus = [];
       for (let i in cohorts) {
@@ -166,8 +167,8 @@ const UpcomingDates = ({
         },
       }));
     };
-    getData();
-  }, []);
+    if (session?.academyAliasDictionary) getData();
+  }, [session]);
 
   const formIsValid = (formData = null) => {
     if (!formData) return null;

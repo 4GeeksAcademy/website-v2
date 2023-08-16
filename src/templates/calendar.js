@@ -370,11 +370,12 @@ const Calendar = (props) => {
                 value={academy}
                 onChange={(opt) => {
                   setAcademy(opt);
+                  const academySlug = session.academyAliasDictionary[opt.value] || opt.value
 
                   let filtered =
                     opt.label !== "All Locations"
                       ? datas[filterType.value].all.filter(
-                          (elm) => elm.academy.slug === opt.value
+                          (elm) => elm.academy.slug === academySlug
                         )
                       : datas[filterType.value].all;
                   // if no cohorts on location, try to include online
