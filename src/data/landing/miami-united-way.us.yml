@@ -54,7 +54,7 @@ features:
     - "Get up to $6400 for living stipends to pay your regular costs while taking the program"
     - "100 Spots Available. Only 50 left!" 
     - "Now open and accepting applications!"
-  styles: '{ "color": "black", "fontWeight":"500", "fontSize":"14px" }'
+  styles: '{ "color": "black", "fontWeight":"400", "fontSize":"20px" }'
   
 short_badges:
   - name: "Premios Excelencia Educativa"
