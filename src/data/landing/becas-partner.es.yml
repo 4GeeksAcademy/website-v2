@@ -161,6 +161,5 @@ components:
       font_size: ["50px", "50px", "50px", "50px", "50px"]
     content:
       text: "Nuestros programa está basado en el uso de Python y Javascript. La razón? En el mercado laboral JavaScript tiene 26 veces más vacantes de trabajo que Ruby on Rails y  Python tiene 10 veces más trabajos que node.js.
-      
       Otras herramientas que también aprenderás a usar en nuestro programa son: GitHub, CSS3, HTML5, Flask, etc."
       font_size: ["16px"]

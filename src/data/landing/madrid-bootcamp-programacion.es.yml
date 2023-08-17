@@ -1,0 +1,232 @@
+meta_info:
+  slug: bootcamp-programacion-espana # <--- URL 4geeksacademy.com/us/landing/example
+
+  # This will show on social media when shared
+  title: "Curso de programación en remoto, aprende a programar e impulsa tu carrera profesional en 4Geeks, la escuela más premiada de España"
+  description: "La programación es el nuevo lenguaje universal, únete a nuestro programa, recibe acompañamiento de por vida y aprende lo que las empresas necesitan."
+  image: "/images/bg/main-bg.jpg"
+  keywords: "Curso de programación, Bootcamp, Bootcamp de Programación, Clases de programación, Aprende a programar, 4Geeks Academy"
+
+  template: "landing_a" # <--- choose your landing template
+  redirects: # <--- URL redirections to avoid 404 errors
+    ["/landing/coding-course"]
+
+  # Set a particular course or location to the landing page
+  # this UTM fields will be also included in the CRM contact
+  utm_course: ["full-stack"]
+  utm_location: ["madrid-spain"]
+  automation: soft # comma separated, "soft" is the default value
+  tag: request_more_info # comma separated, "request_more_info" is the default value
+
+form:
+  # posible fields: "first_name", "last_name", "full_name", "phone", "email"
+  # always the first_name, email and phone will be mandatory if added.
+  fields: ["full_name", "phone", "email"]
+  heading: "Solicita tu beca"
+  motivation: "Conviértete en Full-Stack Developer con financiación a tu medida, becas y ayuda al estudio en la escuela más premiada de España."
+  button_label: Solicita tu beca
+  redirect: null #you can redirect to another url or entirely diffrent website
+
+apply_schollarship: # form that is displayed at the end of the landing
+  # title: "Apoyo Profesional Ilimitado"
+  imageSide: "right"
+  image: "../../../static/images/comunity-support.png"
+
+# jumbotron on the top (cannot be commented out)
+header_data:
+  background: "#FFF1D1"
+  tagline: Conviértete en Full-Stack Developer en 18 semanas en el Mejor Bootcamp de España 2021, 2022 y 2023.
+  sub_heading: "El 86% de nuestros alumnos ya han empezado su carrera en el sector tech con un salario medio de 22.000€ al año."
+  badge: "../../../static/images/badges/Course-Report-Badge-2023.png"
+  image_filter: brightness(0.3)
+
+features:
+  marginTop: 0px #<-- separation between tagline and the bullets
+
+  #                                         up   left down  right
+  styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
+  bullets:
+   - Aprende las tecnologías que demandan las empresas. 
+   - Clases reducidas en remoto y con acompañamiento de por vida.
+   - No se necesita experiencia previa, ¡empieza desde cero!
+  
+short_badges:
+  - name: "Premios Excelencia Educativa"
+    url: ""
+    image: "../../../static/images/badges/exelencia-educativa-es.png"
+    alt: "Mejor centro de Coding Bootcamp"
+  - name: "Premio Nacional"
+    url: ""
+    image: "../../../static/images/awards/premios_tecnologia_sigloxxi.png"
+    alt: "Premio Nacional de Tecnología 2023"
+  - name: "Course Report"
+    url: ""
+    image: "../../../static/images/badges/Course-Report-Badge-2023.png"
+    alt: "Best cooding bootcamp Course Report 2023"   
+  - name: "European Excellence Education"
+    url: ""
+    image: "../../../static/images/badges/european_excellence_education_black.png"
+    alt: "European Excellence Education"   
+  - name: "Departamendo de Educacion de Florida"
+    url: ""
+    image: "../../../static/images/badges/licensed-es.png"
+    alt: "Dpto. Educacion Florida."     
+
+follow_bar:
+  position: "top" # top, bottom, hidden
+  content:
+    text: "You don't have to pay anything until \n you get a job in tech. Starting at $135/mo."
+    text_mobile: "As low as $135/mo. \n Don't pay anything until you get a job in tech"
+    # devices:   XL      LG    MD      SM    XS
+    font_size: ["25px", "25px", "25px", "20px", "18px"]
+  button:
+    text: "Get more information"
+    path: "#top"
+  phone:
+    text: "Call "
+
+#
+# ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇
+#
+who_is_hiring:
+  position: 1
+  limit: 4
+  heading: "Nuestros estudiantes trabajan en las mejores empresas"
+  sub_heading: "Más de 500 partners, más de 150 vacantes abiertas como Full-Stack Developer en nuestra bolsa de empleo "
+  featured:
+    - name: "Facebook"
+      image: "../../../static/images/partner/facebook.png"
+    - name: "Microsoft"
+      image: "../../../static/images/partner/microsoft.png"
+    - name: "Apple"
+      image: "../../../static/images/partner/apple.png"
+
+badges:
+  position: 3
+  heading: "4Geeks Academy España ha ganado más de 20 premios desde 2020, siendo reconocido una y otra vez como el Mejor Coding Bootcamp de España"
+
+program_details:
+  position: 5
+  background: "#FFFFFF"
+  heading: "Detalles del programa"
+  sub_heading: "Aprende las tecnologías que demandan las empresas"
+
+why_4geeks:
+  position: 6
+  heading: "¿Por qué debes estudiar en 4Geeks Academy?"
+  sub_heading: " "
+
+geeks_vs_others:
+  position: 8
+  heading: "¿Por qué 4Geeks Academy es único?"
+  # sub_heading: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
+  total_rows: 5
+
+iconogram:
+  position: 9
+  icons:
+  - icon: "touch"
+    title: Completa el formulario antes que se agoten las plazas
+  - icon: "receive_mail"
+    title: recibirás un correo electrónico con toda la información para avanzar en el proceso
+  - icon: "talk"
+    title: te llamaremos para conocerte y si aplicas a nuestras becas ¡te ofreceremos una!
+  - icon: "terminal"
+    title: reserva tu plaza y ¡acelera tu carrera!
+
+choose_your_program:
+  position: 10
+  title: Nuestros Programas
+  paragraph: Programas en formato part-time con clases en vivo y profesores en activo
+  programs:
+  - title: "Full Stack Developer"
+    sub_title: "Nivel 1"
+    icon: "fullstack"
+    description: |
+      Desde 0 hasta convertirte en programador full-Stack. Trabajarás con HTML5, CSS3, Bootstrap, JS, Reactjs, SQL, Python, Flask, REST API's, etc. para crear aplicaciones web responsive. Obtendrás una sólida base de front, back, bbdd, procesos distribuidos y despliegue con instructores apasionados y un plan de estudios práctico y actualizado. 
+      Disponible en modalidad part time en remoto
+    
+    text_link: Solicita tu beca
+    link: "#" # moves to start position
+    
+  - title: "Data Science & Machine Learning"
+    sub_title: "Developers o perfiles STEM"
+    icon: "machine"
+    description: |
+      Domina las principales librerías de gestión de datos con Python (Pandas, Numpy, Matplotlib). Gestiona todo el ciclo de vida de los datos: extracción, depuración, visualización y análisis y desarrolla pronósticos con Machine Learning y Deep Learning. 
+    text_link: Solicita tu beca
+    link: "#"    
+
+#alumni_projects:
+#  position: 8
+#  heading: "Proyectos que serás capaz de realizar"
+#  sub_heading: "Take a look at our previous student projects"
+
+components:
+  - name: inmediatez
+    position: 2
+    layout: two_column_left
+    background: "#C9F9F9" # Name of the color(from components/Styling/index.js) or color code ex: #C9F9F9
+    image:
+      src: "/images/landing/PeopleStudying.jpeg"
+    heading:
+      text:
+        "¡No te quedes fuera!"
+        #           xl      lg      md      sm      xs
+      font_size: ["50px", "50px", "50px", "50px", "50px"]
+    content:
+      text: "Nuestras plazas son limitadas, aplica ahora y no te quedes fuera. 
+      Nuestras becas está sujetas a disponibilidad, habla con nuestro equipo de admisiones ahora y aprovecha esta oportunidad"
+      font_size: ["16px"]
+      
+  - name: geeksinfo
+    position: 4
+    layout: geeksInfo
+
+  - name: python_y_javascript
+    position: 8
+    layout: two_column_right
+    background: "#C9F9F9" # Name of the color(from components/Styling/index.js) or color code ex: #C9F9F9
+    image:
+      src: "/images/why-4geeks/python-image.png"
+    heading:
+      text:
+        "Python y Javascript"
+        #           xl      lg      md      sm      xs
+      font_size: ["50px", "50px", "50px", "50px", "50px"]
+    content:
+      text: "Nuestro programa está basado en el uso de Python y Javascript. ¿La razón? En el mercado laboral JavaScript tiene 26 veces más vacantes de trabajo que Ruby on Rails y  Python tiene 10 veces más trabajos que node.js.
+      
+      Otras herramientas que también aprenderás a usar en nuestro programa son: GitHub, CSS3, HTML5, Flask, PostgreSQL, etc."
+      font_size: ["16px"]
+
+  - name: top_coding_bootcamp
+    position: 7
+    background: "#FFF1D1"
+    layout: two_column_left
+    proportions: [4, 8]
+    image:
+      style: '{ "backgroundSize": "contain" }'
+      src: "/images/badges/Course-Report-Badge-2023.png"
+      link: "https://www.coursereport.com/schools/4geeks-academy"
+    heading:
+      text:
+        "Hemos sido seleccionados entre los mejores Coding Bootcamps del mundo por 3 años consecutivos"
+        #xl      lg     md     sm    xs
+      font_size: ["40px", "40px", "40px", "40px", "40px"]
+
+  - name: seguridad_europa
+    position: 11
+    background: "#C9F9F9"
+    layout: two_column_right
+    proportions: [8, 4]
+    image:
+      style: '{ "backgroundSize": "contain" }'
+      src: "/images/badges/european_excellence_education_black.png"
+      link:
+    heading:
+      text:
+        "Nombrados como el TOP 1 Bootcamp de España y somos reconocidos en Europa"
+        #xl      lg     md     sm    xs
+      font_size: ["40px", "40px", "40px", "40px", "40px"]
+     
