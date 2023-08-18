@@ -10,6 +10,8 @@ import {
   GridContainer,
 } from "../components/Sections";
 import { Colors, StyledBackgroundSection } from "../components/Styling";
+import { Circle } from "../components/BackgroundDrawing";
+import Icon from "../components/Icon";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import LandingNavbar from "../components/NavbarDesktop/landing";
 import BaseRender from "./_baseLandingLayout";
@@ -101,6 +103,22 @@ const Landing = (props) => {
       (l) => l.breathecode_location_slug === yml.meta_info.utm_location
     );
 
+  const bulletIcons = [
+    {
+      icon: "square-bracket-fill",
+      background: "#000",
+    },
+    {
+      icon: "curly-bracket-fill",
+      background: "#FFB718",
+    },
+    {
+      icon: "elderly-fill",
+      background: "#0097CF",
+      transform: "rotate(180deg)",
+    },
+  ];
+
   return (
     <>
       <LandingNavbar
@@ -162,6 +180,8 @@ const Landing = (props) => {
         background={yml.header_data.background || Colors.white}
       >
         <GridContainer
+          style={{ maxWidth: "1366px" }}
+          margin="0 auto"
           padding="95px 0 35px 0"
           containerGridGap="0"
           containerColumns_tablet="repeat(1,0fr)"
@@ -214,9 +234,11 @@ const Landing = (props) => {
               </>
             )}
             <H1
+              zIndex="1"
               type="h1"
               variant="main"
-              lineHeight="40px"
+              lineHeight="normal"
+              lineHeight_tablet="normal"
               margin="20px 0"
               margin_xs="10px 0"
               padding="0 10px 0 0px"
@@ -227,11 +249,10 @@ const Landing = (props) => {
                   ? Colors.black
                   : Colors.white
               }
-              fontSize="22px"
-              fontSize_tablet="22px"
-              fontWeight="bolder"
-              textAlign="center"
-              textAlign_tablet="left"
+              fontSize="32px"
+              fontSize_tablet="52px"
+              fontWeight="700"
+              textAlign="left"
             >
               {inLocation}
               {yml.header_data.tagline}
@@ -239,35 +260,50 @@ const Landing = (props) => {
             </H1>
             {yml.header_data.sub_heading !== "" && (
               <H2
+                zIndex="1"
                 type="h2"
                 textAlign="left"
                 fontSize="18px"
                 color={yml.header_data.background ? Colors.black : Colors.white}
                 variant="main"
-                fontWeight="400"
-                margin_tablet="0px 0px 40px 0px"
-                margin="0 0 20px 30px"
-                maxWidth="350px"
+                fontWeight="bolder"
               >
                 {yml.header_data.sub_heading}
               </H2>
             )}
+
             {Array.isArray(yml.features.bullets) &&
               yml.features.bullets.map((f, i) => (
                 <Paragraph
+                  zIndex="1"
                   key={i}
-                  style={JSON.parse(yml.features.styles)}
+                  style={{
+                    ...JSON.parse(yml.features.styles),
+                    fontWeight: "bolder",
+                  }}
                   margin="7px 0"
                   padding="0px 20px"
-                  fontWeight="400"
                   // textShadow="1px 0px #898a8b"
                   textAlign="left"
                   color={
                     yml.header_data.background ? Colors.black : Colors.white
                   }
                 >
-                  {"• "}
-                  {f}
+                  <Icon
+                    style={{
+                      background:
+                        bulletIcons[i % bulletIcons.length].background,
+                      padding: "5px",
+                      transform: bulletIcons[i % bulletIcons.length]?.transform,
+                      fontWeight: "bolder",
+                    }}
+                    width="20px"
+                    height="20px"
+                    icon={bulletIcons[i % bulletIcons.length].icon}
+                    color="white"
+                  />
+
+                  {" " + f}
                 </Paragraph>
               ))}
             {yml.features.text && (
@@ -323,6 +359,7 @@ const Landing = (props) => {
             )}
           </Div>
           <Div
+            position="relative"
             flexDirection="column"
             size="12"
             size_tablet="10"
@@ -335,19 +372,80 @@ const Landing = (props) => {
             textAlign_sm="center"
             margin_md={yml.form.margin_md || "0 auto 0 70px"}
           >
+            <Div
+              top="0"
+              position="absolute"
+              display="none"
+              display_tablet="block"
+              zIndex="0"
+            >
+              <Circle color="lightBlue" width="301px" height="301px" />
+              <Icon
+                style={{ marginTop: "150%" }}
+                icon="elderly-unfill"
+                width="135px"
+                height="184px"
+                color="#0097CD"
+              />
+            </Div>
+            <Div
+              position="absolute"
+              right="50%"
+              display_tablet="none"
+              zIndex="0"
+            >
+              <Circle
+                color="lightBlue"
+                width="301px"
+                height="301px"
+                position="unset"
+              />
+              <Div display_tablet="none" margin="100% auto">
+                <Icon
+                  style={{ marginTop: "90%" }}
+                  icon="slash-fill"
+                  width="41px"
+                  height="111px"
+                  color="#C7F3FD"
+                />
+                <Icon
+                  style={{ marginTop: "90%" }}
+                  icon="slash-fill"
+                  width="41px"
+                  height="111px"
+                  color="#020203"
+                />
+                <Icon
+                  style={{ marginTop: "90%" }}
+                  icon="elderly-fill"
+                  width="82px"
+                  height="112px"
+                  color="#FFB718"
+                />
+              </Div>
+            </Div>
             <LeadForm
+              landingTemplate
               headerImage={
                 yml.header_data.badge &&
                 yml.header_data.badge.childImageSharp.gatsbyImageData
               }
-              background={Colors.white}
+              background={
+                yml.header_data.background === "#FFF1D1"
+                  ? Colors.white
+                  : "#FFF1D1"
+              }
               margin_tablet="18px 38px"
               selectProgram={programs}
               selectLocation={locations}
               margin="18px 10px"
               marginTop_tablet="50px"
               // marginTop_xs="20px"
-              style={{ minHeight: "350px" }}
+              style={{
+                zIndex: "1",
+                minHeight: "350px",
+                border: "3px solid black",
+              }}
               formHandler={processFormEntry}
               heading={yml.form.heading}
               motivation={yml.form.motivation}
@@ -361,7 +459,28 @@ const Landing = (props) => {
               justifyContentButton="center"
               marginButton="15px auto 30px auto"
               marginButton_tablet="15px 0 30px auto"
+              boxShadow="9px 8px 0px 0px rgba(0,0,0,1)"
             />
+            <Div display="none" display_tablet="block" margin="20% 0 0 0">
+              <Icon
+                icon="slash-fill"
+                width="41px"
+                height="111px"
+                color="#C7F3FD"
+              />
+              <Icon
+                icon="slash-fill"
+                width="41px"
+                height="111px"
+                color="#020203"
+              />
+              <Icon
+                icon="elderly-fill"
+                width="82px"
+                height="112px"
+                color="#FFB718"
+              />
+            </Div>
           </Div>
         </GridContainer>
       </LandingContainer>
