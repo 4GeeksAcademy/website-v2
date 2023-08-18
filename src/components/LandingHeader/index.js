@@ -2,11 +2,7 @@ import React, { useEffect } from "react";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import LeadForm from "../LeadForm";
 import { H1, H2, Paragraph } from "../Heading";
-import {
-  GridContainerWithImage,
-  Div,
-  GridContainer,
-} from "../Sections";
+import { GridContainerWithImage, Div, GridContainer } from "../Sections";
 import { Colors, StyledBackgroundSection } from "../Styling";
 import { Circle } from "../BackgroundDrawing";
 import Icon from "../Icon";
