@@ -17,6 +17,7 @@ export default function Template(props) {
   const { session } = useContext(SessionContext);
   const post = data.markdownRemark;
   const lang = pageContext.lang;
+  const isBrowser = typeof window !== `undefined`;
   let isCustombarActive;
 
   if (session && session.location) {
@@ -74,6 +75,23 @@ export default function Template(props) {
     else mes = monthsUs[n];
 
     return mes;
+  }
+
+  if (isBrowser) {
+    const anchors = document.getElementsByTagName("a");
+
+    Array.from(anchors).forEach((anchor) => {
+      const linkRegex = new RegExp("(http)");
+      console.log(anchor.href);
+      if (
+        linkRegex.test(anchor.href) &&
+        !anchor.href.includes("4geeks.com") &&
+        !anchor.href.includes("4geeksacademy.com")
+      ) {
+        anchor.rel = "nofollow";
+        anchor.target = "_self";
+      }
+    });
   }
 
   return (

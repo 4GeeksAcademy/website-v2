@@ -238,6 +238,7 @@ export const BackgroundSection = ({
   borderRadius,
   margin,
   withOverlay,
+  style,
 }) => {
   const thisImage = getImage(image);
 
@@ -256,6 +257,7 @@ export const BackgroundSection = ({
       // fluid={image}
       {...bgImage}
       preserveStackingContext
+      style={style}
     >
       {children}
     </BackgroundImage>
