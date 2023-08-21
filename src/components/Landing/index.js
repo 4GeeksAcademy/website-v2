@@ -89,7 +89,8 @@ const Side = ({
     );
   }
 
-  const [h_xl, h_lg, h_md, h_sm, h_xs] = heading && heading.font_size ? heading.font_size : [];
+  const [h_xl, h_lg, h_md, h_sm, h_xs] =
+    heading && heading.font_size ? heading.font_size : [];
   const [sh_xl, sh_lg, sh_md, sh_sm, sh_xs] =
     sub_heading && Array.isArray(sub_heading.font_size)
       ? sub_heading.font_size
