@@ -44,7 +44,7 @@ features:
   marginTop: 20px #<-- separation between tagline and the bullets
 
   #                                         up   left down  right
-  styles: '{ "color": "black", "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
+  styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
   bullets:
     - Un Desarrollador Web Junior en Caracas gana aprox. $1.000 mensuales. 
     - Es una de las industrias donde hay más vacantes actualmente.

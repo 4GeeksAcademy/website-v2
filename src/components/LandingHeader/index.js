@@ -176,7 +176,7 @@ const LandingHeader = (props) => {
             {yml.features.text && (
               <Paragraph
                 isActive
-                color={Colors.white}
+                color={yml.header_data.background ? Colors.black : Colors.white}
                 style={JSON.parse(yml.features.styles)}
                 margin="7px 0"
                 padding_tablet="0px 0px"
