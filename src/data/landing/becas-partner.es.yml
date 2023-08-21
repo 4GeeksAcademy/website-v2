@@ -35,6 +35,7 @@ form:
 # jumbotron on the top (cannot be commented out)
 header_data:
   tagline: Impulsa tu carrera profesional, Obtén tu beca!
+  tagline_color: black
   sub_heading: ""
   partner_logo_url: "../../../static/images/partner/microsoft.png"
   background_image: "../../../static/images/Happy-People-Landing-4Geeks-ES.jpg"
@@ -44,7 +45,7 @@ features:
   marginTop: 20px #<-- separation between tagline and the bullets
 
   #                                         up   left down  right
-  styles: '{ "fontSize": "15px", "margin": "10px 0px 10px 0px" }'
+  styles: '{ "color": "black", "fontSize": "15px", "margin": "10px 0px 10px 0px" }'
   text: Hay más vacantes que en cualquier otra industria ¡Impulsa tu Carrera! y hazte programador de software
 
 follow_bar:

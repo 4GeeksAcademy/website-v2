@@ -78,15 +78,13 @@ const Side = ({
           }
         }}
         style={imgStyles}
-        // borderRadius={"1.25rem"}
-        borderRadius={"3px"}
-        // className="pointer"
-        alt={"4Geeks Academy Section"}
+        borderRadius="3px"
+        alt="4Geeks Academy Section"
         margin="auto"
         height={img_h_xl}
         width={imgStyles ? imgStyles.width || "100%" : "100%"}
         h_sm={img_h_sm || "250px"}
-        backgroundSize={`contain`}
+        backgroundSize="contain"
       />
     );
   }
@@ -124,11 +122,12 @@ const Side = ({
           textAlign_tablet="left"
           padding={heading ? "0" : "20px"}
           margin="0"
-          fontSize={sh_xl || "16px"}
+          fontSize={sh_xl || "18px"}
           fontSize_sm={sh_sm}
           fonSize_md={sh_md}
           fontSize_xs={sh_xs}
           fontHeight="30px"
+          fontWeight="700"
         >
           {sub_heading.text}
         </Paragraph>
@@ -214,14 +213,11 @@ const Side = ({
       {button && (
         <Button
           outline
-          // width="250px"
           colorHoverText={button.hover_color || Colors.blue}
           background={Colors[button.background] || button.background}
           lineHeight="26px"
           textColor={Colors.black}
           color={Colors[button.color] || button.color}
-          // padding="0"
-          // padding_tablet="0"
           fontSize="15px"
           textAlign="left"
           margin="2rem 0"
