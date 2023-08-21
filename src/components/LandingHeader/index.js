@@ -112,8 +112,8 @@ const LandingHeader = (props) => {
               margin_xs="10px 0"
               padding="0 10px 0 0px"
               color={
-                yml.header_data.color
-                  ? yml.header_data.color
+                yml.header_data.tagline_color
+                  ? yml.header_data.tagline_color
                   : yml.header_data.background
                   ? Colors.black
                   : Colors.white
@@ -145,11 +145,12 @@ const LandingHeader = (props) => {
                 <Paragraph
                   zIndex="1"
                   key={i}
+                  fontSize="21px"
                   style={{
                     ...JSON.parse(yml.features.styles),
                     fontWeight: "bolder",
                   }}
-                  margin="7px 0"
+                  margin="8px 0"
                   padding="0px 20px"
                   textAlign="left"
                   color={
@@ -176,6 +177,7 @@ const LandingHeader = (props) => {
             {yml.features.text && (
               <Paragraph
                 isActive
+                fontSize="18px"
                 color={yml.header_data.background ? Colors.black : Colors.white}
                 style={JSON.parse(yml.features.styles)}
                 margin="7px 0"

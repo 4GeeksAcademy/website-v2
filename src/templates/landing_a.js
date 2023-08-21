@@ -6,11 +6,11 @@ import LeadForm from "../components/LeadForm";
 import { Paragraph } from "../components/Heading";
 import { GridContainerWithImage, Div } from "../components/Sections";
 import { Colors, StyledBackgroundSection } from "../components/Styling";
-import LandingNavbar from "../components/NavbarDesktop/landing";
-import LandingHeader from "../components/LandingHeader";
 import BaseRender from "./_baseLandingLayout";
 import { processFormEntry } from "../actions";
 import { SessionContext } from "../session.js";
+import LandingNavbar from "../components/NavbarDesktop/landing";
+import LandingHeader from "../components/LandingHeader";
 
 const Landing = (props) => {
   const { session } = React.useContext(SessionContext);
