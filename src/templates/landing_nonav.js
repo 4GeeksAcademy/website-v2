@@ -4,10 +4,7 @@ import { landingSections } from "../components/Landing";
 import FollowBar from "../components/FollowBar";
 import LeadForm from "../components/LeadForm";
 import { Paragraph } from "../components/Heading";
-import {
-  GridContainerWithImage,
-  Div,
-} from "../components/Sections";
+import { GridContainerWithImage, Div } from "../components/Sections";
 import { Colors, StyledBackgroundSection } from "../components/Styling";
 import BaseRender from "./_baseLandingLayout";
 import { processFormEntry } from "../actions";
