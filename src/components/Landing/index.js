@@ -89,7 +89,7 @@ const Side = ({
     );
   }
 
-  const [h_xl, h_lg, h_md, h_sm, h_xs] = heading ? heading.font_size : [];
+  const [h_xl, h_lg, h_md, h_sm, h_xs] = heading && heading.font_size ? heading.font_size : [];
   const [sh_xl, sh_lg, sh_md, sh_sm, sh_xs] =
     sub_heading && Array.isArray(sub_heading.font_size)
       ? sub_heading.font_size
@@ -110,7 +110,7 @@ const Side = ({
           lineHeight_tablet="38px"
           fontSize={h_xs || "30px"}
           fs_xl={h_xl}
-          fontSize_md={h_md || "40px"}
+          fontSize_md={h_md || "30px"}
           fontSize_sm={h_sm}
           margin="30px 0 20px 0"
         >
@@ -128,6 +128,9 @@ const Side = ({
           fontSize_xs={sh_xs}
           fontHeight="30px"
           fontWeight="700"
+          fontWeight_tablet="700"
+          fontWeight_xs="700"
+          opacity="1"
         >
           {sub_heading.text}
         </Paragraph>
@@ -183,7 +186,8 @@ const Side = ({
           textAlign="left"
           textAlign_tablet="left"
           padding={heading ? "0" : "15px"}
-          margin="26px 0"
+          margin="10px 0"
+          opacity="1"
           fontSize={c_xl || "16px"}
           fontSize_sm={c_sm}
           fonSize_md={c_md}
@@ -198,7 +202,8 @@ const Side = ({
             textAlign="left"
             textAlign_tablet="left"
             padding={heading ? "0" : "15px"}
-            margin="26px 0"
+            margin="10px 0"
+            opacity="1"
             fontSize={c_xl || "16px"}
             fontSize_sm={c_sm}
             fonSize_md={c_md}
@@ -213,10 +218,12 @@ const Side = ({
       {button && (
         <Button
           outline
+          borderRadius="0"
           colorHoverText={button.hover_color || Colors.blue}
           background={Colors[button.background] || button.background}
           lineHeight="26px"
           textColor={Colors.black}
+          textTransform="none"
           color={Colors[button.color] || button.color}
           fontSize="15px"
           textAlign="left"
