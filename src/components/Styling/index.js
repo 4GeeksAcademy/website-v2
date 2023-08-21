@@ -254,7 +254,6 @@ export const BackgroundSection = ({
       // fadeIn={false}
       className={className}
       borderRadius={borderRadius}
-      // fluid={image}
       {...bgImage}
       preserveStackingContext
       style={style}

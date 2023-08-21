@@ -451,9 +451,6 @@ export const query = graphql`
                 height: 289
                 placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
               )
-              # fluid(maxHeight: 289, maxWidth: 390){
-              #   ...GatsbyImageSharpFluid_withWebp
-              # }
             }
           }
           tech_list {
@@ -465,9 +462,6 @@ export const query = graphql`
                   height: 100
                   placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                 )
-                # fluid(maxHeight: 100, maxWidth: 100){
-                #   ...GatsbyImageSharpFluid_withWebp
-                # }
               }
             }
             alt
@@ -594,10 +588,6 @@ export const query = graphql`
                     width: 100
                     placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                   )
-
-                  # fluid(maxWidth: 100){
-                  #   ...GatsbyImageSharpFluid_withWebp
-                  # }
                 }
               }
             }
@@ -656,10 +646,6 @@ export const query = graphql`
                     width: 150
                     placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                   )
-
-                  # fluid(maxWidth: 150){
-                  #   ...GatsbyImageSharpFluid_withWebp
-                  # }
                 }
               }
               featured
@@ -675,10 +661,6 @@ export const query = graphql`
                     width: 100
                     placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                   )
-
-                  # fluid(maxWidth: 100){
-                  #   ...GatsbyImageSharpFluid_withWebp
-                  # }
                 }
               }
               featured
@@ -696,9 +678,6 @@ export const query = graphql`
                     width: 100
                     placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                   )
-                  # fluid(maxWidth: 100){
-                  #   ...GatsbyImageSharpFluid_withWebp
-                  # }
                 }
               }
               featured
@@ -716,10 +695,6 @@ export const query = graphql`
                     width: 100
                     placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                   )
-
-                  # fluid(maxWidth: 100){
-                  #   ...GatsbyImageSharpFluid_withWebp
-                  # }
                 }
               }
               featured
@@ -750,10 +725,6 @@ export const query = graphql`
                   height: 14
                   placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                 )
-
-                # fluid(maxHeight: 14){
-                #   ...GatsbyImageSharpFluid_withWebp
-                # }
               }
             }
             student_thumb {
@@ -763,9 +734,6 @@ export const query = graphql`
                   height: 200
                   placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                 )
-                # fluid(maxHeight: 200){
-                #   ...GatsbyImageSharpFluid_withWebp
-                # }
               }
             }
             short_content
@@ -793,10 +761,6 @@ export const query = graphql`
                   width: 800
                   placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                 )
-
-                # fluid(maxWidth: 800){
-                #   ...GatsbyImageSharpFluid_withWebp
-                # }
               }
             }
             project_content
@@ -886,10 +850,6 @@ export const query = graphql`
                   width: 800
                   placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                 )
-
-                # fluid(maxWidth: 800){
-                #   ...GatsbyImageSharpFluid_withWebp
-                # }
               }
             }
           }

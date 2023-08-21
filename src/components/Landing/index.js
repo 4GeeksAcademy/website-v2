@@ -677,7 +677,6 @@ export const landingSections = {
                   // fadeIn={false}
                   alt={item.alt}
                   image={getImage(item.image.childImageSharp.gatsbyImageData)}
-                  // fluid={l.image.childImageSharp.fluid}
                 />
                 <StarRating rating={item.rating} />
                 <Paragraph

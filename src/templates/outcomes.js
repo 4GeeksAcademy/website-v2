@@ -157,7 +157,6 @@ const Outcomes = ({ data, pageContext, yml }) => {
       <Div
         display="flex"
         display_tablet="none"
-        width="auto"
         margin="0 0 0 -17px"
         background={Colors.white}
         style={{
@@ -475,9 +474,6 @@ export const query = graphql`
                       quality: 100
                       placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                     )
-                    # fluid(maxWidth: 500, quality: 100){
-                    #     ...GatsbyImageSharpFluid_withWebp
-                    # }
                   }
                 }
                 image_paragraph
@@ -502,11 +498,3 @@ export const query = graphql`
   }
 `;
 export default BaseRender(Outcomes);
-
-// image{
-//     childImageSharp {
-//       fluid(maxWidth: 500, quality: 100, srcSetBreakpoints: [ 200, 340, 520, 890 ]){
-//         ...GatsbyImageSharpFluid_withWebp
-//       }
-//     }
-//   }

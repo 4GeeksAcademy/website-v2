@@ -2,23 +2,19 @@ import React, { useEffect } from "react";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import LeadForm from "../LeadForm";
 import { H1, H2, Paragraph } from "../Heading";
-import { GridContainerWithImage, Div, GridContainer } from "../Sections";
-import { Colors, StyledBackgroundSection } from "../Styling";
+import { Div, GridContainer } from "../Sections";
+import { Colors } from "../Styling";
 import { Circle } from "../BackgroundDrawing";
 import Icon from "../Icon";
 import LandingContainer from "../LandingContainer";
 import Marquee_v2 from "../Marquee_v2";
 import { processFormEntry } from "../../actions";
-import { SessionContext } from "../../session.js";
 
 const LandingHeader = (props) => {
-  const { data, pageContext, yml, preData, locations, programs } = props;
+  const { pageContext, yml, preData, locations, programs } = props;
   const [inLocation, setInLocation] = React.useState("");
 
   useEffect(() => {
-    // if (yml.meta_info && yml.meta_info.utm_location)
-    //   setLocation(yml.meta_info.utm_location[0] || null);
-
     const urlParams = new URLSearchParams(window.location.search);
     const _inLoc = urlParams.get("in") || null;
     if (_inLoc && _inLoc != "")
@@ -65,7 +61,6 @@ const LandingHeader = (props) => {
           columns_tablet="2"
         >
           <Div
-            // display="none"
             display_tablet="flex"
             flexDirection="column"
             width="100%"
@@ -73,12 +68,10 @@ const LandingHeader = (props) => {
             size="12"
             alignItems="center"
             alignItems_tablet="flex-start"
-            // borderRadius="0 0 0 1.25rem"
             margin="0 0 0 auto"
-            // padding={`40px 0 0 0`}
             padding_xs="0 10px"
             height="auto"
-            padding_tablet={`40px 0 0 20px`}
+            padding_tablet="40px 0 0 20px"
           >
             {yml.header_data.partner_logo_url && (
               <>
@@ -132,7 +125,6 @@ const LandingHeader = (props) => {
             >
               {inLocation}
               {yml.header_data.tagline}
-              {/* <Span animated color={Colors.yellow}>_</Span> */}
             </H1>
             {yml.header_data.sub_heading !== "" && (
               <H2
@@ -159,7 +151,6 @@ const LandingHeader = (props) => {
                   }}
                   margin="7px 0"
                   padding="0px 20px"
-                  // textShadow="1px 0px #898a8b"
                   textAlign="left"
                   color={
                     yml.header_data.background ? Colors.black : Colors.white
@@ -185,13 +176,12 @@ const LandingHeader = (props) => {
             {yml.features.text && (
               <Paragraph
                 isActive
+                color={Colors.white}
                 style={JSON.parse(yml.features.styles)}
                 margin="7px 0"
                 padding_tablet="0px 0px"
                 padding="0px 20px"
-                // textShadow="0px 0px 4px black"
                 textAlign="left"
-                color={Colors.white}
                 dangerouslySetInnerHTML={{ __html: yml.features.text }}
               />
             )}
@@ -222,7 +212,6 @@ const LandingHeader = (props) => {
                           }}
                           imgStyle={{ objectFit: "contain" }}
                           alt={l.alt}
-                          // fluid={l.image != null && l.image.childImageSharp.fluid}
                           image={getImage(
                             l.image != null &&
                               l.image.childImageSharp.gatsbyImageData

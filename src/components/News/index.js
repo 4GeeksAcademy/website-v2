@@ -43,10 +43,6 @@ export default ({
                     height: 60
                     placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                   )
-
-                  # fluid(maxHeight: 60,){
-                  #   ...GatsbyImageSharpFluid_withWebp
-                  # }
                 }
               }
               location
@@ -111,7 +107,6 @@ export default ({
               image={getImage(
                 l.image != null && l.image.childImageSharp.gatsbyImageData
               )}
-              // fluid={l.image != null && l.image.childImageSharp.fluid}
             />
           );
         })}
