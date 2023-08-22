@@ -84,7 +84,8 @@ const Side = ({
         height={img_h_xl}
         width={imgStyles ? imgStyles.width || "100%" : "100%"}
         h_sm={img_h_sm || "250px"}
-        backgroundSize="contain"
+        backgroundSize={image.shadow ? "cover" : "contain"}
+        boxShadow={image.shadow && "9px 8px 0px 0px rgba(0,0,0,1)"}
       />
     );
   }
@@ -250,9 +251,12 @@ export const TwoColumn = ({ left, right, proportions, session }) => {
     <Div
       flexDirection="column"
       gap={left.gap || right.gap || "0px"}
-      gap_tablet={left.gap_tablet || right.gap_tablet || "0px"}
+      gap_tablet={left.gap_tablet || right.gap_tablet || "20px"}
       flexDirection_tablet="row"
-      m_sm="0px 0px 100px 0"
+      m_sm="0px auto 100px auto"
+      margin="auto"
+      width_tablet="100%"
+      maxWidth_tablet="1366px"
     >
       <Div
         flexDirection="column"
@@ -912,10 +916,11 @@ export const landingSections = {
       id="testimonials_new"
       key={`${index}-testimonials_new`}
       flexDirection="column"
-      margin="30px 0 0 0"
-      // margin_tablet="100px"
+      margin="30px auto 0 auto"
       m_sm="0"
       p_xs="0"
+      width_tablet="100%"
+      maxWidth_tablet="1366px"
     >
       <SuccessStories
         lang={pageContext.lang}
@@ -1026,13 +1031,12 @@ export const landingSections = {
   two_column_left: ({ session, data, pageContext, yml, index }) => (
     <Div
       id="two_column_left"
-      maxWidth="1366px"
       key={index}
       background={Colors[yml.background] || yml.background}
       flexDirection="column"
       padding="50px 0 50px 0"
       padding_tablet="50px 6%"
-      margin="auto"
+      margin="0"
     >
       <TwoColumn
         left={{ image: yml.image, video: yml.video }}
@@ -1052,13 +1056,12 @@ export const landingSections = {
     return (
       <Div
         id="two_column_right"
-        maxWidth="1366px"
         key={index}
         background={Colors[yml.background] || yml.background}
         flexDirection="column"
         padding="0 0 50px 0"
         padding_tablet="6%"
-        margin="auto"
+        margin="0"
       >
         <TwoColumn
           left={{

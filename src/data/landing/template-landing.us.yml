@@ -165,10 +165,11 @@ components:
     layout: two_column_right 
     swipable: False
     background: "#FFFFFF"
-    image: 
+    image:
       style: "{}"
-      src: "/images/landing/image-with-shadow.png"
+      src: "/images/alumni-bg.png"
       link: "https://google.com" # take uses somewhere when they click on the image
+      shadow: true
     heading: 
       text: "Finance your future"
     sub_heading:
