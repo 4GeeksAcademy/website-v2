@@ -1026,12 +1026,13 @@ export const landingSections = {
   two_column_left: ({ session, data, pageContext, yml, index }) => (
     <Div
       id="two_column_left"
+      maxWidth="1366px"
       key={index}
       background={Colors[yml.background] || yml.background}
       flexDirection="column"
       padding="50px 0 50px 0"
       padding_tablet="50px 6%"
-      margin="0"
+      margin="auto"
     >
       <TwoColumn
         left={{ image: yml.image, video: yml.video }}
@@ -1051,12 +1052,13 @@ export const landingSections = {
     return (
       <Div
         id="two_column_right"
+        maxWidth="1366px"
         key={index}
         background={Colors[yml.background] || yml.background}
         flexDirection="column"
         padding="0 0 50px 0"
         padding_tablet="6%"
-        margin="0"
+        margin="auto"
       >
         <TwoColumn
           left={{
