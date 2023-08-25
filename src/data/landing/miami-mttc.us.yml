@@ -36,25 +36,20 @@ navbar:
 
 header_data:
   background: "#FFF1D1"
-  tagline: "There are no excuses to enter the tech industry"
+  tagline: "No excuses. No Cost. Miami Tech Talent is bringing 100% scholraships. We are changing the Game"
   tagline_color: "black"
-  sub_heading: "No cost, ever, for your Coding Education. We changed the game."
   badge: "../../../static/images/badges/Course-Report-Badge-2023.png"
   image_filter: brightness(0.3)
-  right_image: "../../../static/images/landing/header_united_way.png"
-  # right_image: 
-  #   style: '{ "backgroundSize": "contain" }'
-  #   src: "/images/landing/header_united_way.png"
 
 features:
   marginTop: 0px #<-- separation between tagline and the bullets
-  text: '<span style="margin-top: 10px; display: block;"> <strong style="font-weight: bold;">The United Way Miami Workforce Project</strong> is an exciting new training program made possible by United Way Miami, 4Geeks Academy, and Social Finance.</span>'
+  text: '<span style="margin-top: 10px; display: block;"> <strong style="font-weight: bold;">The Miami Tech Talent Coalition is creating a sustainable pipeline of skilled tech workers in Miami by bridging the gap between employers and talent.</span>'
   bullets:
-    - "Become a Software Developer and get a new career"
-    - "Get up to $6400 for living stipends to pay your regular costs while taking the program"
-    - "100 Spots Available. Only 50 left!" 
+    - "Get a career in Tech and join the #MiamiTechLife"
+    - "Be a software Developer or a Data Scientist"
+    - "30 Spots Available. Only 15 left!" 
     - "Now open and accepting applications!"
-  styles: '{ "color": "gray", "fontWeight":"500" }'
+  styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
 
 short_badges:
   - name: "Premios Tecnologia Siglo XXI"
@@ -77,7 +72,7 @@ short_badges:
 follow_bar:
   position: "top" # top, bottom, hidden
   content:
-    text: "No Costs. No Excuses."
+    text: "No Costs. No Excuses. Join and be a part of the #MiamiTech movement"
     text_mobile: "No Costs. No Excuses."
     # devices:   XL      LG    MD      SM    XS
     font_size: ["25px", "25px", "25px", "20px", "18px"]
@@ -90,24 +85,24 @@ follow_bar:
 choose_your_program:
   position: 8
   title: Our Programs
-  paragraph: Programs in Full-Time or Part-Time modality with live classes taught by experts
+  paragraph: We are specialized on Part-time Programs with live classes taught by experts. Plan for a +25 hours a week of workload
   programs:
   - title: "Full Stack Developer"
     sub_title: "Level 1"
     icon: "fullstack"
     description: |
       From 0 to becoming a Full-Stack Jr. programmer, you will work with HTML5, CSS3, Bootstrap, JS, Reactjs, SQL, Python, Flask, REST API's, etc. to design and create responsive websites. You'll gain a solid foundation of front, back, database, distributed processes, and deployment with passionate instructors and an up-to-date, hands-on syllabus.
-      Available Part-Time or Full-Time mode. Download <a href=https://storage.googleapis.com/4geeks-academy-website/syllabus/europe/Syllabus%20Europe%20EN.pdf target=_blank>"here the syllabus"</a>.  
+      Available Part-Time or Full-Time mode. Download <a href=https://online.fliphtml5.com/yxcff/btco/"</a>.  
     
     text_link: Apply now
     link: "#" # moves to start position
 
-  - title: "AI & Machine Learning"
-    sub_title: "Developers and STEM Profiles"
+  - title: "Data Science & Machine Learning"
+    sub_title: "No experience required"
     icon: "machine"
     description: |
-      Get trained by a renowned expert in A.I.; explore Machine Learning's fundamentals and Deep Learning with some of the most powerful technologies that truly scale intelligence for business. Practice with real-life business scenarios typical in business and review some of the tools used in the industry. Strategize and develop your A.I. following the lifecycle development from start to end, including deployment into production and maintenance with Privacy, Security, and Ethics. 
-      Download <a href=https://storage.googleapis.com/4geeks-academy-website/syllabus/europe/Syllabus%20Europe%20EN.pdf target=_blank>"here the syllabus"</a>. 
+      Get trained by a renowned expert in Machine Learning and DS: explore Machine Learning's fundamentals and Deep Learning with some of the most powerful technologies that truly scale intelligence for business. Practice with real-life business scenarios typical in business and review some of the tools used in the industry. Strategize and develop your A.I. following the lifecycle development from start to end, including deployment into production and maintenance with Privacy, Security, and Ethics. 
+      Download <a href=https://online.fliphtml5.com/yxcff/jzre/#p=1"</a>. 
       
     text_link: Apply now
     link: "#"
@@ -131,21 +126,21 @@ components:
           style: '{ "backgroundSize": "contain", "height": "130px" }'
           src: "/images/landing/graduated-icon.png"
         content: 
-          text: "Apply to the United Way Miami Workforce Project to jumpstart your career in coding."
+          text: "Apply to the Miami Tech Talent Coalition Program to jumpstart your career in coding."
           font_size: ["16px"]
         size: [3,3,3,3]
       - image:
           style: '{ "backgroundSize": "contain", "height": "130px" }'
           src: "/images/landing/pc-icon.png"
         content: 
-          text: "Once accepted, students enroll in the 4Geeks Full-Stack Software Development Program. 4Geeks provides quality training and offers supporting services —like resume review and career coaching—to help participants find jobs after graduating."
+          text: "You will have to approve a Logical test. Then you will be invited to complete the Pre-work, and finally you are going to have a couple of onboarding sessions. After completing these stages, you will be enrolled and formally a part of the program."
           font_size: ["16px"]
         size: [3,3,3,3]
       - image:
           style: '{ "backgroundSize": "contain", "height": "130px" }'
           src: "/images/landing/cicle-icon.png"
         content: 
-          text: "Participants pay program costs after they start jobs making more than $35,000 a year. Participants who don't find a job or keep jobs with salaries above $35,000 pay nothing."
+          text: "You will never have to pay but you will have to express commitment, passion and desire to get a Job after graduation, so more people can benefit from it as well as you did!."
           font_size: ["16px"]
         size: [3,3,3,3]
 
