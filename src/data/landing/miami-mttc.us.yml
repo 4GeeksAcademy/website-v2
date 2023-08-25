@@ -125,7 +125,7 @@ components:
           style: '{ "backgroundSize": "contain", "height": "130px" }'
           src: "/images/landing/graduated-icon.png"
         content: 
-          text: "Apply to the Miami Tech Talent Coalition Program to jumpstart your career in coding."
+          text: "Apply to the Miami Tech Talent Coalition Program to jumpstart your career in coding. More info here <a href=https://refreshmiami.com/miami-tech-talent-coalition/</a>."
           font_size: ["16px"]
         size: [3,3,3,3]
       - image:
@@ -262,10 +262,10 @@ components:
       style: '{ "backgroundSize": "contain", "maxHeight": "270px" }'
       src: "/images/landing/miamitech-logo.png"
     heading:
-      text: "The United Way Miami Workforce Project is a partnership between United Way Miami and 4Geeks Academy."
+      text: "The Miami Tech Coalition and 4Geeks Academy Mission" 
       font_size: ["40px", "40px", "40px", "40px", "40px"]
     content:
       text: |
-        <p>United Way Miami envisions a thriving and equitable community where all people have access to quality education and the opportunity to lead healthy and financially secure lives – the building blocks of a thriving community.</p>
+        <p>is to actively engage employers, academic institutions, government entities, service providers, and local training providers for the purpose of connecting employers with technology talent and creating a sustainable tech talent pipeline in Miami.</p>
         <br> 
       font_size: ["16px"] 
