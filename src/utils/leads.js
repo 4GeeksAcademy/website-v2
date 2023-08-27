@@ -25,7 +25,8 @@ export const save_form = async (
   };
 
   const getReferralKey = () => {
-    let alias = ["referral_code", "ref", "referral_key"];
+    // at_gd is for the adtraction referral program
+    let alias = ["referral_code", "ref", "referral_key", "at_gd"];
     let referral = null;
     for (let i = 0; i < alias.length; i++) {
       referral =
