@@ -184,8 +184,36 @@ components:
       text: "We're all about making our high-quality education affordable to everyone. That's why we offer multiple options to help you fund our coding bootcamps stress-free. Whether it's an ISA, scholarship, payment plan or Job Guarantee we're here to guide you every step of the way."
       font_size: ["16px"]
       path: ""
+  - name: new_design_with_bullets
+    position: 9
+    layout: two_column_right 
+    swipable: False
+    background: "#FFFFFF"
+    image:
+      style: "{}"
+      src: "/images/alumni-bg.png"
+      link: "https://google.com" # take uses somewhere when they click on the image
+      shadow: true
+    heading: 
+      text: "Finance your future"
+    sub_heading:
+      text: "We're all about making our high-quality education affordable to everyone."
+    button: 
+      text: "See all financing options"
+      color: white
+      hover_color: "white"
+      background: "black"
+      path: "https://www.youtube.com/watch?v=plwPwyrxX84"
+    content: 
+      text: "We're all about making our high-quality education affordable to everyone. That's why we offer multiple options to help you fund our coding bootcamps stress-free. Whether it's an ISA, scholarship, payment plan or Job Guarantee we're here to guide you every step of the way."
+      font_size: ["16px"]
+      path: ""
+    bullets:
+      - Lorem ipsum dolor sit amet
+      - Lorem ipsum dolor sit amet
+      - Lorem ipsum dolor sit amet
   - name: first_syllabus_form
-    position: 8
+    position: 10
     layout: syllabus
     button:
       text: "Instant Download"
