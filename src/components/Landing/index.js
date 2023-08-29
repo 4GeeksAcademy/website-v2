@@ -78,14 +78,14 @@ const Side = ({
           }
         }}
         style={imgStyles}
-        borderRadius="3px"
         alt="4Geeks Academy Section"
         margin="auto"
         height={img_h_xl}
         width={imgStyles ? imgStyles.width || "100%" : "100%"}
         h_sm={img_h_sm || "250px"}
         backgroundSize={image.shadow ? "cover" : "contain"}
-        boxShadow={image.shadow && "9px 8px 0px 0px rgba(0,0,0,1)"}
+        border={image.shadow && "3px solid black"}
+        boxShadow={image.shadow && "20px 15px 0px 0px rgba(0,0,0,1)"}
       />
     );
   }
