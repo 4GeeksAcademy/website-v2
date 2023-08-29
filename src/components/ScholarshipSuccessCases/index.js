@@ -6,7 +6,7 @@ import { Colors } from "../Styling";
 import Icon from "../Icon";
 import Marquee from "react-fast-marquee";
 
-const ScholarshipSuccessCases = ({ content }) => {
+const ScholarshipSuccessCases = ({ content, maxWidth }) => {
   return (
     <Div height="590px" display="block" margin="0 0 10px 0">
       <H2 margin="30px 0">{content.title}</H2>
@@ -47,21 +47,25 @@ const ScholarshipSuccessCases = ({ content }) => {
                   <Div
                     alignItems="center"
                     padding="3px"
-                    background={Colors.veryLightBlue}
+                    background={Colors.lightYellow}
                   >
                     <Icon
                       icon="graduation"
                       width="19px"
                       height="16px"
-                      fill={Colors.blue}
+                      fill={Colors.yellow}
                     />
-                    <Paragraph fontSize="10px" color={Colors.blue}>
+                    <Paragraph fontSize="10px" color={Colors.yellow}>
                       {student.status}
                     </Paragraph>
                   </Div>
                 </Div>
-                <Div margin="10px 0 0 0">
-                  <Div className="react-tel-input" margin="0" width="25px">
+                <Div margin="10px 0 0 0" alignItems="center">
+                  <Div
+                    className="react-tel-input"
+                    margin="0"
+                    style={{ width: "25px" }}
+                  >
                     <div className={`flag ${student.country.iso}`} />
                   </Div>
                   <Paragraph
@@ -95,16 +99,16 @@ const ScholarshipSuccessCases = ({ content }) => {
                   alignItems="center"
                   width="fit-content"
                   padding="3px 5px"
-                  background={Colors.lightYellow}
+                  background={Colors.veryLightBlue}
                   position="absolute"
                   bottom="17px"
                   right="17px"
                 >
-                  <Icon icon="flag-check" color={Colors.yellow} />
+                  <Icon icon="flag-check" color={Colors.blue} />
                   <Paragraph
                     margin="0 0 0 5px"
                     fontSize="9px"
-                    color={Colors.yellow}
+                    color={Colors.blue}
                   >
                     {student.achievement}
                   </Paragraph>

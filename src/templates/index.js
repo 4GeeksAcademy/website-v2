@@ -534,9 +534,6 @@ export const query = graphql`
                     width: 100
                     placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                   )
-                  # fluid(maxWidth: 100){
-                  #   ...GatsbyImageSharpFluid_withWebp
-                  # }
                 }
               }
               featured
@@ -609,9 +606,6 @@ export const query = graphql`
                   width: 800
                   placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                 )
-                # fluid(maxWidth: 800){
-                #   ...GatsbyImageSharpFluid_withWebp
-                # }
               }
             }
           }
@@ -746,9 +740,6 @@ export const query = graphql`
                 width: 1200
                 placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
               )
-              # fluid(maxWidth: 1200){
-              #   ...GatsbyImageSharpFluid_withWebp
-              # }
             }
           }
           image_mobile {
@@ -758,9 +749,6 @@ export const query = graphql`
                 width: 800
                 placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
               )
-              # fluid(maxWidth: 800){
-              #   ...GatsbyImageSharpFluid_withWebp
-              # }
             }
           }
         }

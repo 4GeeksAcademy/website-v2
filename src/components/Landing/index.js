@@ -44,6 +44,7 @@ const Side = ({
   button,
   bullets,
   session,
+  padding_tablet,
 }) => {
   const utm = session && session.utm;
   if (video)
@@ -51,9 +52,10 @@ const Side = ({
       <ReactPlayer
         thumb={image && image.src}
         id={video}
+        videoHeight="360px"
         style={{
           width: "100%",
-          height: "260px",
+          height: "360px",
         }}
       />
     );
@@ -76,20 +78,20 @@ const Side = ({
           }
         }}
         style={imgStyles}
-        // borderRadius={"1.25rem"}
-        borderRadius={"3px"}
-        // className="pointer"
-        alt={"4Geeks Academy Section"}
+        borderRadius="3px"
+        alt="4Geeks Academy Section"
         margin="auto"
         height={img_h_xl}
         width={imgStyles ? imgStyles.width || "100%" : "100%"}
         h_sm={img_h_sm || "250px"}
-        backgroundSize={`contain`}
+        backgroundSize={image.shadow ? "cover" : "contain"}
+        boxShadow={image.shadow && "9px 8px 0px 0px rgba(0,0,0,1)"}
       />
     );
   }
 
-  const [h_xl, h_lg, h_md, h_sm, h_xs] = heading ? heading.font_size : [];
+  const [h_xl, h_lg, h_md, h_sm, h_xs] =
+    heading && heading.font_size ? heading.font_size : [];
   const [sh_xl, sh_lg, sh_md, sh_sm, sh_xs] =
     sub_heading && Array.isArray(sub_heading.font_size)
       ? sub_heading.font_size
@@ -100,7 +102,7 @@ const Side = ({
       flexDirection_tablet="column"
       flexDirection="column"
       padding="40px 20px"
-      padding_tablet="36px 72px"
+      padding_tablet={padding_tablet || "36px 72px"}
     >
       {heading && (
         <H2
@@ -110,7 +112,7 @@ const Side = ({
           lineHeight_tablet="38px"
           fontSize={h_xs || "30px"}
           fs_xl={h_xl}
-          fontSize_md={h_md || "40px"}
+          fontSize_md={h_md || "30px"}
           fontSize_sm={h_sm}
           margin="30px 0 20px 0"
         >
@@ -122,11 +124,15 @@ const Side = ({
           textAlign_tablet="left"
           padding={heading ? "0" : "20px"}
           margin="0"
-          fontSize={sh_xl || "16px"}
+          fontSize={sh_xl || "18px"}
           fontSize_sm={sh_sm}
           fonSize_md={sh_md}
           fontSize_xs={sh_xs}
           fontHeight="30px"
+          fontWeight="700"
+          fontWeight_tablet="700"
+          fontWeight_xs="700"
+          opacity="1"
         >
           {sub_heading.text}
         </Paragraph>
@@ -182,7 +188,8 @@ const Side = ({
           textAlign="left"
           textAlign_tablet="left"
           padding={heading ? "0" : "15px"}
-          margin="26px 0"
+          margin="10px 0"
+          opacity="1"
           fontSize={c_xl || "16px"}
           fontSize_sm={c_sm}
           fonSize_md={c_md}
@@ -197,7 +204,8 @@ const Side = ({
             textAlign="left"
             textAlign_tablet="left"
             padding={heading ? "0" : "15px"}
-            margin="26px 0"
+            margin="10px 0"
+            opacity="1"
             fontSize={c_xl || "16px"}
             fontSize_sm={c_sm}
             fonSize_md={c_md}
@@ -212,14 +220,13 @@ const Side = ({
       {button && (
         <Button
           outline
-          // width="250px"
+          borderRadius="0"
           colorHoverText={button.hover_color || Colors.blue}
           background={Colors[button.background] || button.background}
           lineHeight="26px"
           textColor={Colors.black}
+          textTransform="none"
           color={Colors[button.color] || button.color}
-          // padding="0"
-          // padding_tablet="0"
           fontSize="15px"
           textAlign="left"
           margin="2rem 0"
@@ -243,9 +250,13 @@ export const TwoColumn = ({ left, right, proportions, session }) => {
   return (
     <Div
       flexDirection="column"
-      gap="0px"
+      gap={left.gap || right.gap || "0px"}
+      gap_tablet={left.gap_tablet || right.gap_tablet || "20px"}
       flexDirection_tablet="row"
-      m_sm="0px 0px 100px 0"
+      m_sm="0px auto 100px auto"
+      margin="auto"
+      width_tablet="100%"
+      maxWidth_tablet="1366px"
     >
       <Div
         flexDirection="column"
@@ -674,7 +685,6 @@ export const landingSections = {
                   // fadeIn={false}
                   alt={item.alt}
                   image={getImage(item.image.childImageSharp.gatsbyImageData)}
-                  // fluid={l.image.childImageSharp.fluid}
                 />
                 <StarRating rating={item.rating} />
                 <Paragraph
@@ -728,6 +738,7 @@ export const landingSections = {
           }))) ||
       [];
 
+    const defaultCourse = Array.isArray(course) ? course[0] : course;
     return (
       <GridContainer
         key={index}
@@ -773,7 +784,8 @@ export const landingSections = {
             data={{
               course: {
                 type: "hidden",
-                value: programs.length <= 1 ? programs[0].value : course,
+                value:
+                  programs.length === 1 ? programs[0].value : defaultCourse,
                 valid: true,
               },
               utm_location: {
@@ -904,10 +916,11 @@ export const landingSections = {
       id="testimonials_new"
       key={`${index}-testimonials_new`}
       flexDirection="column"
-      margin="30px 0 0 0"
-      // margin_tablet="100px"
+      margin="30px auto 0 auto"
       m_sm="0"
       p_xs="0"
+      width_tablet="100%"
+      maxWidth_tablet="1366px"
     >
       <SuccessStories
         lang={pageContext.lang}

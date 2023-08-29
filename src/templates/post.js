@@ -48,23 +48,6 @@ export default function Template(props) {
     },
   }).Compiler;
 
-  post.htmlAst.children?.forEach((elem) => {
-    if (elem.tagName === "p") {
-      elem.children?.forEach((tag) => {
-        if (tag.tagName === "a") {
-          if (
-            tag.properties &&
-            !tag.properties.href.includes("4geeks.com") &&
-            !tag.properties.href.includes("4geeksacademy.com")
-          ) {
-            tag.properties.rel = "nofollow";
-            tag.properties.target = "_self";
-          }
-        }
-      });
-    }
-  });
-
   const markdownAST = renderAst(post.htmlAst).props.children;
   const sanitizedData = markdownAST?.filter((el) => el.type !== "h1");
 
@@ -141,53 +124,35 @@ export default function Template(props) {
   //Formatted post date
   let postDate = GetFormattedDate(post.frontmatter.date);
 
-  // element that will be wrapped
-  let el;
-  let wrapper;
   if (isBrowser) {
-    el = document.querySelector("table");
-    // create wrapper container
-    wrapper = document.createElement("div");
-    wrapper.classList.add("table-container");
+    const anchors = document.getElementsByTagName("a");
+    Array.from(anchors).forEach((anchor) => {
+      const linkRegex = new RegExp("(http)");
+      console.log(anchor.href);
+      if (
+        linkRegex.test(anchor.href) &&
+        !anchor.href.includes("4geeks.com") &&
+        !anchor.href.includes("4geeksacademy.com")
+      ) {
+        anchor.rel = "nofollow";
+        anchor.target = "_self";
+      }
+    });
+    const tables = document.getElementsByTagName("table");
+    Array.from(tables).forEach((table) => {
+      let wrapper;
+      wrapper = document.createElement("div");
+      wrapper.classList.add("table-container");
 
-    if (el) {
-      el.parentNode.insertBefore(wrapper, el);
+      if (table) {
+        table.parentNode.insertBefore(wrapper, table);
 
-      // move el into wrapper
-      wrapper.appendChild(el);
-      // insert wrapper before el in the DOM tree
-    }
+        // move el into wrapper
+        wrapper.appendChild(table);
+        // insert wrapper before el in the DOM tree
+      }
+    });
   }
-
-  const schema = {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    headline: post.frontmatter.title,
-    alternativeHeadline: post.frontmatter.title,
-    image: post.frontmatter.image,
-    author: post.frontmatter.author,
-    // "award": "Best article ever written",
-    editor: "4Geeks Academy",
-    genre: post.frontmatter.cluster.replace(/-|_/g, " "),
-    // "keywords": "cuanto gana un desarrollador full stack",
-    wordcount: post.frontmatter.wordcount,
-    publisher: {
-      "@type": "Organization",
-      name: "4Geeks Academy",
-      logo: {
-        "@type": "ImageObject",
-        url: "https://storage.googleapis.com/media-breathecode/b25a096eb14565c0c5e75d72442f888c17ac06fcfec7282747bf6c87baaf559c",
-      },
-    },
-    url: `https://4geeksacademy.com/${pageContext.lang}/${post.frontmatter.cluster}/${post.frontmatter.slug}`,
-    mainEntityOfPage: {
-      "@type": "WebPage",
-    },
-    // datePublished: post.frontmatter.date,
-    dateCreated: post.frontmatter.date,
-    // dateModified: post.frontmatter.date,
-    description: post.frontmatter.excerpt,
-  };
 
   return (
     <>
@@ -335,47 +300,6 @@ export default function Template(props) {
             </Div>
           </Div>
         </GridContainer>
-
-        {/* <Div
-          flexDirection="column"
-          justifyContent="center"
-          alignItems="center"
-          height="43px"
-          margin="0 0 89px 0"
-          width="100%"
-          width_tablet="100%"
-          height_tablet="100%"
-          borderRadius="3px"
-          gridArea_tablet="1/10/2/13"
-        >
-          <Paragraph
-            color="#3A3A3A"
-            margin="0 0 10px 0"
-            display="none"
-            display_tablet="block"
-            fontWeight="900"
-            fontSize="15px"
-            lineHeight="19px"
-            style={{letterSpacing: "0.05em", textTransform: "uppercase"}}
-          >
-            Compartir Articulo
-            </Paragraph>
-
-          <Div>
-            <Icon icon="twitter"
-              style={{margin: "0 15px 0 0"}}
-              height="32px"
-              width="32px"
-            />
-            <Icon icon="facebook"
-              style={{margin: "0 15px 0 0"}}
-              color={Colors.black}
-              fill={Colors.black}
-              height="32px"
-              width="32px"
-            />
-          </Div>
-        </Div> */}
       </Layout>
     </>
   );

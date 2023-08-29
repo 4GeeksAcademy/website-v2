@@ -1,30 +1,21 @@
 import React, { useEffect } from "react";
-import { graphql, navigate } from "gatsby";
+import { graphql } from "gatsby";
 import { landingSections } from "../components/Landing";
 import FollowBar from "../components/FollowBar";
 import LeadForm from "../components/LeadForm";
-import { H1, H2, H4, Paragraph, Span } from "../components/Heading";
-import {
-  GridContainerWithImage,
-  Div,
-  GridContainer,
-} from "../components/Sections";
+import { Paragraph } from "../components/Heading";
+import { GridContainerWithImage, Div } from "../components/Sections";
 import { Colors, StyledBackgroundSection } from "../components/Styling";
-import { Circle } from "../components/BackgroundDrawing";
-import Icon from "../components/Icon";
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
-import LandingNavbar from "../components/NavbarDesktop/landing";
 import BaseRender from "./_baseLandingLayout";
 import { processFormEntry } from "../actions";
 import { SessionContext } from "../session.js";
-import LandingContainer from "../components/LandingContainer";
-import Marquee_v2 from "../components/Marquee_v2";
+import LandingNavbar from "../components/NavbarDesktop/landing";
+import LandingHeader from "../components/LandingHeader";
 
 const Landing = (props) => {
-  const { session, setLocation } = React.useContext(SessionContext);
+  const { session } = React.useContext(SessionContext);
   const { data, pageContext, yml, filteredPrograms } = props;
   const [components, setComponents] = React.useState({});
-  const [inLocation, setInLocation] = React.useState("");
 
   const applySchollarship =
     data.allLandingYaml.edges.length !== 0
@@ -56,15 +47,6 @@ const Landing = (props) => {
       });
     setComponents({ ...yml, ..._components });
   }, [yml]);
-  useEffect(() => {
-    // if (yml.meta_info && yml.meta_info.utm_location)
-    //   setLocation(yml.meta_info.utm_location[0] || null);
-
-    const urlParams = new URLSearchParams(window.location.search);
-    const _inLoc = urlParams.get("in") || null;
-    if (_inLoc && _inLoc != "")
-      setInLocation(_inLoc.replace(/^\w/, (c) => c.toUpperCase()) + " ");
-  }, []);
 
   // data sent to the form already prefilled
   const preData = {
@@ -102,22 +84,6 @@ const Landing = (props) => {
     session.locations?.find(
       (l) => l.breathecode_location_slug === yml.meta_info.utm_location
     );
-
-  const bulletIcons = [
-    {
-      icon: "square-bracket-fill",
-      background: "#000",
-    },
-    {
-      icon: "curly-bracket-fill",
-      background: "#FFB718",
-    },
-    {
-      icon: "elderly-fill",
-      background: "#0097CF",
-      transform: "rotate(180deg)",
-    },
-  ];
 
   return (
     <>
@@ -167,323 +133,13 @@ const Landing = (props) => {
         </Paragraph>
       </FollowBar>
 
-      <LandingContainer
-        filter={yml.header_data.image_filter}
-        image={
-          yml.header_data?.image &&
-          yml.header_data.image.childImageSharp.gatsbyImageData
-        }
-        badge={
-          yml.header_data?.badge &&
-          yml.header_data.badge.childImageSharp.gatsbyImageData
-        }
-        background={yml.header_data.background || Colors.white}
-      >
-        <GridContainer
-          style={{ maxWidth: "1366px" }}
-          margin="0 auto"
-          padding="95px 0 35px 0"
-          containerGridGap="0"
-          containerColumns_tablet="repeat(1,0fr)"
-          padding_tablet="72px 0 35px 0"
-          columns_tablet="2"
-        >
-          <Div
-            // display="none"
-            display_tablet="flex"
-            flexDirection="column"
-            width="100%"
-            size_tablet="10"
-            size="12"
-            alignItems="center"
-            alignItems_tablet="flex-start"
-            // borderRadius="0 0 0 1.25rem"
-            margin="0 0 0 auto"
-            // padding={`40px 0 0 0`}
-            padding_xs="0 10px"
-            height="auto"
-            padding_tablet={`40px 0 0 20px`}
-          >
-            {yml.header_data.partner_logo_url && (
-              <>
-                <Div
-                  width="242px"
-                  flexDirection_tablet="column"
-                  height="auto"
-                  padding="0 0 25px 0"
-                >
-                  <GatsbyImage
-                    loading="eager"
-                    imgStyle={{ objectFit: "contain" }}
-                    image={getImage(
-                      yml.header_data.partner_logo_url.childImageSharp
-                        .gatsbyImageData
-                    )}
-                    alt="4Geeks Logo"
-                  />
-                </Div>
-
-                <Div
-                  display="none"
-                  display_tablet="flex"
-                  background="#FFFFFF"
-                  width="calc(50% - 30px)"
-                  height="2px"
-                  margin="7px 0"
-                />
-              </>
-            )}
-            <H1
-              zIndex="1"
-              type="h1"
-              variant="main"
-              lineHeight="normal"
-              lineHeight_tablet="normal"
-              margin="20px 0"
-              margin_xs="10px 0"
-              padding="0 10px 0 0px"
-              color={
-                yml.header_data.color
-                  ? yml.header_data.color
-                  : yml.header_data.background
-                  ? Colors.black
-                  : Colors.white
-              }
-              fontSize="32px"
-              fontSize_tablet="52px"
-              fontWeight="700"
-              textAlign="left"
-            >
-              {inLocation}
-              {yml.header_data.tagline}
-              {/* <Span animated color={Colors.yellow}>_</Span> */}
-            </H1>
-            {yml.header_data.sub_heading !== "" && (
-              <H2
-                zIndex="1"
-                type="h2"
-                textAlign="left"
-                fontSize="18px"
-                color={yml.header_data.background ? Colors.black : Colors.white}
-                variant="main"
-                fontWeight="bolder"
-              >
-                {yml.header_data.sub_heading}
-              </H2>
-            )}
-
-            {Array.isArray(yml.features.bullets) &&
-              yml.features.bullets.map((f, i) => (
-                <Paragraph
-                  zIndex="1"
-                  key={i}
-                  style={{
-                    ...JSON.parse(yml.features.styles),
-                    fontWeight: "bolder",
-                  }}
-                  margin="7px 0"
-                  padding="0px 20px"
-                  // textShadow="1px 0px #898a8b"
-                  textAlign="left"
-                  color={
-                    yml.header_data.background ? Colors.black : Colors.white
-                  }
-                >
-                  <Icon
-                    style={{
-                      background:
-                        bulletIcons[i % bulletIcons.length].background,
-                      padding: "5px",
-                      transform: bulletIcons[i % bulletIcons.length]?.transform,
-                      fontWeight: "bolder",
-                    }}
-                    width="20px"
-                    height="20px"
-                    icon={bulletIcons[i % bulletIcons.length].icon}
-                    color="white"
-                  />
-
-                  {" " + f}
-                </Paragraph>
-              ))}
-            {yml.features.text && (
-              <Paragraph
-                isActive
-                style={JSON.parse(yml.features.styles)}
-                margin="7px 0"
-                padding_tablet="0px 0px"
-                padding="0px 20px"
-                // textShadow="0px 0px 4px black"
-                textAlign="left"
-                color={Colors.white}
-                dangerouslySetInnerHTML={{ __html: yml.features.text }}
-              />
-            )}
-            {yml.short_badges && (
-              <Marquee_v2
-                speed={1.5}
-                reversed={false}
-                containerstyle={{
-                  height: "160px",
-                  width: "100%",
-                }}
-              >
-                <Div
-                  className="badge-slider"
-                  justifyContent="center"
-                  padding="44px 0"
-                >
-                  {Array.isArray(yml.short_badges) &&
-                    yml.short_badges.map((l, i) => {
-                      return (
-                        <GatsbyImage
-                          key={i}
-                          draggable={false}
-                          style={{
-                            height: "65px",
-                            minWidth: "165px",
-                            width: "165px",
-                          }}
-                          imgStyle={{ objectFit: "contain" }}
-                          alt={l.alt}
-                          // fluid={l.image != null && l.image.childImageSharp.fluid}
-                          image={getImage(
-                            l.image != null &&
-                              l.image.childImageSharp.gatsbyImageData
-                          )}
-                        />
-                      );
-                    })}
-                </Div>
-              </Marquee_v2>
-            )}
-          </Div>
-          <Div
-            position="relative"
-            flexDirection="column"
-            size="12"
-            size_tablet="10"
-            width="100%"
-            width_tablet="65%"
-            // size_lg="4"
-            // size_sm="6"
-            // size_xs="12"
-            margin="0"
-            textAlign_sm="center"
-            margin_md={yml.form.margin_md || "0 auto 0 70px"}
-          >
-            <Div
-              top="0"
-              position="absolute"
-              display="none"
-              display_tablet="block"
-              zIndex="0"
-            >
-              <Circle color="lightBlue" width="301px" height="301px" />
-              <Icon
-                style={{ marginTop: "150%" }}
-                icon="elderly-unfill"
-                width="135px"
-                height="184px"
-                color="#0097CD"
-              />
-            </Div>
-            <Div
-              position="absolute"
-              right="50%"
-              display_tablet="none"
-              zIndex="0"
-            >
-              <Circle
-                color="lightBlue"
-                width="301px"
-                height="301px"
-                position="unset"
-              />
-              <Div display_tablet="none" margin="100% auto">
-                <Icon
-                  style={{ marginTop: "90%" }}
-                  icon="slash-fill"
-                  width="41px"
-                  height="111px"
-                  color="#C7F3FD"
-                />
-                <Icon
-                  style={{ marginTop: "90%" }}
-                  icon="slash-fill"
-                  width="41px"
-                  height="111px"
-                  color="#020203"
-                />
-                <Icon
-                  style={{ marginTop: "90%" }}
-                  icon="elderly-fill"
-                  width="82px"
-                  height="112px"
-                  color="#FFB718"
-                />
-              </Div>
-            </Div>
-            <LeadForm
-              landingTemplate
-              headerImage={
-                yml.header_data.badge &&
-                yml.header_data.badge.childImageSharp.gatsbyImageData
-              }
-              background={
-                yml.header_data.background === "#FFF1D1"
-                  ? Colors.white
-                  : "#FFF1D1"
-              }
-              margin_tablet="18px 38px"
-              selectProgram={programs}
-              selectLocation={locations}
-              margin="18px 10px"
-              marginTop_tablet="50px"
-              // marginTop_xs="20px"
-              style={{
-                zIndex: "1",
-                minHeight: "350px",
-                border: "3px solid black",
-              }}
-              formHandler={processFormEntry}
-              heading={yml.form.heading}
-              motivation={yml.form.motivation}
-              sendLabel={yml.form.button_label}
-              redirect={yml.form.redirect}
-              inputBgColor="#FFFFFF"
-              layout="block"
-              lang={pageContext.lang}
-              fields={yml.form.fields}
-              data={preData}
-              justifyContentButton="center"
-              marginButton="15px auto 30px auto"
-              marginButton_tablet="15px 0 30px auto"
-              boxShadow="9px 8px 0px 0px rgba(0,0,0,1)"
-            />
-            <Div display="none" display_tablet="block" margin="20% 0 0 0">
-              <Icon
-                icon="slash-fill"
-                width="41px"
-                height="111px"
-                color="#C7F3FD"
-              />
-              <Icon
-                icon="slash-fill"
-                width="41px"
-                height="111px"
-                color="#020203"
-              />
-              <Icon
-                icon="elderly-fill"
-                width="82px"
-                height="112px"
-                color="#FFB718"
-              />
-            </Div>
-          </Div>
-        </GridContainer>
-      </LandingContainer>
+      <LandingHeader
+        pageContext={pageContext}
+        yml={yml}
+        preData={preData}
+        locations={locations}
+        programs={programs}
+      />
       {Object.keys(components)
         .filter(
           (name) =>
@@ -524,7 +180,6 @@ const Landing = (props) => {
           gridArea_tablet={
             applySchollarship?.imageSide === "right" ? "1/1/1/6" : "1/7/1/13"
           }
-          // gridArea_tablet="1/1/1/6"
         >
           <Div
             flexDirection="column"
@@ -532,12 +187,8 @@ const Landing = (props) => {
             size_tablet="12"
             width="100%"
             width_tablet="100%"
-            // size_lg="4"
-            // size_sm="6"
-            // size_xs="12"
             margin="0"
             textAlign_sm="center"
-            // margin_md="0 auto 0 70px"
           >
             <LeadForm
               landingTemplate
@@ -576,7 +227,6 @@ const Landing = (props) => {
         >
           {applySchollarship?.imageSide === "right" ? (
             <>
-              {/* <Div display="none" display_md="flex" style={{position: "absolute", background: "#F5F5F5", width: "101%", height: "282px", top: "-25px", left: "-35px", borderRadius: "3px"}}/> */}
               <Div
                 display="none"
                 display_md="flex"
@@ -609,16 +259,15 @@ const Landing = (props) => {
             </>
           )}
           <StyledBackgroundSection
-            height={`450px`}
-            // width={`85%`}
-            borderRadius={`3px`}
+            height="450px"
+            borderRadius="3px"
             image={
               applySchollarship
                 ? applySchollarship?.image.childImageSharp.gatsbyImageData
                 : data.allPageYaml.edges[0].node.list[0].image.childImageSharp
                     .gatsbyImageData
             }
-            bgSize={`contain`}
+            bgSize="contain"
             alt="geekforce image"
           />
         </Div>
@@ -821,12 +470,8 @@ export const query = graphql`
                     width: 150
                     placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                   )
-                  # fluid(maxWidth: 150){
-                  #   ...GatsbyImageSharpFluid_withWebp
-                  # }
                 }
               }
-              # featured
             }
           }
           choose_your_program {
@@ -873,6 +518,7 @@ export const query = graphql`
               src
               style
               link
+              shadow
             }
             video
             height
@@ -1107,12 +753,8 @@ export const query = graphql`
                     width: 150
                     placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                   )
-                  # fluid(maxWidth: 150){
-                  #   ...GatsbyImageSharpFluid_withWebp
-                  # }
                 }
               }
-              # featured
             }
           }
           choose_your_program {
@@ -1337,12 +979,6 @@ export const query = graphql`
                   height: 200
                   placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                 )
-                # fluid(maxHeight: 200){
-                #   ...GatsbyImageSharpFluid_withWebp
-                # }
-                # fixed(width: 250, height: 250) {
-                #   ...GatsbyImageSharpFixed
-                # }
               }
             }
             content
@@ -1369,9 +1005,6 @@ export const query = graphql`
                   width: 800
                   placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                 )
-                # fluid(maxWidth: 800){
-                #   ...GatsbyImageSharpFluid_withWebp
-                # }
               }
             }
             project_content
@@ -1414,9 +1047,6 @@ export const query = graphql`
                     width: 150
                     placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                   )
-                  # fluid(maxWidth: 150){
-                  #   ...GatsbyImageSharpFluid_withWebp
-                  # }
                 }
               }
               featured

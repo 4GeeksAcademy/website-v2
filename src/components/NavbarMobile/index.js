@@ -7,7 +7,7 @@ import { H3, H4, Paragraph } from "../Heading";
 import { Colors, Button, Anchor, Link } from "../Styling";
 import { Div, Grid } from "../Sections";
 import Icon from "../Icon";
-import { NavItem } from "../Navbar";
+import { locByLanguage } from "../../actions";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 const BurgerIcon = (props) => (
@@ -103,6 +103,11 @@ const MenuItem = styled.li`
   font-family: lato, sans-serif;
 `;
 
+const langDictionary = {
+  us: "es",
+  es: "us",
+};
+
 export const NavbarMobile = ({
   lang,
   menu,
@@ -114,7 +119,7 @@ export const NavbarMobile = ({
   currentURL,
   locationCity,
 }) => {
-  const { session, setSession } = useContext(SessionContext);
+  const { session } = useContext(SessionContext);
   const [status, setStatus] = useState({
     toggle: false,
     hovered: false,
@@ -154,13 +159,57 @@ export const NavbarMobile = ({
             width: 125
             placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
           )
-          #   fixed(width: 125) {
-          #     ...GatsbyImageSharpFixed
-          #   }
+        }
+      }
+      allLocationYaml {
+        edges {
+          node {
+            city
+            name
+            latitude
+            longitude
+            phone
+            socials {
+              name
+              icon
+              link
+            }
+            country
+            country_shortname
+            defaultLanguage
+            breathecode_location_slug
+            active_campaign_location_slug
+            gdpr_compliant
+            in_person_available
+            online_available
+            meta_info {
+              slug
+              visibility
+              position
+              region
+              dialCode
+            }
+            button {
+              apply_button_text
+              syllabus_button_text
+            }
+            custom_bar {
+              active
+            }
+          }
+        }
+        nodes {
+          fields {
+            file_name
+            lang
+            slug
+          }
         }
       }
     }
   `);
+
+  const locations = locByLanguage(data.allLocationYaml, langDictionary[lang]);
   return (
     <>
       <Nav
@@ -191,6 +240,8 @@ export const NavbarMobile = ({
           session={session}
           currentURL={currentURL}
           languageButton={languageButton}
+          locations={locations}
+          lang={lang}
         />
         <Div alignItems="center" justifyContent="between">
           <Link onClick={onToggle} to={button.button_link || "#"}>
@@ -305,7 +356,10 @@ export const MegaMenu = ({
   languageButton,
   currentURL,
   session,
+  locations,
+  lang,
 }) => {
+  const { setSession } = useContext(SessionContext);
   return (
     <>
       {status.toggle && (
@@ -389,6 +443,13 @@ export const MegaMenu = ({
               </>
             ) : (
               <Link
+                onClick={() =>
+                  setSession({
+                    ...session,
+                    language: langDictionary[lang],
+                    locations,
+                  })
+                }
                 to={
                   session && session.pathsDictionary && currentURL
                     ? `${session.pathsDictionary[currentURL] || ""}${

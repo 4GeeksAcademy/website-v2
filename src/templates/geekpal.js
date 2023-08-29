@@ -121,6 +121,7 @@ const GeekPal = (props) => {
                     id={item.videoId}
                     thumb={item.image}
                     imageSize="maxresdefault"
+                    videoHeight="350px"
                     style={{
                       width: "85%",
                       height: "350px",
@@ -349,9 +350,6 @@ export const query = graphql`
                   placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                   quality: 100
                 )
-                # fluid(maxWidth: 800, quality: 100){
-                #   ...GatsbyImageSharpFluid_withWebp
-                # }
               }
             }
             image_alt
@@ -374,9 +372,6 @@ export const query = graphql`
                   placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                   quality: 100
                 )
-                # fluid(maxWidth: 800, quality: 100){
-                #   ...GatsbyImageSharpFluid_withWebp
-                # }
               }
             }
             position
@@ -395,9 +390,6 @@ export const query = graphql`
                   placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                   quality: 100
                 )
-                # fluid(maxWidth: 800, quality: 100){
-                #   ...GatsbyImageSharpFluid_withWebp
-                # }
               }
             }
           }
@@ -421,13 +413,6 @@ export const query = graphql`
                   height: 200
                   placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                 )
-
-                # fluid(maxWidth: 200){
-                #   ...GatsbyImageSharpFluid_withWebp
-                # }
-                # fixed(width: 200, height: 200) {
-                #   ...GatsbyImageSharpFixed
-                # }
               }
             }
             content
@@ -452,9 +437,6 @@ export const query = graphql`
                     width: 150
                     placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                   )
-                  # fluid(maxWidth: 150){
-                  #   ...GatsbyImageSharpFluid_withWebp
-                  # }
                 }
               }
               featured
