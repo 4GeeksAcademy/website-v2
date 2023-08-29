@@ -358,7 +358,7 @@ H1.defaultProps = {
 };
 H2.defaultProps = {
   fontSize: "30px",
-  lineHeight: "36px",
+  lineHeight: "24px",
   fontWeight: "700",
 };
 H3.defaultProps = {
