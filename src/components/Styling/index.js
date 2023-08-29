@@ -171,6 +171,7 @@ const StyledImage = styled.div`
   background-position: ${(props) => props.position || "center center"};
   background-color: ${(props) => props.backgroundColor};
   width: ${(props) => props.width};
+  border: ${(props) => props.border};
   height: ${(props) => props.height};
   min-height: ${(props) => props.minHeight};
   max-height: ${(props) => (props.maxHeight ? props.maxHeight : "none")};

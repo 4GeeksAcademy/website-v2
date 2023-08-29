@@ -471,7 +471,7 @@ const LeadForm = ({
             {selectLocation?.length > 1 && (
               <Div
                 data-cy="dropdown_location_selector"
-                margin_tablet="0 0 23px 0"
+                margin_tablet="0"
               >
                 <SelectRaw
                   style={{
