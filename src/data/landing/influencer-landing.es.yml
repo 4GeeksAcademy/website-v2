@@ -35,7 +35,7 @@ form:
   # jumbotron on the top (cannot be commented out)
 header_data:
   background: "#FFF1D1"
-  tagline: ¡Bienvenido a 4Geeks Academy! La academia de programación líder en el mundo.
+  tagline: ¡Bienvenido a 4Geeks Academy! La academia de programación líder en el mundo
   tagline_color: "black"
   sub_heading: Con más de 7 años de experiencia tenemos presencia en USA, Europa y Latinoamérica. En nuestra academia, te enseñamos habilidades y destrezas relevantes para el futuro
   background_image: "../../../static/images/bg/main-bg.jpg"
@@ -61,6 +61,10 @@ short_badges:
     url: ""
     image: "../../../static/images/badges/switchup-badge-2023.png"
     alt: "Best coding bootcamp Switchup 2023"   
+  - name: "Florida Department of Education"
+    url: ""
+    image: "../../../static/images/badges/licensed.png"
+    alt: "Florida Department of Education"
 
 follow_bar:
   position: "top" # top, bottom, hidden

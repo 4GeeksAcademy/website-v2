@@ -20,6 +20,10 @@ awards_list:
     title: "Florida Department of Education"
     paragraph: "The United States of America ensures education quality thru federal deparments of education, being certified means we have to anually commit and comply with federal and national regulations to ensure academy success and renewed license."
 
+  - image: "../../../static/images/badges/Course-Report-Badge-2023.png"
+    title: "Best Bootcamp for Course Report 2023"
+    paragraph: "We have been selected as one of the Top Coding Bootcamps globally for 3 years in a row"
+
   - image: "../../../static/images/badges/switchup-badge-2023.png"
     title: "Best Bootcamp according to Switchup 2023"
     paragraph: "Not only in Florida, but over each of our campus 4Geeks is constantly keeping a ~5 start rating that makes us one of the top bootcamp in the world"
