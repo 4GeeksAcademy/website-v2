@@ -895,7 +895,7 @@ export const landingSections = {
       id="geeksInfo"
       key={index}
       flexDirection="column"
-      // margin="50px"
+      margin="50px"
       margin_tablet="100px"
       m_sm="0"
       p_xs="0"
@@ -930,7 +930,7 @@ export const landingSections = {
       padding="0"
     >
       <Title
-        title={yml.heading}
+        title="{yml.heading}"
         paragraph={yml.sub_heading}
         paragraphColor={Colors.gray}
         variant="primary"

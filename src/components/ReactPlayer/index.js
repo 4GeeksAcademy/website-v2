@@ -150,11 +150,11 @@ const Player = ({
                 onStateChange={onStateChange}
                 onPlaybackRateChange={onPlaybackRateChange}
                 onPlaybackQualityChange={onPlaybackQualityChange}
-                height={videoHeight}
+                height="375px"
                 opts={{
                   // padding: "125px 0 0",
                   width: "100%",
-                  height: `675px`,
+                  height: "675px",
                   host: noCookies
                     ? "https://www.youtube-nocookie.com"
                     : "https://www.youtube.com",

@@ -79,20 +79,24 @@ export default ({
   return (
     <Fragment github="/components/with_4geeks">
       {title && (
-        <GridContainer margin="0 0 40px 0">
+        <GridContainer margin="0 0 40px 0" marginTablet="0px 0px 20px 0px">
           <Div
             display="flex"
             flexDirection="column"
-            alignItems="center"
-            padding_tablet="0 4em"
-            padding="0 2em"
+            alignItems="left"
+            padding_tablet="0px"
+            padding="0px"
           >
             <H2
-              margin="0 0 15px 0"
-              fontSize="15px"
+              margin_tablet="0 0 15px 0"
+              margin_xs="0px"
+              fontSize="21px"
+              fontSize_tablet="32px"
               textTransform="uppercase"
-              lineHeight="19px"
+              lineHeight="38.4px"
               fontWeight="900"
+              color={Colors.darkGray}
+              textAlign="left"
             >
               {info.header.title}
             </H2>
@@ -122,71 +126,45 @@ export default ({
             return (
               <Div
                 display="flex"
-                flexDirection="row"
+                flexDirection="column"
                 flexDirection_tablet="column"
                 justifyContent="start"
-                border={`1px solid ${Colors.lightGray}`}
+                border="none"
                 key={`${i.name}_${index}`}
-                style={{ borderRadius: `3px` }}
+                style={{ borderRadius: `0px` }}
               >
                 <Div
-                  padding_tablet="0"
+                  padding_xs="0 0 20px 0px"
                   padding="20px 0"
                   width_tablet="100%"
-                  height_tablet="158px"
+                  height_tablet="173px"
+                  height="173px"
                   alignSelf={`baseline`}
                 >
                   <ReactPlayer
                     With_Modal={true}
-                    imageWidth="74px"
+                    imageWidth="100%"
+                    imageHeight="auto"
+                    height="100%"
                     className="react-player-with4geeks"
                     thumb={i.image}
                     id={i.video}
-                    width="85%"
+                    width="100%"
                     width_tablet="100%"
-                    height_tablet="158px"
                     videoHeight={playerHeight}
+                    style={{ borderRadius: `0px`, height: `173px` }}
                   />
                 </Div>
                 <Div
                   marginTop="20px"
-                  padding="20px 25px"
+                  padding_tablet="20px 32px"
+                  padding_xs="20px 16px"
                   display={`flex`}
                   height="100%"
                   flexDirection="column"
+                  gap="16px"
+                  boxShadow="0px 2px 5px 0px rgba(0,0,0,0.1)"
                 >
-                  <H4
-                    textAlign="left"
-                    width="100%"
-                    margin="0 0 10px 0"
-                    uppercase
-                    fontSize="15px"
-                    fontWeight="400"
-                    color={Colors.darkGray}
-                  >
-                    {i.name}
-                  </H4>
-                  <H3
-                    textAlign="left"
-                    width="100%"
-                    margin="0"
-                    fontSize="22px"
-                    fontWeight="700"
-                    lineHeight="26px"
-                  >
-                    {`“${i.title}”`}
-                  </H3>
-                  <Paragraph
-                    color="gray"
-                    textAlign="left"
-                    margin="10px 0 10px 0"
-                    fontWeight="400"
-                    lineHeight="18px"
-                    fontSize="14px"
-                  >
-                    {i.description}
-                  </Paragraph>
-
                   {i.footer.is_image ? (
                     <Link to={i.footer.image_link}>
                       <RoundImage
@@ -197,19 +175,45 @@ export default ({
                       />
                     </Link>
                   ) : (
-                    <Link to={text_link || i.footer.text_link}>
-                      <H4
-                        textAlign="left"
-                        width="100%"
-                        fontSize="13px"
-                        lineHeight="15px"
-                        fontWeight="400"
-                        color={Colors.blue}
-                      >
-                        {text || i.footer.text}
-                      </H4>
-                    </Link>
+                    <H4
+                      textAlign="left"
+                      width="100%"
+                      margin="0 0 10px 0"
+                      uppercase
+                      fontSize="15px"
+                      fontWeight="900"
+                      lineHeight="19px"
+                      color={Colors.darkGray}
+                    >
+                      {i.name}
+                    </H4>
                   )}
+                  <H3
+                    textAlign="left"
+                    width="100%"
+                    margin="0"
+                    fontSize_xs="18px"
+                    fontSize_tablet="28px"
+                    fontSize_md="28px"
+                    lineHeight_xs="21.6px"
+                    lineHeight_tablet="33.6px"
+                  >
+                    {`“${i.title}”`}
+                  </H3>
+                  <Paragraph
+                    color={Colors.darkGray}
+                    textAlign="left"
+                    margin="10px 0 10px 0"
+                    fontWeight="400"
+                    fontSize_xs="14px"
+                    fontSize_tablet="13px"
+                    lineHeight_xs="16.8px"
+                    lineHeight_tablet="26px"
+                  >
+                    {i.description}
+                  </Paragraph>
+
+
                 </Div>
               </Div>
             );
