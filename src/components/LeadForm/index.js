@@ -469,10 +469,7 @@ const LeadForm = ({
               </Div>
             )}
             {selectLocation?.length > 1 && (
-              <Div
-                data-cy="dropdown_location_selector"
-                margin_tablet="0"
-              >
+              <Div data-cy="dropdown_location_selector" margin_tablet="0">
                 <SelectRaw
                   style={{
                     background: "#FFFFFF",
