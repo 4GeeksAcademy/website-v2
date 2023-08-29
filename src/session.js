@@ -69,7 +69,8 @@ export default ({ children }) => {
   useEffect(() => {
     const urlParams = new URLSearchParams(window.location.search);
     const getReferral = () => {
-      let alias = ["referral_code", "ref", "referral_key", "referral"];
+      // at_gd is for the adtraction referral program
+      let alias = ["referral_code", "ref", "referral_key", "referral", "at_gd"];
       let referral = null;
       for (let i = 0; i < alias.length; i++) {
         referral = urlParams.get(alias[i]);
