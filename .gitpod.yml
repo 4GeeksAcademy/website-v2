@@ -14,4 +14,4 @@ tasks:
       nvm alias default v18 && 
       nvm use v18 &&
       npm install --legacy-peer-deps
-    command: npm run start
+    command: nvm install v18 && npm run start

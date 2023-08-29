@@ -16,17 +16,17 @@ apply_button:
 not_available: '<p>No payment information has been found for this location and program.</p> Please apply for more information or <a class="faq-link" href="/us/contact" rel="noopener noreferrer nofollow">send us a message.</a>'
 not_available_job_guarantee: '<p>We have no plans available with the modality Job Guarantee on this program at this location.</p> Please apply for more information or <a class="faq-link" href="/us/contact" rel="noopener noreferrer nofollow">send us a message.</a>'
 chart_section:
-  title: '4Geeks: When Payment stops being a Concern'
+  title: '4Geeks: Breaking Down Barriers to Education'
   data:
     - percentage: '76%'
       color: '#00A0DA'
-      description: 'of our graduates received some form of financial support, thanks to our extensive array of options.'
-    - percentage: '46%'
+      description: 'of graduates benefited from our diverse financial assistance options that ensure education is accessible to all.'
+    - percentage: '28%'
       color: '#FFB718'
       description: 'of our students are women'
-    - percentage: '24%'
+    - percentage: '19%'
       color: '#23C520'
-      description: 'of our students are part of the Afro-descendants community'
+      description: 'of our students identify as African American'
 
 button:
   button_text: See plans and prices

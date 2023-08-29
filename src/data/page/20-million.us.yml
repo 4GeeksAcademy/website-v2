@@ -32,7 +32,7 @@ two_column_left:
       - 40px
       - 40px
   sub_heading:
-    text: In the past, 68% of the people applying to 4Geeks Academy could not enroll due to financial reasons. We concentrated our efforts on lowering the financial barriers by finding partners and sponsors who shared our vision. Today, thanks to our joint efforts, 80% of our students receive some form of financial support, making top-quality coding education accessible to more individuals.
+    text: In the past, 68% of the people applying to 4Geeks Academy could not enroll due to financial reasons. We concentrated our efforts on lowering the financial barriers by finding partners and sponsors who shared our vision. Today, thanks to our joint efforts, 80% of our students receive some form of financial support, making top-quality coding education accessible to a wider audience.
     font_size:
       - 16px
       - 16px
@@ -43,21 +43,17 @@ two_column_left:
     font_size:
       - 16px
     text: |
-      When we launched 4Geeks back in 2015, we had three fundamental goals:
-        - To be a top-quality school where people can learn coding skills and improve their future prospects.
-        - To help graduates secure job opportunities right after completing the program.
-        - To make our high-quality coding education accessible to as many people as possible.
+      Since our foundation in 2015,  these goals have been fundamental to our mission:
+        - To be a premier school for coding education, enriching the futures of our students.
+        - To secure job placement for our graduates immediately after program completion.
+        - To make high-quality education accessible to anyone eager to embark on a coding career.
   button:
-    text: JOIN US AS A PARTNER
+    text: JOIN THE NETWORK
     color: white
     background: blue
     hover_color: white
     path: "#top"
 form:
-  title: Become a 4Geeks Partner
+  title: "Become a Catalyst for Change: Join Our Network of Partners"
   paragraph: >
-    Thanks to our dedicated partners, we are turning our goals into reality. Become a part of our network and help shape the future of tech education.
-
-    - Our graduates are talented, committed and have gone through many stages of our methodology: not only hard, skills, or soft, but also, interviews, tech assesments, working in projects and many more features that allow them to get ready for a new chance in our comopany.
-    
-    - Our programs prepare students to work and thrive at any tech and forward-thinking organization.
+    Thanks to our dedicated partners, we are turning our goals into reality. As a community, hiring, or funding partner, you too can help shape the future of tech and tech education . Connect with us to explore how we can mutually leverage our capacities and  make a lasting impact.
