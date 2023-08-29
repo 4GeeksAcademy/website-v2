@@ -36,9 +36,9 @@ navbar:
 
 header_data:
   background: "#FFF1D1"
-  tagline: "There are no excuses to enter the tech industry"
+  tagline: "There are no excuses to enter the tech industry."
   tagline_color: "black"
-  sub_heading: "No cost, ever, for your Coding Education. We changed the game."
+  sub_heading: "No cost, ever, for your Coding education. We changed the game."
   badge: "../../../static/images/badges/Course-Report-Badge-2023.png"
   image_filter: brightness(0.3)
   right_image: "../../../static/images/landing/header_united_way.png"
@@ -48,13 +48,13 @@ header_data:
 
 features:
   marginTop: 0px #<-- separation between tagline and the bullets
-  text: '<span style="margin-top: 10px; display: block;"> <strong style="font-weight: bold;">The United Way Miami Workforce Project</strong> is an exciting new training program made possible by United Way Miami, 4Geeks Academy, and Social Finance.</span>'
+  text: '<span style="margin-top: 14px; display: block;"> <strong style="font-weight: bold;">The United Way Miami Workforce Project</strong> is an exciting new training program made possible by United Way Miami, 4Geeks Academy, and Social Finance.</span>'
   bullets:
     - "Become a Software Developer and get a new career"
     - "Get up to $6400 for living stipends to pay your regular costs while taking the program"
     - "100 Spots Available. Only 50 left!" 
     - "Now open and accepting applications!"
-  styles: '{ "color": "gray", "fontWeight":"500" }'
+  styles: '{ "color": "black", "fontWeight":"400", "fontSize":"20px" }'
   
 short_badges:
   - name: "Premios Tecnologia Siglo XXI"
@@ -254,6 +254,8 @@ components:
 
   - name: testimonials
     position: 9
+    heading:
+    text: "Testimonials"
     layout: testimonials_new
     # filter_indexes: [6,7,8]
     filter_indexes: ['azu-bota','nai-kali','cha-fabr']
@@ -271,8 +273,8 @@ components:
       style: '{ "backgroundSize": "contain" }'
       src: "/images/landing/temp4.png"
     heading:
-      text: "Ready to start your journey to a better future?"
-      font_size: ["40px", "40px", "40px", "40px", "40px"]
+      text: "Take the first step towards a better future today."
+      font_size: ["40px", "40px", "35px", "30px", "25px"]
     content:
       text: "A total of 100 students will be accepted into the program."
       font_size: ["16px"]
