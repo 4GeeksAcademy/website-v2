@@ -29,7 +29,10 @@ import { smartRedirecting, transferQuerystrings } from "../../utils/utils.js";
 const Title = ({ id, title, paragraph }) => {
   return (
     <GridContainer id={id} margin="40px 0 0 0">
-      <H2 type="h2">{title}</H2>
+      <H2
+        type="h2"
+
+      >{title}</H2>
       <Paragraph margin="26px 0">{paragraph}</Paragraph>
     </GridContainer>
   );
@@ -352,7 +355,7 @@ export const MultiColumns = ({
           fontSize_xs={sh_xs}
           fontHeight="30px"
           style={sub_heading.style ? JSON.parse(sub_heading.style) : null}
-          // style={{textAlign:'center'}}
+        // style={{textAlign:'center'}}
         >
           {sub_heading.text}
         </Paragraph>
@@ -559,8 +562,8 @@ export const landingSections = {
           location
             ? location
             : session &&
-              session.location &&
-              session.location.breathecode_location_slug
+            session.location &&
+            session.location.breathecode_location_slug
         }
         lang={pageContext.lang}
         filter={
@@ -573,7 +576,7 @@ export const landingSections = {
   about4Geeks: ({ session, data, pageContext, yml, index }) => {
     let dataYml =
       data.allLandingYaml.edges.length !== 0 &&
-      data.allLandingYaml.edges[0].node.about4Geeks !== null
+        data.allLandingYaml.edges[0].node.about4Geeks !== null
         ? data.allLandingYaml.edges
         : data.allDownloadableYaml.edges;
     return (
@@ -586,7 +589,7 @@ export const landingSections = {
   iconogram: ({ session, data, pageContext, yml, index }) => {
     let dataYml =
       data.allLandingYaml.edges.length !== 0 &&
-      data.allLandingYaml.edges[0].node.iconogram !== null
+        data.allLandingYaml.edges[0].node.iconogram !== null
         ? data.allLandingYaml.edges
         : data.allDownloadableYaml.edges;
     let content = dataYml[0].node.iconogram;
@@ -618,7 +621,7 @@ export const landingSections = {
   badges: ({ session, data, pageContext, yml, course, index }) => {
     let dataYml =
       data.allLandingYaml.edges.length !== 0 &&
-      data.allLandingYaml.edges[0].node.badges !== null
+        data.allLandingYaml.edges[0].node.badges !== null
         ? data.allLandingYaml.edges
         : data.allDownloadableYaml.edges;
     let badges = dataYml[0].node.badges;
@@ -693,9 +696,8 @@ export const landingSections = {
                   letterSpacing="0.05em"
                   fontWeight="bold"
                 >
-                  {`${item.rating} ${
-                    pageContext.lang === "us" ? "On Reviews" : "En reseñas"
-                  }`}
+                  {`${item.rating} ${pageContext.lang === "us" ? "On Reviews" : "En reseñas"
+                    }`}
                 </Paragraph>
               </Div>
             );
@@ -854,7 +856,7 @@ export const landingSections = {
   choose_your_program: ({ session, pageContext, yml, data, index }) => {
     let dataYml =
       data.allLandingYaml.edges.length !== 0 &&
-      data.allLandingYaml.edges[0].node.choose_your_program !== null
+        data.allLandingYaml.edges[0].node.choose_your_program !== null
         ? data.allLandingYaml.edges
         : data.allDownloadableYaml.edges;
     let chooseYourProgram = dataYml[0].node?.choose_your_program;
@@ -937,12 +939,30 @@ export const landingSections = {
       margin="0"
       padding="0"
     >
-      <Title
-        title="{yml.heading}"
-        paragraph={yml.sub_heading}
-        paragraphColor={Colors.gray}
-        variant="primary"
-      />
+      <GridContainer margin_tablet="40px 0 0 0" margin_xs="20px 0 0 0">
+        <H2
+          margin_tablet="0 0 40px 0"
+          margin_xs="0 0 20px 0"
+          fontSize="21px"
+          fontSize_tablet="32px"
+          textTransform="uppercase"
+          lineHeight_tablet="38.4px"
+          lineHeight_xs="25.2px"
+          fontWeight="900"
+          color={Colors.darkGray}
+          textAlign="left"
+        >
+          {yml.heading}
+        </H2>
+
+        {yml.sub_heading && (
+          <Paragraph margin="26px 0">
+          {yml.sub_heading}
+        </Paragraph>
+        )}
+      </GridContainer>
+
+
       <With4Geeks
         text={yml.footer?.text}
         sessionLocation={
@@ -977,7 +997,7 @@ export const landingSections = {
   who_is_hiring: ({ session, data, pageContext, yml, location, index }) => {
     let dataYml =
       data.allLandingYaml.edges.length !== 0 &&
-      data.allLandingYaml.edges[0].node?.who_is_hiring !== null
+        data.allLandingYaml.edges[0].node?.who_is_hiring !== null
         ? data.allLandingYaml.edges
         : data.allDownloadableYaml.edges;
 
