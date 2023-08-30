@@ -25,11 +25,13 @@ const formIsValid = (formData = null) => {
 const Form = styled.form`
   margin: ${(props) => props.margin};
   margin-top: ${(props) => props.marginTop};
+  padding: ${(props) => props.padding};
   width: auto;
   height: auto;
   display: block;
   background: ${(props) => (props.background ? props.background : "#FFFFFF")};
   border-radius: 3px;
+  box-shadow: ${(props) => props.boxShadow};
   @media ${Break.sm} {
     display: ${(props) => props.d_sm};
   }
@@ -144,6 +146,7 @@ const LeadForm = ({
   marginTop_tablet,
   marginTop_xs,
   margin_tablet,
+  padding,
   justifyContentButton,
   buttonWidth_tablet,
   titleTextAlign,
@@ -170,6 +173,7 @@ const LeadForm = ({
   titleMargin,
   titleMargin_tablet,
   headerImage,
+  boxShadow,
 }) => {
   const _query = useStaticQuery(graphql`
     query newLeadFormQuery {
@@ -259,6 +263,7 @@ const LeadForm = ({
 
   return (
     <Form
+      boxShadow={boxShadow}
       margin={margin}
       background={background}
       margin_tablet={margin_tablet}
@@ -321,21 +326,23 @@ const LeadForm = ({
     >
       {headerImage && (
         <Div
+          position="absolute"
+          style={{
+            top: 0,
+            right: 50,
+          }}
           width="0px"
           display="none"
           display_tablet="none"
           display_md="flex"
           display_lg="flex"
           flexDirection_tablet="column"
-          padding="0 0 25px 0"
         >
           <GatsbyImage
             loading="eager"
             style={{
               width: "160px",
               height: "130px",
-              position: "absolute",
-              margin: "-44px 0 0 26%",
             }}
             imgStyle={{ objectFit: "contain" }}
             image={getImage(headerImage)}
@@ -350,21 +357,17 @@ const LeadForm = ({
         </Paragraph>
       ) : (
         <>
-          <GridContainer
+          <Div
             display="block"
-            containerColumns_tablet={
-              landingTemplate && "0fr repeat(12, 1fr) 0fr"
-            }
-            containerGridGap={landingTemplate && "0"}
             className={"leadform-" + layout}
             size="12"
-            paddingLeft="0"
-            paddingRight="0"
+            padding="0 24px"
           >
             {heading && (
               <H4
                 type="h4"
-                fontSize="25px"
+                lineHeight="40px"
+                fontSize="38px"
                 padding={headerImage && "0 10% 0 0"}
                 fontWeight="700"
                 width="auto"
@@ -372,7 +375,7 @@ const LeadForm = ({
                 textAlign_tablet={titleTextAlign || "left"}
                 margin={
                   landingTemplate
-                    ? "25px 0px 0px 0"
+                    ? "25px 0px 5px 0"
                     : titleMargin || "20px 0px 5px 0px"
                 }
                 margin_tablet={titleMargin_tablet || "20px 0px 5px 0px"}
@@ -382,6 +385,7 @@ const LeadForm = ({
             )}
             {motivation && (
               <Paragraph
+                style={{ fontWeight: "700", color: "#000" }}
                 textAlign="left"
                 padding={textPadding || "0px 0px 10px 0px"}
                 padding_tablet={textPadding_tablet || "0px 0px 10px 0px"}
@@ -532,14 +536,7 @@ const LeadForm = ({
                 {formStatus.msg}
               </Alert>
             )}
-          </GridContainer>
-          {layout === "block" && (
-            <GridContainer
-              containerColumns_tablet={
-                landingTemplate && "0fr repeat(12, 1fr) 0fr"
-              }
-              containerGridGap={landingTemplate && "0"}
-            >
+            {layout === "block" && (
               <Div
                 justifyContent={
                   justifyContentButton ? justifyContentButton : "end"
@@ -563,8 +560,8 @@ const LeadForm = ({
                   {formStatus.status === "loading" ? "Loading..." : sendLabel}
                 </Button>
               </Div>
-            </GridContainer>
-          )}
+            )}
+          </Div>
         </>
       )}
     </Form>

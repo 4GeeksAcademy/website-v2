@@ -57,7 +57,6 @@ const Badges = ({
       }
     }
   `);
-  // ...GatsbyImageSharpFluidLimitPresentationSize
 
   let content = data.allBadgesYaml.edges.find(
     ({ node }) => node.fields.lang === lang
@@ -119,7 +118,6 @@ const Badges = ({
                   // fadeIn={false}
                   alt={l.name}
                   image={getImage(l.image.childImageSharp.gatsbyImageData)}
-                  // fluid={l.image.childImageSharp.fluid}
                 />
               );
             })}
@@ -151,7 +149,6 @@ const Badges = ({
                           image={getImage(
                             l.image.childImageSharp.gatsbyImageData
                           )}
-                          // fluid={l.image.childImageSharp.fluid}
                         />
                       )
                     );
@@ -174,7 +171,6 @@ const Badges = ({
                         image={getImage(
                           l.image.childImageSharp.gatsbyImageData
                         )}
-                        // fluid={l.image.childImageSharp.fluid}
                       />
                     );
                   })}

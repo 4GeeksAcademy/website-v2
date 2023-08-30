@@ -76,7 +76,6 @@ const Images_With_Slider = (props) => {
               imgStyle={{ objectFit: "contain" }}
               alt={l.name}
               image={getImage(l.image.childImageSharp.gatsbyImageData)}
-              // fluid={l.image.childImageSharp.fluid}
             />
           );
         })}
@@ -114,7 +113,6 @@ const Images_With_Marquee = (props) => {
           objectFit="contain"
           alt={l.name}
           image={getImage(l.image.childImageSharp.gatsbyImageData)}
-          // fluid={l.image.childImageSharp.fluid}
         />
       )
     );
@@ -189,7 +187,6 @@ const Images_Featured = (props) => {
                 imgStyle={{ objectFit: "contain" }}
                 alt={m.name}
                 image={getImage(m.image.childImageSharp.gatsbyImageData)}
-                // fluid={m.image.childImageSharp.fluid}
               />
             );
           }
