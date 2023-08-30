@@ -20,13 +20,13 @@ module.exports = {
   "4GeeksAcademy": {
     bio: "4Geeks Academy is one of the top coding bootcamps in the world, with locations in USA, Chile, Spain, Costa Rica and Venezuela.",
     name: "4Geeks Academy",
-    avatar: "/images/4geeks-logo.png",
+    avatar: "/images/4geeksacademy-logo.png",
     username: "4GeeksAcademy",
   },
   "4GeeksAcademyES": {
     bio: "4Geeks Academy is one of the top coding bootcamps in Spain and the world, thousands of graduates and 86% hiring rate.",
     name: "4Geeks Academy",
-    avatar: "/images/4geeks-logo.png",
+    avatar: "/images/4geeksacademy-logo.png",
     username: "4GeeksAcademyES",
   },
   VictorManuelG: {
