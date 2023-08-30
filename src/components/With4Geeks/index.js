@@ -79,7 +79,7 @@ export default ({
   return (
     <Fragment github="/components/with_4geeks">
       {title && (
-        <GridContainer margin="0 0 40px 0" marginTablet="0px 0px 20px 0px">
+        <GridContainer margin_xs="0 0 20px 0" marginTablet="0px 0px 20px 0px">
           <Div
             display="flex"
             flexDirection="column"
@@ -88,12 +88,13 @@ export default ({
             padding="0px"
           >
             <H2
-              margin_tablet="0 0 15px 0"
+              margin_tablet="0 0 20px 0"
               margin_xs="0px"
               fontSize="21px"
               fontSize_tablet="32px"
               textTransform="uppercase"
-              lineHeight="38.4px"
+              lineHeight_tablet="38.4px"
+              lineHeight_xs="25.2px"
               fontWeight="900"
               color={Colors.darkGray}
               textAlign="left"
