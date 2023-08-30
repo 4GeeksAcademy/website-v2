@@ -36,7 +36,7 @@ header_data:
   background: "#FFF1D1"
   tagline: Become a web developer in as 16 weeks through work on real project and mentorship by ezperienced professionals
   sub_heading: "86% of our graduates have already started their future-proof, tech careers with on overage entry salary of $50.000"
-  image: "../../../static/images/4geeks-main.jpg"
+  background_image: "../../../static/images/4geeks-main.jpg"
   badge: "../../../static/images/badges/switchup.png" #Tmage on the right side of the form
   image_filter: brightness(0.4) #0 is dark, 1 is bright
 

@@ -844,7 +844,7 @@ export const query = graphql`
                 )
               }
             }
-            image {
+            background_image {
               childImageSharp {
                 gatsbyImageData(
                   layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH

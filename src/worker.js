@@ -255,6 +255,22 @@ const initSession = async (locationsArray, storedSession, seed = {}) => {
   }
 
   if (!language) language = location.defaultLanguage;
+
+  //construct the academy alias dictionary
+  let academyAlias = await fetch(
+    `${process.env.GATSBY_BREATHECODE_HOST}/marketing/alias?academy=2,4,5,6,7,8,9,10,11`,
+    {
+      method: "GET",
+    }
+  );
+  academyAlias = await academyAlias.json();
+
+  const academyAliasDictionary = {};
+  academyAlias.map((alias) => {
+    const key = alias.slug;
+    academyAliasDictionary[key] = alias.academy.slug;
+  });
+
   const _session = {
     ...defaultSession,
     ...storedSession,
@@ -266,6 +282,7 @@ const initSession = async (locationsArray, storedSession, seed = {}) => {
     language,
     latitude,
     longitude,
+    academyAliasDictionary,
     pathsDictionary,
 
     // marketing utm info
