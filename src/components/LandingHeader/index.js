@@ -42,8 +42,8 @@ const LandingHeader = (props) => {
       <LandingContainer
         filter={yml.header_data.image_filter}
         image={
-          yml.header_data?.image &&
-          yml.header_data.image.childImageSharp.gatsbyImageData
+          yml.header_data?.background_image &&
+          yml.header_data.background_image.childImageSharp.gatsbyImageData
         }
         badge={
           yml.header_data?.badge &&
