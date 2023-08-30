@@ -157,7 +157,6 @@ const Outcomes = ({ data, pageContext, yml }) => {
       <Div
         display="flex"
         display_tablet="none"
-        width="auto"
         margin="0 0 0 -17px"
         background={Colors.white}
         style={{
