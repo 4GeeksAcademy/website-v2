@@ -150,7 +150,7 @@ const Player = ({
                 onStateChange={onStateChange}
                 onPlaybackRateChange={onPlaybackRateChange}
                 onPlaybackQualityChange={onPlaybackQualityChange}
-                height="375px"
+                height={videoHeight}
                 opts={{
                   // padding: "125px 0 0",
                   width: "100%",
