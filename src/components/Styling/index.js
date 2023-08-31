@@ -171,11 +171,13 @@ const StyledImage = styled.div`
   background-position: ${(props) => props.position || "center center"};
   background-color: ${(props) => props.backgroundColor};
   width: ${(props) => props.width};
+  border: ${(props) => props.border};
   height: ${(props) => props.height};
   min-height: ${(props) => props.minHeight};
   max-height: ${(props) => (props.maxHeight ? props.maxHeight : "none")};
   min-width: ${(props) => props.minWidth};
   margin: ${(props) => props.margin};
+  box-shadow: ${(props) => props.boxShadow};
   @media ${Break.sm} {
     height: ${(props) => props.h_sm};
     min-height: ${(props) => props.minHeight_sm};
@@ -254,7 +256,6 @@ export const BackgroundSection = ({
       // fadeIn={false}
       className={className}
       borderRadius={borderRadius}
-      // fluid={image}
       {...bgImage}
       preserveStackingContext
       style={style}

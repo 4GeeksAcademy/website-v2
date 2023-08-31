@@ -104,7 +104,6 @@ const Partners = (props) => {
             }}
             alt={yml.header.image_alt}
             image={getImage(yml.header.image.childImageSharp.gatsbyImageData)}
-            // fluid={l.image.childImageSharp.fluid}
           />
         </Div>
       </GridContainer>
@@ -471,9 +470,6 @@ export const query = graphql`
                   placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                   breakpoints: [200, 340, 520, 890]
                 )
-                # fluid(maxWidth: 1200, quality: 100, srcSetBreakpoints: [ 200, 340, 520, 890 ]){
-                #   ...GatsbyImageSharpFluid_withWebp
-                # }
               }
             }
           }
@@ -491,9 +487,6 @@ export const query = graphql`
                   quality: 100
                   placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                 )
-                # fluid(maxWidth: 1600, quality: 100){
-                #   ...GatsbyImageSharpFluid_withWebp
-                # }
               }
             }
           }

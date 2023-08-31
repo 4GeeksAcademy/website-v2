@@ -31,7 +31,7 @@ form:
 header_data:
   tagline: Programming Bootcamp
   sub_heading: "Become a web developer in 9 or 16 weeks"
-  image: "../../../static/images/4geeks-main.jpg"
+  background_image: "../../../static/images/4geeks-main.jpg"
   image_filter: brightness(0.3)
 
 features:
