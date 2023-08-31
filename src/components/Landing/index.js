@@ -119,7 +119,7 @@ const Side = ({
           {heading.text}
         </H2>
       )}
-      {/* {sub_heading && (
+      {sub_heading && (
         <Paragraph
           textAlign_tablet="left"
           padding={heading ? "0" : "20px"}
@@ -136,15 +136,14 @@ const Side = ({
         >
           {sub_heading.text}
         </Paragraph>
-      )} */}
+      )}
       {Array.isArray(bullets) && (
         <Div
           display="grid"
           gridAutoFlow="dense"
           gridTemplateColumns="repeat(auto-fill, minmax(40%, 100%))"
           gridAutoRows="auto" //"minmax(100px, auto);"
-          // margin={sub_heading ? "16px 0 16px 0" : "0 0 16px 0"}
-          margin={"0 0 16px 0"}
+          margin={sub_heading ? "16px 0 16px 0" : "0 0 16px 0"}
           gridGap="24px"
         >
           {bullets.map((p, index) => {
@@ -154,8 +153,8 @@ const Side = ({
                 gridColumn_tablet="1/1"
                 height="auto"
                 alignItems="center"
-                padding="16px 5px 0 20px"
-                padding_tablet="16px 5px 0 0"
+                padding="16px 5px 0 0"
+                padding_tablet="16px 0 0 0"
                 display="grid"
                 gridTemplateColumns="100%"
                 //gridAutoRows="auto"
