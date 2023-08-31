@@ -119,7 +119,7 @@ const Side = ({
           {heading.text}
         </H2>
       )}
-      {sub_heading && (
+      {/* {sub_heading && (
         <Paragraph
           textAlign_tablet="left"
           padding={heading ? "0" : "20px"}
@@ -136,74 +136,76 @@ const Side = ({
         >
           {sub_heading.text}
         </Paragraph>
-      )}
+      )} */}
       {Array.isArray(bullets) && (
         <Div
           display="grid"
           gridAutoFlow="dense"
-          gridTemplateColumns="repeat(auto-fill, minmax(40%, 1fr))"
-          gridAutoRows="4.6rem"
-          gridGap="0"
+          gridTemplateColumns="repeat(auto-fill, minmax(40%, 100%))"
+          gridAutoRows="auto" //"minmax(100px, auto);"
+          // margin={sub_heading ? "16px 0 16px 0" : "0 0 16px 0"}
+          margin={"0 0 16px 0"}
+          gridGap="24px"
         >
           {bullets.map((p, index) => {
             return (
               <Div
                 key={index}
-                // gridColumn_tablet={index >= 5 ? "2/2" : "1/2"}
-                flex="block"
-                height="74px"
+                gridColumn_tablet="1/1"
+                height="auto"
                 alignItems="center"
-                padding="0 5px 0 20px"
-                padding_tablet="0 5px 0 10px"
+                padding="16px 5px 0 20px"
+                padding_tablet="16px 5px 0 0"
+                display="grid"
+                gridTemplateColumns="100%"
+                //gridAutoRows="auto"
+                gridGap="0"
               >
                 <Div
-                  flexDirection="column"
-                  alignSelf="center"
+                  display="flex"
+                  flexDirection="row"
+                  alignSelf="left"
                   padding="0 8px 0 0"
                 >
                   <Icon
                     icon={p.icon}
-                    width="18px"
-                    color={Colors.yellow}
+                    width="13px"
+                    //height="12px"
+                    color={Colors.blue}
                     fill={Colors.yellow}
+                    style={{ strokeWidth: "2px" }}
                   />
+                  <H2
+                    type="h3"
+                    textAlign="left"
+                    fontSize="15px"
+                    fontWeight="900"
+                    lineHeight="19px"
+                    textTransform="uppercase"
+                    padding="0 0 0 5px"
+                  >
+                    {p.heading}
+                  </H2>
                 </Div>
-                <H2
-                  type="h3"
+                <Paragraph
                   textAlign="left"
                   fontSize="15px"
                   fontWeight="400"
                   lineHeight="22px"
+                  margin="12px 0 0 0"
                 >
-                  {p.heading}
-                </H2>
-                <Paragraph>
                   {p.text}
                 </Paragraph>
               </Div>
             );
           })}
         </Div>
-      )}
+      )
+      }
 
-      {content && /<\/?[a-z0-9]+>/g.test(content.text) ? (
-        <Paragraph
-          textAlign="left"
-          textAlign_tablet="left"
-          padding={heading ? "0" : "15px"}
-          margin="10px 0"
-          opacity="1"
-          fontSize={c_xl || "16px"}
-          fontSize_sm={c_sm}
-          fonSize_md={c_md}
-          fontSize_xs={c_xs}
-          fontHeight="30px"
-          dangerouslySetInnerHTML={{ __html: content.text }}
-        />
-      ) : content ? (
-        content.text.split("\n").map((p, i) => (
+      {
+        content && /<\/?[a-z0-9]+>/g.test(content.text) ? (
           <Paragraph
-            key={`${i}-${p}`}
             textAlign="left"
             textAlign_tablet="left"
             padding={heading ? "0" : "15px"}
@@ -214,36 +216,55 @@ const Side = ({
             fonSize_md={c_md}
             fontSize_xs={c_xs}
             fontHeight="30px"
-          >
-            {p}
-          </Paragraph>
-        ))
-      ) : null}
+            dangerouslySetInnerHTML={{ __html: content.text }}
+          />
+        ) : content ? (
+          content.text.split("\n").map((p, i) => (
+            <Paragraph
+              key={`${i}-${p}`}
+              textAlign="left"
+              textAlign_tablet="left"
+              padding={heading ? "0" : "15px"}
+              margin="10px 0"
+              opacity="1"
+              fontSize={c_xl || "16px"}
+              fontSize_sm={c_sm}
+              fonSize_md={c_md}
+              fontSize_xs={c_xs}
+              fontHeight="30px"
+            >
+              {p}
+            </Paragraph>
+          ))
+        ) : null
+      }
 
-      {button && (
-        <Button
-          outline
-          borderRadius="0"
-          colorHoverText={button.hover_color || Colors.blue}
-          background={Colors[button.background] || button.background}
-          lineHeight="26px"
-          textColor={Colors.black}
-          textTransform="none"
-          color={Colors[button.color] || button.color}
-          fontSize="15px"
-          textAlign="left"
-          margin="2rem 0"
-          padding=".35rem.85rem"
-          onClick={() => {
-            if (button.path && button.path.indexOf("http") > -1)
-              window.open(transferQuerystrings(button.path, utm));
-            else navigate(button.path);
-          }}
-        >
-          {button.text}
-        </Button>
-      )}
-    </Div>
+      {
+        button && (
+          <Button
+            outline
+            borderRadius="0"
+            colorHoverText={button.hover_color || Colors.blue}
+            background={Colors[button.background] || button.background}
+            lineHeight="26px"
+            textColor={Colors.black}
+            textTransform="none"
+            color={Colors[button.color] || button.color}
+            fontSize="15px"
+            textAlign="left"
+            margin="2rem 0"
+            padding=".35rem.85rem"
+            onClick={() => {
+              if (button.path && button.path.indexOf("http") > -1)
+                window.open(transferQuerystrings(button.path, utm));
+              else navigate(button.path);
+            }}
+          >
+            {button.text}
+          </Button>
+        )
+      }
+    </Div >
   );
 };
 
@@ -355,7 +376,7 @@ export const MultiColumns = ({
           fontSize_xs={sh_xs}
           fontHeight="30px"
           style={sub_heading.style ? JSON.parse(sub_heading.style) : null}
-          // style={{textAlign:'center'}}
+        // style={{textAlign:'center'}}
         >
           {sub_heading.text}
         </Paragraph>
@@ -562,8 +583,8 @@ export const landingSections = {
           location
             ? location
             : session &&
-              session.location &&
-              session.location.breathecode_location_slug
+            session.location &&
+            session.location.breathecode_location_slug
         }
         lang={pageContext.lang}
         filter={
@@ -576,7 +597,7 @@ export const landingSections = {
   about4Geeks: ({ session, data, pageContext, yml, index }) => {
     let dataYml =
       data.allLandingYaml.edges.length !== 0 &&
-      data.allLandingYaml.edges[0].node.about4Geeks !== null
+        data.allLandingYaml.edges[0].node.about4Geeks !== null
         ? data.allLandingYaml.edges
         : data.allDownloadableYaml.edges;
     return (
@@ -589,7 +610,7 @@ export const landingSections = {
   iconogram: ({ session, data, pageContext, yml, index }) => {
     let dataYml =
       data.allLandingYaml.edges.length !== 0 &&
-      data.allLandingYaml.edges[0].node.iconogram !== null
+        data.allLandingYaml.edges[0].node.iconogram !== null
         ? data.allLandingYaml.edges
         : data.allDownloadableYaml.edges;
     let content = dataYml[0].node.iconogram;
@@ -621,7 +642,7 @@ export const landingSections = {
   badges: ({ session, data, pageContext, yml, course, index }) => {
     let dataYml =
       data.allLandingYaml.edges.length !== 0 &&
-      data.allLandingYaml.edges[0].node.badges !== null
+        data.allLandingYaml.edges[0].node.badges !== null
         ? data.allLandingYaml.edges
         : data.allDownloadableYaml.edges;
     let badges = dataYml[0].node.badges;
@@ -696,9 +717,8 @@ export const landingSections = {
                   letterSpacing="0.05em"
                   fontWeight="bold"
                 >
-                  {`${item.rating} ${
-                    pageContext.lang === "us" ? "On Reviews" : "En reseñas"
-                  }`}
+                  {`${item.rating} ${pageContext.lang === "us" ? "On Reviews" : "En reseñas"
+                    }`}
                 </Paragraph>
               </Div>
             );
@@ -857,7 +877,7 @@ export const landingSections = {
   choose_your_program: ({ session, pageContext, yml, data, index }) => {
     let dataYml =
       data.allLandingYaml.edges.length !== 0 &&
-      data.allLandingYaml.edges[0].node.choose_your_program !== null
+        data.allLandingYaml.edges[0].node.choose_your_program !== null
         ? data.allLandingYaml.edges
         : data.allDownloadableYaml.edges;
     let chooseYourProgram = dataYml[0].node?.choose_your_program;
@@ -980,7 +1000,7 @@ export const landingSections = {
   who_is_hiring: ({ session, data, pageContext, yml, location, index }) => {
     let dataYml =
       data.allLandingYaml.edges.length !== 0 &&
-      data.allLandingYaml.edges[0].node?.who_is_hiring !== null
+        data.allLandingYaml.edges[0].node?.who_is_hiring !== null
         ? data.allLandingYaml.edges
         : data.allDownloadableYaml.edges;
 
