@@ -350,7 +350,7 @@ export const query = graphql`
           features {
             marginTop
             text
-            bullets
+            
             styles
             button {
               text
@@ -537,11 +537,15 @@ export const query = graphql`
               text
               font_size
             }
-            bullets
             content {
               text
               font_size
               path
+            }
+            bullets{
+              heading
+              text
+              icon
             }
             columns {
               size
@@ -654,7 +658,11 @@ export const query = graphql`
           features {
             marginTop
             text
-            bullets
+            bullets{
+              heading
+              text
+              icon
+            }
             styles
           }
           badges {
@@ -815,7 +823,7 @@ export const query = graphql`
               text
               font_size
             }
-            bullets
+            
             content {
               text
               font_size

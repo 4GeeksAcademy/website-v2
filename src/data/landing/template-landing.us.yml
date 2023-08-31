@@ -46,9 +46,15 @@ features:
   #                                         up   left down  right
   styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
   bullets:
-    - Un Desarrollador en Madrid hace €25mil anual
-    - Hay más vacantes que en cualquier otra industria
-    - Impulsa tu Carrera y hazte programador de software
+    - heading: "Lorem ipsum dolor sit amet"
+      text: "Some text description for the bullet"
+      icon: "check"
+    - heading: "Lorem ipsum dolor sit amet"
+      text: "Some text description for the bullet"
+      icon: "check"
+    # - Un Desarrollador en Madrid hace €25mil anual
+    # - Hay más vacantes que en cualquier otra industria
+    # - Impulsa tu Carrera y hazte programador de software
   button:
       text: "APPLY NOW"
       color: "white"
@@ -209,9 +215,12 @@ components:
       font_size: ["16px"]
       path: ""
     bullets:
-      - Lorem ipsum dolor sit amet
-      - Lorem ipsum dolor sit amet
-      - Lorem ipsum dolor sit amet
+      - heading: "Lorem ipsum dolor sit amet"
+        text: "Some text description for the bullet"
+        icon: "check"
+      - heading: "Lorem ipsum dolor sit amet"
+        text: "Some text description for the bullet"
+        icon: "check"
   - name: first_syllabus_form
     position: 10
     layout: syllabus
@@ -283,18 +292,23 @@ components:
     position: 15
     layout: testimonials_new
     filter_indexes: ['azu-bota','nai-kali','cha-fabr']
-
     bullets:
-      - Número
-      - String
-      - Boolean
-      - Iterables
-      - Dictionary
-      - Lista
-      - Tupla
-      - Rango
-      - Set & Frozenset
-      - Tabla Hash
+      - heading: "Lorem ipsum dolor sit amet"
+        text: "Some text description for the bullet"
+        icon: "check"
+      - heading: "Lorem ipsum dolor sit amet"
+        text: "Some text description for the bullet"
+        icon: "check"
+      # - Número
+      # - String
+      # - Boolean
+      # - Iterables
+      # - Dictionary
+      # - Lista
+      # - Tupla
+      # - Rango
+      # - Set & Frozenset
+      # - Tabla Hash
 
     content: 
       text: " "

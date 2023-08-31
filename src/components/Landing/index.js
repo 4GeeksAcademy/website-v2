@@ -149,8 +149,8 @@ const Side = ({
             return (
               <Div
                 key={index}
-                gridColumn_tablet={index >= 5 ? "2/2" : "1/2"}
-                borderBottom="1px solid rgba(164, 164, 164, 0.4)"
+                // gridColumn_tablet={index >= 5 ? "2/2" : "1/2"}
+                flex="block"
                 height="74px"
                 alignItems="center"
                 padding="0 5px 0 20px"
@@ -162,7 +162,7 @@ const Side = ({
                   padding="0 8px 0 0"
                 >
                   <Icon
-                    icon="check"
+                    icon={p.icon}
                     width="18px"
                     color={Colors.yellow}
                     fill={Colors.yellow}
@@ -175,8 +175,11 @@ const Side = ({
                   fontWeight="400"
                   lineHeight="22px"
                 >
-                  {p}
+                  {p.heading}
                 </H2>
+                <Paragraph>
+                  {p.text}
+                </Paragraph>
               </Div>
             );
           })}
