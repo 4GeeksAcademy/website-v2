@@ -23,7 +23,7 @@ module.exports = {
     },
     org: {
       name: "4Geeks Academy",
-      logo: "/images/4geeks-logo.png",
+      logo: "/images/4geeksacademy-logo.png",
     },
     siteVerification: {
       google: "",

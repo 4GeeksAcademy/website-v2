@@ -49,7 +49,7 @@ features:
     - "Be a software Developer or a Data Scientist"
     - "30 Spots Available. Only 15 left!" 
     - "Now open and accepting applications!"
-  styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
+  styles: '{ "color": "black", "fontWeight":"500" }'
 
 short_badges:
   - name: "Premios Tecnologia Siglo XXI"
