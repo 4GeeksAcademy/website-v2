@@ -222,7 +222,7 @@ export const apply = async (data, session) => {
     tagManager("student_application", {
       email: _data.email,
       formentry_id: _data.id,
-      attribution_id: _data.attribution_id,
+      attribution_id: _data.attribution_id.toString(),
       referral_key: _data.referral_key,
     });
 
@@ -271,7 +271,7 @@ export const requestSyllabus = async (data, session) => {
     tagManager("request_more_info", {
       email: _data.email,
       formentry_id: _data.id,
-      attribution_id: _data.attribution_id,
+      attribution_id: _data.attribution_id?.toString(),
       referral_key: _data.referral_key,
     });
 
@@ -304,7 +304,7 @@ export const beHiringPartner = async (data, session) => {
     setDataLayer({
       email: _data.email,
       formentry_id: _data.id,
-      attribution_id: _data.attribution_id,
+      attribution_id: _data.attribution_id?.toString(),
       referral_key: _data.referral_key,
     });
     return _data;
@@ -346,7 +346,7 @@ export const newsletterSignup = async (data, session) => {
     tagManager("newsletter_signup", {
       email: _data.email,
       formentry_id: _data.id,
-      attribution_id: _data.attribution_id,
+      attribution_id: _data.attribution_id?.toString(),
       referral_key: _data.referral_key,
     });
     return _data;
@@ -370,7 +370,7 @@ export const outcomesReport = async (data, session) => {
     setDataLayer({
       email: _data.email,
       formentry_id: _data.id,
-      attribution_id: _data.attribution_id,
+      attribution_id: _data.attribution_id?.toString(),
       referral_key: _data.referral_key,
     });
     return _data;
@@ -440,7 +440,7 @@ export const processFormEntry = async (data, session) => {
       tagManager("request_more_info", {
         email: _data.email,
         formentry_id: _data.id,
-        attribution_id: _data.attribution_id,
+        attribution_id: _data.attribution_id?.toString(),
         referral_key: _data.referral_key,
       });
     } else
