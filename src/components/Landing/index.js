@@ -169,7 +169,6 @@ const Side = ({
                   <Icon
                     icon={p.icon}
                     width="13px"
-                    //height="12px"
                     color={Colors.blue}
                     fill={Colors.yellow}
                     style={{ strokeWidth: "2px" }}

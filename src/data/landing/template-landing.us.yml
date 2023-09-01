@@ -48,10 +48,10 @@ features:
   bullets:
     - heading: "Lorem ipsum dolor sit amet"
       text: "Some text description for the bullet"
-      icon: "check"
+      icon: "check" #string with icon for example ['check', 'cicle', etc]
     - heading: "Lorem ipsum dolor sit amet"
       text: "Some text description for the bullet"
-      icon: "check"
+      icon: "check" #string with icon for example ['check', 'cicle', etc]
     # - Un Desarrollador en Madrid hace €25mil anual
     # - Hay más vacantes que en cualquier otra industria
     # - Impulsa tu Carrera y hazte programador de software
@@ -217,10 +217,10 @@ components:
     bullets:
       - heading: "Lorem ipsum dolor sit amet"
         text: "Some text description for the bullet"
-        icon: "check"
+        icon: "check" #string with icon for example ['check', 'cicle', etc]
       - heading: "Lorem ipsum dolor sit amet"
-        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "
-        icon: "check"
+        text: "Some text description for the bullet"
+        icon: "check" #string with icon for example ['check', 'cicle', etc]
   - name: first_syllabus_form
     position: 10
     layout: syllabus
@@ -295,10 +295,10 @@ components:
     bullets:
       - heading: "Lorem ipsum dolor sit amet"
         text: "Some text description for the bullet"
-        icon: "check"
+        icon: "check" #string with icon for example ['check', 'cicle', etc]
       - heading: "Lorem ipsum dolor sit amet"
         text: "Some text description for the bullet"
-        icon: "check"
+        icon: "check" #string with icon for example ['check', 'cicle', etc]
       # - Número
       # - String
       # - Boolean
