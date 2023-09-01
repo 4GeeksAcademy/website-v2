@@ -88,7 +88,7 @@ export default ({ children }) => {
           urlParams.get("city") ||
           urlParams.get("utm_location") ||
           null,
-        gclid: urlParams.get("gclid") || urlParams.get("fbclid") || undefined,
+        gclid: urlParams.get("gclid") || urlParams.get("fbclid") || urlParams.get("ttclid") || undefined,
         utm_medium: urlParams.get("utm_medium") || undefined,
         utm_campaign: urlParams.get("utm_campaign") || undefined,
         utm_content: urlParams.get("utm_content") || undefined,
