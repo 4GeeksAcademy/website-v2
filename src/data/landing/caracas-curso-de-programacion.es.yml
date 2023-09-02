@@ -1,11 +1,11 @@
 meta_info:
-  slug: aprende-a-programar-ve # <--- URL 4geeksacademy.com/us/landing/example
+  slug: curso-de-programacion-ve # <--- URL 4geeksacademy.com/us/landing/example
 
   # This will show on social media when shared
   title: "Impulsa tu carrera profesional ¡Aprende a programar con 4Geeks Academy!"
   description: "La programación se ha convertido en un conocimiento esencial para tu éxito profesional, aprende a programar con 4Geeks Academy."
   image: "/images/bg/remote.jpeg"
-  keywords: "Aprende a programar, 4Geeks academy, aprende programacion, aprende ingenieria informatica"
+  keywords: "Curso de programación, Aprende a programar, 4Geeks academy, aprende programacion, aprende ingenieria informatica"
 
   template: "landing_nonav" # <--- choose your landing template
   redirects: [] # <--- URL redirections to avoid 404 errors
@@ -146,7 +146,7 @@ components:
       color: null
       path: "https://www.youtube.com/watch?v=plwPwyrxX84"
     content:
-    - text: "Mi experiencia con 4Geeks ha sido magnífica, me ha encantado. Tengo unos profesores maravillosos y tengo unos compañeros súper geniales. He aprendido bastante sobre HTML, CSS, JavaScript, React y Python. Mis profesores siempre estuvieron atentos a lo que necesitaba. Igual hay una plataforma donde podemos hablar todos los estudiantes de 4Geeks y nos ayudamos entre todos.... ¡Ha sido genial tomar esta decisión! -Beatriz Hernández"
+  - text: "Mi experiencia con 4Geeks ha sido magnífica, me ha encantado. Tengo unos profesores maravillosos y tengo unos compañeros súper geniales. He aprendido bastante sobre HTML, CSS, JavaScript, React y Python. Mis profesores siempre estuvieron atentos a lo que necesitaba. Igual hay una plataforma donde podemos hablar todos los estudiantes de 4Geeks y nos ayudamos entre todos.... ¡Ha sido genial tomar esta decisión! -Beatriz Hernández"
     font_size: ["16px"]
   - name: divider_one
     position: 9
