@@ -50,11 +50,17 @@ features:
   marginTop: 0px #<-- separation between tagline and the bullets
   text: '<span style="margin-top: 10px; display: block; color: black;"> <strong style="font-weight: bold; color:black;">Entonces… ¿Qué estás esperando? ¡COMIENZA HOY!</span>'
   bullets:
-    - Clases online y en vivo
-    - Certificación internacional.
-    - Mentorías de código personalizadas e ilimitadas.
-    - Asesorías profesionales de por vida.
-    - La oportunidad de convertirte en Full-Stack Developer en tan solo ¡18 SEMANAS!
+    - heading: Lorem ipsum dolor sit amet
+        text: Some text description for the bullet
+        icon: string with icon for example ['check', 'cicle', etc]
+    - heading: Lorem ipsum dolor sit amet
+        text: Some text description for the bullet
+        icon: string with icon for example ['check', 'cicle', etc]
+    # - Clases online y en vivo
+    # - Certificación internacional.
+    # - Mentorías de código personalizadas e ilimitadas.
+    # - Asesorías profesionales de por vida.
+    # - La oportunidad de convertirte en Full-Stack Developer en tan solo ¡18 SEMANAS!
   styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
 
 short_badges:

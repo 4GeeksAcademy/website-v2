@@ -35,9 +35,15 @@ features:
   #                                         up   left down  right
   styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
   bullets:
-    - Un Desarrollador en Madrid gana 24.000€ al año
-    - Hay más vacantes que en cualquier otra industria
-    - ¡Impulsa tu Carrera! y hazte programador de software
+    - heading: Lorem ipsum dolor sit amet
+        text: Some text description for the bullet
+        icon: string with icon for example ['check', 'cicle', etc]
+    - heading: Lorem ipsum dolor sit amet
+        text: Some text description for the bullet
+        icon: string with icon for example ['check', 'cicle', etc]
+    # - Un Desarrollador en Madrid gana 24.000€ al año
+    # - Hay más vacantes que en cualquier otra industria
+    # - ¡Impulsa tu Carrera! y hazte programador de software
 follow_bar:
   position: "top" # top, bottom, hidden
   content:

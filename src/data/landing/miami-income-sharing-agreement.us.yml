@@ -40,10 +40,16 @@ features:
   #                                         up   left down  right
   styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
   bullets:
-    - Our  Graduates are making $50k (avg) per year;
-    - Focus on your education and success first before making any investments;
-    - Training on everything needed to become a successful software developer;
-    - Get lifetime job support, education and our community of developers around the world.
+    - heading: Lorem ipsum dolor sit amet
+        text: Some text description for the bullet
+        icon: string with icon for example ['check', 'cicle', etc]
+    - heading: Lorem ipsum dolor sit amet
+        text: Some text description for the bullet
+        icon: string with icon for example ['check', 'cicle', etc]
+    # - Our  Graduates are making $50k (avg) per year;
+    # - Focus on your education and success first before making any investments;
+    # - Training on everything needed to become a successful software developer;
+    # - Get lifetime job support, education and our community of developers around the world.
 
 follow_bar:
   position: "top" # top, bottom, hidden

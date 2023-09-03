@@ -221,6 +221,7 @@ components:
       - heading: "Lorem ipsum dolor sit amet"
         text: "Some text description for the bullet"
         icon: "check" #string with icon for example ['check', 'cicle', etc]
+        
   - name: first_syllabus_form
     position: 10
     layout: syllabus

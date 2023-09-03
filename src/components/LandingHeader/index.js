@@ -141,7 +141,7 @@ const LandingHeader = (props) => {
             )}
 
             {Array.isArray(yml.features.bullets) &&
-              yml.features.bullets.map((f, i) => (
+              yml.features.bullets.map((bullet, i) => (
                 <Paragraph
                   zIndex="1"
                   key={i}
@@ -167,11 +167,12 @@ const LandingHeader = (props) => {
                     }}
                     width="20px"
                     height="20px"
-                    icon={bulletIcons[i % bulletIcons.length].icon}
+                    // icon={bulletIcons[i % bulletIcons.length].icon}
+                    icon={bullet.icon}
                     color="white"
                   />
 
-                  {" " + f}
+                  {" " + bullet.heading + " " + bullet.text}
                 </Paragraph>
               ))}
             {yml.features.text && (

@@ -46,9 +46,15 @@ features:
   #                                         up   left down  right
   styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
   bullets:
-    - Un Desarrollador Web Junior en Caracas gana aprox. $1.000 mensuales. 
-    - Es una de las industrias donde hay más vacantes actualmente.
-    - No necesitas experiencia previa para comenzar
+    - heading: Lorem ipsum dolor sit amet
+        text: Some text description for the bullet
+        icon: string with icon for example ['check', 'cicle', etc]
+    - heading: Lorem ipsum dolor sit amet
+        text: Some text description for the bullet
+        icon: string with icon for example ['check', 'cicle', etc]
+    # - Un Desarrollador Web Junior en Caracas gana aprox. $1.000 mensuales. 
+    # - Es una de las industrias donde hay más vacantes actualmente.
+    # - No necesitas experiencia previa para comenzar
   text: ¡Es el momento de impulsar tu carrera y convertirte en programador!
 
 short_badges:

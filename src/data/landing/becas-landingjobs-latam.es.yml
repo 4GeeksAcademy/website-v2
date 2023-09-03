@@ -46,9 +46,15 @@ features:
   styles: '{ "fontSize": "15px", "margin": "10px 0px 10px 0px" }'
   text: Landing Jobs ofrece más de 1.000.000€ en Becas para estudiar Desarrollo Web o Inteligencia Artificial en 4Geeks. La beca mínima es de un 30% y se otorgarán en función del resultado del proceso de selección. Si quieres empezar tu carrera como programador junior o impulsarla y convertirte en un desarrollador senior, no dejes pasar esta oportunidad.
   bullets:
-    - 300 becas en total, la mayoría superiores al 50% 
-    - Programas Full-Stack (iniciación) e Inteligencia Artificial
-    - Formato full-time y part-time
+    - heading: Lorem ipsum dolor sit amet
+        text: Some text description for the bullet
+        icon: string with icon for example ['check', 'cicle', etc]
+    - heading: Lorem ipsum dolor sit amet
+        text: Some text description for the bullet
+        icon: string with icon for example ['check', 'cicle', etc]
+    # - 300 becas en total, la mayoría superiores al 50% 
+    # - Programas Full-Stack (iniciación) e Inteligencia Artificial
+    # - Formato full-time y part-time
 
 follow_bar:
   position: "top" # top, bottom, hidden

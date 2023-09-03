@@ -47,10 +47,16 @@ features:
   #                                         up   left down  right
   styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
   bullets:
-    - No requieres experiencia previa.
-    - Tenemos horarios part time y full time.
-    - La tecnología es el futuro, y tu puedes ser parte de ello. 
-    - Nuestro objetivo es que consigas empleo en los primeros 90 días. 
+    - heading: Lorem ipsum dolor sit amet
+        text: Some text description for the bullet
+        icon: string with icon for example ['check', 'cicle', etc]
+    - heading: Lorem ipsum dolor sit amet
+        text: Some text description for the bullet
+        icon: string with icon for example ['check', 'cicle', etc]
+    # - No requieres experiencia previa.
+    # - Tenemos horarios part time y full time.
+    # - La tecnología es el futuro, y tu puedes ser parte de ello. 
+    # - Nuestro objetivo es que consigas empleo en los primeros 90 días. 
 
 follow_bar:
   position: "top" # top, bottom, hidden
