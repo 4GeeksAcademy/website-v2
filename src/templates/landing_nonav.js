@@ -517,6 +517,14 @@ export const query = graphql`
               link
               shadow
             }
+            programs{
+              title
+              sub_title
+              icon
+              description
+              text_link
+              link
+            }
             video
             height
             button {
@@ -797,6 +805,14 @@ export const query = graphql`
             image {
               src
               style
+              link
+            }
+            programs{
+              title
+              sub_title
+              icon
+              description
+              text_link
               link
             }
             video

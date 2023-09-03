@@ -852,12 +852,12 @@ export const landingSections = {
   },
 
   choose_your_program: ({ session, pageContext, yml, data, index }) => {
-    let dataYml =
-      data.allLandingYaml.edges.length !== 0 &&
-      data.allLandingYaml.edges[0].node.choose_your_program !== null
-        ? data.allLandingYaml.edges
-        : data.allDownloadableYaml.edges;
-    let chooseYourProgram = dataYml[0].node?.choose_your_program;
+    // let dataYml =
+    //   data.allLandingYaml.edges.length !== 0 &&
+    //   data.allLandingYaml.edges[0].node.choose_your_program !== null
+    //     ? data.allLandingYaml.edges
+    //     : data.allDownloadableYaml.edges;
+    // let chooseYourProgram = dataYml[0].node?.choose_your_program;
     return (
       <React.Fragment key={index}>
         <Div id="choose_your_program" width="100%" flexDirection="column">
@@ -872,10 +872,10 @@ export const landingSections = {
         <ChooseYourProgram
           // chooseProgramRef={chooseProgramRef}
           landingTemplate
-          title={chooseYourProgram.title}
-          paragraph={chooseYourProgram.paragraph}
+          title={yml.heading.text}
+          paragraph={yml.content.text}
           lang={pageContext.lang}
-          programs={chooseYourProgram.programs}
+          programs={yml.programs}
         />
       </React.Fragment>
     );
