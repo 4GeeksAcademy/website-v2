@@ -472,20 +472,6 @@ export const query = graphql`
               }
             }
           }
-          choose_your_program {
-            position
-            title
-            paragraph
-            programs {
-              text_link
-              link
-              sub_title
-              title
-              description
-              icon
-            }
-          }
-
           why_python {
             position
             heading
@@ -764,20 +750,6 @@ export const query = graphql`
               }
             }
           }
-          choose_your_program {
-            position
-            title
-            paragraph
-            programs {
-              text_link
-              link
-              sub_title
-              title
-              description
-              icon
-            }
-          }
-
           why_python {
             position
             heading
