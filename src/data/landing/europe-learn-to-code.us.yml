@@ -44,15 +44,9 @@ features:
   #                                         up   left down  right
   styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
   bullets:
-    - heading: Lorem ipsum dolor sit amet
-        text: Some text description for the bullet
-        icon: string with icon for example ['check', 'cicle', etc]
-    - heading: Lorem ipsum dolor sit amet
-        text: Some text description for the bullet
-        icon: string with icon for example ['check', 'cicle', etc]
-    # - No previous experience or coding skills required.
-    # - Part-Time focused. No need to stop your life.
-    # - Lifetime and unlimited mentorships and career support. (Your first Job in Tech is our goal).
+    - No previous experience or coding skills required.
+    - Part-Time focused. No need to stop your life.
+    - Lifetime and unlimited mentorships and career support. (Your first Job in Tech is our goal).
 
 follow_bar:
   position: "top" # top, bottom, hidden

@@ -46,15 +46,9 @@ features:
   #                                         up   left down  right
   styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
   bullets:
-    - heading: Lorem ipsum dolor sit amet
-        text: Some text description for the bullet
-        icon: string with icon for example ['check', 'cicle', etc]
-    - heading: Lorem ipsum dolor sit amet
-        text: Some text description for the bullet
-        icon: string with icon for example ['check', 'cicle', etc]
-  #  - Tailor-made career support, our goal is to get you a job in tech. 
-  #  - No previous experience or coding skills required.
-  #  - Part-Time focused. No need to stop your life.
+   - Tailor-made career support, our goal is to get you a job in tech. 
+   - No previous experience or coding skills required.
+   - Part-Time focused. No need to stop your life.
   
 short_badges:
   - name: "Premios Tecnologia Siglo XXI"

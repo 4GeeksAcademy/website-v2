@@ -50,15 +50,9 @@ features:
   marginTop: 0px #<-- separation between tagline and the bullets
   text: '<span style="margin-top: 10px; display: block;"> <strong style="font-weight: bold;">El Proyecto Social Tech</strong> es en colaboración con United Way España, Bcas y 4Geeks Academy</span>'
   bullets:
-    - heading: Lorem ipsum dolor sit amet
-        text: Some text description for the bullet
-        icon: string with icon for example ['check', 'cicle', etc]
-    - heading: Lorem ipsum dolor sit amet
-        text: Some text description for the bullet
-        icon: string with icon for example ['check', 'cicle', etc]
-    # - "Obtén una beca y no pagues nada hasta que encuentres trabajo"
-    # - "Si estás en el paro o eres migrante, esta beca es para ti" 
-    # - "Solo 50 personas serán beneficiadas"
+    - "Obtén una beca y no pagues nada hasta que encuentres trabajo"
+    - "Si estás en el paro o eres migrante, esta beca es para ti" 
+    - "Solo 50 personas serán beneficiadas"
   styles: '{ "color": "gray", "fontWeight":"500" }'
   
 short_badges:

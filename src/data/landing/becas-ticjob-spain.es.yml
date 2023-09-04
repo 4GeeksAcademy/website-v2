@@ -48,15 +48,9 @@ features:
   styles: '{ "fontSize": "16.5px", "line-height": "2", "margin": "10px 0px 10px 0px", "letter-spacing": ".5px" }'
   text: TicJob ofrece más de 500.000€ en Becas para que te conviertas en Data Scientist en 4Geeks Academy. No te quedes atrás, Aprende Data Science y Machine Learning, el perfil más demandado por las empresas. Impulsarás tu carrera en el Mejor Coding Bootcamp de España según los Premios Excelencia Educativa. Se te descontarán 3.900 €. ¿Listo para unirte y reinventar tu futuro?
   bullets:
-    - heading: Lorem ipsum dolor sit amet
-        text: Some text description for the bullet
-        icon: string with icon for example ['check', 'cicle', etc]
-    - heading: Lorem ipsum dolor sit amet
-        text: Some text description for the bullet
-        icon: string with icon for example ['check', 'cicle', etc]
-    # - +125 becas, todas del 50% (Válido únicamente para 4Geeks España)  
-    # - Programa Data Science y Machine Learning
-    # - Formato part-time (16 semanas)
+    - +125 becas, todas del 50% (Válido únicamente para 4Geeks España)  
+    - Programa Data Science y Machine Learning
+    - Formato part-time (16 semanas)
 
 follow_bar:
   position: "top" # top, bottom, hidden

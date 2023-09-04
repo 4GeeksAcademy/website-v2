@@ -40,16 +40,10 @@ features:
   #                                         up   left down  right
   styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
   bullets:
-    - heading: Lorem ipsum dolor sit amet
-        text: Some text description for the bullet
-        icon: string with icon for example ['check', 'cicle', etc]
-    - heading: Lorem ipsum dolor sit amet
-        text: Some text description for the bullet
-        icon: string with icon for example ['check', 'cicle', etc]
-    # - No previous experience or coding skills required.
-    # - Part-Time or Full-Time Schedules Available. Online or in our beautiful campus in Miami.
-    # - Get lifetime access to our mentors and Career Growth Support (Your first Job in Tech is our goal).
-    # - Junior developers make avg $55k per year in Florida.
+    - No previous experience or coding skills required.
+    - Part-Time or Full-Time Schedules Available. Online or in our beautiful campus in Miami.
+    - Get lifetime access to our mentors and Career Growth Support (Your first Job in Tech is our goal).
+    - Junior developers make avg $55k per year in Florida.
 
 follow_bar:
   position: "top" # top, bottom, hidden

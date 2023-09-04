@@ -54,6 +54,10 @@ features:
       path: "https://www.switchup.org/bootcamps/4geeks-academy"
       background: "blue"
       hover_color: "black"
+  bullets:
+    - Un Desarrollador en Madrid hace €25mil anual
+    - Hay más vacantes que en cualquier otra industria
+    - Impulsa tu Carrera y hazte programador de software
 
 follow_bar:
   position: "top" # top, bottom, hidden

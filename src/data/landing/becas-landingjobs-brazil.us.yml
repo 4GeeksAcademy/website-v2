@@ -45,15 +45,9 @@ features:
   styles: '{ "fontSize": "15px", "margin": "10px 0px 10px 0px" }'
   text: Landing Jobs is offering more than €1,000,000 in Scholarships to study Web Development at 4Geeks Academy. The minimum scholarship is 30% and they will be awarded based on the results of the selection process. Whether you want to start your career as a Junior programmer or upskill  and become a Senior Developer, don't miss out on this amazing opportunity.
   bullets:
-      - heading: Lorem ipsum dolor sit amet
-         text: Some text description for the bullet
-         icon: string with icon for example ['check', 'cicle', etc]
-      - heading: Lorem ipsum dolor sit amet
-         text: Some text description for the bullet
-         icon: string with icon for example ['check', 'cicle', etc]
-    # - 300 scholarships in total, most of them greater than 50%
-    # - Ful-Stack Developer (Level 1) and AI/Machine Learning programs
-    # - Full-Time and Part-Time modality
+    - 300 scholarships in total, most of them greater than 50%
+    - Ful-Stack Developer (Level 1) and AI/Machine Learning programs
+    - Full-Time and Part-Time modality
 
 follow_bar:
   position: "top" # top, bottom, hidden

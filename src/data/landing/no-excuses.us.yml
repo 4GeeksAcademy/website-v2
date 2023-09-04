@@ -50,17 +50,11 @@ features:
   styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
   text: With our expertise and your hard work, you'll be a professional developer in just 18 weeks!
   bullets:
-    - heading: "Lorem ipsum dolor sit amet"
-      text: "Some text description for the bullet"
-      icon: "check" #string with icon for example ['check', 'cicle', etc]
-    - heading: "Lorem ipsum dolor sit amet"
-      text: "Some text description for the bullet"
-      icon: "check" #string with icon for example ['check', 'cicle', etc]
-  #  - Scholarships available. Award winning Bootcamp at the Best pricing 
-  #  - Unlimited Mentorship and senior support FOREVER
-  #  - 84% placement rate
-  #  - Job placement rate of 81%
-  #  - "Part-time: it’s immersive but with a flexible schedule"
+   - Scholarships available. Award winning Bootcamp at the Best pricing 
+   - Unlimited Mentorship and senior support FOREVER
+   - 84% placement rate
+   - Job placement rate of 81%
+   - "Part-time: it’s immersive but with a flexible schedule"
   
 short_badges:
   - name: "Premios Tecnologia Siglo XXI"

@@ -50,17 +50,11 @@ features:
   marginTop: 0px #<-- separation between tagline and the bullets
   text: '<span style="margin-top: 14px; display: block;"> <strong style="font-weight: bold;">The United Way Miami Workforce Project</strong> is an exciting new training program made possible by United Way Miami, 4Geeks Academy, and Social Finance.</span>'
   bullets:
-    - heading: Lorem ipsum dolor sit amet
-        text: Some text description for the bullet
-        icon: string with icon for example ['check', 'cicle', etc]
-    - heading: Lorem ipsum dolor sit amet
-        text: Some text description for the bullet
-        icon: string with icon for example ['check', 'cicle', etc]
-    # - "Become a Software Developer and get a new career"
-    # - "Get up to $6400 for living stipends to pay your regular costs while taking the program"
-    # - "100 Spots Available. Only 50 left!" 
-    # - "Now open and accepting applications!"
-  # styles: '{ "color": "gray", "fontWeight":"500" }'
+    - "Become a Software Developer and get a new career"
+    - "Get up to $6400 for living stipends to pay your regular costs while taking the program"
+    - "100 Spots Available. Only 50 left!" 
+    - "Now open and accepting applications!"
+  styles: '{ "color": "gray", "fontWeight":"500" }'
   
 short_badges:
   - name: "Premios Tecnologia Siglo XXI"
