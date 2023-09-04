@@ -150,6 +150,17 @@ components:
       
       text_link: Aplica a una beca
       link: "#"
+    
+    - title: "Full Stack Developer"
+      sub_title: "Nivel 1"
+      icon: "fullstack"
+      description: |
+        Aprende desde cero, empezando por lo básico: HTML + CSS3 + Javascript.
+        
+        Aprende las habilidades más solicitadas con instructores apasionados y un plan de estudios práctico para ayudarte a encontrar un trabajo de programación como desarrollador Jr.
+      
+      text_link: Aplica a una beca
+      link: "#"
       
     - title: "Ingeniero de Software"
       sub_title: "Nivel 2"

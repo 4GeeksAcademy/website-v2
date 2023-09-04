@@ -51,7 +51,7 @@ const ChooseYourProgram = ({
       gridAutoRows_tablet="minmax(100px, auto)"
       background={landingTemplate ? Colors.white : Colors.verylightGray}
       background_tablet={landingTemplate ? Colors.white : "transparent"}
-      padding="59px 17px 83px 17px"
+      padding="59px 0px 83px 0px"
       padding_tablet=" 0 "
       margin="0 0 50px 0"
       margin_tablet="0 0 100px 0"
@@ -64,29 +64,43 @@ const ChooseYourProgram = ({
         gridRow_tablet="1 / 1"
         flexDirection="column"
       >
-        <H2 margin="0 0 10px 0" fontWeight="700">
+        <H2 
+          margin="0 0 10px 0" 
+          fontSize_xs="24px"
+          fontSize_tablet="30px"
+          fontWeight="700"
+        >
           {title || info.title}
         </H2>
-        <Paragraph margin="10px 0">{paragraph || info.paragraph}</Paragraph>
+        <Paragraph 
+          margin="10px 0"
+          fontWeight="400"
+          fontSize="21px"
+          lineHeight="22px"
+        >
+          {paragraph || info.paragraph}
+        </Paragraph>
       </Div>
       <Grid
         gridColumn_tablet="2 / 14"
-        gridRow_tablet="2 / 4"
+        gridRow_tablet="1 / 4"
         zIndex="1"
         gridTemplateColumns_tablet={
-          landingTemplate ? "repeat(2, 4fr)" : "repeat(3, 4fr)"
+          landingTemplate ? "1fr repeat(3, 10fr) 1fr" : "1fr repeat(3, 10fr) 1fr"
         }
       >
         {Array.isArray(programs) &&
-          programs.map((program, i) => {
+          programs.map((program, index) => {
             return (
               <Div
-                key={i}
+                key={index}
                 display="flex"
                 // height="145px"
                 // minHeight_tablet="285px"
                 borderRadius="3px"
-                padding={landingTemplate ? "1rem 2.5rem 1rem 2rem" : "1rem"}
+                //padding={landingTemplate ? "1rem 2.5rem 1rem 2rem" : "1rem"}
+                padding_xs="16px"
+                padding_tablet="16px"
                 border="1px solid black"
                 borderLeft="6px solid black"
                 borderTop="1px solid black"
@@ -137,12 +151,12 @@ const ChooseYourProgram = ({
                     color={Colors.darkGray}
                     margin="0 0 5px 0"
                   >
-                    {program.sub_title}
+                    {program.sub_title + "subtitle"}
                   </H4>
                   {program.title.split("\n").map((program_title, index) => (
                     <Link key={index} to={program.link}>
                       <H3 textAlign="left" fontSize="22px" lineHeight="26px">
-                        {program_title}
+                        {program_title + "title"}
                       </H3>
                     </Link>
                   ))}
@@ -159,7 +173,7 @@ const ChooseYourProgram = ({
                         lineHeight="19px"
                         fontWeight="400"
                         opacity="1"
-                        margin={i == 0 && "10px 0px 25px 0"}
+                        margin={index == 0 && "10px 0px 25px 0"}
                         dangerouslySetInnerHTML={{ __html: program_description }}
                       />
                     ))}
