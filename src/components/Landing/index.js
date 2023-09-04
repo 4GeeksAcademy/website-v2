@@ -146,7 +146,7 @@ const Side = ({
           margin={sub_heading ? "16px 0 16px 0" : "0 0 16px 0"}
           gridGap="24px"
         >
-          {bullets.map((p, index) => {
+          {bullets.map((bullet, index) => {
             return (
               <Div
                 key={index}
@@ -167,7 +167,7 @@ const Side = ({
                   padding="0 8px 0 0"
                 >
                   <Icon
-                    icon={p.icon}
+                    icon={bullet.icon || "check"}
                     width="13px"
                     color={Colors.blue}
                     fill={Colors.yellow}
@@ -182,7 +182,7 @@ const Side = ({
                     textTransform="uppercase"
                     padding="0 0 0 5px"
                   >
-                    {p.heading}
+                    {bullet.heading}
                   </H2>
                 </Div>
                 <Paragraph
@@ -192,7 +192,7 @@ const Side = ({
                   lineHeight="22px"
                   margin="12px 0 0 0"
                 >
-                  {p.text}
+                  {bullet.text}
                 </Paragraph>
               </Div>
             );
