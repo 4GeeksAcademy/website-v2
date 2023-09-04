@@ -113,12 +113,17 @@ components:
       font_size: ["15px"]
 
     bullets:
-      - heading: Lorem ipsum dolor sit amet
-         text: Some text description for the bullet
-         icon: string with icon for example ['check', 'cicle', etc]
-      - heading: Lorem ipsum dolor sit amet
-         text: Some text description for the bullet
-         icon: string with icon for example ['check', 'cicle', etc]
+      - heading: Numbers
+      - heading: String
+      - heading: Boolean
+      - heading: Iterables
+      - heading: Dictionary
+      - heading: List
+      - heading: Tuple
+      - heading: Range
+      - heading: Set & Frozenset
+      - heading: Table Hash
+      
 
     content:
       text: "The Python Zen, variables, conditionals, loops, functions, decorators, generators, virtual environment, PIP package manager."

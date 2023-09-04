@@ -49,11 +49,11 @@ features:
   #                                         up   left down  right
   styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
   bullets:
-   - Available nationwide  
-   - Fill out the contact form or call 786-416-6640
-   - Invest less than $6k and gain access to jobs paying more than 60k a year!
-   - Enjoy the full benefits of our bootcamp
-   - Rolling admission. Apply now!
+    - Available nationwide  
+    - Fill out the contact form or call 786-416-6640
+    - Invest less than $6k and gain access to jobs paying more than 60k a year!
+    - Enjoy the full benefits of our bootcamp
+    - Rolling admission. Apply now!
   
 short_badges:
   - name: "Premios Tecnologia Siglo XXI"
