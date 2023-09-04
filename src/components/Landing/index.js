@@ -1064,7 +1064,7 @@ export const landingSections = {
         right={{
           heading: yml.heading,
           sub_heading: yml.sub_heading,
-          bullets: yml.bullets_new,
+          bullets: yml.bullets,
           content: yml.content,
           button: yml.button,
         }}
@@ -1088,7 +1088,7 @@ export const landingSections = {
           left={{
             heading: yml.heading,
             sub_heading: yml.sub_heading,
-            bullets: yml.bullets_new,
+            bullets: yml.bullets,
             content: yml.content,
             button: yml.button,
           }}
