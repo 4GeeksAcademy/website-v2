@@ -173,31 +173,36 @@ components:
       
       Otras herramientas que también aprenderás a usar en nuestro programa son: HTML5, CSS3, React, Flask, etc."
       font_size: ["16px"]
-
-choose_your_program:
-  position: 5
-  title: Nuestras Modalidades
-  paragraph: Programa Full Stack Developer en Modalidad Part Time y Full Time
-  programs:
-  - title: "Part Time"
-    sub_title: "18 semanas"
-    icon: "fullstack"
-    description: |
-      De cero a tener tu primer trabajo como Full Stack Developer, con una duración de 18 semanas, con clases 3 veces por semana, compatible con horario laboral o de estudios. 
-
-      Precio: 3.450.000 CLP
-    
-    text_link: Obtener más información
-    link: "#top" # moves to start position
-    
-  - title: "Full Time"
-    sub_title: "9 semanas"
-    icon: "fullstack"
-    description: |
-      Programa intensivo de 9 semanas, con clases de lunes a viernes durante todo el día, para vivir una experiencia inmersiva en el mundo del código.
-
-      Precio: 3.800.000 CLP
+  - name: "whatever"
+    layout: choose_your_program
+    position: 5
+    heading:
+      text: Nuestros Programas
+    content:
+      text: Contamos con programas que combinan clases prácticas dictadas por expertos
+      font_size: ["16px"]
+      path: ""
+    programs:
+    - title: "Full Stack Developer"
+      sub_title: "Nivel 1"
+      icon: "fullstack"
+      description: |
+        Aprende desde cero, empezando por lo básico: HTML + CSS3 + Javascript.
+        
+        Aprende las habilidades más solicitadas con instructores apasionados y un plan de estudios práctico para ayudarte a encontrar un trabajo de programación como desarrollador Jr.
       
-    text_link: Obtener más información
-    link: "#top"
+      text_link: Aplica a una beca
+      link: "#"
+      
+    - title: "Ingeniero de Software"
+      sub_title: "Nivel 2"
+      icon: "software"
+      description: |
+        Profundizamos a un nivel avanzado principios específicos de desarrollo, llevando tu carrera a otro nivel.
+        
+        Texto que resuma y explique que este programa tiene modalidad part time y full time. Que también resuma eficientemente el syballus del programa. Acá incluiría un <a href="/us/apply">link</a> para poder descargar el PDF con el detalle del programa.
+        Desarrolla más habilidades adentrándote en el mundo de computación y aplicaciones nativas de la nube. Aprende las habilidades que el 90% de las empresas Fortune 500 están buscando.
+      
+      text_link: Aplica a una beca
+      link: "#"
 

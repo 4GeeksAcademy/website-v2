@@ -139,17 +139,17 @@ const ChooseYourProgram = ({
                   >
                     {program.sub_title}
                   </H4>
-                  {program.title.split("\n").map((m, i) => (
-                    <Link key={i} to={program.link}>
+                  {program.title.split("\n").map((program_title, index) => (
+                    <Link key={index} to={program.link}>
                       <H3 textAlign="left" fontSize="22px" lineHeight="26px">
-                        {m}
+                        {program_title}
                       </H3>
                     </Link>
                   ))}
                   {program.description &&
-                    program.description.split("\n").map((m, i) => (
+                    program.description.split("\n").map((program_description, index) => (
                       <Paragraph
-                        key={i}
+                        key={index}
                         letterSpacing="0.05em"
                         display_tablet="block"
                         display="none"
@@ -160,7 +160,7 @@ const ChooseYourProgram = ({
                         fontWeight="400"
                         opacity="1"
                         margin={i == 0 && "10px 0px 25px 0"}
-                        dangerouslySetInnerHTML={{ __html: m }}
+                        dangerouslySetInnerHTML={{ __html: program_description }}
                       />
                     ))}
 

@@ -117,28 +117,6 @@ badges:
   position: 2
   heading: "4Geeks Academy cuenta con premios y reconocimientos que validan su excelencia"
 
-choose_your_program:
-  position: 4
-  title: Nuestros programas
-  paragraph: Contamos con programas que combinan clases prácticas dictadas por expertos
-  programs:
-  - title: "Full Stack Developer"
-    sub_title: "Desde Cero"
-    icon: "fullstack"
-    description: |
-      Convierte en un programador que utiliza las tecnologias más búscadas, mentoria personalizada y un plan de estudios y career support para conseguir tu primer trabajo.
-    
-    text_link: Aplica
-    link: "#" # moves to start position
-    
-  - title: "Data Science & Machine Learning"
-    sub_title: "Desde Cero"
-    icon: "machine"
-    description: |
-      Conviértete en un científico de datos, desarrolla modelos de predicción y uneté a una de las profesiones mejores pagadas del mundo.
-    text_link: Aplica
-    link: "#" # moves to start position
-
 geeks_vs_others:
   position: 7
   heading: "¿Qué hace a este bootcamp tan exitoso?"
@@ -162,6 +140,39 @@ alumni_projects:
   sub_heading: "Proyectos hechos por estudiantes de la academia"
 
 components:
+  - name: "whatever"
+    layout: choose_your_program
+    position: 5
+    heading:
+      text: Nuestros Programas
+    content:
+      text: Contamos con programas que combinan clases prácticas dictadas por expertos
+      font_size: ["16px"]
+      path: ""
+    programs:
+    - title: "Full Stack Developer"
+      sub_title: "Nivel 1"
+      icon: "fullstack"
+      description: |
+        Aprende desde cero, empezando por lo básico: HTML + CSS3 + Javascript.
+        
+        Aprende las habilidades más solicitadas con instructores apasionados y un plan de estudios práctico para ayudarte a encontrar un trabajo de programación como desarrollador Jr.
+      
+      text_link: Aplica a una beca
+      link: "#"
+      
+    - title: "Ingeniero de Software"
+      sub_title: "Nivel 2"
+      icon: "software"
+      description: |
+        Profundizamos a un nivel avanzado principios específicos de desarrollo, llevando tu carrera a otro nivel.
+        
+        Texto que resuma y explique que este programa tiene modalidad part time y full time. Que también resuma eficientemente el syballus del programa. Acá incluiría un <a href="/us/apply">link</a> para poder descargar el PDF con el detalle del programa.
+        Desarrolla más habilidades adentrándote en el mundo de computación y aplicaciones nativas de la nube. Aprende las habilidades que el 90% de las empresas Fortune 500 están buscando.
+      
+      text_link: Aplica a una beca
+      link: "#"
+      
   - name: top_coding_bootcamp
     position: 6
     layout: two_column_left

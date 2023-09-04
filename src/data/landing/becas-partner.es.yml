@@ -125,34 +125,6 @@ who_is_hiring:
     - name: "Apple"
       image: "../../../static/images/partner/apple.png"
 
-choose_your_program:
-  position: 5
-  title: Nuestros Programas
-  paragraph: Contamos con programas que combinan clases prácticas dictadas por expertos
-  programs:
-  - title: "Full Stack Developer"
-    sub_title: "Nivel 1"
-    icon: "fullstack"
-    description: |
-      Aprende desde cero, empezando por lo básico: HTML + CSS3 + Javascript.
-      
-      Aprende las habilidades más solicitadas con instructores apasionados y un plan de estudios práctico para ayudarte a encontrar un trabajo de programación como desarrollador Jr.
-    
-    text_link: Aplica a una beca
-    link: "#"
-    
-  - title: "Ingeniero de Software"
-    sub_title: "Nivel 2"
-    icon: "software"
-    description: |
-      Profundizamos a un nivel avanzado principios específicos de desarrollo, llevando tu carrera a otro nivel.
-      
-      Texto que resuma y explique que este programa tiene modalidad part time y full time. Que también resuma eficientemente el syballus del programa. Acá incluiría un <a href="/us/apply">link</a> para poder descargar el PDF con el detalle del programa.
-      Desarrolla más habilidades adentrándote en el mundo de computación y aplicaciones nativas de la nube. Aprende las habilidades que el 90% de las empresas Fortune 500 están buscando.
-    
-    text_link: Aplica a una beca
-    link: "#"
-
 why_4geeks:
   position: 8
   heading: "Escuchalo de nuestros alumnos"
@@ -165,6 +137,39 @@ apply_schollarship:
 
 # Possible layours: [two_column_left_image, two_column_right_image]
 components:
+  - name: "whatever"
+    layout: choose_your_program
+    position: 5
+    heading:
+      text: Nuestros Programas
+    content:
+      text: Contamos con programas que combinan clases prácticas dictadas por expertos
+      font_size: ["16px"]
+      path: ""
+    programs:
+    - title: "Full Stack Developer"
+      sub_title: "Nivel 1"
+      icon: "fullstack"
+      description: |
+        Aprende desde cero, empezando por lo básico: HTML + CSS3 + Javascript.
+        
+        Aprende las habilidades más solicitadas con instructores apasionados y un plan de estudios práctico para ayudarte a encontrar un trabajo de programación como desarrollador Jr.
+      
+      text_link: Aplica a una beca
+      link: "#"
+      
+    - title: "Ingeniero de Software"
+      sub_title: "Nivel 2"
+      icon: "software"
+      description: |
+        Profundizamos a un nivel avanzado principios específicos de desarrollo, llevando tu carrera a otro nivel.
+        
+        Texto que resuma y explique que este programa tiene modalidad part time y full time. Que también resuma eficientemente el syballus del programa. Acá incluiría un <a href="/us/apply">link</a> para poder descargar el PDF con el detalle del programa.
+        Desarrolla más habilidades adentrándote en el mundo de computación y aplicaciones nativas de la nube. Aprende las habilidades que el 90% de las empresas Fortune 500 están buscando.
+      
+      text_link: Aplica a una beca
+      link: "#"
+
   - name: python_y_javascript
     position: 7
     layout: two_column_right
