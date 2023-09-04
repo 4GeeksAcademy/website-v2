@@ -50,9 +50,15 @@ features:
   styles: '{ "fontSize": "15px", "margin": "10px 0px 10px 0px", "color": "white" }'
   text: BIT is offering more than $30k in scholarships to study Web Development or AI at 4Geeks Academy. 8 scholaships will be awarded based on the results of the selection process. Whether you want to start your career as a Junior programmer or upskill and become a Senior Developer or AI/ML Engineer, don't miss out on this amazing opportunity.
   bullets:
-    - 8 scholarships in total
-    - Access to the largest community of black technologists
-    - Part-time Ful-Stack Developer and AI/Machine Learning courses
+    - heading: Lorem ipsum dolor sit amet
+        text: Some text description for the bullet
+        icon: string with icon for example ['check', 'cicle', etc]
+    - heading: Lorem ipsum dolor sit amet
+        text: Some text description for the bullet
+        icon: string with icon for example ['check', 'cicle', etc]
+    # - 8 scholarships in total
+    # - Access to the largest community of black technologists
+    # - Part-time Ful-Stack Developer and AI/Machine Learning courses
 
 short_badges:
   - name: "Premios Tecnologia Siglo XXI"

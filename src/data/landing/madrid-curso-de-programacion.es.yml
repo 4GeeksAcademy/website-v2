@@ -46,9 +46,15 @@ features:
   #                                         up   left down  right
   styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
   bullets:
-   - Aprende las tecnologías que demandan las empresas. 
-   - Clases reducidas, presenciales o en remoto, y con acompañamiento de por vida.
-   - No se necesita experiencia previa, ¡empieza desde cero!
+    - heading: Lorem ipsum dolor sit amet
+        text: Some text description for the bullet
+        icon: string with icon for example ['check', 'cicle', etc]
+    - heading: Lorem ipsum dolor sit amet
+        text: Some text description for the bullet
+        icon: string with icon for example ['check', 'cicle', etc]
+  #  - Aprende las tecnologías que demandan las empresas. 
+  #  - Clases reducidas, presenciales o en remoto, y con acompañamiento de por vida.
+  #  - No se necesita experiencia previa, ¡empieza desde cero!
   
 short_badges:
   - name: "Premios Tecnologia Siglo XXI"

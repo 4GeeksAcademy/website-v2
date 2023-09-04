@@ -47,10 +47,16 @@ features:
   text: '<span style="margin-top: 10px; display: block; color: black;"> <strong style="font-weight: bold; color:black;">Conviértete en Full Stack Developer Junior</strong> trabajando en proyectos reales y con mentores profesionales</span>'
   styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
   bullets:
-    - De cero a programador en 9 o 18 semanas
-    - Mentorías y Apoyo Laboral de por vida
-    - Modalidad Full Time y Part Time disponible
-    - Un desarrollador Jr puede ganar desde $700.000 CLP al mes
+    - heading: Lorem ipsum dolor sit amet
+        text: Some text description for the bullet
+        icon: string with icon for example ['check', 'cicle', etc]
+    - heading: Lorem ipsum dolor sit amet
+        text: Some text description for the bullet
+        icon: string with icon for example ['check', 'cicle', etc]
+    # - De cero a programador en 9 o 18 semanas
+    # - Mentorías y Apoyo Laboral de por vida
+    # - Modalidad Full Time y Part Time disponible
+    # - Un desarrollador Jr puede ganar desde $700.000 CLP al mes
 
 short_badges:
   - name: "Premios Tecnologia Siglo XXI"

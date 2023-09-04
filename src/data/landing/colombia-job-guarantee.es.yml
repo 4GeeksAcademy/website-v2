@@ -52,10 +52,16 @@ features:
   #                                         up   left down  right
   styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
   bullets:
-    - 84% de nuestros alumnos han sido contratados.
-    - Mentorías y career support de por vida
-    - Programa Part Time 100% remoto.
-    - Aprovecha nuestras opciones de Financiamiento
+    - heading: Lorem ipsum dolor sit amet
+        text: Some text description for the bullet
+        icon: string with icon for example ['check', 'cicle', etc]
+    - heading: Lorem ipsum dolor sit amet
+        text: Some text description for the bullet
+        icon: string with icon for example ['check', 'cicle', etc]
+    # - 84% de nuestros alumnos han sido contratados.
+    # - Mentorías y career support de por vida
+    # - Programa Part Time 100% remoto.
+    # - Aprovecha nuestras opciones de Financiamiento
 
 short_badges:
   - name: "Premios Tecnologia Siglo XXI"
