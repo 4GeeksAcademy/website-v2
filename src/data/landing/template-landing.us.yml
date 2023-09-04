@@ -45,9 +45,6 @@ features:
 
   #                                         up   left down  right
   styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
-    - Un Desarrollador en Madrid hace €25mil anual
-    - Hay más vacantes que en cualquier otra industria
-    - Impulsa tu Carrera y hazte programador de software
   button:
       text: "APPLY NOW"
       color: "white"
