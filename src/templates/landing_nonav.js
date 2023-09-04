@@ -534,7 +534,11 @@ export const query = graphql`
               text
               font_size
             }
-            bullets
+            bullets{
+              heading
+              text
+              icon
+            }
             background
             content {
               text
@@ -814,7 +818,11 @@ export const query = graphql`
               text
               font_size
             }
-            bullets
+            bullets{
+              heading
+              text
+              icon
+            }
             content {
               text
               font_size

@@ -274,17 +274,13 @@ components:
       text:
         "Tipos de datos con súperpoderes:"
       font_size: ["15px"]
-    bullets:
-      - Número
-      - String
-      - Boolean
-      - Iterables
-      - Dictionary
-      - Lista
-      - Tupla
-      - Rango
-      - Set & Frozenset
-      - Tabla Hash
+    # bullets:
+    #   - heading: Lorem ipsum dolor sit amet
+    #     text: Some text description for the bullet
+    #     icon: string with icon for example ['check', 'cicle', etc]
+    #   - heading: Lorem ipsum dolor sit amet
+    #     text: Some text description for the bullet
+    #     icon: string with icon for example ['check', 'cicle', etc]
     content: 
       text: " "
       font_size: ["16px"]

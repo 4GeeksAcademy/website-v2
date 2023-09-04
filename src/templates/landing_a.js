@@ -537,11 +537,15 @@ export const query = graphql`
               text
               font_size
             }
-            bullets
             content {
               text
               font_size
               path
+            }
+            bullets{
+              heading
+              text
+              icon
             }
             columns {
               size
@@ -815,7 +819,11 @@ export const query = graphql`
               text
               font_size
             }
-            bullets
+            bullets{
+              heading
+              text
+              icon
+            }
             content {
               text
               font_size
