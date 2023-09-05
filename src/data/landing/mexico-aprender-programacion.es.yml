@@ -3,9 +3,9 @@ meta_info:
 
   # This will show on social media when shared
   title: "Aprende a programar desde cero o potencia tu carrera en el mundo tech"
-  description: "Aprende programación en uno de los coding bootcamps más importantes del mundo y consigue miles de oportunidades laborales."
+  description: "Transforma tu carrera con 4Geeks: Aprende programación y abre las puertas a un futuro brillante. 💼🚀 #CodingBootcamp"
   image: "/images/bg/main-bg.jpg"
-  keywords: "Aprender a programar", "Bootcamp de Programación, Bootcamp programacion Mexico, Bootcamp de python, Bootcamp de React y Javascript, Bootcamp de Informática, Coding Bootcamp, 4Geeks Academy"
+  keywords: "Aprender a programar, Bootcamp de Programación, Bootcamp programacion Mexico, Bootcamp de python, Bootcamp de React y Javascript, Bootcamp de Informática, Coding Bootcamp, 4Geeks Academy"
 
   template: "landing_a" # <--- choose your landing template
   redirects: # <--- URL redirections to avoid 404 errors
@@ -52,10 +52,10 @@ features:
   #                                         up   left down  right
   styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
   bullets:
-    - Mentorías de código ilimitadas, apoyo profesional de por vida y mucho más…
-    - Programa 100% Remoto y Medio Tiempo. ¡Certificate en tan solo 18 semanas!
-    - Contamos con un plan de Trabajo Garantizado y distintas opciones de Financiamiento. 
-
+    - "Mentorías de código ilimitadas, apoyo profesional de por vida y mucho más…"
+    - "Programa 100% Remoto y Medio Tiempo. ¡Certificate en tan solo 18 semanas!"
+    - "Contamos con un plan de Trabajo Garantizado y distintas opciones de Financiamiento."
+    
 short_badges:
   - name: "Premios Tecnologia Siglo XXI"
     url: ""
