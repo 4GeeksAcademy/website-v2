@@ -48,25 +48,29 @@ const ChooseYourProgram = ({
       gridTemplateColumns_tablet={
         landingTemplate ? "1fr repeat(12,1fr) 1fr" : "1fr repeat(12, 1fr) 1fr"
       }
+      gridTemplateColumns_xs= "1fr"//{landingTemplate && "1fr"}
       gridAutoRows_tablet="auto" //"minmax(100px, auto)"
       background={landingTemplate ? Colors.white : Colors.verylightGray}
       background_tablet={landingTemplate ? Colors.white : "transparent"}
-      padding="59px 17px 83px 17px"
-      padding_tablet=" 0 "
-      margin="0 0 50px 0"
-      margin_tablet="0 0 100px 0"
+      padding_tablet="40px 17px"
+      padding_xs=" 0 "
+    //margin="0 0 50px 0"
+    //margin_tablet="0 0 100px 0"
     >
       <Div
-        margin_tablet="0"
-        margin="0"
-        padding_tablet="0 0 0 0"
-        gridColumn_tablet="5 / 11"
-        gridRow_tablet="1 / 2"
+        margin_tablet="0 0 20px 0" 
+        margin_xs="30px 0 0 0"
+        padding_tablet="0 20px"
+        paddin_xs="0px 20px"
+        gridColumn_tablet="2 / 14"
+        gridColumn_xs="5 / 11"
+        textAlign="center"
+        gridRow_tablet="1 / 1"
         flexDirection="column"
         width="100%"
       >
         <H2
-          margin="0 0 10px 0"
+          //margin="0 0 10px 0"
           fontWeight="700"
           fontSize_tablet="30px"
           fontSize_xs="24px"
@@ -76,9 +80,10 @@ const ChooseYourProgram = ({
           {title || info.title}
         </H2>
         <Paragraph
-          margin="10px 0"
+          margin="10px 0px"
+          padding_xs="0 20px"
           fontWeight="400"
-          fontSize_tablet="21px"
+          fontSize="21px"
           lineHeight="22px"
         >
           {paragraph || info.paragraph}
@@ -91,7 +96,6 @@ const ChooseYourProgram = ({
         gridTemplateColumns_tablet={
           landingTemplate ? "repeat(3, 4fr)" : "repeat(3, 4fr)"
         }
-        gridRow_xs="1 / 3"
       >
         {Array.isArray(programs) &&
           programs.map((program, index) => {
@@ -99,13 +103,12 @@ const ChooseYourProgram = ({
               <Div
                 key={index}
                 display="flex"
-                //height_xs="500px"
-                // minHeight_tablet="285px"
-                //padding={landingTemplate ? "1rem 2.5rem 1rem 2rem" : "1rem"}
                 padding=" 24px 24px"
+                margin_xs="20px"
+                margin_tablet="0"
                 border="3px solid black"
                 flexDirection_tablet="column"
-                flexDirection="row"
+                flexDirection_xs="column"
                 alignItems="center"
                 justifyContent="space-between"
                 alignItems_tablet="flex-end"
@@ -119,7 +122,7 @@ const ChooseYourProgram = ({
                   display="flex"
                   justifyContent="space-between"
                   //alignSelf="center"
-                  margin="10px 0 0 0"
+                  margin_xs="10px 0 0 0"
                   margin_tablet="0"
                   //alignSelf_tablet="flex-end"
                   width="100%"
@@ -161,7 +164,8 @@ const ChooseYourProgram = ({
                   flexDirection="column"
                   width="100%"
                   alignContent="flex-start"
-                  margin="10px 0 0 0"
+                  margin_tablet="10px 0 50px 0"
+                  margin_xs="10px 0 50px 0"
                   padding={landingTemplate ? "10px 0px 10px 0px" : "0 0 30px 15px"}
                 >
                   {program.description &&
@@ -170,7 +174,7 @@ const ChooseYourProgram = ({
                         key={index}
                         letterSpacing="0.05em"
                         display_tablet="block"
-                        display="none"
+                        display_xs="inline"
                         // lineHeight="22px"
                         textAlign="left"
                         fontSize="15px"
@@ -199,54 +203,59 @@ const ChooseYourProgram = ({
                     </Paragraph>
                   )}
                 </Div>
-                {!program.comming_soon ? (
-                  <Link to={program.link}>
-                    {landingTemplate ? (
+                <Div margin_xs="24px 0 0 0">
+                  {!program.comming_soon ? (
+                    <Link to={program.link}>
+                      {landingTemplate ? (
+                        <Button
+                          display="flex"
+                          float="left"
+                          background={Colors.black}
+                          colorHover={Colors.black}
+                          color={Colors.white}
+                          className="mobile"
+                          style={{
+                            position: "absolute",
+                            bottom: "24px",
+                            left: "24px",
+                          }}
+                        // backgroundColor="#000" width="184" height="40"
+                        >
+                          {program.text_link}
+                        </Button>
+                      ) : (
+                        <Icon
+                          className="mobile"
+                          style={{
+                            position: "absolute",
+                            bottom: "10px",
+                            right: "10px",
+                          }}
+                          icon="arrowright"
+                          height="32px"
+                          width="32px"
+                        />
+                      )}
+                    </Link>
+                  ) : (
+                    <Link to={program.link}>
                       <Button
-                        background={Colors.black}
-                        colorHover={Colors.black}
-                        color={Colors.white}
-                        className="mobile"
-                        style={{
-                          position: "absolute",
-                          bottom: "24px",
-                          left: "24px",
-                        }}
-                      // backgroundColor="#000" width="184" height="40"
+                        variant="outline"
+                        color="black"
+                        font='"Lato", sans-serif'
+                        width="fit-content"
+                        pointer
+                        textColor={Colors.black}
+                        fontSize={"13px"}
+                        borderRadius="3px"
+                        padding="10px"
                       >
                         {program.text_link}
                       </Button>
-                    ) : (
-                      <Icon
-                        className="mobile"
-                        style={{
-                          position: "absolute",
-                          bottom: "10px",
-                          right: "10px",
-                        }}
-                        icon="arrowright"
-                        height="32px"
-                        width="32px"
-                      />
-                    )}
-                  </Link>
-                ) : (
-                  <Link to={program.link}>
-                    <Button
-                      variant="outline"
-                      color="black"
-                      font='"Lato", sans-serif'
-                      width="fit-content"
-                      pointer
-                      textColor={Colors.black}
-                      fontSize={"13px"}
-                      borderRadius="3px"
-                      padding="10px"
-                    >
-                      {program.text_link}
-                    </Button>
-                  </Link>
-                )}
+                    </Link>
+                  )}
+                </Div>
+
               </Div>
             );
           })}
