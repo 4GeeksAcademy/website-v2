@@ -44,38 +44,41 @@ const ChooseYourProgram = ({
   return (
     <Grid
       ref={chooseProgramRef}
-      gridTemplateColumns_md={landingTemplate && "4fr repeat(12,1fr) 4fr"}
+      gridTemplateColumns_md={landingTemplate && "1fr repeat(12,1fr) 1fr"}
       gridTemplateColumns_tablet={
-        landingTemplate ? "1fr repeat(12,1fr) 1fr" : "2fr repeat(12, 1fr) 2fr"
+        landingTemplate ? "1fr repeat(12,1fr) 1fr" : "1fr repeat(12, 1fr) 1fr"
       }
-      gridAutoRows_tablet="minmax(100px, auto)"
+      gridAutoRows_tablet="auto" //"minmax(100px, auto)"
       background={landingTemplate ? Colors.white : Colors.verylightGray}
       background_tablet={landingTemplate ? Colors.white : "transparent"}
-      padding="59px 0px 83px 0px"
+      padding="59px 17px 83px 17px"
       padding_tablet=" 0 "
       margin="0 0 50px 0"
       margin_tablet="0 0 100px 0"
     >
       <Div
-        margin_tablet="0 0 45px 0"
-        margin="0 0 35px 0"
-        padding_tablet="75px 0 0 0"
+        margin_tablet="0"
+        margin="0"
+        padding_tablet="0 0 0 0"
         gridColumn_tablet="5 / 11"
-        gridRow_tablet="1 / 1"
+        gridRow_tablet="1 / 2"
         flexDirection="column"
+        width="100%"
       >
-        <H2 
-          margin="0 0 10px 0" 
-          fontSize_xs="24px"
-          fontSize_tablet="30px"
+        <H2
+          margin="0 0 10px 0"
           fontWeight="700"
+          fontSize_tablet="30px"
+          fontSize_xs="24px"
+          lineHeight_tablet="36px"
+          lineHeight_xs="28.8px"
         >
           {title || info.title}
         </H2>
-        <Paragraph 
+        <Paragraph
           margin="10px 0"
           fontWeight="400"
-          fontSize="21px"
+          fontSize_tablet="21px"
           lineHeight="22px"
         >
           {paragraph || info.paragraph}
@@ -83,11 +86,12 @@ const ChooseYourProgram = ({
       </Div>
       <Grid
         gridColumn_tablet="2 / 14"
-        gridRow_tablet="1 / 4"
+        //gridRow_tablet="2 / 4"
         zIndex="1"
         gridTemplateColumns_tablet={
-          landingTemplate ? "1fr repeat(3, 10fr) 1fr" : "1fr repeat(3, 10fr) 1fr"
+          landingTemplate ? "repeat(3, 4fr)" : "repeat(3, 4fr)"
         }
+        gridRow_xs="1 / 3"
       >
         {Array.isArray(programs) &&
           programs.map((program, index) => {
@@ -95,17 +99,11 @@ const ChooseYourProgram = ({
               <Div
                 key={index}
                 display="flex"
-                // height="145px"
+                //height_xs="500px"
                 // minHeight_tablet="285px"
-                borderRadius="3px"
                 //padding={landingTemplate ? "1rem 2.5rem 1rem 2rem" : "1rem"}
-                padding_xs="16px"
-                padding_tablet="16px"
-                border="1px solid black"
-                borderLeft="6px solid black"
-                borderTop="1px solid black"
-                borderLeft_tablet="1px solid black"
-                borderTop_tablet="6px solid black"
+                padding=" 24px 24px"
+                border="3px solid black"
                 flexDirection_tablet="column"
                 flexDirection="row"
                 alignItems="center"
@@ -119,19 +117,43 @@ const ChooseYourProgram = ({
                 <Div
                   placeSelf_tablet={landingTemplate && "flex-start"}
                   display="flex"
-                  justifyContent="end"
-                  alignSelf="flex-start"
+                  justifyContent="space-between"
+                  //alignSelf="center"
                   margin="10px 0 0 0"
                   margin_tablet="0"
-                  alignSelf_tablet="flex-end"
-                  width="90px"
-                  width_tablet="120px"
+                  //alignSelf_tablet="flex-end"
+                  width="100%"
+                  width_tablet="100%"
                 >
+                  <Div
+                    display="inline"
+                  >
+                    <H4
+                      textTransform="uppercase"
+                      textAlign="left"
+                      fontSize="15px"
+                      lineHeight="19px"
+                      letterSpacing="0.05em"
+                      color={Colors.darkGray}
+                      margin="0 0 5px 0"
+                    >
+                      {program.sub_title}
+                    </H4>
+                    {program.title.split("\n").map((title, index) => (
+                      <Link key={index} to={program.link}>
+                        <H3 textAlign="left" fontSize="22px" lineHeight="26px">
+                          {title}
+                        </H3>
+                      </Link>
+                    ))}
+                  </Div>
+
                   <Icon
                     className="choose-your-program-icon"
                     icon={program.icon}
                     height="40px"
                     width="52px"
+                    alignItems="end"
                   />
                 </Div>
                 <Div
@@ -140,28 +162,10 @@ const ChooseYourProgram = ({
                   width="100%"
                   alignContent="flex-start"
                   margin="10px 0 0 0"
-                  padding={landingTemplate ? "0 0 100px 15px" : "0 0 30px 15px"}
+                  padding={landingTemplate ? "10px 0px 10px 0px" : "0 0 30px 15px"}
                 >
-                  <H4
-                    textTransform="uppercase"
-                    textAlign="left"
-                    fontSize="15px"
-                    lineHeight="19px"
-                    letterSpacing="0.05em"
-                    color={Colors.darkGray}
-                    margin="0 0 5px 0"
-                  >
-                    {program.sub_title + "subtitle"}
-                  </H4>
-                  {program.title.split("\n").map((program_title, index) => (
-                    <Link key={index} to={program.link}>
-                      <H3 textAlign="left" fontSize="22px" lineHeight="26px">
-                        {program_title + "title"}
-                      </H3>
-                    </Link>
-                  ))}
                   {program.description &&
-                    program.description.split("\n").map((program_description, index) => (
+                    program.description.split("\n").map((paragraph, index) => (
                       <Paragraph
                         key={index}
                         letterSpacing="0.05em"
@@ -170,11 +174,11 @@ const ChooseYourProgram = ({
                         // lineHeight="22px"
                         textAlign="left"
                         fontSize="15px"
-                        lineHeight="19px"
+                        lineHeight="22px"
                         fontWeight="400"
                         opacity="1"
                         margin={index == 0 && "10px 0px 25px 0"}
-                        dangerouslySetInnerHTML={{ __html: program_description }}
+                        dangerouslySetInnerHTML={{ __html: paragraph }}
                       />
                     ))}
 
@@ -205,10 +209,10 @@ const ChooseYourProgram = ({
                         className="mobile"
                         style={{
                           position: "absolute",
-                          bottom: "40px",
-                          left: "46px",
+                          bottom: "24px",
+                          left: "24px",
                         }}
-                        // backgroundColor="#000" width="184" height="40"
+                      // backgroundColor="#000" width="184" height="40"
                       >
                         {program.text_link}
                       </Button>
