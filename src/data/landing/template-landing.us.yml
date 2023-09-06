@@ -192,6 +192,17 @@ components:
       
       text_link: Aplica a una beca
       link: "#"
+    - title: "Ingeniero de Software"
+      sub_title: "Nivel 2"
+      icon: "software_2"
+      description: |
+        Profundizamos a un nivel avanzado principios específicos de desarrollo, llevando tu carrera a otro nivel.
+        
+        Texto que resuma y explique que este programa tiene modalidad part time y full time. Que también resuma eficientemente el syballus del programa. Acá incluiría un <a href="/us/apply">link</a> para poder descargar el PDF con el detalle del programa.
+        Desarrolla más habilidades adentrándote en el mundo de computación y aplicaciones nativas de la nube. Aprende las habilidades que el 90% de las empresas Fortune 500 están buscando.
+      
+      text_link: Aplica a una beca
+      link: "#"
      
 
   - name: new_design
