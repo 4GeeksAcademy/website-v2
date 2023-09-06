@@ -131,6 +131,7 @@ const ChooseYourProgram = ({
                   <Div
                     display="inline"
                     width="75%"
+                    padding="0 5px 0 0"
                   >
                     <H4
                       textTransform="uppercase"

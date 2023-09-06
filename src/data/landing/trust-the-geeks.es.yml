@@ -142,7 +142,7 @@ alumni_projects:
 components:
   - name: "whatever"
     layout: choose_your_program
-    position: 5
+    position: 4
     heading:
       text: Nuestros Programas
     content:
@@ -151,27 +151,21 @@ components:
       path: ""
     programs:
     - title: "Full Stack Developer"
-      sub_title: "Nivel 1"
-      icon: "fullstack"
+      sub_title: "Desde Cero"
+      icon: "fullstack_2"
       description: |
-        Aprende desde cero, empezando por lo básico: HTML + CSS3 + Javascript.
-        
-        Aprende las habilidades más solicitadas con instructores apasionados y un plan de estudios práctico para ayudarte a encontrar un trabajo de programación como desarrollador Jr.
+        Convierte en un programador que utiliza las tecnologias más búscadas, mentoria personalizada y un plan de estudios y career support para conseguir tu primer trabajo.
       
-      text_link: Aplica a una beca
-      link: "#"
+      text_link: Aplica
+      link: "#" # moves to start position
       
-    - title: "Ingeniero de Software"
-      sub_title: "Nivel 2"
-      icon: "software"
+    - title: "Data Science & Machine Learning"
+      sub_title: "Desde Cero"
+      icon: "machine_2"
       description: |
-        Profundizamos a un nivel avanzado principios específicos de desarrollo, llevando tu carrera a otro nivel.
-        
-        Texto que resuma y explique que este programa tiene modalidad part time y full time. Que también resuma eficientemente el syballus del programa. Acá incluiría un <a href="/us/apply">link</a> para poder descargar el PDF con el detalle del programa.
-        Desarrolla más habilidades adentrándote en el mundo de computación y aplicaciones nativas de la nube. Aprende las habilidades que el 90% de las empresas Fortune 500 están buscando.
-      
-      text_link: Aplica a una beca
-      link: "#"
+        Conviértete en un científico de datos, desarrolla modelos de predicción y uneté a una de las profesiones mejores pagadas del mundo.
+      text_link: Aplica
+      link: "#" # moves to start position
       
   - name: top_coding_bootcamp
     position: 6

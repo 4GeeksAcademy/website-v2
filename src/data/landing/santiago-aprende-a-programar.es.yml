@@ -154,25 +154,23 @@ components:
     programs:
     - title: "Full Stack Developer"
       sub_title: "Nivel 1"
-      icon: "fullstack"
+      icon: "fullstack_2"
       description: |
         Aprende desde cero, empezando por lo básico: HTML + CSS3 + Javascript.
         
         Aprende las habilidades más solicitadas con instructores apasionados y un plan de estudios práctico para ayudarte a encontrar un trabajo de programación como desarrollador Jr.
       
-      text_link: Aplica a una beca
+      text_link: Postula
       link: "#"
-      
-    - title: "Ingeniero de Software"
+    - title: "NodeJs Back End Development"
       sub_title: "Nivel 2"
-      icon: "software"
+      icon: "software_2"
       description: |
-        Profundizamos a un nivel avanzado principios específicos de desarrollo, llevando tu carrera a otro nivel.
-        
-        Texto que resuma y explique que este programa tiene modalidad part time y full time. Que también resuma eficientemente el syballus del programa. Acá incluiría un <a href="/us/apply">link</a> para poder descargar el PDF con el detalle del programa.
-        Desarrolla más habilidades adentrándote en el mundo de computación y aplicaciones nativas de la nube. Aprende las habilidades que el 90% de las empresas Fortune 500 están buscando.
+        Este programa de estudio te permitirá trabajar y desarrollar el back-end de software y aplicaciones web, utilizando uno de los lenguajes de programacion más demandados en el mundo, Javascript.
+
+        Aprenderás a crear tu ambiente de trabajo y realizar las configuraciones pertinentes para poder trabajar con el stack más solicitado de NodeJs
       
-      text_link: Aplica a una beca
+      text_link: Postula
       link: "#"
   - name: python_y_javascript
     position: 6

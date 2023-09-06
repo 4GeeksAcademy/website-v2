@@ -149,7 +149,7 @@ components:
     programs:
     - title: "Full Stack Developer"
       sub_title: "Nivel 1"
-      icon: "fullstack"
+      icon: "fullstack_2"
       description: |
         Aprende desde cero, empezando por lo básico: HTML + CSS3 + Javascript.
         
@@ -160,7 +160,7 @@ components:
       
     - title: "Ingeniero de Software"
       sub_title: "Nivel 2"
-      icon: "software"
+      icon: "software_2"
       description: |
         Profundizamos a un nivel avanzado principios específicos de desarrollo, llevando tu carrera a otro nivel.
         
