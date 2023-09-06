@@ -44,11 +44,11 @@ const ChooseYourProgram = ({
   return (
     <Grid
       ref={chooseProgramRef}
-      gridTemplateColumns_md={landingTemplate && "1fr repeat(12,1fr) 1fr"}
+      gridTemplateColumns_md={landingTemplate && "4fr repeat(12,1fr) 4fr"}
       gridTemplateColumns_tablet={
-        landingTemplate ? "1fr repeat(12,1fr) 1fr" : "1fr repeat(12, 1fr) 1fr"
+        landingTemplate ? "4fr repeat(6, 1fr) 4fr" : "4fr repeat(6, 1fr) 4fr"
       }
-      gridTemplateColumns_xs= "1fr"//{landingTemplate && "1fr"}
+      gridTemplateColumns_xs="1fr"//{landingTemplate && "1fr"}
       gridAutoRows_tablet="auto" //"minmax(100px, auto)"
       background={landingTemplate ? Colors.white : Colors.verylightGray}
       background_tablet={landingTemplate ? Colors.white : "transparent"}
@@ -58,7 +58,7 @@ const ChooseYourProgram = ({
     //margin_tablet="0 0 100px 0"
     >
       <Div
-        margin_tablet="0 0 20px 0" 
+        margin_tablet="0 0 20px 0"
         margin_xs="30px 0 0 0"
         padding_tablet="0 20px"
         paddin_xs="0px 20px"
@@ -94,7 +94,7 @@ const ChooseYourProgram = ({
         //gridRow_tablet="2 / 4"
         zIndex="1"
         gridTemplateColumns_tablet={
-          landingTemplate ? "repeat(3, 4fr)" : "repeat(3, 4fr)"
+          landingTemplate ? "repeat(2, 4fr)" : "repeat(2, 4fr)"
         }
       >
         {Array.isArray(programs) &&
@@ -105,7 +105,7 @@ const ChooseYourProgram = ({
                 display="flex"
                 padding=" 24px 24px"
                 margin_xs="20px"
-                margin_tablet="0"
+                margin_tablet="0 5px"
                 border="3px solid black"
                 flexDirection_tablet="column"
                 flexDirection_xs="column"
@@ -130,6 +130,7 @@ const ChooseYourProgram = ({
                 >
                   <Div
                     display="inline"
+                    width="75%"
                   >
                     <H4
                       textTransform="uppercase"
@@ -150,14 +151,15 @@ const ChooseYourProgram = ({
                       </Link>
                     ))}
                   </Div>
-
-                  <Icon
-                    className="choose-your-program-icon"
-                    icon={program.icon}
-                    height="40px"
-                    width="52px"
-                    alignItems="end"
-                  />
+                  <Div float="right" width="25%">
+                    <Icon
+                      className="choose-your-program-icon"
+                      icon={program.icon}
+                      padding="0 0 0 20px"
+                      height="40px"
+                      width="52px"
+                    />
+                  </Div>
                 </Div>
                 <Div
                   display="flex"
