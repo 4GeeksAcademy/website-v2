@@ -72,15 +72,15 @@ short_badges:
 follow_bar:
   position: "top" # top, bottom, hidden
   content:
-    text: "Financiamiento sin interés. \n Plan de pago a 12 cuotas."
-    text_mobile: "Financiamiento sin interés. \n Hasta 12 cuotas."
+    text: "Financiamiento sin interés. \n Plan de pago a 9 cuotas."
+    text_mobile: "Financiamiento sin interés. \n Hasta 9 cuotas."
     # devices:    XL      LG      MD      SM       XS
     font_size: ["25px", "25px", "25px", "18px", "4.3vw"]
   button:
-    text: "Obtener más información"
-    path: "#top"
-  phone:
-    text: "Llama "
+    text: "Escribir por WhatsApp"
+    path: "https://api.whatsapp.com/send/?phone=56920065786&text&type=phone_number&app_absent=0&utm_source=GADS&utm_medium=GADS&utm_campaign=GADS&utm_id=GADS&utm_term=GADS&utm_content=GADS"
+  phone: 
+    text: ""
 
 #
 # ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇
