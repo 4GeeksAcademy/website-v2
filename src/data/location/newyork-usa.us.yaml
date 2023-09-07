@@ -85,8 +85,8 @@ online_available: false # important to accept online-only applicants
 
 city: "NYC"
 name: "NYC, USA"
-latitude: "25.760158"
-longitude: "-80.200154"
+latitude: "40.712776"
+longitude: "-74.005974"
 phone: "+1 (786) 416-6640"
 address: "1801 SW 3rd Ave #100"
 zip_code: "33130"
