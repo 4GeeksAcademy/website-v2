@@ -48,9 +48,9 @@ const ChooseYourProgram = ({
     <Grid
       ref={chooseProgramRef}
       gridTemplateColumns_md={landingTemplate ? "4fr repeat(12, 1fr) 4fr" : "2fr repeat(12, 1fr) 2fr"}
-      // gridTemplateColumns_tablet={
-      //   landingTemplate ? "4fr repeat(12, 1fr) 4fr" : "2fr repeat(12, 1fr) 2fr"
-      // }
+      gridTemplateColumns_tablet={
+        landingTemplate ? "4fr repeat(12, 1fr) 4fr" : "2fr repeat(12, 1fr) 2fr"
+      }
       gridTemplateColumns_xs="1fr"//{landingTemplate && "1fr"}
       gridAutoRows_tablet="auto" //"minmax(100px, auto)"
       //background={landingTemplate ? Colors.white : "transparent"}
@@ -97,7 +97,7 @@ const ChooseYourProgram = ({
         //gridRow_tablet="2 / 4"
         zIndex="1"
         gridTemplateColumns_tablet={
-          Array.isArray(programs) && `repeat(${programs.length}, 4fr)`
+          landingTemplate ? "repeat(2, 4fr)" : "repeat(3, 4fr)"
         }
       >
         {Array.isArray(programs) &&
@@ -124,10 +124,8 @@ const ChooseYourProgram = ({
                   placeSelf_tablet={landingTemplate && "flex-start"}
                   display="flex"
                   justifyContent="space-between"
-                  //alignSelf="center"
                   margin_xs="10px 0 0 0"
                   margin_tablet="0"
-                  //alignSelf_tablet="flex-end"
                   width="100%"
                   width_tablet="100%"
                 >
