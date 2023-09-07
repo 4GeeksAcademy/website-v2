@@ -40,22 +40,25 @@ const ChooseYourProgram = ({
   let info = data.allChooseYourProgramYaml.edges.find(
     ({ node }) => node.fields.lang === lang
   );
+  const linearGradient = (color1, color2) => {
+    return `linear-gradient(to right, ${color1}, ${color2})`;
+  };
   if (info) info = info.node;
   return (
     <Grid
       ref={chooseProgramRef}
-      gridTemplateColumns_md={landingTemplate && "4fr repeat(12,1fr) 4fr"}
-      gridTemplateColumns_tablet={
-        landingTemplate ? "4fr repeat(6, 1fr) 4fr" : "4fr repeat(6, 1fr) 4fr"
-      }
+      gridTemplateColumns_md={landingTemplate ? "4fr repeat(12, 1fr) 4fr" : "2fr repeat(12, 1fr) 2fr"}
+      // gridTemplateColumns_tablet={
+      //   landingTemplate ? "4fr repeat(12, 1fr) 4fr" : "2fr repeat(12, 1fr) 2fr"
+      // }
       gridTemplateColumns_xs="1fr"//{landingTemplate && "1fr"}
       gridAutoRows_tablet="auto" //"minmax(100px, auto)"
+      //background={landingTemplate ? Colors.white : "transparent"}
       background={landingTemplate ? Colors.white : Colors.verylightGray}
-      background_tablet={landingTemplate ? Colors.white : "transparent"}
+      //background_tablet={landingTemplate ? Colors.white : }
+
       padding_tablet="40px 17px"
       padding_xs=" 0 "
-    //margin="0 0 50px 0"
-    //margin_tablet="0 0 100px 0"
     >
       <Div
         margin_tablet="0 0 20px 0"
@@ -94,7 +97,7 @@ const ChooseYourProgram = ({
         //gridRow_tablet="2 / 4"
         zIndex="1"
         gridTemplateColumns_tablet={
-          landingTemplate ? "repeat(2, 4fr)" : "repeat(2, 4fr)"
+          Array.isArray(programs) && `repeat(${programs.length}, 4fr)`
         }
       >
         {Array.isArray(programs) &&
@@ -167,9 +170,9 @@ const ChooseYourProgram = ({
                   flexDirection="column"
                   width="100%"
                   alignContent="flex-start"
-                  margin_tablet="10px 0 50px 0"
-                  margin_xs="10px 0 50px 0"
-                  padding={landingTemplate ? "10px 0px 10px 0px" : "0 0 30px 15px"}
+                  margin_tablet={landingTemplate ? "10px 0 50px 0" : "10px 0 0 0"}
+                  margin_xs={landingTemplate ? "10px 0 50px 0" : "10px 0 0 0"}
+                  padding={landingTemplate ? "10px 0px 20px 0px" : "10px 0px 10px 0px"}
                 >
                   {program.description &&
                     program.description.split("\n").map((paragraph, index) => (
@@ -178,13 +181,12 @@ const ChooseYourProgram = ({
                         letterSpacing="0.05em"
                         display_tablet="block"
                         display_xs="inline"
-                        // lineHeight="22px"
                         textAlign="left"
                         fontSize="15px"
                         lineHeight="22px"
                         fontWeight="400"
                         opacity="1"
-                        margin={index == 0 && "10px 0px 25px 0"}
+                        margin={index == 0 && "10px 0px 10px 0"}
                         dangerouslySetInnerHTML={{ __html: paragraph }}
                       />
                     ))}
@@ -194,7 +196,6 @@ const ChooseYourProgram = ({
                       letterSpacing="0.05em"
                       display="block"
                       display_tablet="none"
-                      // lineHeight="22px"
                       textAlign="left"
                       fontSize="15px"
                       lineHeight="19px"
@@ -206,7 +207,7 @@ const ChooseYourProgram = ({
                     </Paragraph>
                   )}
                 </Div>
-                <Div margin_xs="24px 0 0 0">
+                <Div margin_xs="0 0 0 0">
                   {!program.comming_soon ? (
                     <Link to={program.link}>
                       {landingTemplate ? (
@@ -222,22 +223,23 @@ const ChooseYourProgram = ({
                             bottom: "24px",
                             left: "24px",
                           }}
-                        // backgroundColor="#000" width="184" height="40"
                         >
                           {program.text_link}
                         </Button>
                       ) : (
-                        <Icon
-                          className="mobile"
-                          style={{
-                            position: "absolute",
-                            bottom: "10px",
-                            right: "10px",
-                          }}
-                          icon="arrowright"
-                          height="32px"
-                          width="32px"
-                        />
+                        <Div displey="flex">
+                          <Icon
+                            className="mobile"
+                            style={{
+                              position:"absolute",
+                              bottom: "24px",
+                              right: "24px",
+                            }}
+                            icon="arrowright"
+                            height="32px"
+                            width="32px"
+                          />
+                        </Div>
                       )}
                     </Link>
                   ) : (

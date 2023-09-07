@@ -378,7 +378,7 @@ const CampusMenu = ({ status, setStatus, menu }) => {
                       fontWeight="400"
                       margin="0 5px 0 0"
                     >
-                      {l.title + "ACAAAAAAAAAAAAAAAAAAAAA"}
+                      {l.title}
                     </H3>
                     <Icon
                       icon="arrow-right"
