@@ -1,34 +1,34 @@
 meta_info:
-  slug: bootcamp-colombia-jg # <--- URL 4geeksacademy.com/us/landing/example
+  slug: bootcamp-mexico # <--- URL 4geeksacademy.com/us/landing/example
 
   # This will show on social media when shared
-  title: "Bootcamp de programación en Colombia, consigue empleo como programador."
-  description: "Únete a 4Geeks Academy y consigue empleo 6 meses luego de haber recibido nuestro certificado."
+  title: "Bootcamp de programación en México. Aprende a programar y consigue empleo como programador."
+  description: "Aprende programación en uno de los coding bootcamps más importantes del mundo y consigue miles de oportunidades laborales, consigue un mejor futuro con 4geeks."
   image: "/images/bg/main-bg.jpg"
-  keywords: "Bootcamp de Programación, Bootcamp programacion Colombia, Bootcamp de python, Bootcamp de React y Javascript, Bootcamp de Informática, Coding Bootcamp, 4Geeks Academy"
+  keywords: "Bootcamp de Programación, Bootcamp programacion Mexico, Bootcamp de python, Bootcamp de React y Javascript, Bootcamp de Informática, Coding Bootcamp, 4Geeks Academy"
 
   template: "landing_a" # <--- choose your landing template
   redirects: # <--- URL redirections to avoid 404 errors
-    ["/landing/bootcamp-colombia-jg"]
+    ["/landing/bootcamp-mexico"]
 
   # Set a particular course or location to the landing page
   # this UTM fields will be also included in the CRM contact
   utm_course: ["full-stack"]
-  utm_location: ["bogota-colombia"]
-  automation: soft # comma separated, "soft" is the default value
-  tag: request_more_info # comma separated, "request_more_info" is the default value
+  utm_location: ["mexicocity-mexico"]
+  automation: strong # comma separated, "soft" is the default value
+  tag: website-lead # comma separated, "request_more_info" is the default value
 
 form:
   # posible fields: "first_name", "last_name", "full_name", "phone", "email"
   # always the first_name, email and phone will be mandatory if added.
   fields: ["full_name", "phone", "email"]
   heading: "Aplica a 4Geeks"
-  motivation: "Únete a miles de graduados que viven como programadores y trabajan en grandes empresas."
+  motivation: "Este es el futuro que estabas buscando."
   button_label: APLICA YA
   redirect: "/es/gracias/?lang=es"  #you can redirect to another url or entirely diffrent website
 
 navbar:
-  buttonText: "APLICA YA"
+  buttonText: "APLICAR AHORA"
   buttonUrl: "#bottom" # url accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
   logoUrl: "#"
 
@@ -41,8 +41,8 @@ apply_schollarship: # form that is displayed at the end of the landing
 # jumbotron on the top (cannot be commented out)
 header_data:
   background: "#FFF1D1"
-  tagline: Empleo Garantizado en 6 meses con nuestro programa Full-Stack Developer 
-  sub_heading: Si no consigues empleo con nuestro Programa te devolvemos tu dinero. Da el paso hoy y Conviértete en Full-Stack Developer.
+  tagline: Aprende a programar desde cero o potencia tu carrera en el mundo tech
+  sub_heading: Forma parte hoy de una experiencia sin igual que llevará tu carrera al siguiente nivel
   badge: "../../../static/images/badges/Course-Report-Badge-2023.png"
   image_filter: brightness(0.3)
 
@@ -52,11 +52,9 @@ features:
   #                                         up   left down  right
   styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
   bullets:
-    - 84% de nuestros alumnos han sido contratados.
-    - Mentorías y career support de por vida
-    - Programa Part Time 100% remoto.
-    - Aprovecha nuestras opciones de Financiamiento
-    
+    - Mentorías de código ilimitadas, apoyo profesional de por vida y mucho más…
+    - Programa 100% Remoto y Medio Tiempo. ¡Certificate en tan solo 18 semanas!
+    - Contamos con un plan de Trabajo Garantizado y distintas opciones de Financiamiento. 
 
 short_badges:
   - name: "Premios Tecnologia Siglo XXI"
@@ -94,7 +92,7 @@ follow_bar:
 #
 
 rating_reviews:
-  position: 1
+  position: 2
   heading: "Lee acerca de nosotros"
   rating_list:
     - alt: "Career Karma"
@@ -115,35 +113,17 @@ rating_reviews:
       url: ""
 
 badges:
-  position: 2
+  position: 3
   heading: "4Geeks Academy cuenta con premios y reconocimientos que validan su excelencia"
 
 program_details:
-  position: 3
+  position: 1
   background: "#FFFFFF"
   heading: "Domina Python, JS y React"
   sub_heading: "Un curso de programación sobre las tecnologías más usadas del mundo"
 
-iconogram:
-  position: 4
-  icons:
-  - icon: "touch" 
-    title: Incríbete en el Programa
-  - icon: "instructor"
-    title: Obtén tu certificación
-  - icon: "talk"
-    title: Completa Nuestro GeekForce
-  - icon: "terminal"
-    title: Consigue tu Empleo soñado
-
-geeks_vs_others:
-  position: 6
-  heading: "¿Qué hace a este bootcamp tan exitoso?"
-  paragraph: "Top bootcamp en el mundo y #1 en Colombia"
-  total_rows: 5
-
 why_4geeks:
-  position: 7
+  position: 4
   heading: "Por qué 4Geeks"
   sub_heading: " "
 
@@ -153,25 +133,3 @@ who_is_hiring:
   heading: "¿Quién contrata a nuestros alumnos?"
   sub_heading: "84% de nuestros estudiantes que completaron el proceso de GeekFORCE han conseguido trabajo luego de haberse graduado (incluso dentro de los sigiuientes  100 días)"
 
-alumni_projects:
-  position: 9
-  heading: "Así podría ser tu proyecto final del curso"
-  sub_heading: "Proyectos hechos por estudiantes de la academia"
-
-components:
-  - name: python_y_javascript
-    position: 5
-    layout: two_column_right
-    background: "veryLightBlue2" # Name of the color(from components/Styling/index.js) or color code ex: #C9F9F9
-    image:
-      src: "/images/why-4geeks/python-image.png"
-    heading:
-      text:
-        "Python y Javascript"
-        #           xl      lg      md      sm      xs
-      font_size: ["50px", "50px", "50px", "50px", "50px"]
-    content:
-      text: "Nuestro programa está basado en el uso de Python y Javascript. ¿La razón? En el mercado laboral JavaScript tiene 26 veces más vacantes de trabajo que Ruby on Rails y Python te permite acceder a distintas áreas del mundo de la programación."
-      
-      Otras herramientas que también aprenderás a usar en nuestro programa son: HTML5, CSS3, React, Flask, etc."
-      font_size: ["16px"]
