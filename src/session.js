@@ -88,7 +88,11 @@ export default ({ children }) => {
           urlParams.get("city") ||
           urlParams.get("utm_location") ||
           null,
-        gclid: urlParams.get("gclid") || urlParams.get("fbclid") || urlParams.get("ttclid") || undefined,
+        gclid:
+          urlParams.get("gclid") ||
+          urlParams.get("fbclid") ||
+          urlParams.get("ttclid") ||
+          undefined,
         utm_medium: urlParams.get("utm_medium") || undefined,
         utm_campaign: urlParams.get("utm_campaign") || undefined,
         utm_content: urlParams.get("utm_content") || undefined,
@@ -103,7 +107,7 @@ export default ({ children }) => {
       },
     };
     const worker = new Worker(new URL("./worker.js", import.meta.url));
-
+    console.log("Initializing worker with: ", message)
     worker.postMessage(message);
     worker.onmessage = (e) => {
       const _session = e.data;

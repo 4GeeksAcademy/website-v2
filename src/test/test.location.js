@@ -74,6 +74,7 @@ walk(`${__dirname}/../data/location`, async (err, files) => {
       f.indexOf("call-to-actions.yml") === -1
   );
 
+  let allCoordinates = {};
   let slugs = [];
 
   for (let i = 0; i < _files.length; i++) {
@@ -159,6 +160,30 @@ walk(`${__dirname}/../data/location`, async (err, files) => {
         }
       });
 
+      if (
+        allCoordinates[location.latitude] != undefined &&
+        allCoordinates[location.latitude] != location.breathecode_location_slug
+      )
+        fail(
+          `❌ ERROR: Location ${
+            location.breathecode_location_slug
+          } has same latitude as ${allCoordinates[location.latitude]}\n`
+        );
+      else
+        allCoordinates[location.latitude] = location.breathecode_location_slug;
+
+      if (
+        allCoordinates[location.longitude] != undefined &&
+        allCoordinates[location.longitude] != location.breathecode_location_slug
+      )
+        fail(
+          `❌ ERROR: Location ${
+            location.breathecode_location_slug
+          } has same longitude as ${allCoordinates[location.longitude]}\n`
+        );
+      else
+        allCoordinates[location.longitude] = location.breathecode_location_slug;
+
       locations_fields.forEach((field) => {
         if (!meta_keys.includes(field["key"]) && field["mandatory"] === true)
           warn(`Missing prop ${field["key"]} from location on ${_path}`);
@@ -173,7 +198,7 @@ walk(`${__dirname}/../data/location`, async (err, files) => {
             location_fields_es !== location_fields_us
           ) {
             fail(
-              `❌ ERROR: key ${field["key"].yellow} trying match ${location_fields_es.yellow} with ${location_fields_us.yellow} in ${path}.yaml\n`
+              `❌ ERROR: ${field["key"].yellow} for spanish ${location_fields_es.yellow} musth match with english ${location_fields_us.yellow} in ${path}\n`
             );
           }
         });

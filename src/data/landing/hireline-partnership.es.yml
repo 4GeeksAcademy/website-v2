@@ -70,15 +70,15 @@ short_badges:
 follow_bar:
   position: "top" # top, bottom, hidden
   content:
-    text: "Financiamiento sin interés. \n Plan de pago a 12 cuotas."
-    text_mobile: "Financiamiento sin interés. \n Hasta 12 cuotas."
+    text: "Diversos planes de financiamiento. \n Plan de pago a 12 cuotas."
+    text_mobile: "Diversos planes de financiamiento. \n Hasta 12 cuotas."
     # devices:    XL      LG      MD      SM       XS
     font_size: ["25px", "25px", "25px", "18px", "4.3vw"]
   button:
     text: "Obtener más información"
     path: "#top"
   phone:
-    text: "Llama"
+    text: ""
 
 #
 # ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇
