@@ -1,7 +1,8 @@
 import React from "react";
-import { H2, H3, H4 } from "../Heading";
+import { H2, H3, H4, Paragraph } from "../Heading";
 import { Colors } from "../Styling";
 import { Div } from "../Sections";
+import { Link } from "gatsby";
 import Icon from "../Icon";
 
 const positions = [
@@ -19,7 +20,7 @@ const positions = [
   },
 ];
 
-export default (props) => {
+export default ({icon, title, content}) => {
   return (
     <Div
       gridGap="0"
@@ -28,21 +29,27 @@ export default (props) => {
       justifyContent_tablet="center"
       flexDirection="column"
       flexDirection_tablet="column"
+      height="auto"
     >
       <Div flexDirection="column" alignItems="center">
-        <Icon icon={props.icon} width="94" height="98" />
+        <Icon icon={icon} width="94" height="98" />
         <H2
           type="h2"
-          fontSize="15px"
+          fontSize="16px"
           width="140px"
           width_md="auto"
-          textTransform="uppercase"
           lineHeight="19px"
           padding="20px 0"
           padding_tablet="20px 15%"
         >
-          {props.title}
+          {title}
         </H2>
+        <Paragraph
+          fontSize="14px"
+          lineHeight="17px"  
+        >
+          {content}
+        </Paragraph>
       </Div>
     </Div>
   );

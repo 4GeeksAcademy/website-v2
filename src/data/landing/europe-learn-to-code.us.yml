@@ -104,6 +104,7 @@ about4Geeks:
 
 iconogram:
   position: 3
+  text_link: "/"
   icons:
   - icon: "touch"
     title: Apply for your scholarship before October 8th, 2021

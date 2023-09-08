@@ -1,6 +1,6 @@
 import React from "react";
 import { GridContainerWithImage, Div, GridContainer } from "../Sections";
-import { H2, H5, H4, Paragraph } from "../Heading";
+import { H3, H2, H5, H4, Paragraph } from "../Heading";
 import { Colors, Img, Button, StyledBackgroundSection, Link } from "../Styling";
 import Badges from "../Badges";
 import News from "../News";
@@ -606,34 +606,81 @@ export const landingSections = {
   },
 
   iconogram: ({ session, data, pageContext, yml, index }) => {
-    let dataYml =
-      data.allLandingYaml.edges.length !== 0 &&
-        data.allLandingYaml.edges[0].node.iconogram !== null
-        ? data.allLandingYaml.edges
-        : data.allDownloadableYaml.edges;
-    let content = dataYml[0].node.iconogram;
+    // let dataYml =
+    //   data.allLandingYaml.edges.length !== 0 &&
+    //     data.allLandingYaml.edges[0].node.iconogram !== null
+    //     ? data.allLandingYaml.edges
+    //     : data.allDownloadableYaml.edges;
+    // let content = dataYml[0].node.iconogram;
+    const { background, heading, sub_heading, icons, text_link, layout } = yml
     return (
+
       <GridContainer
         key={index}
         id="iconogram"
-        background={Colors.lightYellow}
-        columns="2"
+        columns="1"
         rows="2"
-        columns_tablet="4"
         margin="0 0 58px 0"
-        height="470px"
-        height_tablet="320px"
+        height="auto"
+        background={ Colors.lightYellow}
+        //height_tablet="320px"
         margin_tablet="0 0 78px 0"
+        padding_tablet="50px 0 50px 0"
       >
-        {Array.isArray(content.icons) &&
-          content.icons?.map((item, i) => {
-            return (
-              <React.Fragment key={i}>
-                <IconsBanner icon={item.icon} title={item.title} />
-              </React.Fragment>
-            );
-          })}
+        <Div
+          columns="1"
+          display="block"
+        >
+          {heading &&
+            <H2
+              type="h2"
+              lineHeight="38px"
+              lineHeight_tablet="38px"
+              fontSize={layout ? "30px" : "24px"}
+              //fs_xl={h_xl}
+              //fontSize_md="40px"
+              // fontSize_sm={h_sm}
+              margin="30px 0 20px 0"
+              style={{ textAlign: "center" }}
+            >
+              {heading.text}
+            </H2>
+          }
+          {sub_heading && /<\/?[a-z0-9]+>/g.test(sub_heading.text) &&
+            <Paragraph
+              padding={heading ? "0" : "20px"}
+              margin="15px 0"
+              fontSize="16px"
+              fontHeight="30px"
+              //style={sub_heading.style ? JSON.parse(sub_heading.style) : null}
+              // style={{textAlign:'center'}}
+              dangerouslySetInnerHTML={{ __html: sub_heading.text }}
+            />
+          }
+          </Div>
+          <Div
+            display="flex"
+            justifyContent="center"
+          >
+          {Array.isArray(icons) &&
+            icons?.map((item, index) => {
+              return (
+                <React.Fragment key={index}>
+                  {console.log(item)}
+                  <IconsBanner icon={item.icon} title={item.title} content={item.content}/>
+                </React.Fragment>
+              );
+            })}
+          </Div>
+          <Link to={text_link} display="block">
+            <H3 
+              fontSize="18px"
+            >
+              Conditions Apply.
+            </H3>
+          </Link>
       </GridContainer>
+
     );
   },
 
