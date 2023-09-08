@@ -115,8 +115,9 @@ choose_your_program:
 
 iconogram:
   position: 2
-  heading:
-    text: "Aqui puede ser un titulo"
+  heading: "Aqui puede ser un titulo"
+  sub_heading: "Aqui va un subtitulo"
+  text_link: "#"
   icons:
   - icon: "graduation-2" 
     title: ""

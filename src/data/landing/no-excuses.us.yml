@@ -119,8 +119,6 @@ program_details:
 
 iconogram:
   position: 2
-  heading:
-    text: "Aqui puede ser un titulo"
   icons:
   - icon: "touch" 
     title: Request Info

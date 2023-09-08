@@ -408,9 +408,8 @@ export const query = graphql`
           iconogram {
             position
             text_link
-            heading{
-              text
-            }
+            heading
+            sub_heading
             icons {
               icon
               title
@@ -516,12 +515,6 @@ export const query = graphql`
             swipable
             proportions
             layout
-            text_link
-            icons{
-              icon
-              title
-              content
-            }
             image {
               src
               style
@@ -707,9 +700,8 @@ export const query = graphql`
           iconogram {
             position
             text_link
-            heading{
-              text
-            }
+            heading
+            sub_heading
             icons {
               icon
               title
@@ -814,12 +806,7 @@ export const query = graphql`
             background
             proportions
             layout
-            text_link
-            icons{
-              icon
-              title
-              content
-            }
+            
             image {
               src
               style

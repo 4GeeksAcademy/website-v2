@@ -612,7 +612,7 @@ export const landingSections = {
     //     ? data.allLandingYaml.edges
     //     : data.allDownloadableYaml.edges;
     // let content = dataYml[0].node.iconogram;
-    const { background, heading, sub_heading, icons, text_link, layout } = yml
+    const {heading, sub_heading, icons, text_link } = yml
     return (
 
       <GridContainer
@@ -622,7 +622,7 @@ export const landingSections = {
         rows="2"
         margin="0 0 58px 0"
         height="auto"
-        background={ Colors.lightYellow}
+        background={Colors.lightYellow}
         //height_tablet="320px"
         margin_tablet="0 0 78px 0"
         padding_tablet="50px 0 50px 0"
@@ -636,7 +636,7 @@ export const landingSections = {
               type="h2"
               lineHeight="38px"
               lineHeight_tablet="38px"
-              fontSize={layout ? "30px" : "24px"}
+              fontSize="24px"
               //fs_xl={h_xl}
               //fontSize_md="40px"
               // fontSize_sm={h_sm}
@@ -666,7 +666,6 @@ export const landingSections = {
             icons?.map((item, index) => {
               return (
                 <React.Fragment key={index}>
-                  {console.log(item)}
                   <IconsBanner icon={item.icon} title={item.title} content={item.content}/>
                 </React.Fragment>
               );
