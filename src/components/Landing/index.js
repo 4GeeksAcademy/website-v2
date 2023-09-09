@@ -460,9 +460,9 @@ export const Columns = ({ columns, proportions, swipable }) => {
         <Div
           key={index}
           flexDirection="column"
-          size={c.size[0]}
-          size_sm={c.size[2]}
-          size_xs={c.size[3]}
+          // size={c.size[0]}
+          // size_sm={c.size[2]}
+          // size_xs={c.size[3]}
           textAlign={c.align}
           minWidth="250px"
           margin="25px 15px 0 15px"
