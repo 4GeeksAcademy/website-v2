@@ -47,21 +47,19 @@ const ChooseYourProgram = ({
   return (
     <Grid
       ref={chooseProgramRef}
-      gridTemplateColumns_md={landingTemplate ? "4fr repeat(12, 1fr) 4fr" : "2fr repeat(12, 1fr) 2fr"}
+      gridTemplateColumns_md={landingTemplate ? "4fr repeat(12, 1fr) 4fr" : "repeat(14, 1fr)"}
       gridTemplateColumns_tablet={
-        landingTemplate ? "4fr repeat(12, 1fr) 4fr" : "2fr repeat(12, 1fr) 2fr"
+        landingTemplate ? "4fr repeat(12, 1fr) 4fr" : "repeat(14, 1fr)"
       }
       gridTemplateColumns_xs="1fr"//{landingTemplate && "1fr"}
       gridAutoRows_tablet="auto" //"minmax(100px, auto)"
-      //background={landingTemplate ? Colors.white : "transparent"}
       background={landingTemplate ? Colors.white : Colors.verylightGray}
-      //background_tablet={landingTemplate ? Colors.white : }
-
+      background_tablet={landingTemplate ? Colors.white : "transparent"}
       padding_tablet="40px 17px"
-      padding_xs=" 0 "
+      padding_xs="0 10px 40px 10px "
     >
       <Div
-        margin_tablet="0 0 20px 0"
+        margin_tablet="50px 0 30px 0"
         margin_xs="30px 0 0 0"
         padding_tablet="0 20px"
         paddin_xs="0px 20px"
@@ -71,6 +69,7 @@ const ChooseYourProgram = ({
         gridRow_tablet="1 / 1"
         flexDirection="column"
         width="100%"
+        zIndex="1"
       >
         <H2
           //margin="0 0 10px 0"
@@ -93,12 +92,20 @@ const ChooseYourProgram = ({
         </Paragraph>
       </Div>
       <Grid
-        gridColumn_tablet="2 / 14"
-        //gridRow_tablet="2 / 4"
-        zIndex="1"
-        gridTemplateColumns_tablet={
+        gridColumn_tablet={landingTemplate ? "1 / 15" : "1 / 14"}
+        padding_tablet={landingTemplate ? "0 17px" : "0"}
+        padding_md="0"
+        gridColumn_md="2 / 14"
+        gridRow_tablet="2 / 4"
+        gridTemplateColumns_md={
           landingTemplate ? "repeat(2, 4fr)" : "repeat(3, 4fr)"
         }
+        gridTemplateColumns_tablet={
+          landingTemplate ? "repeat(2, 4fr)" : "repeat(3 , 33%)"
+        }
+        zIndex="1"
+        margin_tablet={!landingTemplate && "0 0 0 35px" }
+        margin_md="0"
       >
         {Array.isArray(programs) &&
           programs.map((program, index) => {
@@ -108,17 +115,20 @@ const ChooseYourProgram = ({
                 display="flex"
                 padding=" 24px 24px"
                 margin_xs="20px"
-                margin_tablet="0 5px"
+                margin_tablet="0px"
                 border="3px solid black"
                 flexDirection_tablet="column"
                 flexDirection_xs="column"
                 alignItems="center"
                 justifyContent="space-between"
-                alignItems_tablet="flex-end"
+                //alignItems_tablet="flex-end"
                 background="#ffffff"
                 style={{ position: "relative" }}
                 flexWrap_sm="nowrap"
                 flexWrap="wrap"
+                zIndex="1"
+                width_md="100%"
+                width_tablet="100%"
               >
                 <Div
                   placeSelf_tablet={landingTemplate && "flex-start"}
@@ -170,14 +180,14 @@ const ChooseYourProgram = ({
                   alignContent="flex-start"
                   margin_tablet={landingTemplate ? "10px 0 50px 0" : "10px 0 0 0"}
                   margin_xs={landingTemplate ? "10px 0 50px 0" : "10px 0 0 0"}
-                  padding={landingTemplate ? "10px 0px 20px 0px" : "10px 0px 10px 0px"}
+                  padding={landingTemplate ? "10px 0px 20px 0px" : "10px 0px 15px 0px"}
                 >
                   {program.description &&
                     program.description.split("\n").map((paragraph, index) => (
                       <Paragraph
                         key={index}
                         letterSpacing="0.05em"
-                        display_tablet="block"
+                        display_tablet="inline"
                         display_xs="inline"
                         textAlign="left"
                         fontSize="15px"
@@ -205,7 +215,7 @@ const ChooseYourProgram = ({
                     </Paragraph>
                   )}
                 </Div>
-                <Div margin_xs="0 0 0 0">
+                <Div margin="20px 0 0 0">
                   {!program.comming_soon ? (
                     <Link to={program.link}>
                       {landingTemplate ? (
@@ -215,7 +225,7 @@ const ChooseYourProgram = ({
                           background={Colors.black}
                           colorHover={Colors.black}
                           color={Colors.white}
-                          className="mobile"
+                          //className="mobile"
                           style={{
                             position: "absolute",
                             bottom: "24px",
@@ -227,7 +237,7 @@ const ChooseYourProgram = ({
                       ) : (
                         <Div displey="flex">
                           <Icon
-                            className="mobile"
+                            //className="mobile"
                             style={{
                               position:"absolute",
                               bottom: "24px",
@@ -251,7 +261,11 @@ const ChooseYourProgram = ({
                         textColor={Colors.black}
                         fontSize={"13px"}
                         borderRadius="3px"
+                        //margin_xs="5px 0 0 0"
                         padding="10px"
+                        position="absolute"
+                        bottom="24px"
+                        right="24px"
                       >
                         {program.text_link}
                       </Button>
@@ -264,11 +278,13 @@ const ChooseYourProgram = ({
           })}
       </Grid>
       <Div
-        display="none"
+        display_xs="none"
         display_tablet="flex"
-        padding_tablet="75px 0 0 0"
+        //padding_tablet="75px 0 0 0"
         background={Colors.verylightGray}
         zIndex="-1"
+        height_tablet="350px"
+        height_xs="100%"
         gridColumn_tablet="1 / 15"
         gridRow_tablet="1 / 3"
         gridRow="1 / 4"
