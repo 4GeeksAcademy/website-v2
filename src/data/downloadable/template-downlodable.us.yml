@@ -187,7 +187,7 @@ apply_schollarship: # form that is displayed at the end of the landing
 # Possible layours: [two_column_left, two_column_right]
 components:
   - name: how-it-works
-    position: 2
+    position: 3
     background: "veryLightBlue2"
     layout: iconogram
     swipable: True
@@ -343,14 +343,4 @@ testimonial:
     comment: For me the most amazing thing about 4Geeks was the syllabus, the fact that you guys teach exactly what the market is looking for.
     video: https://www.youtube.com/watch?v=LvnxLyqaQDo
 
-iconogram:
-  position: 3    
-  icons:
-  - icon: "touch"
-    title: Apply for your scholarship before October 8th, 2021
-  - icon: "receive_mail"
-    title: You will receive an email with all the information and a logic test 
-  - icon: "talk"
-    title: Do an online interview with our admissions team 
-  - icon: "terminal"
-    title: Get the result, book your spot and start coding
+

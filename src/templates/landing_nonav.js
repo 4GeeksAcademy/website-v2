@@ -405,14 +405,7 @@ export const query = graphql`
               }
             }
           }
-          iconogram {
-            position
-            
-            icons {
-              icon
-              title
-            }
-          }
+      
           in_the_news {
             heading
             position
@@ -700,14 +693,7 @@ export const query = graphql`
               }
             }
           }
-          iconogram {
-            position
-            
-            icons {
-              icon
-              title
-            }
-          }
+          
           in_the_news {
             heading
             position
