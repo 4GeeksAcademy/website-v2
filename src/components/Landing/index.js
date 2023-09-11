@@ -632,11 +632,12 @@ export const landingSections = {
         padding_xs="50px 10px"
         padding_tablet="50px 0"
         justifyItems="center"
+        justifyContent="center"
       >
         <Div
           columns="1"
           display="block"
-          
+  
         >
           {heading &&
             <H2
@@ -644,9 +645,6 @@ export const landingSections = {
               lineHeight="28px"
               lineHeight_tablet="28px"
               fontSize="30px"
-              //fs_xl={h_xl}
-              //fontSize_md="40px"
-              // fontSize_sm={h_sm}
               margin="30px 0 30px 0"
               style={{ textAlign: "center" }}
             >
@@ -659,8 +657,6 @@ export const landingSections = {
               margin="15px 0"
               fontSize="16px"
               fontHeight="30px"
-              //style={sub_heading.style ? JSON.parse(sub_heading.style) : null}
-              // style={{textAlign:'center'}}
               dangerouslySetInnerHTML={{ __html: sub_heading.text }}
             />
           }
@@ -669,6 +665,7 @@ export const landingSections = {
           display="flex"
           justifyContent="center"
           flexDirection_tablet="row"
+          flexDirection_sm={icons.length > 3 ? "row" : "column"}
           flexDirection_xs="column"
         >
           {Array.isArray(icons) &&

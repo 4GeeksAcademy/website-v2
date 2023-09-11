@@ -24,29 +24,31 @@ export default ({ icon, title, content }) => {
   return (
     <Div
       gridGap="0"
-      alignItems="center"
-      justifyContent="center"
-      justifyContent_tablet="center"
+      //alignItems="stretch"
+      justifyContent_tablet="flex-start"
+      justifyContent_xs="flex-start"
       flexDirection="column"
       flexDirection_tablet="column"
       height="auto"
-      width="300px"
+      width_tablet="100%"
       width_xs="100%"
-      margin_tablet="0 20px"
+      margin_tablet="0"
       margin_xs="20px 0"
-      padding_xs="0"
+      padding_xs="0 "
+      display="flex"
     >
       <Div
         display="flex"
         flexDirection="column"
         alignItems="center"
-        padding_xs="0 15%"
+        padding_tablet="0 10px"
+        padding_xs="0 10%"
       >
         <Icon 
           icon={icon} 
           width="94" 
           height="98" 
-          margin="0 0 20px 0"
+          margin="0 0 20px 0" 
         />
         {
           title &&
@@ -58,6 +60,7 @@ export default ({ icon, title, content }) => {
             lineHeight="19px"
             padding="20px 0"
             padding_tablet="20px 15%"
+            textAlign="center"
           >
             {title}
           </H2>
@@ -69,6 +72,8 @@ export default ({ icon, title, content }) => {
             lineHeight="17px"
             color={Colors.black}
             margin_xs="10px 0 0 0"
+            width="100%"
+            textAlign="center"
           >
             {content}
           </Paragraph>
