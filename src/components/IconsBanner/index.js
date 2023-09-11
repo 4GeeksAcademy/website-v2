@@ -20,7 +20,7 @@ const positions = [
   },
 ];
 
-export default ({icon, title, content}) => {
+export default ({ icon, title, content }) => {
   return (
     <Div
       gridGap="0"
@@ -30,26 +30,50 @@ export default ({icon, title, content}) => {
       flexDirection="column"
       flexDirection_tablet="column"
       height="auto"
+      width="300px"
+      width_xs="100%"
+      margin_tablet="0 20px"
+      margin_xs="20px 0"
+      padding_xs="0"
     >
-      <Div flexDirection="column" alignItems="center">
-        <Icon icon={icon} width="94" height="98" />
-        <H2
-          type="h2"
-          fontSize="16px"
-          width="140px"
-          width_md="auto"
-          lineHeight="19px"
-          padding="20px 0"
-          padding_tablet="20px 15%"
-        >
-          {title}
-        </H2>
-        <Paragraph
-          fontSize="14px"
-          lineHeight="17px"  
-        >
-          {content}
-        </Paragraph>
+      <Div
+        display="flex"
+        flexDirection="column"
+        alignItems="center"
+        padding_xs="0 15%"
+      >
+        <Icon 
+          icon={icon} 
+          width="94" 
+          height="98" 
+          margin="0 0 20px 0"
+        />
+        {
+          title &&
+          <H2
+            type="h2"
+            fontSize="16px"
+            width="140px"
+            width_md="auto"
+            lineHeight="19px"
+            padding="20px 0"
+            padding_tablet="20px 15%"
+          >
+            {title}
+          </H2>
+        }
+        {
+          content &&
+          <Paragraph
+            fontSize="14px"
+            lineHeight="17px"
+            color={Colors.black}
+            margin_xs="10px 0 0 0"
+          >
+            {content}
+          </Paragraph>
+        }
+
       </Div>
     </Div>
   );

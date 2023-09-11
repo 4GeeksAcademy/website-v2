@@ -113,25 +113,9 @@ choose_your_program:
     link: "#"
 
 
-# iconogram:
-#   position: 2
-#   heading: "Aqui puede ser un titulo"
-#   sub_heading: "Aqui va un subtitulo"
-#   text_link: "#"
-#   icons:
-#   - icon: "graduation-2" 
-#     title: ""
-#     content: "Apply to the United Way Miami Workforce Project to jumpstart your career in coding."
-#   - icon: "laptop_new"
-#     title: ""
-#     content: "Once accepted, students enroll in the 4Geeks Full-Stack Software Development Program. 4Geeks provides quality training and offers supporting services —like resume review and career coaching—to help participants find jobs after graduating."
-#   - icon: "circle"
-#     title: ""
-#     content: "Participants pay program costs after they start jobs making more than $35,000 a year. Participants who don't find a job or keep jobs with salaries above $35,000 pay nothing."
-
 components:
   - name: how-it-works
-    position: 2
+    position: 3
     background: "veryLightBlue2"
     layout: iconogram
     swipable: True
@@ -139,10 +123,9 @@ components:
       text: "How It Works"
       font_size: ["30px", "30px", "30px", "30px", "30px"]
     sub_heading:
-      text: "According to the U.S. Bureau of Labor Statistics, <strong style="font-weight: bold;">software developers in the U.S. have a higher than average job outlook and earn a median salary of $110,140 a year</strong>. Improve your chances to be one of them."
+      text: 'According to the U.S. Bureau of Labor Statistics, <strong style="font-weight: bold;">software developers in the U.S. have a higher than average job outlook and earn a median salary of $110,140 a year</strong>. Improve your chances to be one of them.'
       font_size: ["16px", "16px", "16px", "16px", "16px"]
       style: '{ "textAlign": "center", "width": "60%" }'
-    text_link: "#"
     icons:
       - icon: "graduation-2" 
         title: ""
@@ -150,7 +133,7 @@ components:
       - icon: "laptop_new"
         title: ""
         content: "Once accepted, students enroll in the 4Geeks Full-Stack Software Development Program. 4Geeks provides quality training and offers supporting services —like resume review and career coaching—to help participants find jobs after graduating."
-      - icon: "circle"
+      - icon: "handmoney"
         title: ""
         content: "Participants pay program costs after they start jobs making more than $35,000 a year. Participants who don't find a job or keep jobs with salaries above $35,000 pay nothing."
 

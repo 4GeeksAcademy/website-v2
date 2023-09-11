@@ -88,7 +88,7 @@ follow_bar:
 
 components:
   - name: how-it-works
-    position: 3
+    position: 2
     background: "veryLightBlue2"
     layout: iconogram
     swipable: True
@@ -99,6 +99,7 @@ components:
       text: 'La Fundación United Way y 4Geeks Academy España se unen con el objetivo de proporcionar formación digital a través de becas a personas con bajos recursos económicos, para que inicien su carrera profesional en el ámbito de la tecnología, mejorando la inclusión en un sector poco diverso.'
       font_size: ["16px", "16px", "16px", "16px", "16px"]
       style: '{ "textAlign": "center", "width": "60%" }'
+    text_link: "#"
     icons:
     - icon: "graduation-2" 
       title: REQUEST INFO

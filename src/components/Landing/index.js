@@ -612,35 +612,42 @@ export const landingSections = {
     //     ? data.allLandingYaml.edges
     //     : data.allDownloadableYaml.edges;
     // let content = dataYml[0].node.iconogram;
-    const {heading, sub_heading, icons, text_link } = yml
+    const { heading, sub_heading, icons, text_link } = yml
     return (
 
       <GridContainer
+        display="flex"
         key={index}
         id="iconogram"
+        containerColumns="repeat(14, 1fr)"
         columns="1"
         rows="2"
-        margin="0 0 58px 0"
+        margin="0 0 0 0"
         height="auto"
+        width="100%"
+        // background={Colors[yml.background] || Colors.lightYellow}
         background={Colors.lightYellow}
         //height_tablet="320px"
-        margin_tablet="0 0 78px 0"
-        padding_tablet="50px 0 50px 0"
+        //margin_tablet="0 0 78px 0"
+        padding_xs="50px 10px"
+        padding_tablet="50px 0"
+        justifyItems="center"
       >
         <Div
           columns="1"
           display="block"
+          
         >
           {heading &&
             <H2
               type="h2"
-              lineHeight="38px"
-              lineHeight_tablet="38px"
-              fontSize="24px"
+              lineHeight="28px"
+              lineHeight_tablet="28px"
+              fontSize="30px"
               //fs_xl={h_xl}
               //fontSize_md="40px"
               // fontSize_sm={h_sm}
-              margin="30px 0 20px 0"
+              margin="30px 0 30px 0"
               style={{ textAlign: "center" }}
             >
               {heading.text}
@@ -648,7 +655,7 @@ export const landingSections = {
           }
           {sub_heading && /<\/?[a-z0-9]+>/g.test(sub_heading.text) &&
             <Paragraph
-              padding={heading ? "0" : "20px"}
+              padding_xs={heading ? "0" : "20px"}
               margin="15px 0"
               fontSize="16px"
               fontHeight="30px"
@@ -657,27 +664,32 @@ export const landingSections = {
               dangerouslySetInnerHTML={{ __html: sub_heading.text }}
             />
           }
-          </Div>
-          <Div
-            display="flex"
-            justifyContent="center"
-          >
+        </Div>
+        <Div
+          display="flex"
+          justifyContent="center"
+          flexDirection_tablet="row"
+          flexDirection_xs="column"
+        >
           {Array.isArray(icons) &&
             icons?.map((item, index) => {
               return (
                 <React.Fragment key={index}>
-                  <IconsBanner icon={item.icon} title={item.title} content={item.content}/>
+                  <IconsBanner icon={item.icon} title={item.title} content={item.content} />
                 </React.Fragment>
               );
             })}
-          </Div>
+        </Div>
+        {text_link &&
           <Link to={text_link} display="block">
-            <H3 
+            <H3
               fontSize="18px"
             >
               Conditions Apply.
             </H3>
           </Link>
+        }
+
       </GridContainer>
 
     );

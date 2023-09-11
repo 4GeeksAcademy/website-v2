@@ -111,18 +111,6 @@ about4Geeks:
   image: "../../../static/images/bg/community.png"
   image_mobile: "../../../static/images/bg/community.png"
 
-iconogram:
-  position: 3
-  icons:
-  - icon: "touch" 
-    title: Postula al programa 
-  - icon: "receive_mail"
-    title: Recibe un correo electrónico con la información
-  - icon: "talk"
-    title: Haz una entrevista con nuestro equipo
-  - icon: "terminal"
-    title: Aprende a programar con nosotros
-
 who_is_hiring:
   position: 4
   heading: "DÓNDE TRABAJAN NUESTROS ESTUDIANTES"
@@ -169,6 +157,28 @@ why_4geeks:
 
 # Possible layours: [two_column_left_image, two_column_right_image]
 components:
+  - name: how-it-works
+    position: 3
+    layout: iconogram
+    swipable: True
+    heading:
+      text: ""
+      font_size: ["30px", "30px", "30px", "30px", "30px"]
+    sub_heading:
+      text: ""
+      font_size: ["16px", "16px", "16px", "16px", "16px"]
+      style: '{ "textAlign": "center", "width": "60%" }'
+    text_link: "#"
+    icons:
+    - icon: "touch" 
+      title: Postula al programa 
+    - icon: "receive_mail"
+      title: Recibe un correo electrónico con la información
+    - icon: "talk"
+      title: Haz una entrevista con nuestro equipo
+    - icon: "terminal"
+      title: Aprende a programar con nosotros
+
   - name: python_y_javascript
     position: 6
     layout: two_column_right
