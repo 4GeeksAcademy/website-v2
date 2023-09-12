@@ -77,14 +77,14 @@ short_badges:
 follow_bar:
   position: "top" # top, bottom, hidden
   content:
-    text: "Puedes escribirnos un mensaje por WhatsApp o llamarnos y con gusto te ayudaremos"
+    text: "Puedes escribirnos un mensaje por WhatsApp y con gusto te ayudaremos"
     text_mobile: "Puedes enviarnos un mensaje por WhatsApp"
     # devices:    XL      LG      MD      SM       XS
     font_size: ["25px", "25px", "25px", "18px", "4.3vw"]
   button:
     text: "Escribir por WhatsApp"
-    path: "https://api.whatsapp.com/send?phone=+56972848039&text=Hola+4Geeks&utm_source=RIPLEY&u[…]aign=RIPLEY&utm_id=RIPLEY&utm_term=RIPLEY&utm_content=RIPLEY"
-  phone:
+    path: "https://api.whatsapp.com/send/?phone=56920065786&text&type=phone_number&app_absent=0&utm_source=GADS&utm_medium=GADS&utm_campaign=GADS&utm_id=GADS&utm_term=GADS&utm_content=GADS"
+  phone: 
     text: ""
 
 program_details:
