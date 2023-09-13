@@ -47,7 +47,7 @@ const ChooseYourProgram = ({
   return (
     <Grid
       ref={chooseProgramRef}
-      gridTemplateColumns_md={landingTemplate ? "4fr repeat(12, 1fr) 4fr" : "repeat(14, 1fr)"}
+      gridTemplateColumns_md={landingTemplate ? "2fr repeat(12, 1fr) 2fr" : "repeat(14, 1fr)"}
       gridTemplateColumns_tablet={
         landingTemplate ? "4fr repeat(12, 1fr) 4fr" : "repeat(14, 1fr)"
       }
@@ -57,6 +57,8 @@ const ChooseYourProgram = ({
       background_tablet={landingTemplate ? Colors.white : "transparent"}
       padding_tablet="40px 17px"
       padding_xs="0 10px 40px 10px "
+      maxWidth_tablet="1366px"
+      margin_tablet="auto"
     >
       <Div
         margin_tablet="50px 0 30px 0"
@@ -111,6 +113,7 @@ const ChooseYourProgram = ({
           programs.map((program, index) => {
             return (
               <Div
+                
                 key={index}
                 display="flex"
                 padding=" 24px 24px"
@@ -163,7 +166,7 @@ const ChooseYourProgram = ({
                       </Link>
                     ))}
                   </Div>
-                  <Div float="right" width="25%">
+                  <Div display="flex" justifyContent_sm="end" width="25%">
                     <Icon
                       className="choose-your-program-icon"
                       icon={program.icon}

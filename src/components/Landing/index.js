@@ -875,7 +875,11 @@ export const landingSections = {
   choose_your_program: ({ session, pageContext, yml, data, index }) => {
     return (
       <React.Fragment key={index}>
-        <Div id="choose_your_program" width="100%" flexDirection="column">
+        <Div 
+          id="choose_your_program" 
+          width="100%"
+          flexDirection="column"
+        >
           <Div
             background={Colors.lightGray}
             alignSelf="center"
@@ -885,7 +889,6 @@ export const landingSections = {
           />
         </Div>
         <ChooseYourProgram
-          // chooseProgramRef={chooseProgramRef}
           landingTemplate
           title={yml.heading.text}
           paragraph={yml.content.text}
