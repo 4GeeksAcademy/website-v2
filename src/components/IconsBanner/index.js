@@ -41,7 +41,7 @@ export default ({ icon, title, content }) => {
         display="flex"
         flexDirection="column"
         alignItems="center"
-        padding_tablet="0 10px"
+        padding_tablet="0 15px"
         padding_xs="0 10%"
       >
         <Icon 

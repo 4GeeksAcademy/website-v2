@@ -616,7 +616,7 @@ export const landingSections = {
         containerColumns="repeat(14, 1fr)"
         columns="1"
         rows="2"
-        margin="0 0 0 0"
+        margin="auto"
         height="auto"
         width="100%"
         background={Colors.lightYellow}
@@ -628,7 +628,9 @@ export const landingSections = {
         <Div
           columns="1"
           display="block"
-  
+          maxWidth_tablet="1366px"
+          margin="auto"
+          padding_lg="0 50px"
         >
           {heading &&
             <H2
@@ -658,6 +660,9 @@ export const landingSections = {
           flexDirection_tablet="row"
           flexDirection_sm={icons.length > 3 ? "row" : "column"}
           flexDirection_xs="column"
+          maxWidth_tablet="1366px"
+          margin="auto"
+          padding_lg="0 50px"
         >
           {Array.isArray(icons) &&
             icons?.map((item, index) => {
