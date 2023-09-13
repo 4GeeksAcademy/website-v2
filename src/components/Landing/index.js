@@ -606,12 +606,6 @@ export const landingSections = {
   },
 
   iconogram: ({ session, data, pageContext, yml, index }) => {
-    // let dataYml =
-    //   data.allLandingYaml.edges.length !== 0 &&
-    //     data.allLandingYaml.edges[0].node.iconogram !== null
-    //     ? data.allLandingYaml.edges
-    //     : data.allDownloadableYaml.edges;
-    // let content = dataYml[0].node.iconogram;
     const { heading, sub_heading, icons, text_link } = yml
     return (
 
@@ -625,10 +619,7 @@ export const landingSections = {
         margin="0 0 0 0"
         height="auto"
         width="100%"
-        // background={Colors[yml.background] || Colors.lightYellow}
         background={Colors.lightYellow}
-        //height_tablet="320px"
-        //margin_tablet="0 0 78px 0"
         padding_xs="50px 10px"
         padding_tablet="50px 0"
         justifyItems="center"
