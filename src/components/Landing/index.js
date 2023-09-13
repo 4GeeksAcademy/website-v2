@@ -567,7 +567,7 @@ export const landingSections = {
         m_sm="20px auto"
         maxWidth="350px"
       >
-        {yml.heading}
+        {yml.heading + "AQUIIIII"}
       </H4>
 
       <News
@@ -956,7 +956,7 @@ export const landingSections = {
       padding="0"
     >
       <Title
-        title="{yml.heading}"
+        title={yml.heading}
         paragraph={yml.sub_heading}
         paragraphColor={Colors.gray}
         variant="primary"
