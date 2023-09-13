@@ -567,7 +567,7 @@ export const landingSections = {
         m_sm="20px auto"
         maxWidth="350px"
       >
-        {yml.heading + "AQUIIIII"}
+        {yml.heading}
       </H4>
 
       <News
