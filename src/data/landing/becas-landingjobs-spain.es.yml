@@ -46,6 +46,7 @@ features:
   styles: '{ "fontSize": "15px", "margin": "10px 0px 10px 0px" }'
   text: Landing.Jobs y 4Geeks se unen para ofrecer más de 500.000 € en Becas para convertirte en Data Scientist, Data Analyst o Machine Learning Engineer. Todas las becas son del 50% y se otorgarán en función del resultado del proceso de selección. Si quieres impulsar tu carrera profesiona, ¡no dejes pasar esta oportunidad!
   bullets:
+    
     - Durante Mayo 2023 becas del 50% en el programa Data Science & Machine Learning 
     - Formato Part-Time, ¡no renuncies a tu vida!
     - Opciones de financiación para complementar tu beca

@@ -45,16 +45,16 @@ features:
 
   #                                         up   left down  right
   styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
-  bullets:
-    - Un Desarrollador en Madrid hace €25mil anual
-    - Hay más vacantes que en cualquier otra industria
-    - Impulsa tu Carrera y hazte programador de software
   button:
       text: "APPLY NOW"
       color: "white"
       path: "https://www.switchup.org/bootcamps/4geeks-academy"
       background: "blue"
       hover_color: "black"
+  bullets:
+    - Un Desarrollador en Madrid hace €25mil anual
+    - Hay más vacantes que en cualquier otra industria
+    - Impulsa tu Carrera y hazte programador de software
 
 follow_bar:
   position: "top" # top, bottom, hidden
@@ -243,9 +243,13 @@ components:
       font_size: ["16px"]
       path: ""
     bullets:
-      - Lorem ipsum dolor sit amet
-      - Lorem ipsum dolor sit amet
-      - Lorem ipsum dolor sit amet
+      - heading: "Lorem ipsum dolor sit amet"
+        text: "Some text description for the bullet"
+        icon: "check" #string with icon for example ['check', 'cicle', etc]
+      - heading: "Lorem ipsum dolor sit amet"
+        text: "Some text description for the bullet"
+        icon: "check" #string with icon for example ['check', 'cicle', etc]
+        
   - name: first_syllabus_form
     position: 10
     layout: syllabus
@@ -317,19 +321,6 @@ components:
     position: 15
     layout: testimonials_new
     filter_indexes: ['azu-bota','nai-kali','cha-fabr']
-
-    bullets:
-      - Número
-      - String
-      - Boolean
-      - Iterables
-      - Dictionary
-      - Lista
-      - Tupla
-      - Rango
-      - Set & Frozenset
-      - Tabla Hash
-
     content: 
       text: " "
       font_size: ["16px"]
