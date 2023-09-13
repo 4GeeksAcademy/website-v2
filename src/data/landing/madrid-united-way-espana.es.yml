@@ -106,8 +106,8 @@ components:
       content: "Conviértete en Full-Stack Developer aplicando a esta iniciativa impulsada por United Way. ¡Acelera tu carrera!"
     - icon: "laptop_new"
       title: RECEIVE AN E-MAIL WITH THE DETAILS
-      content: "Una vez aceptado en el Programa Full-Stack recibirás formación de calidad, mentorías y servicio de carreras para que impulses tu futuro.""
-    - icon: "circle"
+      content: "Una vez aceptado en el Programa Full-Stack recibirás formación de calidad, mentorías y servicio de carreras para que impulses tu futuro."
+    - icon: "job"
       title: TALK TO ADMISSIONS
       content: "Para ayudar a otros participantes, deberás pagar esta beca solo cuando consigas trabajo, sin intereses y a un precio muy por debajo del mercado."
 
