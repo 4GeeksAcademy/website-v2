@@ -158,7 +158,7 @@ export const Div = styled.div`
   border-radius: ${(props) => props.borderRadius};
   background: ${(props) =>
     props.isActive ? props.backgroundActive : props.background};
-  background-image: url(${(props) => props.bgImage});
+  background-image: {url(${(props) => props.bgImage}) || ""};
   background-size: ${(props) => props.bgSize};
   background-repeat: ${(props) => props.bgRepeat};
   border-left: ${(props) =>

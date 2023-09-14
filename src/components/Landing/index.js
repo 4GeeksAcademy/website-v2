@@ -877,7 +877,7 @@ export const landingSections = {
     const { heading, sub_heading, content, cards, button } = yml
     return(
       <React.Fragment key={index}>
-        <Div id="cards_carousel" width="100%" flexDirection="column">
+        {/* <Div id="cards_carousel" width="100%" flexDirection="column">
           <Div
             background={Colors.lightGray}
             alignSelf="center"
@@ -885,7 +885,7 @@ export const landingSections = {
             width="94%"
             width_tablet="63.4%"
           />
-        </Div>
+        </Div> */}
         <CardsCarousel
           landingTemplate
           title={heading}
