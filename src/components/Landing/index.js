@@ -876,16 +876,17 @@ export const landingSections = {
   cards_carousel: ({session, pageContext, yml, data, index}) => {
     const { heading, sub_heading, content, cards, button } = yml
     return(
-      <React.Fragment key={index}>
-        {/* <Div id="cards_carousel" width="100%" flexDirection="column">
-          <Div
-            background={Colors.lightGray}
-            alignSelf="center"
-            height="2px"
-            width="94%"
-            width_tablet="63.4%"
-          />
-        </Div> */}
+      <React.Fragment key={index} >
+        <Div 
+          id="cards_carousel" 
+          width="100%" 
+          flexDirection="column" 
+          background_tablet="linear-gradient(180deg, #C7F3FD 57.5%, #FFFFFF 43%)"
+          background_sm="linear-gradient(180deg, #C7F3FD 59.9%, #FFFFFF 43%)"
+          background_xs="linear-gradient(180deg, #C7F3FD 58.44%, #FFFFFF 43%)"
+          background_xxs="linear-gradient(180deg, #C7F3FD 59.4%, #FFFFFF 43%)"
+          display_xs="flex"
+        >
         <CardsCarousel
           landingTemplate
           title={heading}
@@ -895,6 +896,7 @@ export const landingSections = {
           button={button}
           lang={pageContext.lang}
         />
+        </Div>
       </React.Fragment>
     );
   },

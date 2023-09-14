@@ -156,7 +156,7 @@ components:
       text: "Elegibility in this Program"
       font_size: ["30px", "30px", "30px", "30px", "30px"]
     content:
-      text: '<br/> <br/> Learn more about <a style="color: rgb(0, 160, 218); cursor:pointer;">eligibility conditions</a> and apply'
+      text: 'Learn more about <a style="color: rgb(0, 160, 218); cursor:pointer;">eligibility conditions</a> and apply'
       font_size: ["18px", "18px", "18px", "18px", "18px"]
       path: "https://storage.googleapis.com/media-breathecode/bc38ffebe9e56f8cd62e10d5d0839f98d7528c4fe7756456630588d2c2048a2a"
     sub_heading:
