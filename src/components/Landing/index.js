@@ -25,6 +25,7 @@ import ChooseYourProgram from "../ChooseYourProgram";
 import StarRating from "../StarRating";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { smartRedirecting, transferQuerystrings } from "../../utils/utils.js";
+import CardsCarousel from "../CardsCarousel";
 
 const Title = ({ id, title, paragraph }) => {
   return (
@@ -32,7 +33,7 @@ const Title = ({ id, title, paragraph }) => {
       <H2 type="h2">{title}</H2>
       <Paragraph margin="26px 0">{paragraph}</Paragraph>
     </GridContainer>
-  );
+  );  
 };
 
 const Side = ({
@@ -919,6 +920,34 @@ export const landingSections = {
           lang={pageContext.lang}
         />
         <ProgramDetailsMobile details={course && course.details} />
+      </React.Fragment>
+    );
+  },
+
+  cards_carousel: ({session, pageContext, yml, data, index}) => {
+    const { heading, sub_heading, content, cards, button } = yml
+    return(
+      <React.Fragment key={index} >
+        <Div 
+          id="cards_carousel" 
+          width="100%" 
+          flexDirection="column" 
+          background_tablet="linear-gradient(180deg, #C7F3FD 57.5%, #FFFFFF 43%)"
+          background_sm="linear-gradient(180deg, #C7F3FD 59.9%, #FFFFFF 43%)"
+          background_xs="linear-gradient(180deg, #C7F3FD 58.44%, #FFFFFF 43%)"
+          background_xxs="linear-gradient(180deg, #C7F3FD 59.4%, #FFFFFF 43%)"
+          display_xs="flex"
+        >
+        <CardsCarousel
+          landingTemplate
+          title={heading}
+          sub_title={sub_heading}
+          content={content}
+          cards={cards}
+          button={button}
+          lang={pageContext.lang}
+        />
+        </Div>
       </React.Fragment>
     );
   },

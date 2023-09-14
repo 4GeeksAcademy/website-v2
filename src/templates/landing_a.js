@@ -541,6 +541,19 @@ export const query = graphql`
               text
               icon
             }
+            cards{
+              image{
+                src
+                style
+              }
+              heading{
+                text
+                font_size
+              }
+              button{
+                text
+              }
+            }
             columns {
               size
               content {

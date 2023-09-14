@@ -158,7 +158,7 @@ export const Div = styled.div`
   border-radius: ${(props) => props.borderRadius};
   background: ${(props) =>
     props.isActive ? props.backgroundActive : props.background};
-  background-image: url(${(props) => props.bgImage});
+  background-image: {url(${(props) => props.bgImage}) || ""};
   background-size: ${(props) => props.bgSize};
   background-repeat: ${(props) => props.bgRepeat};
   border-left: ${(props) =>
@@ -201,6 +201,7 @@ export const Div = styled.div`
   }
   @media ${Devices.xxs} {
     margin: ${(props) => props.margin_xxs};
+    background: ${(props) => props.background_xxs};
   }
   @media ${Devices.xs} {
     padding: ${(props) => props.padding_xs};
@@ -223,6 +224,7 @@ export const Div = styled.div`
     align-content: ${(props) => props.alignContent_xs};
     top: ${(props) => props.top_xs};
     right: ${(props) => props.right_xs};
+    background: ${(props) => props.background_xs};
   }
   @media ${Devices.sm} {
     padding: ${(props) => props.padding_sm};
@@ -243,6 +245,7 @@ export const Div = styled.div`
     border-radius: ${(props) => props.borderRadius_sm};
     max-width: ${(props) => props.maxWidth_sm};
     width: ${(props) => props.width_sm};
+    background: ${(props) => props.background_sm};
   }
   @media ${Devices.tablet} {
     flex: ${(props) =>
