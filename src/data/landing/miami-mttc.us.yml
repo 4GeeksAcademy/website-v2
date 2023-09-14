@@ -87,36 +87,46 @@ follow_bar:
   phone:
     text: "Call "
 
-choose_your_program:
-  position: 8
-  title: Our Programs
-  paragraph: Programs in Full-Time or Part-Time modality with live classes taught by experts
-  programs:
-  - title: "Full Stack Developer"
-    sub_title: "Level 1"
-    icon: "fullstack"
-    description: |
-      From 0 to becoming a Full-Stack Jr. programmer, you will work with HTML5, CSS3, Bootstrap, JS, Reactjs, SQL, Python, Flask, REST API's, etc. to design and create responsive websites. You'll gain a solid foundation of front, back, database, distributed processes, and deployment with passionate instructors and an up-to-date, hands-on syllabus.
-      Available Part-Time or Full-Time mode. Download <a href=https://storage.googleapis.com/4geeks-academy-website/syllabus/europe/Syllabus%20Europe%20EN.pdf target=_blank>"here the syllabus"</a>.  
-    
-    text_link: Apply now
-    link: "#" # moves to start position
-
-  - title: "AI & Machine Learning"
-    sub_title: "Developers and STEM Profiles"
-    icon: "machine"
-    description: |
-      Get trained by a renowned expert in A.I.; explore Machine Learning's fundamentals and Deep Learning with some of the most powerful technologies that truly scale intelligence for business. Practice with real-life business scenarios typical in business and review some of the tools used in the industry. Strategize and develop your A.I. following the lifecycle development from start to end, including deployment into production and maintenance with Privacy, Security, and Ethics. 
-      Download <a href=https://storage.googleapis.com/4geeks-academy-website/syllabus/europe/Syllabus%20Europe%20EN.pdf target=_blank>"here the syllabus"</a>. 
+components:
+  - name: "whatever"
+    layout: choose_your_program
+    position: 8
+    heading:
+      text: Our Programs
+    content:
+      text: Programs in Full-Time or Part-Time modality with live classes taught by experts
+      font_size: ["16px"]
+      path: ""
+    programs:
+    - title: "Full Stack Developer"
+      sub_title: "Level 1"
+      icon: "fullstack_2"
+      description: |
+        From 0 to becoming a Full-Stack Jr. programmer, you will work with HTML5, CSS3, Bootstrap, JS, Reactjs, SQL, Python, Flask, REST API's, etc. to design and create responsive websites. You'll gain a solid foundation of front, back, database, distributed processes, and deployment with passionate instructors and an up-to-date, hands-on syllabus.
+        Available Part-Time or Full-Time mode. 
+        Download <a href=https://storage.googleapis.com/4geeks-academy-website/syllabus/europe/Syllabus%20Europe%20EN.pdf target=_blank>"here the syllabus"</a>
       
+      text_link: Apply now
+      link: "#" # moves to start position
+
+
+components:
+
+  - title: "Data Science & Machine Learning"
+    sub_title: "No experience required"
+    icon: "machine_2"
+    description: |
+      Get trained by a renowned expert in Machine Learning and DS: explore Machine Learning's fundamentals and Deep Learning with some of the most powerful technologies that truly scale intelligence for business. Practice with real-life business scenarios typical in business and review some of the tools used in the industry. Strategize and develop your A.I. following the lifecycle development from start to end, including deployment into production and maintenance with Privacy, Security, and Ethics.
+      Download <a href=https://storage.googleapis.com/4geeks-academy-website/syllabus/europe/Syllabus%20Europe%20EN.pdf target=_blank>"here the syllabus"</a>. 
+
     text_link: Apply now
     link: "#"
 
-components:
+
   - name: how-it-works
     position: 3
     background: "veryLightBlue2"
-    layout: multi_column
+    layout: iconogram
     swipable: True
     heading:
       text: "How It Works"
@@ -125,29 +135,16 @@ components:
       text: 'According to the U.S. Bureau of Labor Statistics, <strong style="font-weight: bold;">software developers in the U.S. have a higher than average job outlook and earn a median salary of $110,140 a year</strong>. Improve your chances to be one of them.'
       font_size: ["16px", "16px", "16px", "16px", "16px"]
       style: '{ "textAlign": "center", "width": "60%" }'
-    columns:
-      - image:
-          style: '{ "backgroundSize": "contain", "height": "130px" }'
-          src: "/images/landing/graduated-icon.png"
-        content: 
-          text: "Apply to the United Way Miami Workforce Project to jumpstart your career in coding."
-          font_size: ["16px"]
-        size: [3,3,3,3]
-      - image:
-          style: '{ "backgroundSize": "contain", "height": "130px" }'
-          src: "/images/landing/pc-icon.png"
-        content: 
-          text: "Once accepted, students enroll in the 4Geeks Full-Stack Software Development Program. 4Geeks provides quality training and offers supporting services —like resume review and career coaching—to help participants find jobs after graduating."
-          font_size: ["16px"]
-        size: [3,3,3,3]
-      - image:
-          style: '{ "backgroundSize": "contain", "height": "130px" }'
-          src: "/images/landing/cicle-icon.png"
-        content: 
-          text: "Participants pay program costs after they start jobs making more than $35,000 a year. Participants who don't find a job or keep jobs with salaries above $35,000 pay nothing."
-          font_size: ["16px"]
-        size: [3,3,3,3]
-
+    icons:
+      - icon: "graduation-2" 
+        title: ""
+        content: "Apply to the United Way Miami Workforce Project to jumpstart your career in coding."
+      - icon: "terminal"
+        title: ""
+        content: "Once accepted, students enroll in the 4Geeks Full-Stack Software Development Program. 4Geeks provides quality training and offers supporting services —like resume review and career coaching—to help participants find jobs after graduating."
+      - icon: "job"
+        title: ""
+        content: "Participants pay program costs after they start jobs making more than $35,000 a year. Participants who don't find a job or keep jobs with salaries above $35,000 pay nothing."
 
   - name: elegibility
     position: 3

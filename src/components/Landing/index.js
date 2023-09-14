@@ -1,6 +1,6 @@
 import React from "react";
 import { GridContainerWithImage, Div, GridContainer } from "../Sections";
-import { H2, H5, H4, Paragraph } from "../Heading";
+import { H3, H2, H5, H4, Paragraph } from "../Heading";
 import { Colors, Img, Button, StyledBackgroundSection, Link } from "../Styling";
 import Badges from "../Badges";
 import News from "../News";
@@ -461,9 +461,9 @@ export const Columns = ({ columns, proportions, swipable }) => {
         <Div
           key={index}
           flexDirection="column"
-          size={c.size[0]}
-          size_sm={c.size[2]}
-          size_xs={c.size[3]}
+          // size={c.size[0]}
+          // size_sm={c.size[2]}
+          // size_xs={c.size[3]}
           textAlign={c.align}
           minWidth="250px"
           margin="25px 15px 0 15px"
@@ -607,34 +607,85 @@ export const landingSections = {
   },
 
   iconogram: ({ session, data, pageContext, yml, index }) => {
-    let dataYml =
-      data.allLandingYaml.edges.length !== 0 &&
-        data.allLandingYaml.edges[0].node.iconogram !== null
-        ? data.allLandingYaml.edges
-        : data.allDownloadableYaml.edges;
-    let content = dataYml[0].node.iconogram;
+    const { heading, sub_heading, icons, text_link } = yml
     return (
+
       <GridContainer
+        display="flex"
         key={index}
         id="iconogram"
-        background={Colors.lightYellow}
-        columns="2"
+        containerColumns="repeat(14, 1fr)"
+        columns="1"
         rows="2"
-        columns_tablet="4"
-        margin="0 0 58px 0"
-        height="470px"
-        height_tablet="320px"
-        margin_tablet="0 0 78px 0"
+        margin="auto"
+        height="auto"
+        width="100%"
+        background={Colors.lightYellow}
+        padding_xs="50px 10px"
+        padding_tablet="50px 0"
+        justifyItems="center"
+        justifyContent="center"
       >
-        {Array.isArray(content.icons) &&
-          content.icons?.map((item, i) => {
-            return (
-              <React.Fragment key={i}>
-                <IconsBanner icon={item.icon} title={item.title} />
-              </React.Fragment>
-            );
-          })}
+        <Div
+          columns="1"
+          display="block"
+          maxWidth_tablet="1366px"
+          margin="auto"
+          padding_lg="0 50px"
+        >
+          {heading &&
+            <H2
+              type="h2"
+              lineHeight="28px"
+              lineHeight_tablet="28px"
+              fontSize="30px"
+              margin="30px 0 30px 0"
+              style={{ textAlign: "center" }}
+            >
+              {heading.text}
+            </H2>
+          }
+          {sub_heading && /<\/?[a-z0-9]+>/g.test(sub_heading.text) &&
+            <Paragraph
+              padding_xs={heading ? "0" : "20px"}
+              margin="15px 0"
+              fontSize="16px"
+              fontHeight="30px"
+              dangerouslySetInnerHTML={{ __html: sub_heading.text }}
+            />
+          }
+        </Div>
+        <Div
+          display="flex"
+          justifyContent="center"
+          flexDirection_tablet="row"
+          flexDirection_sm={icons.length > 3 ? "row" : "column"}
+          flexDirection_xs="column"
+          maxWidth_tablet="1366px"
+          margin="auto"
+          padding_lg="0 50px"
+        >
+          {Array.isArray(icons) &&
+            icons?.map((item, index) => {
+              return (
+                <React.Fragment key={index}>
+                  <IconsBanner icon={item.icon} title={item.title} content={item.content} />
+                </React.Fragment>
+              );
+            })}
+        </Div>
+        {text_link &&
+          <Link to={text_link} display="block">
+            <H3
+              fontSize="18px"
+            >
+              Conditions Apply.
+            </H3>
+          </Link>
+        }
+
       </GridContainer>
+
     );
   },
 
@@ -902,15 +953,13 @@ export const landingSections = {
   },
 
   choose_your_program: ({ session, pageContext, yml, data, index }) => {
-    let dataYml =
-      data.allLandingYaml.edges.length !== 0 &&
-        data.allLandingYaml.edges[0].node.choose_your_program !== null
-        ? data.allLandingYaml.edges
-        : data.allDownloadableYaml.edges;
-    let chooseYourProgram = dataYml[0].node?.choose_your_program;
     return (
       <React.Fragment key={index}>
-        <Div id="choose_your_program" width="100%" flexDirection="column">
+        <Div 
+          id="choose_your_program" 
+          width="100%"
+          flexDirection="column"
+        >
           <Div
             background={Colors.lightGray}
             alignSelf="center"
@@ -920,12 +969,11 @@ export const landingSections = {
           />
         </Div>
         <ChooseYourProgram
-          // chooseProgramRef={chooseProgramRef}
           landingTemplate
-          title={chooseYourProgram.title}
-          paragraph={chooseYourProgram.paragraph}
+          title={yml.heading.text}
+          paragraph={yml.content.text}
           lang={pageContext.lang}
-          programs={chooseYourProgram.programs}
+          programs={yml.programs}
         />
       </React.Fragment>
     );
@@ -988,7 +1036,7 @@ export const landingSections = {
       padding="0"
     >
       <Title
-        title="{yml.heading}"
+        title={yml.heading}
         paragraph={yml.sub_heading}
         paragraphColor={Colors.gray}
         variant="primary"
