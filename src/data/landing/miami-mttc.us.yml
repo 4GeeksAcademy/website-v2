@@ -112,7 +112,6 @@ choose_your_program:
     text_link: Apply now
     link: "#"
 
-
 components:
   - name: how-it-works
     position: 3
@@ -152,10 +151,9 @@ components:
 
   - name: elegibility
     position: 3
-    layout: multi_column
-    swipable: True
+    layout: cards_carousel
     heading:
-      text: "Program Eligibility"
+      text: "Elegibility in this Program"
       font_size: ["30px", "30px", "30px", "30px", "30px"]
     content:
       text: '<br/> <br/> Learn more about <a style="color: rgb(0, 160, 218); cursor:pointer;">eligibility conditions</a> and apply'
@@ -163,7 +161,7 @@ components:
       path: "https://storage.googleapis.com/media-breathecode/bc38ffebe9e56f8cd62e10d5d0839f98d7528c4fe7756456630588d2c2048a2a"
     sub_heading:
       text: |
-        If you work or live in Miami-Dade and have an annual household income below the Area Median Income, who is a citizen, permanent resident, or DACA recipient is invited to apply. <strong style="font-weight: bold;"> People of color, veterans, and single female heads of household </strong> are encouraged to apply.
+        You may qualify if are a <strong style="font-weight: bold;"> Miami resident </strong> and belong to one of these groups:
       font_size: ["16px", "16px", "16px", "16px", "16px"]
     button:
       text: "APPLY NOW"
@@ -171,31 +169,34 @@ components:
       hover_color: "white"
       path: "#top"
       background: "black"
-    columns:
+    cards:
       - image:
           style: '{ "backgroundSize": "cover", "minHeight": "230px", "borderRadius": "80px" }'
           src: "/images/landing/of_color.png"
-        content: 
-          text: "PEOPLE <br> OF COLOR"
+        heading: 
+          text: "Low-income people of color"
           style: '{ "fontWeight": "700" }'
           font_size: ["16px"]
-        size: [3,3,3,3]
+        button:
+          text: "See more"
       - image:
-          style: '{ "backgroundSize": "cover", "borderRadius": "80px" }'
-          src: "/images/landing/veteran2.png"
-        content: 
-          text: "VETERANS"
+          style: '{ "backgroundSize": "cover", "minHeight": "230px", "borderRadius": "80px" }'
+          src: "/images/landing/of_color.png"
+        heading: 
+          text: "Low-income veterans"
           style: '{ "fontWeight": "700" }'
           font_size: ["16px"]
-        size: [3,3,3,3]
+        button:
+          text: "See more"
       - image:
-          style: '{ "backgroundSize": "cover", "borderRadius": "80px" }'
-          src: "/images/landing/mom-household.png"
-        content: 
-          text: "SINGLE FEMALE HEADS OF HOUSEHOLD"
+          style: '{ "backgroundSize": "cover", "minHeight": "230px", "borderRadius": "80px" }'
+          src: "/images/landing/of_color.png"
+        heading: 
+          text: "Low-income single female heads of household"
           style: '{ "fontWeight": "700" }'
           font_size: ["16px"]
-        size: [3,3,3,3]
+        button:
+          text: "See more"
 
   - name: coding
     position: 4

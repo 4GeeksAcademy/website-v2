@@ -545,6 +545,19 @@ export const query = graphql`
               font_size
               path
             }
+            cards{
+              image{
+                src
+                style
+              }
+              heading{
+                text
+                font_size
+              }
+              button{
+                text
+              }
+            }
             columns {
               size
               content {
