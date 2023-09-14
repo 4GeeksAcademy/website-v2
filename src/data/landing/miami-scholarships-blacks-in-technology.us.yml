@@ -111,18 +111,6 @@ rating_reviews:
       rating: 5
       url: ""
 
-iconogram:
-  position: 3
-  icons:
-  - icon: "touch"
-    title: Apply for your scholarship before March 31st, 2022
-  - icon: "receive_mail"
-    title: You will receive an email with all the information and a logic test 
-  - icon: "talk"
-    title: Do an online interview with our admissions team 
-  - icon: "terminal"
-    title: Get the result, book your spot and start coding
-
 who_is_hiring:
   position: 4
   heading: "OUR STUDENTS WORK AT"
@@ -159,6 +147,31 @@ apply_schollarship: # form that is displayed at the end of the landing
 # Possible layours: [two_column_left_image, two_column_right_image]
 
 components:
+
+  - name: how-it-works
+    position: 3
+    background: "veryLightBlue2"
+    layout: iconogram
+    swipable: True
+    heading:
+      text: ""
+      font_size: ["30px", "30px", "30px", "30px", "30px"]
+    sub_heading:
+      text: ""
+      font_size: ["16px", "16px", "16px", "16px", "16px"]
+      style: '{ "textAlign": "center", "width": "60%" }'
+    text_link: "#"
+    icons:
+    - icon: "touch"
+      title: Apply for your scholarship before March 31st, 2022
+    - icon: "receive_mail"
+      title: You will receive an email with all the information and a logic test 
+    - icon: "talk"
+      title: Do an online interview with our admissions team 
+    - icon: "terminal"
+      title: Get the result, book your spot and start coding
+  
+
   - name: "whatever"
     layout: choose_your_program
     position: 5
@@ -188,6 +201,7 @@ components:
         
       text_link: Apply for a scholarship
       link: "#"
+
   - name: blacks_in_technolgy
     position: 6
     layout: two_column_right

@@ -186,6 +186,31 @@ apply_schollarship: # form that is displayed at the end of the landing
 
 # Possible layours: [two_column_left, two_column_right]
 components:
+  - name: how-it-works
+    position: 3
+    background: "veryLightBlue2"
+    layout: iconogram
+    swipable: True
+    heading:
+      text: "How It Works"
+      font_size: ["30px", "30px", "30px", "30px", "30px"]
+    sub_heading:
+      text: 'According to the U.S. Bureau of Labor Statistics, <strong style="font-weight: bold;">software developers in the U.S. have a higher than average job outlook and earn a median salary of $110,140 a year</strong>. Improve your chances to be one of them.'
+      font_size: ["16px", "16px", "16px", "16px", "16px"]
+      style: '{ "textAlign": "center", "width": "60%" }'
+    text_link: "#"
+    icons:
+      - icon: "graduation-2" 
+        title: ""
+        content: "Apply to the United Way Miami Workforce Project to jumpstart your career in coding."
+      - icon: "laptop_new"
+        title: ""
+        content: "Once accepted, students enroll in the 4Geeks Full-Stack Software Development Program. 4Geeks provides quality training and offers supporting services —like resume review and career coaching—to help participants find jobs after graduating."
+      - icon: "circle"
+        title: ""
+        content: "Participants pay program costs after they start jobs making more than $35,000 a year. Participants who don't find a job or keep jobs with salaries above $35,000 pay nothing."
+  
+=======
   - name: "whatever"
     layout: choose_your_program
     position: 5
@@ -352,14 +377,4 @@ testimonial:
     comment: For me the most amazing thing about 4Geeks was the syllabus, the fact that you guys teach exactly what the market is looking for.
     video: https://www.youtube.com/watch?v=LvnxLyqaQDo
 
-iconogram:
-  position: 3
-  icons:
-  - icon: "touch"
-    title: Apply for your scholarship before October 8th, 2021
-  - icon: "receive_mail"
-    title: You will receive an email with all the information and a logic test 
-  - icon: "talk"
-    title: Do an online interview with our admissions team 
-  - icon: "terminal"
-    title: Get the result, book your spot and start coding
+

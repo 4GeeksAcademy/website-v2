@@ -101,18 +101,6 @@ about4Geeks:
   image: "../../../static/images/bg/community.png"
   image_mobile: "../../../static/images/bg/community.png"
 
-iconogram:
-  position: 3
-  icons:
-  - icon: "touch" 
-    title: Aplica a la beca
-  - icon: "receive_mail"
-    title: Obten un correo electrónico con la información
-  - icon: "talk"
-    title: Haz una entrevista con nuestro equipo
-  - icon: "terminal"
-    title: Aprende a programar con nosotros
-
 who_is_hiring:
   position: 4
   heading: "DÓNDE TRABAJAN NUESTROS ESTUDIANTES"
@@ -137,6 +125,30 @@ apply_schollarship:
 
 # Possible layours: [two_column_left_image, two_column_right_image]
 components:
+
+  - name: how-it-works
+    position: 3
+    background: "veryLightBlue2"
+    layout: iconogram
+    swipable: True
+    heading:
+      text: ""
+      font_size: ["30px", "30px", "30px", "30px", "30px"]
+    sub_heading:
+      text: ""
+      font_size: ["16px", "16px", "16px", "16px", "16px"]
+      style: '{ "textAlign": "center", "width": "60%" }'
+    text_link: "#"
+    icons:
+    - icon: "touch" 
+      title: Aplica a la beca
+    - icon: "receive_mail"
+      title: Obten un correo electrónico con la información
+    - icon: "talk"
+      title: Haz una entrevista con nuestro equipo
+    - icon: "terminal"
+      title: Aprende a programar con nosotros
+
   - name: "whatever"
     layout: choose_your_program
     position: 5

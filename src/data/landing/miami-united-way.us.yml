@@ -87,6 +87,20 @@ follow_bar:
   phone:
     text: "Call "
 
+iconogram:
+  position: 3
+  heading:
+    text: "Aqui puede ser un titulo"
+  icons:
+  - icon: "graduation-2" 
+    title: ""
+    content: "Apply to the United Way Miami Workforce Project to jumpstart your career in coding."
+  - icon: "laptop_new"
+    title: ""
+    content: "Once accepted, students enroll in the 4Geeks Full-Stack Software Development Program. 4Geeks provides quality training and offers supporting services —like resume review and career coaching—to help participants find jobs after graduating."
+  - icon: "circle"
+    title: ""
+    content: "Participants pay program costs after they start jobs making more than $35,000 a year. Participants who don't find a job or keep jobs with salaries above $35,000 pay nothing."
 
 components:
   - name: how-it-works

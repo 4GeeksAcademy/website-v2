@@ -405,13 +405,7 @@ export const query = graphql`
               }
             }
           }
-          iconogram {
-            position
-            icons {
-              icon
-              title
-            }
-          }
+      
           in_the_news {
             heading
             position
@@ -497,6 +491,12 @@ export const query = graphql`
             swipable
             proportions
             layout
+            text_link
+            icons {
+              icon
+              title
+              content
+            }
             image {
               src
               style
@@ -687,13 +687,7 @@ export const query = graphql`
               }
             }
           }
-          iconogram {
-            position
-            icons {
-              icon
-              title
-            }
-          }
+          
           in_the_news {
             heading
             position
@@ -778,6 +772,12 @@ export const query = graphql`
             background
             proportions
             layout
+            text_link
+            icons {
+              icon
+              title
+              content
+            }
             image {
               src
               style

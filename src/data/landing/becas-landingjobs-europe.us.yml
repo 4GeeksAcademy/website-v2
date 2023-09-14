@@ -105,17 +105,6 @@ about4Geeks:
   image: "../../../static/images/bg/community.png"
   image_mobile: "../../../static/images/bg/community.png"
 
-iconogram:
-  position: 3
-  icons:
-  - icon: "touch"
-    title: Apply for your scholarship before June 15th, 2023
-  - icon: "receive_mail"
-    title: You will receive an email with all the information
-  - icon: "talk"
-    title: Do an online interview with our admissions team 
-  - icon: "terminal"
-    title: Get the result, book your spot and start coding
 
 who_is_hiring:
   position: 4
@@ -150,6 +139,30 @@ apply_schollarship: # form that is displayed at the end of the landing
 
 # Possible layours: [two_column_left_image, two_column_right_image]
 components:
+
+  - name: how-it-works
+    position: 2
+    background: ""
+    layout: iconogram
+    swipable: True
+    heading:
+      text: ""
+      font_size: ["30px", "30px", "30px", "30px", "30px"]
+    sub_heading:
+      text: ''
+      font_size: ["16px", "16px", "16px", "16px", "16px"]
+      style: '{ "textAlign": "center", "width": "60%" }'
+    text_link: "#"
+    icons:
+    - icon: "touch"
+      title: Apply for your scholarship before June 15th, 2023
+    - icon: "receive_mail"
+      title: You will receive an email with all the information
+    - icon: "talk"
+      title: Do an online interview with our admissions team 
+    - icon: "terminal"
+      title: Get the result, book your spot and start coding
+
   # - name: "whatever"
   #   layout: choose_your_program
   #   position: 5
@@ -180,6 +193,7 @@ components:
 
   #     text_link: Apply for a scholarship
   #     link: "#"
+
 
   - name: data_science_machine_learning
     position: 6
