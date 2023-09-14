@@ -123,33 +123,6 @@ who_is_hiring:
     - name: "Apple"
       image: "../../../static/images/partner/apple.png"
 
-choose_your_program:
-  position: 5
-  title: Nuestros Programas
-  paragraph: Contamos con programas que combinan clases prácticas dictadas por expertos
-  programs:
-  - title: "Full Stack Developer"
-    sub_title: "Nivel 1"
-    icon: "fullstack"
-    description: |
-      Aprende desde cero, empezando por lo básico: HTML + CSS3 + Javascript.
-      
-      Aprende las habilidades más solicitadas con instructores apasionados y un plan de estudios práctico para ayudarte a encontrar un trabajo de programación como desarrollador Jr.
-    
-    text_link: Postula
-    link: "#"
-  - title: "NodeJs Back End Development"
-    sub_title: "Nivel 2"
-    icon: "software"
-    description: |
-      Este programa de estudio te permitirá trabajar y desarrollar el back-end de software y aplicaciones web, utilizando uno de los lenguajes de programacion más demandados en el mundo, Javascript.
-
-      Aprenderás a crear tu ambiente de trabajo y realizar las configuraciones pertinentes para poder trabajar con el stack más solicitado de NodeJs
-    
-    text_link: Postula
-    link: "#"
-    
-
 why_4geeks:
   position: 7
   heading: "Escúchalo de nuestros alumnos"
@@ -157,6 +130,7 @@ why_4geeks:
 
 # Possible layours: [two_column_left_image, two_column_right_image]
 components:
+
   - name: how-it-works
     position: 3
     layout: iconogram
@@ -178,6 +152,37 @@ components:
       title: Haz una entrevista con nuestro equipo
     - icon: "terminal"
       title: Aprende a programar con nosotros
+
+  - name: "whatever"
+    layout: choose_your_program
+    position: 5
+    heading:
+      text: Nuestros Programas
+    content:
+      text: Contamos con programas que combinan clases prácticas dictadas por expertos
+      font_size: ["16px"]
+      path: ""
+    programs:
+    - title: "Full Stack Developer"
+      sub_title: "Nivel 1"
+      icon: "fullstack_2"
+      description: |
+        Aprende desde cero, empezando por lo básico: HTML + CSS3 + Javascript.
+        
+        Aprende las habilidades más solicitadas con instructores apasionados y un plan de estudios práctico para ayudarte a encontrar un trabajo de programación como desarrollador Jr.
+      
+      text_link: Postula
+      link: "#"
+    - title: "NodeJs Back End Development"
+      sub_title: "Nivel 2"
+      icon: "software_2"
+      description: |
+        Este programa de estudio te permitirá trabajar y desarrollar el back-end de software y aplicaciones web, utilizando uno de los lenguajes de programacion más demandados en el mundo, Javascript.
+
+        Aprenderás a crear tu ambiente de trabajo y realizar las configuraciones pertinentes para poder trabajar con el stack más solicitado de NodeJs
+      
+      text_link: Postula
+      link: "#"
 
   - name: python_y_javascript
     position: 6

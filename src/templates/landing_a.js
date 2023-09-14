@@ -468,20 +468,6 @@ export const query = graphql`
               }
             }
           }
-          choose_your_program {
-            position
-            title
-            paragraph
-            programs {
-              text_link
-              link
-              sub_title
-              title
-              description
-              icon
-            }
-          }
-
           why_python {
             position
             heading
@@ -519,6 +505,14 @@ export const query = graphql`
               style
               link
               shadow
+            }
+            programs{
+              title
+              sub_title
+              icon
+              description
+              text_link
+              link
             }
             video
             height
@@ -755,20 +749,7 @@ export const query = graphql`
               }
             }
           }
-          choose_your_program {
-            position
-            title
-            paragraph
-            programs {
-              text_link
-              link
-              sub_title
-              title
-              description
-              icon
-            }
-          }
-
+          
           why_python {
             position
             heading
@@ -802,6 +783,14 @@ export const query = graphql`
             image {
               src
               style
+              link
+            }
+            programs{
+              title
+              sub_title
+              icon
+              description
+              text_link
               link
             }
             video
