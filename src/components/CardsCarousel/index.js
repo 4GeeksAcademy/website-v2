@@ -3,7 +3,7 @@ import { Link, useStaticQuery, graphql } from "gatsby";
 import PropTypes from "prop-types";
 import { Button, Colors, Img } from "../Styling";
 import { Grid, Div } from "../Sections";
-import { H4, H3, H2, Paragraph } from "../Heading";
+import { H4, H3, H2, H1, Paragraph } from "../Heading";
 import Icon from "../Icon";
 
 const CardsCarousel = ({
@@ -56,10 +56,14 @@ const CardsCarousel = ({
             alignItems="center"
             maxWidth_tablet="1366px"
             margin="auto"
+            padding_tablet="20px 0 40px 0"
+            padding_xs="10px 0 40px 0"
         >
             <Div
                 display="flex"
                 flexDirection="column"
+                gap="10px"
+                margin="50px 10% 20px 10%"
             >
                 {title &&
                     <H2
@@ -110,28 +114,44 @@ const CardsCarousel = ({
                             width="262px"
                             height="266px"
                         />
-                        <H3
-                            textTransform="uppercase"
-                            fontSize={card.heading.font_size}
-                            fontWeight="900"
-                            lineHeight="19px"
+                        <Div height="70px">
+                            <H1
+                                textTransform="uppercase"
+                                fontSize={card.heading.font_size}
+                                fontWeight="900"
+                                lineHeight="19px"
+                                padding="24px 5px 12px 5px"
+                            >
+                                {card.heading.text}
+                            </H1>
+                        </Div>
+
+                        <Div 
+                            padding="12px 0"
+                            height="62px"
+                            justifyContent="center"
+                            alignItems="center"
                         >
-                            {card.heading.text}
-                        </H3>
-                        <Button
-                            textTransform="uppercase"
-                            fontSize="16px"
-                            fontWeight="700"
-                            lineHeight="19px"
-                        >
-                            {card.button.text}
-                            <Icon
-                                icon="arrow-right"
-                                width="15px"
-                                height="15px"
-                                padding="0 0 0 5px"
-                            />
-                        </Button>
+                            <Link to="#">
+                                <H3
+                                    margin="12px 10px 12px 0"
+                                    textTransform="uppercase"
+                                    fontSize="16px"
+                                    fontWeight="700"
+                                    lineHeight="19px"
+                                >
+                                    {card.button.text}
+                                </H3>
+                            </Link>
+                            <Link to="#">
+                                <Icon
+                                    icon="arrow-right"
+                                    width="15px"
+                                    height="12px"
+                                    //padding="0 0 0 5px"
+                                />
+                            </Link>
+                        </Div>
                     </Div>
                 )
                 )}
