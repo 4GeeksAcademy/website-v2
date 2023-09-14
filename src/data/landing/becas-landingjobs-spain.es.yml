@@ -131,34 +131,6 @@ who_is_hiring:
     - name: "Apple"
       image: "../../../static/images/partner/apple.png"
 
-#choose_your_program:
-#  position: 5
-#  title: Nuestros Programas
-#  paragraph: Programas en formato full-time o part-time con clases en vivo dictadas por expertos
-#  programs:
-#  - title: "Full Stack Developer"
-#    sub_title: "Nivel 1"
-#    icon: "fullstack"
-#    description: |
-#      Desde 0 hasta convertirte en programador fullstack Jr. Trabajarás con HTML5, CSS3, Bootstrap, JS, Reactjs, SQL, Python, Flask, REST API's, etc. para diseñar y crear webs responsive. Obtendrás una sólida base de front, back, bbdd, procesos distribuidos y despliegue con instructores apasionados y un plan de estudios práctico y actualizado. 
-#      Disponible en modalidad part time y full time.
-#      Descarga aquí el <a href=https://storage.googleapis.com/4geeks-academy-website/syllabus/europe/Syllabus%20EU%20ES.pdf target=_blank>"programa de estudios"</a>.
-#    
-#    text_link: Solicita tu beca
-#    link: "#" # moves to start position
-#    
-#  - title: "AI & Machine Learning"
-#    sub_title: "Developers y perfiles STEM"
-#    icon: "machine"
-#    description: |
-#      Explora los fundamentos del machine learning y el deep learning con las tecnologías más poderosas que escalan la inteligencia para los negocios. 
-#      Practica con escenarios comerciales de la vida real y maneja las herramientas más utilizadas en la industria. Elabora estrategias y desarrolla tu Inteligencia Artificial, siguiendo el desarrollo del ciclo de vida de principio a fin, incluida la implementación en producción y mantenimiento con Privacidad, Seguridad y Ética. 
-#      
-#      Descarga aquí el <a href=https://storage.googleapis.com/4geeks-academy-website/syllabus/europe/Syllabus%20EU%20ES.pdf target=_blank>"programa de estudios"</a>.
-#
-#    text_link: Solicita tu beca
-#    link: "#"
-
 program_details:
   position: 5
   background: "#FFFFFF"
@@ -180,6 +152,39 @@ apply_schollarship: # form that is displayed at the end of the landing
 
 # Possible layours: [two_column_left_image, two_column_right_image]
 components:
+  # - name: "whatever"
+  #   layout: choose_your_program
+  #   position: 5
+  #   heading:
+  #     text: Nuestros Programas
+  #   content:
+  #     text: Programas en formato full-time o part-time con clases en vivo dictadas por expertos
+  #     font_size: ["16px"]
+  #     path: ""
+  #   programs:
+  #   - title: "Full Stack Developer"
+  #     sub_title: "Nivel 1"
+  #     icon: "fullstack_2"
+  #     description: |
+  #       Desde 0 hasta convertirte en programador fullstack Jr. Trabajarás con HTML5, CSS3, Bootstrap, JS, Reactjs, SQL, Python, Flask, REST API's, etc. para diseñar y crear webs responsive. Obtendrás una sólida base de front, back, bbdd, procesos distribuidos y despliegue con instructores apasionados y un plan de estudios práctico y actualizado. 
+  #       Disponible en modalidad part time y full time.
+  #       Descarga aquí el <a href=https://storage.googleapis.com/4geeks-academy-website/syllabus/europe/Syllabus%20EU%20ES.pdf target=_blank>"programa de estudios"</a>.
+      
+  #     text_link: Solicita tu beca
+  #     link: "#" # moves to start position
+
+  #   - title: "AI & Machine Learning"
+  #     sub_title: "Developers y perfiles STEM"
+  #     icon: "machine_2"
+  #     description: |
+  #       Explora los fundamentos del machine learning y el deep learning con las tecnologías más poderosas que escalan la inteligencia para los negocios. 
+  #       Practica con escenarios comerciales de la vida real y maneja las herramientas más utilizadas en la industria. Elabora estrategias y desarrolla tu Inteligencia Artificial, siguiendo el desarrollo del ciclo de vida de principio a fin, incluida la implementación en producción y mantenimiento con Privacidad, Seguridad y Ética. 
+        
+  #       Descarga aquí el <a href=https://storage.googleapis.com/4geeks-academy-website/syllabus/europe/Syllabus%20EU%20ES.pdf target=_blank>"programa de estudios"</a>.
+
+  #     text_link: Solicita tu beca
+  #     link: "#"
+
   - name: Data_Science_y_Machine_Learning
     position: 6
     layout: two_column_right

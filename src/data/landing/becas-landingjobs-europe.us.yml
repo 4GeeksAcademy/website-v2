@@ -129,32 +129,6 @@ who_is_hiring:
     - name: "Apple"
       image: "../../../static/images/partner/apple.png"
 
-#choose_your_program:
-#  position: 5
-#  title: Our Programs
-#  paragraph: Programs in Full-Time or Part-Time modality with live classes taught by experts
-#  programs:
-#  - title: "Full Stack Developer"
-#    sub_title: "Level 1"
-#    icon: "fullstack"
-#    description: |
-#      From 0 to becoming a Full-Stack Jr. programmer, you will work with HTML5, CSS3, Bootstrap, JS, Reactjs, SQL, Python, Flask, REST API's, etc. to design and create responsive websites. You'll gain a solid foundation of front, back, database, distributed processes, and deployment with passionate instructors and an up-to-date, hands-on syllabus.
-#      Available Part-Time or Full-Time mode. Download <a href=https://storage.googleapis.com/4geeks-academy-website/syllabus/europe/Syllabus%20Europe%20EN.pdf target=_blank>"here the syllabus"</a>.  
-#    
-#    text_link: Apply for a scholarship
-#    link: "#" # moves to start position
-#    
-#  - title: "AI & Machine Learning"
-#    sub_title: "Developers and STEM Profiles"
-#    icon: "machine"
-#    description: |
-#      Get trained by a renowned expert in A.I.; explore Machine Learning's fundamentals and Deep Learning with some of the most powerful technologies that truly scale intelligence for business. Practice with real-life business scenarios typical in business and review some of the tools used in the industry. Strategize and develop your A.I. following the lifecycle development from start to end, including deployment into production and maintenance with Privacy, Security, and Ethics. 
-#      Download <a href=https://storage.googleapis.com/4geeks-academy-website/syllabus/europe/Syllabus%20Europe%20EN.pdf target=_blank>"here the syllabus"</a>. 
-#      
-#
-#    text_link: Apply for a scholarship
-#    link: "#"
-
 program_details:
   position: 5
   background: "#FFFFFF"
@@ -176,6 +150,37 @@ apply_schollarship: # form that is displayed at the end of the landing
 
 # Possible layours: [two_column_left_image, two_column_right_image]
 components:
+  # - name: "whatever"
+  #   layout: choose_your_program
+  #   position: 5
+  #   heading:
+  #     text: Our Programs
+  #   content:
+  #     text: Programs in Full-Time or Part-Time modality with live classes taught by experts
+  #     font_size: ["16px"]
+  #     path: ""
+  #   programs:
+  #   - title: "Full Stack Developer"
+  #     sub_title: "Level 1"
+  #     icon: "fullstack_2"
+  #     description: |
+  #       From 0 to becoming a Full-Stack Jr. programmer, you will work with HTML5, CSS3, Bootstrap, JS, Reactjs, SQL, Python, Flask, REST API's, etc. to design and create responsive websites. You'll gain a solid foundation of front, back, database, distributed processes, and deployment with passionate instructors and an up-to-date, hands-on syllabus.
+  #       Available Part-Time or Full-Time mode. Download <a href=https://storage.googleapis.com/4geeks-academy-website/syllabus/europe/Syllabus%20Europe%20EN.pdf target=_blank>"here the syllabus"</a>.  
+      
+  #     text_link: Apply for a scholarship
+  #     link: "#" # moves to start position
+   
+  #   - title: "AI & Machine Learning"
+  #     sub_title: "Developers and STEM Profiles"
+  #     icon: "machine_2"
+  #     description: |
+  #       Get trained by a renowned expert in A.I.; explore Machine Learning's fundamentals and Deep Learning with some of the most powerful technologies that truly scale intelligence for business. Practice with real-life business scenarios typical in business and review some of the tools used in the industry. Strategize and develop your A.I. following the lifecycle development from start to end, including deployment into production and maintenance with Privacy, Security, and Ethics. 
+  #       Download <a href=https://storage.googleapis.com/4geeks-academy-website/syllabus/europe/Syllabus%20Europe%20EN.pdf target=_blank>"here the syllabus"</a>. 
+        
+
+  #     text_link: Apply for a scholarship
+  #     link: "#"
+
   - name: data_science_machine_learning
     position: 6
     layout: two_column_right
