@@ -55,10 +55,10 @@ const ChooseYourProgram = ({
       gridAutoRows_tablet="auto" //"minmax(100px, auto)"
       background={landingTemplate ? Colors.white : Colors.verylightGray}
       background_tablet={landingTemplate ? Colors.white : "transparent"}
-      padding_tablet="40px 17px"
+      padding_tablet="20px 20px 50px 20px"
       padding_xs="0 10px 40px 10px "
       maxWidth_tablet="1366px"
-      margin_tablet="auto"
+      margin_tablet="0 auto 50px auto"
     >
       <Div
         margin_tablet="50px 0 30px 0"
@@ -218,9 +218,9 @@ const ChooseYourProgram = ({
                     </Paragraph>
                   )}
                 </Div>
-                <Div margin="20px 0 0 0">
+                <Div margin="20px 0 0 0" width_xs="100%" width_tablet="150px">
                   {!program.comming_soon ? (
-                    <Link to={program.link}>
+                    <Link to={program.link} style={{width: "100%"}}>
                       {landingTemplate ? (
                         <Button
                           display="flex"
@@ -228,11 +228,15 @@ const ChooseYourProgram = ({
                           background={Colors.black}
                           colorHover={Colors.black}
                           color={Colors.white}
+                          justifyContent="center"
                           //className="mobile"
+                          width_xs="auto"
+                          width_tablet="150px"
                           style={{
                             position: "absolute",
                             bottom: "24px",
                             left: "24px",
+                            right: "24px",
                           }}
                         >
                           {program.text_link}
