@@ -59,15 +59,15 @@ features:
 follow_bar:
   position: "top" # top, bottom, hidden
   content:
-    text: "Puedes llamarnos o enviarnos un mensaje por WhatsApp"
-    text_mobile: "Puedes llamarnos o enviarnos un mensaje por WhatsApp"
+    text: "Diversos planes de financiamiento \n Hasta 18 cuotas"
+    text_mobile: "Diversos planes de financiamiento \n Hasta 18 cuotas"
     # devices:    XL      LG      MD      SM       XS
     font_size: ["25px", "25px", "25px", "18px", "4.3vw"]
   button:
-    text: "Obtener más información"
-    path: "#top"
-  phone:
-    text: "Llama "
+    text: "Escribir por WhatsApp"
+    path: "https://api.whatsapp.com/send/?phone=56920065786&text&type=phone_number&app_absent=0&utm_source=GADS&utm_medium=GADS&utm_campaign=GADS&utm_id=GADS&utm_term=GADS&utm_content=GADS"
+  phone: 
+    text: ""
 
 short_badges:
   - name: "Premios Tecnologia Siglo XXI"
@@ -169,9 +169,7 @@ components:
         #           xl      lg      md      sm      xs
       font_size: ["50px", "50px", "50px", "50px", "50px"]
     content:
-      text: "Nuestro programa está basado en el uso de Python y Javascript. ¿La razón? En el mercado laboral JavaScript tiene 26 veces más vacantes de trabajo que Ruby on Rails y Python te permite acceder a distintas áreas del mundo de la programación.
-      
-      Otras herramientas que también aprenderás a usar en nuestro programa son: HTML5, CSS3, React, Flask, etc."
+      text: "Nuestro programa está basado en el uso de Python y Javascript. ¿La razón? En el mercado laboral JavaScript tiene 26 veces más vacantes de trabajo que Ruby on Rails y Python te permite acceder a distintas áreas del mundo de la programación. Otras herramientas que también aprenderás a usar en nuestro programa son: HTML5, CSS3, React, Flask, etc."
       font_size: ["16px"]
 
 choose_your_program:
