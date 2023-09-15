@@ -481,7 +481,7 @@ const LeadForm = ({
                       ...formData,
                       utm_location: { value: selected.value, valid },
                     });
-                    if (landingTemplate) setLocation(selected.value);
+                    setLocation(selected.value);
                   }}
                 />
               </Div>
