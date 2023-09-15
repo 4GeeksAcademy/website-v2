@@ -123,18 +123,6 @@ program_details:
   heading: "Domina Python, JS y React"
   sub_heading: "Un curso de programación sobre las tecnologías más usadas del mundo"
 
-iconogram:
-  position: 4
-  icons:
-  - icon: "touch" 
-    title: Incríbete en el Programa
-  - icon: "instructor"
-    title: Obtén tu certificación
-  - icon: "talk"
-    title: Completa Nuestro GeekForce
-  - icon: "terminal"
-    title: Consigue tu Empleo soñado
-
 geeks_vs_others:
   position: 6
   heading: "¿Qué hace a este bootcamp tan exitoso?"
@@ -158,6 +146,29 @@ alumni_projects:
   sub_heading: "Proyectos hechos por estudiantes de la academia"
 
 components:
+  - name: ""
+    position: 4
+    background: "veryLightBlue2"
+    layout: iconogram
+    swipable: True
+    heading:
+      text: ""
+      font_size: ["30px", "30px", "30px", "30px", "30px"]
+    sub_heading:
+      text: ""
+      font_size: ["16px", "16px", "16px", "16px", "16px"]
+      style: '{ "textAlign": "center", "width": "60%" }'
+    text_link: "#"
+    icons:
+    - icon: "touch" 
+      title: Incríbete en el Programa
+    - icon: "instructor"
+      title: Obtén tu certificación
+    - icon: "talk"
+      title: Completa Nuestro GeekForce
+    - icon: "terminal"
+      title: Consigue tu Empleo soñado
+
   - name: python_y_javascript
     position: 5
     layout: two_column_right
