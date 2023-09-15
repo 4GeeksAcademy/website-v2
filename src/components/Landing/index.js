@@ -932,10 +932,11 @@ export const landingSections = {
           id="cards_carousel" 
           width="100%" 
           flexDirection="column" 
-          background_tablet="linear-gradient(180deg, #C7F3FD 57.5%, #FFFFFF 43%)"
-          background_sm="linear-gradient(180deg, #C7F3FD 59.9%, #FFFFFF 43%)"
-          background_xs="linear-gradient(180deg, #C7F3FD 58.44%, #FFFFFF 43%)"
-          background_xxs="linear-gradient(180deg, #C7F3FD 59.4%, #FFFFFF 43%)"
+          background_md="linear-gradient(180deg, #C7F3FD 58.1%, #FFFFFF 50%)"
+          background_tablet="linear-gradient(180deg, #C7F3FD 58.6%, #FFFFFF 50%)"
+          background_sm="linear-gradient(180deg, #C7F3FD 61.04%, #FFFFFF 50%)"
+          background_xs="linear-gradient(180deg, #C7F3FD 59.45%, #FFFFFF 50%)"
+          background_xxs="linear-gradient(180deg, #C7F3FD 60%, #FFFFFF 50%)"
           display_xs="flex"
         >
         <CardsCarousel

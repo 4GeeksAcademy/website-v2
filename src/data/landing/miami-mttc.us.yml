@@ -108,7 +108,7 @@ components:
       
       text_link: Apply now
       link: "#" # moves to start position
-
+      
     - title: "Data Science & Machine Learning"
       sub_title: "No experience required"
       icon: "machine_2"
