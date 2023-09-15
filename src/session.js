@@ -108,7 +108,7 @@ export default ({ children }) => {
       },
     };
     const worker = new Worker(new URL("./worker.js", import.meta.url));
-    console.log("Initializing worker with: ", message)
+    console.log("Initializing worker with: ", message);
     worker.postMessage(message);
     worker.onmessage = (e) => {
       const _session = e.data;
