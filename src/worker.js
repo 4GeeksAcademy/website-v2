@@ -114,7 +114,7 @@ const getRegion = (shortName, regions) => {
 };
 
 const initSession = async (locationsArray, storedSession, path, seed = {}) => {
-   console.log("Initializing session")
+  console.log("Initializing session");
   var v4 = null;
   var latitude = null;
   var longitude = null;
@@ -157,7 +157,7 @@ const initSession = async (locationsArray, storedSession, path, seed = {}) => {
     longitude = location.longitude;
   }
 
-  if (location === null && !path.includes('/landings')) {
+  if (location === null && !path.includes("/landings")) {
     console.log("Calculating nearest location because it was null...");
     try {
       const response = await fetch(
@@ -255,7 +255,7 @@ const initSession = async (locationsArray, storedSession, path, seed = {}) => {
     }
   }
 
-  const defaultLang = path.split('/').filter((l) => l !== '')[0] || 'us';
+  const defaultLang = path.split("/").filter((l) => l !== "")[0] || "us";
 
   if (!language) language = location?.defaultLanguage || defaultLang;
 
