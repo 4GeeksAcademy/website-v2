@@ -555,33 +555,36 @@ const LeadForm = ({
             )}
             {layout === "block" && (
               <Div
-                justifyContent_tablet={
-                  justifyContentButton || "end"
-                }
+                // justifyContent_tablet={
+                //   justifyContentButton || "end"
+                // }
                 display="flex"
                 padding="10px 0 0 0"
                 width="100%"
               >
 
                 <Button
-                  variant="full"
+                  //variant="full"
                   type="submit"
                   fontSize="17px"
                   margin={marginButton}
                   margin_tablet={marginButton_tablet}
                   width="100%"
                   width_tablet="30%"
-                  padding_xs="12px 40%"
-                  padding_sm="12px 42%"
-                  padding_tablet="12px 24px"
+                  // padding_xs="12px 45%"
+                  // padding_sm="12px 42%"
+                  //padding_tablet="12px 24px"
+                  justifyContent="center"
+                  //padding="auto"
+                  background={Colors.blue}
+                  //textAlign="center"
                   color={
                     formStatus.status === "loading"
                       ? Colors.darkGray
-                      : Colors.blue
+                      : Colors.white
                   }
-                  textColor={Colors.white}
                   disabled={formStatus.status === "loading" ? true : false}
-                  
+
                 >
                   {formStatus.status === "loading" ? "Loading..." : sendLabel}
                 </Button>
