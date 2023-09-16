@@ -20,6 +20,11 @@ const FillerStyles = styled.div`
   transform: translateY(-50%);
 `;
 
+const weeks = [];
+for (let i = 1; i <= 16; i++) {
+  weeks.push(i.toString() + "sm.")
+};
+
 const strings = {
   us: {
     Projects: "Projects",
@@ -49,8 +54,8 @@ const ProgramDetails = (props) => {
         current.manual
           ? current
           : current.index < steps.length - 1
-          ? { index: current.index + 1, manual: false }
-          : { index: 0, manual: false }
+            ? { index: current.index + 1, manual: false }
+            : { index: 0, manual: false }
       );
     }, 2000);
     return () => clearInterval(inter);
@@ -72,7 +77,7 @@ const ProgramDetails = (props) => {
             height="auto"
             borderBottom_tablet="1px solid black"
           >
-            <H2>{props.heading || props.details.heading}</H2>
+            <H2 lineHeight="36px">{props.heading || props.details.heading}</H2>
             <Paragraph padding="20px 0 0 0">
               {props.sub_heading || props.details.sub_heading}
             </Paragraph>
@@ -85,8 +90,8 @@ const ProgramDetails = (props) => {
                     cursor="pointer"
                     flexDirection={`column`}
                     alignItems={`center`}
-                    backgroundHover={Colors.black}
-                    background={selected.index === index ? "#000000" : null}
+                    backgroundHover={Colors.grayBrown}
+                    background={selected.index === index ? Colors.grayBrown : null}
                     padding={"10px"}
                     borderRadius={"3px"}
                     display="flex"
@@ -100,9 +105,9 @@ const ProgramDetails = (props) => {
                         color={
                           selected.index === index ? "#ffffff" : Colors.darkGray
                         }
+                        colorHover="#ffffff"
                         fontWeight="900"
                         cursor={`pointer`}
-                        colorHover="#ffffff"
                         lineHeight="19px"
                       >
                         {item.module_name}
@@ -119,55 +124,101 @@ const ProgramDetails = (props) => {
                 }
               />
             </ContainerStyle>
-            <Div margin="50px 0">
-              <Icon
-                style={{ flexShrink: 0 }}
-                icon="laptop"
-                width="52px"
-                height="39px"
-              />
-              <Div flexDirection="column" margin="0 0 0 15px">
-                <H3 textAlign="left">
-                  {props.details.details_modules[selected.index].title}
-                </H3>
-                {props.details.details_modules[selected.index].description
-                  .split("\\n")
-                  .map((d, i) => (
-                    <Paragraph key={i} textAlign="left" color={Colors.darkGray}>
-                      {d}
-                    </Paragraph>
-                  ))}
-              </Div>
+            <Div
+              flexDirection="row"
+              padding="32px"
+            >{
+                weeks.map((sm, index) => (
+                  <H4
+                    margin="0 5px"
+                    fontSize="15px"
+                    lineHeight="22px"
+                    color={Colors.darkGray}
+                  >
+                    {sm}
+                  </H4>))
+              }
             </Div>
-            <Div margin="20px 0">
-              <Div margin="0 10px 0 0" width="50%">
-                <Div>
-                  <Icon icon="rocket" width="46px" height="46px" />
-                </Div>
+            <Div>
+              <Div margin="20px 20px 0 0" width="50%" height="250px">
+                <Icon
+                  style={{ flexShrink: 0 }}
+                  icon="laptop"
+                  width="52px"
+                  height="39px"
+                />
                 <Div flexDirection="column" margin="0 0 0 15px">
-                  <H3 textAlign="left">{strings[lang]["Projects"]}</H3>
-                  {props.details.details_modules[selected.index].projects
+                  <H3 
+                    textAlign="left" 
+                    textTransform="uppercase"
+                    margin="0 0 10px 0"
+                  >
+                    {props.details.details_modules[selected.index].title}
+                  </H3>
+                  {props.details.details_modules[selected.index].description
                     .split("\\n")
-                    .map((d, i) => (
+                    .map((detail, i) => (
                       <Paragraph
                         key={i}
                         textAlign="left"
                         color={Colors.darkGray}
+                        fontSize="18px"
+                        lineHeight="19px"
                       >
-                        {d}
+                        {detail}
                       </Paragraph>
                     ))}
                 </Div>
               </Div>
-              <Div>
-                <Div>
-                  <Icon icon="clock" width="46px" height="46px" />
+              <Div margin="20px 0 20px 20px" display="inline" width="50%">
+                <Div margin="0 10px 0 0" width="100%" height="150px">
+                  <Div>
+                    <Icon icon="rocket" width="46px" height="46px" />
+                  </Div>
+                  <Div flexDirection="column" margin="0 0 0 15px">
+                    <H3 
+                      textAlign="left" 
+                      textTransform="uppercase"
+                      margin="0 0 10px 0"
+                    >
+                        {strings[lang]["Projects"]}
+                    </H3>
+                    {props.details.details_modules[selected.index].projects
+                      .split("\\n")
+                      .map((detail, i) => (
+                        <Paragraph
+                          key={i}
+                          textAlign="left"
+                          color={Colors.darkGray}
+                          fontSize="18px"
+                          lineHeight="19px"
+                        >
+                          {detail}
+                        </Paragraph>
+                      ))}
+                  </Div>
                 </Div>
-                <Div flexDirection="column" margin="0 0 0 15px">
-                  <H3 textAlign="left">{strings[lang]["Duration"]}</H3>
-                  <Paragraph textAlign="left" color={Colors.darkGray}>
-                    {props.details.details_modules[selected.index].duration}
-                  </Paragraph>
+                <Div width="100%" height="50px">
+                  <Div>
+                    <Icon icon="clock" width="50px" height="46px" />
+                  </Div>
+                  <Div flexDirection="column" margin="0 0 0 15px">
+                    <H3 
+                      textAlign="left" 
+                      textTransform="uppercase"
+                      margin="0 0 10px 0"
+                    >
+                      {strings[lang]["Duration"]}
+                    </H3>
+                    <Paragraph
+                      textAlign="left"
+                      color={Colors.darkGray}
+                      fontSize="18px"
+                      lineHeight="19px"
+                    >
+                      {props.details.details_modules[selected.index].duration}
+                    </Paragraph>
+                  </Div>
                 </Div>
               </Div>
             </Div>
