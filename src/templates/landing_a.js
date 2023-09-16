@@ -92,8 +92,8 @@ const Landing = (props) => {
           yml.navbar
             ? yml.navbar.buttonText
             : pageContext.lang === "us"
-            ? "Apply"
-            : "Solicita una plaza"
+              ? "Apply"
+              : "Solicita una plaza"
         }
         buttonUrl={yml.navbar?.buttonUrl}
         logoUrl={yml.navbar?.logoUrl}
@@ -192,8 +192,8 @@ const Landing = (props) => {
           >
             <LeadForm
               landingTemplate
-              titleMargin="20px 0px 15px 0px"
-              titleMargin_tablet="20px 0px 15px 0px"
+              titleMargin="20px 0px 10px 0px"
+              titleMargin_tablet="20px 0px 10px 0px"
               textPadding_tablet="6px 0px 20px 0px"
               textPadding="6px 0px 20px 0px"
               selectProgram={programs}
@@ -216,60 +216,61 @@ const Landing = (props) => {
               marginButton_tablet="15px 0 30px auto"
             />
           </Div>
-        </Div>
-        <Div
-          height="auto"
-          width="100%"
-          gridArea_tablet={
-            applySchollarship?.imageSide === "right" ? "1/7/1/13" : "1/1/1/6"
-          }
-          style={{ position: "relative" }}
-        >
-          {applySchollarship?.imageSide === "right" ? (
-            <>
-              <Div
-                display="none"
-                display_md="flex"
-                style={{
-                  position: "absolute",
-                  background: "#FFB718",
-                  width: "280px",
-                  height: "480px",
-                  bottom: "-10px",
-                  right: "-16px",
-                  borderRadius: "3px",
-                }}
-              />
-            </>
-          ) : (
-            <>
-              <Div
-                display="none"
-                display_md="flex"
-                style={{
-                  position: "absolute",
-                  background: "#F5F5F5",
-                  width: "101%",
-                  height: "282px",
-                  top: "-25px",
-                  left: "30px",
-                  borderRadius: "3px",
-                }}
-              />
-            </>
-          )}
-          <StyledBackgroundSection
-            height="450px"
-            borderRadius="3px"
-            image={
-              applySchollarship
-                ? applySchollarship?.image.childImageSharp.gatsbyImageData
-                : data.allPageYaml.edges[0].node.list[0].image.childImageSharp
-                    .gatsbyImageData
+
+          <Div
+            height="auto"
+            width="100%"
+            gridArea_tablet={
+              applySchollarship?.imageSide === "right" ? "1/7/1/13" : "1/1/1/6"
             }
-            bgSize="contain"
-            alt="geekforce image"
-          />
+            style={{ position: "relative" }}
+          >
+            {applySchollarship?.imageSide === "right" ? (
+              <>
+                <Div
+                  display="none"
+                  display_md="flex"
+                  style={{
+                    position: "absolute",
+                    background: "#FFB718",
+                    width: "280px",
+                    height: "480px",
+                    bottom: "-10px",
+                    right: "-16px",
+                    borderRadius: "3px",
+                  }}
+                />
+              </>
+            ) : (
+              <>
+                <Div
+                  display="none"
+                  display_md="flex"
+                  style={{
+                    position: "absolute",
+                    background: "#F5F5F5",
+                    width: "101%",
+                    height: "282px",
+                    top: "-25px",
+                    left: "30px",
+                    borderRadius: "3px",
+                  }}
+                />
+              </>
+            )}
+            <StyledBackgroundSection
+              height="450px"
+              borderRadius="3px"
+              image={
+                applySchollarship
+                  ? applySchollarship?.image.childImageSharp.gatsbyImageData
+                  : data.allPageYaml.edges[0].node.list[0].image.childImageSharp
+                    .gatsbyImageData
+              }
+              bgSize="contain"
+              alt="geekforce image"
+            />
+          </Div>
         </Div>
       </GridContainerWithImage>
     </>

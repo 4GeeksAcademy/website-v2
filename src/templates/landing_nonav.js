@@ -4,7 +4,7 @@ import { landingSections } from "../components/Landing";
 import FollowBar from "../components/FollowBar";
 import LeadForm from "../components/LeadForm";
 import { Paragraph } from "../components/Heading";
-import { GridContainerWithImage, Div } from "../components/Sections";
+import { GridContainerWithImage, Div, Grid } from "../components/Sections";
 import { Colors, StyledBackgroundSection } from "../components/Styling";
 import BaseRender from "./_baseLandingLayout";
 import { processFormEntry } from "../actions";
@@ -161,69 +161,23 @@ const Landing = (props) => {
           });
         })}
       <div id="bottom"></div>
-      <GridContainerWithImage
+      <Grid
         id="bottom"
-        background="#F9F9F9"
         imageSide={applySchollarship?.imageSide}
         padding="0"
         padding_tablet="80px 0 90px 0"
         columns_tablet="14"
         margin="0"
-        margin_tablet="0"
-      >
+        margin_tablet="auto"
+        maxWidth_tablet="1366px"
+      > 
         <Div
-          flexDirection="column"
-          margin="0"
-          justifyContent_tablet="start"
-          padding="0"
-          padding_tablet="0 30px"
-          gridArea_tablet={
-            applySchollarship?.imageSide === "right" ? "1/1/1/6" : "1/7/1/13"
-          }
-        >
-          <Div
-            flexDirection="column"
-            size="12"
-            size_tablet="12"
-            width="100%"
-            width_tablet="100%"
-            margin="0"
-            textAlign_sm="center"
-          >
-            <LeadForm
-              landingTemplate
-              titleMargin="20px 0px 15px 0px"
-              titleMargin_tablet="20px 0px 15px 0px"
-              textPadding_tablet="6px 0px 20px 0px"
-              textPadding="6px 0px 20px 0px"
-              selectProgram={programs}
-              selectLocation={locations}
-              layout="block"
-              background="#F9F9F9"
-              margin="0"
-              formHandler={processFormEntry}
-              heading={yml.form.heading}
-              style={{ minHeight: "350px" }}
-              motivation={yml.form.motivation}
-              sendLabel={yml.form.button_label}
-              redirect={yml.form.redirect}
-              inputBgColor="#FFFFFF"
-              lang={pageContext.lang}
-              fields={yml.form.fields}
-              data={preData}
-              justifyContentButton="center"
-              marginButton="15px auto 30px auto"
-              marginButton_tablet="15px 0 30px auto"
-            />
-          </Div>
-        </Div>
-        <Div
-          height="auto"
+          //height="auto"
           width="100%"
-          gridArea_tablet={
-            applySchollarship?.imageSide === "right" ? "1/7/1/13" : "1/1/1/6"
-          }
+          padding_tablet="0"
           style={{ position: "relative" }}
+          gridColumn_tablet={applySchollarship?.imageSide === "right" ? "8/15" : "2/8"}
+          gridRow_tablet="1/1"
         >
           {applySchollarship?.imageSide === "right" ? (
             <>
@@ -248,7 +202,7 @@ const Landing = (props) => {
                 display_md="flex"
                 style={{
                   position: "absolute",
-                  background: Colors.lightBlue,
+                  background: "transparent",
                   width: "101%",
                   height: "282px",
                   top: "40px",
@@ -271,7 +225,55 @@ const Landing = (props) => {
             alt="geekforce image"
           />
         </Div>
-      </GridContainerWithImage>
+        <Div
+          flexDirection="column"
+          margin="0"
+          justifyContent_tablet="start"
+          padding="0"
+          padding_tablet={applySchollarship?.imageSide === "right" ? "0 20px 0 20%" : "0 20% 0 20px"}
+          // gridArea_tablet={
+          //   applySchollarship?.imageSide === "right" ? "1/1/1/6" : "1/7/1/14"
+          // }
+          gridColumn_tablet={applySchollarship?.imageSide === "right" ? "1/7" : "8/15"}
+          gridRow_tablet="1/1"
+        >
+          <Div
+            flexDirection="column"
+            size="12"
+            size_tablet="12"
+            width="100%"
+            width_tablet="100%"
+            margin="0"
+            textAlign_sm="center"
+          >
+            <LeadForm
+              landingTemplate
+              titleMargin="20px 0px 15px 0px"
+              titleMargin_tablet="20px 0px 15px 0px"
+              textPadding_tablet="6px 0px 20px 0px"
+              textPadding="6px 0px 20px 0px"
+              selectProgram={programs}
+              selectLocation={locations}
+              layout="block"
+              background="#FFFFFF"
+              margin="0"
+              formHandler={processFormEntry}
+              heading={yml.form.heading}
+              style={{ minHeight: "350px" }}
+              motivation={yml.form.motivation}
+              sendLabel={yml.form.button_label}
+              redirect={yml.form.redirect}
+              inputBgColor="#FFFFFF"
+              lang={pageContext.lang}
+              fields={yml.form.fields}
+              data={preData}
+              justifyContentButton="center"
+              marginButton="15px auto 30px auto"
+              marginButton_tablet="15px 0 30px auto"
+            />
+          </Div>
+        </Div>
+      </Grid>
     </>
   );
 };
