@@ -139,7 +139,7 @@ const ProgramDetails = (props) => {
           })}
         </Div>
       </Grid>
-      <Div flexWrap="wrap" margin_xs="0 35px" margin_tablet="50px 0 0 0">
+      <Div flexWrap="wrap" margin_xs="0 20px" margin_tablet="100px 0 0 0">
         <H2
           lineHeight="36px"
         >

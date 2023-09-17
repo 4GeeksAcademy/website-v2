@@ -1,7 +1,7 @@
 import React from "react";
 import { useStaticQuery, graphql, Link } from "gatsby";
 import { H2, H4, H3, Paragraph } from "../Heading";
-import { Div, GridContainer } from "../Sections";
+import { Div, GridContainer, Grid } from "../Sections";
 import { RoundImage, Colors } from "../Styling";
 import ReactPlayer from "../ReactPlayer";
 import Fragment from "../Fragment";
@@ -78,14 +78,20 @@ export default ({
 
   return (
     <Fragment github="/components/with_4geeks">
-      {title && (
-        <GridContainer margin="0 0 40px 0" marginTablet="0px 0px 20px 0px">
+      
+      {info?.header && (
+        <Grid 
+          margin="40px 5px" 
+          margin_tablet="40px auto 20px auto"
+          maxWidth_tablet="1366px"
+        >
           <Div
             display="flex"
             flexDirection="column"
             alignItems="left"
-            padding_tablet="0px"
+            padding_tablet="0px 16px"
             padding="0px"
+            gridColumn="2/14"
           >
             <H2
               margin_tablet="0 0 15px 0"
@@ -112,60 +118,63 @@ export default ({
               </Paragraph>
             )}
           </Div>
-        </GridContainer>
+        </Grid>
       )}
       {locationFiltered && (
-        <GridContainer
+        <Grid
           columns_tablet={
             locationFiltered.length <= 3 ? locationFiltered.length : "3"
           }
-          margin="0 0 73px 0"
-          margin_tablet="0 0 84px 0"
+          margin="0 10px 73px 10px"
+          margin_tablet="0 auto 84px auto"
+          maxWidth_tablet="1366px"
         >
-          {locationFiltered.map((i, index) => {
-            return (
-              <Div
-                display="flex"
-                flexDirection="column"
-                flexDirection_tablet="column"
-                justifyContent="start"
-                border="none"
-                key={`${i.name}_${index}`}
-                style={{ borderRadius: `0px` }}
-              >
+          <Div  gridColumn="2/14" className="badge-slider hideOverflowX__">
+            {locationFiltered.map((i, index) => {
+              return (
                 <Div
-                  padding_xs="0 0 20px 0px"
-                  padding="20px 0"
-                  width_tablet="100%"
-                  height_tablet="173px"
-                  height="173px"
-                  alignSelf={`baseline`}
-                >
-                  <ReactPlayer
-                    With_Modal={true}
-                    imageWidth="100%"
-                    imageHeight="auto"
-                    height="100%"
-                    className="react-player-with4geeks"
-                    thumb={i.image}
-                    id={i.video}
-                    width="100%"
-                    width_tablet="100%"
-                    videoHeight={playerHeight}
-                    style={{ borderRadius: `0px`, height: `173px` }}
-                  />
-                </Div>
-                <Div
-                  marginTop="20px"
-                  padding_tablet="20px 32px"
-                  padding_xs="20px 16px"
-                  display={`flex`}
-                  height="100%"
+                  display="flex"
                   flexDirection="column"
-                  gap="16px"
-                  boxShadow="0px 2px 5px 0px rgba(0,0,0,0.1)"
+                  flexDirection_tablet="column"
+                  justifyContent="start"
+                  border="none"
+                  padding="0 16px"
+                  key={`${i.name}_${index}`}
+                  style={{ borderRadius: `0px` }}
+                  minWidth="315px"
                 >
-                  {i.footer.is_image ? (
+                  <Div
+                    padding_xs="0 0 20px 0px"
+                    padding="20px 0"
+                    width_tablet="100%"
+                    height_tablet="173px"
+                    height="173px"
+                    alignSelf={`baseline`}
+                  >
+                    <ReactPlayer
+                      With_Modal={true}
+                      imageWidth="100%"
+                      imageHeight="auto"
+                      height="100%"
+                      className="react-player-with4geeks"
+                      thumb={i.image}
+                      id={i.video}
+                      width="100%"
+                      width_tablet="100%"
+                      videoHeight={playerHeight}
+                      style={{ borderRadius: `0px`, height: `173px` }}
+                    />
+                  </Div>
+                  <Div
+                    marginTop="20px"
+                    padding_tablet="20px 32px"
+                    padding_xs="20px 16px"
+                    display={`flex`}
+                    height="100%"
+                    flexDirection="column"
+                    gap="16px"
+                    boxShadow="0px 2px 5px 0px rgba(0,0,0,0.1)"
+                  >
                     <Link to={i.footer.image_link}>
                       <RoundImage
                         url={i.footer.image}
@@ -174,7 +183,7 @@ export default ({
                         position="left"
                       />
                     </Link>
-                  ) : (
+
                     <H4
                       textAlign="left"
                       width="100%"
@@ -187,38 +196,45 @@ export default ({
                     >
                       {i.name}
                     </H4>
-                  )}
-                  <H3
-                    textAlign="left"
-                    width="100%"
-                    margin="0"
-                    fontSize_xs="18px"
-                    fontSize_tablet="28px"
-                    fontSize_md="28px"
-                    lineHeight_xs="21.6px"
-                    lineHeight_tablet="33.6px"
-                  >
-                    {`“${i.title}”`}
-                  </H3>
-                  <Paragraph
-                    color={Colors.darkGray}
-                    textAlign="left"
-                    margin="10px 0 10px 0"
-                    fontWeight="400"
-                    fontSize_xs="14px"
-                    fontSize_tablet="13px"
-                    lineHeight_xs="16.8px"
-                    lineHeight_tablet="26px"
-                  >
-                    {i.description}
-                  </Paragraph>
+                    <H3
+                      textAlign="left"
+                      width="100%"
+                      margin="0"
+                      fontSize_xs="18px"
+                      fontSize_tablet="28px"
+                      fontSize_md="28px"
+                      lineHeight_xs="21.6px"
+                      lineHeight_tablet="33.6px"
+                    >
+                      {`“${i.title}”`}
+                    </H3>
+                    <Paragraph
+                      color={Colors.darkGray}
+                      textAlign="left"
+                      margin="10px 0 10px 0"
+                      fontWeight="400"
+                      fontSize_xs="14px"
+                      fontSize_tablet="13px"
+                      lineHeight_xs="16.8px"
+                      lineHeight_tablet="26px"
+                    >
+                      {i.description}
+                    </Paragraph>
 
+                    <Link>
+                      <H4 
+                        display="flex"
+                        fontWeigth="700"
+                        color={Colors.blue}
+                      >See Article</H4>
+                    </Link>
 
+                  </Div>
                 </Div>
-              </Div>
-            );
-          })}
-        </GridContainer>
+              );
+            })}
+          </Div>
+        </Grid>
       )}
     </Fragment>
   );

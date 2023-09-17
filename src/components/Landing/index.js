@@ -1036,12 +1036,6 @@ export const landingSections = {
       margin="0"
       padding="0"
     >
-      <Title
-        title={yml.heading}
-        paragraph={yml.sub_heading}
-        paragraphColor={Colors.gray}
-        variant="primary"
-      />
       <With4Geeks
         text={yml.footer?.text}
         sessionLocation={
