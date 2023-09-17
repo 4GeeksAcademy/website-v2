@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState} from "react";
 import { useStaticQuery, graphql, Link } from "gatsby";
 import { GridContainer, Div } from "../Sections";
 import { H2, H3, Paragraph } from "../Heading";
@@ -7,6 +7,9 @@ import { Colors } from "../Styling";
 import Fragment from "../Fragment";
 
 const GeeksVsOthers = (props) => {
+
+  const [selected, setSelected] = useState({ index: null, manual: false });
+
   const data = useStaticQuery(graphql`
     query newGeeksVsOthersQuery {
       allGeeksVsOthersYaml {
@@ -55,8 +58,13 @@ const GeeksVsOthers = (props) => {
             padding_tablet="0 4em"
             padding="0 2em"
           >
-            <H2 margin="0 0 15px 0">{props.title}</H2>
-            <Paragraph>{props.paragraph}</Paragraph>
+            <H2 
+              margin="0 0 15px 0"
+              fontSize="24px" fontSize_tablet="32px"
+              fontWeight="700"
+              lineHeight="29px" lineHeight_tablet="38"
+            >{props.title}</H2>
+            <Paragraph fontSize_tablet="15px" fontSize="18px"> {props.paragraph}</Paragraph>
           </Div>
         </GridContainer>
       )}
@@ -66,13 +74,13 @@ const GeeksVsOthers = (props) => {
         borderRadiusChild="3px"
         borderRadiusChild_tablet="3px"
         overflowChild="auto"
-        containerColumns_tablet={`2fr repeat(10, 1fr) 2fr`}
+        containerColumns_tablet={`1fr repeat(10, 1fr) 1fr`}
         gridColumn_tablet="2 / span 10"
         columns_tablet="9"
         columns="3"
         backgroundChild="#FFF1D1"
         gridGap="0"
-        padding_tabletChild="11px 11px 11px 44px"
+        padding_tabletChild="10px"
       >
         <Div
           gridColumn_tablet="1 / 4"
@@ -83,9 +91,10 @@ const GeeksVsOthers = (props) => {
         >
           <H3
             textAlign="left"
-            fontSize="15px"
+            fontSize="24px"
             fontWeight="900"
             lineHeight="19px"
+            color={Colors.darkGray}
           >
             {geeks.titles.featured}
           </H3>
@@ -100,9 +109,10 @@ const GeeksVsOthers = (props) => {
         >
           <H3
             textAlign="left"
-            fontSize="15px"
+            fontSize="24px"
             fontWeight="900"
             lineHeight="19px"
+            color={Colors.darkGray}
           >
             {geeks.titles.at_geeks}
           </H3>
@@ -117,9 +127,10 @@ const GeeksVsOthers = (props) => {
         >
           <H3
             textAlign="left"
-            fontSize="15px"
+            fontSize="24px"
             fontWeight="900"
             lineHeight="19px"
+            color={Colors.darkGray}
           >
             {geeks.titles.average}
           </H3>
@@ -142,9 +153,10 @@ const GeeksVsOthers = (props) => {
                 <H3
                   textAlign="left"
                   fontSize="15px"
-                  fontWeight="400"
+                  fontWeight="700"
                   lineHeight="22px"
                   textTransform="uppercase"
+                  color={Colors.darkGray}
                 >
                   {m.features}
                 </H3>
@@ -164,9 +176,10 @@ const GeeksVsOthers = (props) => {
                 <H3
                   textAlign="left"
                   fontSize="15px"
-                  fontWeight="400"
+                  fontWeight="700"
                   lineHeight="22px"
                   textTransform="uppercase"
+                  color={Colors.darkGray}
                 >
                   {m.at4_Geeks}
                 </H3>
@@ -186,9 +199,10 @@ const GeeksVsOthers = (props) => {
                 <H3
                   textAlign="left"
                   fontSize="15px"
-                  fontWeight="400"
+                  fontWeight="700"
                   lineHeight="22px"
                   textTransform="uppercase"
+                  color={Colors.darkGray}
                 >
                   {m.industry_average}
                 </H3>
