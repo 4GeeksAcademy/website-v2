@@ -42,6 +42,7 @@ export const Colors = {
   veryLightBlue: "#C7F3FD", 
   veryLightBlue2: "#E3F9FE",
   grayBrown:"#333333",
+  gray2: "#A4A4A466",
   gray: "#898a8b",
   gray3: "#828282",
   verylightGray: "#F5F5F5",
@@ -59,6 +60,7 @@ export const Colors = {
   white: "#FFFFFF",
   red: "red",
   lightRed: "#ffcdc9",
+  whitePink: "#FFF1D1",
   shadow: "0px 0px 16px rgba(0, 0, 0, 0.15)",
 };
 

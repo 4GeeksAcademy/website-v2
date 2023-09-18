@@ -202,6 +202,7 @@ export const Div = styled.div`
   @media ${Devices.xxs} {
     margin: ${(props) => props.margin_xxs};
     background: ${(props) => props.background_xxs};
+    display: ${(props) => props.display_xss};
   }
   @media ${Devices.xs} {
     padding: ${(props) => props.padding_xs};
@@ -382,12 +383,14 @@ export const Grid = styled(Div)`
   @media ${Devices.xs} {
     grid-template-columns: ${(props) =>
       props.columns_xs ? `repeat(${props.columns_xs}, 1fr)` : null};
+    display: ${(props) => props.display_xs || "grid"};
   }
   @media ${Devices.sm} {
     grid-template-columns: ${(props) =>
       props.gridTemplateColumns_sm
         ? `repeat(${props.gridTemplateColumns_sm}, 1fr)`
         : null};
+    display: ${(props) => props.display_sm || "grid"};
   }
   @media ${Devices.tablet} {
     margin: ${(props) => props.margin_tablet};
@@ -418,6 +421,7 @@ export const Grid = styled(Div)`
         : null};
     grid-gap: ${(props) => props.gridGap_md};
     grid-column: ${(props) => props.gridColumn_md};
+    display: ${(props) => props.display_md || "grid"};
   }
   @media ${Devices.lg} {
   }
@@ -595,7 +599,10 @@ export const GridContainer = ({
   containerColumns_md,
   children,
   display,
+  display_xs,
+  display_sm,
   display_tablet,
+  display_md,
   background,
   borderRadius,
   borderRadiusChild,
@@ -647,7 +654,10 @@ export const GridContainer = ({
       boxShadow_tablet={shadow_tablet}
       borderRadius={borderRadius}
       display={display}
+      display_sm={display_sm}
+      displa_xs={display_xs}
       display_tablet={display_tablet}
+      display_md={display_md}
       justifyContent={justifyContent}
       justifyContent_tablet={justifyContent_tablet}
       position={position}
