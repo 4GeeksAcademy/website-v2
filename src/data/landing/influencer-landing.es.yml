@@ -27,7 +27,7 @@ form:
   # posible fields: "first_name", "last_name", "full_name", "phone", "email"
   # always the first_name, email and phone will be mandatory if added.
   fields: ["full_name", "phone", "email"]
-  margin_md: "0 auto 0 -30px"
+  #margin_md: "0 auto 0 -30px"
   heading: "Conoce más información"
   button_label: Obtener más información
   redirect: "https://marketing892162.typeform.com/to/XhfwihKQ" #you can redirect to another url or entirely diffrent website

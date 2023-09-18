@@ -105,7 +105,7 @@ const ProgramDetails = (props) => {
             return (
               <Div flexWrap="wrap">
                 <Div alignItems="start" margin="10px 0" key={index}>
-                  <Icon icon={item.icon} width="20px" height="20px" color="black" />
+                  <Icon icon={item.icon} width="20px" height="20px" style={{color: "black"}}/>
                   <H4
                     fontSize="16px"
                     textAlign="start"
@@ -139,7 +139,7 @@ const ProgramDetails = (props) => {
           })}
         </Div>
       </Grid>
-      <Div flexWrap="wrap" margin_xs="0 20px" margin_tablet="100px 0 0 0">
+      <Div flexWrap="wrap" margin_xs="20px" margin_tablet="100px 0 0 0">
         <H2
           lineHeight="36px"
         >
@@ -157,10 +157,9 @@ const ProgramDetails = (props) => {
       {props.withoutAnimation !== true && (
         <Grid
           padding_tablet="0"
-          margin="0 auto 83px auto"
+          margin="0 auto"
           justifyItems="center"
           maxWidth="1366px"
-
         >
           <Div
             flexDirection="column"
@@ -169,13 +168,15 @@ const ProgramDetails = (props) => {
             height="auto"
             borderBottom_tablet="1px solid black"
             gridColumn_tablet="2/14"
-            display="none"
-            display_md="block"
+          // display="none"
+          // display_md="block"
           >
             <Div
               justifyContent="between"
               margin="50px 0 20px 0"
               className="badge-slider hideOverflowX__"
+              display_xs="none"
+              display_tablet="flex"
             >
               {props.details.details_modules.map((item, index) => {
                 return (
@@ -212,16 +213,23 @@ const ProgramDetails = (props) => {
                 );
               })}
             </Div>
-            <ContainerStyle>
-              <FillerStyles
-                completed={
-                  (steps[selected.index] * 100) / steps[steps.length - 1]
-                }
-              />
-            </ContainerStyle>
+            <Div 
+              display_xs="none"
+              display_tablet="flex"
+            >
+              <ContainerStyle>
+                <FillerStyles
+                  completed={
+                    (steps[selected.index] * 100) / steps[steps.length - 1]
+                  }
+                />
+              </ContainerStyle>
+            </Div>
             <Div
               flexDirection="row"
               padding="32px"
+              display_xs="none"
+              display_tablet="flex"
             >{
                 weeks.map((sm, index) => (
                   <H4
@@ -234,8 +242,23 @@ const ProgramDetails = (props) => {
                   </H4>))
               }
             </Div>
-            <Div display_tablet="flex" display="block">
-              <Div margin="20px 20px 0 0" width="50%" height="250px">
+            <Div
+              display_tablet="flex"
+              display_xs="flex"  // aqui
+              flexDirection_xs="column"
+              flexDirection_md="row"
+              margin_xss="20px"
+            >
+              <Div
+                margin_md="20px 20px 0 0"
+                margin_tablet="auto"
+                margin_xs="0 0 20px 20px"
+                width_md="50%"
+                width_xs="300px"
+                width_tablet="80%"
+                height_md="250px"
+                height_xs="auto"
+              >
                 <Icon
                   style={{ flexShrink: 0 }}
                   icon="laptop"
@@ -247,6 +270,8 @@ const ProgramDetails = (props) => {
                     textAlign="left"
                     textTransform="uppercase"
                     margin="0 0 10px 0"
+                    fontSize_xs="18px"
+                    fontSize_tavlet="22px"
                   >
                     {props.details.details_modules[selected.index].title}
                   </H3>
@@ -257,16 +282,32 @@ const ProgramDetails = (props) => {
                         key={i}
                         textAlign="left"
                         color={Colors.darkGray}
-                        fontSize="18px"
-                        lineHeight="19px"
+                        fontSize_tablet="18px"
+                        fontSize_xs="14px"
+                        lineHeight_tablet="19px"
+                        lineHeight_xs="17px"
                       >
                         {detail}
                       </Paragraph>
                     ))}
                 </Div>
               </Div>
-              <Div margin="20px 0 20px 20px" display="inline" width="50%">
-                <Div margin="0 10px 0 0" width="100%" height="150px">
+              <Div
+                margin_md="20px 0 20px 20px"
+                margin_tablet="auto"
+                margin_xs="0 0 0 20px"
+                display="inline"
+                width_tablet="80%"
+                width_md="50%"
+                width_xs="320px"
+              >
+                <Div
+                  margin_md="0 10px 0 0"
+                  margin_xs="0 0 20px 0"
+                  width="100%"
+                  height_md="150px"
+                  height_xs="auto"
+                >
                   <Div>
                     <Icon icon="rocket" width="46px" height="46px" />
                   </Div>
@@ -285,15 +326,17 @@ const ProgramDetails = (props) => {
                           key={i}
                           textAlign="left"
                           color={Colors.darkGray}
-                          fontSize="18px"
-                          lineHeight="19px"
+                          fontSize_tablet="18px"
+                          fontSize_xs="14px"
+                          lineHeight_tablet="19px"
+                          lineHeight_xs="17px"
                         >
                           {detail}
                         </Paragraph>
                       ))}
                   </Div>
                 </Div>
-                <Div width="100%" height="50px">
+                <Div margin="0 10px 0 0" width="100%" height_md="50px" height_xs="auto">
                   <Div>
                     <Icon icon="clock" width="46px" height="46px" />
                   </Div>

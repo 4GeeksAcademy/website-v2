@@ -245,6 +245,7 @@ export const Paragraph = styled.p`
     margin: ${(props) => props.margin_md};
     padding: ${(props) => props.padding_md};
     max-width: ${(props) => props.maxWidth_md};
+    
   }
   @media ${Devices.lg} {
     font-size: ${(props) => props.fontSize_lg};

@@ -203,7 +203,7 @@ const Side = ({
       )
       }
 
-      {
+      {/* {
         content.text && /<\/?[a-z0-9]+>/g.test(content.text) ? 
           <Paragraph
             textAlign="left"
@@ -237,7 +237,7 @@ const Side = ({
             </Paragraph>
           ))
         ) : null
-      }
+      } */}
 
       {
         button && (
@@ -890,7 +890,7 @@ export const landingSections = {
           title={yml.heading}
           paragraph={yml.sub_heading}
         />
-        ,
+      
       </React.Fragment>
     );
   },
@@ -922,7 +922,7 @@ export const landingSections = {
           details={course?.details}
           lang={pageContext.lang}
         />
-        <ProgramDetailsMobile details={course && course.details} />
+        {/* <ProgramDetailsMobile details={course && course.details} /> */}
       </React.Fragment>
     );
   },
@@ -1090,6 +1090,7 @@ export const landingSections = {
         m_sm="0"
         p_xs="0"
         maxWidth="1366px"
+        margin_xs="40px 0"
       >
         <OurPartners
           images={hiring.partners.images}
