@@ -12,24 +12,31 @@ partners:
   footer_button: Revisa nuestra lista de aliados
   footer_link: "/es/aliados"
   images:
+    - name: "Facebook"
+      #locations: ["madrid-spain"]
+      image: "../../../../static/images/partner/facebook.png"
+      featured: true
     - name: "Microsoft"
       #locations: ["madrid-spain"]
       image: "../../../../static/images/partner/microsoft.png"
       featured: true
       link: "https://microsoft.com"
+    - name: "Apple"
+      #locations: ["madrid-spain"]
+      image: "../../../../static/images/partner/apple.png"
+      featured: true
+      #if follow is equal to false then it will add the nofollow attribute
+      follow: true
+      link: "https://www.apple.com"
     - name: "Evernote"
       #locations: ["madrid-spain"]
       image: "../../../../static/images/partner/evernote.png"
       featured: false
       link: "https://evernote.com/intl/es"
-    - name: "Facebook"
-      #locations: ["madrid-spain"]
-      image: "../../../../static/images/partner/facebook.png"
-      featured: true
     - name: "Ebay"
       #locations: ["madrid-spain"]
       image: "../../../../static/images/partner/ebay.png"
-      featured: true
+      featured: false
     - name: "National Geographic"
       #locations: ["madrid-spain"]
       image: "../../../../static/images/partner/natgeo.png"
@@ -85,6 +92,7 @@ partners:
       #if follow is equal to false then it will add the nofollow attribute
       follow: true
       link: "https://es.jooble.org"
+    
       
 coding:
   tagline: "Actores globales en el mundo de la codificación"

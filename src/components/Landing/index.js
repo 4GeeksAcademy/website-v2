@@ -138,6 +138,7 @@ const Side = ({
           {sub_heading.text}
         </Paragraph>
       )}
+      
       {Array.isArray(bullets) && (
         <Div
           display="grid"
@@ -203,7 +204,7 @@ const Side = ({
       }
 
       {
-        content && /<\/?[a-z0-9]+>/g.test(content.text) ? (
+        content.text && /<\/?[a-z0-9]+>/g.test(content.text) ? 
           <Paragraph
             textAlign="left"
             textAlign_tablet="left"
@@ -217,7 +218,7 @@ const Side = ({
             fontHeight="30px"
             dangerouslySetInnerHTML={{ __html: content.text }}
           />
-        ) : content ? (
+         : content ? (
           content.text.split("\n").map((p, i) => (
             <Paragraph
               key={`${i}-${p}`}
@@ -698,19 +699,21 @@ export const landingSections = {
     let badges = dataYml[0].node.badges;
     return (
       <React.Fragment key={index}>
+      <Div background={Colors.verylightGray2} width="100%">
         <Badges
           link
           // wrapped_images={true}
           id="badges"
           lang={pageContext.lang}
-          background={Colors.verylightGray}
+          background={Colors.verylightGray2}
           paragraph={badges.heading}
           short_text
           padding="60px 0"
           padding_tablet="68px 0"
-          margin="0"
           margin_tablet="0 0 78px 0"
+          maxWidth="1366px"
         />
+      </Div>
       </React.Fragment>
     );
   },
@@ -1082,10 +1085,11 @@ export const landingSections = {
         id="who_is_hiring"
         key={index}
         flexDirection="column"
-        margin="40px 0"
-        margin_tablet="40px 50px 100px"
+        //margin="40px auto"
+        margin_tablet="40px auto 100px auto"
         m_sm="0"
         p_xs="0"
+        maxWidth="1366px"
       >
         <OurPartners
           images={hiring.partners.images}
@@ -1129,7 +1133,8 @@ export const landingSections = {
       flexDirection="column"
       padding="50px 0 50px 0"
       padding_tablet="50px 6%"
-      margin="0"
+      margin_tablet="0 auto"
+      maxWidth="1366px"
     >
       <TwoColumn
         left={{ image: yml.image, video: yml.video }}
@@ -1154,7 +1159,8 @@ export const landingSections = {
         flexDirection="column"
         padding="0 0 50px 0"
         padding_tablet="6%"
-        margin="0"
+        margin_tablet="0 auto"
+        maxWidth="1366px"
       >
         <TwoColumn
           left={{

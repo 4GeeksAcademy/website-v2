@@ -71,7 +71,7 @@ const GeeksVsOthers = (props) => {
       )}
 
       {/* 3 / span 10 */}
-      <Div width="100%" display_xss="none" display_md="flex"> 
+      <Div width="100%" display_xss="none" display_md="flex" maxWidth="1366px" margin="auto"> 
         <GridContainer
           borderRadiusChild="3px"
           borderRadiusChild_tablet="3px"
