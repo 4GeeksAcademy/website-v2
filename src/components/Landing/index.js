@@ -26,6 +26,8 @@ import StarRating from "../StarRating";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { smartRedirecting, transferQuerystrings } from "../../utils/utils.js";
 import CardsCarousel from "../CardsCarousel";
+import Overlaped from "../Overlaped";
+import { background } from "@storybook/theming";
 
 const Title = ({ id, title, paragraph }) => {
   return (
@@ -923,6 +925,25 @@ export const landingSections = {
           lang={pageContext.lang}
         />
         {/* <ProgramDetailsMobile details={course && course.details} /> */}
+      </React.Fragment>
+    );
+  },
+
+  overlaped: ({session, pageContext, yml, data, index}) => {
+    const { heading, content, button, background, image } = yml
+    return(
+      <React.Fragment key={index} >
+        <Div maxWidth_tablet="1366px" margin_tablet="auto">
+        <Overlaped
+          landingTemplate
+          heading={heading.text}
+          content={content.text}
+          button={button}
+          background={background}
+          image={image}
+          lang={pageContext.lang}
+        />
+        </Div>
       </React.Fragment>
     );
   },

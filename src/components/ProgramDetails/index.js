@@ -105,7 +105,7 @@ const ProgramDetails = (props) => {
             return (
               <Div flexWrap="wrap">
                 <Div alignItems="start" margin="10px 0" key={index}>
-                  <Icon icon={item.icon} width="20px" height="20px" style={{color: "black"}}/>
+                  <Icon icon={item.icon} width="20px" height="20px" style={{ color: "black" }} />
                   <H4
                     fontSize="16px"
                     textAlign="start"
@@ -213,7 +213,7 @@ const ProgramDetails = (props) => {
                 );
               })}
             </Div>
-            <Div 
+            <Div
               display_xs="none"
               display_tablet="flex"
             >
@@ -316,6 +316,8 @@ const ProgramDetails = (props) => {
                       textAlign="left"
                       textTransform="uppercase"
                       margin="0 0 10px 0"
+                      fontSize_xs="18px"
+                      fontSize_tavlet="22px"
                     >
                       {strings[lang]["Projects"]}
                     </H3>
@@ -345,6 +347,8 @@ const ProgramDetails = (props) => {
                       textAlign="left"
                       textTransform="uppercase"
                       margin="0 0 10px 0"
+                      fontSize_xs="18px"
+                      fontSize_tavlet="22px"
                     >
                       {strings[lang]["Duration"]}
                     </H3>

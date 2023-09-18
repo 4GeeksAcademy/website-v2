@@ -39,6 +39,7 @@ export const Colors = {
   blue: "#00A0DA",
   lightBlue: "#BBEAFC",
   lightBlue2: "rgba(199, 243, 253, 0.5)",
+  blue2: "#0097CD",
   veryLightBlue: "#C7F3FD", 
   veryLightBlue2: "#E3F9FE",
   grayBrown:"#333333",
