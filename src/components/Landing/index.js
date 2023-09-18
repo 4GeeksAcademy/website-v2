@@ -203,7 +203,7 @@ const Side = ({
       )
       }
 
-      {/* {
+      {
         content.text && /<\/?[a-z0-9]+>/g.test(content.text) ? 
           <Paragraph
             textAlign="left"
@@ -237,7 +237,7 @@ const Side = ({
             </Paragraph>
           ))
         ) : null
-      } */}
+      }
 
       {
         button && (
