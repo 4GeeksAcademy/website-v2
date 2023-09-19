@@ -84,12 +84,19 @@ const ProgramDetails = (props) => {
           >
             {title}
           </H3>
-          {sub_title && /<\/?[a-z0-9]+>/g.test(sub_title) &&
+          {sub_title && /<\/?[a-z0-9]+>/g.test(sub_title) ?
             <Paragraph
               textAlign="start"
               lineHeight="26px"
               dangerouslySetInnerHTML={{ __html: sub_title }}
             />
+            :
+            <Paragraph
+              textAlign="start"
+              lineHeight="26px"
+            >
+              {sub_title}
+            </Paragraph>
           }
 
         </Div>

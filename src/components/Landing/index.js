@@ -206,7 +206,7 @@ const Side = ({
       }
 
       {
-        content.text && /<\/?[a-z0-9]+>/g.test(content.text) ? 
+        content && /<\/?[a-z0-9]+>/g.test(content.text) ? 
           <Paragraph
             textAlign="left"
             textAlign_tablet="left"
@@ -220,7 +220,7 @@ const Side = ({
             fontHeight="30px"
             dangerouslySetInnerHTML={{ __html: content.text }}
           />
-         : content ? (
+        : content && (
           content.text.split("\n").map((p, i) => (
             <Paragraph
               key={`${i}-${p}`}
@@ -238,7 +238,7 @@ const Side = ({
               {p}
             </Paragraph>
           ))
-        ) : null
+        )
       }
 
       {
@@ -961,6 +961,7 @@ export const landingSections = {
           background_xs="linear-gradient(180deg, #C7F3FD 59.45%, #FFFFFF 50%)"
           background_xxs="linear-gradient(180deg, #C7F3FD 60%, #FFFFFF 50%)"
           display_xs="flex"
+          margin_tablet="97px 0"
         >
         <CardsCarousel
           landingTemplate

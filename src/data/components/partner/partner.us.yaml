@@ -40,7 +40,7 @@ partners:
     - name: "National Geographic"
       #locations: ["miami-downtown"]
       image: "../../../../static/images/partner/natgeo.png"
-      featured: true
+      featured: false
     - name: "Evernote"
       #locations: ["miami-downtown"]
       image: "../../../../static/images/partner/evernote.png"

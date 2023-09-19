@@ -1,5 +1,5 @@
 import React from "react";
-import { Div, GridContainer } from "../Sections";
+import { Div, GridContainer, Grid } from "../Sections";
 import { Colors } from "../Styling";
 import { H2, Paragraph } from "../Heading";
 import { Link } from "gatsby";
@@ -12,7 +12,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 const Title_Paragraph = (props) => {
   return (
     <>
-      <GridContainer 
+      <Grid 
         margin="0 0 20px 0" 
         background={props.background}
         containerColumns_tablet="1fr repeat(12, 1fr) 1fr"
@@ -59,7 +59,7 @@ const Title_Paragraph = (props) => {
             {props.paragraph}
           </Paragraph>
         </Div>
-      </GridContainer>
+      </Grid>
     </>
   );
 };

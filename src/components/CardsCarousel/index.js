@@ -92,9 +92,22 @@ const CardsCarousel = ({
                 width_md="100%"
                 className="badge-slider hideOverflowX__"
                 flexDirection="row"
-                marginTablet="97px 0"
-                justifyContent_tablet="flex-start"
-                justifyContent_md={cards.length > 3 ? "flex-start" : "center"}
+                justifyContent_tablet={
+                    cards.length >= 1 && cards.length <= 2 ? 
+                    "center"
+                    : (
+                        cards.length >= 3 && "flex-start"
+                    )
+                }
+                justifyContent_md={
+                    cards.length == 3 ? "center" 
+                    : (
+                        cards.length > 3 && "flex-start"
+                    )    
+                }
+
+                justifyContent_lg="center"
+
                 maxWidth_tablet="1366px"
                 margin="auto"
             >

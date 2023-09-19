@@ -136,9 +136,32 @@ const Overlaped = ({
           >
             {heading}
           </H2>
-          <Paragraph textAlign="start" margin="12px 0 0 0">
+          {
+            content && /<\/?[a-z0-9]+>/g.test(content) ?
+            <Paragraph 
+              textAlign="start" 
+              margin="12px 0 0 0"
+              dangerouslySetInnerHTML={{ __html: content }}
+            />
+            : 
+            <Paragraph 
+              textAlign="start" 
+              margin="12px 0 0 0"
+            >
             {content}
-          </Paragraph>
+            </Paragraph>
+          }
+
+          {
+            button &&
+            <Button 
+              background={button.color}
+              color={Colors.white}
+              margin="12px 0 0 0"
+              >
+              {button.text}
+            </Button>
+          }
         </Div>
       </Div>
 
@@ -158,12 +181,12 @@ const Overlaped = ({
         {/* <Div
           width="100%"
         > */}
-          <Img
-            src={image.src}
-            width="23.43em"
-            height="533px"
-            backgroundSize="contain"
-          />
+        <Img
+          src={image.src}
+          width="23.43em"
+          height="533px"
+          backgroundSize="contain"
+        />
         {/* </Div> */}
 
         <Img
