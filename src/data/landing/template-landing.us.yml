@@ -369,15 +369,6 @@ components:
           font_size: "15px"
         button:
           text: "See more"
-      - image:
-          style: '{ "backgroundSize": "cover", "minHeight": "230px", "borderRadius": "80px" }'
-          src: "/images/low-income-female-heads-of-household.png"
-        heading: 
-          text: "Low-income single female heads of household"
-          style: '{ "fontWeight": "700" }'
-          font_size: "15px"
-        button:
-          text: "See more"
 
   - name: elegibility
     position: 13
@@ -427,7 +418,15 @@ components:
           font_size: "15px"
         button:
           text: "See more"
-      
+      - image:
+          style: '{ "backgroundSize": "cover", "minHeight": "230px", "borderRadius": "80px" }'
+          src: "/images/low-income-female-heads-of-household.png"
+        heading: 
+          text: "Low-income single female heads of household"
+          style: '{ "fontWeight": "700" }'
+          font_size: "15px"
+        button:
+          text: "See more"
       
 
   - name: name
