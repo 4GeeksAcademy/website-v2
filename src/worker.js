@@ -113,8 +113,8 @@ const getRegion = (shortName, regions) => {
   return region.length === 1 ? region[0] : null;
 };
 
-const initSession = async (locationsArray, storedSession, seed = {}) => {
-   console.log("Initializing session")
+const initSession = async (locationsArray, storedSession, path, seed = {}) => {
+  console.log("Initializing session");
   var v4 = null;
   var latitude = null;
   var longitude = null;
@@ -157,7 +157,7 @@ const initSession = async (locationsArray, storedSession, seed = {}) => {
     longitude = location.longitude;
   }
 
-  if (location === null) {
+  if (location === null && !path.includes("/landings")) {
     console.log("Calculating nearest location because it was null...");
     try {
       const response = await fetch(
@@ -255,7 +255,9 @@ const initSession = async (locationsArray, storedSession, seed = {}) => {
     }
   }
 
-  if (!language) language = location.defaultLanguage;
+  const defaultLang = path.split("/").filter((l) => l !== "")[0] || "us";
+
+  if (!language) language = location?.defaultLanguage || defaultLang;
 
   //construct the academy alias dictionary
   let academyAlias = await fetch(
@@ -301,7 +303,7 @@ const initSession = async (locationsArray, storedSession, seed = {}) => {
 };
 
 self.onmessage = async (message) => {
-  const { locationsArray, storedSession, seed } = message.data;
-  const _session = await initSession(locationsArray, storedSession, seed);
+  const { locationsArray, storedSession, seed, path } = message.data;
+  const _session = await initSession(locationsArray, storedSession, path, seed);
   self.postMessage(_session);
 };
