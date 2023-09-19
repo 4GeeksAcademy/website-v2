@@ -332,7 +332,7 @@ export const query = graphql`
             }
             phone {
               text
-              number
+          
             }
           }
           navbar {
@@ -352,13 +352,11 @@ export const query = graphql`
             text
             bullets
             styles
-            button {
-              text
-              path
-              background
-              color
-              hover_color
-            }
+            
+
+
+
+
           }
           badges {
             position
@@ -411,7 +409,7 @@ export const query = graphql`
           in_the_news {
             heading
             position
-            filter
+
           }
           rating_reviews {
             position
@@ -503,7 +501,7 @@ export const query = graphql`
               src
               style
               link
-              shadow
+              
             }
             programs{
               title
@@ -604,20 +602,15 @@ export const query = graphql`
             position
             heading
             paragraph
-            sub_heading
+            
             total_rows
           }
-          testimonial {
-            position
-            heading
-            sub_heading
-            students {
-              name
-              sub_heading
-              comment
-              video
-            }
-          }
+          
+
+
+
+
+
         }
       }
     }
