@@ -933,7 +933,7 @@ export const landingSections = {
     const { heading, content, button, background, image } = yml
     return(
       <React.Fragment key={index} >
-        <Div maxWidth_tablet="1366px" margin_tablet="auto">
+        
         <Overlaped
           landingTemplate
           heading={heading.text}
@@ -943,7 +943,6 @@ export const landingSections = {
           image={image}
           lang={pageContext.lang}
         />
-        </Div>
       </React.Fragment>
     );
   },

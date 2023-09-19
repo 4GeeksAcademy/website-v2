@@ -39,60 +39,94 @@ const Overlaped = ({
 
   return (
     <Div
-      position="relative"
+      maxWidth_tablet="1366px"
+      margin_tablet="auto"
     >
-      <Grid
-        gridTemplateColumns="1fr repeat(14, 1fr) 1fr"
-      >
-        <Div
-          gridColumn_tablet="2 / 8"
+      <Div position="relative" justifyContent="center" margin_tablet="auto">
+        <Grid
+          gridTemplateColumns_tablet="1fr repeat(14, 1fr) 1fr"
+          gridGap="0px"
         >
-          <Img
-            src={image.src}
-            width="100%"
-            height="533px"
-          />
-        </Div>
+          <Div
+            gridColumn="2 / 9"
+          >
+            <Img
+              src={image.src}
+              width="33.3em"
+              height="533px"
+            />
+          </Div>
+
+          <Div
+            gridColumn="9 / 16"
+            position="relative"
+          >
+            <Div width="100%" >
+              <Img
+                src="/images/landing/vector-stroke.png"
+                width="114px"
+                height="162px"
+                style={{
+                  position: "absolute",
+                  right: "3.7em",
+                  top: "20px",
+                }}
+              />
+              <Img
+                src="/images/landing/vector-stroke1.png"
+                width="70px"
+                height="181px"
+                style={{
+                  position: "absolute",
+                  right: "11.25em",
+                  top: "20px",
+                }}
+              />
+              <Img
+                src="/images/landing/vector-stroke2.png"
+                width="106px"
+                height="151px"
+                style={{
+                  position: "absolute",
+                  left: "0%",
+                  bottom: "0.8em",
+                }}
+              />
+            </Div>
+
+            <Img
+              src="/images/landing/group-2.png"
+              width="49px"
+              height="286px"
+              style={{
+                position: "absolute",
+                right: "5%",
+                bottom: "0%",
+                zIndex: "1"
+              }}
+            />
+
+          </Div>
+
+        </Grid>
 
         <Div
-          gridColumn_tablet="8 / 14"
-          position="relative"
-          alignItems="flex-end"
+          border="3px solid black"
+          flexWrap="wrap"
+          position="absolute"
+          top= "20%"
+          right= "15%"
+          left= "45%"
+          zIndex="1"
+          padding="20px"
+          background={Colors.white}
+          boxShadow="20px 15px 0px 0px rgba(0,0,0,1)"
         >
-
-          <Img
-            src="/images/landing/group-1.png"
-            width="528px"
-            height="533px"
-          />
-          <Img
-            src="/images/landing/group-2.png"
-            width="43px"
-            height="286px"
-            position="absolute"
-            zIndex="1"
-          />
-
-        </Div>
-
-      </Grid>
-
-      <Div
-        border="3px solid black"
-        flexWrap="wrap"
-        position="absolute"
-        top="100px"
-        left="40%"
-        right="20%"
-        zIndex="1"
-        padding="20px"
-        background={Colors.white}
-      >
-        <H2 
-          textAlign="start" 
+        <H2
+          textAlign="start"
           lineHeight_tablet="36px"
           margin="0 0 12px 0"
-         >
+        >
           {heading}
         </H2>
         <Paragraph textAlign="start" margin="12px 0 0 0">
@@ -100,6 +134,7 @@ const Overlaped = ({
         </Paragraph>
       </Div>
     </Div>
+    </Div >
   );
 
 
