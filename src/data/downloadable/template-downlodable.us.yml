@@ -148,31 +148,31 @@ who_is_hiring:
     - name: "Apple"
       image: "../../../static/images/partner/apple.png"
 
-choose_your_program:
-  position: 5
-  title: Our Programs____Downloadable
-  paragraph: Programs in Full-Time or Part-Time modality with live classes taught by experts
-  programs:
-  - title: "Full Stack Developer"
-    sub_title: "Level 1"
-    icon: "fullstack"
-    description: |
-      From 0 to becoming a Full-Stack Jr. programmer, you will work with HTML5, CSS3, Bootstrap, JS, Reactjs, SQL, Python, Flask, REST API's, etc. to design and create responsive websites. You'll gain a solid foundation of front, back, database, distributed processes, and deployment with passionate instructors and an up-to-date, hands-on syllabus.
-      Available Part-Time or Full-Time mode. Download <a href=https://storage.googleapis.com/4geeks-academy-website/syllabus/europe/Syllabus%20Europe%20EN.pdf target=_blank>"here the syllabus"</a>.  
+# choose_your_program:
+#   position: 5
+#   title: Our Programs____Downloadable
+#   paragraph: Programs in Full-Time or Part-Time modality with live classes taught by experts
+#   programs:
+#   - title: "Full Stack Developer"
+#     sub_title: "Level 1"
+#     icon: "fullstack"
+#     description: |
+#       From 0 to becoming a Full-Stack Jr. programmer, you will work with HTML5, CSS3, Bootstrap, JS, Reactjs, SQL, Python, Flask, REST API's, etc. to design and create responsive websites. You'll gain a solid foundation of front, back, database, distributed processes, and deployment with passionate instructors and an up-to-date, hands-on syllabus.
+#       Available Part-Time or Full-Time mode. Download <a href=https://storage.googleapis.com/4geeks-academy-website/syllabus/europe/Syllabus%20Europe%20EN.pdf target=_blank>"here the syllabus"</a>.  
     
-    text_link: Apply for a scholarship
-    link: "#" # moves to start position
+#     text_link: Apply for a scholarship
+#     link: "#" # moves to start position
     
-  - title: "AI & Machine Learning"
-    sub_title: "Developers and STEM Profiles"
-    icon: "machine"
-    description: |
-      Get trained by a renowned expert in A.I.; explore Machine Learning's fundamentals and Deep Learning with some of the most powerful technologies that truly scale intelligence for business. Practice with real-life business scenarios typical in business and review some of the tools used in the industry. Strategize and develop your A.I. following the lifecycle development from start to end, including deployment into production and maintenance with Privacy, Security, and Ethics. 
-      Download <a href=https://storage.googleapis.com/4geeks-academy-website/syllabus/europe/Syllabus%20Europe%20EN.pdf target=_blank>"here the syllabus"</a>. 
+#   - title: "AI & Machine Learning"
+#     sub_title: "Developers and STEM Profiles"
+#     icon: "machine"
+#     description: |
+#       Get trained by a renowned expert in A.I.; explore Machine Learning's fundamentals and Deep Learning with some of the most powerful technologies that truly scale intelligence for business. Practice with real-life business scenarios typical in business and review some of the tools used in the industry. Strategize and develop your A.I. following the lifecycle development from start to end, including deployment into production and maintenance with Privacy, Security, and Ethics. 
+#       Download <a href=https://storage.googleapis.com/4geeks-academy-website/syllabus/europe/Syllabus%20Europe%20EN.pdf target=_blank>"here the syllabus"</a>. 
       
 
-    text_link: Apply for a scholarship
-    link: "#"
+#     text_link: Apply for a scholarship
+#     link: "#"
 
 badges:
   position: 3
@@ -210,6 +210,40 @@ components:
         title: ""
         content: "Participants pay program costs after they start jobs making more than $35,000 a year. Participants who don't find a job or keep jobs with salaries above $35,000 pay nothing."
   
+=======
+  - name: "whatever"
+    layout: choose_your_program
+    position: 5
+    heading:
+      text: Nuestros Programas
+    content:
+      text: Contamos con programas que combinan clases prácticas dictadas por expertos
+      font_size: ["16px"]
+      path: ""
+    programs:
+    - title: "Full Stack Developer"
+      sub_title: "Nivel 1"
+      icon: "fullstack_2"
+      description: |
+        Aprende desde cero, empezando por lo básico: HTML + CSS3 + Javascript.
+        
+        Aprende las habilidades más solicitadas con instructores apasionados y un plan de estudios práctico para ayudarte a encontrar un trabajo de programación como desarrollador Jr.
+      
+      text_link: Aplica a una beca
+      link: "#"
+      
+    - title: "Ingeniero de Software"
+      sub_title: "Nivel 2"
+      icon: "software_2"
+      description: |
+        Profundizamos a un nivel avanzado principios específicos de desarrollo, llevando tu carrera a otro nivel.
+        
+        Texto que resuma y explique que este programa tiene modalidad part time y full time. Que también resuma eficientemente el syballus del programa. Acá incluiría un <a href="/us/apply">link</a> para poder descargar el PDF con el detalle del programa.
+        Desarrolla más habilidades adentrándote en el mundo de computación y aplicaciones nativas de la nube. Aprende las habilidades que el 90% de las empresas Fortune 500 están buscando.
+      
+      text_link: Aplica a una beca
+      link: "#"
+
   - name: isa_explanation
     position: 2
     layout: columns
