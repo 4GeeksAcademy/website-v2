@@ -117,19 +117,6 @@ program_details:
   heading: "Program details"
   sub_heading: "Real-life projects and exactly what companies are looking for"
 
-iconogram:
-  position: 2
-  icons:
-  - icon: "touch" 
-    title: Request Info
-  - icon: "receive_mail"
-    title: Receive an email with details
-  - icon: "talk"
-    title: Talk to Admissions
-  - icon: "terminal"
-    title: Learn to Code
-
-
 why_python:
   position: 5
   heading: "Why Python and React.js" # optional or set to white space to hide
@@ -157,6 +144,28 @@ who_is_hiring:
   sub_heading: "550+ hiring partners, and 50+ job openings right now for software development"
 
 components:
+  - name: how-it-works
+    position: 2
+    layout: iconogram
+    swipable: True
+    heading:
+      text: ""
+      font_size: ["30px", "30px", "30px", "30px", "30px"]
+    sub_heading:
+      text: ""
+      font_size: ["16px", "16px", "16px", "16px", "16px"]
+      style: '{ "textAlign": "center", "width": "60%" }'
+    text_link: "#"
+    icons:
+    - icon: "touch" 
+      title: Request Info
+    - icon: "receive_mail"
+      title: Receive an email with details
+    - icon: "talk"
+      title: Talk to Admissions
+    - icon: "terminal"
+      title: Learn to Code
+
   #- name: how_it_works
   #  position: 4
   #  background: "veryLightBlue2"

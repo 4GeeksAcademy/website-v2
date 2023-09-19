@@ -23,11 +23,16 @@ meta_info:
 form:
   # posible fields: "first_name", "last_name", "full_name", "phone", "email"
   # always the first_name, email and phone will be mandatory if added.
-  fields: ["full_name", "phone", "email"]
+  fields: ["full_name", "phone", "email", "course"]
   heading: "Apply to 4Geeks"
-  motivation: "A top quality program at No Cost for you. No excuses. Become a developer and change your life"
-  button_label: Apply Now
+  #motivation: "A top quality program at No Cost for you. No excuses. Become a developer and change your life"
+  button_label: Apply
   redirect: "/us/thank-you/?lang=us"  #you can redirect to another url or entirely diffrent website
+
+apply_schollarship: # form that is displayed at the end of the landing
+  # title: "Get more info about this award-winning development course"
+  imageSide: "left"
+  image: "../../../static/images/landing/apply.png"
 
 navbar:
   buttonText: "Apply now"
@@ -87,37 +92,43 @@ follow_bar:
   phone:
     text: "Call "
 
-choose_your_program:
-  position: 8
-  title: Our Programs
-  paragraph: Programs in Full-Time or Part-Time modality with live classes taught by experts
-  programs:
-  - title: "Full Stack Developer"
-    sub_title: "Level 1"
-    icon: "fullstack"
-    description: |
-      From 0 to becoming a Full-Stack Jr. programmer, you will work with HTML5, CSS3, Bootstrap, JS, Reactjs, SQL, Python, Flask, REST API's, etc. to design and create responsive websites. You'll gain a solid foundation of front, back, database, distributed processes, and deployment with passionate instructors and an up-to-date, hands-on syllabus.
-      Available Part-Time or Full-Time mode. Download <a href=https://storage.googleapis.com/4geeks-academy-website/syllabus/europe/Syllabus%20Europe%20EN.pdf target=_blank>"here the syllabus"</a>.  
-    
-    text_link: Apply now
-    link: "#" # moves to start position
-
-  - title: "AI & Machine Learning"
-    sub_title: "Developers and STEM Profiles"
-    icon: "machine"
-    description: |
-      Get trained by a renowned expert in A.I.; explore Machine Learning's fundamentals and Deep Learning with some of the most powerful technologies that truly scale intelligence for business. Practice with real-life business scenarios typical in business and review some of the tools used in the industry. Strategize and develop your A.I. following the lifecycle development from start to end, including deployment into production and maintenance with Privacy, Security, and Ethics. 
-      Download <a href=https://storage.googleapis.com/4geeks-academy-website/syllabus/europe/Syllabus%20Europe%20EN.pdf target=_blank>"here the syllabus"</a>. 
-      
-    text_link: Apply now
-    link: "#"
-
-
 components:
+  - name: "whatever"
+    layout: choose_your_program
+    position: 8
+    heading:
+      text: Our Programs
+    content:
+      text: Programs in Full-Time or Part-Time modality with live classes taught by experts
+      font_size: ["16px"]
+      path: ""
+    programs:
+    - title: "Full Stack Developer"
+      sub_title: "Level 1"
+      icon: "fullstack_2"
+      description: |
+        From 0 to becoming a Full-Stack Jr. programmer, you will work with HTML5, CSS3, Bootstrap, JS, Reactjs, SQL, Python, Flask, REST API's, etc. to design and create responsive websites. You'll gain a solid foundation of front, back, database, distributed processes, and deployment with passionate instructors and an up-to-date, hands-on syllabus.
+        Available Part-Time or Full-Time mode. 
+        Download <a href=https://storage.googleapis.com/4geeks-academy-website/syllabus/europe/Syllabus%20Europe%20EN.pdf target=_blank>"here the syllabus"</a>
+      
+      text_link: Apply now
+      link: "#" # moves to start position
+      
+    - title: "Data Science & Machine Learning"
+      sub_title: "No experience required"
+      icon: "machine_2"
+      description: |
+        Get trained by a renowned expert in Machine Learning and DS: explore Machine Learning's fundamentals and Deep Learning with some of the most powerful technologies that truly scale intelligence for business. Practice with real-life business scenarios typical in business and review some of the tools used in the industry. Strategize and develop your A.I. following the lifecycle development from start to end, including deployment into production and maintenance with Privacy, Security, and Ethics.
+        Download <a href=https://storage.googleapis.com/4geeks-academy-website/syllabus/europe/Syllabus%20Europe%20EN.pdf target=_blank>"here the syllabus"</a>. 
+
+      text_link: Apply now
+      link: "#"
+
+
   - name: how-it-works
     position: 3
     background: "veryLightBlue2"
-    layout: multi_column
+    layout: iconogram
     swipable: True
     heading:
       text: "How It Works"
@@ -126,44 +137,30 @@ components:
       text: 'According to the U.S. Bureau of Labor Statistics, <strong style="font-weight: bold;">software developers in the U.S. have a higher than average job outlook and earn a median salary of $110,140 a year</strong>. Improve your chances to be one of them.'
       font_size: ["16px", "16px", "16px", "16px", "16px"]
       style: '{ "textAlign": "center", "width": "60%" }'
-    columns:
-      - image:
-          style: '{ "backgroundSize": "contain", "height": "130px" }'
-          src: "/images/landing/graduated-icon.png"
-        content: 
-          text: "Apply to the United Way Miami Workforce Project to jumpstart your career in coding."
-          font_size: ["16px"]
-        size: [3,3,3,3]
-      - image:
-          style: '{ "backgroundSize": "contain", "height": "130px" }'
-          src: "/images/landing/pc-icon.png"
-        content: 
-          text: "Once accepted, students enroll in the 4Geeks Full-Stack Software Development Program. 4Geeks provides quality training and offers supporting services —like resume review and career coaching—to help participants find jobs after graduating."
-          font_size: ["16px"]
-        size: [3,3,3,3]
-      - image:
-          style: '{ "backgroundSize": "contain", "height": "130px" }'
-          src: "/images/landing/cicle-icon.png"
-        content: 
-          text: "Participants pay program costs after they start jobs making more than $35,000 a year. Participants who don't find a job or keep jobs with salaries above $35,000 pay nothing."
-          font_size: ["16px"]
-        size: [3,3,3,3]
-
+    icons:
+      - icon: "graduation-2" 
+        title: ""
+        content: "Apply to the United Way Miami Workforce Project to jumpstart your career in coding."
+      - icon: "terminal"
+        title: ""
+        content: "Once accepted, students enroll in the 4Geeks Full-Stack Software Development Program. 4Geeks provides quality training and offers supporting services —like resume review and career coaching—to help participants find jobs after graduating."
+      - icon: "job"
+        title: ""
+        content: "Participants pay program costs after they start jobs making more than $35,000 a year. Participants who don't find a job or keep jobs with salaries above $35,000 pay nothing."
 
   - name: elegibility
     position: 3
-    layout: multi_column
-    swipable: True
+    layout: cards_carousel
     heading:
-      text: "Program Eligibility"
+      text: "Elegibility in this Program"
       font_size: ["30px", "30px", "30px", "30px", "30px"]
     content:
-      text: '<br/> <br/> Learn more about <a style="color: rgb(0, 160, 218); cursor:pointer;">eligibility conditions</a> and apply'
-      font_size: ["16px", "16px", "16px", "16px", "16px"]
+      text: 'Learn more about <a style="color: rgb(0, 160, 218); cursor:pointer;">eligibility conditions</a> and apply'
+      font_size: ["18px", "18px", "18px", "18px", "18px"]
       path: "https://storage.googleapis.com/media-breathecode/bc38ffebe9e56f8cd62e10d5d0839f98d7528c4fe7756456630588d2c2048a2a"
     sub_heading:
       text: |
-        If you work or live in Miami-Dade and have an annual household income below the Area Median Income, who is a citizen, permanent resident, or DACA recipient is invited to apply. <strong style="font-weight: bold;"> People of color, veterans, and single female heads of household </strong> are encouraged to apply.
+        You may qualify if are a <strong style="font-weight: bold;"> Miami resident </strong> and belong to one of these groups:
       font_size: ["16px", "16px", "16px", "16px", "16px"]
     button:
       text: "APPLY NOW"
@@ -171,31 +168,34 @@ components:
       hover_color: "white"
       path: "#top"
       background: "black"
-    columns:
+    cards:
       - image:
           style: '{ "backgroundSize": "cover", "minHeight": "230px", "borderRadius": "80px" }'
-          src: "/images/landing/of_color.png"
-        content: 
-          text: "PEOPLE <br> OF COLOR"
+          src: "/images/low-income-people-of-color.png"
+        heading: 
+          text: "Low-income people of color"
           style: '{ "fontWeight": "700" }'
-          font_size: ["16px"]
-        size: [3,3,3,3]
+          font_size: "15px"
+        button:
+          text: "See more"
       - image:
-          style: '{ "backgroundSize": "cover", "borderRadius": "80px" }'
-          src: "/images/landing/veteran2.png"
-        content: 
-          text: "VETERANS"
+          style: '{ "backgroundSize": "cover", "minHeight": "230px", "borderRadius": "80px" }'
+          src: "/images/low-income-veterans.png"
+        heading: 
+          text: "Low-income veterans"
           style: '{ "fontWeight": "700" }'
-          font_size: ["16px"]
-        size: [3,3,3,3]
+          font_size: "15px"
+        button:
+          text: "See more"
       - image:
-          style: '{ "backgroundSize": "cover", "borderRadius": "80px" }'
-          src: "/images/landing/mom-household.png"
-        content: 
-          text: "SINGLE FEMALE HEADS OF HOUSEHOLD"
+          style: '{ "backgroundSize": "cover", "minHeight": "230px", "borderRadius": "80px" }'
+          src: "/images/low-income-female-heads-of-household.png"
+        heading: 
+          text: "Low-income single female heads of household"
           style: '{ "fontWeight": "700" }'
-          font_size: ["16px"]
-        size: [3,3,3,3]
+          font_size: "15px"
+        button:
+          text: "See more"
 
   - name: coding
     position: 4

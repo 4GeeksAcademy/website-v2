@@ -108,18 +108,6 @@ about4Geeks:
   image: "../../../static/images/bg/remote.jpeg"
   image_mobile: "../../../static/images/bg/remote.jpeg"
 
-iconogram:
-  position: 3
-  icons:
-  - icon: "touch"
-    title: completa el formulario antes del 1 de abril de 2023
-  - icon: "receive_mail"
-    title: recibirás un correo electrónico con toda la información para avanzar en el proceso
-  - icon: "talk"
-    title: haz una entrevista personal vía telefónica con el equipo de admisiones
-  - icon: "terminal"
-    title: reserva tu plaza y ¡acelera tu carrera!
-
 who_is_hiring:
   position: 5
   heading: "DÓNDE TRABAJAN NUESTROS ESTUDIANTES"
@@ -156,6 +144,28 @@ program_details:
 
 # Possible layouts: [two_column_left_image, two_column_right_image]
 components:
+  - name: how-it-works
+    position: 3
+    background: "veryLightBlue2"
+    layout: iconogram
+    swipable: True
+    heading:
+      text: ""
+      font_size: ["30px", "30px", "30px", "30px", "30px"]
+    sub_heading:
+      text: ""
+      font_size: ["16px", "16px", "16px", "16px", "16px"]
+      style: '{ "textAlign": "center", "width": "60%" }'
+    text_link: "#"
+    icons:
+    - icon: "touch"
+      title: Completa el formulario antes del 1 de abril de 2023
+    - icon: "receive_mail"
+      title: Recibirás un correo electrónico con toda la información para avanzar en el proceso
+    - icon: "talk"
+      title: Haz una entrevista personal vía telefónica con el equipo de admisiones
+    - icon: "terminal"
+      title: Reserva tu plaza y ¡acelera tu carrera!
 #  - name: python_y_javascript
 #    position: 6
 #    layout: two_column_right

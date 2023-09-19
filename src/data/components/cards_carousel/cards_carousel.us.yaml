@@ -1,0 +1,17 @@
+title:
+  text: a
+sub_title:
+  text: a
+content:
+  text: a
+button: 
+  text: a
+cards:
+  - image:
+      src: image src
+    heading:
+      text: heading text
+    button:
+      text: button text
+    
+

@@ -1,0 +1,133 @@
+meta_info:
+  slug: conding-bootcamp-colombia # <--- URL 4geeksacademy.com/es/landing/conding-bootcamp-colombia
+
+  visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
+  # This will show on social media when shared
+  title: "Bootcamp de programación en Colombia."
+  description: "Mejora tus habilidades en programación o aprende a programar desde cero y recibe soporte técnivo y profesional de por vida."
+  image: "/images/bg/main-bg.jpg"
+  keywords: "Bootcamp de Programación, Bootcamp programacion Colombia, Bootcamp de python, Bootcamp de React y Javascript, Bootcamp de Informática, Coding Bootcamp, 4Geeks Academy"
+
+  template: "landing_a" # <--- choose your landing template
+  redirects: # <--- URL redirections to avoid 404 errors
+    ["/landing/bootcamp-colombia"]
+
+  # Set a particular course or location to the landing page
+  # this UTM fields will be also included in the CRM contact
+  utm_course: ["full-stack"]
+  utm_location: ["bogota-colombia"]
+  automation: strong # comma separated, "soft" is the default value
+  tag: website-lead # comma separated, "request_more_info" is the default value
+
+navbar:
+  logoUrl: "#" # relative(/apply), absolute(https://google.com) or id(#componentName)
+  buttonText: "Información"
+  buttonUrl: "#bottom" # url accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
+
+form:
+  # posible fields: "first_name", "last_name", "full_name", "phone", "email"
+  # always the first_name, email and phone will be mandatory if added.
+  fields: ["full_name", "phone", "email"]
+  #margin_md: "0 auto 0 -30px"
+  heading: "Conoce más información"
+  button_label: Obtener más información
+  redirect: "https://marketing892162.typeform.com/to/XhfwihKQ" #you can redirect to another url or entirely diffrent website
+    
+  # jumbotron on the top (cannot be commented out)
+apply_schollarship: # form that is displayed at the end of the landing
+  # title: "Get more info about this award-winning development course"
+  imageSide: "left"
+  image: "../../../static/images/landing/apply.png"
+
+header_data:
+  background: "#FFF1D1"
+  tagline: ¡Bienvenido a 4Geeks Academy! La academia de programación líder en el mundo
+  tagline_color: "black"
+  sub_heading: Con más de 7 años de experiencia tenemos presencia en USA, Europa y Latinoamérica. En nuestra academia, te enseñamos habilidades y destrezas relevantes para el futuro
+  background_image: "../../../static/images/bg/main-bg.jpg"
+  #video: "https://www.videoask.com/fm984j5nz"
+  image_filter: brightness(0.4)
+
+features:
+  marginTop: 0px #<-- separation between tagline and the bullets
+  #                                         up   left down  right
+  styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
+  bullets:
+    - Un Desarrollador en Madrid gana 24.000€ al año.
+    - Hay más vacantes que en cualquier otra industria
+    - Impulsa tu Carrera y hazte programador de software
+
+short_badges:
+  - name: "Premios Tecnologia Siglo XXI"
+    url: ""
+    image: "../../../static/images/awards/premios_tecnologia_sigloxxi.png"
+    alt: "Mejor centro de Coding Bootcamp"
+  - name: "Course Report"
+    url: ""
+    image: "../../../static/images/badges/Course-Report-Badge-2023.png"
+    alt: "Top Coding Bootcamps Course Report"
+  - name: "Switchup"
+    url: ""
+    image: "../../../static/images/badges/switchup-badge-2023.png"
+    alt: "Best coding bootcamp Switchup 2023"   
+  - name: "Florida Department of Education"
+    url: ""
+    image: "../../../static/images/badges/licensed.png"
+    alt: "Florida Department of Education"
+
+follow_bar:
+  position: "top" # top, bottom, hidden
+  content:
+    text: "Financiamiento sin interés. \n Plan de pago a 12 cuotas."
+    text_mobile: "Financiamiento sin interés. \n Hasta 12 cuotas."
+    # devices:    XL      LG      MD      SM       XS
+    font_size: ["25px", "25px", "25px", "18px", "4.3vw"]
+  button:
+    text: "Obtener más información"
+    path: "#top"
+  phone:
+    text: "Llama"
+
+#
+# ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇
+#
+
+program_details:
+  position: 1
+  heading: "Domina Python, JS y React"
+  sub_heading: "Un curso de programación sobre las tecnologías más usadas del mundo"
+
+#nuevo_componente:
+#position: 2  
+
+why_4geeks:
+  position: 4
+  heading: "¿Por qué 4Geeks?"
+  sub_heading: " "
+
+badges:
+  position: 3
+  heading: "4Geeks Academy cuenta con premios y reconocimientos de validan su excelencia"
+
+who_is_hiring:
+  position: 6
+  limit: 4
+  heading: "¿Quién contrata a nuestros alumnos?"
+  sub_heading: "Nos encanta ver crecer a nuestros estudiantes, es por eso que nos esforzamos cada día por tener más aliados, para que puedas trabajar en empresas que te ayuden a seguir creciendo profesionalmente."
+
+components:
+  - name: name
+    position: 1
+    layout: overlaped
+    image:
+      src: "/images/landing/dos-mujeres-1.png"
+    heading:
+      text: "How it works?"
+    content:
+      text: |
+        Al aprender a programar con 4Geeks Academy tendrás clases online completamente en vivo, la oportunidad de certificarte internacionalmente en poco tiempo y de conseguir tu primer empleo como programador con nuestro apoyo.
+
+        <strong style="font-weight: bold;">Descubre cómo puede ser tu vida como un profesional en programación con 4Geeks Academy, ¡comienza ahora! </strong>
+    button: 
+      text: Aplicar
+      color: Colors.blue2

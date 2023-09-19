@@ -116,18 +116,6 @@ program_details:
   heading: "Program details"
   sub_heading: "Real-life projects and exactly what companies are looking for"
 
-iconogram:
-  position: 2
-  icons:
-  - icon: "touch" 
-    title: REQUEST INFO
-  - icon: "receive_mail"
-    title: RECEIVE AN E-MAIL WITH THE DETAILS
-  - icon: "talk"
-    title: TALK TO ADMISSIONS
-  - icon: "terminal"
-    title: LEARN TO CODE
-
 
 why_python:
   position: 5
@@ -161,32 +149,36 @@ who_is_hiring:
 #  sub_heading: "Take a look at our previous student projects"
 
 components:
-  - name: how_it_works
-    position: 4
+  - name: Reserva tu plaza y ¡acelera tu carrera!
+    position: 2
     background: "veryLightBlue2"
-    layout: two_column_right
-    proportions: [6, 6]
-    image:
-      style: '{ "backgroundSize": "contain" }'
-      src: "/images/landing/_CU_Horiz_Red_LG.png"
+    layout: iconogram
+    swipable: True
     heading:
       text: "How it works"
       font_size: ["30px", "30px", "30px", "30px", "30px"]
     sub_heading:
       text: "Techboost is a national workforce development program funded by the Department of Labor that is run in alliance with Clark University and selected IT education providers. 4Geeks Academy has been chosen as a partner in the program, making it possible to offer a limited number of $4K scholarships to our bootcamp. We couldn't be prouder to be part of this important initiative!"
-      font_size: ["18px", "18px", "18px", "18px", "18px"]
-    button:
-      text: "Apply here"
-      color: null
-      path: "https://tqaclark.agsprime.net/one_workforce/self_registration_module/participant_self_registration_form?EDIT_MODE=false&staff_organization_id=6329D58D569BD902D19F1E8C"
-    content:
-      text: |
-        <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">1. Apply and ask for the Clark Scholarship fund.</strong></h2>
-        <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">2. Show/provide proof of working permit in the US.</strong></h2>
-        <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">3. If you are unemployed, that's good here. But if you are underpaid or need a new job or a new salary, you also are subject to receive the Scholarship.</strong></h2>
-        <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">4. Complete the program.</strong></h2>
-        <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">5. Let's start together to find a job. Your success will open more doors to upcoming students.</strong></h2>
-      font_size: ["16px"]
+      font_size: ["16px", "16px", "16px", "16px", "16px"]
+      style: '{ "textAlign": "center", "width": "60%" }'
+    text_link: "#"
+    icons:
+    - icon: "touch"
+      title: ""
+      content: 1. Apply and ask for the Clark Scholarship fund.
+    - icon: "receive_mail"
+      title: ""
+      content: 2. Show/provide proof of working permit in the US.
+    - icon: "talk"
+      title: ""
+      content: 3. If you are unemployed, that's good here. But if you are underpaid or need a new job or a new salary, you also are subject to receive the Scholarship
+    - icon: "talk"
+      title: ""
+      content: 4. Complete the program.
+    - icon: "talk"
+      title: ""
+      content: 5. Let's start together to find a job. Your success will open more doors to upcoming students.
+
   - name: python_y_javascript
     position: 11
     layout: two_column_right

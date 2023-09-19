@@ -1,6 +1,6 @@
 import React from "react";
 import { GridContainerWithImage, Div, GridContainer } from "../Sections";
-import { H2, H5, H4, Paragraph } from "../Heading";
+import { H3, H2, H5, H4, Paragraph } from "../Heading";
 import { Colors, Img, Button, StyledBackgroundSection, Link } from "../Styling";
 import Badges from "../Badges";
 import News from "../News";
@@ -25,6 +25,9 @@ import ChooseYourProgram from "../ChooseYourProgram";
 import StarRating from "../StarRating";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { smartRedirecting, transferQuerystrings } from "../../utils/utils.js";
+import CardsCarousel from "../CardsCarousel";
+import Overlaped from "../Overlaped";
+import { background } from "@storybook/theming";
 
 const Title = ({ id, title, paragraph }) => {
   return (
@@ -32,7 +35,7 @@ const Title = ({ id, title, paragraph }) => {
       <H2 type="h2">{title}</H2>
       <Paragraph margin="26px 0">{paragraph}</Paragraph>
     </GridContainer>
-  );
+  );  
 };
 
 const Side = ({
@@ -137,6 +140,7 @@ const Side = ({
           {sub_heading.text}
         </Paragraph>
       )}
+      
       {Array.isArray(bullets) && (
         <Div
           display="grid"
@@ -202,7 +206,7 @@ const Side = ({
       }
 
       {
-        content && /<\/?[a-z0-9]+>/g.test(content.text) ? (
+        content && /<\/?[a-z0-9]+>/g.test(content.text) ? 
           <Paragraph
             textAlign="left"
             textAlign_tablet="left"
@@ -216,7 +220,7 @@ const Side = ({
             fontHeight="30px"
             dangerouslySetInnerHTML={{ __html: content.text }}
           />
-        ) : content ? (
+        : content && (
           content.text.split("\n").map((p, i) => (
             <Paragraph
               key={`${i}-${p}`}
@@ -234,7 +238,7 @@ const Side = ({
               {p}
             </Paragraph>
           ))
-        ) : null
+        )
       }
 
       {
@@ -460,9 +464,9 @@ export const Columns = ({ columns, proportions, swipable }) => {
         <Div
           key={index}
           flexDirection="column"
-          size={c.size[0]}
-          size_sm={c.size[2]}
-          size_xs={c.size[3]}
+          // size={c.size[0]}
+          // size_sm={c.size[2]}
+          // size_xs={c.size[3]}
           textAlign={c.align}
           minWidth="250px"
           margin="25px 15px 0 15px"
@@ -606,34 +610,85 @@ export const landingSections = {
   },
 
   iconogram: ({ session, data, pageContext, yml, index }) => {
-    let dataYml =
-      data.allLandingYaml.edges.length !== 0 &&
-        data.allLandingYaml.edges[0].node.iconogram !== null
-        ? data.allLandingYaml.edges
-        : data.allDownloadableYaml.edges;
-    let content = dataYml[0].node.iconogram;
+    const { heading, sub_heading, icons, text_link } = yml
     return (
+
       <GridContainer
+        display="flex"
         key={index}
         id="iconogram"
-        background={Colors.lightYellow}
-        columns="2"
+        containerColumns_tablet="repeat(14, 1fr)"
+        columns="1"
         rows="2"
-        columns_tablet="4"
-        margin="0 0 58px 0"
-        height="470px"
-        height_tablet="320px"
-        margin_tablet="0 0 78px 0"
+        margin="auto"
+        height="auto"
+        width="100%"
+        background={Colors.lightYellow}
+        padding_xs="50px 10px"
+        padding_tablet="50px 0"
+        justifyItems="center"
+        justifyContent="center"
       >
-        {Array.isArray(content.icons) &&
-          content.icons?.map((item, i) => {
-            return (
-              <React.Fragment key={i}>
-                <IconsBanner icon={item.icon} title={item.title} />
-              </React.Fragment>
-            );
-          })}
+        <Div
+          columns="1"
+          display="block"
+          maxWidth_tablet="1366px"
+          margin="auto"
+          padding_lg="0 50px"
+        >
+          {heading &&
+            <H2
+              type="h2"
+              lineHeight="28px"
+              lineHeight_tablet="28px"
+              fontSize="30px"
+              margin="30px 0 30px 0"
+              style={{ textAlign: "center" }}
+            >
+              {heading.text}
+            </H2>
+          }
+          {sub_heading && /<\/?[a-z0-9]+>/g.test(sub_heading.text) &&
+            <Paragraph
+              padding_xs={heading ? "0" : "20px"}
+              margin="15px 0"
+              fontSize="16px"
+              fontHeight="30px"
+              dangerouslySetInnerHTML={{ __html: sub_heading.text }}
+            />
+          }
+        </Div>
+        <Div
+          display="flex"
+          justifyContent="center"
+          flexDirection_tablet="row"
+          flexDirection_sm={icons.length > 3 ? "row" : "column"}
+          flexDirection_xs="column"
+          maxWidth_tablet="1366px"
+          margin="auto"
+          padding_lg="0 50px"
+        >
+          {Array.isArray(icons) &&
+            icons?.map((item, index) => {
+              return (
+                <React.Fragment key={index}>
+                  <IconsBanner icon={item.icon} title={item.title} content={item.content} />
+                </React.Fragment>
+              );
+            })}
+        </Div>
+        {text_link &&
+          <Link to={text_link} display="block">
+            <H3
+              fontSize="18px"
+            >
+              Conditions Apply.
+            </H3>
+          </Link>
+        }
+
       </GridContainer>
+
     );
   },
 
@@ -646,19 +701,21 @@ export const landingSections = {
     let badges = dataYml[0].node.badges;
     return (
       <React.Fragment key={index}>
+      <Div background={Colors.verylightGray2} width="100%">
         <Badges
           link
           // wrapped_images={true}
           id="badges"
           lang={pageContext.lang}
-          background={Colors.verylightGray}
+          background={Colors.verylightGray2}
           paragraph={badges.heading}
           short_text
           padding="60px 0"
           padding_tablet="68px 0"
-          margin="0"
           margin_tablet="0 0 78px 0"
+          maxWidth="1366px"
         />
+      </Div>
       </React.Fragment>
     );
   },
@@ -835,7 +892,7 @@ export const landingSections = {
           title={yml.heading}
           paragraph={yml.sub_heading}
         />
-        ,
+      
       </React.Fragment>
     );
   },
@@ -867,21 +924,67 @@ export const landingSections = {
           details={course?.details}
           lang={pageContext.lang}
         />
-        <ProgramDetailsMobile details={course && course.details} />
+        {/* <ProgramDetailsMobile details={course && course.details} /> */}
+      </React.Fragment>
+    );
+  },
+
+  overlaped: ({session, pageContext, yml, data, index}) => {
+    const { heading, content, button, background, image } = yml
+    return(
+      <React.Fragment key={index} >
+        
+        <Overlaped
+          landingTemplate
+          heading={heading.text}
+          content={content.text}
+          button={button}
+          background={background}
+          image={image}
+          lang={pageContext.lang}
+        />
+      </React.Fragment>
+    );
+  },
+
+  cards_carousel: ({session, pageContext, yml, data, index}) => {
+    const { heading, sub_heading, content, cards, button } = yml
+    return(
+      <React.Fragment key={index} >
+        <Div 
+          id="cards_carousel" 
+          width="100%" 
+          flexDirection="column" 
+          background_md="linear-gradient(180deg, #C7F3FD 58.6%, #FFFFFF 50%)"
+          background_tablet="linear-gradient(180deg, #C7F3FD 58.1%, #FFFFFF 50%)"
+          background_sm="linear-gradient(180deg, #C7F3FD 61.04%, #FFFFFF 50%)"
+          background_xs="linear-gradient(180deg, #C7F3FD 59.45%, #FFFFFF 50%)"
+          background_xxs="linear-gradient(180deg, #C7F3FD 60%, #FFFFFF 50%)"
+          display_xs="flex"
+          margin_tablet="97px 0"
+        >
+        <CardsCarousel
+          landingTemplate
+          title={heading}
+          sub_title={sub_heading}
+          content={content}
+          cards={cards}
+          button={button}
+          lang={pageContext.lang}
+        />
+        </Div>
       </React.Fragment>
     );
   },
 
   choose_your_program: ({ session, pageContext, yml, data, index }) => {
-    let dataYml =
-      data.allLandingYaml.edges.length !== 0 &&
-        data.allLandingYaml.edges[0].node.choose_your_program !== null
-        ? data.allLandingYaml.edges
-        : data.allDownloadableYaml.edges;
-    let chooseYourProgram = dataYml[0].node?.choose_your_program;
     return (
       <React.Fragment key={index}>
-        <Div id="choose_your_program" width="100%" flexDirection="column">
+        <Div 
+          id="choose_your_program" 
+          width="100%"
+          flexDirection="column"
+        >
           <Div
             background={Colors.lightGray}
             alignSelf="center"
@@ -891,12 +994,11 @@ export const landingSections = {
           />
         </Div>
         <ChooseYourProgram
-          // chooseProgramRef={chooseProgramRef}
           landingTemplate
-          title={chooseYourProgram.title}
-          paragraph={chooseYourProgram.paragraph}
+          title={yml.heading.text}
+          paragraph={yml.content.text}
           lang={pageContext.lang}
-          programs={chooseYourProgram.programs}
+          programs={yml.programs}
         />
       </React.Fragment>
     );
@@ -958,12 +1060,6 @@ export const landingSections = {
       margin="0"
       padding="0"
     >
-      <Title
-        title="{yml.heading}"
-        paragraph={yml.sub_heading}
-        paragraphColor={Colors.gray}
-        variant="primary"
-      />
       <With4Geeks
         text={yml.footer?.text}
         sessionLocation={
@@ -1010,10 +1106,12 @@ export const landingSections = {
         id="who_is_hiring"
         key={index}
         flexDirection="column"
-        margin="40px 0"
-        margin_tablet="40px 50px 100px"
+        //margin="40px auto"
+        margin_tablet="40px auto 100px auto"
         m_sm="0"
         p_xs="0"
+        maxWidth="1366px"
+        margin_xs="40px 0"
       >
         <OurPartners
           images={hiring.partners.images}
@@ -1057,7 +1155,8 @@ export const landingSections = {
       flexDirection="column"
       padding="50px 0 50px 0"
       padding_tablet="50px 6%"
-      margin="0"
+      margin_tablet="0 auto"
+      maxWidth="1366px"
     >
       <TwoColumn
         left={{ image: yml.image, video: yml.video }}
@@ -1082,7 +1181,8 @@ export const landingSections = {
         flexDirection="column"
         padding="0 0 50px 0"
         padding_tablet="6%"
-        margin="0"
+        margin_tablet="0 auto"
+        maxWidth="1366px"
       >
         <TwoColumn
           left={{
