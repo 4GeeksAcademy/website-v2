@@ -286,6 +286,7 @@ const ProgramDetails = (props) => {
                         fontSize_xs="14px"
                         lineHeight_tablet="19px"
                         lineHeight_xs="17px"
+                        margin="0 0 10px 0"
                       >
                         {detail}
                       </Paragraph>
@@ -332,6 +333,7 @@ const ProgramDetails = (props) => {
                           fontSize_xs="14px"
                           lineHeight_tablet="19px"
                           lineHeight_xs="17px"
+                          margin="0 0 10px 0"
                         >
                           {detail}
                         </Paragraph>
@@ -357,6 +359,7 @@ const ProgramDetails = (props) => {
                       color={Colors.darkGray}
                       fontSize="18px"
                       lineHeight="19px"
+                      margin="0 0 10px 0"
                     >
                       {props.details.details_modules[selected.index].duration}
                     </Paragraph>

@@ -24,7 +24,7 @@ partners:
     - name: "Apple"
       #locations: ["madrid-spain"]
       image: "../../../../static/images/partner/apple.png"
-      featured: true
+      featured: false
       #if follow is equal to false then it will add the nofollow attribute
       follow: true
       link: "https://www.apple.com"
@@ -36,7 +36,7 @@ partners:
     - name: "Ebay"
       #locations: ["madrid-spain"]
       image: "../../../../static/images/partner/ebay.png"
-      featured: false
+      featured: true
     - name: "National Geographic"
       #locations: ["madrid-spain"]
       image: "../../../../static/images/partner/natgeo.png"
