@@ -345,7 +345,7 @@ const LeadForm = ({
           display_tablet="none"
           display_md="flex"
           display_lg="flex"
-          flexDirection_tablet="column"
+          flexDirection_tablet="row"
         >
           <GatsbyImage
             loading="eager"

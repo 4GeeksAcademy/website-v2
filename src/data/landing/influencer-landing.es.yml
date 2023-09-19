@@ -33,6 +33,11 @@ form:
   redirect: "https://marketing892162.typeform.com/to/XhfwihKQ" #you can redirect to another url or entirely diffrent website
     
   # jumbotron on the top (cannot be commented out)
+apply_schollarship: # form that is displayed at the end of the landing
+  # title: "Get more info about this award-winning development course"
+  imageSide: "left"
+  image: "../../../static/images/landing/apply.png"
+  
 header_data:
   background: "#FFF1D1"
   tagline: ¡Bienvenido a 4Geeks Academy! La academia de programación líder en el mundo
