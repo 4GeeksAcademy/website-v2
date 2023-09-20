@@ -37,14 +37,15 @@ with:
       image_link: ""
       text: "Check Financials Options"
       text_link: "/us/financials"
-  - name: "Joao Henrique"
-    title: "You'll always have support from the  Academy"
-    description: "Joao shares his experience receiving coding mentorship as a student, after graduating, and in his current job."
-    image: ../../../../static/images/staff/joao.png
-    alt: ""
-    video: "https://www.youtube.com/watch?v=MBXqEnhodx0" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
-    location: ["downtown-miami", "all"]
-    # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+  
+  - name: "Amira"
+    title: "They will be there even after you have graduated to help you"
+    description: "Amira finds invaluable lifetime support at 4geeks Academy, always available when needed."
+    image: ../../../../static/images/staff/amira-testimonial.png
+    alt: "amira-testimonials"
+    video: "https://www.youtube.com/watch?v=NaEm0B9p7jY" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    location: ["all", "downtown-miami"]
+  # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     icon: address
     footer:
       is_image: true

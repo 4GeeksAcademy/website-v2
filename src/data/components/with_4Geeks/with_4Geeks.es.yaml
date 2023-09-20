@@ -6,12 +6,12 @@ header:
   title: 4Geeks Academy en tres historias
   paragraph: ""
 with:
-  - name: "Hernan García"
-    title: "Recibí ofertas de empresas que nunca me lo esperé"
-    description: "Hernán tardó un mes en conseguir un trabajo en tecnología una vez que comenzó a aplicar."
-    image: ../../../../static/images/staff/hernan.png
+  - name: "Ibai Fernández"
+    title: "Ibai está más cerca de cumplir su sueño de poder trabajar en cualquier locación"
+    description: "¡Ibai consiguió su primer empleo como programador gracias a nuestro apoyo profesional de por vida!"
+    image: ../../../../static/images/staff/ibai-fernandez.png
     alt: ""
-    video: "https://www.youtube.com/watch?v=ln3bQsV1BaQ" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    video: "https://www.youtube.com/watch?v=G7KS0uOqKaQ" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     location: ["all", "downtown-miami"]
     # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     icon: address
@@ -21,12 +21,13 @@ with:
       image_link: "/es/geekforce"
       text: ""
       text_link: ""
-  - name: "Luisa Glum"
-    title: "La Academia estaba tan comprometida como yo"
-    description: "Luisa pagó el programa después de que se graduó y encontró trabajo, ella aplicó al ISA (Income Share Agreement)"
-    image: ../../../../static/images/staff/luisa.png
+  
+  - name: "Javier Murillo"
+    title: "¡Realmente se puede a programar en 16 semanas!"
+    description: "¡Si, se puede! a medida que iban pasando las semanas Javier notó como su pensamiento lógico incrementaba, ahora, javier es un fullstack capaz de asumir nuevos retos en la industria"
+    image: ../../../../static/images/staff/javier-murillo-testimonial.png
     alt: ""
-    video: "https://www.youtube.com/watch?v=MBXqEnhodx0" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    video: "https://www.youtube.com/watch?v=NT6bkSQWFXw" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     location: ["all"]
     # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     icon: address
@@ -36,12 +37,13 @@ with:
       image_link: ""
       text: "Ver opciones de financiación"
       text_link: "/es/financiacion"
-  - name: "Joao Henrique"
-    title: "Siempre tendrás apoyo por parte de la Academia"
-    description: "Joao cuenta su experiencia obteniendo mentores de codificación mientras estudiaba, después de graduarse e incluso en sus trabajos."
-    image: ../../../../static/images/staff/joao.png
+  
+  - name: "Rita"
+    title: "De técnico ortopedico a programadora, una travesía inspiradora"
+    description: "Su vida cambió por completo cuando dio el primer paso en el bootcamp que marcó el inicio de su nueva carrera en el mundo tech."
+    image: ../../../../static/images/staff/rita-testimonials.png
     alt: ""
-    video: "https://www.youtube.com/watch?v=PWkgaAT8pHg" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    video: "https://www.youtube.com/watch?v=I87ONvJB2OM" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     location: ["all", "downtown-miami"]
     # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     icon: address
