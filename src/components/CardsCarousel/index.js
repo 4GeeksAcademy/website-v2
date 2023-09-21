@@ -56,10 +56,10 @@ const CardsCarousel = ({
                 display="flex"
                 flexDirection="column"
                 gap="10px"
-                margin="50px 10% 30px 10%"
+                margin="60px 10% 30px 10%"
                 maxWidth_tablet="1366px"
-                margin_md="50px auto 20px auto"
-                padding_tablet="20px 0 0 0"
+                margin_md="60px auto 20px auto"
+                padding_tablet="0px"
                 padding_xs="10px 0 0 0"
 
             >
@@ -179,7 +179,7 @@ const CardsCarousel = ({
             </Paragraph>
             }
             <Div
-                padding="0 0 40px 0"
+                padding="0 0 30px 0"
                 justifyContent="center"
             >
                 {button &&
@@ -195,7 +195,7 @@ const CardsCarousel = ({
                         style={button.style ? JSON.parse(button.style) : null}
                         background={Colors[button.background] || button.background}
                         // textAlign="left"
-                        margin="24px 0 32px 0"
+                        margin="24px 0 30px 0"
                         padding=".35rem.85rem"
                         onClick={() => {
                             if (button.path && button.path.indexOf("http") > -1)
