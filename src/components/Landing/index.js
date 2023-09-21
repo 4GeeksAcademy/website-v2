@@ -608,10 +608,11 @@ export const landingSections = {
   iconogram: ({ session, data, pageContext, yml, index }) => {
     const { heading, sub_heading, icons, text_link } = yml
     return (
-
-      <GridContainer
-        display="flex"
+      <Div
         key={index}
+        padding={heading.text ? "0 0 60px 0" : "60px 0 60px 0"}
+        display="flex"
+        flexDirection="column"
         id="iconogram"
         containerColumns_tablet="repeat(14, 1fr)"
         columns="1"
@@ -620,49 +621,58 @@ export const landingSections = {
         height="auto"
         width="100%"
         background={Colors.lightYellow}
-        padding_xs="50px 10px"
-        padding_tablet="50px 0"
-        justifyItems="center"
-        justifyContent="center"
       >
-        <Div
-          columns="1"
-          display="block"
-          maxWidth_tablet="1366px"
-          margin="auto"
-          padding_lg="0 50px"
-        >
-          {heading &&
-            <H2
-              type="h2"
-              lineHeight="28px"
-              lineHeight_tablet="28px"
-              fontSize="30px"
-              margin="30px 0 30px 0"
-              style={{ textAlign: "center" }}
-            >
-              {heading.text}
-            </H2>
-          }
-          {sub_heading && /<\/?[a-z0-9]+>/g.test(sub_heading.text) &&
+        {heading.text &&
+          <H2
+            type="h2"
+            lineHeight="28px"
+            lineHeight_tablet="28px"
+            fontSize="30px"
+            //margin="30px 0 30px 0"
+            maxWidth="1366px"
+            margin="30px auto"
+            style={{ textAlign: "center" }}
+          >
+            {heading.text}
+          </H2>
+        }
+        {sub_heading && /<\/?[a-z0-9]+>/g.test(sub_heading.text) ?
+          <Paragraph
+            padding_xs={heading.text ? "0 10%" : "20px 10%"}
+            padding_tablet={heading.text ? "0 10%" : "20px 10%"}
+            padding_md={heading.text ? "0 10%" : "20px 10%"}
+            margin="15px auto"
+            fontSize="16px"
+            fontHeight="30px"
+            maxWidth="1366px"
+            dangerouslySetInnerHTML={{ __html: sub_heading.text }}
+          />
+          : sub_heading.text == !"" ? (
             <Paragraph
-              padding_xs={heading ? "0" : "20px"}
-              margin="15px 0"
+              padding_xs={heading.text ? "0 10%" : "20px 10%"}
+              padding_tablet={heading.text ? "0 10%" : "20px 10%"}
+              padding_md={heading.text ? "0 10%" : "20px 10%"}
+              margin="15px auto"
               fontSize="16px"
               fontHeight="30px"
-              dangerouslySetInnerHTML={{ __html: sub_heading.text }}
-            />
-          }
-        </Div>
+              maxWidth="1366px">
+              {sub_heading.text}
+            </Paragraph>
+          ) : null
+
+        }
         <Div
           display="flex"
+          flexDirection="column"
+          flexDirection_tablet="row "
           justifyContent="center"
-          flexDirection_tablet="row"
-          flexDirection_sm={icons.length > 3 ? "row" : "column"}
-          flexDirection_xs="column"
-          maxWidth_tablet="1366px"
-          margin="auto"
-          padding_lg="0 50px"
+          // gap="45px"
+          gap_tablet={icons.length > 4 ? "0px" : "5%"}
+          //gap_md="10%"
+          maxWidth="1366px"
+          margin="20px auto 0 auto"
+        //className="badge-slider hideOverflowX__"
+
         >
           {Array.isArray(icons) &&
             icons?.map((item, index) => {
@@ -674,17 +684,23 @@ export const landingSections = {
             })}
         </Div>
         {text_link &&
-          <Link to={text_link} display="block">
-            <H3
-              fontSize="18px"
-            >
-              Conditions Apply.
-            </H3>
-          </Link>
+          <Div
+            maxWidth="1366px"
+            margin="10px auto"
+          >
+            <Link to={text_link} display="block">
+              <H3
+                fontSize="18px"
+                lineHeight="22px"
+                textDecoration="underline"
+                textDecorationOffset="5px"
+              >
+                Conditions Apply.
+              </H3>
+            </Link>
+          </Div>
         }
-
-      </GridContainer>
-
+      </Div>
     );
   },
 
@@ -926,8 +942,8 @@ export const landingSections = {
   choose_your_program: ({ session, pageContext, yml, data, index }) => {
     return (
       <React.Fragment key={index}>
-        <Div 
-          id="choose_your_program" 
+        <Div
+          id="choose_your_program"
           width="100%"
           flexDirection="column"
         >
