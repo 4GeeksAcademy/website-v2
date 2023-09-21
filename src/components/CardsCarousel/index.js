@@ -41,6 +41,7 @@ const CardsCarousel = ({
                         }
                         button{
                             text
+                            link
                         }
                     }
                 }
@@ -60,6 +61,7 @@ const CardsCarousel = ({
                 margin_md="50px auto 20px auto"
                 padding_tablet="20px 0 0 0"
                 padding_xs="10px 0 0 0"
+
             >
                 {title &&
                     <H2
@@ -95,6 +97,7 @@ const CardsCarousel = ({
                 marginTablet="97px 0"
                 justifyContent_tablet="flex-start"
                 justifyContent_md={cards.length > 3 ? "flex-start" : "center"}
+                justifyContent_lg="center"
                 maxWidth_tablet="1366px"
                 margin="auto"
             >
@@ -103,9 +106,11 @@ const CardsCarousel = ({
                         key={index}
                         flexDirection="column"
                         width="266px"
-                        height="auto"
+                        height={card.button ? "auto" : "fit-content"}
+                        //height="auto"
                         border="2px solid black"
                         margin="0 12px"
+                        //margin={card.button ? "0 12px" : "0 12px 24px 12px"}
                         background={Colors.white}
                     >
                         <Img
@@ -119,38 +124,43 @@ const CardsCarousel = ({
                                 fontSize={card.heading.font_size}
                                 fontWeight="900"
                                 lineHeight="19px"
-                                padding="24px 5px 12px 5px"
+                                padding="24px 5px 12px 5px"        
                             >
                                 {card.heading.text}
                             </H1>
                         </Div>
 
                         <Div
-                            padding="12px 0"
-                            height="62px"
+                            padding={card.button ? "12px 0" : "12px 0 0 0"}
+                            //height="62px"
                             justifyContent="center"
                             alignItems="center"
+                            height={card.button ? "62px" : "0px"}
                         >
-                            <Link to="#">
-                                <H3
-                                    margin="12px 10px 12px 0"
-                                    textTransform="uppercase"
-                                    fontSize="16px"
-                                    fontWeight="700"
-                                    lineHeight="19px"
-                                >
-                                    {card.button.text}
-                                </H3>
-                            </Link>
-                            <Link to="#">
-                                <Icon
-                                    icon="arrow-right"
-                                    width="15px"
-                                    height="12px"
-                                //padding="0 0 0 5px"
-                                />
-                            </Link>
+                            {
+                                card.button && <>
+                                    <Link to={card.button.link}>
+                                        <H3
+                                            margin="12px 10px 12px 0"
+                                            textTransform="uppercase"
+                                            fontSize="16px"
+                                            fontWeight="700"
+                                            lineHeight="19px"
+                                        >
+                                            {card.button.text}
+                                        </H3>
+                                    </Link>
+                                    <Link to={card.button.link}>
+                                        <Icon
+                                            icon="arrow-right"
+                                            width="15px"
+                                            height="12px"
+                                        //padding="0 0 0 5px"
+                                        />
+                                    </Link>
+                                    </>}
                         </Div>
+
                     </Div>
                 )
                 )}
@@ -168,7 +178,7 @@ const CardsCarousel = ({
                 {content.text}
             </Paragraph>
             }
-            <Div 
+            <Div
                 padding="0 0 40px 0"
                 justifyContent="center"
             >

@@ -149,8 +149,8 @@ components:
     heading:
       text: "Elegibility in this Program"
       font_size: ["30px", "30px", "30px", "30px", "30px"]
-    content:
-      text: 'Learn more about <a style="color: rgb(0, 160, 218); cursor:pointer;">eligibility conditions</a> and apply'
+    content: #If a link is placed in the content, use the same inline style as the example.
+      text: 'Learn more about <a style="color: rgb(0, 160, 218); text-decoration:underline; cursor:pointer;">eligibility conditions</a> and apply'
       font_size: ["18px", "18px", "18px", "18px", "18px"]
       path: "https://storage.googleapis.com/media-breathecode/bc38ffebe9e56f8cd62e10d5d0839f98d7528c4fe7756456630588d2c2048a2a"
     sub_heading:
@@ -171,8 +171,8 @@ components:
           text: "Low-income people of color"
           style: '{ "fontWeight": "700" }'
           font_size: "15px"
-        button:
-          text: "See more"
+        # button:
+        #   text: "See more"
       - image:
           style: '{ "backgroundSize": "cover", "minHeight": "230px", "borderRadius": "80px" }'
           src: "/images/low-income-veterans.png"
@@ -182,6 +182,7 @@ components:
           font_size: "15px"
         button:
           text: "See more"
+          link: /
       - image:
           style: '{ "backgroundSize": "cover", "minHeight": "230px", "borderRadius": "80px" }'
           src: "/images/low-income-female-heads-of-household.png"
@@ -189,8 +190,8 @@ components:
           text: "Low-income single female heads of household"
           style: '{ "fontWeight": "700" }'
           font_size: "15px"
-        button:
-          text: "See more"
+        # button:
+        #   text: "See more"
 
   - name: coding
     position: 4

@@ -13,5 +13,6 @@ cards:
       text: heading text
     button:
       text: button text
+      link: button link
     
 
