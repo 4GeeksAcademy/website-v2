@@ -74,6 +74,7 @@ export default ({ icon, title, content }) => {
             fontSize="14px"
             lineHeight="17px"
             color={Colors.black}
+            padding="0 15%"
             margin_xs="10px 0 0 0"
             width="100%"
             textAlign="center"

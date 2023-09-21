@@ -201,7 +201,7 @@ const SuccessStoriescomponent = ({ filterIndexes, lang }) => {
         columnCount="3"
         gap="1em"
         style={{ gridAutoFlow: "dense" }}
-        padding="0 10% 10% 10%"
+        padding="0 10% 60px 10%"
         columnCount_sm="1"
         columnCount_xs="1"
         columnCount_tablet="3"

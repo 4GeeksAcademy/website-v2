@@ -105,7 +105,7 @@ const Side = ({
       flexDirection_tablet="column"
       flexDirection="column"
       padding="40px 20px"
-      padding_tablet={padding_tablet || "36px 72px"}
+      padding_tablet={padding_tablet || "36px 72px 0px 36px"}
     >
       {heading && (
         <H2
@@ -255,7 +255,7 @@ const Side = ({
             fontSize="15px"
             textAlign="left"
             margin="2rem 0"
-            padding=".35rem.85rem"
+            padding="32px .85rem 0 .85rem"
             onClick={() => {
               if (button.path && button.path.indexOf("http") > -1)
                 window.open(transferQuerystrings(button.path, utm));
@@ -614,7 +614,7 @@ export const landingSections = {
     return (
       <Div
         key={index}
-        padding={heading.text ? "0 0 60px 0": "60px 0 60px 0"}
+        padding={heading.text ? "30px 0 60px 0" : "60px 0 60px 0"}
         display="flex"
         flexDirection="column"
         id="iconogram"
@@ -626,7 +626,7 @@ export const landingSections = {
         width="100%"
         background={Colors.lightYellow}
       >
-        {heading.text  &&
+        {heading.text &&
           <H2
             type="h2"
             lineHeight="28px"
@@ -642,24 +642,28 @@ export const landingSections = {
         }
         {sub_heading && /<\/?[a-z0-9]+>/g.test(sub_heading.text) ?
           <Paragraph
-            padding_xs={heading.text ? "0 10px" : "20px 10px"}
-            padding_tablet={heading.text ? "0 30px" : "20px 30px"}
-            padding_md={heading.text ? "0 50px" : "20px 50px"}
+            padding_xs={heading.text ? "0 10%" : "20px 10%"}
+            padding_tablet={heading.text ? "0 10%" : "20px 10%"}
+            padding_md={heading.text ? "0 10%" : "20px 10%"}
+
             margin="15px auto"
             fontSize="16px"
             fontHeight="30px"
             maxWidth="1366px"
             dangerouslySetInnerHTML={{ __html: sub_heading.text }}
           />
-          :
-          <Paragraph
-            padding_xs={heading ? "0" : "20px"}
-            margin="15px auto"
-            fontSize="16px"
-            fontHeight="30px"
-            maxWidth="1366px">
-            {sub_heading.text}
-          </Paragraph>
+          : sub_heading.text == !"" ? (
+            <Paragraph
+              padding_xs={heading.text ? "0 10%" : "20px 10%"}
+              padding_tablet={heading.text ? "0 10%" : "20px 10%"}
+              padding_md={heading.text ? "0 10%" : "20px 10%"}
+              margin="15px auto"
+              fontSize="16px"
+              fontHeight="30px"
+              maxWidth="1366px">
+              {sub_heading.text}
+            </Paragraph>
+          ) : null
         }
         <Div
           display="flex"
@@ -670,9 +674,9 @@ export const landingSections = {
           gap_tablet={icons.length > 4 ? "0px" : "5%"}
           //gap_md="10%"
           maxWidth="1366px"
-          margin="auto"
-          //className="badge-slider hideOverflowX__"
-          
+          margin="20px auto 0 auto"
+        //className="badge-slider hideOverflowX__"
+
         >
           {Array.isArray(icons) &&
             icons?.map((item, index) => {
@@ -973,7 +977,6 @@ export const landingSections = {
           background_xs="linear-gradient(180deg, #C7F3FD 59.45%, #FFFFFF 50%)"
           background_xxs="linear-gradient(180deg, #C7F3FD 60%, #FFFFFF 50%)"
           display_xs="flex"
-          margin_tablet="97px 0"
         >
         <CardsCarousel
           landingTemplate
@@ -1037,8 +1040,8 @@ export const landingSections = {
       id="geeksInfo"
       key={index}
       flexDirection="column"
-      margin="50px"
-      margin_tablet="100px"
+      margin="30px auto 42px auto"
+      margin_tablet="30px auto 42px auto"
       m_sm="0"
       p_xs="0"
     >
@@ -1051,7 +1054,7 @@ export const landingSections = {
       id="testimonials_new"
       key={`${index}-testimonials_new`}
       flexDirection="column"
-      margin="30px auto 0 auto"
+      margin="30px auto 50px auto"
       m_sm="0"
       p_xs="0"
       width_tablet="100%"
@@ -1165,8 +1168,8 @@ export const landingSections = {
       key={index}
       background={Colors[yml.background] || yml.background}
       flexDirection="column"
-      padding="50px 0 50px 0"
-      padding_tablet="50px 6%"
+      padding="30px 0"
+      padding_tablet="30px 6%"
       margin_tablet="0 auto"
       maxWidth="1366px"
     >
@@ -1191,8 +1194,8 @@ export const landingSections = {
         key={index}
         background={Colors[yml.background] || yml.background}
         flexDirection="column"
-        padding="0 0 50px 0"
-        padding_tablet="6%"
+        padding="40px 0 50px 0"
+        padding_tablet="40px 6%"
         margin_tablet="0 auto"
         maxWidth="1366px"
       >
