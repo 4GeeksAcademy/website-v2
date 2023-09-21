@@ -67,7 +67,12 @@ const Tags = ({ pageContext, data, yml }) => {
           padding_tablet="70px 0 0 0"
           gridColumn_tablet="1 / 7"
         >
-          <H1 type="h1" textAlign_tablet="left" margin="0 0 11px 0" color="#606060">
+          <H1
+            type="h1"
+            textAlign_tablet="left"
+            margin="0 0 11px 0"
+            color="#606060"
+          >
             {cluster?.seo_title || yml.seo_title}
           </H1>
           <H2
