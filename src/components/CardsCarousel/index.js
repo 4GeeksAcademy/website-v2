@@ -107,7 +107,6 @@ const CardsCarousel = ({
                 }
 
                 justifyContent_lg="center"
-
                 maxWidth_tablet="1366px"
                 margin="auto"
             >
