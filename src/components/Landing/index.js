@@ -977,7 +977,6 @@ export const landingSections = {
           background_xs="linear-gradient(180deg, #C7F3FD 59.45%, #FFFFFF 50%)"
           background_xxs="linear-gradient(180deg, #C7F3FD 60%, #FFFFFF 50%)"
           display_xs="flex"
-          margin_tablet="97px 0"
         >
         <CardsCarousel
           landingTemplate
