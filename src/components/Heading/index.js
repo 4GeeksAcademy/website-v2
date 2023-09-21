@@ -47,6 +47,8 @@ const BaseHeading = styled(Heading)`
   align-self: ${(props) => props.alignSelf};
   padding: ${(props) => props.padding};
   border-bottom: ${(props) => props.borderBottom};
+  text-decoration: ${(props) => props.textDecoration};
+  text-decoration-offset: ${(props) => props.textDecorationOffset}
 
   &:hover {
     background-color: ${(props) => props.bgHover || props.bg};
