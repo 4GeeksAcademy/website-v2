@@ -146,6 +146,7 @@ const ProgramDetails = (props) => {
           })}
         </Div>
       </Grid>
+
       <Div flexWrap="wrap" margin_xs="20px" margin_tablet="100px 0 0 0">
         <H2
           lineHeight="36px"
@@ -161,6 +162,7 @@ const ProgramDetails = (props) => {
           {props.sub_heading || props.details.sub_heading}
         </Paragraph>
       </Div>
+
       {props.withoutAnimation !== true && (
         <Grid
           padding_tablet="0"
@@ -175,8 +177,8 @@ const ProgramDetails = (props) => {
             height="auto"
             borderBottom_tablet="1px solid black"
             gridColumn_tablet="2/14"
-          // display="none"
-          // display_md="block"
+            display="none"
+            display_md="block"
           >
             <Div
               justifyContent="between"

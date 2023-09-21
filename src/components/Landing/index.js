@@ -940,7 +940,7 @@ export const landingSections = {
           details={course?.details}
           lang={pageContext.lang}
         />
-        {/* <ProgramDetailsMobile details={course && course.details} /> */}
+        <ProgramDetailsMobile details={course && course.details} />
       </React.Fragment>
     );
   },
@@ -1121,11 +1121,11 @@ export const landingSections = {
         id="who_is_hiring"
         key={index}
         flexDirection="column"
-        //margin="40px auto"
-        margin_tablet="40px auto 100px auto"
+        margin="40px 0"
+        margin_tablet="40px 0 100px 0"
         m_sm="0"
         p_xs="0"
-        maxWidth="1366px"
+        // maxWidth="1366px"
         margin_xs="40px 0"
       >
         <OurPartners

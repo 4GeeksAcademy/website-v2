@@ -30,8 +30,8 @@ const ProgramDetailsMobile = (props) => {
       <Div
         //className="program-details-mobile"
         flexWrap="wrap"
-        padding_xs="0 20px"
-        padding_tablet="0 35px"
+        padding_xs="20px"
+        padding_tablet="35px"
         gridGap="10px"
       >
         {props.details.details_modules.map((item, index) => {
@@ -43,7 +43,7 @@ const ProgramDetailsMobile = (props) => {
                 height={selected.index === index ? "auto" : "76px"}
                 padding_xs="10px 20px"
                 border={`1px solid ${Colors.black}`}
-                borderRadius="3px"
+                //borderRadius="3px"
                 borderLeft={`6px solid ${Colors.black}`}
                 margin_xs="5px 0"
                 display_md="none"
