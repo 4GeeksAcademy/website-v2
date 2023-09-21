@@ -4,7 +4,7 @@ import { landingSections } from "../components/Landing";
 import FollowBar from "../components/FollowBar";
 import LeadForm from "../components/LeadForm";
 import { Paragraph } from "../components/Heading";
-import { GridContainerWithImage, Div } from "../components/Sections";
+import { GridContainerWithImage, Div, Grid } from "../components/Sections";
 import { Colors, StyledBackgroundSection } from "../components/Styling";
 import BaseRender from "./_baseLandingLayout";
 import { processFormEntry } from "../actions";
@@ -92,8 +92,8 @@ const Landing = (props) => {
           yml.navbar
             ? yml.navbar.buttonText
             : pageContext.lang === "us"
-            ? "Apply"
-            : "Solicita una plaza"
+              ? "Apply"
+              : "Solicita una plaza"
         }
         buttonUrl={yml.navbar?.buttonUrl}
         logoUrl={yml.navbar?.logoUrl}
@@ -161,25 +161,81 @@ const Landing = (props) => {
           });
         })}
       <div id="bottom"></div>
-      <GridContainerWithImage
+      <Grid
         id="bottom"
-        background="#F9F9F9"
-        imageSide={applySchollarship?.imageSide || "right"}
+        imageSide={applySchollarship?.imageSide}
         padding="0"
         padding_tablet="80px 0 90px 0"
         columns_tablet="14"
         margin="0"
-        margin_tablet="0"
+        margin_tablet="auto"
+        maxWidth_tablet="1366px"
       >
+        <Div
+          //height="auto"
+          width="100%"
+          padding_tablet="0"
+          style={{ position: "relative" }}
+          gridColumn_tablet={applySchollarship?.imageSide === "right" ? "8/15" : "2/8"}
+          gridRow_tablet="1/1"
+        >
+          {applySchollarship?.imageSide === "right" ? (
+            <>
+              <Div
+                display="none"
+                display_md="flex"
+                style={{
+                  position: "absolute",
+                  background: Colors.yellow,
+                  width: "280px",
+                  height: "480px",
+                  bottom: "-10px",
+                  right: "-16px",
+                  borderRadius: "3px",
+                }}
+              />
+            </>
+          ) : (
+            <>
+              <Div
+                display="none"
+                display_md="flex"
+                style={{
+                  position: "absolute",
+                  background: "transparent",
+                  width: "101%",
+                  height: "282px",
+                  top: "40px",
+                  left: "-30px",
+                  borderRadius: "3px",
+                }}
+              />
+            </>
+          )}
+          <StyledBackgroundSection
+            height="450px"
+            borderRadius="3px"
+            image={
+              applySchollarship
+                ? applySchollarship?.image.childImageSharp.gatsbyImageData
+                : data.allPageYaml.edges[0].node.list[0].image.childImageSharp
+                  .gatsbyImageData
+            }
+            bgSize="contain"
+            alt="geekforce image"
+          />
+        </Div>
         <Div
           flexDirection="column"
           margin="0"
           justifyContent_tablet="start"
           padding="0"
-          padding_tablet="0 30px"
-          gridArea_tablet={
-            applySchollarship?.imageSide === "right" ? "1/1/1/6" : "1/7/1/13"
-          }
+          padding_tablet={applySchollarship?.imageSide === "right" ? "0 20px 0 20%" : "0 20% 0 20px"}
+          // gridArea_tablet={
+          //   applySchollarship?.imageSide === "right" ? "1/1/1/6" : "1/7/1/14"
+          // }
+          gridColumn_tablet={applySchollarship?.imageSide === "right" ? "1/7" : "8/15"}
+          gridRow_tablet="1/1"
         >
           <Div
             flexDirection="column"
@@ -198,16 +254,16 @@ const Landing = (props) => {
               textPadding="6px 0px 20px 0px"
               selectProgram={programs}
               selectLocation={locations}
-              background="#F9F9F9"
+              layout="block"
+              background="#FFFFFF"
               margin="0"
-              style={{ minHeight: "350px" }}
               formHandler={processFormEntry}
               heading={yml.form.heading}
+              style={{ minHeight: "350px" }}
               motivation={yml.form.motivation}
               sendLabel={yml.form.button_label}
               redirect={yml.form.redirect}
               inputBgColor="#FFFFFF"
-              layout="block"
               lang={pageContext.lang}
               fields={yml.form.fields}
               data={preData}
@@ -217,61 +273,7 @@ const Landing = (props) => {
             />
           </Div>
         </Div>
-        <Div
-          height="auto"
-          width="100%"
-          gridArea_tablet={
-            applySchollarship?.imageSide === "right" ? "1/7/1/13" : "1/1/1/6"
-          }
-          style={{ position: "relative" }}
-        >
-          {applySchollarship?.imageSide === "right" ? (
-            <>
-              <Div
-                display="none"
-                display_md="flex"
-                style={{
-                  position: "absolute",
-                  background: "#FFB718",
-                  width: "280px",
-                  height: "480px",
-                  bottom: "-10px",
-                  right: "-16px",
-                  borderRadius: "3px",
-                }}
-              />
-            </>
-          ) : (
-            <>
-              <Div
-                display="none"
-                display_md="flex"
-                style={{
-                  position: "absolute",
-                  background: "#F5F5F5",
-                  width: "101%",
-                  height: "282px",
-                  top: "-25px",
-                  left: "30px",
-                  borderRadius: "3px",
-                }}
-              />
-            </>
-          )}
-          <StyledBackgroundSection
-            height="450px"
-            borderRadius="3px"
-            image={
-              applySchollarship
-                ? applySchollarship?.image.childImageSharp.gatsbyImageData
-                : data.allPageYaml.edges[0].node.list[0].image.childImageSharp
-                    .gatsbyImageData
-            }
-            bgSize="contain"
-            alt="geekforce image"
-          />
-        </Div>
-      </GridContainerWithImage>
+      </Grid>
     </>
   );
 };
@@ -331,7 +333,7 @@ export const query = graphql`
             }
             phone {
               text
-              number
+
             }
           }
           navbar {
@@ -352,13 +354,10 @@ export const query = graphql`
             text
             bullets
             styles
-            button {
-              text
-              path
-              background
-              color
-              hover_color
-            }
+            
+
+
+
           }
           badges {
             position
@@ -411,7 +410,7 @@ export const query = graphql`
           in_the_news {
             heading
             position
-            filter
+            
           }
           rating_reviews {
             position
@@ -504,7 +503,7 @@ export const query = graphql`
               src
               style
               link
-              shadow
+              
             }
             programs{
               title
@@ -540,6 +539,19 @@ export const query = graphql`
               heading
               text
               icon
+            }
+            cards{
+              image{
+                src
+                style
+              }
+              heading{
+                text
+                font_size
+              }
+              button{
+                text
+              }
             }
             columns {
               size
@@ -590,20 +602,15 @@ export const query = graphql`
             position
             heading
             paragraph
-            sub_heading
+            
             total_rows
           }
-          testimonial {
-            position
-            heading
-            sub_heading
-            students {
-              name
-              sub_heading
-              comment
-              video
-            }
-          }
+          
+
+
+
+
+
         }
       }
     }

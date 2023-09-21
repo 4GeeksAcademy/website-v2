@@ -27,11 +27,12 @@ const ProgramDetailsMobile = (props) => {
   }
   return (
     <>
-      <Grid
-        className="program-details-mobile"
-        padding="50px 10px"
-        padding_tablet="0px"
-        gridGap="0"
+      <Div
+        //className="program-details-mobile"
+        flexWrap="wrap"
+        padding_xs="0 20px"
+        padding_tablet="0 35px"
+        gridGap="10px"
       >
         {props.details.details_modules.map((item, index) => {
           return (
@@ -40,12 +41,12 @@ const ProgramDetailsMobile = (props) => {
                 key={index}
                 width="100%"
                 height={selected.index === index ? "auto" : "76px"}
-                padding="20px"
+                padding_xs="10px 20px"
                 border={`1px solid ${Colors.black}`}
                 borderRadius="3px"
                 borderLeft={`6px solid ${Colors.black}`}
-                margin={`7px 0`}
-                display_tablet="none"
+                margin_xs="5px 0"
+                display_md="none"
                 cursor={`pointer`}
                 onClick={() =>
                   selected.index === index
@@ -68,7 +69,7 @@ const ProgramDetailsMobile = (props) => {
                 </Div>
                 <Icon
                   icon="arrowdown"
-                  width="32"
+                  width="32px"
                   style={{ position: "absolute", right: "35px" }}
                 />
                 {selected.index === index && (
@@ -119,7 +120,7 @@ const ProgramDetailsMobile = (props) => {
             </React.Fragment>
           );
         })}
-      </Grid>
+      </Div>
     </>
   );
 };

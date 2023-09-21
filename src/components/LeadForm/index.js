@@ -51,7 +51,7 @@ const _fields = {
     valid: false,
     required: true,
     type: "text",
-    place_holder: "First name *",
+    place_holder: "First name",
     error: "Please specify a valid first name",
   },
   full_name: {
@@ -59,7 +59,7 @@ const _fields = {
     valid: false,
     required: true,
     type: "text",
-    place_holder: "Full name *",
+    place_holder: "Full name ",
     error: "Please specify a valid full name",
   },
   last_name: {
@@ -75,7 +75,7 @@ const _fields = {
     valid: false,
     required: true,
     type: "email",
-    place_holder: "Your email *",
+    place_holder: "Your email",
     error: "Please specify a valid email",
   },
   phone: {
@@ -109,6 +109,14 @@ const _fields = {
     type: "hidden",
     place_holder: "",
     error: "formType not found",
+  },
+  course: {
+    value: "",
+    valid: true,
+    required: true,
+    type: "selector",
+    place_holder: "Select a program *",
+    error: "Please choose a program",
   },
 };
 
@@ -234,6 +242,7 @@ const LeadForm = ({
   const consentCheckboxField = yml.form_fields.find(
     (f) => f.name === "consent"
   );
+
   React.useEffect(() => {
     setVal((_data) => {
       const _ = Object.keys(_data).reduce((total, key) => {
@@ -336,7 +345,7 @@ const LeadForm = ({
           display_tablet="none"
           display_md="flex"
           display_lg="flex"
-          flexDirection_tablet="column"
+          flexDirection_tablet="row"
         >
           <GatsbyImage
             loading="eager"
@@ -366,19 +375,19 @@ const LeadForm = ({
             {heading && (
               <H4
                 type="h4"
-                lineHeight="40px"
-                fontSize="38px"
+                lineHeight="26px"
+                fontSize="22px"
                 padding={headerImage && "0 10% 0 0"}
                 fontWeight="700"
                 width="auto"
-                textAlign="center"
-                textAlign_tablet={titleTextAlign || "left"}
+
+                textAlign={titleTextAlign || "left"}
                 margin={
                   landingTemplate
-                    ? "25px 0px 5px 0"
-                    : titleMargin || "20px 0px 5px 0px"
+                    ? "25px 0px 10px 0"
+                    : titleMargin || "20px 0px 10px 0px"
                 }
-                margin_tablet={titleMargin_tablet || "20px 0px 5px 0px"}
+                margin_tablet={titleMargin_tablet || "20px 0px 10px 0px"}
               >
                 {heading}
               </H4>
@@ -447,10 +456,10 @@ const LeadForm = ({
                 );
               })}
 
-            {selectProgram?.length > 1 && (
+            {selectProgram?.length >= 1 && (
               <Div
                 data-cy="dropdown_program_selector"
-                margin_tablet="0 0 23px 0"
+                margin_tablet="0 0 10px 0"
               >
                 <SelectRaw
                   style={{
@@ -468,7 +477,7 @@ const LeadForm = ({
                 />
               </Div>
             )}
-            {selectLocation?.length > 1 && (
+            {selectLocation?.length >= 1 && (
               <Div data-cy="dropdown_location_selector" margin_tablet="0">
                 <SelectRaw
                   style={{
@@ -506,17 +515,26 @@ const LeadForm = ({
                 {formStatus.status === "loading" ? "Loading..." : sendLabel}
               </Button>
             )}
-            {session && session.location && session.location.gdpr_compliant && (
-              <Paragraph fontSize="11px" margin="5px 0 0 0" textAlign="left">
-                <input
-                  name="isGoing"
-                  type="checkbox"
-                  checked={consentValue}
-                  onChange={() => {
-                    setConsentValue(!consentValue);
-                    // setVal({...formData, consent: {...formData.consent, valid: !formData.consent.valid}})
-                  }}
-                />
+
+            {/* {session && session.location && session.location.gdpr_compliant && ( */}
+            <Div position="relative" margin="10px 0 0 0">
+              <input
+                name="isGoing"
+                type="checkbox"
+                checked={consentValue}
+                onChange={() => {
+                  setConsentValue(!consentValue);
+                  // setVal({...formData, consent: {...formData.consent, valid: !formData.consent.valid}})
+                }}
+                style={{
+                  width: "24px",
+                  height: "24px",
+                  top: "10px",
+                  left: "7px"
+                }}
+              />
+              <Paragraph fontSize="11px" margin="5px 0 0 5px" textAlign="left">
+
                 {yml.consent.message}
                 <a
                   target="_blank"
@@ -527,7 +545,9 @@ const LeadForm = ({
                   {yml.consent.link_label}
                 </a>
               </Paragraph>
-            )}
+            </Div>
+
+            {/* )} */}
             {formStatus.status === "error" && (
               <Alert color="red" margin="0" padding="5px 0 0 0">
                 {formStatus.msg}
@@ -535,24 +555,36 @@ const LeadForm = ({
             )}
             {layout === "block" && (
               <Div
-                justifyContent={
-                  justifyContentButton ? justifyContentButton : "end"
-                }
+                // justifyContent_tablet={
+                //   justifyContentButton || "end"
+                // }
                 display="flex"
-                padding="5px 0 0 0"
+                padding="10px 0 0 0"
+                width="100%"
               >
+
                 <Button
-                  variant="full"
+                  //variant="full"
                   type="submit"
+                  fontSize="17px"
                   margin={marginButton}
                   margin_tablet={marginButton_tablet}
+                  width="100%"
+                  width_tablet="30%"
+                  // padding_xs="12px 45%"
+                  // padding_sm="12px 42%"
+                  //padding_tablet="12px 24px"
+                  justifyContent="center"
+                  //padding="auto"
+                  background={Colors.blue}
+                  //textAlign="center"
                   color={
                     formStatus.status === "loading"
                       ? Colors.darkGray
-                      : Colors.blue
+                      : Colors.white
                   }
-                  textColor={Colors.white}
                   disabled={formStatus.status === "loading" ? true : false}
+
                 >
                   {formStatus.status === "loading" ? "Loading..." : sendLabel}
                 </Button>

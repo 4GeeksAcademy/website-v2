@@ -25,6 +25,9 @@ import ChooseYourProgram from "../ChooseYourProgram";
 import StarRating from "../StarRating";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { smartRedirecting, transferQuerystrings } from "../../utils/utils.js";
+import CardsCarousel from "../CardsCarousel";
+import Overlaped from "../Overlaped";
+import { background } from "@storybook/theming";
 
 const Title = ({ id, title, paragraph }) => {
   return (
@@ -32,7 +35,7 @@ const Title = ({ id, title, paragraph }) => {
       <H2 type="h2">{title}</H2>
       <Paragraph margin="26px 0">{paragraph}</Paragraph>
     </GridContainer>
-  );
+  );  
 };
 
 const Side = ({
@@ -137,6 +140,7 @@ const Side = ({
           {sub_heading.text}
         </Paragraph>
       )}
+      
       {Array.isArray(bullets) && (
         <Div
           display="grid"
@@ -202,7 +206,7 @@ const Side = ({
       }
 
       {
-        content && /<\/?[a-z0-9]+>/g.test(content.text) ? (
+        content && /<\/?[a-z0-9]+>/g.test(content.text) ? 
           <Paragraph
             textAlign="left"
             textAlign_tablet="left"
@@ -216,7 +220,7 @@ const Side = ({
             fontHeight="30px"
             dangerouslySetInnerHTML={{ __html: content.text }}
           />
-        ) : content ? (
+        : content && (
           content.text.split("\n").map((p, i) => (
             <Paragraph
               key={`${i}-${p}`}
@@ -234,7 +238,7 @@ const Side = ({
               {p}
             </Paragraph>
           ))
-        ) : null
+        )
       }
 
       {
@@ -641,6 +645,7 @@ export const landingSections = {
             padding_xs={heading.text ? "0 10%" : "20px 10%"}
             padding_tablet={heading.text ? "0 10%" : "20px 10%"}
             padding_md={heading.text ? "0 10%" : "20px 10%"}
+
             margin="15px auto"
             fontSize="16px"
             fontHeight="30px"
@@ -659,7 +664,6 @@ export const landingSections = {
               {sub_heading.text}
             </Paragraph>
           ) : null
-
         }
         <Div
           display="flex"
@@ -713,19 +717,21 @@ export const landingSections = {
     let badges = dataYml[0].node.badges;
     return (
       <React.Fragment key={index}>
+      <Div background={Colors.verylightGray2} width="100%">
         <Badges
           link
           // wrapped_images={true}
           id="badges"
           lang={pageContext.lang}
-          background={Colors.verylightGray}
+          background={Colors.verylightGray2}
           paragraph={badges.heading}
           short_text
           padding="60px 0"
           padding_tablet="68px 0"
-          margin="0"
           margin_tablet="0 0 78px 0"
+          maxWidth="1366px"
         />
+      </Div>
       </React.Fragment>
     );
   },
@@ -902,7 +908,7 @@ export const landingSections = {
           title={yml.heading}
           paragraph={yml.sub_heading}
         />
-        ,
+      
       </React.Fragment>
     );
   },
@@ -934,7 +940,55 @@ export const landingSections = {
           details={course?.details}
           lang={pageContext.lang}
         />
-        <ProgramDetailsMobile details={course && course.details} />
+        {/* <ProgramDetailsMobile details={course && course.details} /> */}
+      </React.Fragment>
+    );
+  },
+
+  overlaped: ({session, pageContext, yml, data, index}) => {
+    const { heading, content, button, background, image } = yml
+    return(
+      <React.Fragment key={index} >
+        
+        <Overlaped
+          landingTemplate
+          heading={heading.text}
+          content={content.text}
+          button={button}
+          background={background}
+          image={image}
+          lang={pageContext.lang}
+        />
+      </React.Fragment>
+    );
+  },
+
+  cards_carousel: ({session, pageContext, yml, data, index}) => {
+    const { heading, sub_heading, content, cards, button } = yml
+    return(
+      <React.Fragment key={index} >
+        <Div 
+          id="cards_carousel" 
+          width="100%" 
+          flexDirection="column" 
+          background_md="linear-gradient(180deg, #C7F3FD 58.6%, #FFFFFF 50%)"
+          background_tablet="linear-gradient(180deg, #C7F3FD 58.1%, #FFFFFF 50%)"
+          background_sm="linear-gradient(180deg, #C7F3FD 61.04%, #FFFFFF 50%)"
+          background_xs="linear-gradient(180deg, #C7F3FD 59.45%, #FFFFFF 50%)"
+          background_xxs="linear-gradient(180deg, #C7F3FD 60%, #FFFFFF 50%)"
+          display_xs="flex"
+          margin_tablet="97px 0"
+        >
+        <CardsCarousel
+          landingTemplate
+          title={heading}
+          sub_title={sub_heading}
+          content={content}
+          cards={cards}
+          button={button}
+          lang={pageContext.lang}
+        />
+        </Div>
       </React.Fragment>
     );
   },
@@ -1022,12 +1076,6 @@ export const landingSections = {
       margin="0"
       padding="0"
     >
-      <Title
-        title={yml.heading}
-        paragraph={yml.sub_heading}
-        paragraphColor={Colors.gray}
-        variant="primary"
-      />
       <With4Geeks
         text={yml.footer?.text}
         sessionLocation={
@@ -1074,10 +1122,12 @@ export const landingSections = {
         id="who_is_hiring"
         key={index}
         flexDirection="column"
-        margin="40px 0"
-        margin_tablet="40px 50px 100px"
+        //margin="40px auto"
+        margin_tablet="40px auto 100px auto"
         m_sm="0"
         p_xs="0"
+        maxWidth="1366px"
+        margin_xs="40px 0"
       >
         <OurPartners
           images={hiring.partners.images}
@@ -1121,7 +1171,8 @@ export const landingSections = {
       flexDirection="column"
       padding="50px 0 50px 0"
       padding_tablet="50px 6%"
-      margin="0"
+      margin_tablet="0 auto"
+      maxWidth="1366px"
     >
       <TwoColumn
         left={{ image: yml.image, video: yml.video }}
@@ -1146,7 +1197,8 @@ export const landingSections = {
         flexDirection="column"
         padding="0 0 50px 0"
         padding_tablet="6%"
-        margin="0"
+        margin_tablet="0 auto"
+        maxWidth="1366px"
       >
         <TwoColumn
           left={{

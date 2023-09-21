@@ -1,5 +1,5 @@
 import React from "react";
-import { Div, GridContainer } from "../Sections";
+import { Div, GridContainer, Grid } from "../Sections";
 import { Colors } from "../Styling";
 import { H2, Paragraph } from "../Heading";
 import { Link } from "gatsby";
@@ -12,25 +12,30 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 const Title_Paragraph = (props) => {
   return (
     <>
-      <GridContainer margin="0 0 20px 0" background={props.background}>
+      <Grid 
+        margin="0 0 20px 0" 
+        background={props.background}
+        containerColumns_tablet="1fr repeat(12, 1fr) 1fr"
+      >
         <Div
           display="flex"
           flexDirection="column"
           alignItems="center"
-          padding_tablet="0 4em"
+          padding_tablet="0"
           padding="0 10px"
+          gridColumn_tablet="2 / 14"
         >
           {/*<H2 margin="0 0 15px 0" fontSize="15px" lineHeight="19px" fontWeight="900">{title}</H2>*/}
           <H2
             type="h2"
             fontFamily="Lato"
             fontWeight="900"
-            fontSize="15px"
-            lineHeight="19px"
+            fontSize="32px"
+            lineHeight="30px"
             letterSpacing="0.05em"
             color="#3A3A3A"
             width="100%"
-            margin="0 0 15px 0"
+            margin="0 0 23px 0"
             textTransform="uppercase"
             style={{ fontStyle: "normal" }}
           >
@@ -41,10 +46,10 @@ const Title_Paragraph = (props) => {
           <Paragraph
             fontFamily="Lato"
             fontWeight="normal"
-            fontSize="15px"
+            fontSize="21px"
             lineHeight="22px"
             padding="0"
-            padding_tablet="0 14%"
+            padding_tablet="0px 10%"
             letterSpacing="0.05em"
             color="#3A3A3A"
             width="100%"
@@ -54,7 +59,7 @@ const Title_Paragraph = (props) => {
             {props.paragraph}
           </Paragraph>
         </Div>
-      </GridContainer>
+      </Grid>
     </>
   );
 };

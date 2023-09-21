@@ -1,26 +1,27 @@
 meta_info:
-  slug: academia-programacion # <--- URL 4geeksacademy.com/es/landing/academia-programacion
-# landing para campañas con influencers
+  slug: conding-bootcamp-colombia # <--- URL 4geeksacademy.com/es/landing/conding-bootcamp-colombia
+
   visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   # This will show on social media when shared
-  title: "Academia de Programación Online"
-  description: "La programación es esencial para tu éxito profesional, únete a 4Geeks Academy, el bootcamp de programación número uno en Latinoamérica."
-  image: "../../../static/images/bg/main-bg.jpg"
-  keywords: "Aprende a programar, 4Geeks academy, aprende programacion, aprende ingenieria informatica, curso programacion"
+  title: "Bootcamp de programación en Colombia."
+  description: "Mejora tus habilidades en programación o aprende a programar desde cero y recibe soporte técnivo y profesional de por vida."
+  image: "/images/bg/main-bg.jpg"
+  keywords: "Bootcamp de Programación, Bootcamp programacion Colombia, Bootcamp de python, Bootcamp de React y Javascript, Bootcamp de Informática, Coding Bootcamp, 4Geeks Academy"
 
   template: "landing_a" # <--- choose your landing template
-  redirects: [] # <--- URL redirections to avoid 404 errors
+  redirects: # <--- URL redirections to avoid 404 errors
+    ["/landing/bootcamp-colombia"]
 
   # Set a particular course or location to the landing page
   # this UTM fields will be also included in the CRM contact
   utm_course: ["full-stack"]
-  utm_location: ["caracas-venezuela","santiago-chile","buenosaires-argentina","bogota-colombia","montevideo-uruguay","mexicocity-mexico","costa-rica","panamacity-panama","quito-ecuador","lima-peru","madrid-spain","downtown-miami"]
+  utm_location: ["bogota-colombia"]
   automation: strong # comma separated, "soft" is the default value
   tag: website-lead # comma separated, "request_more_info" is the default value
 
 navbar:
   logoUrl: "#" # relative(/apply), absolute(https://google.com) or id(#componentName)
-  buttonText: "Obtener más información"
+  buttonText: "Información"
   buttonUrl: "#bottom" # url accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
 
 form:
@@ -37,7 +38,7 @@ apply_schollarship: # form that is displayed at the end of the landing
   # title: "Get more info about this award-winning development course"
   imageSide: "left"
   image: "../../../static/images/landing/apply.png"
-  
+
 header_data:
   background: "#FFF1D1"
   tagline: ¡Bienvenido a 4Geeks Academy! La academia de programación líder en el mundo
@@ -50,8 +51,11 @@ header_data:
 features:
   marginTop: 0px #<-- separation between tagline and the bullets
   #                                         up   left down  right
-  styles: '{"fontSize": "15px", "margin": "10px 0px 0px 0px" , "color": "darkslategray"}'
-  text: Al aprender a programar con 4Geeks Academy tendrás clases online completamente en vivo, la oportunidad de certificarte internacionalmente en poco tiempo y de conseguir tu primer empleo como programador con nuestro apoyo. Descubre cómo puede ser tu vida como un profesional en programación con 4Geeks Academy, ¡comienza ahora!
+  styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
+  bullets:
+    - Un Desarrollador en Madrid gana 24.000€ al año.
+    - Hay más vacantes que en cualquier otra industria
+    - Impulsa tu Carrera y hazte programador de software
 
 short_badges:
   - name: "Premios Tecnologia Siglo XXI"
@@ -89,23 +93,20 @@ follow_bar:
 #
 
 program_details:
-  position: 2
+  position: 1
   heading: "Domina Python, JS y React"
   sub_heading: "Un curso de programación sobre las tecnologías más usadas del mundo"
 
+#nuevo_componente:
+#position: 2  
+
 why_4geeks:
-  position: 3
+  position: 4
   heading: "¿Por qué 4Geeks?"
   sub_heading: " "
 
-geeks_vs_others:
-  position: 4
-  heading: "¿Por qué somos tan exitosos?"
-  paragraph: "Un galardonado curso de programación"
-  total_rows: 5
-
 badges:
-  position: 5
+  position: 3
   heading: "4Geeks Academy cuenta con premios y reconocimientos de validan su excelencia"
 
 who_is_hiring:
@@ -117,51 +118,16 @@ who_is_hiring:
 components:
   - name: name
     position: 1
-    layout: two_column_left
-    proportions: [5, 7]
+    layout: overlaped
     image:
-      style: '{ "backgroundSize": "contain" }'
-      src: "/images/landing/hombre-con-laptop.png"
+      src: "/images/landing/dos-mujeres-1.png"
     heading:
       text: "How it works?"
-      font_size: ["30px", "30px", "30px", "30px", "30px"]
-    sub_heading:
-      text: "¿Quieres desatar tu potencial como Full-Stack Developer y/o Data Scientist?"
-      font_size: ["16px", "16px", "16px", "16px", "16px"]
     content:
-      font_size: ["16px"]
       text: |
         Al aprender a programar con 4Geeks Academy tendrás clases online completamente en vivo, la oportunidad de certificarte internacionalmente en poco tiempo y de conseguir tu primer empleo como programador con nuestro apoyo.
 
-        <strong style="font-weight: bold;">Descubre cómo puede ser tu vida como un profesional en programación con 4Geeks Academy, ¡comienza ahora!
-  # - name: top_coding_bootcamp
-  #   position: 8
-  #   layout: two_column_left
-  #   proportions: [4, 8]
-  #   image:
-  #     style: '{ "backgroundSize": "contain" }'
-  #     src: "/images/badges/Course-Report-Badge-2023.png"
-  #     link: "https://www.coursereport.com/schools/4geeks-academy"
-  #   heading:
-  #     text:
-  #       "Hemos sido seleccionados entre los mejores Coding Bootcamps del mundo por 3 años consecutivos"
-  #       #xl      lg     md     sm    xs
-  #     font_size: ["40px", "40px", "40px", "40px", "40px"]
-  # - name: geeksinfo
-  #   position: 5
-  #   layout: geeksInfo
-  # - name: passion
-  #   position: 7
-  #   layout: two_column_right
-  #   proportions: [6, 6]
-  #   image:
-  #     style: '{ "backgroundSize": "contain" }'
-  #     src: "/images/badges/switchup-badge-2023.png"
-  #     link: "https://www.switchup.org/bootcamps/4geeks-academy"
-  #   video: "JLSP_1HYoAg"
-  #   heading:
-  #     text: "Nanutria y 4Geeks"
-  #     font_size: ["40px", "40px", "40px", "40px", "40px"]
-  #   content:
-  #     text: "Nanutria tiene todas las características de una persona con la que nos identificamos en 4Geeks. Es Ingeniero, es ingenioso, es talentoso y es constante. Se decidió por la comedia pero mantiene los rasgos de lo que todos queremos poder ser, cada uno en sus áreas. Ahora Nanutria también recomienda 4Geeks Academy"
-  #     font_size: ["16px"]
+        <strong style="font-weight: bold;">Descubre cómo puede ser tu vida como un profesional en programación con 4Geeks Academy, ¡comienza ahora! </strong>
+    button: 
+      text: Aplicar
+      color: Colors.blue2
