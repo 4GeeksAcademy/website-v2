@@ -31,18 +31,21 @@ export default ({ icon, title, content }) => {
       flexDirection_tablet="column"
       height="auto"
       width_tablet="100%"
+      minWidth_tablet="120px"
+      minWidth_md="180px"
+      //minWidth_lg="240px"
       width_xs="100%"
-      margin_tablet="0"
+      margin_tablet="0 10px"
       margin_xs="20px 0"
-      padding_xs="0 "
-      display="flex"
+      padding_xs="0"
     >
       <Div
         display="flex"
         flexDirection="column"
         alignItems="center"
-        padding_tablet="0 15px"
+        padding_tablet="0"
         padding_xs="0 10%"
+        width="100%"
       >
         <Icon 
           icon={icon} 
@@ -58,7 +61,7 @@ export default ({ icon, title, content }) => {
             width="140px"
             width_md="auto"
             lineHeight="19px"
-            padding="20px 0"
+            padding="0"
             padding_tablet="20px 15%"
             textAlign="center"
           >

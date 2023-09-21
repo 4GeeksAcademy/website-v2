@@ -26,6 +26,8 @@ import StarRating from "../StarRating";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { smartRedirecting, transferQuerystrings } from "../../utils/utils.js";
 import CardsCarousel from "../CardsCarousel";
+import Overlaped from "../Overlaped";
+import { background } from "@storybook/theming";
 
 const Title = ({ id, title, paragraph }) => {
   return (
@@ -138,6 +140,7 @@ const Side = ({
           {sub_heading.text}
         </Paragraph>
       )}
+      
       {Array.isArray(bullets) && (
         <Div
           display="grid"
@@ -203,7 +206,7 @@ const Side = ({
       }
 
       {
-        content && /<\/?[a-z0-9]+>/g.test(content.text) ? (
+        content && /<\/?[a-z0-9]+>/g.test(content.text) ? 
           <Paragraph
             textAlign="left"
             textAlign_tablet="left"
@@ -217,7 +220,7 @@ const Side = ({
             fontHeight="30px"
             dangerouslySetInnerHTML={{ __html: content.text }}
           />
-        ) : content ? (
+        : content && (
           content.text.split("\n").map((p, i) => (
             <Paragraph
               key={`${i}-${p}`}
@@ -235,7 +238,7 @@ const Side = ({
               {p}
             </Paragraph>
           ))
-        ) : null
+        )
       }
 
       {
@@ -609,61 +612,67 @@ export const landingSections = {
   iconogram: ({ session, data, pageContext, yml, index }) => {
     const { heading, sub_heading, icons, text_link } = yml
     return (
-
-      <GridContainer
-        display="flex"
+      <Div
         key={index}
+        padding={heading.text ? "0 0 60px 0": "60px 0 60px 0"}
+        display="flex"
+        flexDirection="column"
         id="iconogram"
-        containerColumns="repeat(14, 1fr)"
+        containerColumns_tablet="repeat(14, 1fr)"
         columns="1"
         rows="2"
         margin="auto"
         height="auto"
         width="100%"
         background={Colors.lightYellow}
-        padding_xs="50px 10px"
-        padding_tablet="50px 0"
-        justifyItems="center"
-        justifyContent="center"
       >
-        <Div
-          columns="1"
-          display="block"
-          maxWidth_tablet="1366px"
-          margin="auto"
-          padding_lg="0 50px"
-        >
-          {heading &&
-            <H2
-              type="h2"
-              lineHeight="28px"
-              lineHeight_tablet="28px"
-              fontSize="30px"
-              margin="30px 0 30px 0"
-              style={{ textAlign: "center" }}
-            >
-              {heading.text}
-            </H2>
-          }
-          {sub_heading && /<\/?[a-z0-9]+>/g.test(sub_heading.text) &&
-            <Paragraph
-              padding_xs={heading ? "0" : "20px"}
-              margin="15px 0"
-              fontSize="16px"
-              fontHeight="30px"
-              dangerouslySetInnerHTML={{ __html: sub_heading.text }}
-            />
-          }
-        </Div>
+        {heading.text  &&
+          <H2
+            type="h2"
+            lineHeight="28px"
+            lineHeight_tablet="28px"
+            fontSize="30px"
+            //margin="30px 0 30px 0"
+            maxWidth="1366px"
+            margin="30px auto"
+            style={{ textAlign: "center" }}
+          >
+            {heading.text}
+          </H2>
+        }
+        {sub_heading && /<\/?[a-z0-9]+>/g.test(sub_heading.text) ?
+          <Paragraph
+            padding_xs={heading.text ? "0 10px" : "20px 10px"}
+            padding_tablet={heading.text ? "0 30px" : "20px 30px"}
+            padding_md={heading.text ? "0 50px" : "20px 50px"}
+            margin="15px auto"
+            fontSize="16px"
+            fontHeight="30px"
+            maxWidth="1366px"
+            dangerouslySetInnerHTML={{ __html: sub_heading.text }}
+          />
+          :
+          <Paragraph
+            padding_xs={heading ? "0" : "20px"}
+            margin="15px auto"
+            fontSize="16px"
+            fontHeight="30px"
+            maxWidth="1366px">
+            {sub_heading.text}
+          </Paragraph>
+        }
         <Div
           display="flex"
+          flexDirection="column"
+          flexDirection_tablet="row "
           justifyContent="center"
-          flexDirection_tablet="row"
-          flexDirection_sm={icons.length > 3 ? "row" : "column"}
-          flexDirection_xs="column"
-          maxWidth_tablet="1366px"
+          // gap="45px"
+          gap_tablet={icons.length > 4 ? "0px" : "5%"}
+          //gap_md="10%"
+          maxWidth="1366px"
           margin="auto"
-          padding_lg="0 50px"
+          //className="badge-slider hideOverflowX__"
+          
         >
           {Array.isArray(icons) &&
             icons?.map((item, index) => {
@@ -675,17 +684,23 @@ export const landingSections = {
             })}
         </Div>
         {text_link &&
-          <Link to={text_link} display="block">
-            <H3
-              fontSize="18px"
-            >
-              Conditions Apply.
-            </H3>
-          </Link>
+          <Div
+            maxWidth="1366px"
+            margin="10px auto"
+          >
+            <Link to={text_link} display="block">
+              <H3
+                fontSize="18px"
+                lineHeight="22px"
+                textDecoration="underline"
+                textDecorationOffset="5px"
+              >
+                Conditions Apply.
+              </H3>
+            </Link>
+          </Div>
         }
-
-      </GridContainer>
-
+      </Div>
     );
   },
 
@@ -698,19 +713,21 @@ export const landingSections = {
     let badges = dataYml[0].node.badges;
     return (
       <React.Fragment key={index}>
+      <Div background={Colors.verylightGray2} width="100%">
         <Badges
           link
           // wrapped_images={true}
           id="badges"
           lang={pageContext.lang}
-          background={Colors.verylightGray}
+          background={Colors.verylightGray2}
           paragraph={badges.heading}
           short_text
           padding="60px 0"
           padding_tablet="68px 0"
-          margin="0"
           margin_tablet="0 0 78px 0"
+          maxWidth="1366px"
         />
+      </Div>
       </React.Fragment>
     );
   },
@@ -887,7 +904,7 @@ export const landingSections = {
           title={yml.heading}
           paragraph={yml.sub_heading}
         />
-        ,
+      
       </React.Fragment>
     );
   },
@@ -919,7 +936,25 @@ export const landingSections = {
           details={course?.details}
           lang={pageContext.lang}
         />
-        <ProgramDetailsMobile details={course && course.details} />
+        {/* <ProgramDetailsMobile details={course && course.details} /> */}
+      </React.Fragment>
+    );
+  },
+
+  overlaped: ({session, pageContext, yml, data, index}) => {
+    const { heading, content, button, background, image } = yml
+    return(
+      <React.Fragment key={index} >
+        
+        <Overlaped
+          landingTemplate
+          heading={heading.text}
+          content={content.text}
+          button={button}
+          background={background}
+          image={image}
+          lang={pageContext.lang}
+        />
       </React.Fragment>
     );
   },
@@ -938,6 +973,7 @@ export const landingSections = {
           background_xs="linear-gradient(180deg, #C7F3FD 59.45%, #FFFFFF 50%)"
           background_xxs="linear-gradient(180deg, #C7F3FD 60%, #FFFFFF 50%)"
           display_xs="flex"
+          margin_tablet="97px 0"
         >
         <CardsCarousel
           landingTemplate
@@ -956,8 +992,8 @@ export const landingSections = {
   choose_your_program: ({ session, pageContext, yml, data, index }) => {
     return (
       <React.Fragment key={index}>
-        <Div 
-          id="choose_your_program" 
+        <Div
+          id="choose_your_program"
           width="100%"
           flexDirection="column"
         >
@@ -1036,12 +1072,6 @@ export const landingSections = {
       margin="0"
       padding="0"
     >
-      <Title
-        title={yml.heading}
-        paragraph={yml.sub_heading}
-        paragraphColor={Colors.gray}
-        variant="primary"
-      />
       <With4Geeks
         text={yml.footer?.text}
         sessionLocation={
@@ -1088,10 +1118,12 @@ export const landingSections = {
         id="who_is_hiring"
         key={index}
         flexDirection="column"
-        margin="40px 0"
-        margin_tablet="40px 50px 100px"
+        //margin="40px auto"
+        margin_tablet="40px auto 100px auto"
         m_sm="0"
         p_xs="0"
+        maxWidth="1366px"
+        margin_xs="40px 0"
       >
         <OurPartners
           images={hiring.partners.images}
@@ -1135,7 +1167,8 @@ export const landingSections = {
       flexDirection="column"
       padding="50px 0 50px 0"
       padding_tablet="50px 6%"
-      margin="0"
+      margin_tablet="0 auto"
+      maxWidth="1366px"
     >
       <TwoColumn
         left={{ image: yml.image, video: yml.video }}
@@ -1160,7 +1193,8 @@ export const landingSections = {
         flexDirection="column"
         padding="0 0 50px 0"
         padding_tablet="6%"
-        margin="0"
+        margin_tablet="0 auto"
+        maxWidth="1366px"
       >
         <TwoColumn
           left={{

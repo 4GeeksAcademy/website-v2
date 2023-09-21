@@ -23,11 +23,16 @@ meta_info:
 form:
   # posible fields: "first_name", "last_name", "full_name", "phone", "email"
   # always the first_name, email and phone will be mandatory if added.
-  fields: ["full_name", "phone", "email"]
+  fields: ["full_name", "phone", "email", "course"]
   heading: "Apply to 4Geeks"
-  motivation: "A top quality program at No Cost for you. No excuses. Become a developer and change your life"
-  button_label: Apply Now
+  #motivation: "A top quality program at No Cost for you. No excuses. Become a developer and change your life"
+  button_label: Apply
   redirect: "/us/thank-you/?lang=us"  #you can redirect to another url or entirely diffrent website
+
+apply_schollarship: # form that is displayed at the end of the landing
+  # title: "Get more info about this award-winning development course"
+  imageSide: "left"
+  image: "../../../static/images/landing/apply.png"
 
 navbar:
   buttonText: "Apply now"

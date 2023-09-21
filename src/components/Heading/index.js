@@ -43,10 +43,13 @@ const BaseHeading = styled(Heading)`
   background-color: ${(props) => props.background};
   margin-top: ${(props) => props.marginTop};
   text-transform: ${(props) => props.textTransform};
+  text-decoration: ${(props) => props.textDecoration};
   text-align: ${(props) => props.textAlign || "center"};
   align-self: ${(props) => props.alignSelf};
   padding: ${(props) => props.padding};
   border-bottom: ${(props) => props.borderBottom};
+  text-decoration: ${(props) => props.textDecoration};
+  text-decoration-offset: ${(props) => props.textDecorationOffset}
 
   &:hover {
     background-color: ${(props) => props.bgHover || props.bg};
@@ -244,6 +247,7 @@ export const Paragraph = styled.p`
     margin: ${(props) => props.margin_md};
     padding: ${(props) => props.padding_md};
     max-width: ${(props) => props.maxWidth_md};
+    
   }
   @media ${Devices.lg} {
     font-size: ${(props) => props.fontSize_lg};
