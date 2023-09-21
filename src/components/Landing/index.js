@@ -633,6 +633,7 @@ export const landingSections = {
           <Paragraph
             padding_xs={heading.text ? "0 10px" : "20px 10px"}
             padding_tablet={heading.text ? "0 30px" : "20px 30px"}
+            padding_md={heading.text ? "0 50px" : "20px 50px"}
             margin="15px auto"
             fontSize="16px"
             fontHeight="30px"
