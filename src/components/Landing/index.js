@@ -932,14 +932,12 @@ export const landingSections = {
     const course = getCourse();
     return (
       <React.Fragment key={index}>
-      {/* {console.log(yml.heading)} */}
         <ProgramDetails
           id="program_details"
           heading={yml.heading}
           sub_heading={yml.sub_heading}
           background={yml?.background}
-          details={course && course.details}
-          //details={course?.details}
+          details={course?.details}
           lang={pageContext.lang}
         />
         <ProgramDetailsMobile details={course && course.details} />
