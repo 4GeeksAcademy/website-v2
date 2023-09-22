@@ -143,13 +143,14 @@ const Overlaped = ({
               margin="12px 0 0 0"
               dangerouslySetInnerHTML={{ __html: content }}
             />
-            : 
+            : content ? (
             <Paragraph 
               textAlign="start" 
               margin="12px 0 0 0"
             >
             {content}
             </Paragraph>
+            ) : null
           }
 
           {
@@ -157,7 +158,7 @@ const Overlaped = ({
             <Button 
               background={button.color}
               color={Colors.white}
-              margin="12px 0 0 0"
+              margin="20px 0 0 0"
               >
               {button.text}
             </Button>
