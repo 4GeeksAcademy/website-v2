@@ -86,9 +86,9 @@ short_badges:
     image: "../../../static/images/badges/licensed.png"
     alt: "Florida Department of Education"
 
-#
-# ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇
-#
+# #
+# # ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇
+# #
 badges:
   position: 1 # It's the position of the component that will be rendered first
   heading: "4Geeks Academy es una de las mejores escuelas de programación del mundo, ha sido Galardonada como el Mejor Centro de Formación de España 2023 y sus programas de estudio han sido reconocidos como los Mejores para la Inserción Profesional. "
@@ -120,29 +120,29 @@ who_is_hiring:
     - name: "Apple"
       image: "../../../static/images/partner/apple.png"
 
-#choose_your_program:
-#  position: 5
-#  title: Nuestro Programa
-#  paragraph: Programa en formato part-time con clases en vivo impartidas por profesionales de la programación del mundo real y diseñados pensando en lo que las empresas demandan.
-#  programs:    
-#  - title: "Data Science & Machine Learning"
-#    sub_title: "Desde Cero"
-#    icon: "machine"
-#    description: |
-#      Explora los fundamentos de Machine Learning y Deep Learning con algunas de las tecnologías más poderosas  para escalar la inteligencia en los negocios. 
-#       Practica con escenarios y casos reales y maneja las herramientas más utilizadas en la industria. Crea estrategías, implementa y manten en producción tus modelos de IA con privacidad, seguridad y ética. Conviértete en uno de los profesionales mejor pagados del sector. 
-#      
-#       Disponible en modalidad part-time. Descarga aquí el <a href=https://storage.googleapis.com/4geeks-academy-website/syllabus/madrid-spain/Syllabus-Full-Stack-AI-ML-2022-Espa%C3%B1a.pdf target=_blank>programa de estudios</a>.
-#    text_link: Aplica ahora
-#    link: "#"
+# #choose_your_program:
+# #  position: 5
+# #  title: Nuestro Programa
+# #  paragraph: Programa en formato part-time con clases en vivo impartidas por profesionales de la programación del mundo real y diseñados pensando en lo que las empresas demandan.
+# #  programs:    
+# #  - title: "Data Science & Machine Learning"
+# #    sub_title: "Desde Cero"
+# #    icon: "machine"
+# #    description: |
+# #      Explora los fundamentos de Machine Learning y Deep Learning con algunas de las tecnologías más poderosas  para escalar la inteligencia en los negocios. 
+# #       Practica con escenarios y casos reales y maneja las herramientas más utilizadas en la industria. Crea estrategías, implementa y manten en producción tus modelos de IA con privacidad, seguridad y ética. Conviértete en uno de los profesionales mejor pagados del sector. 
+# #      
+# #       Disponible en modalidad part-time. Descarga aquí el <a href=https://storage.googleapis.com/4geeks-academy-website/syllabus/madrid-spain/Syllabus-Full-Stack-AI-ML-2022-Espa%C3%B1a.pdf target=_blank>programa de estudios</a>.
+# #    text_link: Aplica ahora
+# #    link: "#"
 
-program_details:
-  position: 4
-  background: "#FFFFFF"
-  heading: "Detalles del programa"
-  sub_heading: "Aprende las tecnologías que demandan las empresas"
+# program_details:
+#   position: 4
+#   background: "#FFFFFF"
+#   heading: "Detalles del programa"
+#   sub_heading: "Aprende las tecnologías que demandan las empresas"
 
-# Possible layouts: [two_column_left_image, two_column_right_image]
+# # Possible layouts: [two_column_left_image, two_column_right_image]
 components:
   - name: how-it-works
     position: 3
@@ -166,24 +166,23 @@ components:
       title: Haz una entrevista personal vía telefónica con el equipo de admisiones
     - icon: "terminal"
       title: Reserva tu plaza y ¡acelera tu carrera!
-#  - name: python_y_javascript
-#    position: 6
-#    layout: two_column_right
-#    background: "veryLightBlue2" # Name of the color(from components/Styling/index.js) or color code ex: #C9F9F9
-#    image:
-#      src: "/images/why-4geeks/python-image.png"
-      # /static/images/why-4geeks/python-image.png
-    # video: "B01-eTfgqqc"
-#    heading:
-#      text:
-#        "Python y Javascript"
-        #           xl      lg      md      sm      xs
-#      font_size: ["50px", "50px", "50px", "50px", "50px"]
-#    content:
-#      text: "Nuestros programas están basados en el uso de Phyton y Javascript. ¿La razón? En el mercado laboral JavaScript tiene 26 veces más vacantes de trabajo que Ruby on Rails. Python tiene 10 veces más oportunidades que Node.JS. Además, están entre las carreras mejor pagadas en todo el mundo.
-             
-#             Otras herramientas que también aprenderás a usar en nuestros programas son: GitHub, Git, React, Amazon Web Services, Pandas, Matplotlib, Plotly, etc."
-#      font_size: ["17px"]
+
+  # - name: python_y_javascript
+  #   position: 8
+  #   layout: two_column_right
+  #   background: "veryLightBlue2" # Name of the color(from components/Styling/index.js) or color code ex: #C9F9F9
+  #   image:
+  #     src: "/images/why-4geeks/python-image.png"
+  #       #/static/images/why-4geeks/python-image.png
+  #     video: "B01-eTfgqqc"
+  #   heading:
+  #     text:
+  #       "Python y Javascript"
+  #                   xl      lg      md      sm      xs
+  #     font_size: ["50px", "50px", "50px", "50px", "50px"]
+  #   content:
+  #     text: "Nuestros programas están basados en el uso de Phyton y Javascript. ¿La razón? En el mercado laboral JavaScript tiene 26 veces más vacantes de trabajo que Ruby on Rails. Python tiene 10 veces más oportunidades que Node.JS. Además, están entre las carreras mejor pagadas en todo el mundo. Otras herramientas que también aprenderás a usar en nuestros programas son: GitHub, Git, React, Amazon Web Services, Pandas, Matplotlib, Plotly, etc."
+  #     font_size: ["17px"]
 
 why_python:
   position: 6
@@ -196,7 +195,7 @@ why_4geeks:
   sub_heading: ""
   footer:
     text: Ver opciones de financiación
-    text_link:
+    text_link: ""
 
 apply_schollarship: # form that is displayed at the end of the landing
   # title: "Apoyo Profesional Ilimitado"

@@ -119,11 +119,11 @@ who_is_hiring:
     - name: "Apple"
       image: "../../../static/images/partner/apple.png"
 
-program_details:
-  position: 5
-  background: "#FFFFFF"
-  heading: "Detalles del programa"
-  sub_heading: "Aprende las tecnologías que demandan las empresas"
+# program_details:
+#   position: 5
+#   background: "#FFFFFF"
+#   heading: "Detalles del programa"
+#   sub_heading: "Aprende las tecnologías que demandan las empresas"
 
 why_4geeks:
   position: 7

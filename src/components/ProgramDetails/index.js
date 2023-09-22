@@ -151,6 +151,7 @@ const ProgramDetails = (props) => {
         <H2
           lineHeight="36px"
         >
+          
           {props.heading || props.details.heading}
         </H2>
         <Paragraph
