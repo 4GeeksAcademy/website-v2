@@ -109,10 +109,11 @@ const ProgramDetails = (props) => {
           margin="13px 20px 40px 20px"
         >
           {list.map((item, index) => {
-            return (
+            return ( 
+              
               <Div flexWrap="wrap">
                 <Div alignItems="start" margin="10px 0" key={index}>
-                  <Icon icon={item.icon} width="20px" height="20px" style={{ color: "black" }} />
+                  <Icon icon={item.icon} width="20px" height="20px"/>
                   <H4
                     fontSize="16px"
                     textAlign="start"
@@ -126,7 +127,6 @@ const ProgramDetails = (props) => {
                 </Div>
                 {
                   item.link_text && (
-
                     <a
                       href={item.link}
                       style={{
@@ -143,7 +143,7 @@ const ProgramDetails = (props) => {
                 }
               </Div>
             );
-          })}
+          })} 
         </Div>
       </Grid>
 
@@ -266,7 +266,7 @@ const ProgramDetails = (props) => {
                 width_md="50%"
                 width_xs="300px"
                 width_tablet="80%"
-                height_md="250px"
+                height_md="fit-content"
                 height_xs="auto"
               >
                 <Icon
@@ -316,7 +316,7 @@ const ProgramDetails = (props) => {
                   margin_md="0 10px 0 0"
                   margin_xs="0 0 20px 0"
                   width="100%"
-                  height_md="150px"
+                  height_md="fit-content"
                   height_xs="auto"
                 >
                   <Div>

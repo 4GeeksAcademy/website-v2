@@ -930,6 +930,7 @@ export const landingSections = {
       return {};
     };
     const course = getCourse();
+
     return (
       <React.Fragment key={index}>
         <ProgramDetails

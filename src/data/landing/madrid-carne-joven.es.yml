@@ -24,9 +24,10 @@ form:
 # jumbotron on the top (cannot be commented out)
 
 header_data:
+  background: "#FFF1D1"
   tagline: Aprende a programar con Carné Joven
   sub_heading: ""
-  image: "../../../static/images/Happy-People-Landing-4Geeks-ES.jpg"
+  #image: "../../../static/images/Happy-People-Landing-4Geeks-ES.jpg"
   image_filter: brightness(0.4)
 
 features:
