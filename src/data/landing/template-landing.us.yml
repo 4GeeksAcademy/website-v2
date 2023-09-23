@@ -41,7 +41,7 @@ header_data:
   background: "#FFF1D1"
   tagline: Become a web developer in as 16 weeks through work on real project and mentorship by ezperienced professionals
   sub_heading: "86% of our graduates have already started their future-proof, tech careers with on overage entry salary of $50.000"
-  background_image: "../../../static/images/4geeks-main.jpg"
+  #background_image: "../../../static/images/4geeks-main.jpg"
   badge: "../../../static/images/badges/switchup.png" #Tmage on the right side of the form
   image_filter: brightness(0.4) #0 is dark, 1 is bright
 
@@ -407,17 +407,8 @@ components:
           text: "Low-income veterans"
           style: '{ "fontWeight": "700" }'
           font_size: "15px"
-        button:
-          text: "See more"
-      - image:
-          style: '{ "backgroundSize": "cover", "minHeight": "230px", "borderRadius": "80px" }'
-          src: "/images/low-income-veterans.png"
-        heading: 
-          text: "Low-income veterans"
-          style: '{ "fontWeight": "700" }'
-          font_size: "15px"
-        button:
-          text: "See more"
+        # button:
+        #   text: "See more"
       - image:
           style: '{ "backgroundSize": "cover", "minHeight": "230px", "borderRadius": "80px" }'
           src: "/images/low-income-female-heads-of-household.png"
