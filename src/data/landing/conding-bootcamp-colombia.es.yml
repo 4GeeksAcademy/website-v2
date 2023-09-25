@@ -5,7 +5,7 @@ meta_info:
   # This will show on social media when shared
   title: "Bootcamp de programación en Colombia."
   description: "Mejora tus habilidades en programación o aprende a programar desde cero y recibe soporte técnivo y profesional de por vida."
-  image: "" #"/images/bg/main-bg.jpg"
+  image: "/images/bg/main-bg.jpg"
   keywords: "Bootcamp de Programación, Bootcamp programacion Colombia, Bootcamp de python, Bootcamp de React y Javascript, Bootcamp de Informática, Coding Bootcamp, 4Geeks Academy"
 
   template: "landing_a" # <--- choose your landing template
