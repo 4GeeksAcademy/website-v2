@@ -44,7 +44,7 @@ header_data:
   tagline: ¡Bienvenido a 4Geeks Academy! La academia de programación líder en el mundo
   tagline_color: "black"
   sub_heading: Con más de 7 años de experiencia tenemos presencia en USA, Europa y Latinoamérica. En nuestra academia, te enseñamos habilidades y destrezas relevantes para el futuro
-  background_image: "" #"../../../static/images/bg/main-bg.jpg"
+  background_image: #"../../../static/images/bg/main-bg.jpg"
   #video: "https://www.videoask.com/fm984j5nz"
   image_filter: brightness(0.4)
 
