@@ -58,7 +58,7 @@ const ThumbnailPage = () => {
     if (isWindow) document.body.className = "page-thumbnail";
   }, [data]);
 
-  const url = `/images/bg/random-bg${Math.floor(Math.random() * 4) +1}.png`;
+  const url = `/images/bg/random-bg${Math.floor(Math.random() * 4) + 1}.png`;
 
   const Div = styled.div`
     background: url("${url}");

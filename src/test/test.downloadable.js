@@ -43,33 +43,31 @@ walk(`${__dirname}/../data/downloadable`, async (err, files) => {
       localizeImage(header_image, "relative_images", _path, ".");
       localizeImage(meta_info_image, "relative_images", _path, "bg");
 
-      
-        const data = doc.yaml;
-        const meta_keys = Object.keys(data.meta_info);
-        const current_download = data.meta_info.current_download;
+      const data = doc.yaml;
+      const meta_keys = Object.keys(data.meta_info);
+      const current_download = data.meta_info.current_download;
 
-        const scanResult = downloadables.some(
-          (el) => el.slug === current_download
+      const scanResult = downloadables.some(
+        (el) => el.slug === current_download
+      );
+      if (scanResult === false) {
+        console.log(
+          "The list of downloadables available is:".green,
+          downloadables.map((el) => el.slug)
         );
-        if (scanResult === false) {
-          console.log(
-            "The list of downloadables available is:".green,
-            downloadables.map((el) => el.slug)
-          );
-          fail(
-            `${`\nProblem found in: ${_path}`.red}\n\n${
-              `Property current_download with value ${
-                `${current_download}`.yellow
-              } ${`not found in the downloadables list`.red}`.red
-            }\n\n`
-          );
-        }
+        fail(
+          `${`\nProblem found in: ${_path}`.red}\n\n${
+            `Property current_download with value ${
+              `${current_download}`.yellow
+            } ${`not found in the downloadables list`.red}`.red
+          }\n\n`
+        );
+      }
 
-        front_matter_fields.forEach((obj) => {
-          if (!meta_keys.includes(obj["key"]))
-            fail(`Missing prop ${obj["key"]} from course on ${_path}`);
-        });
-      
+      front_matter_fields.forEach((obj) => {
+        if (!meta_keys.includes(obj["key"]))
+          fail(`Missing prop ${obj["key"]} from course on ${_path}`);
+      });
     }
     success("All Downloadables yml have correct properties");
   } catch (error) {
