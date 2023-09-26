@@ -152,7 +152,5 @@ components:
       color: null
       path: "https://www.youtube.com/watch?v=rtpfwwfE0yY&ab_channel=4GeeksAcademy"
     content:
-      text: "Mentorías ilimitadas, distintos instructores, todas las semanas. 
-      <br> 
-      Te acompañaremos en este camino para que puedas convertirte en Full Stack Developer Junior y conseguir tu primer empleo en el área. Siempre te acompañaremos, aún cuando ya hayas conseguido trabajo, una vez eres parte de 4Geeks, siempre serás parte de la comunidad y sus beneficios."
+      text: "Mentorías ilimitadas, distintos instructores, todas las semanas. Te acompañaremos en este camino para que puedas convertirte en Full Stack Developer Junior y conseguir tu primer empleo en el área. Siempre te acompañaremos, aún cuando ya hayas conseguido trabajo, una vez eres parte de 4Geeks, siempre serás parte de la comunidad y sus beneficios."
       font_size: ["16px"]

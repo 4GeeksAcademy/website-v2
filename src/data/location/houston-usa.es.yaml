@@ -37,15 +37,16 @@ custom_bar:
 
 badges:
   title: ""
-  paragraph: "4Geeks Academy es el lugar donde los desarrolladores crecen y prosperan.
- 
-Estamos autorizados por el Departamento de Educación de Florida.
+  paragraph: |
+    4Geeks Academy es el lugar donde los desarrolladores crecen y prosperan.
   
-Elegido como uno de los 35 mejores bootcamps de codificación del mundo y el mejor bootcamp de codificación en Houston según SwitchUp.
+    Estamos autorizados por el Departamento de Educación de Florida.
+      
+    Elegido como uno de los 35 mejores bootcamps de codificación del mundo y el mejor bootcamp de codificación en Houston según SwitchUp.
 
-4Geeks Academy ha sido reconocida como uno de los 10 mejores bootcamps de codificación en los Estados Unidos según Newsweek.
+    4Geeks Academy ha sido reconocida como uno de los 10 mejores bootcamps de codificación en los Estados Unidos según Newsweek.
 
-Una comunidad construida para desarrolladores."
+    Una comunidad construida para desarrolladores.
 news:
   title: "4Geeks Academy Houston en las noticias..."
 upcoming:
