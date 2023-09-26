@@ -8,6 +8,8 @@ meta_info:
     redirects: ["/upcoming", "/dates", "/calendar", "/us/calendar"]
 
 seo_title: "Coding Bootcamp"
+show_more: Show more
+show_less: Show less
 header:
     title: Upcoming Courses
     paragraph: "Filter the events or cohorts based what you are interested on"
