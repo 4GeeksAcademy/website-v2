@@ -282,7 +282,9 @@ export const TwoColumn = ({ left, right, proportions, session }) => {
       m_sm="0px auto 100px auto"
       margin="auto"
       width_tablet="100%"
-      maxWidth_tablet="1366px"
+      maxWidth_md="1366px"
+      padding_tablet="0"
+      padding_md="0 5%"
     >
       <Div
         flexDirection="column"
@@ -1171,7 +1173,7 @@ export const landingSections = {
       padding="30px 0"
       padding_tablet="30px 6%"
       margin_tablet="0 auto"
-      maxWidth="1366px"
+      width="100%"
     >
       <TwoColumn
         left={{ image: yml.image, video: yml.video }}
@@ -1197,7 +1199,8 @@ export const landingSections = {
         padding="40px 0 50px 0"
         padding_tablet="40px 6%"
         margin_tablet="0 auto"
-        maxWidth="1366px"
+        width="100%"
+        //maxWidth="1366px"
       >
         <TwoColumn
           left={{
