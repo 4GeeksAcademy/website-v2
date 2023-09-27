@@ -1173,7 +1173,7 @@ export const landingSections = {
       padding="30px 0"
       padding_tablet="30px 6%"
       margin_tablet="0 auto"
-      width="100%"
+      width_md="100%"
     >
       <TwoColumn
         left={{ image: yml.image, video: yml.video }}
@@ -1199,8 +1199,7 @@ export const landingSections = {
         padding="40px 0 50px 0"
         padding_tablet="40px 6%"
         margin_tablet="0 auto"
-        width="100%"
-        //maxWidth="1366px"
+        width_md="100%"
       >
         <TwoColumn
           left={{
