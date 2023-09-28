@@ -49,13 +49,16 @@ const Overlaped = ({
         position="relative"
         justifyContent="center"
         margin_tablet="auto"
+        padding_tablet="0 40px"
+        padding_md="0 80px"
+        padding_lg="0"
       >
         <Grid
           gridTemplateColumns_tablet="1fr repeat(14, 1fr) 1fr"
           gridGap="0px"
         >
           <Div
-            gridColumn="2 / 9"
+            gridColumn="1 / 9"
           >
             <Img
               src={image.src}
@@ -65,7 +68,7 @@ const Overlaped = ({
           </Div>
 
           <Div
-            gridColumn="9 / 16"
+            gridColumn="9 / 17"
             position="relative"
           >
             <Div width="100%" >
@@ -138,28 +141,28 @@ const Overlaped = ({
           </H2>
           {
             content && /<\/?[a-z0-9]+>/g.test(content) ?
-            <Paragraph 
-              textAlign="start" 
-              margin="12px 0 0 0"
-              dangerouslySetInnerHTML={{ __html: content }}
-            />
-            : content ? (
-            <Paragraph 
-              textAlign="start" 
-              margin="12px 0 0 0"
-            >
-            {content}
-            </Paragraph>
-            ) : null
+              <Paragraph
+                textAlign="start"
+                margin="12px 0 0 0"
+                dangerouslySetInnerHTML={{ __html: content }}
+              />
+              : content ? (
+                <Paragraph
+                  textAlign="start"
+                  margin="12px 0 0 0"
+                >
+                  {content}
+                </Paragraph>
+              ) : null
           }
 
           {
             button &&
-            <Button 
+            <Button
               background={button.color}
               color={Colors.white}
               margin="20px 0 0 0"
-              >
+            >
               {button.text}
             </Button>
           }

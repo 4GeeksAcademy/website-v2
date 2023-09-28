@@ -67,13 +67,16 @@ const ProgramDetails = (props) => {
   return (
     <>
       <Grid
-        gridTemplateColumns_tablet="2fr repeat(14,1fr) 2fr"
+        gridTemplateColumns_tablet="repeat(14,1fr)"
         maxWidth="1366px"
         margin_xs="0 auto 45px auto"
+        padding_tablet="0 40px"
+        padding_md="0 80px"
+        padding_lg="0"
       >
         <Div
           flexDirection="column"
-          gridColumn_tablet="2/10"
+          gridColumn_tablet="1/8"
           gap="22px"
           padding_tablet="0 13px 0 0"
           margin_tablet="100px 0 0 0"
@@ -102,18 +105,18 @@ const ProgramDetails = (props) => {
         </Div>
         <Div
           flexDirection="column"
-          gridColumn_tablet="10/16"
+          gridColumn_tablet="8/16"
           padding="15px"
           margin_tablet="100px 0 0 0"
           background={Colors.veryLightBlue}
           margin="13px 20px 40px 20px"
         >
           {list.map((item, index) => {
-            return ( 
-              
+            return (
+
               <Div flexWrap="wrap">
                 <Div alignItems="start" margin="10px 0" key={index}>
-                  <Icon icon={item.icon} width="20px" height="20px"/>
+                  <Icon icon={item.icon} width="20px" height="20px" />
                   <H4
                     fontSize="16px"
                     textAlign="start"
@@ -143,7 +146,7 @@ const ProgramDetails = (props) => {
                 }
               </Div>
             );
-          })} 
+          })}
         </Div>
       </Grid>
 
@@ -151,7 +154,7 @@ const ProgramDetails = (props) => {
         <H2
           lineHeight="36px"
         >
-          
+
           {props.heading || props.details.heading}
         </H2>
         <Paragraph
@@ -166,10 +169,14 @@ const ProgramDetails = (props) => {
 
       {props.withoutAnimation !== true && (
         <Grid
-          padding_tablet="0"
+          //padding_tablet="0"
+          gridTemplateColumns_tablet="repeat(14,1fr)"
           margin="0 auto"
           justifyItems="center"
           maxWidth="1366px"
+          padding_tablet="0 40px"
+          padding_md="0 80px"
+          padding_lg="0"
         >
           <Div
             flexDirection="column"
@@ -177,7 +184,8 @@ const ProgramDetails = (props) => {
             minHeight="475px"
             height="auto"
             borderBottom_tablet="1px solid black"
-            gridColumn_tablet="2/14"
+            gridColumn_tablet="1/15"
+
             display="none"
             display_md="block"
           >
