@@ -60,21 +60,51 @@ info_box:
   contact_heading: "Contacts"
   phone: "(786) 416-6640"
   email: "info@4GeeksAcademy.com"
+
+TwoColumnsCampus:
+  background: "veryLightBlue2"
+  layout: two_column_right
+  proportions: [6, 6]
+  image:
+    style: '{ "backgroundSize": "contain" }'
+    src: "/images/staff/alissa.jpg"
+  video: "https://www.youtube.com/watch?v=TCHASxvkhpI"
+  heading:
+    text: "4Geeks, Toronto y una historia llena de oportunidades."
+    font_size: ["30px", "30px", "30px", "30px", "30px"]
+  sub_heading:
+    text: "Estamos presentes en Toronto y estamos enfocados en brindar oportunidades para todos."
+    font_size: ["18px", "18px", "18px", "18px", "18px"]
+  button:
+    text: ""
+    color: null
+    path: "https://storage.googleapis.com/4geeks-academy-website/syllabus/madrid-spain/UnitedWay/Criterios%20de%20elegibilidad%20UWay.docx.pdf"
+  content:
+    text: |
+      <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">1- Tenemos una variedad de opciones de financiamiento disponibles.</strong></h2>
+      <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">2- Contamos con convenios con empresas nacionales y multinacionales.</strong></h2>
+      <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">3- Siempre habrá oportunidades para todos en Canadá</strong></h2>
+    font_size: ["16px"]
+
 images_box:
   heading: "Qué deberías saber acerca de esta ubicacion: "
   content: |
     La ciudad es un imán para empresas tecnológicas y startups innovadoras que atraen talento y capital de todo el mundo. La codificación ocupa un papel fundamental en el panorama tecnológico de Toronto, sirviendo como base para el desarrollo de software y el avance digital. La demanda de experiencia en codificación sigue siendo alta, lo que ha llevado al establecimiento de bootcamps de codificación, escuelas de codificación e instituciones educativas en toda la ciudad. La dedicación de Toronto para cultivar una fuerza laboral altamente capacitada en codificación ha sido fundamental en su éxito continuo como un centro tecnológico de primer nivel.
   images:
-    - path: "../../../static/images/locations/toronto-new.png"
-      alt: "Atlanta city"
-    - path: "../../../static/images/ownpeoplecoding2.jpg"
-      alt: "4Geeks Own People Coding"
-    - path: "../../../static/images/ownmancoding.jpg"
-      alt: "Remote-Coding-Bootcamp"
-    - path: "../../../static/images/locations/miami-old.jpg"
-      alt: "4Geeeks miami location"
-    - path: "../../../static/images/locations/miami-people.jpeg"
-      alt: "4Geeeks miami lab"
+    # - path: "../../../static/images/locations/toronto-new.png"
+    #   alt: "Atlanta city"
+    # - path: "../../../static/images/ownpeoplecoding2.jpg"
+    #   alt: "4Geeks Own People Coding"
+    # - path: "../../../static/images/ownmancoding.jpg"
+    #   alt: "Remote-Coding-Bootcamp"
+    # - path: "../../../static/images/locations/miami-old.jpg"
+    #   alt: "4Geeeks miami location"
+    # - path: "../../../static/images/locations/miami-people.jpeg"
+    #   alt: "4Geeeks miami lab"
+
+with4geeks: 
+  header: "Experiencias en 4Geeks Academy"
+
 
 active_campaign_location_slug: "toronto-canada"
 breathecode_location_slug: "toronto-canada"

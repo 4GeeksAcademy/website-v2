@@ -68,16 +68,44 @@ images_box:
   heading: "Lo que deberías saber sobre nuestra sede en Argentina: "
   content: "Buenos Aires fomenta la innovación y el emprendimiento a través de varias iniciativas y eventos. La ciudad alberga conferencias tecnológicas, competiciones de startups y programas de emprendimiento que brindan oportunidades a las startups para dar a conocer sus ideas, conectarse con inversores y obtener exposición. Además, los programas gubernamentales y organizaciones apoyan el emprendimiento y ofrecen opciones de financiamiento para que las startups aceleren su crecimiento. Buenos Aires presume de un ecosistema de startups vibrante y diverso. Las startups en Buenos Aires han logrado un notable éxito en áreas como el comercio electrónico, la educación tecnológica, agritech y soluciones de movilidad." 
   images: 
-    - path: "../../../static/images/locations/buenosaires-new.png"
-      alt: "BAires city"
-    - path: "../../../static/images/ownpeoplecoding2.jpg"
-      alt: "4Geeks Own People Coding"
-    - path: "../../../static/images/ownmancoding.jpg"
-      alt: "Remote-Coding-Bootcamp"
-    - path: "../../../static/images/locations/miami-old.jpg"
-      alt: "4Geeeks location"
-    - path: "../../../static/images/locations/miami-people.jpeg"
-      alt: "4Geeeks lab"
+    # - path: "../../../static/images/locations/buenosaires-new.png"
+    #   alt: "BAires city"
+    # - path: "../../../static/images/ownpeoplecoding2.jpg"
+    #   alt: "4Geeks Own People Coding"
+    # - path: "../../../static/images/ownmancoding.jpg"
+    #   alt: "Remote-Coding-Bootcamp"
+    # - path: "../../../static/images/locations/miami-old.jpg"
+    #   alt: "4Geeeks location"
+    # - path: "../../../static/images/locations/miami-people.jpeg"
+    #   alt: "4Geeeks lab"
+
+TwoColumnsCampus:
+  background: "veryLightBlue2"
+  layout: two_column_right
+  proportions: [6, 6]
+  image:
+    style: '{ "backgroundSize": "contain" }'
+    src: "/images/staff/pablo-review.jpg"
+  video: "https://www.youtube.com/watch?v=ScqncejBOvY"
+  heading:
+    text: "4Geeks, Argentina y una historia llena de oportunidades."
+    font_size: ["30px", "30px", "30px", "30px", "30px"]
+  sub_heading:
+    text: "Estamos presentes en Argentina y estamos enfocados en brindar oportunidades para todos."
+    font_size: ["18px", "18px", "18px", "18px", "18px"]
+  button:
+    text: ""
+    color: null
+    path: ""
+  content:
+    text: |
+      <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">1- Tenemos una variedad de opciones de financiamiento disponibles.</strong></h2>
+      <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">2- Contamos con convenios con empresas nacionales y multinacionales.</strong></h2>
+      <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">3- Siempre habrá oportunidades para todos en Argentina</strong></h2>
+    font_size: ["16px"]
+
+with4geeks: 
+  header: "Experiencias en 4Geeks Academy"
 
 ## START FROM HERE - DON'T CHANGE ANYTHING ABOVE
 ## HEADING SECTION

@@ -71,16 +71,44 @@ images_box:
   heading: "What you should know about this location: "
   content: "Caracas is one of the cities with the greatest technological entrepreneurship, with great opportunities to grow both inside and outside the country. It has become an opportunity for SMEs to move forward quickly. You will have high speed internet access and a first class office."
   images:
-    - path: "../../../static/images/locations/caracas-main.png"
-      alt: "Caracas 4Geeks"
-    - path: "../../../static/images/locations/caracas-loc-3.png"
-      alt: "Caracas Office Jalisco"
-    - path: "../../../static/images/ownpeoplecoding2.jpg"
-      alt: "4Geeks Own People Coding"
-    - path: "../../../static/images/ownmancoding.jpg"
-      alt: "Remote-Coding-Bootcamp"
-    - path: "../../../static/images/locations/caracas-graduates.png"
-      alt: "4Geeeks Caracas graduates"
+    # - path: "../../../static/images/locations/caracas-main.png"
+    #   alt: "Caracas 4Geeks"
+    # - path: "../../../static/images/locations/caracas-loc-3.png"
+    #   alt: "Caracas Office Jalisco"
+    # - path: "../../../static/images/ownpeoplecoding2.jpg"
+    #   alt: "4Geeks Own People Coding"
+    # - path: "../../../static/images/ownmancoding.jpg"
+    #   alt: "Remote-Coding-Bootcamp"
+    # - path: "../../../static/images/locations/caracas-graduates.png"
+    #   alt: "4Geeeks Caracas graduates"
+
+TwoColumnsCampus:
+  background: "veryLightBlue2"
+  layout: two_column_right
+  proportions: [6, 6]
+  image:
+    style: '{ "backgroundSize": "contain" }'
+    src: "/images/staff/alissa.jpg"
+  video: "https://www.youtube.com/watch?v=TCHASxvkhpI"
+  heading:
+    text: "4Geeks, Caracas and a Story full of Opportunities"
+    font_size: ["30px", "30px", "30px", "30px", "30px"]
+  sub_heading:
+    text: "We are Caracas based and we have been focusing in bringing on more opportunities for everyone."
+    font_size: ["18px", "18px", "18px", "18px", "18px"]
+  button:
+    text: ""
+    color: null
+    path: ""
+  content:
+    text: |
+      <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">1- There is always a full or partial scholarship open</strong></h2>
+      <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">2- There is always opportunities for everyone in Miami-Dade County, Broward and Palm-Beach</strong></h2>
+      <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">3- We have ongoing partnerships with Miami Dade College Miami Tech Coalition, UWM, the City of Miami, Miami Dade County and so many more</strong></h2>
+    font_size: ["16px"]
+
+with4geeks: 
+  header: "Experiences at 4Geeks Academy"
 
 ## START FROM HERE - DON'T CHANGE ANYTHING ABOVE
 ## HEADING SECTION

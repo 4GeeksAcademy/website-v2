@@ -70,16 +70,44 @@ images_box:
   heading: "What you should know about this location: "
   content: "La escena tecnológica de Ecuador ha evolucionado constantemente, impulsada por el aumento del acceso a Internet y la alfabetización digital. Quito y Guayaquil, las dos ciudades más grandes de Ecuador, están a la vanguardia de este desarrollo. El país ha visto avances en áreas como comercio electrónico, fintech, saludtech, edtech y agritech. El gobierno también ha demostrado su apoyo a la industria tecnológica a través de iniciativas destinadas a promover la innovación y el emprendimiento."
   images:
-    - path: "../../../static/images/locations/ecuador-new.png"
-      alt: "Quito city"
-    - path: "../../../static/images/ownpeoplecoding2.jpg"
-      alt: "4Geeks Own People Coding"
-    - path: "../../../static/images/ownmancoding.jpg"
-      alt: "Remote-Coding-Bootcamp"
-    - path: "../../../static/images/locations/miami-old.jpg"
-      alt: "4Geeeks location"
-    - path: "../../../static/images/locations/miami-people.jpeg"
-      alt: "4Geeeks lab"
+    # - path: "../../../static/images/locations/ecuador-new.png"
+    #   alt: "Quito city"
+    # - path: "../../../static/images/ownpeoplecoding2.jpg"
+    #   alt: "4Geeks Own People Coding"
+    # - path: "../../../static/images/ownmancoding.jpg"
+    #   alt: "Remote-Coding-Bootcamp"
+    # - path: "../../../static/images/locations/miami-old.jpg"
+    #   alt: "4Geeeks location"
+    # - path: "../../../static/images/locations/miami-people.jpeg"
+    #   alt: "4Geeeks lab"
+
+TwoColumnsCampus:
+  background: "veryLightBlue2"
+  layout: two_column_right
+  proportions: [6, 6]
+  image:
+    style: '{ "backgroundSize": "contain" }'
+    src: "/images/staff/alissa.jpg"
+  video: "https://www.youtube.com/watch?v=TCHASxvkhpI"
+  heading:
+    text: "4Geeks, Ecuador and a Story full of Opportunities"
+    font_size: ["30px", "30px", "30px", "30px", "30px"]
+  sub_heading:
+    text: "We are Ecuador based and we have been focusing in bringing on more opportunities for everyone."
+    font_size: ["18px", "18px", "18px", "18px", "18px"]
+  button:
+    text: ""
+    color: null
+    path: ""
+  content:
+    text: |
+      <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">1- There is always a full or partial scholarship open</strong></h2>
+      <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">2- There is always opportunities for everyone in Miami-Dade County, Broward and Palm-Beach</strong></h2>
+      <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">3- We have ongoing partnerships with Miami Dade College Miami Tech Coalition, UWM, the City of Miami, Miami Dade County and so many more</strong></h2>
+    font_size: ["16px"]
+
+with4geeks: 
+  header: "Experiences at 4Geeks Academy"
 
 ## HEADING SECTION
 heading_section:

@@ -68,16 +68,44 @@ images_box:
   content: |
     El ecosistema tecnológico de Atlanta florece con más de 850 empresas tecnológicas y más de 70,000 trabajadores de tecnología. Grandes empresas tecnológicas como Google y Facebook han establecido locales atraídos por la diversa fuerza laboral de la ciudad. Mientras Atlanta compite por convertirse en un centro tecnológico, los bootcamps de programación buscan reducir la brecha de habilidades capacitando talento tecnológico para satisfacer la creciente demanda de conocimientos en programación de las empresas tecnológicas en expansión.
   images:
-    - path: "../../../static/images/locations/atlanta-new.jpg"
-      alt: "Atlanta city"
-    - path: "../../../static/images/locations/ownpeoplecoding2.jpg"
-      alt: "4Geeks Own People Coding"
-    - path: "../../../static/images/locations/ownmancoding.jpg"
-      alt: "Remote-Coding-Bootcamp"
-    - path: "../../../static/images/locations/miami-old.jpg"
-      alt: "4Geeeks miami location"
-    - path: "../../../static/images/locations/miami-people.jpeg"
-      alt: "4Geeeks miami lab"
+    # - path: "../../../static/images/locations/atlanta-new.jpg"
+    #   alt: "Atlanta city"
+    # - path: "../../../static/images/locations/ownpeoplecoding2.jpg"
+    #   alt: "4Geeks Own People Coding"
+    # - path: "../../../static/images/locations/ownmancoding.jpg"
+    #   alt: "Remote-Coding-Bootcamp"
+    # - path: "../../../static/images/locations/miami-old.jpg"
+    #   alt: "4Geeeks miami location"
+    # - path: "../../../static/images/locations/miami-people.jpeg"
+    #   alt: "4Geeeks miami lab"
+
+TwoColumnsCampus:
+  background: "veryLightBlue2"
+  layout: two_column_right
+  proportions: [6, 6]
+  image:
+    style: '{ "backgroundSize": "contain" }'
+    src: "/images/staff/alissa.jpg"
+  video: "https://www.youtube.com/watch?v=TCHASxvkhpI"
+  heading:
+    text: "4Geeks, Atlanta y una historia llena de oportunidades."
+    font_size: ["30px", "30px", "30px", "30px", "30px"]
+  sub_heading:
+    text: "Estamos presentes en Atlanta y estamos enfocados en brindar oportunidades para todos."
+    font_size: ["18px", "18px", "18px", "18px", "18px"]
+  button:
+    text: ""
+    color: null
+    path: ""
+  content:
+    text: |
+      <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">1- Tenemos una variedad de opciones de financiamiento disponibles.</strong></h2>
+      <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">2- Contamos con convenios con empresas nacionales y multinacionales.</strong></h2>
+      <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">3- Siempre habrá oportunidades para todos en Atlanta</strong></h2>
+    font_size: ["16px"]
+
+with4geeks: 
+  header: "Experiencias en 4Geeks Academy"
 
 
 active_campaign_location_slug: "atlanta-usa"

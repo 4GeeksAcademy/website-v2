@@ -59,20 +59,51 @@ info_box:
   contact_heading: "Contacts"
   phone: "(786) 416-6640"
   email: "info@4GeeksAcademy.com"
+
+TwoColumnsCampus:
+  background: "veryLightBlue2"
+  layout: two_column_right
+  proportions: [6, 6]
+  image:
+    style: '{ "backgroundSize": "contain" }'
+    src: "/images/staff/alissa.jpg"
+  video: "https://www.youtube.com/watch?v=TCHASxvkhpI"
+  heading:
+    text: "4Geeks, Toronto and a Story full of Opportunities"
+    font_size: ["30px", "30px", "30px", "30px", "30px"]
+  sub_heading:
+    text: "We are Toronto based and we have been focusing in bringing on more opportunities for everyone."
+    font_size: ["18px", "18px", "18px", "18px", "18px"]
+  button:
+    text: ""
+    color: null
+    path: "https://storage.googleapis.com/4geeks-academy-website/syllabus/madrid-spain/UnitedWay/Criterios%20de%20elegibilidad%20UWay.docx.pdf"
+  content:
+    text: |
+      <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">1- There is always a full or partial scholarship open</strong></h2>
+      <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">2- There is always opportunities for everyone in Miami-Dade County, Broward and Palm-Beach</strong></h2>
+      <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">3- We have ongoing partnerships with Miami Dade College Miami Tech Coalition, UWM, the City of Miami, Miami Dade County and so many more</strong></h2>
+    font_size: ["16px"]
+
 images_box:
   heading: "What you should know about this location: "
   content: "The city is a magnet for tech companies and cutting-edge startups, drawing talent and capital from across the globe. Coding occupies a pivotal role within Toronto's tech landscape, acting as the foundation for software development and digital advancement. The demand for coding expertise remains high, leading to the establishment of coding bootcamps, coding schools, and educational institutions throughout the city. Toronto's dedication to cultivating a highly skilled coding workforce has been instrumental in its ongoing success as a premier tech hub."
   images:
-    - path: "../../../static/images/locations/toronto-new.png"
-      alt: "Atlanta city"
-    - path: "../../../static/images/ownpeoplecoding2.jpg"
-      alt: "4Geeks Own People Coding"
-    - path: "../../../static/images/ownmancoding.jpg"
-      alt: "Remote-Coding-Bootcamp"
-    - path: "../../../static/images/locations/miami-old.jpg"
-      alt: "4Geeeks miami location"
-    - path: "../../../static/images/locations/miami-people.jpeg"
-      alt: "4Geeeks miami lab"
+    # - path: "../../../static/images/locations/toronto-new.png"
+    #   alt: "Atlanta city"
+    # - path: "../../../static/images/ownpeoplecoding2.jpg"
+    #   alt: "4Geeks Own People Coding"
+    # - path: "../../../static/images/ownmancoding.jpg"
+    #   alt: "Remote-Coding-Bootcamp"
+    # - path: "../../../static/images/locations/miami-old.jpg"
+    #   alt: "4Geeeks miami location"
+    # - path: "../../../static/images/locations/miami-people.jpeg"
+    #   alt: "4Geeeks miami lab"
+
+with4geeks: 
+  header: "Experiences at 4Geeks Academy"
+
+
 
 active_campaign_location_slug: "toronto-canada"
 breathecode_location_slug: "toronto-canada"

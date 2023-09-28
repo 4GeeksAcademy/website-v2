@@ -26,6 +26,9 @@ import { SessionContext } from "../session";
 import JobGuaranteeSmall from "../components/JobGuaranteeSmall";
 import RelatedPosts from "../components/RelatedPosts";
 import FaqCard from "../components/FaqCard";
+import GeeksVsOthers from "../components/GeeksVsOthers";
+import { TwoColumn } from "../components/Landing";
+import With4Geeks from "../components/With4Geeks";
 
 const MapFrame = lazy(() => import("../components/MapFrame"));
 
@@ -62,6 +65,8 @@ const Location = ({ data, pageContext, yml }) => {
     us: "CHOOSE PROGRAM",
     es: "SELECCIONAR PROGRAMA",
   };
+
+  const ymlTwoColumnsCampus = yml?.TwoColumnsCampus;
 
   return (
     <>
@@ -256,7 +261,35 @@ const Location = ({ data, pageContext, yml }) => {
           content={data.allJobGuaranteeSmallYaml.edges[0].node}
         />
       )}
-
+      {ymlTwoColumnsCampus  && (
+        
+        <Div
+          id="two_column_right"
+          flexDirection="column"
+          padding="30px 0"
+          padding_tablet="0 20px"
+          margin="auto"
+          background={Colors[ymlTwoColumnsCampus.background]}
+        >
+          <Div maxWidth="1366px" margin="auto" > 
+          <TwoColumn
+            right={{ image: ymlTwoColumnsCampus.image, video: ymlTwoColumnsCampus.video }}
+            left={{
+              heading: ymlTwoColumnsCampus.heading,
+              sub_heading: ymlTwoColumnsCampus.sub_heading,
+              bullets: ymlTwoColumnsCampus.bullets,
+              content: ymlTwoColumnsCampus.content,
+              button: ymlTwoColumnsCampus.button,
+              padding_tablet: "20px",
+              gap_tablet: "40px",
+            }}
+            proportions={ymlTwoColumnsCampus.proportions}
+            session={session}
+          />
+          </Div>
+          
+        </Div>
+      )}
       <Badges
         lang={pageContext.lang}
         background={Colors.verylightGray}
@@ -307,6 +340,7 @@ const Location = ({ data, pageContext, yml }) => {
           height="304px"
           childHeight="inherit"
         >
+                
           {yml.images_box.images.map((m, i) => {
             return (
               <GatsbyImage
@@ -319,6 +353,39 @@ const Location = ({ data, pageContext, yml }) => {
           })}
         </GridContainer>
       )}
+            
+
+      {yml.with4geeks && (
+        <Div
+          id="why_4geeks"
+          flexDirection="column"
+          margin="0"
+          padding="20px 0"
+        >
+          {/* <H2 textAlign="center" padding="15px 0">{yml.with4geeks.header}</H2> */}
+          <With4Geeks
+            lang={pageContext.lang}
+            playerHeight="125px"
+            sessionLocation={
+              session &&
+              session.location &&
+              session.location.breathecode_location_slug
+            }
+          />
+        </Div>
+      )}
+
+
+      {yml.geeks_vs_others && (
+        <GeeksVsOthers
+          lang={pageContext.lang}
+          link={true}
+          limit={4}
+          title={yml.geeks_vs_others.header.title}
+          paragraph={yml.geeks_vs_others.header.paragraph}
+        />
+      )}
+            
       <OurPartners
         images={hiring.partners.images}
         showFeatured
@@ -468,6 +535,31 @@ export const query = graphql`
             keywords
             related_clusters
           }
+          TwoColumnsCampus {
+            proportions
+            background
+            image {
+              style
+              src
+            }
+            video
+            heading {
+              text
+              font_size
+            }
+            sub_heading {
+              text
+              font_size
+            }
+            content {
+              text
+              font_size
+            }
+            button {
+              text
+              path
+            }
+          }
           images_box {
             heading
             content
@@ -483,6 +575,16 @@ export const query = graphql`
                 }
               }
               alt
+            }
+          }
+
+          with4geeks{ 
+            header
+          }
+          geeks_vs_others {
+            header {
+              title
+              paragraph
             }
           }
         }

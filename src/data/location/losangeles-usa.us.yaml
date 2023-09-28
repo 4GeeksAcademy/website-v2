@@ -66,17 +66,44 @@ images_box:
   heading: "What you should know about this location: "
   content: "LA boasts a flourishing tech ecosystem and a dynamic startup community. The city has witnessed remarkable expansion in its tech industry, where coding and programming have become pivotal. Coding bootcamps, gaining traction among individuals from diverse backgrounds, have become increasingly popular in the region."
   images:
-    - path: "../../../static/images/locations/losangeles-new.png"
-      alt: "Los Angeles city"
-    - path: "../../../static/images/ownpeoplecoding2.jpg"
-      alt: "4Geeks Own People Coding"
-    - path: "../../../static/images/ownmancoding.jpg"
-      alt: "Remote-Coding-Bootcamp"
-    - path: "../../../static/images/locations/miami-old.jpg"
-      alt: "4Geeeks location"
-    - path: "../../../static/images/locations/miami-people.jpeg"
-      alt: "4Geeeks lab"
+    # - path: "../../../static/images/locations/losangeles-new.png"
+    #   alt: "Los Angeles city"
+    # - path: "../../../static/images/ownpeoplecoding2.jpg"
+    #   alt: "4Geeks Own People Coding"
+    # - path: "../../../static/images/ownmancoding.jpg"
+    #   alt: "Remote-Coding-Bootcamp"
+    # - path: "../../../static/images/locations/miami-old.jpg"
+    #   alt: "4Geeeks location"
+    # - path: "../../../static/images/locations/miami-people.jpeg"
+    #   alt: "4Geeeks lab"
 
+TwoColumnsCampus:
+  background: "veryLightBlue2"
+  layout: two_column_right
+  proportions: [6, 6]
+  image:
+    style: '{ "backgroundSize": "contain" }'
+    src: "/images/staff/alissa.jpg"
+  video: "https://www.youtube.com/watch?v=TCHASxvkhpI"
+  heading:
+    text: "4Geeks, LA and a Story full of Opportunities"
+    font_size: ["30px", "30px", "30px", "30px", "30px"]
+  sub_heading:
+    text: "We are LA based and we have been focusing in bringing on more opportunities for everyone."
+    font_size: ["18px", "18px", "18px", "18px", "18px"]
+  button:
+    text: ""
+    color: null
+    path: ""
+  content:
+    text: |
+      <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">1- There is always a full or partial scholarship open</strong></h2>
+      <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">2- There is always opportunities for everyone in Miami-Dade County, Broward and Palm-Beach</strong></h2>
+      <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">3- We have ongoing partnerships with Miami Dade College Miami Tech Coalition, UWM, the City of Miami, Miami Dade County and so many more</strong></h2>
+    font_size: ["16px"]
+
+with4geeks: 
+  header: "Experiences at 4Geeks Academy"
 
 active_campaign_location_slug: "losangeles-usa"
 breathecode_location_slug: "losangeles-usa"

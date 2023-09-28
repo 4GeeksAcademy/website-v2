@@ -74,16 +74,44 @@ images_box:
   heading: "Lo que deberías saber de Caracas: "
   content: "Caracas se encuentra como uno de las ciudades con mayor emprendimiento tecnológico, con grandes oportunidades de crecer tanto dentro como fuera del país. Se ha convertido en una oportunidad para que las PYME puedan avanzar de manera rápida. Tendrás acceso a internet de alta velocidad y una oficina de primer nivel."
   images:
-    - path: "../../../static/images/locations/caracas-main.png"
-      alt: "Caracas 4Geeks"
-    - path: "../../../static/images/locations/caracas-loc-3.png"
-      alt: "Caracas Office Jalisco"
-    - path: "../../../static/images/ownpeoplecoding2.jpg"
-      alt: "4Geeks Own People Coding"
-    - path: "../../../static/images/ownmancoding.jpg"
-      alt: "Remote-Coding-Bootcamp"
-    - path: "../../../static/images/locations/caracas-graduates.png"
-      alt: "4Geeeks Caracas graduates"
+    # - path: "../../../static/images/locations/caracas-main.png"
+    #   alt: "Caracas 4Geeks"
+    # - path: "../../../static/images/locations/caracas-loc-3.png"
+    #   alt: "Caracas Office Jalisco"
+    # - path: "../../../static/images/ownpeoplecoding2.jpg"
+    #   alt: "4Geeks Own People Coding"
+    # - path: "../../../static/images/ownmancoding.jpg"
+    #   alt: "Remote-Coding-Bootcamp"
+    # - path: "../../../static/images/locations/caracas-graduates.png"
+    #   alt: "4Geeeks Caracas graduates"
+
+TwoColumnsCampus:
+  background: "veryLightBlue2"
+  layout: two_column_right
+  proportions: [6, 6]
+  image:
+    style: '{ "backgroundSize": "contain" }'
+    src: "/images/staff/paula-review.jpg"
+  video: "https://www.youtube.com/watch?v=owkLtBFAsAE"
+  heading:
+    text: "4Geeks, Caracas y una historia llena de oportunidades."
+    font_size: ["30px", "30px", "30px", "30px", "30px"]
+  sub_heading:
+    text: "Estamos presentes en Caracas y estamos enfocados en brindar oportunidades para todos."
+    font_size: ["18px", "18px", "18px", "18px", "18px"]
+  button:
+    text: ""
+    color: null
+    path: ""
+  content:
+    text: |
+      <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">1- Tenemos una variedad de opciones de financiamiento disponibles.</strong></h2>
+      <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">2- Contamos con convenios con empresas nacionales y multinacionales.</strong></h2>
+      <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">3- Siempre habrá oportunidades para todos en Venezuela</strong></h2>
+    font_size: ["16px"]
+
+with4geeks: 
+  header: "Experiencias en 4Geeks Academy"
 
 ## START FROM HERE - DON'T CHANGE ANYTHING ABOVE
 ## HEADING SECTION

@@ -71,20 +71,51 @@ info_box:
   email: "info@4GeeksAcademy.com"
   image: "../../../static/images/locations/miami-map.png"
   alt: ""
+
+TwoColumnsCampus:
+  background: "veryLightBlue2"
+  layout: two_column_right
+  proportions: [6, 6]
+  image:
+    style: '{ "backgroundSize": "contain" }'
+    src: "/images/staff/alissa.jpg"
+  video: "https://www.youtube.com/watch?v=TCHASxvkhpI"
+  heading:
+    text: "4Geeks, Miami and a Story full of Opportunities"
+    font_size: ["30px", "30px", "30px", "30px", "30px"]
+  sub_heading:
+    text: "We are Miami based and we have been focusing in bringing on more opportunities for everyone in South Florida."
+    font_size: ["18px", "18px", "18px", "18px", "18px"]
+  button:
+    text: ""
+    color: null
+    path: ""
+  content:
+    text: |
+      <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">1- There is always a full or partial scholarship open</strong></h2>
+      <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">2- There is always opportunities for everyone in Miami-Dade County, Broward and Palm-Beach</strong></h2>
+      <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">3- We have ongoing partnerships with Miami Dade College Miami Tech Coalition, UWM, the City of Miami, Miami Dade County and so many more</strong></h2>
+    font_size: ["16px"]
+
 images_box:
   heading: "What you should know about this location: "
   content: "Miami is one of the fastest growing tech ecosystems in the world. Join the #1 part-time Coding Bootcamp in Miami and become part of the best place to learn to code in Florida. \n Career Support and Mentorship for our students is for life. Located in Brickell and 5 mins away from the Metro Mover (subway station). Our place is full of amenities, and close to everything. We have parking (free for students and members of the community), and we have a great terrace! Brickell is one of the most active areas in the city. The office is opened 24/7 during the week and on Saturday we host our famous 'Coding Weekends' when students and other developers gather to code all day with mentors, pizzas and drinks on the house!"
   images:
-    - path: "../../../static/images/locations/miami-loc.jpg"
-      alt: "miami-sunset"
-    - path: "../../../static/images/locations/miami-people2.jpeg"
-      alt: "4Geeeks miami room"
-    - path: "../../../static/images/locations/miami-people.jpeg"
-      alt: "4Geeeks miami day"
-    - path: "../../../static/images/locations/miami-old.jpg"
-      alt: "4Geeeks miami location"
-    - path: "../../../static/images/locations/miami-old2.jpg"
-      alt: "4Geeeks miami lab"
+    # - path: "../../../static/images/locations/miami-loc.jpg"
+    #   alt: "miami-sunset"
+    # - path: "../../../static/images/locations/miami-people2.jpeg"
+    #   alt: "4Geeeks miami room"
+    # - path: "../../../static/images/locations/miami-people.jpeg"
+    #   alt: "4Geeeks miami day"
+    # - path: "../../../static/images/locations/miami-old.jpg"
+    #   alt: "4Geeeks miami location"
+    # - path: "../../../static/images/locations/miami-old2.jpg"
+    #   alt: "4Geeeks miami lab"
+
+geeks_vs_others:
+  header:
+    title: 4GEEKS VS OTHERS
+    paragraph: "Compare with others schools"
 
 chart_section:
   data:

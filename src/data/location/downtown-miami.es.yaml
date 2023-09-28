@@ -51,6 +51,31 @@ upcoming:
   no_dates_message: "Actualmente no hay próximas fechas para este campus"
   actionMessage: "Avisenme fechas disponibles"
 
+TwoColumnsCampus:
+  background: "veryLightBlue2"
+  layout: two_column_right
+  proportions: [6, 6]
+  image:
+    style: '{ "backgroundSize": "contain" }'
+    src: "/images/staff/alissa.jpg"
+  video: "https://www.youtube.com/watch?v=TCHASxvkhpI"
+  heading:
+    text: "4Geeks, Miami y una historia llena de oportunidades."
+    font_size: ["30px", "30px", "30px", "30px", "30px"]
+  sub_heading:
+    text: "Estamos presentes en Miami y estamos enfocados en brindar oportunidades para todos en el sur de florida."
+    font_size: ["18px", "18px", "18px", "18px", "18px"]
+  button:
+    text: ""
+    color: null
+    path: "https://storage.googleapis.com/4geeks-academy-website/syllabus/madrid-spain/UnitedWay/Criterios%20de%20elegibilidad%20UWay.docx.pdf"
+  content:
+    text: |
+      <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">1- Tenemos una variedad de opciones de financiamiento disponibles.</strong></h2>
+      <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">2- Contamos con convenios con empresas nacionales y multinacionales.</strong></h2>
+      <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">3- Siempre habrá oportunidades para todos en Miami</strong></h2>
+    font_size: ["16px"]
+
 info_box:
   heading: "Encuéntranos en Miami"
   address: "1801 SW 3rd Ave #100, Miami, FL 33129."
@@ -66,16 +91,21 @@ images_box:
   content: |
     Miami es una de las ciudades de mayor crecimiento tecnólogico, únete al Bootcamp de Programación part-time numero uno de la ciudad y la mayor comunidad de desarrolladores. \n El Career Support y Student Support es de por vida.Estamos ubicados a corta distancia de la estación de metro y a tan solo 5 minutos de Brickell, una de las áreas más activas de la ciudad. Nuestra oficina está abierta 24/7 durante la semana y los sábados hacemos los famosos "Findes de Programación", donde los estudiantes y otros programadores se juntan a programar con pizzas y tragos! Además, contamos con parqueo gratuito para los estudiantes!
   images:
-    - path: "../../../static/images/locations/miami-loc.jpg"
-      alt: "miami-sunset"
-    - path: "../../../static/images/locations/miami-people2.jpeg"
-      alt: "4Geeeks miami room"
-    - path: "../../../static/images/locations/miami-people.jpeg"
-      alt: "4Geeeks miami day"
-    - path: "../../../static/images/locations/miami-old.jpg"
-      alt: "4Geeeks miami location"
-    - path: "../../../static/images/locations/miami-old2.jpg"
-      alt: "4Geeeks miami lab"
+    # - path: "../../../static/images/locations/miami-loc.jpg"
+    #   alt: "miami-sunset"
+    # - path: "../../../static/images/locations/miami-people2.jpeg"
+    #   alt: "4Geeeks miami room"
+    # - path: "../../../static/images/locations/miami-people.jpeg"
+    #   alt: "4Geeeks miami day"
+    # - path: "../../../static/images/locations/miami-old.jpg"
+    #   alt: "4Geeeks miami location"
+    # - path: "../../../static/images/locations/miami-old2.jpg"
+    #   alt: "4Geeeks miami lab"
+
+geeks_vs_others:
+  header:
+    title: 4GEEKS VS OTROS
+    paragraph: Comparar con otras escuelas
 
 chart_section:
   data:

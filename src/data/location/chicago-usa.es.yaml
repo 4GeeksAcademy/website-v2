@@ -61,22 +61,51 @@ info_box:
   contact_heading: "Contacts"
   phone: "(786) 416-6640"
   email: "info@4GeeksAcademy.com"
+
+TwoColumnsCampus:
+  background: "veryLightBlue2"
+  layout: two_column_right
+  proportions: [6, 6]
+  image:
+    style: '{ "backgroundSize": "contain" }'
+    src: "/images/staff/alissa.jpg"
+  video: "https://www.youtube.com/watch?v=TCHASxvkhpI"
+  heading:
+    text: "4Geeks, Chicago y una historia llena de oportunidades."
+    font_size: ["30px", "30px", "30px", "30px", "30px"]
+  sub_heading:
+    text: "Estamos presentes en Chicago y estamos enfocados en brindar oportunidades para todos."
+    font_size: ["18px", "18px", "18px", "18px", "18px"]
+  button:
+    text: ""
+    color: null
+    path: ""
+  content:
+    text: |
+      <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">1- Tenemos una variedad de opciones de financiamiento disponibles.</strong></h2>
+      <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">2- Contamos con convenios con empresas nacionales y multinacionales.</strong></h2>
+      <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">3- Siempre habrá oportunidades para todos en Chicago</strong></h2>
+    font_size: ["16px"]
+
 images_box:
   heading: "Qué deberías saber acerca de esta ubicacion: "
   content: |
     Chicago es conocida por su vibrante escena tecnológica y su ecosistema de startups floreciente. La ciudad se ha convertido en un imán para innovadores y entusiastas de la tecnología en diferentes industrias. La programación se erige como un pilar vital del panorama tecnológico de Chicago, sirviendo como una habilidad esencial para el desarrollo de software e innovación digital. La demanda de conocimientos en programación sigue siendo alta, motivando el surgimiento de bootcamps de programación, academias de código y programas educativos en toda la ciudad. El compromiso incansable de Chicago para fomentar una comunidad diversa y capacitada en materia de programación ha impulsado su crecimiento como un importante centro tecnológico.
   images:
-    - path: "../../../static/images/locations/chicago-new.png"
-      alt: "Chicago city"
-    - path: "../../../static/images/ownpeoplecoding2.jpg"
-      alt: "4Geeks Own People Coding"
-    - path: "../../../static/images/ownmancoding.jpg"
-      alt: "Remote-Coding-Bootcamp"
-    - path: "../../../static/images/locations/miami-old.jpg"
-      alt: "4Geeeks location"
-    - path: "../../../static/images/locations/miami-people.jpeg"
-      alt: "4Geeeks lab"
+    # - path: "../../../static/images/locations/chicago-new.png"
+    #   alt: "Chicago city"
+    # - path: "../../../static/images/ownpeoplecoding2.jpg"
+    #   alt: "4Geeks Own People Coding"
+    # - path: "../../../static/images/ownmancoding.jpg"
+    #   alt: "Remote-Coding-Bootcamp"
+    # - path: "../../../static/images/locations/miami-old.jpg"
+    #   alt: "4Geeeks location"
+    # - path: "../../../static/images/locations/miami-people.jpeg"
+    #   alt: "4Geeeks lab"
 
+
+with4geeks: 
+  header: "Experiencias en 4Geeks Academy"
 
 
 active_campaign_location_slug: "chicago-usa"

@@ -70,16 +70,45 @@ images_box:
   heading: "What you should know about this location:"
   content: "Buenos Aires encourages innovation and entrepreneurship through various initiatives and events. The city hosts tech conferences, startup competitions, and entrepreneurship programs that provide opportunities for startups to showcase their ideas, connect with investors, and gain exposure. Additionally, government programs and organizations support entrepreneurship and offer funding options for startups to accelerate their growth. Buenos Aires boasts a vibrant and diverse startup ecosystem. The city has seen a surge in the number of startups across different industries, driven by a combination of factors, including access to funding, skilled talent pool, and supportive government initiatives. Startups in Buenos Aires have achieved notable success in areas like e-commerce, edtech, agritech, and mobility solutions. Some well-known startups from Buenos Aires include MercadoLibre (Latin America's largest e-commerce platform), Auth0 (identity verification), and Globant (software development)."
   images: 
-    - path: "../../../static/images/locations/buenosaires-new.png"
-      alt: "Buenos Aires city"
-    - path: "../../../static/images/ownpeoplecoding2.jpg"
-      alt: "4Geeks Own People Coding"
-    - path: "../../../static/images/ownmancoding.jpg"
-      alt: "Remote-Coding-Bootcamp"
-    - path: "../../../static/images/locations/miami-old.jpg"
-      alt: "4Geeeks location"
-    - path: "../../../static/images/locations/miami-people.jpeg"
-      alt: "4Geeeks lab"
+    # - path: "../../../static/images/locations/buenosaires-new.png"
+    #   alt: "Buenos Aires city"
+    # - path: "../../../static/images/ownpeoplecoding2.jpg"
+    #   alt: "4Geeks Own People Coding"
+    # - path: "../../../static/images/ownmancoding.jpg"
+    #   alt: "Remote-Coding-Bootcamp"
+    # - path: "../../../static/images/locations/miami-old.jpg"
+    #   alt: "4Geeeks location"
+    # - path: "../../../static/images/locations/miami-people.jpeg"
+    #   alt: "4Geeeks lab"
+
+TwoColumnsCampus:
+  background: "veryLightBlue2"
+  layout: two_column_right
+  proportions: [6, 6]
+  image:
+    style: '{ "backgroundSize": "contain" }'
+    src: "/images/staff/alissa.jpg"
+  video: "https://www.youtube.com/watch?v=ScqncejBOvY"
+  heading:
+    text: "4Geeks, Argentina and a Story full of Opportunities"
+    font_size: ["30px", "30px", "30px", "30px", "30px"]
+  sub_heading:
+    text: "We are Argentina based and we have been focusing in bringing on more opportunities for everyone."
+    font_size: ["18px", "18px", "18px", "18px", "18px"]
+  button:
+    text: ""
+    color: null
+    path: ""
+  content:
+    text: |
+      <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">1- There is always a full or partial scholarship open</strong></h2>
+      <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">2- There is always opportunities for everyone in Miami-Dade County, Broward and Palm-Beach</strong></h2>
+      <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">3- We have ongoing partnerships with Miami Dade College Miami Tech Coalition, UWM, the City of Miami, Miami Dade County and so many more</strong></h2>
+    font_size: ["16px"]
+
+with4geeks: 
+  header: "Experiences at 4Geeks Academy"
+
 
 ## START FROM HERE - DON'T CHANGE ANYTHING ABOVE
 ## HEADING SECTION

@@ -68,16 +68,44 @@ images_box:
   heading: "What you should know about this location: "
   content: "Uruguay tiene un próspero escenario tecnológico con startups innovadoras que perturban industrias tradicionales. Montevideo es un centro prominente de innovación tecnológica. El sector tecnológico abarca fintech, comercio electrónico, saludtech, edtech y agrotech. Algunas startups notables incluyen PedidosYa y dLocal. El país cuenta con un talento habilidoso y diverso con universidades que ofrecen programas tecnológicos y atrae talento local e internacional. Uruguay ofrece iniciativas de financiamiento, incubadoras de negocios, aceleradoras y eventos de networking para apoyar el crecimiento de startups. También hay bootcamps de programación y talleres disponibles para fomentar habilidades de programación y satisfacer la demanda de talento tecnológico."
   images:
-    - path: "../../../static/images/locations/uruguay-new.jpg"
-      alt: "Uruguay city"
-    - path: "../../../static/images/ownpeoplecoding2.jpg"
-      alt: "4Geeks Own People Coding"
-    - path: "../../../static/images/ownmancoding.jpg"
-      alt: "Remote-Coding-Bootcamp"
-    - path: "../../../static/images/locations/miami-old.jpg"
-      alt: "4Geeeks location"
-    - path: "../../../static/images/locations/miami-people.jpeg"
-      alt: "4Geeeks lab"
+    # - path: "../../../static/images/locations/uruguay-new.jpg"
+    #   alt: "Uruguay city"
+    # - path: "../../../static/images/ownpeoplecoding2.jpg"
+    #   alt: "4Geeks Own People Coding"
+    # - path: "../../../static/images/ownmancoding.jpg"
+    #   alt: "Remote-Coding-Bootcamp"
+    # - path: "../../../static/images/locations/miami-old.jpg"
+    #   alt: "4Geeeks location"
+    # - path: "../../../static/images/locations/miami-people.jpeg"
+    #   alt: "4Geeeks lab"
+
+TwoColumnsCampus:
+  background: "veryLightBlue2"
+  layout: two_column_right
+  proportions: [6, 6]
+  image:
+    style: '{ "backgroundSize": "contain" }'
+    src: "/images/staff/pablo-review.jpg"
+  video: "https://www.youtube.com/watch?v=ScqncejBOvY"
+  heading:
+    text: "4Geeks, Montevideo y una historia llena de oportunidades."
+    font_size: ["30px", "30px", "30px", "30px", "30px"]
+  sub_heading:
+    text: "Estamos presentes en Montevideo y estamos enfocados en brindar oportunidades para todos."
+    font_size: ["18px", "18px", "18px", "18px", "18px"]
+  button:
+    text: ""
+    color: null
+    path: ""
+  content:
+    text: |
+      <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">1- Tenemos una variedad de opciones de financiamiento disponibles.</strong></h2>
+      <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">2- Contamos con convenios con empresas nacionales y multinacionales.</strong></h2>
+      <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">3- Siempre habrá oportunidades para todos en Uruguay</strong></h2>
+    font_size: ["16px"]
+
+with4geeks: 
+  header: "Experiencias en 4Geeks Academy"
 
 ## START FROM HERE - DON'T CHANGE ANYTHING ABOVE
 ## HEADING SECTION
