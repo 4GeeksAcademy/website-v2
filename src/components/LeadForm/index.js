@@ -497,12 +497,12 @@ const LeadForm = ({
             )}
             {layout === "flex" && (
               <Button
-                width="100%"
+                width="fit-content%"
                 justifyContent="center"
-                width_tablet={buttonWidth_tablet}
+                //width_tablet={buttonWidth_tablet}
                 variant="full"
                 type="submit"
-                margin="10px 0"
+                margin={marginButton}
                 borderRadius={buttonBorderRadius || "0px 10px 10px 0px"}
                 color={
                   formStatus.status === "loading"
@@ -569,8 +569,7 @@ const LeadForm = ({
                   fontSize="17px"
                   margin={marginButton}
                   margin_tablet={marginButton_tablet}
-                  width="100%"
-                  width_tablet="30%"
+                  width="fit-content"
                   // padding_xs="12px 45%"
                   // padding_sm="12px 42%"
                   //padding_tablet="12px 24px"

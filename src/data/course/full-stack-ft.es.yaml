@@ -28,7 +28,7 @@ seo_title: "Coding Bootcamp"
 header:
   title: "Full Stack Developer"
   image: "../../../static/images/bg/program-bg.png"
-  image_alt: ""
+  image_alt: "FullStack"
   paragraph: "De cero a tener tu primer trabajo como programador, aprende todo lo necesario, recibe soporte de por vida y consigue un trabajo después de 18 semanas de estudio."
 button:
   syllabus_heading: "Descargar Detalles del Curso"

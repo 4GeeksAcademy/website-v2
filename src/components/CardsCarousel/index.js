@@ -41,6 +41,7 @@ const CardsCarousel = ({
                         }
                         button{
                             text
+                            link
                         }
                     }
                 }
@@ -55,11 +56,12 @@ const CardsCarousel = ({
                 display="flex"
                 flexDirection="column"
                 gap="10px"
-                margin="50px 10% 30px 10%"
+                margin="60px 10% 30px 10%"
                 maxWidth_tablet="1366px"
-                margin_md="50px auto 20px auto"
-                padding_tablet="20px 0 0 0"
+                margin_md="60px auto 20px auto"
+                padding_tablet="0px"
                 padding_xs="10px 0 0 0"
+
             >
                 {title &&
                     <H2
@@ -92,20 +94,9 @@ const CardsCarousel = ({
                 width_md="100%"
                 className="badge-slider hideOverflowX__"
                 flexDirection="row"
-                justifyContent_tablet={
-                    cards.length >= 1 && cards.length <= 2 ? 
-                    "center"
-                    : (
-                        cards.length >= 3 && "flex-start"
-                    )
-                }
-                justifyContent_md={
-                    cards.length == 3 ? "center" 
-                    : (
-                        cards.length > 3 && "flex-start"
-                    )    
-                }
-
+                marginTablet="97px 0"
+                justifyContent_tablet={cards.length < 3 ? "center" : "flex-start"}
+                justifyContent_md={cards.length > 3 ? "flex-start" : "center"}
                 justifyContent_lg="center"
                 maxWidth_tablet="1366px"
                 margin="auto"
@@ -115,9 +106,11 @@ const CardsCarousel = ({
                         key={index}
                         flexDirection="column"
                         width="266px"
-                        height="auto"
+                        height={card.button ? "auto" : "fit-content"}
+                        //height="auto"
                         border="2px solid black"
                         margin="0 12px"
+                        //margin={card.button ? "0 12px" : "0 12px 24px 12px"}
                         background={Colors.white}
                     >
                         <Img
@@ -131,38 +124,43 @@ const CardsCarousel = ({
                                 fontSize={card.heading.font_size}
                                 fontWeight="900"
                                 lineHeight="19px"
-                                padding="24px 5px 12px 5px"
+                                padding="24px 5px 12px 5px"        
                             >
                                 {card.heading.text}
                             </H1>
                         </Div>
 
                         <Div
-                            padding="12px 0"
-                            height="62px"
+                            padding={card.button ? "12px 0" : "12px 0 0 0"}
+                            //height="62px"
                             justifyContent="center"
                             alignItems="center"
+                            height={card.button ? "62px" : "0px"}
                         >
-                            <Link to="#">
-                                <H3
-                                    margin="12px 10px 12px 0"
-                                    textTransform="uppercase"
-                                    fontSize="16px"
-                                    fontWeight="700"
-                                    lineHeight="19px"
-                                >
-                                    {card.button.text}
-                                </H3>
-                            </Link>
-                            <Link to="#">
-                                <Icon
-                                    icon="arrow-right"
-                                    width="15px"
-                                    height="12px"
-                                //padding="0 0 0 5px"
-                                />
-                            </Link>
+                            {
+                                card.button && <>
+                                    <Link to={card.button.link}>
+                                        <H3
+                                            margin="12px 10px 12px 0"
+                                            textTransform="uppercase"
+                                            fontSize="16px"
+                                            fontWeight="700"
+                                            lineHeight="19px"
+                                        >
+                                            {card.button.text}
+                                        </H3>
+                                    </Link>
+                                    <Link to={card.button.link}>
+                                        <Icon
+                                            icon="arrow-right"
+                                            width="15px"
+                                            height="12px"
+                                        //padding="0 0 0 5px"
+                                        />
+                                    </Link>
+                                    </>}
                         </Div>
+
                     </Div>
                 )
                 )}
@@ -180,8 +178,8 @@ const CardsCarousel = ({
                 {content.text}
             </Paragraph>
             }
-            <Div 
-                padding="0 0 40px 0"
+            <Div
+                padding="0 0 30px 0"
                 justifyContent="center"
             >
                 {button &&
@@ -197,7 +195,7 @@ const CardsCarousel = ({
                         style={button.style ? JSON.parse(button.style) : null}
                         background={Colors[button.background] || button.background}
                         // textAlign="left"
-                        margin="24px 0 32px 0"
+                        margin="24px 0 30px 0"
                         padding=".35rem.85rem"
                         onClick={() => {
                             if (button.path && button.path.indexOf("http") > -1)

@@ -57,8 +57,8 @@ const GeeksInfo = ({ lang }) => {
   return (
     <>
       <H2
-        padding="50px 0 20px 0"
-        margin_tablet="50px auto 76px auto"
+        padding="15px 0 20px 0"
+        margin_tablet="15px auto 76px auto"
         width_tablet="100%"
 
       >

@@ -105,7 +105,7 @@ const Side = ({
       flexDirection_tablet="column"
       flexDirection="column"
       padding="40px 20px"
-      padding_tablet={padding_tablet || "36px 72px"}
+      padding_tablet={padding_tablet || "36px 72px 0px 36px"}
     >
       {heading && (
         <H2
@@ -255,7 +255,7 @@ const Side = ({
             fontSize="15px"
             textAlign="left"
             margin="2rem 0"
-            padding=".35rem.85rem"
+            padding="32px .85rem 0 .85rem"
             onClick={() => {
               if (button.path && button.path.indexOf("http") > -1)
                 window.open(transferQuerystrings(button.path, utm));
@@ -612,10 +612,11 @@ export const landingSections = {
   iconogram: ({ session, data, pageContext, yml, index }) => {
     const { heading, sub_heading, icons, text_link } = yml
     return (
-
-      <GridContainer
-        display="flex"
+      <Div
         key={index}
+        padding={heading.text ? "30px 0 60px 0" : "60px 0 60px 0"}
+        display="flex"
+        flexDirection="column"
         id="iconogram"
         containerColumns_tablet="repeat(14, 1fr)"
         columns="1"
@@ -624,49 +625,58 @@ export const landingSections = {
         height="auto"
         width="100%"
         background={Colors.lightYellow}
-        padding_xs="50px 10px"
-        padding_tablet="50px 0"
-        justifyItems="center"
-        justifyContent="center"
       >
-        <Div
-          columns="1"
-          display="block"
-          maxWidth_tablet="1366px"
-          margin="auto"
-          padding_lg="0 50px"
-        >
-          {heading &&
-            <H2
-              type="h2"
-              lineHeight="28px"
-              lineHeight_tablet="28px"
-              fontSize="30px"
-              margin="30px 0 30px 0"
-              style={{ textAlign: "center" }}
-            >
-              {heading.text}
-            </H2>
-          }
-          {sub_heading && /<\/?[a-z0-9]+>/g.test(sub_heading.text) &&
+        {heading.text &&
+          <H2
+            type="h2"
+            lineHeight="28px"
+            lineHeight_tablet="28px"
+            fontSize="30px"
+            //margin="30px 0 30px 0"
+            maxWidth="1366px"
+            margin="30px auto"
+            style={{ textAlign: "center" }}
+          >
+            {heading.text}
+          </H2>
+        }
+        {sub_heading && /<\/?[a-z0-9]+>/g.test(sub_heading.text) ?
+          <Paragraph
+            padding_xs={heading.text ? "0 10%" : "20px 10%"}
+            padding_tablet={heading.text ? "0 10%" : "20px 10%"}
+            padding_md={heading.text ? "0 10%" : "20px 10%"}
+
+            margin="15px auto"
+            fontSize="16px"
+            fontHeight="30px"
+            maxWidth="1366px"
+            dangerouslySetInnerHTML={{ __html: sub_heading.text }}
+          />
+          : sub_heading.text == !"" ? (
             <Paragraph
-              padding_xs={heading ? "0" : "20px"}
-              margin="15px 0"
+              padding_xs={heading.text ? "0 10%" : "20px 10%"}
+              padding_tablet={heading.text ? "0 10%" : "20px 10%"}
+              padding_md={heading.text ? "0 10%" : "20px 10%"}
+              margin="15px auto"
               fontSize="16px"
               fontHeight="30px"
-              dangerouslySetInnerHTML={{ __html: sub_heading.text }}
-            />
-          }
-        </Div>
+              maxWidth="1366px">
+              {sub_heading.text}
+            </Paragraph>
+          ) : null
+        }
         <Div
           display="flex"
+          flexDirection="column"
+          flexDirection_tablet="row "
           justifyContent="center"
-          flexDirection_tablet="row"
-          flexDirection_sm={icons.length > 3 ? "row" : "column"}
-          flexDirection_xs="column"
-          maxWidth_tablet="1366px"
-          margin="auto"
-          padding_lg="0 50px"
+          // gap="45px"
+          gap_tablet={icons.length > 4 ? "0px" : "5%"}
+          //gap_md="10%"
+          maxWidth="1366px"
+          margin="20px auto 0 auto"
+        //className="badge-slider hideOverflowX__"
+
         >
           {Array.isArray(icons) &&
             icons?.map((item, index) => {
@@ -678,17 +688,23 @@ export const landingSections = {
             })}
         </Div>
         {text_link &&
-          <Link to={text_link} display="block">
-            <H3
-              fontSize="18px"
-            >
-              Conditions Apply.
-            </H3>
-          </Link>
+          <Div
+            maxWidth="1366px"
+            margin="10px auto"
+          >
+            <Link to={text_link} display="block">
+              <H3
+                fontSize="18px"
+                lineHeight="22px"
+                textDecoration="underline"
+                textDecorationOffset="5px"
+              >
+                Conditions Apply.
+              </H3>
+            </Link>
+          </Div>
         }
-
-      </GridContainer>
-
+      </Div>
     );
   },
 
@@ -914,6 +930,7 @@ export const landingSections = {
       return {};
     };
     const course = getCourse();
+
     return (
       <React.Fragment key={index}>
         <ProgramDetails
@@ -924,7 +941,7 @@ export const landingSections = {
           details={course?.details}
           lang={pageContext.lang}
         />
-        {/* <ProgramDetailsMobile details={course && course.details} /> */}
+        <ProgramDetailsMobile details={course && course.details} />
       </React.Fragment>
     );
   },
@@ -961,7 +978,6 @@ export const landingSections = {
           background_xs="linear-gradient(180deg, #C7F3FD 59.45%, #FFFFFF 50%)"
           background_xxs="linear-gradient(180deg, #C7F3FD 60%, #FFFFFF 50%)"
           display_xs="flex"
-          margin_tablet="97px 0"
         >
         <CardsCarousel
           landingTemplate
@@ -980,8 +996,8 @@ export const landingSections = {
   choose_your_program: ({ session, pageContext, yml, data, index }) => {
     return (
       <React.Fragment key={index}>
-        <Div 
-          id="choose_your_program" 
+        <Div
+          id="choose_your_program"
           width="100%"
           flexDirection="column"
         >
@@ -1025,8 +1041,8 @@ export const landingSections = {
       id="geeksInfo"
       key={index}
       flexDirection="column"
-      margin="50px"
-      margin_tablet="100px"
+      margin="30px auto 42px auto"
+      margin_tablet="30px auto 42px auto"
       m_sm="0"
       p_xs="0"
     >
@@ -1039,7 +1055,7 @@ export const landingSections = {
       id="testimonials_new"
       key={`${index}-testimonials_new`}
       flexDirection="column"
-      margin="30px auto 0 auto"
+      margin="30px auto 50px auto"
       m_sm="0"
       p_xs="0"
       width_tablet="100%"
@@ -1106,11 +1122,11 @@ export const landingSections = {
         id="who_is_hiring"
         key={index}
         flexDirection="column"
-        //margin="40px auto"
-        margin_tablet="40px auto 100px auto"
+        margin="40px 0"
+        margin_tablet="40px 0 100px 0"
         m_sm="0"
         p_xs="0"
-        maxWidth="1366px"
+        // maxWidth="1366px"
         margin_xs="40px 0"
       >
         <OurPartners
@@ -1153,8 +1169,8 @@ export const landingSections = {
       key={index}
       background={Colors[yml.background] || yml.background}
       flexDirection="column"
-      padding="50px 0 50px 0"
-      padding_tablet="50px 6%"
+      padding="30px 0"
+      padding_tablet="30px 6%"
       margin_tablet="0 auto"
       maxWidth="1366px"
     >
@@ -1179,8 +1195,8 @@ export const landingSections = {
         key={index}
         background={Colors[yml.background] || yml.background}
         flexDirection="column"
-        padding="0 0 50px 0"
-        padding_tablet="6%"
+        padding="40px 0 50px 0"
+        padding_tablet="40px 6%"
         margin_tablet="0 auto"
         maxWidth="1366px"
       >
