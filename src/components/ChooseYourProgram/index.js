@@ -47,7 +47,7 @@ const ChooseYourProgram = ({
   return (
     <Grid
       ref={chooseProgramRef}
-      gridTemplateColumns_md={landingTemplate ? "2fr repeat(12, 1fr) 2fr" : "repeat(14, 1fr)"}
+      gridTemplateColumns_md={landingTemplate ? "repeat(14, 1fr)" : "repeat(14, 1fr)"}
       gridTemplateColumns_tablet={
         landingTemplate ? "4fr repeat(12, 1fr) 4fr" : "repeat(14, 1fr)"
       }
@@ -55,10 +55,13 @@ const ChooseYourProgram = ({
       gridAutoRows_tablet="auto" //"minmax(100px, auto)"
       background={landingTemplate ? Colors.white : Colors.verylightGray}
       background_tablet={landingTemplate ? Colors.white : "transparent"}
+      padding_lg="10px 0 50px 0"
+      padding_md="10px 80px 50px 80px"
       padding_tablet="10px 20px 50px 20px"
       padding_xs="0 10px 40px 10px "
       maxWidth_tablet="1366px"
       margin_tablet="0 auto 50px auto"
+      margin_lg="0 auto 50px auto"
     >
       <Div
         margin_tablet="50px 0 30px 0"
@@ -97,7 +100,7 @@ const ChooseYourProgram = ({
         gridColumn_tablet={landingTemplate ? "1 / 15" : "1 / 14"}
         padding_tablet={landingTemplate ? "0 17px" : "0"}
         padding_md="0"
-        gridColumn_md="2 / 14"
+        gridColumn_md="1 / 15"
         gridRow_tablet="2 / 4"
         gridTemplateColumns_md={
           landingTemplate ? "repeat(2, 4fr)" : "repeat(3, 4fr)"

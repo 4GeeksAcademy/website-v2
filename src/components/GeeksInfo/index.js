@@ -66,13 +66,19 @@ const GeeksInfo = ({ lang }) => {
       </H2>
 
       <Div maxWidth_tablet="1366px" margin="auto">
-        <GridContainerWithImage imageSide="left" columns_tablet="2">
+        <GridContainerWithImage 
+          imageSide="left" 
+          columns_tablet="2"
+          padding_tablet="0 40px"
+          padding_md="0 80px"
+          padding_lg="0"
+        >
           {/* <Grid columns_md="2" gridGap_md="50px"> */}
 
           <Div
             style={{ position: "relative" }}
             height="400px"
-            padding_tablet="0 38px 23px 25px"
+            padding_tablet="0 38px 23px 0px"
             padding_xs="0"
             gridColumn_md="2 / 8"
             gridColumn_tablet="1 / 8"
@@ -86,7 +92,7 @@ const GeeksInfo = ({ lang }) => {
                 width: "101%",
                 height: "282px",
                 top: "0",
-                left: "-60px",
+                left: "-120px",
                 borderRadius: "3px",
               }}
             />
@@ -113,7 +119,7 @@ const GeeksInfo = ({ lang }) => {
               style={{ backgroundSize: "contain" }}
             />
           </Div>
-          <Div flexDirection="column" gridColumn_tablet="9 / 16">
+          <Div flexDirection="column" gridColumn_tablet="8 / 16">
             <Div
               margin="0 0 30px 0"
               justifyContent="center"

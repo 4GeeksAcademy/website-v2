@@ -35,7 +35,7 @@ const Title = ({ id, title, paragraph }) => {
       <H2 type="h2">{title}</H2>
       <Paragraph margin="26px 0">{paragraph}</Paragraph>
     </GridContainer>
-  );  
+  );
 };
 
 const Side = ({
@@ -87,6 +87,7 @@ const Side = ({
         width={imgStyles ? imgStyles.width || "100%" : "100%"}
         h_sm={img_h_sm || "250px"}
         backgroundSize={image.shadow ? "cover" : "contain"}
+        //backgroundPosition="center right"
         border={image.shadow && "3px solid black"}
         boxShadow={image.shadow && "20px 15px 0px 0px rgba(0,0,0,1)"}
       />
@@ -104,8 +105,8 @@ const Side = ({
     <Div
       flexDirection_tablet="column"
       flexDirection="column"
-      padding="40px 20px"
-      padding_tablet={padding_tablet || "36px 72px 0px 36px"}
+
+      padding_tablet={padding_tablet || "36px 0px 0px 0px"}
     >
       {heading && (
         <H2
@@ -140,7 +141,7 @@ const Side = ({
           {sub_heading.text}
         </Paragraph>
       )}
-      
+
       {Array.isArray(bullets) && (
         <Div
           display="grid"
@@ -206,7 +207,7 @@ const Side = ({
       }
 
       {
-        content && /<\/?[a-z0-9]+>/g.test(content.text) ? 
+        content && /<\/?[a-z0-9]+>/g.test(content.text) ?
           <Paragraph
             textAlign="left"
             textAlign_tablet="left"
@@ -220,25 +221,25 @@ const Side = ({
             fontHeight="30px"
             dangerouslySetInnerHTML={{ __html: content.text }}
           />
-        : content && (
-          content.text.split("\n").map((p, i) => (
-            <Paragraph
-              key={`${i}-${p}`}
-              textAlign="left"
-              textAlign_tablet="left"
-              padding={heading ? "0" : "15px"}
-              margin="10px 0"
-              opacity="1"
-              fontSize={c_xl || "16px"}
-              fontSize_sm={c_sm}
-              fonSize_md={c_md}
-              fontSize_xs={c_xs}
-              fontHeight="30px"
-            >
-              {p}
-            </Paragraph>
-          ))
-        )
+          : content && (
+            content.text.split("\n").map((p, i) => (
+              <Paragraph
+                key={`${i}-${p}`}
+                textAlign="left"
+                textAlign_tablet="left"
+                padding={heading ? "0" : "15px"}
+                margin="10px 0"
+                opacity="1"
+                fontSize={c_xl || "16px"}
+                fontSize_sm={c_sm}
+                fonSize_md={c_md}
+                fontSize_xs={c_xs}
+                fontHeight="30px"
+              >
+                {p}
+              </Paragraph>
+            ))
+          )
       }
 
       {
@@ -281,6 +282,9 @@ export const TwoColumn = ({ left, right, proportions, session }) => {
       flexDirection_tablet="row"
       m_sm="0px auto 100px auto"
       margin="auto"
+      padding_md="40px 80px"
+      padding_lg="40px 0px"
+      padding_tablet="40px 40px"
       width_tablet="100%"
       maxWidth_tablet="1366px"
     >
@@ -675,6 +679,9 @@ export const landingSections = {
           //gap_md="10%"
           maxWidth="1366px"
           margin="20px auto 0 auto"
+          padding_tablet="0 40px"
+          padding_md="0 80px"
+          padding_lg="0"
         //className="badge-slider hideOverflowX__"
 
         >
@@ -717,21 +724,21 @@ export const landingSections = {
     let badges = dataYml[0].node.badges;
     return (
       <React.Fragment key={index}>
-      <Div background={Colors.verylightGray2} width="100%">
-        <Badges
-          link
-          // wrapped_images={true}
-          id="badges"
-          lang={pageContext.lang}
-          background={Colors.verylightGray2}
-          paragraph={badges.heading}
-          short_text
-          padding="60px 0"
-          padding_tablet="68px 0"
-          margin_tablet="0 0 78px 0"
-          maxWidth="1366px"
-        />
-      </Div>
+        <Div background={Colors.verylightGray2} width="100%">
+          <Badges
+            link
+            // wrapped_images={true}
+            id="badges"
+            lang={pageContext.lang}
+            background={Colors.verylightGray2}
+            paragraph={badges.heading}
+            short_text
+            padding="60px 0"
+            padding_tablet="68px 0"
+            margin_tablet="0 0 78px 0"
+            maxWidth="1366px"
+          />
+        </Div>
       </React.Fragment>
     );
   },
@@ -908,7 +915,7 @@ export const landingSections = {
           title={yml.heading}
           paragraph={yml.sub_heading}
         />
-      
+
       </React.Fragment>
     );
   },
@@ -930,7 +937,6 @@ export const landingSections = {
       return {};
     };
     const course = getCourse();
-
     return (
       <React.Fragment key={index}>
         <ProgramDetails
@@ -946,11 +952,11 @@ export const landingSections = {
     );
   },
 
-  overlaped: ({session, pageContext, yml, data, index}) => {
+  overlaped: ({ session, pageContext, yml, data, index }) => {
     const { heading, content, button, background, image } = yml
-    return(
+    return (
       <React.Fragment key={index} >
-        
+
         <Overlaped
           landingTemplate
           heading={heading.text}
@@ -964,14 +970,14 @@ export const landingSections = {
     );
   },
 
-  cards_carousel: ({session, pageContext, yml, data, index}) => {
+  cards_carousel: ({ session, pageContext, yml, data, index }) => {
     const { heading, sub_heading, content, cards, button } = yml
-    return(
+    return (
       <React.Fragment key={index} >
-        <Div 
-          id="cards_carousel" 
-          width="100%" 
-          flexDirection="column" 
+        <Div
+          id="cards_carousel"
+          width="100%"
+          flexDirection="column"
           background_md="linear-gradient(180deg, #C7F3FD 58.6%, #FFFFFF 50%)"
           background_tablet="linear-gradient(180deg, #C7F3FD 58.1%, #FFFFFF 50%)"
           background_sm="linear-gradient(180deg, #C7F3FD 61.04%, #FFFFFF 50%)"
@@ -979,15 +985,15 @@ export const landingSections = {
           background_xxs="linear-gradient(180deg, #C7F3FD 60%, #FFFFFF 50%)"
           display_xs="flex"
         >
-        <CardsCarousel
-          landingTemplate
-          title={heading}
-          sub_title={sub_heading}
-          content={content}
-          cards={cards}
-          button={button}
-          lang={pageContext.lang}
-        />
+          <CardsCarousel
+            landingTemplate
+            title={heading}
+            sub_title={sub_heading}
+            content={content}
+            cards={cards}
+            button={button}
+            lang={pageContext.lang}
+          />
         </Div>
       </React.Fragment>
     );
@@ -1000,6 +1006,7 @@ export const landingSections = {
           id="choose_your_program"
           width="100%"
           flexDirection="column"
+          background_tablet="linear-gradient(180deg, #f5f5f5 50%, #FFFFFF 50%)"
         >
           <Div
             background={Colors.lightGray}
@@ -1122,12 +1129,12 @@ export const landingSections = {
         id="who_is_hiring"
         key={index}
         flexDirection="column"
-        margin="40px 0"
-        margin_tablet="40px 0 100px 0"
+        //margin="40px auto"
+        margin_tablet="40px auto 100px auto"
         m_sm="0"
         p_xs="0"
-        // maxWidth="1366px"
-        margin_xs="40px 0"
+        
+        margin_xs="60px 0 40px 0"
       >
         <OurPartners
           images={hiring.partners.images}
@@ -1169,8 +1176,8 @@ export const landingSections = {
       key={index}
       background={Colors[yml.background] || yml.background}
       flexDirection="column"
-      padding="30px 0"
-      padding_tablet="30px 6%"
+      // padding="30px 0"
+      // padding_tablet="30px 40px"
       margin_tablet="0 auto"
       width_md="100%"
     >
@@ -1195,8 +1202,7 @@ export const landingSections = {
         key={index}
         background={Colors[yml.background] || yml.background}
         flexDirection="column"
-        padding="40px 0 50px 0"
-        padding_tablet="40px 6%"
+        //padding="40px 0 50px 0"
         margin_tablet="0 auto"
         width_md="100%"
       >

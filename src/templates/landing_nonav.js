@@ -169,6 +169,7 @@ const Landing = (props) => {
         columns_tablet="14"
         margin="0"
         margin_tablet="auto"
+        gridTemplateColumns_tablet="repeat(14, 1fr)"
         maxWidth_tablet="1366px"
       > 
         <Div
@@ -230,7 +231,7 @@ const Landing = (props) => {
           margin="0"
           justifyContent_tablet="start"
           padding="0"
-          padding_tablet={applySchollarship?.imageSide === "right" ? "0 20px 0 20%" : "0 20% 0 20px"}
+          padding_tablet={applySchollarship?.imageSide === "right" ? "0 20px 0 40px" : "0 40px 0 20px"}
           // gridArea_tablet={
           //   applySchollarship?.imageSide === "right" ? "1/1/1/6" : "1/7/1/14"
           // }

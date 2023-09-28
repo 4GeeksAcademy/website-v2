@@ -71,7 +71,7 @@ const LandingHeader = (props) => {
             margin="0 0 0 auto"
             padding_xs="0 10px"
             height="auto"
-            padding_tablet="40px 0 0 20px"
+            padding_tablet="40px 0 0 0"
           >
             {yml.header_data.partner_logo_url && (
               <>

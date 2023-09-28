@@ -84,6 +84,11 @@ export default ({
           margin="40px 5px" 
           margin_tablet="40px auto 20px auto"
           maxWidth_tablet="1366px"
+          gridTemplateColumns_tablet="repeat(14, 1fr)"
+          padding_tablet="0 40px"
+          padding_md="0 80px"
+          padding_lg="0"
+          padding="0 17px"
         >
           <Div
             display="flex"
@@ -91,7 +96,7 @@ export default ({
             alignItems="left"
             padding_tablet="0px 16px"
             padding="0px"
-            gridColumn="2/14"
+            gridColumn="1/15"
           >
             <H2
               margin_tablet="0 0 15px 0"
@@ -122,14 +127,19 @@ export default ({
       )}
       {locationFiltered && (
         <Grid
+          gridTemplateColumns_tablet="repeat(14, 1fr)"
           columns_tablet={
             locationFiltered.length <= 3 ? locationFiltered.length : "3"
           }
-          margin="0 10px 73px 10px"
+          padding_tablet="0 40px"
+          padding_md="0 80px"
+          padding_lg="0"
+          
+          //margin="0 10px 73px 10px"
           margin_tablet="0 auto 84px auto"
-          maxWidth_tablet="1366px"
+          maxWidth_md="1366px"
         >
-          <Div  gridColumn="2/14" className="badge-slider hideOverflowX__">
+          <Div  gridColumn="1/15" width="100%" className="badge-slider hideOverflowX__">
             {locationFiltered.map((i, index) => {
               return (
                 <Div

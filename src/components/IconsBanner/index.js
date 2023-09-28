@@ -31,6 +31,7 @@ export default ({ icon, title, content }) => {
       flexDirection_tablet="column"
       height="auto"
       width_tablet="100%"
+      minWidth_lg="320px"
       minWidth_tablet="120px"
       minWidth_md="180px"
       //minWidth_lg="240px"
