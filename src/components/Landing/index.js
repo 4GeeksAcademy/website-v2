@@ -282,6 +282,7 @@ export const TwoColumn = ({ left, right, proportions, session }) => {
       flexDirection_tablet="row"
       m_sm="0px auto 100px auto"
       margin="auto"
+      padding_xs="0 10px"
       padding_md="40px 80px"
       padding_lg="40px 0px"
       padding_tablet="40px 40px"
@@ -1064,7 +1065,7 @@ export const landingSections = {
       flexDirection="column"
       margin="30px auto 50px auto"
       m_sm="0"
-      p_xs="0"
+      p_xs="0 10px"
       width_tablet="100%"
       maxWidth_tablet="1366px"
     >
