@@ -177,7 +177,8 @@ const Landing = (props) => {
           width="100%"
           padding_tablet="0"
           style={{ position: "relative" }}
-          gridColumn_tablet={applySchollarship?.imageSide === "right" ? "8/15" : "2/8"}
+          gridColumn_tablet={applySchollarship?.imageSide === "right" ? "8/15" : "1/7"}
+          gridColumn_lg={applySchollarship?.imageSide === "right" ? "8/15" : "1/8"}
           gridRow_tablet="1/1"
         >
           {applySchollarship?.imageSide === "right" ? (
@@ -236,6 +237,7 @@ const Landing = (props) => {
           //   applySchollarship?.imageSide === "right" ? "1/1/1/6" : "1/7/1/14"
           // }
           gridColumn_tablet={applySchollarship?.imageSide === "right" ? "1/7" : "8/15"}
+          //gridColumn_lg={applySchollarship?.imageSide === "right" ? "8/15" : "1/8"}
           gridRow_tablet="1/1"
         >
           <Div
