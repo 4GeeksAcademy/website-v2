@@ -1,6 +1,5 @@
 import React from "react";
-import { Link, useStaticQuery, graphql } from "gatsby";
-import PropTypes from "prop-types";
+import { Link } from "gatsby";
 import { Button, Colors, Img } from "../Styling";
 import { Grid, Div } from "../Sections";
 import { H4, H3, H2, H1, Paragraph } from "../Heading";
@@ -15,40 +14,6 @@ const CardsCarousel = ({
   button,
   cards,
 }) => {
-  const data = useStaticQuery(graphql`
-    {
-      allCardsCarouselYaml {
-        edges {
-          node {
-            title {
-              text
-            }
-            sub_title {
-              text
-            }
-            content {
-              text
-            }
-            button {
-              text
-            }
-            cards {
-              image {
-                src
-              }
-              heading {
-                text
-              }
-              button {
-                text
-                link
-              }
-            }
-          }
-        }
-      }
-    }
-  `);
 
   return (
     <>
