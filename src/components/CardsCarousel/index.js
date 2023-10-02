@@ -14,7 +14,6 @@ const CardsCarousel = ({
   button,
   cards,
 }) => {
-
   return (
     <>
       <Div
