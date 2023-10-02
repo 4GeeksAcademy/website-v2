@@ -1,20 +1,32 @@
-title: Job guarantee commitment
+title: Ask for Job Guarantee 
 locations:
-  - "bogota-colombia"
-  - "buenosaires-argentina"
-  - "coding-bootcamp-caracas"
-  - "costa-rica"
-  - "downtown-miami"
-  - "lapaz-bolivia"
-  - "lima-peru"
-  - "mexicocity-mexico"
-  - "montevideo-uruguay"
-  - "online"
-  - "orlando"
-  - "panamacity-panama"
-  - "quito-ecuador"
-  - "santiago-chile"
-  - "toronto-canada"
+- "atlanta-usa"
+- "berlin-germany"
+- "bogota-colombia"
+- "buenosaires-argentina"
+- "caracas-venezuela"
+- "chicago-usa"
+- "costa-rica"
+- "downtown-miami"
+- "dublin-ireland"
+- "europe"
+- "hamburg-germany"
+- "houston-usa"
+- "lapaz-bolivia"
+- "lima-peru"
+- "lisbon-portugal"
+- "losangeles-usa"
+- "mexicocity-mexico"
+- "milan-italy"
+- "montevideo-uruguay"
+- "munich-germany"
+- "newyork-usa"
+- "online"
+- "orlando"
+- "panamacity-panama"
+- "quito-ecuador"
+- "rome-italy"
+- "toronto-canada"
 icons:
   - icon: "graduation-2"
     title: Get a job within 180 days after graduation or get your money back.
@@ -26,4 +38,4 @@ icons:
     title: We both commit to your future career
 link:
   url: https://storage.googleapis.com/4geeks-academy-website/PDF%20and%20Docs/Conditions%20Job%20Guaranteed%20Program.pdf
-  label: Conditions Apply
+  label: Conditions Apply when you add the Job Guarantee Feature

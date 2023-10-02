@@ -338,7 +338,6 @@ const Location = ({ data, pageContext, yml }) => {
         message={yml.upcoming.no_dates_message}
         actionMessage={yml.upcoming.actionMessage}
       />
-      <Loc lang={pageContext.lang} allLocationYaml={data.test} />
       <Staff lang={pageContext.lang} />
 
       {/* IFRAME map */}
@@ -376,6 +375,7 @@ const Location = ({ data, pageContext, yml }) => {
         posts={data.allMarkdownRemark.edges}
         relatedClusters={yml.meta_info.related_clusters}
       />
+      <Loc lang={pageContext.lang} allLocationYaml={data.test} />
     </>
   );
 };

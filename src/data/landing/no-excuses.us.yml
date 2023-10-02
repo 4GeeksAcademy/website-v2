@@ -27,7 +27,7 @@ form:
   # always the first_name, email and phone will be mandatory if added.
   fields: ["full_name", "phone", "email"]
   heading: "Join our award-winning Coding Program"
-  motivation: "Fill out the form and get the Schiolarship towards your tuition at 4Geeks. Only 85 seats remain available"
+  motivation: "Fill out the form and get the scholarship towards your tuition at 4Geeks. Only 85 seats remain available."
   button_label: Get more info Now
   redirect: null #you can redirect to another url or entirely diffrent website
 
@@ -39,7 +39,7 @@ apply_schollarship: # form that is displayed at the end of the landing
 # jumbotron on the top (cannot be commented out)
 header_data:
   background: "#FFF1D1"
-  tagline: Learn to code now and give your life a boost!
+  tagline: No Excuses. Boost your career. Money is what you’ll make!
   badge: "../../../static/images/badges/Course-Report-Badge-2023.png"
   image_filter: brightness(0.3)
 
@@ -50,11 +50,11 @@ features:
   styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
   text: With our expertise and your hard work, you'll be a professional developer in just 18 weeks!
   bullets:
-   - Award-winning bootcamp methodology 
-   - Hands-on, industry-approved syllabus
-   - Lifelong, unlimited 1:1 mentorship
+   - Scholarships available. Award winning Bootcamp at the Best pricing 
+   - Unlimited Mentorship and senior support FOREVER
+   - 84% placement rate
    - Job placement rate of 81%
-   - A vibrant community of coders
+   - "Part-time: it’s immersive but with a flexible schedule"
   
 short_badges:
   - name: "Premios Tecnologia Siglo XXI"
@@ -69,6 +69,10 @@ short_badges:
     url: ""
     image: "../../../static/images/badges/switchup-badge-2023.png"
     alt: "Best coding bootcamp Switchup 2023"   
+  - name: "Florida Department of Education"
+    url: ""
+    image: "../../../static/images/badges/licensed.png"
+    alt: "Florida Department of Education"
 
 follow_bar:
   position: "top" # top, bottom, hidden

@@ -1,0 +1,173 @@
+meta_info:
+  slug: curso-de-programacion-ve # <--- URL 4geeksacademy.com/us/landing/example
+
+  # This will show on social media when shared
+  title: "Impulsa tu carrera profesional ¡Aprende a programar con 4Geeks Academy!"
+  description: "La programación se ha convertido en la carrera con mayor demanda a nivel mundial, aprende a programar con 4Geeks Academy hoy y impulsa tu futuro."
+  image: "/images/bg/remote.jpeg"
+  keywords: "Curso de programación, Aprende a programar, 4Geeks academy, aprende programacion, aprende ingenieria informatica"
+
+  template: "landing_nonav" # <--- choose your landing template
+  redirects: [] # <--- URL redirections to avoid 404 errors
+
+  # Set a particular course or location to the landing page
+  # this UTM fields will be also included in the CRM contact
+  utm_course: ["full-stack"]
+  utm_location: ["caracas-venezuela"]
+  automation: soft # comma separated, "soft" is the default value
+  tag: request_more_info # comma separated, "request_more_info" is the default value
+
+form:
+  # posible fields: "first_name", "last_name", "full_name", "phone", "email"
+  # always the first_name, email and phone will be mandatory if added.
+  fields: ["full_name", "phone", "email"]
+  heading: "¡Empieza hoy!"
+  button_label: Comienza hoy
+  redirect: "/es/gracias/?lang=es" #you can redirect to another url or entirely diffrent website
+
+navbar:
+  buttonText: "APLICAR AHORA"
+  buttonUrl: "#bottom" # url accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
+  logoUrl: "#"
+
+# jumbotron on the top (cannot be commented out)
+header_data:
+  background: "#FFF1D1"
+  tagline: Cambia tu vida y aprende a programar
+  sub_heading: ""
+  badge: "../../../static/images/badges/Course-Report-Badge-2023.png"
+  # partner_logo_url: "../../../static/images/partner/microsoft.png"
+  # background_image: "../../../static/images/Happy-People-Landing-4Geeks-ES.jpg"
+  image_filter: brightness(0.4)
+
+features:
+  marginTop: 20px #<-- separation between tagline and the bullets
+
+  #                                         up   left down  right
+  styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
+  bullets:
+    - Un Desarrollador Web Junior en Caracas gana aprox. $1.000 mensuales. 
+    - Es una de las industrias donde hay más vacantes actualmente.
+    - No necesitas experiencia previa para comenzar
+  text: ¡Es el momento de impulsar tu carrera y convertirte en programador!
+
+short_badges:
+  - name: "Premios Tecnologia Siglo XXI"
+    url: ""
+    image: "../../../static/images/awards/premios_tecnologia_sigloxxi.png"
+    alt: "Mejor centro de Coding Bootcamp"
+  - name: "Course Report"
+    url: ""
+    image: "../../../static/images/badges/Course-Report-Badge-2023.png"
+    alt: "Top Coding Bootcamps Course Report"
+  - name: "Switchup"
+    url: ""
+    image: "../../../static/images/badges/switchup-badge-2023.png"
+    alt: "Best coding bootcamp Switchup 2023"   
+  - name: "Florida Department of Education"
+    url: ""
+    image: "../../../static/images/badges/licensed.png"
+    alt: "Florida Department of Education"
+
+follow_bar:
+  position: "top" # top, bottom, hidden
+  content:
+    text: "Solicita una beca. \n Planes de pago de hasta 24 meses."
+    text_mobile: "Plan de pago de 24 m. \n ¡Últimas plazas!"
+    # devices:   XL      LG    MD      SM    XS
+    font_size: ["25px", "25px", "25px", "18px", "4.3vw"]
+  button:
+    text: "Más información"
+    path: "#top"
+  phone:
+    text: "Llama "
+
+#
+# ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇
+#
+
+badges:
+  position: 6
+  heading: "Premios y reconocimientos que validan nuestra excelencia"
+
+program_details:
+  position: 1
+  heading: "Lo que aprenderás"
+  sub_heading: "Python, Javascript y React son las tecnologías más usadas del mundo"
+
+geeks_vs_others:
+  position: 4
+  heading: "¿Qué hace a 4Geeks Academy tan exitoso?"
+  paragraph: ""
+  total_rows: 5
+
+why_4geeks:
+  position: 5
+  heading: "Porqué 4Geeks"
+  sub_heading: ""
+
+who_is_hiring:
+  position: 6
+  limit: 4
+  heading: "¿Quién contrata a nuestros alumnos?"
+  sub_heading: "Nuestros partners de contratación crecen todos los días, con más de 150 aliados a nivel global y decenas de vacantes activas en nuestras bolsas de empleo."
+
+#alumni_projects:
+# position: 7
+#heading: "Así podría ser tu proyecto final"
+#sub_heading: "Proyectos de antiguos estudiantes"
+
+# Possible layours: [two_column_left_image, two_column_right_image]
+components:
+  - name: top_coding_bootcamp
+    position: 5
+    layout: two_column_left
+    proportions: [4, 8]
+    image:
+      style: '{ "backgroundSize": "contain" }'
+      src: "/static/images/badges/Course-Report-Badge-2023.png"
+      link: "https://www.coursereport.com/schools/4geeks-academy"
+    heading:
+      text:
+        "Tenemos 3 años consecutivos siendo seleccionados como uno de los mejores coding bootcamps del mundo"
+        #xl      lg     md     sm    xs
+      font_size: ["40px", "40px", "40px", "40px", "40px"]
+  - name: more_testimonials
+    position: 9
+    layout: two_column_left
+    image:
+      src: "https://storage.googleapis.com/4geeks-academy-website/landing-pictures/testimonials.webp"
+    heading:
+      text: "Escúchalo de nuestros alumnos"
+      #xl      lg     md     sm    xs
+      font_size: ["40px", "34px", "34px", "25px", "20px"]
+    button:
+      text: "Más testimoniales"
+      color: null
+      path: "https://www.youtube.com/watch?v=plwPwyrxX84"
+    content:
+      text: "Mi experiencia con 4Geeks ha sido magnífica, me ha encantado. Tengo unos profesores maravillosos y tengo unos compañeros súper geniales. He aprendido bastante sobre HTML, CSS, JavaScript, React y Python. Mis profesores siempre estuvieron atentos a lo que necesitaba. Igual hay una plataforma donde podemos hablar todos los estudiantes de 4Geeks y nos ayudamos entre todos.... ¡Ha sido genial tomar esta decisión! -Beatriz Hernández"
+      font_size: ["16px"]
+  - name: divider_one
+    position: 9
+    layout: divider
+    height: ["50px", "50px", "50px", "0px", "0px"]
+  - name: some_id
+    position: 7
+    layout: two_column_right
+    image:
+      src: "/images/bg/people_happy.jpg"
+    video: "B01-eTfgqqc"
+    heading:
+      text:
+        "Todo lo hacemos con pasión y con la mirada puesta en tu desarrollo profesional."
+        #xl      lg     md     sm    xs
+      font_size: ["40px", "34px", "34px", "25px", "20px"]
+    # content:
+    #   text: ""
+    #   # font_size: ["16px"]
+
+# why_python:
+#   position: 7
+#   heading: "¿Porqué enseñamos Python?" # optional or set to white space to hide
+#   sub_heading: " " # optional or set to white space to hide

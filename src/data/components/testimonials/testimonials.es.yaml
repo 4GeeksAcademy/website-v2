@@ -221,3 +221,105 @@ testimonials:
     short_content: "Third Party Risk at UKG"
     content: |
       I was a lawyer for 6 years and I decided to change my career. I attended 4Geeks Academy, a coding bootcamp, that was last year (2018), I graduated in August, and after graduating in October, I was able to get a job as a web developer. I had no background whatsoever in coding. I didn't know anything about anything computer-technology wise, so that's an encouragement because it's possible!
+
+  - student_name: "Leslie"
+    featured: false
+    highlighted: false
+    testimonial_date: ""
+    rating: null
+    student_thumb: "../../../../static/images/testimonials/Leslie-.jpg"
+    linkedin_url: ""
+    linkedin_text: ""
+    linkedin_image: ""
+    hidden: false
+    source_url: ""
+    video_url: "https://www.youtube.com/watch?v=gOXxYmjAIj0"
+    source_url_text: ""
+    short_content: "Crecimiento Profesional tras Bootcamp de Programación"
+    content: |
+      Su primera carrera fue Ingeniera Comercial, trabajaba en un banco ganando muy poco, llegó a 4Geeks Academy y obtuvo una beca del 100% con nosotros y desde ahí su carrera ha despegado, trabajó en empresas como Ecomsur, Cencosud y actualmente esta en LATAM Airlines. Leslie además participa activamente en comunidades de desarrollo, como Women Who Code, Mermelada Tech y Javascript Chile
+
+  - student_name: "Manuel"
+    featured: false
+    highlighted: false
+    testimonial_date: ""
+    rating: null
+    student_thumb: "../../../../static/images/testimonials/Manuel-alejandro.jpg"
+    linkedin_url: ""
+    linkedin_text: ""
+    linkedin_image: ""
+    hidden: false
+    source_url: ""
+    video_url: "https://www.youtube.com/watch?v=edTe-JOzad4"
+    source_url_text: ""
+    short_content: "Habilidades Blandas que Lideran al Éxito"
+    content: |
+      Venía de ser terapeuta y también de desempeñarse en el área de marketing, y gracias a su formación en programación en conjunto con sus habilidades blandas lo llevaron a puestos de liderazgo en Ecomsur
+
+  - student_name: "Santiago De Aguirre"
+    featured: false
+    highlighted: false
+    testimonial_date: ""
+    rating: null
+    student_thumb: "../../../../static/images/testimonials/Santiago-de-Aguirre.jpg"
+    linkedin_url: ""
+    linkedin_text: ""
+    linkedin_image: ""
+    hidden: false
+    source_url: ""
+    video_url: "https://www.youtube.com/watch?v=gOXxYmjAIj0"
+    source_url_text: ""
+    short_content: "De Músico a Liderazgo en Programación"
+    content: |
+      Viene de ser músico profesional, fue uno de los mejores alumnos de su cohorte y ocupó puesto de liderazgo en su proyecto final
+
+  - student_name: "Nicolas Carcamo"
+    featured: false
+    highlighted: false
+    testimonial_date: ""
+    rating: null
+    student_thumb: "../../../../static/images/testimonials/Nicolas-Carcamo.jpg"
+    linkedin_url: ""
+    linkedin_text: ""
+    linkedin_image: ""
+    hidden: false
+    source_url: ""
+    video_url: ""
+    source_url_text: ""
+    short_content: "De las Artes al Desarrollo de Software"
+    content: |
+      Nicolas es desarrollador de software y músico. Por muchos años se dedicó al mundo de las artes escénicas, y luego por medio de amistades despertó su curiosidad por la programación. Se graduó de 4geeks este 2023 y está actualmente trabajando como desarrollador en una gran empresa chilena. 
+
+  - student_name: "Cristian Rivera"
+    featured: false
+    highlighted: false
+    testimonial_date: ""
+    rating: null
+    student_thumb: "../../../../static/images/testimonials/Cristian-Rivera.jpg"
+    linkedin_url: ""
+    linkedin_text: ""
+    linkedin_image: ""
+    hidden: false
+    source_url: ""
+    video_url: ""
+    source_url_text: ""
+    short_content: "Siguiendo la Pasión hacia el Desarrollo Web"
+    content: |
+      Cristian siempre tuvo interés en el mundo del desarrollo, su trayecto laboral comenzó como prevencionista de riesgos y luego de la pandemia decidió dedicarse a algo que le diera felicidad,por lo que se adentra en el mundo del desarrollo algo que siempre le interesó. Actualmente trabaja como desarrollador.
+
+  - student_name: "Monica Calle"
+    featured: false
+    highlighted: false
+    testimonial_date: ""
+    rating: null
+    student_thumb: "../../../../static/images/testimonials/Monica-Calle.jpg"
+    linkedin_url: ""
+    linkedin_text: ""
+    linkedin_image: ""
+    hidden: false
+    source_url: ""
+    video_url: ""
+    source_url_text: ""
+    short_content: "Desarrolladora Front-End Apasionada"
+    content: |
+      Apasionada de lo que hace, de aprender y de los constantes cambios, busca hacer un trabajo que genere cambios. una vez acabado el bootcamp fue ayudante de muchas cohortes de 4geeks y actualmente es desarrolladora front end.  
