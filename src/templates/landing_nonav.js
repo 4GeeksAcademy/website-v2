@@ -171,14 +171,18 @@ const Landing = (props) => {
         margin_tablet="auto"
         gridTemplateColumns_tablet="repeat(14, 1fr)"
         maxWidth_tablet="1366px"
-      > 
+      >
         <Div
           //height="auto"
           width="100%"
           padding_tablet="0"
           style={{ position: "relative" }}
-          gridColumn_tablet={applySchollarship?.imageSide === "right" ? "8/15" : "1/7"}
-          gridColumn_lg={applySchollarship?.imageSide === "right" ? "8/15" : "1/8"}
+          gridColumn_tablet={
+            applySchollarship?.imageSide === "right" ? "8/15" : "1/7"
+          }
+          gridColumn_lg={
+            applySchollarship?.imageSide === "right" ? "8/15" : "1/8"
+          }
           gridRow_tablet="1/1"
         >
           {applySchollarship?.imageSide === "right" ? (
@@ -232,11 +236,17 @@ const Landing = (props) => {
           margin="0"
           justifyContent_tablet="start"
           padding="0"
-          padding_tablet={applySchollarship?.imageSide === "right" ? "0 20px 0 40px" : "0 40px 0 20px"}
+          padding_tablet={
+            applySchollarship?.imageSide === "right"
+              ? "0 20px 0 40px"
+              : "0 40px 0 20px"
+          }
           // gridArea_tablet={
           //   applySchollarship?.imageSide === "right" ? "1/1/1/6" : "1/7/1/14"
           // }
-          gridColumn_tablet={applySchollarship?.imageSide === "right" ? "1/7" : "8/15"}
+          gridColumn_tablet={
+            applySchollarship?.imageSide === "right" ? "1/7" : "8/15"
+          }
           //gridColumn_lg={applySchollarship?.imageSide === "right" ? "8/15" : "1/8"}
           gridRow_tablet="1/1"
         >
@@ -355,11 +365,6 @@ export const query = graphql`
             text
             bullets
             styles
-            
-
-
-
-
           }
           badges {
             position
@@ -408,11 +413,10 @@ export const query = graphql`
               }
             }
           }
-      
+
           in_the_news {
             heading
             position
-
           }
           rating_reviews {
             position
@@ -504,9 +508,8 @@ export const query = graphql`
               src
               style
               link
-              
             }
-            programs{
+            programs {
               title
               sub_title
               icon
@@ -531,7 +534,7 @@ export const query = graphql`
               text
               font_size
             }
-            bullets{
+            bullets {
               heading
               text
               icon
@@ -542,16 +545,16 @@ export const query = graphql`
               font_size
               path
             }
-            cards{
-              image{
+            cards {
+              image {
                 src
                 style
               }
-              heading{
+              heading {
                 text
                 font_size
               }
-              button{
+              button {
                 text
               }
             }
@@ -605,15 +608,9 @@ export const query = graphql`
             position
             heading
             paragraph
-            
+
             total_rows
           }
-          
-
-
-
-
-
         }
       }
     }
@@ -698,7 +695,7 @@ export const query = graphql`
               }
             }
           }
-          
+
           in_the_news {
             heading
             position
@@ -794,7 +791,7 @@ export const query = graphql`
               style
               link
             }
-            programs{
+            programs {
               title
               sub_title
               icon
@@ -817,7 +814,7 @@ export const query = graphql`
               text
               font_size
             }
-            bullets{
+            bullets {
               heading
               text
               icon

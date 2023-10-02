@@ -21,7 +21,7 @@ const Badges = ({
   padding_tablet,
   margin,
   wrapped_images,
-  maxWidth
+  maxWidth,
 }) => {
   const data = useStaticQuery(graphql`
     query myNewQueryBadges {
@@ -68,7 +68,12 @@ const Badges = ({
   return (
     <>
       {/* <Fragment github="/components/badges"> */}
-      <Div width="100%" maxWidth={maxWidth} margin_tablet="0 auto" background={background}>
+      <Div
+        width="100%"
+        maxWidth={maxWidth}
+        margin_tablet="0 auto"
+        background={background}
+      >
         <GridContainer
           id={id}
           containerColumns_tablet={`1.8fr repeat(12, 1fr) 1.8fr`}
@@ -130,53 +135,53 @@ const Badges = ({
               <Div
                 className="badge-slider hideOverflowX__"
                 margin="auto"
-              // justifyContent="center"
-              // alignItems="center"
+                // justifyContent="center"
+                // alignItems="center"
               >
                 {short_link
                   ? content.badges.map((l, i) => {
-                    return (
-                      i < 4 && (
+                      return (
+                        i < 4 && (
+                          <GatsbyImage
+                            key={i}
+                            style={{
+                              height: "65px",
+                              minWidth: "80px",
+                              margin: "0 20px",
+                            }}
+                            imgStyle={{ objectFit: "contain" }}
+                            loading="eager"
+                            // draggable={false}
+                            // fadeIn={false}
+                            alt={l.name}
+                            image={getImage(
+                              l.image.childImageSharp.gatsbyImageData
+                            )}
+                          />
+                        )
+                      );
+                    })
+                  : content.badges.map((l, i) => {
+                      return (
                         <GatsbyImage
                           key={i}
                           style={{
-                            height: "65px",
-                            minWidth: "80px",
-                            margin: "0 20px",
+                            height: "85px",
+                            // minWidth: "200px",
+                            minWidth: "150px",
+                            margin: "0 24px",
                           }}
                           imgStyle={{ objectFit: "contain" }}
                           loading="eager"
-                          // draggable={false}
+                          draggable={false}
                           // fadeIn={false}
                           alt={l.name}
                           image={getImage(
                             l.image.childImageSharp.gatsbyImageData
                           )}
                         />
-                      )
-                    );
-                  })
-                  : content.badges.map((l, i) => {
-                    return (
-                      <GatsbyImage
-                        key={i}
-                        style={{
-                          height: "85px",
-                          // minWidth: "200px",
-                          minWidth: "150px",
-                          margin: "0 24px",
-                        }}
-                        imgStyle={{ objectFit: "contain" }}
-                        loading="eager"
-                        draggable={false}
-                        // fadeIn={false}
-                        alt={l.name}
-                        image={getImage(
-                          l.image.childImageSharp.gatsbyImageData
-                        )}
-                      />
-                    );
-                  })}
+                      );
+                    })}
 
                 {short_link && (
                   <Link to={content.link_to}>
