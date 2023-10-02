@@ -41,23 +41,18 @@ navbar:
 
 header_data:
   background: "#FFF1D1"
-  tagline: "There are no excuses to enter the tech industry"
+  tagline: "No excuses. No Cost. Miami Tech Talent is bringing 100% scholraships. We are changing the Game"
   tagline_color: "black"
-  sub_heading: "No cost, ever, for your Coding Education. We changed the game."
   badge: "../../../static/images/badges/Course-Report-Badge-2023.png"
   image_filter: brightness(0.3)
-  right_image: "../../../static/images/landing/header_united_way.png"
-  # right_image: 
-  #   style: '{ "backgroundSize": "contain" }'
-  #   src: "/images/landing/header_united_way.png"
 
 features:
   marginTop: 0px #<-- separation between tagline and the bullets
-  text: '<span style="margin-top: 10px; display: block;"> <strong style="font-weight: bold;">The United Way Miami Workforce Project</strong> is an exciting new training program made possible by United Way Miami, 4Geeks Academy, and Social Finance.</span>'
+  text: '<span style="margin-top: 10px; display: block;"> <strong style="font-weight: bold;">The Miami Tech Talent Coalition is creating a sustainable pipeline of skilled tech workers in Miami by bridging the gap between employers and talent.</span>'
   bullets:
-    - "Become a Software Developer and get a new career"
-    - "Get up to $6400 for living stipends to pay your regular costs while taking the program"
-    - "100 Spots Available. Only 50 left!" 
+    - "Get a career in Tech and join the #MiamiTechLife"
+    - "Be a software Developer or a Data Scientist"
+    - "30 Spots Available. Only 15 left!" 
     - "Now open and accepting applications!"
   styles: '{ "color": "black", "fontWeight":"500" }'
 
@@ -82,8 +77,8 @@ short_badges:
 follow_bar:
   position: "top" # top, bottom, hidden
   content:
-    text: "No Costs. No Excuses."
-    text_mobile: "No Costs. No Excuses."
+    text: "No Costs. No Excuses. Join and be a part of the #MiamiTech movement"
+    text_mobile: "No Costs. No Excuses. Join and be a part of the #MiamiTech movement"
     # devices:   XL      LG    MD      SM    XS
     font_size: ["25px", "25px", "25px", "20px", "18px"]
   button:
@@ -261,15 +256,12 @@ components:
       src: "/static/images/staff/luisa.png"
     video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
     heading:
-      text: "Now you don't need to be worried about payment. Only about your career ahead"
+      text: "You don't need to be worried about payments. Only about your career ahead"
       font_size: ["30px", "30px", "30px", "30px", "30px"]
     sub_heading:
       text: "We changed the game by offering the program with no costs associated. You will need to find a job to make the program worth it, and to keep the program alive for new students."
       font_size: ["18px", "18px", "18px", "18px", "18px"]
     button:
-      text: "Review Conditions"
-      color: null
-      path: "https://storage.googleapis.com/media-breathecode/bc38ffebe9e56f8cd62e10d5d0839f98d7528c4fe7756456630588d2c2048a2a"
     content:
       text: |
         <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">1. Enroll in the program.</strong></h2>
@@ -310,19 +302,19 @@ components:
       hover_color: "white"
       path: "#top"
 
-  - name: united
+  - name: Miami Tech Talent Coalition
     position: 11
     layout: two_column_right
     proportions: [6, 6]
     background: "veryLightBlue2"
     image:
       style: '{ "backgroundSize": "contain", "maxHeight": "270px" }'
-      src: "/images/landing/united-way-two.png"
+      src: "/images/landing/miamitech-logo.png"
     heading:
-      text: "The United Way Miami Workforce Project is a partnership between United Way Miami and 4Geeks Academy."
+      text: "The Miami Tech Coalition and 4Geeks Academy Mission" 
       font_size: ["40px", "40px", "40px", "40px", "40px"]
     content:
       text: |
-        <p>United Way Miami envisions a thriving and equitable community where all people have access to quality education and the opportunity to lead healthy and financially secure lives – the building blocks of a thriving community.</p>
+        <p>is to actively engage employers, academic institutions, government entities, service providers, and local training providers for the purpose of connecting employers with technology talent and creating a sustainable tech talent pipeline in Miami.</p>
         <br> 
       font_size: ["16px"] 

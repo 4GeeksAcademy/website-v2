@@ -8,13 +8,18 @@ import { Circle } from "../BackgroundDrawing";
 import Icon from "../Icon";
 import LandingContainer from "../LandingContainer";
 import Marquee_v2 from "../Marquee_v2";
+import { SessionContext } from "../../session.js";
 import { processFormEntry } from "../../actions";
 
 const LandingHeader = (props) => {
+  const { setLocation } = React.useContext(SessionContext);
   const { pageContext, yml, preData, locations, programs } = props;
   const [inLocation, setInLocation] = React.useState("");
 
   useEffect(() => {
+    if (yml.meta_info && yml.meta_info.utm_location)
+      setLocation(yml.meta_info?.utm_location[0]);
+
     const urlParams = new URLSearchParams(window.location.search);
     const _inLoc = urlParams.get("in") || null;
     if (_inLoc && _inLoc != "")

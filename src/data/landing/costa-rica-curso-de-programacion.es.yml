@@ -1,15 +1,15 @@
 meta_info:
-  slug: bootcamp-costa-rica # <--- URL 4geeksacademy.com/us/landing/example
+  slug: curso-de-programacion-costa-rica # <--- URL 4geeksacademy.com/us/landing/example
 
   # This will show on social media when shared
   title: "Bootcamp de programación en Costa Rica. Aprende a programar y consigue empleo como programador."
-  description: "Aprende a programar en uno de los bootcamps más importantes del Costa Rica, obtén acceso mejores oportunidades laborales a partir de ahora."
+  description: "Aprende a programar en uno de los bootcamps más importantes del Costa Rica, obtén asesoria de por vida y acceso a mejores oportunidades laborales."
   image: "/images/bg/main-bg.jpg"
-  keywords: "Bootcamp de Programación, Bootcamp programacion Costa Rica, Bootcamp de python, Bootcamp de React y Javascript, Bootcamp de Informática, Coding Bootcamp, 4Geeks Academy"
+  keywords: "Curso de programacion, Bootcamp de Programación, Bootcamp programacion Costa Rica, Bootcamp de python, Bootcamp de React y Javascript, Bootcamp de Informática, Coding Bootcamp, 4Geeks Academy"
 
   template: "landing_a" # <--- choose your landing template
   redirects: # <--- URL redirections to avoid 404 errors
-    ["/landing/bootcamp-costa-rica"]
+    ["/landing/curso-de-programacion-costa-rica"]
 
   # Set a particular course or location to the landing page
   # this UTM fields will be also included in the CRM contact
@@ -41,8 +41,8 @@ apply_schollarship: # form that is displayed at the end of the landing
 # jumbotron on the top (cannot be commented out)
 header_data:
   background: "#FFF1D1"
-  tagline: Bootcamp de Programación en Costa Rica 
-  sub_heading: Aprende a programar desde cero o mejora tus habilidades en programación y recibe soporte técnico y profesional de por vida.
+  tagline: Aprende a programar desde cero o potencia tu carrera en el mundo tech 
+  sub_heading: ""
   badge: "../../../static/images/badges/Course-Report-Badge-2023.png"
   image_filter: brightness(0.3)
 

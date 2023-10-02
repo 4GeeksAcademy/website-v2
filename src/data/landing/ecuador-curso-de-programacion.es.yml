@@ -1,20 +1,20 @@
 meta_info:
-  slug: bootcamp-costa-rica # <--- URL 4geeksacademy.com/us/landing/example
+  slug: curso-de-programacion-ecuador-quito # <--- URL 4geeksacademy.com/us/landing/example
 
   # This will show on social media when shared
-  title: "Bootcamp de programación en Costa Rica. Aprende a programar y consigue empleo como programador."
-  description: "Aprende a programar en uno de los bootcamps más importantes del Costa Rica, obtén acceso mejores oportunidades laborales a partir de ahora."
+  title: "Bootcamp de programación en Ecuador. Aprende a programar y consigue empleo como programador."
+  description: "Aprende a programar en uno de los coding bootcamps más importantes del mundo y consigue miles de oportunidades laborales."
   image: "/images/bg/main-bg.jpg"
-  keywords: "Bootcamp de Programación, Bootcamp programacion Costa Rica, Bootcamp de python, Bootcamp de React y Javascript, Bootcamp de Informática, Coding Bootcamp, 4Geeks Academy"
+  keywords: "Bootcamp de Programación, Bootcamp programacion Ecuador, Bootcamp de python, Bootcamp de React y Javascript, Bootcamp de Informática, Coding Bootcamp, 4Geeks Academy"
 
   template: "landing_a" # <--- choose your landing template
   redirects: # <--- URL redirections to avoid 404 errors
-    ["/landing/bootcamp-costa-rica"]
+    ["/landing/bootcamp-colombia"]
 
   # Set a particular course or location to the landing page
   # this UTM fields will be also included in the CRM contact
   utm_course: ["full-stack"]
-  utm_location: ["costa-rica"]
+  utm_location: ["quito-ecuador"]
   automation: strong # comma separated, "soft" is the default value
   tag: website-lead # comma separated, "request_more_info" is the default value
 
@@ -28,7 +28,7 @@ form:
   redirect: "/es/gracias/?lang=es"  #you can redirect to another url or entirely diffrent website
 
 navbar:
-  buttonText: "APLICAR YA"
+  buttonText: "APLICAR AHORA"
   buttonUrl: "#bottom" # url accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
   logoUrl: "#"
 
@@ -41,8 +41,8 @@ apply_schollarship: # form that is displayed at the end of the landing
 # jumbotron on the top (cannot be commented out)
 header_data:
   background: "#FFF1D1"
-  tagline: Bootcamp de Programación en Costa Rica 
-  sub_heading: Aprende a programar desde cero o mejora tus habilidades en programación y recibe soporte técnico y profesional de por vida.
+  tagline: Aprende a programar desde cero o potencia tu carrera en el mundo tech
+  sub_heading: ""
   badge: "../../../static/images/badges/Course-Report-Badge-2023.png"
   image_filter: brightness(0.3)
 
@@ -52,9 +52,9 @@ features:
   #                                         up   left down  right
   styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
   bullets:
-    - Aprende las tecnologías más demandadas por las grandes empresas.
+    - Mentorías de código ilimitasas, apoyodo de la comunidad y profesores y mucho más...
     - Programa 100% Remoto y Medio Tiempo. ¡Certificate en tan solo 18 semanas!
-    - Contamos con un plan de Trabajo Garantizado y distintas opciones de Financiamiento.
+    - Contamos con un plan de Trabajo Garantizado y distintas opciones de Financiamiento. 
 
 short_badges:
   - name: "Premios Tecnologia Siglo XXI"
@@ -132,3 +132,4 @@ who_is_hiring:
   limit: 4
   heading: "¿Quién contrata a nuestros alumnos?"
   sub_heading: "84% de nuestros estudiantes que completaron el proceso de GeekFORCE han conseguido trabajo luego de haberse graduado (incluso dentro de los sigiuientes  100 días)"
+

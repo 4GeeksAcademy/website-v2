@@ -486,12 +486,13 @@ const LeadForm = ({
                   options={selectLocation}
                   placeholder={locationSelector.place_holder}
                   valid={true}
-                  onChange={(selected, valid) =>
+                  onChange={(selected, valid) => {
                     setVal({
                       ...formData,
                       utm_location: { value: selected.value, valid },
-                    })
-                  }
+                    });
+                    setLocation(selected.value);
+                  }}
                 />
               </Div>
             )}
