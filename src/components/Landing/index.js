@@ -105,7 +105,6 @@ const Side = ({
     <Div
       flexDirection_tablet="column"
       flexDirection="column"
-
       padding_tablet={padding_tablet || "36px 0px 0px 0px"}
     >
       {heading && (
@@ -203,12 +202,27 @@ const Side = ({
             );
           })}
         </Div>
-      )
-      }
+      )}
 
-      {
-        content && /<\/?[a-z0-9]+>/g.test(content.text) ?
+      {content && /<\/?[a-z0-9]+>/g.test(content.text) ? (
+        <Paragraph
+          textAlign="left"
+          textAlign_tablet="left"
+          padding={heading ? "0" : "15px"}
+          margin="10px 0"
+          opacity="1"
+          fontSize={c_xl || "16px"}
+          fontSize_sm={c_sm}
+          fonSize_md={c_md}
+          fontSize_xs={c_xs}
+          fontHeight="30px"
+          dangerouslySetInnerHTML={{ __html: content.text }}
+        />
+      ) : (
+        content &&
+        content.text.split("\n").map((p, i) => (
           <Paragraph
+            key={`${i}-${p}`}
             textAlign="left"
             textAlign_tablet="left"
             padding={heading ? "0" : "15px"}
@@ -219,55 +233,36 @@ const Side = ({
             fonSize_md={c_md}
             fontSize_xs={c_xs}
             fontHeight="30px"
-            dangerouslySetInnerHTML={{ __html: content.text }}
-          />
-          : content && (
-            content.text.split("\n").map((p, i) => (
-              <Paragraph
-                key={`${i}-${p}`}
-                textAlign="left"
-                textAlign_tablet="left"
-                padding={heading ? "0" : "15px"}
-                margin="10px 0"
-                opacity="1"
-                fontSize={c_xl || "16px"}
-                fontSize_sm={c_sm}
-                fonSize_md={c_md}
-                fontSize_xs={c_xs}
-                fontHeight="30px"
-              >
-                {p}
-              </Paragraph>
-            ))
-          )
-      }
-
-      {
-        button && (
-          <Button
-            outline
-            borderRadius="0"
-            colorHoverText={button.hover_color || Colors.blue}
-            background={Colors[button.background] || button.background}
-            lineHeight="26px"
-            textColor={Colors.black}
-            textTransform="none"
-            color={Colors[button.color] || button.color}
-            fontSize="15px"
-            textAlign="left"
-            margin="2rem 0"
-            padding="32px .85rem 0 .85rem"
-            onClick={() => {
-              if (button.path && button.path.indexOf("http") > -1)
-                window.open(transferQuerystrings(button.path, utm));
-              else navigate(button.path);
-            }}
           >
-            {button.text}
-          </Button>
-        )
-      }
-    </Div >
+            {p}
+          </Paragraph>
+        ))
+      )}
+
+      {button && (
+        <Button
+          outline
+          borderRadius="0"
+          colorHoverText={button.hover_color || Colors.blue}
+          background={Colors[button.background] || button.background}
+          lineHeight="26px"
+          textColor={Colors.black}
+          textTransform="none"
+          color={Colors[button.color] || button.color}
+          fontSize="15px"
+          textAlign="left"
+          margin="2rem 0"
+          padding="32px .85rem 0 .85rem"
+          onClick={() => {
+            if (button.path && button.path.indexOf("http") > -1)
+              window.open(transferQuerystrings(button.path, utm));
+            else navigate(button.path);
+          }}
+        >
+          {button.text}
+        </Button>
+      )}
+    </Div>
   );
 };
 
@@ -385,7 +380,7 @@ export const MultiColumns = ({
           fontSize_xs={sh_xs}
           fontHeight="30px"
           style={sub_heading.style ? JSON.parse(sub_heading.style) : null}
-        // style={{textAlign:'center'}}
+          // style={{textAlign:'center'}}
         >
           {sub_heading.text}
         </Paragraph>
@@ -592,8 +587,8 @@ export const landingSections = {
           location
             ? location
             : session &&
-            session.location &&
-            session.location.breathecode_location_slug
+              session.location &&
+              session.location.breathecode_location_slug
         }
         lang={pageContext.lang}
         filter={
@@ -606,7 +601,7 @@ export const landingSections = {
   about4Geeks: ({ session, data, pageContext, yml, index }) => {
     let dataYml =
       data.allLandingYaml.edges.length !== 0 &&
-        data.allLandingYaml.edges[0].node.about4Geeks !== null
+      data.allLandingYaml.edges[0].node.about4Geeks !== null
         ? data.allLandingYaml.edges
         : data.allDownloadableYaml.edges;
     return (
@@ -617,7 +612,7 @@ export const landingSections = {
   },
 
   iconogram: ({ session, data, pageContext, yml, index }) => {
-    const { heading, sub_heading, icons, text_link } = yml
+    const { heading, sub_heading, icons, text_link } = yml;
     return (
       <Div
         key={index}
@@ -633,7 +628,7 @@ export const landingSections = {
         width="100%"
         background={Colors.lightYellow}
       >
-        {heading.text &&
+        {heading.text && (
           <H2
             type="h2"
             lineHeight="28px"
@@ -646,32 +641,31 @@ export const landingSections = {
           >
             {heading.text}
           </H2>
-        }
-        {sub_heading && /<\/?[a-z0-9]+>/g.test(sub_heading.text) ?
+        )}
+        {sub_heading && /<\/?[a-z0-9]+>/g.test(sub_heading.text) ? (
           <Paragraph
             padding_xs={heading.text ? "0 10%" : "20px 10%"}
             padding_tablet={heading.text ? "0 10%" : "20px 10%"}
             padding_md={heading.text ? "0 10%" : "20px 10%"}
-
             margin="15px auto"
             fontSize="16px"
             fontHeight="30px"
             maxWidth="1366px"
             dangerouslySetInnerHTML={{ __html: sub_heading.text }}
           />
-          : sub_heading.text == !"" ? (
-            <Paragraph
-              padding_xs={heading.text ? "0 10%" : "20px 10%"}
-              padding_tablet={heading.text ? "0 10%" : "20px 10%"}
-              padding_md={heading.text ? "0 10%" : "20px 10%"}
-              margin="15px auto"
-              fontSize="16px"
-              fontHeight="30px"
-              maxWidth="1366px">
-              {sub_heading.text}
-            </Paragraph>
-          ) : null
-        }
+        ) : sub_heading.text == !"" ? (
+          <Paragraph
+            padding_xs={heading.text ? "0 10%" : "20px 10%"}
+            padding_tablet={heading.text ? "0 10%" : "20px 10%"}
+            padding_md={heading.text ? "0 10%" : "20px 10%"}
+            margin="15px auto"
+            fontSize="16px"
+            fontHeight="30px"
+            maxWidth="1366px"
+          >
+            {sub_heading.text}
+          </Paragraph>
+        ) : null}
         <Div
           display="flex"
           flexDirection="column"
@@ -685,23 +679,23 @@ export const landingSections = {
           padding_tablet="0 40px"
           padding_md="0 80px"
           padding_lg="0"
-        //className="badge-slider hideOverflowX__"
-
+          //className="badge-slider hideOverflowX__"
         >
           {Array.isArray(icons) &&
             icons?.map((item, index) => {
               return (
                 <React.Fragment key={index}>
-                  <IconsBanner icon={item.icon} title={item.title} content={item.content} />
+                  <IconsBanner
+                    icon={item.icon}
+                    title={item.title}
+                    content={item.content}
+                  />
                 </React.Fragment>
               );
             })}
         </Div>
-        {text_link &&
-          <Div
-            maxWidth="1366px"
-            margin="10px auto"
-          >
+        {text_link && (
+          <Div maxWidth="1366px" margin="10px auto">
             <Link to={text_link} display="block">
               <H3
                 fontSize="18px"
@@ -713,7 +707,7 @@ export const landingSections = {
               </H3>
             </Link>
           </Div>
-        }
+        )}
       </Div>
     );
   },
@@ -721,7 +715,7 @@ export const landingSections = {
   badges: ({ session, data, pageContext, yml, course, index }) => {
     let dataYml =
       data.allLandingYaml.edges.length !== 0 &&
-        data.allLandingYaml.edges[0].node.badges !== null
+      data.allLandingYaml.edges[0].node.badges !== null
         ? data.allLandingYaml.edges
         : data.allDownloadableYaml.edges;
     let badges = dataYml[0].node.badges;
@@ -798,8 +792,9 @@ export const landingSections = {
                   letterSpacing="0.05em"
                   fontWeight="bold"
                 >
-                  {`${item.rating} ${pageContext.lang === "us" ? "On Reviews" : "En reseñas"
-                    }`}
+                  {`${item.rating} ${
+                    pageContext.lang === "us" ? "On Reviews" : "En reseñas"
+                  }`}
                 </Paragraph>
               </Div>
             );
@@ -918,7 +913,6 @@ export const landingSections = {
           title={yml.heading}
           paragraph={yml.sub_heading}
         />
-
       </React.Fragment>
     );
   },
@@ -956,10 +950,9 @@ export const landingSections = {
   },
 
   overlaped: ({ session, pageContext, yml, data, index }) => {
-    const { heading, content, button, background, image } = yml
+    const { heading, content, button, background, image } = yml;
     return (
-      <React.Fragment key={index} >
-
+      <React.Fragment key={index}>
         <Overlaped
           landingTemplate
           heading={heading.text}
@@ -974,9 +967,9 @@ export const landingSections = {
   },
 
   cards_carousel: ({ session, pageContext, yml, data, index }) => {
-    const { heading, sub_heading, content, cards, button } = yml
+    const { heading, sub_heading, content, cards, button } = yml;
     return (
-      <React.Fragment key={index} >
+      <React.Fragment key={index}>
         <Div
           id="cards_carousel"
           width="100%"
@@ -1120,7 +1113,7 @@ export const landingSections = {
   who_is_hiring: ({ session, data, pageContext, yml, location, index }) => {
     let dataYml =
       data.allLandingYaml.edges.length !== 0 &&
-        data.allLandingYaml.edges[0].node?.who_is_hiring !== null
+      data.allLandingYaml.edges[0].node?.who_is_hiring !== null
         ? data.allLandingYaml.edges
         : data.allDownloadableYaml.edges;
 
@@ -1136,7 +1129,6 @@ export const landingSections = {
         margin_tablet="40px auto 100px auto"
         m_sm="0"
         p_xs="0"
-        
         margin_xs="60px 0 40px 0"
       >
         <OurPartners

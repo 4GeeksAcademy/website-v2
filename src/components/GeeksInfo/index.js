@@ -60,14 +60,13 @@ const GeeksInfo = ({ lang }) => {
         padding="15px 0 20px 0"
         margin_tablet="15px auto 76px auto"
         width_tablet="100%"
-
       >
         {content.heading}
       </H2>
 
       <Div maxWidth_tablet="1366px" margin="auto">
-        <GridContainerWithImage 
-          imageSide="left" 
+        <GridContainerWithImage
+          imageSide="left"
           columns_tablet="2"
           padding_tablet="0 40px"
           padding_md="0 80px"

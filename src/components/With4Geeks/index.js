@@ -78,10 +78,9 @@ export default ({
 
   return (
     <Fragment github="/components/with_4geeks">
-      
       {info?.header && (
-        <Grid 
-          margin="40px 5px" 
+        <Grid
+          margin="40px 5px"
           margin_tablet="40px auto 20px auto"
           maxWidth_tablet="1366px"
           gridTemplateColumns_tablet="repeat(14, 1fr)"
@@ -134,12 +133,15 @@ export default ({
           padding_tablet="0 40px"
           padding_md="0 80px"
           padding_lg="0"
-          
           //margin="0 10px 73px 10px"
           margin_tablet="0 auto 84px auto"
           maxWidth_md="1366px"
         >
-          <Div  gridColumn="1/15" width="100%" className="badge-slider hideOverflowX__">
+          <Div
+            gridColumn="1/15"
+            width="100%"
+            className="badge-slider hideOverflowX__"
+          >
             {locationFiltered.map((i, index) => {
               return (
                 <Div
@@ -232,13 +234,10 @@ export default ({
                     </Paragraph>
 
                     <Link>
-                      <H4 
-                        display="flex"
-                        fontWeigth="700"
-                        color={Colors.blue}
-                      >See Article</H4>
+                      <H4 display="flex" fontWeigth="700" color={Colors.blue}>
+                        See Article
+                      </H4>
                     </Link>
-
                   </Div>
                 </Div>
               );

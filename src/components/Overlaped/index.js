@@ -14,22 +14,21 @@ const Overlaped = ({
   content,
   button,
   background,
-  image
+  image,
 }) => {
-
   const data = useStaticQuery(graphql`
     {
-      allOverlapedYaml{
-        edges{
-          node{
+      allOverlapedYaml {
+        edges {
+          node {
             heading
             content
-            button{
+            button {
               text
               color
             }
             background
-            image{
+            image {
               src
             }
           }
@@ -39,10 +38,7 @@ const Overlaped = ({
   `);
 
   return (
-    <Div
-      maxWidth_tablet="1366px"
-      margin_tablet="100px auto"
-    >
+    <Div maxWidth_tablet="1366px" margin_tablet="100px auto">
       <Div
         display_xss="none"
         display_tablet="flex"
@@ -57,21 +53,12 @@ const Overlaped = ({
           gridTemplateColumns_tablet="1fr repeat(14, 1fr) 1fr"
           gridGap="0px"
         >
-          <Div
-            gridColumn="1 / 9"
-          >
-            <Img
-              src={image.src}
-              width="33.3em"
-              height="533px"
-            />
+          <Div gridColumn="1 / 9">
+            <Img src={image.src} width="33.3em" height="533px" />
           </Div>
 
-          <Div
-            gridColumn="9 / 17"
-            position="relative"
-          >
-            <Div width="100%" >
+          <Div gridColumn="9 / 17" position="relative">
+            <Div width="100%">
               <Img
                 src="/images/landing/vector-stroke.png"
                 width="114px"
@@ -112,12 +99,10 @@ const Overlaped = ({
                 position: "absolute",
                 right: "5%",
                 bottom: "0%",
-                zIndex: "1"
+                zIndex: "1",
               }}
             />
-
           </Div>
-
         </Grid>
 
         <Div
@@ -132,32 +117,22 @@ const Overlaped = ({
           background={Colors.white}
           boxShadow="20px 15px 0px 0px rgba(0,0,0,1)"
         >
-          <H2
-            textAlign="start"
-            lineHeight_tablet="36px"
-            margin="0 0 12px 0"
-          >
+          <H2 textAlign="start" lineHeight_tablet="36px" margin="0 0 12px 0">
             {heading}
           </H2>
-          {
-            content && /<\/?[a-z0-9]+>/g.test(content) ?
-              <Paragraph
-                textAlign="start"
-                margin="12px 0 0 0"
-                dangerouslySetInnerHTML={{ __html: content }}
-              />
-              : content ? (
-                <Paragraph
-                  textAlign="start"
-                  margin="12px 0 0 0"
-                >
-                  {content}
-                </Paragraph>
-              ) : null
-          }
+          {content && /<\/?[a-z0-9]+>/g.test(content) ? (
+            <Paragraph
+              textAlign="start"
+              margin="12px 0 0 0"
+              dangerouslySetInnerHTML={{ __html: content }}
+            />
+          ) : content ? (
+            <Paragraph textAlign="start" margin="12px 0 0 0">
+              {content}
+            </Paragraph>
+          ) : null}
 
-          {
-            button &&
+          {button && (
             <Button
               background={button.color}
               color={Colors.white}
@@ -165,15 +140,11 @@ const Overlaped = ({
             >
               {button.text}
             </Button>
-          }
+          )}
         </Div>
       </Div>
 
-
-
       {/* Version mobile */}
-
-
 
       <Div
         display_xss="flex"
@@ -212,7 +183,7 @@ const Overlaped = ({
             position: "absolute",
             right: "14%",
             bottom: "-25%",
-            zIndex: "1"
+            zIndex: "1",
           }}
         />
 
@@ -227,11 +198,7 @@ const Overlaped = ({
           background={Colors.white}
           boxShadow="20px 15px 0px 0px rgba(0,0,0,1)"
         >
-          <H2
-            textAlign="start"
-            lineHeight_tablet="36px"
-            margin="0 0 12px 0"
-          >
+          <H2 textAlign="start" lineHeight_tablet="36px" margin="0 0 12px 0">
             {heading}
           </H2>
           <Paragraph textAlign="start" margin="12px 0 0 0">
@@ -239,8 +206,7 @@ const Overlaped = ({
           </Paragraph>
         </Div>
       </Div>
-
-    </Div >
+    </Div>
   );
 };
 

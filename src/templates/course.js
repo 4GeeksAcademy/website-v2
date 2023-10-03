@@ -567,6 +567,7 @@ export const query = graphql`
                 content
                 link
                 link_text
+                icon
               }
             }
             heading

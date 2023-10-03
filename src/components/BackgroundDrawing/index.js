@@ -15,7 +15,7 @@ const Color = {
 const Figure = styled.div`
   z-index: ${(props) => props.zIndex || "-1"};
   display: ${(props) => props.display};
-  position: ${(props) => props.zIndex || "absolute"};
+  position: absolute;
   background-color: ${(props) => Color[props.color]};
   width: ${(props) => props.width};
   height: ${(props) => props.height};

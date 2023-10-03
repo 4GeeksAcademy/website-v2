@@ -23,8 +23,8 @@ const FillerStyles = styled.div`
 
 const weeks = [];
 for (let i = 1; i <= 16; i++) {
-  weeks.push(i.toString() + "sm.")
-};
+  weeks.push(i.toString() + "sm.");
+}
 
 const strings = {
   us: {
@@ -50,7 +50,7 @@ const ProgramDetails = (props) => {
     []
   );
 
-  const { title, sub_title, list } = props.details.about
+  const { title, sub_title, list } = props.details.about;
 
   useEffect(() => {
     const inter = setInterval(() => {
@@ -58,8 +58,8 @@ const ProgramDetails = (props) => {
         current.manual
           ? current
           : current.index < steps.length - 1
-            ? { index: current.index + 1, manual: false }
-            : { index: 0, manual: false }
+          ? { index: current.index + 1, manual: false }
+          : { index: 0, manual: false }
       );
     }, 2000);
     return () => clearInterval(inter);
@@ -82,26 +82,18 @@ const ProgramDetails = (props) => {
           margin_tablet="100px 0 0 0"
           margin="40px 20px 13px 20px"
         >
-          <H3
-            textAlign="start"
-          >
-            {title}
-          </H3>
-          {sub_title && /<\/?[a-z0-9]+>/g.test(sub_title) ?
+          <H3 textAlign="start">{title}</H3>
+          {sub_title && /<\/?[a-z0-9]+>/g.test(sub_title) ? (
             <Paragraph
               textAlign="start"
               lineHeight="26px"
               dangerouslySetInnerHTML={{ __html: sub_title }}
             />
-            :
-            <Paragraph
-              textAlign="start"
-              lineHeight="26px"
-            >
+          ) : (
+            <Paragraph textAlign="start" lineHeight="26px">
               {sub_title}
             </Paragraph>
-          }
-
+          )}
         </Div>
         <Div
           flexDirection="column"
@@ -113,7 +105,6 @@ const ProgramDetails = (props) => {
         >
           {list.map((item, index) => {
             return (
-
               <Div flexWrap="wrap">
                 <Div alignItems="start" margin="10px 0" key={index}>
                   <Icon icon={item.icon} width="20px" height="20px" />
@@ -124,26 +115,27 @@ const ProgramDetails = (props) => {
                     lineHeight="19px"
                     margin="0 0 0 9px"
                   >
-                    <strong style={{ fontWeight: "700" }}>{item.label}: </strong>
+                    <strong style={{ fontWeight: "700" }}>
+                      {item.label}:{" "}
+                    </strong>
                     {item.content}
                   </H4>
                 </Div>
-                {
-                  item.link_text && (
-                    <a
-                      href={item.link}
-                      style={{
-                        textAlign: "start",
-                        margin: "0 0 0 30px",
-                        textDecoration: "underline",
-                        fontFamily: "Lato",
-                        color: Colors.blue,
-                        fontSize: "16px",
-                      }}
-
-                    >{item.link_text}</a>
-                  )
-                }
+                {item.link_text && (
+                  <a
+                    href={item.link}
+                    style={{
+                      textAlign: "start",
+                      margin: "0 0 0 30px",
+                      textDecoration: "underline",
+                      fontFamily: "Lato",
+                      color: Colors.blue,
+                      fontSize: "16px",
+                    }}
+                  >
+                    {item.link_text}
+                  </a>
+                )}
               </Div>
             );
           })}
@@ -151,12 +143,7 @@ const ProgramDetails = (props) => {
       </Grid>
 
       <Div flexWrap="wrap" margin_xs="20px" margin_tablet="100px 0 0 0">
-        <H2
-          lineHeight="36px"
-        >
-
-          {props.heading || props.details.heading}
-        </H2>
+        <H2 lineHeight="36px">{props.heading || props.details.heading}</H2>
         <Paragraph
           padding="20px 0 0 0"
           lineHeight_xs="22px"
@@ -185,7 +172,6 @@ const ProgramDetails = (props) => {
             height="auto"
             borderBottom_tablet="1px solid black"
             gridColumn_tablet="1/15"
-
             display="none"
             display_md="block"
           >
@@ -205,7 +191,9 @@ const ProgramDetails = (props) => {
                     flexDirection={`column`}
                     alignItems={`center`}
                     backgroundHover={Colors.grayBrown}
-                    background={selected.index === index ? Colors.grayBrown : null}
+                    background={
+                      selected.index === index ? Colors.grayBrown : null
+                    }
                     padding={"10px"}
                     borderRadius={"3px"}
                     display="flex"
@@ -231,10 +219,7 @@ const ProgramDetails = (props) => {
                 );
               })}
             </Div>
-            <Div
-              display_xs="none"
-              display_tablet="flex"
-            >
+            <Div display_xs="none" display_tablet="flex">
               <ContainerStyle>
                 <FillerStyles
                   completed={
@@ -248,21 +233,21 @@ const ProgramDetails = (props) => {
               padding="32px"
               display_xs="none"
               display_tablet="flex"
-            >{
-                weeks.map((sm, index) => (
-                  <H4
-                    margin="0 5px"
-                    fontSize="15px"
-                    lineHeight="22px"
-                    color={Colors.darkGray}
-                  >
-                    {sm}
-                  </H4>))
-              }
+            >
+              {weeks.map((sm, index) => (
+                <H4
+                  margin="0 5px"
+                  fontSize="15px"
+                  lineHeight="22px"
+                  color={Colors.darkGray}
+                >
+                  {sm}
+                </H4>
+              ))}
             </Div>
             <Div
               display_tablet="flex"
-              display_xs="flex"  // aqui
+              display_xs="flex" // aqui
               flexDirection_xs="column"
               flexDirection_md="row"
               margin_xss="20px"
@@ -358,7 +343,12 @@ const ProgramDetails = (props) => {
                       ))}
                   </Div>
                 </Div>
-                <Div margin="0 10px 0 0" width="100%" height_md="50px" height_xs="auto">
+                <Div
+                  margin="0 10px 0 0"
+                  width="100%"
+                  height_md="50px"
+                  height_xs="auto"
+                >
                   <Div>
                     <Icon icon="clock" width="46px" height="46px" />
                   </Div>

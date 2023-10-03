@@ -48,14 +48,8 @@ export default ({ icon, title, content }) => {
         padding_xs="0 10%"
         width="100%"
       >
-        <Icon 
-          icon={icon} 
-          width="94" 
-          height="98" 
-          margin="0 0 20px 0" 
-        />
-        {
-          title &&
+        <Icon icon={icon} width="94" height="98" margin="0 0 20px 0" />
+        {title && (
           <H2
             type="h2"
             fontSize="16px"
@@ -68,9 +62,8 @@ export default ({ icon, title, content }) => {
           >
             {title}
           </H2>
-        }
-        {
-          content &&
+        )}
+        {content && (
           <Paragraph
             fontSize="14px"
             lineHeight="17px"
@@ -82,8 +75,7 @@ export default ({ icon, title, content }) => {
           >
             {content}
           </Paragraph>
-        }
-
+        )}
       </Div>
     </Div>
   );

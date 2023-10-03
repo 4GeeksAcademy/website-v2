@@ -92,8 +92,8 @@ const Landing = (props) => {
           yml.navbar
             ? yml.navbar.buttonText
             : pageContext.lang === "us"
-              ? "Apply"
-              : "Solicita una plaza"
+            ? "Apply"
+            : "Solicita una plaza"
         }
         buttonUrl={yml.navbar?.buttonUrl}
         logoUrl={yml.navbar?.logoUrl}
@@ -177,8 +177,12 @@ const Landing = (props) => {
           width="100%"
           padding_tablet="0"
           style={{ position: "relative" }}
-          gridColumn_tablet={applySchollarship?.imageSide === "right" ? "8/15" : "1/7"}
-          gridColumn_lg={applySchollarship?.imageSide === "right" ? "8/15" : "1/8"}
+          gridColumn_tablet={
+            applySchollarship?.imageSide === "right" ? "8/15" : "1/7"
+          }
+          gridColumn_lg={
+            applySchollarship?.imageSide === "right" ? "8/15" : "1/8"
+          }
           gridRow_tablet="1/1"
         >
           {applySchollarship?.imageSide === "right" ? (
@@ -221,7 +225,7 @@ const Landing = (props) => {
               applySchollarship
                 ? applySchollarship?.image.childImageSharp.gatsbyImageData
                 : data.allPageYaml.edges[0].node.list[0].image.childImageSharp
-                  .gatsbyImageData
+                    .gatsbyImageData
             }
             bgSize="contain"
             alt="geekforce image"
@@ -232,12 +236,20 @@ const Landing = (props) => {
           margin="0"
           justifyContent_tablet="start"
           padding="0"
-          padding_tablet={applySchollarship?.imageSide === "right" ? "0 20px 0 40px" : "0 40px 0 20px"}
+          padding_tablet={
+            applySchollarship?.imageSide === "right"
+              ? "0 20px 0 40px"
+              : "0 40px 0 20px"
+          }
           // gridArea_tablet={
           //   applySchollarship?.imageSide === "right" ? "1/1/1/6" : "1/7/1/14"
           // }
-          gridColumn_tablet={applySchollarship?.imageSide === "right" ? "1/7" : "8/15"}
-          gridColumn_lg={applySchollarship?.imageSide === "right" ? "1/8" : "8/15"}
+          gridColumn_tablet={
+            applySchollarship?.imageSide === "right" ? "1/7" : "8/15"
+          }
+          gridColumn_lg={
+            applySchollarship?.imageSide === "right" ? "1/8" : "8/15"
+          }
           gridRow_tablet="1/1"
         >
           <Div
@@ -336,7 +348,6 @@ export const query = graphql`
             }
             phone {
               text
-
             }
           }
           navbar {
@@ -357,10 +368,6 @@ export const query = graphql`
             text
             bullets
             styles
-            
-
-
-
           }
           badges {
             position
@@ -409,11 +416,10 @@ export const query = graphql`
               }
             }
           }
-          
+
           in_the_news {
             heading
             position
-            
           }
           rating_reviews {
             position
@@ -506,9 +512,8 @@ export const query = graphql`
               src
               style
               link
-              
             }
-            programs{
+            programs {
               title
               sub_title
               icon
@@ -538,21 +543,21 @@ export const query = graphql`
               font_size
               path
             }
-            bullets{
+            bullets {
               heading
               text
               icon
             }
-            cards{
-              image{
+            cards {
+              image {
                 src
                 style
               }
-              heading{
+              heading {
                 text
                 font_size
               }
-              button{
+              button {
                 text
               }
             }
@@ -605,15 +610,9 @@ export const query = graphql`
             position
             heading
             paragraph
-            
+
             total_rows
           }
-          
-
-
-
-
-
         }
       }
     }
@@ -698,7 +697,7 @@ export const query = graphql`
               }
             }
           }
-          
+
           in_the_news {
             heading
             position
@@ -759,7 +758,7 @@ export const query = graphql`
               }
             }
           }
-          
+
           why_python {
             position
             heading
@@ -795,7 +794,7 @@ export const query = graphql`
               style
               link
             }
-            programs{
+            programs {
               title
               sub_title
               icon
@@ -818,7 +817,7 @@ export const query = graphql`
               text
               font_size
             }
-            bullets{
+            bullets {
               heading
               text
               icon

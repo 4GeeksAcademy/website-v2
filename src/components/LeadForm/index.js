@@ -380,7 +380,6 @@ const LeadForm = ({
                 padding={headerImage && "0 10% 0 0"}
                 fontWeight="700"
                 width="auto"
-
                 textAlign={titleTextAlign || "left"}
                 margin={
                   landingTemplate
@@ -486,12 +485,13 @@ const LeadForm = ({
                   options={selectLocation}
                   placeholder={locationSelector.place_holder}
                   valid={true}
-                  onChange={(selected, valid) =>
+                  onChange={(selected, valid) => {
                     setVal({
                       ...formData,
                       utm_location: { value: selected.value, valid },
-                    })
-                  }
+                    });
+                    setLocation(selected.value);
+                  }}
                 />
               </Div>
             )}
@@ -530,11 +530,10 @@ const LeadForm = ({
                   width: "24px",
                   height: "24px",
                   top: "10px",
-                  left: "7px"
+                  left: "7px",
                 }}
               />
               <Paragraph fontSize="11px" margin="5px 0 0 5px" textAlign="left">
-
                 {yml.consent.message}
                 <a
                   target="_blank"
@@ -562,7 +561,6 @@ const LeadForm = ({
                 padding="10px 0 0 0"
                 width="100%"
               >
-
                 <Button
                   //variant="full"
                   type="submit"
@@ -583,7 +581,6 @@ const LeadForm = ({
                       : Colors.white
                   }
                   disabled={formStatus.status === "loading" ? true : false}
-
                 >
                   {formStatus.status === "loading" ? "Loading..." : sendLabel}
                 </Button>

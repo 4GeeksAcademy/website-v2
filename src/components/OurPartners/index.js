@@ -1,7 +1,7 @@
 import React from "react";
 import { Div, GridContainer, Grid } from "../Sections";
 import { Colors } from "../Styling";
-import {H1, H2, Paragraph } from "../Heading";
+import { H1, H2, Paragraph } from "../Heading";
 import { Link } from "gatsby";
 import { smartRedirecting } from "../../utils/utils.js";
 import Fragment from "../Fragment";
@@ -12,9 +12,9 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 const Title_Paragraph = (props) => {
   return (
     <>
-      <Grid 
+      <Grid
         maxWidth="1366px"
-        margin="0 auto 20px auto" 
+        margin="0 auto 20px auto"
         background={props.background}
         containerColumns_tablet="1fr repeat(12, 1fr) 1fr"
       >
@@ -73,8 +73,7 @@ const Images_With_Slider = (props) => {
         className="badge-slider"
         justifyContent="between"
         margin="0 0 50px 0"
-      > 
-
+      >
         {props.images.map((l, i) => {
           return (
             <GatsbyImage
@@ -141,7 +140,7 @@ const Images_Centered = (props) => {
       background={Colors.white}
       padding="25px 0 0 0"
       margin="0 0 50px 0"
-    > 
+    >
       {props.images.map((l, i) => {
         return (
           <Div
