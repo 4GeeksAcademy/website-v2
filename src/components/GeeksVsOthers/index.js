@@ -108,7 +108,7 @@ const GeeksVsOthers = (props) => {
               textAlign="left"
               fontSize="24px"
               fontWeight="900"
-              lineHeight="19px"
+              lineHeight="28px"
               color={Colors.darkGray}
             >
               {geeks.titles.featured}
@@ -126,7 +126,7 @@ const GeeksVsOthers = (props) => {
               textAlign="left"
               fontSize="24px"
               fontWeight="900"
-              lineHeight="19px"
+              lineHeight="28px"
               color={Colors.darkGray}
             >
               {geeks.titles.at_geeks}
@@ -144,7 +144,7 @@ const GeeksVsOthers = (props) => {
               textAlign="left"
               fontSize="24px"
               fontWeight="900"
-              lineHeight="19px"
+              lineHeight="28px"
               color={Colors.darkGray}
             >
               {geeks.titles.average}
