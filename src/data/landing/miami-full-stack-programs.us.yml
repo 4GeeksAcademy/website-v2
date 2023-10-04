@@ -136,11 +136,12 @@ alumni_projects:
 components:
   - name: passion
     position: 6
+    background: "#C7F3FD"
     layout: two_column_right
     proportions: [6, 6]
     image:
       style: '{ "backgroundSize": "contain" }'
-      src: "/images/why-4geeks-academy-preview.png"
+      src: "/images/landing/why-4geeks-academy-preview.png"
       link: "https://www.switchup.org/bootcamps/4geeks-academy"
     video: "SixRm6R8rc0"
     heading:
@@ -151,22 +152,25 @@ components:
       font_size: ["16px"]
   - name: top_coding_bootcamp
     position: 5
+    background: "#F5F5F5"
     layout: two_column_left
     proportions: [4, 8]
     image:
       style: '{ "backgroundSize": "contain" }'
       src: "/images/badges/Course-Report-Badge-2023.png"
       link: "https://www.coursereport.com/schools/4geeks-academy"
-    heading:
+    content:
+      style: '{ "line-height": "30px" }'
       text:
         "We have been selected as one of the Top Coding Bootcamps globally for 3 years in a row"
-        #xl      lg     md     sm    xs
-      font_size: ["40px", "40px", "40px", "40px", "40px"]
+                    #xl      lg     md     sm       xs
+      font_size: ["30px", "30px", "30px", "30px", "30px"]
   - name: geeksinfo
     position: 4
     layout: geeksInfo
   - name: working_in_tech
-    position: 7
+    position: 4
+    background: "#F5F5F5"
     proportions: [4, 8]
     layout: two_column_left
     image:

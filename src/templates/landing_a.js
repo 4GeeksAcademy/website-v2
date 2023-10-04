@@ -540,6 +540,7 @@ export const query = graphql`
             }
             content {
               text
+              style
               font_size
               path
             }

@@ -101,6 +101,7 @@ const Side = ({
       ? sub_heading.font_size
       : [];
   const [c_xl, c_lg, c_md, c_sm, c_xs] = content ? content.font_size : [];
+  if(content) console.log(`content.style for ${content.text}`, content.style)
   return (
     <Div
       flexDirection_tablet="column"
@@ -215,7 +216,7 @@ const Side = ({
           fontSize_sm={c_sm}
           fonSize_md={c_md}
           fontSize_xs={c_xs}
-          fontHeight="30px"
+          style={content.style ? JSON.parse(content.style) : null}
           dangerouslySetInnerHTML={{ __html: content.text }}
         />
       ) : (
@@ -232,6 +233,7 @@ const Side = ({
             fontSize_sm={c_sm}
             fonSize_md={c_md}
             fontSize_xs={c_xs}
+            style={content.style ? JSON.parse(content.style) : null}
             fontHeight="30px"
           >
             {p}
@@ -543,6 +545,7 @@ export const Columns = ({ columns, proportions, swipable }) => {
             lineHeight="30px"
             fontWeight="700"
             color="black"
+            style={c.content.style ? JSON.parse(c.content.style) : null}
             dangerouslySetInnerHTML={{ __html: c.content.text }}
           />
         </Div>

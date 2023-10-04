@@ -542,6 +542,7 @@ export const query = graphql`
             background
             content {
               text
+              style
               font_size
               path
             }
