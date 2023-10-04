@@ -180,9 +180,9 @@ components:
           text: "Low-income veterans"
           style: '{ "fontWeight": "700" }'
           font_size: "15px"
-        button:
-          text: "See more"
-          link: /
+        # button:
+        #   text: "See more"
+        #   link: /
       - image:
           style: '{ "backgroundSize": "cover", "minHeight": "230px", "borderRadius": "80px" }'
           src: "/images/low-income-female-heads-of-household.png"
@@ -248,7 +248,7 @@ components:
     
   - name: pay
     position: 11
-    background: "veryLightBlue2"
+    # background: "veryLightBlue2"
     layout: two_column_right
     proportions: [6, 6]
     image:
@@ -256,20 +256,30 @@ components:
       src: "/static/images/staff/luisa.png"
     video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
     heading:
+      style: '{ "margin-top": "0px" }'
       text: "You don't need to be worried about payments. Only about your career ahead"
       font_size: ["30px", "30px", "30px", "30px", "30px"]
+    # sub_heading:
+    #   text: "We changed the game by offering the program with no costs associated. You will need to find a job to make the program worth it, and to keep the program alive for new students."
     sub_heading:
-      text: "We changed the game by offering the program with no costs associated. You will need to find a job to make the program worth it, and to keep the program alive for new students."
       font_size: ["18px", "18px", "18px", "18px", "18px"]
-    button:
-    content:
+      style: '{ "font-weight": "100" }'
       text: |
-        <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">1. Enroll in the program.</strong></h2>
-        <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">2. Learn software development skills.</strong></h2>
-        <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">3. Graduate and complete your projects.</strong></h2>
-        <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">4. Land a job.</strong></h2>
-        <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">5. Keep building a career you love.</strong></h2>
-      font_size: ["16px"]
+        We changed the game by offering the program with no costs associated. You will need to find a job to make the program worth it, and to keep the program alive for new students.
+        
+    bullets:
+      item_style: '{ "padding": 0, "font-weight": "100" }'
+      items:
+        - text: Enroll in the program.
+          icon: null
+        - text: Learn software development skills.
+          icon: null
+        - text: Graduate and complete your projects.
+          icon: null
+        - text: Land a job.
+          icon: null
+        - text: Keep building a career you love.
+          icon: null
 
   - name: testimonials
     position: 9
@@ -308,7 +318,7 @@ components:
     proportions: [6, 6]
     background: "veryLightBlue2"
     image:
-      style: '{ "backgroundSize": "contain", "maxHeight": "270px" }'
+      style: '{ "backgroundSize": "contain", "maxHeight": "150px" }'
       src: "/images/landing/miamitech-logo.png"
     heading:
       text: "The Miami Tech Coalition and 4Geeks Academy Mission" 

@@ -170,7 +170,6 @@ const ProgramDetails = (props) => {
             margin="0 0 0 0"
             minHeight="475px"
             height="auto"
-            borderBottom_tablet="1px solid black"
             gridColumn_tablet="1/15"
             display="none"
             display_md="block"
