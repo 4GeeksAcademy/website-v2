@@ -101,7 +101,10 @@ const Side = ({
       ? sub_heading.font_size
       : [];
   const [c_xl, c_lg, c_md, c_sm, c_xs] = content ? content.font_size : [];
-  if(content) console.log(`content.style for ${content.text}`, content.style)
+
+  let subHeadingStyles = {}
+  if(sub_heading?.style) subHeadingStyles = JSON.parse(sub_heading.style)
+  
   return (
     <Div
       flexDirection_tablet="column"
@@ -119,6 +122,7 @@ const Side = ({
           fontSize_md={h_md || "30px"}
           fontSize_sm={h_sm}
           margin="30px 0 20px 0"
+          style={heading.style ? JSON.parse(heading.style) : null}
         >
           {heading.text}
         </H2>
@@ -133,16 +137,15 @@ const Side = ({
           fonSize_md={sh_md}
           fontSize_xs={sh_xs}
           fontHeight="30px"
-          fontWeight="700"
-          fontWeight_tablet="700"
-          fontWeight_xs="700"
+          fontWeight={subHeadingStyles["font-weight"] || 700}
           opacity="1"
+          style={sub_heading.style ? JSON.parse(sub_heading.style) : null}
         >
           {sub_heading.text}
         </Paragraph>
       )}
 
-      {Array.isArray(bullets) && (
+      {Array.isArray(bullets?.items) && (
         <Div
           display="grid"
           gridAutoFlow="dense"
@@ -151,10 +154,11 @@ const Side = ({
           margin={sub_heading ? "16px 0 16px 0" : "0 0 16px 0"}
           gridGap="24px"
         >
-          {bullets.map((bullet, index) => {
+          {bullets.items?.map((bullet, index) => {
             return (
               <Div
                 key={index}
+
                 gridColumn_tablet="1/1"
                 height="auto"
                 alignItems="center"
@@ -164,6 +168,7 @@ const Side = ({
                 gridTemplateColumns="100%"
                 //gridAutoRows="auto"
                 gridGap="0"
+                style={bullets.item_style ? JSON.parse(bullets.item_style) : null}
               >
                 <Div
                   display="flex"
@@ -174,23 +179,36 @@ const Side = ({
                   <Icon
                     icon={bullet.icon || "check"}
                     width="13px"
+                    display="inline"
                     color={Colors.blue}
                     fill={Colors.yellow}
                     style={{ strokeWidth: "2px" }}
                   />
-                  <H2
-                    type="h3"
-                    textAlign="left"
-                    fontSize="15px"
-                    fontWeight="900"
-                    lineHeight="19px"
-                    textTransform="uppercase"
-                    padding="0 0 0 5px"
-                  >
-                    {bullet.heading}
-                  </H2>
+                  {bullet.heading ?
+                    <H2
+                      type="h3"
+                      textAlign="left"
+                      fontSize="15px"
+                      fontWeight="900"
+                      lineHeight="19px"
+                      textTransform="uppercase"
+                      padding="0 0 0 5px"
+                    >
+                      {bullet.heading}
+                    </H2>
+                    :
+                    <Paragraph
+                      textAlign="left"
+                      fontSize="18px"
+                      fontWeight="400"
+                      lineHeight="22px"
+                      margin="0px 0px 0px 5px"
+                    >
+                      {bullet.text}
+                    </Paragraph>
+                    }
                 </Div>
-                <Paragraph
+                {bullet.heading && <Paragraph
                   textAlign="left"
                   fontSize="15px"
                   fontWeight="400"
@@ -198,7 +216,7 @@ const Side = ({
                   margin="12px 0 0 0"
                 >
                   {bullet.text}
-                </Paragraph>
+                </Paragraph>}
               </Div>
             );
           })}

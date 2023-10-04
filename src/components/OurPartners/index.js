@@ -78,7 +78,12 @@ const Images_With_Slider = (props) => {
           return (
             <GatsbyImage
               key={i}
-              style={{ height: "80px", minWidth: "120px", maxWidth:"150px", margin: "0 15px" }}
+              style={{
+                height: "80px",
+                minWidth: "120px",
+                maxWidth: "150px",
+                margin: "0 15px",
+              }}
               imgStyle={{ objectFit: "contain" }}
               alt={l.name}
               image={getImage(l.image.childImageSharp.gatsbyImageData)}
@@ -101,7 +106,12 @@ const Images_With_Marquee = (props) => {
         <a href={l.link} rel={!follow ? "nofollow" : ""}>
           <GatsbyImage
             key={i}
-            style={{ minWidth: "120px", maxWidth:"150px", border: 0, cursor: "pointer" }}
+            style={{
+              minWidth: "120px",
+              maxWidth: "150px",
+              border: 0,
+              cursor: "pointer",
+            }}
             height="80px"
             objectFit="contain"
             alt={l.name}
@@ -114,7 +124,7 @@ const Images_With_Marquee = (props) => {
       ) : (
         <GatsbyImage
           key={i}
-          style={{ minWidth: "120px", maxWidth:"150px", border: 0 }}
+          style={{ minWidth: "120px", maxWidth: "150px", border: 0 }}
           height="80px"
           objectFit="contain"
           alt={l.name}
@@ -152,7 +162,7 @@ const Images_Centered = (props) => {
           >
             <GatsbyImage
               key={i}
-              style={{ height: "60px", minWidth: "90px" , maxWidth:"150px"}}
+              style={{ height: "60px", minWidth: "90px", maxWidth: "150px" }}
               imgStyle={{ objectFit: "contain" }}
               alt={l.name}
               fluid={l.image.childImageSharp.fluid}

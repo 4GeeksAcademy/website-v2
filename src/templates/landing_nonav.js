@@ -529,15 +529,20 @@ export const query = graphql`
             heading {
               text
               font_size
+              style
             }
             sub_heading {
               text
+              style
               font_size
             }
             bullets {
-              heading
-              text
-              icon
+              item_style
+              items{
+                heading
+                text
+                icon
+              }
             }
             background
             content {
