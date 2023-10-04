@@ -140,7 +140,7 @@ components:
     proportions: [6, 6]
     image:
       style: '{ "backgroundSize": "contain" }'
-      src: "/images/badges/switchup-badge-2023.png"
+      src: "/images/why-4geeks-academy-preview.png"
       link: "https://www.switchup.org/bootcamps/4geeks-academy"
     video: "SixRm6R8rc0"
     heading:
