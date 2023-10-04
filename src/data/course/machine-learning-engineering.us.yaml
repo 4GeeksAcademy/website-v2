@@ -82,6 +82,7 @@ details:
         icon: "book"
       - label: "Class size"
         content: "12 people max"
+        icon: "laptop"
       - label: "Certificate"
         content: "Our certificates are recognized by multiple organizations."
         link_text: "See example"

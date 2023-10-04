@@ -39,11 +39,15 @@ export const Colors = {
   blue: "#00A0DA",
   lightBlue: "#BBEAFC",
   lightBlue2: "rgba(199, 243, 253, 0.5)",
+  blue2: "#0097CD",
   veryLightBlue: "#C7F3FD",
   veryLightBlue2: "#E3F9FE",
+  grayBrown: "#333333",
+  gray2: "#A4A4A466",
   gray: "#898a8b",
   gray3: "#828282",
   verylightGray: "#F5F5F5",
+  verylightGray2: "#FBFBFB",
   lightGray: "#ebebeb",
   lightGreen: "#c4f7b7",
   green: "#20630d",
@@ -58,6 +62,7 @@ export const Colors = {
   white: "#FFFFFF",
   red: "red",
   lightRed: "#ffcdc9",
+  whitePink: "#FFF1D1",
   shadow: "0px 0px 16px rgba(0, 0, 0, 0.15)",
 };
 
@@ -171,11 +176,13 @@ const StyledImage = styled.div`
   background-position: ${(props) => props.position || "center center"};
   background-color: ${(props) => props.backgroundColor};
   width: ${(props) => props.width};
+  border: ${(props) => props.border};
   height: ${(props) => props.height};
   min-height: ${(props) => props.minHeight};
   max-height: ${(props) => (props.maxHeight ? props.maxHeight : "none")};
   min-width: ${(props) => props.minWidth};
   margin: ${(props) => props.margin};
+  box-shadow: ${(props) => props.boxShadow};
   @media ${Break.sm} {
     height: ${(props) => props.h_sm};
     min-height: ${(props) => props.minHeight_sm};
@@ -254,7 +261,6 @@ export const BackgroundSection = ({
       // fadeIn={false}
       className={className}
       borderRadius={borderRadius}
-      // fluid={image}
       {...bgImage}
       preserveStackingContext
       style={style}

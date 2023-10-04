@@ -130,6 +130,38 @@ who_is_hiring:
 
 # Possible layours: [two_column_left_image, two_column_right_image]
 components:
+  - name: "whatever"
+    layout: choose_your_program
+    position: 5
+    heading:
+      text: Nuestras Modalidades
+    content:
+      text: Programa Full Stack Developer en Modalidad Part Time y Full Time
+      font_size: ["16px"]
+      path: ""
+    programs:
+    - title: "Part Time"
+      sub_title: "18 semanas"
+      icon: "fullstack_2"
+      description: |
+        De cero a tener tu primer trabajo como Full Stack Developer, con una duración de 18 semanas, con clases 3 veces por semana, compatible con horario laboral o de estudios. 
+
+        Precio: 3.450.000 CLP
+      
+      text_link: Obtener más información
+      link: "#top" # moves to start position
+      
+    - title: "Full Time"
+      sub_title: "9 semanas"
+      icon: "fullstack_2"
+      description: |
+        Programa intensivo de 9 semanas, con clases de lunes a viernes durante todo el día, para vivir una experiencia inmersiva en el mundo del código.
+
+        Precio: 3.800.000 CLP
+        
+      text_link: Obtener más información
+      link: "#top"
+
   - name: geeksinfo
     position: 3
     layout: geeksInfo
@@ -172,30 +204,4 @@ components:
       text: "Nuestro programa está basado en el uso de Python y Javascript. ¿La razón? En el mercado laboral JavaScript tiene 26 veces más vacantes de trabajo que Ruby on Rails y Python te permite acceder a distintas áreas del mundo de la programación. Otras herramientas que también aprenderás a usar en nuestro programa son: HTML5, CSS3, React, Flask, etc."
       font_size: ["16px"]
 
-choose_your_program:
-  position: 5
-  title: Nuestras Modalidades
-  paragraph: Programa Full Stack Developer en Modalidad Part Time y Full Time
-  programs:
-  - title: "Part Time"
-    sub_title: "18 semanas"
-    icon: "fullstack"
-    description: |
-      De cero a tener tu primer trabajo como Full Stack Developer, con una duración de 18 semanas, con clases 3 veces por semana, compatible con horario laboral o de estudios. 
-
-      Precio: 3.450.000 CLP
-    
-    text_link: Obtener más información
-    link: "#top" # moves to start position
-    
-  - title: "Full Time"
-    sub_title: "9 semanas"
-    icon: "fullstack"
-    description: |
-      Programa intensivo de 9 semanas, con clases de lunes a viernes durante todo el día, para vivir una experiencia inmersiva en el mundo del código.
-
-      Precio: 3.800.000 CLP
-      
-    text_link: Obtener más información
-    link: "#top"
 

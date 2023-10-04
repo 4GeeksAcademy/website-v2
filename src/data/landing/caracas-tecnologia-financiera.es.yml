@@ -148,8 +148,7 @@ components:
       font_size: ["30px", "30px", "30px", "30px", "30px"]
     sub_heading:
       text: "Si formas parte de Tecnología Financiera ahora también podrás ser uno de nuestros geeks.
-
-En 4Geeks Academy sabemos lo que buscas y queremos darte todas las herramientas necesarias para que puedas aprender a programar y logres cambiar tu vida por completo."
+            En 4Geeks Academy sabemos lo que buscas y queremos darte todas las herramientas necesarias para que puedas aprender a programar y logres cambiar tu vida por completo."
       font_size: ["16px", "16px", "16px", "16px", "16px"]
     content:
       font_size: ["16px"]
