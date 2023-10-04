@@ -538,7 +538,7 @@ export const query = graphql`
             }
             bullets {
               item_style
-              items{
+              items {
                 heading
                 text
                 icon

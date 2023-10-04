@@ -102,9 +102,9 @@ const Side = ({
       : [];
   const [c_xl, c_lg, c_md, c_sm, c_xs] = content ? content.font_size : [];
 
-  let subHeadingStyles = {}
-  if(sub_heading?.style) subHeadingStyles = JSON.parse(sub_heading.style)
-  
+  let subHeadingStyles = {};
+  if (sub_heading?.style) subHeadingStyles = JSON.parse(sub_heading.style);
+
   return (
     <Div
       flexDirection_tablet="column"
@@ -158,7 +158,6 @@ const Side = ({
             return (
               <Div
                 key={index}
-
                 gridColumn_tablet="1/1"
                 height="auto"
                 alignItems="center"
@@ -168,7 +167,9 @@ const Side = ({
                 gridTemplateColumns="100%"
                 //gridAutoRows="auto"
                 gridGap="0"
-                style={bullets.item_style ? JSON.parse(bullets.item_style) : null}
+                style={
+                  bullets.item_style ? JSON.parse(bullets.item_style) : null
+                }
               >
                 <Div
                   display="flex"
@@ -184,7 +185,7 @@ const Side = ({
                     fill={Colors.yellow}
                     style={{ strokeWidth: "2px" }}
                   />
-                  {bullet.heading ?
+                  {bullet.heading ? (
                     <H2
                       type="h3"
                       textAlign="left"
@@ -196,7 +197,7 @@ const Side = ({
                     >
                       {bullet.heading}
                     </H2>
-                    :
+                  ) : (
                     <Paragraph
                       textAlign="left"
                       fontSize="18px"
@@ -206,17 +207,19 @@ const Side = ({
                     >
                       {bullet.text}
                     </Paragraph>
-                    }
+                  )}
                 </Div>
-                {bullet.heading && <Paragraph
-                  textAlign="left"
-                  fontSize="15px"
-                  fontWeight="400"
-                  lineHeight="22px"
-                  margin="12px 0 0 0"
-                >
-                  {bullet.text}
-                </Paragraph>}
+                {bullet.heading && (
+                  <Paragraph
+                    textAlign="left"
+                    fontSize="15px"
+                    fontWeight="400"
+                    lineHeight="22px"
+                    margin="12px 0 0 0"
+                  >
+                    {bullet.text}
+                  </Paragraph>
+                )}
               </Div>
             );
           })}
