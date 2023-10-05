@@ -185,7 +185,7 @@ export default ({
                     height="100%"
                     flexDirection="column"
                     gap="16px"
-                    boxShadow="0px 2px 5px 0px rgba(0,0,0,0.1)"
+                    boxShadow="inset 0px 0px 5px 0px #0000001A"
                   >
                     <Link to={i.footer.image_link}>
                       <RoundImage
@@ -233,11 +233,17 @@ export default ({
                       {i.description}
                     </Paragraph>
 
-                    <Link>
-                      <H4 display="flex" fontWeigth="700" color={Colors.blue}>
-                        See Article
-                      </H4>
-                    </Link>
+                    {i.footer.text_link != "" &&
+                      <Link to={i.footer.text_link}>
+                        <H4 display="flex" 
+                          fontWeigth="700" 
+                          color={Colors.blue} 
+                          // textDecoration="underline"
+                        >
+                          {i.footer.text}
+                        </H4>
+                      </Link>
+                    }
                   </Div>
                 </Div>
               );
