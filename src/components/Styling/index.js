@@ -476,6 +476,7 @@ export const Button = styled(SmartButton)`
   }
   @media ${Devices.lg} {
     font-size: ${(props) => props.fontSize_lg};
+    width: ${(props) => props.width_lg};
   }
   @media ${Devices.xl} {
   }
