@@ -279,7 +279,7 @@ const Landing = (props) => {
                 padding="0px 20px"
                 // textShadow="0px 0px 4px black"
                 textAlign="left"
-                color={Colors.white}
+                
                 dangerouslySetInnerHTML={{ __html: yml.features.text }}
               />
             )}

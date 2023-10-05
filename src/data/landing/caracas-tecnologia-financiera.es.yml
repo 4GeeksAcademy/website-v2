@@ -9,7 +9,7 @@ meta_info:
   image: "/images/bg/main-bg.jpg"
   keywords: "Bootcamp de programación, Bootcamp de python, Bootcamp de javascript, Bootcamp de full stack, Bootcamp, 4Geeks Academy"
 
-  template: "landing_nonav" # <--- choose your landing template
+  template: "landing_a" # <--- choose your landing template
   redirects: # <--- URL redirections to avoid 404 errors
     []
 
@@ -134,8 +134,8 @@ components:
     heading:
       text:
         "Tenemos 3 años consecutivos siendo seleccionados como uno de los mejores coding bootcamps del mundo"
-        #xl      lg     md     sm    xs
-      font_size: ["40px", "40px", "40px", "40px", "40px"]
+                      #xl      lg     md     sm    xs
+      font_size: ["38px", "36px", "32px", "30px", "30px"]
   - name: alianza
     position: 2
     layout: two_column_left
