@@ -261,8 +261,7 @@ const Location = ({ data, pageContext, yml }) => {
           content={data.allJobGuaranteeSmallYaml.edges[0].node}
         />
       )}
-      {ymlTwoColumnsCampus  && (
-        
+      {ymlTwoColumnsCampus && (
         <Div
           id="two_column_right"
           flexDirection="column"
@@ -271,23 +270,25 @@ const Location = ({ data, pageContext, yml }) => {
           margin="auto"
           background={Colors[ymlTwoColumnsCampus.background]}
         >
-          <Div maxWidth="1366px" margin="auto" > 
-          <TwoColumn
-            right={{ image: ymlTwoColumnsCampus.image, video: ymlTwoColumnsCampus.video }}
-            left={{
-              heading: ymlTwoColumnsCampus.heading,
-              sub_heading: ymlTwoColumnsCampus.sub_heading,
-              bullets: ymlTwoColumnsCampus.bullets,
-              content: ymlTwoColumnsCampus.content,
-              button: ymlTwoColumnsCampus.button,
-              padding_tablet: "20px",
-              gap_tablet: "40px",
-            }}
-            proportions={ymlTwoColumnsCampus.proportions}
-            session={session}
-          />
+          <Div maxWidth="1366px" margin="auto">
+            <TwoColumn
+              right={{
+                image: ymlTwoColumnsCampus.image,
+                video: ymlTwoColumnsCampus.video,
+              }}
+              left={{
+                heading: ymlTwoColumnsCampus.heading,
+                sub_heading: ymlTwoColumnsCampus.sub_heading,
+                bullets: ymlTwoColumnsCampus.bullets,
+                content: ymlTwoColumnsCampus.content,
+                button: ymlTwoColumnsCampus.button,
+                padding_tablet: "20px",
+                gap_tablet: "40px",
+              }}
+              proportions={ymlTwoColumnsCampus.proportions}
+              session={session}
+            />
           </Div>
-          
         </Div>
       )}
       <Badges
@@ -340,7 +341,6 @@ const Location = ({ data, pageContext, yml }) => {
           height="304px"
           childHeight="inherit"
         >
-                
           {yml.images_box.images.map((m, i) => {
             return (
               <GatsbyImage
@@ -353,15 +353,9 @@ const Location = ({ data, pageContext, yml }) => {
           })}
         </GridContainer>
       )}
-            
 
       {yml.with4geeks && (
-        <Div
-          id="why_4geeks"
-          flexDirection="column"
-          margin="0"
-          padding="20px 0"
-        >
+        <Div id="why_4geeks" flexDirection="column" margin="0" padding="20px 0">
           {/* <H2 textAlign="center" padding="15px 0">{yml.with4geeks.header}</H2> */}
           <With4Geeks
             lang={pageContext.lang}
@@ -375,7 +369,6 @@ const Location = ({ data, pageContext, yml }) => {
         </Div>
       )}
 
-
       {yml.geeks_vs_others && (
         <GeeksVsOthers
           lang={pageContext.lang}
@@ -385,7 +378,7 @@ const Location = ({ data, pageContext, yml }) => {
           paragraph={yml.geeks_vs_others.header.paragraph}
         />
       )}
-            
+
       <OurPartners
         images={hiring.partners.images}
         showFeatured
@@ -578,7 +571,7 @@ export const query = graphql`
             }
           }
 
-          with4geeks{ 
+          with4geeks {
             header
           }
           geeks_vs_others {
