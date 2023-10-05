@@ -26,6 +26,11 @@ form:
   button_label: Get more information
   redirect: null #you can redirect to another url or entirely diffrent website
 
+apply_schollarship: # form that is displayed at the end of the landing
+  # title: "Apoyo Profesional Ilimitado"
+  imageSide: "left"
+  image: "../../../static/images/landing/apply.png"  
+
 # jumbotron on the top (cannot be commented out)
 header_data:
   tagline: Become a Software Developer and Boost your Career in Tech

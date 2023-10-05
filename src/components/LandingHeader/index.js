@@ -329,8 +329,9 @@ const LandingHeader = (props) => {
               fields={yml.form.fields}
               data={preData}
               justifyContentButton="center"
-              marginButton="0 auto 30px auto"
-              marginButton_tablet="0 0 30px auto"
+              marginButton="10px auto 30px auto"
+              widthButton="100%"
+              // marginButton_tablet="0 0 30px auto"
               boxShadow="9px 8px 0px 0px rgba(0,0,0,1)"
             />
             <Div display="none" display_tablet="block" margin="20% 0 0 0">

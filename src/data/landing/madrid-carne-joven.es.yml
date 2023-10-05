@@ -70,6 +70,11 @@ short_badges:
     url: ""
     image: "../../../static/images/badges/licensed.png"
     alt: "Florida Department of Education"
+
+apply_schollarship: # form that is displayed at the end of the landing
+  # title: "Apoyo Profesional Ilimitado"
+  imageSide: "left"
+  image: "../../../static/images/landing/apply.png"     
 #
 # ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇
 #

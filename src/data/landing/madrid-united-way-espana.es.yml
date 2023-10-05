@@ -28,6 +28,11 @@ form:
   motivation: "Únete a nuestra comunidad de más de 3500 personas. Conviértete en Full-Stack Developer y ¡cambia tu vida!"
   button_label: Solicita tu plaza
   redirect: "/es/gracias"  #you can redirect to another url or entirely diffrent website
+
+apply_schollarship: # form that is displayed at the end of the landing
+  # title: "Apoyo Profesional Ilimitado"
+  imageSide: "left"
+  image: "../../../static/images/landing/apply.png"  
   
 navbar:
   buttonText: "Aplica ahora"

@@ -148,6 +148,7 @@ const clean = (fields, data) => {
 const LeadForm = ({
   marginButton,
   marginButton_tablet,
+  widthButton,
   background,
   margin,
   marginTop,
@@ -497,7 +498,7 @@ const LeadForm = ({
             )}
             {layout === "flex" && (
               <Button
-                width="fit-content%"
+                width="fit-content"
                 justifyContent="center"
                 //width_tablet={buttonWidth_tablet}
                 variant="full"
@@ -536,6 +537,7 @@ const LeadForm = ({
               <Paragraph fontSize="11px" margin="5px 0 0 5px" textAlign="left">
                 {yml.consent.message}
                 <a
+                  style={{marginLeft: '5px'}}
                   target="_blank"
                   rel="noopener noreferrer nofollow"
                   className="decorated"
@@ -554,9 +556,6 @@ const LeadForm = ({
             )}
             {layout === "block" && (
               <Div
-                // justifyContent_tablet={
-                //   justifyContentButton || "end"
-                // }
                 display="flex"
                 padding="10px 0 0 0"
                 width="100%"
@@ -567,12 +566,9 @@ const LeadForm = ({
                   fontSize="17px"
                   margin={marginButton}
                   margin_tablet={marginButton_tablet}
-                  width="fit-content"
-                  // padding_xs="12px 45%"
-                  // padding_sm="12px 42%"
-                  //padding_tablet="12px 24px"
+                  width_lg={widthButton}
+                  width_xs="100%"
                   justifyContent="center"
-                  //padding="auto"
                   background={Colors.blue}
                   //textAlign="center"
                   color={
