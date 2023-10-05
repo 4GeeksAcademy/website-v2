@@ -41,7 +41,7 @@ navbar:
 
 header_data:
   background: "#FFF1D1"
-  tagline: "No excuses. No Cost. Miami Tech Talent is bringing 100% scholraships. We are changing the Game"
+  tagline: "No excuses. No Cost. Miami Tech Talent is bringing 100% scholarships. We are changing the Game"
   tagline_color: "black"
   badge: "../../../static/images/badges/Course-Report-Badge-2023.png"
   image_filter: brightness(0.3)

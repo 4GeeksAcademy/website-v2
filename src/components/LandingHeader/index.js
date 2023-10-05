@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import LeadForm from "../LeadForm";
 import { H1, H2, Paragraph } from "../Heading";
-import { Div, GridContainer } from "../Sections";
+import { Div, GridContainer, Grid } from "../Sections";
 import { Colors } from "../Styling";
 import { Circle } from "../BackgroundDrawing";
 import Icon from "../Icon";
@@ -56,27 +56,28 @@ const LandingHeader = (props) => {
         }
         background={yml.header_data.background || Colors.white}
       >
-        <GridContainer
+        <Grid
           style={{ maxWidth: "1366px" }}
           margin="0 auto"
-          padding="95px 0 35px 0"
+          maxWidth="1366px"
           containerGridGap="0"
-          containerColumns_tablet="repeat(1,0fr)"
-          padding_tablet="72px 0 35px 0"
+          gridTemplateColumns_tablet="repeat(14,1fr)"
+          padding_xs="132px 20px 60px 20px"
+          padding_tablet="72px 40px 35px 40px"
+          padding_md="72px 80px 35px 80px"
+          padding_lg="72px 0 35px 0"
           columns_tablet="2"
         >
           <Div
             display_tablet="flex"
             flexDirection="column"
             width="100%"
-            size_tablet="10"
-            size="12"
-            alignItems="center"
-            alignItems_tablet="flex-start"
-            margin="0 0 0 auto"
-            padding_xs="0 10px"
+            //margin="0 auto"
+            padding_xs="0"
             height="auto"
             padding_tablet="40px 0 0 0"
+            gridColumn_md="1 / 8"
+            gridColumn_tablet="1 / 8"
           >
             {yml.header_data.partner_logo_url && (
               <>
@@ -115,7 +116,7 @@ const LandingHeader = (props) => {
               lineHeight_tablet="normal"
               margin="20px 0"
               margin_xs="10px 0"
-              padding="0 10px 0 0px"
+              padding="0 10px 20px 0px"
               color={
                 yml.header_data.tagline_color
                   ? yml.header_data.tagline_color
@@ -140,6 +141,7 @@ const LandingHeader = (props) => {
                 color={yml.header_data.background ? Colors.black : Colors.white}
                 variant="main"
                 fontWeight="bolder"
+                padding="0 0 10px 0"
               >
                 {yml.header_data.sub_heading}
               </H2>
@@ -233,16 +235,13 @@ const LandingHeader = (props) => {
           <Div
             position="relative"
             flexDirection="column"
-            size="12"
-            size_tablet="10"
             width="100%"
-            width_tablet="65%"
-            // size_lg="4"
-            // size_sm="6"
-            // size_xs="12"
             margin="0"
             textAlign_sm="center"
-            margin_md={yml.form.margin_md || "0 auto 0 70px"}
+            margin_md={yml.form.margin_md || "0 auto 0 25px"}
+            gridColumn_tablet="8 / 14"
+            // gridColumn_md="8 / 14"
+            // gridColumn_tablet="8 / 13"
           >
             <Div
               top="0"
@@ -355,7 +354,7 @@ const LandingHeader = (props) => {
               />
             </Div>
           </Div>
-        </GridContainer>
+        </Grid>
       </LandingContainer>
     </>
   );
