@@ -29,6 +29,11 @@ form:
   button_label: Obtener malla y más información
   redirect: "/es/gracias/?lang=es"  #you can redirect to another url or entirely diffrent website
 
+apply_schollarship: # form that is displayed at the end of the landing
+  # title: "Apoyo Profesional Ilimitado"
+  imageSide: "left"
+  image: "../../../static/images/landing/apply.png"    
+
 navbar:
   buttonText: "Postular"
   buttonUrl: "#bottom" # url accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)

@@ -172,3 +172,8 @@ components:
 #   position: 7
 #   heading: "¿Porqué enseñamos Python?" # optional or set to white space to hide
 #   sub_heading: " " # optional or set to white space to hide
+
+apply_schollarship: # form that is displayed at the end of the landing
+  # title: "Apoyo Profesional Ilimitado"
+  imageSide: "left"
+  image: "../../../static/images/landing/apply.png"

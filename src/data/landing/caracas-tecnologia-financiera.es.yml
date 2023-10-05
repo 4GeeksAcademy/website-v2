@@ -91,7 +91,7 @@ follow_bar:
 program_details:
   position: 4
   heading: "Domina Python, JS y React"
-  sub_heading: "Un bootcamp de programación sobre las tecnologías más usadas del mundo"
+  sub_heading: "Un bootcamp de programación sobre las tecnologías más usadas del mundo" 
 
 # Possible layours: [two_column_left_image, two_column_right_image]
 components:
@@ -170,3 +170,8 @@ who_is_hiring:
   limit: 4
   heading: "¿Quién contrata a nuestros alumnos?"
   sub_heading: "Nos encanta ver crecer a nuestros estudiantes, es por eso que nos esforzamos cada día por tener más aliados, para que puedas trabajar en empresas que te ayuden a seguir creciendo profesionalmente."
+
+apply_schollarship: # form that is displayed at the end of the landing
+  # title: "Apoyo Profesional Ilimitado"
+  imageSide: "left"
+  image: "../../../static/images/landing/apply.png"

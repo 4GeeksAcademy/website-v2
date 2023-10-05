@@ -165,11 +165,12 @@ const Landing = (props) => {
         id="bottom"
         imageSide={applySchollarship?.imageSide}
         padding="0"
-        padding_tablet="80px 0 90px 0"
-        columns_tablet="14"
+        padding_tablet="50px 40px 90px 40px"
+        padding_md="50px 80px 90px 80px"
+        padding_lg="50px 0 90px 0"
         margin="0"
         margin_tablet="auto"
-        gridTemplateColumns_tablet="repeat(14, 1fr)"
+        gridTemplateColumns_tablet="repeat(16, 1fr)"
         maxWidth_tablet="1366px"
       >
         <Div
@@ -178,18 +179,18 @@ const Landing = (props) => {
           padding_tablet="0"
           style={{ position: "relative" }}
           gridColumn_tablet={
-            applySchollarship?.imageSide === "right" ? "8/15" : "1/7"
+            applySchollarship?.imageSide === "right" ? "9/17" : "1/9"
           }
-          gridColumn_lg={
-            applySchollarship?.imageSide === "right" ? "8/15" : "1/8"
-          }
+          // gridColumn_lg={
+          //   applySchollarship?.imageSide === "right" ? "8/15" : "1/8"
+          // }
           gridRow_tablet="1/1"
         >
           {applySchollarship?.imageSide === "right" ? (
             <>
               <Div
                 display="none"
-                display_md="flex"
+                display_md="none"
                 style={{
                   position: "absolute",
                   background: Colors.yellow,
@@ -205,7 +206,7 @@ const Landing = (props) => {
             <>
               <Div
                 display="none"
-                display_md="flex"
+                display_md="none"
                 style={{
                   position: "absolute",
                   background: "transparent",
@@ -236,16 +237,12 @@ const Landing = (props) => {
           margin="0"
           justifyContent_tablet="start"
           padding="0"
-          padding_tablet={
-            applySchollarship?.imageSide === "right"
-              ? "0 20px 0 40px"
-              : "0 40px 0 20px"
-          }
+          padding_tablet="0"
           // gridArea_tablet={
           //   applySchollarship?.imageSide === "right" ? "1/1/1/6" : "1/7/1/14"
           // }
           gridColumn_tablet={
-            applySchollarship?.imageSide === "right" ? "1/7" : "8/15"
+            applySchollarship?.imageSide === "right" ? "1/9" : "9/17"
           }
           //gridColumn_lg={applySchollarship?.imageSide === "right" ? "8/15" : "1/8"}
           gridRow_tablet="1/1"
