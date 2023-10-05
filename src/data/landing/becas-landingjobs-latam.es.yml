@@ -128,7 +128,7 @@ why_4geeks:
 apply_schollarship: # form that is displayed at the end of the landing
   # title: "Apoyo Profesional Ilimitado"
   imageSide: "right"
-  image: "../../../static/images/comunity-support.png"
+  image: "../../../static/images/landing/apply.png"
 
 # Possible layours: [two_column_left_image, two_column_right_image]
 components:

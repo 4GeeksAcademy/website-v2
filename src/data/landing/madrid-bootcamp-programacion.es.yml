@@ -30,7 +30,7 @@ form:
 apply_schollarship: # form that is displayed at the end of the landing
   # title: "Apoyo Profesional Ilimitado"
   imageSide: "right"
-  image: "../../../static/images/comunity-support.png"
+  image: "../../../static/images/landing/apply.png" 
 
 # jumbotron on the top (cannot be commented out)
 header_data:
