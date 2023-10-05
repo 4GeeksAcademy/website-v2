@@ -136,14 +136,17 @@ components:
     position: 9
     layout: two_column_left
     image:
+      shadow: true 
       src: "https://storage.googleapis.com/4geeks-academy-website/landing-pictures/testimonials.webp"
     heading:
       text: "Escúchalo de nuestros alumnos"
       #xl      lg     md     sm    xs
       font_size: ["40px", "34px", "34px", "25px", "20px"]
     button:
-      text: "Más testimoniales"
-      color: null
+      text: "Testimoniales"
+      background: black
+      color: white
+      hover_color: "#bdbdbd"
       path: "https://www.youtube.com/watch?v=plwPwyrxX84"
     content:
       text: "Mi experiencia con 4Geeks ha sido magnífica, me ha encantado. Tengo unos profesores maravillosos y tengo unos compañeros súper geniales. He aprendido bastante sobre HTML, CSS, JavaScript, React y Python. Mis profesores siempre estuvieron atentos a lo que necesitaba. Igual hay una plataforma donde podemos hablar todos los estudiantes de 4Geeks y nos ayudamos entre todos.... ¡Ha sido genial tomar esta decisión! -Beatriz Hernández"
@@ -157,6 +160,7 @@ components:
     layout: two_column_right
     image:
       src: "/images/bg/people_happy.jpg"
+      shadow: true 
     video: "B01-eTfgqqc"
     heading:
       text:

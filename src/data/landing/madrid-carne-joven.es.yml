@@ -24,9 +24,10 @@ form:
 # jumbotron on the top (cannot be commented out)
 
 header_data:
+  background: "#FFF1D1"
   tagline: Aprende a programar con Carné Joven
   sub_heading: ""
-  image: "../../../static/images/Happy-People-Landing-4Geeks-ES.jpg"
+  #image: "../../../static/images/Happy-People-Landing-4Geeks-ES.jpg"
   image_filter: brightness(0.4)
 
 features:
@@ -38,6 +39,7 @@ features:
     - Un Desarrollador en Madrid gana 24.000€ al año
     - Hay más vacantes que en cualquier otra industria
     - ¡Impulsa tu Carrera! y hazte programador de software
+    
 follow_bar:
   position: "top" # top, bottom, hidden
   content:

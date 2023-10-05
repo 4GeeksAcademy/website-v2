@@ -36,6 +36,8 @@ const Figure = styled.div`
     width: ${(props) => props.width_tablet};
     height: ${(props) => props.height_tablet};
     display: ${(props) => props.display_tablet};
+    top: ${(props) => props.top_tablet};
+    left: ${(props) => props.left_tablet};
   }
   @media ${Devices.md} {
     width: ${(props) => props.width_md};

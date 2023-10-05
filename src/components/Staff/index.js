@@ -39,9 +39,6 @@ const Staff = (props) => {
                     width: 800
                     placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                   )
-                  # fluid(maxWidth: 800){
-                  #   ...GatsbyImageSharpFluid_withWebp
-                  # }
                 }
               }
               age
@@ -119,7 +116,6 @@ const Staff = (props) => {
                     image={getImage(
                       item.image && item.image.childImageSharp.gatsbyImageData
                     )}
-                    // fluid={item.image && item.image.childImageSharp.fluid}
                     style={{
                       height: "100%",
                       minWidth: "100%",

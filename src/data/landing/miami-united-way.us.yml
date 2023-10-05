@@ -54,7 +54,7 @@ features:
     - "Get up to $6400 for living stipends to pay your regular costs while taking the program"
     - "100 Spots Available. Only 50 left!" 
     - "Now open and accepting applications!"
-  styles: '{ "color": "black", "fontWeight":"400", "fontSize":"20px" }'
+  styles: '{ "color": "gray", "fontWeight":"500" }'
   
 short_badges:
   - name: "Premios Tecnologia Siglo XXI"
@@ -87,12 +87,26 @@ follow_bar:
   phone:
     text: "Call "
 
+iconogram:
+  position: 3
+  heading:
+    text: "Aqui puede ser un titulo"
+  icons:
+  - icon: "graduation-2" 
+    title: ""
+    content: "Apply to the United Way Miami Workforce Project to jumpstart your career in coding."
+  - icon: "laptop_new"
+    title: ""
+    content: "Once accepted, students enroll in the 4Geeks Full-Stack Software Development Program. 4Geeks provides quality training and offers supporting services —like resume review and career coaching—to help participants find jobs after graduating."
+  - icon: "circle"
+    title: ""
+    content: "Participants pay program costs after they start jobs making more than $35,000 a year. Participants who don't find a job or keep jobs with salaries above $35,000 pay nothing."
 
 components:
   - name: how-it-works
     position: 3
     background: "veryLightBlue2"
-    layout: multi_column
+    layout: iconogram
     swipable: True
     heading:
       text: "How It Works"
@@ -101,43 +115,33 @@ components:
       text: 'According to the U.S. Bureau of Labor Statistics, <strong style="font-weight: bold;">software developers in the U.S. have a higher than average job outlook and earn a median salary of $110,140 a year</strong>. Improve your chances to be one of them.'
       font_size: ["16px", "16px", "16px", "16px", "16px"]
       style: '{ "textAlign": "center", "width": "60%" }'
-    columns:
-      - image:
-          style: '{ "backgroundSize": "contain", "height": "130px" }'
-          src: "/images/landing/graduated-icon.png"
-        content: 
-          text: "Apply to the United Way Miami Workforce Project to jumpstart your career in coding."
-          font_size: ["16px"]
-        size: [3,3,3,3]
-      - image:
-          style: '{ "backgroundSize": "contain", "height": "130px" }'
-          src: "/images/landing/pc-icon.png"
-        content: 
-          text: "Once accepted, students enroll in the 4Geeks Full-Stack Software Development Program. 4Geeks provides quality training and offers supporting services —like resume review and career coaching—to help participants find jobs after graduating."
-          font_size: ["16px"]
-        size: [3,3,3,3]
-      - image:
-          style: '{ "backgroundSize": "contain", "height": "130px" }'
-          src: "/images/landing/cicle-icon.png"
-        content: 
-          text: "Participants pay program costs after they start jobs making more than $35,000 a year. Participants who don't find a job or keep jobs with salaries above $35,000 pay nothing."
-          font_size: ["16px"]
-        size: [3,3,3,3]
+    text_link: "/"
+    icons:
+      - icon: "graduation-2" 
+        title: ""
+        content: "Apply to the United Way Miami Workforce Project to jumpstart your career in coding."
+      - icon: "laptop_new"
+        title: ""
+        content: "Once accepted, students enroll in the 4Geeks Full-Stack Software Development Program. 4Geeks provides quality training and offers supporting services —like resume review and career coaching—to help participants find jobs after graduating."
+      - icon: "circle"
+        title: ""
+        content: "Participants pay program costs after they start jobs making more than $35,000 a year. Participants who don't find a job or keep jobs with salaries above $35,000 pay nothing."
+    
 
   - name: elegibility
     position: 3
-    layout: multi_column
+    layout: cards_carousel
     swipable: True
     heading:
-      text: "Program Eligibility"
+      text: "Elegibility in this Program"
       font_size: ["30px", "30px", "30px", "30px", "30px"]
     content:
-      text: '<br/> <br/> Learn more about <a style="color: rgb(0, 160, 218); cursor:pointer;">eligibility conditions</a> and apply'
-      font_size: ["16px", "16px", "16px", "16px", "16px"]
+      text: 'Learn more about <a style="color: rgb(0, 160, 218); cursor:pointer;">eligibility conditions</a> and apply'
+      font_size: ["18px", "18px", "18px", "18px", "18px"]
       path: "https://storage.googleapis.com/media-breathecode/bc38ffebe9e56f8cd62e10d5d0839f98d7528c4fe7756456630588d2c2048a2a"
     sub_heading:
       text: |
-        If you work or live in Miami-Dade and have an annual household income below the Area Median Income, who is a citizen, permanent resident, or DACA recipient is invited to apply. <strong style="font-weight: bold;"> People of color, veterans, and single female heads of household </strong> are encouraged to apply.
+        You may qualify if are a <strong style="font-weight: bold;"> Miami resident </strong> and belong to one of these groups:
       font_size: ["16px", "16px", "16px", "16px", "16px"]
     button:
       text: "APPLY NOW"
@@ -145,31 +149,34 @@ components:
       hover_color: "white"
       path: "#top"
       background: "black"
-    columns:
+    cards:
       - image:
           style: '{ "backgroundSize": "cover", "minHeight": "230px", "borderRadius": "80px" }'
-          src: "/images/landing/of_color.png"
-        content: 
-          text: "PEOPLE <br> OF COLOR"
+          src: "/images/low-income-people-of-color.png"
+        heading: 
+          text: "Low-income people of color"
           style: '{ "fontWeight": "700" }'
-          font_size: ["16px"]
-        size: [3,3,3,3]
+          font_size: "15px"
+        button:
+          text: "See more"
       - image:
-          style: '{ "backgroundSize": "cover", "borderRadius": "80px" }'
-          src: "/images/landing/veteran2.png"
-        content: 
-          text: "VETERANS"
+          style: '{ "backgroundSize": "cover", "minHeight": "230px", "borderRadius": "80px" }'
+          src: "/images/low-income-veterans.png"
+        heading: 
+          text: "Low-income veterans"
           style: '{ "fontWeight": "700" }'
-          font_size: ["16px"]
-        size: [3,3,3,3]
+          font_size: "15px"
+        button:
+          text: "See more"
       - image:
-          style: '{ "backgroundSize": "cover", "borderRadius": "80px" }'
-          src: "/images/landing/mom-household.png"
-        content: 
-          text: "SINGLE FEMALE HEADS OF HOUSEHOLD"
+          style: '{ "backgroundSize": "cover", "minHeight": "230px", "borderRadius": "80px" }'
+          src: "/images/low-income-female-heads-of-household.png"
+        heading: 
+          text: "Low-income single female heads of household"
           style: '{ "fontWeight": "700" }'
-          font_size: ["16px"]
-        size: [3,3,3,3]
+          font_size: "15px"
+        button:
+          text: "See more"
 
   - name: coding
     position: 4

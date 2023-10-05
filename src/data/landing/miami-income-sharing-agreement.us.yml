@@ -31,7 +31,7 @@ form:
 header_data:
   tagline: Pay nothing until you make it
   sub_heading: Become a software developer without upfront investment.
-  image: "../../../static/images/4geeks-main.jpg"
+  background_image: "../../../static/images/4geeks-main.jpg"
   image_filter: brightness(0.3)
 
 features:
