@@ -47,6 +47,8 @@ navbar:
               link_to: "/es/geekpal"
             - title: "GeekForce"
               link_to: "/es/geekforce"
+            - title: "Trabajo Garantizado"
+              link_to: "/es/trabajo-garantizado"
         - title: "Validaciones"
           sub_links:
             - title: "Premios"
@@ -59,10 +61,8 @@ navbar:
           sub_links:
             - title: "Financiaciones"
               link_to: "/es/financiacion"
-            # - title: "Precios"
-            #   link_to: "/es/precios"
-            # - title: "Becas"
-            #   link_to: "/es/becas"
+            - title: "Recibe una beca"
+              link_to: "/es/20-millones"
         - title: "Nuestros Alumnos"
           sub_links:
             - title: "Alumnos y Proyectos"
