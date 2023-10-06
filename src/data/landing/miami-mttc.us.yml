@@ -90,7 +90,8 @@ follow_bar:
 components:
   - name: "whatever"
     layout: choose_your_program
-    position: 8
+    background: "green"
+    position: 3
     heading:
       text: Our Programs
     content:
@@ -121,7 +122,7 @@ components:
 
 
   - name: how-it-works
-    position: 3
+    position: 2
     background: "veryLightBlue2"
     layout: iconogram
     swipable: True
@@ -292,7 +293,7 @@ components:
     # ["azu-bota","nai-kali","cha-fabr"]
 
   - name: better-future
-    position: 10
+    position: 13
     layout: two_column_right
     proportions: [6, 6]
     background: "#F5F5F5"
@@ -313,7 +314,7 @@ components:
       path: "#top"
 
   - name: Miami Tech Talent Coalition
-    position: 11
+    position: 9
     layout: two_column_right
     proportions: [6, 6]
     background: "veryLightBlue2"

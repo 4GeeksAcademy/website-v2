@@ -90,7 +90,7 @@ short_badges:
 #   heading: "Read about us in the media..."
 
 badges:
-  position: 2
+  position: 6
   heading: "4Geeks Academy has awards and recognitions that validate it's excellence"
 
 geeks_vs_others:
@@ -118,7 +118,7 @@ alumni_projects:
 # Possible layours: [two_column_left_image, two_column_right_image]
 components:
   - name: isa_explanation
-    position: 2
+    position: 1
     layout: columns
     proportions: [3, 2]
     heading:
@@ -168,7 +168,7 @@ components:
           src: "/images/isa/isa6.png"
 
   - name: first_syllabus_form
-    position: 4
+    position: 3
     layout: syllabus
     button:
       text: "Instant Download"
@@ -177,8 +177,9 @@ components:
       #             xl      lg      md      sm      xs
       font_size: ["40px", "40px", "40px", "40px", "40px"]
   - name: top_coding_bootcamp
-    position: 4
+    position: 2
     layout: two_column_left
+    background: "#ebebeb"
     proportions: [4, 8]
     image:
       style: '{ "backgroundSize": "contain" }'
@@ -197,6 +198,7 @@ components:
     position: 7
     proportions: [4, 8]
     layout: two_column_left
+    background: "lightBlue"
     image:
       src: "https://storage.googleapis.com/4geeks-academy-website/landing-pictures/testimonials.webp"
     heading:
