@@ -91,7 +91,7 @@ apply_schollarship: # form that is displayed at the end of the landing
   image: "../../../static/images/landing/apply.png"
 
 badges:
-  position: 6
+  position: 5
   heading: "Premios y reconocimientos que validan nuestra excelencia"
 
 program_details:
@@ -124,30 +124,35 @@ who_is_hiring:
 # Possible layours: [two_column_left_image, two_column_right_image]
 components:
   - name: top_coding_bootcamp
-    position: 5
+    position: 2
     layout: two_column_left
     proportions: [4, 8]
+    background: "#e6e6e6"
     image:
-      style: '{ "backgroundSize": "contain" }'
+      style: '{ "backgroundSize": "contain"}'
       src: "/images/badges/Course-Report-Badge-2023.png"
       link: "https://www.coursereport.com/schools/4geeks-academy"
     heading:
       text:
         "Tenemos 3 años consecutivos siendo seleccionados como uno de los mejores coding bootcamps del mundo"
         #xl      lg     md     sm    xs
-      font_size: ["40px", "40px", "40px", "40px", "40px"]
+      font_size: ["38px", "36px", "32", "30px", "30px"]
+      padding: "0px"
   - name: more_testimonials
     position: 9
     layout: two_column_left
     image:
+      shadow: true
       src: "https://storage.googleapis.com/4geeks-academy-website/landing-pictures/testimonials.webp"
     heading:
       text: "Escúchalo de nuestros alumnos"
       #xl      lg     md     sm    xs
       font_size: ["40px", "34px", "34px", "25px", "20px"]
     button:
-      text: "Más testimoniales"
-      color: null
+      text: "Historias de Éxito"
+      background: black
+      color: white
+      hover_color: "#FFB718"
       path: "https://www.youtube.com/watch?v=plwPwyrxX84"
     content:
       text: "Mi experiencia con 4Geeks ha sido magnífica, me ha encantado. Tengo unos profesores maravillosos y tengo unos compañeros súper geniales. He aprendido bastante sobre HTML, CSS, JavaScript, React y Python. Mis profesores siempre estuvieron atentos a lo que necesitaba. Igual hay una plataforma donde podemos hablar todos los estudiantes de 4Geeks y nos ayudamos entre todos.... ¡Ha sido genial tomar esta decisión! -Beatriz Hernández"

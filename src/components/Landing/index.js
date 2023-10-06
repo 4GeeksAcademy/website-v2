@@ -109,7 +109,7 @@ const Side = ({
     <Div
       flexDirection_tablet="column"
       flexDirection="column"
-      padding_tablet={padding_tablet || "36px 0px 0px 0px"}
+      padding_tablet={padding_tablet || "10px 0px 0px 0px"}
     >
       {heading && (
         <H2

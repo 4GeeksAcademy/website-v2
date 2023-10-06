@@ -124,9 +124,10 @@ components:
         <p>GeekForce es el proceso colectivo de apoyo profesional del Bootcamp. La 'fuerza' significa empoderamiento profesional y es una membresía de por vida. Brinda asistencia para la colocación laboral del estudiante y para que se prepare para conseguir un trabajo en tecnología.</p>
 
   - name: top_coding_bootcamp
-    position: 6
+    position: 4
     layout: two_column_left
     proportions: [4, 8]
+    background: "#e6e6e6"
     image:
       style: '{ "backgroundSize": "contain" }'
       src: "/images/badges/Course-Report-Badge-2023.png"
@@ -157,7 +158,7 @@ components:
 
     
 badges:
-  position: 3
+  position: 7
   heading: "4Geeks Academy cuenta con premios y reconocimientos de validan su excelencia"
 
 why_4geeks:

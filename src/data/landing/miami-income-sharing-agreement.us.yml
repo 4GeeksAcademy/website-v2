@@ -85,9 +85,9 @@ short_badges:
 # ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇
 #
 
-in_the_news:
-  position: 1
-  heading: "Read about us in the media..."
+# in_the_news:
+#   position: 1
+#   heading: "Read about us in the media..."
 
 badges:
   position: 2
