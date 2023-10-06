@@ -1,6 +1,7 @@
 var colors = require("colors");
 const fs = require("fs");
 const { walk, loadYML, empty, fail, success } = require("./_utils");
+const { log } = require("console");
 
 const metas = [
   { key: "slug", type: "string", mandatory: true },
@@ -36,7 +37,10 @@ walk(`${__dirname}/../data/`, async function (err, files) {
     )
     .forEach((_path) => {
       const doc = loadYML(_path);
-      if (!doc || !doc.yaml) fail("Invalid YML syntax for " + _path);
+      if (!doc || !doc.yaml) {
+        fail("Invalid YML syntax for " + _path);
+        console.log(doc)
+      }
     });
 
   const _files = files.filter(

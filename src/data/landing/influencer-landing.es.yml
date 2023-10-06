@@ -94,12 +94,12 @@ program_details:
   sub_heading: "Un curso de programación sobre las tecnologías más usadas del mundo"
 
 why_4geeks:
-  position: 3
+  position: 4
   heading: "¿Por qué 4Geeks?"
   sub_heading: " "
 
 geeks_vs_others:
-  position: 4
+  position: 5
   heading: "¿Por qué somos tan exitosos?"
   paragraph: "Un galardonado curso de programación"
   total_rows: 5
@@ -119,8 +119,9 @@ components:
     position: 1
     layout: two_column_left
     proportions: [5, 7]
+    background: "#FFF8E8"
     image:
-      style: '{ "backgroundSize": "contain" }'
+      style: '{ "backgroundSize": "contain"}'
       src: "/images/landing/hombre-con-laptop.png"
     heading:
       text: "How it works?"
@@ -134,6 +135,22 @@ components:
         Al aprender a programar con 4Geeks Academy tendrás clases online completamente en vivo, la oportunidad de certificarte internacionalmente en poco tiempo y de conseguir tu primer empleo como programador con nuestro apoyo.
 
         <strong style="font-weight: bold;">Descubre cómo puede ser tu vida como un profesional en programación con 4Geeks Academy, ¡comienza ahora! </strong>
+  
+  - name: top_coding_bootcamp
+    position: 3
+    layout: two_column_left
+    proportions: [4, 8]
+    background: "#f1f1f1"
+    image:
+      style: '{ "backgroundSize": "contain" }'
+      src: "/images/badges/Course-Report-Badge-2023.png"
+      link: "https://www.coursereport.com/schools/4geeks-academy"
+    heading:
+      text:
+        "Tenemos 3 años consecutivos siendo seleccionados como uno de los mejores coding bootcamps del mundo"
+        #xl      lg     md     sm    xs
+      font_size: ["38px", "36px", "32px", "30px", "30px"]
+ 
   # - name: top_coding_bootcamp
   #   position: 8
   #   layout: two_column_left

@@ -86,7 +86,7 @@ short_badges:
 #
 
 rating_reviews:
-  position: 1
+  position: 5
   heading: "Top rated on all available review sites"
   rating_list:
     - alt: "Career Karma"
@@ -140,8 +140,8 @@ alumni_projects:
 # Possible layours: [two_column_left_image, two_column_right_image]
 components:
   - name: passion
-    position: 6
-    background: "#C7F3FD"
+    position: 4
+    background: "lightYellow"
     layout: two_column_right
     proportions: [6, 6]
     image:
@@ -156,8 +156,8 @@ components:
       text: "We have graduated thousands of students around the world. People from Europe, North America, and Latin America have enjoyed, learned and grown with us. We are focused on being the bridge between your passion about coding and the skills you need to launch your career within the tech industry. Here you will find some of them talking about their experience:"
       font_size: ["16px"]
   - name: top_coding_bootcamp
-    position: 5
-    background: "#F5F5F5"
+    position: 8
+    background: "lightblue"
     layout: two_column_left
     proportions: [4, 8]
     image:
@@ -171,11 +171,11 @@ components:
                     #xl      lg     md     sm       xs
       font_size: ["30px", "30px", "30px", "30px", "30px"]
   - name: geeksinfo
-    position: 4
+    position: 1
     layout: geeksInfo
   - name: working_in_tech
-    position: 4
-    background: "#F5F5F5"
+    position: 3
+    background: "#f1f1f1"
     proportions: [4, 8]
     layout: two_column_left
     image:
