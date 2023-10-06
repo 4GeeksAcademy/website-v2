@@ -638,7 +638,7 @@ export const landingSections = {
   },
 
   iconogram: ({ session, data, pageContext, yml, index }) => {
-    const { heading, sub_heading, icons, text_link } = yml;
+    const { heading, sub_heading, icons, button } = yml;
     return (
       <Div
         key={index}
@@ -720,20 +720,29 @@ export const landingSections = {
               );
             })}
         </Div>
-        {text_link && (
-          <Div maxWidth="1366px" margin="10px auto">
-            <Link to={text_link} display="block">
-              <H3
-                fontSize="18px"
-                lineHeight="22px"
-                textDecoration="underline"
-                textDecorationOffset="5px"
-              >
-                Conditions Apply.
-              </H3>
-            </Link>
-          </Div>
-        )}
+        {button && (
+          <Button
+            outline
+            borderRadius="0"
+            colorHoverText={button.hover_color || Colors.blue}
+            background={Colors[button.background] || button.background}
+            lineHeight="26px"
+            textColor={Colors.black}
+            textTransform="none"
+            color={Colors[button.color] || button.color}
+            fontSize="15px"
+            textAlign="left"
+            margin="2rem 0"
+            padding="32px .85rem 0 .85rem"
+            onClick={() => {
+              if (button.path && button.path.indexOf("http") > -1)
+                window.open(transferQuerystrings(button.path, utm));
+              else navigate(button.path);
+            }}
+          >
+            {button.text}
+          </Button>
+      )}
       </Div>
     );
   },
