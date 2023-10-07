@@ -128,23 +128,25 @@ const AlumniProjects = ({
               gridGap_tablet="0"
               margin_tablet="0 0 36px 0"
               margin="0 0 50px 0"
-              padding_tablet="0"
+              padding_tablet="0 40px"
             >
               <Div
                 background={Colors.lightGray}
                 height_tablet="414px"
                 padding="0"
                 //padding_tablet="17px 51px"
-                padding_tablet="17px 51px"
+                padding_tablet="17px 0px"
                 gridColumn_tablet="1 / 7"
               >
                 {item.project_video === "" ? (
                   <StyledBackgroundSection
-                    height={`414px`}
+                    height="80%"
+                    width="80%"
+                    padding="36px 0"
+                    margin="0 auto"
                     image={item.project_image.childImageSharp.gatsbyImageData}
                     bgSize={`cover`}
                     alt="Cnn Logo"
-                    style={{height: "414px"}}
                   />
                 ) : (
                   <ReactPlayer
@@ -158,7 +160,7 @@ const AlumniProjects = ({
                     videoHeight="500px"
                     width_play="92px"
                     height_play="92px"
-                    fontSize_play="63px"
+                    fontSize_play="28px"
                     background_play="black"
                     opacity_play="1"
                     style={{

@@ -199,6 +199,7 @@ const Player = ({
           width_tablet={imageWidth_tablet || "100%"}
           borderRadius="3px"
           height={imageHeight}
+          position="relative"
         >
           {id && (
             <Play
@@ -313,7 +314,7 @@ const Play = styled.button`
   position: absolute !important;
   top: 50%;
   left: 50%;
-  transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%); {/*translateX(-50%) translateY(-50%);*/}
   border: none;
   opacity:  ${(props) => props.opacity || "0.8"};
   cursor: pointer;
