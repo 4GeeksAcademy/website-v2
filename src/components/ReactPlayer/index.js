@@ -96,6 +96,11 @@ const Player = ({
   imageHeight,
   videoHeight,
   switched,
+  width_play,
+  height_play,
+  fontSize_play,
+  background_play,
+  opacity_play,
   ...rest
 }) => {
   const [showVideo, setShowVideo] = React.useState(false);
@@ -201,6 +206,13 @@ const Player = ({
               right_tablet={right_tablet}
               left_tablet={left_tablet}
               aria-label="Play Video"
+              width={width_play}
+              height={height_play}
+              background={background_play}
+              fontSize={fontSize_play}
+              opacity={opacity_play}
+              // width_md={width_play}
+              // heigth_md={height_play}
             />
           )}
           {thumb && thumb.childImageSharp ? (
@@ -240,13 +252,13 @@ const Player = ({
 export default Player;
 
 Player.defaultProps = {
-  onPlay: () => {},
-  onPause: () => {},
-  onEnd: () => {},
-  onError: () => {},
-  onStateChange: () => {},
-  onPlaybackRateChange: () => {},
-  onPlaybackQualityChange: () => {},
+  onPlay: () => { },
+  onPause: () => { },
+  onEnd: () => { },
+  onError: () => { },
+  onStateChange: () => { },
+  onPlaybackRateChange: () => { },
+  onPlaybackQualityChange: () => { },
   imageSize: "default",
   playerVars: {},
   noCookies: false,
@@ -288,11 +300,11 @@ Player.propTypes = {
 };
 
 const Play = styled.button`
-  background: rgba(0, 0, 0, 0.7);
+  background: ${(props) => props.background || "rgba(0, 0, 0, 0.7)"} ;
   border-radius: 3px;
   color: ${(props) => props.white};
   font-size: 1em;
-  height: 36px;
+  height: 36px; 
   padding: 0;
   text-align: center;
   text-indent: 0.1em;
@@ -303,7 +315,7 @@ const Play = styled.button`
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
   border: none;
-  opacity: 0.8;
+  opacity:  ${(props) => props.opacity || "0.8"};
   cursor: pointer;
   z-index: 9;
   &:hover {
@@ -341,14 +353,15 @@ const Play = styled.button`
     left: ${(props) => props.left_tablet};
   }
   @media ${Devices.md} {
-    height: 44px;
-    width: 44px;
-
+    height: ${(props) => props.height || "44px"};
+    width: ${(props) => props.width || "44px"};
+    font-size: ${(props) => props.fontSize || "0.75em"};
     &:after {
-      font-size: 0.75em;
+      font-size: ${(props) => props.fontSize || "0.75em"};
     }
   }
   @media ${Devices.lg} {
+    
   }
   @media ${Devices.xl} {
   }

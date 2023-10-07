@@ -17,6 +17,7 @@ const AlumniProjects = ({
   playerHeight,
   title,
   paragraph,
+  yml
 }) => {
   const [projects, setProjects] = useState(
     lang[0].node.projects.slice(0, limit || lang[0].node.projects.length)
@@ -62,13 +63,13 @@ const AlumniProjects = ({
   };
   const settings = {
     dots: true,
-    infinite: true,
-    autoplay: true,
-    autoplaySpeed: 6000,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    pauseOnHover: true,
+    // infinite: true,
+    // autoplay: true,
+    // autoplaySpeed: 6000,
+    // speed: 500,
+    // slidesToShow: 1,
+    // slidesToScroll: 1,
+    // pauseOnHover: true,
     afterChange: () => {
       setSwitched(!switched);
     },
@@ -101,17 +102,16 @@ const AlumniProjects = ({
   //         }
   //     }
   // };
-
   return (
     <Div flexDirection="column" style={containerStyle}>
-      {title !== undefined && paragraph !== undefined && (
+      {(title !== undefined && paragraph !== undefined) || yml && (
         <GridContainer margin="6rem 0">
           <Div display="flex" flexDirection="column" alignItems="center">
             <H2 margin="0 0 15px 0" fontWeight="900">
-              {title}
+              {yml.heading || title}
             </H2>
             <Paragraph padding="0" padding_tablet="0 16%">
-              {paragraph}
+              {yml.sub_heading || paragraph}
             </Paragraph>
           </Div>
         </GridContainer>
@@ -132,17 +132,19 @@ const AlumniProjects = ({
             >
               <Div
                 background={Colors.lightGray}
-                height_tablet="auto"
+                height_tablet="414px"
                 padding="0"
+                //padding_tablet="17px 51px"
                 padding_tablet="17px 51px"
-                gridColumn_tablet="1 / 9"
+                gridColumn_tablet="1 / 7"
               >
                 {item.project_video === "" ? (
                   <StyledBackgroundSection
-                    height={`500px`}
+                    height={`414px`}
                     image={item.project_image.childImageSharp.gatsbyImageData}
                     bgSize={`cover`}
                     alt="Cnn Logo"
+                    style={{height: "414px"}}
                   />
                 ) : (
                   <ReactPlayer
@@ -154,14 +156,19 @@ const AlumniProjects = ({
                     left_tablet="unset"
                     switched={switched}
                     videoHeight="500px"
+                    width_play="92px"
+                    height_play="92px"
+                    fontSize_play="63px"
+                    background_play="black"
+                    opacity_play="1"
                     style={{
                       width: "100%",
-                      height: "500px",
+                      height: "414px",
                     }}
                   />
                 )}
               </Div>
-              <Div flexDirection="column" gridColumn_tablet="10 / 15 ">
+              <Div flexDirection="column" gridColumn_tablet="8 / 15 ">
                 <H3 textAlign="left" margin={`10px 0`}>
                   Project: {`${item.project_name}`}
                 </H3>

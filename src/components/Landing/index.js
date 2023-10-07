@@ -1120,12 +1120,14 @@ export const landingSections = {
       key={index}
       flexDirection="column"
       margin="0"
-      margin_tablet="8% 0 100px 0"
+      margin_tablet="8% auto 100px auto"
       padding="60px 0"
       padding_tablet="0"
+      maxWidth_md="1366px"
     >
       <AlumniProjects
         lang={data.allAlumniProjectsYaml.edges}
+        yml={yml}
         hasTitle
         showThumbs="false"
         limit={5}
