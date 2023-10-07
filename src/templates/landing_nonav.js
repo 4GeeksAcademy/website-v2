@@ -506,8 +506,9 @@ export const query = graphql`
             }
             image {
               src
-              style
               link
+              shadow
+              style
             }
             programs {
               title

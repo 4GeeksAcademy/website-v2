@@ -189,7 +189,7 @@ components:
       style: "{}"
       src: "/images/landing/grupo-ventanas.png"
       link: "https://google.com" # take uses somewhere when they click on the image
-      shadow: true
+      #shadow: true
     heading: 
       text: "Finance your future"
     sub_heading:

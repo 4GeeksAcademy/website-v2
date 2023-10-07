@@ -510,6 +510,7 @@ export const query = graphql`
             }
             image {
               src
+              shadow
               style
               link
             }
