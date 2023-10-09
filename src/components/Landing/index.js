@@ -33,7 +33,11 @@ const Title = ({ id, title, paragraph }) => {
   return (
     <GridContainer id={id} margin="40px 0 0 0">
       <H2 type="h2">{title}</H2>
-      <Paragraph margin="26px 0">{paragraph}</Paragraph>
+      {
+        paragraph && 
+          <Paragraph margin="26px 0">{paragraph}</Paragraph>
+      }
+      
     </GridContainer>
   );
 };
@@ -1235,6 +1239,7 @@ export const landingSections = {
         //padding="40px 0 50px 0"
         margin_tablet="0 auto"
         width_md="100%"
+        padding_xs="30px 0px"
       >
         <TwoColumn
           left={{
