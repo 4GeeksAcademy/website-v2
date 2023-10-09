@@ -56,9 +56,9 @@ const Side = ({
         thumb={image && image.src}
         id={video}
         videoHeight="360px"
+        margin_tablet="0px"
         style={{
           width: "100%",
-          height: "360px",
         }}
       />
     );
@@ -82,7 +82,7 @@ const Side = ({
         }}
         style={imgStyles}
         alt="4Geeks Academy Section"
-        margin="auto"
+        margin="0px"
         height={img_h_xl}
         width={imgStyles ? imgStyles.width || "100%" : "100%"}
         h_sm={img_h_sm || "250px"}
@@ -308,6 +308,7 @@ export const TwoColumn = ({ left, right, proportions, session }) => {
       maxWidth_md="1366px"
     >
       <Div
+        justifyContent={left.video && "center"}
         flexDirection="column"
         size_tablet={left_size || 6}
         size="12"
@@ -317,6 +318,7 @@ export const TwoColumn = ({ left, right, proportions, session }) => {
         <Side session={session} {...left} />
       </Div>
       <Div
+        justifyContent={right.video && "center"}
         flexDirection="column"
         size_tablet={right_size || 6}
         size="12"
@@ -1120,11 +1122,19 @@ export const landingSections = {
       key={index}
       flexDirection="column"
       margin="0"
-      margin_tablet="8% auto 100px auto"
-      padding="60px 0"
-      padding_tablet="0"
-      maxWidth_md="1366px"
+      padding="0"
+      padding_tablet="0"    
+      position="relative"  
     >
+      <Div
+        background={Colors.lightGray}
+        width="50%"
+        height="414px"
+        position="absolute"
+        top="181px"
+        display_xs="none"
+        display_tablet="flex"
+      />
       <AlumniProjects
         lang={data.allAlumniProjectsYaml.edges}
         yml={yml}
@@ -1199,6 +1209,7 @@ export const landingSections = {
       // padding_tablet="30px 40px"
       margin_tablet="0 auto"
       width_md="100%"
+      padding_xs="30px 0px"
     >
       <TwoColumn
         left={{ image: yml.image, video: yml.video }}

@@ -18,6 +18,7 @@ const VideoWrapper = styled.section`
   @media ${Devices.sm} {
   }
   @media ${Devices.tablet} {
+    margin: ${(props) => props.margin_tablet || "30px 10%"};
     width: ${(props) => props.width_tablet};
     height: ${(props) => props.height_tablet};
   }
@@ -85,6 +86,7 @@ const Player = ({
   imageSize,
   playerVars,
   noCookies,
+  width,
   style,
   className,
   thumb,
@@ -101,6 +103,13 @@ const Player = ({
   fontSize_play,
   background_play,
   opacity_play,
+  transformPlay,
+  transformPlay_tablet,
+  transformPlay_md,
+  transformPlay_lg,
+  leftPlay_tablet,
+  margin_tablet,
+  
   ...rest
 }) => {
   const [showVideo, setShowVideo] = React.useState(false);
@@ -133,7 +142,7 @@ const Player = ({
   }, [switched]);
 
   return (
-    <VideoWrapper {...rest} style={style}>
+    <VideoWrapper {...rest} style={style} margin_tablet={margin_tablet}>
       {showVideo ? (
         <>
           {With_Modal ? (
@@ -198,7 +207,7 @@ const Player = ({
           width={imageWidth}
           width_tablet={imageWidth_tablet || "100%"}
           borderRadius="3px"
-          height={imageHeight}
+          height={imageHeight || "100%"}
           position="relative"
         >
           {id && (
@@ -212,8 +221,13 @@ const Player = ({
               background={background_play}
               fontSize={fontSize_play}
               opacity={opacity_play}
-              // width_md={width_play}
-              // heigth_md={height_play}
+              margin_tablet={margin_tablet}
+              leftPlay_tablet={leftPlay_tablet}
+              transformPlay_tablet={transformPlay_tablet}
+              transformPlay_md={transformPlay_md}
+              transformPlay_lg={transformPlay_lg}
+            // width_md={width_play}
+            // heigth_md={height_play}
             />
           )}
           {thumb && thumb.childImageSharp ? (
@@ -314,7 +328,7 @@ const Play = styled.button`
   position: absolute !important;
   top: 50%;
   left: 50%;
-  transform: translateX(-50%) translateY(-50%); {/*translateX(-50%) translateY(-50%);*/}
+  transform: ${(props) => props.transformPlay || "translateX(-50%) translateY(-50%)"}; {/*translateX(-50%) translateY(-50%);*/}
   border: none;
   opacity:  ${(props) => props.opacity || "0.8"};
   cursor: pointer;
@@ -350,19 +364,20 @@ const Play = styled.button`
   @media ${Devices.sm} {
   }
   @media ${Devices.tablet} {
-    right: ${(props) => props.right_tablet};
-    left: ${(props) => props.left_tablet};
+    left: ${(props) => props.leftPlay_tablet || "50%"};
+    transform: ${(props) => props.transformPlay_tablet};
   }
   @media ${Devices.md} {
     height: ${(props) => props.height || "44px"};
     width: ${(props) => props.width || "44px"};
     font-size: ${(props) => props.fontSize || "0.75em"};
+    transform: ${(props) => props.transformPlay_md};
     &:after {
       font-size: ${(props) => props.fontSize || "0.75em"};
     }
   }
   @media ${Devices.lg} {
-    
+    transform: ${(props) => props.transformPlay_lg};
   }
   @media ${Devices.xl} {
   }

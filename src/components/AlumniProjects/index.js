@@ -8,6 +8,7 @@ import ReactPlayer from "../ReactPlayer";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import "../../assets/css/utils.css"
 
 const AlumniProjects = ({
   lang,
@@ -63,13 +64,14 @@ const AlumniProjects = ({
   };
   const settings = {
     dots: true,
-    // infinite: true,
-    // autoplay: true,
-    // autoplaySpeed: 6000,
-    // speed: 500,
-    // slidesToShow: 1,
-    // slidesToScroll: 1,
-    // pauseOnHover: true,
+    dotsClass: "slick-dotss",
+    infinite: true,
+    autoplay: true,
+    autoplaySpeed: 6000,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    pauseOnHover: true,
     afterChange: () => {
       setSwitched(!switched);
     },
@@ -103,9 +105,17 @@ const AlumniProjects = ({
   //     }
   // };
   return (
-    <Div flexDirection="column" style={containerStyle}>
+    <Div 
+      flexDirection="column" 
+      style={containerStyle} 
+      maxWidth_lg="1366px"
+      maxWidth_md="1024px"
+      maxWidth_tablet="768px" 
+      margin_tablet="30px auto 100px auto" 
+      zIndex="1" 
+    >
       {(title !== undefined && paragraph !== undefined) || yml && (
-        <GridContainer margin="6rem 0">
+        <GridContainer margin="0 0 90px 0">
           <Div display="flex" flexDirection="column" alignItems="center">
             <H2 margin="0 0 15px 0" fontWeight="900">
               {yml.heading || title}
@@ -116,7 +126,6 @@ const AlumniProjects = ({
           </Div>
         </GridContainer>
       )}
-
       <Slider {...settings}>
         {projects?.map((item, index) => {
           return (
@@ -131,22 +140,22 @@ const AlumniProjects = ({
               padding_tablet="0 40px"
             >
               <Div
-                background={Colors.lightGray}
                 height_tablet="414px"
                 padding="0"
                 //padding_tablet="17px 51px"
-                padding_tablet="17px 0px"
+                padding_tablet="0"
                 gridColumn_tablet="1 / 7"
               >
                 {item.project_video === "" ? (
                   <StyledBackgroundSection
-                    height="80%"
-                    width="80%"
-                    padding="36px 0"
-                    margin="0 auto"
                     image={item.project_image.childImageSharp.gatsbyImageData}
                     bgSize={`cover`}
                     alt="Cnn Logo"
+                    style={{
+                      width: "100%",
+                      height: "342px",
+                      margin: "36px 15%",
+                    }}
                   />
                 ) : (
                   <ReactPlayer
@@ -156,6 +165,7 @@ const AlumniProjects = ({
                     imageSize="maxresdefault"
                     right_tablet="-93px"
                     left_tablet="unset"
+                    margin_tablet="36px 15%"
                     switched={switched}
                     videoHeight="500px"
                     width_play="92px"
@@ -163,9 +173,13 @@ const AlumniProjects = ({
                     fontSize_play="28px"
                     background_play="black"
                     opacity_play="1"
+                    leftPlay_tablet="121.5%"
+                    transformPlay_tablet="translateX(-115%%) translateY(-50%)"
+                    transformPlay_md="translateX(-51%) translateY(-50%)"
+                    transformPlay_lg="translateX(-50%) translateY(-50%)"
                     style={{
                       width: "100%",
-                      height: "414px",
+                      height: "342px",
                     }}
                   />
                 )}

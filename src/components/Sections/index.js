@@ -156,6 +156,7 @@ export const Div = styled.div`
   margin: ${(props) => props.margin};
   border: ${(props) => props.border};
   border-radius: ${(props) => props.borderRadius};
+  background-color: ${(props) => props.backgroundColor};
   background: ${(props) =>
     props.isActive ? props.backgroundActive : props.background};
   background-image: url(${(props) => props.bgImage});
