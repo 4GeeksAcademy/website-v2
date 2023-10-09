@@ -109,7 +109,7 @@ iconogram:
 
 components:
   - name: how-it-works
-    position: 3
+    position: 2
     background: "veryLightBlue2"
     layout: iconogram
     swipable: True
@@ -209,11 +209,11 @@ components:
         <h4><strong style="font-weight: bold;"> > CAREER FLEXIBILITY </strong></h4>
         <p>Coding skills prepare you for a variety of jobs in the rapidly-shifting digital economy.</p>
   - name: geeksinfo
-    position: 7
+    position: 1
     layout: geeksInfo
 
   - name: why4geeks
-    position: 5
+    position: 2
     layout: two_column_left
     proportions: [5, 7]
     image:
@@ -238,7 +238,7 @@ components:
     
   - name: pay
     position: 8
-    background: "veryLightBlue2"
+    background: "#C7F3FD"
     layout: two_column_right
     proportions: [6, 6]
     image:
@@ -277,7 +277,7 @@ components:
     # ["azu-bota","nai-kali","cha-fabr"]
 
   - name: better-future
-    position: 10
+    position: 7
     layout: two_column_right
     proportions: [6, 6]
     background: "#F5F5F5"
@@ -298,12 +298,12 @@ components:
       path: "#top"
 
   - name: united
-    position: 11
+    position: 9
     layout: two_column_right
     proportions: [6, 6]
-    background: "veryLightBlue2"
+    background: "lightBlue"
     image:
-      style: '{ "backgroundSize": "contain", "maxHeight": "270px" }'
+      style: '{ "backgroundSize": "contain", "maxHeight": "170px" }'
       src: "/images/landing/united-way-two.png"
     heading:
       text: "The United Way Miami Workforce Project is a partnership between United Way Miami and 4Geeks Academy."
