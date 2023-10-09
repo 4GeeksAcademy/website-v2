@@ -316,6 +316,7 @@ export const TwoColumn = ({ left, right, proportions, session }) => {
         size="12"
         // maxHeight="300px"
         textAlign="center"
+        
       >
         <Side session={session} {...left} />
       </Div>
@@ -324,6 +325,7 @@ export const TwoColumn = ({ left, right, proportions, session }) => {
         size_tablet={right_size || 6}
         size="12"
         textAlign="center"
+        padding_tablet="0 0 0 10px"
       >
         <Side session={session} {...right} />
       </Div>
