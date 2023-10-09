@@ -7,7 +7,7 @@ meta_info:
   image: "/images/bg/main-bg.jpg"
   keywords: "Clase de programación, Clase de python, clase de javascript, Clase de informática, Coding Bootcamp, 4Geeks Academy"
 
-  template: "landing_nonav" # <--- choose your landing template
+  template: "landing_a" # <--- choose your landing template
   redirects: # <--- URL redirections to avoid 404 errors
     []
 
@@ -92,7 +92,7 @@ short_badges:
 #
 
 rating_reviews:
-  position: 1
+  position: 3
   heading: "Lee acerca de nosotros"
   rating_list:
     - alt: "Career Karma"
@@ -141,6 +141,7 @@ components:
     image:
       style: '{ "backgroundSize": "contain" }'
       src: "/images/landing/group_194.png"
+      shadow: true
     heading:
       text: "Membresías"
       font_size: ["50px", "50px", "50px", "50px", "50px"]

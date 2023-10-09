@@ -9,7 +9,7 @@ meta_info:
   image: "/images/bg/main-bg.jpg"
   keywords: "Bootcamp de programación, Bootcamp de python, Bootcamp de javascript, Bootcamp de full stack, Bootcamp, 4Geeks Academy"
 
-  template: "landing_nonav" # <--- choose your landing template
+  template: "landing_a" # <--- choose your landing template
   redirects: # <--- URL redirections to avoid 404 errors
     []
 
@@ -124,9 +124,10 @@ components:
         <p>GeekForce es el proceso colectivo de apoyo profesional del Bootcamp. La 'fuerza' significa empoderamiento profesional y es una membresía de por vida. Brinda asistencia para la colocación laboral del estudiante y para que se prepare para conseguir un trabajo en tecnología.</p>
 
   - name: top_coding_bootcamp
-    position: 6
+    position: 4
     layout: two_column_left
     proportions: [4, 8]
+    background: "#e6e6e6"
     image:
       style: '{ "backgroundSize": "contain" }'
       src: "/images/badges/Course-Report-Badge-2023.png"
@@ -134,8 +135,8 @@ components:
     heading:
       text:
         "Tenemos 3 años consecutivos siendo seleccionados como uno de los mejores coding bootcamps del mundo"
-        #xl      lg     md     sm    xs
-      font_size: ["40px", "40px", "40px", "40px", "40px"]
+                      #xl      lg     md     sm    xs
+      font_size: ["38px", "36px", "32px", "30px", "30px"]
   - name: alianza
     position: 2
     layout: two_column_left
@@ -157,7 +158,7 @@ components:
 
     
 badges:
-  position: 3
+  position: 7
   heading: "4Geeks Academy cuenta con premios y reconocimientos de validan su excelencia"
 
 why_4geeks:
