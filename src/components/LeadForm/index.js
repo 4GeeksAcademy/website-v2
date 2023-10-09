@@ -537,7 +537,7 @@ const LeadForm = ({
               <Paragraph fontSize="11px" margin="5px 0 0 5px" textAlign="left">
                 {yml.consent.message}
                 <a
-                  style={{marginLeft: '5px'}}
+                  style={{ marginLeft: "5px" }}
                   target="_blank"
                   rel="noopener noreferrer nofollow"
                   className="decorated"
@@ -555,11 +555,7 @@ const LeadForm = ({
               </Alert>
             )}
             {layout === "block" && (
-              <Div
-                display="flex"
-                padding="10px 0 0 0"
-                width="100%"
-              >
+              <Div display="flex" padding="10px 0 0 0" width="100%">
                 <Button
                   //variant="full"
                   type="submit"

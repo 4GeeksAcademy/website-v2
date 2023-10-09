@@ -76,6 +76,7 @@ const NotFoundPage = () => {
     if (filter === "") return true;
     if (node.meta_info.utm_location.some((slug) => slug.includes(filter)))
       return true;
+    if(node.meta_info.slug.includes(filter)) return true;
     return false;
   };
   return (
@@ -99,7 +100,7 @@ const NotFoundPage = () => {
           border="1px solid hsl(0,0%,80%)"
           borderRadius="3px"
           type="text"
-          placeholder="Filter by location"
+          placeholder="Filter by slug or campus (location)"
           onChange={(value) => {
             setFilter(value);
           }}

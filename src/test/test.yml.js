@@ -39,7 +39,7 @@ walk(`${__dirname}/../data/`, async function (err, files) {
       const doc = loadYML(_path);
       if (!doc || !doc.yaml) {
         fail("Invalid YML syntax for " + _path);
-        console.log(doc)
+        console.log(doc);
       }
     });
 
