@@ -1131,7 +1131,7 @@ export const landingSections = {
         width="50%"
         height="414px"
         position="absolute"
-        top="181px"
+        top="192px"
         display_xs="none"
         display_tablet="flex"
       />

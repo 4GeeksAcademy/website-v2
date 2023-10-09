@@ -117,7 +117,7 @@ const AlumniProjects = ({
       {(title !== undefined && paragraph !== undefined) || yml && (
         <GridContainer margin="0 0 90px 0">
           <Div display="flex" flexDirection="column" alignItems="center">
-            <H2 margin="0 0 15px 0" fontWeight="900">
+            <H2 margin="0 0 15px 0" fontWeight="700" lineHeight="36px">
               {yml.heading || title}
             </H2>
             <Paragraph padding="0" padding_tablet="0 16%">
@@ -188,7 +188,7 @@ const AlumniProjects = ({
                 <H3 textAlign="left" margin={`10px 0`}>
                   Project: {`${item.project_name}`}
                 </H3>
-                <H4 textAlign="left" fontWeight="900" margin={`24px 0 9px 0`}>
+                <H4 textAlign="left" fontWeight="900" lineHeight="19px" margin={`24px 0 9px 0`}>
                   {" "}
                   {`> MADE BY:`}
                 </H4>
@@ -206,6 +206,7 @@ const AlumniProjects = ({
                         fontWeight={`400`}
                         width="fit-content"
                         margin="0 20px 0 0"
+                        lineHeight="22px"
                       >
                         {`${alumni.first_name} ${alumni.last_name}`}
                       </H4>
@@ -248,12 +249,13 @@ const AlumniProjects = ({
                   textAlign="left"
                   fontWeight="900"
                   margin={`20px 0 6px 0`}
+                  lineHeight="19px"
                   style={{ borderTop: "1px solid #ebebeb" }}
                 >
                   {" "}
                   {`> DESCRIPTION:`}
                 </H4>
-                <Paragraph color={Colors.gray} textAlign="left">
+                <Paragraph color={Colors.gray} textAlign="left" lineHeight="22px">
                   {item.project_content}
                 </Paragraph>
               </Div>
