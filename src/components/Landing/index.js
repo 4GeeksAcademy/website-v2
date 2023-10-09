@@ -312,7 +312,7 @@ export const TwoColumn = ({ left, right, proportions, session }) => {
         size_tablet={left_size || 6}
         size="12"
         padding_xs="0"
-        padding_md={right.image?.shadow? "0 20px 0 0 " : "0px"}
+        padding_md={right.image?.shadow ? "0 20px 0 0 " : "0px"}
         // maxHeight="300px"
         textAlign="center"
       >
@@ -322,7 +322,7 @@ export const TwoColumn = ({ left, right, proportions, session }) => {
         flexDirection="column"
         size_tablet={right_size || 6}
         padding_xs="0"
-        padding_md={left.image?.shadow? "0 0 0 20px" : "0px"}
+        padding_md={left.image?.shadow ? "0 0 0 20px" : "0px"}
         size="12"
         textAlign="center"
       >

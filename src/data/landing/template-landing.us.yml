@@ -430,7 +430,7 @@ components:
       text: "Python y Javascript"
     content:
       text: |
-        <strong style="font-weight: bold;"> Nuestros programa está basado en el uso de Phyton y Javascript. La razón? </strong>  En el mercado laboral JavaScript tiene 26 veces más vacantes de trabajo que Ruby on Rails. Python tiene 10 veces más trabajos que node.js.
+        <strong style="font-weight: bold;"> Nuestros programa está basado en el uso de Phyton y Javascript. La razón? </strong> En el mercado laboral JavaScript tiene 26 veces más vacantes de trabajo que Ruby on Rails. Python tiene 10 veces más trabajos que node.js.
         Otras herramientas que también aprenderás a usar en nuestro programa son: GitHub, CSS3, HTML5, Flask, etc.
     button: 
       text: Aplicar

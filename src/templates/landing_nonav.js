@@ -280,8 +280,10 @@ const Landing = (props) => {
               justifyContentButton="center"
               widthButton="fit-content"
               //marginButton="15px auto 30px auto"
-              marginButton_tablet={ 
-                applySchollarship?.imageSide === "right" ? "15px auto 30px 0" : "15px 0 30px auto" 
+              marginButton_tablet={
+                applySchollarship?.imageSide === "right"
+                  ? "15px auto 30px 0"
+                  : "15px 0 30px auto"
               }
             />
           </Div>
