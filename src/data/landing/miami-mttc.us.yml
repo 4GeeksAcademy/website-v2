@@ -90,7 +90,7 @@ follow_bar:
 components:
   - name: "whatever"
     layout: choose_your_program
-    background: "green"
+    background: "lightblue"
     position: 3
     heading:
       text: Our Programs
