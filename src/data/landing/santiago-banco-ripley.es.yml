@@ -9,7 +9,7 @@ meta_info:
   image: "/images/bg/main-bg.jpg"
   keywords: "Bootcamp de programación, Bootcamp de python, Bootcamp de javascript, Bootcamp de full stack, Bootcamp, 4Geeks Academy"
 
-  template: "landing_nonav" # <--- choose your landing template
+  template: "landing_a" # <--- choose your landing template
   redirects: # <--- URL redirections to avoid 404 errors
     ["/landing/alianza-banco-ripley"]
 
@@ -208,7 +208,7 @@ components:
     button:
       text: "Postula Ahora"
       color: "white"
-      hover_color: "white"
+      hover_color: "rgb(255, 183, 24)"
       path: "#top"
       background: "black"
     columns:

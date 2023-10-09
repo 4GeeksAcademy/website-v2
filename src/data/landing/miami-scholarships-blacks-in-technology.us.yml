@@ -8,7 +8,7 @@ meta_info:
   image: "/images/bg/remote.jpeg"
   keywords: "Learn to code, 4Geeks academy, scholarship"
 
-  template: "landing_nonav" # <--- choose your landing template
+  template: "landing_a" # <--- choose your landing template
   redirects: ["/bit"] # <--- URL redirections to avoid 404 errors
 
   # Set a particular course or location to the landing page
@@ -39,9 +39,9 @@ header_data:
   sub_heading: ""
   partner_logo_url: "../../../static/images/partner/bit-logo.png" # optional
   badge: "../../../static/images/badges/Course-Report-Badge-2023.png"
-  # background_image: "../../../static/images/Happy-People-Landing-4Geeks-ES.jpg" # optional
-  background: "black" #background property, it can be a hex color
-  image_filter: brightness(0.4)
+  background_image: "../../../static/images/Happy-People-Landing-4Geeks-ES.jpg" # optional
+  background: "#000000" #background property, it can be a hex color
+  image_filter: brightness(0.35)
 
 features:
   marginTop: 20px #<-- separation between tagline and the bullets
@@ -91,7 +91,7 @@ follow_bar:
 # ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇
 #
 rating_reviews:
-  position: 1
+  position: 3
   heading: "Top rated on all available review sites"
   rating_list:
     - alt: "Career Karma"
@@ -112,7 +112,7 @@ rating_reviews:
       url: ""
 
 who_is_hiring:
-  position: 4
+  position: 10
   heading: "OUR STUDENTS WORK AT"
   sub_heading: "Get a job in less than 3 months thanks to our growing network of more than 500 technology companies. Access to national and international offers and a community of more than 2000 graduates"
   featured:
@@ -141,7 +141,7 @@ why_4geeks:
 
 apply_schollarship: # form that is displayed at the end of the landing
   # title: "Apoyo Profesional Ilimitado"
-  imageSide: "right"
+  imageSide: "left"
   image: "../../../static/images/landing/apply.png"  
 
 # Possible layours: [two_column_left_image, two_column_right_image]
@@ -149,7 +149,7 @@ apply_schollarship: # form that is displayed at the end of the landing
 components:
 
   - name: how-it-works
-    position: 3
+    position: 2
     background: "veryLightBlue2"
     layout: iconogram
     swipable: True
@@ -174,7 +174,7 @@ components:
 
   - name: "whatever"
     layout: choose_your_program
-    position: 5
+    position: 1
     heading:
       text: Our Programs
     content:

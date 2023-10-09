@@ -8,7 +8,7 @@ meta_info:
   image: "/images/bg/remote.jpeg"
   keywords: "Data Science, Analista de Datos, 4Geeks academy, aprende programación, aprende ingeniería informática, aprende Inteligencia Artificial, aprende Data Science, aprende Machine Learning, ticjob"
 
-  template: "landing_nonav" # <--- choose your landing template
+  template: "landing_a" # <--- choose your landing template
   redirects: ["/landing/becas-ticjob-españa"] # <--- URL redirections to avoid 404 errors
 
   # Set a particular course or location to the landing page
