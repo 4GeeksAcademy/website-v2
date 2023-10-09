@@ -8,7 +8,7 @@ meta_info:
   image: "/images/bg/remote.jpeg"
   keywords: "Learn to code, 4Geeks academy, Learn programming, learn computer engineering"
 
-  template: "landing_nonav" # <--- choose your landing template
+  template: "landing_a" # <--- choose your landing template
   redirects: ["/landing/becas-partner"] # <--- URL redirections to avoid 404 errors
 
   # Set a particular course or location to the landing page
@@ -104,18 +104,6 @@ about4Geeks:
   image: "../../../static/images/bg/community.png"
   image_mobile: "../../../static/images/bg/community.png"
 
-iconogram:
-  position: 3
-  icons:
-  - icon: "touch"
-    title: Apply for your scholarship before October 8th, 2021
-  - icon: "receive_mail"
-    title: You will receive an email with all the information and a logic test 
-  - icon: "talk"
-    title: Do an online interview with our admissions team 
-  - icon: "terminal"
-    title: Get the result, book your spot and start coding
-
 who_is_hiring:
   position: 4
   heading: "OUR STUDENTS WORK AT"
@@ -128,33 +116,6 @@ who_is_hiring:
     - name: "Apple"
       image: "../../../static/images/partner/apple.png"
 
-choose_your_program:
-  position: 5
-  title: Our Programs
-  paragraph: Programs in Full-Time or Part-Time modality with live classes taught by experts
-  programs:
-  - title: "Full Stack Developer"
-    sub_title: "Level 1"
-    icon: "fullstack"
-    description: |
-      From 0 to becoming a Full-Stack Jr. programmer, you will work with HTML5, CSS3, Bootstrap, JS, Reactjs, SQL, Python, Flask, REST API's, etc. to design and create responsive websites. You'll gain a solid foundation of front, back, database, distributed processes, and deployment with passionate instructors and an up-to-date, hands-on syllabus.
-      Available Part-Time or Full-Time mode.   
-    
-    text_link: Apply for a scholarship
-    link: "#" # moves to start position
-    
-  - title: "AI & Machine Learning"
-    sub_title: "Level 2"
-    icon: "machine"
-    description: |
-      Get trained by a renowned expert in A.I.; explore Machine Learning's fundamentals and Deep Learning with some of the most powerful technologies that truly scale intelligence for business. Practice with real-life business scenarios typical in business and review some of the tools used in the industry. Strategize and develop your A.I. following the lifecycle development from start to end, including deployment into production and maintenance with Privacy, Security, and Ethics. 
-
-      
-
-    text_link: Apply for a scholarship
-    link: "#"
-
-
 why_4geeks:
   position: 7
   heading: "In words of our students"
@@ -166,10 +127,64 @@ why_4geeks:
 apply_schollarship: # form that is displayed at the end of the landing
   # title: "Apoyo Profesional Ilimitado"
   imageSide: "right"
-  image: "../../../static/images/comunity-support.png"
+  image: "../../../static/images/landing/apply.png"
 
 # Possible layours: [two_column_left_image, two_column_right_image]
 components:
+
+  - name: how-it-works
+    position: 3
+    background: "veryLightBlue2"
+    layout: iconogram
+    swipable: True
+    heading:
+      text: ""
+      font_size: ["30px", "30px", "30px", "30px", "30px"]
+    sub_heading:
+      text: ""
+      font_size: ["16px", "16px", "16px", "16px", "16px"]
+      style: '{ "textAlign": "center", "width": "60%" }'
+    text_link: "#"
+    icons:
+    - icon: "touch"
+      title: Apply for your scholarship before October 8th, 2021
+    - icon: "receive_mail"
+      title: You will receive an email with all the information and a logic test 
+    - icon: "talk"
+      title: Do an online interview with our admissions team 
+    - icon: "terminal"
+      title: Get the result, book your spot and start coding
+
+  - name: "whatever"
+    layout: choose_your_program
+    position: 5
+    heading:
+      text: Our Programs
+    content:
+      text: Programs in Full-Time or Part-Time modality with live classes taught by experts
+      font_size: ["16px"]
+      path: ""
+    programs:
+    - title: "Full Stack Developer"
+      sub_title: "Level 1"
+      icon: "fullstack_2"
+      description: |
+        From 0 to becoming a Full-Stack Jr. programmer, you will work with HTML5, CSS3, Bootstrap, JS, Reactjs, SQL, Python, Flask, REST API's, etc. to design and create responsive websites. You'll gain a solid foundation of front, back, database, distributed processes, and deployment with passionate instructors and an up-to-date, hands-on syllabus.
+        Available Part-Time or Full-Time mode.   
+      
+      text_link: Apply for a scholarship
+      link: "#" # moves to start position
+    
+    - title: "AI & Machine Learning"
+      sub_title: "Level 2"
+      icon: "machine_2"
+      description: |
+        Get trained by a renowned expert in A.I.; explore Machine Learning's fundamentals and Deep Learning with some of the most powerful technologies that truly scale intelligence for business. Practice with real-life business scenarios typical in business and review some of the tools used in the industry. Strategize and develop your A.I. following the lifecycle development from start to end, including deployment into production and maintenance with Privacy, Security, and Ethics. 
+
+      text_link: Apply for a scholarship
+      link: "#"
+
+
   - name: python_y_javascript
     position: 6
     layout: two_column_right

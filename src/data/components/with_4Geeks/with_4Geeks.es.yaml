@@ -3,7 +3,7 @@
 
 ## IF THE video url IS SPECIFIED, THE IMAGE WILL HAVE A PLAY ICON TO PLAY THE VIDEO, OTHERWISE ONLY THE IMAGE IS SHOWN
 header:
-  title: 4Geeks Academy en tres historias
+  title: ESCÚCHALO DE NUESTROS ALUMNOS
   paragraph: ""
 with:
   - name: "Hernan García"

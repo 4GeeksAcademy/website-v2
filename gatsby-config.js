@@ -109,7 +109,7 @@ module.exports = {
       resolve: "gatsby-plugin-web-font-loader",
       options: {
         custom: {
-          families: ["Lato"],
+          families: ["Lato", "Inter"],
           urls: ["/fonts/fonts.css"],
         },
       },

@@ -26,6 +26,11 @@ form:
   button_label: Get more information
   redirect: null #you can redirect to another url or entirely diffrent website
 
+apply_schollarship: # form that is displayed at the end of the landing
+  # title: "Apoyo Profesional Ilimitado"
+  imageSide: "left"
+  image: "../../../static/images/landing/apply.png"  
+
 # jumbotron on the top (cannot be commented out)
 header_data:
   tagline: Become a Software Developer and Boost your Career in Tech
@@ -81,7 +86,7 @@ short_badges:
 #
 
 rating_reviews:
-  position: 1
+  position: 5
   heading: "Top rated on all available review sites"
   rating_list:
     - alt: "Career Karma"
@@ -135,12 +140,13 @@ alumni_projects:
 # Possible layours: [two_column_left_image, two_column_right_image]
 components:
   - name: passion
-    position: 6
+    position: 4
+    background: "lightYellow"
     layout: two_column_right
     proportions: [6, 6]
     image:
       style: '{ "backgroundSize": "contain" }'
-      src: "/images/badges/switchup-badge-2023.png"
+      src: "/images/landing/why-4geeks-academy-preview.png"
       link: "https://www.switchup.org/bootcamps/4geeks-academy"
     video: "SixRm6R8rc0"
     heading:
@@ -150,23 +156,26 @@ components:
       text: "We have graduated thousands of students around the world. People from Europe, North America, and Latin America have enjoyed, learned and grown with us. We are focused on being the bridge between your passion about coding and the skills you need to launch your career within the tech industry. Here you will find some of them talking about their experience:"
       font_size: ["16px"]
   - name: top_coding_bootcamp
-    position: 5
+    position: 8
+    background: "lightblue"
     layout: two_column_left
     proportions: [4, 8]
     image:
       style: '{ "backgroundSize": "contain" }'
       src: "/images/badges/Course-Report-Badge-2023.png"
       link: "https://www.coursereport.com/schools/4geeks-academy"
-    heading:
+    content:
+      style: '{ "line-height": "30px" }'
       text:
         "We have been selected as one of the Top Coding Bootcamps globally for 3 years in a row"
-        #xl      lg     md     sm    xs
-      font_size: ["40px", "40px", "40px", "40px", "40px"]
+                    #xl      lg     md     sm       xs
+      font_size: ["30px", "30px", "30px", "30px", "30px"]
   - name: geeksinfo
-    position: 4
+    position: 1
     layout: geeksInfo
   - name: working_in_tech
-    position: 7
+    position: 3
+    background: "#f1f1f1"
     proportions: [4, 8]
     layout: two_column_left
     image:

@@ -25,11 +25,13 @@ const formIsValid = (formData = null) => {
 const Form = styled.form`
   margin: ${(props) => props.margin};
   margin-top: ${(props) => props.marginTop};
+  padding: ${(props) => props.padding};
   width: auto;
   height: auto;
   display: block;
   background: ${(props) => (props.background ? props.background : "#FFFFFF")};
   border-radius: 3px;
+  box-shadow: ${(props) => props.boxShadow};
   @media ${Break.sm} {
     display: ${(props) => props.d_sm};
   }
@@ -49,7 +51,7 @@ const _fields = {
     valid: false,
     required: true,
     type: "text",
-    place_holder: "First name *",
+    place_holder: "First name",
     error: "Please specify a valid first name",
   },
   full_name: {
@@ -57,7 +59,7 @@ const _fields = {
     valid: false,
     required: true,
     type: "text",
-    place_holder: "Full name *",
+    place_holder: "Full name ",
     error: "Please specify a valid full name",
   },
   last_name: {
@@ -73,7 +75,7 @@ const _fields = {
     valid: false,
     required: true,
     type: "email",
-    place_holder: "Your email *",
+    place_holder: "Your email",
     error: "Please specify a valid email",
   },
   phone: {
@@ -108,6 +110,14 @@ const _fields = {
     place_holder: "",
     error: "formType not found",
   },
+  course: {
+    value: "",
+    valid: true,
+    required: true,
+    type: "selector",
+    place_holder: "Select a program *",
+    error: "Please choose a program",
+  },
 };
 
 const clean = (fields, data) => {
@@ -138,12 +148,14 @@ const clean = (fields, data) => {
 const LeadForm = ({
   marginButton,
   marginButton_tablet,
+  widthButton,
   background,
   margin,
   marginTop,
   marginTop_tablet,
   marginTop_xs,
   margin_tablet,
+  padding,
   justifyContentButton,
   buttonWidth_tablet,
   titleTextAlign,
@@ -170,6 +182,7 @@ const LeadForm = ({
   titleMargin,
   titleMargin_tablet,
   headerImage,
+  boxShadow,
 }) => {
   const _query = useStaticQuery(graphql`
     query newLeadFormQuery {
@@ -230,6 +243,7 @@ const LeadForm = ({
   const consentCheckboxField = yml.form_fields.find(
     (f) => f.name === "consent"
   );
+
   React.useEffect(() => {
     setVal((_data) => {
       const _ = Object.keys(_data).reduce((total, key) => {
@@ -259,6 +273,7 @@ const LeadForm = ({
 
   return (
     <Form
+      boxShadow={boxShadow}
       margin={margin}
       background={background}
       margin_tablet={margin_tablet}
@@ -321,21 +336,23 @@ const LeadForm = ({
     >
       {headerImage && (
         <Div
+          position="absolute"
+          style={{
+            top: 0,
+            right: 50,
+          }}
           width="0px"
           display="none"
           display_tablet="none"
           display_md="flex"
           display_lg="flex"
-          flexDirection_tablet="column"
-          padding="0 0 25px 0"
+          flexDirection_tablet="row"
         >
           <GatsbyImage
             loading="eager"
             style={{
               width: "160px",
               height: "130px",
-              position: "absolute",
-              margin: "-44px 0 0 26%",
             }}
             imgStyle={{ objectFit: "contain" }}
             image={getImage(headerImage)}
@@ -350,38 +367,34 @@ const LeadForm = ({
         </Paragraph>
       ) : (
         <>
-          <GridContainer
+          <Div
             display="block"
-            containerColumns_tablet={
-              landingTemplate && "0fr repeat(12, 1fr) 0fr"
-            }
-            containerGridGap={landingTemplate && "0"}
             className={"leadform-" + layout}
             size="12"
-            paddingLeft="0"
-            paddingRight="0"
+            padding="0 24px"
           >
             {heading && (
               <H4
                 type="h4"
-                fontSize="25px"
+                lineHeight="26px"
+                fontSize="22px"
                 padding={headerImage && "0 10% 0 0"}
                 fontWeight="700"
                 width="auto"
-                textAlign="center"
-                textAlign_tablet={titleTextAlign || "left"}
+                textAlign={titleTextAlign || "left"}
                 margin={
                   landingTemplate
-                    ? "25px 0px 0px 0"
-                    : titleMargin || "20px 0px 5px 0px"
+                    ? "25px 0px 10px 0"
+                    : titleMargin || "20px 0px 10px 0px"
                 }
-                margin_tablet={titleMargin_tablet || "20px 0px 5px 0px"}
+                margin_tablet={titleMargin_tablet || "20px 0px 10px 0px"}
               >
                 {heading}
               </H4>
             )}
             {motivation && (
               <Paragraph
+                style={{ fontWeight: "700", color: "#000" }}
                 textAlign="left"
                 padding={textPadding || "0px 0px 10px 0px"}
                 padding_tablet={textPadding_tablet || "0px 0px 10px 0px"}
@@ -443,10 +456,10 @@ const LeadForm = ({
                 );
               })}
 
-            {selectProgram?.length > 1 && (
+            {selectProgram?.length >= 1 && (
               <Div
                 data-cy="dropdown_program_selector"
-                margin_tablet="0 0 23px 0"
+                margin_tablet="0 0 10px 0"
               >
                 <SelectRaw
                   style={{
@@ -464,11 +477,8 @@ const LeadForm = ({
                 />
               </Div>
             )}
-            {selectLocation?.length > 1 && (
-              <Div
-                data-cy="dropdown_location_selector"
-                margin_tablet="0 0 23px 0"
-              >
+            {selectLocation?.length >= 1 && (
+              <Div data-cy="dropdown_location_selector" margin_tablet="0">
                 <SelectRaw
                   style={{
                     background: "#FFFFFF",
@@ -488,12 +498,12 @@ const LeadForm = ({
             )}
             {layout === "flex" && (
               <Button
-                width="100%"
+                width="fit-content"
                 justifyContent="center"
-                width_tablet={buttonWidth_tablet}
+                //width_tablet={buttonWidth_tablet}
                 variant="full"
                 type="submit"
-                margin="10px 0"
+                margin={marginButton}
                 borderRadius={buttonBorderRadius || "0px 10px 10px 0px"}
                 color={
                   formStatus.status === "loading"
@@ -506,19 +516,28 @@ const LeadForm = ({
                 {formStatus.status === "loading" ? "Loading..." : sendLabel}
               </Button>
             )}
-            {session && session.location && session.location.gdpr_compliant && (
-              <Paragraph fontSize="11px" margin="5px 0 0 0" textAlign="left">
-                <input
-                  name="isGoing"
-                  type="checkbox"
-                  checked={consentValue}
-                  onChange={() => {
-                    setConsentValue(!consentValue);
-                    // setVal({...formData, consent: {...formData.consent, valid: !formData.consent.valid}})
-                  }}
-                />
+
+            {/* {session && session.location && session.location.gdpr_compliant && ( */}
+            <Div position="relative" margin="10px 0 0 0">
+              <input
+                name="isGoing"
+                type="checkbox"
+                checked={consentValue}
+                onChange={() => {
+                  setConsentValue(!consentValue);
+                  // setVal({...formData, consent: {...formData.consent, valid: !formData.consent.valid}})
+                }}
+                style={{
+                  width: "24px",
+                  height: "24px",
+                  top: "10px",
+                  left: "7px",
+                }}
+              />
+              <Paragraph fontSize="11px" margin="5px 0 0 5px" textAlign="left">
                 {yml.consent.message}
                 <a
+                  style={{marginLeft: '5px'}}
                   target="_blank"
                   rel="noopener noreferrer nofollow"
                   className="decorated"
@@ -527,45 +546,43 @@ const LeadForm = ({
                   {yml.consent.link_label}
                 </a>
               </Paragraph>
-            )}
+            </Div>
+
+            {/* )} */}
             {formStatus.status === "error" && (
               <Alert color="red" margin="0" padding="5px 0 0 0">
                 {formStatus.msg}
               </Alert>
             )}
-          </GridContainer>
-          {layout === "block" && (
-            <GridContainer
-              containerColumns_tablet={
-                landingTemplate && "0fr repeat(12, 1fr) 0fr"
-              }
-              containerGridGap={landingTemplate && "0"}
-            >
+            {layout === "block" && (
               <Div
-                justifyContent={
-                  justifyContentButton ? justifyContentButton : "end"
-                }
                 display="flex"
-                padding="5px 0 0 0"
+                padding="10px 0 0 0"
+                width="100%"
               >
                 <Button
-                  variant="full"
+                  //variant="full"
                   type="submit"
+                  fontSize="17px"
                   margin={marginButton}
                   margin_tablet={marginButton_tablet}
+                  width_lg={widthButton}
+                  width_xs="100%"
+                  justifyContent="center"
+                  background={Colors.blue}
+                  //textAlign="center"
                   color={
                     formStatus.status === "loading"
                       ? Colors.darkGray
-                      : Colors.blue
+                      : Colors.white
                   }
-                  textColor={Colors.white}
                   disabled={formStatus.status === "loading" ? true : false}
                 >
                   {formStatus.status === "loading" ? "Loading..." : sendLabel}
                 </Button>
               </Div>
-            </GridContainer>
-          )}
+            )}
+          </Div>
         </>
       )}
     </Form>

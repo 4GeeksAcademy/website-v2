@@ -7,7 +7,7 @@ meta_info:
   image: "/images/bg/remote.jpeg"
   keywords: "Aprende a programar, 4Geeks academy, aprende programacion, aprende ingenieria informatica"
 
-  template: "landing_nonav" # <--- choose your landing template
+  template: "landing_a" # <--- choose your landing template
   redirects: [] # <--- URL redirections to avoid 404 errors
 
   # Set a particular course or location to the landing page
@@ -75,12 +75,17 @@ short_badges:
     image: "../../../static/images/badges/licensed.png"
     alt: "Florida Department of Education"
 
+apply_schollarship: # form that is displayed at the end of the landing
+  # title: "Get more info about this award-winning development course"
+  imageSide: "left"
+  image: "../../../static/images/landing/apply.png"   
+
 #
 # ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇
 #
 
 badges:
-  position: 6
+  position: 5
   heading: "Premios y reconocimientos que validan nuestra excelencia"
 
 program_details:
@@ -113,9 +118,10 @@ who_is_hiring:
 # Possible layours: [two_column_left_image, two_column_right_image]
 components:
   - name: top_coding_bootcamp
-    position: 5
+    position: 2
     layout: two_column_left
     proportions: [4, 8]
+    background: "#f1f1f1"
     image:
       style: '{ "backgroundSize": "contain" }'
       src: "/images/badges/Course-Report-Badge-2023.png"

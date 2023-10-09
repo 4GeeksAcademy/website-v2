@@ -9,7 +9,7 @@ meta_info:
   image: "/images/bg/main-bg.jpg"
   keywords: "Bootcamp de programación, Bootcamp de python, Bootcamp de javascript, Bootcamp de full stack, Bootcamp, 4Geeks Academy"
 
-  template: "landing_nonav" # <--- choose your landing template
+  template: "landing_a" # <--- choose your landing template
   redirects: # <--- URL redirections to avoid 404 errors
     ["/landing/alianza-banco-ripley"]
 
@@ -28,6 +28,11 @@ form:
   motivation: "Completa el formulario y te enviaremos la información en unos minutos a tu correo electrónico."
   button_label: Obtener malla y más información
   redirect: "/es/gracias/?lang=es"  #you can redirect to another url or entirely diffrent website
+
+apply_schollarship: # form that is displayed at the end of the landing
+  # title: "Apoyo Profesional Ilimitado"
+  imageSide: "left"
+  image: "../../../static/images/landing/apply.png"    
 
 navbar:
   buttonText: "Postular"
@@ -94,6 +99,32 @@ program_details:
 
 # Possible layours: [two_column_left_image, two_column_right_image]
 components:
+  - name: "whatever"
+    layout: choose_your_program
+    position: 5
+    heading:
+      text: Nuestras Modalidades
+    content:
+      text: Programa Full Stack Developer en Modalidad Part Time y Full Time
+      font_size: ["16px"]
+      path: ""
+    programs:
+    - title: "Part Time"
+      sub_title: "18 semanas"
+      icon: "fullstack_2"
+      description: |
+        De cero a tener tu primer trabajo como Full Stack Developer, con una duración de 18 semanas, con clases 3 veces por semana, compatible con horario laboral o de estudios. 
+      text_link: Obtener más información
+      link: "#top" # moves to start position
+      
+    - title: "Full Time"
+      sub_title: "9 semanas"
+      icon: "fullstack_2"
+      description: |
+        Programa intensivo de 9 semanas, con clases de lunes a viernes durante todo el día, para vivir una experiencia inmersiva en el mundo del código.
+      text_link: Obtener más información
+      link: "#top"
+
   - name: geeksinfo
     position: 4
     layout: geeksInfo
@@ -177,7 +208,7 @@ components:
     button:
       text: "Postula Ahora"
       color: "white"
-      hover_color: "white"
+      hover_color: "rgb(255, 183, 24)"
       path: "#top"
       background: "black"
     columns:
@@ -205,27 +236,6 @@ components:
           style: '{ "fontWeight": "700" }'
           font_size: ["16px"]
         size: [3,3,3,3]
-    
-choose_your_program:
-  position: 5
-  title: Nuestras Modalidades
-  paragraph: Programa Full Stack Developer en Modalidad Part Time y Full Time
-  programs:
-  - title: "Part Time"
-    sub_title: "18 semanas"
-    icon: "fullstack"
-    description: |
-      De cero a tener tu primer trabajo como Full Stack Developer, con una duración de 18 semanas, con clases 3 veces por semana, compatible con horario laboral o de estudios. 
-    text_link: Obtener más información
-    link: "#top" # moves to start position
-    
-  - title: "Full Time"
-    sub_title: "9 semanas"
-    icon: "fullstack"
-    description: |
-      Programa intensivo de 9 semanas, con clases de lunes a viernes durante todo el día, para vivir una experiencia inmersiva en el mundo del código.
-    text_link: Obtener más información
-    link: "#top"
 
 why_4geeks:
   position: 7

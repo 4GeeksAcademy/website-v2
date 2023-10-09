@@ -1,27 +1,21 @@
 import React, { useEffect } from "react";
-import { graphql, navigate } from "gatsby";
+import { graphql } from "gatsby";
 import { landingSections } from "../components/Landing";
 import FollowBar from "../components/FollowBar";
 import LeadForm from "../components/LeadForm";
-import { H1, H2, H4, Paragraph, Span } from "../components/Heading";
-import {
-  GridContainerWithImage,
-  Div,
-  GridContainer,
-} from "../components/Sections";
-import { Colors, StyledBackgroundSection, Button } from "../components/Styling";
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import { Paragraph } from "../components/Heading";
+import { GridContainerWithImage, Div, Grid } from "../components/Sections";
+import { Colors, StyledBackgroundSection } from "../components/Styling";
 import BaseRender from "./_baseLandingLayout";
 import { processFormEntry } from "../actions";
 import { SessionContext } from "../session.js";
 import LandingNavbar from "../components/NavbarDesktop/landing";
-import LandingContainer from "../components/LandingContainer";
+import LandingHeader from "../components/LandingHeader";
 
 const Landing = (props) => {
-  const { session, setLocation } = React.useContext(SessionContext);
+  const { session } = React.useContext(SessionContext);
   const { data, pageContext, yml, filteredPrograms } = props;
   const [components, setComponents] = React.useState({});
-  const [inLocation, setInLocation] = React.useState("");
 
   const applySchollarship =
     data.allLandingYaml.edges.length !== 0
@@ -53,15 +47,6 @@ const Landing = (props) => {
       });
     setComponents({ ...yml, ..._components });
   }, [yml]);
-  useEffect(() => {
-    if (yml.meta_info && yml.meta_info.utm_location)
-      setLocation(yml.meta_info?.utm_location[0]);
-
-    const urlParams = new URLSearchParams(window.location.search);
-    const _inLoc = urlParams.get("in") || null;
-    if (_inLoc && _inLoc != "")
-      setInLocation(_inLoc.replace(/^\w/, (c) => c.toUpperCase()) + " ");
-  }, []);
 
   // data sent to the form already prefilled
   const preData = {
@@ -147,261 +132,13 @@ const Landing = (props) => {
             ))}
         </Paragraph>
       </FollowBar>
-      <LandingContainer
-        filter={yml.header_data.image_filter}
-        image={
-          yml.header_data?.background_image &&
-          yml.header_data.background_image.childImageSharp.gatsbyImageData
-        }
-        badge={
-          yml.header_data?.badge &&
-          yml.header_data.badge.childImageSharp.gatsbyImageData
-        }
-        background={yml.header_data.background || Colors.white}
-      >
-        <GridContainer
-          containerGridGap="0"
-          containerColumns_tablet="repeat(1,0fr)"
-          padding="95px 0 35px 0"
-          padding_tablet="70px 0 40px 0"
-          columns_tablet="2"
-        >
-          <Div
-            // display="none"
-            display_tablet="flex"
-            flexDirection="column"
-            width="100%"
-            size_tablet="10"
-            size="12"
-            alignItems="center"
-            alignItems_tablet="flex-start"
-            // borderRadius="0 0 0 1.25rem"
-            margin="0 0 35px auto"
-            padding={`80px 0 0 0`}
-            height="auto"
-            padding_tablet={`80px 0 0 20px`}
-          >
-            {yml.header_data.partner_logo_url && (
-              <>
-                <Div
-                  width="auto"
-                  flexDirection_tablet="column"
-                  height="70"
-                  padding="0 0 25px 0"
-                >
-                  <GatsbyImage
-                    loading="eager"
-                    imgStyle={{ objectFit: "contain" }}
-                    image={getImage(
-                      yml.header_data.partner_logo_url.childImageSharp
-                        .gatsbyImageData
-                    )}
-                    alt="4Geeks Logo"
-                  />
-                </Div>
-
-                <Div
-                  display="none"
-                  display_tablet="flex"
-                  background="#FFFFFF"
-                  width="calc(50% - 30px)"
-                  height="2px"
-                  margin="7px 0"
-                />
-              </>
-            )}
-            <H1
-              type="h1"
-              variant="main"
-              lineHeight="40px"
-              margin="20px 0"
-              padding="0 10px 0 0"
-              color={
-                yml.header_data.tagline_color || yml.header_data.background
-                  ? Colors.black
-                  : Colors.white
-              }
-              fontSize="38px"
-              fontSize_tablet="42px"
-              fontWeight="bolder"
-              textAlign="center"
-              textAlign_tablet="left"
-            >
-              {inLocation}
-              {yml.header_data.tagline}
-              {/* <Span animated color={Colors.yellow}>_</Span> */}
-            </H1>
-            {yml.header_data.sub_heading !== "" && (
-              <H2
-                type="h2"
-                textAlign="left"
-                fontSize="18px"
-                color={yml.header_data.background ? Colors.black : Colors.white}
-                variant="main"
-                fontWeight="400"
-                margin_tablet="0px 0px 40px 0px"
-                margin="0 0 20px 30px"
-                maxWidth="350px"
-                // textShadow="0px 0px 4px black"
-              >
-                {yml.header_data.sub_heading}
-              </H2>
-            )}
-            {Array.isArray(yml.features.bullets) &&
-              yml.features.bullets.map((f, i) => (
-                <Paragraph
-                  key={i}
-                  // isActive
-                  style={JSON.parse(yml.features.styles)}
-                  margin="7px 0"
-                  padding="0px 20px"
-                  fontWeight="400"
-                  // textShadow="0px 0px 4px black"
-                  textAlign="left"
-                  color={
-                    yml.header_data.background ? Colors.black : Colors.white
-                  }
-                >
-                  {"• "}
-                  {f}
-                </Paragraph>
-              ))}
-            {yml.features.text && (
-              <Paragraph
-                isActive
-                style={JSON.parse(yml.features.styles)}
-                margin="7px 0"
-                padding_tablet="0px 0px"
-                padding="0px 20px"
-                // textShadow="0px 0px 4px black"
-                textAlign="left"
-                color={yml.header_data.background ? Colors.black : Colors.white}
-                dangerouslySetInnerHTML={{ __html: yml.features.text }}
-              />
-            )}
-            {yml.features.button && (
-              <Button
-                outline
-                // width="250px"
-                colorHoverText={yml.features.button.hover_color || Colors.blue}
-                lineHeight="26px"
-                textColor={
-                  Colors[yml.features.button.color] || yml.features.button.color
-                }
-                color={
-                  Colors[yml.features.button.color] || yml.features.button.color
-                }
-                padding_tablet="0"
-                fontSize="15px"
-                style={
-                  yml.features.button.style
-                    ? JSON.parse(yml.features.button.style)
-                    : null
-                }
-                background={
-                  Colors[yml.features.button.background] ||
-                  yml.features.button.background
-                }
-                // textAlign="left"
-                margin="2rem 0"
-                padding=".35rem.85rem"
-                onClick={() => {
-                  if (
-                    yml.features.button.path &&
-                    yml.features.button.path.indexOf("http") > -1
-                  )
-                    window.open(yml.features.button.path);
-                  else navigate(yml.features.button.path);
-                }}
-              >
-                {yml.features.button.text}
-              </Button>
-            )}
-            {yml.short_badges && (
-              <Div
-                // className="badge-slider hideOverflowX__"
-                display="flex"
-                flexDirection="row"
-                width="100%"
-                margin="25px 0 0 0"
-                padding="24px 0 0 0"
-                justifyContent="between"
-                maxWidth="100vw"
-                gap="40px"
-                overflowX="auto"
-                // justifyContent="center"
-                // alignItems="center"
-              >
-                {yml.short_badges.map((l, i) => {
-                  return (
-                    i <= 3 && (
-                      <React.Fragment key={i}>
-                        <GatsbyImage
-                          style={{
-                            height: "65px",
-                            minWidth: "165px",
-                            width: "165px",
-                          }}
-                          imgStyle={{
-                            objectFit: "contain",
-                          }}
-                          loading="eager"
-                          // draggable={false}
-                          // fadeIn={false}
-                          alt={l.name}
-                          image={getImage(
-                            l.image.childImageSharp.gatsbyImageData
-                          )}
-                          // fluid={l.image.childImageSharp.fluid}
-                        />
-                      </React.Fragment>
-                    )
-                  );
-                })}
-              </Div>
-            )}
-          </Div>
-          <Div
-            flexDirection="column"
-            size="12"
-            size_tablet="10"
-            width="100%"
-            width_tablet="65%"
-            // size_lg="4"
-            // size_sm="6"
-            // size_xs="12"
-            margin="0"
-            textAlign_sm="center"
-            margin_md="0 auto 0 70px"
-          >
-            <LeadForm
-              headerImage={
-                yml.header_data.badge &&
-                yml.header_data.badge.childImageSharp.gatsbyImageData
-              }
-              background={Colors.white}
-              margin_tablet="18px 38px"
-              margin="18px 10px"
-              style={{ marginTop: "50px", minHeight: "350px" }}
-              selectProgram={programs}
-              selectLocation={locations}
-              formHandler={processFormEntry}
-              heading={yml.form.heading}
-              motivation={yml.form.motivation}
-              sendLabel={yml.form.button_label}
-              redirect={yml.form.redirect}
-              inputBgColor="#FFFFFF"
-              layout="block"
-              lang={pageContext.lang}
-              fields={yml.form.fields}
-              data={preData}
-              justifyContentButton="center"
-              marginButton="15px auto 30px auto"
-              marginButton_tablet="15px 0 30px auto"
-            />
-          </Div>
-        </GridContainer>
-      </LandingContainer>
+      <LandingHeader
+        pageContext={pageContext}
+        yml={yml}
+        preData={preData}
+        locations={locations}
+        programs={programs}
+      />
 
       {Object.keys(components)
         .filter(
@@ -424,81 +161,36 @@ const Landing = (props) => {
           });
         })}
       <div id="bottom"></div>
-      <GridContainerWithImage
+      <Grid
         id="bottom"
-        background="#F9F9F9"
         imageSide={applySchollarship?.imageSide}
         padding="0"
-        padding_tablet="80px 0 90px 0"
-        columns_tablet="14"
+        padding_tablet="50px 40px 90px 40px"
+        padding_md="50px 80px 90px 80px"
+        padding_lg="50px 0 90px 0"
         margin="0"
-        margin_tablet="0"
+        margin_tablet="auto"
+        gridTemplateColumns_tablet="repeat(16, 1fr)"
+        maxWidth_tablet="1366px"
       >
         <Div
-          flexDirection="column"
-          margin="0"
-          justifyContent_tablet="start"
-          padding="0"
-          padding_tablet="0 30px"
-          gridArea_tablet={
-            applySchollarship?.imageSide === "right" ? "1/1/1/6" : "1/7/1/13"
-          }
-          // gridArea_tablet="1/1/1/6"
-        >
-          <Div
-            flexDirection="column"
-            size="12"
-            size_tablet="12"
-            width="100%"
-            width_tablet="100%"
-            // size_lg="4"
-            // size_sm="6"
-            // size_xs="12"
-            margin="0"
-            textAlign_sm="center"
-            // margin_md="0 auto 0 70px"
-          >
-            <LeadForm
-              landingTemplate
-              titleMargin="20px 0px 15px 0px"
-              titleMargin_tablet="20px 0px 15px 0px"
-              textPadding_tablet="6px 0px 20px 0px"
-              textPadding="6px 0px 20px 0px"
-              selectProgram={programs}
-              selectLocation={locations}
-              layout="block"
-              background="#F9F9F9"
-              margin="0"
-              formHandler={processFormEntry}
-              heading={yml.form.heading}
-              style={{ minHeight: "350px" }}
-              motivation={yml.form.motivation}
-              sendLabel={yml.form.button_label}
-              redirect={yml.form.redirect}
-              inputBgColor="#FFFFFF"
-              lang={pageContext.lang}
-              fields={yml.form.fields}
-              data={preData}
-              justifyContentButton="center"
-              marginButton="15px auto 30px auto"
-              marginButton_tablet="15px 0 30px auto"
-            />
-          </Div>
-        </Div>
-        <Div
-          height="auto"
+          //height="auto"
           width="100%"
-          gridArea_tablet={
-            applySchollarship?.imageSide === "right" ? "1/7/1/13" : "1/1/1/6"
-          }
+          padding_tablet="0"
           style={{ position: "relative" }}
+          gridColumn_tablet={
+            applySchollarship?.imageSide === "right" ? "9/17" : "1/9"
+          }
+          // gridColumn_lg={
+          //   applySchollarship?.imageSide === "right" ? "8/15" : "1/8"
+          // }
+          gridRow_tablet="1/1"
         >
           {applySchollarship?.imageSide === "right" ? (
             <>
-              {/* <Div display="none" display_md="flex" style={{position: "absolute", background: "#F5F5F5", width: "101%", height: "282px", top: "-25px", left: "-35px", borderRadius: "3px"}}/> */}
               <Div
                 display="none"
-                display_md="flex"
+                display_md="none"
                 style={{
                   position: "absolute",
                   background: Colors.yellow,
@@ -514,10 +206,10 @@ const Landing = (props) => {
             <>
               <Div
                 display="none"
-                display_md="flex"
+                display_md="none"
                 style={{
                   position: "absolute",
-                  background: Colors.lightBlue,
+                  background: "transparent",
                   width: "101%",
                   height: "282px",
                   top: "40px",
@@ -528,20 +220,73 @@ const Landing = (props) => {
             </>
           )}
           <StyledBackgroundSection
-            height={`450px`}
-            // width={`85%`}
-            borderRadius={`3px`}
+            height="450px"
+            borderRadius="3px"
             image={
               applySchollarship
                 ? applySchollarship?.image.childImageSharp.gatsbyImageData
                 : data.allPageYaml.edges[0].node.list[0].image.childImageSharp
                     .gatsbyImageData
             }
-            bgSize={`contain`}
+            bgSize="contain"
             alt="geekforce image"
           />
         </Div>
-      </GridContainerWithImage>
+        <Div
+          flexDirection="column"
+          margin="0"
+          justifyContent_tablet="start"
+          padding="0"
+          padding_tablet="0"
+          // gridArea_tablet={
+          //   applySchollarship?.imageSide === "right" ? "1/1/1/6" : "1/7/1/14"
+          // }
+          gridColumn_tablet={
+            applySchollarship?.imageSide === "right" ? "1/9" : "9/17"
+          }
+          //gridColumn_lg={applySchollarship?.imageSide === "right" ? "8/15" : "1/8"}
+          gridRow_tablet="1/1"
+        >
+          <Div
+            flexDirection="column"
+            size="12"
+            size_tablet="12"
+            width="100%"
+            width_tablet="100%"
+            margin="0"
+            textAlign_sm="center"
+          >
+            <LeadForm
+              landingTemplate
+              titleMargin="20px 0px 15px 0px"
+              titleMargin_tablet="20px 0px 15px 0px"
+              textPadding_tablet="6px 0px 20px 0px"
+              textPadding="6px 0px 20px 0px"
+              selectProgram={programs}
+              selectLocation={locations}
+              layout="block"
+              background="#FFFFFF"
+              margin="0"
+              formHandler={processFormEntry}
+              heading={yml.form.heading}
+              style={{ minHeight: "350px" }}
+              motivation={yml.form.motivation}
+              sendLabel={yml.form.button_label}
+              redirect={yml.form.redirect}
+              inputBgColor="#FFFFFF"
+              lang={pageContext.lang}
+              fields={yml.form.fields}
+              data={preData}
+              justifyContentButton="center"
+              widthButton="fit-content"
+              //marginButton="15px auto 30px auto"
+              marginButton_tablet={ 
+                applySchollarship?.imageSide === "right" ? "15px auto 30px 0" : "15px 0 30px auto" 
+              }
+            />
+          </Div>
+        </Div>
+      </Grid>
     </>
   );
 };
@@ -620,13 +365,6 @@ export const query = graphql`
             text
             bullets
             styles
-            button {
-              text
-              path
-              background
-              color
-              hover_color
-            }
           }
           badges {
             position
@@ -675,17 +413,10 @@ export const query = graphql`
               }
             }
           }
-          iconogram {
-            position
-            icons {
-              icon
-              title
-            }
-          }
+
           in_the_news {
             heading
             position
-            filter
           }
           rating_reviews {
             position
@@ -738,28 +469,10 @@ export const query = graphql`
                     width: 150
                     placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                   )
-                  # fluid(maxWidth: 150){
-                  #   ...GatsbyImageSharpFluid_withWebp
-                  # }
                 }
               }
-              # featured
             }
           }
-          choose_your_program {
-            position
-            title
-            paragraph
-            programs {
-              text_link
-              link
-              sub_title
-              title
-              description
-              icon
-            }
-          }
-
           why_python {
             position
             heading
@@ -785,9 +498,23 @@ export const query = graphql`
             swipable
             proportions
             layout
+            text_link
+            icons {
+              icon
+              title
+              content
+            }
             image {
               src
               style
+              link
+            }
+            programs {
+              title
+              sub_title
+              icon
+              description
+              text_link
               link
             }
             video
@@ -802,17 +529,40 @@ export const query = graphql`
             heading {
               text
               font_size
+              style
             }
             sub_heading {
               text
+              style
               font_size
             }
-            bullets
+            bullets {
+              item_style
+              items {
+                heading
+                text
+                icon
+              }
+            }
             background
             content {
               text
+              style
               font_size
               path
+            }
+            cards {
+              image {
+                src
+                style
+              }
+              heading {
+                text
+                font_size
+              }
+              button {
+                text
+              }
             }
             columns {
               size
@@ -848,9 +598,6 @@ export const query = graphql`
                   width: 1000
                   placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                 )
-                # fluid(maxWidth: 1000){
-                #   ...GatsbyImageSharpFluid_withWebp
-                # }
               }
             }
             badge {
@@ -867,19 +614,8 @@ export const query = graphql`
             position
             heading
             paragraph
-            sub_heading
+
             total_rows
-          }
-          testimonial {
-            position
-            heading
-            sub_heading
-            students {
-              name
-              sub_heading
-              comment
-              video
-            }
           }
         }
       }
@@ -965,13 +701,7 @@ export const query = graphql`
               }
             }
           }
-          iconogram {
-            position
-            icons {
-              icon
-              title
-            }
-          }
+
           in_the_news {
             heading
             position
@@ -1028,28 +758,10 @@ export const query = graphql`
                     width: 150
                     placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                   )
-                  # fluid(maxWidth: 150){
-                  #   ...GatsbyImageSharpFluid_withWebp
-                  # }
                 }
               }
-              # featured
             }
           }
-          choose_your_program {
-            position
-            title
-            paragraph
-            programs {
-              text_link
-              link
-              sub_title
-              title
-              description
-              icon
-            }
-          }
-
           why_python {
             position
             heading
@@ -1074,9 +786,23 @@ export const query = graphql`
             background
             proportions
             layout
+            text_link
+            icons {
+              icon
+              title
+              content
+            }
             image {
               src
               style
+              link
+            }
+            programs {
+              title
+              sub_title
+              icon
+              description
+              text_link
               link
             }
             video
@@ -1094,7 +820,11 @@ export const query = graphql`
               text
               font_size
             }
-            bullets
+            bullets {
+              heading
+              text
+              icon
+            }
             content {
               text
               font_size
@@ -1124,7 +854,7 @@ export const query = graphql`
                 )
               }
             }
-            image {
+            background_image {
               childImageSharp {
                 gatsbyImageData(
                   layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
@@ -1251,12 +981,6 @@ export const query = graphql`
                   height: 200
                   placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                 )
-                # fluid(maxHeight: 200){
-                #   ...GatsbyImageSharpFluid_withWebp
-                # }
-                # fixed(width: 250, height: 250) {
-                #   ...GatsbyImageSharpFixed
-                # }
               }
             }
             content
@@ -1283,9 +1007,6 @@ export const query = graphql`
                   width: 800
                   placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                 )
-                # fluid(maxWidth: 800){
-                #   ...GatsbyImageSharpFluid_withWebp
-                # }
               }
             }
             project_content
@@ -1325,12 +1046,9 @@ export const query = graphql`
                 childImageSharp {
                   gatsbyImageData(
                     layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                    width: 150
+                    width: 600
                     placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                   )
-                  # fluid(maxWidth: 150){
-                  #   ...GatsbyImageSharpFluid_withWebp
-                  # }
                 }
               }
               featured

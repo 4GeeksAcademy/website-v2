@@ -27,18 +27,23 @@ form:
   # posible fields: "first_name", "last_name", "full_name", "phone", "email"
   # always the first_name, email and phone will be mandatory if added.
   fields: ["full_name", "phone", "email"]
-  margin_md: "0 auto 0 -30px"
+  #margin_md: "0 auto 0 -30px"
   heading: "Conoce más información"
   button_label: Obtener más información
   redirect: "https://marketing892162.typeform.com/to/XhfwihKQ" #you can redirect to another url or entirely diffrent website
     
   # jumbotron on the top (cannot be commented out)
+apply_schollarship: # form that is displayed at the end of the landing
+  # title: "Get more info about this award-winning development course"
+  imageSide: "left"
+  image: "../../../static/images/landing/apply.png"
+  
 header_data:
-  background: "#FFF1D1"
+  background: "#FFFFFF"
   tagline: ¡Bienvenido a 4Geeks Academy! La academia de programación líder en el mundo
   tagline_color: "black"
   sub_heading: Con más de 7 años de experiencia tenemos presencia en USA, Europa y Latinoamérica. En nuestra academia, te enseñamos habilidades y destrezas relevantes para el futuro
-  background_image: "../../../static/images/bg/main-bg.jpg"
+  background_image: "" #"../../../static/images/bg/main-bg.jpg"
   #video: "https://www.videoask.com/fm984j5nz"
   image_filter: brightness(0.4)
 
@@ -84,23 +89,23 @@ follow_bar:
 #
 
 program_details:
-  position: 1
+  position: 2
   heading: "Domina Python, JS y React"
   sub_heading: "Un curso de programación sobre las tecnologías más usadas del mundo"
 
 why_4geeks:
-  position: 2
+  position: 4
   heading: "¿Por qué 4Geeks?"
   sub_heading: " "
 
 geeks_vs_others:
-  position: 3
+  position: 5
   heading: "¿Por qué somos tan exitosos?"
   paragraph: "Un galardonado curso de programación"
   total_rows: 5
 
 badges:
-  position: 4
+  position: 5
   heading: "4Geeks Academy cuenta con premios y reconocimientos de validan su excelencia"
 
 who_is_hiring:
@@ -110,34 +115,70 @@ who_is_hiring:
   sub_heading: "Nos encanta ver crecer a nuestros estudiantes, es por eso que nos esforzamos cada día por tener más aliados, para que puedas trabajar en empresas que te ayuden a seguir creciendo profesionalmente."
 
 components:
+  - name: name
+    position: 1
+    layout: two_column_left
+    proportions: [5, 7]
+    background: "#FFF8E8"
+    image:
+      style: '{ "backgroundSize": "contain"}'
+      src: "/images/landing/hombre-con-laptop.png"
+    heading:
+      text: "How it works?"
+      font_size: ["30px", "30px", "30px", "30px", "30px"]
+    sub_heading:
+      text: "¿Quieres desatar tu potencial como Full-Stack Developer y/o Data Scientist?"
+      font_size: ["16px", "16px", "16px", "16px", "16px"]
+    content:
+      font_size: ["16px"]
+      text: |
+        Al aprender a programar con 4Geeks Academy tendrás clases online completamente en vivo, la oportunidad de certificarte internacionalmente en poco tiempo y de conseguir tu primer empleo como programador con nuestro apoyo.
+
+        <strong style="font-weight: bold;">Descubre cómo puede ser tu vida como un profesional en programación con 4Geeks Academy, ¡comienza ahora! </strong>
+  
   - name: top_coding_bootcamp
-    position: 8
+    position: 3
     layout: two_column_left
     proportions: [4, 8]
+    background: "#f1f1f1"
     image:
       style: '{ "backgroundSize": "contain" }'
       src: "/images/badges/Course-Report-Badge-2023.png"
       link: "https://www.coursereport.com/schools/4geeks-academy"
     heading:
       text:
-        "Hemos sido seleccionados entre los mejores Coding Bootcamps del mundo por 3 años consecutivos"
+        "Tenemos 3 años consecutivos siendo seleccionados como uno de los mejores coding bootcamps del mundo"
         #xl      lg     md     sm    xs
-      font_size: ["40px", "40px", "40px", "40px", "40px"]
-  - name: geeksinfo
-    position: 5
-    layout: geeksInfo
-  - name: passion
-    position: 7
-    layout: two_column_right
-    proportions: [6, 6]
-    image:
-      style: '{ "backgroundSize": "contain" }'
-      src: "/images/badges/switchup-badge-2023.png"
-      link: "https://www.switchup.org/bootcamps/4geeks-academy"
-    video: "JLSP_1HYoAg"
-    heading:
-      text: "Nanutria y 4Geeks"
-      font_size: ["40px", "40px", "40px", "40px", "40px"]
-    content:
-      text: "Nanutria tiene todas las características de una persona con la que nos identificamos en 4Geeks. Es Ingeniero, es ingenioso, es talentoso y es constante. Se decidió por la comedia pero mantiene los rasgos de lo que todos queremos poder ser, cada uno en sus áreas. Ahora Nanutria también recomienda 4Geeks Academy"
-      font_size: ["16px"]
+      font_size: ["38px", "36px", "32px", "30px", "30px"]
+ 
+  # - name: top_coding_bootcamp
+  #   position: 8
+  #   layout: two_column_left
+  #   proportions: [4, 8]
+  #   image:
+  #     style: '{ "backgroundSize": "contain" }'
+  #     src: "/images/badges/Course-Report-Badge-2023.png"
+  #     link: "https://www.coursereport.com/schools/4geeks-academy"
+  #   heading:
+  #     text:
+  #       "Hemos sido seleccionados entre los mejores Coding Bootcamps del mundo por 3 años consecutivos"
+  #       #xl      lg     md     sm    xs
+  #     font_size: ["40px", "40px", "40px", "40px", "40px"]
+  # - name: geeksinfo
+  #   position: 5
+  #   layout: geeksInfo
+  # - name: passion
+  #   position: 7
+  #   layout: two_column_right
+  #   proportions: [6, 6]
+  #   image:
+  #     style: '{ "backgroundSize": "contain" }'
+  #     src: "/images/badges/switchup-badge-2023.png"
+  #     link: "https://www.switchup.org/bootcamps/4geeks-academy"
+  #   video: "JLSP_1HYoAg"
+  #   heading:
+  #     text: "Nanutria y 4Geeks"
+  #     font_size: ["40px", "40px", "40px", "40px", "40px"]
+  #   content:
+  #     text: "Nanutria tiene todas las características de una persona con la que nos identificamos en 4Geeks. Es Ingeniero, es ingenioso, es talentoso y es constante. Se decidió por la comedia pero mantiene los rasgos de lo que todos queremos poder ser, cada uno en sus áreas. Ahora Nanutria también recomienda 4Geeks Academy"
+  #     font_size: ["16px"]

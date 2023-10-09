@@ -34,15 +34,15 @@ navbar:
 
 
 apply_schollarship: # form that is displayed at the end of the landing
-  # title: "Get more info about this award-winning development course"
+  # title: "Apoyo Profesional Ilimitado"
   imageSide: "right"
-  image: "../../../static/images/comunity-support.png"
+  image: "../../../static/images/landing/apply.png"  
 
 # jumbotron on the top (cannot be commented out)
 header_data:
   background: "#FFF1D1"
-  tagline: Aprende a programar desde cero o potencia tu carrera en el mundo tech
-  sub_heading: Forma parte hoy de una experiencia sin igual que llevará tu carrera al siguiente nivel
+  tagline: "Aprende a programar desde cero o potencia tu carrera en el mundo tech"
+  sub_heading: ""
   badge: "../../../static/images/badges/Course-Report-Badge-2023.png"
   image_filter: brightness(0.3)
 
@@ -52,9 +52,9 @@ features:
   #                                         up   left down  right
   styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
   bullets:
-    - Mentorías de código ilimitadas, apoyo profesional de por vida y mucho más…
-    - Programa 100% Remoto y Medio Tiempo. ¡Certificate en tan solo 18 semanas!
-    - Contamos con un plan de Trabajo Garantizado y distintas opciones de Financiamiento. 
+    - "Mentorías de código ilimitadas, apoyo profesional de por vida y mucho más…"
+    - "Programa 100% Remoto y Medio Tiempo. ¡Certificate en tan solo 18 semanas!"
+    - "Contamos con un plan de Trabajo Garantizado y distintas opciones de Financiamiento."
 
 short_badges:
   - name: "Premios Tecnologia Siglo XXI"
@@ -112,15 +112,21 @@ rating_reviews:
       rating: 4.9
       url: ""
 
-badges:
-  position: 3
-  heading: "4Geeks Academy cuenta con premios y reconocimientos que validan su excelencia"
-
 program_details:
   position: 1
   background: "#FFFFFF"
   heading: "Domina Python, JS y React"
   sub_heading: "Un curso de programación sobre las tecnologías más usadas del mundo"
+
+badges:
+  position: 4
+  heading: "4Geeks Academy cuenta con premios y reconocimientos que validan su excelencia"
+
+geeks_vs_others:
+  position: 3
+  heading: "¿Qué hace a 4Geeks Academy tan exitoso?"
+  paragraph: ""
+  total_rows: 5
 
 why_4geeks:
   position: 4

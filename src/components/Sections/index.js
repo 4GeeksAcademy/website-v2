@@ -176,7 +176,6 @@ export const Div = styled.div`
   flex-grow: ${(props) => props.flexGrow || "0"};
   flex-shrink: ${(props) => props.flexShrink};
   align-content: ${(props) => props.alignContent};
-  align: ${(props) => props.align};
   cursor: ${(props) => props.cursor};
   transform: ${(props) => props.transform};
   z-index: ${(props) => props.zIndex};
@@ -201,6 +200,8 @@ export const Div = styled.div`
   }
   @media ${Devices.xxs} {
     margin: ${(props) => props.margin_xxs};
+    background: ${(props) => props.background_xxs};
+    display: ${(props) => props.display_xss};
   }
   @media ${Devices.xs} {
     padding: ${(props) => props.padding_xs};
@@ -223,6 +224,7 @@ export const Div = styled.div`
     align-content: ${(props) => props.alignContent_xs};
     top: ${(props) => props.top_xs};
     right: ${(props) => props.right_xs};
+    background: ${(props) => props.background_xs};
   }
   @media ${Devices.sm} {
     padding: ${(props) => props.padding_sm};
@@ -243,6 +245,7 @@ export const Div = styled.div`
     border-radius: ${(props) => props.borderRadius_sm};
     max-width: ${(props) => props.maxWidth_sm};
     width: ${(props) => props.width_sm};
+    background: ${(props) => props.background_sm};
   }
   @media ${Devices.tablet} {
     flex: ${(props) =>
@@ -379,12 +382,14 @@ export const Grid = styled(Div)`
   @media ${Devices.xs} {
     grid-template-columns: ${(props) =>
       props.columns_xs ? `repeat(${props.columns_xs}, 1fr)` : null};
+    display: ${(props) => props.display_xs || "grid"};
   }
   @media ${Devices.sm} {
     grid-template-columns: ${(props) =>
       props.gridTemplateColumns_sm
         ? `repeat(${props.gridTemplateColumns_sm}, 1fr)`
         : null};
+    display: ${(props) => props.display_sm || "grid"};
   }
   @media ${Devices.tablet} {
     margin: ${(props) => props.margin_tablet};
@@ -415,6 +420,7 @@ export const Grid = styled(Div)`
         : null};
     grid-gap: ${(props) => props.gridGap_md};
     grid-column: ${(props) => props.gridColumn_md};
+    display: ${(props) => props.display_md || "grid"};
   }
   @media ${Devices.lg} {
   }
@@ -592,7 +598,10 @@ export const GridContainer = ({
   containerColumns_md,
   children,
   display,
+  display_xs,
+  display_sm,
   display_tablet,
+  display_md,
   background,
   borderRadius,
   borderRadiusChild,
@@ -644,7 +653,10 @@ export const GridContainer = ({
       boxShadow_tablet={shadow_tablet}
       borderRadius={borderRadius}
       display={display}
+      display_sm={display_sm}
+      displa_xs={display_xs}
       display_tablet={display_tablet}
+      display_md={display_md}
       justifyContent={justifyContent}
       justifyContent_tablet={justifyContent_tablet}
       position={position}
@@ -714,6 +726,8 @@ export const GridContainerWithImage = ({
   margin_tablet,
   padding,
   padding_tablet,
+  padding_md,
+  padding_lg,
   position,
 }) => {
   return (
@@ -722,7 +736,7 @@ export const GridContainerWithImage = ({
       className={className}
       onMouseOut={onMouseOutHandler}
       gridTemplateColumns_tablet={
-        imageSide == "left" ? "repeat(14, 1fr) 1.5fr" : "2fr repeat(14, 1fr)"
+        imageSide == "left" ? "repeat(14, 1fr)" : "repeat(14, 1fr)"
       }
       background={background}
       height={height}
@@ -732,6 +746,8 @@ export const GridContainerWithImage = ({
       margin_tablet={margin_tablet}
       padding={padding || "0 17px"}
       padding_tablet={padding_tablet}
+      padding_md={padding_md}
+      padding_lg={padding_lg}
     >
       <Grid
         gridGap={gridGap}

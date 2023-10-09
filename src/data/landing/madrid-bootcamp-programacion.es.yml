@@ -30,7 +30,7 @@ form:
 apply_schollarship: # form that is displayed at the end of the landing
   # title: "Apoyo Profesional Ilimitado"
   imageSide: "right"
-  image: "../../../static/images/comunity-support.png"
+  image: "../../../static/images/landing/apply.png" 
 
 # jumbotron on the top (cannot be commented out)
 header_data:
@@ -89,7 +89,7 @@ follow_bar:
 # ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇
 #
 who_is_hiring:
-  position: 1
+  position: 10
   limit: 4
   heading: "Nuestros estudiantes trabajan en las mejores empresas"
   sub_heading: "Más de 500 partners, más de 150 vacantes abiertas como Full-Stack Developer en nuestra bolsa de empleo "
@@ -106,7 +106,7 @@ badges:
   heading: "4Geeks Academy España ha ganado más de 20 premios desde 2020, siendo reconocido una y otra vez como el Mejor Coding Bootcamp de España"
 
 program_details:
-  position: 5
+  position: 2
   background: "#FFFFFF"
   heading: "Detalles del programa"
   sub_heading: "Aprende las tecnologías que demandan las empresas"
@@ -164,9 +164,9 @@ choose_your_program:
 
 components:
   - name: inmediatez
-    position: 2
+    position: 11
     layout: two_column_left
-    background: "#C9F9F9" # Name of the color(from components/Styling/index.js) or color code ex: #C9F9F9
+    background: "lightYellow" # Name of the color(from components/Styling/index.js) or color code ex: #C9F9F9
     image:
       src: "/images/landing/PeopleStudying.jpeg"
     heading:
@@ -184,9 +184,9 @@ components:
     layout: geeksInfo
 
   - name: python_y_javascript
-    position: 8
+    position: 1
     layout: two_column_right
-    background: "#C9F9F9" # Name of the color(from components/Styling/index.js) or color code ex: #C9F9F9
+    background: "lightBlue" # Name of the color(from components/Styling/index.js) or color code ex: #C9F9F9
     image:
       src: "/images/why-4geeks/python-image.png"
     heading:
@@ -201,8 +201,8 @@ components:
       font_size: ["16px"]
 
   - name: top_coding_bootcamp
-    position: 7
-    background: "#FFF1D1"
+    position: 4
+    background: "#F1f1f1"
     layout: two_column_left
     proportions: [4, 8]
     image:
@@ -216,8 +216,8 @@ components:
       font_size: ["40px", "40px", "40px", "40px", "40px"]
 
   - name: seguridad_europa
-    position: 11
-    background: "#C9F9F9"
+    position: 7
+    background: "#f1f1f1"
     layout: two_column_right
     proportions: [8, 4]
     image:

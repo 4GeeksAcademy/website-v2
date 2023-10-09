@@ -30,7 +30,7 @@ form:
 apply_schollarship: # form that is displayed at the end of the landing
   # title: "Apoyo Profesional Ilimitado"
   imageSide: "right"
-  image: "../../../static/images/comunity-support.png"
+  image: "../../../static/images/landing/apply.png"  
 
 # jumbotron on the top (cannot be commented out)
 header_data:
@@ -46,9 +46,9 @@ features:
   #                                         up   left down  right
   styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
   bullets:
-   - Aprende las tecnologías que demandan las empresas. 
-   - Clases reducidas, presenciales o en remoto, y con acompañamiento de por vida.
-   - No se necesita experiencia previa, ¡empieza desde cero!
+    - Aprende las tecnologías que demandan las empresas. 
+    - Clases reducidas, presenciales o en remoto, y con acompañamiento de por vida.
+    - No se necesita experiencia previa, ¡empieza desde cero!
   
 short_badges:
   - name: "Premios Tecnologia Siglo XXI"
@@ -85,7 +85,7 @@ follow_bar:
 # ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇
 #
 rating_reviews:
-  position: 1
+  position: 3
   heading: "Lo que opinan de 4Geeks Academy..."
   rating_list:
     - alt: "Career Karma"
@@ -106,7 +106,7 @@ rating_reviews:
       url: ""
   
 badges:
-  position: 2
+  position: 5
   heading: "4Geeks Academy tiene premios y reconocimientos que validan su excelencia"
 
 program_details:
@@ -144,7 +144,7 @@ who_is_hiring:
 
 components:
   - name: python_y_javascript
-    position: 3
+    position: 1
     layout: two_column_right
     background: "veryLightBlue2" # Name of the color(from components/Styling/index.js) or color code ex: #C9F9F9
     image:

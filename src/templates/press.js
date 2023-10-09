@@ -262,7 +262,6 @@ const Press = (props) => {
                   image={getImage(
                     l.logo != null && l.logo.childImageSharp.gatsbyImageData
                   )}
-                  // fluid={l.logo != null && l.logo.childImageSharp.gatsbyImageData}
                 />
                 <H3
                   type="h3"
@@ -356,9 +355,6 @@ export const query = graphql`
                     height: 60
                     placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                   )
-                  # fluid(maxHeight:60){
-                  #     ...GatsbyImageSharpFluid_withWebp
-                  # }
                 }
               }
               location
@@ -369,9 +365,6 @@ export const query = graphql`
                     height: 277
                     placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                   )
-                  # fluid(maxHeight:277){
-                  #     ...GatsbyImageSharpFluid_withWebp
-                  # }
                 }
               }
               title
@@ -396,9 +389,6 @@ export const query = graphql`
                   height: 60
                   placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                 )
-                #     fluid(maxHeight: 60,){
-                #     ...GatsbyImageSharpFluid_withWebp
-                #   }
               }
             }
             location

@@ -28,7 +28,7 @@ seo_title: "Cooding Bootcamp"
 header:
   title: "Full Stack Developer"
   image: "../../../static/images/bg/program-bg.png"
-  image_alt: ""
+  image_alt: "FullStack"
   paragraph: "From zero to getting paid as a developer, learn the skills of the present and future. \n Boost your professional career and get hired by a tech company."
 
 button:

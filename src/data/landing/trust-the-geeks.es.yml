@@ -7,7 +7,7 @@ meta_info:
   image: "/images/bg/main-bg.jpg"
   keywords: "Bootcamp de Programación, Bootcamp programacion Colombia, Bootcamp de python, Bootcamp de React y Javascript, Bootcamp de Informática, Coding Bootcamp, 4Geeks Academy"
 
-  template: "landing_nonav" # <--- choose your landing template
+  template: "landing_a" # <--- choose your landing template
   redirects: # <--- URL redirections to avoid 404 errors
     []
 
@@ -34,9 +34,9 @@ navbar:
 
 
 apply_schollarship: # form that is displayed at the end of the landing
-  # title: "Get more info about this award-winning development course"
+  # title: "Apoyo Profesional Ilimitado"
   imageSide: "right"
-  image: "../../../static/images/comunity-support.png"
+  image: "../../../static/images/landing/apply.png"  
 
 # jumbotron on the top (cannot be commented out)
 header_data:
@@ -117,28 +117,6 @@ badges:
   position: 2
   heading: "4Geeks Academy cuenta con premios y reconocimientos que validan su excelencia"
 
-choose_your_program:
-  position: 4
-  title: Nuestros programas
-  paragraph: Contamos con programas que combinan clases prácticas dictadas por expertos
-  programs:
-  - title: "Full Stack Developer"
-    sub_title: "Desde Cero"
-    icon: "fullstack"
-    description: |
-      Convierte en un programador que utiliza las tecnologias más búscadas, mentoria personalizada y un plan de estudios y career support para conseguir tu primer trabajo.
-    
-    text_link: Aplica
-    link: "#" # moves to start position
-    
-  - title: "Data Science & Machine Learning"
-    sub_title: "Desde Cero"
-    icon: "machine"
-    description: |
-      Conviértete en un científico de datos, desarrolla modelos de predicción y uneté a una de las profesiones mejores pagadas del mundo.
-    text_link: Aplica
-    link: "#" # moves to start position
-
 geeks_vs_others:
   position: 7
   heading: "¿Qué hace a este bootcamp tan exitoso?"
@@ -162,6 +140,33 @@ alumni_projects:
   sub_heading: "Proyectos hechos por estudiantes de la academia"
 
 components:
+  - name: "whatever"
+    layout: choose_your_program
+    position: 4
+    heading:
+      text: Nuestros Programas
+    content:
+      text: Contamos con programas que combinan clases prácticas dictadas por expertos
+      font_size: ["16px"]
+      path: ""
+    programs:
+    - title: "Full Stack Developer"
+      sub_title: "Desde Cero"
+      icon: "fullstack_2"
+      description: |
+        Convierte en un programador que utiliza las tecnologias más búscadas, mentoria personalizada y un plan de estudios y career support para conseguir tu primer trabajo.
+      
+      text_link: Aplica
+      link: "#" # moves to start position
+      
+    - title: "Data Science & Machine Learning"
+      sub_title: "Desde Cero"
+      icon: "machine_2"
+      description: |
+        Conviértete en un científico de datos, desarrolla modelos de predicción y uneté a una de las profesiones mejores pagadas del mundo.
+      text_link: Aplica
+      link: "#" # moves to start position
+      
   - name: top_coding_bootcamp
     position: 6
     layout: two_column_left
