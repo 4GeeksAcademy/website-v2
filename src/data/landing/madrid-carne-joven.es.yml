@@ -5,7 +5,7 @@ meta_info:
   description: "La programación se ha convertido en un conocimiento esencial para el desarrollo profesional, aprende a programar con 4Geeks Academy y Carné Joven."
   image: "/images/bg/remote.jpeg"
   keywords: "Aprende a programar, 4Geeks academy, aprende programacion, aprende ingenieria informatica"
-  template: "landing_nonav" # <--- choose your landing template
+  template: "landing_a" # <--- choose your landing template
   redirects: ["/landing/impulsa-tu-carrera-carne-joven"] # <--- URL redirections to avoid 404 errors
   # Set a particular course or location to the landing page
   # this UTM fields will be also included in the CRM contact
