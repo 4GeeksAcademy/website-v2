@@ -915,7 +915,7 @@ export const query = graphql`
     }
     allCourseYaml(
       filter: {
-        fields: { file_name: { eq: $utm_course }, lang: { eq: $lang } }
+        fields: { lang: { eq: $lang } }
       }
     ) {
       edges {

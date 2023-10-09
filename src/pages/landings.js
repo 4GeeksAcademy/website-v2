@@ -76,7 +76,7 @@ const NotFoundPage = () => {
     if (filter === "") return true;
     if (node.meta_info.utm_location.some((slug) => slug.includes(filter)))
       return true;
-    if(node.meta_info.slug.includes(filter)) return true;
+    if (node.meta_info.slug.includes(filter)) return true;
     return false;
   };
   return (
