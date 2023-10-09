@@ -31,7 +31,7 @@ import { background } from "@storybook/theming";
 
 const Title = ({ id, title, paragraph }) => {
   return (
-    <GridContainer id={id} margin="40px 0 0 0">
+    <GridContainer id={id} margin="40px 0 40px 0">
       <H2 type="h2">{title}</H2>
       {
         paragraph && 
@@ -1135,7 +1135,7 @@ export const landingSections = {
         width="50%"
         height="414px"
         position="absolute"
-        top="192px"
+        top="173px"
         display_xs="none"
         display_tablet="flex"
       />
@@ -1164,7 +1164,7 @@ export const landingSections = {
         key={index}
         flexDirection="column"
         //margin="40px auto"
-        margin_tablet="40px auto 100px auto"
+        margin_tablet="60px auto 60px auto"
         m_sm="0"
         p_xs="0"
         margin_xs="60px 0 40px 0"

@@ -111,11 +111,11 @@ const AlumniProjects = ({
       maxWidth_lg="1366px"
       maxWidth_md="1024px"
       maxWidth_tablet="768px" 
-      margin_tablet="30px auto 100px auto" 
+      margin_tablet="0px auto 60px auto" 
       zIndex="1" 
     >
       {(title !== undefined && paragraph !== undefined) || yml && (
-        <GridContainer margin="0 0 90px 0">
+        <GridContainer margin="50px 0 50px 0">
           <Div display="flex" flexDirection="column" alignItems="center">
             <H2 margin="0 0 15px 0" fontWeight="700" lineHeight="36px">
               {yml.heading || title}
@@ -138,6 +138,7 @@ const AlumniProjects = ({
               margin_tablet="0 0 36px 0"
               margin="0 0 50px 0"
               padding_tablet="0 40px"
+              height_tablet="414px"
             >
               <Div
                 height_tablet="414px"
