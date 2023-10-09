@@ -112,15 +112,21 @@ rating_reviews:
       rating: 4.9
       url: ""
 
-badges:
-  position: 3
-  heading: "4Geeks Academy cuenta con premios y reconocimientos que validan su excelencia"
-
 program_details:
   position: 1
   background: "#FFFFFF"
   heading: "Domina Python, JS y React"
   sub_heading: "Un curso de programación sobre las tecnologías más usadas del mundo"
+
+badges:
+  position: 4
+  heading: "4Geeks Academy cuenta con premios y reconocimientos que validan su excelencia"
+
+geeks_vs_others:
+  position: 3
+  heading: "¿Qué hace a 4Geeks Academy tan exitoso?"
+  paragraph: ""
+  total_rows: 5
 
 why_4geeks:
   position: 4

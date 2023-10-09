@@ -512,6 +512,7 @@ export const query = graphql`
               src
               shadow
               style
+              shadow
               link
             }
             programs {

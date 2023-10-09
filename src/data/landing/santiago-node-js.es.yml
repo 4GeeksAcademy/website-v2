@@ -7,7 +7,7 @@ meta_info:
   image: "/images/bg/main-bg.jpg"
   keywords: "Clase de programación, Clase de node, clase de javascript, Coding Bootcamp, 4Geeks Academy"
 
-  template: "landing_nonav" # <--- choose your landing template
+  template: "landing_a" # <--- choose your landing template
   redirects: # <--- URL redirections to avoid 404 errors
     ["/landing/curso-node-js-santiago"]
 

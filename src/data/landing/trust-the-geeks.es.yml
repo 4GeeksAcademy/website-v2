@@ -7,7 +7,7 @@ meta_info:
   image: "/images/bg/main-bg.jpg"
   keywords: "Bootcamp de Programación, Bootcamp programacion Colombia, Bootcamp de python, Bootcamp de React y Javascript, Bootcamp de Informática, Coding Bootcamp, 4Geeks Academy"
 
-  template: "landing_nonav" # <--- choose your landing template
+  template: "landing_a" # <--- choose your landing template
   redirects: # <--- URL redirections to avoid 404 errors
     []
 
