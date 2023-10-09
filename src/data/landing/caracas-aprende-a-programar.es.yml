@@ -138,6 +138,7 @@ components:
     layout: two_column_left
     image:
       shadow: true
+      style: '{ "border" : "3px solid black" }' 
       src: "https://storage.googleapis.com/4geeks-academy-website/landing-pictures/testimonials.webp"
     heading:
       text: "Escúchalo de nuestros alumnos"
@@ -159,7 +160,7 @@ components:
     layout: two_column_right
     image:
       shadow: true
-      style: '{ "border" : "3px solid black" }' #REVISAR PORQUE SE PROCESA COMO STRING Y NO COMO OBJETO JSON 
+      style: '{ "border" : "3px solid black" }' 
       src: "/images/bg/people_happy.jpg"
     video: "B01-eTfgqqc"
     heading:
