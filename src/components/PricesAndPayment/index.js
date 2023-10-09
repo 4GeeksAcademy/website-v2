@@ -559,9 +559,9 @@ const PricesAndPayments = (props) => {
         </Div>
       </GridContainer>
       <Div display="block" minHeight_tablet="600px" padding_md="20px">
-        <ChartSection info={info} currentLocation={currentLocation} />
+        {/* <ChartSection info={info} currentLocation={currentLocation} /> */}
         <Div
-          border="1px solid #000"
+          //border="1px solid #000"
           background="#FFF"
           padding_xs="18px 15px"
           padding_sm="38px"
