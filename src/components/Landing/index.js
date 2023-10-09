@@ -54,6 +54,7 @@ const Side = ({
     return (
       <ReactPlayer
         thumb={image && image.src}
+        image_thumb={image}
         id={video}
         videoHeight="360px"
         style={{
@@ -88,7 +89,7 @@ const Side = ({
         h_sm={img_h_sm || "250px"}
         backgroundSize={image.shadow ? "cover" : "contain"}
         //backgroundPosition="center right"
-        border={image.shadow && "3px solid black"}
+        //border={image.shadow && "3px solid black"}
         boxShadow={image.shadow && "20px 15px 0px 0px rgba(0,0,0,1)"}
       />
     );
