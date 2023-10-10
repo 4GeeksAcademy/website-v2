@@ -164,7 +164,6 @@ components:
       style: '{ "border" : "3px solid black" }' 
       shadow: true 
       src: "/images/bg/people_happy.jpg"
-      shadow: true 
     video: "B01-eTfgqqc"
     heading:
       text:
