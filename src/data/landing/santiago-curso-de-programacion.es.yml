@@ -108,7 +108,7 @@ rating_reviews:
       url: ""
 
 badges:
-  position: 2
+  position: 5
   heading: "4Geeks Academy cuenta con premios y reconocimientos de validan su excelencia"
 
 program_details:
@@ -146,16 +146,18 @@ alumni_projects:
 # Possible layours: [two_column_left_image, two_column_right_image]
 components:
   - name: top_coding_bootcamp
-    position: 5
-    layout: two_column_left
+    position: 12
+    layout: two_column_right
     proportions: [4, 8]
     image:
       style: '{ "backgroundSize": "contain" }'
-      src: "/images/badges/switchup.png"
+      src: "/images/badges/switchup-badge-2023.png"
       link: "https://www.switchup.org/bootcamps/4geeks-academy"
     button:
       text: "Leer testimoniales"
-      color: null
+      color: white
+      background: black
+      hover: white
       path: "https://www.switchup.org/bootcamps/4geeks-academy"
     heading:
       text:

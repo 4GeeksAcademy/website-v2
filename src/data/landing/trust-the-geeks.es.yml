@@ -7,7 +7,7 @@ meta_info:
   image: "/images/bg/main-bg.jpg"
   keywords: "Bootcamp de Programación, Bootcamp programacion Colombia, Bootcamp de python, Bootcamp de React y Javascript, Bootcamp de Informática, Coding Bootcamp, 4Geeks Academy"
 
-  template: "landing_a" # <--- choose your landing template
+  template: "landing_nonav" # <--- choose your landing template
   redirects: # <--- URL redirections to avoid 404 errors
     []
 
@@ -114,7 +114,7 @@ rating_reviews:
       url: ""
 
 badges:
-  position: 2
+  position: 12
   heading: "4Geeks Academy cuenta con premios y reconocimientos que validan su excelencia"
 
 geeks_vs_others:

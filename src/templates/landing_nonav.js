@@ -510,6 +510,7 @@ export const query = graphql`
               src
               style
               link
+              shadow
             }
             programs {
               title

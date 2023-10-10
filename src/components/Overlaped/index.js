@@ -51,13 +51,14 @@ const Overlaped = ({
       >
         <Grid
           gridTemplateColumns_tablet="1fr repeat(14, 1fr) 1fr"
+          gridTemplateColumns_lg="1fr repeat(19, 1fr) 1fr"
           gridGap="0px"
         >
           <Div gridColumn="1 / 9">
             <Img src={image.src} width="33.3em" height="533px" />
           </Div>
 
-          <Div gridColumn="9 / 17" position="relative">
+          <Div gridColumn="9 / 17" gridColumn_lg="9/ 22" position="relative">
             <Div width="100%">
               <Img
                 src="/images/landing/vector-stroke.png"
@@ -65,7 +66,7 @@ const Overlaped = ({
                 height="162px"
                 style={{
                   position: "absolute",
-                  right: "3.7em",
+                  right: "0%",
                   top: "20px",
                 }}
               />
@@ -97,7 +98,7 @@ const Overlaped = ({
               height="286px"
               style={{
                 position: "absolute",
-                right: "5%",
+                right: "0%",
                 bottom: "0%",
                 zIndex: "1",
               }}
@@ -109,9 +110,12 @@ const Overlaped = ({
           border="3px solid black"
           flexWrap="wrap"
           position="absolute"
-          top="6.5em"
-          right="15%"
-          left="45%"
+          top_tablet="6.5em"
+          right_tablet="15%"
+          left_tablet="45%"
+          top_lg="6.5em"
+          right_lg="11%"
+          left_lg="50%"
           zIndex="1"
           padding="20px"
           background={Colors.white}
@@ -201,9 +205,27 @@ const Overlaped = ({
           <H2 textAlign="start" lineHeight_tablet="36px" margin="0 0 12px 0">
             {heading}
           </H2>
-          <Paragraph textAlign="start" margin="12px 0 0 0">
-            {content}
-          </Paragraph>
+          {content && /<\/?[a-z0-9]+>/g.test(content) ? (
+            <Paragraph
+              textAlign="start"
+              margin="12px 0 0 0"
+              dangerouslySetInnerHTML={{ __html: content }}
+            />
+          ) : content ? (
+            <Paragraph textAlign="start" margin="12px 0 0 0">
+              {content}
+            </Paragraph>
+          ) : null}
+          {button && (
+            <Button
+              width="100%"
+              background={button.color}
+              color={Colors.white}
+              margin="20px 0 0 0"
+            >
+              {button.text}
+            </Button>
+          )}
         </Div>
       </Div>
     </Div>
