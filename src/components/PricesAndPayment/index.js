@@ -36,8 +36,10 @@ const PricingCard = ({
           <Div background={Colors.blue}>
             <Paragraph
               color={Colors.white}
-              fontWeight_tablet="700"
-              fontSize="1"
+              // fontWeight_tablet="700"
+              fontSize="14px"
+              fontWeight="500"
+              lineHeight="17px"
               opacity="1"
             >
               {info.recomended}
@@ -46,11 +48,11 @@ const PricingCard = ({
         )}
         <Div
           border={`2px solid ${Colors.blue}`}
-          padding="15px 12px"
+          padding="8px 20px"
           display="block"
         >
           <Div className="price-section" justifyContent="between" width="100%">
-            <Div alignItems="center">
+            <Div alignItems="center" width="60%">
               <Div
                 border={`1px solid ${isSelected ? Colors.blue : "#A4A4A4"}`}
                 width="21px"
@@ -74,8 +76,9 @@ const PricingCard = ({
               </Div>
               <Div display="block">
                 <Paragraph
-                  lineHeight="14px"
+                  lineHeight="17px"
                   fontWeight_tablet="700"
+                  fontSize="14px"
                   color={Colors.black}
                   opacity="1"
                   textAlign="left"
@@ -84,7 +87,9 @@ const PricingCard = ({
                   {scholarship}
                 </Paragraph>
                 <Paragraph
-                  lineHeight="14px"
+                  lineHeight="17px"
+                  fontWeight_tablet="400"
+                  fontSize="14px"
                   color={Colors.black}
                   opacity="1"
                   textAlign="left"
@@ -93,19 +98,22 @@ const PricingCard = ({
                 </Paragraph>
               </Div>
             </Div>
-            <Div className="price-container" display="block">
-              <Paragraph
-                fontWeight_tablet="700"
+            <Div className="price-container" display="block" width="40%">
+              <H3
+                textAlign="end"
+                fontWeight="700"
+                fontSize="30px"
+                lineHeight="36px"
                 color={Colors.black}
                 opacity="1"
               >
-                <span style={{ fontSize: "36px" }}>
-                  {!jobGuarantee ? data.price : data.job_guarantee_price}
-                </span>
-              </Paragraph>
+                {!jobGuarantee ? data.price : data.job_guarantee_price}
+              </H3>
               {!jobGuarantee && (
                 <Paragraph
-                  fontWeight_tablet="700"
+                  fontWeight="700"
+                  fontSize="30px"
+                  lineHeight="36px"
                   color={Colors.black}
                   opacity="1"
                   textAlign="right"
@@ -589,7 +597,7 @@ const PricesAndPayments = (props) => {
         background="#FFF"
         padding_xs="18px 15px"
         padding_sm="38px"
-        padding_tablet="38px 0px"
+        padding_tablet="0 0 38px 0"
         maxWidth_md="1366px"
         minWidth_md="580px"
         width_md="auto"
@@ -612,37 +620,46 @@ const PricesAndPayments = (props) => {
           />
         ) : (
           <>
-            {availablePlans.some((plan) => plan.job_guarantee_price) && (
-              <Div
-                background={Colors.veryLightBlue}
-                padding="10px"
-                margin="20px 0 20px 0"
-              >
-                <Div alignItems="center">
-                  <Toggle
-                    isChecked={jobGuarantee}
-                    onChange={() => setJobGuarantee(!jobGuarantee)}
-                  />
-                  <H4
-                    textAlign="left"
-                    fontWeight="700"
-                    fontSize="18px"
-                    margin="0 0 0 10px"
-                  >
-                    {info.job_guarantee.title}
-                  </H4>
-                </Div>
-                <Paragraph textAlign="left" color={Colors.black} opacity="1">
-                  {info.job_guarantee.description}
-                </Paragraph>
-              </Div>
-            )}
             <Grid
               gridTemplateColumns_tablet="3fr repeat(20,1fr) 3fr"
-              gridTemplateRows_tablet="1fr 1fr"
-              gap="10px"
-              margin="0 0 15px 0"
+              gridTemplateRows_tablet="1fr 1fr 1fr"
+              //margin="32px 0 15px 0"
+              gridGap="32px 15px"
             >
+              {availablePlans.some((plan) => plan.job_guarantee_price) && (
+                <Div
+                  background={Colors.veryLightBlue}
+                  padding="8px"
+                  margin="32px 0 0 0"
+                  gridColumn="2/22"
+                  gridRow="1"
+                  flexWrap="wrap"
+                >
+                  <Div alignItems="center" margin="0 0 7px 0">
+                    <Toggle
+                      isChecked={jobGuarantee}
+                      onChange={() => setJobGuarantee(!jobGuarantee)}
+                    />
+                    <H4
+                      textAlign="left"
+                      fontWeight="700"
+                      fontSize="18px"
+                      margin="0 0 0 10px"
+                    >
+                      {info.job_guarantee.title}
+                    </H4>
+                  </Div>
+                  <Paragraph 
+                    textAlign="left" 
+                    color={Colors.black} 
+                    opacity="1"
+                    fontSize="14px"
+                    lineHeight="17px"
+                  >
+                    {info.job_guarantee.description}
+                  </Paragraph>
+                </Div>
+              )}
               {availablePlans && availablePlans.length > 0 && (
                 <Div
                   display="none"
@@ -651,10 +668,10 @@ const PricesAndPayments = (props) => {
                   border="1px solid #EBEBEB"
                   padding="24px 15px 0 15px"
                   gridColumn_tablet="2/12"
-                  gridRow="1"
+                  gridRow="2"
                 >
-                  <H3 
-                    textAlign="center"  
+                  <H3
+                    textAlign="center"
                     margin="0 0 16px 0"
                     fontSize="21px"
                     lineHeight="25px"
@@ -664,10 +681,7 @@ const PricesAndPayments = (props) => {
                   <hr style={{ border: "1px solid #ebebeb", width: "60%" }} />
                   {selected?.bullets &&
                     selected.bullets.map((bullet) => (
-                      <Div 
-                        alignItems="center" 
-                        margin="21px 0 0 0"
-                      >
+                      <Div alignItems="center" margin="21px 0 0 0">
                         <Icon
                           icon="check"
                           width="17px"
@@ -680,7 +694,6 @@ const PricesAndPayments = (props) => {
                           lineHeight="19px"
                           fontWeight="500"
                           fontSize="16px"
-                          //fontWeight_tablet="700"
                           color={Colors.black}
                           opacity="1"
                           textAlign="left"
@@ -698,7 +711,7 @@ const PricesAndPayments = (props) => {
                 justifyContent_xs="evenly"
                 gap="15px"
                 gridColumn_tablet="12/22"
-                gridRow="1"
+                gridRow="2"
               >
                 {availablePlans &&
                   availablePlans.map((plan, index) => (
@@ -718,8 +731,9 @@ const PricesAndPayments = (props) => {
                   display="none"
                   display_tablet="flex"
                   flexDirection="row-reverse"
-                  gridRow="2"
-                  gridColumn="2/5"
+                  gridRow="3"
+                  gridColumn="12/22"
+                  //margin="32px 0 0 0"
                 >
                   <Link
                     style={{
