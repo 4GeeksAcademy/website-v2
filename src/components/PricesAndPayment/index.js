@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from "gatsby";
 import Icon from "../Icon";
 import Toggle from "../ToggleSwitch";
 import { Link } from "../Styling/index";
-import { GridContainer, Div } from "../Sections";
+import { GridContainer, Div, Grid } from "../Sections";
 import Select, { SelectRaw } from "../Select";
 import { H2, H3, H4, H5, Paragraph } from "../Heading";
 import { Button, Colors, RoundImage, Img } from "../Styling";
@@ -183,9 +183,8 @@ const PricingCard = ({
               marginTop: "15px",
               display: "block",
             }}
-            to={`${info.apply_button.link}${
-              selectedPlan ? `?utm_plan=${selectedPlan}` : ""
-            }`}
+            to={`${info.apply_button.link}${selectedPlan ? `?utm_plan=${selectedPlan}` : ""
+              }`}
           >
             <Button
               variant="full"
@@ -238,7 +237,7 @@ const ChartSection = ({ info, currentLocation }) => {
           width="100%"
           width_xs="300px"
           margin="auto"
-          // height="256px"
+        // height="256px"
         >
           <Icon icon="payments_chart" style={{ margin: "auto" }} />
         </Div>
@@ -493,248 +492,263 @@ const PricesAndPayments = (props) => {
       flexDirection="column"
       padding="50px 0"
       padding_tablet="70px 0"
+      maxWidth_md="1366px"
+      margin="0 auto"
     >
-      <GridContainer margin="0 0 25px 0" margin_tablet="0 0 25px 0">
+      {/* <GridContainer margin="0 0 25px 0" margin_tablet="0 0 25px 0">
         <Div display="flex" flexDirection="column" alignItems="center">
           <H2 margin="0 0 15px 0" fontWeight="900">
             {props.title}
           </H2>
           <Paragraph>{props.paragraph}</Paragraph>
         </Div>
-      </GridContainer>
-      <GridContainer
-        margin="0 0 70px 0"
-        margin_tablet="0 0 25px 0"
-        margin_xs="0 0 30px 0"
+      </GridContainer> */}
+      <H2
+        fontSize="38px"
+        lineHeight="46px"
+        textAlign="center"
+        width="100%"
+        margin="0 0 20px 0"
       >
-        <Div
-          flexDirection_tablet="row"
-          flexDirection="column"
-          justifyContent="center"
-          alignItems="center"
-        >
-          {
-            props.course && (
-              <Select
-                top="40px"
-                left="20px"
-                width="fit-content"
-                options={courseArray}
-                openLabel={course ? course.label : props.openedLabel}
-                closeLabel={course ? course.label : props.closedLabel}
-                onSelect={(opt) => setCourse(opt)}
-              />
-            )
-            // </GridContainer>
-          }
-          &nbsp;
-          {
-            course && (
-              // <GridContainer>
-              <Div width="320px">
-                <SelectRaw
-                  bgColor={Colors.white}
-                  options={locations.map((l) => ({
-                    label: l.node.name,
-                    value: l.node.active_campaign_location_slug,
-                  }))}
-                  placeholder={info.top_label}
-                  value={{
-                    label: currentLocation?.name,
-                    value: currentLocation?.active_campaign_location_slug,
-                  }}
-                  onChange={(opt) =>
-                    setCurrentLocation(
-                      locations.find(
-                        (l) =>
-                          l.node.active_campaign_location_slug === opt.value
-                      ).node
-                    )
-                  }
-                />
-              </Div>
-            )
-            // </GridContainer>
-          }
+        {info.plans_title}
+      </H2>
+      <Grid gridTemplateColumns_tablet="2fr repeat(15,1fr) 2fr">
+        <Div gridColumn_tablet="2/12">
+          <Paragraph
+            fontSize="24px"
+            lineHeight="29px"
+            textAlign="start"
+            width="100%"
+            margin="0 0 20px 0"
+            opacity="1"
+            color={Colors.black}
+            gridColumn="2/9"
+          >
+            {info.select}
+          </Paragraph>
         </Div>
-      </GridContainer>
-      <Div display="block" minHeight_tablet="600px" padding_md="20px">
-        {/* <ChartSection info={info} currentLocation={currentLocation} /> */}
+        {/* SELECT COUNTRY */}
         <Div
-          //border="1px solid #000"
-          background="#FFF"
-          padding_xs="18px 15px"
-          padding_sm="38px"
-          maxWidth_md="800px"
-          minWidth_md="580px"
-          width_md="auto"
-          width_xs="80%"
-          margin_sm="auto"
-          margin_xs="20px auto"
-          margin="20px auto"
-          display="block"
+          margin="0 0 70px 0"
+          margin_tablet="0 0 25px 0"
+          margin_xs="0 0 30px 0"
+          gridColumn_tablet="12/16"
         >
-          {availablePlans && availablePlans.length !== 0 ? (
-            <>
-              <H3
-                fontSize="24px"
-                lineHeight="29px"
-                textAlign="center"
-                width="100%"
-                margin="0 0 20px 0"
-              >
-                {info.plans_title}
-              </H3>
-              <Paragraph
-                fontSize="24px"
-                lineHeight="29px"
-                textAlign="center"
-                width="100%"
-                margin="0 0 20px 0"
-                opacity="1"
-                color={Colors.black}
-              >
-                {info.select}
-              </Paragraph>
-            </>
-          ) : (
-            <Div
-              fontSize="25px"
-              display="block"
-              textAlign="center"
-              dangerouslySetInnerHTML={{
-                __html: jobGuarantee
-                  ? info.not_available_job_guarantee
-                  : info.not_available,
-              }}
-            />
-          )}
-          {availablePlans.some((plan) => plan.job_guarantee_price) && (
-            <Div
-              display="block"
-              background={Colors.veryLightBlue}
-              padding="10px"
-              margin="20px 0 20px 0"
-            >
-              <Div alignItems="center">
-                <Toggle
-                  isChecked={jobGuarantee}
-                  onChange={() => setJobGuarantee(!jobGuarantee)}
+          <Div
+            flexDirection_tablet="row"
+            flexDirection="column"
+            justifyContent="center"
+            alignItems="center"
+          >
+            {
+              props.course && (
+                <Select
+                  top="40px"
+                  left="20px"
+                  width="fit-content"
+                  topLabel="Location"
+                  options={courseArray}
+                  openLabel={course ? course.label : props.openedLabel}
+                  closeLabel={course ? course.label : props.closedLabel}
+                  onSelect={(opt) => setCourse(opt)}
                 />
-                <H4
-                  textAlign="left"
-                  fontWeight="700"
-                  fontSize="18px"
-                  margin="0 0 0 10px"
-                >
-                  {info.job_guarantee.title}
-                </H4>
-              </Div>
-              <Paragraph textAlign="left" color={Colors.black} opacity="1">
-                {info.job_guarantee.description}
-              </Paragraph>
-            </Div>
-          )}
-          <Div gap="10px" margin="0 0 15px 0">
-            {availablePlans && availablePlans.length > 0 && (
+              )}
+            &nbsp;
+            {
+              course && (
+                <Div width="320px">
+                  <SelectRaw
+                    bgColor={Colors.white}
+                    topLabel="Location"
+                    options={locations.map((l) => ({
+                      label: l.node.name,
+                      value: l.node.active_campaign_location_slug,
+                    }))}
+                    placeholder={info.top_label}
+                    value={{
+                      label: currentLocation?.name,
+                      value: currentLocation?.active_campaign_location_slug,
+                    }}
+                    onChange={(opt) =>
+                      setCurrentLocation(
+                        locations.find(
+                          (l) =>
+                            l.node.active_campaign_location_slug === opt.value
+                        ).node
+                      )
+                    }
+                  />
+                </Div>
+              )}
+          </Div>
+        </Div>
+      </Grid>
+
+
+
+      {/* <Div display="block" minHeight_tablet="600px" padding_md="20px"> */}
+      {/* <ChartSection info={info} currentLocation={currentLocation} /> */}
+      <Div
+        //border="1px solid #000"
+        background="#FFF"
+        padding_xs="18px 15px"
+        padding_sm="38px"
+        padding_tablet="38px 0px"
+        maxWidth_md="1366px"
+        minWidth_md="580px"
+        width_md="auto"
+        width_xs="80%"
+        margin_sm="auto"
+        margin_xs="20px auto"
+        margin="20px auto"
+      //display="block"
+      >
+        {availablePlans && availablePlans.length === 0 ?
+          <Div
+            fontSize="25px"
+            display="block"
+            textAlign="center"
+            dangerouslySetInnerHTML={{
+              __html: jobGuarantee
+                ? info.not_available_job_guarantee
+                : info.not_available,
+            }}
+          />
+          : <>
+            {availablePlans.some((plan) => plan.job_guarantee_price) && (
               <Div
-                display="none"
-                display_tablet="block"
-                width="50%"
-                background="#F9F9F9"
-                border="1px solid #EBEBEB"
+                background={Colors.veryLightBlue}
                 padding="10px"
+                margin="20px 0 20px 0"
               >
-                <H3 textAlign="center" margin="0 0 20px 0">
-                  {info.plan_details}
-                </H3>
-                <hr style={{ border: "1px solid #ebebeb" }} />
-                {selected?.bullets &&
-                  selected.bullets.map((bullet) => (
-                    <Div alignItems="center" margin="10px 0 0 0">
-                      <Icon
-                        icon="check"
-                        width="17px"
-                        height="17px"
-                        style={{ marginRight: "10px" }}
-                        color={Colors.blue}
-                        fill={Colors.blue}
-                      />
-                      <Paragraph
-                        lineHeight="19px"
-                        fontWeight="700"
-                        fontWeight_tablet="700"
-                        color={Colors.black}
-                        opacity="1"
-                        textAlign="left"
-                      >
-                        {bullet}
-                      </Paragraph>
-                    </Div>
-                  ))}
+                <Div alignItems="center">
+                  <Toggle
+                    isChecked={jobGuarantee}
+                    onChange={() => setJobGuarantee(!jobGuarantee)}
+                  />
+                  <H4
+                    textAlign="left"
+                    fontWeight="700"
+                    fontSize="18px"
+                    margin="0 0 0 10px"
+                  >
+                    {info.job_guarantee.title}
+                  </H4>
+                </Div>
+                <Paragraph textAlign="left" color={Colors.black} opacity="1">
+                  {info.job_guarantee.description}
+                </Paragraph>
               </Div>
             )}
-            <Div
-              className="cards-container"
-              flexWrap="wrap"
-              justifyContent_tablet="between"
-              justifyContent_xs="evenly"
-              width_tablet="50%"
-              gap="15px"
+            <Grid
+              gridTemplateColumns_tablet="3fr repeat(20,1fr) 3fr"
+              gridTemplateRows_tablet="1fr"
+              gap="10px"
+              margin="0 0 15px 0"
             >
-              {availablePlans &&
-                availablePlans.map((plan, index) => (
-                  <PricingCard
-                    data={plan}
-                    info={info}
-                    selectedPlan={selectedPlan}
-                    setSelectedPlan={setSelectedPlan}
-                    index={index}
-                    buttonText={buttonText}
-                    jobGuarantee={jobGuarantee}
-                  />
-                ))}
-            </Div>
-          </Div>
-          {availablePlans && availablePlans.length !== 0 && (
-            <Div
-              display="none"
-              display_tablet="flex"
-              flexDirection="row-reverse"
-            >
-              <Link
-                style={{
-                  display: "block",
-                }}
-                to={`${info.apply_button.link}${
-                  selectedPlan ? `?utm_plan=${selectedPlan}` : ""
-                }`}
-              >
-                <Button
-                  variant="full"
-                  width="100%"
-                  color={Colors.black}
-                  textColor={Colors.white}
-                  fontSize="16px"
-                  margin="auto"
-                  textAlign="center"
-                  display="block"
-                  onClick={() => {
-                    if (selectedPlan) {
-                      setSession({
-                        ...session,
-                        utm: { ...session.utm, utm_plan: selectedPlan },
-                      });
-                    }
-                  }}
+              {availablePlans && availablePlans.length > 0 && (
+                <Div
+                  display="none"
+                  display_tablet="block"
+                  background="#F9F9F9"
+                  border="1px solid #EBEBEB"
+                  padding="10px"
+                  gridColumn_tablet="2/12"
+                  gridRow="1"
                 >
-                  {buttonText || info.apply_button.label}
-                </Button>
-              </Link>
-            </Div>
-          )}
-        </Div>
+                  <H3 textAlign="center" margin="0 0 20px 0">
+                    {info.plan_details}
+                  </H3>
+                  <hr style={{ border: "1px solid #ebebeb" }} />
+                  {selected?.bullets &&
+                    selected.bullets.map((bullet) => (
+                      <Div alignItems="center" margin="10px 0 0 0">
+                        <Icon
+                          icon="check"
+                          width="17px"
+                          height="17px"
+                          style={{ marginRight: "10px" }}
+                          color={Colors.blue}
+                          fill={Colors.blue}
+                        />
+                        <Paragraph
+                          lineHeight="19px"
+                          fontWeight="700"
+                          fontWeight_tablet="700"
+                          color={Colors.black}
+                          opacity="1"
+                          textAlign="left"
+                        >
+                          {bullet}
+                        </Paragraph>
+                      </Div>
+                    ))}
+                </Div>
+              )}
+              <Div
+                className="cards-container"
+                flexWrap="wrap"
+                justifyContent_tablet="between"
+                justifyContent_xs="evenly"
+                gap="15px"
+                gridColumn_tablet="12/22"
+                gridRow="1"
+              >
+                {availablePlans &&
+                  availablePlans.map((plan, index) => (
+                    <PricingCard
+                      data={plan}
+                      info={info}
+                      selectedPlan={selectedPlan}
+                      setSelectedPlan={setSelectedPlan}
+                      index={index}
+                      buttonText={buttonText}
+                      jobGuarantee={jobGuarantee}
+                    />
+                  ))}
+                {availablePlans && availablePlans.length !== 0 && (
+                  <Div
+                    display="none"
+                    display_tablet="flex"
+                    flexDirection="row-reverse"
+                  >
+                    <Link
+                      style={{
+                        display: "block",
+                      }}
+                      to={`${info.apply_button.link}${selectedPlan ? `?utm_plan=${selectedPlan}` : ""
+                        }`}
+                    >
+                      <Button
+                        variant="full"
+                        width="100%"
+                        color={Colors.black}
+                        textColor={Colors.white}
+                        fontSize="16px"
+                        margin="auto"
+                        textAlign="center"
+                        display="block"
+                        onClick={() => {
+                          if (selectedPlan) {
+                            setSession({
+                              ...session,
+                              utm: { ...session.utm, utm_plan: selectedPlan },
+                            });
+                          }
+                        }}
+                      >
+                        {buttonText || info.apply_button.label}
+                      </Button>
+                    </Link>
+                  </Div>
+                )}
+              </Div>
+
+            </Grid>
+
+          </>}
       </Div>
+      {/* </Div> */}
       <GridContainer
         columns_tablet="12"
         gridGap="0"
