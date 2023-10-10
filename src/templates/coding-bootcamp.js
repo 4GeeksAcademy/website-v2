@@ -589,7 +589,7 @@ const Program = ({ data, pageContext, yml }) => {
           paragraph={yml.prices.sub_heading}
         />
       </Div>
-      
+
       <Testimonials
         id="testimonials"
         lang={data.allTestimonialsYaml.edges}

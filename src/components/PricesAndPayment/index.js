@@ -513,26 +513,26 @@ const PricesAndPayments = (props) => {
         {info.plans_title}
       </H2>
       <Grid gridTemplateColumns_tablet="2fr repeat(15,1fr) 2fr">
-        <Div gridColumn_tablet="2/12">
-          <Paragraph
-            fontSize="24px"
-            lineHeight="29px"
+        <Div gridColumn_tablet="2/12" alignItems="center">
+          <H3
+            fontSize="22px"
+            lineHeight="26px"
+            fontWeight="700"
             textAlign="start"
-            width="100%"
-            margin="0 0 20px 0"
+            //width="100%"
             opacity="1"
             color={Colors.black}
             gridColumn="2/9"
           >
             {info.select}
-          </Paragraph>
+          </H3>
         </Div>
         {/* SELECT COUNTRY */}
         <Div
-          margin="0 0 70px 0"
-          margin_tablet="0 0 25px 0"
-          margin_xs="0 0 30px 0"
-          gridColumn_tablet="12/16"
+          // margin="0 0 70px 0"
+          // margin_tablet="0 0 25px 0"
+          //margin_xs="0 0 30px 0"
+          gridColumn_tablet="12/17"
         >
           <Div
             flexDirection_tablet="row"
@@ -540,51 +540,47 @@ const PricesAndPayments = (props) => {
             justifyContent="center"
             alignItems="center"
           >
-            {
-              props.course && (
-                <Select
-                  top="40px"
-                  left="20px"
-                  width="fit-content"
-                  topLabel="Location"
-                  options={courseArray}
-                  openLabel={course ? course.label : props.openedLabel}
-                  closeLabel={course ? course.label : props.closedLabel}
-                  onSelect={(opt) => setCourse(opt)}
-                />
-              )}
+            {props.course && (
+              <Select
+                top="40px"
+                left="20px"
+                width="fit-content"
+                topLabel="Location"
+                options={courseArray}
+                openLabel={course ? course.label : props.openedLabel}
+                closeLabel={course ? course.label : props.closedLabel}
+                onSelect={(opt) => setCourse(opt)}
+              />
+            )}
             &nbsp;
-            {
-              course && (
-                <Div width="320px">
-                  <SelectRaw
-                    bgColor={Colors.white}
-                    topLabel="Location"
-                    options={locations.map((l) => ({
-                      label: l.node.name,
-                      value: l.node.active_campaign_location_slug,
-                    }))}
-                    placeholder={info.top_label}
-                    value={{
-                      label: currentLocation?.name,
-                      value: currentLocation?.active_campaign_location_slug,
-                    }}
-                    onChange={(opt) =>
-                      setCurrentLocation(
-                        locations.find(
-                          (l) =>
-                            l.node.active_campaign_location_slug === opt.value
-                        ).node
-                      )
-                    }
-                  />
-                </Div>
-              )}
+            {course && (
+              <Div width="320px">
+                <SelectRaw
+                  bgColor={Colors.white}
+                  topLabel="Location"
+                  options={locations.map((l) => ({
+                    label: l.node.name,
+                    value: l.node.active_campaign_location_slug,
+                  }))}
+                  placeholder={info.top_label}
+                  value={{
+                    label: currentLocation?.name,
+                    value: currentLocation?.active_campaign_location_slug,
+                  }}
+                  onChange={(opt) =>
+                    setCurrentLocation(
+                      locations.find(
+                        (l) =>
+                          l.node.active_campaign_location_slug === opt.value
+                      ).node
+                    )
+                  }
+                />
+              </Div>
+            )}
           </Div>
         </Div>
       </Grid>
-
-
 
       {/* <Div display="block" minHeight_tablet="600px" padding_md="20px"> */}
       {/* <ChartSection info={info} currentLocation={currentLocation} /> */}
@@ -603,7 +599,7 @@ const PricesAndPayments = (props) => {
         margin="20px auto"
       //display="block"
       >
-        {availablePlans && availablePlans.length === 0 ?
+        {availablePlans && availablePlans.length === 0 ? (
           <Div
             fontSize="25px"
             display="block"
@@ -614,7 +610,8 @@ const PricesAndPayments = (props) => {
                 : info.not_available,
             }}
           />
-          : <>
+        ) : (
+          <>
             {availablePlans.some((plan) => plan.job_guarantee_price) && (
               <Div
                 background={Colors.veryLightBlue}
@@ -642,7 +639,7 @@ const PricesAndPayments = (props) => {
             )}
             <Grid
               gridTemplateColumns_tablet="3fr repeat(20,1fr) 3fr"
-              gridTemplateRows_tablet="1fr"
+              gridTemplateRows_tablet="1fr 1fr"
               gap="10px"
               margin="0 0 15px 0"
             >
@@ -652,17 +649,25 @@ const PricesAndPayments = (props) => {
                   display_tablet="block"
                   background="#F9F9F9"
                   border="1px solid #EBEBEB"
-                  padding="10px"
+                  padding="24px 15px 0 15px"
                   gridColumn_tablet="2/12"
                   gridRow="1"
                 >
-                  <H3 textAlign="center" margin="0 0 20px 0">
+                  <H3 
+                    textAlign="center"  
+                    margin="0 0 16px 0"
+                    fontSize="21px"
+                    lineHeight="25px"
+                  >
                     {info.plan_details}
                   </H3>
-                  <hr style={{ border: "1px solid #ebebeb" }} />
+                  <hr style={{ border: "1px solid #ebebeb", width: "60%" }} />
                   {selected?.bullets &&
                     selected.bullets.map((bullet) => (
-                      <Div alignItems="center" margin="10px 0 0 0">
+                      <Div 
+                        alignItems="center" 
+                        margin="21px 0 0 0"
+                      >
                         <Icon
                           icon="check"
                           width="17px"
@@ -673,8 +678,9 @@ const PricesAndPayments = (props) => {
                         />
                         <Paragraph
                           lineHeight="19px"
-                          fontWeight="700"
-                          fontWeight_tablet="700"
+                          fontWeight="500"
+                          fontSize="16px"
+                          //fontWeight_tablet="700"
                           color={Colors.black}
                           opacity="1"
                           textAlign="left"
@@ -706,47 +712,48 @@ const PricesAndPayments = (props) => {
                       jobGuarantee={jobGuarantee}
                     />
                   ))}
-                {availablePlans && availablePlans.length !== 0 && (
-                  <Div
-                    display="none"
-                    display_tablet="flex"
-                    flexDirection="row-reverse"
-                  >
-                    <Link
-                      style={{
-                        display: "block",
-                      }}
-                      to={`${info.apply_button.link}${selectedPlan ? `?utm_plan=${selectedPlan}` : ""
-                        }`}
-                    >
-                      <Button
-                        variant="full"
-                        width="100%"
-                        color={Colors.black}
-                        textColor={Colors.white}
-                        fontSize="16px"
-                        margin="auto"
-                        textAlign="center"
-                        display="block"
-                        onClick={() => {
-                          if (selectedPlan) {
-                            setSession({
-                              ...session,
-                              utm: { ...session.utm, utm_plan: selectedPlan },
-                            });
-                          }
-                        }}
-                      >
-                        {buttonText || info.apply_button.label}
-                      </Button>
-                    </Link>
-                  </Div>
-                )}
               </Div>
-
+              {availablePlans && availablePlans.length !== 0 && (
+                <Div
+                  display="none"
+                  display_tablet="flex"
+                  flexDirection="row-reverse"
+                  gridRow="2"
+                  gridColumn="2/5"
+                >
+                  <Link
+                    style={{
+                      display: "block",
+                    }}
+                    to={`${info.apply_button.link}${selectedPlan ? `?utm_plan=${selectedPlan}` : ""
+                      }`}
+                  >
+                    <Button
+                      variant="full"
+                      width="100%"
+                      color={Colors.black}
+                      textColor={Colors.white}
+                      fontSize="16px"
+                      margin="auto"
+                      textAlign="center"
+                      display="block"
+                      onClick={() => {
+                        if (selectedPlan) {
+                          setSession({
+                            ...session,
+                            utm: { ...session.utm, utm_plan: selectedPlan },
+                          });
+                        }
+                      }}
+                    >
+                      {buttonText || info.apply_button.label}
+                    </Button>
+                  </Link>
+                </Div>
+              )}
             </Grid>
-
-          </>}
+          </>
+        )}
       </Div>
       {/* </Div> */}
       <GridContainer
