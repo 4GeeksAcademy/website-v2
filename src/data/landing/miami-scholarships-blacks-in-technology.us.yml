@@ -199,12 +199,5 @@ components:
       text: "Access to the largest community of black technologists"
       font_size: ["18px", "18px", "18px", "18px", "18px"]
     content:
-      text: "<h4>CAREER SUPPORT</h4>
-Job boards, mentorships, and strategic partnerships give members an upper hand in their job search and career advancement goals.
-
-<h4>NETWORKING</h4>
-Professional and social events connect our community. Virtual and physical events are core to the BIT mission.
-
-<h4>TECH RESOURCES</h4>
-Through our relationships, the BIT Foundation offers discounts on technical training, and events and conferences."
+      text: "<strong>CAREER SUPPORT</strong> <br>Job boards, mentorships, and strategic partnerships give members an upper hand in their job search and career advancement goals.<br><br><strong>NETWORKING</strong><br>Professional and social events connect our community. Virtual and physical events are core to the BIT mission.<br><br><strong>TECH RESOURCES</strong><br>Through our relationships, the BIT Foundation offers discounts on technical training, and events and conferences."
       font_size: ["16px"]

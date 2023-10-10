@@ -117,16 +117,13 @@ components:
       font_size: ["15px"]
 
     bullets:
-      - Número
-      - String
-      - Boolean
-      - Iterables
-      - Dictionary
-      - Lista
-      - Tupla
-      - Rango
-      - Set & Frozenset
-      - Tabla Hash
+      - Cliente-Servidor en Arquitectura
+      - "Listas en Python: Introducción"
+      - ¿Qué es una lista?
+      - Declaración de Listas
+      - "Funciones: Conceptos Básicos"
+      - Alcance de las Funciones
+      - Práctica
 
     content:
       text: "El Zen del Python, variables, conditionals, loops, functions, decorators, generators, virtual environment, package manager."
