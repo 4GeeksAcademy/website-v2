@@ -50,14 +50,16 @@ const PricingCard = ({
           </Div>
         )}
         <Div
-          border={`2px solid ${Colors.blue}`}
+          //border={`2px solid ${Colors.blue}`}
+          //border={`2px solid ${isSelected ? Colors.blue : "black"}`}
+          border={isSelected ? `2px solid ${Colors.blue}` : "1px solid black"}
           padding="8px 20px"
           display="block"
         >
           <Div className="price-section" justifyContent="between" width="100%">
             <Div alignItems_xs="flex-start" width="60%" padding_xs="5px 0 0 0">
               <Div
-                border={`1px solid ${isSelected ? Colors.blue : "#A4A4A4"}`}
+                //border={`1px solid ${isSelected ? Colors.blue : "#A4A4A4"}`}
                 width="21px"
                 height="21px"
                 borderRadius="15px"
@@ -194,8 +196,9 @@ const PricingCard = ({
               marginTop: "21px",
               display: "block",
             }}
-            to={`${info.apply_button.link}${selectedPlan ? `?utm_plan=${selectedPlan}` : ""
-              }`}
+            to={`${info.apply_button.link}${
+              selectedPlan ? `?utm_plan=${selectedPlan}` : ""
+            }`}
           >
             <Button
               variant="full"
@@ -248,7 +251,7 @@ const ChartSection = ({ info, currentLocation }) => {
           width="100%"
           width_xs="300px"
           margin="auto"
-        // height="256px"
+          // height="256px"
         >
           <Icon icon="payments_chart" style={{ margin: "auto" }} />
         </Div>
@@ -516,8 +519,12 @@ const PricesAndPayments = (props) => {
       >
         {info.plans_title}
       </H2>
-      <Grid gridTemplateColumns_tablet="2fr repeat(15,1fr) 2fr" gridGap="0">
-        <Div gridColumn_tablet="2/12" alignItems="center">
+      <Grid 
+        gridTemplateColumns_md="2fr repeat(13,1fr) 2fr"
+        gridTemplateColumns_tablet="2fr repeat(13,1fr) 2fr" 
+        gridGap="0"
+      >
+        <Div gridColumn_md="2/10" gridColumn_tablet="2/10" alignItems="center">
           <H3
             fontSize_md="22px"
             fontSize_xs="16px"
@@ -532,14 +539,15 @@ const PricesAndPayments = (props) => {
           </H3>
         </Div>
         {/* SELECT COUNTRY */}
-        <Div
-          gridColumn_tablet="12/17"
-          justifyContent_xs="center"
+        <Div 
+          gridColumn_md="10/15"
+          gridColumn_tablet="10/15" 
+          justifyContent_xs="center" 
+          justifyContent_tablet="end"
         >
           <Div
             flexDirection_tablet="row"
             flexDirection="column"
-            justifyContent="center"
             alignItems="center"
           >
             {props.course && (
@@ -556,7 +564,7 @@ const PricesAndPayments = (props) => {
             )}
             &nbsp;
             {course && (
-              <Div width="320px">
+              <Div width_tablet="220px" width_md="320px" width_xs="320px">
                 <SelectRaw
                   bgColor={Colors.white}
                   topLabel="Location"
@@ -593,7 +601,7 @@ const PricesAndPayments = (props) => {
         maxWidth_md="1366px"
         minWidth_md="580px"
         margin="20px auto"
-      //display="block"
+        //display="block"
       >
         {availablePlans && availablePlans.length === 0 ? (
           <Div
@@ -609,7 +617,8 @@ const PricesAndPayments = (props) => {
         ) : (
           <>
             <Grid
-              gridTemplateColumns_tablet="3fr repeat(20,1fr) 3fr"
+              gridTemplateColumns_tablet="5fr repeat(20,1fr) 5fr"
+              gridTemplateColumns_md="3fr repeat(20,1fr) 3fr"
               gridTemplateRows_tablet="1fr 1fr 1fr"
               gridGap="32px 15px"
             >
@@ -721,14 +730,15 @@ const PricesAndPayments = (props) => {
                   flexDirection="row-reverse"
                   gridRow_tablet="3"
                   gridColumn_tablet="12/22"
-                //margin="32px 0 0 0"
+                  //margin="32px 0 0 0"
                 >
                   <Link
                     style={{
                       display: "block",
                     }}
-                    to={`${info.apply_button.link}${selectedPlan ? `?utm_plan=${selectedPlan}` : ""
-                      }`}
+                    to={`${info.apply_button.link}${
+                      selectedPlan ? `?utm_plan=${selectedPlan}` : ""
+                    }`}
                   >
                     <Button
                       variant="full"
