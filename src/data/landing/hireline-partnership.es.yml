@@ -8,7 +8,7 @@ meta_info:
   image: "../../../static/images/bg/main-bg.jpg"
   keywords: "Aprende a programar, 4Geeks academy, aprende programacion, aprende ingenieria informatica, curso programacion"
 
-  template: "landing_nonav" # <--- choose your landing template
+  template: "landing_a" # <--- choose your landing template
   redirects: [] # <--- URL redirections to avoid 404 errors
 
   # Set a particular course or location to the landing page
@@ -137,8 +137,9 @@ components:
     layout: two_column_right
     proportions: [6, 6]
     image:
-      style: '{ "backgroundSize": "contain" }'
+      style: '{ "backgroundSize": "cover", "background-position": "top"}'
       src: "/images/ownpeoplecoding2.jpg"
+      shadow: true
     heading:
       text: "En Alianza con Hireline"
       font_size: ["30px", "30px", "30px", "30px", "30px"]
@@ -158,9 +159,10 @@ components:
         <h2 style="margin-bottom:3px"><strong style="font-weight: italic;">*Beneficios extra disponibles</strong></h2>
       font_size: ["16px"]
   - name: top_coding_bootcamp
-    position: 6
+    position: 5
     layout: two_column_left
     proportions: [4, 8]
+    background: "#e6e6e6"
     image:
       style: '{ "backgroundSize": "contain" }'
       src: "/images/badges/Course-Report-Badge-2023.png"

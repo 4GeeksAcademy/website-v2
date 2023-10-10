@@ -282,8 +282,10 @@ const Landing = (props) => {
               justifyContentButton="center"
               widthButton="fit-content"
               //marginButton="15px auto 30px auto"
-              marginButton_tablet={ 
-                applySchollarship?.imageSide === "right" ? "15px auto 30px 0" : "15px 0 30px auto" 
+              marginButton_tablet={
+                applySchollarship?.imageSide === "right"
+                  ? "15px auto 30px 0"
+                  : "15px 0 30px auto"
               }
             />
           </Div>
@@ -296,7 +298,6 @@ export const query = graphql`
   query LandingAQuery(
     $file_name: String!
     $lang: String!
-    $utm_course: String
   ) {
     allPageYaml(
       filter: {
@@ -511,7 +512,9 @@ export const query = graphql`
             image {
               src
               style
+              shadow
               link
+              shadow
             }
             programs {
               title
@@ -910,11 +913,7 @@ export const query = graphql`
         }
       }
     }
-    allCourseYaml(
-      filter: {
-        fields: { file_name: { eq: $utm_course }, lang: { eq: $lang } }
-      }
-    ) {
+    allCourseYaml(filter: { fields: { lang: { eq: $lang } } }) {
       edges {
         node {
           meta_info {

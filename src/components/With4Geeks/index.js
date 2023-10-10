@@ -233,17 +233,18 @@ export default ({
                       {i.description}
                     </Paragraph>
 
-                    {i.footer.text_link != "" &&
+                    {i.footer.text_link != "" && (
                       <Link to={i.footer.text_link}>
-                        <H4 display="flex" 
-                          fontWeigth="700" 
-                          color={Colors.blue} 
+                        <H4
+                          display="flex"
+                          fontWeigth="700"
+                          color={Colors.blue}
                           // textDecoration="underline"
                         >
                           {i.footer.text}
                         </H4>
                       </Link>
-                    }
+                    )}
                   </Div>
                 </Div>
               );

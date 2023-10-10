@@ -90,6 +90,21 @@ follow_bar:
 #
 # ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇
 #
+components:
+  - name: top_coding_bootcamp
+    position: 1
+    layout: two_column_left
+    proportions: [4, 8]
+    background: "#f1f1f1"
+    image:
+      style: '{ "backgroundSize": "contain" }'
+      src: "/images/badges/Course-Report-Badge-2023.png"
+      link: "https://www.coursereport.com/schools/4geeks-academy"
+    heading:
+      text:
+        "Tenemos 3 años consecutivos siendo seleccionados como uno de los mejores coding bootcamps del mundo"
+        #xl      lg     md     sm    xs
+      font_size: ["38px", "36px", "32px", "30px", "30px"]
 
 rating_reviews:
   position: 2
@@ -113,7 +128,7 @@ rating_reviews:
       url: ""
 
 badges:
-  position: 3
+  position: 10
   heading: "4Geeks Academy cuenta con premios y reconocimientos que validan su excelencia"
 
 program_details:

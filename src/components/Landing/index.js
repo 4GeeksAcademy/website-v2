@@ -58,6 +58,7 @@ const Side = ({
     return (
       <ReactPlayer
         thumb={image && image.src}
+        image_thumb={image}
         id={video}
         videoHeight="360px"
         margin_tablet="0px"
@@ -92,7 +93,7 @@ const Side = ({
         h_sm={img_h_sm || "250px"}
         backgroundSize={image.shadow ? "cover" : "contain"}
         //backgroundPosition="center right"
-        border={image.shadow && "3px solid black"}
+        //border={image.shadow && "3px solid black"}
         boxShadow={image.shadow && "20px 15px 0px 0px rgba(0,0,0,1)"}
       />
     );
@@ -113,7 +114,7 @@ const Side = ({
     <Div
       flexDirection_tablet="column"
       flexDirection="column"
-      padding_tablet={padding_tablet || "36px 0px 0px 0px"}
+      padding_tablet={padding_tablet || "10px 0px 0px 0px"}
     >
       {heading && (
         <H2
@@ -316,6 +317,8 @@ export const TwoColumn = ({ left, right, proportions, session }) => {
         flexDirection="column"
         size_tablet={left_size || 6}
         size="12"
+        padding_xs="0"
+        padding_md={right.image?.shadow ? "0 20px 0 0 " : "0px"}
         // maxHeight="300px"
         textAlign="center"
       >
@@ -325,6 +328,8 @@ export const TwoColumn = ({ left, right, proportions, session }) => {
         justifyContent={right.video && "center"}
         flexDirection="column"
         size_tablet={right_size || 6}
+        padding_xs="0"
+        padding_md={left.image?.shadow ? "0 0 0 20px" : "0px"}
         size="12"
         textAlign="center"
       >
@@ -640,7 +645,7 @@ export const landingSections = {
   },
 
   iconogram: ({ session, data, pageContext, yml, index }) => {
-    const { heading, sub_heading, icons, text_link } = yml;
+    const { heading, sub_heading, icons, button } = yml;
     return (
       <Div
         key={index}
@@ -722,19 +727,28 @@ export const landingSections = {
               );
             })}
         </Div>
-        {text_link && (
-          <Div maxWidth="1366px" margin="10px auto">
-            <Link to={text_link} display="block">
-              <H3
-                fontSize="18px"
-                lineHeight="22px"
-                textDecoration="underline"
-                textDecorationOffset="5px"
-              >
-                Conditions Apply.
-              </H3>
-            </Link>
-          </Div>
+        {button && (
+          <Button
+            outline
+            borderRadius="0"
+            colorHoverText={button.hover_color || Colors.blue}
+            background={Colors[button.background] || button.background}
+            lineHeight="26px"
+            textColor={Colors.black}
+            textTransform="none"
+            color={Colors[button.color] || button.color}
+            fontSize="15px"
+            textAlign="left"
+            margin="2rem 0"
+            padding="32px .85rem 0 .85rem"
+            onClick={() => {
+              if (button.path && button.path.indexOf("http") > -1)
+                window.open(transferQuerystrings(button.path, utm));
+              else navigate(button.path);
+            }}
+          >
+            {button.text}
+          </Button>
         )}
       </Div>
     );

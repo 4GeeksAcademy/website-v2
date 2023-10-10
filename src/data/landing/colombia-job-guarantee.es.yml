@@ -58,24 +58,6 @@ features:
     - Aprovecha nuestras opciones de Financiamiento
     
 
-short_badges:
-  - name: "Premios Tecnologia Siglo XXI"
-    url: ""
-    image: "../../../static/images/awards/premios_tecnologia_sigloxxi.png"
-    alt: "Mejor centro de Coding Bootcamp"
-  - name: "Course Report"
-    url: ""
-    image: "../../../static/images/badges/Course-Report-Badge-2023.png"
-    alt: "Top Coding Bootcamps Course Report"
-  - name: "Switchup"
-    url: ""
-    image: "../../../static/images/badges/switchup-badge-2023.png"
-    alt: "Best coding bootcamp Switchup 2023"   
-  - name: "Florida Department of Education"
-    url: ""
-    image: "../../../static/images/badges/licensed.png"
-    alt: "Florida Department of Education"
-
 follow_bar:
   position: "top" # top, bottom, hidden
   content:
@@ -94,7 +76,7 @@ follow_bar:
 #
 
 rating_reviews:
-  position: 1
+  position: 3
   heading: "Lee acerca de nosotros"
   rating_list:
     - alt: "Career Karma"
@@ -115,11 +97,11 @@ rating_reviews:
       url: ""
 
 badges:
-  position: 2
+  position: 7
   heading: "4Geeks Academy cuenta con premios y reconocimientos que validan su excelencia"
 
 program_details:
-  position: 3
+  position: 1
   background: "#FFFFFF"
   heading: "Domina Python, JS y React"
   sub_heading: "Un curso de programación sobre las tecnologías más usadas del mundo"
@@ -136,7 +118,7 @@ why_4geeks:
   sub_heading: " "
 
 who_is_hiring:
-  position: 8
+  position: 14
   limit: 4
   heading: "¿Quién contrata a nuestros alumnos?"
   sub_heading: "84% de nuestros estudiantes que completaron el proceso de GeekFORCE han conseguido trabajo luego de haberse graduado (incluso dentro de los sigiuientes  100 días)"
@@ -148,18 +130,23 @@ alumni_projects:
 
 components:
   - name: ""
-    position: 4
+    position: 12
     background: "veryLightBlue2"
     layout: iconogram
     swipable: True
     heading:
-      text: ""
+      text: "Garantía de Empleo"
       font_size: ["30px", "30px", "30px", "30px", "30px"]
     sub_heading:
       text: ""
       font_size: ["16px", "16px", "16px", "16px", "16px"]
       style: '{ "textAlign": "center", "width": "60%" }'
-    text_link: "#"
+    button:
+      text: "Conditiones Applican"
+      color: black
+      # hover_color: "white"
+      # background: "black"
+      path: "#"
     icons:
     - icon: "touch" 
       title: Incríbete en el Programa
@@ -171,7 +158,7 @@ components:
       title: Consigue tu Empleo soñado
 
   - name: python_y_javascript
-    position: 5
+    position: 2
     layout: two_column_right
     background: "veryLightBlue2" # Name of the color(from components/Styling/index.js) or color code ex: #C9F9F9
     image:

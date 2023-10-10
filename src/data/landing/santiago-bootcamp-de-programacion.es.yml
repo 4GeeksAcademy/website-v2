@@ -9,7 +9,7 @@ meta_info:
   image: "/images/bg/main-bg.jpg"
   keywords: "Bootcamp de Programación, Bootcamp de Codigo, Bootcamp de python, Bootcamp de React y Javascript, Bootcamp de Full Stack, Coding Bootcamp, 4Geeks Academy"
 
-  template: "landing_nonav" # <--- choose your landing template
+  template: "landing_a" # <--- choose your landing template
   redirects: # <--- URL redirections to avoid 404 errors
     ["/landing/bootcamp-de-programacion-santiago"]
 
@@ -156,16 +156,19 @@ components:
 
   - name: more_testimonials
     position: 9
-    layout: two_column_right
+    layout: two_column_left
     image:
       src: "https://storage.googleapis.com/4geeks-academy-website/landing-pictures/testimonials.webp"
+      shadow: true
     heading:
-      text: "Escúchalo de nuestros alumnos"
+      text: "Testimonios de Nuestros Alumnos"
       #xl      lg     md     sm    xs
       font_size: ["40px", "34px", "34px", "25px", "20px"]
     button:
       text: "Ver Testimoniales"
-      color: null
+      color: white
+      background: black
+      hover: white
       path: "https://www.youtube.com/watch?v=rtpfwwfE0yY&ab_channel=4GeeksAcademy"
     content:
       text: "Mentorías ilimitadas, distintos instructores, todas las semanas. Te acompañaremos en este camino para que puedas convertirte en Full Stack Developer Junior y conseguir tu primer empleo en el área. Siempre te acompañaremos, aún cuando ya hayas conseguido trabajo, una vez eres parte de 4Geeks, siempre serás parte de la comunidad y sus beneficios."

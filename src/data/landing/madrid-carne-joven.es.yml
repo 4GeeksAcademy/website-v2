@@ -5,7 +5,7 @@ meta_info:
   description: "La programación se ha convertido en un conocimiento esencial para el desarrollo profesional, aprende a programar con 4Geeks Academy y Carné Joven."
   image: "/images/bg/remote.jpeg"
   keywords: "Aprende a programar, 4Geeks academy, aprende programacion, aprende ingenieria informatica"
-  template: "landing_nonav" # <--- choose your landing template
+  template: "landing_a" # <--- choose your landing template
   redirects: ["/landing/impulsa-tu-carrera-carne-joven"] # <--- URL redirections to avoid 404 errors
   # Set a particular course or location to the landing page
   # this UTM fields will be also included in the CRM contact
@@ -79,32 +79,34 @@ apply_schollarship: # form that is displayed at the end of the landing
 # ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇
 #
 
-in_the_news:
+# in_the_news:
+#   position: 1
+#   heading: "4Geeks en los medios"
+
+program_details:
   position: 1
-  heading: "4Geeks en los medios"
+  heading: "Lo que aprenderás"
+  sub_heading: "Python, Javascript y React son las tecnologías más usadas del mundo"
 
 badges:
   position: 6
   heading: "Premios y reconocimientos que validan nuestra excelencia"
 
-program_details:
-  position: 3
-  heading: "Lo que aprenderás"
-  sub_heading: "Python, Javascript y React son las tecnologías más usadas del mundo"
+
 
 geeks_vs_others:
-  position: 4
+  position: 5
   heading: "¿Qué hace a 4Geeks Academy tan exitoso?"
   paragraph: ""
   total_rows: 5
 
 why_4geeks:
-  position: 5
+  position: 6
   heading: "Porqué 4Geeks"
   sub_heading: ""
 
 who_is_hiring:
-  position: 6
+  position: 7
   limit: 4
   heading: "¿Quién contrata a nuestros alumnos?"
   sub_heading: "Nuestros partners de contratación crecen todos los días, con más de 150 aliados a nivel global y decenas de vacantes activas en nuestras bolsas de empleo."
@@ -116,20 +118,23 @@ who_is_hiring:
 
 # Possible layours: [two_column_left_image, two_column_right_image]
 components:
-  - name: first_syllabus_form
-    position: 4
-    layout: syllabus
-    button:
-      text: "Descarga Instantánea"
-    heading:
-      text: "Descarga el Programa de Estudios"
+  # - name: first_syllabus_form
+  #   position: 4
+  #   layout: syllabus
+  #   background: "#fff"
+  #   button:
+  #     text: "Descarga Instantánea"
+  #   heading:
+  #     text: "Descarga el Programa de Estudios"
+  
   - name: top_coding_bootcamp
-    position: 5
+    position: 3
     layout: two_column_left
+    background: "#f1f1f1"
     proportions: [4, 8]
     image:
       style: '{ "backgroundSize": "contain" }'
-      src: "/images/badges/switchup.png"
+      src: "/images/badges/switchup-badge-2023.png"
       link: "https://www.switchup.org/bootcamps/4geeks-academy"
     heading:
       text:
@@ -140,14 +145,17 @@ components:
     position: 9
     layout: two_column_left
     image:
+      shadow: true 
       src: "https://storage.googleapis.com/4geeks-academy-website/landing-pictures/testimonials.webp"
     heading:
       text: "Escúchalo de nuestros alumnos"
       #xl      lg     md     sm    xs
       font_size: ["40px", "34px", "34px", "25px", "20px"]
     button:
-      text: "Más testimoniales"
-      color: null
+      text: "Testimoniales"
+      background: black
+      color: white
+      hover_color: "#bdbdbd"
       path: "https://www.youtube.com/watch?v=plwPwyrxX84"
     content:
       text: "Mentoría como nunca antes. Decenas de Instructores, en varios idiomas, todos los días, a cualquier hora. Estaremos contigo todo el tiempo, aun cuando hayas conseguido trabajo. Una vez eres parte de 4Geeks, estaremos para siempre contigo."
@@ -170,8 +178,9 @@ components:
     content:
       text: ""
       font_size: ["16px"]
+      
   - name: some_other_id
-    position: 2
+    position: 19
     layout: single_column
     image:
       style: '{"height": ["500px", "500px", "400px", "300px", "200px"], "background-size": "contain"  }'
@@ -180,7 +189,7 @@ components:
     # video: #youtube id
     heading:
       text: "Aplica a una beca del 50%"
-      #xl      lg     md     sm    xs
+        #xl      lg     md     sm    xs
       font_size: ["40px", "34px", "34px", "25px", "20px"]
     content:
       text: ""

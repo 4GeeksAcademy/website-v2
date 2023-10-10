@@ -47,7 +47,7 @@ header_data:
   image_filter: brightness(0.3)
 
 features:
-  marginTop: 0px #<-- separation between tagline and the bullets
+  marginTop: 25px #<-- separation between tagline and the bullets
 
   #                                         up   left down  right
   styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
@@ -98,11 +98,11 @@ short_badges:
 #  filter: ["CNN Español", "La Tercera", "Las Ultimas Noticias", "Emol"]
 
 badges:
-  position: 1
+  position: 5
   heading: "4Geeks Academy cuenta con premios y reconocimientos que validan su excelencia"
 
 about4Geeks:
-  position: 2
+  position: 1
   heading: Aprende a programar desde cero con 4Geeks
   sub_heading: "Una comunidad de más de 4000 estudiantes, profesores, partners y exalumnos, conectados por medio de Slack, GitHub, Social Media y 4Geeks.com (nuestra plataforma educacional)"
   list:
@@ -203,9 +203,7 @@ components:
         #           xl      lg      md      sm      xs
       font_size: ["50px", "50px", "50px", "50px", "50px"]
     content:
-      text: "Nuestros programa está basado en el uso de Python y Javascript. ¿La razón? En el mercado laboral JavaScript tiene 26 veces más vacantes de trabajo que Ruby on Rails y  Python tiene 10 veces más trabajos que node.js.
-      
-      Otras herramientas que también aprenderás a usar en nuestro programa son: GitHub, CSS3, HTML5, Flask, etc."
+      text: "Nuestros programa está basado en el uso de Python y Javascript. ¿La razón? En el mercado laboral JavaScript tiene 26 veces más vacantes de trabajo que Ruby on Rails y  Python tiene 10 veces más trabajos que node.js. <br> Otras herramientas que también aprenderás a usar en nuestro programa son: GitHub, CSS3, HTML5, Flask, etc."
       font_size: ["16px"]
   - name: top_coding_bootcamp
     position: 8
@@ -213,17 +211,19 @@ components:
     proportions: [4, 8]
     image:
       style: '{ "backgroundSize": "contain" }'
-      src: "/images/badges/switchup.png"
+      src: "/images/badges/switchup-badge-2023.png"
       link: "https://www.switchup.org/bootcamps/4geeks-academy"
     button:
       text: "Leer testimoniales"
-      color: null
+      color: white
+      background: black
+      hover: "blue"
       path: "https://www.switchup.org/bootcamps/4geeks-academy"
     heading:
       text:
         "Hemos sido nombrados uno de los TOP coding bootcamps en el mundo"
         #xl      lg     md     sm    xs
-      font_size: ["40px", "40px", "40px", "40px", "40px"]
+      font_size: ["36px", "36px", "36px", "36px", "36px"]
 
 # why_python:
 #   position: 7

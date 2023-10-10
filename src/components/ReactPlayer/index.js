@@ -50,7 +50,7 @@ const Image = styled.div`
   margin: auto;
   height: ${(props) => props.height || "auto"};
   width: ${(props) => props.width || "100%"};
-  box-shadow: ${(props) => props.shadow};
+  box-shadow: ${(props) => props.boxShadow};
   border-radius: ${(props) => props.borderRadius || "1.25rem"};
   @media ${Devices.xxs} {
   }
@@ -90,6 +90,7 @@ const Player = ({
   style,
   className,
   thumb,
+  image_thumb,
   left_tablet,
   right_tablet,
   With_Modal,
@@ -141,6 +142,7 @@ const Player = ({
     }
   }, [switched]);
 
+  const imgStyles = image_thumb?.style ? JSON.parse(image_thumb?.style) : null;
   return (
     <VideoWrapper {...rest} style={style} margin_tablet={margin_tablet}>
       {showVideo ? (
@@ -209,6 +211,9 @@ const Player = ({
           borderRadius="3px"
           height={imageHeight || "100%"}
           position="relative"
+          boxShadow={image_thumb?.shadow && "20px 15px 0px 0px rgba(0,0,0,1)"}
+          //border={image_thumb?.shadow && "3px solid black"}
+          style={imgStyles && {...JSON.parse(image_thumb?.style)}}
         >
           {id && (
             <Play

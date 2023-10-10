@@ -1,6 +1,7 @@
 meta_info:
   slug: clark-scholarship # <--- URL 4geeksacademy.com/us/landing/example
 
+  visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   # This will show on social media when shared
   title: "Get a Scholarship and join our software development program now. It's LIVE, on-line (or in-person if you want as well). Learn to code and launch your career in Tech"
   description: "Coding has become an essencial skills for every career, enroll in 4Geeks Academy coding program and learn to code to have a better life."
@@ -90,7 +91,7 @@ follow_bar:
 # ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇
 #
 rating_reviews:
-  position: 1
+  position: 7
   heading: "Top rated on all available review sites"
   rating_list:
     - alt: "Career Karma"
@@ -111,7 +112,7 @@ rating_reviews:
       url: ""
 
 program_details:
-  position: 3
+  position: 1
   background: "#FFFFFF"
   heading: "Program details"
   sub_heading: "Real-life projects and exactly what companies are looking for"

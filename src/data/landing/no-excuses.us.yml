@@ -7,7 +7,7 @@ meta_info:
   image: "/images/bg/main-bg.jpg"
   keywords: "Scholarships for coding program, coding course, Financial aid Coding Classes, Learn to code with a scholarship"
 
-  template: "landing_nonav" # <--- choose your landing template
+  template: "landing_a" # <--- choose your landing template
   redirects: [] # <--- URL redirections to avoid 404 errors
 
     # Set a particular course or location to the landing page
@@ -145,7 +145,7 @@ who_is_hiring:
 
 components:
   - name: how-it-works
-    position: 2
+    position: 4
     layout: iconogram
     swipable: True
     heading:
@@ -169,6 +169,7 @@ components:
   - name: top_coding_bootcamp
     position: 6
     layout: two_column_left
+    background: "#fbfbfb"
     proportions: [4, 8]
     image:
       style: '{ "backgroundSize": "contain" }'
@@ -178,7 +179,7 @@ components:
       text:
         "We have been selected as one of the Top Coding Bootcamps globally for 3 years in a row"
         #xl      lg     md     sm    xs
-      font_size: ["40px", "40px", "40px", "40px", "40px"]
+      font_size: ["38px", "36px", "34px", "32px", "30px"]
   - name: geeksinfo
     position: 5
     layout: geeksInfo

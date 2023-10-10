@@ -121,8 +121,9 @@ components:
     layout: two_column_left
     proportions: [5, 7]
     image:
-      style: '{ "backgroundSize": "contain" }'
+      style: '{ "backgroundSize": "cover" }'
       src: "/images/landing/GrupoVariasNacionalidades.png"
+      shadow: true
     heading:
       text: "A quién va dirigido"
       font_size: ["30px", "30px", "30px", "30px", "30px"]
@@ -180,7 +181,7 @@ components:
       text: |
         <p>Desde 2015 enseñamos en programación. Tenemos 7 campus entre USA, Latinoamérica y Europa. Más de 3500 personas han impulsado su carrera gracias a 4Geeks Academy. </p>
         <br>
-        <p><span style="background: rgb(255, 183, 24);font-weight: bold;">Hemos sido reconocidos como el Mejor Coding Bootcamp de España (2021, 2022 y 2023) y el Mejor Centro de Formación de España (2023)</p>
+        <p style="background: rgb(255, 183, 24); box-shadow: 5px 5px 0px 0px rgba(0,0,0,1); padding:5px; ><span ;font-weight: bold;">Hemos sido reconocidos como el Mejor Coding Bootcamp de España (2021, 2022 y 2023) y el Mejor Centro de Formación de España (2023)</p>
         <br>
         <p>Formato part-time intensivo de 18 semanas que ha sido reconocido como el Mejor Programa para la Inserción Profesional según los Premios Excelencia Educativa. </p>
         <br>
@@ -227,12 +228,13 @@ components:
 
   - name: better-future
     position: 10
-    layout: two_column_right
+    layout: two_column_left
     proportions: [6, 6]
     background: "#F5F5F5"
     image:
       style: '{ "backgroundSize": "contain" }'
-      src: "/images/landing/temp4.png"
+      src: "/images/landing/comunity-support.png"
+      shadow: true
     heading:
       text: "¿Preparado para iniciar el camino hacia un mejor futuro?"
       font_size: ["40px", "40px", "40px", "40px", "40px"]
@@ -242,7 +244,7 @@ components:
     button:
       text: "Solicita tu Plaza"
       color: "white"
-      background: "blue"
+      background: "black"
       hover_color: "white"
       path: "#top"
 
@@ -252,7 +254,7 @@ components:
     proportions: [6, 6]
     background: "veryLightBlue2"
     image:
-      style: '{ "backgroundSize": "contain", "maxHeight": "270px" }'
+      style: '{ "backgroundSize": "contain", "maxHeight": "220px" }'
       src: "/images/landing/Bcas-UnitedWay-Madrid.png"
     heading:
       text: "El Proyecto Social Tech es en colaboración con United Way España, Bcas y 4Geeks Academy"
