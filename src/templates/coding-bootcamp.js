@@ -571,7 +571,11 @@ const Program = ({ data, pageContext, yml }) => {
         <Div height="1px" background="#EBEBEB"></Div>
       </GridContainer>
 
-      <Div id="prices_and_payment" display="block" height="auto">
+      <Div 
+        id="prices_and_payment" 
+        display="block" 
+        height="auto" 
+      >
         <PricesAndPayment
           // id="prices_and_payment"
           background={`linear-gradient(to bottom,

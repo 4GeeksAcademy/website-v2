@@ -31,6 +31,9 @@ const PricingCard = ({
           setSelectedPlan(slug);
         }}
         height="fit-content"
+        alignItems="flex-start"
+        margin_xs="9px 0 0 0"
+        margin_tablet="0"
       >
         {recomended && (
           <Div background={Colors.blue}>
@@ -52,7 +55,7 @@ const PricingCard = ({
           display="block"
         >
           <Div className="price-section" justifyContent="between" width="100%">
-            <Div alignItems="center" width="60%">
+            <Div alignItems_xs="flex-start" width="60%" padding_xs="5px 0 0 0">
               <Div
                 border={`1px solid ${isSelected ? Colors.blue : "#A4A4A4"}`}
                 width="21px"
@@ -77,7 +80,7 @@ const PricingCard = ({
               <Div display="block">
                 <Paragraph
                   lineHeight="17px"
-                  fontWeight_tablet="700"
+                  fontWeight_xs="700"
                   fontSize="14px"
                   color={Colors.black}
                   opacity="1"
@@ -88,7 +91,7 @@ const PricingCard = ({
                 </Paragraph>
                 <Paragraph
                   lineHeight="17px"
-                  fontWeight_tablet="400"
+                  fontWeight="400"
                   fontSize="14px"
                   color={Colors.black}
                   opacity="1"
@@ -124,7 +127,7 @@ const PricingCard = ({
             </Div>
           </Div>
 
-          {data.icons && data.icons.length !== 0 && (
+          {data.icons && data.icons.length > 0 && (
             <Div
               className="icons"
               background={Colors.verylightGray}
@@ -154,18 +157,18 @@ const PricingCard = ({
           className="expandable"
           display="block"
           display_tablet="none"
-          margin="10px 0 0 0"
+          margin="0 0 10px 0"
           background="#F9F9F9"
           border="1px solid #EBEBEB"
-          padding="15px 12px"
+          padding="24px 15px"
           width="100%"
         >
-          <H3 textAlign="center" margin="0 0 15px 0">
+          <H3 textAlign="center" margin="0 0 15px 0" fontSize="21px">
             {info.plan_details}
           </H3>
           {data.bullets &&
             data.bullets.map((bullet) => (
-              <Div alignItems="center" margin="10px 0 0 0">
+              <Div alignItems="center" margin="21px 0 0 0">
                 <Icon
                   icon="check"
                   width="17px"
@@ -176,8 +179,8 @@ const PricingCard = ({
                 />
                 <Paragraph
                   lineHeight="19px"
-                  fontWeight="700"
-                  fontWeight_tablet="700"
+                  fontWeight="500"
+                  fontSize="14px"
                   color={Colors.black}
                   opacity="1"
                   textAlign="left"
@@ -188,7 +191,7 @@ const PricingCard = ({
             ))}
           <Link
             style={{
-              marginTop: "15px",
+              marginTop: "21px",
               display: "block",
             }}
             to={`${info.apply_button.link}${selectedPlan ? `?utm_plan=${selectedPlan}` : ""
@@ -199,7 +202,7 @@ const PricingCard = ({
               width="100%"
               color={Colors.black}
               textColor={Colors.white}
-              fontSize="16px"
+              fontSize="12px"
               margin="auto"
               textAlign="center"
               display="block"
@@ -498,21 +501,14 @@ const PricesAndPayments = (props) => {
       background={props.background}
       github="/location"
       flexDirection="column"
-      padding="50px 0"
+      padding="50px 17px"
       padding_tablet="70px 0"
       maxWidth_md="1366px"
       margin="0 auto"
     >
-      {/* <GridContainer margin="0 0 25px 0" margin_tablet="0 0 25px 0">
-        <Div display="flex" flexDirection="column" alignItems="center">
-          <H2 margin="0 0 15px 0" fontWeight="900">
-            {props.title}
-          </H2>
-          <Paragraph>{props.paragraph}</Paragraph>
-        </Div>
-      </GridContainer> */}
       <H2
-        fontSize="38px"
+        fontSize_md="38px"
+        fontSize_xs="21px"
         lineHeight="46px"
         textAlign="center"
         width="100%"
@@ -520,27 +516,25 @@ const PricesAndPayments = (props) => {
       >
         {info.plans_title}
       </H2>
-      <Grid gridTemplateColumns_tablet="2fr repeat(15,1fr) 2fr">
+      <Grid gridTemplateColumns_tablet="2fr repeat(15,1fr) 2fr" gridGap="0">
         <Div gridColumn_tablet="2/12" alignItems="center">
           <H3
-            fontSize="22px"
+            fontSize_md="22px"
+            fontSize_xs="16px"
             lineHeight="26px"
             fontWeight="700"
-            textAlign="start"
-            //width="100%"
+            textAlign_tablet="start"
+            textAlign_xs="center"
             opacity="1"
             color={Colors.black}
-            gridColumn="2/9"
           >
             {info.select}
           </H3>
         </Div>
         {/* SELECT COUNTRY */}
         <Div
-          // margin="0 0 70px 0"
-          // margin_tablet="0 0 25px 0"
-          //margin_xs="0 0 30px 0"
           gridColumn_tablet="12/17"
+          justifyContent_xs="center"
         >
           <Div
             flexDirection_tablet="row"
@@ -595,15 +589,9 @@ const PricesAndPayments = (props) => {
       <Div
         //border="1px solid #000"
         background="#FFF"
-        padding_xs="18px 15px"
-        padding_sm="38px"
         padding_tablet="0 0 38px 0"
         maxWidth_md="1366px"
         minWidth_md="580px"
-        width_md="auto"
-        width_xs="80%"
-        margin_sm="auto"
-        margin_xs="20px auto"
         margin="20px auto"
       //display="block"
       >
@@ -623,16 +611,15 @@ const PricesAndPayments = (props) => {
             <Grid
               gridTemplateColumns_tablet="3fr repeat(20,1fr) 3fr"
               gridTemplateRows_tablet="1fr 1fr 1fr"
-              //margin="32px 0 15px 0"
               gridGap="32px 15px"
             >
               {availablePlans.some((plan) => plan.job_guarantee_price) && (
                 <Div
                   background={Colors.veryLightBlue}
                   padding="8px"
-                  margin="32px 0 0 0"
-                  gridColumn="2/22"
-                  gridRow="1"
+                  margin_tablet="32px 0 0 0"
+                  gridColumn_tablet="2/22"
+                  gridRow_tablet="1"
                   flexWrap="wrap"
                 >
                   <Div alignItems="center" margin="0 0 7px 0">
@@ -643,15 +630,16 @@ const PricesAndPayments = (props) => {
                     <H4
                       textAlign="left"
                       fontWeight="700"
-                      fontSize="18px"
+                      fontSize_tablet="18px"
+                      fontSize_xs="16px"
                       margin="0 0 0 10px"
                     >
                       {info.job_guarantee.title}
                     </H4>
                   </Div>
-                  <Paragraph 
-                    textAlign="left" 
-                    color={Colors.black} 
+                  <Paragraph
+                    textAlign="left"
+                    color={Colors.black}
                     opacity="1"
                     fontSize="14px"
                     lineHeight="17px"
@@ -668,7 +656,7 @@ const PricesAndPayments = (props) => {
                   border="1px solid #EBEBEB"
                   padding="24px 15px 0 15px"
                   gridColumn_tablet="2/12"
-                  gridRow="2"
+                  gridRow_tablet="2"
                 >
                   <H3
                     textAlign="center"
@@ -731,9 +719,9 @@ const PricesAndPayments = (props) => {
                   display="none"
                   display_tablet="flex"
                   flexDirection="row-reverse"
-                  gridRow="3"
-                  gridColumn="12/22"
-                  //margin="32px 0 0 0"
+                  gridRow_tablet="3"
+                  gridColumn_tablet="12/22"
+                //margin="32px 0 0 0"
                 >
                   <Link
                     style={{

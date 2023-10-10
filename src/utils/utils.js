@@ -51,17 +51,16 @@ export const transferQuerystrings = (url, utmSession) => {
 };
 
 export const separateCurrencySymbols = (mount) => {
-  const currency = []
-  const notCurrency = []
-  const symbols = ["$", "~", "*", "€"]
-  const ids= ["USD", "CLP", "COP"]
+  const currency = [];
+  const notCurrency = [];
+  const symbols = ["$", "~", "*", "€"];
+  const ids = ["USD", "CLP", "COP"];
 
   for (const char of mount) {
     if (char in symbols) {
       currency.push(char);
-    }
-    else {
+    } else {
       notCurrency.push(caracter);
     }
   }
-}
+};
