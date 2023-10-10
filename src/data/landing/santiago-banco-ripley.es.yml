@@ -165,9 +165,7 @@ components:
         #           xl      lg      md      sm      xs
       font_size: ["50px", "50px", "50px", "50px", "50px"]
     content:
-      text: "Nuestro programa está basado en el uso de Python y JavaScript. ¿La razón? En el mercado laboral JavaScript tiene 26 veces más vacantes de trabajo que Ruby on Rails y Python te permite acceder a distintas áreas del mundo de la programación.
-      <br> 
-      Otras herramientas que también aprenderás a usar en nuestro programa son: HTML5, CSS3, React, Flask, etc."
+      text: "Nuestro programa está basado en el uso de Python y JavaScript. ¿La razón? En el mercado laboral JavaScript tiene 26 veces más vacantes de trabajo que Ruby on Rails y Python te permite acceder a distintas áreas del mundo de la programación.<br> Otras herramientas que también aprenderás a usar en nuestro programa son: HTML5, CSS3, React, Flask, etc."
       font_size: ["16px"]
 
   - name: alianza
@@ -188,7 +186,7 @@ components:
       text: |
         <p>Es por ello que junto a Banco Ripley, les traemos un descuento especial para todos los clientes del banco que paguen con sus tarjetas.</p>
         <br>
-        <p><span style="background: rgb(255, 183, 24);font-weight: bold;">Válido para Tarjetas de Crédito y Débito Mastercard Banco Ripley.</p>
+        <p  style="background: rgb(255, 183, 24);font-weight: bold; padding: 5px; box-shadow: 5px 5px 0px 0px rgba(0,0,0,1);">Válido para Tarjetas de Crédito y Débito Mastercard Banco Ripley.</p>
         <br>
         <p>Aplica exclusivamente para el programa Full Stack Development en su modalidad part time y full time. </p>
         <br>

@@ -166,7 +166,9 @@ components:
       font_size: ["40px", "34px", "34px", "25px", "20px"]
     button:
       text: "Ver Testimoniales"
-      color: null
+      color: white
+      background: black
+      hover: white
       path: "https://www.youtube.com/watch?v=rtpfwwfE0yY&ab_channel=4GeeksAcademy"
     content:
       text: "Mentorías ilimitadas, distintos instructores, todas las semanas. Te acompañaremos en este camino para que puedas convertirte en Full Stack Developer Junior y conseguir tu primer empleo en el área. Siempre te acompañaremos, aún cuando ya hayas conseguido trabajo, una vez eres parte de 4Geeks, siempre serás parte de la comunidad y sus beneficios."

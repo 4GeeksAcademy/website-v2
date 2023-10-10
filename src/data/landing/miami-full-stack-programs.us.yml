@@ -157,7 +157,7 @@ components:
       font_size: ["16px"]
   - name: top_coding_bootcamp
     position: 8
-    background: "lightblue"
+    background: "veryLightBlue2"
     layout: two_column_left
     proportions: [4, 8]
     image:
@@ -179,7 +179,9 @@ components:
     proportions: [4, 8]
     layout: two_column_left
     image:
+      style: '{ "backgroundSize": "cover" }'
       src: "https://storage.googleapis.com/4geeks-academy-website/landing-pictures/testimonials.webp"
+      shadow: true
     heading:
       text:
         "86% of our graduates are now working in the field with an average entry salary of $50,000/yr."

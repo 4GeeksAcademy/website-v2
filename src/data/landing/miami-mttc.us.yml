@@ -294,12 +294,13 @@ components:
 
   - name: better-future
     position: 2
-    layout: two_column_right
+    layout: two_column_left
     proportions: [6, 6]
     background: "#F5F5F5"
     image:
-      style: '{ "backgroundSize": "contain" }'
-      src: "/images/landing/temp4.png"
+      style: '{ "backgroundSize": "cover" }'
+      src: "/images/landing/comunity-support.png"
+      shadow: true
     heading:
       text: "Ready to start your journey to a better future?"
       font_size: ["40px", "40px", "40px", "40px", "40px"]
@@ -309,7 +310,7 @@ components:
     button:
       text: "APPLY NOW"
       color: "white"
-      background: "blue"
+      background: "black"
       hover_color: "white"
       path: "#top"
 
