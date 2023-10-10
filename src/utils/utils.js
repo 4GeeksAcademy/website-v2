@@ -50,17 +50,17 @@ export const transferQuerystrings = (url, utmSession) => {
   return `${origin}?${joinQS({ ...params, ...utmSession })}`;
 };
 
-export const separateCurrencySymbols = (mount) => {
-  const currency = [];
-  const notCurrency = [];
-  const symbols = ["$", "~", "*", "€"];
-  const ids = ["USD", "CLP", "COP"];
+// export const separateCurrencySymbols = (mount) => {
+//   const currency = [];
+//   const notCurrency = [];
+//   const symbols = ["$", "~", "*", "€"];
+//   const ids = ["USD", "CLP", "COP"];
 
-  for (const char of mount) {
-    if (char in symbols) {
-      currency.push(char);
-    } else {
-      notCurrency.push(caracter);
-    }
-  }
-};
+//   for (const char of mount) {
+//     if (char in symbols) {
+//       currency.push(char);
+//     } else {
+//       notCurrency.push(caracter);
+//     }
+//   }
+// };

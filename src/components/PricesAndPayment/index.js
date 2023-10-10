@@ -521,12 +521,13 @@ const PricesAndPayments = (props) => {
       >
         {info.plans_title}
       </H2>
-      <Grid 
+      <Grid
+        gridTemplateColumns_lg="3fr repeat(23,1fr) 3fr"
         gridTemplateColumns_md="2fr repeat(13,1fr) 2fr"
-        gridTemplateColumns_tablet="2fr repeat(13,1fr) 2fr" 
+        gridTemplateColumns_tablet="2fr repeat(13,1fr) 2fr"
         gridGap="0"
       >
-        <Div gridColumn_md="2/10" gridColumn_tablet="2/10" alignItems="center">
+        <Div gridColumn_md="2/10" gridColumn_lg="2/16" gridColumn_tablet="2/10" alignItems="center">
           <H3
             fontSize_md="22px"
             fontSize_xs="16px"
@@ -541,10 +542,11 @@ const PricesAndPayments = (props) => {
           </H3>
         </Div>
         {/* SELECT COUNTRY */}
-        <Div 
+        <Div
+          gridColumn_lg="16/25"
           gridColumn_md="10/15"
-          gridColumn_tablet="10/15" 
-          justifyContent_xs="center" 
+          gridColumn_tablet="10/15"
+          justifyContent_xs="center"
           justifyContent_tablet="end"
         >
           <Div
@@ -607,6 +609,9 @@ const PricesAndPayments = (props) => {
       >
         {availablePlans && availablePlans.length === 0 ? (
           <Div
+            margin_xs="20px 15px"
+            margin_tablet="30px 60px"
+            margin_lg="60px 0"
             fontSize="25px"
             display="block"
             textAlign="center"
@@ -620,7 +625,8 @@ const PricesAndPayments = (props) => {
           <>
             <Grid
               gridTemplateColumns_tablet="5fr repeat(20,1fr) 5fr"
-              gridTemplateColumns_lg="3fr repeat(20,1fr) 3fr"
+              gridTemplateColumns_md="5fr repeat(22,1fr) 5fr"
+              gridTemplateColumns_lg="4fr repeat(24,1fr) 4fr"
               gridTemplateRows_tablet="1fr 1fr 1fr"
               gridGap="32px 15px"
             >
@@ -630,6 +636,8 @@ const PricesAndPayments = (props) => {
                   padding="8px"
                   margin_tablet="32px 0 0 0"
                   gridColumn_tablet="2/22"
+                  gridColumn_md="2/24"
+                  gridColumn_lg="2/26"
                   gridRow_tablet="1"
                   flexWrap="wrap"
                 >
@@ -667,6 +675,8 @@ const PricesAndPayments = (props) => {
                   border="1px solid #EBEBEB"
                   padding="24px 15px 0 15px"
                   gridColumn_tablet="2/12"
+                  gridColumn_md="2/13" 
+                  gridColumn_lg="2/14"
                   gridRow_tablet="2"
                 >
                   <H3
@@ -710,6 +720,8 @@ const PricesAndPayments = (props) => {
                 justifyContent_xs="evenly"
                 gap="15px"
                 gridColumn_tablet="12/22"
+                gridColumn_md="13/24"
+                gridColumn_lg="14/26"
                 gridRow="2"
               >
                 {availablePlans &&
@@ -732,6 +744,8 @@ const PricesAndPayments = (props) => {
                   flexDirection="row-reverse"
                   gridRow_tablet="3"
                   gridColumn_tablet="12/22"
+                  gridColumn_md="13/24"
+                  gridColumn_lg="14/26"
                   //margin="32px 0 0 0"
                 >
                   <Link
