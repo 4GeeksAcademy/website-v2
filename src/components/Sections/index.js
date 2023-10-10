@@ -348,7 +348,6 @@ export const Div = styled.div`
     margin: ${(props) => props.margin_lg};
     transform: ${(props) => props.transform_lg};
     grid-column: ${(props) => props.gridColumn_lg};
-    
   }
   @media ${Devices.xl} {
   }

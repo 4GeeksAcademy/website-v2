@@ -527,7 +527,12 @@ const PricesAndPayments = (props) => {
         gridTemplateColumns_tablet="2fr repeat(13,1fr) 2fr"
         gridGap="0"
       >
-        <Div gridColumn_md="2/10" gridColumn_lg="2/16" gridColumn_tablet="2/10" alignItems="center">
+        <Div
+          gridColumn_md="2/19"
+          gridColumn_lg="2/16"
+          gridColumn_tablet="2/10"
+          alignItems="center"
+        >
           <H3
             fontSize_md="22px"
             fontSize_xs="16px"
@@ -675,7 +680,7 @@ const PricesAndPayments = (props) => {
                   border="1px solid #EBEBEB"
                   padding="24px 15px 0 15px"
                   gridColumn_tablet="2/12"
-                  gridColumn_md="2/13" 
+                  gridColumn_md="2/13"
                   gridColumn_lg="2/14"
                   gridRow_tablet="2"
                 >
