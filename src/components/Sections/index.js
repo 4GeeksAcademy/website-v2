@@ -423,6 +423,7 @@ export const Grid = styled(Div)`
     display: ${(props) => props.display_md || "grid"};
   }
   @media ${Devices.lg} {
+    grid-template-columns: ${(props) => props.gridTemplateColumns_lg};
   }
   @media ${Devices.xl} {
   }

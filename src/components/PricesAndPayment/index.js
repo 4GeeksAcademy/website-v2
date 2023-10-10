@@ -52,14 +52,16 @@ const PricingCard = ({
         <Div
           //border={`2px solid ${Colors.blue}`}
           //border={`2px solid ${isSelected ? Colors.blue : "black"}`}
-          border={isSelected ? `2px solid ${Colors.blue}` : "1px solid black"}
-          padding="8px 20px"
+          border={isSelected ? `1px solid ${Colors.blue}` : "1px solid black"}
+          padding_md="17px 20px"
+          padding_tablet="8px 5px"
+          padding_xs="8px 20px"
           display="block"
         >
           <Div className="price-section" justifyContent="between" width="100%">
             <Div alignItems_xs="flex-start" width="60%" padding_xs="5px 0 0 0">
               <Div
-                //border={`1px solid ${isSelected ? Colors.blue : "#A4A4A4"}`}
+                border={`1px solid ${isSelected ? Colors.blue : "#A4A4A4"}`}
                 width="21px"
                 height="21px"
                 borderRadius="15px"
@@ -618,7 +620,7 @@ const PricesAndPayments = (props) => {
           <>
             <Grid
               gridTemplateColumns_tablet="5fr repeat(20,1fr) 5fr"
-              gridTemplateColumns_md="3fr repeat(20,1fr) 3fr"
+              gridTemplateColumns_lg="3fr repeat(20,1fr) 3fr"
               gridTemplateRows_tablet="1fr 1fr 1fr"
               gridGap="32px 15px"
             >
