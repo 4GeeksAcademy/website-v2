@@ -8,7 +8,7 @@ import ReactPlayer from "../ReactPlayer";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import "../../assets/css/utils.css"
+import "../../assets/css/utils.css";
 
 const AlumniProjects = ({
   lang,
@@ -18,7 +18,7 @@ const AlumniProjects = ({
   playerHeight,
   title,
   paragraph,
-  yml
+  yml,
 }) => {
   const [projects, setProjects] = useState(
     lang[0].node.projects.slice(0, limit || lang[0].node.projects.length)
@@ -105,28 +105,29 @@ const AlumniProjects = ({
   //     }
   // };
   return (
-    <Div 
-      flexDirection="column" 
-      style={containerStyle} 
+    <Div
+      flexDirection="column"
+      style={containerStyle}
       maxWidth_lg="1366px"
       maxWidth_md="1024px"
-      maxWidth_tablet="768px" 
-      margin_md="0px auto 30px auto" 
-      paddgin_xs="0 0 20px 0" 
-      zIndex="1" 
+      maxWidth_tablet="768px"
+      margin_md="0px auto 30px auto"
+      paddgin_xs="0 0 20px 0"
+      zIndex="1"
     >
-      {(title !== undefined && paragraph !== undefined) || yml && (
-        <GridContainer margin="50px 0 50px 0">
-          <Div display="flex" flexDirection="column" alignItems="center">
-            <H2 margin="0 0 15px 0" fontWeight="700" lineHeight="36px">
-              {yml.heading || title}
-            </H2>
-            <Paragraph padding="0" padding_tablet="0 16%">
-              {yml.sub_heading || paragraph}
-            </Paragraph>
-          </Div>
-        </GridContainer>
-      )}
+      {(title !== undefined && paragraph !== undefined) ||
+        (yml && (
+          <GridContainer margin="50px 0 50px 0">
+            <Div display="flex" flexDirection="column" alignItems="center">
+              <H2 margin="0 0 15px 0" fontWeight="700" lineHeight="36px">
+                {yml.heading || title}
+              </H2>
+              <Paragraph padding="0" padding_tablet="0 16%">
+                {yml.sub_heading || paragraph}
+              </Paragraph>
+            </Div>
+          </GridContainer>
+        ))}
       <Slider {...settings}>
         {projects?.map((item, index) => {
           return (
@@ -144,7 +145,6 @@ const AlumniProjects = ({
               <Div
                 height_tablet="414px"
                 padding="0"
-                //padding_tablet="17px 51px"
                 padding_tablet="0"
                 gridColumn_tablet="1 / 7"
               >
@@ -186,16 +186,26 @@ const AlumniProjects = ({
                   />
                 )}
               </Div>
-              <Div 
-                flexDirection="column" 
+              <Div
+                flexDirection="column"
                 gridColumn_tablet="8 / 15 "
                 //height_tablet="500px"
               >
-                <H3 textAlign="left" margin_tablet={`0 0 10px 0`} margin_xs="20px 0 5px 0">
+                <H3
+                  textAlign="left"
+                  margin_tablet={`0 0 10px 0`}
+                  margin_xs="20px 0 5px 0"
+                >
                   Project: {`${item.project_name}`}
                 </H3>
-                <H4 textAlign="left" fontWeight="900" lineHeight="19px" 
-                  margin_tablet="9px 0" margin_xs="20px 0 0 0" margin_md="20px 0 0 0">
+                <H4
+                  textAlign="left"
+                  fontWeight="900"
+                  lineHeight="19px"
+                  margin_tablet="9px 0"
+                  margin_xs="20px 0 0 0"
+                  margin_md="20px 0 0 0"
+                >
                   {" "}
                   {`> MADE BY:`}
                 </H4>
@@ -264,7 +274,11 @@ const AlumniProjects = ({
                   {" "}
                   {`> DESCRIPTION:`}
                 </H4>
-                <Paragraph color={Colors.gray} textAlign="left" lineHeight="22px">
+                <Paragraph
+                  color={Colors.gray}
+                  textAlign="left"
+                  lineHeight="22px"
+                >
                   {item.project_content}
                 </Paragraph>
               </Div>
