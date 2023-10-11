@@ -137,7 +137,7 @@ components:
     layout: two_column_right
     proportions: [6, 6]
     image:
-      style: '{ "border" : "3px solid black" }' 
+      style: '{ "border" : "3px solid black", "backgroundSize": "cover", "background-position": "top"}' 
       shadow: true
       #style: '{ "backgroundSize": "contain" }'
       src: "/images/ownpeoplecoding2.jpg"

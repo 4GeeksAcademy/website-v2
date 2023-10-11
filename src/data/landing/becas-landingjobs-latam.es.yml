@@ -8,7 +8,7 @@ meta_info:
   image: "/images/bg/remote.jpeg"
   keywords: "Aprende a programar, 4Geeks academy, aprende programacion, aprende ingenieria informatica"
 
-  template: "landing_a" # <--- choose your landing template
+  template: "landing_nonav" # <--- choose your landing template
   redirects: ["/landing/becas-partner"] # <--- URL redirections to avoid 404 errors
 
   # Set a particular course or location to the landing page
@@ -80,14 +80,14 @@ short_badges:
     alt: "Best coding bootcamp Switchup 2023"   
   - name: "Florida Department of Education"
     url: ""
-    image: "../../../static/images/badges/licensed.png"
+    image: "../../../static/images/badges/licensed-inverted.png"
     alt: "Florida Department of Education"
 
 #
 # ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇
 #
 badges:
-  position: 1 # It's the position of the component that will be rendered first
+  position: 5 # It's the position of the component that will be rendered first
   heading: "4Geeks Academy cuenta con premios y reconocimientos que validan su excelencia"
 
 about4Geeks:

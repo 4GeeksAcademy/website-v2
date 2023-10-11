@@ -142,8 +142,9 @@ components:
     layout: two_column_left
     proportions: [5, 7]
     image:
-      style: '{ "backgroundSize": "contain" }'
+      style: '{ "backgroundSize": "cover", "background-position": "top"}'
       src: "/images/ownpeoplecoding2.jpg"
+      shadow: true
     heading:
       text: "4Geeks Academy & Tecnología Financiera: ¡La alianza que impulsará tu vida profesional!"
       font_size: ["30px", "30px", "30px", "30px", "30px"]

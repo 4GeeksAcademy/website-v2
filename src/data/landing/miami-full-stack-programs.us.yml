@@ -158,7 +158,7 @@ components:
       font_size: ["16px"]
   - name: top_coding_bootcamp
     position: 8
-    background: "lightblue"
+    background: "veryLightBlue2"
     layout: two_column_left
     proportions: [4, 8]
     image:
@@ -182,6 +182,7 @@ components:
     image:
       style: '{ "border" : "3px solid black" }' 
       shadow: true
+      #style: '{ "backgroundSize": "cover" }'
       src: "https://storage.googleapis.com/4geeks-academy-website/landing-pictures/testimonials.webp"
     heading:
       text:

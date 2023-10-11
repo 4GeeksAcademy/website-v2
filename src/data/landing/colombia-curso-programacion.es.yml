@@ -92,7 +92,7 @@ follow_bar:
 #
 components:
   - name: top_coding_bootcamp
-    position: 1
+    position: 2
     layout: two_column_left
     proportions: [4, 8]
     background: "#f1f1f1"
@@ -128,7 +128,7 @@ rating_reviews:
       url: ""
 
 badges:
-  position: 3
+  position: 10
   heading: "4Geeks Academy cuenta con premios y reconocimientos que validan su excelencia"
 
 program_details:

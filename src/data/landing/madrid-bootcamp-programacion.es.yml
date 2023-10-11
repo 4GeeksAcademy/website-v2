@@ -170,6 +170,7 @@ components:
     image:
       # style: '{ "border" : "3px solid black" }' 
       # shadow: true
+      style: '{ "backgroundSize": "cover", "min-height": "300px"}'
       src: "/images/landing/PeopleStudying.jpeg"
     heading:
       text:
@@ -177,8 +178,7 @@ components:
         #           xl      lg      md      sm      xs
       font_size: ["50px", "50px", "50px", "50px", "50px"]
     content:
-      text: "Nuestras plazas son limitadas, aplica ahora y no te quedes fuera. 
-      Nuestras becas está sujetas a disponibilidad, habla con nuestro equipo de admisiones ahora y aprovecha esta oportunidad"
+      text: "Nuestras plazas son limitadas, aplica ahora y no te quedes fuera. Nuestras becas está sujetas a disponibilidad, habla con nuestro equipo de admisiones ahora y aprovecha esta oportunidad"
       font_size: ["16px"]
       
   - name: geeksinfo
@@ -197,9 +197,7 @@ components:
         #           xl      lg      md      sm      xs
       font_size: ["50px", "50px", "50px", "50px", "50px"]
     content:
-      text: "Nuestro programa está basado en el uso de Python y Javascript. ¿La razón? En el mercado laboral JavaScript tiene 26 veces más vacantes de trabajo que Ruby on Rails y  Python tiene 10 veces más trabajos que node.js.
-      
-      Otras herramientas que también aprenderás a usar en nuestro programa son: GitHub, CSS3, HTML5, Flask, PostgreSQL, etc."
+      text: "Nuestro programa está basado en el uso de Python y Javascript. ¿La razón? En el mercado laboral JavaScript tiene 26 veces más vacantes de trabajo que Ruby on Rails y  Python tiene 10 veces más trabajos que node.js. Otras herramientas que también aprenderás a usar en nuestro programa son: GitHub, CSS3, HTML5, Flask, PostgreSQL, etc."
       font_size: ["16px"]
 
   - name: top_coding_bootcamp
