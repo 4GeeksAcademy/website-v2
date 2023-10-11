@@ -111,7 +111,8 @@ const AlumniProjects = ({
       maxWidth_lg="1366px"
       maxWidth_md="1024px"
       maxWidth_tablet="768px" 
-      margin_tablet="0px auto 60px auto" 
+      margin_md="0px auto 30px auto" 
+      paddgin_xs="0 0 20px 0" 
       zIndex="1" 
     >
       {(title !== undefined && paragraph !== undefined) || yml && (
@@ -185,11 +186,16 @@ const AlumniProjects = ({
                   />
                 )}
               </Div>
-              <Div flexDirection="column" gridColumn_tablet="8 / 15 ">
-                <H3 textAlign="left" margin={`10px 0`}>
+              <Div 
+                flexDirection="column" 
+                gridColumn_tablet="8 / 15 "
+                //height_tablet="500px"
+              >
+                <H3 textAlign="left" margin_tablet={`0 0 10px 0`} margin_xs="20px 0 5px 0">
                   Project: {`${item.project_name}`}
                 </H3>
-                <H4 textAlign="left" fontWeight="900" lineHeight="19px" margin={`24px 0 9px 0`}>
+                <H4 textAlign="left" fontWeight="900" lineHeight="19px" 
+                  margin_tablet="9px 0" margin_xs="20px 0 0 0" margin_md="20px 0 0 0">
                   {" "}
                   {`> MADE BY:`}
                 </H4>
@@ -198,7 +204,9 @@ const AlumniProjects = ({
                     <Div
                       key={i}
                       justifyContent="start"
-                      margin={`0 0 20px 0`}
+                      margin_xs="10px 0 0 0"
+                      margin_tablet="5px 0 0 0"
+                      margin_md="15px 0 0 0"
                       gap="10px"
                       display="flex"
                     >
@@ -249,7 +257,7 @@ const AlumniProjects = ({
                 <H4
                   textAlign="left"
                   fontWeight="900"
-                  margin={`20px 0 6px 0`}
+                  margin={`30px 0 10px 0`}
                   lineHeight="19px"
                   style={{ borderTop: "1px solid #ebebeb" }}
                 >
