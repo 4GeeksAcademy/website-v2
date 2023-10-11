@@ -190,8 +190,8 @@ components:
     layout: two_column_right
     background: "veryLightBlue2" # Name of the color(from components/Styling/index.js) or color code ex: #C9F9F9
     image:
-      style: '{ "border" : "3px solid black" }' 
-      shadow: true
+      # style: '{ "border" : "3px solid black", "backgroundSize" : "cover" }' 
+      # shadow: true
       src: "/images/why-4geeks/python-image.png"
       # /static/images/why-4geeks/python-image.png
     # video: "B01-eTfgqqc"

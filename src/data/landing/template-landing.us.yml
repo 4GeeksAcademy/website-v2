@@ -161,10 +161,10 @@ components:
     swipable: False
     background: "#FFFFFF"
     image:
-      style: "{}"
-      src: "/images/landing/feliz-empresario.png"
-      link: "https://google.com" # take uses somewhere when they click on the image
+      style: '{ "border" : "3px solid black", "backgroundSize": "contain" }' 
       shadow: true
+      src: "/images/landing/feliz-empresario.png"
+      link: "https://google.com" # take uses somewhere when they click on the image     
     heading: 
       text: "Finance your future"
     sub_heading:
@@ -186,10 +186,10 @@ components:
     swipable: False
     background: "#FFFFFF"
     image:
-      style: "{}"
+      style: '{ "border" : "3px solid black", "backgroundSize": "cover" }' 
+      shadow: true
       src: "/images/landing/grupo-ventanas.png"
       link: "https://google.com" # take uses somewhere when they click on the image
-      shadow: true
     heading: 
       text: "Finance your future"
     sub_heading:

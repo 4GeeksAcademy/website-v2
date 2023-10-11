@@ -168,6 +168,8 @@ components:
     layout: two_column_left
     background: "lightYellow" # Name of the color(from components/Styling/index.js) or color code ex: #C9F9F9
     image:
+      # style: '{ "border" : "3px solid black" }' 
+      # shadow: true
       src: "/images/landing/PeopleStudying.jpeg"
     heading:
       text:

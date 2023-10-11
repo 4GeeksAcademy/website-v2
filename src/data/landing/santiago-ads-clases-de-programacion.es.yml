@@ -139,9 +139,10 @@ components:
     proportions: [6, 6]
     background: "rgba(255, 183, 24, 0.2)"
     image:
-      style: '{ "backgroundSize": "contain" }'
+      # style: '{ "border" : "3px solid black", "backgroundSize": "contain" }' 
+      # shadow: true
+      # style: '{ "backgroundSize": "contain" }'
       src: "/images/landing/group_194.png"
-      shadow: true
     heading:
       text: "Membresías"
       font_size: ["50px", "50px", "50px", "50px", "50px"]

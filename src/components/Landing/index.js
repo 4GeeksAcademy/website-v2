@@ -733,7 +733,7 @@ export const landingSections = {
             color={Colors[button.color] || button.color}
             fontSize="15px"
             textAlign="left"
-            margin="2rem 0"
+            margin="2rem auto"
             padding="32px .85rem 0 .85rem"
             onClick={() => {
               if (button.path && button.path.indexOf("http") > -1)

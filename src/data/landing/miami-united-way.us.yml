@@ -306,7 +306,9 @@ components:
     proportions: [6, 6]
     background: "lightBlue"
     image:
-      style: '{ "backgroundSize": "contain", "maxHeight": "170px" }'
+      style: '{ "border" : "3px solid black", "backgroundSize": "contain"}' 
+      shadow: true
+      #style: '{ "backgroundSize": "contain", "maxHeight": "170px" }'
       src: "/images/landing/united-way-two.png"
     heading:
       text: "The United Way Miami Workforce Project is a partnership between United Way Miami and 4Geeks Academy."

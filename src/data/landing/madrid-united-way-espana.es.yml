@@ -141,7 +141,9 @@ components:
     proportions: [6, 6]
     background: "rgba(255, 183, 24, 0.2)"
     image:
-      style: '{ "backgroundSize": "contain" }'
+      # style: '{ "border" : "3px solid black" }' 
+      # shadow: true
+      #style: '{ "backgroundSize": "contain" }'
       src: "/images/landing/group_194.png"
     heading:
       text: "Porqué aprender a programar"
@@ -169,8 +171,8 @@ components:
     layout: two_column_left
     proportions: [5, 7]
     image:
-      style: '{ "border" : "3px solid black" }' 
-      shadow: true
+      # style: '{ "border" : "3px solid black" }' 
+      # shadow: true
       #style: '{ "backgroundSize": "contain" }'
       src: "/images/landing/group_4.png"
     heading:

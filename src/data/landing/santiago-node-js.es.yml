@@ -175,7 +175,9 @@ components:
     proportions: [6, 6]
     background: "veryLightBlue2"
     image:
-      style: '{ "backgroundSize": "contain" }'
+      style: '{ "border" : "3px solid black", "backgroundSize": "contain" }' 
+      shadow: true
+      # style: '{ "backgroundSize": "contain" }'
       src: "/images/landing/nodeandjs.png"
     heading:
       text: "Node.js y MongoDB"
