@@ -121,7 +121,9 @@ components:
     layout: two_column_left
     proportions: [5, 7]
     image:
-      style: '{ "backgroundSize": "contain" }'
+      style: '{ "border" : "3px solid black" }' 
+      shadow: true
+      #style: '{ "backgroundSize": "contain" }'
       src: "/images/landing/GrupoVariasNacionalidades.png"
     heading:
       text: "A quién va dirigido"
@@ -167,7 +169,9 @@ components:
     layout: two_column_left
     proportions: [5, 7]
     image:
-      style: '{ "backgroundSize": "contain" }'
+      style: '{ "border" : "3px solid black" }' 
+      shadow: true
+      #style: '{ "backgroundSize": "contain" }'
       src: "/images/landing/group_4.png"
     heading:
       text: "Porqué 4Geeks Academy"
@@ -192,7 +196,9 @@ components:
     layout: two_column_right
     proportions: [6, 6]
     image:
-      style: '{ "backgroundSize": "contain" }'
+      style: '{ "border" : "3px solid black" }' 
+      shadow: true
+      #style: '{ "backgroundSize": "contain" }'
       src: "/static/images/staff/luisa.png"
     video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
     heading:
@@ -231,6 +237,8 @@ components:
     proportions: [6, 6]
     background: "#F5F5F5"
     image:
+      #style: '{ "border" : "3px solid black" }' 
+      #shadow: true
       style: '{ "backgroundSize": "contain" }'
       src: "/images/landing/temp4.png"
     heading:
@@ -252,7 +260,9 @@ components:
     proportions: [6, 6]
     background: "veryLightBlue2"
     image:
-      style: '{ "backgroundSize": "contain", "maxHeight": "270px" }'
+      style: '{ "border" : "3px solid black" }' 
+      shadow: true
+      #style: '{ "backgroundSize": "contain", "maxHeight": "270px", "border" : "3px solid black" }'
       src: "/images/landing/Bcas-UnitedWay-Madrid.png"
     heading:
       text: "El Proyecto Social Tech es en colaboración con United Way España, Bcas y 4Geeks Academy"

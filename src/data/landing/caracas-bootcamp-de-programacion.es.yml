@@ -142,6 +142,7 @@ components:
     position: 9
     layout: two_column_left
     image:
+      style: '{ "border" : "3px solid black" }' 
       shadow: true
       src: "https://storage.googleapis.com/4geeks-academy-website/landing-pictures/testimonials.webp"
     heading:
@@ -165,6 +166,8 @@ components:
     position: 7
     layout: two_column_right
     image:
+      style: '{ "border" : "3px solid black" }' 
+      shadow: true
       src: "/images/bg/people_happy.jpg"
     video: "B01-eTfgqqc"
     heading:

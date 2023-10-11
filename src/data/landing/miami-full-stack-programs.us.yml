@@ -145,7 +145,8 @@ components:
     layout: two_column_right
     proportions: [6, 6]
     image:
-      style: '{ "backgroundSize": "contain" }'
+      style: '{ "border" : "3px solid black" }' 
+      shadow: true
       src: "/images/landing/why-4geeks-academy-preview.png"
       link: "https://www.switchup.org/bootcamps/4geeks-academy"
     video: "SixRm6R8rc0"
@@ -179,6 +180,8 @@ components:
     proportions: [4, 8]
     layout: two_column_left
     image:
+      style: '{ "border" : "3px solid black" }' 
+      shadow: true
       src: "https://storage.googleapis.com/4geeks-academy-website/landing-pictures/testimonials.webp"
     heading:
       text:

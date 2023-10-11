@@ -292,7 +292,8 @@ components:
     position: 10
     layout: two_column_right 
     image: 
-      style: "{}"
+      style: '{ "border" : "3px solid black" }' 
+      shadow: true
       src: "../../../static/images/projects/ims.jpg"
       link: "https://google.com" # take uses somewhere when they click on the image
     video: "plwPwyrxX84" #youtube id
@@ -318,7 +319,7 @@ components:
     position: 10
     layout: single_column 
     image: 
-      style: '{"height": ["400px", "400px", "400px", "300px", "200px"], "background-size": "contain"  }'
+      style: '{"height": ["400px", "400px", "400px", "300px", "200px"], "background-size": "contain", "border" : "3px solid black", }'
       src: "../../../static/images/projects/ims.jpg"
       link: "https://google.com" # take uses somewhere when they click on the image
     video: "plwPwyrxX84" #youtube id

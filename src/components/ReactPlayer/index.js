@@ -199,7 +199,7 @@ const Player = ({
           height={imageHeight}
           shadow={image_thumb?.shadow && "20px 15px 0px 0px rgba(0,0,0,1)"}
           //border={image_thumb?.shadow && "3px solid black"}
-          style={imgStyles && {...JSON.parse(image_thumb?.style)}}
+          style={imgStyles && { ...JSON.parse(image_thumb?.style) }}
         >
           {id && (
             <Play
