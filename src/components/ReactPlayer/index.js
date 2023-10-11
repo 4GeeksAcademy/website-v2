@@ -88,6 +88,7 @@ const Player = ({
   style,
   className,
   thumb,
+  image_thumb,
   left_tablet,
   right_tablet,
   With_Modal,
@@ -126,6 +127,8 @@ const Player = ({
       vid.pauseVideo();
     }
   }, [switched]);
+
+  const imgStyles = image_thumb?.style ? JSON.parse(image_thumb?.style) : null;
 
   return (
     <VideoWrapper {...rest} style={style}>
@@ -194,6 +197,9 @@ const Player = ({
           width_tablet={imageWidth_tablet || "100%"}
           borderRadius="3px"
           height={imageHeight}
+          shadow={image_thumb?.shadow && "20px 15px 0px 0px rgba(0,0,0,1)"}
+          //border={image_thumb?.shadow && "3px solid black"}
+          style={imgStyles && {...JSON.parse(image_thumb?.style)}}
         >
           {id && (
             <Play
