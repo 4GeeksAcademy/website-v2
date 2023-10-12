@@ -1,0 +1,170 @@
+meta_info:
+  slug: alianza-kurios # <--- URL 4geeksacademy.com/es/landing/academia-programacion
+# landing para campañas con influencers
+  visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
+  # This will show on social media when shared
+  title: "Impulsa tu carrera profesional, ¡aprende a programar con 4Geeks Academy!"
+  description: "La programación es clave para el éxito profesional. Únete a 4Geeks Academy, el bootcamp líder en Latinoamérica."
+  image: "../../../static/images/bg/main-bg.jpg"
+  keywords: "Aprende a programar, 4Geeks academy, aprende programacion, aprende ingenieria informatica, curso programacion"
+
+  template: "landing_a" # <--- choose your landing template
+  redirects: [] # <--- URL redirections to avoid 404 errors
+
+  # Set a particular course or location to the landing page
+  # this UTM fields will be also included in the CRM contact
+  utm_course: ["full-stack"]
+  utm_location: ["santiago-chile"]
+  automation: strong # comma separated, "soft" is the default value
+  tag: website-lead # comma separated, "request_more_info" is the default value
+
+navbar:
+  logoUrl: "#" # relative(/apply), absolute(https://google.com) or id(#componentName)
+  buttonText: "Obtener más información"
+  buttonUrl: "#bottom" # url accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
+
+form:
+  # posible fields: "first_name", "last_name", "full_name", "phone", "email"
+  # always the first_name, email and phone will be mandatory if added.
+  fields: ["full_name", "phone", "email"]
+  margin_md: "0 auto 0 -30px"
+  heading: "Acelera tu camino hacia el éxito con 4Geeks y contacta con nosotros hoy"
+  button_label: Obtener más información
+  redirect: "https://marketing892162.typeform.com/to/Ar4zOahX" #you can redirect to another url or entirely diffrent website
+    
+  # jumbotron on the top (cannot be commented out)
+header_data:
+  background: "#FFF1D1"
+  tagline: ¡Bienvenido a 4Geeks Academy! La academia de programación líder en el mundo
+  tagline_color: "black"
+  sub_heading: ""
+  badge: "../../../static/images/badges/Course-Report-Badge-2023.png"
+  #background_image: "../../../static/images/bg/main-bg.jpg"
+  #video: "https://www.videoask.com/fm984j5nz"
+  image_filter: brightness(0.4)
+
+features:
+  marginTop: 0px #<-- separation between tagline and the bullets
+  #                                         up   left down  right
+  styles: '{"fontSize": "15px", "margin": "10px 0px 0px 0px" , "color": "darkslategray"}'
+  text: Clases online y en vivo, certificación internacional, mentorías de código personalizadas e ilimitadas, asesorías profesionales de por vida y mucho más.
+
+short_badges:
+  - name: "Premios Tecnologia Siglo XXI"
+    url: ""
+    image: "../../../static/images/awards/premios_tecnologia_sigloxxi.png"
+    alt: "Mejor centro de Coding Bootcamp"
+  - name: "Course Report"
+    url: ""
+    image: "../../../static/images/badges/Course-Report-Badge-2023.png"
+    alt: "Top Coding Bootcamps Course Report"
+  - name: "Switchup"
+    url: ""
+    image: "../../../static/images/badges/switchup-badge-2023.png"
+    alt: "Best coding bootcamp Switchup 2023"   
+  - name: "Florida Department of Education"
+    url: ""
+    image: "../../../static/images/badges/licensed.png"
+    alt: "Florida Department of Education"
+
+follow_bar:
+  position: "top" # top, bottom, hidden
+  content:
+    text: "Diversos planes de financiamiento. \n Plan de pago a 12 cuotas."
+    text_mobile: "Diversos planes de financiamiento. \n Hasta 12 cuotas."
+    # devices:    XL      LG      MD      SM       XS
+    font_size: ["25px", "25px", "25px", "18px", "4.3vw"]
+  button:
+    text: "Obtener más información"
+    path: "#top"
+  phone:
+    text: ""
+
+#
+# ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇
+#
+
+rating_reviews:
+  position: 5
+  heading: "Valorado en todos los sitios de reseñas disponibles"
+  rating_list:
+    - alt: "Career Karma"
+      image: "../../../static/images/badges/career-karma.png"
+      rating: 4.89
+      url: ""
+    - alt: "Switchup"
+      image: "../../../static/images/badges/switchup-img.png"
+      rating: 4.91
+      url: ""
+    - alt: "Course Report"
+      image: "../../../static/images/badges/course-report.png"
+      rating: 4.84
+      url: ""
+    - alt: "Google"
+      image: "../../../static/images/badges/google.png"
+      rating: 5
+      url: ""
+
+why_4geeks:
+  position: 3
+  heading: "¿Por qué 4Geeks?"
+  sub_heading: " "
+
+geeks_vs_others:
+  position: 6
+  heading: "Compara 4Geeks con otros bootcamps"
+  # sub_heading: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
+  total_rows: 5
+
+who_is_hiring:
+  position: 9
+  limit: 4
+  heading: "¿Quién contrata a nuestros estudiantes?"
+  sub_heading: "550+ aliados de contrataciones, y +50 oportunidades laborales para programadores hoy mismo"
+
+components:
+  - name: geeksinfo
+    position: 1
+    layout: geeksInfo
+  - name: how_it_works
+    position: 4
+    background: "veryLightBlue2"
+    layout: two_column_right
+    proportions: [6, 6]
+    image:
+      style: '{ "backgroundSize": "contain" }'
+      src: "/images/ownpeoplecoding2.jpg"
+    heading:
+      text: "4Geeks y Kurios: Una Alianza para el Éxito"
+      font_size: ["30px", "30px", "30px", "30px", "30px"]
+    sub_heading:
+      text: "Conviértete en Full-Stack Developer y/o Data Scientist, sin necesidad de tener experiencia previa, en tan solo 18 semanas con 4Geeks Academy. Con más de 8 años de experiencia, contamos con presencia en diferentes partes del mundo, además de ser acreedores de diferentes premios a nivel mundial. ¿Cómo funciona esta alianza?"
+      font_size: ["18px", "18px", "18px", "18px", "18px"]
+    button:
+      text: "¡Aplica hoy!"
+      color: "white"
+      background: "black"
+      hover: "white"
+      path: "#top"
+    content:
+      text: |
+        <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">20% de descuento sobre los (3) tres programas vigentes:</strong></h2>
+        <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">Full Stack Developer*</strong></h2>
+        <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">Node.js</strong></h2>
+        <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">Data Science y Machine Learning</strong></h2>
+        <h2 style="margin-bottom:3px"><strong style="font-weight: italic;">*Beneficios extra disponibles</strong></h2>
+      font_size: ["16px"]
+  - name: top_coding_bootcamp
+    position: 5
+    layout: two_column_left
+    background: "#fbfbfb"
+    proportions: [4, 8]
+    image:
+      style: '{ "backgroundSize": "contain"}'
+      src: "/images/badges/Course-Report-Badge-2023.png"
+      link: "https://www.coursereport.com/schools/4geeks-academy"
+    heading:
+      text:
+        "Tenemos 3 años consecutivos siendo seleccionados como uno de los mejores coding bootcamps del mundo"
+        #xl      lg     md     sm    xs
+      font_size: ["36px", "36px", "32px", "30px", "28px"]
