@@ -170,9 +170,15 @@ components:
         "Todo lo hacemos con pasión y con la mirada puesta en tu desarrollo profesional."
         #xl      lg     md     sm    xs
       font_size: ["40px", "34px", "34px", "25px", "20px"]
-    # content:
-    #   text: ""
-    #   # font_size: ["16px"]
+    content:
+      text: "Desde mentorías individualizadas hasta proyectos desafiantes, cada paso está diseñado con precisión para impulsar tu éxito en el mundo laboral. Confía en nosotros para ser tu aliado incondicional en este viaje hacia el crecimiento profesional."
+      font_size: ["16px"]
+    button:
+      text: "Únete a la Academia"
+      background: black
+      color: white
+      hover_color: "#FFB718"
+      path: "#top"
 
 # why_python:
 #   position: 7
