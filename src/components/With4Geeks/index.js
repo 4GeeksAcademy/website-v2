@@ -15,6 +15,7 @@ export default ({
   paragraph,
   background,
   sessionLocation,
+  // excludedLocations,
 }) => {
   const data = useStaticQuery(graphql`
     query With4Geeks {
@@ -46,6 +47,7 @@ export default ({
               icon
               video
               location
+              excludedLocations
               footer {
                 is_image
                 image
@@ -70,7 +72,7 @@ export default ({
     locationFiltered = info.with.filter(
       (n) =>
         n.location === "all" ||
-        n.location.includes("all") ||
+        (n.location.includes("all") && !n.excludedLocations.includes(sessionLocation)) ||
         !sessionLocation ||
         n.location.includes(sessionLocation)
     );

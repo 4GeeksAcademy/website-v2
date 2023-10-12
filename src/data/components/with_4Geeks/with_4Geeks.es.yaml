@@ -12,7 +12,8 @@ with:
     image: ../../../../static/images/staff/hernan.png
     alt: ""
     video: "https://www.youtube.com/watch?v=ln3bQsV1BaQ" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
-    location: ["all", "downtown-miami"]
+    location: ["all"]
+    excludedLocations: ["barcelona-spain", "madrid-spain", "malaga-spain", "valencia-spain"]
     # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     icon: address
     footer:
@@ -27,7 +28,7 @@ with:
     image: ../../../../static/images/staff/luisa.png
     alt: ""
     video: "https://www.youtube.com/watch?v=MBXqEnhodx0" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
-    location: ["all"]
+    location: ["atlanta-usa", "berlin-germany", "bogota-colombia", "buenosaires-argentina", "caracas-venezuela", "chicago-usa", "costa-rica", "downtown-miami", "dublin-ireland", "europe", "hamburg-germany", "houston-usa", "lapaz-bolivia", "lima-peru", "lisbon-portugal", "losangeles-usa", "mexicocity-mexico", "milan-italy", "montevideo-uruguay", "munich-germany", "newyork-usa", "online", "orlando", "panamacity-panama", "quito-ecuador", "santiago-chile", "toronto-canada"]
     # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     icon: address
     footer:
@@ -42,7 +43,7 @@ with:
     image: ../../../../static/images/staff/joao.png
     alt: ""
     video: "https://www.youtube.com/watch?v=PWkgaAT8pHg" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
-    location: ["all", "downtown-miami"]
+    location: ["atlanta-usa", "berlin-germany", "bogota-colombia", "buenosaires-argentina", "caracas-venezuela", "chicago-usa", "costa-rica", "downtown-miami", "dublin-ireland", "europe", "hamburg-germany", "houston-usa", "lapaz-bolivia", "lima-peru", "lisbon-portugal", "losangeles-usa", "mexicocity-mexico", "milan-italy", "montevideo-uruguay", "munich-germany", "newyork-usa", "online", "orlando", "panamacity-panama", "quito-ecuador", "santiago-chile", "toronto-canada"]
     # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     icon: address
     footer:
@@ -51,6 +52,55 @@ with:
       image_link: "/es/geekpal"
       text: ""
       text_link: ""
+
+  - name: "Amira "
+    title: "Estarán ahí incluso después de que te hayas graduado para ayudarte"
+    description: "Amira encontró un invaluable apoyo de por vida en 4Geeks Academy, siempre disponible cuando se necesita."
+    image: ../../../../static/images/testimonials/Amira-testimonials-esp.jpg
+    alt: ""
+    video: "https://www.youtube.com/watch?v=NaEm0B9p7jY" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    location: ["barcelona-spain", "madrid-spain", "malaga-spain", "valencia-spain"]
+    icon: address
+    footer:
+      is_image: true
+      image: "/images/geekforce.png"
+      image_link: "/es/geekforce"
+      text: ""
+      text_link: ""
+
+  - name: "Rita "
+    title: "De técnico Ortopedico a programadora"
+    description: "Rita dio un vuelco de 360° a su vida y encontró un invaluable apoyo de por vida en 4Geeks Academy, siempre disponible cuando se necesita."
+    image: ../../../../static/images/testimonials/Amira-testimonials-esp.jpg
+    alt: ""
+    video: "https://www.youtube.com/watch?v=NaEm0B9p7jY" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    location: ["barcelona-spain", "madrid-spain", "malaga-spain", "valencia-spain"]
+    icon: address
+    footer:
+      is_image: true
+      image: "/images/geekpal.png"
+      image_link: "/es/geekpal"
+      text: ""
+      text_link: ""
+
+  - name: "Amira "
+    title: "Estarán ahí incluso después de que te hayas graduado para ayudarte"
+    description: "Amira encontró un invaluable apoyo de por vida en 4Geeks Academy, siempre disponible cuando se necesita."
+    image: ../../../../static/images/testimonials/Amira-testimonials-esp.jpg
+    alt: ""
+    video: "https://www.youtube.com/watch?v=NaEm0B9p7jY" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    location: ["barcelona-spain", "madrid-spain", "malaga-spain", "valencia-spain"]
+    icon: address
+    footer:
+      is_image: true
+      image: "/images/geekforce.png"
+      image_link: "/es/geekforce"
+      text: ""
+      text_link: ""
+
+
+
+
 ## ***************************
 ## BELOW SOME AVAILABLE VIDEOS
 ## ***************************
@@ -78,3 +128,13 @@ with:
 
 # Guensie Grecy
 # Here is the URL: https://www.youtube.com/watch?v=z_YORvcJHqA
+
+
+## ***************************
+## array from all location except spain
+## ***************************
+# ["atlanta-usa", "berlin-germany", "bogota-colombia", "buenosaires-argentina", "caracas-venezuela", "chicago-usa", "costa-rica", "downtown-miami", "dublin-ireland", "europe", "hamburg-germany", "houston-usa", "lapaz-bolivia", "lima-peru", "lisbon-portugal", "losangeles-usa", "mexicocity-mexico", "milan-italy", "montevideo-uruguay", "munich-germany", "newyork-usa", "online", "orlando", "panamacity-panama", "quito-ecuador", "santiago-chile", "toronto-canada"]
+# ## ***************************
+# ## array from spain
+# ## ***************************
+# ["barcelona-spain", "madrid-spain", "malaga-spain", "valencia-spain"]
