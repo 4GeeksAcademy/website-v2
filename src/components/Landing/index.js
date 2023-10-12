@@ -31,9 +31,13 @@ import { background } from "@storybook/theming";
 
 const Title = ({ id, title, paragraph }) => {
   return (
-    <GridContainer id={id} margin="40px 0 0 0">
+    <GridContainer id={id} margin="40px 0 40px 0">
       <H2 type="h2">{title}</H2>
-      <Paragraph margin="26px 0">{paragraph}</Paragraph>
+      {
+        paragraph && 
+          <Paragraph margin="26px 0">{paragraph}</Paragraph>
+      }
+      
     </GridContainer>
   );
 };
@@ -54,11 +58,12 @@ const Side = ({
     return (
       <ReactPlayer
         thumb={image && image.src}
+        image_thumb={image}
         id={video}
         videoHeight="360px"
+        margin_tablet="0px"
         style={{
           width: "100%",
-          height: "360px",
         }}
       />
     );
@@ -82,13 +87,13 @@ const Side = ({
         }}
         style={imgStyles}
         alt="4Geeks Academy Section"
-        margin="auto"
+        margin="0px"
         height={img_h_xl}
         width={imgStyles ? imgStyles.width || "100%" : "100%"}
         h_sm={img_h_sm || "250px"}
         backgroundSize={image.shadow ? "cover" : "contain"}
         //backgroundPosition="center right"
-        border={image.shadow && "3px solid black"}
+        //border={image.shadow && "3px solid black"}
         boxShadow={image.shadow && "20px 15px 0px 0px rgba(0,0,0,1)"}
       />
     );
@@ -308,6 +313,7 @@ export const TwoColumn = ({ left, right, proportions, session }) => {
       maxWidth_md="1366px"
     >
       <Div
+        justifyContent={left.video && "center"}
         flexDirection="column"
         size_tablet={left_size || 6}
         size="12"
@@ -319,6 +325,7 @@ export const TwoColumn = ({ left, right, proportions, session }) => {
         <Side session={session} {...left} />
       </Div>
       <Div
+        justifyContent={right.video && "center"}
         flexDirection="column"
         size_tablet={right_size || 6}
         padding_xs="0"
@@ -638,7 +645,7 @@ export const landingSections = {
   },
 
   iconogram: ({ session, data, pageContext, yml, index }) => {
-    const { heading, sub_heading, icons, text_link } = yml;
+    const { heading, sub_heading, icons, button } = yml;
     return (
       <Div
         key={index}
@@ -720,19 +727,28 @@ export const landingSections = {
               );
             })}
         </Div>
-        {text_link && (
-          <Div maxWidth="1366px" margin="10px auto">
-            <Link to={text_link} display="block">
-              <H3
-                fontSize="18px"
-                lineHeight="22px"
-                textDecoration="underline"
-                textDecorationOffset="5px"
-              >
-                Conditions Apply.
-              </H3>
-            </Link>
-          </Div>
+        {button && (
+          <Button
+            outline
+            borderRadius="0"
+            colorHoverText={button.hover_color || Colors.blue}
+            background={Colors[button.background] || button.background}
+            lineHeight="26px"
+            textColor={Colors.black}
+            textTransform="none"
+            color={Colors[button.color] || button.color}
+            fontSize="15px"
+            textAlign="left"
+            margin="2rem 0"
+            padding="32px .85rem 0 .85rem"
+            onClick={() => {
+              if (button.path && button.path.indexOf("http") > -1)
+                window.open(transferQuerystrings(button.path, utm));
+              else navigate(button.path);
+            }}
+          >
+            {button.text}
+          </Button>
         )}
       </Div>
     );
@@ -1124,12 +1140,22 @@ export const landingSections = {
       key={index}
       flexDirection="column"
       margin="0"
-      margin_tablet="8% 0 100px 0"
-      padding="60px 0"
-      padding_tablet="0"
+      padding="0"
+      padding_tablet="0"    
+      position="relative"  
     >
+      <Div
+        background={Colors.lightGray}
+        width="50%"
+        height="414px"
+        position="absolute"
+        top="173px"
+        display_xs="none"
+        display_tablet="flex"
+      />
       <AlumniProjects
         lang={data.allAlumniProjectsYaml.edges}
+        yml={yml}
         hasTitle
         showThumbs="false"
         limit={5}
@@ -1152,7 +1178,7 @@ export const landingSections = {
         key={index}
         flexDirection="column"
         //margin="40px auto"
-        margin_tablet="40px auto 100px auto"
+        margin_tablet="60px auto 60px auto"
         m_sm="0"
         p_xs="0"
         margin_xs="60px 0 40px 0"
@@ -1201,6 +1227,7 @@ export const landingSections = {
       // padding_tablet="30px 40px"
       margin_tablet="0 auto"
       width_md="100%"
+      padding_xs="30px 0px"
     >
       <TwoColumn
         left={{ image: yml.image, video: yml.video }}
@@ -1226,6 +1253,7 @@ export const landingSections = {
         //padding="40px 0 50px 0"
         margin_tablet="0 auto"
         width_md="100%"
+        padding_xs="30px 0px"
       >
         <TwoColumn
           left={{

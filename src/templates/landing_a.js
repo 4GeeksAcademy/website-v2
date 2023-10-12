@@ -298,7 +298,6 @@ export const query = graphql`
   query LandingAQuery(
     $file_name: String!
     $lang: String!
-    $utm_course: String
   ) {
     allPageYaml(
       filter: {
@@ -515,6 +514,7 @@ export const query = graphql`
               style
               shadow
               link
+              shadow
             }
             programs {
               title
@@ -913,11 +913,7 @@ export const query = graphql`
         }
       }
     }
-    allCourseYaml(
-      filter: {
-        fields: { file_name: { eq: $utm_course }, lang: { eq: $lang } }
-      }
-    ) {
+    allCourseYaml(filter: { fields: { lang: { eq: $lang } } }) {
       edges {
         node {
           meta_info {
