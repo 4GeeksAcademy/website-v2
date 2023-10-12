@@ -1,0 +1,140 @@
+meta_info:
+  slug: guia-de-python-chl # <--- URL 4geeksacademy.com/us/landing/example
+  # This will show on social media when shared
+  title: "Guía rápida de Python para principiantes"
+  description: "Python, preferido por Google, Netflix y más. Entra a 4Geeks y domina este líder en programación."
+  image: "/images/bg/remote.jpeg"
+  keywords: "Aprende a programar en Python, 4Geeks academy, aprende programacion en Python"
+  template: "landing_a" # <--- choose your landing template
+  redirects: [] # <--- URL redirections to avoid 404 errors
+
+  visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
+  automation: downloadable # optional, lead as "null" if you don't know, it can be more than one (comma separated)
+  tag: request_downloadable # mandatory: at lease one tag (comma separated)
+  current_download: "python-guide"
+
+form:
+  # posible fields: "first_name", "last_name", "full_name", "phone", "email"
+  # always the first_name, email and phone will be mandatory if added.
+  fields: ["full_name", "phone", "email"]
+  heading: "Descargar Guía"
+  button_label: Descargar Gratis
+  redirect: null #you can redirect to another url or entirely diffrent website
+# jumbotron on the top (cannot be commented out)
+
+navbar:
+  logoUrl: "#" # relative(/apply), absolute(https://google.com) or id(#componentName)
+  buttonText: "Descargar Guía"
+  buttonUrl: "#bottom" # url accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
+
+# jumbotron on the top (cannot be commented out)
+header_data:
+  background: "black"
+  color: "white"
+  tagline: "Amazing Python:\nGuía rápida para principiantes"
+  sub_heading: ""
+  partner_logo_url: "../../../static/images/techs/python-logo.png"
+  background_image: "../../../static/images/program-bg.png"
+  image_filter: brightness(0.4)
+
+features:
+  marginTop: 20px #<-- separation between tagline and the bullets
+
+  #                                         up   left down  right
+  styles: '{ "fontSize": "15px", "margin": "10px 0px 10px 0px" }'
+  text: "Introdúcete en el mundo de Python en pocos días, aprende un lenguaje de programación que está revolucionando el mercado y que es utilizado por empresas como: Netflix, Spotify, Amazon y muchas más."
+  # bullets: ""
+
+follow_bar:
+  position: "top" # top, bottom, hidden
+  content:
+    text: "Solicita tu beca Landing Jobs ya. \n Planes de pago de hasta 24 meses."
+    text_mobile: "Becas de Landing Jobs . \n Plan de pago de 24 m."
+    # devices:    XL      LG      MD      SM      XS
+    font_size: ["25px", "25px", "25px", "18px", "4.3vw"]
+  button:
+    text: "Solicita tu beca"
+    path: "#top" #top, #bottom, #anotherComponentId
+    # ├──if path is empty("") it point to top per default ("#" -> points to top)
+    # └── path accepts: relative(/example/path), absolute(https://google.com) or id(#idName)
+  phone:
+    text: "Llama "
+    number: null # change only if need to customize
+
+#
+# ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇
+#
+
+badges:
+  position: 2 # It's the position of the component that will be rendered first
+  heading: "4Geeks Academy cuenta con premios y reconocimientos que validan su excelencia"
+  style: 
+    font_size: "20px"
+  
+ 
+
+apply_schollarship: # form that is displayed at the end of the landing
+  # title: "Apoyo Profesional Ilimitado"
+  imageSide: "right"
+  image: "../../../static/images/comunity-support.png"
+
+# Possible layours: [two_column_left_image, two_column_right_image]
+components:
+  - name: python_y_javascript
+    position: 1
+    layout: two_column_right
+    background: "lightYellow" # Name of the color(from components/Styling/index.js) or color code ex: #C9F9F9
+    image:
+      src: "/images/why-4geeks/python-image.png"
+      # /static/images/why-4geeks/python-image.png
+    # video: "B01-eTfgqqc"
+    heading:
+      text:
+        "La guía que te ayudará a dar tus primeros pasos en Python"
+        #           xl      lg      md      sm      xs
+      font_size: ["35px", "35px", "35px", "35px", "35px"]
+    content:
+      text: "La guía ha sido desarrollada con la intención de que conozcas la importancia de este lenguaje de programación y sus principales elementos."
+      font_size: ["16px"]
+    button:
+      text: "¡CAMBIA TU FUTURO Y COMIENZA A PROGRAMAR EN PYTHON!"
+      path: "#"
+
+  - name: python_table_content
+    position: 3
+    layout: two_column_left
+    image:
+      src: "/images/python-guide.png"
+    heading:
+      text:
+        "Temario de la Guía"
+        #           xl      lg      md      sm      xs
+      font_size: ["40px", "34px", "34px", "25px", "20px"]
+    
+    sub_heading:
+      text:
+        "Tipos de datos con súperpoderes:"
+      font_size: ["15px"]
+
+    bullets:
+      - Cliente-Servidor en Arquitectura
+      - "Listas en Python: Introducción"
+      - ¿Qué es una lista?
+      - Declaración de Listas
+      - "Funciones: Conceptos Básicos"
+      - Alcance de las Funciones
+      - Práctica
+
+    content:
+      text: "El Zen del Python, variables, conditionals, loops, functions, decorators, generators, virtual environment, package manager."
+      font_size: ["16px"]
+
+  # - name: first_syllabus_form
+  #   position: 4
+  #   layout: syllabus
+  #   containerBackground: "white"
+  #   background: "white"
+  #   button:
+  #     text: "Descargar Gratis"
+  #   heading:
+  #     text: "Descargar Guía"
