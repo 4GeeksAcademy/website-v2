@@ -72,7 +72,8 @@ export default ({
     locationFiltered = info.with.filter(
       (n) =>
         n.location === "all" ||
-        (n.location.includes("all") && !n.excludedLocations.includes(sessionLocation)) ||
+        (n.location.includes("all") &&
+          !n.excludedLocations.includes(sessionLocation)) ||
         !sessionLocation ||
         n.location.includes(sessionLocation)
     );
