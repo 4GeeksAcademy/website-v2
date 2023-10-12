@@ -9,7 +9,7 @@ meta_info:
   image: "/images/bg/main-bg.jpg"
   keywords: "Bootcamp de programación, Bootcamp de python, Bootcamp de javascript, Bootcamp de full stack, Bootcamp, 4Geeks Academy"
 
-  template: "landing_nonav" # <--- choose your landing template
+  template: "landing_a" # <--- choose your landing template
   redirects: # <--- URL redirections to avoid 404 errors
     []
 
@@ -91,7 +91,7 @@ follow_bar:
 program_details:
   position: 4
   heading: "Domina Python, JS y React"
-  sub_heading: "Un bootcamp de programación sobre las tecnologías más usadas del mundo"
+  sub_heading: "Un bootcamp de programación sobre las tecnologías más usadas del mundo" 
 
 # Possible layours: [two_column_left_image, two_column_right_image]
 components:
@@ -124,9 +124,10 @@ components:
         <p>GeekForce es el proceso colectivo de apoyo profesional del Bootcamp. La 'fuerza' significa empoderamiento profesional y es una membresía de por vida. Brinda asistencia para la colocación laboral del estudiante y para que se prepare para conseguir un trabajo en tecnología.</p>
 
   - name: top_coding_bootcamp
-    position: 6
+    position: 4
     layout: two_column_left
     proportions: [4, 8]
+    background: "#e6e6e6"
     image:
       style: '{ "backgroundSize": "contain" }'
       src: "/images/badges/Course-Report-Badge-2023.png"
@@ -134,22 +135,22 @@ components:
     heading:
       text:
         "Tenemos 3 años consecutivos siendo seleccionados como uno de los mejores coding bootcamps del mundo"
-        #xl      lg     md     sm    xs
-      font_size: ["40px", "40px", "40px", "40px", "40px"]
+                      #xl      lg     md     sm    xs
+      font_size: ["38px", "36px", "32px", "30px", "30px"]
   - name: alianza
     position: 2
     layout: two_column_left
     proportions: [5, 7]
     image:
-      style: '{ "backgroundSize": "contain" }'
+      style: '{ "backgroundSize": "cover", "background-position": "top"}'
       src: "/images/ownpeoplecoding2.jpg"
+      shadow: true
     heading:
       text: "4Geeks Academy & Tecnología Financiera: ¡La alianza que impulsará tu vida profesional!"
       font_size: ["30px", "30px", "30px", "30px", "30px"]
     sub_heading:
       text: "Si formas parte de Tecnología Financiera ahora también podrás ser uno de nuestros geeks.
-
-En 4Geeks Academy sabemos lo que buscas y queremos darte todas las herramientas necesarias para que puedas aprender a programar y logres cambiar tu vida por completo."
+            En 4Geeks Academy sabemos lo que buscas y queremos darte todas las herramientas necesarias para que puedas aprender a programar y logres cambiar tu vida por completo."
       font_size: ["16px", "16px", "16px", "16px", "16px"]
     content:
       font_size: ["16px"]
@@ -158,7 +159,7 @@ En 4Geeks Academy sabemos lo que buscas y queremos darte todas las herramientas 
 
     
 badges:
-  position: 3
+  position: 7
   heading: "4Geeks Academy cuenta con premios y reconocimientos de validan su excelencia"
 
 why_4geeks:
@@ -171,3 +172,8 @@ who_is_hiring:
   limit: 4
   heading: "¿Quién contrata a nuestros alumnos?"
   sub_heading: "Nos encanta ver crecer a nuestros estudiantes, es por eso que nos esforzamos cada día por tener más aliados, para que puedas trabajar en empresas que te ayuden a seguir creciendo profesionalmente."
+
+apply_schollarship: # form that is displayed at the end of the landing
+  # title: "Apoyo Profesional Ilimitado"
+  imageSide: "left"
+  image: "../../../static/images/landing/apply.png"

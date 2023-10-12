@@ -83,10 +83,10 @@ details:
       diseño web responsive, trabajando con diversos lenguajes. Obtedrás una       
       sólida base de frontend, backend, base de datos, manejo de procesos       
       distribuídos y despliegue en plataformas web.
-
+      |
       Al finalizar este programa, contarás con los conocimientos para       
-      desempeñarte como Full Stack Developer. 
-    "
+      desempeñarte como <strong style='font-weight: 700'>Full Stack Developer</strong>." 
+    
       list:
         - label: "Duración"
           content:  "18 semanas"
@@ -95,8 +95,8 @@ details:
           content: "3 Clases semanales"
           icon: "book"
         - label: "Certificado"
-          content: "Nuestros certificados son  reconocidos por múltiples instuticiones."
-          link_text: "Ver ejemplo"
+          content: "Nuestros certificados son  reconocidos por múltiples instituciones."
+          link_text: "Ver certificado"
           link: "https://certificate.breatheco.de/4ae7a46bba78dc19b823e124fea120c17b45e044"
           icon: "certificate"
         - label: "Requisitos"

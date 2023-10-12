@@ -23,7 +23,7 @@ const Testimonials = (props) => {
         height="425px"
         margin={props.margin}
         margin_tablet={props.margin_tablet}
-        padding="30px 17px 60px 17px"
+        padding="30px 20px 60px 20px"
         padding_tablet="48px 0 36px 0"
       >
         <H2>{testimonialsArray.heading}</H2>

@@ -142,7 +142,8 @@ const UpcomingDates = ({
       const academySlug = session.academyAliasDictionary[location]
         ? session.academyAliasDictionary[location]
         : location;
-      const cohorts = await getCohorts({ academy: academySlug });
+      let cohorts = await getCohorts({ academy: academySlug, limit: 10 });
+      cohorts = cohorts?.results || [];
       console.log("cohorts upcoming", cohorts);
       let syllabus = [];
       for (let i in cohorts) {
