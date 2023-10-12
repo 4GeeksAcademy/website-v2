@@ -33,6 +33,11 @@ form:
   button_label: Obtener malla y más información
   redirect: "/es/gracias/?lang=es" #you can redirect to another url or entirely diffrent website
 
+apply_schollarship: # form that is displayed at the end of the landing
+  # title: "Apoyo Profesional Ilimitado"
+  imageSide: "left"
+  image: "../../../static/images/landing/apply.png"    
+
 # jumbotron on the top (cannot be commented out)
 header_data:
   background: "#FFF1D1"
@@ -42,7 +47,7 @@ header_data:
   image_filter: brightness(0.3)
 
 features:
-  marginTop: 0px #<-- separation between tagline and the bullets
+  marginTop: 25px #<-- separation between tagline and the bullets
 
   #                                         up   left down  right
   styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
@@ -93,11 +98,11 @@ short_badges:
 #  filter: ["CNN Español", "La Tercera", "Las Ultimas Noticias", "Emol"]
 
 badges:
-  position: 1
+  position: 5
   heading: "4Geeks Academy cuenta con premios y reconocimientos que validan su excelencia"
 
 about4Geeks:
-  position: 2
+  position: 1
   heading: Aprende a programar desde cero con 4Geeks
   sub_heading: "Una comunidad de más de 4000 estudiantes, profesores, partners y exalumnos, conectados por medio de Slack, GitHub, Social Media y 4Geeks.com (nuestra plataforma educacional)"
   list:
@@ -111,18 +116,6 @@ about4Geeks:
   image: "../../../static/images/bg/community.png"
   image_mobile: "../../../static/images/bg/community.png"
 
-iconogram:
-  position: 3
-  icons:
-  - icon: "touch" 
-    title: Postula al programa 
-  - icon: "receive_mail"
-    title: Recibe un correo electrónico con la información
-  - icon: "talk"
-    title: Haz una entrevista con nuestro equipo
-  - icon: "terminal"
-    title: Aprende a programar con nosotros
-
 who_is_hiring:
   position: 4
   heading: "DÓNDE TRABAJAN NUESTROS ESTUDIANTES"
@@ -135,33 +128,6 @@ who_is_hiring:
     - name: "Apple"
       image: "../../../static/images/partner/apple.png"
 
-choose_your_program:
-  position: 5
-  title: Nuestros Programas
-  paragraph: Contamos con programas que combinan clases prácticas dictadas por expertos
-  programs:
-  - title: "Full Stack Developer"
-    sub_title: "Nivel 1"
-    icon: "fullstack"
-    description: |
-      Aprende desde cero, empezando por lo básico: HTML + CSS3 + Javascript.
-      
-      Aprende las habilidades más solicitadas con instructores apasionados y un plan de estudios práctico para ayudarte a encontrar un trabajo de programación como desarrollador Jr.
-    
-    text_link: Postula
-    link: "#"
-  - title: "NodeJs Back End Development"
-    sub_title: "Nivel 2"
-    icon: "software"
-    description: |
-      Este programa de estudio te permitirá trabajar y desarrollar el back-end de software y aplicaciones web, utilizando uno de los lenguajes de programacion más demandados en el mundo, Javascript.
-
-      Aprenderás a crear tu ambiente de trabajo y realizar las configuraciones pertinentes para poder trabajar con el stack más solicitado de NodeJs
-    
-    text_link: Postula
-    link: "#"
-    
-
 why_4geeks:
   position: 7
   heading: "Escúchalo de nuestros alumnos"
@@ -169,6 +135,60 @@ why_4geeks:
 
 # Possible layours: [two_column_left_image, two_column_right_image]
 components:
+
+  - name: how-it-works
+    position: 3
+    layout: iconogram
+    swipable: True
+    heading:
+      text: ""
+      font_size: ["30px", "30px", "30px", "30px", "30px"]
+    sub_heading:
+      text: ""
+      font_size: ["16px", "16px", "16px", "16px", "16px"]
+      style: '{ "textAlign": "center", "width": "60%" }'
+    text_link: "#"
+    icons:
+    - icon: "touch" 
+      title: Postula al programa 
+    - icon: "receive_mail"
+      title: Recibe un correo electrónico con la información
+    - icon: "talk"
+      title: Haz una entrevista con nuestro equipo
+    - icon: "terminal"
+      title: Aprende a programar con nosotros
+
+  - name: "whatever"
+    layout: choose_your_program
+    position: 5
+    heading:
+      text: Nuestros Programas
+    content:
+      text: Contamos con programas que combinan clases prácticas dictadas por expertos
+      font_size: ["16px"]
+      path: ""
+    programs:
+    - title: "Full Stack Developer"
+      sub_title: "Nivel 1"
+      icon: "fullstack_2"
+      description: |
+        Aprende desde cero, empezando por lo básico: HTML + CSS3 + Javascript.
+        
+        Aprende las habilidades más solicitadas con instructores apasionados y un plan de estudios práctico para ayudarte a encontrar un trabajo de programación como desarrollador Jr.
+      
+      text_link: Postula
+      link: "#"
+    - title: "NodeJs Back End Development"
+      sub_title: "Nivel 2"
+      icon: "software_2"
+      description: |
+        Este programa de estudio te permitirá trabajar y desarrollar el back-end de software y aplicaciones web, utilizando uno de los lenguajes de programacion más demandados en el mundo, Javascript.
+
+        Aprenderás a crear tu ambiente de trabajo y realizar las configuraciones pertinentes para poder trabajar con el stack más solicitado de NodeJs
+      
+      text_link: Postula
+      link: "#"
+
   - name: python_y_javascript
     position: 6
     layout: two_column_right
@@ -183,9 +203,7 @@ components:
         #           xl      lg      md      sm      xs
       font_size: ["50px", "50px", "50px", "50px", "50px"]
     content:
-      text: "Nuestros programa está basado en el uso de Python y Javascript. ¿La razón? En el mercado laboral JavaScript tiene 26 veces más vacantes de trabajo que Ruby on Rails y  Python tiene 10 veces más trabajos que node.js.
-      
-      Otras herramientas que también aprenderás a usar en nuestro programa son: GitHub, CSS3, HTML5, Flask, etc."
+      text: "Nuestros programa está basado en el uso de Python y Javascript. ¿La razón? En el mercado laboral JavaScript tiene 26 veces más vacantes de trabajo que Ruby on Rails y  Python tiene 10 veces más trabajos que node.js. <br> Otras herramientas que también aprenderás a usar en nuestro programa son: GitHub, CSS3, HTML5, Flask, etc."
       font_size: ["16px"]
   - name: top_coding_bootcamp
     position: 8
@@ -193,17 +211,19 @@ components:
     proportions: [4, 8]
     image:
       style: '{ "backgroundSize": "contain" }'
-      src: "/images/badges/switchup.png"
+      src: "/images/badges/switchup-badge-2023.png"
       link: "https://www.switchup.org/bootcamps/4geeks-academy"
     button:
       text: "Leer testimoniales"
-      color: null
+      color: white
+      background: black
+      hover: "blue"
       path: "https://www.switchup.org/bootcamps/4geeks-academy"
     heading:
       text:
         "Hemos sido nombrados uno de los TOP coding bootcamps en el mundo"
         #xl      lg     md     sm    xs
-      font_size: ["40px", "40px", "40px", "40px", "40px"]
+      font_size: ["36px", "36px", "36px", "36px", "36px"]
 
 # why_python:
 #   position: 7

@@ -34,7 +34,8 @@ form:
 
 # jumbotron on the top (cannot be commented out)
 header_data:
-  tagline: Impulsa tu carrera profesional, obtén tu beca!
+  tagline: Impulsa tu carrera profesional, Obtén tu beca!
+  tagline_color: white
   sub_heading: ""
   partner_logo_url: "../../../static/images/partner/microsoft.png"
   background_image: "../../../static/images/Happy-People-Landing-4Geeks-ES.jpg"
@@ -44,7 +45,7 @@ features:
   marginTop: 20px #<-- separation between tagline and the bullets
 
   #                                         up   left down  right
-  styles: '{ "fontSize": "15px", "margin": "10px 0px 10px 0px" }'
+  styles: '{ "color": "white", "fontSize": "15px", "margin": "10px 0px 10px 0px" }'
   text: Hay más vacantes que en cualquier otra industria ¡Impulsa tu Carrera! y hazte programador de software
 
 follow_bar:
@@ -75,14 +76,14 @@ short_badges:
     alt: "Best coding bootcamp Switchup 2023"   
   - name: "Florida Department of Education"
     url: ""
-    image: "../../../static/images/badges/licensed.png"
+    image: "../../../static/images/badges/licensed-inverted.png"
     alt: "Florida Department of Education"
 
 #
 # ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇
 #
 badges:
-  position: 1 # It's the position of the component that will be rendered first
+  position: 5 # It's the position of the component that will be rendered first
   heading: "4Geeks Academy cuenta con premios y reconocimientos que validan su excelencia"
 
 about4Geeks:
@@ -100,18 +101,6 @@ about4Geeks:
   image: "../../../static/images/bg/community.png"
   image_mobile: "../../../static/images/bg/community.png"
 
-iconogram:
-  position: 3
-  icons:
-  - icon: "touch" 
-    title: Aplica a la beca
-  - icon: "receive_mail"
-    title: Obten un correo electrónico con la información
-  - icon: "talk"
-    title: Haz una entrevista con nuestro equipo
-  - icon: "terminal"
-    title: Aprende a programar con nosotros
-
 who_is_hiring:
   position: 4
   heading: "DÓNDE TRABAJAN NUESTROS ESTUDIANTES"
@@ -124,34 +113,6 @@ who_is_hiring:
     - name: "Apple"
       image: "../../../static/images/partner/apple.png"
 
-choose_your_program:
-  position: 5
-  title: Nuestros Programas
-  paragraph: Contamos con programas que combinan clases prácticas dictadas por expertos
-  programs:
-  - title: "Full Stack Developer"
-    sub_title: "Nivel 1"
-    icon: "fullstack"
-    description: |
-      Aprende desde cero, empezando por lo básico: HTML + CSS3 + Javascript.
-      
-      Aprende las habilidades más solicitadas con instructores apasionados y un plan de estudios práctico para ayudarte a encontrar un trabajo de programación como desarrollador Jr.
-    
-    text_link: Aplica a una beca
-    link: "#"
-    
-  - title: "Ingeniero de Software"
-    sub_title: "Nivel 2"
-    icon: "software"
-    description: |
-      Profundizamos a un nivel avanzado principios específicos de desarrollo, llevando tu carrera a otro nivel.
-      
-      Texto que resuma y explique que este programa tiene modalidad part time y full time. Que también resuma eficientemente el syballus del programa. Acá incluiría un <a href="/us/apply">link</a> para poder descargar el PDF con el detalle del programa.
-      Desarrolla más habilidades adentrándote en el mundo de computación y aplicaciones nativas de la nube. Aprende las habilidades que el 90% de las empresas Fortune 500 están buscando.
-    
-    text_link: Aplica a una beca
-    link: "#"
-
 why_4geeks:
   position: 8
   heading: "Escuchalo de nuestros alumnos"
@@ -160,10 +121,67 @@ why_4geeks:
 apply_schollarship:
   # title: "Apoyo Profesional Ilimitado"
   imageSide: "right"
-  image: "../../../static/images/comunity-support.png"
+  image: "../../../static/images/landing/apply.png"
 
 # Possible layours: [two_column_left_image, two_column_right_image]
 components:
+
+  - name: how-it-works
+    position: 3
+    background: "veryLightBlue2"
+    layout: iconogram
+    swipable: True
+    heading:
+      text: ""
+      font_size: ["30px", "30px", "30px", "30px", "30px"]
+    sub_heading:
+      text: ""
+      font_size: ["16px", "16px", "16px", "16px", "16px"]
+      style: '{ "textAlign": "center", "width": "60%" }'
+    text_link: "#"
+    icons:
+    - icon: "touch" 
+      title: Aplica a la beca
+    - icon: "receive_mail"
+      title: Obten un correo electrónico con la información
+    - icon: "talk"
+      title: Haz una entrevista con nuestro equipo
+    - icon: "terminal"
+      title: Aprende a programar con nosotros
+
+  - name: "whatever"
+    layout: choose_your_program
+    position: 5
+    heading:
+      text: Nuestros Programas
+    content:
+      text: Contamos con programas que combinan clases prácticas dictadas por expertos
+      font_size: ["16px"]
+      path: ""
+    programs:
+    - title: "Full Stack Developer"
+      sub_title: "Nivel 1"
+      icon: "fullstack_2"
+      description: |
+        Aprende desde cero, empezando por lo básico: HTML + CSS3 + Javascript.
+        
+        Aprende las habilidades más solicitadas con instructores apasionados y un plan de estudios práctico para ayudarte a encontrar un trabajo de programación como desarrollador Jr.
+      
+      text_link: Aplica a una beca
+      link: "#"
+      
+    - title: "Ingeniero de Software"
+      sub_title: "Nivel 2"
+      icon: "software_2"
+      description: |
+        Profundizamos a un nivel avanzado principios específicos de desarrollo, llevando tu carrera a otro nivel.
+        
+        Texto que resuma y explique que este programa tiene modalidad part time y full time. Que también resuma eficientemente el syballus del programa. Acá incluiría un <a href="/us/apply">link</a> para poder descargar el PDF con el detalle del programa.
+        Desarrolla más habilidades adentrándote en el mundo de computación y aplicaciones nativas de la nube. Aprende las habilidades que el 90% de las empresas Fortune 500 están buscando.
+      
+      text_link: Aplica a una beca
+      link: "#"
+
   - name: python_y_javascript
     position: 7
     layout: two_column_right
@@ -178,7 +196,5 @@ components:
         #           xl      lg      md      sm      xs
       font_size: ["50px", "50px", "50px", "50px", "50px"]
     content:
-      text: "Nuestros programa está basado en el uso de Python y Javascript. La razón? En el mercado laboral JavaScript tiene 26 veces más vacantes de trabajo que Ruby on Rails y  Python tiene 10 veces más trabajos que node.js.
-      
-      Otras herramientas que también aprenderás a usar en nuestro programa son: GitHub, CSS3, HTML5, Flask, etc."
+      text: "Nuestros programa está basado en el uso de Python y Javascript. La razón? En el mercado laboral JavaScript tiene 26 veces más vacantes de trabajo que Ruby on Rails y  Python tiene 10 veces más trabajos que node.js. Otras herramientas que también aprenderás a usar en nuestro programa son: GitHub, CSS3, HTML5, Flask, etc."
       font_size: ["16px"]
