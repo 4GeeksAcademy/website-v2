@@ -141,9 +141,8 @@ components:
     proportions: [6, 6]
     background: "rgba(255, 183, 24, 0.2)"
     image:
-      # style: '{ "border" : "3px solid black" }' 
+      style: '{ "backgroundSize": "contain" }' 
       # shadow: true
-      #style: '{ "backgroundSize": "contain" }'
       src: "/images/landing/group_194.png"
     heading:
       text: "Porqué aprender a programar"
@@ -262,7 +261,7 @@ components:
     proportions: [6, 6]
     background: "veryLightBlue2"
     image:
-      style: '{ "border" : "3px solid black" }' 
+      style: '{"backgroundSize": "contain"}'
       shadow: true
       #style: '{ "backgroundSize": "contain", "maxHeight": "270px", "border" : "3px solid black" }'
       src: "/images/landing/Bcas-UnitedWay-Madrid.png"

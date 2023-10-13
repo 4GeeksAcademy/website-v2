@@ -141,7 +141,7 @@ components:
     image:
       # style: '{ "border" : "3px solid black", "backgroundSize": "contain" }' 
       # shadow: true
-      # style: '{ "backgroundSize": "contain" }'
+      style: '{ "backgroundSize": "contain" }'
       src: "/images/landing/group_194.png"
     heading:
       text: "Membresías"
