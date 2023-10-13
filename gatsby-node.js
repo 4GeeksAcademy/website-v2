@@ -317,7 +317,7 @@ const createBlog = async ({ actions, graphql }) => {
     clusters[lang].forEach((cluster) => {
       let file_name = `clusters.${lang}`;
       let type = "page";
-      let path = `/${lang}/${langSwitcher[lang]}/${cluster}/`;
+      let path = `/${lang}/${langSwitcher[lang]}/${cluster}`;
       createPage({
         path,
         component: clusterTemplate,

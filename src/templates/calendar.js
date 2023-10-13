@@ -83,9 +83,10 @@ const Calendar = (props) => {
 
   useEffect(() => {
     const getData = async () => {
-      let cohorts = await getCohorts();
+      let cohorts = await getCohorts({ limit: 100 });
       let events = await getEvents();
       let syllabus = [];
+      cohorts = cohorts?.results || [];
       for (let i in cohorts) {
         let name = cohorts[i].syllabus_version.name;
         name === "Full-Stack Software Developer FT"
@@ -581,7 +582,7 @@ const Calendar = (props) => {
             cursor="pointer"
             onClick={() => setLimit(!limit)}
           >
-            Show more
+            {content.show_more}
           </Paragraph>
         </GridContainer>
       )}
@@ -596,7 +597,7 @@ const Calendar = (props) => {
             cursor="pointer"
             onClick={() => setLimit(!limit)}
           >
-            Show less
+            {content.show_less}
           </Paragraph>
         </GridContainer>
       )}
@@ -618,7 +619,7 @@ const Calendar = (props) => {
       >
         <>
           {datas.events.filtered.map((m, i) => {
-            const limits = limit == true ? 6 : 100;
+            const limits = limit ? 6 : 100;
             return (
               i < limits && (
                 <Div
@@ -706,6 +707,8 @@ export const query = graphql`
             image
             keywords
           }
+          show_more
+          show_less
           events {
             title
             paragraph
