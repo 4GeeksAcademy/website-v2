@@ -8,7 +8,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 const VideoWrapper = styled.section`
   position: relative;
-  width: ${(props) => props.width || "640px"};
+  width: ${(props) => props.width || "100%"};
   height: ${(props) => props.height || "auto"};
   margin: auto;
   @media ${Devices.xxs} {
@@ -18,7 +18,7 @@ const VideoWrapper = styled.section`
   @media ${Devices.sm} {
   }
   @media ${Devices.tablet} {
-    margin: ${(props) => props.margin_tablet || "30px 10%"};
+    margin: ${(props) => props.margin_tablet};
     width: ${(props) => props.width_tablet};
     height: ${(props) => props.height_tablet};
   }
@@ -48,8 +48,8 @@ const Thumbnail = styled.img`
 const Image = styled.div`
   position: relative;
   margin: auto;
-  height: ${(props) => props.height || "auto"};
-  width: ${(props) => props.width || "100%"};
+  height: ${(props) => props.height };
+  width: ${(props) => props.width };
   box-shadow: ${(props) => props.boxShadow};
   border-radius: ${(props) => props.borderRadius || "1.25rem"};
   @media ${Devices.xxs} {
@@ -211,10 +211,9 @@ const Player = ({
           width_tablet={imageWidth_tablet || "100%"}
           borderRadius="3px"
           height={imageHeight || "100%"}
-          shadow={image_thumb?.shadow && "20px 15px 0px 0px rgba(0,0,0,1)"}
+          boxShadow={image_thumb?.shadow && "20px 15px 0px 0px rgba(0,0,0,1)"}
           //border={image_thumb?.shadow && "3px solid black"}
           style={imgStyles && { ...JSON.parse(image_thumb?.style) }}
-
         >
           {id && (
             <Play
