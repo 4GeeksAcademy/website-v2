@@ -117,13 +117,13 @@ components:
       font_size: ["15px"]
 
     bullets:
-      - Cliente-Servidor en Arquitectura
-      - "Listas en Python: Introducción"
-      - ¿Qué es una lista?
-      - Declaración de Listas
-      - "Funciones: Conceptos Básicos"
-      - Alcance de las Funciones
-      - Práctica
+      - heading: Cliente-Servidor en Arquitectura
+      - heading: "Listas en Python: Introducción"
+      - heading: ¿Qué es una lista?
+      - heading: Declaración de Listas
+      - heading: Funciones Conceptos Básicos
+      - heading: Alcance de las Funciones
+      - heading: Práctica
 
     content:
       text: "El Zen del Python, variables, conditionals, loops, functions, decorators, generators, virtual environment, package manager."
