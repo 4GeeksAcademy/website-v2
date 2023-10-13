@@ -13,6 +13,7 @@ with:
     alt: ""
     video: "https://www.youtube.com/watch?v=ln3bQsV1BaQ" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     location: ["all", "downtown-miami"]
+    excluded_locations: ["barcelona-spain", "madrid-spain", "malaga-spain", "valencia-spain"]
     # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     icon: address
     footer:
@@ -29,6 +30,7 @@ with:
     alt: ""
     video: "https://www.youtube.com/watch?v=PWkgaAT8pHg" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     location: ["all"]
+    excluded_locations: ["barcelona-spain", "madrid-spain", "malaga-spain", "valencia-spain"]
     # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     icon: address
     footer:
@@ -44,6 +46,7 @@ with:
     alt: ""
     video: "https://www.youtube.com/watch?v=MBXqEnhodx0" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     location: ["downtown-miami", "all"]
+    excluded_locations: ["barcelona-spain", "madrid-spain", "malaga-spain", "valencia-spain"]
     # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     icon: address
     footer:
@@ -52,6 +55,70 @@ with:
       image_link: "/us/geekpal-support"
       text: ""
       text_link: ""
+
+## ***************************
+## Spain Testimonials
+## ***************************
+  - name: "Amira "
+    Title: "They'll be there to support you even after you graduate"
+    Description: "Amira discovered an invaluable lifelong support system at 4Geeks Academy, always there when needed."
+    image: ../../../../static/images/testimonials/Amira-testimonials-esp.jpg
+    alt: ""
+    video: "https://www.youtube.com/watch?v=NaEm0B9p7jY" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    location: ["barcelona-spain", "madrid-spain", "malaga-spain", "valencia-spain"]
+    icon: address
+    footer:
+      is_image: true
+      image: "/images/geekforce.png"
+      image_link: "/es/geekforce"
+      text: ""
+      text_link: ""
+
+  - name: "Rita "
+    Title: "From Orthopedic Technician to Programmer"
+    Description: "Rita made a complete 360-degree turn in her life, and found invaluable support at 4Geeks Academy, always there when needed."
+    image: ../../../../static/images/testimonials/rita-testimonials.ong
+    alt: ""
+    video: "https://www.youtube.com/watch?v=I87ONvJB2OM" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    location: ["barcelona-spain", "malaga-spain", "valencia-spain"]
+    icon: address
+    footer:
+      is_image: false
+      image: ""
+      image_link: ""
+      text: "Ver opciones de financiación"
+      text_link: "/es/financiacion"
+  
+  - name: "Javier Murillo"
+    Title: "Yes, it's possible to acquire programming skills in just 18 weeks!"
+    Description: "Javier shares his journey from zero to becoming a programmer in only 18 weeks."
+    image: ../../../../static/images/testimonials/ibai-fernandez.png
+    alt: ""
+    video: "https://www.youtube.com/watch?v=NT6bkSQWFXw" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    location: ["madrid-spain"]
+    icon: address
+    footer:
+      is_image: false
+      image: ""
+      image_link: ""
+      text: "Ver opciones de financiación"
+      text_link: "/es/financiacion"
+  
+  - name: "Ibai Fernández"
+    Title: "Embark on Your Journey in the World of Programming"
+    Description: "Ibai is closer to achieving his dream of becoming a digital nomad. <br> Join today and take the first steps towards this exciting reality."
+    image: ../../../../static/images/testimonials/ibai-fernandez.png
+    alt: ""
+    video: "https://www.youtube.com/watch?v=G7KS0uOqKaQ" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    location: ["barcelona-spain", "madrid-spain", "malaga-spain", "valencia-spain"]
+    icon: address
+    footer:
+      is_image: true
+      image: "/images/geekforce.png"
+      image_link: "/es/geekforce"
+      text: ""
+      text_link: ""
+
 ## ***************************
 ## BELOW SOME AVAILABLE VIDEOS
 ## ***************************

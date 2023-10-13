@@ -13,7 +13,7 @@ with:
     alt: ""
     video: "https://www.youtube.com/watch?v=ln3bQsV1BaQ" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     location: ["all"]
-    excludedLocations: ["barcelona-spain", "madrid-spain", "malaga-spain", "valencia-spain"]
+    excluded_locations: ["barcelona-spain", "madrid-spain", "malaga-spain", "valencia-spain"]
     # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     icon: address
     footer:
@@ -29,7 +29,7 @@ with:
     alt: ""
     video: "https://www.youtube.com/watch?v=MBXqEnhodx0" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     location: ["all"]
-    excludedLocations: ["barcelona-spain", "madrid-spain", "malaga-spain", "valencia-spain"]
+    excluded_locations: ["barcelona-spain", "madrid-spain", "malaga-spain", "valencia-spain"]
     # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     icon: address
     footer:
@@ -45,7 +45,7 @@ with:
     alt: ""
     video: "https://www.youtube.com/watch?v=PWkgaAT8pHg" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     location: ["all"]
-    excludedLocations: ["barcelona-spain", "madrid-spain", "malaga-spain", "valencia-spain"]
+    excluded_locations: ["barcelona-spain", "madrid-spain", "malaga-spain", "valencia-spain"]
     # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     icon: address
     footer:
@@ -87,22 +87,7 @@ with:
       image_link: ""
       text: "Ver opciones de financiación"
       text_link: "/es/financiacion"
-
-  - name: "Ibai Fernández"
-    title: "Comienza tu camino en el mundo de la programación"
-    description: "Ibai está más cerca de alcanzar su sueño, ser un nomada digital. <br>Únete hoy y da los primeros pasos hacia esta emocionante realidad."
-    image: ../../../../static/images/testimonials/ibai-fernandez.png
-    alt: ""
-    video: "https://www.youtube.com/watch?v=G7KS0uOqKaQ" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
-    location: ["barcelona-spain", "madrid-spain", "malaga-spain", "valencia-spain"]
-    icon: address
-    footer:
-      is_image: true
-      image: "/images/geekforce.png"
-      image_link: "/es/geekforce"
-      text: ""
-      text_link: ""
-
+  
   - name: "Javier Murillo"
     title: "¡Sí, es posible adquirir habilidades de programación en un periodo de 18 semanas!"
     description: "Javier narra su travesía desde cero a convertirse en programador en tan solo 18 semanas."
@@ -117,8 +102,21 @@ with:
       image_link: ""
       text: "Ver opciones de financiación"
       text_link: "/es/financiacion"
-
-
+  
+  - name: "Ibai Fernández"
+    title: "Comienza tu camino en el mundo de la programación"
+    description: "Ibai está más cerca de alcanzar su sueño, ser un nomada digital. <br>Únete hoy y da los primeros pasos hacia esta emocionante realidad."
+    image: ../../../../static/images/testimonials/ibai-fernandez.png
+    alt: ""
+    video: "https://www.youtube.com/watch?v=G7KS0uOqKaQ" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    location: ["barcelona-spain", "madrid-spain", "malaga-spain", "valencia-spain"]
+    icon: address
+    footer:
+      is_image: true
+      image: "/images/geekforce.png"
+      image_link: "/es/geekforce"
+      text: ""
+      text_link: ""
 
 
 ## *************************** 
