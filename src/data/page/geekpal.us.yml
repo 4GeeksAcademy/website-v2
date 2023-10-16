@@ -43,9 +43,9 @@ list:
     image: "../../../static/images/final-project.png"
     position: "right"
     sub:
-      - title: "✔ EXCLUSIVE CLASSES"
+      - title: "EXCLUSIVE CLASSES"
         text: "At 4Geeks we believe that the personalized process gives better results, that is why our classes are designed for a maximum of 8 students and we have a ratio of <span style='font-weight: bold'> 1 teacher for every 5 students.</span>"
-      - title: "✔ 1:1 MENTORSHIPS"
+      - title: "1:1 MENTORSHIPS"
         text: "We have a network of mentors who are willing to give you 
         <span style='font-weight: bold'> 1:1 support</span> in person or remotely, unlimitedly. These 
         <span style='font-weight: bold'> unlimited mentoring continues</span> even after you finish your studies at 4Geeks."
@@ -57,14 +57,18 @@ list:
     <span style='font-weight: bold'> according to your calendar</span>, but we also give you the opportunity to see them 
     <span style='font-weight: bold'> online or in person</span>, this because we have campus in many different cities and therefore time zones.<br/>
     <br/>In any case, we assure you that you have the opportunity for constant mentoring whenever you need it."
+    button:
+      link: "/"
+      text: ""
+      color: "black"
 
   - title: "Community Support"
     image: "../../../static/images/comunity-support.png"
     position: "right"
     sub:
-      - title: "✔ 4Geeks.com"
+      - title: "4Geeks.com"
         text: "Is a community created to accelerate the way junior developers learn and evolve using technology. <a href='https://4geeks.com'>4Geeks.com</a> gives you access to many resources to improve your skills, but also you can contribute to help others with their code."
-      - title: "✔ Slack Community"
+      - title: "Slack Community"
         text: "Our international community of more than 
         <span style='font-weight: bold'> 2100 people</span>, who will provide you with all the support you need."
 

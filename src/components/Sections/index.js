@@ -410,6 +410,7 @@ export const Grid = styled(Div)`
     grid-row: ${(props) => props.gridRow_tablet};
     justify-content: ${(props) => props.justifyContent_tablet};
     grid-template-areas: ${(props) => props.gridTemplateAreas_tablet};
+    maxWidth: ${(props) => props.maxWidth_tablet};
   }
   @media ${Devices.md} {
     margin: ${(props) => props.margin_md};
@@ -729,6 +730,7 @@ export const GridContainerWithImage = ({
   padding_md,
   padding_lg,
   position,
+  maxWidth_tablet,
 }) => {
   return (
     <Grid
@@ -748,6 +750,7 @@ export const GridContainerWithImage = ({
       padding_tablet={padding_tablet}
       padding_md={padding_md}
       padding_lg={padding_lg}
+      maxWidth_tablet={maxWidth_tablet}
     >
       <Grid
         gridGap={gridGap}
@@ -759,6 +762,7 @@ export const GridContainerWithImage = ({
         }
         gridTemplateColumns={columns}
         gridColumn_tablet={imageSide == "left" ? "1 / span 14" : "2 / span 14"}
+        maxWidth_tablet={maxWidth_tablet}
       >
         {children}
       </Grid>
