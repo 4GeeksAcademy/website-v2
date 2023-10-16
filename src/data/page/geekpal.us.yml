@@ -8,15 +8,16 @@ meta_info:
   redirects: ["/geekpal", "/us/career-support"]
 
 header:
-  title: ""
+  title: "<strong style='color:black; font-weight:700;'>Geek</strong> <strong style = 'color:red; font-weight:bold;'>PAL</strong> <br>
+          never code alone again"
   image: "../../../static/images/bg/companies-bg.jpg"
   image_alt: ""
-  paragraph: "GeekPAL is an instant membership you get when you become a student at 4Geeks Academy. 
-  <ul>
-    <li>- Don't code alone ever again.</li> 
-    <li>- Have mentors for the rest of your life.</li> 
-    <li>- Even after graduation.</li>
-  </ul>"
+  paragraph: "GeekPAL is an instant membership you get when you become a student at 4Geeks Academy."
+  bullets:
+    - Don't code alone ever again.
+    - Have mentors for the rest of your life.
+    - Even after graduation.
+    
   image_logo: "/images/geekpal.png"
 
 seo_title: "Geekpal"
@@ -35,7 +36,7 @@ icons:
   - icon: "talk"
     title: "Avg. 50 tutorships PER STUDENT"
   - icon: "timer"
-    title: "RESPONSE TIME OF 15 MINUTES"
+    title: "RESPONSE TIME OF 15 MINUTES"  
 
 list:
   - title: "Unlimited Coding Support"

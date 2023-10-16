@@ -96,6 +96,7 @@ const Player = ({
   imageHeight,
   videoHeight,
   switched,
+  boxShadow,
   ...rest
 }) => {
   const [showVideo, setShowVideo] = React.useState(false);
@@ -194,6 +195,7 @@ const Player = ({
           width_tablet={imageWidth_tablet || "100%"}
           borderRadius="3px"
           height={imageHeight}
+          boxShadow={boxShadow}
         >
           {id && (
             <Play

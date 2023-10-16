@@ -188,6 +188,12 @@ const StyledImage = styled.div`
     min-height: ${(props) => props.minHeight_sm};
     width: ${(props) => props.w_sm};
   }
+  @media ${Devices.xs} {
+    left: ${(props) => props.left_xs};
+  }
+  @media ${Devices.md} {
+    left: ${(props) => props.left_md};
+  }
 `;
 export const Img = React.memo(StyledImage);
 
@@ -275,6 +281,7 @@ export const StyledBackgroundSection = styled(BackgroundSection)`
   padding: ${(props) => props.padding};
   text-align: ${(props) => props.align};
   border-radius: ${(props) => props.borderRadius};
+  box-shadow: ${(props) => props.boxShadow};
   background-repeat: no-repeat;
   margin: ${(props) => props.margin || "auto"};
   z-index: ${(props) => props.zIndex || 1};
