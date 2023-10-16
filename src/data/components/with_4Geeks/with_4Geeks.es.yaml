@@ -91,7 +91,7 @@ with:
   - name: "Javier Murillo"
     title: "¡Sí, es posible adquirir habilidades de programación en un periodo de 18 semanas!"
     description: "Javier narra su travesía desde cero a convertirse en programador en tan solo 18 semanas."
-    image: ../../../../static/images/testimonials/ibai-fernandez.png
+    image: ../../../../static/images/testimonials/javier-murillo-testimonial.png
     alt: ""
     video: "https://www.youtube.com/watch?v=NT6bkSQWFXw" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     location: ["madrid-spain"]
@@ -105,7 +105,7 @@ with:
   
   - name: "Ibai Fernández"
     title: "Comienza tu camino en el mundo de la programación"
-    description: "Ibai está más cerca de alcanzar su sueño, ser un nomada digital. <br>Únete hoy y da los primeros pasos hacia esta emocionante realidad."
+    description: "Ibai está más cerca de alcanzar su sueño, ser un nomada digital.  Únete hoy y da los primeros pasos hacia esta emocionante realidad."
     image: ../../../../static/images/testimonials/ibai-fernandez.png
     alt: ""
     video: "https://www.youtube.com/watch?v=G7KS0uOqKaQ" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL

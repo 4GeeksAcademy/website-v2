@@ -181,7 +181,7 @@ export default ({
                     />
                   </Div>
                   <Div
-                    marginTop="20px"
+                    marginTop="40px"
                     padding_tablet="20px 32px"
                     padding_xs="20px 16px"
                     display={`flex`}
