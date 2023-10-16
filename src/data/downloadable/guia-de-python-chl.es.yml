@@ -19,7 +19,7 @@ form:
   fields: ["full_name", "phone", "email"]
   heading: "Descargar Guía"
   button_label: Descargar Gratis
-  redirect: null #you can redirect to another url or entirely diffrent website
+  redirect: https://storage.googleapis.com/4geeks-academy-website/PDF%20and%20Docs/Gui%CC%81a%20de%20Python.pdf #you can redirect to another url or entirely diffrent website
 # jumbotron on the top (cannot be commented out)
 
 navbar:
@@ -30,18 +30,18 @@ navbar:
 # jumbotron on the top (cannot be commented out)
 header_data:
   background: "black"
-  color: "white"
-  tagline: "Amazing Python:\nGuía rápida para principiantes"
+  tagline: "Amazing Python: Guía rápida para principiantes"
+  tagline_color: "white"
   sub_heading: ""
   partner_logo_url: "../../../static/images/techs/python-logo.png"
   background_image: "../../../static/images/program-bg.png"
-  image_filter: brightness(0.4)
+  image_filter: brightness(0.17)
 
 features:
   marginTop: 20px #<-- separation between tagline and the bullets
 
   #                                         up   left down  right
-  styles: '{ "fontSize": "15px", "margin": "10px 0px 10px 0px" }'
+  styles: '{ "fontSize": "15px", "margin": "10px 0px 10px 0px", "color": "white" }'
   text: "Introdúcete en el mundo de Python en pocos días, aprende un lenguaje de programación que está revolucionando el mercado y que es utilizado por empresas como: Netflix, Spotify, Amazon y muchas más."
   # bullets: ""
 
@@ -116,17 +116,8 @@ components:
         "Tipos de datos con súperpoderes:"
       font_size: ["15px"]
 
-    bullets:
-      - Cliente-Servidor en Arquitectura
-      - "Listas en Python: Introducción"
-      - ¿Qué es una lista?
-      - Declaración de Listas
-      - "Funciones: Conceptos Básicos"
-      - Alcance de las Funciones
-      - Práctica
-
     content:
-      text: "El Zen del Python, variables, conditionals, loops, functions, decorators, generators, virtual environment, package manager."
+      text:   <ul style="list-style:unset; padding-left:30px"> <li> Cliente-Servidor en Arquitectura <li>Listas en Python Introducción <li>¿Qué es una lista? <li>Aquí va la explicación sobre qué es una lista en Python. <li>Declaración de Listas  <li>Explicación sobre cómo declarar listas en Python. <li>Funciones Conceptos Básicos <li>Conceptos básicos sobre funciones en Python. <li>Alcance de las Funciones <li>Explicación sobre el alcance de las funciones en Python. <li>Práctica <li>Actividades prácticas relacionadas con listas en Python. </ul>
       font_size: ["16px"]
 
   # - name: first_syllabus_form
