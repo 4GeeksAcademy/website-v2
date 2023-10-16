@@ -410,7 +410,7 @@ export const Grid = styled(Div)`
     grid-row: ${(props) => props.gridRow_tablet};
     justify-content: ${(props) => props.justifyContent_tablet};
     grid-template-areas: ${(props) => props.gridTemplateAreas_tablet};
-    maxWidth: ${(props) => props.maxWidth_tablet};
+    maxwidth: ${(props) => props.maxWidth_tablet};
   }
   @media ${Devices.md} {
     margin: ${(props) => props.margin_md};

@@ -238,7 +238,7 @@ const GeekPal = (props) => {
           padding_tablet="50px 40px"
           padding_md="50px 80px"
           padding_lg="50px 0"
-        //className="badge-slider hideOverflowX__"
+          //className="badge-slider hideOverflowX__"
         >
           {Array.isArray(content.icons) &&
             content.icons?.map((item, index) => {
@@ -255,381 +255,395 @@ const GeekPal = (props) => {
         </Div>
       </Div>
 
-
-      
-        {Array.isArray(content.list) &&
-          content.list.map((m, i) => {
-            return (
-              <>
-                {i === 1 ?
-                  <Div maxWidth_tablet="1366px" margin_tablet="100px auto">
-                    <Div
-                      display_xss="none"
-                      display_tablet="flex"
-                      position="relative"
-                      justifyContent="center"
-                      margin_tablet="auto"
-                      padding_tablet="0 40px"
-                      padding_md="0 80px"
-                      padding_lg="0"
+      {Array.isArray(content.list) &&
+        content.list.map((m, i) => {
+          return (
+            <>
+              {i === 1 ? (
+                <Div maxWidth_tablet="1366px" margin_tablet="100px auto">
+                  <Div
+                    display_xss="none"
+                    display_tablet="flex"
+                    position="relative"
+                    justifyContent="center"
+                    margin_tablet="auto"
+                    padding_tablet="0 40px"
+                    padding_md="0 80px"
+                    padding_lg="0"
+                  >
+                    <Grid
+                      gridTemplateColumns_tablet="1fr repeat(14, 1fr) 1fr"
+                      gridGap="0px"
                     >
-                      <Grid
-                        gridTemplateColumns_tablet="1fr repeat(14, 1fr) 1fr"
-                        gridGap="0px"
+                      <Div gridColumn="1 / 9">
+                        <Img
+                          src="/images/woman-afro-with-laptop.png"
+                          width="33.3em"
+                          height="533px"
+                        />
+                      </Div>
+
+                      <Div
+                        gridColumn="9 / 17"
+                        gridColumn_lg="9/ 22"
+                        position="relative"
                       >
-                        <Div gridColumn="1 / 9">
-                          <Img src="/images/woman-afro-with-laptop.png" width="33.3em" height="533px" />
-
-                        </Div>
-
-                        <Div gridColumn="9 / 17" gridColumn_lg="9/ 22" position="relative">
-                          <Div width="100%">
-                            <Img
-                              src="/images/landing/vector-stroke.png"
-                              width="114px"
-                              height="162px"
-                              style={{
-                                position: "absolute",
-                                right: "0%",
-                                top: "20px",
-                              }}
-                            />
-                            <Img
-                              src="/images/landing/vector-stroke1.png"
-                              width="70px"
-                              height="181px"
-                              style={{
-                                position: "absolute",
-                                right: "11.25em",
-                                top: "20px",
-                              }}
-                            />
-                            <Img
-                              src="/images/landing/vector-stroke2.png"
-                              width="106px"
-                              height="151px"
-                              style={{
-                                position: "absolute",
-                                left: "0%",
-                                bottom: "0.8em",
-                              }}
-                            />
-                          </Div>
-
+                        <Div width="100%">
                           <Img
-                            src="/images/landing/group-2.png"
-                            width="49px"
-                            height="286px"
+                            src="/images/landing/vector-stroke.png"
+                            width="114px"
+                            height="162px"
                             style={{
                               position: "absolute",
                               right: "0%",
-                              bottom: "0%",
-                              zIndex: "1",
+                              top: "20px",
+                            }}
+                          />
+                          <Img
+                            src="/images/landing/vector-stroke1.png"
+                            width="70px"
+                            height="181px"
+                            style={{
+                              position: "absolute",
+                              right: "11.25em",
+                              top: "20px",
+                            }}
+                          />
+                          <Img
+                            src="/images/landing/vector-stroke2.png"
+                            width="106px"
+                            height="151px"
+                            style={{
+                              position: "absolute",
+                              left: "0%",
+                              bottom: "0.8em",
                             }}
                           />
                         </Div>
-                      </Grid>
 
-                      <Div
-                        border="3px solid black"
-                        flexWrap="wrap"
-                        position="absolute"
-                        top_tablet="6.5em"
-                        right_tablet="15%"
-                        left_tablet="45%"
-                        top_lg="6.5em"
-                        right_lg="11%"
-                        left_lg="50%"
-                        zIndex="1"
-                        padding="20px"
-                        background={Colors.white}
-                        boxShadow="20px 15px 0px 0px rgba(0,0,0,1)"
-                      >
-                        <H2 textAlign="start" lineHeight_tablet="36px" margin="0 0 12px 0">
-                          {m.title}
-                        </H2>
-                        {m.text && /<\/?[a-z0-9]+>/g.test(m.text) ? (
-                          <Paragraph
-                            textAlign="start"
-                            margin="12px 0 0 0"
-                            dangerouslySetInnerHTML={{ __html: m.text }}
-                          />
-                        ) : m.text ? (
-                          <Paragraph textAlign="start" margin="12px 0 0 0">
-                            {m.text}
-                          </Paragraph>
-                        ) : null}
-
-                        {m.button.text && (
-                          <Button
-                            background={m.button.color}
-                            color={Colors.white}
-                            margin="20px 0 0 0"
-                          >
-                            {m.button.text}
-                          </Button>
-                        )}
-                      </Div>
-                    </Div>
-
-                    {/* Version mobile */}
-
-                    <Div
-                      display_xss="flex"
-                      display_tablet="none"
-                      position="relative"
-                      flexDirection="Column"
-                      margin="0 auto 30% auto"
-                    >
-
-                      <Img
-                        src={m.image.childImageSharp.gatsbyImageData}
-                        width="23.43em"
-                        height="533px"
-                        backgroundSize="contain"
-                      />
-
-                      <Img
-                        src="/images/landing/vector-stroke2.png"
-                        width="106px"
-                        height="151px"
-                        style={{
-                          position: "absolute",
-                          left: "5%",
-                          bottom: "-30%",
-                        }}
-                      />
-
-                      <Img
-                        src="/images/landing/group-2.png"
-                        width="49px"
-                        height="286px"
-                        style={{
-                          position: "absolute",
-                          right: "14%",
-                          bottom: "-25%",
-                          zIndex: "1",
-                        }}
-                      />
-
-                      <Div
-                        border="3px solid black"
-                        flexWrap="wrap"
-                        position="absolute"
-                        top="60%"
-                        zIndex="1"
-                        padding="20px"
-                        margin="10px"
-                        background={Colors.white}
-                        boxShadow="20px 15px 0px 0px rgba(0,0,0,1)"
-                      >
-                        <H2 textAlign="start" lineHeight_tablet="36px" margin="0 0 12px 0">
-                          {m.title}
-                        </H2>
-                        {m.text && /<\/?[a-z0-9]+>/g.test(m.text) ? (
-                          <Paragraph
-                            textAlign="start"
-                            margin="12px 0 0 0"
-                            dangerouslySetInnerHTML={{ __html: m.text }}
-                          />
-                        ) : m.text ? (
-                          <Paragraph textAlign="start" margin="12px 0 0 0">
-                            {m.text}
-                          </Paragraph>
-                        ) : m.text}
-
-                        {m.button && (
-                          <Button
-                            background={m.button.color}
-                            color={Colors.white}
-                            margin="20px 0 0 0"
-                          >
-                            {m.button.text}
-                          </Button>
-                        )}
-                      </Div>
-                    </Div>
-                  </Div>
-                  :
-                  <React.Fragment key={`${i}-${m.title}`}>
-                    <GridContainerWithImage
-                      imageSide={i % 2 != 0 ? "left" : "right"}
-                      padding_tablet="36px 0 100px 0"
-                      columns_tablet="14"
-                      maxWidth_tablet="1366px"
-                      margin_tablet="0 auto"
-                    >
-                      <Div
-                        flexDirection="column"
-                        justifyContent_tablet="start"
-                        padding="0px 24px 0"
-                        padding_tablet="0"
-                        gridArea_tablet={i % 2 == 0 ? "1/1/1/6" : "1/7/1/13"}
-                      >
-                        <H2
-                          key={i}
-                          type="h2"
-                          padding="20px 0"
-                          lineHeight="36px"
-                          textAlign="center"
-                          textAlign_tablet="left"
-                          margin="0"
-                          fontWeight="900"
-                          fontSize="30px"
-                        >
-                          {m.title}
-                        </H2>
-                        {m.sub ? (
-                          <>
-                            {m.sub?.map((sub, index) => {
-                              return (
-                                <React.Fragment
-                                  key={`${index}-${sub.title || sub.text}`}
-                                >
-                                  <Div display="" inline>
-                                    <Icon
-                                      icon={"check"}
-                                      width="13px"
-                                      display="inline"
-                                      color={Colors.blue}
-                                      fill={Colors.yellow}
-                                      style={{ strokeWidth: "2px" }}
-                                    />
-                                    <H3
-                                      type="h3"
-                                      padding="10px 0px"
-                                      textAlign="left"
-                                      margin="0"
-                                      fontWeight="900"
-                                      textTransform="uppercase"
-                                      fontSize="15px"
-                                    >
-                                      {sub?.title}
-                                    </H3>
-                                  </Div>
-                                  <Paragraph
-                                    letterSpacing="0.05em"
-                                    textAlign="left"
-                                    margin="0 0 20px 0"
-                                    fontSize="15px"
-                                    lineHeight="26px"
-                                    dangerouslySetInnerHTML={{ __html: sub?.text }}
-                                  />
-                                </React.Fragment>
-                              );
-                            })}
-                          </>
-                        ) : (
-                          <>
-                            <Paragraph
-                              letterSpacing="0.05em"
-                              fontSize="15px"
-                              textAlign="left"
-                              margin="0 0 20px 0"
-                              lineHeight="22px"
-                              dangerouslySetInnerHTML={{ __html: m?.text }}
-                            />
-                          </>
-                        )}
-                      </Div>
-                      <Div
-                        height="auto"
-                        width="100%"
-                        gridArea_tablet={i % 2 == 0 ? "1/7/1/13" : "1/1/1/6"}
-                        style={{ position: "relative" }}
-                      >
-                        {i === 0 ? (
-                          <>
-                            <Div
-                              display="none"
-                              display_md="flex"
-                              style={{
-                                position: "absolute",
-                                background: "#F5F5F5",
-                                width: "101%",
-                                height: "282px",
-                                top: "-25px",
-                                left: "-35px",
-                                borderRadius: "3px",
-                              }}
-                            />
-                            <Div
-                              display="none"
-                              display_md="flex"
-                              style={{
-                                position: "absolute",
-                                background: "#FFB718",
-                                width: "256px",
-                                height: "256px",
-                                bottom: "-20px",
-                                right: "-45px",
-                                borderRadius: "3px",
-                              }}
-                            />
-                          </>
-                        ) : i === 1 ? (
-                          <>
-                            <Div
-                              display="none"
-                              display_md="flex"
-                              style={{
-                                position: "absolute",
-                                background: "#F5F5F5",
-                                width: "101%",
-                                height: "282px",
-                                top: "-25px",
-                                left: "30px",
-                                borderRadius: "3px",
-                              }}
-                            />
-                          </>
-                        ) : (
-                          <>
-                            <Div
-                              display="none"
-                              display_md="flex"
-                              style={{
-                                position: "absolute",
-                                background: "#F5F5F5",
-                                width: "101%",
-                                height: "282px",
-                                top: "-25px",
-                                left: "25px",
-                                borderRadius: "3px",
-                              }}
-                            />
-                            <Div
-                              display="none"
-                              display_md="flex"
-                              style={{
-                                position: "absolute",
-                                background: "#0097CD",
-                                width: "256px",
-                                height: "256px",
-                                bottom: "-20px",
-                                right: "0px",
-                                borderRadius: "3px",
-                              }}
-                            />
-                          </>
-                        )}
-                        <StyledBackgroundSection
-                          height={`350px`}
-                          // width={`85%`}
-                          borderRadius={`3px`}
-                          image={m.image.childImageSharp.gatsbyImageData}
-                          bgSize={`contain`}
-                          alt="geekforce image"
+                        <Img
+                          src="/images/landing/group-2.png"
+                          width="49px"
+                          height="286px"
+                          style={{
+                            position: "absolute",
+                            right: "0%",
+                            bottom: "0%",
+                            zIndex: "1",
+                          }}
                         />
                       </Div>
-                    </GridContainerWithImage>
+                    </Grid>
 
-                  </React.Fragment>
-                }
-              </>
-            )
-          })
-        }
+                    <Div
+                      border="3px solid black"
+                      flexWrap="wrap"
+                      position="absolute"
+                      top_tablet="6.5em"
+                      right_tablet="15%"
+                      left_tablet="45%"
+                      top_lg="6.5em"
+                      right_lg="11%"
+                      left_lg="50%"
+                      zIndex="1"
+                      padding="20px"
+                      background={Colors.white}
+                      boxShadow="20px 15px 0px 0px rgba(0,0,0,1)"
+                    >
+                      <H2
+                        textAlign="start"
+                        lineHeight_tablet="36px"
+                        margin="0 0 12px 0"
+                      >
+                        {m.title}
+                      </H2>
+                      {m.text && /<\/?[a-z0-9]+>/g.test(m.text) ? (
+                        <Paragraph
+                          textAlign="start"
+                          margin="12px 0 0 0"
+                          dangerouslySetInnerHTML={{ __html: m.text }}
+                        />
+                      ) : m.text ? (
+                        <Paragraph textAlign="start" margin="12px 0 0 0">
+                          {m.text}
+                        </Paragraph>
+                      ) : null}
+
+                      {m.button.text && (
+                        <Button
+                          background={m.button.color}
+                          color={Colors.white}
+                          margin="20px 0 0 0"
+                        >
+                          {m.button.text}
+                        </Button>
+                      )}
+                    </Div>
+                  </Div>
+
+                  {/* Version mobile */}
+
+                  <Div
+                    display_xss="flex"
+                    display_tablet="none"
+                    position="relative"
+                    flexDirection="Column"
+                    margin="0 auto 30% auto"
+                  >
+                    <Img
+                      src={m.image.childImageSharp.gatsbyImageData}
+                      width="23.43em"
+                      height="533px"
+                      backgroundSize="contain"
+                    />
+
+                    <Img
+                      src="/images/landing/vector-stroke2.png"
+                      width="106px"
+                      height="151px"
+                      style={{
+                        position: "absolute",
+                        left: "5%",
+                        bottom: "-30%",
+                      }}
+                    />
+
+                    <Img
+                      src="/images/landing/group-2.png"
+                      width="49px"
+                      height="286px"
+                      style={{
+                        position: "absolute",
+                        right: "14%",
+                        bottom: "-25%",
+                        zIndex: "1",
+                      }}
+                    />
+
+                    <Div
+                      border="3px solid black"
+                      flexWrap="wrap"
+                      position="absolute"
+                      top="60%"
+                      zIndex="1"
+                      padding="20px"
+                      margin="10px"
+                      background={Colors.white}
+                      boxShadow="20px 15px 0px 0px rgba(0,0,0,1)"
+                    >
+                      <H2
+                        textAlign="start"
+                        lineHeight_tablet="36px"
+                        margin="0 0 12px 0"
+                      >
+                        {m.title}
+                      </H2>
+                      {m.text && /<\/?[a-z0-9]+>/g.test(m.text) ? (
+                        <Paragraph
+                          textAlign="start"
+                          margin="12px 0 0 0"
+                          dangerouslySetInnerHTML={{ __html: m.text }}
+                        />
+                      ) : m.text ? (
+                        <Paragraph textAlign="start" margin="12px 0 0 0">
+                          {m.text}
+                        </Paragraph>
+                      ) : (
+                        m.text
+                      )}
+
+                      {m.button && (
+                        <Button
+                          background={m.button.color}
+                          color={Colors.white}
+                          margin="20px 0 0 0"
+                        >
+                          {m.button.text}
+                        </Button>
+                      )}
+                    </Div>
+                  </Div>
+                </Div>
+              ) : (
+                <React.Fragment key={`${i}-${m.title}`}>
+                  <GridContainerWithImage
+                    imageSide={i % 2 != 0 ? "left" : "right"}
+                    padding_tablet="36px 0 100px 0"
+                    columns_tablet="14"
+                    maxWidth_tablet="1366px"
+                    margin_tablet="0 auto"
+                  >
+                    <Div
+                      flexDirection="column"
+                      justifyContent_tablet="start"
+                      padding="0px 24px 0"
+                      padding_tablet="0"
+                      gridArea_tablet={i % 2 == 0 ? "1/1/1/6" : "1/7/1/13"}
+                    >
+                      <H2
+                        key={i}
+                        type="h2"
+                        padding="20px 0"
+                        lineHeight="36px"
+                        textAlign="center"
+                        textAlign_tablet="left"
+                        margin="0"
+                        fontWeight="900"
+                        fontSize="30px"
+                      >
+                        {m.title}
+                      </H2>
+                      {m.sub ? (
+                        <>
+                          {m.sub?.map((sub, index) => {
+                            return (
+                              <React.Fragment
+                                key={`${index}-${sub.title || sub.text}`}
+                              >
+                                <Div display="" inline>
+                                  <Icon
+                                    icon={"check"}
+                                    width="13px"
+                                    display="inline"
+                                    color={Colors.blue}
+                                    fill={Colors.yellow}
+                                    style={{ strokeWidth: "2px" }}
+                                  />
+                                  <H3
+                                    type="h3"
+                                    padding="10px 0px"
+                                    textAlign="left"
+                                    margin="0"
+                                    fontWeight="900"
+                                    textTransform="uppercase"
+                                    fontSize="15px"
+                                  >
+                                    {sub?.title}
+                                  </H3>
+                                </Div>
+                                <Paragraph
+                                  letterSpacing="0.05em"
+                                  textAlign="left"
+                                  margin="0 0 20px 0"
+                                  fontSize="15px"
+                                  lineHeight="26px"
+                                  dangerouslySetInnerHTML={{
+                                    __html: sub?.text,
+                                  }}
+                                />
+                              </React.Fragment>
+                            );
+                          })}
+                        </>
+                      ) : (
+                        <>
+                          <Paragraph
+                            letterSpacing="0.05em"
+                            fontSize="15px"
+                            textAlign="left"
+                            margin="0 0 20px 0"
+                            lineHeight="22px"
+                            dangerouslySetInnerHTML={{ __html: m?.text }}
+                          />
+                        </>
+                      )}
+                    </Div>
+                    <Div
+                      height="auto"
+                      width="100%"
+                      gridArea_tablet={i % 2 == 0 ? "1/7/1/13" : "1/1/1/6"}
+                      style={{ position: "relative" }}
+                    >
+                      {i === 0 ? (
+                        <>
+                          <Div
+                            display="none"
+                            display_md="flex"
+                            style={{
+                              position: "absolute",
+                              background: "#F5F5F5",
+                              width: "101%",
+                              height: "282px",
+                              top: "-25px",
+                              left: "-35px",
+                              borderRadius: "3px",
+                            }}
+                          />
+                          <Div
+                            display="none"
+                            display_md="flex"
+                            style={{
+                              position: "absolute",
+                              background: "#FFB718",
+                              width: "256px",
+                              height: "256px",
+                              bottom: "-20px",
+                              right: "-45px",
+                              borderRadius: "3px",
+                            }}
+                          />
+                        </>
+                      ) : i === 1 ? (
+                        <>
+                          <Div
+                            display="none"
+                            display_md="flex"
+                            style={{
+                              position: "absolute",
+                              background: "#F5F5F5",
+                              width: "101%",
+                              height: "282px",
+                              top: "-25px",
+                              left: "30px",
+                              borderRadius: "3px",
+                            }}
+                          />
+                        </>
+                      ) : (
+                        <>
+                          <Div
+                            display="none"
+                            display_md="flex"
+                            style={{
+                              position: "absolute",
+                              background: "#F5F5F5",
+                              width: "101%",
+                              height: "282px",
+                              top: "-25px",
+                              left: "25px",
+                              borderRadius: "3px",
+                            }}
+                          />
+                          <Div
+                            display="none"
+                            display_md="flex"
+                            style={{
+                              position: "absolute",
+                              background: "#0097CD",
+                              width: "256px",
+                              height: "256px",
+                              bottom: "-20px",
+                              right: "0px",
+                              borderRadius: "3px",
+                            }}
+                          />
+                        </>
+                      )}
+                      <StyledBackgroundSection
+                        height={`350px`}
+                        // width={`85%`}
+                        borderRadius={`3px`}
+                        image={m.image.childImageSharp.gatsbyImageData}
+                        bgSize={`contain`}
+                        alt="geekforce image"
+                      />
+                    </Div>
+                  </GridContainerWithImage>
+                </React.Fragment>
+              )}
+            </>
+          );
+        })}
     </>
   );
 };
@@ -685,7 +699,7 @@ export const query = graphql`
               }
             }
             position
-            button{
+            button {
               link
               text
               color
