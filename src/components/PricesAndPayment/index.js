@@ -528,7 +528,7 @@ const PricesAndPayments = (props) => {
         gridGap="0"
       >
         <Div
-          gridColumn_md="2/19"
+          gridColumn_md="2/9"
           gridColumn_lg="2/16"
           gridColumn_tablet="2/10"
           alignItems="center"
@@ -572,11 +572,11 @@ const PricesAndPayments = (props) => {
               />
             )}
             &nbsp;
-            {course && (
+            {course && ( 
               <Div width_tablet="220px" width_md="320px" width_xs="320px">
                 <SelectRaw
                   bgColor={Colors.white}
-                  topLabel="Location"
+                  //topLabel="Location"
                   options={locations.map((l) => ({
                     label: l.node.name,
                     value: l.node.active_campaign_location_slug,
