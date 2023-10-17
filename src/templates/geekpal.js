@@ -48,8 +48,9 @@ const GeekPal = (props) => {
     <>
       <Grid
         padding="24px 20px"
-        padding_tablet="100px 40px"
-        padding_md="100px 80px"
+        padding_tablet="100px 40px 0 40px"
+        padding_md="100px 80px 0 80px"
+        padding_lg="100px 0px 0px 0px"
         columns_tablet="18"
         margin={
           isCustomBarActive(session)
@@ -70,6 +71,9 @@ const GeekPal = (props) => {
             right: "-150px",
             top: "-100px",
           }}
+          // display_xs="none"
+          // display_tablet="flex"
+
         />
         <Img
           src="/images/vector-stroke-light.png"
@@ -157,6 +161,7 @@ const GeekPal = (props) => {
         <Div
           height="auto"
           width="100%"
+          padding_xs="40px 0 0 0"
           padding_tablet="0"
           padding_md="0 0 0 10%"
           gridColumn_tablet="12 / 22"
@@ -178,6 +183,7 @@ const GeekPal = (props) => {
             boxShadow="15px 15px 0px 1px rgba(0,0,0,1)"
             zIndex="1"
             height_tablet="290px"
+            width="99%"
           >
             {yml.geekPal.map((item, i) => {
               return (
@@ -238,7 +244,7 @@ const GeekPal = (props) => {
           padding_tablet="50px 40px"
           padding_md="50px 80px"
           padding_lg="50px 0"
-          //className="badge-slider hideOverflowX__"
+        //className="badge-slider hideOverflowX__"
         >
           {Array.isArray(content.icons) &&
             content.icons?.map((item, index) => {
@@ -260,22 +266,23 @@ const GeekPal = (props) => {
           return (
             <>
               {i === 1 ? (
-                <Div maxWidth_tablet="1366px" margin_tablet="100px auto">
+                <Div maxWidth_tablet="1366px" margin_tablet="50px auto 0 auto">
                   <Div
                     display_xss="none"
                     display_tablet="flex"
                     position="relative"
                     justifyContent="center"
-                    margin_tablet="auto"
+                    //margin_tablet="auto"
                     padding_tablet="0 40px"
                     padding_md="0 80px"
                     padding_lg="0"
                   >
                     <Grid
-                      gridTemplateColumns_tablet="1fr repeat(14, 1fr) 1fr"
+                      gridTemplateColumns_lg="1fr repeat(24,1fr) 1fr"
+                      gridTemplateColumns_tablet="1fr repeat(14,1fr) 1fr"
                       gridGap="0px"
                     >
-                      <Div gridColumn="1 / 9">
+                      <Div gridColumn_tablet="1 / 9" gridColumn_lg="1 / 11">
                         <Img
                           src="/images/woman-afro-with-laptop.png"
                           width="33.3em"
@@ -285,7 +292,7 @@ const GeekPal = (props) => {
 
                       <Div
                         gridColumn="9 / 17"
-                        gridColumn_lg="9/ 22"
+                        gridColumn_lg="11 / 27"
                         position="relative"
                       >
                         <Div width="100%">
@@ -388,10 +395,10 @@ const GeekPal = (props) => {
                     display_tablet="none"
                     position="relative"
                     flexDirection="Column"
-                    margin="0 auto 30% auto"
+                    margin="-50px 20px 38% 20px"
                   >
                     <Img
-                      src={m.image.childImageSharp.gatsbyImageData}
+                      src="/images/woman-afro-with-laptop.png"
                       width="23.43em"
                       height="533px"
                       backgroundSize="contain"
@@ -452,7 +459,7 @@ const GeekPal = (props) => {
                         m.text
                       )}
 
-                      {m.button && (
+                      {m.button.text && (
                         <Button
                           background={m.button.color}
                           color={Colors.white}
@@ -464,11 +471,16 @@ const GeekPal = (props) => {
                     </Div>
                   </Div>
                 </Div>
+
               ) : (
                 <React.Fragment key={`${i}-${m.title}`}>
-                  <GridContainerWithImage
+                  <Grid
+                    gridTemplateColumns_tablet="repeat(19, 1fr)"
                     imageSide={i % 2 != 0 ? "left" : "right"}
-                    padding_tablet="36px 0 100px 0"
+                    padding_tablet="50px 40px 20px 40px"
+                    padding_md="50px 80px 20px 80px"
+                    padding_lg="100px 0"
+                    padding_xs="0 20px"
                     columns_tablet="14"
                     maxWidth_tablet="1366px"
                     margin_tablet="0 auto"
@@ -476,9 +488,10 @@ const GeekPal = (props) => {
                     <Div
                       flexDirection="column"
                       justifyContent_tablet="start"
-                      padding="0px 24px 0"
+                      padding="0"
                       padding_tablet="0"
-                      gridArea_tablet={i % 2 == 0 ? "1/1/1/6" : "1/7/1/13"}
+                      gridArea_lg={i % 2 == 0 ? "1/1/1/10" : "1/11/1/20"}
+                      gridArea_tablet={i % 2 == 0 ? "1/1/1/10" : "1/10/1/20"}
                     >
                       <H2
                         key={i}
@@ -488,7 +501,7 @@ const GeekPal = (props) => {
                         textAlign="center"
                         textAlign_tablet="left"
                         margin="0"
-                        fontWeight="900"
+                        fontWeight="700"
                         fontSize="30px"
                       >
                         {m.title}
@@ -511,7 +524,7 @@ const GeekPal = (props) => {
                                   />
                                   <H3
                                     type="h3"
-                                    padding="10px 0px"
+                                    padding="10px 0px 10px 5px"
                                     textAlign="left"
                                     margin="0"
                                     fontWeight="900"
@@ -526,7 +539,7 @@ const GeekPal = (props) => {
                                   textAlign="left"
                                   margin="0 0 20px 0"
                                   fontSize="15px"
-                                  lineHeight="26px"
+                                  lineHeight="22px"
                                   dangerouslySetInnerHTML={{
                                     __html: sub?.text,
                                   }}
@@ -551,94 +564,60 @@ const GeekPal = (props) => {
                     <Div
                       height="auto"
                       width="100%"
-                      gridArea_tablet={i % 2 == 0 ? "1/7/1/13" : "1/1/1/6"}
+                      padding_xs=""
+                      gridArea_lg={i % 2 == 0 ? "1/11/1/20" : "1/1/1/10"}
+                      gridArea_tablet={i % 2 == 0 ? "1/11/1/20" : "1/1/1/10"}
                       style={{ position: "relative" }}
                     >
                       {i === 0 ? (
                         <>
-                          <Div
-                            display="none"
-                            display_md="flex"
+                          <Img
+                            src="/images/Ellipse-79.png"
+                            width="164px"
+                            height="164px"
                             style={{
                               position: "absolute",
-                              background: "#F5F5F5",
-                              width: "101%",
-                              height: "282px",
-                              top: "-25px",
-                              left: "-35px",
-                              borderRadius: "3px",
+                              zIndex: "0",
                             }}
-                          />
-                          <Div
-                            display="none"
-                            display_md="flex"
-                            style={{
-                              position: "absolute",
-                              background: "#FFB718",
-                              width: "256px",
-                              height: "256px",
-                              bottom: "-20px",
-                              right: "-45px",
-                              borderRadius: "3px",
-                            }}
+                            right_lg="-11%"
+                            top_lg="-16%"
+                            right_md="-20%"
+                            top_md="0%"
+                            right_tablet="-25%"
+                            top_tablet="8%"
                           />
                         </>
-                      ) : i === 1 ? (
+                      ) : i === 2 && (
                         <>
-                          <Div
-                            display="none"
-                            display_md="flex"
+                          <Img
+                            src="/images/Ellipse-26.png"
+                            width="164px"
+                            height="164px"
                             style={{
                               position: "absolute",
-                              background: "#F5F5F5",
-                              width: "101%",
-                              height: "282px",
-                              top: "-25px",
-                              left: "30px",
-                              borderRadius: "3px",
+                              zIndex: "0",
                             }}
+                            right_lg="-10%"
+                            bottom_lg="-17%"
+                            right_md="-20%"
+                            bottom_md="0%"
+                            right_tablet="-25%"
+                            bottom_tablet="7%"
+                            right_xs="0%"
+                            bottom_xs="-5px"
                           />
                         </>
-                      ) : (
-                        <>
-                          <Div
-                            display="none"
-                            display_md="flex"
-                            style={{
-                              position: "absolute",
-                              background: "#F5F5F5",
-                              width: "101%",
-                              height: "282px",
-                              top: "-25px",
-                              left: "25px",
-                              borderRadius: "3px",
-                            }}
-                          />
-                          <Div
-                            display="none"
-                            display_md="flex"
-                            style={{
-                              position: "absolute",
-                              background: "#0097CD",
-                              width: "256px",
-                              height: "256px",
-                              bottom: "-20px",
-                              right: "0px",
-                              borderRadius: "3px",
-                            }}
-                          />
-                        </>
-                      )}
+                      )
+                      }
                       <StyledBackgroundSection
-                        height={`350px`}
+                        height="450px"
                         // width={`85%`}
-                        borderRadius={`3px`}
                         image={m.image.childImageSharp.gatsbyImageData}
                         bgSize={`contain`}
                         alt="geekforce image"
                       />
                     </Div>
-                  </GridContainerWithImage>
+                  </Grid>
                 </React.Fragment>
               )}
             </>

@@ -288,6 +288,7 @@ export const Div = styled.div`
     border-top: ${(props) => props.borderTop_tablet};
     top: ${(props) => props.top_tablet};
     right: ${(props) => props.right_tablet};
+    left: ${(props) => props.left_tablet};
     border-right: ${(props) => props.borderRight_tablet};
     border-bottom: ${(props) => props.borderBottom_tablet};
     border-radius: ${(props) => props.borderRadius_tablet};
@@ -344,9 +345,11 @@ export const Div = styled.div`
     padding: ${(props) => props.padding_lg};
     max-width: ${(props) => props.maxWidth_lg};
     min-width: ${(props) => props.minWidth_lg};
+    right: ${(props) => props.right_lg};
     left: ${(props) => props.left_lg};
     margin: ${(props) => props.margin_lg};
     transform: ${(props) => props.transform_lg};
+    grid-column: ${(props) => props.gridColumn_lg};
   }
   @media ${Devices.xl} {
   }
@@ -424,6 +427,8 @@ export const Grid = styled(Div)`
     display: ${(props) => props.display_md || "grid"};
   }
   @media ${Devices.lg} {
+    grid-template-columns: ${(props) => props.gridTemplateColumns_lg};
+    padding: ${(props) => props.padding_lg};
   }
   @media ${Devices.xl} {
   }

@@ -169,6 +169,7 @@ export const Span = styled.div`
 `;
 
 const StyledImage = styled.div`
+  display: ${(props) => props.display};
   background-image: url(${(props) => props.src});
   background-repeat: no-repeat;
   background-size: ${(props) => props.backgroundSize || "cover"};
@@ -189,10 +190,32 @@ const StyledImage = styled.div`
     width: ${(props) => props.w_sm};
   }
   @media ${Devices.xs} {
+    display: ${(props) => props.display_xs};
     left: ${(props) => props.left_xs};
+    right: ${(props) => props.right_xs};
+    top: ${(props) => props.top_xs};
+    bottom: ${(props) => props.bottom_xs};
+  }
+  @media ${Devices.tablet} {
+    display: ${(props) => props.display_tablet};
+    left: ${(props) => props.left_tablet};
+    right: ${(props) => props.right_tablet};
+    top: ${(props) => props.top_tablet};
+    bottom: ${(props) => props.bottom_tablet};
   }
   @media ${Devices.md} {
+    display: ${(props) => props.display_md};
     left: ${(props) => props.left_md};
+    right: ${(props) => props.right_md};
+    top: ${(props) => props.top_md};
+    bottom: ${(props) => props.bottom_md};
+  }
+  @media ${Devices.lg} {
+    display: ${(props) => props.display_lg};
+    left: ${(props) => props.left_lg};
+    right: ${(props) => props.right_lg};
+    top: ${(props) => props.top_lg};
+    bottom: ${(props) => props.bottom_lg};
   }
 `;
 export const Img = React.memo(StyledImage);
@@ -282,6 +305,7 @@ export const StyledBackgroundSection = styled(BackgroundSection)`
   text-align: ${(props) => props.align};
   border-radius: ${(props) => props.borderRadius};
   box-shadow: ${(props) => props.boxShadow};
+  position: ${(props) => props.position};
   background-repeat: no-repeat;
   margin: ${(props) => props.margin || "auto"};
   z-index: ${(props) => props.zIndex || 1};
