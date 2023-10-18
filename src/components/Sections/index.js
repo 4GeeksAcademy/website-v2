@@ -647,6 +647,9 @@ export const GridContainer = ({
   childHeight,
   displayChild,
   displayChild_tablet,
+  displayChild_xs,
+  displayChild_sm,
+  displayChild_md,
   columns_sm,
   justifyContentChild,
 }) => {
@@ -686,7 +689,10 @@ export const GridContainer = ({
       <Grid
         display={displayChild}
         justifyContent={justifyContentChild}
-        display_tablet={displayChild_tablet}
+        display_xs={displayChild_xs}
+        display_sm={displayChild_sm}
+        display_tablet={displayChild_tablet} 
+        display_md={displayChild_md}
         overflow={overflowChild}
         background={backgroundChild}
         gridGap={gridGap}
