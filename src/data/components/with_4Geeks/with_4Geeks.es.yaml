@@ -13,7 +13,7 @@ with:
     alt: ""
     video: "https://www.youtube.com/watch?v=ln3bQsV1BaQ" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     location: ["all"]
-    excluded_locations: ["barcelona-spain", "madrid-spain", "malaga-spain", "valencia-spain"]
+
     # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     icon: address
     footer:
@@ -29,7 +29,7 @@ with:
     alt: ""
     video: "https://www.youtube.com/watch?v=MBXqEnhodx0" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     location: ["all"]
-    excluded_locations: ["barcelona-spain", "madrid-spain", "malaga-spain", "valencia-spain"]
+
     # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     icon: address
     footer:
@@ -45,7 +45,7 @@ with:
     alt: ""
     video: "https://www.youtube.com/watch?v=PWkgaAT8pHg" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     location: ["all"]
-    excluded_locations: ["barcelona-spain", "madrid-spain", "malaga-spain", "valencia-spain"]
+
     # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     icon: address
     footer:
