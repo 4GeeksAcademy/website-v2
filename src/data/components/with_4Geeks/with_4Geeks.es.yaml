@@ -58,7 +58,7 @@ with:
 ## ***************************
 ## Spain Testimonials
 ## ***************************
-  - name: "Amira "
+  - name: "Amira"
     title: "Estarán ahí incluso después de que te hayas graduado para ayudarte"
     description: "Amira encontró un invaluable apoyo de por vida en 4Geeks Academy, siempre disponible cuando se necesita."
     image: ../../../../static/images/testimonials/Amira-testimonials-esp.jpg
@@ -68,15 +68,15 @@ with:
     icon: address
     footer:
       is_image: true
-      image: "/images/geekforce.png"
-      image_link: "/es/geekforce"
+      image: "/images/geekpal.png"
+      image_link: "/es/geekpal"
       text: ""
       text_link: ""
 
-  - name: "Rita "
+  - name: "Rita"
     title: "De técnico Ortopedico a programadora"
     description: "Rita transformó por completo su vida al dar un giro de 360 grados, y descubrió en 4Geeks Academy un apoyo inestimable, siempre presente cuando se requiere."
-    image: ../../../../static/images/testimonials/rita-testimonials.ong
+    image: ../../../../static/images/testimonials/rita-testimonials.png
     alt: ""
     video: "https://www.youtube.com/watch?v=I87ONvJB2OM" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     location: ["barcelona-spain", "malaga-spain", "valencia-spain"]
