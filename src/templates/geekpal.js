@@ -28,7 +28,7 @@ const GeekPal = (props) => {
   const { session } = React.useContext(SessionContext);
   const partnersData = data.allPartnerYaml.edges[0].node;
   const content = data.allPageYaml.edges[0].node;
-  
+
   const bulletIcons = [
     {
       icon: "elderly-fill",
@@ -61,6 +61,7 @@ const GeekPal = (props) => {
         maxWidth="1366px"
         position="relative"
         gridTemplateColumns_tablet="repeat(21, 1fr)"
+        gridGap="0px"
       >
         <Img
           src="/images/Ellipse-7.png"
@@ -74,7 +75,6 @@ const GeekPal = (props) => {
           }}
         // display_xs="none"
         // display_tablet="flex"
-
         />
         <Img
           src="/images/vector-stroke-light.png"
@@ -163,8 +163,9 @@ const GeekPal = (props) => {
           height="auto"
           width="100%"
           padding_xs="40px 0 0 0"
-          padding_tablet="0"
-          padding_md="0 0 0 10%"
+          padding_tablet="15% 0 0 0"
+          padding_md="0% 16px 0 10%"
+          padding_lg="0 15px 0 10%"
           gridColumn_tablet="12 / 22"
           position="relative"
         >
@@ -174,26 +175,29 @@ const GeekPal = (props) => {
             height="10px"
             style={{
               position: "absolute",
-              bottom: "0px",
+              // bottom: "0px",
             }}
             left_xs="0"
+            bottom_tablet="10%"
             left_md="10%"
+            bottom_md="10%"
+            bottom_lg="0%"
           />
           <Div
-            border="2px solid black"
-            boxShadow="15px 15px 0px 1px rgba(0,0,0,1)"
+            border="3px solid black"
+            boxShadow="13px 13px 0px 1px rgba(0,0,0,1)"
             zIndex="1"
-            height_tablet="290px"
-            width="99%"
+            height="fit-content"
+            width="100%"
           >
             {yml.geekPal.map((item, i) => {
               return (
                 <React.Fragment key={i}>
                   {item.videoId === "" ? (
                     <StyledBackgroundSection
-                      height={`290px`}
-                      width={`100%`}
-                      borderRadius={`3px`}
+                      height={`280px`}
+                      // width={`85%`}
+                      //borderRadius={`3px`}
                       image={item.image.childImageSharp.gatsbyImageData}
                       bgSize={`contain`}
                       alt="geekforce image"
@@ -204,10 +208,12 @@ const GeekPal = (props) => {
                       thumb={item.image}
                       //imageSize="maxresdefault"
                       videoHeight="350px"
+                      bgSize={`contain`}
                       style={{
                         width: "100%",
-                        height: "290px",
+                        height: "280px",
                       }}
+                      margin="-3px 0 0 0"
                     />
                   )}
                 </React.Fragment>
@@ -219,8 +225,6 @@ const GeekPal = (props) => {
 
       {/* ICONOGRAM-GEEKPAL */}
       <Div
-        //key={index}
-        //padding={heading.text ? "30px 0 60px 0" : "60px 0 60px 0"}
         display="flex"
         flexDirection="column"
         id="iconogram"
@@ -237,9 +241,6 @@ const GeekPal = (props) => {
           flexDirection="column"
           flexDirection_tablet="row "
           justifyContent="center"
-          // gap="45px"
-          //gap_tablet={content.icons.length > 4 ? "0px" : "5%"}
-          //gap_md="10%"
           maxWidth="1366px"
           margin="20px auto 0 auto"
           padding_tablet="50px 40px"
@@ -265,8 +266,8 @@ const GeekPal = (props) => {
       {Array.isArray(content.list) &&
         content.list.map((m, i) => {
           return (
-            <> 
-              {i === 1 ? (<>
+            <>
+            {i === 1 ? (
                 <Div maxWidth_tablet="1366px" margin_tablet="50px auto">
                   <Div
                     display_xss="none"
@@ -283,10 +284,12 @@ const GeekPal = (props) => {
                       gridGap="0px"
                     >
                       <Div gridColumn_tablet="1 / 9" gridColumn_lg="1 / 11">
-                        <Img
-                          src={m.image}
-                          width="33.3em"
-                          height="533px"
+                        <StyledBackgroundSection
+                          width_tablet="33.3em"
+                          height_tablet="533px"
+                          image={m.image.childImageSharp.gatsbyImageData}
+                          bgSize="cover"
+                          alt="geekforce image"
                         />
                       </Div>
 
@@ -354,6 +357,7 @@ const GeekPal = (props) => {
                       left_lg="50%"
                       zIndex="1"
                       padding="20px"
+                      margin_lg="0 0 0 0"
                       background={Colors.white}
                       boxShadow="20px 15px 0px 0px rgba(0,0,0,1)"
                     >
@@ -387,6 +391,7 @@ const GeekPal = (props) => {
                       )}
                     </Div>
                   </Div>
+
                   {/* Version mobile */}
 
                   <Div
@@ -394,15 +399,19 @@ const GeekPal = (props) => {
                     display_tablet="none"
                     position="relative"
                     flexDirection="Column"
-                    margin="-50px 20px 38% 20px"
+                    margin_sm="40px 20px 40% 20px"
+                    margin_xxs="40px 20px 65% 20px" // Modify the bottom margin if the floating box of the overlapped element overlaps the other component.
+                    margin_xs="40px 20px 50% 20px"
                   >
-                    <Img
-                      src="/images/landing/dos-mujeres-1.png"
-                      width="23.43em"
-                      height="533px"
-                      backgroundSize="contain"
+                    <StyledBackgroundSection
+                      width_xxs="280px"
+                      width_xs="335px"
+                      width_sm="385px"
+                      height_xxs="450px"
+                      image={m.image.childImageSharp.gatsbyImageData}
+                      //bgSize={`contain`}
+                      alt="geekforce image"
                     />
-
                     <Img
                       src="/images/landing/vector-stroke2.png"
                       width="106px"
@@ -430,7 +439,7 @@ const GeekPal = (props) => {
                       border="3px solid black"
                       flexWrap="wrap"
                       position="absolute"
-                      top="60%"
+                      top="50%"
                       zIndex="1"
                       padding="20px"
                       margin="10px"
@@ -439,7 +448,7 @@ const GeekPal = (props) => {
                     >
                       <H2
                         textAlign="start"
-                        lineHeight_tablet="36px"
+                        lineHeight_xxs="36px"
                         margin="0 0 12px 0"
                       >
                         {m.title}
@@ -471,27 +480,30 @@ const GeekPal = (props) => {
                   </Div>
                 </Div>
 
-              </>
               ) : (
                 <React.Fragment key={`${i}-${m.title}`}>
                   <Grid
-                    gridTemplateColumns_tablet="repeat(19, 1fr)"
+                    gridTemplateColumns_tablet="repeat(20, 1fr)"
                     imageSide={i % 2 != 0 ? "left" : "right"}
                     padding_tablet="50px 40px 20px 40px"
                     padding_md="50px 80px 20px 80px"
-                    padding_lg="100px 0"
-                    padding_xs="0 20px"
+                    padding_lg={i === 0 ? "50px 0 0 0" : "0 0 50px 0"}
+                    padding_xxs="0 20px"
                     columns_tablet="14"
                     maxWidth_tablet="1366px"
                     margin_tablet="0 auto"
+                    gridGap="0px"
                   >
                     <Div
-                      flexDirection="column"
+                      flexDirection="row"
+                      flexWrap="wrap"
                       justifyContent_tablet="start"
+                      alignContent={i % 2 == 0 ? "center" : "flex-start"}
                       padding="0"
-                      padding_tablet="0"
-                      gridArea_lg={i % 2 == 0 ? "1/1/1/10" : "1/11/1/20"}
-                      gridArea_tablet={i % 2 == 0 ? "1/1/1/10" : "1/10/1/20"}
+                      padding_tablet={i % 2 == 0 ? "0 14px 0 0" : "0 0 0 14px"}
+                      padding_lg={i % 2 == 0 ? "0 25px 0 0" : "0 0 0 23px"}
+                      gridArea_lg={i % 2 == 0 ? "1/1/1/11" : "1/11/1/21"}
+                      gridArea_tablet={i % 2 == 0 ? "1/1/1/11" : "1/11/1/21"}
                     >
                       <H2
                         key={i}
@@ -564,53 +576,45 @@ const GeekPal = (props) => {
                     <Div
                       height="auto"
                       width="100%"
-                      padding_xs=""
-                      gridArea_lg={i % 2 == 0 ? "1/11/1/20" : "1/1/1/10"}
-                      gridArea_tablet={i % 2 == 0 ? "1/11/1/20" : "1/1/1/10"}
+                      margin_xs={i % 2 != 0 && "0 0 20px 0"}
+                      margin_sm={i % 2 == 0 && "0 0 20px 0"}
+                      margin_tablet="0px"
+                      padding_lg={i === 0 ? "0 0 0 0" : "0 0 0 0"}
+                      gridArea_lg={i % 2 == 0 ? "1/11/1/21" : "1/1/1/11"}
+                      gridArea_tablet={i % 2 == 0 ? "1/11/1/21" : "1/1/1/11"}
                       style={{ position: "relative" }}
                     >
                       {i === 0 ? (
                         <>
                           <Img
                             src="/images/Ellipse-79.png"
+                            display_xxs="none"
+                            display_tablet="flex"
                             width="164px"
                             height="164px"
                             style={{
                               position: "absolute",
                               zIndex: "0",
                             }}
-                            right_lg="-11%"
-                            top_lg="-16%"
-                            right_md="-20%"
-                            top_md="0%"
+                            right_lg="-7%"
+                            top_lg="-4%"
+                            right_md="-15%"
+                            top_md="-12%"
                             right_tablet="-25%"
                             top_tablet="8%"
                           />
                         </>
                       ) : i === 2 && (
                         <>
-                          <Img
-                            src="/images/Ellipse-26.png"
-                            width="164px"
-                            height="164px"
-                            style={{
-                              position: "absolute",
-                              zIndex: "0",
-                            }}
-                            right_lg="-10%"
-                            bottom_lg="-17%"
-                            right_md="-20%"
-                            bottom_md="0%"
-                            right_tablet="-25%"
-                            bottom_tablet="7%"
-                            right_xs="0%"
-                            bottom_xs="-5px"
-                          />
+                          
                         </>
                       )
                       }
                       <StyledBackgroundSection
-                        height="450px"
+                        height_lg={i===0 ?"600px" : "600px"}
+                        height_xxs="200px"
+                        height_xs="300px"
+                        height_tablet="350px"
                         // width={`85%`}
                         image={m.image.childImageSharp.gatsbyImageData}
                         bgSize={`contain`}

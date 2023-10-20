@@ -36,7 +36,7 @@ icons:
     
 list:
   - title: "Apoyo Profesional Ilimitado"
-    image: "../../../static/images/final-project-new.png"
+    image: "../../../static/images/Group-6611.png"
     position: "right"
     sub:
       - title: "CLASES EXCLUSIVAS"
@@ -47,7 +47,7 @@ list:
         <span style='font-weight: bold'> mentorias ilimitadas continúan</span> incluso después de haber finalizado tus estudios en 4geeks."
         
   - title: "Dónde sea y cuando sea"
-    image: "../../../static/images/bg/main-bg.jpg"
+    image: "../../../static/images/woman-afro-with-laptop.png"
     position: "left"
     text: "En 4Geeks no solo ajustamos las sesiones 
     <span style='font-weight: bold'> acordes tu calendario</span>, sino que también te damos la oportunidad de verlas de forma 
@@ -55,7 +55,7 @@ list:
     <br/>En cualquier sea el caso, te aseguramos tener la oportunidad de mentorias constantes y siempre que las necesites."
 
   - title: "Apoyo de la Comunidad"
-    image: "../../../static/images/comunity-support.png"
+    image: "../../../static/images/landing/grupo-ventanas.png"
     position: "right"
     sub:
       - title: "4Geeks.com"

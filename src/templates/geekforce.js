@@ -119,6 +119,21 @@ const GeekForce = (props) => {
 
           {Array.isArray(yml.header.bullets) &&
             yml.header.bullets.map((bullet, index) => (
+            <Div >
+              <Icon
+                style={{
+                  background:
+                    bulletIcons[index % bulletIcons.length].background,
+                  padding: "5px",
+                  transform:
+                    bulletIcons[index % bulletIcons.length]?.transform,
+                  fontWeight: "bolder",
+                }}
+                width="20px"
+                height="20px"
+                icon={bulletIcons[index % bulletIcons.length].icon}
+                color="white"
+              />
               <Paragraph
                 zIndex="2"
                 key={index}
@@ -129,22 +144,9 @@ const GeekForce = (props) => {
                 textAlign="left"
                 color="black"
               >
-                <Icon
-                  style={{
-                    background:
-                      bulletIcons[index % bulletIcons.length].background,
-                    padding: "5px",
-                    transform:
-                      bulletIcons[index % bulletIcons.length]?.transform,
-                    fontWeight: "bolder",
-                  }}
-                  width="20px"
-                  height="20px"
-                  icon={bulletIcons[index % bulletIcons.length].icon}
-                  color="white"
-                />
                 {" " + bullet}
               </Paragraph>
+            </Div>
             ))}
           <Img
             src="/images/vector-stroke-left.png"
@@ -164,8 +166,8 @@ const GeekForce = (props) => {
           width="100%"
           padding_xs="40px 0 0 0"
           padding_tablet="20% 0 0 0"
-          padding_md="15% 17px 0 10%"
-          padding_lg="0 17px 0 10%"
+          padding_md="0% 14px 0 10%"
+          padding_lg="0 14px 0 10%"
           gridColumn_tablet="12 / 22"
           position="relative"
         >
@@ -402,8 +404,10 @@ const GeekForce = (props) => {
                     display_tablet="none"
                     position="relative"
                     flexDirection="Column"
-                    margin_sm="40px 20px 45% 20px"
-                    margin_xxs="40px 20px 60% 20px"
+                    margin_sm="0 auto"
+                    padding_sm="40px 20px 45% 20px"
+                    margin_xxs="40px 20px 65% 20px" // Modify the bottom margin if the floating box of the overlapped element overlaps the other component.
+                    margin_xs="40px 20px 60% 20px"
                   >
                     <StyledBackgroundSection
                       width_xxs="280px"
@@ -487,9 +491,9 @@ const GeekForce = (props) => {
                   <Grid
                     gridTemplateColumns_tablet="repeat(20, 1fr)"
                     imageSide={i % 2 != 0 ? "left" : "right"}
-                    padding_tablet="50px 40px 20px 40px"
+                    padding_tablet={i === 0 ? "50px 40px 0px 40px" : "0px 40px 50px 40px"} //Designed for 2 components
                     padding_md="50px 80px 20px 80px"
-                    padding_lg="100px 0"
+                    padding_lg={i === 0 ? "100px 0 50px 0" : "50px 0 100px 0"}
                     padding_xxs="0 20px"
                     columns_tablet="14"
                     maxWidth_tablet="1366px"
@@ -534,8 +538,9 @@ const GeekForce = (props) => {
                                     display="inline"
                                     color={Colors.blue}
                                     fill={Colors.yellow}
-                                    style={{ strokeWidth: "2px", 
-                                    margin: "0 5px 0 0"
+                                    style={{
+                                      strokeWidth: "2px",
+                                      margin: "0 5px 0 0"
                                     }}
                                   />
                                   <H3
@@ -631,7 +636,7 @@ const GeekForce = (props) => {
                       )}
                       <StyledBackgroundSection
                         height_xxs="200px"
-                        height_xs="350px"
+                        height_xs="300px"
                         height_lg="450px"
                         width="100%"
                         image={m.image.childImageSharp.gatsbyImageData}

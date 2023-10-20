@@ -9,10 +9,10 @@ meta_info:
 
 seo_title: "geekforce"
 header:
-  title: ""
+  title: "<strong style='color:black; font-weight:700;'>Geek</strong> <strong style = 'color:rgba(255, 183, 24, 1); font-weight:bold;'>FORCE</strong> <br> es el proceso colectivo de apoyo profesional en la Academia"
   image: "../../../static/images/bg/companies-bg.jpg"
   image_alt: ""
-  paragraph: "GeekForce es el proceso colectivo de apoyo profesional en la Academia. La 'fuerza' significa empoderamiento profesional y es una membresía de por vida. Brinda asistencia para la colocación laboral del estudiante y para que se prepare para conseguir un trabajo en tecnología."
+  paragraph: "La 'fuerza' significa empoderamiento profesional y es una membresía de por vida. Brinda asistencia para la colocación laboral del estudiante y para que se prepare para conseguir un trabajo en tecnología."
   image_logo: "/images/geekforce.png"
 
 geekForce:
@@ -36,9 +36,9 @@ list:
     sub:
       - title: "Asesoría y creación de perfil profesional"
         text: "En 4Geeks te ayudaremos a perfeccionar tu perfil profesional. Contarás con la asesoría personalizada con nuestros expertos para mejorar tu CV, Linkedin, GitHub y Portafolio."
- 
+
   - title: "Simulación de Entrevistas"
-    image: "../../../static/images/entrevista-tecnica.png"
+    image: "../../../static/images/landing/dos-mujeres-1.png"
     position: "left"
     text: "Realizaremos simulacros de entrevistas para evaluar sus fortalezas y debilidades para crear un perfil más fuerte antes de las entrevistas reales. Cada vez que tenga una entrevista, practicaremos el uso de diferentes tecnologías. Tenemos nuestro propio grupo de ejercicios autocalificados, por lo que puede practicar hasta que domine las habilidades para obtener el trabajo que desea."
     
@@ -48,7 +48,7 @@ list:
     position: "right"
     text: "Iniciar una carrera en tecnología implica evaluar su situación actual y tomar decisiones informadas sobre el futuro. Requiere evaluación de usted mismo, su contexto y ACCIÓN. Puede hacer esto solo; o puede confiar en la experiencia de un mentor que puede brindarle
     perspectiva, información y acceso a los recursos adecuados. En 4Geeks ajustamos las sesiones según tu calendario, también le damos la oportunidad de tenerlos en línea o en persona. En cualquier caso, te aseguramos que tienes la oportunidad de una mentoría constante siempre que la necesites." 
-   
+  
 # benefits:
 #   - p:
 #     heading: "Personal"

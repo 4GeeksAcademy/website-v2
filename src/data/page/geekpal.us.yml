@@ -51,7 +51,7 @@ list:
         <span style='font-weight: bold'> unlimited mentoring continues</span> even after you finish your studies at 4Geeks."
 
   - title: "Wherever and whenever"
-    image: "/images/woman-afro-with-laptop.png"
+    image: "../../../static/images/woman-afro-with-laptop.png"
     position: "left"
     text: "In 4Geeks we not only adjust the sessions 
     <span style='font-weight: bold'> according to your calendar</span>, but we also give you the opportunity to see them 
@@ -63,7 +63,7 @@ list:
       color: "black"
 
   - title: "Community Support"
-    image: "../../../static/images/Group-6606.png"
+    image: "../../../static/images/landing/grupo-ventanas.png"
     position: "right"
     sub:
       - title: "4Geeks.com"
