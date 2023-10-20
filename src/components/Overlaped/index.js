@@ -40,7 +40,7 @@ const Overlaped = ({
   return (
     <Div maxWidth_tablet="1366px" margin_tablet="100px auto">
       <Div
-        display_xss="none"
+        display_xxs="none"
         display_tablet="flex"
         position="relative"
         justifyContent="center"
@@ -147,7 +147,7 @@ const Overlaped = ({
       {/* Version mobile */}
 
       <Div
-        display_xss="flex"
+        display_xxs="flex"
         display_tablet="none"
         position="relative"
         flexDirection="Column"
