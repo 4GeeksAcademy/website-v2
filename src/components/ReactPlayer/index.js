@@ -110,7 +110,7 @@ const Player = ({
   transformPlay_lg,
   leftPlay_tablet,
   margin_tablet,
-  
+
   ...rest
 }) => {
   const [showVideo, setShowVideo] = React.useState(false);
@@ -213,7 +213,7 @@ const Player = ({
           position="relative"
           boxShadow={image_thumb?.shadow && "20px 15px 0px 0px rgba(0,0,0,1)"}
           //border={image_thumb?.shadow && "3px solid black"}
-          style={imgStyles && {...JSON.parse(image_thumb?.style)}}
+          style={imgStyles && { ...JSON.parse(image_thumb?.style) }}
         >
           {id && (
             <Play
@@ -231,8 +231,8 @@ const Player = ({
               transformPlay_tablet={transformPlay_tablet}
               transformPlay_md={transformPlay_md}
               transformPlay_lg={transformPlay_lg}
-            // width_md={width_play}
-            // heigth_md={height_play}
+              // width_md={width_play}
+              // heigth_md={height_play}
             />
           )}
           {thumb && thumb.childImageSharp ? (
@@ -272,13 +272,13 @@ const Player = ({
 export default Player;
 
 Player.defaultProps = {
-  onPlay: () => { },
-  onPause: () => { },
-  onEnd: () => { },
-  onError: () => { },
-  onStateChange: () => { },
-  onPlaybackRateChange: () => { },
-  onPlaybackQualityChange: () => { },
+  onPlay: () => {},
+  onPause: () => {},
+  onEnd: () => {},
+  onError: () => {},
+  onStateChange: () => {},
+  onPlaybackRateChange: () => {},
+  onPlaybackQualityChange: () => {},
   imageSize: "default",
   playerVars: {},
   noCookies: false,
@@ -320,11 +320,11 @@ Player.propTypes = {
 };
 
 const Play = styled.button`
-  background: ${(props) => props.background || "rgba(0, 0, 0, 0.7)"} ;
+  background: ${(props) => props.background || "rgba(0, 0, 0, 0.7)"};
   border-radius: 3px;
   color: ${(props) => props.white};
   font-size: 1em;
-  height: 36px; 
+  height: 36px;
   padding: 0;
   text-align: center;
   text-indent: 0.1em;
@@ -333,9 +333,13 @@ const Play = styled.button`
   position: absolute !important;
   top: 50%;
   left: 50%;
-  transform: ${(props) => props.transformPlay || "translateX(-50%) translateY(-50%)"}; {/*translateX(-50%) translateY(-50%);*/}
+  transform: ${(props) =>
+    props.transformPlay || "translateX(-50%) translateY(-50%)"};
+   {
+    /*translateX(-50%) translateY(-50%);*/
+  }
   border: none;
-  opacity:  ${(props) => props.opacity || "0.8"};
+  opacity: ${(props) => props.opacity || "0.8"};
   cursor: pointer;
   z-index: 9;
   &:hover {
