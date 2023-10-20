@@ -1,0 +1,54 @@
+The following are capstone projects built by our students during our bootcamps:
+
+Project name: Raspberry Sky
+Description: A platform capable of receiving information (wind, temperature, geolocation, etc) from rockets being launched to outer space. The platform also lets you make arrangements to send your own rocket, track it and receive messages from it.
+Video demonstration: https://www.youtube.com/watch?v=OZfv9kYl0_o
+Github URL: https://github.com/Luis846/SatelliteBetaSoftware
+Live URL: https://sattelite-beta.vercel.app/
+Buit by: Luis Rivera and Naila Kaliyeva during the full-stack bootcamp
+
+---
+
+Project name: IMS: Inventory Tracking
+Description: IMS is a Pharmacy Inventory and logistics tracking system built using Python, Javascript, React, and integration with Barcode Readers, SMS, the Twillio API, and GPS Tracking Systems. IMS holds stock quantities of all products stored and sold by the Drug Store and then tracks the vehicles that deliver those sells.
+Video demonstration: https://www.youtube.com/watch?v=TTjSZ2Lud2E
+Github URL: https://github.com/sebastianpd1/IMS-FRONTEND
+Live URL: https://ims-frontend.vercel.app/react-hello-webapp/private/dashboard
+Buit by: Jonathan Perez and Sebastian Pinto and Paola Castro during the full-stack bootcamp
+
+---
+
+Project name: The Hour
+Description: Happy Hour! What are you doing today? The Hour is your perfect night sidekick, find happy hour information about bars, night clubs and what is happening in the city! This application stands out because of its UI/UX component, very easy to use, mobile first and build around React.js, Javascript and Headless Wordpress API for easy management.
+Video demonstration: https://www.youtube.com/watch?v=KTeOIU3eVrc
+Github URL: https://github.com/samirbenzada/Iwash
+Live URL: 
+Buit by: Darius Bounds and Christian Valdes during the full-stack bootcamp
+
+---
+
+Project name: WonderTracker
+Description: A platform capable of keeping your travel information and documents saved in an absolute secure system. It also lets you track places where you have been, and gather information that you thought was important to save for as long as you want - all in just one place.
+Video demonstration: 
+Github URL: https://github.com/gmihov001/Wandertracker_front-end
+Live URL: https://wandertrackerfront-end.gmihov001.now.sh
+Buit by: Fernando Funes and George Mihov during the full-stack bootcamp
+
+---
+
+Project name: iWash
+Description: iWash is an application integrating hardware and software towards building a platform capable of setting and launching Smart Laundry machines from your mobile device.  You can pay the cost of the service as well as set time, speed, type of laundry process, and receive notifications about the status of your laundry.
+Video demonstration: 
+Github URL: https://github.com/samirbenzada/Iwash
+Live URL: https://iwash-react.herokuapp.com/
+Buit by: Samir Benzada and Victor Mori during the full-stack bootcamp
+
+---
+
+Project name: reMindful
+Description: Generating awareness about recycling and considering all the steps that need to be covered. They have created an application that integrates both software and hardware that allows to weigh the amount of plastic, glass or garbage there is within a container and how much it will affect both the recycling process as well as the environment.
+Video demonstration: https://www.youtube.com/watch?v=cKcZD0_1IKk
+Github URL: https://github.com/gabsssrod/ReduceReuseRecycle-frontEnd
+Live URL: https://re-mindful.vercel.app/
+Buit by: Jordan Aguiriano and Gabriela Rodriguez during the full-stack bootcamp
+
