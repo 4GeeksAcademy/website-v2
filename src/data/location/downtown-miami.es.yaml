@@ -57,7 +57,7 @@ TwoColumnsCampus:
   proportions: [6, 6]
   image:
     style: '{ "backgroundSize": "contain" }'
-    src: "/images/staff/alissa.jpg"
+    src: "/images/staff/allisa.jpg"
   video: "https://www.youtube.com/watch?v=TCHASxvkhpI"
   heading:
     text: "4Geeks, Miami y una historia llena de oportunidades."
