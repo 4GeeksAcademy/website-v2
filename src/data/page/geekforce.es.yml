@@ -17,7 +17,7 @@ header:
 
 geekForce:
   - videoId: "ln3bQsV1BaQ"
-    image: ../../../static/images/staff/hernan.png
+    image: ../../../static/images/staff/hernan-new.png
 
 icons:
   - icon: "contract-checked"
@@ -31,10 +31,10 @@ icons:
 
 list:
   - title: "Apoyo Profesional Ilimitado"
-    image: "../../../static/images/perfil-profesional.png"
+    image: "../../../static/images/Group-6618-2.png"
     position: "right"
     sub:
-      - title: "✔ Asesoría y creación de perfil profesional"
+      - title: "Asesoría y creación de perfil profesional"
         text: "En 4Geeks te ayudaremos a perfeccionar tu perfil profesional. Contarás con la asesoría personalizada con nuestros expertos para mejorar tu CV, Linkedin, GitHub y Portafolio."
  
   - title: "Simulación de Entrevistas"
@@ -44,7 +44,7 @@ list:
     
 
   - title: "Mentorías de por vida"
-    image: "../../../static/images/bg/main-bg.jpg"
+    image: "../../../static/images/Group-6617.png"
     position: "right"
     text: "Iniciar una carrera en tecnología implica evaluar su situación actual y tomar decisiones informadas sobre el futuro. Requiere evaluación de usted mismo, su contexto y ACCIÓN. Puede hacer esto solo; o puede confiar en la experiencia de un mentor que puede brindarle
     perspectiva, información y acceso a los recursos adecuados. En 4Geeks ajustamos las sesiones según tu calendario, también le damos la oportunidad de tenerlos en línea o en persona. En cualquier caso, te aseguramos que tienes la oportunidad de una mentoría constante siempre que la necesites." 

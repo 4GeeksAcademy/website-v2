@@ -200,6 +200,7 @@ export const Div = styled.div`
   }
   @media ${Devices.xxs} {
     margin: ${(props) => props.margin_xxs};
+    padding: ${(props) => props.padding_xxs};
     background: ${(props) => props.background_xxs};
     display: ${(props) => props.display_xss};
   }
@@ -375,7 +376,6 @@ export const Grid = styled(Div)`
   grid-auto-rows: ${(props) => props.gridAutoRows};
   grid-column: ${(props) => props.gridColumn};
   justify-items: ${(props) => props.justifyItems};
-
   justify-content: ${(props) => props.justifyContent};
   grid-template-areas: ${(props) => props.gridTemplateAreas};
   @media ${Devices.xxs} {

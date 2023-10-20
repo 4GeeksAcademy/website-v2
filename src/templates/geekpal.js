@@ -21,13 +21,14 @@ import { H1, H2, H3, Paragraph } from "../components/Heading";
 import { Button, RoundImage, Img } from "../components/Styling";
 import { StyledBackgroundSection } from "../components/Styling";
 import LandingHeader from "../components/LandingHeader";
+import Overlaped from "../components/Overlaped";
 
 const GeekPal = (props) => {
   const { data, pageContext, yml } = props;
   const { session } = React.useContext(SessionContext);
   const partnersData = data.allPartnerYaml.edges[0].node;
   const content = data.allPageYaml.edges[0].node;
-
+  
   const bulletIcons = [
     {
       icon: "elderly-fill",
@@ -48,9 +49,9 @@ const GeekPal = (props) => {
     <>
       <Grid
         padding="24px 20px"
-        padding_tablet="100px 40px 0 40px"
-        padding_md="100px 80px 0 80px"
-        padding_lg="100px 0px 0px 0px"
+        padding_tablet="100px 40px 40px 40px"
+        padding_md="100px 80px 40px 80px"
+        padding_lg="100px 0px 40px 0px"
         columns_tablet="18"
         margin={
           isCustomBarActive(session)
@@ -71,8 +72,8 @@ const GeekPal = (props) => {
             right: "-150px",
             top: "-100px",
           }}
-          // display_xs="none"
-          // display_tablet="flex"
+        // display_xs="none"
+        // display_tablet="flex"
 
         />
         <Img
@@ -191,7 +192,7 @@ const GeekPal = (props) => {
                   {item.videoId === "" ? (
                     <StyledBackgroundSection
                       height={`290px`}
-                      // width={`85%`}
+                      width={`100%`}
                       borderRadius={`3px`}
                       image={item.image.childImageSharp.gatsbyImageData}
                       bgSize={`contain`}
@@ -264,15 +265,14 @@ const GeekPal = (props) => {
       {Array.isArray(content.list) &&
         content.list.map((m, i) => {
           return (
-            <>
-              {i === 1 ? (
-                <Div maxWidth_tablet="1366px" margin_tablet="50px auto 0 auto">
+            <> 
+              {i === 1 ? (<>
+                <Div maxWidth_tablet="1366px" margin_tablet="50px auto">
                   <Div
                     display_xss="none"
                     display_tablet="flex"
                     position="relative"
                     justifyContent="center"
-                    //margin_tablet="auto"
                     padding_tablet="0 40px"
                     padding_md="0 80px"
                     padding_lg="0"
@@ -284,7 +284,7 @@ const GeekPal = (props) => {
                     >
                       <Div gridColumn_tablet="1 / 9" gridColumn_lg="1 / 11">
                         <Img
-                          src="/images/woman-afro-with-laptop.png"
+                          src={m.image}
                           width="33.3em"
                           height="533px"
                         />
@@ -376,7 +376,7 @@ const GeekPal = (props) => {
                         </Paragraph>
                       ) : null}
 
-                      {m.button.text && (
+                      {m.button?.text && (
                         <Button
                           background={m.button.color}
                           color={Colors.white}
@@ -387,7 +387,6 @@ const GeekPal = (props) => {
                       )}
                     </Div>
                   </Div>
-
                   {/* Version mobile */}
 
                   <Div
@@ -398,7 +397,7 @@ const GeekPal = (props) => {
                     margin="-50px 20px 38% 20px"
                   >
                     <Img
-                      src="/images/woman-afro-with-laptop.png"
+                      src="/images/landing/dos-mujeres-1.png"
                       width="23.43em"
                       height="533px"
                       backgroundSize="contain"
@@ -459,7 +458,7 @@ const GeekPal = (props) => {
                         m.text
                       )}
 
-                      {m.button.text && (
+                      {m.button?.text && (
                         <Button
                           background={m.button.color}
                           color={Colors.white}
@@ -472,6 +471,7 @@ const GeekPal = (props) => {
                   </Div>
                 </Div>
 
+              </>
               ) : (
                 <React.Fragment key={`${i}-${m.title}`}>
                   <Grid

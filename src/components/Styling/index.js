@@ -189,15 +189,24 @@ const StyledImage = styled.div`
     min-height: ${(props) => props.minHeight_sm};
     width: ${(props) => props.w_sm};
   }
+  @media ${Devices.xxs} {
+    display: ${(props) => props.display_xxs}; 
+    height: ${(props) => props.height_xxs};
+  }
   @media ${Devices.xs} {
     display: ${(props) => props.display_xs};
+    height: ${(props) => props.height_xs};
     left: ${(props) => props.left_xs};
     right: ${(props) => props.right_xs};
     top: ${(props) => props.top_xs};
     bottom: ${(props) => props.bottom_xs};
   }
+  @media ${Devices.sm} {
+    width: ${(props) => props.width_sm};
+  }
   @media ${Devices.tablet} {
     display: ${(props) => props.display_tablet};
+    height: ${(props) => props.height_tablet};
     left: ${(props) => props.left_tablet};
     right: ${(props) => props.right_tablet};
     top: ${(props) => props.top_tablet};
@@ -316,7 +325,9 @@ export const StyledBackgroundSection = styled(BackgroundSection)`
   min-height: ${(props) => props.minHeight};
   flex-shrink: ${(props) => props.flexShrink};
   display: ${(props) => props.display};
-  &:before,
+  &:before{
+    background-size: ${(props) => props.bgSize};
+  },
   &:after {
     min-height: ${(props) => props.minHeight};
     border-radius: ${(props) => props.borderRadius};
@@ -327,16 +338,21 @@ export const StyledBackgroundSection = styled(BackgroundSection)`
     background-position: ${(props) => props.backgroundPosition} !important;
   }
   @media ${Devices.xxs} {
+    height: ${(props) => props.height_xxs};
+    width: ${(props) => props.width_xxs};
   }
   @media ${Devices.xs} {
     height: ${(props) => props.height_xs};
+    margin: ${(props) => props.margin_xs};
     width: ${(props) => props.width_xs || "100%"};
   }
   @media ${Devices.sm} {
     height: ${(props) => props.height_sm};
+    width: ${(props) => props.width_sm};
   }
   @media ${Devices.tablet} {
     border-radius: ${(props) => props.borderRadius_tablet};
+    margin: ${(props) => props.margin_tablet};
     height: ${(props) => props.height_tablet};
     width: ${(props) => props.width_tablet || "100%"};
     display: ${(props) => props.display_tablet};
@@ -350,6 +366,7 @@ export const StyledBackgroundSection = styled(BackgroundSection)`
     height: ${(props) => props.height_md};
   }
   @media ${Devices.lg} {
+    height: ${(props) => props.height_lg};
   }
   @media ${Devices.xl} {
   }
