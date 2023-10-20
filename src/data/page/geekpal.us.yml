@@ -8,7 +8,7 @@ meta_info:
   redirects: ["/geekpal", "/us/career-support"]
 
 header:
-  title: "<strong style='color:black; font-weight:700;'>Geek</strong> <strong style = 'color:red; font-weight:bold;'>PAL</strong> <br>
+  title: "<p style='color:black; font-weight:900;'>Geek</p> <strong style = 'color:#CD0000; font-weight:900;'>PAL</strong> <br>
           never code alone again"
   image: "../../../static/images/bg/companies-bg.jpg"
   image_alt: ""

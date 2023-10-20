@@ -96,7 +96,6 @@ const GeekPal = (props) => {
             fontSize="50px"
             lineHeight="54px"
             //fontFamily="Archivo"
-            //fontWeight="900"
             padding_xs="10px 0"
             padding_md="0px"
             margin="0"

@@ -44,6 +44,7 @@
     "format": "prettier --write ."
   },
   "dependencies": {
+    "@fontsource/archivo": "^5.0.14",
     "@loadable/component": "^5.13.2",
     "browser-monads": "^1.0.0",
     "classnames": "^2.3.1",

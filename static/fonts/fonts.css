@@ -8,3 +8,9 @@
   font-display: swap;
   src: url("./lato/Lato-Light.woff");
 }
+
+@font-face {
+  font-family: "Archivo";
+  font-display: swap;
+  src: url("./archivo/Archivo-Black.ttf");
+}
