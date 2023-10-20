@@ -295,10 +295,7 @@ const Landing = (props) => {
   );
 };
 export const query = graphql`
-  query LandingAQuery(
-    $file_name: String!
-    $lang: String!
-  ) {
+  query LandingAQuery($file_name: String!, $lang: String!) {
     allPageYaml(
       filter: {
         fields: { file_name: { regex: "/geekpal/" }, lang: { eq: $lang } }
@@ -849,6 +846,7 @@ export const query = graphql`
           }
           header_data {
             tagline
+            tagline_color
             background
             color
             sub_heading

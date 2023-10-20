@@ -27,7 +27,7 @@ form:
   # always the first_name, email and phone will be mandatory if added.
   fields: ["full_name", "phone", "email"]
   heading: "Join our award-winning Coding Program"
-  motivation: "Fill out the form and get the scholarship towards your tuition at 4Geeks. Only 85 seats remain available."
+  motivation: "Fill out the form and get a Scholarship to reduce your tuition at 4Geeks. A few seats remain available."
   button_label: Get more info Now
   redirect: null #you can redirect to another url or entirely diffrent website
 
@@ -39,7 +39,7 @@ apply_schollarship: # form that is displayed at the end of the landing
 # jumbotron on the top (cannot be commented out)
 header_data:
   background: "#FFF1D1"
-  tagline: No Excuses. Boost your career. Money is what you’ll make!
+  tagline: No Excuses. The Go-to Coding Bootcamp in Florida.
   badge: "../../../static/images/badges/Course-Report-Badge-2023.png"
   image_filter: brightness(0.3)
 
@@ -50,9 +50,9 @@ features:
   styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
   text: With our expertise and your hard work, you'll be a professional developer in just 18 weeks!
   bullets:
-    - Scholarships available. Award winning Bootcamp at the Best pricing 
-    - Unlimited Mentorship and senior support FOREVER
-    - 84% placement rate
+    - Money is not excuse. Best pricing (ask for scholarships)
+    - Unlimited Mentorship and lifetime access to career services
+    - Award winning Florida Bootcamp (Miami, Orlando, Boca, and online!)
     - Job placement rate of 81%
     - "Part-time: it’s immersive but with a flexible schedule"
   

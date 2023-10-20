@@ -33,11 +33,7 @@ const Title = ({ id, title, paragraph }) => {
   return (
     <GridContainer id={id} margin="40px 0 40px 0">
       <H2 type="h2">{title}</H2>
-      {
-        paragraph && 
-          <Paragraph margin="26px 0">{paragraph}</Paragraph>
-      }
-      
+      {paragraph && <Paragraph margin="26px 0">{paragraph}</Paragraph>}
     </GridContainer>
   );
 };
@@ -659,6 +655,7 @@ export const landingSections = {
         margin="auto"
         height="auto"
         width="100%"
+        alignItems="center"
         background={Colors.lightYellow}
       >
         {heading.text && (
@@ -666,7 +663,7 @@ export const landingSections = {
             type="h2"
             lineHeight="28px"
             lineHeight_tablet="28px"
-            fontSize="30px"
+            fontSize="38px"
             //margin="30px 0 30px 0"
             maxWidth="1366px"
             margin="30px auto"
@@ -737,7 +734,9 @@ export const landingSections = {
             textColor={Colors.black}
             textTransform="none"
             color={Colors[button.color] || button.color}
-            fontSize="15px"
+            fontSize="18px"
+            fontFamily="Lato"
+            fontWeight="500"
             textAlign="left"
             margin="2rem 0"
             padding="32px .85rem 0 .85rem"
@@ -1141,8 +1140,8 @@ export const landingSections = {
       flexDirection="column"
       margin="0"
       padding="0"
-      padding_tablet="0"    
-      position="relative"  
+      padding_tablet="0"
+      position="relative"
     >
       <Div
         background={Colors.lightGray}

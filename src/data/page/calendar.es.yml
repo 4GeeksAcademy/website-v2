@@ -8,6 +8,8 @@ meta_info:
     redirects: ["/calendario", "/es/calendario"]
 
 seo_title: "Coding Bootcamp"
+show_more: Mostrar más
+show_less: Mostrar menos
 header:
     title: Próximos programas y Eventos de 4GEEKS ACADEMY
     paragraph: "Ajusta los filtros a los eventos de los cursos que más te interesan"
