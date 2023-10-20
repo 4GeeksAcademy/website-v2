@@ -7,7 +7,7 @@ meta_info:
   image: "/images/bg/remote.jpeg"
   keywords: "Aprende a programar, 4Geeks academy, aprende programacion, aprende ingenieria informatica"
 
-  template: "landing_nonav" # <--- choose your landing template
+  template: "landing_a" # <--- choose your landing template
   redirects: ["/landing/becas-partner"] # <--- URL redirections to avoid 404 errors
 
   # Set a particular course or location to the landing page
@@ -34,19 +34,23 @@ form:
 
 # jumbotron on the top (cannot be commented out)
 header_data:
-  tagline: Impulsa tu carrera profesional, Obtén tu beca!
+  tagline: Impulsa tu carrera profesional!
   tagline_color: white
   sub_heading: ""
   partner_logo_url: "../../../static/images/partner/microsoft.png"
   background_image: "../../../static/images/Happy-People-Landing-4Geeks-ES.jpg"
-  image_filter: brightness(0.4)
+  image_filter: brightness(0.15)
 
 features:
-  marginTop: 20px #<-- separation between tagline and the bullets
-
+  marginTop: 20px #<-- separation between tagline and the bullet
   #                                         up   left down  right
   styles: '{ "color": "white", "fontSize": "15px", "margin": "10px 0px 10px 0px" }'
   text: Hay más vacantes que en cualquier otra industria ¡Impulsa tu Carrera! y hazte programador de software
+  bullets:
+    
+    - Programas para Full Satck & Software Engineer
+    - Formato Part-Time, ¡no renuncies a tu vida!
+    - Opciones de financiación 
 
 follow_bar:
   position: "top" # top, bottom, hidden

@@ -109,7 +109,7 @@ about4Geeks:
   image_mobile: "../../../static/images/bg/remote.jpeg"
 
 who_is_hiring:
-  position: 5
+  position: 10
   heading: "DÓNDE TRABAJAN NUESTROS ESTUDIANTES"
   sub_heading: "Consigue un trabajo en menos de 6 meses gracias a nuestra creciente red de más de 500 partners. Accede a ofertas nacionales e internacionales y a una comunidad de más de 3500 graduados."
   featured:
@@ -143,7 +143,7 @@ components:
     text_link: "#"
     icons:
     - icon: "touch"
-      title: Completa el formulario antes del 1 de abril de 2023
+      title: Completa el formulario
     - icon: "receive_mail"
       title: Recibirás un correo electrónico con toda la información para avanzar en el proceso
     - icon: "talk"
