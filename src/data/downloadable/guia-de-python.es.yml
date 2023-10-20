@@ -113,16 +113,16 @@ components:
       font_size: ["15px"]
 
     bullets:
-      - Número
-      - String
-      - Boolean
-      - Iterables
-      - Dictionary
-      - Lista
-      - Tupla
-      - Rango
-      - Set & Frozenset
-      - Tabla Hash
+      - heading: Numbers
+      - heading: String
+      - heading: Boolean
+      - heading: Iterables
+      - heading: Dictionary
+      - heading: List
+      - heading: Tuple
+      - heading: Range
+      - heading: Set & Frozenset
+      - heading: Table Hash
 
     content:
       text: "El Zen del Python, variables, conditionals, loops, functions, decorators, generators, virtual environment, package manager."

@@ -9,7 +9,7 @@ meta_info:
   image: "/images/bg/main-bg.jpg"
   keywords: "Bootcamp de Programación, Bootcamp de Codigo, Bootcamp de python, Bootcamp de React y Javascript, Bootcamp de Full Stack, Coding Bootcamp, 4Geeks Academy"
 
-  template: "landing_nonav" # <--- choose your landing template
+  template: "landing_a" # <--- choose your landing template
   redirects: # <--- URL redirections to avoid 404 errors
     ["/landing/bootcamp-de-programacion-santiago"]
 
@@ -28,6 +28,11 @@ form:
   motivation: "Completa el formulario y te enviaremos la información en menos de 5 min a tu correo electrónico."
   button_label: Obtener más información
   redirect: "/es/gracias/?lang=es"  #you can redirect to another url or entirely diffrent website
+
+apply_schollarship: # form that is displayed at the end of the landing
+  # title: "Apoyo Profesional Ilimitado"
+  imageSide: "left"
+  image: "../../../static/images/landing/apply.png"    
 
 navbar:
   buttonText: "Postular"
@@ -93,17 +98,6 @@ program_details:
   heading: "Domina Python, JS y React"
   sub_heading: "Un curso de programación sobre las tecnologías más usadas del mundo"
 
-iconogram:
-  position: 4
-  icons:
-  - icon: "touch" 
-    title: Solicita información
-  - icon: "receive_mail"
-    title: Recibe un correo electrónico con los detalles
-  - icon: "talk"
-    title: Haz una entrevista con nuestro equipo
-  - icon: "terminal"
-    title: Aprende a programar con nosotros
 
 geeks_vs_others:
   position: 6
@@ -123,6 +117,28 @@ who_is_hiring:
   sub_heading: "Nos encanta ver crecer a nuestros estudiantes, es por eso que nos esforzamos cada día por tener más aliados, para que puedas trabajar en empresas que te ayuden a seguir creciendo profesionalmente."
 
 components:
+  - name: how-it-works
+    position: 4
+    layout: iconogram
+    swipable: True
+    heading:
+      text: ""
+      font_size: ["30px", "30px", "30px", "30px", "30px"]
+    sub_heading:
+      text: ""
+      font_size: ["16px", "16px", "16px", "16px", "16px"]
+      style: '{ "textAlign": "center", "width": "60%" }'
+    text_link: "#"
+    icons:
+    - icon: "touch" 
+      title: Solicita información
+    - icon: "receive_mail"
+      title: Recibe un correo electrónico con los detalles
+    - icon: "talk"
+      title: Haz una entrevista con nuestro equipo
+    - icon: "terminal"
+      title: Aprende a programar con nosotros
+
   - name: python_y_javascript
     position: 5
     layout: two_column_right
@@ -140,16 +156,19 @@ components:
 
   - name: more_testimonials
     position: 9
-    layout: two_column_right
+    layout: two_column_left
     image:
       src: "https://storage.googleapis.com/4geeks-academy-website/landing-pictures/testimonials.webp"
+      shadow: true
     heading:
-      text: "Escúchalo de nuestros alumnos"
+      text: "Testimonios de Nuestros Alumnos"
       #xl      lg     md     sm    xs
       font_size: ["40px", "34px", "34px", "25px", "20px"]
     button:
       text: "Ver Testimoniales"
-      color: null
+      color: white
+      background: black
+      hover: white
       path: "https://www.youtube.com/watch?v=rtpfwwfE0yY&ab_channel=4GeeksAcademy"
     content:
       text: "Mentorías ilimitadas, distintos instructores, todas las semanas. Te acompañaremos en este camino para que puedas convertirte en Full Stack Developer Junior y conseguir tu primer empleo en el área. Siempre te acompañaremos, aún cuando ya hayas conseguido trabajo, una vez eres parte de 4Geeks, siempre serás parte de la comunidad y sus beneficios."

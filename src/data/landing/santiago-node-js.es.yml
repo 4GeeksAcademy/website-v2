@@ -7,7 +7,7 @@ meta_info:
   image: "/images/bg/main-bg.jpg"
   keywords: "Clase de programación, Clase de node, clase de javascript, Coding Bootcamp, 4Geeks Academy"
 
-  template: "landing_nonav" # <--- choose your landing template
+  template: "landing_a" # <--- choose your landing template
   redirects: # <--- URL redirections to avoid 404 errors
     ["/landing/curso-node-js-santiago"]
 
@@ -33,9 +33,9 @@ form:
   redirect: "/es/gracias/?lang=es"  #you can redirect to another url or entirely diffrent website
 
 apply_schollarship: # form that is displayed at the end of the landing
-  # title: "Get more info about this award-winning development course"
+  # title: "Apoyo Profesional Ilimitado"
   imageSide: "right"
-  image: "../../../static/images/comunity-support.png"
+  image: "../../../static/images/landing/apply.png"  
 
 # jumbotron on the top (cannot be commented out)
 header_data:
@@ -91,17 +91,6 @@ follow_bar:
 # ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇
 #
 
-iconogram:
-  position: 3
-  icons:
-  - icon: "touch" 
-    title: Solicita información
-  - icon: "receive_mail"
-    title: Recibe un correo electrónico con los detalles
-  - icon: "talk"
-    title: Haz una entrevista con nuestro equipo
-  - icon: "terminal"
-    title: Aprende Nodejs con nosotros
 
 rating_reviews:
   position: 1
@@ -131,6 +120,28 @@ why_4geeks:
 
 # Possible layours: [two_column_left_image, two_column_right_image]
 components:
+  - name: how-it-works
+    position: 3
+    layout: iconogram
+    swipable: True
+    heading:
+      text: ""
+      font_size: ["30px", "30px", "30px", "30px", "30px"]
+    sub_heading:
+      text: ""
+      font_size: ["16px", "16px", "16px", "16px", "16px"]
+      style: '{ "textAlign": "center", "width": "60%" }'
+    text_link: "#"
+    icons:
+    - icon: "touch" 
+      title: Solicita información
+    - icon: "receive_mail"
+      title: Recibe un correo electrónico con los detalles
+    - icon: "talk"
+      title: Haz una entrevista con nuestro equipo
+    - icon: "terminal"
+      title: Aprende Nodejs con nosotros
+
   - name: geeksinfo
     position: 4
     layout: geeksInfo

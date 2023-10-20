@@ -474,9 +474,6 @@ export const query = graphql`
                       quality: 100
                       placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                     )
-                    # fluid(maxWidth: 500, quality: 100){
-                    #     ...GatsbyImageSharpFluid_withWebp
-                    # }
                   }
                 }
                 image_paragraph
@@ -501,11 +498,3 @@ export const query = graphql`
   }
 `;
 export default BaseRender(Outcomes);
-
-// image{
-//     childImageSharp {
-//       fluid(maxWidth: 500, quality: 100, srcSetBreakpoints: [ 200, 340, 520, 890 ]){
-//         ...GatsbyImageSharpFluid_withWebp
-//       }
-//     }
-//   }

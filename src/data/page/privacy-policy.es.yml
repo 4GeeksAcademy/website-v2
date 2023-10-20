@@ -13,7 +13,7 @@ meta_info:
 #   image: "/images/bg/pricing-bg.jpg"
 
 consent:
-  message: Al completar este formulario acepto que mi información será utilizada para enviarme información comercial sobre 4Geeks Academy y que podria resultar una relación comercial a partir de esto. Revisa nuestra
+  message: Al completar este formulario acepto que mi información será utilizada para enviarme información comercial sobre 4Geeks Academy y que podria resultar una relación comercial a partir de esto. Revisa nuestra 
   link_label: Política de Privacidad
   url: /es/privacidad
   

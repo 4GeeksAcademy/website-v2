@@ -46,6 +46,8 @@ navbar:
               link_to: "/us/geekpal-support"
             - title: "GeekForce"
               link_to: "/us/geekforce-career-support"
+            - title: "Job Guarantee"
+              link_to: "/us/job-guarantee"
         - title: "Validation"
           sub_links:
             - title: "Awards"
@@ -58,8 +60,8 @@ navbar:
           sub_links:
             - title: "Financing"
               link_to: "/us/financials"
-            # - title: "Prices"
-            #   link_to: ""
+            - title: "Scholarships"
+              link_to: "/us/20-million"
             # - title: "Scholarships"
             #   link_to: ""
         - title: "Our Students"

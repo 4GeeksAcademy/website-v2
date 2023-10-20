@@ -12,11 +12,9 @@ const LandingContainer = ({ background, children, filter, image, badge }) => {
           bgSize={`cover`}
           width_tablet="100%"
           height="auto"
-          margin="0 0 auto 0"
+          margin="0 auto"
           filter={filter}
           background={background || Colors.white}
-          align="center"
-          borderRadius="0"
         >
           {children}
         </Div>
