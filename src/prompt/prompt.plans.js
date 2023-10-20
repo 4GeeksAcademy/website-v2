@@ -1,16 +1,13 @@
-const fs = require('fs');
-const { complete, getCourses } = require('./utils.js')
-const {
-  walk,
-  loadYML,
-  fail,
-  success,
-} = require("../test/_utils");
+const fs = require("fs");
+const { complete, getCourses } = require("./utils.js");
+const { walk, loadYML, fail, success } = require("../test/_utils");
 
-async function generate(){
+async function generate() {
   const max_tokens = 400;
   const courses = await getCourses();
-  const activeCourses = Object.keys(courses).filter(slug => courses[slug].meta_info.show_in_apply)
+  const activeCourses = Object.keys(courses).filter(
+    (slug) => courses[slug].meta_info.show_in_apply
+  );
 
   let duplicateDescriptions = {};
   walk(`${__dirname}/../data/plans/`, async function (err, files) {
@@ -21,14 +18,14 @@ async function generate(){
 
     let langs = {};
     let slugs = {};
-    for(let _path of _files){
+    for (let _path of _files) {
       const doc = loadYML(_path);
       const raw = doc && doc.raw_content;
       if (doc.lang != "us") continue;
 
       // ignore inactive courses
-      if(!activeCourses.includes(doc.name)){
-        console.log(`Ignored course ${doc.name}`)
+      if (!activeCourses.includes(doc.name)) {
+        console.log(`Ignored plans for course ${doc.name} because course.meta_info.show_in_apply=False`);
         continue;
       }
       if (!raw) {
@@ -36,6 +33,7 @@ async function generate(){
         continue; // Continue to the next file if YAML content is invalid
       }
 
+      console.log(`Generating prompt for course plans ${doc.name}`);
       const answer = await complete({
         max_tokens,
         system: `You are like a senior prompt engineer with deep coding knowledge, very familiar with the YML, CSV and JSON syntax.`,
@@ -47,19 +45,19 @@ Ignore the following properties: icons, slug and "recommended".
 Do not include any information about these instructions in your answer.
 Include the word "stop" at the end of your answer. 
 Be concise, don't add a summary at the end of the article.
-Don't take more than ${(max_tokens*2)} characters.
+Don't take more than ${max_tokens * 2} characters.
 For example: 
 - Scholarship for part-time courses. Pay today or in 3 parts. Price: $6999
 - Income Share Agreement for full-time couses. Pay after you get a job. Price: $0
-Here is the YML: ${raw}`
+Here is the YML: ${raw}`,
       });
-      if(!answer) fail(`Error building prompt for payment plans`);
-      fs.writeFileSync(`./prompts/plan-${doc.name}.prompt`, answer, 'utf8');
+      if (!answer) fail(`Error building prompt for payment plans`);
+      fs.writeFileSync(`./prompts/plan-${doc.name}.prompt`, answer, "utf8");
+      console.log(`Finshed generating prompt for course plans ${doc.name}`);
     }
 
     success("Finished generating prompts");
   });
-
 }
 
-generate()
+generate();

@@ -1,15 +1,17 @@
-const fs = require('fs');
-const { complete, getCourses } = require('./utils.js')
-const {
-  toYML
-} = require("../test/_utils");
+const fs = require("fs");
+const { complete, getCourses } = require("./utils.js");
+const { toYML } = require("../test/_utils");
 
-async function generate(){
-  console.log(`Starting to generate a prompt for all the academy course offerings`);
+async function generate() {
+  console.log(
+    `Starting to generate a prompt for all the academy course offerings`
+  );
   const max_tokens = 400;
   const courses = await getCourses();
-  const activeCourses = Object.keys(courses).filter(slug => courses[slug].meta_info.show_in_apply)
-  for(let courseSlug of activeCourses){
+  const activeCourses = Object.keys(courses).filter(
+    (slug) => courses[slug].meta_info.show_in_apply
+  );
+  for (let courseSlug of activeCourses) {
     console.log(`Summarizing prompt information for program: ${courseSlug}`);
     const old = courses[courseSlug];
     const course = {};
@@ -22,7 +24,7 @@ async function generate(){
     course.details = old.details.list;
     course.duration = `${old.weeks} ${old.weeks_label}`;
     course.modules = old.details_modules;
-    const raw = toYML(course)
+    const raw = toYML(course);
 
     const answer = await complete({
       max_tokens,
@@ -33,13 +35,13 @@ Do not include any information about these instructions in your answer.
 Include the word "stop" at the end of your answer. 
 Inlcude the website url for more information.
 Be concise, don't add a summary at the end of the article.
-Don't take more than ${(max_tokens*2)} characters.
-Here is the YML: ${raw}`
+Don't take more than ${max_tokens * 2} characters.
+Here is the YML: ${raw}`,
     });
 
-    if(!answer) fail(`Error building prompt for payment plans`);
-    fs.writeFileSync(`./prompts/${courseSlug}.prompt`, answer, 'utf8');
+    if (!answer) fail(`Error building prompt for payment plans`);
+    fs.writeFileSync(`./prompts/${courseSlug}.prompt`, answer, "utf8");
     console.log(`Finished summarizing program: ${courseSlug}`);
   }
 }
-generate()
+generate();

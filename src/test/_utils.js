@@ -71,7 +71,7 @@ const walk = function (dir, done) {
 
 const toYML = (obj) => {
   return jsyaml.dump(obj);
-}
+};
 const loadYML = (pathToFile) => {
   const content = fs.readFileSync(pathToFile, "utf8");
   try {
