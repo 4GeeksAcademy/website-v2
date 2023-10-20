@@ -18,35 +18,35 @@ walk(`${__dirname}/../data/downloadable`, async (err, files) => {
     const doc = loadYML(_path);
     if (!doc || !doc.yaml) fail("Invalid YML syntax for " + _path);
   });
+  try {
+    const resp = await fetch(
+      `https://breathecode.herokuapp.com/v1/marketing/downloadable`
+    );
+    const downloadables = await resp.json();
 
-  const _files = files.filter(
-    (f) =>
-      (f.indexOf(".yml") > 1 || f.indexOf(".yaml") > 1) &&
-      f.indexOf("additional-redirects.yml") === -1 &&
-      f.indexOf("call-to-actions.yml") === -1
-  );
+    const _files = files.filter(
+      (f) =>
+        (f.indexOf(".yml") > 1 || f.indexOf(".yaml") > 1) &&
+        f.indexOf("additional-redirects.yml") === -1 &&
+        f.indexOf("call-to-actions.yml") === -1
+    );
 
-  for (let i = 0; i < _files.length; i++) {
-    const _path = _files[i];
-    const doc = loadYML(_path);
-    if (!doc.yaml) fail("Invalid YML syntax for " + _path);
-    if (!doc.lang) fail("Missing language on yml file name for " + _path);
+    for (let i = 0; i < _files.length; i++) {
+      const _path = _files[i];
+      const doc = loadYML(_path);
+      if (!doc.yaml) fail("Invalid YML syntax for " + _path);
+      if (!doc.lang) fail("Missing language on yml file name for " + _path);
 
-    let meta_info_image = doc.yaml.meta_info.image;
-    let header_image = doc.yaml.header_data.image;
+      let meta_info_image = doc.yaml.meta_info.image;
+      let header_image = doc.yaml.header_data.image;
 
-    localizeImage(header_image, "relative_images", _path, ".");
-    localizeImage(meta_info_image, "relative_images", _path, "bg");
+      localizeImage(header_image, "relative_images", _path, ".");
+      localizeImage(meta_info_image, "relative_images", _path, "bg");
 
-    try {
       const data = doc.yaml;
       const meta_keys = Object.keys(data.meta_info);
       const current_download = data.meta_info.current_download;
 
-      const resp = await fetch(
-        `https://breathecode.herokuapp.com/v1/marketing/downloadable`
-      );
-      const downloadables = await resp.json();
       const scanResult = downloadables.some(
         (el) => el.slug === current_download
       );
@@ -68,10 +68,10 @@ walk(`${__dirname}/../data/downloadable`, async (err, files) => {
         if (!meta_keys.includes(obj["key"]))
           fail(`Missing prop ${obj["key"]} from course on ${_path}`);
       });
-    } catch (error) {
-      console.error(`Error on file: ${_path}`.red);
-      fail(error.message || error);
     }
+    success("All Downloadables yml have correct properties");
+  } catch (error) {
+    console.error(`Error on file: ${_path}`.red);
+    fail(error.message || error);
   }
-  success("All Downloadables yml have correct properties");
 });

@@ -846,6 +846,7 @@ export const query = graphql`
           }
           header_data {
             tagline
+            tagline_color
             background
             color
             sub_heading
