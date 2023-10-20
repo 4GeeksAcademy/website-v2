@@ -66,7 +66,7 @@ const AlumniProjects = ({
     dots: true,
     dotsClass: "slick-dotss",
     infinite: true,
-    autoplay: true,
+    //autoplay: true,
     autoplaySpeed: 6000,
     speed: 500,
     slidesToShow: 1,
@@ -156,7 +156,6 @@ const AlumniProjects = ({
                     style={{
                       width: "100%",
                       height: "342px",
-                      margin: "36px 15%",
                     }}
                   />
                 ) : (
