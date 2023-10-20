@@ -106,7 +106,7 @@ about4Geeks:
   image_mobile: "../../../static/images/bg/community.png"
 
 who_is_hiring:
-  position: 4
+  position: 10
   heading: "DÓNDE TRABAJAN NUESTROS ESTUDIANTES"
   sub_heading: "Gracias a nuestra creciente red de Aliados podemos contar con ofertas constantes a nivel nacional e internacional"
   featured:

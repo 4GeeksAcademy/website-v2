@@ -195,6 +195,8 @@ components:
     image:
       style: '{ "backgroundSize": "contain" }'
       src: "/static/images/staff/luisa.png"
+      shadow: true
+      
     video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
     heading:
       text: "¡Paga solo cuando consigas trabajo!"
