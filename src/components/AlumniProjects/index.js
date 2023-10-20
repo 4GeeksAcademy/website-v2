@@ -156,7 +156,10 @@ const AlumniProjects = ({
                     style={{
                       width: "100%",
                       height: "342px",
+                      //margin: "36px 15%",
                     }}
+                    margin_xxs="0px"
+                    margin_tablet="36px 15%"
                   />
                 ) : (
                   <ReactPlayer
