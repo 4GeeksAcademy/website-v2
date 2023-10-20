@@ -127,12 +127,12 @@ geeks_vs_others:
   total_rows: 5
 
 why_4geeks:
-  position: 5
+  position: 6
   heading: "¿Por qué debes estudiar en 4Geeks Academy?"
   sub_heading: " "
 
 who_is_hiring:
-  position: 6
+  position: 7
   limit: 4
   heading: "Empresas que contratan a nuestros estudiantes"
   sub_heading: "Más de 500 partners y más de 150 vacantes abiertas como Full-Stack Developer"
@@ -143,6 +143,29 @@ who_is_hiring:
 #  sub_heading: "Take a look at our previous student projects"
 
 components:
+  - name: some_id
+    position: 5
+    layout: two_column_right
+    background: "lightYellow"
+    image:
+      style: '{ "border" : "3px solid black" }' 
+      shadow: true 
+      src: "../../../static/images/testimonials/Mattia-Tozzi-testimonial.jpg"
+    video: "B01-eTfgqqc"
+    heading:
+      text: "El viaje de Mattia Tozzi en 4geeks Academy y como cambió su vida profesional."
+      #xl      lg     md     sm    xs
+      font_size: ["40px", "34px", "34px", "25px", "20px"]
+    content:
+      text: "Descubre la historia de Mattia Tozzi, quien decidió unirse a 4Geeks Academy en busca de un cambio en su carrera profesional. Su experiencia demuestra cómo la dedicación y el aprendizaje en este bootcamp lo llevaron a convertirse en un profesional altamente capacitado en España."
+      font_size: ["16px"]
+    button:
+      text: "Unete a la academia!"
+      path: "#bottom"
+      color: "white"
+      background: "black"
+      hover: "lightBlue"
+
   - name: python_y_javascript
     position: 1
     layout: two_column_right
