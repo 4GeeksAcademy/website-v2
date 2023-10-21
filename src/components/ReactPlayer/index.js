@@ -138,21 +138,23 @@ const Player = ({
   const videoHeightFix = (height) => {
     const numbers = height.match(/[0-9]+/g);
     const integers = numbers.map(Number);
-    const rest = integers.map(number => number - 6);
-    const result = rest.map(number => `${number}px`);
+    const rest = integers.map((number) => number - 6);
+    const result = rest.map((number) => `${number}px`);
     return result.join(" ");
-  }
+  };
 
   function borderStyle(style) {
-    console.log(style)
+    console.log(style);
     if (style == null) {
-      return false
+      return false;
     } else {
       return Object.keys(style).includes("border");
     }
   }
 
-  const imgStyle = image_thumb?.style ? { ...JSON.parse(image_thumb?.style) } : null;
+  const imgStyle = image_thumb?.style
+    ? { ...JSON.parse(image_thumb?.style) }
+    : null;
 
   // With_Modal
 
@@ -164,11 +166,7 @@ const Player = ({
 
   const imgStyles = image_thumb?.style ? JSON.parse(image_thumb?.style) : null;
   return (
-    <VideoWrapper 
-      {...rest} 
-      style={style} 
-      margin_tablet={margin_tablet}  
-    >
+    <VideoWrapper {...rest} style={style} margin_tablet={margin_tablet}>
       {showVideo ? (
         <>
           {With_Modal ? (
@@ -206,34 +204,40 @@ const Player = ({
             <Div
               flexDirection="column"
               height={videoHeight}
-              boxShadow={image_thumb?.shadow && "20px 15px 0px 0px rgba(0,0,0,1)"}
-              style={ imgStyle && { ...JSON.parse(image_thumb?.style) }}
+              boxShadow={
+                image_thumb?.shadow && "20px 15px 0px 0px rgba(0,0,0,1)"
+              }
+              style={imgStyle && { ...JSON.parse(image_thumb?.style) }}
               background="black"
             >
-            <Iframe
-              borderRadius={style.borderRadius}
-              videoId={yt_parser(id)}
-              id={`a-${id} do-not-delete-this-hack`}
-              // onReady={(e) => e.target.pauseVideo()}
-              onReady={(e) => setVid(e.target)}
-              onPlay={onPlay}
-              onPause={onPause}
-              onEnd={onEnd}
-              onError={onError}
-              onStateChange={onStateChange}
-              onPlaybackRateChange={onPlaybackRateChange}
-              onPlaybackQualityChange={onPlaybackQualityChange}
-              // height={videoHeight}
-              height={borderStyle(imgStyle) ? videoHeightFix(videoHeight) : videoHeight}
-              opts={{
-                width: "100%",
-                height: `${style.height}`,
-                host: noCookies
-                  ? "https://www.youtube-nocookie.com"
-                  : "https://www.youtube.com",
-                ...playerVars,
-              }}
-            />
+              <Iframe
+                borderRadius={style.borderRadius}
+                videoId={yt_parser(id)}
+                id={`a-${id} do-not-delete-this-hack`}
+                // onReady={(e) => e.target.pauseVideo()}
+                onReady={(e) => setVid(e.target)}
+                onPlay={onPlay}
+                onPause={onPause}
+                onEnd={onEnd}
+                onError={onError}
+                onStateChange={onStateChange}
+                onPlaybackRateChange={onPlaybackRateChange}
+                onPlaybackQualityChange={onPlaybackQualityChange}
+                // height={videoHeight}
+                height={
+                  borderStyle(imgStyle)
+                    ? videoHeightFix(videoHeight)
+                    : videoHeight
+                }
+                opts={{
+                  width: "100%",
+                  height: `${style.height}`,
+                  host: noCookies
+                    ? "https://www.youtube-nocookie.com"
+                    : "https://www.youtube.com",
+                  ...playerVars,
+                }}
+              />
             </Div>
           )}
         </>
@@ -265,8 +269,8 @@ const Player = ({
               transformPlay_tablet={transformPlay_tablet}
               transformPlay_md={transformPlay_md}
               transformPlay_lg={transformPlay_lg}
-            // width_md={width_play}
-            // heigth_md={height_play}
+              // width_md={width_play}
+              // heigth_md={height_play}
             />
           )}
           {thumb && thumb.childImageSharp ? (
@@ -306,13 +310,13 @@ const Player = ({
 export default Player;
 
 Player.defaultProps = {
-  onPlay: () => { },
-  onPause: () => { },
-  onEnd: () => { },
-  onError: () => { },
-  onStateChange: () => { },
-  onPlaybackRateChange: () => { },
-  onPlaybackQualityChange: () => { },
+  onPlay: () => {},
+  onPause: () => {},
+  onEnd: () => {},
+  onError: () => {},
+  onStateChange: () => {},
+  onPlaybackRateChange: () => {},
+  onPlaybackQualityChange: () => {},
   imageSize: "default",
   playerVars: {},
   noCookies: false,
