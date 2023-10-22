@@ -317,7 +317,7 @@ const LandingHeader = (props) => {
                   ? Colors.white
                   : "#FFF1D1"
               }
-              margin_md="50px 0 0 14%"
+              margin_md="50px 0 0 14.5%"
               margin_tablet="18px 0"
               selectProgram={programs}
               selectLocation={locations}
@@ -330,6 +330,7 @@ const LandingHeader = (props) => {
                 borderRadius: "0px",
                 border: "3px solid black",
               }}
+              gap="11px"
               formHandler={processFormEntry}
               heading={yml.form.heading}
               motivation={yml.form.motivation}
@@ -343,7 +344,7 @@ const LandingHeader = (props) => {
               justifyContentButton="center"
               marginButton="10px auto 30px auto"
               widthButton="100%"
-              width_md="85%"
+              width_md="84%"
               width_tablet="84%"
               // marginButton_tablet="0 0 30px auto"
               boxShadow="9px 8px 0px 0px rgba(0,0,0,1)"
@@ -351,7 +352,7 @@ const LandingHeader = (props) => {
             <Div 
               display="none" 
               display_tablet="block" 
-              // margin_lg="20% 0 0 20px"
+              margin_lg="5% 0 0 20px"
               // margin_md="40% 0 0 20px"
               margin_tablet="20% 0 0 20px"
             >
