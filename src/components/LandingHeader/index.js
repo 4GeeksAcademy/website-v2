@@ -63,9 +63,9 @@ const LandingHeader = (props) => {
           containerGridGap="0"
           gridTemplateColumns_tablet="repeat(14,1fr)"
           padding_xs="132px 20px 60px 20px"
-          padding_tablet="85px 40px 35px 40px"
-          padding_md="85px 80px 35px 80px"
-          padding_lg="85px 0 35px 0"
+          padding_tablet="85px 40px 55px 40px"
+          padding_md="85px 80px 55px 80px"
+          padding_lg="85px 0 55px 0"
           columns_tablet="2"
         >
           <Div
@@ -355,6 +355,10 @@ const LandingHeader = (props) => {
               margin_lg="5% 0 0 20px"
               // margin_md="40% 0 0 20px"
               margin_tablet="20% 0 0 20px"
+              position="absolute"
+              bottom_lg="0px"
+              bottom_md="5%"
+              bottom_tablet="25%"
             >
               <Icon
                 icon="slash-fill"
