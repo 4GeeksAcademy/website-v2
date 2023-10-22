@@ -507,7 +507,10 @@ const PricesAndPayments = (props) => {
       github="/location"
       flexDirection="column"
       padding="50px 17px"
-      padding_tablet="70px 0"
+      padding_xxs = "20px"
+      padding_tablet="70px 40px"
+      padding_md="70px 80px"
+      padding_lg="70px 0px"
       maxWidth_md="1366px"
       margin="0 auto"
     >
@@ -523,8 +526,8 @@ const PricesAndPayments = (props) => {
       </H2>
       <Grid
         gridTemplateColumns_lg="3fr repeat(23,1fr) 3fr"
-        gridTemplateColumns_md="2fr repeat(13,1fr) 2fr"
-        gridTemplateColumns_tablet="2fr repeat(13,1fr) 2fr"
+        gridTemplateColumns_md="1fr repeat(14,1fr) 1fr"
+        gridTemplateColumns_tablet="1fr repeat(13,1fr) 1fr"
         gridGap="0"
       >
         <Div
@@ -549,10 +552,11 @@ const PricesAndPayments = (props) => {
         {/* SELECT COUNTRY */}
         <Div
           gridColumn_lg="16/25"
-          gridColumn_md="10/15"
+          gridColumn_md="11/16"
           gridColumn_tablet="10/15"
           justifyContent_xs="center"
           justifyContent_tablet="end"
+          justifyContent_lg="start"
         >
           <Div
             flexDirection_tablet="row"
@@ -573,7 +577,7 @@ const PricesAndPayments = (props) => {
             )}
             &nbsp;
             {course && ( 
-              <Div width_tablet="220px" width_md="320px" width_xs="320px">
+              <Div width_tablet="220px" width_md="320px" width_xs="320px" width_xxs="280px">
                 <SelectRaw
                   bgColor={Colors.white}
                   //topLabel="Location"
@@ -629,20 +633,20 @@ const PricesAndPayments = (props) => {
         ) : (
           <>
             <Grid
-              gridTemplateColumns_tablet="5fr repeat(20,1fr) 5fr"
-              gridTemplateColumns_md="5fr repeat(22,1fr) 5fr"
-              gridTemplateColumns_lg="4fr repeat(24,1fr) 4fr"
+              gridTemplateColumns_tablet="repeat(20,1fr)"
+              // gridTemplateColumns_md="repeat(22,1fr)"
+              // gridTemplateColumns_lg="repeat(24,1fr)"
               gridTemplateRows_tablet="1fr 1fr 1fr"
-              gridGap="32px 15px"
+              gridGap="32px 0px"
             >
               {availablePlans.some((plan) => plan.job_guarantee_price) && (
                 <Div
                   background={Colors.veryLightBlue}
                   padding="8px"
                   margin_tablet="32px 0 0 0"
-                  gridColumn_tablet="2/22"
-                  gridColumn_md="2/24"
-                  gridColumn_lg="2/26"
+                  gridColumn_tablet="1/21"
+                  // gridColumn_md="2/24"
+                  // gridColumn_lg="2/26"
                   gridRow_tablet="1"
                   flexWrap="wrap"
                 >
@@ -679,9 +683,10 @@ const PricesAndPayments = (props) => {
                   background="#F9F9F9"
                   border="1px solid #EBEBEB"
                   padding="24px 15px 0 15px"
-                  gridColumn_tablet="2/12"
-                  gridColumn_md="2/13"
-                  gridColumn_lg="2/14"
+                  margin_tablet="0 8px 0 0"
+                  gridColumn_tablet="1/11"
+                  // gridColumn_md="2/13"
+                  // gridColumn_lg="2/14"
                   gridRow_tablet="2"
                 >
                   <H3
@@ -723,10 +728,11 @@ const PricesAndPayments = (props) => {
                 flexWrap="wrap"
                 justifyContent_tablet="between"
                 justifyContent_xs="evenly"
-                gap="15px"
-                gridColumn_tablet="12/22"
-                gridColumn_md="13/24"
-                gridColumn_lg="14/26"
+                gap="16px"
+                margin_tablet="0 0 0 8px"
+                gridColumn_tablet="11/21"
+                // gridColumn_md="13/24"
+                // gridColumn_lg="14/26"
                 gridRow="2"
               >
                 {availablePlans &&
