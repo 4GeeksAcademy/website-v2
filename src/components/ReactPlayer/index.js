@@ -18,6 +18,7 @@ const VideoWrapper = styled.section`
   @media ${Devices.sm} {
   }
   @media ${Devices.tablet} {
+    margin: ${(props) => props.margin_tablet || "30px 10%"};
     width: ${(props) => props.width_tablet};
     height: ${(props) => props.height_tablet};
   }
@@ -49,7 +50,7 @@ const Image = styled.div`
   margin: auto;
   height: ${(props) => props.height || "auto"};
   width: ${(props) => props.width || "100%"};
-  box-shadow: ${(props) => props.shadow};
+  box-shadow: ${(props) => props.boxShadow};
   border-radius: ${(props) => props.borderRadius || "1.25rem"};
   @media ${Devices.xxs} {
   }
@@ -85,9 +86,11 @@ const Player = ({
   imageSize,
   playerVars,
   noCookies,
+  width,
   style,
   className,
   thumb,
+  image_thumb,
   left_tablet,
   right_tablet,
   With_Modal,
@@ -97,6 +100,17 @@ const Player = ({
   videoHeight,
   switched,
   boxShadow,
+  width_play,
+  height_play,
+  fontSize_play,
+  background_play,
+  opacity_play,
+  transformPlay,
+  transformPlay_tablet,
+  transformPlay_md,
+  transformPlay_lg,
+  leftPlay_tablet,
+  margin_tablet,
   ...rest
 }) => {
   const [showVideo, setShowVideo] = React.useState(false);
@@ -128,8 +142,9 @@ const Player = ({
     }
   }, [switched]);
 
+  const imgStyles = image_thumb?.style ? JSON.parse(image_thumb?.style) : null;
   return (
-    <VideoWrapper {...rest} style={style}>
+    <VideoWrapper {...rest} style={style} margin_tablet={margin_tablet}>
       {showVideo ? (
         <>
           {With_Modal ? (
@@ -194,8 +209,11 @@ const Player = ({
           width={imageWidth}
           width_tablet={imageWidth_tablet || "100%"}
           borderRadius="3px"
-          height={imageHeight}
-          boxShadow={boxShadow}
+          height={imageHeight || "100%"}
+          position="relative"
+          boxShadow={image_thumb?.shadow && "20px 15px 0px 0px rgba(0,0,0,1)"}
+          //border={image_thumb?.shadow && "3px solid black"}
+          style={imgStyles && { ...JSON.parse(image_thumb?.style) }}
         >
           {id && (
             <Play
@@ -203,6 +221,18 @@ const Player = ({
               right_tablet={right_tablet}
               left_tablet={left_tablet}
               aria-label="Play Video"
+              width={width_play}
+              height={height_play}
+              background={background_play}
+              fontSize={fontSize_play}
+              opacity={opacity_play}
+              margin_tablet={margin_tablet}
+              leftPlay_tablet={leftPlay_tablet}
+              transformPlay_tablet={transformPlay_tablet}
+              transformPlay_md={transformPlay_md}
+              transformPlay_lg={transformPlay_lg}
+              // width_md={width_play}
+              // heigth_md={height_play}
             />
           )}
           {thumb && thumb.childImageSharp ? (
@@ -290,7 +320,7 @@ Player.propTypes = {
 };
 
 const Play = styled.button`
-  background: rgba(0, 0, 0, 0.7);
+  background: ${(props) => props.background || "rgba(0, 0, 0, 0.7)"};
   border-radius: 3px;
   color: ${(props) => props.white};
   font-size: 1em;
@@ -303,9 +333,13 @@ const Play = styled.button`
   position: absolute !important;
   top: 50%;
   left: 50%;
-  transform: translateX(-50%) translateY(-50%);
+  transform: ${(props) =>
+    props.transformPlay || "translateX(-50%) translateY(-50%)"};
+   {
+    /*translateX(-50%) translateY(-50%);*/
+  }
   border: none;
-  opacity: 0.8;
+  opacity: ${(props) => props.opacity || "0.8"};
   cursor: pointer;
   z-index: 9;
   &:hover {
@@ -339,18 +373,20 @@ const Play = styled.button`
   @media ${Devices.sm} {
   }
   @media ${Devices.tablet} {
-    right: ${(props) => props.right_tablet};
-    left: ${(props) => props.left_tablet};
+    left: ${(props) => props.leftPlay_tablet || "50%"};
+    transform: ${(props) => props.transformPlay_tablet};
   }
   @media ${Devices.md} {
-    height: 44px;
-    width: 44px;
-
+    height: ${(props) => props.height || "44px"};
+    width: ${(props) => props.width || "44px"};
+    font-size: ${(props) => props.fontSize || "0.75em"};
+    transform: ${(props) => props.transformPlay_md};
     &:after {
-      font-size: 0.75em;
+      font-size: ${(props) => props.fontSize || "0.75em"};
     }
   }
   @media ${Devices.lg} {
+    transform: ${(props) => props.transformPlay_lg};
   }
   @media ${Devices.xl} {
   }

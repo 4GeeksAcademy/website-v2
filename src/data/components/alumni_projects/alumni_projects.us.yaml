@@ -8,6 +8,7 @@ button_section:
 
 projects:
   - project_name: "Raspberry Sky"
+    course: full-stack
     slug: "raspberry-sky"
     project_image: "../../../../static/images/projects/rocket-app.jpg"
     project_content: "A platform capable of receiving information (wind, temperature, geolocation, etc) from rockets being launched to outer space. The platform also lets you make arrangements to send your own rocket, track it and receive messages from it."
@@ -30,6 +31,7 @@ projects:
   - project_name: "IMS: Inventory Tracking"
     hidden: false
     slug: "ims"
+    course: full-stack
     project_image: "../../../../static/images/projects/ims.jpg"
     project_content: "IMS is a Pharmacy Inventory and logistics tracking system built using Python, Javascript, React, and integration with Barcode Readers, SMS, the Twillio API, and GPS Tracking Systems. IMS holds stock quantities of all products stored and sold by the Drug Store and then tracks the vehicles that deliver those sells."
     project_video: "https://www.youtube.com/watch?v=TTjSZ2Lud2E"
@@ -56,6 +58,7 @@ projects:
         twitter: ""
   - project_name: "The Hour"
     hidden: true
+    course: full-stack
     slug: "the-hour"
     project_image: "../../../../static/images/projects/the-hour.png"
     project_content: "Happy Hour! What are you doing today? The Hour is your perfect night sidekick, find happy hour information about bars, night clubs and what is happening in the city! This application stands out because of its UI/UX component, very easy to use, mobile first and build around React.js, Javascript and Headless Wordpress API for easy management."
@@ -77,6 +80,7 @@ projects:
         twitter: ""
   - project_name: "WonderTracker"
     slug: "wondertracker"
+    course: full-stack
     project_image: "../../../../static/images/projects/fernando-funez.jpg"
     project_content: "A platform capable of keeping your travel information and documents saved in an absolute secure system. It also lets you track places where you have been, and gather information that you thought was important to save for as long as you want - all in just one place."
     project_video: ""
@@ -97,6 +101,7 @@ projects:
         twitter: ""
   - project_name: "iWash"
     slug: "i-wash"
+    course: full-stack
     project_image: "../../../../static/images/projects/i-wash.jpg"
     project_content: "iWash is an application integrating hardware and software towards building a platform capable of setting and launching Smart Laundry machines from your mobile device.  You can pay the cost of the service as well as set time, speed, type of laundry process, and receive notifications about the status of your laundry."
     project_video: ""
@@ -117,6 +122,7 @@ projects:
         twitter: ""
   - project_name: "reMindful"
     slug: "re-mindful"
+    course: full-stack
     project_image: "../../../../static/images/projects/re-mindful.jpg"
     project_content: |
       Generating awareness about recycling and considering all the steps that need to be covered. 

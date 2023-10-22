@@ -156,6 +156,7 @@ export const Div = styled.div`
   margin: ${(props) => props.margin};
   border: ${(props) => props.border};
   border-radius: ${(props) => props.borderRadius};
+  background-color: ${(props) => props.backgroundColor};
   background: ${(props) =>
     props.isActive ? props.backgroundActive : props.background};
   background-image: url(${(props) => props.bgImage});
@@ -303,6 +304,10 @@ export const Div = styled.div`
     justify-content: ${(props) =>
       justifyContentOptions[props.justifyContent_tablet]};
     z-index: ${(props) => props.zIndex_tablet};
+    top: ${(props) => props.top_tablet};
+    bottom: ${(props) => props.bottom_tablet};
+    right: ${(props) => props.right_tablet};
+    left: ${(props) => props.left_tablet};
     &:after {
       display: ${(props) => props.displayAfter_tablet};
     }
@@ -351,6 +356,10 @@ export const Div = styled.div`
     margin: ${(props) => props.margin_lg};
     transform: ${(props) => props.transform_lg};
     grid-column: ${(props) => props.gridColumn_lg};
+    top: ${(props) => props.top_lg};
+    bottom: ${(props) => props.bottom_lg};
+    right: ${(props) => props.right_lg};
+    left: ${(props) => props.left_lg};
   }
   @media ${Devices.xl} {
   }
@@ -642,6 +651,9 @@ export const GridContainer = ({
   childHeight,
   displayChild,
   displayChild_tablet,
+  displayChild_xs,
+  displayChild_sm,
+  displayChild_md,
   columns_sm,
   justifyContentChild,
 }) => {
@@ -681,7 +693,10 @@ export const GridContainer = ({
       <Grid
         display={displayChild}
         justifyContent={justifyContentChild}
-        display_tablet={displayChild_tablet}
+        display_xs={displayChild_xs}
+        display_sm={displayChild_sm}
+        display_tablet={displayChild_tablet} 
+        display_md={displayChild_md}
         overflow={overflowChild}
         background={backgroundChild}
         gridGap={gridGap}

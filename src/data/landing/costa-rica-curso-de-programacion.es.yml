@@ -91,6 +91,29 @@ follow_bar:
 # ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇
 #
 components:
+  - name: some_id
+    position: 3
+    layout: two_column_right
+    background: "lightBlue2"
+    image:
+      style: '{ "border" : "3px solid black" }' 
+      shadow: true 
+      src: "../../../static/images/testimonials/Mattia-Tozzi-testimonial.jpg"
+    video: "B01-eTfgqqc"
+    heading:
+      text: "El viaje de Mattia Tozzi en 4geeks Academy y como cambió su vida profesional."
+      #xl      lg     md     sm    xs
+      font_size: ["40px", "34px", "34px", "25px", "20px"]
+    content:
+      text: "Conoce la historia inspiradora de Mattia Tozzi, quien, buscando un cambio en su carrera, se unió a 4Geeks Academy. Su experiencia demuestra cómo la dedicación y el aprendizaje en este bootcamp lo llevaron a convertirse en un profesional altamente capacitado."
+      font_size: ["16px"]
+    button:
+      text: "Unete a la academia!"
+      path: "#bottom"
+      color: "white"
+      background: "black"
+      hover: "lightBlue"
+
   - name: top_coding_bootcamp
     position: 1
     layout: two_column_left
@@ -128,7 +151,7 @@ rating_reviews:
       url: ""
 
 badges:
-  position: 3
+  position: 7
   heading: "4Geeks Academy cuenta con premios y reconocimientos que validan su excelencia"
 
 program_details:
@@ -147,3 +170,5 @@ who_is_hiring:
   limit: 4
   heading: "¿Quién contrata a nuestros alumnos?"
   sub_heading: "84% de nuestros estudiantes que completaron el proceso de GeekFORCE han conseguido trabajo luego de haberse graduado (incluso dentro de los sigiuientes  100 días)"
+
+

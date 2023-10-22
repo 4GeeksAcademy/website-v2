@@ -9,7 +9,7 @@ meta_info:
 
   template: "landing_a" # <--- choose your landing template
   redirects: # <--- URL redirections to avoid 404 errors
-    ["/landing/coding-course"]
+    ["/landing/coding-course", "/es/landing/curso-de-programacion"]
 
   # Set a particular course or location to the landing page
   # this UTM fields will be also included in the CRM contact
@@ -127,12 +127,12 @@ geeks_vs_others:
   total_rows: 5
 
 why_4geeks:
-  position: 5
+  position: 6
   heading: "¿Por qué debes estudiar en 4Geeks Academy?"
   sub_heading: " "
 
 who_is_hiring:
-  position: 6
+  position: 7
   limit: 4
   heading: "Empresas que contratan a nuestros estudiantes"
   sub_heading: "Más de 500 partners y más de 150 vacantes abiertas como Full-Stack Developer"
@@ -143,6 +143,29 @@ who_is_hiring:
 #  sub_heading: "Take a look at our previous student projects"
 
 components:
+  - name: some_id
+    position: 5
+    layout: two_column_right
+    background: "lightYellow"
+    image:
+      style: '{ "border" : "3px solid black" }' 
+      shadow: true 
+      src: "../../../static/images/testimonials/Mattia-Tozzi-testimonial.jpg"
+    video: "B01-eTfgqqc"
+    heading:
+      text: "El viaje de Mattia Tozzi en 4geeks Academy y como cambió su vida profesional."
+      #xl      lg     md     sm    xs
+      font_size: ["40px", "34px", "34px", "25px", "20px"]
+    content:
+      text: "Descubre la historia de Mattia Tozzi, quien decidió unirse a 4Geeks Academy en busca de un cambio en su carrera profesional. Su experiencia demuestra cómo la dedicación y el aprendizaje en este bootcamp lo llevaron a convertirse en un profesional altamente capacitado en España."
+      font_size: ["16px"]
+    button:
+      text: "Unete a la academia!"
+      path: "#bottom"
+      color: "white"
+      background: "black"
+      hover: "lightBlue"
+
   - name: python_y_javascript
     position: 1
     layout: two_column_right
@@ -155,7 +178,5 @@ components:
         #           xl      lg      md      sm      xs
       font_size: ["50px", "50px", "50px", "50px", "50px"]
     content:
-      text: "Nuestro programa está basado en el uso de Python y Javascript. ¿La razón? En el mercado laboral JavaScript tiene 26 veces más vacantes de trabajo que Ruby on Rails y  Python tiene 10 veces más trabajos que node.js.
-      
-      Otras herramientas que también aprenderás a usar en nuestro programa son: GitHub, CSS3, HTML5, Flask, PostgreSQL, etc."
+      text: "Nuestro programa está basado en el uso de Python y Javascript. ¿La razón? En el mercado laboral JavaScript tiene 26 veces más vacantes de trabajo que Ruby on Rails y  Python tiene 10 veces más trabajos que node.js.     Otras herramientas que también aprenderás a usar en nuestro programa son: GitHub, CSS3, HTML5, Flask, PostgreSQL, etc."
       font_size: ["16px"]

@@ -337,6 +337,7 @@ export const StyledBackgroundSection = styled(BackgroundSection)`
     border-radius: ${(props) => props.borderRadius};
     filter: ${(props) => props.filter};
     height: ${(props) => props.h_sm};
+    width: ${(props) => props.width};
     max-width: ${(props) => props.maxWidth};
     background-color: ${(props) => props.backgroundColor};
     background-position: ${(props) => props.backgroundPosition} !important;
