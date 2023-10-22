@@ -555,8 +555,7 @@ const PricesAndPayments = (props) => {
           gridColumn_md="11/16"
           gridColumn_tablet="10/15"
           justifyContent_xs="center"
-          justifyContent_tablet="end"
-          justifyContent_lg="start"
+          justifyContent_tablet="start"
         >
           <Div
             flexDirection_tablet="row"
