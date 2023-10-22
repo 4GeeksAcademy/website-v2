@@ -828,7 +828,7 @@ const PricesAndPayments = (props) => {
           />
         </Div>
       </GridContainer>
-      <Paragraph margin="35px 0 0 0">{info.get_notified}</Paragraph>
+      <Paragraph margin_xxs="15px 0" margin_tablet="0 0 0 0">{info.get_notified}</Paragraph>
       {/* <Div background={Colors.lightYellow} height="511px" width="100%" style={{position: "absolute", height: "511px"}}>f</Div> */}
     </Div>
   );
