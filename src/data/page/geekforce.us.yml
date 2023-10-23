@@ -9,7 +9,9 @@ meta_info:
 
 seo_title: "geekforce"
 header:
-  title: "<strong style='color:black; font-weight:700;'>Geek</strong> <strong style = 'color:rgba(255, 183, 24, 1); font-weight:bold;'>FORCE</strong> <br> the collective process of Career Support at the Academy"
+  title: "<strong style='color:black; font-family: Archivo-Black;'>Geek</strong>
+  <strong style = 'color:rgba(255, 183, 24, 1); font-family: Archivo-Black;'>FORCE</strong> <br>
+  <strong style='font-family: Archivo;'>the collective process of Career Support at the Academy</strong>"
   image: "../../../static/images/bg/companies-bg.jpg"
   image_alt: ""
   paragraph: |

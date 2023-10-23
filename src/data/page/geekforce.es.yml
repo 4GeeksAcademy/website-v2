@@ -9,7 +9,9 @@ meta_info:
 
 seo_title: "geekforce"
 header:
-  title: "<strong style='color:black; font-weight:700;'>Geek</strong> <strong style = 'color:rgba(255, 183, 24, 1); font-weight:bold;'>FORCE</strong> <br> es el proceso colectivo de apoyo profesional en la Academia"
+  title: "<strong style='color:black; font-family: Archivo-Black;'>Geek</strong>
+  <strong style = 'color:rgba(255, 183, 24, 1); font-family: Archivo-Black;'>FORCE</strong> <br>
+  <strong style='font-family: Archivo;'> es el proceso colectivo de apoyo profesional en la Academia</strong>"
   image: "../../../static/images/bg/companies-bg.jpg"
   image_alt: ""
   paragraph: "La 'fuerza' significa empoderamiento profesional y es una membresía de por vida. Brinda asistencia para la colocación laboral del estudiante y para que se prepare para conseguir un trabajo en tecnología."

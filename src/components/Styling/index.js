@@ -170,6 +170,7 @@ export const Span = styled.div`
 
 const StyledImage = styled.div`
   display: ${(props) => props.display};
+  position: ${(props) => props.position};
   background-image: url(${(props) => props.src});
   background-repeat: no-repeat;
   background-size: ${(props) => props.backgroundSize || "cover"};
@@ -192,6 +193,9 @@ const StyledImage = styled.div`
   @media ${Devices.xxs} {
     display: ${(props) => props.display_xxs}; 
     height: ${(props) => props.height_xxs};
+    right: ${(props) => props.right_xxs};
+    bottom: ${(props) => props.bottom_xxs};
+    left: ${(props) => props.left_xxs};
   }
   @media ${Devices.xs} {
     display: ${(props) => props.display_xs};

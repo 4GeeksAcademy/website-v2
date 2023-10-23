@@ -10,7 +10,9 @@ meta_info:
 seo_title: Geekpal - 4Geeks Academy
 
 header:
-  title: "<strong style='color:black; font-weight:900;'>Geek</strong><strong style = 'color:#CD0000; font-weight:900;'>PAL</strong> <br> never code alone again"
+  title: "<strong style='color:black; font-family: Archivo-Black;'>Geek</strong>
+  <strong style = 'color:#CD0000; font-family: Archivo-Black;'>PAL</strong> <br> 
+  <strong style='font-family: Archivo;'>nunca vuelvas a codificar solo</strong>"
   image: "../../../static/images/bg/companies-bg.jpg"
   image_alt: ""
   paragraph: "GeekPAL es una membresía instantánea que obtienes cuando te conviertes en estudiante de 4Geeks Academy."

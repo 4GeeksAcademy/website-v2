@@ -96,7 +96,6 @@ const GeekForce = (props) => {
             fontSize="50px"
             lineHeight="54px"
             //fontFamily="Archivo"
-            //fontWeight="900"
             padding_xs="10px 0"
             padding_md="0px"
             margin="0"
@@ -107,6 +106,7 @@ const GeekForce = (props) => {
           />
           <Paragraph
             fontSize="24px"
+            fontFamily="Lato-Bold"
             lineHeight="29px"
             fontWeight="500"
             padding_xs="10px 0px"
@@ -119,23 +119,9 @@ const GeekForce = (props) => {
 
           {Array.isArray(yml.header.bullets) &&
             yml.header.bullets.map((bullet, index) => (
-            <Div >
-              <Icon
-                style={{
-                  background:
-                    bulletIcons[index % bulletIcons.length].background,
-                  padding: "5px",
-                  transform:
-                    bulletIcons[index % bulletIcons.length]?.transform,
-                  fontWeight: "bolder",
-                }}
-                width="20px"
-                height="20px"
-                icon={bulletIcons[index % bulletIcons.length].icon}
-                color="white"
-              />
               <Paragraph
                 zIndex="2"
+                fontFamily="Lato-Bold"
                 key={index}
                 fontSize="21px"
                 fontWeight="500"
@@ -144,9 +130,22 @@ const GeekForce = (props) => {
                 textAlign="left"
                 color="black"
               >
+                <Icon
+                  style={{
+                    background:
+                      bulletIcons[index % bulletIcons.length].background,
+                    padding: "5px",
+                    transform:
+                      bulletIcons[index % bulletIcons.length]?.transform,
+                    fontWeight: "bolder",
+                  }}
+                  width="20px"
+                  height="20px"
+                  icon={bulletIcons[index % bulletIcons.length].icon}
+                  color="white"
+                />
                 {" " + bullet}
               </Paragraph>
-            </Div>
             ))}
           <Img
             src="/images/vector-stroke-left.png"
@@ -209,7 +208,7 @@ const GeekForce = (props) => {
                       id={item.videoId}
                       thumb={item.image}
                       //imageSize="maxresdefault"
-                      videoHeight="350px"
+                      videoHeight="280px"
                       bgSize={`contain`}
                       style={{
                         width: "100%",
@@ -275,7 +274,7 @@ const GeekForce = (props) => {
               {i === 1 ? (
                 <Div maxWidth_tablet="1366px" margin_tablet="50px auto">
                   <Div
-                    display_xss="none"
+                    display_xxs="none"
                     display_tablet="flex"
                     position="relative"
                     justifyContent="center"
@@ -302,6 +301,7 @@ const GeekForce = (props) => {
                         gridColumn="9 / 17"
                         gridColumn_lg="11 / 27"
                         position="relative"
+
                       >
                         <Div width="100%">
                           <Img
@@ -400,7 +400,7 @@ const GeekForce = (props) => {
                   {/* Version mobile */}
 
                   <Div
-                    display_xss="flex"
+                    display_xxs="flex"
                     display_tablet="none"
                     position="relative"
                     flexDirection="Column"
@@ -424,8 +424,8 @@ const GeekForce = (props) => {
                       height="151px"
                       style={{
                         position: "absolute",
-                        left: "5%",
-                        bottom: "-30%",
+                        left: "10%",
+                        bottom: "5%",
                       }}
                     />
 
@@ -435,9 +435,8 @@ const GeekForce = (props) => {
                       height="286px"
                       style={{
                         position: "absolute",
-                        right: "14%",
-                        bottom: "-25%",
-                        zIndex: "1",
+                        right: "10%",
+                        bottom: "5%",
                       }}
                     />
 

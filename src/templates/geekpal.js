@@ -95,7 +95,8 @@ const GeekPal = (props) => {
           <Paragraph
             fontSize="50px"
             lineHeight="54px"
-            //fontFamily="Archivo"
+            //fontFamily="Lato-Bold"
+            //fontWeight="black"
             padding_xs="10px 0"
             padding_md="0px"
             margin="0"
@@ -107,7 +108,7 @@ const GeekPal = (props) => {
           <Paragraph
             fontSize="24px"
             lineHeight="29px"
-            fontWeight="500"
+            fontFamily="Lato-Bold"
             padding_xs="10px 0px"
             textAlign_xs="center"
             textAlign_tablet="left"
@@ -120,6 +121,7 @@ const GeekPal = (props) => {
             yml.header.bullets.map((bullet, index) => (
               <Paragraph
                 zIndex="2"
+                fontFamily="Lato-Bold"
                 key={index}
                 fontSize="21px"
                 fontWeight="500"
@@ -206,7 +208,7 @@ const GeekPal = (props) => {
                       id={item.videoId}
                       thumb={item.image}
                       //imageSize="maxresdefault"
-                      videoHeight="350px"
+                      videoHeight="280px"
                       bgSize={`contain`}
                       style={{
                         width: "100%",
@@ -269,7 +271,7 @@ const GeekPal = (props) => {
             {i === 1 ? (
                 <Div maxWidth_tablet="1366px" margin_tablet="50px auto">
                   <Div
-                    display_xss="none"
+                    display_xxs="none"
                     display_tablet="flex"
                     position="relative"
                     justifyContent="center"
@@ -394,7 +396,7 @@ const GeekPal = (props) => {
                   {/* Version mobile */}
 
                   <Div
-                    display_xss="flex"
+                    display_xxs="flex"
                     display_tablet="none"
                     position="relative"
                     flexDirection="Column"
@@ -418,7 +420,7 @@ const GeekPal = (props) => {
                       style={{
                         position: "absolute",
                         left: "5%",
-                        bottom: "-30%",
+                        bottom: "-35%",
                       }}
                     />
 
@@ -429,8 +431,7 @@ const GeekPal = (props) => {
                       style={{
                         position: "absolute",
                         right: "14%",
-                        bottom: "-25%",
-                        zIndex: "1",
+                        bottom: "-35%",
                       }}
                     />
 

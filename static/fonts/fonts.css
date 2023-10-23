@@ -8,9 +8,27 @@
   font-display: swap;
   src: url("./lato/Lato-Light.woff");
 }
+@font-face {
+  font-family: "Lato-Bold";
+  font-display: swap;
+  src: url("./lato/Lato-Bold.woff");
+}
 
 @font-face {
   font-family: "Archivo";
   font-display: swap;
+  src: url("./archivo/Archivo-Medium.ttf");
+}
+
+@font-face {
+  font-family: "Archivo-Black";
+  font-display: swap;
   src: url("./archivo/Archivo-Black.ttf");
 }
+
+@font-face {
+  font-family: "Archivo-Light";
+  font-display: swap;
+  src: url("./archivo/Archivo-Light.ttf");
+}
+
