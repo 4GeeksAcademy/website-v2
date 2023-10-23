@@ -657,6 +657,7 @@ export const GridContainer = ({
   displayChild_md,
   columns_sm,
   justifyContentChild,
+  justifyItemsChild,
 }) => {
   return (
     <Grid
@@ -695,6 +696,7 @@ export const GridContainer = ({
       <Grid
         display={displayChild}
         justifyContent={justifyContentChild}
+        justifyItems={justifyItemsChild}
         display_xs={displayChild_xs}
         display_sm={displayChild_sm}
         display_tablet={displayChild_tablet}

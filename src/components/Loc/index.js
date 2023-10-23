@@ -162,8 +162,8 @@ const Loc = ({ lang, yml, allLocationYaml }) => {
     <>
       {heading && (
         <GridContainer
-          margin_tablet="0 auto 35px auto"
-          margin_xs="0 0 15px 0"
+          margin_tablet="35px auto"
+          margin_xs="15px 0"
           margin="0 0 10px 0"
           gridGap="17px"
           maxWidth="1366px"

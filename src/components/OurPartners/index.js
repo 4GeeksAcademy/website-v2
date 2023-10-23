@@ -181,11 +181,13 @@ const Images_Featured = (props) => {
   return (
     <>
       <GridContainer
-        justifyItems="center"
+        justifyItemsChild="center"
         display_xs="none"
         display_md="block"
         style={{ justifyItems: "center" }}
         justifyContentChild="center"
+        maxWidth="1366px"
+        margin="0 auto"
         columns_tablet={
           imagesFiltered.length <= 4 ? imagesFiltered.length : "3"
         }
@@ -241,6 +243,7 @@ const OurPartners = ({
   withoutLine,
   slider,
   marquee,
+  maxWidth,
   ...rest
 }) => {
   let FragmentStyle = {
