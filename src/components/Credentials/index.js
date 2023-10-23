@@ -8,15 +8,28 @@ export default (props) => {
   const credentials = props.lang[0].node.credentials;
   const scope = props.scope_slug; // it can be course slug like "full-stack" or an academy location like "downtown-miami"
   return (
+  <>
+    <Div width="100%" 
+      background={Colors.verylightGray} 
+      justifyContent_tablet="center" 
+      flexDirection="column"
+      padding_xxs="40px 0"
+      padding_tablet="0px"
+    >
     <GridContainer
-      height="375px"
+      //height="375px"
       height_tablet="219px"
       background={Colors.verylightGray}
       columns="2"
       padding="0"
-      columns_tablet="4"
-      margin="0 0 67px 0"
-      margin_tablet="0 0 57px 0"
+      containerColumns_tablet="repeat(12, 1fr)"
+      gridColumn_tablet="1/ span 12"
+      columns_tablet={credentials.length}
+      // margin="0 0 67px 0"
+      margin_tablet="0 auto"
+      maxWidth="1366px"
+      gridGap_xxs="30px 15px"
+      gridGap_tablet="15px"
     >
       {credentials
         .filter((c) => c.scope === scope)
@@ -27,9 +40,13 @@ export default (props) => {
               gridGap="0"
               alignItems="center"
               justifyContent="center"
-              justifyContent_md="start"
+              //justifyContent_md="start"
               flexDirection="column"
               flexDirection_md="row"
+              minWidth_tablet="181px"
+              width_md="100%"
+              minWidth_md="245px"
+              minWidth_lg="330px"
             >
               <Icon icon={m.icon} width="48" height="48" />
               <Div
@@ -51,5 +68,7 @@ export default (props) => {
           );
         })}
     </GridContainer>
+    </Div>
+  </>
   );
 };

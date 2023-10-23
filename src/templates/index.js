@@ -118,11 +118,16 @@ const Home = (props) => {
         <SVGBubblesRight />
       </Div>
       <Div
-        display="block"
-        margin={isContentBarActive ? "110px 0 72px 0" : "72px 0 72px 0"}
+        flexDirection="column"
+        margin={isContentBarActive ? "110px auto 72px auto" : "72px auto 72px auto"}
         margin_tablet={
-          isContentBarActive ? "120px 0 108px 0" : "72px 0 108px 0"
+          isContentBarActive ? "120px auto 108px auto" : "72px auto 108px auto"
         }
+        maxWidth="1366px"
+        padding_xxs="0px"
+        padding_tablet="0 40px"
+        padding_md="0 80px"
+        padding_lg="0px"
       >
         <GridContainerWithImage
           padding="30px 0 0 0"
@@ -130,6 +135,7 @@ const Home = (props) => {
           columns_tablet="2"
           margin_tablet="30px 0 20px 0"
           position="relative"
+          gridColumn_tablet="1/15"
         >
           <Div
             position="absolute"
@@ -322,12 +328,14 @@ const Home = (props) => {
         </Div>
       </Div>
       <Testimonials lang={data.allTestimonialsYaml.edges} />
+      
       <Badges
         lang={pageContext.lang}
         paragraph={yml.badges.paragraph}
         margin="10px 0 65px 0"
         paddingText="0 5% 0.5em 5%"
         paddingText_tablet="0 12% 1.6em 12%"
+        maxWidth="1366px"
       />
 
       <GridContainer
@@ -340,7 +348,9 @@ const Home = (props) => {
       </GridContainer>
 
       <About4Geeks lang={data.allAbout4GeeksYaml.edges} />
+      
       <Credentials lang={data.allCredentialsYaml.edges} shadow={false} />
+      
       <With4Geeks
         lang={pageContext.lang}
         sessionLocation={
@@ -358,6 +368,7 @@ const Home = (props) => {
         title={yml.choose_program.title}
         paragraph={yml.choose_program.paragraph}
       />
+      
       <OurPartners
         images={hiring.partners.images}
         marquee

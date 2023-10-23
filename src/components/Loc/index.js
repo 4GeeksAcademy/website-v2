@@ -162,10 +162,11 @@ const Loc = ({ lang, yml, allLocationYaml }) => {
     <>
       {heading && (
         <GridContainer
-          margin_tablet="0 0 35px 0"
+          margin_tablet="0 auto 35px auto"
           margin_xs="0 0 15px 0"
           margin="0 0 10px 0"
           gridGap="17px"
+          maxWidth="1366px"
         >
           <Div display="flex" flexDirection="column" alignItems="center">
             <H2
@@ -184,17 +185,20 @@ const Loc = ({ lang, yml, allLocationYaml }) => {
       )}
       <Div
         id="locations-container"
-        padding="0 10%"
-        padding_md="0 10%"
-        padding_tablet="0 7%"
+        padding_xxs="0 20px"
+        padding_lg="0px"
+        padding_md="0 80px"
+        padding_tablet="0 40px"
         // padding="0 0 5% 0"
-        flexDirection_tablet="row"
+        flexDirection_md="row"
+        flexDirection_tablet="column"
         flexDirection_sm="column"
         flexDirection_xs="column"
         flexDirection="column"
-        margin="0 0 20px 0"
+        margin="0 auto 20px auto"
         // margin="auto"
         // width="70%"
+        maxWidth="1366px"
         height="100%"
         maxHeight="none"
       >
@@ -203,15 +207,16 @@ const Loc = ({ lang, yml, allLocationYaml }) => {
           display_tablet="block"
           display="flex"
           flexDirection="column"
-          width_md="45%"
-          width_tablet="40%"
+          width_md="50%"
+          width_tablet="100%"
           // maxWidth_tablet="270px"
           width="100%"
-          margin_tablet="0 20px 0 0"
+          margin_md="0 20px 0 0"
           margin_xs="0 0 20px 0"
         >
           <H3
-            textAlign_tablet="left"
+            textAlign_md="left"
+            textAlign_tablet="center"
             color={Colors.blue}
             width="100%"
             margin="0 0 10px 0"
@@ -223,7 +228,8 @@ const Loc = ({ lang, yml, allLocationYaml }) => {
               display="block"
               margin_tablet="0 0 20px 0"
               marginxs="0 0 5px 0"
-              textAlign_tablet="left"
+              textAlign_md="left"
+              textAlign_tablet="center"
               textAlign="center"
               color={Colors.darkGray2}
               style={{
@@ -254,7 +260,7 @@ const Loc = ({ lang, yml, allLocationYaml }) => {
           {image && (
             <Div
               id="img-container"
-              height_tablet="100%"
+              height_tablet="280px"
               height="200px"
               order="-1"
               order_tablet="0"
@@ -281,10 +287,11 @@ const Loc = ({ lang, yml, allLocationYaml }) => {
         <ResponsiveMenu />
         <Div
           id="menu-container"
-          width_md="55%"
-          width_tablet="60%"
+          width_md="50%"
+          width_tablet="100%"
           width="100%"
-          display_tablet="block"
+          display_tablet="flex"
+          flexDirection_tablet="column"
           display="none"
         >
           <Div

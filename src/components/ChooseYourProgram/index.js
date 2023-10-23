@@ -45,6 +45,7 @@ const ChooseYourProgram = ({
   };
   if (info) info = info.node;
   return (
+    <Div background={landingTemplate ? Colors.white : Colors.verylightGray}>
     <Grid
       ref={chooseProgramRef}
       gridTemplateColumns_md={
@@ -55,7 +56,7 @@ const ChooseYourProgram = ({
       }
       gridTemplateColumns_xs="1fr" //{landingTemplate && "1fr"}
       gridAutoRows_tablet="auto" //"minmax(100px, auto)"
-      background={landingTemplate ? Colors.white : Colors.verylightGray}
+      
       background_tablet={landingTemplate ? Colors.white : "transparent"}
       padding_lg="10px 0 50px 0"
       padding_md="10px 80px 50px 80px"
@@ -302,6 +303,7 @@ const ChooseYourProgram = ({
         gridRow="1 / 4"
       />
     </Grid>
+    </Div>
   );
 };
 

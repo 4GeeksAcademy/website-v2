@@ -72,11 +72,17 @@ const Badges = ({
         width="100%"
         maxWidth={maxWidth}
         margin_tablet="0 auto"
+        justifyContent="center"
         background={background}
+        padding_xxs="0 20px"
+        padding_tablet="0 40px"
+        padding_md="0 80px"
+        padding_lg="0px"
       >
         <GridContainer
           id={id}
-          containerColumns_tablet={`1.8fr repeat(12, 1fr) 1.8fr`}
+          containerColumns_tablet="repeat(12, 1fr)"
+          gridColumn_tablet="1/ span 12"
           background={background}
           padding={padding}
           padding_tablet={padding_tablet}
