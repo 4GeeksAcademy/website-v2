@@ -19,8 +19,14 @@ const About4Geeks = ({ id, lang }) => {
       padding_tablet="0 40px"
       padding_md="0 80px"
       padding_lg="0px"
+      alignItems_tablet="center"
+      alignItems_md="start"
     >
-      <Div flexDirection="column" gridColumn_tablet="1 / 6" alignItems_tablet="center">
+      <Div
+        flexDirection="column"
+        gridColumn_tablet="1 / 6"
+        alignItems_tablet="flex-start"
+      >
         <H2 textAlign="left" margin="0 0 20px 0">
           {about.heading}
         </H2>

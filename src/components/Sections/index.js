@@ -697,7 +697,7 @@ export const GridContainer = ({
         justifyContent={justifyContentChild}
         display_xs={displayChild_xs}
         display_sm={displayChild_sm}
-        display_tablet={displayChild_tablet} 
+        display_tablet={displayChild_tablet}
         display_md={displayChild_md}
         overflow={overflowChild}
         background={backgroundChild}
@@ -710,14 +710,19 @@ export const GridContainer = ({
         gridTemplateRows_tablet={gridTemplateRows_tablet}
         gridTemplateColumns_sm={columns_sm}
         gridTemplateColumns_tablet={`repeat(${columns_tablet}, ${
-          12 / columns_tablet }fr)`}
+          12 / columns_tablet
+        }fr)`}
         padding={paddingChild}
         padding_tablet={padding_tabletChild}
         gridTemplateColumns={`${columns}, 1fr`}
         gridColumn={GridColumn}
         gridRow_tablet={gridRow_tablet}
         gridColumn_tablet={
-          gridColumn_tablet ? gridColumn_tablet : fluid ? "1 / span 14" : "2 / span 12"
+          gridColumn_tablet
+            ? gridColumn_tablet
+            : fluid
+            ? "1 / span 14"
+            : "2 / span 12"
         }
         gridTemplateAreas={gridTemplateAreas}
         gridTemplateAreas_tablet={gridTemplateAreas_tablet}
@@ -750,6 +755,8 @@ export const GridContainerWithImage = ({
   position,
   gridColumn_tablet,
   maxWidth,
+  alignItems_tablet,
+  alignItems_md,
 }) => {
   return (
     <Grid
@@ -780,9 +787,15 @@ export const GridContainerWithImage = ({
             : `repeat(${columns_tablet}, ${14 / columns_tablet}fr)`
         }
         gridTemplateColumns={columns}
-        gridColumn_tablet={ gridColumn_tablet ? gridColumn_tablet : 
-            imageSide == "left" ? "1 / span 14" : "2 / span 14"
+        gridColumn_tablet={
+          gridColumn_tablet
+            ? gridColumn_tablet
+            : imageSide == "left"
+            ? "1 / span 14"
+            : "2 / span 14"
         }
+        alignItems_tablet={alignItems_tablet}
+        alignItems_md={alignItems_md}
       >
         {children}
       </Grid>

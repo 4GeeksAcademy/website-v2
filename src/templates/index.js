@@ -119,7 +119,9 @@ const Home = (props) => {
       </Div>
       <Div
         flexDirection="column"
-        margin={isContentBarActive ? "110px auto 72px auto" : "72px auto 72px auto"}
+        margin={
+          isContentBarActive ? "110px auto 72px auto" : "72px auto 72px auto"
+        }
         margin_tablet={
           isContentBarActive ? "120px auto 108px auto" : "72px auto 108px auto"
         }
@@ -328,7 +330,7 @@ const Home = (props) => {
         </Div>
       </Div>
       <Testimonials lang={data.allTestimonialsYaml.edges} />
-      
+
       <Badges
         lang={pageContext.lang}
         paragraph={yml.badges.paragraph}
@@ -348,9 +350,9 @@ const Home = (props) => {
       </GridContainer>
 
       <About4Geeks lang={data.allAbout4GeeksYaml.edges} />
-      
+
       <Credentials lang={data.allCredentialsYaml.edges} shadow={false} />
-      
+
       <With4Geeks
         lang={pageContext.lang}
         sessionLocation={
@@ -368,7 +370,7 @@ const Home = (props) => {
         title={yml.choose_program.title}
         paragraph={yml.choose_program.paragraph}
       />
-      
+
       <OurPartners
         images={hiring.partners.images}
         marquee
