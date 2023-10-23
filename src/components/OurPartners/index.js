@@ -182,6 +182,8 @@ const Images_Featured = (props) => {
     <>
       <GridContainer
         justifyItems="center"
+        display_xs="none"
+        display_md="block"
         style={{ justifyItems: "center" }}
         justifyContentChild="center"
         columns_tablet={
