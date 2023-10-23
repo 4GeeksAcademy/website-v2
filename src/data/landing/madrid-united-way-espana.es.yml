@@ -160,7 +160,7 @@ components:
         <h4><strong style="font-weight: bold;"> > Flexibilidad de carrera </strong></h4>
         <p>Como programador podrás trabajar en diversas áreas. Esta habilidad te abre muchas puertas.</p>
   - name: geeksinfo
-    position: 7
+    position: 1
     layout: geeksInfo
 
   - name: why4geeks
@@ -195,6 +195,8 @@ components:
     image:
       style: '{ "backgroundSize": "contain" }'
       src: "/static/images/staff/luisa.png"
+      shadow: true
+      
     video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
     heading:
       text: "¡Paga solo cuando consigas trabajo!"
@@ -232,7 +234,7 @@ components:
     proportions: [6, 6]
     background: "#F5F5F5"
     image:
-      style: '{ "backgroundSize": "contain" }'
+      style: '{ "backgroundSize": "cover" }'
       src: "/images/landing/comunity-support.png"
       shadow: true
     heading:
@@ -246,7 +248,7 @@ components:
       color: "white"
       background: "black"
       hover_color: "white"
-      path: "#top"
+      path: "#bottom"
 
   - name: united
     position: 11
