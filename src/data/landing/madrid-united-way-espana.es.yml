@@ -196,7 +196,6 @@ components:
       style: '{ "border" : "3px solid black", "backgroundSize": "contain" }' 
       shadow: true 
       src: "/static/images/staff/luisa.png"
-      shadow: true
       
     video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
     heading:

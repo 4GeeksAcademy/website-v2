@@ -63,9 +63,9 @@ const LandingHeader = (props) => {
           containerGridGap="0"
           gridTemplateColumns_tablet="repeat(14,1fr)"
           padding_xs="132px 20px 60px 20px"
-          padding_tablet="72px 40px 35px 40px"
-          padding_md="72px 80px 35px 80px"
-          padding_lg="72px 0 35px 0"
+          padding_tablet="85px 40px 55px 40px"
+          padding_md="85px 80px 55px 80px"
+          padding_lg="85px 0 55px 0"
           columns_tablet="2"
         >
           <Div
@@ -238,8 +238,8 @@ const LandingHeader = (props) => {
             width="100%"
             margin="0"
             textAlign_sm="center"
-            margin_md={yml.form.margin_md || "0 auto 0 25px"}
-            gridColumn_tablet="8 / 14"
+            margin_md={yml.form.margin_md || "0 0 0 0"}
+            gridColumn_tablet="8 / 15"
             // gridColumn_md="8 / 14"
             // gridColumn_tablet="8 / 13"
           >
@@ -250,7 +250,16 @@ const LandingHeader = (props) => {
               display_tablet="block"
               zIndex="0"
             >
-              <Circle color="lightBlue" width="301px" height="301px" />
+              <Circle 
+                color="lightBlue" 
+                width="301px" 
+                height="301px" 
+                right="-100%"
+                top="-15%"
+                style={{ 
+                  
+                }}
+              />
               <Icon
                 style={{ marginTop: "150%" }}
                 icon="elderly-unfill"
@@ -270,8 +279,10 @@ const LandingHeader = (props) => {
                 width="301px"
                 height="301px"
                 position="unset"
+                left="10%"
+                top="-5%"
               />
-              <Div display_tablet="none" margin="100% auto">
+              <Div display="flex" display_tablet="none" margin="100% auto">
                 <Icon
                   style={{ marginTop: "90%" }}
                   icon="slash-fill"
@@ -306,17 +317,20 @@ const LandingHeader = (props) => {
                   ? Colors.white
                   : "#FFF1D1"
               }
-              margin_tablet="18px 38px"
+              margin_md="50px 0 0 14.5%"
+              margin_tablet="18px 0"
               selectProgram={programs}
               selectLocation={locations}
-              margin="18px 10px"
+              margin="18px 0"
               marginTop_tablet="50px"
               // marginTop_xs="20px"
               style={{
                 zIndex: "1",
                 minHeight: "350px",
+                borderRadius: "0px",
                 border: "3px solid black",
               }}
+              gap="11px"
               formHandler={processFormEntry}
               heading={yml.form.heading}
               motivation={yml.form.motivation}
@@ -330,10 +344,22 @@ const LandingHeader = (props) => {
               justifyContentButton="center"
               marginButton="10px auto 30px auto"
               widthButton="100%"
+              width_md="84%"
+              width_tablet="84%"
               // marginButton_tablet="0 0 30px auto"
               boxShadow="9px 8px 0px 0px rgba(0,0,0,1)"
             />
-            <Div display="none" display_tablet="block" margin="20% 0 0 0">
+            <Div 
+              display="none" 
+              display_tablet="block" 
+              margin_lg="5% 0 0 20px"
+              // margin_md="40% 0 0 20px"
+              margin_tablet="20% 0 0 20px"
+              position="absolute"
+              bottom_lg="0px"
+              bottom_md="5%"
+              bottom_tablet="25%"
+            >
               <Icon
                 icon="slash-fill"
                 width="41px"

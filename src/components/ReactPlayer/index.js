@@ -39,6 +39,24 @@ const Iframe = styled(YouTube)`
   padding: 0;
   border-radius: ${(props) => props.borderRadius || "auto"};
   height: ${(props) => props.height || "100%"};
+  @media ${Devices.xxs} {
+    height: ${(props) => props.height_xxs};
+  }
+  @media ${Devices.xs} {
+    height: ${(props) => props.height_xs};
+  }
+  @media ${Devices.sm} {
+    height: ${(props) => props.height_sm};
+  }
+  @media ${Devices.tablet} {
+    height: ${(props) => props.height_tablet};
+  }
+  @media ${Devices.md} {
+    height: ${(props) => props.height_md};
+  }
+  @media ${Devices.lg} {
+    height: ${(props) => props.height_}lg;
+  }
 `;
 
 const Thumbnail = styled.img`
@@ -167,7 +185,11 @@ const Player = ({
 
   const imgStyles = image_thumb?.style ? JSON.parse(image_thumb?.style) : null;
   return (
-    <VideoWrapper {...rest} style={style} margin_tablet={margin_tablet}>
+    <VideoWrapper {...rest} 
+      style={style} 
+      margin_tablet={margin_tablet} 
+      width={width}
+    >
       {showVideo ? (
         <>
           {With_Modal ? (
@@ -189,7 +211,10 @@ const Player = ({
                 onStateChange={onStateChange}
                 onPlaybackRateChange={onPlaybackRateChange}
                 onPlaybackQualityChange={onPlaybackQualityChange}
-                height="375px"
+                height_xxs="300px"
+                height_tablet="400px"
+                height_md="520px"
+                height_lg="100%"
                 opts={{
                   // padding: "125px 0 0",
                   width: "100%",

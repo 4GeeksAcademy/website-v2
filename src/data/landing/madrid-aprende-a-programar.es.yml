@@ -160,7 +160,6 @@ components:
     image:
       shadow: true
       src: "https://storage.googleapis.com/4geeks-academy-website/landing-pictures/testimonials.webp"
-      shadow: true
     heading:
       text: "Escúchalo de nuestros alumnos"
       #xl      lg     md     sm    xs
