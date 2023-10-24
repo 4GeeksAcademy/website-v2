@@ -111,7 +111,6 @@ const Player = ({
   transformPlay_lg,
   leftPlay_tablet,
   margin_tablet,
-
   ...rest
 }) => {
   const [showVideo, setShowVideo] = React.useState(false);
