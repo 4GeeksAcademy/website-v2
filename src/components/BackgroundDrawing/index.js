@@ -48,4 +48,9 @@ const Figure = styled.div`
   @media ${Devices.xl} {
   }
 `;
-export const Circle = styled(Figure)``;
+export const Circle = styled(Figure)`
+  top: ${(props) => props.top};
+  left: ${(props) => props.left};
+  bottom: ${(props) => props.bottom};
+  right: ${(props) => props.right};
+`;
