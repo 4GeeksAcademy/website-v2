@@ -29,9 +29,12 @@ import CardsCarousel from "../CardsCarousel";
 import Overlaped from "../Overlaped";
 import { background } from "@storybook/theming";
 
-const Title = ({ id, title, paragraph }) => {
+const Title = ({ id, title, paragraph}) => {
   return (
-    <GridContainer id={id} margin="40px 0 40px 0">
+    <GridContainer id={id}
+      margin={paragraph ? "40px 0 20px 0" : "40px 0 30px 0"}
+      margin_tablet={paragraph ? "80px 0 20px 0" : "80px 0 60px 0"}
+    >
       <H2 type="h2">{title}</H2>
       {paragraph && <Paragraph margin="26px 0">{paragraph}</Paragraph>}
     </GridContainer>
