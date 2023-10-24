@@ -11,10 +11,22 @@ const About4Geeks = ({ id, lang }) => {
     <GridContainerWithImage
       id={id}
       columns_tablet="12"
-      margin_tablet="100px 0 108px 0"
+      margin_tablet="50px auto 50px auto"
       margin="80px 0 64px 0"
+      maxWidth="1366px"
+      gridColumn_tablet="1/15"
+      padding_xxs="0 20px"
+      padding_tablet="0 40px"
+      padding_md="0 80px"
+      padding_lg="0px"
+      alignItems_tablet="center"
+      alignItems_md="start"
     >
-      <Div flexDirection="column" gridColumn_tablet="1 / 6">
+      <Div
+        flexDirection="column"
+        gridColumn_tablet="1 / 6"
+        alignItems_tablet="flex-start"
+      >
         <H2 textAlign="left" margin="0 0 20px 0">
           {about.heading}
         </H2>
