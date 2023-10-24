@@ -111,8 +111,8 @@ const ChooseYourProgram = ({
           landingTemplate ? "repeat(2, 4fr)" : "repeat(3 , 33%)"
         }
         zIndex="1"
-        margin_tablet={!landingTemplate && "0 0 0 35px"}
-        margin_md="0"
+        margin_tablet={!landingTemplate && "0 20px 0 20px"}
+        margin_md="20px"
       >
         {Array.isArray(programs) &&
           programs.map((program, index) => {
