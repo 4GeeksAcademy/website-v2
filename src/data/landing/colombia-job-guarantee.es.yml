@@ -187,7 +187,7 @@ components:
       color: white
       hover_color: "white"
       background: "black"
-      path: ""
+      path: "https://4geeksacademy.com/us/coding-campus/coding-bootcamp-colombia"
     # content:
     #   text: "text after bullets"
     #   font_size: ["16px"]
