@@ -24,7 +24,7 @@ const Title_Paragraph = (props) => {
           alignItems="center"
           padding_tablet="0"
           padding="0 10px"
-          gridColumn_tablet="2 / 14"
+          gridColumn_tablet="1 / 15"
         >
           {/*<H2 margin="0 0 15px 0" fontSize="15px" lineHeight="19px" fontWeight="900">{title}</H2>*/}
           <H2
@@ -188,6 +188,8 @@ const Images_Featured = (props) => {
         display_sm="none"
         //display_tablet="block"
         justifyContentChild="center"
+        maxWidth="1366px"
+        margin="0 auto"
         columns_tablet={
           imagesFiltered.length <= 4 ? imagesFiltered.length : "3"
         }
@@ -243,6 +245,7 @@ const OurPartners = ({
   withoutLine,
   slider,
   marquee,
+  maxWidth,
   ...rest
 }) => {
   let FragmentStyle = {
