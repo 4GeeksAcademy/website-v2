@@ -207,6 +207,7 @@ const GeekForce = (props) => {
                   ) : (
                     <ReactPlayer
                       id={item.videoId}
+                      margin_tablet="0px"
                       thumb={item.image}
                       //imageSize="maxresdefault"
                       videoHeight="280px"

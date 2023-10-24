@@ -511,6 +511,7 @@ export const query = graphql`
               style
               shadow
               link
+              shadow
             }
             programs {
               title
@@ -845,6 +846,7 @@ export const query = graphql`
           }
           header_data {
             tagline
+            tagline_color
             background
             color
             sub_heading

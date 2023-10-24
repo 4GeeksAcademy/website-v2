@@ -47,6 +47,7 @@ const Overlaped = ({
         padding_tablet="0 40px"
         padding_md="0 80px"
         padding_lg="0"
+        width="100%"
       >
         <Grid
           gridTemplateColumns_lg="1fr repeat(32,1fr) 1fr"
@@ -162,7 +163,7 @@ const Overlaped = ({
 
           {button?.text && (
             <Button
-              background={m.button.color}
+              background={button.color}
               color={Colors.white}
               margin="20px 0 0 0"
             >
@@ -246,13 +247,11 @@ const Overlaped = ({
             <Paragraph textAlign="start" margin="12px 0 0 0">
               {content}
             </Paragraph>
-          ) : (
-            content
-          )}
-
+          ) : null}
           {button?.text && (
             <Button
-              background={m.button.color}
+              width="100%"
+              background={button.color}
               color={Colors.white}
               margin="20px 0 0 0"
             >

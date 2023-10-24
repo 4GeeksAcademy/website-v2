@@ -8,7 +8,7 @@ const Icon = ({ icon, ...rest }) => {
   const Comp = loadable(() =>
     import(`./set/${icon}`).catch((err) => console.error(err))
   );
-  return <Comp {...rest} />;
+  return icon && <Comp {...rest} />;
 };
 Icon.propTypes = {
   icon: PropTypes.string.isRequired,

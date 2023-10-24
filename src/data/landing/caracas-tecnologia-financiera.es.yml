@@ -89,8 +89,8 @@ follow_bar:
     text: ""
 
 program_details:
-  position: 4
-  heading: "Domina Python, JS y React"
+  position: 1
+  heading: "Domina JS, React y Python"
   sub_heading: "Un bootcamp de programación sobre las tecnologías más usadas del mundo" 
 
 # Possible layours: [two_column_left_image, two_column_right_image]
@@ -142,8 +142,9 @@ components:
     layout: two_column_left
     proportions: [5, 7]
     image:
-      style: '{ "backgroundSize": "contain" }'
+      style: '{ "backgroundSize": "cover", "background-position": "top"}'
       src: "/images/ownpeoplecoding2.jpg"
+      shadow: true
     heading:
       text: "4Geeks Academy & Tecnología Financiera: ¡La alianza que impulsará tu vida profesional!"
       font_size: ["30px", "30px", "30px", "30px", "30px"]
@@ -155,6 +156,12 @@ components:
       font_size: ["16px"]
       text: |
         <p><span style="font-weight: bold;">Aprovecha esta alianza y forma parte de la evolución tecnológica a nivel mundial ¡Comienza HOY!</p>
+    button:
+      text: "Únete a la Academia"
+      background: black
+      color: white
+      hover_color: "#white"
+      path: "#top"
 
     
 badges:

@@ -34,19 +34,23 @@ form:
 
 # jumbotron on the top (cannot be commented out)
 header_data:
-  tagline: Impulsa tu carrera profesional, Obtén tu beca!
+  tagline: Impulsa tu carrera profesional!
   tagline_color: white
   sub_heading: ""
   partner_logo_url: "../../../static/images/partner/microsoft.png"
   background_image: "../../../static/images/Happy-People-Landing-4Geeks-ES.jpg"
-  image_filter: brightness(0.4)
+  image_filter: brightness(0.15)
 
 features:
-  marginTop: 20px #<-- separation between tagline and the bullets
-
+  marginTop: 20px #<-- separation between tagline and the bullet
   #                                         up   left down  right
   styles: '{ "color": "white", "fontSize": "15px", "margin": "10px 0px 10px 0px" }'
   text: Hay más vacantes que en cualquier otra industria ¡Impulsa tu Carrera! y hazte programador de software
+  bullets:
+    
+    - Programas para Full Satck & Software Engineer
+    - Formato Part-Time, ¡no renuncies a tu vida!
+    - Opciones de financiación 
 
 follow_bar:
   position: "top" # top, bottom, hidden
@@ -76,14 +80,14 @@ short_badges:
     alt: "Best coding bootcamp Switchup 2023"   
   - name: "Florida Department of Education"
     url: ""
-    image: "../../../static/images/badges/licensed.png"
+    image: "../../../static/images/badges/licensed-inverted.png"
     alt: "Florida Department of Education"
 
 #
 # ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇
 #
 badges:
-  position: 1 # It's the position of the component that will be rendered first
+  position: 5 # It's the position of the component that will be rendered first
   heading: "4Geeks Academy cuenta con premios y reconocimientos que validan su excelencia"
 
 about4Geeks:
@@ -102,7 +106,7 @@ about4Geeks:
   image_mobile: "../../../static/images/bg/community.png"
 
 who_is_hiring:
-  position: 4
+  position: 10
   heading: "DÓNDE TRABAJAN NUESTROS ESTUDIANTES"
   sub_heading: "Gracias a nuestra creciente red de Aliados podemos contar con ofertas constantes a nivel nacional e internacional"
   featured:
@@ -196,6 +200,5 @@ components:
         #           xl      lg      md      sm      xs
       font_size: ["50px", "50px", "50px", "50px", "50px"]
     content:
-      text: "Nuestros programa está basado en el uso de Python y Javascript. La razón? En el mercado laboral JavaScript tiene 26 veces más vacantes de trabajo que Ruby on Rails y  Python tiene 10 veces más trabajos que node.js.
-      Otras herramientas que también aprenderás a usar en nuestro programa son: GitHub, CSS3, HTML5, Flask, etc."
+      text: "Nuestros programa está basado en el uso de Python y Javascript. La razón? En el mercado laboral JavaScript tiene 26 veces más vacantes de trabajo que Ruby on Rails y  Python tiene 10 veces más trabajos que node.js. Otras herramientas que también aprenderás a usar en nuestro programa son: GitHub, CSS3, HTML5, Flask, etc."
       font_size: ["16px"]

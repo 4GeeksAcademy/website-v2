@@ -207,6 +207,7 @@ const GeekPal = (props) => {
                     <ReactPlayer
                       id={item.videoId}
                       thumb={item.image}
+                      margin_tablet="0px"
                       //imageSize="maxresdefault"
                       videoHeight="280px"
                       bgSize={`contain`}
