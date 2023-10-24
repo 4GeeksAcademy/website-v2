@@ -159,10 +159,33 @@ choose_your_program:
 #  sub_heading: "Take a look at our previous student projects"
 
 components:
-  - name: inmediatez
-    position: 2
-    layout: two_column_left
-    background: "lightYellow" # Name of the color(from components/Styling/index.js) or color code ex: #C9F9F9
+  - name: some_id
+    position: 5
+    layout: two_column_right
+    background: "lightYellow"
+    image:
+      style: '{ "border" : "3px solid black" }' 
+      shadow: true 
+      src: "../../../static/images/testimonials/Mattia-Tozzi-testimonial.jpg"
+    video: "B01-eTfgqqc"
+    heading:
+      text: "El viaje de Mattia Tozzi en 4geeks Academy y como cambió su vida profesional."
+      #xl      lg     md     sm    xs
+      font_size: ["40px", "34px", "34px", "25px", "20px"]
+    content:
+      text: "Descubre la historia de Mattia Tozzi, quien decidió unirse a 4Geeks Academy en busca de un cambio en su carrera profesional. Su experiencia demuestra cómo la dedicación y el aprendizaje en este bootcamp lo llevaron a convertirse en un profesional altamente capacitado en España."
+      font_size: ["16px"]
+    button:
+      text: "Unete a la academia!"
+      path: "#bottom"
+      color: "white"
+      background: "black"
+      hover: "lightBlue"
+
+  - name: python_y_javascript
+    position: 1
+    layout: two_column_right
+    background: "veryLightBlue2" # Name of the color(from components/Styling/index.js) or color code ex: #C9F9F9
     image:
       style: '{ "backgroundSize": "cover", "min-height": "300px"}'
       src: "/images/landing/PeopleStudying.jpeg"
