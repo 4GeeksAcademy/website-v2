@@ -341,6 +341,10 @@ export const Div = styled.div`
     grid-column: ${(props) => props.gridColumn_md};
     grid-row: ${(props) => props.gridRow_md};
     position: ${(props) => props.position_md};
+    top: ${(props) => props.top_md};
+    bottom: ${(props) => props.bottom_md};
+    right: ${(props) => props.right_md};
+    left: ${(props) => props.left_md};
   }
   @media ${Devices.lg} {
     display: ${(props) => props.display_lg};
