@@ -181,10 +181,12 @@ const Images_Featured = (props) => {
   return (
     <>
       <GridContainer
-        justifyItems="center"
+        justifyItemsChild="center"
+        display_xxs="none"
         display_xs="none"
-        display_md="block"
-        style={{ justifyItems: "center" }}
+        displayChild_xs="none"
+        display_sm="none"
+        //display_tablet="block"
         justifyContentChild="center"
         columns_tablet={
           imagesFiltered.length <= 4 ? imagesFiltered.length : "3"

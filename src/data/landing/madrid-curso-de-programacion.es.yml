@@ -107,11 +107,6 @@ program_details:
   heading: "Detalles del programa"
   sub_heading: "Aprende las tecnologías que demandan las empresas"
 
-why_4geeks:
-  position: 6
-  heading: "¿Por qué debes estudiar en 4Geeks Academy?"
-  sub_heading: " "
-
 geeks_vs_others:
   position: 8
   heading: "¿Por qué 4Geeks Academy es único?"
@@ -122,12 +117,6 @@ why_4geeks:
   position: 6
   heading: "¿Por qué debes estudiar en 4Geeks Academy?"
   sub_heading: " "
-
-who_is_hiring:
-  position: 7
-  limit: 4
-  heading: "Empresas que contratan a nuestros estudiantes"
-  sub_heading: "Más de 500 partners y más de 150 vacantes abiertas como Full-Stack Developer"
 
 iconogram:
   position: 9
