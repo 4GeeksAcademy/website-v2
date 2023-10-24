@@ -130,6 +130,7 @@ export default ({
           columns_tablet={
             locationFiltered.length <= 3 ? locationFiltered.length : "3"
           }
+          padding_xxs="0 20px 50px 20px"
           padding_tablet="0 40px"
           padding_md="0 80px"
           padding_lg="0"

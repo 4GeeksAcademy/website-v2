@@ -388,6 +388,7 @@ export const Grid = styled(Div)`
   @media ${Devices.xxs} {
     grid-template-columns: ${(props) =>
       props.columns_xxs ? `repeat(${props.columns_xxs}, 1fr)` : null};
+    padding: ${(props) => props.padding_xxs};
   }
   @media ${Devices.xs} {
     grid-template-columns: ${(props) =>
@@ -420,9 +421,11 @@ export const Grid = styled(Div)`
     grid-row: ${(props) => props.gridRow_tablet};
     justify-content: ${(props) => props.justifyContent_tablet};
     grid-template-areas: ${(props) => props.gridTemplateAreas_tablet};
+    padding: ${(props) => props.padding_tablet};
   }
   @media ${Devices.md} {
     margin: ${(props) => props.margin_md};
+     padding: ${(props) => props.padding_md};
     grid-template-columns: ${(props) => props.gridTemplateColumns_md};
     grid-template-rows: ${(props) =>
       props.gridTemplateRows_md
@@ -434,6 +437,7 @@ export const Grid = styled(Div)`
   }
   @media ${Devices.lg} {
     grid-template-columns: ${(props) => props.gridTemplateColumns_lg};
+    padding: ${(props) => props.padding_lg};
   }
   @media ${Devices.xl} {
   }
