@@ -201,8 +201,9 @@ export const Div = styled.div`
   }
   @media ${Devices.xxs} {
     margin: ${(props) => props.margin_xxs};
+    padding: ${(props) => props.padding_xxs};
     background: ${(props) => props.background_xxs};
-    display: ${(props) => props.display_xss};
+    display: ${(props) => props.display_xxs};
     padding: ${(props) => props.padding_xxs};
   }
   @media ${Devices.xs} {
