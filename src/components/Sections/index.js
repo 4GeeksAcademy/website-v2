@@ -200,11 +200,11 @@ export const Div = styled.div`
     border-bottom: ${(props) => props.borderBottomHover};
   }
   @media ${Devices.xxs} {
+    width: ${(props) => props.width_xxs};
     margin: ${(props) => props.margin_xxs};
-    padding: ${(props) => props.padding_xxs};
+    padding: ${(props) => props.padding_xxs}
     background: ${(props) => props.background_xxs};
     display: ${(props) => props.display_xxs};
-    padding: ${(props) => props.padding_xxs};
   }
   @media ${Devices.xs} {
     padding: ${(props) => props.padding_xs};
