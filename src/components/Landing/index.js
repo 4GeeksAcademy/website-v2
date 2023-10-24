@@ -799,9 +799,12 @@ export const landingSections = {
         </H2>
         <Div
           display="flex"
-          flexDirection="column"
-          flexDirection_tablet="row "
-          justifyContent="center"
+          flexDirection_xxs="row"
+          flexDirection_tablet="row"
+          flexWrap_xxs="wrap"
+          flexWrap_tablet="nowrap"
+          justifyContent_xxs="space-evenly"
+          justifyContent_tablet="space-evenly"
           gap="45px"
           gap_tablet="10%"
         >

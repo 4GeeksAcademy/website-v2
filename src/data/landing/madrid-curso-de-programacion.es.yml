@@ -118,17 +118,6 @@ geeks_vs_others:
   # sub_heading: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
   total_rows: 5
 
-why_4geeks:
-  position: 6
-  heading: "¿Por qué debes estudiar en 4Geeks Academy?"
-  sub_heading: " "
-
-who_is_hiring:
-  position: 7
-  limit: 4
-  heading: "Empresas que contratan a nuestros estudiantes"
-  sub_heading: "Más de 500 partners y más de 150 vacantes abiertas como Full-Stack Developer"
-
 iconogram:
   position: 9
   icons:

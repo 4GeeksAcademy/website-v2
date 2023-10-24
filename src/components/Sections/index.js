@@ -203,6 +203,9 @@ export const Div = styled.div`
     margin: ${(props) => props.margin_xxs};
     background: ${(props) => props.background_xxs};
     display: ${(props) => props.display_xss};
+    justify-content: ${(props) => props.justifyContent_xxs};
+    flex-direction: ${(props) => props.flexDirection_xxs};
+    flex-wrap: ${(props) => props.flexWrap_xxs}; 
   }
   @media ${Devices.xs} {
     padding: ${(props) => props.padding_xs};
@@ -691,7 +694,7 @@ export const GridContainer = ({
         justifyContent={justifyContentChild}
         display_xs={displayChild_xs}
         display_sm={displayChild_sm}
-        display_tablet={displayChild_tablet} 
+        display_tablet={displayChild_tablet}
         display_md={displayChild_md}
         overflow={overflowChild}
         background={backgroundChild}
