@@ -111,12 +111,9 @@ const AlumniProjects = ({
       maxWidth_lg="1366px"
       maxWidth_md="1024px"
       maxWidth_tablet="768px"
-<<<<<<< HEAD
       margin_md="0px auto 30px auto"
       paddgin_xs="0 0 20px 0"
-=======
       margin_tablet="0px auto 60px auto"
->>>>>>> 9b4faa4df2f325f32f55c92b4ac409408fe335c8
       zIndex="1"
     >
       {(title !== undefined && paragraph !== undefined) ||
