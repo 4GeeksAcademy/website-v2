@@ -25,13 +25,12 @@ form:
   heading: "Aplica a 4Geeks"
   motivation: "Únete a miles de graduados que viven como programadores y trabajan en grandes empresas."
   button_label: APLICA YA
-  redirect: "/es/gracias/?lang=es"  #you can redirect to another url or entirely diffrent website
+  redirect: "/es/gracias/?lang=es" #you can redirect to another url or entirely diffrent website
 
 navbar:
   buttonText: "APLICA YA"
   buttonUrl: "#bottom" # url accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
   logoUrl: "#"
-
 
 apply_schollarship: # form that is displayed at the end of the landing
   # title: "Get more info about this award-winning development course"
@@ -41,7 +40,7 @@ apply_schollarship: # form that is displayed at the end of the landing
 # jumbotron on the top (cannot be commented out)
 header_data:
   background: "#FFF1D1"
-  tagline: Empleo Garantizado en 6 meses con nuestro programa Full-Stack Developer 
+  tagline: Empleo Garantizado en 6 meses con nuestro programa Full-Stack Developer
   sub_heading: Si no consigues empleo con nuestro Programa te devolvemos tu dinero. Da el paso hoy y Conviértete en Full-Stack Developer.
   badge: "../../../static/images/badges/Course-Report-Badge-2023.png"
   image_filter: brightness(0.3)
@@ -56,7 +55,6 @@ features:
     - Mentorías y career support de por vida
     - Programa Part Time 100% remoto.
     - Aprovecha nuestras opciones de Financiamiento
-    
 
 follow_bar:
   position: "top" # top, bottom, hidden
@@ -76,7 +74,7 @@ follow_bar:
 #
 
 rating_reviews:
-  position: 3
+  position: 4
   heading: "Lee acerca de nosotros"
   rating_list:
     - alt: "Career Karma"
@@ -130,7 +128,7 @@ alumni_projects:
 
 components:
   - name: ""
-    position: 12
+    position: 3
     background: "veryLightBlue2"
     layout: iconogram
     swipable: True
@@ -142,34 +140,63 @@ components:
       font_size: ["16px", "16px", "16px", "16px", "16px"]
       style: '{ "textAlign": "center", "width": "60%" }'
     button:
-      text: "condiciones aplican"
+      text: "Condiciones Aplican"
       color: black
       # hover_color: "white"
       # background: "black"
       path: "#"
     icons:
-    - icon: "yellowhat" 
-      title: Si no encuentras empleo en los primeros 180 días tras graduarte, te devolvemos tu dinero.
-    - icon: "stairswflag"
-      title: Completa las etapas de nuestro proceso de apoyo para la carrera profesional.
-    - icon: "group"
-      title: Optimiza tu perfil profesional y preparate para las entrevistas.
-    - icon: "hands"
-      title: Ambos nos comprometemos con tu futura carrera.
+      - icon: "yellowhat"
+        title: Si no encuentras empleo en los primeros 180 días tras graduarte, te devolvemos tu dinero.
+      - icon: "stairswflag"
+        title: Completa las etapas de nuestro proceso de apoyo para la carrera profesional.
+      - icon: "group"
+        title: Optimiza tu perfil profesional y preparate para las entrevistas.
+      - icon: "hands"
+        title: Ambos nos comprometemos con tu futura carrera.
+
+  # - name: python_y_javascript
+  #   position: 2
+  #   layout: two_column_right
+  #   background: "veryLightBlue2" # Name of the color(from components/Styling/index.js) or color code ex: #C9F9F9
+  #   image:
+  #     src: "/images/landing/hombre-con-laptop.png"
+  #   heading:
+  #     text:
+  #       "Python y Javascript"
+  #       #           xl      lg      md      sm      xs
+  #     font_size: ["50px", "50px", "50px", "50px", "50px"]
+  #     sub_heading: ""
 
   - name: python_y_javascript
     position: 2
     layout: two_column_right
-    background: "veryLightBlue2" # Name of the color(from components/Styling/index.js) or color code ex: #C9F9F9
+    swipable: False
+    background: "veryLightBlue2"
     image:
-      src: "/images/why-4geeks/python-image.png"
+      style: "{}"
+      src: "/images/landing/metting-img.png"
+      link: "#top" # take uses somewhere when they click on the image
+      # shadow: true
     heading:
-      text:
-        "Python y Javascript"
-        #           xl      lg      md      sm      xs
-      font_size: ["50px", "50px", "50px", "50px", "50px"]
-    content:
-      text: "Nuestro programa está basado en el uso de Python y Javascript. ¿La razón? En el mercado laboral JavaScript tiene 26 veces más vacantes de trabajo que Ruby on Rails y Python te permite acceder a distintas áreas del mundo de la programación."
-      
-      Otras herramientas que también aprenderás a usar en nuestro programa son: HTML5, CSS3, React, Flask, etc."
-      font_size: ["16px"]
+      text: "Python y Javascript"
+    sub_heading:
+      text: "Nuestro programa está basado en el uso de Python y Javascript. ¿La razón? En el mercado laboral JavaScript tiene 26 veces más vacantes de trabajo que Ruby on Rails y Python te permite acceder a distintas áreas del mundo de la programación. "
+    button:
+      text: "Unete a la academia!"
+      color: white
+      hover_color: "white"
+      background: "black"
+      path: "https://4geeksacademy.com/us/coding-campus/coding-bootcamp-colombia"
+    # content:
+    #   text: "text after bullets"
+    #   font_size: ["16px"]
+    #   path: ""
+    bullets:
+      items:
+        - heading: "¡Conviertete en un FullStack developer en tan solo 18 semanas!"
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
+        - heading: "Desarrollo de habilidades altamente valoradas en el mercado profesional."
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
+        - heading: "Acceso a oportunidades laborales al momento de la graducación."
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
