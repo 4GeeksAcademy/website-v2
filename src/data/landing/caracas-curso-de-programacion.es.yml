@@ -153,34 +153,32 @@ components:
       background: black
       color: white
       hover_color: "#FFB718"
-      path: "https://www.youtube.com/watch?v=plwPwyrxX84"
+      path: "#why_4geeks"
     content:
       text: "Mi experiencia con 4Geeks ha sido magnífica, me ha encantado. Tengo unos profesores maravillosos y tengo unos compañeros súper geniales. He aprendido bastante sobre HTML, CSS, JavaScript, React y Python. Mis profesores siempre estuvieron atentos a lo que necesitaba. Igual hay una plataforma donde podemos hablar todos los estudiantes de 4Geeks y nos ayudamos entre todos.... ¡Ha sido genial tomar esta decisión! -Beatriz Hernández"
       font_size: ["16px"]
-  - name: divider_one
-    position: 9
-    layout: divider
-    height: ["50px", "50px", "50px", "0px", "0px"]
   - name: some_id
-    position: 7
+    position: 9
     layout: two_column_right
     image:
-      src: "/images/bg/people_happy.jpg"
+      style: '{ "border" : "3px solid black" }' 
+      shadow: true 
+      src: "../../../static/images/testimonials/Mattia-Tozzi-testimonial.jpg"
     video: "B01-eTfgqqc"
     heading:
       text:
-        "Todo lo hacemos con pasión y con la mirada puesta en tu desarrollo profesional."
+        "El viaje de Mattia Tozzi en 4geeks Academy y como cambió su vida profesional."
         #xl      lg     md     sm    xs
       font_size: ["40px", "34px", "34px", "25px", "20px"]
     content:
-      text: "Nuestro Curso de Programación ofrece mentorías detalladas y proyectos desafiantes, minuciosamente planeados para impulsar tu éxito en el mundo laboral. Confía en nosotros como tu socio incondicional en esta travesía hacia el crecimiento profesional."
+      text: "Descubre la cautivadora historia de Mattia Tozzi, quien, en busca de un cambio en su trayectoria profesional, se unió a 4Geeks Academy. Su experiencia es un testimonio vivo de cómo la dedicación y el aprendizaje en este bootcamp lo llevaron a convertirse en un profesional altamente capacitado."
       font_size: ["16px"]
     button:
-      text: "Únete a la Academia"
-      background: black
-      color: white
-      hover_color: "#white"
+      text: "Unete a la academia!"
       path: "https://4geeksacademy.com/us/coding-campus/coding-bootcamp-caracas"
+      color: "white"
+      background: "black"
+      hover: "lightBlue"
 
 # why_python:
 #   position: 7
