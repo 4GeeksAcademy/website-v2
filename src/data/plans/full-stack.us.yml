@@ -62,7 +62,7 @@ full_time:
     recomended: true
     scholarship: "Scholarships Available"
     payment_time: ""
-    price: "From €160/mo."
+    price: "From €160 /mo."
     bullets:
       - "Customized financing without interests. From 4 to 30 months."
       - "Scholarships available up to €1,900. Pay €4,800 instead of €6,700. Scholarships subject to availability!"     
@@ -178,7 +178,7 @@ part_time:
     recomended: false
     scholarship: "Financed"
     payment_time: "You can pay in 3, 4 or 5 years"
-    price: "~$115p/m"
+    price: "~$115 p/m"
     bullets: 
       - "Several partners offering loans and payment plans"
       - "You can get a partial scholarship and the remaining balance with a payment plan"
