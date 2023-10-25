@@ -111,6 +111,8 @@ const AlumniProjects = ({
       maxWidth_lg="1366px"
       maxWidth_md="1024px"
       maxWidth_tablet="768px"
+      margin_md="0px auto 30px auto"
+      paddgin_xs="0 0 20px 0"
       margin_tablet="0px auto 60px auto"
       zIndex="1"
     >
@@ -144,7 +146,6 @@ const AlumniProjects = ({
               <Div
                 height_tablet="414px"
                 padding="0"
-                //padding_tablet="17px 51px"
                 padding_tablet="0"
                 gridColumn_tablet="1 / 7"
               >
@@ -156,8 +157,9 @@ const AlumniProjects = ({
                     style={{
                       width: "100%",
                       height: "342px",
-                      margin: "36px 15%",
                     }}
+                    margin_xxs="0px"
+                    margin_tablet="36px 15%"
                   />
                 ) : (
                   <ReactPlayer
@@ -186,14 +188,24 @@ const AlumniProjects = ({
                   />
                 )}
               </Div>
-              <Div flexDirection="column" gridColumn_tablet="8 / 15 ">
-                <H3 textAlign="left" margin={`10px 0`}>
+              <Div
+                flexDirection="column"
+                gridColumn_tablet="8 / 15 "
+              >
+                <H3
+                  textAlign="left"
+                  margin_tablet={`0 0 10px 0`}
+                  margin_xs="20px 0 5px 0"
+                >
                   Project: {`${item.project_name}`}
                 </H3>
                 <H4
                   textAlign="left"
                   fontWeight="900"
                   lineHeight="19px"
+                  margin_tablet="9px 0"
+                  margin_xs="20px 0 0 0"
+                  margin_md="20px 0 0 0"
                   margin={`24px 0 9px 0`}
                 >
                   {" "}
@@ -204,7 +216,9 @@ const AlumniProjects = ({
                     <Div
                       key={i}
                       justifyContent="start"
-                      margin={`0 0 20px 0`}
+                      margin_xs="10px 0 0 0"
+                      margin_tablet="5px 0 0 0"
+                      margin_md="15px 0 0 0"
                       gap="10px"
                       display="flex"
                     >
@@ -255,7 +269,7 @@ const AlumniProjects = ({
                 <H4
                   textAlign="left"
                   fontWeight="900"
-                  margin={`20px 0 6px 0`}
+                  margin={`30px 0 10px 0`}
                   lineHeight="19px"
                   style={{ borderTop: "1px solid #ebebeb" }}
                 >

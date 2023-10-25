@@ -301,7 +301,7 @@ export const TwoColumn = ({ left, right, proportions, session }) => {
       flexDirection_tablet="row"
       m_sm="0px auto 100px auto"
       margin="auto"
-      padding_xs="0 20px"
+      padding_xxs="0 20px"
       padding_md="40px 80px"
       padding_lg="40px 0px"
       padding_tablet="40px 40px"
@@ -1138,7 +1138,9 @@ export const landingSections = {
       id="alumni_projects"
       key={index}
       flexDirection="column"
-      margin="0"
+      margin_xs="0 0 50px 0"
+      margin_tablet="0 0 30px 0"
+      //margin_md="0 0 30px 0"
       padding="0"
       padding_tablet="0"
       position="relative"
@@ -1149,7 +1151,7 @@ export const landingSections = {
         height="414px"
         position="absolute"
         top="173px"
-        display_xs="none"
+        display_xxs="none"
         display_tablet="flex"
       />
       <AlumniProjects

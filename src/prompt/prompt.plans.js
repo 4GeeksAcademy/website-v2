@@ -25,7 +25,9 @@ async function generate() {
 
       // ignore inactive courses
       if (!activeCourses.includes(doc.name)) {
-        console.log(`Ignored plans for course ${doc.name} because course.meta_info.show_in_apply=False`);
+        console.log(
+          `Ignored plans for course ${doc.name} because course.meta_info.show_in_apply=False`
+        );
         continue;
       }
       if (!raw) {

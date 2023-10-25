@@ -35,14 +35,25 @@ const Form = styled.form`
   @media ${Break.sm} {
     display: ${(props) => props.d_sm};
   }
+  @media ${Devices.xxs} {
+  }
+  
+  @media ${Devices.xs} {
+  }
+  @media ${Devices.sm} {
+  }
   @media ${Devices.tablet} {
     margin: ${(props) => props.margin_tablet};
     margin-top: ${(props) => props.marginTop_tablet};
     width: 100%;
   }
-  @media ${Devices.xs} {
-    margin-top: ${(props) => props.marginTop_xs};
+  @media ${Devices.md} {
+    margin: ${(props) => props.margin_md};
+    width: ${(props) => props.width_md};
   }
+  @media ${Devices.lg} {
+  }
+  
 `;
 
 const _fields = {
@@ -150,11 +161,14 @@ const LeadForm = ({
   marginButton_tablet,
   widthButton,
   background,
+  width_md,
   margin,
   marginTop,
   marginTop_tablet,
   marginTop_xs,
   margin_tablet,
+  margin_md,
+  gap,
   padding,
   justifyContentButton,
   buttonWidth_tablet,
@@ -274,8 +288,10 @@ const LeadForm = ({
   return (
     <Form
       boxShadow={boxShadow}
+      width_md={width_md}
       margin={margin}
       background={background}
+      margin_md={margin_md}
       margin_tablet={margin_tablet}
       marginTop={marginTop}
       marginTop_tablet={marginTop_tablet}
@@ -337,22 +353,25 @@ const LeadForm = ({
       {headerImage && (
         <Div
           position="absolute"
-          style={{
-            top: 0,
-            right: 50,
-          }}
-          width="0px"
+          top_tablet="-10px"
+          right_tablet="-45%"
+          top_md=""
+          right_md=""
+          top_lg=""
+          right_lg=""
+          width="100%"
           display="none"
-          display_tablet="none"
+          display_tablet="flex"
           display_md="flex"
           display_lg="flex"
           flexDirection_tablet="row"
+          justifyContent_tablet="flex-end"
         >
           <GatsbyImage
             loading="eager"
             style={{
-              width: "160px",
-              height: "130px",
+              width: "100%",
+              height: "109px",
             }}
             imgStyle={{ objectFit: "contain" }}
             image={getImage(headerImage)}
@@ -372,6 +391,7 @@ const LeadForm = ({
             className={"leadform-" + layout}
             size="12"
             padding="0 24px"
+            gap={gap}
           >
             {heading && (
               <H4
@@ -413,6 +433,7 @@ const LeadForm = ({
                   <React.Fragment key={i}>
                     {_field.name !== "phone" && (
                       <Input
+                        style={{margin: "0 0 16px 0"}}
                         data-cy={f}
                         id={f}
                         bgColor={inputBgColor || "#FFFFFF"}
@@ -444,6 +465,7 @@ const LeadForm = ({
                 const _field = formData[f];
                 return (
                   <PhoneInput
+                    style={{margin: "0 0 16px 0"}}
                     key={i}
                     data-cy="phone"
                     id="phone"
@@ -459,12 +481,13 @@ const LeadForm = ({
             {selectProgram?.length >= 1 && (
               <Div
                 data-cy="dropdown_program_selector"
-                margin_tablet="0 0 10px 0"
+                margin_tablet="0 0 0 0"
               >
                 <SelectRaw
                   style={{
                     background: "#FFFFFF",
                   }}
+                  //style={{margin: "0 0 11px 0"}}
                   options={selectProgram}
                   placeholder={courseSelector.place_holder}
                   valid={true}
