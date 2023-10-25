@@ -92,7 +92,7 @@ follow_bar:
 #
 
 rating_reviews:
-  position: 2
+  position: 3
   heading: "Lee acerca de nosotros"
   rating_list:
     - alt: "Career Karma"
@@ -139,3 +139,26 @@ who_is_hiring:
   heading: "¿Quién contrata a nuestros alumnos?"
   sub_heading: "84% de nuestros estudiantes que completaron el proceso de GeekFORCE han conseguido trabajo luego de haberse graduado (incluso dentro de los sigiuientes  100 días)"
 
+components:
+    - name: some_id
+      position: 2
+      layout: two_column_right
+      background: "lightBlue2"
+      image:
+        style: '{ "border" : "3px solid black" }' 
+        # shadow: true 
+        src: "../../../static/images/testimonials/samantha-review.png"
+      video: "https://www.youtube.com/watch?v=32a-phct9I0"
+      heading:
+        text: "4Geeks en México La Elección de Samantha para su Bootcamp Ideal"
+        #xl      lg     md     sm    xs
+      font_size: ["40px", "34px", "34px", "25px", "20px"]
+      content:
+        text: "La excelencia en el contenido del curso, la dedicada mentoría individual y las sólidas colaboraciones industriales son solo algunos de los aspectos que destacan a 4Geeks. Además, el historial de éxito de los graduados respalda la reputación de la institución."
+        font_size: ["16px"]
+      button:
+        text: "Unete a la academia!"
+        path: "https://4geeksacademy.com/us/coding-campus/coding-bootcamp-mexico"
+        color: "white"
+        background: "black"
+        hover: "lightBlue"

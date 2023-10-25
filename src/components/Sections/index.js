@@ -204,6 +204,7 @@ export const Div = styled.div`
     padding: ${(props) => props.padding_xxs};
     background: ${(props) => props.background_xxs};
     display: ${(props) => props.display_xxs};
+    padding: ${(props) => props.padding_xxs};
   }
   @media ${Devices.xs} {
     padding: ${(props) => props.padding_xs};
@@ -303,6 +304,10 @@ export const Div = styled.div`
     justify-content: ${(props) =>
       justifyContentOptions[props.justifyContent_tablet]};
     z-index: ${(props) => props.zIndex_tablet};
+    top: ${(props) => props.top_tablet};
+    bottom: ${(props) => props.bottom_tablet};
+    right: ${(props) => props.right_tablet};
+    left: ${(props) => props.left_tablet};
     &:after {
       display: ${(props) => props.displayAfter_tablet};
     }
@@ -338,6 +343,10 @@ export const Div = styled.div`
     grid-column: ${(props) => props.gridColumn_md};
     grid-row: ${(props) => props.gridRow_md};
     position: ${(props) => props.position_md};
+    top: ${(props) => props.top_md};
+    bottom: ${(props) => props.bottom_md};
+    right: ${(props) => props.right_md};
+    left: ${(props) => props.left_md};
   }
   @media ${Devices.lg} {
     display: ${(props) => props.display_lg};
@@ -349,6 +358,11 @@ export const Div = styled.div`
     left: ${(props) => props.left_lg};
     margin: ${(props) => props.margin_lg};
     transform: ${(props) => props.transform_lg};
+    grid-column: ${(props) => props.gridColumn_lg};
+    top: ${(props) => props.top_lg};
+    bottom: ${(props) => props.bottom_lg};
+    right: ${(props) => props.right_lg};
+    left: ${(props) => props.left_lg};
   }
   @media ${Devices.xl} {
   }
@@ -362,7 +376,7 @@ export const Grid = styled(Div)`
   display: ${(props) => props.display || "grid"};
   direction: ${(props) => props.direction};
   width: ${(props) => props.width};
-
+  max-width: ${(props) => props.maxWidth};
   grid-template-columns: ${(props) =>
     props.gridTemplateColumns
       ? `repeat(${props.gridTemplateColumns})`
@@ -378,8 +392,10 @@ export const Grid = styled(Div)`
   justify-content: ${(props) => props.justifyContent};
   grid-template-areas: ${(props) => props.gridTemplateAreas};
   @media ${Devices.xxs} {
+    grid-gap: ${(props) => props.gridGap_xxs};
     grid-template-columns: ${(props) =>
       props.columns_xxs ? `repeat(${props.columns_xxs}, 1fr)` : null};
+    padding: ${(props) => props.padding_xxs};
   }
   @media ${Devices.xs} {
     grid-template-columns: ${(props) =>
@@ -412,9 +428,11 @@ export const Grid = styled(Div)`
     grid-row: ${(props) => props.gridRow_tablet};
     justify-content: ${(props) => props.justifyContent_tablet};
     grid-template-areas: ${(props) => props.gridTemplateAreas_tablet};
+    padding: ${(props) => props.padding_tablet};
   }
   @media ${Devices.md} {
     margin: ${(props) => props.margin_md};
+     padding: ${(props) => props.padding_md};
     grid-template-columns: ${(props) => props.gridTemplateColumns_md};
     grid-template-rows: ${(props) =>
       props.gridTemplateRows_md
@@ -425,6 +443,8 @@ export const Grid = styled(Div)`
     display: ${(props) => props.display_md || "grid"};
   }
   @media ${Devices.lg} {
+    grid-template-columns: ${(props) => props.gridTemplateColumns_lg};
+    padding: ${(props) => props.padding_lg};
   }
   @media ${Devices.xl} {
   }
@@ -598,6 +618,7 @@ export const GridContainer = ({
   containerColumns,
   containerColumns_tablet,
   containerColumns_md,
+  containerColumnsChild_tablet,
   children,
   display,
   display_xs,
@@ -611,6 +632,7 @@ export const GridContainer = ({
   backgroundChild,
   containerGridGap,
   gridGap,
+  gridGap_xxs,
   gridGap_tablet,
   gridTemplateRows,
   gridTemplateRows_tablet,
@@ -635,11 +657,16 @@ export const GridContainer = ({
   gridRow_tablet,
   gridTemplateAreas,
   gridTemplateAreas_tablet,
+  maxWidth,
   childHeight,
   displayChild,
   displayChild_tablet,
+  displayChild_xs,
+  displayChild_sm,
+  displayChild_md,
   columns_sm,
   justifyContentChild,
+  justifyItemsChild,
 }) => {
   return (
     <Grid
@@ -663,6 +690,7 @@ export const GridContainer = ({
       justifyContent_tablet={justifyContent_tablet}
       position={position}
       borderTop={borderTop}
+      maxWidth={maxWidth}
       height={height}
       height_tablet={height_tablet}
       minHeight={minHeight}
@@ -677,13 +705,18 @@ export const GridContainer = ({
       <Grid
         display={displayChild}
         justifyContent={justifyContentChild}
+        justifyItems={justifyItemsChild}
+        display_xs={displayChild_xs}
+        display_sm={displayChild_sm}
         display_tablet={displayChild_tablet}
+        display_md={displayChild_md}
         overflow={overflowChild}
         background={backgroundChild}
         gridGap={gridGap}
+        gridGap_xxs={gridGap_xxs}
+        gridGap_tablet={gridGap_tablet}
         borderRadius={borderRadiusChild}
         borderRadius_tablet={borderRadiusChild_tablet}
-        gridGap_tablet={gridGap_tablet}
         gridTemplateRows={gridTemplateRows}
         gridTemplateRows_tablet={gridTemplateRows_tablet}
         gridTemplateColumns_sm={columns_sm}
@@ -731,6 +764,10 @@ export const GridContainerWithImage = ({
   padding_md,
   padding_lg,
   position,
+  gridColumn_tablet,
+  maxWidth,
+  alignItems_tablet,
+  alignItems_md,
 }) => {
   return (
     <Grid
@@ -740,6 +777,7 @@ export const GridContainerWithImage = ({
       gridTemplateColumns_tablet={
         imageSide == "left" ? "repeat(14, 1fr)" : "repeat(14, 1fr)"
       }
+      maxWidth={maxWidth}
       background={background}
       height={height}
       position={position}
@@ -760,7 +798,15 @@ export const GridContainerWithImage = ({
             : `repeat(${columns_tablet}, ${14 / columns_tablet}fr)`
         }
         gridTemplateColumns={columns}
-        gridColumn_tablet={imageSide == "left" ? "1 / span 14" : "2 / span 14"}
+        gridColumn_tablet={
+          gridColumn_tablet
+            ? gridColumn_tablet
+            : imageSide == "left"
+            ? "1 / span 14"
+            : "2 / span 14"
+        }
+        alignItems_tablet={alignItems_tablet}
+        alignItems_md={alignItems_md}
       >
         {children}
       </Grid>

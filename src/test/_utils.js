@@ -69,6 +69,9 @@ const walk = function (dir, done) {
   });
 };
 
+const toYML = (obj) => {
+  return jsyaml.dump(obj);
+};
 const loadYML = (pathToFile) => {
   const content = fs.readFileSync(pathToFile, "utf8");
   try {
@@ -91,7 +94,7 @@ const loadYML = (pathToFile) => {
 
     const type = m[1] === "data" ? m[2] : m[1];
 
-    return { yaml, name, lang, type, path };
+    return { yaml, name, lang, type, path, raw_content: content };
   } catch (error) {
     console.error(error);
     return null;
@@ -243,6 +246,7 @@ const checkForLanguages = (slugs, folder_name) => {
 module.exports = {
   walk,
   loadYML,
+  toYML,
   loadMD,
   empty,
   fail,
