@@ -1230,6 +1230,20 @@ export const landingSections = {
       width_md="100%"
       padding_xs="30px 0px"
     >
+      {yml.main_heading && yml.main_heading !== "" && <H2
+          type="h2"
+          textAlign_tablet="left"
+          lineHeight="38px"
+          lineHeight_tablet="38px"
+          fontSize={h_xs || "30px"}
+          fs_xl={h_xl}
+          fontSize_md={h_md || "30px"}
+          fontSize_sm={h_sm}
+          margin="30px 0 20px 0"
+          style={yml.main_heading_style ? JSON.parse(heading.main_heading_style) : null}
+        >
+          {yml.main_heading}
+      </H2>}
       <TwoColumn
         left={{ image: yml.image, video: yml.video }}
         right={{
