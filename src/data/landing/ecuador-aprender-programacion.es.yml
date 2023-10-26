@@ -106,6 +106,26 @@ components:
         #xl      lg     md     sm    xs
       font_size: ["38px", "36px", "32px", "30px", "30px"]
 
+  - name: some_id
+    position: 2
+    layout: two_column_right
+    image:
+      src: "/images/testimonials/valentina-review.jpg"
+    video: "https://www.youtube.com/watch?v=Vyrynn4Ey1U"
+    heading:
+      text: "¡Aprende a programar con los mejores en Ecuador!🤓🖥️"
+        #xl      lg     md     sm    xs
+      font_size: ["40px", "34px", "34px", "25px", "20px"]
+    content:
+      text: "Con más de 18 meses operando en el país contamos con uno de los mejores programas de estudio para aprender a programar a nivel mundial🌍 además de fuertes alianzas con diferentes empresas a nivel nacional e internacional que nos permiten ayudar a nuestros estudiantes a encontrar empleo ¡en tiempo record!⏰"
+      font_size: ["16px"]
+    button:
+      text: "Joint to the Academy"
+      background: black
+      color: white
+      hover_color: "#white"
+      path: "#bottom"
+
 rating_reviews:
   position: 2
   heading: "Lee acerca de nosotros"

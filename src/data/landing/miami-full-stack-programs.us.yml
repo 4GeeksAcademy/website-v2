@@ -150,11 +150,17 @@ components:
       link: "https://www.switchup.org/bootcamps/4geeks-academy"
     video: "SixRm6R8rc0"
     heading:
-      text: "Our passion is your future"
+      text: "Jordan's Journey from JS and React to Python at 4Geeks Academy!"
       font_size: ["40px", "40px", "40px", "40px", "40px"]
     content:
-      text: "We have graduated thousands of students around the world. People from Europe, North America, and Latin America have enjoyed, learned and grown with us. We are focused on being the bridge between your passion about coding and the skills you need to launch your career within the tech industry. Here you will find some of them talking about their experience:"
+      text: "Join us in celebrating his success story and discover how you too can unlock a world of opportunities through our comprehensive bootcamp program!"
       font_size: ["16px"]
+    button:
+      text: "Joint to the Academy"
+      background: black
+      color: white
+      hover_color: "#white"
+      path: "#bottom"
   - name: top_coding_bootcamp
     position: 8
     background: "veryLightBlue2"
