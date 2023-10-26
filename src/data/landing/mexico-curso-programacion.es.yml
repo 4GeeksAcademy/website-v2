@@ -143,6 +143,7 @@ components:
     - name: some_id
       position: 2
       layout: two_column_right
+      proportions: [8, 4]
       background: "lightBlue2"
       image:
         style: '{ "border" : "3px solid black" }' 
