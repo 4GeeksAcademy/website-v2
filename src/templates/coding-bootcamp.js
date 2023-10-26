@@ -47,25 +47,36 @@ const Program = ({ data, pageContext, yml }) => {
 
   return (
     <>
-      <GridContainerWithImage
+      <Div background={Colors.veryLightBlue2}>
+        <GridContainerWithImage
         id="bottom"
-        background={Colors.veryLightBlue2}
         imageSide="right"
-        padding={
+        padding_tablet={
           isCustomBarActive(session)
-            ? "180px 12px 72px 12px"
-            : "140px 12px 72px 12px"
+            ? "180px 40px 72px 40px"
+            : "140px 40px 72px 40px"
+        }
+        padding_md={
+          isCustomBarActive(session)
+            ? "180px 80px 72px 80px"
+            : "140px 80px 72px 80px"
+        }
+        padding_lg={
+          isCustomBarActive(session)
+            ? "180px 0 72px 0"
+            : "140px 0 72px 0"
         }
         columns_tablet="14"
-        margin="0"
-        margin_tablet="0"
+        margin="40px 0"
+        margin_tablet="40px auto"
+        maxWidth="1366px"
       >
         <Div
           flexDirection="column"
           margin="0"
           justifyContent_tablet="start"
           padding_tablet="0 30px"
-          gridArea_tablet="1/1/1/6"
+          gridArea_tablet="1/1/1/7"
         >
           <Div
             flexDirection="column"
@@ -118,8 +129,8 @@ const Program = ({ data, pageContext, yml }) => {
             alt={yml.header.image_alt}
           />
         </Div>
-      </GridContainerWithImage>
-
+        </GridContainerWithImage>
+      </Div>
       <Div
         display="flex"
         background={Colors.white}
@@ -130,12 +141,14 @@ const Program = ({ data, pageContext, yml }) => {
           position: "sticky",
           top: isCustomBarActive(session) ? 50 : 0,
         }}
-        padding="0 35px"
+        padding="0"
+        justifyContent="center"
         alignItems="center"
         flexDirection="row"
         gap="40px"
         width="100%"
         height="70px"
+        maxWidth="1366px"
         className="scroll-spy-container"
       >
         <ScrollSpy offsetTop={80} autoScrollOffsetTop={-70}>
@@ -163,86 +176,99 @@ const Program = ({ data, pageContext, yml }) => {
         lang={pageContext.lang}
         course={program_type}
       />
-
-      <GridContainerWithImage
-        id="what_will_you_learn"
-        background={Colors.lightYellow}
-        imageSide="left"
-        padding="82px 0"
-        columns_tablet="14"
-        margin="0"
-        margin_tablet="0"
-      >
-        <Div
-          height="auto"
-          width="100%"
-          gridArea_tablet="1/1/1/6"
-          style={{ position: "relative" }}
-        >
-          <StyledBackgroundSection
-            height={`350px`}
-            borderRadius={`3px`}
-            image={yml.what_will_you_learn.image}
-            bgSize={`contain`}
-            alt={yml.what_will_you_learn.image_alt}
-          />
-        </Div>
-        <Div
-          flexDirection="column"
-          margin="0"
-          justifyContent_tablet="start"
-          padding_tablet="0 30px"
-          gridArea_tablet="1/7/1/13"
+      
+      <Div background={Colors.lightYellow}>
+        <GridContainerWithImage
+          id="what_will_you_learn"
+          imageSide="left"
+          padding="82px 0"
+          columns_tablet="14"
+          margin="40px 0"
+          margin_tablet="40px auto"
+          padding_xxs="0 20px"
+          padding_tablet="0 40px"
+          padding_md="0 80px"
+          padding_lg="0px"
+          maxWidth="1366px"
         >
           <Div
-            flexDirection="column"
-            size="12"
-            size_tablet="12"
+            height="auto"
             width="100%"
-            width_tablet="100%"
-            margin="0"
-            textAlign_sm="center"
+            gridArea_tablet="1/1/1/6"
+            style={{ position: "relative" }}
           >
-            <H2
-              type="h2"
-              padding="0 0 14px 0"
-              textAlign_tablet="left"
-              fontSize="30px"
-              fontSize_tablet="30px"
-              lineHeight="60px"
-            >
-              {yml.what_will_you_learn.heading}
-            </H2>
-            {yml.what_will_you_learn.sub_title.split("\n").map((m, i) => (
-              <Paragraph
-                key={i}
-                padding="0"
-                textAlign_tablet="left"
-                letterSpacing="0.05em"
-                margin="10px 0"
-              >
-                {m}
-              </Paragraph>
-            ))}
+            <StyledBackgroundSection
+              height={`350px`}
+              borderRadius={`3px`}
+              image={yml.what_will_you_learn.image}
+              bgSize={`contain`}
+              alt={yml.what_will_you_learn.image_alt}
+            />
           </Div>
-        </Div>
-      </GridContainerWithImage>
-
+          <Div
+            flexDirection="column"
+            margin="0"
+            justifyContent_tablet="start"
+            padding_tablet={"0 0 0 0"}
+            gridArea_tablet="1/7/1/13"
+          >
+            <Div
+              flexDirection="column"
+              size="12"
+              size_tablet="12"
+              width="100%"
+              width_tablet="100%"
+              margin="0"
+              textAlign_sm="center"
+            >
+              <H2
+                type="h2"
+                padding="0 0 14px 0"
+                textAlign_tablet="left"
+                fontSize="30px"
+                fontSize_tablet="30px"
+                lineHeight="60px"
+              >
+                {yml.what_will_you_learn.heading}
+              </H2>
+              {yml.what_will_you_learn.sub_title.split("\n").map((m, i) => (
+                <Paragraph
+                  key={i}
+                  padding="0"
+                  textAlign_tablet="left"
+                  letterSpacing="0.05em"
+                  margin="10px 0"
+                >
+                  {m}
+                </Paragraph>
+              ))}
+            </Div>
+          </Div>
+        </GridContainerWithImage>
+      </Div>
+      
       <GridContainerWithImage
         id="what_does_it_mean_full_stack_developer"
         background={Colors.white}
         imageSide="right"
         padding="82px 0"
         columns_tablet="14"
-        margin="0"
-        margin_tablet="0"
+        margin="40px 0"
+        margin_tablet="40px auto"
+        padding_xxs="0 20px"
+        padding_tablet="0 40px"
+        padding_md="0 80px"
+        padding_lg="0px"
+        maxWidth="1366px"
+        gridColumn_tablet="1/15"
       >
         <Div
           flexDirection="column"
           margin="0"
           justifyContent_tablet="start"
-          padding_tablet="0 30px"
-          gridArea_tablet="1/1/1/7"
+          padding="0px"
+          gridArea_tablet="1/1/1/10"
+          zIndex="1"
         >
           <Div
             flexDirection="column"
@@ -315,7 +341,7 @@ const Program = ({ data, pageContext, yml }) => {
         <Div
           height="auto"
           width="100%"
-          gridArea_tablet="1/8/1/13"
+          gridArea_tablet="1/11/1/15"
           style={{ position: "relative" }}
         >
           <StyledBackgroundSection
@@ -326,6 +352,7 @@ const Program = ({ data, pageContext, yml }) => {
             alt={yml.content_with_subtitle_and_image.image_alt}
           />
         </Div>
+
         <Div
           display="none"
           display_tablet="block"
@@ -333,7 +360,7 @@ const Program = ({ data, pageContext, yml }) => {
         >
           <svg
             width="525"
-            style={{ zIndex: "99", right: "0", position: "absolute" }}
+            style={{ zIndex: "0", right: "0", position: "absolute" }}
             height="762"
             viewBox="0 0 525 762"
             fill="none"
@@ -360,118 +387,129 @@ const Program = ({ data, pageContext, yml }) => {
         </Div>
       </GridContainerWithImage>
 
-      <GridContainer
-        id="tools_and_tech"
-        padding="60px 4%"
-        gridGap="0px"
-        padding_tablet="80px 20%"
-        github={`/page/faq.${pageContext.lang}.yml`}
-        background={Colors.verylightGray}
-      >
-        {yml.tools_and_tech.map((item, i) => (
-          <React.Fragment key={`${i}-${item.topic}`}>
-            <H3
-              type="h3"
-              fontSize="20px"
-              borderBottom="1px solid #C4C4C4"
-              padding="0 30px 30px 30px"
-            >
-              {item.topic}
-            </H3>
-            {item.list.map((tech, i) => (
-              <Card
-                key={`${i}-${tech.title}`}
-                // color={buttonToggle && tech.title == toggleIndex}
-                height="auto"
-                width="100%"
-                borders="0"
-                color="verylightGray"
+      <Div background={Colors.verylightGray}>
+        <GridContainer
+          id="tools_and_tech"
+          
+          margin_tablet="40px auto"
+          padding_xxs="0 20px"
+          padding_tablet="0 40px"
+          padding_md="0 80px"
+          padding_lg="0px"
+          maxWidth="1366px"
+          github={`/page/faq.${pageContext.lang}.yml`}
+        >
+          {yml.tools_and_tech.map((item, i) => (<>
+            {/*<React.Fragment key={`${i}-${item.topic}`}>*/}
+              <H3
+                type="h3"
+                fontSize="20px"
                 borderBottom="1px solid #C4C4C4"
-                padding="20px 10px"
-                onClick={() =>
-                  toggleIndex === tech.title
-                    ? (setToggleIndex(undefined),
-                      setButtonToggle(!buttonToggle))
-                    : (setToggleIndex(tech.title), setButtonToggle(true))
-                }
+                padding="0 30px 30px 30px"
               >
-                <Div display="block" height="100%">
-                  <Div
-                    onClick={() => {
-                      setButtonToggle(!buttonToggle),
-                        setToggleIndex(
-                          toggleIndex != undefined ? undefined : tech.title
-                        );
-                    }}
-                    display="flex"
-                    width="100%"
-                    align={`center`}
-                    alignSelf="center"
-                  >
-                    <GatsbyImage
-                      style={{
-                        height: "20px",
-                        minWidth: "20px",
-                        width: "min-content",
-                        margin: "0 20px 0 0",
+                {item.topic}
+              </H3>
+              {item.list.map((tech, i) => (
+                <Card
+                  key={`${i}-${tech.title}`}
+                  // color={buttonToggle && tech.title == toggleIndex}
+                  height="auto"
+                  width="100%"
+                  borders="0"
+                  color="verylightGray"
+                  borderBottom="1px solid #C4C4C4"
+                  padding="20px 10px"
+                  onClick={() =>
+                    toggleIndex === tech.title
+                      ? (setToggleIndex(undefined),
+                        setButtonToggle(!buttonToggle))
+                      : (setToggleIndex(tech.title), setButtonToggle(true))
+                  }
+                >
+                  <Div display="block" height="100%">
+                    <Div
+                      onClick={() => {
+                        setButtonToggle(!buttonToggle),
+                          setToggleIndex(
+                            toggleIndex != undefined ? undefined : tech.title
+                          );
                       }}
-                      imgStyle={{ objectFit: "contain" }}
-                      loading="eager"
-                      draggable={false}
-                      alt={tech.title}
-                      image={getImage(
-                        tech.image.childImageSharp.gatsbyImageData
-                      )}
-                    />
-                    <H4
-                      type="h4"
-                      textAlign="left"
-                      fontSize="14px"
-                      align={`left`}
-                      align_sm={`left`}
-                      color={Colors.black}
-                      paddingRight="5%"
-                      textTransform="uppercase"
-                      fontWeight="700"
+                      display="flex"
+                      width="100%"
+                      align={`center`}
+                      alignSelf="center"
                     >
-                      {tech.title}
-                    </H4>
-                    {buttonToggle === false ? (
-                      toggleIndex !== tech.title && (
-                        <Icon icon="plus" width="24" />
-                      )
-                    ) : buttonToggle === true && toggleIndex === tech.title ? (
-                      <Icon icon="minus" width="24" />
-                    ) : (
-                      <Icon icon="plus" width="24" />
-                    )}
-                  </Div>
-                  <Div size="12" size_sm="12" alignSelf="center">
-                    {buttonToggle === true && toggleIndex === tech.title && (
-                      <Paragraph
+                      <GatsbyImage
+                        style={{
+                          height: "20px",
+                          minWidth: "20px",
+                          width: "min-content",
+                          margin: "0 20px 0 0",
+                        }}
+                        imgStyle={{ objectFit: "contain" }}
+                        loading="eager"
+                        draggable={false}
+                        alt={tech.title}
+                        image={getImage(
+                          tech.image.childImageSharp.gatsbyImageData
+                        )}
+                      />
+                      <H4
+                        type="h4"
                         textAlign="left"
-                        letterSpacing="0.05em"
-                        lineHeight="22px"
-                        fontWeight="normal"
-                        dangerouslySetInnerHTML={{ __html: tech.description }}
-                        margin={`20px 0 0 0`}
-                        align_sm="left"
-                        fontFamily="Lato, sans-serif"
-                      ></Paragraph>
-                    )}
+                        fontSize="14px"
+                        align={`left`}
+                        align_sm={`left`}
+                        color={Colors.black}
+                        paddingRight="5%"
+                        textTransform="uppercase"
+                        fontWeight="700"
+                      >
+                        {tech.title}
+                      </H4>
+                      {buttonToggle === false ? (
+                        toggleIndex !== tech.title && (
+                          <Icon icon="plus" width="24" />
+                        )
+                      ) : buttonToggle === true && toggleIndex === tech.title ? (
+                        <Icon icon="minus" width="24" />
+                      ) : (
+                        <Icon icon="plus" width="24" />
+                      )}
+                    </Div>
+                    <Div size="12" size_sm="12" alignSelf="center">
+                      {buttonToggle === true && toggleIndex === tech.title && (
+                        <Paragraph
+                          textAlign="left"
+                          letterSpacing="0.05em"
+                          lineHeight="22px"
+                          fontWeight="normal"
+                          dangerouslySetInnerHTML={{ __html: tech.description }}
+                          margin={`20px 0 0 0`}
+                          align_sm="left"
+                          fontFamily="Lato, sans-serif"
+                        ></Paragraph>
+                      )}
+                    </Div>
                   </Div>
-                </Div>
-              </Card>
-            ))}
-          </React.Fragment>
-        ))}
-      </GridContainer>
+                </Card>
+              ))}
+            {/*</React.Fragment>*/}</>
+          ))}
+        </GridContainer>
+      </Div>
 
       <GridContainer
         id="what_includes"
-        padding="60px 10px"
+        margin="40px auto"
+        padding_xxs="0 20px"
+        padding_tablet="0 40px"
+        padding_md="0 80px"
+        padding_lg="0px"
+        maxWidth="1366px"
+        gridTemplateColumns_tablet="repeat(14, 1fr)"
+        gridColumn_tablet="1/15"
         gridGap="0px"
-        padding_tablet="80px 0"
         github={`/page/faq.${pageContext.lang}.yml`}
         background={Colors.white}
       >
@@ -509,7 +547,7 @@ const Program = ({ data, pageContext, yml }) => {
               gridTemplateColumns_tablet="repeat(2, 1fr)"
               style={{ columnGap: "2.25rem", boxSizing: "border-box" }}
               justifyContent="center"
-              padding="0 6%"
+              padding="0px"
             >
               {l.list.map((item, i) => (
                 <Div
@@ -559,9 +597,6 @@ const Program = ({ data, pageContext, yml }) => {
         <Div height="1px" background="#EBEBEB"></Div>
       </GridContainer>
       <UpcomingDates
-        style={{
-          padding: "40px 0",
-        }}
         id="upcoming_dates"
         lang={pageContext.lang}
         message={pageDetails.upcoming.no_dates_message}

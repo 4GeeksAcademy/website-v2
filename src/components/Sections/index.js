@@ -434,7 +434,7 @@ export const Grid = styled(Div)`
   }
   @media ${Devices.md} {
     margin: ${(props) => props.margin_md};
-     padding: ${(props) => props.padding_md};
+    padding: ${(props) => props.padding_md};
     grid-template-columns: ${(props) => props.gridTemplateColumns_md};
     grid-template-rows: ${(props) =>
       props.gridTemplateRows_md
@@ -652,6 +652,8 @@ export const GridContainer = ({
   margin_md,
   padding,
   padding_tablet,
+  padding_lg,
+  padding_md,
   paddingChild,
   borderTop,
   padding_tabletChild,
@@ -705,6 +707,8 @@ export const GridContainer = ({
       margin_md={margin_md}
       padding={padding || "0 17px"}
       padding_tablet={padding_tablet || "0"}
+      padding_md={padding_md}
+      padding_lg={padding_lg}
     >
       <Grid
         display={displayChild}
@@ -765,6 +769,7 @@ export const GridContainerWithImage = ({
   margin_tablet,
   padding,
   padding_tablet,
+  padding_xxs,
   padding_md,
   padding_lg,
   position,
@@ -792,6 +797,7 @@ export const GridContainerWithImage = ({
       padding_tablet={padding_tablet}
       padding_md={padding_md}
       padding_lg={padding_lg}
+      padding_xxs={padding_xxs}
     >
       <Grid
         gridGap={gridGap}

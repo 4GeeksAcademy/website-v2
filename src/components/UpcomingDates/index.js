@@ -219,8 +219,14 @@ const UpcomingDates = ({
     <GridContainer
       id={id}
       style={style}
-      margin_tablet="0 0 48px 0"
-      maxWidth_lg="1366px"
+      margin_tablet="40px auto"
+      padding_xxs="0 20px"
+      padding_tablet="0 40px"
+      padding_md="0 80px"
+      padding_lg="0px"
+      maxWidth="1366px"
+      gridTemplateColumns_tablet="repeat(14, 1fr)"
+      gridColumn_tablet="1/15"
     >
       <Div flexDirection="column">
         <Div

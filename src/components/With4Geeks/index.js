@@ -165,7 +165,7 @@ export default ({
                     alignSelf={`baseline`}
                   >
                     <ReactPlayer
-                      With_Modal={true} 
+                      With_Modal={true}
                       margin_tablet="0px"
                       imageWidth="100%"
                       imageHeight="auto"

@@ -793,6 +793,8 @@ export const landingSections = {
         display="flex"
         flexDirection="column"
         borderBottom="3px solid #F5F5F5"
+        maxWidth="1366px"
+        margin="0 auto"
       >
         <H2 type="h2" fontSize="22px" fontWeight="700" padding="10px 0 60px 0">
           {ratingReviews.heading}
