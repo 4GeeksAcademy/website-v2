@@ -27,7 +27,7 @@ form:
   heading: "¡Aplica ya!"
   motivation: "Completa el formulario y te enviaremos la información en unos minutos a tu correo electrónico."
   button_label: Aplica hoy
-  redirect: "/es/gracias/?lang=es"  #you can redirect to another url or entirely diffrent website
+  redirect: "/es/gracias/?lang=es" #you can redirect to another url or entirely diffrent website
 
 navbar:
   buttonText: "Aplica hoy"
@@ -42,7 +42,7 @@ header_data:
   badge: "../../../static/images/badges/Course-Report-Badge-2023.png"
   image_filter: brightness(0.3)
   # right_image: "../../../static/images/landing/header_united_way.png"
-  # right_image: 
+  # right_image:
   #   style: '{ "backgroundSize": "contain" }'
   #   src: "/images/landing/header_united_way.png"
 
@@ -69,7 +69,7 @@ short_badges:
   - name: "Switchup"
     url: ""
     image: "../../../static/images/badges/switchup-badge-2023.png"
-    alt: "Best coding bootcamp Switchup 2023"   
+    alt: "Best coding bootcamp Switchup 2023"
   - name: "Florida Department of Education"
     url: ""
     image: "../../../static/images/badges/licensed.png"
@@ -89,15 +89,52 @@ follow_bar:
     text: ""
 
 program_details:
-  position: 4
-  heading: "Domina Python, JS y React"
-  sub_heading: "Un bootcamp de programación sobre las tecnologías más usadas del mundo" 
+  position: 1
+  heading: "Domina JS, React y Python"
+  sub_heading: "Un bootcamp de programación sobre las tecnologías más usadas del mundo"
 
 # Possible layours: [two_column_left_image, two_column_right_image]
 components:
-  - name: geeksinfo
+  - name: geekInfo
+    # Title: "Diseñado para hacerte exitoso en el mundo de la programación"
     position: 5
-    layout: geeksInfo
+    layout: two_column_right
+    swipable: False
+    background: "#FFFFFF"
+    image:
+      style: '{ "backgroundSize": "contain" }'
+      src: "/images/landing/grupo-ventanas.png"
+      link: "#top" # take uses somewhere when they click on the image
+      # shadow: true
+    heading:
+      text: ""
+    sub_heading:
+      text: ""
+    button:
+      text: "Porque 4geeks es la mejor opción"
+      color: white
+      hover_color: "white"
+      background: "black"
+      path: "https://4geeksacademy.com/es/geeks-vs-otros"
+    content:
+      text: "En 4Geeks Academy nos destacamos por nuestro enfoque integral y compromiso constante con el éxito de nuestros estudiantes, ofreciendo un ambiente de aprendizaje excepcionalmente favorable y un historial probado de resultados positivos en términos de empleabilidad."
+      font_size: ["16px"]
+      path: ""
+    bullets:
+      items:
+        - heading: "TODAS LAS MENTORIAS QUE NECESITAS"
+          text: "Some text description for the bullet"
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
+        - heading: "TIEMPO DE RESPUESTA"
+          text: "Some text description for the bullet"
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
+        - heading: "1:7 PROPORCIÓN PROFESOR: ESTUDIANTE"
+          text: "Some text description for the bullet"
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
+        - heading: "SOPORTE PROFESIONAL A LA MEDIDA"
+          text: "Basado en cada oportunidad laboral"
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
+
   - name: coding
     position: 6
     layout: two_column_right
@@ -110,7 +147,7 @@ components:
       text: "Membresías"
       font_size: ["50px", "50px", "50px", "50px", "50px"]
     sub_heading:
-      text: 
+      text:
       font_size: ["16px", "16px", "16px", "16px", "16px"]
     content:
       font_size: ["16px"]
@@ -127,7 +164,7 @@ components:
     position: 4
     layout: two_column_left
     proportions: [4, 8]
-    background: "#e6e6e6"
+    background: "#fbfbfb"
     image:
       style: '{ "backgroundSize": "contain" }'
       src: "/images/badges/Course-Report-Badge-2023.png"
@@ -135,7 +172,7 @@ components:
     heading:
       text:
         "Tenemos 3 años consecutivos siendo seleccionados como uno de los mejores coding bootcamps del mundo"
-                      #xl      lg     md     sm    xs
+        #xl      lg     md     sm    xs
       font_size: ["38px", "36px", "32px", "30px", "30px"]
   - name: alianza
     position: 2
@@ -149,15 +186,21 @@ components:
       text: "4Geeks Academy & Tecnología Financiera: ¡La alianza que impulsará tu vida profesional!"
       font_size: ["30px", "30px", "30px", "30px", "30px"]
     sub_heading:
-      text: "Si formas parte de Tecnología Financiera ahora también podrás ser uno de nuestros geeks.
-            En 4Geeks Academy sabemos lo que buscas y queremos darte todas las herramientas necesarias para que puedas aprender a programar y logres cambiar tu vida por completo."
+      text:
+        "Si formas parte de Tecnología Financiera ahora también podrás ser uno de nuestros geeks.
+        En 4Geeks Academy sabemos lo que buscas y queremos darte todas las herramientas necesarias para que puedas aprender a programar y logres cambiar tu vida por completo."
       font_size: ["16px", "16px", "16px", "16px", "16px"]
     content:
       font_size: ["16px"]
       text: |
         <p><span style="font-weight: bold;">Aprovecha esta alianza y forma parte de la evolución tecnológica a nivel mundial ¡Comienza HOY!</p>
+    button:
+      text: "Únete a la Academia"
+      background: black
+      color: white
+      hover_color: "#white"
+      path: "#top"
 
-    
 badges:
   position: 7
   heading: "4Geeks Academy cuenta con premios y reconocimientos de validan su excelencia"

@@ -570,6 +570,7 @@ const Program = ({ data, pageContext, yml }) => {
       <GridContainer padding_tablet="0" margin_tablet="0 0 62px 0">
         <Div height="1px" background="#EBEBEB"></Div>
       </GridContainer>
+
       <Div id="prices_and_payment" display="block" height="auto">
         <PricesAndPayment
           // id="prices_and_payment"
@@ -588,6 +589,7 @@ const Program = ({ data, pageContext, yml }) => {
           paragraph={yml.prices.sub_heading}
         />
       </Div>
+
       <Testimonials
         id="testimonials"
         lang={data.allTestimonialsYaml.edges}

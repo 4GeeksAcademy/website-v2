@@ -297,6 +297,7 @@ export const StyledBackgroundSection = styled(BackgroundSection)`
     background-position: ${(props) => props.backgroundPosition} !important;
   }
   @media ${Devices.xxs} {
+    margin: ${(props) => props.margin_xxs};
   }
   @media ${Devices.xs} {
     height: ${(props) => props.height_xs};
@@ -310,6 +311,7 @@ export const StyledBackgroundSection = styled(BackgroundSection)`
     height: ${(props) => props.height_tablet};
     width: ${(props) => props.width_tablet || "100%"};
     display: ${(props) => props.display_tablet};
+    margin: ${(props) => props.margin_tablet};
     &:before,
     &:after {
       border-radius: ${(props) => props.borderRadius_tablet};
