@@ -34,8 +34,6 @@ geeksvsothers:
 
 python_banner:
   title: "Python y Javascript"
-  paragraph: "Nuestros programa está basado en el uso de Python y Javascript. La razón? En el mercado laboral JavaScript tiene 26 veces más vacantes de trabajo que Ruby on Rails y  Python tiene 10 veces más trabajos que node.js.
-
-  Otras herramientas que también aprenderás a usar en nuestro programa son: GitHub, CSS3, HTML5, Flask, etc."
+  paragraph: "Nuestros programa está basado en el uso de Python y Javascript. La razón? En el mercado laboral JavaScript tiene 26 veces más vacantes de trabajo que Ruby on Rails y  Python tiene 10 veces más trabajos que node.js. Otras herramientas que también aprenderás a usar en nuestro programa son: GitHub, CSS3, HTML5, Flask, etc."
   image: "../../../static/images/why-4geeks/python-image.png"
   image_alt: "python-image"

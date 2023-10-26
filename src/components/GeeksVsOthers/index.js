@@ -79,7 +79,7 @@ const GeeksVsOthers = (props) => {
       {/* 3 / span 10 */}
       <Div
         width="100%"
-        display_xss="none"
+        display_xxs="none"
         display_md="flex"
         maxWidth="1366px"
         margin="auto"
@@ -246,7 +246,7 @@ const GeeksVsOthers = (props) => {
         flexWrap="wrap"
         padding_xs="40px 0 20px 0"
         margin_tablet="20px 35px"
-        margin_xs="30px 20px"
+        margin_xxs="30px 20px"
         gridGap="10px"
         display_md="none"
         background={Colors.whitePink}

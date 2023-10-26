@@ -36,7 +36,7 @@ const SmartSelect = (props) => {
       zIndex="9"
       alignItems="center"
       width="314px"
-      padding={props.padding || "4px 10px"}
+      //padding={props.padding || "4px 10px"}
       minWidth={props.minWidth}
       onClick={() => _p.setStatus({ toggle: !_p.status.toggle })}
       color={Colors.white}
@@ -132,6 +132,7 @@ const customStyles = {
   input: (styles) => ({
     ...styles,
     width: "100%",
+    margin: "0px"
   }),
   control: (styles, state) => ({
     ...styles,
@@ -140,8 +141,8 @@ const customStyles = {
     border: state.isFocused ? "1px solid #000000" : "1px solid #A4A4A4",
     boxShadow: "none",
 
-    marginBottom: "5px",
-    marginTop: "5px",
+    marginBottom: "16px",
+    marginTop: "0px",
     width: "100%",
     fontSize: "15px",
     fontWeight: "400",

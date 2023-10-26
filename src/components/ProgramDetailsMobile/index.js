@@ -30,7 +30,7 @@ const ProgramDetailsMobile = (props) => {
       <Div
         //className="program-details-mobile"
         flexWrap="wrap"
-        padding_xs="20px"
+        padding_xxs="20px"
         padding_tablet="35px"
         gridGap="10px"
       >
