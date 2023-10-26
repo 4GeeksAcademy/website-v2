@@ -204,10 +204,11 @@ export const Div = styled.div`
     margin: ${(props) => props.margin_xxs};
     padding: ${(props) => props.padding_xxs}
     background: ${(props) => props.background_xxs};
-    display: ${(props) => props.display_xxs};
+    display: ${(props) => props.display_xss};
     justify-content: ${(props) => props.justifyContent_xxs};
     flex-direction: ${(props) => props.flexDirection_xxs};
     flex-wrap: ${(props) => props.flexWrap_xxs}; 
+    padding: ${(props) => props.padding_xxs};
   }
   @media ${Devices.xs} {
     padding: ${(props) => props.padding_xs};
