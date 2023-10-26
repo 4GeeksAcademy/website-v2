@@ -38,7 +38,7 @@ icons:
     
 list:
   - title: "Apoyo Profesional Ilimitado"
-    image: "../../../static/images/Group-6611.png"
+    image: "../../../static/images/professional-support.png"
     position: "right"
     sub:
       - title: "CLASES EXCLUSIVAS"

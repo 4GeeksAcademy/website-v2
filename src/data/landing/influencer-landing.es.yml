@@ -121,19 +121,33 @@ components:
     proportions: [5, 7]
     background: "#FFF8E8"
     image:
-      style: '{ "backgroundSize": "contain"}'
+      style: '{ "backgroundSize": "contain", "width": "auto"}'
       src: "/images/landing/hombre-con-laptop.png"
     heading:
-      text: "How it works?"
+      text: "¿Cómo Funciona?"
       font_size: ["30px", "30px", "30px", "30px", "30px"]
     sub_heading:
-      text: "¿Quieres desatar tu potencial como Full-Stack Developer y/o Data Scientist?"
+      text: ""
       font_size: ["16px", "16px", "16px", "16px", "16px"]
+    button:
+      text: "Unete a la academia!"
+      color: white
+      hover_color: "white"
+      background: "black"
+      hover: "veryLightBlue2"
+      path: "#top"
+    bullets:
+      items:
+        - heading: "¡Conviertete en un FullStack developer en tan solo 18 semanas!"
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
+        - heading: "Desarrollo de habilidades altamente valoradas en el mercado profesional."
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
+        - heading: "Acceso a oportunidades laborales al momento de la graducación."
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
     content:
       font_size: ["16px"]
       text: |
-        Al aprender a programar con 4Geeks Academy tendrás clases online completamente en vivo, la oportunidad de certificarte internacionalmente en poco tiempo y de conseguir tu primer empleo como programador con nuestro apoyo.
-
+        Imagina certificarte a nivel internacional en un tiempo récord, abriendo las puertas a nuevas oportunidades laborales. Y lo mejor de todo, no estarás solo en este camino. <br>Nuestro apoyo no termina con la certificación; estamos comprometidos contigo hasta que consigas tu primer empleo como programador. <br>
         <strong style="font-weight: bold;">Descubre cómo puede ser tu vida como un profesional en programación con 4Geeks Academy, ¡comienza ahora! </strong>
   
   - name: top_coding_bootcamp
