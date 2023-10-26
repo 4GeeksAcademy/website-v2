@@ -530,6 +530,11 @@ export const query = graphql`
               background
               hover_color
             }
+            section_heading {
+              text
+              font_size
+              style
+            }
             heading {
               text
               font_size
