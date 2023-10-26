@@ -70,13 +70,14 @@ const Program = ({ data, pageContext, yml }) => {
         margin="40px 0"
         margin_tablet="40px auto"
         maxWidth="1366px"
+        gridColumn_tablet="1/15"
       >
         <Div
           flexDirection="column"
           margin="0"
           justifyContent_tablet="start"
-          padding_tablet="0 30px"
-          gridArea_tablet="1/1/1/7"
+          padding_tablet="0"
+          gridArea_tablet="1/1/1/8"
         >
           <Div
             flexDirection="column"
@@ -118,7 +119,7 @@ const Program = ({ data, pageContext, yml }) => {
         <Div
           height="auto"
           width="100%"
-          gridArea_tablet="1/7/1/13"
+          gridArea_tablet="1/8/1/15"
           style={{ position: "relative" }}
         >
           <StyledBackgroundSection
@@ -134,6 +135,8 @@ const Program = ({ data, pageContext, yml }) => {
       <Div
         display="flex"
         background={Colors.white}
+        margin= "0 auto"
+        maxWidth="1366px"
         style={{
           borderBottom: "1px solid #EBEBEB",
           overflowX: "auto",
@@ -141,14 +144,13 @@ const Program = ({ data, pageContext, yml }) => {
           position: "sticky",
           top: isCustomBarActive(session) ? 50 : 0,
         }}
-        padding="0"
-        justifyContent="center"
+        padding="0 35px"
         alignItems="center"
+        justifyContent="evenly"
         flexDirection="row"
         gap="40px"
         width="100%"
         height="70px"
-        maxWidth="1366px"
         className="scroll-spy-container"
       >
         <ScrollSpy offsetTop={80} autoScrollOffsetTop={-70}>

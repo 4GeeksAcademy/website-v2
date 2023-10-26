@@ -545,6 +545,7 @@ const PricesAndPayments = (props) => {
             textAlign_xs="center"
             opacity="1"
             color={Colors.black}
+            margin="0 0 16px 0"
           >
             {info.select}
           </H3>

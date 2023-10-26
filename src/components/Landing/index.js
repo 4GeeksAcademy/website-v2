@@ -702,7 +702,7 @@ export const landingSections = {
           flexDirection_tablet="row "
           justifyContent="center"
           // gap="45px"
-          gap_tablet={icons.length > 4 ? "0px" : "5%"}
+          gap_tablet={icons.length >= 4 ? "0px" : "5%"}
           //gap_md="10%"
           maxWidth="1366px"
           margin="20px auto 0 auto"
