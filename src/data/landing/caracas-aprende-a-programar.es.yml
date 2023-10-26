@@ -156,6 +156,8 @@ components:
   - name: divider_one
     position: 9
     layout: divider
+    # heading:
+    #   text: Bobuuuu
     height: ["50px", "50px", "50px", "0px", "0px"]
   - name: some_id
     position: 7

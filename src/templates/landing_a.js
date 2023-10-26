@@ -532,7 +532,6 @@ export const query = graphql`
             }
             section_heading {
               text
-              font_size
               style
             }
             heading {
