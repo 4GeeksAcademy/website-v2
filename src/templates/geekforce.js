@@ -278,7 +278,7 @@ const GeekForce = (props) => {
                   heading={m?.title}
                   content={m?.text}
                   button={m?.button}
-                  image={m.image.childImageSharp.gatsbyImageData}
+                  image={m?.image.childImageSharp.gatsbyImageData}
                 />
 
               ) : (
