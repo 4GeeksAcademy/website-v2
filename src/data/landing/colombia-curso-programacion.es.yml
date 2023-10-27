@@ -95,7 +95,7 @@ components:
     position: 2
     layout: two_column_left
     proportions: [4, 8]
-    background: "#f1f1f1"
+    background: "#fbfbfb"
     image:
       style: '{ "backgroundSize": "contain" }'
       src: "/images/badges/Course-Report-Badge-2023.png"
@@ -105,6 +105,27 @@ components:
         "Tenemos 3 años consecutivos siendo seleccionados como uno de los mejores coding bootcamps del mundo"
         #xl      lg     md     sm    xs
       font_size: ["38px", "36px", "32px", "30px", "30px"]
+
+  - name: some_id
+    position: 2
+    layout: two_column_right
+    image:
+      src: "/images/testimonials/liliana-review.jpg"
+      shadow: true
+    video: "https://www.youtube.com/watch?v=pbo4D9w0eI0"
+    heading:
+      text: "Liliana nos cuenta por qué deberías considerar a 4Geeks como una opción si te encuentras en Colombia."
+        #xl      lg     md     sm    xs
+      font_size: ["40px", "34px", "34px", "25px", "20px"]
+    content:
+      text: "Desde su creación en Colombia, 4Geeks Academy siempre ha tenido como objetivo brindar oportunidades de aprendizaje, facilitar opciones de financiamiento y establecer asociaciones públicas para ofrecer oportunidades laborales. Si tienes alguna pregunta sobre cómo podemos contribuir a tu futuro profesional, no dudes en contactarnos. Estaremos encantados de ayudarte en todo lo posible."
+      font_size: ["16px"]
+    button:
+      text: "Experiencias reales"
+      background: black
+      color: white
+      hover_color: "#white"
+      path: "#why_4geeks"
 
 rating_reviews:
   position: 2
@@ -128,7 +149,7 @@ rating_reviews:
       url: ""
 
 badges:
-  position: 10
+  position: 3
   heading: "4Geeks Academy cuenta con premios y reconocimientos que validan su excelencia"
 
 program_details:

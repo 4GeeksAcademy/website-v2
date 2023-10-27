@@ -32,7 +32,7 @@ form:
   heading: "Conoce más información"
   button_label: Obtener más información
   redirect: "https://marketing892162.typeform.com/to/XhfwihKQ" #you can redirect to another url or entirely diffrent website
-    
+
   # jumbotron on the top (cannot be commented out)
 apply_schollarship: # form that is displayed at the end of the landing
   # title: "Get more info about this award-winning development course"
@@ -70,7 +70,7 @@ short_badges:
   - name: "Switchup"
     url: ""
     image: "../../../static/images/badges/switchup-badge-2023.png"
-    alt: "Best coding bootcamp Switchup 2023"   
+    alt: "Best coding bootcamp Switchup 2023"
   - name: "Florida Department of Education"
     url: ""
     image: "../../../static/images/badges/licensed.png"
@@ -99,7 +99,7 @@ program_details:
   sub_heading: "Un curso de programación sobre las tecnologías más usadas del mundo"
 
 #nuevo_componente:
-#position: 2  
+#position: 2
 
 why_4geeks:
   position: 4
@@ -126,6 +126,28 @@ components:
       text: "How it works?"
     content:
       text: "Al aprender a programar con 4Geeks Academy tendrás clases online completamente en vivo, la oportunidad de certificarte internacionalmente en poco tiempo y de conseguir tu primer empleo como programador con nuestro apoyo. Descubre cómo puede ser tu vida como un profesional en programación con 4Geeks Academy, ¡comienza ahora!"
-    button: 
+    button:
       # text: Aplicar
       # color: "#0097CD"
+
+  - name: two_column_w_video
+    position: 3
+    layout: two_column_right
+    image:
+      src: "/images/testimonials/liliana-review.jpg"
+      shadow: true
+    video: "https://www.youtube.com/watch?v=pbo4D9w0eI0"
+    heading:
+      text:
+        "Liliana nos cuenta por qué deberías considerar a 4Geeks como una opción si te encuentras en Colombia."
+        #xl      lg     md     sm    xs
+      font_size: ["40px", "34px", "34px", "25px", "20px"]
+    content:
+      text: "Desde su creación en Colombia, 4Geeks Academy siempre ha tenido como objetivo brindar oportunidades de aprendizaje, facilitar opciones de financiamiento y establecer asociaciones públicas para ofrecer oportunidades laborales. Si tienes alguna pregunta sobre cómo podemos contribuir a tu futuro profesional, no dudes en contactarnos. Estaremos encantados de ayudarte en todo lo posible."
+      font_size: ["16px"]
+    button:
+      text: "Experiencias reales"
+      background: black
+      color: white
+      hover_color: "#white"
+      path: "#why_4geeks"
