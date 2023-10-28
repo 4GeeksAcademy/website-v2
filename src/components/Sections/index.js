@@ -182,6 +182,7 @@ export const Div = styled.div`
   z-index: ${(props) => props.zIndex};
   place-items: ${(props) => props.placeItems};
   font-size: ${(props) => props.fontSize};
+  transform: ${(props) => props.transform};
   &:after {
     content: ${(props) => props.contentAfter};
     display: ${(props) => props.displayAfter || "block"};
@@ -613,7 +614,6 @@ export const GridContainer = ({
   overflowChild,
   justifyContent,
   justifyContent_tablet,
-  justifyItemsChild,
   shadow,
   shadow_tablet,
   containerColumns,
