@@ -249,7 +249,6 @@ const Player = ({
                 onStateChange={onStateChange}
                 onPlaybackRateChange={onPlaybackRateChange}
                 onPlaybackQualityChange={onPlaybackQualityChange}
-                // height={videoHeight}
                 height={
                   borderStyle(imgStyle)
                     ? videoHeightFix(videoHeight)
@@ -272,8 +271,8 @@ const Player = ({
           width={imageWidth}
           width_tablet={imageWidth_tablet || "100%"}
           borderRadius={image_thumb?.shadow ? "0px" : "3px"}
-          height={imageHeight || "100%"}
-          //height={videoHeight || "100%"}
+          //height={imageHeight || "100%"}
+          height={videoHeight || "100%"}
           position="relative"
           boxShadow={image_thumb?.shadow && "20px 15px 0px 0px rgba(0,0,0,1)"}
           //border={image_thumb?.shadow && "3px solid black"}
@@ -306,6 +305,11 @@ const Player = ({
               onClick={() => setShowVideo(true)}
               image={getImage(thumb.childImageSharp.gatsbyImageData)}
               alt="Video"
+              height={
+                borderStyle(imgStyle)
+                  ? videoHeightFix(videoHeight)
+                  : videoHeight
+              }
               style={{
                 height: `${style.height}` || "100%",
                 width: `${style.width}` || "100%",
@@ -319,6 +323,11 @@ const Player = ({
               src={
                 (thumb && thumb.replace("/static", "")) ||
                 `https://img.youtube.com/vi/${id}/${image()}.jpg`
+              }
+              height={
+                borderStyle(imgStyle)
+                  ? videoHeightFix(videoHeight)
+                  : videoHeight
               }
               alt="Video"
               style={{
