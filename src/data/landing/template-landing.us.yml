@@ -190,6 +190,9 @@ components:
       src: "/images/landing/grupo-ventanas.png"
       link: "https://google.com" # take uses somewhere when they click on the image
       shadow: true
+    section_heading: 
+      text: "Finance your future"
+      style: '{ "font-size": "30px" }'
     heading: 
       text: "Finance your future"
     sub_heading:

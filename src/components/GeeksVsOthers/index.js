@@ -247,7 +247,7 @@ const GeeksVsOthers = (props) => {
         flexWrap="wrap"
         padding_xs="0 0 20px 0"
         margin_tablet="20px 35px"
-        margin_xs="30px 20px"
+        margin_xxs="30px 20px"
         gridGap="10px"
         display_md="none"
         background={Colors.whitePink}
