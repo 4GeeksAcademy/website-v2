@@ -200,10 +200,11 @@ export const Div = styled.div`
     border-bottom: ${(props) => props.borderBottomHover};
   }
   @media ${Devices.xxs} {
+    width: ${(props) => props.width_xxs};
     margin: ${(props) => props.margin_xxs};
+    padding: ${(props) => props.padding_xxs}
     background: ${(props) => props.background_xxs};
-    display: ${(props) => props.display_xss};
-    padding: ${(props) => props.padding_xxs};
+    display: ${(props) => props.display_xxs};
   }
   @media ${Devices.xs} {
     padding: ${(props) => props.padding_xs};
@@ -239,7 +240,6 @@ export const Div = styled.div`
     column-count: ${(props) => props.columnCount_sm};
     flex-direction: ${(props) => props.flexDirection_sm};
     flex-wrap: ${(props) => props.flexWrap_sm};
-    display: ${(props) => props.display_sm};
     order: ${(props) => props.order_sm};
     margin: ${(props) => props.margin_sm};
     top: ${(props) => props.top_sm};
@@ -612,6 +612,7 @@ export const GridContainer = ({
   overflowChild,
   justifyContent,
   justifyContent_tablet,
+  justifyItemsChild,
   shadow,
   shadow_tablet,
   containerColumns,
@@ -620,6 +621,7 @@ export const GridContainer = ({
   containerColumnsChild_tablet,
   children,
   display,
+  display_xxs,
   display_xs,
   display_sm,
   display_tablet,
@@ -665,7 +667,6 @@ export const GridContainer = ({
   displayChild_md,
   columns_sm,
   justifyContentChild,
-  justifyItemsChild,
 }) => {
   return (
     <Grid
@@ -683,6 +684,7 @@ export const GridContainer = ({
       display={display}
       display_sm={display_sm}
       displa_xs={display_xs}
+      display_xxs={display_xxs}
       display_tablet={display_tablet}
       display_md={display_md}
       justifyContent={justifyContent}

@@ -107,16 +107,16 @@ program_details:
   heading: "Detalles del programa"
   sub_heading: "Aprende las tecnologías que demandan las empresas"
 
-why_4geeks:
-  position: 6
-  heading: "¿Por qué debes estudiar en 4Geeks Academy?"
-  sub_heading: " "
-
 geeks_vs_others:
   position: 8
   heading: "¿Por qué 4Geeks Academy es único?"
   # sub_heading: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
   total_rows: 5
+
+why_4geeks:
+  position: 6
+  heading: "¿Por qué debes estudiar en 4Geeks Academy?"
+  sub_heading: " "
 
 iconogram:
   position: 9
