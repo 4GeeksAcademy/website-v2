@@ -132,7 +132,7 @@ const customStyles = {
   input: (styles) => ({
     ...styles,
     width: "100%",
-    margin: "0px"
+    margin: "0px",
   }),
   control: (styles, state) => ({
     ...styles,
