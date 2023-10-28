@@ -123,16 +123,16 @@ components:
     bullets:
       items:
         - heading: "TODAS LAS MENTORIAS QUE NECESITAS"
-          text: "Some text description for the bullet"
+          text: ""
           icon: "check" #string with icon for example ['check', 'cicle', etc]
         - heading: "TIEMPO DE RESPUESTA"
-          text: "Some text description for the bullet"
+          text: ""
           icon: "check" #string with icon for example ['check', 'cicle', etc]
         - heading: "1:7 PROPORCIÓN PROFESOR: ESTUDIANTE"
-          text: "Some text description for the bullet"
+          text: ""
           icon: "check" #string with icon for example ['check', 'cicle', etc]
         - heading: "SOPORTE PROFESIONAL A LA MEDIDA"
-          text: "Basado en cada oportunidad laboral"
+          text: ""
           icon: "check" #string with icon for example ['check', 'cicle', etc]
 
   - name: coding
