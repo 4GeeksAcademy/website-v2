@@ -188,10 +188,7 @@ const AlumniProjects = ({
                   />
                 )}
               </Div>
-              <Div
-                flexDirection="column"
-                gridColumn_tablet="8 / 15 "
-              >
+              <Div flexDirection="column" gridColumn_tablet="8 / 15 ">
                 <H3
                   textAlign="left"
                   margin_tablet={`0 0 10px 0`}
