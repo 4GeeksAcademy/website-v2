@@ -228,8 +228,7 @@ const GeeksVsOthers = (props) => {
         </GridContainer>
       </Div>
       {props.link && (
-      <GridContainer margin="0 0 36px 0" margin_tablet="0 0 76px 0">
-        
+        <GridContainer margin="0 0 36px 0" margin_tablet="0 0 76px 0">
           <Div justifyContent="center" margin="50px 0 0 0">
             <Link to={geeks.button.button_link}>
               <Paragraph color={Colors.blue}>
@@ -237,7 +236,7 @@ const GeeksVsOthers = (props) => {
               </Paragraph>
             </Link>
           </Div>
-      </GridContainer>
+        </GridContainer>
       )}
 
       {/* MOBILE VERSION*/}
