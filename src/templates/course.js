@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link, graphql } from "gatsby";
 import BaseRender from "./_baseLayout";
 import { Header, Div, GridContainer } from "../components/Sections";
-import { Button, Colors } from "../components/Styling";
+import { Button, Colors, Img } from "../components/Styling";
 import { requestSyllabus, isCustomBarActive } from "../actions";
 import { SessionContext } from "../session";
 import AboutTheProgram from "../components/AboutTheProgram";
@@ -22,6 +22,7 @@ import Testimonials from "../components/Testimonials";
 import OurPartners from "../components/OurPartners";
 import RelatedPosts from "../components/RelatedPosts";
 import Icon from "../components/Icon";
+import Overlaped from "../components/Overlaped";
 
 const Program = ({ data, pageContext, yml }) => {
   const { session } = React.useContext(SessionContext);
@@ -55,6 +56,7 @@ const Program = ({ data, pageContext, yml }) => {
   }, [currentLocation]);
 
   const syllabus_button_text = yml.button.syllabus_heading;
+  const apply_button_text = yml.apply_button_text;
 
   return (
     <>
@@ -62,244 +64,28 @@ const Program = ({ data, pageContext, yml }) => {
         margin={isCustomBarActive(session) ? "120px 0 0 0" : ""}
         paragraphMargin="26px 0"
         paragraphMargin_Tablet="26px 22%"
+        paddingParagraph_tablet="0 40px"
         seo_title={yml.seo_title}
         title={yml.header.title}
         paragraph={yml.header.paragraph}
         padding_tablet="72px 0 40px 0"
         position="relative"
+        fontSize_title="60px"
+        fontSizeTitle_tablet="60px"
+        fontFamily_title="Archivo-Black"
+        fontSize_paragraph="24px"
       >
-        <Circle
-          color="yellow"
-          width="17px"
-          height="17px"
-          top="0"
-          left="74px"
-          zIndex="1"
-          display="none"
-          display_tablet="inline"
-          opacity="0.2"
-        />
-        <Circle
-          color="grey"
-          width="17px"
-          height="17px"
-          top="0"
-          left="106px"
-          zIndex="1"
-          display="none"
-          display_tablet="inline"
-        />
-        <Circle
-          color="black"
-          width="17px"
-          height="17px"
-          top="32px"
-          left="106px"
-          zIndex="1"
-          display="none"
-          display_tablet="inline"
-        />
-        <Circle
-          color="black"
-          width="17px"
-          height="17px"
-          top="32px"
-          left="74px"
-          zIndex="1"
-          display="none"
-          display_tablet="inline"
-        />
-        <Circle
-          color="grey"
-          width="17px"
-          height="17px"
-          top="67px"
-          left="74px"
-          zIndex="1"
-          display="none"
-          display_tablet="inline"
-        />
-        <Circle
-          color="grey"
-          width="17px"
-          height="17px"
-          top="102px"
-          left="74px"
-          zIndex="1"
-          display="none"
-          display_tablet="inline"
-        />
-        <Circle
-          color="grey"
-          width="17px"
-          height="17px"
-          top="137px"
-          left="106px"
-          zIndex="1"
-          display="none"
-          display_tablet="inline"
-        />
-        <Circle
-          color="grey"
-          width="17px"
-          height="17px"
-          top="172px"
-          left="106px"
-          zIndex="1"
-          display="none"
-          display_tablet="inline"
-        />
-        <Circle
-          color="blue"
-          width="17px"
-          height="17px"
-          top="216px"
-          left="74px"
-          zIndex="1"
-          display="none"
-          display_tablet="inline"
-        />
-        <Circle
-          color="grey"
-          width="17px"
-          height="17px"
-          top="271px"
-          left="106px"
-          zIndex="1"
-          display="none"
-          display_tablet="inline"
-        />
-        <Circle
-          color="red"
-          width="27px"
-          height="27px"
-          top="222px"
-          left="278px"
-          zIndex="1"
-          display="none"
-          display_tablet="inline"
-        />
-        <Circle
-          color="yellow"
-          width="250px"
-          height="250px"
-          bottom="20px"
-          right="-68px"
-          opacity="0.2"
-          zIndex="1"
-          display="none"
-          display_tablet="inline"
-        />
-        <Circle
-          color="grey"
-          width="17px"
-          height="17px"
-          top="120px"
-          right="50px"
-          zIndex="1"
-          display="none"
-          display_tablet="inline"
-        />
-        <Circle
-          color="black"
-          width="17px"
-          height="17px"
-          top="120px"
-          right="89px"
-          zIndex="1"
-          display="none"
-          display_tablet="inline"
-        />
-        <Circle
-          color="grey"
-          width="17px"
-          height="17px"
-          top="120px"
-          right="128px"
-          zIndex="1"
-          display="none"
-          display_tablet="inline"
-        />
-        <Circle
-          color="black"
-          width="119px"
-          height="11px"
-          border="10px"
-          bottom="115px"
-          right="40px"
-          zIndex="1"
-          display="none"
-          display_tablet="inline"
-        />
-        <Circle
-          color="black"
-          width="77px"
-          height="11px"
-          border="10px"
-          bottom="115px"
-          right="175px"
-          zIndex="1"
-          display="none"
-          display_tablet="inline"
-        />
-        <Circle
-          color="yellow"
-          width="116px"
-          height="116px"
-          bottom="50px"
-          left="-58px"
-          zIndex="1"
-          display="none"
-          display_tablet="inline"
-        />
-        <Circle
-          color="yellow"
-          width="116px"
-          height="116px"
-          bottom="200px"
-          left="-90px"
-          zIndex="1"
-          display="inline"
-          display_tablet="none"
-        />
-        <Circle
-          color="yellow"
-          width="21px"
-          height="21px"
-          top="10px"
-          right="320px"
-          zIndex="1"
-          display="none"
-          display_tablet="inline"
-        />
-        <Circle
-          color="blue"
-          width="57px"
-          height="57px"
-          top="32px"
-          right="61px"
-          display="none"
-          display_tablet="inline"
-        />
-        <Circle
-          color="yellow"
-          width="160px"
-          height="160px"
-          top="0"
-          right="-120px"
-          opacity="0.2"
-          display="inline"
-          display_tablet="none"
-        />
-        <Circle
-          color="red"
-          width="25px"
-          height="25px"
-          top="60px"
-          right="30px"
-          display="inline"
-          display_tablet="none"
-        />
+        <Img
+              src="/images/landing/group-2.png"
+              width="49px"
+              height="286px"
+              style={{
+                position: "absolute",
+                right: "0%",
+                bottom: "0%",
+                zIndex: "1",
+              }}
+            /> 
         <Div
           flexDirection_tablet="row"
           flexDirection="column"
@@ -320,7 +106,7 @@ const Program = ({ data, pageContext, yml }) => {
               margin_tablet="10px 24px 10px 0"
               textColor="white"
             >
-              {applyButtonText}
+              {apply_button_text}
             </Button>
           </Link>
           <Button
@@ -374,15 +160,11 @@ const Program = ({ data, pageContext, yml }) => {
         <Badges
           lang={pageContext.lang}
           short_link={true}
+          short_text="12px"
           margin="0 0 40px 0"
           paragraph={yml.badges.paragraph}
         />
       </Header>
-      <AboutTheProgram
-        details={courseDetails.details}
-        lang={pageContext.lang}
-        course={program_type}
-      />
       <JobGuaranteeSmall
         content={data.allJobGuaranteeSmallYaml.edges[0].node}
       />
@@ -396,8 +178,26 @@ const Program = ({ data, pageContext, yml }) => {
         lang={pageContext.lang}
         course={program_type}
       />
-      <TechsWeTeach lang={pageContext.lang} data={data.allFullStackTechsYaml} />
+      {/* <TechsWeTeach lang={pageContext.lang} data={data.allFullStackTechsYaml} /> */}
+      <Overlaped
+        heading={yml.overlaped.heading}
+        content={yml.overlaped.paragraph}
+        button={yml.overlaped.button}
+        image={yml.overlaped.image.src}
+      />
       <GeeksInfo lang={pageContext.lang} />
+      <TwoColumn
+        left={{ image: yml.two_column.image, video: yml.two_column.video }}
+        right={{
+          heading: yml.two_column.heading,
+          sub_heading: yml.two_column.sub_heading,
+          bullets: yml.two_column.bullets,
+          content: yml.two_column.content,
+          button: yml.two_column.button,
+        }}
+        proportions={yml.proportions}
+        session={session}
+      />
       <GridContainer
         padding_tablet="0"
         margin_tablet="90px 0 62px 0"

@@ -35,6 +35,7 @@ button:
   syllabus_heading: "Download Syllabus"
   syllabus_btn_label: "Instant Download"
   syllabus_motivation: "Get it in just a few seconds"
+  apply_button_text: "Apply now"
   apply_button_link: "/us/apply"
 
 course_instructors: 
@@ -67,6 +68,16 @@ upcoming:
 credentials:
   heading: "This Program By The Numbers"
   paragraph: "Our results speak for themselves"
+
+# OVERLAPED
+overlaped:
+  heading: "Why learning Python and Javascript is essential"
+  paragraph: "Programming in Python and JavaScript offers some of the highest-paid career opportunities in the US. There are currently over 26 times more job opportunities in JavaScript compared to Ruby on Rails, and 10 times more jobs in Python compared to node.js. According to Indeed, Python and JavaScript developers enjoy average salaries exceeding $110k."
+  button:
+    text: "LEARN MORE"
+    color: "Colors.blue"  
+  image:
+    src: "/images/landing/tres-personas.png"
 
 ## PROGRAM DETAILS
 details:
