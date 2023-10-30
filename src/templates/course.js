@@ -23,6 +23,8 @@ import OurPartners from "../components/OurPartners";
 import RelatedPosts from "../components/RelatedPosts";
 import Icon from "../components/Icon";
 import Overlaped from "../components/Overlaped";
+import Loc from "../components/Loc"
+import { TwoColumn } from "../components/Landing";
 
 const Program = ({ data, pageContext, yml }) => {
   const { session } = React.useContext(SessionContext);
@@ -56,8 +58,7 @@ const Program = ({ data, pageContext, yml }) => {
   }, [currentLocation]);
 
   const syllabus_button_text = yml.button.syllabus_heading;
-  const apply_button_text = yml.apply_button_text;
-
+  const apply_button_text = yml.button.apply_button_text;
   return (
     <>
       <Header
@@ -65,7 +66,7 @@ const Program = ({ data, pageContext, yml }) => {
         paragraphMargin="26px 0"
         paragraphMargin_Tablet="26px 22%"
         paddingParagraph_tablet="0 40px"
-        seo_title={yml.seo_title}
+        //seo_title={yml.seo_title}
         title={yml.header.title}
         paragraph={yml.header.paragraph}
         padding_tablet="72px 0 40px 0"
@@ -76,16 +77,16 @@ const Program = ({ data, pageContext, yml }) => {
         fontSize_paragraph="24px"
       >
         <Img
-              src="/images/landing/group-2.png"
-              width="49px"
-              height="286px"
-              style={{
-                position: "absolute",
-                right: "0%",
-                bottom: "0%",
-                zIndex: "1",
-              }}
-            /> 
+          src="/images/landing/group-3.png"
+          width="49px"
+          height="286px"
+          style={{
+            position: "absolute",
+            left: "20%",
+            top: "15%",
+            zIndex: "1",
+          }}
+        /> 
         <Div
           flexDirection_tablet="row"
           flexDirection="column"
@@ -178,26 +179,28 @@ const Program = ({ data, pageContext, yml }) => {
         lang={pageContext.lang}
         course={program_type}
       />
-      {/* <TechsWeTeach lang={pageContext.lang} data={data.allFullStackTechsYaml} /> */}
       <Overlaped
-        heading={yml.overlaped.heading}
-        content={yml.overlaped.paragraph}
-        button={yml.overlaped.button}
-        image={yml.overlaped.image.src}
+        heading={yml.overlaped?.heading}
+        content={yml.overlaped?.paragraph}
+        button={yml.overlaped?.button}
+        image={yml.overlaped?.image}
       />
+
       <GeeksInfo lang={pageContext.lang} />
+
       <TwoColumn
-        left={{ image: yml.two_column.image, video: yml.two_column.video }}
+        left={{ image: yml.two_columns?.image, video: yml.two_columns?.video }}
         right={{
-          heading: yml.two_column.heading,
-          sub_heading: yml.two_column.sub_heading,
-          bullets: yml.two_column.bullets,
-          content: yml.two_column.content,
-          button: yml.two_column.button,
+          heading: yml.two_columns?.heading,
+          sub_heading: yml.two_columns?.sub_heading,
+          bullets: yml.two_columns?.bullets,
+          content: yml.two_columns?.content,
+          button: yml.two_columns?.button,
         }}
-        proportions={yml.proportions}
+        proportions={yml.two_columns?.proportions}
         session={session}
       />
+      
       <GridContainer
         padding_tablet="0"
         margin_tablet="90px 0 62px 0"
@@ -205,6 +208,7 @@ const Program = ({ data, pageContext, yml }) => {
       >
         <Div height="5px" background="#EBEBEB"></Div>
       </GridContainer>
+
       <UpcomingDates
         lang={pageContext.lang}
         message={courseDetails.upcoming.no_dates_message}
@@ -230,17 +234,8 @@ const Program = ({ data, pageContext, yml }) => {
         lang={data.allAlumniProjectsYaml.edges}
         limit={2}
       />
-      <Testimonials
-        lang={data.allTestimonialsYaml.edges}
-        margin_tablet="75px 0 0 0"
-        margin="45px 0 0 0"
-      />
-      <OurPartners images={hiring.partners.images} marquee></OurPartners>
-      <RelatedPosts
-        lang={pageContext.lang}
-        posts={data.allMarkdownRemark.edges}
-        relatedClusters={courseDetails.meta_info.related_clusters}
-      />
+      <OurPartners images={hiring.partners.images} marquee/>
+      <Loc lang={pageContext.lang} allLocationYaml={data.allLocationYaml} />
     </>
   );
 };
@@ -343,6 +338,7 @@ export const query = graphql`
             syllabus_btn_label
             syllabus_motivation
             apply_button_link
+            apply_button_text
           }
           meta_info {
             title
@@ -409,7 +405,45 @@ export const query = graphql`
             sub_heading
             sub_heading_link
           }
-
+          overlaped{
+            heading
+            paragraph
+            button {
+              text
+              color
+            }
+            image {
+              src
+            }
+          }
+          two_columns{
+            proportions
+            image{
+              style
+              src
+              shadow
+            } 
+            video
+            heading{
+              text
+              font_size
+              }
+            sub_heading{
+              text
+              font_size
+              }
+            button{
+              text
+              color
+              background
+              path
+            }
+            bullets{
+              items{ 
+                text
+              }
+            }
+          }
           prices {
             heading
             sub_heading
@@ -654,11 +688,13 @@ export const query = graphql`
           meta_info {
             slug
             description
+            title
             image
             position
             visibility
             keywords
             redirects
+            region
           }
           header {
             sub_heading

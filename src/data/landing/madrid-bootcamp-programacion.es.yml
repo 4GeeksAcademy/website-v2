@@ -46,9 +46,9 @@ features:
   #                                         up   left down  right
   styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
   bullets:
-   - Aprende las Tecnologías Más Demandadas en la Industria Tech. 
-   - Adquiere Habilidades Altamente Solicitadas por Empresas Líderes.
-   - Clases en Grupos Reducidos y Soporte de Por Vida
+    - Aprende las Tecnologías Más Demandadas en la Industria Tech. 
+    - Adquiere Habilidades Altamente Solicitadas por Empresas Líderes.
+    - Clases en Grupos Reducidos y Soporte de Por Vida
   
 short_badges:
   - name: "Premios Excelencia Educativa"
@@ -234,4 +234,4 @@ components:
         "Nombrados como el TOP 1 Bootcamp de España y somos reconocidos en Europa"
         #xl      lg     md     sm    xs
       font_size: ["40px", "40px", "40px", "40px", "40px"]
-     
+

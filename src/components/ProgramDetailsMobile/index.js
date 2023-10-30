@@ -33,6 +33,7 @@ const ProgramDetailsMobile = (props) => {
         padding_xxs="20px"
         padding_tablet="35px"
         gridGap="10px"
+        display_md="none"
       >
         {props.details.details_modules.map((item, index) => {
           return (

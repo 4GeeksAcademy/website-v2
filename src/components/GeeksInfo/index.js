@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from "gatsby";
 import { GridContainerWithImage, Div, GridContainer } from "../Sections";
 import { H2, H4, Paragraph } from "../Heading";
 import { Colors, RoundImage, StyledBackgroundSection } from "../Styling";
-
+import { TwoColumn } from "../Landing"
 const GeeksInfo = ({ lang }) => {
   const data = useStaticQuery(graphql`
     {
@@ -16,12 +16,21 @@ const GeeksInfo = ({ lang }) => {
               image
               image_link
             }
-            list {
-              sub_title
-              title
+            bullets {
+              items {
+                heading
+                text
+              }
             }
             paragraph
-            image1 {
+            button{
+              text,
+              path,
+              color,
+              background,
+              hover,
+            }
+            image {
               childImageSharp {
                 gatsbyImageData(
                   layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
@@ -31,17 +40,7 @@ const GeeksInfo = ({ lang }) => {
                 )
               }
             }
-            image2 {
-              childImageSharp {
-                gatsbyImageData(
-                  layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                  width: 800
-                  quality: 100
-                  placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
-                )
-              }
-            }
-            fields {
+            fields{
               lang
             }
           }
@@ -49,6 +48,7 @@ const GeeksInfo = ({ lang }) => {
       }
     }
   `);
+  console.log(data)
   let content = data.allGeeksInfoYaml.edges.find(
     ({ node }) => node.fields.lang === lang
   );
@@ -58,13 +58,28 @@ const GeeksInfo = ({ lang }) => {
     <>
       <H2
         padding="15px 0 20px 0"
-        margin_tablet="15px auto 76px auto"
+        margin_tablet="15px auto 30px auto"
         width_tablet="100%"
       >
         {content.heading}
       </H2>
 
-      <Div maxWidth_tablet="1366px" margin="auto">
+      <TwoColumn
+        left={{
+          //heading: yml.heading,
+          //sub_heading: yml.sub_heading,
+          bullets: content.bullets,
+          //content: yml.content,
+          button: content.button,
+          //paragraph: content.paragraph,
+          //header: content.header
+        }}
+        right={{ image: content.image.childImageSharp.gatsbyImageData }}
+      //proportions={yml.proportions}
+      //session={session}
+      />
+
+      {/* <Div maxWidth_tablet="1366px" margin="auto">
         <GridContainerWithImage
           imageSide="left"
           columns_tablet="2"
@@ -72,7 +87,6 @@ const GeeksInfo = ({ lang }) => {
           padding_md="0 80px"
           padding_lg="0"
         >
-          {/* <Grid columns_md="2" gridGap_md="50px"> */}
 
           <Div
             style={{ position: "relative" }}
@@ -137,7 +151,7 @@ const GeeksInfo = ({ lang }) => {
                     />
                   );
                 })}
-              {/* <RoundImage url={i.footer.image} bsize="contain" height="20px" position="left" /> */}
+              
             </Div>
             {Array.isArray(content.list) &&
               content.list.map((m, i) => {
@@ -177,7 +191,7 @@ const GeeksInfo = ({ lang }) => {
             ></Paragraph>
           </Div>
         </GridContainerWithImage>
-      </Div>
+      </Div> */}
     </>
   );
 };

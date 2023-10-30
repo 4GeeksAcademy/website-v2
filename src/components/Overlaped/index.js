@@ -55,7 +55,7 @@ const Overlaped = ({
           gridGap="0px"
         >
           <Div gridColumn="1 / 9">
-            <Img src={image.src} width="33.3em" height="533px" />
+            <Img src={image?.src} width="33.3em" height="533px" />
           </Div>
 
           <Div gridColumn="9 / 17" gridColumn_lg="9/ 22" position="relative">
@@ -138,7 +138,7 @@ const Overlaped = ({
 
           {button && (
             <Button
-              background={button.color}
+              background={Colors[button.color]}
               color={Colors.white}
               margin="20px 0 0 0"
             >
@@ -161,7 +161,7 @@ const Overlaped = ({
           width="100%"
         > */}
         <Img
-          src={image.src}
+          src={image?.src}
           width="23.43em"
           height="533px"
           backgroundSize="contain"

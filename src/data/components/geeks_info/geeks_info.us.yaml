@@ -5,15 +5,23 @@ header:
     image_link: ""
   - image: "/images/geekpal.png"
     image_link: ""
-list:
-  - title: "> UNLIMITED MENTORING"
-    sub_title: "Get expert support for all your coding needs. Our mentors are available online or in-person, ready to help you from day one to ever after. "
-  - title: "> HIGH AVAILABILITY"
-    sub_title: "Never get stuck with a coding problem. Our dedicated instructors will respond within 15 minutes or less."
-  - title: ">  1:7 PROFESSOR: STUDENT RATIO"
-    sub_title: "Experience individualized attention with our higher-than-average professor-to-student ratio."
-  - title: ">  TAILOR-MADE CAREER SUPPORT"
-    sub_title: "Receive customized advice, guidance, and training tailored to your unique profile and specific job offers."
+bullets:
+  items:
+  - heading: "UNLIMITED MENTORING"
+    text: "Get expert support for all your coding needs. Our mentors are available online or in-person, ready to help you from day one to ever after. "
+  - heading: "HIGH AVAILABILITY"
+    text: "Never get stuck with a coding problem. Our dedicated instructors will respond within 15 minutes or less."
+  - heading: "1:7 PROFESSOR: STUDENT RATIO"
+    text: "Experience individualized attention with our higher-than-average professor-to-student ratio."
+  - heading: "TAILOR-MADE CAREER SUPPORT"
+    text: "Receive customized advice, guidance, and training tailored to your unique profile and specific job offers."
+
 paragraph: "<a href='/us/geeks-vs-others'><span class='span-blue'>Compare 4Geeks</span></a> with other bootcamps."
-image1: "../../../../static/images/geeksinfo/geeksinfo.png"
-image2: "../../../../static/images/bg/community.png"
+button:
+  text: "Compare 4Geeks with other bootcamps"
+  path: "/us/geeks-vs-others"
+  color: "white"
+  background: "black"
+  hover: "lightBlue"
+
+image: "../../../../static/images/geeksinfo/grupo-ventanas.png"
