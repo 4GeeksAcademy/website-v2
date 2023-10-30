@@ -200,6 +200,7 @@ export const Div = styled.div`
     border-bottom: ${(props) => props.borderBottomHover};
   }
   @media ${Devices.xxs} {
+    column-count: ${(props) => props.columnCount_xxs};
     width: ${(props) => props.width_xxs};
     margin: ${(props) => props.margin_xxs};
     padding: ${(props) => props.padding_xxs}

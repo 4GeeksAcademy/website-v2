@@ -51,8 +51,7 @@ const Press = (props) => {
         padding_tablet="0 40px 60px 40px"
         padding_md="0 80px 60px 80px"
         padding_lg="0 0 60px 0"
-        columnCount_sm="1"
-        columnCount_xs="1"
+        columnCount_xxs="1"
         columnCount_tablet="3"
       >
         {Array.isArray(content.news) &&
