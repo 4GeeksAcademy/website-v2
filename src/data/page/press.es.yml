@@ -18,7 +18,7 @@ content:
   limit: 7
   news:
     - name: "Miami Herald"
-      logo: "../../../static/images/news/miami-herald.png"
+      logo: "../../../static/images/news/the-miami-herald.png"
       #location: ["santiago-chile", "online", "downtown-miami", "bogota-colombia", "mexicocity-mexico", "costa-rica", "lima-peru", "buenosaires-argentina", "lapaz-bolivia", "montevideo-uruguay", "quito-ecuador"]
       image: "../../../static/images/partner/united-way-schoolarship.jpeg"
       title: "Becas para aprender a programar"

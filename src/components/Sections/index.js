@@ -535,6 +535,7 @@ export const Header = ({
   paddingParagraph_tablet,
   paddingTitle_tablet,
   display_mobile,
+  maxWidth
 }) => {
   return (
     <Grid
@@ -546,6 +547,7 @@ export const Header = ({
       margin_tablet={margin_tablet}
       padding={padding || "60px 17px"}
       padding_tablet={padding_tablet || "60px 0"}
+      maxWidth={maxWidth}
     >
       <Grid
         gridTemplateColumns_tablet={`repeat(12, 1fr)`}
