@@ -91,7 +91,7 @@ apply_schollarship: # form that is displayed at the end of the landing
   image: "../../../static/images/landing/apply.png"
 
 badges:
-  position: 5
+  position: 8
   heading: "Premios y reconocimientos que validan nuestra excelencia"
 
 program_details:
@@ -111,7 +111,7 @@ why_4geeks:
   sub_heading: ""
 
 who_is_hiring:
-  position: 6
+  position: 10
   limit: 4
   heading: "¿Quién contrata a nuestros alumnos?"
   sub_heading: "Nuestros partners de contratación crecen todos los días, con más de 150 aliados a nivel global y decenas de vacantes activas en nuestras bolsas de empleo."
@@ -179,7 +179,7 @@ components:
       font_size: ["16px"]
     button:
       text: "Unete a la academia!"
-      path: "https://4geeksacademy.com/us/coding-campus/coding-bootcamp-caracas"
+      path: "#bottom"
       color: "white"
       background: "black"
       hover: "lightBlue"
