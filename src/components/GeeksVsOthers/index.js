@@ -89,8 +89,8 @@ const GeeksVsOthers = (props) => {
           borderRadiusChild="3px"
           borderRadiusChild_tablet="3px"
           overflowChild="auto"
-          containerColumns_tablet={`1fr repeat(10, 1fr) 1fr`}
-          gridColumn_tablet="2 / span 10"
+          containerColumns_tablet={`1fr repeat(12, 1fr) 1fr`}
+          gridColumn_tablet="2 / 15"
           columns_tablet="9"
           columns="3"
           backgroundChild={Colors.whitePink}
