@@ -405,7 +405,7 @@ export const MultiColumns = ({
           fontSize_xs={sh_xs}
           fontHeight="30px"
           style={sub_heading.style ? JSON.parse(sub_heading.style) : null}
-          // style={{textAlign:'center'}}
+        // style={{textAlign:'center'}}
         >
           {sub_heading.text}
         </Paragraph>
@@ -613,8 +613,8 @@ export const landingSections = {
           location
             ? location
             : session &&
-              session.location &&
-              session.location.breathecode_location_slug
+            session.location &&
+            session.location.breathecode_location_slug
         }
         lang={pageContext.lang}
         filter={
@@ -627,7 +627,7 @@ export const landingSections = {
   about4Geeks: ({ session, data, pageContext, yml, index }) => {
     let dataYml =
       data.allLandingYaml.edges.length !== 0 &&
-      data.allLandingYaml.edges[0].node.about4Geeks !== null
+        data.allLandingYaml.edges[0].node.about4Geeks !== null
         ? data.allLandingYaml.edges
         : data.allDownloadableYaml.edges;
     return (
@@ -706,7 +706,7 @@ export const landingSections = {
           padding_tablet="0 40px"
           padding_md="0 80px"
           padding_lg="0"
-          //className="badge-slider hideOverflowX__"
+        //className="badge-slider hideOverflowX__"
         >
           {Array.isArray(icons) &&
             icons?.map((item, index) => {
@@ -753,7 +753,7 @@ export const landingSections = {
   badges: ({ session, data, pageContext, yml, course, index }) => {
     let dataYml =
       data.allLandingYaml.edges.length !== 0 &&
-      data.allLandingYaml.edges[0].node.badges !== null
+        data.allLandingYaml.edges[0].node.badges !== null
         ? data.allLandingYaml.edges
         : data.allDownloadableYaml.edges;
     let badges = dataYml[0].node.badges;
@@ -830,9 +830,8 @@ export const landingSections = {
                   letterSpacing="0.05em"
                   fontWeight="bold"
                 >
-                  {`${item.rating} ${
-                    pageContext.lang === "us" ? "On Reviews" : "En reseñas"
-                  }`}
+                  {`${item.rating} ${pageContext.lang === "us" ? "On Reviews" : "En reseñas"
+                    }`}
                 </Paragraph>
               </Div>
             );
@@ -1163,7 +1162,7 @@ export const landingSections = {
   who_is_hiring: ({ session, data, pageContext, yml, location, index }) => {
     let dataYml =
       data.allLandingYaml.edges.length !== 0 &&
-      data.allLandingYaml.edges[0].node?.who_is_hiring !== null
+        data.allLandingYaml.edges[0].node?.who_is_hiring !== null
         ? data.allLandingYaml.edges
         : data.allDownloadableYaml.edges;
 
@@ -1216,20 +1215,20 @@ export const landingSections = {
         sm={yml.height[3]}
         xs={yml.height[4]}
       >{yml.heading && yml.heading !== "" && <H2
-          type="h2"
-          textAlign_tablet="center"
-          lineHeight="38px"
-          lineHeight_tablet="38px"
-          fontSize={h_xs || "30px"}
-          fs_xl={h_xl}
-          fontSize_md={h_md || "30px"}
-          fontSize_sm={h_sm}
-          margin="30px 0 0px 0"
-          style={yml.heading.style ? JSON.parse(heading.heading.style) : null}
-        >
-          {yml.heading.text}
+        type="h2"
+        textAlign_tablet="center"
+        lineHeight="38px"
+        lineHeight_tablet="38px"
+        fontSize={h_xs || "30px"}
+        fs_xl={h_xl}
+        fontSize_md={h_md || "30px"}
+        fontSize_sm={h_sm}
+        margin="30px 0 0px 0"
+        style={yml.heading.style ? JSON.parse(heading.heading.style) : null}
+      >
+        {yml.heading.text}
       </H2>}
-    </Div>);
+      </Div>);
   },
   two_column_left: ({ session, data, pageContext, yml, index }) => {
     const [h_xl, h_lg, h_md, h_sm, h_xs] = yml.section_heading && yml.section_heading.font_size ? yml.section_heading.font_size : [];
@@ -1246,18 +1245,18 @@ export const landingSections = {
         padding_xs="30px 0px"
       >
         {yml.section_heading && yml.section_heading !== "" && <H2
-            type="h2"
-            textAlign_tablet="center"
-            lineHeight="38px"
-            lineHeight_tablet="38px"
-            fontSize={h_xs || "30px"}
-            fs_xl={h_xl}
-            fontSize_md={h_md || "30px"}
-            fontSize_sm={h_sm}
-            margin="30px 0 0px 0"
-            style={yml.section_heading.style ? JSON.parse(heading.section_heading.style) : null}
-          >
-            {yml.section_heading.text}
+          type="h2"
+          textAlign_tablet="center"
+          lineHeight="38px"
+          lineHeight_tablet="38px"
+          fontSize={h_xs || "30px"}
+          fs_xl={h_xl}
+          fontSize_md={h_md || "30px"}
+          fontSize_sm={h_sm}
+          margin="30px 0 0px 0"
+          style={yml.section_heading.style ? JSON.parse(heading.section_heading.style) : null}
+        >
+          {yml.section_heading.text}
         </H2>}
         <TwoColumn
           left={{ image: yml.image, video: yml.video }}
@@ -1288,18 +1287,18 @@ export const landingSections = {
         padding_xs="30px 0px"
       >
         {yml.section_heading && yml.section_heading !== "" && <H2
-            type="h2"
-            textAlign_tablet="center"
-            lineHeight="38px"
-            lineHeight_tablet="38px"
-            fontSize={h_xs || "30px"}
-            fs_xl={h_xl}
-            fontSize_md={h_md || "30px"}
-            fontSize_sm={h_sm}
-            margin="30px 0 0px 0"
-            style={yml.section_heading.style ? JSON.parse(yml.section_heading.style) : null}
-          >
-            {yml.section_heading.text}
+          type="h2"
+          textAlign_tablet="center"
+          lineHeight="38px"
+          lineHeight_tablet="38px"
+          fontSize={h_xs || "30px"}
+          fs_xl={h_xl}
+          fontSize_md={h_md || "30px"}
+          fontSize_sm={h_sm}
+          margin="30px 0 0px 0"
+          style={yml.section_heading.style ? JSON.parse(yml.section_heading.style) : null}
+        >
+          {yml.section_heading.text}
         </H2>}
         <TwoColumn
           left={{

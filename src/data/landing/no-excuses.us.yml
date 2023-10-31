@@ -91,7 +91,7 @@ follow_bar:
 # ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇
 #
 rating_reviews:
-  position: 5
+  position: 6
   heading: "Top rated on all available review sites"
   rating_list:
     - alt: "Career Karma"
@@ -134,7 +134,7 @@ why_4geeks:
   sub_heading: ""
 
 badges:
-  position: 8
+  position: 4
   heading: "4Geeks Academy has awards and recognitions that validate its excellence"
 
 who_is_hiring:
@@ -145,11 +145,11 @@ who_is_hiring:
 
 components:
   - name: how-it-works
-    position: 4
+    position: 3
     layout: iconogram
     swipable: True
     heading:
-      text: ""
+      text: "How it works?"
       font_size: ["30px", "30px", "30px", "30px", "30px"]
     sub_heading:
       text: ""
@@ -180,9 +180,9 @@ components:
         "We have been selected as one of the Top Coding Bootcamps globally for 3 years in a row"
         #xl      lg     md     sm    xs
       font_size: ["38px", "36px", "34px", "32px", "30px"]
-  - name: geeksinfo
-    position: 5
-    layout: geeksInfo
+  # - name: geeksinfo
+  #   position: 5
+  #   layout: geeksInfo
 
   - name: some_id
     position: 1
@@ -204,3 +204,56 @@ components:
       color: white
       hover_color: "#white"
       path: "#top"
+
+  - name: geekinfo_2
+    position: 5
+    layout: two_column_right
+    proportions: [6, 6]
+    background: ""
+    image:
+      style: '{ "backgroundSize": "contain" }'
+      src: "/images/landing/group_194.png"
+    section_heading: 
+      text: "Get everything you need to succeed"
+      style: '{ "font-size": "30px" }'
+    heading:
+      text: "Why coding?"
+      font_size: ["40px", "40px", "40px", "40px", "40px"]
+    sub_heading:
+      text: "Learning to code will give you access to:"
+      font_size: ["16px", "16px", "16px", "16px", "16px"]
+    button: 
+      text: "Explore Student Testimonials"
+      color: white
+      hover_color: "white"
+      background: "black"
+      path: "#why_4geeks"
+    content: 
+      text: ""
+      font_size: ["16px"]
+      path: ""
+    bullets:
+      items:
+      - heading: "UNLIMITED MENTORING"
+        text: "Get expert support for all your coding needs. Our mentors are available online or in-person, ready to help you from day one to forever."
+        icon: "circle" #string with icon for example ['check', 'cicle', etc]
+      - heading: "HIGH AVAILABILITY"
+        text: "Never get stuck with a coding problem. Our dedicated instructors will respond within 15 minutes or less."
+        icon: "circle" #string with icon for example ['check', 'cicle', etc]
+      - heading: "1:7 PROFESSOR-STUDENT RATIO"
+        text: "Experience individualized attention with our higher-than-average professor-to-student ratio."
+        icon: "circle" #string with icon for example ['check', 'cicle', etc]
+      - heading: "TAILOR-MADE CAREER SUPPORT"
+        text: "Receive customized advice, guidance, and training tailored to your unique profile and specific job offers."
+        icon: "circle" #string with icon for example ['check', 'cicle', etc]
+
+
+
+
+
+
+
+
+
+
+

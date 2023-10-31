@@ -142,10 +142,10 @@ components:
       src: "/images/badges/switchup-badge-2023.png"
       link: "https://www.switchup.org/bootcamps/4geeks-academy"
     button:
-      text: "Read testimonials"
+      text: "Explore Success Stories"
       color: "white"
       background: "black"
-      path: "https://www.switchup.org/bootcamps/4geeks-academy"
+      path: "#why_4geeks"
     heading:
       text: "We have been named one of the TOP programming bootcamps in the World"
       #             xl      lg      md      sm      xs
@@ -153,6 +153,7 @@ components:
   - name: working_as_software_developers
     position: 6
     proportions: [4, 8]
+    background: "#fbfbfb"
     layout: two_column_left
     image:
       src: "https://storage.googleapis.com/4geeks-academy-website/landing-pictures/testimonials.webp"
