@@ -158,8 +158,8 @@ components:
     position: 9
     layout: two_column_left
     image:
-      src: "https://storage.googleapis.com/4geeks-academy-website/landing-pictures/testimonials.webp"
       shadow: true
+      src: "https://storage.googleapis.com/4geeks-academy-website/landing-pictures/testimonials.webp"
     heading:
       text: "Escúchalo de nuestros alumnos"
       #xl      lg     md     sm    xs
@@ -178,7 +178,6 @@ components:
     position: 9
     layout: divider
     height: ["50px", "50px", "50px", "0px", "0px"]
-  
 
 # why_python:
 #   position: 7
