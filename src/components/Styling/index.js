@@ -188,6 +188,13 @@ const StyledImage = styled.div`
     min-height: ${(props) => props.minHeight_sm};
     width: ${(props) => props.w_sm};
   }
+  @media ${Devices.xxs} {
+    display: ${(props) => props.display_xxs};
+  } 
+  @media ${Devices.tablet} {
+    display: ${(props) => props.display_tablet};
+  }
+  
 `;
 export const Img = React.memo(StyledImage);
 
