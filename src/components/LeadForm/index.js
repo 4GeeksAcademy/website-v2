@@ -37,7 +37,6 @@ const Form = styled.form`
   }
   @media ${Devices.xxs} {
   }
-
   @media ${Devices.xs} {
   }
   @media ${Devices.sm} {
@@ -53,6 +52,10 @@ const Form = styled.form`
   }
   @media ${Devices.lg} {
   }
+<<<<<<< HEAD
+=======
+  
+>>>>>>> 2ab57f5bd34978e35b257d3d49cb88de5f3ecb3f
 `;
 
 const _fields = {
