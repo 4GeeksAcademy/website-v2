@@ -285,6 +285,8 @@ const LeadForm = ({
       );
   });
 
+  const isSessionLocationGDPR = session && session.location && session.location.gdpr_compliant;
+  console.log(isSessionLocationGDPR, session)
   return (
     <Form
       boxShadow={boxShadow}
@@ -478,7 +480,7 @@ const LeadForm = ({
                 );
               })}
 
-            {selectProgram?.length >= 1 && (
+            {selectProgram?.length > 1 && (
               <Div
                 data-cy="dropdown_program_selector"
                 margin_tablet="0 0 0 0"
@@ -500,7 +502,7 @@ const LeadForm = ({
                 />
               </Div>
             )}
-            {selectLocation?.length >= 1 && (
+            {selectLocation?.length > 1 && (
               <Div data-cy="dropdown_location_selector" margin_tablet="0">
                 <SelectRaw
                   style={{
@@ -540,7 +542,7 @@ const LeadForm = ({
               </Button>
             )}
 
-            {/* {session && session.location && session.location.gdpr_compliant && ( */}
+          {session && session.location && session.location.gdpr_compliant && ( 
             <Div position="relative" margin="10px 0 0 0">
               <input
                 name="isGoing"
@@ -571,7 +573,7 @@ const LeadForm = ({
               </Paragraph>
             </Div>
 
-            {/* )} */}
+            )}
             {formStatus.status === "error" && (
               <Alert color="red" margin="0" padding="5px 0 0 0">
                 {formStatus.msg}
@@ -588,14 +590,22 @@ const LeadForm = ({
                   width_lg={widthButton}
                   width_xs="100%"
                   justifyContent="center"
-                  background={Colors.blue}
+                  background={ isSessionLocationGDPR ?
+                    consentValue ? Colors.blue : Colors.darkGray
+                    :
+                    Colors.blue
+                  }
                   //textAlign="center"
                   color={
                     formStatus.status === "loading"
                       ? Colors.darkGray
                       : Colors.white
                   }
-                  disabled={formStatus.status === "loading" ? true : false}
+                  disabled={ isSessionLocationGDPR ?
+                    (consentValue ? (formStatus.status === "loading" ? true : false) : true)
+                    :
+                    (formStatus.status === "loading" ? true : false)
+                  }
                 >
                   {formStatus.status === "loading" ? "Loading..." : sendLabel}
                 </Button>
