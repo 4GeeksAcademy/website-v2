@@ -144,7 +144,8 @@ const Press = (props) => {
                     : Colors.lightYellow2
                 }
                 padding="17px 16px"
-                margin="0 0 27px 0"
+                margin_xxs="0 20px 27px 20px"
+                margin_tablet="0 0 27px 0"
                 boxShadow="0px 0px 5px 0px #0000001A"
               >
                 <GatsbyImage
