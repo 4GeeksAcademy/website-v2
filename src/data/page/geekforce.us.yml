@@ -25,9 +25,9 @@ geekForce:
 
 # Banner of icons
 icons:
-  - icon: "contract-checked"
+  - icon: "contract"
     title: "86% of our students hired"
-  - icon: "job"
+  - icon: "ratio" #"group"
     title: "POST PROGRAM LABOR SUPPORT"
   - icon: "talk"
     title: "PREPARING FOR INTERVIEWS"

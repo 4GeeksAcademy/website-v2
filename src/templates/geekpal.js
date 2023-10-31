@@ -470,10 +470,11 @@ export const query = graphql`
             image {
               childImageSharp {
                 gatsbyImageData(
-                  layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                  layout: FULL_WIDTH # --> CONSTRAINED || FIXED || FULL_WIDTH
                   width: 1000
                   placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                   quality: 100
+                  outputPixelDensities: 2
                 )
               }
             }
@@ -493,8 +494,8 @@ export const query = graphql`
             image {
               childImageSharp {
                 gatsbyImageData(
-                  layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                  width: 800
+                  layout: FULL_WIDTH # --> CONSTRAINED || FIXED || FULL_WIDTH
+                  width: 1000
                   placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                   quality: 100
                 )

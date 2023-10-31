@@ -41,7 +41,7 @@ icons:
 
 list:
   - title: "Unlimited Coding Support"
-    image: "../../../static/images/Group-6611.png"
+    image: "../../../static/images/professional-support.png"
     position: "right"
     sub:
       - title: "EXCLUSIVE CLASSES"
@@ -64,7 +64,7 @@ list:
       color: "black"
 
   - title: "Community Support"
-    image: "../../../static/images/landing/grupo-ventanas.png"
+    image: "../../../static/images/Group-6606.png"
     position: "right"
     sub:
       - title: "4Geeks.com"
