@@ -550,6 +550,8 @@ const Program = ({ data, pageContext, yml }) => {
               style={{ columnGap: "2.25rem", boxSizing: "border-box" }}
               justifyContent="center"
               padding="0px"
+              width="100%"
+              maxWidth="1366px"
             >
               {l.list.map((item, i) => (
                 <Div
