@@ -190,11 +190,10 @@ const StyledImage = styled.div`
   }
   @media ${Devices.xxs} {
     display: ${(props) => props.display_xxs};
-  } 
+  }
   @media ${Devices.tablet} {
     display: ${(props) => props.display_tablet};
   }
-  
 `;
 export const Img = React.memo(StyledImage);
 

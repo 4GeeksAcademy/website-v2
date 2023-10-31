@@ -250,15 +250,13 @@ const LandingHeader = (props) => {
               display_tablet="block"
               zIndex="0"
             >
-              <Circle 
-                color="lightBlue" 
-                width="301px" 
-                height="301px" 
+              <Circle
+                color="lightBlue"
+                width="301px"
+                height="301px"
                 right="-100%"
                 top="-15%"
-                style={{ 
-                  
-                }}
+                style={{}}
               />
               <Icon
                 style={{ marginTop: "150%" }}
@@ -349,9 +347,9 @@ const LandingHeader = (props) => {
               // marginButton_tablet="0 0 30px auto"
               boxShadow="9px 8px 0px 0px rgba(0,0,0,1)"
             />
-            <Div 
-              display="none" 
-              display_tablet="block" 
+            <Div
+              display="none"
+              display_tablet="block"
               margin_lg="5% 0 0 20px"
               // margin_md="40% 0 0 20px"
               margin_tablet="20% 0 0 20px"

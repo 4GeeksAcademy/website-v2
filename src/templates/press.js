@@ -7,7 +7,12 @@ import { SessionContext } from "../session";
 // components
 import News from "../components/News";
 import Icon from "../components/Icon";
-import { Colors, StyledBackgroundSection, Anchor, Img } from "../components/Styling";
+import {
+  Colors,
+  StyledBackgroundSection,
+  Anchor,
+  Img,
+} from "../components/Styling";
 import { GridContainer, Div, Header } from "../components/Sections";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
@@ -18,7 +23,11 @@ const Press = (props) => {
   let position = 0;
   return (
     <Div
-      margin={isCustomBarActive(session) ? "120px auto 75px auto" : "90px auto 75px auto"}
+      margin={
+        isCustomBarActive(session)
+          ? "120px auto 75px auto"
+          : "90px auto 75px auto"
+      }
       flexDirection="column"
       maxWidth="1366px"
       position="relative"
@@ -59,7 +68,6 @@ const Press = (props) => {
           top: "3%",
           zIndex: "0",
         }}
-
       />
       <Img
         src="/images/Group-6594-e.png"
@@ -120,11 +128,21 @@ const Press = (props) => {
       >
         {Array.isArray(content.news) &&
           content.news.slice(0, content.limit).map((l, i) => {
-            i == 0 ? position = 0 : (position == 2 ? position = 0 : position += 1)
+            i == 0
+              ? (position = 0)
+              : position == 2
+              ? (position = 0)
+              : (position += 1);
             return (
               <Div
                 display="column"
-                background={position == 0 ? Colors.white : (position == 1 ? Colors.veryLightBlue : Colors.lightYellow2)}
+                background={
+                  position == 0
+                    ? Colors.white
+                    : position == 1
+                    ? Colors.veryLightBlue
+                    : Colors.lightYellow2
+                }
                 padding="17px 16px"
                 margin="0 0 27px 0"
                 boxShadow="0px 0px 5px 0px #0000001A"
