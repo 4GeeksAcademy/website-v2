@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import { graphql } from "gatsby";
-import Link from "gatsby-link";
+import { graphql, Link } from "gatsby";
 import Layout from "../global/Layout";
 import {
   Grid,
@@ -8,8 +7,8 @@ import {
   GridContainerWithImage,
   GridContainer,
 } from "../components/Sections";
-import { H1, H2, H3, Paragraph } from "../components/Heading";
-import { Colors, Button, StyledBackgroundSection } from "../components/Styling";
+import { H1, H2, H3, Paragraph, H4 } from "../components/Heading";
+import { Colors, Button, StyledBackgroundSection, Img } from "../components/Styling";
 import Badges from "../components/Badges";
 import BaseRender from "./_baseLayout";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
@@ -264,31 +263,76 @@ const SVGImage = () => (
 const Awards = ({ data, pageContext, yml }) => {
   return (
     <>
+
       <Div
-        display="none"
-        position="absolute"
-        width="100%"
-        zIndex="0"
-        display_tablet="flex"
+        padding_xxs="0 20px"
+        padding_tablet="0 40px"
+        padding_md="0 80px"
+        padding_lg="0"
+        margin="100px auto 0 auto"
+        maxWidth="1366px"
+        position="relative"
       >
-        <SVGBubblesLeft />
-        <SVGBubblesRight />
-      </Div>
-      <GridContainer
-        padding_tablet="80px 0"
-        padding="60px 17px 80px 17px"
-        background="rgba(199, 243, 253, 0.5)"
-        margin="60px 0 0 0"
-      >
+        <Img
+          src="/images/Group-6594.png"
+          width="208px"
+          height="35px"
+          style={{
+            position: "absolute",
+            right: "4%",
+            bottom: "0%",
+            zIndex: "0",
+          }}
+          display_xxs="none"
+          display_tablet="flex"
+        />
+        <Img
+          src="/images/slash-light.png"
+          width="44px"
+          height="121px"
+          style={{
+            position: "absolute",
+            right: "14%",
+            top: "10%",
+            zIndex: "0",
+          }}
+          display_xxs="none"
+          display_tablet="flex"
+        /> 
+        <Img
+          src="/images/Vector-light-right.png"
+          width="89px"
+          height="80px"
+          style={{
+            position: "absolute",
+            right: "4%",
+            top: "0%",
+            zIndex: "0",
+          }}
+        />
+        <Img
+          src="/images/Vector-light.png"
+          width="164px"
+          height="222px"
+          style={{
+            position: "absolute",
+            left: "4%",
+            top: "0%",
+            zIndex: "0",
+          }}
+        />
+
         <Div
-          // gridColumn_tablet="1 / 6"
           flexDirection="column"
-          justifyContent_tablet="start"
+          //justifyContent_tablet="start"
           padding_tablet="60px 0"
+          zIndex="1"
+          margin="0 auto"
+          padding_xxs="60px 0px"
         >
           <H1
             type="h1"
-            textAlign_tablet="center"
+            textAlign="center"
             margin="0 0 11px 0"
             color="#606060"
           >
@@ -296,96 +340,116 @@ const Awards = ({ data, pageContext, yml }) => {
           </H1>
           <H2
             type="h2"
-            fontSize="40px"
+            fontFamily="Archivo-Black"
+            fontSize="50px"
             fontSize_tablet="50px"
-            textAlign_tablet="center"
+            textAlign="center"
             lineHeight="60px"
-          >{`${yml.header.title}`}</H2>
+            padding_xxs="0 20px"
+          >
+            {"< " + yml.header.title + " >"}
+          </H2>
           <Paragraph
-            textAlign_tablet="center"
-            padding_tablet="0 28%"
+            fontSize="15px"
+            textAlign="center"
+            padding_xxs="0 20px"
+            padding_tablet="0 10%"
             margin="26px 0"
           >
-            {yml.header.paragraph}{" "}
+            {yml.header.paragraph}
           </Paragraph>
         </Div>
-        <Div
-          display="flex"
-          alignItems="center"
-          justifyContent="center"
-          display_tablet="none"
-          height="auto"
-          width="100%"
-        >
-          <SVGImage />
-        </Div>
-      </GridContainer>
-      <Badges
-        lang={pageContext.lang}
-        background={Colors.lightYellow}
-        padding="60px 0"
-        padding_tablet="68px 0"
-        margin="0 0 58px 0"
-        margin_tablet="0 0 78px 0"
-      />
-      <GridContainer
-        padding="17px"
-        columns="1"
-        rows="1"
-        columns_tablet="12"
-        gridGap_tablet="11px"
-        gridGap="0"
+      </Div>
+      <Div
+        padding_xxs="0 20px"
+        padding_tablet="0 40px"
+        padding_md="0 80px"
+        padding_lg="0"
+        margin="60px auto 0 auto"
+        maxWidth="1366px"
+        gap="36px 0px"
+        flexDirection="row"
+        flexWrap="wrap"
+        justifyContent_xxs="center"
+        justifyContent_tablet="around"
       >
-        <Div gridArea_tablet="1/1/1/13" flexDirection="column">
           {Array.isArray(yml.awards_list) &&
-            yml.awards_list.map((m, i) => {
-              console.log("m", m);
+            yml.awards_list.map((award, i) => {
               return (
                 <Div
                   key={i}
-                  flexDirection="column"
-                  flexDirection_tablet="row"
-                  margin="0 0 75px 0"
+                  flexDirection_xxs="column"
+                  flexDirection_tablet="column"
+                  flexWrap="wrap"
+                  margin="0"
+                  minWidth="180px"
+                  width_xxs="240px"
+                  width_xs="260px"
+                  width_sm="300px"
+                  width_tablet="300px"
+                  width_md="260px"
+                  width_lg="356px"
+                  maxWidth="356px"
+                  boxShadow="0px 3px 7px 0px #0000001A"
+                  borderRadius="3px"
+                  padding_xxs="0 20px"
                 >
                   <GatsbyImage
                     style={{
-                      height: "85px",
+                      height: "173px",
+                      width: "100%",
                       minWidth: "150px",
-                      margin: "0 24px",
                     }}
                     imgStyle={{ objectFit: "contain" }}
                     loading="eager"
-                    alt={m.title}
-                    image={getImage(m.image.childImageSharp.gatsbyImageData)}
+                    alt={award.title}
+                    image={getImage(award.image.childImageSharp.gatsbyImageData)}
                   />
-                  <Div flexDirection="column" width="100%">
+                  <Div
+                    flexDirection="column"
+                    width="100%"
+                    padding_tablet="20px"
+                    padding_xxs="17px 16px"
+                  >
                     <H3
                       textAlign_tablet="left"
-                      margin="49px 0 0 "
-                      margin_tablet="0"
+                      margin="0 0 16px 0"
+                      fontWeight="700"
+                      fontSize="28px"
+                      lineHeight="34px"
+                      padding_xxs="0 20px"
                     >
-                      {m.title}
+                      {award.title}
                     </H3>
-                    <Div
-                      background="#c4c4c4"
-                      height=".5px"
-                      margin="35px 0 25px 0"
-                      width="100%"
-                    />
-                    {m.paragraph.split("\n").map((p, i) => (
+                    {award.paragraph.split("\n").map((p, i) => (
                       <Paragraph
+                        fontSize="13px"
+                        lineHeight="16px"
                         textAlign_tablet="left"
-                        margin="10px 0"
+                        margin="0 0 24px 0"
+                        padding_xxs="0 20px"
                         key={i}
                         dangerouslySetInnerHTML={{ __html: p }}
-                      ></Paragraph>
+                      />
                     ))}
+                    {award.text_link &&
+                      <Link to={award.link}>
+                        <H4
+                          display="flex"
+                          fontWeigth="700"
+                          color={Colors.blue}
+                          padding_xxs="0 20px 20px 20px"
+                        >
+                          {award.text_link}
+                        </H4>
+                      </Link>
+                    }
                   </Div>
+
                 </Div>
               );
             })}
         </Div>
-      </GridContainer>
     </>
   );
 };
@@ -407,15 +471,12 @@ export const query = graphql`
             title
             paragraph
           }
-          badges {
-            paragraph
-          }
           awards_list {
             image {
               childImageSharp {
                 gatsbyImageData(
-                  layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                  width: 500
+                  layout: FULL_WIDTH # --> CONSTRAINED || FIXED || FULL_WIDTH
+                  width: 1000
                   quality: 100
                   placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                   breakpoints: [200, 340, 520, 890]
@@ -424,6 +485,8 @@ export const query = graphql`
             }
             title
             paragraph
+            text_link
+            link
           }
         }
       }

@@ -205,6 +205,7 @@ export const Div = styled.div`
     padding: ${(props) => props.padding_xxs}
     background: ${(props) => props.background_xxs};
     display: ${(props) => props.display_xxs};
+    justify-content ${(props) => props.justifyContent_xxs};
   }
   @media ${Devices.xs} {
     padding: ${(props) => props.padding_xs};
@@ -349,6 +350,7 @@ export const Div = styled.div`
   }
   @media ${Devices.lg} {
     display: ${(props) => props.display_lg};
+    width: ${(props) => props.width_lg};
     justify-content: ${(props) =>
       justifyContentOptions[props.justifyContent_lg]};
     padding: ${(props) => props.padding_lg};
