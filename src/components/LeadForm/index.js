@@ -53,6 +53,13 @@ const Form = styled.form`
   }
   @media ${Devices.lg} {
   }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+  
+>>>>>>> 2ab57f5bd34978e35b257d3d49cb88de5f3ecb3f
+>>>>>>> ef784a90a4a4d58df5d02aeea094142bdfc507b6
 `;
 
 const _fields = {
