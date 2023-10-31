@@ -37,7 +37,6 @@ const Form = styled.form`
   }
   @media ${Devices.xxs} {
   }
-  
   @media ${Devices.xs} {
   }
   @media ${Devices.sm} {
@@ -53,7 +52,10 @@ const Form = styled.form`
   }
   @media ${Devices.lg} {
   }
+<<<<<<< HEAD
+=======
   
+>>>>>>> 2ab57f5bd34978e35b257d3d49cb88de5f3ecb3f
 `;
 
 const _fields = {
@@ -433,7 +435,7 @@ const LeadForm = ({
                   <React.Fragment key={i}>
                     {_field.name !== "phone" && (
                       <Input
-                        style={{margin: "0 0 16px 0"}}
+                        style={{ margin: "0 0 16px 0" }}
                         data-cy={f}
                         id={f}
                         bgColor={inputBgColor || "#FFFFFF"}
@@ -465,7 +467,7 @@ const LeadForm = ({
                 const _field = formData[f];
                 return (
                   <PhoneInput
-                    style={{margin: "0 0 16px 0"}}
+                    style={{ margin: "0 0 16px 0" }}
                     key={i}
                     data-cy="phone"
                     id="phone"
@@ -479,10 +481,7 @@ const LeadForm = ({
               })}
 
             {selectProgram?.length >= 1 && (
-              <Div
-                data-cy="dropdown_program_selector"
-                margin_tablet="0 0 0 0"
-              >
+              <Div data-cy="dropdown_program_selector" margin_tablet="0 0 0 0">
                 <SelectRaw
                   style={{
                     background: "#FFFFFF",
