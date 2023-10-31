@@ -8,7 +8,12 @@ import {
   GridContainer,
 } from "../components/Sections";
 import { H1, H2, H3, Paragraph, H4 } from "../components/Heading";
-import { Colors, Button, StyledBackgroundSection, Img } from "../components/Styling";
+import {
+  Colors,
+  Button,
+  StyledBackgroundSection,
+  Img,
+} from "../components/Styling";
 import Badges from "../components/Badges";
 import BaseRender from "./_baseLayout";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
@@ -263,7 +268,6 @@ const SVGImage = () => (
 const Awards = ({ data, pageContext, yml }) => {
   return (
     <>
-
       <Div
         padding_xxs="0 20px"
         padding_tablet="0 40px"
@@ -298,7 +302,7 @@ const Awards = ({ data, pageContext, yml }) => {
           }}
           display_xxs="none"
           display_tablet="flex"
-        /> 
+        />
         <Img
           src="/images/Vector-light-right.png"
           width="89px"
@@ -330,12 +334,7 @@ const Awards = ({ data, pageContext, yml }) => {
           margin="0 auto"
           padding_xxs="60px 0px"
         >
-          <H1
-            type="h1"
-            textAlign="center"
-            margin="0 0 11px 0"
-            color="#606060"
-          >
+          <H1 type="h1" textAlign="center" margin="0 0 11px 0" color="#606060">
             {yml.seo_title}
           </H1>
           <H2
@@ -373,83 +372,79 @@ const Awards = ({ data, pageContext, yml }) => {
         justifyContent_xxs="center"
         justifyContent_tablet="around"
       >
-          {Array.isArray(yml.awards_list) &&
-            yml.awards_list.map((award, i) => {
-              return (
+        {Array.isArray(yml.awards_list) &&
+          yml.awards_list.map((award, i) => {
+            return (
+              <Div
+                key={i}
+                flexDirection_xxs="column"
+                flexDirection_tablet="column"
+                flexWrap="wrap"
+                margin="0"
+                minWidth="180px"
+                width_xxs="240px"
+                width_xs="280px"
+                width_sm="380px"
+                width_tablet="300px"
+                width_md="260px"
+                width_lg="356px"
+                maxWidth="356px"
+                boxShadow="0px 3px 7px 0px #0000001A"
+                borderRadius="3px"
+                padding_tablet="20px"
+                padding_xxs="17px 16px"
+              >
+                <GatsbyImage
+                  style={{
+                    height: "173px",
+                    width: "100%",
+                    minWidth: "150px",
+                  }}
+                  imgStyle={{ objectFit: "contain" }}
+                  loading="eager"
+                  alt={award.title}
+                  image={getImage(award.image.childImageSharp.gatsbyImageData)}
+                />
                 <Div
-                  key={i}
-                  flexDirection_xxs="column"
-                  flexDirection_tablet="column"
-                  flexWrap="wrap"
-                  margin="0"
-                  minWidth="180px"
-                  width_xxs="240px"
-                  width_xs="260px"
-                  width_sm="300px"
-                  width_tablet="300px"
-                  width_md="260px"
-                  width_lg="356px"
-                  maxWidth="356px"
-                  boxShadow="0px 3px 7px 0px #0000001A"
-                  borderRadius="3px"
-                  padding_xxs="0 20px"
+                  flexDirection="column"
+                  width="100%"
+                  margin_tablet="20px 0 0 0"
                 >
-                  <GatsbyImage
-                    style={{
-                      height: "173px",
-                      width: "100%",
-                      minWidth: "150px",
-                    }}
-                    imgStyle={{ objectFit: "contain" }}
-                    loading="eager"
-                    alt={award.title}
-                    image={getImage(award.image.childImageSharp.gatsbyImageData)}
-                  />
-                  <Div
-                    flexDirection="column"
-                    width="100%"
-                    padding_tablet="20px"
-                    padding_xxs="17px 16px"
+                  <H3
+                    textAlign_tablet="left"
+                    margin="0 0 16px 0"
+                    fontWeight="700"
+                    fontSize="28px"
+                    lineHeight="34px"
                   >
-                    <H3
+                    {award.title}
+                  </H3>
+                  {award.paragraph.split("\n").map((p, i) => (
+                    <Paragraph
+                      fontSize="13px"
+                      lineHeight="16px"
                       textAlign_tablet="left"
-                      margin="0 0 16px 0"
-                      fontWeight="700"
-                      fontSize="28px"
-                      lineHeight="34px"
-                      padding_xxs="0 20px"
-                    >
-                      {award.title}
-                    </H3>
-                    {award.paragraph.split("\n").map((p, i) => (
-                      <Paragraph
-                        fontSize="13px"
-                        lineHeight="16px"
-                        textAlign_tablet="left"
-                        margin="0 0 24px 0"
-                        padding_xxs="0 20px"
-                        key={i}
-                        dangerouslySetInnerHTML={{ __html: p }}
-                      />
-                    ))}
-                    {award.text_link &&
-                      <Link to={award.link}>
-                        <H4
-                          display="flex"
-                          fontWeigth="700"
-                          color={Colors.blue}
-                          padding_xxs="0 20px 20px 20px"
-                        >
-                          {award.text_link}
-                        </H4>
-                      </Link>
-                    }
-                  </Div>
-
+                      margin="0 0 24px 0"
+                      key={i}
+                      dangerouslySetInnerHTML={{ __html: p }}
+                    />
+                  ))}
+                  {award.text_link && (
+                    <Link to={award.link}>
+                      <H4
+                        display="flex"
+                        fontWeigth="700"
+                        color={Colors.blue}
+                      >
+                        {award.text_link}
+                      </H4>
+                    </Link>
+                  )}
                 </Div>
-              );
-            })}
-        </Div>
+              </Div>
+            );
+          })}
+      </Div>
     </>
   );
 };
@@ -477,9 +472,9 @@ export const query = graphql`
                 gatsbyImageData(
                   layout: FULL_WIDTH # --> CONSTRAINED || FIXED || FULL_WIDTH
                   width: 1000
+                  height: 1000
                   quality: 100
                   placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
-                  breakpoints: [200, 340, 520, 890]
                 )
               }
             }
