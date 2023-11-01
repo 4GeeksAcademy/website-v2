@@ -7,6 +7,7 @@ import { SessionContext } from "../session";
 // components
 import News from "../components/News";
 import Icon from "../components/Icon";
+import TestimonialCard from "../components/TestimonialCard";
 import {
   Colors,
   StyledBackgroundSection,
@@ -135,75 +136,32 @@ const Press = (props) => {
               ? (position = 0)
               : (position += 1);
             return (
-              <Div
+              <TestimonialCard
+                key={i}
                 background={
-                  position == 0
-                    ? Colors.white
-                    : position == 1
-                    ? Colors.veryLightBlue
-                    : Colors.lightYellow2
-                }
-                padding="17px 16px"
-                margin_xxs="0 20px 27px 20px"
-                margin_tablet="0 0 27px 0"
-                boxShadow="0px 0px 5px 0px #0000001A"
-                height="fit-content"
-                display="inline-block"
-              >
-                <GatsbyImage
-                  key={i}
-                  style={{
-                    height: "50px",
-                    width: "100%",
-                    minWidth: "60px",
-                    margin: "0 0 12px 0",
-                  }}
-                  imgStyle={{
-                    objectPosition: "left",
-                    width: "150px",
-                    objectFit: "contain",
-                  }}
-                  alt={l.name}
-                  image={getImage(
-                    l.logo != null && l.logo.childImageSharp.gatsbyImageData
-                  )}
-                />
-
-                <H3
-                  type="h3"
-                  textAlign="left"
-                  fontSize="28px"
-                  lineHeight="34px"
-                  margin="12px 0"
-                >
-                  {l.title}
-                </H3>
-                <Paragraph
-                  textAlign="left"
-                  margin="12px 0 0 0"
-                  fontSize="13px"
-                  lineHeight="22px"
-                  letterSpacing="0.05em"
-                  fontWeight="300"
-                >
-                  {l.text}
-                </Paragraph>
-                <Paragraph
-                  style={{ alignItems: "center" }}
-                  margin="12px 0"
-                  display="flex"
-                  fontWeight="700"
-                  letterSpacing="0.05em"
-                  lineHeight="26px"
-                  textAlign="left"
-                  fontSize="13px"
-                  color={Colors.blue}
-                >
-                  <Anchor cursor="pointer" to={l.url}>
-                    {l.textUrl}
-                  </Anchor>
-                </Paragraph>
-              </Div>
+                      position == 0
+                        ? Colors.white
+                        : position == 1
+                        ? Colors.veryLightBlue
+                        : Colors.lightYellow2
+                    }
+                image={l.logo && l.logo}
+                imgStyle={{
+                        objectPosition: "left",
+                        objectFit: "contain",
+                        height: "40px",
+                        width: "150px",
+                        minWidth: "60px",
+                        margin: "0 0 0 0",
+                      }}
+                name={l.title}
+                textUrl={l.textUrl}
+                url={l.url}
+                location={l.location}
+                //short_content={l.text}
+                description={l.text}
+                starRating = {false}
+              />
             );
           })}
       </Div>
