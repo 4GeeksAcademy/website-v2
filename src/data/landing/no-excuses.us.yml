@@ -91,7 +91,7 @@ follow_bar:
 # ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇
 #
 rating_reviews:
-  position: 1
+  position: 5
   heading: "Top rated on all available review sites"
   rating_list:
     - alt: "Career Karma"
@@ -183,3 +183,24 @@ components:
   - name: geeksinfo
     position: 5
     layout: geeksInfo
+
+  - name: some_id
+    position: 1
+    layout: two_column_right
+    image:
+      src: "/images/testimonials/allisa-testimonial.jpg"
+    video: "https://www.youtube.com/watch?v=TCHASxvkhpI"
+    heading:
+      text:
+        "Unlock Your Future: Exclusive Scholarships with Miami Dade College, Clark University, and United Way Miami for South Florida Applicants!"
+        #xl      lg     md     sm    xs
+      font_size: ["40px", "34px", "34px", "25px", "20px"]
+    content:
+      text: "Seize this chance to supercharge your education. Join the academy now and pave the way to your brightest future! Contact our admissions team to learn more and join our coding bootcamp today!"
+      font_size: ["16px"]
+    button:
+      text: "Joint to the Academy"
+      background: black
+      color: white
+      hover_color: "#white"
+      path: "#top"

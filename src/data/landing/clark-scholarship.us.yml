@@ -9,7 +9,9 @@ meta_info:
   keywords: "Scholarships for coding program, coding course, Financial aid Coding Classes, Learn to code with a scholarship"
 
   template: "landing_a" # <--- choose your landing template
-  redirects: [] # <--- URL redirections to avoid 404 errors
+  redirects:
+    [] # <--- URL redirections to avoid 404 errors
+
 
     # Set a particular course or location to the landing page
   # this UTM fields will be also included in the CRM contact
@@ -50,12 +52,12 @@ features:
   #                                         up   left down  right
   styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
   bullets:
-    - Available nationwide  
+    - Available nationwide
     - Fill out the contact form or call 786-416-6640
     - Invest less than $6k and gain access to jobs paying more than 60k a year!
     - Enjoy the full benefits of our bootcamp
     - Rolling admission. Apply now!
-  
+
 short_badges:
   - name: "Premios Tecnologia Siglo XXI"
     url: ""
@@ -68,7 +70,7 @@ short_badges:
   - name: "Switchup"
     url: ""
     image: "../../../static/images/badges/switchup-badge-2023.png"
-    alt: "Best coding bootcamp Switchup 2023"   
+    alt: "Best coding bootcamp Switchup 2023"
   - name: "Florida Department of Education"
     url: ""
     image: "../../../static/images/badges/licensed.png"
@@ -91,7 +93,7 @@ follow_bar:
 # ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇
 #
 rating_reviews:
-  position: 7
+  position: 4
   heading: "Top rated on all available review sites"
   rating_list:
     - alt: "Career Karma"
@@ -117,25 +119,24 @@ program_details:
   heading: "Program details"
   sub_heading: "Real-life projects and exactly what companies are looking for"
 
-
 why_python:
   position: 5
   heading: "Why Python and React.js" # optional or set to white space to hide
   sub_heading: "JavaScript has 26x's more job vacancies than Ruby On Rails. Python has 10x's more job vacancies than Node.js" # optional or set to white space to hide
 
 geeks_vs_others:
-  position: 6
+  position: 3
   heading: "Compare 4Geeks to other bootcamps"
   # sub_heading: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
   total_rows: 5
 
 why_4geeks:
-  position: 7
+  position: 8
   heading: "Why 4Geeks Academy"
   sub_heading: ""
 
 badges:
-  position: 8
+  position: 7
   heading: "4Geeks Academy has awards and recognitions that validate its excellence"
 
 who_is_hiring:
@@ -164,33 +165,72 @@ components:
       style: '{ "textAlign": "center", "width": "60%" }'
     text_link: "#"
     icons:
-    - icon: "touch"
-      title: ""
-      content: 1. Apply and ask for the Clark Scholarship fund.
-    - icon: "receive_mail"
-      title: ""
-      content: 2. Show/provide proof of working permit in the US.
-    - icon: "talk"
-      title: ""
-      content: 3. If you are unemployed, that's good here. But if you are underpaid or need a new job or a new salary, you also are subject to receive the Scholarship
-    - icon: "talk"
-      title: ""
-      content: 4. Complete the program.
-    - icon: "talk"
-      title: ""
-      content: 5. Let's start together to find a job. Your success will open more doors to upcoming students.
+      - icon: "touch"
+        title: ""
+        content: 1. Apply and ask for the Clark Scholarship fund.
+      - icon: "receive_mail"
+        title: ""
+        content: 2. Show/provide proof of working permit in the US.
+      - icon: "talk"
+        title: ""
+        content: 3. If you are unemployed, that's good here. But if you are underpaid or need a new job or a new salary, you also are subject to receive the Scholarship
+      - icon: "talk"
+        title: ""
+        content: 4. Complete the program.
+      - icon: "talk"
+        title: ""
+        content: 5. Let's start together to find a job. Your success will open more doors to upcoming students.
 
   - name: python_y_javascript
-    position: 11
+    position: 1
     layout: two_column_right
-    background: "veryLightBlue2" # Name of the color(from components/Styling/index.js) or color code ex: #C9F9F9
+    swipable: False
+    background: "veryLightBlue2"
     image:
+      style: "{}"
       src: "/images/why-4geeks/python-image.png"
+      link: "#top" # take uses somewhere when they click on the image
+      # shadow: true
+    heading:
+      text: "Python y Javascript"
+    sub_heading:
+      text: "Learn the highest paid and in demand technologies that enable you to create amazing software, apps and websites."
+    button:
+      text: "Join to the academy"
+      color: white
+      hover_color: "white"
+      background: "black"
+      path: "#top"
+    # content:
+    #   text: "text after bullets"
+    #   font_size: ["16px"]
+    #   path: ""
+    bullets:
+      items:
+        - heading: "¡Become a FullStack Developer in just 18 weeks!"
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
+        - heading: "Development of highly valued skills in the professional market."
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
+        - heading: "Get access to job opportunities upon graduation"
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
+
+  - name: some_id
+    position: 7
+    layout: two_column_right
+    image:
+      src: "/images/testimonials/allisa-testimonial.jpg"
+    video: "https://www.youtube.com/watch?v=TCHASxvkhpI"
     heading:
       text:
-        "Learn Python, Javascript, and more"
-        #           xl      lg      md      sm      xs
-      font_size: ["50px", "50px", "50px", "50px", "50px"]
+        "Unlock Your Future: Exclusive Scholarships with Miami Dade College, Clark University, and United Way Miami for South Florida Applicants!"
+        #xl      lg     md     sm    xs
+      font_size: ["40px", "34px", "34px", "25px", "20px"]
     content:
-      text: "Learn the highest paid and in demand technologies that enable you to create amazing software, apps and websites."
+      text: "Seize this chance to supercharge your education. Join the academy now and pave the way to your brightest future! Contact our admissions team to learn more and join our coding bootcamp today!"
       font_size: ["16px"]
+    button:
+      text: "Joint to the Academy"
+      background: black
+      color: white
+      hover_color: "#white"
+      path: "#bottom"

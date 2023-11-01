@@ -253,16 +253,30 @@ components:
       font_size: ["18px", "18px", "18px", "18px", "18px"]
     button:
       text: "Review Conditions"
-      color: null
+      color: white
+      background: black
+      hover: "lightBlue"
       path: "https://storage.googleapis.com/media-breathecode/bc38ffebe9e56f8cd62e10d5d0839f98d7528c4fe7756456630588d2c2048a2a"
     content:
-      text: |
-        <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">1. Enroll in the program.</strong></h2>
-        <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">2. Learn software development skills.</strong></h2>
-        <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">3. Graduate and complete your projects.</strong></h2>
-        <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">4. Land a job.</strong></h2>
-        <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">5. Keep building a career you love.</strong></h2>
+      text: ""
       font_size: ["16px"]
+    bullets:
+      items:
+        - heading: "Enroll in the program."
+          text: ""
+          icon: "circle" #string with icon for example ['check', 'cicle', etc]
+        - heading: "Learn software development skills."
+          text: ""
+          icon: "circle" #string with icon for example ['check', 'cicle', etc]
+        - heading: "Graduate and complete your projects."
+          text: ""
+          icon: "circle" #string with icon for example ['check', 'cicle', etc]
+        - heading: "Land a job."
+          text: ""
+          icon: "circle" #string with icon for example ['check', 'cicle', etc]
+        - heading: "Keep building a career you love."
+          text: ""
+          icon: "circle" #string with icon for example ['check', 'cicle', etc]
 
   - name: testimonials
     position: 9

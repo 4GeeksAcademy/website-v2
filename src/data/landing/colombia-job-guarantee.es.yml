@@ -175,7 +175,7 @@ components:
     background: "veryLightBlue2"
     image:
       style: "{}"
-      src: "/images/landing/metting-img.png"
+      src: "/images/techs/python-js.png"
       link: "#top" # take uses somewhere when they click on the image
       # shadow: true
     heading:
@@ -183,20 +183,45 @@ components:
     sub_heading:
       text: "Nuestro programa está basado en el uso de Python y Javascript. ¿La razón? En el mercado laboral JavaScript tiene 26 veces más vacantes de trabajo que Ruby on Rails y Python te permite acceder a distintas áreas del mundo de la programación. "
     button:
-      text: "Unete a la academia!"
+      text: "¡Únete a la Academia!"
       color: white
       hover_color: "white"
       background: "black"
-      path: "https://4geeksacademy.com/us/coding-campus/coding-bootcamp-colombia"
+      path: "#bottom"
     # content:
     #   text: "text after bullets"
     #   font_size: ["16px"]
     #   path: ""
     bullets:
       items:
-        - heading: "¡Conviertete en un FullStack developer en tan solo 18 semanas!"
-          icon: "check" #string with icon for example ['check', 'cicle', etc]
-        - heading: "Desarrollo de habilidades altamente valoradas en el mercado profesional."
-          icon: "check" #string with icon for example ['check', 'cicle', etc]
-        - heading: "Acceso a oportunidades laborales al momento de la graducación."
-          icon: "check" #string with icon for example ['check', 'cicle', etc]
+        - heading: "La creciente demanda de desarrolladores especializados en JavaScript"
+          text: "Los desarrolladores de JavaScript son altamente demandados en el mercado laboral. Según el U.S. Bureau of Labor Statistics, se proyecta que la necesidad de desarrolladores web experimentará un notable crecimiento del 13% entre los años 2020 y 2030."
+          icon: "circle" #string with icon for example ['check', 'cicle', etc]
+        - heading: "JavaScript y Python una opción ganadora"
+          text: "Tanto JavaScript como Python se caracterizan por tener una curva de aprendizaje relativamente baja, lo que los convierte en lenguajes accesibles tanto para principiantes como para aquellos que desean adentrarse en el mundo de la tecnología."
+          icon: "circle" #string with icon for example ['check', 'cicle', etc]
+        - heading: "Python y la inteligencia Artificial"
+          text: "Python lidera el campo de la ciencia de datos y el aprendizaje automático, siendo utilizado por aproximadamente el 67.8% de los profesionales en este ámbito. Esta alta adopción lo convierte en una opción excepcional para aquellos que desean sumergirse de lleno en el emocionante mundo del desarrollo de inteligencias artificiales."
+          icon: "circle" #string with icon for example ['check', 'cicle', etc]
+
+  - name: two_column_w_video
+    position: 3
+    layout: two_column_left
+    image:
+      src: "/images/testimonials/liliana-review.jpg"
+      shadow: true
+    video: "https://www.youtube.com/watch?v=aZrQNvyniLo"
+    heading:
+      text:
+        "Liliana nos cuenta por qué deberías considerar a 4Geeks como una opción si te encuentras en Colombia."
+        #xl      lg     md     sm    xs
+      font_size: ["40px", "34px", "34px", "25px", "20px"]
+    content:
+      text: "Desde su creación en Colombia, 4Geeks Academy siempre ha tenido como objetivo brindar oportunidades de aprendizaje, facilitar opciones de financiamiento y establecer asociaciones públicas para ofrecer oportunidades laborales. Si tienes alguna pregunta sobre cómo podemos contribuir a tu futuro profesional, no dudes en contactarnos. Estaremos encantados de ayudarte en todo lo posible."
+      font_size: ["16px"]
+    button:
+      text: "Experiencias reales"
+      background: black
+      color: white
+      hover_color: "#white"
+      path: "#why_4geeks"
