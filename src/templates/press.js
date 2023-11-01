@@ -125,6 +125,7 @@ const Press = (props) => {
         padding_lg="0 0 60px 0"
         columnCount_xxs="1"
         columnCount_tablet="3"
+        height="auto"
       >
         {Array.isArray(content.news) &&
           content.news.slice(0, content.limit).map((l, i) => {
@@ -135,7 +136,6 @@ const Press = (props) => {
               : (position += 1);
             return (
               <Div
-                display="column"
                 background={
                   position == 0
                     ? Colors.white
@@ -147,6 +147,8 @@ const Press = (props) => {
                 margin_xxs="0 20px 27px 20px"
                 margin_tablet="0 0 27px 0"
                 boxShadow="0px 0px 5px 0px #0000001A"
+                height="fit-content"
+                display="inline-block"
               >
                 <GatsbyImage
                   key={i}
@@ -166,6 +168,7 @@ const Press = (props) => {
                     l.logo != null && l.logo.childImageSharp.gatsbyImageData
                   )}
                 />
+                
                 <H3
                   type="h3"
                   textAlign="left"
