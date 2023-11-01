@@ -30,7 +30,7 @@ form:
   margin_md: "0 auto 0 -30px"
   heading: "Acelera tu camino hacia el éxito con 4Geeks y contacta con nosotros hoy"
   button_label: Obtener más información
-  redirect: "https://marketing892162.typeform.com/to/Ar4zOahX" #you can redirect to another url or entirely diffrent website
+  redirect: "" #you can redirect to another url or entirely diffrent website
     
   # jumbotron on the top (cannot be commented out)
 header_data:
