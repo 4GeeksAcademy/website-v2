@@ -70,6 +70,8 @@ navbar:
               link_to: "/us/students-and-projects"
             - title: "Testimonials"
               link_to: "/us/testimonials"
+            - title: "Talent"
+              link_to: "https://www.notion.so/4geeksacademy/Talent-Pipeline-4Geeks-Academy-ef91aba17f9c4964bf7972396d190bdf"
   - name: "The Academy"
     link: "/us/the-academy"
     sub_menu:

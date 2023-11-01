@@ -69,6 +69,8 @@ navbar:
               link_to: "/es/alumnos-y-proyectos"
             - title: "Testimonios"
               link_to: "/es/testimonios"
+            - title: "Talento"
+              link_to: "https://www.notion.so/4geeksacademy/Talent-Pipeline-4Geeks-Academy-ef91aba17f9c4964bf7972396d190bdf"
 
   - name: "Academia"
     link: "/es/sobre-la-academia"
