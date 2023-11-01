@@ -147,6 +147,7 @@ components:
     image:
       style: '{ "backgroundSize": "contain" }'
       src: "/images/landing/why-4geeks-academy-preview.png"
+      shadow: true
       link: "https://www.switchup.org/bootcamps/4geeks-academy"
     video: "SixRm6R8rc0"
     heading:
