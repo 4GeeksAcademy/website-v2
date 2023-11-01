@@ -395,7 +395,7 @@ Player.propTypes = {
 };
 
 const Play = styled.button`
-  background: ${(props) => props.background || "rgba(0, 0, 0, 0.7)"};
+  background: ${(props) => props.background || "rgba(228,15,15,0.7)"};
   border-radius: 3px;
   color: ${(props) => props.white};
   font-size: 1em;

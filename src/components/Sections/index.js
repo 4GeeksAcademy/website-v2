@@ -182,6 +182,7 @@ export const Div = styled.div`
   z-index: ${(props) => props.zIndex};
   place-items: ${(props) => props.placeItems};
   font-size: ${(props) => props.fontSize};
+  transform: ${(props) => props.transform};
   &:after {
     content: ${(props) => props.contentAfter};
     display: ${(props) => props.displayAfter || "block"};
@@ -205,6 +206,7 @@ export const Div = styled.div`
     padding: ${(props) => props.padding_xxs}
     background: ${(props) => props.background_xxs};
     display: ${(props) => props.display_xxs};
+    padding: ${(props) => props.padding_xxs};
   }
   @media ${Devices.xs} {
     padding: ${(props) => props.padding_xs};
@@ -614,7 +616,6 @@ export const GridContainer = ({
   overflowChild,
   justifyContent,
   justifyContent_tablet,
-  justifyItemsChild,
   shadow,
   shadow_tablet,
   containerColumns,
@@ -669,6 +670,7 @@ export const GridContainer = ({
   displayChild_md,
   columns_sm,
   justifyContentChild,
+  justifyItemsChild,
 }) => {
   return (
     <Grid
