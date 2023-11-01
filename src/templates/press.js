@@ -117,7 +117,7 @@ const Press = (props) => {
         display="column"
         columns="3"
         columnCount="3"
-        gap="24px"
+        gap_tablet="24px"
         //style={{ gridAutoFlow: "dense" }}
         padding_xxs="40px 20px"
         padding_tablet="0 40px 60px 40px"
@@ -168,7 +168,7 @@ const Press = (props) => {
                     l.logo != null && l.logo.childImageSharp.gatsbyImageData
                   )}
                 />
-                
+
                 <H3
                   type="h3"
                   textAlign="left"
