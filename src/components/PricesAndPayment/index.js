@@ -507,7 +507,7 @@ const PricesAndPayments = (props) => {
       github="/location"
       flexDirection="column"
       padding="50px 17px"
-      padding_xxs = "20px"
+      padding_xxs="20px"
       padding_tablet="70px 40px"
       padding_md="70px 80px"
       padding_lg="70px 0px"
@@ -575,8 +575,13 @@ const PricesAndPayments = (props) => {
               />
             )}
             &nbsp;
-            {course && ( 
-              <Div width_tablet="220px" width_md="320px" width_xs="320px" width_xxs="280px">
+            {course && (
+              <Div
+                width_tablet="220px"
+                width_md="320px"
+                width_xs="320px"
+                width_xxs="280px"
+              >
                 <SelectRaw
                   bgColor={Colors.white}
                   //topLabel="Location"
@@ -827,7 +832,9 @@ const PricesAndPayments = (props) => {
           />
         </Div>
       </GridContainer>
-      <Paragraph margin_xxs="15px 0" margin_tablet="0 0 0 0">{info.get_notified}</Paragraph>
+      <Paragraph margin_xxs="15px 0" margin_tablet="0 0 0 0">
+        {info.get_notified}
+      </Paragraph>
       {/* <Div background={Colors.lightYellow} height="511px" width="100%" style={{position: "absolute", height: "511px"}}>f</Div> */}
     </Div>
   );

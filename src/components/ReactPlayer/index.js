@@ -162,9 +162,10 @@ const Player = ({
 
   const imgStyles = image_thumb?.style ? JSON.parse(image_thumb?.style) : null;
   return (
-    <VideoWrapper {...rest} 
-      style={style} 
-      margin_tablet={margin_tablet} 
+    <VideoWrapper
+      {...rest}
+      style={style}
+      margin_tablet={margin_tablet}
       width={width}
     >
       {showVideo ? (

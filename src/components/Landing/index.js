@@ -1204,7 +1204,10 @@ export const landingSections = {
   },
 
   divider: ({ session, data, pageContext, yml, index }) => {
-    const [h_xl, h_lg, h_md, h_sm, h_xs] = yml.section_heading && yml.section_heading.font_size ? yml.section_heading.font_size : [];
+    const [h_xl, h_lg, h_md, h_sm, h_xs] =
+      yml.section_heading && yml.section_heading.font_size
+        ? yml.section_heading.font_size
+        : [];
     return (
       <Div
         id="divider"
@@ -1215,24 +1218,31 @@ export const landingSections = {
         md={yml.height[2]}
         sm={yml.height[3]}
         xs={yml.height[4]}
-      >{yml.heading && yml.heading !== "" && <H2
-          type="h2"
-          textAlign_tablet="center"
-          lineHeight="38px"
-          lineHeight_tablet="38px"
-          fontSize={h_xs || "30px"}
-          fs_xl={h_xl}
-          fontSize_md={h_md || "30px"}
-          fontSize_sm={h_sm}
-          margin="30px 0 0px 0"
-          style={yml.heading.style ? JSON.parse(heading.heading.style) : null}
-        >
-          {yml.heading.text}
-      </H2>}
-    </Div>);
+      >
+        {yml.heading && yml.heading !== "" && (
+          <H2
+            type="h2"
+            textAlign_tablet="center"
+            lineHeight="38px"
+            lineHeight_tablet="38px"
+            fontSize={h_xs || "30px"}
+            fs_xl={h_xl}
+            fontSize_md={h_md || "30px"}
+            fontSize_sm={h_sm}
+            margin="30px 0 0px 0"
+            style={yml.heading.style ? JSON.parse(heading.heading.style) : null}
+          >
+            {yml.heading.text}
+          </H2>
+        )}
+      </Div>
+    );
   },
   two_column_left: ({ session, data, pageContext, yml, index }) => {
-    const [h_xl, h_lg, h_md, h_sm, h_xs] = yml.section_heading && yml.section_heading.font_size ? yml.section_heading.font_size : [];
+    const [h_xl, h_lg, h_md, h_sm, h_xs] =
+      yml.section_heading && yml.section_heading.font_size
+        ? yml.section_heading.font_size
+        : [];
     return (
       <Div
         id="two_column_left"
@@ -1245,7 +1255,8 @@ export const landingSections = {
         width_md="100%"
         padding_xs="30px 0px"
       >
-        {yml.section_heading && yml.section_heading !== "" && <H2
+        {yml.section_heading && yml.section_heading !== "" && (
+          <H2
             type="h2"
             textAlign_tablet="center"
             lineHeight="38px"
@@ -1255,10 +1266,15 @@ export const landingSections = {
             fontSize_md={h_md || "30px"}
             fontSize_sm={h_sm}
             margin="30px 0 0px 0"
-            style={yml.section_heading.style ? JSON.parse(heading.section_heading.style) : null}
+            style={
+              yml.section_heading.style
+                ? JSON.parse(heading.section_heading.style)
+                : null
+            }
           >
             {yml.section_heading.text}
-        </H2>}
+          </H2>
+        )}
         <TwoColumn
           left={{ image: yml.image, video: yml.video }}
           right={{
@@ -1275,7 +1291,10 @@ export const landingSections = {
     );
   },
   two_column_right: ({ session, data, pageContext, yml, index }) => {
-    const [h_xl, h_lg, h_md, h_sm, h_xs] = yml.section_heading && yml.section_heading.font_size ? yml.section_heading.font_size : [];
+    const [h_xl, h_lg, h_md, h_sm, h_xs] =
+      yml.section_heading && yml.section_heading.font_size
+        ? yml.section_heading.font_size
+        : [];
     return (
       <Div
         id="two_column_right"
@@ -1287,7 +1306,8 @@ export const landingSections = {
         width_md="100%"
         padding_xs="30px 0px"
       >
-        {yml.section_heading && yml.section_heading !== "" && <H2
+        {yml.section_heading && yml.section_heading !== "" && (
+          <H2
             type="h2"
             textAlign_tablet="center"
             lineHeight="38px"
@@ -1297,10 +1317,15 @@ export const landingSections = {
             fontSize_md={h_md || "30px"}
             fontSize_sm={h_sm}
             margin="30px 0 0px 0"
-            style={yml.section_heading.style ? JSON.parse(yml.section_heading.style) : null}
+            style={
+              yml.section_heading.style
+                ? JSON.parse(yml.section_heading.style)
+                : null
+            }
           >
             {yml.section_heading.text}
-        </H2>}
+          </H2>
+        )}
         <TwoColumn
           left={{
             heading: yml.heading,

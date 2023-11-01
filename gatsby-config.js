@@ -62,6 +62,10 @@ module.exports = {
       options: {
         plugins: [
           {
+            resolve: `gatsby-remark-prismjs`,
+            options: {},
+          },
+          {
             resolve: "gatsby-remark-component",
             options: { components: ["button", "call-to-action"] },
           },
