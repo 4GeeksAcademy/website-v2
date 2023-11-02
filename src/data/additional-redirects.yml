@@ -79,7 +79,7 @@ redirects:
     toPath: "/us/trends-and-tech/feelings-learning-coding"
     #redirectInBrowser: true
     isPermanent: true # if permanent google will erase the original url from its results 
-           
+    
   - fromPath: "/us/trends-and-tech/4geeks-academy-history"
     toPath: "/"
     #redirectInBrowser: true

@@ -31,7 +31,11 @@ import { background } from "@storybook/theming";
 
 const Title = ({ id, title, paragraph }) => {
   return (
-    <GridContainer id={id} margin="40px 0 40px 0">
+    <GridContainer
+      id={id}
+      margin={paragraph ? "40px 0 20px 0" : "40px 0 30px 0"}
+      margin_tablet={paragraph ? "80px 0 20px 0" : "80px 0 60px 0"}
+    >
       <H2 type="h2">{title}</H2>
       {paragraph && <Paragraph margin="26px 0">{paragraph}</Paragraph>}
     </GridContainer>
@@ -166,7 +170,6 @@ const Side = ({
       {sub_heading && (
         <Paragraph
           textAlign_tablet="left"
-          padding={heading ? "0" : "20px"}
           margin="0"
           fontSize={sh_xl || "18px"}
           fontSize_sm={sh_sm}
@@ -266,7 +269,6 @@ const Side = ({
         <Paragraph
           textAlign="left"
           textAlign_tablet="left"
-          padding={heading ? "0" : "15px"}
           margin="10px 0"
           opacity="1"
           fontSize={c_xl || "16px"}
@@ -283,7 +285,6 @@ const Side = ({
             key={`${i}-${p}`}
             textAlign="left"
             textAlign_tablet="left"
-            padding={heading ? "0" : "15px"}
             margin="10px 0"
             opacity="1"
             fontSize={c_xl || "16px"}
@@ -1251,45 +1252,98 @@ export const landingSections = {
     );
   },
 
-  divider: ({ session, data, pageContext, yml, index }) => (
-    <Div
-      id="divider"
-      flexDirection="column"
-      key={index}
-      height={yml.height[0]}
-      lg={yml.height[1]}
-      md={yml.height[2]}
-      sm={yml.height[3]}
-      xs={yml.height[4]}
-    />
-  ),
-  two_column_left: ({ session, data, pageContext, yml, index }) => (
-    <Div
-      id="two_column_left"
-      key={index}
-      background={Colors[yml.background] || yml.background}
-      flexDirection="column"
-      // padding="30px 0"
-      // padding_tablet="30px 40px"
-      margin_tablet="0 auto"
-      width_md="100%"
-      padding_xs="30px 0px"
-    >
-      <TwoColumn
-        left={{ image: yml.image, video: yml.video }}
-        right={{
-          heading: yml.heading,
-          sub_heading: yml.sub_heading,
-          bullets: yml.bullets,
-          content: yml.content,
-          button: yml.button,
-        }}
-        proportions={yml.proportions}
-        session={session}
-      />
-    </Div>
-  ),
+  divider: ({ session, data, pageContext, yml, index }) => {
+    const [h_xl, h_lg, h_md, h_sm, h_xs] =
+      yml.section_heading && yml.section_heading.font_size
+        ? yml.section_heading.font_size
+        : [];
+    return (
+      <Div
+        id="divider"
+        flexDirection="column"
+        key={index}
+        height={yml.height[0]}
+        lg={yml.height[1]}
+        md={yml.height[2]}
+        sm={yml.height[3]}
+        xs={yml.height[4]}
+      >
+        {yml.heading && yml.heading !== "" && (
+          <H2
+            type="h2"
+            textAlign_tablet="center"
+            lineHeight="38px"
+            lineHeight_tablet="38px"
+            fontSize={h_xs || "30px"}
+            fs_xl={h_xl}
+            fontSize_md={h_md || "30px"}
+            fontSize_sm={h_sm}
+            margin="30px 0 0px 0"
+            style={yml.heading.style ? JSON.parse(heading.heading.style) : null}
+          >
+            {yml.heading.text}
+          </H2>
+        )}
+      </Div>
+    );
+  },
+  two_column_left: ({ session, data, pageContext, yml, index }) => {
+    const [h_xl, h_lg, h_md, h_sm, h_xs] =
+      yml.section_heading && yml.section_heading.font_size
+        ? yml.section_heading.font_size
+        : [];
+    return (
+      <Div
+        id="two_column_left"
+        key={index}
+        background={Colors[yml.background] || yml.background}
+        flexDirection="column"
+        // padding="30px 0"
+        // padding_tablet="30px 40px"
+        margin_tablet="0 auto"
+        width_md="100%"
+        padding_xs="30px 0px"
+      >
+        {yml.section_heading && yml.section_heading !== "" && (
+          <H2
+            type="h2"
+            textAlign_tablet="center"
+            lineHeight="38px"
+            lineHeight_tablet="38px"
+            fontSize={h_xs || "30px"}
+            fs_xl={h_xl}
+            fontSize_md={h_md || "30px"}
+            fontSize_sm={h_sm}
+            margin="30px 0 0px 0"
+            style={
+              yml.section_heading.style
+                ? JSON.parse(heading.section_heading.style)
+                : null
+            }
+          >
+            {yml.section_heading.text}
+          </H2>
+        )}
+        <TwoColumn
+          left={{ image: yml.image, video: yml.video }}
+          right={{
+            heading: yml.heading,
+            sub_heading: yml.sub_heading,
+            bullets: yml.bullets,
+            content: yml.content,
+            button: yml.button,
+          }}
+          proportions={yml.proportions}
+          session={session}
+        />
+      </Div>
+    );
+  },
   two_column_right: ({ session, data, pageContext, yml, index }) => {
+    const [h_xl, h_lg, h_md, h_sm, h_xs] =
+      yml.section_heading && yml.section_heading.font_size
+        ? yml.section_heading.font_size
+        : [];
     return (
       <Div
         id="two_column_right"
@@ -1301,6 +1355,26 @@ export const landingSections = {
         width_md="100%"
         padding_xs="30px 0px"
       >
+        {yml.section_heading && yml.section_heading !== "" && (
+          <H2
+            type="h2"
+            textAlign_tablet="center"
+            lineHeight="38px"
+            lineHeight_tablet="38px"
+            fontSize={h_xs || "30px"}
+            fs_xl={h_xl}
+            fontSize_md={h_md || "30px"}
+            fontSize_sm={h_sm}
+            margin="30px 0 0px 0"
+            style={
+              yml.section_heading.style
+                ? JSON.parse(yml.section_heading.style)
+                : null
+            }
+          >
+            {yml.section_heading.text}
+          </H2>
+        )}
         <TwoColumn
           left={{
             heading: yml.heading,

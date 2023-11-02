@@ -182,6 +182,7 @@ export const Div = styled.div`
   z-index: ${(props) => props.zIndex};
   place-items: ${(props) => props.placeItems};
   font-size: ${(props) => props.fontSize};
+  transform: ${(props) => props.transform};
   &:after {
     content: ${(props) => props.contentAfter};
     display: ${(props) => props.displayAfter || "block"};
@@ -205,6 +206,7 @@ export const Div = styled.div`
     padding: ${(props) => props.padding_xxs}
     background: ${(props) => props.background_xxs};
     display: ${(props) => props.display_xxs};
+    padding: ${(props) => props.padding_xxs};
   }
   @media ${Devices.xs} {
     padding: ${(props) => props.padding_xs};
@@ -290,6 +292,7 @@ export const Div = styled.div`
     border-top: ${(props) => props.borderTop_tablet};
     top: ${(props) => props.top_tablet};
     right: ${(props) => props.right_tablet};
+    left: ${(props) => props.left_tablet};
     border-right: ${(props) => props.borderRight_tablet};
     border-bottom: ${(props) => props.borderBottom_tablet};
     border-radius: ${(props) => props.borderRadius_tablet};
@@ -354,6 +357,7 @@ export const Div = styled.div`
     padding: ${(props) => props.padding_lg};
     max-width: ${(props) => props.maxWidth_lg};
     min-width: ${(props) => props.minWidth_lg};
+    right: ${(props) => props.right_lg};
     left: ${(props) => props.left_lg};
     margin: ${(props) => props.margin_lg};
     transform: ${(props) => props.transform_lg};
@@ -387,7 +391,6 @@ export const Grid = styled(Div)`
   grid-auto-rows: ${(props) => props.gridAutoRows};
   grid-column: ${(props) => props.gridColumn};
   justify-items: ${(props) => props.justifyItems};
-
   justify-content: ${(props) => props.justifyContent};
   grid-template-areas: ${(props) => props.gridTemplateAreas};
   @media ${Devices.xxs} {
@@ -427,11 +430,12 @@ export const Grid = styled(Div)`
     grid-row: ${(props) => props.gridRow_tablet};
     justify-content: ${(props) => props.justifyContent_tablet};
     grid-template-areas: ${(props) => props.gridTemplateAreas_tablet};
+    maxwidth: ${(props) => props.maxWidth_tablet};
     padding: ${(props) => props.padding_tablet};
   }
   @media ${Devices.md} {
     margin: ${(props) => props.margin_md};
-     padding: ${(props) => props.padding_md};
+    padding: ${(props) => props.padding_md};
     grid-template-columns: ${(props) => props.gridTemplateColumns_md};
     grid-template-rows: ${(props) =>
     props.gridTemplateRows_md
@@ -624,7 +628,6 @@ export const GridContainer = ({
   overflowChild,
   justifyContent,
   justifyContent_tablet,
-  justifyItemsChild,
   shadow,
   shadow_tablet,
   containerColumns,
@@ -679,6 +682,7 @@ export const GridContainer = ({
   displayChild_md,
   columns_sm,
   justifyContentChild,
+  justifyItemsChild,
 }) => {
   return (
     <Grid
@@ -776,6 +780,7 @@ export const GridContainerWithImage = ({
   padding_md,
   padding_lg,
   position,
+  maxWidth_tablet,
   gridColumn_tablet,
   maxWidth,
   alignItems_tablet,
@@ -800,6 +805,7 @@ export const GridContainerWithImage = ({
       padding_tablet={padding_tablet}
       padding_md={padding_md}
       padding_lg={padding_lg}
+      maxWidth_tablet={maxWidth_tablet}
     >
       <Grid
         gridGap={gridGap}
@@ -810,6 +816,7 @@ export const GridContainerWithImage = ({
             : `repeat(${columns_tablet}, ${14 / columns_tablet}fr)`
         }
         gridTemplateColumns={columns}
+        maxWidth_tablet={maxWidth_tablet}
         gridColumn_tablet={
           gridColumn_tablet
             ? gridColumn_tablet
