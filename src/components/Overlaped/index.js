@@ -55,22 +55,22 @@ const Overlaped = ({
           gridTemplateColumns_tablet="1fr repeat(14,1fr) 1fr"
           gridGap="0px"
         >
-          <Div 
-            gridColumn_tablet="1 / 9" 
-            gridColumn_md="1 / 14" 
+          <Div
+            gridColumn_tablet="1 / 9"
+            gridColumn_md="1 / 14"
             gridColumn_lg="1 / 14"
           >
-          {image?.src ?
-            <Img src={image?.src} width="33.3em" height="533px" />
-            :
-            <StyledBackgroundSection
-              width_tablet="33.3em"
-              height_tablet="533px"
-              image={image}
-              bgSize="cover"
-              alt="geekforce image"
-            />
-          }
+            {image?.src ?
+              <Img src={image?.src} width="33.3em" height="533px" />
+              :
+              <StyledBackgroundSection
+                width_tablet="33.3em"
+                height_tablet="533px"
+                image={image}
+                bgSize="cover"
+                alt="geekforce image"
+              />
+            }
           </Div>
 
           <Div
@@ -195,7 +195,7 @@ const Overlaped = ({
             height_xxs="450px"
             image={image}
             //bgSize={`contain`}
-            alt="geekforce image"/>
+            alt="geekforce image" />
         }
         <Img
           src="/images/landing/vector-stroke2.png"
@@ -249,14 +249,17 @@ const Overlaped = ({
             </Paragraph>
           ) : null}
           {button?.text && (
-            <Button
-              width="100%"
-              background={button.color}
-              color={Colors.white}
-              margin="20px 0 0 0"
+            <Link
+              to={button.link}
             >
-              {button.text}
-            </Button>
+              <Button
+                background={Colors[button.color]}
+                color={Colors.white}
+                margin="20px 0 0 0"
+              >
+                {button.text}
+              </Button>
+            </Link>
           )}
         </Div>
       </Div>

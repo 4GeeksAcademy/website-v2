@@ -24,6 +24,7 @@ import RelatedPosts from "../components/RelatedPosts";
 import Icon from "../components/Icon";
 import Overlaped from "../components/Overlaped";
 import Loc from "../components/Loc"
+import ScholarshipProjects from "../components/ScholarshipProjects";
 import { TwoColumn } from "../components/Landing";
 
 const Program = ({ data, pageContext, yml }) => {
@@ -228,13 +229,13 @@ const Program = ({ data, pageContext, yml }) => {
         title={yml.prices.heading}
         paragraph={yml.prices.sub_heading}
       />
-      <AlumniProjects
-        title={yml.alumni.heading}
-        paragraph={yml.alumni.sub_heading}
-        lang={data.allAlumniProjectsYaml.edges}
-        limit={2}
+      <ScholarshipProjects
+        content={data.allScholarshipProjectsYaml.edges[0].node}
+        lang={pageContext.lang}
       />
+
       <OurPartners images={hiring.partners.images} marquee/>
+      
       <Loc lang={pageContext.lang} allLocationYaml={data.allLocationYaml} />
     </>
   );
@@ -477,6 +478,65 @@ export const query = graphql`
             geeks_vs_other
             pricing
             alumni
+          }
+        }
+      }
+    }
+    allScholarshipProjectsYaml(filter: { fields: { lang: { eq: $lang } } }) {
+      edges {
+        node {
+          title
+          description
+          project_name
+          project_details
+          total_cost
+          geeks_benefited
+          institutions
+          press
+          see_project
+          projects {
+            name
+            image {
+              alt
+              src {
+                childImageSharp {
+                  gatsbyImageData(
+                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                    width: 700
+                    quality: 100
+                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                    breakpoints: [200, 340, 520, 890]
+                  )
+                }
+              }
+            }
+            description
+            details {
+              cost
+              geeks_benefited
+            }
+            institutions {
+              name
+              logo {
+                childImageSharp {
+                  gatsbyImageData(
+                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                    width: 700
+                    quality: 100
+                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                    breakpoints: [200, 340, 520, 890]
+                  )
+                }
+              }
+            }
+            press {
+              name
+              link
+            }
+            pdf
+          }
+          fields {
+            lang
           }
         }
       }
