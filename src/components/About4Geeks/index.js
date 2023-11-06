@@ -5,7 +5,7 @@ import { H2, H4, Paragraph } from "../Heading";
 import { Link } from "gatsby";
 import Icon from "../Icon";
 
-const About4Geeks = ({ id, lang }) => {
+const About4Geeks = ({ id, lang}) => {
   const about = lang[0]?.node || lang;
   return (
     <GridContainerWithImage
@@ -27,7 +27,7 @@ const About4Geeks = ({ id, lang }) => {
         gridColumn_tablet="1 / 6"
         alignItems_tablet="flex-start"
       >
-        <H2 textAlign="left" margin="0 0 20px 0">
+        <H2 textAlign="left" lineHeight="36px" margin="0 0 20px 0">
           {about.heading}
         </H2>
         {about.sub_heading.split("\n").map((m, i) => (
@@ -50,7 +50,7 @@ const About4Geeks = ({ id, lang }) => {
                 padding="10px 0"
                 display="flex"
                 alignItems="center"
-                style={{ borderBottom: "1px solid #EBEBEB" }}
+                //style={{ borderBottom: "1px solid #EBEBEB" }}
               >
                 <Icon
                   icon="check"
@@ -108,35 +108,11 @@ const About4Geeks = ({ id, lang }) => {
         height="468px"
         gridColumn_tablet="7 / 14"
       >
-        <Div
-          style={{
-            position: "absolute",
-            background: "#00A0DA",
-            width: "101%",
-            height: "216px",
-            top: "-10px",
-            left: "-10px",
-            borderRadius: "3px",
-            zIndex: -1,
-          }}
-        ></Div>
-        <Div
-          style={{
-            position: "absolute",
-            background: "#FFB718",
-            width: "50%",
-            height: "216px",
-            bottom: "-10px",
-            right: "-10px",
-            borderRadius: "3px",
-            zIndex: -1,
-          }}
-        ></Div>
         <StyledBackgroundSection
           className={`image`}
           height={`468px`}
           image={about.image.childImageSharp.gatsbyImageData}
-          bgSize={`cover`}
+          bgSize={`contain`}
           alt="Cnn Logo"
           borderRadius={`0 0 0 3px`}
         />

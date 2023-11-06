@@ -25,6 +25,8 @@ import OurPartners from "../components/OurPartners";
 import ChooseYourProgram from "../components/ChooseYourProgram";
 import Testimonials from "../components/Testimonials";
 import { isDevelopment, isTestMode } from "../components/NavbarDesktop";
+import { TwoColumn } from "../components/Landing";
+//import TwoColumn from "../components/TwoColumn/index.js";
 
 const SVGBubblesLeft = () => (
   <svg
@@ -76,10 +78,9 @@ const Home = (props) => {
 
     if (session?.language && window && window.location.pathname === "/")
       navigate(
-        `${
-          props.pageContext.translations[
-            session.language === "en" ? "us" : session.language
-          ]
+        `${props.pageContext.translations[
+        session.language === "en" ? "us" : session.language
+        ]
         }`
       );
 
@@ -105,6 +106,8 @@ const Home = (props) => {
     (session?.location?.custom_bar.active && isTestMode) ||
     (session?.location?.custom_bar.active && !isDevelopment());
 
+
+  console.log(yml)
   return (
     <>
       <Div
@@ -142,9 +145,9 @@ const Home = (props) => {
           <Div
             position="absolute"
             zIndex="5"
-            right_tablet={yml.header_data.video ? "40%" : "5%"}
-            right="5%"
-            top_tablet={yml.header_data.video ? "1%" : "55%"}
+            left_tablet={yml.header_data.video ? "40%" : "50%"}
+            left="50%"
+            top_tablet={yml.header_data.video ? "1%" : "25%"}
             top="90px"
             width_tablet="160px"
             height_tablet="152px"
@@ -172,22 +175,25 @@ const Home = (props) => {
                 type="h1"
                 textAlign="left"
                 textShadow="none"
-                fontSize="13px"
+                fontSize="15px"
+                lineHeight="18px"
                 color="#606060"
               >
                 {city} {yml.header_data.tagline}
               </H1>
               <H2
                 type="h2"
-                textAlign="left"
+                textAlign_tablet="left"
+                textAlign_xxs="left"
                 fontSize="40px"
                 fontSize_tablet="50px"
                 margin="20px 0 0 0"
-                lineHeight_xs="38px"
+                lineHeight_xxs="40px"
                 lineHeight_tablet="60px"
                 width_tablet="100%"
                 width_xs="80%"
               >{`${yml.header_data.title}`}</H2>
+
               <Div display="block" margin="20px 0">
                 {yml.header_data.bullets.map((bullet) => (
                   <Div alignItems="center" margin="0 0 15px 0">
@@ -201,6 +207,7 @@ const Home = (props) => {
                       padding="0 20% 0 0"
                       color={Colors.black}
                       fontSize="16px"
+                      lineHeight="19px"
                     >
                       {bullet}{" "}
                     </Paragraph>
@@ -220,7 +227,7 @@ const Home = (props) => {
                 >
                   {yml.header_data.join_button_text}
                 </Button>
-                {/* <Button
+                <Button
                   variant="outline"
                   justifyContent="center"
                   // width="200px"
@@ -230,7 +237,7 @@ const Home = (props) => {
                   textColor={Colors.blue}
                 >
                   {yml.header_data.free_button_text}
-                </Button> */}
+                </Button>
               </Div>
             </Div>
           </Div>
@@ -298,7 +305,7 @@ const Home = (props) => {
               </Div>
             ) : (
               <StyledBackgroundSection
-                height_tablet="623px"
+                height_tablet="533px"
                 display_tablet="block"
                 display="none"
                 height="390px"
@@ -314,8 +321,8 @@ const Home = (props) => {
           </Div>
         </GridContainerWithImage>
         <Div
-          margin="10px auto"
-          margin_tablet="auto"
+          margin="90px auto"
+          margin_tablet="90px auto 0 auto"
           width="90%"
           className="badge-slider hideOverflowX__"
         >
@@ -330,15 +337,6 @@ const Home = (props) => {
         </Div>
       </Div>
       <Testimonials lang={data.allTestimonialsYaml.edges} />
-
-      <Badges
-        lang={pageContext.lang}
-        paragraph={yml.badges.paragraph}
-        margin="10px 0 65px 0"
-        paddingText="0 5% 0.5em 5%"
-        paddingText_tablet="0 12% 1.6em 12%"
-        maxWidth="1366px"
-      />
 
       <GridContainer
         margin="44px 0"
@@ -371,7 +369,19 @@ const Home = (props) => {
         paragraph={yml.choose_program.paragraph}
       />
 
-      <OurPartners
+      {/* TWO COLUMN CREAR EN EL YML*/}
+      <TwoColumn 
+        right={{ image: yml.two_columns?.image}}
+        left={{
+          heading: yml.two_columns?.heading,
+          sub_heading: yml.two_columns?.sub_heading,
+          button: yml.two_columns?.button,
+        }}
+        proportions={yml.two_columns?.proportions}
+        session={session}
+      />
+
+      < OurPartners
         images={hiring.partners.images}
         marquee
         title={hiring.partners.tagline}
@@ -438,6 +448,28 @@ export const query = graphql`
           why_4geeks {
             heading
             sub_heading
+          }
+          two_columns {
+            proportions
+            image {
+              style
+              src
+              shadow
+            }
+            heading {
+              text
+              font_size
+            }
+            sub_heading {
+              text
+              font_size
+            }
+            button {
+              text
+              color
+              background
+              path
+            }
           }
           join_geeks {
             heading
@@ -751,15 +783,6 @@ export const query = graphql`
               gatsbyImageData(
                 layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
                 width: 1200
-                placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
-              )
-            }
-          }
-          image_mobile {
-            childImageSharp {
-              gatsbyImageData(
-                layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                width: 800
                 placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
               )
             }

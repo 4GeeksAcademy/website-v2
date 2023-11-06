@@ -16,13 +16,13 @@ header_data:
     - Lifetime Coding Mentorship, endless Career Support, and a tech-driven community of developers.
     - 'Job Guarantee: get a job within the next 6 months upon graduation or money back, conditions apply.'
     - Learn everywhere, all the time, you choose the methodology.
-  join_button_text: JOIN A PROGRAM
-  free_button_text: FREE TRIAL
+  join_button_text: CHOOSE A PROGRAM
+  free_button_text: TAKE FREE TRIAL AT NO COST
   #If it doesn't have a video it will show the image
   #It must be a video from videoaks
   # video: "https://www.videoask.com/fm984j5nz"
   video: ""
-  image: "../../../static/images/bg/new-main-home-bg.png"
+  image: "../../../static/images/bg/more-new-main-home-bg.png"
 
 news:
   heading: "Read about this coding bootcamp in the news..."
@@ -34,10 +34,30 @@ button:
 badges:
   paragraph: "Benefit from an expert-designed coding education. Join a recognized academy with prestigious awards and prizes, and kickstart your coding career!"
 
+
 ## CHOOSE YOUR PROGRAM /components/ChooseYourProgram
 choose_program:
   title: Choose your program
   paragraph: Find the path that’s right for you
+
+## TWO COLUMNS
+two_columns:
+  proportions: [6, 6]
+  image:
+    style: '{ "backgroundSize": "cover" }'
+    src: "/images/landing/feliz-empresario-laptop.png"
+    shadow: true  
+  heading:
+    text: "Finance your future"
+    font_size: ["30px", "30px", "30px", "30px", "30px"]
+  sub_heading:
+    text: "We’re all about making our high-quality education affordable to everyone. That's why we offer multiple options to help you fund our coding bootcamps stress-free. Whether it's an ISA, scholarship, payment plan or Job Guarantee we're here to guide you every step of the way."
+    font_size: ["18px", "18px", "18px", "18px", "18px"]
+  button:
+    text: "See all financing options"
+    color: "white"
+    background: "black"
+    path: "#"
 
 ## 4GEEKS VS OTHERS SECTION
 geeks_vs_others:
