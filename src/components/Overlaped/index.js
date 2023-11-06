@@ -26,6 +26,7 @@ const Overlaped = ({
             button {
               text
               color
+              link
             }
             background
             image {
@@ -44,7 +45,7 @@ const Overlaped = ({
         display_tablet="flex"
         position="relative"
         justifyContent="center"
-        padding_tablet="0 40px"
+        padding_tablet={content.length > 200 ? "0px 40px 30px 40px" : "0 40px"}
         padding_md="0 80px"
         padding_lg="0"
         width="100%"
@@ -162,13 +163,17 @@ const Overlaped = ({
           ) : null}
 
           {button?.text && (
-            <Button
-              background={Colors[button.color]}
-              color={Colors.white}
-              margin="20px 0 0 0"
+            <Link
+              to={button.link}
             >
-              {button.text}
-            </Button>
+              <Button
+                background={Colors[button.color]}
+                color={Colors.white}
+                margin="20px 0 0 0"
+              >
+                {button.text}
+              </Button>
+            </Link>
           )}
         </Div>
       </Div>
@@ -181,7 +186,7 @@ const Overlaped = ({
         position="relative"
         flexDirection="Column"
         margin_sm="0 auto"
-        padding_sm="40px 20px 45% 20px"
+        padding_sm={content.length > 200 ? "40px 20px 45% 20px" : "40px 20px 20% 20px"}
         margin_xxs="40px 20px 65% 20px" // Modify the bottom margin if the floating box of the overlapped element overlaps the other component.
         margin_xs="40px 20px 60% 20px"
       >
@@ -223,8 +228,12 @@ const Overlaped = ({
           border="3px solid black"
           flexWrap="wrap"
           position="absolute"
-          top="50%"
+          top={content.length > 200 ? "40%" : "50%"}
           zIndex="1"
+          width_xxs="51%"
+          width_xs="59%"
+          width_sm="66%"
+          width_tablet="100%"
           padding="20px"
           margin="10px"
           background={Colors.white}

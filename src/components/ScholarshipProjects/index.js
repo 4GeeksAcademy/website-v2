@@ -29,6 +29,10 @@ const ScholarshipProjects = ({ content, maxWidth }) => {
       position="relative"
       maxWidth={maxWidth || "1366px"}
       margin="auto"
+      padding_xxs="20px"
+      padding_tablet="70px 40px"
+      padding_md="70px 80px"
+      padding_lg="70px 0px"
     >
       <H2 margin="0 0 10px 0">{content.title}</H2>
       <Paragraph margin="0 0 25px 0">{content.description}</Paragraph>
@@ -44,7 +48,7 @@ const ScholarshipProjects = ({ content, maxWidth }) => {
         top="50%"
         left="5%"
         left_md="5%"
-        left_tablet="5%"
+        left_tablet="0%"
         width="12px"
         height="20px"
         width_tablet="21px"
@@ -65,7 +69,7 @@ const ScholarshipProjects = ({ content, maxWidth }) => {
         top="50%"
         right="5%"
         right_md="5%"
-        right_tablet="5%"
+        right_tablet="0%"
         width="12px"
         height="20px"
         width_tablet="21px"

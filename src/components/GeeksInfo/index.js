@@ -48,7 +48,6 @@ const GeeksInfo = ({ lang }) => {
       }
     }
   `);
-  console.log(data)
   let content = data.allGeeksInfoYaml.edges.find(
     ({ node }) => node.fields.lang === lang
   );
@@ -58,7 +57,8 @@ const GeeksInfo = ({ lang }) => {
     <>
       <H2
         padding="15px 0 20px 0"
-        margin_tablet="15px auto 30px auto"
+        margin_tablet="30px auto 15px auto"
+        margin_xxs="15px auto 30px auto"
         width_tablet="100%"
       >
         {content.heading}

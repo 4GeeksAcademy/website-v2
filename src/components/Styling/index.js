@@ -532,6 +532,8 @@ export const Button = styled(SmartButton)`
   @media ${Devices.lg} {
     font-size: ${(props) => props.fontSize_lg};
     width: ${(props) => props.width_lg};
+    left: ${(props) => props.left_lg};
+    right: ${(props) => props.right_lg};
   }
   @media ${Devices.xl} {
   }

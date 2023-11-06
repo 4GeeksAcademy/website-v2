@@ -544,7 +544,9 @@ export const Header = ({
   fontFamily_title,
   fontSize_paragraph,
   fontWeight_paragraph,
-  fontWeight_title
+  fontWeight_title,
+  gridTemplateColumns_tablet,
+  maxWidth,
 }) => {
   return (
     <Grid
@@ -556,10 +558,12 @@ export const Header = ({
       margin_tablet={margin_tablet}
       padding={padding || "60px 17px"}
       padding_tablet={padding_tablet || "60px 0"}
+      gridTemplateColumns_tablet={gridTemplateColumns_tablet}
+      maxWidth={maxWidth}
     >
       <Grid
         gridTemplateColumns_tablet={`repeat(12, 1fr)`}
-        gridArea_tablet="1/2/1/14"
+        gridArea_tablet="1/1/1/15"
       >
         {/* hacer cambios aqui ... remover svg en mobile */}
         <Div

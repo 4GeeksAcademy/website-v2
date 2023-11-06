@@ -32,6 +32,7 @@ const Program = ({ data, pageContext, yml }) => {
   const courseDetails = data.allCourseYaml.edges[0].node;
   const [open, setOpen] = React.useState(false);
   const hiring = data.allPartnerYaml.edges[0].node;
+  const landingHiriging = yml.partners
 
   const course_type = "full_stack";
   const program_type = yml.meta_info.slug.includes("full-time")
@@ -63,7 +64,7 @@ const Program = ({ data, pageContext, yml }) => {
   return (
     <>
       <Header
-        margin={isCustomBarActive(session) ? "120px 0 0 0" : ""}
+        margin={isCustomBarActive(session) ? "120px auto 0 auto" : "0 auto"}
         paragraphMargin="26px 0"
         paragraphMargin_Tablet="26px 22%"
         paddingParagraph_tablet="0 40px"
@@ -72,10 +73,12 @@ const Program = ({ data, pageContext, yml }) => {
         paragraph={yml.header.paragraph}
         padding_tablet="72px 0 40px 0"
         position="relative"
-        fontSize_title="60px"
+        fontSize_title="40px"
         fontSizeTitle_tablet="60px"
         fontFamily_title="Archivo-Black"
-        fontSize_paragraph="24px"
+        fontSize_paragraph="24px" 
+        gridTemplateColumns_tablet="repeat(14, 1fr)"
+        maxWidth="1366px"
       >
         <Img
           src="/images/landing/group-3.png"
@@ -83,11 +86,13 @@ const Program = ({ data, pageContext, yml }) => {
           height="286px"
           style={{
             position: "absolute",
-            left: "20%",
-            top: "15%",
+            left: "15%",
+            top: "13%",
             zIndex: "1",
           }}
-        /> 
+          display_xxs="none"
+          display_tablet="flex"
+        />
         <Div
           flexDirection_tablet="row"
           flexDirection="column"
@@ -201,7 +206,7 @@ const Program = ({ data, pageContext, yml }) => {
         proportions={yml.two_columns?.proportions}
         session={session}
       />
-      
+
       <GridContainer
         padding_tablet="0"
         margin_tablet="90px 0 62px 0"
@@ -234,8 +239,28 @@ const Program = ({ data, pageContext, yml }) => {
         lang={pageContext.lang}
       />
 
-      <OurPartners images={hiring.partners.images} marquee/>
-      
+      {/*<OurPartners images={hiring.partners.images} marquee/>*/}
+
+      <OurPartners
+        images={hiring.partners.images}
+        margin="0"
+        padding="50px 0"
+        marquee
+        paddingFeatured="0 0 50px 0"
+        featuredImages={landingHiriging?.featured}
+        showFeatured
+        withoutLine
+        title={
+          landingHiriging ? landingHiriging.heading : hiring.partners.tagline
+        }
+        paragraph={
+          landingHiriging
+            ? landingHiriging.sub_heading
+            : hiring.partners.sub_heading
+        }
+      />
+
+
       <Loc lang={pageContext.lang} allLocationYaml={data.allLocationYaml} />
     </>
   );
@@ -537,45 +562,6 @@ export const query = graphql`
           }
           fields {
             lang
-          }
-        }
-      }
-    }
-    allAlumniProjectsYaml(filter: { fields: { lang: { eq: $lang } } }) {
-      edges {
-        node {
-          header {
-            tagline
-            sub_heading
-          }
-          projects {
-            project_name
-            slug
-            project_image {
-              childImageSharp {
-                gatsbyImageData(
-                  layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                  width: 800
-                  placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
-                )
-              }
-            }
-            project_content
-            project_video
-            live_link
-            github_repo
-            alumni {
-              first_name
-              last_name
-              job_title
-              github
-              linkedin
-              twitter
-            }
-          }
-          button_section {
-            button_text
-            button_link
           }
         }
       }
