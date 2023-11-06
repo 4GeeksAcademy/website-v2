@@ -1,9 +1,9 @@
 meta_info:
-  slug: bootcamp-datascience-santiago-fb # <--- URL 4geeksacademy.com/us/landing/example
+  slug: bootcamp-full-stack-santiago-fb # <--- URL 4geeksacademy.com/us/landing/example
 
   # This will show on social media when shared
   title: "Clases de Data Science en Santiago de Chile, aprende ciencia de datos en 15 semanas y consigue trabajo como científico de datos."
-  description: "El Bootcamp de Data Science y Machine Learning más premiado en Santiago, Chile. Con 4Geeks, te convertirás en experto."
+  description: "El Bootcamp de Full-Satack más premiado en Santiago, Chile. Con 4Geeks, te convertirás en experto en 18 semanas"
   image: "/images/bg/main-bg.jpg"
   keywords: "Clase de programación, Clase de python, clase de javascript, Clase de informática, Coding Bootcamp, 4Geeks Academy"
 
@@ -13,7 +13,7 @@ meta_info:
 
   # Set a particular course or location to the landing page
   # this UTM fields will be also included in the CRM contact
-  utm_course: ["datascience-ml"]
+  utm_course: ["full-stack"]
   utm_location: ["santiago-chile"]
   automation: soft # comma separated, "soft" is the default value
   tag: request_more_info # comma separated, "request_more_info" is the default value
@@ -40,8 +40,8 @@ apply_schollarship: # form that is displayed at the end of the landing
 # jumbotron on the top (cannot be commented out)
 header_data:
   background: "#FFF1D1"
-  tagline: Clases de Machine Learning y Data Science
-  sub_heading: "Domina Machine Learning y Data Science desde cero y accede a oportunidades como Junior Data Scientist"
+  tagline: Full-stack software developer bootcamp
+  sub_heading: "Desde cero hasta conseguir tu primer trabajo como programador, aprende todo lo necesario, recibe soporte de por vida y consigue un empleo después de 18 semanas de estudio."
   badge: "../../../static/images/badges/Course-Report-Badge-2023.png"
   image_filter: brightness(0.3)
 
@@ -54,7 +54,7 @@ features:
     - No se requiere experiencia previa
     - Horario part-time 
     - Mentorías y career support de por vida
-    - Un Data Scientist Jr puede ganar hasta $1.200.000 CLP al mes
+    - El salario promedio de un Full-stack Developer en Chile suele estar entre $10,000,000 CLP al año.
 
 follow_bar:
   position: "top" # top, bottom, hidden
@@ -178,14 +178,15 @@ components:
     image:
       src: "/images/why-4geeks/python-image.png"
     heading:
+      # style: '{"padding": "0 20px", "line-height": "50px"}'
       text:
-        "Python y Machine Learning"
+        "JavaScript y Python"
         #           xl      lg      md      sm      xs
       font_size: ["50px", "50px", "50px", "50px", "50px"]
     content:
       style: '{"padding": "0 20px"}'
-      text: "Al inscribite te sumergirás en el mundo de la programación comenzando con Python, el lenguaje de programación más demandado a nivel mundial, y sus librerías especializadas en big data como pandas, numpy y matplotlib.<br> No solo adquirirás habilidades técnicas, sino que también obtendrás experiencia en la gestión de proyectos desde la perspectiva del usuario final y desarrollarás tu capacidad para el pensamiento lógico. Prepárate para una experiencia enriquecedora que te preparará para enfrentar desafíos del mundo real en el campo de la programación y el análisis de datos."
-      font_size: ["16px"]
+      text: "El Bootcamp abarca desde los fundamentos de programación en JavaScript hasta la creación de aplicaciones dinámicas con React.js. También incluye conceptos avanzados como Python, Flask, bases de datos y la publicación de sitios web. Prepárate para desarrollar proyectos web de forma efectiva y aplicar tus conocimientos en entornos profesionales, donde se valora altamente a profesionales bien preparados en esta área."
+      font_size: ["18px"]
 
   - name: some_id
     position: 4
@@ -202,7 +203,6 @@ components:
         #xl      lg     md     sm    xs
       font_size: ["40px", "34px", "34px", "25px", "20px"]
     content:
-      style: '{"padding": "0 20px"}'
       text: "Descubre la inspiradora historia de Joshua Bravo, quien pasó de ser un asistente de cocina a programador gracias a su decisión de formar parte de 4Geeks Academy. Su experiencia es un testimonio vivo de cómo la dedicación y el aprendizaje en este bootcamp lo llevaron a convertirse en un profesional altamente capacitado."
       font_size: ["16px"]
     button:
