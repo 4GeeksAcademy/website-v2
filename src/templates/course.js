@@ -186,6 +186,8 @@ const Program = ({ data, pageContext, yml }) => {
         lang={pageContext.lang}
         course={program_type}
       />
+
+      {/* OVERLAPED CREAR EN EL YML*/}
       <Overlaped
         heading={yml.overlaped?.heading}
         content={yml.overlaped?.paragraph}
@@ -193,9 +195,11 @@ const Program = ({ data, pageContext, yml }) => {
         image={yml.overlaped?.image}
       />
 
+      {/* GEEKSINFO IS A TWOCOLUMN WITH TITLE */}
       <GeeksInfo lang={pageContext.lang} />
 
-      <TwoColumn
+      {/* TWO COLUMN CREAR EN EL YML*/}
+      <TwoColumn 
         left={{ image: yml.two_columns?.image, video: yml.two_columns?.video }}
         right={{
           heading: yml.two_columns?.heading,
@@ -225,6 +229,7 @@ const Program = ({ data, pageContext, yml }) => {
       <GridContainer padding_tablet="0" margin_tablet="0 0 62px 0">
         <Div height="1px" background="#EBEBEB"></Div>
       </GridContainer>
+
       <PricesAndPayment
         background={`linear-gradient(to bottom, ${Colors.white} 50%, ${Colors.lightYellow2} 50%)`}
         type={pageContext.slug}
@@ -235,6 +240,7 @@ const Program = ({ data, pageContext, yml }) => {
         title={yml.prices.heading}
         paragraph={yml.prices.sub_heading}
       />
+
       <ScholarshipProjects
         content={data.allScholarshipProjectsYaml.edges[0].node}
         lang={pageContext.lang}
