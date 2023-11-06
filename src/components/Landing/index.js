@@ -28,6 +28,7 @@ import { smartRedirecting, transferQuerystrings } from "../../utils/utils.js";
 import CardsCarousel from "../CardsCarousel";
 import Overlaped from "../Overlaped";
 import TwoColumn from "../TwoColumn/index.js";
+import {SingleColumn} from "../TwoColumn/index.js"
 import { background } from "@storybook/theming";
 
 const Title = ({ id, title, paragraph }) => {

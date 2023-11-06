@@ -9,6 +9,7 @@ import { Button, Colors, Img } from "../Styling";
 const Side = ({
   video,
   image,
+  header,
   heading,
   sub_heading,
   content,
@@ -80,6 +81,27 @@ const Side = ({
       flexDirection="column"
       padding_tablet={padding_tablet || "10px 0px 0px 0px"}
     >
+      {header && (
+        <Div
+          margin="0 0 30px 0"
+          justifyContent="center"
+          justifyContent_md="start"
+        >
+          {Array.isArray(header) &&
+            header.map((item, index) => {
+              return (
+                <RoundImage
+                  key={index}
+                  url={item.image}
+                  bsize="contain"
+                  height="20px"
+                  width="130px"
+                  position="left"
+                />
+              );
+            })}
+        </Div>
+      )}
       {heading && (
         <H2
           type="h2"
@@ -261,8 +283,8 @@ const TwoColumn = ({ left, right, proportions, session }) => {
   return (
     <Div
       flexDirection="column"
-      gap={left.gap || right.gap || "0px"}
-      gap_tablet={left.gap_tablet || right.gap_tablet || "20px"}
+      gap={left?.gap || right?.gap || "0px"}
+      gap_tablet={left?.gap_tablet || right?.gap_tablet || "20px"}
       flexDirection_tablet="row"
       m_sm="0px auto 100px auto"
       margin="auto"
@@ -274,23 +296,23 @@ const TwoColumn = ({ left, right, proportions, session }) => {
       maxWidth_md="1366px"
     >
       <Div
-        justifyContent={left.video && "center"}
+        justifyContent={left?.video && "center"}
         flexDirection="column"
         size_tablet={left_size || 6}
         size="12"
         padding_xs="0"
-        padding_md={right.image?.shadow ? "0 20px 0 0 " : "0px"}
+        padding_md={right?.image?.shadow ? "0 20px 0 0 " : "0px"}
         // maxHeight="300px"
         textAlign="center"
       >
         <Side session={session} {...left} />
       </Div>
       <Div
-        justifyContent={right.video && "center"}
+        justifyContent={right?.video && "center"}
         flexDirection="column"
         size_tablet={right_size || 6}
         padding_xs="0"
-        padding_md={left.image?.shadow ? "0 0 0 20px" : "0px"}
+        padding_md={left?.image?.shadow ? "0 0 0 20px" : "0px"}
         size="12"
         textAlign="center"
       >
