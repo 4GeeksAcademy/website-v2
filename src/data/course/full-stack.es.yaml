@@ -64,6 +64,16 @@ course_instructors:
       github: ""
       linkedin: "https://www.linkedin.com/"
 
+overlaped:
+  heading: "Python y Javascript"
+  paragraph: "Nuestros programa está basado en el uso de Phyton y Javascript. La razón?En el mercado laboral JavaScript tiene 26 veces más vacantes de trabajo que Ruby on Rails. Python tiene 10 veces más trabajos que node.js. Otras herramientas que también aprenderás a usar en nuestro programa: son GitHub, CSS3, HTML5, Flask, etc."
+  button:
+    text: "Aplicar"
+    color: "blue"  
+    link: "/"
+  image:
+    src: "/images/landing/tres-personas.png"  
+
 badges:
   paragraph: "4Geeks Academy es el lugar idóneo para <a href='/es/curso-de-programacion-desde-cero'>aprender a programar desde cero</a>. Estamos avalados y autorizados por el Departamento de Educación de Florida y hemos sido reconocidos como el mejor de Miami, según SwitchUp y de los 10 mejores cursos de programación, según Newsweek. En España, hemos recibido el Premio Excelencia Educativa durante dos años consecutivos. Y a nivel global formamos parte del top 35 de cursos de programación en el mundo."
 

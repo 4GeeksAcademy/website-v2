@@ -16,6 +16,7 @@ const Overlaped = ({
   background,
   image,
 }) => {
+  
   const data = useStaticQuery(graphql`
     {
       allOverlapedYaml {
@@ -36,8 +37,7 @@ const Overlaped = ({
         }
       }
     }
-  `);
-
+  `); console.log(heading.length)
   return (
     <Div maxWidth_tablet="1366px" margin_tablet="50px auto">
       <Div
@@ -45,7 +45,7 @@ const Overlaped = ({
         display_tablet="flex"
         position="relative"
         justifyContent="center"
-        padding_tablet={content.length > 200 ? "0px 40px 30px 40px" : "0 40px"}
+        padding_tablet={content?.length > 200 ? "0px 40px 30px 40px" : "0 40px"}
         padding_md="0 80px"
         padding_lg="0"
         width="100%"
@@ -179,12 +179,10 @@ const Overlaped = ({
         display_tablet="none"
         position="relative"
         flexDirection="Column"
-        margin_sm="0 auto"
-        padding_sm={
-          content.length > 200 ? "40px 20px 45% 20px" : "40px 20px 20% 20px"
-        }
-        margin_xxs="40px 20px 65% 20px" // Modify the bottom margin if the floating box of the overlapped element overlaps the other component.
-        margin_xs="40px 20px 60% 20px"
+        //margin_sm="0 auto"
+        //padding_xxs={ heading?.length > 4 ? "40px 20px 65% 20px" : "40px 20px 30% 20px" }
+        margin_xxs={ heading?.length > 20 ? "40px 20px 65% 20px" : "40px 20px 45% 20px" } // Modify the bottom margin if the floating box of the overlapped element overlaps the other component.
+        margin_sm={ heading?.length > 20 ? "40px 20px 45% 20px" : "40px 20px 30% 20px" }
       >
         {image?.src ? (
           <Img src={image?.src} width="33.3em" height="533px" />
@@ -225,7 +223,7 @@ const Overlaped = ({
           border="3px solid black"
           flexWrap="wrap"
           position="absolute"
-          top={content.length > 200 ? "40%" : "50%"}
+          top={heading?.length > 4 ? "40%" : "50%"}
           zIndex="1"
           width_xxs="51%"
           width_xs="59%"
