@@ -73,8 +73,8 @@ const GeekPal = (props) => {
             right: "-150px",
             top: "-100px",
           }}
-        // display_xs="none"
-        // display_tablet="flex"
+          // display_xs="none"
+          // display_tablet="flex"
         />
         <Img
           src="/images/vector-stroke-light.png"
@@ -248,7 +248,7 @@ const GeekPal = (props) => {
           padding_tablet="50px 40px"
           padding_md="50px 80px"
           padding_lg="50px 0"
-        //className="badge-slider hideOverflowX__"
+          //className="badge-slider hideOverflowX__"
         >
           {Array.isArray(content.icons) &&
             content.icons?.map((item, index) => {
@@ -269,7 +269,7 @@ const GeekPal = (props) => {
         content.list.map((m, i) => {
           return (
             <>
-            {i === 1 ? (
+              {i === 1 ? (
                 <Overlaped
                   heading={m?.title}
                   content={m?.text}
@@ -400,14 +400,11 @@ const GeekPal = (props) => {
                             top_tablet="8%"
                           />
                         </>
-                      ) : i === 2 && (
-                        <>
-                          
-                        </>
-                      )
-                      }
+                      ) : (
+                        i === 2 && <></>
+                      )}
                       <StyledBackgroundSection
-                        height_lg={i===0 ?"600px" : "600px"}
+                        height_lg={i === 0 ? "600px" : "600px"}
                         height_xxs="200px"
                         height_xs="300px"
                         height_tablet="350px"
@@ -561,4 +558,3 @@ export const query = graphql`
   }
 `;
 export default BaseRender(GeekPal);
-

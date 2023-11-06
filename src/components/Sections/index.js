@@ -219,7 +219,7 @@ export const Div = styled.div`
     margin: ${(props) => props.margin_xs};
     display: ${(props) => props.display_xs};
     justify-content: ${(props) =>
-    justifyContentOptions[props.justifyContent_xs]};
+      justifyContentOptions[props.justifyContent_xs]};
     order: ${(props) => props.order_xs};
     border: ${(props) => props.border_xs};
     border-top: ${(props) => props.borderTop_xs};
@@ -234,7 +234,7 @@ export const Div = styled.div`
   @media ${Devices.sm} {
     padding: ${(props) => props.padding_sm};
     justify-content: ${(props) =>
-    justifyContentOptions[props.justifyContent_sm]};
+      justifyContentOptions[props.justifyContent_sm]};
     height: ${(props) => props.height_sm};
     position: ${(props) => props.position_sm};
     margin: ${(props) => props.margin_sm};
@@ -253,16 +253,16 @@ export const Div = styled.div`
   }
   @media ${Devices.tablet} {
     flex: ${(props) =>
-    props.flex_tablet || props.size_tablet
-      ? `0 0 ${(props.size_tablet / 12) * 100}%`
-      : null};
+      props.flex_tablet || props.size_tablet
+        ? `0 0 ${(props.size_tablet / 12) * 100}%`
+        : null};
     flex-flow: ${(props) => props.flexFlow_tablet};
     max-width: ${(props) =>
-    props.size_tablet ? `${(props.size_tablet / 12) * 100}%` : null};
+      props.size_tablet ? `${(props.size_tablet / 12) * 100}%` : null};
     max-width: ${(props) =>
-    props.maxWidth_tablet
-      ? props.maxWidth_tablet
-      : props.size_tablet
+      props.maxWidth_tablet
+        ? props.maxWidth_tablet
+        : props.size_tablet
         ? `${(props.size_tablet / 12) * 100}%`
         : null};
     align-self: ${(props) => props.alignSelf_tablet};
@@ -286,7 +286,7 @@ export const Div = styled.div`
     height: ${(props) => props.height_tablet};
     flex: ${(props) => props.flex_tablet};
     flex-shrink: ${(props) =>
-    props.flexShrink_tablet ? props.flexShrink_tablet : 1};
+      props.flexShrink_tablet ? props.flexShrink_tablet : 1};
     flex-wrap: ${(props) => props.flexWrap_tablet};
     border: ${(props) => props.border_tablet};
     border-top: ${(props) => props.borderTop_tablet};
@@ -304,7 +304,7 @@ export const Div = styled.div`
     grid-row: ${(props) => props.gridRow_tablet};
     justify-self: ${(props) => props.justifySelf_tablet};
     justify-content: ${(props) =>
-    justifyContentOptions[props.justifyContent_tablet]};
+      justifyContentOptions[props.justifyContent_tablet]};
     z-index: ${(props) => props.zIndex_tablet};
     top: ${(props) => props.top_tablet};
     bottom: ${(props) => props.bottom_tablet};
@@ -316,11 +316,11 @@ export const Div = styled.div`
   }
   @media ${Devices.md} {
     flex: ${(props) =>
-    props.size_md ? `0 0 ${(props.size_md / 12) * 100}%` : null};
+      props.size_md ? `0 0 ${(props.size_md / 12) * 100}%` : null};
     max-width: ${(props) =>
-    props.maxWidth_md
-      ? props.maxWidth_md
-      : props.size_md
+      props.maxWidth_md
+        ? props.maxWidth_md
+        : props.size_md
         ? `${(props.size_md / 12) * 100}%`
         : null};
     min-width: ${(props) => props.minWidth_md};
@@ -330,7 +330,7 @@ export const Div = styled.div`
     gap: ${(props) => (props) => props.gap_md};
     flex-wrap: ${(props) => props.flexWrap_md};
     justify-content: ${(props) =>
-    justifyContentOptions[props.justifyContent_md]};
+      justifyContentOptions[props.justifyContent_md]};
     text-align: ${(props) => props.textAlign_md};
     align-items: ${(props) => props.alignItems_md};
     margin: ${(props) => props.margin_md};
@@ -353,7 +353,7 @@ export const Div = styled.div`
   @media ${Devices.lg} {
     display: ${(props) => props.display_lg};
     justify-content: ${(props) =>
-    justifyContentOptions[props.justifyContent_lg]};
+      justifyContentOptions[props.justifyContent_lg]};
     padding: ${(props) => props.padding_lg};
     max-width: ${(props) => props.maxWidth_lg};
     min-width: ${(props) => props.minWidth_lg};
@@ -396,19 +396,19 @@ export const Grid = styled(Div)`
   @media ${Devices.xxs} {
     grid-gap: ${(props) => props.gridGap_xxs};
     grid-template-columns: ${(props) =>
-    props.columns_xxs ? `repeat(${props.columns_xxs}, 1fr)` : null};
+      props.columns_xxs ? `repeat(${props.columns_xxs}, 1fr)` : null};
     padding: ${(props) => props.padding_xxs};
   }
   @media ${Devices.xs} {
     grid-template-columns: ${(props) =>
-    props.columns_xs ? `repeat(${props.columns_xs}, 1fr)` : null};
+      props.columns_xs ? `repeat(${props.columns_xs}, 1fr)` : null};
     display: ${(props) => props.display_xs || "grid"};
   }
   @media ${Devices.sm} {
     grid-template-columns: ${(props) =>
-    props.gridTemplateColumns_sm
-      ? `repeat(${props.gridTemplateColumns_sm}, 1fr)`
-      : null};
+      props.gridTemplateColumns_sm
+        ? `repeat(${props.gridTemplateColumns_sm}, 1fr)`
+        : null};
     display: ${(props) => props.display_sm || "grid"};
   }
   @media ${Devices.tablet} {
@@ -417,13 +417,13 @@ export const Grid = styled(Div)`
     display: ${(props) => props.display_tablet || "grid"};
     width: ${(props) => props.width_tablet};
     grid-template-columns: ${(props) =>
-    props.gridTemplateColumns_tablet
-      ? `${props.gridTemplateColumns_tablet}`
-      : "2fr repeat(12, 1fr) 2fr"};
+      props.gridTemplateColumns_tablet
+        ? `${props.gridTemplateColumns_tablet}`
+        : "2fr repeat(12, 1fr) 2fr"};
     grid-template-rows: ${(props) =>
-    props.gridTemplateRows_tablet
-      ? `repeat(${props.gridTemplateRows_tablet})`
-      : null};
+      props.gridTemplateRows_tablet
+        ? `repeat(${props.gridTemplateRows_tablet})`
+        : null};
     grid-gap: ${(props) => props.gridGap_tablet};
     grid-auto-rows: ${(props) => props.gridAutoRows_tablet};
     grid-column: ${(props) => props.gridColumn_tablet};
@@ -438,9 +438,9 @@ export const Grid = styled(Div)`
     padding: ${(props) => props.padding_md};
     grid-template-columns: ${(props) => props.gridTemplateColumns_md};
     grid-template-rows: ${(props) =>
-    props.gridTemplateRows_md
-      ? `repeat(${props.gridTemplateRows_md})`
-      : null};
+      props.gridTemplateRows_md
+        ? `repeat(${props.gridTemplateRows_md})`
+        : null};
     grid-gap: ${(props) => props.gridGap_md};
     grid-column: ${(props) => props.gridColumn_md};
     display: ${(props) => props.display_md || "grid"};
@@ -470,28 +470,28 @@ export const Old_Grid = styled.div`
   margin: ${(props) => props.margin};
   @media ${Devices.xxs} {
     grid-template-columns: ${(props) =>
-    props.columns_xxs ? `repeat(${props.columns_xxs}, 1fr)` : null};
+      props.columns_xxs ? `repeat(${props.columns_xxs}, 1fr)` : null};
   }
   @media ${Devices.xs} {
     grid-template-columns: ${(props) =>
-    props.columns_xs ? `repeat(${props.columns_xs}, 1fr)` : null};
+      props.columns_xs ? `repeat(${props.columns_xs}, 1fr)` : null};
   }
   @media ${Devices.sm} {
     grid-template-columns: ${(props) =>
-    props.columns_sm ? `repeat(${props.columns_sm}, 1fr)` : null};
+      props.columns_sm ? `repeat(${props.columns_sm}, 1fr)` : null};
   }
   @media ${Devices.tablet} {
     grid-template-columns: ${(props) =>
-    props.columns_tablet ? `repeat(${props.columns_tablet}, 1fr)` : null};
+      props.columns_tablet ? `repeat(${props.columns_tablet}, 1fr)` : null};
     grid-template-rows: ${(props) =>
-    props.rows_tablet ? `repeat(${props.rows_tablet}, 5vw)` : null};
+      props.rows_tablet ? `repeat(${props.rows_tablet}, 5vw)` : null};
     padding: ${(props) => props.padding_tablet};
   }
   @media ${Devices.md} {
     grid-template-columns: ${(props) =>
-    props.columns_md ? `repeat(${props.columns_md})` : null};
+      props.columns_md ? `repeat(${props.columns_md})` : null};
     grid-template-rows: ${(props) =>
-    props.rows_md ? `repeat(${props.rows_md})` : null};
+      props.rows_md ? `repeat(${props.rows_md})` : null};
     grid-gap: ${(props) => props.gridGap_md};
     height: ${(props) => props.height_md};
     padding: ${(props) => props.padding_md};
@@ -500,16 +500,16 @@ export const Old_Grid = styled.div`
   }
   @media ${Devices.lg} {
     grid-template-columns: ${(props) =>
-    props.columns_lg ? `repeat(${props.columns_lg}, 1fr)` : null};
+      props.columns_lg ? `repeat(${props.columns_lg}, 1fr)` : null};
     padding: ${(props) => props.padding_lg};
   }
   @media ${Devices.xl} {
     grid-template-columns: ${(props) =>
-    props.columns_xl ? `repeat(${props.columns_xl}, 1fr)` : null};
+      props.columns_xl ? `repeat(${props.columns_xl}, 1fr)` : null};
   }
   @media ${Devices.xxl} {
     grid-template-columns: ${(props) =>
-    props.columns_xxl ? `repeat(${props.columns_xxl}, 1fr)` : null};
+      props.columns_xxl ? `repeat(${props.columns_xxl}, 1fr)` : null};
   }
 `;
 
@@ -741,8 +741,9 @@ export const GridContainer = ({
         gridTemplateRows={gridTemplateRows}
         gridTemplateRows_tablet={gridTemplateRows_tablet}
         gridTemplateColumns_sm={columns_sm}
-        gridTemplateColumns_tablet={`repeat(${columns_tablet}, ${12 / columns_tablet
-          }fr)`}
+        gridTemplateColumns_tablet={`repeat(${columns_tablet}, ${
+          12 / columns_tablet
+        }fr)`}
         padding={paddingChild}
         padding_tablet={padding_tabletChild}
         gridTemplateColumns={`${columns}, 1fr`}
@@ -752,8 +753,8 @@ export const GridContainer = ({
           gridColumn_tablet
             ? gridColumn_tablet
             : fluid
-              ? "1 / span 14"
-              : "2 / span 12"
+            ? "1 / span 14"
+            : "2 / span 12"
         }
         gridTemplateAreas={gridTemplateAreas}
         gridTemplateAreas_tablet={gridTemplateAreas_tablet}
@@ -825,8 +826,8 @@ export const GridContainerWithImage = ({
           gridColumn_tablet
             ? gridColumn_tablet
             : imageSide == "left"
-              ? "1 / span 14"
-              : "2 / span 14"
+            ? "1 / span 14"
+            : "2 / span 14"
         }
         alignItems_tablet={alignItems_tablet}
         alignItems_md={alignItems_md}

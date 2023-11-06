@@ -61,9 +61,9 @@ const Overlaped = ({
             gridColumn_md="1 / 14"
             gridColumn_lg="1 / 14"
           >
-            {image?.src ?
+            {image?.src ? (
               <Img src={image?.src} width="33.3em" height="533px" />
-              :
+            ) : (
               <StyledBackgroundSection
                 width_tablet="33.3em"
                 height_tablet="533px"
@@ -71,7 +71,7 @@ const Overlaped = ({
                 bgSize="cover"
                 alt="geekforce image"
               />
-            }
+            )}
           </Div>
 
           <Div
@@ -143,11 +143,7 @@ const Overlaped = ({
           background={Colors.white}
           boxShadow="20px 15px 0px 0px rgba(0,0,0,1)"
         >
-          <H2
-            textAlign="start"
-            lineHeight_tablet="36px"
-            margin="0 0 12px 0"
-          >
+          <H2 textAlign="start" lineHeight_tablet="36px" margin="0 0 12px 0">
             {heading}
           </H2>
           {content && /<\/?[a-z0-9]+>/g.test(content) ? (
@@ -163,9 +159,7 @@ const Overlaped = ({
           ) : null}
 
           {button?.text && (
-            <Link
-              to={button.link}
-            >
+            <Link to={button.link}>
               <Button
                 background={Colors[button.color]}
                 color={Colors.white}
@@ -186,13 +180,15 @@ const Overlaped = ({
         position="relative"
         flexDirection="Column"
         margin_sm="0 auto"
-        padding_sm={content.length > 200 ? "40px 20px 45% 20px" : "40px 20px 20% 20px"}
+        padding_sm={
+          content.length > 200 ? "40px 20px 45% 20px" : "40px 20px 20% 20px"
+        }
         margin_xxs="40px 20px 65% 20px" // Modify the bottom margin if the floating box of the overlapped element overlaps the other component.
         margin_xs="40px 20px 60% 20px"
       >
-        {image?.src ?
+        {image?.src ? (
           <Img src={image?.src} width="33.3em" height="533px" />
-          :
+        ) : (
           <StyledBackgroundSection
             width_xxs="280px"
             width_xs="335px"
@@ -200,8 +196,9 @@ const Overlaped = ({
             height_xxs="450px"
             image={image}
             //bgSize={`contain`}
-            alt="geekforce image" />
-        }
+            alt="geekforce image"
+          />
+        )}
         <Img
           src="/images/landing/vector-stroke2.png"
           width="106px"
@@ -239,11 +236,7 @@ const Overlaped = ({
           background={Colors.white}
           boxShadow="20px 15px 0px 0px rgba(0,0,0,1)"
         >
-          <H2
-            textAlign="start"
-            lineHeight_xxs="36px"
-            margin="0 0 12px 0"
-          >
+          <H2 textAlign="start" lineHeight_xxs="36px" margin="0 0 12px 0">
             {heading}
           </H2>
           {content && /<\/?[a-z0-9]+>/g.test(content) ? (
@@ -258,9 +251,7 @@ const Overlaped = ({
             </Paragraph>
           ) : null}
           {button?.text && (
-            <Link
-              to={button.link}
-            >
+            <Link to={button.link}>
               <Button
                 background={Colors[button.color]}
                 color={Colors.white}

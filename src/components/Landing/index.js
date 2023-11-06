@@ -1,7 +1,14 @@
 import React from "react";
 import { GridContainerWithImage, Div, GridContainer } from "../Sections";
 import { H3, H2, H5, H4, Paragraph } from "../Heading";
-import { Colors, Img, Button, StyledBackgroundSection, Link, RoundImage } from "../Styling";
+import {
+  Colors,
+  Img,
+  Button,
+  StyledBackgroundSection,
+  Link,
+  RoundImage,
+} from "../Styling";
 import Badges from "../Badges";
 import News from "../News";
 import { navigate } from "gatsby";
@@ -28,6 +35,7 @@ import { smartRedirecting, transferQuerystrings } from "../../utils/utils.js";
 import CardsCarousel from "../CardsCarousel";
 import Overlaped from "../Overlaped";
 import { background } from "@storybook/theming";
+//import TwoColumn from "../TwoColumn/index.js";
 
 const Title = ({ id, title, paragraph }) => {
   return (
@@ -78,37 +86,40 @@ const Side = ({
           ? imgStyles.height
           : [imgStyles.height]
         : ["100%"];
-    return (<>
-  
-      {image.src ? <Img
-        src={image.src}
-        onClick={() => {
-          if (image.link) {
-            if (image.link.indexOf("http") > -1) window.open(image.link);
-            else navigate(image.link);
-          }
-        }}
-        style={imgStyles}
-        alt="4Geeks Academy Section"
-        margin="0px"
-        height={img_h_xl}
-        width={imgStyles ? imgStyles.width || "100%" : "100%"}
-        h_sm={img_h_sm || "250px"}
-        backgroundSize={image.shadow ? "cover" : "contain"}
-        //backgroundPosition="center right"
-        //border={image.shadow && "3px solid black"}
-        boxShadow={image.shadow && "20px 15px 0px 0px rgba(0,0,0,1)"}
-      /> :
-      <StyledBackgroundSection
-        className="image"
-        height="412px"
-        image={image}
-        bgSize="contain"
-        alt="Cnn Logo"
-        borderRadius="0 0 0 3px"
-        style={{ backgroundSize: "contain" }}
-      />}
-    </>
+    return (
+      <>
+        {image.src ? (
+          <Img
+            src={image.src}
+            onClick={() => {
+              if (image.link) {
+                if (image.link.indexOf("http") > -1) window.open(image.link);
+                else navigate(image.link);
+              }
+            }}
+            style={imgStyles}
+            alt="4Geeks Academy Section"
+            margin="0px"
+            height={img_h_xl}
+            width={imgStyles ? imgStyles.width || "100%" : "100%"}
+            h_sm={img_h_sm || "250px"}
+            backgroundSize={image.shadow ? "cover" : "contain"}
+            //backgroundPosition="center right"
+            //border={image.shadow && "3px solid black"}
+            boxShadow={image.shadow && "20px 15px 0px 0px rgba(0,0,0,1)"}
+          />
+        ) : (
+          <StyledBackgroundSection
+            className="image"
+            height="412px"
+            image={image}
+            bgSize="contain"
+            alt="Cnn Logo"
+            borderRadius="0 0 0 3px"
+            style={{ backgroundSize: "contain" }}
+          />
+        )}
+      </>
     );
   }
 
@@ -129,7 +140,7 @@ const Side = ({
       flexDirection="column"
       padding_tablet={padding_tablet || "10px 0px 0px 0px"}
     >
-      {header &&
+      {header && (
         <Div
           margin="0 0 30px 0"
           justifyContent="center"
@@ -148,9 +159,8 @@ const Side = ({
                 />
               );
             })}
-
         </Div>
-      }
+      )}
       {heading && (
         <H2
           type="h2"
@@ -322,7 +332,7 @@ const Side = ({
         </Button>
       )}
 
-      {paragraph &&
+      {paragraph && (
         <Paragraph
           textAlign="left"
           textAlign_tablet="left"
@@ -334,7 +344,8 @@ const Side = ({
           fonSize_md={c_md}
           fontSize_xs={c_xs}
           dangerouslySetInnerHTML={{ __html: paragraph }}
-        />}
+        />
+      )}
     </Div>
   );
 };
@@ -456,7 +467,7 @@ export const MultiColumns = ({
           fontSize_xs={sh_xs}
           fontHeight="30px"
           style={sub_heading.style ? JSON.parse(sub_heading.style) : null}
-        // style={{textAlign:'center'}}
+          // style={{textAlign:'center'}}
         >
           {sub_heading.text}
         </Paragraph>
@@ -664,8 +675,8 @@ export const landingSections = {
           location
             ? location
             : session &&
-            session.location &&
-            session.location.breathecode_location_slug
+              session.location &&
+              session.location.breathecode_location_slug
         }
         lang={pageContext.lang}
         filter={
@@ -678,7 +689,7 @@ export const landingSections = {
   about4Geeks: ({ session, data, pageContext, yml, index }) => {
     let dataYml =
       data.allLandingYaml.edges.length !== 0 &&
-        data.allLandingYaml.edges[0].node.about4Geeks !== null
+      data.allLandingYaml.edges[0].node.about4Geeks !== null
         ? data.allLandingYaml.edges
         : data.allDownloadableYaml.edges;
     return (
@@ -757,7 +768,7 @@ export const landingSections = {
           padding_tablet="0 40px"
           padding_md="0 80px"
           padding_lg="0"
-        //className="badge-slider hideOverflowX__"
+          //className="badge-slider hideOverflowX__"
         >
           {Array.isArray(icons) &&
             icons?.map((item, index) => {
@@ -804,7 +815,7 @@ export const landingSections = {
   badges: ({ session, data, pageContext, yml, course, index }) => {
     let dataYml =
       data.allLandingYaml.edges.length !== 0 &&
-        data.allLandingYaml.edges[0].node.badges !== null
+      data.allLandingYaml.edges[0].node.badges !== null
         ? data.allLandingYaml.edges
         : data.allDownloadableYaml.edges;
     let badges = dataYml[0].node.badges;
@@ -881,8 +892,9 @@ export const landingSections = {
                   letterSpacing="0.05em"
                   fontWeight="bold"
                 >
-                  {`${item.rating} ${pageContext.lang === "us" ? "On Reviews" : "En reseñas"
-                    }`}
+                  {`${item.rating} ${
+                    pageContext.lang === "us" ? "On Reviews" : "En reseñas"
+                  }`}
                 </Paragraph>
               </Div>
             );
@@ -1212,7 +1224,7 @@ export const landingSections = {
   who_is_hiring: ({ session, data, pageContext, yml, location, index }) => {
     let dataYml =
       data.allLandingYaml.edges.length !== 0 &&
-        data.allLandingYaml.edges[0].node?.who_is_hiring !== null
+      data.allLandingYaml.edges[0].node?.who_is_hiring !== null
         ? data.allLandingYaml.edges
         : data.allDownloadableYaml.edges;
 

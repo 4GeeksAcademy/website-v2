@@ -23,16 +23,17 @@ import OurPartners from "../components/OurPartners";
 import RelatedPosts from "../components/RelatedPosts";
 import Icon from "../components/Icon";
 import Overlaped from "../components/Overlaped";
-import Loc from "../components/Loc"
+import Loc from "../components/Loc";
 import ScholarshipProjects from "../components/ScholarshipProjects";
 import { TwoColumn } from "../components/Landing";
+//import TwoColumn from "../components/TwoColumn/index.js";
 
 const Program = ({ data, pageContext, yml }) => {
   const { session } = React.useContext(SessionContext);
   const courseDetails = data.allCourseYaml.edges[0].node;
   const [open, setOpen] = React.useState(false);
   const hiring = data.allPartnerYaml.edges[0].node;
-  const landingHiriging = yml.partners
+  const landingHiriging = yml.partners;
 
   const course_type = "full_stack";
   const program_type = yml.meta_info.slug.includes("full-time")
@@ -76,7 +77,7 @@ const Program = ({ data, pageContext, yml }) => {
         fontSize_title="40px"
         fontSizeTitle_tablet="60px"
         fontFamily_title="Archivo-Black"
-        fontSize_paragraph="24px" 
+        fontSize_paragraph="24px"
         gridTemplateColumns_tablet="repeat(14, 1fr)"
         maxWidth="1366px"
       >
@@ -260,7 +261,6 @@ const Program = ({ data, pageContext, yml }) => {
         }
       />
 
-
       <Loc lang={pageContext.lang} allLocationYaml={data.allLocationYaml} />
     </>
   );
@@ -431,7 +431,7 @@ export const query = graphql`
             sub_heading
             sub_heading_link
           }
-          overlaped{
+          overlaped {
             heading
             paragraph
             button {
@@ -442,30 +442,30 @@ export const query = graphql`
               src
             }
           }
-          two_columns{
+          two_columns {
             proportions
-            image{
+            image {
               style
               src
               shadow
-            } 
+            }
             video
-            heading{
+            heading {
               text
               font_size
-              }
-            sub_heading{
+            }
+            sub_heading {
               text
               font_size
-              }
-            button{
+            }
+            button {
               text
               color
               background
               path
             }
-            bullets{
-              items{ 
+            bullets {
+              items {
                 text
               }
             }

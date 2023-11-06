@@ -16,6 +16,7 @@ import ScholarshipProjects from "../components/ScholarshipProjects";
 import ScholarshipSuccessCases from "../components/ScholarshipSuccessCases";
 import BenefitsAndCharts from "../components/BenefitsAndCharts";
 import { TwoColumn } from "../components/Landing";
+//import TwoColumn from "../components/TwoColumn/index.js";
 
 const TwentyMillion = ({ data, pageContext, yml }) => {
   const { session } = React.useContext(SessionContext);
