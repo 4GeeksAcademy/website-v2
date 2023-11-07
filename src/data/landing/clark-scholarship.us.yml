@@ -196,23 +196,26 @@ components:
     sub_heading:
       text: "Learn the highest paid and in demand technologies that enable you to create amazing software, apps and websites."
     button:
-      text: "Join to the academy"
+      text: "Hear What Our Students Have to Say"
       color: white
       hover_color: "white"
       background: "black"
-      path: "#top"
+      path: "#why_4geeks"
     # content:
     #   text: "text after bullets"
     #   font_size: ["16px"]
     #   path: ""
     bullets:
       items:
-        - heading: "¡Become a FullStack Developer in just 18 weeks!"
-          icon: "check" #string with icon for example ['check', 'cicle', etc]
-        - heading: "Development of highly valued skills in the professional market."
-          icon: "check" #string with icon for example ['check', 'cicle', etc]
-        - heading: "Get access to job opportunities upon graduation"
-          icon: "check" #string with icon for example ['check', 'cicle', etc]
+        - heading: "Elevate Your Career Trajectory"
+          text: "Don't settle for mediocrity. Unleash your extraordinary potential with 4Geeks Academy. Transform from a novice to a proficient FullStack Developer in just 18 weeks."
+          icon: "circle" #string with icon for example ['check', 'cicle', etc]
+        - heading: "Job Placement Excellence"
+          text: "Over 81% of our graduates secure employment within three to six months of program completion, attesting to the effectiveness of our training."
+          icon: "circle" #string with icon for example ['check', 'cicle', etc]
+        - heading: "Access to a Network of Opportunities"
+          text: "Our support extends beyond graduation. Benefit from an extensive alumni network and a dedicated career services team, guiding you throughout your professional journey."
+          icon: "circle" #string with icon for example ['check', 'cicle', etc]
 
   - name: some_id
     position: 7
@@ -229,7 +232,7 @@ components:
       text: "Seize this chance to supercharge your education. Join the academy now and pave the way to your brightest future! Contact our admissions team to learn more and join our coding bootcamp today!"
       font_size: ["16px"]
     button:
-      text: "Joint to the Academy"
+      text: "GET MORE INFO"
       background: black
       color: white
       hover_color: "#white"
