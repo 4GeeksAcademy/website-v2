@@ -145,7 +145,8 @@ components:
     layout: two_column_left
     proportions: [6, 6]
     image:
-      style: '{ "backgroundSize": "contain" }'
+      style: '{ "border" : "3px solid black", "backgroundSize": "contain" }' 
+      shadow: true
       src: "/images/landing/why-4geeks-academy-preview.png"
       shadow: true
       link: "https://www.switchup.org/bootcamps/4geeks-academy"

@@ -5,6 +5,7 @@ import PropTypes from "prop-types";
 import { Devices } from "../Responsive";
 import Modal from "../Modal";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import { Div, Grid } from "../Sections";
 
 const VideoWrapper = styled.section`
   position: relative;
@@ -70,6 +71,7 @@ const Image = styled.div`
   width: ${(props) => props.width || "100%"};
   box-shadow: ${(props) => props.boxShadow};
   border-radius: ${(props) => props.borderRadius || "1.25rem"};
+  background: ${(props) => props.background};
   @media ${Devices.xxs} {
   }
   @media ${Devices.xs} {
@@ -117,6 +119,7 @@ const Player = ({
   imageHeight,
   videoHeight,
   switched,
+  boxShadow,
   width_play,
   height_play,
   fontSize_play,
@@ -128,7 +131,6 @@ const Player = ({
   transformPlay_lg,
   leftPlay_tablet,
   margin_tablet,
-
   ...rest
 }) => {
   const [showVideo, setShowVideo] = React.useState(false);
@@ -151,6 +153,27 @@ const Player = ({
 
   const image = () =>
     validImageSizes.includes(imageSize) ? imageSize : "default";
+
+  const videoHeightFix = (height) => {
+    const numbers = height.match(/[0-9]+/g);
+    const integers = numbers.map(Number);
+    const rest = integers.map((number) => number - 6);
+    const result = rest.map((number) => `${number}px`);
+    return result.join(" ");
+  };
+
+  function borderStyle(style) {
+    console.log(style);
+    if (style == null) {
+      return false;
+    } else {
+      return Object.keys(style).includes("border");
+    }
+  }
+
+  const imgStyle = image_thumb?.style
+    ? { ...JSON.parse(image_thumb?.style) }
+    : null;
 
   // With_Modal
 
@@ -205,41 +228,60 @@ const Player = ({
               />
             </Modal>
           ) : (
-            <Iframe
-              borderRadius={style.borderRadius}
-              videoId={yt_parser(id)}
-              id={`a-${id} do-not-delete-this-hack`}
-              // onReady={(e) => e.target.pauseVideo()}
-              onReady={(e) => setVid(e.target)}
-              onPlay={onPlay}
-              onPause={onPause}
-              onEnd={onEnd}
-              onError={onError}
-              onStateChange={onStateChange}
-              onPlaybackRateChange={onPlaybackRateChange}
-              onPlaybackQualityChange={onPlaybackQualityChange}
+            <Div
+              flexDirection="column"
               height={videoHeight}
-              opts={{
-                width: "100%",
-                height: `${style.height}`,
-                host: noCookies
-                  ? "https://www.youtube-nocookie.com"
-                  : "https://www.youtube.com",
-                ...playerVars,
-              }}
-            />
+              boxShadow={
+                image_thumb?.shadow && "20px 15px 0px 0px rgba(0,0,0,1)"
+              }
+              style={imgStyle && { ...JSON.parse(image_thumb?.style) }}
+              background="black"
+            >
+              <Iframe
+                borderRadius={style.borderRadius}
+                videoId={yt_parser(id)}
+                id={`a-${id} do-not-delete-this-hack`}
+                // onReady={(e) => e.target.pauseVideo()}
+                onReady={(e) => setVid(e.target)}
+                onPlay={onPlay}
+                onPause={onPause}
+                onEnd={onEnd}
+                onError={onError}
+                onStateChange={onStateChange}
+                onPlaybackRateChange={onPlaybackRateChange}
+                onPlaybackQualityChange={onPlaybackQualityChange}
+                height={
+                  borderStyle(imgStyle)
+                    ? videoHeightFix(videoHeight)
+                    : videoHeight
+                }
+                opts={{
+                  width: "100%",
+                  height: `${style.height}`,
+                  host: noCookies
+                    ? "https://www.youtube-nocookie.com"
+                    : "https://www.youtube.com",
+                  ...playerVars,
+                }}
+              />
+            </Div>
           )}
         </>
       ) : (
         <Image
           width={imageWidth}
           width_tablet={imageWidth_tablet || "100%"}
-          borderRadius="3px"
-          height={imageHeight || "100%"}
+          borderRadius={image_thumb?.shadow ? "0px" : "3px"}
+          //height={imageHeight || "100%"}
+          height={videoHeight || "100%"}
           position="relative"
-          boxShadow={image_thumb?.shadow && "20px 15px 0px 0px rgba(0,0,0,1)"}
+          boxShadow={
+            boxShadow ||
+            (image_thumb?.shadow && "20px 15px 0px 0px rgba(0,0,0,1)")
+          }
           //border={image_thumb?.shadow && "3px solid black"}
           style={imgStyles && { ...JSON.parse(image_thumb?.style) }}
+          background="black"
         >
           {id && (
             <Play
@@ -267,10 +309,15 @@ const Player = ({
               onClick={() => setShowVideo(true)}
               image={getImage(thumb.childImageSharp.gatsbyImageData)}
               alt="Video"
+              height={
+                borderStyle(imgStyle)
+                  ? videoHeightFix(videoHeight)
+                  : videoHeight
+              }
               style={{
                 height: `${style.height}` || "100%",
                 width: `${style.width}` || "100%",
-                borderRadius: `${style.borderRadius}` || "auto",
+                //borderRadius: `${style.borderRadius}` || "auto",
               }}
             />
           ) : (
@@ -281,11 +328,16 @@ const Player = ({
                 (thumb && thumb.replace("/static", "")) ||
                 `https://img.youtube.com/vi/${id}/${image()}.jpg`
               }
+              height={
+                borderStyle(imgStyle)
+                  ? videoHeightFix(videoHeight)
+                  : videoHeight
+              }
               alt="Video"
               style={{
                 height: `${style.height}` || "100%",
                 width: `${style.width}` || "100%",
-                borderRadius: `${style.borderRadius}` || "auto",
+                //borderRadius: `${style.borderRadius}` || "auto",
               }}
             />
           )}
