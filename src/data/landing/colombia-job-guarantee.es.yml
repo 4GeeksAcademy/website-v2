@@ -176,7 +176,7 @@ components:
     image:
       style: "{}"
       src: "/images/techs/python-js.png"
-      link: "#top" # take uses somewhere when they click on the image
+      link: "" # take uses somewhere when they click on the image
       # shadow: true
     heading:
       text: "Python y Javascript"
@@ -195,13 +195,13 @@ components:
     bullets:
       items:
         - heading: "La creciente demanda de desarrolladores especializados en JavaScript"
-          text: "Los desarrolladores de JavaScript son altamente demandados en el mercado laboral. Según el U.S. Bureau of Labor Statistics, se proyecta que la necesidad de desarrolladores web experimentará un notable crecimiento del 13% entre los años 2020 y 2030."
+          text: "Se proyecta que el empleo general de desarrolladores web y diseñadores digitales crecerá un 16 por ciento entre 2022 y 2032, mucho más rápido que el promedio de todas las ocupaciones."
           icon: "circle" #string with icon for example ['check', 'cicle', etc]
-        - heading: "JavaScript y Python una opción ganadora"
-          text: "Tanto JavaScript como Python se caracterizan por tener una curva de aprendizaje relativamente baja, lo que los convierte en lenguajes accesibles tanto para principiantes como para aquellos que desean adentrarse en el mundo de la tecnología."
+        - heading: "expectativa salarial"
+          text: "El salario medio anual de los desarrolladores web era de 78.580 dólares americanos"
           icon: "circle" #string with icon for example ['check', 'cicle', etc]
         - heading: "Python y la inteligencia Artificial"
-          text: "Python lidera el campo de la ciencia de datos y el aprendizaje automático, siendo utilizado por aproximadamente el 67.8% de los profesionales en este ámbito. Esta alta adopción lo convierte en una opción excepcional para aquellos que desean sumergirse de lleno en el emocionante mundo del desarrollo de inteligencias artificiales."
+          text: "Python es líder en ciencia de datos y aprendizaje automático, usado por el 67.8% de los profesionales en este campo."
           icon: "circle" #string with icon for example ['check', 'cicle', etc]
 
   - name: two_column_w_video
