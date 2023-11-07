@@ -159,7 +159,7 @@ components:
         text: "La mentoría individualizada, con respuestas en menos de 15 minutos, proporciona un apoyo inigualable. Las sólidas alianzas estrategicas y un historial de éxito del 81% en la colocación laboral respaldan la reputación de la institución. Esto garantiza una transición sin problemas hacia una exitosa carrera en desarrollo de software."
         font_size: ["16px"]
       button:
-        text: "Unete a la academia!"
+        text: "¡Únete a la Academia!"
         path: "#bottom"
         color: "white"
         background: "black"

@@ -130,7 +130,7 @@ components:
       text: ""
       font_size: ["16px", "16px", "16px", "16px", "16px"]
     button:
-      text: "Unete a la academia!"
+      text: "¡Únete a la Academia!"
       color: white
       hover_color: "white"
       background: "black"
