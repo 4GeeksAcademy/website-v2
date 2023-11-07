@@ -331,11 +331,12 @@ export const StyledBackgroundSection = styled(BackgroundSection)`
   display: ${(props) => props.display};
   &:before{
     background-size: ${(props) => props.bgSize};
+    filter: ${(props) => props.filter};
   },
   &:after {
     min-height: ${(props) => props.minHeight};
     border-radius: ${(props) => props.borderRadius};
-    filter: ${(props) => props.filter};
+    
     height: ${(props) => props.h_sm};
     width: ${(props) => props.width};
     max-width: ${(props) => props.maxWidth};
@@ -358,7 +359,6 @@ export const StyledBackgroundSection = styled(BackgroundSection)`
   }
   @media ${Devices.tablet} {
     border-radius: ${(props) => props.borderRadius_tablet};
-    margin: ${(props) => props.margin_tablet};
     height: ${(props) => props.height_tablet};
     width: ${(props) => props.width_tablet || "100%"};
     display: ${(props) => props.display_tablet};
