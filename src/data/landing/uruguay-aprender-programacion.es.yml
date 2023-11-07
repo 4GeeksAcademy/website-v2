@@ -151,7 +151,7 @@ components:
       text: "Descubre por qué 4Geeks Academy en Uruguay es la elección insuperable. Pablo nos detalla las razones fundamentales. Desde su inicio, hemos focalizado en asegurar que las conexiones, el impacto, las alternativas de financiamiento y las perspectivas laborales sean tangibles para cada estudiante. En 4Geeks Academy, tu éxito es nuestra prioridad."
       font_size: ["16px"]
     button:
-      text: "Unete a la academia!"
+      text: "¡Únete a la Academia!"
       path: "#bottom"
       color: "white"
       background: "black"
