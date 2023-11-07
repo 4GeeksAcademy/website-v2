@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useMemo } from "react";
 import { graphql } from "gatsby";
 import { landingSections } from "../components/Landing";
 import FollowBar from "../components/FollowBar";
@@ -49,7 +49,7 @@ const Landing = (props) => {
   }, [yml]);
 
   // data sent to the form already prefilled
-  const preData = {
+  const preData = useMemo(() => {return {
     course: {
       type: "hidden",
       value:
@@ -77,7 +77,7 @@ const Landing = (props) => {
       valid: true,
     },
     form_type: { type: "hidden", value: pageContext.type, valid: true },
-  };
+  }}, []);
 
   const landingLocation =
     session &&
