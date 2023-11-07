@@ -249,7 +249,7 @@ const ProgramDetails = (props) => {
               display_xs="flex" // aqui
               flexDirection_xs="column"
               flexDirection_md="row"
-              margin_xss="20px"
+              margin_xxs="20px"
             >
               <Div
                 margin_md="20px 20px 0 0"

@@ -513,7 +513,6 @@ export const query = graphql`
               style
               shadow
               link
-              shadow
             }
             programs {
               title
@@ -531,6 +530,10 @@ export const query = graphql`
               path
               background
               hover_color
+            }
+            section_heading {
+              text
+              style
             }
             heading {
               text
