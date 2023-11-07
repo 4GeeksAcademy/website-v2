@@ -284,9 +284,6 @@ const LeadForm = ({
       );
   });
 
-  const isSessionLocationGDPR =
-    session && session.location && session.location.gdpr_compliant;
-  console.log(isSessionLocationGDPR, session);
   return (
     <Form
       boxShadow={boxShadow}
@@ -547,7 +544,7 @@ const LeadForm = ({
                   checked={consentValue}
                   onChange={() => {
                     setConsentValue(!consentValue);
-                    // setVal({...formData, consent: {...formData.consent, valid: !formData.consent.valid}})
+                    setVal({ ...formData, consent: { ...formData.consent, valid: !formData.consent.valid } })
                   }}
                   style={{
                     width: "24px",
@@ -590,30 +587,14 @@ const LeadForm = ({
                   width_lg={widthButton}
                   width_xs="100%"
                   justifyContent="center"
-                  background={
-                    isSessionLocationGDPR
-                      ? consentValue
-                        ? Colors.blue
-                        : Colors.darkGray
-                      : Colors.blue
-                  }
+                  background={Colors.blue}
                   //textAlign="center"
                   color={
                     formStatus.status === "loading"
                       ? Colors.darkGray
                       : Colors.white
                   }
-                  disabled={
-                    isSessionLocationGDPR
-                      ? consentValue
-                        ? formStatus.status === "loading"
-                          ? true
-                          : false
-                        : true
-                      : formStatus.status === "loading"
-                      ? true
-                      : false
-                  }
+                  disabled={formStatus.status === "loading" ? true : false}
                 >
                   {formStatus.status === "loading" ? "Loading..." : sendLabel}
                 </Button>
