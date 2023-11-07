@@ -298,15 +298,15 @@ const GeeksVsOthers = (props) => {
                   >
                     {item.features}
                   </H3>
-                  <Div 
+                  <Div
                     style={{ position: "absolute", right: "0px", top: "15px" }}
-                    transform={selected.index === index ? "rotate(90deg)" : "rotate(0deg)"}
+                    transform={
+                      selected.index === index
+                        ? "rotate(90deg)"
+                        : "rotate(0deg)"
+                    }
                   >
-                    <Icon
-                      icon="arrow-right"
-                      width="32px"
-                      height="16px"        
-                    />
+                    <Icon icon="arrow-right" width="32px" height="16px" />
                   </Div>
                   {selected.index === index && (
                     <Div flexDirection="row" margin="10px 0" width="100%">
