@@ -157,7 +157,7 @@ components:
       text: "Join us in celebrating his success story and discover how you too can unlock a world of opportunities through our comprehensive bootcamp program!"
       font_size: ["16px"]
     button:
-      text: "Joint to the Academy"
+      text: "GET MORE INFO"
       background: black
       color: white
       hover_color: "#white"
