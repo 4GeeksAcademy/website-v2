@@ -329,14 +329,14 @@ export const StyledBackgroundSection = styled(BackgroundSection)`
   min-height: ${(props) => props.minHeight};
   flex-shrink: ${(props) => props.flexShrink};
   display: ${(props) => props.display};
+
   &:before{
-    background-size: ${(props) => props.bgSize};
-    filter: ${(props) => props.filter};
+    background-size: ${(props) => props.bgSize};  
   },
   &:after {
     min-height: ${(props) => props.minHeight};
-    border-radius: ${(props) => props.borderRadius};
-    
+    border-radius: ${(props) => props.borderRadius}; 
+    filter: ${(props) => props.filter}; 
     height: ${(props) => props.h_sm};
     width: ${(props) => props.width};
     max-width: ${(props) => props.maxWidth};
@@ -347,6 +347,10 @@ export const StyledBackgroundSection = styled(BackgroundSection)`
     height: ${(props) => props.height_xxs};
     width: ${(props) => props.width_xxs};
     margin: ${(props) => props.margin_xxs};
+    &:before,
+    &:after {
+      filter: ${(props) => props.filter_xxs};
+    }
   }
   @media ${Devices.xs} {
     height: ${(props) => props.height_xs};
