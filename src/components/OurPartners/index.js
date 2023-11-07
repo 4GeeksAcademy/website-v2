@@ -256,9 +256,9 @@ const OurPartners = ({
     margin: `${margin || "40px 0 0 0"}`,
     padding: `${padding || "75px 0"}`,
     borderBottom: borderBottom,
-    width: width
+    width: width,
   };
-  console.log(rest)
+  console.log(rest);
   //Renderized...
   return (
     <Fragment github="/components/partner" style={FragmentStyle}>

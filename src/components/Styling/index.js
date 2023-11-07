@@ -191,7 +191,7 @@ const StyledImage = styled.div`
     width: ${(props) => props.w_sm};
   }
   @media ${Devices.xxs} {
-    display: ${(props) => props.display_xxs}; 
+    display: ${(props) => props.display_xxs};
     height: ${(props) => props.height_xxs};
     right: ${(props) => props.right_xxs};
     bottom: ${(props) => props.bottom_xxs};
@@ -329,9 +329,8 @@ export const StyledBackgroundSection = styled(BackgroundSection)`
   min-height: ${(props) => props.minHeight};
   flex-shrink: ${(props) => props.flexShrink};
   display: ${(props) => props.display};
-
-  &:before{
-    background-size: ${(props) => props.bgSize};  
+  &:before {
+    background-size: ${(props) => props.bgSize};
   },
   &:after {
     min-height: ${(props) => props.minHeight};
