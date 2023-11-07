@@ -8,8 +8,8 @@ meta_info:
   keywords: "Clase de programación, Clase de python, clase de javascript, Clase de informática, Coding Bootcamp, 4Geeks Academy"
 
   template: "landing_a" # <--- choose your landing template
-  redirects: # <--- URL redirections to avoid 404 errors
-    ["https://4geeksacademy.com/es/coding-campus/bootcamp-programacion-santiago"]
+  # <--- URL redirections to avoid 404 errors
+  redirects: []
 
   # Set a particular course or location to the landing page
   # this UTM fields will be also included in the CRM contact

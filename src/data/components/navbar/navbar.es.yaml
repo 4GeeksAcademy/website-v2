@@ -90,6 +90,8 @@ navbar:
               link_to: "/es/alianzas"
             - title: "Trabaja con Nosotros"
               link_to: "/es/empleo"
+            - title: "Talento"
+              link_to: "https://www.notion.so/4geeksacademy/Talent-Pipeline-4Geeks-Academy-ef91aba17f9c4964bf7972396d190bdf"
 
   - name: "Campus"
     link: "/partners"
