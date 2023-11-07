@@ -188,10 +188,20 @@ components:
         "Python y Machine Learning"
         #           xl      lg      md      sm      xs
       font_size: ["50px", "50px", "50px", "50px", "50px"]
+    sub_heading:
+      text: "Nuestro programa te capacita en Python, SQL, Looker, Streamlit y Estadísticas para convertirte en analista de datos. Desarrolla modelos predictivos, aplica algoritmos como vecinos cercanos y árboles de decisión, y trabaja en casos reales. Únete a equipos técnicos en diversas compañías."
     content:
-      style: '{"padding": "0 20px"}'
-      text: "Al inscribite te sumergirás en el mundo de la programación comenzando con Python, el lenguaje de programación más demandado a nivel mundial, y sus librerías especializadas en big data como pandas, numpy y matplotlib.<br> No solo adquirirás habilidades técnicas, sino que también obtendrás experiencia en la gestión de proyectos desde la perspectiva del usuario final y desarrollarás tu capacidad para el pensamiento lógico. Prepárate para una experiencia enriquecedora que te preparará para enfrentar desafíos del mundo real en el campo de la programación y el análisis de datos."
+      style: '{}'
+      text: ""
       font_size: ["16px"]
+    bullets:
+      items:
+      - heading: "Python vs Ruby on Rails"
+        text: "En el último año, se han publicado más de 120,000 ofertas de trabajo que requieren experiencia en Python en plataformas como Indeed y LinkedIn, en comparación con aproximadamente 4,600 para Ruby on Rails."
+        icon: "circle" #string with icon for example ['check', 'cicle', etc]
+      - heading: "Python Versatilidad, Desarrollo Web y Machine Learning"
+        text: "Python se destaca como el tercer lenguaje de programación más popular según la encuesta de Stack Overflow en 2023. "
+        icon: "circle" #string with icon for example ['check', 'cicle', etc]
 
   - name: some_id
     position: 5
@@ -204,13 +214,13 @@ components:
     video: "https://www.youtube.com/watch?v=rtpfwwfE0yY"
     heading:
       text:
-        "De asistente de cocina a programador la decisión que llevo a Joshua a un futuro en la industria Tecnológica."
+        "De ayudante de cocina al mundo tecnológico, El camino de Joshua hacia una carrera en la industria de la tecnología"
         #xl      lg     md     sm    xs
       font_size: ["40px", "34px", "34px", "25px", "20px"]
     content:
-      style: '{"padding": "0 20px"}'
-      text: "Descubre la inspiradora historia de Joshua Bravo, quien pasó de ser un asistente de cocina a programador gracias a su decisión de formar parte de 4Geeks Academy. Su experiencia es un testimonio vivo de cómo la dedicación y el aprendizaje en este bootcamp lo llevaron a convertirse en un profesional altamente capacitado."
-      font_size: ["16px"]
+      #style: '{}'
+      #text: "De asistente de cocina a programador gracias a 4Geeks Academy. Su dedicación y formación lo convirtieron en un profesional altamente capacitado."
+      #font_size: ["16px"]
     button:
       text: "Experiencias de Éxito"
       path: "#why_4geeks"

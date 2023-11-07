@@ -6,7 +6,7 @@ meta_info:
   description: "El más galardonado curso de programacion en Santiago, Chile. Con 4Geeks te convertiras en programador en unos pocos meses."
   image: "/images/bg/main-bg.jpg"
   keywords: "Clase de programación, Clase de python, clase de javascript, Clase de informática, Coding Bootcamp, 4Geeks Academy"
-
+  visibility: "hidden" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   template: "landing_a" # <--- choose your landing template
   redirects: # <--- URL redirections to avoid 404 errors
     ["/landing/clases-de-programacion-santiago"]
