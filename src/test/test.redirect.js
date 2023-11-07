@@ -34,5 +34,17 @@ folders.forEach(async (folder) => {
             .red
         }\n`
       );
+
+    if (
+      file.yaml.meta_info.redirects.some((redirect) =>
+        (redirect.includes("http") || redirect === "" || redirect[0] !== "/")
+      )
+    )
+      fail(
+        `${`\nProblem found in: src/data/${folder}/${_path}`.red}\n\n${
+          `Redirects can only point to relative path's that does not include a domain name, its not empty and starts with a /, check your meta_info.redirects array`
+            .red
+        }\n`
+      );
   });
 });
