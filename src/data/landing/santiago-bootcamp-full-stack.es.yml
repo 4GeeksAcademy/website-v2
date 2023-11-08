@@ -1,15 +1,15 @@
 meta_info:
-  slug: clases-de-programacion-santiago # <--- URL 4geeksacademy.com/us/landing/example
+  slug: bootcamp-full-stack-santiago-fb # <--- URL 4geeksacademy.com/us/landing/example
 
   # This will show on social media when shared
-  title: "Clases de programación en Santiago de Chile, aprende a programar en 9 o 16 sem y consigue trabajo como programador."
-  description: "El más galardonado curso de programacion en Santiago, Chile. Con 4Geeks te convertiras en programador en unos pocos meses."
+  title: "Clases de Data Science en Santiago de Chile, aprende ciencia de datos en 15 semanas y consigue trabajo como científico de datos."
+  description: "El Bootcamp de Full-Satack más premiado en Santiago, Chile. Con 4Geeks, te convertirás en experto en 18 semanas"
   image: "/images/bg/main-bg.jpg"
   keywords: "Clase de programación, Clase de python, clase de javascript, Clase de informática, Coding Bootcamp, 4Geeks Academy"
   visibility: "hidden" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   template: "landing_a" # <--- choose your landing template
-  redirects: # <--- URL redirections to avoid 404 errors
-    ["/landing/clases-de-programacion-santiago"]
+  # <--- URL redirections to avoid 404 errors
+  redirects: []
 
   # Set a particular course or location to the landing page
   # this UTM fields will be also included in the CRM contact
@@ -33,15 +33,15 @@ form:
   redirect: "/es/gracias/?lang=es"  #you can redirect to another url or entirely diffrent website
 
 apply_schollarship: # form that is displayed at the end of the landing
-  # title: "Apoyo Profesional Ilimitado"
+  # title: "Get more info about this award-winning development course"
   imageSide: "right"
-  image: "../../../static/images/landing/apply.png"  
+  image: "../../../static/images/landing/apply.png"
 
 # jumbotron on the top (cannot be commented out)
 header_data:
   background: "#FFF1D1"
-  tagline: Clases de Programación Web
-  sub_heading: "Aprende a programar desde cero y consigue trabajo como Full Stack Developer Junior"
+  tagline: Full-stack software developer bootcamp
+  sub_heading: "Desde cero hasta conseguir tu primer trabajo como programador, aprende todo lo necesario, recibe soporte de por vida y consigue un empleo después de 18 semanas de estudio."
   badge: "../../../static/images/badges/Course-Report-Badge-2023.png"
   image_filter: brightness(0.3)
 
@@ -52,9 +52,9 @@ features:
   styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
   bullets:
     - No se requiere experiencia previa
-    - Horarios part-time y full-time
+    - Horario part-time 
     - Mentorías y career support de por vida
-    - Un desarrollador Jr puede ganar hasta $900.000 CLP al mes
+    - El salario promedio de un Full-stack Developer en Chile suele estar entre $10,000,000 CLP al año.
 
 follow_bar:
   position: "top" # top, bottom, hidden
@@ -92,7 +92,7 @@ short_badges:
 #
 
 rating_reviews:
-  position: 1
+  position: 6
   heading: "Lee acerca de nosotros"
   rating_list:
     - alt: "Career Karma"
@@ -113,9 +113,9 @@ rating_reviews:
       url: ""
 
 program_details:
-  position: 2
-  heading: "Domina Python, JS y React"
-  sub_heading: "Un bootcamp de programación sobre las tecnologías más usadas del mundo"
+  position: 3
+  heading: "Ciencia de Datos y Machine Learning"
+  sub_heading: "Comienza con Python, Ciencia de Datos, Aprendizaje Automático, Deep Learning y el mantenimiento de un entorno de producción en Inteligencia Artificial."
 
 why_4geeks:
   position: 7
@@ -123,85 +123,104 @@ why_4geeks:
   sub_heading: " "
 
 who_is_hiring:
-  position: 8
+  position: 15
   limit: 4
   heading: "¿Quién contrata a nuestros alumnos?"
   sub_heading: "Nos encanta ver crecer a nuestros estudiantes, es por eso que nos esforzamos cada día por tener más aliados, para que puedas trabajar en empresas que te ayuden a seguir creciendo profesionalmente."
 
 # Possible layours: [two_column_left_image, two_column_right_image]
 components:
-  - name: "whatever"
-    layout: choose_your_program
-    position: 5
-    heading:
-      text: Nuestras Modalidades
-    content:
-      text: Programa Full Stack Developer en Modalidad Part Time y Full Time
+  - name: new_design_with_bullets
+    position: 1
+    layout: two_column_right 
+    swipable: False
+    background: "#fbfbfb"
+    image:
+      style: '{"backgroundSize": "contain;"}'
+      src: "/images/landing/hombre-con-laptop.png"
+      shadow: false
+    section_heading: 
+      text: "Diseñado para hacerte exitoso en el mundo de la programación"
+      style: '{ "font-size": "30px" }'
+    heading: 
+      text: "¡Únete a nosotros para impulsar tu carrera en tecnología!"
+    sub_heading:
+      text: ""
+    button: 
+      text: "Descubre por qué somos tu mejor elección"
+      color: white
+      hover_color: "white"
+      background: "black"
+      path: "https://4geeksacademy.com/es/geeks-vs-otros"
+    content: 
+      text: ""
       font_size: ["16px"]
       path: ""
-    programs:
-    - title: "Part Time"
-      sub_title: "18 semanas"
-      icon: "fullstack_2"
-      description: |
-        De cero a tener tu primer trabajo como Full Stack Developer, con una duración de 18 semanas, con clases 3 veces por semana, compatible con horario laboral o de estudios. 
+    bullets:
+      items:
+      - heading: "TODAS LAS MENTORIAS QUE NECESITAS"
+        text: "En línea y en persona, por el resto de tu vida, incluso para codificación de dudas laborales"
+        icon: "circle" 
+      - heading: "TIEMPO DE RESPUESTA"
+        text: "No te quedes atascado con tu código, no te llevará más de 15 minutos para que un instructor te ayude."
+        icon: "circle" 
+      - heading: "1:7 PROPORCIÓN PROFESOR: ESTUDIANTE"
+        text: "Encontrarás más profesores en 4Geeks que el promedio de la industria."
+        icon: "circle" 
+      - heading: "SOPORTE PROFESIONAL A LA MEDIDA"
+        text: "Proporcionamos ayuda para la colocación laboral y preparación para el empleo en tecnología."
+        icon: "circle" 
 
-        Precio: 3.450.000 CLP
-      
-      text_link: Obtener más información
-      link: "#top" # moves to start position
-      
-    - title: "Full Time"
-      sub_title: "9 semanas"
-      icon: "fullstack_2"
-      description: |
-        Programa intensivo de 9 semanas, con clases de lunes a viernes durante todo el día, para vivir una experiencia inmersiva en el mundo del código.
-
-        Precio: 3.800.000 CLP
-        
-      text_link: Obtener más información
-      link: "#top"
-
-  - name: geeksinfo
-    position: 3
-    layout: geeksInfo
-  - name: coding
-    position: 6
-    layout: two_column_right
-    proportions: [6, 6]
-    background: "rgba(255, 183, 24, 0.2)"
-    image:
-      style: '{ "backgroundSize": "contain" }'
-      src: "/images/landing/group_194.png"
-    heading:
-      text: "Membresías"
-      font_size: ["50px", "50px", "50px", "50px", "50px"]
-    sub_heading:
-      text: 
-      font_size: ["16px", "16px", "16px", "16px", "16px"]
-    content:
-      font_size: ["16px"]
-      text: |
-        <img src="/images/geekpal.png">
-        <br>
-        <p>GeekPAL es una membresía instantánea que obtienes cuando te conviertes en estudiante de 4Geeks Academy. Te garantiza que no volverás a programar solo. Con GeekPAL contará con un compañero por el resto de su vida, sí, incluso después de graduarse. Si te quedas atascado, siempre habrá un mentor disponible para que puedas obtener ayuda con tu código</p>
-        <br>
-        <br>
-        <img src="/images/geekforce.png">
-        <p>GeekForce es el proceso colectivo de apoyo profesional del Bootcamp. La 'fuerza' significa empoderamiento profesional y es una membresía de por vida. Brinda asistencia para la colocación laboral del estudiante y para que se prepare para conseguir un trabajo en tecnología.</p>
   - name: python_y_javascript
-    position: 3
-    layout: two_column_right
+    position: 2
+    layout: two_column_left
     background: "veryLightBlue2" # Name of the color(from components/Styling/index.js) or color code ex: #C9F9F9
     image:
       src: "/images/why-4geeks/python-image.png"
     heading:
+      # style: '{"padding": "0 20px", "line-height": "50px"}'
       text:
-        "Python y Javascript"
+        "JavaScript y Python"
         #           xl      lg      md      sm      xs
       font_size: ["50px", "50px", "50px", "50px", "50px"]
     content:
-      text: "Nuestro programa está basado en el uso de Python y Javascript. ¿La razón? En el mercado laboral JavaScript tiene 26 veces más vacantes de trabajo que Ruby on Rails y Python te permite acceder a distintas áreas del mundo de la programación. Otras herramientas que también aprenderás a usar en nuestro programa son: HTML5, CSS3, React, Flask, etc."
+      text: "El Bootcamp abarca desde los fundamentos de programación en JavaScript hasta la creación de aplicaciones dinámicas con React.js. También incluye conceptos avanzados como Python, Flask, bases de datos y la publicación de sitios web. Prepárate para desarrollar proyectos web de forma efectiva y aplicar tus conocimientos en entornos profesionales, donde se valora altamente a profesionales bien preparados en esta área."
+      font_size: ["18px"]
+
+  - name: some_id
+    position: 4
+    layout: two_column_right
+    background: "#fbfbfb"
+    image:
+      style: '{ "border" : "3px solid black" }' 
+      shadow: true 
+      src: "../../../static/images/testimonials/joshua-bravo-testimonial.jpg"
+    video: "https://www.youtube.com/watch?v=rtpfwwfE0yY"
+    heading:
+      text:
+        "De asistente de cocina a Full-stack la decisión que llevo a Joshua a un futuro en la industria Tecnológica."
+        #xl      lg     md     sm    xs
+      font_size: ["40px", "34px", "34px", "25px", "20px"]
+    content:
+      text: "Descubre la inspiradora historia de Joshua Bravo, quien pasó de ser un asistente de cocina a programador gracias a su decisión de formar parte de 4Geeks Academy. Su experiencia es un testimonio vivo de cómo la dedicación y el aprendizaje en este bootcamp lo llevaron a convertirse en un profesional altamente capacitado."
       font_size: ["16px"]
+    button:
+      text: "Experiencias de Éxito"
+      path: "#why_4geeks"
+      color: "white"
+      background: "black"
+      hover: "lightBlue"
 
-
+choose_your_program:
+  position: 5
+  title: Nuestra Modalidad
+  paragraph: Programa de Machine Learning y Data Science en Modalidad Part Time y Full Time
+  programs:  
+  - title: "Part Time"
+    sub_title: "16 semanas"
+    icon: "fullstack"
+    description: |
+      De cero a tener tu primer trabajo como Data Scientist, con una duración de 16 semanas, con clases en vivo 3 veces por semana, compatible con horario laboral o de estudios. 
+    text_link: Obtener más información
+    link: "#top" # moves to start position
+  
