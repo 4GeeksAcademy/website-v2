@@ -147,7 +147,7 @@ about4Geeks:
     - title: "Ratio 1:7 profesor alumno. Mentorías 1:1 ilimitadas "
     - title: "Preparación para entrevistas y procesos de selección"
   paragraph: ""
-  button_text: "Solicita tu beca"
+  button_text: "Solicita tu descuento"
   button_link: "#" # accepts url: relative(/us/apply), absolute(https://google.com) or component id(#componentName)
   image: "../../../static/images/bg/community.png"
   image_mobile: "../../../static/images/bg/community.png"
