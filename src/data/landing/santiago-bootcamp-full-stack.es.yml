@@ -2,7 +2,7 @@ meta_info:
   slug: bootcamp-full-stack-santiago-fb # <--- URL 4geeksacademy.com/us/landing/example
 
   # This will show on social media when shared
-  title: "Clases de Data Science en Santiago de Chile, aprende ciencia de datos en 15 semanas y consigue trabajo como científico de datos."
+  title: "Full Stack Developer Bootcamp, aprende todo lo necesario para integrarte en el mundo laboral de la industria Tech."
   description: "El Bootcamp de Full-Satack más premiado en Santiago, Chile. Con 4Geeks, te convertirás en experto en 18 semanas"
   image: "/images/bg/main-bg.jpg"
   keywords: "Clase de programación, Clase de python, clase de javascript, Clase de informática, Coding Bootcamp, 4Geeks Academy"
@@ -147,11 +147,11 @@ components:
     sub_heading:
       text: ""
     button: 
-      text: "Descubre por qué somos tu mejor elección"
+      text: "OBTENER MÁS INFORMACIÓN"
       color: white
       hover_color: "white"
       background: "black"
-      path: "https://4geeksacademy.com/es/geeks-vs-otros"
+      path: "#"
     content: 
       text: ""
       font_size: ["16px"]
