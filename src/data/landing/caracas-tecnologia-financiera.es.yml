@@ -9,7 +9,7 @@ meta_info:
   image: "/images/bg/main-bg.jpg"
   keywords: "Bootcamp de programación, Bootcamp de python, Bootcamp de javascript, Bootcamp de full stack, Bootcamp, 4Geeks Academy"
 
-  template: "landing_nonav" # <--- choose your landing template
+  template: "landing_a" # <--- choose your landing template
   redirects: # <--- URL redirections to avoid 404 errors
     []
 
@@ -27,7 +27,7 @@ form:
   heading: "¡Aplica ya!"
   motivation: "Completa el formulario y te enviaremos la información en unos minutos a tu correo electrónico."
   button_label: Aplica hoy
-  redirect: "/es/gracias/?lang=es"  #you can redirect to another url or entirely diffrent website
+  redirect: "/es/gracias/?lang=es" #you can redirect to another url or entirely diffrent website
 
 navbar:
   buttonText: "Aplica hoy"
@@ -42,7 +42,7 @@ header_data:
   badge: "../../../static/images/badges/Course-Report-Badge-2023.png"
   image_filter: brightness(0.3)
   # right_image: "../../../static/images/landing/header_united_way.png"
-  # right_image: 
+  # right_image:
   #   style: '{ "backgroundSize": "contain" }'
   #   src: "/images/landing/header_united_way.png"
 
@@ -69,7 +69,7 @@ short_badges:
   - name: "Switchup"
     url: ""
     image: "../../../static/images/badges/switchup-badge-2023.png"
-    alt: "Best coding bootcamp Switchup 2023"   
+    alt: "Best coding bootcamp Switchup 2023"
   - name: "Florida Department of Education"
     url: ""
     image: "../../../static/images/badges/licensed.png"
@@ -89,44 +89,92 @@ follow_bar:
     text: ""
 
 program_details:
-  position: 4
-  heading: "Domina Python, JS y React"
+  position: 1
+  heading: "Domina JS, React y Python"
   sub_heading: "Un bootcamp de programación sobre las tecnologías más usadas del mundo"
 
 # Possible layours: [two_column_left_image, two_column_right_image]
 components:
-  - name: geeksinfo
+  - name: geekInfo
+    # Title: "Diseñado para hacerte exitoso en el mundo de la programación"
     position: 5
-    layout: geeksInfo
-  - name: coding
-    position: 6
     layout: two_column_right
-    proportions: [6, 6]
-    background: "rgba(255, 183, 24, 0.2)"
+    swipable: False
+    background: "#FFFFFF"
     image:
       style: '{ "backgroundSize": "contain" }'
-      src: "/images/landing/group_194.png"
+      src: "/images/landing/grupo-ventanas.png"
+      link: "#top" # take uses somewhere when they click on the image
+      # shadow: true
+    section_heading: 
+      text: "Diseñado para hacerte exitoso en el mundo de la programación"
+      style: '{ "font-size": "30px" }'
     heading:
-      text: "Membresías"
-      font_size: ["50px", "50px", "50px", "50px", "50px"]
+      text: ""
     sub_heading:
-      text: 
-      font_size: ["16px", "16px", "16px", "16px", "16px"]
+      text: ""
+    button:
+      text: "Porque 4geeks es la mejor opción"
+      color: white
+      hover_color: "white"
+      background: "black"
+      path: "https://4geeksacademy.com/es/geeks-vs-otros"
     content:
+      text: "En 4Geeks Academy nos destacamos por nuestro enfoque integral y compromiso constante con el éxito de nuestros estudiantes, ofreciendo un ambiente de aprendizaje excepcionalmente favorable y un historial probado de resultados positivos en términos de empleabilidad."
       font_size: ["16px"]
-      text: |
-        <img src="/images/geekpal.png" style="max-width: 200px;">
-        <br>
-        <p>GeekPAL es una membresía instantánea que obtienes cuando te conviertes en estudiante de 4Geeks Academy. Te garantiza que no volverás a programar solo. Con GeekPAL contará con un compañero por el resto de su vida, sí, incluso después de graduarse. Si te quedas atascado, siempre habrá un mentor disponible para que puedas obtener ayuda con tu código</p>
-        <br>
-        <br>
-        <img src="/images/geekforce.png" style="max-width: 200px;">
-        <p>GeekForce es el proceso colectivo de apoyo profesional del Bootcamp. La 'fuerza' significa empoderamiento profesional y es una membresía de por vida. Brinda asistencia para la colocación laboral del estudiante y para que se prepare para conseguir un trabajo en tecnología.</p>
+      path: ""
+    bullets:
+      items:
+        - heading: "TODAS LAS MENTORIAS QUE NECESITAS"
+          text: ""
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
+        - heading: "TIEMPO DE RESPUESTA"
+          text: ""
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
+        - heading: "1:7 PROPORCIÓN PROFESOR: ESTUDIANTE"
+          text: ""
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
+        - heading: "SOPORTE PROFESIONAL A LA MEDIDA"
+          text: ""
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
 
-  - name: top_coding_bootcamp
+  - name: coding
     position: 6
     layout: two_column_left
+    swipable: False
+    background: "lightBlue2"
+    image:
+      style: '{ "backgroundSize": "contain" }'
+      src: "/images/landing/metting-img.png"
+      shadow: false
+    heading: 
+      text: "Membresías"
+    sub_heading:
+      text: ""
+    button: 
+      text: "Descubre lo que dicen nuestros estudiantes"
+      color: white
+      hover_color: "white"
+      background: "black"
+      path: "#why_4geeks"
+    content: 
+      text: ""
+      font_size: ["16px"]
+      path: ""
+    bullets:
+      items:
+      - heading: "GeekPAL"
+        text: "Es una membresía instantánea que obtienes cuando te conviertes en estudiante de 4Geeks Academy. Te garantiza que no volverás a programar solo. Con GeekPAL contará con un compañero por el resto de su vida, sí, incluso después de graduarse. Si te quedas atascado, siempre habrá un mentor disponible para que puedas obtener ayuda con tu código"
+        icon: "circle" #string with icon for example ['check', 'cicle', etc]
+      - heading: "GeekForce"
+        text: "Es el proceso colectivo de apoyo profesional del Bootcamp. La 'fuerza' significa empoderamiento profesional y es una membresía de por vida. Brinda asistencia para la colocación laboral del estudiante y para que se prepare para conseguir un trabajo en tecnología."
+        icon: "circle" #string with icon for example ['check', 'cicle', etc]
+        
+  - name: top_coding_bootcamp
+    position: 4
+    layout: two_column_left
     proportions: [4, 8]
+    background: "#fbfbfb"
     image:
       style: '{ "backgroundSize": "contain" }'
       src: "/images/badges/Course-Report-Badge-2023.png"
@@ -135,31 +183,38 @@ components:
       text:
         "Tenemos 3 años consecutivos siendo seleccionados como uno de los mejores coding bootcamps del mundo"
         #xl      lg     md     sm    xs
-      font_size: ["40px", "40px", "40px", "40px", "40px"]
+      font_size: ["38px", "36px", "32px", "30px", "30px"]
   - name: alianza
     position: 2
     layout: two_column_left
     proportions: [5, 7]
     image:
-      style: '{ "backgroundSize": "contain" }'
+      style: '{ "backgroundSize": "cover", "background-position": "top"}'
       src: "/images/ownpeoplecoding2.jpg"
+      shadow: true
     heading:
       text: "4Geeks Academy & Tecnología Financiera: ¡La alianza que impulsará tu vida profesional!"
       font_size: ["30px", "30px", "30px", "30px", "30px"]
     sub_heading:
-      text: "Si formas parte de Tecnología Financiera ahora también podrás ser uno de nuestros geeks.
-
-En 4Geeks Academy sabemos lo que buscas y queremos darte todas las herramientas necesarias para que puedas aprender a programar y logres cambiar tu vida por completo."
+      text:
+        "Si formas parte de Tecnología Financiera ahora también podrás ser uno de nuestros geeks.
+        En 4Geeks Academy sabemos lo que buscas y queremos darte todas las herramientas necesarias para que puedas aprender a programar y logres cambiar tu vida por completo."
       font_size: ["16px", "16px", "16px", "16px", "16px"]
     content:
       font_size: ["16px"]
       text: |
         <p><span style="font-weight: bold;">Aprovecha esta alianza y forma parte de la evolución tecnológica a nivel mundial ¡Comienza HOY!</p>
+    button:
+      text: "Únete a la Academia"
+      background: black
+      color: white
+      hover_color: "#white"
+      path: "#top"
 
-    
 badges:
-  position: 3
+  position: 7
   heading: "4Geeks Academy cuenta con premios y reconocimientos de validan su excelencia"
+  style: '{ "font-size":"22px", "font-weight":"800"}'
 
 why_4geeks:
   position: 7
@@ -171,3 +226,8 @@ who_is_hiring:
   limit: 4
   heading: "¿Quién contrata a nuestros alumnos?"
   sub_heading: "Nos encanta ver crecer a nuestros estudiantes, es por eso que nos esforzamos cada día por tener más aliados, para que puedas trabajar en empresas que te ayuden a seguir creciendo profesionalmente."
+
+apply_schollarship: # form that is displayed at the end of the landing
+  # title: "Apoyo Profesional Ilimitado"
+  imageSide: "left"
+  image: "../../../static/images/landing/apply.png"

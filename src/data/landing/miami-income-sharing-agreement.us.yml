@@ -27,12 +27,17 @@ form:
   button_label: Get more information
   redirect: null #you can redirect to another url or entirely diffrent website
 
+apply_schollarship: # form that is displayed at the end of the landing
+  # title: "Apoyo Profesional Ilimitado"
+  imageSide: "left"
+  image: "../../../static/images/landing/apply.png"
+
 # jumbotron on the top (cannot be commented out)
 header_data:
   tagline: Pay nothing until you make it
   sub_heading: Become a software developer without upfront investment.
-  image: "../../../static/images/4geeks-main.jpg"
-  image_filter: brightness(0.3)
+  background_image: "../../../static/images/4geeks-main.jpg"
+  image_filter: brightness(0.25)
 
 features:
   marginTop: 0px #<-- separation between tagline and the bullets
@@ -70,22 +75,22 @@ short_badges:
   - name: "Switchup"
     url: ""
     image: "../../../static/images/badges/switchup-badge-2023.png"
-    alt: "Best coding bootcamp Switchup 2023"   
+    alt: "Best coding bootcamp Switchup 2023"
   - name: "Florida Department of Education"
     url: ""
-    image: "../../../static/images/badges/licensed.png"
+    image: "../../../static/images/badges/licensed-inverted.png"
     alt: "Florida Department of Education"
 
 #
 # ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇
 #
 
-in_the_news:
-  position: 1
-  heading: "Read about us in the media..."
+# in_the_news:
+#   position: 1
+#   heading: "Read about us in the media..."
 
 badges:
-  position: 2
+  position: 6
   heading: "4Geeks Academy has awards and recognitions that validate it's excellence"
 
 geeks_vs_others:
@@ -100,7 +105,7 @@ why_4geeks:
   sub_heading: " "
 
 who_is_hiring:
-  position: 7
+  position: 11
   limit: 4
   heading: "Who is hiring our students?"
   sub_heading: "500+ hiring partners, and 50+ job openings right now for software development"
@@ -163,7 +168,7 @@ components:
           src: "/images/isa/isa6.png"
 
   - name: first_syllabus_form
-    position: 4
+    position: 3
     layout: syllabus
     button:
       text: "Instant Download"
@@ -172,38 +177,58 @@ components:
       #             xl      lg      md      sm      xs
       font_size: ["40px", "40px", "40px", "40px", "40px"]
   - name: top_coding_bootcamp
-    position: 4
+    position: 2
     layout: two_column_left
+    background: "#ebebeb"
     proportions: [4, 8]
     image:
       style: '{ "backgroundSize": "contain" }'
-      src: "/images/badges/switchup.png"
+      src: "/images/badges/switchup-badge-2023.png"
       link: "https://www.switchup.org/bootcamps/4geeks-academy"
     button:
       text: "Read testimonials"
-      color: null
+      color: "white"
+      background: "black"
+      hover: "white"
       path: "https://www.switchup.org/bootcamps/4geeks-academy"
     heading:
-      text:
-        "We have been named one of the TOP coding bootcamps in the World"
+      text: "We have been named one of the TOP coding bootcamps in the World"
       #             xl      lg      md      sm      xs
       font_size: ["40px", "40px", "40px", "40px", "40px"]
   - name: working_as_software_developers
     position: 7
     proportions: [4, 8]
     layout: two_column_left
+    background: "#fbfbfb"
     image:
+      style: '{ "backgroundSize": "cover" }'
       src: "https://storage.googleapis.com/4geeks-academy-website/landing-pictures/testimonials.webp"
+      shadow: true
     heading:
-      text:
-        "89% of our graduates are now working as software developers with an average entry salary of $50,000/yr."
+      text: "89% of our graduates are now working as software developers with an average entry salary of $50,000/yr."
       #             xl      lg      md      sm      xs
       font_size: ["40px", "34px"]
 
-    # content:
-    #   text:
-    #     "89% of our graduates are now working as software developers with an average entry salary of $50,000/yr."
-
+  - name: some_id
+    position: 1
+    layout: two_column_right
+    image:
+      src: "/images/testimonials/allisa-testimonial.jpg"
+    video: "https://www.youtube.com/watch?v=TCHASxvkhpI"
+    heading:
+      text:
+        "Unlock Your Future: Exclusive Scholarships with Miami Dade College, Clark University, and United Way Miami for South Florida Applicants!"
+        #xl      lg     md     sm    xs
+      font_size: ["40px", "34px", "34px", "25px", "20px"]
+    content:
+      text: "Seize this chance to supercharge your education. Join the academy now and pave the way to your brightest future! Contact our admissions team to learn more and join our coding bootcamp today!"
+      font_size: ["16px"]
+    button:
+      text: "GET MORE INFO"
+      background: black
+      color: white
+      hover_color: "#white"
+      path: "#top"
 # why_python:
 #   position: 7
 #   heading: "¿Porqué enseñamos Python?" # optional or set to white space to hide

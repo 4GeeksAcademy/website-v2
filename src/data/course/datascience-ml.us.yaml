@@ -84,6 +84,7 @@ details:
           icon: "book"
         - label: "Class size"
           content: "12 people max"
+          icon: "laptop"
         - label: "Certificate"
           content: "Our certificates are recognized by multiple organizations."
           link_text: "See example"
@@ -139,7 +140,7 @@ details:
       step: 2
     - module_name: "Collect"
       title: "Collect and store data"
-      description: "Probably longest step in most professional projects is collecting and cleaning the data. In this module you use Python and connect to a SQL Database, learn the SQL Sintax to query and manipulate that date, upload and download static files (CSV, JSON, etc.). Learn how to connect with API's or scrape websites that don't have available API's. Store the data in an organized way."
+      description: "Probably longest step in most professional projects is collecting and cleaning the data. In this module you use Python and connect to a SQL Database, learn the SQL syntax to query and manipulate that date, upload and download static files (CSV, JSON, etc.). Learn how to connect with API's or scrape websites that don't have available API's. Store the data in an organized way."
       projects: "Loading structured and unstructured data from different sources (e.g. SQL, Web Scraping, text files) and connect with the Twitter API."
       slug: "data-science"
       duration: "2 wks"

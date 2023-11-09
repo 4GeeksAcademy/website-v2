@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import { GridContainer, Div } from "../Sections";
+import { GridContainer, Grid, Div } from "../Sections";
 import { H2, H3, H4, Paragraph } from "../Heading";
 import { Colors, Anchor } from "../Styling";
 import Icon from "../Icon";
+import Link from "gatsby-link";
 
 const ContainerStyle = styled.div`
   height: 0.5px;
@@ -19,6 +20,11 @@ const FillerStyles = styled.div`
   text-align: right;
   transform: translateY(-50%);
 `;
+
+const weeks = [];
+for (let i = 1; i <= 16; i++) {
+  weeks.push(i.toString() + "sm.");
+}
 
 const strings = {
   us: {
@@ -43,6 +49,9 @@ const ProgramDetails = (props) => {
     (total, current, i) => [...total, (total[i - 1] || 0) + current.step],
     []
   );
+
+  const { title, sub_title, list } = props.details.about;
+
   useEffect(() => {
     const inter = setInterval(() => {
       setSelected((current) =>
@@ -57,26 +66,121 @@ const ProgramDetails = (props) => {
   }, []);
   return (
     <>
+      <Grid
+        gridTemplateColumns_tablet="repeat(14,1fr)"
+        maxWidth="1366px"
+        margin_xs="0 auto 45px auto"
+        padding_tablet="0 40px"
+        padding_md="0 80px"
+        padding_lg="0"
+      >
+        <Div
+          flexDirection="column"
+          gridColumn_tablet="1/8"
+          gap="22px"
+          padding_tablet="0 13px 0 0"
+          margin_tablet="100px 0 0 0"
+          margin="40px 20px 13px 20px"
+        >
+          <H3 textAlign="start">{title}</H3>
+          {sub_title && /<\/?[a-z0-9]+>/g.test(sub_title) ? (
+            <Paragraph
+              textAlign="start"
+              lineHeight="26px"
+              dangerouslySetInnerHTML={{ __html: sub_title }}
+            />
+          ) : (
+            <Paragraph textAlign="start" lineHeight="26px">
+              {sub_title}
+            </Paragraph>
+          )}
+        </Div>
+        <Div
+          flexDirection="column"
+          gridColumn_tablet="8/16"
+          padding="15px"
+          margin_tablet="100px 0 0 0"
+          background={Colors.veryLightBlue}
+          margin="13px 20px 40px 20px"
+        >
+          {list.map((item, index) => {
+            return (
+              <Div flexWrap="wrap">
+                <Div alignItems="start" margin="10px 0" key={index}>
+                  <Icon icon={item.icon} width="20px" height="20px" />
+                  <H4
+                    fontSize="16px"
+                    textAlign="start"
+                    fontFamily="Inter"
+                    lineHeight="19px"
+                    margin="0 0 0 9px"
+                  >
+                    <strong style={{ fontWeight: "700" }}>
+                      {item.label}:{" "}
+                    </strong>
+                    {item.content}
+                  </H4>
+                </Div>
+                {item.link_text && (
+                  <a
+                    href={item.link}
+                    style={{
+                      textAlign: "start",
+                      margin: "0 0 0 30px",
+                      textDecoration: "underline",
+                      fontFamily: "Lato",
+                      color: Colors.blue,
+                      fontSize: "16px",
+                    }}
+                  >
+                    {item.link_text}
+                  </a>
+                )}
+              </Div>
+            );
+          })}
+        </Div>
+      </Grid>
+
+      <Div flexWrap="wrap" margin_xs="20px" margin_tablet="100px 0 0 0">
+        <H2 lineHeight="36px">{props.heading || props.details.heading}</H2>
+        <Paragraph
+          padding="20px 0 0 0"
+          lineHeight_xs="22px"
+          fontSize_tablet="15px"
+          fontSize_xs="18px"
+        >
+          {props.sub_heading || props.details.sub_heading}
+        </Paragraph>
+      </Div>
+
       {props.withoutAnimation !== true && (
-        <GridContainer
-          padding_tablet="0"
-          margin_tablet="0 0 83px 0"
+        <Grid
+          //padding_tablet="0"
+          gridTemplateColumns_tablet="repeat(14,1fr)"
+          margin="0 auto"
           justifyItems="center"
+          maxWidth="1366px"
+          padding_tablet="0 40px"
+          padding_md="0 80px"
+          padding_lg="0"
         >
           <Div
             flexDirection="column"
-            display="none"
-            display_tablet="block"
-            margin="50px 0 0 0"
+            margin="0 0 0 0"
             minHeight="475px"
             height="auto"
-            borderBottom_tablet="1px solid black"
+            gridColumn_tablet="1/15"
+            display="none"
+            display_md="block"
           >
-            <H2>{props.heading || props.details.heading}</H2>
-            <Paragraph padding="20px 0 0 0">
-              {props.sub_heading || props.details.sub_heading}
-            </Paragraph>
-            <Div justifyContent="between" margin="50px 0 20px 0">
+            <Div
+              justifyContent="between"
+              margin="50px 0 20px 0"
+              className="badge-slider hideOverflowX__"
+              display_xs="none"
+              display_tablet="flex"
+            >
               {props.details.details_modules.map((item, index) => {
                 return (
                   <Div
@@ -85,8 +189,10 @@ const ProgramDetails = (props) => {
                     cursor="pointer"
                     flexDirection={`column`}
                     alignItems={`center`}
-                    backgroundHover={Colors.black}
-                    background={selected.index === index ? "#000000" : null}
+                    backgroundHover={Colors.grayBrown}
+                    background={
+                      selected.index === index ? Colors.grayBrown : null
+                    }
                     padding={"10px"}
                     borderRadius={"3px"}
                     display="flex"
@@ -100,9 +206,9 @@ const ProgramDetails = (props) => {
                         color={
                           selected.index === index ? "#ffffff" : Colors.darkGray
                         }
+                        colorHover="#ffffff"
                         fontWeight="900"
                         cursor={`pointer`}
-                        colorHover="#ffffff"
                         lineHeight="19px"
                       >
                         {item.module_name}
@@ -112,67 +218,164 @@ const ProgramDetails = (props) => {
                 );
               })}
             </Div>
-            <ContainerStyle>
-              <FillerStyles
-                completed={
-                  (steps[selected.index] * 100) / steps[steps.length - 1]
-                }
-              />
-            </ContainerStyle>
-            <Div margin="50px 0">
-              <Icon
-                style={{ flexShrink: 0 }}
-                icon="laptop"
-                width="52px"
-                height="39px"
-              />
-              <Div flexDirection="column" margin="0 0 0 15px">
-                <H3 textAlign="left">
-                  {props.details.details_modules[selected.index].title}
-                </H3>
-                {props.details.details_modules[selected.index].description
-                  .split("\\n")
-                  .map((d, i) => (
-                    <Paragraph key={i} textAlign="left" color={Colors.darkGray}>
-                      {d}
-                    </Paragraph>
-                  ))}
-              </Div>
+            <Div display_xs="none" display_tablet="flex">
+              <ContainerStyle>
+                <FillerStyles
+                  completed={
+                    (steps[selected.index] * 100) / steps[steps.length - 1]
+                  }
+                />
+              </ContainerStyle>
             </Div>
-            <Div margin="20px 0">
-              <Div margin="0 10px 0 0" width="50%">
-                <Div>
-                  <Icon icon="rocket" width="46px" height="46px" />
-                </Div>
+            <Div
+              flexDirection="row"
+              padding="32px"
+              display_xs="none"
+              display_tablet="flex"
+            >
+              {weeks.map((sm, index) => (
+                <H4
+                  margin="0 5px"
+                  fontSize="15px"
+                  lineHeight="22px"
+                  color={Colors.darkGray}
+                >
+                  {sm}
+                </H4>
+              ))}
+            </Div>
+            <Div
+              display_tablet="flex"
+              display_xs="flex" // aqui
+              flexDirection_xs="column"
+              flexDirection_md="row"
+              margin_xxs="20px"
+            >
+              <Div
+                margin_md="20px 20px 0 0"
+                margin_tablet="auto"
+                margin_xs="0 0 20px 20px"
+                width_md="50%"
+                width_xs="300px"
+                width_tablet="80%"
+                height_md="fit-content"
+                height_xs="auto"
+              >
+                <Icon
+                  style={{ flexShrink: 0 }}
+                  icon="laptop"
+                  width="52px"
+                  height="39px"
+                />
                 <Div flexDirection="column" margin="0 0 0 15px">
-                  <H3 textAlign="left">{strings[lang]["Projects"]}</H3>
-                  {props.details.details_modules[selected.index].projects
+                  <H3
+                    textAlign="left"
+                    textTransform="uppercase"
+                    margin="0 0 10px 0"
+                    fontSize_xs="18px"
+                    fontSize_tavlet="22px"
+                  >
+                    {props.details.details_modules[selected.index].title}
+                  </H3>
+                  {props.details.details_modules[selected.index].description
                     .split("\\n")
-                    .map((d, i) => (
+                    .map((detail, i) => (
                       <Paragraph
                         key={i}
                         textAlign="left"
                         color={Colors.darkGray}
+                        fontSize_tablet="18px"
+                        fontSize_xs="14px"
+                        lineHeight_tablet="19px"
+                        lineHeight_xs="17px"
+                        margin="0 0 10px 0"
                       >
-                        {d}
+                        {detail}
                       </Paragraph>
                     ))}
                 </Div>
               </Div>
-              <Div>
-                <Div>
-                  <Icon icon="clock" width="46px" height="46px" />
+              <Div
+                margin_md="20px 0 20px 20px"
+                margin_tablet="auto"
+                margin_xs="0 0 0 20px"
+                display="inline"
+                width_tablet="80%"
+                width_md="50%"
+                width_xs="320px"
+              >
+                <Div
+                  margin_md="0 10px 0 0"
+                  margin_xs="0 0 20px 0"
+                  width="100%"
+                  height_md="fit-content"
+                  height_xs="auto"
+                >
+                  <Div>
+                    <Icon icon="rocket" width="46px" height="46px" />
+                  </Div>
+                  <Div flexDirection="column" margin="0 0 0 15px">
+                    <H3
+                      textAlign="left"
+                      textTransform="uppercase"
+                      margin="0 0 10px 0"
+                      fontSize_xs="18px"
+                      fontSize_tavlet="22px"
+                    >
+                      {strings[lang]["Projects"]}
+                    </H3>
+                    {props.details.details_modules[selected.index].projects
+                      .split("\\n")
+                      .map((detail, i) => (
+                        <Paragraph
+                          key={i}
+                          textAlign="left"
+                          color={Colors.darkGray}
+                          fontSize_tablet="18px"
+                          fontSize_xs="14px"
+                          lineHeight_tablet="19px"
+                          lineHeight_xs="17px"
+                          margin="0 0 10px 0"
+                        >
+                          {detail}
+                        </Paragraph>
+                      ))}
+                  </Div>
                 </Div>
-                <Div flexDirection="column" margin="0 0 0 15px">
-                  <H3 textAlign="left">{strings[lang]["Duration"]}</H3>
-                  <Paragraph textAlign="left" color={Colors.darkGray}>
-                    {props.details.details_modules[selected.index].duration}
-                  </Paragraph>
+                <Div
+                  margin="0 10px 0 0"
+                  width="100%"
+                  height_md="50px"
+                  height_xs="auto"
+                >
+                  <Div>
+                    <Icon icon="clock" width="46px" height="46px" />
+                  </Div>
+                  <Div flexDirection="column" margin="0 0 0 20px">
+                    <H3
+                      textAlign="left"
+                      textTransform="uppercase"
+                      margin="0 0 10px 0"
+                      fontSize_xs="18px"
+                      fontSize_tavlet="22px"
+                    >
+                      {strings[lang]["Duration"]}
+                    </H3>
+                    <Paragraph
+                      textAlign="left"
+                      color={Colors.darkGray}
+                      fontSize="18px"
+                      lineHeight="19px"
+                      margin="0 0 10px 0"
+                    >
+                      {props.details.details_modules[selected.index].duration}
+                    </Paragraph>
+                  </Div>
                 </Div>
               </Div>
             </Div>
           </Div>
-        </GridContainer>
+        </Grid>
       )}
     </>
   );

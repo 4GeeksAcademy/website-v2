@@ -7,7 +7,7 @@ meta_info:
   image: "/images/bg/remote.jpeg"
   keywords: "Bootcamp de programacion, Aprende a programar, 4Geeks academy, aprende programacion, aprende ingenieria informatica"
 
-  template: "landing_nonav" # <--- choose your landing template
+  template: "landing_a" # <--- choose your landing template
   redirects: [] # <--- URL redirections to avoid 404 errors
 
   # Set a particular course or location to the landing page
@@ -46,7 +46,7 @@ features:
   #                                         up   left down  right
   styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
   bullets:
-    - Un Desarrollador Web Junior en Caracas gana aprox. $1.000 mensuales. 
+    - Un Desarrollador Web Junior en Caracas gana aprox. $1.000 mensuales.
     - Es una de las industrias donde hay más vacantes actualmente.
     - No necesitas experiencia previa para comenzar
   text: ¡Es el momento de impulsar tu carrera y convertirte en programador!
@@ -63,7 +63,7 @@ short_badges:
   - name: "Switchup"
     url: ""
     image: "../../../static/images/badges/switchup-badge-2023.png"
-    alt: "Best coding bootcamp Switchup 2023"   
+    alt: "Best coding bootcamp Switchup 2023"
   - name: "Florida Department of Education"
     url: ""
     image: "../../../static/images/badges/licensed.png"
@@ -85,9 +85,13 @@ follow_bar:
 #
 # ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇
 #
+apply_schollarship: # form that is displayed at the end of the landing
+  # title: "Apoyo Profesional Ilimitado"
+  imageSide: "left"
+  image: "../../../static/images/landing/apply.png"
 
 badges:
-  position: 6
+  position: 8
   heading: "Premios y reconocimientos que validan nuestra excelencia"
 
 program_details:
@@ -107,7 +111,7 @@ why_4geeks:
   sub_heading: ""
 
 who_is_hiring:
-  position: 6
+  position: 10
   limit: 4
   heading: "¿Quién contrata a nuestros alumnos?"
   sub_heading: "Nuestros partners de contratación crecen todos los días, con más de 150 aliados a nivel global y decenas de vacantes activas en nuestras bolsas de empleo."
@@ -120,31 +124,36 @@ who_is_hiring:
 # Possible layours: [two_column_left_image, two_column_right_image]
 components:
   - name: top_coding_bootcamp
-    position: 5
+    position: 2
     layout: two_column_left
     proportions: [4, 8]
+    background: "#e6e6e6"
     image:
-      style: '{ "backgroundSize": "contain" }'
-      src: "/static/images/badges/Course-Report-Badge-2023.png"
+      style: '{ "backgroundSize": "contain"}'
+      src: "/images/badges/Course-Report-Badge-2023.png"
       link: "https://www.coursereport.com/schools/4geeks-academy"
     heading:
       text:
         "Tenemos 3 años consecutivos siendo seleccionados como uno de los mejores coding bootcamps del mundo"
         #xl      lg     md     sm    xs
-      font_size: ["40px", "40px", "40px", "40px", "40px"]
+      font_size: ["38px", "36px", "32", "30px", "30px"]
+      padding: "0px"
   - name: more_testimonials
     position: 9
     layout: two_column_left
     image:
+      shadow: true
       src: "https://storage.googleapis.com/4geeks-academy-website/landing-pictures/testimonials.webp"
     heading:
       text: "Escúchalo de nuestros alumnos"
       #xl      lg     md     sm    xs
       font_size: ["40px", "34px", "34px", "25px", "20px"]
     button:
-      text: "Más testimoniales"
-      color: null
-      path: "https://www.youtube.com/watch?v=plwPwyrxX84"
+      text: "Historias de Éxito"
+      background: black
+      color: white
+      hover_color: "#FFB718"
+      path: "#why_4geeks"
     content:
       text: "Mi experiencia con 4Geeks ha sido magnífica, me ha encantado. Tengo unos profesores maravillosos y tengo unos compañeros súper geniales. He aprendido bastante sobre HTML, CSS, JavaScript, React y Python. Mis profesores siempre estuvieron atentos a lo que necesitaba. Igual hay una plataforma donde podemos hablar todos los estudiantes de 4Geeks y nos ayudamos entre todos.... ¡Ha sido genial tomar esta decisión! -Beatriz Hernández"
       font_size: ["16px"]
@@ -156,17 +165,24 @@ components:
     position: 7
     layout: two_column_right
     image:
-      src: "/images/bg/people_happy.jpg"
+      style: '{ "border" : "3px solid black" }'
+      shadow: true
+      src: "../../../static/images/testimonials/Mattia-Tozzi-testimonial.jpg"
     video: "B01-eTfgqqc"
     heading:
       text:
-        "Todo lo hacemos con pasión y con la mirada puesta en tu desarrollo profesional."
+        "El viaje de Mattia Tozzi en 4geeks Academy y como cambió su vida profesional."
         #xl      lg     md     sm    xs
       font_size: ["40px", "34px", "34px", "25px", "20px"]
-    # content:
-    #   text: ""
-    #   # font_size: ["16px"]
-
+    content:
+      text: "Descubre la cautivadora historia de Mattia Tozzi, quien, en busca de un cambio en su trayectoria profesional, se unió a 4Geeks Academy. Su experiencia es un testimonio vivo de cómo la dedicación y el aprendizaje en este bootcamp lo llevaron a convertirse en un profesional altamente capacitado."
+      font_size: ["16px"]
+    button:
+      text: "¡Únete a la Academia!"
+      path: "#bottom"
+      color: "white"
+      background: "black"
+      hover: "lightBlue"
 # why_python:
 #   position: 7
 #   heading: "¿Porqué enseñamos Python?" # optional or set to white space to hide

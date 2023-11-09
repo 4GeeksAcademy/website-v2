@@ -30,6 +30,7 @@
   "scripts": {
     "start": "gatsby develop -H 0.0.0.0 -o",
     "test": "sh ./src/test/test.sh",
+    "prompts": "sh ./src/prompt/prompt.sh",
     "start:storybook": "start-storybook -p 9000 -c .storybook",
     "build": "npm run test && node ./src/utils/makePagesDictionary.js && node ./src/test/test.redirect.js && node ./src/utils/makePostsDictionary.js && node ./src/utils/makeRedirectsDictionary.js && gatsby build",
     "build:gatsby": "gatsby build",
@@ -44,6 +45,7 @@
     "format": "prettier --write ."
   },
   "dependencies": {
+    "@fontsource/archivo": "^5.0.14",
     "@loadable/component": "^5.13.2",
     "browser-monads": "^1.0.0",
     "classnames": "^2.3.1",
@@ -75,14 +77,16 @@
     "gatsby-remark-images": "^3.3.27",
     "gatsby-remark-lazy-image-url": "^1.0.1",
     "gatsby-remark-lazy-load": "^1.0.2",
+    "gatsby-remark-prismjs": "^7.12.0",
     "gatsby-remark-reading-time": "^1.1.0",
     "gatsby-source-filesystem": "^5.11.0",
     "gatsby-transformer-remark": "^6.11.0",
     "gatsby-transformer-sharp": "^5.11.0",
     "gatsby-transformer-yaml": "^5.11.0",
+    "inter": "^2.1.0",
     "lazysizes": "^5.2.2",
     "node-fetch": "^2.6.1",
-    "prismjs": "^1.25.0",
+    "prismjs": "^1.29.0",
     "process": "^0.11.10",
     "prop-types": "^15.7.2",
     "react": "^18.2.0",

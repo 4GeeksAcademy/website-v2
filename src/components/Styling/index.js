@@ -39,11 +39,15 @@ export const Colors = {
   blue: "#00A0DA",
   lightBlue: "#BBEAFC",
   lightBlue2: "rgba(199, 243, 253, 0.5)",
+  blue2: "#0097CD",
   veryLightBlue: "#C7F3FD",
   veryLightBlue2: "#E3F9FE",
+  grayBrown: "#333333",
+  gray2: "#A4A4A466",
   gray: "#898a8b",
   gray3: "#828282",
   verylightGray: "#F5F5F5",
+  verylightGray2: "#FBFBFB",
   lightGray: "#ebebeb",
   lightGreen: "#c4f7b7",
   green: "#20630d",
@@ -58,6 +62,7 @@ export const Colors = {
   white: "#FFFFFF",
   red: "red",
   lightRed: "#ffcdc9",
+  whitePink: "#FFF1D1",
   shadow: "0px 0px 16px rgba(0, 0, 0, 0.15)",
 };
 
@@ -164,6 +169,8 @@ export const Span = styled.div`
 `;
 
 const StyledImage = styled.div`
+  display: ${(props) => props.display};
+  position: ${(props) => props.position};
   background-image: url(${(props) => props.src});
   background-repeat: no-repeat;
   background-size: ${(props) => props.backgroundSize || "cover"};
@@ -171,15 +178,57 @@ const StyledImage = styled.div`
   background-position: ${(props) => props.position || "center center"};
   background-color: ${(props) => props.backgroundColor};
   width: ${(props) => props.width};
+  border: ${(props) => props.border};
   height: ${(props) => props.height};
   min-height: ${(props) => props.minHeight};
   max-height: ${(props) => (props.maxHeight ? props.maxHeight : "none")};
   min-width: ${(props) => props.minWidth};
   margin: ${(props) => props.margin};
+  box-shadow: ${(props) => props.boxShadow};
   @media ${Break.sm} {
     height: ${(props) => props.h_sm};
     min-height: ${(props) => props.minHeight_sm};
     width: ${(props) => props.w_sm};
+  }
+  @media ${Devices.xxs} {
+    display: ${(props) => props.display_xxs};
+    height: ${(props) => props.height_xxs};
+    right: ${(props) => props.right_xxs};
+    bottom: ${(props) => props.bottom_xxs};
+    left: ${(props) => props.left_xxs};
+  }
+  @media ${Devices.xs} {
+    display: ${(props) => props.display_xs};
+    height: ${(props) => props.height_xs};
+    left: ${(props) => props.left_xs};
+    right: ${(props) => props.right_xs};
+    top: ${(props) => props.top_xs};
+    bottom: ${(props) => props.bottom_xs};
+  }
+  @media ${Devices.sm} {
+    width: ${(props) => props.width_sm};
+  }
+  @media ${Devices.tablet} {
+    display: ${(props) => props.display_tablet};
+    height: ${(props) => props.height_tablet};
+    left: ${(props) => props.left_tablet};
+    right: ${(props) => props.right_tablet};
+    top: ${(props) => props.top_tablet};
+    bottom: ${(props) => props.bottom_tablet};
+  }
+  @media ${Devices.md} {
+    display: ${(props) => props.display_md};
+    left: ${(props) => props.left_md};
+    right: ${(props) => props.right_md};
+    top: ${(props) => props.top_md};
+    bottom: ${(props) => props.bottom_md};
+  }
+  @media ${Devices.lg} {
+    display: ${(props) => props.display_lg};
+    left: ${(props) => props.left_lg};
+    right: ${(props) => props.right_lg};
+    top: ${(props) => props.top_lg};
+    bottom: ${(props) => props.bottom_lg};
   }
 `;
 export const Img = React.memo(StyledImage);
@@ -254,7 +303,6 @@ export const BackgroundSection = ({
       // fadeIn={false}
       className={className}
       borderRadius={borderRadius}
-      // fluid={image}
       {...bgImage}
       preserveStackingContext
       style={style}
@@ -269,6 +317,8 @@ export const StyledBackgroundSection = styled(BackgroundSection)`
   padding: ${(props) => props.padding};
   text-align: ${(props) => props.align};
   border-radius: ${(props) => props.borderRadius};
+  box-shadow: ${(props) => props.boxShadow};
+  position: ${(props) => props.position};
   background-repeat: no-repeat;
   margin: ${(props) => props.margin || "auto"};
   z-index: ${(props) => props.zIndex || 1};
@@ -279,30 +329,43 @@ export const StyledBackgroundSection = styled(BackgroundSection)`
   min-height: ${(props) => props.minHeight};
   flex-shrink: ${(props) => props.flexShrink};
   display: ${(props) => props.display};
-  &:before,
+  &:before {
+    background-size: ${(props) => props.bgSize};
+  },
   &:after {
     min-height: ${(props) => props.minHeight};
-    border-radius: ${(props) => props.borderRadius};
-    filter: ${(props) => props.filter};
+    border-radius: ${(props) => props.borderRadius}; 
+    filter: ${(props) => props.filter}; 
     height: ${(props) => props.h_sm};
+    width: ${(props) => props.width};
     max-width: ${(props) => props.maxWidth};
     background-color: ${(props) => props.backgroundColor};
     background-position: ${(props) => props.backgroundPosition} !important;
   }
   @media ${Devices.xxs} {
+    height: ${(props) => props.height_xxs};
+    width: ${(props) => props.width_xxs};
+    margin: ${(props) => props.margin_xxs};
+    &:before,
+    &:after {
+      filter: ${(props) => props.filter_xxs};
+    }
   }
   @media ${Devices.xs} {
     height: ${(props) => props.height_xs};
+    margin: ${(props) => props.margin_xs};
     width: ${(props) => props.width_xs || "100%"};
   }
   @media ${Devices.sm} {
     height: ${(props) => props.height_sm};
+    width: ${(props) => props.width_sm};
   }
   @media ${Devices.tablet} {
     border-radius: ${(props) => props.borderRadius_tablet};
     height: ${(props) => props.height_tablet};
     width: ${(props) => props.width_tablet || "100%"};
     display: ${(props) => props.display_tablet};
+    margin: ${(props) => props.margin_tablet};
     &:before,
     &:after {
       border-radius: ${(props) => props.borderRadius_tablet};
@@ -313,6 +376,7 @@ export const StyledBackgroundSection = styled(BackgroundSection)`
     height: ${(props) => props.height_md};
   }
   @media ${Devices.lg} {
+    height: ${(props) => props.height_lg};
   }
   @media ${Devices.xl} {
   }
@@ -470,6 +534,7 @@ export const Button = styled(SmartButton)`
   }
   @media ${Devices.lg} {
     font-size: ${(props) => props.fontSize_lg};
+    width: ${(props) => props.width_lg};
   }
   @media ${Devices.xl} {
   }

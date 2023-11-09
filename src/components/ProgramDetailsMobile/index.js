@@ -27,11 +27,12 @@ const ProgramDetailsMobile = (props) => {
   }
   return (
     <>
-      <Grid
-        className="program-details-mobile"
-        padding="50px 10px"
-        padding_tablet="0px"
-        gridGap="0"
+      <Div
+        //className="program-details-mobile"
+        flexWrap="wrap"
+        padding_xxs="20px"
+        padding_tablet="35px"
+        gridGap="10px"
       >
         {props.details.details_modules.map((item, index) => {
           return (
@@ -40,12 +41,12 @@ const ProgramDetailsMobile = (props) => {
                 key={index}
                 width="100%"
                 height={selected.index === index ? "auto" : "76px"}
-                padding="20px"
+                padding_xs="10px 20px"
                 border={`1px solid ${Colors.black}`}
-                borderRadius="3px"
+                //borderRadius="3px"
                 borderLeft={`6px solid ${Colors.black}`}
-                margin={`7px 0`}
-                display_tablet="none"
+                margin_xs="5px 0"
+                display_md="none"
                 cursor={`pointer`}
                 onClick={() =>
                   selected.index === index
@@ -54,23 +55,26 @@ const ProgramDetailsMobile = (props) => {
                 }
                 justifyContent={`between`}
                 flexDirection={selected.index === index && "column"}
+                style={{ position: "relative" }}
               >
                 <Div
                   display="flex"
                   flexDirection={`column`}
                   alignItems={`flex-start`}
-                  style={{ position: "relative" }}
                 >
                   <H3 textAlign="left">{item.module_name}</H3>
                   <Paragraph textAlign="left" margin="0 0 20px 0">
                     {item.duration}
                   </Paragraph>
                 </Div>
-                <Icon
-                  icon="arrowdown"
-                  width="32"
-                  style={{ position: "absolute", right: "35px" }}
-                />
+                <Div
+                  style={{ position: "absolute", right: "13px", top: "15px" }}
+                  transform={
+                    selected.index === index ? "rotate(180deg)" : "rotate(0deg)"
+                  }
+                >
+                  <Icon icon="arrowdown" width="32px" height="32px" />
+                </Div>
                 {selected.index === index && (
                   <Div flexDirection="column">
                     <Div alignItems={`center`} margin={`10px 0`}>
@@ -119,7 +123,7 @@ const ProgramDetailsMobile = (props) => {
             </React.Fragment>
           );
         })}
-      </Grid>
+      </Div>
     </>
   );
 };

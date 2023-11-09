@@ -8,6 +8,7 @@ import ReactPlayer from "../ReactPlayer";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import "../../assets/css/utils.css";
 
 const AlumniProjects = ({
   lang,
@@ -17,6 +18,7 @@ const AlumniProjects = ({
   playerHeight,
   title,
   paragraph,
+  yml,
 }) => {
   const [projects, setProjects] = useState(
     lang[0].node.projects.slice(0, limit || lang[0].node.projects.length)
@@ -62,6 +64,7 @@ const AlumniProjects = ({
   };
   const settings = {
     dots: true,
+    dotsClass: "slick-dotss",
     infinite: true,
     autoplay: true,
     autoplaySpeed: 6000,
@@ -101,22 +104,31 @@ const AlumniProjects = ({
   //         }
   //     }
   // };
-
   return (
-    <Div flexDirection="column" style={containerStyle}>
-      {title !== undefined && paragraph !== undefined && (
-        <GridContainer margin="6rem 0">
-          <Div display="flex" flexDirection="column" alignItems="center">
-            <H2 margin="0 0 15px 0" fontWeight="900">
-              {title}
-            </H2>
-            <Paragraph padding="0" padding_tablet="0 16%">
-              {paragraph}
-            </Paragraph>
-          </Div>
-        </GridContainer>
-      )}
-
+    <Div
+      flexDirection="column"
+      style={containerStyle}
+      maxWidth_lg="1366px"
+      maxWidth_md="1024px"
+      maxWidth_tablet="768px"
+      margin_md="0px auto 30px auto"
+      paddgin_xs="0 0 20px 0"
+      margin_tablet="0px auto 60px auto"
+      zIndex="1"
+    >
+      {(title !== undefined && paragraph !== undefined) ||
+        (yml && (
+          <GridContainer margin="50px 0 50px 0">
+            <Div display="flex" flexDirection="column" alignItems="center">
+              <H2 margin="0 0 15px 0" fontWeight="700" lineHeight="36px">
+                {yml.heading || title}
+              </H2>
+              <Paragraph padding="0" padding_tablet="0 16%">
+                {yml.sub_heading || paragraph}
+              </Paragraph>
+            </Div>
+          </GridContainer>
+        ))}
       <Slider {...settings}>
         {projects?.map((item, index) => {
           return (
@@ -128,21 +140,26 @@ const AlumniProjects = ({
               gridGap_tablet="0"
               margin_tablet="0 0 36px 0"
               margin="0 0 50px 0"
-              padding_tablet="0"
+              padding_tablet="0 40px"
+              height_tablet="414px"
             >
               <Div
-                background={Colors.lightGray}
-                height_tablet="auto"
+                height_tablet="414px"
                 padding="0"
-                padding_tablet="17px 51px"
-                gridColumn_tablet="1 / 9"
+                padding_tablet="0"
+                gridColumn_tablet="1 / 7"
               >
                 {item.project_video === "" ? (
                   <StyledBackgroundSection
-                    height={`500px`}
                     image={item.project_image.childImageSharp.gatsbyImageData}
                     bgSize={`cover`}
                     alt="Cnn Logo"
+                    style={{
+                      width: "100%",
+                      height: "342px",
+                    }}
+                    margin_xxs="0px"
+                    margin_tablet="36px 15%"
                   />
                 ) : (
                   <ReactPlayer
@@ -152,20 +169,42 @@ const AlumniProjects = ({
                     imageSize="maxresdefault"
                     right_tablet="-93px"
                     left_tablet="unset"
+                    margin_tablet="36px 15%"
                     switched={switched}
-                    videoHeight="500px"
+                    videoHeight="342px"
+                    width_play="92px"
+                    height_play="92px"
+                    fontSize_play="28px"
+                    background_play="black"
+                    opacity_play="1"
+                    leftPlay_tablet="121.5%"
+                    transformPlay_tablet="translateX(-115%%) translateY(-50%)"
+                    transformPlay_md="translateX(-51%) translateY(-50%)"
+                    transformPlay_lg="translateX(-50%) translateY(-50%)"
                     style={{
                       width: "100%",
-                      height: "500px",
+                      height: "342px",
                     }}
                   />
                 )}
               </Div>
-              <Div flexDirection="column" gridColumn_tablet="10 / 15 ">
-                <H3 textAlign="left" margin={`10px 0`}>
+              <Div flexDirection="column" gridColumn_tablet="8 / 15 ">
+                <H3
+                  textAlign="left"
+                  margin_tablet={`0 0 10px 0`}
+                  margin_xs="20px 0 5px 0"
+                >
                   Project: {`${item.project_name}`}
                 </H3>
-                <H4 textAlign="left" fontWeight="900" margin={`24px 0 9px 0`}>
+                <H4
+                  textAlign="left"
+                  fontWeight="900"
+                  lineHeight="19px"
+                  margin_tablet="9px 0"
+                  margin_xs="20px 0 0 0"
+                  margin_md="20px 0 0 0"
+                  margin={`24px 0 9px 0`}
+                >
                   {" "}
                   {`> MADE BY:`}
                 </H4>
@@ -174,7 +213,9 @@ const AlumniProjects = ({
                     <Div
                       key={i}
                       justifyContent="start"
-                      margin={`0 0 20px 0`}
+                      margin_xs="10px 0 0 0"
+                      margin_tablet="5px 0 0 0"
+                      margin_md="15px 0 0 0"
                       gap="10px"
                       display="flex"
                     >
@@ -183,6 +224,7 @@ const AlumniProjects = ({
                         fontWeight={`400`}
                         width="fit-content"
                         margin="0 20px 0 0"
+                        lineHeight="22px"
                       >
                         {`${alumni.first_name} ${alumni.last_name}`}
                       </H4>
@@ -224,13 +266,18 @@ const AlumniProjects = ({
                 <H4
                   textAlign="left"
                   fontWeight="900"
-                  margin={`20px 0 6px 0`}
+                  margin={`30px 0 10px 0`}
+                  lineHeight="19px"
                   style={{ borderTop: "1px solid #ebebeb" }}
                 >
                   {" "}
                   {`> DESCRIPTION:`}
                 </H4>
-                <Paragraph color={Colors.gray} textAlign="left">
+                <Paragraph
+                  color={Colors.gray}
+                  textAlign="left"
+                  lineHeight="22px"
+                >
                   {item.project_content}
                 </Paragraph>
               </Div>

@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from "gatsby";
 import Icon from "../Icon";
 import Toggle from "../ToggleSwitch";
 import { Link } from "../Styling/index";
-import { GridContainer, Div } from "../Sections";
+import { GridContainer, Div, Grid } from "../Sections";
 import Select, { SelectRaw } from "../Select";
 import { H2, H3, H4, H5, Paragraph } from "../Heading";
 import { Button, Colors, RoundImage, Img } from "../Styling";
@@ -31,13 +31,18 @@ const PricingCard = ({
           setSelectedPlan(slug);
         }}
         height="fit-content"
+        alignItems="flex-start"
+        margin_xs="9px 0 0 0"
+        margin_tablet="0"
       >
         {recomended && (
           <Div background={Colors.blue}>
             <Paragraph
               color={Colors.white}
-              fontWeight_tablet="700"
-              fontSize="1"
+              // fontWeight_tablet="700"
+              fontSize="14px"
+              fontWeight="500"
+              lineHeight="17px"
               opacity="1"
             >
               {info.recomended}
@@ -45,12 +50,16 @@ const PricingCard = ({
           </Div>
         )}
         <Div
-          border={`2px solid ${Colors.blue}`}
-          padding="15px 12px"
+          //border={`2px solid ${Colors.blue}`}
+          //border={`2px solid ${isSelected ? Colors.blue : "black"}`}
+          border={isSelected ? `1px solid ${Colors.blue}` : "1px solid black"}
+          padding_md="17px 20px"
+          padding_tablet="8px 5px"
+          padding_xs="8px 20px"
           display="block"
         >
           <Div className="price-section" justifyContent="between" width="100%">
-            <Div alignItems="center">
+            <Div alignItems_xs="flex-start" width="60%" padding_xs="5px 0 0 0">
               <Div
                 border={`1px solid ${isSelected ? Colors.blue : "#A4A4A4"}`}
                 width="21px"
@@ -74,8 +83,9 @@ const PricingCard = ({
               </Div>
               <Div display="block">
                 <Paragraph
-                  lineHeight="14px"
-                  fontWeight_tablet="700"
+                  lineHeight="17px"
+                  fontWeight_xs="700"
+                  fontSize="14px"
                   color={Colors.black}
                   opacity="1"
                   textAlign="left"
@@ -84,7 +94,9 @@ const PricingCard = ({
                   {scholarship}
                 </Paragraph>
                 <Paragraph
-                  lineHeight="14px"
+                  lineHeight="17px"
+                  fontWeight="400"
+                  fontSize="14px"
                   color={Colors.black}
                   opacity="1"
                   textAlign="left"
@@ -93,19 +105,22 @@ const PricingCard = ({
                 </Paragraph>
               </Div>
             </Div>
-            <Div className="price-container" display="block">
-              <Paragraph
-                fontWeight_tablet="700"
+            <Div className="price-container" display="block" width="40%">
+              <H3
+                textAlign="end"
+                fontWeight="700"
+                fontSize="30px"
+                lineHeight="36px"
                 color={Colors.black}
                 opacity="1"
               >
-                <span style={{ fontSize: "36px" }}>
-                  {!jobGuarantee ? data.price : data.job_guarantee_price}
-                </span>
-              </Paragraph>
+                {!jobGuarantee ? data.price : data.job_guarantee_price}
+              </H3>
               {!jobGuarantee && (
                 <Paragraph
-                  fontWeight_tablet="700"
+                  fontWeight="700"
+                  fontSize="30px"
+                  lineHeight="36px"
                   color={Colors.black}
                   opacity="1"
                   textAlign="right"
@@ -116,7 +131,7 @@ const PricingCard = ({
             </Div>
           </Div>
 
-          {data.icons && data.icons.length !== 0 && (
+          {data.icons && data.icons.length > 0 && (
             <Div
               className="icons"
               background={Colors.verylightGray}
@@ -146,18 +161,18 @@ const PricingCard = ({
           className="expandable"
           display="block"
           display_tablet="none"
-          margin="10px 0 0 0"
+          margin="0 0 10px 0"
           background="#F9F9F9"
           border="1px solid #EBEBEB"
-          padding="15px 12px"
+          padding="24px 15px"
           width="100%"
         >
-          <H3 textAlign="center" margin="0 0 15px 0">
+          <H3 textAlign="center" margin="0 0 15px 0" fontSize="21px">
             {info.plan_details}
           </H3>
           {data.bullets &&
             data.bullets.map((bullet) => (
-              <Div alignItems="center" margin="10px 0 0 0">
+              <Div alignItems="center" margin="21px 0 0 0">
                 <Icon
                   icon="check"
                   width="17px"
@@ -168,8 +183,8 @@ const PricingCard = ({
                 />
                 <Paragraph
                   lineHeight="19px"
-                  fontWeight="700"
-                  fontWeight_tablet="700"
+                  fontWeight="500"
+                  fontSize="14px"
                   color={Colors.black}
                   opacity="1"
                   textAlign="left"
@@ -180,7 +195,7 @@ const PricingCard = ({
             ))}
           <Link
             style={{
-              marginTop: "15px",
+              marginTop: "21px",
               display: "block",
             }}
             to={`${info.apply_button.link}${
@@ -192,7 +207,7 @@ const PricingCard = ({
               width="100%"
               color={Colors.black}
               textColor={Colors.white}
-              fontSize="16px"
+              fontSize="12px"
               margin="auto"
               textAlign="center"
               display="block"
@@ -491,49 +506,85 @@ const PricesAndPayments = (props) => {
       background={props.background}
       github="/location"
       flexDirection="column"
-      padding="50px 0"
-      padding_tablet="70px 0"
+      padding="50px 17px"
+      padding_xxs="20px"
+      padding_tablet="70px 40px"
+      padding_md="70px 80px"
+      padding_lg="70px 0px"
+      maxWidth_md="1366px"
+      margin="0 auto"
     >
-      <GridContainer margin="0 0 25px 0" margin_tablet="0 0 25px 0">
-        <Div display="flex" flexDirection="column" alignItems="center">
-          <H2 margin="0 0 15px 0" fontWeight="900">
-            {props.title}
-          </H2>
-          <Paragraph>{props.paragraph}</Paragraph>
-        </Div>
-      </GridContainer>
-      <GridContainer
-        margin="0 0 70px 0"
-        margin_tablet="0 0 25px 0"
-        margin_xs="0 0 30px 0"
+      <H2
+        fontSize_md="38px"
+        fontSize_xs="21px"
+        lineHeight="46px"
+        textAlign="center"
+        width="100%"
+        margin="0 0 20px 0"
+      >
+        {info.plans_title}
+      </H2>
+      <Grid
+        gridTemplateColumns_lg="3fr repeat(23,1fr) 3fr"
+        gridTemplateColumns_md="1fr repeat(14,1fr) 1fr"
+        gridTemplateColumns_tablet="1fr repeat(13,1fr) 1fr"
+        gridGap="0"
       >
         <Div
-          flexDirection_tablet="row"
-          flexDirection="column"
-          justifyContent="center"
+          gridColumn_md="2/9"
+          gridColumn_lg="2/16"
+          gridColumn_tablet="2/10"
           alignItems="center"
         >
-          {
-            props.course && (
+          <H3
+            fontSize_md="22px"
+            fontSize_xs="16px"
+            lineHeight="26px"
+            fontWeight="700"
+            textAlign_tablet="start"
+            textAlign_xs="center"
+            opacity="1"
+            color={Colors.black}
+          >
+            {info.select}
+          </H3>
+        </Div>
+        {/* SELECT COUNTRY */}
+        <Div
+          gridColumn_lg="16/25"
+          gridColumn_md="11/16"
+          gridColumn_tablet="10/15"
+          justifyContent_xs="center"
+          justifyContent_tablet="start"
+        >
+          <Div
+            flexDirection_tablet="row"
+            flexDirection="column"
+            alignItems="center"
+          >
+            {props.course && (
               <Select
                 top="40px"
                 left="20px"
                 width="fit-content"
+                topLabel="Location"
                 options={courseArray}
                 openLabel={course ? course.label : props.openedLabel}
                 closeLabel={course ? course.label : props.closedLabel}
                 onSelect={(opt) => setCourse(opt)}
               />
-            )
-            // </GridContainer>
-          }
-          &nbsp;
-          {
-            course && (
-              // <GridContainer>
-              <Div width="320px">
+            )}
+            &nbsp;
+            {course && (
+              <Div
+                width_tablet="220px"
+                width_md="320px"
+                width_xs="320px"
+                width_xxs="280px"
+              >
                 <SelectRaw
                   bgColor={Colors.white}
+                  //topLabel="Location"
                   options={locations.map((l) => ({
                     label: l.node.name,
                     value: l.node.active_campaign_location_slug,
@@ -553,188 +604,201 @@ const PricesAndPayments = (props) => {
                   }
                 />
               </Div>
-            )
-            // </GridContainer>
-          }
+            )}
+          </Div>
         </Div>
-      </GridContainer>
-      <Div display="block" minHeight_tablet="600px" padding_md="20px">
-        <ChartSection info={info} currentLocation={currentLocation} />
-        <Div
-          border="1px solid #000"
-          background="#FFF"
-          padding_xs="18px 15px"
-          padding_sm="38px"
-          maxWidth_md="800px"
-          minWidth_md="580px"
-          width_md="auto"
-          width_xs="80%"
-          margin_sm="auto"
-          margin_xs="20px auto"
-          margin="20px auto"
-          display="block"
-        >
-          {availablePlans && availablePlans.length !== 0 ? (
-            <>
-              <H3
-                fontSize="24px"
-                lineHeight="29px"
-                textAlign="center"
-                width="100%"
-                margin="0 0 20px 0"
-              >
-                {info.plans_title}
-              </H3>
-              <Paragraph
-                fontSize="24px"
-                lineHeight="29px"
-                textAlign="center"
-                width="100%"
-                margin="0 0 20px 0"
-                opacity="1"
-                color={Colors.black}
-              >
-                {info.select}
-              </Paragraph>
-            </>
-          ) : (
-            <Div
-              fontSize="25px"
-              display="block"
-              textAlign="center"
-              dangerouslySetInnerHTML={{
-                __html: jobGuarantee
-                  ? info.not_available_job_guarantee
-                  : info.not_available,
-              }}
-            />
-          )}
-          {availablePlans.some((plan) => plan.job_guarantee_price) && (
-            <Div
-              display="block"
-              background={Colors.veryLightBlue}
-              padding="10px"
-              margin="20px 0 20px 0"
+      </Grid>
+
+      {/* <Div display="block" minHeight_tablet="600px" padding_md="20px"> */}
+      {/* <ChartSection info={info} currentLocation={currentLocation} /> */}
+      <Div
+        //border="1px solid #000"
+        background="#FFF"
+        padding_tablet="0 0 38px 0"
+        maxWidth_md="1366px"
+        minWidth_md="580px"
+        margin="20px auto"
+        //display="block"
+      >
+        {availablePlans && availablePlans.length === 0 ? (
+          <Div
+            margin_xs="20px 15px"
+            margin_tablet="30px 60px"
+            margin_lg="60px 0"
+            fontSize="25px"
+            display="block"
+            textAlign="center"
+            dangerouslySetInnerHTML={{
+              __html: jobGuarantee
+                ? info.not_available_job_guarantee
+                : info.not_available,
+            }}
+          />
+        ) : (
+          <>
+            <Grid
+              gridTemplateColumns_tablet="repeat(20,1fr)"
+              // gridTemplateColumns_md="repeat(22,1fr)"
+              // gridTemplateColumns_lg="repeat(24,1fr)"
+              gridTemplateRows_tablet="1fr 1fr 1fr"
+              gridGap="32px 0px"
             >
-              <Div alignItems="center">
-                <Toggle
-                  isChecked={jobGuarantee}
-                  onChange={() => setJobGuarantee(!jobGuarantee)}
-                />
-                <H4
-                  textAlign="left"
-                  fontWeight="700"
-                  fontSize="18px"
-                  margin="0 0 0 10px"
+              {availablePlans.some((plan) => plan.job_guarantee_price) && (
+                <Div
+                  background={Colors.veryLightBlue}
+                  padding="8px"
+                  margin_tablet="32px 0 0 0"
+                  gridColumn_tablet="1/21"
+                  // gridColumn_md="2/24"
+                  // gridColumn_lg="2/26"
+                  gridRow_tablet="1"
+                  flexWrap="wrap"
                 >
-                  {info.job_guarantee.title}
-                </H4>
-              </Div>
-              <Paragraph textAlign="left" color={Colors.black} opacity="1">
-                {info.job_guarantee.description}
-              </Paragraph>
-            </Div>
-          )}
-          <Div gap="10px" margin="0 0 15px 0">
-            {availablePlans && availablePlans.length > 0 && (
+                  <Div alignItems="center" margin="0 0 7px 0">
+                    <Toggle
+                      isChecked={jobGuarantee}
+                      onChange={() => setJobGuarantee(!jobGuarantee)}
+                    />
+                    <H4
+                      textAlign="left"
+                      fontWeight="700"
+                      fontSize_tablet="18px"
+                      fontSize_xs="16px"
+                      margin="0 0 0 10px"
+                    >
+                      {info.job_guarantee.title}
+                    </H4>
+                  </Div>
+                  <Paragraph
+                    textAlign="left"
+                    color={Colors.black}
+                    opacity="1"
+                    fontSize="14px"
+                    lineHeight="17px"
+                  >
+                    {info.job_guarantee.description}
+                  </Paragraph>
+                </Div>
+              )}
+              {availablePlans && availablePlans.length > 0 && (
+                <Div
+                  display="none"
+                  display_tablet="block"
+                  background="#F9F9F9"
+                  border="1px solid #EBEBEB"
+                  padding="24px 15px 0 15px"
+                  margin_tablet="0 8px 0 0"
+                  gridColumn_tablet="1/11"
+                  // gridColumn_md="2/13"
+                  // gridColumn_lg="2/14"
+                  gridRow_tablet="2"
+                >
+                  <H3
+                    textAlign="center"
+                    margin="0 0 16px 0"
+                    fontSize="21px"
+                    lineHeight="25px"
+                  >
+                    {info.plan_details}
+                  </H3>
+                  <hr style={{ border: "1px solid #ebebeb", width: "60%" }} />
+                  {selected?.bullets &&
+                    selected.bullets.map((bullet) => (
+                      <Div alignItems="center" margin="21px 0 0 0">
+                        <Icon
+                          icon="check"
+                          width="17px"
+                          height="17px"
+                          style={{ marginRight: "10px" }}
+                          color={Colors.blue}
+                          fill={Colors.blue}
+                        />
+                        <Paragraph
+                          lineHeight="19px"
+                          fontWeight="500"
+                          fontSize="16px"
+                          color={Colors.black}
+                          opacity="1"
+                          textAlign="left"
+                        >
+                          {bullet}
+                        </Paragraph>
+                      </Div>
+                    ))}
+                </Div>
+              )}
               <Div
-                display="none"
-                display_tablet="block"
-                width="50%"
-                background="#F9F9F9"
-                border="1px solid #EBEBEB"
-                padding="10px"
+                className="cards-container"
+                flexWrap="wrap"
+                justifyContent_tablet="between"
+                justifyContent_xs="evenly"
+                gap="16px"
+                margin_tablet="0 0 0 8px"
+                gridColumn_tablet="11/21"
+                // gridColumn_md="13/24"
+                // gridColumn_lg="14/26"
+                gridRow="2"
               >
-                <H3 textAlign="center" margin="0 0 20px 0">
-                  {info.plan_details}
-                </H3>
-                <hr style={{ border: "1px solid #ebebeb" }} />
-                {selected?.bullets &&
-                  selected.bullets.map((bullet) => (
-                    <Div alignItems="center" margin="10px 0 0 0">
-                      <Icon
-                        icon="check"
-                        width="17px"
-                        height="17px"
-                        style={{ marginRight: "10px" }}
-                        color={Colors.blue}
-                        fill={Colors.blue}
-                      />
-                      <Paragraph
-                        lineHeight="19px"
-                        fontWeight="700"
-                        fontWeight_tablet="700"
-                        color={Colors.black}
-                        opacity="1"
-                        textAlign="left"
-                      >
-                        {bullet}
-                      </Paragraph>
-                    </Div>
+                {availablePlans &&
+                  availablePlans.map((plan, index) => (
+                    <PricingCard
+                      data={plan}
+                      info={info}
+                      selectedPlan={selectedPlan}
+                      setSelectedPlan={setSelectedPlan}
+                      index={index}
+                      buttonText={buttonText}
+                      jobGuarantee={jobGuarantee}
+                    />
                   ))}
               </Div>
-            )}
-            <Div
-              className="cards-container"
-              flexWrap="wrap"
-              justifyContent_tablet="between"
-              justifyContent_xs="evenly"
-              width_tablet="50%"
-              gap="15px"
-            >
-              {availablePlans &&
-                availablePlans.map((plan, index) => (
-                  <PricingCard
-                    data={plan}
-                    info={info}
-                    selectedPlan={selectedPlan}
-                    setSelectedPlan={setSelectedPlan}
-                    index={index}
-                    buttonText={buttonText}
-                    jobGuarantee={jobGuarantee}
-                  />
-                ))}
-            </Div>
-          </Div>
-          {availablePlans && availablePlans.length !== 0 && (
-            <Div
-              display="none"
-              display_tablet="flex"
-              flexDirection="row-reverse"
-            >
-              <Link
-                style={{
-                  display: "block",
-                }}
-                to={`${info.apply_button.link}${
-                  selectedPlan ? `?utm_plan=${selectedPlan}` : ""
-                }`}
-              >
-                <Button
-                  variant="full"
-                  width="100%"
-                  color={Colors.black}
-                  textColor={Colors.white}
-                  fontSize="16px"
-                  margin="auto"
-                  textAlign="center"
-                  display="block"
-                  onClick={() => {
-                    if (selectedPlan) {
-                      setSession({
-                        ...session,
-                        utm: { ...session.utm, utm_plan: selectedPlan },
-                      });
-                    }
-                  }}
+              {availablePlans && availablePlans.length !== 0 && (
+                <Div
+                  display="none"
+                  display_tablet="flex"
+                  flexDirection="row-reverse"
+                  gridRow_tablet="3"
+                  gridColumn_tablet="12/22"
+                  gridColumn_md="13/24"
+                  gridColumn_lg="14/26"
+                  //margin="32px 0 0 0"
                 >
-                  {buttonText || info.apply_button.label}
-                </Button>
-              </Link>
-            </Div>
-          )}
-        </Div>
+                  <Link
+                    style={{
+                      display: "block",
+                    }}
+                    to={`${info.apply_button.link}${
+                      selectedPlan ? `?utm_plan=${selectedPlan}` : ""
+                    }`}
+                  >
+                    <Button
+                      variant="full"
+                      width="100%"
+                      color={Colors.black}
+                      textColor={Colors.white}
+                      fontSize="16px"
+                      margin="auto"
+                      textAlign="center"
+                      display="block"
+                      onClick={() => {
+                        if (selectedPlan) {
+                          setSession({
+                            ...session,
+                            utm: { ...session.utm, utm_plan: selectedPlan },
+                          });
+                        }
+                      }}
+                    >
+                      {buttonText || info.apply_button.label}
+                    </Button>
+                  </Link>
+                </Div>
+              )}
+            </Grid>
+          </>
+        )}
       </Div>
+      {/* </Div> */}
       <GridContainer
         columns_tablet="12"
         gridGap="0"
@@ -768,7 +832,9 @@ const PricesAndPayments = (props) => {
           />
         </Div>
       </GridContainer>
-      <Paragraph margin="35px 0 0 0">{info.get_notified}</Paragraph>
+      <Paragraph margin_xxs="15px 0" margin_tablet="0 0 0 0">
+        {info.get_notified}
+      </Paragraph>
       {/* <Div background={Colors.lightYellow} height="511px" width="100%" style={{position: "absolute", height: "511px"}}>f</Div> */}
     </Div>
   );

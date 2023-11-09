@@ -8,8 +8,8 @@ const size = {
   desktop: "2560px",
 };
 export const Devices = {
-  xxs: `(min-width: ${size.miniS})`,
-  xs: `(min-width: ${size.mobileS})`,
+  xxs: `(min-width: ${size.mobileS})`,
+  xs: `(min-width: ${size.mobileM})`,
   sm: `(min-width: ${size.mobileL})`,
   tablet: `(min-width: ${size.tablet})`,
   md: `(min-width: ${size.laptop})`,

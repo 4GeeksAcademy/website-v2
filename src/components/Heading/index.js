@@ -43,10 +43,13 @@ const BaseHeading = styled(Heading)`
   background-color: ${(props) => props.background};
   margin-top: ${(props) => props.marginTop};
   text-transform: ${(props) => props.textTransform};
+  text-decoration: ${(props) => props.textDecoration};
   text-align: ${(props) => props.textAlign || "center"};
   align-self: ${(props) => props.alignSelf};
   padding: ${(props) => props.padding};
   border-bottom: ${(props) => props.borderBottom};
+  text-decoration: ${(props) => props.textDecoration};
+  text-decoration-offset: ${(props) => props.textDecorationOffset};
 
   &:hover {
     background-color: ${(props) => props.bgHover || props.bg};
@@ -54,7 +57,9 @@ const BaseHeading = styled(Heading)`
     border-bottom: ${(props) => props.borderBottomHover};
   }
   @media ${Devices.xxs} {
+    line-height: ${(props) => props.lineHeight_xxs};
   }
+
   @media ${Devices.xs} {
     margin: ${(props) => props.margin_xs};
     max-width: ${(props) => props.maxWidth_xs};
@@ -64,6 +69,7 @@ const BaseHeading = styled(Heading)`
   }
   @media ${Devices.sm} {
     text-align: ${(props) => props.textAlign_sm};
+    font-size: ${(props) => props.fontSize_sm};
     margin: ${(props) => props.margin_sm};
     width: ${(props) => props.width_sm};
   }
@@ -207,6 +213,7 @@ export const Paragraph = styled.p`
   }
 
   @media ${Devices.xxs} {
+    margin: ${(props) => props.margin_xxs};
   }
   @media ${Devices.xs} {
     padding: ${(props) => props.padding_xs};
@@ -215,11 +222,13 @@ export const Paragraph = styled.p`
     font-size: ${(props) => props.fontSize_xs};
     font-weight: ${(props) =>
       props.isActive ? "bold" : props.fontWeight_xs || "400"};
+    line-height: ${(props) => props.lineHeight_xs};
   }
   @media ${Devices.sm} {
     width: ${(props) => props.width_sm};
     padding: ${(props) => props.padding_sm};
     text-transform: ${(props) => props.textTransform_sm};
+    font-size: ${(props) => props.fontSize_sm};
   }
   @media ${Devices.tablet} {
     display: ${(props) => props.display_tablet};
@@ -234,6 +243,7 @@ export const Paragraph = styled.p`
     padding: ${(props) => props.padding_tablet};
     margin: ${(props) => props.margin_tablet};
     text-transform: ${(props) => props.textTransform_tablet};
+    line-height: ${(props) => props.lineHeight_tablet};
   }
   @media ${Devices.md} {
     text-align: ${(props) => props.textAlign_md};
@@ -354,7 +364,7 @@ H1.defaultProps = {
 };
 H2.defaultProps = {
   fontSize: "30px",
-  lineHeight: "36px",
+  lineHeight: "24px",
   fontWeight: "700",
 };
 H3.defaultProps = {

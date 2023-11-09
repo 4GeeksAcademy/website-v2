@@ -102,6 +102,7 @@ details:
         icon: "book"
       - label: "Tamaño de la clase"
         content: "14 personas máx"
+        icon: "laptop"
       - label: "Certificado"
         content: "Nuestros certificados son  reconocidos por múltiples instuticiones."
         link_text: "Ver ejemplo"

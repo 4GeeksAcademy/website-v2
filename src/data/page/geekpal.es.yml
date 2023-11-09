@@ -10,15 +10,16 @@ meta_info:
 seo_title: Geekpal - 4Geeks Academy
 
 header:
-  title: ""
+  title: "<strong style='color:black; font-family: Archivo-Black;'>Geek</strong>
+  <strong style = 'color:#CD0000; font-family: Archivo-Black;'>PAL</strong> <br> 
+  <strong style='font-family: Archivo;'>nunca vuelvas a codificar solo</strong>"
   image: "../../../static/images/bg/companies-bg.jpg"
   image_alt: ""
-  paragraph: "GeekPAL es una membresía instantánea que obtienes cuando te conviertes en estudiante de 4Geeks Academy. 
-  <ul>
-    <li>- No volverás a codificar sólo. </li>
-    <li>- Cuenta mentores por el resto de su vida. </li>
-    <li>- Incluso después de graduarte.</li>
-  </ul>"
+  paragraph: "GeekPAL es una membresía instantánea que obtienes cuando te conviertes en estudiante de 4Geeks Academy."
+  bullets: 
+    - No volverás a codificar sólo.
+    - Cuenta mentores por el resto de su vida.
+    - Incluso después de graduarte.
   image_logo: "/images/geekpal.png"
 
 geekPal:
@@ -37,18 +38,18 @@ icons:
     
 list:
   - title: "Apoyo Profesional Ilimitado"
-    image: "../../../static/images/final-project.png"
+    image: "../../../static/images/professional-support.png"
     position: "right"
     sub:
-      - title: "✔ CLASES EXCLUSIVAS"
+      - title: "CLASES EXCLUSIVAS"
         text: "En 4Geeks creemos que el proceso personalizado da mejores resultados, es por esto que nuestras clases están pensadas para un máximo de 8 estudiantes y contamos con un ratio de <span style='font-weight: bold'> 1 profesor por cada 5 alumnos.</span>"
-      - title: "✔ MENTORÍAS 1:1"
+      - title: "MENTORÍAS 1:1"
         text: "Contamos con una red de mentores que están dispuestos a darte 
         <span style='font-weight: bold'> soporte 1:1</span> de manera presencial o remota, de forma ilimitada. Estas 
         <span style='font-weight: bold'> mentorias ilimitadas continúan</span> incluso después de haber finalizado tus estudios en 4geeks."
- 
+        
   - title: "Dónde sea y cuando sea"
-    image: "../../../static/images/bg/main-bg.jpg"
+    image: "../../../static/images/woman-afro-with-laptop.png"
     position: "left"
     text: "En 4Geeks no solo ajustamos las sesiones 
     <span style='font-weight: bold'> acordes tu calendario</span>, sino que también te damos la oportunidad de verlas de forma 
@@ -56,12 +57,12 @@ list:
     <br/>En cualquier sea el caso, te aseguramos tener la oportunidad de mentorias constantes y siempre que las necesites."
 
   - title: "Apoyo de la Comunidad"
-    image: "../../../static/images/comunity-support.png"
+    image: "../../../static/images/Group-6606.png"
     position: "right"
     sub:
-      - title: "✔ 4Geeks.com"
+      - title: "4Geeks.com"
         text: "Es una comunidad creada para acelerar la forma en que los desarrolladores junior aprenden y evolucionan utilizando la tecnología. <a href='https://4geeks.com'>4Geeks.com</a> te da acceso a muchos recursos para mejorar tus habilidades, pero también puedes contribuir para ayudar a otros con su código. "
-      - title: "✔ Comunidad Slack"
+      - title: "Comunidad Slack"
         text: "Nuestra comunidad internacional de más de 
         <span style='font-weight: bold'> 2100 personas</span>, que te brindará todo el apoyo que necesites."
 

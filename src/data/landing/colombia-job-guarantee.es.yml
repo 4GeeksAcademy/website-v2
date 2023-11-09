@@ -25,30 +25,28 @@ form:
   heading: "Aplica a 4Geeks"
   motivation: "Únete a miles de graduados que viven como programadores y trabajan en grandes empresas."
   button_label: APLICA YA
-  redirect: "/es/gracias/?lang=es"  #you can redirect to another url or entirely diffrent website
+  redirect: "/es/gracias/?lang=es" #you can redirect to another url or entirely diffrent website
 
 navbar:
   buttonText: "APLICA YA"
   buttonUrl: "#bottom" # url accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
   logoUrl: "#"
 
-
 apply_schollarship: # form that is displayed at the end of the landing
   # title: "Get more info about this award-winning development course"
   imageSide: "right"
-  image: "../../../static/images/comunity-support.png"
+  image: "../../../static/images/landing/apply.png"
 
 # jumbotron on the top (cannot be commented out)
 header_data:
   background: "#FFF1D1"
-  tagline: Empleo Garantizado en 6 meses con nuestro programa Full-Stack Developer 
+  tagline: Empleo Garantizado en 6 meses con nuestro programa Full-Stack Developer
   sub_heading: Si no consigues empleo con nuestro Programa te devolvemos tu dinero. Da el paso hoy y Conviértete en Full-Stack Developer.
   badge: "../../../static/images/badges/Course-Report-Badge-2023.png"
   image_filter: brightness(0.3)
 
 features:
   marginTop: 0px #<-- separation between tagline and the bullets
-
   #                                         up   left down  right
   styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
   bullets:
@@ -56,7 +54,6 @@ features:
     - Mentorías y career support de por vida
     - Programa Part Time 100% remoto.
     - Aprovecha nuestras opciones de Financiamiento
-    
 
 short_badges:
   - name: "Premios Tecnologia Siglo XXI"
@@ -94,7 +91,7 @@ follow_bar:
 #
 
 rating_reviews:
-  position: 1
+  position: 4
   heading: "Lee acerca de nosotros"
   rating_list:
     - alt: "Career Karma"
@@ -115,26 +112,14 @@ rating_reviews:
       url: ""
 
 badges:
-  position: 2
+  position: 7
   heading: "4Geeks Academy cuenta con premios y reconocimientos que validan su excelencia"
 
 program_details:
-  position: 3
+  position: 1
   background: "#FFFFFF"
   heading: "Domina Python, JS y React"
   sub_heading: "Un curso de programación sobre las tecnologías más usadas del mundo"
-
-iconogram:
-  position: 4
-  icons:
-  - icon: "touch" 
-    title: Incríbete en el Programa
-  - icon: "instructor"
-    title: Obtén tu certificación
-  - icon: "talk"
-    title: Completa Nuestro GeekForce
-  - icon: "terminal"
-    title: Consigue tu Empleo soñado
 
 geeks_vs_others:
   position: 6
@@ -148,7 +133,7 @@ why_4geeks:
   sub_heading: " "
 
 who_is_hiring:
-  position: 8
+  position: 14
   limit: 4
   heading: "¿Quién contrata a nuestros alumnos?"
   sub_heading: "84% de nuestros estudiantes que completaron el proceso de GeekFORCE han conseguido trabajo luego de haberse graduado (incluso dentro de los sigiuientes  100 días)"
@@ -159,19 +144,101 @@ alumni_projects:
   sub_heading: "Proyectos hechos por estudiantes de la academia"
 
 components:
+  - name: ""
+    position: 3
+    background: "veryLightBlue2"
+    layout: iconogram
+    swipable: True
+    heading:
+      text: "Garantía de Empleo"
+      font_size: ["30px", "30px", "30px", "30px", "30px"]
+    sub_heading:
+      text: ""
+      font_size: ["16px", "16px", "16px", "16px", "16px"]
+      style: '{ "textAlign": "center", "width": "60%" }'
+    button:
+      text: "Condiciones Aplican"
+      color: black
+      # hover_color: "white"
+      # background: "black"
+      path: "#"
+    icons:
+      - icon: "yellowhat"
+        title: Si no encuentras empleo en los primeros 180 días tras graduarte, te devolvemos tu dinero.
+      - icon: "stairswflag"
+        title: Completa las etapas de nuestro proceso de apoyo para la carrera profesional.
+      - icon: "group"
+        title: Optimiza tu perfil profesional y preparate para las entrevistas.
+      - icon: "hands"
+        title: Ambos nos comprometemos con tu futura carrera.
+
+  # - name: python_y_javascript
+  #   position: 2
+  #   layout: two_column_right
+  #   background: "veryLightBlue2" # Name of the color(from components/Styling/index.js) or color code ex: #C9F9F9
+  #   image:
+  #     src: "/images/landing/hombre-con-laptop.png"
+  #   heading:
+  #     text:
+  #       "Python y Javascript"
+  #       #           xl      lg      md      sm      xs
+  #     font_size: ["50px", "50px", "50px", "50px", "50px"]
+  #     sub_heading: ""
+
   - name: python_y_javascript
-    position: 5
+    position: 2
     layout: two_column_right
-    background: "veryLightBlue2" # Name of the color(from components/Styling/index.js) or color code ex: #C9F9F9
+    swipable: False
+    background: "veryLightBlue2"
     image:
-      src: "/images/why-4geeks/python-image.png"
+      style: "{}"
+      src: "/images/techs/python-js.png"
+      link: "" # take uses somewhere when they click on the image
+      # shadow: true
+    heading:
+      text: "Python y Javascript"
+    sub_heading:
+      text: "Nuestro programa está basado en el uso de Python y Javascript. ¿La razón? En el mercado laboral JavaScript tiene 26 veces más vacantes de trabajo que Ruby on Rails y Python te permite acceder a distintas áreas del mundo de la programación. "
+    button:
+      text: "¡Únete a la Academia!"
+      color: white
+      hover_color: "white"
+      background: "black"
+      path: "#bottom"
+    # content:
+    #   text: "text after bullets"
+    #   font_size: ["16px"]
+    #   path: ""
+    bullets:
+      items:
+        - heading: "La creciente demanda de desarrolladores especializados en JavaScript"
+          text: "Se proyecta que el empleo general de desarrolladores web y diseñadores digitales crecerá un 16 por ciento entre 2022 y 2032, mucho más rápido que el promedio de todas las ocupaciones."
+          icon: "circle" #string with icon for example ['check', 'cicle', etc]
+        - heading: "expectativa salarial"
+          text: "El salario medio anual de los desarrolladores web era de 78.580 dólares americanos"
+          icon: "circle" #string with icon for example ['check', 'cicle', etc]
+        - heading: "Python y la inteligencia Artificial"
+          text: "Python es líder en ciencia de datos y aprendizaje automático, usado por el 67.8% de los profesionales en este campo."
+          icon: "circle" #string with icon for example ['check', 'cicle', etc]
+
+  - name: two_column_w_video
+    position: 3
+    layout: two_column_left
+    image:
+      src: "/images/testimonials/liliana-review.jpg"
+      shadow: true
+    video: "https://www.youtube.com/watch?v=aZrQNvyniLo"
     heading:
       text:
-        "Python y Javascript"
-        #           xl      lg      md      sm      xs
-      font_size: ["50px", "50px", "50px", "50px", "50px"]
+        "Liliana nos cuenta por qué deberías considerar a 4Geeks como una opción si te encuentras en Colombia."
+        #xl      lg     md     sm    xs
+      font_size: ["40px", "34px", "34px", "25px", "20px"]
     content:
-      text: "Nuestro programa está basado en el uso de Python y Javascript. ¿La razón? En el mercado laboral JavaScript tiene 26 veces más vacantes de trabajo que Ruby on Rails y Python te permite acceder a distintas áreas del mundo de la programación."
-      
-      Otras herramientas que también aprenderás a usar en nuestro programa son: HTML5, CSS3, React, Flask, etc."
+      text: "Desde su creación en Colombia, 4Geeks Academy siempre ha tenido como objetivo brindar oportunidades de aprendizaje, facilitar opciones de financiamiento y establecer asociaciones públicas para ofrecer oportunidades laborales. Si tienes alguna pregunta sobre cómo podemos contribuir a tu futuro profesional, no dudes en contactarnos. Estaremos encantados de ayudarte en todo lo posible."
       font_size: ["16px"]
+    button:
+      text: "Experiencias reales"
+      background: black
+      color: white
+      hover_color: "#white"
+      path: "#why_4geeks"

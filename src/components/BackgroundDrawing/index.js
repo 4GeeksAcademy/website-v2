@@ -36,6 +36,8 @@ const Figure = styled.div`
     width: ${(props) => props.width_tablet};
     height: ${(props) => props.height_tablet};
     display: ${(props) => props.display_tablet};
+    top: ${(props) => props.top_tablet};
+    left: ${(props) => props.left_tablet};
   }
   @media ${Devices.md} {
     width: ${(props) => props.width_md};
@@ -46,4 +48,9 @@ const Figure = styled.div`
   @media ${Devices.xl} {
   }
 `;
-export const Circle = styled(Figure)``;
+export const Circle = styled(Figure)`
+  top: ${(props) => props.top};
+  left: ${(props) => props.left};
+  bottom: ${(props) => props.bottom};
+  right: ${(props) => props.right};
+`;

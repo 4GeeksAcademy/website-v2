@@ -34,9 +34,9 @@ navbar:
 
 
 apply_schollarship: # form that is displayed at the end of the landing
-  # title: "Get more info about this award-winning development course"
+  # title: "Apoyo Profesional Ilimitado"
   imageSide: "right"
-  image: "../../../static/images/comunity-support.png"
+  image: "../../../static/images/landing/apply.png"  
 
 # jumbotron on the top (cannot be commented out)
 header_data:
@@ -112,15 +112,21 @@ rating_reviews:
       rating: 4.9
       url: ""
 
-badges:
-  position: 3
-  heading: "4Geeks Academy cuenta con premios y reconocimientos que validan su excelencia"
-
 program_details:
   position: 1
   background: "#FFFFFF"
   heading: "Domina Python, JS y React"
   sub_heading: "Un curso de programación sobre las tecnologías más usadas del mundo"
+
+badges:
+  position: 4
+  heading: "4Geeks Academy cuenta con premios y reconocimientos que validan su excelencia"
+
+geeks_vs_others:
+  position: 3
+  heading: "¿Qué hace a 4Geeks Academy tan exitoso?"
+  paragraph: ""
+  total_rows: 5
 
 why_4geeks:
   position: 4
@@ -133,3 +139,28 @@ who_is_hiring:
   heading: "¿Quién contrata a nuestros alumnos?"
   sub_heading: "84% de nuestros estudiantes que completaron el proceso de GeekFORCE han conseguido trabajo luego de haberse graduado (incluso dentro de los sigiuientes  100 días)"
 
+components:
+    - name: some_id
+      position: 6
+      layout: two_column_right
+      # proportions: [8, 4]
+      background: "#fbfbfb"
+      image:
+        style: '{ "border" : "3px solid black" }' 
+        # shadow: true 
+        src: "../../../static/images/testimonials/samantha-review.png"
+        shadow: true
+      video: "https://www.youtube.com/watch?v=DrzRJICxjOU"
+      heading:
+        text: "4Geeks en México La Elección de Samantha para su Bootcamp Ideal"
+        #xl      lg     md     sm    xs
+      font_size: ["40px", "34px", "34px", "25px", "20px"]
+      content:
+        text: "La mentoría individualizada, con respuestas en menos de 15 minutos, proporciona un apoyo inigualable. Las sólidas alianzas estrategicas y un historial de éxito del 81% en la colocación laboral respaldan la reputación de la institución. Esto garantiza una transición sin problemas hacia una exitosa carrera en desarrollo de software."
+        font_size: ["16px"]
+      button:
+        text: "¡Únete a la Academia!"
+        path: "#bottom"
+        color: "white"
+        background: "black"
+        hover: "lightBlue"

@@ -12,11 +12,9 @@ const LandingContainer = ({ background, children, filter, image, badge }) => {
           bgSize={`cover`}
           width_tablet="100%"
           height="auto"
-          margin="0 0 auto 0"
+          margin="0 auto"
           filter={filter}
           background={background || Colors.white}
-          align="center"
-          borderRadius="0"
         >
           {children}
         </Div>
@@ -29,7 +27,7 @@ const LandingContainer = ({ background, children, filter, image, badge }) => {
           width_tablet="100%"
           height="auto"
           margin="0 0 auto 0"
-          filter={filter}
+          filter_xxs={filter}
           backgroundColor={Colors.lightGray}
           align="center"
           alt="4Geeks Academy"

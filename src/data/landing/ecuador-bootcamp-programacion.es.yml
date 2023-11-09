@@ -36,7 +36,7 @@ navbar:
 apply_schollarship: # form that is displayed at the end of the landing
   # title: "Get more info about this award-winning development course"
   imageSide: "right"
-  image: "../../../static/images/comunity-support.png"
+  image: "../../../static/images/landing/apply.png"
 
 # jumbotron on the top (cannot be commented out)
 header_data:
@@ -90,6 +90,43 @@ follow_bar:
 #
 # ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇
 #
+components:
+  - name: top_coding_bootcamp
+    position: 1
+    layout: two_column_left
+    proportions: [4, 8]
+    background: "#f1f1f1"
+    image:
+      style: '{ "backgroundSize": "contain" }'
+      src: "/images/badges/Course-Report-Badge-2023.png"
+      link: "https://www.coursereport.com/schools/4geeks-academy"
+    heading:
+      text:
+        "Tenemos 3 años consecutivos siendo seleccionados como uno de los mejores coding bootcamps del mundo"
+        #xl      lg     md     sm    xs
+      font_size: ["38px", "36px", "32px", "30px", "30px"]
+
+  - name: some_id
+    position: 2
+    layout: two_column_right
+    image:
+      src: "/images/testimonials/valentina-review.jpg"
+    video: "https://www.youtube.com/watch?v=Vyrynn4Ey1U"
+    shadow: true
+    heading:
+      text: "¡Aprende a programar con los mejores en Ecuador!🖥️"
+        #xl      lg     md     sm    xs
+      font_size: ["40px", "34px", "34px", "25px", "20px"]
+    content:
+      text: "Con más de 18 meses operando en el país contamos con uno de los mejores programas de estudio para aprender a programar a nivel mundial🌍 además de fuertes alianzas con diferentes empresas a nivel nacional e internacional que nos permiten ayudar a nuestros estudiantes a encontrar empleo ¡en tiempo record!⏰"
+      font_size: ["16px"]
+    button:
+      text: "Únete a la Academia"
+      background: black
+      color: white
+      hover_color: "#white"
+      path: "#bottom"
+
 
 rating_reviews:
   position: 2

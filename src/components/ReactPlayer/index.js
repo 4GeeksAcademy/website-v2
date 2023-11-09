@@ -5,6 +5,7 @@ import PropTypes from "prop-types";
 import { Devices } from "../Responsive";
 import Modal from "../Modal";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import { Div, Grid } from "../Sections";
 
 const VideoWrapper = styled.section`
   position: relative;
@@ -18,6 +19,7 @@ const VideoWrapper = styled.section`
   @media ${Devices.sm} {
   }
   @media ${Devices.tablet} {
+    margin: ${(props) => props.margin_tablet || "30px 10%"};
     width: ${(props) => props.width_tablet};
     height: ${(props) => props.height_tablet};
   }
@@ -37,6 +39,24 @@ const Iframe = styled(YouTube)`
   padding: 0;
   border-radius: ${(props) => props.borderRadius || "auto"};
   height: ${(props) => props.height || "100%"};
+  @media ${Devices.xxs} {
+    height: ${(props) => props.height_xxs};
+  }
+  @media ${Devices.xs} {
+    height: ${(props) => props.height_xs};
+  }
+  @media ${Devices.sm} {
+    height: ${(props) => props.height_sm};
+  }
+  @media ${Devices.tablet} {
+    height: ${(props) => props.height_tablet};
+  }
+  @media ${Devices.md} {
+    height: ${(props) => props.height_md};
+  }
+  @media ${Devices.lg} {
+    height: ${(props) => props.height_}lg;
+  }
 `;
 
 const Thumbnail = styled.img`
@@ -49,8 +69,9 @@ const Image = styled.div`
   margin: auto;
   height: ${(props) => props.height || "auto"};
   width: ${(props) => props.width || "100%"};
-  box-shadow: ${(props) => props.shadow};
+  box-shadow: ${(props) => props.boxShadow};
   border-radius: ${(props) => props.borderRadius || "1.25rem"};
+  background: ${(props) => props.background};
   @media ${Devices.xxs} {
   }
   @media ${Devices.xs} {
@@ -85,9 +106,11 @@ const Player = ({
   imageSize,
   playerVars,
   noCookies,
+  width,
   style,
   className,
   thumb,
+  image_thumb,
   left_tablet,
   right_tablet,
   With_Modal,
@@ -96,6 +119,18 @@ const Player = ({
   imageHeight,
   videoHeight,
   switched,
+  boxShadow,
+  width_play,
+  height_play,
+  fontSize_play,
+  background_play,
+  opacity_play,
+  transformPlay,
+  transformPlay_tablet,
+  transformPlay_md,
+  transformPlay_lg,
+  leftPlay_tablet,
+  margin_tablet,
   ...rest
 }) => {
   const [showVideo, setShowVideo] = React.useState(false);
@@ -119,6 +154,27 @@ const Player = ({
   const image = () =>
     validImageSizes.includes(imageSize) ? imageSize : "default";
 
+  const videoHeightFix = (height) => {
+    const numbers = height.match(/[0-9]+/g);
+    const integers = numbers.map(Number);
+    const rest = integers.map((number) => number - 6);
+    const result = rest.map((number) => `${number}px`);
+    return result.join(" ");
+  };
+
+  function borderStyle(style) {
+    console.log(style);
+    if (style == null) {
+      return false;
+    } else {
+      return Object.keys(style).includes("border");
+    }
+  }
+
+  const imgStyle = image_thumb?.style
+    ? { ...JSON.parse(image_thumb?.style) }
+    : null;
+
   // With_Modal
 
   useEffect(() => {
@@ -127,8 +183,14 @@ const Player = ({
     }
   }, [switched]);
 
+  const imgStyles = image_thumb?.style ? JSON.parse(image_thumb?.style) : null;
   return (
-    <VideoWrapper {...rest} style={style}>
+    <VideoWrapper
+      {...rest}
+      style={style}
+      margin_tablet={margin_tablet}
+      width={width}
+    >
       {showVideo ? (
         <>
           {With_Modal ? (
@@ -150,11 +212,14 @@ const Player = ({
                 onStateChange={onStateChange}
                 onPlaybackRateChange={onPlaybackRateChange}
                 onPlaybackQualityChange={onPlaybackQualityChange}
-                height={videoHeight}
+                height_xxs="300px"
+                height_tablet="400px"
+                height_md="520px"
+                height_lg="100%"
                 opts={{
                   // padding: "125px 0 0",
                   width: "100%",
-                  height: `675px`,
+                  height: "675px",
                   host: noCookies
                     ? "https://www.youtube-nocookie.com"
                     : "https://www.youtube.com",
@@ -163,37 +228,60 @@ const Player = ({
               />
             </Modal>
           ) : (
-            <Iframe
-              borderRadius={style.borderRadius}
-              videoId={yt_parser(id)}
-              id={`a-${id} do-not-delete-this-hack`}
-              // onReady={(e) => e.target.pauseVideo()}
-              onReady={(e) => setVid(e.target)}
-              onPlay={onPlay}
-              onPause={onPause}
-              onEnd={onEnd}
-              onError={onError}
-              onStateChange={onStateChange}
-              onPlaybackRateChange={onPlaybackRateChange}
-              onPlaybackQualityChange={onPlaybackQualityChange}
+            <Div
+              flexDirection="column"
               height={videoHeight}
-              opts={{
-                width: "100%",
-                height: `${style.height}`,
-                host: noCookies
-                  ? "https://www.youtube-nocookie.com"
-                  : "https://www.youtube.com",
-                ...playerVars,
-              }}
-            />
+              boxShadow={
+                image_thumb?.shadow && "20px 15px 0px 0px rgba(0,0,0,1)"
+              }
+              style={imgStyle && { ...JSON.parse(image_thumb?.style) }}
+              background="black"
+            >
+              <Iframe
+                borderRadius={style.borderRadius}
+                videoId={yt_parser(id)}
+                id={`a-${id} do-not-delete-this-hack`}
+                // onReady={(e) => e.target.pauseVideo()}
+                onReady={(e) => setVid(e.target)}
+                onPlay={onPlay}
+                onPause={onPause}
+                onEnd={onEnd}
+                onError={onError}
+                onStateChange={onStateChange}
+                onPlaybackRateChange={onPlaybackRateChange}
+                onPlaybackQualityChange={onPlaybackQualityChange}
+                height={
+                  borderStyle(imgStyle)
+                    ? videoHeightFix(videoHeight)
+                    : videoHeight
+                }
+                opts={{
+                  width: "100%",
+                  height: `${style.height}`,
+                  host: noCookies
+                    ? "https://www.youtube-nocookie.com"
+                    : "https://www.youtube.com",
+                  ...playerVars,
+                }}
+              />
+            </Div>
           )}
         </>
       ) : (
         <Image
           width={imageWidth}
           width_tablet={imageWidth_tablet || "100%"}
-          borderRadius="3px"
-          height={imageHeight}
+          borderRadius={image_thumb?.shadow ? "0px" : "3px"}
+          //height={imageHeight || "100%"}
+          height={videoHeight || "100%"}
+          position="relative"
+          boxShadow={
+            boxShadow ||
+            (image_thumb?.shadow && "20px 15px 0px 0px rgba(0,0,0,1)")
+          }
+          //border={image_thumb?.shadow && "3px solid black"}
+          style={imgStyles && { ...JSON.parse(image_thumb?.style) }}
+          background="black"
         >
           {id && (
             <Play
@@ -201,6 +289,18 @@ const Player = ({
               right_tablet={right_tablet}
               left_tablet={left_tablet}
               aria-label="Play Video"
+              width={width_play}
+              height={height_play}
+              background={background_play}
+              fontSize={fontSize_play}
+              opacity={opacity_play}
+              margin_tablet={margin_tablet}
+              leftPlay_tablet={leftPlay_tablet}
+              transformPlay_tablet={transformPlay_tablet}
+              transformPlay_md={transformPlay_md}
+              transformPlay_lg={transformPlay_lg}
+              // width_md={width_play}
+              // heigth_md={height_play}
             />
           )}
           {thumb && thumb.childImageSharp ? (
@@ -209,10 +309,15 @@ const Player = ({
               onClick={() => setShowVideo(true)}
               image={getImage(thumb.childImageSharp.gatsbyImageData)}
               alt="Video"
+              height={
+                borderStyle(imgStyle)
+                  ? videoHeightFix(videoHeight)
+                  : videoHeight
+              }
               style={{
                 height: `${style.height}` || "100%",
                 width: `${style.width}` || "100%",
-                borderRadius: `${style.borderRadius}` || "auto",
+                //borderRadius: `${style.borderRadius}` || "auto",
               }}
             />
           ) : (
@@ -223,11 +328,16 @@ const Player = ({
                 (thumb && thumb.replace("/static", "")) ||
                 `https://img.youtube.com/vi/${id}/${image()}.jpg`
               }
+              height={
+                borderStyle(imgStyle)
+                  ? videoHeightFix(videoHeight)
+                  : videoHeight
+              }
               alt="Video"
               style={{
                 height: `${style.height}` || "100%",
                 width: `${style.width}` || "100%",
-                borderRadius: `${style.borderRadius}` || "auto",
+                //borderRadius: `${style.borderRadius}` || "auto",
               }}
             />
           )}
@@ -288,7 +398,7 @@ Player.propTypes = {
 };
 
 const Play = styled.button`
-  background: rgba(0, 0, 0, 0.7);
+  background: ${(props) => props.background || "rgba(228,15,15,0.7)"};
   border-radius: 3px;
   color: ${(props) => props.white};
   font-size: 1em;
@@ -301,9 +411,13 @@ const Play = styled.button`
   position: absolute !important;
   top: 50%;
   left: 50%;
-  transform: translateX(-50%) translateY(-50%);
+  transform: ${(props) =>
+    props.transformPlay || "translateX(-50%) translateY(-50%)"};
+   {
+    /*translateX(-50%) translateY(-50%);*/
+  }
   border: none;
-  opacity: 0.8;
+  opacity: ${(props) => props.opacity || "0.8"};
   cursor: pointer;
   z-index: 9;
   &:hover {
@@ -337,18 +451,20 @@ const Play = styled.button`
   @media ${Devices.sm} {
   }
   @media ${Devices.tablet} {
-    right: ${(props) => props.right_tablet};
-    left: ${(props) => props.left_tablet};
+    left: ${(props) => props.leftPlay_tablet || "50%"};
+    transform: ${(props) => props.transformPlay_tablet};
   }
   @media ${Devices.md} {
-    height: 44px;
-    width: 44px;
-
+    height: ${(props) => props.height || "44px"};
+    width: ${(props) => props.width || "44px"};
+    font-size: ${(props) => props.fontSize || "0.75em"};
+    transform: ${(props) => props.transformPlay_md};
     &:after {
-      font-size: 0.75em;
+      font-size: ${(props) => props.fontSize || "0.75em"};
     }
   }
   @media ${Devices.lg} {
+    transform: ${(props) => props.transformPlay_lg};
   }
   @media ${Devices.xl} {
   }
