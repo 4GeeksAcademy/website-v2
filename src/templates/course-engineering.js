@@ -377,13 +377,7 @@ const Program = ({ data, pageContext, yml }) => {
           paragraph={yml.badges.paragraph && yml.badges.paragraph}
         />
       </Header>
-      <OurPartners
-        background={Colors.verylightGray}
-        images={hiring.partners.images}
-        marquee
-        title={hiring.partners.tagline}
-        paragraph={hiring.partners.sub_heading}
-      />
+      
       <AboutTheProgram
         details={courseDetails.details}
         lang={pageContext.lang}
@@ -425,7 +419,14 @@ const Program = ({ data, pageContext, yml }) => {
       />
 
       <Testimonials lang={data.allTestimonialsYaml.edges} />
-      <OurPartners images={hiring.partners.images} marquee></OurPartners>
+      
+      <OurPartners
+        background={Colors.verylightGray}
+        images={hiring.partners.images}
+        marquee
+        title={hiring.partners.tagline}
+        paragraph={hiring.partners.sub_heading}
+      />
     </>
   );
 };
