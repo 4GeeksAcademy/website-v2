@@ -109,6 +109,7 @@ export const H1 = styled(BaseHeading)`
 export const H2 = styled(BaseHeading)`
   z-index: ${(props) => props.zIndex};
   letter-spacing: 0.05em;
+  font-family: ${(props) => props.fontFamily};
 `;
 export const H3 = styled(BaseHeading)`
   font-weight: ${(props) => props.fontWeight || "700"};

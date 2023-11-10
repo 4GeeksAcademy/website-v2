@@ -54,7 +54,6 @@ const GeeksInfo = ({ lang }) => {
   if (content) content = content.node;
   else return null;
 
-  console.log(content.image);
   return (
     <>
       <H2

@@ -30,8 +30,8 @@ const ScholarshipProjects = ({ content, maxWidth }) => {
       maxWidth={maxWidth || "1366px"}
       margin="auto"
       padding_xxs="20px"
-      padding_tablet="70px 40px"
-      padding_md="70px 80px"
+      padding_tablet="50px 40px"
+      padding_md="50px 80px"
       padding_lg="70px 0px"
     >
       <H2 margin="0 0 10px 0">{content.title}</H2>
