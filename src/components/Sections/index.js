@@ -352,6 +352,7 @@ export const Div = styled.div`
   }
   @media ${Devices.lg} {
     display: ${(props) => props.display_lg};
+    width: ${(props) => props.width_lg};
     justify-content: ${(props) =>
       justifyContentOptions[props.justifyContent_lg]};
     padding: ${(props) => props.padding_lg};
@@ -670,7 +671,10 @@ export const GridContainer = ({
   margin_xs,
   margin_md,
   padding,
+  padding_xxs,
   padding_tablet,
+  padding_md,
+  padding_lg,
   paddingChild,
   borderTop,
   padding_tabletChild,
@@ -725,6 +729,9 @@ export const GridContainer = ({
       margin_md={margin_md}
       padding={padding || "0 17px"}
       padding_tablet={padding_tablet || "0"}
+      padding_xxs={padding_xxs}
+      padding_md={padding_md}
+      padding_lg={padding_lg}
     >
       <Grid
         display={displayChild}
