@@ -25,8 +25,7 @@ import Icon from "../components/Icon";
 import Overlaped from "../components/Overlaped";
 import Loc from "../components/Loc";
 import ScholarshipProjects from "../components/ScholarshipProjects";
-import { TwoColumn } from "../components/Landing";
-//import TwoColumn from "../components/TwoColumn/index.js";
+import TwoColumn from "../components/TwoColumn/index.js";
 
 const Program = ({ data, pageContext, yml }) => {
   const { session } = React.useContext(SessionContext);
@@ -115,6 +114,7 @@ const Program = ({ data, pageContext, yml }) => {
               textColor="white"
             >
               {apply_button_text}
+              {/* {applyButtonText} */}
             </Button>
           </Link>
           <Button
@@ -199,7 +199,7 @@ const Program = ({ data, pageContext, yml }) => {
       <GeeksInfo lang={pageContext.lang} />
 
       {/* TWO COLUMN CREAR EN EL YML*/}
-      <TwoColumn 
+      <TwoColumn
         left={{ image: yml.two_columns?.image, video: yml.two_columns?.video }}
         right={{
           heading: yml.two_columns?.heading,

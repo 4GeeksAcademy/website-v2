@@ -3,8 +3,7 @@ import { useStaticQuery, graphql } from "gatsby";
 import { GridContainerWithImage, Div, GridContainer } from "../Sections";
 import { H2, H4, Paragraph } from "../Heading";
 import { Colors, RoundImage, StyledBackgroundSection } from "../Styling";
-//import TwoColumn from "../components/TwoColumn/index.js";
-import { TwoColumn } from "../Landing";
+import TwoColumn from "../TwoColumn/index.js";
 const GeeksInfo = ({ lang }) => {
   const data = useStaticQuery(graphql`
     {
@@ -35,7 +34,7 @@ const GeeksInfo = ({ lang }) => {
               childImageSharp {
                 gatsbyImageData(
                   layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                  width: 800
+                  width: 1000
                   quality: 100
                   placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                 )
@@ -54,6 +53,8 @@ const GeeksInfo = ({ lang }) => {
   );
   if (content) content = content.node;
   else return null;
+
+  console.log(content.image);
   return (
     <>
       <H2
@@ -75,7 +76,7 @@ const GeeksInfo = ({ lang }) => {
           //paragraph: content.paragraph,
           //header: content.header
         }}
-        right={{ image: content.image.childImageSharp.gatsbyImageData }}
+        right={{ image: content.image }}
         //proportions={yml.proportions}
         //session={session}
       />

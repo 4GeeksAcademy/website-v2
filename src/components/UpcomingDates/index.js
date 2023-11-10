@@ -220,7 +220,8 @@ const UpcomingDates = ({
       id={id}
       style={style}
       margin_tablet="0 0 48px 0"
-      maxWidth_lg="1366px"
+      maxWidth="1366px"
+      containerColumns="14"
     >
       <Div flexDirection="column">
         <Div

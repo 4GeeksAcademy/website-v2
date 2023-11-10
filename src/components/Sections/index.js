@@ -590,6 +590,9 @@ export const Header = ({
             fontSize_tablet={fontSizeTitle_tablet || "50px"}
             lineHeight="60px"
             fontFamily={fontFamily_title}
+            //fontSize={fontSize || "40px"}
+            fontSize_tablet={fontSize_tablet || "50px"}
+            lineHeight="60px"
           >
             {hideArrowKey ? title : `< ${title} >`}
           </H2>

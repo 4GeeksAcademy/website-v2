@@ -37,7 +37,6 @@ const Overlaped = ({
       }
     }
   `);
-  console.log(heading.length);
   return (
     <Div maxWidth_tablet="1366px" margin_tablet="50px auto">
       <Div

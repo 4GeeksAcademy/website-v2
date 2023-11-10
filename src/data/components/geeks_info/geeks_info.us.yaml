@@ -17,6 +17,7 @@ bullets:
     text: "Receive customized advice, guidance, and training tailored to your unique profile and specific job offers."
 
 paragraph: "<a href='/us/geeks-vs-others'><span class='span-blue'>Compare 4Geeks</span></a> with other bootcamps."
+image: "../../../../static/images/geeksinfo/grupo-ventanas.png"
 button:
   text: "Compare 4Geeks with other bootcamps"
   path: "/us/geeks-vs-others"
@@ -24,4 +25,4 @@ button:
   background: "black"
   hover: "lightBlue"
 
-image: "../../../../static/images/geeksinfo/grupo-ventanas.png"
+
