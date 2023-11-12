@@ -45,8 +45,8 @@ const ChooseYourProgram = ({
   };
   if (info) info = info.node;
   return (
-    <Div 
-      //background={landingTemplate ? Colors.white : Colors.verylightGray} 
+    <Div
+      //background={landingTemplate ? Colors.white : Colors.verylightGray}
       position="relative"
     >
       <Div

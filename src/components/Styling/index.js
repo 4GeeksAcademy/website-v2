@@ -183,10 +183,19 @@ const StyledImage = styled.div`
   min-width: ${(props) => props.minWidth};
   margin: ${(props) => props.margin};
   box-shadow: ${(props) => props.boxShadow};
+  padding= ${(props) => props.padding};
   @media ${Break.sm} {
     height: ${(props) => props.h_sm};
     min-height: ${(props) => props.minHeight_sm};
     width: ${(props) => props.w_sm};
+  }
+  @media ${Devices.xxs} {
+    height: ${(props) => props.height_tablet};
+    padding: ${(props) => props.padding_xxs}; 
+  }
+  @media ${Devices.tablet} {
+    height: ${(props) => props.height_tablet};
+    padding: ${(props) => props.padding_tablet}; 
   }
 `;
 export const Img = React.memo(StyledImage);

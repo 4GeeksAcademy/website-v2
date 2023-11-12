@@ -26,14 +26,16 @@ const Testimonials = (props) => {
         padding="30px 20px 60px 20px"
         padding_tablet="48px 0 36px 0"
       >
-        <Div 
+        <Div
           flexDirection="column"
           padding_lg="0PX"
           padding_md="10px 80px"
           padding_tablet="10px 40px"
           padding_xxs="0 20px"
         >
-          <H2 lineHeight_tablet="40px" lineHeight_xxs="30px">{testimonialsArray.heading}</H2>
+          <H2 lineHeight_tablet="40px" lineHeight_xxs="30px">
+            {testimonialsArray.heading}
+          </H2>
           <Link to={testimonialsArray.button_link}>
             <Paragraph margin="25px 0 36px 0" color={Colors.blue}>
               {testimonialsArray.button_text}

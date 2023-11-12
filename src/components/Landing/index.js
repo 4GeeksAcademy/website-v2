@@ -58,6 +58,8 @@ const Side = ({
         id={video}
         videoHeight="360px"
         margin_tablet="0px"
+        padding_tablet="0px"
+        padding_xxs="20px"
         style={{
           width: "100%",
         }}
@@ -91,6 +93,8 @@ const Side = ({
         //backgroundPosition="center right"
         //border={image.shadow && "3px solid black"}
         boxShadow={image.shadow && "20px 15px 0px 0px rgba(0,0,0,1)"}
+        padding="20px"
+        padding_tablet={padding_tablet}
       />
     );
   }
@@ -111,6 +115,7 @@ const Side = ({
       flexDirection_tablet="column"
       flexDirection="column"
       padding_tablet={padding_tablet || "10px 0px 0px 0px"}
+      padding="20px"
     >
       {heading && (
         <H2
@@ -276,7 +281,7 @@ const Side = ({
           fontSize="15px"
           textAlign="left"
           margin="2rem 0"
-          padding="32px .85rem 0 .85rem"
+          padding="32px .85rem 0 32px .85rem"
           onClick={() => {
             if (button.path && button.path.indexOf("http") > -1)
               window.open(transferQuerystrings(button.path, utm));

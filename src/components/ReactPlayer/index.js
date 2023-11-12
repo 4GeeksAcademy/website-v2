@@ -128,7 +128,8 @@ const Player = ({
   transformPlay_lg,
   leftPlay_tablet,
   margin_tablet,
-
+  padding_xxs,
+  padding_tablet,
   ...rest
 }) => {
   const [showVideo, setShowVideo] = React.useState(false);
@@ -162,10 +163,13 @@ const Player = ({
 
   const imgStyles = image_thumb?.style ? JSON.parse(image_thumb?.style) : null;
   return (
-    <VideoWrapper {...rest} 
-      style={style} 
-      margin_tablet={margin_tablet} 
+    <VideoWrapper
+      {...rest}
+      style={style}
+      margin_tablet={margin_tablet}
       width={width}
+      padding_xxs={padding_xxs}
+      padding_tablet={padding_tablet}
     >
       {showVideo ? (
         <>

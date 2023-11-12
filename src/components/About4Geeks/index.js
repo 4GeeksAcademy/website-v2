@@ -5,7 +5,7 @@ import { H2, H4, Paragraph } from "../Heading";
 import { Link } from "gatsby";
 import Icon from "../Icon";
 
-const About4Geeks = ({ id, lang}) => {
+const About4Geeks = ({ id, lang }) => {
   const about = lang[0]?.node || lang;
   return (
     <GridContainerWithImage

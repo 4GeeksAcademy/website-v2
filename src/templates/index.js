@@ -78,9 +78,10 @@ const Home = (props) => {
 
     if (session?.language && window && window.location.pathname === "/")
       navigate(
-        `${props.pageContext.translations[
-        session.language === "en" ? "us" : session.language
-        ]
+        `${
+          props.pageContext.translations[
+            session.language === "en" ? "us" : session.language
+          ]
         }`
       );
 
@@ -106,8 +107,7 @@ const Home = (props) => {
     (session?.location?.custom_bar.active && isTestMode) ||
     (session?.location?.custom_bar.active && !isDevelopment());
 
-
-  console.log(yml)
+  console.log(yml);
   return (
     <>
       <Div
@@ -343,7 +343,10 @@ const Home = (props) => {
           />
         </Div>
       </Div>
-      <Testimonials lang={data.allTestimonialsYaml.edges} background={Colors.verylightGray}/>
+      <Testimonials
+        lang={data.allTestimonialsYaml.edges}
+        background={Colors.verylightGray}
+      />
 
       <About4Geeks lang={data.allAbout4GeeksYaml.edges} />
 
@@ -368,8 +371,8 @@ const Home = (props) => {
       />
 
       {/* TWO COLUMN CREAR EN EL YML*/}
-      <TwoColumn 
-        right={{ image: yml.two_columns?.image}}
+      <TwoColumn
+        right={{ image: yml.two_columns?.image }}
         left={{
           heading: yml.two_columns?.heading,
           sub_heading: yml.two_columns?.sub_heading,
@@ -379,7 +382,7 @@ const Home = (props) => {
         session={session}
       />
 
-      < OurPartners
+      <OurPartners
         images={hiring.partners.images}
         marquee
         title={hiring.partners.tagline}

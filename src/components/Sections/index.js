@@ -434,7 +434,7 @@ export const Grid = styled(Div)`
   }
   @media ${Devices.md} {
     margin: ${(props) => props.margin_md};
-     padding: ${(props) => props.padding_md};
+    padding: ${(props) => props.padding_md};
     grid-template-columns: ${(props) => props.gridTemplateColumns_md};
     grid-template-rows: ${(props) =>
       props.gridTemplateRows_md
@@ -671,7 +671,6 @@ export const GridContainer = ({
   displayChild_md,
   columns_sm,
   justifyContentChild,
-  
 }) => {
   return (
     <Grid
