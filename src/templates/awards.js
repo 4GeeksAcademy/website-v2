@@ -372,7 +372,7 @@ const Awards = ({ data, pageContext, yml }) => {
         flexWrap="wrap"
         maxWidth="1366px"
         justifyContent_xxs="center"
-        justifyContent_tablet="around"
+        justifyContent_tablet="between"
         height="auto"
       >
         {Array.isArray(yml.awards_list) &&
@@ -409,9 +409,10 @@ const Awards = ({ data, pageContext, yml }) => {
                   width_lg="356px"
                   height="min-content"
                 />
-              </>);
+              </>
+            );
           })}
-      </Div >
+      </Div>
     </>
   );
 };
