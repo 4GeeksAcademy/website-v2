@@ -80,7 +80,7 @@ export default ({
     <Fragment github="/components/with_4geeks">
       {info?.header && (
         <Grid
-          margin="40px 5px"
+          margin="40px 5px 0 5px"
           margin_tablet="40px auto 20px auto"
           maxWidth_tablet="1366px"
           gridTemplateColumns_tablet="repeat(14, 1fr)"
@@ -168,21 +168,21 @@ export default ({
                       With_Modal={true} 
                       margin_tablet="0px"
                       imageWidth="100%"
-                      imageHeight="auto"
-                      height="100%"
+                      imageHeight="173px"
+                      height="173px"
                       className="react-player-with4geeks"
                       thumb={i.image}
                       id={i.video}
                       width="100%"
                       width_tablet="100%"
                       videoHeight={playerHeight}
-                      style={{ borderRadius: `0px`, height: `173px` }}
+                      //style={{ borderRadius: `0px`, height: `173px` }}
                     />
                   </Div>
                   <Div
                     marginTop="20px"
                     padding_tablet="20px 32px"
-                    padding_xs="20px 16px"
+                    padding_xxs="20px 16px"
                     display={`flex`}
                     height="100%"
                     flexDirection="column"

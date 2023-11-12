@@ -45,7 +45,18 @@ const ChooseYourProgram = ({
   };
   if (info) info = info.node;
   return (
-    <Div background={landingTemplate ? Colors.white : Colors.verylightGray}>
+    <Div 
+      //background={landingTemplate ? Colors.white : Colors.verylightGray} 
+      position="relative"
+    >
+      <Div
+        background={Colors.verylightGray}
+        display_xxs="none"
+        display_tablet={landingTemplate ? "none" : "flex"}
+        height_tablet="50%"
+        width_tablet="100%"
+        position="absolute"
+      />
       <Grid
         ref={chooseProgramRef}
         gridTemplateColumns_md={
@@ -59,8 +70,8 @@ const ChooseYourProgram = ({
         background_tablet={landingTemplate ? Colors.white : "transparent"}
         padding_lg="10px 0 50px 0"
         padding_md="10px 80px 50px 80px"
-        padding_tablet="10px 20px 50px 20px"
-        padding_xs="0 10px 40px 10px "
+        padding_tablet="10px 40px 50px 40px"
+        padding_xxs="0 20px 40px 20px "
         maxWidth_tablet="1366px"
         margin_tablet="0 auto 50px auto"
         margin_lg="0 auto 50px auto"
@@ -295,18 +306,6 @@ const ChooseYourProgram = ({
               );
             })}
         </Grid>
-        <Div
-          display_xs="none"
-          display_tablet="flex"
-          //padding_tablet="75px 0 0 0"
-          background={Colors.verylightGray}
-          zIndex="-1"
-          height_tablet="350px"
-          height_xs="100%"
-          gridColumn_tablet="1 / 15"
-          gridRow_tablet="1 / 3"
-          gridRow="1 / 4"
-        />
       </Grid>
     </Div>
   );

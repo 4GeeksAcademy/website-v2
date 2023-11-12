@@ -147,8 +147,15 @@ const Home = (props) => {
             zIndex="5"
             left_tablet={yml.header_data.video ? "40%" : "50%"}
             left="50%"
+            left_xxs="50%"
+            left_xs="74%"
             top_tablet={yml.header_data.video ? "1%" : "25%"}
             top="90px"
+            top_xxs="-2px"
+            top_xs="100px"
+            width_xxs="80px"
+            width_sm="100px"
+            height_xxs="80px"
             width_tablet="160px"
             height_tablet="152px"
             width="100px"
@@ -188,7 +195,7 @@ const Home = (props) => {
                 fontSize="40px"
                 fontSize_tablet="50px"
                 margin="20px 0 0 0"
-                lineHeight_xxs="40px"
+                lineHeight_xxs="45px"
                 lineHeight_tablet="60px"
                 width_tablet="100%"
                 width_xs="80%"
@@ -336,16 +343,7 @@ const Home = (props) => {
           />
         </Div>
       </Div>
-      <Testimonials lang={data.allTestimonialsYaml.edges} />
-
-      <GridContainer
-        margin="44px 0"
-        padding="50px 0"
-        padding_tablet="40px 0"
-        margin_tablet="0 0 40px 0"
-      >
-        <Div background="#EBEBEB" height="1px" />
-      </GridContainer>
+      <Testimonials lang={data.allTestimonialsYaml.edges} background={Colors.verylightGray}/>
 
       <About4Geeks lang={data.allAbout4GeeksYaml.edges} />
 

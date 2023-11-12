@@ -205,6 +205,8 @@ export const Div = styled.div`
     padding: ${(props) => props.padding_xxs}
     background: ${(props) => props.background_xxs};
     display: ${(props) => props.display_xxs};
+    top: ${(props) => props.top_xxs};
+    left: ${(props) => props.left_xxs};
   }
   @media ${Devices.xs} {
     padding: ${(props) => props.padding_xs};
@@ -227,6 +229,7 @@ export const Div = styled.div`
     align-content: ${(props) => props.alignContent_xs};
     top: ${(props) => props.top_xs};
     right: ${(props) => props.right_xs};
+    left: ${(props) => props.left_xs};
     background: ${(props) => props.background_xs};
   }
   @media ${Devices.sm} {
@@ -649,6 +652,7 @@ export const GridContainer = ({
   margin_md,
   padding,
   padding_tablet,
+  padding_xxs,
   paddingChild,
   borderTop,
   padding_tabletChild,
@@ -667,6 +671,7 @@ export const GridContainer = ({
   displayChild_md,
   columns_sm,
   justifyContentChild,
+  
 }) => {
   return (
     <Grid
@@ -702,6 +707,7 @@ export const GridContainer = ({
       margin_md={margin_md}
       padding={padding || "0 17px"}
       padding_tablet={padding_tablet || "0"}
+      padding_xxs={padding_xxs}
     >
       <Grid
         display={displayChild}
