@@ -28,6 +28,12 @@ const TestimonialCard = ({
   imgStyle,
   style,
   stories,
+  width_xxs,
+  width_xs,
+  width_sm,
+  width_tablet,
+  width_md,
+  width_lg,
 }) => {
   const [isExpanded, setIsExpanded] = useState(false);
 
@@ -58,7 +64,6 @@ const TestimonialCard = ({
       </div>
     );
   };
-  console.log(image)
   return (
     <Div
       flexDirection="column"
@@ -69,6 +74,13 @@ const TestimonialCard = ({
       border={`1px solid ${Colors.lightGray}`}
       boxShadow={`0px 2px 5px rgba(0, 0, 0, 0.1)`}
       style={{ breakInside: "avoid", marginBottom: "1em" }}
+      width_xxs={width_xxs}
+      width_xs={width_xs}
+      width_sm={width_sm}
+      width_tablet={width_tablet}
+      width_md={width_md}
+      width_lg={width_lg}
+      height={height}
     >
       <Div flexDirection={stories ? "row" : "column"}>
         <GatsbyImage
@@ -76,14 +88,16 @@ const TestimonialCard = ({
           style={style}
           imgStyle={imgStyle}
         />
-        {stories ? <Div flexDirection="column" margin="0 0 0 9px">
-          <H3 fontSize="15px" lineHeight="19px" textAlign="left">
-            {name}
-          </H3>
-          <H4 fontSize="14px" lineHeight="22px" textAlign="left">
-            {short_content}
-          </H4>
-        </Div> :
+        {stories ? ( //Where the component is called (true/false)
+          <Div flexDirection="column" margin="0 0 0 9px">
+            <H3 fontSize="15px" lineHeight="19px" textAlign="left">
+              {name}
+            </H3>
+            <H4 fontSize="14px" lineHeight="22px" textAlign="left">
+              {short_content}
+            </H4>
+          </Div>
+        ) : (
           <H3
             type="h3"
             textAlign="left"
@@ -92,24 +106,38 @@ const TestimonialCard = ({
             margin="12px 0"
           >
             {name}
-          </H3>}
+          </H3>
+        )}
       </Div>
-      {starRating && <Div margin="30px 0 17px 0">
-        <StarRating totalStars={studentRating} />
-      </Div>}
+      {starRating && (
+        <Div margin="30px 0 17px 0">
+          <StarRating totalStars={studentRating} />
+        </Div>
+      )}
       {!video && (
-        <Paragraph
-          textAlign="left"
-          margin="12px 0 0 0"
-          fontSize="13px"
-          lineHeight="22px"
-          letterSpacing="0.05em"
-          fontWeight="300"
-        >
-          {description.length > 500 && !isExpanded
-            ? description.substring(0, 500) + "..."
-            : description}
-        </Paragraph>
+          (description && /<\/?[a-z0-9]+>/g.test(description)) ?
+            <Paragraph
+              textAlign="left"
+              margin="12px 0 0 0"
+              fontSize="13px"
+              lineHeight="22px"
+              letterSpacing="0.05em"
+              fontWeight="300"
+              dangerouslySetInnerHTML={{ __html: description }}
+            />
+            :
+            <Paragraph
+              textAlign="left"
+              margin="12px 0 0 0"
+              fontSize="13px"
+              lineHeight="22px"
+              letterSpacing="0.05em"
+              fontWeight="300"
+            >
+              {description.length > 500 && !isExpanded
+                ? description.substring(0, 500) + "..."
+                : description}
+            </Paragraph>
       )}
       {video && (
         <>
@@ -141,22 +169,24 @@ const TestimonialCard = ({
         </Paragraph>
       )}
 
-      {url && <Paragraph
-        style={{ alignItems: "center" }}
-        margin="12px 0"
-        display="flex"
-        fontWeight="700"
-        letterSpacing="0.05em"
-        lineHeight="26px"
-        textAlign="left"
-        fontSize="13px"
-        color={Colors.blue}
-      >
-        <Anchor cursor="pointer" to={url}>
-          {textUrl}
-        </Anchor>
-      </Paragraph>}
-    </Div >
+      {url && (
+        <Paragraph
+          style={{ alignItems: "center" }}
+          margin="12px 0"
+          display="flex"
+          fontWeight="700"
+          letterSpacing="0.05em"
+          lineHeight="26px"
+          textAlign="left"
+          fontSize="13px"
+          color={Colors.blue}
+        >
+          <Anchor cursor="pointer" to={url}>
+            {textUrl}
+          </Anchor>
+        </Paragraph>
+      )}
+    </Div>
   );
 };
 

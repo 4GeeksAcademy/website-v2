@@ -8,6 +8,7 @@ import {
   GridContainer,
 } from "../components/Sections";
 import { H1, H2, H3, Paragraph, H4 } from "../components/Heading";
+import TestimonialCard from "../components/TestimonialCard";
 import {
   Colors,
   Button,
@@ -337,17 +338,18 @@ const Awards = ({ data, pageContext, yml }) => {
           <H1 type="h1" textAlign="center" margin="0 0 11px 0" color="#606060">
             {yml.seo_title}
           </H1>
-          <Paragraph
+          <H2
             type="h2"
             fontFamily="Archivo-Black"
-            fontSize="50px"
+            fontSize="34px"
             fontSize_tablet="50px"
             textAlign="center"
-            lineHeight="60px"
+            lineHeight_tablet="60px"
+            lineHeight="52px"
             padding_xxs="0 20px"
           >
             {"< " + yml.header.title + " >"}
-          </Paragraph>
+          </H2>
           <Paragraph
             fontSize="15px"
             textAlign="center"
@@ -365,82 +367,51 @@ const Awards = ({ data, pageContext, yml }) => {
         padding_md="0 80px"
         padding_lg="0"
         margin="60px auto 0 auto"
-        maxWidth="1366px"
-        gap="36px 0px"
+        gap="36px 25px"
         flexDirection="row"
         flexWrap="wrap"
+        maxWidth="1366px"
         justifyContent_xxs="center"
         justifyContent_tablet="around"
+        height="auto"
       >
         {Array.isArray(yml.awards_list) &&
           yml.awards_list.map((award, i) => {
             return (
-              <Div
-                key={i}
-                flexDirection_xxs="column"
-                flexDirection_tablet="column"
-                flexWrap="wrap"
-                margin="0"
-                minWidth="180px"
-                width_xxs="240px"
-                width_xs="280px"
-                width_sm="380px"
-                width_tablet="300px"
-                width_md="260px"
-                width_lg="356px"
-                maxWidth="356px"
-                boxShadow="0px 3px 7px 0px #0000001A"
-                borderRadius="3px"
-                padding_tablet="20px"
-                padding_xxs="17px 16px"
-              >
-                <GatsbyImage
+              <>
+                <TestimonialCard
+                  key={i}
+                  image={award.image && award.image}
                   style={{
-                    height: "173px",
+                    height: "180px",
                     width: "100%",
                     minWidth: "150px",
                   }}
-                  imgStyle={{ objectFit: "contain" }}
-                  loading="eager"
-                  alt={award.title}
-                  image={getImage(award.image.childImageSharp.gatsbyImageData)}
+                  imgStyle={{
+                    objectPosition: "center",
+                    objectFit: "contain",
+                    height: "180px",
+                    width: "100%",
+                    minWidth: "150px",
+                  }}
+                  name={award.title}
+                  textUrl={award.text_link}
+                  url={award.link}
+                  description={award.paragraph}
+                  starRating={false}
+                  //margin="0"
+                  minWidth="180px"
+                  width_xxs="240px"
+                  width_xs="280px"
+                  width_sm="380px"
+                  width_tablet="300px"
+                  //width_md="260px"
+                  width_lg="356px"
+                  height="min-content"
                 />
-                <Div
-                  flexDirection="column"
-                  width="100%"
-                  margin_tablet="20px 0 0 0"
-                >
-                  <H3
-                    textAlign_tablet="left"
-                    margin="0 0 16px 0"
-                    fontWeight="700"
-                    fontSize="28px"
-                    lineHeight="34px"
-                  >
-                    {award.title}
-                  </H3>
-                  {award.paragraph.split("\n").map((p, i) => (
-                    <Paragraph
-                      fontSize="13px"
-                      lineHeight="16px"
-                      textAlign_tablet="left"
-                      margin="0 0 24px 0"
-                      key={i}
-                      dangerouslySetInnerHTML={{ __html: p }}
-                    />
-                  ))}
-                  {award.text_link && (
-                    <Link to={award.link}>
-                      <H4 display="flex" fontWeigth="700" color={Colors.blue}>
-                        {award.text_link}
-                      </H4>
-                    </Link>
-                  )}
-                </Div>
-              </Div>
-            );
+              </>);
           })}
-      </Div>
+      </Div >
     </>
   );
 };
@@ -468,7 +439,6 @@ export const query = graphql`
                 gatsbyImageData(
                   layout: FULL_WIDTH # --> CONSTRAINED || FIXED || FULL_WIDTH
                   width: 1000
-                  height: 1000
                   quality: 100
                   placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                 )

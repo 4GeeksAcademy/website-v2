@@ -542,6 +542,7 @@ export const Header = ({
   paddingTitle_tablet,
   display_mobile,
   maxWidth,
+  fontFamily,
 }) => {
   return (
     <Grid
@@ -581,6 +582,7 @@ export const Header = ({
             fontSize={fontSize || "40px"}
             fontSize_tablet={fontSize_tablet || "50px"}
             lineHeight="60px"
+            fontFamily={fontFamily}
           >
             {hideArrowKey ? title : `< ${title} >`}
           </H2>
