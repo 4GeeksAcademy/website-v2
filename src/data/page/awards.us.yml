@@ -14,11 +14,11 @@ header:
   image: "../../../static/images/awards/awards.png"
 
 awards_list:
-  - image: "../../../static/images/badges/licensed.png"
-    title: "Florida Department of Education"
-    paragraph: "The United States of America ensures education quality thru federal deparments of education, being certified means we have to anually commit and comply with federal and national regulations to ensure academy success and renewed license."
-    text_link: "See article"
-    link: "/"
+  # - image: "../../../static/images/badges/licensed.png"
+  #   title: "Florida Department of Education"
+  #   paragraph: "The United States of America ensures education quality thru federal deparments of education, being certified means we have to anually commit and comply with federal and national regulations to ensure academy success and renewed license."
+  #   text_link: "See article"
+  #   link: "/"
 
   - image: "../../../static/images/badges/Course-Report-Badge-2023.png"
     title: "Best Bootcamp for Course Report 2023"

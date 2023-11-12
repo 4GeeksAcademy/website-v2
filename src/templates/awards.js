@@ -337,7 +337,7 @@ const Awards = ({ data, pageContext, yml }) => {
           <H1 type="h1" textAlign="center" margin="0 0 11px 0" color="#606060">
             {yml.seo_title}
           </H1>
-          <H2
+          <Paragraph
             type="h2"
             fontFamily="Archivo-Black"
             fontSize="50px"
@@ -347,7 +347,7 @@ const Awards = ({ data, pageContext, yml }) => {
             padding_xxs="0 20px"
           >
             {"< " + yml.header.title + " >"}
-          </H2>
+          </Paragraph>
           <Paragraph
             fontSize="15px"
             textAlign="center"
