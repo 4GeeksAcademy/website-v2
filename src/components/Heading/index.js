@@ -58,7 +58,9 @@ const BaseHeading = styled(Heading)`
   }
   @media ${Devices.xxs} {
     padding: ${(props) => props.padding_xxs};
+    line-height: ${(props) => props.lineHeight_xxs};
   }
+
   @media ${Devices.xs} {
     margin: ${(props) => props.margin_xs};
     max-width: ${(props) => props.maxWidth_xs};

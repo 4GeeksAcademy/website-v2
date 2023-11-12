@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useMemo } from "react";
 import { graphql } from "gatsby";
 import { landingSections } from "../components/Landing";
 import FollowBar from "../components/FollowBar";
@@ -49,35 +49,37 @@ const Landing = (props) => {
   }, [yml]);
 
   // data sent to the form already prefilled
-  const preData = {
-    course: {
-      type: "hidden",
-      value:
-        programs.length <= 1 ? programs[0].value : yml.meta_info?.utm_course,
-      valid: true,
-    },
-    utm_location: {
-      type: "hidden",
-      value:
-        locations.length <= 1
-          ? locations[0]?.value
-          : yml.meta_info.utm_location || null,
-      valid: true,
-    },
-    utm_language: { type: "hidden", value: pageContext.lang, valid: true },
-    automation: {
-      type: "hidden",
-      value: yml.meta_info.automation,
-      valid: true,
-    },
-    tag: { type: "hidden", value: yml.meta_info.tag, valid: true },
-    current_download: {
-      type: "hidden",
-      value: yml.meta_info.current_download,
-      valid: true,
-    },
-    form_type: { type: "hidden", value: pageContext.type, valid: true },
-  };
+  const preData = useMemo(() => {
+    return {
+      course: {
+        type: "hidden",
+        value:
+          programs.length <= 1 ? programs[0].value : yml.meta_info?.utm_course,
+        valid: true,
+      },
+      utm_location: {
+        type: "hidden",
+        value:
+          locations.length <= 1
+            ? locations[0]?.value
+            : yml.meta_info.utm_location || null,
+        valid: true,
+      },
+      utm_language: { type: "hidden", value: pageContext.lang, valid: true },
+      automation: {
+        type: "hidden",
+        value: yml.meta_info.automation,
+        valid: true,
+      },
+      tag: { type: "hidden", value: yml.meta_info.tag, valid: true },
+      current_download: {
+        type: "hidden",
+        value: yml.meta_info.current_download,
+        valid: true,
+      },
+      form_type: { type: "hidden", value: pageContext.type, valid: true },
+    };
+  }, []);
 
   const landingLocation =
     session &&
@@ -511,7 +513,6 @@ export const query = graphql`
               style
               shadow
               link
-              shadow
             }
             programs {
               title
@@ -529,6 +530,10 @@ export const query = graphql`
               path
               background
               hover_color
+            }
+            section_heading {
+              text
+              style
             }
             heading {
               text

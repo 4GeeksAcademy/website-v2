@@ -431,11 +431,7 @@ const Awards = ({ data, pageContext, yml }) => {
                   ))}
                   {award.text_link && (
                     <Link to={award.link}>
-                      <H4
-                        display="flex"
-                        fontWeigth="700"
-                        color={Colors.blue}
-                      >
+                      <H4 display="flex" fontWeigth="700" color={Colors.blue}>
                         {award.text_link}
                       </H4>
                     </Link>

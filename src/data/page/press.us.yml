@@ -42,7 +42,7 @@ content:
       textUrl: "See Interview"
       url: "https://refreshmiami.com/miami-based-coding-school-4geeks-is-breaking-down-the-barriers-to-becoming-a-software-developer/"
     - name: "Miami Herald"
-      logo: "../../../static/images/news/miami-herald.png"
+      logo: "../../../static/images/news/the-miami-herald.png"
       #location: ["santiago-chile", "online", "downtown-miami", "bogota-colombia", "mexicocity-mexico", "costa-rica", "lima-peru", "buenosaires-argentina", "lapaz-bolivia", "montevideo-uruguay", "quito-ecuador"]
       image: "../../../static/images/partner/united-way-schoolarship.jpeg"
       title: "Learn to Code Scholarships"
@@ -58,7 +58,7 @@ content:
       textUrl: "Watch Video"
       url: "https://www.nbcmiami.com/on-air/as-seen-on/students-with-autism-learn-to-code_miami/159640/"
     - name: "Newsweek"
-      logo: "../../../static/images/news/newsweek.png"
+      logo: "../../../static/images/news/newsweek-2.png"
       #location: ["downtown-miami", "online", "madrid-spain"]
       image: "../../../static/images/news/newsWeek-TopCodingSchools-2017.png"
       title: "A Coding Career and You  - Top Coding Schools 2017"

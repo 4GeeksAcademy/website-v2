@@ -119,6 +119,7 @@ const Player = ({
   imageHeight,
   videoHeight,
   switched,
+  boxShadow,
   width_play,
   height_play,
   fontSize_play,
@@ -130,7 +131,6 @@ const Player = ({
   transformPlay_lg,
   leftPlay_tablet,
   margin_tablet,
-
   ...rest
 }) => {
   const [showVideo, setShowVideo] = React.useState(false);
@@ -275,7 +275,10 @@ const Player = ({
           //height={imageHeight || "100%"}
           height={videoHeight || "100%"}
           position="relative"
-          boxShadow={image_thumb?.shadow && "20px 15px 0px 0px rgba(0,0,0,1)"}
+          boxShadow={
+            boxShadow ||
+            (image_thumb?.shadow && "20px 15px 0px 0px rgba(0,0,0,1)")
+          }
           //border={image_thumb?.shadow && "3px solid black"}
           style={imgStyles && { ...JSON.parse(image_thumb?.style) }}
           background="black"
@@ -395,7 +398,7 @@ Player.propTypes = {
 };
 
 const Play = styled.button`
-  background: ${(props) => props.background || "rgba(0, 0, 0, 0.7)"};
+  background: ${(props) => props.background || "rgba(228,15,15,0.7)"};
   border-radius: 3px;
   color: ${(props) => props.white};
   font-size: 1em;
