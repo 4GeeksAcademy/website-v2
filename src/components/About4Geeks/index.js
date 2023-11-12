@@ -11,7 +11,7 @@ const About4Geeks = ({ id, lang }) => {
     <GridContainerWithImage
       id={id}
       columns_tablet="12"
-      margin_tablet="50px auto 50px auto"
+      margin_tablet="80px auto"
       margin="80px 0 64px 0"
       maxWidth="1366px"
       gridColumn_tablet="1/15"

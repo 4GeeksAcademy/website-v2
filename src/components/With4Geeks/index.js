@@ -85,8 +85,8 @@ export default ({
           maxWidth_tablet="1366px"
           gridTemplateColumns_tablet="repeat(14, 1fr)"
           padding_tablet="0 40px"
-          padding_md="0 80px"
-          padding_lg="0"
+          padding_md="40px 80px"
+          padding_lg="50px 0 0 0"
           padding="0 17px"
         >
           <Div
@@ -142,6 +142,7 @@ export default ({
             gridColumn="1/15"
             width="100%"
             className="badge-slider hideOverflowX__"
+            gap="0px 20px"
           >
             {locationFiltered.map((i, index) => {
               return (
@@ -151,14 +152,11 @@ export default ({
                   flexDirection_tablet="column"
                   justifyContent="start"
                   border="none"
-                  padding="0 16px"
                   key={`${i.name}_${index}`}
                   style={{ borderRadius: `0px` }}
                   minWidth="315px"
                 >
                   <Div
-                    padding_xs="0 0 20px 0px"
-                    padding="20px 0"
                     width_tablet="100%"
                     height_tablet="173px"
                     height="173px"
@@ -180,13 +178,14 @@ export default ({
                     />
                   </Div>
                   <Div
-                    marginTop="20px"
+                    //marginTop="20px"
+                    style={{padding: "20px 32px"}}
                     padding_tablet="20px 32px"
                     padding_xxs="20px 16px"
                     display={`flex`}
                     height="100%"
                     flexDirection="column"
-                    gap="16px"
+                    gap="16px 0px"
                     boxShadow="inset 0px 0px 5px 0px #0000001A"
                   >
                     <Link to={i.footer.image_link}>

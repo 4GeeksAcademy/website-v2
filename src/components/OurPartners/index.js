@@ -22,8 +22,8 @@ const Title_Paragraph = (props) => {
           display="flex"
           flexDirection="column"
           alignItems="center"
-          padding_tablet="0"
-          padding="0 10px"
+          margin_tablet="0px"
+          margin_xxs="0 20px"
           gridColumn_tablet="1 / 15"
         >
           {/*<H2 margin="0 0 15px 0" fontSize="15px" lineHeight="19px" fontWeight="900">{title}</H2>*/}
