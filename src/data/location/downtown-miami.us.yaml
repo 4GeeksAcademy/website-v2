@@ -59,7 +59,7 @@ custom_bar:
   message: 'Change your life with Code. Starting at $150 a month. Or you can pay after you get a job! <a class="customBar-link" href="/us/apply">Apply</a>'
   button: 
     label: "Read More"
-    path: "/us/apply" #string (can be inline path using #, relative path or absolute path)
+    path: "" # leave empty to hide (can be inline path using #, relative path or absolute path)
 
 info_box:
   heading: "Find us in Miami"
