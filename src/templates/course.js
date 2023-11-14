@@ -64,14 +64,15 @@ const Program = ({ data, pageContext, yml }) => {
   return (
     <>
       <Header
-        margin={isCustomBarActive(session) ? "120px auto 0 auto" : "0 auto"}
-        paragraphMargin="26px 0"
+        margin={isCustomBarActive(session) ? "60px auto 0 auto" : "0 auto"}
+        paragraphMargin="26px 20px"
         paragraphMargin_Tablet="26px 22%"
         paddingParagraph_tablet="0 40px"
         //seo_title={yml.seo_title}
         title={yml.header.title}
         paragraph={yml.header.paragraph}
         padding_tablet="72px 0 40px 0"
+        padding="0px"
         position="relative"
         fontSize_title="40px"
         fontSizeTitle_tablet="60px"
@@ -86,12 +87,14 @@ const Program = ({ data, pageContext, yml }) => {
           height="286px"
           style={{
             position: "absolute",
-            left: "15%",
-            top: "13%",
             zIndex: "1",
           }}
           display_xxs="none"
           display_tablet="flex"
+          left_tablet= "72px"
+          top_tablet= "13%"
+          left_lg= "0%"
+          top_lg= "13%"
         />
         <Div
           flexDirection_tablet="row"

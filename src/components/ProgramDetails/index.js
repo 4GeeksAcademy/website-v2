@@ -142,7 +142,7 @@ const ProgramDetails = (props) => {
         </Div>
       </Grid>
 
-      <Div flexWrap="wrap" margin_xs="20px" margin_tablet="100px 0 0 0">
+      <Div flexWrap="wrap" margin_xxs="20px" margin_tablet="100px 0 0 0">
         <H2 lineHeight="36px">{props.heading || props.details.heading}</H2>
         <Paragraph
           padding="20px 0 0 0"

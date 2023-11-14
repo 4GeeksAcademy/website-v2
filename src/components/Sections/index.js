@@ -400,6 +400,8 @@ export const Grid = styled(Div)`
     grid-template-columns: ${(props) =>
       props.columns_xxs ? `repeat(${props.columns_xxs}, 1fr)` : null};
     padding: ${(props) => props.padding_xxs};
+    margin: ${(props) => props.margin_xxs};
+    
   }
   @media ${Devices.xs} {
     grid-template-columns: ${(props) =>
@@ -558,7 +560,7 @@ export const Header = ({
       position={position}
       margin={margin || "70px 0 0 0"}
       margin_tablet={margin_tablet}
-      padding={padding || "60px 17px"}
+      padding={padding || "60px 20px"}
       padding_tablet={padding_tablet || "60px 0"}
       gridTemplateColumns_tablet={gridTemplateColumns_tablet}
       maxWidth={maxWidth}

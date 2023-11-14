@@ -200,6 +200,7 @@ export const Paragraph = styled.p`
   text-shadow: ${(props) => props.textShadow};
   line-height: ${(props) => props.lineHeight};
   color: ${(props) => props.color};
+  text-decoration: ${(props) => props.textDecoration}; 
   text-align: ${(props) => props.textAlign || "center"};
   align-self: ${(props) => props.alignSelf};
   align-items: ${(props) => props.alignItems};
