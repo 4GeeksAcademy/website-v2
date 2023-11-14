@@ -112,12 +112,12 @@ const SuccessStoriescomponent = ({ filterIndexes, lang }) => {
                 video={m.student_video}
                 starRating={true}
                 stories={true}
-                style={{ 
-                  height: "39px", 
-                  maxWidth: "39px", 
-                  backgroundSize: "contain" }}
+                style={{
+                  height: "39px",
+                  maxWidth: "39px",
+                  backgroundSize: "contain",
+                }}
                 lang={lang}
-    
               />
             )
           );
