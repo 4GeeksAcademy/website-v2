@@ -8,11 +8,7 @@ import Marquee from "react-fast-marquee";
 
 const ScholarshipSuccessCases = ({ content, maxWidth }) => {
   return (
-    <Div 
-      height="590px" 
-      display="block" 
-      margin="60px 0 60px 0"
-    >
+    <Div height="590px" display="block" margin="60px 0 60px 0">
       <H2 margin="30px 0">{content.title}</H2>
       <Marquee speed={30} pauseOnHover>
         <Div height="500px">

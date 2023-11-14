@@ -76,7 +76,7 @@ const ScholarshipProjects = ({ content, maxWidth }) => {
       </Button>
       <Slider {...settings} ref={sliderRef}>
         {content?.projects.map((project) => (
-          <Div>
+          <Div margin_md="50px auto">
             <Div
               padding="15px"
               padding_tablet="0"

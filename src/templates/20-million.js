@@ -249,11 +249,11 @@ const TwentyMillion = ({ data, pageContext, yml }) => {
           <Paragraph
             color="black"
             opacity="1"
-            margin="15px 0"
+            margin="20px 0"
             padding="0"
             width="auto"
             letterSpacing="0.05em"
-            textAlign="left"
+            textAlign="center"
             textAlign_tablet="center"
             fontSize="24px"
             lineHeight="28px"
@@ -330,7 +330,7 @@ const TwentyMillion = ({ data, pageContext, yml }) => {
           session={session}
         />
       </Div>
-      
+
       <Testimonials
         lang={data.allTestimonialsYaml.edges}
         margin_tablet="75px 0 0 0"
@@ -360,14 +360,14 @@ const TwentyMillion = ({ data, pageContext, yml }) => {
           gridColumn_tablet="1 / 7"
           flexDirection="column"
         >
-          <H2 textAlign_md="left" margin="0 0 30px 0" lineHeight="35px">
+          <H2 textAlign_tablet="start" margin="0 0 30px 0" lineHeight="35px">
             {yml.form.title}
           </H2>
           {yml.form.paragraph.split("\n").map((m, i) => (
             <Paragraph
               key={i}
               margin="7px 0"
-              textAlign_md="left"
+              textAlign_tablet="start"
               dangerouslySetInnerHTML={{ __html: m }}
             />
           ))}
