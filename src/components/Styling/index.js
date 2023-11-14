@@ -335,8 +335,8 @@ export const StyledBackgroundSection = styled(BackgroundSection)`
   ,
   &:after {
     min-height: ${(props) => props.minHeight};
-    border-radius: ${(props) => props.borderRadius};
-    filter: ${(props) => props.filter};
+    border-radius: ${(props) => props.borderRadius}; 
+    filter: ${(props) => props.filter}; 
     height: ${(props) => props.h_sm};
     width: ${(props) => props.width};
     max-width: ${(props) => props.maxWidth};
@@ -347,6 +347,10 @@ export const StyledBackgroundSection = styled(BackgroundSection)`
     height: ${(props) => props.height_xxs};
     width: ${(props) => props.width_xxs};
     margin: ${(props) => props.margin_xxs};
+    &:before,
+    &:after {
+      filter: ${(props) => props.filter_xxs};
+    }
   }
   @media ${Devices.xs} {
     height: ${(props) => props.height_xs};
@@ -359,7 +363,6 @@ export const StyledBackgroundSection = styled(BackgroundSection)`
   }
   @media ${Devices.tablet} {
     border-radius: ${(props) => props.borderRadius_tablet};
-    margin: ${(props) => props.margin_tablet};
     height: ${(props) => props.height_tablet};
     width: ${(props) => props.width_tablet || "100%"};
     display: ${(props) => props.display_tablet};
