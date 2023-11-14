@@ -25,8 +25,7 @@ import OurPartners from "../components/OurPartners";
 import ChooseYourProgram from "../components/ChooseYourProgram";
 import Testimonials from "../components/Testimonials";
 import { isDevelopment, isTestMode } from "../components/NavbarDesktop";
-import { TwoColumn } from "../components/Landing";
-//import TwoColumn from "../components/TwoColumn/index.js";
+import TwoColumn from "../components/TwoColumn/index.js";
 
 const SVGBubblesLeft = () => (
   <svg
@@ -147,11 +146,11 @@ const Home = (props) => {
             zIndex="5"
             left_tablet={yml.header_data.video ? "40%" : "50%"}
             left="50%"
-            left_xxs="50%"
+            left_xxs="65%"
             left_xs="74%"
             top_tablet={yml.header_data.video ? "1%" : "25%"}
             top="90px"
-            top_xxs="-2px"
+            top_xxs="20px"
             top_xs="100px"
             width_xxs="80px"
             width_sm="100px"
@@ -166,9 +165,10 @@ const Home = (props) => {
           <Div
             flexDirection="column"
             // justifyContent_tablet="evenly"
-            alignItems="center"
+            alignItems="start"
             alignItems_tablet="start"
-            padding="0 0 0 0"
+            margin_xxs="0 20px"
+            margin_tablet="0px"
           >
             <Div
               flexDirection="column"
@@ -190,8 +190,8 @@ const Home = (props) => {
               </H1>
               <H2
                 type="h2"
-                textAlign_tablet="left"
-                textAlign_xxs="left"
+                textAlign_tablet="start"
+                textAlign_xxs="start"
                 fontSize="40px"
                 fontSize_tablet="50px"
                 margin="20px 0 0 0"
@@ -328,7 +328,7 @@ const Home = (props) => {
           </Div>
         </GridContainerWithImage>
         <Div
-          margin="90px auto"
+          margin="70px auto 0 auto"
           margin_tablet="90px auto 0 auto"
           width="90%"
           className="badge-slider hideOverflowX__"

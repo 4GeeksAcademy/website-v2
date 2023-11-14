@@ -426,7 +426,6 @@ a.faq-link:hover {
 .testimonial-slider::-webkit-scrollbar-thumb {
   -webkit-border-radius: 10px;
   width: 50px;
-  height: 10px;
   border-radius: 10px;
   background: #0097cd;
   -webkit-box-shadow: inset 0 0 0px rgba(0,0,0,0.5); /* height of horizontal scrollbar ← You're missing this */ /* width of vertical scrollbar */

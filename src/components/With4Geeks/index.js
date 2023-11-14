@@ -163,17 +163,17 @@ export default ({
                     alignSelf={`baseline`}
                   >
                     <ReactPlayer
-                      With_Modal={true} 
+                      With_Modal={true}
                       margin_tablet="0px"
                       imageWidth="100%"
                       imageHeight="auto"
-                      height="100%"
+                      //height="100%"
                       className="react-player-with4geeks"
                       thumb={i.image}
                       id={i.video}
                       width="100%"
                       width_tablet="100%"
-                      videoHeight={playerHeight}
+                      //videoHeight={playerHeight}
                       style={{ borderRadius: `0px`, height: `173px` }}
                     />
                   </Div>

@@ -110,7 +110,7 @@ const ChooseYourProgram = ({
           </Paragraph>
         </Div>
         <Grid
-          gridColumn_tablet={landingTemplate ? "1 / 15" : "1 / 14"}
+          gridColumn_tablet={landingTemplate ? "1 / 15" : "1 / 15"}
           padding_tablet={landingTemplate ? "0 17px" : "0"}
           padding_md="0"
           gridColumn_md="1 / 15"
@@ -119,10 +119,11 @@ const ChooseYourProgram = ({
             landingTemplate ? "repeat(2, 4fr)" : "repeat(3, 4fr)"
           }
           gridTemplateColumns_tablet={
-            landingTemplate ? "repeat(2, 4fr)" : "repeat(3 , 33%)"
+            landingTemplate ? "repeat(2, 4fr)" : "repeat(3 , 32%)"
           }
           zIndex="1"
-          margin_tablet={!landingTemplate && "0 0 0 35px"}
+          margin="0px auto"
+          margin_tablet={!landingTemplate && "0 0 0 0"}
           margin_md="0"
         >
           {Array.isArray(programs) &&
@@ -132,7 +133,7 @@ const ChooseYourProgram = ({
                   key={index}
                   display="flex"
                   padding=" 24px 24px"
-                  margin_xs="20px 0px"
+                  //margin_xs="20px 0px"
                   margin_tablet="0px"
                   border="3px solid black"
                   flexDirection_tablet="column"
@@ -147,6 +148,8 @@ const ChooseYourProgram = ({
                   zIndex="1"
                   width_md="100%"
                   width_tablet="100%"
+                  width_xxs="95%"
+                  width_xs="100%"
                 >
                   <Div
                     placeSelf_tablet={landingTemplate && "flex-start"}

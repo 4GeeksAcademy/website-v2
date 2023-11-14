@@ -16,7 +16,7 @@ const Title_Paragraph = (props) => {
         maxWidth="1366px"
         margin="0 auto 20px auto"
         background={props.background}
-        containerColumns_tablet="1fr repeat(12, 1fr) 1fr"
+        gridTemplateColumns_tablet="1fr repeat(12, 1fr) 1fr"
       >
         <Div
           display="flex"
@@ -47,7 +47,7 @@ const Title_Paragraph = (props) => {
           <Paragraph
             fontFamily="Lato"
             fontWeight="normal"
-            fontSize="21px"
+            fontSize={props.fontSize || "21px"}
             lineHeight="22px"
             padding="0"
             padding_tablet="0px 10%"
@@ -245,6 +245,9 @@ const OurPartners = ({
   withoutLine,
   slider,
   marquee,
+  fontSize,
+  width,
+  gridColumn,
   maxWidth,
   ...rest
 }) => {
@@ -253,13 +256,16 @@ const OurPartners = ({
     margin: `${margin || "40px 0 0 0"}`,
     padding: `${padding || "75px 0"}`,
     borderBottom: borderBottom,
+    width: width,
   };
-
+  console.log(rest);
   //Renderized...
   return (
     <Fragment github="/components/partner" style={FragmentStyle}>
       {title && (
         <Title_Paragraph
+          gridColumn={gridColumn}
+          fontSize={fontSize}
           title={title}
           paragraph={paragraph}
           background={background}
