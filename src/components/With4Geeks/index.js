@@ -46,6 +46,7 @@ export default ({
               alt
               icon
               video
+              video_height
               location
               footer {
                 is_image
@@ -76,7 +77,6 @@ export default ({
         n.location.includes(sessionLocation)
     );
   else locationFiltered = info.with;
-      console.log(locationFiltered)
   return (
     <Fragment github="/components/with_4geeks">
       {info?.header && (
@@ -155,29 +155,30 @@ export default ({
                   padding="0 16px"
                   key={`${element.name}_${index}`}
                   style={{ borderRadius: `0px` }}
-                  minWidth="315px"
+                  //minWidth="315px"
                 >
                   <Div
                     padding_xs="0 0 20px 0px"
-                    padding="20px 0"
+                    //padding="20px 0"
                     width_tablet="100%"
-                    height_tablet="173px"
-                    height="173px"
+                    height_tablet={element.video_height || "173px"}
+                    height={element.video_height || "173px"}
                     alignSelf={`baseline`}
+                    style={{ borderRadius: `0px`}}
                   >
                     <ReactPlayer
                       With_Modal={element.open_in_modal}
                       margin_tablet="0px"
                       imageWidth="100%"
-                      imageHeight="auto"
+                      imageHeight={element.video_height || "auto"}
                       //height="100%"
                       className="react-player-with4geeks"
                       thumb={element.image}
                       id={element.video}
                       width="100%"
                       width_tablet="100%"
-                      //videoHeight={playerHeight}
-                      style={{ borderRadius: `0px`, height: `173px` }}
+                      videoHeight={element.video_height}
+                      style={{ borderRadius: `0px`}}
                     />
                   </Div>
                   <Div

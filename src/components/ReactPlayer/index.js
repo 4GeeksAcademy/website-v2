@@ -275,7 +275,10 @@ const Player = ({
           //height={imageHeight || "100%"}
           height={videoHeight || "100%"}
           position="relative"
-          boxShadow={boxShadow || (image_thumb?.shadow && "20px 15px 0px 0px rgba(0,0,0,1)")}
+          boxShadow={
+            boxShadow ||
+            (image_thumb?.shadow && "20px 15px 0px 0px rgba(0,0,0,1)")
+          }
           //border={image_thumb?.shadow && "3px solid black"}
           style={imgStyles && { ...JSON.parse(image_thumb?.style) }}
           background="black"
@@ -312,7 +315,7 @@ const Player = ({
                   : videoHeight
               }
               style={{
-                height: `${style.height}` || "100%",
+                height: `${videoHeight}` || "100%",
                 width: `${style.width}` || "100%",
                 //borderRadius: `${style.borderRadius}` || "auto",
               }}

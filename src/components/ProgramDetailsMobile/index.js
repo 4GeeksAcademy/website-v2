@@ -61,22 +61,19 @@ const ProgramDetailsMobile = (props) => {
                   display="flex"
                   flexDirection={`column`}
                   alignItems={`flex-start`}
-                  
                 >
                   <H3 textAlign="left">{item.module_name}</H3>
                   <Paragraph textAlign="left" margin="0 0 20px 0">
                     {item.duration}
                   </Paragraph>
                 </Div>
-                <Div 
+                <Div
                   style={{ position: "absolute", right: "13px", top: "15px" }}
-                  transform={selected.index === index ? "rotate(180deg)" : "rotate(0deg)"}
+                  transform={
+                    selected.index === index ? "rotate(180deg)" : "rotate(0deg)"
+                  }
                 >
-                  <Icon
-                    icon="arrowdown"
-                    width="32px"
-                    height="32px"
-                  />
+                  <Icon icon="arrowdown" width="32px" height="32px" />
                 </Div>
                 {selected.index === index && (
                   <Div flexDirection="column">
