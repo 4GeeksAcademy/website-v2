@@ -20,12 +20,6 @@ translations:
 
 # This is my dakladsdas
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> d942b76900e5c305981277a2b8b149f20edc6a73
-loren ipsun.
 
 ```js
 Copycopy code to clipboard
