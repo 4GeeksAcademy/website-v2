@@ -204,7 +204,7 @@ export const Div = styled.div`
     column-count: ${(props) => props.columnCount_xxs};
     width: ${(props) => props.width_xxs};
     margin: ${(props) => props.margin_xxs};
-    padding: ${(props) => props.padding_xxs}
+    padding: ${(props) => props.padding_xxs};
     background: ${(props) => props.background_xxs};
     display: ${(props) => props.display_xxs};
     padding: ${(props) => props.padding_xxs};
@@ -541,7 +541,6 @@ export const Header = ({
   paddingParagraph_tablet,
   paddingTitle_tablet,
   display_mobile,
-<<<<<<< HEAD
   fontSize_title,
   fontSizeTitle_tablet,
   fontFamily_title,
@@ -549,8 +548,6 @@ export const Header = ({
   fontWeight_paragraph,
   fontWeight_title,
   gridTemplateColumns_tablet,
-=======
->>>>>>> 30c5c369d397533cd9becd61e75359f47af43b98
   maxWidth,
 }) => {
   return (
