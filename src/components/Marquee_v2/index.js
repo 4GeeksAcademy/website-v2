@@ -33,7 +33,7 @@ const Marquee_elements = styled.div`
     ${(props) =>
       props.numberSpeed
         ? Math.round((props.childCount * 22) / props.numberSpeed)
-        : props.childCount * 22}s
+        : 0}s
   );
 
   &:hover {
@@ -71,7 +71,7 @@ export default function Marquee_v2({
           [reversed]: props.reversed,
         },
         className
-      )}
+      ) }
     >
       <div ref={ref} className={marquee__measure} aria-hidden>
         {children}

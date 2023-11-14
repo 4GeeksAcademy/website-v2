@@ -168,7 +168,7 @@ const Home = (props) => {
             // justifyContent_tablet="evenly"
             alignItems="center"
             alignItems_tablet="start"
-            padding="0 0 0 20px"
+            padding="0 0 0 0"
           >
             <Div
               flexDirection="column"

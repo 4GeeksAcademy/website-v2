@@ -50,9 +50,9 @@ const Testimonials = (props) => {
                         containerstyle
                 */}
         <Marquee_v2
-          speed={0.7}
+          //speed={0.1}
           reversed={false}
-          containerstyle={{ height: "215px" }}
+          containerstyle={{ height: "215px",  }}
         >
           <Div
             className="testimonial-slider"
