@@ -1,21 +1,23 @@
 meta_info:
   slug: programs
-  title: "Courses and programs taught at 4Geeks Academy"
-  description: "If it's related to coding, 4Geeks Academy teaches it. Discover our course offerings and programs."
+  title: "Courses, programs, and bootcamps taught at 4Geeks Academy"
+  description: "If it's related to coding, 4Geeks Academy teaches it. Discover our course offerings; bootcamps and programs."
   visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   image: "/images/programs-heading.png"
   keywords: "Programs at 4Geeks Academy"
   redirects: ["/programs"]
 
-seo_title: "level up as a developer"
+seo_title: "4geeks academy courses"
 header:
-  title: Coding sets you free
-  paragraph: Our focus on coding skills, lifetime career and coding support and aggressive scholarship programs allows us to present the best possible offers to become a developer in a matter of weeks.
+  title: Pick one of 4Geeks Bootcamp's
+  paragraph: |
+    What do coding, data science, cybersecurity, and web3/blockchain have in common? The simple answer is: Code. 
+    As a coding-centric school, our learning framework will make you job-ready faster than any other school.
   image: "../../../static/images/programs-heading.png"
   alt: ""
 
 choose_program:
-  title: These are our available courses
+  title: Pick one of our available bootcamps
   paragraph: ""
 
 content:
