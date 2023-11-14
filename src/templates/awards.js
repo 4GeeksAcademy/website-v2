@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { graphql, Link } from "gatsby";
+import { graphql } from "gatsby";
+import Link from "gatsby-link";
 import Layout from "../global/Layout";
 import {
   Grid,
@@ -434,6 +435,9 @@ export const query = graphql`
             title
             paragraph
           }
+          badges {
+            paragraph
+          }
           awards_list {
             image {
               childImageSharp {
@@ -447,8 +451,6 @@ export const query = graphql`
             }
             title
             paragraph
-            text_link
-            link
           }
         }
       }

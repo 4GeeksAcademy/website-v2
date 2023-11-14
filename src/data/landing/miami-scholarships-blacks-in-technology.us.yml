@@ -91,7 +91,7 @@ follow_bar:
 # ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇
 #
 rating_reviews:
-  position: 3
+  position: 4
   heading: "Top rated on all available review sites"
   rating_list:
     - alt: "Career Karma"
@@ -123,13 +123,11 @@ who_is_hiring:
     - name: "Apple"
       image: "../../../static/images/partner/apple.png"
 
-
 geeks_vs_others:
-  position: 4
+  position: 5
   heading: "Compare 4Geeks to other bootcamps"
   # sub_heading: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
   total_rows: 5
-
 
 why_4geeks:
   position: 7
@@ -147,9 +145,8 @@ apply_schollarship: # form that is displayed at the end of the landing
 # Possible layours: [two_column_left_image, two_column_right_image]
 
 components:
-
   - name: how-it-works
-    position: 2
+    position: 3
     background: "veryLightBlue2"
     layout: iconogram
     swipable: True
@@ -162,19 +159,18 @@ components:
       style: '{ "textAlign": "center", "width": "60%" }'
     text_link: "#"
     icons:
-    - icon: "touch"
-      title: Apply for your scholarship before March 31st, 2022
-    - icon: "receive_mail"
-      title: You will receive an email with all the information and a logic test 
-    - icon: "talk"
-      title: Do an online interview with our admissions team 
-    - icon: "terminal"
-      title: Get the result, book your spot and start coding
-  
+      - icon: "touch"
+        title: Apply for your scholarship before March 31st, 2022
+      - icon: "receive_mail"
+        title: You will receive an email with all the information and a logic test
+      - icon: "talk"
+        title: Do an online interview with our admissions team
+      - icon: "terminal"
+        title: Get the result, book your spot and start coding
 
   - name: "whatever"
     layout: choose_your_program
-    position: 1
+    position: 2
     heading:
       text: Our Programs
     content:
@@ -215,9 +211,41 @@ components:
         "Blacks In Technology Foundation"
         #           xl      lg      md      sm      xs
       font_size: ["40px", "40px", "40px", "40px", "40px"]
-    sub_heading: 
+    sub_heading:
       text: "Access to the largest community of black technologists"
       font_size: ["18px", "18px", "18px", "18px", "18px"]
     content:
-      text: "<strong>CAREER SUPPORT</strong> <br>Job boards, mentorships, and strategic partnerships give members an upper hand in their job search and career advancement goals.<br><br><strong>NETWORKING</strong><br>Professional and social events connect our community. Virtual and physical events are core to the BIT mission.<br><br><strong>TECH RESOURCES</strong><br>Through our relationships, the BIT Foundation offers discounts on technical training, and events and conferences."
+      text: ""
       font_size: ["16px"]
+    bullets:
+      items:
+        - heading: "CAREER SUPPORT"
+          text: "Job boards, mentorships, and strategic partnerships give members an upper hand in their job search and career advancement goals."
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
+        - heading: "NETWORKING"
+          text: "Professional and social events connect our community. Virtual and physical events are core to the BIT mission."
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
+        - heading: "TECH RESOURCES"
+          text: "Through our relationships, the BIT Foundation offers discounts on technical training, and events and conferences."
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
+
+  - name: some_id
+    position: 1
+    layout: two_column_right
+    image:
+      src: "/images/testimonials/allisa-testimonial.jpg"
+    video: "https://www.youtube.com/watch?v=TCHASxvkhpI"
+    heading:
+      text:
+        "Unlock Your Future: Exclusive Scholarships with Miami Dade College, Clark University, and United Way Miami for South Florida Applicants!"
+        #xl      lg     md     sm    xs
+      font_size: ["40px", "34px", "34px", "25px", "20px"]
+    content:
+      text: "Seize this chance to supercharge your education. Join the academy now and pave the way to your brightest future! Contact our admissions team to learn more and join our coding bootcamp today!"
+      font_size: ["16px"]
+    button:
+      text: "Apply Now"
+      background: black
+      color: white
+      hover_color: "#white"
+      path: "#top"

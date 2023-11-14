@@ -32,7 +32,6 @@ navbar:
   buttonUrl: "#bottom" # url accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
   logoUrl: "#"
 
-
 apply_schollarship: # form that is displayed at the end of the landing
   # title: "Get more info about this award-winning development course"
   imageSide: "right"
@@ -106,6 +105,27 @@ components:
         #xl      lg     md     sm    xs
       font_size: ["38px", "36px", "32px", "30px", "30px"]
 
+  - name: some_id
+    position: 2
+    layout: two_column_right
+    image:
+      src: "/images/testimonials/liliana-review.jpg"
+      shadow: true
+    video: "https://www.youtube.com/watch?v=aZrQNvyniLo"
+    heading:
+      text: "Liliana nos cuenta por qué deberías considerar a 4Geeks como una opción si te encuentras en Colombia."
+        #xl      lg     md     sm    xs
+      font_size: ["40px", "34px", "34px", "25px", "20px"]
+    content:
+      text: "Desde su creación en Colombia, 4Geeks Academy siempre ha tenido como objetivo brindar oportunidades de aprendizaje, facilitar opciones de financiamiento y establecer asociaciones públicas para ofrecer oportunidades laborales. Si tienes alguna pregunta sobre cómo podemos contribuir a tu futuro profesional, no dudes en contactarnos. Estaremos encantados de ayudarte en todo lo posible."
+      font_size: ["16px"]
+    button:
+      text: "Únete a la Academia"
+      background: black
+      color: white
+      hover_color: "#white"
+      path: "#bottom"
+
 rating_reviews:
   position: 2
   heading: "Lee acerca de nosotros"
@@ -147,4 +167,3 @@ who_is_hiring:
   limit: 4
   heading: "¿Quién contrata a nuestros alumnos?"
   sub_heading: "84% de nuestros estudiantes que completaron el proceso de GeekFORCE han conseguido trabajo luego de haberse graduado (incluso dentro de los sigiuientes  100 días)"
-

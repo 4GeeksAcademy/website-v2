@@ -111,7 +111,7 @@ badges:
   heading: "4Geeks Academy has awards and recognitions that validate it's excellence"
 
 program_details:
-  position: 2
+  position: 1
   heading: "Master Python, JS and React"
   sub_heading: "The 3 most used languages in the world"
 
@@ -142,7 +142,7 @@ components:
   - name: passion
     position: 4
     background: "lightYellow"
-    layout: two_column_right
+    layout: two_column_left
     proportions: [6, 6]
     image:
       style: '{ "border" : "3px solid black", "backgroundSize": "contain" }' 
@@ -151,29 +151,35 @@ components:
       link: "https://www.switchup.org/bootcamps/4geeks-academy"
     video: "SixRm6R8rc0"
     heading:
-      text: "Our passion is your future"
+      text: "Jordan's Journey from JS and React to Python at 4Geeks Academy!"
       font_size: ["40px", "40px", "40px", "40px", "40px"]
     content:
-      text: "We have graduated thousands of students around the world. People from Europe, North America, and Latin America have enjoyed, learned and grown with us. We are focused on being the bridge between your passion about coding and the skills you need to launch your career within the tech industry. Here you will find some of them talking about their experience:"
+      text: "Join us in celebrating his success story and discover how you too can unlock a world of opportunities through our comprehensive bootcamp program!"
       font_size: ["16px"]
+    button:
+      text: "GET MORE INFO"
+      background: black
+      color: white
+      hover_color: "#white"
+      path: "#bottom"
   - name: top_coding_bootcamp
     position: 8
-    background: "veryLightBlue2"
+    background: "#fbfbfb"
     layout: two_column_left
     proportions: [4, 8]
     image:
-      style: '{ "backgroundSize": "contain" }'
+      style: '{ "backgroundSize": "contain", "maxWidth": "250px", "margin": "0 auto"}'
       src: "/images/badges/Course-Report-Badge-2023.png"
       link: "https://www.coursereport.com/schools/4geeks-academy"
     content:
-      style: '{ "line-height": "30px" }'
+      style: '{ "line-height": "30px", "textAling": "center", "padding": "0 20px"}'
       text:
         "We have been selected as one of the Top Coding Bootcamps globally for 3 years in a row"
                     #xl      lg     md     sm       xs
-      font_size: ["30px", "30px", "30px", "30px", "30px"]
-  - name: geeksinfo
-    position: 1
-    layout: geeksInfo
+      font_size: ["35px", "30px", "30px", "28px", "20px"]
+  # - name: geeksinfo
+  #   position: 1
+  #   layout: geeksInfo
   - name: working_in_tech
     position: 3
     background: "#f1f1f1"
@@ -188,6 +194,46 @@ components:
         "86% of our graduates are now working in the field with an average entry salary of $50,000/yr."
         #           xl      lg     md     sm    xs
       font_size: ["40px", "34px"]
+    
+  - name: geekinfo_2
+    position: 3
+    layout: two_column_right
+    proportions: [6, 6]
+    background: ""
+    image:
+      style: '{ "backgroundSize": "contain" }'
+      src: "/images/landing/group_194.png"
+    section_heading: 
+      text: "Get everything you need to succeed"
+      style: '{ "font-size": "30px" }'
+    heading:
+      text: "Why coding?"
+      font_size: ["40px", "40px", "40px", "40px", "40px"]
+    sub_heading:
+      text: "Learning to code will give you access to:"
+      font_size: ["16px", "16px", "16px", "16px", "16px"]
+    button: 
+      text: "Compare 4Geeks with other bootcamps."
+      color: white
+      hover_color: "white"
+      background: "black"
+      path: "https://4geeksacademy.com/us/geeks-vs-others"
+    content: 
+      text: ""
+      font_size: ["16px"]
+      path: ""
+    bullets:
+      items:
+      - heading: "JOB OPPORTUNITIES"
+        text: "Computer programmers are in high demand, and this demand is projected to continue increasing over the next decade."
+        icon: "circle" #string with icon for example ['check', 'cicle', etc]
+      - heading: "BETTER PAY"
+        text: "The starting salary for a Junior Software Developer in Miami is $48,000."
+        icon: "circle" #string with icon for example ['check', 'cicle', etc]
+      - heading: "CAREER FLEXIBILITY"
+        text: "Coding skills prepare you for a variety of roles in the rapidly shifting digital economy."
+        icon: "circle" #string with icon for example ['check', 'cicle', etc]
+
 # why_python:
 #   position: 7
 #   heading: "¿Porqué enseñamos Python?" # optional or set to white space to hide

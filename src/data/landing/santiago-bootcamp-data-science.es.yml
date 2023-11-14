@@ -1,12 +1,12 @@
 meta_info:
-  slug: clases-de-programacion-data-sciense # <--- URL 4geeksacademy.com/us/landing/example
+  slug: bootcamp-datascience-santiago-fb # <--- URL 4geeksacademy.com/us/landing/example
 
   # This will show on social media when shared
   title: "Clases de Data Science en Santiago de Chile, aprende ciencia de datos en 15 semanas y consigue trabajo como científico de datos."
-  description: "El curso de programación más galardonado en Santiago, Chile. Con 4Geeks, te convertirás en programador en meses."
+  description: "El Bootcamp de Data Science y Machine Learning más premiado en Santiago, Chile. Con 4Geeks, te convertirás en experto."
   image: "/images/bg/main-bg.jpg"
   keywords: "Clase de programación, Clase de python, clase de javascript, Clase de informática, Coding Bootcamp, 4Geeks Academy"
-
+  visibility: "hidden" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   template: "landing_a" # <--- choose your landing template
   # <--- URL redirections to avoid 404 errors
   redirects: []
@@ -128,12 +128,6 @@ who_is_hiring:
   heading: "¿Quién contrata a nuestros alumnos?"
   sub_heading: "Nos encanta ver crecer a nuestros estudiantes, es por eso que nos esforzamos cada día por tener más aliados, para que puedas trabajar en empresas que te ayuden a seguir creciendo profesionalmente."
 
-geeks_vs_others:
-  position: 4
-  heading: "¿Qué nos hace tan exitosos?"
-  paragraph: ""
-  total_rows: 5
-
 # Possible layours: [two_column_left_image, two_column_right_image]
 components:
   - name: new_design_with_bullets
@@ -157,7 +151,7 @@ components:
       color: white
       hover_color: "white"
       background: "black"
-      path: "#geeks_vs_others"
+      path: "https://4geeksacademy.com/es/geeks-vs-otros"
     content: 
       text: ""
       font_size: ["16px"]
@@ -204,7 +198,7 @@ components:
         icon: "circle" #string with icon for example ['check', 'cicle', etc]
 
   - name: some_id
-    position: 5
+    position: 4
     layout: two_column_right
     background: "#fbfbfb"
     image:
@@ -228,28 +222,16 @@ components:
       background: "black"
       hover: "lightBlue"
 
-  - name: "choose_your_program"
-    layout: choose_your_program
-    position: 4
-    heading:
-      text: Nuestros Programas
-    content:
-      text: Selecciona el plan que mejor se ajusta a ti
-      font_size: ["16px"]
-      path: ""
-    programs:
-    - title: "Data Science y Machine Learning"
-      sub_title: "pago único"
-      icon: "machine"
-      description: |
-        Aprende Python, SQL, Looker (Google Data Studio), Streamlit y Estadísticas para convertirte en analista de datos y formar parte de un equipo técnico en cualquier compañía. Crea tus propios modelos predictivos con Python, Pandas, Numpy, etc. Utiliza algoritmos predictivos como vecinos cercanos, árboles de decisión, entre otros muchos. Y emplea algoritmos de aprendizaje supervisado y no supervisado.<br><br><span style="font-weight: 800;">4.500.000 CLP</span>
-      text_link: Aplica
-      link: "#bottom" # moves to start position
-      
-    - title: "Data Science & Machine Learning"
-      sub_title: "pago fraccionado"
-      icon: "machine_2"
-      description: |
-        Todos los beneficios de nuestro bootcamp de machine learning pero en pagos fraccionados. Esto te brinda la oportunidad de acceder a todos los beneficios de nuestro bootcamp de machine learning, pero de una manera más flexible y adaptada a tus necesidades financieras. <br><br><span style="font-weight: 800;">Cuotas desde ~220.500 CLP</span>
-      text_link: Aplica
-      link: "#bottom" 
+choose_your_program:
+  position: 5
+  title: Nuestra Modalidad
+  paragraph: Programa de Machine Learning y Data Science en Modalidad Part Time y Full Time
+  programs:  
+  - title: "Part Time"
+    sub_title: "16 semanas"
+    icon: "fullstack"
+    description: |
+      De cero a tener tu primer trabajo como Data Scientist, con una duración de 16 semanas, con clases en vivo 3 veces por semana, compatible con horario laboral o de estudios. 
+    text_link: Obtener más información
+    link: "#top" # moves to start position
+  

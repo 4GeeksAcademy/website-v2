@@ -203,11 +203,11 @@ export const Div = styled.div`
   @media ${Devices.xxs} {
     padding: ${(props) => props.padding_xxs};
     column-count: ${(props) => props.columnCount_xxs};
-    width: ${(props) => props.width_xxs};
     margin: ${(props) => props.margin_xxs};
     background: ${(props) => props.background_xxs};
     display: ${(props) => props.display_xxs};
     justify-content ${(props) => props.justifyContent_xxs};
+    width: ${(props) => props.width_xxs};
   }
   @media ${Devices.xs} {
     padding: ${(props) => props.padding_xs};
