@@ -165,7 +165,7 @@ export default ({
                     height_tablet={element.video_height || "173px"}
                     height={element.video_height || "173px"}
                     alignSelf={`baseline`}
-                    style={{ borderRadius: `0px`}}
+                    style={{ borderRadius: `0px` }}
                   >
                     <ReactPlayer
                       With_Modal={element.open_in_modal}
@@ -179,7 +179,7 @@ export default ({
                       width="100%"
                       width_tablet="100%"
                       videoHeight={element.video_height}
-                      style={{ borderRadius: `0px`}}
+                      style={{ borderRadius: `0px` }}
                     />
                   </Div>
                   <Div
