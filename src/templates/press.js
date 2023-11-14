@@ -139,28 +139,28 @@ const Press = (props) => {
               <TestimonialCard
                 key={i}
                 background={
-                      position == 0
-                        ? Colors.white
-                        : position == 1
-                        ? Colors.veryLightBlue
-                        : Colors.lightYellow2
-                    }
+                  position == 0
+                    ? Colors.white
+                    : position == 1
+                    ? Colors.veryLightBlue
+                    : Colors.lightYellow2
+                }
                 image={l.logo && l.logo}
                 imgStyle={{
-                        objectPosition: "left",
-                        objectFit: "contain",
-                        height: "40px",
-                        width: "150px",
-                        minWidth: "60px",
-                        margin: "0 0 0 0",
-                      }}
+                  objectPosition: "left",
+                  objectFit: "contain",
+                  height: "40px",
+                  width: "150px",
+                  minWidth: "60px",
+                  margin: "0 0 0 0",
+                }}
                 name={l.title}
                 textUrl={l.textUrl}
                 url={l.url}
                 location={l.location}
                 //short_content={l.text}
                 description={l.text}
-                starRating = {false}
+                starRating={false}
               />
             );
           })}
