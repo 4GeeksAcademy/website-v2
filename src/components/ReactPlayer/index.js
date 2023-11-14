@@ -41,27 +41,27 @@ const Iframe = styled(YouTube)`
   height: ${(props) => props.height || "100%"};
   @media ${Devices.xxs} {
     height: ${(props) => props.height_xxs};
-    minHeight: ${(props) => props.minHeight_xxs};
+    minheight: ${(props) => props.minHeight_xxs};
   }
   @media ${Devices.xs} {
     height: ${(props) => props.height_xs};
-    minHeight: ${(props) => props.minHeight_xs};
+    minheight: ${(props) => props.minHeight_xs};
   }
   @media ${Devices.sm} {
     height: ${(props) => props.height_sm};
-    minHeight: ${(props) => props.minHeight_sm};
+    minheight: ${(props) => props.minHeight_sm};
   }
   @media ${Devices.tablet} {
     height: ${(props) => props.height_tablet};
-    minHeight: ${(props) => props.minHeight_tablet};
+    minheight: ${(props) => props.minHeight_tablet};
   }
   @media ${Devices.md} {
     height: ${(props) => props.height_md};
-    minHeight: ${(props) => props.minHeight_md};
+    minheight: ${(props) => props.minHeight_md};
   }
   @media ${Devices.lg} {
     height: ${(props) => props.height_lg};
-    minHeight: ${(props) => props.minHeight_lg};
+    minheight: ${(props) => props.minHeight_lg};
   }
 `;
 
@@ -419,9 +419,6 @@ const Play = styled.button`
   left: 50%;
   transform: ${(props) =>
     props.transformPlay || "translateX(-50%) translateY(-50%)"};
-   {
-    /*translateX(-50%) translateY(-50%);*/
-  }
   border: none;
   opacity: ${(props) => props.opacity || "0.8"};
   cursor: pointer;
