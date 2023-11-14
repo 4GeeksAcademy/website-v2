@@ -33,19 +33,21 @@ const BenefitsAndCharts = (props) => {
         display="flex"
         flexDirection="column"
         gap="50px"
-        padding="52px 0"
+        padding="30px 20px 80px 20px"
         flexDirection_tablet="row"
         margin="auto"
+        padding_tablet="40px 40px"
+        padding_md="60px 80px"
+        padding_lg="80px 0"
         maxWidth={props.maxWidth || "1366px"}
       >
         <Div
           flexDirection="column"
           flex="1"
           flex_tablet="1"
-          padding="0 10px"
-          padding_tablet="45px 0 0 14%"
+          
         >
-          <H2 type="h2" textAlign="left">
+          <H2 type="h2" textAlign="left" lineHeight="30px">
             {data.benefits_and_charts.title}
           </H2>
           <Paragraph
@@ -116,7 +118,7 @@ const BenefitsAndCharts = (props) => {
           flex="1"
           flex_tablet="1"
           padding="20px 10px 40px 10px"
-          padding_tablet="4% 10% 2% 6%"
+          padding_tablet="4% 30px 2% 30px"
           background={Colors.lightYellow}
         >
           <Div
