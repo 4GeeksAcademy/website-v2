@@ -12,13 +12,13 @@ header:
   title: "Awards and Recognitions"
   paragraph: "It's fantastic to have been recognized for years of effort into making one of the best coding communities and learning ecosystems in the world."
   image: "../../../static/images/awards/awards.png"
-badges:
-  paragraph: "This is the place to boost your career by learning to code. We are very proud of our programs and methodology to train developers in just a few months and help them boost their professional careers."
 
 awards_list:
-  - image: "../../../static/images/badges/licensed.png"
-    title: "Florida Department of Education"
-    paragraph: "The United States of America ensures education quality thru federal deparments of education, being certified means we have to anually commit and comply with federal and national regulations to ensure academy success and renewed license."
+  # - image: "../../../static/images/badges/licensed.png"
+  #   title: "Florida Department of Education"
+  #   paragraph: "The United States of America ensures education quality thru federal deparments of education, being certified means we have to anually commit and comply with federal and national regulations to ensure academy success and renewed license."
+  #   text_link: "See article"
+  #   link: "/"
 
   - image: "../../../static/images/badges/Course-Report-Badge-2023.png"
     title: "Best Bootcamp for Course Report 2023"

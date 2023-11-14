@@ -69,6 +69,8 @@ navbar:
               link_to: "/es/alumnos-y-proyectos"
             - title: "Testimonios"
               link_to: "/es/testimonios"
+            - title: "Talento"
+              link_to: "https://www.notion.so/4geeksacademy/Talent-Pipeline-4Geeks-Academy-ef91aba17f9c4964bf7972396d190bdf"
 
   - name: "Academia"
     link: "/es/sobre-la-academia"
@@ -80,14 +82,16 @@ navbar:
       links:
         - title: ""
           sub_links:
+            - title: "Contrata nuestros alumnos"
+              link_to: "https://www.notion.so/4geeksacademy/Talent-Pipeline-4Geeks-Academy-ef91aba17f9c4964bf7972396d190bdf"
+            - title: "Conviértete en Aliado"
+              link_to: "/es/alianzas"
             - title: "Quiénes Somos"
               link_to: "/es/sobre-la-academia"
             - title: "Prensa"
               link_to: "/es/prensa"
             - title: "Blog"
               link_to: "/es/blog-en-espanol"
-            - title: "Partners"
-              link_to: "/es/alianzas"
             - title: "Trabaja con Nosotros"
               link_to: "/es/empleo"
             - title: "Talento"

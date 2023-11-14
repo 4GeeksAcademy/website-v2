@@ -21,7 +21,10 @@ translations:
 # This is my dakladsdas
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> d942b76900e5c305981277a2b8b149f20edc6a73
 loren ipsun.
 
 ```js
@@ -42,5 +45,3 @@ import { Script } from "gatsby"
     gtag('config', ${process.env.GTAG}, { page_path: location ? location.pathname + location.search + location.hash : undefined })
   `}
 </Script>
-```
->>>>>>> e644e086bec03f592503ea7262d4e10930c9c9ec

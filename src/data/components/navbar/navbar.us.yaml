@@ -80,6 +80,12 @@ navbar:
       links:
         - title: ""
           sub_links:
+            - title: "Hire our alumni"
+              link_to: "https://www.notion.so/4geeksacademy/Talent-Pipeline-4Geeks-Academy-ef91aba17f9c4964bf7972396d190bdf"
+            - title: "Partners with 4Geeks"
+              link_to: "/us/partners"
+            - title: "Work with us"
+              link_to: "/us/jobs"
             - title: "Who we are"
               link_to: "/us/the-academy"
             - title: "Press"

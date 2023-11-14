@@ -15,9 +15,9 @@ header:
 badges:
   paragraph: "Este es el lugar para impulsar tu carrera aprendiendo a programar. Estamos muy orgullosos de nuestros programas y metodología para capacitar a los desarrolladores en solo unos meses y ayudarlos a impulsar sus carreras profesionales."
 awards_list:
-  - image: "../../../static/images/badges/licensed.png"
-    title: "Departamento de Education de EEUU"
-    paragraph: "Los Estados Unidos de America se aseguran de la calidad de la educación a través de los departamentos de educación a nivel federal. Contar con la certificación significa que estamos comprometidos a cumplir con todas las regulaciones nacionales y estatales y a ser supervisados y auditados anualmente para asegurar el éxito de la academia."
+  # - image: "../../../static/images/badges/licensed.png"
+  #   title: "Departamento de Education de EEUU"
+  #   paragraph: "Los Estados Unidos de America se aseguran de la calidad de la educación a través de los departamentos de educación a nivel federal. Contar con la certificación significa que estamos comprometidos a cumplir con todas las regulaciones nacionales y estatales y a ser supervisados y auditados anualmente para asegurar el éxito de la academia."
 
   - image: "../../../static/images/badges/Course-Report-Badge-2023.png"
     title: "Best Bootcamp for Course Report 2023"
