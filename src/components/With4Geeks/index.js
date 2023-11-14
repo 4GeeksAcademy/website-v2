@@ -155,7 +155,8 @@ export default ({
                   padding="0 16px"
                   key={`${element.name}_${index}`}
                   style={{ borderRadius: `0px` }}
-                  //minWidth="315px"
+                  minWidth="315px"
+                  width="100%"
                 >
                   <Div
                     padding_xs="0 0 20px 0px"
