@@ -44,7 +44,6 @@ const GeekForce = (props) => {
     },
   ];
 
-
   return (
     <>
       <Grid
