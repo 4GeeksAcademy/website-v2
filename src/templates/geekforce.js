@@ -28,8 +28,6 @@ const GeekForce = (props) => {
   const partnersData = data.allPartnerYaml.edges[0].node;
   const content = data.allPageYaml.edges[0].node;
 
-  console.log(partnersData);
-
   const bulletIcons = [
     {
       icon: "elderly-fill",
@@ -45,6 +43,7 @@ const GeekForce = (props) => {
       background: "#FFB718",
     },
   ];
+
 
   return (
     <>
