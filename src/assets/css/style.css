@@ -428,10 +428,10 @@ a.faq-link:hover {
   width: 50px;
   border-radius: 10px;
   background: #0097cd;
-  -webkit-box-shadow: inset 0 0 0px rgba(0,0,0,0.5); /* height of horizontal scrollbar ← You're missing this */ /* width of vertical scrollbar */
-  }
+  -webkit-box-shadow: inset 0 0 0px rgba(0, 0, 0, 0.5); /* height of horizontal scrollbar ← You're missing this */ /* width of vertical scrollbar */
+}
 @media (min-width: 320px) {
-  .testimonial-slider::-webkit-scrollbar-track{
+  .testimonial-slider::-webkit-scrollbar-track {
     margin-top: 10px;
     border-radius: 5px;
     background: #e5e5e5;
@@ -440,27 +440,29 @@ a.faq-link:hover {
   }
 }
 @media (min-width: 768px) {
-  .testimonial-slider::-webkit-scrollbar-track{
+  .testimonial-slider::-webkit-scrollbar-track {
     margin-left: 250px;
     margin-right: 250px;
   }
 }
 @media (min-width: 1024px) {
-  .testimonial-slider::-webkit-scrollbar-track{
+  .testimonial-slider::-webkit-scrollbar-track {
     margin-left: 300px;
     margin-right: 300px;
   }
 }
 @media (min-width: 1440px) {
-  .testimonial-slider::-webkit-scrollbar-track{
+  .testimonial-slider::-webkit-scrollbar-track {
     margin-left: 400px;
     margin-right: 400px;
-}}
+  }
+}
 @media (min-width: 1441px) {
-  .testimonial-slider::-webkit-scrollbar-track{
+  .testimonial-slider::-webkit-scrollbar-track {
     margin-left: 600px;
     margin-right: 600px;
-}}
+  }
+}
 
 .testimonial-slider::-webkit-scrollbar {
   height: 5px;

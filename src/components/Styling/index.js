@@ -334,11 +334,12 @@ export const StyledBackgroundSection = styled(BackgroundSection)`
   display: ${(props) => props.display};
   &:before {
     background-size: ${(props) => props.bgSize};
-  },
+  }
+  ,
   &:after {
     min-height: ${(props) => props.minHeight};
-    border-radius: ${(props) => props.borderRadius}; 
-    filter: ${(props) => props.filter}; 
+    border-radius: ${(props) => props.borderRadius};
+    filter: ${(props) => props.filter};
     height: ${(props) => props.h_sm};
     width: ${(props) => props.width};
     max-width: ${(props) => props.maxWidth};

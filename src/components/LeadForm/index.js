@@ -544,7 +544,13 @@ const LeadForm = ({
                   checked={consentValue}
                   onChange={() => {
                     setConsentValue(!consentValue);
-                    setVal({ ...formData, consent: { ...formData.consent, valid: !formData.consent.valid } })
+                    setVal({
+                      ...formData,
+                      consent: {
+                        ...formData.consent,
+                        valid: !formData.consent.valid,
+                      },
+                    });
                   }}
                   style={{
                     width: "24px",

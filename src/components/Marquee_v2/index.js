@@ -71,7 +71,7 @@ export default function Marquee_v2({
           [reversed]: props.reversed,
         },
         className
-      ) }
+      )}
     >
       <div ref={ref} className={marquee__measure} aria-hidden>
         {children}

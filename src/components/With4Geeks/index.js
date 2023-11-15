@@ -179,7 +179,7 @@ export default ({
                   </Div>
                   <Div
                     //marginTop="20px"
-                    style={{padding: "20px 32px"}}
+                    style={{ padding: "20px 32px" }}
                     padding_tablet="20px 32px"
                     padding_xxs="20px 16px"
                     display={`flex`}

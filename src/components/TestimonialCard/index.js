@@ -58,7 +58,7 @@ const TestimonialCard = ({
       </div>
     );
   };
-  console.log(image)
+  console.log(image);
   return (
     <Div
       flexDirection="column"
@@ -76,14 +76,16 @@ const TestimonialCard = ({
           style={style}
           imgStyle={imgStyle}
         />
-        {stories ? <Div flexDirection="column" margin="0 0 0 9px">
-          <H3 fontSize="15px" lineHeight="19px" textAlign="left">
-            {name}
-          </H3>
-          <H4 fontSize="14px" lineHeight="22px" textAlign="left">
-            {short_content}
-          </H4>
-        </Div> :
+        {stories ? (
+          <Div flexDirection="column" margin="0 0 0 9px">
+            <H3 fontSize="15px" lineHeight="19px" textAlign="left">
+              {name}
+            </H3>
+            <H4 fontSize="14px" lineHeight="22px" textAlign="left">
+              {short_content}
+            </H4>
+          </Div>
+        ) : (
           <H3
             type="h3"
             textAlign="left"
@@ -92,11 +94,14 @@ const TestimonialCard = ({
             margin="12px 0"
           >
             {name}
-          </H3>}
+          </H3>
+        )}
       </Div>
-      {starRating && <Div margin="30px 0 17px 0">
-        <StarRating totalStars={studentRating} />
-      </Div>}
+      {starRating && (
+        <Div margin="30px 0 17px 0">
+          <StarRating totalStars={studentRating} />
+        </Div>
+      )}
       {!video && (
         <Paragraph
           textAlign="left"
@@ -122,7 +127,7 @@ const TestimonialCard = ({
               width="100%"
               width_tablet="100%"
               style={{ breakInside: "avoid" }}
-            //videoHeight="600px"
+              //videoHeight="600px"
             />
           </Div>
         </>
@@ -141,22 +146,24 @@ const TestimonialCard = ({
         </Paragraph>
       )}
 
-      {url && <Paragraph
-        style={{ alignItems: "center" }}
-        margin="12px 0"
-        display="flex"
-        fontWeight="700"
-        letterSpacing="0.05em"
-        lineHeight="26px"
-        textAlign="left"
-        fontSize="13px"
-        color={Colors.blue}
-      >
-        <Anchor cursor="pointer" to={url}>
-          {textUrl}
-        </Anchor>
-      </Paragraph>}
-    </Div >
+      {url && (
+        <Paragraph
+          style={{ alignItems: "center" }}
+          margin="12px 0"
+          display="flex"
+          fontWeight="700"
+          letterSpacing="0.05em"
+          lineHeight="26px"
+          textAlign="left"
+          fontSize="13px"
+          color={Colors.blue}
+        >
+          <Anchor cursor="pointer" to={url}>
+            {textUrl}
+          </Anchor>
+        </Paragraph>
+      )}
+    </Div>
   );
 };
 
