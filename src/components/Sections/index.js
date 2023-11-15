@@ -657,7 +657,6 @@ export const GridContainer = ({
   margin_xs,
   margin_md,
   padding,
-  padding_tablet,
   paddingChild,
   borderTop,
   padding_tabletChild,
@@ -677,6 +676,9 @@ export const GridContainer = ({
   columns_sm,
   justifyContentChild,
   justifyItemsChild,
+  padding_lg,
+  padding_md,
+  padding_tablet,
 }) => {
   return (
     <Grid
@@ -712,6 +714,8 @@ export const GridContainer = ({
       margin_md={margin_md}
       padding={padding || "0 17px"}
       padding_tablet={padding_tablet || "0"}
+      padding_lg={padding_lg}
+      padding_md={padding_md}
     >
       <Grid
         display={displayChild}

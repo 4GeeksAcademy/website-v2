@@ -5,13 +5,16 @@
 header:
   title: ESCÚCHALO DE NUESTROS ALUMNOS
   paragraph: ""
+
 with:
   - name: "Hernan García"
     title: "Recibí ofertas de empresas que nunca me lo esperé"
+    open_in_modal: true
     description: "Hernán tardó un mes en conseguir un trabajo en tecnología una vez que comenzó a aplicar."
     image: ../../../../static/images/staff/hernan.png
     alt: ""
     video: "https://www.youtube.com/watch?v=ln3bQsV1BaQ" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    video_height: 173px
     location: ["all", "downtown-miami"]
     # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     icon: address
@@ -23,10 +26,12 @@ with:
       text_link: ""
   - name: "Luisa Glum"
     title: "La Academia estaba tan comprometida como yo"
+    open_in_modal: true
     description: "Luisa pagó el programa después de que se graduó y encontró trabajo, ella aplicó al ISA (Income Share Agreement)"
     image: ../../../../static/images/staff/luisa.png
     alt: ""
-    video: "https://www.youtube.com/watch?v=PWkgaAT8pHg" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    video: "https://www.youtube.com/watch?v=MBXqEnhodx0" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    video_height: 173px
     location: ["all"]
     # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     icon: address
@@ -38,10 +43,12 @@ with:
       text_link: "/es/financiacion"
   - name: "Joao Henrique"
     title: "Siempre tendrás apoyo por parte de la Academia"
+    open_in_modal: true
     description: "Joao cuenta su experiencia obteniendo mentores de codificación mientras estudiaba, después de graduarse e incluso en sus trabajos."
     image: ../../../../static/images/staff/joao.png
     alt: ""
-    video: "https://www.youtube.com/watch?v=MBXqEnhodx0" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    video: "https://www.youtube.com/watch?v=PWkgaAT8pHg" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    video_height: 173px
     location: ["all", "downtown-miami"]
     # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     icon: address

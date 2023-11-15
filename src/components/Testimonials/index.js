@@ -26,7 +26,7 @@ const Testimonials = (props) => {
         padding="30px 20px 60px 20px"
         padding_tablet="48px 0 36px 0"
       >
-        <H2>{testimonialsArray.heading}</H2>
+        <H2 lineHeight="30px">{testimonialsArray.heading}</H2>
         <Link to={testimonialsArray.button_link}>
           <Paragraph margin="25px 0 36px 0" color={Colors.blue}>
             {testimonialsArray.button_text}
