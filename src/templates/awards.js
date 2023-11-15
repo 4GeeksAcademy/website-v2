@@ -275,7 +275,7 @@ const Awards = ({ data, pageContext, yml }) => {
         padding_tablet="0 40px"
         padding_md="0 80px"
         padding_lg="0"
-        margin="100px auto 0 auto"
+        margin="120px auto 0 auto"
         maxWidth="1366px"
         position="relative"
       >
@@ -451,6 +451,8 @@ export const query = graphql`
             }
             title
             paragraph
+            link
+            text_link
           }
         }
       }
