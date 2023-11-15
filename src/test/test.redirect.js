@@ -36,8 +36,9 @@ folders.forEach(async (folder) => {
       );
 
     if (
-      file.yaml.meta_info.redirects.some((redirect) =>
-        (redirect.includes("http") || redirect === "" || redirect[0] !== "/")
+      file.yaml.meta_info.redirects.some(
+        (redirect) =>
+          redirect.includes("http") || redirect === "" || redirect[0] !== "/"
       )
     )
       fail(
