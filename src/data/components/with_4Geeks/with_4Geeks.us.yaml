@@ -43,7 +43,7 @@ with:
       text_link: "/us/financials"
   - name: "Joao Henrique"
     title: "You'll always have support from the  Academy"
-    open_in_modal: false
+    open_in_modal: true
     description: "Joao shares his experience receiving coding mentorship as a student, after graduating, and in his current job."
     image: ../../../../static/images/staff/joao.png
     alt: ""
