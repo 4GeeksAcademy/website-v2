@@ -7,7 +7,9 @@ meta_info:
   image: /images/programs-heading.png
   keywords: Programs at 4Geeks Academy
   redirects:
-    - /20-million
+    - "/20million"
+    - "/20-millions"
+    - "/20millions"
 seo_title: Level up as a developer
 header:
   title: $20+ Million in Scholarships

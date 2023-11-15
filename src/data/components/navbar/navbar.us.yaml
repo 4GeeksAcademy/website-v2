@@ -70,6 +70,10 @@ navbar:
               link_to: "/us/students-and-projects"
             - title: "Testimonials"
               link_to: "/us/testimonials"
+            - title: "Talent"
+              link_to: "https://www.notion.so/4geeksacademy/Talent-Pipeline-4Geeks-Academy-ef91aba17f9c4964bf7972396d190bdf"
+
+
   - name: "The Academy"
     link: "/us/the-academy"
     sub_menu:
@@ -80,16 +84,19 @@ navbar:
       links:
         - title: ""
           sub_links:
+            - title: "Hire our alumni"
+              link_to: "https://www.notion.so/4geeksacademy/Talent-Pipeline-4Geeks-Academy-ef91aba17f9c4964bf7972396d190bdf"
+            - title: "Partners with 4Geeks"
+              link_to: "/us/partners"
+            - title: "Work with us"
+              link_to: "/us/jobs"
             - title: "Who we are"
               link_to: "/us/the-academy"
             - title: "Press"
               link_to: "/us/press"
             - title: "Blog"
               link_to: "/us/blog"
-            - title: "Partners"
-              link_to: "/us/partners"
-            - title: "Work with us"
-              link_to: "/us/jobs"
+              
   - name: "Campus"
     link: "/partners"
     sub_menu:

@@ -5,6 +5,8 @@ import { H2, Paragraph } from "../Heading";
 import Icon from "../Icon";
 import { Div } from "../Sections";
 import { Button, Colors, Img } from "../Styling";
+import { navigate } from "gatsby";
+import { transferQuerystrings, smartRedirecting } from "../../utils/utils";
 
 const Side = ({
   video,
