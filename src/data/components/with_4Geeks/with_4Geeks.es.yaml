@@ -17,7 +17,7 @@ with:
     icon: address
     footer:
       is_image: true
-      image: "/images/geekforce.png"
+      image: "/images/geekforce-logo-new.png"
       image_link: "/es/geekforce"
       text: ""
       text_link: ""
@@ -47,7 +47,7 @@ with:
     icon: address
     footer:
       is_image: true
-      image: "/images/geekpal.png"
+      image: "/images/geekpal-logo-new.png"
       image_link: "/es/geekpal"
       text: ""
       text_link: ""
