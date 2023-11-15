@@ -108,7 +108,7 @@ components:
       text: "Conoce la historia inspiradora de Mattia Tozzi, quien, buscando un cambio en su carrera, se unió a 4Geeks Academy. Su experiencia demuestra cómo la dedicación y el aprendizaje en este bootcamp lo llevaron a convertirse en un profesional altamente capacitado."
       font_size: ["16px"]
     button:
-      text: "Unete a la academia!"
+      text: "¡Únete a la Academia!"
       path: "#bottom"
       color: "white"
       background: "black"

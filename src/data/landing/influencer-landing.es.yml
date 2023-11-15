@@ -130,7 +130,7 @@ components:
       text: ""
       font_size: ["16px", "16px", "16px", "16px", "16px"]
     button:
-      text: "Unete a la academia!"
+      text: "¡Únete a la academia!"
       color: white
       hover_color: "white"
       background: "black"
@@ -138,7 +138,7 @@ components:
       path: "#top"
     bullets:
       items:
-        - heading: "¡Conviertete en un FullStack developer en tan solo 18 semanas!"
+        - heading: "¡Conviértete en un FullStack developer en tan solo 18 semanas!"
           icon: "check" #string with icon for example ['check', 'cicle', etc]
         - heading: "Desarrollo de habilidades altamente valoradas en el mercado profesional."
           icon: "check" #string with icon for example ['check', 'cicle', etc]
