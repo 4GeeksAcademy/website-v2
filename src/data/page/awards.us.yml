@@ -23,7 +23,7 @@ awards_list:
   - image: "../../../static/images/badges/Course-Report-Badge-2023.png"
     title: "Best Bootcamp for Course Report 2023"
     paragraph: "We have been selected as one of the Top Coding Bootcamps globally for 3 years in a row"
-    link: ""
+    link: "/"
     text_link: See article
 
   - image: "../../../static/images/badges/switchup-badge-2023.png"
