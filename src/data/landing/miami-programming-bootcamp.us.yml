@@ -158,8 +158,7 @@ components:
       src: "https://storage.googleapis.com/4geeks-academy-website/landing-pictures/testimonials.webp"
       shadow: true
     heading:
-      text:
-        "89% of our graduates are now working as software developers with an average entry salary of $50,000/yr."
+      text: "89% of our graduates are now working as software developers with an average entry salary of $50,000/yr."
       #             xl      lg      md      sm      xs
       font_size: ["40px", "34px"]
     # content:

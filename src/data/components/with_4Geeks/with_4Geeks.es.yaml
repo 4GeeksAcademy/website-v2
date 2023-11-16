@@ -30,7 +30,7 @@ with:
     description: "Luisa pagó el programa después de que se graduó y encontró trabajo, ella aplicó al ISA (Income Share Agreement)"
     image: ../../../../static/images/staff/luisa.png
     alt: ""
-    video: "https://www.youtube.com/watch?v=MBXqEnhodx0" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    video: "https://www.youtube.com/watch?v=PWkgaAT8pHg" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     video_height: 173px
     location: ["all"]
     # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
@@ -47,7 +47,7 @@ with:
     description: "Joao cuenta su experiencia obteniendo mentores de codificación mientras estudiaba, después de graduarse e incluso en sus trabajos."
     image: ../../../../static/images/staff/joao.png
     alt: ""
-    video: "https://www.youtube.com/watch?v=PWkgaAT8pHg" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    video: "https://www.youtube.com/watch?v=MBXqEnhodx0" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     video_height: 173px
     location: ["all", "downtown-miami"]
     # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL

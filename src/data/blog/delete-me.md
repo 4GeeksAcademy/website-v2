@@ -39,3 +39,4 @@ import { Script } from "gatsby"
     gtag('config', ${process.env.GTAG}, { page_path: location ? location.pathname + location.search + location.hash : undefined })
   `}
 </Script>
+```

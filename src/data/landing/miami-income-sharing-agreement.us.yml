@@ -192,8 +192,7 @@ components:
       hover: "white"
       path: "https://www.switchup.org/bootcamps/4geeks-academy"
     heading:
-      text:
-        "We have been named one of the TOP coding bootcamps in the World"
+      text: "We have been named one of the TOP coding bootcamps in the World"
       #             xl      lg      md      sm      xs
       font_size: ["40px", "40px", "40px", "40px", "40px"]
   - name: working_as_software_developers
