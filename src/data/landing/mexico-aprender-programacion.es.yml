@@ -171,19 +171,24 @@ components:
       layout: iconogram
       swipable: True
       heading:
-        text: "¿Cómo funciona?"
+        text: "Garantía de Empleo"
         font_size: ["30px", "30px", "30px", "30px", "30px"]
       sub_heading:
-        text: 'Descubre el proceso paso a paso para <strong style="font-weight: bold;">unirte a 4Geeks Academy.</strong>'
+        text: ""
         font_size: ["16px", "16px", "16px", "16px", "16px"]
         style: '{ "textAlign": "center", "width": "60%" }'
-      text_link: "#"
+      button:
+        text: "Condiciones Aplican"
+        color: black
+        # hover_color: "white"
+        # background: "black"
+        path: "#"
       icons:
-      - icon: "touch"
-        title: Completa el formulario
-      - icon: "receive_mail"
-        title: Recibirás un correo con detalles para avanzar en el proceso
-      - icon: "talk"
-        title: Realiza una entrevista telefónica con el equipo de admisiones
-      - icon: "terminal"
-        title: Reserva tu lugar y ¡Avanza en tu carrera!
+        - icon: "yellowhat"
+          title: Si no encuentras empleo en los primeros 180 días tras graduarte, te devolvemos tu dinero.
+        - icon: "stairswflag"
+          title: Completa las etapas de nuestro proceso de apoyo para la carrera profesional.
+        - icon: "group"
+          title: Optimiza tu perfil profesional y preparate para las entrevistas.
+        - icon: "hands"
+          title: Ambos nos comprometemos con tu futura carrera.
