@@ -114,20 +114,6 @@ const TestimonialCard = ({
           <StarRating totalStars={studentRating} />
         </Div>
       )}
-      {!video && (
-        <Paragraph
-          textAlign="left"
-          margin="12px 0 0 0"
-          fontSize="13px"
-          lineHeight="22px"
-          letterSpacing="0.05em"
-          fontWeight="300"
-        >
-          {description.length > 500 && !isExpanded
-            ? description.substring(0, 500) + "..."
-            : description}
-        </Paragraph>
-      )}
       {!video &&
         (description && /<\/?[a-z0-9]+>/g.test(description) ? (
           <Paragraph
