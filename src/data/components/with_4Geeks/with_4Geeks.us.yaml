@@ -8,10 +8,12 @@ header:
 with:
   - name: "Hernán García"
     title: "I got offers from companies I wasn't expecting"
+    open_in_modal: true
     description: "Hernán landed a job in tech within one month of starting his job search."
     image: ../../../../static/images/staff/hernan.png
     alt: ""
     video: "https://www.youtube.com/watch?v=ln3bQsV1BaQ" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    video_height: 173px
     location: ["all", "downtown-miami"]
     # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     icon: address
@@ -24,10 +26,12 @@ with:
 
   - name: "Luisa Glum"
     title: "The school was as invested as I was"
+    open_in_modal: true
     description: "Luisa enrolled in our ISA (Income Sharing Agreement) program and paid for the program after graduation."
     image: ../../../../static/images/staff/luisa.png
     alt: ""
     video: "https://www.youtube.com/watch?v=PWkgaAT8pHg" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    video_height: 173px
     location: ["all"]
     # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     icon: address
@@ -39,10 +43,13 @@ with:
       text_link: "/us/financials"
   - name: "Joao Henrique"
     title: "You'll always have support from the  Academy"
+    open_in_modal: true
     description: "Joao shares his experience receiving coding mentorship as a student, after graduating, and in his current job."
     image: ../../../../static/images/staff/joao.png
     alt: ""
-    video: "https://www.youtube.com/watch?v=MBXqEnhodx0" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    # video: "https://www.youtube.com/watch?v=MBXqEnhodx0" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    video: "https://www.youtube.com/watch?v=DrzRJICxjOU" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    video_height: 250px
     location: ["downtown-miami", "all"]
     # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     icon: address
