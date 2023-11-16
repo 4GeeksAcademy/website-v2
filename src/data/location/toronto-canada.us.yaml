@@ -49,7 +49,7 @@ custom_bar:
   active: true
   message: 'NOW open: 06/27 Full-Stack | 07/11 Machine Learning! <a class="customBar-link" href="/us/apply" taget="_blank" rel="noopener noreferrer nofollow">Apply</a>'
   button: 
-    label: "Read More"
+    label: "" # leave empty to hide button
     path: "#" #string (can be inline path using #, relative path or absolute path)
 
 info_box:

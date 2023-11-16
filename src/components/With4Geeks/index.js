@@ -31,6 +31,7 @@ export default ({
             with {
               name
               title
+              open_in_modal
               description
               image {
                 childImageSharp {
@@ -45,6 +46,7 @@ export default ({
               alt
               icon
               video
+              video_height
               location
               footer {
                 is_image
@@ -75,7 +77,6 @@ export default ({
         n.location.includes(sessionLocation)
     );
   else locationFiltered = info.with;
-
   return (
     <Fragment github="/components/with_4geeks">
       {info?.header && (
@@ -144,7 +145,7 @@ export default ({
             className="badge-slider hideOverflowX__"
             gap="0px 20px"
           >
-            {locationFiltered.map((i, index) => {
+            {locationFiltered.map((element, index) => {
               return (
                 <Div
                   display="flex"
@@ -152,29 +153,34 @@ export default ({
                   flexDirection_tablet="column"
                   justifyContent="start"
                   border="none"
-                  key={`${i.name}_${index}`}
+                  padding="0 16px"
+                  key={`${element.name}_${index}`}
                   style={{ borderRadius: `0px` }}
                   minWidth="315px"
+                  width="100%"
                 >
                   <Div
+                    padding_xs="0 0 20px 0px"
+                    //padding="20px 0"
                     width_tablet="100%"
-                    height_tablet="173px"
-                    height="173px"
+                    height_tablet={element.video_height || "173px"}
+                    height={element.video_height || "173px"}
                     alignSelf={`baseline`}
+                    style={{ borderRadius: `0px` }}
                   >
                     <ReactPlayer
-                      With_Modal={true}
+                      With_Modal={element.open_in_modal}
                       margin_tablet="0px"
                       imageWidth="100%"
-                      imageHeight="auto"
+                      imageHeight={element.video_height || "auto"}
                       //height="100%"
                       className="react-player-with4geeks"
-                      thumb={i.image}
-                      id={i.video}
+                      thumb={element.image}
+                      id={element.video}
                       width="100%"
                       width_tablet="100%"
-                      //videoHeight={playerHeight}
-                      style={{ borderRadius: `0px`, height: `173px` }}
+                      videoHeight={element.video_height}
+                      style={{ borderRadius: `0px` }}
                     />
                   </Div>
                   <Div
@@ -188,9 +194,9 @@ export default ({
                     gap="16px 0px"
                     boxShadow="inset 0px 0px 5px 0px #0000001A"
                   >
-                    <Link to={i.footer.image_link}>
+                    <Link to={element.footer.image_link}>
                       <RoundImage
-                        url={i.footer.image}
+                        url={element.footer.image}
                         bsize="contain"
                         height="20px"
                         position="left"
@@ -207,7 +213,7 @@ export default ({
                       lineHeight="19px"
                       color={Colors.darkGray}
                     >
-                      {i.name}
+                      {element.name}
                     </H4>
                     <H3
                       textAlign="left"
@@ -219,7 +225,7 @@ export default ({
                       lineHeight_xs="21.6px"
                       lineHeight_tablet="33.6px"
                     >
-                      {`“${i.title}”`}
+                      {`“${element.title}”`}
                     </H3>
                     <Paragraph
                       color={Colors.darkGray}
@@ -231,18 +237,18 @@ export default ({
                       lineHeight_xs="16.8px"
                       lineHeight_tablet="26px"
                     >
-                      {i.description}
+                      {element.description}
                     </Paragraph>
 
-                    {i.footer.text_link != "" && (
-                      <Link to={i.footer.text_link}>
+                    {element.footer.text_link != "" && (
+                      <Link to={element.footer.text_link}>
                         <H4
                           display="flex"
                           fontWeigth="700"
                           color={Colors.blue}
                           // textDecoration="underline"
                         >
-                          {i.footer.text}
+                          {element.footer.text}
                         </H4>
                       </Link>
                     )}
