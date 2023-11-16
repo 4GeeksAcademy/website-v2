@@ -8,7 +8,7 @@ meta_info:
   keywords: "" # SEO optimized keywords
   visibility: "hidden" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   template: "landing_a" # <--- choose your landing template
-  redirects: [""] # <--- URL redirections to avoid 404 errors
+  redirects: [] # <--- URL redirections to avoid 404 errors
   
   # this UTM fields will be included in the CRM
   # utm_course available ["full-stack", "software-engineering", "machine-learning-engineering"]

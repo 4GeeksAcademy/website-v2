@@ -199,7 +199,7 @@ components:
     position: 7
     proportions: [4, 8]
     layout: two_column_left
-    background: "lightBlue"
+    background: "#fbfbfb"
     image:
       style: '{ "backgroundSize": "cover" }'
       src: "https://storage.googleapis.com/4geeks-academy-website/landing-pictures/testimonials.webp"
@@ -224,7 +224,7 @@ components:
       text: "Seize this chance to supercharge your education. Join the academy now and pave the way to your brightest future! Contact our admissions team to learn more and join our coding bootcamp today!"
       font_size: ["16px"]
     button:
-      text: "Joint to the Academy"
+      text: "GET MORE INFO"
       background: black
       color: white
       hover_color: "#white"

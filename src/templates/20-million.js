@@ -15,7 +15,7 @@ import OurPartners from "../components/OurPartners";
 import ScholarshipProjects from "../components/ScholarshipProjects";
 import ScholarshipSuccessCases from "../components/ScholarshipSuccessCases";
 import BenefitsAndCharts from "../components/BenefitsAndCharts";
-import { TwoColumn } from "../components/Landing";
+import TwoColumn from "../components/TwoColumn/index.js";
 
 const TwentyMillion = ({ data, pageContext, yml }) => {
   const { session } = React.useContext(SessionContext);
@@ -47,8 +47,8 @@ const TwentyMillion = ({ data, pageContext, yml }) => {
   return (
     <>
       <Div
-        margin={isCustomBarActive(session) ? "40px 0 0 0" : "0"}
-        padding="90px 30px 42px 30px"
+        margin={isCustomBarActive(session) ? "40px 0 0 0" : "50px 0 0 0"}
+        padding="90px 20px 42px 20px"
         padding_tablet="120px 130px 72px 130px"
         position="relative"
         background={Colors.veryLightBlue2}
@@ -80,7 +80,7 @@ const TwentyMillion = ({ data, pageContext, yml }) => {
           height="17px"
           top="172px"
           left="74px"
-          zIndex="1"
+          zIndex="-1"
           display="none"
           display_tablet="inline"
         />
@@ -90,7 +90,7 @@ const TwentyMillion = ({ data, pageContext, yml }) => {
           height="17px"
           top="216px"
           left="74px"
-          zIndex="1"
+          zIndex="-1"
           display="none"
           display_tablet="inline"
         />
@@ -100,7 +100,7 @@ const TwentyMillion = ({ data, pageContext, yml }) => {
           height="17px"
           top="298px"
           left="74px"
-          zIndex="1"
+          zIndex="-1"
           display="none"
           display_tablet="inline"
         />
@@ -110,7 +110,7 @@ const TwentyMillion = ({ data, pageContext, yml }) => {
           height="17px"
           top="116px"
           left="106px"
-          zIndex="1"
+          zIndex="-1"
           display="none"
           display_tablet="inline"
         />
@@ -120,7 +120,7 @@ const TwentyMillion = ({ data, pageContext, yml }) => {
           height="17px"
           top="145px"
           left="106px"
-          zIndex="1"
+          zIndex="-1"
           display="none"
           display_tablet="inline"
         />
@@ -208,7 +208,7 @@ const TwentyMillion = ({ data, pageContext, yml }) => {
           width="15px"
           height="15px"
           top="92px"
-          left="14px"
+          left="9px"
           zIndex="1"
           display="inline"
           display_tablet="none"
@@ -218,7 +218,7 @@ const TwentyMillion = ({ data, pageContext, yml }) => {
           width="15px"
           height="15px"
           top="130px"
-          left="15px"
+          left="10px"
           zIndex="1"
           display="inline"
           display_tablet="none"
@@ -228,7 +228,7 @@ const TwentyMillion = ({ data, pageContext, yml }) => {
           width="15px"
           height="15px"
           top="195px"
-          left="10px"
+          left="5px"
           zIndex="1"
           display="inline"
           display_tablet="none"
@@ -236,7 +236,7 @@ const TwentyMillion = ({ data, pageContext, yml }) => {
         <Div display="block">
           <H2
             type="h2"
-            textAlign="left"
+            textAlign="center"
             textAlign_tablet="center"
             fontSize="40px"
             fontSize_tablet="50px"
@@ -249,11 +249,11 @@ const TwentyMillion = ({ data, pageContext, yml }) => {
           <Paragraph
             color="black"
             opacity="1"
-            margin="15px 0"
+            margin="20px 0"
             padding="0"
             width="auto"
             letterSpacing="0.05em"
-            textAlign="left"
+            textAlign="center"
             textAlign_tablet="center"
             fontSize="24px"
             lineHeight="28px"
@@ -304,18 +304,15 @@ const TwentyMillion = ({ data, pageContext, yml }) => {
         content={data.allScholarshipProjectsYaml.edges[0].node}
         lang={pageContext.lang}
       />
-      <Testimonials
-        lang={data.allTestimonialsYaml.edges}
-        margin_tablet="75px 0 0 0"
-        margin="45px 0 0 0"
+      <ScholarshipSuccessCases
+        content={data.allScholarshipSuccessCasesYaml.edges[0].node}
       />
       <BenefitsAndCharts data={partnersData} goToForm={goToForm} />
+
       <Div
         id="two_column_left"
         flexDirection="column"
-        padding="50px 0 50px 0"
-        padding_tablet="50px 6%"
-        margin="auto"
+        margin="0 auto"
         maxWidth="1366px"
       >
         <TwoColumn
@@ -333,36 +330,44 @@ const TwentyMillion = ({ data, pageContext, yml }) => {
           session={session}
         />
       </Div>
-      <ScholarshipSuccessCases
-        content={data.allScholarshipSuccessCasesYaml.edges[0].node}
+
+      <Testimonials
+        lang={data.allTestimonialsYaml.edges}
+        margin_tablet="75px 0 0 0"
+        margin="45px 0 0 0"
       />
+
       <HR
         background={Colors.verylightGray}
         width="100%"
         height="5px"
         margin="40px 0"
       />
+
       <GridContainer
         columns_tablet="12"
         containerColumns_tablet="none"
-        padding="0 17px 40px 17px"
-        padding_tablet="0"
+        padding="30px 20px"
+        padding_tablet="40px 40px"
+        padding_md="60px 80px"
+        padding_lg="80px 0"
         margin_tablet="0 auto 81px auto"
         style={{ maxWidth: "1366px" }}
+        containerGridGap="0px"
       >
         <Div
           ref={joinPartnersRef}
           gridColumn_tablet="1 / 7"
           flexDirection="column"
         >
-          <H2 textAlign_md="left" margin="0 0 30px 0">
+          <H2 textAlign_tablet="start" margin="0 0 30px 0" lineHeight="35px">
             {yml.form.title}
           </H2>
           {yml.form.paragraph.split("\n").map((m, i) => (
             <Paragraph
               key={i}
               margin="7px 0"
-              textAlign_md="left"
+              textAlign_tablet="start"
               dangerouslySetInnerHTML={{ __html: m }}
             />
           ))}

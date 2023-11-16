@@ -47,7 +47,6 @@ header_data:
 
 features:
   marginTop: 0px #<-- separation between tagline and the bullets
-
   #                                         up   left down  right
   styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
   bullets:
@@ -55,6 +54,24 @@ features:
     - Mentorías y career support de por vida
     - Programa Part Time 100% remoto.
     - Aprovecha nuestras opciones de Financiamiento
+
+short_badges:
+  - name: "Premios Tecnologia Siglo XXI"
+    url: ""
+    image: "../../../static/images/awards/premios_tecnologia_sigloxxi.png"
+    alt: "Mejor centro de Coding Bootcamp"
+  - name: "Course Report"
+    url: ""
+    image: "../../../static/images/badges/Course-Report-Badge-2023.png"
+    alt: "Top Coding Bootcamps Course Report"
+  - name: "Switchup"
+    url: ""
+    image: "../../../static/images/badges/switchup-badge-2023.png"
+    alt: "Best coding bootcamp Switchup 2023"   
+  - name: "Florida Department of Education"
+    url: ""
+    image: "../../../static/images/badges/licensed.png"
+    alt: "Florida Department of Education"
 
 follow_bar:
   position: "top" # top, bottom, hidden
@@ -176,7 +193,7 @@ components:
     image:
       style: "{}"
       src: "/images/techs/python-js.png"
-      link: "#top" # take uses somewhere when they click on the image
+      link: "" # take uses somewhere when they click on the image
       # shadow: true
     heading:
       text: "Python y Javascript"
@@ -195,13 +212,13 @@ components:
     bullets:
       items:
         - heading: "La creciente demanda de desarrolladores especializados en JavaScript"
-          text: "Los desarrolladores de JavaScript son altamente demandados en el mercado laboral. Según el U.S. Bureau of Labor Statistics, se proyecta que la necesidad de desarrolladores web experimentará un notable crecimiento del 13% entre los años 2020 y 2030."
+          text: "Se proyecta que el empleo general de desarrolladores web y diseñadores digitales crecerá un 16 por ciento entre 2022 y 2032, mucho más rápido que el promedio de todas las ocupaciones."
           icon: "circle" #string with icon for example ['check', 'cicle', etc]
-        - heading: "JavaScript y Python una opción ganadora"
-          text: "Tanto JavaScript como Python se caracterizan por tener una curva de aprendizaje relativamente baja, lo que los convierte en lenguajes accesibles tanto para principiantes como para aquellos que desean adentrarse en el mundo de la tecnología."
+        - heading: "expectativa salarial"
+          text: "El salario medio anual de los desarrolladores web era de 78.580 dólares americanos"
           icon: "circle" #string with icon for example ['check', 'cicle', etc]
         - heading: "Python y la inteligencia Artificial"
-          text: "Python lidera el campo de la ciencia de datos y el aprendizaje automático, siendo utilizado por aproximadamente el 67.8% de los profesionales en este ámbito. Esta alta adopción lo convierte en una opción excepcional para aquellos que desean sumergirse de lleno en el emocionante mundo del desarrollo de inteligencias artificiales."
+          text: "Python es líder en ciencia de datos y aprendizaje automático, usado por el 67.8% de los profesionales en este campo."
           icon: "circle" #string with icon for example ['check', 'cicle', etc]
 
   - name: two_column_w_video

@@ -57,7 +57,9 @@ const BaseHeading = styled(Heading)`
     border-bottom: ${(props) => props.borderBottomHover};
   }
   @media ${Devices.xxs} {
+    line-height: ${(props) => props.lineHeight_xxs};
   }
+
   @media ${Devices.xs} {
     margin: ${(props) => props.margin_xs};
     max-width: ${(props) => props.maxWidth_xs};

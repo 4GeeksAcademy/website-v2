@@ -477,7 +477,7 @@ const LeadForm = ({
                 );
               })}
 
-            {selectProgram?.length >= 1 && (
+            {selectProgram?.length > 1 && (
               <Div data-cy="dropdown_program_selector" margin_tablet="0 0 0 0">
                 <SelectRaw
                   style={{
@@ -496,7 +496,7 @@ const LeadForm = ({
                 />
               </Div>
             )}
-            {selectLocation?.length >= 1 && (
+            {selectLocation?.length > 1 && (
               <Div data-cy="dropdown_location_selector" margin_tablet="0">
                 <SelectRaw
                   style={{
@@ -536,38 +536,47 @@ const LeadForm = ({
               </Button>
             )}
 
-            {/* {session && session.location && session.location.gdpr_compliant && ( */}
-            <Div position="relative" margin="10px 0 0 0">
-              <input
-                name="isGoing"
-                type="checkbox"
-                checked={consentValue}
-                onChange={() => {
-                  setConsentValue(!consentValue);
-                  // setVal({...formData, consent: {...formData.consent, valid: !formData.consent.valid}})
-                }}
-                style={{
-                  width: "24px",
-                  height: "24px",
-                  top: "10px",
-                  left: "7px",
-                }}
-              />
-              <Paragraph fontSize="11px" margin="5px 0 0 5px" textAlign="left">
-                {yml.consent.message}
-                <a
-                  style={{ marginLeft: "5px" }}
-                  target="_blank"
-                  rel="noopener noreferrer nofollow"
-                  className="decorated"
-                  href={yml.consent.url}
+            {session && session.location && session.location.gdpr_compliant && (
+              <Div position="relative" margin="10px 0 0 0">
+                <input
+                  name="isGoing"
+                  type="checkbox"
+                  checked={consentValue}
+                  onChange={() => {
+                    setConsentValue(!consentValue);
+                    setVal({
+                      ...formData,
+                      consent: {
+                        ...formData.consent,
+                        valid: !formData.consent.valid,
+                      },
+                    });
+                  }}
+                  style={{
+                    width: "24px",
+                    height: "24px",
+                    top: "10px",
+                    left: "7px",
+                  }}
+                />
+                <Paragraph
+                  fontSize="11px"
+                  margin="5px 0 0 5px"
+                  textAlign="left"
                 >
-                  {yml.consent.link_label}
-                </a>
-              </Paragraph>
-            </Div>
-
-            {/* )} */}
+                  {yml.consent.message}
+                  <a
+                    style={{ marginLeft: "5px" }}
+                    target="_blank"
+                    rel="noopener noreferrer nofollow"
+                    className="decorated"
+                    href={yml.consent.url}
+                  >
+                    {yml.consent.link_label}
+                  </a>
+                </Paragraph>
+              </Div>
+            )}
             {formStatus.status === "error" && (
               <Alert color="red" margin="0" padding="5px 0 0 0">
                 {formStatus.msg}
