@@ -42,13 +42,6 @@ const Testimonials = (props) => {
             </Paragraph>
           </Link>
         </Div>
-        <H2 lineHeight="30px">{testimonialsArray.heading}</H2>
-        <Link to={testimonialsArray.button_link}>
-          <Paragraph margin="25px 0 36px 0" color={Colors.blue}>
-            {testimonialsArray.button_text}
-          </Paragraph>
-        </Link>
-
         {/* MARQUEE_V2 
 
                     Optional atrributes:

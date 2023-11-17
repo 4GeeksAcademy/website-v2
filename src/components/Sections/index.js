@@ -656,7 +656,6 @@ export const GridContainer = ({
   margin_xs,
   margin_md,
   padding,
-  padding_tablet,
   padding_xxs,
   paddingChild,
   borderTop,
