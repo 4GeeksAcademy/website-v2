@@ -21,6 +21,12 @@ header:
   image_alt: "apple-building"
   paragraph: "Trabaja en Grandes compañías, ganá mucho más y ayuda a construir el Ecosistema Tech del futuro.
   "
+button:
+  syllabus_heading: "Descargar Detalles del Curso"
+  syllabus_btn_label: "Descarga Instantánea"
+  syllabus_motivation: "En 2 min. recibirás en tu buzón de correo un PDF con información muy detallada sobre nuestra metodología, tecnologías, financiación e información del curso."
+  apply_button_link: "/es/aplica"
+  apply_button_text: "Aplicar"
 
 course_instructors: 
   header:
@@ -84,13 +90,6 @@ two_columns:
 upcoming:
   no_dates_message: "Actualmente no hay próximas fechas para este programa"
   actionMessage: "Avisenme fechas disponibles"
-
-button:
-  syllabus_heading: "Descargar Detalles del Curso"
-  syllabus_btn_label: "Descarga Instantánea"
-  syllabus_motivation: "En 2 min. recibirás en tu buzón de correo un PDF con información muy detallada sobre nuestra metodología, tecnologías, financiación e información del curso."
-  apply_button_link: "/es/aplica"
-  apply_button_text: "Aplicar"
 
 credentials:
   heading: "Nuestros números hablan por sí solos"

@@ -6,10 +6,10 @@ import Icon from "../Icon";
 
 const JobGuaranteeSmall = ({ content }) => {
   return (
-    <Div 
-      display="block" 
-      padding_xxs="40px 20px" 
-      padding_tablet="50px 0" 
+    <Div
+      display="block"
+      padding_xxs="40px 20px"
+      padding_tablet="50px 0"
       background={Colors.lightYellow}
     >
       {content.title && <H2 margin="0 0 30px 0">{content.title}</H2>}

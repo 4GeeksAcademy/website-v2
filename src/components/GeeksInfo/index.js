@@ -56,18 +56,18 @@ const GeeksInfo = ({ lang }) => {
 
   return (
     <>
-    {content.heading &&
-      <H2
-        padding="30px 0 0 0"
-        margin_tablet="60px auto 0 auto"
-        margin_xxs="15px auto 0px auto"
-        width_tablet="100%"
-        maxWidth="1366px"
-        lineHeight="35px"
-      >
-        {content.heading}
-      </H2>
-    }
+      {content.heading && (
+        <H2
+          padding="30px 0 0 0"
+          margin_tablet="30px auto 0 auto"
+          margin_xxs="15px auto 0px auto"
+          width_tablet="100%"
+          maxWidth="1366px"
+          lineHeight="35px"
+        >
+          {content.heading}
+        </H2>
+      )}
       <TwoColumn
         left={{
           //heading: yml.heading,

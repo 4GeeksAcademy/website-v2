@@ -401,7 +401,6 @@ export const Grid = styled(Div)`
       props.columns_xxs ? `repeat(${props.columns_xxs}, 1fr)` : null};
     padding: ${(props) => props.padding_xxs};
     margin: ${(props) => props.margin_xxs};
-    
   }
   @media ${Devices.xs} {
     grid-template-columns: ${(props) =>

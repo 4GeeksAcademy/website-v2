@@ -229,9 +229,7 @@ const UpcomingDates = ({
       padding_tablet="40px 40px"
     >
       <Div flexDirection="column">
-        <H2 textAlign="center">
-            {content?.title}
-        </H2>
+        <H2 textAlign="center">{content?.title}</H2>
         <Div
           padding="30px 0"
           gap="15px"

@@ -252,9 +252,7 @@ const Program = ({ data, pageContext, yml }) => {
         featuredImages={landingHiring?.featured}
         showFeatured
         withoutLine
-        title={
-          landingHiring ? landingHiring.heading : hiring.partners.tagline
-        }
+        title={landingHiring ? landingHiring.heading : hiring.partners.tagline}
         paragraph={
           landingHiring
             ? landingHiring.sub_heading
@@ -263,7 +261,6 @@ const Program = ({ data, pageContext, yml }) => {
       />
 
       <Loc lang={pageContext.lang} allLocationYaml={data.allLocationYaml} />
-      
     </>
   );
 };

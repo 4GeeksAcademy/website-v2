@@ -92,10 +92,10 @@ const Program = ({ data, pageContext, yml }) => {
           }}
           display_xxs="none"
           display_tablet="flex"
-          left_tablet= "72px"
-          top_tablet= "13%"
-          left_lg= "0%"
-          top_lg= "13%"
+          left_tablet="72px"
+          top_tablet="13%"
+          left_lg="0%"
+          top_lg="13%"
         />
         <Div
           flexDirection_tablet="row"
@@ -250,9 +250,7 @@ const Program = ({ data, pageContext, yml }) => {
         featuredImages={landingHiring?.featured}
         showFeatured
         withoutLine
-        title={
-          landingHiring ? landingHiring.heading : hiring.partners.tagline
-        }
+        title={landingHiring ? landingHiring.heading : hiring.partners.tagline}
         paragraph={
           landingHiring
             ? landingHiring.sub_heading
