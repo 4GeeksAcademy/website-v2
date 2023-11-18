@@ -10,7 +10,7 @@ meta_info:
   redirects:
     [
       "/course/full-time",
-      "full-time",
+      "/full-time",
       "/us/full-time",
       "/us/course/full-time",
       "/us/full-stack-ft",

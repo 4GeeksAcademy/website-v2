@@ -6,6 +6,8 @@ import Icon from "../Icon";
 import { Div } from "../Sections";
 import { Button, Colors, Img, StyledBackgroundSection } from "../Styling";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import { navigate } from "gatsby";
+import { transferQuerystrings, smartRedirecting } from "../../utils/utils";
 
 const Side = ({
   video,
