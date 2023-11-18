@@ -81,7 +81,7 @@ overlaped:
 two_columns:
   proportions: [6, 6]
   image:
-    style: '{ "backgroundSize": "contain" }'
+    style: '{"border" : "3px solid black", "backgroundSize": "contain" }'
     src: "/static/images/staff/luisa.png"
     shadow: true  
   video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"

@@ -299,7 +299,7 @@ const TwoColumn = ({ left, right, proportions, session }) => {
       flexDirection_tablet="row"
       m_sm="0px auto 100px auto"
       margin="auto"
-      padding_xxs="20px 20px"
+      padding_xxs="40px 20px"
       padding_md="40px 80px"
       padding_lg="40px 0px"
       padding_tablet="40px 40px"

@@ -45,6 +45,42 @@ course_instructors:
 badges:
   paragraph: "4Geeks Academy es el lugar donde los desarrolladores crecen y prosperan. Estamos autorizados por el Departamento de Educación de Florida. Elegido como uno de los top 35 <a href='/es/curso-de-programacion-desde-cero'>cursos de programacion</a> del mundo, el mejor de Miami según SwitchUp y de los 10 mejores cursos de programación en los Estados Unidos según Newsweek:"
 
+overlaped:
+  heading: "Python y Javascript"
+  paragraph: "Nuestros programa está basado en el uso de Phyton y Javascript. La razón?En el mercado laboral JavaScript tiene 26 veces más vacantes de trabajo que Ruby on Rails. Python tiene 10 veces más trabajos que node.js. Otras herramientas que también aprenderás a usar en nuestro programa: son GitHub, CSS3, HTML5, Flask, etc."
+  button:
+    text: "Aplicar"
+    color: "blue"  
+    link: "/"
+  image:
+    src: "/images/landing/tres-personas.png"  
+
+## TWO COLUMNS
+two_columns:
+  proportions: [6, 6]
+  image:
+    style: '{"border" : "3px solid black", "backgroundSize": "contain" }'
+    src: "/static/images/staff/luisa.png"
+    shadow: true  
+  video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
+  heading:
+    text: "4Geeks, Miami and a story full of opportunities"
+    font_size: ["30px", "30px", "30px", "30px", "30px"]
+  sub_heading:
+    text: "We are Miami based and we have been focusing in bringing on more opportunities in South Florida."
+    font_size: ["18px", "18px", "18px", "18px", "18px"]
+  button:
+    text: "Apply now"
+    color: "white"
+    background: "black"
+    path: "#"
+  bullets:
+    items: 
+    - text: "There is always a full or partial scholarship open"
+    - text: "There is always opportunities for everyone in Miami-Dade County, Broward and Palm Beach"
+    - text: "We have ongoing partnerships with Miami Dade College, Miami Tech Coalition, UWM, The City of Miami, Miami Dade Counti and so manu more."
+
+
 upcoming:
   no_dates_message: "Actualmente no hay próximas fechas para este programa"
   actionMessage: "Avisenme fechas disponibles"
@@ -54,6 +90,7 @@ button:
   syllabus_btn_label: "Descarga Instantánea"
   syllabus_motivation: "En 2 min. recibirás en tu buzón de correo un PDF con información muy detallada sobre nuestra metodología, tecnologías, financiación e información del curso."
   apply_button_link: "/es/aplica"
+  apply_button_text: "Aplicar"
 
 credentials:
   heading: "Nuestros números hablan por sí solos"

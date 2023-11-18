@@ -32,7 +32,7 @@ const Program = ({ data, pageContext, yml }) => {
   const courseDetails = data.allCourseYaml.edges[0].node;
   const [open, setOpen] = React.useState(false);
   const hiring = data.allPartnerYaml.edges[0].node;
-  const landingHiriging = yml.partners;
+  const landingHiring = yml.partners;
 
   const course_type = "full_stack";
   const program_type = yml.meta_info.slug.includes("full-time")
@@ -53,14 +53,15 @@ const Program = ({ data, pageContext, yml }) => {
     (loc) => loc.node?.city === city
   );
 
+  const syllabus_button_text = yml.button.syllabus_heading;
+  const apply_button_text = yml.button.apply_button_text;
+
   useEffect(() => {
     if (currentLocation !== undefined) {
       setApplyButtonText(currentLocation.node.button.apply_button_text);
     }
   }, [currentLocation]);
 
-  const syllabus_button_text = yml.button.syllabus_heading;
-  const apply_button_text = yml.button.apply_button_text;
   return (
     <>
       <Header
@@ -68,13 +69,13 @@ const Program = ({ data, pageContext, yml }) => {
         paragraphMargin="26px 20px"
         paragraphMargin_Tablet="26px 22%"
         paddingParagraph_tablet="0 40px"
-        //seo_title={yml.seo_title}
+        seo_title={yml.seo_title}
         title={yml.header.title}
         paragraph={yml.header.paragraph}
         padding_tablet="72px 0 40px 0"
-        padding="0px"
+        padding="0px 20px"
         position="relative"
-        fontSize_title="40px"
+        fontSize_title="12px"
         fontSizeTitle_tablet="60px"
         fontFamily_title="Archivo-Black"
         fontSize_paragraph="24px"
@@ -87,7 +88,7 @@ const Program = ({ data, pageContext, yml }) => {
           height="286px"
           style={{
             position: "absolute",
-            zIndex: "1",
+            zIndex: "-1",
           }}
           display_xxs="none"
           display_tablet="flex"
@@ -116,7 +117,7 @@ const Program = ({ data, pageContext, yml }) => {
               margin_tablet="10px 24px 10px 0"
               textColor="white"
             >
-              {apply_button_text}
+              {applyButtonText || apply_button_text}
               {/* {applyButtonText} */}
             </Button>
           </Link>
@@ -221,9 +222,6 @@ const Program = ({ data, pageContext, yml }) => {
         actionMessage={courseDetails.upcoming.actionMessage}
         locations={data.allLocationYaml.edges}
       />
-      <GridContainer padding_tablet="0" margin_tablet="0 0 62px 0">
-        <Div height="1px" background="#EBEBEB"></Div>
-      </GridContainer>
 
       <PricesAndPayment
         background={`linear-gradient(to bottom, ${Colors.white} 50%, ${Colors.lightYellow2} 50%)`}
@@ -249,15 +247,15 @@ const Program = ({ data, pageContext, yml }) => {
         padding="50px 0"
         marquee
         paddingFeatured="0 0 50px 0"
-        featuredImages={landingHiriging?.featured}
+        featuredImages={landingHiring?.featured}
         showFeatured
         withoutLine
         title={
-          landingHiriging ? landingHiriging.heading : hiring.partners.tagline
+          landingHiring ? landingHiring.heading : hiring.partners.tagline
         }
         paragraph={
-          landingHiriging
-            ? landingHiriging.sub_heading
+          landingHiring
+            ? landingHiring.sub_heading
             : hiring.partners.sub_heading
         }
       />
@@ -649,7 +647,7 @@ export const query = graphql`
                 childImageSharp {
                   gatsbyImageData(
                     layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                    width: 150
+                    width: 350
                     placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                   )
                 }
@@ -664,7 +662,7 @@ export const query = graphql`
                 childImageSharp {
                   gatsbyImageData(
                     layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                    width: 100
+                    width: 300
                     placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                   )
                 }
@@ -681,7 +679,7 @@ export const query = graphql`
                 childImageSharp {
                   gatsbyImageData(
                     layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                    width: 100
+                    width: 300
                     placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                   )
                 }

@@ -24,7 +24,7 @@ meta_info:
 apply_form:
   label: Full Stack Developer
 
-seo_title: #"Coding Bootcamp"
+seo_title: "Coding Bootcamp"
 header:
   title: "Full Stack Developer"
   image: "../../../static/images/bg/program-bg.png"
@@ -35,7 +35,7 @@ button:
   syllabus_btn_label: "Descarga Instantánea"
   syllabus_motivation: "En 2 min. recibirás en tu buzón de correo un PDF con información muy detallada sobre nuestra metodología, tecnologías, financiación e información del curso."
   apply_button_link: "/es/aplica"
-  apply_button_text: "Apply now"
+  apply_button_text: "Aplicar"
 
 course_instructors: 
   header:
@@ -66,7 +66,8 @@ overlaped:
   paragraph: "Programming in Python and JavaScript offers some of the highest-paid career opportunities in the US. There are currently over 26 times more job opportunities in JavaScript compared to Ruby on Rails, and 10 times more jobs in Python compared to node.js. According to Indeed, Python and JavaScript developers enjoy average salaries exceeding $110k."
   button:
     text: "LEARN MORE"
-    color: "blue"  
+    color: "blue"
+    link: "/"  
   image:
     src: "/images/landing/tres-personas.png"
 
@@ -74,7 +75,7 @@ overlaped:
 two_columns:
   proportions: [6, 6]
   image:
-    style: '{ "backgroundSize": "contain" }'
+    style: '{"border" : "3px solid black", "backgroundSize": "contain" }'
     src: "/static/images/staff/luisa.png"
     shadow: true  
   video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"

@@ -538,6 +538,8 @@ export const Header = ({
   margin_tablet,
   padding,
   padding_tablet,
+  padding_lg,
+  padding_md,
   position,
   textAlign_tablet,
   paddingParagraph_tablet,
@@ -546,8 +548,11 @@ export const Header = ({
   fontSize_title,
   fontSizeTitle_tablet,
   fontFamily_title,
+  fontSize_seo,
   fontSize_paragraph,
   fontWeight_paragraph,
+  lineHeight,
+  lineHeight_tablet,
   fontWeight_title,
   gridTemplateColumns_tablet,
   maxWidth,
@@ -561,7 +566,9 @@ export const Header = ({
       margin={margin || "70px 0 0 0"}
       margin_tablet={margin_tablet}
       padding={padding || "60px 20px"}
-      padding_tablet={padding_tablet || "60px 0"}
+      padding_tablet={padding_tablet || "60px 40px"}
+      padding_md={padding_md || "60px 80px"}
+      padding_lg={padding_lg || "60px 0"}
       gridTemplateColumns_tablet={gridTemplateColumns_tablet}
       maxWidth={maxWidth}
     >
@@ -575,30 +582,32 @@ export const Header = ({
           gridColumn_tablet={svg_image ? null : "1 / 13"}
           gridArea_tablet={svg_image ? "1/1/1/7" : null}
         >
-          <H1
-            type="h1"
-            textAlign_tablet={textAlign_tablet}
-            margin="0 0 11px 0"
-            color="#606060"
-            fontSize={fontSize_title}
-            fontFamily={fontFamily_title}
-          >
-            {seo_title}
-          </H1>
           <H2
             type="h2"
             textAlign_tablet={textAlign_tablet}
-            padding="0"
+            margin="0 0 11px 0"
+            padding="0 20px"
+            color="#606060"
+            fontSize={fontSize_seo || "12px"}
+            //fontFamily={fontFamily_title}
+          >
+            {seo_title}
+          </H2>
+          <H1
+            type="h1"
+            textAlign_tablet={textAlign_tablet}
+            padding="0 20px"
             padding_tablet={paddingTitle_tablet}
             fontSize={fontSize_title || "40px"}
             fontSize_tablet={fontSizeTitle_tablet || "50px"}
-            lineHeight="60px"
+            lineHeight={lineHeight || "50px"}
+            lineHeight_tablet={lineHeight_tablet || "60px"}
             fontFamily={fontFamily_title}
             //fontSize={fontSize || "40px"}
             //fontSize_tablet={fontSize_tablet || "50px"}
           >
             {hideArrowKey ? title : `< ${title} >`}
-          </H2>
+          </H1>
           <Paragraph
             padding="0"
             width="auto"

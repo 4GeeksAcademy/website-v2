@@ -229,8 +229,11 @@ const UpcomingDates = ({
       padding_tablet="40px 40px"
     >
       <Div flexDirection="column">
+        <H2 textAlign="center">
+            {content?.title}
+        </H2>
         <Div
-          padding="0 0 30px 0"
+          padding="30px 0"
           gap="15px"
           style={{ borderBottom: "1px solid black" }}
           justifyContent_tablet="between"
@@ -239,7 +242,7 @@ const UpcomingDates = ({
           alignItems_tablet="center"
         >
           <H3 textAlign="left" width="188px">
-            {content.title}
+            {content?.title}
           </H3>
           {!location && (
             <Select
@@ -250,7 +253,7 @@ const UpcomingDates = ({
               width="300px"
               maxWidth="100%"
               shadow="0px 0px 6px 2px rgba(0, 0, 0, 0.2)"
-              options={data.cohorts.catalog}
+              options={data.cohorts?.catalog}
               openLabel={
                 lang == "us"
                   ? academy

@@ -43,6 +43,7 @@ button:
   syllabus_btn_label: "Descarga Instantánea"
   syllabus_motivation: "En 2 min. recibirás en tu buzón de correo un PDF con información muy detallada sobre nuestra metodología, tecnologías, financiación e información del curso."
   apply_button_link: "/es/aplica"
+  apply_button_text: "Aplicar"
   
 course_instructors: 
   header:
@@ -78,7 +79,7 @@ overlaped:
 two_columns:
   proportions: [6, 6]
   image:
-    style: '{ "backgroundSize": "contain" }'
+    style: '{"border" : "3px solid black", "backgroundSize": "contain" }'
     src: "/static/images/staff/luisa.png"
     shadow: true  
   video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
@@ -110,6 +111,7 @@ upcoming:
 credentials:
   heading: "RESULTADOS"
   paragraph: "Nuestros números hablan por sí solos"
+
 ## PROGRAM DETAILS
 details:
   about:

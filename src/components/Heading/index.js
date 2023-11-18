@@ -58,6 +58,7 @@ const BaseHeading = styled(Heading)`
   }
   @media ${Devices.xxs} {
     line-height: ${(props) => props.lineHeight_xxs};
+    margin: ${(props) => props.margin_xxs};
   }
 
   @media ${Devices.xs} {
@@ -104,6 +105,8 @@ const BaseHeading = styled(Heading)`
 
 export const H1 = styled(BaseHeading)`
   z-index: ${(props) => props.zIndex};
+  letter-spacing: 0.05em;
+  font-family: ${(props) => props.fontFamily};
 `;
 
 export const H2 = styled(BaseHeading)`
