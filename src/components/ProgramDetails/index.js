@@ -105,7 +105,7 @@ const ProgramDetails = (props) => {
         >
           {list.map((item, index) => {
             return (
-              <Div flexWrap="wrap">
+              <Div flexWrap="wrap" alignItems="center">
                 <Div alignItems="start" margin="10px 0" key={index}>
                   <Icon icon={item.icon} width="20px" height="20px" />
                   <H4
