@@ -54,6 +54,24 @@ label:
 
 syllabus_button_text: Buscar
 
+we_trust_section:
+  title: ¿Por qué deberías confiar en nosotros?
+  text: |
+    Nuestro programa tiene un historial probado de éxito y lo seguirá haciendo.
+    <br>
+    <br>
+    Los números hablan por sí solos.
+  boxes:
+    - icon: briefcase-2
+      title: 82%
+      text: Tasa de inserción laboral
+    - icon: chart
+      title: "60K"
+      text: Ingreso promedio
+    - icon: graduation-2
+      title: "20MM"
+      text: Días para conseguir trabajo después de la graduación
+
 ## PAYMENT GUIDE SECTION
 # payment_guide:
 #   heading: "GUÍA DE PAGOS"

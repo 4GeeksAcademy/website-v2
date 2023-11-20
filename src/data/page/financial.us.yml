@@ -39,7 +39,6 @@ prices:
   closed_label: "Select a program"
   opened_label: "Close"
 
-
 label:
   program: 
     title: "Program"
@@ -52,6 +51,191 @@ label:
     closedLabel: "Select a campus"
 
 syllabus_button_text: "Search"
+
+iconogram:
+  heading:
+    text: ""
+    font_size: ["30px", "30px", "30px", "30px", "30px"]
+    style: '{ "textAlign": "center", "width": "60%" }'
+  sub_heading:
+    text: ""
+    font_size: ["16px", "16px", "16px", "16px", "16px"]
+    style: '{ "textAlign": "center", "width": "60%" }'
+  text_link: "#"
+  icons:
+  - icon: "touch"
+    title: Solicita tu beca antes del 8 de octubre
+    content: ""
+  - icon: "receive_mail"
+    title: Recibirás un correo electrónico con toda la información y un test de lógica
+    content: ""
+  - icon: "talk"
+    title: Haz una entrevista online con nuestro equipo de admisiones
+    content: ""
+  - icon: "terminal"
+    title: Recibe los resultados, reserva tu plaza y empieza a PROGRAMAR
+    content: ""
+  button:
+    text: "¡Aplica hoy!"
+    color: ""
+    path: "#top"
+    background: ""
+    hover_color: ""
+
+two_columns:
+  - proportions:
+      - 6
+      - 6
+    image:
+      style: '{ "backgroundSize": "contain" }'
+      src: /images/landing/20-million-column.png
+    heading:
+      text: Our mission is to make high-quality coding education affordable.
+      font_size:
+        - 40px
+        - 40px
+        - 40px
+        - 40px
+        - 40px
+    sub_heading:
+      text: In the past, 68% of the people applying to 4Geeks Academy could not enroll due to financial reasons. We concentrated our efforts on lowering the financial barriers by finding partners and sponsors who shared our vision. Today, thanks to our joint efforts, 80% of our students receive some form of financial support, making top-quality coding education accessible to a wider audience.
+      font_size:
+        - 16px
+        - 16px
+        - 16px
+        - 16px
+        - 16px
+    content:
+      font_size:
+        - 16px
+      text: |
+        Since our foundation in 2015,  these goals have been fundamental to our mission:
+          - To be a premier school for coding education, enriching the futures of our students.
+          - To secure job placement for our graduates immediately after program completion.
+          - To make high-quality education accessible to anyone eager to embark on a coding career.
+    button:
+      text: JOIN THE NETWORK
+      color: white
+      background: black
+      hover_color: white
+      path: "#top"
+
+  - proportions:
+      - 6
+      - 6
+    image:
+      style: '{ "backgroundSize": "contain" }'
+      src: /images/landing/20-million-column.png
+    heading:
+      text: Our mission is to make high-quality coding education affordable.
+      font_size:
+        - 40px
+        - 40px
+        - 40px
+        - 40px
+        - 40px
+    sub_heading:
+      text: In the past, 68% of the people applying to 4Geeks Academy could not enroll due to financial reasons. We concentrated our efforts on lowering the financial barriers by finding partners and sponsors who shared our vision. Today, thanks to our joint efforts, 80% of our students receive some form of financial support, making top-quality coding education accessible to a wider audience.
+      font_size:
+        - 16px
+        - 16px
+        - 16px
+        - 16px
+        - 16px
+    content:
+      font_size:
+        - 16px
+      text: |
+        Since our foundation in 2015,  these goals have been fundamental to our mission:
+          - To be a premier school for coding education, enriching the futures of our students.
+          - To secure job placement for our graduates immediately after program completion.
+          - To make high-quality education accessible to anyone eager to embark on a coding career.
+    button:
+      text: JOIN THE NETWORK
+      color: white
+      background: black
+      hover_color: white
+      path: "#top"
+
+  - proportions: [6, 6]
+    image:
+      style: '{ "backgroundSize": "contain" }'
+      src: "/images/woman-glasses-laptop.png"
+    heading:
+      text: "Why are we offering a job guarantee?"
+      font_size: ["30px", "30px", "30px", "30px", "30px"]
+    content:
+      font_size: ["24px", "24px", "24px", "18px", "18px"]
+      #Using <p> tags gives <p> inside <p> bug
+      text: |
+        We’re here to challenge the traditional education model. Our bootcamps go beyond teaching relevant skills; they are designed to launch new, rewarding careers. Together, we’ll shape your future.
+        <br>
+        <br>
+        <span style="color: #0097CD;">✓</span> We <strong style="font-weight: bold;">trust</strong> the effectiveness of the program
+        <br>
+        <br>
+        <span style="color: #0097CD;">✓</span> We <strong style="font-weight: bold;">trust</strong> the industry
+        <br>
+        <br>
+        <span style="color: #0097CD;">✓</span> We <strong style="font-weight: bold;">trust</strong> the process
+        <br>
+        <br>
+        <span style="color: #0097CD;">✓</span> We <strong style="font-weight: bold;">trust</strong> you
+    button:
+        text: "APPLY"
+        color: "white"
+        background: "black"
+        hover_color: "white"
+        path: "#top"
+
+parthers:
+  paragraph: "Este curso cuenta con premios y reconocimientos que validan su excelencia"
+  badges:
+    - name: "Premios Excelencia Educativa"
+      url: ""
+      image: "../../../../static/images/badges/exelencia-educativa-es.png"
+      alt: "Mejor centro de Coding Bootcamp"
+    - name: "Switchup"
+      url: ""
+      image: "../../../../static/images/badges/Course-Report-Badge-2023.png"
+      alt: "Best cooding bootcamp Course Report 2023"
+    - name: "FDOE"
+      url: ""
+      image: "../../../../static/images/badges/licensed-es.png"
+      alt: "Licensed by the Florida Department of Education"
+    - name: "Newsweek"
+      url: ""
+      image: "../../../../static/images/badges/newsweek-es.png"
+      alt: "Top Coding Bootcamps Newsweek"
+    - name: "FDOE"
+      url: ""
+      image: "../../../../static/images/badges/switchup-badge-2023.png"
+      alt: "Top Coding Bootcamps Switchup"
+    - name: "FDOE"
+      url: ""
+      image: "../../../../static/images/badges/syllabus-es.png"
+      alt: "Award winning syllabus"
+  link_text: "Ver todos los Premios y Reconocimientos"
+  link_to: "/es/premios"
+  short_link_text: "Ver más"
+
+we_trust_section:
+  title: Why trust us?
+  text: |
+    A job guarantee seals our commitment to your success! With a proven track record of success, our program will continue to empower future graduates. 
+    <br>
+    <br>
+    The numbers speak for themselves
+  boxes:
+    - icon: briefcase-2
+      title: "82%"
+      text: Job placement rate
+    - icon: chart
+      title: "60K"
+      text: Avg. Income at a new job
+    - icon: graduation-2
+      title: "20MM"
+      text: Average days to get hired
 
 ## PAYMENT GUIDE SECTION
 # payment_guide:

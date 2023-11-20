@@ -22,6 +22,7 @@ const Badges = ({
   margin,
   wrapped_images,
   maxWidth,
+  badges,
 }) => {
   const data = useStaticQuery(graphql`
     query myNewQueryBadges {
