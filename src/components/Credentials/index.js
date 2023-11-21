@@ -14,19 +14,20 @@ export default (props) => {
         background={Colors.verylightGray}
         justifyContent_tablet="center"
         flexDirection="column"
-        padding_xxs="40px 0"
+        padding_xxs="20px"
         padding_tablet="0px"
+        style={{padding: "20px 0"}}
       >
         <GridContainer
           //height="375px"
           height_tablet="219px"
           background={Colors.verylightGray}
           columns="2"
-          padding="0"
+          //padding="0 20px"
           containerColumns_tablet="repeat(12, 1fr)"
           gridColumn_tablet="1/ span 12"
           columns_tablet={credentials.length}
-          // margin="0 0 67px 0"
+          margin="0 20px"
           margin_tablet="0 auto"
           maxWidth="1366px"
           gridGap_xxs="30px 15px"

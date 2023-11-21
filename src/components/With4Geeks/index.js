@@ -81,7 +81,7 @@ export default ({
     <Fragment github="/components/with_4geeks">
       {info?.header && (
         <Grid
-          margin="40px 5px 0 5px"
+          margin="40px 5px 20px 5px"
           margin_tablet="40px auto 20px auto"
           maxWidth_tablet="1366px"
           gridTemplateColumns_tablet="repeat(14, 1fr)"
