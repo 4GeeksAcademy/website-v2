@@ -20,7 +20,7 @@ const Testimonials = (props) => {
         id={props.id}
         fluid
         background={props.background || "linear-gradient(#f5f5f5, white)"}
-        height="auto"
+        height="425px"
         margin={props.margin}
         margin_tablet={props.margin_tablet}
         padding="30px 20px 60px 20px"
@@ -28,7 +28,7 @@ const Testimonials = (props) => {
       >
         <Div
           flexDirection="column"
-          padding_lg="0PX"
+          padding_lg="0px"
           padding_md="10px 80px"
           padding_tablet="10px 40px"
           padding_xxs="0 20px"

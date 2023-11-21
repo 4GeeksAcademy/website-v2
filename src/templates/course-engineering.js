@@ -1,26 +1,28 @@
 import React, { useState, useEffect } from "react";
+import { isCustomBarActive } from "../actions";
 import { graphql, Link } from "gatsby";
 import { GridContainer, Header, Div } from "../components/Sections";
-import { isCustomBarActive } from "../actions";
-import { Button, Colors } from "../components/Styling";
-import AboutTheProgram from "../components/AboutTheProgram";
+import { Button, Colors, Img } from "../components/Styling";
+import UpcomingDates from "../components/UpcomingDates";
 import ProgramDetails from "../components/ProgramDetails";
 import ProgramDetailsMobile from "../components/ProgramDetailsMobile";
 import TechsWeTeach from "../components/TechsWeTeach";
 import GeeksInfo from "../components/GeeksInfo";
 import OurPartners from "../components/OurPartners";
 import BaseRender from "./_baseLayout";
-import Modal from "../components/Modal";
-import LeadForm from "../components/LeadForm";
+import Icon from "../components/Icon";
 import { requestSyllabus } from "../actions";
 import { SessionContext } from "../session";
-import { Circle } from "../components/BackgroundDrawing";
-import Icon from "../components/Icon";
-import Testimonials from "../components/Testimonials";
+import ScholarshipProjects from "../components/ScholarshipProjects";
 import Badges from "../components/Badges";
 import PricesAndPayment from "../components/PricesAndPayment";
-import Instructors from "../components/Instructors";
+import { Circle } from "../components/BackgroundDrawing";
+import LeadForm from "../components/LeadForm";
+import Modal from "../components/Modal";
+import TwoColumn from "../components/TwoColumn/index.js";
+import Overlaped from "../components/Overlaped";
 import JobGuaranteeSmall from "../components/JobGuaranteeSmall";
+import Loc from "../components/Loc";
 
 const Program = ({ data, pageContext, yml }) => {
   const { session } = React.useContext(SessionContext);
@@ -41,6 +43,7 @@ const Program = ({ data, pageContext, yml }) => {
   };
 
   const hiring = data.allPartnerYaml.edges[0].node;
+  const landingHiring = yml.partners;
 
   const [applyButtonText, setApplyButtonText] = useState("");
   let city = session && session.location ? session.location.city : [];
@@ -48,261 +51,55 @@ const Program = ({ data, pageContext, yml }) => {
     (loc) => loc.node?.city === city
   );
 
+  const syllabus_button_text = yml.button.syllabus_heading;
+  const apply_button_text = yml.button.apply_button_text;
+
   useEffect(() => {
     if (currentLocation !== undefined) {
       setApplyButtonText(currentLocation.node.button.apply_button_text);
     }
   }, [currentLocation]);
 
-  const syllabus_button_text = yml.button.syllabus_heading;
-
   return (
     <>
       <Header
-        margin={isCustomBarActive(session) ? "120px 0 0 0" : ""}
+        margin={isCustomBarActive(session) ? "60px auto 0 auto" : "0 auto"}
+        paragraphMargin="26px 20px"
+        paragraphMargin_Tablet="26px 22%"
+        paddingParagraph_tablet="0 40px"
         seo_title={yml.seo_title}
         title={yml.header.title}
         paragraph={yml.header.paragraph}
         padding_tablet="72px 0 40px 0"
+        padding="0px 20px"
         position="relative"
+        fontSize_title="12px"
+        fontSizeTitle_tablet="60px"
+        fontFamily_title="Archivo-Black"
+        fontSize_paragraph="24px"
+        gridTemplateColumns_tablet="repeat(14, 1fr)"
+        maxWidth="1366px"
       >
-        <Circle
-          color="yellow"
-          width="17px"
-          height="17px"
-          top="0"
-          left="74px"
-          zIndex="1"
-          display="none"
-          display_tablet="inline"
-          opacity="0.2"
-        />
-        <Circle
-          color="grey"
-          width="17px"
-          height="17px"
-          top="0"
-          left="106px"
-          zIndex="1"
-          display="none"
-          display_tablet="inline"
-        />
-        <Circle
-          color="black"
-          width="17px"
-          height="17px"
-          top="32px"
-          left="106px"
-          zIndex="1"
-          display="none"
-          display_tablet="inline"
-        />
-        <Circle
-          color="black"
-          width="17px"
-          height="17px"
-          top="32px"
-          left="74px"
-          zIndex="1"
-          display="none"
-          display_tablet="inline"
-        />
-        <Circle
-          color="grey"
-          width="17px"
-          height="17px"
-          top="67px"
-          left="74px"
-          zIndex="1"
-          display="none"
-          display_tablet="inline"
-        />
-        <Circle
-          color="grey"
-          width="17px"
-          height="17px"
-          top="102px"
-          left="74px"
-          zIndex="1"
-          display="none"
-          display_tablet="inline"
-        />
-        <Circle
-          color="grey"
-          width="17px"
-          height="17px"
-          top="137px"
-          left="106px"
-          zIndex="1"
-          display="none"
-          display_tablet="inline"
-        />
-        <Circle
-          color="grey"
-          width="17px"
-          height="17px"
-          top="172px"
-          left="106px"
-          zIndex="1"
-          display="none"
-          display_tablet="inline"
-        />
-        <Circle
-          color="blue"
-          width="17px"
-          height="17px"
-          top="216px"
-          left="74px"
-          zIndex="1"
-          display="none"
-          display_tablet="inline"
-        />
-        <Circle
-          color="grey"
-          width="17px"
-          height="17px"
-          top="271px"
-          left="106px"
-          zIndex="1"
-          display="none"
-          display_tablet="inline"
-        />
-        <Circle
-          color="red"
-          width="27px"
-          height="27px"
-          top="222px"
-          left="278px"
-          zIndex="1"
-          display="none"
-          display_tablet="inline"
-        />
-        <Circle
-          color="yellow"
-          width="250px"
-          height="250px"
-          bottom="20px"
-          right="-68px"
-          opacity="0.2"
-          zIndex="1"
-          display="none"
-          display_tablet="inline"
-        />
-        <Circle
-          color="grey"
-          width="17px"
-          height="17px"
-          top="120px"
-          right="50px"
-          zIndex="1"
-          display="none"
-          display_tablet="inline"
-        />
-        <Circle
-          color="black"
-          width="17px"
-          height="17px"
-          top="120px"
-          right="89px"
-          zIndex="1"
-          display="none"
-          display_tablet="inline"
-        />
-        <Circle
-          color="grey"
-          width="17px"
-          height="17px"
-          top="120px"
-          right="128px"
-          zIndex="1"
-          display="none"
-          display_tablet="inline"
-        />
-        <Circle
-          color="black"
-          width="119px"
-          height="11px"
-          border="10px"
-          bottom="115px"
-          right="40px"
-          zIndex="1"
-          display="none"
-          display_tablet="inline"
-        />
-        <Circle
-          color="black"
-          width="77px"
-          height="11px"
-          border="10px"
-          bottom="115px"
-          right="175px"
-          zIndex="1"
-          display="none"
-          display_tablet="inline"
-        />
-        <Circle
-          color="yellow"
-          width="116px"
-          height="116px"
-          bottom="50px"
-          left="-58px"
-          zIndex="1"
-          display="none"
-          display_tablet="inline"
-        />
-        <Circle
-          color="yellow"
-          width="116px"
-          height="116px"
-          bottom="200px"
-          left="-90px"
-          zIndex="1"
-          display="inline"
-          display_tablet="none"
-        />
-        <Circle
-          color="yellow"
-          width="21px"
-          height="21px"
-          top="10px"
-          right="320px"
-          zIndex="1"
-          display="none"
-          display_tablet="inline"
-        />
-        <Circle
-          color="blue"
-          width="57px"
-          height="57px"
-          top="32px"
-          right="61px"
-          display="none"
-          display_tablet="inline"
-        />
-        <Circle
-          color="yellow"
-          width="160px"
-          height="160px"
-          top="0"
-          right="-120px"
-          opacity="0.2"
-          display="inline"
-          display_tablet="none"
-        />
-        <Circle
-          color="red"
-          width="25px"
-          height="25px"
-          top="60px"
-          right="30px"
-          display="inline"
-          display_tablet="none"
+        <Img
+          src="/images/landing/group-3.png"
+          width="49px"
+          height="286px"
+          style={{
+            position: "absolute",
+            zIndex: "-1",
+          }}
+          display_xxs="none"
+          display_tablet="flex"
+          left_tablet="72px"
+          top_tablet="13%"
+          left_lg="0%"
+          top_lg="13%"
         />
         <Div
           flexDirection_tablet="row"
           flexDirection="column"
-          alignItems="center"
           justifyContent="center"
+          alignItems="center"
           margin_tablet="0 0 50px 0"
         >
           <Link
@@ -318,7 +115,8 @@ const Program = ({ data, pageContext, yml }) => {
               margin_tablet="10px 24px 10px 0"
               textColor="white"
             >
-              {applyButtonText}
+              {applyButtonText || apply_button_text}
+              {/* {applyButtonText} */}
             </Button>
           </Link>
           <Button
@@ -342,8 +140,6 @@ const Program = ({ data, pageContext, yml }) => {
           >
             {syllabus_button_text}
           </Button>
-          {/* <Button onClick={handleOpen} variant="outline" width="200px" color={Colors.black} margin="10px 0 58px 0" textColor={Colors.black}>{syllabus_button_text}</Button> */}
-          {/* <Button onClick={handleOpen} variant="outline" icon={<Icon icon="download" stroke={Colors.black} style={{marginRight: "10px"}} width="46px" height="46px" />} color={Colors.black} margin="10px 0 50px 0" margin_tablet="0" textColor={Colors.black}>{syllabus_button_text}</Button> */}
         </Div>
         <Modal
           aria-labelledby="simple-modal-title"
@@ -374,21 +170,17 @@ const Program = ({ data, pageContext, yml }) => {
         <Badges
           lang={pageContext.lang}
           short_link={true}
-          paragraph={yml.badges.paragraph && yml.badges.paragraph}
+          short_text="12px"
+          margin="0 0 40px 0"
+          paragraph={yml.badges.paragraph}
         />
       </Header>
-      <OurPartners
-        background={Colors.verylightGray}
-        images={hiring.partners.images}
-        marquee
-        title={hiring.partners.tagline}
-        paragraph={hiring.partners.sub_heading}
-      />
-      <AboutTheProgram
-        details={courseDetails.details}
+
+      {/* <TechsWeTeach
         lang={pageContext.lang}
-        course={program_type}
-      />
+        data={data.allSoftwareEngineeringTechsYaml}
+      /> */}
+
       <JobGuaranteeSmall
         content={data.allJobGuaranteeSmallYaml.edges[0].node}
       />
@@ -403,17 +195,39 @@ const Program = ({ data, pageContext, yml }) => {
         lang={pageContext.lang}
         course={program_type}
       />
-      <TechsWeTeach
-        lang={pageContext.lang}
-        data={data.allSoftwareEngineeringTechsYaml}
+
+      {/* OVERLAPED CREAR EN EL YML*/}
+      <Overlaped
+        heading={yml.overlaped?.heading}
+        content={yml.overlaped?.paragraph}
+        button={yml.overlaped?.button}
+        image={yml.overlaped?.image}
       />
+
+      {/* GEEKSINFO IS A TWOCOLUMN WITH TITLE */}
       <GeeksInfo lang={pageContext.lang} />
 
-      <GridContainer padding_tablet="0" margin_tablet="0 0 62px 0">
-        <Div height="1px" background="#EBEBEB"></Div>
-      </GridContainer>
+      {/* TWO COLUMN CREAR EN EL YML*/}
+      <TwoColumn
+        left={{ image: yml.two_columns?.image, video: yml.two_columns?.video }}
+        right={{
+          heading: yml.two_columns?.heading,
+          sub_heading: yml.two_columns?.sub_heading,
+          bullets: yml.two_columns?.bullets,
+          content: yml.two_columns?.content,
+          button: yml.two_columns?.button,
+        }}
+        proportions={yml.two_columns?.proportions}
+        session={session}
+      />
 
-      {/* <Instructors lang={{...courseDetails.course_instructors, lang: pageContext.lang}}/> */}
+      <UpcomingDates
+        lang={pageContext.lang}
+        message={courseDetails.upcoming?.no_dates_message}
+        actionMessage={courseDetails.upcoming?.actionMessage}
+        locations={data.allLocationYaml.edges}
+      />
+
       <PricesAndPayment
         type={pageContext.slug}
         lang={pageContext.lang}
@@ -424,8 +238,29 @@ const Program = ({ data, pageContext, yml }) => {
         paragraph={yml.prices.sub_heading}
       />
 
-      <Testimonials lang={data.allTestimonialsYaml.edges} />
-      <OurPartners images={hiring.partners.images} marquee></OurPartners>
+      <ScholarshipProjects
+        content={data.allScholarshipProjectsYaml.edges[0].node}
+        lang={pageContext.lang}
+      />
+
+      <OurPartners
+        images={hiring.partners.images}
+        margin="0"
+        padding="50px 0"
+        marquee
+        paddingFeatured="0 0 50px 0"
+        featuredImages={landingHiring?.featured}
+        showFeatured
+        withoutLine
+        title={landingHiring ? landingHiring.heading : hiring.partners.tagline}
+        paragraph={
+          landingHiring
+            ? landingHiring.sub_heading
+            : hiring.partners.sub_heading
+        }
+      />
+
+      <Loc lang={pageContext.lang} allLocationYaml={data.allLocationYaml} />
     </>
   );
 };
@@ -592,6 +427,45 @@ export const query = graphql`
               }
             }
           }
+          two_columns {
+            proportions
+            image {
+              style
+              src
+              shadow
+            }
+            video
+            heading {
+              text
+              font_size
+            }
+            sub_heading {
+              text
+              font_size
+            }
+            button {
+              text
+              color
+              background
+              path
+            }
+            bullets {
+              items {
+                text
+              }
+            }
+          }
+          overlaped {
+            heading
+            paragraph
+            button {
+              text
+              color
+            }
+            image {
+              src
+            }
+          }
           geeks_vs_others {
             heading
             sub_heading
@@ -625,7 +499,65 @@ export const query = graphql`
         }
       }
     }
-
+    allScholarshipProjectsYaml(filter: { fields: { lang: { eq: $lang } } }) {
+      edges {
+        node {
+          title
+          description
+          project_name
+          project_details
+          total_cost
+          geeks_benefited
+          institutions
+          press
+          see_project
+          projects {
+            name
+            image {
+              alt
+              src {
+                childImageSharp {
+                  gatsbyImageData(
+                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                    width: 700
+                    quality: 100
+                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                    breakpoints: [200, 340, 520, 890]
+                  )
+                }
+              }
+            }
+            description
+            details {
+              cost
+              geeks_benefited
+            }
+            institutions {
+              name
+              logo {
+                childImageSharp {
+                  gatsbyImageData(
+                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                    width: 700
+                    quality: 100
+                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                    breakpoints: [200, 340, 520, 890]
+                  )
+                }
+              }
+            }
+            press {
+              name
+              link
+            }
+            pdf
+          }
+          fields {
+            lang
+          }
+        }
+      }
+    }
     allPartnerYaml(filter: { fields: { lang: { eq: $lang } } }) {
       edges {
         node {
@@ -643,7 +575,7 @@ export const query = graphql`
                 childImageSharp {
                   gatsbyImageData(
                     layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                    width: 150
+                    width: 350
                     placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                   )
                 }
@@ -658,7 +590,7 @@ export const query = graphql`
                 childImageSharp {
                   gatsbyImageData(
                     layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                    width: 100
+                    width: 300
                     placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                   )
                 }
@@ -675,7 +607,7 @@ export const query = graphql`
                 childImageSharp {
                   gatsbyImageData(
                     layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                    width: 100
+                    width: 300
                     placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                   )
                 }
@@ -692,7 +624,7 @@ export const query = graphql`
                 childImageSharp {
                   gatsbyImageData(
                     layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                    width: 100
+                    width: 300
                     placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                   )
                 }
@@ -833,11 +765,13 @@ export const query = graphql`
           meta_info {
             slug
             description
+            title
             image
             position
             visibility
             keywords
             redirects
+            region
           }
           header {
             sub_heading
@@ -859,6 +793,13 @@ export const query = graphql`
               color
               description
             }
+          }
+          button {
+            apply_button_link
+            apply_button_text
+            cohort_more_details_text
+            syllabus_button_text
+            syllabus_submit_text
           }
         }
       }

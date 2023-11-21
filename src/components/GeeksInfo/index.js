@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from "gatsby";
 import { GridContainerWithImage, Div, GridContainer } from "../Sections";
 import { H2, H4, Paragraph } from "../Heading";
 import { Colors, RoundImage, StyledBackgroundSection } from "../Styling";
-
+import TwoColumn from "../TwoColumn/index.js";
 const GeeksInfo = ({ lang }) => {
   const data = useStaticQuery(graphql`
     {
@@ -16,26 +16,25 @@ const GeeksInfo = ({ lang }) => {
               image
               image_link
             }
-            list {
-              sub_title
-              title
-            }
-            paragraph
-            image1 {
-              childImageSharp {
-                gatsbyImageData(
-                  layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                  width: 800
-                  quality: 100
-                  placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
-                )
+            bullets {
+              items {
+                heading
+                text
               }
             }
-            image2 {
+            paragraph
+            button {
+              text
+              path
+              color
+              background
+              hover
+            }
+            image {
               childImageSharp {
                 gatsbyImageData(
                   layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                  width: 800
+                  width: 1000
                   quality: 100
                   placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                 )

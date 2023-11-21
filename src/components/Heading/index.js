@@ -57,7 +57,9 @@ const BaseHeading = styled(Heading)`
     border-bottom: ${(props) => props.borderBottomHover};
   }
   @media ${Devices.xxs} {
+    padding: ${(props) => props.padding_xxs};
     line-height: ${(props) => props.lineHeight_xxs};
+    margin: ${(props) => props.margin_xxs};
   }
 
   @media ${Devices.xs} {
@@ -104,6 +106,8 @@ const BaseHeading = styled(Heading)`
 
 export const H1 = styled(BaseHeading)`
   z-index: ${(props) => props.zIndex};
+  letter-spacing: 0.05em;
+  font-family: ${(props) => props.fontFamily};
 `;
 
 export const H2 = styled(BaseHeading)`
@@ -116,6 +120,7 @@ export const H2 = styled(BaseHeading)`
   @media ${Devices.tablet} {
     text-align: ${(props) => props.textAlign_tablet};
   }
+  font-family: ${(props) => props.fontFamily};
 `;
 export const H3 = styled(BaseHeading)`
   font-weight: ${(props) => props.fontWeight || "700"};
@@ -212,6 +217,7 @@ export const Paragraph = styled.p`
   text-shadow: ${(props) => props.textShadow};
   line-height: ${(props) => props.lineHeight};
   color: ${(props) => props.color};
+  text-decoration: ${(props) => props.textDecoration};
   text-align: ${(props) => props.textAlign || "center"};
   align-self: ${(props) => props.alignSelf};
   align-items: ${(props) => props.alignItems};
@@ -227,6 +233,7 @@ export const Paragraph = styled.p`
 
   @media ${Devices.xxs} {
     margin: ${(props) => props.margin_xxs};
+    padding: ${(props) => props.padding_xxs};
   }
   @media ${Devices.xs} {
     padding: ${(props) => props.padding_xs};

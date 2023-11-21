@@ -492,6 +492,7 @@ export const Button = styled(SmartButton)`
     color: ${(props) => props.colorHoverText};
   }
   @media ${Devices.xxs} {
+    padding: ${(props) => props.padding_xxs};
   }
   @media ${Devices.xs} {
     width: ${(props) => props.width_xs};
@@ -539,6 +540,8 @@ export const Button = styled(SmartButton)`
   @media ${Devices.lg} {
     font-size: ${(props) => props.fontSize_lg};
     width: ${(props) => props.width_lg};
+    left: ${(props) => props.left_lg};
+    right: ${(props) => props.right_lg};
   }
   @media ${Devices.xl} {
   }

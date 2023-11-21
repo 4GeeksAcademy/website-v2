@@ -102,6 +102,7 @@ const Press = (props) => {
         title={yml.header.title}
         paragraph={yml.header.paragraph}
         position="relative"
+        fontFamily="Archivo-Black"
       />
       <News
         lang={pageContext.lang}
