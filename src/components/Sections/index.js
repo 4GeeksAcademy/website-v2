@@ -201,13 +201,13 @@ export const Div = styled.div`
     border-bottom: ${(props) => props.borderBottomHover};
   }
   @media ${Devices.xxs} {
+    padding: ${(props) => props.padding_xxs};
     column-count: ${(props) => props.columnCount_xxs};
-    width: ${(props) => props.width_xxs};
     margin: ${(props) => props.margin_xxs};
-    padding: ${(props) => props.padding_xxs}
     background: ${(props) => props.background_xxs};
     display: ${(props) => props.display_xxs};
-    padding: ${(props) => props.padding_xxs};
+    justify-content ${(props) => props.justifyContent_xxs};
+    width: ${(props) => props.width_xxs};
   }
   @media ${Devices.xs} {
     padding: ${(props) => props.padding_xs};
@@ -353,6 +353,7 @@ export const Div = styled.div`
   }
   @media ${Devices.lg} {
     display: ${(props) => props.display_lg};
+    width: ${(props) => props.width_lg};
     justify-content: ${(props) =>
       justifyContentOptions[props.justifyContent_lg]};
     padding: ${(props) => props.padding_lg};
@@ -541,6 +542,7 @@ export const Header = ({
   paddingTitle_tablet,
   display_mobile,
   maxWidth,
+  fontFamily,
 }) => {
   return (
     <Grid
@@ -580,6 +582,7 @@ export const Header = ({
             fontSize={fontSize || "40px"}
             fontSize_tablet={fontSize_tablet || "50px"}
             lineHeight="60px"
+            fontFamily={fontFamily}
           >
             {hideArrowKey ? title : `< ${title} >`}
           </H2>
