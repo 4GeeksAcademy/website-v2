@@ -57,6 +57,7 @@ const BaseHeading = styled(Heading)`
     border-bottom: ${(props) => props.borderBottomHover};
   }
   @media ${Devices.xxs} {
+    padding: ${(props) => props.padding_xxs};
     line-height: ${(props) => props.lineHeight_xxs};
     margin: ${(props) => props.margin_xxs};
   }
@@ -219,6 +220,7 @@ export const Paragraph = styled.p`
 
   @media ${Devices.xxs} {
     margin: ${(props) => props.margin_xxs};
+    padding: ${(props) => props.padding_xxs};
   }
   @media ${Devices.xs} {
     padding: ${(props) => props.padding_xs};

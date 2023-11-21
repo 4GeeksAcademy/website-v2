@@ -201,13 +201,14 @@ export const Div = styled.div`
     border-bottom: ${(props) => props.borderBottomHover};
   }
   @media ${Devices.xxs} {
+    padding: ${(props) => props.padding_xxs};
     column-count: ${(props) => props.columnCount_xxs};
-    width: ${(props) => props.width_xxs};
     margin: ${(props) => props.margin_xxs};
     padding: ${(props) => props.padding_xxs};
     background: ${(props) => props.background_xxs};
     display: ${(props) => props.display_xxs};
-    padding: ${(props) => props.padding_xxs};
+    justify-content ${(props) => props.justifyContent_xxs};
+    width: ${(props) => props.width_xxs};
   }
   @media ${Devices.xs} {
     padding: ${(props) => props.padding_xs};
@@ -395,24 +396,26 @@ export const Grid = styled(Div)`
   justify-items: ${(props) => props.justifyItems};
   justify-content: ${(props) => props.justifyContent};
   grid-template-areas: ${(props) => props.gridTemplateAreas};
+
   @media ${Devices.xxs} {
     grid-gap: ${(props) => props.gridGap_xxs};
     grid-template-columns: ${(props) =>
       props.columns_xxs ? `repeat(${props.columns_xxs}, 1fr)` : null};
     padding: ${(props) => props.padding_xxs};
     margin: ${(props) => props.margin_xxs};
+    display: ${(props) => props.display_xxs || "grid"};
   }
   @media ${Devices.xs} {
     grid-template-columns: ${(props) =>
       props.columns_xs ? `repeat(${props.columns_xs}, 1fr)` : null};
-    display: ${(props) => props.display_xs || "grid"};
+    display: ${(props) => props.display_xs};
   }
   @media ${Devices.sm} {
     grid-template-columns: ${(props) =>
       props.gridTemplateColumns_sm
         ? `repeat(${props.gridTemplateColumns_sm}, 1fr)`
         : null};
-    display: ${(props) => props.display_sm || "grid"};
+    display: ${(props) => props.display_sm};
   }
   @media ${Devices.tablet} {
     margin: ${(props) => props.margin_tablet};
@@ -446,7 +449,7 @@ export const Grid = styled(Div)`
         : null};
     grid-gap: ${(props) => props.gridGap_md};
     grid-column: ${(props) => props.gridColumn_md};
-    display: ${(props) => props.display_md || "grid"};
+    //display: ${(props) => props.display_md || "grid"};
   }
   @media ${Devices.lg} {
     grid-template-columns: ${(props) => props.gridTemplateColumns_lg};
@@ -555,6 +558,7 @@ export const Header = ({
   fontWeight_title,
   gridTemplateColumns_tablet,
   maxWidth,
+  fontFamily,
 }) => {
   return (
     <Grid
@@ -699,6 +703,7 @@ export const GridContainer = ({
   displayChild,
   displayChild_tablet,
   displayChild_xs,
+  displayChild_xxs,
   displayChild_sm,
   displayChild_md,
   columns_sm,
@@ -747,6 +752,7 @@ export const GridContainer = ({
         display={displayChild}
         justifyContent={justifyContentChild}
         justifyItems={justifyItemsChild}
+        display_xxs={displayChild_xxs}
         display_xs={displayChild_xs}
         display_sm={displayChild_sm}
         display_tablet={displayChild_tablet}

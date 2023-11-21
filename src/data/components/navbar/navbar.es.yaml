@@ -95,7 +95,6 @@ navbar:
             - title: "Trabaja con Nosotros"
               link_to: "/es/empleo"
 
-
   - name: "Campus"
     link: "/partners"
     sub_menu:

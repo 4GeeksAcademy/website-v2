@@ -32,7 +32,6 @@ form:
   heading: "Conoce más información"
   button_label: Obtener más información
   redirect: "https://marketing892162.typeform.com/to/XhfwihKQ" #you can redirect to another url or entirely diffrent website
-
   # jumbotron on the top (cannot be commented out)
 apply_schollarship: # form that is displayed at the end of the landing
   # title: "Get more info about this award-winning development course"
