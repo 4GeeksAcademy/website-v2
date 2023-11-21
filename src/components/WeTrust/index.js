@@ -28,7 +28,11 @@ const WeTrust = ({ we_trust }) => {
         maxWidth="1366px"
       >
         <Div display="block">
-          <H2 textAlign="left" margin="0 0 22px 0" fontSize="32px">
+          <H2 textAlign="left" 
+            margin="0 0 22px 0" 
+            fontSize="32px"
+            lineHeight=""
+          >
             {we_trust.title}
           </H2>
           <Paragraph

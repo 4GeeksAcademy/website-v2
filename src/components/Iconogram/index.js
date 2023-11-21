@@ -32,9 +32,10 @@ const Iconogram = ({ session, data, pageContext, yml, index }) => {
       {heading.text && (
         <H2
           type="h2"
-          lineHeight="28px"
+          lineHeight="35px"
           lineHeight_tablet="28px"
-          fontSize="38px"
+          fontSize_tablet="24px"
+          fontSize="24px"
           //margin="30px 0 30px 0"
           maxWidth="1366px"
           margin="30px auto"

@@ -95,19 +95,19 @@ two_columns:
     heading:
       text: $20 millones en becas
       font_size:
-        - 40px
-        - 40px
-        - 40px
-        - 40px
-        - 40px
+        - 38px
+        - 38px
+        - 38px
+        - 21px
+        - 21px
     sub_heading:
       text: 1.456 personas se han beneficiado de nuestros programas de becas, de todos los orígenes posibles, lee aquí historias de los beneficiarios y proyectos.
       font_size:
+        - 24px
+        - 24px
+        - 24px
         - 16px
         - 16px
-        - 24px
-        - 24px
-        - 24px
     button:
       text: VER MÁS
       color: white
@@ -131,19 +131,19 @@ two_columns:
     heading:
       text: El 62% de los solicitantes de bootcamps son rechazados por razones financieras.
       font_size:
-        - 40px
-        - 40px
-        - 40px
-        - 40px
-        - 40px
+        - 38px
+        - 38px
+        - 38px
+        - 21px
+        - 21px
     sub_heading:
       text: 4Geeks está comprometido a eliminar el costo como un factor posible para evitar que individuos talentosos se conviertan en programadores.
       font_size:
+        - 24px
+        - 24px
+        - 24px
         - 16px
         - 16px
-        - 24px
-        - 24px
-        - 24px
     content:
       font_size:
         - 16px
@@ -163,19 +163,19 @@ two_columns:
     heading:
       text: "Compromiso de garantía de empleo"
       font_size:
-        - 40px
-        - 40px
-        - 40px
-        - 40px
-        - 40px]
+        - 38px
+        - 38px
+        - 38px
+        - 21px
+        - 21px
     sub_heading:
       text: "Nuestro Programa de Garantía de Empleo consta de 3 etapas que son necesarias para completar como parte de su proceso. ¡Son tres bootcamps en uno!"
       font_size:
+        - 24px
+        - 24px
+        - 24px
         - 16px
         - 16px
-        - 24px
-        - 24px
-        - 24px
     bullets:
       item_style: ""
       items:

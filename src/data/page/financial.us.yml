@@ -55,7 +55,12 @@ syllabus_button_text: "Search"
 iconogram:
   heading:
     text: "How your tuition is no longer a concern"
-    font_size: ["30px", "30px", "30px", "30px", "30px"]
+    font_size:
+      - 38px
+      - 38px
+      - 38px
+      - 21px
+      - 21px
     style: '{ "textAlign": "center", "width": "60%" }'
   sub_heading:
     text: ""
@@ -93,19 +98,19 @@ two_columns:
     heading:
       text: $20 Millions in scholarships
       font_size:
-        - 40px
-        - 40px
-        - 40px
-        - 40px
-        - 40px
+        - 38px
+        - 38px
+        - 38px
+        - 21px
+        - 21px
     sub_heading:
       text: 1.456 people have benefited from our scholarship programs, from all possible backgrounds, read here stories of the beneficiaries and projects.
       font_size:
+        - 24px
+        - 24px
+        - 24px
         - 16px
         - 16px
-        - 24px
-        - 24px
-        - 24px
     button:
       text: SEE MORE
       color: white
@@ -129,19 +134,19 @@ two_columns:
     heading:
       text: 62% of bootcamp applicants are rejected due to financial reasons.
       font_size:
-        - 40px
-        - 40px
-        - 40px
-        - 40px
-        - 40px
+        - 38px
+        - 38px
+        - 38px
+        - 21px
+        - 21px
     sub_heading:
       text: 4Geeks is committed to removing the cost as a possible factor to prevent talented individuals to become coders.
       font_size:
+        - 24px
+        - 24px
+        - 24px
         - 16px
         - 16px
-        - 24px
-        - 24px
-        - 24px
     content:
       font_size:
         - 16px
@@ -161,19 +166,19 @@ two_columns:
     heading:
       text: "Job guarantee commitment"
       font_size:
-        - 40px
-        - 40px
-        - 40px
-        - 40px
-        - 40px]
+        - 18px
+        - 38px
+        - 38px
+        - 38px
+        - 38px
     sub_heading:
       text: "Our Job Guarantee Program consists of 3 stages that are needed to be complete as part of your process. It’s three bootcamps in One:"
       font_size:
+        - 24px
+        - 24px
+        - 24px
         - 16px
         - 16px
-        - 24px
-        - 24px
-        - 24px
     bullets:
       item_style: ""
       items:

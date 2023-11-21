@@ -113,6 +113,7 @@ const Side = ({
           lineHeight_tablet="38px"
           fontSize={h_xs || "30px"}
           fs_xl={h_xl}
+          fontSize_xxs={h_xs || "21px"}
           fontSize_md={h_md || "30px"}
           fontSize_sm={h_sm}
           margin="30px 0 20px 0"
