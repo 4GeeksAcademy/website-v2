@@ -28,6 +28,12 @@ const TestimonialCard = ({
   imgStyle,
   style,
   stories,
+  width_xxs,
+  width_xs,
+  width_sm,
+  width_tablet,
+  width_md,
+  width_lg,
 }) => {
   const [isExpanded, setIsExpanded] = useState(false);
 
@@ -58,7 +64,6 @@ const TestimonialCard = ({
       </div>
     );
   };
-  console.log(image);
   return (
     <Div
       flexDirection="column"
@@ -69,6 +74,13 @@ const TestimonialCard = ({
       border={`1px solid ${Colors.lightGray}`}
       boxShadow={`0px 2px 5px rgba(0, 0, 0, 0.1)`}
       style={{ breakInside: "avoid", marginBottom: "1em" }}
+      width_xxs={width_xxs}
+      width_xs={width_xs}
+      width_sm={width_sm}
+      width_tablet={width_tablet}
+      width_md={width_md}
+      width_lg={width_lg}
+      height={height}
     >
       <Div flexDirection={stories ? "row" : "column"}>
         <GatsbyImage
@@ -76,7 +88,7 @@ const TestimonialCard = ({
           style={style}
           imgStyle={imgStyle}
         />
-        {stories ? (
+        {stories ? ( //Where the component is called (true/false)
           <Div flexDirection="column" margin="0 0 0 9px">
             <H3 fontSize="15px" lineHeight="19px" textAlign="left">
               {name}
@@ -102,20 +114,31 @@ const TestimonialCard = ({
           <StarRating totalStars={studentRating} />
         </Div>
       )}
-      {!video && (
-        <Paragraph
-          textAlign="left"
-          margin="12px 0 0 0"
-          fontSize="13px"
-          lineHeight="22px"
-          letterSpacing="0.05em"
-          fontWeight="300"
-        >
-          {description.length > 500 && !isExpanded
-            ? description.substring(0, 500) + "..."
-            : description}
-        </Paragraph>
-      )}
+      {!video &&
+        (description && /<\/?[a-z0-9]+>/g.test(description) ? (
+          <Paragraph
+            textAlign="left"
+            margin="12px 0 0 0"
+            fontSize="13px"
+            lineHeight="22px"
+            letterSpacing="0.05em"
+            fontWeight="300"
+            dangerouslySetInnerHTML={{ __html: description }}
+          />
+        ) : (
+          <Paragraph
+            textAlign="left"
+            margin="12px 0 0 0"
+            fontSize="13px"
+            lineHeight="22px"
+            letterSpacing="0.05em"
+            fontWeight="300"
+          >
+            {description.length > 500 && !isExpanded
+              ? description.substring(0, 500) + "..."
+              : description}
+          </Paragraph>
+        ))}
       {video && (
         <>
           <Div padding_tablet="0" width="100%" style={{ breakInside: "avoid" }}>
