@@ -106,7 +106,6 @@ const Home = (props) => {
     (session?.location?.custom_bar.active && isTestMode) ||
     (session?.location?.custom_bar.active && !isDevelopment());
 
-  console.log(yml);
   return (
     <>
       <Div
@@ -200,7 +199,6 @@ const Home = (props) => {
                 width_tablet="100%"
                 width_xs="80%"
               >{`${yml.header_data.title}`}</H2>
-
               <Div display="block" margin="20px 0">
                 {yml.header_data.bullets.map((bullet) => (
                   <Div alignItems="center" margin="0 0 15px 0">

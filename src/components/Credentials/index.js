@@ -14,6 +14,8 @@ export default (props) => {
         background={Colors.verylightGray}
         justifyContent_tablet="center"
         flexDirection="column"
+        padding_xxs="40px 0"
+        padding_tablet="0px"
       >
         <GridContainer
           //height="375px"
@@ -29,8 +31,6 @@ export default (props) => {
           maxWidth="1366px"
           gridGap_xxs="30px 15px"
           gridGap_tablet="15px"
-          padding_xxs="40px 0"
-          padding_tablet="0px"
         >
           {credentials
             .filter((c) => c.scope === scope)
