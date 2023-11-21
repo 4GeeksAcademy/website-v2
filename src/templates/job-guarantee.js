@@ -377,7 +377,7 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
           session={session}
         />
       </Div>
-      
+
       <WeTrust we_trust={yml.we_trust_section} />
 
       <Div display="block" margin_tablet="0 0 40px 0" margin="0 0 20px 0">

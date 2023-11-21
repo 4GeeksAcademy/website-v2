@@ -334,14 +334,7 @@ export const landingSections = {
 
   iconogram: ({ session, data, pageContext, yml, index }) => {
     const { heading, sub_heading, icons, button } = yml;
-    return (
-      <Iconogram
-        yml={yml}
-        session={session}
-        data={data}
-        index={index}
-      />
-    );
+    return <Iconogram yml={yml} session={session} data={data} index={index} />;
   },
 
   badges: ({ session, data, pageContext, yml, course, index }) => {

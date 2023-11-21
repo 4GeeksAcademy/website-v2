@@ -294,20 +294,20 @@ const FinancialFilter = (props) => {
 
           {props.button_text && (
             <Div justifyContent="center">
-            <Button
-              background={Colors.black}
-              color={Colors.white}
-              onClick={() => {
-                search();
-              }}
-              margin_tablet="0 0 16px 0"
-              height_tablet="38px"
-              width="100%"
-              width_tablet="auto"
-              justifyContent="center"
-            >
-              {props.button_text}
-            </Button>
+              <Button
+                background={Colors.black}
+                color={Colors.white}
+                onClick={() => {
+                  search();
+                }}
+                margin_tablet="0 0 16px 0"
+                height_tablet="38px"
+                width="100%"
+                width_tablet="auto"
+                justifyContent="center"
+              >
+                {props.button_text}
+              </Button>
             </Div>
           )}
         </Grid>

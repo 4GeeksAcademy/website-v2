@@ -104,7 +104,7 @@ const BaseHeading = styled(Heading)`
 
 export const H1 = styled(BaseHeading)`
   z-index: ${(props) => props.zIndex};
-  font-family: ${(props) => props.fontFamily}; 
+  font-family: ${(props) => props.fontFamily};
 `;
 
 export const H2 = styled(BaseHeading)`
