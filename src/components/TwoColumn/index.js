@@ -280,7 +280,8 @@ const Side = ({
 
       {boxes && (
         <Div
-          margin="15px 0 0 0"
+          margin_xxs="15px 0 15px 0"
+          margin_tablet="15px 0 0 0"
           justifyContent_tablet="between"
           gap="15px"
           flexDirection="column"

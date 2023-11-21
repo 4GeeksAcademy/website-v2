@@ -17,66 +17,6 @@ import Iconogram from "../components/Iconogram";
 import TwoColumn from "../components/TwoColumn";
 import Badges from "../components/Badges";
 
-const SVGBubblesLeft = () => (
-  <svg
-    style={{ top: "75px", left: "75px", position: "absolute" }}
-    width="205"
-    height="286"
-    viewBox="0 0 205 286"
-    fill="none"
-    xmlns="https:://www.w3.org/2000/svg"
-  >
-    <circle cx="191.5" cy="59.5" r="13.5" fill="#CD0000" />
-    <circle cx="8.5" cy="8.5" r="8.5" fill="#FFB718" fillOpacity="0.2" />
-    <circle cx="40.5" cy="63.5" r="8.5" fill="white" />
-    <circle cx="8.5" cy="43.5" r="8.5" fill="black" />
-    <circle cx="40.5" cy="98.5" r="8.5" fill="black" />
-    <circle cx="8.5" cy="98.5" r="8.5" fill="white" />
-    <circle cx="40.5" cy="141.5" r="8.5" fill="white" />
-    <circle cx="8.5" cy="141.5" r="8.5" fill="white" />
-    <circle cx="40.5" cy="178.5" r="8.5" fill="white" />
-    <circle cx="8.5" cy="222.5" r="8.5" fill="#0097CD" />
-    <circle cx="40.5" cy="277.5" r="8.5" fill="white" />
-  </svg>
-);
-
-const SVGBubblesRight = () => (
-  <>
-    <svg
-      style={{ right: "65px", position: "absolute", top: "110px" }}
-      width="278"
-      height="140"
-      viewBox="0 0 278 140"
-      fill="none"
-      xmlns="https:://www.w3.org/2000/svg"
-    >
-      <circle cx="14" cy="14" r="14" fill="#FFB718" />
-      <circle cx="227.5" cy="45.5" r="26.5" fill="#0097CD" />
-      <circle
-        cx="269.5"
-        cy="131.5"
-        r="8.5"
-        transform="rotate(90 269.5 131.5)"
-        fill="white"
-      />
-      <circle
-        cx="230.5"
-        cy="131.5"
-        r="8.5"
-        transform="rotate(90 230.5 131.5)"
-        fill="black"
-      />
-      <circle
-        cx="191.5"
-        cy="131.5"
-        r="8.5"
-        transform="rotate(90 191.5 131.5)"
-        fill="white"
-      />
-    </svg>
-  </>
-);
-
 const Financial = (props) => {
   const { session } = React.useContext(SessionContext);
   const { data, pageContext, yml } = props;
@@ -117,12 +57,13 @@ const Financial = (props) => {
         padding_tablet="72px 0 40px 0"
         padding="0px 20px"
         position="relative"
-        fontSize_title="12px"
+        fontSize_title="32px"
         fontSizeTitle_tablet="60px"
         fontFamily_title="Archivo-Black"
-        fontSize_paragraph="24px"
+        fontSize_paragraph="15px"
         gridTemplateColumns_tablet="repeat(14, 1fr)"
         maxWidth="1366px"
+        hideArrowKey
       >
         <Img
           src="/images/landing/group-3.png"
@@ -229,6 +170,8 @@ const Financial = (props) => {
           type={pageContext.slug}
           lang={pageContext.lang}
           locations={data.allLocationYaml.edges}
+          margin="0px"
+          padding_tablet="0px"
         />
       </Header>
 
@@ -246,8 +189,8 @@ const Financial = (props) => {
       />
 
       <TwoColumn
-        left={{ image: ymlTwoColumn[0].image }}
-        right={{
+        right={{ image: ymlTwoColumn[0].image }}
+        left={{
           heading: ymlTwoColumn[0].heading,
           sub_heading: ymlTwoColumn[0].sub_heading,
           bullets: ymlTwoColumn[0].bullets,
@@ -447,7 +390,7 @@ export const query = graphql`
               hover_color
               path
             }
-            boxes{
+            boxes {
               icon
               title
               text

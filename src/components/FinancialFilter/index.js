@@ -184,18 +184,18 @@ const FinancialFilter = (props) => {
   // }, [modality, course, currentLocation]);
 
   const search = () => {
-      const currentPlans = getCurrentPlans();
-      if (modality && course && currentLocation && currentPlans) {
-        setPrices(
-          currentPlans.filter((plan) =>
-            plan.academies.includes(currentLocation.fields.file_name.slice(0, -3))
-          )
-        );
-      } else {
-        setPrices(null);
-        console.log("modality", modality);
-      }
-    };
+    const currentPlans = getCurrentPlans();
+    if (modality && course && currentLocation && currentPlans) {
+      setPrices(
+        currentPlans.filter((plan) =>
+          plan.academies.includes(currentLocation.fields.file_name.slice(0, -3))
+        )
+      );
+    } else {
+      setPrices(null);
+      console.log("modality", modality);
+    }
+  };
 
   if (!currentLocation)
     return (
@@ -212,12 +212,13 @@ const FinancialFilter = (props) => {
   return (
     <Div
       background="transparent"
-      margin="0 0 5rem 0"
+      margin="0 0 0 0"
       github="/location"
       flexDirection="column"
     >
       <GridContainer
-        padding="15px 0"
+        padding="13px 0"
+        padding_tablet="13px 0 0 0"
         margin="0 10px 3em 10px"
         margin_tablet="0 5rem 4em 5rem"
         containerColumns_tablet={`0fr repeat(12, 1fr) 0fr`}
@@ -225,12 +226,15 @@ const FinancialFilter = (props) => {
         margin_md="0 20% 4em 20%"
         background={Colors.white}
         height="100%"
-        height_tablet="122px"
+        height_tablet="70px"
         border="3px solid black"
+        id="assa"
       >
         <Grid
           gridTemplateColumns_tablet="repeat(4, 1fr)"
-          width="200px"
+          width_xxs="200px"
+          width_xs="250px"
+          width_sm="320px"
           width_tablet="auto"
           gridGap_tablet="20px"
           gridGap="8px"
@@ -288,17 +292,24 @@ const FinancialFilter = (props) => {
             />
           )}
 
-          {props.button_text &&
+          {props.button_text && (
+            <Div justifyContent="center">
             <Button
               background={Colors.black}
               color={Colors.white}
-              onClick={()=>{search()}}
+              onClick={() => {
+                search();
+              }}
               margin_tablet="0 0 16px 0"
-              height="38px"
+              height_tablet="38px"
+              width="100%"
+              width_tablet="auto"
+              justifyContent="center"
             >
               {props.button_text}
             </Button>
-          }
+            </Div>
+          )}
         </Grid>
       </GridContainer>
 
@@ -311,13 +322,13 @@ const FinancialFilter = (props) => {
         </>
       ) : (
         <GridContainer
-          padding="4.5rem 16px"
+          padding="0 16px"
           containerColumns_md={`2fr repeat(12, 1fr) 2fr`}
           containerColumns_tablet={`0fr repeat(12, 1fr) 0fr`}
-          background={Colors.white}
+          background="transparent"
           columns_tablet="1"
           gridGap_tablet="0"
-          padding_tablet="4.5rem 16px"
+          padding_tablet={props.padding_tablet || "4.5rem 16px"}
         >
           {prices && Array.isArray(prices) && (
             <PricingCard color="black" background={Colors.white} data={{}}>
@@ -333,12 +344,14 @@ const FinancialFilter = (props) => {
                     height="100%"
                     minHeight_tablet="122px"
                     columns_tablet="4"
+                    width="100%"
                   >
                     <Div
                       margin="10px 0px"
                       justifyContent="center"
                       placeItems="center"
                       display="flex"
+                      className="badge-slider hideOverflowX__"
                     >
                       {label.icons?.map((logo) => (
                         <img

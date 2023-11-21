@@ -400,11 +400,13 @@ export const Grid = styled(Div)`
     grid-template-columns: ${(props) =>
       props.columns_xxs ? `repeat(${props.columns_xxs}, 1fr)` : null};
     padding: ${(props) => props.padding_xxs};
+    width: ${(props) => props.width_xxs};
   }
   @media ${Devices.xs} {
     grid-template-columns: ${(props) =>
       props.columns_xs ? `repeat(${props.columns_xs}, 1fr)` : null};
     display: ${(props) => props.display_xs || "grid"};
+    width: ${(props) => props.width_xs};
   }
   @media ${Devices.sm} {
     grid-template-columns: ${(props) =>
@@ -412,6 +414,7 @@ export const Grid = styled(Div)`
         ? `repeat(${props.gridTemplateColumns_sm}, 1fr)`
         : null};
     display: ${(props) => props.display_sm || "grid"};
+    width: ${(props) => props.width_sm};
   }
   @media ${Devices.tablet} {
     margin: ${(props) => props.margin_tablet};

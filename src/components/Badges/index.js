@@ -24,7 +24,7 @@ const Badges = ({
   maxWidth,
   badges,
   height_badge,
-  style
+  style,
 }) => {
   const data = useStaticQuery(graphql`
     query myNewQueryBadges {
@@ -67,7 +67,7 @@ const Badges = ({
   );
   // if (content) content = content.node;
   // else return null;
-  content = (badges || content.node) || null; 
+  content = badges || content.node || null;
 
   return (
     <>
@@ -178,12 +178,14 @@ const Badges = ({
                       return (
                         <GatsbyImage
                           key={i}
-                          style={style || {
-                            height: "85px",
-                            // minWidth: "200px",
-                            minWidth: "150px",
-                            margin: "0 24px",
-                          }}
+                          style={
+                            style || {
+                              height: "85px",
+                              // minWidth: "200px",
+                              minWidth: "150px",
+                              margin: "0 24px",
+                            }
+                          }
                           imgStyle={{ objectFit: "contain" }}
                           loading="eager"
                           draggable={false}

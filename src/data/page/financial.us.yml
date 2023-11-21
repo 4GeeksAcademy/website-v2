@@ -88,7 +88,7 @@ two_columns:
       - 6
       - 6
     image:
-      style: '{ "backgroundSize": "contain" }'
+      style: '{ "backgroundSize": "contain", "height": "500px" }'
       src: /images/landing/Group-6626.png
     heading:
       text: $20 Millions in scholarships
@@ -124,7 +124,7 @@ two_columns:
       - 6
       - 6
     image:
-      style: '{ "backgroundSize": "contain" }'
+      style: '{ "backgroundSize": "contain", "height": "500px"}'
       src: /images/landing/20-million-column.png
     heading:
       text: 62% of bootcamp applicants are rejected due to financial reasons.
@@ -156,7 +156,7 @@ two_columns:
 
   - proportions: [6, 6]
     image:
-      style: '{ "backgroundSize": "contain" }'
+      style: '{ "backgroundSize": "contain", "height": "500px"}'
       src: "/images/woman-glasses-laptop.png"
     heading:
       text: "Job guarantee commitment"
@@ -239,7 +239,7 @@ we_trust_section:
       text: Avg. Income at a new job
     - icon: graduation-2
       title: "20MM"
-      text: Average days to get hired
+      text: Millions in scolarchips and counting
 
 ## PAYMENT GUIDE SECTION
 # payment_guide:

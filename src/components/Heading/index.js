@@ -104,6 +104,7 @@ const BaseHeading = styled(Heading)`
 
 export const H1 = styled(BaseHeading)`
   z-index: ${(props) => props.zIndex};
+  font-family: ${(props) => props.fontFamily}; 
 `;
 
 export const H2 = styled(BaseHeading)`
@@ -116,6 +117,7 @@ export const H3 = styled(BaseHeading)`
   text-align: ${(props) => props.textAlign};
   letter-spacing: 0.05em;
   place-self: ${(props) => props.placeSelf};
+  font-family: ${(props) => props.fontFamily};
 `;
 export const H4 = styled(BaseHeading)`
   font-weight: ${(props) => props.fontWeight || "400"};
