@@ -25,7 +25,7 @@ form:
   heading: "Aplica a 4Geeks"
   motivation: "Este es el futuro que estabas buscando."
   button_label: APLICA YA
-  redirect: "/es/gracias/?lang=es"  #you can redirect to another url or entirely diffrent website
+  redirect: "/es/gracias/?lang=es" #you can redirect to another url or entirely diffrent website
 
 navbar:
   buttonText: "APLICAR YA"
@@ -40,7 +40,7 @@ apply_schollarship: # form that is displayed at the end of the landing
 # jumbotron on the top (cannot be commented out)
 header_data:
   background: "#FFF1D1"
-  tagline: Si no consigues empleo te devolveremos TODO tu dinero. 
+  tagline: Si no consigues empleo te devolveremos TODO tu dinero.
   sub_heading: Da el paso hoy y Conviértete en Full-Stack Developer.
   badge: "../../../static/images/badges/Course-Report-Badge-2023.png"
   image_filter: brightness(0.3)
@@ -67,7 +67,7 @@ short_badges:
   - name: "Switchup"
     url: ""
     image: "../../../static/images/badges/switchup-badge-2023.png"
-    alt: "Best coding bootcamp Switchup 2023"   
+    alt: "Best coding bootcamp Switchup 2023"
   - name: "Florida Department of Education"
     url: ""
     image: "../../../static/images/badges/licensed.png"

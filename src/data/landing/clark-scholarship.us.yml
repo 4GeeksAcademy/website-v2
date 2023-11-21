@@ -9,7 +9,9 @@ meta_info:
   keywords: "Scholarships for coding program, coding course, Financial aid Coding Classes, Learn to code with a scholarship"
 
   template: "landing_a" # <--- choose your landing template
-  redirects: [] # <--- URL redirections to avoid 404 errors
+  redirects:
+    [] # <--- URL redirections to avoid 404 errors
+
 
     # Set a particular course or location to the landing page
   # this UTM fields will be also included in the CRM contact
@@ -55,7 +57,6 @@ features:
     - Invest less than $6k and gain access to jobs paying more than 60k a year!
     - Enjoy the full benefits of our bootcamp
     - Rolling admission. Apply now!
-  
 short_badges:
   - name: "Premios Tecnologia Siglo XXI"
     url: ""
@@ -68,7 +69,7 @@ short_badges:
   - name: "Switchup"
     url: ""
     image: "../../../static/images/badges/switchup-badge-2023.png"
-    alt: "Best coding bootcamp Switchup 2023"   
+    alt: "Best coding bootcamp Switchup 2023"
   - name: "Florida Department of Education"
     url: ""
     image: "../../../static/images/badges/licensed.png"
