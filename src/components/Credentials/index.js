@@ -16,7 +16,7 @@ export default (props) => {
         flexDirection="column"
         padding_xxs="20px"
         padding_tablet="0px"
-        style={{padding: "20px 0"}}
+        style={{ padding: "20px 0" }}
       >
         <GridContainer
           //height="375px"
