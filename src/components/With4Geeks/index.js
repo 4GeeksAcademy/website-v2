@@ -144,6 +144,7 @@ export default ({
             width="100%"
             className="badge-slider hideOverflowX__"
             gap="0px 20px"
+            gap_tablet="0px 20px"
           >
             {locationFiltered.map((element, index) => {
               return (
@@ -153,10 +154,10 @@ export default ({
                   flexDirection_tablet="column"
                   justifyContent="start"
                   border="none"
-                  padding="0 16px"
+                  //padding="0 16px"
                   key={`${element.name}_${index}`}
                   style={{ borderRadius: `0px` }}
-                  minWidth="315px"
+                  minWidth="250px"
                   width="100%"
                 >
                   <Div
