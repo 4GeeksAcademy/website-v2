@@ -38,93 +38,80 @@ const Overlaped = ({
   `);
 
   return (
-    <Div maxWidth_tablet="1366px" margin_tablet="50px auto">
-      <Div
+    <Div maxWidth_tablet="1366px" margin_tablet="50px auto" width="100%">
+      <Grid
         display_xxs="none"
-        display_tablet="flex"
+        display="grid"
         position="relative"
         justifyContent="center"
         padding_tablet="0 40px"
         padding_md="0 80px"
         padding_lg="0"
         width="100%"
+        flexDirection="column"
+        gridTemplateColumns_tablet="repeat(16, 1fr)"
       >
-        <Grid
-          gridTemplateColumns_lg="1fr repeat(32,1fr) 1fr"
-          gridTemplateColumns_md="1fr repeat(24,1fr) 1fr"
-          gridTemplateColumns_tablet="1fr repeat(14,1fr) 1fr"
-          gridGap="0px"
-        >
-          <Div
-            gridColumn_tablet="1 / 9"
-            gridColumn_md="1 / 14"
-            gridColumn_lg="1 / 14"
-          >
-            {image?.src ? (
-              <Img src={image?.src} width="33.3em" height="533px" />
-            ) : (
-              <StyledBackgroundSection
-                width_tablet="33.3em"
-                height_tablet="533px"
-                image={image}
-                bgSize="cover"
-                alt="geekforce image"
-              />
-            )}
-          </Div>
+        <Div gridColumn_tablet="1 / 9" gridColumn_md="0 / 9" margin="0">
+          {image?.src ? (
+            <Img src={image?.src} width="33.3em" height="533px" />
+          ) : (
+            <StyledBackgroundSection
+              width_tablet="33.3em"
+              height_tablet="533px"
+              margin="0px"
+              image={image}
+              bgSize="cover"
+              alt="geekforce image"
+            />
+          )}
+        </Div>
 
-          <Div
-            gridColumn_tablet="9 / 17"
-            gridColumn_md="14 / 27"
-            gridColumn_lg="14 / 35"
-            position="relative"
-          >
-            <Div width="100%">
-              <Img
-                src="/images/landing/vector-stroke.png"
-                width="114px"
-                height="162px"
-                style={{
-                  position: "absolute",
-                  right: "0%",
-                  top: "20px",
-                }}
-              />
-              <Img
-                src="/images/landing/vector-stroke1.png"
-                width="70px"
-                height="181px"
-                style={{
-                  position: "absolute",
-                  right: "11.25em",
-                  top: "20px",
-                }}
-              />
-              <Img
-                src="/images/landing/vector-stroke2.png"
-                width="106px"
-                height="151px"
-                style={{
-                  position: "absolute",
-                  left: "0%",
-                  bottom: "0.8em",
-                }}
-              />
-            </Div>
-
+        <Div gridColumn_tablet="9 / 17" position="relative">
+          <Div width="100%">
             <Img
-              src="/images/landing/group-2.png"
-              width="49px"
-              height="286px"
+              src="/images/landing/vector-stroke.png"
+              width="114px"
+              height="162px"
               style={{
                 position: "absolute",
                 right: "0%",
-                bottom: "0%",
-                zIndex: "1",
+                top: "20px",
+              }}
+            />
+            <Img
+              src="/images/landing/vector-stroke1.png"
+              width="70px"
+              height="181px"
+              style={{
+                position: "absolute",
+                right: "11.25em",
+                top: "20px",
+              }}
+            />
+            <Img
+              src="/images/landing/vector-stroke2.png"
+              width="106px"
+              height="151px"
+              style={{
+                position: "absolute",
+                left: "0%",
+                bottom: "0.8em",
               }}
             />
           </Div>
-        </Grid>
+
+          <Img
+            src="/images/landing/group-2.png"
+            width="49px"
+            height="286px"
+            style={{
+              position: "absolute",
+              right: "0%",
+              bottom: "0%",
+              zIndex: "1",
+            }}
+          />
+        </Div>
 
         <Div
           border="3px solid black"
@@ -167,7 +154,7 @@ const Overlaped = ({
             </Button>
           )}
         </Div>
-      </Div>
+      </Grid>
 
       {/* Version mobile */}
 
@@ -220,7 +207,7 @@ const Overlaped = ({
           border="3px solid black"
           flexWrap="wrap"
           position="absolute"
-          top="50%"
+          top="40%"
           zIndex="1"
           padding="20px"
           margin="10px"
