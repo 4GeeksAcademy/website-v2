@@ -9,7 +9,7 @@ const JobGuaranteeSmall = ({ content }) => {
     <Div display="block" padding="20px" background={Colors.lightYellow}>
       {content.title && <H2 margin="0 0 30px 0">{content.title}</H2>}
       <Div
-        maxWidth="1400px"
+        maxWidth="1366px"
         margin="auto"
         justifyContent="around"
         flexWrap="wrap"

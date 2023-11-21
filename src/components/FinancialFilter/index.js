@@ -168,19 +168,34 @@ const FinancialFilter = (props) => {
     }
   }, [session, props.locations]);
 
-  useEffect(() => {
-    const currentPlans = getCurrentPlans();
-    if (modality && course && currentLocation && currentPlans) {
-      setPrices(
-        currentPlans.filter((plan) =>
-          plan.academies.includes(currentLocation.fields.file_name.slice(0, -3))
-        )
-      );
-    } else {
-      setPrices(null);
-      console.log("modality", modality);
-    }
-  }, [modality, course, currentLocation]);
+  // useEffect(() => {
+  //   const currentPlans = getCurrentPlans();
+  //   if (modality && course && currentLocation && currentPlans) {
+  //     console.log("ASSAS")
+  //     setPrices(
+  //       currentPlans.filter((plan) =>
+  //         plan.academies.includes(currentLocation.fields.file_name.slice(0, -3))
+  //       )
+  //     );
+  //   } else {
+  //     setPrices(null);
+  //     console.log("modality", modality);
+  //   }
+  // }, [modality, course, currentLocation]);
+
+  const search = () => {
+      const currentPlans = getCurrentPlans();
+      if (modality && course && currentLocation && currentPlans) {
+        setPrices(
+          currentPlans.filter((plan) =>
+            plan.academies.includes(currentLocation.fields.file_name.slice(0, -3))
+          )
+        );
+      } else {
+        setPrices(null);
+        console.log("modality", modality);
+      }
+    };
 
   if (!currentLocation)
     return (
@@ -196,13 +211,12 @@ const FinancialFilter = (props) => {
 
   return (
     <Div
-      background={Colors.lightBlue2}
+      background="transparent"
       margin="0 0 5rem 0"
-      display="block"
       github="/location"
+      flexDirection="column"
     >
       <GridContainer
-        shadow="0px 0px 16px rgba(0, 0, 0, 0.25)"
         padding="15px 0"
         margin="0 10px 3em 10px"
         margin_tablet="0 5rem 4em 5rem"
@@ -212,11 +226,10 @@ const FinancialFilter = (props) => {
         background={Colors.white}
         height="100%"
         height_tablet="122px"
-        borderRadius="3px"
+        border="3px solid black"
       >
         <Grid
-          gridTemplateColumns_tablet="repeat(3, 1fr)"
-          display="inline-flex"
+          gridTemplateColumns_tablet="repeat(4, 1fr)"
           width="200px"
           width_tablet="auto"
           gridGap_tablet="20px"
@@ -274,6 +287,18 @@ const FinancialFilter = (props) => {
               }
             />
           )}
+
+          {props.button_text &&
+            <Button
+              background={Colors.black}
+              color={Colors.white}
+              onClick={()=>{search()}}
+              margin_tablet="0 0 16px 0"
+              height="38px"
+            >
+              {props.button_text}
+            </Button>
+          }
         </Grid>
       </GridContainer>
 

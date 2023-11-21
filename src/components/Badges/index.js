@@ -23,6 +23,8 @@ const Badges = ({
   wrapped_images,
   maxWidth,
   badges,
+  height_badge,
+  style
 }) => {
   const data = useStaticQuery(graphql`
     query myNewQueryBadges {
@@ -63,8 +65,9 @@ const Badges = ({
   let content = data.allBadgesYaml.edges.find(
     ({ node }) => node.fields.lang === lang
   );
-  if (content) content = content.node;
-  else return null;
+  // if (content) content = content.node;
+  // else return null;
+  content = (badges || content.node) || null; 
 
   return (
     <>
@@ -112,7 +115,7 @@ const Badges = ({
           {wrapped_images === true ? (
             <Div
               className="badge-slider hideOverflowX__"
-              justifyContent="center"
+              //justifyContent="center"
               rowGap="3rem"
               flexWrap="wrap"
               columnGap="1rem"
@@ -142,6 +145,9 @@ const Badges = ({
               <Div
                 className="badge-slider hideOverflowX__"
                 margin="auto"
+                gap_tablet="20px"
+                gap_md="50px"
+                gap_lg="100px"
                 // justifyContent="center"
                 // alignItems="center"
               >
@@ -172,7 +178,7 @@ const Badges = ({
                       return (
                         <GatsbyImage
                           key={i}
-                          style={{
+                          style={style || {
                             height: "85px",
                             // minWidth: "200px",
                             minWidth: "150px",

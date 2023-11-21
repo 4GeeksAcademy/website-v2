@@ -11,12 +11,12 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { smartRedirecting, transferQuerystrings } from "../../utils/utils.js";
 
 const Iconogram = ({ session, data, pageContext, yml, index }) => {
-  const { heading, sub_heading, icons, button } = yml;
+  const { heading, sub_heading, icons, button, swipable } = yml;
 
   return (
     <Div
       key={index}
-      padding={heading.text ? "30px 0 60px 0" : "60px 0 60px 0"}
+      padding={heading.text ? "30px 0 30px 0" : "60px 0 60px 0"}
       display="flex"
       flexDirection="column"
       id="iconogram"
@@ -38,7 +38,7 @@ const Iconogram = ({ session, data, pageContext, yml, index }) => {
           //margin="30px 0 30px 0"
           maxWidth="1366px"
           margin="30px auto"
-          style={{ ...JSON.parse(heading?.style)}  || { textAlign: "center" }}
+          style={{ ...JSON.parse(heading?.style) } || { textAlign: "center" }}
         >
           {heading.text}
         </H2>
@@ -53,7 +53,7 @@ const Iconogram = ({ session, data, pageContext, yml, index }) => {
           fontHeight="30px"
           maxWidth="1366px"
           dangerouslySetInnerHTML={{ __html: sub_heading.text }}
-          style={{ ...JSON.parse(sub_heading?.style)}  || {}}
+          style={{ ...JSON.parse(sub_heading?.style) } || {}}
         />
       ) : sub_heading.text == !"" ? (
         <Paragraph
@@ -64,7 +64,7 @@ const Iconogram = ({ session, data, pageContext, yml, index }) => {
           fontSize="16px"
           fontHeight="30px"
           maxWidth="1366px"
-          style={{ ...JSON.parse(sub_heading?.style)}  || {}}
+          style={{ ...JSON.parse(sub_heading?.style) } || {}}
         >
           {sub_heading.text}
         </Paragraph>
@@ -75,14 +75,14 @@ const Iconogram = ({ session, data, pageContext, yml, index }) => {
         flexDirection_tablet="row "
         justifyContent="center"
         // gap="45px"
-        gap_tablet={icons.length > 4 ? "0px" : "5%"}
+        gap_tablet={icons.length > 4 ? "0px" : "3%"}
         //gap_md="10%"
         maxWidth="1366px"
         margin="20px auto 0 auto"
         padding_tablet="0 40px"
         padding_md="0 80px"
         padding_lg="0"
-        //className="badge-slider hideOverflowX__"
+        className={swipable && "badge-slider hideOverflowX__"}
       >
         {Array.isArray(icons) &&
           icons?.map((item, index) => {
@@ -106,12 +106,13 @@ const Iconogram = ({ session, data, pageContext, yml, index }) => {
           lineHeight="26px"
           textColor={Colors.black}
           textTransform="none"
+          textDecorationLine="underline"
           color={Colors[button.color] || button.color}
           fontSize="18px"
           fontFamily="Lato"
           fontWeight="500"
           textAlign="left"
-          margin="2rem 0"
+          margin="2rem 0 1rem 0"
           padding="32px .85rem 0 .85rem"
           onClick={() => {
             if (button.path && button.path.indexOf("http") > -1)
@@ -124,6 +125,6 @@ const Iconogram = ({ session, data, pageContext, yml, index }) => {
       )}
     </Div>
   );
-}
+};
 
 export default Iconogram;

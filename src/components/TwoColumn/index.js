@@ -1,7 +1,7 @@
 import React from "react";
 import { useStaticQuery, graphql, Link } from "gatsby";
 import ReactPlayer from "../ReactPlayer";
-import { H2, Paragraph } from "../Heading";
+import { H2, Paragraph, H3 } from "../Heading";
 import Icon from "../Icon";
 import { Div } from "../Sections";
 import { Button, Colors, Img } from "../Styling";
@@ -17,6 +17,7 @@ const Side = ({
   content,
   button,
   bullets,
+  boxes,
   session,
   padding_tablet,
 }) => {
@@ -123,6 +124,7 @@ const Side = ({
       {sub_heading && (
         <Paragraph
           textAlign_tablet="left"
+          fontFamily="Lato-Bold"
           margin="0"
           fontSize={sh_xl || "18px"}
           fontSize_sm={sh_sm}
@@ -274,6 +276,63 @@ const Side = ({
         >
           {button.text}
         </Button>
+      )}
+
+      {boxes && (
+        <Div
+          margin="15px 0 0 0"
+          justifyContent_tablet="between"
+          gap="15px"
+          flexDirection="column"
+          flexDirection_tablet="row"
+        >
+          {boxes.map((box) => (
+            <Div
+              key={box.title}
+              background="#FFF"
+              border="3px solid #000"
+              width="100%"
+              width_md="320px"
+              height_md="320px"
+              width_tablet="200px"
+              height_tablet="200px"
+              boxShadow="6px 6px 0px 0px rgba(0,0,0,1)"
+              boxShadow_tablet="9px 8px 0px 0px rgba(0,0,0,1)"
+              flexDirection_tablet="column"
+              justifyContent_tablet="center"
+              padding="15px"
+              alignItems="center"
+              alignItems_tablet="normal"
+            >
+              <Icon icon={box.icon} width="89px" height="89px" color={null} />
+              <Div
+                margin="0 0 0 15px"
+                margin_tablet="30px 0 0 0"
+                display="flex"
+                flexDirection="column"
+                display_tablet="block"
+              >
+                <H3
+                  textAlign="left"
+                  fontSize="30px"
+                  fontSize_tablet="65px"
+                  fontFamily="Archivo-Black"
+                  margin="0 0 30px 0"
+                >
+                  {box.title}
+                </H3>
+                <Paragraph
+                  textAlign="left"
+                  color="#000"
+                  opacity="1"
+                  fontSize="21px"
+                >
+                  {box.text}
+                </Paragraph>
+              </Div>
+            </Div>
+          ))}
+        </Div>
       )}
     </Div>
   );

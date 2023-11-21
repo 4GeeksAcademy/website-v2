@@ -91,6 +91,8 @@ const Financial = (props) => {
   }
 
   const ymlTwoColumn = yml?.two_columns;
+  const course_type = "full_stack";
+  const program_type = "part_time";
 
   return (
     <>
@@ -105,7 +107,7 @@ const Financial = (props) => {
         padding="72px 0 15px 0"
       /> */}
       <Header
-        margin={isCustomBarActive(session) ? "60px auto 0 auto" : "0 auto"}
+        margin={isCustomBarActive(session) ? "120px auto 0 auto" : "60px auto"}
         paragraphMargin="26px 20px"
         paragraphMargin_Tablet="26px 22%"
         paddingParagraph_tablet="0 40px"
@@ -137,6 +139,81 @@ const Financial = (props) => {
           left_lg="0%"
           top_lg="13%"
         />
+        <Img
+          src="/images/landing/Ellipse-40.png"
+          width="53px"
+          height="53px"
+          style={{
+            position: "absolute",
+            zIndex: "-1",
+          }}
+          display_xxs="none"
+          display_tablet="flex"
+          right_tablet="85px"
+          top_tablet="15%"
+          right_lg="5%"
+          top_lg="15%"
+        />
+        <Img
+          src="/images/landing/Ellipse-39.png"
+          width="17px"
+          height="17px"
+          style={{
+            position: "absolute",
+            zIndex: "-1",
+          }}
+          display_xxs="none"
+          display_tablet="flex"
+          right_tablet="16%"
+          top_tablet="45%"
+          right_lg="3%"
+          top_lg="45%"
+        />
+        <Img
+          src="/images/landing/Ellipse-38.png"
+          width="17px"
+          height="17px"
+          style={{
+            position: "absolute",
+            zIndex: "-1",
+          }}
+          display_xxs="none"
+          display_tablet="flex"
+          right_tablet="12%"
+          top_tablet="45%"
+          right_lg="6%"
+          top_lg="45%"
+        />
+        <Img
+          src="/images/landing/Ellipse-39.png"
+          width="17px"
+          height="17px"
+          style={{
+            position: "absolute",
+            zIndex: "-1",
+          }}
+          display_xxs="none"
+          display_tablet="flex"
+          right_tablet="8%"
+          top_tablet="45%"
+          right_lg="9%"
+          top_lg="45%"
+        />
+        <Img
+          src="/images/landing/Ellipse-39.png"
+          width="28px"
+          height="28px"
+          style={{
+            position: "absolute",
+            zIndex: "-1",
+          }}
+          display_xxs="none"
+          display_tablet="flex"
+          right_tablet="25%"
+          top_tablet="13%"
+          right_lg="23%"
+          top_lg="12%"
+        />
 
         <FinancialFilter
           button_text={yml.syllabus_button_text}
@@ -153,7 +230,6 @@ const Financial = (props) => {
           lang={pageContext.lang}
           locations={data.allLocationYaml.edges}
         />
-
       </Header>
 
       <Iconogram yml={yml.iconogram} />
@@ -163,38 +239,48 @@ const Financial = (props) => {
         type={pageContext.slug}
         lang={pageContext.lang}
         locations={data.allLocationYaml.edges}
-        // programType={program_type}
-        // courseType={course_type}
+        programType={program_type}
+        courseType={course_type}
         title={yml.prices.heading}
         paragraph={yml.prices.sub_heading}
       />
-      {/* <TwoColumn
+
+      <TwoColumn
         left={{ image: ymlTwoColumn[0].image }}
         right={{
-          heading: ymlTwoColumn.heading,
-          sub_heading: ymlTwoColumn.sub_heading,
-          bullets: ymlTwoColumn.bullets,
-          content: ymlTwoColumn.content,
-          button: ymlTwoColumn.button,
-          padding_tablet: "20px",
+          heading: ymlTwoColumn[0].heading,
+          sub_heading: ymlTwoColumn[0].sub_heading,
+          bullets: ymlTwoColumn[0].bullets,
+          content: ymlTwoColumn[0].content,
+          button: ymlTwoColumn[0].button,
+          boxes: ymlTwoColumn[0].boxes,
+          //padding_tablet: "20px",
           gap_tablet: "40px",
         }}
         proportions={ymlTwoColumn.proportions}
         session={session}
-      /> */}
+      />
 
       <Badges
         link
-        // wrapped_images={true}
-        id="parthers"
+        id="partners"
         lang={pageContext.lang}
         //background={Colors.verylightGray2}
-        paragraph={parthers.heading}
-        short_text
+        badges={yml.partners}
+        paragraph={yml.partners.paragraph}
+        //short_text
+        height_badge="80px"
         padding="60px 0"
         padding_tablet="68px 0"
         margin_tablet="0 0 78px 0"
         maxWidth="1366px"
+        //wrapped_images
+        style={{
+          height: "100px",
+          minWidth: "150px",
+          width: "min-content",
+          //margin: "0 20px",
+        }}
       />
 
       <TwoColumn
@@ -205,7 +291,7 @@ const Financial = (props) => {
           bullets: ymlTwoColumn[1].bullets,
           content: ymlTwoColumn[1].content,
           button: ymlTwoColumn[1].button,
-          padding_tablet: "20px",
+          //padding_tablet: "20px",
           gap_tablet: "40px",
         }}
         proportions={ymlTwoColumn[1].proportions}
@@ -222,13 +308,12 @@ const Financial = (props) => {
           bullets: ymlTwoColumn[2].bullets,
           content: ymlTwoColumn[2].content,
           button: ymlTwoColumn[2].button,
-          padding_tablet: "20px",
+          //padding_tablet: "20px",
           gap_tablet: "40px",
         }}
         proportions={ymlTwoColumn[2].proportions}
         session={session}
       />
-
     </>
   );
 };
@@ -309,12 +394,23 @@ export const query = graphql`
             }
           }
           syllabus_button_text
-          parthers{
+          partners {
             paragraph
-            badges{
+            link_to
+            link_text
+            badges {
               name
               url
-              image
+              image {
+                childImageSharp {
+                  gatsbyImageData(
+                    layout: FULL_WIDTH # --> CONSTRAINED || FIXED || FULL_WIDTH
+                    width: 1500
+                    quality: 100
+                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                  )
+                }
+              }
               alt
             }
           }
@@ -332,6 +428,14 @@ export const query = graphql`
               text
               font_size
             }
+            bullets {
+              item_style
+              items {
+                heading
+                text
+                icon
+              }
+            }
             content {
               text
               font_size
@@ -343,7 +447,11 @@ export const query = graphql`
               hover_color
               path
             }
-          
+            boxes{
+              icon
+              title
+              text
+            }
           }
           we_trust_section {
             title
@@ -366,7 +474,8 @@ export const query = graphql`
               link
             }
           }
-          iconogram{
+          iconogram {
+            swipable
             heading {
               text
               font_size

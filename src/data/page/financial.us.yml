@@ -54,7 +54,7 @@ syllabus_button_text: "Search"
 
 iconogram:
   heading:
-    text: ""
+    text: "How your tuition is no longer a concern"
     font_size: ["30px", "30px", "30px", "30px", "30px"]
     style: '{ "textAlign": "center", "width": "60%" }'
   sub_heading:
@@ -62,21 +62,22 @@ iconogram:
     font_size: ["16px", "16px", "16px", "16px", "16px"]
     style: '{ "textAlign": "center", "width": "60%" }'
   text_link: "#"
+  swipable: false
   icons:
-  - icon: "touch"
-    title: Solicita tu beca antes del 8 de octubre
-    content: ""
-  - icon: "receive_mail"
-    title: Recibirás un correo electrónico con toda la información y un test de lógica
-    content: ""
-  - icon: "talk"
-    title: Haz una entrevista online con nuestro equipo de admisiones
-    content: ""
-  - icon: "terminal"
-    title: Recibe los resultados, reserva tu plaza y empieza a PROGRAMAR
-    content: ""
+  - icon: "contract-money"
+    title: Payment Plans - No interest
+    content: " No interest: you can pay in up to 6 months"
+  - icon: "handmoney-new"
+    title: Loans - long term
+    content: "long term: 3, 4 or 5 years loan"
+  - icon: "hand-puzzle"
+    title: Scholarships and partnerships
+    content: "We are working with several organizations to reduce your tuition fee."
+  - icon: "briefcase-new"
+    title: Income Sharing Agreement
+    content: "Only pay when you get a job above a thereshold"
   button:
-    text: "¡Aplica hoy!"
+    text: "Conditions apply."
     color: ""
     path: "#top"
     background: ""
@@ -88,9 +89,9 @@ two_columns:
       - 6
     image:
       style: '{ "backgroundSize": "contain" }'
-      src: /images/landing/20-million-column.png
+      src: /images/landing/Group-6626.png
     heading:
-      text: Our mission is to make high-quality coding education affordable.
+      text: $20 Millions in scholarships
       font_size:
         - 40px
         - 40px
@@ -98,27 +99,26 @@ two_columns:
         - 40px
         - 40px
     sub_heading:
-      text: In the past, 68% of the people applying to 4Geeks Academy could not enroll due to financial reasons. We concentrated our efforts on lowering the financial barriers by finding partners and sponsors who shared our vision. Today, thanks to our joint efforts, 80% of our students receive some form of financial support, making top-quality coding education accessible to a wider audience.
+      text: 1.456 people have benefited from our scholarship programs, from all possible backgrounds, read here stories of the beneficiaries and projects.
       font_size:
         - 16px
         - 16px
-        - 16px
-        - 16px
-        - 16px
-    content:
-      font_size:
-        - 16px
-      text: |
-        Since our foundation in 2015,  these goals have been fundamental to our mission:
-          - To be a premier school for coding education, enriching the futures of our students.
-          - To secure job placement for our graduates immediately after program completion.
-          - To make high-quality education accessible to anyone eager to embark on a coding career.
+        - 24px
+        - 24px
+        - 24px
     button:
-      text: JOIN THE NETWORK
+      text: SEE MORE
       color: white
       background: black
       hover_color: white
       path: "#top"
+    boxes:
+    - icon: rocket-2
+      title: "14"
+      text: Projects completed
+    - icon: handsheart
+      title: "1465"
+      text: Beneficiaries so far
 
   - proportions:
       - 6
@@ -127,7 +127,7 @@ two_columns:
       style: '{ "backgroundSize": "contain" }'
       src: /images/landing/20-million-column.png
     heading:
-      text: Our mission is to make high-quality coding education affordable.
+      text: 62% of bootcamp applicants are rejected due to financial reasons.
       font_size:
         - 40px
         - 40px
@@ -135,23 +135,20 @@ two_columns:
         - 40px
         - 40px
     sub_heading:
-      text: In the past, 68% of the people applying to 4Geeks Academy could not enroll due to financial reasons. We concentrated our efforts on lowering the financial barriers by finding partners and sponsors who shared our vision. Today, thanks to our joint efforts, 80% of our students receive some form of financial support, making top-quality coding education accessible to a wider audience.
+      text: 4Geeks is committed to removing the cost as a possible factor to prevent talented individuals to become coders.
       font_size:
         - 16px
         - 16px
-        - 16px
-        - 16px
-        - 16px
+        - 24px
+        - 24px
+        - 24px
     content:
       font_size:
         - 16px
       text: |
-        Since our foundation in 2015,  these goals have been fundamental to our mission:
-          - To be a premier school for coding education, enriching the futures of our students.
-          - To secure job placement for our graduates immediately after program completion.
-          - To make high-quality education accessible to anyone eager to embark on a coding career.
+        Thanks to a deep network of 2000+ partners and donors from  Government Institutions, none profit organizations and private companies enables our scholarship platform to be one of the biggest in the world.
     button:
-      text: JOIN THE NETWORK
+      text: JOIN THE PROGRAM
       color: white
       background: black
       hover_color: white
@@ -162,25 +159,37 @@ two_columns:
       style: '{ "backgroundSize": "contain" }'
       src: "/images/woman-glasses-laptop.png"
     heading:
-      text: "Why are we offering a job guarantee?"
-      font_size: ["30px", "30px", "30px", "30px", "30px"]
+      text: "Job guarantee commitment"
+      font_size:
+        - 40px
+        - 40px
+        - 40px
+        - 40px
+        - 40px]
+    sub_heading:
+      text: "Our Job Guarantee Program consists of 3 stages that are needed to be complete as part of your process. It’s three bootcamps in One:"
+      font_size:
+        - 16px
+        - 16px
+        - 24px
+        - 24px
+        - 24px
+    bullets:
+      item_style: ""
+      items:
+        - heading: "Become a Software Developer."
+          text: ""
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
+        - heading: "Get career ready."
+          text: ""
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
+        - heading: "Get a job!"
+          text: ""
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
     content:
-      font_size: ["24px", "24px", "24px", "18px", "18px"]
-      #Using <p> tags gives <p> inside <p> bug
-      text: |
-        We’re here to challenge the traditional education model. Our bootcamps go beyond teaching relevant skills; they are designed to launch new, rewarding careers. Together, we’ll shape your future.
-        <br>
-        <br>
-        <span style="color: #0097CD;">✓</span> We <strong style="font-weight: bold;">trust</strong> the effectiveness of the program
-        <br>
-        <br>
-        <span style="color: #0097CD;">✓</span> We <strong style="font-weight: bold;">trust</strong> the industry
-        <br>
-        <br>
-        <span style="color: #0097CD;">✓</span> We <strong style="font-weight: bold;">trust</strong> the process
-        <br>
-        <br>
-        <span style="color: #0097CD;">✓</span> We <strong style="font-weight: bold;">trust</strong> you
+      font_size:
+        - 16px
+      text: The goal is to help you get a job within 180 days after graduation. You need to complete and meet the requirements in order to opt for the Money back if the job opportunity has not arrived within the time frame.
     button:
         text: "APPLY"
         color: "white"
@@ -188,36 +197,31 @@ two_columns:
         hover_color: "white"
         path: "#top"
 
-parthers:
-  paragraph: "Este curso cuenta con premios y reconocimientos que validan su excelencia"
+partners:
+  paragraph: "Don't miss out on the awesome allies of 4Geeks Academy! Here are just a few of them."
   badges:
-    - name: "Premios Excelencia Educativa"
+    - name: "Miami Tech Works"
       url: ""
-      image: "../../../../static/images/badges/exelencia-educativa-es.png"
-      alt: "Mejor centro de Coding Bootcamp"
-    - name: "Switchup"
+      image: "../../../static/images/allies/miamitech-works-logo.png"
+      alt: "Miami Tech Works"
+    - name: "UTEC"
       url: ""
-      image: "../../../../static/images/badges/Course-Report-Badge-2023.png"
+      image: "../../../static/images/allies/utec.png"
       alt: "Best cooding bootcamp Course Report 2023"
-    - name: "FDOE"
+    - name: "Universidad Tecnologica"
       url: ""
-      image: "../../../../static/images/badges/licensed-es.png"
-      alt: "Licensed by the Florida Department of Education"
-    - name: "Newsweek"
+      image: "../../../static/images/allies/clark-uni-rounded-logo.png"
+      alt: "Clark University"
+    - name: "CINDE"
       url: ""
-      image: "../../../../static/images/badges/newsweek-es.png"
-      alt: "Top Coding Bootcamps Newsweek"
-    - name: "FDOE"
+      image: "../../../static/images/allies/cinde.png"
+      alt: "CINDE Invest in Costa Rica"
+    - name: "IDB"
       url: ""
-      image: "../../../../static/images/badges/switchup-badge-2023.png"
-      alt: "Top Coding Bootcamps Switchup"
-    - name: "FDOE"
-      url: ""
-      image: "../../../../static/images/badges/syllabus-es.png"
-      alt: "Award winning syllabus"
-  link_text: "Ver todos los Premios y Reconocimientos"
-  link_to: "/es/premios"
-  short_link_text: "Ver más"
+      image: "../../../static/images/allies/idb.png"
+      alt: "Inter-American Development Bank"
+  link_text: "See all parthers"
+  link_to: "/us/partners"
 
 we_trust_section:
   title: Why trust us?

@@ -356,6 +356,7 @@ export const Div = styled.div`
     justify-content: ${(props) =>
       justifyContentOptions[props.justifyContent_lg]};
     padding: ${(props) => props.padding_lg};
+    gap: ${(props) => props.gap_lg};
     max-width: ${(props) => props.maxWidth_lg};
     min-width: ${(props) => props.minWidth_lg};
     right: ${(props) => props.right_lg};
@@ -701,6 +702,7 @@ export const GridContainer = ({
   padding_lg,
   padding_md,
   padding_tablet,
+  border,
 }) => {
   return (
     <Grid
@@ -738,6 +740,7 @@ export const GridContainer = ({
       padding_tablet={padding_tablet || "0"}
       padding_lg={padding_lg}
       padding_md={padding_md}
+      border={border}
     >
       <Grid
         display={displayChild}
