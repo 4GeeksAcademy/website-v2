@@ -26,6 +26,7 @@ const Overlaped = ({
             button {
               text
               color
+              link
             }
             background
             image {
@@ -36,7 +37,6 @@ const Overlaped = ({
       }
     }
   `);
-
   return (
     <Div maxWidth_tablet="1366px" margin_tablet="50px auto" width="100%">
       <Grid
@@ -44,7 +44,7 @@ const Overlaped = ({
         display="grid"
         position="relative"
         justifyContent="center"
-        padding_tablet="0 40px"
+        padding_tablet={content?.length > 200 ? "0px 40px 30px 40px" : "0 40px"}
         padding_md="0 80px"
         padding_lg="0"
         width="100%"
@@ -145,13 +145,15 @@ const Overlaped = ({
           ) : null}
 
           {button?.text && (
-            <Button
-              background={button.color}
-              color={Colors.white}
-              margin="20px 0 0 0"
-            >
-              {button.text}
-            </Button>
+            <Link to={button.link}>
+              <Button
+                background={Colors[button.color]}
+                color={Colors.white}
+                margin="20px 0 0 0"
+              >
+                {button.text}
+              </Button>
+            </Link>
           )}
         </Div>
       </Grid>
@@ -163,10 +165,14 @@ const Overlaped = ({
         display_tablet="none"
         position="relative"
         flexDirection="Column"
-        margin_sm="0 auto"
-        padding_sm="40px 20px 45% 20px"
-        margin_xxs="40px 20px 65% 20px" // Modify the bottom margin if the floating box of the overlapped element overlaps the other component.
-        margin_xs="40px 20px 60% 20px"
+        //margin_sm="0 auto"
+        //padding_xxs={ heading?.length > 4 ? "40px 20px 65% 20px" : "40px 20px 30% 20px" }
+        margin_xxs={
+          heading?.length > 20 ? "40px 20px 65% 20px" : "40px 20px 45% 20px"
+        } // Modify the bottom margin if the floating box of the overlapped element overlaps the other component.
+        margin_sm={
+          heading?.length > 20 ? "40px 20px 45% 20px" : "40px 20px 30% 20px"
+        }
       >
         {image?.src ? (
           <Img src={image?.src} width="33.3em" height="533px" />
@@ -207,8 +213,12 @@ const Overlaped = ({
           border="3px solid black"
           flexWrap="wrap"
           position="absolute"
-          top="40%"
+          top={heading?.length > 4 ? "40%" : "50%"}
           zIndex="1"
+          width_xxs="51%"
+          width_xs="59%"
+          width_sm="66%"
+          width_tablet="100%"
           padding="20px"
           margin="10px"
           background={Colors.white}
@@ -229,14 +239,15 @@ const Overlaped = ({
             </Paragraph>
           ) : null}
           {button?.text && (
-            <Button
-              width="100%"
-              background={button.color}
-              color={Colors.white}
-              margin="20px 0 0 0"
-            >
-              {button.text}
-            </Button>
+            <Link to={button.link}>
+              <Button
+                background={Colors[button.color]}
+                color={Colors.white}
+                margin="20px 0 0 0"
+              >
+                {button.text}
+              </Button>
+            </Link>
           )}
         </Div>
       </Div>

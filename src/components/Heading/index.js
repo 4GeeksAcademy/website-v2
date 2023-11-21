@@ -59,6 +59,7 @@ const BaseHeading = styled(Heading)`
   @media ${Devices.xxs} {
     padding: ${(props) => props.padding_xxs};
     line-height: ${(props) => props.lineHeight_xxs};
+    margin: ${(props) => props.margin_xxs};
   }
 
   @media ${Devices.xs} {
@@ -105,6 +106,8 @@ const BaseHeading = styled(Heading)`
 
 export const H1 = styled(BaseHeading)`
   z-index: ${(props) => props.zIndex};
+  letter-spacing: 0.05em;
+  font-family: ${(props) => props.fontFamily};
 `;
 
 export const H2 = styled(BaseHeading)`
@@ -201,6 +204,7 @@ export const Paragraph = styled.p`
   text-shadow: ${(props) => props.textShadow};
   line-height: ${(props) => props.lineHeight};
   color: ${(props) => props.color};
+  text-decoration: ${(props) => props.textDecoration};
   text-align: ${(props) => props.textAlign || "center"};
   align-self: ${(props) => props.alignSelf};
   align-items: ${(props) => props.alignItems};

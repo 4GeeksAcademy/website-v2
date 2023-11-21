@@ -204,6 +204,7 @@ export const Div = styled.div`
     padding: ${(props) => props.padding_xxs};
     column-count: ${(props) => props.columnCount_xxs};
     margin: ${(props) => props.margin_xxs};
+    padding: ${(props) => props.padding_xxs};
     background: ${(props) => props.background_xxs};
     display: ${(props) => props.display_xxs};
     justify-content ${(props) => props.justifyContent_xxs};
@@ -401,6 +402,7 @@ export const Grid = styled(Div)`
     grid-template-columns: ${(props) =>
       props.columns_xxs ? `repeat(${props.columns_xxs}, 1fr)` : null};
     padding: ${(props) => props.padding_xxs};
+    margin: ${(props) => props.margin_xxs};
     display: ${(props) => props.display_xxs || "grid"};
   }
   @media ${Devices.xs} {
@@ -538,11 +540,23 @@ export const Header = ({
   margin_tablet,
   padding,
   padding_tablet,
+  padding_lg,
+  padding_md,
   position,
   textAlign_tablet,
   paddingParagraph_tablet,
   paddingTitle_tablet,
   display_mobile,
+  fontSize_title,
+  fontSizeTitle_tablet,
+  fontFamily_title,
+  fontSize_seo,
+  fontSize_paragraph,
+  fontWeight_paragraph,
+  lineHeight,
+  lineHeight_tablet,
+  fontWeight_title,
+  gridTemplateColumns_tablet,
   maxWidth,
   fontFamily,
 }) => {
@@ -554,13 +568,16 @@ export const Header = ({
       position={position}
       margin={margin || "70px 0 0 0"}
       margin_tablet={margin_tablet}
-      padding={padding || "60px 17px"}
-      padding_tablet={padding_tablet || "60px 0"}
+      padding={padding || "60px 20px"}
+      padding_tablet={padding_tablet || "60px 40px"}
+      padding_md={padding_md || "60px 80px"}
+      padding_lg={padding_lg || "60px 0"}
+      gridTemplateColumns_tablet={gridTemplateColumns_tablet}
       maxWidth={maxWidth}
     >
       <Grid
         gridTemplateColumns_tablet={`repeat(12, 1fr)`}
-        gridArea_tablet="1/2/1/14"
+        gridArea_tablet="1/1/1/15"
       >
         {/* hacer cambios aqui ... remover svg en mobile */}
         <Div
@@ -568,26 +585,32 @@ export const Header = ({
           gridColumn_tablet={svg_image ? null : "1 / 13"}
           gridArea_tablet={svg_image ? "1/1/1/7" : null}
         >
-          <H1
-            type="h1"
-            textAlign_tablet={textAlign_tablet}
-            margin="0 0 11px 0"
-            color="#606060"
-          >
-            {seo_title}
-          </H1>
           <H2
             type="h2"
             textAlign_tablet={textAlign_tablet}
-            padding="0"
+            margin="0 0 11px 0"
+            padding="0 20px"
+            color="#606060"
+            fontSize={fontSize_seo || "12px"}
+            //fontFamily={fontFamily_title}
+          >
+            {seo_title}
+          </H2>
+          <H1
+            type="h1"
+            textAlign_tablet={textAlign_tablet}
+            padding="0 20px"
             padding_tablet={paddingTitle_tablet}
-            fontSize={fontSize || "40px"}
-            fontSize_tablet={fontSize_tablet || "50px"}
-            lineHeight="60px"
-            fontFamily={fontFamily}
+            fontSize={fontSize_title || "40px"}
+            fontSize_tablet={fontSizeTitle_tablet || "50px"}
+            lineHeight={lineHeight || "50px"}
+            lineHeight_tablet={lineHeight_tablet || "60px"}
+            fontFamily={fontFamily_title}
+            //fontSize={fontSize || "40px"}
+            //fontSize_tablet={fontSize_tablet || "50px"}
           >
             {hideArrowKey ? title : `< ${title} >`}
-          </H2>
+          </H1>
           <Paragraph
             padding="0"
             width="auto"
@@ -596,6 +619,9 @@ export const Header = ({
             textAlign_tablet={textAlign_tablet}
             margin={paragraphMargin || "26px 0"}
             margin_tablet={paragraphMargin_Tablet}
+            fontSize={fontSize_paragraph}
+            fontWeight={fontWeight_paragraph}
+            color={Colors.black}
           >
             {paragraph}
           </Paragraph>
@@ -659,6 +685,10 @@ export const GridContainer = ({
   margin_xs,
   margin_md,
   padding,
+  padding_xxs,
+  padding_tablet,
+  padding_md,
+  padding_lg,
   paddingChild,
   borderTop,
   padding_tabletChild,
@@ -679,9 +709,6 @@ export const GridContainer = ({
   columns_sm,
   justifyContentChild,
   justifyItemsChild,
-  padding_lg,
-  padding_md,
-  padding_tablet,
 }) => {
   return (
     <Grid
@@ -717,8 +744,9 @@ export const GridContainer = ({
       margin_md={margin_md}
       padding={padding || "0 17px"}
       padding_tablet={padding_tablet || "0"}
-      padding_lg={padding_lg}
+      padding_xxs={padding_xxs}
       padding_md={padding_md}
+      padding_lg={padding_lg}
     >
       <Grid
         display={displayChild}
