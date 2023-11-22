@@ -62,16 +62,16 @@ const Program = ({ data, pageContext, yml }) => {
     }
   }, [currentLocation]);
 
-<<<<<<< HEAD
-  const syllabus_button_text = yml.button.syllabus_heading;
-
+  return (
+    <>
+      <Header
         margin={isCustomBarActive(session) ? "60px auto 0 auto" : "0 auto"}
         paragraphMargin="26px 20px"
         paragraphMargin_Tablet="26px 22%"
         paddingParagraph_tablet="0 40px"
->>>>>>> 9a54c74f5523fee106fa0abe9dc673de503b882c
         seo_title={yml.seo_title}
         title={yml.header.title}
+        paragraph={yml.header.paragraph}
         padding_tablet="72px 0 40px 0"
         padding="0px 20px"
         position="relative"
@@ -177,9 +177,9 @@ const Program = ({ data, pageContext, yml }) => {
           paragraph={yml.badges.paragraph}
         />
       </Header>
-<<<<<<< HEAD
-      <AboutTheProgram
-        details={courseDetails.details}
+      <JobGuaranteeSmall
+        content={data.allJobGuaranteeSmallYaml.edges[0].node}
+      />
       <ProgramDetails
         details={courseDetails.details}
         lang={pageContext.lang}
@@ -190,17 +190,6 @@ const Program = ({ data, pageContext, yml }) => {
         lang={pageContext.lang}
         course={program_type}
       />
-<<<<<<< HEAD
-      <TechsWeTeach lang={pageContext.lang} data={data.allFullStackTechsYaml} />
-      <GeeksInfo lang={pageContext.lang} />
-      <GridContainer
-        padding_tablet="0"
-        margin_tablet="90px 0 62px 0"
-        margin="57px 0"
-      >
-        <Div height="5px" background="#EBEBEB"></Div>
-      </GridContainer>
-=======
 
       {/* OVERLAPED CREAR EN EL YML*/}
       <Overlaped
@@ -227,20 +216,12 @@ const Program = ({ data, pageContext, yml }) => {
         session={session}
       />
 
->>>>>>> 9a54c74f5523fee106fa0abe9dc673de503b882c
       <UpcomingDates
         lang={pageContext.lang}
         message={courseDetails.upcoming.no_dates_message}
         actionMessage={courseDetails.upcoming.actionMessage}
         locations={data.allLocationYaml.edges}
       />
-<<<<<<< HEAD
-      <GridContainer padding_tablet="0" margin_tablet="0 0 62px 0">
-        <Div height="1px" background="#EBEBEB"></Div>
-      </GridContainer>
-=======
-
->>>>>>> 9a54c74f5523fee106fa0abe9dc673de503b882c
       <PricesAndPayment
         background={`linear-gradient(to bottom, ${Colors.white} 50%, ${Colors.lightYellow2} 50%)`}
         type={pageContext.slug}
@@ -251,25 +232,6 @@ const Program = ({ data, pageContext, yml }) => {
         title={yml.prices.heading}
         paragraph={yml.prices.sub_heading}
       />
-<<<<<<< HEAD
-      <AlumniProjects
-        title={yml.alumni.heading}
-        paragraph={yml.alumni.sub_heading}
-        lang={data.allAlumniProjectsYaml.edges}
-        limit={2}
-      />
-      <Testimonials
-        lang={data.allTestimonialsYaml.edges}
-        margin_tablet="75px 0 0 0"
-        margin="45px 0 0 0"
-      />
-      <OurPartners images={hiring.partners.images} marquee></OurPartners>
-      <RelatedPosts
-        lang={pageContext.lang}
-        posts={data.allMarkdownRemark.edges}
-        relatedClusters={courseDetails.meta_info.related_clusters}
-      />
-=======
 
       <ScholarshipProjects
         content={data.allScholarshipProjectsYaml.edges[0].node}
@@ -296,7 +258,6 @@ const Program = ({ data, pageContext, yml }) => {
       />
 
       <Loc lang={pageContext.lang} allLocationYaml={data.allLocationYaml} />
->>>>>>> 9a54c74f5523fee106fa0abe9dc673de503b882c
     </>
   );
 };
@@ -399,10 +360,7 @@ export const query = graphql`
             syllabus_btn_label
             syllabus_motivation
             apply_button_link
-<<<<<<< HEAD
-=======
             apply_button_text
->>>>>>> 9a54c74f5523fee106fa0abe9dc673de503b882c
           }
           meta_info {
             title
@@ -469,9 +427,6 @@ export const query = graphql`
             sub_heading
             sub_heading_link
           }
-<<<<<<< HEAD
-
-=======
           overlaped {
             heading
             paragraph
@@ -511,7 +466,6 @@ export const query = graphql`
               }
             }
           }
->>>>>>> 9a54c74f5523fee106fa0abe9dc673de503b882c
           prices {
             heading
             sub_heading
@@ -549,43 +503,6 @@ export const query = graphql`
         }
       }
     }
-<<<<<<< HEAD
-    allAlumniProjectsYaml(filter: { fields: { lang: { eq: $lang } } }) {
-      edges {
-        node {
-          header {
-            tagline
-            sub_heading
-          }
-          projects {
-            project_name
-            slug
-            project_image {
-              childImageSharp {
-                gatsbyImageData(
-                  layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                  width: 800
-                  placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
-                )
-              }
-            }
-            project_content
-            project_video
-            live_link
-            github_repo
-            alumni {
-              first_name
-              last_name
-              job_title
-              github
-              linkedin
-              twitter
-            }
-          }
-          button_section {
-            button_text
-            button_link
-=======
     allScholarshipProjectsYaml(filter: { fields: { lang: { eq: $lang } } }) {
       edges {
         node {
@@ -641,7 +558,6 @@ export const query = graphql`
           }
           fields {
             lang
->>>>>>> 9a54c74f5523fee106fa0abe9dc673de503b882c
           }
         }
       }
@@ -728,11 +644,7 @@ export const query = graphql`
                 childImageSharp {
                   gatsbyImageData(
                     layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-<<<<<<< HEAD
-                    width: 150
-=======
                     width: 350
->>>>>>> 9a54c74f5523fee106fa0abe9dc673de503b882c
                     placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                   )
                 }
@@ -747,11 +659,7 @@ export const query = graphql`
                 childImageSharp {
                   gatsbyImageData(
                     layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-<<<<<<< HEAD
-                    width: 100
-=======
                     width: 300
->>>>>>> 9a54c74f5523fee106fa0abe9dc673de503b882c
                     placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                   )
                 }
@@ -768,11 +676,7 @@ export const query = graphql`
                 childImageSharp {
                   gatsbyImageData(
                     layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-<<<<<<< HEAD
-                    width: 100
-=======
                     width: 300
->>>>>>> 9a54c74f5523fee106fa0abe9dc673de503b882c
                     placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                   )
                 }
@@ -826,19 +730,13 @@ export const query = graphql`
           meta_info {
             slug
             description
-<<<<<<< HEAD
-=======
             title
->>>>>>> 9a54c74f5523fee106fa0abe9dc673de503b882c
             image
             position
             visibility
             keywords
             redirects
-<<<<<<< HEAD
-=======
             region
->>>>>>> 9a54c74f5523fee106fa0abe9dc673de503b882c
           }
           header {
             sub_heading
