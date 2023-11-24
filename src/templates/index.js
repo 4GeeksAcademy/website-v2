@@ -27,38 +27,11 @@ import Testimonials from "../components/Testimonials";
 import { isDevelopment, isTestMode } from "../components/NavbarDesktop";
 import TwoColumn from "../components/TwoColumn/index.js";
 
-const SVGBubblesLeft = () => (
-  <svg
-    style={{ top: "62px", left: "0", position: "absolute", zIndex: -1 }}
-    width="26"
-    height="362"
-    viewBox="0 0 26 362"
-    fill="none"
-    xmlns="https://www.w3.org/2000/svg"
-  >
-    <circle cx="-2.5" cy="333.5" r="28.5" fill="#FFB718" fillOpacity="0.2" />
-    <circle cx="-10.5" cy="26.5" r="26.5" fill="#0097CD" />
-  </svg>
-);
-
-const SVGBubblesRight = () => (
-  <svg
-    style={{ top: "10px", right: "0", position: "absolute", zIndex: -1 }}
-    width="50"
-    height="160"
-    viewBox="0 0 50 160"
-    fill="none"
-    xmlns="https://www.w3.org/2000/svg"
-  >
-    <circle cx="12.5" cy="73.5" r="12.5" fill="#CD0000" />
-    <circle cx="89" cy="80" r="80" fill="#FFB718" fillOpacity="0.2" />
-  </svg>
-);
-
 const Home = (props) => {
   const { data, pageContext, yml } = props;
 
   const hiring = data.allPartnerYaml.edges[0].node;
+  const landingHiring = yml.partners;
   const { session } = React.useContext(SessionContext);
   const [city, setCity] = useState("");
 
@@ -77,10 +50,9 @@ const Home = (props) => {
 
     if (session?.language && window && window.location.pathname === "/")
       navigate(
-        `${
-          props.pageContext.translations[
-            session.language === "en" ? "us" : session.language
-          ]
+        `${props.pageContext.translations[
+        session.language === "en" ? "us" : session.language
+        ]
         }`
       );
 
@@ -108,16 +80,6 @@ const Home = (props) => {
 
   return (
     <>
-      <Div
-        display="flex"
-        position="absolute"
-        width="100%"
-        zIndex="0"
-        display_tablet="none"
-      >
-        <SVGBubblesLeft />
-        <SVGBubblesRight />
-      </Div>
       <Div
         flexDirection="column"
         margin={
@@ -341,9 +303,11 @@ const Home = (props) => {
           />
         </Div>
       </Div>
+
       <Testimonials
         lang={data.allTestimonialsYaml.edges}
         background={Colors.verylightGray}
+        noMove // no movement and show slider
       />
 
       <About4Geeks lang={data.allAbout4GeeksYaml.edges} />
@@ -382,11 +346,20 @@ const Home = (props) => {
 
       <OurPartners
         images={hiring.partners.images}
+        margin="0"
+        padding="50px 0"
         marquee
-        title={hiring.partners.tagline}
-        paragraph={hiring.partners.sub_heading}
+        paddingFeatured="0 0 50px 0"
+        featuredImages={landingHiring?.featured}
+        showFeatured
+        withoutLine
+        title={landingHiring ? landingHiring.heading : hiring.partners.tagline}
+        paragraph={
+          landingHiring
+            ? landingHiring.sub_heading
+            : hiring.partners.sub_heading
+        }
       />
-
       <Loc lang={pageContext.lang} allLocationYaml={data.allLocationYaml} />
     </>
   );
@@ -542,8 +515,8 @@ export const query = graphql`
               image {
                 childImageSharp {
                   gatsbyImageData(
-                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                    width: 150
+                    layout: FULL_WIDTH # --> CONSTRAINED || FIXED || FULL_WIDTH
+                    width: 200
                     placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                   )
                 }

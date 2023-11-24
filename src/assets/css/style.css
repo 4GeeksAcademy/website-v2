@@ -469,6 +469,11 @@ a.faq-link:hover {
   display: flex;
 }
 
+.testimonial-slider-hidden::-webkit-scrollbar {
+  height: 5px;
+  display: none;
+}
+
 .badge-slider::-webkit-scrollbar-track {
   margin-top: 10px;
   border-radius: 5px;

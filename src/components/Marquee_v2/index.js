@@ -76,7 +76,13 @@ export default function Marquee_v2({
       <div ref={ref} className={marquee__measure} aria-hidden>
         {children}
       </div>
-      <DragScrollProvider className={`${marquee__overflow} testimonial-slider`}>
+      <DragScrollProvider 
+        className={ props.showSlider ? 
+          `${marquee__overflow} testimonial-slider`
+          : 
+          `${marquee__overflow} testimonial-slider-hidden`
+        }
+      >
         <Marquee_elements
           reversed={props.reversed}
           animated={count !== null}

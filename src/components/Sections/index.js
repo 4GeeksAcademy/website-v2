@@ -523,6 +523,7 @@ export const Old_Grid = styled.div`
 
 export const Header = ({
   hideArrowKey,
+  uppercase,
   children,
   fontSize,
   fontSize_tablet,
@@ -541,6 +542,7 @@ export const Header = ({
   margin,
   margin_tablet,
   padding,
+  padding_xxs,
   padding_tablet,
   padding_lg,
   padding_md,
@@ -570,7 +572,7 @@ export const Header = ({
       position={position}
       margin={margin || "70px 0 0 0"}
       margin_tablet={margin_tablet}
-      padding={padding || "60px 20px"}
+      padding={padding_xxs || "60px 20px"}
       padding_tablet={padding_tablet || "60px 40px"}
       padding_md={padding_md || "60px 80px"}
       padding_lg={padding_lg || "60px 0"}
@@ -591,7 +593,7 @@ export const Header = ({
             type="h2"
             textAlign_tablet={textAlign_tablet}
             margin="0 0 11px 0"
-            padding="0 20px"
+            //padding="0 20px"
             color="#606060"
             fontSize={fontSize_seo || "12px"}
             //fontFamily={fontFamily_title}
@@ -601,13 +603,14 @@ export const Header = ({
           <H1
             type="h1"
             textAlign_tablet={textAlign_tablet}
-            padding="0 20px"
+            //padding="0 20px"
             padding_tablet={paddingTitle_tablet}
             fontSize={fontSize_title || "40px"}
             fontSize_tablet={fontSizeTitle_tablet || "50px"}
             lineHeight={lineHeight || "50px"}
             lineHeight_tablet={lineHeight_tablet || "60px"}
             fontFamily={fontFamily_title}
+            textTransform={uppercase && "uppercase"}
             //fontSize={fontSize || "40px"}
             //fontSize_tablet={fontSize_tablet || "50px"}
           >
@@ -643,6 +646,8 @@ export const Header = ({
     </Grid>
   );
 };
+
+
 
 export const GridContainer = ({
   id,
@@ -712,6 +717,7 @@ export const GridContainer = ({
   justifyContentChild,
   justifyItemsChild,
 }) => {
+  console.log(height_tablet)
   return (
     <Grid
       id={id}

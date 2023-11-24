@@ -36,7 +36,7 @@ const Badges = ({
                 childImageSharp {
                   gatsbyImageData(
                     layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                    height: 120 # --> maxHeight
+                    height: 150 # --> maxHeight
                     quality: 100
                     placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                     # transformOptions: {fit: COVER}
