@@ -148,7 +148,7 @@ export const NavbarMobile = ({
     */
   let findCity = currentLocation.find((loc) => loc.node?.city === city);
   useEffect(() => {
-    if (findCity !== undefined){
+    if (findCity !== undefined) {
       setButtonText(findCity.node.button.apply_button_text);
       setContentBar(findCity.node.custom_bar);
     }
@@ -218,11 +218,15 @@ export const NavbarMobile = ({
     <>
       <Nav
         display_md="none"
-        style={{ top: 
-          `${isCustombarActive && !isDevelopment && contentBar.button ? "84px" 
-            : isCustombarActive && !isDevelopment && !contentBar.button ?
-            "60px" : "0px"}` }}
-
+        style={{
+          top: `${
+            isCustombarActive && !isDevelopment && contentBar.button
+              ? "84px"
+              : isCustombarActive && !isDevelopment && !contentBar.button
+              ? "60px"
+              : "0px"
+          }`,
+        }}
         display="flex"
       >
         <Div alignItems="center">
