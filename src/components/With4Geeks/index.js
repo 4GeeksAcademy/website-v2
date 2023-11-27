@@ -69,14 +69,15 @@ export default ({
   let locationFiltered;
 
   if (sessionLocation)
-    locationFiltered = info.with.filter(
+    locationFiltered = info?.with.filter(
       (n) =>
         n.location === "all" ||
         n.location.includes("all") ||
         !sessionLocation ||
         n.location.includes(sessionLocation)
     );
-  else locationFiltered = info.with;
+  else locationFiltered = info?.with;
+
   return (
     <Fragment github="/components/with_4geeks">
       {info?.header && (

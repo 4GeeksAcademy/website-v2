@@ -148,7 +148,7 @@ const PricingCard = ({
                   backgroundSize="contain"
                   height="17px"
                   minWidth="30px"
-                  width="auto"
+                  width="50px"
                   margin="0 5px"
                 />
               ))}

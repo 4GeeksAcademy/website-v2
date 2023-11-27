@@ -60,7 +60,7 @@ const WeTrust = ({ we_trust }) => {
               width_md="320px"
               height_md="320px"
               width_tablet="200px"
-              height_tablet="200px"
+              height_tablet="240px"
               boxShadow="6px 6px 0px 0px rgba(0,0,0,1)"
               boxShadow_tablet="9px 8px 0px 0px rgba(0,0,0,1)"
               flexDirection_tablet="column"

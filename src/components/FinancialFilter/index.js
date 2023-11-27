@@ -1,6 +1,6 @@
 import React, { useState, useContext, useEffect } from "react";
 import { useStaticQuery, graphql } from "gatsby";
-import { Link } from "../Styling/index";
+import { Img, Link } from "../Styling/index";
 import { GridContainer, Grid, Div } from "../Sections";
 import { SelectRaw } from "../Select";
 import { H2, H3, Paragraph } from "../Heading";
@@ -215,37 +215,42 @@ const FinancialFilter = (props) => {
       margin="0 0 0 0"
       github="/location"
       flexDirection="column"
+      //padding_xxs="0 20px"
+      padding_md="0 80px"
+      padding_lg="0 80px"
+      padding_tablet="0 40px"
     >
-      <GridContainer
-        padding="13px 0"
-        padding_tablet="13px 0 0 0"
-        margin="0 10px 3em 10px"
-        margin_tablet="0 5rem 4em 5rem"
+      <Div
+        padding="22px"
+        padding_tablet="22px"
+        margin="0 0 3em 0"
+        margin_tablet="0 0 4em 0"
         containerColumns_tablet={`0fr repeat(12, 1fr) 0fr`}
         containerGridGap="20px"
-        margin_md="0 20% 4em 20%"
+        margin_md="0 0% 4em 0%"
         background={Colors.white}
         height="100%"
-        height_tablet="70px"
+        height_tablet="95px"
         border="3px solid black"
-        id="assa"
+        justifyContent="center"
       >
-        <Grid
+        <Div
           gridTemplateColumns_tablet="repeat(4, 1fr)"
           width_xxs="200px"
           width_xs="250px"
           width_sm="320px"
-          width_tablet="auto"
-          gridGap_tablet="20px"
-          gridGap="8px"
+          width_tablet="100%"
+          gap_tablet="20px"
+          gap="8px"
           justifySelf="center"
           justifySelf_tablet="inherit"
           flexDirection_tablet="row"
           flexDirection="column"
           justifyContent="center"
-          alignItems="center"
+          alignItems_tablet="start"
         >
           {!props.course && (
+            
             <SelectRaw
               options={courseArray}
               placeholder={props.program}
@@ -254,6 +259,7 @@ const FinancialFilter = (props) => {
             />
           )}
           {props.modality && (
+            
             <SelectRaw
               options={modalityArray}
               placeholder={props.modality}
@@ -262,6 +268,7 @@ const FinancialFilter = (props) => {
             />
           )}
           {!props.course && (
+            
             <SelectRaw
               options={locations
                 .map((l) => ({
@@ -310,8 +317,8 @@ const FinancialFilter = (props) => {
               </Button>
             </Div>
           )}
-        </Grid>
-      </GridContainer>
+        </Div>
+      </Div>
 
       {!prices || prices.length === 0 ? (
         <>
@@ -322,12 +329,12 @@ const FinancialFilter = (props) => {
         </>
       ) : (
         <GridContainer
-          padding="0 16px"
-          containerColumns_md={`2fr repeat(12, 1fr) 2fr`}
+          padding="0"
+          //containerColumns_md={`2fr repeat(12, 1fr) 2fr`}
           containerColumns_tablet={`0fr repeat(12, 1fr) 0fr`}
           background="transparent"
           columns_tablet="1"
-          gridGap_tablet="0"
+          containerGridGap="0px"
           padding_tablet={props.padding_tablet || "4.5rem 16px"}
         >
           {prices && Array.isArray(prices) && (
@@ -351,12 +358,18 @@ const FinancialFilter = (props) => {
                       justifyContent="center"
                       placeItems="center"
                       display="flex"
-                      className="badge-slider hideOverflowX__"
+                      flexWrap="wrap"
+                    //className="badge-slider hideOverflowX__"
                     >
                       {label.icons?.map((logo) => (
-                        <img
-                          style={{ margin: "auto 5px", height: "25px" }}
+                        <Img
                           src={logo}
+                          alt="4Geeks Academy Icon"
+                          backgroundSize="contain"
+                          height="56px"
+                          minWidth="30px"
+                          width="96px"
+                          margin="0 5px"
                         />
                       ))}
                     </Div>

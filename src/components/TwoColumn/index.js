@@ -20,6 +20,7 @@ const Side = ({
   boxes,
   session,
   padding_tablet,
+  side,
 }) => {
   const utm = session && session.utm;
   if (video)
@@ -35,7 +36,7 @@ const Side = ({
         }}
       />
     );
-
+        console.log(side)
   if (image) {
     const imgStyles = image.style ? JSON.parse(image.style) : null;
     const [img_h_xl, img_h_lg, img_h_md, img_h_sm, img_h_xs] =
@@ -56,11 +57,11 @@ const Side = ({
         style={imgStyles}
         alt="4Geeks Academy Section"
         margin="0px"
-        height={img_h_xl || "500px"}
+        height={img_h_xl || "100%"}
         width={imgStyles ? imgStyles.width || "100%" : "100%"}
-        h_sm={img_h_sm || "500px"}
+        h_sm={img_h_sm || "100%"}
         backgroundSize={image.shadow ? "cover" : "contain"}
-        //backgroundPosition="center right"
+        position={side}
         //border={image.shadow && "3px solid black"}
         boxShadow={image.shadow && "20px 15px 0px 0px rgba(0,0,0,1)"}
       />
@@ -295,7 +296,7 @@ const Side = ({
               border="3px solid #000"
               width="100%"
               width_md="320px"
-              height_md="320px"
+              minHeight_md="260px"
               width_tablet="200px"
               height_tablet="200px"
               boxShadow="6px 6px 0px 0px rgba(0,0,0,1)"
@@ -368,7 +369,7 @@ const TwoColumn = ({ left, right, proportions, session }) => {
         // maxHeight="300px"
         textAlign="center"
       >
-        <Side session={session} {...left} />
+        <Side session={session} {...left} side="left"/>
       </Div>
       <Div
         justifyContent={right?.video && "center"}
@@ -379,7 +380,7 @@ const TwoColumn = ({ left, right, proportions, session }) => {
         size="12"
         textAlign="center"
       >
-        <Side session={session} {...right} />
+        <Side session={session} {...right} side="right"/>
       </Div>
     </Div>
   );

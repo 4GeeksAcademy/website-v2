@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useContext } from "react";
 import PropTypes from "prop-types";
 import { Button, Colors } from "../Styling";
-import { H4 } from "../Heading";
+import { H4, Paragraph, Span } from "../Heading";
 import Icon from "../Icon";
 import { Div, Column } from "../Sections";
 import Select from "react-select";
@@ -133,11 +133,13 @@ const customStyles = {
     ...styles,
     width: "100%",
     margin: "0px",
+    padding: "10px 0",
+    zIndex: "5",
   }),
   control: (styles, state) => ({
     ...styles,
     fontFamily: "Lato, sans-serif",
-    // background: "#ffffff",
+    background: "#ffffff",
     border: state.isFocused ? "1px solid #000000" : "1px solid #A4A4A4",
     boxShadow: "none",
 
@@ -154,21 +156,44 @@ const customStyles = {
     return {
       ...styles,
       fontFamily: "Lato, sans-serif",
+      //position: "absolute",
+      zIndex: "50",
     };
   },
 };
 
-export const SelectRaw = ({ onChange, ...rest }) => {
+export const SelectRaw = ({ onChange, topLabel, ...rest }) => {
+
   return (
-    <Select
-      className="react-select-wrapper"
-      data-cy="react_select_wrapper"
-      styles={customStyles}
-      {...rest}
-      onChange={(opt) => {
-        if (onChange) onChange(opt, true);
-      }}
-    />
+    <Div position="relative" width="100%">
+      {rest.placeholder &&
+        <Paragraph
+          style={{
+            position: "absolute",
+            top: "-13px",
+            left: "10px",
+            zIndex: "1",
+            background: "white",
+            fontSize: "10px",
+            opacity: "1",
+            width: "fit-content",
+            height: "20px",
+            padding: "0 4px",
+          }}
+        >
+          {rest.placeholder}
+        </Paragraph>
+      }
+      <Select
+        className="react-select-wrapper"
+        data-cy="react_select_wrapper"
+        styles={customStyles}
+        {...rest}
+        onChange={(opt) => {
+          if (onChange) onChange(opt, true);
+        }}
+      />
+    </Div>
   );
 };
 SelectRaw.propTypes = {

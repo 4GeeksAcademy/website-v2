@@ -285,7 +285,7 @@ part_time:
       - "You're saving $4000 USD. Thanks to Clark University TechBoost Fund"
       - "You have to be underemployed or unemployed, and provide a valid US Work permit."
     icons: 
-      - "/static/images/clarkuniversity.png"
+      - "/images/clarkuniversity.png"
     
   - slug: 'usa-clark-scholarship-pt-miami'
     academies: ['downtown-miami']
@@ -297,7 +297,7 @@ part_time:
       - "You're saving $4000 USD. Thanks to Clark University TechBoost Fund"
       - "You have to be underemployed or unemployed, and provide a valid US Work permit."
     icons: 
-      - "/static/images/clarkuniversity.png"
+      - "/images/clarkuniversity.png"
 
   - slug: 'usa-isa-pt'
     academies: ['orlando', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa','toronto-canada']
@@ -309,7 +309,7 @@ part_time:
       - "Focus on your career and not how to afford your education"
       - "8.5% of your salary until paid in full (1.5x revenue cap), only if you get a job in tech."
     icons: 
-      - "/static/images/miashare.png"      
+      - "/images/miashare.png"      
 
   - slug: 'spain-upfront-fs-pt'
     academies: ['barcelona-spain','madrid-spain', 'malaga-spain', 'valencia-spain']
@@ -479,7 +479,7 @@ part_time:
       - "We offer a number of full or partial scholarship options that you could be eligible for." 
       - "Pay only for the Full-Stack program if you are not interested yet in our career support program and our job guarantee"   
     icons: 
-      - "/images/partner/flevo.png" 
+      - "/images/partner/flevo-new.png" 
 
   - slug: 'venezuela-scholarship-pt'
     academies: ['caracas-venezuela']

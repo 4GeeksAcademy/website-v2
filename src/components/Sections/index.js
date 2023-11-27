@@ -325,6 +325,7 @@ export const Div = styled.div`
         ? `${(props.size_md / 12) * 100}%`
         : null};
     min-width: ${(props) => props.minWidth_md};
+    min-height: ${(props) => props.minHeight_md};
     grid-area: ${(props) => props.gridArea_md};
     display: ${(props) => props.display_md};
     flex-direction: ${(props) => props.flexDirection_md};
