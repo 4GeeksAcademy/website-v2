@@ -9,11 +9,20 @@ const CardsCarousel = ({
   lang,
   landingTemplate,
   title,
+  cardWidth,
   sub_title,
   content,
   button,
   cards,
 }) => {
+  if(!Array.isArray(cardWidth)) cardWidth = [cardWidth || "250px"];
+  if (cardWidth.length > 0) {
+    let lastValue = cardWidth[cardWidth.length - 1];
+    for (let i = 0; i < 4 - cardWidth.length; i++) {
+      cardWidth.push(lastValue);
+    }
+}
+
   return (
     <>
       <Div
@@ -67,26 +76,40 @@ const CardsCarousel = ({
           <Div
             key={index}
             flexDirection="column"
-            width="266px"
             height={card.button ? "auto" : "fit-content"}
             //height="auto"
+            width_xxs={`${cardWidth[0]}`}
+            width_sm={`${cardWidth[1]}`}
+            width_md={`${cardWidth[2]}`}
+            width_lg={`${cardWidth[3]}`}
             border="2px solid black"
             margin="0 12px"
             //margin={card.button ? "0 12px" : "0 12px 24px 12px"}
             background={Colors.white}
           >
-            <Img src={card.image.src} width="262px" height="266px" />
-            <Div height="70px">
+            <Img src={card.image.src} height="266px" />
+            <Div>
               <H1
                 textTransform="uppercase"
                 fontSize={card.heading.font_size}
                 fontWeight="900"
                 lineHeight="19px"
                 padding="24px 5px 12px 5px"
+                style={card.heading.style ? JSON.parse(card.heading.style) : null}
               >
                 {card.heading.text}
               </H1>
             </Div>
+
+            {card.content &&
+                <Div
+                justifyContent="center"
+                alignItems="center"
+                style={card.content.style ? JSON.parse(card.content.style) : null}
+              >
+                {card.content.text}
+              </Div>
+            }
 
             <Div
               padding={card.button ? "12px 0" : "12px 0 0 0"}

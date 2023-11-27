@@ -501,6 +501,9 @@ export const query = graphql`
             background
             proportions
             layout
+            video
+            height
+            width
             filter_indexes
             text_link
             icons {
@@ -522,8 +525,6 @@ export const query = graphql`
               text_link
               link
             }
-            video
-            height
             button {
               text
               color
@@ -566,7 +567,12 @@ export const query = graphql`
               }
               heading {
                 text
+                style
                 font_size
+              }
+              content{
+                text
+                style
               }
               button {
                 text
