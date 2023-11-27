@@ -139,15 +139,19 @@ export const NavbarMobile = ({
   let city = session && session.location ? session.location.city : [];
   let isCustombarActive =
     session && session.location && session.location.custom_bar.active;
+
   let currentLocation = locationCity ? locationCity : [];
   const [buttonText, setButtonText] = useState("");
+  const [contentBar, setContentBar] = useState({});
   /* In case of want change the Button text "Aplica" search the key 
         "apply_button_text" in /src/data/location/locationfile.yaml
     */
   let findCity = currentLocation.find((loc) => loc.node?.city === city);
   useEffect(() => {
-    if (findCity !== undefined)
+    if (findCity !== undefined){
       setButtonText(findCity.node.button.apply_button_text);
+      setContentBar(findCity.node.custom_bar);
+    }
   }, [findCity]);
 
   const data = useStaticQuery(graphql`
@@ -214,9 +218,11 @@ export const NavbarMobile = ({
     <>
       <Nav
         display_md="none"
-        style={{
-          top: `${isCustombarActive && !isDevelopment() ? "50px" : "0px"}`,
-        }}
+        style={{ top: 
+          `${isCustombarActive && !isDevelopment && contentBar.button ? "84px" 
+            : isCustombarActive && !isDevelopment && !contentBar.button ?
+            "60px" : "0px"}` }}
+
         display="flex"
       >
         <Div alignItems="center">

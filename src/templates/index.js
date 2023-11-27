@@ -120,7 +120,7 @@ const Home = (props) => {
       <Div
         flexDirection="column"
         margin={
-          isContentBarActive ? "110px auto 72px auto" : "72px auto 72px auto"
+          isContentBarActive ? "154px auto 72px auto" : "72px auto 72px auto"
         }
         margin_tablet={
           isContentBarActive ? "120px auto 108px auto" : "72px auto 108px auto"

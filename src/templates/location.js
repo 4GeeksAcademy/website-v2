@@ -69,7 +69,7 @@ const Location = ({ data, pageContext, yml }) => {
         padding="0"
         padding_tablet="0 0 20px 0"
         columns_tablet="14"
-        margin={isCustomBarActive(session) ? "70px 0 24px 0" : "70px 0"}
+        margin={isCustomBarActive(session) ? "104px 0 24px 0" : "70px 0"}
       >
         <Div
           flexDirection="column"

@@ -48,7 +48,7 @@ const GeekPal = (props) => {
   return (
     <>
       <Grid
-        padding="24px 20px"
+        padding="60px 20px 24px 20px"
         padding_tablet="100px 40px 40px 40px"
         padding_md="100px 80px 40px 80px"
         padding_lg="100px 0px 40px 0px"
