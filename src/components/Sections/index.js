@@ -213,6 +213,7 @@ export const Div = styled.div`
     padding: ${(props) => props.padding_xs};
     column-count: ${(props) => props.columnCount_xs};
     flex-direction: ${(props) => props.flexDirection_xs};
+    flex-wrap: ${(props) => props.flexWrap_xs};
     width: ${(props) => props.width_xs};
     max-width: ${(props) => props.maxWidth_xs};
     height: ${(props) => props.height_xs};

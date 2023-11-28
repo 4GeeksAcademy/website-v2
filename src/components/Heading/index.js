@@ -209,7 +209,8 @@ export const Paragraph = styled.p`
   border-left: ${(props) => props.borderLeft};
   opacity: ${(props) =>
     props.isActive ? 1 : props.opacity ? props.opacity : 0.8};
-
+  top: ${(props) => props.top};
+  left: ${(props) => props.left};
   a {
     color: ${Colors.blue};
   }
@@ -246,6 +247,10 @@ export const Paragraph = styled.p`
     margin: ${(props) => props.margin_tablet};
     text-transform: ${(props) => props.textTransform_tablet};
     line-height: ${(props) => props.lineHeight_tablet};
+    z-index: ${(props) => props.zIndex_tablet}; 
+    top: ${(props) => props.top_tablet};
+    left: ${(props) => props.left_tablet};
+    
   }
   @media ${Devices.md} {
     text-align: ${(props) => props.textAlign_md};

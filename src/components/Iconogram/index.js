@@ -73,7 +73,10 @@ const Iconogram = ({ session, data, pageContext, yml, index }) => {
       <Div
         display="flex"
         flexDirection="column"
+        flexDirection_xs="row"
         flexDirection_tablet="row "
+        flexWrap_xs="wrap"
+        flexWrap_tablet="nowrap"
         justifyContent="center"
         // gap="45px"
         gap_tablet={icons.length > 4 ? "0px" : "3%"}
@@ -84,6 +87,7 @@ const Iconogram = ({ session, data, pageContext, yml, index }) => {
         padding_md="0 80px"
         padding_lg="0"
         className={swipable && "badge-slider hideOverflowX__"}
+        id="accccccccccc"
       >
         {Array.isArray(icons) &&
           icons?.map((item, index) => {

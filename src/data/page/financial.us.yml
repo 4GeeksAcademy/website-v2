@@ -93,7 +93,7 @@ two_columns:
       - 6
       - 6
     image:
-      style: '{ "backgroundSize": "contain", "height": "500px" }'
+      style: '{ "backgroundSize": "contain" }'
       src: /images/landing/Group-6626.png
     heading:
       text: $20 Millions in scholarships
@@ -129,7 +129,7 @@ two_columns:
       - 6
       - 6
     image:
-      style: '{ "backgroundSize": "contain", "height": "500px"}'
+      style: '{ "backgroundSize": "contain"}'
       src: /images/landing/20-million-column.png
     heading:
       text: 62% of bootcamp applicants are rejected due to financial reasons.
@@ -161,16 +161,16 @@ two_columns:
 
   - proportions: [6, 6]
     image:
-      style: '{ "backgroundSize": "contain", "height": "500px"}'
+      style: '{ "backgroundSize": "contain"}'
       src: "/images/woman-glasses-laptop.png"
     heading:
       text: "Job guarantee commitment"
       font_size:
-        - 18px
         - 38px
         - 38px
         - 38px
-        - 38px
+        - 21px
+        - 21px
     sub_heading:
       text: "Our Job Guarantee Program consists of 3 stages that are needed to be complete as part of your process. It’s three bootcamps in One:"
       font_size:

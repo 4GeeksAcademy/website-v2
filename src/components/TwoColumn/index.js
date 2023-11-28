@@ -36,7 +36,6 @@ const Side = ({
         }}
       />
     );
-  console.log(side);
   if (image) {
     const imgStyles = image.style ? JSON.parse(image.style) : null;
     const [img_h_xl, img_h_lg, img_h_md, img_h_sm, img_h_xs] =
@@ -57,9 +56,11 @@ const Side = ({
         style={imgStyles}
         alt="4Geeks Academy Section"
         margin="0px"
-        height={img_h_xl || "100%"}
+        height_md={img_h_xl || "100%"}
+        minHeight="500px"
         width={imgStyles ? imgStyles.width || "100%" : "100%"}
-        h_sm={img_h_sm || "100%"}
+        h_sm={img_h_sm}
+        height_xxs={img_h_xs || "500px"}
         backgroundSize={image.shadow ? "cover" : "contain"}
         position={side}
         //border={image.shadow && "3px solid black"}

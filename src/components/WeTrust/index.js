@@ -31,7 +31,8 @@ const WeTrust = ({ we_trust }) => {
           <H2
             textAlign="left"
             margin="0 0 22px 0"
-            fontSize="32px"
+            fontSize_tablet="32px"
+            fontSize="21px"
             lineHeight=""
           >
             {we_trust.title}
@@ -40,7 +41,8 @@ const WeTrust = ({ we_trust }) => {
             textAlign="left"
             color={Colors.darkGray}
             opacity="1"
-            fontSize="18px"
+            fontSize_tablet="18px"
+            fontSize="16px"
             dangerouslySetInnerHTML={{ __html: we_trust.text }}
           />
         </Div>
@@ -79,7 +81,7 @@ const WeTrust = ({ we_trust }) => {
               >
                 <H3
                   textAlign="left"
-                  fontSize="30px"
+                  fontSize="35px"
                   fontSize_tablet="65px"
                   fontFamily="Archivo-Black"
                   margin="0 0 30px 0"

@@ -218,6 +218,7 @@ const StyledImage = styled.div`
   }
   @media ${Devices.md} {
     display: ${(props) => props.display_md};
+    height: ${(props) => props.height_md};
     left: ${(props) => props.left_md};
     right: ${(props) => props.right_md};
     top: ${(props) => props.top_md};

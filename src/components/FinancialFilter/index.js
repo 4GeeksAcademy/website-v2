@@ -149,6 +149,39 @@ const FinancialFilter = (props) => {
       )?.node[modality?.value];
   };
 
+  const selectStyle = {
+    input: (styles) => ({
+      ...styles,
+      width: "100%",
+      margin: "0px",
+      padding: "10px 0",
+    }),
+    control: (styles, state) => ({
+      ...styles,
+      fontFamily: "Lato, sans-serif",
+      background: "#ffffff",
+      border: "1px solid #000",
+      boxShadow: "none",
+  
+      marginBottom:"0px",
+      marginTop: "0px",
+  
+      width: "100%",
+      fontSize: "15px",
+      fontWeight: "400",
+      color: "#000",
+      lineHeight: "22px",
+      "&:hover": { boxShadow: "0 0 0 1px black" },
+      "&:focus": { boxShadow: "0 0 0 1px black", border: "1px solid #000000" },
+    }),
+    option: (styles, { data, isDisabled, isFocused, isSelected }) => {
+      return {
+        ...styles,
+        fontFamily: "Lato, sans-serif",
+      };
+    },
+  };
+
   useEffect(() => {
     setLocations(
       props.locations.filter(
@@ -221,7 +254,7 @@ const FinancialFilter = (props) => {
       padding_tablet="0 40px"
     >
       <Div
-        padding="22px"
+        padding="34px 24px 24px 24px"
         padding_tablet="22px"
         margin="0 0 3em 0"
         margin_tablet="0 0 4em 0"
@@ -255,6 +288,8 @@ const FinancialFilter = (props) => {
               placeholder={props.program}
               value={course}
               onChange={(opt) => setCourse(opt)}
+              style={selectStyle}
+              //display="none"
             />
           )}
           {props.modality && (
@@ -263,6 +298,8 @@ const FinancialFilter = (props) => {
               placeholder={props.modality}
               value={modality}
               onChange={(opt) => setModality(opt)}
+              style={selectStyle}
+              //display="none"
             />
           )}
           {!props.course && (
@@ -293,6 +330,8 @@ const FinancialFilter = (props) => {
                   ).node
                 )
               }
+              style={selectStyle}
+              //display="none"
             />
           )}
 
@@ -304,7 +343,7 @@ const FinancialFilter = (props) => {
                 onClick={() => {
                   search();
                 }}
-                margin_tablet="0 0 16px 0"
+                margin_tablet="5px 0 0 0"
                 height_tablet="38px"
                 width="100%"
                 width_tablet="auto"

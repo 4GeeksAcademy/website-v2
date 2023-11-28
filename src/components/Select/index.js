@@ -134,7 +134,6 @@ const customStyles = {
     width: "100%",
     margin: "0px",
     padding: "10px 0",
-    
   }),
   control: (styles, state) => ({
     ...styles,
@@ -142,12 +141,14 @@ const customStyles = {
     background: "#ffffff",
     border: state.isFocused ? "1px solid #000000" : "1px solid #A4A4A4",
     boxShadow: "none",
-    
-    marginBottom: "16px",
+
+    marginBottom:"0px",
     marginTop: "0px",
+
     width: "100%",
     fontSize: "15px",
     fontWeight: "400",
+    color: "#000",
     lineHeight: "22px",
     "&:hover": { boxShadow: "0 0 0 1px black" },
     "&:focus": { boxShadow: "0 0 0 1px black", border: "1px solid #000000" },
@@ -156,31 +157,39 @@ const customStyles = {
     return {
       ...styles,
       fontFamily: "Lato, sans-serif",
-      position: "relative",
-      zIndex: "10",
     };
   },
 };
 
 export const SelectRaw = ({ onChange, ...rest }) => {
-  let click = false;
-  console.log(click)
+
   return (
-    <Div position="relative" width="100%">
+    <Div 
+      position="relative" 
+      width="100%" 
+      margin={rest.placeholder ? "0 0 20px 0" : "0 0 16px 0"}
+      margin_tablet="0 0 16px 0"
+    >
       {rest.placeholder && (
         <Paragraph
+          display={rest.display || "flex"}
+          display_tablet="flex"
           style={{
             position: "absolute",
-            top: "-13px",
-            left: "10px",
-            zIndex: "1",
             background: "white",
-            fontSize: "10px",
+            fontSize: "13px",
+            color: "#000",
             opacity: "1",
             width: "fit-content",
             height: "20px",
             padding: "0 4px",
           }}
+          top= {rest.single ? "-13px" :"-20px"}
+          left="7px"
+          left_tablet="8px"
+          top_tablet = "-13px"
+          zIndex_tablet="1"
+          zIndex={rest.single ? "1" : "0"}
         >
           {rest.placeholder}
         </Paragraph>
@@ -188,7 +197,7 @@ export const SelectRaw = ({ onChange, ...rest }) => {
       <Select
         className="react-select-wrapper"
         data-cy="react_select_wrapper"
-        styles={customStyles}
+        styles={rest.style || customStyles}
         {...rest}
         onChange={(opt) => {
           if (onChange) onChange(opt, true);
