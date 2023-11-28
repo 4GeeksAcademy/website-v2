@@ -162,10 +162,10 @@ const FinancialFilter = (props) => {
       background: "#ffffff",
       border: "1px solid #000",
       boxShadow: "none",
-  
-      marginBottom:"0px",
+
+      marginBottom: "0px",
       marginTop: "0px",
-  
+
       width: "100%",
       fontSize: "15px",
       fontWeight: "400",

@@ -142,7 +142,7 @@ const customStyles = {
     border: state.isFocused ? "1px solid #000000" : "1px solid #A4A4A4",
     boxShadow: "none",
 
-    marginBottom:"0px",
+    marginBottom: "0px",
     marginTop: "0px",
 
     width: "100%",
@@ -162,11 +162,10 @@ const customStyles = {
 };
 
 export const SelectRaw = ({ onChange, ...rest }) => {
-
   return (
-    <Div 
-      position="relative" 
-      width="100%" 
+    <Div
+      position="relative"
+      width="100%"
       margin={rest.placeholder ? "0 0 20px 0" : "0 0 16px 0"}
       margin_tablet="0 0 16px 0"
     >
@@ -184,10 +183,10 @@ export const SelectRaw = ({ onChange, ...rest }) => {
             height: "20px",
             padding: "0 4px",
           }}
-          top= {rest.single ? "-13px" :"-20px"}
+          top={rest.single ? "-13px" : "-20px"}
           left="7px"
           left_tablet="8px"
-          top_tablet = "-13px"
+          top_tablet="-13px"
           zIndex_tablet="1"
           zIndex={rest.single ? "1" : "0"}
         >
@@ -201,7 +200,7 @@ export const SelectRaw = ({ onChange, ...rest }) => {
         {...rest}
         onChange={(opt) => {
           if (onChange) onChange(opt, true);
-        }}   
+        }}
       />
     </Div>
   );

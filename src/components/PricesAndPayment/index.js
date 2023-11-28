@@ -614,7 +614,7 @@ const PricesAndPayments = (props) => {
                       background: "#ffffff",
                       border: "1px solid #000",
                       boxShadow: "none",
-                      marginBottom:"0px",
+                      marginBottom: "0px",
                       marginTop: "0px",
                       width: "100%",
                       fontSize: "15px",
@@ -623,9 +623,15 @@ const PricesAndPayments = (props) => {
                       color: "#000",
                       lineHeight: "22px",
                       "&:hover": { boxShadow: "0 0 0 1px black" },
-                      "&:focus": { boxShadow: "0 0 0 1px black", border: "1px solid #000000" },
+                      "&:focus": {
+                        boxShadow: "0 0 0 1px black",
+                        border: "1px solid #000000",
+                      },
                     }),
-                    option: (styles, { data, isDisabled, isFocused, isSelected }) => {
+                    option: (
+                      styles,
+                      { data, isDisabled, isFocused, isSelected }
+                    ) => {
                       return {
                         ...styles,
                         fontFamily: "Lato, sans-serif",
