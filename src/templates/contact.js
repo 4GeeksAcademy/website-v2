@@ -124,11 +124,15 @@ const Contact = (props) => {
           }}
         />
       </Div>
+
       <Div
         margin={isCustomBarActive(session) ? "130px 0 64px 0" : "64px 0"}
         justifyContent="center"
         variant="fluid"
-        padding_md="17px 8px 40px 8px"
+        padding_xxs="40px 20px"
+        padding_md="40px 80px"
+        padding_lg="40px 0px"
+        padding_tablet="40px 40px"
       >
         <Div
           paddingRight="0px"
@@ -172,10 +176,8 @@ const Contact = (props) => {
           >
             <Old_Grid
               height="100%"
-              columns_md="3, 0fr"
+              columns_md="3fr 1fr 3fr"
               justifyContent="center"
-              padding_sm="0 40px"
-              padding_md="0 13%"
             >
               {formStatus.status === "thank-you" ? (
                 <Old_Grid
