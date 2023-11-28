@@ -94,7 +94,8 @@ const MenuItem = styled.li`
   }
 `;
 
-const parsedUrl = typeof window !== "undefined" ? new URL(window.location.href) : false;
+const parsedUrl =
+  typeof window !== "undefined" ? new URL(window.location.href) : false;
 
 export const isTestMode = parsedUrl
   ? parsedUrl.searchParams.get("test") === "true"
@@ -201,7 +202,9 @@ export const Navbar = ({
     }
   `);
 
-  const isContentBarActive = (contentBar.active && isTestMode) || (contentBar.active && !isDevelopment());
+  const isContentBarActive =
+    (contentBar.active && isTestMode) ||
+    (contentBar.active && !isDevelopment());
 
   const langDictionary = {
     us: "es",

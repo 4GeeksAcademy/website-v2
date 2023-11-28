@@ -108,12 +108,12 @@ const langDictionary = {
   es: "us",
 };
 
-const parsedUrl = typeof window !== "undefined" ? new URL(window.location.href) : false;
+const parsedUrl =
+  typeof window !== "undefined" ? new URL(window.location.href) : false;
 
 export const isTestMode = parsedUrl
   ? parsedUrl.searchParams.get("test") === "true"
   : false;
-
 
 export const NavbarMobile = ({
   lang,
@@ -155,15 +155,17 @@ export const NavbarMobile = ({
     */
   let findCity = currentLocation.find((loc) => loc.node?.city === city);
 
-  let isCustombarActive = session && session.location && session.location.custom_bar.active;
-  const isContentBarActive = (contentBar?.active && isTestMode) || (contentBar?.active && !isDevelopment());
+  let isCustombarActive =
+    session && session.location && session.location.custom_bar.active;
+  const isContentBarActive =
+    (contentBar?.active && isTestMode) ||
+    (contentBar?.active && !isDevelopment());
 
   useEffect(() => {
     if (findCity !== undefined)
       setButtonText(findCity.node.button.apply_button_text);
-      setContentBar(findCity?.node.custom_bar);
+    setContentBar(findCity?.node.custom_bar);
   }, [findCity]);
-
 
   //console.log(contentBar, currentLocation, session, findCity)
 
@@ -229,14 +231,14 @@ export const NavbarMobile = ({
   const locations = locByLanguage(data.allLocationYaml, langDictionary[lang]);
 
   const spacer = (isContentBarActive, contentBar) => {
-    if (isContentBarActive && (contentBar?.button == null)){
-      return "50px"
-    }else if(isContentBarActive && (contentBar?.button != null)){
-      return "85px"
-    }else{
-      return "0px"
+    if (isContentBarActive && contentBar?.button == null) {
+      return "50px";
+    } else if (isContentBarActive && contentBar?.button != null) {
+      return "85px";
+    } else {
+      return "0px";
     }
-  }
+  };
 
   return (
     <>

@@ -15,13 +15,13 @@ const CardsCarousel = ({
   button,
   cards,
 }) => {
-  if(!Array.isArray(cardWidth)) cardWidth = [cardWidth || "250px"];
+  if (!Array.isArray(cardWidth)) cardWidth = [cardWidth || "250px"];
   if (cardWidth.length > 0) {
     let lastValue = cardWidth[cardWidth.length - 1];
     for (let i = 0; i < 4 - cardWidth.length; i++) {
       cardWidth.push(lastValue);
     }
-}
+  }
 
   return (
     <>
@@ -95,21 +95,25 @@ const CardsCarousel = ({
                 fontWeight="900"
                 lineHeight="19px"
                 padding="24px 5px 12px 5px"
-                style={card.heading.style ? JSON.parse(card.heading.style) : null}
+                style={
+                  card.heading.style ? JSON.parse(card.heading.style) : null
+                }
               >
                 {card.heading.text}
               </H1>
             </Div>
 
-            {card.content &&
-                <Div
+            {card.content && (
+              <Div
                 justifyContent="center"
                 alignItems="center"
-                style={card.content.style ? JSON.parse(card.content.style) : null}
+                style={
+                  card.content.style ? JSON.parse(card.content.style) : null
+                }
               >
                 {card.content.text}
               </Div>
-            }
+            )}
 
             <Div
               padding={card.button ? "12px 0" : "12px 0 0 0"}
