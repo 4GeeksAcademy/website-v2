@@ -220,11 +220,9 @@ export const NavbarMobile = ({
         display_md="none"
         style={{
           top: `${
-            isCustombarActive && !isDevelopment && contentBar.button
-              ? "84px"
-              : isCustombarActive && !isDevelopment && !contentBar.button
-              ? "60px"
-              : "0px"
+            (isCustombarActive && contentBar.button)
+              ? "90px"
+              : (isCustombarActive && !contentBar.button) ? "60px": "0px"
           }`,
         }}
         display="flex"
