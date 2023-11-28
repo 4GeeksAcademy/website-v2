@@ -17,7 +17,7 @@ form:
   # posible fields: "first_name", "last_name", "full_name", "phone", "email"
   # always the first_name, email and phone will be mandatory if added.
   fields: ["full_name", "phone", "email"]
-  heading: "Descargar Guía"
+  heading: "Descargar Guía" 
   button_label: Descargar Gratis
   redirect: null #you can redirect to another url or entirely diffrent website
 # jumbotron on the top (cannot be commented out)
