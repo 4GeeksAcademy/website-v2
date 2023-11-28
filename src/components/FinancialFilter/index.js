@@ -250,7 +250,6 @@ const FinancialFilter = (props) => {
           alignItems_tablet="start"
         >
           {!props.course && (
-            
             <SelectRaw
               options={courseArray}
               placeholder={props.program}
@@ -259,7 +258,6 @@ const FinancialFilter = (props) => {
             />
           )}
           {props.modality && (
-            
             <SelectRaw
               options={modalityArray}
               placeholder={props.modality}
@@ -268,7 +266,6 @@ const FinancialFilter = (props) => {
             />
           )}
           {!props.course && (
-            
             <SelectRaw
               options={locations
                 .map((l) => ({
@@ -359,7 +356,7 @@ const FinancialFilter = (props) => {
                       placeItems="center"
                       display="flex"
                       flexWrap="wrap"
-                    //className="badge-slider hideOverflowX__"
+                      //className="badge-slider hideOverflowX__"
                     >
                       {label.icons?.map((logo) => (
                         <Img

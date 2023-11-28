@@ -36,7 +36,7 @@ const Side = ({
         }}
       />
     );
-        console.log(side)
+  console.log(side);
   if (image) {
     const imgStyles = image.style ? JSON.parse(image.style) : null;
     const [img_h_xl, img_h_lg, img_h_md, img_h_sm, img_h_xs] =
@@ -369,7 +369,7 @@ const TwoColumn = ({ left, right, proportions, session }) => {
         // maxHeight="300px"
         textAlign="center"
       >
-        <Side session={session} {...left} side="left"/>
+        <Side session={session} {...left} side="left" />
       </Div>
       <Div
         justifyContent={right?.video && "center"}
@@ -380,7 +380,7 @@ const TwoColumn = ({ left, right, proportions, session }) => {
         size="12"
         textAlign="center"
       >
-        <Side session={session} {...right} side="right"/>
+        <Side session={session} {...right} side="right" />
       </Div>
     </Div>
   );

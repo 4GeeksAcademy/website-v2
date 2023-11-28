@@ -134,7 +134,7 @@ const customStyles = {
     width: "100%",
     margin: "0px",
     padding: "10px 0",
-    zIndex: "5",
+    
   }),
   control: (styles, state) => ({
     ...styles,
@@ -142,7 +142,7 @@ const customStyles = {
     background: "#ffffff",
     border: state.isFocused ? "1px solid #000000" : "1px solid #A4A4A4",
     boxShadow: "none",
-
+    
     marginBottom: "16px",
     marginTop: "0px",
     width: "100%",
@@ -156,17 +156,18 @@ const customStyles = {
     return {
       ...styles,
       fontFamily: "Lato, sans-serif",
-      //position: "absolute",
-      zIndex: "50",
+      position: "relative",
+      zIndex: "10",
     };
   },
 };
 
-export const SelectRaw = ({ onChange, topLabel, ...rest }) => {
-
+export const SelectRaw = ({ onChange, ...rest }) => {
+  let click = false;
+  console.log(click)
   return (
     <Div position="relative" width="100%">
-      {rest.placeholder &&
+      {rest.placeholder && (
         <Paragraph
           style={{
             position: "absolute",
@@ -183,7 +184,7 @@ export const SelectRaw = ({ onChange, topLabel, ...rest }) => {
         >
           {rest.placeholder}
         </Paragraph>
-      }
+      )}
       <Select
         className="react-select-wrapper"
         data-cy="react_select_wrapper"
@@ -191,7 +192,7 @@ export const SelectRaw = ({ onChange, topLabel, ...rest }) => {
         {...rest}
         onChange={(opt) => {
           if (onChange) onChange(opt, true);
-        }}
+        }}   
       />
     </Div>
   );
