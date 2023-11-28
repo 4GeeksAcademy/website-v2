@@ -1,4 +1,4 @@
-import React, { useState, useRef} from "react";
+import React, { useState, useRef } from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import { H1, H2, H3, H4, Title, Separator, Paragraph } from "../Heading";
 import { Anchor, Colors, Button } from "../Styling";
@@ -110,7 +110,6 @@ const Staff = (props) => {
     //pauseOnHover: true,
   };
 
-  
   return (
     <Fragment github="/components/staff">
       <GridContainer
@@ -152,86 +151,84 @@ const Staff = (props) => {
           //className="badge-slider hideOverflowX__"
         >
           <Button
-          variant="empty"
-          padding="0"
-          padding_xs="0"
-          padding_tablet="0"
-          position="absolute"
-          zIndex="99"
-          top="50%"
-          right="5%"
-          right_md="20%"
-          right_tablet="15%"
-          width="12px"
-          height="20px"
-          width_tablet="21px"
-          height_tablet="35px"
-          onClick={() => sliderRef.current.slickNext()}
-        >
-          <Icon width="100%" height="100%" icon="arrow-right" />
-        </Button>
-          
-          <Slider {...settings} ref={sliderRef}>
+            variant="empty"
+            padding="0"
+            padding_xs="0"
+            padding_tablet="0"
+            position="absolute"
+            zIndex="99"
+            top="50%"
+            right="5%"
+            right_md="20%"
+            right_tablet="15%"
+            width="12px"
+            height="20px"
+            width_tablet="21px"
+            height_tablet="35px"
+            onClick={() => sliderRef.current.slickNext()}
+          >
+            <Icon width="100%" height="100%" icon="arrow-right" />
+          </Button>
 
+          <Slider {...settings} ref={sliderRef}>
             {staffFilteredByLocation?.map((item, index) => {
               return (
-                  <Div 
-                    key={index} 
-                    flexDirection="column" 
-                    alignItems="center"
+                <Div
+                  key={index}
+                  flexDirection="column"
+                  alignItems="center"
+                  width="220px"
+                >
+                  <Div
+                    //minWidth="184px"
                     width="220px"
+                    height="184px"
+                    //margin="0 10px 0 0"
+                    alignItems_tablet="center"
                   >
-                    <Div
-                      //minWidth="184px"
-                      width="220px"
-                      height="184px"
-                      //margin="0 10px 0 0"
-                      alignItems_tablet="center"
-                    >
-                      <GatsbyImage
-                        image={getImage(
-                          item.image && item.image.childImageSharp.gatsbyImageData
-                        )}
-                        style={{
-                          height: "100%",
-                          width: "220px",
-                          //minWidth: "100%",
-                          backgroundSize: `cover`,
-                        }}
-                        alt={item.name}
-                      />
-                    </Div>
-                    <H3 fontSize="18px" lineHeight="22px" margin="14px 0 0 0">
-                      {item.name}
-                    </H3>
-                    <H4 fontSize="15px" lineHeight="18px" margin="8px 0">
-                      {item.job_title}
-                    </H4>
-                    {/* <Paragraph
+                    <GatsbyImage
+                      image={getImage(
+                        item.image && item.image.childImageSharp.gatsbyImageData
+                      )}
+                      style={{
+                        height: "100%",
+                        width: "220px",
+                        //minWidth: "100%",
+                        backgroundSize: `cover`,
+                      }}
+                      alt={item.name}
+                    />
+                  </Div>
+                  <H3 fontSize="18px" lineHeight="22px" margin="14px 0 0 0">
+                    {item.name}
+                  </H3>
+                  <H4 fontSize="15px" lineHeight="18px" margin="8px 0">
+                    {item.job_title}
+                  </H4>
+                  {/* <Paragraph
                                     fontSize="14px"
                                     lineHeight="22px"
                                     margin="0 0 6px 0"
                                 >
                                     {item.bio}
                   </Paragraph> */}
-                    <Anchor
-                      to={item.linkdin}
-                      target="_blank"
-                      rel="noopener noreferrer nofollow"
-                    >
-                      <Icon
-                        icon="linkedin-new"
-                        width="24px"
-                        fill="#2867b2"
-                        stroke="#2867b2"
-                      />
-                    </Anchor>
-                  </Div>
+                  <Anchor
+                    to={item.linkdin}
+                    target="_blank"
+                    rel="noopener noreferrer nofollow"
+                  >
+                    <Icon
+                      icon="linkedin-new"
+                      width="24px"
+                      fill="#2867b2"
+                      stroke="#2867b2"
+                    />
+                  </Anchor>
+                </Div>
               );
             })}
           </Slider>
         </Div>
-
 
         {/* <DraggableDiv
           gridColumn_tablet="1/span 12"

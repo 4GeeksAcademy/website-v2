@@ -70,7 +70,9 @@ const Location = ({ data, pageContext, yml }) => {
         padding="0"
         padding_tablet="0 0 20px 0"
         columns_tablet="14"
-        margin={isCustomBarActive(session) ? "70px auto 24px auto" : "70px auto"}
+        margin={
+          isCustomBarActive(session) ? "70px auto 24px auto" : "70px auto"
+        }
         maxWidth="1366px"
       >
         <Div
@@ -266,10 +268,10 @@ const Location = ({ data, pageContext, yml }) => {
       {data.allJobGuaranteeSmallYaml.edges[0].node.locations.includes(
         yml.breathecode_location_slug
       ) && (
-          <JobGuaranteeSmall
-            content={data.allJobGuaranteeSmallYaml.edges[0].node}
-          />
-        )}
+        <JobGuaranteeSmall
+          content={data.allJobGuaranteeSmallYaml.edges[0].node}
+        />
+      )}
 
       <TwoColumn
         left={{ image: yml.two_columns?.image, video: yml.two_columns?.video }}
@@ -309,7 +311,7 @@ const Location = ({ data, pageContext, yml }) => {
           ))}
         </Div>
       </GridContainer>
-      
+
       {yml.images_box.images && (
         <GridContainer
           columns_tablet="10"
@@ -386,7 +388,7 @@ const Location = ({ data, pageContext, yml }) => {
           faqs={data.allFaqYaml.edges[0].node.faq}
           topicSlug="enrollment"
           minPriority="1"
-        // locationSlug={yml.breathecode_location_slug}
+          // locationSlug={yml.breathecode_location_slug}
         />
       </GridContainer>
 

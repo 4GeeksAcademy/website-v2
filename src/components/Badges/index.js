@@ -93,7 +93,7 @@ const Badges = ({
           maxWidth={maxWidth}
         >
           {/* <Grid columns_md="12" background={background} padding_md={padding_md} rows={paragraph && `3`} padding="0 17px" margin="36px 0 58px 0" margin_md="73px 0"> */}
-          {(!bottom_paragraph && paragraph) && (
+          {!bottom_paragraph && paragraph && (
             <Div className="badge-slider" justifyContent="between">
               <Paragraph
                 fontFamily="Lato-Light"
@@ -143,53 +143,53 @@ const Badges = ({
               <Div
                 className="badge-slider hideOverflowX__"
                 margin="auto"
-              // justifyContent="center"
-              // alignItems="center"
+                // justifyContent="center"
+                // alignItems="center"
               >
                 {short_link
                   ? content.badges.map((l, i) => {
-                    return (
-                      i < 4 && (
+                      return (
+                        i < 4 && (
+                          <GatsbyImage
+                            key={i}
+                            style={{
+                              height: "65px",
+                              minWidth: "80px",
+                              margin: "0 20px",
+                            }}
+                            imgStyle={{ objectFit: "contain" }}
+                            loading="eager"
+                            // draggable={false}
+                            // fadeIn={false}
+                            alt={l.name}
+                            image={getImage(
+                              l.image.childImageSharp.gatsbyImageData
+                            )}
+                          />
+                        )
+                      );
+                    })
+                  : content.badges.map((l, i) => {
+                      return (
                         <GatsbyImage
                           key={i}
                           style={{
-                            height: "65px",
-                            minWidth: "80px",
-                            margin: "0 20px",
+                            height: "85px",
+                            // minWidth: "200px",
+                            minWidth: "150px",
+                            margin: "0 24px",
                           }}
                           imgStyle={{ objectFit: "contain" }}
                           loading="eager"
-                          // draggable={false}
+                          draggable={false}
                           // fadeIn={false}
                           alt={l.name}
                           image={getImage(
                             l.image.childImageSharp.gatsbyImageData
                           )}
                         />
-                      )
-                    );
-                  })
-                  : content.badges.map((l, i) => {
-                    return (
-                      <GatsbyImage
-                        key={i}
-                        style={{
-                          height: "85px",
-                          // minWidth: "200px",
-                          minWidth: "150px",
-                          margin: "0 24px",
-                        }}
-                        imgStyle={{ objectFit: "contain" }}
-                        loading="eager"
-                        draggable={false}
-                        // fadeIn={false}
-                        alt={l.name}
-                        image={getImage(
-                          l.image.childImageSharp.gatsbyImageData
-                        )}
-                      />
-                    );
-                  })}
+                      );
+                    })}
 
                 {short_link && (
                   <Link to={content.link_to}>
