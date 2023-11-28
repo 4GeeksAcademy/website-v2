@@ -35,7 +35,7 @@ const SmartSelect = (props) => {
       padding={props.padding || "7px"}
       zIndex="9"
       alignItems="center"
-      width="314px"
+      width={props.width || "314px"}
       //padding={props.padding || "4px 10px"}
       minWidth={props.minWidth}
       onClick={() => _p.setStatus({ toggle: !_p.status.toggle })}

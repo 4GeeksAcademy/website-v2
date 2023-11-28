@@ -529,6 +529,7 @@ const PricesAndPayments = (props) => {
         gridTemplateColumns_md="1fr repeat(14,1fr) 1fr"
         gridTemplateColumns_tablet="1fr repeat(13,1fr) 1fr"
         gridGap="0"
+        margin_tablet="20px 0 0 0"
       >
         <Div
           gridColumn_md="2/9"
@@ -545,6 +546,7 @@ const PricesAndPayments = (props) => {
             textAlign_xs="center"
             opacity="1"
             color={Colors.black}
+            padding="0 0 16px 0"
           >
             {info.select}
           </H3>

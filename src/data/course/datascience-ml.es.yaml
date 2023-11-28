@@ -26,6 +26,7 @@ button:
   syllabus_btn_label: "Descarga Instantánea"
   syllabus_motivation: "En 2 min. recibirás en tu buzón de correo un PDF con información muy detallada sobre nuestra metodología, tecnologías, becas, financiación e información del curso."
   apply_button_link: "/es/aplica"
+  apply_button_text: "Aplicar"
 
 course_instructors:
   header:
@@ -61,6 +62,42 @@ course_instructors:
 badges:
   paragraph: "Gracias a un enfoque hacia la programación, nuestros programas han sido galardonados como TOP en <a href='/es/premios'>España, USA y otros países</a>. Nuestros certificados estan avalados por el Departamento de Educación de Estado Unidos en Florida."
 
+
+overlaped:
+  heading: "Python y Javascript"
+  paragraph: "Nuestros programa está basado en el uso de Phyton y Javascript. La razón?En el mercado laboral JavaScript tiene 26 veces más vacantes de trabajo que Ruby on Rails. Python tiene 10 veces más trabajos que node.js. Otras herramientas que también aprenderás a usar en nuestro programa: son GitHub, CSS3, HTML5, Flask, etc."
+  button:
+    text: "Aplicar"
+    color: "blue"  
+    link: "/"
+  image:
+    src: "/images/landing/tres-personas.png"  
+
+## TWO COLUMNS
+two_columns:
+  proportions: [6, 6]
+  image:
+    style: '{"border" : "3px solid black", "backgroundSize": "contain" }'
+    src: "/static/images/staff/luisa.png"
+    shadow: true  
+  video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
+  heading:
+    text: "4Geeks, Miami and a story full of opportunities"
+    font_size: ["30px", "30px", "30px", "30px", "30px"]
+  sub_heading:
+    text: "We are Miami based and we have been focusing in bringing on more opportunities in South Florida."
+    font_size: ["18px", "18px", "18px", "18px", "18px"]
+  button:
+    text: "Apply now"
+    color: "white"
+    background: "black"
+    path: "#"
+  bullets:
+    items: 
+    - text: "There is always a full or partial scholarship open"
+    - text: "There is always opportunities for everyone in Miami-Dade County, Broward and Palm Beach"
+    - text: "We have ongoing partnerships with Miami Dade College, Miami Tech Coalition, UWM, The City of Miami, Miami Dade Counti and so manu more."
+
 upcoming:
   no_dates_message: "Actualmente no hay próximas fechas para este programa"
   actionMessage: "Avisadme de fechas disponibles"
@@ -71,6 +108,9 @@ upcoming:
 #   content: >
 #     Entrénate con expertos en Data Science, Machine Learning e Inteligencia Artificial. Aprende Data Science desde las bases, recolecta, manipula y modela datos. Crea modelos de Machine Learning e iníciate en el Deep Learning.\n
 #     Practica con escenarios típicos de empresas de la vida real y conoce algunas de las herramientas más utilizadas en la industria. \n
+
+
+
 
 ## PROGRAM DETAILS
 details:
@@ -220,6 +260,7 @@ geeks_vs_others:
   heading: "¿Qué nos hace tan exitosos?"
   sub_heading: ""
   sub_heading_link: ""
+
 ## GEEK PAL AND GEEK FORCE BOXES
 geek_data:
   heading: ¡Para que te contraten empresas de Fortune 500!

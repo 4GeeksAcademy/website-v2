@@ -5,6 +5,7 @@ content: "Nuestros programa está basado en el uso de Phyton y Javascript. La ra
 button: 
  text: Aplicar
  color: Colors.blue2
+ link: "#"
 background: Colors.white
 image:
   src: "/images/landing/dos-mujeres-1.png"
