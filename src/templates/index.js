@@ -101,7 +101,7 @@ const Home = (props) => {
     en: "CHOOSE PROGRAM",
   };
 
-  const isContentBarActive =
+  const isContentBarActive = 
     (session?.location?.custom_bar.active && isTestMode) ||
     (session?.location?.custom_bar.active && !isDevelopment());
 
@@ -120,13 +120,13 @@ const Home = (props) => {
       <Div
         flexDirection="column"
         margin={
-          isContentBarActive ? "110px auto 72px auto" : "72px auto 72px auto"
+          isContentBarActive ? "138px auto 72px auto" : "72px auto 72px auto"
         }
         margin_tablet={
           isContentBarActive ? "120px auto 108px auto" : "72px auto 108px auto"
         }
         maxWidth="1366px"
-        padding_xxs="0px"
+        padding_xxs={isContentBarActive ? "68px 0px" : "0px"}
         padding_tablet="0 40px"
         padding_md="0 80px"
         padding_lg="0px"

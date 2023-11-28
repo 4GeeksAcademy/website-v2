@@ -108,6 +108,13 @@ const langDictionary = {
   es: "us",
 };
 
+const parsedUrl = typeof window !== "undefined" ? new URL(window.location.href) : false;
+
+export const isTestMode = parsedUrl
+  ? parsedUrl.searchParams.get("test") === "true"
+  : false;
+
+
 export const NavbarMobile = ({
   lang,
   menu,
@@ -137,18 +144,28 @@ export const NavbarMobile = ({
   // let buttonText = session.location ? session.location.button.apply_button_text : button.apply_button_text
 
   let city = session && session.location ? session.location.city : [];
-  let isCustombarActive =
-    session && session.location && session.location.custom_bar.active;
+
+  const [contentBar, setContentBar] = useState({});
+
   let currentLocation = locationCity ? locationCity : [];
   const [buttonText, setButtonText] = useState("");
+
   /* In case of want change the Button text "Aplica" search the key 
         "apply_button_text" in /src/data/location/locationfile.yaml
     */
   let findCity = currentLocation.find((loc) => loc.node?.city === city);
+
+  let isCustombarActive = session && session.location && session.location.custom_bar.active;
+  const isContentBarActive = (contentBar?.active && isTestMode) || (contentBar?.active && !isDevelopment());
+
   useEffect(() => {
     if (findCity !== undefined)
       setButtonText(findCity.node.button.apply_button_text);
+      setContentBar(findCity?.node.custom_bar);
   }, [findCity]);
+
+
+  //console.log(contentBar, currentLocation, session, findCity)
 
   const data = useStaticQuery(graphql`
     query {
@@ -210,12 +227,23 @@ export const NavbarMobile = ({
   `);
 
   const locations = locByLanguage(data.allLocationYaml, langDictionary[lang]);
+
+  const spacer = (isContentBarActive, contentBar) => {
+    if (isContentBarActive && (contentBar?.button == null)){
+      return "50px"
+    }else if(isContentBarActive && (contentBar?.button != null)){
+      return "85px"
+    }else{
+      return "0px"
+    }
+  }
+
   return (
     <>
       <Nav
         display_md="none"
         style={{
-          top: `${isCustombarActive && !isDevelopment() ? "50px" : "0px"}`,
+          top: `${spacer(isContentBarActive, contentBar)}`,
         }}
         display="flex"
       >
