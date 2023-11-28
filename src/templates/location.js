@@ -4,7 +4,6 @@ import process from "process";
 import ChooseProgram from "../components/ChooseProgram";
 import Badges from "../components/Badges";
 import Loc from "../components/Loc";
-import OurPartners from "../components/OurPartners";
 import { isCustomBarActive } from "../actions";
 import ChooseYourProgram from "../components/ChooseYourProgram";
 import UpcomingDates from "../components/UpcomingDates";
@@ -26,6 +25,8 @@ import { SessionContext } from "../session";
 import JobGuaranteeSmall from "../components/JobGuaranteeSmall";
 import RelatedPosts from "../components/RelatedPosts";
 import FaqCard from "../components/FaqCard";
+import TwoColumn from "../components/TwoColumn/index.js";
+import GeeksInfo from "../components/GeeksInfo";
 
 const MapFrame = lazy(() => import("../components/MapFrame"));
 
@@ -69,7 +70,8 @@ const Location = ({ data, pageContext, yml }) => {
         padding="0"
         padding_tablet="0 0 20px 0"
         columns_tablet="14"
-        margin={isCustomBarActive(session) ? "70px 0 24px 0" : "70px 0"}
+        margin={isCustomBarActive(session) ? "70px auto 24px auto" : "70px auto"}
+        maxWidth="1366px"
       >
         <Div
           flexDirection="column"
@@ -249,22 +251,42 @@ const Location = ({ data, pageContext, yml }) => {
           />
         </Div>
       </GridContainerWithImage>
-      {data.allJobGuaranteeSmallYaml.edges[0].node.locations.includes(
-        yml.breathecode_location_slug
-      ) && (
-        <JobGuaranteeSmall
-          content={data.allJobGuaranteeSmallYaml.edges[0].node}
-        />
-      )}
 
       <Badges
         lang={pageContext.lang}
-        background={Colors.verylightGray}
+        short_link={true}
+        short_text="15px"
+        margin="40px auto"
         paragraph={yml.badges.paragraph}
-        margin="0 0 57px 0"
-        padding="27px 17px 50px 17px"
-        padding_tablet="80px 0 100px 0"
+        bottom_paragraph
+        maxWidth="1366px"
+        paddingText_tablet="0 10% 55px 10%"
       />
+
+      {data.allJobGuaranteeSmallYaml.edges[0].node.locations.includes(
+        yml.breathecode_location_slug
+      ) && (
+          <JobGuaranteeSmall
+            content={data.allJobGuaranteeSmallYaml.edges[0].node}
+          />
+        )}
+
+      <TwoColumn
+        left={{ image: yml.two_columns?.image, video: yml.two_columns?.video }}
+        right={{
+          heading: yml.two_columns?.heading,
+          sub_heading: yml.two_columns?.sub_heading,
+          bullets: yml.two_columns?.bullets,
+          content: yml.two_columns?.content,
+          button: yml.two_columns?.button,
+        }}
+        proportions={yml.two_columns?.proportions}
+        session={session}
+      />
+
+      {/* GEEKSINFO IS A TWOCOLUMN WITH TITLE */}
+      <GeeksInfo lang={pageContext.lang} />
+
       <GridContainer
         columns_tablet="12"
         padding_tablet="60px 0 77px 0"
@@ -287,6 +309,7 @@ const Location = ({ data, pageContext, yml }) => {
           ))}
         </Div>
       </GridContainer>
+      
       {yml.images_box.images && (
         <GridContainer
           columns_tablet="10"
@@ -319,18 +342,13 @@ const Location = ({ data, pageContext, yml }) => {
           })}
         </GridContainer>
       )}
-      <OurPartners
-        images={hiring.partners.images}
-        showFeatured
-        marquee
-        title={hiring.partners.tagline}
-        paragraph={hiring.partners.sub_heading}
-      />
+
       <ChooseYourProgram
         chooseProgramRef={chooseProgramRef}
         lang={pageContext.lang}
         programs={data.allChooseYourProgramYaml.edges[0].node.programs}
       />
+
       <UpcomingDates
         lang={pageContext.lang}
         location={yml.breathecode_location_slug}
@@ -338,9 +356,10 @@ const Location = ({ data, pageContext, yml }) => {
         message={yml.upcoming.no_dates_message}
         actionMessage={yml.upcoming.actionMessage}
       />
+
       <Staff lang={pageContext.lang} />
 
-      {/* IFRAME map */}
+      {/* IFRAME map
       <Div>
         {!ready ? (
           <H1>Loading Map...</H1>
@@ -355,7 +374,8 @@ const Location = ({ data, pageContext, yml }) => {
             )}
           </Suspense>
         )}
-      </Div>
+      </Div> */}
+
       <GridContainer
         padding="0 4%"
         gridGap="0px"
@@ -366,15 +386,18 @@ const Location = ({ data, pageContext, yml }) => {
           faqs={data.allFaqYaml.edges[0].node.faq}
           topicSlug="enrollment"
           minPriority="1"
-          // locationSlug={yml.breathecode_location_slug}
+        // locationSlug={yml.breathecode_location_slug}
         />
       </GridContainer>
+
       <Divider height="50px" />
+
       <RelatedPosts
         lang={pageContext.lang}
         posts={data.allMarkdownRemark.edges}
         relatedClusters={yml.meta_info.related_clusters}
       />
+
       <Loc lang={pageContext.lang} allLocationYaml={data.test} />
     </>
   );
@@ -483,6 +506,34 @@ export const query = graphql`
                 }
               }
               alt
+            }
+          }
+          two_columns {
+            proportions
+            image {
+              style
+              src
+              shadow
+            }
+            video
+            heading {
+              text
+              font_size
+            }
+            sub_heading {
+              text
+              font_size
+            }
+            button {
+              text
+              color
+              background
+              path
+            }
+            bullets {
+              items {
+                text
+              }
             }
           }
         }

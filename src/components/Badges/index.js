@@ -22,6 +22,8 @@ const Badges = ({
   margin,
   wrapped_images,
   maxWidth,
+  paragraph_style,
+  bottom_paragraph,
 }) => {
   const data = useStaticQuery(graphql`
     query myNewQueryBadges {
@@ -70,7 +72,7 @@ const Badges = ({
       {/* <Fragment github="/components/badges"> */}
       <Div
         width="100%"
-        maxWidth={maxWidth}
+        maxWidth={maxWidth || "1366px"}
         margin_tablet="0 auto"
         justifyContent="center"
         background={background}
@@ -91,7 +93,7 @@ const Badges = ({
           maxWidth={maxWidth}
         >
           {/* <Grid columns_md="12" background={background} padding_md={padding_md} rows={paragraph && `3`} padding="0 17px" margin="36px 0 58px 0" margin_md="73px 0"> */}
-          {paragraph && (
+          {(!bottom_paragraph && paragraph) && (
             <Div className="badge-slider" justifyContent="between">
               <Paragraph
                 fontFamily="Lato-Light"
@@ -141,53 +143,53 @@ const Badges = ({
               <Div
                 className="badge-slider hideOverflowX__"
                 margin="auto"
-                // justifyContent="center"
-                // alignItems="center"
+              // justifyContent="center"
+              // alignItems="center"
               >
                 {short_link
                   ? content.badges.map((l, i) => {
-                      return (
-                        i < 4 && (
-                          <GatsbyImage
-                            key={i}
-                            style={{
-                              height: "65px",
-                              minWidth: "80px",
-                              margin: "0 20px",
-                            }}
-                            imgStyle={{ objectFit: "contain" }}
-                            loading="eager"
-                            // draggable={false}
-                            // fadeIn={false}
-                            alt={l.name}
-                            image={getImage(
-                              l.image.childImageSharp.gatsbyImageData
-                            )}
-                          />
-                        )
-                      );
-                    })
-                  : content.badges.map((l, i) => {
-                      return (
+                    return (
+                      i < 4 && (
                         <GatsbyImage
                           key={i}
                           style={{
-                            height: "85px",
-                            // minWidth: "200px",
-                            minWidth: "150px",
-                            margin: "0 24px",
+                            height: "65px",
+                            minWidth: "80px",
+                            margin: "0 20px",
                           }}
                           imgStyle={{ objectFit: "contain" }}
                           loading="eager"
-                          draggable={false}
+                          // draggable={false}
                           // fadeIn={false}
                           alt={l.name}
                           image={getImage(
                             l.image.childImageSharp.gatsbyImageData
                           )}
                         />
-                      );
-                    })}
+                      )
+                    );
+                  })
+                  : content.badges.map((l, i) => {
+                    return (
+                      <GatsbyImage
+                        key={i}
+                        style={{
+                          height: "85px",
+                          // minWidth: "200px",
+                          minWidth: "150px",
+                          margin: "0 24px",
+                        }}
+                        imgStyle={{ objectFit: "contain" }}
+                        loading="eager"
+                        draggable={false}
+                        // fadeIn={false}
+                        alt={l.name}
+                        image={getImage(
+                          l.image.childImageSharp.gatsbyImageData
+                        )}
+                      />
+                    );
+                  })}
 
                 {short_link && (
                   <Link to={content.link_to}>
@@ -198,6 +200,22 @@ const Badges = ({
                   </Link>
                 )}
               </Div>
+            </Div>
+          )}
+
+          {bottom_paragraph && (
+            <Div className="badge-slider" justifyContent="between">
+              <Paragraph
+                fontFamily="Lato-Bold"
+                padding={paddingText || "0 10px 45px 10px"}
+                padding_tablet={paddingText_tablet || "0 5% 55px 5%"}
+                fontSize={short_link || short_text ? "12px" : "12px"}
+                fontSize_tablet={short_link || short_text ? "12px" : "12px"}
+                lineHeight={short_link || short_text ? "29px" : "38px"}
+                color={Colors.black}
+                dangerouslySetInnerHTML={{ __html: paragraph }}
+                margin="15px 0 0 0"
+              />
             </Div>
           )}
 
