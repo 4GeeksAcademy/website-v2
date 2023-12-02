@@ -9,6 +9,7 @@ import { Div, Grid } from "../Sections";
 import Icon from "../Icon";
 import { locByLanguage } from "../../actions";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import CustomBar from "../CustomBar";
 
 const BurgerIcon = (props) => (
   <svg
@@ -59,13 +60,13 @@ const MegaMenuContainer = styled(Div)`
 `;
 const SecondaryMenuContainer = styled(Div)``;
 const Nav = styled.nav`
-  height: 71px;
+  height: ${(props) => props.height || "71px"};
   display: ${(props) => props.display};
-  position: fixed;
+  position: ${(props) => props.position || "fixed"};
   width: 100%;
-  background: white;
-  z-index: 10;
-  top: 0;
+  background: ${(props) => props.background || "white"};;
+  z-index: ${(props) => props.zIndex || "10"};;
+  top: ${(props) => props.top || "0"};
   align-items: center;
   justify-content: space-between;
   padding: 15px;
@@ -157,17 +158,17 @@ export const NavbarMobile = ({
 
   let isCustombarActive =
     session && session.location && session.location.custom_bar.active;
-  const isContentBarActive =
-    (contentBar?.active && isTestMode) ||
-    (contentBar?.active && !isDevelopment());
+
+  const isContentBarActive = true
+    // (contentBar?.active && isTestMode) ||
+    // (contentBar?.active && !isDevelopment());
 
   useEffect(() => {
-    if (findCity !== undefined)
+    if (findCity !== undefined && findCity.node){
       setButtonText(findCity.node.button.apply_button_text);
-    setContentBar(findCity?.node.custom_bar);
+      setContentBar(findCity?.node.custom_bar);
+    }
   }, [findCity]);
-
-  //console.log(contentBar, currentLocation, session, findCity)
 
   const data = useStaticQuery(graphql`
     query {
@@ -230,24 +231,28 @@ export const NavbarMobile = ({
 
   const locations = locByLanguage(data.allLocationYaml, langDictionary[lang]);
 
-  const spacer = (isContentBarActive, contentBar) => {
-    if (isContentBarActive && contentBar?.button == null) {
-      return "50px";
-    } else if (isContentBarActive && contentBar?.button != null) {
-      return "85px";
-    } else {
-      return "0px";
-    }
-  };
-
   return (
-    <>
+    <Div 
+      display="inline" 
+      position="fixed"
+      width="100%"
+      top="0"
+      opacity="1"
+      zIndex="100"
+    >
+      <CustomBar
+        isContentBarActive={isContentBarActive}
+        contentBar={contentBar}
+        display_md="none"
+        display_xxs="flex"
+        position="static"
+      />
       <Nav
         display_md="none"
-        style={{
-          top: `${spacer(isContentBarActive, contentBar)}`,
-        }}
         display="flex"
+        position="static"
+        top="0"
+        height="60px"
       >
         <Div alignItems="center">
           <BurgerIcon
@@ -285,7 +290,7 @@ export const NavbarMobile = ({
           </Link>
         </Div>
       </Nav>
-    </>
+    </Div>
   );
 };
 

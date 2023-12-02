@@ -101,9 +101,9 @@ const Home = (props) => {
     en: "CHOOSE PROGRAM",
   };
 
-  const isContentBarActive =
-    (session?.location?.custom_bar.active && isTestMode) ||
-    (session?.location?.custom_bar.active && !isDevelopment());
+  const isContentBarActive = true
+    // (session?.location?.custom_bar.active && isTestMode) ||
+    // (session?.location?.custom_bar.active && !isDevelopment());
 
   return (
     <>
