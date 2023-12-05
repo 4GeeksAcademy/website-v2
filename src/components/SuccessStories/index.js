@@ -138,7 +138,6 @@ const SuccessStoriescomponent = ({ filterIndexes, lang }) => {
                 lang={lang}
                 linkedin_url={m.linkedin_url}
                 url={m.source_url}
-                textUrl={m.source_url_text}
               />
             )
           );
