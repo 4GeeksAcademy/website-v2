@@ -96,9 +96,9 @@ const SuccessStories = (props) => {
       <Div
         maxWidth="1366px"
         margin="0 auto"
-        padding_xxs="80px 20px"
-        padding_md="50px 10%"
-        padding_lg="60px 10%"
+        padding_xxs="80px 20px 0 20px"
+        padding_md="50px 10% 10px 10%"
+        padding_lg="60px 10% 10px 10%"
         padding_tablet="40px 40px"
       >
         <OurPartners

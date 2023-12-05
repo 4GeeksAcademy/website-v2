@@ -139,7 +139,6 @@ const Images_With_Marquee = (props) => {
 
 //Funcion que muestra las imagenes en columna y centradas
 const Images_Centered = (props) => {
-  console.log(props.gray);
   return (
     <Div
       display="flex"
@@ -149,7 +148,7 @@ const Images_Centered = (props) => {
       // columnGap="70px"
       justifyContent="center"
       background={Colors.white}
-      padding="25px 0 0 0"
+      padding="0 0 0 0"
       margin="0 0 50px 0"
     >
       {props.images?.map((l, i) => {
