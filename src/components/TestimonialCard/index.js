@@ -221,9 +221,7 @@ const TestimonialCard = ({
           color={Colors.blue}
         >
           <Anchor cursor="pointer" to={url}>
-            {lang == "us"
-              ? "Open review"
-              : "Ver reseña"}
+            {lang == "us" ? "Open review" : "Ver reseña"}
           </Anchor>
         </Paragraph>
       )}
