@@ -9,6 +9,7 @@ import { Div, Grid } from "../Sections";
 import Icon from "../Icon";
 import { locByLanguage } from "../../actions";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import CustomBar from "../CustomBar";
 
 const BurgerIcon = (props) => (
   <svg
@@ -59,13 +60,13 @@ const MegaMenuContainer = styled(Div)`
 `;
 const SecondaryMenuContainer = styled(Div)``;
 const Nav = styled.nav`
-  height: 71px;
+  height: ${(props) => props.height || "71px"};
   display: ${(props) => props.display};
-  position: fixed;
+  position: ${(props) => props.position || "fixed"};
   width: 100%;
-  background: white;
-  z-index: 10;
-  top: 0;
+  background: ${(props) => props.background || "white"};;
+  z-index: ${(props) => props.zIndex || "10"};;
+  top: ${(props) => props.top || "0"};
   align-items: center;
   justify-content: space-between;
   padding: 15px;
@@ -108,6 +109,13 @@ const langDictionary = {
   es: "us",
 };
 
+const parsedUrl =
+  typeof window !== "undefined" ? new URL(window.location.href) : false;
+
+export const isTestMode = parsedUrl
+  ? parsedUrl.searchParams.get("test") === "true"
+  : false;
+
 export const NavbarMobile = ({
   lang,
   menu,
@@ -137,17 +145,29 @@ export const NavbarMobile = ({
   // let buttonText = session.location ? session.location.button.apply_button_text : button.apply_button_text
 
   let city = session && session.location ? session.location.city : [];
-  let isCustombarActive =
-    session && session.location && session.location.custom_bar.active;
+
+  const [contentBar, setContentBar] = useState({});
+
   let currentLocation = locationCity ? locationCity : [];
   const [buttonText, setButtonText] = useState("");
+
   /* In case of want change the Button text "Aplica" search the key 
         "apply_button_text" in /src/data/location/locationfile.yaml
     */
   let findCity = currentLocation.find((loc) => loc.node?.city === city);
+
+  let isCustombarActive =
+    session && session.location && session.location.custom_bar.active;
+
+  const isContentBarActive = true
+    // (contentBar?.active && isTestMode) ||
+    // (contentBar?.active && !isDevelopment());
+
   useEffect(() => {
-    if (findCity !== undefined)
+    if (findCity !== undefined && findCity.node){
       setButtonText(findCity.node.button.apply_button_text);
+      setContentBar(findCity?.node.custom_bar);
+    }
   }, [findCity]);
 
   const data = useStaticQuery(graphql`
@@ -210,14 +230,29 @@ export const NavbarMobile = ({
   `);
 
   const locations = locByLanguage(data.allLocationYaml, langDictionary[lang]);
+
   return (
-    <>
+    <Div 
+      display="inline" 
+      position="fixed"
+      width="100%"
+      top="0"
+      opacity="1"
+      zIndex="100"
+    >
+      <CustomBar
+        isContentBarActive={isContentBarActive}
+        contentBar={contentBar}
+        display_md="none"
+        display_xxs="flex"
+        position="static"
+      />
       <Nav
         display_md="none"
-        style={{
-          top: `${isCustombarActive && !isDevelopment() ? "50px" : "0px"}`,
-        }}
         display="flex"
+        position="static"
+        top="0"
+        height="60px"
       >
         <Div alignItems="center">
           <BurgerIcon
@@ -255,7 +290,7 @@ export const NavbarMobile = ({
           </Link>
         </Div>
       </Nav>
-    </>
+    </Div>
   );
 };
 
