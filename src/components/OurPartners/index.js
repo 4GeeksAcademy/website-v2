@@ -32,7 +32,7 @@ const Title_Paragraph = (props) => {
             fontFamily="Lato"
             fontWeight="900"
             fontSize="32px"
-            lineHeight="30px"
+            lineHeight="40px"
             letterSpacing="0.05em"
             color="#3A3A3A"
             width="100%"
