@@ -4,7 +4,8 @@ import ReactPlayer from "../ReactPlayer";
 import { H2, Paragraph } from "../Heading";
 import Icon from "../Icon";
 import { Div } from "../Sections";
-import { Button, Colors, Img } from "../Styling";
+import { Button, Colors, Img, StyledBackgroundSection } from "../Styling";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { navigate } from "gatsby";
 import { transferQuerystrings, smartRedirecting } from "../../utils/utils";
 
@@ -43,7 +44,8 @@ const Side = ({
           ? imgStyles.height
           : [imgStyles.height]
         : ["100%"];
-    return (
+    console.log(image);
+    return image?.src ? (
       <Img
         src={image.src}
         onClick={() => {
@@ -62,6 +64,13 @@ const Side = ({
         //backgroundPosition="center right"
         //border={image.shadow && "3px solid black"}
         boxShadow={image.shadow && "20px 15px 0px 0px rgba(0,0,0,1)"}
+      />
+    ) : (
+      <GatsbyImage
+        height_xxs="450px"
+        image={getImage(image.childImageSharp.gatsbyImageData)}
+        //bgSize={`contain`}
+        alt="geekforce image"
       />
     );
   }
@@ -265,7 +274,9 @@ const Side = ({
           fontSize="15px"
           textAlign="left"
           margin="2rem 0"
-          padding="32px .85rem 0 .85rem"
+          padding_xxs="0 .5rem"
+          padding_xs="0 .85rem"
+          //padding_tablet="32px .85rem 0 .85rem"
           onClick={() => {
             if (button.path && button.path.indexOf("http") > -1)
               window.open(transferQuerystrings(button.path, utm));
@@ -290,7 +301,7 @@ const TwoColumn = ({ left, right, proportions, session }) => {
       flexDirection_tablet="row"
       m_sm="0px auto 100px auto"
       margin="auto"
-      padding_xxs="0 20px"
+      padding_xxs="40px 20px"
       padding_md="40px 80px"
       padding_lg="40px 0px"
       padding_tablet="40px 40px"

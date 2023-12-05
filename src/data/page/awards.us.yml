@@ -9,50 +9,67 @@ meta_info:
 
 seo_title: "Awards"
 header:
-  title: "Awards and Recognitions"
+  title: "AWARDS WINNING BOOTCAMP"
   paragraph: "It's fantastic to have been recognized for years of effort into making one of the best coding communities and learning ecosystems in the world."
   image: "../../../static/images/awards/awards.png"
-badges:
-  paragraph: "This is the place to boost your career by learning to code. We are very proud of our programs and methodology to train developers in just a few months and help them boost their professional careers."
 
 awards_list:
-  - image: "../../../static/images/badges/licensed.png"
-    title: "Florida Department of Education"
-    paragraph: "The United States of America ensures education quality thru federal deparments of education, being certified means we have to anually commit and comply with federal and national regulations to ensure academy success and renewed license."
+  # - image: "../../../static/images/badges/licensed.png"
+  #   title: "Florida Department of Education"
+  #   paragraph: "The United States of America ensures education quality thru federal deparments of education, being certified means we have to anually commit and comply with federal and national regulations to ensure academy success and renewed license."
+  #   text_link: "See article"
+  #   link: "/"
 
   - image: "../../../static/images/badges/Course-Report-Badge-2023.png"
     title: "Best Bootcamp for Course Report 2023"
     paragraph: "We have been selected as one of the Top Coding Bootcamps globally for 3 years in a row"
+    link: "/"
+    text_link: See article
 
   - image: "../../../static/images/badges/switchup-badge-2023.png"
     title: "Best Bootcamp according to Switchup 2023"
     paragraph: "Not only in Florida, but over each of our campus 4Geeks is constantly keeping a ~5 start rating that makes us one of the top bootcamp in the world"
+    link: "/"
+    text_link: See article
 
   - image: "../../../static/images/awards/premios_tecnologia_sigloxxi.png"
     title: "Winners of the Premios Tecnologia Siglo XXI mention 'Formación'"
     paragraph: "Our campus in Spain was awarded with the Premio Tecnología Siglo XXI on the 'Formation' category in 2023"
+    link: "/"
+    text_link: See article
 
   - image: "../../../static/images/badges/newsweek.png"
     title: "Top Coding School according to Newsweek"
     paragraph: "4Geeks Academy has been recognized as one of the top 10 coding bootcamps in the United States according to Newsweek."
+    link: "/"
+    text_link: See article
 
   - image: "../../../static/images/awards/pee-career.png"
     title: "Best Career Oriented Educational Program"
     paragraph: 'Educational Excelence Awards 2021 to the Best Career Oriented Educational Program specialized in Coding Bootcamps, more information found on the palmares <a href="https://premiosexcelenciaeducativa.org/wp-content/uploads/2016/05/PALMARE%CC%81S-EXCELENCIA-2020-1.pdf" rel="noopener noreferrer nofollow">for the 2021 awards</a>'
+    link: "/"
+    text_link: See article
 
   - image: "../../../static/images/awards/pee-innovation.png"
     title: "Most Innovative Program"
     paragraph: 'Educational Excelence Awards 2021 to the most innovative coding bootcamp school, more information found on the palmares <a href="https://premiosexcelenciaeducativa.org/wp-content/uploads/2016/05/PALMARE%CC%81S-EXCELENCIA-2020-1.pdf" rel="noopener noreferrer nofollow">for the 2021 awards</a>'
+    link: "/"
+    text_link: See article
 
   - image: "../../../static/images/awards/pee-trajectory.png"
     title: "Best International Trajectory"
     paragraph: 'Educational Excelence Awards 2021 to the best international trajectory school, more information found on the palmares <a href="https://premiosexcelenciaeducativa.org/wp-content/uploads/2016/05/PALMARE%CC%81S-EXCELENCIA-2020-1.pdf" rel="noopener noreferrer nofollow">for the 2021 awards</a>'
-
+    link: "/"
+    text_link: See article
 
   - image: "../../../static/images/badges/reviews.png"
     title: "4.9 on all reviews"
     paragraph: "4.9 in all Course Report, Switchup and Google reviews."
+    link: "/"
+    text_link: See article
 
   - image: "../../../static/images/badges/syllabus.png"
     title: "Award Winning Syllabus"
     paragraph: "Award winning syllabus."
+    link: "/"
+    text_link: See article

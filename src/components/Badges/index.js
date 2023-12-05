@@ -96,7 +96,7 @@ const Badges = ({
               <Paragraph
                 fontFamily="Lato-Light"
                 padding={paddingText || "0 10px 45px 10px"}
-                padding_tablet={paddingText_tablet || "0 12% 55px 12%"}
+                padding_tablet={paddingText_tablet || "0 5% 55px 5%"}
                 fontSize={short_link || short_text ? "16px" : "16px"}
                 fontSize_tablet={short_link || short_text ? "16px" : "16px"}
                 lineHeight={short_link || short_text ? "29px" : "38px"}

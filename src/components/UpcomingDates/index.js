@@ -4,7 +4,7 @@ import { GridContainer, Div, Grid } from "../Sections";
 import { H2, H3, H4, H5, Paragraph } from "../Heading";
 import { Colors, Button, Img, Anchor } from "../Styling";
 import dayjs from "dayjs";
-import Select from "../Select";
+import Select, { SelectRaw } from "../Select";
 import "dayjs/locale/de";
 import Icon from "../Icon";
 import styled from "styled-components";
@@ -219,66 +219,64 @@ const UpcomingDates = ({
     <GridContainer
       id={id}
       style={style}
-      margin_tablet="0 0 48px 0"
-      maxWidth_lg="1366px"
+      margin_tablet="0 auto 48px auto"
+      maxWidth="1366px"
+      containerColumns_tablet="14fr"
+      gridColumn_tablet="1 / 15"
+      padding_xxs="0 20px"
+      padding_md="40px 80px"
+      padding_lg="40px 0px"
+      padding_tablet="40px 40px"
     >
       <Div flexDirection="column">
+        <H2 textAlign="center">{content?.title}</H2>
         <Div
-          padding="0 0 30px 0"
+          padding="30px 0"
           gap="15px"
           style={{ borderBottom: "1px solid black" }}
-          justifyContent_md="between"
+          justifyContent_tablet="between"
           flexDirection="column"
           flexDirection_tablet="row"
           alignItems_tablet="center"
         >
           <H3 textAlign="left" width="188px">
-            {content.title}
+            {content?.title}
           </H3>
           {!location && (
-            <Select
-              // margin="0 10px 0 0"
-              top="40px"
-              padding="4px 10px"
-              left="20px"
-              width="300px"
-              maxWidth="100%"
-              shadow="0px 0px 6px 2px rgba(0, 0, 0, 0.2)"
-              options={data.cohorts.catalog}
-              openLabel={
-                lang == "us"
-                  ? academy
+            <Div
+              width_tablet="220px"
+              width_md="320px"
+              width_xs="320px"
+              width_xxs="280px"
+            >
+              <SelectRaw
+                options={data?.cohorts?.catalog}
+                placeholder={
+                  lang == "us"
+                    ? academy
+                      ? "Campus: " + academy.label
+                      : "Select one academy"
+                    : academy
                     ? "Campus: " + academy.label
-                    : "Select one academy"
-                  : academy
-                  ? "Campus: " + academy.label
-                  : "Escoge una academia"
-              }
-              closeLabel={
-                lang == "us"
-                  ? academy
-                    ? "Campus: " + academy.label
-                    : "Select one academy"
-                  : academy
-                  ? "Campus: " + academy.label
-                  : "Escoge una academia"
-              }
-              onSelect={(opt) => {
-                setAcademy(opt);
-                setData({
-                  ...data,
-                  [filterType.value]: {
-                    ...data[filterType.value],
-                    filtered:
-                      opt.label !== "All Locations"
-                        ? data[filterType.value].all.filter(
-                            (elm) => elm.academy.slug === opt.value
-                          )
-                        : data[filterType.value].all,
-                  },
-                });
-              }}
-            />
+                    : "Escoge una academia"
+                }
+                onChange={(opt) => {
+                  setAcademy(opt);
+                  setData({
+                    ...data,
+                    [filterType.value]: {
+                      ...data[filterType.value],
+                      filtered:
+                        opt.label !== "All Locations"
+                          ? data[filterType.value].all.filter(
+                              (elm) => elm.academy.slug === opt.value
+                            )
+                          : data[filterType.value].all,
+                    },
+                  });
+                }}
+              />
+            </Div>
           )}
         </Div>
         {Array.isArray(data.cohorts.filtered) &&
