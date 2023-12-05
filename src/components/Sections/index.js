@@ -495,7 +495,7 @@ export const Old_Grid = styled.div`
   }
   @media ${Devices.md} {
     grid-template-columns: ${(props) =>
-      props.columns_md ? `repeat(${props.columns_md})` : null};
+      props.columns_md ? props.columns_md : null};
     grid-template-rows: ${(props) =>
       props.rows_md ? `repeat(${props.rows_md})` : null};
     grid-gap: ${(props) => props.gridGap_md};
