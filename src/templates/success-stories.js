@@ -33,6 +33,7 @@ const SuccessStories = (props) => {
           }
           position="relative"
           zIndex="1"
+          maxWidth="1366px"
         >
           <Img
             src="/images/slash-light.png"
