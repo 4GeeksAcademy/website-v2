@@ -139,7 +139,7 @@ const Images_With_Marquee = (props) => {
 
 //Funcion que muestra las imagenes en columna y centradas
 const Images_Centered = (props) => {
-  console.log(props.gray)
+  console.log(props.gray);
   return (
     <Div
       display="flex"
@@ -163,9 +163,16 @@ const Images_Centered = (props) => {
           >
             <GatsbyImage
               key={i}
-              style={props.gray ? {filter: "grayscale(100%)", height: "60px", minWidth: "90px", maxWidth: "150px"} 
-                  : { height: "60px", minWidth: "90px", maxWidth: "150px"}
-                }
+              style={
+                props.gray
+                  ? {
+                      filter: "grayscale(100%)",
+                      height: "60px",
+                      minWidth: "90px",
+                      maxWidth: "150px",
+                    }
+                  : { height: "60px", minWidth: "90px", maxWidth: "150px" }
+              }
               imgStyle={{ objectFit: "contain" }}
               alt={l.name}
               fluid={l.image.childImageSharp.fluid}

@@ -66,7 +66,7 @@ const SuccessStoriescomponent = ({ filterIndexes, lang }) => {
   )?.node?.testimonials;
   const [testimonials, setTestimonials] = useState([]);
 
-  let position = 0;  
+  let position = 0;
 
   useEffect(() => {
     filteredData.forEach((testim, ind, arr) => {
@@ -104,10 +104,10 @@ const SuccessStoriescomponent = ({ filterIndexes, lang }) => {
       >
         {testimonials.map((m, i) => {
           i == 0
-          ? (position = 0)
-          : position == 2
-          ? (position = 0)
-          : (position += 1);
+            ? (position = 0)
+            : position == 2
+            ? (position = 0)
+            : (position += 1);
           return (
             i < 9 && (
               <TestimonialCard
@@ -119,8 +119,8 @@ const SuccessStoriescomponent = ({ filterIndexes, lang }) => {
                   position == 0
                     ? Colors.white
                     : position == 1
-                    ? Colors.veryLightBlue
-                    : Colors.lightYellow2
+                    ? Colors.lightYellow2
+                    : Colors.veryLightBlue
                 }
                 // background={m.highlighted && Colors.darkYellow}
                 name={m.student_name}

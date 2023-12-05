@@ -86,8 +86,8 @@ const TestimonialCard = ({
       minHeight={minHeight}
       gap="24px 0px"
     >
-      <Div 
-        flexDirection={stories ? "row" : "column"} 
+      <Div
+        flexDirection={stories ? "row" : "column"}
         justifyContent="between"
         borderBottom={`1px solid ${Colors.lightGray}`}
         padding="0 0 16px 0"
@@ -99,14 +99,24 @@ const TestimonialCard = ({
             imgStyle={imgStyle}
           />
           {stories ? ( //Where the component is called (true/false)
-              <Div flexDirection="column" margin="0 0 0 9px">
-                <H3 fontSize="15px" lineHeight="19px" textAlign="left" fontFamily="Lato-Black">
-                  {name}
-                </H3>
-                <H4 fontSize="12px" lineHeight="22px" textAlign="left" color={Colors.darkGray}>
-                  {short_content}
-                </H4>
-              </Div>
+            <Div flexDirection="column" margin="0 0 0 9px">
+              <H3
+                fontSize="15px"
+                lineHeight="19px"
+                textAlign="left"
+                fontFamily="Lato-Black"
+              >
+                {name}
+              </H3>
+              <H4
+                fontSize="12px"
+                lineHeight="22px"
+                textAlign="left"
+                color={Colors.darkGray}
+              >
+                {short_content}
+              </H4>
+            </Div>
           ) : (
             <H3
               type="h3"
@@ -120,7 +130,7 @@ const TestimonialCard = ({
           )}
         </Div>
 
-        {linkedin_url &&
+        {linkedin_url && (
           <Div>
             <Anchor
               to={linkedin_url}
@@ -135,7 +145,8 @@ const TestimonialCard = ({
                 stroke="#2867b2"
               />
             </Anchor>
-          </Div>}
+          </Div>
+        )}
       </Div>
       {!video &&
         (description && /<\/?[a-z0-9]+>/g.test(description) ? (
@@ -174,7 +185,7 @@ const TestimonialCard = ({
               width="100%"
               width_tablet="100%"
               style={{ breakInside: "avoid" }}
-            //videoHeight="600px"
+              videoHeight="286px"
             />
           </Div>
         </>
@@ -206,7 +217,7 @@ const TestimonialCard = ({
           letterSpacing="0.05em"
           lineHeight="26px"
           textAlign="left"
-          fontSize="13px"
+          fontSize="15px"
           color={Colors.blue}
         >
           <Anchor cursor="pointer" to={url}>

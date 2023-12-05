@@ -65,7 +65,7 @@ const SuccessStories = (props) => {
             style={{
               position: "absolute",
               zIndex: "-1",
-              transform: "rotate(90deg)"
+              transform: "rotate(90deg)",
             }}
             right_lg="11%"
             right_tablet="21%"
@@ -93,8 +93,8 @@ const SuccessStories = (props) => {
         filterIndexes={yml.filter_indexes}
       />
 
-      <Div 
-        maxWidth="1366px" 
+      <Div
+        maxWidth="1366px"
         margin="0 auto"
         padding_xxs="80px 20px"
         padding_md="50px 10%"
@@ -136,7 +136,7 @@ export const query = graphql`
             title
             paragraph
           }
-          partners{
+          partners {
             title
           }
           images {
@@ -152,7 +152,7 @@ export const query = graphql`
             }
           }
         }
-      }  
+      }
     }
     allPartnerYaml(filter: { fields: { lang: { eq: $lang } } }) {
       edges {
