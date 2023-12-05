@@ -139,6 +139,7 @@ const Images_With_Marquee = (props) => {
 
 //Funcion que muestra las imagenes en columna y centradas
 const Images_Centered = (props) => {
+  console.log(props.gray)
   return (
     <Div
       display="flex"
@@ -151,7 +152,7 @@ const Images_Centered = (props) => {
       padding="25px 0 0 0"
       margin="0 0 50px 0"
     >
-      {props.images.map((l, i) => {
+      {props.images?.map((l, i) => {
         return (
           <Div
             key={`${i}-${l.name}`}
@@ -162,7 +163,9 @@ const Images_Centered = (props) => {
           >
             <GatsbyImage
               key={i}
-              style={{ height: "60px", minWidth: "90px", maxWidth: "150px" }}
+              style={props.gray ? {filter: "grayscale(100%)", height: "60px", minWidth: "90px", maxWidth: "150px"} 
+                  : { height: "60px", minWidth: "90px", maxWidth: "150px"}
+                }
               imgStyle={{ objectFit: "contain" }}
               alt={l.name}
               fluid={l.image.childImageSharp.fluid}
@@ -249,6 +252,7 @@ const OurPartners = ({
   width,
   gridColumn,
   maxWidth,
+  gray,
   ...rest
 }) => {
   let FragmentStyle = {
@@ -284,7 +288,7 @@ const OurPartners = ({
       ) : marquee ? (
         <Images_With_Marquee images={images} />
       ) : (
-        <Images_Centered images={images} />
+        <Images_Centered images={images} gray={gray} />
       )}
       {link && (
         <Div gridArea_md="2/3/2/11" justifyContent="center" margin="50px 0 0 0">

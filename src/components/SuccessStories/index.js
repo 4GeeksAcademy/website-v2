@@ -66,6 +66,8 @@ const SuccessStoriescomponent = ({ filterIndexes, lang }) => {
   )?.node?.testimonials;
   const [testimonials, setTestimonials] = useState([]);
 
+  let position = 0;  
+
   useEffect(() => {
     filteredData.forEach((testim, ind, arr) => {
       arr[ind].isExpanded = false;
@@ -88,23 +90,39 @@ const SuccessStoriescomponent = ({ filterIndexes, lang }) => {
         display="column"
         columns="3"
         columnCount="3"
-        gap="1em"
+        gap="20px"
         style={{ gridAutoFlow: "dense" }}
-        padding_tablet="0 40px 60px 40px"
-        padding_md="0 80px 60px 80px"
-        padding_lg="0 0 60px 0"
+        padding="0 20px"
+        padding_tablet="50px 40px"
+        padding_md="50px 80px"
+        padding_lg="50px 0"
+        margin="0px auto"
         columnCount_sm="1"
-        columnCount_xs="1"
+        columnCount_xxs="1"
         columnCount_tablet="3"
+        maxWidth="1366px"
       >
         {testimonials.map((m, i) => {
+          i == 0
+          ? (position = 0)
+          : position == 2
+          ? (position = 0)
+          : (position += 1);
           return (
             i < 9 && (
               <TestimonialCard
                 key={i}
                 studentRating={m.rating}
                 image={m.student_thumb && m.student_thumb}
-                background={m.highlighted && Colors.darkYellow}
+                //minHeight="400px"
+                background={
+                  position == 0
+                    ? Colors.white
+                    : position == 1
+                    ? Colors.veryLightBlue
+                    : Colors.lightYellow2
+                }
+                // background={m.highlighted && Colors.darkYellow}
                 name={m.student_name}
                 short_content={m.short_content}
                 // description={m.content.length > 500 && !m.isExpanded ? m.content.substring(0, 500) + "..." : m.content}
@@ -118,6 +136,9 @@ const SuccessStoriescomponent = ({ filterIndexes, lang }) => {
                   backgroundSize: "contain",
                 }}
                 lang={lang}
+                linkedin_url={m.linkedin_url}
+                url={m.source_url}
+                textUrl={m.source_url_text}
               />
             )
           );

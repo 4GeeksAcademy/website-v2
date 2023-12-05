@@ -559,6 +559,7 @@ export const Header = ({
   gridTemplateColumns_tablet,
   maxWidth,
   fontFamily,
+  zIndex,
 }) => {
   return (
     <Grid
@@ -568,7 +569,7 @@ export const Header = ({
       position={position}
       margin={margin || "70px 0 0 0"}
       margin_tablet={margin_tablet}
-      padding={padding || "60px 20px"}
+      padding={padding || "0 0"}
       padding_tablet={padding_tablet || "60px 40px"}
       padding_md={padding_md || "60px 80px"}
       padding_lg={padding_lg || "60px 0"}
@@ -608,6 +609,7 @@ export const Header = ({
             fontFamily={fontFamily_title}
             //fontSize={fontSize || "40px"}
             //fontSize_tablet={fontSize_tablet || "50px"}
+            zindex={zIndex}
           >
             {hideArrowKey ? title : `< ${title} >`}
           </H1>
