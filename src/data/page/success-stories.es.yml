@@ -18,7 +18,7 @@ images:
   - name: "Facebook"
     image: "../../../static/images/partner/facebook.png"
   - name: "Microsoft"
-    image: "../../../static/images/partner/microsoft.png"
+    image: "../../../static/images/partner/google-gray.png"
   - name: "Apple"
     image: "../../../static/images/partner/apple.png"
   - name: "Uber"
