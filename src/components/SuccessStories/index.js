@@ -17,6 +17,7 @@ const SuccessStoriescomponent = ({ filterIndexes, lang }) => {
             heading
             button_text
             button_link
+            source_url_text
             testimonials {
               student_name
               slug
@@ -50,7 +51,6 @@ const SuccessStoriescomponent = ({ filterIndexes, lang }) => {
               short_content
               content
               source_url
-              source_url_text
             }
             fields {
               lang
@@ -61,9 +61,12 @@ const SuccessStoriescomponent = ({ filterIndexes, lang }) => {
     }
   `);
 
-  const filteredData = data.allTestimonialsYaml.edges.find(
+  const data_ = data.allTestimonialsYaml.edges.find(
     ({ node }) => node.fields.lang === lang
-  )?.node?.testimonials;
+  )?.node;
+
+  const filteredData = data_?.testimonials;
+
   const [testimonials, setTestimonials] = useState([]);
 
   let position = 0;
@@ -84,6 +87,7 @@ const SuccessStoriescomponent = ({ filterIndexes, lang }) => {
       setTestimonials([...filteredData.filter((f) => f.hidden == false)]);
     }
   }, []);
+
   return (
     <>
       <Div
@@ -138,6 +142,7 @@ const SuccessStoriescomponent = ({ filterIndexes, lang }) => {
                 lang={lang}
                 linkedin_url={m.linkedin_url}
                 url={m.source_url}
+                textUrl={data_.source_url_text}
               />
             )
           );

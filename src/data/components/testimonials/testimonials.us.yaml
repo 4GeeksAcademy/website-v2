@@ -1,6 +1,8 @@
 heading: "81% of our graduates successfully land a job after completing our program."
 button_text: Discover what they have to say
 button_link: "/us/testimonials"
+source_url_text: "Open review"
+
 testimonials:
   - student_name: Peter Schwarck
     include_in_marquee: true
@@ -57,7 +59,7 @@ testimonials:
     linkedin_text: "Linkedin Profile"
     linkedin_image: "../../../../static/images/linkedin.png"
     source_url: ""
-    source_url_text: ""
+    ##source_url_text: ""
     short_content: "Full Stack Developer"
     content: |
       I love 4Geeks Academy's approach to teaching students. There are always at least three 
@@ -83,7 +85,7 @@ testimonials:
     linkedin_text: ""
     linkedin_image: "../../../../static/images/linkedin.png"
     source_url: ""
-    source_url_text: ""
+    #source_url_text: ""
     short_content: "Full Stack Developer"
     content: |
       I felt lost in my career and could not see clear goals for myself anymore. I came across 
@@ -99,7 +101,7 @@ testimonials:
   #   alt: ""
   #   hidden: false
   #   source_url: ""
-  #   source_url_text: ""
+  #   #source_url_text: ""
   #   content: |
   #     I've been learning how to code by myself for 4 years, mostly HTML, CSS and PHP.
   #     I've been struggling a lot trying to make a dynamic website, so I started to look
@@ -122,7 +124,7 @@ testimonials:
     linkedin_text: "Linkedin Profile"
     linkedin_image: "../../../../static/images/linkedin.png"
     source_url: ""
-    source_url_text: ""
+    #source_url_text: ""
     short_content: "Full Stack Developer"
     content: |
       Overall just a great group of people with a common goal. I came into 4Geeks with little to 
@@ -145,7 +147,7 @@ testimonials:
     linkedin_text: "Linkedin Profile"
     linkedin_image: "../../../../static/images/linkedin.png"
     source_url: ""
-    source_url_text: ""
+    #source_url_text: ""
     short_content: "Full Stack Developer"
     content: |
       I highly recommend this coding boot camp!!!! Before 4Geeks I never had any experience with 
@@ -165,7 +167,7 @@ testimonials:
     linkedin_text: "Linkedin Profile"
     linkedin_image: "../../../../static/images/linkedin.png"
     source_url: ""
-    source_url_text: ""
+    #source_url_text: ""
     short_content: "Full Stack Developer"
     content: |
       This program was definitely one of the hardest things I've done in my life. It was 16 weeks of 
@@ -184,7 +186,7 @@ testimonials:
     linkedin_text: "Linkedin Profile"
     linkedin_image: "../../../../static/images/linkedin.png"
     source_url: ""
-    source_url_text: ""
+    #source_url_text: ""
     short_content: "Full Stack Developer"
     content: |
       Now I think that I can actually know how to solve the issues that I face when I'm coding and 
@@ -205,7 +207,7 @@ testimonials:
     linkedin_text: "Linkedin Profile"
     linkedin_image: "../../../../static/images/linkedin.png"
     source_url: ""
-    source_url_text: ""
+    #source_url_text: ""
     short_content: "Software Engineer at UDT"
     content: |
       My experience in 4Geeks Academy was and is the best. The instructors and TAs will help you in 
@@ -260,7 +262,7 @@ testimonials:
     linkedin_image: "../../../../static/images/linkedin.png"
     hidden: false
     source_url: ""
-    source_url_text: ""
+    #source_url_text: ""
     video_url: "https://www.youtube.com/watch?v=LvnxLyqaQDo"
  
     short_content: "Third-Party Risk Management at GitHub"
