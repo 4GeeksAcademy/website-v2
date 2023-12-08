@@ -7,7 +7,6 @@ meta_info:
   keywords: "Aprende a programar en Python, 4Geeks academy, aprende programacion en Python"
   template: "landing_a" # <--- choose your landing template
   redirects: [] # <--- URL redirections to avoid 404 errors
-  utm_location: ["santiago-chile"]
   visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   automation: downloadable-cl # optional, lead as "null" if you don't know, it can be more than one (comma separated)
   tag: request_downloadable # mandatory: at lease one tag (comma separated)
