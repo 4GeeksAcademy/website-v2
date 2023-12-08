@@ -88,7 +88,7 @@ const Landing = (props) => {
   //   );
 
   const landingLocation = session && (
-    yml.meta_info.utm_location.length > 1
+    yml.meta_info.utm_location?.length > 1
       ? 
         session.locations?.find(
           (l) =>
