@@ -89,7 +89,7 @@ const Landing = (props) => {
 
   const landingLocation =
     session &&
-    (yml.meta_info.utm_location?.length > 1
+    (yml.meta_info.utm_location?.length >= 1
       ? session.locations?.find(
           (l) =>
             l.breathecode_location_slug ===
@@ -97,11 +97,10 @@ const Landing = (props) => {
               (l) => l === session.location?.breathecode_location_slug
             )
         )
-      : session.locations?.find(
-          (l) => l.breathecode_location_slug === yml.meta_info.utm_location[0]
+        : session.locations?.find(
+          (l) => l.breathecode_location_slug === yml?.meta_info.utm_location
         ));
-
-      console.log(landingLocation, session, yml.meta_info.utm_location);
+        
   return (
     <>
       <LandingNavbar
