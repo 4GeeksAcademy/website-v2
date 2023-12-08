@@ -110,12 +110,10 @@ components:
         "Temario de la Guía"
         #           xl      lg      md      sm      xs
       font_size: ["40px", "34px", "34px", "25px", "20px"]
-    
     sub_heading:
       text:
         "Tipos de datos con súperpoderes:"
       font_size: ["15px"]
-
     content:
       text:   <ul style="list-style:unset; padding-left:30px"> <li> Cliente-Servidor en Arquitectura <li>Listas en Python Introducción <li>¿Qué es una lista? <li>Aquí va la explicación sobre qué es una lista en Python. <li>Declaración de Listas  <li>Explicación sobre cómo declarar listas en Python. <li>Funciones Conceptos Básicos <li>Conceptos básicos sobre funciones en Python. <li>Alcance de las Funciones <li>Explicación sobre el alcance de las funciones en Python. <li>Práctica <li>Actividades prácticas relacionadas con listas en Python. </ul>
       font_size: ["16px"]

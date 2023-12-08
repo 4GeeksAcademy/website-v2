@@ -9,7 +9,7 @@ meta_info:
   visibility: "hidden" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   template: "landing_a" # <--- choose your landing template
   redirects: ["/example-redirect"] # <--- URL redirections to avoid 404 errors
-
+  utm_location: ["online"]
   automation: downloadable # optional, lead as "null" if you don't know, it can be more than one (comma separated)
   tag: request_downloadable # mandatory: at lease one tag (comma separated)
   current_download: "python-guide"
