@@ -97,10 +97,10 @@ const Landing = (props) => {
               (l) => l === session.location?.breathecode_location_slug
             )
         )
-        : session.locations?.find(
+      : session.locations?.find(
           (l) => l.breathecode_location_slug === yml?.meta_info.utm_location
         ));
-        
+
   return (
     <>
       <LandingNavbar
