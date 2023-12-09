@@ -249,7 +249,7 @@ const FinancialFilter = (props) => {
     setFirstLoadData(false);
   }
 
-  console.log(prices)
+  console.log(prices);
 
   return (
     <Div
@@ -261,7 +261,6 @@ const FinancialFilter = (props) => {
       padding_md="0 80px"
       padding_lg="0 80px"
       padding_tablet="0 40px"
-      
     >
       <Div
         padding="34px 24px 24px 24px"

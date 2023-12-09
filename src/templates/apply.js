@@ -39,7 +39,7 @@ const formIsValid = (formData = null) => {
 };
 
 const Apply = (props) => {
-  console.log(props)
+  console.log(props);
   const { data, pageContext, yml } = props;
   const { session } = useContext(SessionContext);
   const [formStatus, setFormStatus] = useState({

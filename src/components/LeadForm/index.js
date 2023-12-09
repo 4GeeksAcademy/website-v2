@@ -480,7 +480,6 @@ const LeadForm = ({
             {selectProgram?.length > 1 && (
               <Div data-cy="dropdown_program_selector" margin_tablet="0 0 0 0">
                 <SelectRaw
-                  
                   //style={{margin: "0 0 11px 0"}}
                   options={selectProgram}
                   placeholder={courseSelector.place_holder}

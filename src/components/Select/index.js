@@ -169,7 +169,7 @@ export const SelectRaw = ({ onChange, ...rest }) => {
       margin={rest.placeholder ? "0 0 20px 0" : "0 0 16px 0"}
       margin_tablet="0 0 16px 0"
     >
-      {(rest.placeholder && rest.placeholderFloat) && (
+      {rest.placeholder && rest.placeholderFloat && (
         <Paragraph
           display={rest.display || "flex"}
           display_tablet="flex"
