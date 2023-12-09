@@ -140,6 +140,7 @@ const FinancialFilter = (props) => {
   const [locations, setLocations] = useState(false);
   const [modality, setModality] = useState(false);
   const [prices, setPrices] = useState();
+  const [firstLoadData, setFirstLoadData] = useState(false)
 
   const getCurrentPlans = () => {
     return data.allPlansYaml.edges
@@ -182,6 +183,12 @@ const FinancialFilter = (props) => {
     },
   };
 
+  if (course === false && modality === false && firstLoadData === false) {
+    setCourse({ value: "full_stack", label: "Full Stack Developer" });
+    setModality({ value: "part_time", label: "Part Time" });
+    setFirstLoadData(true);
+  }
+
   useEffect(() => {
     setLocations(
       props.locations.filter(
@@ -199,24 +206,10 @@ const FinancialFilter = (props) => {
       );
       setCurrentLocation(_loc ? _loc.node : null);
     }
+
   }, [session, props.locations]);
 
-  // useEffect(() => {
-  //   const currentPlans = getCurrentPlans();
-  //   if (modality && course && currentLocation && currentPlans) {
-  //     console.log("ASSAS")
-  //     setPrices(
-  //       currentPlans.filter((plan) =>
-  //         plan.academies.includes(currentLocation.fields.file_name.slice(0, -3))
-  //       )
-  //     );
-  //   } else {
-  //     setPrices(null);
-  //     console.log("modality", modality);
-  //   }
-  // }, [modality, course, currentLocation]);
-
-  const search = () => {
+  useEffect(() => {
     const currentPlans = getCurrentPlans();
     if (modality && course && currentLocation && currentPlans) {
       setPrices(
@@ -224,6 +217,22 @@ const FinancialFilter = (props) => {
           plan.academies.includes(currentLocation.fields.file_name.slice(0, -3))
         )
       );
+    } else {
+      setPrices(null);
+      console.log("modality", modality);
+    } 
+    setFirstLoadData(true);
+  }, []);
+    
+  const search = () => {
+    const currentPlans = getCurrentPlans();
+    if (modality && course && currentLocation && currentPlans) {
+      console.log("EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE")
+      setPrices(
+        currentPlans.filter((plan) =>
+          plan.academies.includes(currentLocation.fields.file_name.slice(0, -3))
+        )
+      ); 
     } else {
       setPrices(null);
       console.log("modality", modality);
@@ -237,9 +246,10 @@ const FinancialFilter = (props) => {
       </Paragraph>
     );
 
-  if (course === false && modality === false) {
-    setCourse({ value: "full_stack", label: "Full Stack Developer" });
-    setModality({ value: "part_time", label: "Part Time" });
+
+  if(firstLoadData){
+    search();
+    setFirstLoadData(false);
   }
 
   return (
