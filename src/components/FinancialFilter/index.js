@@ -140,7 +140,7 @@ const FinancialFilter = (props) => {
   const [locations, setLocations] = useState(false);
   const [modality, setModality] = useState(false);
   const [prices, setPrices] = useState();
-  const [firstLoadData, setFirstLoadData] = useState(false)
+  const [firstLoadData, setFirstLoadData] = useState(false);
 
   const getCurrentPlans = () => {
     return data.allPlansYaml.edges
@@ -206,7 +206,6 @@ const FinancialFilter = (props) => {
       );
       setCurrentLocation(_loc ? _loc.node : null);
     }
-
   }, [session, props.locations]);
 
   useEffect(() => {
@@ -220,19 +219,18 @@ const FinancialFilter = (props) => {
     } else {
       setPrices(null);
       console.log("modality", modality);
-    } 
+    }
     setFirstLoadData(true);
   }, []);
-    
+
   const search = () => {
     const currentPlans = getCurrentPlans();
     if (modality && course && currentLocation && currentPlans) {
-      console.log("EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE")
       setPrices(
         currentPlans.filter((plan) =>
           plan.academies.includes(currentLocation.fields.file_name.slice(0, -3))
         )
-      ); 
+      );
     } else {
       setPrices(null);
       console.log("modality", modality);
@@ -246,8 +244,7 @@ const FinancialFilter = (props) => {
       </Paragraph>
     );
 
-
-  if(firstLoadData){
+  if (firstLoadData) {
     search();
     setFirstLoadData(false);
   }
