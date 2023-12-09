@@ -81,11 +81,28 @@ const Landing = (props) => {
     };
   }, []);
 
-  const landingLocation =
-    session &&
-    session.locations?.find(
-      (l) => l.breathecode_location_slug === yml.meta_info.utm_location
-    );
+  // const landingLocation =
+  //   session &&
+  //   session.locations?.find(
+  //     (l) => l.breathecode_location_slug === yml.meta_info.utm_location[0]
+  //   );
+
+  const landingLocation = session && (
+    yml.meta_info.utm_location.length > 1
+      ? 
+        session.locations?.find(
+          (l) =>
+            l.breathecode_location_slug ===
+            yml.meta_info.utm_location?.find(
+              (l) => l === session.location?.breathecode_location_slug
+            )
+        )
+      : 
+        session.locations?.find(
+          (l) => l.breathecode_location_slug === yml.meta_info.utm_location[0]
+        ));
+
+  console.log(landingLocation, session, yml.meta_info.utm_location);
 
   return (
     <>
@@ -103,11 +120,11 @@ const Landing = (props) => {
       />
       <FollowBar
         position={yml.follow_bar.position}
-        showOnScrollPosition={12400}
+        showOnScrollPosition={400}
         buttonText={yml.follow_bar.button.text}
         phone={
           yml.follow_bar.phone.number ||
-          (landingLocation && landingLocation.phone)
+          (landingLocation && landingLocation?.phone)
         }
         phoneText={yml.follow_bar.phone.text}
         link={yml.follow_bar.button.path}

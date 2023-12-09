@@ -32,7 +32,7 @@ const Title_Paragraph = (props) => {
             fontFamily="Lato"
             fontWeight="900"
             fontSize="32px"
-            lineHeight="30px"
+            lineHeight="40px"
             letterSpacing="0.05em"
             color="#3A3A3A"
             width="100%"
@@ -148,10 +148,10 @@ const Images_Centered = (props) => {
       // columnGap="70px"
       justifyContent="center"
       background={Colors.white}
-      padding="25px 0 0 0"
+      padding="0 0 0 0"
       margin="0 0 50px 0"
     >
-      {props.images.map((l, i) => {
+      {props.images?.map((l, i) => {
         return (
           <Div
             key={`${i}-${l.name}`}
@@ -162,7 +162,16 @@ const Images_Centered = (props) => {
           >
             <GatsbyImage
               key={i}
-              style={{ height: "60px", minWidth: "90px", maxWidth: "150px" }}
+              style={
+                props.gray
+                  ? {
+                      filter: "grayscale(100%)",
+                      height: "60px",
+                      minWidth: "90px",
+                      maxWidth: "150px",
+                    }
+                  : { height: "60px", minWidth: "90px", maxWidth: "150px" }
+              }
               imgStyle={{ objectFit: "contain" }}
               alt={l.name}
               fluid={l.image.childImageSharp.fluid}
@@ -249,6 +258,7 @@ const OurPartners = ({
   width,
   gridColumn,
   maxWidth,
+  gray,
   ...rest
 }) => {
   let FragmentStyle = {
@@ -284,7 +294,7 @@ const OurPartners = ({
       ) : marquee ? (
         <Images_With_Marquee images={images} />
       ) : (
-        <Images_Centered images={images} />
+        <Images_Centered images={images} gray={gray} />
       )}
       {link && (
         <Div gridArea_md="2/3/2/11" justifyContent="center" margin="50px 0 0 0">
