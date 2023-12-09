@@ -171,7 +171,6 @@ const Player = ({
   };
 
   function borderStyle(style) {
-    console.log(style);
     if (style == null) {
       return false;
     } else {
