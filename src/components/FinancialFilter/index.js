@@ -249,6 +249,8 @@ const FinancialFilter = (props) => {
     setFirstLoadData(false);
   }
 
+  console.log(prices)
+
   return (
     <Div
       background="transparent"
@@ -259,6 +261,7 @@ const FinancialFilter = (props) => {
       padding_md="0 80px"
       padding_lg="0 80px"
       padding_tablet="0 40px"
+      
     >
       <Div
         padding="34px 24px 24px 24px"
@@ -297,6 +300,7 @@ const FinancialFilter = (props) => {
               onChange={(opt) => setCourse(opt)}
               style={selectStyle}
               //display="none"
+              placeholderFloat
             />
           )}
           {props.modality && (
@@ -307,6 +311,7 @@ const FinancialFilter = (props) => {
               onChange={(opt) => setModality(opt)}
               style={selectStyle}
               //display="none"
+              placeholderFloat
             />
           )}
           {!props.course && (
@@ -339,6 +344,7 @@ const FinancialFilter = (props) => {
               }
               style={selectStyle}
               //display="none"
+              placeholderFloat
             />
           )}
 

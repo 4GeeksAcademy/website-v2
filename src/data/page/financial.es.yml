@@ -118,7 +118,7 @@ two_columns:
       color: white
       background: black
       hover_color: white
-      path: "#top"
+      path: "/es/20-millones"
     boxes:
     - icon: rocket-2
       title: "14"
@@ -159,7 +159,7 @@ two_columns:
       color: white
       background: black
       hover_color: white
-      path: "#top"
+      path: "#financials"
 
   - proportions: [6, 6]
     image:
@@ -196,13 +196,13 @@ two_columns:
     content:
       font_size:
         - 16px
-      text: Nuestro objetivo es ayudarte a conseguir un trabajo dentro de los 180 días posteriores a tu graduación.Debes completar y cumplir con los requisitos para optar por la devolución del dinero si la oportunidad laboral no ha llegado dentro del plazo.
+      text: Nuestro objetivo es ayudarte a conseguir un trabajo dentro de los 180 días posteriores a tu graduación. Debes completar y cumplir con los requisitos para optar por la devolución del dinero si la oportunidad laboral no ha llegado dentro del plazo.
     button:
         text: "APLICAR"
         color: "white"
         background: "black"
         hover_color: "white"
-        path: "#top"
+        path: "/es/aplica"
 
 partners:
   paragraph: "¡No te pierdas los increíbles aliados de 4Geeks Academy! Aquí hay algunos de ellos."

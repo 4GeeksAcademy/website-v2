@@ -566,6 +566,7 @@ export const Header = ({
   maxWidth,
   fontFamily,
   zIndex,
+  id,
 }) => {
   return (
     <Grid
@@ -581,6 +582,7 @@ export const Header = ({
       padding_lg={padding_lg || "60px 0"}
       gridTemplateColumns_tablet={gridTemplateColumns_tablet}
       maxWidth={maxWidth}
+      id={id}
     >
       <Grid
         gridTemplateColumns_tablet={`repeat(12, 1fr)`}

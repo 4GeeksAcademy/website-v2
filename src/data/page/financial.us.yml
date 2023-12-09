@@ -116,7 +116,7 @@ two_columns:
       color: white
       background: black
       hover_color: white
-      path: "#top"
+      path: "/us/20-million"
     boxes:
     - icon: rocket-2
       title: "14"
@@ -157,7 +157,7 @@ two_columns:
       color: white
       background: black
       hover_color: white
-      path: "#top"
+      path: "#financials"
 
   - proportions: [6, 6]
     image:
@@ -200,7 +200,7 @@ two_columns:
         color: "white"
         background: "black"
         hover_color: "white"
-        path: "#top"
+        path: "/us/apply"
 
 partners:
   paragraph: "Don't miss out on the awesome allies of 4Geeks Academy! Here are just a few of them."

@@ -585,6 +585,7 @@ const PricesAndPayments = (props) => {
                 width_xxs="280px"
               >
                 <SelectRaw
+                  placeholderFloat
                   bgColor={Colors.white}
                   single
                   options={locations.map((l) => ({

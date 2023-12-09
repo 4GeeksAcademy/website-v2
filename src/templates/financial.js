@@ -64,6 +64,7 @@ const Financial = (props) => {
         gridTemplateColumns_tablet="repeat(14, 1fr)"
         maxWidth="1366px"
         hideArrowKey
+        id="financials"
       >
         <Img
           src="/images/landing/group-3.png"
