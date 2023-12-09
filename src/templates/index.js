@@ -191,7 +191,11 @@ const Home = (props) => {
                   color={Colors.blue}
                   margin="0 10px 0 0"
                   textColor="white"
-                  onClick={goToChooseProgram}
+                  onClick={() => {
+                    if (yml.header_data.join_button_path && yml.header_data.join_button_path.indexOf("http") > -1)
+                      window.open(transferQuerystrings(yml.header_data.join_button_path, utm));
+                    else navigate(yml.header_data.join_button_path);
+                  }}
                 >
                   {yml.header_data.join_button_text}
                 </Button>
@@ -203,6 +207,11 @@ const Home = (props) => {
                   color={Colors.blue}
                   margin="0 0 0 10px"
                   textColor={Colors.blue}
+                  onClick={() => {
+                    if (yml.header_data.free_button_path && yml.header_data.free_button_path.indexOf("http") > -1)
+                      window.open(transferQuerystrings(yml.header_data.free_button_path, utm));
+                    else navigate(yml.header_data.free_button_path);
+                  }}
                 >
                   {yml.header_data.free_button_text}
                 </Button>
@@ -308,7 +317,7 @@ const Home = (props) => {
       <Testimonials
         lang={data.allTestimonialsYaml.edges}
         background={Colors.verylightGray}
-        noMove // no movement and show slider
+        //noMove // no movement and show slider
       />
 
       <About4Geeks lang={data.allAbout4GeeksYaml.edges} />
@@ -327,6 +336,7 @@ const Home = (props) => {
       />
       <ChooseYourProgram
         chooseProgramRef={chooseProgramRef}
+        id="choose-program"
         lang={pageContext.lang}
         programs={data.allChooseYourProgramYaml.edges[0].node.programs}
         title={yml.choose_program.title}
@@ -384,7 +394,9 @@ export const query = graphql`
             sub_heading
             bullets
             join_button_text
+            join_button_path
             free_button_text
+            free_button_path
             video
             image {
               childImageSharp {

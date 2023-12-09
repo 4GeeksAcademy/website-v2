@@ -17,7 +17,9 @@ header_data:
     - 'Job Guarantee: get a job within the next 6 months upon graduation or money back, conditions apply.'
     - Learn everywhere, all the time, you choose the methodology.
   join_button_text: CHOOSE A PROGRAM
+  join_button_path: "#choose-program"
   free_button_text: TAKE FREE TRIAL AT NO COST
+  free_button_path: ""
   #If it doesn't have a video it will show the image
   #It must be a video from videoaks
   # video: "https://www.videoask.com/fm984j5nz"
@@ -56,7 +58,7 @@ two_columns:
     text: "See all financing options"
     color: "white"
     background: "black"
-    path: "#"
+    path: "/us/financials"
 
 ## 4GEEKS VS OTHERS SECTION
 geeks_vs_others:

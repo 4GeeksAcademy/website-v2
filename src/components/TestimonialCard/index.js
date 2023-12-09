@@ -89,10 +89,10 @@ const TestimonialCard = ({
       <Div
         flexDirection={stories ? "row" : "column"}
         justifyContent="between"
-        borderBottom={`1px solid ${Colors.lightGray}`}
-        padding="0 0 16px 0"
+        borderBottom={ stories ? `1px solid ${Colors.lightGray}` : ""}
+        padding={stories ? "0 0 16px 0" : "0"}
       >
-        <Div>
+        <Div flexDirection={stories ? "row" : "column"}>
           <GatsbyImage
             image={getImage(image && image.childImageSharp.gatsbyImageData)}
             style={style}

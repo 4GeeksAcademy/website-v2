@@ -13,6 +13,7 @@ const ChooseYourProgram = ({
   paragraph,
   chooseProgramRef,
   landingTemplate,
+  id,
 }) => {
   const data = useStaticQuery(graphql`
     {
@@ -48,6 +49,7 @@ const ChooseYourProgram = ({
     <Div
       //background={landingTemplate ? Colors.white : Colors.verylightGray}
       position="relative"
+      id={id}
     >
       <Div
         background={Colors.verylightGray}
