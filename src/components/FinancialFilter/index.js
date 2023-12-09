@@ -481,7 +481,7 @@ const FinancialFilter = (props) => {
                       placeItems="center"
                       image="no"
                     >
-                      <Link to={`/${props.lang}/apply?utm_plan=${label.slug}`}>
+                      <Link to={`/${props.lang}/${props.lang == "us" ? "apply" : "aplica"}?utm_plan=${label.slug}`}>
                         <Button
                           variant="full"
                           height="40px"

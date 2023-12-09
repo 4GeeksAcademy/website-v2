@@ -133,7 +133,8 @@ const customStyles = {
     ...styles,
     width: "100%",
     margin: "0px",
-    padding: "10px 0",
+    padding: "6px 0",
+    
   }),
   control: (styles, state) => ({
     ...styles,
@@ -144,14 +145,14 @@ const customStyles = {
 
     marginBottom: "0px",
     marginTop: "0px",
-
+    opacity: "0.7",
     width: "100%",
     fontSize: "15px",
     fontWeight: "400",
     color: "#000",
     lineHeight: "22px",
-    "&:hover": { boxShadow: "0 0 0 1px black" },
-    "&:focus": { boxShadow: "0 0 0 1px black", border: "1px solid #000000" },
+    "&:hover": { border: "1px solid #000000" },
+    //"&:focus": { boxShadow: "0 0 0 1px black", border: "1px solid #000000" },
   }),
   option: (styles, { data, isDisabled, isFocused, isSelected }) => {
     return {

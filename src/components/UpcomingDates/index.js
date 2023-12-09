@@ -250,6 +250,41 @@ const UpcomingDates = ({
               width_xxs="280px"
             >
               <SelectRaw
+                style={{
+                  input: (styles) => ({
+                    ...styles,
+                    width: "100%",
+                    margin: "5px 0px",
+                  }),
+                  control: (styles, state) => ({
+                    ...styles,
+                    fontFamily: "Lato, sans-serif",
+                    background: "#ffffff",
+                    border: "1px solid #000",
+                    boxShadow: "none",
+                    marginBottom: "0px",
+                    marginTop: "0px",
+                    width: "100%",
+                    fontSize: "15px",
+                    fontWeight: "400",
+                    color: "#000",
+                    lineHeight: "22px",
+                    "&:hover": { boxShadow: "0 0 0 1px black" },
+                    "&:focus": {
+                      boxShadow: "0 0 0 1px black",
+                      border: "1px solid #000000",
+                    },
+                  }),
+                  option: (
+                    styles,
+                    { data, isDisabled, isFocused, isSelected }
+                  ) => {
+                    return {
+                      ...styles,
+                      fontFamily: "Lato, sans-serif",
+                    };
+                  },
+                }}
                 options={data?.cohorts?.catalog}
                 placeholder={
                   lang == "us"
@@ -257,8 +292,8 @@ const UpcomingDates = ({
                       ? "Campus: " + academy.label
                       : "Select one academy"
                     : academy
-                    ? "Campus: " + academy.label
-                    : "Escoge una academia"
+                      ? "Campus: " + academy.label
+                      : "Escoge una academia"
                 }
                 onChange={(opt) => {
                   setAcademy(opt);
@@ -269,8 +304,8 @@ const UpcomingDates = ({
                       filtered:
                         opt.label !== "All Locations"
                           ? data[filterType.value].all.filter(
-                              (elm) => elm.academy.slug === opt.value
-                            )
+                            (elm) => elm.academy.slug === opt.value
+                          )
                           : data[filterType.value].all,
                     },
                   });
@@ -280,7 +315,7 @@ const UpcomingDates = ({
           )}
         </Div>
         {Array.isArray(data.cohorts.filtered) &&
-        data.cohorts.filtered.length > 0 ? (
+          data.cohorts.filtered.length > 0 ? (
           data.cohorts.filtered.map((m, i) => {
             return (
               i < 4 && (
@@ -313,25 +348,23 @@ const UpcomingDates = ({
                     </H4>
                     <Paragraph textAlign="left" fontWeight="700">
                       {`
-                                ${
-                                  lang === "us"
-                                    ? dayjs(m.kickoff_date)
-                                        .locale("en")
-                                        .format("MM/DD")
-                                    : dayjs(m.kickoff_date)
-                                        .locale("es")
-                                        .format("DD/MM")
-                                } 
+                                ${lang === "us"
+                          ? dayjs(m.kickoff_date)
+                            .locale("en")
+                            .format("MM/DD")
+                          : dayjs(m.kickoff_date)
+                            .locale("es")
+                            .format("DD/MM")
+                        } 
                                 ${lang === "us" ? " to " : " al "} 
-                                ${
-                                  lang === "us"
-                                    ? dayjs(m.ending_date)
-                                        .locale("en")
-                                        .format("MM/DD")
-                                    : dayjs(m.ending_date)
-                                        .locale("es")
-                                        .format("DD/MM")
-                                }
+                                ${lang === "us"
+                          ? dayjs(m.ending_date)
+                            .locale("en")
+                            .format("MM/DD")
+                          : dayjs(m.ending_date)
+                            .locale("es")
+                            .format("DD/MM")
+                        }
                                 `}
                     </Paragraph>
                   </Div>
@@ -390,8 +423,8 @@ const UpcomingDates = ({
                       {m.syllabus_version.name === modality["full_time"]
                         ? content.info.duration_full_time
                         : m.syllabus_version.name === modality["part_time"]
-                        ? content.info.duration_part_time
-                        : content.info.duration_weeks}
+                          ? content.info.duration_part_time
+                          : content.info.duration_weeks}
                     </Paragraph>
                   </Div>
 
@@ -430,8 +463,8 @@ const UpcomingDates = ({
                         {m.syllabus_version.name === modality["full_time"]
                           ? content.info.duration_full_time
                           : m.syllabus_version.name === modality["part_time"]
-                          ? content.info.duration_part_time
-                          : content.info.duration_weeks}
+                            ? content.info.duration_part_time
+                            : content.info.duration_weeks}
                       </Paragraph>
                     </Div>
                   </Div>
