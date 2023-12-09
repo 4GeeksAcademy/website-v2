@@ -650,8 +650,6 @@ export const Header = ({
   );
 };
 
-
-
 export const GridContainer = ({
   id,
   className,
@@ -720,7 +718,7 @@ export const GridContainer = ({
   justifyContentChild,
   justifyItemsChild,
 }) => {
-  console.log(height_tablet)
+  console.log(height_tablet);
   return (
     <Grid
       id={id}

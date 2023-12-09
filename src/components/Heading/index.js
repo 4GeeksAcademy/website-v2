@@ -108,7 +108,7 @@ export const H1 = styled(BaseHeading)`
   z-index: ${(props) => props.zIndex};
   letter-spacing: 0.05em;
   font-family: ${(props) => props.fontFamily};
-  text-decoration: ${(props) => props.textTransform} 
+  text-decoration: ${(props) => props.textTransform};
 `;
 
 export const H2 = styled(BaseHeading)`

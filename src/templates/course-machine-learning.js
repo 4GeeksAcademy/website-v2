@@ -56,8 +56,6 @@ const Program = ({ data, pageContext, yml }) => {
     }
   }, [currentLocation]);
 
-  
-
   const syllabus_button_text = yml.button.syllabus_heading;
   const apply_button_text = yml.button.apply_button_text;
 
@@ -74,7 +72,9 @@ const Program = ({ data, pageContext, yml }) => {
   return (
     <>
       <Header
-        margin={isCustomBarActive(session) ? "120px auto 0 auto" : "90px auto 0 auto"}
+        margin={
+          isCustomBarActive(session) ? "120px auto 0 auto" : "90px auto 0 auto"
+        }
         paragraphMargin="26px 20px"
         paragraphMargin_Tablet="26px 22%"
         paddingParagraph_tablet="0 40px"
