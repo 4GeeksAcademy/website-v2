@@ -27,6 +27,7 @@ import RelatedPosts from "../components/RelatedPosts";
 import FaqCard from "../components/FaqCard";
 import TwoColumn from "../components/TwoColumn/index.js";
 import GeeksInfo from "../components/GeeksInfo";
+import With4Geeks from "../components/With4Geeks"
 
 const MapFrame = lazy(() => import("../components/MapFrame"));
 
@@ -36,6 +37,8 @@ const Location = ({ data, pageContext, yml }) => {
   const hiring = data.allPartnerYaml.edges[0].node;
   const images = data.allLocationYaml.edges[0].node;
   const [ready, setReady] = useState(false);
+
+  console.log(data)
 
   useEffect(() => {
     process.nextTick(() => {
@@ -64,12 +67,17 @@ const Location = ({ data, pageContext, yml }) => {
     es: "SELECCIONAR PROGRAMA",
   };
 
+  console.log(yml)
+
   return (
     <>
       <GridContainerWithImage
-        padding="0"
-        padding_tablet="0 0 20px 0"
+        padding="40px 20px"
+        padding_md="40px 80px"
+        padding_lg="40px 0px"
+        padding_tablet="40px 40px"
         columns_tablet="14"
+        gridColumn_tablet="1 / span 14"
         margin={
           isCustomBarActive(session) ? "70px auto 24px auto" : "70px auto"
         }
@@ -79,7 +87,7 @@ const Location = ({ data, pageContext, yml }) => {
           flexDirection="column"
           justifyContent_tablet="start"
           padding_tablet="70px 0 0 0"
-          padding={isCustomBarActive(session) ? "70px 25px 0 25px" : "0 25px"}
+          padding={isCustomBarActive(session) ? "70px 0 0 0" : "0 0"}
           gridColumn_tablet="1 / 7"
         >
           <H1 type="h1" textAlign="left" margin="0 0 11px 0" color="#606060">
@@ -268,10 +276,10 @@ const Location = ({ data, pageContext, yml }) => {
       {data.allJobGuaranteeSmallYaml.edges[0].node.locations.includes(
         yml.breathecode_location_slug
       ) && (
-        <JobGuaranteeSmall
-          content={data.allJobGuaranteeSmallYaml.edges[0].node}
-        />
-      )}
+          <JobGuaranteeSmall
+            content={data.allJobGuaranteeSmallYaml.edges[0].node}
+          />
+        )}
 
       <TwoColumn
         left={{ image: yml.two_columns?.image, video: yml.two_columns?.video }}
@@ -378,21 +386,19 @@ const Location = ({ data, pageContext, yml }) => {
         )}
       </Div> */}
 
-      <GridContainer
-        padding="0 4%"
-        gridGap="0px"
-        padding_tablet="0 20%"
-        padding_lg="0 26%"
-      >
-        <FaqCard
-          faqs={data.allFaqYaml.edges[0].node.faq}
-          topicSlug="enrollment"
-          minPriority="1"
-          // locationSlug={yml.breathecode_location_slug}
-        />
-      </GridContainer>
 
-      <Divider height="50px" />
+      <FaqCard
+        faqs={data.allFaqYaml.edges[0].node.faq}
+        topicSlug="enrollment"
+        minPriority="1"
+      // locationSlug={yml.breathecode_location_slug}
+      />
+
+      <With4Geeks
+        lang={pageContext.lang}
+        title={yml?.related_articles?.title}
+        stories={yml?.related_articles?.stories}
+      />
 
       <RelatedPosts
         lang={pageContext.lang}
@@ -538,6 +544,37 @@ export const query = graphql`
               }
             }
           }
+          related_articles{
+            title
+            stories{
+              name
+              title
+              open_in_modal
+              description
+              image {
+                childImageSharp {
+                  gatsbyImageData(
+                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                    width: 800
+                    quality: 100
+                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                  )
+                }
+              }
+              alt
+              icon
+              video
+              video_height
+              location
+              footer {
+                is_image
+                image
+                image_link
+                text
+                text_link
+              }
+            }
+          }
         }
       }
     }
@@ -611,7 +648,7 @@ export const query = graphql`
       }
     }
     allMarkdownRemark(
-      limit: 4
+      limit: 3
       sort: { frontmatter: { date: DESC } }
       filter: { frontmatter: { cluster: { in: $related_clusters } } }
     ) {

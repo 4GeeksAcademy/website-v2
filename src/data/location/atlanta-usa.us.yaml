@@ -79,6 +79,83 @@ images_box:
     - path: "../../../static/images/locations/miami-people.jpeg"
       alt: "4Geeeks miami lab"
 
+## START FROM HERE - DON'T CHANGE ANYTHING ABOVE
+
+two_columns:
+  proportions: [6, 6]
+  image:
+    style: '{"border" : "5px solid black", "backgroundSize": "contain" }'
+    src: "/static/images/staff/luisa.png"
+    shadow: true  
+  video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
+  heading:
+    text: "4Geeks, Argentina and a story full of opportunities"
+    font_size: ["30px", "30px", "30px", "30px", "30px"]
+  sub_heading:
+    text: "We are Buenos Aires based and we have been focusing in bringing on more opportunities."
+    font_size: ["18px", "18px", "22px", "22px", "22px"]
+  button:
+    text: "APPLY NOW"
+    color: "white"
+    background: "black"
+    path: "/us/apply"
+  bullets:
+    items: 
+    - text: "There is always a full or partial scholarship open"
+    - text: "There is always opportunities for everyone in Miami-Dade County, Broward and Palm Beach"
+    - text: "We have ongoing partnerships with Miami Dade College, Miami Tech Coalition, UWM, The City of Miami, Miami Dade Counti and so manu more."
+
+related_articles:
+  title: "Related articles"
+  stories:
+  - name: ""
+    title: "Conseguí trabajo..."
+    open_in_modal: true
+    description: "En una investigación realizada y publicada por Forbes, se detallaron todas las formas posibles de convertirse en desarrollador web en los Estados Unidos."
+    image: ../../../static/images/consegui-trabajo.png
+    alt: ""
+    video: "" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    video_height: "173px"
+    location: ["all", "downtown-miami"]
+    icon: ""
+    footer:
+      is_image: false
+      image: ""
+      image_link: ""
+      text: ""
+      text_link: ""
+  - name: ""
+    title: "Financiaron mi carrera..."
+    open_in_modal: true
+    description: "Paga el programa después de que te gradues y encuentra trabajo, aplica al ISA (Income Share Agreement)"
+    image: ../../../static/images/financiaron-carrera.png
+    alt: ""
+    video: "" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    video_height: "173px"
+    location: ["all", "downtown-miami"]
+    icon: ""
+    footer:
+      is_image: false
+      image: ""
+      image_link: ""
+      text: ""
+      text_link: ""
+  - name: ""
+    title: "Nunca programé solo otra vez..."
+    open_in_modal: true
+    description: "Obten mentores de codificación mientras estudias, después de graduarte e incluso en sus trabajos."
+    image: ../../../static/images/nunca-programa-solo.png
+    alt: ""
+    video: "" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    video_height: "173px"
+    location: ["all", "downtown-miami"]
+    icon: ""
+    footer:
+      is_image: false
+      image: ""
+      image_link: ""
+      text: ""
+      text_link: ""
 
 active_campaign_location_slug: "atlanta-usa"
 breathecode_location_slug: "atlanta-usa"
