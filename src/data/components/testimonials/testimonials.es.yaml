@@ -1,6 +1,8 @@
 heading: "86% de nuestros alumnos han sido contratados"
 button_text: Ver experiencias
 button_link: "/es/testimonios"
+source_url_text: "Ver reseña"
+
 testimonials:
   - student_name: Peter Schwarck
     include_in_marquee: true
@@ -38,32 +40,7 @@ testimonials:
     linkedin_url: "https://www.linkedin.com/in/floviera"
     student_thumb: "../../../../static/images/testimonials/florencia-viera.jpeg"
     linkedin_image: "../../../../static/images/linkedin.png"
-  - student_name: "Azul Botaya"
-    slug: "azu-bota"
-    country:
-      iso: ve
-      name: Venezuela
-    featured: false
-    highlighted: false
-    testimonial_date: ""
-    rating: 5
-    student_thumb: "../../../../static/images/testimonials/azul-botaya.jpg"
-    student_video: "" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
-    # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
-    hidden: false
-    linkedin_url: "https://www.linkedin.com/in/azul-botaya-31669b151/"
-    linkedin_text: "Linkedin Perfil"
-    linkedin_image: "../../../../static/images/linkedin.png"
-    source_url: ""
-    source_url_text: ""
-    short_content: "Full Stack Developer"
-    content: |
-      Estuve a punto de dejar toda mi carrera atrás y olvidarme de todo. Luego consegúi 4Geeks y recuperé 
-      la esperanza de ser una gran profesional. Me uní a 4Geeks y encontré un gran equipo, una gran comunidad y sobre todo
-      mucha calidad humana. Fui capaz finalmente de comprometerme en algo realmente interesante y que se sumaría 
-      a mi carrera de Diseñadora Gráfica, permitiéndome fortalecer mis habilidades. Además un programa Part-time! 
-      No tenía que renunciar a nada. 
-      Se que hice un gran grupo y que además podré volver siempre con ellos.
+
   - student_name: "Naila Kaliyeva"
     slug: "nai-kali"
     country:
@@ -82,7 +59,7 @@ testimonials:
     linkedin_text: "Linkedin Perfil"
     linkedin_image: "../../../../static/images/linkedin.png"
     source_url: ""
-    source_url_text: ""
+    #source_url_text: ""
     short_content: "Full Stack Developer"
     content: |
       Me encanta el enfoque de 4Geeks Academy para enseñar Programación. Siempre hay -al menos- 3 mentores disponibles para ayudarte y asegurar que puedas entender todo el contenido.  
@@ -96,12 +73,40 @@ testimonials:
   #   alt: ""
   #   hidden: false
   #   source_url: ""
-  #   source_url_text: ""
+  #   #source_url_text: ""
   #   content: |
   #     I've been learning how to code by myself for 4 years, mostly HTML, CSS and PHP.
   #     I've been struggling a lot trying to make a dynamic website, so I started to look
   #     for a coding school in Miami and I found the best one: 4Geeks Academy. And thanks to
   #     the program they offer, the Income Sharing Agreement, I could enroll right away and pay once I get a job
+
+  - student_name: "Azul Botaya"
+    slug: "azu-bota"
+    country:
+      iso: ve
+      name: Venezuela
+    featured: false
+    highlighted: false
+    testimonial_date: ""
+    rating: 5
+    student_thumb: "../../../../static/images/testimonials/azul-botaya.jpg"
+    student_video: "" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    hidden: false
+    linkedin_url: "https://www.linkedin.com/in/azul-botaya-31669b151/"
+    linkedin_text: "Linkedin Perfil"
+    linkedin_image: "../../../../static/images/linkedin.png"
+    source_url: ""
+    #source_url_text: ""
+    short_content: "Full Stack Developer"
+    content: |
+      Estuve a punto de dejar toda mi carrera atrás y olvidarme de todo. Luego consegúi 4Geeks y recuperé 
+      la esperanza de ser una gran profesional. Me uní a 4Geeks y encontré un gran equipo, una gran comunidad y sobre todo
+      mucha calidad humana. Fui capaz finalmente de comprometerme en algo realmente interesante y que se sumaría 
+      a mi carrera de Diseñadora Gráfica, permitiéndome fortalecer mis habilidades. Además un programa Part-time! 
+      No tenía que renunciar a nada. 
+      Se que hice un gran grupo y que además podré volver siempre con ellos.
+
   - student_name: "Charles Fabricius"
     slug: "cha-fabr"
     country:
@@ -119,7 +124,7 @@ testimonials:
     linkedin_text: "Linkedin Perfil"
     linkedin_image: "../../../../static/images/linkedin.png"
     source_url: ""
-    source_url_text: ""
+    #source_url_text: ""
     short_content: "Full Stack Developer"
     content: |
       En general es un grupo extraordinario de personas. Yo empecé en 4Geeks con casi ningún conocimiento de programación. 
@@ -141,7 +146,7 @@ testimonials:
     linkedin_text: "Linkedin Perfil"
     linkedin_image: "../../../../static/images/linkedin.png"
     source_url: ""
-    source_url_text: ""
+    #source_url_text: ""
     short_content: "Full Stack Developer"
     content: |
       Yo recomiendo totalmente 4Geeks Academy. Antes de 4Geeks no sabía nada y después de 10 semanas ya estaba haciendo cosas impensadas por mi. 
@@ -160,7 +165,7 @@ testimonials:
     linkedin_text: "Linkedin Perfil"
     linkedin_image: "../../../../static/images/linkedin.png"
     source_url: ""
-    source_url_text: ""
+    #source_url_text: ""
     short_content: "Full Stack Developer in Facebook"
     content: |
       Este programa es definitivamente una de las cosas más difíciles que he hecho en mi vida. Pero lo completé y me gradué como Desarrollador de Software en 16 semanas. 
@@ -179,7 +184,7 @@ testimonials:
     linkedin_text: "Linkedin Perfil"
     linkedin_image: "../../../../static/images/linkedin.png"
     source_url: ""
-    source_url_text: ""
+    #source_url_text: ""
     short_content: "Full Stack Developer"
     content: |
       Ahora creo que puedo completamente desarrollar una aplicación y entender cómo funciona. Puedo incluso ayudar a resolver problemas y bugs en algún código. 
@@ -197,7 +202,7 @@ testimonials:
     linkedin_image: "../../../../static/images/linkedin.png"
     student_thumb: "../../../../static/images/testimonials/fidel-rosell.jpg"
     source_url: ""
-    source_url_text: ""
+    #source_url_text: ""
     short_content: "Software Engineer in UDT"
     content: |
       Mi experiencia en 4Geeks ha sido super gratificante. Los mentores y personal son muy buenos con todos. La cantidad de soporte que recibes es mejor de lo que imaginas. 
@@ -216,8 +221,8 @@ testimonials:
     linkedin_image: "../../../../static/images/linkedin.png"
     hidden: true
     source_url: ""
-    video_url: "https://www.youtube.com/watch?v=LvnxLyqaQDo"
     source_url_text: ""
+    video_url: "https://www.youtube.com/watch?v=LvnxLyqaQDo"
     short_content: "Third-Party Risk Management at GitHub"
     content: |
       I was a lawyer for 6 years and I decided to change my career. I attended 4Geeks Academy, a coding bootcamp, that was last year (2018), I graduated in August, and after graduating in October, I was able to get a job as a web developer. I had no background whatsoever in coding. I didn't know anything about anything computer-technology wise, so that's an encouragement because it's possible!
@@ -234,7 +239,7 @@ testimonials:
     hidden: false
     source_url: ""
     video_url: "https://www.youtube.com/watch?v=gOXxYmjAIj0"
-    source_url_text: ""
+    #source_url_text: ""
     short_content: "Crecimiento Profesional tras Bootcamp de Programación"
     content: |
       Su primera carrera fue Ingeniera Comercial, trabajaba en un banco ganando muy poco, llegó a 4Geeks Academy y obtuvo una beca del 100% con nosotros y desde ahí su carrera ha despegado, trabajó en empresas como Ecomsur, Cencosud y actualmente esta en LATAM Airlines. Leslie además participa activamente en comunidades de desarrollo, como Women Who Code, Mermelada Tech y Javascript Chile
@@ -251,7 +256,7 @@ testimonials:
     hidden: false
     source_url: ""
     video_url: "https://www.youtube.com/watch?v=edTe-JOzad4"
-    source_url_text: ""
+    ##source_url_text: ""
     short_content: "Habilidades Blandas que Lideran al Éxito"
     content: |
       Venía de ser terapeuta y también de desempeñarse en el área de marketing, y gracias a su formación en programación en conjunto con sus habilidades blandas lo llevaron a puestos de liderazgo en Ecomsur
@@ -268,7 +273,7 @@ testimonials:
     hidden: false
     source_url: ""
     video_url: "https://www.youtube.com/watch?v=gOXxYmjAIj0"
-    source_url_text: ""
+    #source_url_text: ""
     short_content: "De Músico a Liderazgo en Programación"
     content: |
       Viene de ser músico profesional, fue uno de los mejores alumnos de su cohorte y ocupó puesto de liderazgo en su proyecto final
@@ -285,7 +290,7 @@ testimonials:
     hidden: false
     source_url: ""
     video_url: ""
-    source_url_text: ""
+    #source_url_text: ""
     short_content: "De las Artes al Desarrollo de Software"
     content: |
       Nicolas es desarrollador de software y músico. Por muchos años se dedicó al mundo de las artes escénicas, y luego por medio de amistades despertó su curiosidad por la programación. Se graduó de 4geeks este 2023 y está actualmente trabajando como desarrollador en una gran empresa chilena. 
@@ -302,7 +307,7 @@ testimonials:
     hidden: false
     source_url: ""
     video_url: ""
-    source_url_text: ""
+    #source_url_text: ""
     short_content: "Siguiendo la Pasión hacia el Desarrollo Web"
     content: |
       Cristian siempre tuvo interés en el mundo del desarrollo, su trayecto laboral comenzó como prevencionista de riesgos y luego de la pandemia decidió dedicarse a algo que le diera felicidad,por lo que se adentra en el mundo del desarrollo algo que siempre le interesó. Actualmente trabaja como desarrollador.
@@ -319,7 +324,7 @@ testimonials:
     hidden: false
     source_url: ""
     video_url: ""
-    source_url_text: ""
+    #source_url_text: ""
     short_content: "Desarrolladora Front-End Apasionada"
     content: |
       Apasionada de lo que hace, de aprender y de los constantes cambios, busca hacer un trabajo que genere cambios. una vez acabado el bootcamp fue ayudante de muchas cohortes de 4geeks y actualmente es desarrolladora front end.  
