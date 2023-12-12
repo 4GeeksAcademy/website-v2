@@ -84,25 +84,22 @@ const Landing = (props) => {
   // const landingLocation =
   //   session &&
   //   session.locations?.find(
-  //     (l) => l.breathecode_location_slug === yml.meta_info.utm_location[0]
+  //     (l) => l.breathecode_location_slug === yml.meta_info.utm_location
   //   );
 
-  const landingLocation = session && (
-    yml.meta_info.utm_location.length > 1
-      ? 
-        session.locations?.find(
+  const landingLocation =
+    session &&
+    (yml.meta_info.utm_location?.length >= 1
+      ? session.locations?.find(
           (l) =>
             l.breathecode_location_slug ===
             yml.meta_info.utm_location?.find(
               (l) => l === session.location?.breathecode_location_slug
             )
         )
-      : 
-        session.locations?.find(
-          (l) => l.breathecode_location_slug === yml.meta_info.utm_location[0]
+      : session.locations?.find(
+          (l) => l.breathecode_location_slug === yml?.meta_info.utm_location
         ));
-
-  console.log(landingLocation, session, yml.meta_info.utm_location);
 
   return (
     <>
