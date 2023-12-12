@@ -6,6 +6,7 @@ import { Grid, Div } from "../Sections";
 import { H4, H3, H2, H1, Paragraph } from "../Heading";
 import Icon from "../Icon";
 import { DirectiveLocation } from "graphql";
+import { transferQuerystrings, smartRedirecting } from "../../utils/utils";
 
 const Overlaped = ({
   lang,
@@ -37,8 +38,7 @@ const Overlaped = ({
       }
     }
   `);
-
-  console.log(button);
+  //const utm = session && session.utm;
   return (
     <Div maxWidth_tablet="1366px" margin_tablet="50px auto" width="100%">
       <Grid
@@ -147,20 +147,20 @@ const Overlaped = ({
           ) : null}
 
           {button?.text && (
-            // <Link to={button.path}>
-            <Button
-              background={Colors[button.color]}
-              color={Colors.white}
-              margin="20px 0 0 0"
-              onClick={() => {
-                if (button.path && button.path.indexOf("http") > -1)
-                  window.open(transferQuerystrings(button.path, utm));
-                else navigate(button.path);
-              }}
-            >
-              {button.text}
-            </Button>
-            // </Link>
+            <Link to={button.path}>
+              <Button
+                background={Colors[button.color]}
+                color={Colors.white}
+                margin="20px 0 0 0"
+              // onClick={() => {
+              //   if (button.path && button.path.indexOf("http") > -1)
+              //     window.open(transferQuerystrings(button.path, utm));
+              //   else navigate(button.path);
+              // }}
+              >
+                {button.text}
+              </Button>
+            </Link>
           )}
         </Div>
       </Grid>
@@ -251,11 +251,11 @@ const Overlaped = ({
                 background={Colors[button.color]}
                 color={Colors.white}
                 margin="20px 0 0 0"
-                onClick={() => {
-                  if (button.path && button.path.indexOf("http") > -1)
-                    window.open(transferQuerystrings(button.link, utm));
-                  else navigate(button.path);
-                }}
+              // onClick={() => {
+              //   if (button.path && button.path.indexOf("http") > -1)
+              //     window.open(transferQuerystrings(button.path, utm));
+              //   else navigate(button.path);
+              // }}
               >
                 {button.text}
               </Button>
