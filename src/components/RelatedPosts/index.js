@@ -16,7 +16,7 @@ const Post = ({ item, i, lang }) => {
       border="none"
       padding="0 16px"
       style={{ borderRadius: `0px` }}
-      minWidth="315px"
+      minWidth="260px"
       width="100%"
     >
       <Link to={item.node.fields.pagePath}>
@@ -48,7 +48,7 @@ const Post = ({ item, i, lang }) => {
         <Div
           marginTop="20px"
           padding_tablet="20px 32px"
-          padding_xs="20px 16px"
+          padding_xxs="20px 16px"
           display={`flex`}
           //height="100%"
           height="fit-content"
@@ -117,7 +117,7 @@ const RelatedPosts = ({ posts, lang, relatedClusters }) => {
           flexDirection="column"
           alignItems="left"
           padding_tablet="0px 16px"
-          padding="0px"
+          padding="0px 16px"
         >
           <H2
             margin_tablet="0 0 40px 0"
