@@ -37,7 +37,7 @@ icons:
     title: "TIEMPO DE RESPUESTA DE 15 MINUTOS"
     
 list:
-  - title: "Apoyo Profesional Ilimitado"
+  - title: "Proceso Personalizado"
     image: "../../../static/images/professional-support.png"
     position: "right"
     sub:
