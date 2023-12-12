@@ -78,22 +78,21 @@ const Staff = (props) => {
   var coords = 0;
 
   useEffect(() => {
-    coords = document.querySelector(".scroll-items").getBoundingClientRect();
-
+    coords = document.querySelector(".scroll-elements").getBoundingClientRect();
   })
-  const scrollL = (scroll) => {
-    var left = document.querySelector(".scroll-items");
-    left?.scrollBy(-1 * scroll, 0);
+  const scrollLeft = (scroll) => {
+    var left = document.querySelector(".scroll-elements");
+    left.scrollBy(-1 * scroll, 0);
   };
 
-  const scrollC = (coords) => {
-    var center = document.querySelector(".scroll-items");
-    center?.scrollBy(coords.width / 2, 0);
+  const scrollCenter = (coords) => {
+    var center = document.querySelector(".scroll-elements");
+    center.scrollBy(coords.width / 2, 0);
   };
 
-  const scrollR = (scroll) => {
-    var right = document.querySelector(".scroll-items");
-    right?.scrollBy(scroll, 0);
+  const scrollRight = (scroll) => {
+    var right = document.querySelector(".scroll-elements");
+    right.scrollBy(scroll, 0);
   };
 
   return (
@@ -119,7 +118,7 @@ const Staff = (props) => {
         >
           <H4
             fontSize="30px"
-            textTransform="uppercase"
+            //textTransform="uppercase"
             lineHeight="19px"
             fontWeight="500"
           >
@@ -146,7 +145,7 @@ const Staff = (props) => {
           >
 
             <Div
-              className="scroll-items"
+              className="scroll-elements"
               alignItems="start"
               justifyContent="left"
               overflow="auto"
@@ -224,7 +223,7 @@ const Staff = (props) => {
             height="38px"
             width="24px"
             height_tablet="44px"
-            onClick={() => scrollR(256)}
+            onClick={() => scrollRight(256)}
           >
             <Icon width="100%" height="100%" icon="arrow-right" />
           </Button>
@@ -235,9 +234,9 @@ const Staff = (props) => {
           justifyContent="center"
           gap="16px"
         >
-          <Anchor className="dot" onClick={() => scrollL(10000)}></Anchor>
-          <Anchor className="dot" onClick={() => scrollC(coords)}></Anchor>
-          <Anchor className="dot" onClick={() => scrollR(10000)}></Anchor>
+          <Anchor className="dot" onClick={() => scrollLeft(10000)}></Anchor>
+          <Anchor className="dot" onClick={() => scrollCenter(coords)}></Anchor>
+          <Anchor className="dot" onClick={() => scrollRight(10000)}></Anchor>
         </Div>
 
       </Div>

@@ -494,37 +494,6 @@ export const query = graphql`
               }
             }
           }
-          related_articles{
-            title
-            stories{
-              name
-              title
-              open_in_modal
-              description
-              image {
-                childImageSharp {
-                  gatsbyImageData(
-                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                    width: 800
-                    quality: 100
-                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
-                  )
-                }
-              }
-              alt
-              icon
-              video
-              video_height
-              location
-              footer {
-                is_image
-                image
-                image_link
-                text
-                text_link
-              }
-            }
-          }
         }
       }
     }

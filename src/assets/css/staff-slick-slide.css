@@ -2,16 +2,16 @@
 
 .cover {}
 
-.scroll-items {
+.scroll-elements {
   scroll-behavior: smooth;
 }
 
-.scroll-items::-webkit-scrollbar {
+.scroll-elements::-webkit-scrollbar {
   -webkit-appearance: none;
 
 }
 
-.scroll-items::-webkit-scrollbar-thumb {
+.scroll-elements::-webkit-scrollbar-thumb {
   background-color: transparent;
   /* color of the scroll thumb */
 }

@@ -66,6 +66,7 @@ const Carousel = ({
           flexDirection_md="row"
           flexDirection="column"
           alignItems="center"
+          gap="32px"
         >
           {content?.heading &&
             <H2 textAlign="left" lineHeight="36px">
