@@ -6,7 +6,6 @@ import { Img, Colors } from "../Styling";
 import Icon from "../Icon";
 
 const Loc = ({ lang, yml, allLocationYaml }) => {
-  console.log(yml, allLocationYaml);
   const data = useStaticQuery(graphql`
     {
       allLocYaml {
@@ -80,8 +79,9 @@ const Loc = ({ lang, yml, allLocationYaml }) => {
         width="100%"
         display_tablet="none"
         display="block"
+        margin_xxs="0 20px"
       >
-        <Div id="responsive-options-selector">
+        <Div id="responsive-options-selector" width="90%">
           {regions.map((m, i) => (
             <Div
               color={activeOpt.title === m.title ? Colors.black : Colors.gray}
@@ -163,7 +163,7 @@ const Loc = ({ lang, yml, allLocationYaml }) => {
     <>
       {heading && (
         <GridContainer
-          margin_tablet="50px auto"
+          margin_tablet="35px auto"
           margin_xs="15px 0"
           margin="0 0 10px 0"
           gridGap="17px"
@@ -209,18 +209,18 @@ const Loc = ({ lang, yml, allLocationYaml }) => {
           display="flex"
           flexDirection="column"
           width_md="50%"
-          width_tablet="100%"
-          // maxWidth_tablet="270px"
-          width="100%"
+          width_xxs="90%"
+          width_xs="100%"
           margin_md="0 20px 0 0"
-          margin_xs="0 0 20px 0"
+          margin_xxs="0 auto 20px auto"
         >
           <H3
             textAlign_md="left"
             textAlign_tablet="center"
             color={Colors.blue}
             width="100%"
-            margin="0 0 10px 0"
+            margin_xxs="0 20px 10px 20px"
+            margin_tablet="0 0 10px 0"
           >
             {title_image}
           </H3>

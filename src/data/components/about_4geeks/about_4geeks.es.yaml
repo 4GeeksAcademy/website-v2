@@ -9,5 +9,5 @@ list:
 paragraph: "<a href='/es/geeks-vs-otros'><span class='span-blue'>Compara 4Geeks</span></a> con otros cursos."
 button_text: "Más sobre 4Geeks"
 button_link: "/es/porque-4geeks"
-image: "../../../../static/images/bg/community.png"
+image: "../../../../static/images/landing/hombre-con-laptop.png"
 image_mobile: "../../../../static/images/bg/community.png"

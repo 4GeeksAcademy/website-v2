@@ -372,7 +372,7 @@ const TwentyMillion = ({ data, pageContext, yml }) => {
             />
           ))}
         </Div>
-        <Div flexDirection="column" gridColumn_tablet="7 / 13">
+        <Div flexDirection="column" gridColumn_tablet="7 / 13" id="bottom">
           <LeadForm
             formHandler={beHiringPartner}
             // handleClose={handleClose}

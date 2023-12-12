@@ -185,12 +185,14 @@ const StyledImage = styled.div`
   min-width: ${(props) => props.minWidth};
   margin: ${(props) => props.margin};
   box-shadow: ${(props) => props.boxShadow};
+  padding= ${(props) => props.padding};
   @media ${Break.sm} {
     height: ${(props) => props.h_sm};
     min-height: ${(props) => props.minHeight_sm};
     width: ${(props) => props.w_sm};
   }
   @media ${Devices.xxs} {
+    padding: ${(props) => props.padding_xxs}; 
     display: ${(props) => props.display_xxs};
     height: ${(props) => props.height_xxs};
     right: ${(props) => props.right_xxs};
@@ -209,6 +211,7 @@ const StyledImage = styled.div`
     width: ${(props) => props.width_sm};
   }
   @media ${Devices.tablet} {
+    padding: ${(props) => props.padding_tablet}; 
     display: ${(props) => props.display_tablet};
     height: ${(props) => props.height_tablet};
     left: ${(props) => props.left_tablet};
@@ -332,6 +335,7 @@ export const StyledBackgroundSection = styled(BackgroundSection)`
   &:before {
     background-size: ${(props) => props.bgSize};
   }
+  ,
   &:after {
     min-height: ${(props) => props.minHeight};
     border-radius: ${(props) => props.borderRadius};

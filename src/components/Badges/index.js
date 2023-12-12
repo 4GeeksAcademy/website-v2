@@ -36,7 +36,7 @@ const Badges = ({
                 childImageSharp {
                   gatsbyImageData(
                     layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                    height: 120 # --> maxHeight
+                    height: 150 # --> maxHeight
                     quality: 100
                     placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                     # transformOptions: {fit: COVER}
@@ -96,7 +96,7 @@ const Badges = ({
               <Paragraph
                 fontFamily="Lato-Light"
                 padding={paddingText || "0 10px 45px 10px"}
-                padding_tablet={paddingText_tablet || "0 5% 55px 5%"}
+                padding_tablet={paddingText_tablet || "0 12% 55px 12%"}
                 fontSize={short_link || short_text ? "16px" : "16px"}
                 fontSize_tablet={short_link || short_text ? "16px" : "16px"}
                 lineHeight={short_link || short_text ? "29px" : "38px"}

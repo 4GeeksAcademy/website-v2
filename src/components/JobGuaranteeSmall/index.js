@@ -8,7 +8,7 @@ const JobGuaranteeSmall = ({ content }) => {
   return (
     <Div
       display="block"
-      padding_xxs="40px 20px"
+      padding="40px 20px"
       padding_tablet="50px 0"
       background={Colors.lightYellow}
     >

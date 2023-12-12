@@ -58,7 +58,10 @@ const GeeksInfo = ({ lang }) => {
     <>
       {content.heading && (
         <H2
-          padding="30px 0 0 0"
+          padding="40px 20px"
+          padding_md="40px 80px"
+          padding_lg="40px 0px"
+          padding_tablet="40px 40px"
           margin_tablet="30px auto 0 auto"
           margin_xxs="15px auto 0px auto"
           width_tablet="100%"

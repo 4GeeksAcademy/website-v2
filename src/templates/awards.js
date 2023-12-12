@@ -400,6 +400,7 @@ const Awards = ({ data, pageContext, yml }) => {
                   url={award.link}
                   description={award.paragraph}
                   starRating={false}
+                  
                   //margin="0"
                   minWidth="180px"
                   width_xxs="240px"

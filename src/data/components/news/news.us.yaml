@@ -7,7 +7,7 @@ news:
   - name: "NBC"
     location: ["downtown-miami"]
     url: "https://www.nbcmiami.com/on-air/as-seen-on/students-with-autism-learn-to-code_miami/159640/"
-    image: "../../../../static/images/news/nbc_grey.png"
+    image: "../../../../static/images/news/nbc.png"
   - name: "Forbes"
     location: ["downtown-miami"]
     url: "https://www.forbes.com/advisor/education/become-a-web-developer/"
@@ -23,11 +23,11 @@ news:
   - name: "South Florida Business Journal"
     location: ["downtown-miami"]
     url: "https://www.bizjournals.com/southflorida/news/2022/07/29/meet-the-40-under-40-class-of-2022.html"
-    image: "../../../../static/images/news/south-florida-business-journal.png"
+    image: "../../../../static/images/news/south-florida-business-journal-color.png"
   - name: "Refresh Miami"
     location: ["downtown-miami"]
     url: "https://refreshmiami.com/4geeks-academy-aims-to-help-make-miami-a-top-spot-for-ai-innovation/"
-    image: "../../../../static/images/news/refresh-miami.png"
+    image: "../../../../static/images/news/refresh-miami-color.png"
   - name: "Newsweek"
     location:
       [
