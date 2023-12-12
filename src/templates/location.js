@@ -77,7 +77,7 @@ const Location = ({ data, pageContext, yml }) => {
         columns_tablet="14"
         gridColumn_tablet="1 / span 14"
         margin={
-          isCustomBarActive(session) ? "70px auto 24px auto" : "70px auto"
+          isCustomBarActive(session) ? "70px auto 24px auto" : "50px auto"
         }
         maxWidth="1366px"
       >

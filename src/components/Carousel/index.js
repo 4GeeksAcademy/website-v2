@@ -55,7 +55,7 @@ const Carousel = ({
       padding_md="40px 80px"
       padding_lg="40px 0px"
       padding_tablet="40px 40px 10px 40px"
-      margin_tablet="0 auto 30px auto"
+      margin_tablet="30px auto"
       margin="0 0 36px 0"
       maxWidth="1366px"
       gap="32px 0"
@@ -75,7 +75,7 @@ const Carousel = ({
           }
 
           {content?.content &&
-            <Div flexDirection="column">
+            <Div flexDirection="column" margin="0 0 10px 0">
               {content?.content.split("\n").map((m, i) => (
                 <Paragraph
                   key={i}
