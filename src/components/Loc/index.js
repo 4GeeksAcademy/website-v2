@@ -6,7 +6,6 @@ import { Img, Colors } from "../Styling";
 import Icon from "../Icon";
 
 const Loc = ({ lang, yml, allLocationYaml }) => {
-  console.log(yml, allLocationYaml);
   const data = useStaticQuery(graphql`
     {
       allLocYaml {

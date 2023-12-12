@@ -6,6 +6,7 @@ import { H1, H2, Paragraph } from "../Heading";
 import { Break } from "../Responsive";
 import { Devices } from "../Responsive";
 import Fragment from "../Fragment";
+import { Carousel } from "react-responsive-carousel";
 
 const containerVariants = {
   fluid: {
@@ -795,6 +796,7 @@ export const GridContainer = ({
 };
 export const GridContainerWithImage = ({
   id,
+  carousel,
   className,
   onMouseOutHandler,
   children,
@@ -860,7 +862,17 @@ export const GridContainerWithImage = ({
         alignItems_tablet={alignItems_tablet}
         alignItems_md={alignItems_md}
       >
+
+        {/* {
+          carousel ? (
+            <Carousel/>
+          )
+          :
+          {children}
+        } */}
+
         {children}
+
       </Grid>
     </Grid>
   );

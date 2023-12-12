@@ -53,7 +53,7 @@ const FaqCard = ({ faqs, topicSlug, locationSlug, minPriority }) => {
                 key={i}
                 borderBottom="1px solid"
                 borderColor="#C4C4C4"
-                padding="80px 30px 30px 30px"
+                padding="30px 30px 30px 30px"
               >
                 {item.topic}
               </H3>

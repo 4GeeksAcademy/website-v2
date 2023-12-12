@@ -27,7 +27,9 @@ import RelatedPosts from "../components/RelatedPosts";
 import FaqCard from "../components/FaqCard";
 import TwoColumn from "../components/TwoColumn/index.js";
 import GeeksInfo from "../components/GeeksInfo";
-import With4Geeks from "../components/With4Geeks"
+import With4Geeks from "../components/With4Geeks";
+import MosaicImages from "../components/MosaicImages/index.js";
+import Carousel from "../components/Carousel/index.js";
 
 const MapFrame = lazy(() => import("../components/MapFrame"));
 
@@ -37,8 +39,6 @@ const Location = ({ data, pageContext, yml }) => {
   const hiring = data.allPartnerYaml.edges[0].node;
   const images = data.allLocationYaml.edges[0].node;
   const [ready, setReady] = useState(false);
-
-  console.log(data)
 
   useEffect(() => {
     process.nextTick(() => {
@@ -297,61 +297,14 @@ const Location = ({ data, pageContext, yml }) => {
       {/* GEEKSINFO IS A TWOCOLUMN WITH TITLE */}
       <GeeksInfo lang={pageContext.lang} />
 
-      <GridContainer
-        columns_tablet="12"
-        padding_tablet="60px 0 77px 0"
-        padding="40px 17px"
-      >
-        <Div gridColumn_tablet="1 / 4">
-          <H2 textAlign="left">{images.images_box.heading}</H2>
-        </Div>
-        <Div flexDirection="column" gridColumn_tablet="5 / 13">
-          {images.images_box.content.split("\n").map((m, i) => (
-            <Paragraph
-              key={i}
-              textAlign="left"
-              margin="0 0 20px 0"
-              fontSize="15px"
-              lineHeight="26px"
-            >
-              {m}
-            </Paragraph>
-          ))}
-        </Div>
-      </GridContainer>
-
-      {yml.images_box.images && (
-        <GridContainer
-          columns_tablet="10"
-          gridTemplateRows_tablet="repeat(4, 1fr)"
-          gridTemplateAreas={`
-        'image1 image1 image1 image1 image1 image1 image1 image2 image2 image2'
-        'image1 image1 image1 image1 image1 image1 image1 image2 image2 image2'
-        'image3 image3 image3 image3 image5 image5 image5 image5 image5 image5'
-        'image4 image4 image4 image4 image5 image5 image5 image5 image5 image5'
-        `}
-          gridTemplateAreas_tablet={`
-          'image1 image1 image1 image1 image1 image1 image1 image2 image2 image2'
-          'image1 image1 image1 image1 image1 image1 image1 image2 image2 image2'
-          'image3 image3 image3 image3 image5 image5 image5 image5 image5 image5'
-          'image4 image4 image4 image4 image5 image5 image5 image5 image5 image5'
-          `}
-          height_tablet="813px"
-          height="304px"
-          childHeight="inherit"
-        >
-          {yml.images_box.images.map((m, i) => {
-            return (
-              <GatsbyImage
-                style={{ gridArea: `image${i + 1}`, borderRadius: "3px" }}
-                key={i}
-                image={getImage(m.path.childImageSharp.gatsbyImageData)}
-                alt={m.alt}
-              />
-            );
-          })}
-        </GridContainer>
-      )}
+      {/* <MosaicImages yml={yml.images_box}/> */}
+      <Carousel 
+        content={yml?.images_box}
+        width_container="315px"
+        height_image="347px"
+        main_gap="23px"
+        scrollX={320} //must be only a number integer
+      />
 
       <ChooseYourProgram
         chooseProgramRef={chooseProgramRef}
@@ -367,7 +320,7 @@ const Location = ({ data, pageContext, yml }) => {
         actionMessage={yml.upcoming.actionMessage}
       />
 
-      <Staff lang={pageContext.lang} />
+      <Staff lang={pageContext.lang} heading={yml?.staff?.heading}/>
 
       {/* IFRAME map
       <Div>
@@ -484,7 +437,7 @@ export const query = graphql`
               childImageSharp {
                 gatsbyImageData(
                   layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                  width: 800
+                  width: 1000
                   quality: 100
                   placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                 )
@@ -515,6 +468,10 @@ export const query = graphql`
               }
               alt
             }
+          }
+          staff{
+            heading
+            sub_heading
           }
           two_columns {
             proportions

@@ -1,25 +1,32 @@
 import React from "react";
 import { Link } from "gatsby";
-import { H3, H4, Paragraph } from "../Heading";
-import { RoundImage } from "../Styling";
+import { H3, H2, H4, Paragraph } from "../Heading";
+import { RoundImage, Colors } from "../Styling";
 import LazyLoad from "react-lazyload";
-import { Div } from "../Sections";
+import { Div, Grid } from "../Sections";
 
 const Post = ({ item, i, lang }) => {
   return (
     <Div
       key={`${i}-${item.node.frontmatter.title}`}
-      flexDirection="Column"
-      margin_tablet="0 10px"
-      margin_sm="0  10px 20px 10px"
-      margin="0  0 20px 0"
-      width_tablet="200px"
-      width="80%"
-      maxWidth="300px"
+      display="flex"
+      flexDirection="column"
+      flexDirection_tablet="column"
+      justifyContent="start"
+      border="none"
+      padding="0 16px"
+      style={{ borderRadius: `0px` }}
+      minWidth="315px"
+      width="100%"
     >
       <Link to={item.node.fields.pagePath}>
         {item.node.frontmatter.image !== "" && (
-          <LazyLoad height={10} scroll={true} once={true}>
+          <LazyLoad
+            height={10}
+            scroll={true}
+            once={true}
+            style={{ height: "173px" }}
+          >
             <RoundImage
               url={
                 item.node.frontmatter.image !== null
@@ -30,34 +37,48 @@ const Post = ({ item, i, lang }) => {
               border="0px"
               position="center"
               width="100%"
-              height="200px"
-              height_tablet="130px"
-              margin="0 0 10px 0"
+              height="173px"
+              height_tablet="173px"
+              margin="0 0 0 0"
             />
           </LazyLoad>
         )}
 
         {/* Titulo */}
-        <Div>
-          <H4
+        <Div
+          marginTop="20px"
+          padding_tablet="20px 32px"
+          padding_xs="20px 16px"
+          display={`flex`}
+          //height="100%"
+          height="100%"
+          flexDirection="column"
+          gap="16px"
+          boxShadow="inset 0px 0px 5px 0px #0000001A"
+        >
+          <H3
             textAlign="left"
-            align_sm="left"
-            margin="0 0 10px 0"
-            fontWeight="700"
-            fontSize="16px"
+            width="100%"
+            margin="0"
+            fontSize_xs="18px"
+            fontSize_tablet="28px"
+            fontSize_md="28px"
+            lineHeight_xs="21.6px"
+            lineHeight_tablet="33.6px"
           >
             {item.node.frontmatter.title}
-          </H4>
-        </Div>
+          </H3>
 
-        {/* Comentario acerca del post */}
-        <Div>
+          {/* Comentario acerca del post */}
           <Paragraph
-            fontWeight="300"
-            fontSize="15px"
-            color="#000"
+            color={Colors.darkGray}
             textAlign="left"
-            margin="0 0 15px 0"
+            margin="10px 0 10px 0"
+            fontWeight="400"
+            fontSize_xs="14px"
+            fontSize_tablet="13px"
+            lineHeight_xs="16.8px"
+            lineHeight_tablet="26px"
           >
             {item.node.frontmatter.excerpt}
           </Paragraph>
@@ -82,31 +103,56 @@ const RelatedPosts = ({ posts, lang, relatedClusters }) => {
   return (
     articles.length > 0 && (
       <Div
-        display="block"
-        padding_md="10px 90px 30px 90px"
-        padding_tablet="10px 40px"
+        display="flex"
+        flexDirection="column"
+        margin="40px 5px"
+        margin_tablet="40px auto 20px auto"
+        padding_tablet="0 40px"
+        padding_md="0 80px"
+        padding_lg="0"
         padding="10px 20px"
       >
-        <H3
-          textAlign_lg="center"
-          textAlign_tablet="left"
-          margin="0 0 20px 0"
-          fontSize_lg="30px"
-          margin_lg="0 0 40px 0"
-        >
-          {title[lang]}
-        </H3>
         <Div
-          justifyContent_lg="evenly"
-          justifyContent_tablet="between"
-          justifyContent="center"
-          flexWrap="wrap"
+          display="flex"
+          flexDirection="column"
+          alignItems="left"
+          padding_tablet="0px 16px"
+          padding="0px"
         >
-          {articles.map((item, i) => (
-            <Post item={item} i={i} lang={lang} />
-          ))}
-        </Div>
-      </Div>
+          <H2
+            margin_tablet="0 0 40px 0"
+            margin_xs="0px"
+            fontSize="21px"
+            fontSize_tablet="32px"
+            lineHeight="38.4px"
+            fontWeight="900"
+            color={Colors.darkGray}
+            textAlign="center"
+          >
+            {title[lang]}
+          </H2>
+
+        </Div >
+        <Grid
+          gridTemplateColumns_tablet="repeat(14, 1fr)"
+          columns_tablet={
+            articles.length <= 3 ? articles.length : "3"
+          }
+          //margin="0 10px 73px 10px"
+          margin_tablet="0 auto 84px auto"
+          maxWidth_md="1366px"
+        >
+          <Div
+            gridColumn="1/15"
+            width="100%"
+            className="badge-slider hideOverflowX__"
+          >
+            {articles.map((item, i) => (
+              <Post item={item} i={i} lang={lang} />
+            ))}
+          </Div>
+        </Grid >
+      </Div >
     )
   );
 };
