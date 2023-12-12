@@ -265,7 +265,7 @@ const Side = ({
         <Button
           outline
           borderRadius="0"
-          colorHoverText={button.hover_color || Colors.blue}
+          colorHoverText={button.hover_color || ""}
           background={Colors[button.background] || button.background}
           lineHeight="26px"
           textColor={Colors.black}
