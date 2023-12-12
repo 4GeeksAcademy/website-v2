@@ -128,7 +128,7 @@ components:
     button:
       text: "Aplicar"
       color: "blue"  
-      link: "#top"
+      path: "https://github.com/"
 
   - name: two_column_w_video
     position: 3

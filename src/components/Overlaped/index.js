@@ -16,6 +16,7 @@ const Overlaped = ({
   background,
   image,
 }) => {
+
   const data = useStaticQuery(graphql`
     {
       allOverlapedYaml {
@@ -26,7 +27,7 @@ const Overlaped = ({
             button {
               text
               color
-              link
+              path
             }
             background
             image {
@@ -37,6 +38,8 @@ const Overlaped = ({
       }
     }
   `);
+
+  console.log(button)
   return (
     <Div maxWidth_tablet="1366px" margin_tablet="50px auto" width="100%">
       <Grid
@@ -145,20 +148,20 @@ const Overlaped = ({
           ) : null}
 
           {button?.text && (
-            <Link to={button.link}>
+            // <Link to={button.path}>
               <Button
                 background={Colors[button.color]}
                 color={Colors.white}
                 margin="20px 0 0 0"
                 onClick={() => {
-                  if (button.link && button.link.indexOf("http") > -1)
-                    window.open(transferQuerystrings(button.link, utm));
-                  else navigate(button.link);
+                  if (button.path && button.path.indexOf("http") > -1)
+                    window.open(transferQuerystrings(button.path, utm));
+                  else navigate(button.path);
                 }}
               >
                 {button.text}
               </Button>
-            </Link>
+            // </Link>
           )}
         </Div>
       </Grid>
@@ -244,11 +247,16 @@ const Overlaped = ({
             </Paragraph>
           ) : null}
           {button?.text && (
-            <Link to={button.link}>
+            <Link to={button.path}>
               <Button
                 background={Colors[button.color]}
                 color={Colors.white}
                 margin="20px 0 0 0"
+                onClick={() => {
+                  if (button.path && button.path.indexOf("http") > -1)
+                    window.open(transferQuerystrings(button.link, utm));
+                  else navigate(button.path);
+                }}
               >
                 {button.text}
               </Button>
