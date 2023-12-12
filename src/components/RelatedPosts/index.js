@@ -51,7 +51,7 @@ const Post = ({ item, i, lang }) => {
           padding_xs="20px 16px"
           display={`flex`}
           //height="100%"
-          height="100%"
+          height="fit-content"
           flexDirection="column"
           gap="16px"
           boxShadow="inset 0px 0px 5px 0px #0000001A"

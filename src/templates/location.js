@@ -347,12 +347,6 @@ const Location = ({ data, pageContext, yml }) => {
       // locationSlug={yml.breathecode_location_slug}
       />
 
-      <With4Geeks
-        lang={pageContext.lang}
-        title={yml?.related_articles?.title}
-        stories={yml?.related_articles?.stories}
-      />
-
       <RelatedPosts
         lang={pageContext.lang}
         posts={data.allMarkdownRemark.edges}
