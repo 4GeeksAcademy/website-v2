@@ -16,7 +16,6 @@ const Overlaped = ({
   background,
   image,
 }) => {
-
   const data = useStaticQuery(graphql`
     {
       allOverlapedYaml {
@@ -39,7 +38,7 @@ const Overlaped = ({
     }
   `);
 
-  console.log(button)
+  console.log(button);
   return (
     <Div maxWidth_tablet="1366px" margin_tablet="50px auto" width="100%">
       <Grid
@@ -149,18 +148,18 @@ const Overlaped = ({
 
           {button?.text && (
             // <Link to={button.path}>
-              <Button
-                background={Colors[button.color]}
-                color={Colors.white}
-                margin="20px 0 0 0"
-                onClick={() => {
-                  if (button.path && button.path.indexOf("http") > -1)
-                    window.open(transferQuerystrings(button.path, utm));
-                  else navigate(button.path);
-                }}
-              >
-                {button.text}
-              </Button>
+            <Button
+              background={Colors[button.color]}
+              color={Colors.white}
+              margin="20px 0 0 0"
+              onClick={() => {
+                if (button.path && button.path.indexOf("http") > -1)
+                  window.open(transferQuerystrings(button.path, utm));
+                else navigate(button.path);
+              }}
+            >
+              {button.text}
+            </Button>
             // </Link>
           )}
         </Div>
