@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, useStaticQuery, graphql } from "gatsby";
+import { Link, useStaticQuery, graphql, navigate } from "gatsby";
 import PropTypes from "prop-types";
 import { Button, Colors, Img, StyledBackgroundSection } from "../Styling";
 import { Grid, Div } from "../Sections";
@@ -150,6 +150,11 @@ const Overlaped = ({
                 background={Colors[button.color]}
                 color={Colors.white}
                 margin="20px 0 0 0"
+                onClick={() => {
+                  if (button.link && button.link.indexOf("http") > -1)
+                    window.open(transferQuerystrings(button.link, utm));
+                  else navigate(button.link);
+                }}
               >
                 {button.text}
               </Button>
