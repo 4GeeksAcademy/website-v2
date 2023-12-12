@@ -48,8 +48,6 @@ const Carousel = ({
     right?.scrollBy(scroll, 0);
   };
 
-  console.log(content.content)
-
   return (
     <Div
       flexDirection="column"
@@ -63,7 +61,7 @@ const Carousel = ({
       gap="32px 0"
     >
 
-      {content?.heading || content?.content &&
+      {(content?.heading || content?.content) &&
         <Div
           flexDirection_md="row"
           flexDirection="column"
@@ -71,7 +69,7 @@ const Carousel = ({
         >
           {content?.heading &&
             <H2 textAlign="left" lineHeight="36px">
-              {content?.heading + "assssssssss"}
+              {content?.heading}
             </H2>
           }
 
@@ -83,7 +81,7 @@ const Carousel = ({
                   textAlign="left"
                   margin="0 0 0 0"
                   fontSize="15px"
-                  lineHeight="18px"
+                  lineHeight="20px"
                 >
                   {m}
                 </Paragraph>

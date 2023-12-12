@@ -67,8 +67,6 @@ const Location = ({ data, pageContext, yml }) => {
     es: "SELECCIONAR PROGRAMA",
   };
 
-  console.log(yml)
-
   return (
     <>
       <GridContainerWithImage
@@ -298,8 +296,9 @@ const Location = ({ data, pageContext, yml }) => {
       <GeeksInfo lang={pageContext.lang} />
 
       {/* <MosaicImages yml={yml.images_box}/> */}
+     
       <Carousel 
-        content={yml?.images_box}
+        content={images?.images_box}
         width_container="315px"
         height_image="347px"
         main_gap="23px"
