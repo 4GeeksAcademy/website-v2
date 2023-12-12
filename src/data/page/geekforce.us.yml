@@ -41,17 +41,18 @@ list:
     sub:
       - title: "Advice and creation of professional profile"
         text: "At 4Geeks we will help you perfect your professional profile. You will have personalized advice with our experts to improve your CV, LinkedIn, GitHub and Portfolio."
-
+    button:
+      text: "APPLY NOW"
+      color: blue
+      hover_color: "white"
+      background: "black"
+      link: "/us/apply"
 
   - title: "Interview Simulation"
     image: "../../../static/images/landing/dos-mujeres-1.png" 
     position: "left"
     text: "We will hold mock interviews to assess your strengths and weaknesses to create a stronger profile before the actual interviews. Every time you have an interview, we will practice using different technologies.
     We have our very own pool of auto-graded exercises, so you can practice until you master the skills to get the job you want."
-    button:
-      link: "/"
-      text: ""
-      color: "black"
 
   - title: "Lifetime Mentoring"
     image: "../../../static/images/Group-6617.png"
@@ -61,6 +62,12 @@ list:
     perspective, information and access to the right resources. In 4Geeks we adjust the sessions according to your calendar,
     we also give you the opportunity to have them online or in-person.
     In any case, we assure you that you have the opportunity for constant mentoring whenever you need it. "
+    button:
+      text: "APPLY NOW"
+      color: blue
+      hover_color: "white"
+      background: "black"
+      link: "/us/apply"
 
 # benefits:
 #   - p:

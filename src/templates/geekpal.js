@@ -368,6 +368,17 @@ const GeekPal = (props) => {
                           />
                         </>
                       )}
+                      {m.button?.text && (
+                        <Link to={m.button.link}>
+                          <Button
+                            background={Colors[m.button.color]}
+                            color={Colors.white}
+                            margin="20px 0 0 0"
+                          >
+                            {m.button.text}
+                          </Button>
+                        </Link>
+                      )}
                     </Div>
                     <Div
                       height="auto"

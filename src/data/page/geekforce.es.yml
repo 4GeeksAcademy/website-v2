@@ -23,7 +23,7 @@ geekForce:
 
 icons:
   - icon: "contract-checked"
-    title: "86% de nuestros alumnos contratados"
+    title: "86% DE NUESTROS ALUMNOS CONTRATADOS"
   - icon: "job"
     title: "SOPORTE LABORAL POST PROGRAMA"
   - icon: "talk"
@@ -38,6 +38,12 @@ list:
     sub:
       - title: "Asesoría y creación de perfil profesional"
         text: "En 4Geeks te ayudaremos a perfeccionar tu perfil profesional. Contarás con la asesoría personalizada con nuestros expertos para mejorar tu CV, Linkedin, GitHub y Portafolio."
+    button:
+      text: "APLICA"
+      color: blue
+      hover_color: "white"
+      background: "black"
+      link: "/es/aplica"
 
   - title: "Simulación de Entrevistas"
     image: "../../../static/images/landing/dos-mujeres-1.png"
@@ -50,7 +56,14 @@ list:
     position: "right"
     text: "Iniciar una carrera en tecnología implica evaluar su situación actual y tomar decisiones informadas sobre el futuro. Requiere evaluación de usted mismo, su contexto y ACCIÓN. Puede hacer esto solo; o puede confiar en la experiencia de un mentor que puede brindarle
     perspectiva, información y acceso a los recursos adecuados. En 4Geeks ajustamos las sesiones según tu calendario, también le damos la oportunidad de tenerlos en línea o en persona. En cualquier caso, te aseguramos que tienes la oportunidad de una mentoría constante siempre que la necesites." 
-  
+    button:
+      text: "APLICA"
+      color: blue
+      hover_color: "white"
+      background: "black"
+      link: "/es/aplica"
+
+
 # benefits:
 #   - p:
 #     heading: "Personal"

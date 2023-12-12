@@ -59,7 +59,7 @@ list:
     <span style='font-weight: bold'> online or in person</span>, this because we have campus in many different cities and therefore time zones.<br/>
     <br/>In any case, we assure you that you have the opportunity for constant mentoring whenever you need it."
     button:
-      link: "/"
+      link: "/us/apply"
       text: ""
       color: "black"
 
