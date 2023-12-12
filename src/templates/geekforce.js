@@ -72,8 +72,8 @@ const GeekForce = (props) => {
             right: "-150px",
             top: "-100px",
           }}
-        // display_xs="none"
-        // display_tablet="flex"
+          // display_xs="none"
+          // display_tablet="flex"
         />
         <Img
           src="/images/vector-stroke-light.png"
@@ -250,7 +250,7 @@ const GeekForce = (props) => {
           padding_tablet="50px 40px"
           padding_md="50px 80px"
           padding_lg="50px 0"
-        //className="badge-slider hideOverflowX__"
+          //className="badge-slider hideOverflowX__"
         >
           {Array.isArray(content.icons) &&
             content.icons?.map((item, index) => {
