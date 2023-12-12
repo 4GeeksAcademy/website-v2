@@ -50,7 +50,7 @@ features:
   styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
   text: With our expertise and your hard work, you'll be a professional developer in just 18 weeks!
   bullets:
-    - Money is not excuse. Best pricing (ask for scholarships)
+    - Money is not an excuse. Best pricing (ask for scholarships)
     - Unlimited Mentorship and lifetime access to career services
     - Award winning Florida Bootcamp (Miami, Orlando, Boca, and online!)
     - Job placement rate of 81%
@@ -192,7 +192,7 @@ components:
     video: "https://www.youtube.com/watch?v=TCHASxvkhpI"
     heading:
       text:
-        "Unlock Your Future: Exclusive Scholarships with Miami Dade College, Clark University, and United Way Miami for South Florida Applicants!"
+        "Unlock Your Future: Exclusive Scholarships with Miami Dade College, Clark University, the Miami tech Coalition for South Florida Applicants!"
         #xl      lg     md     sm    xs
       font_size: ["40px", "34px", "34px", "25px", "20px"]
     content:
@@ -246,14 +246,4 @@ components:
       - heading: "TAILOR-MADE CAREER SUPPORT"
         text: "Receive customized advice, guidance, and training tailored to your unique profile and specific job offers."
         icon: "circle" #string with icon for example ['check', 'cicle', etc]
-
-
-
-
-
-
-
-
-
-
 
