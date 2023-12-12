@@ -1,0 +1,367 @@
+meta_info:
+  slug: applied-ai
+  title: "Conviértete en un Ingeniero de Inteligencia Artificial y Machine Learning en 4Geeks Academy"
+  description: "Sin conocimientos previos requeridos, comienza una carrera como científico de datos y construye tus primeros modelos de Machine Learning."
+  bc_slug: "applied-ai"
+  template: "course-datascience"
+  image: "/images/og-preview/datascience-ml.es.png"
+  visibility: "hidden"
+  keywords: ""
+  show_in_apply: true
+  redirects: [""]
+  related_clusters: [""]
+
+apply_form:
+  label: Applied AI for Professionals
+
+seo_title: "Applied AI for Professionals"
+header:
+  title: "Conviértete en un Profesional en Inteligencia Artificial Aplicada"
+  paragraph: "¡Prepárate para ingresar a los campos mejor remunerados de la tecnología en tan solo 16 semanas!"
+  image: "../../../static/images/bg/circles.jpg"
+  image_alt: "círculos"
+
+button:
+  syllabus_heading: "Descargar Detalles del Curso"
+  syllabus_btn_label: "Descarga Instantánea"
+  syllabus_motivation: "En 2 min. recibirás en tu buzón de correo un PDF con información muy detallada sobre nuestra metodología, tecnologías, becas, financiación e información del curso."
+  apply_button_link: "/es/aplica"
+
+course_instructors:
+  header:
+    title: "Conoce a nuestros instructores"
+    paragraph: ""
+
+  instructors:
+    - name: "Charly Chacon"
+      sub_title: "AI builder"
+      degree: "Prompt Engineer"
+      image: "../../../static/images/instructors/charly.jpeg"
+      bio: | 
+        Contacto de 2º grado2º
+        📓#Tana creator 🧠Prompt Engineer 🐍⚛️ Fullstack project leader Django and Next 📽️ Code Speller on YouTube 
+        Desarrollo de aplicaciones en la nube, Desarrollo web, Diseño web y Diseño de experiencia de usuario (UX)"
+      linkedin: "https://www.linkedin.com/in/charlytoc/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+
+    # - name: "Sayyed Nezhadi"
+    #   sub_title: "Doctorado en Inteligencia Artificial de la Universidad de Toronto"
+    #   degree: "Doctorado en Inteligencia Artificial"
+    #   image: "../../../static/images/instructors/sayyed.jpeg"
+    #   bio: "Más de 25 años de experiencia en la entrega de soluciones complejas habilitadas para IA y arquitecturas digitales para grandes empresas. PhD en Inteligencia Artificial de la Universidad de Toronto, y certificados en Big Data Analytics y Big Data de Hardvard y MIT respectivamente."
+    #   github: "https://github.com/snezhadi"
+    #   linkedin: "https://www.linkedin.com/in/sayyednezhadi"
+
+badges:
+  paragraph: "Gracias a un enfoque hacia la programación, nuestros programas han sido galardonados como TOP en <a href='/es/premios'>España, USA y otros países</a>. Nuestros certificados están avalados por el Departamento de Educación de Estado Unidos en Florida."
+
+upcoming:
+  no_dates_message: "Actualmente no hay próximas fechas para este programa"
+  actionMessage: "Avisadme de fechas disponibles"
+
+# description:
+#   heading: "Sobre este curso"
+#   sub_heading: "Prepárate para la era de la Ciencia de Datos."
+#   content: >
+#     Entrénate con expertos en Data Science, Machine Learning e Inteligencia Artificial. Aprende Data Science desde las bases, recolecta, manipula y modela datos. Crea modelos de Machine Learning e iníciate en el Deep Learning.\n
+#     Practica con escenarios típicos de empresas de la vida real y conoce algunas de las herramientas más utilizadas en la industria. \n
+
+## PROGRAM DETAILS
+details:
+  about:
+    title: "Sobre este programa"
+    sub_title: |
+      Este curso está diseñado para que te conviertas en un experto en inteligencia artificial aplicada en el ámbito profesional. Aprenderás Python, SQL, Looker (Google Data Studio), Streamlit y estadísticas fundamentales para desempeñarte como analista de datos y ser parte integral de equipos técnicos en diversas empresas.
+      Dominarás la creación de modelos predictivos utilizando herramientas como Python, Pandas, Numpy, entre otras. Implementarás algoritmos predictivos, como vecinos cercanos y árboles de decisión, tanto en contextos de aprendizaje supervisado como no supervisado. Además, te sumergirás en escenarios comerciales reales para aplicar tus conocimientos y familiarizarte con las herramientas más relevantes de la industria.
+        
+    list:
+      - label: "Duración"
+        content:  "6 semanas"
+        icon: "calendar"
+      - label: "Clases"
+        content: "2 Clases semanales"
+        icon: "book"
+      - label: "Tamaño de la clase"
+        content: "12 personas máx"
+        icon: "laptop"
+      - label: "Certificado"
+        content: "Nuestros certificados están reconocidos por múltiples instituciones."
+        link_text: "Ver ejemplo"
+        link: "https://certificate.4geeks.com/44c61b294a248f91088f5355aea09606126795e3"
+        icon: "certificate"
+      - label: "Requisitos"
+        content: "No se necesita experiencia previa"
+        icon: "contract-checked"
+
+  heading: "DETALLES DEL PROGRAMA"
+  weeks: 6
+  facts:
+    - label: "Duración"
+      value: "6 semanas"
+    - label: "Compromiso"
+      value: "2 sesiones en vivo cada semana, cada sesión de 2 horas, totalizando 24 horas"
+    - label: "Certificado"
+      content: "Nuestros certificados son reconocidos por múltiples instituciones."
+      link_text: "Ver ejemplo"
+      link: "https://certificate.4geeks.com/44c61b294a248f91088f5355aea09606126795e3"
+      icon: "certificate"
+    - label: "Horario"
+      value: "En línea / Remoto"
+    - label: "Tamaño Clase"
+      value: "Hasta 14 personas"
+    - label: "Horas totales"
+      value: "24"
+  sub_heading: "Curso de 6 semanas para profesionales que desean incorporar la IA en sus roles laborales."
+  left_labels:
+    description: "DESCRIPCIÓN:"
+    projects: "PROYECTOS:"
+    duration: "DURACIÓN:"
+    skills: "Habilidades / Semanas:"
+  details_modules:
+    - module_name: "Introducción a la IA en el entorno laboral"
+      title: "Introducción a AI"
+      description: "Conceptos de IA y su aplicación en el entorno laboral. Uso de la IA para mejorar diversos roles laborales y tareas en diferentes industrias como salud, marketing, bienes raíces, etc."
+      projects: "Identificación de oportunidades para implementar IA, comprensión de desafíos y riesgos, desarrollo de estrategias de IA y creación de comandos útiles."
+      slug: "intro-ai-workplace"
+      duration: "1 semana"
+      step: 1
+    - module_name: "Generación de texto utilizando modelos populares"
+      title: "Generación de texto"
+      description: "Capacidades de modelos populares (ChatGPT, Claude, Llama-2). Estrategias para escribir comandos para modelos de generación de texto."
+      projects: "Creación de flujos de trabajo para profesiones como profesores, lingüistas y desarrolladores."
+      slug: "text-generation"
+      duration: "2 semanas"
+      step: 2
+    - module_name: "Generación de imágenes"
+      title: "Generación de imágenes"
+      description: "Capacidades de modelos populares (Stable Diffusion, Dall-E, Midjourney). Estrategias para escribir buenos comandos para modelos de generación de imágenes."
+      projects: "Desarrollo de estrategias de IA para generar imágenes según los casos de uso."
+      slug: "image-generation"
+      duration: "2 semanas"
+      step: 3
+    - module_name: "Herramientas de IA y el futuro"
+      title: "Herramientas de IA y Futuro"
+      description: "Comparación de herramientas de IA, proyectos prácticos usando herramientas populares."
+      projects: "Sesión de Graduación: preguntas, tareas, próximos pasos para cada estudiante."
+      slug: "ai-tools-future"
+      duration: "1 semana"
+      step: 4
+    - module_name: "Proyecto Final"
+      title: "Proyecto Final"
+      description: "Elección y resolución de un problema real utilizando Machine Learning. Trabajo en equipo, recolección y limpieza de datos, análisis exploratorio, selección y evaluación de modelos, y despliegue en producción."
+      projects: "Despliegue de la aplicación de IA en la nube y monitoreo de modelos."
+      slug: "final-project"
+      duration: "2 semanas"
+      step: 5
+    - module_name: "Comunicación y Retroalimentación"
+      title: "Comunicación y Retroalimentación"
+      description: "Canal de comunicación para preguntas y retroalimentación con el instructor."
+      projects: "Uso del foro para preguntas al instructor, correo electrónico para consultas individuales."
+      slug: "communication-feedback"
+      duration: "1 semana"
+      step: 6
+
+
+syllabus:
+  heading: Descarga toda la información acerca de este programa
+  button_label: Descargar
+
+potential_companies:
+  tagline: "Entrénate para destacar en las compañías más exigentes"
+  sub_heading: "Da un salto a tu carrera y trabaja en las mejores empresas"
+  companies:
+    - name: "Facebook"
+      image: "../../../static/images/partner/facebook.png"
+      alt: ""
+    - name: "Google"
+      image: "../../../static/images/partner/google.png"
+      alt: ""
+    - name: "Microsoft"
+      image: "../../../static/images/partner/microsoft.png"
+      alt: ""
+    - name: "Apple"
+      image: "../../../static/images/partner/apple.png"
+      alt: ""
+    - name: "Salesforce"
+      image: "../../../static/images/partner/salesforce.png"
+      alt: ""
+    - name: "Oracle"
+      image: "../../../static/images/partner/oracle.png"
+      alt: ""
+    - name: "AirBnB"
+      image: "../../../static/images/partner/airbnb.png"
+      alt: ""
+    - name: "Uber"
+      image: "../../../static/images/partner/uber.png"
+      alt: ""
+
+## 4GEEKS VS OTHERS SECTION
+geeks_vs_others:
+  heading: "¿Qué nos hace tan exitosos?"
+  sub_heading: ""
+  sub_heading_link: ""
+## GEEK PAL AND GEEK FORCE BOXES
+geek_data:
+  heading: ¡Para que te contraten empresas de Fortune 500!
+  geek_pal:
+    - Un profesor cada siete estudiantes (1:7).
+    - Sesiones ilimitadas de tutoría 1-1 por demanda, en persona o en línea.
+    - Miles de ejercicios interactivos y autoevaluados.
+    - Soluciones en video para una retroalimentación instantánea.
+    - Chat de apoyo en línea 12 horas al día.
+    - Transmisión en línea de las clases.
+    - Grabación de las clases para su posterior revisión.
+  geek_force:
+    - Construcción de CV y LinkedIn.
+    - Construcción del perfil de Github y portafolio desde el dia 1.
+    - Career Week para dedicación exclusiva a tu perfil profesional.
+    - Preparación de simulación de entrevistas.
+    - Sesión de preparación de entrevistas personalizadas para trabajos específicos.
+    - Entrenamiento en marca personal.
+    - Prácticas y ejercicios de programación posteriores a la graduación.
+    - Coaching SEMANAL hasta que consigas trabajo.
+
+## PRICES AND PAYMENTS SECTION
+prices:
+  heading: "PRECIOS Y PAGOS"
+  sub_heading: ""
+
+## ALUMNI SECTION
+alumni:
+  heading: "Conoce a ex-estudiantes y sus proyectos"
+  sub_heading: "Conoce a personas que ya se han graduado y algunos de los proyectos que estarás construyendo durante el programa"
+
+faq:
+  title: "Preguntas Frecuentes"
+  read_more: "Ver más preguntas"
+  link: "/faq"
+
+
+# button:
+#   syllabus_heading: "Descargar Syllabus"
+#   syllabus_btn_label: "Descarga Instantánea"
+#   syllabus_motivation: "Obténlo en solo unos segundos"
+#   apply_button_link: "/us/apply"
+
+# course_instructors: 
+#   header:
+#     title: "Conoce a nuestros instructores"
+#     paragraph: ""
+
+#   instructors:
+#     - name: "Sayyed Nezhadi"
+#       sub_title: "Doctorado en Inteligencia Artificial de la Universidad de Toronto"
+#       degree: "PhD en Inteligencia Artificial"
+#       image: "../../../static/images/instructors/sayyed.jpeg"
+#       bio: "Con más de 25 años de experiencia entregando soluciones complejas habilitadas por IA y arquitecturas digitales para grandes empresas. Doctorado en Inteligencia Artificial de la Universidad de Toronto, y certificados en Analítica de Big Data y Big Data de Harvard y MIT respectivamente."
+#       github: "https://github.com/snezhadi"
+#       linkedin: "https://www.linkedin.com/in/sayyednezhadi"
+
+#     - name: "Francesco Pugliese"
+#       sub_title: "Científico de datos y Doctor en Robótica e Inteligencia Artificial"
+#       job: "Científico de Machine Learning y Deep Learning en ISTAT (Instituto Nacional de Estadística de Italia)."
+#       degree: "Doctorado en Robótica e Inteligencia Artificial"
+#       image: "../../../static/images/instructors/fpugliese.jpeg"
+#       bio: "Especializado en Deep Learning, Redes Neuronales y Robótica Evolutiva; Francesco tiene más de 20 años de experiencia en temas de investigación en Robótica con diversas publicaciones. Actualmente trabaja como Científico de Machine Learning y Deep Learning en ISTAT (Instituto Nacional de Estadística de Italia)."
+#       github: "https://github.com/neural1977"
+#       linkedin: "https://www.linkedin.com/in/francescopugliese77"
+
+#     - name: "Manuel Mena"
+#       sub_title: "Científico de datos sénior | IA y Machine Learning"
+#       job: "Científico de Datos en el Instituto de Tecnología de Georgia"
+#       image: "../../../static/images/instructors/manu-mena.jpeg"
+#       bio: "Ingeniero en Ciencias de la Computación del Instituto de Tecnología de Georgia con más de 5 años de experiencia en Machine Learning y Business Intelligence aplicados a estrategias comerciales. Experiencia en liderar equipos en industrias financieras, de investigación de mercado y automotriz. Experto en R, Python, AWS y PostgreSQL."
+#       github: "https://github.com/alexismenanieves"
+#       linkedin: "https://www.linkedin.com/in/alexismena/"
+
+# badges:
+#   paragraph: "Impulsa tu carrera en 4Geeks Academy, donde los desarrolladores crecen y prosperan. Nombrado el mejor <a href='/us/coding-bootcamp'>bootcamp de codificación</a> 2023 por Course Report, mejor centro para bootcamps de codificación 2023 por Premios de Excelencia Educativa en España, listado entre los 10 mejores en EE. UU. por Newsweek y calificado con 4.92/5 en Switchup. Licenciado por el Departamento de Educación de Florida, EE. UU."
+
+# upcoming:
+#   no_dates_message: "Actualmente no hay fechas próximas para este programa"
+#   actionMessage: "Déjame saber cuando haya fechas disponibles"
+
+# details:
+#   about:
+#       title: "Sobre nuestro Curso de Data Science & Machine Learning"
+#       sub_title: |
+#         Aprende Python, SQL, Looker (Google Data Studio), Streamlit y Estadísticas para convertirte en un Analista de Datos profesional, listo para contribuir en cualquier equipo orientado a los datos en cualquier empresa.
+#         Crea modelos predictivos usando Python, Pandas, Numpy y otras bibliotecas poderosas. Explora algoritmos como Vecinos Cercanos, Árboles de Decisión y más. Trabaja con modelos de aprendizaje supervisado y no supervisado.
+#         Practica resolviendo casos de la vida real y aprende a abordar los desafíos que encontrarás en tu carrera. Domina el uso de herramientas estándar de la industria.
+#         Estrategiza y desarrolla tus propios proyectos de IA, siguiendo el ciclo completo desde el desarrollo hasta la implementación y el mantenimiento, garantizando la privacidad y la seguridad.
+
+#   heading: "Syllabus de Data Science y Machine Learning"
+#   weeks: 16
+#   weeks_label: "semanas"
+#   facts:
+#     - label: "Duración"
+#       value: "16 semanas"
+#     - label: "Compromiso"
+#       value: "20 hrs (Lun - Mié - Vie)"
+#     - label: "Certificado"
+#       content: "Nuestros certificados son reconocidos por múltiples organizaciones."
+#       link_text: "Ver ejemplo"
+#       link: "https://certificate.4geeks.com/44c61b294a248f91088f5355aea09606126795e3"
+#       icon: "certificate"
+#     - label: "Entrega"
+#       value: "Online / Remoto"
+#     - label: "Tamaño de la clase"
+#       value: "Máx. 12 personas"
+#     - label: "Horas totales"
+#       value: "320"
+#   sub_heading: "Comienza con Python, Data Science, Machine Learning, Deep Learning y el mantenimiento de un entorno de producción en IA."
+#   left_labels:
+#     description: "DESCRIPCIÓN:"
+#     projects: "PROYECTOS:"
+#     duration: "DURACIÓN:"
+#     skills: "Habilidades / Semanas:"
+#   details_modules:
+#     - module_name: "Python"
+#       title: "Introducción a Python"
+#       description: >
+#         Partiendo de un Prework (2 semanas antes), introdúcete en el mundo de la codificación y aprende los conceptos básicos de Python y Algoritmos; este módulo te ayudará a prepararte para codificar y desarrollar los diferentes modelos de A.I. y Machine Learning para el siguiente paso.
+#       projects: "Recolección, almacenamiento y medición con Numpy, Pandas, Matplotlib, etc."
+#       slug: "python-intro"
+#       duration: "2 semanas"
+#       step: 2
+#     # (Otros módulos omitidos por brevedad)
+
+# syllabus:
+#   heading: Obtén toda la información sobre el plan de estudios
+#   button_label: Descargar
+
+# potential_companies:
+#   tagline: "Prepárate para triunfar en grandes empresas"
+#   sub_heading: "Prepárate para aplicar a las mejores empresas del mundo: Desarrolla las herramientas para actualizarte para el futuro del trabajo en IA."
+#   companies:
+#     - name: "Facebook"
+#       image: "../../../static/images/partner/facebook.png"
+#       alt: ""
+#     # (Otras empresas omitidas por brevedad)
+
+# geeks_vs_others:
+#   heading: "¿QUÉ NOS HACE TAN EXITOSOS?"
+#   sub_heading: "Compara 4Geeks con otras escuelas de programación"
+#   sub_heading_link: ""
+
+# geek_data:
+#   heading: "¡Y las empresas Fortune 500 te contratarán!"
+#   geek_pal:
+#     - Mentoría Senior ilimitada.
+#     - Acceso de por vida a la comunidad de software.
+#     - Acceso y soporte a nivel mundial.
+#   geek_force:
+#     - Ayudándote a conseguir un empleo en una empresa Fortune 500.
+#     - Perfil, portafolio, entrevistas, talleres, charlas, comunidad de software, red, colaboración activa en proyectos.
+
+# prices:
+#   heading: "PRECIOS Y PAGOS"
+#   sub_heading: ""
+
+# alumni:
+#   heading: "CONOCE A LOS ALUMNOS Y PROYECTOS"
+#   sub_heading: "Conoce a nuestros graduados y algunos de los proyectos que desarrollarás durante el programa"
+
+# faq:
+#   title: "Preguntas Frecuentes"
+#   read_more: "Contáctanos para más preguntas"
+#   link: "/faq"
