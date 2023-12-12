@@ -89,7 +89,7 @@ const TestimonialCard = ({
       <Div
         flexDirection={stories ? "row" : "column"}
         justifyContent="between"
-        borderBottom={ stories ? `1px solid ${Colors.lightGray}` : ""}
+        borderBottom={stories ? `1px solid ${Colors.lightGray}` : ""}
         padding={stories ? "0 0 16px 0" : "0"}
       >
         <Div flexDirection={stories ? "row" : "column"}>

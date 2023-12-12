@@ -192,14 +192,22 @@ const Home = (props) => {
                   margin="0 10px 0 0"
                   textColor="white"
                   onClick={() => {
-                    if (yml.header_data.join_button_path && yml.header_data.join_button_path.indexOf("http") > -1)
-                      window.open(transferQuerystrings(yml.header_data.join_button_path, utm));
+                    if (
+                      yml.header_data.join_button_path &&
+                      yml.header_data.join_button_path.indexOf("http") > -1
+                    )
+                      window.open(
+                        transferQuerystrings(
+                          yml.header_data.join_button_path,
+                          utm
+                        )
+                      );
                     else navigate(yml.header_data.join_button_path);
                   }}
                 >
                   {yml.header_data.join_button_text}
                 </Button>
-                <Button
+                {/* <Button
                   variant="outline"
                   justifyContent="center"
                   // width="200px"
@@ -208,13 +216,21 @@ const Home = (props) => {
                   margin="0 0 0 10px"
                   textColor={Colors.blue}
                   onClick={() => {
-                    if (yml.header_data.free_button_path && yml.header_data.free_button_path.indexOf("http") > -1)
-                      window.open(transferQuerystrings(yml.header_data.free_button_path, utm));
+                    if (
+                      yml.header_data.free_button_path &&
+                      yml.header_data.free_button_path.indexOf("http") > -1
+                    )
+                      window.open(
+                        transferQuerystrings(
+                          yml.header_data.free_button_path,
+                          utm
+                        )
+                      );
                     else navigate(yml.header_data.free_button_path);
                   }}
                 >
                   {yml.header_data.free_button_text}
-                </Button>
+                </Button> */}
               </Div>
             </Div>
           </Div>
