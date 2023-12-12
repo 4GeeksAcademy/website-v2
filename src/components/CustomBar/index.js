@@ -4,11 +4,18 @@ import { Colors, Button, Link } from "../Styling";
 import { Div } from "../Sections";
 import { SessionContext } from "../../session";
 
-const CustomBar = ({ isContentBarActive, contentBar }) => {
+const CustomBar = ({ 
+    isContentBarActive, 
+    contentBar, 
+    display_md, 
+    display_xxs,
+    position
+}) => {
   return (
     <Div
       id="custom-bar"
-      display={isContentBarActive ? "flex" : "none"}
+      display_md={isContentBarActive ? display_md : "none"}
+      display_xxs={isContentBarActive ? display_xxs : "none"}
       style={{ top: "0px" }}
       width="100%"
       height="auto"
@@ -16,8 +23,7 @@ const CustomBar = ({ isContentBarActive, contentBar }) => {
       padding="10px 20px"
       alignItems="center"
       background="#0097CD"
-      position="fixed"
-      zIndex="99"
+      position={position}
     >
       {contentBar.message && (
         <Paragraph

@@ -6,6 +6,7 @@ import { Img, Colors } from "../Styling";
 import Icon from "../Icon";
 
 const Loc = ({ lang, yml, allLocationYaml }) => {
+  console.log(yml, allLocationYaml);
   const data = useStaticQuery(graphql`
     {
       allLocYaml {
@@ -162,7 +163,7 @@ const Loc = ({ lang, yml, allLocationYaml }) => {
     <>
       {heading && (
         <GridContainer
-          margin_tablet="35px auto"
+          margin_tablet="50px auto"
           margin_xs="15px 0"
           margin="0 0 10px 0"
           gridGap="17px"

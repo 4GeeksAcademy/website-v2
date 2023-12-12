@@ -69,13 +69,14 @@ const Location = ({ data, pageContext, yml }) => {
         padding="0"
         padding_tablet="0 0 20px 0"
         columns_tablet="14"
-        margin={isCustomBarActive(session) ? "70px 0 24px 0" : "70px 0"}
+        margin={isCustomBarActive(session) ? "138px auto 30px auto" : "72px auto 30px auto"}
+        margin_md={isCustomBarActive(session) ? "120px auto 30px auto" : "72px auto 30px auto"}
       >
         <Div
           flexDirection="column"
           justifyContent_tablet="start"
           padding_tablet="70px 0 0 0"
-          padding={isCustomBarActive(session) ? "70px 25px 0 25px" : "0 25px"}
+          padding={isCustomBarActive(session) ? "50px 25px 0 25px" : "0 25px"}
           gridColumn_tablet="1 / 7"
         >
           <H1 type="h1" textAlign="left" margin="0 0 11px 0" color="#606060">
