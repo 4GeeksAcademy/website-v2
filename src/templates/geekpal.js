@@ -73,8 +73,8 @@ const GeekPal = (props) => {
             right: "-150px",
             top: "-100px",
           }}
-          // display_xs="none"
-          // display_tablet="flex"
+        // display_xs="none"
+        // display_tablet="flex"
         />
         <Img
           src="/images/vector-stroke-light.png"
@@ -248,7 +248,7 @@ const GeekPal = (props) => {
           padding_tablet="50px 40px"
           padding_md="50px 80px"
           padding_lg="50px 0"
-          //className="badge-slider hideOverflowX__"
+        //className="badge-slider hideOverflowX__"
         >
           {Array.isArray(content.icons) &&
             content.icons?.map((item, index) => {
@@ -367,6 +367,17 @@ const GeekPal = (props) => {
                             dangerouslySetInnerHTML={{ __html: m?.text }}
                           />
                         </>
+                      )}
+                      {m.button?.text && (
+                        <Link to={m.button.link}>
+                          <Button
+                            background={Colors[m.button.color]}
+                            color={Colors.white}
+                            margin="20px 0 0 0"
+                          >
+                            {m.button.text}
+                          </Button>
+                        </Link>
                       )}
                     </Div>
                     <Div
