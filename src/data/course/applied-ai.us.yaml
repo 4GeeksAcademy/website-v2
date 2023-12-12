@@ -8,8 +8,8 @@ meta_info:
   visibility: "hidden"
   keywords: ""
   show_in_apply: true
-  redirects: [""]
-  related_clusters: [""]
+  redirects: ["/us/applied-ai"]
+  related_clusters: ["trends-and-tech"]
 
 apply_form:
   label: Applied AI for Professionals
