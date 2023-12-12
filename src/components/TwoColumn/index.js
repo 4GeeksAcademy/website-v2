@@ -95,7 +95,7 @@ const Side = ({
       {header && (
         <Div
           margin="0 0 30px 0"
-          justifyContent="center"
+          justifyContent="start"
           justifyContent_md="start"
         >
           {Array.isArray(header) &&
@@ -117,6 +117,7 @@ const Side = ({
         <H2
           type="h2"
           textAlign_tablet="left"
+          textAlign="left"
           lineHeight="38px"
           lineHeight_tablet="38px"
           fontSize={h_xs || "30px"}
@@ -132,6 +133,7 @@ const Side = ({
       {sub_heading && (
         <Paragraph
           textAlign_tablet="left"
+          textAlign="left"
           margin="0"
           fontSize={sh_xl || "18px"}
           fontSize_sm={sh_sm}
@@ -311,25 +313,25 @@ const TwoColumn = ({ left, right, proportions, session }) => {
       maxWidth_md="1366px"
     >
       <Div
-        justifyContent={left?.video && "center"}
+        justifyContent={left?.video && "left"}
         flexDirection="column"
         size_tablet={left_size || 6}
         size="12"
         padding_xs="0"
         padding_md={right?.image?.shadow ? "0 20px 0 0 " : "0px"}
         // maxHeight="300px"
-        textAlign="center"
+        textAlign="left"
       >
         <Side session={session} {...left} />
       </Div>
       <Div
-        justifyContent={right?.video && "center"}
+        justifyContent={right?.video && "left"}
         flexDirection="column"
         size_tablet={right_size || 6}
         padding_xs="0"
         padding_md={left?.image?.shadow ? "0 0 0 20px" : "0px"}
         size="12"
-        textAlign="center"
+        textAlign="left"
       >
         <Side session={session} {...right} />
       </Div>
