@@ -12,6 +12,8 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { SessionContext } from "../../session";
 import Slider from "react-slick";
 import "../../assets/css/carousel.css"
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 
 const Carousel = ({
@@ -26,26 +28,63 @@ const Carousel = ({
   scrollX,
 }) => {
 
-  var coords = 0;
+  // var coords = 0;
 
-  useEffect(() => {
-    coords = document.querySelector(".scroll-items").getBoundingClientRect();
+  // useEffect(() => {
+  //   coords = document.querySelector(".scroll-items").getBoundingClientRect();
     
-  })
+  // })
 
-  const scrollLeft = (scroll) => {
-    var left = document.querySelector(".scroll-items");
-    left?.scrollBy(-1 * scroll, 0);
-  };
+  // const scrollLeft = (scroll) => {
+  //   var left = document.querySelector(".scroll-items");
+  //   left?.scrollBy(-1 * scroll, 0);
+  // };
 
-  const scrollCenter = (coords) => {
-    var center = document.querySelector(".scroll-items");
-    center?.scrollBy(coords.width / 2, 0);
-  };
+  // const scrollCenter = (coords) => {
+  //   var center = document.querySelector(".scroll-items");
+  //   center?.scrollBy(coords.width / 2, 0);
+  // };
 
-  const scrollRight = (scroll) => {
-    var right = document.querySelector(".scroll-items");
-    right?.scrollBy(scroll, 0);
+  // const scrollRight = (scroll) => {
+  //   var right = document.querySelector(".scroll-items");
+  //   right?.scrollBy(scroll, 0);
+  // };
+
+  const sliderRef = useRef();
+
+  var settings = {
+    dots: true,
+    infinite: false,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 4,
+    initialSlide: 0,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
   };
 
   return (
@@ -99,8 +138,9 @@ const Carousel = ({
             alignItems="center"
             justifyContent="between"
             position="relative"
+            display="block"
           >
-            <Div
+            {/* <Div
               className="cover"
               position="relative"
               width="90%"
@@ -113,7 +153,10 @@ const Carousel = ({
                 overflow="auto"
                 position="relative"
                 gap={main_gap || "36px"}
-              >
+              > */}
+
+              <Slider {...settings} ref={sliderRef}>
+
                 {content?.images.map((item, index) => {
                   return (
                     <Div
@@ -146,37 +189,12 @@ const Carousel = ({
                           alt={item.alt}
                         />
                       </Div>
-                      {/* { item.title &&
-                  <H3 fontSize="18px" lineHeight="22px" margin="14px 0 0 0">
-                    {item.title}
-                  </H3>
-                }
-                {
-                  item.sub_title &&
-                  <H4 fontSize="15px" lineHeight="18px" margin="8px 0">
-                  {item.sub_title}
-                </H4>}
-
-                { item.link &&
-                  <Anchor
-                  to={item.link}
-                  target="_blank"
-                  rel="noopener noreferrer nofollow"
-                  textAlign="center"
-                >
-                  <Icon
-                    icon="linkedin-new"
-                    width="24px"
-                    fill="#2867b2"
-                    stroke="#2867b2"
-                  />
-                </Anchor>} */}
                     </Div>
                   );
                 })}
 
-              </Div>
-            </Div>
+              {/* </Div>
+            </Div> */}
             <Button
               padding="0"
               padding_xs="0"
@@ -191,13 +209,14 @@ const Carousel = ({
               height="38px"
               width="24px"
               height_tablet="44px"
-              onClick={() => scrollRight(scrollX || 257)}
             >
               <Icon width="100%" height="100%" icon="arrow-right" />
             </Button>
+
+            </Slider>
           </Div>
 
-          <Div
+          {/* <Div
             className="dots"
             justifyContent="center"
             gap="16px"
@@ -205,7 +224,7 @@ const Carousel = ({
             <Anchor className="dot" onClick={() => scrollLeft(10000)}></Anchor>
             <Anchor className="dot" onClick={() => scrollCenter(coords)}></Anchor>
             <Anchor className="dot" onClick={() => scrollRight(10000)}></Anchor>
-          </Div>
+          </Div> */}
         </>}
     </Div>
   )
