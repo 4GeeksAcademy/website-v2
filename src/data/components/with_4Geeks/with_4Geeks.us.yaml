@@ -49,7 +49,7 @@ with:
     alt: ""
     # video: "https://www.youtube.com/watch?v=MBXqEnhodx0" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     video: "https://www.youtube.com/watch?v=DrzRJICxjOU" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
-    video_height: 250px
+    video_height: 173px
     location: ["downtown-miami", "all"]
     # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     icon: address
