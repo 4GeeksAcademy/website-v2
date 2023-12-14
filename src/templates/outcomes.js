@@ -247,13 +247,17 @@ const Outcomes = ({ data, pageContext, yml }) => {
                           margin="0 0 38px 0"
                         >
                           <H2
+                            id="yololololo"
                             type="h2"
                             textAlign_tablet="left"
                             color={Colors.blue}
+                            margin= "0 0 10px 0"
+                            fontSize= "27px"
+                            lineHeight="28px"
                           >
                             {m.stat}
                           </H2>
-                          <H3 type="h3" textAlign_tablet="left">
+                          <H3 type="h3" textAlign_tablet="left" lineHeight="28px">
                             {m.content}
                           </H3>
                         </Div>
