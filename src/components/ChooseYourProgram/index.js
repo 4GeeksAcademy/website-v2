@@ -13,6 +13,7 @@ const ChooseYourProgram = ({
   paragraph,
   chooseProgramRef,
   landingTemplate,
+  id,
 }) => {
   const data = useStaticQuery(graphql`
     {
@@ -45,7 +46,19 @@ const ChooseYourProgram = ({
   };
   if (info) info = info.node;
   return (
-    <Div background={landingTemplate ? Colors.white : Colors.verylightGray}>
+    <Div
+      //background={landingTemplate ? Colors.white : Colors.verylightGray}
+      position="relative"
+      id={id}
+    >
+      <Div
+        background={Colors.verylightGray}
+        display_xxs="none"
+        display_tablet={landingTemplate ? "none" : "flex"}
+        height_tablet="50%"
+        width_tablet="100%"
+        position="absolute"
+      />
       <Grid
         ref={chooseProgramRef}
         gridTemplateColumns_md={
@@ -59,8 +72,8 @@ const ChooseYourProgram = ({
         background_tablet={landingTemplate ? Colors.white : "transparent"}
         padding_lg="10px 0 50px 0"
         padding_md="10px 80px 50px 80px"
-        padding_tablet="10px 20px 50px 20px"
-        padding_xs="0 10px 40px 10px "
+        padding_tablet="10px 40px 50px 40px"
+        padding_xxs="0 20px 40px 20px "
         maxWidth_tablet="1366px"
         margin_tablet="0 auto 50px auto"
         margin_lg="0 auto 50px auto"
@@ -99,7 +112,7 @@ const ChooseYourProgram = ({
           </Paragraph>
         </Div>
         <Grid
-          gridColumn_tablet={landingTemplate ? "1 / 15" : "1 / 14"}
+          gridColumn_tablet={landingTemplate ? "1 / 15" : "1 / 15"}
           padding_tablet={landingTemplate ? "0 17px" : "0"}
           padding_md="0"
           gridColumn_md="1 / 15"
@@ -108,10 +121,11 @@ const ChooseYourProgram = ({
             landingTemplate ? "repeat(2, 4fr)" : "repeat(3, 4fr)"
           }
           gridTemplateColumns_tablet={
-            landingTemplate ? "repeat(2, 4fr)" : "repeat(3 , 33%)"
+            landingTemplate ? "repeat(2, 4fr)" : "repeat(3 , 32%)"
           }
           zIndex="1"
-          margin_tablet={!landingTemplate && "0 0 0 35px"}
+          margin="0px auto"
+          margin_tablet={!landingTemplate && "0 0 0 0"}
           margin_md="0"
         >
           {Array.isArray(programs) &&
@@ -121,7 +135,7 @@ const ChooseYourProgram = ({
                   key={index}
                   display="flex"
                   padding=" 24px 24px"
-                  margin_xs="20px"
+                  //margin_xs="20px 0px"
                   margin_tablet="0px"
                   border="3px solid black"
                   flexDirection_tablet="column"
@@ -136,6 +150,8 @@ const ChooseYourProgram = ({
                   zIndex="1"
                   width_md="100%"
                   width_tablet="100%"
+                  width_xxs="95%"
+                  width_xs="100%"
                 >
                   <Div
                     placeSelf_tablet={landingTemplate && "flex-start"}
@@ -295,18 +311,6 @@ const ChooseYourProgram = ({
               );
             })}
         </Grid>
-        <Div
-          display_xs="none"
-          display_tablet="flex"
-          //padding_tablet="75px 0 0 0"
-          background={Colors.verylightGray}
-          zIndex="-1"
-          height_tablet="350px"
-          height_xs="100%"
-          gridColumn_tablet="1 / 15"
-          gridRow_tablet="1 / 3"
-          gridRow="1 / 4"
-        />
       </Grid>
     </Div>
   );
