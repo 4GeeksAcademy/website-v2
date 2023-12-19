@@ -137,6 +137,8 @@ const Player = ({
   transformPlay_lg,
   leftPlay_tablet,
   margin_tablet,
+  padding_xxs,
+  padding_tablet,
   ...rest
 }) => {
   const [showVideo, setShowVideo] = React.useState(false);
@@ -195,6 +197,8 @@ const Player = ({
       style={style}
       margin_tablet={margin_tablet}
       width={width}
+      padding_xxs={padding_xxs}
+      padding_tablet={padding_tablet}
     >
       {showVideo ? (
         <>
