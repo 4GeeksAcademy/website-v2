@@ -265,7 +265,7 @@ const Location = ({ data, pageContext, yml }) => {
 
 
       <Gallery
-        images={images?.images_box?.images}
+        images={yml?.images_box?.images}
         heading={yml?.images_box?.heading}
         paragraph={yml?.images_box?.content}
         widthImage="315px"

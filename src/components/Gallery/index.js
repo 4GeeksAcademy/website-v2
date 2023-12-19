@@ -73,27 +73,29 @@ const Gallery = ({
             nextArrow={nextArrow}
           >
 
-            {images.map((item, index) => {
-              return (
-                <Div
-                  width={widthImage || "100%"}
-                  height={heightImage || "100%"}
-                >
-                  <GatsbyImage
-                    image={getImage(
-                      item.path && item.path.childImageSharp.gatsbyImageData
-                    )}
-                    style={{
-                      height: "100%",
-                      //width: "220px",
-                      //minWidth: "100%",
-                      backgroundSize: `cover`,
-                    }}
-                    alt={item.alt}
-                  />
-                </Div>
-              );
-            })}
+            {
+              Array.isArray(images) &&
+              images.map((item, index) => {
+                return (
+                  <Div
+                    width={widthImage || "100%"}
+                    height={heightImage || "100%"}
+                  >
+                    <GatsbyImage
+                      image={getImage(
+                        item.path && item.path.childImageSharp.gatsbyImageData
+                      )}
+                      style={{
+                        height: "100%",
+                        //width: "220px",
+                        //minWidth: "100%",
+                        backgroundSize: `cover`,
+                      }}
+                      alt={item.alt}
+                    />
+                  </Div>
+                );
+              })}
           </Carousel>
 
         </Div>
