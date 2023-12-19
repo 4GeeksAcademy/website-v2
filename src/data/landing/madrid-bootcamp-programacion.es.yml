@@ -80,10 +80,10 @@ follow_bar:
     # devices:   XL      LG    MD      SM    XS
     font_size: ["25px", "25px", "25px", "20px", "18px"]
   button:
-    text: "Get more information"
+    text: "¡Quiero mi beca!"
     path: "#top"
   phone:
-    text: "Call "
+    text: "Llámanos "
 
 #
 # ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇
