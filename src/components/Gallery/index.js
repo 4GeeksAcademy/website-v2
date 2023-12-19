@@ -20,7 +20,6 @@ const Gallery = ({
   previewArrow,
   nextArrow,
 }) => {
-  console.log(heading);
 
   return (
     <>
