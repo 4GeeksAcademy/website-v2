@@ -122,9 +122,9 @@ components:
     image:
       src: "/images/landing/dos-mujeres-1.png"
     heading:
-      text: "Python y Javascript?"
+      text: "¿Como funciona?"
     content:
-      text: "Nuestros programa está basado en el uso de Phyton y Javascript. La razón?En el mercado laboral JavaScript tiene 26 veces más vacantes de trabajo que Ruby on Rails. Python tiene 10 veces más trabajos que node.js. Otras herramientas que también aprenderás a usar en nuestro programa: son GitHub, CSS3, HTML5, Flask, etc."
+      text: "Al aprender a programar con 4Geeks Academy tendrás clases online completamente en vivo, la oportunidad de certificarte internacionalmente en poco tiempo y de conseguir tu primer empleo como programador con nuestro apoyo. Descubre cómo puede ser tu vida como un profesional en programación con 4Geeks Academy, ¡comienza ahora!"
     button:
       text: "Aplicar"
       color: "blue"  

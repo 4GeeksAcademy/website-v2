@@ -7,10 +7,7 @@ import { H4, H3, H2, H1, Paragraph } from "../Heading";
 import Icon from "../Icon";
 import { DirectiveLocation } from "graphql";
 import { transferQuerystrings, smartRedirecting } from "../../utils/utils";
-
 const Overlaped = ({
-  lang,
-  landingTemplate,
   heading,
   content,
   button,
@@ -38,7 +35,6 @@ const Overlaped = ({
       }
     }
   `);
-  //const utm = session && session.utm;
   return (
     <Div maxWidth_tablet="1366px" margin_tablet="50px auto" width="100%">
       <Grid
@@ -152,11 +148,6 @@ const Overlaped = ({
                 background={Colors[button.color]}
                 color={Colors.white}
                 margin="20px 0 0 0"
-              // onClick={() => {
-              //   if (button.path && button.path.indexOf("http") > -1)
-              //     window.open(transferQuerystrings(button.path, utm));
-              //   else navigate(button.path);
-              // }}
               >
                 {button.text}
               </Button>
@@ -251,11 +242,6 @@ const Overlaped = ({
                 background={Colors[button.color]}
                 color={Colors.white}
                 margin="20px 0 0 0"
-              // onClick={() => {
-              //   if (button.path && button.path.indexOf("http") > -1)
-              //     window.open(transferQuerystrings(button.path, utm));
-              //   else navigate(button.path);
-              // }}
               >
                 {button.text}
               </Button>

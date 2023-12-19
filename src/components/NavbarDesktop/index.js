@@ -147,8 +147,8 @@ export const Navbar = ({
       file(relativePath: { eq: "images/4geeksacademy-logo.png" }) {
         childImageSharp {
           gatsbyImageData(
-            layout: FIXED # --> CONSTRAINED || FIXED || FULL_WIDTH
-            width: 125
+            layout: FULL_WIDTH # --> CONSTRAINED || FIXED || FULL_WIDTH
+            width: 200
             placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
           )
         }
@@ -230,6 +230,10 @@ export const Navbar = ({
             image={getImage(data.file.childImageSharp.gatsbyImageData)}
             // fixed={data.file.childImageSharp.fixed}
             alt="4Geeks Logo"
+            style={{
+              height:"39px",
+              width:"139px"
+            }}
           />
         </Link>
         <Menu>
