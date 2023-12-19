@@ -108,11 +108,19 @@ export const H1 = styled(BaseHeading)`
   z-index: ${(props) => props.zIndex};
   letter-spacing: 0.05em;
   font-family: ${(props) => props.fontFamily};
+  text-decoration: ${(props) => props.textTransform};
 `;
 
 export const H2 = styled(BaseHeading)`
   z-index: ${(props) => props.zIndex};
   letter-spacing: 0.05em;
+  text-align: ${(props) => props.textAlign};
+  @media ${Devices.xxs} {
+    text-align: ${(props) => props.textAlign_xxs};
+  }
+  @media ${Devices.tablet} {
+    text-align: ${(props) => props.textAlign_tablet};
+  }
   font-family: ${(props) => props.fontFamily};
 `;
 export const H3 = styled(BaseHeading)`
@@ -121,6 +129,12 @@ export const H3 = styled(BaseHeading)`
   text-align: ${(props) => props.textAlign};
   letter-spacing: 0.05em;
   place-self: ${(props) => props.placeSelf};
+  @media ${Devices.xxs} {
+    margin: ${(props) => props.margin_xxs};
+  }
+  @media ${Devices.tablet} {
+    margin: ${(props) => props.margin_tablet};
+  }
 `;
 export const H4 = styled(BaseHeading)`
   font-weight: ${(props) => props.fontWeight || "400"};
