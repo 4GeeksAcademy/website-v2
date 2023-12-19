@@ -7,13 +7,7 @@ import { H4, H3, H2, H1, Paragraph } from "../Heading";
 import Icon from "../Icon";
 import { DirectiveLocation } from "graphql";
 import { transferQuerystrings, smartRedirecting } from "../../utils/utils";
-const Overlaped = ({
-  heading,
-  content,
-  button,
-  background,
-  image,
-}) => {
+const Overlaped = ({ heading, content, button, background, image }) => {
   const data = useStaticQuery(graphql`
     {
       allOverlapedYaml {
