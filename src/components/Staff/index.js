@@ -83,7 +83,7 @@ const Staff = (props) => {
       <Div
         columns_tablet="12"
         flexDirection="column"
-        padding_xxs="20px 20px"
+        padding="20px 20px"
         padding_md="40px 80px"
         padding_lg="40px 0px"
         padding_tablet="40px 40px 10px 40px"
