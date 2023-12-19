@@ -1,4 +1,3 @@
-
 import React, { useState, useRef, useEffect } from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import { H1, H2, H3, H4, Title, Separator, Paragraph } from "../Heading";
@@ -11,11 +10,9 @@ import DraggableDiv from "../DraggableDiv";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { SessionContext } from "../../session";
 import Slider from "react-slick";
-import "../../assets/css/carousel.css"
+import "../../assets/css/carousel.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
-
 
 const Carousel = ({
   content,
@@ -39,54 +36,55 @@ const Carousel = ({
     const { className, style, onClick } = props;
     return (
       <>
-        { nextArrow &&
+        {nextArrow && (
           <Button
-          padding="0"
-          padding_xs="0"
-          padding_tablet="0"
-          position="absolute"
-          zIndex="101"
-          top="50%"
-          right="-2%"
-          right_md="0%"
-          right_lg="0%"
-          right_tablet="0%"
-          height="30px"
-          width="24px"
-          height_tablet="44px"
-          onClick={onClick}
-        >
-          <Icon width="100%" height="100%" icon="arrow-right" />
-        </Button>}
+            padding="0"
+            padding_xs="0"
+            padding_tablet="0"
+            position="absolute"
+            zIndex="101"
+            top="50%"
+            right="-2%"
+            right_md="0%"
+            right_lg="0%"
+            right_tablet="0%"
+            height="30px"
+            width="24px"
+            height_tablet="44px"
+            onClick={onClick}
+          >
+            <Icon width="100%" height="100%" icon="arrow-right" />
+          </Button>
+        )}
       </>
     );
   };
   const CustomPrevArrow = (props) => {
     const { className, style, onClick } = props;
-    return (<>
-      {
-        previewArrow &&
-        <Button
-          padding="0"
-          padding_xs="0"
-          padding_tablet="0"
-          position="absolute"
-          zIndex="101"
-          top="50%"
-          left="-2%"
-          left_md="0%"
-          left_lg="0%"
-          left_tablet="0%"
-          height="30px"
-          width="24px"
-          height_tablet="44px"
-          style={{ transform: "rotate(180deg)" }}
-          onClick={onClick}
-        >
-          <Icon width="100%" height="100%" icon="arrow-right" />
-        </Button>
-      }
-    </>
+    return (
+      <>
+        {previewArrow && (
+          <Button
+            padding="0"
+            padding_xs="0"
+            padding_tablet="0"
+            position="absolute"
+            zIndex="101"
+            top="50%"
+            left="-2%"
+            left_md="0%"
+            left_lg="0%"
+            left_tablet="0%"
+            height="30px"
+            width="24px"
+            height_tablet="44px"
+            style={{ transform: "rotate(180deg)" }}
+            onClick={onClick}
+          >
+            <Icon width="100%" height="100%" icon="arrow-right" />
+          </Button>
+        )}
+      </>
     );
   };
 
@@ -107,26 +105,26 @@ const Carousel = ({
           slidesToShow: 3,
           slidesToScroll: 3,
           infinite: true,
-          dots: true
-        }
+          dots: true,
+        },
       },
       {
         breakpoint: 600,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
-          initialSlide: 2
-        }
+          initialSlide: 2,
+        },
       },
       {
         breakpoint: 480,
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      }
+          slidesToScroll: 1,
+        },
+      },
     ],
-    ...customSettings
+    ...customSettings,
   };
 
   return (
@@ -140,21 +138,20 @@ const Carousel = ({
       margin={margin || "0 0 36px 0"}
       maxWidth={maxWidth}
     >
-
-      {(content?.heading || content?.content) &&
+      {(content?.heading || content?.content) && (
         <Div
           flexDirection_md="row"
           flexDirection="column"
           alignItems="center"
           gap="32px"
         >
-          {content?.heading &&
+          {content?.heading && (
             <H2 textAlign="left" lineHeight="36px">
               {content?.heading}
             </H2>
-          }
+          )}
 
-          {content?.content &&
+          {content?.content && (
             <Div flexDirection="column" margin="0 0 10px 0">
               {content?.content.split("\n").map((m, i) => (
                 <Paragraph
@@ -167,26 +164,17 @@ const Carousel = ({
                   {m}
                 </Paragraph>
               ))}
-            </Div>}
+            </Div>
+          )}
         </Div>
-      }
-      <Div
-        className="main-scroll-div"
-        position="relative"
-        display="block"
-      >
-
+      )}
+      <Div className="main-scroll-div" position="relative" display="block">
         <Slider {...settings} ref={sliderRef}>
-
           {children}
-
         </Slider>
-
-
-
       </Div>
     </Div>
-  )
-}
+  );
+};
 
 export default Carousel;

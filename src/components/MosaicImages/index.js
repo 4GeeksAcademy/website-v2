@@ -8,12 +8,11 @@ import {
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 const MosaicImages = (props) => {
-
   const { yml } = props;
 
-  return (<>
-    {
-      yml?.images && (
+  return (
+    <>
+      {yml?.images && (
         <GridContainer
           margin="0 auto"
           padding_xxs="40px 20px"
@@ -43,7 +42,7 @@ const MosaicImages = (props) => {
           childHeight="inherit"
         >
           {yml?.images.map((m, i) => {
-            console.log(m)
+            console.log(m);
             return (
               <GatsbyImage
                 style={{ gridArea: `image${i + 1}`, borderRadius: "3px" }}
@@ -54,11 +53,9 @@ const MosaicImages = (props) => {
             );
           })}
         </GridContainer>
-      )
-    }
-    
-  </>
-  )
+      )}
+    </>
+  );
 };
 
 export default MosaicImages;

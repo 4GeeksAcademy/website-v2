@@ -10,7 +10,7 @@ import DraggableDiv from "../DraggableDiv";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { SessionContext } from "../../session";
 import Slider from "react-slick";
-import "../../assets/css/staff-css.css"
+import "../../assets/css/staff-css.css";
 import Carousel from "../Carousel";
 // import "slick-carousel/slick/slick.css";
 // import "slick-carousel/slick/slick-theme.css";
@@ -78,7 +78,6 @@ const Staff = (props) => {
 
   const sliderRef = useRef();
 
-
   return (
     <Fragment github="/components/staff">
       <Div
@@ -134,8 +133,8 @@ const Staff = (props) => {
                     slidesToShow: 4,
                     slidesToScroll: 4,
                     infinite: false,
-                    dots: true
-                  }
+                    dots: true,
+                  },
                 },
                 {
                   breakpoint: 1024,
@@ -143,8 +142,8 @@ const Staff = (props) => {
                     slidesToShow: 3,
                     slidesToScroll: 3,
                     infinite: false,
-                    dots: true
-                  }
+                    dots: true,
+                  },
                 },
                 {
                   breakpoint: 768,
@@ -152,8 +151,8 @@ const Staff = (props) => {
                     slidesToShow: 2,
                     slidesToScroll: 2,
                     infinite: false,
-                    dots: true
-                  }
+                    dots: true,
+                  },
                 },
                 {
                   breakpoint: 450,
@@ -161,13 +160,12 @@ const Staff = (props) => {
                     slidesToShow: 1,
                     slidesToScroll: 1,
                     infinite: false,
-                    dots: true
-                  }
+                    dots: true,
+                  },
                 },
               ],
             }}
           >
-
             {staffFilteredByLocation?.map((item, index) => {
               return (
                 <Div
@@ -219,11 +217,9 @@ const Staff = (props) => {
               );
             })}
           </Carousel>
-
+        </Div>
       </Div>
-      
-    </Div >
-    </Fragment >
+    </Fragment>
   );
 };
 

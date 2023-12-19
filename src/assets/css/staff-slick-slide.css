@@ -1,6 +1,8 @@
-.main-scroll-div {}
+.main-scroll-div {
+}
 
-.cover {}
+.cover {
+}
 
 .scroll-elements {
   scroll-behavior: smooth;
@@ -8,7 +10,6 @@
 
 .scroll-elements::-webkit-scrollbar {
   -webkit-appearance: none;
-
 }
 
 .scroll-elements::-webkit-scrollbar-thumb {

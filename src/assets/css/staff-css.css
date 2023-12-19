@@ -1,81 +1,77 @@
-
 /*NORMAL CLASS*/
 @media screen and (width >= 1440px) {
-  .staff-class > div > div > div{
+  .staff-class > div > div > div {
     /* width: 100% !important; */
     /* margin: 0 36px 0 0; */
     padding: 0 18px;
   }
 }
 @media screen and (1024px <= width < 1440px) {
-  .staff-class > div > div > div{
+  .staff-class > div > div > div {
     /* width: 100% !important; */
     /* margin: 0 36px 0 0; */
     padding: 0 18px;
   }
 }
 @media screen and (768px <= width < 1024px) {
-  .staff-class > div > div > div{
+  .staff-class > div > div > div {
     /* width: 100% !important; */
     /* margin: 0 36px 0 0; */
     padding: 0 9px;
   }
 }
 @media screen and (width <= 767px) {
-  .staff-class > div > div > div{
+  .staff-class > div > div > div {
     /* width: 100% !important; */
     /* margin: 0 36px 0 0; */
-    padding: 0 9px; 
+    padding: 0 9px;
   }
 }
 @media screen and (width <= 450px) {
-  .staff-class > div > div > div{
+  .staff-class > div > div > div {
     /* width: 100% !important; */
     /* margin: 0 36px 0 0; */
-    padding: 0 8px; 
+    padding: 0 8px;
   }
 }
 
-.staff-class > div > div > div{
+.staff-class > div > div > div {
   /* width: 220px; */
   /* margin: 0 36px 0 0; */
 }
-.staff-class > div{
+.staff-class > div {
   width: 90%;
   left: 5%;
 }
-.staff-class > div > div{
-
-
+.staff-class > div > div {
 }
 /*NORMAL CLASS*/
 
 /*NO ARROW CLASS*/
-.carousel-class-noprev-arrow > div > div{
+.carousel-class-noprev-arrow > div > div {
   width: 95%;
   margin: 0 0 0 0;
 }
-.carousel-class-nonext-arrow > div{
+.carousel-class-nonext-arrow > div {
   width: 100%;
   margin: 0 0 0 5%;
 }
-.carousel-class-noarrow > div > div{
+.carousel-class-noarrow > div > div {
   width: 95%;
   margin: 0 0 0 0;
 }
-.carousel-class-noarrow > div{
+.carousel-class-noarrow > div {
   width: 100%;
   margin: 0 0 0 0;
 }
 /*NO ARROW CLASS*/
-
 
 /* DOTS */
 .slick-dotted.slick-slider {
   margin-bottom: 30px;
 }
 
-.slick-dots-staff{
+.slick-dots-staff {
   position: absolute;
   bottom: -50px;
 
@@ -151,4 +147,3 @@
   opacity: 1;
   color: black;
 }
-

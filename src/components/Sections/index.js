@@ -869,7 +869,6 @@ export const GridContainerWithImage = ({
         alignItems_tablet={alignItems_tablet}
         alignItems_md={alignItems_md}
       >
-
         {/* {
           carousel ? (
             <Carousel/>
@@ -879,7 +878,6 @@ export const GridContainerWithImage = ({
         } */}
 
         {children}
-
       </Grid>
     </Grid>
   );

@@ -173,7 +173,7 @@ export default ({
                     alignSelf={`baseline`}
                     style={{ borderRadius: `0px` }}
                   >
-                    {(element.video && element.image) &&
+                    {element.video && element.image && (
                       <ReactPlayer
                         With_Modal={element.open_in_modal}
                         margin_tablet="0px"
@@ -188,16 +188,17 @@ export default ({
                         videoHeight={element.video_height}
                         style={{ borderRadius: `0px` }}
                       />
-                    }
-                    {(!element.video && element.image) &&
+                    )}
+                    {!element.video && element.image && (
                       <GatsbyImage
                         //className={className}
                         height="173px"
-                        image={getImage(element?.image?.childImageSharp?.gatsbyImageData)}
+                        image={getImage(
+                          element?.image?.childImageSharp?.gatsbyImageData
+                        )}
                         alt="Image"
                       />
-                    }
-
+                    )}
                   </Div>
                   <Div
                     //marginTop="20px"
@@ -211,7 +212,7 @@ export default ({
                     gap="16px 0px"
                     boxShadow="inset 0px 0px 5px 0px #0000001A"
                   >
-                    {element.footer.image_link &&
+                    {element.footer.image_link && (
                       <Link to={element.footer.image_link}>
                         <RoundImage
                           url={element.footer.image}
@@ -220,9 +221,9 @@ export default ({
                           position="left"
                         />
                       </Link>
-                    }
+                    )}
 
-                    {element.name &&
+                    {element.name && (
                       <H4
                         textAlign="left"
                         width="100%"
@@ -234,8 +235,9 @@ export default ({
                         color={Colors.darkGray}
                       >
                         {element.name}
-                      </H4>}
-                    {element.title &&
+                      </H4>
+                    )}
+                    {element.title && (
                       <H3
                         textAlign="left"
                         width="100%"
@@ -247,8 +249,9 @@ export default ({
                         lineHeight_tablet="33.6px"
                       >
                         {`“${element.title}”`}
-                      </H3>}
-                    {element.description &&
+                      </H3>
+                    )}
+                    {element.description && (
                       <Paragraph
                         color={Colors.darkGray}
                         textAlign="left"
@@ -260,7 +263,8 @@ export default ({
                         lineHeight_tablet="26px"
                       >
                         {element.description}
-                      </Paragraph>}
+                      </Paragraph>
+                    )}
 
                     {element.footer.text_link != "" && (
                       <Link to={element.footer.text_link}>
@@ -268,7 +272,7 @@ export default ({
                           display="flex"
                           fontWeigth="700"
                           color={Colors.blue}
-                        // textDecoration="underline"
+                          // textDecoration="underline"
                         >
                           {element.footer.text}
                         </H4>

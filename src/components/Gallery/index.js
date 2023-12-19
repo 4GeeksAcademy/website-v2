@@ -8,7 +8,7 @@ import Icon from "../Icon";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { SessionContext } from "../../session";
 import Carousel from "../Carousel";
-import '../../assets/css/carousel.css'
+import "../../assets/css/carousel.css";
 
 const Gallery = ({
   heading,
@@ -18,10 +18,9 @@ const Gallery = ({
   widthImage,
   heightImage,
   previewArrow,
-  nextArrow
+  nextArrow,
 }) => {
-
-  console.log(heading)
+  console.log(heading);
 
   return (
     <>
@@ -55,7 +54,12 @@ const Gallery = ({
             </H4>
           </Div>
           <Div width_tablet="70%">
-            <Paragraph fontSize="15px" textAlign="center" textAlign_tablet="start" margin="0 0 50px 0" >
+            <Paragraph
+              fontSize="15px"
+              textAlign="center"
+              textAlign_tablet="start"
+              margin="0 0 50px 0"
+            >
               {paragraph}
             </Paragraph>
           </Div>
@@ -72,9 +76,7 @@ const Gallery = ({
             previewArrow={previewArrow}
             nextArrow={nextArrow}
           >
-
-            {
-              Array.isArray(images) &&
+            {Array.isArray(images) &&
               images.map((item, index) => {
                 return (
                   <Div
@@ -97,11 +99,9 @@ const Gallery = ({
                 );
               })}
           </Carousel>
-
         </Div>
-
-      </Div >
-    </ >
+      </Div>
+    </>
   );
 };
 

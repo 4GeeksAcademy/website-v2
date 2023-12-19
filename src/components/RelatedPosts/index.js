@@ -131,13 +131,10 @@ const RelatedPosts = ({ posts, lang, relatedClusters }) => {
           >
             {title[lang]}
           </H2>
-
-        </Div >
+        </Div>
         <Grid
           gridTemplateColumns_tablet="repeat(14, 1fr)"
-          columns_tablet={
-            articles.length <= 3 ? articles.length : "3"
-          }
+          columns_tablet={articles.length <= 3 ? articles.length : "3"}
           //margin="0 10px 73px 10px"
           margin_tablet="0 auto 84px auto"
           maxWidth_md="1366px"
@@ -151,8 +148,8 @@ const RelatedPosts = ({ posts, lang, relatedClusters }) => {
               <Post item={item} i={i} lang={lang} />
             ))}
           </Div>
-        </Grid >
-      </Div >
+        </Grid>
+      </Div>
     )
   );
 };

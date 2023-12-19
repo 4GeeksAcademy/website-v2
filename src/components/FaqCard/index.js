@@ -35,8 +35,8 @@ const FaqCard = ({ faqs, topicSlug, locationSlug, minPriority }) => {
   });
 
   return (
-    <Div 
-      display="block" 
+    <Div
+      display="block"
       maxWidth="1366px"
       margin="0 auto"
       padding_xxs="40px 20px"
