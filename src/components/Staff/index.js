@@ -108,7 +108,7 @@ const Staff = (props) => {
           >
             {props.heading || staffList.heading}
           </H4>
-          <Paragraph fontSize="18px" textAlign="center" margin="14px 0 50px 0">
+          <Paragraph fontSize="18px" textAlign="center" margin="20px 0 0 0">
             {props.paragraph || staffList.sub_heading}
           </Paragraph>
         </Div>
