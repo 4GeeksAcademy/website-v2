@@ -114,8 +114,10 @@ rating_reviews:
 
 program_details:
   position: 3
-  heading: "Ciencia de Datos y Machine Learning"
+  heading: "Maestría en Python, JavaScript y React"
   sub_heading: "Comienza con Python, Ciencia de Datos, Aprendizaje Automático, Deep Learning y el mantenimiento de un entorno de producción en Inteligencia Artificial."
+  weeks:
+    duration: 10
 
 why_4geeks:
   position: 7

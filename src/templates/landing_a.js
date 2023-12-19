@@ -979,6 +979,7 @@ export const query = graphql`
                 icon
               }
             }
+            weeks
             sub_heading
             left_labels {
               description

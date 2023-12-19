@@ -108,18 +108,17 @@ credentials:
 details:
   about:
       title: "Acerca del programa"
-      sub_title: "En esta carrera te desarrollarás desde cero como Full Stack Developer.       
-      Aprenderás a crear un sitio web sumergiéndote en las mejores prácticas del       
+      sub_title: "En esta carrera te desarrollarás desde cero como Full Stack Developer.
+      Aprenderás a crear un sitio web sumergiéndote en las mejores prácticas del
       diseño web responsive, trabajando con diversos lenguajes. Obtedrás una       
       sólida base de front end, back end, base de datos, manejo de procesos       
       distribuidos y despliegue a distintas plataformas web.
 
       Al finalizar este programa, contarás con los conocimientos para       
-      desempeñarte como Full Stack Developer. 
-    "
+      desempeñarte como Full Stack Developer. "
       list:
         - label: "Duración"
-          content:  "9 semanas"
+          content:  "10 semanas"
           icon: "calendar"
         - label: "Clases"
           content: "De Lunes a Viernes"
@@ -137,7 +136,7 @@ details:
           icon: "contract-checked"
           
   heading: DETALLES DEL PROGRAMA FULL-TIME
-  weeks: 9
+  weeks: 10
   sub_heading: "Proyectos de la vida real y exactamente lo que buscan las empresas"
   left_labels:
     description: "DESCRIPCIÓN:"
@@ -150,7 +149,7 @@ details:
       description: "Empezando por lo básico: HTML5 + CSS3 + Javascript. Revisamos los fundamentos de la codificación y nos aseguramos de que todos estamos en la misma página."
       projects: "CSS Postcard, Versión mínima de Instagram, etc."
       slug: "prework"
-      duration: "1 sem"
+      duration: "0 sem"
       step: 0
     - module_name: "FUNDAMENTOS"
       title: "Aprende a programar"
@@ -158,28 +157,28 @@ details:
       projects: "Pequeños juegos y sitios web interactivos."
       slug: "fundamentos"
       duration: "2 sem"
-      step: 3.4
+      step: 2
     - module_name: "LA WEB"
       title: "Desarrollo web"
       description: "Crea tu primera aplicación con React.js, Patrón MVC, Módulos JS, Bunding, Babel JS, el DOM, Eventos."
       projects: "Clon de Coursera, clon de Instagram, clon de Youtube, etc."
       slug: "desarrollo-web"
-      duration: "4 sem"
-      step: 3.5
+      duration: "3 sem"
+      step: 3
     - module_name: "API's"
       title: "Aplicaciones avanzadas"
       description: "Python, Flask, REST API's, Bases de datos, SQL, Patrón MVC, Publicando tu sitio web, etc."
       projects: "Durante esta fase tendrás que diseñar, programar, probar y publicar tu propia aplicación web completa."
       slug: "aplicacion-avanzada"
-      duration: "2 sem"
-      step: 2
+      duration: "3 sem"
+      step: 3
     - module_name: "DE POR VIDA"
       title: "Soporte de por vida"
       description: "Sigue recibiendo la ayuda de la academia de por vida, acceso a los contenidos, soporte profesional (career support). Recibe incluso ayuda durante el inicio de tu nuevo trabajo, nunca más estarás sólo."
       projects: "Conseguirás tu primer trabajo, empezarás a ganar dinero pero continuarás aprendiendo hasta convertirte en Senior Developer, ganar muy bien y disfrutar de la vida de un programador."
       slug: "lifelong-learning"
       duration: "1+ week"
-      step: 0.1
+      step: 2
 
 syllabus:
   heading: Descarga toda la infomación sobre este programa
