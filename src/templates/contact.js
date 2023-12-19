@@ -126,7 +126,9 @@ const Contact = (props) => {
       </Div>
 
       <Div
-        margin={isCustomBarActive(session) ? "130px auto 64px auto" : "64px auto"}
+        margin={
+          isCustomBarActive(session) ? "130px auto 64px auto" : "64px auto"
+        }
         justifyContent="center"
         variant="fluid"
         padding_xxs="40px 20px"
