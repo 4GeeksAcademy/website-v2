@@ -30,6 +30,7 @@ import GeeksInfo from "../components/GeeksInfo";
 import With4Geeks from "../components/With4Geeks";
 import MosaicImages from "../components/MosaicImages/index.js";
 import Carousel from "../components/Carousel/index.js";
+import Gallery from "../components/Gallery/index.js";
 
 const MapFrame = lazy(() => import("../components/MapFrame"));
 
@@ -66,6 +67,8 @@ const Location = ({ data, pageContext, yml }) => {
     us: "CHOOSE PROGRAM",
     es: "SELECCIONAR PROGRAMA",
   };
+
+  console.log(yml)
 
   return (
     <>
@@ -205,43 +208,6 @@ const Location = ({ data, pageContext, yml }) => {
               </Paragraph>
             )}
           </Div>
-
-          {/* <Paragraph textAlign_tablet="left">{yml.info_box.phone} </Paragraph>
-          {yml.info_box.whatsapp && (
-            <Paragraph
-              justifyContent="center"
-              justifyContent_tablet="start"
-              textAlign_tablet="left"
-              display="flex"
-              alignItems="center"
-            >
-              {yml.info_box.whatsapp_link ? (
-                <>
-                  <Div
-                    width="22px"
-                    height="22px"
-                    alignItems="center"
-                    margin="0 8px 0 0"
-                  >
-                    <Icon icon="whatsapp" />
-                  </Div>
-                  Whatsapp:
-                  <a
-                    href={yml.info_box.whatsapp_link}
-                    target="_blank"
-                    rel="noopener noreferrer nofollow"
-                  >
-                    {yml.info_box.whatsapp}
-                  </a>
-                </>
-              ) : (
-                `Whatsapp: ${yml.info_box.whatsapp}`
-              )}
-            </Paragraph>
-          )}
-          <Paragraph textAlign_tablet="left" margin="0 0 30px 0">
-            {yml.info_box.email}{" "}
-          </Paragraph> */}
         </Div>
         <Div
           height="auto"
@@ -296,13 +262,60 @@ const Location = ({ data, pageContext, yml }) => {
       <GeeksInfo lang={pageContext.lang} />
 
       {/* <MosaicImages yml={yml.images_box}/> */}
-     
-      <Carousel 
-        content={images?.images_box}
-        width_container="315px"
-        height_image="347px"
-        main_gap="23px"
-        scrollX={320} //must be only a number integer
+
+
+      <Gallery
+        images={images?.images_box?.images}
+        heading={yml?.images_box?.heading}
+        paragraph={yml?.images_box?.content}
+        widthImage="315px"
+        heightImage="347px"
+        previewArrow
+        nextArrow
+        customSettingsCarousel={{
+          dotsClass: "slick-dots-staff",
+              slidesToShow: 3,
+              slidesToScroll: 3,
+              className: "carousel-class ", // staff-class | carousel-class-noprev-arrow | carousel-class-nonext-arrow | carousel-class-noarrow
+              responsive: [
+                {
+                  breakpoint: 1439,
+                  settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                    infinite: false,
+                    dots: true
+                  }
+                },
+                {
+                  breakpoint: 1024,
+                  settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                    infinite: false,
+                    dots: true
+                  }
+                },
+                {
+                  breakpoint: 768,
+                  settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    infinite: false,
+                    dots: true
+                  }
+                },
+                {
+                  breakpoint: 450,
+                  settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    infinite: false,
+                    dots: true
+                  }
+                },
+              ],
+            }}
       />
 
       <ChooseYourProgram
@@ -319,7 +332,7 @@ const Location = ({ data, pageContext, yml }) => {
         actionMessage={yml.upcoming.actionMessage}
       />
 
-      <Staff lang={pageContext.lang} heading={yml?.staff?.heading}/>
+      <Staff lang={pageContext.lang} heading={yml?.staff?.heading} />
 
       {/* IFRAME map
       <Div>

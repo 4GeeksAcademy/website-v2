@@ -1,50 +1,50 @@
 
 /*NORMAL CLASS*/
 @media screen and (width >= 1440px) {
-  .carousel-class > div > div > div{
+  .staff-class > div > div > div{
     /* width: 100% !important; */
     /* margin: 0 36px 0 0; */
-    padding: 0 12px;
+    padding: 0 18px;
   }
 }
 @media screen and (1024px <= width < 1440px) {
-  .carousel-class > div > div > div{
+  .staff-class > div > div > div{
     /* width: 100% !important; */
     /* margin: 0 36px 0 0; */
-    padding: 0 12px;
+    padding: 0 18px;
   }
 }
 @media screen and (768px <= width < 1024px) {
-  .carousel-class > div > div > div{
+  .staff-class > div > div > div{
     /* width: 100% !important; */
     /* margin: 0 36px 0 0; */
     padding: 0 9px;
   }
 }
 @media screen and (width <= 767px) {
-  .carousel-class > div > div > div{
+  .staff-class > div > div > div{
     /* width: 100% !important; */
     /* margin: 0 36px 0 0; */
     padding: 0 9px; 
   }
 }
 @media screen and (width <= 450px) {
-  .carousel-class > div > div > div{
+  .staff-class > div > div > div{
     /* width: 100% !important; */
     /* margin: 0 36px 0 0; */
     padding: 0 8px; 
   }
 }
 
-.carousel-class > div > div > div{
+.staff-class > div > div > div{
   /* width: 220px; */
   /* margin: 0 36px 0 0; */
 }
-.carousel-class > div{
+.staff-class > div{
   width: 90%;
   left: 5%;
 }
-.carousel-class > div > div{
+.staff-class > div > div{
 
 
 }

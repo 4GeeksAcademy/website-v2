@@ -16,48 +16,89 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 
+
 const Carousel = ({
   content,
-  main_gap,
-  width_container,
   flexDirection,
-  width_image,
-  height_image,
-  gap,
-  alignItemsTablet_image,
-  scrollX,
+  padding_xxs,
+  padding_md,
+  padding_lg,
+  padding_tablet,
+  margin_tablet,
+  margin,
+  maxWidth,
+  customSettings,
+  previewArrow,
+  nextArrow,
+  className,
+  children,
 }) => {
-
-  // var coords = 0;
-
-  // useEffect(() => {
-  //   coords = document.querySelector(".scroll-items").getBoundingClientRect();
-    
-  // })
-
-  // const scrollLeft = (scroll) => {
-  //   var left = document.querySelector(".scroll-items");
-  //   left?.scrollBy(-1 * scroll, 0);
-  // };
-
-  // const scrollCenter = (coords) => {
-  //   var center = document.querySelector(".scroll-items");
-  //   center?.scrollBy(coords.width / 2, 0);
-  // };
-
-  // const scrollRight = (scroll) => {
-  //   var right = document.querySelector(".scroll-items");
-  //   right?.scrollBy(scroll, 0);
-  // };
-
   const sliderRef = useRef();
+
+  const CustomNextArrow = (props) => {
+    const { className, style, onClick } = props;
+    return (
+      <>
+        { nextArrow &&
+          <Button
+          padding="0"
+          padding_xs="0"
+          padding_tablet="0"
+          position="absolute"
+          zIndex="101"
+          top="50%"
+          right="0%"
+          right_md="0%"
+          right_lg="0%"
+          right_tablet="0%"
+          height="30px"
+          width="24px"
+          height_tablet="44px"
+          onClick={onClick}
+        >
+          <Icon width="100%" height="100%" icon="arrow-right" />
+        </Button>}
+      </>
+    );
+  };
+  const CustomPrevArrow = (props) => {
+    const { className, style, onClick } = props;
+    return (<>
+      {
+        previewArrow &&
+        <Button
+          padding="0"
+          padding_xs="0"
+          padding_tablet="0"
+          position="absolute"
+          zIndex="101"
+          top="50%"
+          left="0%"
+          left_md="0%"
+          left_lg="0%"
+          right_tablet="0%"
+          height="30px"
+          width="24px"
+          height_tablet="44px"
+          style={{ transform: "rotate(180deg)" }}
+          onClick={onClick}
+        >
+          <Icon width="100%" height="100%" icon="arrow-right" />
+        </Button>
+      }
+    </>
+    );
+  };
 
   var settings = {
     dots: true,
     infinite: false,
     speed: 500,
+    arrows: true,
+    nextArrow: <CustomNextArrow />,
+    prevArrow: <CustomPrevArrow />,
     slidesToShow: 4,
-    slidesToScroll: 4,
+    slidesToScroll: 3,
     initialSlide: 0,
     responsive: [
       {
@@ -84,20 +125,20 @@ const Carousel = ({
           slidesToScroll: 1
         }
       }
-    ]
+    ],
+    ...customSettings
   };
 
   return (
     <Div
       flexDirection="column"
-      padding_xxs="20px 20px"
-      padding_md="40px 80px"
-      padding_lg="40px 0px"
-      padding_tablet="40px 40px 10px 40px"
-      margin_tablet="30px auto"
-      margin="0 0 36px 0"
-      maxWidth="1366px"
-      gap="32px 0"
+      padding_xxs={padding_xxs || "0px"}
+      padding_md={padding_md || "0px"}
+      padding_lg={padding_lg || "0px"}
+      padding_tablet={padding_tablet || "0px"}
+      margin_tablet={margin_tablet || "30px auto"}
+      margin={margin || "0 0 36px 0"}
+      maxWidth={maxWidth}
     >
 
       {(content?.heading || content?.content) &&
@@ -129,103 +170,21 @@ const Carousel = ({
             </Div>}
         </Div>
       }
+      <Div
+        className="main-scroll-div"
+        position="relative"
+        display="block"
+      >
 
-      {content?.images &&
-        <>
-          <Div
-            className="main-scroll-div"
-            //width="90%"
-            alignItems="center"
-            justifyContent="between"
-            position="relative"
-            display="block"
-          >
-            {/* <Div
-              className="cover"
-              position="relative"
-              width="90%"
-              width_md="95%"
-            >
-              <Div
-                className="scroll-items"
-                alignItems="start"
-                justifyContent="left"
-                overflow="auto"
-                position="relative"
-                gap={main_gap || "36px"}
-              > */}
+        <Slider {...settings} ref={sliderRef}>
 
-              <Slider {...settings} ref={sliderRef}>
+          {children}
 
-                {content?.images.map((item, index) => {
-                  return (
-                    <Div
-                      className="child"
-                      key={index}
-                      minWidth={width_container || "220px"}
-                      height="fit-content"
-                      overflow="hidden"
-                      flexDirection={flexDirection || "row"}
-                      gap={gap || "8px"}
-                      id={`slide${index}`}
-                    >
-                      <Div
-                        //minWidth="184px"
-                        width={width_image || "100%"}
-                        height={height_image || "100%"}
-                        //margin="0 10px 0 0"
-                        alignItems_tablet={alignItemsTablet_image || "center"}
-                      >
-                        <GatsbyImage
-                          image={getImage(
-                            item.path && item.path.childImageSharp.gatsbyImageData
-                          )}
-                          style={{
-                            height: "100%",
-                            //width: "220px",
-                            //minWidth: "100%",
-                            backgroundSize: `cover`,
-                          }}
-                          alt={item.alt}
-                        />
-                      </Div>
-                    </Div>
-                  );
-                })}
+        </Slider>
 
-              {/* </Div>
-            </Div> */}
-            <Button
-              padding="0"
-              padding_xs="0"
-              padding_tablet="0"
-              position="absolute"
-              zIndex="101"
-              top="50%"
-              right="0%"
-              right_md="0%"
-              right_lg="2%"
-              right_tablet="0%"
-              height="38px"
-              width="24px"
-              height_tablet="44px"
-            >
-              <Icon width="100%" height="100%" icon="arrow-right" />
-            </Button>
 
-            </Slider>
-          </Div>
 
-          {/* <Div
-            className="dots"
-            justifyContent="center"
-            gap="16px"
-          >
-            <Anchor className="dot" onClick={() => scrollLeft(10000)}></Anchor>
-            <Anchor className="dot" onClick={() => scrollCenter(coords)}></Anchor>
-            <Anchor className="dot" onClick={() => scrollRight(10000)}></Anchor>
-          </Div> */}
-        </>}
+      </Div>
     </Div>
   )
 }

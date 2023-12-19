@@ -10,7 +10,8 @@ import DraggableDiv from "../DraggableDiv";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { SessionContext } from "../../session";
 import Slider from "react-slick";
-import "../../assets/css/staff-slick-slide.css"
+import "../../assets/css/staff-css.css"
+import Carousel from "../Carousel";
 // import "slick-carousel/slick/slick.css";
 // import "slick-carousel/slick/slick-theme.css";
 
@@ -75,25 +76,8 @@ const Staff = (props) => {
         n.location.includes(sessionLocation)
     );
 
-  var coords = 0;
+  const sliderRef = useRef();
 
-  useEffect(() => {
-    coords = document.querySelector(".scroll-elements").getBoundingClientRect();
-  })
-  const scrollLeft = (scroll) => {
-    var left = document.querySelector(".scroll-elements");
-    left.scrollBy(-1 * scroll, 0);
-  };
-
-  const scrollCenter = (coords) => {
-    var center = document.querySelector(".scroll-elements");
-    center.scrollBy(coords.width / 2, 0);
-  };
-
-  const scrollRight = (scroll) => {
-    var right = document.querySelector(".scroll-elements");
-    right.scrollBy(scroll, 0);
-  };
 
   return (
     <Fragment github="/components/staff">
@@ -130,116 +114,115 @@ const Staff = (props) => {
         </Div>
 
         <Div
-          className="main-scroll-div"
-          //width="90%"
           alignItems="center"
           justifyContent="between"
           position="relative"
+          display="block"
         >
-
-          <Div
-            className="cover"
-            position="relative"
-            width="90%"
-            width_md="95%"
+          <Carousel
+            previewArrow
+            nextArrow
+            customSettings={{
+              dotsClass: "slick-dots-staff",
+              slidesToShow: 4,
+              slidesToScroll: 3,
+              className: "staff-class ", // staff-class | carousel-class-noprev-arrow | carousel-class-nonext-arrow | carousel-class-noarrow
+              responsive: [
+                {
+                  breakpoint: 1439,
+                  settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 4,
+                    infinite: false,
+                    dots: true
+                  }
+                },
+                {
+                  breakpoint: 1024,
+                  settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                    infinite: false,
+                    dots: true
+                  }
+                },
+                {
+                  breakpoint: 768,
+                  settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    infinite: false,
+                    dots: true
+                  }
+                },
+                {
+                  breakpoint: 450,
+                  settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    infinite: false,
+                    dots: true
+                  }
+                },
+              ],
+            }}
           >
 
-            <Div
-              className="scroll-elements"
-              alignItems="start"
-              justifyContent="left"
-              overflow="auto"
-              position="relative"
-              gap="36px"
-            >
-              {staffFilteredByLocation?.map((item, index) => {
-                return (
+            {staffFilteredByLocation?.map((item, index) => {
+              return (
+                <Div
+                  key={index}
+                  height="fit-content"
+                  flexDirection="column"
+                  gap="8px"
+                  //padding="0 36px 0 0"
+                >
                   <Div
-                    className="child"
-                    key={index}
-                    minWidth="220px"
-                    height="fit-content"
-                    overflow="hidden"
-                    flexDirection="column"
-                    gap="8px"
-                    id={`slide${index}`}
+                    width="100%"
+                    height_tablet="300px"
+                    height_sm="360px"
+                    height="320px"
+                    //margin="0 10px 0 0"
+                    alignItems_tablet="center"
                   >
-                    <Div
-                      //minWidth="184px"
-                      width="100%"
-                      height="240px"
-                      //margin="0 10px 0 0"
-                      alignItems_tablet="center"
-                    >
-                      <GatsbyImage
-                        image={getImage(
-                          item.image && item.image.childImageSharp.gatsbyImageData
-                        )}
-                        style={{
-                          height: "100%",
-                          //width: "220px",
-                          //minWidth: "100%",
-                          backgroundSize: `cover`,
-                        }}
-                        alt={item.name}
-                      />
-                    </Div>
-                    <H3 fontSize="18px" lineHeight="22px" margin="14px 0 0 0">
-                      {item.name}
-                    </H3>
-                    <H4 fontSize="15px" lineHeight="18px" margin="8px 0">
-                      {item.job_title}
-                    </H4>
-                    <Anchor
-                      to={item.linkdin}
-                      target="_blank"
-                      rel="noopener noreferrer nofollow"
-                      textAlign="center"
-                    >
-                      <Icon
-                        icon="linkedin-new"
-                        width="24px"
-                        fill="#2867b2"
-                        stroke="#2867b2"
-                      />
-                    </Anchor>
+                    <GatsbyImage
+                      image={getImage(
+                        item.image && item.image.childImageSharp.gatsbyImageData
+                      )}
+                      style={{
+                        height: "100%",
+                        backgroundSize: `cover`,
+                      }}
+                      alt={item.name}
+                    />
                   </Div>
-                );
-              })}
-
-            </Div>
-          </Div>
-          <Button
-            padding="0"
-            padding_xs="0"
-            padding_tablet="0"
-            position="absolute"
-            zIndex="101"
-            top="50%"
-            right="0%"
-            right_md="0%"
-            right_lg="2%"
-            right_tablet="0%"
-            height="38px"
-            width="24px"
-            height_tablet="44px"
-            onClick={() => scrollRight(256)}
-          >
-            <Icon width="100%" height="100%" icon="arrow-right" />
-          </Button>
-        </Div>
-
-        <Div
-          className="dots"
-          justifyContent="center"
-          gap="16px"
-        >
-          <Anchor className="dot" onClick={() => scrollLeft(10000)}></Anchor>
-          <Anchor className="dot" onClick={() => scrollCenter(coords)}></Anchor>
-          <Anchor className="dot" onClick={() => scrollRight(10000)}></Anchor>
-        </Div>
+                  <H3 fontSize="18px" lineHeight="22px" margin="14px 0 0 0">
+                    {item.name}
+                  </H3>
+                  <H4 fontSize="15px" lineHeight="18px" margin="8px 0">
+                    {item.job_title}
+                  </H4>
+                  <Anchor
+                    to={item.linkdin}
+                    target="_blank"
+                    rel="noopener noreferrer nofollow"
+                    textAlign="center"
+                  >
+                    <Icon
+                      icon="linkedin-new"
+                      width="24px"
+                      fill="#2867b2"
+                      stroke="#2867b2"
+                    />
+                  </Anchor>
+                </Div>
+              );
+            })}
+          </Carousel>
 
       </Div>
+      
+    </Div >
     </Fragment >
   );
 };
