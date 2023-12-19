@@ -31,16 +31,16 @@ geekPal:
 # Banner of icons 
 icons:
   - icon: "capacity"
-    title: "Maximum 8 students per class"
+    title: "MAXIMUM 8 STUDENTS PER CLASS"
   - icon: "ratio"
-    title: "1:7 RATIO teacher student"
+    title: "1:7 RATIO TEACHER STUDENT"
   - icon: "talk"
-    title: "Avg. 50 tutorships PER STUDENT"
+    title: "AVG. 50 TUTORSHIPS PER STUDENT"
   - icon: "timer"
     title: "RESPONSE TIME OF 15 MINUTES"  
 
 list:
-  - title: "Unlimited Coding Support"
+  - title: "Customized process"
     image: "../../../static/images/professional-support.png"
     position: "right"
     sub:

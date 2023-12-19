@@ -10,5 +10,5 @@ list:
   - title: "An extensive network of partners in tech"
 button_text: "More about 4Geeks"
 button_link: "/us/why-4geeks"
-image: "../../../../static/images/bg/community.png"
-image_mobile: "../../../../static/images/bg/community_mobile.png"
+image: "../../../../static/images/landing/hombre-con-laptop.png"
+image_mobile: "../../../../static/images/bg/hombre-con-laptop.png"
