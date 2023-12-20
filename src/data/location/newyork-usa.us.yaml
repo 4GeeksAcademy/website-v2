@@ -62,6 +62,7 @@ info_box:
   contact_heading: "Contacts"
   phone: "(786) 416-6640"
   email: "info@4GeeksAcademy.com"
+  
 images_box:
   heading: "What you should know about this location: "
   content: "New York City showcases a dynamic tech ecosystem and a flourishing startup landscape. The metropolis has seen a notable rise in the need for coding expertise, as coding has become an essential component of the local tech industry. In response, coding bootcamps in New York have flourished, drawing in ambitious learners looking to acquire programming skills and become part of the city's thriving tech community."
@@ -77,6 +78,29 @@ images_box:
     - path: "../../../static/images/locations/miami-people.jpeg"
       alt: "4Geeeks lab"
 
+two_columns:
+  proportions: [6, 6]
+  image:
+    style: '{"border" : "5px solid black", "backgroundSize": "contain" }'
+    src: "/static/images/staff/luisa.png"
+    shadow: true  
+  video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
+  heading:
+    text: "4Geeks, Argentina and a story full of opportunities"
+    font_size: ["30px", "30px", "30px", "30px", "30px"]
+  sub_heading:
+    text: "We are Buenos Aires based and we have been focusing in bringing on more opportunities."
+    font_size: ["18px", "18px", "22px", "22px", "22px"]
+  button:
+    text: "APPLY NOW"
+    color: "white"
+    background: "black"
+    path: "/us/apply"
+  bullets:
+    items: 
+    - text: "There is always a full or partial scholarship open"
+    - text: "There is always opportunities for everyone in Miami-Dade County, Broward and Palm Beach"
+    - text: "We have ongoing partnerships with Miami Dade College, Miami Tech Coalition, UWM, The City of Miami, Miami Dade Counti and so manu more."
 
 active_campaign_location_slug: "newyork-usa"
 breathecode_location_slug: "newyork-usa"
