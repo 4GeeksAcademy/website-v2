@@ -44,7 +44,6 @@ const Side = ({
           ? imgStyles.height
           : [imgStyles.height]
         : ["100%"];
-    console.log(image);
     return image?.src ? (
       <Img
         src={image.src}
