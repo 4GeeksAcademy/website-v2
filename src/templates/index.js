@@ -178,7 +178,7 @@ const Home = (props) => {
                       lineHeight="19px"
                       dangerouslySetInnerHTML={{ __html: bullet }}
                     />
-                      {/* {bullet}{" "}
+                    {/* {bullet}{" "}
                     </Paragraph> */}
                   </Div>
                 ))}
