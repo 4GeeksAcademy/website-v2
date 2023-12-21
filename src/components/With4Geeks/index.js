@@ -81,9 +81,11 @@ export default ({
     );
   else locationFiltered = stories || info.with;
 
+  console.log(info, typeof(title))
+
   return (
     <Fragment github="/components/with_4geeks">
-      {info?.header && (
+      {(info?.header || title) && (
         <Grid
           margin="40px 5px 20px 5px"
           margin_tablet="40px auto 20px auto"
@@ -113,7 +115,7 @@ export default ({
               color={Colors.darkGray}
               textAlign={title ? "center" : "left"}
             >
-              {title || info.header.title}
+              {title || info?.header?.title}
             </H2>
             {paragraph && (
               <Paragraph

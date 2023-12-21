@@ -349,7 +349,6 @@ const Home = (props) => {
           session.location.breathecode_location_slug
         }
         playerHeight="600px"
-        title={true}
       />
       <ChooseYourProgram
         chooseProgramRef={chooseProgramRef}
