@@ -35,7 +35,15 @@ const FaqCard = ({ faqs, topicSlug, locationSlug, minPriority }) => {
   });
 
   return (
-    <Div display="block">
+    <Div
+      display="block"
+      maxWidth="1366px"
+      margin="0 auto"
+      padding_xxs="40px 20px"
+      padding_md="40px 80px"
+      padding_lg="40px 0px"
+      padding_tablet="40px 40px"
+    >
       {filteredTopics.map(
         (item, i) =>
           item.questions.length > 0 && (
@@ -45,7 +53,7 @@ const FaqCard = ({ faqs, topicSlug, locationSlug, minPriority }) => {
                 key={i}
                 borderBottom="1px solid"
                 borderColor="#C4C4C4"
-                padding="80px 30px 30px 30px"
+                padding="30px 30px 30px 30px"
               >
                 {item.topic}
               </H3>
