@@ -284,7 +284,7 @@ const TwentyMillion = ({ data, pageContext, yml }) => {
               </Link>
             </Div>
             <Div width="100%" width_tablet="fit-content">
-              <Link to="#bottom" style={{ width: "100%" }}>
+              <Link to="#fake_bottom" style={{ width: "100%" }}>
                 <Button
                   display="block"
                   width="100%"
@@ -346,6 +346,7 @@ const TwentyMillion = ({ data, pageContext, yml }) => {
         width="100%"
         height="5px"
         margin="40px 0"
+        id="fake_bottom"
       />
 
       <GridContainer
