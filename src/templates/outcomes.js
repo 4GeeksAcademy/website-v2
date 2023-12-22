@@ -142,8 +142,14 @@ const Outcomes = ({ data, pageContext, yml }) => {
       .replace(/[^\w-]+/g, "");
   };
 
-  return (
-    <Div padding="0 0 50px 0" flexDirection="column">
+  return (<>
+
+    <Div
+      background={Colors.lightYellow}
+      padding="40px 20px"
+      padding_md="40px 80px"
+      padding_lg="40px 0px"
+      padding_tablet="40px 40px">
       <Header
         hideArrowKey
         paddingParagraph="0px 14% 0px 0"
@@ -152,8 +158,18 @@ const Outcomes = ({ data, pageContext, yml }) => {
         title={yml.header.title}
         paragraph={yml.header.paragraph}
         svg_image={<SVGImage />}
-        background={Colors.lightYellow}
+        margin_tablet="70px auto 0 auto"
+        maxWidth="1366px"
       />
+    </Div>
+    <Div
+      padding="40px 20px"
+      padding_md="40px 80px"
+      padding_lg="40px 0px"
+      padding_tablet="40px 40px"
+      // padding="0 0 50px 0" 
+      flexDirection="column"
+    >
       <Div
         display="flex"
         display_tablet="none"
@@ -173,6 +189,7 @@ const Outcomes = ({ data, pageContext, yml }) => {
         width="100%"
         height="70px"
         className="scroll-spy-container"
+
       >
         <ScrollSpy offsetTop={140} autoScrollOffsetTop={-140}>
           {yml.sections
@@ -193,8 +210,8 @@ const Outcomes = ({ data, pageContext, yml }) => {
         </ScrollSpy>
       </Div>
 
-      <GridContainer columns="12" padding="0 17px" padding_tablet="0 65px 0 0 ">
-        <Div gridArea="1/2/1/12" flexDirection="column">
+      <GridContainer columns="12" gridColumn_tablet="1 / span 13" padding="0 0" padding_tablet="0 0 0 0 " maxWidth="1366px" margin_tablet="0 auto">
+        <Div gridArea="1/1/1/12" flexDirection="column">
           {yml.sections
             .filter((section) => section.title !== "")
             .map((section, i) => {
@@ -241,10 +258,10 @@ const Outcomes = ({ data, pageContext, yml }) => {
                       return (
                         <Div
                           key={i}
-                          gap="0"
                           gridColumnGap="40px"
                           flexDirection="column"
                           margin="0 0 38px 0"
+                          gap="10px"
                         >
                           <H2
                             type="h2"
@@ -346,6 +363,7 @@ const Outcomes = ({ data, pageContext, yml }) => {
           display="none"
           display_md="flex"
           style={{ position: "relative" }}
+
         >
           <Div
             flexDirection="column"
@@ -358,6 +376,7 @@ const Outcomes = ({ data, pageContext, yml }) => {
             border={`1px solid #e5e5e5`}
             width="266px"
             height="fit-content"
+
           >
             <Div
               className="container-sidebar-content"
@@ -434,6 +453,7 @@ const Outcomes = ({ data, pageContext, yml }) => {
         </Div>
       </GridContainer>
     </Div>
+  </>
   );
 };
 export const query = graphql`
