@@ -90,14 +90,14 @@ two_columns:
   proportions: [6, 6]
   image:
     style: '{"border" : "5px solid black", "backgroundSize": "contain" }'
-    src: "/static/images/staff/luisa.png"
+    src: "/static/images/testimonials/allisa-testimonial.jpg"
     shadow: true  
-  video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
+  video: "https://www.youtube.com/watch?v=TCHASxvkhpI"
   heading:
-    text: "4Geeks, Argentina and a story full of opportunities"
+    text: "Exclusive Scholarships with Miami Dade College, Clark University, and United Way Miami"
     font_size: ["30px", "30px", "30px", "30px", "30px"]
   sub_heading:
-    text: "We are Buenos Aires based and we have been focusing in bringing on more opportunities."
+    text: "Enhance Your Professional Trajectory with 4Geeks Academy"
     font_size: ["18px", "18px", "22px", "22px", "22px"]
   button:
     text: "APPLY NOW"

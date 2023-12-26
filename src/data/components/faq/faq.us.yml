@@ -46,12 +46,36 @@ faq:
           Furthermore, we also work with amazing partners to offer you the best Extended Payment Plan. You can apply for either a 6,12,19 or 24 month plan ( depending on each location) so that you just have to worry about obtaining your education. 
           Financing is available for those who qualify wherever financing is available.If you are in Chile or Spain, we also have our partner Quotanda who offers many options to make your education possible.
           If you need more information about how it works, please feel free to contact us ar info@4geeksacademy.com."
+      - question: "Do we offer career support?"
+        priority: 1
+        answer: |-
+          "Absolutely! At 4Geeks Academy, our robust career support includes tailored guidance for job placement, resume crafting, and interview preparation to ensure our students excel in the tech industry."
       - question: "Extended Payment Plan? How does it work? And what does it mean?"
-        priority: 3
+        priority: 1
         answer: |-
           "The Extended Payment Plan has been designed specifically for our students.
           You can apply for an extended payment plan for either a 6,12, 18 or 24 months. You just need to pay the deposit and sign a contract that will take about the payments and what fits best your lifestyle.
           If you want to have more information about the plan, click <a rel="noopener noreferrer nofollow" href="https://quotanda.com/en/4geeks/">here</a>."
+      - question: "Can I pay after I get a job?"
+        priority: 1
+        answer: |-
+          "At 4Geeks Academy, we have various payment options available, including Income Share Agreements (ISAs) or Deferred Tuition plans, where you pay after securing a job.
+          These models are designed to support your journey by allowing you to focus on learning first and then repay once you've entered the workforce. 
+          However, specific terms and conditions might apply based on the program you choose and your location, so it's essential to discuss these options with our 
+          admissions team for further details and eligibility criteria."
+      - question: "Do we offer mentorship?"
+        priority: 1
+        answer: |-
+          "Yes, at 4Geeks Academy, mentorship is a pivotal part of our educational approach. 
+          We provide mentorship programs to offer personalized guidance, support, and insights from experienced professionals in the tech industry. 
+          This mentorship is aimed at nurturing your learning journey, helping you navigate challenges, and providing valuable career advice to enhance 
+          your skills and prospects in the tech field."
+      - question: "Do I need prior experience?"
+        priority: 1
+        answer: |-
+          "No prior experience in coding or technology is required to join 4Geeks Academy.
+          Our programs are designed to cater to individuals with diverse backgrounds and varying levels of experience. 
+          Whether you're a complete beginner or have some prior knowledge, our curriculum is structured to accommodate learners at different starting points."
 
   - topic: "Frequently Asked Questions about Programs"
     slug: "programs"
@@ -122,7 +146,7 @@ faq:
           Node is amazing.  It challenges the way the web is created.  However, only 0.3% of the web has adopted Node JS, and its growth has slowed even further over the last months.  Python, Java, PHP, and other similar languages still rule the world (and that is not going to change anytime soon).  They work in a very different way than Node does; our purpose is to prepare you for the "real world."  We train our Full-Stack Developers using/teaching only the most standard and professional technologies.
           <a class="faq-link" href="/us/trends-and-tech/dont-teach-nodejs-full-stack-development-program">Here</a> you can find a great argument as to why we are not teaching Node JS.
       - question: "Do I need to have previous experience in programming to join the bootcamp?"
-        priority: 0
+        priority: 3
         answer: |-
           "No. You just need to want to learn. Coding must exist in some part of your body and we will find it! If you already know how to open your browser and check facebook then we'll be fine!"
       - question: "Do I graduate as a 'Senior Developer?'"

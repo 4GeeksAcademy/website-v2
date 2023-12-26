@@ -85,14 +85,14 @@ two_columns:
   proportions: [6, 6]
   image:
     style: '{"border" : "5px solid black", "backgroundSize": "contain" }'
-    src: "/static/images/staff/luisa.png"
+    src: "/static/images/testimonials/allisa-testimonial.jpg"
     shadow: true  
-  video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
+  video: "https://www.youtube.com/watch?v=TCHASxvkhpI"
   heading:
-    text: "4Geeks, Argentina and a story full of opportunities"
+    text: "Unlocking Atlanta's Coding Potential"
     font_size: ["30px", "30px", "30px", "30px", "30px"]
   sub_heading:
-    text: "We are Buenos Aires based and we have been focusing in bringing on more opportunities."
+    text: "Alissa Reveals Why 4Geeks Academy is the best option"
     font_size: ["18px", "18px", "22px", "22px", "22px"]
   button:
     text: "APPLY NOW"
@@ -101,9 +101,9 @@ two_columns:
     path: "/us/apply"
   bullets:
     items: 
-    - text: "There is always a full or partial scholarship open"
-    - text: "There is always opportunities for everyone in Miami-Dade County, Broward and Palm Beach"
-    - text: "We have ongoing partnerships with Miami Dade College, Miami Tech Coalition, UWM, The City of Miami, Miami Dade Counti and so manu more."
+    - text: "Hands-on projects fostering practical skill mastery"
+    - text: "Industry-aligned curriculum for real-world readiness"
+    - text: "Career support navigating Atlanta's thriving tech industry"
 
 active_campaign_location_slug: "atlanta-usa"
 breathecode_location_slug: "atlanta-usa"
