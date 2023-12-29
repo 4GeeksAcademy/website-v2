@@ -87,14 +87,14 @@ two_columns:
   proportions: [6, 6]
   image:
     style: '{"border" : "5px solid black", "backgroundSize": "contain" }'
-    src: "/static/images/testimonials/paola-testimonial.webp"
+    src: "/static/images/staff/luisa.png"
     shadow: true  
-  video: "https://www.youtube.com/watch?v=4H_Sp28PFLc"
+  video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
   heading:
-    text: "Training, Impact, and Programming"
+    text: "Luisa Glum's Insights about 4Geeks Academy in Caracas"
     font_size: ["30px", "30px", "30px", "30px", "30px"]
   sub_heading:
-    text: "Paola chooses 4Geeks Academy for this and other advantages"
+    text: "Luisa chooses 4Geeks Academy for this and other advantages"
     font_size: ["18px", "18px", "22px", "22px", "22px"]
   button:
     text: "¡Únete ahora!"

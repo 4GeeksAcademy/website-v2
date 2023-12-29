@@ -88,14 +88,14 @@ two_columns:
   proportions: [6, 6]
   image:
     style: '{"border" : "5px solid black", "backgroundSize": "contain" }'
-    src: "/static/images/staff/luisa.png"
+    src: "/static/images/testimonials/allisa-testimonial.jpg"
     shadow: true  
-  video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
+  video: "https://www.youtube.com/watch?v=TCHASxvkhpI"
   heading:
-    text: "4Geeks, Argentina and a story full of opportunities"
+    text: " 4Geeks Academy's Influence"
     font_size: ["30px", "30px", "30px", "30px", "30px"]
   sub_heading:
-    text: "We are Buenos Aires based and we have been focusing in bringing on more opportunities."
+    text: "Navigating Hamburg's Tech Domain for Career Excellence"
     font_size: ["18px", "18px", "22px", "22px", "22px"]
   button:
     text: "APPLY NOW"
@@ -104,9 +104,10 @@ two_columns:
     path: "/us/apply"
   bullets:
     items: 
-    - text: "There is always a full or partial scholarship open"
-    - text: "There is always opportunities for everyone in Miami-Dade County, Broward and Palm Beach"
-    - text: "We have ongoing partnerships with Miami Dade College, Miami Tech Coalition, UWM, The City of Miami, Miami Dade Counti and so manu more."
+    - text: "4Geeks Academy's job placement rate of 95% within six months post-graduation"
+    - text: "Flexible learning options, encompassing part-time and immersive courses, accommodate diverse schedules and learning preferences"
+    - text: "Flexibility to study from anywhere at your own pace"
+    - text: "Our personalized mentorship program connects students with industry professionals, fostering insights and guidance for career growth"
 
 active_campaign_location_slug: "hamburg-germany"
 breathecode_location_slug: "hamburg-germany"

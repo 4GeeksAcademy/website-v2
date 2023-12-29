@@ -89,10 +89,10 @@ two_columns:
     shadow: true  
   video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
   heading:
-    text: "4Geeks, Argentina and a story full of opportunities"
+    text: "4Geeks Academy in Mexico"
     font_size: ["30px", "30px", "30px", "30px", "30px"]
   sub_heading:
-    text: "We are Buenos Aires based and we have been focusing in bringing on more opportunities."
+    text: "Empowering Tech Journeys and Innovations"
     font_size: ["18px", "18px", "22px", "22px", "22px"]
   button:
     text: "APPLY NOW"
@@ -101,7 +101,7 @@ two_columns:
     path: "/us/apply"
   bullets:
     items: 
-    - text: "There is always a full or partial scholarship open"
+    - text: "Explore the transformative effect of our tailored career paths, empowering students to thrive"
     - text: "There is always opportunities for everyone in Miami-Dade County, Broward and Palm Beach"
     - text: "We have ongoing partnerships with Miami Dade College, Miami Tech Coalition, UWM, The City of Miami, Miami Dade Counti and so manu more."
 

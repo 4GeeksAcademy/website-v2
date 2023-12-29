@@ -85,14 +85,14 @@ two_columns:
   proportions: [6, 6]
   image:
     style: '{"border" : "5px solid black", "backgroundSize": "contain" }'
-    src: "/static/images/staff/luisa.png"
-    shadow: true  
-  video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
+    src: "/static/images/testimonials/pablo-review.jpg"
+    shadow: true 
+  video: "ScqncejBOvY"
   heading:
-    text: "4Geeks, Argentina and a story full of opportunities"
+    text: "4Geeks, Uruguay and a story full of opportunities"
     font_size: ["30px", "30px", "30px", "30px", "30px"]
   sub_heading:
-    text: "We are Buenos Aires based and we have been focusing in bringing on more opportunities."
+    text: "We are in Monte Video based and we have been focusing in bringing on more opportunities."
     font_size: ["18px", "18px", "22px", "22px", "22px"]
   button:
     text: "APPLY NOW"
@@ -102,8 +102,8 @@ two_columns:
   bullets:
     items: 
     - text: "There is always a full or partial scholarship open"
-    - text: "There is always opportunities for everyone in Miami-Dade County, Broward and Palm Beach"
-    - text: "We have ongoing partnerships with Miami Dade College, Miami Tech Coalition, UWM, The City of Miami, Miami Dade Counti and so manu more."
+    - text: "Our programs are tailored to meet the current demands of the tech industry, ensuring graduates possess relevant skills"
+    - text: "A track record of high job placement rates post-graduation, ensuring career progression for our students"
 
 ## START FROM HERE - DON'T CHANGE ANYTHING ABOVE
 ## HEADING SECTION

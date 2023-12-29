@@ -92,10 +92,10 @@ two_columns:
     shadow: true  
   video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
   heading:
-    text: "4Geeks, Argentina and a story full of opportunities"
+    text: "Insights with 4Geeks Academy"
     font_size: ["30px", "30px", "30px", "30px", "30px"]
   sub_heading:
-    text: "We are Buenos Aires based and we have been focusing in bringing on more opportunities."
+    text: "Navigating Dublin's Expansive Tech Realm for Career Success"
     font_size: ["18px", "18px", "22px", "22px", "22px"]
   button:
     text: "APPLY NOW"
@@ -104,9 +104,9 @@ two_columns:
     path: "/us/apply"
   bullets:
     items: 
-    - text: "There is always a full or partial scholarship open"
-    - text: "There is always opportunities for everyone in Miami-Dade County, Broward and Palm Beach"
-    - text: "We have ongoing partnerships with Miami Dade College, Miami Tech Coalition, UWM, The City of Miami, Miami Dade Counti and so manu more."
+    - text: "The demand for software engineers in Dublin has surged by 20% in the last year alone, signaling a robust market for skilled developers"
+    - text: "Coding skills have become indispensable, with a 25% rise in job listings requiring programming proficiency"
+    - text: "With a 95% job placement rate within six months of graduation, our programs ensure tangible outcomes for career advancement"
 
 ## HEADING SECTION
 

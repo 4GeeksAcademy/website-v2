@@ -85,25 +85,25 @@ two_columns:
   proportions: [6, 6]
   image:
     style: '{"border" : "5px solid black", "backgroundSize": "contain" }'
-    src: "/static/images/staff/luisa.png"
-    shadow: true  
-  video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
+    src: "/images/testimonials/liliana-review.jpg"
+    shadow: true
+  video: "https://www.youtube.com/watch?v=aZrQNvyniLo"
   heading:
-    text: "4Geeks, Argentina and a story full of opportunities"
+    text: "Perspectivas de 4Geeks Academy en Colombia"
     font_size: ["30px", "30px", "30px", "30px", "30px"]
   sub_heading:
-    text: "We are Buenos Aires based and we have been focusing in bringing on more opportunities."
+    text: "Explorando el Panorama Tecnológico y las Oportunidades Educativas"
     font_size: ["18px", "18px", "22px", "22px", "22px"]
   button:
-    text: "APPLY NOW"
+    text: "¡Únete ahora!"
     color: "white"
     background: "black"
-    path: "/us/apply"
+    path: "/es/aplica"
   bullets:
     items: 
-    - text: "There is always a full or partial scholarship open"
-    - text: "There is always opportunities for everyone in Miami-Dade County, Broward and Palm Beach"
-    - text: "We have ongoing partnerships with Miami Dade College, Miami Tech Coalition, UWM, The City of Miami, Miami Dade Counti and so manu more."
+    - text: "Liliana destaca el papel fundamental de las redes en la industria tecnológica colombiana y cómo 4Geeks Academy se integra en este entorno"
+    - text: "Nuestros graduados tienen una tasa de colocación laboral del 95% dentro de los seis meses posteriores a la graduación"
+    - text: "Hemos capacitado a más de 10,000 estudiantes, brindándoles las habilidades necesarias para triunfar en el campo de la tecnología"
 
 ## HEADING SECTION
 heading_section:
