@@ -9,7 +9,7 @@ meta_info:
   keywords: "Learn to code, 4Geeks academy, Learn programming, learn computer engineering"
 
   template: "landing_a" # <--- choose your landing template
-  redirects: [""] # <--- URL redirections to avoid 404 errors
+  redirects: [] # <--- URL redirections to avoid 404 errors
 
   # Set a particular course or location to the landing page
   # this UTM fields will be also included in the CRM contact
