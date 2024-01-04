@@ -219,7 +219,7 @@ const UpcomingDates = ({
     <GridContainer
       id={id}
       style={style}
-      margin_tablet="0 auto 48px auto"
+      margin_tablet="0 auto 0 auto"
       maxWidth="1366px"
       containerColumns_tablet="14fr"
       gridColumn_tablet="1 / 15"

@@ -2,14 +2,17 @@ import React from "react";
 import { useStaticQuery, graphql, Link } from "gatsby";
 import { H2, H4, H3, Paragraph } from "../Heading";
 import { Div, GridContainer, Grid } from "../Sections";
-import { RoundImage, Colors } from "../Styling";
+import { RoundImage, Colors, Img } from "../Styling";
 import ReactPlayer from "../ReactPlayer";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import Fragment from "../Fragment";
 
 export default ({
   lang,
   playerHeight,
   title,
+  subtitle,
+  stories,
   text,
   text_link,
   paragraph,
@@ -76,7 +79,8 @@ export default ({
         !sessionLocation ||
         n.location.includes(sessionLocation)
     );
-  else locationFiltered = info.with;
+  else locationFiltered = stories || info.with;
+
   return (
     <Fragment github="/components/with_4geeks">
       {info?.header && (
@@ -103,13 +107,13 @@ export default ({
               margin_xs="0px"
               fontSize="21px"
               fontSize_tablet="32px"
-              textTransform="uppercase"
+              textTransform={title ? "" : "uppercase"}
               lineHeight="38.4px"
               fontWeight="900"
               color={Colors.darkGray}
-              textAlign="left"
+              textAlign={title ? "center" : "left"}
             >
-              {info.header.title}
+              {title || info.header.title}
             </H2>
             {paragraph && (
               <Paragraph
@@ -119,7 +123,7 @@ export default ({
                 padding="0"
                 padding_tablet="0 12% 4% 12%"
               >
-                {info.header.paragraph}
+                {subtitle || info.header.paragraph}
               </Paragraph>
             )}
           </Div>
@@ -161,7 +165,7 @@ export default ({
                   width="100%"
                 >
                   <Div
-                    padding_xs="0 0 20px 0px"
+                    padding_xs="0 0 0 0px"
                     //padding="20px 0"
                     width_tablet="100%"
                     height_tablet={element.video_height || "173px"}
@@ -169,20 +173,32 @@ export default ({
                     alignSelf={`baseline`}
                     style={{ borderRadius: `0px` }}
                   >
-                    <ReactPlayer
-                      With_Modal={element.open_in_modal}
-                      margin_tablet="0px"
-                      imageWidth="100%"
-                      imageHeight={element.video_height || "auto"}
-                      //height="100%"
-                      className="react-player-with4geeks"
-                      thumb={element.image}
-                      id={element.video}
-                      width="100%"
-                      width_tablet="100%"
-                      videoHeight={element.video_height}
-                      style={{ borderRadius: `0px` }}
-                    />
+                    {element.video && element.image && (
+                      <ReactPlayer
+                        With_Modal={element.open_in_modal}
+                        margin_tablet="0px"
+                        imageWidth="100%"
+                        imageHeight={element.video_height || "auto"}
+                        //height="100%"
+                        className="react-player-with4geeks"
+                        thumb={element.image}
+                        id={element.video}
+                        width="100%"
+                        width_tablet="100%"
+                        videoHeight={element.video_height}
+                        style={{ borderRadius: `0px` }}
+                      />
+                    )}
+                    {!element.video && element.image && (
+                      <GatsbyImage
+                        //className={className}
+                        height="173px"
+                        image={getImage(
+                          element?.image?.childImageSharp?.gatsbyImageData
+                        )}
+                        alt="Image"
+                      />
+                    )}
                   </Div>
                   <Div
                     //marginTop="20px"
@@ -190,56 +206,65 @@ export default ({
                     padding_tablet="20px 32px"
                     padding_xxs="20px 16px"
                     display={`flex`}
-                    height="100%"
+                    //height="100%"
+                    height={stories ? "fit-content" : "100%"}
                     flexDirection="column"
                     gap="16px 0px"
                     boxShadow="inset 0px 0px 5px 0px #0000001A"
                   >
-                    <Link to={element.footer.image_link}>
-                      <RoundImage
-                        url={element.footer.image}
-                        bsize="contain"
-                        height="20px"
-                        position="left"
-                      />
-                    </Link>
+                    {element.footer.image_link && (
+                      <Link to={element.footer.image_link}>
+                        <RoundImage
+                          url={element.footer.image}
+                          bsize="contain"
+                          height="20px"
+                          position="left"
+                        />
+                      </Link>
+                    )}
 
-                    <H4
-                      textAlign="left"
-                      width="100%"
-                      margin="0 0 10px 0"
-                      uppercase
-                      fontSize="15px"
-                      fontWeight="900"
-                      lineHeight="19px"
-                      color={Colors.darkGray}
-                    >
-                      {element.name}
-                    </H4>
-                    <H3
-                      textAlign="left"
-                      width="100%"
-                      margin="0"
-                      fontSize_xs="18px"
-                      fontSize_tablet="28px"
-                      fontSize_md="28px"
-                      lineHeight_xs="21.6px"
-                      lineHeight_tablet="33.6px"
-                    >
-                      {`“${element.title}”`}
-                    </H3>
-                    <Paragraph
-                      color={Colors.darkGray}
-                      textAlign="left"
-                      margin="10px 0 10px 0"
-                      fontWeight="400"
-                      fontSize_xs="14px"
-                      fontSize_tablet="13px"
-                      lineHeight_xs="16.8px"
-                      lineHeight_tablet="26px"
-                    >
-                      {element.description}
-                    </Paragraph>
+                    {element.name && (
+                      <H4
+                        textAlign="left"
+                        width="100%"
+                        margin="0 0 10px 0"
+                        uppercase
+                        fontSize="15px"
+                        fontWeight="900"
+                        lineHeight="19px"
+                        color={Colors.darkGray}
+                      >
+                        {element.name}
+                      </H4>
+                    )}
+                    {element.title && (
+                      <H3
+                        textAlign="left"
+                        width="100%"
+                        margin="0"
+                        fontSize_xs="18px"
+                        fontSize_tablet="28px"
+                        fontSize_md="28px"
+                        lineHeight_xs="21.6px"
+                        lineHeight_tablet="33.6px"
+                      >
+                        {`“${element.title}”`}
+                      </H3>
+                    )}
+                    {element.description && (
+                      <Paragraph
+                        color={Colors.darkGray}
+                        textAlign="left"
+                        margin="10px 0 10px 0"
+                        fontWeight="400"
+                        fontSize_xs="14px"
+                        fontSize_tablet="13px"
+                        lineHeight_xs="16.8px"
+                        lineHeight_tablet="26px"
+                      >
+                        {element.description}
+                      </Paragraph>
+                    )}
 
                     {element.footer.text_link != "" && (
                       <Link to={element.footer.text_link}>
