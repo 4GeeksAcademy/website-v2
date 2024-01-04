@@ -91,7 +91,7 @@ follow_bar:
 who_is_hiring:
   position: 10
   limit: 4
-  heading: "Nuestros estudiantes trabajan en las mejores empresas. ¡Sé parte de esta lista!"
+  heading: "Nuestros estudiantes trabajan en las mejores empresas. Forma parte de esta lista!"
   sub_heading: "A nivel mundial ya somos más de 500 partners que, como tú, reciben el mejor servicio (gratuito) para acceder a candidatos tech junior, de la forma más personalizada que puedas imaginarte "
   featured:
     - name: "Facebook"
