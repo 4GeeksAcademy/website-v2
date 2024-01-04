@@ -71,22 +71,27 @@ const Program = ({ data, pageContext, yml }) => {
   return (
     <>
       <Header
-        margin={isCustomBarActive(session) ? "60px auto 0 auto" : "0 auto"}
+        margin={
+          isCustomBarActive(session) ? "120px auto 0 auto" : "90px auto 0 auto"
+        }
         paragraphMargin="26px 20px"
         paragraphMargin_Tablet="26px 22%"
         paddingParagraph_tablet="0 40px"
         seo_title={yml.seo_title}
         title={yml.header.title}
         paragraph={yml.header.paragraph}
-        padding_tablet="72px 0 40px 0"
-        padding="0px 20px"
+        padding_xxs="40px 20px"
+        padding_md="40px 80px"
+        padding_lg="40px 0px"
+        padding_tablet="40px 40px"
         position="relative"
-        fontSize_title="12px"
+        fontSize_title="40px"
         fontSizeTitle_tablet="60px"
         fontFamily_title="Archivo-Black"
         fontSize_paragraph="24px"
         gridTemplateColumns_tablet="repeat(14, 1fr)"
         maxWidth="1366px"
+        uppercase
       >
         <Img
           src="/images/landing/group-3.png"
@@ -123,8 +128,7 @@ const Program = ({ data, pageContext, yml }) => {
               margin_tablet="10px 24px 10px 0"
               textColor="white"
             >
-              {applyButtonText || apply_button_text}
-              {/* {applyButtonText} */}
+              {apply_button_text || applyButtonText}
             </Button>
           </Link>
           <Button
@@ -148,6 +152,8 @@ const Program = ({ data, pageContext, yml }) => {
           >
             {syllabus_button_text}
           </Button>
+          {/* <Button onClick={handleOpen} variant="outline" width="200px" color={Colors.black} margin="10px 0 58px 0" textColor={Colors.black}>{syllabus_button_text}</Button> */}
+          {/* <Button variant="outline" icon={<Icon icon="download" stroke={Colors.black} style={{marginRight: "10px"}} width="46px" height="46px" />} color={Colors.black} margin="10px 0 50px 0" margin_tablet="0" textColor={Colors.black}>{syllabus_button_text}</Button> */}
         </Div>
         <Modal
           aria-labelledby="simple-modal-title"
@@ -395,8 +401,10 @@ export const query = graphql`
           }
           button {
             syllabus_heading
+            syllabus_btn_label
             syllabus_motivation
             apply_button_link
+            apply_button_text
           }
           meta_info {
             title

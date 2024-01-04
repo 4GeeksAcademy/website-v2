@@ -81,13 +81,13 @@ export default ({
     <Fragment github="/components/with_4geeks">
       {info?.header && (
         <Grid
-          margin="40px 5px"
+          margin="40px 5px 20px 5px"
           margin_tablet="40px auto 20px auto"
           maxWidth_tablet="1366px"
           gridTemplateColumns_tablet="repeat(14, 1fr)"
           padding_tablet="0 40px"
-          padding_md="0 80px"
-          padding_lg="0"
+          padding_md="40px 80px"
+          padding_lg="50px 0 0 0"
           padding="0 17px"
         >
           <Div
@@ -143,6 +143,8 @@ export default ({
             gridColumn="1/15"
             width="100%"
             className="badge-slider hideOverflowX__"
+            gap="0px 20px"
+            gap_tablet="0px 20px"
           >
             {locationFiltered.map((element, index) => {
               return (
@@ -152,10 +154,10 @@ export default ({
                   flexDirection_tablet="column"
                   justifyContent="start"
                   border="none"
-                  padding="0 16px"
+                  //padding="0 16px"
                   key={`${element.name}_${index}`}
                   style={{ borderRadius: `0px` }}
-                  minWidth="315px"
+                  minWidth="250px"
                   width="100%"
                 >
                   <Div
@@ -183,13 +185,14 @@ export default ({
                     />
                   </Div>
                   <Div
-                    marginTop="20px"
+                    //marginTop="20px"
+                    style={{ padding: "20px 32px" }}
                     padding_tablet="20px 32px"
-                    padding_xs="20px 16px"
+                    padding_xxs="20px 16px"
                     display={`flex`}
                     height="100%"
                     flexDirection="column"
-                    gap="16px"
+                    gap="16px 0px"
                     boxShadow="inset 0px 0px 5px 0px #0000001A"
                   >
                     <Link to={element.footer.image_link}>
