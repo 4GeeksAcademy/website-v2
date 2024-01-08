@@ -68,7 +68,7 @@ two_columns:
     text: "Aprende a programar desde Atlanta"
     font_size: ["30px", "30px", "30px", "30px", "30px"]
   sub_heading:
-    text: "Alissa nos cuenta por qué 4 Geeks Academy es la mejor opción"
+    text: "Alissa nos cuenta por qué 4Geeks Academy es la mejor opción para convertirte en programador en Atlanta"
     font_size: ["18px", "18px", "22px", "22px", "22px"]
   button:
     text: "¡Únete ahora!"
