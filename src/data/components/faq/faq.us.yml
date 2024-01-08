@@ -63,20 +63,14 @@ faq:
           These models are designed to support your journey by allowing you to focus on learning first and then repay once you've entered the workforce. 
           However, specific terms and conditions might apply based on the program you choose and your location, so it's essential to discuss these options with our 
           admissions team for further details and eligibility criteria."
-      - question: "Do we offer mentorship?"
+      - question: "Does 4Geeks offer mentorships?"
         priority: 1
         answer: |-
-          "Yes, at 4Geeks Academy, mentorship is a pivotal part of our educational approach. 
-          We provide mentorship programs to offer personalized guidance, support, and insights from experienced professionals in the tech industry. 
-          This mentorship is aimed at nurturing your learning journey, helping you navigate challenges, and providing valuable career advice to enhance 
-          your skills and prospects in the tech field."
+          "Yes, ¡For life! 4Geeks Academy offers mentorship through our GeekPal and GeekForce programs. GeekPal provides technical coaching through group mentoring sessions and 1-1 sessions on topics like mock interviews, interview preparation, debugging, and problem-solving. GeekForce offers career coaching through mock interviews in soft skills, career advice, and resume building."
       - question: "Do I need prior experience?"
         priority: 1
         answer: |-
-          "No prior experience in coding or technology is required to join 4Geeks Academy.
-          Our programs are designed to cater to individuals with diverse backgrounds and varying levels of experience. 
-          Whether you're a complete beginner or have some prior knowledge, our curriculum is structured to accommodate learners at different starting points."
-
+          "No, you do not need any prior experience to join our bootcamps. We believe in making our courses accessible to anyone who wants to change their lives, regardless of their background or previous knowledge. We have internally developed interactive, real-time, and award-winning learning tools with content, syllabi, and a framework to help everyone learn efficiently regardless of their background. Our pre-work experience levels the students and offers challenges incrementally, along with videos, AI tutoring, unlimited mentorships, and documentation to support your learning journey."
   - topic: "Frequently Asked Questions about Programs"
     slug: "programs"
     questions:
