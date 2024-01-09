@@ -200,7 +200,7 @@ a {
   display: inline-block;
   width: 33%;
 }
-.logo-navbar{
+.logo-navbar {
   width: 139px;
   height: 39px;
 }
@@ -253,7 +253,7 @@ a {
 }
 
 @media (min-width: 320px) {
-  .logo-navbar{
+  .logo-navbar {
     width: 114px;
     height: 31px;
   }
@@ -579,4 +579,3 @@ button.active p {
   -webkit-text-stroke-width: 0.4px;
   -webkit-text-stroke-color: rgb(169 169 169);
 }
-
