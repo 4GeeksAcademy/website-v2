@@ -178,7 +178,7 @@ const Home = (props) => {
                       lineHeight="19px"
                       dangerouslySetInnerHTML={{ __html: bullet }}
                     />
-                      {/* {bullet}{" "}
+                    {/* {bullet}{" "}
                     </Paragraph> */}
                   </Div>
                 ))}
@@ -349,7 +349,6 @@ const Home = (props) => {
           session.location.breathecode_location_slug
         }
         playerHeight="600px"
-        title={true}
       />
       <ChooseYourProgram
         chooseProgramRef={chooseProgramRef}
