@@ -210,6 +210,7 @@ export const NavbarMobile = ({
   `);
 
   const locations = locByLanguage(data.allLocationYaml, langDictionary[lang]);
+
   return (
     <>
       <Nav
@@ -230,6 +231,7 @@ export const NavbarMobile = ({
               loading="eager"
               image={getImage(data.file.childImageSharp.gatsbyImageData)}
               alt="4Geeks Logo"
+              className="logo-navbar"
             />
           </Link>
         </Div>
