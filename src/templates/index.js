@@ -176,9 +176,10 @@ const Home = (props) => {
                       color={Colors.black}
                       fontSize="16px"
                       lineHeight="19px"
-                    >
-                      {bullet}{" "}
-                    </Paragraph>
+                      dangerouslySetInnerHTML={{ __html: bullet }}
+                    />
+                      {/* {bullet}{" "}
+                    </Paragraph> */}
                   </Div>
                 ))}
               </Div>
