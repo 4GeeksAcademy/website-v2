@@ -1,8 +1,8 @@
 meta_info:
   slug: "bootcamp-programacion-miami"
   position: 1
-  title: "4Geeks Academy Miami - Bootcamp de programación en Miami, aprende a programar en Miami"
-  description: "Conoce aquí todo sobre nuestro campus de bootcamp de programación en Miami, Florida de 4Geeks Academy"
+  title: "4GeeksAcademy Miami - Bootcamp de programación en Miami, aprende a programar en Miami"
+  description: "Conoce aquí todo sobre nuestro campus de bootcamp de programación en Miami, Florida de 4GeeksAcademy"
   image: "/images/og-preview/downtown-miami.es.png"
   keywords: "null"
   redirects: []
@@ -12,12 +12,12 @@ meta_info:
 
 seo_title: "Bootcamp de Programación en Miami"
 header:
-  tagline: "4Geeks Academy en Miami"
+  tagline: "4GeeksAcademy en Miami"
   sub_header: "Todos los programas son enseñados "
   sub_header_highlighted: "Online, Híbrida o En Persona."
   paragraph: ""
   image: "../../../static/images/locations/miami-home.png"
-  alt: "4Geeks Academy modalidad online y presencial en Miami, Florida"
+  alt: "4GeeksAcademy modalidad online y presencial en Miami, Florida"
 button_header:
   button_text: Ver Programas
   button_link: "#programs"
@@ -38,15 +38,15 @@ custom_bar:
 badges:
   title: ""
   paragraph: |
-    4Geeks Academy es el lugar donde los desarrolladores crecen y prosperan. 
+    4GeeksAcademy es el lugar donde los desarrolladores crecen y prosperan. 
     Estamos autorizados por el Departamento de Educación de Florida. 
     Elegido como uno de los 35 mejores cursos de programacion del mundo y 
     el mejor <a href="https://4geeksacademy.com/es/curso-de-programacion-desde-cero/?lang=es" rel="nofollow">curso de programacion</a> en Miami según SwitchUp. 
-    4Geeks Academy ha sido reconocida como uno de los 10 mejores bootcamps de codificación en los Estados Unidos según Newsweek. 
+    4GeeksAcademy ha sido reconocida como uno de los 10 mejores bootcamps de codificación en los Estados Unidos según Newsweek. 
     Una comunidad construida para desarrolladores.
 
 news:
-  title: "4Geeks Academy Miami en las noticias..."
+  title: "4GeeksAcademy Miami en las noticias..."
 upcoming:
   no_dates_message: "Actualmente no hay próximas fechas para este campus"
   actionMessage: "Avisenme fechas disponibles"
@@ -89,7 +89,7 @@ two_columns:
     text: "Becas Exclusivas con Miami Dade College, Clark University y United Way Miami"
     font_size: ["30px", "30px", "30px", "30px", "30px"]
   sub_heading:
-    text: "Potencia tu Trayectoria Profesional con 4Geeks Academy"
+    text: "Potencia tu Trayectoria Profesional con 4GeeksAcademy"
     font_size: ["18px", "18px", "22px", "22px", "22px"]
   button:
     text: "¡Únete ahora!"

@@ -1,8 +1,8 @@
 meta_info:
   slug: "coding-bootcamp-argentina-buenos-aires"
-  title: "4Geeks Academy in Argentina, Buenos Aires"
+  title: "4GeeksAcademy in Argentina, Buenos Aires"
   position: 33
-  description: "Get to know here all about our coding bootcamp campus in Argentina, Buenos Aires of 4Geeks Academy"
+  description: "Get to know here all about our coding bootcamp campus in Argentina, Buenos Aires of 4GeeksAcademy"
   image: "/images/og-preview/buenosaires-argentina.us.png"
   keywords: ""
   # it will not show up on the applications forms
@@ -14,12 +14,12 @@ meta_info:
 
 seo_title: "Coding Bootcamp Argentina"
 header:
-  tagline: "4Geeks Academy in Argentina"
+  tagline: "4GeeksAcademy in Argentina"
   sub_header: "All programs are taught "
   sub_header_highlighted: "Online, Hybrid or In-person."
   paragraph: "Lifetime Coding Mentorship, Career Support and a tech driven developer community. \\n The number one coding bootcamp in Argentina with over 1,000 graduates"
   image: "../../../static/images/locations/argentina-header.png"
-  alt: "4Geeks Academy online coding bootcamp in Argentina"
+  alt: "4GeeksAcademy online coding bootcamp in Argentina"
 button_header:
   button_text: See Programs
   button_link: "#programs"
@@ -41,10 +41,10 @@ custom_bar:
 badges:
   title: ""
   paragraph: |
-    Kickstart your career at 4Geeks Academy, where developers grow and thrive. Named best <a style='color:black; text-decoration: underline;'} href="https://4geeksacademy.com/us/coding-bootcamp" rel="nofollow">coding bootcamp</a> 2023 by Course Report, best center for coding bootcamps 2023 by Premios de Excelencia Educativa in Spain, listed among the top 10 in the US by Newsweek, and rated 4.92/5 on Switchup. Licensed by the Florida Department of Education, USA.
+    Kickstart your career at 4GeeksAcademy, where developers grow and thrive. Named best <a style='color:black; text-decoration: underline;'} href="https://4geeksacademy.com/us/coding-bootcamp" rel="nofollow">coding bootcamp</a> 2023 by Course Report, best center for coding bootcamps 2023 by Premios de Excelencia Educativa in Spain, listed among the top 10 in the US by Newsweek, and rated 4.92/5 on Switchup. Licensed by the Florida Department of Education, USA.
 
 news:
-  title: "4Geeks Academy Argentina in the news..."
+  title: "4GeeksAcademy Argentina in the news..."
 upcoming:
   no_dates_message: "There are currently no upcoming dates for this campus"
   actionMessage: "Let me know when dates are available"
@@ -97,7 +97,7 @@ two_columns:
     path: "/us/apply"
   bullets:
     items: 
-    - text: "Luisa Glum shares her personal journey and how 4Geeks Academy transformed her career path in Santiago's evolving tech landscape"
+    - text: "Luisa Glum shares her personal journey and how 4GeeksAcademy transformed her career path in Santiago's evolving tech landscape"
     - text: "With a 95% job placement rate within six months of graduation, our programs ensure tangible outcomes for career advancement"
     - text: "Flexible learning options, including part-time and immersive courses, cater to diverse schedules and learning preferences"
 

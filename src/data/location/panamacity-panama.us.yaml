@@ -90,10 +90,10 @@ two_columns:
     shadow: true  
   video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
   heading:
-    text: "Insights by Luisa Glum: 4Geeks Academy in Panama"
+    text: "Luisa's Experience at 4Geeks Academy in Panama City"
     font_size: ["30px", "30px", "30px", "30px", "30px"]
   sub_heading:
-    text: "Empowering Tech Journeys and Innovations"
+    text: "Enhance Your Tech Skills from Anywhere in Panama City"
     font_size: ["18px", "18px", "22px", "22px", "22px"]
   button:
     text: "APPLY NOW"

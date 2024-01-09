@@ -2,7 +2,7 @@ meta_info:
   slug: "bootcamp-programacion-colombia"
   title: "Bootcamp Programación Colombia"
   position: 31
-  description: "Conoce aquí todo sobre nuestro campus de bootcamp de programación en Colombia, Bogotá de 4Geeks Academy"
+  description: "Conoce aquí todo sobre nuestro campus de bootcamp de programación en Colombia, Bogotá de 4GeeksAcademy"
   image: "/images/og-preview/bogota-colombia.es.png"
   # it will not show up on the applications forms
   visibility: "visible"
@@ -14,12 +14,12 @@ meta_info:
 
 seo_title: "Aprende a programar en Colombia"
 header:
-  tagline: "4Geeks Academy en Colombia"
+  tagline: "4GeeksAcademy en Colombia"
   sub_header: "Todos los programas son enseñados "
   sub_header_highlighted: "Online, Híbrida o En Persona."
   paragraph: "Únete a uno de los coding bootcamps y comunidades de programadores más grandes del mundo, aprende a programar desde cero o mejora tus habilidades de código y recibe soporte para tu Carrera y de Mentores Senior de por vida."
   image: "../../../static/images/locations/colombia-header.png"
-  alt: "4Geeks Academy modalidad online para Colombia"
+  alt: "4GeeksAcademy modalidad online para Colombia"
 
 button_header:
   button_text: Ver Programas
@@ -41,14 +41,14 @@ custom_bar:
 badges:
   title: ""
   paragraph: |
-    4Geeks Academy es el lugar donde los desarrolladores crecen y prosperan. 
+    4GeeksAcademy es el lugar donde los desarrolladores crecen y prosperan. 
     Estamos autorizados por el Departamento de Educación de Florida. 
     Elegido como uno de los 35 mejores cursos de programacion del mundo y 
     el mejor <a href="https://4geeksacademy.com/es/curso-de-programacion-desde-cero/?lang=es" rel="nofollow">curso de programacion</a> en Miami según SwitchUp. 
-    4Geeks Academy ha sido reconocida como uno de los 10 mejores bootcamps de codificación en los Estados Unidos según Newsweek. 
+    4GeeksAcademy ha sido reconocida como uno de los 10 mejores bootcamps de codificación en los Estados Unidos según Newsweek. 
     Una comunidad construida para desarrolladores.
 news:
-  title: "4Geeks Academy Colombia en las noticias..."
+  title: "4GeeksAcademy Colombia en las noticias..."
 upcoming:
   no_dates_message: "Actualmente no hay próximas fechas para este campus"
   actionMessage: "Avisenme fechas disponibles"
@@ -89,10 +89,10 @@ two_columns:
     shadow: true
   video: "https://www.youtube.com/watch?v=aZrQNvyniLo"
   heading:
-    text: "Perspectivas de 4Geeks Academy en Colombia"
+    text: "Perspectivas de 4GeeksAcademy en Bogotá"
     font_size: ["30px", "30px", "30px", "30px", "30px"]
   sub_heading:
-    text: "Explorando el Panorama Tecnológico y las Oportunidades Educativas"
+    text: "Explorando el Panorama Tecnológico y las Oportunidades Educativas en Bogotá"
     font_size: ["18px", "18px", "22px", "22px", "22px"]
   button:
     text: "¡Únete ahora!"
@@ -101,7 +101,7 @@ two_columns:
     path: "/es/aplica"
   bullets:
     items: 
-    - text: "Liliana destaca el papel fundamental de las redes en la industria tecnológica colombiana y cómo 4Geeks Academy se integra en este entorno"
+    - text: "Liliana destaca el papel fundamental de las redes en la industria tecnológica colombiana y cómo 4GeeksAcademy se integra en este entorno"
     - text: "Nuestros graduados tienen una tasa de colocación laboral del 95% dentro de los seis meses posteriores a la graduación"
     - text: "Hemos capacitado a más de 10,000 estudiantes, brindándoles las habilidades necesarias para triunfar en el campo de la tecnología"
 

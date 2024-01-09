@@ -11,9 +11,9 @@ meta_info:
   dialCode: "34"
   related_clusters: ["desarrollador-full-stack"]
 
-seo_title: "4Geeks Academy Málaga, España"
+seo_title: "4GeeksAcademy Málaga, España"
 header:
-  tagline: "4Geeks Academy en Málaga"
+  tagline: "4GeeksAcademy en Málaga"
   sub_header: "Todos los programas son enseñados "
   sub_header_highlighted: "Online, Híbrida o En Persona."
   paragraph: ""
@@ -50,15 +50,15 @@ info_box:
 badges:
   title: ""
   paragraph: |
-    4Geeks Academy es el lugar donde los desarrolladores crecen y prosperan. 
+    4GeeksAcademy es el lugar donde los desarrolladores crecen y prosperan. 
     Estamos autorizados por el Departamento de Educación de Florida. 
     Elegido como uno de los 35 mejores cursos de programacion del mundo y 
     el mejor <a href="https://4geeksacademy.com/es/curso-de-programacion-desde-cero/?lang=es" rel="nofollow">curso de programacion</a> en España según Premios Excelencia Educativa. 
-    4Geeks Academy ha sido reconocida como uno de los 10 mejores bootcamps de codificación en los Estados Unidos según Newsweek. 
+    4GeeksAcademy ha sido reconocida como uno de los 10 mejores bootcamps de codificación en los Estados Unidos según Newsweek. 
     Una comunidad construida para desarrolladores.
 
 news:
-  title: "4Geeks Academy Málaga en los medios..."
+  title: "4GeeksAcademy Málaga en los medios..."
 
 upcoming:
   no_dates_message: "Actualmente no hay próximas fechas para este campus"
@@ -87,10 +87,10 @@ two_columns:
     shadow: true  
   video: "B01-eTfgqqc"
   heading:
-    text: "La Experiencia de Mattia en 4Geeks Academy"
+    text: "La Experiencia de Mattia en 4GeeksAcademy en España"
     font_size: ["30px", "30px", "30px", "30px", "30px"]
   sub_heading:
-    text: "Orientación experta y mentoría que fomentan el crecimiento profesional dentro de la comunidad tecnológica"
+    text: "Orientación experta y mentoría en Málaga que impulsan el desarrollo profesional en la comunidad tecnológica"
     font_size: ["18px", "18px", "22px", "22px", "22px"]
   button:
     text: "¡Únete ahora!"

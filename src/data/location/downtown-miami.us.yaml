@@ -2,7 +2,7 @@ meta_info:
   slug: "coding-bootcamp-miami"
   title: "Miami Coding Bootcamp"
   position: 1
-  description: "Get to know here all about our coding bootcamp campus in Miami, Florida of 4Geeks Academy"
+  description: "Get to know here all about our coding bootcamp campus in Miami, Florida of 4GeeksAcademy"
   image: "/images/og-preview/downtown-miami.us.png"
   keywords: "null"
   redirects:
@@ -19,28 +19,28 @@ meta_info:
 
 seo_title: "Coding Bootcamp in Miami"
 header:
-  tagline: "4Geeks Academy in Miami"
+  tagline: "4GeeksAcademy in Miami"
   sub_header: "All programs are taught "
   sub_header_highlighted: "Online, Hybrid or In-person."
   paragraph: ""
   image: "../../../static/images/locations/miami-home.png"
-  alt: "4Geeks Academy live coding bootcamp in Miami, Florida"
+  alt: "4GeeksAcademy live coding bootcamp in Miami, Florida"
 
 badges:
   title: ""
   paragraph: |
-    4Geeks Academy is the place where developers grow and thrive.
+    4GeeksAcademy is the place where developers grow and thrive.
  
     We are licensed by the USA F. Dep. of Education.
   
     Chosen as one of the top 35 coding bootcamps of the world and the top <a href="https://4geeksacademy.com/us/coding-bootcamp" rel="nofollow">coding bootcamp</a> in Miami according to SwitchUp.
 
-    4Geeks Academy has been recognized as one of the top 10 coding bootcamps in the United States according to Newsweek.
+    4GeeksAcademy has been recognized as one of the top 10 coding bootcamps in the United States according to Newsweek.
 
 
     A community built for developers.
 news:
-  title: "4Geeks Academy Miami has been reviewed in:"
+  title: "4GeeksAcademy Miami has been reviewed in:"
 upcoming:
   no_dates_message: "There are currently no upcoming dates for this campus"
   actionMessage: "Let me know when dates are available"
@@ -97,7 +97,7 @@ two_columns:
     text: "Exclusive Scholarships with Miami Dade College, Clark University, and United Way Miami"
     font_size: ["30px", "30px", "30px", "30px", "30px"]
   sub_heading:
-    text: "Enhance Your Professional Trajectory with 4Geeks Academy"
+    text: "Enhance Your Professional Trajectory with 4GeeksAcademy"
     font_size: ["18px", "18px", "22px", "22px", "22px"]
   button:
     text: "APPLY NOW"

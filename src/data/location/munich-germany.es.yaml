@@ -1,7 +1,7 @@
 meta_info:
   slug: "bootcamp-programacion-munich-alemania"
   title: "Bootcamp de Programación en Munich, Alemania"
-  description: "Descubre todos los bootcamps de programación online impartidos por 4Geeks Academy en Munich, Alemania. ¡Regístrate hoy!"
+  description: "Descubre todos los bootcamps de programación online impartidos por 4GeeksAcademy en Munich, Alemania. ¡Regístrate hoy!"
   position: 101
   image: "/images/og-preview/munchen-germany.es.png"
   keywords: "null"
@@ -39,14 +39,14 @@ custom_bar:
 badges:
   title: ""
   paragraph: |
-    4Geeks Academy es el lugar donde los desarrolladores crecen y prosperan. 
+    4GeeksAcademy es el lugar donde los desarrolladores crecen y prosperan. 
     Estamos autorizados por el Departamento de Educación de Florida. 
     Elegido como uno de los 35 mejores cursos de programacion del mundo y 
     el mejor <a href="https://4geeksacademy.com/es/curso-de-programacion-desde-cero/?lang=es" rel="nofollow">curso de programacion</a> en Miami según SwitchUp. 
-    4Geeks Academy ha sido reconocida como uno de los 10 mejores bootcamps de codificación en los Estados Unidos según Newsweek. 
+    4GeeksAcademy ha sido reconocida como uno de los 10 mejores bootcamps de codificación en los Estados Unidos según Newsweek. 
     Una comunidad construida para desarrolladores.
 news:
-  title: "4Geeks Academy Munich en las noticias..."
+  title: "4GeeksAcademy Munich en las noticias..."
 upcoming:
   no_dates_message: "Actualmente no hay próximas fechas para este campus"
   actionMessage: "Avisenme fechas disponibles"
@@ -83,7 +83,7 @@ two_columns:
     shadow: true  
   video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
   heading:
-    text: "Explorando 4Geeks Academy"
+    text: "Explorando 4GeeksAcademy en Munich"
     font_size: ["30px", "30px", "30px", "30px", "30px"]
   sub_heading:
     text: "Únete a nosotros para explorar el aprendizaje práctico, interactuar con líderes de la industria y forjar tu camino en el próspero ámbito tecnológico de Munich."
@@ -96,7 +96,7 @@ two_columns:
   bullets:
     items: 
     - text: "La industria tecnológica de Munich anticipa un crecimiento del 15% en roles de desarrolladores de software en los próximos dos años"
-    - text: "4Geeks Academy se enorgullece de tener una tasa de colocación laboral del 95% en los seis meses posteriores a la graduación"
+    - text: "4GeeksAcademy se enorgullece de tener una tasa de colocación laboral del 95% en los seis meses posteriores a la graduación"
     - text: "Preparación para desafíos del mundo real y oportunidades laborales en tecnología"
 
 ## HEADING SECTION

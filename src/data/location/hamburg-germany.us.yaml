@@ -2,7 +2,7 @@ meta_info:
   slug: "coding-bootcamp-hamburg-germany"
   title: "Coding Bootcamp in Hamburg, Germany"
   position: 101
-  description: "Discover all coding bootcamps taught by 4Geeks Academy at Hamburg, Germany. Sign up today!"
+  description: "Discover all coding bootcamps taught by 4GeeksAcademy at Hamburg, Germany. Sign up today!"
   image: "/images/og-preview/hamburg-germany.us.png"
   keywords: "null"
   redirects:
@@ -44,7 +44,7 @@ custom_bar:
 badges:
   title: ""
   paragraph: |
-    4Geeks Academy is the place where developers grow and thrive.
+    4GeeksAcademy is the place where developers grow and thrive.
  
     We are licensed by the USA F. Dep. of Education.
   
@@ -54,7 +54,7 @@ badges:
 
     A community built for developers .
 news:
-  title: "4Geeks Academy Hamburg in the news..."
+  title: "4GeeksAcademy Hamburg in the news..."
 upcoming:
   no_dates_message: "There are currently no upcoming dates for this campus"
   actionMessage: "Let me know when dates are available"
@@ -92,7 +92,7 @@ two_columns:
     shadow: true  
   video: "https://www.youtube.com/watch?v=TCHASxvkhpI"
   heading:
-    text: " 4Geeks Academy's Influence"
+    text: "Transforming Tech Careers from Hamburg"
     font_size: ["30px", "30px", "30px", "30px", "30px"]
   sub_heading:
     text: "Navigating Hamburg's Tech Domain for Career Excellence"
@@ -104,7 +104,7 @@ two_columns:
     path: "/us/apply"
   bullets:
     items: 
-    - text: "4Geeks Academy's job placement rate of 95% within six months post-graduation"
+    - text: "4GeeksAcademy's job placement rate of 95% within six months post-graduation"
     - text: "Flexible learning options, encompassing part-time and immersive courses, accommodate diverse schedules and learning preferences"
     - text: "Flexibility to study from anywhere at your own pace"
     - text: "Our personalized mentorship program connects students with industry professionals, fostering insights and guidance for career growth"

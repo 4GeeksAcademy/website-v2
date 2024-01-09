@@ -1,7 +1,7 @@
 meta_info:
   slug: "bootcamp-programacion-dublin-irlanda"
   title: "Bootcamp de Programación en Dublin, Irlanda"
-  description: "Descubre todos los bootcamps de programación online impartidos por 4Geeks Academy en Dublin, Irlanda. ¡Regístrate hoy!"
+  description: "Descubre todos los bootcamps de programación online impartidos por 4GeeksAcademy en Dublin, Irlanda. ¡Regístrate hoy!"
   position: 101
   image: "/images/og-preview/dublin-ireland.es.png"
   keywords: "null"
@@ -39,14 +39,14 @@ custom_bar:
 badges:
   title: ""
   paragraph: |
-    4Geeks Academy es el lugar donde los desarrolladores crecen y prosperan. 
+    4GeeksAcademy es el lugar donde los desarrolladores crecen y prosperan. 
     Estamos autorizados por el Departamento de Educación de Florida. 
     Elegido como uno de los 35 mejores cursos de programacion del mundo y 
     el mejor <a href="https://4geeksacademy.com/es/curso-de-programacion-desde-cero/?lang=es" rel="nofollow">curso de programacion</a> en Miami según SwitchUp. 
-    4Geeks Academy ha sido reconocida como uno de los 10 mejores bootcamps de codificación en los Estados Unidos según Newsweek. 
+    4GeeksAcademy ha sido reconocida como uno de los 10 mejores bootcamps de codificación en los Estados Unidos según Newsweek. 
     Una comunidad construida para desarrolladores.
 news:
-  title: "4Geeks Academy Dublin en las noticias..."
+  title: "4GeeksAcademy Dublin en las noticias..."
 upcoming:
   no_dates_message: "Actualmente no hay próximas fechas para este campus"
   actionMessage: "Avisenme fechas disponibles"
@@ -83,7 +83,7 @@ two_columns:
     shadow: true  
   video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
   heading:
-    text: "Perspectivas con 4Geeks Academy"
+    text: "Perspectivas con 4GeeksAcademy"
     font_size: ["30px", "30px", "30px", "30px", "30px"]
   sub_heading:
     text: "Únete a nosotros para sumergirte en el aprendizaje práctico, conectarte con líderes de la industria y forjar una exitosa carrera en el próspero mundo tecnológico de Dublín"

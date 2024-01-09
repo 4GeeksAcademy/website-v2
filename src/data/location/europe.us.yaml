@@ -2,7 +2,7 @@ meta_info:
   slug: "europe-online-coding-bootcamp"
   title: "Online Coding Bootcamps in Europe"
   position: 1001
-  description: "Discover here all the online coding bootcamps taught by 4geeks Academy. Sign up today!"
+  description: "Discover here all the online coding bootcamps taught by 4GeeksAcademy in Europe Sign up today!"
   image: "/images/og-preview/online.us.png"
   keywords: "null"
   redirects:
@@ -44,7 +44,7 @@ custom_bar:
 badges:
   title: ""
   paragraph: |
-    4Geeks Academy is the place where developers grow and thrive.
+    4GeeksAcademy is the place where developers grow and thrive.
  
     We are licensed by the USA F. Dep. of Education.
   
@@ -54,7 +54,7 @@ badges:
 
     A community built for developers .
 news:
-  title: "4Geeks Academy in the news..."
+  title: "4GeeksAcademy in the news..."
 upcoming:
   no_dates_message: "There are currently no upcoming dates for this campus"
   actionMessage: "Let me know when dates are available"
@@ -92,7 +92,7 @@ two_columns:
     shadow: true  
   video: "https://www.youtube.com/watch?v=TCHASxvkhpI"
   heading:
-    text: "Your Journey with 4Geeks Academy Online"
+    text: "Your Journey with 4GeeksAcademy in Europe"
     font_size: ["30px", "30px", "30px", "30px", "30px"]
   sub_heading:
     text: "Develop Your Tech Skills from Anywhere"
