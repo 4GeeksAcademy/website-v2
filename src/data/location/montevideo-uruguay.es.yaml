@@ -93,7 +93,7 @@ two_columns:
     text: "Oportunidades de Financiamiento y Adaptabilidad al Mercado"
     font_size: ["18px", "18px", "22px", "22px", "22px"]
   button:
-    text: "APPLY NOW"
+    text: "¡Únete ahora!"
     color: "white"
     background: "black"
     path: "/es/aplica"
