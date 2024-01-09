@@ -19,28 +19,28 @@ meta_info:
 
 seo_title: "Coding Bootcamp in Miami"
 header:
-  tagline: "4GeeksAcademy in Miami"
+  tagline: "4Geeks Academy in Miami"
   sub_header: "All programs are taught "
   sub_header_highlighted: "Online, Hybrid or In-person."
   paragraph: ""
   image: "../../../static/images/locations/miami-home.png"
-  alt: "4GeeksAcademy live coding bootcamp in Miami, Florida"
+  alt: "4Geeks Academy live coding bootcamp in Miami, Florida"
 
 badges:
   title: ""
   paragraph: |
-    4GeeksAcademy is the place where developers grow and thrive.
+    4Geeks Academy is the place where developers grow and thrive.
  
     We are licensed by the USA F. Dep. of Education.
   
     Chosen as one of the top 35 coding bootcamps of the world and the top <a href="https://4geeksacademy.com/us/coding-bootcamp" rel="nofollow">coding bootcamp</a> in Miami according to SwitchUp.
 
-    4GeeksAcademy has been recognized as one of the top 10 coding bootcamps in the United States according to Newsweek.
+    4Geeks Academy has been recognized as one of the top 10 coding bootcamps in the United States according to Newsweek.
 
 
     A community built for developers.
 news:
-  title: "4GeeksAcademy Miami has been reviewed in:"
+  title: "4Geeks Academy Miami has been reviewed in:"
 upcoming:
   no_dates_message: "There are currently no upcoming dates for this campus"
   actionMessage: "Let me know when dates are available"

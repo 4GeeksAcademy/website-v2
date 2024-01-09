@@ -12,28 +12,28 @@ meta_info:
 
 seo_title: "Coding Bootcamp in NYC"
 header:
-  tagline: "4GeeksAcademy in New York City"
+  tagline: "4Geeks Academy in New York City"
   sub_header: "All programs are taught "
   sub_header_highlighted: "Online"
   paragraph: ""
   image: "../../../static/images/locations/newyork-home.png"
-  alt: "4GeeksAcademy live coding bootcamp in NYC, New York"
+  alt: "4Geeks Academy live coding bootcamp in NYC, New York"
 
 badges:
   title: ""
   paragraph: |
-    4GeeksAcademy is the place where developers grow and thrive.
+    4Geeks Academy is the place where developers grow and thrive.
   
     We are licensed by the USA F. Dep. of Education.
       
     Chosen as one of the top 35 coding bootcamps of the world and the top coding bootcamp in NYC according to SwitchUp.
 
-    4GeeksAcademy has been recognized as one of the top 10 coding bootcamps in the United States according to Newsweek.
+    4Geeks Academy has been recognized as one of the top 10 coding bootcamps in the United States according to Newsweek.
 
 
     A community built for developers.
 news:
-  title: "4GeeksAcademy NYC has been reviewed in:"
+  title: "4Geeks Academy NYC has been reviewed in:"
 upcoming:
   no_dates_message: "There are currently no upcoming dates for this campus"
   actionMessage: "Let me know when dates are available"
@@ -86,7 +86,7 @@ two_columns:
     shadow: true  
   video: "https://www.youtube.com/watch?v=TCHASxvkhpI"
   heading:
-    text: "Exploring 4GeeksAcademy in New York"
+    text: "Exploring 4Geeks Academy in New York"
     font_size: ["30px", "30px", "30px", "30px", "30px"]
   sub_heading:
     text: "Join us to explore hands-on learning, interact with industry leaders, and pave your way in New York's thriving tech scene."

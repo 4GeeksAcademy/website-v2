@@ -2,7 +2,7 @@ meta_info:
   slug: "bootcamp-programacion-argentina-buenos-aires"
   title: "Bootcamp Programación Argentina"
   position: 33
-  description: "Conoce aquí todo sobre nuestro campus de bootcamp de programación en Argentina, Buenos Aires de 4GeeksAcademy aquí"
+  description: "Conoce aquí todo sobre nuestro campus de bootcamp de programación en Argentina, Buenos Aires de 4Geeks Academy aquí"
   image: "/images/og-preview/buenosaires-argentina.es.png"
   # it will not show up on the applications forms
   visibility: "visible"
@@ -14,12 +14,12 @@ meta_info:
 
 seo_title: "Aprende a programar en Argentina"
 header:
-  tagline: "4GeeksAcademy en Argentina"
+  tagline: "4Geeks Academy en Argentina"
   sub_header: "Todos los programas son enseñados "
   sub_header_highlighted: "Online, Híbrida o En Persona."
   paragraph: "Únete a uno de los coding bootcamps y comunidades de programadores más grandes del mundo, mejora tus habilidades de código o aprende a programar desde cero y recibe soporte técnico y profesional de por vida."
   image: "../../../static/images/locations/argentina-header.png"
-  alt: "4GeeksAcademy modalidad online para Argentina"
+  alt: "4Geeks Academy modalidad online para Argentina"
 
 button_header:
   button_text: Ver Programas
@@ -44,7 +44,7 @@ badges:
   paragraph: |
     Pon en marcha tu carrera en 4GeeksAcademy, donde los desarrolladores crecen y prosperan. Nombrada el mejor <a style='color:black; text-decoration: underline;'} href="https://4geeksacademy.com/us/coding-bootcamp" rel="nofollow">coding bootcamp</a> del 2023 por Course Report, el mejor centro de bootcamps de codificación de 2023 por los Premios de Excelencia Educativa en España, incluida entre las 10 mejores de los EE. UU. por Newsweek y calificada con 4.92/5 en Switchup. Licenciada por el Departamento de Educación de Florida, EE. UU.
 news:
-  title: "4GeeksAcademy Argentina en las noticias..."
+  title: "4Geeks Academy Argentina en las noticias..."
 upcoming:
   no_dates_message: "Actualmente no hay próximas fechas para este campus"
   actionMessage: "Avisenme fechas disponibles"
@@ -90,7 +90,7 @@ two_columns:
     shadow: true 
   video: "ScqncejBOvY"
   heading:
-    text: "4GeeksAcademy en Argentina"
+    text: "4Geeks Academy en Argentina"
     font_size: ["30px", "30px", "30px", "30px", "30px"]
   sub_heading:
     text: "Oportunidades de Financiamiento y Adaptabilidad al Mercado de Buenos Aires"
@@ -102,7 +102,7 @@ two_columns:
     path: "/es/aplica"
   bullets:
     items: 
-    - text: "Pablo resalta las variadas oportunidades de financiamiento disponibles para estudiantes que deseen unirse a 4GeeksAcademy en Argentina"
+    - text: "Pablo resalta las variadas oportunidades de financiamiento disponibles para estudiantes que deseen unirse a 4Geeks Academy en Argentina"
     - text: "Explora cómo nuestros programas están meticulosamente diseñados para alinearse con las demandas del mercado tecnológico actual"
     - text: "Nuestros graduados tienen una tasa de colocación laboral del 95% dentro de los seis meses posteriores a la graduación, asegurando transiciones exitosas al mundo laboral"
 

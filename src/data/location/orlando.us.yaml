@@ -12,27 +12,27 @@ meta_info:
 
 seo_title: "Coding Bootcamp in Orlando"
 header:
-  tagline: "4GeeksAcademy in Orlando"
+  tagline: "4Geeks Academy in Orlando"
   sub_header: "All programs are taught "
   sub_header_highlighted: "Online, Hybrid or In-person."
   paragraph: ""
   image: "../../../static/images/locations/orlando-header.png"
-  alt: "4GeeksAcademy online and in-person coding bootcamp in Orlando, Florida"
+  alt: "4Geeks Academy online and in-person coding bootcamp in Orlando, Florida"
 
 badges:
   title: ""
   paragraph: |
-    4GeeksAcademy is the place where developers grow and thrive.
+    4Geeks Academy is the place where developers grow and thrive.
  
     We are licensed by the USA F. Dep. of Education.
   
     Chosen as one of the top 35 coding bootcamps of the world and the top <a href="https://4geeksacademy.com/us/coding-bootcamp" rel="nofollow">coding bootcamp</a> in Orlando according to SwitchUp.
 
-    4GeeksAcademy has been recognized as one of the top 10 coding bootcamps in the United States according to Newsweek.
+    4Geeks Academy has been recognized as one of the top 10 coding bootcamps in the United States according to Newsweek.
 
     A community built for developers.
 news:
-  title: "4GeeksAcademy Orlando has been reviewed in:"
+  title: "4Geeks Academy Orlando has been reviewed in:"
 upcoming:
   no_dates_message: "There are currently no upcoming dates for this campus"
   actionMessage: "Let me know when dates are available"
@@ -85,7 +85,7 @@ two_columns:
     shadow: true  
   video: "https://www.youtube.com/watch?v=TCHASxvkhpI"
   heading:
-    text: "Your Path to Tech with 4GeeksAcademy in Orlando"
+    text: "Your Path to Tech with 4Geeks Academy in Orlando"
     font_size: ["30px", "30px", "30px", "30px", "30px"]
   sub_heading:
     text: "Unlock Your Tech Potential through Coding Mastery in Orlando"

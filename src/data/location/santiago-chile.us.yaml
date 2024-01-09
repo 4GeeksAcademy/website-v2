@@ -19,7 +19,7 @@ meta_info:
 
 seo_title: "Coding Bootcamp Santiago de Chile"
 header:
-  tagline: "4GeeksAcademy in Santiago de Chile"
+  tagline: "4Geeks Academy in Santiago de Chile"
   sub_header: "All programs are taught "
   sub_header_highlighted: "Online or Hybrid."
   paragraph: "Chile is positioned as one of the countries with the highest digital growth in the coming years, and particularly in Santiago the trend of bootcamps has been fostered in recent years, among them is 4GeeksAcademy. We have become a great study opportunity for many Chileans and foreigners who want to change their lives and learn about web development."
@@ -58,16 +58,16 @@ info_box:
 badges:
   title: ""
   paragraph: |
-    4GeeksAcademy is the place where developers grow and thrive.
+    4Geeks Academy is the place where developers grow and thrive.
  
     We are licensed by the USA F. Dep. of Education.
   
     Chosen as one of the top 35 coding bootcamps of the world and the top <a href="https://4geeksacademy.com/us/coding-bootcamp" rel="nofollow">coding bootcamp</a> in Miami according to SwitchUp.
 
-    4GeeksAcademy has been recognized as one of the top 10 coding bootcamps in the United States according to Newsweek.
+    4Geeks Academy has been recognized as one of the top 10 coding bootcamps in the United States according to Newsweek.
 
 news:
-  title: "4GeeksAcademy Chile in the news..."
+  title: "4Geeks Academy Chile in the news..."
 upcoming:
   no_dates_message: "There are currently no upcoming dates for this campus"
   actionMessage: "Let me know when dates are available"
@@ -95,7 +95,7 @@ two_columns:
     shadow: true  
   video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
   heading:
-    text: "Luisa Glum's Experience at 4GeeksAcademy in Santiago, Chile"
+    text: "Luisa Glum's Experience at 4Geeks Academy in Santiago, Chile"
     font_size: ["30px", "30px", "30px", "30px", "30px"]
   sub_heading:
     text: "Transformative Journeys and the Income Share Agreement, Elevate Your Tech Skills from Santiago, Chile"
@@ -107,7 +107,7 @@ two_columns:
     path: "/us/apply"
   bullets:
     items: 
-    - text: "Luisa Glum shares her personal journey and how 4GeeksAcademy transformed her career path in Santiago's evolving tech landscape"
+    - text: "Luisa Glum shares her personal journey and how 4Geeks Academy transformed her career path in Santiago's evolving tech landscape"
     - text: "Learn about the innovative Income Share Agreement (ISA) model, a pioneering approach where tuition is paid after securing a job, ensuring access to quality education"
     - text: "With a 95% job placement rate within six months of graduation, our programs ensure tangible outcomes for career advancement"
 

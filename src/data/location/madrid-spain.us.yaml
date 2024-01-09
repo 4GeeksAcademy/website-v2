@@ -12,7 +12,7 @@ meta_info:
 
 seo_title: "Coding Bootcamp Madrid"
 header:
-  tagline: "4GeeksAcademy in Madrid" 
+  tagline: "4Geeks Academy in Madrid" 
   sub_header: "All programs are taught "
   sub_header_highlighted: "Online, Hybrid or In-person."
   sub_heading: ""
@@ -40,7 +40,7 @@ custom_bar:
 badges:
   title: ""
   paragraph: |
-    4GeeksAcademy is the place where developers grow and thrive.
+    4Geeks Academy is the place where developers grow and thrive.
  
     We are licensed by the USA F. Dep. of Education.
   
@@ -51,7 +51,7 @@ badges:
     A community built for developers .
 
 news:
-  title: "4GeeksAcademy Madrid on the news..."
+  title: "4Geeks Academy Madrid on the news..."
 
 info_box:
   heading: "Find us in Madrid, Spain."
@@ -91,7 +91,7 @@ two_columns:
     shadow: true  
   video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
   heading:
-    text: "Luisa Glum's Journey with 4GeeksAcademy"
+    text: "Luisa Glum's Journey with 4Geeks Academy"
     font_size: ["30px", "30px", "30px", "30px", "30px"]
   sub_heading:
     text: "Empowering Career Shifts in Madrid's Tech Arena"

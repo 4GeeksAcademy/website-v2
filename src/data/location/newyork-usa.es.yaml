@@ -1,7 +1,7 @@
 meta_info:
   slug: "bootcamp-programacion-nyc"
   position: 1
-  title: "4GeeksAcademy NYC - Bootcamp de programación en NYC, aprende a programar en NYC"
+  title: "4Geeks Academy NYC - Bootcamp de programación en NYC, aprende a programar en NYC"
   description: "Conoce aquí todo sobre nuestro campus de bootcamp de programación en NYC, New York de 4GeeksAcademy"
   image: "/images/og-preview/downtown-miami.es.png"
   keywords: "null"
@@ -12,12 +12,12 @@ meta_info:
 
 seo_title: "Bootcamp de Programación en NYC"
 header:
-  tagline: "4GeeksAcademy en New York City"
+  tagline: "4Geeks Academy en New York City"
   sub_header: "Todos los programas son enseñados "
   sub_header_highlighted: "Online"
   paragraph: ""
   image: "../../../static/images/locations/newyork-home.png"
-  alt: "4GeeksAcademy modalidad online en NYC, New York"
+  alt: "4Geeks Academy modalidad online en NYC, New York"
 button_header:
   button_text: Ver Programas
   button_link: "#programs"
@@ -38,17 +38,17 @@ custom_bar:
 badges:
   title: ""
   paragraph: |
-    4GeeksAcademy es el lugar donde los desarrolladores crecen y prosperan.
+    4Geeks Academy es el lugar donde los desarrolladores crecen y prosperan.
     
     Estamos autorizados por el Departamento de Educación de Florida.
       
     Elegido como uno de los 35 mejores bootcamps de codificación del mundo y el mejor bootcamp de codificación en NYC según SwitchUp.
 
-    4GeeksAcademy ha sido reconocida como uno de los 10 mejores bootcamps de codificación en los Estados Unidos según Newsweek.
+    4Geeks Academy ha sido reconocida como uno de los 10 mejores bootcamps de codificación en los Estados Unidos según Newsweek.
 
     Una comunidad construida para desarrolladores.
 news:
-  title: "4GeeksAcademy NYC en las noticias..."
+  title: "4Geeks Academy NYC en las noticias..."
 upcoming:
   no_dates_message: "Actualmente no hay próximas fechas para este campus"
   actionMessage: "Avisenme fechas disponibles"
@@ -85,7 +85,7 @@ two_columns:
     shadow: true  
   video: "https://www.youtube.com/watch?v=TCHASxvkhpI"
   heading:
-    text: "Explorando 4GeeksAcademy en Nueva York"
+    text: "Explorando 4Geeks Academy en Nueva York"
     font_size: ["30px", "30px", "30px", "30px", "30px"]
   sub_heading:
     text: "Únete a nosotros para explorar el aprendizaje práctico, interactuar con líderes de la industria y forjar tu camino en el próspero ámbito tecnológico de Nueva York"

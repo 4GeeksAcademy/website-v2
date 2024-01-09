@@ -11,9 +11,9 @@ meta_info:
   dialCode: "34"
   related_clusters: ["desarrollador-full-stack"]
 
-seo_title: "4GeeksAcademy Madrid, España"
+seo_title: "4Geeks Academy Madrid, España"
 header:
-  tagline: "4GeeksAcademy en Madrid"
+  tagline: "4Geeks Academy en Madrid"
   sub_header: "Todos los programas son enseñados "
   sub_header_highlighted: "Online, Híbrida o En Persona."
   paragraph: ""
@@ -50,15 +50,15 @@ info_box:
 badges:
   title: ""
   paragraph: |
-    4GeeksAcademy es el lugar donde los desarrolladores crecen y prosperan. 
+    4Geeks Academy es el lugar donde los desarrolladores crecen y prosperan. 
     Estamos autorizados por el Departamento de Educación de Florida. 
     Elegido como uno de los 35 mejores cursos de programacion del mundo y 
     el mejor <a href="https://4geeksacademy.com/es/curso-de-programacion-desde-cero/?lang=es" rel="nofollow">curso de programacion</a> en España según Premios Excelencia Educativa. 
-    4GeeksAcademy ha sido reconocida como uno de los 10 mejores bootcamps de codificación en los Estados Unidos según Newsweek. 
+    4Geeks Academy ha sido reconocida como uno de los 10 mejores bootcamps de codificación en los Estados Unidos según Newsweek. 
     Una comunidad construida para desarrolladores.
 
 news:
-  title: "4GeeksAcademy Madrid en los medios..."
+  title: "4Geeks Academy Madrid en los medios..."
 
 upcoming:
   no_dates_message: "Actualmente no hay próximas fechas para este campus"
@@ -83,11 +83,11 @@ two_columns:
   proportions: [6, 6]
   image:
     style: '{"border" : "5px solid black", "backgroundSize": "contain" }'
-    src: "/static/images/testimonials/Mattia-Tozzi-testimonial.jpg"
+    src: "/static/images/testimonials/javier-murillo-testimonial.jpg"
     shadow: true  
-  video: "B01-eTfgqqc"
+  video: "c14ZDHXN6_w"
   heading:
-    text: "La Experiencia de Mattia en 4GeeksAcademy en Madrid"
+    text: "La Experiencia de Javier Murillo en 4Geeks Academy en Madrid"
     font_size: ["30px", "30px", "30px", "30px", "30px"]
   sub_heading:
     text: "Fortalece tus Habilidades Tecnológicas desde Madrid, España"
@@ -99,9 +99,9 @@ two_columns:
     path: "/es/aplica"
   bullets:
     items: 
-    - text: "Cursos interactivos enfocados en habilidades técnicas esenciales para el mundo digital actual"
-    - text: "Acceso a profesores experimentados y una comunidad colaborativa de aprendizaje"
-    - text: "Preparación para desafíos del mundo real y oportunidades laborales en tecnología"
+    - text: "Aprende las tecnologías más demandadas por las empresas y entra en el mundo laboral en tiempo récord"
+    - text: "Te acompañaremos durante todo el proceso, con mentorías ilimitadas y de por vida, ¡para que nunca más programes solo!"
+    - text: "Ofrecemos becas parciales y múltiples opciones de financiación, para que el dinero no te frene"
 
 active_campaign_location_slug: "madrid-spain"
 breathecode_location_slug: "madrid-spain"

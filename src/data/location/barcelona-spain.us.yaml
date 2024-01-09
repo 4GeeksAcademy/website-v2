@@ -12,7 +12,7 @@ meta_info:
 
 seo_title: "Coding Bootcamp Barcelona"
 header:
-  tagline: "4GeeksAcademy in Barcelona"
+  tagline: "4Geeks Academy in Barcelona"
   sub_header: "All programs are taught "
   sub_header_highlighted: "Online, Hybrid or In-person." 
   sub_heading: ""
@@ -40,7 +40,7 @@ custom_bar:
 badges:
   title: ""
   paragraph: |
-    4GeeksAcademy is the place where developers grow and thrive.
+    4Geeks Academy is the place where developers grow and thrive.
  
     We are licensed by the USA F. Dep. of Education.
   
@@ -51,7 +51,7 @@ badges:
     A community built for developers .
 
 news:
-  title: "4GeeksAcademy Barcelona on the news..."
+  title: "4Geeks Academy Barcelona on the news..."
 
 info_box:
   heading: "Find us in Barcelona, Spain."

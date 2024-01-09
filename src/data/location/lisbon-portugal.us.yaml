@@ -2,7 +2,7 @@ meta_info:
   slug: "coding-bootcamp-lisbon-portugal"
   title: "Coding Bootcamp in Lisbon, Portugal"
   position: 101
-  description: "Discover all coding bootcamps taught by 4GeeksAcademy at Lisbon, Portugal. Sign up today!"
+  description: "Discover all coding bootcamps taught by 4Geeks Academy at Lisbon, Portugal. Sign up today!"
   image: "/images/og-preview/lisbon-portugal.es.png"
   keywords: "null"
   redirects: []
@@ -40,7 +40,7 @@ custom_bar:
 badges:
   title: ""
   paragraph: |
-    4GeeksAcademy is the place where developers grow and thrive.
+    4Geeks Academy is the place where developers grow and thrive.
  
     We are licensed by the USA F. Dep. of Education.
   
@@ -50,7 +50,7 @@ badges:
 
     A community built for developers .
 news:
-  title: "4GeeksAcademy Lisbon in the news..."
+  title: "4Geeks Academy Lisbon in the news..."
 upcoming:
   no_dates_message: "There are currently no upcoming dates for this campus"
   actionMessage: "Let me know when dates are available"
@@ -87,7 +87,7 @@ two_columns:
     shadow: true  
   video: "ln3bQsV1BaQ"
   heading:
-    text: "Hernan García's Experience with 4GeeksAcademy in Lisbon"
+    text: "Hernan García's Experience with 4Geeks Academy in Lisbon"
     font_size: ["30px", "30px", "30px", "30px", "30px"]
   sub_heading:
     text: "Discover how Hernan García has shaped his career with 4GeeksAcademy. Explore how our programs have molded his professional journey"

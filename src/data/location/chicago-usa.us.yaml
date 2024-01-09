@@ -12,28 +12,28 @@ meta_info:
 
 seo_title: "Coding Bootcamp in Chicago"
 header:
-  tagline: "4GeeksAcademy in Chicago"
+  tagline: "4Geeks Academy in Chicago"
   sub_header: "All programs are taught "
   sub_header_highlighted: "Online"
   paragraph: ""
   image: "../../../static/images/locations/chicago-home.png"
-  alt: "4GeeksAcademy live coding bootcamp in Chicago, Illinois"
+  alt: "4Geeks Academy live coding bootcamp in Chicago, Illinois"
 
 badges:
   title: ""
   paragraph: |
-    4GeeksAcademy is the place where developers grow and thrive.
+    4Geeks Academy is the place where developers grow and thrive.
   
     We are licensed by the USA F. Dep. of Education.
       
     Chosen as one of the top 35 coding bootcamps of the world and the top coding bootcamp in Chicago according to SwitchUp.
 
-    4GeeksAcademy has been recognized as one of the top 10 coding bootcamps in the United States according to Newsweek.
+    4Geeks Academy has been recognized as one of the top 10 coding bootcamps in the United States according to Newsweek.
 
 
     A community built for developers.
 news:
-  title: "4GeeksAcademy Chicago has been reviewed in:"
+  title: "4Geeks Academy Chicago has been reviewed in:"
 upcoming:
   no_dates_message: "There are currently no upcoming dates for this campus"
   actionMessage: "Let me know when dates are available"

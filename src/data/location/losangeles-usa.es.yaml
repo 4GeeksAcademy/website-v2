@@ -1,7 +1,7 @@
 meta_info:
   slug: "bootcamp-programacion-losangeles"
   position: 1
-  title: "4GeeksAcademy Los Angeles - Bootcamp de programación en Los Angeles, aprende a programar en Los Angeles"
+  title: "4Geeks Academy Los Angeles - Bootcamp de programación en Los Angeles, aprende a programar en Los Angeles"
   description: "Conoce aquí todo sobre nuestro campus de bootcamp de programación en Los Angeles, California de 4GeeksAcademy"
   image: "/images/og-preview/downtown-miami.es.png"
   keywords: "null"
@@ -12,12 +12,12 @@ meta_info:
 
 seo_title: "Bootcamp de Programación en Los Angeles"
 header:
-  tagline: "4GeeksAcademy en Los Angeles"
+  tagline: "4Geeks Academy en Los Angeles"
   sub_header: "Todos los programas son enseñados "
   sub_header_highlighted: "Online"
   paragraph: ""
   image: "../../../static/images/locations/california-home.png"
-  alt: "4GeeksAcademy modalidad online en Los Angeles, California"
+  alt: "4Geeks Academy modalidad online en Los Angeles, California"
 button_header:
   button_text: Ver Programas
   button_link: "#programs"
@@ -39,17 +39,17 @@ custom_bar:
 badges:
   title: ""
   paragraph: |
-    4GeeksAcademy es el lugar donde los desarrolladores crecen y prosperan.
+    4Geeks Academy es el lugar donde los desarrolladores crecen y prosperan.
   
     Estamos autorizados por el Departamento de Educación de Florida.
       
     Elegido como uno de los 35 mejores bootcamps de codificación del mundo y el mejor bootcamp de codificación en Los Angeles según SwitchUp.
 
-    4GeeksAcademy ha sido reconocida como uno de los 10 mejores bootcamps de codificación en los Estados Unidos según Newsweek.
+    4Geeks Academy ha sido reconocida como uno de los 10 mejores bootcamps de codificación en los Estados Unidos según Newsweek.
 
     Una comunidad construida para desarrolladores.
 news:
-  title: "4GeeksAcademy Los Angeles en las noticias..."
+  title: "4Geeks Academy Los Angeles en las noticias..."
 upcoming:
   no_dates_message: "Actualmente no hay próximas fechas para este campus"
   actionMessage: "Avisenme fechas disponibles"

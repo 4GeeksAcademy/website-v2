@@ -10,9 +10,9 @@ meta_info:
   dialCode: "34"
   related_clusters: ["desarrollador-full-stack"]
 
-seo_title: "4GeeksAcademy Valencia, España"
+seo_title: "4Geeks Academy Valencia, España"
 header:
-  tagline: "4GeeksAcademy en Valencia"
+  tagline: "4Geeks Academy en Valencia"
   sub_header: "Todos los programas son enseñados "
   sub_header_highlighted: "Online, Híbrida o En Persona."
   paragraph: ""
@@ -49,15 +49,15 @@ info_box:
 badges:
   title: ""
   paragraph: |
-    4GeeksAcademy es el lugar donde los desarrolladores crecen y prosperan. 
+    4Geeks Academy es el lugar donde los desarrolladores crecen y prosperan. 
     Estamos autorizados por el Departamento de Educación de Florida. 
     Elegido como uno de los 35 mejores cursos de programacion del mundo y 
     el mejor <a href="https://4geeksacademy.com/es/curso-de-programacion-desde-cero/?lang=es" rel="nofollow">curso de programacion</a> en España según Premios Excelencia Educativa. 
-    4GeeksAcademy ha sido reconocida como uno de los 10 mejores bootcamps de codificación en los Estados Unidos según Newsweek. 
+    4Geeks Academy ha sido reconocida como uno de los 10 mejores bootcamps de codificación en los Estados Unidos según Newsweek. 
     Una comunidad construida para desarrolladores.
 
 news:
-  title: "4GeeksAcademy Valencia en los medios..."
+  title: "4Geeks Academy Valencia en los medios..."
 
 upcoming:
   no_dates_message: "Actualmente no hay próximas fechas para este campus"
@@ -89,7 +89,7 @@ two_columns:
     shadow: true  
   video: "B01-eTfgqqc"
   heading:
-    text: "La Experiencia de Mattia Tozzi en 4GeeksAcademy en Valencia, España"
+    text: "La Experiencia de Mattia Tozzi en 4Geeks Academy en Valencia, España"
     font_size: ["30px", "30px", "30px", "30px", "30px"]
   sub_heading:
     text: "Desarrolla tus Habilidades en Tecnología desde Valencia, España"

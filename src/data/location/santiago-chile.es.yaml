@@ -2,7 +2,7 @@ meta_info:
   slug: "bootcamp-programacion-santiago"
   position: 20
   title: "Bootcamp Programación Santiago de Chile"
-  description: "Conoce aquí todo sobre nuestro campus de bootcamp de programación en Santiago de Chile de 4GeeksAcademy aquí"
+  description: "Conoce aquí todo sobre nuestro campus de bootcamp de programación en Santiago de Chile de 4Geeks Academy aquí"
   image: "/images/og-preview/santiago-chile.es.png"
   keywords: "Coding Bootcamp Santiago"
   redirects:
@@ -16,7 +16,7 @@ meta_info:
 
 seo_title: "Coding Bootcamp en Santiago de Chile"
 header:
-  tagline: "4GeeksAcademy en Chile"
+  tagline: "4Geeks Academy en Chile"
   sub_header: "Todos los programas son enseñados "
   sub_header_highlighted: "Online o Híbrida."
   paragraph: ""
@@ -52,14 +52,14 @@ info_box:
 badges:
   title: ""
   paragraph: |
-    4GeeksAcademy es el lugar donde los desarrolladores crecen y prosperan. 
+    4Geeks Academy es el lugar donde los desarrolladores crecen y prosperan. 
     Estamos autorizados por el Departamento de Educación de Florida. 
     Elegido como uno de los 35 mejores cursos de programacion del mundo y 
     el mejor <a href="https://4geeksacademy.com/es/curso-de-programacion-desde-cero/?lang=es" rel="nofollow">curso de programacion</a> en Miami según SwitchUp. 
-    4GeeksAcademy ha sido reconocida como uno de los 10 mejores bootcamps de codificación en los Estados Unidos según Newsweek. 
+    4Geeks Academy ha sido reconocida como uno de los 10 mejores bootcamps de codificación en los Estados Unidos según Newsweek. 
     Una comunidad construida para desarrolladores.
 news:
-  title: "4GeeksAcademy Chile en las noticias..."
+  title: "4Geeks Academy Chile en las noticias..."
 
 upcoming:
   no_dates_message: "Actualmente no hay próximas fechas para este campus"
@@ -88,7 +88,7 @@ two_columns:
     shadow: true  
   video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
   heading:
-    text: "La Experiencia de Luisa Glum en 4GeeksAcademy en Santiago, Chile"
+    text: "La Experiencia de Luisa Glum en 4Geeks Academy en Santiago, Chile"
     font_size: ["30px", "30px", "30px", "30px", "30px"]
   sub_heading:
     text: "Desarrolla tus Habilidades Tecnológicas desde Santiago, Chile"
@@ -100,8 +100,8 @@ two_columns:
     path: "/es/aplica"
   bullets:
     items: 
-    - text: "Luisa Glum comparte su trayectoria personal y cómo 4GeeksAcademy transformó su camino profesional en el cambiante panorama tecnológico de Santiago"
-    - text: "4GeeksAcademy se enorgullece de tener una tasa de colocación laboral del 95% en los seis meses posteriores a la graduación, garantizando un progreso profesional concreto para nuestros estudiantes"
+    - text: "Luisa Glum comparte su trayectoria personal y cómo 4Geeks Academy transformó su camino profesional en el cambiante panorama tecnológico de Santiago"
+    - text: "4Geeks Academy se enorgullece de tener una tasa de colocación laboral del 95% en los seis meses posteriores a la graduación, garantizando un progreso profesional concreto para nuestros estudiantes"
     - text: "Preparación para desafíos del mundo real y oportunidades laborales en tecnología"
 
 active_campaign_location_slug: "santiago-chile"
