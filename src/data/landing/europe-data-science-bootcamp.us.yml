@@ -1,0 +1,193 @@
+meta_info:
+  slug: data-science-bootcamp-europe # <--- URL 4geeksacademy.com/us/landing/example
+
+  visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
+  # This will show on social media when shared
+  title: "Become a Data Scientist at 4Geeks Academy"
+  description: "Embark on a transformative journey into the world of data science"
+  image: "/images/bg/remote.jpeg"
+  keywords: "Learn to code, 4Geeks academy, Learn programming, learn computer engineering"
+
+  template: "landing_a" # <--- choose your landing template
+  redirects: # <--- URL redirections to avoid 404 errors
+    []
+
+  # Set a particular course or location to the landing page
+  # this UTM fields will be also included in the CRM contact
+  utm_course: ["datascience-ml"]
+  utm_location: ["europe"]
+  automation: soft # comma separated, "soft" is the default value
+  tag: website-lead # comma separated, "request_more_info" is the default value
+
+navbar:
+  buttonText: "Apply now"
+  buttonUrl: "#bottom" # url accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
+  logoUrl: "#"
+
+form:
+  # posible fields: "first_name", "last_name", "full_name", "phone", "email"
+  # always the first_name, email and phone will be mandatory if added.
+  fields: ["full_name", "phone", "email"]
+  heading: "Apply for a scholarship now"
+  button_label: Apply now
+  redirect: "/us/thank-you" #you can redirect to another url or entirely diffrent website
+
+# jumbotron on the top (cannot be commented out)
+header_data:
+  tagline: Master Data Science at 4Geeks Academy
+  sub_heading: "Unleash the power of data in just 16 weeks with our comprehensive course!"
+  background_image: "../../../static/images/Happy-People-Landing-4Geeks-ES.jpg"
+  image_filter: brightness(0.1)
+
+features:
+  marginTop: 10px #<-- separation between tagline and the bullets
+
+  #                                         up   left down  right
+  styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
+  bullets:
+    - No previous experience or coding skills required.
+    - Practical application of data visualization techniques
+    - Guidance from industry experts in the field of data science
+
+follow_bar:
+  position: "top" # top, bottom, hidden
+  content:
+    text: "Financing options available."
+    text_mobile: "Payment plans available"
+    # devices:   XL      LG    MD      SM    XS
+    font_size: ["25px", "25px", "25px", "18px", "4.3vw"]
+  button:
+    text: "Apply now"
+    path: "#top" #top, #bottom, #anotherComponentId
+    # ├──if path is empty("") it point to top per default ("#" -> points to top)
+    # └── path accepts: relative(/example/path), absolute(https://google.com) or id(#idName)
+  phone:
+    text: "WhatsApp "
+
+short_badges:
+  - name: "Premios Tecnologia Siglo XXI"
+    url: ""
+    image: "../../../static/images/awards/premios_tecnologia_sigloxxi.png"
+    alt: "Mejor centro de Coding Bootcamp"
+  - name: "Course Report"
+    url: ""
+    image: "../../../static/images/badges/Course-Report-Badge-2023.png"
+    alt: "Top Coding Bootcamps Course Report"
+  - name: "Switchup"
+    url: ""
+    image: "../../../static/images/badges/switchup-badge-2023.png"
+    alt: "Best coding bootcamp Switchup 2023"   
+  - name: "Florida Department of Education"
+    url: ""
+    image: "../../../static/images/badges/licensed-inverted.png"
+    alt: "Florida Department of Education"
+    
+apply_schollarship: # form that is displayed at the end of the landing
+  # title: "Apoyo Profesional Ilimitado"
+  imageSide: "right"
+  image: "../../../static/images/landing/grupo-ventanas.png"
+
+#
+# ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇
+#
+program_details:
+  position: 2
+  heading: "What you will learn"
+  sub_heading: "Python, Javascript, and React are the most used technologies in the world"
+
+about4Geeks:
+  position: 3
+  heading: Flexible and intensive education
+  sub_heading: "More than 400 hours of practical learning (exercises, projects). You will be able to improve your skills in order to face interviews and different selection processes that will allow you to find a job as a Junior or Senior Developer."
+  list:
+    - title: "Lifetime Career Support"
+    - title: "Financial options to complement your scholarship"
+    - title: "Ratio 1:7 teacher student. Unlimited 1 on 1 mentoring"
+    - title: "Preparation for interviews and selection processes"
+  paragraph: ""
+  button_text: "Apply for a scholarship"
+  button_link: "#"
+  image: "../../../static/images/bg/companies-bg.jpg"
+  image_mobile: "../../../static/images/bg/community.png"
+
+geeks_vs_others:
+  position: 4
+  heading: "What makes 4Geeks Academy successful?"
+  paragraph: ""
+  sub_heading: ""
+  total_rows: 6
+
+why_4geeks:
+  position: 7
+  heading: "In words of our students"
+  sub_heading: ""
+  footer:
+    text: "Financing options"
+    text_link: "https://storage.googleapis.com/4geeks-academy-website/syllabus/europe/Payment%20Guide%20Landing%20Jobs%20Scholarships%20(2).pdf"
+
+components:
+  - name: python_y_javascript
+    position: 2
+    layout: two_column_left
+    background: "veryLightBlue2" # Name of the color(from components/Styling/index.js) or color code ex: #C9F9F9
+    image:
+      src: "/images/why-4geeks/python-image.png"
+    heading:
+      text:
+        "Python and Machine Learning"
+        #           xl      lg      md      sm      xs
+      font_size: ["40px", "40px", "35px", "35px", "30px"]
+    sub_heading:
+      text: "Our program trains you in Python, SQL, Looker, Streamlit, and Statistics to become a data analyst. Develop predictive models, apply algorithms like K-Nearest Neighbors and Decision Trees, and work on real-life cases."
+    content:
+      style: '{}'
+      text: ""
+      font_size: ["16px"]
+    bullets:
+      items:
+      - heading: "PYTHON VS RUBY ON RAILS"
+        text: "In the past year, over 120,000 job postings requiring Python expertise were listed on platforms like Indeed and LinkedIn, compared to approximately 4,600 for Ruby on Rails."
+        icon: "circle" #string with icon for example ['check', 'cicle', etc]
+      - heading: "PYTHON'S VERSATILITY, WEB DEVELOPMENT, AND MACHINE LEARNING"
+        text: "Python stands out as the third most popular programming language according to the Stack Overflow survey in 2023."
+        icon: "circle" #string with icon for example ['check', 'cicle', etc]
+
+  - name: new_design_with_bullets
+    position: 5
+    layout: two_column_left
+    swipable: False
+    background: "#FFFFFF"
+    image:
+      src: "/images/landing/dos-mujeres-1.png"
+      shadow: true
+    heading: 
+      text: "Become a Data Scientist in just 16 Weeks"
+    sub_heading:
+      text: "This course is designed to equip individuals with a comprehensive skill set in data analysis and machine learning, preparing them for roles as data analysts in today's competitive job market."
+    button: 
+      text: "Watch our testimonials!"
+      color: white
+      hover_color: "white"
+      background: "black"
+      path: "#why_4geeks"
+    content: 
+      text: ""
+      font_size: ["16px"]
+      path: ""
+    bullets:
+      items:
+      - heading: "Python Proficiency"
+        text: "Learn Python, SQL, Looker, Streamlit, and Statistics."
+        icon: "check" 
+      - heading: "Data Analysis Skills"
+        text: "Develop the ability to analyze complex datasets"
+        icon: "check"
+      - heading: "Predictive Modeling"
+        text: "Acquire skills in developing predictive models"
+        icon: "check" 
+      - heading: "Algorithm Application"
+        text: "Apply algorithms like K-Nearest Neighbors and Decision Trees"
+        icon: "check"
+      - heading: "Real-life Case Studies"
+        text: "Work on practical cases to implement learning"
+        icon: "check" 
