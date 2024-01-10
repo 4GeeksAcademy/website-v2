@@ -156,7 +156,7 @@ components:
         #xl      lg     md     sm    xs
       font_size: ["40px", "34px", "34px", "25px", "20px"]
       content:
-        text: "La mentoría individualizada, con respuestas en menos de 15 minutos, proporciona un apoyo inigualable. Las sólidas alianzas estrategicas y un historial de éxito del 81% en la colocación laboral respaldan la reputación de la institución. Esto garantiza una transición sin problemas hacia una exitosa carrera en desarrollo de software."
+        text: "La mentoría individualizada, con respuestas en menos de 30 minutos, proporciona un apoyo inigualable. Las sólidas alianzas estrategicas y un historial de éxito del 81% en la colocación laboral respaldan la reputación de la institución. Esto garantiza una transición sin problemas hacia una exitosa carrera en desarrollo de software."
         font_size: ["16px"]
       button:
         text: "¡Únete a la Academia!"

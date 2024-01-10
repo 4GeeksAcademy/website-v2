@@ -2,7 +2,7 @@ meta_info:
   slug: "coding-bootcamp-bolivia"
   title: "4Geeks Academy in Bolivia, La Paz"
   position: 37
-  description: "Get to know here all about our coding bootcamp campus in Bolivia, La Paz of 4Geeks Academy"
+  description: "Get to know here all about our coding bootcamp campus in Bolivia, La Paz of 4GeeksAcademy"
   image: "/images/og-preview/lapaz-bolivia.us.png"
   keywords: ""
   # it will not show up on the applications forms
@@ -74,6 +74,30 @@ images_box:
     #   alt: "mcbo-chinita"
     # - path: "../../../static/images/locations/mcbo-loc.jpg"
     #   alt: "4Geeeks Maracaibo Location"
+
+two_columns:
+  proportions: [6, 6]
+  image:
+    style: '{"border" : "5px solid black", "backgroundSize": "contain" }'
+    src: "/static/images/staff/luisa.png"
+    shadow: true  
+  video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
+  heading:
+    text: "Insights by Luisa Glum: 4Geeks Academy in la Paz"
+    font_size: ["30px", "30px", "30px", "30px", "30px"]
+  sub_heading:
+    text: "Empowering Tech Journeys and Innovations"
+    font_size: ["18px", "18px", "22px", "22px", "22px"]
+  button:
+    text: "APPLY NOW"
+    color: "white"
+    background: "black"
+    path: "/us/apply"
+  bullets:
+    items: 
+    - text: "Gain guidance from expert mentors for tailored coding support"
+    - text: "Explore hands-on coding with our focused and updated curriculum"
+    - text: "Access ongoing career development and support for life"
 
 ## START FROM HERE - DON'T CHANGE ANYTHING ABOVE
 ## HEADING SECTION

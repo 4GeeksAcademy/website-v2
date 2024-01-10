@@ -75,9 +75,9 @@ const Home = (props) => {
     en: "CHOOSE PROGRAM",
   };
 
-  const isContentBarActive = true
-    // (session?.location?.custom_bar.active && isTestMode) ||
-    // (session?.location?.custom_bar.active && !isDevelopment());
+  const isContentBarActive = true;
+  // (session?.location?.custom_bar.active && isTestMode) ||
+  // (session?.location?.custom_bar.active && !isDevelopment());
 
   return (
     <>
@@ -176,9 +176,10 @@ const Home = (props) => {
                       color={Colors.black}
                       fontSize="16px"
                       lineHeight="19px"
-                    >
-                      {bullet}{" "}
-                    </Paragraph>
+                      dangerouslySetInnerHTML={{ __html: bullet }}
+                    />
+                    {/* {bullet}{" "}
+                    </Paragraph> */}
                   </Div>
                 ))}
               </Div>
@@ -348,7 +349,6 @@ const Home = (props) => {
           session.location.breathecode_location_slug
         }
         playerHeight="600px"
-        title={true}
       />
       <ChooseYourProgram
         chooseProgramRef={chooseProgramRef}

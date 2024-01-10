@@ -64,8 +64,8 @@ const Nav = styled.nav`
   display: ${(props) => props.display};
   position: ${(props) => props.position || "fixed"};
   width: 100%;
-  background: ${(props) => props.background || "white"};;
-  z-index: ${(props) => props.zIndex || "10"};;
+  background: ${(props) => props.background || "white"};
+  z-index: ${(props) => props.zIndex || "10"};
   top: ${(props) => props.top || "0"};
   align-items: center;
   justify-content: space-between;
@@ -159,12 +159,12 @@ export const NavbarMobile = ({
   let isCustombarActive =
     session && session.location && session.location.custom_bar.active;
 
-  const isContentBarActive = true
-    // (contentBar?.active && isTestMode) ||
-    // (contentBar?.active && !isDevelopment());
+  const isContentBarActive = true;
+  // (contentBar?.active && isTestMode) ||
+  // (contentBar?.active && !isDevelopment());
 
   useEffect(() => {
-    if (findCity !== undefined && findCity.node){
+    if (findCity !== undefined && findCity.node) {
       setButtonText(findCity.node.button.apply_button_text);
       setContentBar(findCity?.node.custom_bar);
     }
@@ -232,8 +232,8 @@ export const NavbarMobile = ({
   const locations = locByLanguage(data.allLocationYaml, langDictionary[lang]);
 
   return (
-    <Div 
-      display="inline" 
+    <Div
+      display="inline"
       position="fixed"
       width="100%"
       top="0"

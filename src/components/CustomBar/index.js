@@ -4,12 +4,12 @@ import { Colors, Button, Link } from "../Styling";
 import { Div } from "../Sections";
 import { SessionContext } from "../../session";
 
-const CustomBar = ({ 
-    isContentBarActive, 
-    contentBar, 
-    display_md, 
-    display_xxs,
-    position
+const CustomBar = ({
+  isContentBarActive,
+  contentBar,
+  display_md,
+  display_xxs,
+  position,
 }) => {
   return (
     <Div

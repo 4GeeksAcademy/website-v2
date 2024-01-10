@@ -78,6 +78,33 @@ images_box:
     - path: "../../../static/images/locations/miami-people.jpeg"
       alt: "4Geeeks lab"
 
+## START FROM HERE - DON'T CHANGE ANYTHING ABOVE
+
+two_columns:
+  proportions: [6, 6]
+  image:
+    style: '{"border" : "5px solid black", "backgroundSize": "contain" }'
+    src: "/static/images/staff/luisa.png"
+    shadow: true  
+  video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
+  heading:
+    text: "Luisa Glum's Insight with 4GeeksAcademy"
+    font_size: ["30px", "30px", "30px", "30px", "30px"]
+  sub_heading:
+    text: "Empowering Tech Careers in Berlin's Dynamic Sphere"
+    font_size: ["18px", "18px", "22px", "22px", "22px"]
+  button:
+    text: "APPLY NOW"
+    color: "white"
+    background: "black"
+    path: "/us/apply"
+  bullets:
+    items: 
+    - text: "Interactive courses focusing on essential technical skills for today's digital world"
+    - text: "Flexibility to study from anywhere at your own pace"
+    - text: "Preparation for real-world challenges and job opportunities in technology"
+
+
 ## HEADING SECTION
 
 active_campaign_location_slug: "berlin-germany"
