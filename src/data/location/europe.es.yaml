@@ -1,7 +1,7 @@
 meta_info:
   slug: "bootcamp-programacion-europa-online"
   title: "Bootcamps de Programación Online en Europa"
-  description: "Descubre aquí todos los bootcamps de programación online impartidos por 4geeks Academy en europa. ¡Regístrate hoy!"
+  description: "Descubre aquí todos los bootcamps de programación online impartidos por 4Geeks Academy en europa. ¡Regístrate hoy!"
   position: 101
   image: "/images/og-preview/online.es.png"
   keywords: "null"
@@ -78,26 +78,26 @@ two_columns:
   proportions: [6, 6]
   image:
     style: '{"border" : "5px solid black", "backgroundSize": "contain" }'
-    src: "/static/images/staff/luisa.png"
+    src: "/static/images/testimonials/allisa-testimonial.jpg"
     shadow: true  
-  video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
+  video: "https://www.youtube.com/watch?v=TCHASxvkhpI"
   heading:
-    text: "4Geeks, Argentina and a story full of opportunities"
+    text: "Tu Viaje con 4Geeks Academy en Europa"
     font_size: ["30px", "30px", "30px", "30px", "30px"]
   sub_heading:
-    text: "We are Buenos Aires based and we have been focusing in bringing on more opportunities."
+    text: "Desarrolla tus Habilidades en Tecnología desde Cualquier Lugar"
     font_size: ["18px", "18px", "22px", "22px", "22px"]
   button:
-    text: "APPLY NOW"
+    text: "¡Únete ahora!"
     color: "white"
     background: "black"
-    path: "/us/apply"
+    path: "/es/aplica"
   bullets:
     items: 
-    - text: "There is always a full or partial scholarship open"
-    - text: "There is always opportunities for everyone in Miami-Dade County, Broward and Palm Beach"
-    - text: "We have ongoing partnerships with Miami Dade College, Miami Tech Coalition, UWM, The City of Miami, Miami Dade Counti and so manu more."
-
+    - text: "Cursos interactivos enfocados en habilidades técnicas esenciales para el mundo digital actual"
+    - text: "Acceso a profesores experimentados y una comunidad colaborativa de aprendizaje"
+    - text: "Preparación para desafíos del mundo real y oportunidades laborales en tecnología"
+    
 ## HEADING SECTION
 
 active_campaign_location_slug: "europe"

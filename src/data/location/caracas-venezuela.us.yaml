@@ -2,7 +2,7 @@ meta_info:
   slug: "coding-bootcamp-caracas"
   title: "Coding Bootcamp Caracas"
   position: 40
-  description: "Get to know here all about our coding bootcamp campus in Caracas, Venezuela of 4Geeks Academy"
+  description: "Get to know here all about our coding bootcamp campus in Caracas, Venezuela of 4GeeksAcademy"
   image: "/images/og-preview/caracas-venezuela.us.png"
   keywords: ""
   template: "location"
@@ -91,21 +91,22 @@ two_columns:
     shadow: true  
   video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
   heading:
-    text: "4Geeks, Argentina and a story full of opportunities"
+    text: "Luisa Glum's Insights about 4Geeks Academy in Caracas"
     font_size: ["30px", "30px", "30px", "30px", "30px"]
   sub_heading:
-    text: "We are Buenos Aires based and we have been focusing in bringing on more opportunities."
+    text: "Luisa chooses 4Geeks Academy for this and other advantages"
     font_size: ["18px", "18px", "22px", "22px", "22px"]
   button:
-    text: "APPLY NOW"
+    text: "¡Únete ahora!"
     color: "white"
     background: "black"
-    path: "/us/apply"
+    path: "/es/aplica"
   bullets:
-    items: 
-    - text: "There is always a full or partial scholarship open"
-    - text: "There is always opportunities for everyone in Miami-Dade County, Broward and Palm Beach"
-    - text: "We have ongoing partnerships with Miami Dade College, Miami Tech Coalition, UWM, The City of Miami, Miami Dade Counti and so manu more."
+    items:
+    - text: "Accessibility through various opportunities for financial support"
+    - text: "Hands-on projects fostering practical skill mastery"
+    - text: "Industry-aligned curriculum for real-world readiness"
+    - text: "Discover why 4Geeks Academy stands out as the best option to learn programming"
 
 ## START FROM HERE - DON'T CHANGE ANYTHING ABOVE
 ## HEADING SECTION

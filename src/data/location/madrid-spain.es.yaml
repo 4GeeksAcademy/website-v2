@@ -83,26 +83,25 @@ two_columns:
   proportions: [6, 6]
   image:
     style: '{"border" : "5px solid black", "backgroundSize": "contain" }'
-    src: "/static/images/staff/luisa.png"
+    src: "/static/images/testimonials/javier-murillo-testimonial.jpg"
     shadow: true  
-  video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
+  video: "c14ZDHXN6_w"
   heading:
-    text: "4Geeks, Argentina and a story full of opportunities"
+    text: "La Experiencia de Javier Murillo en 4Geeks Academy en Madrid"
     font_size: ["30px", "30px", "30px", "30px", "30px"]
   sub_heading:
-    text: "We are Buenos Aires based and we have been focusing in bringing on more opportunities."
+    text: "Fortalece tus Habilidades Tecnológicas desde Madrid, España"
     font_size: ["18px", "18px", "22px", "22px", "22px"]
   button:
-    text: "APPLY NOW"
+    text: "¡Únete ahora!"
     color: "white"
     background: "black"
-    path: "/us/apply"
+    path: "/es/aplica"
   bullets:
     items: 
-    - text: "There is always a full or partial scholarship open"
-    - text: "There is always opportunities for everyone in Miami-Dade County, Broward and Palm Beach"
-    - text: "We have ongoing partnerships with Miami Dade College, Miami Tech Coalition, UWM, The City of Miami, Miami Dade Counti and so manu more."
-
+    - text: "Aprende las tecnologías más demandadas por las empresas y entra en el mundo laboral en tiempo récord"
+    - text: "Te acompañaremos durante todo el proceso, con mentorías ilimitadas y de por vida, ¡para que nunca más programes solo!"
+    - text: "Ofrecemos becas parciales y múltiples opciones de financiación, para que el dinero no te frene"
 
 active_campaign_location_slug: "madrid-spain"
 breathecode_location_slug: "madrid-spain"
