@@ -80,7 +80,7 @@ const ChooseProgram = (props) => {
       onMouseLeave={() => {
         setStatus({ ...status, hovered: false });
         setTimeout(() => {
-          setStatus(_status => ({..._status, toggle: _status.hovered}));
+          // setStatus(_status => ({..._status, toggle: _status.hovered}));
         }, 300);
       }}
       onMouseEnter={() => setStatus({ ...status, hovered: true })}
