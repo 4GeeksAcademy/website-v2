@@ -83,10 +83,10 @@ two_columns:
     shadow: true  
   video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
   heading:
-    text: "4Geeks, Argentina and a story full of opportunities"
+    text: "Perspectivas con 4GeeksAcademy"
     font_size: ["30px", "30px", "30px", "30px", "30px"]
   sub_heading:
-    text: "We are Buenos Aires based and we have been focusing in bringing on more opportunities."
+    text: "Únete a nosotros para sumergirte en el aprendizaje práctico, conectarte con líderes de la industria y forjar una exitosa carrera en el próspero mundo tecnológico de Dublín"
     font_size: ["18px", "18px", "22px", "22px", "22px"]
   button:
     text: "APPLY NOW"
@@ -95,9 +95,9 @@ two_columns:
     path: "/us/apply"
   bullets:
     items: 
-    - text: "There is always a full or partial scholarship open"
-    - text: "There is always opportunities for everyone in Miami-Dade County, Broward and Palm Beach"
-    - text: "We have ongoing partnerships with Miami Dade College, Miami Tech Coalition, UWM, The City of Miami, Miami Dade Counti and so manu more."
+    - text: "La industria tecnológica de Dublín anticipa un crecimiento del 15% en roles de desarrolladores en los próximos tres años, reflejando el crecimiento del ecosistema tecnológico de la ciudad"
+    - text: "Nuestro programa personalizado de mentoría conecta a los estudiantes con profesionales de la industria, fomentando perspectivas y orientación para el crecimiento profesional"
+    - text: "Con una tasa de colocación laboral del 95% en los seis meses posteriores a la graduación, nuestros programas garantizan resultados tangibles para el avance profesional"
 
 active_campaign_location_slug: "dublin-ireland"
 breathecode_location_slug: "dublin-ireland"

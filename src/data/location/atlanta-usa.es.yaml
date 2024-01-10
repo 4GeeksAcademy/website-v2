@@ -1,8 +1,8 @@
 meta_info:
   slug: "bootcamp-programacion-atlanta"
   position: 1
-  title: "4Geeks Academy Atlanta - Bootcamp de programación en Atlanta, aprende a programar en Atlanta"
-  description: "Conoce aquí todo sobre nuestro campus de bootcamp de programación en Atlanta, Georgia de 4Geeks Academy"
+  title: "4Geeks AcademyAtlanta - Bootcamp de programación en Atlanta, aprende a programar en Atlanta"
+  description: "Conoce aquí todo sobre nuestro campus de bootcamp de programación en Atlanta, Georgia de 4GeeksAcademy"
   image: "/images/locations/atlanta-home.png"
   keywords: "null"
   redirects: []
@@ -61,25 +61,25 @@ two_columns:
   proportions: [6, 6]
   image:
     style: '{"border" : "5px solid black", "backgroundSize": "contain" }'
-    src: "/static/images/staff/luisa.png"
+    src: "/static/images/testimonials/allisa-testimonial.jpg"
     shadow: true  
-  video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
+  video: "https://www.youtube.com/watch?v=TCHASxvkhpI"
   heading:
-    text: "4Geeks, Argentina and a story full of opportunities"
+    text: "Aprende a programar desde Atlanta"
     font_size: ["30px", "30px", "30px", "30px", "30px"]
   sub_heading:
-    text: "We are Buenos Aires based and we have been focusing in bringing on more opportunities."
+    text: "Alissa nos cuenta por qué 4Geeks Academy es la mejor opción"
     font_size: ["18px", "18px", "22px", "22px", "22px"]
   button:
-    text: "APPLY NOW"
+    text: "¡Únete ahora!"
     color: "white"
     background: "black"
-    path: "/us/apply"
+    path: "/es/aplica"
   bullets:
     items: 
-    - text: "There is always a full or partial scholarship open"
-    - text: "There is always opportunities for everyone in Miami-Dade County, Broward and Palm Beach"
-    - text: "We have ongoing partnerships with Miami Dade College, Miami Tech Coalition, UWM, The City of Miami, Miami Dade Counti and so manu more."
+    - text: "Proyectos prácticos donde obtendrás un dominio de las herramientas."
+    - text: "Plan de estudios alineado con la industria para estar listo para el mundo real"
+    - text: "Apoyo profesional para navegar la próspera industria tecnológica de Atlanta"
 
 staff:
   heading: "Meet your Staff"
