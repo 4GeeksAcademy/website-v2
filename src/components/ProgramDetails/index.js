@@ -21,8 +21,6 @@ const FillerStyles = styled.div`
   transform: translateY(-50%);
 `;
 
-
-
 const strings = {
   us: {
     Projects: "Projects",

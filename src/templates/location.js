@@ -68,7 +68,6 @@ const Location = ({ data, pageContext, yml }) => {
     es: "SELECCIONAR PROGRAMA",
   };
 
-
   return (
     <>
       <GridContainerWithImage
