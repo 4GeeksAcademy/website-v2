@@ -55,7 +55,7 @@ exports.sourceNodes = async (
     try{
       content = matter(content);
     }catch(e){
-      throw Error(`There was an error while processing blog post frontmatter for: ${post.slug}. \n ${str(e)}`)
+      throw Error(`There was an error while processing blog post frontmatter for: ${post.slug}. \n ${e}`)
     }
 
     const frontMatter = {
