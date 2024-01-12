@@ -137,6 +137,8 @@ components:
     position: 3
     layout: cards_carousel
     swipable: True
+    #            xs         sm       md        lg
+    width: ["280px", "280px", "280px",  280px"]
     heading:
       text: "Elegibility in this Program"
       font_size: ["30px", "30px", "30px", "30px", "30px"]
@@ -173,6 +175,10 @@ components:
           font_size: "15px"
         # button:
         #   text: "See more"
+        # content: 
+        #   text: "Learn from senior-level professionals with successful careers in tech and real industry experience."
+        #   style: '{ "padding": "0px 10px" }'
+
       - image:
           style: '{ "backgroundSize": "cover", "minHeight": "230px", "borderRadius": "80px" }'
           src: "/images/low-income-female-heads-of-household.png"
