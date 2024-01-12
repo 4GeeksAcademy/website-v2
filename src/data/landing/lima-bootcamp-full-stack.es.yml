@@ -134,9 +134,9 @@ who_is_hiring:
 # Possible layours: [two_column_left_image, two_column_right_image]
 components:
   - name: concurso
-    position: 2
+    position: 6
     layout: two_column_left
-    background: "#fbfbfb" # Name of the color(from components/Styling/index.js) or color code ex: #C9F9F9
+    background: "#fff" # Name of the color(from components/Styling/index.js) or color code ex: #C9F9F9
     image:
       src: "/images/landing/bootcamps.png"
     heading:
@@ -205,32 +205,17 @@ components:
     content:
       text: "El Bootcamp abarca desde los fundamentos de programación en JavaScript hasta la creación de aplicaciones dinámicas con React.js. También incluye conceptos avanzados como Python, Flask, bases de datos y la publicación de sitios web. Prepárate para desarrollar proyectos web de forma efectiva y aplicar tus conocimientos en entornos profesionales, donde se valora altamente a profesionales bien preparados en esta área."
       font_size: ["18px"]
-
-  - name: some_id
-    position: 4
-    layout: two_column_right
-    image:
-      style: '{ "border" : "3px solid black" }' 
-      shadow: true 
-      src: "../../../static/images/testimonials/pablo-review.jpg"
-    video: "https://www.youtube.com/watch?v=ScqncejBOvY"
-    heading:
-      text:
-        "Eleva tu Trayectoria con 4Geeks Academy"
-        #xl      lg     md     sm    xs
-      font_size: ["40px", "34px", "34px", "25px", "20px"]
-    content:
-      text: "Descubre por qué 4Geeks Academy es la elección insuperable. Pablo nos detalla las razones fundamentales. Desde su inicio, hemos focalizado en asegurar que las conexiones, el impacto, las alternativas de financiamiento y las perspectivas laborales sean tangibles para cada estudiante. En 4Geeks Academy, tu éxito es nuestra prioridad."
-      font_size: ["16px"]
-    button:
-      text: "¡Únete a la Academia!"
-      path: "#bottom"
-      color: "white"
-      background: "black"
-      hover: "lightBlue"
+    bullets:
+      items:
+      - heading: "Cierre de Postulación"
+        text: "4 de Marzo del 2024"
+        icon: "circle" 
+      - heading: "Inicio del Bootcamp"
+        text: "20 de Mayo del 2024"
+        icon: "circle" 
 
   - name: pro_innovate
-    position: 6
+    position: 1
     layout: two_column_right
     background: "#fff" # Name of the color(from components/Styling/index.js) or color code ex: #C9F9F9
     image:
