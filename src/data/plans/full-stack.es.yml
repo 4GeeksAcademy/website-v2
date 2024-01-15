@@ -177,18 +177,6 @@ full_time:
 
 part_time:
 
-  - slug: 'miami-uwm-pt'
-    academies: ['downtown-miami']
-    recomended: false
-    scholarship: "Más adelante este año"
-    payment_time: "No hay excusas. No pages nada si vives o trabajas en Miami"
-    price: "$0"
-    bullets: 
-      - "Te pagamos tus costos de vida al completar partes del programa"
-      - "En partnership con United Way Miami. Pregúntanos más detalles!"
-    icons: 
-      - "/images/landing/uwm_pantone_2021_2.png"
-
   - slug: 'usa-clark-scholarship-pt'
     academies: ['orlando']
     recomended: true

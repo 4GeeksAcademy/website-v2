@@ -6,6 +6,7 @@ import { H1, H2, Paragraph } from "../Heading";
 import { Break } from "../Responsive";
 import { Devices } from "../Responsive";
 import Fragment from "../Fragment";
+import { Carousel } from "react-responsive-carousel";
 
 const containerVariants = {
   fluid: {
@@ -201,11 +202,13 @@ export const Div = styled.div`
     border-bottom: ${(props) => props.borderBottomHover};
   }
   @media ${Devices.xxs} {
-    padding: ${(props) => props.padding_xxs};
     column-count: ${(props) => props.columnCount_xxs};
-    margin: ${(props) => props.margin_xxs};
-    padding: ${(props) => props.padding_xxs};
+    padding: ${(props) => props.padding_xxs}
     background: ${(props) => props.background_xxs};
+    display: ${(props) => props.display_xxs};
+    top: ${(props) => props.top_xxs};
+    left: ${(props) => props.left_xxs};
+    margin: ${(props) => props.margin_xxs};
     display: ${(props) => props.display_xxs};
     justify-content ${(props) => props.justifyContent_xxs};
     width: ${(props) => props.width_xxs};
@@ -232,6 +235,7 @@ export const Div = styled.div`
     align-content: ${(props) => props.alignContent_xs};
     top: ${(props) => props.top_xs};
     right: ${(props) => props.right_xs};
+    left: ${(props) => props.left_xs};
     background: ${(props) => props.background_xs};
   }
   @media ${Devices.sm} {
@@ -399,7 +403,6 @@ export const Grid = styled(Div)`
   justify-items: ${(props) => props.justifyItems};
   justify-content: ${(props) => props.justifyContent};
   grid-template-areas: ${(props) => props.gridTemplateAreas};
-
   @media ${Devices.xxs} {
     grid-gap: ${(props) => props.gridGap_xxs};
     grid-template-columns: ${(props) =>
@@ -455,7 +458,7 @@ export const Grid = styled(Div)`
         : null};
     grid-gap: ${(props) => props.gridGap_md};
     grid-column: ${(props) => props.gridColumn_md};
-    //display: ${(props) => props.display_md || "grid"};
+    display: ${(props) => props.display_md || "grid"};
   }
   @media ${Devices.lg} {
     grid-template-columns: ${(props) => props.gridTemplateColumns_lg};
@@ -527,6 +530,7 @@ export const Old_Grid = styled.div`
 
 export const Header = ({
   hideArrowKey,
+  uppercase,
   children,
   fontSize,
   fontSize_tablet,
@@ -545,6 +549,7 @@ export const Header = ({
   margin,
   margin_tablet,
   padding,
+  padding_xxs,
   padding_tablet,
   padding_lg,
   padding_md,
@@ -576,6 +581,7 @@ export const Header = ({
       position={position}
       margin={margin || "70px 0 0 0"}
       margin_tablet={margin_tablet}
+      //padding={padding_xxs || "60px 20px"}
       padding={padding || "0 0"}
       padding_tablet={padding_tablet || "60px 40px"}
       padding_md={padding_md || "60px 80px"}
@@ -615,6 +621,7 @@ export const Header = ({
             lineHeight={lineHeight || "50px"}
             lineHeight_tablet={lineHeight_tablet || "60px"}
             fontFamily={fontFamily_title}
+            textTransform={uppercase && "uppercase"}
             //fontSize={fontSize || "40px"}
             //fontSize_tablet={fontSize_tablet || "50px"}
             zindex={zIndex}
@@ -805,6 +812,7 @@ export const GridContainer = ({
 };
 export const GridContainerWithImage = ({
   id,
+  carousel,
   className,
   onMouseOutHandler,
   children,
@@ -870,6 +878,14 @@ export const GridContainerWithImage = ({
         alignItems_tablet={alignItems_tablet}
         alignItems_md={alignItems_md}
       >
+        {/* {
+          carousel ? (
+            <Carousel/>
+          )
+          :
+          {children}
+        } */}
+
         {children}
       </Grid>
     </Grid>

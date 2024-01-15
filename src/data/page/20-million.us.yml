@@ -18,7 +18,6 @@ header:
 button:
   btn_label: I want to Contribute
   apply_button_link: /us/apply
-
 two_column_left:
   proportions:
     - 6
@@ -55,8 +54,7 @@ two_column_left:
     color: white
     background: blue
     hover_color: white
-    path: "#top"
-    
+    path: "#bottom"
 form:
   title: "Become a Catalyst for Change: Join Our Network of Partners"
   paragraph: >

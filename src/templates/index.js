@@ -25,39 +25,13 @@ import OurPartners from "../components/OurPartners";
 import ChooseYourProgram from "../components/ChooseYourProgram";
 import Testimonials from "../components/Testimonials";
 import { isDevelopment, isTestMode } from "../components/NavbarDesktop";
-
-const SVGBubblesLeft = () => (
-  <svg
-    style={{ top: "62px", left: "0", position: "absolute", zIndex: -1 }}
-    width="26"
-    height="362"
-    viewBox="0 0 26 362"
-    fill="none"
-    xmlns="https://www.w3.org/2000/svg"
-  >
-    <circle cx="-2.5" cy="333.5" r="28.5" fill="#FFB718" fillOpacity="0.2" />
-    <circle cx="-10.5" cy="26.5" r="26.5" fill="#0097CD" />
-  </svg>
-);
-
-const SVGBubblesRight = () => (
-  <svg
-    style={{ top: "10px", right: "0", position: "absolute", zIndex: -1 }}
-    width="50"
-    height="160"
-    viewBox="0 0 50 160"
-    fill="none"
-    xmlns="https://www.w3.org/2000/svg"
-  >
-    <circle cx="12.5" cy="73.5" r="12.5" fill="#CD0000" />
-    <circle cx="89" cy="80" r="80" fill="#FFB718" fillOpacity="0.2" />
-  </svg>
-);
+import TwoColumn from "../components/TwoColumn/index.js";
 
 const Home = (props) => {
   const { data, pageContext, yml } = props;
 
   const hiring = data.allPartnerYaml.edges[0].node;
+  const landingHiring = yml.partners;
   const { session } = React.useContext(SessionContext);
   const [city, setCity] = useState("");
 
@@ -101,32 +75,24 @@ const Home = (props) => {
     en: "CHOOSE PROGRAM",
   };
 
-  const isContentBarActive =
-    (session?.location?.custom_bar.active && isTestMode) ||
-    (session?.location?.custom_bar.active && !isDevelopment());
+  const isContentBarActive = true;
+  // (session?.location?.custom_bar.active && isTestMode) ||
+  // (session?.location?.custom_bar.active && !isDevelopment());
+
+  console.log(yml)
 
   return (
     <>
       <Div
-        display="flex"
-        position="absolute"
-        width="100%"
-        zIndex="0"
-        display_tablet="none"
-      >
-        <SVGBubblesLeft />
-        <SVGBubblesRight />
-      </Div>
-      <Div
         flexDirection="column"
         margin={
-          isContentBarActive ? "110px auto 72px auto" : "72px auto 72px auto"
+          isContentBarActive ? "138px auto 72px auto" : "72px auto 72px auto"
         }
         margin_tablet={
           isContentBarActive ? "120px auto 108px auto" : "72px auto 108px auto"
         }
         maxWidth="1366px"
-        padding_xxs="0px"
+        padding_xxs="0px 0px"
         padding_tablet="0 40px"
         padding_md="0 80px"
         padding_lg="0px"
@@ -142,10 +108,17 @@ const Home = (props) => {
           <Div
             position="absolute"
             zIndex="5"
-            right_tablet={yml.header_data.video ? "40%" : "5%"}
-            right="5%"
-            top_tablet={yml.header_data.video ? "1%" : "55%"}
+            left_tablet={yml.header_data.video ? "40%" : "50%"}
+            left="50%"
+            left_xxs="65%"
+            left_xs="74%"
+            top_tablet={yml.header_data.video ? "1%" : "25%"}
             top="90px"
+            top_xxs="20px"
+            top_xs="100px"
+            width_xxs="80px"
+            width_sm="100px"
+            height_xxs="80px"
             width_tablet="160px"
             height_tablet="152px"
             width="100px"
@@ -156,9 +129,10 @@ const Home = (props) => {
           <Div
             flexDirection="column"
             // justifyContent_tablet="evenly"
-            alignItems="center"
+            alignItems="start"
             alignItems_tablet="start"
-            padding="0 0 0 20px"
+            margin_xxs="0 20px"
+            margin_tablet="0px"
           >
             <Div
               flexDirection="column"
@@ -172,18 +146,20 @@ const Home = (props) => {
                 type="h1"
                 textAlign="left"
                 textShadow="none"
-                fontSize="13px"
+                fontSize="15px"
+                lineHeight="18px"
                 color="#606060"
               >
                 {city} {yml.header_data.tagline}
               </H1>
               <H2
                 type="h2"
-                textAlign="left"
+                textAlign_tablet="start"
+                textAlign_xxs="start"
                 fontSize="40px"
                 fontSize_tablet="50px"
                 margin="20px 0 0 0"
-                lineHeight_xs="38px"
+                lineHeight_xxs="45px"
                 lineHeight_tablet="60px"
                 width_tablet="100%"
                 width_xs="80%"
@@ -201,9 +177,11 @@ const Home = (props) => {
                       padding="0 20% 0 0"
                       color={Colors.black}
                       fontSize="16px"
-                    >
-                      {bullet}{" "}
-                    </Paragraph>
+                      lineHeight="19px"
+                      dangerouslySetInnerHTML={{ __html: bullet }}
+                    />
+                    {/* {bullet}{" "}
+                    </Paragraph> */}
                   </Div>
                 ))}
               </Div>
@@ -216,7 +194,19 @@ const Home = (props) => {
                   color={Colors.blue}
                   margin="0 10px 0 0"
                   textColor="white"
-                  onClick={goToChooseProgram}
+                  onClick={() => {
+                    if (
+                      yml.header_data.join_button_path &&
+                      yml.header_data.join_button_path.indexOf("http") > -1
+                    )
+                      window.open(
+                        transferQuerystrings(
+                          yml.header_data.join_button_path,
+                          utm
+                        )
+                      );
+                    else navigate(yml.header_data.join_button_path);
+                  }}
                 >
                   {yml.header_data.join_button_text}
                 </Button>
@@ -228,6 +218,19 @@ const Home = (props) => {
                   color={Colors.blue}
                   margin="0 0 0 10px"
                   textColor={Colors.blue}
+                  onClick={() => {
+                    if (
+                      yml.header_data.free_button_path &&
+                      yml.header_data.free_button_path.indexOf("http") > -1
+                    )
+                      window.open(
+                        transferQuerystrings(
+                          yml.header_data.free_button_path,
+                          utm
+                        )
+                      );
+                    else navigate(yml.header_data.free_button_path);
+                  }}
                 >
                   {yml.header_data.free_button_text}
                 </Button> */}
@@ -298,7 +301,7 @@ const Home = (props) => {
               </Div>
             ) : (
               <StyledBackgroundSection
-                height_tablet="623px"
+                height_tablet="533px"
                 display_tablet="block"
                 display="none"
                 height="390px"
@@ -314,8 +317,8 @@ const Home = (props) => {
           </Div>
         </GridContainerWithImage>
         <Div
-          margin="10px auto"
-          margin_tablet="auto"
+          margin="70px auto 0 auto"
+          margin_tablet="90px auto 0 auto"
           width="90%"
           className="badge-slider hideOverflowX__"
         >
@@ -329,25 +332,12 @@ const Home = (props) => {
           />
         </Div>
       </Div>
-      <Testimonials lang={data.allTestimonialsYaml.edges} />
 
-      <Badges
-        lang={pageContext.lang}
-        paragraph={yml.badges.paragraph}
-        margin="10px 0 65px 0"
-        paddingText="0 5% 0.5em 5%"
-        paddingText_tablet="0 12% 1.6em 12%"
-        maxWidth="1366px"
+      <Testimonials
+        lang={data.allTestimonialsYaml.edges}
+        background={Colors.verylightGray}
+        //noMove // no movement and show slider
       />
-
-      <GridContainer
-        margin="44px 0"
-        padding="50px 0"
-        padding_tablet="40px 0"
-        margin_tablet="0 0 40px 0"
-      >
-        <Div background="#EBEBEB" height="1px" />
-      </GridContainer>
 
       <About4Geeks lang={data.allAbout4GeeksYaml.edges} />
 
@@ -361,23 +351,44 @@ const Home = (props) => {
           session.location.breathecode_location_slug
         }
         playerHeight="600px"
-        title={true}
       />
       <ChooseYourProgram
         chooseProgramRef={chooseProgramRef}
+        id="choose-program"
         lang={pageContext.lang}
         programs={data.allChooseYourProgramYaml.edges[0].node.programs}
         title={yml.choose_program.title}
         paragraph={yml.choose_program.paragraph}
       />
 
-      <OurPartners
-        images={hiring.partners.images}
-        marquee
-        title={hiring.partners.tagline}
-        paragraph={hiring.partners.sub_heading}
+      {/* TWO COLUMN CREAR EN EL YML*/}
+      <TwoColumn
+        right={{ image: yml.two_columns?.image }}
+        left={{
+          heading: yml.two_columns?.heading,
+          sub_heading: yml.two_columns?.sub_heading,
+          button: yml.two_columns?.button,
+        }}
+        proportions={yml.two_columns?.proportions}
+        session={session}
       />
 
+      <OurPartners
+        images={hiring.partners.images}
+        margin="0"
+        padding="50px 0"
+        marquee
+        paddingFeatured="0 0 50px 0"
+        featuredImages={landingHiring?.featured}
+        showFeatured
+        withoutLine
+        title={landingHiring ? landingHiring.heading : hiring.partners.tagline}
+        paragraph={
+          landingHiring
+            ? landingHiring.sub_heading
+            : hiring.partners.sub_heading
+        }
+      />
       <Loc lang={pageContext.lang} allLocationYaml={data.allLocationYaml} />
     </>
   );
@@ -401,7 +412,9 @@ export const query = graphql`
             sub_heading
             bullets
             join_button_text
+            join_button_path
             free_button_text
+            free_button_path
             video
             image {
               childImageSharp {
@@ -438,6 +451,28 @@ export const query = graphql`
           why_4geeks {
             heading
             sub_heading
+          }
+          two_columns {
+            proportions
+            image {
+              style
+              src
+              shadow
+            }
+            heading {
+              text
+              font_size
+            }
+            sub_heading {
+              text
+              font_size
+            }
+            button {
+              text
+              color
+              background
+              path
+            }
           }
           join_geeks {
             heading
@@ -511,8 +546,8 @@ export const query = graphql`
               image {
                 childImageSharp {
                   gatsbyImageData(
-                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                    width: 150
+                    layout: FULL_WIDTH # --> CONSTRAINED || FIXED || FULL_WIDTH
+                    width: 200
                     placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                   )
                 }
@@ -751,15 +786,6 @@ export const query = graphql`
               gatsbyImageData(
                 layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
                 width: 1200
-                placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
-              )
-            }
-          }
-          image_mobile {
-            childImageSharp {
-              gatsbyImageData(
-                layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                width: 800
                 placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
               )
             }

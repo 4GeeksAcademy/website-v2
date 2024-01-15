@@ -302,7 +302,7 @@ const FinancialFilter = (props) => {
               placeholderFloat
             />
           )}
-          {props.modality && (
+          {/* {props.modality && (
             <SelectRaw
               options={modalityArray}
               placeholder={props.modality}
@@ -312,7 +312,7 @@ const FinancialFilter = (props) => {
               //display="none"
               placeholderFloat
             />
-          )}
+          )} */}
           {!props.course && (
             <SelectRaw
               options={locations
@@ -375,135 +375,135 @@ const FinancialFilter = (props) => {
             {info.pricing_error_contact}
           </Paragraph>
         </>
-      ) : (
-        <GridContainer
-          padding="0"
-          //containerColumns_md={`2fr repeat(12, 1fr) 2fr`}
-          containerColumns_tablet={`0fr repeat(12, 1fr) 0fr`}
-          background="transparent"
-          columns_tablet="1"
-          containerGridGap="0px"
-          padding_tablet={props.padding_tablet || "4.5rem 16px"}
-        >
-          {prices && Array.isArray(prices) && (
-            <PricingCard color="black" background={Colors.white} data={{}}>
-              {Array.isArray(prices) &&
-                prices.map((label, index) => (
-                  <GridContainer
-                    key={index}
-                    containerColumns_tablet="0fr repeat(12, 1fr) 0fr"
-                    margin="0 0 20px 0"
-                    shadow={Colors.shadow}
-                    shadow_tablet={Colors.shadow}
-                    padding="20px"
-                    height="100%"
-                    minHeight_tablet="122px"
-                    columns_tablet="4"
-                    width="100%"
-                  >
-                    <Div
-                      margin="10px 0px"
-                      justifyContent="center"
-                      placeItems="center"
-                      display="flex"
-                      flexWrap="wrap"
-                      //className="badge-slider hideOverflowX__"
-                    >
-                      {label.icons?.map((logo) => (
-                        <Img
-                          src={logo}
-                          alt="4Geeks Academy Icon"
-                          backgroundSize="contain"
-                          height="56px"
-                          minWidth="30px"
-                          width="96px"
-                          margin="0 5px"
-                        />
-                      ))}
-                    </Div>
-                    <Div
-                      margin="10px 0px"
-                      justifyContent="center"
-                      placeItems="center"
-                      flexDirection="column"
-                      display="flex"
-                    >
-                      <Paragraph
-                        fontWeight="700"
-                        lineHeight="36px"
-                        fontSize="30px"
-                      >
-                        {label.scholarship}
-                      </Paragraph>
-                      <H3
-                        type="h3"
-                        fontWeight="400"
-                        color="#A4A4A4"
-                        width="fit-content"
-                        padding="0 5px"
-                        fontSize="15px"
-                        lineHeight="24px"
-                        letterSpacing="0.05em"
-                      >
-                        {label.payment_time}
-                      </H3>
-                    </Div>
-                    <Div
-                      margin="10px 0px"
-                      justifyContent="center"
-                      placeItems="center"
-                      flexDirection="column"
-                      display="flex"
-                    >
-                      <Paragraph
-                        fontWeight="700"
-                        lineHeight="36px"
-                        fontSize="30px"
-                      >
-                        {label.price}
-                      </Paragraph>
-                      <H3
-                        type="h3"
-                        fontWeight="400"
-                        color="#A4A4A4"
-                        width="fit-content"
-                        padding="0 5px"
-                        fontSize="15px"
-                        lineHeight="24px"
-                        letterSpacing="0.05em"
-                      >
-                        {label.payment_time}
-                      </H3>
-                    </Div>
-                    <Div
-                      margin="10px 0px"
-                      justifyContent="center"
-                      placeItems="center"
-                      image="no"
-                    >
-                      <Link to={`/${props.lang}/${props.lang == "us" ? "apply" : "aplica"}?utm_plan=${label.slug}`}>
-                        <Button
-                          variant="full"
-                          height="40px"
-                          color={Colors.blue}
-                          textColor={Colors.white}
-                          fontSize="16px"
-                          onClick={() =>
-                            setSession({
-                              ...session,
-                              utm: { ...session.utm, utm_plan: label.slug },
-                            })
-                          }
-                        >
-                          {info?.apply_button?.label || "APPLY"}
-                        </Button>
-                      </Link>
-                    </Div>
-                  </GridContainer>
-                ))}
-            </PricingCard>
-          )}
-        </GridContainer>
+      ) : (<></>
+        // <GridContainer
+        //   padding="0"
+        //   //containerColumns_md={`2fr repeat(12, 1fr) 2fr`}
+        //   containerColumns_tablet={`0fr repeat(12, 1fr) 0fr`}
+        //   background="transparent"
+        //   columns_tablet="1"
+        //   containerGridGap="0px"
+        //   padding_tablet={props.padding_tablet || "4.5rem 16px"}
+        // >
+        //   {prices && Array.isArray(prices) && (
+        //     <PricingCard color="black" background={Colors.white} data={{}}>
+        //       {Array.isArray(prices) &&
+        //         prices.map((label, index) => (
+        //           <GridContainer
+        //             key={index}
+        //             containerColumns_tablet="0fr repeat(12, 1fr) 0fr"
+        //             margin="0 0 20px 0"
+        //             shadow={Colors.shadow}
+        //             shadow_tablet={Colors.shadow}
+        //             padding="20px"
+        //             height="100%"
+        //             minHeight_tablet="122px"
+        //             columns_tablet="4"
+        //             width="100%"
+        //           >
+        //             <Div
+        //               margin="10px 0px"
+        //               justifyContent="center"
+        //               placeItems="center"
+        //               display="flex"
+        //               flexWrap="wrap"
+        //               //className="badge-slider hideOverflowX__"
+        //             >
+        //               {label.icons?.map((logo) => (
+        //                 <Img
+        //                   src={logo}
+        //                   alt="4Geeks Academy Icon"
+        //                   backgroundSize="contain"
+        //                   height="56px"
+        //                   minWidth="30px"
+        //                   width="96px"
+        //                   margin="0 5px"
+        //                 />
+        //               ))}
+        //             </Div>
+        //             <Div
+        //               margin="10px 0px"
+        //               justifyContent="center"
+        //               placeItems="center"
+        //               flexDirection="column"
+        //               display="flex"
+        //             >
+        //               <Paragraph
+        //                 fontWeight="700"
+        //                 lineHeight="36px"
+        //                 fontSize="30px"
+        //               >
+        //                 {label.scholarship}
+        //               </Paragraph>
+        //               <H3
+        //                 type="h3"
+        //                 fontWeight="400"
+        //                 color="#A4A4A4"
+        //                 width="fit-content"
+        //                 padding="0 5px"
+        //                 fontSize="15px"
+        //                 lineHeight="24px"
+        //                 letterSpacing="0.05em"
+        //               >
+        //                 {label.payment_time}
+        //               </H3>
+        //             </Div>
+        //             <Div
+        //               margin="10px 0px"
+        //               justifyContent="center"
+        //               placeItems="center"
+        //               flexDirection="column"
+        //               display="flex"
+        //             >
+        //               <Paragraph
+        //                 fontWeight="700"
+        //                 lineHeight="36px"
+        //                 fontSize="30px"
+        //               >
+        //                 {label.price}
+        //               </Paragraph>
+        //               <H3
+        //                 type="h3"
+        //                 fontWeight="400"
+        //                 color="#A4A4A4"
+        //                 width="fit-content"
+        //                 padding="0 5px"
+        //                 fontSize="15px"
+        //                 lineHeight="24px"
+        //                 letterSpacing="0.05em"
+        //               >
+        //                 {label.payment_time}
+        //               </H3>
+        //             </Div>
+        //             <Div
+        //               margin="10px 0px"
+        //               justifyContent="center"
+        //               placeItems="center"
+        //               image="no"
+        //             >
+        //               <Link to={`/${props.lang}/${props.lang == "us" ? "apply" : "aplica"}?utm_plan=${label.slug}`}>
+        //                 <Button
+        //                   variant="full"
+        //                   height="40px"
+        //                   color={Colors.blue}
+        //                   textColor={Colors.white}
+        //                   fontSize="16px"
+        //                   onClick={() =>
+        //                     setSession({
+        //                       ...session,
+        //                       utm: { ...session.utm, utm_plan: label.slug },
+        //                     })
+        //                   }
+        //                 >
+        //                   {info?.apply_button?.label || "APPLY"}
+        //                 </Button>
+        //               </Link>
+        //             </Div>
+        //           </GridContainer>
+        //         ))}
+        //     </PricingCard>
+        //   )}
+        // </GridContainer>
       )}
     </Div>
   );

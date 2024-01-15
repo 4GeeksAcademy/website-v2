@@ -25,6 +25,8 @@ const Badges = ({
   badges,
   height_badge,
   style,
+  paragraph_style,
+  bottom_paragraph,
 }) => {
   const data = useStaticQuery(graphql`
     query myNewQueryBadges {
@@ -39,7 +41,7 @@ const Badges = ({
                 childImageSharp {
                   gatsbyImageData(
                     layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                    height: 120 # --> maxHeight
+                    height: 150 # --> maxHeight
                     quality: 100
                     placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                     # transformOptions: {fit: COVER}
@@ -74,7 +76,7 @@ const Badges = ({
       {/* <Fragment github="/components/badges"> */}
       <Div
         width="100%"
-        maxWidth={maxWidth}
+        maxWidth={maxWidth || "1366px"}
         margin_tablet="0 auto"
         justifyContent="center"
         background={background}
@@ -95,7 +97,7 @@ const Badges = ({
           maxWidth={maxWidth}
         >
           {/* <Grid columns_md="12" background={background} padding_md={padding_md} rows={paragraph && `3`} padding="0 17px" margin="36px 0 58px 0" margin_md="73px 0"> */}
-          {paragraph && (
+          {!bottom_paragraph && paragraph && (
             <Div className="badge-slider" justifyContent="between">
               <Paragraph
                 fontFamily="Lato-Light"
@@ -115,7 +117,7 @@ const Badges = ({
           {wrapped_images === true ? (
             <Div
               className="badge-slider hideOverflowX__"
-              //justifyContent="center"
+              justifyContent="center"
               rowGap="3rem"
               flexWrap="wrap"
               columnGap="1rem"
@@ -145,9 +147,6 @@ const Badges = ({
               <Div
                 className="badge-slider hideOverflowX__"
                 margin="auto"
-                gap_tablet="20px"
-                gap_md="50px"
-                gap_lg="100px"
                 // justifyContent="center"
                 // alignItems="center"
               >
@@ -178,14 +177,12 @@ const Badges = ({
                       return (
                         <GatsbyImage
                           key={i}
-                          style={
-                            style || {
-                              height: "85px",
-                              // minWidth: "200px",
-                              minWidth: "150px",
-                              margin: "0 24px",
-                            }
-                          }
+                          style={{
+                            height: "85px",
+                            // minWidth: "200px",
+                            minWidth: "150px",
+                            margin: "0 24px",
+                          }}
                           imgStyle={{ objectFit: "contain" }}
                           loading="eager"
                           draggable={false}
@@ -207,6 +204,22 @@ const Badges = ({
                   </Link>
                 )}
               </Div>
+            </Div>
+          )}
+
+          {bottom_paragraph && (
+            <Div className="badge-slider" justifyContent="between">
+              <Paragraph
+                fontFamily="Lato-Bold"
+                padding={paddingText || "0 10px 45px 10px"}
+                padding_tablet={paddingText_tablet || "0 5% 55px 5%"}
+                fontSize={short_link || short_text ? "12px" : "12px"}
+                fontSize_tablet={short_link || short_text ? "12px" : "12px"}
+                lineHeight={short_link || short_text ? "29px" : "38px"}
+                color={Colors.black}
+                dangerouslySetInnerHTML={{ __html: paragraph }}
+                margin="15px 0 0 0"
+              />
             </Div>
           )}
 

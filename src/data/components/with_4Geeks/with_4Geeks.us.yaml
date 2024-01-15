@@ -19,7 +19,7 @@ with:
     icon: address
     footer:
       is_image: true
-      image: "/images/geekforce.png"
+      image: "/images/geekforce-logo-new.png"
       image_link: "/us/geekforce-career-support"
       text: ""
       text_link: ""
@@ -43,19 +43,19 @@ with:
       text_link: "/us/financials"
   - name: "Joao Henrique"
     title: "You'll always have support from the  Academy"
-    open_in_modal: false
+    open_in_modal: true
     description: "Joao shares his experience receiving coding mentorship as a student, after graduating, and in his current job."
     image: ../../../../static/images/staff/joao.png
     alt: ""
     # video: "https://www.youtube.com/watch?v=MBXqEnhodx0" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     video: "https://www.youtube.com/watch?v=DrzRJICxjOU" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
-    video_height: 250px
+    video_height: 173px
     location: ["downtown-miami", "all"]
     # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     icon: address
     footer:
       is_image: true
-      image: "/images/geekpal.png"
+      image: "/images/geekpal-logo-new.png"
       image_link: "/us/geekpal-support"
       text: ""
       text_link: ""

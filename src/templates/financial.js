@@ -187,6 +187,7 @@ const Financial = (props) => {
         courseType={course_type}
         title={yml.prices.heading}
         paragraph={yml.prices.sub_heading}
+        financial // Indicates that it is running from financial.js and alters the component structure
       />
 
       <TwoColumn

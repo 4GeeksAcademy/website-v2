@@ -179,3 +179,8 @@ redirects:
     toPath: "/us/coding-campus/coding-bootcamp-argentina-buenos-aires/"
     #redirectInBrowser: true
     isPermanent: true # if permanent google will erase the original url from its results 
+    
+  - fromPath: "/es/full-stack-developer/desarrollador-full-stack"
+    toPath: "/es/desarrollador-full-stack/desarrollador-full-stack"
+    #redirectInBrowser: true
+    isPermanent: true # if permanent google will erase the original url from its results 

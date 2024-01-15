@@ -573,7 +573,7 @@ const LeadForm = ({
               </Div>
             )}
             {formStatus.status === "error" && (
-              <Alert color="red" margin="0" padding="5px 0 0 0">
+              <Alert color="red" margin="20px 0 0 0" padding="5px 0 0 0">
                 {formStatus.msg}
               </Alert>
             )}

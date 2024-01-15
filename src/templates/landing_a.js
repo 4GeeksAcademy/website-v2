@@ -84,7 +84,7 @@ const Landing = (props) => {
   // const landingLocation =
   //   session &&
   //   session.locations?.find(
-  //     (l) => l.breathecode_location_slug === yml.meta_info.utm_location[0]
+  //     (l) => l.breathecode_location_slug === yml.meta_info.utm_location
   //   );
 
   const landingLocation =
@@ -100,8 +100,6 @@ const Landing = (props) => {
       : session.locations?.find(
           (l) => l.breathecode_location_slug === yml.meta_info.utm_location[0]
         ));
-
-  console.log(landingLocation, session, yml.meta_info.utm_location);
 
   return (
     <>
@@ -517,6 +515,9 @@ export const query = graphql`
             background
             proportions
             layout
+            video
+            height
+            width
             filter_indexes
             text_link
             icons {
@@ -538,8 +539,6 @@ export const query = graphql`
               text_link
               link
             }
-            video
-            height
             button {
               text
               color
@@ -582,7 +581,12 @@ export const query = graphql`
               }
               heading {
                 text
+                style
                 font_size
+              }
+              content {
+                text
+                style
               }
               button {
                 text
@@ -973,6 +977,7 @@ export const query = graphql`
                 icon
               }
             }
+            weeks
             sub_heading
             left_labels {
               description

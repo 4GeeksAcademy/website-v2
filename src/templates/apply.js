@@ -39,7 +39,6 @@ const formIsValid = (formData = null) => {
 };
 
 const Apply = (props) => {
-  console.log(props);
   const { data, pageContext, yml } = props;
   const { session } = useContext(SessionContext);
   const [formStatus, setFormStatus] = useState({
@@ -494,7 +493,7 @@ const Apply = (props) => {
             <Div
               data-cy="dropdown_program_selector"
               tabindex="1"
-              margin_tablet="0 0 12px 0"
+              margin_tablet="0 0 23px 0"
             >
               <SelectRaw
                 bgColor={Colors.white}

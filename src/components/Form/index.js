@@ -7,7 +7,7 @@ import { Div } from "../Sections";
 
 const regex = {
   email:
-    /^[-!#$%&'*+\/0-9=?A-Z^_a-z`{|}~](\.?[-!#$%&'*+\/0-9=?A-Z^_a-z`{|}~])*@(?!mailinator|leonvero|ichkoch|naymeo|naymio)[a-zA-Z0-9]*\.[a-zA-Z](-?[a-zA-Z0-9])*.*[a-zA-Z]+$/,
+    /^[-!#$%&'*+\/0-9=?A-Z^_a-z`{|}~](\.?[-!#$%&'*+\/0-9=?A-Z^_a-z`{|}~])*@(?!mailinator|leonvero|ichkoch|naymeo|naymio)[\-a-zA-Z0-9]*\.[a-zA-Z](-?[a-zA-Z0-9])*.*[a-zA-Z]+$/,
   text: /^.+$/,
   textarea: /^.+$/,
   number: /^\d+$/,

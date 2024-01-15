@@ -472,6 +472,22 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
             </Div>
           ))}
         </Div>
+        {yml.how_it_works.link && (
+          <Paragraph
+            margin="30px 0 0 0"
+            fontSize="18px"
+            color={Colors.black}
+            opacity="1"
+            textDecoration="underline"
+          >
+            <Anchor
+              color={`${Colors.black} !important`}
+              to={yml.how_it_works.link.url}
+            >
+              {yml.how_it_works.link.label}
+            </Anchor>
+          </Paragraph>
+        )}
       </Div>
       <Div
         background={Colors.lightGray}
@@ -713,6 +729,10 @@ export const query = graphql`
               icon
               title
               highlight
+            }
+            link {
+              url
+              label
             }
           }
           successful_stories {

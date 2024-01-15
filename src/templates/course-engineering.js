@@ -63,22 +63,27 @@ const Program = ({ data, pageContext, yml }) => {
   return (
     <>
       <Header
-        margin={isCustomBarActive(session) ? "60px auto 0 auto" : "0 auto"}
+        margin={
+          isCustomBarActive(session) ? "120px auto 0 auto" : "90px auto 0 auto"
+        }
         paragraphMargin="26px 20px"
         paragraphMargin_Tablet="26px 22%"
         paddingParagraph_tablet="0 40px"
         seo_title={yml.seo_title}
         title={yml.header.title}
         paragraph={yml.header.paragraph}
-        padding_tablet="72px 0 40px 0"
-        padding="0px 20px"
+        padding_xxs="40px 20px"
+        padding_md="40px 80px"
+        padding_lg="40px 0px"
+        padding_tablet="40px 40px"
         position="relative"
-        fontSize_title="12px"
+        fontSize_title="40px"
         fontSizeTitle_tablet="60px"
         fontFamily_title="Archivo-Black"
         fontSize_paragraph="24px"
         gridTemplateColumns_tablet="repeat(14, 1fr)"
         maxWidth="1366px"
+        uppercase
       >
         <Img
           src="/images/landing/group-3.png"
@@ -357,8 +362,10 @@ export const query = graphql`
           }
           button {
             syllabus_heading
+            syllabus_btn_label
             syllabus_motivation
             apply_button_link
+            apply_button_text
           }
           meta_info {
             title

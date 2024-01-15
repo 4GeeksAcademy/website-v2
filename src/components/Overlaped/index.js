@@ -1,21 +1,14 @@
 import React from "react";
-import { Link, useStaticQuery, graphql } from "gatsby";
+import { Link, useStaticQuery, graphql, navigate } from "gatsby";
 import PropTypes from "prop-types";
 import { Button, Colors, Img, StyledBackgroundSection } from "../Styling";
 import { Grid, Div } from "../Sections";
 import { H4, H3, H2, H1, Paragraph } from "../Heading";
 import Icon from "../Icon";
 import { DirectiveLocation } from "graphql";
+import { transferQuerystrings, smartRedirecting } from "../../utils/utils";
 
-const Overlaped = ({
-  lang,
-  landingTemplate,
-  heading,
-  content,
-  button,
-  background,
-  image,
-}) => {
+const Overlaped = ({ heading, content, button, background, image }) => {
   const data = useStaticQuery(graphql`
     {
       allOverlapedYaml {
@@ -26,7 +19,7 @@ const Overlaped = ({
             button {
               text
               color
-              link
+              path
             }
             background
             image {
@@ -145,7 +138,7 @@ const Overlaped = ({
           ) : null}
 
           {button?.text && (
-            <Link to={button.link}>
+            <Link to={button.path}>
               <Button
                 background={Colors[button.color]}
                 color={Colors.white}
@@ -239,7 +232,7 @@ const Overlaped = ({
             </Paragraph>
           ) : null}
           {button?.text && (
-            <Link to={button.link}>
+            <Link to={button.path}>
               <Button
                 background={Colors[button.color]}
                 color={Colors.white}

@@ -315,6 +315,11 @@ components:
           font_size: "15px"
         button:
           text: "See more"
+
+        content: 
+          text: "Learn from senior-level professionals with successful careers in tech and real industry experience."
+          style: '{ "padding": "0px 10px" }'
+
       - image:
           style: '{ "backgroundSize": "cover", "minHeight": "230px", "borderRadius": "80px" }'
           src: "/images/low-income-veterans.png"

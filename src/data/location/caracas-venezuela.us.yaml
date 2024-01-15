@@ -2,7 +2,7 @@ meta_info:
   slug: "coding-bootcamp-caracas"
   title: "Coding Bootcamp Caracas"
   position: 40
-  description: "Get to know here all about our coding bootcamp campus in Caracas, Venezuela of 4Geeks Academy"
+  description: "Get to know here all about our coding bootcamp campus in Caracas, Venezuela of 4GeeksAcademy"
   image: "/images/og-preview/caracas-venezuela.us.png"
   keywords: ""
   template: "location"
@@ -81,6 +81,31 @@ images_box:
       alt: "Remote-Coding-Bootcamp"
     - path: "../../../static/images/locations/caracas-graduates.png"
       alt: "4Geeeks Caracas graduates"
+
+two_columns:
+  proportions: [6, 6]
+  image:
+    style: '{"border" : "5px solid black", "backgroundSize": "contain" }'
+    src: "/static/images/staff/luisa.png"
+    shadow: true  
+  video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
+  heading:
+    text: "Luisa Glum's Insights about 4Geeks Academy in Caracas"
+    font_size: ["30px", "30px", "30px", "30px", "30px"]
+  sub_heading:
+    text: "Luisa chooses 4Geeks Academy for this and other advantages"
+    font_size: ["18px", "18px", "22px", "22px", "22px"]
+  button:
+    text: "¡Únete ahora!"
+    color: "white"
+    background: "black"
+    path: "/es/aplica"
+  bullets:
+    items:
+    - text: "Accessibility through various opportunities for financial support"
+    - text: "Hands-on projects fostering practical skill mastery"
+    - text: "Industry-aligned curriculum for real-world readiness"
+    - text: "Discover why 4Geeks Academy stands out as the best option to learn programming"
 
 ## START FROM HERE - DON'T CHANGE ANYTHING ABOVE
 ## HEADING SECTION

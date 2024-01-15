@@ -592,7 +592,7 @@ export const landingSections = {
   },
 
   cards_carousel: ({ session, pageContext, yml, data, index }) => {
-    const { heading, sub_heading, content, cards, button } = yml;
+    const { heading, sub_heading, content, cards, button, width } = yml;
     return (
       <React.Fragment key={index}>
         <Div
@@ -609,6 +609,7 @@ export const landingSections = {
           <CardsCarousel
             landingTemplate
             title={heading}
+            cardWidth={width}
             sub_title={sub_heading}
             content={content}
             cards={cards}
