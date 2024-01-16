@@ -167,7 +167,7 @@ const Outcomes = ({ data, pageContext, yml }) => {
         padding_lg="40px 0px"
         padding_tablet="40px 40px"
         // padding="0 0 50px 0"
-        flexDirection="column"
+        flexDirection="column" 
       >
         <Div
           display="flex"
@@ -185,11 +185,11 @@ const Outcomes = ({ data, pageContext, yml }) => {
           alignItems="center"
           flexDirection="row"
           gap="40px"
-          width="100%"
+          width="100vw"
           height="70px"
           className="scroll-spy-container"
         >
-          <ScrollSpy offsetTop={140} autoScrollOffsetTop={-140}>
+          <ScrollSpy offsetTop={140} autoScrollOffsetTop={-140} id="Scroll">
             {yml.sections
               .filter((i) => i.title !== "")
               .map((m) => (
