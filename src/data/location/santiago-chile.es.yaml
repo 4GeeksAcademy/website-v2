@@ -67,7 +67,7 @@ upcoming:
 
 images_box:
   heading: "Lo que debes saber de nuestra sede en Santiago de Chile: "
-  content: "Chile se posiciona como uno de los países con mayor crecimiento digital en los próximos años, y particularmente en Santiago se ha fomentado la tendencia de los bootcamps en estos últimos años, entre ellos se encuentra 4Geeks Academy. Nos hemos convertido en una gran oportunidad de estudio para muchos chilenos y extranjeros que quieren cambiar su vida y aprender acerca del desarrollo web.A 10 min camindando desde la estación del metro y ubicada en la zona oriente de la ciudad, esta oficina es ideal para todos los Santiaguinos que quieran convertirse en programadores. Reciendemente remodelada, con internet de alta velocidad y acceso ilimitado para nuestros alumnos."
+  content: "Chile se posiciona como uno de los países con mayor crecimiento digital en los próximos años, y particularmente en Santiago se ha fomentado la tendencia de los bootcamps en estos últimos años, entre ellos se encuentra 4GeeksAcademy. Nos hemos convertido en una gran oportunidad de estudio para muchos chilenos y extranjeros que quieren cambiar su vida y aprender acerca del desarrollo web.A 10 min camindando desde la estación del metro y ubicada en la zona oriente de la ciudad, esta oficina es ideal para todos los Santiaguinos que quieran convertirse en programadores. Reciendemente remodelada, con internet de alta velocidad y acceso ilimitado para nuestros alumnos."
   images:
     - path: "../../../static/images/locations/santiago-office-1.jpeg"
       alt: "Santiago Location Image"
@@ -88,21 +88,21 @@ two_columns:
     shadow: true  
   video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
   heading:
-    text: "4Geeks, Argentina and a story full of opportunities"
+    text: "La Experiencia de Luisa Glum en 4Geeks Academy en Santiago, Chile"
     font_size: ["30px", "30px", "30px", "30px", "30px"]
   sub_heading:
-    text: "We are Buenos Aires based and we have been focusing in bringing on more opportunities."
+    text: "Desarrolla tus Habilidades Tecnológicas desde Santiago, Chile"
     font_size: ["18px", "18px", "22px", "22px", "22px"]
   button:
-    text: "APPLY NOW"
+    text: "¡Únete ahora!"
     color: "white"
     background: "black"
-    path: "/us/apply"
+    path: "/es/aplica"
   bullets:
     items: 
-    - text: "There is always a full or partial scholarship open"
-    - text: "There is always opportunities for everyone in Miami-Dade County, Broward and Palm Beach"
-    - text: "We have ongoing partnerships with Miami Dade College, Miami Tech Coalition, UWM, The City of Miami, Miami Dade Counti and so manu more."
+    - text: "Luisa Glum comparte su trayectoria personal y cómo 4Geeks Academy transformó su camino profesional en el cambiante panorama tecnológico de Santiago"
+    - text: "4Geeks Academy se enorgullece de tener una tasa de colocación laboral del 95% en los seis meses posteriores a la graduación, garantizando un progreso profesional concreto para nuestros estudiantes"
+    - text: "Preparación para desafíos del mundo real y oportunidades laborales en tecnología"
 
 active_campaign_location_slug: "santiago-chile"
 breathecode_location_slug: "santiago-chile"

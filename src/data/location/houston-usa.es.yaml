@@ -2,7 +2,7 @@ meta_info:
   slug: "bootcamp-programacion-houston"
   position: 1
   title: "4Geeks Academy Houston - Bootcamp de programación en Houston, aprende a programar en Houston"
-  description: "Conoce aquí todo sobre nuestro campus de bootcamp de programación en Houston, Texas de 4Geeks Academy"
+  description: "Conoce aquí todo sobre nuestro campus de bootcamp de programación en Houston, Texas de 4GeeksAcademy"
   image: "/images/og-preview/downtown-miami.es.png"
   keywords: "null"
   redirects: []
@@ -82,25 +82,25 @@ two_columns:
   proportions: [6, 6]
   image:
     style: '{"border" : "5px solid black", "backgroundSize": "contain" }'
-    src: "/static/images/staff/luisa.png"
+    src: "/static/images/testimonials/allisa-testimonial.jpg"
     shadow: true  
-  video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
+  video: "https://www.youtube.com/watch?v=TCHASxvkhpI"
   heading:
-    text: "4Geeks, Argentina and a story full of opportunities"
+    text: "Descubre el Escenario de la Programación en Houston"
     font_size: ["30px", "30px", "30px", "30px", "30px"]
   sub_heading:
-    text: "We are Buenos Aires based and we have been focusing in bringing on more opportunities."
+    text: "Perspectivas de Alissa sobre 4GeeksAcademy"
     font_size: ["18px", "18px", "22px", "22px", "22px"]
   button:
-    text: "APPLY NOW"
+    text: "¡Únete ahora!"
     color: "white"
     background: "black"
-    path: "/us/apply"
+    path: "/es/aplica"
   bullets:
     items: 
-    - text: "There is always a full or partial scholarship open"
-    - text: "There is always opportunities for everyone in Miami-Dade County, Broward and Palm Beach"
-    - text: "We have ongoing partnerships with Miami Dade College, Miami Tech Coalition, UWM, The City of Miami, Miami Dade Counti and so manu more."
+    - text: "Plan de estudios alineado con la industria enfocado en su aplicabilidad práctica"
+    - text: "Aprendizaje práctico basado en proyectos para el perfeccionamiento de habilidades"
+    - text: "Orientación profesional para navegar el dinámico sector tecnológico de Chicago"
 
 active_campaign_location_slug: "houston-usa"
 breathecode_location_slug: "houston-usa"

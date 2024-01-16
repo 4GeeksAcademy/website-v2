@@ -22,7 +22,7 @@ header:
   tagline: "4Geeks Academy in Santiago de Chile"
   sub_header: "All programs are taught "
   sub_header_highlighted: "Online or Hybrid."
-  paragraph: "Chile is positioned as one of the countries with the highest digital growth in the coming years, and particularly in Santiago the trend of bootcamps has been fostered in recent years, among them is 4Geeks Academy. We have become a great study opportunity for many Chileans and foreigners who want to change their lives and learn about web development."
+  paragraph: "Chile is positioned as one of the countries with the highest digital growth in the coming years, and particularly in Santiago the trend of bootcamps has been fostered in recent years, among them is 4GeeksAcademy. We have become a great study opportunity for many Chileans and foreigners who want to change their lives and learn about web development."
   image: "../../../static/images/locations/santiago-home.png"
   alt: ""
 button_header:
@@ -74,7 +74,7 @@ upcoming:
 
 images_box:
   heading: "What you should know about this location: "
-  content: "Chile is positioning itself as one of the countries with the highest digital growth in the coming years, and particularly in Santiago, the trend of bootcamps has been encouraged in recent years, including 4Geeks Academy. We have become a great study opportunity for many Chileans and foreigners who want to change their lives and learn about web development. Located a 10-minute walk from the metro station and situated in the eastern part of the city, this office is ideal for all Santiaguinos who want to become programmers. Recently renovated, with high-speed internet and unlimited access for our students."
+  content: "Chile is positioning itself as one of the countries with the highest digital growth in the coming years, and particularly in Santiago, the trend of bootcamps has been encouraged in recent years, including 4GeeksAcademy. We have become a great study opportunity for many Chileans and foreigners who want to change their lives and learn about web development. Located a 10-minute walk from the metro station and situated in the eastern part of the city, this office is ideal for all Santiaguinos who want to become programmers. Recently renovated, with high-speed internet and unlimited access for our students."
   images:
     - path: "../../../static/images/locations/santiago-office-1.jpeg"
       alt: "Santiago Location Image"
@@ -95,10 +95,10 @@ two_columns:
     shadow: true  
   video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
   heading:
-    text: "4Geeks, Argentina and a story full of opportunities"
+    text: "Luisa Glum's Experience at 4Geeks Academy in Santiago, Chile"
     font_size: ["30px", "30px", "30px", "30px", "30px"]
   sub_heading:
-    text: "We are Buenos Aires based and we have been focusing in bringing on more opportunities."
+    text: "Transformative Journeys and the Income Share Agreement, Elevate Your Tech Skills from Santiago, Chile"
     font_size: ["18px", "18px", "22px", "22px", "22px"]
   button:
     text: "APPLY NOW"
@@ -107,9 +107,9 @@ two_columns:
     path: "/us/apply"
   bullets:
     items: 
-    - text: "There is always a full or partial scholarship open"
-    - text: "There is always opportunities for everyone in Miami-Dade County, Broward and Palm Beach"
-    - text: "We have ongoing partnerships with Miami Dade College, Miami Tech Coalition, UWM, The City of Miami, Miami Dade Counti and so manu more."
+    - text: "Luisa Glum shares her personal journey and how 4Geeks Academy transformed her career path in Santiago's evolving tech landscape"
+    - text: "Learn about the innovative Income Share Agreement (ISA) model, a pioneering approach where tuition is paid after securing a job, ensuring access to quality education"
+    - text: "With a 95% job placement rate within six months of graduation, our programs ensure tangible outcomes for career advancement"
 
 active_campaign_location_slug: "santiago-chile"
 breathecode_location_slug: "santiago-chile"
