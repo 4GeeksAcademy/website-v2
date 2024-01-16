@@ -68,8 +68,6 @@ const Location = ({ data, pageContext, yml }) => {
     es: "SELECCIONAR PROGRAMA",
   };
 
-  console.log(yml);
-
   return (
     <>
       <GridContainerWithImage
@@ -266,9 +264,21 @@ const Location = ({ data, pageContext, yml }) => {
       {/* GEEKSINFO IS A TWOCOLUMN WITH TITLE */}
       <GeeksInfo lang={pageContext.lang} />
 
-      {/* <MosaicImages yml={yml.images_box}/> */}
+
+      <GridContainerWithImage 
+        maxWidth_tablet="1366px"
+        margin="0 auto"
+        padding="0"
+        gridColumn_tablet="1 / span 14"
+        images={yml?.images_box?.images}
+        heading={yml?.images_box?.heading}
+        paragraph={yml?.images_box?.content}
+        horizontal={yml?.images_box?.layout_horizontal}
+        //customSettingsCarousel={}
+      />
 
       <Gallery
+        horizontal={yml?.images_box?.layout_horizontal}
         images={yml?.images_box?.images}
         heading={yml?.images_box?.heading}
         paragraph={yml?.images_box?.content}
@@ -276,50 +286,7 @@ const Location = ({ data, pageContext, yml }) => {
         heightImage="347px"
         previewArrow
         nextArrow
-        customSettingsCarousel={{
-          dotsClass: "slick-dots-staff",
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          className: "carousel-class ", // staff-class | carousel-class-noprev-arrow | carousel-class-nonext-arrow | carousel-class-noarrow
-          responsive: [
-            {
-              breakpoint: 1439,
-              settings: {
-                slidesToShow: 3,
-                slidesToScroll: 3,
-                infinite: false,
-                dots: true,
-              },
-            },
-            {
-              breakpoint: 1024,
-              settings: {
-                slidesToShow: 3,
-                slidesToScroll: 3,
-                infinite: false,
-                dots: true,
-              },
-            },
-            {
-              breakpoint: 768,
-              settings: {
-                slidesToShow: 2,
-                slidesToScroll: 2,
-                infinite: false,
-                dots: true,
-              },
-            },
-            {
-              breakpoint: 450,
-              settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                infinite: false,
-                dots: true,
-              },
-            },
-          ],
-        }}
+        //customSettingsCarousel={}
       />
 
       <ChooseYourProgram
@@ -464,6 +431,7 @@ export const query = graphql`
           images_box {
             heading
             content
+            layout_horizontal
             images {
               path {
                 childImageSharp {

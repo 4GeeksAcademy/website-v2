@@ -79,6 +79,7 @@ images_box:
       alt: "Santiago Location Image"
     - path: "../../../static/images/locations/santiago-1.png"
       alt: "Santiago Location Image"
+  layout_horizontal: true #false == "mode mosaic"
 
 two_columns:
   proportions: [6, 6]

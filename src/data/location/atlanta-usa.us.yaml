@@ -78,6 +78,7 @@ images_box:
       alt: "4Geeeks miami location"
     - path: "../../../static/images/locations/miami-people.jpeg"
       alt: "4Geeeks miami lab"
+  layout_horizontal: true #false == "mode mosaic"
 
 ## START FROM HERE - DON'T CHANGE ANYTHING ABOVE
 

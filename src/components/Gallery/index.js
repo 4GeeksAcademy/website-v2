@@ -9,6 +9,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { SessionContext } from "../../session";
 import Carousel from "../Carousel";
 import "../../assets/css/carousel.css";
+import MosaicImages from "../MosaicImages";
 
 const Gallery = ({
   heading,
@@ -19,7 +20,10 @@ const Gallery = ({
   heightImage,
   previewArrow,
   nextArrow,
+  horizontal
 }) => {
+
+  
   return (
     <>
       <Div
@@ -30,8 +34,8 @@ const Gallery = ({
         padding_tablet="40px 40px 10px 40px"
         margin_tablet="0 auto 30px auto"
         margin="0 0 36px 0"
-        maxWidth="1366px"
-      >
+        maxWidth={"1366px"}
+      >{heading &&
         <Div
           alignItems="start"
           flexDirection="column"
@@ -62,42 +66,91 @@ const Gallery = ({
             </Paragraph>
           </Div>
         </Div>
-
-        <Div
-          alignItems="center"
-          justifyContent="between"
-          position="relative"
-          display="block"
-        >
-          <Carousel
-            customSettings={customSettingsCarousel}
-            previewArrow={previewArrow}
-            nextArrow={nextArrow}
-          >
-            {Array.isArray(images) &&
-              images.map((item, index) => {
-                return (
-                  <Div
-                    width={widthImage || "100%"}
-                    height={heightImage || "100%"}
-                  >
-                    <GatsbyImage
-                      image={getImage(
-                        item.path && item.path.childImageSharp.gatsbyImageData
-                      )}
-                      style={{
-                        height: "100%",
-                        //width: "220px",
-                        //minWidth: "100%",
-                        backgroundSize: `cover`,
-                      }}
-                      alt={item.alt}
-                    />
-                  </Div>
-                );
-              })}
-          </Carousel>
-        </Div>
+        }{
+          horizontal ?
+            <Div
+              alignItems="center"
+              justifyContent="between"
+              position="relative"
+              display="block"
+            >
+              <Carousel
+                customSettings={customSettingsCarousel || {
+                  dotsClass: "slick-dots-staff",
+                  slidesToShow: 3,
+                  slidesToScroll: 3,
+                  className: "carousel-class ", // staff-class | carousel-class-noprev-arrow | carousel-class-nonext-arrow | carousel-class-noarrow
+                  responsive: [
+                    {
+                      breakpoint: 1439,
+                      settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 3,
+                        infinite: false,
+                        dots: true,
+                      },
+                    },
+                    {
+                      breakpoint: 1024,
+                      settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 3,
+                        infinite: false,
+                        dots: true,
+                      },
+                    },
+                    {
+                      breakpoint: 768,
+                      settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2,
+                        infinite: false,
+                        dots: true,
+                      },
+                    },
+                    {
+                      breakpoint: 450,
+                      settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        infinite: false,
+                        dots: true,
+                      },
+                    },
+                  ],
+                }}
+                previewArrow={previewArrow}
+                nextArrow={nextArrow}
+              >
+                {Array.isArray(images) &&
+                  images.map((item, index) => {
+                    return (
+                      <Div
+                        width={widthImage || "100%"}
+                        height={heightImage || "100%"}
+                      >
+                        <GatsbyImage
+                          image={getImage(
+                            item.path && item.path.childImageSharp.gatsbyImageData
+                          )}
+                          style={{
+                            height: "100%",
+                            //width: "220px",
+                            //minWidth: "100%",
+                            backgroundSize: `cover`,
+                          }}
+                          alt={item.alt}
+                        />
+                      </Div>
+                    );
+                  })}
+              </Carousel>
+            </Div>
+            :
+            <MosaicImages
+              images={images}
+            />
+        }
       </Div>
     </>
   );
