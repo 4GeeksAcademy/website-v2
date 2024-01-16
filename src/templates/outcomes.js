@@ -172,14 +172,14 @@ const Outcomes = ({ data, pageContext, yml }) => {
         <Div
           display="flex"
           display_tablet="none"
-          margin="0 0 0 -17px"
+          margin="0 0 0 -20px"
           background={Colors.white}
           style={{
             borderBottom: "1px solid #EBEBEB",
             overflowX: "auto",
             zIndex: "999",
             position: "sticky",
-            top: `${isCustomBarActive(session) ? "50px" : "0"}`,
+            top: `${isCustomBarActive(session) ? "109px" : "109px"}`,
           }}
           padding="0 35px"
           alignItems="center"
