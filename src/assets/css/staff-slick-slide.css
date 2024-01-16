@@ -1,0 +1,46 @@
+.main-scroll-div {
+}
+
+.cover {
+}
+
+.scroll-elements {
+  scroll-behavior: smooth;
+}
+
+.scroll-elements::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+
+.scroll-elements::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  /* color of the scroll thumb */
+}
+
+.child {
+  cursor: pointer;
+}
+
+.dot:hover {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  background-color: rgb(0, 0, 0);
+  padding: 10px;
+  width: 16px;
+  height: 16px;
+  font-size: 20px;
+  border-radius: 100%;
+}
+
+.dot {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  background-color: rgb(160, 160, 160);
+  padding: 10px;
+  width: 16px;
+  height: 16px;
+  font-size: 20px;
+  border-radius: 100%;
+}

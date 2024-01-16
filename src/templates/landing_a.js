@@ -84,7 +84,7 @@ const Landing = (props) => {
   // const landingLocation =
   //   session &&
   //   session.locations?.find(
-  //     (l) => l.breathecode_location_slug === yml.meta_info.utm_location[0]
+  //     (l) => l.breathecode_location_slug === yml.meta_info.utm_location
   //   );
 
   const landingLocation =
@@ -100,8 +100,6 @@ const Landing = (props) => {
       : session.locations?.find(
           (l) => l.breathecode_location_slug === yml.meta_info.utm_location[0]
         ));
-
-  console.log(landingLocation, session, yml.meta_info.utm_location);
 
   return (
     <>
@@ -979,6 +977,7 @@ export const query = graphql`
                 icon
               }
             }
+            weeks
             sub_heading
             left_labels {
               description

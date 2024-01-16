@@ -81,6 +81,31 @@ images_box:
     - path: "../../../static/images/locations/miami-people.jpeg"
       alt: "4Geeeks lab"
 
+two_columns:
+  proportions: [6, 6]
+  image:
+    style: '{"border" : "5px solid black", "backgroundSize": "contain" }'
+    src: "/static/images/staff/hernan-new.png"
+    shadow: true  
+  video: "ln3bQsV1BaQ"
+  heading:
+    text: "Hernan's Experience at 4Geeks Academy in Rome, Italy"
+    font_size: ["30px", "30px", "30px", "30px", "30px"]
+  sub_heading:
+    text: "Discover how Hernan García has shaped his career with 4GeeksAcademy. Explore how our programs have molded his professional journey from Rome, Italy"
+    font_size: ["18px", "18px", "22px", "22px", "22px"]
+  button:
+    text: "APPLY NOW"
+    color: "white"
+    background: "black"
+    path: "/us/apply"
+  bullets:
+    items: 
+    - text: "With a 90% job placement rate within six months of graduation, our programs ensure tangible outcomes for career advancement"
+    - text: "Flexible learning options, including part-time and immersive courses, cater to diverse schedules and learning preferences"
+    - text: "Exclusive networking events and workshops provide opportunities to interact with tech leaders and expand professional connections"
+
+
 active_campaign_location_slug: "rome-italy"
 breathecode_location_slug: "rome-italy"
 gdpr_compliant: true # do we need to ask for permision?

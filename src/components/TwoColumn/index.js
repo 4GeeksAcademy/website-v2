@@ -44,7 +44,6 @@ const Side = ({
           ? imgStyles.height
           : [imgStyles.height]
         : ["100%"];
-    console.log(image);
     return image?.src ? (
       <Img
         src={image.src}
@@ -95,7 +94,7 @@ const Side = ({
       {header && (
         <Div
           margin="0 0 30px 0"
-          justifyContent="center"
+          justifyContent="start"
           justifyContent_md="start"
         >
           {Array.isArray(header) &&
@@ -117,6 +116,7 @@ const Side = ({
         <H2
           type="h2"
           textAlign_tablet="left"
+          textAlign="left"
           lineHeight="38px"
           lineHeight_tablet="38px"
           fontSize={h_xs || "30px"}
@@ -132,6 +132,7 @@ const Side = ({
       {sub_heading && (
         <Paragraph
           textAlign_tablet="left"
+          textAlign="left"
           margin="0"
           fontSize={sh_xl || "18px"}
           fontSize_sm={sh_sm}
@@ -265,7 +266,7 @@ const Side = ({
         <Button
           outline
           borderRadius="0"
-          colorHoverText={button.hover_color || Colors.blue}
+          colorHoverText={button.hover_color || ""}
           background={Colors[button.background] || button.background}
           lineHeight="26px"
           textColor={Colors.black}
@@ -300,8 +301,10 @@ const TwoColumn = ({ left, right, proportions, session }) => {
       gap_tablet={left?.gap_tablet || right?.gap_tablet || "20px"}
       flexDirection_tablet="row"
       m_sm="0px auto 100px auto"
+      margin_tablet="0 auto"
+      margin_xxs="0"
       margin="auto"
-      padding_xxs="40px 20px"
+      padding="40px 20px"
       padding_md="40px 80px"
       padding_lg="40px 0px"
       padding_tablet="40px 40px"
@@ -309,25 +312,25 @@ const TwoColumn = ({ left, right, proportions, session }) => {
       maxWidth_md="1366px"
     >
       <Div
-        justifyContent={left?.video && "center"}
+        justifyContent={left?.video && "left"}
         flexDirection="column"
         size_tablet={left_size || 6}
         size="12"
         padding_xs="0"
         padding_md={right?.image?.shadow ? "0 20px 0 0 " : "0px"}
         // maxHeight="300px"
-        textAlign="center"
+        textAlign="left"
       >
         <Side session={session} {...left} />
       </Div>
       <Div
-        justifyContent={right?.video && "center"}
+        justifyContent={right?.video && "left"}
         flexDirection="column"
         size_tablet={right_size || 6}
         padding_xs="0"
         padding_md={left?.image?.shadow ? "0 0 0 20px" : "0px"}
         size="12"
-        textAlign="center"
+        textAlign="left"
       >
         <Side session={session} {...right} />
       </Div>
