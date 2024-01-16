@@ -482,14 +482,9 @@ const PricesAndPayments = (props) => {
   // sync property course
   useEffect(
     () => (
-      props.financial ? (
-        setModality(modalityArray.find((d) => d.value === props.programType))
-      ) :
-        (
+      setCourse(courseArray.find((c) => c.value === props.courseType)),
+      setModality(modalityArray.find((d) => d.value === props.programType))
 
-          setCourse(courseArray.find((c) => c.value === props.courseType)),
-          setModality(modalityArray.find((d) => d.value === props.programType))
-        )
 
     ),
     [props.courseType, props.programType]
@@ -584,138 +579,72 @@ const PricesAndPayments = (props) => {
             )}
             &nbsp;
             {course && (
-              <Div>
-                <Div
-                  width_tablet="220px"
-                  width_md="320px"
-                  width_xs="320px"
-                  width_xxs="280px"
-                >
-                  <SelectRaw
-                    placeholderFloat
-                    bgColor={Colors.white}
-                    single
-                    options={locations.map((l) => ({
-                      label: l.node.name,
-                      value: l.node.active_campaign_location_slug,
-                    }))}
-                    placeholder={info.top_label}
-                    value={{
-                      label: currentLocation?.name,
-                      value: currentLocation?.active_campaign_location_slug,
-                    }}
-                    onChange={(opt) =>
-                      setCurrentLocation(
-                        locations.find(
-                          (l) =>
-                            l.node.active_campaign_location_slug === opt.value
-                        ).node
-                      )
-                    }
-                    style={{
-                      input: (styles) => ({
-                        ...styles,
-                        width: "100%",
-                        margin: "5px 0px",
-                      }),
-                      control: (styles, state) => ({
+              <Div
+                width_tablet="220px"
+                width_md="320px"
+                width_xs="320px"
+                width_xxs="280px"
+              >
+                <SelectRaw
+                  placeholderFloat
+                  bgColor={Colors.white}
+                  single
+                  options={locations.map((l) => ({
+                    label: l.node.name,
+                    value: l.node.active_campaign_location_slug,
+                  }))}
+                  placeholder={info.top_label}
+                  value={{
+                    label: currentLocation?.name,
+                    value: currentLocation?.active_campaign_location_slug,
+                  }}
+                  onChange={(opt) =>
+                    setCurrentLocation(
+                      locations.find(
+                        (l) =>
+                          l.node.active_campaign_location_slug === opt.value
+                      ).node
+                    )
+                  }
+                  style={{
+                    input: (styles) => ({
+                      ...styles,
+                      width: "100%",
+                      margin: "5px 0px",
+                    }),
+                    control: (styles, state) => ({
+                      ...styles,
+                      fontFamily: "Lato, sans-serif",
+                      background: "#ffffff",
+                      border: "1px solid #000",
+                      boxShadow: "none",
+                      marginBottom: "0px",
+                      marginTop: "0px",
+                      width: "100%",
+                      fontSize: "15px",
+                      fontWeight: "400",
+                      fontStyle: "italic",
+                      color: "#000",
+                      lineHeight: "22px",
+                      "&:hover": { boxShadow: "0 0 0 1px black" },
+                      "&:focus": {
+                        boxShadow: "0 0 0 1px black",
+                        border: "1px solid #000000",
+                      },
+                    }),
+                    option: (
+                      styles,
+                      { data, isDisabled, isFocused, isSelected }
+                    ) => {
+                      return {
                         ...styles,
                         fontFamily: "Lato, sans-serif",
-                        background: "#ffffff",
-                        border: "1px solid #000",
-                        boxShadow: "none",
-                        marginBottom: "0px",
-                        marginTop: "0px",
-                        width: "100%",
-                        fontSize: "15px",
-                        fontWeight: "400",
-                        fontStyle: "italic",
-                        color: "#000",
-                        lineHeight: "22px",
-                        "&:hover": { boxShadow: "0 0 0 1px black" },
-                        "&:focus": {
-                          boxShadow: "0 0 0 1px black",
-                          border: "1px solid #000000",
-                        },
-                      }),
-                      option: (
-                        styles,
-                        { data, isDisabled, isFocused, isSelected }
-                      ) => {
-                        return {
-                          ...styles,
-                          fontFamily: "Lato, sans-serif",
-                        };
-                      },
-                    }}
-                  />
-                </Div>
-                <Div
-                  width_tablet="220px"
-                  width_md="320px"
-                  width_xs="320px"
-                  width_xxs="280px"
-                >
-                  <SelectRaw
-                    placeholderFloat
-                    bgColor={Colors.white}
-                    single
-                    options={locations.map((l) => ({
-                      label: l.node.name,
-                      value: l.node.active_campaign_location_slug,
-                    }))}
-                    placeholder={info.top_label}
-                    value={{
-                      label: currentLocation?.name,
-                      value: currentLocation?.active_campaign_location_slug,
-                    }}
-                    onChange={(opt) =>
-                      setCurrentLocation(
-                        locations.find(
-                          (l) =>
-                            l.node.active_campaign_location_slug === opt.value
-                        ).node
-                      )
-                    }
-                    style={{
-                      input: (styles) => ({
-                        ...styles,
-                        width: "100%",
-                        margin: "5px 0px",
-                      }),
-                      control: (styles, state) => ({
-                        ...styles,
-                        fontFamily: "Lato, sans-serif",
-                        background: "#ffffff",
-                        border: "1px solid #000",
-                        boxShadow: "none",
-                        marginBottom: "0px",
-                        marginTop: "0px",
-                        width: "100%",
-                        fontSize: "15px",
-                        fontWeight: "400",
-                        fontStyle: "italic",
-                        color: "#000",
-                        lineHeight: "22px",
-                        "&:hover": { boxShadow: "0 0 0 1px black" },
-                        "&:focus": {
-                          boxShadow: "0 0 0 1px black",
-                          border: "1px solid #000000",
-                        },
-                      }),
-                      option: (
-                        styles,
-                        { data, isDisabled, isFocused, isSelected }
-                      ) => {
-                        return {
-                          ...styles,
-                          fontFamily: "Lato, sans-serif",
-                        };
-                      },
-                    }}
-                  />
-                </Div>
+                      };
+                    },
+                  }}
+                />
               </Div>
+
             )}
           </Div>
         </Div>

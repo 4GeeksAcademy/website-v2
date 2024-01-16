@@ -79,8 +79,6 @@ const Home = (props) => {
   // (session?.location?.custom_bar.active && isTestMode) ||
   // (session?.location?.custom_bar.active && !isDevelopment());
 
-  console.log(yml)
-
   return (
     <>
       <Div

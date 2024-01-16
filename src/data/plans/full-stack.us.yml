@@ -10,7 +10,7 @@ full_time:
       - "Regular tuition is $11999. Avg tuition in the US is $15k."
       - "Remaining balance could be paid over time $100 p/mo"
     icons: 
-      - "/static/images/clarkuniversity.png"
+      - "images/clarkuniversity.png"
   - slug: 'usa-financed-ft'
     academies: ['toronto-canada', downtown-miami', 'orlando', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa']
     recomended: false
@@ -35,7 +35,7 @@ full_time:
       - "8.5% of your salary until paid in full, only if you get a job in tech."
       - "Only start making payments after you find a Job"
     icons: 
-      -  "/static/images/clarkuniversity.png"
+      -  "/images/clarkuniversity.png"
 
   - slug: 'usa-fs-ft'
     academies: ['downtown-miami']
@@ -274,7 +274,7 @@ part_time:
       - "You're saving $4000 USD. Thanks to Clark University and the TechBoost Fund"
       - "You have to be underemployed or unemployed, and provide a valid US Work permit."
     icons: 
-      - "/static/images/clarkuniversity.png"
+      - "/images/clarkuniversity.png"
     
   - slug: 'usa-clark-scholarship-pt-miami'
     academies: ['downtown-miami', 'orlando', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'toronto-canada']

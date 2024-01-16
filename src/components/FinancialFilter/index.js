@@ -249,8 +249,6 @@ const FinancialFilter = (props) => {
     setFirstLoadData(false);
   }
 
-  console.log(prices);
-
   return (
     <Div
       background="transparent"
@@ -375,7 +373,8 @@ const FinancialFilter = (props) => {
             {info.pricing_error_contact}
           </Paragraph>
         </>
-      ) : (<></>
+      ) : (
+        <></>
         // <GridContainer
         //   padding="0"
         //   //containerColumns_md={`2fr repeat(12, 1fr) 2fr`}

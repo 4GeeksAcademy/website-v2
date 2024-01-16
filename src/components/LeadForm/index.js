@@ -432,7 +432,7 @@ const LeadForm = ({
                   <React.Fragment key={i}>
                     {_field.name !== "phone" && (
                       <Input
-                        style={{ margin: "0 0 16px 0"}}
+                        style={{ margin: "0 0 16px 0" }}
                         data-cy={f}
                         id={f}
                         bgColor={inputBgColor || "#FFFFFF"}

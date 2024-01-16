@@ -14,12 +14,14 @@ import Icon from "../components/Icon";
 import WeTrust from "../components/WeTrust";
 import PricesAndPayment from "../components/PricesAndPayment";
 import Iconogram from "../components/Iconogram";
-import TwoColumn from "../components/TwoColumn";
+import TwoColumn from "../components/TwoColumn/index.js";
 import Badges from "../components/Badges";
 
 const Financial = (props) => {
   const { session } = React.useContext(SessionContext);
+
   const { data, pageContext, yml } = props;
+
   let location = null;
   if (session && session.location) {
     location = data.allLocationYaml.edges.find(
@@ -33,6 +35,8 @@ const Financial = (props) => {
   const ymlTwoColumn = yml?.two_columns;
   const course_type = "full_stack";
   const program_type = "part_time";
+
+  console.log(yml)
 
   return (
     <>
@@ -190,7 +194,7 @@ const Financial = (props) => {
         financial // Indicates that it is running from financial.js and alters the component structure
       />
 
-      <TwoColumn
+      {/* <TwoColumn
         right={{ image: ymlTwoColumn[0].image }}
         left={{
           heading: ymlTwoColumn[0].heading,
@@ -204,7 +208,7 @@ const Financial = (props) => {
         }}
         proportions={ymlTwoColumn.proportions}
         session={session}
-      />
+      /> */}
 
       <Badges
         link
@@ -228,7 +232,7 @@ const Financial = (props) => {
         }}
       />
 
-      <TwoColumn
+      {/* <TwoColumn
         left={{ image: ymlTwoColumn[1].image }}
         right={{
           heading: ymlTwoColumn[1].heading,
@@ -241,11 +245,11 @@ const Financial = (props) => {
         }}
         proportions={ymlTwoColumn[1].proportions}
         session={session}
-      />
+      /> */}
 
       <WeTrust we_trust={yml.we_trust_section} />
 
-      <TwoColumn
+      {/* <TwoColumn
         right={{ image: ymlTwoColumn[2].image }}
         left={{
           heading: ymlTwoColumn[2].heading,
@@ -258,7 +262,7 @@ const Financial = (props) => {
         }}
         proportions={ymlTwoColumn[2].proportions}
         session={session}
-      />
+      /> */}
     </>
   );
 };
@@ -359,45 +363,6 @@ export const query = graphql`
               alt
             }
           }
-          two_columns {
-            proportions
-            image {
-              style
-              src
-            }
-            heading {
-              text
-              font_size
-            }
-            sub_heading {
-              text
-              font_size
-            }
-            bullets {
-              item_style
-              items {
-                heading
-                text
-                icon
-              }
-            }
-            content {
-              text
-              font_size
-            }
-            button {
-              text
-              color
-              background
-              hover_color
-              path
-            }
-            boxes {
-              icon
-              title
-              text
-            }
-          }
           we_trust_section {
             title
             text
@@ -442,6 +407,44 @@ export const query = graphql`
               path
               background
               hover_color
+            }
+          }
+          two_columns{
+            proportions
+            image{
+              style
+              src
+            }
+            heading{
+              text
+              font_size
+            }
+            sub_heading{
+              text
+              font_size
+            }
+            content{
+              font_size
+              text
+            }
+            button{
+              text
+              color
+              background
+              hover_color
+              path
+            }
+            bullets
+              item_style
+              items{
+                heading
+                text
+                icon
+              }
+            boxes{
+              icon
+              title
+              text
             }
           }
         }

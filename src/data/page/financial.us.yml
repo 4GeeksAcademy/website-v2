@@ -118,12 +118,12 @@ two_columns:
       hover_color: white
       path: "/us/20-million"
     boxes:
-    - icon: rocket-2
-      title: "14"
-      text: Projects completed
-    - icon: handsheart
-      title: "1465"
-      text: Beneficiaries so far
+      - icon: rocket-2
+        title: "14"
+        text: Projects completed
+      - icon: handsheart
+        title: "1465"
+        text: Beneficiaries so far
 
   - proportions:
       - 6
@@ -196,11 +196,11 @@ two_columns:
         - 16px
       text: The goal is to help you get a job within 180 days after graduation. You need to complete and meet the requirements in order to opt for the Money back if the job opportunity has not arrived within the time frame.
     button:
-        text: "APPLY"
-        color: "white"
-        background: "black"
-        hover_color: "white"
-        path: "/us/apply"
+      text: "APPLY"
+      color: "white"
+      background: "black"
+      hover_color: "white"
+      path: "/us/apply"
 
 partners:
   paragraph: "Don't miss out on the awesome allies of 4Geeks Academy! Here are just a few of them."
