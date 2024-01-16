@@ -167,7 +167,7 @@ const Outcomes = ({ data, pageContext, yml }) => {
         padding_lg="40px 0px"
         padding_tablet="40px 40px"
         // padding="0 0 50px 0"
-        flexDirection="column" 
+        flexDirection="column"
       >
         <Div
           display="flex"
