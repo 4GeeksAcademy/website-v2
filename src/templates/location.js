@@ -243,10 +243,10 @@ const Location = ({ data, pageContext, yml }) => {
       {data.allJobGuaranteeSmallYaml.edges[0].node.locations.includes(
         yml.breathecode_location_slug
       ) && (
-        <JobGuaranteeSmall
-          content={data.allJobGuaranteeSmallYaml.edges[0].node}
-        />
-      )}
+          <JobGuaranteeSmall
+            content={data.allJobGuaranteeSmallYaml.edges[0].node}
+          />
+        )}
 
       <TwoColumn
         left={{ image: yml.two_columns?.image, video: yml.two_columns?.video }}
@@ -264,30 +264,24 @@ const Location = ({ data, pageContext, yml }) => {
       {/* GEEKSINFO IS A TWOCOLUMN WITH TITLE */}
       <GeeksInfo lang={pageContext.lang} />
 
-
-      <GridContainerWithImage 
-        maxWidth_tablet="1366px"
-        margin="0 auto"
-        padding="0"
-        gridColumn_tablet="1 / span 14"
-        images={yml?.images_box?.images}
-        heading={yml?.images_box?.heading}
-        paragraph={yml?.images_box?.content}
-        horizontal={yml?.images_box?.layout_horizontal}
+      {yml?.images_box?.layout_horizontal ?
+        <Gallery
+          images={yml?.images_box?.images}
+          heading={yml?.images_box?.heading}
+          paragraph={yml?.images_box?.content}
+          widthImage="315px"
+          heightImage="347px"
+          previewArrow
+          nextArrow
         //customSettingsCarousel={}
-      />
-
-      <Gallery
-        horizontal={yml?.images_box?.layout_horizontal}
-        images={yml?.images_box?.images}
-        heading={yml?.images_box?.heading}
-        paragraph={yml?.images_box?.content}
-        widthImage="315px"
-        heightImage="347px"
-        previewArrow
-        nextArrow
-        //customSettingsCarousel={}
-      />
+        />
+        :
+        <MosaicImages
+          images={yml?.images_box?.images}
+          heading={yml?.images_box?.heading}
+          paragraph={yml?.images_box?.content}
+        />
+      }
 
       <ChooseYourProgram
         chooseProgramRef={chooseProgramRef}
@@ -326,7 +320,7 @@ const Location = ({ data, pageContext, yml }) => {
         faqs={data.allFaqYaml.edges[0].node.faq}
         topicSlug="enrollment"
         minPriority="1"
-        // locationSlug={yml.breathecode_location_slug}
+      // locationSlug={yml.breathecode_location_slug}
       />
 
       <RelatedPosts
