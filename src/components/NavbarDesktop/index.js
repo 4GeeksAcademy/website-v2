@@ -46,8 +46,8 @@ const Nav = styled.nav`
   display: ${(props) => props.display};
   position: ${(props) => props.position || "fixed"};
   width: 100%;
-  background: ${(props) => props.background || "white"};;
-  z-index: ${(props) => props.zIndex || "100"};;
+  background: ${(props) => props.background || "white"};
+  z-index: ${(props) => props.zIndex || "100"};
   top: ${(props) => props.top || "0"};
   align-items: center;
   justify-content: space-between;
@@ -148,8 +148,8 @@ export const Navbar = ({
       file(relativePath: { eq: "images/4geeksacademy-logo.png" }) {
         childImageSharp {
           gatsbyImageData(
-            layout: FIXED # --> CONSTRAINED || FIXED || FULL_WIDTH
-            width: 125
+            layout: FULL_WIDTH # --> CONSTRAINED || FIXED || FULL_WIDTH
+            width: 200
             placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
           )
         }
@@ -202,9 +202,9 @@ export const Navbar = ({
     }
   `);
 
-  const isContentBarActive = true
-    // (contentBar.active && isTestMode) ||
-    // (contentBar.active && !isDevelopment());
+  const isContentBarActive = true;
+  // (contentBar.active && isTestMode) ||
+  // (contentBar.active && !isDevelopment());
 
   const langDictionary = {
     us: "es",
@@ -214,8 +214,8 @@ export const Navbar = ({
   const locations = locByLanguage(data.allLocationYaml, langDictionary[lang]);
 
   return (
-    <Div 
-      display="inline" 
+    <Div
+      display="inline"
       position="fixed"
       width="100%"
       top="0"
@@ -243,6 +243,10 @@ export const Navbar = ({
             image={getImage(data.file.childImageSharp.gatsbyImageData)}
             // fixed={data.file.childImageSharp.fixed}
             alt="4Geeks Logo"
+            style={{
+              height: "39px",
+              width: "139px",
+            }}
           />
         </Link>
         <Menu>

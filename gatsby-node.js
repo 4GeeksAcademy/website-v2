@@ -432,7 +432,6 @@ const createEntityPagesfromYml = async (
         redirectInBrowser: true,
         isPermanent: true,
       });
-
     }
 
     if (node.meta_info && node.meta_info.redirects) {

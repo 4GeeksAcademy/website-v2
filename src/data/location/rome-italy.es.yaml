@@ -78,6 +78,30 @@ images_box:
     - path: "../../../static/images/locations/miami-people.jpeg"
       alt: "4Geeeks miami lab"
 
+two_columns:
+  proportions: [6, 6]
+  image:
+    style: '{"border" : "5px solid black", "backgroundSize": "contain" }'
+    src: "/static/images/staff/hernan-new.png"
+    shadow: true  
+  video: "ln3bQsV1BaQ"
+  heading:
+    text: "La Experiencia de Hernán en 4Geeks Academy en Roma, Italia"
+    font_size: ["30px", "30px", "30px", "30px", "30px"]
+  sub_heading:
+    text: "Desarrolla tus Habilidades en Tecnología desde Roma, Italia"
+    font_size: ["18px", "18px", "22px", "22px", "22px"]
+  button:
+    text: "¡Únete ahora!"
+    color: "white"
+    background: "black"
+    path: "/es/aplica"
+  bullets:
+    items: 
+    - text: "Cursos interactivos enfocados en habilidades técnicas esenciales para el mundo digital actual"
+    - text: "Acceso a profesores experimentados y una comunidad colaborativa de aprendizaje"
+    - text: "Preparación para desafíos del mundo real y oportunidades laborales en tecnología"
+
 active_campaign_location_slug: "rome-italy"
 breathecode_location_slug: "rome-italy"
 gdpr_compliant: true # do we need to ask for permision?

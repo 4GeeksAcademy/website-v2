@@ -81,6 +81,30 @@ images_box:
     - path: "../../../static/images/locations/miami-people.jpeg"
       alt: "4Geeeks lab"
 
+two_columns:
+  proportions: [6, 6]
+  image:
+    style: '{"border" : "5px solid black", "backgroundSize": "contain" }'
+    src: "/static/images/testimonials/Mattia-Tozzi-testimonial.jpg"
+    shadow: true  
+  video: "B01-eTfgqqc"
+  heading:
+    text: "La Experiencia de Mattia Tozzi en 4Geeks Academy en Valencia, España"
+    font_size: ["30px", "30px", "30px", "30px", "30px"]
+  sub_heading:
+    text: "Desarrolla tus Habilidades en Tecnología desde Valencia, España"
+    font_size: ["18px", "18px", "22px", "22px", "22px"]
+  button:
+    text: "¡Únete ahora!"
+    color: "white"
+    background: "black"
+    path: "/es/aplica"
+  bullets:
+    items: 
+    - text: "Cursos interactivos enfocados en habilidades técnicas esenciales para el mundo digital actual"
+    - text: "Acceso a profesores experimentados y una comunidad colaborativa de aprendizaje"
+    - text: "Preparación para desafíos del mundo real y oportunidades laborales en tecnología"
+
 active_campaign_location_slug: "valencia-spain"
 breathecode_location_slug: "valencia-spain"
 gdpr_compliant: true # do we need to ask for permision?

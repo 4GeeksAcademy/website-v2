@@ -34,8 +34,16 @@ const Blog = ({ data, pageContext, yml }) => {
         padding="35px 0 "
         padding_tablet="36px 40px 54px 0"
         columns_tablet="14"
-        margin={isCustomBarActive(session) ? "138px auto 30px auto" : "72px auto 30px auto"}
-        margin_md={isCustomBarActive(session) ? "120px auto 30px auto" : "72px auto 30px auto"}
+        margin={
+          isCustomBarActive(session)
+            ? "138px auto 30px auto"
+            : "72px auto 30px auto"
+        }
+        margin_md={
+          isCustomBarActive(session)
+            ? "120px auto 30px auto"
+            : "72px auto 30px auto"
+        }
       >
         <Div
           flexDirection="column"
