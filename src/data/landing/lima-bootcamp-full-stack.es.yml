@@ -41,6 +41,7 @@ apply_schollarship: # form that is displayed at the end of the landing
 header_data:
   background: "#FFF1D1"
   tagline: Full-stack software developer bootcamp
+  partner_logo_url: "../../../static/images/partner/min-produccion-peru.png"
   sub_heading: "Desde cero hasta conseguir tu primer trabajo como programador, aprende todo lo necesario, recibe soporte de por vida y consigue un empleo después de 10 semanas de estudio."
   badge: "../../../static/images/badges/Course-Report-Badge-2023.png"
   image_filter: brightness(0.3)
@@ -132,8 +133,24 @@ who_is_hiring:
 
 # Possible layours: [two_column_left_image, two_column_right_image]
 components:
+  - name: concurso
+    position: 2
+    layout: two_column_left
+    background: "#fbfbfb" # Name of the color(from components/Styling/index.js) or color code ex: #C9F9F9
+    image:
+      src: "/images/landing/bootcamps.png"
+    heading:
+      style: '{"color": "#FFF", "line-height": "55px"}'
+      text: " 4Geeks Academy y ProInnóvate"
+      color: "#FFF"
+        #           xl      lg      md      sm      xs
+      font_size: ["50px", "50px", "50px", "50px", "50px"]
+    content:
+      text: "La colaboración entre 4Geeks Academy y ProInnóvate representa una fusión poderosa de conocimientos y recursos para el beneficio de los interesados en el campo de la innovación y la tecnología"
+      font_size: ["18px"]
+
   - name: new_design_with_bullets
-    position: 1
+    position: 2
     layout: two_column_right 
     swipable: False
     background: "#fbfbfb"
@@ -212,6 +229,21 @@ components:
       background: "black"
       hover: "lightBlue"
 
+  - name: pro_innovate
+    position: 6
+    layout: two_column_right
+    background: "#fff" # Name of the color(from components/Styling/index.js) or color code ex: #C9F9F9
+    image:
+      src: "/images/partner/pro-innovate-logo.png"
+    heading:
+      # style: '{"padding": "0 20px", "line-height": "50px"}'
+      text:
+        ""
+        #           xl      lg      md      sm      xs
+      font_size: ["50px", "50px", "50px", "50px", "50px"]
+    content:
+      text: "Esta colaboración reúne la excelencia en la formación tecnológica de 4Geeks Academy con la visión innovadora y el respaldo del Ministerio de la Producción del Perú a través de ProInnóvate. Juntos, están comprometidos en ofrecer oportunidades únicas de aprendizaje, capacitación y crecimiento profesional en áreas clave de la tecnología, preparando a los futuros líderes para enfrentar los desafíos del mundo digital con confianza y habilidades de vanguardia. "
+      font_size: ["18px"]
 
 choose_your_program:
   position: 5
