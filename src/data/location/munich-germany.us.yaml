@@ -77,6 +77,31 @@ images_box:
       alt: "4Geeeks location"
     - path: "../../../static/images/locations/miami-people.jpeg"
       alt: "4Geeeks lab"
+      
+two_columns:
+  proportions: [6, 6]
+  image:
+    style: '{"border" : "5px solid black", "backgroundSize": "contain" }'
+    src: "/static/images/staff/luisa.png"
+    shadow: true  
+  video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
+  heading:
+    text: "Exploring 4Geeks Academy in Munich"
+    font_size: ["30px", "30px", "30px", "30px", "30px"]
+  sub_heading:
+    text: "Join us to explore hands-on learning, interact with industry leaders, and pave your way in Munich's thriving tech sphere"
+    font_size: ["18px", "18px", "22px", "22px", "22px"]
+  button:
+    text: "APPLY NOW"
+    color: "white"
+    background: "black"
+    path: "/us/apply"
+  bullets:
+    items: 
+    - text: "Munich's tech industry anticipates a 15% growth in software developer roles within the next two years, showcasing expanding opportunities for skilled professionals"
+    - text: "4Geeks Academy prides itself on a job placement rate of 95% within six months post-graduation, ensuring concrete career progress for our students"
+    - text: "Flexible learning options, including part-time and immersive courses, cater to diverse schedules and learning preferences"
+    - text: "Preparation for real-world challenges and job opportunities in technology"
 
 ## HEADING SECTION
 

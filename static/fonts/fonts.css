@@ -13,6 +13,11 @@
   font-display: swap;
   src: url("./lato/Lato-Bold.woff");
 }
+@font-face {
+  font-family: "Lato-Black";
+  font-display: swap;
+  src: url("./lato/Lato-Black.woff");
+}
 
 @font-face {
   font-family: "Archivo";

@@ -85,6 +85,7 @@ const Instructors = ({
         displayChild_xs="block"
         displayChild_sm="block"
         displayChild_md="block"
+        displayChild_xxs="block"
         style={{ display: "block" }}
         background={Colors.verylightGray}
         padding="73px 0 60px 0"

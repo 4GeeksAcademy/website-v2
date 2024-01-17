@@ -4,7 +4,8 @@ import ReactPlayer from "../ReactPlayer";
 import { H2, Paragraph } from "../Heading";
 import Icon from "../Icon";
 import { Div } from "../Sections";
-import { Button, Colors, Img } from "../Styling";
+import { Button, Colors, Img, StyledBackgroundSection } from "../Styling";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { navigate } from "gatsby";
 import { transferQuerystrings, smartRedirecting } from "../../utils/utils";
 
@@ -43,7 +44,7 @@ const Side = ({
           ? imgStyles.height
           : [imgStyles.height]
         : ["100%"];
-    return (
+    return image?.src ? (
       <Img
         src={image.src}
         onClick={() => {
@@ -62,6 +63,13 @@ const Side = ({
         //backgroundPosition="center right"
         //border={image.shadow && "3px solid black"}
         boxShadow={image.shadow && "20px 15px 0px 0px rgba(0,0,0,1)"}
+      />
+    ) : (
+      <GatsbyImage
+        height_xxs="450px"
+        image={getImage(image.childImageSharp.gatsbyImageData)}
+        //bgSize={`contain`}
+        alt="geekforce image"
       />
     );
   }
@@ -86,7 +94,7 @@ const Side = ({
       {header && (
         <Div
           margin="0 0 30px 0"
-          justifyContent="center"
+          justifyContent="start"
           justifyContent_md="start"
         >
           {Array.isArray(header) &&
@@ -108,6 +116,7 @@ const Side = ({
         <H2
           type="h2"
           textAlign_tablet="left"
+          textAlign="left"
           lineHeight="38px"
           lineHeight_tablet="38px"
           fontSize={h_xs || "30px"}
@@ -123,6 +132,7 @@ const Side = ({
       {sub_heading && (
         <Paragraph
           textAlign_tablet="left"
+          textAlign="left"
           margin="0"
           fontSize={sh_xl || "18px"}
           fontSize_sm={sh_sm}
@@ -256,7 +266,7 @@ const Side = ({
         <Button
           outline
           borderRadius="0"
-          colorHoverText={button.hover_color || Colors.blue}
+          colorHoverText={button.hover_color || ""}
           background={Colors[button.background] || button.background}
           lineHeight="26px"
           textColor={Colors.black}
@@ -265,7 +275,9 @@ const Side = ({
           fontSize="15px"
           textAlign="left"
           margin="2rem 0"
-          padding="32px .85rem 0 .85rem"
+          padding_xxs="0 .5rem"
+          padding_xs="0 .85rem"
+          //padding_tablet="32px .85rem 0 .85rem"
           onClick={() => {
             if (button.path && button.path.indexOf("http") > -1)
               window.open(transferQuerystrings(button.path, utm));
@@ -289,8 +301,10 @@ const TwoColumn = ({ left, right, proportions, session }) => {
       gap_tablet={left?.gap_tablet || right?.gap_tablet || "20px"}
       flexDirection_tablet="row"
       m_sm="0px auto 100px auto"
+      margin_tablet="0 auto"
+      margin_xxs="0"
       margin="auto"
-      padding_xxs="0 20px"
+      padding="40px 20px"
       padding_md="40px 80px"
       padding_lg="40px 0px"
       padding_tablet="40px 40px"
@@ -298,25 +312,25 @@ const TwoColumn = ({ left, right, proportions, session }) => {
       maxWidth_md="1366px"
     >
       <Div
-        justifyContent={left?.video && "center"}
+        justifyContent={left?.video && "left"}
         flexDirection="column"
         size_tablet={left_size || 6}
         size="12"
         padding_xs="0"
         padding_md={right?.image?.shadow ? "0 20px 0 0 " : "0px"}
         // maxHeight="300px"
-        textAlign="center"
+        textAlign="left"
       >
         <Side session={session} {...left} />
       </Div>
       <Div
-        justifyContent={right?.video && "center"}
+        justifyContent={right?.video && "left"}
         flexDirection="column"
         size_tablet={right_size || 6}
         padding_xs="0"
         padding_md={left?.image?.shadow ? "0 0 0 20px" : "0px"}
         size="12"
-        textAlign="center"
+        textAlign="left"
       >
         <Side session={session} {...right} />
       </Div>

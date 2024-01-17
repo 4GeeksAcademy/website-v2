@@ -79,6 +79,30 @@ images_box:
     - path: "../../../static/images/locations/madrid-2.png"
       alt: "4Geeeks España lab"
 
+two_columns:
+  proportions: [6, 6]
+  image:
+    style: '{"border" : "5px solid black", "backgroundSize": "contain" }'
+    src: "/static/images/testimonials/javier-murillo-testimonial.jpg"
+    shadow: true  
+  video: "c14ZDHXN6_w"
+  heading:
+    text: "La Experiencia de Javier Murillo en 4Geeks Academy en Madrid"
+    font_size: ["30px", "30px", "30px", "30px", "30px"]
+  sub_heading:
+    text: "Fortalece tus Habilidades Tecnológicas desde Madrid, España"
+    font_size: ["18px", "18px", "22px", "22px", "22px"]
+  button:
+    text: "¡Únete ahora!"
+    color: "white"
+    background: "black"
+    path: "/es/aplica"
+  bullets:
+    items: 
+    - text: "Aprende las tecnologías más demandadas por las empresas y entra en el mundo laboral en tiempo récord"
+    - text: "Te acompañaremos durante todo el proceso, con mentorías ilimitadas y de por vida, ¡para que nunca más programes solo!"
+    - text: "Ofrecemos becas parciales y múltiples opciones de financiación, para que el dinero no te frene"
+
 active_campaign_location_slug: "madrid-spain"
 breathecode_location_slug: "madrid-spain"
 gdpr_compliant: true # do we need to ask for permision?

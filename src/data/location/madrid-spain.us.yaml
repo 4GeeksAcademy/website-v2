@@ -1,8 +1,8 @@
 meta_info:
   slug: "coding-bootcamp-madrid"
-  title: "Coding Bootcamp Madrid, Spain of 4Geeks Academy"
+  title: "Coding Bootcamp Madrid, Spain of 4GeeksAcademy"
   position: 20
-  description: "Know here all about our coding bootcamp campus in Madrid, Spain of 4Geeks Academy"
+  description: "Know here all about our coding bootcamp campus in Madrid, Spain of 4GeeksAcademy"
   image: "/images/og-preview/madrid-spain.us.png"
   keywords: "Coding Bootcamp, Madrid"
   redirects: []
@@ -82,6 +82,31 @@ images_box:
       alt: "4Geeeks España lab"
     - path: "../../../static/images/locations/madrid-2.png"
       alt: "4Geeeks España lab"
+
+two_columns:
+  proportions: [6, 6]
+  image:
+    style: '{"border" : "5px solid black", "backgroundSize": "contain" }'
+    src: "/static/images/staff/luisa.png"
+    shadow: true  
+  video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
+  heading:
+    text: "Luisa Glum's Journey with 4Geeks Academy"
+    font_size: ["30px", "30px", "30px", "30px", "30px"]
+  sub_heading:
+    text: "Empowering Career Shifts in Madrid's Tech Arena"
+    font_size: ["18px", "18px", "22px", "22px", "22px"]
+  button:
+    text: "APPLY NOW"
+    color: "white"
+    background: "black"
+    path: "/us/apply"
+  bullets:
+    items: 
+    - text: "Industry-aligned curriculum focused on practical skills and project-based learning"
+    - text: "Mentorship programs connecting students with industry professionals for insights and guidance"
+    - text: "Practical skill development preparing individuals for Madrid's competitive tech job market"
+
 
 active_campaign_location_slug: "madrid-spain"
 breathecode_location_slug: "madrid-spain"
