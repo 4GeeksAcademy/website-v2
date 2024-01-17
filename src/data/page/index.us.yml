@@ -29,7 +29,6 @@ header_data:
 news:
   heading: "Read about this coding bootcamp in the news..."
   limit: 7
-  
 button:
   button_text: See Programs
   button_link: "#programs"
@@ -43,7 +42,8 @@ choose_program:
   paragraph: Find the path that’s right for you
 
 ## TWO COLUMNS
-two_column:
+two_columns:
+  proportions: [6, 6]
   image:
     style: '{ "backgroundSize": "cover" }'
     src: "/images/landing/feliz-empresario-laptop.png"

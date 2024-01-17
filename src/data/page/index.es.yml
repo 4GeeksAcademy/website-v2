@@ -23,10 +23,13 @@ header_data:
   video: ""
   image: "../../../static/images/bg/more-new-main-home-bg.png"
 
+why_4geeks:
+  heading: Por qué 4Geeks
+  sub_heading: ""
+
 news:
   heading: "Lee sobre nosotros en las noticias..."
   limit: 7
-  
 button:
   button_text: Ver Programas
   button_link: "#programs"
@@ -41,7 +44,8 @@ choose_program:
 
 
 ## TWO COLUMNS
-two_column:
+two_columns:
+  proportions: [6, 6]
   image:
     style: '{ "backgroundSize": "cover" }'
     src: "/images/landing/feliz-empresario-laptop.png"

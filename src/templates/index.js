@@ -322,7 +322,7 @@ const Home = (props) => {
         >
           <News
             lang={pageContext.lang}
-            limit={yml?.news?.limit}
+            limit={yml.news.limit}
             // width={`17%`}
             height="45px"
             margin="0"
@@ -450,7 +450,8 @@ export const query = graphql`
             heading
             sub_heading
           }
-          two_column {
+          two_columns {
+            proportions
             image {
               style
               src
