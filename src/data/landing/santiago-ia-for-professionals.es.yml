@@ -39,9 +39,9 @@ apply_schollarship: # form that is displayed at the end of the landing
 
 # jumbotron on the top (cannot be commented out)
 header_data:
-  tagline: Domina Inteligencia Artificial Aplicada para Impulsar tu Carrera
+  tagline: Aprende a utilizar inteligencia artificial en tu dia a dia y potencia tus resultados
   tagline_color: "#FFFFFF"
-  sub_heading: "Potencia tu Trayectoria Profesional con Herramientas Prácticas de IA para Diversas Industrias"
+  sub_heading: "Aprende a sacar provecho a las herramientas actuales y optimiza tus resultados en tiempo record"
   badge: "../../../static/images/badges/Course-Report-Badge-2023.png"
   background_image: "../../../static/images/Happy-People-Landing-4Geeks-ES.jpg"
   image_filter: brightness(0.1)
@@ -54,8 +54,7 @@ features:
   bullets:
     - No se requiere experiencia previa
     - Horario part-time 
-    - Mentorías y career support de por vida
-    - Un Data Scientist Jr puede ganar hasta $1.200.000 CLP al mes
+    - Incorpora la Inteligencia Artificial en tu Rutina Diaria
 
 follow_bar:
   position: "top" # top, bottom, hidden
@@ -115,8 +114,8 @@ rating_reviews:
 
 program_details:
   position: 3
-  heading: "Ciencia de Datos y Machine Learning"
-  sub_heading: "Comienza con Python, Ciencia de Datos, Aprendizaje Automático, Deep Learning y el mantenimiento de un entorno de producción en Inteligencia Artificial."
+  heading: "Únete a la Revolución de la Inteligencia Artificial y No te Quedes Atrás"
+  sub_heading: ""
 
 why_4geeks:
   position: 7
@@ -141,14 +140,14 @@ components:
       src: "/images/landing/hombre-con-laptop.png"
       shadow: false
     section_heading: 
-      text: "Diseñado para impulsar tu éxito en el mundo de la Inteligencia Artificial"
+      text: "Multiplica Tus Resultados"
       style: '{ "font-size": "30px" }'
     heading: 
-      text: "¡Únete a nosotros para impulsar tu carrera en tecnología!"
+      text: "¡Únete a nosotros para impulsar tu carrera!"
     sub_heading:
-      text: "Obtén las habilidades clave en Inteligencia Artificial para sobresalir en tu carrera"
+      text: "Obtén las habilidades claves para dominar las herramientas de Inteligencia Artificial"
     button: 
-      text: "Explora más sobre nuestro curso de IA"
+      text: "Explora más sobre nuestro curso de Applied IA"
       color: white
       hover_color: "white"
       background: "black"
@@ -181,7 +180,7 @@ components:
       src: "/images/blog/blog_3.jpg"
       shadow: true
     heading:
-      text: "Programa de Inteligencia Artificial"
+      text: "Aumenta Tus Resultados con Inteligencia Artificial"
       font_size: ["50px", "50px", "50px", "50px", "50px"]
     sub_heading:
       text: "Desarrolla habilidades clave en Inteligencia Artificial para impulsar tu éxito profesional"
@@ -192,16 +191,16 @@ components:
     bullets:
       items:
       - heading: "Aplicaciones Prácticas de IA"
-        text: "Descubre cómo aplicar la IA en diversas industrias como salud, marketing y más, abordando casos reales y desafíos específicos."
+        text: "Descubre cómo aplicar la IA en diversas industrias como salud, marketing y más, abordando casos reales y desafíos específicos"
         icon: "circle"
       - heading: "Identificación y Aprovechamiento de Oportunidades en IA"
-        text: "Aprende a identificar y aprovechar oportunidades de implementación de IA en entornos laborales, maximizando su impacto en el rendimiento laboral."
+        text: "Aprende a identificar y aprovechar oportunidades de implementación de IA en entornos laborales, maximizando su impacto en el rendimiento laboral"
         icon: "circle"
-      - heading: "Dominio de Herramientas Avanzadas de IA"
-        text: "Adquiere destrezas prácticas con herramientas líderes en IA como ChatGPT, Midjourney, StableDiffusion y Claude, para desarrollar soluciones efectivas."
+      - heading: "Aprovecha la IA para optimizar tus tareas"
+        text: "Tareas repetitivas pueden ser optimizadas por IAs para aprovecar el tiempo y maximizar resultados"
         icon: "circle"
-      - heading: "Perspectiva Ética y Futuro de la IA"
-        text: "Explora la ética en la IA, su impacto social y el panorama legal y regulatorio, comprendiendo su relevancia en el entorno laboral actual."
+      - heading: "Entendimiento de las Herramientas actuales"
+        text: "Al entenderlas herramientas podrás optener los mejores resultados de ellas, podrás pensar en como aplicarlas de una forma efectiva a tu entorno"
         icon: "circle"
 
 
@@ -230,16 +229,16 @@ components:
   #     background: "black"
   #     hover: "lightBlue"
 
-choose_your_program:
-  position: 5
-  title: Nuestra Modalidad
-  paragraph: Programa de Machine Learning y Data Science en Modalidad Part Time y Full Time
-  programs:  
-  - title: "Part Time"
-    sub_title: "16 semanas"
-    icon: "fullstack"
-    description: |
-      De cero a tener tu primer trabajo como Data Scientist, con una duración de 16 semanas, con clases en vivo 3 veces por semana, compatible con horario laboral o de estudios. 
-    text_link: Obtener más información
-    link: "#top" # moves to start position
+# choose_your_program:
+#   position: 5
+#   title: Nuestra Modalidad
+#   paragraph: Applied IA para mejorar la productividad
+#   programs:  
+#   - title: "Part Time"
+#     sub_title: "16 semanas"
+#     icon: "fullstack"
+#     description: |
+#       De cero a tener tu primer trabajo como Data Scientist, con una duración de 16 semanas, con clases en vivo 3 veces por semana, compatible con horario laboral o de estudios. 
+#     text_link: Obtener más información
+#     link: "#top" # moves to start position
   

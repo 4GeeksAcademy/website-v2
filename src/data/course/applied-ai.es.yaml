@@ -70,8 +70,8 @@ details:
   about:
     title: "Sobre este programa"
     sub_title: |
-      Este curso está diseñado para que te conviertas en un experto en inteligencia artificial aplicada en el ámbito profesional. Aprenderás Python, SQL, Looker (Google Data Studio), Streamlit y estadísticas fundamentales para desempeñarte como analista de datos y ser parte integral de equipos técnicos en diversas empresas.
-      Dominarás la creación de modelos predictivos utilizando herramientas como Python, Pandas, Numpy, entre otras. Implementarás algoritmos predictivos, como vecinos cercanos y árboles de decisión, tanto en contextos de aprendizaje supervisado como no supervisado. Además, te sumergirás en escenarios comerciales reales para aplicar tus conocimientos y familiarizarte con las herramientas más relevantes de la industria.
+      Este curso, "Applied AI for Professionals," está diseñado para capacitar a profesionales que buscan integrar la inteligencia artificial (IA) en sus roles actuales. A lo largo de seis semanas, los participantes obtendrán una comprensión integral de la IA y sus aplicaciones prácticas en diversas industrias.
+      El curso abarca conceptos esenciales como definiciones de IA, beneficios en el entorno laboral y elementos clave como Contexto, Prompts y Modelos. Los participantes aprenderán a identificar oportunidades para implementar IA, superar desafíos, desarrollar estrategias efectivas de IA y crear comandos prácticos.
         
     list:
       - label: "Duración"
@@ -85,8 +85,6 @@ details:
         icon: "laptop"
       - label: "Certificado"
         content: "Nuestros certificados están reconocidos por múltiples instituciones."
-        link_text: "Ver ejemplo"
-        link: "https://certificate.4geeks.com/44c61b294a248f91088f5355aea09606126795e3"
         icon: "certificate"
       - label: "Requisitos"
         content: "No se necesita experiencia previa"
@@ -117,48 +115,42 @@ details:
     duration: "DURACIÓN:"
     skills: "Habilidades / Semanas:"
   details_modules:
-    - module_name: "Introducción a la IA en el entorno laboral"
+    - module_name: "Introducción a la IA"
       title: "Introducción a AI"
-      description: "Conceptos de IA y su aplicación en el entorno laboral. Uso de la IA para mejorar diversos roles laborales y tareas en diferentes industrias como salud, marketing, bienes raíces, etc."
+      description: "Definiciones de IA, beneficios en el entorno laboral, tipos de IA con ejemplos prácticos, y conceptos clave como Contexto, Prompts y Modelos."
       projects: "Identificación de oportunidades para implementar IA, comprensión de desafíos y riesgos, desarrollo de estrategias de IA y creación de comandos útiles."
       slug: "intro-ai-workplace"
       duration: "1 semana"
       step: 1
-    - module_name: "Generación de texto utilizando modelos populares"
-      title: "Generación de texto"
-      description: "Capacidades de modelos populares (ChatGPT, Claude, Llama-2). Estrategias para escribir comandos para modelos de generación de texto."
+    - module_name: "Mejorar el Rendimiento Laboral"
+      title: "Estrategias para Mejorar el Rendimiento Laboral"
+      description: "Comparación entre la IA y los humanos en diversas tareas, cuándo utilizar la IA, ejemplos de prompts relacionados con los campos de los estudiantes, y consejos de Ingeniería de Prompts."
       projects: "Creación de flujos de trabajo para profesiones como profesores, lingüistas y desarrolladores."
+      slug: "generation-estrategies"
+      duration: "1 semanas"
+      step: 2
+    - module_name: "Generación de Texto"
+      title: "Generación de Texto"
+      description: "Capacidades de modelos populares como ChatGPT, Claude y Llama-2. Explicación detallada de estrategias de prompts, flujos de trabajo de IA y herramientas para automatizar prompts."
+      projects: "Revisión y depuración de prompts, cómo evaluar si una respuesta de modelo es buena y cómo instruir correctamente a un modelo de enfoques."
       slug: "text-generation"
       duration: "2 semanas"
-      step: 2
-    - module_name: "Generación de imágenes"
-      title: "Generación de imágenes"
-      description: "Capacidades de modelos populares (Stable Diffusion, Dall-E, Midjourney). Estrategias para escribir buenos comandos para modelos de generación de imágenes."
-      projects: "Desarrollo de estrategias de IA para generar imágenes según los casos de uso."
-      slug: "image-generation"
-      duration: "2 semanas"
       step: 3
-    - module_name: "Herramientas de IA y el futuro"
-      title: "Herramientas de IA y Futuro"
-      description: "Comparación de herramientas de IA, proyectos prácticos usando herramientas populares."
-      projects: "Sesión de Graduación: preguntas, tareas, próximos pasos para cada estudiante."
-      slug: "ai-tools-future"
+    - module_name: "Generación de imagenes"
+      title: "Generación de Imágenes e Implementación de IA"
+      description: "Revisión de capacidades de modelos populares para generación de imágenes como Stable Diffusion, Dall-E, Midjourney. Cómo redactar buenos prompts para modelos de generación de imágenes."
+      projects: "Desarrollo de una estrategia de IA y creación de prompts útiles para generar imágenes en casos de uso específicos."
+      slug: "img-generation"
       duration: "1 semana"
       step: 4
-    - module_name: "Proyecto Final"
-      title: "Proyecto Final"
-      description: "Elección y resolución de un problema real utilizando Machine Learning. Trabajo en equipo, recolección y limpieza de datos, análisis exploratorio, selección y evaluación de modelos, y despliegue en producción."
-      projects: "Despliegue de la aplicación de IA en la nube y monitoreo de modelos."
+    - module_name: "Herramientas y Futuo de las IAs"
+      title: "Herramientas y el Futuro de las IAs"
+      description: "Evaluación de herramientas de IA, proyectos prácticos utilizando herramientas populares."
+      projects: "Graduación del curso, preguntas finales, tareas y próximos pasos..."
       slug: "final-project"
-      duration: "2 semanas"
+      duration: "1 semanas"
       step: 5
-    - module_name: "Comunicación y Retroalimentación"
-      title: "Comunicación y Retroalimentación"
-      description: "Canal de comunicación para preguntas y retroalimentación con el instructor."
-      projects: "Uso del foro para preguntas al instructor, correo electrónico para consultas individuales."
-      slug: "communication-feedback"
-      duration: "1 semana"
-      step: 6
+
 
 
 syllabus:
