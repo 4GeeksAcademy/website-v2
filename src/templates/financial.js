@@ -36,8 +36,6 @@ const Financial = (props) => {
   const course_type = "full_stack";
   const program_type = "part_time";
 
-  console.log(yml)
-
   return (
     <>
       {/* <Header
@@ -51,13 +49,13 @@ const Financial = (props) => {
         padding="72px 0 15px 0"
       /> */}
       <Header
-        margin={isCustomBarActive(session) ? "120px auto 0 auto" : "60px auto"}
+        margin={isCustomBarActive(session) ? "140px auto 0 auto" : "60px auto"}
         paragraphMargin="26px 20px"
         paragraphMargin_Tablet="26px 22%"
         paddingParagraph_tablet="0 40px"
         seo_title={yml.seo_title}
         title={yml.header.title}
-        paragraph={yml.header.paragraph}
+        //paragraph={yml.header.paragraph}
         padding_tablet="72px 0 40px 0"
         padding="0px 20px"
         position="relative"
@@ -81,9 +79,9 @@ const Financial = (props) => {
           display_xxs="none"
           display_tablet="flex"
           left_tablet="72px"
-          top_tablet="13%"
+          top_tablet="0%"
           left_lg="0%"
-          top_lg="13%"
+          top_lg="-10%"
         />
         <Img
           src="/images/landing/Ellipse-40.png"
@@ -161,7 +159,7 @@ const Financial = (props) => {
           top_lg="12%"
         />
 
-        <FinancialFilter
+        {/* <FinancialFilter
           button_text={yml.syllabus_button_text}
           program={yml.label.program.title}
           programClosedLabel={yml.label.program.closedLabel}
@@ -177,7 +175,7 @@ const Financial = (props) => {
           locations={data.allLocationYaml.edges}
           margin="0px"
           padding_tablet="0px"
-        />
+        /> */}
       </Header>
 
       <Iconogram yml={yml.iconogram} />

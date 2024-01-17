@@ -414,6 +414,14 @@ const PricesAndPayments = (props) => {
     return data.allPlansYaml.edges
       .filter(({ node }) => node.fields.lang === props.lang)
       .find((p) =>
+        p.node.fields.file_name.includes(course?.value?.replaceAll("_", "-"))
+      )?.node[props.programType];
+  };
+
+  const getCurrentPlansV2 = () => {
+    return data.allPlansYaml.edges
+      .filter(({ node }) => node.fields.lang === props.lang)
+      .find((p) =>
         p.node.fields.file_name.includes(props.courseType?.replaceAll("_", "-"))
       )?.node[props.programType];
   };
@@ -426,10 +434,11 @@ const PricesAndPayments = (props) => {
   const [locations, setLocations] = useState(false);
   const [selectedPlan, setSelectedPlan] = useState(null);
   const [jobGuarantee, setJobGuarantee] = useState(false);
-  const [currentPlans] = useState(getCurrentPlans());
+  //const [currentPlans] = useState();
   const [availablePlans, setAvailablePlans] = useState([]);
 
   const getAvailablePlans = () => {
+    const currentPlans = getCurrentPlans();
     if (currentPlans && currentLocation) {
       return currentPlans
         .filter((plan) =>
@@ -469,6 +478,15 @@ const PricesAndPayments = (props) => {
     }
   }, [session, props.locations]);
 
+  // sync property course
+  useEffect(
+    () => (
+      setCourse(courseArray.find((c) => c.value === props.courseType)),
+      setModality(modalityArray.find((d) => d.value === props.programType))
+    ),
+    [props.courseType, props.programType]
+  );
+
   useEffect(() => {
     setJobGuarantee(false);
   }, [currentLocation]);
@@ -477,18 +495,7 @@ const PricesAndPayments = (props) => {
     const filteredPlans = getAvailablePlans();
     setAvailablePlans(filteredPlans);
     setSelectedPlan(filteredPlans[0]?.slug);
-  }, [jobGuarantee, currentLocation]);
-
-  // sync property course
-  useEffect(
-    () => (
-      setCourse(courseArray.find((c) => c.value === props.courseType)),
-      setModality(modalityArray.find((d) => d.value === props.programType))
-
-
-    ),
-    [props.courseType, props.programType]
-  );
+  }, [jobGuarantee, currentLocation, course]);
 
   const city = session && session.location ? session.location.city : [];
 
@@ -500,6 +507,8 @@ const PricesAndPayments = (props) => {
   }, [findCity]);
 
   const selected = availablePlans.find((plan) => plan.slug === selectedPlan);
+
+  console.log(course?.value)
 
   return (
     <Div
@@ -526,16 +535,16 @@ const PricesAndPayments = (props) => {
         {info.plans_title}
       </H2>
       <Grid
-        gridTemplateColumns_lg="3fr repeat(23,1fr) 3fr"
+        gridTemplateColumns_lg={props.financial ? "repeat(26,1fr)" : "3fr repeat(23,1fr) 3fr"}
         gridTemplateColumns_md="1fr repeat(14,1fr) 1fr"
-        gridTemplateColumns_tablet="1fr repeat(13,1fr) 1fr"
-        gridGap="0"
+        gridTemplateColumns_tablet={props.financial ? "1fr repeat(14,1fr) 1fr" : "1fr repeat(13,1fr) 1fr"}
+        gridGap="8px"
         margin_tablet="20px 0 0 0"
       >
         <Div
           gridColumn_md="2/9"
-          gridColumn_lg="2/16"
-          gridColumn_tablet="2/10"
+          gridColumn_lg={props.financial ? "2/14" : "2/16"}
+          gridColumn_tablet={props.financial ? "1/9" : "2/10"}
           alignItems="center"
         >
           <H3
@@ -554,16 +563,17 @@ const PricesAndPayments = (props) => {
         </Div>
         {/* SELECT COUNTRY */}
         <Div
-          gridColumn_lg="16/25"
-          gridColumn_md="11/16"
-          gridColumn_tablet="10/15"
-          justifyContent_xs="center"
+          gridColumn_lg={props.financial ? "14/26" : "16/25"}
+          gridColumn_md={props.financial ? "9/16" : "11/16"}
+          gridColumn_tablet={props.financial ? "9/16" : "10/15"}
+          justifyContent_xxs="center"
           justifyContent_tablet="start"
         >
           <Div
             flexDirection_tablet="row"
             flexDirection="column"
             alignItems="center"
+            width="100%"
           >
             {props.course && (
               <Select
@@ -580,15 +590,19 @@ const PricesAndPayments = (props) => {
             &nbsp;
             {course && (
               <Div
-                width_tablet="220px"
-                width_md="320px"
+                flexDirection_tablet="row"
+                flexDirection="column"
+                width_tablet="100%"
+                gap="20px"
+                // width_md="320px"
                 width_xs="320px"
                 width_xxs="280px"
+
               >
                 <SelectRaw
                   placeholderFloat
                   bgColor={Colors.white}
-                  single
+                  single={props.financial ? false : true}
                   options={locations.map((l) => ({
                     label: l.node.name,
                     value: l.node.active_campaign_location_slug,
@@ -643,6 +657,53 @@ const PricesAndPayments = (props) => {
                     },
                   }}
                 />
+                {props.financial &&
+                  <SelectRaw
+                    placeholderFloat
+                    bgColor={Colors.white}
+                    single={props.financial ? false : true}
+                    options={courseArray}
+                    placeholder={"Program"}
+                    value={course}
+                    onChange={(opt) => setCourse(opt)}
+                    style={{
+                      input: (styles) => ({
+                        ...styles,
+                        width: "100%",
+                        margin: "5px 0px",
+                      }),
+                      control: (styles, state) => ({
+                        ...styles,
+                        fontFamily: "Lato, sans-serif",
+                        background: "#ffffff",
+                        border: "1px solid #000",
+                        boxShadow: "none",
+                        marginBottom: "0px",
+                        marginTop: "0px",
+                        width: "100%",
+                        fontSize: "15px",
+                        fontWeight: "400",
+                        fontStyle: "italic",
+                        color: "#000",
+                        lineHeight: "22px",
+                        "&:hover": { boxShadow: "0 0 0 1px black" },
+                        "&:focus": {
+                          boxShadow: "0 0 0 1px black",
+                          border: "1px solid #000000",
+                        },
+                      }),
+                      option: (
+                        styles,
+                        { data, isDisabled, isFocused, isSelected }
+                      ) => {
+                        return {
+                          ...styles,
+                          fontFamily: "Lato, sans-serif",
+                        };
+                      },
+                    }}
+                  />
+                }
               </Div>
 
             )}

@@ -14,14 +14,13 @@ const WeTrust = ({ we_trust }) => {
       id="we-trust"
       display="block"
       margin="0 auto"
-      padding_xxs="0 20px"
-      padding_md="40px 80px"
-      padding_lg="40px 0px"
-      padding_tablet="40px 40px"
+      
     >
       <Div
-        padding="50px 10px"
-        padding_tablet="30px"
+        padding="50px 20px"
+        padding_md="40px 80px"
+        padding_lg="40px"
+        padding_tablet="40px 40px"
         margin="0 auto"
         background={Colors.lightBlue}
         display="block"
