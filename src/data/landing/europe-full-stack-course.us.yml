@@ -1,0 +1,179 @@
+meta_info:
+  slug: europe-full-stack-course # <--- URL 4geeksacademy.com/us/landing/example
+
+  visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
+  # This will show on social media when shared
+  title: "Master Full-Stack Development at 4Geeks Academy"
+  description: "Unlock the realm of Full-Stack Development with our immersive course at 4Geeks Academy. Dive into the world of coding"
+  image: "/images/bg/remote.jpeg"
+  keywords: "Learn to code, 4Geeks academy, Learn programming, learn computer engineering"
+
+  template: "landing_a" # <--- choose your landing template
+  redirects: [] # <--- URL redirections to avoid 404 errors
+
+  # Set a particular course or location to the landing page
+  # this UTM fields will be also included in the CRM contact
+  utm_course: ["full-stack"]
+  utm_location: ["europe"]
+  automation: strong # comma separated, "soft" is the default value
+  tag: website-lead # comma separated, "request_more_info" is the default value
+
+navbar:
+  buttonText: "Apply now"
+  buttonUrl: "#bottom" # url accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
+  logoUrl: "#"
+
+form:
+  # posible fields: "first_name", "last_name", "full_name", "phone", "email"
+  # always the first_name, email and phone will be mandatory if added.
+  fields: ["full_name", "phone", "email"]
+  heading: "Apply for a scholarship now"
+  button_label: Apply now
+  redirect: "/us/thank-you" #you can redirect to another url or entirely diffrent website
+
+# jumbotron on the top (cannot be commented out)
+header_data:
+  tagline: Become a Full Stack Developer
+  sub_heading: "In just 18 weeks, unlock the benefits of our bootcamp!"
+  background_image: "../../../static/images/Happy-People-Landing-4Geeks-ES.jpg"
+  image_filter: brightness(0.1)
+
+features:
+  marginTop: 10px #<-- separation between tagline and the bullets
+
+  #                                         up   left down  right
+  styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
+  bullets:
+    - No previous experience or coding skills required.
+    - Part-Time focused. No need to stop your life.
+    - Lifetime and unlimited mentorships and career support. (Your first Job in Tech is our goal).
+
+follow_bar:
+  position: "top" # top, bottom, hidden
+  content:
+    text: "Financing options available."
+    text_mobile: "Payment plans available"
+    # devices:   XL      LG    MD      SM    XS
+    font_size: ["25px", "25px", "25px", "18px", "4.3vw"]
+  button:
+    text: "Apply now"
+    path: "#top" #top, #bottom, #anotherComponentId
+    # ├──if path is empty("") it point to top per default ("#" -> points to top)
+    # └── path accepts: relative(/example/path), absolute(https://google.com) or id(#idName)
+  phone:
+    text: "WhatsApp "
+
+short_badges:
+  - name: "Premios Tecnologia Siglo XXI"
+    url: ""
+    image: "../../../static/images/awards/premios_tecnologia_sigloxxi.png"
+    alt: "Mejor centro de Coding Bootcamp"
+  - name: "Course Report"
+    url: ""
+    image: "../../../static/images/badges/Course-Report-Badge-2023.png"
+    alt: "Top Coding Bootcamps Course Report"
+  - name: "Switchup"
+    url: ""
+    image: "../../../static/images/badges/switchup-badge-2023.png"
+    alt: "Best coding bootcamp Switchup 2023"   
+  - name: "Florida Department of Education"
+    url: ""
+    image: "../../../static/images/badges/licensed-inverted.png"
+    alt: "Florida Department of Education"
+    
+apply_schollarship: # form that is displayed at the end of the landing
+  # title: "Apoyo Profesional Ilimitado"
+  imageSide: "right"
+  image: "../../../static/images/landing/grupo-ventanas.png"
+
+#
+# ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇
+#
+program_details:
+  position: 2
+  heading: "What you will learn"
+  sub_heading: "Python, Javascript, and React are the most used technologies in the world"
+
+about4Geeks:
+  position: 3
+  heading: Flexible and intensive education
+  sub_heading: "More than 400 hours of practical learning (exercises, projects). You will be able to improve your skills in order to face interviews and different selection processes that will allow you to find a job as a Junior or Senior Developer."
+  list:
+    - title: "Lifetime Career Support"
+    - title: "Financial options to complement your scholarship"
+    - title: "Ratio 1:7 teacher student. Unlimited 1 on 1 mentoring"
+    - title: "Preparation for interviews and selection processes"
+  paragraph: ""
+  button_text: "Apply for a scholarship"
+  button_link: "#"
+  image: "../../../static/images/bg/community.png"
+  image_mobile: "../../../static/images/bg/community.png"
+
+geeks_vs_others:
+  position: 4
+  heading: "What makes 4Geeks Academy successful?"
+  paragraph: ""
+  sub_heading: ""
+  total_rows: 6
+
+why_4geeks:
+  position: 7
+  heading: "In words of our students"
+  sub_heading: ""
+  footer:
+    text: "Financing options"
+    text_link: "https://storage.googleapis.com/4geeks-academy-website/syllabus/europe/Payment%20Guide%20Landing%20Jobs%20Scholarships%20(2).pdf"
+
+components:
+  - name: python_y_javascript
+    position: 2
+    layout: two_column_right
+    background: "veryLightBlue2"
+    image:
+      src: "/images/why-4geeks/python-image.png"
+    heading:
+      text: "Python and Javascript"
+      font_size: ["50px", "50px", "50px", "50px", "50px"]
+    content:
+      text: "Our programs are based on the use of Python and Javascript. In the job market, JavaScript has 26 times more job openings than Ruby on Rails. Python has 10 times more jobs than node.js. Other tools that you will also learn to use in our programs are: GitHub, Git, Redux, Amazon Web Services, etc."
+      font_size: ["16px"]
+
+  - name: new_design_with_bullets
+    position: 5
+    layout: two_column_left
+    swipable: False
+    background: "#FFFFFF"
+    image:
+      style: "{}"
+      src: "/images/landing/metting-img.png"
+    heading: 
+      text: "Master Full Stack Development in 18 Weeks"
+    sub_heading:
+      text: "Transform Your Skills with Our Intensive Full Stack Developer Course"
+    button: 
+      text: "Watch our testimonials!"
+      color: white
+      hover_color: "white"
+      background: "black"
+      path: "#why_4geeks"
+    content: 
+      text: ""
+      font_size: ["16px"]
+      path: ""
+    bullets:
+      items:
+      - heading: "Comprehensible Approach"
+        text: "Provides a complete understanding of both front-end and back-end development"
+        icon: "check" 
+      - heading: "Practical Orientation"
+        text: "With over 400 hours of intensive practice, including exercises and projects, it focuses on practical and applied skills"
+        icon: "check"
+      - heading: "Preparation for the Job Market"
+        text: "Prepares students to face interviews and selection processes, offering skills that enable them to apply for positions as Junior or Senior Developers"
+        icon: "check" 
+      - heading: "Continual Support"
+        text: "Offers lifetime career support, along with complementary financial options for scholarships."
+        icon: "check"
+      - heading: "Personalized Mentoring"
+        text: "Provides a close teacher-student relationship with a 1:7 ratio, allowing unlimited one-on-one mentoring sessions"
+        icon: "check" 

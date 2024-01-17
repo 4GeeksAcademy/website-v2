@@ -85,6 +85,33 @@ images_box:
     - path: "../../../static/images/locations/caracas-graduates.png"
       alt: "4Geeeks Caracas graduates"
 
+
+two_columns:
+  proportions: [6, 6]
+  image:
+    style: '{"border" : "5px solid black", "backgroundSize": "contain" }'
+    src: "/static/images/testimonials/paola-testimonial.webp"
+    shadow: true  
+  video: "https://www.youtube.com/watch?v=4H_Sp28PFLc"
+  heading:
+    text: "Entrenamiento, Impacto y Programación en Caracas"
+    font_size: ["30px", "30px", "30px", "30px", "30px"]
+  sub_heading:
+    text: "Paola elige 4Geeks Academy en Venezuela por esta y otras ventajas"
+    font_size: ["18px", "18px", "22px", "22px", "22px"]
+  button:
+    text: "¡Únete ahora!"
+    color: "white"
+    background: "black"
+    path: "/es/aplica"
+  bullets:
+    items:
+    - text: "Recibe orientación de mentores expertos para soporte personalizado en codificación"
+    - text: "Accede a desarrollo profesional y apoyo continuo de por vida"
+    - text: "Enfoque en habilidades prácticas para el mercado laboral"
+    - text: "Descubre por qué 4Geeks Academy destaca como la mejor opción para aprender a programar"
+
+
 ## START FROM HERE - DON'T CHANGE ANYTHING ABOVE
 ## HEADING SECTION
 heading_section:

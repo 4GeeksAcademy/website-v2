@@ -18,8 +18,8 @@ bullets:
 paragraph: "<a href='/es/geeks-vs-otros'><span class='span-blue'>Compara 4Geeks</span></a> con otras academias."
 image: "../../../../static/images/geeksinfo/grupo-ventanas.png"
 button:
-  text: "Compare 4Geeks with other bootcamps"
-  path: "/us/geeks-vs-others"
+  text: "Compara 4Geeks con otros bootcamps"
+  path: "/es/geeks-vs-otros"
   color: "white"
   background: "black"
   hover: "lightBlue"
