@@ -13,14 +13,15 @@ header_data:
   sub_heading: "Únete a miles de graduados que viven como programadores, trabajan en grandes empresas y forman parte de una de las comunidades de programación más grandes del mundo."
   bullets:
     - Tutoría de codificación de por vida, asistencia profesional interminable y una comunidad de desarrolladores impulsada por la tecnología.
-    - 'Trabajo Garantizado: Obtenga un trabajo hasta 6 meses después de graduarse o le devolvemos el dinero, condiciones aplican.'
+    - 'Trabajo Garantizado: Obtenga un trabajo hasta 6 meses después de graduarse o le devolvemos el dinero, <a href="https://storage.googleapis.com/4geeks-academy-website/PDF%20and%20Docs/Condiciones%20y%20Requerimientos%20Job%20Guaranteed%20Program.pdf" style="text-decoration: none; color: #000000;"> condiciones aplican. </a>'
     - Aprende en todas partes, todo el tiempo, tú eliges la metodología.
   join_button_text: UNETE A UN PROGRAMA
+  join_button_path: "#choose-program"
   free_button_text: PRUEBA GRATIS
   #If it doesn't have a video it will show the image
   #It must be a video from videoaks
   video: ""
-  image: "../../../static/images/bg/new-main-home-bg.png"
+  image: "../../../static/images/bg/more-new-main-home-bg.png"
 
 why_4geeks:
   heading: Por qué 4Geeks
@@ -40,6 +41,26 @@ badges:
 choose_program:
   title: Elige tu programa
   paragraph: Contamos con programas que combinan clases prácticas dictadas por expertos
+
+
+## TWO COLUMNS
+two_columns:
+  proportions: [6, 6]
+  image:
+    style: '{ "backgroundSize": "cover" }'
+    src: "/images/landing/feliz-empresario-laptop.png"
+    shadow: true  
+  heading:
+    text: "Invierte en tu futuro"
+    font_size: ["30px", "30px", "30px", "30px", "30px"]
+  sub_heading:
+    text: "Nuestra prioridad es que nuestra educación de alta calidad sea accesible para todos. Por eso, ofrecemos múltiples opciones para que puedas financiar tus estudios en nuestros bootcamps de programación sin estrés. Ya sea a través de un ISA (Income Share Agreement), becas, planes de pago o la garantía de empleo, estamos aquí para guiarte en cada paso del camino."
+    font_size: ["18px", "18px", "18px", "18px", "18px"]
+  button:
+    text: "VER OPCIONES DE FINANCIACIÓN"
+    color: "white"
+    background: "black"
+    path: "/es/financiacion"
 
 ## 4GEEKS VS OTHERS SECTION
 geeks_vs_others:

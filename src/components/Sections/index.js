@@ -6,6 +6,7 @@ import { H1, H2, Paragraph } from "../Heading";
 import { Break } from "../Responsive";
 import { Devices } from "../Responsive";
 import Fragment from "../Fragment";
+import { Carousel } from "react-responsive-carousel";
 
 const containerVariants = {
   fluid: {
@@ -202,12 +203,15 @@ export const Div = styled.div`
   }
   @media ${Devices.xxs} {
     column-count: ${(props) => props.columnCount_xxs};
-    width: ${(props) => props.width_xxs};
-    margin: ${(props) => props.margin_xxs};
     padding: ${(props) => props.padding_xxs}
     background: ${(props) => props.background_xxs};
     display: ${(props) => props.display_xxs};
-    padding: ${(props) => props.padding_xxs};
+    top: ${(props) => props.top_xxs};
+    left: ${(props) => props.left_xxs};
+    margin: ${(props) => props.margin_xxs};
+    display: ${(props) => props.display_xxs};
+    justify-content ${(props) => props.justifyContent_xxs};
+    width: ${(props) => props.width_xxs};
   }
   @media ${Devices.xs} {
     padding: ${(props) => props.padding_xs};
@@ -230,6 +234,7 @@ export const Div = styled.div`
     align-content: ${(props) => props.alignContent_xs};
     top: ${(props) => props.top_xs};
     right: ${(props) => props.right_xs};
+    left: ${(props) => props.left_xs};
     background: ${(props) => props.background_xs};
   }
   @media ${Devices.sm} {
@@ -353,6 +358,7 @@ export const Div = styled.div`
   }
   @media ${Devices.lg} {
     display: ${(props) => props.display_lg};
+    width: ${(props) => props.width_lg};
     justify-content: ${(props) =>
       justifyContentOptions[props.justifyContent_lg]};
     padding: ${(props) => props.padding_lg};
@@ -399,18 +405,20 @@ export const Grid = styled(Div)`
     grid-template-columns: ${(props) =>
       props.columns_xxs ? `repeat(${props.columns_xxs}, 1fr)` : null};
     padding: ${(props) => props.padding_xxs};
+    margin: ${(props) => props.margin_xxs};
+    display: ${(props) => props.display_xxs || "grid"};
   }
   @media ${Devices.xs} {
     grid-template-columns: ${(props) =>
       props.columns_xs ? `repeat(${props.columns_xs}, 1fr)` : null};
-    display: ${(props) => props.display_xs || "grid"};
+    display: ${(props) => props.display_xs};
   }
   @media ${Devices.sm} {
     grid-template-columns: ${(props) =>
       props.gridTemplateColumns_sm
         ? `repeat(${props.gridTemplateColumns_sm}, 1fr)`
         : null};
-    display: ${(props) => props.display_sm || "grid"};
+    display: ${(props) => props.display_sm};
   }
   @media ${Devices.tablet} {
     margin: ${(props) => props.margin_tablet};
@@ -490,7 +498,7 @@ export const Old_Grid = styled.div`
   }
   @media ${Devices.md} {
     grid-template-columns: ${(props) =>
-      props.columns_md ? `repeat(${props.columns_md})` : null};
+      props.columns_md ? props.columns_md : null};
     grid-template-rows: ${(props) =>
       props.rows_md ? `repeat(${props.rows_md})` : null};
     grid-gap: ${(props) => props.gridGap_md};
@@ -516,6 +524,7 @@ export const Old_Grid = styled.div`
 
 export const Header = ({
   hideArrowKey,
+  uppercase,
   children,
   fontSize,
   fontSize_tablet,
@@ -534,13 +543,28 @@ export const Header = ({
   margin,
   margin_tablet,
   padding,
+  padding_xxs,
   padding_tablet,
+  padding_lg,
+  padding_md,
   position,
   textAlign_tablet,
   paddingParagraph_tablet,
   paddingTitle_tablet,
   display_mobile,
+  fontSize_title,
+  fontSizeTitle_tablet,
+  fontFamily_title,
+  fontSize_seo,
+  fontSize_paragraph,
+  fontWeight_paragraph,
+  lineHeight,
+  lineHeight_tablet,
+  fontWeight_title,
+  gridTemplateColumns_tablet,
   maxWidth,
+  fontFamily,
+  zIndex,
 }) => {
   return (
     <Grid
@@ -550,13 +574,17 @@ export const Header = ({
       position={position}
       margin={margin || "70px 0 0 0"}
       margin_tablet={margin_tablet}
-      padding={padding || "60px 17px"}
-      padding_tablet={padding_tablet || "60px 0"}
+      //padding={padding_xxs || "60px 20px"}
+      padding={padding || "0 0"}
+      padding_tablet={padding_tablet || "60px 40px"}
+      padding_md={padding_md || "60px 80px"}
+      padding_lg={padding_lg || "60px 0"}
+      gridTemplateColumns_tablet={gridTemplateColumns_tablet}
       maxWidth={maxWidth}
     >
       <Grid
         gridTemplateColumns_tablet={`repeat(12, 1fr)`}
-        gridArea_tablet="1/2/1/14"
+        gridArea_tablet="1/1/1/15"
       >
         {/* hacer cambios aqui ... remover svg en mobile */}
         <Div
@@ -564,25 +592,34 @@ export const Header = ({
           gridColumn_tablet={svg_image ? null : "1 / 13"}
           gridArea_tablet={svg_image ? "1/1/1/7" : null}
         >
-          <H1
-            type="h1"
-            textAlign_tablet={textAlign_tablet}
-            margin="0 0 11px 0"
-            color="#606060"
-          >
-            {seo_title}
-          </H1>
           <H2
             type="h2"
             textAlign_tablet={textAlign_tablet}
-            padding="0"
+            margin="0 0 11px 0"
+            //padding="0 20px"
+            color="#606060"
+            fontSize={fontSize_seo || "12px"}
+            //fontFamily={fontFamily_title}
+          >
+            {seo_title}
+          </H2>
+          <H1
+            type="h1"
+            textAlign_tablet={textAlign_tablet}
+            //padding="0 20px"
             padding_tablet={paddingTitle_tablet}
-            fontSize={fontSize || "40px"}
-            fontSize_tablet={fontSize_tablet || "50px"}
-            lineHeight="60px"
+            fontSize={fontSize_title || "40px"}
+            fontSize_tablet={fontSizeTitle_tablet || "50px"}
+            lineHeight={lineHeight || "50px"}
+            lineHeight_tablet={lineHeight_tablet || "60px"}
+            fontFamily={fontFamily_title}
+            textTransform={uppercase && "uppercase"}
+            //fontSize={fontSize || "40px"}
+            //fontSize_tablet={fontSize_tablet || "50px"}
+            zindex={zIndex}
           >
             {hideArrowKey ? title : `< ${title} >`}
-          </H2>
+          </H1>
           <Paragraph
             padding="0"
             width="auto"
@@ -591,6 +628,9 @@ export const Header = ({
             textAlign_tablet={textAlign_tablet}
             margin={paragraphMargin || "26px 0"}
             margin_tablet={paragraphMargin_Tablet}
+            fontSize={fontSize_paragraph}
+            fontWeight={fontWeight_paragraph}
+            color={Colors.black}
           >
             {paragraph}
           </Paragraph>
@@ -654,6 +694,10 @@ export const GridContainer = ({
   margin_xs,
   margin_md,
   padding,
+  padding_xxs,
+  padding_tablet,
+  padding_md,
+  padding_lg,
   paddingChild,
   borderTop,
   padding_tabletChild,
@@ -668,15 +712,14 @@ export const GridContainer = ({
   displayChild,
   displayChild_tablet,
   displayChild_xs,
+  displayChild_xxs,
   displayChild_sm,
   displayChild_md,
   columns_sm,
   justifyContentChild,
   justifyItemsChild,
-  padding_lg,
-  padding_md,
-  padding_tablet,
 }) => {
+  console.log(height_tablet);
   return (
     <Grid
       id={id}
@@ -711,6 +754,7 @@ export const GridContainer = ({
       margin_md={margin_md}
       padding={padding || "0 17px"}
       padding_tablet={padding_tablet || "0"}
+      padding_xxs={padding_xxs}
       padding_lg={padding_lg}
       padding_md={padding_md}
     >
@@ -718,6 +762,7 @@ export const GridContainer = ({
         display={displayChild}
         justifyContent={justifyContentChild}
         justifyItems={justifyItemsChild}
+        display_xxs={displayChild_xxs}
         display_xs={displayChild_xs}
         display_sm={displayChild_sm}
         display_tablet={displayChild_tablet}
@@ -758,6 +803,7 @@ export const GridContainer = ({
 };
 export const GridContainerWithImage = ({
   id,
+  carousel,
   className,
   onMouseOutHandler,
   children,
@@ -823,6 +869,14 @@ export const GridContainerWithImage = ({
         alignItems_tablet={alignItems_tablet}
         alignItems_md={alignItems_md}
       >
+        {/* {
+          carousel ? (
+            <Carousel/>
+          )
+          :
+          {children}
+        } */}
+
         {children}
       </Grid>
     </Grid>

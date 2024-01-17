@@ -32,7 +32,6 @@ form:
   heading: "Conoce más información"
   button_label: Obtener más información
   redirect: "https://marketing892162.typeform.com/to/XhfwihKQ" #you can redirect to another url or entirely diffrent website
-
   # jumbotron on the top (cannot be commented out)
 apply_schollarship: # form that is displayed at the end of the landing
   # title: "Get more info about this award-winning development course"
@@ -123,12 +122,13 @@ components:
     image:
       src: "/images/landing/dos-mujeres-1.png"
     heading:
-      text: "How it works?"
+      text: "¿Como funciona?"
     content:
       text: "Al aprender a programar con 4Geeks Academy tendrás clases online completamente en vivo, la oportunidad de certificarte internacionalmente en poco tiempo y de conseguir tu primer empleo como programador con nuestro apoyo. Descubre cómo puede ser tu vida como un profesional en programación con 4Geeks Academy, ¡comienza ahora!"
     button:
-      # text: Aplicar
-      # color: "#0097CD"
+      text: "Aplicar"
+      color: "blue"  
+      path: "#top"
 
   - name: two_column_w_video
     position: 3

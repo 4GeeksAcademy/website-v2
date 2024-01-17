@@ -1,6 +1,8 @@
 import React from "react";
 // import Link from "gatsby-link";
 import { graphql, Link } from "gatsby";
+import { isCustomBarActive } from "../actions";
+import { SessionContext } from "../session";
 import { H1, H2, H4, Paragraph } from "../components/Heading";
 import {
   Button,
@@ -19,6 +21,7 @@ import {
 
 //Functional Component: Blog
 const Blog = ({ data, pageContext, yml }) => {
+  const { session } = React.useContext(SessionContext);
   const langSwitcher = {
     es: "blog-en-espanol",
     us: "blog",
@@ -28,10 +31,19 @@ const Blog = ({ data, pageContext, yml }) => {
     return (
       <GridContainerWithImage
         background="rgba(199, 243, 253, 0.5)"
-        padding="24px 0 "
+        padding="35px 0 "
         padding_tablet="36px 40px 54px 0"
         columns_tablet="14"
-        margin="70px 0 0 0"
+        margin={
+          isCustomBarActive(session)
+            ? "138px auto 30px auto"
+            : "72px auto 30px auto"
+        }
+        margin_md={
+          isCustomBarActive(session)
+            ? "120px auto 30px auto"
+            : "72px auto 30px auto"
+        }
       >
         <Div
           flexDirection="column"

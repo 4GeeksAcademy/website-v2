@@ -30,14 +30,14 @@ icons:
   - icon: "capacity"
     title: "MÁXIMO 8 ALUMNOS POR CLASES"
   - icon: "ratio"
-    title: "1:7 RATIO profesor estudiante"
+    title: "1:7 RATIO PROFESOR ESTUDIANTE"
   - icon: "talk"
-    title: "En promedio, cada alumno tiene 50 MENTORIAS"
+    title: " EN PROMEDIO, CADA ALUMNO TIENE 50 MENTORIAS"
   - icon: "timer"
     title: "TIEMPO DE RESPUESTA DE 15 MINUTOS"
     
 list:
-  - title: "Apoyo Profesional Ilimitado"
+  - title: "Proceso Personalizado"
     image: "../../../static/images/professional-support.png"
     position: "right"
     sub:
@@ -49,7 +49,7 @@ list:
         <span style='font-weight: bold'> mentorias ilimitadas continúan</span> incluso después de haber finalizado tus estudios en 4geeks."
         
   - title: "Dónde sea y cuando sea"
-    image: "../../../static/images/woman-afro-with-laptop.png"
+    image: "../../../static/images/mujer-leyendo-cafeteria.png"
     position: "left"
     text: "En 4Geeks no solo ajustamos las sesiones 
     <span style='font-weight: bold'> acordes tu calendario</span>, sino que también te damos la oportunidad de verlas de forma 

@@ -86,6 +86,9 @@ how_it_works:
       title: Complete the career support process
     - icon: briefcase-2
       title: Get a job in 6 months
+  link:
+    url: https://storage.googleapis.com/4geeks-academy-website/PDF%20and%20Docs/Conditions%20Job%20Guaranteed%20Program.pdf
+    label: Conditions Apply.
 
 successful_stories:
   title: Success stories

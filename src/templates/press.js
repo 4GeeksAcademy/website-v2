@@ -96,12 +96,26 @@ const Press = (props) => {
       />
 
       <Header
-        padding="0 10px"
-        padding_tablet="0 18%"
+        //margin={isCustomBarActive(session) ? "120px auto 0 auto" : "90px auto 0 auto"}
+        margin="0"
+        paragraphMargin="26px 20px"
+        paragraphMargin_Tablet="26px 22%"
+        paddingParagraph_tablet="0 40px"
         seo_title={yml.seo_title}
         title={yml.header.title}
         paragraph={yml.header.paragraph}
+        padding_xxs="40px 20px"
+        padding_md="40px 80px"
+        padding_lg="40px 0px"
+        padding_tablet="40px 40px"
         position="relative"
+        fontSize_title="40px"
+        fontSizeTitle_tablet="60px"
+        fontFamily_title="Archivo-Black"
+        fontSize_paragraph="24px"
+        gridTemplateColumns_tablet="repeat(14, 1fr)"
+        maxWidth="1366px"
+        uppercase
       />
       <News
         lang={pageContext.lang}
