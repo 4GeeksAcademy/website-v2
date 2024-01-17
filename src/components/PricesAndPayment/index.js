@@ -346,6 +346,7 @@ const PricesAndPayments = (props) => {
             plans_title
             plan_details
             select
+            select_2
             job_guarantee {
               title
               description
@@ -417,14 +418,6 @@ const PricesAndPayments = (props) => {
       .filter(({ node }) => node.fields.lang === props.lang)
       .find((p) =>
         p.node.fields.file_name.includes(course?.value?.replaceAll("_", "-"))
-      )?.node[props.programType];
-  };
-
-  const getCurrentPlansV2 = () => {
-    return data.allPlansYaml.edges
-      .filter(({ node }) => node.fields.lang === props.lang)
-      .find((p) =>
-        p.node.fields.file_name.includes(props.courseType?.replaceAll("_", "-"))
       )?.node[props.programType];
   };
 
@@ -510,6 +503,8 @@ const PricesAndPayments = (props) => {
 
   const selected = availablePlans.find((plan) => plan.slug === selectedPlan);
 
+  console.log(info.select_2)
+
   return (
     <Div
       id="prices_and_payment"
@@ -562,7 +557,7 @@ const PricesAndPayments = (props) => {
             color={Colors.black}
             padding="0 0 16px 0"
           >
-            {info.select}
+            {props.financial ? info.select_2 : info.select}
           </H3>
         </Div>
         {/* SELECT COUNTRY */}

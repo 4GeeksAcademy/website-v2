@@ -38,16 +38,6 @@ const Financial = (props) => {
 
   return (
     <>
-      {/* <Header
-        margin={isCustomBarActive(session) ? "120px 0 0 0" : ""}
-        background={Colors.lightBlue2}
-        fontSize="40px"
-        seo_title={yml.seo_title}
-        title={yml.header.title}
-        paragraph={yml.header.paragraph}
-        padding_tablet="72px 0 15px 0"
-        padding="72px 0 15px 0"
-      /> */}
       <Header
         margin={isCustomBarActive(session) ? "140px auto 0 auto" : "60px auto"}
         paragraphMargin="26px 20px"
@@ -159,23 +149,7 @@ const Financial = (props) => {
           top_lg="12%"
         />
 
-        {/* <FinancialFilter
-          button_text={yml.syllabus_button_text}
-          program={yml.label.program.title}
-          programClosedLabel={yml.label.program.closedLabel}
-          modality={yml.label.modality.title}
-          modalityClosedLabel={yml.label.modality.closedLabel}
-          campus={yml.label.campus.title}
-          campusClosedLabel={yml.label.campus.closedLabel}
-          // openedLabel={yml.prices.opened_label}
-          session={session}
-          // closedLabel={yml.prices.closed_label}
-          type={pageContext.slug}
-          lang={pageContext.lang}
-          locations={data.allLocationYaml.edges}
-          margin="0px"
-          padding_tablet="0px"
-        /> */}
+       
       </Header>
 
       <Iconogram yml={yml.iconogram} />

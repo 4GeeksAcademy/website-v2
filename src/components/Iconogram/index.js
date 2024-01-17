@@ -1,7 +1,7 @@
 import React from "react";
 import { GridContainerWithImage, Div, GridContainer } from "../Sections";
 import { H3, H2, H5, H4, Paragraph } from "../Heading";
-import { Colors, Img, Button, StyledBackgroundSection, Link } from "../Styling";
+import { Colors, Img, Button, StyledBackgroundSection, Link, Anchor } from "../Styling";
 import { navigate } from "gatsby";
 import IconsBanner from "../IconsBanner";
 import Icon from "../Icon";
@@ -125,7 +125,10 @@ const Iconogram = ({ session, data, pageContext, yml, index }) => {
             else navigate(button.path);
           }}
         >
-          {button.text}
+          <Link to={button.path}>
+            {button.text}
+          </Link>
+
         </Button>
       )}
     </Div>
