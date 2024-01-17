@@ -179,7 +179,7 @@ const Outcomes = ({ data, pageContext, yml }) => {
             overflowX: "auto",
             zIndex: "999",
             position: "sticky",
-            top: `${isCustomBarActive(session) ? "109px" : "109px"}`,
+            top: `${isCustomBarActive(session) ? "115px" : "115px"}`,
           }}
           padding="0 35px"
           alignItems="center"
