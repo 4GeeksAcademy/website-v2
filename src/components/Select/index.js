@@ -134,7 +134,6 @@ const customStyles = {
     width: "100%",
     margin: "0px",
     padding: "6px 0",
-    
   }),
   control: (styles, state) => ({
     ...styles,

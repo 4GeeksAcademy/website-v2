@@ -90,11 +90,8 @@ iconogram:
     background: ""
     hover_color: ""
 
-two_columns:
-  - proportions:
-      - 6
-      - 6
-    image:
+two_column:
+  - image:
       style: '{ "backgroundSize": "contain" }'
       src: /images/landing/Group-6626.png
     heading:
@@ -127,10 +124,7 @@ two_columns:
       title: "1465"
       text: Beneficiarios hasta ahora
 
-  - proportions:
-      - 6
-      - 6
-    image:
+  - image:
       style: '{ "backgroundSize": "contain" }'
       src: /images/landing/20-million-column.png
     heading:
@@ -161,8 +155,7 @@ two_columns:
       hover_color: white
       path: "#financials"
 
-  - proportions: [6, 6]
-    image:
+  - image:
       style: '{ "backgroundSize": "contain" }'
       src: "/images/woman-glasses-laptop.png"
     heading:

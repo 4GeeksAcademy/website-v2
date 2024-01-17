@@ -198,8 +198,9 @@ const PricingCard = ({
               marginTop: "21px",
               display: "block",
             }}
-            to={`${info.apply_button.link}${selectedPlan ? `?utm_plan=${selectedPlan}` : ""
-              }`}
+            to={`${info.apply_button.link}${
+              selectedPlan ? `?utm_plan=${selectedPlan}` : ""
+            }`}
           >
             <Button
               variant="full"
@@ -252,7 +253,7 @@ const ChartSection = ({ info, currentLocation }) => {
           width="100%"
           width_xs="300px"
           margin="auto"
-        // height="256px"
+          // height="256px"
         >
           <Icon icon="payments_chart" style={{ margin: "auto" }} />
         </Div>
@@ -341,6 +342,7 @@ const PricesAndPayments = (props) => {
             pricing_error
             get_notified
             top_label
+            top_label_2
             plans_title
             plan_details
             select
@@ -508,8 +510,6 @@ const PricesAndPayments = (props) => {
 
   const selected = availablePlans.find((plan) => plan.slug === selectedPlan);
 
-  console.log(course?.value)
-
   return (
     <Div
       id="prices_and_payment"
@@ -535,9 +535,13 @@ const PricesAndPayments = (props) => {
         {info.plans_title}
       </H2>
       <Grid
-        gridTemplateColumns_lg={props.financial ? "repeat(26,1fr)" : "3fr repeat(23,1fr) 3fr"}
+        gridTemplateColumns_lg={
+          props.financial ? "repeat(26,1fr)" : "3fr repeat(23,1fr) 3fr"
+        }
         gridTemplateColumns_md="1fr repeat(14,1fr) 1fr"
-        gridTemplateColumns_tablet={props.financial ? "1fr repeat(14,1fr) 1fr" : "1fr repeat(13,1fr) 1fr"}
+        gridTemplateColumns_tablet={
+          props.financial ? "1fr repeat(14,1fr) 1fr" : "1fr repeat(13,1fr) 1fr"
+        }
         gridGap="8px"
         margin_tablet="20px 0 0 0"
       >
@@ -564,7 +568,7 @@ const PricesAndPayments = (props) => {
         {/* SELECT COUNTRY */}
         <Div
           gridColumn_lg={props.financial ? "14/26" : "16/25"}
-          gridColumn_md={props.financial ? "9/16" : "11/16"}
+          gridColumn_md={props.financial ? "9/16" : "10/16"}
           gridColumn_tablet={props.financial ? "9/16" : "10/15"}
           justifyContent_xxs="center"
           justifyContent_tablet="start"
@@ -597,7 +601,6 @@ const PricesAndPayments = (props) => {
                 // width_md="320px"
                 width_xs="320px"
                 width_xxs="280px"
-
               >
                 <SelectRaw
                   placeholderFloat
@@ -657,13 +660,13 @@ const PricesAndPayments = (props) => {
                     },
                   }}
                 />
-                {props.financial &&
+                {props.financial && (
                   <SelectRaw
                     placeholderFloat
                     bgColor={Colors.white}
                     single={props.financial ? false : true}
                     options={courseArray}
-                    placeholder={"Program"}
+                    placeholder={info.top_label_2}
                     value={course}
                     onChange={(opt) => setCourse(opt)}
                     style={{
@@ -703,9 +706,8 @@ const PricesAndPayments = (props) => {
                       },
                     }}
                   />
-                }
+                )}
               </Div>
-
             )}
           </Div>
         </Div>
@@ -720,7 +722,7 @@ const PricesAndPayments = (props) => {
         maxWidth_md="1366px"
         minWidth_md="580px"
         margin="20px auto"
-      //display="block"
+        //display="block"
       >
         {availablePlans && availablePlans.length === 0 ? (
           <Div
@@ -863,14 +865,15 @@ const PricesAndPayments = (props) => {
                   gridColumn_tablet="12/22"
                   gridColumn_md="13/24"
                   gridColumn_lg="14/26"
-                //margin="32px 0 0 0"
+                  //margin="32px 0 0 0"
                 >
                   <Link
                     style={{
                       display: "block",
                     }}
-                    to={`${info.apply_button.link}${selectedPlan ? `?utm_plan=${selectedPlan}` : ""
-                      }`}
+                    to={`${info.apply_button.link}${
+                      selectedPlan ? `?utm_plan=${selectedPlan}` : ""
+                    }`}
                   >
                     <Button
                       variant="full"

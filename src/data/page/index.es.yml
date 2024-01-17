@@ -23,8 +23,10 @@ header_data:
   video: ""
   image: "../../../static/images/bg/more-new-main-home-bg.png"
 
+news:
   heading: "Lee sobre nosotros en las noticias..."
   limit: 7
+  
 button:
   button_text: Ver Programas
   button_link: "#programs"
@@ -39,8 +41,7 @@ choose_program:
 
 
 ## TWO COLUMNS
-two_columns:
-  proportions: [6, 6]
+two_column:
   image:
     style: '{ "backgroundSize": "cover" }'
     src: "/images/landing/feliz-empresario-laptop.png"

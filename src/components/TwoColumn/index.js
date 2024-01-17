@@ -373,7 +373,7 @@ const TwoColumn = ({ left, right, proportions, session }) => {
       maxWidth_md="1366px"
     >
       <Div
-        justifyContent={left?.video && "left"}
+        justifyContent={left?.video ? "center" : left?.image ? "end" : "start"}
         flexDirection="column"
         size_tablet={left_size || 6}
         size="12"
@@ -385,7 +385,7 @@ const TwoColumn = ({ left, right, proportions, session }) => {
         <Side session={session} {...left} side="left" />
       </Div>
       <Div
-        justifyContent={right?.video && "center"}
+        justifyContent={right?.video ? "center" : right?.image ? "end" : "start"}
         flexDirection="column"
         size_tablet={right_size || 6}
         padding_xs="0"

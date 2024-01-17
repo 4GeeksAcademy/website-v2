@@ -32,7 +32,7 @@ const Financial = (props) => {
     if (location) location = location.node;
   }
 
-  const ymlTwoColumn = yml?.two_columns;
+  const ymlTwoColumn = yml?.two_column;
   const course_type = "full_stack";
   const program_type = "part_time";
 
@@ -192,7 +192,7 @@ const Financial = (props) => {
         financial // Indicates that it is running from financial.js and alters the component structure
       />
 
-      {/* <TwoColumn
+      <TwoColumn
         right={{ image: ymlTwoColumn[0].image }}
         left={{
           heading: ymlTwoColumn[0].heading,
@@ -206,7 +206,7 @@ const Financial = (props) => {
         }}
         proportions={ymlTwoColumn.proportions}
         session={session}
-      /> */}
+      />
 
       <Badges
         link
@@ -230,7 +230,7 @@ const Financial = (props) => {
         }}
       />
 
-      {/* <TwoColumn
+      <TwoColumn
         left={{ image: ymlTwoColumn[1].image }}
         right={{
           heading: ymlTwoColumn[1].heading,
@@ -241,13 +241,12 @@ const Financial = (props) => {
           //padding_tablet: "20px",
           gap_tablet: "40px",
         }}
-        proportions={ymlTwoColumn[1].proportions}
         session={session}
-      /> */}
+      />
 
       <WeTrust we_trust={yml.we_trust_section} />
 
-      {/* <TwoColumn
+      <TwoColumn
         right={{ image: ymlTwoColumn[2].image }}
         left={{
           heading: ymlTwoColumn[2].heading,
@@ -258,9 +257,8 @@ const Financial = (props) => {
           //padding_tablet: "20px",
           gap_tablet: "40px",
         }}
-        proportions={ymlTwoColumn[2].proportions}
         session={session}
-      /> */}
+      />
     </>
   );
 };
@@ -407,9 +405,8 @@ export const query = graphql`
               hover_color
             }
           }
-          two_columns{
-            proportions
-            image{
+          two_column {
+            image {
               style
               src
             }
@@ -420,6 +417,14 @@ export const query = graphql`
             sub_heading{
               text
               font_size
+            }
+            bullets{
+              item_style
+              items{
+                heading
+                text
+                icon
+              }
             }
             content{
               font_size
@@ -432,13 +437,6 @@ export const query = graphql`
               hover_color
               path
             }
-            bullets
-              item_style
-              items{
-                heading
-                text
-                icon
-              }
             boxes{
               icon
               title

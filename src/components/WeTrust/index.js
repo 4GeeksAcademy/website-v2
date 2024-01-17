@@ -10,12 +10,7 @@ import { transferQuerystrings, smartRedirecting } from "../../utils/utils";
 
 const WeTrust = ({ we_trust }) => {
   return (
-    <Div
-      id="we-trust"
-      display="block"
-      margin="0 auto"
-      
-    >
+    <Div id="we-trust" display="block" margin="0 auto">
       <Div
         padding="50px 20px"
         padding_md="40px 80px"
