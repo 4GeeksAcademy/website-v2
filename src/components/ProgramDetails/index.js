@@ -21,10 +21,7 @@ const FillerStyles = styled.div`
   transform: translateY(-50%);
 `;
 
-const weeks = [];
-for (let i = 1; i <= 16; i++) {
-  weeks.push(i.toString() + "sm.");
-}
+
 
 const strings = {
   us: {
@@ -45,6 +42,13 @@ const ProgramDetails = (props) => {
     );
     return null;
   }
+
+  const weeks = [];
+  const totalWeeks = props.details.weeks || 16;
+  for (let i = 1; i <= totalWeeks; i++) {
+    weeks.push(i.toString() + "sm.");
+  }
+
   const steps = props.details.details_modules.reduce(
     (total, current, i) => [...total, (total[i - 1] || 0) + current.step],
     []
@@ -105,7 +109,7 @@ const ProgramDetails = (props) => {
         >
           {list.map((item, index) => {
             return (
-              <Div flexWrap="wrap">
+              <Div flexWrap="wrap" alignItems="center">
                 <Div alignItems="start" margin="10px 0" key={index}>
                   <Icon icon={item.icon} width="20px" height="20px" />
                   <H4
@@ -142,7 +146,7 @@ const ProgramDetails = (props) => {
         </Div>
       </Grid>
 
-      <Div flexWrap="wrap" margin_xs="20px" margin_tablet="100px 0 0 0">
+      <Div flexWrap="wrap" margin_xxs="20px" margin_tablet="100px 0 0 0">
         <H2 lineHeight="36px">{props.heading || props.details.heading}</H2>
         <Paragraph
           padding="20px 0 0 0"

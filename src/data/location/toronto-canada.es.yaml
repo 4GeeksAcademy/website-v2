@@ -2,7 +2,7 @@ meta_info:
   slug: "bootcamp-programacion-toronto-canada"
   position: 2
   title: "4Geeks Academy Toronto - Bootcamp de programación en Toronto, aprende a programar en Toronto"
-  description: "Conoce aquí todo sobre nuestro campus de bootcamp de programación en Toronto, Canada de 4Geeks Academy"
+  description: "Conoce aquí todo sobre nuestro campus de bootcamp de programación en Toronto, Canada de 4GeeksAcademy"
   image: "/images/og-preview/toronto-canada.es.png"
   keywords: "null"
   redirects: []
@@ -32,7 +32,7 @@ custom_bar:
   active: false
   message: 'Próximas fechas: 06/27 Full-Stack | 07/11 Machine Learning! <a class="customBar-link" href="/us/apply" taget="_blank" rel="noopener noreferrer nofollow">Aplica</a>'
   button: 
-    label: "Read More"
+    label: "" # leave empty to hide button
     path: "#" #string (can be inline path using #, relative path or absolute path)
 
 badges:
@@ -75,6 +75,31 @@ images_box:
       alt: "4Geeeks miami location"
     - path: "../../../static/images/locations/miami-people.jpeg"
       alt: "4Geeeks miami lab"
+
+two_columns:
+  proportions: [6, 6]
+  image:
+    style: '{"border" : "5px solid black", "backgroundSize": "contain" }'
+    src: "/static/images/staff/luisa.png"
+    shadow: true  
+  video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
+  heading:
+    text: "La Experiencia de Luisa en 4Geeks Academy en Toronto, Canadá"
+    font_size: ["30px", "30px", "30px", "30px", "30px"]
+  sub_heading:
+    text: "Potencia tu Trayectoria Tecnológica desde Toronto, Canadá"
+    font_size: ["18px", "18px", "22px", "22px", "22px"]
+  button:
+    text: "¡Únete ahora!"
+    color: "white"
+    background: "black"
+    path: "/es/aplica"
+  bullets:
+    items: 
+    - text: "Asesoramiento experto e información compartida por profesionales de la industria "
+    - text: "Desarrollo práctico de habilidades que mejoran tu preparación para el mercado laboral tecnológico"
+    - text: "Preparación para desafíos del mundo real y oportunidades laborales en tecnología"
+
 
 active_campaign_location_slug: "toronto-canada"
 breathecode_location_slug: "toronto-canada"

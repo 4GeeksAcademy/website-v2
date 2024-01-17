@@ -2,7 +2,7 @@ meta_info:
   slug: "coding-bootcamp-miami"
   title: "Miami Coding Bootcamp"
   position: 1
-  description: "Get to know here all about our coding bootcamp campus in Miami, Florida of 4Geeks Academy"
+  description: "Get to know here all about our coding bootcamp campus in Miami, Florida of 4GeeksAcademy"
   image: "/images/og-preview/downtown-miami.us.png"
   keywords: "null"
   redirects:
@@ -55,11 +55,11 @@ button:
   cohort_more_details_text: "DETAILS"
 
 custom_bar:
-  active: false
-  message: 'Change your life with Code. <a class="customBar-link" href="/us/apply">Apply</a> Upcoming programs: June 6 Full-Stack | July 7 ML+AI!'
+  active: true
+  message: 'Change your life with Code. Starting at $150 a month. Or you can pay after you get a job! <a class="customBar-link" href="/us/apply">Apply</a>'
   button: 
-    label: "Read More"
-    path: "#" #string (can be inline path using #, relative path or absolute path)
+    label: "" # leave empty to hide button
+    path: "/us/apply" #string (can be inline path using #, relative path or absolute path)
 
 info_box:
   heading: "Find us in Miami"
@@ -86,6 +86,31 @@ images_box:
     - path: "../../../static/images/locations/miami-old2.jpg"
       alt: "4Geeeks miami lab"
 
+two_columns:
+  proportions: [6, 6]
+  image:
+    style: '{"border" : "5px solid black", "backgroundSize": "contain" }'
+    src: "/static/images/testimonials/allisa-testimonial.jpg"
+    shadow: true  
+  video: "https://www.youtube.com/watch?v=TCHASxvkhpI"
+  heading:
+    text: "Exclusive Scholarships with Miami Dade College, Clark University, and United Way Miami"
+    font_size: ["30px", "30px", "30px", "30px", "30px"]
+  sub_heading:
+    text: "Enhance Your Professional Trajectory with 4GeeksAcademy"
+    font_size: ["18px", "18px", "22px", "22px", "22px"]
+  button:
+    text: "APPLY NOW"
+    color: "white"
+    background: "black"
+    path: "/us/apply"
+  bullets:
+    items: 
+    - text: "There is always a full or partial scholarship open"
+    - text: "There is always opportunities for everyone in Miami-Dade County, Broward and Palm Beach"
+    - text: "We have ongoing partnerships with Miami Dade College, Miami Tech Coalition, UWM, The City of Miami, Miami Dade Counti and so manu more."
+
+      
 chart_section:
   data:
     - percentage: '78%'

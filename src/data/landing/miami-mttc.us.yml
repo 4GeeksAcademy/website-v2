@@ -2,7 +2,7 @@ meta_info:
   slug: miami-tech-talent-coalition # <--- URL 4geeksacademy.com/us/landing/example
 
   # This will show on social media when shared
-  title: "4GeeksAcademy & Miami Tech Talent Coalition"
+  title: "4Geeks Academy & Miami Tech Talent Coalition"
   description: "The Miami Tech Talent Coalition is a community forum connecting employers with technology talent and creating a sustainable tech talent pipeline in Miami."
   visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   # This will show on social media when shared

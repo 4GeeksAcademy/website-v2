@@ -2,7 +2,7 @@ meta_info:
   slug: "coding-bootcamp-orlando"
   title: "Orlando Coding Bootcamp"
   position: 2
-  description: "Get to know here all about our coding bootcamp campus in Orlando, Florida of 4Geeks Academy"
+  description: "Get to know here all about our coding bootcamp campus in Orlando, Florida of 4GeeksAcademy"
   image: "/images/og-preview/orlando-usa.us.png"
   keywords: "null"
   redirects: []
@@ -47,11 +47,11 @@ button:
   cohort_more_details_text: "DETAILS"
 
 custom_bar:
-  active: false
-  message: 'NOW open: 06/27 Full-Stack | 07/11 Machine Learning! <a class="customBar-link" href="/us/apply" taget="_blank" rel="noopener noreferrer nofollow">Apply</a>'
+  active: true
+  message: 'Change your life with Code. Starting at $150 a month. Or you can pay after you get a job! <a class="customBar-link" href="/us/apply">Apply</a>'
   button: 
     label: "Read More"
-    path: "#" #string (can be inline path using #, relative path or absolute path)
+    path: "/us/apply" #string (can be inline path using #, relative path or absolute path)
 
 info_box:
   heading: "Find us in Orlando"
@@ -76,6 +76,30 @@ images_box:
       alt: "4Geeeks location"
     - path: "../../../static/images/locations/miami-people.jpeg"
       alt: "4Geeeks lab"
+
+two_columns:
+  proportions: [6, 6]
+  image:
+    style: '{"border" : "5px solid black", "backgroundSize": "contain" }'
+    src: "/static/images/testimonials/allisa-testimonial.jpg"
+    shadow: true  
+  video: "https://www.youtube.com/watch?v=TCHASxvkhpI"
+  heading:
+    text: "Your Path to Tech with 4Geeks Academy in Orlando"
+    font_size: ["30px", "30px", "30px", "30px", "30px"]
+  sub_heading:
+    text: "Unlock Your Tech Potential through Coding Mastery in Orlando"
+    font_size: ["18px", "18px", "22px", "22px", "22px"]
+  button:
+    text: "APPLY NOW"
+    color: "white"
+    background: "black"
+    path: "/us/apply"
+  bullets:
+    items: 
+    - text: "Tailored curriculum designed to nurture your tech skills and career growth"
+    - text: "Expert-led courses emphasizing practical coding mastery for real-world applications"
+    - text: "Personalized mentorship guiding your journey into Orlando's tech industry"
 
 ## HEADING SECTION
 

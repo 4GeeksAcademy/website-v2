@@ -84,6 +84,30 @@ images_box:
     - path: "../../../static/images/locations/miami-old2.jpg"
       alt: "4Geeeks miami lab"
 
+two_columns:
+  proportions: [6, 6]
+  image:
+    style: '{"border" : "5px solid black", "backgroundSize": "contain" }'
+    src: "/static/images/staff/luisa.png"
+    shadow: true  
+  video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
+  heading:
+    text: "Insights with 4GeeksAcademy"
+    font_size: ["30px", "30px", "30px", "30px", "30px"]
+  sub_heading:
+    text: "Navigating Dublin's Expansive Tech Realm for Career Success"
+    font_size: ["18px", "18px", "22px", "22px", "22px"]
+  button:
+    text: "APPLY NOW"
+    color: "white"
+    background: "black"
+    path: "/us/apply"
+  bullets:
+    items: 
+    - text: "The demand for software engineers in Dublin has surged by 20% in the last year alone, signaling a robust market for skilled developers"
+    - text: "Coding skills have become indispensable, with a 25% rise in job listings requiring programming proficiency"
+    - text: "With a 95% job placement rate within six months of graduation, our programs ensure tangible outcomes for career advancement"
+
 ## HEADING SECTION
 
 active_campaign_location_slug: "dublin-ireland"

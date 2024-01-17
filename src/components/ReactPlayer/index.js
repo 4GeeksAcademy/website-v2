@@ -41,21 +41,27 @@ const Iframe = styled(YouTube)`
   height: ${(props) => props.height || "100%"};
   @media ${Devices.xxs} {
     height: ${(props) => props.height_xxs};
+    minheight: ${(props) => props.minHeight_xxs};
   }
   @media ${Devices.xs} {
     height: ${(props) => props.height_xs};
+    minheight: ${(props) => props.minHeight_xs};
   }
   @media ${Devices.sm} {
     height: ${(props) => props.height_sm};
+    minheight: ${(props) => props.minHeight_sm};
   }
   @media ${Devices.tablet} {
     height: ${(props) => props.height_tablet};
+    minheight: ${(props) => props.minHeight_tablet};
   }
   @media ${Devices.md} {
     height: ${(props) => props.height_md};
+    minheight: ${(props) => props.minHeight_md};
   }
   @media ${Devices.lg} {
-    height: ${(props) => props.height_}lg;
+    height: ${(props) => props.height_lg};
+    minheight: ${(props) => props.minHeight_lg};
   }
 `;
 
@@ -131,6 +137,8 @@ const Player = ({
   transformPlay_lg,
   leftPlay_tablet,
   margin_tablet,
+  padding_xxs,
+  padding_tablet,
   ...rest
 }) => {
   const [showVideo, setShowVideo] = React.useState(false);
@@ -163,7 +171,6 @@ const Player = ({
   };
 
   function borderStyle(style) {
-    console.log(style);
     if (style == null) {
       return false;
     } else {
@@ -190,6 +197,8 @@ const Player = ({
       style={style}
       margin_tablet={margin_tablet}
       width={width}
+      padding_xxs={padding_xxs}
+      padding_tablet={padding_tablet}
     >
       {showVideo ? (
         <>
@@ -215,7 +224,7 @@ const Player = ({
                 height_xxs="300px"
                 height_tablet="400px"
                 height_md="520px"
-                height_lg="100%"
+                height_lg="675px"
                 opts={{
                   // padding: "125px 0 0",
                   width: "100%",
@@ -315,7 +324,7 @@ const Player = ({
                   : videoHeight
               }
               style={{
-                height: `${style.height}` || "100%",
+                height: `${videoHeight}` || "100%",
                 width: `${style.width}` || "100%",
                 //borderRadius: `${style.borderRadius}` || "auto",
               }}
@@ -413,9 +422,6 @@ const Play = styled.button`
   left: 50%;
   transform: ${(props) =>
     props.transformPlay || "translateX(-50%) translateY(-50%)"};
-   {
-    /*translateX(-50%) translateY(-50%);*/
-  }
   border: none;
   opacity: ${(props) => props.opacity || "0.8"};
   cursor: pointer;

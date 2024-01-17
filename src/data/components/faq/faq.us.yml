@@ -46,13 +46,31 @@ faq:
           Furthermore, we also work with amazing partners to offer you the best Extended Payment Plan. You can apply for either a 6,12,19 or 24 month plan ( depending on each location) so that you just have to worry about obtaining your education. 
           Financing is available for those who qualify wherever financing is available.If you are in Chile or Spain, we also have our partner Quotanda who offers many options to make your education possible.
           If you need more information about how it works, please feel free to contact us ar info@4geeksacademy.com."
+      - question: "Does 4Geeks offer career support?"
+        priority: 1
+        answer: |-
+          "Absolutely! At 4Geeks Academy, we offer career support for life (even after you graduate from the BootCamp), with unlimited mentoring sessions intended for Interview Preparation, Resume Building, LinkedIn Optimization, Mock Interviews, and career advice. We also have an internship program where selected students can start obtaining real job experience while looking for a Job. You can read more about our career support services (A.K.A Geekpal) here https://4geeksacademy.com/us/geekforce-career-support"
       - question: "Extended Payment Plan? How does it work? And what does it mean?"
-        priority: 3
+        priority: 1
         answer: |-
           "The Extended Payment Plan has been designed specifically for our students.
           You can apply for an extended payment plan for either a 6,12, 18 or 24 months. You just need to pay the deposit and sign a contract that will take about the payments and what fits best your lifestyle.
           If you want to have more information about the plan, click <a rel="noopener noreferrer nofollow" href="https://quotanda.com/en/4geeks/">here</a>."
-
+      - question: "Can I pay after I get a job?"
+        priority: 1
+        answer: |-
+          "At 4Geeks Academy, we have various payment options available, including Income Share Agreements (ISAs) or Deferred Tuition plans, where you pay after securing a job.
+          These models are designed to support your journey by allowing you to focus on learning first and then repay once you've entered the workforce. 
+          However, specific terms and conditions might apply based on the program you choose and your location, so it's essential to discuss these options with our 
+          admissions team for further details and eligibility criteria."
+      - question: "Does 4Geeks offer mentorships?"
+        priority: 1
+        answer: |-
+          "Yes, ¡For life! 4Geeks Academy offers mentorship through our GeekPal and GeekForce programs. GeekPal provides technical coaching through group mentoring sessions and 1-1 sessions on topics like mock interviews, interview preparation, debugging, and problem-solving. GeekForce offers career coaching through mock interviews in soft skills, career advice, and resume building."
+      - question: "Do I need prior experience?"
+        priority: 1
+        answer: |-
+          "No, you do not need any prior experience to join our bootcamps. We believe in making our courses accessible to anyone who wants to change their lives, regardless of their background or previous knowledge. We have internally developed interactive, real-time, and award-winning learning tools with content, syllabi, and a framework to help everyone learn efficiently regardless of their background. Our pre-work experience levels the students and offers challenges incrementally, along with videos, AI tutoring, unlimited mentorships, and documentation to support your learning journey."
   - topic: "Frequently Asked Questions about Programs"
     slug: "programs"
     questions:
@@ -122,7 +140,7 @@ faq:
           Node is amazing.  It challenges the way the web is created.  However, only 0.3% of the web has adopted Node JS, and its growth has slowed even further over the last months.  Python, Java, PHP, and other similar languages still rule the world (and that is not going to change anytime soon).  They work in a very different way than Node does; our purpose is to prepare you for the "real world."  We train our Full-Stack Developers using/teaching only the most standard and professional technologies.
           <a class="faq-link" href="/us/trends-and-tech/dont-teach-nodejs-full-stack-development-program">Here</a> you can find a great argument as to why we are not teaching Node JS.
       - question: "Do I need to have previous experience in programming to join the bootcamp?"
-        priority: 0
+        priority: 3
         answer: |-
           "No. You just need to want to learn. Coding must exist in some part of your body and we will find it! If you already know how to open your browser and check facebook then we'll be fine!"
       - question: "Do I graduate as a 'Senior Developer?'"

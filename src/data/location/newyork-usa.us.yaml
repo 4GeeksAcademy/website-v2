@@ -2,7 +2,7 @@ meta_info:
   slug: "coding-bootcamp-nyc"
   title: "New York City Coding Bootcamp"
   position: 1
-  description: "Get to know here all about our coding bootcamp campus in NYC, New York of 4Geeks Academy"
+  description: "Get to know here all about our coding bootcamp campus in NYC, New York of 4GeeksAcademy"
   image: "/images/og-preview/downtown-miami.us.png"
   keywords: "null"
   redirects: []
@@ -48,11 +48,11 @@ button:
   cohort_more_details_text: "DETAILS"
 
 custom_bar:
-  active: false
-  message: 'Change your life with Code. <a class="customBar-link" href="/us/apply">Apply</a> Upcoming programs: June 6 Full-Stack | July 7 ML+AI!'
+  active: true
+  message: 'Change your life with Code. Starting at $150 a month. Or you can pay after you get a job! <a class="customBar-link" href="/us/apply">Apply</a>'
   button: 
-    label: "Read More"
-    path: "#" #string (can be inline path using #, relative path or absolute path)
+    label: "" # leave empty to hide button
+    path: "/us/apply" #string (can be inline path using #, relative path or absolute path)
 
 info_box:
   heading: ""
@@ -62,6 +62,7 @@ info_box:
   contact_heading: "Contacts"
   phone: "(786) 416-6640"
   email: "info@4GeeksAcademy.com"
+  
 images_box:
   heading: "What you should know about this location: "
   content: "New York City showcases a dynamic tech ecosystem and a flourishing startup landscape. The metropolis has seen a notable rise in the need for coding expertise, as coding has become an essential component of the local tech industry. In response, coding bootcamps in New York have flourished, drawing in ambitious learners looking to acquire programming skills and become part of the city's thriving tech community."
@@ -77,6 +78,29 @@ images_box:
     - path: "../../../static/images/locations/miami-people.jpeg"
       alt: "4Geeeks lab"
 
+two_columns:
+  proportions: [6, 6]
+  image:
+    style: '{"border" : "5px solid black", "backgroundSize": "contain" }'
+    src: "/static/images/testimonials/allisa-testimonial.jpg"
+    shadow: true  
+  video: "https://www.youtube.com/watch?v=TCHASxvkhpI"
+  heading:
+    text: "Exploring 4Geeks Academy in New York"
+    font_size: ["30px", "30px", "30px", "30px", "30px"]
+  sub_heading:
+    text: "Join us to explore hands-on learning, interact with industry leaders, and pave your way in New York's thriving tech scene."
+    font_size: ["18px", "18px", "22px", "22px", "22px"]
+  button:
+    text: "APPLY NOW"
+    color: "white"
+    background: "black"
+    path: "/us/apply"
+  bullets:
+    items: 
+    - text: "Job-oriented curriculum ensuring career success"
+    - text: "Courses emphasizing coding mastery and skill enhancement"
+    - text: "Professional guidance maximizing opportunities within New York's vibrant tech industry"
 
 active_campaign_location_slug: "newyork-usa"
 breathecode_location_slug: "newyork-usa"

@@ -17,6 +17,7 @@ const SuccessStoriescomponent = ({ filterIndexes, lang }) => {
             heading
             button_text
             button_link
+            source_url_text
             testimonials {
               student_name
               slug
@@ -50,7 +51,6 @@ const SuccessStoriescomponent = ({ filterIndexes, lang }) => {
               short_content
               content
               source_url
-              source_url_text
             }
             fields {
               lang
@@ -61,10 +61,15 @@ const SuccessStoriescomponent = ({ filterIndexes, lang }) => {
     }
   `);
 
-  const filteredData = data.allTestimonialsYaml.edges.find(
+  const data_ = data.allTestimonialsYaml.edges.find(
     ({ node }) => node.fields.lang === lang
-  )?.node?.testimonials;
+  )?.node;
+
+  const filteredData = data_?.testimonials;
+
   const [testimonials, setTestimonials] = useState([]);
+
+  let position = 0;
 
   useEffect(() => {
     filteredData.forEach((testim, ind, arr) => {
@@ -82,29 +87,46 @@ const SuccessStoriescomponent = ({ filterIndexes, lang }) => {
       setTestimonials([...filteredData.filter((f) => f.hidden == false)]);
     }
   }, []);
+
   return (
     <>
       <Div
         display="column"
         columns="3"
         columnCount="3"
-        gap="1em"
+        gap="20px"
         style={{ gridAutoFlow: "dense" }}
-        padding_tablet="0 40px 60px 40px"
-        padding_md="0 80px 60px 80px"
-        padding_lg="0 0 60px 0"
+        padding="0 20px"
+        padding_tablet="50px 40px"
+        padding_md="50px 80px"
+        padding_lg="50px 0"
+        margin="0px auto"
         columnCount_sm="1"
-        columnCount_xs="1"
+        columnCount_xxs="1"
         columnCount_tablet="3"
+        maxWidth="1366px"
       >
         {testimonials.map((m, i) => {
+          i == 0
+            ? (position = 0)
+            : position == 2
+            ? (position = 0)
+            : (position += 1);
           return (
             i < 9 && (
               <TestimonialCard
                 key={i}
                 studentRating={m.rating}
                 image={m.student_thumb && m.student_thumb}
-                background={m.highlighted && Colors.darkYellow}
+                //minHeight="400px"
+                background={
+                  position == 0
+                    ? Colors.white
+                    : position == 1
+                    ? Colors.lightYellow2
+                    : Colors.veryLightBlue
+                }
+                // background={m.highlighted && Colors.darkYellow}
                 name={m.student_name}
                 short_content={m.short_content}
                 // description={m.content.length > 500 && !m.isExpanded ? m.content.substring(0, 500) + "..." : m.content}
@@ -112,12 +134,15 @@ const SuccessStoriescomponent = ({ filterIndexes, lang }) => {
                 video={m.student_video}
                 starRating={true}
                 stories={true}
-                style={{ 
-                  height: "39px", 
-                  maxWidth: "39px", 
-                  backgroundSize: "contain" }}
+                style={{
+                  height: "39px",
+                  maxWidth: "39px",
+                  backgroundSize: "contain",
+                }}
                 lang={lang}
-    
+                linkedin_url={m.linkedin_url}
+                url={m.source_url}
+                textUrl={data_.source_url_text}
               />
             )
           );

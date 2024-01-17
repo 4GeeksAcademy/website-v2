@@ -2,7 +2,7 @@ meta_info:
   slug: "coding-bootcamp-houston"
   title: "Houston Coding Bootcamp"
   position: 1
-  description: "Get to know here all about our coding bootcamp campus in Houston, Texas of 4Geeks Academy"
+  description: "Get to know here all about our coding bootcamp campus in Houston, Texas of 4GeeksAcademy"
   image: "/images/og-preview/downtown-miami.us.png"
   keywords: "null"
   redirects: []
@@ -48,11 +48,11 @@ button:
   cohort_more_details_text: "DETAILS"
 
 custom_bar:
-  active: false
-  message: 'Change your life with Code. <a class="customBar-link" href="/us/apply">Apply</a> Upcoming programs: June 6 Full-Stack | July 7 ML+AI!'
+  active: true
+  message: 'Change your life with Code. Starting at $150 a month. Or you can pay after you get a job! <a class="customBar-link" href="/us/apply">Apply</a>'
   button: 
-    label: "Read More"
-    path: "#" #string (can be inline path using #, relative path or absolute path)
+    label: "" # leave empty to hide button
+    path: "/us/apply" #string (can be inline path using #, relative path or absolute path)
 
 info_box:
   heading: ""
@@ -77,6 +77,30 @@ images_box:
     - path: "../../../static/images/locations/miami-people.jpeg"
       alt: "4Geeeks lab"
 
+
+two_columns:
+  proportions: [6, 6]
+  image:
+    style: '{"border" : "5px solid black", "backgroundSize": "contain" }'
+    src: "/static/images/testimonials/allisa-testimonial.jpg"
+    shadow: true  
+  video: "https://www.youtube.com/watch?v=TCHASxvkhpI"
+  heading:
+    text: "Exploring Houston's Coding Frontier"
+    font_size: ["30px", "30px", "30px", "30px", "30px"]
+  sub_heading:
+    text: "Insights from Alissa on 4GeeksAcademy"
+    font_size: ["18px", "18px", "22px", "22px", "22px"]
+  button:
+    text: "APPLY NOW"
+    color: "white"
+    background: "black"
+    path: "/us/apply"
+  bullets:
+    items: 
+    - text: "Practical projects refining skills on demand within professional environment"
+    - text: "Curriculum aligned with industry needs for seamless job market integration"
+    - text: "Professional guidance maximizing opportunities within Houston's thriving tech industry"
 
 active_campaign_location_slug: "houston-usa"
 breathecode_location_slug: "houston-usa"

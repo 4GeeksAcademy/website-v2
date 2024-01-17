@@ -29,6 +29,10 @@ const ScholarshipProjects = ({ content, maxWidth }) => {
       position="relative"
       maxWidth={maxWidth || "1366px"}
       margin="auto"
+      padding_xxs="20px"
+      padding_tablet="50px 40px"
+      padding_md="50px 80px"
+      padding_lg="70px 0px"
     >
       <H2 margin="0 0 10px 0">{content.title}</H2>
       <Paragraph margin="0 0 25px 0">{content.description}</Paragraph>
@@ -43,12 +47,13 @@ const ScholarshipProjects = ({ content, maxWidth }) => {
         zIndex="99"
         top="50%"
         left="5%"
-        left_md="5%"
-        left_tablet="5%"
+        left_md="3%"
+        left_lg="0%"
+        left_tablet="0%"
         width="12px"
         height="20px"
-        width_tablet="21px"
-        height_tablet="35px"
+        width_tablet="35px"
+        height_tablet="62px"
         onClick={() => sliderRef.current.slickPrev()}
       >
         <Icon width="100%" height="100%" icon="arrowleft" />
@@ -64,25 +69,27 @@ const ScholarshipProjects = ({ content, maxWidth }) => {
         zIndex="99"
         top="50%"
         right="5%"
-        right_md="5%"
-        right_tablet="5%"
+        right_md="3%"
+        right_lg="0%"
+        right_tablet="0%"
         width="12px"
         height="20px"
-        width_tablet="21px"
-        height_tablet="35px"
+        width_tablet="35px"
+        height_tablet="62px"
         onClick={() => sliderRef.current.slickNext()}
       >
         <Icon width="100%" height="100%" icon="arrow-right" />
       </Button>
       <Slider {...settings} ref={sliderRef}>
         {content?.projects.map((project) => (
-          <Div>
+          <Div margin_md="50px auto">
             <Div
               padding="15px"
               padding_tablet="0"
               margin="auto"
-              width_tablet="690px"
-              width_md="900px"
+              width_tablet="100%"
+              width_lg="90%"
+              // width_md="900px"
               minHeight_tablet="605px"
               border_tablet="1px solid #000000"
               flexDirection_tablet="row"
