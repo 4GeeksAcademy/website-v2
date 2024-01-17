@@ -2,7 +2,7 @@ meta_info:
   slug: "coding-bootcamp-atlanta"
   title: "Atlanta Coding Bootcamp"
   position: 1
-  description: "Get to know here all about our coding bootcamp campus in Atlanta, Georgia of 4Geeks Academy"
+  description: "Get to know here all about our coding bootcamp campus in Atlanta, Georgia of 4GeeksAcademy"
   image: "/images/og-preview/downtown-miami.us.png"
   keywords: "null"
   redirects: []
@@ -79,6 +79,31 @@ images_box:
     - path: "../../../static/images/locations/miami-people.jpeg"
       alt: "4Geeeks miami lab"
 
+## START FROM HERE - DON'T CHANGE ANYTHING ABOVE
+
+two_columns:
+  proportions: [6, 6]
+  image:
+    style: '{"border" : "5px solid black", "backgroundSize": "contain" }'
+    src: "/static/images/testimonials/allisa-testimonial.jpg"
+    shadow: true  
+  video: "https://www.youtube.com/watch?v=TCHASxvkhpI"
+  heading:
+    text: "Unlocking Atlanta's Coding Potential"
+    font_size: ["30px", "30px", "30px", "30px", "30px"]
+  sub_heading:
+    text: "Alissa Reveals Why 4Geeks Academy is the best option"
+    font_size: ["18px", "18px", "22px", "22px", "22px"]
+  button:
+    text: "APPLY NOW"
+    color: "white"
+    background: "black"
+    path: "/us/apply"
+  bullets:
+    items: 
+    - text: "Hands-on projects fostering practical skill mastery"
+    - text: "Industry-aligned curriculum for real-world readiness"
+    - text: "Career support navigating Atlanta's thriving tech industry"
 
 active_campaign_location_slug: "atlanta-usa"
 breathecode_location_slug: "atlanta-usa"
