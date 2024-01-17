@@ -216,7 +216,7 @@ const Outcomes = ({ data, pageContext, yml }) => {
           maxWidth="1366px"
           margin_tablet="0 auto"
         >
-          <Div gridArea="1/1/1/12" flexDirection="column">
+          <Div gridArea="1/1/1/13" flexDirection="column">
             {yml.sections
               .filter((section) => section.title !== "")
               .map((section, i) => {
