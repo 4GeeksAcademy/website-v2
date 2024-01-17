@@ -410,34 +410,34 @@ export const query = graphql`
               style
               src
             }
-            heading{
+            heading {
               text
               font_size
             }
-            sub_heading{
+            sub_heading {
               text
               font_size
             }
-            bullets{
+            bullets {
               item_style
-              items{
+              items {
                 heading
                 text
                 icon
               }
             }
-            content{
+            content {
               font_size
               text
             }
-            button{
+            button {
               text
               color
               background
               hover_color
               path
             }
-            boxes{
+            boxes {
               icon
               title
               text

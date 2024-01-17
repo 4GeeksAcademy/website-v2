@@ -450,7 +450,7 @@ export const query = graphql`
             heading
             sub_heading
           }
-          two_column{
+          two_column {
             image {
               style
               src
