@@ -52,10 +52,12 @@ exports.sourceNodes = async (
     };
     const count = wordCount(content);
 
-    try{
+    try {
       content = matter(content);
-    }catch(e){
-      throw Error(`There was an error while processing blog post frontmatter for: ${post.slug}. \n ${e}`)
+    } catch (e) {
+      throw Error(
+        `There was an error while processing blog post frontmatter for: ${post.slug}. \n ${e}`
+      );
     }
 
     const frontMatter = {
