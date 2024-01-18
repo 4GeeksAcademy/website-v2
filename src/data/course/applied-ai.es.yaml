@@ -1,23 +1,22 @@
 meta_info:
   slug: applied-ai
-  title: "Conviértete en un Ingeniero de Inteligencia Artificial y Machine Learning en 4Geeks Academy"
-  description: "Sin conocimientos previos requeridos, comienza una carrera como científico de datos y construye tus primeros modelos de Machine Learning."
+  title: "Curso de Inteligencia Artificial Aplicada"
+  description: "Explora a detalle la inteligencia artificial y cómo aplicarla en diferentes industrias, roles y en tu trabajo. Sin conocimientos previos requeridos."
   bc_slug: "applied-ai"
-  template: "course-datascience"
   image: "/images/og-preview/datascience-ml.es.png"
-  visibility: "hidden"
+  visibility: "visible"
   keywords: ""
   show_in_apply: true
   redirects: ["/es/applied-ai"]
   related_clusters: ["trends-and-tech"]
 
 apply_form:
-  label: Applied AI for Professionals
+  label: Curso de Inteligencia Artificial Aplicada
 
-seo_title: "Applied AI for Professionals"
+seo_title: "Curso de Inteligencia Artificial Aplicada"
 header:
-  title: "Conviértete en un Profesional en Inteligencia Artificial Aplicada"
-  paragraph: "¡Prepárate para ingresar a los campos mejor remunerados de la tecnología en tan solo 16 semanas!"
+  title: "Aprende a utilizar la inteligencia artificial en tu trabajo"
+  paragraph: "¡Conviértete un experto en AI y como aplicarla en las empresas, en diferentes roles y en tu trabajo!"
   image: "../../../static/images/bg/circles.jpg"
   image_alt: "círculos"
 
@@ -70,7 +69,7 @@ details:
   about:
     title: "Sobre este programa"
     sub_title: |
-      Este curso, "Applied AI for Professionals," está diseñado para capacitar a profesionales que buscan integrar la inteligencia artificial (IA) en sus roles actuales. A lo largo de seis semanas, los participantes obtendrán una comprensión integral de la IA y sus aplicaciones prácticas en diversas industrias.
+      Este curso de inteligencia artificial está diseñado para quienes búscan integrar la inteligencia artificial (IA) en sus trabajos y roles actuales. A lo largo de seis semanas, los participantes obtendrán una comprensión integral de la IA y sus aplicaciones prácticas en diversas industrias.
       El curso abarca conceptos esenciales como definiciones de IA, beneficios en el entorno laboral y elementos clave como Contexto, Prompts y Modelos. Los participantes aprenderán a identificar oportunidades para implementar IA, superar desafíos, desarrollar estrategias efectivas de IA y crear comandos prácticos.
         
     list:
@@ -115,16 +114,16 @@ details:
     duration: "DURACIÓN:"
     skills: "Habilidades / Semanas:"
   details_modules:
-    - module_name: "Introducción a la IA"
-      title: "Introducción a AI"
-      description: "Definiciones de IA, beneficios en el entorno laboral, tipos de IA con ejemplos prácticos, y conceptos clave como Contexto, Prompts y Modelos."
+    - module_name: "Intro. al AI"
+      title: "Intro. al AI"
+      description: "Definiciones de IA, beneficios en el entorno laboral, tipos de Inteligencia Artificial con ejemplos prácticos, y conceptos clave como Contexto, Prompts y Modelos."
       projects: "Identificación de oportunidades para implementar IA, comprensión de desafíos y riesgos, desarrollo de estrategias de IA y creación de comandos útiles."
       slug: "intro-ai-workplace"
       duration: "1 semana"
       step: 1
-    - module_name: "Mejorar el Rendimiento Laboral"
+    - module_name: "Sé más productivo"
       title: "Estrategias para Mejorar el Rendimiento Laboral"
-      description: "Comparación entre la IA y los humanos en diversas tareas, cuándo utilizar la IA, ejemplos de prompts relacionados con los campos de los estudiantes, y consejos de Ingeniería de Prompts."
+      description: "Comparación entre la IA y los humanos en diversas tareas, cuándo utilizar la Inteligencia Artificial, ejemplos de prompts relacionados con los campos de los estudiantes, y consejos de Ingeniería de Prompts."
       projects: "Creación de flujos de trabajo para profesiones como profesores, lingüistas y desarrolladores."
       slug: "generation-estrategies"
       duration: "1 semanas"
@@ -139,13 +138,13 @@ details:
     - module_name: "Generación de imagenes"
       title: "Generación de Imágenes e Implementación de IA"
       description: "Revisión de capacidades de modelos populares para generación de imágenes como Stable Diffusion, Dall-E, Midjourney. Cómo redactar buenos prompts para modelos de generación de imágenes."
-      projects: "Desarrollo de una estrategia de IA y creación de prompts útiles para generar imágenes en casos de uso específicos."
+      projects: "Desarrollo de una estrategia de Inteligencia Artificial y creación de prompts útiles para generar imágenes en casos de uso específicos."
       slug: "img-generation"
       duration: "1 semana"
       step: 4
     - module_name: "Herramientas y Futuo de las IAs"
       title: "Herramientas y el Futuro de las IAs"
-      description: "Evaluación de herramientas de IA, proyectos prácticos utilizando herramientas populares."
+      description: "Evaluación de herramientas de Inteligencia Artificial, proyectos prácticos utilizando herramientas populares."
       projects: "Graduación del curso, preguntas finales, tareas y próximos pasos..."
       slug: "final-project"
       duration: "1 semanas"
