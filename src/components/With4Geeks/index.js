@@ -81,7 +81,6 @@ export default ({
     );
   else locationFiltered = stories || info.with;
 
-
   return (
     <Fragment github="/components/with_4geeks">
       {(info?.header || title) && (
