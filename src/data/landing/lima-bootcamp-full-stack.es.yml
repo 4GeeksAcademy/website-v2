@@ -52,7 +52,7 @@ features:
   #                                         up   left down  right
   styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
   bullets:
-    - 4geeks academy ha impartido más de 20 bootcamps de código en Perú, con un alto índice de empleabilidad de sus egresados
+    - 4Geeks Academy ha impartido más de 20 bootcamps de código en Perú, con un alto índice de empleabilidad de sus egresados
     - ProInnóvate financiará los programas con un costo total por beneficiario de hasta US$ 7 500
     - Mentorías y career support de por vida
     - Horario Full-Time 
@@ -121,7 +121,7 @@ program_details:
     duration: 10
 
 why_4geeks:
-  position: 7
+  position: 8
   heading: "¿Por qué 4Geeks?"
   sub_heading: " "
 
@@ -153,7 +153,7 @@ components:
       color: white
       hover_color: "white"
       background: "black"
-      path: "mailto:bootcamps@proinnovate.gob.pe"
+      path: "https://www.proinnovate.gob.pe/convocatorias/por-tipo-de-concurso/concursos-para-actores-del-ecosistema/630-bootcamp"
 
 
   - name: new_design_with_bullets
@@ -200,26 +200,40 @@ components:
 
 
   - name: python_y_javascript
-    position: 6
-    layout: two_column_right
+    position: 7
+    layout: two_column_left
     background: "#fbfbfb" # Name of the color(from components/Styling/index.js) or color code ex: #C9F9F9
     image:
       src: "/images/landing/bootcamps.png"
     heading:
       # style: '{"padding": "0 20px", "line-height": "50px"}'
       text:
-        "Prepárate para el futuro digital"
+        "Cómo postularse a la beca de ProInnóvate"
         #           xl      lg      md      sm      xs
       font_size: ["50px", "50px", "50px", "50px", "50px"]
     content:
-      text: "El temario del programa abarca diversos aspectos de programación de código, destacando las tecnologías digitales más relevantes y las habilidades esenciales para destacar en la actualidad."
+      text: ""
       font_size: ["18px"]
     button: 
       text: "Aplica a la Beca"
       color: white
       hover_color: "white"
       background: "black"
-      path: "https://www.proinnovate.gob.pe/convocatorias/por-tipo-de-concurso/concursos-para-actores-del-ecosistema/630-bootcamp"
+      path: "mailto:bootcamps@proinnovate.gob.pe"
+    bullets:
+      items:
+        - heading: "Paso 1: Registro"
+          text: "Las personas interesadas deben completar el registro a través del Sistema en Línea de ProInnóvate"
+          icon: "circle" 
+        - heading: "Paso 2: Presentación de Proyectos"
+          text: "Las propuestas deben detallar la estrategia para la colocación laboral de los beneficiarios egresados del programa"
+          icon: "circle" 
+        - heading: "Paso 3: Evaluación y Selección"
+          text: "ELa selección se llevará a cabo en dos etapas, eligiendo entre dos y cuatro bootcamps en la primera y beneficiarios en la segunda"
+          icon: "circle" 
+        - heading: "Correo de Consultas del Bootcamp"
+          text: "Para consultas relacionadas con las bases del concurso, pueden comunicarse a: bootcamps@proinnovate.gob.pe  haciendo click en  Aplicar a la Beca"
+          icon: "circle" 
 
 
 

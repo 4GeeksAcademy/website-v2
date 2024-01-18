@@ -136,7 +136,7 @@ details:
           content: "Tan solo necesitas un ordenador y una conexión a internet"
           icon: "contract-checked"
         - label: "Idioma"
-          content: "Puedes elegir entre inglés y español para consumir el plan de estudios y el contenido. Las clases se imparten en el idioma oficial de tú campus."
+          content: "Por ahora las clases se imparten solo en español"
           icon: "contract-checked"
           
   heading: DETALLES DEL PROGRAMA FULL-TIME
