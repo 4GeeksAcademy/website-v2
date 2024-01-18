@@ -26,11 +26,12 @@ navbar:
 form:
   # posible fields: "first_name", "last_name", "full_name", "phone", "email"
   # always the first_name, email and phone will be mandatory if added.
-  fields: ["full_name", "phone", "email"]
-  heading: "Conoce más información"
-  motivation: "Completa el formulario y te enviaremos la información en unos minutos a tu correo electrónico."
-  button_label: Obtener malla y más información
-  redirect: "/es/gracias/?lang=es"  #you can redirect to another url or entirely diffrent website
+  hide_form: True
+  # fields: ["full_name", "phone", "email"]
+  # heading: "Conoce más información"
+  # motivation: "Completa el formulario y te enviaremos la información en unos minutos a tu correo electrónico."
+  # button_label: Obtener malla y más información
+  # redirect: "/es/gracias/?lang=es"  #you can redirect to another url or entirely diffrent website
 
 apply_schollarship: # form that is displayed at the end of the landing
   # title: "Get more info about this award-winning development course"
