@@ -181,11 +181,12 @@ const StyledImage = styled.div`
   border: ${(props) => props.border};
   height: ${(props) => props.height};
   min-height: ${(props) => props.minHeight};
-  max-height: ${(props) => (props.maxHeight ? props.maxHeight : "none")};
+  max-height: ${(props) => props.maxHeight || 'none'};
   min-width: ${(props) => props.minWidth};
   margin: ${(props) => props.margin};
   box-shadow: ${(props) => props.boxShadow};
-  padding= ${(props) => props.padding};
+  padding: ${(props) => props.padding};
+  z-index: ${(props) => props.zIndex};
   @media ${Break.sm} {
     height: ${(props) => props.h_sm};
     min-height: ${(props) => props.minHeight_sm};
@@ -214,6 +215,8 @@ const StyledImage = styled.div`
     padding: ${(props) => props.padding_tablet}; 
     display: ${(props) => props.display_tablet};
     height: ${(props) => props.height_tablet};
+    width: ${(props) => props.width_tablet};
+    min-height: ${(props) => props.minHeight_tablet};
     left: ${(props) => props.left_tablet};
     right: ${(props) => props.right_tablet};
     top: ${(props) => props.top_tablet};
