@@ -350,18 +350,18 @@ const LandingHeader = (props) => {
               />
             ) : (
               <Img
-                src={yml.form.side_image}
+                src={yml.form.side_image || '/images/landing/grupo-ventanas.png'}
                 alt="4Geeks Academy Section"
                 margin="auto"
                 height="100%"
                 minHeight_tablet="none"
                 minHeight="500px"
                 maxHeight="500px"
-                width_tablet="70%"
+                width_tablet="80%"
                 width="100%"
                 zIndex="10"
                 // h_sm="250px"
-                backgroundSize="cover"
+                backgroundSize="contain"
               />
             )}
             <Div

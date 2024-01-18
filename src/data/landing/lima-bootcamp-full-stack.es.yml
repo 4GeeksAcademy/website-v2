@@ -27,7 +27,7 @@ form:
   # posible fields: "first_name", "last_name", "full_name", "phone", "email"
   # always the first_name, email and phone will be mandatory if added.
   hide_form: True
-  side_image: '/images/landing/Becas-para-bootcamps.png'
+  side_image: '/images/landing/metting-img.png'
   # fields: ["full_name", "phone", "email"]
   # heading: "Conoce más información"
   # motivation: "Completa el formulario y te enviaremos la información en unos minutos a tu correo electrónico."
