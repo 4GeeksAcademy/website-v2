@@ -148,6 +148,12 @@ components:
     content:
       text: "4Geeks Academy, la escuela de tecnología líder en América Latina, se une a ProInnóvate, el programa de innovación del Ministerio de la Producción del Perú, para ofrecer becas integrales para bootcamps de programación."
       font_size: ["18px"]
+    button: 
+      text: "OBTENER MÁS INFORMACIÓN"
+      color: white
+      hover_color: "white"
+      background: "black"
+      path: "mailto:bootcamps@proinnovate.gob.pe"
 
 
   - name: new_design_with_bullets
@@ -209,11 +215,11 @@ components:
       text: "El temario del programa abarca diversos aspectos de programación de código, destacando las tecnologías digitales más relevantes y las habilidades esenciales para destacar en la actualidad."
       font_size: ["18px"]
     button: 
-      text: "OBTENER MÁS INFORMACIÓN"
+      text: "Aplica a la Beca"
       color: white
       hover_color: "white"
       background: "black"
-      path: "mailto:pablo@4geeksacademy.com"
+      path: "https://www.proinnovate.gob.pe/convocatorias/por-tipo-de-concurso/concursos-para-actores-del-ecosistema/630-bootcamp"
 
 
 
