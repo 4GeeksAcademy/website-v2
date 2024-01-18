@@ -13,7 +13,7 @@ import { processFormEntry } from "../../actions";
 
 const LandingHeader = (props) => {
   const { setLocation } = React.useContext(SessionContext);
-  const { pageContext, yml, preData, locations, programs } = props;
+  const { pageContext, yml, preData, locations, programs, hideForm } = props;
   const [inLocation, setInLocation] = React.useState("");
 
   useEffect(() => {
@@ -304,49 +304,51 @@ const LandingHeader = (props) => {
                 />
               </Div>
             </Div>
-            <LeadForm
-              landingTemplate
-              headerImage={
-                yml.header_data.badge &&
-                yml.header_data.badge.childImageSharp.gatsbyImageData
-              }
-              background={
-                yml.header_data.background === "#FFF1D1"
-                  ? Colors.white
-                  : "#FFF1D1"
-              }
-              margin_md="50px 0 0 14.5%"
-              margin_tablet="18px 0"
-              selectProgram={programs}
-              selectLocation={locations}
-              margin="18px 0"
-              marginTop_tablet="50px"
-              // marginTop_xs="20px"
-              style={{
-                zIndex: "1",
-                minHeight: "350px",
-                borderRadius: "0px",
-                border: "3px solid black",
-              }}
-              gap="11px"
-              formHandler={processFormEntry}
-              heading={yml.form.heading}
-              motivation={yml.form.motivation}
-              sendLabel={yml.form.button_label}
-              redirect={yml.form.redirect}
-              inputBgColor="#FFFFFF"
-              layout="block"
-              lang={pageContext.lang}
-              fields={yml.form.fields}
-              data={preData}
-              justifyContentButton="center"
-              marginButton="10px auto 30px auto"
-              widthButton="100%"
-              width_md="84%"
-              width_tablet="84%"
-              // marginButton_tablet="0 0 30px auto"
-              boxShadow="9px 8px 0px 0px rgba(0,0,0,1)"
-            />
+            {!hideForm && (
+              <LeadForm
+                landingTemplate
+                headerImage={
+                  yml.header_data.badge &&
+                  yml.header_data.badge.childImageSharp.gatsbyImageData
+                }
+                background={
+                  yml.header_data.background === "#FFF1D1"
+                    ? Colors.white
+                    : "#FFF1D1"
+                }
+                margin_md="50px 0 0 14.5%"
+                margin_tablet="18px 0"
+                selectProgram={programs}
+                selectLocation={locations}
+                margin="18px 0"
+                marginTop_tablet="50px"
+                // marginTop_xs="20px"
+                style={{
+                  zIndex: "1",
+                  minHeight: "350px",
+                  borderRadius: "0px",
+                  border: "3px solid black",
+                }}
+                gap="11px"
+                formHandler={processFormEntry}
+                heading={yml.form.heading}
+                motivation={yml.form.motivation}
+                sendLabel={yml.form.button_label}
+                redirect={yml.form.redirect}
+                inputBgColor="#FFFFFF"
+                layout="block"
+                lang={pageContext.lang}
+                fields={yml.form.fields}
+                data={preData}
+                justifyContentButton="center"
+                marginButton="10px auto 30px auto"
+                widthButton="100%"
+                width_md="84%"
+                width_tablet="84%"
+                // marginButton_tablet="0 0 30px auto"
+                boxShadow="9px 8px 0px 0px rgba(0,0,0,1)"
+              />
+            )}
             <Div
               display="none"
               display_tablet="block"
