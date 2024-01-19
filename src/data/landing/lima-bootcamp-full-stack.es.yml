@@ -115,7 +115,7 @@ rating_reviews:
       url: ""
 
 program_details:
-  position: 2
+  position: 1
   heading: "Maestría en Python, JavaScript y React"
   sub_heading: "Comienza con Python, Ciencia de Datos, Aprendizaje Automático, Deep Learning y el mantenimiento de un entorno de producción en Inteligencia Artificial."
   weeks:
@@ -135,7 +135,7 @@ who_is_hiring:
 # Possible layours: [two_column_left_image, two_column_right_image]
 components:
   - name: pro_innovate
-    position: 1
+    position: 2
     layout: two_column_left
     background: "#fff" # Name of the color(from components/Styling/index.js) or color code ex: #C9F9F9
     image:
