@@ -144,6 +144,9 @@ socials:
   - name: "Instagram"
     icon: "instagram"
     link: "https://www.instagram.com/4geeksacademylatam/"
+  - name: "Linkdein"
+    icon: "linkedin"
+    link: "https://www.linkedin.com/company/79678753/admin/feed/posts/"
 courses:
   - "Full-Time"
   - "Part-Time"

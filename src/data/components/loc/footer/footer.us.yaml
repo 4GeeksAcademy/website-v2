@@ -101,9 +101,9 @@ footer:
         link: "https://www.notion.so/4geeksacademy/Talent-Pipeline-4Geeks-Academy-ef91aba17f9c4964bf7972396d190bdf"
 
 socials:
-  - name: "Github"
-    icon: "github"
-    link: "https://www.github.com/4GeeksAcademy"
+  - name: "Linkedin"
+    icon: "linkedin"
+    link: "https://www.linkedin.com/school/4geeksacademy/"
   - name: "Facebook"
     icon: "facebook"
     link: "https://www.facebook.com/4GeeksAcademy"

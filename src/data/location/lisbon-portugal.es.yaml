@@ -129,9 +129,9 @@ socials:
   - name: "Instagram"
     icon: "instagram"
     link: "https://www.instagram.com/4geeksacademy/"
-  - name: "Meetup"
-    icon: "meetup"
-    link: "https://www.meetup.com/4geeks-academy"
+  - name: "Linkedin"
+    icon: "linkedin"
+    link: "https://www.linkedin.com/school/4geeksacademyes/"
 
 courses:
   - "Full-Time"
