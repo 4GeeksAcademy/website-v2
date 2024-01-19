@@ -53,7 +53,6 @@ features:
   #                                         up   left down  right
   styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
   bullets:
-    - 4Geeks Academy ha impartido más de 20 bootcamps de código en Perú, con un alto índice de empleabilidad de sus egresados
     - ProInnóvate financiará los programas con un costo total por beneficiario de hasta US$ 7 500
     - Mentorías y career support de por vida
     - Horario Full-Time 
@@ -233,7 +232,7 @@ components:
           text: "ELa selección se llevará a cabo en dos etapas, eligiendo entre dos y cuatro bootcamps en la primera y beneficiarios en la segunda"
           icon: "circle" 
         - heading: "Correo de Consultas del Bootcamp"
-          text: "Para consultas relacionadas con las bases del concurso, pueden comunicarse a: bootcamps@proinnovate.gob.pe  haciendo click en  Aplicar a la Beca"
+          text: "Para consultas relacionadas con las bases del concurso, pueden comunicarse a: bootcamps@proinnovate.gob.pe  haciendo click en  Póstulate a la Beca"
           icon: "circle" 
 
 
