@@ -81,7 +81,6 @@ const LandingFooter = ({ yml }) => {
                     fill={Colors.black}
                     height="32px"
                     width="32px"
-
                   />
                 )}
               </Anchor>

@@ -115,7 +115,6 @@ const Footer = ({ yml }) => {
                   fontWeight="400"
                   // textTransform="uppercase"
                   color={Colors.black}
-                  
                 >
                   <Icon
                     icon={ln.icon}
