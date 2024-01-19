@@ -26,7 +26,7 @@ navbar:
 form:
   # posible fields: "first_name", "last_name", "full_name", "phone", "email"
   # always the first_name, email and phone will be mandatory if added.
-  hide_form: True
+  # hide_form: True
   side_image: '/images/bg/main.png'
   # fields: ["full_name", "phone", "email"]
   # heading: "Conoce más información"
