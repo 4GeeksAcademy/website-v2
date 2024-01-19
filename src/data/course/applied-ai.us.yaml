@@ -1,7 +1,7 @@
 meta_info:
   slug: applied-ai-course
-  title: "Conviértete en un Ingeniero de Inteligencia Artificial y Machine Learning en 4Geeks Academy"
-  description: "Sin conocimientos previos requeridos, comienza una carrera como científico de datos y construye tus primeros modelos de - - Machine Learning."
+  title: "Course in Applied Artificial Intelligence"
+  description: "Explore in detail artificial intelligence and how to apply it in different industries, roles, and your work. No previous knowledge required"
   bc_slug: "applied-ai"
   image: "/images/og-preview/datascience-ml.es.png"
   visibility: "visibility"
@@ -13,22 +13,22 @@ meta_info:
 apply_form:
   label: Applied AI for Professionals
 
-seo_title: "Applied AI for Professionals"
+seo_title: "Applied AI Course"
 header:
-  title: "Conviértete en un Profesional en Inteligencia Artificial Aplicada"
-  paragraph: "¡Prepárate para ingresar a los campos mejor remunerados de la tecnología en tan solo 16 semanas!"
+  title: "Become an expert in AI and learn how to apply it in businesses, various roles, and your job!"
+  paragraph: "Get ready to maximize your productivity in just 6 weeks!"
   image: "../../../static/images/bg/circles.jpg"
-  image_alt: "círculos"
+  image_alt: "Applied AI"
 
 button:
-  syllabus_heading: "Descargar Detalles del Curso"
-  syllabus_btn_label: "Descarga Instantánea"
-  syllabus_motivation: "En 2 min. recibirás en tu buzón de correo un PDF con información muy detallada sobre nuestra metodología, tecnologías, becas, financiación e información del curso."
-  apply_button_link: "/es/aplica"
+  syllabus_heading: "Download Course Details"
+  syllabus_btn_label: "Instant Download"
+  syllabus_motivation: "In 2 minutes, you will receive a detailed PDF in your email inbox containing information about our methodology, technologies, scholarships, financing, and course details."
+  apply_button_link: "/us/apply"
 
 course_instructors:
   header:
-    title: "Conoce a nuestros instructores"
+    title: "Meet our instructors"
     paragraph: ""
 
   instructors:
@@ -37,9 +37,9 @@ course_instructors:
       degree: "Prompt Engineer"
       image: "../../../static/images/instructors/charly.jpeg"
       bio: | 
-        Contacto de 2º grado2º
-        📓#Tana creator 🧠Prompt Engineer 🐍⚛️ Fullstack project leader Django and Next 📽️ Code Speller on YouTube 
-        Desarrollo de aplicaciones en la nube, Desarrollo web, Diseño web y Diseño de experiencia de usuario (UX)"
+        "2nd-degree contact
+        📓 #Tana creator 🧠 Prompt Engineer 🐍⚛️ Fullstack project leader Django and Next 📽️ Code Speller on YouTube
+        Cloud application development, Web development, Web design, and User Experience (UX) Design."
       linkedin: "https://www.linkedin.com/in/charlytoc/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
 
     # - name: "Sayyed Nezhadi"
@@ -51,11 +51,11 @@ course_instructors:
     #   linkedin: "https://www.linkedin.com/in/sayyednezhadi"
 
 badges:
-  paragraph: "Gracias a un enfoque hacia la programación, nuestros programas han sido galardonados como TOP en <a href='/es/premios'>España, USA y otros países</a>. Nuestros certificados están avalados por el Departamento de Educación de Estado Unidos en Florida."
+  paragraph: "Kickstart your career at 4Geeks Academy, where developers grow and thrive. Named the best <a href='/us/coding-bootcamp'>coding bootcamp</a> 2023 by Course Report, best center for coding bootcamps 2023 by Premios de Excelencia Educativa in Spain, listed among the top 10 in the US by Newsweek, and rated 4.92/5 on Switchup. Licensed by the Florida Department of Education, USA."
 
 upcoming:
-  no_dates_message: "Actualmente no hay próximas fechas para este programa"
-  actionMessage: "Avisadme de fechas disponibles"
+  no_dates_message: "Currently, there are no upcoming dates for this program"
+  actionMessage: "Notify me of available dates"
 
 # description:
 #   heading: "Sobre este curso"
@@ -67,106 +67,96 @@ upcoming:
 ## PROGRAM DETAILS
 details:
   about:
-    title: "Sobre este programa"
+    title: "About this program"
     sub_title: |
-      Este curso está diseñado para que te conviertas en un experto en inteligencia artificial aplicada en el ámbito profesional. Aprenderás Python, SQL, Looker (Google Data Studio), Streamlit y estadísticas fundamentales para desempeñarte como analista de datos y ser parte integral de equipos técnicos en diversas empresas.
-      Dominarás la creación de modelos predictivos utilizando herramientas como Python, Pandas, Numpy, entre otras. Implementarás algoritmos predictivos, como vecinos cercanos y árboles de decisión, tanto en contextos de aprendizaje supervisado como no supervisado. Además, te sumergirás en escenarios comerciales reales para aplicar tus conocimientos y familiarizarte con las herramientas más relevantes de la industria.
+      This artificial intelligence course is designed for those looking to integrate artificial intelligence (AI) into their current jobs and roles. Over six weeks, participants will gain a comprehensive understanding of AI and its practical applications in various industries.
+      The course covers essential concepts such as AI definitions, benefits in the workplace, and key elements like Context, Prompts, and Models. Participants will learn to identify opportunities to implement AI, overcome challenges, develop effective AI strategies, and create practical commands.
         
     list:
-      - label: "Duración"
-        content:  "6 semanas"
+      - label: "Duration"
+        content:  "6 Weeks"
         icon: "calendar"
-      - label: "Clases"
-        content: "2 Clases semanales"
+      - label: "Classes"
+        content: "2 classes per week"
         icon: "book"
-      - label: "Tamaño de la clase"
+      - label: "Size of the Class"
         content: "12 personas máx"
         icon: "laptop"
-      - label: "Certificado"
-        content: "Nuestros certificados están reconocidos por múltiples instituciones."
-        link_text: "Ver ejemplo"
-        link: "https://certificate.4geeks.com/44c61b294a248f91088f5355aea09606126795e3"
+      - label: "Certificate"
+        content: "Multiple institutions recognize our certificates."
         icon: "certificate"
-      - label: "Requisitos"
-        content: "No se necesita experiencia previa"
+      - label: "Requierements"
+        content: "No previous experience is required"
         icon: "contract-checked"
 
-  heading: "DETALLES DEL PROGRAMA"
-  weeks: 6
-  facts:
-    - label: "Duración"
-      value: "6 semanas"
-    - label: "Compromiso"
-      value: "2 sesiones en vivo cada semana, cada sesión de 2 horas, totalizando 24 horas"
-    - label: "Certificado"
-      content: "Nuestros certificados son reconocidos por múltiples instituciones."
-      link_text: "Ver ejemplo"
-      link: "https://certificate.4geeks.com/44c61b294a248f91088f5355aea09606126795e3"
-      icon: "certificate"
-    - label: "Horario"
-      value: "En línea / Remoto"
-    - label: "Tamaño Clase"
-      value: "Hasta 14 personas"
-    - label: "Horas totales"
-      value: "24"
-  sub_heading: "Curso de 6 semanas para profesionales que desean incorporar la IA en sus roles laborales."
-  left_labels:
-    description: "DESCRIPCIÓN:"
-    projects: "PROYECTOS:"
-    duration: "DURACIÓN:"
-    skills: "Habilidades / Semanas:"
+heading: "PROGRAM DETAILS"
+weeks: 6
+facts:
+  - label: "Duration"
+    value: "6 weeks"
+  - label: "Commitment"
+    value: "2 live sessions each week, each session lasting 2 hours, totaling 24 hours"
+  - label: "Certificate"
+    content: "Multiple institutions recognize our certificates."
+    link_text: "See example"
+    link: "https://certificate.4geeks.com/44c61b294a248f91088f5355aea09606126795e3"
+    icon: "certificate"
+  - label: "Schedule"
+    value: "Online / Remote"
+  - label: "Class Size"
+    value: "Up to 14 people"
+  - label: "Total Hours"
+    value: "24"
+sub_heading: "6-week course for professionals looking to incorporate AI into their job roles."
+left_labels:
+  description: "DESCRIPTION:"
+  projects: "PROJECTS:"
+  duration: "DURATION:"
+  skills: "Skills / Weeks:"
 details_modules:
-  - module_name: "Introduction to AI"
+  - module_name: "Intro to AI"
     title: "Introduction to AI"
-    description: "Definitions of AI, workplace benefits, types of AI with practical examples, and key concepts such as Context, Prompts, and Models."
-    projects: "Identification of opportunities to implement AI, understanding challenges and risks, development of AI strategies, and creation of useful commands."
+    description: "Definitions of AI, workplace benefits, types of Artificial Intelligence with practical examples, and key concepts like Context, Prompts, and Models."
+    projects: "Identifying opportunities to implement AI, understanding challenges and risks, developing AI strategies, and creating useful commands."
     slug: "intro-ai-workplace"
     duration: "1 week"
     step: 1
-  - module_name: "Enhancing Workplace Performance"
-    title: "Strategies for Enhancing Workplace Performance"
-    description: "Comparison between AI and humans in various tasks, when to use AI, examples of prompts related to students' fields, and Prompt Engineering tips."
-    projects: "Creation of workflows for professions such as teachers, linguists, and developers."
+  - module_name: "Be More Productive"
+    title: "Strategies for Improving Work Performance"
+    description: "Comparison between AI and humans in various tasks, when to use Artificial Intelligence, examples of prompts related to students' fields, and Prompt Engineering tips."
+    projects: "Creating workflows for professions such as teachers, linguists, and developers."
     slug: "generation-strategies"
     duration: "1 week"
     step: 2
   - module_name: "Text Generation"
     title: "Text Generation"
-    description: "Capabilities of popular models like ChatGPT, Claude, and Llama-2. Detailed explanation of prompt strategies, AI workflows, and tools for automating prompts."
-    projects: "Review and debugging of prompts, how to evaluate if a model response is good, and how to instruct a model correctly."
+    description: "Capabilities of popular models like ChatGPT, Claude, and Llama-2. Detailed explanation of prompt strategies, AI workflows, and tools to automate prompts."
+    projects: "Reviewing and debugging prompts, assessing if a model's response is good, and how to instruct a model effectively."
     slug: "text-generation"
     duration: "2 weeks"
     step: 3
   - module_name: "Image Generation"
     title: "Image Generation and AI Implementation"
-    description: "Review of capabilities of popular models for image generation such as Stable Diffusion, Dall-E, Midjourney. How to craft good prompts for image generation models."
-    projects: "Development of an AI strategy and creation of useful prompts for generating images in specific use cases."
+    description: "Review of capabilities of popular models for image generation like Stable Diffusion, Dall-E, Midjourney. How to craft good prompts for image generation models."
+    projects: "Developing an AI strategy and creating useful prompts for generating images in specific use cases."
     slug: "img-generation"
     duration: "1 week"
     step: 4
-  - module_name: "Tools and the Future of AIs"
+  - module_name: "Tools and Future of AIs"
     title: "Tools and the Future of AIs"
-    description: "Evaluation of AI tools, practical projects using popular AI tools."
-    projects: "Course graduation, final questions, tasks, and next steps."
+    description: "Evaluation of Artificial Intelligence tools, practical projects using popular tools."
+    projects: "Course graduation, final questions, assignments, and next steps..."
     slug: "final-project"
     duration: "1 week"
     step: 5
-  - module_name: "Final Project"
-    title: "Final Project"
-    description: "Students choose projects based on their job roles and begin working on them."
-    projects: "Ongoing work on the final projects with guidance and support from instructors."
-    slug: "final-project-continued"
-    duration: "2 weeks"
-    step: 6
-
 
 syllabus:
-  heading: Descarga toda la información acerca de este programa
-  button_label: Descargar
+  heading: "Download all the information about this program"
+  button_label: "Download"
 
 potential_companies:
-  tagline: "Entrénate para destacar en las compañías más exigentes"
-  sub_heading: "Da un salto a tu carrera y trabaja en las mejores empresas"
+  tagline: "Train to stand out in the most demanding companies"
+  sub_heading: "Take a leap in your career and work for the best companies"
   companies:
     - name: "Facebook"
       image: "../../../static/images/partner/facebook.png"
@@ -195,45 +185,35 @@ potential_companies:
 
 ## 4GEEKS VS OTHERS SECTION
 geeks_vs_others:
-  heading: "¿Qué nos hace tan exitosos?"
-  sub_heading: ""
+  heading: "WHAT MAKES US SO SUCCESSFULL?"
+  sub_heading: "Compare 4Geeks with other coding schools"
   sub_heading_link: ""
 ## GEEK PAL AND GEEK FORCE BOXES
 geek_data:
-  heading: ¡Para que te contraten empresas de Fortune 500!
+  heading: And Fortune 500 companies will hire you!
   geek_pal:
-    - Un profesor cada siete estudiantes (1:7).
-    - Sesiones ilimitadas de tutoría 1-1 por demanda, en persona o en línea.
-    - Miles de ejercicios interactivos y autoevaluados.
-    - Soluciones en video para una retroalimentación instantánea.
-    - Chat de apoyo en línea 12 horas al día.
-    - Transmisión en línea de las clases.
-    - Grabación de las clases para su posterior revisión.
+    - Unlimited Senior mentorship.
+    - Lifetime access to the software community.
+    - Worldwide access and support.
   geek_force:
-    - Construcción de CV y LinkedIn.
-    - Construcción del perfil de Github y portafolio desde el dia 1.
-    - Career Week para dedicación exclusiva a tu perfil profesional.
-    - Preparación de simulación de entrevistas.
-    - Sesión de preparación de entrevistas personalizadas para trabajos específicos.
-    - Entrenamiento en marca personal.
-    - Prácticas y ejercicios de programación posteriores a la graduación.
-    - Coaching SEMANAL hasta que consigas trabajo.
+    - Helping you land a job in a 500 Fortune company.
+    - Profile, portfolio, interviews, workshops, talks, software community, network, active projects collaboration.
+    - It's about getting your career to the next level.
 
 ## PRICES AND PAYMENTS SECTION
 prices:
-  heading: "PRECIOS Y PAGOS"
+  heading: "PRICES AND PAYMENTS"
   sub_heading: ""
 
 ## ALUMNI SECTION
 alumni:
-  heading: "Conoce a ex-estudiantes y sus proyectos"
-  sub_heading: "Conoce a personas que ya se han graduado y algunos de los proyectos que estarás construyendo durante el programa"
+  heading: "MEET THE ALUMNI AND PROJECTS"
+  sub_heading: "Get to know our graduates and some of the projects you will be building during the program"
 
 faq:
-  title: "Preguntas Frecuentes"
-  read_more: "Ver más preguntas"
+  title: "Frequently Asked Questions"
+  read_more: "Contact us for more questions"
   link: "/faq"
-
 
 # button:
 #   syllabus_heading: "Descargar Syllabus"
