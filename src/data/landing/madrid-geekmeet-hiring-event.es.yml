@@ -1,0 +1,208 @@
+meta_info:
+  slug: geekmeet-hiringday # <--- URL 4geeksacademy.com/us/landing/example
+
+  # This will show on social media when shared
+  title: "Atrae al mejor talento tech"
+  description: "Queremos presentarte al mejor talento tech junior y que tu empresa sea reconocido por cada uno de ellos."
+  image: "/images/bg/main-bg.jpg"
+  keywords: "Curso de programación, Bootcamp, Bootcamp de Programación, Clases de programación, Aprende a programar, 4Geeks Academy"
+
+  template: "landing_a" # <--- choose your landing template
+  redirects: # <--- URL redirections to avoid 404 errors
+    ["/landing/coding-course"]
+
+  # Set a particular course or location to the landing page
+  # this UTM fields will be also included in the CRM contact
+  utm_course: ["full-stack"]
+  utm_location: ["madrid-spain"]
+  automation: hiring-partner # comma separated, "soft" is the default value
+  tag: hiring_partner # comma separated, "request_more_info" is the default value
+
+form:
+  # posible fields: "first_name", "last_name", "full_name", "phone", "email"
+  # always the first_name, email and phone will be mandatory if added.
+  fields: ["full_name", "phone", "email"]
+  heading: "Solicita tu invitación gratuita"
+  motivation: "Asiste al GeekMeet y da a conocer tu empresa a cientos de perfiles tech junior."
+  button_label: Confirma tu asistencia
+  redirect: null #you can redirect to another url or entirely diffrent website
+
+apply_schollarship: # form that is displayed at the end of the landing
+  # title: "Apoyo Profesional Ilimitado"
+  imageSide: "right"
+  image: "../../../static/images/landing/apply.png" 
+
+# jumbotron on the top (cannot be commented out)
+header_data:
+  background: "#FFF1D1"
+  tagline: En Marzo llega el evento más esperado del año.
+  sub_heading: "GeekMeet primera edición: punto de encuentro entre empresas y el mejor talento tech junior."
+  badge: "../../../static/images/badges/Course-Report-Badge-2023.png"
+  image_filter: brightness(0.3)
+
+features:
+  marginTop: 0px #<-- separation between tagline and the bullets
+
+  #                                         up   left down  right
+  styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
+  bullets:
+   - Conoce y atrae al mejor talento tech junior. 
+   - Conecta con otras empresas tecnológicas.
+   - Acércate al ecosistema startup.
+  
+short_badges:
+  - name: "Premios Excelencia Educativa"
+    url: ""
+    image: "../../../static/images/badges/exelencia-educativa-es.png"
+    alt: "Mejor centro de Coding Bootcamp"
+  - name: "Premio Nacional"
+    url: ""
+    image: "../../../static/images/awards/premios_tecnologia_sigloxxi.png"
+    alt: "Premio Nacional de Tecnología 2023"
+  - name: "Course Report"
+    url: ""
+    image: "../../../static/images/badges/Course-Report-Badge-2023.png"
+    alt: "Best cooding bootcamp Course Report 2023"   
+  - name: "European Excellence Education"
+    url: ""
+    image: "../../../static/images/badges/european_excellence_education_black.png"
+    alt: "European Excellence Education"   
+  - name: "Departamendo de Educacion de Florida"
+    url: ""
+    image: "../../../static/images/badges/licensed-es.png"
+    alt: "Dpto. Educacion Florida."     
+
+follow_bar:
+  position: "top" # top, bottom, hidden
+  content:
+    text: "¡Últimas invitaciones, no te quedes fuera!"
+    text_mobile: "¡Últimas invitaciones!"
+    # devices:   XL      LG    MD      SM    XS
+    font_size: ["25px", "25px", "25px", "20px", "18px"]
+  button:
+    text: "¡Quiero asistir!"
+    path: "#top"
+  phone:
+    text: "Llámanos "
+
+#
+# ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇
+#
+who_is_hiring:
+  position: 10
+  limit: 4
+  heading: "Nuestros estudiantes trabajan en las mejores empresas. ¡Forma parte de esta lista!"
+  sub_heading: "A nivel mundial ya somos más de 500 partners que, como tú, reciben el mejor servicio (gratuito) para acceder a candidatos tech junior, de la forma más personalizada que puedas imaginarte "
+  featured:
+    - name: "Facebook"
+      image: "../../../static/images/partner/facebook.png"
+    - name: "Microsoft"
+      image: "../../../static/images/partner/microsoft.png"
+    - name: "Apple"
+      image: "../../../static/images/partner/apple.png"
+
+badges:
+  position: 3
+  heading: "4Geeks Academy España ha ganado más de 20 premios desde 2020, siendo reconocido una y otra vez como el Mejor Coding Bootcamp de España. Imagina la calidad de nuestros Geeks"
+
+#alumni_projects:
+#  position: 8
+#  heading: "Proyectos que serás capaz de realizar"
+#  sub_heading: "Take a look at our previous student projects"
+
+components:
+  - name: about_geekmeet
+    position: 2
+    layout: two_column_right
+    background: "#FFFFFF" # Name of the color(from components/Styling/index.js) or color code ex: #C9F9F9
+    image:
+      style: '{ "backgroundSize": "cover", "min-height": "300px"}'
+      src: "/images/4GeeksTeamES.jpeg"
+      shadow: true
+    heading:
+      text:
+        "Acerca de GeekMeet"
+        #           xl      lg      md      sm      xs
+      font_size: ["50px", "50px", "50px", "50px", "50px"]
+    content:
+      text: "4Geeks Academy se ha propuesto reunir en un mismo lugar al mejor talento tecnológico junior y a grandes empresas del sector. Será la jornada perfecta para conocer a algunos de los mejores talentos recién graduados de 4Geeks Academy. Tendrás la oportunidad de atraer talento a tu equipo y dar a conocer los proyectos en los que trabajáis. Podrás participar en charlas, networking, entrevistas rápidas. ¡No te lo puedes perder!"
+      font_size: ["16px"]
+    button:
+      text: "¡Confirmar asistencia!"
+      path: "#bottom"
+      color: "white"
+      background: "black"
+      hover: "lightBlue"
+
+  - name: tecnologias
+    position: 4
+    layout: two_column_right
+    background: "lightBlue" # Name of the color(from components/Styling/index.js) or color code ex: #C9F9F9
+    image:
+      src: "/images/why-4geeks/python-image.png"
+    heading:
+      text:
+        "Talento y Tecnologías"
+        #           xl      lg      md      sm      xs
+      font_size: ["50px", "50px", "50px", "50px", "50px"]
+    content:
+      text: "4Geeks Academy centra su formación en dos programas principales: Full-Stack (Javascript, React y Python como tecnologías principales) y Data Science & Machine Learning. 
+      
+      En ambos programas nos centramos en Python. Como lenguaje de programación más utilizado en el mundo, ¡nuestros estudiantes deben dominarlo! 
+      
+      Nuestra metodología se basa en dos pilares que permiten que nuestros estudiantes puedan enfrentarse a tecnologías totalmente nuevas para ellos, de forma autodidacta, a través de la práctica y, además, cuentan con mentorías ilimitadas y de por vida. "
+      font_size: ["16px"]  
+
+  - name: inmediatez
+    position: 7
+    layout: two_column_left
+    background: "lightYellow" # Name of the color(from components/Styling/index.js) or color code ex: #C9F9F9
+    image:
+      style: '{ "backgroundSize": "cover", "min-height": "300px"}'
+      src: "/images/landing/PeopleStudying.jpeg"
+      shadow: true
+    heading:
+      text:
+        "¡No te quedes fuera!"
+        #           xl      lg      md      sm      xs
+      font_size: ["50px", "50px", "50px", "50px", "50px"]
+    content:
+      text: "¡Nuestros Geeks están deseando conocerte! Sabemos que contratar talento junior puede ser un dolor de cabeza. No desaproveches esta oportunidad y conoce de primera mano a nuestros mejores talentos. ¿Te lo vas a perder?"
+      font_size: ["16px"]
+    button:
+      text: "¡Confirmar asistencia!"
+      path: "#bottom"
+      color: "white"
+      background: "black"
+      hover: "lightBlue"
+
+  - name: top_coding_bootcamp
+    position: 11
+    background: "#F1f1f1"
+    layout: two_column_left
+    proportions: [4, 8]
+    image:
+      style: '{ "backgroundSize": "contain" }'
+      src: "/images/badges/Course-Report-Badge-2023.png"
+      link: "https://www.coursereport.com/schools/4geeks-academy"
+    heading:
+      text:
+        "Hemos sido seleccionados entre los mejores Coding Bootcamps del mundo por 3 años consecutivos"
+        #xl      lg     md     sm    xs
+      font_size: ["36px", "34px", "32px", "30px", "30px"]
+
+  - name: seguridad_europa
+    position: 9
+    background: "#fbfbfb"
+    layout: two_column_right
+    proportions: [8, 4]
+    image:
+      style: '{ "backgroundSize": "contain" }'
+      src: "/images/badges/european_excellence_education_black.png"
+      link:
+    heading:
+      text:
+        "Nombrados como el TOP 1 Bootcamp de España y somos reconocidos en Europa"
+        #xl      lg     md     sm    xs
+      font_size: ["40px", "40px", "40px", "40px", "40px"]
+     
