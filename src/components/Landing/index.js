@@ -29,6 +29,7 @@ import CardsCarousel from "../CardsCarousel";
 import Overlaped from "../Overlaped";
 import TwoColumn from "../TwoColumn/index.js";
 import { SingleColumn } from "../TwoColumn/index.js";
+import Iconogram from "../Iconogram/index.js";
 import { background } from "@storybook/theming";
 
 const Title = ({ id, title, paragraph }) => {
@@ -333,115 +334,7 @@ export const landingSections = {
 
   iconogram: ({ session, data, pageContext, yml, index }) => {
     const { heading, sub_heading, icons, button } = yml;
-    return (
-      <Div
-        key={index}
-        padding={heading.text ? "30px 0 60px 0" : "60px 0 60px 0"}
-        display="flex"
-        flexDirection="column"
-        id="iconogram"
-        containerColumns_tablet="repeat(14, 1fr)"
-        columns="1"
-        rows="2"
-        margin="auto"
-        height="auto"
-        width="100%"
-        alignItems="center"
-        background={Colors.lightYellow}
-      >
-        {heading.text && (
-          <H2
-            type="h2"
-            lineHeight="28px"
-            lineHeight_tablet="28px"
-            fontSize="38px"
-            //margin="30px 0 30px 0"
-            maxWidth="1366px"
-            margin="30px auto"
-            style={{ textAlign: "center" }}
-          >
-            {heading.text}
-          </H2>
-        )}
-        {sub_heading && /<\/?[a-z0-9]+>/g.test(sub_heading.text) ? (
-          <Paragraph
-            padding_xs={heading.text ? "0 10%" : "20px 10%"}
-            padding_tablet={heading.text ? "0 10%" : "20px 10%"}
-            padding_md={heading.text ? "0 10%" : "20px 10%"}
-            margin="15px auto"
-            fontSize="16px"
-            fontHeight="30px"
-            maxWidth="1366px"
-            dangerouslySetInnerHTML={{ __html: sub_heading.text }}
-          />
-        ) : sub_heading.text == !"" ? (
-          <Paragraph
-            padding_xs={heading.text ? "0 10%" : "20px 10%"}
-            padding_tablet={heading.text ? "0 10%" : "20px 10%"}
-            padding_md={heading.text ? "0 10%" : "20px 10%"}
-            margin="15px auto"
-            fontSize="16px"
-            fontHeight="30px"
-            maxWidth="1366px"
-          >
-            {sub_heading.text}
-          </Paragraph>
-        ) : null}
-        <Div
-          display="flex"
-          flexDirection="column"
-          flexDirection_tablet="row "
-          justifyContent="center"
-          // gap="45px"
-          gap_tablet={icons.length > 4 ? "0px" : "5%"}
-          //gap_md="10%"
-          maxWidth="1366px"
-          margin="20px auto 0 auto"
-          padding_tablet="0 40px"
-          padding_md="0 80px"
-          padding_lg="0"
-          //className="badge-slider hideOverflowX__"
-        >
-          {Array.isArray(icons) &&
-            icons?.map((item, index) => {
-              return (
-                <React.Fragment key={index}>
-                  <IconsBanner
-                    icon={item.icon}
-                    title={item.title}
-                    content={item.content}
-                  />
-                </React.Fragment>
-              );
-            })}
-        </Div>
-        {button && (
-          <Button
-            outline
-            borderRadius="0"
-            colorHoverText={button.hover_color || Colors.blue}
-            background={Colors[button.background] || button.background}
-            lineHeight="26px"
-            textColor={Colors.black}
-            textTransform="none"
-            color={Colors[button.color] || button.color}
-            fontSize="18px"
-            fontFamily="Lato"
-            fontWeight="500"
-            textAlign="left"
-            margin="2rem 0"
-            padding="32px .85rem 0 .85rem"
-            onClick={() => {
-              if (button.path && button.path.indexOf("http") > -1)
-                window.open(transferQuerystrings(button.path, utm));
-              else navigate(button.path);
-            }}
-          >
-            {button.text}
-          </Button>
-        )}
-      </Div>
-    );
+    return <Iconogram yml={yml} session={session} data={data} index={index} />;
   },
 
   badges: ({ session, data, pageContext, yml, course, index }) => {

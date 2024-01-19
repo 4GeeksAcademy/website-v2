@@ -457,6 +457,8 @@ export const Button = styled(SmartButton)`
   font-size: ${(props) => props.fontSize};
   font-family: "Lato", sans-serif;
   text-transform: ${(props) => props.textTransform || "uppercase"};
+  text-decoration: ${(props) => props.textDecoration || "none"};
+  text-decoration-line: ${(props) => props.textDecorationLine || "none"};
   font-weight: ${(props) => props.fontWeight || "700"};
   margin: ${(props) => props.margin};
   border-radius: ${(props) => props.borderRadius};

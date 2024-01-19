@@ -327,7 +327,6 @@ const Location = ({ data, pageContext, yml }) => {
         lang={pageContext.lang}
         programs={data.allChooseYourProgramYaml.edges[0].node.programs}
       />
-
       <UpcomingDates
         lang={pageContext.lang}
         location={yml.breathecode_location_slug}
@@ -367,7 +366,6 @@ const Location = ({ data, pageContext, yml }) => {
         posts={data.allMarkdownRemark.edges}
         relatedClusters={yml.meta_info.related_clusters}
       />
-
       <Loc lang={pageContext.lang} allLocationYaml={data.test} />
     </>
   );
