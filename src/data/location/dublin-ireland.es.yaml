@@ -89,7 +89,7 @@ two_columns:
     text: "Únete a nosotros para sumergirte en el aprendizaje práctico, conectarte con líderes de la industria y forjar una exitosa carrera en el próspero mundo tecnológico de Dublín"
     font_size: ["18px", "18px", "22px", "22px", "22px"]
   button:
-    text: "APPLY NOW"
+    text: "¡Únete ahora!"
     color: "white"
     background: "black"
     path: "/us/apply"
