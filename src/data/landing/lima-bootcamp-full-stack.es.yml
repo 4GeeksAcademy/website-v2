@@ -232,7 +232,7 @@ components:
           text: "ELa selección se llevará a cabo en dos etapas, eligiendo entre dos y cuatro bootcamps en la primera y beneficiarios en la segunda"
           icon: "circle" 
         - heading: "Correo de Consultas del Bootcamp"
-          text: "Para consultas relacionadas con las bases del concurso, pueden comunicarse a: bootcamps@proinnovate.gob.pe  haciendo click en \"Postúlate a la Beca"
+          text: "Para consultas relacionadas con las bases del concurso, pueden comunicarse a: bootcamps@proinnovate.gob.pe  haciendo click en \"Postúlate a la Beca\""
           icon: "circle" 
 
 
