@@ -30,9 +30,10 @@ const ProgramDetailsMobile = (props) => {
       <Div
         //className="program-details-mobile"
         flexWrap="wrap"
-        padding_xxs="20px"
+        padding="20px"
         padding_tablet="35px"
         gridGap="10px"
+        display_md="none"
       >
         {props.details.details_modules.map((item, index) => {
           return (

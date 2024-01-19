@@ -44,12 +44,11 @@ export const isCustomBarActive = (session) => {
 
 export const locByLanguage = (locations, languageToFilter) => {
   if (languageToFilter == "en") languageToFilter = "us";
-
   let repeated = [];
+
   const locs = locations.nodes
     .filter((l) => {
       const [name, _lang] = l.fields.file_name.split(".");
-
       //filter repetead locations and only focuse on the desired language
       if (_lang !== languageToFilter || repeated.includes(name)) return false;
       repeated.push(name);

@@ -35,6 +35,7 @@ button:
   syllabus_btn_label: "Descarga Instantánea"
   syllabus_motivation: "En 2 min. recibirás en tu buzón de correo un PDF con información muy detallada sobre nuestra metodología, tecnologías, financiación e información del curso."
   apply_button_link: "/es/aplica"
+  apply_button_text: "Aplicar"
 
 course_instructors: 
   header:
@@ -59,48 +60,87 @@ course_instructors:
 badges:
   paragraph: "4Geeks Academy es el lugar donde los desarrolladores crecen y prosperan. Estamos autorizados por el Departamento de Educación de Florida. Elegido como uno de los top 35 <a href='/es/curso-de-programacion-desde-cero'>cursos de programacion</a> del mundo, el mejor de Miami según SwitchUp y de los 10 mejores cursos de programación en los Estados Unidos según Newsweek:"
 
+# OVERLAPED
+overlaped:
+  heading: "Why learning Python and Javascript is essential"
+  paragraph: "Programming in Python and JavaScript offers some of the highest-paid career opportunities in the US. There are currently over 26 times more job opportunities in JavaScript compared to Ruby on Rails, and 10 times more jobs in Python compared to node.js. According to Indeed, Python and JavaScript developers enjoy average salaries exceeding $110k."
+  button:
+    text: "LEARN MORE"
+    color: "blue"
+    link: "/"  
+  image:
+    src: "/images/landing/tres-personas.png"
+
+## TWO COLUMNS
+two_columns:
+  proportions: [6, 6]
+  image:
+    style: '{"border" : "3px solid black", "backgroundSize": "contain" }'
+    src: "/static/images/staff/luisa.png"
+    shadow: true  
+  video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
+  heading:
+    text: "4Geeks, Miami and a story full of opportunities"
+    font_size: ["30px", "30px", "30px", "30px", "30px"]
+  sub_heading:
+    text: "We are Miami based and we have been focusing in bringing on more opportunities in South Florida."
+    font_size: ["18px", "18px", "18px", "18px", "18px"]
+  button:
+    text: "Apply now"
+    color: "white"
+    background: "black"
+    path: "#"
+  bullets:
+    items: 
+    - text: "There is always a full or partial scholarship open"
+    - text: "There is always opportunities for everyone in Miami-Dade County, Broward and Palm Beach"
+    - text: "We have ongoing partnerships with Miami Dade College, Miami Tech Coalition, UWM, The City of Miami, Miami Dade Counti and so manu more."
+
 upcoming:
   no_dates_message: "Actualmente no hay próximas fechas para este programa"
   actionMessage: "Avisenme fechas disponibles"
   
 credentials:
   heading: "RESULTADOS"
-  paragraph: "Nuestros resultados hablan por sí solos"
+  paragraph: "Nuestros resultados hablan por sí solos"  
 
 ## PROGRAM DETAILS
 details:
   about:
       title: "Acerca del programa"
-      sub_title: "En esta carrera te desarrollarás desde cero como Full Stack Developer.       
-      Aprenderás a crear un sitio web sumergiéndote en las mejores prácticas del       
+      sub_title: "En esta carrera te desarrollarás desde cero como Full Stack Developer.
+      Aprenderás a crear un sitio web sumergiéndote en las mejores prácticas del
       diseño web responsive, trabajando con diversos lenguajes. Obtedrás una       
       sólida base de front end, back end, base de datos, manejo de procesos       
       distribuidos y despliegue a distintas plataformas web.
 
       Al finalizar este programa, contarás con los conocimientos para       
-      desempeñarte como Full Stack Developer. 
-    "
+      desempeñarte como Full Stack Developer. "
       list:
         - label: "Duración"
-          content:  "9 semanas"
+          content:  "10 semanas"
+          icon: "calendar"
+        - label: "Inicio del Bootcamp"
+          content:  "20 de Mayo del 2024"
+          icon: "calendar"
+        - label: "Cierre de Postulación"
+          content:  "4 de Marzo del 2024"
           icon: "calendar"
         - label: "Clases"
           content: "De Lunes a Viernes"
           icon: "book"
         - label: "Certificados"
           content: "Nuestros certificados son  reconocidos por múltiples instuticiones."
-          link_text: "Ver ejemplo"
-          link: "https://certificate.breatheco.de/4ae7a46bba78dc19b823e124fea120c17b45e044"
           icon: "certificate"
         - label: "Requisitos"
           content: "Tan solo necesitas un ordenador y una conexión a internet"
           icon: "contract-checked"
         - label: "Idioma"
-          content: "Puedes elegir entre inglés y español para consumir el plan de estudios y el contenido. Las clases se imparten en el idioma oficial de tú campus."
+          content: "Por ahora las clases se imparten solo en español"
           icon: "contract-checked"
           
   heading: DETALLES DEL PROGRAMA FULL-TIME
-  weeks: 9
+  weeks: 10
   sub_heading: "Proyectos de la vida real y exactamente lo que buscan las empresas"
   left_labels:
     description: "DESCRIPCIÓN:"
@@ -113,36 +153,36 @@ details:
       description: "Empezando por lo básico: HTML5 + CSS3 + Javascript. Revisamos los fundamentos de la codificación y nos aseguramos de que todos estamos en la misma página."
       projects: "CSS Postcard, Versión mínima de Instagram, etc."
       slug: "prework"
-      duration: "1 sem"
+      duration: "0 semanas"
       step: 0
     - module_name: "FUNDAMENTOS"
       title: "Aprende a programar"
       description: "Piensa como un ordenador: Controla el flujo de tu código, crea algoritmos, haz un bucle, usa condicionales y usa/mezcla JavaScript con HTML5 y CSS3 para lanzar tu primer sitio web interactivo."
       projects: "Pequeños juegos y sitios web interactivos."
       slug: "fundamentos"
-      duration: "2 sem"
-      step: 3.4
+      duration: "2 semanas"
+      step: 2
     - module_name: "LA WEB"
       title: "Desarrollo web"
       description: "Crea tu primera aplicación con React.js, Patrón MVC, Módulos JS, Bunding, Babel JS, el DOM, Eventos."
       projects: "Clon de Coursera, clon de Instagram, clon de Youtube, etc."
       slug: "desarrollo-web"
-      duration: "4 sem"
-      step: 3.5
-    - module_name: "API's"
+      duration: "3 semanas"
+      step: 3
+    - module_name: "Proyecto Final"
       title: "Aplicaciones avanzadas"
-      description: "Python, Flask, REST API's, Bases de datos, SQL, Patrón MVC, Publicando tu sitio web, etc."
+      description: "Aplicación y profundización de las herramientas y técnicas que haz aprendido durante el curso, te aseguro que quedarás sorprendido con las habilidades que has podido aprender."
       projects: "Durante esta fase tendrás que diseñar, programar, probar y publicar tu propia aplicación web completa."
       slug: "aplicacion-avanzada"
-      duration: "2 sem"
-      step: 2
+      duration: "3 semanas"
+      step: 3
     - module_name: "DE POR VIDA"
       title: "Soporte de por vida"
       description: "Sigue recibiendo la ayuda de la academia de por vida, acceso a los contenidos, soporte profesional (career support). Recibe incluso ayuda durante el inicio de tu nuevo trabajo, nunca más estarás sólo."
       projects: "Conseguirás tu primer trabajo, empezarás a ganar dinero pero continuarás aprendiendo hasta convertirte en Senior Developer, ganar muy bien y disfrutar de la vida de un programador."
       slug: "lifelong-learning"
-      duration: "1+ week"
-      step: 0.1
+      duration: "2 semanas"
+      step: 2
 
 syllabus:
   heading: Descarga toda la infomación sobre este programa
@@ -150,7 +190,7 @@ syllabus:
 
 ## 4GEEKS VS OTHERS SECTION
 geeks_vs_others:
-  heading: "EN NÚMEROS: 4 GEEKS VS OTROS"
+  heading: "EN NÚMEROS: 4geeks VS OTROS"
   sub_heading: ""
   sub_heading_link: ""
 

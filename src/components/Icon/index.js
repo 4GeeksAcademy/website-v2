@@ -13,6 +13,7 @@ const Icon = ({ icon, ...rest }) => {
 Icon.propTypes = {
   icon: PropTypes.string.isRequired,
   color: PropTypes.string,
+  width: PropTypes.string,
 };
 Icon.defaultProps = {
   color: "black",

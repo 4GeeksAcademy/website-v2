@@ -181,16 +181,19 @@ const StyledImage = styled.div`
   border: ${(props) => props.border};
   height: ${(props) => props.height};
   min-height: ${(props) => props.minHeight};
-  max-height: ${(props) => (props.maxHeight ? props.maxHeight : "none")};
+  max-height: ${(props) => props.maxHeight || "none"};
   min-width: ${(props) => props.minWidth};
   margin: ${(props) => props.margin};
   box-shadow: ${(props) => props.boxShadow};
+  padding: ${(props) => props.padding};
+  z-index: ${(props) => props.zIndex};
   @media ${Break.sm} {
     height: ${(props) => props.h_sm};
     min-height: ${(props) => props.minHeight_sm};
     width: ${(props) => props.w_sm};
   }
   @media ${Devices.xxs} {
+    padding: ${(props) => props.padding_xxs};
     display: ${(props) => props.display_xxs};
     height: ${(props) => props.height_xxs};
     right: ${(props) => props.right_xxs};
@@ -209,8 +212,11 @@ const StyledImage = styled.div`
     width: ${(props) => props.width_sm};
   }
   @media ${Devices.tablet} {
+    padding: ${(props) => props.padding_tablet};
     display: ${(props) => props.display_tablet};
     height: ${(props) => props.height_tablet};
+    width: ${(props) => props.width_tablet};
+    min-height: ${(props) => props.minHeight_tablet};
     left: ${(props) => props.left_tablet};
     right: ${(props) => props.right_tablet};
     top: ${(props) => props.top_tablet};
@@ -489,6 +495,7 @@ export const Button = styled(SmartButton)`
     color: ${(props) => props.colorHoverText};
   }
   @media ${Devices.xxs} {
+    padding: ${(props) => props.padding_xxs};
   }
   @media ${Devices.xs} {
     width: ${(props) => props.width_xs};
@@ -536,6 +543,8 @@ export const Button = styled(SmartButton)`
   @media ${Devices.lg} {
     font-size: ${(props) => props.fontSize_lg};
     width: ${(props) => props.width_lg};
+    left: ${(props) => props.left_lg};
+    right: ${(props) => props.right_lg};
   }
   @media ${Devices.xl} {
   }

@@ -75,6 +75,30 @@ images_box:
     - path: "../../../static/images/locations/miami-old2.jpg"
       alt: "4Geeeks miami lab"
 
+two_columns:
+  proportions: [6, 6]
+  image:
+    style: '{"border" : "5px solid black", "backgroundSize": "contain" }'
+    src: "/static/images/staff/luisa.png"
+    shadow: true  
+  video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
+  heading:
+    text: "Perspectivas con 4GeeksAcademy"
+    font_size: ["30px", "30px", "30px", "30px", "30px"]
+  sub_heading:
+    text: "Únete a nosotros para sumergirte en el aprendizaje práctico, conectarte con líderes de la industria y forjar una exitosa carrera en el próspero mundo tecnológico de Dublín"
+    font_size: ["18px", "18px", "22px", "22px", "22px"]
+  button:
+    text: "¡Únete ahora!"
+    color: "white"
+    background: "black"
+    path: "/us/apply"
+  bullets:
+    items: 
+    - text: "La industria tecnológica de Dublín anticipa un crecimiento del 15% en roles de desarrolladores en los próximos tres años, reflejando el crecimiento del ecosistema tecnológico de la ciudad"
+    - text: "Nuestro programa personalizado de mentoría conecta a los estudiantes con profesionales de la industria, fomentando perspectivas y orientación para el crecimiento profesional"
+    - text: "Con una tasa de colocación laboral del 95% en los seis meses posteriores a la graduación, nuestros programas garantizan resultados tangibles para el avance profesional"
+
 active_campaign_location_slug: "dublin-ireland"
 breathecode_location_slug: "dublin-ireland"
 gdpr_compliant: true # do we need to ask for permision?

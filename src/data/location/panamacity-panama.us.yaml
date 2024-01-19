@@ -33,7 +33,7 @@ button:
 
 custom_bar:
   active: false
-  message: Lorem ipsum dot simet mosd ei
+  message: '4Geeks offers scholarships and financing tailored to your needs.<a class="customBar-link" href="/us/apply">¡Apply now!</a>'
   button: 
     label: "Read More"
     path: "#" #string (can be inline path using #, relative path or absolute path)
@@ -81,6 +81,31 @@ images_box:
     - path: "../../../static/images/locations/miami-people.jpeg"
       alt: "4Geeeks lab"
 
+
+two_columns:
+  proportions: [6, 6]
+  image:
+    style: '{"border" : "5px solid black", "backgroundSize": "contain" }'
+    src: "/static/images/staff/luisa.png"
+    shadow: true  
+  video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
+  heading:
+    text: "Luisa's Experience at 4Geeks Academy in Panama City"
+    font_size: ["30px", "30px", "30px", "30px", "30px"]
+  sub_heading:
+    text: "Enhance Your Tech Skills from Anywhere in Panama City"
+    font_size: ["18px", "18px", "22px", "22px", "22px"]
+  button:
+    text: "APPLY NOW"
+    color: "white"
+    background: "black"
+    path: "/us/apply"
+  bullets:
+    items: 
+    - text: "Luisa Glum reflects on the unique qualities of 4Geeks Academy's programs and their alignment "
+    - text: "Learn about our innovative teaching methodologies designed to equip learners with industry-relevant skills"
+    - text: "Discover the impact of our programs in shaping tech careers and fostering innovation within Costa Rica's tech industry"
+     
 ## START FROM HERE - DON'T CHANGE ANYTHING ABOVE
 ## HEADING SECTION
 heading_section:

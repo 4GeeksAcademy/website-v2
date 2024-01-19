@@ -81,11 +81,25 @@ const Landing = (props) => {
     };
   }, []);
 
+  // const landingLocation =
+  //   session &&
+  //   session.locations?.find(
+  //     (l) => l.breathecode_location_slug === yml.meta_info.utm_location[0]
+  //   );
+
   const landingLocation =
     session &&
-    session.locations?.find(
-      (l) => l.breathecode_location_slug === yml.meta_info.utm_location
-    );
+    (yml.meta_info.utm_location.length > 1
+      ? session.locations?.find(
+          (l) =>
+            l.breathecode_location_slug ===
+            yml.meta_info.utm_location?.find(
+              (l) => l === session.location?.breathecode_location_slug
+            )
+        )
+      : session.locations?.find(
+          (l) => l.breathecode_location_slug === yml.meta_info.utm_location[0]
+        ));
 
   return (
     <>
@@ -140,6 +154,7 @@ const Landing = (props) => {
         preData={preData}
         locations={locations}
         programs={programs}
+        hideForm={yml.form.hide_form}
       />
 
       {Object.keys(components)
@@ -163,134 +178,136 @@ const Landing = (props) => {
           });
         })}
       <div id="bottom"></div>
-      <Grid
-        id="bottom"
-        imageSide={applySchollarship?.imageSide}
-        padding="0"
-        padding_tablet="50px 40px 90px 40px"
-        padding_md="50px 80px 90px 80px"
-        padding_lg="50px 0 90px 0"
-        margin="0"
-        margin_tablet="auto"
-        gridTemplateColumns_tablet="repeat(16, 1fr)"
-        maxWidth_tablet="1366px"
-      >
-        <Div
-          //height="auto"
-          width="100%"
-          padding_tablet="0"
-          style={{ position: "relative" }}
-          gridColumn_tablet={
-            applySchollarship?.imageSide === "right" ? "9/17" : "1/9"
-          }
-          // gridColumn_lg={
-          //   applySchollarship?.imageSide === "right" ? "8/15" : "1/8"
-          // }
-          gridRow_tablet="1/1"
-        >
-          {applySchollarship?.imageSide === "right" ? (
-            <>
-              <Div
-                display="none"
-                display_md="none"
-                style={{
-                  position: "absolute",
-                  background: Colors.yellow,
-                  width: "280px",
-                  height: "480px",
-                  bottom: "-10px",
-                  right: "-16px",
-                  borderRadius: "3px",
-                }}
-              />
-            </>
-          ) : (
-            <>
-              <Div
-                display="none"
-                display_md="none"
-                style={{
-                  position: "absolute",
-                  background: "transparent",
-                  width: "101%",
-                  height: "282px",
-                  top: "40px",
-                  left: "-30px",
-                  borderRadius: "3px",
-                }}
-              />
-            </>
-          )}
-          <StyledBackgroundSection
-            height="450px"
-            borderRadius="3px"
-            image={
-              applySchollarship
-                ? applySchollarship?.image.childImageSharp.gatsbyImageData
-                : data.allPageYaml.edges[0].node.list[0].image.childImageSharp
-                    .gatsbyImageData
-            }
-            bgSize="contain"
-            alt="geekforce image"
-          />
-        </Div>
-        <Div
-          flexDirection="column"
-          margin="0"
-          justifyContent_tablet="start"
+      {!yml.form.hide_form && (
+        <Grid
+          id="bottom"
+          imageSide={applySchollarship?.imageSide}
           padding="0"
-          padding_tablet="0"
-          // gridArea_tablet={
-          //   applySchollarship?.imageSide === "right" ? "1/1/1/6" : "1/7/1/14"
-          // }
-          gridColumn_tablet={
-            applySchollarship?.imageSide === "right" ? "1/9" : "9/17"
-          }
-          //gridColumn_lg={applySchollarship?.imageSide === "right" ? "8/15" : "1/8"}
-          gridRow_tablet="1/1"
+          padding_tablet="50px 40px 90px 40px"
+          padding_md="50px 80px 90px 80px"
+          padding_lg="50px 0 90px 0"
+          margin="0"
+          margin_tablet="auto"
+          gridTemplateColumns_tablet="repeat(16, 1fr)"
+          maxWidth_tablet="1366px"
         >
           <Div
-            flexDirection="column"
-            size="12"
-            size_tablet="12"
+            //height="auto"
             width="100%"
-            width_tablet="100%"
-            margin="0"
-            textAlign_sm="center"
+            padding_tablet="0"
+            style={{ position: "relative" }}
+            gridColumn_tablet={
+              applySchollarship?.imageSide === "right" ? "9/17" : "1/9"
+            }
+            // gridColumn_lg={
+            //   applySchollarship?.imageSide === "right" ? "8/15" : "1/8"
+            // }
+            gridRow_tablet="1/1"
           >
-            <LeadForm
-              landingTemplate
-              titleMargin="20px 0px 15px 0px"
-              titleMargin_tablet="20px 0px 15px 0px"
-              textPadding_tablet="6px 0px 20px 0px"
-              textPadding="6px 0px 20px 0px"
-              selectProgram={programs}
-              selectLocation={locations}
-              layout="block"
-              background="#FFFFFF"
-              margin="0"
-              formHandler={processFormEntry}
-              heading={yml.form.heading}
-              style={{ minHeight: "350px" }}
-              motivation={yml.form.motivation}
-              sendLabel={yml.form.button_label}
-              redirect={yml.form.redirect}
-              inputBgColor="#FFFFFF"
-              lang={pageContext.lang}
-              fields={yml.form.fields}
-              data={preData}
-              justifyContentButton="center"
-              widthButton="fit-content"
-              //marginButton="15px auto 30px auto"
-              marginButton_tablet={
-                applySchollarship?.imageSide === "right"
-                  ? "15px auto 30px 0"
-                  : "15px 0 30px auto"
+            {applySchollarship?.imageSide === "right" ? (
+              <>
+                <Div
+                  display="none"
+                  display_md="none"
+                  style={{
+                    position: "absolute",
+                    background: Colors.yellow,
+                    width: "280px",
+                    height: "480px",
+                    bottom: "-10px",
+                    right: "-16px",
+                    borderRadius: "3px",
+                  }}
+                />
+              </>
+            ) : (
+              <>
+                <Div
+                  display="none"
+                  display_md="none"
+                  style={{
+                    position: "absolute",
+                    background: "transparent",
+                    width: "101%",
+                    height: "282px",
+                    top: "40px",
+                    left: "-30px",
+                    borderRadius: "3px",
+                  }}
+                />
+              </>
+            )}
+            <StyledBackgroundSection
+              height="450px"
+              borderRadius="3px"
+              image={
+                applySchollarship
+                  ? applySchollarship?.image.childImageSharp.gatsbyImageData
+                  : data.allPageYaml.edges[0].node.list[0].image.childImageSharp
+                      .gatsbyImageData
               }
+              bgSize="contain"
+              alt="geekforce image"
             />
           </Div>
-        </Div>
-      </Grid>
+          <Div
+            flexDirection="column"
+            margin="0"
+            justifyContent_tablet="start"
+            padding="0"
+            padding_tablet="0"
+            // gridArea_tablet={
+            //   applySchollarship?.imageSide === "right" ? "1/1/1/6" : "1/7/1/14"
+            // }
+            gridColumn_tablet={
+              applySchollarship?.imageSide === "right" ? "1/9" : "9/17"
+            }
+            //gridColumn_lg={applySchollarship?.imageSide === "right" ? "8/15" : "1/8"}
+            gridRow_tablet="1/1"
+          >
+            <Div
+              flexDirection="column"
+              size="12"
+              size_tablet="12"
+              width="100%"
+              width_tablet="100%"
+              margin="0"
+              textAlign_sm="center"
+            >
+              <LeadForm
+                landingTemplate
+                titleMargin="20px 0px 15px 0px"
+                titleMargin_tablet="20px 0px 15px 0px"
+                textPadding_tablet="6px 0px 20px 0px"
+                textPadding="6px 0px 20px 0px"
+                selectProgram={programs}
+                selectLocation={locations}
+                layout="block"
+                background="#FFFFFF"
+                margin="0"
+                formHandler={processFormEntry}
+                heading={yml.form.heading}
+                style={{ minHeight: "350px" }}
+                motivation={yml.form.motivation}
+                sendLabel={yml.form.button_label}
+                redirect={yml.form.redirect}
+                inputBgColor="#FFFFFF"
+                lang={pageContext.lang}
+                fields={yml.form.fields}
+                data={preData}
+                justifyContentButton="center"
+                widthButton="fit-content"
+                //marginButton="15px auto 30px auto"
+                marginButton_tablet={
+                  applySchollarship?.imageSide === "right"
+                    ? "15px auto 30px 0"
+                    : "15px 0 30px auto"
+                }
+              />
+            </Div>
+          </Div>
+        </Grid>
+      )}
     </>
   );
 };
@@ -358,6 +375,8 @@ export const query = graphql`
             buttonUrl
           }
           form {
+            hide_form
+            side_image
             heading
             motivation
             redirect

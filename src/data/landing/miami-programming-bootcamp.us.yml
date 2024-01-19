@@ -131,7 +131,6 @@ components:
       text: "Download the course syllabus"
       #             xl      lg      md      sm      xs
       font_size: ["40px", "40px", "40px", "40px", "40px"]
-
   - name: top_coding_bootcamp
     position: 2
     layout: two_column_left
@@ -190,4 +189,3 @@ components:
 #   position: 7
 #   heading: "¿Porqué enseñamos Python?" # optional or set to white space to hide
 #   sub_heading: " " # optional or set to white space to hide
-
