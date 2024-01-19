@@ -205,12 +205,12 @@ export const Columns = ({ columns, proportions, swipable }) => {
             style={c.image.style ? JSON.parse(c.image.style) : null}
             // borderRadius={"1.25rem"}
             className="pointer"
-            alt={"4Geeks Academy Section"}
+            alt="4Geeks Academy Section"
             margin="auto"
             height="100%"
             width="100%"
             h_sm="250px"
-            backgroundSize={`cover`}
+            backgroundSize="cover"
           />
 
           {/* <div style={{background:"red", width:"250px", height:"250px"}}></div> */}
