@@ -21,7 +21,7 @@ header:
   image: "../../../static/images/locations/bolivia-header.png"
   alt: ""
 button_header:
-  button_text: See Programs
+  button_text: Review Programs
   button_link: "#programs"
 button:
   syllabus_button_text: "DOWNLOAD SYLLABUS" # <-- this will show everywhere in the website
@@ -33,7 +33,7 @@ button:
 
 custom_bar:
   active: false
-  message: Lorem ipsum dot simet mosd ei
+  message: 'From US$90/mo. Or pay when you get a job! <a class="customBar-link" href="/apply">Apply</a>'
   button: 
     label: "Read More"
     path: "#" #string (can be inline path using #, relative path or absolute path)
@@ -61,7 +61,7 @@ info_box:
   address: "Only remotely in Bolivia"
   iframeMapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1126.521243034489!2d-80.20142868794088!3d25.759937884725943!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b153865e526d%3A0xf884fb3f86a9c7db!2s4Geeks%20Academy!5e0!3m2!1ses-419!2scl!4v1621010581768!5m2!1ses-419!2scl"
   contact_heading: "Contacts"
-  phone: Llámanos +57 300 7282898
+  phone: Call now +57 300 7282898
   whatsapp: +57 300 7282898
   whatsapp_link: "https://wa.me/+573007282898"
   email: latam@4GeeksAcademy.com
