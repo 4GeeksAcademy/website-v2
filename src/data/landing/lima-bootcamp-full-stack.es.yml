@@ -115,7 +115,7 @@ rating_reviews:
       url: ""
 
 program_details:
-  position: 3
+  position: 2
   heading: "Maestría en Python, JavaScript y React"
   sub_heading: "Comienza con Python, Ciencia de Datos, Aprendizaje Automático, Deep Learning y el mantenimiento de un entorno de producción en Inteligencia Artificial."
   weeks:
@@ -158,7 +158,7 @@ components:
 
 
   - name: new_design_with_bullets
-    position: 2
+    position: 3
     layout: two_column_right 
     swipable: False
     background: "#fbfbfb"
