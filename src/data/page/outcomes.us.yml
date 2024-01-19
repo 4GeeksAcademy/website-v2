@@ -19,21 +19,21 @@ header:
 sections:
   - title: "Our Statement"
     ref: "our_statement"
-    paragraph: "The Coding Bootcamp industry has been growing tremendously in the last few years. Big cities are gathering the majority of the numbers, and also new tech hubs (such as Miami) are rising
-    the occasion and growing to meet the challenge.
+    paragraph: |
+      The Coding Bootcamp industry has been growing tremendously in the last few years. Big cities are gathering the majority of the numbers, and also new tech hubs (such as Miami) are rising
+      the occasion and growing to meet the challenge.
 
-    4Geeks Academy is Licensed by the Florida Department of Education; we also have a long lasting business relationship with Miami Dade College, and we have been awarded and
-    recognized many times for our Syllabus, methodologies and outcomes. 
+      4Geeks Academy is Licensed by the Florida Department of Education; we also have a long lasting business relationship with Miami Dade College, and we have been awarded and
+      recognized many times for our Syllabus, methodologies and outcomes. 
 
-    Since 2017 we have been growing really fast. We have graduated over 700 students across 6 different campus and more than 15 on going programs.
-    "
+      Since 2017 we have been growing really fast. We have graduated over 700 students across 6 different campus and more than 15 on going programs.
     stats: 
-      - stat: "+2500"
+      - stat: "+4000 graduates"
         content: "Graduates"
       - stat: "2 Languages: Eng and Esp"
         content: "Syllabus and Programs"
-      - stat: "+10 Cities"
-        content: "Miami, Orlando, Toronto, Madrid, Santiago de Chile, Caracas, Bogotá, Berlín, and Costa Rica, Uruguay and more to come"
+      - stat: "More than 10 locations"
+        content: "Miami, Orlando, Boca, Houston, Chicago, Atlanta, Toronto, Madrid, Santiago de Chile, Caracas, Bogotá, México, Costa Rica, Uruguay and more to come"
     sub_sections:
       - title: ""
         content: "This report is meant to show our outcomes, achievements and what we consider needs to be improved. It's our story and our way to let you know that we are working harder every time in order to get better." 
@@ -43,18 +43,19 @@ sections:
             
   - title: "Student Facts"
     ref: "student_facts"
-    paragraph: "Here are the results of 4GA operations (excluding programs launched together with Miami Dade College) from March 202 to March 2022.
-
-    The programs included are the Full-Stack Software Development Program taught through Part-time and Full-Time methodologies.
-    "
+    paragraph: |
+      Here are the results of 4GA operations (excluding programs launched together with Miami Dade College) from March 202 to March 2022.
+      The programs included are the Full-Stack Software Development Program taught through Part-time and Full-Time methodologies.
     stats: 
       - stat: "325"
-        content: "Students considered for
-        the purpose of this Report"
+        content: |
+          Students considered for
+          the purpose of this Report
       - stat: "90%"
-        content: "Our students choose Part-time
-        Programs. Ony 10% pursue a
-        Full-Time program."
+        content: |
+          Our students choose Part-time
+          Programs. Ony 10% pursue a
+          Full-Time program.
     sub_sections:
       - title: "PART - TIME"
         content: "We were founded under a PT vision and we keep showing our main strength with Part- time Education; the new way of learning and achieving (upskill) a new career." 
@@ -70,12 +71,10 @@ sections:
             chart: true
   - title: "Job Placement"
     ref: "job_placement"
-    paragraph: "Our students normally need around 100 days after graduation in order to land a job in the field. We have had students landing a job even before finishing the program, or within the next 15 days from Pitch Day. The average is 94 days.
-    "
+    paragraph: "Our students normally need around 100 days after graduation in order to land a job in the field. We have had students landing a job even before finishing the program, or within the next 15 days from Pitch Day. The average is 94 days."
     stats: 
       - stat: "84%"
-        content: "Job Placement Ratio
-        onsidering those with more than 90 days since graduation"
+        content: "Job Placement Ratio considering those with more than 90 days since graduation"
       - stat: "11%"
         content: "Students that have decided to
         drop out before graduating."
