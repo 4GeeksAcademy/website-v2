@@ -3,7 +3,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import LeadForm from "../LeadForm";
 import { H1, H2, Paragraph } from "../Heading";
 import { Div, GridContainer, Grid } from "../Sections";
-import { Colors } from "../Styling";
+import { Colors, Img } from "../Styling";
 import { Circle } from "../BackgroundDrawing";
 import Icon from "../Icon";
 import LandingContainer from "../LandingContainer";
@@ -304,7 +304,7 @@ const LandingHeader = (props) => {
                 />
               </Div>
             </Div>
-            {!hideForm && (
+            {!hideForm ? (
               <LeadForm
                 landingTemplate
                 headerImage={
@@ -347,6 +347,23 @@ const LandingHeader = (props) => {
                 width_tablet="84%"
                 // marginButton_tablet="0 0 30px auto"
                 boxShadow="9px 8px 0px 0px rgba(0,0,0,1)"
+              />
+            ) : (
+              <Img
+                src={
+                  yml.form.side_image || "/images/landing/grupo-ventanas.png"
+                }
+                alt="4Geeks Academy Section"
+                margin="auto"
+                height="100%"
+                minHeight_tablet="none"
+                minHeight="500px"
+                maxHeight="500px"
+                width_tablet="80%"
+                width="100%"
+                zIndex="10"
+                // h_sm="250px"
+                backgroundSize="contain"
               />
             )}
             <Div
