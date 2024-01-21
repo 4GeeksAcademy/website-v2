@@ -227,7 +227,7 @@ components:
           text: "Regístrate y accede al Sistema en Línea de ProInnóvate: https://inngenius.proinnovate.gob.pe/. "
           icon: "circle" 
         - heading: "Paso 2: Selección de Beca"
-          text: "Selecciona el Concurso de Becas para Programas de Bootcamps de Código y haz clic en "Sí, quiero postular""
+          text: "Selecciona el Concurso de Becas para Programas de Bootcamps de Código y haz clic en \"Sí, quiero postular\""
           icon: "circle" 
         - heading: "Paso 3: Evaluación y Selección"
           text: "Completa y envía el Formulario de Postulación del Sistema en Línea de ProInnóvate hasta el 4 de marzo del 2024, a las 13:00 horas (Perú). Revisa el manual de postulación aquí: "
