@@ -20,17 +20,18 @@ meta_info:
 
 navbar:
   buttonText: "Postular"
-  buttonUrl: "#bottom" # url accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
+  buttonUrl: "https://www.proinnovate.gob.pe/convocatorias/por-tipo-de-concurso/concursos-para-actores-del-ecosistema/630-bootcamp" # url accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
   logoUrl: "#"
 
 form:
   # posible fields: "first_name", "last_name", "full_name", "phone", "email"
   # always the first_name, email and phone will be mandatory if added.
-  hide_form: True
-  # fields: ["full_name", "phone", "email"]
-  # heading: "Conoce más información"
-  # motivation: "Completa el formulario y te enviaremos la información en unos minutos a tu correo electrónico."
-  # button_label: Obtener malla y más información
+  hide_form: False
+  side_image: '/images/bg/main.png'
+  fields: ["full_name", "phone", "email"]
+  heading: "Solicita información"
+  motivation: "Completa el formulario y te enviaremos la información en unos minutos a tu correo electrónico."
+  button_label: Solicitar más información
   # redirect: "/es/gracias/?lang=es"  #you can redirect to another url or entirely diffrent website
 
 apply_schollarship: # form that is displayed at the end of the landing
@@ -53,7 +54,6 @@ features:
   #                                         up   left down  right
   styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
   bullets:
-    - 4Geeks Academy ha impartido más de 20 bootcamps de código en Perú, con un alto índice de empleabilidad de sus egresados
     - ProInnóvate financiará los programas con un costo total por beneficiario de hasta US$ 7 500
     - Mentorías y career support de por vida
     - Horario Full-Time 
@@ -61,13 +61,13 @@ features:
 follow_bar:
   position: "top" # top, bottom, hidden
   content:
-    text: "Diversos planes de financiamiento \n Hasta 18 cuotas"
-    text_mobile: "Diversos planes de financiamiento \n Hasta 18 cuotas"
+    text: "Solicita una beca. \n Recibe un credito hasta US $7,500."
+    text_mobile: "Solicita a una beca. \n Credito hasta US $7,500."
     # devices:    XL      LG      MD      SM       XS
     font_size: ["25px", "25px", "25px", "18px", "4.3vw"]
   button:
-    text: "Escribir por WhatsApp"
-    path: "https://api.whatsapp.com/send/?phone=56920065786&text&type=phone_number&app_absent=0&utm_source=GADS&utm_medium=GADS&utm_campaign=GADS&utm_id=GADS&utm_term=GADS&utm_content=GADS"
+    text: "Empieza tu solicitud"
+    path: "https://www.proinnovate.gob.pe/convocatorias/por-tipo-de-concurso/concursos-para-actores-del-ecosistema/630-bootcamp"
   phone: 
     text: ""
 
@@ -115,7 +115,7 @@ rating_reviews:
       url: ""
 
 program_details:
-  position: 3
+  position: 1
   heading: "Maestría en Python, JavaScript y React"
   sub_heading: "Comienza con Python, Ciencia de Datos, Aprendizaje Automático, Deep Learning y el mantenimiento de un entorno de producción en Inteligencia Artificial."
   weeks:
@@ -135,7 +135,7 @@ who_is_hiring:
 # Possible layours: [two_column_left_image, two_column_right_image]
 components:
   - name: pro_innovate
-    position: 1
+    position: 2
     layout: two_column_left
     background: "#fff" # Name of the color(from components/Styling/index.js) or color code ex: #C9F9F9
     image:
@@ -158,7 +158,7 @@ components:
 
 
   - name: new_design_with_bullets
-    position: 2
+    position: 3
     layout: two_column_right 
     swipable: False
     background: "#fbfbfb"
@@ -178,7 +178,7 @@ components:
       color: white
       hover_color: "white"
       background: "black"
-      path: "mailto:pablo@4geeksacademy.com"
+      path: "https://www.proinnovate.gob.pe/convocatorias/por-tipo-de-concurso/concursos-para-actores-del-ecosistema/630-bootcamp"
     content: 
       text: ""
       font_size: ["16px"]
@@ -216,11 +216,11 @@ components:
       text: ""
       font_size: ["18px"]
     button: 
-      text: "Aplica a la Beca"
+      text: "Postúlate a la Beca"
       color: white
       hover_color: "white"
       background: "black"
-      path: "mailto:bootcamps@proinnovate.gob.pe"
+      path: "https://www.proinnovate.gob.pe/convocatorias/por-tipo-de-concurso/concursos-para-actores-del-ecosistema/630-bootcamp"
     bullets:
       items:
         - heading: "Paso 1: Registro"
@@ -233,7 +233,7 @@ components:
           text: "ELa selección se llevará a cabo en dos etapas, eligiendo entre dos y cuatro bootcamps en la primera y beneficiarios en la segunda"
           icon: "circle" 
         - heading: "Correo de Consultas del Bootcamp"
-          text: "Para consultas relacionadas con las bases del concurso, pueden comunicarse a: bootcamps@proinnovate.gob.pe  haciendo click en  Aplicar a la Beca"
+          text: "Para consultas relacionadas con las bases del concurso, pueden comunicarse a: bootcamps@proinnovate.gob.pe  haciendo click en \"Postúlate a la Beca\""
           icon: "circle" 
 
 

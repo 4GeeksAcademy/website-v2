@@ -374,6 +374,7 @@ export const query = graphql`
           }
           form {
             hide_form
+            side_image
             heading
             motivation
             redirect
