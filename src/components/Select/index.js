@@ -162,7 +162,6 @@ const customStyles = {
 };
 
 export const SelectRaw = ({ onChange, ...rest }) => {
-
   return (
     <Div
       position="relative"
