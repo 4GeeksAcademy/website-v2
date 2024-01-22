@@ -198,8 +198,9 @@ const PricingCard = ({
               marginTop: "21px",
               display: "block",
             }}
-            to={`${info.apply_button.link}${selectedPlan ? `?utm_plan=${selectedPlan}` : ""
-              }`}
+            to={`${info.apply_button.link}${
+              selectedPlan ? `?utm_plan=${selectedPlan}` : ""
+            }`}
           >
             <Button
               variant="full"
@@ -252,7 +253,7 @@ const ChartSection = ({ info, currentLocation }) => {
           width="100%"
           width_xs="300px"
           margin="auto"
-        // height="256px"
+          // height="256px"
         >
           <Icon icon="payments_chart" style={{ margin: "auto" }} />
         </Div>
@@ -444,7 +445,7 @@ const PricesAndPayments = (props) => {
       )?.node[props.programType];
   };
 
-  const optionFilter = () => { };
+  const optionFilter = () => {};
 
   const getAvailablePlans = () => {
     const currentPlans = getCurrentPlans();
@@ -520,24 +521,26 @@ const PricesAndPayments = (props) => {
 
   //shows the available plans according to the selected location
   useEffect(() => {
-    const courseFilteredAux = []
+    const courseFilteredAux = [];
     if (currentLocation) {
       courseArray.map((course) => {
         const currentPlans = data.allPlansYaml.edges
           .filter(({ node }) => node.fields.lang === props.lang)
           .find((p) =>
-            p.node.fields.file_name.includes(course?.value?.replaceAll("_", "-"))
+            p.node.fields.file_name.includes(
+              course?.value?.replaceAll("_", "-")
+            )
           )?.node[props.programType];
 
         const availablePlans = currentPlans.filter((plan) =>
           plan.academies.includes(currentLocation.fields.file_name.slice(0, -3))
-        )
+        );
 
-        if(availablePlans.length > 0){
-          courseFilteredAux.push(course)
+        if (availablePlans.length > 0) {
+          courseFilteredAux.push(course);
         }
-      })
-      setCourseArrayFiltered(courseFilteredAux)
+      });
+      setCourseArrayFiltered(courseFilteredAux);
     }
   }, [currentLocation]);
 
@@ -753,7 +756,7 @@ const PricesAndPayments = (props) => {
         maxWidth_md="1366px"
         minWidth_md="580px"
         margin="20px auto"
-      //display="block"
+        //display="block"
       >
         {availablePlans && availablePlans.length === 0 ? (
           <Div
@@ -896,14 +899,15 @@ const PricesAndPayments = (props) => {
                   gridColumn_tablet="12/22"
                   gridColumn_md="13/24"
                   gridColumn_lg="14/26"
-                //margin="32px 0 0 0"
+                  //margin="32px 0 0 0"
                 >
                   <Link
                     style={{
                       display: "block",
                     }}
-                    to={`${info.apply_button.link}${selectedPlan ? `?utm_plan=${selectedPlan}` : ""
-                      }`}
+                    to={`${info.apply_button.link}${
+                      selectedPlan ? `?utm_plan=${selectedPlan}` : ""
+                    }`}
                   >
                     <Button
                       variant="full"
@@ -973,8 +977,8 @@ const PricesAndPayments = (props) => {
             session && session.location && session.location.phone
               ? `https://wa.me/${phoneNumberClean(session?.location?.phone)}`
               : session.email
-                ? `mailto:${session.email}`
-                : `${info.contact_link}`
+              ? `mailto:${session.email}`
+              : `${info.contact_link}`
           }
         >
           {info.contact_carrer_advisor}
