@@ -82,14 +82,14 @@ const LandingHeader = (props) => {
             {yml.header_data.partner_logo_url && (
               <>
                 <Div
-                  width="242px"
+                  width="100%"
                   flexDirection_tablet="column"
                   height="auto"
                   padding="0 0 25px 0"
                 >
                   <GatsbyImage
                     loading="eager"
-                    imgStyle={{ objectFit: "contain" }}
+                    imgStyle={{ "objectFit": "contain" }}
                     image={getImage(
                       yml.header_data.partner_logo_url.childImageSharp
                         .gatsbyImageData
