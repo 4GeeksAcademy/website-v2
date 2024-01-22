@@ -42,8 +42,8 @@ apply_schollarship: # form that is displayed at the end of the landing
 # jumbotron on the top (cannot be commented out)
 header_data:
   background: "#FFF1D1"
+  partner_logo_url: "../../../static/images/landing/logos-promin.png"
   tagline: ProInnóvate otorga becas para bootcamps de programación de 4Geeks Academy. 
-  partner_logo_url: "../../../static/images/landing/min-produccion-peru.png"
   sub_heading: "El concurso está dirigido a jóvenes técnicos o no universitarios que buscan formación técnica especializada para mejorar su empleabilidad."
   badge: "../../../static/images/badges/Course-Report-Badge-2023.png"
   image_filter: brightness(0.3)
