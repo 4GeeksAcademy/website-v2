@@ -415,12 +415,12 @@ const PricesAndPayments = (props) => {
   if (info) info = info.node;
 
   function phoneNumberClean(phoneNumber) {
-    if(phoneNumber){
-    const arr = phoneNumber.split("");
-    const numberClean = arr.filter((elem) => elem.match(/[0-9]/));
-    return numberClean.join("");
-  }
-  return phoneNumber;
+    if (phoneNumber) {
+      const arr = phoneNumber.split("");
+      const numberClean = arr.filter((elem) => elem.match(/[0-9]/));
+      return numberClean.join("");
+    }
+    return phoneNumber;
   }
 
   const { session, setSession } = useContext(SessionContext);
@@ -433,7 +433,7 @@ const PricesAndPayments = (props) => {
   const [jobGuarantee, setJobGuarantee] = useState(false);
   //const [currentPlans] = useState();
   const [availablePlans, setAvailablePlans] = useState([]);
-  const [courseArrayFiltered, setCourseArrayFiltered] = useState(courseArray);
+  const [courseArrayFiltered, setCourseArrayFiltered] = useState([]);
   // const courseArrayFiltered = []
 
   const getCurrentPlans = () => {
@@ -444,15 +444,10 @@ const PricesAndPayments = (props) => {
       )?.node[props.programType];
   };
 
-  const optionFilter = () => {
-
-      
-
-  }
+  const optionFilter = () => { };
 
   const getAvailablePlans = () => {
     const currentPlans = getCurrentPlans();
-    console.log(currentPlans?.filter((plan) => plan.academies?.includes(currentLocation?.fields?.file_name?.slice(0, -3))))
 
     if (currentPlans && currentLocation) {
       return currentPlans
@@ -470,7 +465,6 @@ const PricesAndPayments = (props) => {
     }
     return [];
   };
-
 
   // const steps = props.details.details_modules.reduce((total, current, i) => [...total, (total[i - 1] || 0) + current.step], [])
   useEffect(() => {
@@ -524,17 +518,28 @@ const PricesAndPayments = (props) => {
 
   const selected = availablePlans.find((plan) => plan.slug === selectedPlan);
 
+  //shows the available plans according to the selected location
   useEffect(() => {
+    const courseFilteredAux = []
+    if (currentLocation) {
+      courseArray.map((course) => {
+        const currentPlans = data.allPlansYaml.edges
+          .filter(({ node }) => node.fields.lang === props.lang)
+          .find((p) =>
+            p.node.fields.file_name.includes(course?.value?.replaceAll("_", "-"))
+          )?.node[props.programType];
 
-    if(getCurrentPlans()?.length > 0){
-      console.log(true)
-    }else{
-      console.log(false)
+        const availablePlans = currentPlans.filter((plan) =>
+          plan.academies.includes(currentLocation.fields.file_name.slice(0, -3))
+        )
+
+        if(availablePlans.length > 0){
+          courseFilteredAux.push(course)
+        }
+      })
+      setCourseArrayFiltered(courseFilteredAux)
     }
   }, [currentLocation]);
-
-
-  //console.log(data.allPlansYaml.edges, course, currentLocation)
 
   return (
     <Div
@@ -691,7 +696,7 @@ const PricesAndPayments = (props) => {
                     placeholderFloat
                     bgColor={Colors.white}
                     single={props.financial ? false : true}
-                    options={currentLocation && courseArray}
+                    options={currentLocation && courseArrayFiltered}
                     placeholder={info.top_label_2}
                     value={course}
                     onChange={(opt) => setCourse(opt)}
@@ -962,15 +967,16 @@ const PricesAndPayments = (props) => {
         </Div>
       </GridContainer>
       <Paragraph margin_xxs="15px 0" margin_tablet="0 0 0 0">
-        {info.get_notified +" "}
-        <Link 
+        {info.get_notified + " "}
+        <Link
           to={
-            session && session.location && session.location.phone ? 
-              `https://wa.me/${phoneNumberClean(session?.location?.phone)}`:  
-              session.email ?
-                `mailto:${session.email}` :
-                `${info.contact_link}`
-            } >
+            session && session.location && session.location.phone
+              ? `https://wa.me/${phoneNumberClean(session?.location?.phone)}`
+              : session.email
+                ? `mailto:${session.email}`
+                : `${info.contact_link}`
+          }
+        >
           {info.contact_carrer_advisor}
         </Link>
       </Paragraph>
