@@ -77,6 +77,7 @@ images_box:
       alt: "4Geeeks Barcelona"
     - path: "../../../static/images/locations/madrid-3.png"
       alt: "4Geeeks Barcelona lab"
+  layout_horizontal: true #false == "mode mosaic"
 
 ## START FROM HERE - DON'T CHANGE ANYTHING ABOVE
 
@@ -122,16 +123,16 @@ country_shortname: "es"
 socials:
   - name: "Facebook"
     icon: "facebook"
-    link: "https://www.facebook.com/4geeksacademyes"
+    link: "https://www.facebook.com/4GeeksAcademyES"
   - name: "Twitter"
-    icon: "twitter"
+    icon: "x-logo"
     link: "https://www.twitter.com/4geeksacademyes"
   - name: "Instagram"
     icon: "instagram"
-    link: "https://www.instagram.com/4geeksacademyes"
-  - name: "Meetup"
-    icon: "meetup"
-    link: "https://www.meetup.com/4geeks-academy-madrid"
+    link: "https://www.instagram.com/4geeksacademyes/"
+  - name: "Linkedin"
+    icon: "linkedin"
+    link: "https://www.linkedin.com/school/4geeksacademyes/"
 courses:
   - "Full-Time"
   - "Part-Time"

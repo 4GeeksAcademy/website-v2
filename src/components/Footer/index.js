@@ -100,8 +100,8 @@ const Footer = ({ yml }) => {
           <H4 margin="0 0 10px 0" display="none" display_md="block">
             {yml.newsletter.heading}
           </H4>
-          <Div>
-            {(yml.socials || socials).map((ln, i) => {
+          <Div id="icons-container" alignItems="center" gap="8px">
+            {(socials || yml.socials).map((ln, i) => {
               if (!ln.icon) return null;
               return (
                 <Anchor
@@ -109,7 +109,7 @@ const Footer = ({ yml }) => {
                   cursor="pointer"
                   to={ln.link}
                   // textAlign="left"
-                  margin="0 0 5px 0"
+                  margin="0"
                   fontSize="13px"
                   // lineHeight="22px"
                   fontWeight="400"
@@ -118,7 +118,7 @@ const Footer = ({ yml }) => {
                 >
                   <Icon
                     icon={ln.icon}
-                    style={{ margin: "0 15px 0 0" }}
+                    style={{ margin: "0" }}
                     color={Colors.black}
                     fill={Colors.black}
                     height="32px"

@@ -61,14 +61,12 @@ const Location = ({ data, pageContext, yml }) => {
 
   const open = {
     us: "Open on Maps",
-    es: "Abrir en Mpas",
+    es: "Abrir en Mapas",
   };
   const chooseButton = {
     us: "CHOOSE PROGRAM",
     es: "SELECCIONAR PROGRAMA",
   };
-
-  console.log(yml);
 
   return (
     <>
@@ -266,63 +264,27 @@ const Location = ({ data, pageContext, yml }) => {
       {/* GEEKSINFO IS A TWOCOLUMN WITH TITLE */}
       <GeeksInfo lang={pageContext.lang} />
 
-      {/* <MosaicImages yml={yml.images_box}/> */}
-
-      <Gallery
-        images={yml?.images_box?.images}
-        heading={yml?.images_box?.heading}
-        paragraph={yml?.images_box?.content}
-        widthImage="315px"
-        heightImage="347px"
-        previewArrow
-        nextArrow
-        customSettingsCarousel={{
-          dotsClass: "slick-dots-staff",
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          className: "carousel-class ", // staff-class | carousel-class-noprev-arrow | carousel-class-nonext-arrow | carousel-class-noarrow
-          responsive: [
-            {
-              breakpoint: 1439,
-              settings: {
-                slidesToShow: 3,
-                slidesToScroll: 3,
-                infinite: false,
-                dots: true,
-              },
-            },
-            {
-              breakpoint: 1024,
-              settings: {
-                slidesToShow: 3,
-                slidesToScroll: 3,
-                infinite: false,
-                dots: true,
-              },
-            },
-            {
-              breakpoint: 768,
-              settings: {
-                slidesToShow: 2,
-                slidesToScroll: 2,
-                infinite: false,
-                dots: true,
-              },
-            },
-            {
-              breakpoint: 450,
-              settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                infinite: false,
-                dots: true,
-              },
-            },
-          ],
-        }}
-      />
+      {yml?.images_box?.layout_horizontal ? (
+        <Gallery
+          images={yml?.images_box?.images}
+          heading={yml?.images_box?.heading}
+          paragraph={yml?.images_box?.content}
+          widthImage="315px"
+          heightImage="347px"
+          previewArrow
+          nextArrow
+          //customSettingsCarousel={}
+        />
+      ) : (
+        <MosaicImages
+          images={yml?.images_box?.images}
+          heading={yml?.images_box?.heading}
+          paragraph={yml?.images_box?.content}
+        />
+      )}
 
       <ChooseYourProgram
+        id="choose-program"
         chooseProgramRef={chooseProgramRef}
         lang={pageContext.lang}
         programs={data.allChooseYourProgramYaml.edges[0].node.programs}
@@ -464,6 +426,7 @@ export const query = graphql`
           images_box {
             heading
             content
+            layout_horizontal
             images {
               path {
                 childImageSharp {
