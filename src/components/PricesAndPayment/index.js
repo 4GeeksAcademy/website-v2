@@ -522,6 +522,7 @@ const PricesAndPayments = (props) => {
   //shows the available plans according to the selected location
   useEffect(() => {
     const courseFilteredAux = [];
+
     if (currentLocation) {
       courseArray.map((course) => {
         const currentPlans = data.allPlansYaml.edges
