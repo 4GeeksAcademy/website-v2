@@ -50,6 +50,7 @@ const ChooseYourProgram = ({
       //background={landingTemplate ? Colors.white : Colors.verylightGray}
       position="relative"
       id={id}
+      ref={chooseProgramRef}
     >
       <Div
         background={Colors.verylightGray}
@@ -60,7 +61,6 @@ const ChooseYourProgram = ({
         position="absolute"
       />
       <Grid
-        ref={chooseProgramRef}
         gridTemplateColumns_md={
           landingTemplate ? "repeat(14, 1fr)" : "repeat(14, 1fr)"
         }
