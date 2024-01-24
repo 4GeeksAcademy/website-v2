@@ -205,14 +205,14 @@ export const Div = styled.div`
   }
   @media ${Devices.xxs} {
     column-count: ${(props) => props.columnCount_xxs};
-    padding: ${(props) => props.padding_xxs}
+    padding: ${(props) => props.padding_xxs};
     background: ${(props) => props.background_xxs};
     display: ${(props) => props.display_xxs};
     top: ${(props) => props.top_xxs};
     left: ${(props) => props.left_xxs};
     margin: ${(props) => props.margin_xxs};
     display: ${(props) => props.display_xxs};
-    justify-content ${(props) => props.justifyContent_xxs};
+    justify-content: ${(props) => props.justifyContent_xxs};
     width: ${(props) => props.width_xxs};
   }
   @media ${Devices.xs} {
@@ -721,7 +721,6 @@ export const GridContainer = ({
   justifyContentChild,
   justifyItemsChild,
 }) => {
-  console.log(height_tablet);
   return (
     <Grid
       id={id}

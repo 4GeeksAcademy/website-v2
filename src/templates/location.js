@@ -243,10 +243,10 @@ const Location = ({ data, pageContext, yml }) => {
       {data.allJobGuaranteeSmallYaml.edges[0].node.locations.includes(
         yml.breathecode_location_slug
       ) && (
-          <JobGuaranteeSmall
-            content={data.allJobGuaranteeSmallYaml.edges[0].node}
-          />
-        )}
+        <JobGuaranteeSmall
+          content={data.allJobGuaranteeSmallYaml.edges[0].node}
+        />
+      )}
 
       <TwoColumn
         left={{ image: yml.two_columns?.image, video: yml.two_columns?.video }}
@@ -264,7 +264,7 @@ const Location = ({ data, pageContext, yml }) => {
       {/* GEEKSINFO IS A TWOCOLUMN WITH TITLE */}
       <GeeksInfo lang={pageContext.lang} />
 
-      {yml?.images_box?.layout_horizontal ?
+      {yml?.images_box?.layout_horizontal ? (
         <Gallery
           images={yml?.images_box?.images}
           heading={yml?.images_box?.heading}
@@ -273,17 +273,18 @@ const Location = ({ data, pageContext, yml }) => {
           heightImage="347px"
           previewArrow
           nextArrow
-        //customSettingsCarousel={}
+          //customSettingsCarousel={}
         />
-        :
+      ) : (
         <MosaicImages
           images={yml?.images_box?.images}
           heading={yml?.images_box?.heading}
           paragraph={yml?.images_box?.content}
         />
-      }
+      )}
 
       <ChooseYourProgram
+        id="choose-program"
         chooseProgramRef={chooseProgramRef}
         lang={pageContext.lang}
         programs={data.allChooseYourProgramYaml.edges[0].node.programs}
@@ -320,7 +321,7 @@ const Location = ({ data, pageContext, yml }) => {
         faqs={data.allFaqYaml.edges[0].node.faq}
         topicSlug="enrollment"
         minPriority="1"
-      // locationSlug={yml.breathecode_location_slug}
+        // locationSlug={yml.breathecode_location_slug}
       />
 
       <RelatedPosts
