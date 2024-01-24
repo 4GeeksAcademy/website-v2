@@ -61,14 +61,12 @@ const Location = ({ data, pageContext, yml }) => {
 
   const open = {
     us: "Open on Maps",
-    es: "Abrir en Mpas",
+    es: "Abrir en Mapas",
   };
   const chooseButton = {
     us: "CHOOSE PROGRAM",
     es: "SELECCIONAR PROGRAMA",
   };
-
-  console.log(yml);
 
   return (
     <>

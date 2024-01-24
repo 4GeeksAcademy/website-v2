@@ -47,11 +47,11 @@ const Title_Paragraph = (props) => {
           <Paragraph
             fontFamily="Lato"
             fontWeight="normal"
-            fontSize={props.fontSize || "21px"}
+            fontSize={props.fontSize || "16px"}
             lineHeight="22px"
             padding="0"
             padding_tablet="0px 10%"
-            letterSpacing="0.05em"
+            letterSpacing="0.06em"
             color="#3A3A3A"
             width="100%"
             margin="0 0 15px 0"
