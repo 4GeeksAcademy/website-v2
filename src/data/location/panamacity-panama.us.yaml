@@ -33,7 +33,7 @@ button:
 
 custom_bar:
   active: false
-  message: Lorem ipsum dot simet mosd ei
+  message: '4Geeks offers scholarships and financing tailored to your needs.<a class="customBar-link" href="/us/apply">¡Apply now!</a>'
   button: 
     label: "Read More"
     path: "#" #string (can be inline path using #, relative path or absolute path)
@@ -131,7 +131,7 @@ socials:
     icon: "facebook"
     link: "https://www.facebook.com/4geeksacademy"
   - name: "Twitter"
-    icon: "twitter"
+    icon: "x-logo"
     link: "https://www.twitter.com/4geeksacademy"
   - name: "Instagram"
     icon: "instagram"

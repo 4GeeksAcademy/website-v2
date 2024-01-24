@@ -34,7 +34,7 @@ button:
 
 custom_bar:
   active: false
-  message: Lorem ipsum dot simet mosd ei
+  message: 'Desde US$90 al mes. ¡O paga cuando obtengas un trabajo! <a class="customBar-link" href="/es/aplica">Postúlate</a>'
   button: 
     label: "Read More"
     path: "#" #string (can be inline path using #, relative path or absolute path)
@@ -127,13 +127,13 @@ country_shortname: "ec"
 socials:
   - name: "Facebook"
     icon: "facebook"
-    link: "https://www.facebook.com/4geeksacademy"
+    link: "https://www.facebook.com/4geeksacademyve"
   - name: "Twitter"
-    icon: "twitter"
-    link: "https://www.twitter.com/4geeksacademy"
+    icon: "x-logo"
+    link: "https://twitter.com/4geeksacademyES"
   - name: "Instagram"
     icon: "instagram"
-    link: "https://www.instagram.com/4geeksacademy"
+    link: "https://www.instagram.com/4geeksacademylatam/"
 courses:
   - "Full-Time"
   - "Part-Time"

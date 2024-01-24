@@ -89,7 +89,7 @@ two_columns:
     text: "Únete a nosotros para sumergirte en el aprendizaje práctico, conectarte con líderes de la industria y forjar una exitosa carrera en el próspero mundo tecnológico de Dublín"
     font_size: ["18px", "18px", "22px", "22px", "22px"]
   button:
-    text: "APPLY NOW"
+    text: "¡Únete ahora!"
     color: "white"
     background: "black"
     path: "/us/apply"
@@ -118,16 +118,16 @@ country_shortname: "ie"
 socials:
   - name: "Facebook"
     icon: "facebook"
-    link: "https://www.facebook.com/4geeksacademyes"
+    link: "https://www.facebook.com/4geeksacademy"
   - name: "Twitter"
-    icon: "twitter"
-    link: "https://www.twitter.com/4geeksacademyes"
+    icon: "x-logo"
+    link: "https://twitter.com/4GeeksAcademy"
   - name: "Instagram"
     icon: "instagram"
-    link: "https://www.instagram.com/4geeksacademyes"
-  - name: "Meetup"
-    icon: "meetup"
-    link: "https://www.meetup.com/4geeks-academy"
+    link: "https://www.instagram.com/4geeksacademy/"
+  - name: "Linkedin"
+    icon: "linkedin"
+    link: "https://www.linkedin.com/school/4geeksacademyes/"
 
 courses:
   - "Full-Time"

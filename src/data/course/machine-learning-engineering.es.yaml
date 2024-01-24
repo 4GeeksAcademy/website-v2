@@ -85,7 +85,7 @@ two_columns:
     font_size: ["30px", "30px", "30px", "30px", "30px"]
   sub_heading:
     text: "We are Miami based and we have been focusing in bringing on more opportunities in South Florida."
-    font_size: ["18px", "18px", "18px", "18px", "18px"]
+    font_size: ["16px", "16px", "16px", "16px", "16px"]
   button:
     text: "Apply now"
     color: "white"
