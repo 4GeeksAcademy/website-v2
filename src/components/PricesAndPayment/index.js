@@ -975,11 +975,11 @@ const PricesAndPayments = (props) => {
         {info.get_notified + " "}
         <Link
           to={
-            session && session.location && session.location.phone
+            session && session?.location && session?.location.phone
               ? `https://wa.me/${phoneNumberClean(session?.location?.phone)}`
-              : session.email
-              ? `mailto:${session.email}`
-              : `${info.contact_link}`
+              : session?.email
+              ? `mailto:${session?.email}`
+              : `${info?.contact_link}`
           }
         >
           {info.contact_carrer_advisor}
