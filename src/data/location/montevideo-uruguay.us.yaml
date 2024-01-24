@@ -2,7 +2,7 @@ meta_info:
   slug: "coding-bootcamp-uruguay"
   title: "4Geeks Academy in Uruguay, Monte Video"
   position: 38
-  description: "Get to know here all about our coding bootcamp campus in Uruguay, Monte Video of 4Geeks Academy"
+  description: "Get to know here all about our coding bootcamp campus in Uruguay, Monte Video of 4GeeksAcademy"
   image: "/images/og-preview/montevideo-uruguay.us.png"
   keywords: ""
   # it will not show up on the applications forms
@@ -33,7 +33,7 @@ button:
 
 custom_bar:
   active: false
-  message: Lorem ipsum dot simet mosd ei
+  message: '4Geeks offers scholarships and financing tailored to your needs.<a class="customBar-link" href="/us/apply">¡Apply now!</a>'
   button: 
     label: "Read More"
     path: "#" #string (can be inline path using #, relative path or absolute path)
@@ -85,14 +85,14 @@ two_columns:
   proportions: [6, 6]
   image:
     style: '{"border" : "5px solid black", "backgroundSize": "contain" }'
-    src: "/static/images/staff/luisa.png"
-    shadow: true  
-  video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
+    src: "/static/images/testimonials/pablo-review.jpg"
+    shadow: true 
+  video: "ScqncejBOvY"
   heading:
-    text: "4Geeks, Argentina and a story full of opportunities"
+    text: "4Geeks Academy in Montevideo Pablo's Testimonial"
     font_size: ["30px", "30px", "30px", "30px", "30px"]
   sub_heading:
-    text: "We are Buenos Aires based and we have been focusing in bringing on more opportunities."
+    text: "We are in Monte Video based and we have been focusing in bringing on more opportunities."
     font_size: ["18px", "18px", "22px", "22px", "22px"]
   button:
     text: "APPLY NOW"
@@ -102,8 +102,8 @@ two_columns:
   bullets:
     items: 
     - text: "There is always a full or partial scholarship open"
-    - text: "There is always opportunities for everyone in Miami-Dade County, Broward and Palm Beach"
-    - text: "We have ongoing partnerships with Miami Dade College, Miami Tech Coalition, UWM, The City of Miami, Miami Dade Counti and so manu more."
+    - text: "Our programs are tailored to meet the current demands of the tech industry, ensuring graduates possess relevant skills"
+    - text: "A track record of high job placement rates post-graduation, ensuring career progression for our students"
 
 ## START FROM HERE - DON'T CHANGE ANYTHING ABOVE
 ## HEADING SECTION
@@ -128,13 +128,13 @@ country_shortname: "uy"
 socials:
   - name: "Facebook"
     icon: "facebook"
-    link: "https://www.facebook.com/4geeksacademy"
+    link: "https://www.facebook.com/4geeksacademyve"
   - name: "Twitter"
-    icon: "twitter"
-    link: "https://www.twitter.com/4geeksacademy"
+    icon: "x-logo"
+    link: "https://twitter.com/4GeeksAcademy"
   - name: "Instagram"
     icon: "instagram"
-    link: "https://www.instagram.com/4geeksacademy"
+    link: "https://www.instagram.com/4geeksacademylatam/"
 courses:
   - "Full-Time"
   - "Part-Time"

@@ -1,8 +1,8 @@
 meta_info:
   slug: "coding-bootcamp-madrid"
-  title: "Coding Bootcamp Madrid, Spain of 4Geeks Academy"
+  title: "Coding Bootcamp Madrid, Spain of 4GeeksAcademy"
   position: 20
-  description: "Know here all about our coding bootcamp campus in Madrid, Spain of 4Geeks Academy"
+  description: "Know here all about our coding bootcamp campus in Madrid, Spain of 4GeeksAcademy"
   image: "/images/og-preview/madrid-spain.us.png"
   keywords: "Coding Bootcamp, Madrid"
   redirects: []
@@ -91,10 +91,10 @@ two_columns:
     shadow: true  
   video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
   heading:
-    text: "4Geeks, Argentina and a story full of opportunities"
+    text: "Luisa Glum's Journey with 4Geeks Academy"
     font_size: ["30px", "30px", "30px", "30px", "30px"]
   sub_heading:
-    text: "We are Buenos Aires based and we have been focusing in bringing on more opportunities."
+    text: "Empowering Career Shifts in Madrid's Tech Arena"
     font_size: ["18px", "18px", "22px", "22px", "22px"]
   button:
     text: "APPLY NOW"
@@ -103,9 +103,9 @@ two_columns:
     path: "/us/apply"
   bullets:
     items: 
-    - text: "There is always a full or partial scholarship open"
-    - text: "There is always opportunities for everyone in Miami-Dade County, Broward and Palm Beach"
-    - text: "We have ongoing partnerships with Miami Dade College, Miami Tech Coalition, UWM, The City of Miami, Miami Dade Counti and so manu more."
+    - text: "Industry-aligned curriculum focused on practical skills and project-based learning"
+    - text: "Mentorship programs connecting students with industry professionals for insights and guidance"
+    - text: "Practical skill development preparing individuals for Madrid's competitive tech job market"
 
 
 active_campaign_location_slug: "madrid-spain"
@@ -127,14 +127,14 @@ socials:
     icon: "facebook"
     link: "https://www.facebook.com/4geeksacademyes"
   - name: "Twitter"
-    icon: "twitter"
+    icon: "x-logo"
     link: "https://www.twitter.com/4geeksacademyes"
   - name: "Instagram"
     icon: "instagram"
     link: "https://www.instagram.com/4geeksacademyes"
-  - name: "Meetup"
-    icon: "meetup"
-    link: "https://www.meetup.com/4geeks-academy-madrid"
+  - name: "Linkedin"
+    icon: "linkedin"
+    link: "https://www.linkedin.com/school/4geeksacademy/"
 courses:
   - "Full-Time"
   - "Part-Time"

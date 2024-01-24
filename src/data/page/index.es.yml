@@ -21,7 +21,7 @@ header_data:
   #If it doesn't have a video it will show the image
   #It must be a video from videoaks
   video: ""
-  image: "../../../static/images/bg/new-main-home-bg.png"
+  image: "../../../static/images/bg/more-new-main-home-bg.png"
 
 why_4geeks:
   heading: Por qué 4Geeks
@@ -55,7 +55,7 @@ two_columns:
     font_size: ["30px", "30px", "30px", "30px", "30px"]
   sub_heading:
     text: "Nuestra prioridad es que nuestra educación de alta calidad sea accesible para todos. Por eso, ofrecemos múltiples opciones para que puedas financiar tus estudios en nuestros bootcamps de programación sin estrés. Ya sea a través de un ISA (Income Share Agreement), becas, planes de pago o la garantía de empleo, estamos aquí para guiarte en cada paso del camino."
-    font_size: ["18px", "18px", "18px", "18px", "18px"]
+    font_size: ["16px", "16px", "16px", "16px", "16px"]
   button:
     text: "VER OPCIONES DE FINANCIACIÓN"
     color: "white"

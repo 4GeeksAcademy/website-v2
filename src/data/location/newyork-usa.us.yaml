@@ -2,7 +2,7 @@ meta_info:
   slug: "coding-bootcamp-nyc"
   title: "New York City Coding Bootcamp"
   position: 1
-  description: "Get to know here all about our coding bootcamp campus in NYC, New York of 4Geeks Academy"
+  description: "Get to know here all about our coding bootcamp campus in NYC, New York of 4GeeksAcademy"
   image: "/images/og-preview/downtown-miami.us.png"
   keywords: "null"
   redirects: []
@@ -82,14 +82,14 @@ two_columns:
   proportions: [6, 6]
   image:
     style: '{"border" : "5px solid black", "backgroundSize": "contain" }'
-    src: "/static/images/staff/luisa.png"
+    src: "/static/images/testimonials/allisa-testimonial.jpg"
     shadow: true  
-  video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
+  video: "https://www.youtube.com/watch?v=TCHASxvkhpI"
   heading:
-    text: "4Geeks, Argentina and a story full of opportunities"
+    text: "Exploring 4Geeks Academy in New York"
     font_size: ["30px", "30px", "30px", "30px", "30px"]
   sub_heading:
-    text: "We are Buenos Aires based and we have been focusing in bringing on more opportunities."
+    text: "Join us to explore hands-on learning, interact with industry leaders, and pave your way in New York's thriving tech scene."
     font_size: ["18px", "18px", "22px", "22px", "22px"]
   button:
     text: "APPLY NOW"
@@ -98,9 +98,9 @@ two_columns:
     path: "/us/apply"
   bullets:
     items: 
-    - text: "There is always a full or partial scholarship open"
-    - text: "There is always opportunities for everyone in Miami-Dade County, Broward and Palm Beach"
-    - text: "We have ongoing partnerships with Miami Dade College, Miami Tech Coalition, UWM, The City of Miami, Miami Dade Counti and so manu more."
+    - text: "Job-oriented curriculum ensuring career success"
+    - text: "Courses emphasizing coding mastery and skill enhancement"
+    - text: "Professional guidance maximizing opportunities within New York's vibrant tech industry"
 
 active_campaign_location_slug: "newyork-usa"
 breathecode_location_slug: "newyork-usa"
@@ -123,14 +123,14 @@ socials:
     icon: "facebook"
     link: "https://www.facebook.com/4geeksacademy"
   - name: "Twitter"
-    icon: "twitter"
+    icon: "x-logo"
     link: "https://www.twitter.com/4geeksacademy"
   - name: "Instagram"
     icon: "instagram"
-    link: "https://www.instagram.com/4geeksacademy"
-  - name: "Meetup"
-    icon: "meetup"
-    link: "https://www.meetup.com/4geeks-academy"
+    link: "https://www.instagram.com/4geeksacademy/"
+  - name: "Linkedin"
+    icon: "linkedin"
+    link: "https://www.linkedin.com/school/4geeksacademy/"
 courses:
   - "Full-Time"
   - "Part-Time"

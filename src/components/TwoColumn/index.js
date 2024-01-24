@@ -134,8 +134,9 @@ const Side = ({
           textAlign_tablet="left"
           textAlign="left"
           margin="0"
-          fontSize={sh_xl || "18px"}
-          fontSize_sm={sh_sm}
+          letterSpacing="0.06em"
+          fontSize={sh_xl || "16px"}
+          fontSize_sm={sh_sm || "16px"}
           fonSize_md={sh_md}
           fontSize_xs={sh_xs}
           fontHeight="30px"
@@ -202,7 +203,8 @@ const Side = ({
                   ) : (
                     <Paragraph
                       textAlign="left"
-                      fontSize="18px"
+                      fontSize="16px"
+                      letterSpacing="0.06em"
                       fontWeight="400"
                       lineHeight="22px"
                       margin="0px 0px 0px 5px"

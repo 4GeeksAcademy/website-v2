@@ -21,11 +21,6 @@ const FillerStyles = styled.div`
   transform: translateY(-50%);
 `;
 
-const weeks = [];
-for (let i = 1; i <= 16; i++) {
-  weeks.push(i.toString() + "sm.");
-}
-
 const strings = {
   us: {
     Projects: "Projects",
@@ -45,6 +40,13 @@ const ProgramDetails = (props) => {
     );
     return null;
   }
+
+  const weeks = [];
+  const totalWeeks = props.details.weeks || 16;
+  for (let i = 1; i <= totalWeeks; i++) {
+    weeks.push(i.toString() + "sm.");
+  }
+
   const steps = props.details.details_modules.reduce(
     (total, current, i) => [...total, (total[i - 1] || 0) + current.step],
     []

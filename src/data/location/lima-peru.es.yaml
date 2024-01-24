@@ -2,7 +2,7 @@ meta_info:
   slug: "bootcamp-programacion-lima-peru"
   title: "Bootcamp Programación Lima, Perú"
   position: 36
-  description: "Conoce aquí todo sobre nuestro campus de bootcamp de programación en Lima, Perú de 4Geeks Academy"
+  description: "Conoce aquí todo sobre nuestro campus de bootcamp de programación en Lima, Perú de 4GeeksAcademy"
   image: "/images/og-preview/lima-peru.es.png"
   # it will not show up on the applications forms
   visibility: "visible"
@@ -26,7 +26,7 @@ button_header:
   button_link: "#programs"
 button:
   syllabus_button_text: "DESCARGAR PROGRAMA" # <-- this will show everywhere in the website
-  apply_button_text: "APLICAR" # <-- this will show everywhere in the website
+  apply_button_text: "POSTÚLATE" # <-- this will show everywhere in the website
 
   syllabus_submit_text: "DESCARGAR"
   apply_button_link: "/aplica"
@@ -34,7 +34,7 @@ button:
 
 custom_bar:
   active: false
-  message: Lorem ipsum dot simet mosd ei
+  message: 'Desde $150 al mes. O paga cuando obtengas un trabajo! <a class="customBar-link" href="/es/aplica">Postúlate</a>'
   button: 
     label: "Read More"
     path: "#" #string (can be inline path using #, relative path or absolute path)
@@ -78,30 +78,30 @@ images_box:
       alt: "4Geeeks location"
     - path: "../../../static/images/locations/miami-people.jpeg"
       alt: "4Geeeks lab"
-
+      
 two_columns:
   proportions: [6, 6]
   image:
     style: '{"border" : "5px solid black", "backgroundSize": "contain" }'
-    src: "/static/images/staff/luisa.png"
+    src: "/static/images/testimonials/Mattia-Tozzi-testimonial.jpg"
     shadow: true  
-  video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
+  video: "B01-eTfgqqc"
   heading:
-    text: "4Geeks, Argentina and a story full of opportunities"
+    text: "La Experiencia de Mattia en 4Geeks Academy en Peru"
     font_size: ["30px", "30px", "30px", "30px", "30px"]
   sub_heading:
-    text: "We are Buenos Aires based and we have been focusing in bringing on more opportunities."
+    text: "Desarrolla tus Habilidades en Tecnología desde Lima"
     font_size: ["18px", "18px", "22px", "22px", "22px"]
   button:
-    text: "APPLY NOW"
+    text: "¡Únete ahora!"
     color: "white"
     background: "black"
-    path: "/us/apply"
+    path: "/es/aplica"
   bullets:
     items: 
-    - text: "There is always a full or partial scholarship open"
-    - text: "There is always opportunities for everyone in Miami-Dade County, Broward and Palm Beach"
-    - text: "We have ongoing partnerships with Miami Dade College, Miami Tech Coalition, UWM, The City of Miami, Miami Dade Counti and so manu more."
+    - text: "Cursos interactivos enfocados en habilidades técnicas esenciales para el mundo digital actual"
+    - text: "Los graduados de 4Geeks Academy han experimentado un aumento promedio del 30% en sus salarios después de completar nuestros programas"
+    - text: "Nuestros graduados tienen una tasa de colocación laboral del 95% dentro de los seis meses posteriores a la graduación"
 
 
 ## START FROM HERE - DON'T CHANGE ANYTHING ABOVE
@@ -127,13 +127,13 @@ country_shortname: "pe"
 socials:
   - name: "Facebook"
     icon: "facebook"
-    link: "https://www.facebook.com/4geeksacademy"
+    link: "https://www.facebook.com/4geeksacademyve"
   - name: "Twitter"
-    icon: "twitter"
-    link: "https://www.twitter.com/4geeksacademy"
+    icon: "x-logo"
+    link: "https://twitter.com/4geeksacademyES"
   - name: "Instagram"
     icon: "instagram"
-    link: "https://www.instagram.com/4geeksacademy"
+    link: "https://www.instagram.com/4geeksacademylatam/"
 courses:
   - "Full-Time"
   - "Part-Time"

@@ -84,25 +84,25 @@ two_columns:
   proportions: [6, 6]
   image:
     style: '{"border" : "5px solid black", "backgroundSize": "contain" }'
-    src: "/static/images/staff/luisa.png"
+    src: "/static/images/testimonials/Mattia-Tozzi-testimonial.jpg"
     shadow: true  
-  video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
+  video: "B01-eTfgqqc"
   heading:
-    text: "4Geeks, Argentina and a story full of opportunities"
+    text: "La Experiencia de Mattia en 4GeeksAcademy"
     font_size: ["30px", "30px", "30px", "30px", "30px"]
   sub_heading:
-    text: "We are Buenos Aires based and we have been focusing in bringing on more opportunities."
+    text: "Desarrolla tus Habilidades en Tecnología desde Barcelona"
     font_size: ["18px", "18px", "22px", "22px", "22px"]
   button:
-    text: "APPLY NOW"
+    text: "¡Únete ahora!"
     color: "white"
     background: "black"
-    path: "/us/apply"
+    path: "/es/aplica"
   bullets:
     items: 
-    - text: "There is always a full or partial scholarship open"
-    - text: "There is always opportunities for everyone in Miami-Dade County, Broward and Palm Beach"
-    - text: "We have ongoing partnerships with Miami Dade College, Miami Tech Coalition, UWM, The City of Miami, Miami Dade Counti and so manu more."
+    - text: "Cursos interactivos enfocados en habilidades técnicas esenciales para el mundo digital actual"
+    - text: "Acceso a profesores experimentados y una comunidad colaborativa de aprendizaje"
+    - text: "Preparación para desafíos del mundo real y oportunidades laborales en tecnología"
 
 active_campaign_location_slug: "barcelona-spain"
 breathecode_location_slug: "barcelona-spain"
@@ -122,16 +122,16 @@ country_shortname: "es"
 socials:
   - name: "Facebook"
     icon: "facebook"
-    link: "https://www.facebook.com/4geeksacademyes"
+    link: "https://www.facebook.com/4GeeksAcademyES"
   - name: "Twitter"
-    icon: "twitter"
+    icon: "x-logo"
     link: "https://www.twitter.com/4geeksacademyes"
   - name: "Instagram"
     icon: "instagram"
-    link: "https://www.instagram.com/4geeksacademyes"
-  - name: "Meetup"
-    icon: "meetup"
-    link: "https://www.meetup.com/4geeks-academy-madrid"
+    link: "https://www.instagram.com/4geeksacademyes/"
+  - name: "Linkedin"
+    icon: "linkedin"
+    link: "https://www.linkedin.com/school/4geeksacademyes/"
 courses:
   - "Full-Time"
   - "Part-Time"

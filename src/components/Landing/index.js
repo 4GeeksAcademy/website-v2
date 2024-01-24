@@ -204,12 +204,12 @@ export const Columns = ({ columns, proportions, swipable }) => {
             style={c.image.style ? JSON.parse(c.image.style) : null}
             // borderRadius={"1.25rem"}
             className="pointer"
-            alt={"4Geeks Academy Section"}
+            alt="4Geeks Academy Section"
             margin="auto"
             height="100%"
             width="100%"
             h_sm="250px"
-            backgroundSize={`cover`}
+            backgroundSize="cover"
           />
 
           {/* <div style={{background:"red", width:"250px", height:"250px"}}></div> */}
@@ -699,7 +699,7 @@ export const landingSections = {
   },
 
   cards_carousel: ({ session, pageContext, yml, data, index }) => {
-    const { heading, sub_heading, content, cards, button } = yml;
+    const { heading, sub_heading, content, cards, button, width } = yml;
     return (
       <React.Fragment key={index}>
         <Div
@@ -716,6 +716,7 @@ export const landingSections = {
           <CardsCarousel
             landingTemplate
             title={heading}
+            cardWidth={width}
             sub_title={sub_heading}
             content={content}
             cards={cards}

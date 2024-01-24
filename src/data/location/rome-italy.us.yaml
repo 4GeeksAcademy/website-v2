@@ -85,14 +85,14 @@ two_columns:
   proportions: [6, 6]
   image:
     style: '{"border" : "5px solid black", "backgroundSize": "contain" }'
-    src: "/static/images/staff/luisa.png"
+    src: "/static/images/staff/hernan-new.png"
     shadow: true  
-  video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
+  video: "ln3bQsV1BaQ"
   heading:
-    text: "4Geeks, Argentina and a story full of opportunities"
+    text: "Hernan's Experience at 4Geeks Academy in Rome, Italy"
     font_size: ["30px", "30px", "30px", "30px", "30px"]
   sub_heading:
-    text: "We are Buenos Aires based and we have been focusing in bringing on more opportunities."
+    text: "Discover how Hernan García has shaped his career with 4GeeksAcademy. Explore how our programs have molded his professional journey from Rome, Italy"
     font_size: ["18px", "18px", "22px", "22px", "22px"]
   button:
     text: "APPLY NOW"
@@ -101,9 +101,10 @@ two_columns:
     path: "/us/apply"
   bullets:
     items: 
-    - text: "There is always a full or partial scholarship open"
-    - text: "There is always opportunities for everyone in Miami-Dade County, Broward and Palm Beach"
-    - text: "We have ongoing partnerships with Miami Dade College, Miami Tech Coalition, UWM, The City of Miami, Miami Dade Counti and so manu more."
+    - text: "With a 90% job placement rate within six months of graduation, our programs ensure tangible outcomes for career advancement"
+    - text: "Flexible learning options, including part-time and immersive courses, cater to diverse schedules and learning preferences"
+    - text: "Exclusive networking events and workshops provide opportunities to interact with tech leaders and expand professional connections"
+
 
 active_campaign_location_slug: "rome-italy"
 breathecode_location_slug: "rome-italy"
@@ -126,14 +127,14 @@ socials:
     icon: "facebook"
     link: "https://www.facebook.com/4geeksacademy"
   - name: "Twitter"
-    icon: "twitter"
+    icon: "x-logo"
     link: "https://www.twitter.com/4geeksacademy"
   - name: "Instagram"
     icon: "instagram"
     link: "https://www.instagram.com/4geeksacademy"
-  - name: "Meetup"
-    icon: "meetup"
-    link: "https://www.meetup.com/4geeks-academy"
+  - name: "Linkedin"
+    icon: "linkedin"
+    link: "https://www.linkedin.com/school/4geeksacademy/"
 
 courses:
   - "Full-Time"

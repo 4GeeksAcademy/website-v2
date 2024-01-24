@@ -42,7 +42,7 @@ custom_bar:
 badges:
   title: ""
   paragraph: |
-    Pon en marcha tu carrera en 4Geeks Academy, donde los desarrolladores crecen y prosperan. Nombrada el mejor <a style='color:black; text-decoration: underline;'} href="https://4geeksacademy.com/us/coding-bootcamp" rel="nofollow">coding bootcamp</a> del 2023 por Course Report, el mejor centro de bootcamps de codificación de 2023 por los Premios de Excelencia Educativa en España, incluida entre las 10 mejores de los EE. UU. por Newsweek y calificada con 4.92/5 en Switchup. Licenciada por el Departamento de Educación de Florida, EE. UU.
+    Pon en marcha tu carrera en 4GeeksAcademy, donde los desarrolladores crecen y prosperan. Nombrada el mejor <a style='color:black; text-decoration: underline;'} href="https://4geeksacademy.com/us/coding-bootcamp" rel="nofollow">coding bootcamp</a> del 2023 por Course Report, el mejor centro de bootcamps de codificación de 2023 por los Premios de Excelencia Educativa en España, incluida entre las 10 mejores de los EE. UU. por Newsweek y calificada con 4.92/5 en Switchup. Licenciada por el Departamento de Educación de Florida, EE. UU.
 news:
   title: "4Geeks Academy Argentina en las noticias..."
 upcoming:
@@ -86,25 +86,25 @@ two_columns:
   proportions: [6, 6]
   image:
     style: '{"border" : "5px solid black", "backgroundSize": "contain" }'
-    src: "/static/images/staff/luisa.png"
-    shadow: true  
-  video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
+    src: "/static/images/testimonials/pablo-review.jpg"
+    shadow: true 
+  video: "ScqncejBOvY"
   heading:
-    text: "4Geeks, Argentina and a story full of opportunities"
+    text: "4Geeks Academy en Argentina"
     font_size: ["30px", "30px", "30px", "30px", "30px"]
   sub_heading:
-    text: "We are Buenos Aires based and we have been focusing in bringing on more opportunities."
+    text: "Oportunidades de Financiamiento y Adaptabilidad al Mercado de Buenos Aires"
     font_size: ["18px", "18px", "22px", "22px", "22px"]
   button:
-    text: "APPLY NOW"
+    text: "¡Únete ahora!"
     color: "white"
     background: "black"
     path: "/es/aplica"
   bullets:
     items: 
-    - text: "There is always a full or partial scholarship open"
-    - text: "There is always opportunities for everyone in Miami-Dade County, Broward and Palm Beach"
-    - text: "We have ongoing partnerships with Miami Dade College, Miami Tech Coalition, UWM, The City of Miami, Miami Dade Counti and so manu more."
+    - text: "Pablo resalta las variadas oportunidades de financiamiento disponibles para estudiantes que deseen unirse a 4Geeks Academy en Argentina"
+    - text: "Explora cómo nuestros programas están meticulosamente diseñados para alinearse con las demandas del mercado tecnológico actual"
+    - text: "Nuestros graduados tienen una tasa de colocación laboral del 95% dentro de los seis meses posteriores a la graduación, asegurando transiciones exitosas al mundo laboral"
 
 
 ## HEADING SECTION
@@ -131,7 +131,7 @@ socials:
     icon: "facebook"
     link: "https://www.facebook.com/4geeksacademycr"
   - name: "Twitter"
-    icon: "twitter"
+    icon: "x-logo"
     link: "https://www.twitter.com/4geeksacademycr"
   - name: "Instagram"
     icon: "instagram"

@@ -1,6 +1,6 @@
 meta_info:
   slug: part-time-full-stack-developer
-  title: "Full Stack Developer Course by 4 Geeks Academy, master the Skills and Technologies"
+  title: "Full Stack Developer Course by 4geeks Academy, master the Skills and Technologies"
   bc_slug: "full-stack"
   description: "Enroll in our Full Stack Developer Course and become a web development expert. Learn how to build applications from scratch. Join us today!"
   image: "/images/og-preview/full-stack.us.png"
@@ -90,7 +90,7 @@ two_columns:
     font_size: ["30px", "30px", "30px", "30px", "30px"]
   sub_heading:
     text: "We are Miami based and we have been focusing in bringing on more opportunities in South Florida."
-    font_size: ["18px", "18px", "18px", "18px", "18px"]
+    font_size: ["16px", "16px", "16px", "16px", "16px"]
   button:
     text: "Apply now"
     color: "white"

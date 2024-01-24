@@ -61,14 +61,12 @@ const Location = ({ data, pageContext, yml }) => {
 
   const open = {
     us: "Open on Maps",
-    es: "Abrir en Mpas",
+    es: "Abrir en Mapas",
   };
   const chooseButton = {
     us: "CHOOSE PROGRAM",
     es: "SELECCIONAR PROGRAMA",
   };
-
-  console.log(yml);
 
   return (
     <>
@@ -78,17 +76,22 @@ const Location = ({ data, pageContext, yml }) => {
         padding_lg="40px 0px"
         padding_tablet="40px 40px"
         columns_tablet="14"
-        gridColumn_tablet="1 / span 14"
         margin={
-          isCustomBarActive(session) ? "70px auto 24px auto" : "50px auto"
+          isCustomBarActive(session)
+            ? "138px auto 30px auto"
+            : "72px auto 30px auto"
         }
-        maxWidth="1366px"
+        margin_md={
+          isCustomBarActive(session)
+            ? "120px auto 30px auto"
+            : "72px auto 30px auto"
+        }
       >
         <Div
           flexDirection="column"
           justifyContent_tablet="start"
           padding_tablet="70px 0 0 0"
-          padding={isCustomBarActive(session) ? "70px 0 0 0" : "0px"}
+          padding={isCustomBarActive(session) ? "50px 25px 0 25px" : "0 25px"}
           gridColumn_tablet="1 / 7"
         >
           <H1 type="h1" textAlign="left" margin="0 0 11px 0" color="#606060">
