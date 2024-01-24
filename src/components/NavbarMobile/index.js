@@ -265,6 +265,7 @@ export const NavbarMobile = ({
               loading="eager"
               image={getImage(data.file.childImageSharp.gatsbyImageData)}
               alt="4Geeks Logo"
+              className="logo-navbar"
             />
           </Link>
         </Div>
