@@ -109,6 +109,7 @@ images_box:
       alt: "4Geeeks miami location"
     - path: "../../../static/images/locations/miami-people.jpeg"
       alt: "4Geeeks miami lab"
+  layout_horizontal: true #false == mode mosaic
 
 
 active_campaign_location_slug: "atlanta-usa"

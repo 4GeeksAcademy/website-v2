@@ -243,10 +243,10 @@ const Location = ({ data, pageContext, yml }) => {
       {data.allJobGuaranteeSmallYaml.edges[0].node.locations.includes(
         yml.breathecode_location_slug
       ) && (
-        <JobGuaranteeSmall
-          content={data.allJobGuaranteeSmallYaml.edges[0].node}
-        />
-      )}
+          <JobGuaranteeSmall
+            content={data.allJobGuaranteeSmallYaml.edges[0].node}
+          />
+        )}
 
       <TwoColumn
         left={{ image: yml.two_columns?.image, video: yml.two_columns?.video }}
@@ -264,61 +264,24 @@ const Location = ({ data, pageContext, yml }) => {
       {/* GEEKSINFO IS A TWOCOLUMN WITH TITLE */}
       <GeeksInfo lang={pageContext.lang} />
 
-      {/* <MosaicImages yml={yml.images_box}/> */}
-
-      <Gallery
-        images={yml?.images_box?.images}
-        heading={yml?.images_box?.heading}
-        paragraph={yml?.images_box?.content}
-        widthImage="315px"
-        heightImage="347px"
-        previewArrow
-        nextArrow
-        customSettingsCarousel={{
-          dotsClass: "slick-dots-staff",
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          className: "carousel-class ", // staff-class | carousel-class-noprev-arrow | carousel-class-nonext-arrow | carousel-class-noarrow
-          responsive: [
-            {
-              breakpoint: 1439,
-              settings: {
-                slidesToShow: 3,
-                slidesToScroll: 3,
-                infinite: false,
-                dots: true,
-              },
-            },
-            {
-              breakpoint: 1024,
-              settings: {
-                slidesToShow: 3,
-                slidesToScroll: 3,
-                infinite: false,
-                dots: true,
-              },
-            },
-            {
-              breakpoint: 768,
-              settings: {
-                slidesToShow: 2,
-                slidesToScroll: 2,
-                infinite: false,
-                dots: true,
-              },
-            },
-            {
-              breakpoint: 450,
-              settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                infinite: false,
-                dots: true,
-              },
-            },
-          ],
-        }}
-      />
+      {yml?.images_box?.layout_horizontal ?
+        <Gallery
+          images={yml?.images_box?.images}
+          heading={yml?.images_box?.heading}
+          paragraph={yml?.images_box?.content}
+          widthImage="315px"
+          heightImage="347px"
+          previewArrow
+          nextArrow
+        //customSettingsCarousel={}
+        />
+        :
+        <MosaicImages
+          images={yml?.images_box?.images}
+          heading={yml?.images_box?.heading}
+          paragraph={yml?.images_box?.content}
+        />
+      }
 
       <ChooseYourProgram
         chooseProgramRef={chooseProgramRef}
@@ -357,7 +320,7 @@ const Location = ({ data, pageContext, yml }) => {
         faqs={data.allFaqYaml.edges[0].node.faq}
         topicSlug="enrollment"
         minPriority="1"
-        // locationSlug={yml.breathecode_location_slug}
+      // locationSlug={yml.breathecode_location_slug}
       />
 
       <RelatedPosts
@@ -462,6 +425,7 @@ export const query = graphql`
           images_box {
             heading
             content
+            layout_horizontal
             images {
               path {
                 childImageSharp {
