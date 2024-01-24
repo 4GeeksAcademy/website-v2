@@ -829,7 +829,6 @@ export const GridContainerWithImage = ({
   alignItems_tablet,
   alignItems_md,
 }) => {
-
   return (
     <>
       <Grid
