@@ -300,24 +300,6 @@ const ChartSection = ({ info, currentLocation }) => {
   );
 };
 
-const courseArray = [
-  {
-    value: "full_stack",
-    label: "Full Stack Developer",
-  },
-  {
-    value: "software_engineering",
-    label: "Software Engineering",
-  },
-  {
-    value: "machine_learning",
-    label: "Machine Learning",
-  },
-  {
-    value: "datascience-ml",
-    label: "Datascience & Machine Learning",
-  },
-];
 const modalityArray = [
   {
     value: "part_time",
@@ -445,7 +427,18 @@ const PricesAndPayments = (props) => {
       )?.node[props.programType];
   };
 
-  const optionFilter = () => {};
+  const getPrograms = () => {
+    return props.programs.filter(
+      ({ node }) =>
+        !["unlisted", "hidden"].includes(node.meta_info.visibility) &&
+        node.meta_info.show_in_apply
+    )
+    .map(({ node }) => ({
+      label: node.apply_form.label,
+      value: node.meta_info.bc_slug,
+    }));
+  }
+  const programs = !Array.isArray(props.programs) ? [] : getPrograms();
 
   const getAvailablePlans = () => {
     const currentPlans = getCurrentPlans();
@@ -492,7 +485,7 @@ const PricesAndPayments = (props) => {
   // sync property course
   useEffect(
     () => (
-      setCourse(courseArray.find((c) => c.value === props.courseType)),
+      setCourse(programs.find((c) => c.value === props.courseType)),
       setModality(modalityArray.find((d) => d.value === props.programType))
     ),
     [props.courseType, props.programType]
@@ -524,7 +517,7 @@ const PricesAndPayments = (props) => {
     const courseFilteredAux = [];
 
     if (currentLocation) {
-      courseArray.map((course) => {
+      programs.map((course) => {
         const currentPlans = data.allPlansYaml.edges
           .filter(({ node }) => node.fields.lang === props.lang)
           .find((p) =>
@@ -545,6 +538,7 @@ const PricesAndPayments = (props) => {
     }
   }, [currentLocation]);
 
+    console.log("course", course, props.course)
   return (
     <Div
       id="prices_and_payment"
@@ -620,7 +614,7 @@ const PricesAndPayments = (props) => {
                 left="20px"
                 width="fit-content"
                 topLabel="Location"
-                options={courseArray}
+                options={getPrograms()}
                 openLabel={course ? course.label : props.openedLabel}
                 closeLabel={course ? course.label : props.closedLabel}
                 onSelect={(opt) => setCourse(opt)}

@@ -155,6 +155,7 @@ const Financial = (props) => {
         type={pageContext.slug}
         lang={pageContext.lang}
         locations={data.allLocationYaml.edges}
+        programs={data.allCourseYaml.edges}
         programType={program_type}
         courseType={course_type}
         title={yml.prices.heading}
@@ -545,6 +546,22 @@ export const query = graphql`
             }
             tagline
             sub_heading
+          }
+        }
+      }
+    }
+    allCourseYaml(filter: { fields: { lang: { eq: $lang } } }) {
+      edges {
+        node {
+          meta_info {
+            slug
+            title
+            bc_slug
+            visibility
+            show_in_apply
+          }
+          apply_form {
+            label
           }
         }
       }
