@@ -93,7 +93,7 @@ two_column:
       style: '{ "backgroundSize": "contain" }'
       src: /images/landing/Group-6626.png
     heading:
-      text: $20 Millions in scholarships
+      text: $20 Million in scholarships
       font_size:
         - 38px
         - 38px

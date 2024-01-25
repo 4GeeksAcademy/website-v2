@@ -19,7 +19,6 @@ import Badges from "../components/Badges";
 
 const Financial = (props) => {
   const { session } = React.useContext(SessionContext);
-
   const { data, pageContext, yml } = props;
 
   let location = null;
@@ -49,7 +48,7 @@ const Financial = (props) => {
         padding_tablet="72px 0 40px 0"
         padding="0px 20px"
         position="relative"
-        fontSize_title="32px"
+        fontSize_title="40px"
         fontSizeTitle_tablet="60px"
         fontFamily_title="Archivo-Black"
         fontSize_paragraph="15px"
@@ -148,14 +147,11 @@ const Financial = (props) => {
           right_lg="23%"
           top_lg="12%"
         />
-
-       
       </Header>
 
       <Iconogram yml={yml.iconogram} />
 
       <PricesAndPayment
-        background={`linear-gradient(to bottom, ${Colors.white} 50%, ${Colors.lightYellow2} 50%)`}
         type={pageContext.slug}
         lang={pageContext.lang}
         locations={data.allLocationYaml.edges}

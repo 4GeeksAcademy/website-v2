@@ -341,6 +341,8 @@ const PricesAndPayments = (props) => {
             pricing_error_contact
             pricing_error
             get_notified
+            contact_carrer_advisor
+            contact_link
             top_label
             top_label_2
             plans_title
@@ -413,13 +415,14 @@ const PricesAndPayments = (props) => {
   );
   if (info) info = info.node;
 
-  const getCurrentPlans = () => {
-    return data.allPlansYaml.edges
-      .filter(({ node }) => node.fields.lang === props.lang)
-      .find((p) =>
-        p.node.fields.file_name.includes(course?.value?.replaceAll("_", "-"))
-      )?.node[props.programType];
-  };
+  function phoneNumberClean(phoneNumber) {
+    if (phoneNumber) {
+      const arr = phoneNumber.split("");
+      const numberClean = arr.filter((elem) => elem.match(/[0-9]/));
+      return numberClean.join("");
+    }
+    return phoneNumber;
+  }
 
   const { session, setSession } = useContext(SessionContext);
   const [currentLocation, setCurrentLocation] = useState(false);
@@ -431,9 +434,22 @@ const PricesAndPayments = (props) => {
   const [jobGuarantee, setJobGuarantee] = useState(false);
   //const [currentPlans] = useState();
   const [availablePlans, setAvailablePlans] = useState([]);
+  const [courseArrayFiltered, setCourseArrayFiltered] = useState([]);
+  // const courseArrayFiltered = []
+
+  const getCurrentPlans = () => {
+    return data.allPlansYaml.edges
+      .filter(({ node }) => node.fields.lang === props.lang)
+      .find((p) =>
+        p.node.fields.file_name.includes(course?.value?.replaceAll("_", "-"))
+      )?.node[props.programType];
+  };
+
+  const optionFilter = () => {};
 
   const getAvailablePlans = () => {
     const currentPlans = getCurrentPlans();
+
     if (currentPlans && currentLocation) {
       return currentPlans
         .filter((plan) =>
@@ -503,7 +519,31 @@ const PricesAndPayments = (props) => {
 
   const selected = availablePlans.find((plan) => plan.slug === selectedPlan);
 
-  console.log(info.select_2)
+  //shows the available plans according to the selected location
+  useEffect(() => {
+    const courseFilteredAux = [];
+
+    if (currentLocation) {
+      courseArray.map((course) => {
+        const currentPlans = data.allPlansYaml.edges
+          .filter(({ node }) => node.fields.lang === props.lang)
+          .find((p) =>
+            p.node.fields.file_name.includes(
+              course?.value?.replaceAll("_", "-")
+            )
+          )?.node[props.programType];
+
+        const availablePlans = currentPlans.filter((plan) =>
+          plan.academies.includes(currentLocation.fields.file_name.slice(0, -3))
+        );
+
+        if (availablePlans.length > 0) {
+          courseFilteredAux.push(course);
+        }
+      });
+      setCourseArrayFiltered(courseFilteredAux);
+    }
+  }, [currentLocation]);
 
   return (
     <Div
@@ -527,7 +567,7 @@ const PricesAndPayments = (props) => {
         width="100%"
         margin="0 0 20px 0"
       >
-        {info.plans_title}
+        {info?.plans_title}
       </H2>
       <Grid
         gridTemplateColumns_lg={
@@ -660,7 +700,7 @@ const PricesAndPayments = (props) => {
                     placeholderFloat
                     bgColor={Colors.white}
                     single={props.financial ? false : true}
-                    options={courseArray}
+                    options={currentLocation && courseArrayFiltered}
                     placeholder={info.top_label_2}
                     value={course}
                     onChange={(opt) => setCourse(opt)}
@@ -785,7 +825,7 @@ const PricesAndPayments = (props) => {
                   display_tablet="block"
                   background="#F9F9F9"
                   border="1px solid #EBEBEB"
-                  padding="24px 15px 0 15px"
+                  padding="24px 15px"
                   margin_tablet="0 8px 0 0"
                   gridColumn_tablet="1/11"
                   // gridColumn_md="2/13"
@@ -932,7 +972,18 @@ const PricesAndPayments = (props) => {
         </Div>
       </GridContainer>
       <Paragraph margin_xxs="15px 0" margin_tablet="0 0 0 0">
-        {info.get_notified}
+        {info.get_notified + " "}
+        <Link
+          to={
+            session && session?.location && session?.location.phone
+              ? `https://wa.me/${phoneNumberClean(session?.location?.phone)}`
+              : session?.email
+              ? `mailto:${session?.email}`
+              : `${info?.contact_link}`
+          }
+        >
+          {info.contact_carrer_advisor}
+        </Link>
       </Paragraph>
       {/* <Div background={Colors.lightYellow} height="511px" width="100%" style={{position: "absolute", height: "511px"}}>f</Div> */}
     </Div>
