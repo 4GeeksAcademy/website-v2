@@ -57,7 +57,7 @@ info_box:
   heading: ""
   address: ""
   iframeMapUrl: ""
-  open_on_maps: "Abrir en Maps."
+  open_on_maps: "Abrir Mapa."
   contact_heading: "Contacts"
   phone: "(786) 416-6640"
   email: "info@4GeeksAcademy.com"

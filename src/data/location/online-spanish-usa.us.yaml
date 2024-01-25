@@ -1,8 +1,8 @@
 meta_info:
-  slug: "online-coding-bootcamp"
-  title: "Online Coding Bootcamps"
+  slug: "online-in-spanish-usa"
+  title: "Coding Bootcamp in Spanish"
   position: 102
-  description: "Discover here all the online coding bootcamps taught by 4GeeksAcademy. Sign up today!"
+  description: "Spanish-first coding and data science bootcamps taught from the USA by 4GeeksAcademy. Sign up today!"
   image: "/images/og-preview/online.us.png"
   keywords: "null"
   redirects:
@@ -15,11 +15,11 @@ meta_info:
   region: "usa-canada"
   related_clusters: ["trends-and-tech"]
 
-seo_title: "Online Coding Bootcamp"
+seo_title: "Coding Bootcamp in Spanish"
 header:
-  tagline: "Learn To Code Online"
+  tagline: "Learn to Code in Spanish"
   sub_header: "All programs are taught "
-  sub_header_highlighted: "Online, Hybrid or In-person."
+  sub_header_highlighted: "Online; from the USA."
   paragraph: "Learning online is hard: Lucky for you, we offer: unlimited support, amazing content and lifetime career support. \\n Yes, it really is available for the rest of your life."
   image: "../../../static/images/locations/online-home.png"
   alt: ""
@@ -36,7 +36,7 @@ button:
 
 custom_bar:
   active: false
-  message: '4Geeks offers scholarships and financing tailored to your needs.<a class="customBar-link" href="/us/apply">¡Apply now!</a>'
+  message: 'From US$90/mo. Or pay after you get a job. <a class="customBar-link" href="/us/apply">¡Apply now!</a>'
   button: 
     label: "Read More"
     path: "#" #string (can be inline path using #, relative path or absolute path)
@@ -61,7 +61,7 @@ upcoming:
 
 info_box:
   heading: "Find us Online"
-  address: "1801 SW 3rd Ave #100, Miami, FL 33129"
+  address: "4201 Main St Ste 200, Houston, TX 77002"
   iframeMapUrl: ""
   contact_heading: "Contacts"
   phone: "(786) 416-6640"
@@ -83,7 +83,6 @@ images_box:
       alt: "4Geeeks miami day"
     - path: "../../../static/images/locations/miami-old2.jpg"
       alt: "4Geeeks miami lab"
-  layout_horizontal: true #false == "mode mosaic"
 
 two_columns:
   proportions: [6, 6]
@@ -112,34 +111,31 @@ two_columns:
 
 ## HEADING SECTION
 
-active_campaign_location_slug: "online"
-breathecode_location_slug: "online"
-gdpr_compliant: true # do we need to ask for permision?
+active_campaign_location_slug: "online-spanish-usa"
+breathecode_location_slug: "online-spanish-usa"
+gdpr_compliant: false # do we need to ask for permision?
 in_person_available: false # important to accept in-person applicants
 
-city: "Rest of America"
-name: "Rest of America in English"
-latitude: "10000.760158"
-longitude: "-800000.200154"
+city: "Houston"
+name: "Rest of America in Spanish"
+latitude: "10000.760159"
+longitude: "-800000.200155"
 phone: "+1 (786) 416-6640"
-address: "1801 SW 18th Road"
-zip_code: "33130"
-state: ""
-country: "Remote"
+address: "4201 Main St Ste 200"
+zip_code: "77002"
+state: "Texas"
+country: "USA"
 
 socials:
   - name: "Facebook"
     icon: "facebook"
     link: "https://www.facebook.com/4geeksacademy"
   - name: "Twitter"
-    icon: "x-logo"
+    icon: "twitter"
     link: "https://www.twitter.com/4geeksacademy"
   - name: "Instagram"
     icon: "instagram"
-    link: "https://www.instagram.com/4geeksacademy/"
-  - name: "Linkedin"
-    icon: "linkedin"
-    link: "https://www.linkedin.com/school/4geeksacademy/"
+    link: "https://www.instagram.com/4geeksacademy"
 
 courses:
   - "Full-Time"
@@ -151,5 +147,5 @@ location_office_image: ""
 location_office_image2: ""
 location_office_image3: ""
 should_know: ""
-value: "Miami"
+value: "Houston"
 defaultLanguage: "us" # All lead marketing communications will arrive on this language
