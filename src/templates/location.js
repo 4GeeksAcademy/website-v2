@@ -61,7 +61,7 @@ const Location = ({ data, pageContext, yml }) => {
 
   const open = {
     us: "Open on Maps",
-    es: "Abrir en Mapas",
+    es: "Abrir Mapa",
   };
   const chooseButton = {
     us: "CHOOSE PROGRAM",

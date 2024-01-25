@@ -121,7 +121,7 @@ full_time:
       - "Financimiento a tu medida desde 6 hasta 18 meses"  
       - "Se debe pagar un anticipo correspondiente al 20% del valor del programa" 
     icons: 
-      - "/images/partner/flevo-new.png"
+      - "/images//flevo-new.png"
                        
   - slug: 'chile-isa-fs-ft'
     academies: ['santiago-chile']
@@ -161,7 +161,7 @@ full_time:
       - "Asiste a una entrevista con Flevo y obtén financiamiento rápidamente."
       - "El valor del programa se modifica con la modalidad de financiamiento."
     icons: 
-      - "/images/partner/flevo-new.png"
+      - "/images//flevo-new.png"
 
   - slug: 'venezuela-laptop-pt'
     academies: ['caracas-venezuela']
@@ -378,7 +378,7 @@ part_time:
       - "Financiamiento a tu medida desde 6 hasta 24 meses"  
       - "Se debe pagar un anticipo correspondiente al 20% del valor total del programa sin descuentos" 
     icons: 
-      - "/images/partner/flevo-new.png"
+      - "/images//flevo-new.png"
 
   - slug: 'chile-solo-fs-pt'
     academies: ['santiago-chile']
@@ -446,7 +446,7 @@ part_time:
       - "Debes elegir si tomarás solo el programa, si también quieres obtener nuestro sistema de Career Support, o si quieres ir a por todo y registrarte con nuestra opción de Trabajo Garantizado"  
       - "Pague solamente por el programa Full-Stack si todavía no está interesado en nuestro programa de apoyo profesional y nuestra garantía de empleo."   
     icons: 
-      - "/images/partner/flevo-new.png" 
+      - "/images//flevo-new.png" 
 
   - slug: 'venezuela-scholarship-pt'
     academies: ['caracas-venezuela']
@@ -474,7 +474,7 @@ part_time:
       - "Debes elegir si tomarás solo el programa, si también quieres obtener nuestro sistema de Career Support, o si quieres ir a por todo y registrarte con nuestra opción de Trabajo Garantizado"  
       - "Pague solamente por el programa Full-Stack si todavía no está interesado en nuestro programa de apoyo profesional y nuestra garantía de empleo."   
     icons: 
-      - "/images/partner/flevo-new.png" 
+      - "/images//flevo-new.png" 
 
   - slug: 'venezuela-financed-pt'
     academies: ['caracas-venezuela']

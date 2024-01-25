@@ -64,12 +64,12 @@ badges:
 
 # OVERLAPED
 overlaped:
-  heading: "Why learning Python and Javascript is essential"
-  paragraph: "Programming in Python and JavaScript offers some of the highest-paid career opportunities in the US. There are currently over 26 times more job opportunities in JavaScript compared to Ruby on Rails, and 10 times more jobs in Python compared to node.js. According to Indeed, Python and JavaScript developers enjoy average salaries exceeding $110k."
+  heading: "Learn to create predictive models and Master Machine Learning with 4Geeks Academy"
+  paragraph: "Dive into the world of machine learning with 4Geeks Academy's specialized program. Gain the skills to build predictive models for practical applications like fraud detection and natural language processing, using industry-leading tools such as Python, TensorFlow, and Scikit-learn."
   button:
     text: "LEARN MORE"
     color: "blue" 
-    link: "/" 
+    link: "/us/apply" 
   image:
     src: "/images/landing/tres-personas.png"
 
@@ -96,7 +96,7 @@ two_columns:
     items: 
     - text: "There is always a full or partial scholarship open"
     - text: "There is always opportunities for everyone in Miami-Dade County, Broward and Palm Beach"
-    - text: "We have ongoing partnerships with Miami Dade College, Miami Tech Coalition, UWM, The City of Miami, Miami Dade Counti and so manu more."
+    - text: "We have ongoing partnerships with Miami Dade College, Miami Tech Coalition, UWM, The City of Miami, Miami Dade County and many more."
 
 
 upcoming:
