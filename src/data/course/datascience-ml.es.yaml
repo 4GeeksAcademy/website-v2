@@ -65,7 +65,7 @@ badges:
 
 overlaped:
   heading: "Aprende a crear modelos predictivos que cambien el mundo"
-  paragraph: "En el bootcamp de Machine Learning de 4Geeks Academy, adquirirás habilidades para utilizar eficazmente las herramientas líderes en este campo, como Python, TensorFlow y Scikit-learn. A lo largo del programa, te sumergirás en el desarrollo de modelos predictivos con aplicaciones prácticas en áreas tan diversas como la detección de fraude, recomendación de productos, clasificación de imágenes y procesamiento del lenguaje natural"
+  paragraph: "En el bootcamp de Data Science y Machine Learning de 4Geeks Academy, adquirirás habilidades para utilizar eficazmente las herramientas líderes en este campo, como Python, TensorFlow y Scikit-learn. A lo largo del programa, te sumergirás en el desarrollo de modelos predictivos con aplicaciones prácticas en áreas tan diversas como la detección de fraude, recomendación de productos, clasificación de imágenes y procesamiento del lenguaje natural"
   button:
     text: "Aplicar"
     color: "blue"  

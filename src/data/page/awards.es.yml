@@ -22,20 +22,20 @@ awards_list:
   - image: "../../../static/images/badges/Course-Report-Badge-2024.webp"
     title: "Best Bootcamp for Course Report 2024"
     paragraph: "Tenemos 3 años consecutivos siendo reconocidos por Course Report como uno de los mejores bootcamp de programación del mundo."
-    link: "https://www.coursereport.com/schools/4geeks-academy"
-    text_link: Ver articulo
+    link: "https://www.coursereport.com/best-coding-bootcamps"
+    text_link: Ver artículo
 
   - image: "../../../static/images/badges/switchup-badge-2023.png"
     title: "Best Bootcamp for Switchup 2023"
     paragraph: "No solo en Florida, sino tambien en todos nuestros campus 4Geeks estamos constantemente recibiendo reconocimientos de nuestros alumnos permitiendonos posicionarnos como uno de los top bootcamps a nivel mundial."
     link: "https://www.switchup.org/bootcamps/4geeks-academy"
-    text_link: Ver articulo
+    text_link: Ver artículo
 
   - image: "../../../static/images/awards/premios_tecnologia_sigloxxi.png"
     title: "Ganadores de los Premios Tecnologia Siglo XXI mención 'Formación'"
     paragraph: "Nuestro campus de España fue reconocido como ganador de los Premios Tecnología Siglo XXI en la mención Formación en 2023"
     link: "https://www.elsuplemento.es/premiado/4geeks-academy-premio-nacional-de-tecnologia-2023-en-la-categoria-formacion"
-    text_link: Ver articulo
+    text_link: Ver artículo
 
   - image: "../../../static/images/badges/exelencia-educativa-es.png"
     title: "Mejor Programa Educativo para la Inserción Profesional"
