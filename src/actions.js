@@ -391,7 +391,7 @@ export const getCohorts = async (_query = {}) => {
     .join("&");
   console.log("query", query);
   var resp = (resp = await fetch(
-    `${process.env.GATSBY_BREATHECODE_HOST}/admissions/cohort/all?${query}`
+    `https://breathecode.herokuapp.com/v1/admissions/cohort/all?${query}`
   ));
   return await resp.json();
 };
@@ -406,7 +406,7 @@ export const getEvents = async (_query = {}) => {
     .map((key) => key + "=" + query[key])
     .join("&");
   const resp = await fetch(
-    `${process.env.GATSBY_BREATHECODE_HOST}/events/all?${query}`
+    `https://breathecode.herokuapp.com/v1/events/all?${query}`
   );
   return await resp.json();
 };

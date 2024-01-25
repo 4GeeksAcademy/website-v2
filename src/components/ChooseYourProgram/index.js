@@ -49,7 +49,7 @@ const ChooseYourProgram = ({
     <Div
       //background={landingTemplate ? Colors.white : Colors.verylightGray}
       position="relative"
-      id={id}
+      id={id || "program"}
     >
       <Div
         background={Colors.verylightGray}
