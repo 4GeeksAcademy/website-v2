@@ -10,7 +10,7 @@ meta_info:
 ## BANNER - HEADER
 seo_title: "Bootcamp Financing"
 header:
-  title: Financing
+  title: FINANCING
   paragraph: Indicate the following information to show you the financing options
   tagline: CELEBRATE THE BEST PRICE IN TOWN
   sub_heading: We never stopped trying until we mastered a real premium but affordable program. Our philosophy is rooted in making coding education available to everyone.
@@ -39,7 +39,6 @@ prices:
   closed_label: "Select a program"
   opened_label: "Close"
 
-
 label:
   program: 
     title: "Program"
@@ -52,6 +51,193 @@ label:
     closedLabel: "Select a campus"
 
 syllabus_button_text: "Search"
+
+iconogram:
+  heading:
+    text: "How your tuition is no longer a concern"
+    font_size:
+      - 38px
+      - 38px
+      - 38px
+      - 21px
+      - 21px
+    style: '{ "textAlign": "center", "width": "60%" }'
+  sub_heading:
+    text: ""
+    font_size: ["16px", "16px", "16px", "16px", "16px"]
+    style: '{ "textAlign": "center", "width": "60%" }'
+  text_link: "#"
+  swipable: false
+  icons:
+  - icon: "contract-money"
+    title: Payment Plans - No interest
+    content: " No interest: you can pay in up to 6 months"
+  - icon: "handmoney-new"
+    title: Loans - long term
+    content: "long term: 3, 4 or 5 years loan"
+  - icon: "hand-puzzle"
+    title: Scholarships and partnerships
+    content: "We are working with several organizations to reduce your tuition fee."
+  - icon: "briefcase-new"
+    title: Income Sharing Agreement
+    content: "Only pay when you get a job above a thereshold"
+  button:
+    text: "Conditions apply."
+    color: ""
+    path: "#top"
+    background: ""
+    hover_color: ""
+
+two_column:
+  - image:
+      style: '{ "backgroundSize": "contain" }'
+      src: /images/landing/Group-6626.png
+    heading:
+      text: $20 Million in scholarships
+      font_size:
+        - 38px
+        - 38px
+        - 38px
+        - 21px
+        - 21px
+    sub_heading:
+      text: 1.456 people have benefited from our scholarship programs, from all possible backgrounds, read here stories of the beneficiaries and projects.
+      font_size:
+        - 24px
+        - 24px
+        - 24px
+        - 16px
+        - 16px
+    button:
+      text: SEE MORE
+      color: white
+      background: black
+      hover_color: white
+      path: "/us/20-million"
+    boxes:
+      - icon: rocket-2
+        title: "14"
+        text: Projects completed
+      - icon: handsheart
+        title: "1465"
+        text: Beneficiaries so far
+
+  - image:
+      style: '{ "backgroundSize": "contain"}'
+      src: /images/landing/20-million-column.png
+    heading:
+      text: 62% of bootcamp applicants are rejected due to financial reasons.
+      font_size:
+        - 38px
+        - 38px
+        - 38px
+        - 21px
+        - 21px
+    sub_heading:
+      text: 4Geeks is committed to removing the cost as a possible factor to prevent talented individuals to become coders.
+      font_size:
+        - 24px
+        - 24px
+        - 24px
+        - 16px
+        - 16px
+    content:
+      font_size:
+        - 16px
+      text: |
+        Thanks to a deep network of 2000+ partners and donors from  Government Institutions, none profit organizations and private companies enables our scholarship platform to be one of the biggest in the world.
+    button:
+      text: JOIN THE PROGRAM
+      color: white
+      background: black
+      hover_color: white
+      path: "#prices_and_payment"
+
+  - image:
+      style: '{ "backgroundSize": "contain"}'
+      src: "/images/woman-glasses-laptop.png"
+    heading:
+      text: "Job guarantee commitment"
+      font_size:
+        - 38px
+        - 38px
+        - 38px
+        - 21px
+        - 21px
+    sub_heading:
+      text: "Our Job Guarantee Program consists of 3 stages that are needed to be complete as part of your process. It’s three bootcamps in One:"
+      font_size:
+        - 24px
+        - 24px
+        - 24px
+        - 16px
+        - 16px
+    bullets:
+      item_style: ""
+      items:
+        - heading: "Become a Software Developer."
+          text: ""
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
+        - heading: "Get career ready."
+          text: ""
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
+        - heading: "Get a job!"
+          text: ""
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
+    content:
+      font_size:
+        - 16px
+      text: The goal is to help you get a job within 180 days after graduation. You need to complete and meet the requirements in order to opt for the Money back if the job opportunity has not arrived within the time frame.
+    button:
+      text: "APPLY"
+      color: "white"
+      background: "black"
+      hover_color: "white"
+      path: "/us/apply"
+
+partners:
+  paragraph: "Don't miss out on the awesome allies of 4Geeks Academy! Here are just a few of them."
+  badges:
+    - name: "Miami Tech Works"
+      url: ""
+      image: "../../../static/images/allies/miamitech-works-logo.png"
+      alt: "Miami Tech Works"
+    - name: "UTEC"
+      url: ""
+      image: "../../../static/images/allies/utec.png"
+      alt: "Best cooding bootcamp Course Report 2023"
+    - name: "Universidad Tecnologica"
+      url: ""
+      image: "../../../static/images/allies/clark-uni-rounded-logo.png"
+      alt: "Clark University"
+    - name: "CINDE"
+      url: ""
+      image: "../../../static/images/allies/cinde.png"
+      alt: "CINDE Invest in Costa Rica"
+    - name: "IDB"
+      url: ""
+      image: "../../../static/images/allies/idb.png"
+      alt: "Inter-American Development Bank"
+  link_text: "See all parthers"
+  link_to: "/us/partners"
+
+we_trust_section:
+  title: Why trust us?
+  text: |
+    A job guarantee seals our commitment to your success! With a proven track record of success, our program will continue to empower future graduates. 
+    <br>
+    <br>
+    The numbers speak for themselves
+  boxes:
+    - icon: briefcase-2
+      title: "82%"
+      text: Job placement rate
+    - icon: chart
+      title: "60K"
+      text: Avg. Income at a new job
+    - icon: graduation-2
+      title: "20MM"
+      text: Millions in scolarchips and counting
 
 ## PAYMENT GUIDE SECTION
 # payment_guide:

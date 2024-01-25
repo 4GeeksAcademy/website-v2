@@ -1,6 +1,6 @@
 import React, { useState, useContext, useEffect } from "react";
 import { useStaticQuery, graphql } from "gatsby";
-import { Link } from "../Styling/index";
+import { Img, Link } from "../Styling/index";
 import { GridContainer, Grid, Div } from "../Sections";
 import { SelectRaw } from "../Select";
 import { H2, H3, Paragraph } from "../Heading";
@@ -140,6 +140,7 @@ const FinancialFilter = (props) => {
   const [locations, setLocations] = useState(false);
   const [modality, setModality] = useState(false);
   const [prices, setPrices] = useState();
+  const [firstLoadData, setFirstLoadData] = useState(false);
 
   const getCurrentPlans = () => {
     return data.allPlansYaml.edges
@@ -148,6 +149,45 @@ const FinancialFilter = (props) => {
         p.node.fields.file_name.includes(course?.value?.replaceAll("_", "-"))
       )?.node[modality?.value];
   };
+
+  const selectStyle = {
+    input: (styles) => ({
+      ...styles,
+      width: "100%",
+      margin: "0px",
+      padding: "10px 0",
+    }),
+    control: (styles, state) => ({
+      ...styles,
+      fontFamily: "Lato, sans-serif",
+      background: "#ffffff",
+      border: "1px solid #000",
+      boxShadow: "none",
+
+      marginBottom: "0px",
+      marginTop: "0px",
+
+      width: "100%",
+      fontSize: "15px",
+      fontWeight: "400",
+      color: "#000",
+      lineHeight: "22px",
+      "&:hover": { boxShadow: "0 0 0 1px black" },
+      "&:focus": { boxShadow: "0 0 0 1px black", border: "1px solid #000000" },
+    }),
+    option: (styles, { data, isDisabled, isFocused, isSelected }) => {
+      return {
+        ...styles,
+        fontFamily: "Lato, sans-serif",
+      };
+    },
+  };
+
+  if (course === false && modality === false && firstLoadData === false) {
+    setCourse({ value: "full_stack", label: "Full Stack Developer" });
+    setModality({ value: "part_time", label: "Part Time" });
+    setFirstLoadData(true);
+  }
 
   useEffect(() => {
     setLocations(
@@ -180,7 +220,22 @@ const FinancialFilter = (props) => {
       setPrices(null);
       console.log("modality", modality);
     }
-  }, [modality, course, currentLocation]);
+    setFirstLoadData(true);
+  }, []);
+
+  const search = () => {
+    const currentPlans = getCurrentPlans();
+    if (modality && course && currentLocation && currentPlans) {
+      setPrices(
+        currentPlans.filter((plan) =>
+          plan.academies.includes(currentLocation.fields.file_name.slice(0, -3))
+        )
+      );
+    } else {
+      setPrices(null);
+      console.log("modality", modality);
+    }
+  };
 
   if (!currentLocation)
     return (
@@ -189,44 +244,50 @@ const FinancialFilter = (props) => {
       </Paragraph>
     );
 
-  if (course === false && modality === false) {
-    setCourse({ value: "full_stack", label: "Full Stack Developer" });
-    setModality({ value: "part_time", label: "Part Time" });
+  if (firstLoadData) {
+    search();
+    setFirstLoadData(false);
   }
 
   return (
     <Div
-      background={Colors.lightBlue2}
-      margin="0 0 5rem 0"
-      display="block"
+      background="transparent"
+      margin="0 0 0 0"
       github="/location"
+      flexDirection="column"
+      //padding_xxs="0 20px"
+      padding_md="0 80px"
+      padding_lg="0 80px"
+      padding_tablet="0 40px"
     >
-      <GridContainer
-        shadow="0px 0px 16px rgba(0, 0, 0, 0.25)"
-        padding="15px 0"
-        margin="0 10px 3em 10px"
-        margin_tablet="0 5rem 4em 5rem"
+      <Div
+        padding="34px 24px 24px 24px"
+        padding_tablet="22px"
+        margin="0 0 3em 0"
+        margin_tablet="0 0 4em 0"
         containerColumns_tablet={`0fr repeat(12, 1fr) 0fr`}
         containerGridGap="20px"
-        margin_md="0 20% 4em 20%"
+        margin_md="0 0% 4em 0%"
         background={Colors.white}
         height="100%"
-        height_tablet="122px"
-        borderRadius="3px"
+        height_tablet="95px"
+        border="3px solid black"
+        justifyContent="center"
       >
-        <Grid
-          gridTemplateColumns_tablet="repeat(3, 1fr)"
-          display="inline-flex"
-          width="200px"
-          width_tablet="auto"
-          gridGap_tablet="20px"
-          gridGap="8px"
+        <Div
+          gridTemplateColumns_tablet="repeat(4, 1fr)"
+          width_xxs="200px"
+          width_xs="250px"
+          width_sm="320px"
+          width_tablet="100%"
+          gap_tablet="20px"
+          gap="8px"
           justifySelf="center"
           justifySelf_tablet="inherit"
           flexDirection_tablet="row"
           flexDirection="column"
           justifyContent="center"
-          alignItems="center"
+          alignItems_tablet="start"
         >
           {!props.course && (
             <SelectRaw
@@ -234,16 +295,22 @@ const FinancialFilter = (props) => {
               placeholder={props.program}
               value={course}
               onChange={(opt) => setCourse(opt)}
+              style={selectStyle}
+              //display="none"
+              placeholderFloat
             />
           )}
-          {props.modality && (
+          {/* {props.modality && (
             <SelectRaw
               options={modalityArray}
               placeholder={props.modality}
               value={modality}
               onChange={(opt) => setModality(opt)}
+              style={selectStyle}
+              //display="none"
+              placeholderFloat
             />
-          )}
+          )} */}
           {!props.course && (
             <SelectRaw
               options={locations
@@ -272,10 +339,32 @@ const FinancialFilter = (props) => {
                   ).node
                 )
               }
+              style={selectStyle}
+              //display="none"
+              placeholderFloat
             />
           )}
-        </Grid>
-      </GridContainer>
+
+          {props.button_text && (
+            <Div justifyContent="center">
+              <Button
+                background={Colors.black}
+                color={Colors.white}
+                onClick={() => {
+                  search();
+                }}
+                margin_tablet="5px 0 0 0"
+                height_tablet="38px"
+                width="100%"
+                width_tablet="auto"
+                justifyContent="center"
+              >
+                {props.button_text}
+              </Button>
+            </Div>
+          )}
+        </Div>
+      </Div>
 
       {!prices || prices.length === 0 ? (
         <>
@@ -285,126 +374,135 @@ const FinancialFilter = (props) => {
           </Paragraph>
         </>
       ) : (
-        <GridContainer
-          padding="4.5rem 16px"
-          containerColumns_md={`2fr repeat(12, 1fr) 2fr`}
-          containerColumns_tablet={`0fr repeat(12, 1fr) 0fr`}
-          background={Colors.white}
-          columns_tablet="1"
-          gridGap_tablet="0"
-          padding_tablet="4.5rem 16px"
-        >
-          {prices && Array.isArray(prices) && (
-            <PricingCard color="black" background={Colors.white} data={{}}>
-              {Array.isArray(prices) &&
-                prices.map((label, index) => (
-                  <GridContainer
-                    key={index}
-                    containerColumns_tablet="0fr repeat(12, 1fr) 0fr"
-                    margin="0 0 20px 0"
-                    shadow={Colors.shadow}
-                    shadow_tablet={Colors.shadow}
-                    padding="20px"
-                    height="100%"
-                    minHeight_tablet="122px"
-                    columns_tablet="4"
-                  >
-                    <Div
-                      margin="10px 0px"
-                      justifyContent="center"
-                      placeItems="center"
-                      display="flex"
-                    >
-                      {label.icons?.map((logo) => (
-                        <img
-                          style={{ margin: "auto 5px", height: "25px" }}
-                          src={logo}
-                        />
-                      ))}
-                    </Div>
-                    <Div
-                      margin="10px 0px"
-                      justifyContent="center"
-                      placeItems="center"
-                      flexDirection="column"
-                      display="flex"
-                    >
-                      <Paragraph
-                        fontWeight="700"
-                        lineHeight="36px"
-                        fontSize="30px"
-                      >
-                        {label.scholarship}
-                      </Paragraph>
-                      <H3
-                        type="h3"
-                        fontWeight="400"
-                        color="#A4A4A4"
-                        width="fit-content"
-                        padding="0 5px"
-                        fontSize="15px"
-                        lineHeight="24px"
-                        letterSpacing="0.05em"
-                      >
-                        {label.payment_time}
-                      </H3>
-                    </Div>
-                    <Div
-                      margin="10px 0px"
-                      justifyContent="center"
-                      placeItems="center"
-                      flexDirection="column"
-                      display="flex"
-                    >
-                      <Paragraph
-                        fontWeight="700"
-                        lineHeight="36px"
-                        fontSize="30px"
-                      >
-                        {label.price}
-                      </Paragraph>
-                      <H3
-                        type="h3"
-                        fontWeight="400"
-                        color="#A4A4A4"
-                        width="fit-content"
-                        padding="0 5px"
-                        fontSize="15px"
-                        lineHeight="24px"
-                        letterSpacing="0.05em"
-                      >
-                        {label.payment_time}
-                      </H3>
-                    </Div>
-                    <Div
-                      margin="10px 0px"
-                      justifyContent="center"
-                      placeItems="center"
-                      image="no"
-                    >
-                      <Link to={`/${props.lang}/apply?utm_plan=${label.slug}`}>
-                        <Button
-                          variant="full"
-                          height="40px"
-                          color={Colors.blue}
-                          textColor={Colors.white}
-                          fontSize="16px"
-                          onClick={() =>
-                            setSession({
-                              ...session,
-                              utm: { ...session.utm, utm_plan: label.slug },
-                            })
-                          }
-                        >
-                          {info?.apply_button?.label || "APPLY"}
-                        </Button>
-                      </Link>
-                    </Div>
-                  </GridContainer>
-                ))}
-            </PricingCard>
-          )}
-        </GridContainer>
+        <></>
+        // <GridContainer
+        //   padding="0"
+        //   //containerColumns_md={`2fr repeat(12, 1fr) 2fr`}
+        //   containerColumns_tablet={`0fr repeat(12, 1fr) 0fr`}
+        //   background="transparent"
+        //   columns_tablet="1"
+        //   containerGridGap="0px"
+        //   padding_tablet={props.padding_tablet || "4.5rem 16px"}
+        // >
+        //   {prices && Array.isArray(prices) && (
+        //     <PricingCard color="black" background={Colors.white} data={{}}>
+        //       {Array.isArray(prices) &&
+        //         prices.map((label, index) => (
+        //           <GridContainer
+        //             key={index}
+        //             containerColumns_tablet="0fr repeat(12, 1fr) 0fr"
+        //             margin="0 0 20px 0"
+        //             shadow={Colors.shadow}
+        //             shadow_tablet={Colors.shadow}
+        //             padding="20px"
+        //             height="100%"
+        //             minHeight_tablet="122px"
+        //             columns_tablet="4"
+        //             width="100%"
+        //           >
+        //             <Div
+        //               margin="10px 0px"
+        //               justifyContent="center"
+        //               placeItems="center"
+        //               display="flex"
+        //               flexWrap="wrap"
+        //               //className="badge-slider hideOverflowX__"
+        //             >
+        //               {label.icons?.map((logo) => (
+        //                 <Img
+        //                   src={logo}
+        //                   alt="4Geeks Academy Icon"
+        //                   backgroundSize="contain"
+        //                   height="56px"
+        //                   minWidth="30px"
+        //                   width="96px"
+        //                   margin="0 5px"
+        //                 />
+        //               ))}
+        //             </Div>
+        //             <Div
+        //               margin="10px 0px"
+        //               justifyContent="center"
+        //               placeItems="center"
+        //               flexDirection="column"
+        //               display="flex"
+        //             >
+        //               <Paragraph
+        //                 fontWeight="700"
+        //                 lineHeight="36px"
+        //                 fontSize="30px"
+        //               >
+        //                 {label.scholarship}
+        //               </Paragraph>
+        //               <H3
+        //                 type="h3"
+        //                 fontWeight="400"
+        //                 color="#A4A4A4"
+        //                 width="fit-content"
+        //                 padding="0 5px"
+        //                 fontSize="15px"
+        //                 lineHeight="24px"
+        //                 letterSpacing="0.05em"
+        //               >
+        //                 {label.payment_time}
+        //               </H3>
+        //             </Div>
+        //             <Div
+        //               margin="10px 0px"
+        //               justifyContent="center"
+        //               placeItems="center"
+        //               flexDirection="column"
+        //               display="flex"
+        //             >
+        //               <Paragraph
+        //                 fontWeight="700"
+        //                 lineHeight="36px"
+        //                 fontSize="30px"
+        //               >
+        //                 {label.price}
+        //               </Paragraph>
+        //               <H3
+        //                 type="h3"
+        //                 fontWeight="400"
+        //                 color="#A4A4A4"
+        //                 width="fit-content"
+        //                 padding="0 5px"
+        //                 fontSize="15px"
+        //                 lineHeight="24px"
+        //                 letterSpacing="0.05em"
+        //               >
+        //                 {label.payment_time}
+        //               </H3>
+        //             </Div>
+        //             <Div
+        //               margin="10px 0px"
+        //               justifyContent="center"
+        //               placeItems="center"
+        //               image="no"
+        //             >
+        //               <Link to={`/${props.lang}/${props.lang == "us" ? "apply" : "aplica"}?utm_plan=${label.slug}`}>
+        //                 <Button
+        //                   variant="full"
+        //                   height="40px"
+        //                   color={Colors.blue}
+        //                   textColor={Colors.white}
+        //                   fontSize="16px"
+        //                   onClick={() =>
+        //                     setSession({
+        //                       ...session,
+        //                       utm: { ...session.utm, utm_plan: label.slug },
+        //                     })
+        //                   }
+        //                 >
+        //                   {info?.apply_button?.label || "APPLY"}
+        //                 </Button>
+        //               </Link>
+        //             </Div>
+        //           </GridContainer>
+        //         ))}
+        //     </PricingCard>
+        //   )}
+        // </GridContainer>
       )}
     </Div>
   );
