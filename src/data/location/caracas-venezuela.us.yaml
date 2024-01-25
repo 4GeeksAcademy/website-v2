@@ -82,6 +82,7 @@ images_box:
       alt: "Remote-Coding-Bootcamp"
     - path: "../../../static/images/locations/caracas-graduates.png"
       alt: "4Geeeks Caracas graduates"
+  layout_horizontal: true #false == "mode mosaic"
 
 two_columns:
   proportions: [6, 6]
@@ -134,11 +135,11 @@ socials:
     icon: "facebook"
     link: "https://www.facebook.com/4geeksacademyve"
   - name: "Twitter"
-    icon: "twitter"
-    link: "https://www.twitter.com/4geeksacademyve"
+    icon: "x-logo"
+    link: "https://twitter.com/4GeeksAcademy"
   - name: "Instagram"
     icon: "instagram"
-    link: "https://www.instagram.com/4geeksacademyve"
+    link: "https://www.instagram.com/4geeksacademylatam/"
 courses:
   - "Full-Time"
   - "Part-Time"

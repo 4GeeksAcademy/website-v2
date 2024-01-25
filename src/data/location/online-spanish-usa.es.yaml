@@ -1,40 +1,39 @@
 meta_info:
-  slug: "bootcamp-programacion-hamburgo-alemania"
-  title: "Bootcamp de Programación en Hamburgo, Alemania"
-  description: "Descubre todos los bootcamps de programación online impartidos por 4Geeks Academy en Hamburgo, Alemania. ¡Regístrate hoy!"
-  position: 101
-  image: "/images/og-preview/hamburg-germany.es.png"
+  slug: "online-usa-en-espanol"
+  title: "Bootcamps de Programación En Español"
+  description: "El primer bootcamp de programación en español en Estados Unidos. ¡Regístrate hoy!"
+  position: 102
+  image: "/images/og-preview/online.es.png"
   keywords: "null"
-  redirects: ["/es/location/hamburg-germany"]
-  region: "europe"
-  dialCode: "49"
+  redirects: []
+  region: "usa-canada"
   related_clusters: ["desarrollador-full-stack"]
 
-seo_title: "Coding Bootcamp Hamburgo, Alemania"
+seo_title: "Coding Bootcamp En Español"
 header:
-  tagline: "Aprende a programar en Hamburgo desde casa"
+  tagline: "Aprende a programar en Español"
   sub_header: "Todos los programas son enseñados "
-  sub_header_highlighted: "Online, Híbrida o En Persona."
-  paragraph: "Aprender a programar online es difcíl, únete a la comunidad de programadores más grande del mundo y recibe soporte para aprender y para conseguir trabajo de por vida"
-  image: "../../../static/images/locations/hamburg-header.png"
+  sub_header_highlighted: "Online desde Estados Unidos"
+  paragraph: "Aprender a programar es difcíl, únete a la comunidad de programadores más grande del mundo y recibe soporte para aprender y para conseguir trabajo de por vida"
+  image: "../../../static/images/locations/online-home.png"
   alt: ""
 button_header:
   button_text: Ver Programas
   button_link: "#programs"
 button:
   syllabus_button_text: "DESCARGAR CURRÍCULO" # <-- this will show everywhere in the website
-  apply_button_text: "APLICA YA" # <-- this will show everywhere in the website
+  apply_button_text: "POSTÚLATE YA" # <-- this will show everywhere in the website
 
   syllabus_submit_text: "DESCARGAR"
   apply_button_link: "/aplica"
   cohort_more_details_text: "DETALLES"
 
 custom_bar:
-  active: true
-  message: 4Geeks ofrece becas, ayudas al estudio y financiación a tu medida. <a class="customBar-link" href="/es/aplica" rel="noopener noreferrer nofollow">¡Solicita tu plaza!</a>
-#   button: 
-#     label: "Read More"
-#     path: "#" #string (can be inline path using #, relative path or absolute path)
+  active: false
+  message: 'Desde US$90 al mes. ¡O paga cuando obtengas un trabajo! <a class="customBar-link" href="/es/aplica">Postúlate</a>'
+  button: 
+    label: "Read More"
+    path: "#" #string (can be inline path using #, relative path or absolute path)
 
 badges:
   title: ""
@@ -46,17 +45,17 @@ badges:
     4Geeks Academy ha sido reconocida como uno de los 10 mejores bootcamps de codificación en los Estados Unidos según Newsweek. 
     Una comunidad construida para desarrolladores.
 news:
-  title: "4Geeks Academy Hamburgo en las noticias..."
+  title: "4Geeks Academy Online en las noticias..."
 upcoming:
   no_dates_message: "Actualmente no hay próximas fechas para este campus"
   actionMessage: "Avisenme fechas disponibles"
 
 info_box:
-  heading: "Encuéntranos en Hamburgo"
-  address: "Actualmente sólo estamos enseñando remotamente en Hamburgo"
+  heading: "Encuéntranos Online"
+  address: "4201 Main St Ste 200, Houston, TX 77002"
   contact_heading: "Contacts"
-  phone: "+34 910 86 69 83"
-  email: "europe@4GeeksAcademy.com"
+  phone: "(786) 416-6640"
+  email: "info@4GeeksAcademy.com"
   image: "../../../static/images/locations/remote.jpeg"
   alt: ""
 
@@ -74,7 +73,6 @@ images_box:
       alt: "4Geeeks miami day"
     - path: "../../../static/images/locations/miami-old2.jpg"
       alt: "4Geeeks miami lab"
-  layout_horizontal: true #false == "mode mosaic"
 
 two_columns:
   proportions: [6, 6]
@@ -84,10 +82,10 @@ two_columns:
     shadow: true  
   video: "https://www.youtube.com/watch?v=TCHASxvkhpI"
   heading:
-    text: "Tu Viaje con 4Geeks Academy desde Hamburgo"
+    text: "Tu Viaje con 4Geeks Academy en Línea"
     font_size: ["30px", "30px", "30px", "30px", "30px"]
   sub_heading:
-    text: "Desarrolla tus Habilidades en Tecnología desde Hamburgo"
+    text: "Desarrolla tus Habilidades en Tecnología desde Cualquier Lugar"
     font_size: ["18px", "18px", "22px", "22px", "22px"]
   button:
     text: "¡Únete ahora!"
@@ -99,36 +97,32 @@ two_columns:
     - text: "Cursos interactivos enfocados en habilidades técnicas esenciales para el mundo digital actual"
     - text: "Acceso a profesores experimentados y una comunidad colaborativa de aprendizaje"
     - text: "Preparación para desafíos del mundo real y oportunidades laborales en tecnología"
-    
-active_campaign_location_slug: "hamburg-germany"
-breathecode_location_slug: "hamburg-germany"
-gdpr_compliant: true # do we need to ask for permision?
+
+active_campaign_location_slug: "online-spanish-usa"
+breathecode_location_slug: "online-spanish-usa"
+gdpr_compliant: false # do we need to ask for permision?
 in_person_available: false # important to accept in-person applicants
 
-city: "Hamburg"
-name: "Hamburgo, Alemania"
-latitude: "53.552440"
-longitude: "9.947820"
-address: "" # Schomburgstraße 50, 22767 Hamburg, Alemania
-zip_code: ""
-phone: "+34 910 86 69 83"
-state: "Hamburgo"
-country: "Alemania"
-country_shortname: "de"
+city: "Houston"
+name: "Resto de América en Español"
+latitude: "10000.760159"
+longitude: "-800000.200155"
+address: "4201 Main St Ste 200"
+zip_code: "77002"
+phone: "+1 (786) 416-6640"
+state: "Texas"
+country: "USA"
 
 socials:
   - name: "Facebook"
     icon: "facebook"
     link: "https://www.facebook.com/4geeksacademy"
   - name: "Twitter"
-    icon: "x-logo"
-    link: "https://twitter.com/4GeeksAcademy"
+    icon: "twitter"
+    link: "https://www.twitter.com/4geeksacademy"
   - name: "Instagram"
     icon: "instagram"
-    link: "https://www.instagram.com/4geeksacademy/"
-  - name: "Linkedin"
-    icon: "linkedin"
-    link: "https://www.linkedin.com/school/4geeksacademyes/"
+    link: "https://www.instagram.com/4geeksacademy"
 
 courses:
   - "Full-Time"
@@ -140,5 +134,5 @@ location_office_image: ""
 location_office_image2: ""
 location_office_image3: ""
 should_know: ""
-value: "Hamburg"
+value: "Houston"
 defaultLanguage: "us" # All lead marketing communications will arrive on this language
