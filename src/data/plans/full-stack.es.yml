@@ -187,7 +187,7 @@ part_time:
       - "Ahorras $4000 USD. Gracias al Clark University TechBoost Fund"
       - "Tienes que estar desempleado o subempleado, y contar con un permiso de trabajo en US válido."
     icons: 
-      - "/static/images/clarkuniversity.png"
+      - "/images/clarkuniversity.png"
 
   - slug: 'usa-clark-scholarship-pt-miami'
     academies: ['downtown-miami', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa']
@@ -199,7 +199,7 @@ part_time:
       - "Ahorras $4000 USD. Gracias al Clark University TechBoost Fund"
       - "Tienes que estar desempleado o subempleado, y contar con un permiso de trabajo en US válido."
     icons: 
-      - "/static/images/clarkuniversity.png"      
+      - "/images/clarkuniversity.png"      
 
   - slug: 'usa-financed-pt'
     academies: ['downtown-miami', 'orlando', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa']
@@ -236,7 +236,7 @@ part_time:
       - "Con $400 p/ semana en gastos de vida"
       - "8.5% de tu salario hasta el pago completo, sólo si consigues un trabajo en tech."
     icons: 
-      - "/static/images/miashare.png"      
+      - "/images/miashare.png"      
 
   - slug: 'spain-scholarships-fs-pt'
     academies: ['barcelona-spain', 'madrid-spain', 'malaga-spain', 'valencia-spain']
@@ -487,7 +487,7 @@ part_time:
       - "Ten una entrevista con Flevo para la rápida aprobación de tu financiamiento"
       - "Los precios variarán de acuerdo con la duración de tu período de pago"    
     icons: 
-      - "/images/partner/flevo.png" 
+      - "/images/partner/flevo-new.png" 
 
   - slug: 'venezuela-laptop-pt'
     academies: ['caracas-venezuela']

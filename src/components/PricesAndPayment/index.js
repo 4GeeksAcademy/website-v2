@@ -148,7 +148,7 @@ const PricingCard = ({
                   backgroundSize="contain"
                   height="17px"
                   minWidth="30px"
-                  width="auto"
+                  width="50px"
                   margin="0 5px"
                 />
               ))}
@@ -341,10 +341,14 @@ const PricesAndPayments = (props) => {
             pricing_error_contact
             pricing_error
             get_notified
+            contact_carrer_advisor
+            contact_link
             top_label
+            top_label_2
             plans_title
             plan_details
             select
+            select_2
             job_guarantee {
               title
               description
@@ -411,13 +415,14 @@ const PricesAndPayments = (props) => {
   );
   if (info) info = info.node;
 
-  const getCurrentPlans = () => {
-    return data.allPlansYaml.edges
-      .filter(({ node }) => node.fields.lang === props.lang)
-      .find((p) =>
-        p.node.fields.file_name.includes(props.courseType?.replaceAll("_", "-"))
-      )?.node[props.programType];
-  };
+  function phoneNumberClean(phoneNumber) {
+    if (phoneNumber) {
+      const arr = phoneNumber.split("");
+      const numberClean = arr.filter((elem) => elem.match(/[0-9]/));
+      return numberClean.join("");
+    }
+    return phoneNumber;
+  }
 
   const { session, setSession } = useContext(SessionContext);
   const [currentLocation, setCurrentLocation] = useState(false);
@@ -427,10 +432,24 @@ const PricesAndPayments = (props) => {
   const [locations, setLocations] = useState(false);
   const [selectedPlan, setSelectedPlan] = useState(null);
   const [jobGuarantee, setJobGuarantee] = useState(false);
-  const [currentPlans] = useState(getCurrentPlans());
+  //const [currentPlans] = useState();
   const [availablePlans, setAvailablePlans] = useState([]);
+  const [courseArrayFiltered, setCourseArrayFiltered] = useState([]);
+  // const courseArrayFiltered = []
+
+  const getCurrentPlans = () => {
+    return data.allPlansYaml.edges
+      .filter(({ node }) => node.fields.lang === props.lang)
+      .find((p) =>
+        p.node.fields.file_name.includes(course?.value?.replaceAll("_", "-"))
+      )?.node[props.programType];
+  };
+
+  const optionFilter = () => {};
 
   const getAvailablePlans = () => {
+    const currentPlans = getCurrentPlans();
+
     if (currentPlans && currentLocation) {
       return currentPlans
         .filter((plan) =>
@@ -470,16 +489,6 @@ const PricesAndPayments = (props) => {
     }
   }, [session, props.locations]);
 
-  useEffect(() => {
-    setJobGuarantee(false);
-  }, [currentLocation]);
-
-  useEffect(() => {
-    const filteredPlans = getAvailablePlans();
-    setAvailablePlans(filteredPlans);
-    setSelectedPlan(filteredPlans[0]?.slug);
-  }, [jobGuarantee, currentLocation]);
-
   // sync property course
   useEffect(
     () => (
@@ -488,6 +497,16 @@ const PricesAndPayments = (props) => {
     ),
     [props.courseType, props.programType]
   );
+
+  useEffect(() => {
+    setJobGuarantee(false);
+  }, [currentLocation]);
+
+  useEffect(() => {
+    const filteredPlans = getAvailablePlans();
+    setAvailablePlans(filteredPlans);
+    setSelectedPlan(filteredPlans[0]?.slug);
+  }, [jobGuarantee, currentLocation, course]);
 
   const city = session && session.location ? session.location.city : [];
 
@@ -499,6 +518,32 @@ const PricesAndPayments = (props) => {
   }, [findCity]);
 
   const selected = availablePlans.find((plan) => plan.slug === selectedPlan);
+
+  //shows the available plans according to the selected location
+  useEffect(() => {
+    const courseFilteredAux = [];
+
+    if (currentLocation) {
+      courseArray.map((course) => {
+        const currentPlans = data.allPlansYaml.edges
+          .filter(({ node }) => node.fields.lang === props.lang)
+          .find((p) =>
+            p.node.fields.file_name.includes(
+              course?.value?.replaceAll("_", "-")
+            )
+          )?.node[props.programType];
+
+        const availablePlans = currentPlans.filter((plan) =>
+          plan.academies.includes(currentLocation.fields.file_name.slice(0, -3))
+        );
+
+        if (availablePlans.length > 0) {
+          courseFilteredAux.push(course);
+        }
+      });
+      setCourseArrayFiltered(courseFilteredAux);
+    }
+  }, [currentLocation]);
 
   return (
     <Div
@@ -522,19 +567,23 @@ const PricesAndPayments = (props) => {
         width="100%"
         margin="0 0 20px 0"
       >
-        {info.plans_title}
+        {info?.plans_title}
       </H2>
       <Grid
-        gridTemplateColumns_lg="3fr repeat(23,1fr) 3fr"
+        gridTemplateColumns_lg={
+          props.financial ? "repeat(26,1fr)" : "3fr repeat(23,1fr) 3fr"
+        }
         gridTemplateColumns_md="1fr repeat(14,1fr) 1fr"
-        gridTemplateColumns_tablet="1fr repeat(13,1fr) 1fr"
-        gridGap="0"
+        gridTemplateColumns_tablet={
+          props.financial ? "1fr repeat(14,1fr) 1fr" : "1fr repeat(13,1fr) 1fr"
+        }
+        gridGap="8px"
         margin_tablet="20px 0 0 0"
       >
         <Div
           gridColumn_md="2/9"
-          gridColumn_lg="2/16"
-          gridColumn_tablet="2/10"
+          gridColumn_lg={props.financial ? "2/14" : "2/16"}
+          gridColumn_tablet={props.financial ? "1/9" : "2/10"}
           alignItems="center"
         >
           <H3
@@ -548,21 +597,22 @@ const PricesAndPayments = (props) => {
             color={Colors.black}
             padding="0 0 16px 0"
           >
-            {info.select}
+            {props.financial ? info.select_2 : info.select}
           </H3>
         </Div>
         {/* SELECT COUNTRY */}
         <Div
-          gridColumn_lg="16/25"
-          gridColumn_md="11/16"
-          gridColumn_tablet="10/15"
-          justifyContent_xs="center"
+          gridColumn_lg={props.financial ? "14/26" : "16/25"}
+          gridColumn_md={props.financial ? "9/16" : "10/16"}
+          gridColumn_tablet={props.financial ? "9/16" : "10/15"}
+          justifyContent_xxs="center"
           justifyContent_tablet="start"
         >
           <Div
             flexDirection_tablet="row"
             flexDirection="column"
             alignItems="center"
+            width="100%"
           >
             {props.course && (
               <Select
@@ -579,14 +629,18 @@ const PricesAndPayments = (props) => {
             &nbsp;
             {course && (
               <Div
-                width_tablet="220px"
-                width_md="320px"
+                flexDirection_tablet="row"
+                flexDirection="column"
+                width_tablet="100%"
+                gap="20px"
+                // width_md="320px"
                 width_xs="320px"
                 width_xxs="280px"
               >
                 <SelectRaw
+                  placeholderFloat
                   bgColor={Colors.white}
-                  //topLabel="Location"
+                  single={props.financial ? false : true}
                   options={locations.map((l) => ({
                     label: l.node.name,
                     value: l.node.active_campaign_location_slug,
@@ -604,7 +658,90 @@ const PricesAndPayments = (props) => {
                       ).node
                     )
                   }
+                  style={{
+                    input: (styles) => ({
+                      ...styles,
+                      width: "100%",
+                      margin: "5px 0px",
+                    }),
+                    control: (styles, state) => ({
+                      ...styles,
+                      fontFamily: "Lato, sans-serif",
+                      background: "#ffffff",
+                      border: "1px solid #000",
+                      boxShadow: "none",
+                      marginBottom: "0px",
+                      marginTop: "0px",
+                      width: "100%",
+                      fontSize: "15px",
+                      fontWeight: "400",
+                      fontStyle: "italic",
+                      color: "#000",
+                      lineHeight: "22px",
+                      "&:hover": { boxShadow: "0 0 0 1px black" },
+                      "&:focus": {
+                        boxShadow: "0 0 0 1px black",
+                        border: "1px solid #000000",
+                      },
+                    }),
+                    option: (
+                      styles,
+                      { data, isDisabled, isFocused, isSelected }
+                    ) => {
+                      return {
+                        ...styles,
+                        fontFamily: "Lato, sans-serif",
+                      };
+                    },
+                  }}
                 />
+                {props.financial && (
+                  <SelectRaw
+                    placeholderFloat
+                    bgColor={Colors.white}
+                    single={props.financial ? false : true}
+                    options={currentLocation && courseArrayFiltered}
+                    placeholder={info.top_label_2}
+                    value={course}
+                    onChange={(opt) => setCourse(opt)}
+                    style={{
+                      input: (styles) => ({
+                        ...styles,
+                        width: "100%",
+                        margin: "5px 0px",
+                      }),
+                      control: (styles, state) => ({
+                        ...styles,
+                        fontFamily: "Lato, sans-serif",
+                        background: "#ffffff",
+                        border: "1px solid #000",
+                        boxShadow: "none",
+                        marginBottom: "0px",
+                        marginTop: "0px",
+                        width: "100%",
+                        fontSize: "15px",
+                        fontWeight: "400",
+                        fontStyle: "italic",
+                        color: "#000",
+                        lineHeight: "22px",
+                        "&:hover": { boxShadow: "0 0 0 1px black" },
+                        "&:focus": {
+                          boxShadow: "0 0 0 1px black",
+                          border: "1px solid #000000",
+                        },
+                      }),
+                      option: (
+                        styles,
+                        { data, isDisabled, isFocused, isSelected }
+                      ) => {
+                        return {
+                          ...styles,
+                          fontFamily: "Lato, sans-serif",
+                        };
+                      },
+                    }}
+                  />
+                )}
               </Div>
             )}
           </Div>
@@ -688,7 +825,7 @@ const PricesAndPayments = (props) => {
                   display_tablet="block"
                   background="#F9F9F9"
                   border="1px solid #EBEBEB"
-                  padding="24px 15px 0 15px"
+                  padding="24px 15px"
                   margin_tablet="0 8px 0 0"
                   gridColumn_tablet="1/11"
                   // gridColumn_md="2/13"
@@ -835,7 +972,18 @@ const PricesAndPayments = (props) => {
         </Div>
       </GridContainer>
       <Paragraph margin_xxs="15px 0" margin_tablet="0 0 0 0">
-        {info.get_notified}
+        {info.get_notified + " "}
+        <Link
+          to={
+            session && session?.location && session?.location.phone
+              ? `https://wa.me/${phoneNumberClean(session?.location?.phone)}`
+              : session?.email
+              ? `mailto:${session?.email}`
+              : `${info?.contact_link}`
+          }
+        >
+          {info.contact_carrer_advisor}
+        </Link>
       </Paragraph>
       {/* <Div background={Colors.lightYellow} height="511px" width="100%" style={{position: "absolute", height: "511px"}}>f</Div> */}
     </Div>
