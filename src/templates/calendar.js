@@ -36,7 +36,7 @@ const locations = {
     "santiago-chile": "/us/coding-campus/coding-bootcamp-santiago",
     "downtown-miami": "/us/coding-campus/coding-bootcamp-miami",
     "madrid-spain": "/us/coding-campus/coding-bootcamp-madrid",
-    "online": "/us/coding-campus/online-coding-bootcamp",
+    online: "/us/coding-campus/online-coding-bootcamp",
     "caracas-venezuela": "/us/coding-campus/coding-bootcamp-caracas",
     "costa-rica": "/us/coding-campus/coding-bootcamp-costa-rica",
   },
@@ -44,7 +44,7 @@ const locations = {
     "downtown-miami": "/es/coding-campus/bootcamp-programacion-miami",
     "santiago-chile": "/es/coding-campus/bootcamp-programacion-santiago",
     "madrid-spain": "/es/coding-campus/bootcamp-programacion-madrid",
-    "online": "/es/coding-campus/online-bootcamp-programacion",
+    online: "/es/coding-campus/online-bootcamp-programacion",
     "caracas-venezuela": "/es/coding-campus/bootcamp-programacion-caracas",
     "costa-rica": "/es/coding-campus/bootcamp-programacion-costa-rica",
   },
@@ -383,8 +383,8 @@ const Calendar = (props) => {
                       : datas[filterType.value].all;
                   // if no cohorts on location, try to include online
                   if (filtered.length === 0)
-                    filtered = datas[filterType.value].all.filter(
-                      (elm) => elm.academy.slug.includes("online")
+                    filtered = datas[filterType.value].all.filter((elm) =>
+                      elm.academy.slug.includes("online")
                     );
 
                   setData({

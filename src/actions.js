@@ -389,7 +389,6 @@ export const getCohorts = async (_query = {}) => {
     .filter((key) => query[key] && query[key] != undefined)
     .map((key) => key + "=" + query[key])
     .join("&");
-  console.log("query", query);
   var resp = (resp = await fetch(
     `https://breathecode.herokuapp.com/v1/admissions/cohort/all?${query}`
   ));

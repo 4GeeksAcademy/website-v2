@@ -82,6 +82,7 @@ images_box:
       alt: "4Geeeks España lab"
     - path: "../../../static/images/locations/madrid-2.png"
       alt: "4Geeeks España lab"
+  layout_horizontal: true #false == "mode mosaic"
 
 two_columns:
   proportions: [6, 6]
@@ -127,14 +128,14 @@ socials:
     icon: "facebook"
     link: "https://www.facebook.com/4geeksacademyes"
   - name: "Twitter"
-    icon: "twitter"
+    icon: "x-logo"
     link: "https://www.twitter.com/4geeksacademyes"
   - name: "Instagram"
     icon: "instagram"
     link: "https://www.instagram.com/4geeksacademyes"
-  - name: "Meetup"
-    icon: "meetup"
-    link: "https://www.meetup.com/4geeks-academy-madrid"
+  - name: "Linkedin"
+    icon: "linkedin"
+    link: "https://www.linkedin.com/school/4geeksacademy/"
 courses:
   - "Full-Time"
   - "Part-Time"
