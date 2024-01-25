@@ -409,11 +409,11 @@ const PricesAndPayments = (props) => {
   const { session, setSession } = useContext(SessionContext);
   const [currentLocation, setCurrentLocation] = useState(false);
   const [course, setCourse] = useState(false);
-  const [modality, setModality] = useState(false);
   const [buttonText, setButtonText] = useState(null);
-  const [locations, setLocations] = useState(false);
+  const [locations, setLocations] = useState([]);
   const [selectedPlan, setSelectedPlan] = useState(null);
   const [jobGuarantee, setJobGuarantee] = useState(false);
+  const [schedule, setSchedule] = useState("part_time");
   //const [currentPlans] = useState();
   const [availablePlans, setAvailablePlans] = useState([]);
   const [courseArrayFiltered, setCourseArrayFiltered] = useState([]);
@@ -424,21 +424,19 @@ const PricesAndPayments = (props) => {
       .filter(({ node }) => node.fields.lang === props.lang)
       .find((p) =>
         p.node.fields.file_name.includes(course?.value?.replaceAll("_", "-"))
-      )?.node[props.programType];
+      )?.node[schedule];
   };
 
-  const getPrograms = () => {
-    return props.programs.filter(
-      ({ node }) =>
-        !["unlisted", "hidden"].includes(node.meta_info.visibility) &&
-        node.meta_info.show_in_apply
-    )
-    .map(({ node }) => ({
-      label: node.apply_form.label,
-      value: node.meta_info.bc_slug,
-    }));
-  }
-  const programs = !Array.isArray(props.programs) ? [] : getPrograms();
+  const programs = !Array.isArray(props.programs) ? [] : props.programs
+  .filter(
+    ({ node }) =>
+      !["unlisted", "hidden"].includes(node.meta_info.visibility) &&
+      node.meta_info.show_in_apply
+  )
+  .map(({ node }) => ({
+    label: node.apply_form.label,
+    value: node.meta_info.bc_slug,
+  }));
 
   const getAvailablePlans = () => {
     const currentPlans = getCurrentPlans();
@@ -484,11 +482,11 @@ const PricesAndPayments = (props) => {
 
   // sync property course
   useEffect(
-    () => (
-      setCourse(programs.find((c) => c.value === props.courseType)),
-      setModality(modalityArray.find((d) => d.value === props.programType))
-    ),
-    [props.courseType, props.programType]
+    () => {
+      setCourse(programs.find((c) => c.value === props.defaultCourse))
+      setSchedule(props.defaultSchedule || "part_time")
+    },
+    [props.defaultCourse, props.defaultSchedule]
   );
 
   useEffect(() => {
@@ -518,13 +516,15 @@ const PricesAndPayments = (props) => {
 
     if (currentLocation) {
       programs.map((course) => {
-        const currentPlans = data.allPlansYaml.edges
+        let currentPlans = data.allPlansYaml.edges
           .filter(({ node }) => node.fields.lang === props.lang)
           .find((p) =>
             p.node.fields.file_name.includes(
               course?.value?.replaceAll("_", "-")
             )
-          )?.node[props.programType];
+          );
+        
+        currentPlans = currentPlans.node[schedule];
 
         const availablePlans = currentPlans.filter((plan) =>
           plan.academies.includes(currentLocation.fields.file_name.slice(0, -3))
@@ -538,7 +538,7 @@ const PricesAndPayments = (props) => {
     }
   }, [currentLocation]);
 
-    console.log("course", course, props.course)
+  console.log("course", course)
   return (
     <Div
       id="prices_and_payment"
@@ -608,20 +608,6 @@ const PricesAndPayments = (props) => {
             alignItems="center"
             width="100%"
           >
-            {props.course && (
-              <Select
-                top="40px"
-                left="20px"
-                width="fit-content"
-                topLabel="Location"
-                options={getPrograms()}
-                openLabel={course ? course.label : props.openedLabel}
-                closeLabel={course ? course.label : props.closedLabel}
-                onSelect={(opt) => setCourse(opt)}
-              />
-            )}
-            &nbsp;
-            {course && (
               <Div
                 flexDirection_tablet="row"
                 flexDirection="column"
@@ -737,7 +723,6 @@ const PricesAndPayments = (props) => {
                   />
                 )}
               </Div>
-            )}
           </Div>
         </Div>
       </Grid>

@@ -32,8 +32,7 @@ const Financial = (props) => {
   }
 
   const ymlTwoColumn = yml?.two_column;
-  const course_type = "full_stack";
-  const program_type = "part_time";
+  const defaultCourse = "full-stack";
 
   return (
     <>
@@ -150,14 +149,13 @@ const Financial = (props) => {
       </Header>
 
       <Iconogram yml={yml.iconogram} />
-
+      <p>asjkasdkjasdkjas</p>
       <PricesAndPayment
         type={pageContext.slug}
         lang={pageContext.lang}
         locations={data.allLocationYaml.edges}
         programs={data.allCourseYaml.edges}
-        programType={program_type}
-        courseType={course_type}
+        defaultCourse={defaultCourse}
         title={yml.prices.heading}
         paragraph={yml.prices.sub_heading}
         financial // Indicates that it is running from financial.js and alters the component structure

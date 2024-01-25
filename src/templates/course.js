@@ -34,8 +34,8 @@ const Program = ({ data, pageContext, yml }) => {
   const hiring = data.allPartnerYaml.edges[0].node;
   const landingHiring = yml.partners;
 
-  const course_type = "full_stack";
-  const program_type = yml.meta_info.slug.includes("full-time")
+  const defaultCourse = "full_stack";
+  const program_schedule = yml.meta_info.slug.includes("full-time")
     ? "full_time"
     : "part_time";
 
@@ -188,12 +188,12 @@ const Program = ({ data, pageContext, yml }) => {
       <ProgramDetails
         details={courseDetails.details}
         lang={pageContext.lang}
-        course={program_type}
+        course={program_schedule}
       />
       <ProgramDetailsMobile
         details={courseDetails.details}
         lang={pageContext.lang}
-        course={program_type}
+        course={program_schedule}
       />
 
       {/* OVERLAPED CREAR EN EL YML*/}
@@ -232,8 +232,8 @@ const Program = ({ data, pageContext, yml }) => {
         type={pageContext.slug}
         lang={pageContext.lang}
         locations={data.allLocationYaml.edges}
-        programType={program_type}
-        courseType={course_type}
+        defaultCourse={defaultCourse}
+        defaultSchedule={program_schedule}
         title={yml.prices.heading}
         paragraph={yml.prices.sub_heading}
       />
