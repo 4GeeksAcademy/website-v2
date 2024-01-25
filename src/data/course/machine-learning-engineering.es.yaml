@@ -63,8 +63,8 @@ badges:
   paragraph: "4Geeks Academy es el lugar donde los desarrolladores crecen y prosperan. Estamos autorizados por el Departamento de Educación de Florida. Elegido como uno de los top 35 <a href='/es/curso-de-programacion-desde-cero'>cursos de programacion</a> del mundo, el mejor de Miami según SwitchUp y de los 10 mejores cursos de programación en los Estados Unidos según Newsweek:"
 
 overlaped:
-  heading: "Python y Javascript"
-  paragraph: "Nuestros programa está basado en el uso de Phyton y Javascript. La razón?En el mercado laboral JavaScript tiene 26 veces más vacantes de trabajo que Ruby on Rails. Python tiene 10 veces más trabajos que node.js. Otras herramientas que también aprenderás a usar en nuestro programa: son GitHub, CSS3, HTML5, Flask, etc."
+  heading: "Aprende a crear modelos predictivos que cambien el mundo"
+  paragraph: "En el bootcamp de Machine Learning de 4Geeks Academy, adquirirás habilidades para utilizar eficazmente las herramientas líderes en este campo, como Python, TensorFlow y Scikit-learn. A lo largo del programa, te sumergirás en el desarrollo de modelos predictivos con aplicaciones prácticas en áreas tan diversas como la detección de fraude, recomendación de productos, clasificación de imágenes y procesamiento del lenguaje natural."
   button:
     text: "Aplicar"
     color: "blue"  
@@ -95,7 +95,7 @@ two_columns:
     items: 
     - text: "There is always a full or partial scholarship open"
     - text: "There is always opportunities for everyone in Miami-Dade County, Broward and Palm Beach"
-    - text: "We have ongoing partnerships with Miami Dade College, Miami Tech Coalition, UWM, The City of Miami, Miami Dade Counti and so manu more."
+    - text: "We have ongoing partnerships with Miami Dade College, Miami Tech Coalition, UWM, The City of Miami, Miami Dade County and many more."
 
 upcoming:
   no_dates_message: "Actualmente no hay próximas fechas para este programa"
