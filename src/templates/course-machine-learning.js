@@ -30,7 +30,7 @@ const Program = ({ data, pageContext, yml }) => {
   const geek = data.allCourseYaml.edges[0].node;
   const [open, setOpen] = React.useState(false);
 
-  const defaultCourse = "machine_learning";
+  const defaultCourse = "machine-learning-engineering";
   const program_schedule = yml.meta_info.slug.includes("full-time")
     ? "full_time"
     : "part_time";

@@ -149,7 +149,6 @@ const Financial = (props) => {
       </Header>
 
       <Iconogram yml={yml.iconogram} />
-      <p>asjkasdkjasdkjas</p>
       <PricesAndPayment
         type={pageContext.slug}
         lang={pageContext.lang}

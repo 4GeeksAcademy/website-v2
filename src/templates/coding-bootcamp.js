@@ -38,7 +38,7 @@ const Program = ({ data, pageContext, yml }) => {
   const [open, setOpen] = React.useState(false);
   const hiring = data.allPartnerYaml.edges[0].node;
 
-  const defaultCourse = "full_stack";
+  const defaultCourse = "full-stack";
 
   const [toggleIndex, setToggleIndex] = useState();
 

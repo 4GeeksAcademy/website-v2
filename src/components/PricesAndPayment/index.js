@@ -420,23 +420,31 @@ const PricesAndPayments = (props) => {
   // const courseArrayFiltered = []
 
   const getCurrentPlans = () => {
-    return data.allPlansYaml.edges
+    let _plans = data.allPlansYaml.edges
       .filter(({ node }) => node.fields.lang === props.lang)
       .find((p) =>
-        p.node.fields.file_name.includes(course?.value?.replaceAll("_", "-"))
-      )?.node[schedule];
+        p.node.fields.file_name.includes(course ? course.value?.replaceAll("_", "-") : props.defaultCourse)
+      );
+    
+    console.log("_plans", _plans)
+    if(_plans) _plans = _plans.node[schedule];
+    else _plans = [];
+
+    return _plans;
   };
 
-  const programs = !Array.isArray(props.programs) ? [] : props.programs
-  .filter(
-    ({ node }) =>
-      !["unlisted", "hidden"].includes(node.meta_info.visibility) &&
-      node.meta_info.show_in_apply
-  )
-  .map(({ node }) => ({
-    label: node.apply_form.label,
-    value: node.meta_info.bc_slug,
-  }));
+  const programs = !Array.isArray(props.programs)
+    ? []
+    : props.programs
+        .filter(
+          ({ node }) =>
+            !["unlisted", "hidden"].includes(node.meta_info.visibility) &&
+            node.meta_info.show_in_apply
+        )
+        .map(({ node }) => ({
+          label: node.apply_form.label,
+          value: node.meta_info.bc_slug,
+        }));
 
   const getAvailablePlans = () => {
     const currentPlans = getCurrentPlans();
@@ -481,13 +489,10 @@ const PricesAndPayments = (props) => {
   }, [session, props.locations]);
 
   // sync property course
-  useEffect(
-    () => {
-      setCourse(programs.find((c) => c.value === props.defaultCourse))
-      setSchedule(props.defaultSchedule || "part_time")
-    },
-    [props.defaultCourse, props.defaultSchedule]
-  );
+  useEffect(() => {
+    setCourse(programs.find((c) => c.value === props.defaultCourse));
+    setSchedule(props.defaultSchedule || "part_time");
+  }, [props.defaultCourse, props.defaultSchedule]);
 
   useEffect(() => {
     setJobGuarantee(false);
@@ -523,7 +528,8 @@ const PricesAndPayments = (props) => {
               course?.value?.replaceAll("_", "-")
             )
           );
-        
+
+          console.log("currentPlans", currentPlans, schedule)
         currentPlans = currentPlans.node[schedule];
 
         const availablePlans = currentPlans.filter((plan) =>
@@ -538,7 +544,7 @@ const PricesAndPayments = (props) => {
     }
   }, [currentLocation]);
 
-  console.log("course", course)
+  console.log("course", course);
   return (
     <Div
       id="prices_and_payment"
@@ -608,36 +614,81 @@ const PricesAndPayments = (props) => {
             alignItems="center"
             width="100%"
           >
-              <Div
-                flexDirection_tablet="row"
-                flexDirection="column"
-                width_tablet="100%"
-                gap="20px"
-                // width_md="320px"
-                width_xs="320px"
-                width_xxs="280px"
-              >
+            <Div
+              flexDirection_tablet="row"
+              flexDirection="column"
+              width_tablet="100%"
+              gap="20px"
+              // width_md="320px"
+              width_xs="320px"
+              width_xxs="280px"
+            >
+              <SelectRaw
+                placeholderFloat
+                bgColor={Colors.white}
+                single={props.financial ? false : true}
+                options={locations.map((l) => ({
+                  label: l.node.name,
+                  value: l.node.active_campaign_location_slug,
+                }))}
+                placeholder={info.top_label}
+                value={{
+                  label: currentLocation?.name,
+                  value: currentLocation?.active_campaign_location_slug,
+                }}
+                onChange={(opt) => {
+                  const current = 
+                    locations.find(
+                      (l) => l.node.active_campaign_location_slug === opt.value
+                    ).node;
+                  setCurrentLocation(current);
+                }}
+                style={{
+                  input: (styles) => ({
+                    ...styles,
+                    width: "100%",
+                    margin: "5px 0px",
+                  }),
+                  control: (styles, state) => ({
+                    ...styles,
+                    fontFamily: "Lato, sans-serif",
+                    background: "#ffffff",
+                    border: "1px solid #000",
+                    boxShadow: "none",
+                    marginBottom: "0px",
+                    marginTop: "0px",
+                    width: "100%",
+                    fontSize: "15px",
+                    fontWeight: "400",
+                    fontStyle: "italic",
+                    color: "#000",
+                    lineHeight: "22px",
+                    "&:hover": { boxShadow: "0 0 0 1px black" },
+                    "&:focus": {
+                      boxShadow: "0 0 0 1px black",
+                      border: "1px solid #000000",
+                    },
+                  }),
+                  option: (
+                    styles,
+                    { data, isDisabled, isFocused, isSelected }
+                  ) => {
+                    return {
+                      ...styles,
+                      fontFamily: "Lato, sans-serif",
+                    };
+                  },
+                }}
+              />
+              {props.financial && (
                 <SelectRaw
                   placeholderFloat
                   bgColor={Colors.white}
                   single={props.financial ? false : true}
-                  options={locations.map((l) => ({
-                    label: l.node.name,
-                    value: l.node.active_campaign_location_slug,
-                  }))}
-                  placeholder={info.top_label}
-                  value={{
-                    label: currentLocation?.name,
-                    value: currentLocation?.active_campaign_location_slug,
-                  }}
-                  onChange={(opt) =>
-                    setCurrentLocation(
-                      locations.find(
-                        (l) =>
-                          l.node.active_campaign_location_slug === opt.value
-                      ).node
-                    )
-                  }
+                  options={currentLocation && courseArrayFiltered}
+                  placeholder={info.top_label_2}
+                  value={course}
+                  onChange={(opt) => setCourse(opt)}
                   style={{
                     input: (styles) => ({
                       ...styles,
@@ -675,54 +726,8 @@ const PricesAndPayments = (props) => {
                     },
                   }}
                 />
-                {props.financial && (
-                  <SelectRaw
-                    placeholderFloat
-                    bgColor={Colors.white}
-                    single={props.financial ? false : true}
-                    options={currentLocation && courseArrayFiltered}
-                    placeholder={info.top_label_2}
-                    value={course}
-                    onChange={(opt) => setCourse(opt)}
-                    style={{
-                      input: (styles) => ({
-                        ...styles,
-                        width: "100%",
-                        margin: "5px 0px",
-                      }),
-                      control: (styles, state) => ({
-                        ...styles,
-                        fontFamily: "Lato, sans-serif",
-                        background: "#ffffff",
-                        border: "1px solid #000",
-                        boxShadow: "none",
-                        marginBottom: "0px",
-                        marginTop: "0px",
-                        width: "100%",
-                        fontSize: "15px",
-                        fontWeight: "400",
-                        fontStyle: "italic",
-                        color: "#000",
-                        lineHeight: "22px",
-                        "&:hover": { boxShadow: "0 0 0 1px black" },
-                        "&:focus": {
-                          boxShadow: "0 0 0 1px black",
-                          border: "1px solid #000000",
-                        },
-                      }),
-                      option: (
-                        styles,
-                        { data, isDisabled, isFocused, isSelected }
-                      ) => {
-                        return {
-                          ...styles,
-                          fontFamily: "Lato, sans-serif",
-                        };
-                      },
-                    }}
-                  />
-                )}
-              </Div>
+              )}
+            </Div>
           </Div>
         </Div>
       </Grid>

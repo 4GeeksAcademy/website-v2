@@ -34,7 +34,7 @@ const Program = ({ data, pageContext, yml }) => {
   const hiring = data.allPartnerYaml.edges[0].node;
   const landingHiring = yml.partners;
 
-  const defaultCourse = "full_stack";
+  const defaultCourse = "full-stack";
   const program_schedule = yml.meta_info.slug.includes("full-time")
     ? "full_time"
     : "part_time";
