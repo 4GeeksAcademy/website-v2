@@ -1,31 +1,14 @@
 meta_info:
-  slug: desarrollador-full-stack
-  title: "Curso de Desarrollador Full Stack en 4Geeks Academy"
-  description: "Conoce los detalles de uno de los cursos full stack más reconocidos a nivel mundial. Convertirte en programador con trabajo Garantizado."
+  slug: full-stack-esp-program
+  title: "Become a Full Stack developer in  Spanish with 4Geeks Academy"
+  description: "src/data/course/full-stack-esp.es.yaml"
   image: "/images/og-preview/full-stack.es.png"
-  bc_slug: "full-stack"
+  bc_slug: "full-stack-esp"
   visibility: "visible"
-  keywords: "Bootcamp, Full Stack, part time"
+  keywords: "Bootcamp en espanol, Full Stack, part time"
   show_in_apply: true
   redirects:
-    [
-      "/part-time",
-      "/programa",
-      "/es/part-time",
-      "/es/course/part-time",
-      "/es/full-stack",
-      "/es/coding-bootcamps/desarrollo-web-full-stack-bootcamp-part-time",
-      "/es/coding-bootcamps/desarrollo-web-full-stack-bootcamp-full-time",
-      "/es/coding-bootcamps/desarrollo-web-full-stack",
-      "/es/coding-bootcamps/full-stack-part-time",
-      "/es/course/desarrollo-web-full-stack",
-      "/es/course/bootcamp-de-desarrollo-web-full-stack-part-time/madrid-espana",
-      "/es/course/bootcamp-de-desarrollo-web-full-stack-part-time",
-      "/es/course/bootcamp-desarrollo-web-full-stack-part-time",
-      "/es/course/introduccion-programacion",
-      "/es/course/desarrollo-web-full-stack-bootcamp-full-time",
-      "/introduccion-programacion-codigo",
-    ]
+    []
   related_clusters: ["desarrollador-full-stack"]
 
 apply_form:
