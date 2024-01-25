@@ -5,7 +5,7 @@ meta_info:
   visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   image: "/images/og-preview/finantial.us.png"
   keywords: "Financing at 4Geeks Academy"
-  redirects: ["/financials"]
+  redirects: ["/financials", "/pricing"]
 
 ## BANNER - HEADER
 seo_title: "Bootcamp Financing"

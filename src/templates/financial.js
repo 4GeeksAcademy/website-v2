@@ -157,7 +157,7 @@ const Financial = (props) => {
         defaultCourse={defaultCourse}
         title={yml.prices.heading}
         paragraph={yml.prices.sub_heading}
-        financial // Indicates that it is running from financial.js and alters the component structure
+        chooseProgram // Allow choosing the program (used in financial.js)
       />
 
       <TwoColumn

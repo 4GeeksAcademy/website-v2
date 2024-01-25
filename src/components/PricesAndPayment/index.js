@@ -423,11 +423,13 @@ const PricesAndPayments = (props) => {
     let _plans = data.allPlansYaml.edges
       .filter(({ node }) => node.fields.lang === props.lang)
       .find((p) =>
-        p.node.fields.file_name.includes(course ? course.value?.replaceAll("_", "-") : props.defaultCourse)
+        p.node.fields.file_name.includes(
+          course ? course.value?.replaceAll("_", "-") : props.defaultCourse
+        )
       );
-    
-    console.log("_plans", _plans)
-    if(_plans) _plans = _plans.node[schedule];
+
+    console.log("_plans", _plans);
+    if (_plans) _plans = _plans.node[schedule];
     else _plans = [];
 
     return _plans;
@@ -529,7 +531,7 @@ const PricesAndPayments = (props) => {
             )
           );
 
-          console.log("currentPlans", currentPlans, schedule)
+        console.log("currentPlans", currentPlans, schedule);
         currentPlans = currentPlans.node[schedule];
 
         const availablePlans = currentPlans.filter((plan) =>
@@ -637,10 +639,9 @@ const PricesAndPayments = (props) => {
                   value: currentLocation?.active_campaign_location_slug,
                 }}
                 onChange={(opt) => {
-                  const current = 
-                    locations.find(
-                      (l) => l.node.active_campaign_location_slug === opt.value
-                    ).node;
+                  const current = locations.find(
+                    (l) => l.node.active_campaign_location_slug === opt.value
+                  ).node;
                   setCurrentLocation(current);
                 }}
                 style={{
