@@ -389,7 +389,6 @@ export const getCohorts = async (_query = {}) => {
     .filter((key) => query[key] && query[key] != undefined)
     .map((key) => key + "=" + query[key])
     .join("&");
-  console.log("query", query);
   var resp = (resp = await fetch(
     `${process.env.GATSBY_BREATHECODE_HOST}/admissions/cohort/all?${query}`
   ));

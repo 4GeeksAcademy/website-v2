@@ -338,7 +338,6 @@ export const StyledBackgroundSection = styled(BackgroundSection)`
   &:before {
     background-size: ${(props) => props.bgSize};
   }
-  ,
   &:after {
     min-height: ${(props) => props.minHeight};
     border-radius: ${(props) => props.borderRadius};

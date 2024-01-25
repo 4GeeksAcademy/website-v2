@@ -82,6 +82,7 @@ images_box:
       alt: "4Geeeks España lab"
     - path: "../../../static/images/locations/madrid-2.png"
       alt: "4Geeeks España lab"
+  layout_horizontal: true #false == "mode mosaic"
 
 two_columns:
   proportions: [6, 6]

@@ -9,6 +9,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { SessionContext } from "../../session";
 import Carousel from "../Carousel";
 import "../../assets/css/carousel.css";
+import MosaicImages from "../MosaicImages";
 
 const Gallery = ({
   heading,
@@ -19,6 +20,7 @@ const Gallery = ({
   heightImage,
   previewArrow,
   nextArrow,
+  horizontal,
 }) => {
   return (
     <>
@@ -30,39 +32,40 @@ const Gallery = ({
         padding_tablet="40px 40px 10px 40px"
         margin_tablet="0 auto 30px auto"
         margin="0 0 36px 0"
-        maxWidth="1366px"
+        maxWidth={"1366px"}
       >
-        <Div
-          alignItems="start"
-          flexDirection="column"
-          flexDirection_tablet="row"
-          padding_lg="0 5%"
-          gap="24px"
-        >
-          <Div width_tablet="30%">
-            <H4
-              fontSize="30px"
-              //textTransform="uppercase"
-              lineHeight="36px"
-              fontWeight="700"
-              textAlign="center"
-              textAlign_tablet="start"
-            >
-              {heading}
-            </H4>
+        {heading && (
+          <Div
+            alignItems="start"
+            flexDirection="column"
+            flexDirection_tablet="row"
+            padding_lg="0 5%"
+            gap="24px"
+          >
+            <Div width_tablet="30%">
+              <H4
+                fontSize="30px"
+                //textTransform="uppercase"
+                lineHeight="36px"
+                fontWeight="700"
+                textAlign="center"
+                textAlign_tablet="start"
+              >
+                {heading}
+              </H4>
+            </Div>
+            <Div width_tablet="70%">
+              <Paragraph
+                fontSize="15px"
+                textAlign="center"
+                textAlign_tablet="start"
+                margin="0 0 50px 0"
+              >
+                {paragraph}
+              </Paragraph>
+            </Div>
           </Div>
-          <Div width_tablet="70%">
-            <Paragraph
-              fontSize="15px"
-              textAlign="center"
-              textAlign_tablet="start"
-              margin="0 0 50px 0"
-            >
-              {paragraph}
-            </Paragraph>
-          </Div>
-        </Div>
-
+        )}
         <Div
           alignItems="center"
           justifyContent="between"
@@ -70,7 +73,52 @@ const Gallery = ({
           display="block"
         >
           <Carousel
-            customSettings={customSettingsCarousel}
+            customSettings={
+              customSettingsCarousel || {
+                dotsClass: "slick-dots-staff",
+                slidesToShow: 3,
+                slidesToScroll: 3,
+                className: "carousel-class ", // staff-class | carousel-class-noprev-arrow | carousel-class-nonext-arrow | carousel-class-noarrow
+                responsive: [
+                  {
+                    breakpoint: 1439,
+                    settings: {
+                      slidesToShow: 3,
+                      slidesToScroll: 3,
+                      infinite: false,
+                      dots: true,
+                    },
+                  },
+                  {
+                    breakpoint: 1024,
+                    settings: {
+                      slidesToShow: 3,
+                      slidesToScroll: 3,
+                      infinite: false,
+                      dots: true,
+                    },
+                  },
+                  {
+                    breakpoint: 768,
+                    settings: {
+                      slidesToShow: 2,
+                      slidesToScroll: 2,
+                      infinite: false,
+                      dots: true,
+                    },
+                  },
+                  {
+                    breakpoint: 450,
+                    settings: {
+                      slidesToShow: 1,
+                      slidesToScroll: 1,
+                      infinite: false,
+                      dots: true,
+                    },
+                  },
+                ],
+              }
+            }
             previewArrow={previewArrow}
             nextArrow={nextArrow}
           >

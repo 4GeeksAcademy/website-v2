@@ -243,8 +243,8 @@ export const Navbar = ({
             // fixed={data.file.childImageSharp.fixed}
             alt="4Geeks Logo"
             style={{
-              height: "39px",
-              width: "139px",
+              height: "38px",
+              width: "141px",
             }}
           />
         </Link>
