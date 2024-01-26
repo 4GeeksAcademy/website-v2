@@ -148,6 +148,7 @@ const Outcomes = ({ data, pageContext, yml }) => {
         background={Colors.lightYellow}
         padding="40px 20px"
         padding_tablet="0px"
+        padding_xxs="86px 20px"
       >
         <Header
           hideArrowKey
