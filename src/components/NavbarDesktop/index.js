@@ -145,7 +145,7 @@ export const Navbar = ({
 
   const data = useStaticQuery(graphql`
     query {
-      file(relativePath: { eq: "images/4geeksacademy-logo.png" }) {
+      file(relativePath: { eq: "images/Logo-B_4Geeks_Nuevo.png" }) {
         childImageSharp {
           gatsbyImageData(
             layout: FULL_WIDTH # --> CONSTRAINED || FIXED || FULL_WIDTH
@@ -244,8 +244,8 @@ export const Navbar = ({
             // fixed={data.file.childImageSharp.fixed}
             alt="4Geeks Logo"
             style={{
-              height: "38px",
-              width: "141px",
+              height: "auto",
+              width: "75px",
             }}
           />
         </Link>
