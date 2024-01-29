@@ -120,7 +120,7 @@ components:
       text: "Con más de 18 meses operando en el país contamos con uno de los mejores programas de estudio para aprender a programar a nivel mundial🌍 además de fuertes alianzas con diferentes empresas a nivel nacional e internacional que nos permiten ayudar a nuestros estudiantes a encontrar empleo ¡en tiempo record!⏰"
       font_size: ["16px"]
     button:
-      text: " Testimonios de estudiantes"
+      text: "Testimonios de estudiantes"
       background: black
       color: white
       hover_color: "#white"
