@@ -30,7 +30,7 @@ const Program = ({ data, pageContext, yml }) => {
   const geek = data.allCourseYaml.edges[0].node;
   const [open, setOpen] = React.useState(false);
 
-  const course_type = "datascience-ml";
+  const defaultCourse = "datascience-ml";
   const program_type = yml.meta_info.slug.includes("full-time")
     ? "full_time"
     : "part_time";
@@ -241,8 +241,7 @@ const Program = ({ data, pageContext, yml }) => {
         type={pageContext.slug}
         lang={pageContext.lang}
         locations={data.allLocationYaml.edges}
-        programType={program_type}
-        courseType={course_type}
+        defaultCourse={defaultCourse}
         title={yml.prices.heading}
         paragraph={yml.prices.sub_heading}
       />

@@ -49,7 +49,7 @@ part_time:
   - slug: 'plan-1'
     academies: ['downtown-miami', 'orlando']
     recomended: true
-    scholarship: "Scolarship"
+    scholarship: "Scholarship"
     payment_time: "Pay today"
     price: "$4999"
     bullets: 
