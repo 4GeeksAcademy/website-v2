@@ -261,7 +261,7 @@ const initSession = async (locationsArray, storedSession, path, seed = {}) => {
 
   //construct the academy alias dictionary
   let academyAlias = await fetch(
-    `${process.env.GATSBY_BREATHECODE_HOST}/marketing/alias?academy=2,4,5,6,7,8,9,10,11`,
+    `https://breathecode.herokuapp.com/v1/marketing/alias?academy=2,4,5,6,7,8,9,10,11`,
     {
       method: "GET",
     }

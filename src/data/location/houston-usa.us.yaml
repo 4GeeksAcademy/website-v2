@@ -56,7 +56,7 @@ custom_bar:
 
 info_box:
   heading: ""
-  address: ""
+  address: "4201 Main St Ste 200, Houston, TX 77002"
   iframeMapUrl: ""
   open_on_maps: ""
   contact_heading: "Contacts"
@@ -76,6 +76,7 @@ images_box:
       alt: "4Geeeks location"
     - path: "../../../static/images/locations/miami-people.jpeg"
       alt: "4Geeeks lab"
+  layout_horizontal: true #false == "mode mosaic"
 
 
 two_columns:
@@ -110,11 +111,11 @@ online_available: false # important to accept online-only applicants
 
 city: "Houston"
 name: "Houston, USA"
-latitude: "29.760427"
-longitude: "-95.369804"
+latitude: "29.734440"
+longitude: "-95.382080"
+address: "4201 Main St Ste 200"
+zip_code: "77002"
 phone: "+1 (786) 416-6640"
-address: "1801 SW 3rd Ave #100"
-zip_code: "33130"
 state: "Texas"
 country: "USA"
 country_shortname: "us"
@@ -123,14 +124,14 @@ socials:
     icon: "facebook"
     link: "https://www.facebook.com/4geeksacademy"
   - name: "Twitter"
-    icon: "twitter"
+    icon: "x-logo"
     link: "https://www.twitter.com/4geeksacademy"
   - name: "Instagram"
     icon: "instagram"
-    link: "https://www.instagram.com/4geeksacademy"
-  - name: "Meetup"
-    icon: "meetup"
-    link: "https://www.meetup.com/4geeks-academy"
+    link: "https://www.instagram.com/4geeksacademy/"
+  - name: "Linkedin"
+    icon: "linkedin"
+    link: "https://www.linkedin.com/school/4geeksacademy/"
 courses:
   - "Full-Time"
   - "Part-Time"

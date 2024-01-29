@@ -73,7 +73,7 @@ images_box:
       alt: "4Geeeks location"
     - path: "../../../static/images/locations/miami-people.jpeg"
       alt: "4Geeeks lab"
-
+  layout_horizontal: true #false == "mode mosaic"
 
 
 ## START FROM HERE - DON'T CHANGE ANYTHING ABOVE
@@ -131,7 +131,7 @@ socials:
     icon: "facebook"
     link: "https://www.facebook.com/4geeksacademycr"
   - name: "Twitter"
-    icon: "twitter"
+    icon: "x-logo"
     link: "https://www.twitter.com/4geeksacademycr"
   - name: "Instagram"
     icon: "instagram"

@@ -86,7 +86,7 @@ apply_schollarship: # form that is displayed at the end of the landing
 program_details:
   position: 1
   heading: "Lo que aprenderás"
-  sub_heading: "Python, Javascript y React son las tecnologías más usadas del mundo"
+  sub_heading: "Python, Javascript y React son las tecnologías más demandadas del mundo"
 
 badges:
   position: 6

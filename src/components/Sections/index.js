@@ -7,6 +7,8 @@ import { Break } from "../Responsive";
 import { Devices } from "../Responsive";
 import Fragment from "../Fragment";
 import { Carousel } from "react-responsive-carousel";
+import MosaicImages from "../MosaicImages";
+import Gallery from "../Gallery";
 
 const containerVariants = {
   fluid: {
@@ -203,14 +205,14 @@ export const Div = styled.div`
   }
   @media ${Devices.xxs} {
     column-count: ${(props) => props.columnCount_xxs};
-    padding: ${(props) => props.padding_xxs}
+    padding: ${(props) => props.padding_xxs};
     background: ${(props) => props.background_xxs};
     display: ${(props) => props.display_xxs};
     top: ${(props) => props.top_xxs};
     left: ${(props) => props.left_xxs};
     margin: ${(props) => props.margin_xxs};
     display: ${(props) => props.display_xxs};
-    justify-content ${(props) => props.justifyContent_xxs};
+    justify-content: ${(props) => props.justifyContent_xxs};
     width: ${(props) => props.width_xxs};
   }
   @media ${Devices.xs} {
@@ -719,7 +721,6 @@ export const GridContainer = ({
   justifyContentChild,
   justifyItemsChild,
 }) => {
-  console.log(height_tablet);
   return (
     <Grid
       id={id}
@@ -829,57 +830,51 @@ export const GridContainerWithImage = ({
   alignItems_md,
 }) => {
   return (
-    <Grid
-      id={id}
-      className={className}
-      onMouseOut={onMouseOutHandler}
-      gridTemplateColumns_tablet={
-        imageSide == "left" ? "repeat(14, 1fr)" : "repeat(14, 1fr)"
-      }
-      maxWidth={maxWidth}
-      background={background}
-      height={height}
-      position={position}
-      height_tablet={height_tablet}
-      margin={margin}
-      margin_tablet={margin_tablet}
-      padding={padding || "0 17px"}
-      padding_tablet={padding_tablet}
-      padding_md={padding_md}
-      padding_lg={padding_lg}
-      maxWidth_tablet={maxWidth_tablet}
-    >
+    <>
       <Grid
-        gridGap={gridGap}
-        gridGap_tablet={gridGap_tablet}
+        id={id}
+        className={className}
+        onMouseOut={onMouseOutHandler}
         gridTemplateColumns_tablet={
-          imageSide == "left"
-            ? `repeat(${`12`}, ${14 / columns_tablet}fr)`
-            : `repeat(${columns_tablet}, ${14 / columns_tablet}fr)`
+          imageSide == "left" ? "repeat(14, 1fr)" : "repeat(14, 1fr)"
         }
-        gridTemplateColumns={columns}
+        maxWidth={maxWidth}
+        background={background}
+        height={height}
+        position={position}
+        height_tablet={height_tablet}
+        margin={margin}
+        margin_tablet={margin_tablet}
+        padding={padding || "0 17px"}
+        padding_tablet={padding_tablet}
+        padding_md={padding_md}
+        padding_lg={padding_lg}
         maxWidth_tablet={maxWidth_tablet}
-        gridColumn_tablet={
-          gridColumn_tablet
-            ? gridColumn_tablet
-            : imageSide == "left"
-            ? "1 / span 14"
-            : "2 / span 14"
-        }
-        alignItems_tablet={alignItems_tablet}
-        alignItems_md={alignItems_md}
       >
-        {/* {
-          carousel ? (
-            <Carousel/>
-          )
-          :
+        <Grid
+          gridGap={gridGap}
+          gridGap_tablet={gridGap_tablet}
+          gridTemplateColumns_tablet={
+            imageSide == "left"
+              ? `repeat(${`12`}, ${14 / columns_tablet}fr)`
+              : `repeat(${columns_tablet}, ${14 / columns_tablet}fr)`
+          }
+          gridTemplateColumns={columns}
+          maxWidth_tablet={maxWidth_tablet}
+          gridColumn_tablet={
+            gridColumn_tablet
+              ? gridColumn_tablet
+              : imageSide == "left"
+              ? "1 / span 14"
+              : "2 / span 14"
+          }
+          alignItems_tablet={alignItems_tablet}
+          alignItems_md={alignItems_md}
+        >
           {children}
-        } */}
-
-        {children}
+        </Grid>
       </Grid>
-    </Grid>
+    </>
   );
 };
 export const Row = styled(Div)`
