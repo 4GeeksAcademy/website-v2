@@ -22,7 +22,7 @@ button_header:
   button_link: "#programs"
 button:
   syllabus_button_text: "DESCARGAR CURRÍCULO" # <-- this will show everywhere in the website
-  apply_button_text: "APLICA YA" # <-- this will show everywhere in the website
+  apply_button_text: "POSTÚLATE YA" # <-- this will show everywhere in the website
 
   syllabus_submit_text: "DESCARGAR"
   apply_button_link: "/aplica"
@@ -30,7 +30,7 @@ button:
 
 custom_bar:
   active: false
-  message: Lorem ipsum dot simet mosd ei
+  message: 'Desde US$90 al mes. ¡O paga cuando obtengas un trabajo! <a class="customBar-link" href="/es/aplica">Postúlate</a>'
   button: 
     label: "Read More"
     path: "#" #string (can be inline path using #, relative path or absolute path)
@@ -73,6 +73,7 @@ images_box:
       alt: "4Geeeks miami day"
     - path: "../../../static/images/locations/miami-old2.jpg"
       alt: "4Geeeks miami lab"
+  layout_horizontal: true #false == "mode mosaic"
 
 two_columns:
   proportions: [6, 6]
@@ -104,7 +105,7 @@ gdpr_compliant: true # do we need to ask for permision?
 in_person_available: false # important to accept in-person applicants
 
 city: "Resto de América"
-name: "Resto de América"
+name: "Resto de América en Inglés"
 latitude: "10000.760158"
 longitude: "-800000.200154"
 address: "1801 SW 18th Road"
@@ -118,11 +119,14 @@ socials:
     icon: "facebook"
     link: "https://www.facebook.com/4geeksacademy"
   - name: "Twitter"
-    icon: "twitter"
+    icon: "x-logo"
     link: "https://www.twitter.com/4geeksacademy"
   - name: "Instagram"
     icon: "instagram"
-    link: "https://www.instagram.com/4geeksacademy"
+    link: "https://www.instagram.com/4geeksacademy/"
+  - name: "Linkedin"
+    icon: "linkedin"
+    link: "https://www.linkedin.com/school/4geeksacademy/"
 
 courses:
   - "Full-Time"

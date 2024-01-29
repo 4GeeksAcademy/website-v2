@@ -67,7 +67,6 @@ info_box:
   email: "info@4GeeksAcademy.com"
   image: "../../../static/images/locations/caracas-map.png"
   alt: ""
-
 images_box:
   heading: "What you should know about this location: "
   content: "Caracas is one of the cities with the greatest technological entrepreneurship, with great opportunities to grow both inside and outside the country. It has become an opportunity for SMEs to move forward quickly. You will have high speed internet access and a first class office."
@@ -82,6 +81,7 @@ images_box:
       alt: "Remote-Coding-Bootcamp"
     - path: "../../../static/images/locations/caracas-graduates.png"
       alt: "4Geeeks Caracas graduates"
+  layout_horizontal: true #false == "mode mosaic"
 
 two_columns:
   proportions: [6, 6]
@@ -134,11 +134,11 @@ socials:
     icon: "facebook"
     link: "https://www.facebook.com/4geeksacademyve"
   - name: "Twitter"
-    icon: "twitter"
-    link: "https://www.twitter.com/4geeksacademyve"
+    icon: "x-logo"
+    link: "https://twitter.com/4GeeksAcademy"
   - name: "Instagram"
     icon: "instagram"
-    link: "https://www.instagram.com/4geeksacademyve"
+    link: "https://www.instagram.com/4geeksacademylatam/"
 courses:
   - "Full-Time"
   - "Part-Time"

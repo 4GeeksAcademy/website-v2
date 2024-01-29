@@ -9,8 +9,8 @@ export default (props) => (
     fill="none"
   >
     <path
-      fill-rule="evenodd"
-      clip-rule="evenodd"
+      fillRule="evenodd"
+      clipRule="evenodd"
       d="M0 0L7 0V2.84916L2.59259 2.84916L2.59259 14.1508H7V17H0L0 0Z"
       fill={props.color}
     />

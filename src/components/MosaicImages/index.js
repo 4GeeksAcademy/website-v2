@@ -6,19 +6,75 @@ import {
   Divider,
 } from "../Sections";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import { H4, Paragraph } from "../Heading";
 
-const MosaicImages = (props) => {
-  const { yml } = props;
+const MosaicImages = ({
+  images,
+  heading,
+  paragraph,
+  padding_xxs,
+  padding_md,
+  padding_lg,
+  padding_tablet,
+}) => {
+  if (images?.length > 5) {
+    const limitedImages = images.pop();
+  } else {
+    const limitedImages = images;
+  }
 
   return (
     <>
-      {yml?.images && (
-        <GridContainer
-          margin="0 auto"
-          padding_xxs="40px 20px"
+      {heading && (
+        <Div
+          flexDirection="column"
+          padding="20px 20px"
           padding_md="40px 80px"
           padding_lg="40px 0px"
-          padding_tablet="40px 40px"
+          padding_tablet="40px 40px 10px 40px"
+          margin_tablet="0 auto 30px auto"
+          margin="0 0 36px 0"
+          maxWidth={"1366px"}
+        >
+          <Div
+            alignItems="start"
+            flexDirection="column"
+            flexDirection_tablet="row"
+            padding_lg="0 5%"
+            gap="24px"
+          >
+            <Div width_tablet="30%">
+              <H4
+                fontSize="30px"
+                //textTransform="uppercase"
+                lineHeight="36px"
+                fontWeight="700"
+                textAlign="center"
+                textAlign_tablet="start"
+              >
+                {heading}
+              </H4>
+            </Div>
+            <Div width_tablet="70%">
+              <Paragraph
+                fontSize="15px"
+                textAlign="center"
+                textAlign_tablet="start"
+                margin="0 0 50px 0"
+              >
+                {paragraph}
+              </Paragraph>
+            </Div>
+          </Div>
+        </Div>
+      )}
+      {images && (
+        <GridContainer
+          margin="0 auto"
+          padding_xxs={padding_xxs || "20px 20px"}
+          padding_md={padding_md || "20px 80px"}
+          padding_lg={padding_lg || "20px 0px"}
+          padding_tablet={padding_tablet || "20px 40px"}
           width_tablet="100%"
           maxWidth="1366px"
           columns_tablet="10"
@@ -41,7 +97,7 @@ const MosaicImages = (props) => {
           height="fit-content"
           childHeight="inherit"
         >
-          {yml?.images.map((m, i) => {
+          {images.map((m, i) => {
             console.log(m);
             return (
               <GatsbyImage

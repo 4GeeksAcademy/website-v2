@@ -27,7 +27,7 @@ form:
 
 # jumbotron on the top (cannot be commented out)
 header_data:
-  tagline: ¡Aprende a Programar y Desarrolla en Madrid!
+  tagline: ¡Aprende a Programar en 18 Semanas!
   sub_heading: " "
   badge: "../../../static/images/badges/Course-Report-Badge-2023.png"
   background_image: "../../../static/images/Happy-People-Landing-4Geeks-ES.jpg"
@@ -39,10 +39,10 @@ features:
   #                                         up   left down  right
   styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
   bullets:
-    - Empieza a Ganar 24.000€ al Año Como Desarrollador en Madrid
-    - La Industria de la Programación Tiene un 30%
+    - Gana 24.000 € al año como desarrollador.
+    - El 86% de nuestros estudiantes encuentran trabajo en menos de 180 días.
     - No necesitas experiencia previa para comenzar.
-  text: Te animamos a inscribirse en nuestro curso de programación para dar el primer paso hacia un futuro lleno de oportunidades emocionantes en la industria tecnológica🚀 Estamos aquí para apoyarte <br>en cada etapa de tu aprendizaje. 😎
+  text: 
 
 follow_bar:
   position: "top" # top, bottom, hidden
@@ -91,7 +91,7 @@ badges:
 program_details:
   position: 1
   heading: "Lo que aprenderás"
-  sub_heading: "Python, Javascript y React son las tecnologías más usadas del mundo"
+  sub_heading: "Python, Javascript y React son las tecnologías más demandadas del mundo"
 
 geeks_vs_others:
   position: 4
