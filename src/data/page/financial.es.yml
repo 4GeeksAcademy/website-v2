@@ -10,7 +10,7 @@ meta_info:
 ## BANNER - HEADER
 seo_title: "Financiación de Bootcamp"
 header:
-  title: Financiación
+  title: FINANCIACIÓN
   paragraph: Indicanos los siguientes datos para mostrarte tus opciones de financiación
   tagline: CELEBRA EL MEJOR PRECIO DE LA CIUDAD
   sub_heading: Nunca dejamos de trabajar para construir un programa verdaderamente 'premium', pero asequible. Nuestra filosofía se basa en hacer que la educación en programación esté disponible para todas las personas.
@@ -53,6 +53,195 @@ label:
 
 
 syllabus_button_text: Buscar
+
+iconogram:
+  heading:
+    text: "Cómo tu matrícula ya no es un problema."
+    font_size:
+      - 38px
+      - 38px
+      - 38px
+      - 21px
+      - 21px
+    style: '{ "textAlign": "center", "width": "60%" }'
+  sub_heading:
+    text: ""
+    font_size: ["16px", "16px", "16px", "16px", "16px"]
+    style: '{ "textAlign": "center", "width": "60%" }'
+  text_link: "#"
+  swipable: false
+  icons:
+  - icon: "contract-money"
+    title: Planes de pago - Sin intereses
+    content: " Sin intereses: puedes pagar en hasta 6 meses."
+  - icon: "handmoney-new"
+    title: Financiamiento a largo plazo.
+    content: "long term: 3, 4 or 5 years loan"
+  - icon: "hand-puzzle"
+    title: Becas y alianzas.
+    content: "Nos hemos asociado con varias organizaciones para que tu matrícula sea más asequible."
+  - icon: "briefcase-new"
+    title: Acuerdo de participación en ingresos
+    content: "Solo pagas si encuentras un trabajo con un salario superior a un determinado monto."
+  button:
+    text: "Condiciones aplican."
+    color: ""
+    path: "#top"
+    background: ""
+    hover_color: ""
+
+two_column:
+  - image:
+      style: '{ "backgroundSize": "contain" }'
+      src: /images/landing/Group-6626.png
+    heading:
+      text: $20 millones en becas
+      font_size:
+        - 38px
+        - 38px
+        - 38px
+        - 21px
+        - 21px
+    sub_heading:
+      text: 1.456 personas se han beneficiado de nuestros programas de becas, de todos los orígenes posibles, lee aquí historias de los beneficiarios y proyectos.
+      font_size:
+        - 24px
+        - 24px
+        - 24px
+        - 16px
+        - 16px
+    button:
+      text: VER MÁS
+      color: white
+      background: black
+      hover_color: white
+      path: "/es/20-millones"
+    boxes:
+    - icon: rocket-2
+      title: "14"
+      text: Proyectos completados
+    - icon: handsheart
+      title: "1465"
+      text: Beneficiarios hasta ahora
+
+  - image:
+      style: '{ "backgroundSize": "contain" }'
+      src: /images/landing/20-million-column.png
+    heading:
+      text: El 62% de los solicitantes de bootcamps son rechazados por razones financieras.
+      font_size:
+        - 38px
+        - 38px
+        - 38px
+        - 21px
+        - 21px
+    sub_heading:
+      text: 4Geeks está comprometido a eliminar el costo como un factor posible para evitar que individuos talentosos se conviertan en programadores.
+      font_size:
+        - 24px
+        - 24px
+        - 24px
+        - 16px
+        - 16px
+    content:
+      font_size:
+        - 16px
+      text: |
+        Gracias a una profunda red de más de 2000 socios y donantes de instituciones gubernamentales, organizaciones sin fines de lucro y empresas privadas, nuestra plataforma de becas se convierte en una de las más grandes del mundo.
+    button:
+      text: ÚNETE AL PROGRAMA
+      color: white
+      background: black
+      hover_color: white
+      path: "#prices_and_payment"
+
+  - image:
+      style: '{ "backgroundSize": "contain" }'
+      src: "/images/woman-glasses-laptop.png"
+    heading:
+      text: "Compromiso de garantía de empleo"
+      font_size:
+        - 38px
+        - 38px
+        - 38px
+        - 21px
+        - 21px
+    sub_heading:
+      text: "Nuestro Programa de Garantía de Empleo consta de 3 etapas que son necesarias para completar como parte de su proceso. ¡Son tres bootcamps en uno!"
+      font_size:
+        - 24px
+        - 24px
+        - 24px
+        - 16px
+        - 16px
+    bullets:
+      item_style: ""
+      items:
+        - heading: "Conviértete en Desarrollador de Software."
+          text: ""
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
+        - heading: "Prepárate para tu carrera profesional."
+          text: ""
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
+        - heading: "¡Consigue un trabajo!."
+          text: ""
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
+    content:
+      font_size:
+        - 16px
+      text: Nuestro objetivo es ayudarte a conseguir un trabajo dentro de los 180 días posteriores a tu graduación. Debes completar y cumplir con los requisitos para optar por la devolución del dinero si la oportunidad laboral no ha llegado dentro del plazo.
+    button:
+        text: "APLICAR"
+        color: "white"
+        background: "black"
+        hover_color: "white"
+        path: "/es/aplica"
+
+partners:
+  paragraph: "¡No te pierdas los increíbles aliados de 4Geeks Academy! Aquí hay algunos de ellos."
+  badges:
+    - name: "Miami Tech Works"
+      url: ""
+      image: "../../../static/images/allies/miamitech-works-logo.png"
+      alt: "Miami Tech Works"
+    - name: "UTEC"
+      url: ""
+      image: "../../../static/images/allies/utec.png"
+      alt: "Best cooding bootcamp Course Report 2023"
+    - name: "Universidad Tecnologica"
+      url: ""
+      image: "../../../static/images/allies/clark-uni-rounded-logo.png"
+      alt: "Clark University"
+    - name: "CINDE"
+      url: ""
+      image: "../../../static/images/allies/cinde.png"
+      alt: "CINDE Invest in Costa Rica"
+    - name: "IDB"
+      url: ""
+      image: "../../../static/images/allies/idb.png"
+      alt: "Inter-American Development Bank"
+  link_text: "See all parthers"
+  link_to: "/us/partners"
+
+we_trust_section:
+  title: ¿Por qué deberías confiar en nosotros?
+  text: |
+    !Una garantía de trabajo sella nuestro compromiso con tu éxito! Con un historial comprobado de éxito, nuestro programa continuará empoderando a los futuros graduados.
+    <br>
+    <br>
+    Los números hablan por sí solos.
+  boxes:
+    - icon: briefcase-2
+      title: 82%
+      text: Tasa de inserción laboral
+    - icon: chart
+      title: "60K"
+      text: Ingreso promedio
+    - icon: graduation-2
+      title: "20MM"
+      text: Millones en becas y contando
+
+
 
 ## PAYMENT GUIDE SECTION
 # payment_guide:
