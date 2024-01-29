@@ -3,7 +3,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import LeadForm from "../LeadForm";
 import { H1, H2, Paragraph } from "../Heading";
 import { Div, GridContainer, Grid } from "../Sections";
-import { Colors } from "../Styling";
+import { Colors, Img } from "../Styling";
 import { Circle } from "../BackgroundDrawing";
 import Icon from "../Icon";
 import LandingContainer from "../LandingContainer";
@@ -13,7 +13,7 @@ import { processFormEntry } from "../../actions";
 
 const LandingHeader = (props) => {
   const { setLocation } = React.useContext(SessionContext);
-  const { pageContext, yml, preData, locations, programs } = props;
+  const { pageContext, yml, preData, locations, programs, hideForm } = props;
   const [inLocation, setInLocation] = React.useState("");
 
   useEffect(() => {
@@ -82,7 +82,7 @@ const LandingHeader = (props) => {
             {yml.header_data.partner_logo_url && (
               <>
                 <Div
-                  width="242px"
+                  width="100%"
                   flexDirection_tablet="column"
                   height="auto"
                   padding="0 0 25px 0"
@@ -304,49 +304,68 @@ const LandingHeader = (props) => {
                 />
               </Div>
             </Div>
-            <LeadForm
-              landingTemplate
-              headerImage={
-                yml.header_data.badge &&
-                yml.header_data.badge.childImageSharp.gatsbyImageData
-              }
-              background={
-                yml.header_data.background === "#FFF1D1"
-                  ? Colors.white
-                  : "#FFF1D1"
-              }
-              margin_md="50px 0 0 14.5%"
-              margin_tablet="18px 0"
-              selectProgram={programs}
-              selectLocation={locations}
-              margin="18px 0"
-              marginTop_tablet="50px"
-              // marginTop_xs="20px"
-              style={{
-                zIndex: "1",
-                minHeight: "350px",
-                borderRadius: "0px",
-                border: "3px solid black",
-              }}
-              gap="11px"
-              formHandler={processFormEntry}
-              heading={yml.form.heading}
-              motivation={yml.form.motivation}
-              sendLabel={yml.form.button_label}
-              redirect={yml.form.redirect}
-              inputBgColor="#FFFFFF"
-              layout="block"
-              lang={pageContext.lang}
-              fields={yml.form.fields}
-              data={preData}
-              justifyContentButton="center"
-              marginButton="10px auto 30px auto"
-              widthButton="100%"
-              width_md="84%"
-              width_tablet="84%"
-              // marginButton_tablet="0 0 30px auto"
-              boxShadow="9px 8px 0px 0px rgba(0,0,0,1)"
-            />
+            {!hideForm ? (
+              <LeadForm
+                landingTemplate
+                headerImage={
+                  yml.header_data.badge &&
+                  yml.header_data.badge.childImageSharp.gatsbyImageData
+                }
+                background={
+                  yml.header_data.background === "#FFF1D1"
+                    ? Colors.white
+                    : "#FFF1D1"
+                }
+                margin_md="50px 0 0 14.5%"
+                margin_tablet="18px 0"
+                selectProgram={programs}
+                selectLocation={locations}
+                margin="18px 0"
+                marginTop_tablet="50px"
+                // marginTop_xs="20px"
+                style={{
+                  zIndex: "1",
+                  minHeight: "350px",
+                  borderRadius: "0px",
+                  border: "3px solid black",
+                }}
+                gap="11px"
+                formHandler={processFormEntry}
+                heading={yml.form.heading}
+                motivation={yml.form.motivation}
+                sendLabel={yml.form.button_label}
+                redirect={yml.form.redirect}
+                inputBgColor="#FFFFFF"
+                layout="block"
+                lang={pageContext.lang}
+                fields={yml.form.fields}
+                data={preData}
+                justifyContentButton="center"
+                marginButton="10px auto 30px auto"
+                widthButton="100%"
+                width_md="84%"
+                width_tablet="84%"
+                // marginButton_tablet="0 0 30px auto"
+                boxShadow="9px 8px 0px 0px rgba(0,0,0,1)"
+              />
+            ) : (
+              <Img
+                src={
+                  yml.form.side_image || "/images/landing/grupo-ventanas.png"
+                }
+                alt="4Geeks Academy Section"
+                margin="auto"
+                height="100%"
+                minHeight_tablet="none"
+                minHeight="500px"
+                maxHeight="500px"
+                width_tablet="80%"
+                width="100%"
+                zIndex="10"
+                // h_sm="250px"
+                backgroundSize="contain"
+              />
+            )}
             <Div
               display="none"
               display_tablet="block"

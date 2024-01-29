@@ -292,19 +292,23 @@ const TwentyMillion = ({ data, pageContext, yml }) => {
                 </Button>
               </Link>
             </Div>
-            <Button
-              display="block"
-              width="100%"
-              width_tablet="fit-content"
-              variant="outline"
-              color={Colors.black}
-              margin="10px 0 50px 0"
-              margin_tablet="0"
-              textColor={Colors.black}
-              textAlign="center"
-            >
-              {yml.button.btn_label}
-            </Button>
+            <Div width="100%" width_tablet="fit-content">
+              <Link to="#fake_bottom" style={{ width: "100%" }}>
+                <Button
+                  display="block"
+                  width="100%"
+                  width_tablet="fit-content"
+                  variant="outline"
+                  color={Colors.black}
+                  margin="10px 0 50px 0"
+                  margin_tablet="0"
+                  textColor={Colors.black}
+                  textAlign="center"
+                >
+                  {yml.button.btn_label}
+                </Button>
+              </Link>
+            </Div>
           </Div>
         </Div>
       </Div>
@@ -351,6 +355,7 @@ const TwentyMillion = ({ data, pageContext, yml }) => {
         width="100%"
         height="5px"
         margin="40px 0"
+        id="fake_bottom"
       />
 
       <GridContainer

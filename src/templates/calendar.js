@@ -355,6 +355,7 @@ const Calendar = (props) => {
               <SelectRaw
                 bgColor={Colors.white}
                 options={datas.cohorts.catalog.sort((a, b) => {
+                  if (a.label.includes("Rest")) return 2;
                   if (a.label < b.label) {
                     return -1;
                   }
@@ -382,8 +383,8 @@ const Calendar = (props) => {
                       : datas[filterType.value].all;
                   // if no cohorts on location, try to include online
                   if (filtered.length === 0)
-                    filtered = datas[filterType.value].all.filter(
-                      (elm) => elm.academy.slug === "online"
+                    filtered = datas[filterType.value].all.filter((elm) =>
+                      elm.academy.slug.includes("online")
                     );
 
                   setData({
