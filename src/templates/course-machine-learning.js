@@ -30,8 +30,8 @@ const Program = ({ data, pageContext, yml }) => {
   const geek = data.allCourseYaml.edges[0].node;
   const [open, setOpen] = React.useState(false);
 
-  const course_type = "machine_learning";
-  const program_type = yml.meta_info.slug.includes("full-time")
+  const defaultCourse = "machine-learning-engineering";
+  const program_schedule = yml.meta_info.slug.includes("full-time")
     ? "full_time"
     : "part_time";
   const handleOpen = () => {
@@ -196,13 +196,13 @@ const Program = ({ data, pageContext, yml }) => {
       <ProgramDetails
         details={courseDetails.details}
         lang={pageContext.lang}
-        course={program_type}
+        course={program_schedule}
         background={Colors.white}
       />
       <ProgramDetailsMobile
         details={courseDetails.details}
         lang={pageContext.lang}
-        course={program_type}
+        course={program_schedule}
       />
 
       {/* OVERLAPED CREAR EN EL YML*/}
@@ -241,8 +241,7 @@ const Program = ({ data, pageContext, yml }) => {
         type={pageContext.slug}
         lang={pageContext.lang}
         locations={data.allLocationYaml.edges}
-        programType={program_type}
-        courseType={course_type}
+        defaultCourse={defaultCourse}
         title={yml.prices.heading}
         paragraph={yml.prices.sub_heading}
       />

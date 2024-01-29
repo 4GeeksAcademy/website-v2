@@ -10,7 +10,7 @@ full_time:
       - "Regular tuition is $11999. Avg tuition in the US is $15k."
       - "Remaining balance could be paid over time $100 p/mo"
     icons: 
-      - "/static/images/clarkuniversity.png"
+      - "images/clarkuniversity.png"
   - slug: 'usa-financed-ft'
     academies: ['toronto-canada', downtown-miami', 'orlando', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa']
     recomended: false
@@ -35,7 +35,7 @@ full_time:
       - "8.5% of your salary until paid in full, only if you get a job in tech."
       - "Only start making payments after you find a Job"
     icons: 
-      -  "/static/images/clarkuniversity.png"
+      -  "/images/clarkuniversity.png"
 
   - slug: 'usa-fs-ft'
     academies: ['downtown-miami']
@@ -289,7 +289,7 @@ part_time:
       - "/images/clarkuniversity.png"
 
   - slug: 'usa-isa-pt'
-    academies: ['downtown-miami', 'orlando', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'toronto-canada']
+    academies: ['orlando', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa','toronto-canada']
     recomended: false
     scholarship: "Income Share Agreement"
     payment_time: "Start making payments only when you get a job"
