@@ -7,6 +7,8 @@ import { Break } from "../Responsive";
 import { Devices } from "../Responsive";
 import Fragment from "../Fragment";
 import { Carousel } from "react-responsive-carousel";
+import MosaicImages from "../MosaicImages";
+import Gallery from "../Gallery";
 
 const containerVariants = {
   fluid: {
@@ -203,20 +205,21 @@ export const Div = styled.div`
   }
   @media ${Devices.xxs} {
     column-count: ${(props) => props.columnCount_xxs};
-    padding: ${(props) => props.padding_xxs}
+    padding: ${(props) => props.padding_xxs};
     background: ${(props) => props.background_xxs};
     display: ${(props) => props.display_xxs};
     top: ${(props) => props.top_xxs};
     left: ${(props) => props.left_xxs};
     margin: ${(props) => props.margin_xxs};
     display: ${(props) => props.display_xxs};
-    justify-content ${(props) => props.justifyContent_xxs};
+    justify-content: ${(props) => props.justifyContent_xxs};
     width: ${(props) => props.width_xxs};
   }
   @media ${Devices.xs} {
     padding: ${(props) => props.padding_xs};
     column-count: ${(props) => props.columnCount_xs};
     flex-direction: ${(props) => props.flexDirection_xs};
+    flex-wrap: ${(props) => props.flexWrap_xs};
     width: ${(props) => props.width_xs};
     max-width: ${(props) => props.maxWidth_xs};
     height: ${(props) => props.height_xs};
@@ -330,6 +333,7 @@ export const Div = styled.div`
         ? `${(props.size_md / 12) * 100}%`
         : null};
     min-width: ${(props) => props.minWidth_md};
+    min-height: ${(props) => props.minHeight_md};
     grid-area: ${(props) => props.gridArea_md};
     display: ${(props) => props.display_md};
     flex-direction: ${(props) => props.flexDirection_md};
@@ -362,6 +366,7 @@ export const Div = styled.div`
     justify-content: ${(props) =>
       justifyContentOptions[props.justifyContent_lg]};
     padding: ${(props) => props.padding_lg};
+    gap: ${(props) => props.gap_lg};
     max-width: ${(props) => props.maxWidth_lg};
     min-width: ${(props) => props.minWidth_lg};
     right: ${(props) => props.right_lg};
@@ -405,12 +410,14 @@ export const Grid = styled(Div)`
     grid-template-columns: ${(props) =>
       props.columns_xxs ? `repeat(${props.columns_xxs}, 1fr)` : null};
     padding: ${(props) => props.padding_xxs};
+    width: ${(props) => props.width_xxs};
     margin: ${(props) => props.margin_xxs};
     display: ${(props) => props.display_xxs || "grid"};
   }
   @media ${Devices.xs} {
     grid-template-columns: ${(props) =>
       props.columns_xs ? `repeat(${props.columns_xs}, 1fr)` : null};
+    width: ${(props) => props.width_xs};
     display: ${(props) => props.display_xs};
   }
   @media ${Devices.sm} {
@@ -418,6 +425,7 @@ export const Grid = styled(Div)`
       props.gridTemplateColumns_sm
         ? `repeat(${props.gridTemplateColumns_sm}, 1fr)`
         : null};
+    width: ${(props) => props.width_sm};
     display: ${(props) => props.display_sm};
   }
   @media ${Devices.tablet} {
@@ -565,6 +573,7 @@ export const Header = ({
   maxWidth,
   fontFamily,
   zIndex,
+  id,
 }) => {
   return (
     <Grid
@@ -581,6 +590,7 @@ export const Header = ({
       padding_lg={padding_lg || "60px 0"}
       gridTemplateColumns_tablet={gridTemplateColumns_tablet}
       maxWidth={maxWidth}
+      id={id}
     >
       <Grid
         gridTemplateColumns_tablet={`repeat(12, 1fr)`}
@@ -596,7 +606,7 @@ export const Header = ({
             type="h2"
             textAlign_tablet={textAlign_tablet}
             margin="0 0 11px 0"
-            //padding="0 20px"
+            padding="0 20px"
             color="#606060"
             fontSize={fontSize_seo || "12px"}
             //fontFamily={fontFamily_title}
@@ -606,7 +616,7 @@ export const Header = ({
           <H1
             type="h1"
             textAlign_tablet={textAlign_tablet}
-            //padding="0 20px"
+            padding="0 20px"
             padding_tablet={paddingTitle_tablet}
             fontSize={fontSize_title || "40px"}
             fontSize_tablet={fontSizeTitle_tablet || "50px"}
@@ -718,8 +728,8 @@ export const GridContainer = ({
   columns_sm,
   justifyContentChild,
   justifyItemsChild,
+  border,
 }) => {
-  console.log(height_tablet);
   return (
     <Grid
       id={id}
@@ -755,8 +765,9 @@ export const GridContainer = ({
       padding={padding || "0 17px"}
       padding_tablet={padding_tablet || "0"}
       padding_xxs={padding_xxs}
-      padding_lg={padding_lg}
       padding_md={padding_md}
+      border={border}
+      padding_lg={padding_lg}
     >
       <Grid
         display={displayChild}
@@ -829,57 +840,51 @@ export const GridContainerWithImage = ({
   alignItems_md,
 }) => {
   return (
-    <Grid
-      id={id}
-      className={className}
-      onMouseOut={onMouseOutHandler}
-      gridTemplateColumns_tablet={
-        imageSide == "left" ? "repeat(14, 1fr)" : "repeat(14, 1fr)"
-      }
-      maxWidth={maxWidth}
-      background={background}
-      height={height}
-      position={position}
-      height_tablet={height_tablet}
-      margin={margin}
-      margin_tablet={margin_tablet}
-      padding={padding || "0 17px"}
-      padding_tablet={padding_tablet}
-      padding_md={padding_md}
-      padding_lg={padding_lg}
-      maxWidth_tablet={maxWidth_tablet}
-    >
+    <>
       <Grid
-        gridGap={gridGap}
-        gridGap_tablet={gridGap_tablet}
+        id={id}
+        className={className}
+        onMouseOut={onMouseOutHandler}
         gridTemplateColumns_tablet={
-          imageSide == "left"
-            ? `repeat(${`12`}, ${14 / columns_tablet}fr)`
-            : `repeat(${columns_tablet}, ${14 / columns_tablet}fr)`
+          imageSide == "left" ? "repeat(14, 1fr)" : "repeat(14, 1fr)"
         }
-        gridTemplateColumns={columns}
+        maxWidth={maxWidth}
+        background={background}
+        height={height}
+        position={position}
+        height_tablet={height_tablet}
+        margin={margin}
+        margin_tablet={margin_tablet}
+        padding={padding || "0 17px"}
+        padding_tablet={padding_tablet}
+        padding_md={padding_md}
+        padding_lg={padding_lg}
         maxWidth_tablet={maxWidth_tablet}
-        gridColumn_tablet={
-          gridColumn_tablet
-            ? gridColumn_tablet
-            : imageSide == "left"
-            ? "1 / span 14"
-            : "2 / span 14"
-        }
-        alignItems_tablet={alignItems_tablet}
-        alignItems_md={alignItems_md}
       >
-        {/* {
-          carousel ? (
-            <Carousel/>
-          )
-          :
+        <Grid
+          gridGap={gridGap}
+          gridGap_tablet={gridGap_tablet}
+          gridTemplateColumns_tablet={
+            imageSide == "left"
+              ? `repeat(${`12`}, ${14 / columns_tablet}fr)`
+              : `repeat(${columns_tablet}, ${14 / columns_tablet}fr)`
+          }
+          gridTemplateColumns={columns}
+          maxWidth_tablet={maxWidth_tablet}
+          gridColumn_tablet={
+            gridColumn_tablet
+              ? gridColumn_tablet
+              : imageSide == "left"
+              ? "1 / span 14"
+              : "2 / span 14"
+          }
+          alignItems_tablet={alignItems_tablet}
+          alignItems_md={alignItems_md}
+        >
           {children}
-        } */}
-
-        {children}
+        </Grid>
       </Grid>
-    </Grid>
+    </>
   );
 };
 export const Row = styled(Div)`

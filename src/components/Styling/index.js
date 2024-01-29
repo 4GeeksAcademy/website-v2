@@ -181,18 +181,19 @@ const StyledImage = styled.div`
   border: ${(props) => props.border};
   height: ${(props) => props.height};
   min-height: ${(props) => props.minHeight};
-  max-height: ${(props) => (props.maxHeight ? props.maxHeight : "none")};
+  max-height: ${(props) => props.maxHeight || "none"};
   min-width: ${(props) => props.minWidth};
   margin: ${(props) => props.margin};
   box-shadow: ${(props) => props.boxShadow};
-  padding= ${(props) => props.padding};
+  padding: ${(props) => props.padding};
+  z-index: ${(props) => props.zIndex};
   @media ${Break.sm} {
     height: ${(props) => props.h_sm};
     min-height: ${(props) => props.minHeight_sm};
     width: ${(props) => props.w_sm};
   }
   @media ${Devices.xxs} {
-    padding: ${(props) => props.padding_xxs}; 
+    padding: ${(props) => props.padding_xxs};
     display: ${(props) => props.display_xxs};
     height: ${(props) => props.height_xxs};
     right: ${(props) => props.right_xxs};
@@ -211,9 +212,11 @@ const StyledImage = styled.div`
     width: ${(props) => props.width_sm};
   }
   @media ${Devices.tablet} {
-    padding: ${(props) => props.padding_tablet}; 
+    padding: ${(props) => props.padding_tablet};
     display: ${(props) => props.display_tablet};
     height: ${(props) => props.height_tablet};
+    width: ${(props) => props.width_tablet};
+    min-height: ${(props) => props.minHeight_tablet};
     left: ${(props) => props.left_tablet};
     right: ${(props) => props.right_tablet};
     top: ${(props) => props.top_tablet};
@@ -335,7 +338,6 @@ export const StyledBackgroundSection = styled(BackgroundSection)`
   &:before {
     background-size: ${(props) => props.bgSize};
   }
-  ,
   &:after {
     min-height: ${(props) => props.minHeight};
     border-radius: ${(props) => props.borderRadius};
@@ -454,6 +456,8 @@ export const Button = styled(SmartButton)`
   font-size: ${(props) => props.fontSize};
   font-family: "Lato", sans-serif;
   text-transform: ${(props) => props.textTransform || "uppercase"};
+  text-decoration: ${(props) => props.textDecoration || "none"};
+  text-decoration-line: ${(props) => props.textDecorationLine || "none"};
   font-weight: ${(props) => props.fontWeight || "700"};
   margin: ${(props) => props.margin};
   border-radius: ${(props) => props.borderRadius};
