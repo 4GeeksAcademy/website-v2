@@ -1,7 +1,7 @@
 import React from "react";
 import { useStaticQuery, graphql, Link } from "gatsby";
 import ReactPlayer from "../ReactPlayer";
-import { H2, Paragraph } from "../Heading";
+import { H2, Paragraph, H3 } from "../Heading";
 import Icon from "../Icon";
 import { Div } from "../Sections";
 import { Button, Colors, Img, StyledBackgroundSection } from "../Styling";
@@ -18,8 +18,10 @@ const Side = ({
   content,
   button,
   bullets,
+  boxes,
   session,
   padding_tablet,
+  side,
 }) => {
   const utm = session && session.utm;
   if (video)
@@ -35,7 +37,6 @@ const Side = ({
         }}
       />
     );
-
   if (image) {
     const imgStyles = image.style ? JSON.parse(image.style) : null;
     const [img_h_xl, img_h_lg, img_h_md, img_h_sm, img_h_xs] =
@@ -56,11 +57,13 @@ const Side = ({
         style={imgStyles}
         alt="4Geeks Academy Section"
         margin="0px"
-        height={img_h_xl}
+        height_md={img_h_xl || "100%"}
+        minHeight="500px"
         width={imgStyles ? imgStyles.width || "100%" : "100%"}
-        h_sm={img_h_sm || "250px"}
+        h_sm={img_h_sm}
+        height_xxs={img_h_xs || "500px"}
         backgroundSize={image.shadow ? "cover" : "contain"}
-        //backgroundPosition="center right"
+        position={side}
         //border={image.shadow && "3px solid black"}
         boxShadow={image.shadow && "20px 15px 0px 0px rgba(0,0,0,1)"}
       />
@@ -94,7 +97,7 @@ const Side = ({
       {header && (
         <Div
           margin="0 0 30px 0"
-          justifyContent="start"
+          justifyContent="center"
           justifyContent_md="start"
         >
           {Array.isArray(header) &&
@@ -116,11 +119,11 @@ const Side = ({
         <H2
           type="h2"
           textAlign_tablet="left"
-          textAlign="left"
           lineHeight="38px"
           lineHeight_tablet="38px"
           fontSize={h_xs || "30px"}
           fs_xl={h_xl}
+          fontSize_xxs={h_xs || "21px"}
           fontSize_md={h_md || "30px"}
           fontSize_sm={h_sm}
           margin="30px 0 20px 0"
@@ -132,6 +135,7 @@ const Side = ({
       {sub_heading && (
         <Paragraph
           textAlign_tablet="left"
+          fontFamily="Lato-Bold"
           textAlign="left"
           margin="0"
           letterSpacing="0.06em"
@@ -289,13 +293,70 @@ const Side = ({
           {button.text}
         </Button>
       )}
+
+      {boxes && (
+        <Div
+          margin_xxs="15px 0 30px 0"
+          margin_tablet="15px 0 0 0"
+          justifyContent_tablet="between"
+          gap="15px"
+          flexDirection="column"
+          flexDirection_tablet="row"
+        >
+          {boxes.map((box) => (
+            <Div
+              key={box.title}
+              background="#FFF"
+              border="3px solid #000"
+              width="100%"
+              width_md="320px"
+              minHeight_md="260px"
+              width_tablet="200px"
+              height_tablet="200px"
+              boxShadow="6px 6px 0px 0px rgba(0,0,0,1)"
+              boxShadow_tablet="9px 8px 0px 0px rgba(0,0,0,1)"
+              flexDirection_tablet="column"
+              justifyContent_tablet="center"
+              padding="15px"
+              alignItems="center"
+              alignItems_tablet="normal"
+            >
+              <Icon icon={box.icon} width="89px" height="89px" color={null} />
+              <Div
+                margin="0 0 0 15px"
+                margin_tablet="30px 0 0 0"
+                display="flex"
+                flexDirection="column"
+                display_tablet="block"
+              >
+                <H3
+                  textAlign="left"
+                  fontSize="30px"
+                  fontSize_tablet="65px"
+                  fontFamily="Archivo-Black"
+                  margin="0 0 30px 0"
+                >
+                  {box.title}
+                </H3>
+                <Paragraph
+                  textAlign="left"
+                  color="#000"
+                  opacity="1"
+                  fontSize="21px"
+                >
+                  {box.text}
+                </Paragraph>
+              </Div>
+            </Div>
+          ))}
+        </Div>
+      )}
     </Div>
   );
 };
 
 const TwoColumn = ({ left, right, proportions, session }) => {
   const [left_size, right_size] = proportions ? proportions : [];
-
   return (
     <Div
       flexDirection="column"
@@ -314,27 +375,30 @@ const TwoColumn = ({ left, right, proportions, session }) => {
       maxWidth_md="1366px"
     >
       <Div
-        justifyContent={left?.video && "left"}
+        justifyContent={left?.video ? "center" : left?.image ? "end" : "start"}
         flexDirection="column"
         size_tablet={left_size || 6}
         size="12"
         padding_xs="0"
         padding_md={right?.image?.shadow ? "0 20px 0 0 " : "0px"}
         // maxHeight="300px"
-        textAlign="left"
+        textAlign="center"
       >
-        <Side session={session} {...left} />
+        <Side session={session} {...left} side="left" />
       </Div>
       <Div
-        justifyContent={right?.video && "left"}
+        justifyContent={
+          right?.video ? "center" : right?.image ? "end" : "start"
+        }
         flexDirection="column"
+        justifyContent="center"
         size_tablet={right_size || 6}
         padding_xs="0"
         padding_md={left?.image?.shadow ? "0 0 0 20px" : "0px"}
         size="12"
-        textAlign="left"
+        textAlign="center"
       >
-        <Side session={session} {...right} />
+        <Side session={session} {...right} side="right" />
       </Div>
     </Div>
   );

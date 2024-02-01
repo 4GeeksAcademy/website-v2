@@ -21,9 +21,9 @@ form:
   # posible fields: "first_name", "last_name", "full_name", "phone", "email"
   # always the first_name, email and phone will be mandatory if added.
   fields: ["full_name", "phone", "email"]
-  heading: "Get more information, and change your life!"
-  motivation: "ENROLL NOW and change your life."
-  button_label: Get more information
+  heading: "Descargar curriculum y obtener más información"
+  motivation: "Recibirás un e-mail de nuestro equipo local, detalles sobre cómo funciona el programa icluyendo precios, financiamientos y la asistencia de nuestros asesores para ayudarte a tomar la mejor decisión para tu carrera."
+  button_label: Solicita más información
   redirect: null #you can redirect to another url or entirely diffrent website
 
 apply_schollarship: # form that is displayed at the end of the landing
@@ -33,10 +33,10 @@ apply_schollarship: # form that is displayed at the end of the landing
 
 # jumbotron on the top (cannot be commented out)
 header_data:
-  tagline: Become a Software Developer and Boost your Career in Tech
-  sub_heading: "Get a Career in Tech."
+  tagline: Aprende a Programar en Español en los EE. UU.
+  sub_heading: " Pocas plazas disponibles Emprende Tu Viaje en la Programación ahora"
   background: "#FFF1D1"
-  badge: "../../../static/images/badges/Course-Report-Badge-2023.png"
+  badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
   image_filter: brightness(0.3)
 
 features:
@@ -45,23 +45,24 @@ features:
   #                                         up   left down  right
   styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
   bullets:
-    - No previous experience or coding skills required.
-    - Part-Time, Online and Hybrid programs available.
-    - Get lifetime access to our mentors and Career Growth Support (Your first Job in Tech is our goal).
-    - Starting at $150 a month. Or you can pay after you get a job!
+    - No requiere experiencia previa
+    - Bootcamp a tiempo parcial diseñado para adaptarse a tu vida actual
+    - Experimenta la gratificación de aplicar lo que aprendes en el aula o directamente en proyectos prácticos
+    - El salario promedio de un desarrollador fullstack en Estados Unidos en 2024 es de $100K al año
 
 follow_bar:
   position: "top" # top, bottom, hidden
   content:
-    text: "Get $1,500 off if you enroll with our Labor Day Deal."
-    text_mobile: "ENROLL NOW and get $1,500 off when you use our code LABOR in our apply form"
+    text: |
+      Aprende a Programar en Español y Prepárate para tu Futuro Laboral. ¡Empieza Hoy!
+    text_mobile: "Aprende a Programar en Español y Prepárate para tu Futuro Laboral. ¡Empieza Hoy!"
     # devices:   XL      LG    MD      SM    XS
     font_size: ["25px", "25px", "25px", "20px", "18px"]
   button:
-    text: "Get more information"
-    path: "#top"
+    text: "Aplica"
+    path: "/es/aplica"
   phone:
-    text: "Call "
+    text: "Llama al: "
 
 short_badges:
   - name: "Premios Tecnologia Siglo XXI"
@@ -70,13 +71,17 @@ short_badges:
     alt: "Mejor centro de Coding Bootcamp"
   - name: "Course Report"
     url: ""
-    image: "../../../static/images/badges/Course-Report-Badge-2023.png"
+    image: "../../../static/images/badges/Course-Report-Badge-2024.webp"
     alt: "Top Coding Bootcamps Course Report"
   - name: "Switchup"
     url: ""
     image: "../../../static/images/badges/switchup-badge-2023.png"
-    alt: "Best coding bootcamp Switchup 2023"   
-  - name: "Florida Department of Education"
+    alt: "Best coding bootcamp Switchup 2024"   
+  - name: "Switchup"
+    url: ""
+    image: "../../../static/images/badges/european_excellence_education_black.png"
+    alt: "Premio Excelencia Educativa al Mejor Programa Educativo para la Inserción Profesional"   
+  - name: "European Excellence"
     url: ""
     image: "../../../static/images/badges/licensed.png"
     alt: "Florida Department of Education"
@@ -87,7 +92,7 @@ short_badges:
 
 rating_reviews:
   position: 5
-  heading: "Top rated on all available review sites"
+  heading: "Altas calificaciones en todos los sitios de reseñas disponibles"
   rating_list:
     - alt: "Career Karma"
       image: "../../../static/images/badges/career-karma.png"
@@ -106,133 +111,161 @@ rating_reviews:
       rating: 5
       url: ""
 
-badges:
-  position: 5
-  heading: "4Geeks Academy has awards and recognitions that validate it's excellence"
+# badges:
+#   position: 5
+#   heading: "4Geeks Academy cuenta con premios y reconocimientos que validan su excelencia"
 
 program_details:
-  position: 1
-  heading: "Master Python, JS and React"
-  sub_heading: "The 3 most used languages in the world"
+  position: 4
+  heading: "Domina JavaScript, React y Python"
+  sub_heading: "Tres de los lenguajes más solicitados por la industria"
 
 geeks_vs_others:
   position: 6
-  heading: "What made us so successful?"
+  heading: "¿Qué nos diferencia de Otros Bootcamps?"
   paragraph: ""
   total_rows: 5
 
-# why_4geeks:
-#   position: 7
-#   heading: "Why choosing 4Geeks Academy"
-#   sub_heading: " "
+why_4geeks:
+  position: 10
+  heading: "Escúchalo de nuestros alumnos"
+  sub_heading: ""
+  footer:
+    text: "Ver opciones de financiación"
+    text_link: "/"
 
 who_is_hiring:
-  position: 8
+  position: 15
   limit: 4
-  heading: "Who is hiring our students?"
-  sub_heading: "500+ hiring partners, and 50+ job openings right now for software development"
+  heading: "¿Quién contrata a nuestros estudiantes?"
+  sub_heading: "Contamos con apoyo profesional que te dará las herramientas para entrar al campo laboral"
 
 alumni_projects:
   position: 9
-  heading: "Projects you will be able to make"
-  sub_heading: "Take a look at our previous student projects"
+  heading: "Proyectos que podrás realizar"
+  sub_heading: "Mira otros proyectos realizados por nuestros estudiantes anteriores"
 
 # Possible layours: [two_column_left_image, two_column_right_image]
 components:
   - name: passion
-    position: 4
+    position: 3
     background: "lightYellow"
     layout: two_column_left
     proportions: [6, 6]
     image:
       style: '{ "border" : "3px solid black", "backgroundSize": "contain" }' 
       shadow: true
-      src: "/images/landing/why-4geeks-academy-preview.png"
+      src: "/images/testimonials/javier-murillo-testimonial.jpg"
       link: "https://www.switchup.org/bootcamps/4geeks-academy"
-    video: "SixRm6R8rc0"
+    video: "https://www.youtube.com/watch?v=c14ZDHXN6_w&t=6s"
     heading:
-      text: "Jordan's Journey from JS and React to Python at 4Geeks Academy!"
+      text: "Testimonio de Javier Murillo tras Estudiar en 4Geeks"
       font_size: ["40px", "40px", "40px", "40px", "40px"]
     content:
-      text: "Join us in celebrating his success story and discover how you too can unlock a world of opportunities through our comprehensive bootcamp program!"
+      text: "El programa de 4Geeks es una inversión que vale la pena. La combinación de su enfoque práctico y la exigencia del programa no solo te desafía, sino que te garantiza un sólido posicionamiento en la industria tecnológica de Estados Unidos"
       font_size: ["16px"]
     button:
-      text: "GET MORE INFO"
+      text: "Más información"
       background: black
       color: white
       hover_color: "#white"
       path: "#bottom"
+
   - name: top_coding_bootcamp
     position: 8
     background: "#fbfbfb"
     layout: two_column_left
     proportions: [4, 8]
     image:
-      style: '{ "backgroundSize": "contain", "maxWidth": "250px", "margin": "0 auto"}'
-      src: "/images/badges/Course-Report-Badge-2023.png"
+      style: '{ "backgroundSize": "contain", "height": "250px", "margin": "0 auto"}'
+      src: "/images/badges/Course-Report-Badge-2024.webp"
       link: "https://www.coursereport.com/schools/4geeks-academy"
     content:
-      style: '{ "line-height": "30px", "textAling": "center", "padding": "0 20px"}'
-      text:
-        "We have been selected as one of the Top Coding Bootcamps globally for 3 years in a row"
+      style: '{ "line-height": "30px", "textAling": "center", "padding": "0 20px", "justifyContent":"center"}'
+      text: "hemos sido seleccionados como uno de los mejores bootcamps de codificación a nivel mundial durante cuatro años consecutivo"
                     #xl      lg     md     sm       xs
       font_size: ["35px", "30px", "30px", "28px", "20px"]
   # - name: geeksinfo
   #   position: 1
   #   layout: geeksInfo
-  - name: working_in_tech
-    position: 3
-    background: "#f1f1f1"
-    proportions: [4, 8]
-    layout: two_column_left
-    image:
-      style: '{ "backgroundSize": "cover" }'
-      src: "https://storage.googleapis.com/4geeks-academy-website/landing-pictures/testimonials.webp"
-      shadow: true
-    heading:
-      text:
-        "86% of our graduates are now working in the field with an average entry salary of $50,000/yr."
-        #           xl      lg     md     sm    xs
-      font_size: ["40px", "34px"]
+
     
   - name: geekinfo_2
-    position: 3
+    position: 2
     layout: two_column_right
     proportions: [6, 6]
     background: ""
     image:
-      style: '{ "backgroundSize": "contain" }'
-      src: "/images/landing/group_194.png"
+      style: '{ "backgroundSize": "cover" }'
+      src: "/images/happy_people2.jpg"
+      shadow: true
     section_heading: 
-      text: "Get everything you need to succeed"
+      text: "No Permitas que el Idioma Sea un Obstáculo"
       style: '{ "font-size": "30px" }'
     heading:
-      text: "Why coding?"
+      text: "¿Por qué programar?"
       font_size: ["40px", "40px", "40px", "40px", "40px"]
     sub_heading:
-      text: "Learning to code will give you access to:"
+      text: "Aprender a programar te dará acceso a: "
       font_size: ["16px", "16px", "16px", "16px", "16px"]
     button: 
-      text: "Compare 4Geeks with other bootcamps."
+      text: "Aplica ahora "
       color: white
       hover_color: "white"
       background: "black"
-      path: "https://4geeksacademy.com/us/geeks-vs-others"
+      path: "#top"
     content: 
       text: ""
       font_size: ["16px"]
       path: ""
     bullets:
       items:
-      - heading: "JOB OPPORTUNITIES"
-        text: "Computer programmers are in high demand, and this demand is projected to continue increasing over the next decade."
-        icon: "circle" #string with icon for example ['check', 'cicle', etc]
-      - heading: "BETTER PAY"
-        text: "The starting salary for a Junior Software Developer in Miami is $48,000."
-        icon: "circle" #string with icon for example ['check', 'cicle', etc]
-      - heading: "CAREER FLEXIBILITY"
-        text: "Coding skills prepare you for a variety of roles in the rapidly shifting digital economy."
-        icon: "circle" #string with icon for example ['check', 'cicle', etc]
+      - heading: "Amplias Oportunidades Laborales"
+        text: "Según la Oficina de Estadísticas Laborales de EE. UU., se proyecta un crecimiento del 13% en empleos de desarrollo web hasta 2030"
+        icon: "check" #string with icon for example ['check', 'cicle', etc]
+      - heading: "Salarios Competitivos"
+        text: "Los desarrolladores Full Stack tienen un salario promedio de alrededor de $100,000 anuales, según datos de la Oficina de Estadísticas Laborales de EE. UU."
+        icon: "check" #string with icon for example ['check', 'cicle', etc]
+      - heading: "Demanda Constante"
+        text: "La demanda de desarrolladores Full Stack sigue siendo alta. Según Statista, el 88% de las empresas tienen dificultades para encontrar profesionales de TI con las habilidades adecuadas"
+        icon: "check" #string with icon for example ['check', 'cicle', etc]
+
+  - name: new_design
+    position: 5
+    layout: two_column_right 
+    swipable: False
+    background: "#FFFFFF"
+    image:
+      style: "{}"
+      src: "/images/ownpeoplecoding2.jpg"
+      shadow: true
+    heading: 
+      text: "¿Por qué 4Geeks Academy?"
+    sub_heading:
+      text: "Hay varias razones por las que elegir 4Geeks Academy para aprender a programar"
+    button: 
+      text: "Aplica ahora"
+      color: white
+      hover_color: "white"
+      background: "black"
+      path: "#bottom"
+    content: 
+      text: ""
+      font_size: ["16px"]
+      path: ""
+    bullets:
+      items:
+      - heading: "Enseñanza práctica y orientada a resultados"
+        text: "4Geeks Academy se centra en enseñar a los estudiantes las habilidades que necesitan para tener éxito como programador en el mundo laboral"
+        icon: "check" #string with icon for example ['check', 'cicle', etc]
+      - heading: "Tasa de colocación laboral"
+        text: "4Geeks Academy tiene una tasa de colocación laboral del 82%. Esto significa que la mayoría de los estudiantes que completan el programa encuentran un trabajo como desarrollador de software dentro de los 130 días de graduarse"
+        icon: "check" #string with icon for example ['check', 'cicle', etc]
+      - heading: "Demanda Constante"
+        text: "La demanda de desarrolladores Full Stack sigue siendo alta. Según Statista, el 88% de las empresas tienen dificultades para encontrar profesionales de TI con las habilidades adecuadas"
+        icon: "check" #string with icon for example ['check', 'cicle', etc]
+
+
 
 # why_python:
 #   position: 7
