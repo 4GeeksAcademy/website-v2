@@ -34,7 +34,7 @@ apply_schollarship: # form that is displayed at the end of the landing
 # jumbotron on the top (cannot be commented out)
 header_data:
   tagline: Aprende a Programar en Español en los EE. UU.
-  sub_heading: " Pocas plazas disponibles Emprende Tu Viaje en la Programación ahora"
+  sub_heading: "Pocas plazas disponibles"
   background: "#FFF1D1"
   badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
   image_filter: brightness(0.3)
@@ -54,7 +54,7 @@ follow_bar:
   position: "top" # top, bottom, hidden
   content:
     text: |
-      Aprende a Programar en Español y Prepárate para tu Futuro Laboral. ¡Empieza Hoy!
+      Aprende a Programar en Español en Estados Unidos ¡Empieza Hoy!
     text_mobile: "Aprende a Programar en Español y Prepárate para tu Futuro Laboral. ¡Empieza Hoy!"
     # devices:   XL      LG    MD      SM    XS
     font_size: ["25px", "25px", "25px", "20px", "18px"]
@@ -209,7 +209,7 @@ components:
       text: "Aprender a programar te dará acceso a: "
       font_size: ["16px", "16px", "16px", "16px", "16px"]
     button: 
-      text: "Aplica ahora "
+      text: "¡POSTÚLATE AHORA! "
       color: white
       hover_color: "white"
       background: "black"
@@ -244,7 +244,7 @@ components:
     sub_heading:
       text: "Hay varias razones por las que elegir 4Geeks Academy para aprender a programar"
     button: 
-      text: "Aplica ahora"
+      text: "¡POSTÚLATE AHORA!"
       color: white
       hover_color: "white"
       background: "black"
