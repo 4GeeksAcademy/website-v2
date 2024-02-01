@@ -22,7 +22,7 @@ form:
   # always the first_name, email and phone will be mandatory if added.
   fields: ["full_name", "phone", "email"]
   heading: "Descargar curriculum y obtener más información"
-  motivation: "Recibirás un e-mail de nuestro equipo local, detalles sobre cómo funciona el programa icluyendo precios, financiamientos y la asistencia de nuestros asesores para ayudarte a tomar la mejor decisión para tu carrera."
+  motivation: "Recibirás un e-mail de nuestro equipo con detalles sobre cómo funciona el programa incluyendo financiamiento, oportunidades, y todo lo que necesitas para tomar la mejor decisión para tu carrera."
   button_label: Solicita más información
   redirect: null #you can redirect to another url or entirely diffrent website
 
@@ -34,7 +34,7 @@ apply_schollarship: # form that is displayed at the end of the landing
 # jumbotron on the top (cannot be commented out)
 header_data:
   tagline: Aprende a Programar en Español en los EE. UU.
-  sub_heading: "Pocas plazas disponibles"
+  sub_heading: "Pocos cupos disponibles"
   background: "#FFF1D1"
   badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
   image_filter: brightness(0.3)
@@ -45,9 +45,9 @@ features:
   #                                         up   left down  right
   styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
   bullets:
+    - Pregunta por la oferta de $4000 de descuento
     - No requiere experiencia previa
     - Bootcamp a tiempo parcial diseñado para adaptarse a tu vida actual
-    - Experimenta la gratificación de aplicar lo que aprendes en el aula o directamente en proyectos prácticos
     - El salario promedio de un desarrollador fullstack en Estados Unidos en 2024 es de $100K al año
 
 follow_bar:
