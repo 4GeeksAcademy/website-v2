@@ -201,9 +201,7 @@ export const Navbar = ({
     }
   `);
 
-  const isContentBarActive = true;
-  // (contentBar.active && isTestMode) ||
-  // (contentBar.active && !isDevelopment());
+  const isContentBarActive = contentBar.active || isDevelopment();
 
   const langDictionary = {
     us: "es",

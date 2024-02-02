@@ -156,12 +156,10 @@ export const NavbarMobile = ({
     */
   let findCity = currentLocation.find((loc) => loc.node?.city === city);
 
-  let isCustombarActive =
-    session && session.location && session.location.custom_bar.active;
+  // let isCustombarActive =
+  //   session && session.location && session.location.custom_bar.active;
 
-  const isContentBarActive = true;
-  // (contentBar?.active && isTestMode) ||
-  // (contentBar?.active && !isDevelopment());
+  const isContentBarActive = contentBar.active || isDevelopment();
 
   useEffect(() => {
     if (findCity !== undefined && findCity.node) {
