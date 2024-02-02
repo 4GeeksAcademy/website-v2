@@ -187,7 +187,7 @@ components:
       text:
         "Python y Machine Learning"
         #           xl      lg      md      sm      xs
-      font_size: ["50px", "50px", "50px", "50px", "50px"]
+      font_size: ["45px", "45px", "40px", "25px", "25px"]
     sub_heading:
       text: "Nuestro programa te capacita en Python, SQL, Looker, Streamlit y Estadísticas para convertirte en analista de datos. Desarrolla modelos predictivos, aplica algoritmos como vecinos cercanos y árboles de decisión, y trabaja en casos reales. Únete a equipos técnicos en diversas compañías."
     content:

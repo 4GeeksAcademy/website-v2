@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useContext } from "react";
 import PropTypes from "prop-types";
 import { Button, Colors } from "../Styling";
-import { H4 } from "../Heading";
+import { H4, Paragraph, Span } from "../Heading";
 import Icon from "../Icon";
 import { Div, Column } from "../Sections";
 import Select from "react-select";
@@ -133,22 +133,25 @@ const customStyles = {
     ...styles,
     width: "100%",
     margin: "0px",
+    padding: "6px 0",
   }),
   control: (styles, state) => ({
     ...styles,
     fontFamily: "Lato, sans-serif",
-    // background: "#ffffff",
+    background: "#ffffff",
     border: state.isFocused ? "1px solid #000000" : "1px solid #A4A4A4",
     boxShadow: "none",
 
-    marginBottom: "16px",
+    marginBottom: "0px",
     marginTop: "0px",
+    opacity: "0.7",
     width: "100%",
     fontSize: "15px",
     fontWeight: "400",
+    color: "#000",
     lineHeight: "22px",
-    "&:hover": { boxShadow: "0 0 0 1px black" },
-    "&:focus": { boxShadow: "0 0 0 1px black", border: "1px solid #000000" },
+    "&:hover": { border: "1px solid #000000" },
+    //"&:focus": { boxShadow: "0 0 0 1px black", border: "1px solid #000000" },
   }),
   option: (styles, { data, isDisabled, isFocused, isSelected }) => {
     return {
@@ -160,15 +163,46 @@ const customStyles = {
 
 export const SelectRaw = ({ onChange, ...rest }) => {
   return (
-    <Select
-      className="react-select-wrapper"
-      data-cy="react_select_wrapper"
-      styles={customStyles}
-      {...rest}
-      onChange={(opt) => {
-        if (onChange) onChange(opt, true);
-      }}
-    />
+    <Div
+      position="relative"
+      width="100%"
+      margin={rest.placeholder ? "0 0 20px 0" : "0 0 16px 0"}
+      margin_tablet="0 0 16px 0"
+    >
+      {rest.placeholder && rest.placeholderFloat && (
+        <Paragraph
+          display={rest.display || "flex"}
+          display_tablet="flex"
+          style={{
+            position: "absolute",
+            background: "white",
+            fontSize: "13px",
+            color: "#000",
+            opacity: "1",
+            width: "fit-content",
+            height: "20px",
+            padding: "0 4px",
+          }}
+          top={rest.single ? "-13px" : "-20px"}
+          left="7px"
+          left_tablet="8px"
+          top_tablet="-13px"
+          zIndex_tablet="1"
+          zIndex={rest.single ? "1" : "0"}
+        >
+          {rest.placeholder}
+        </Paragraph>
+      )}
+      <Select
+        className="react-select-wrapper"
+        data-cy="react_select_wrapper"
+        styles={rest.style || customStyles}
+        {...rest}
+        onChange={(opt) => {
+          if (onChange) onChange(opt, true);
+        }}
+      />
+    </Div>
   );
 };
 SelectRaw.propTypes = {

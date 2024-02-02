@@ -416,7 +416,7 @@ const LeadForm = ({
                 style={{ fontWeight: "700", color: "#000" }}
                 textAlign="left"
                 padding={textPadding || "0px 0px 10px 0px"}
-                padding_tablet={textPadding_tablet || "0px 0px 10px 0px"}
+                padding_tablet={textPadding_tablet || "0px 0px 20px 0px"}
               >
                 {motivation}
               </Paragraph>
@@ -480,10 +480,7 @@ const LeadForm = ({
             {selectProgram?.length > 1 && (
               <Div data-cy="dropdown_program_selector" margin_tablet="0 0 0 0">
                 <SelectRaw
-                  style={{
-                    background: "#FFFFFF",
-                  }}
-                  //style={{margin: "0 0 11px 0"}}
+                  //Not apply styles
                   options={selectProgram}
                   placeholder={courseSelector.place_holder}
                   valid={true}
@@ -499,9 +496,7 @@ const LeadForm = ({
             {selectLocation?.length > 1 && (
               <Div data-cy="dropdown_location_selector" margin_tablet="0">
                 <SelectRaw
-                  style={{
-                    background: "#FFFFFF",
-                  }}
+                  //Not apply styles
                   options={selectLocation}
                   placeholder={locationSelector.place_holder}
                   valid={true}
