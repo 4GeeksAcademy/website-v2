@@ -12,7 +12,8 @@ meta_info:
   
   # ⬇️ cohort_include_regex field is used to filter cohorts on the calendar that only test successfully for a particular regex
   # for example: for this location, only show cohorts starting with usa-xx-spanish
-  cohort_include_regex: ""
+  cohort_include_regex: []
+  cohort_exclude_regex: []
 
 seo_title: "Coding Bootcamp Roma, Italia"
 header:

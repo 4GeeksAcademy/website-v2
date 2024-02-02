@@ -146,6 +146,7 @@ const Calendar = (props) => {
               label: l.name,
               value: l.breathecode_location_slug,
               cohort_include_regex: l.meta_info.cohort_include_regex,
+              cohort_exclude_regex: l.meta_info.cohort_exclude_regex,
             }))
           ),
         },
@@ -379,24 +380,23 @@ const Calendar = (props) => {
                   let filtered =
                     opt.label !== "All Locations"
                       ? datas[filterType.value].all.filter((elm) => {
+                          if (Array.isArray(opt.cohort_exclude_regex)){
+                            if(opt.cohort_exclude_regex.some((regx) => RegExp(regx).test(elm.slug))){
+                              console.log(`removing ${elm.slug}`)
+                              return false;
+                            } 
+                          }
+                          if (Array.isArray(opt.cohort_include_regex)){
+                            if(opt.cohort_include_regex.some((regx) => RegExp(regx).test(elm.slug))){
+                              console.log(`adding ${elm.slug}`)
+                              return true;
+                            }
+                          }
+                          
                           if (elm.academy.slug === academySlug) return true;
-                          if (
-                            opt.cohort_include_regex &&
-                            RegExp(`${opt.cohort_include_regex}`).test(elm.slug)
-                          )
-                            return true;
-                          console.log(
-                            "not matching ",
-                            RegExp(`${opt.cohort_include_regex}`)
-                          );
+                          return false;
                         })
                       : datas[filterType.value].all;
-
-                  // if no cohorts on location, try to include online
-                  if (filtered.length === 0)
-                    filtered = datas[filterType.value].all.filter((elm) =>
-                      elm.academy.slug.includes("online")
-                    );
 
                   setData({
                     ...datas,
