@@ -232,7 +232,7 @@ export const NavbarMobile = ({
   return (
     <Div
       display="inline"
-      position="fixed"
+      position="sticky"
       width="100%"
       top="0"
       opacity="1"
