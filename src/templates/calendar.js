@@ -145,7 +145,7 @@ const Calendar = (props) => {
             session.locations.map((l) => ({
               label: l.name,
               value: l.breathecode_location_slug,
-              cohort_filter_regex: l.meta_info.cohort_filter_regex,
+              cohort_include_regex: l.meta_info.cohort_include_regex,
             }))
           ),
         },
@@ -379,10 +379,17 @@ const Calendar = (props) => {
                   let filtered =
                     opt.label !== "All Locations"
                       ? datas[filterType.value].all.filter((elm) => {
-                        if(elm.academy.slug === academySlug) return true;
-                        if(opt.cohort_filter_regex && RegExp(`${opt.cohort_filter_regex}`).test(elm.slug)) return true;
-                        console.log("not matching ", RegExp(`${opt.cohort_filter_regex}`))
-                      })
+                          if (elm.academy.slug === academySlug) return true;
+                          if (
+                            opt.cohort_include_regex &&
+                            RegExp(`${opt.cohort_include_regex}`).test(elm.slug)
+                          )
+                            return true;
+                          console.log(
+                            "not matching ",
+                            RegExp(`${opt.cohort_include_regex}`)
+                          );
+                        })
                       : datas[filterType.value].all;
 
                   // if no cohorts on location, try to include online
