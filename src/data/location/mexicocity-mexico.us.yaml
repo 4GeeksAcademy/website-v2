@@ -11,6 +11,10 @@ meta_info:
   region: "latam"
   dialCode: "52"
   related_clusters: ["trends-and-tech"]
+  
+  # ⬇️ cohort_filter_regex field is used to filter cohorts on the calendar that only test successfully for a particular regex
+  # for example: for this location, only show cohorts starting with usa-xx-spanish
+  cohort_filter_regex: ""
 
 seo_title: "Coding Bootcamp Mexico"
 header:

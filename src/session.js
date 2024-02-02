@@ -43,6 +43,7 @@ export default ({ children }) => {
               position
               region
               dialCode
+              cohort_filter_regex
             }
             button {
               apply_button_text
