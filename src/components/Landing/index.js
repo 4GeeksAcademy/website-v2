@@ -524,7 +524,6 @@ export const landingSections = {
     );
   },
   geeks_vs_others: ({ session, pageContext, yml, course, index }) => {
-    console.log("YML", yml);
     return (
       <React.Fragment key={index}>
         <Title
@@ -883,6 +882,8 @@ export const landingSections = {
       yml.section_heading && yml.section_heading.font_size
         ? yml.section_heading.font_size
         : [];
+    console.log("this is the yml");
+    console.log(yml);
     return (
       <Div
         id="two_column_right"
@@ -922,7 +923,12 @@ export const landingSections = {
             content: yml.content,
             button: yml.button,
           }}
-          right={{ image: yml.image, video: yml.video }}
+          right={{
+            image: yml.image,
+            video: yml.video,
+            videoHeight: yml.videoHeight,
+            videoWidth: yml.videoWidth,
+          }}
           proportions={yml.proportions}
           session={session}
         />

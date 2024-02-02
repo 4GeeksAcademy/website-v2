@@ -11,6 +11,8 @@ import { transferQuerystrings, smartRedirecting } from "../../utils/utils";
 
 const Side = ({
   video,
+  videoHeight,
+  videoWidth,
   image,
   header,
   heading,
@@ -30,10 +32,10 @@ const Side = ({
         thumb={image && image.src}
         image_thumb={image}
         id={video}
-        videoHeight="360px"
+        videoHeight={videoHeight ? videoHeight : "360px"}
         margin_tablet="0px"
         style={{
-          width: "100%",
+          width: videoWidth ? videoWidth : "100%",
         }}
       />
     );
@@ -357,6 +359,7 @@ const Side = ({
 
 const TwoColumn = ({ left, right, proportions, session }) => {
   const [left_size, right_size] = proportions ? proportions : [];
+  console.log(right);
   return (
     <Div
       flexDirection="column"
