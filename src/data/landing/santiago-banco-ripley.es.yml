@@ -145,14 +145,14 @@ components:
     content:
       font_size: ["16px"]
       text: |
-        <img src="/images/geekpal.png" style="max-width: 200px;">
+        <img src="/images/geekpal.png" alt="geekpal" style="max-width: 100%; height: auto; display: block;">
         <br>
         <p>GeekPAL es una membresía instantánea que obtienes cuando te conviertes en estudiante de 4Geeks Academy. Te garantiza que no volverás a programar solo. Con GeekPAL contará con un compañero por el resto de su vida, sí, incluso después de graduarse. Si te quedas atascado, siempre habrá un mentor disponible para que puedas obtener ayuda con tu código</p>
         <br>
         <br>
-        <img src="/images/geekforce.png" style="max-width: 200px;">
+        <img src="/images/geekforce.png" alt="geekpal" style="max-width: 100%; height: auto; display: block;">
         <p>GeekForce es el proceso colectivo de apoyo profesional del Bootcamp. La 'fuerza' significa empoderamiento profesional y es una membresía de por vida. Brinda asistencia para la colocación laboral del estudiante y para que se prepare para conseguir un trabajo en tecnología.</p>
-  
+          
   - name: python_y_javascript
     position: 3
     layout: two_column_left

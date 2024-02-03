@@ -106,17 +106,58 @@ geeks_vs_others:
   total_rows: 5
 
 why_4geeks:
-  position: 7
+  position: 8
   heading: "Por qué 4Geeks"
   sub_heading: " "
 
 who_is_hiring:
-  position: 8
+  position: 9
   limit: 4
   heading: "¿Quién contrata a nuestros alumnos?"
   sub_heading: "Nos encanta ver crecer a nuestros estudiantes, es por eso que nos esforzamos cada día por tener más aliados, para que puedas trabajar en empresas que te ayuden a seguir creciendo profesionalmente."
 
 components:
+  - name: new_design_with_bullets
+    position: 1
+    layout: two_column_right 
+    swipable: False
+    background: "#fbfbfb"
+    image:
+      style: '{"backgroundSize": "contain;"}'
+      src: "/images/landing/hombre-con-laptop.png"
+      shadow: false
+    section_heading: 
+      text: "Diseñado para hacerte exitoso en el mundo de la programación"
+      style: '{ "font-size": "30px" }'
+    heading: 
+      text: "¡Únete a nosotros para impulsar tu carrera en tecnología!"
+    sub_heading:
+      text: ""
+    button: 
+      text: "OBTENER MÁS INFORMACIÓN"
+      color: white
+      hover_color: "white"
+      background: "black"
+      path: "#"
+    content: 
+      text: ""
+      font_size: ["16px"]
+      path: ""
+    bullets:
+      items:
+      - heading: "TODAS LAS MENTORIAS QUE NECESITAS"
+        text: "En línea y en persona, por el resto de tu vida, incluso para codificación de dudas laborales"
+        icon: "circle" 
+      - heading: "TIEMPO DE RESPUESTA"
+        text: "No te quedes atascado con tu código, no te llevará más de 30 minutos para que un instructor te ayude."
+        icon: "circle" 
+      - heading: "1:7 PROPORCIÓN PROFESOR: ESTUDIANTE"
+        text: "Encontrarás más profesores en 4Geeks que el promedio de la industria."
+        icon: "circle" 
+      - heading: "SOPORTE PROFESIONAL A LA MEDIDA"
+        text: "Proporcionamos ayuda para la colocación laboral y preparación para el empleo en tecnología."
+        icon: "circle" 
+
   - name: how-it-works
     position: 4
     layout: iconogram
@@ -140,36 +181,42 @@ components:
       title: Aprende a programar con nosotros
 
   - name: python_y_javascript
-    position: 5
+    position: 2
     layout: two_column_right
     background: "veryLightBlue2" # Name of the color(from components/Styling/index.js) or color code ex: #C9F9F9 .
+    style: '{"magin": "20px"}'
     image:
       src: "/images/why-4geeks/python-image.png"
     heading:
       text:
         "Python y JavaScript"
         #           xl      lg      md      sm      xs
-      font_size: ["50px", "50px", "50px", "50px", "50px"]
+      font_size: ["45px", "45px", "30px", "28px", "25px"]
     content:
       text: "Nuestro programa está basado en el uso de Python y JavaScript. ¿La razón? En el mercado laboral JavaScript tiene 26 veces más vacantes de trabajo que Ruby on Rails y Python te permite acceder a distintas áreas del mundo de la programación. Otras herramientas que también aprenderás a usar en nuestro programa son: HTML5, CSS3, React, Flask, etc."
       font_size: ["16px"]
 
-  - name: more_testimonials
-    position: 9
-    layout: two_column_left
+  - name: some_id
+    position: 7
+    layout: two_column_right
+    background: "#fbfbfb"
     image:
-      src: "https://storage.googleapis.com/4geeks-academy-website/landing-pictures/testimonials.webp"
-      shadow: true
+      style: '{ "border" : "3px solid black" }' 
+      shadow: true 
+      src: "../../../static/images/testimonials/joshua-bravo-testimonial.jpg"
+    video: "https://www.youtube.com/watch?v=rtpfwwfE0yY"
     heading:
-      text: "Testimonios de Nuestros Alumnos"
-      #xl      lg     md     sm    xs
+      text:
+        "De ayudante de cocina al mundo tecnológico, El camino de Joshua hacia una carrera en la industria de la tecnología"
+        #xl      lg     md     sm    xs
       font_size: ["40px", "34px", "34px", "25px", "20px"]
-    button:
-      text: "Ver Testimoniales"
-      color: white
-      background: black
-      hover: white
-      path: "https://www.youtube.com/watch?v=rtpfwwfE0yY&ab_channel=4GeeksAcademy"
     content:
-      text: "Mentorías ilimitadas, distintos instructores, todas las semanas. Te acompañaremos en este camino para que puedas convertirte en Full Stack Developer Junior y conseguir tu primer empleo en el área. Siempre te acompañaremos, aún cuando ya hayas conseguido trabajo, una vez eres parte de 4Geeks, siempre serás parte de la comunidad y sus beneficios."
-      font_size: ["16px"]
+      #style: '{}'
+      #text: "De asistente de cocina a programador gracias a 4Geeks Academy. Su dedicación y formación lo convirtieron en un profesional altamente capacitado."
+      #font_size: ["16px"]
+    button:
+      text: "Experiencias de Éxito"
+      path: "#why_4geeks"
+      color: "white"
+      background: "black"
+      hover: "lightBlue"
