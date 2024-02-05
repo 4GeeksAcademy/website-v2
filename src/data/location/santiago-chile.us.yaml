@@ -119,7 +119,7 @@ two_columns:
 
 active_campaign_location_slug: "santiago-chile"
 breathecode_location_slug: "santiago-chile"
-gdpr_compliant: false # do we need to ask for permision?
+gdpr_compliant: true # do we need to ask for permision?
 in_person_available: true # important to accept in-person applicants
 
 city: "Santiago de Chile"
