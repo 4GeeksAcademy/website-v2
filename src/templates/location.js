@@ -68,6 +68,8 @@ const Location = ({ data, pageContext, yml }) => {
     es: "SELECCIONAR PROGRAMA",
   };
 
+  console.log(data);
+
   return (
     <>
       <GridContainerWithImage
@@ -570,7 +572,7 @@ export const query = graphql`
         }
       }
     }
-    allFaqYaml(filter: { fields: { lang: { eq: $lang } } }) {
+    allFaqYaml {
       edges {
         node {
           faq {
