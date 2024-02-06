@@ -360,15 +360,10 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
       <Div
         id="two_column_left"
         flexDirection="column"
-        // padding="0 0 50px 0"
-        // padding_tablet="0 6% 0 6%"
-        // margin="0 auto"
+        padding="0 0 50px 0"
+        padding_tablet="0 6% 0 6%"
+        margin="0 auto"
         maxWidth="1695px"
-        margin="0"
-        padding="0 10px"
-        padding_tablet="0 90px"
-        padding_md="0 50px"
-        padding_lg="0 30px"
       >
         <TwoColumn
           right={{ image: ymlTwoColumn.image }}
@@ -384,27 +379,9 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
         />
       </Div>
 
-      {/* Cambiar de acuerdo a los parámetros del componente WeTrust, este componente tiene un maxWidth de 1366px con padding diferentes */}
-      <Div
-        maxWidth="1695px"
-        margin="auto"
-        padding="0 10px"
-        padding_tablet="0 90px"
-        padding_md="0 50px"
-        padding_lg="0 -10px"
-      >
-        <WeTrust we_trust={yml.we_trust_section} />
-      </Div>
+      <WeTrust we_trust={yml.we_trust_section} />
 
-      <Div
-        display="block"
-        maxWidth="1695px"
-        margin="40px 0"
-        padding="0 10px"
-        padding_tablet="0 90px"
-        padding_md="0 130px"
-        padding_lg="0 30px"
-      >
+      <Div display="block" margin="40px 0px">
         <Div display="block" margin="0 auto 40px 0" padding="0 20px">
           <H2 margin="0 0 15px 0">{yml.how_it_works.title}</H2>
           <Paragraph color="#000" opacity="1" fontSize="18px">
