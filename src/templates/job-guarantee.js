@@ -368,7 +368,7 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
         padding="0 10px"
         padding_tablet="0 90px"
         padding_md="0 50px"
-        padding_lg="0 30px"
+        padding_lg="0 130px"
       >
         <TwoColumn
           right={{ image: ymlTwoColumn.image }}
