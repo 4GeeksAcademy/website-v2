@@ -104,6 +104,14 @@ const _fields = {
     place_holder: "",
     error: "You need to accept the privacy terms",
   },
+  wa_consent: {
+    value: true,
+    valid: true,
+    required: true,
+    type: "text",
+    place_holder: "",
+    error: "You need to accept Whatsapp contact",
+  },
   client_comments: {
     value: "",
     valid: true,
@@ -212,6 +220,9 @@ const LeadForm = ({
               link_label
               url
             }
+            wa_consent {
+              message
+            }
           }
         }
       }
@@ -249,7 +260,8 @@ const LeadForm = ({
 
   const [formStatus, setFormStatus] = useState({ status: "idle", msg: "" });
   const [formData, setVal] = useState(_fields);
-  const [consentValue, setConsentValue] = useState(false);
+  const [consentValueGdpr, setConsentValueGdpr] = useState(false);
+  const [consentValueWa, setConsentValueWa] = useState(false);
   const { session, setLocation } = useContext(SessionContext);
   const courseSelector = yml.form_fields.find((f) => f.name === "course");
   const locationSelector = yml.form_fields.find((f) => f.name === "location");
@@ -283,8 +295,6 @@ const LeadForm = ({
         )}`
       );
   });
-
-  console.log("yml", yml);
 
   return (
     <Form
@@ -322,8 +332,13 @@ const LeadForm = ({
         ) {
           setFormStatus({ status: "error", msg: locationSelector.error });
         } else if (
-          consentValue === false &&
+          consentValueGdpr === false &&
           session.location?.gdpr_compliant === true
+        ) {
+          setFormStatus({ status: "error", msg: consentCheckboxField.error });
+        } else if (
+          consentValueWa === false &&
+          session.location?.wa_compliant === true
         ) {
           setFormStatus({ status: "error", msg: consentCheckboxField.error });
         } else {
@@ -538,9 +553,9 @@ const LeadForm = ({
                 <input
                   name="isGoing"
                   type="checkbox"
-                  checked={consentValue}
+                  checked={consentValueGdpr}
                   onChange={() => {
-                    setConsentValue(!consentValue);
+                    setConsentValueGdpr(!consentValueGdpr);
                     setVal({
                       ...formData,
                       consent: {
@@ -571,6 +586,38 @@ const LeadForm = ({
                   >
                     {yml.consent.link_label}
                   </a>
+                </Paragraph>
+              </Div>
+            )}
+            {session && session.location && session.location.wa_compliant && (
+              <Div position="relative" margin="10px 0 0 0">
+                <input
+                  name="isGoing"
+                  type="checkbox"
+                  checked={consentValueWa}
+                  onChange={() => {
+                    setConsentValueWa(!consentValueWa);
+                    setVal({
+                      ...formData,
+                      wa_consent: {
+                        ...formData.wa_consent,
+                        valid: !formData.wa_consent.valid,
+                      },
+                    });
+                  }}
+                  style={{
+                    width: "24px",
+                    height: "24px",
+                    top: "10px",
+                    left: "7px",
+                  }}
+                />
+                <Paragraph
+                  fontSize="11px"
+                  margin="5px 0 0 5px"
+                  textAlign="left"
+                >
+                  {yml.wa_consent.message}
                 </Paragraph>
               </Div>
             )}

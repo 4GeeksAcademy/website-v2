@@ -36,6 +36,7 @@ export default ({ children }) => {
             active_campaign_location_slug
             gdpr_compliant
             in_person_available
+            wa_compliant
             online_available
             meta_info {
               slug

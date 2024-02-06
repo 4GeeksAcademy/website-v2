@@ -114,6 +114,7 @@ active_campaign_location_slug: "santiago-chile"
 breathecode_location_slug: "santiago-chile"
 gdpr_compliant: true # do we need to ask for permision?
 in_person_available: true # important to accept in-person applicants
+wa_compliant: true # do we need to ask for WhatsApp permision?
 
 city: "Santiago de Chile"
 hasFinancialsOption: true
