@@ -182,7 +182,7 @@ components:
       text:
         "JavaScript y Python"
         #           xl      lg      md      sm      xs
-      font_size: ["50px", "50px", "50px", "50px", "50px"]
+      font_size: ["45px", "45px", "30px", "28px", "25px"]
     content:
       text: "El Bootcamp abarca desde los fundamentos de programación en JavaScript hasta la creación de aplicaciones dinámicas con React.js. También incluye conceptos avanzados como Python, Flask, bases de datos y la publicación de sitios web. Prepárate para desarrollar proyectos web de forma efectiva y aplicar tus conocimientos en entornos profesionales, donde se valora altamente a profesionales bien preparados en esta área."
       font_size: ["18px"]
