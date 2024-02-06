@@ -360,10 +360,6 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
       <Div
         id="two_column_left"
         flexDirection="column"
-        // padding="0 0 50px 0"
-        // padding_tablet="0 6% 0 6%"
-        // margin="0 auto"
-        maxWidth="1695px"
         margin="0"
         padding="0 10px"
         padding_tablet="0 90px"
@@ -384,15 +380,7 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
         />
       </Div>
 
-      {/* Cambiar de acuerdo a los parámetros del componente WeTrust, este componente tiene un maxWidth de 1366px con padding diferentes */}
-      <Div
-        maxWidth="1695px"
-        margin="auto"
-        padding="0 10px"
-        padding_tablet="0 90px"
-        padding_md="0 50px"
-        padding_lg="0 -10px"
-      >
+      <Div padding="0 10px" padding_tablet="0 90px" padding_lg="0 130px">
         <WeTrust we_trust={yml.we_trust_section} />
       </Div>
 
@@ -516,7 +504,8 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
       <Div
         background={Colors.lightGray}
         padding="30px"
-        padding_tablet="80px 70px"
+        padding_tablet="80px 130px"
+        padding_lg="80px 130px"
         gap="10px"
         display="block"
         display_tablet="flex"
