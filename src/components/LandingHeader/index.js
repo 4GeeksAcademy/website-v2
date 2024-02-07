@@ -306,6 +306,7 @@ const LandingHeader = (props) => {
             </Div>
             {!hideForm ? (
               <LeadForm
+                id={"leadform_header"}
                 landingTemplate
                 headerImage={
                   yml.header_data.badge &&
