@@ -63,7 +63,7 @@ badges:
 # OVERLAPED
 overlaped:
   heading: "Por qué aprender Python y JavaScript es esencial"
-  paragraph: "Aprender Python y JavaScript es fundamental si quieres tener una carrera profesional exitosa. Estos lenguajes de programación ofrecen algunas de las oportunidades de empleo más lucrativas en los Estados Unidos. De hecho, hay una gran demanda por desarrolladores con habilidades en Python y JavaScript, con más de 26 veces más oportunidades en JavaScript que en Ruby on Rails, y 10 veces más en Python que en node.js. Según datos de Indeed, los desarrolladores expertos en estos lenguajes pueden disfrutar de salarios promedio que superan los $110,000 en los Estados Unidos ¿Qué esperas para sumergirte en el mundo de la programación?"
+  paragraph: "Aprender Python y JavaScript es fundamental si quieres buscar trabajo como programador. Estos lenguajes ofrecen las oportunidades de empleo más lucrativas. De hecho, hay una gran demanda por desarrolladores con habilidades en Python y JavaScript, con más de 26 veces más oportunidades en JavaScript que en Ruby on Rails, y 10 veces más en Python que en node.js. Según datos de Indeed, los desarrolladores expertos en estos lenguajes pueden disfrutar de salarios promedio que superan los $110,000 en los Estados Unidos ¿Qué esperas para sumergirte en el mundo de la programación?"
   button:
     text: "Postúlate"
     color: "blue"
