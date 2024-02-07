@@ -83,8 +83,7 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
     data.allTestimonialsYaml.edges[0].node.testimonials.filter((elem) =>
       yml.successful_stories.testimonials.includes(elem.slug)
     );
-  console.log("yml", yml);
-  console.log("yml.two_columns", ymlTwoColumn);
+
   return (
     <>
       <Div
@@ -404,6 +403,7 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
           margin="auto"
           width="300px"
           width_tablet="fit-content"
+          width_md="auto"
           gap_tablet="30px"
           gap_md="40px"
           flexDirection="column"
@@ -542,7 +542,7 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
           width="100%"
           width_tablet="400px"
           width_md="fit-content"
-          minWidth_md="700px"
+          minWidth_md="400px"
           maxWidth_md="900px"
         >
           <Slider {...settings} ref={sliderRef}>
@@ -554,12 +554,12 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
                 >
                   <Div
                     background={Colors.veryLightBlue}
-                    margin="0 5px"
+                    margin="0"
                     border="2px solid black"
                     display="block"
                     display_md="flex"
                     height_tablet="548px"
-                    height_md="307px"
+                    height_md="368px"
                   >
                     <StyledBackgroundSection
                       image={
@@ -569,7 +569,7 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
                       alt={testimonial.student_name}
                       width="300px"
                       width_tablet="100%"
-                      width_md="300px"
+                      width_md="200px"
                       height="340px"
                       height_tablet="240px"
                       height_md="100%"
