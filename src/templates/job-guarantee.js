@@ -83,7 +83,8 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
     data.allTestimonialsYaml.edges[0].node.testimonials.filter((elem) =>
       yml.successful_stories.testimonials.includes(elem.slug)
     );
-
+  console.log("yml", yml);
+  console.log("yml.two_columns", ymlTwoColumn);
   return (
     <>
       <Div
