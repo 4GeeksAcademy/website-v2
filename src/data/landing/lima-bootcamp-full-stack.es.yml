@@ -3,7 +3,7 @@ meta_info:
 
   # This will show on social media when shared
   title: "ProInnóvate y 4Geeks: Full Stack Developer Bootcamp, aprende todo lo necesario para integrarte en el mundo laboral de la industria Tech."
-  description: "El Bootcamp de Full-Satack con mayor credibilidad del mercado."
+  description: "El Bootcamp de Full-Stack con mayor credibilidad del mercado."
   image: "/images/bg/main-bg.jpg"
   keywords: "Clase de programación, Clase de python, clase de javascript, Clase de informática, Coding Bootcamp, 4Geeks Academy"
   visibility: "hidden" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).

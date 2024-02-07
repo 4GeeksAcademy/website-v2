@@ -3,7 +3,7 @@ meta_info:
 
   # This will show on social media when shared
   title: "Full Stack Developer Bootcamp, aprende todo lo necesario para integrarte en el mundo laboral de la industria Tech."
-  description: "El Bootcamp de Full-Satack más premiado en Santiago, Chile. Con 4Geeks, te convertirás en experto en 18 semanas"
+  description: "El Bootcamp de Full-Stack más premiado en Santiago, Chile. Con 4Geeks, te convertirás en experto en 18 semanas"
   image: "/images/bg/main-bg.jpg"
   keywords: "Clase de programación, Clase de python, clase de javascript, Clase de informática, Coding Bootcamp, 4Geeks Academy"
   visibility: "hidden" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
