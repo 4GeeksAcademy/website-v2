@@ -83,33 +83,36 @@ const Calendar = (props) => {
 
   const filterCohorts = (cohorts, location) => {
     const _filtered = cohorts.filter((elm) => {
-        if (Array.isArray(location.cohort_exclude_regex)) {
-          if (
-            location.cohort_exclude_regex.some((regx) =>
+      if (Array.isArray(location.cohort_exclude_regex)) {
+        if (
+          location.cohort_exclude_regex.some((regx) =>
             RegExp(regx).test(elm.slug)
-            )
-            ) {
-              console.log(`removing ${elm.slug}`);
-              return false;
-            }
-          }
-        if (Array.isArray(location.cohort_include_regex)) {
-          console.log(`Testing the following regex for ${elm.slug}`, location.cohort_include_regex)
-          if (
-            location.cohort_include_regex.some((regx) =>
-              RegExp(regx).test(elm.slug)
-            )
-          ) {
-            console.log(`adding ${elm.slug}`);
-            return true;
-          }
+          )
+        ) {
+          console.log(`removing ${elm.slug}`);
+          return false;
         }
-  
-        if (elm.academy.slug === location.value) return true;
-        return false;
-      });
+      }
+      if (Array.isArray(location.cohort_include_regex)) {
+        console.log(
+          `Testing the following regex for ${elm.slug}`,
+          location.cohort_include_regex
+        );
+        if (
+          location.cohort_include_regex.some((regx) =>
+            RegExp(regx).test(elm.slug)
+          )
+        ) {
+          console.log(`adding ${elm.slug}`);
+          return true;
+        }
+      }
+
+      if (elm.academy.slug === location.value) return true;
+      return false;
+    });
     return _filtered;
-  }
+  };
 
   useEffect(() => {
     const getData = async () => {
@@ -156,7 +159,7 @@ const Calendar = (props) => {
             catalog: oldData.cohorts.catalog,
             all: cohorts,
             filtered: defaultValue
-              ?  filterCohorts(cohorts, defaultValue) 
+              ? filterCohorts(cohorts, defaultValue)
               : cohorts,
           },
         };
@@ -403,7 +406,10 @@ const Calendar = (props) => {
                 value={academy}
                 onChange={(opt) => {
                   setAcademy(opt);
-                  let filtered = opt.label !== "All Locations" ? filterCohorts(datas[filterType.value].all, opt) : cohorts;
+                  let filtered =
+                    opt.label !== "All Locations"
+                      ? filterCohorts(datas[filterType.value].all, opt)
+                      : cohorts;
                   setData({
                     ...datas,
                     [filterType.value]: {
