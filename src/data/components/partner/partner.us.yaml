@@ -30,7 +30,7 @@ partners:
       featured: false
     - name: "Facebook"
       #locations: ["miami-downtown"]
-      image: "../../../../static/images/partner/facebook.png"
+      image: "../../../../static/images/partner/meta-logo.png"
       featured: true
     - name: "Ebay"
       #locations: ["madrid-spain"]
