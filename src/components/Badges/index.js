@@ -210,11 +210,11 @@ const Badges = ({
           {bottom_paragraph && (
             <Div className="badge-slider" justifyContent="between">
               <Paragraph
-                fontFamily="Lato-Bold"
+                fontFamily="Lato"
                 padding={paddingText || "0 10px 45px 10px"}
                 padding_tablet={paddingText_tablet || "0 5% 55px 5%"}
-                fontSize={short_link || short_text ? "12px" : "12px"}
-                fontSize_tablet={short_link || short_text ? "12px" : "12px"}
+                fontSize={short_link || short_text ? "14px" : "14px"}
+                fontSize_tablet={short_link || short_text ? "14px" : "14px"}
                 lineHeight={short_link || short_text ? "29px" : "38px"}
                 color={Colors.black}
                 dangerouslySetInnerHTML={{ __html: paragraph }}
