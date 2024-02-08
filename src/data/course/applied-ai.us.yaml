@@ -159,7 +159,7 @@ potential_companies:
   sub_heading: "Take a leap in your career and work for the best companies"
   companies:
     - name: "Facebook"
-      image: "../../../static/images/partner/facebook.png"
+      image: "../../../static/images/partner/meta-logo.png"
       alt: ""
     - name: "Google"
       image: "../../../static/images/partner/google.png"
@@ -313,7 +313,7 @@ faq:
 #   sub_heading: "Prepárate para aplicar a las mejores empresas del mundo: Desarrolla las herramientas para actualizarte para el futuro del trabajo en IA."
 #   companies:
 #     - name: "Facebook"
-#       image: "../../../static/images/partner/facebook.png"
+#       image: "../../../static/images/partner/meta-logo.png"
 #       alt: ""
 #     # (Otras empresas omitidas por brevedad)
 

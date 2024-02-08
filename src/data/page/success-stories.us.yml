@@ -16,7 +16,7 @@ header:
 
 images:
   - name: "Facebook"
-    image: "../../../static/images/partner/facebook.png"
+    image: "../../../static/images/partner/meta-logo.png"
   - name: "Microsoft"
     image: "../../../static/images/partner/google-gray.png"
   - name: "Apple"
