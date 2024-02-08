@@ -19,7 +19,7 @@ meta_info:
   tag: request_more_info # comma separated, "request_more_info" is the default value
 
 navbar:
-  buttonText: "Postular"
+  buttonText: "Obtener más info"
   buttonUrl: "#bottom" # url accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
   logoUrl: "#"
 
@@ -147,7 +147,7 @@ components:
     sub_heading:
       text: "Descubre una oportunidad única para transformar tu carrera y adentrarte en el mundo de la programación. En solo 18 semanas, te guiaremos desde cero hasta conseguir tu primer trabajo como programador."
     button: 
-      text: "Postúlate ahora"
+      text: "Obtener más info"
       color: white
       hover_color: "white"
       background: "black"
