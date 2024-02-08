@@ -76,7 +76,7 @@ overlaped:
     color: "blue"  
     link: "/"
   image:
-    src: "/images/landing/tres-personas.png"  
+    src: "/images/landing/tres-personas-reloaded.webp"  
 
 two_columns:
   proportions: [6, 6]

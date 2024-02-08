@@ -137,7 +137,7 @@ components:
     background: "#fbfbfb"
     image:
       style: '{"backgroundSize": "contain;"}'
-      src: "/images/landing/tres-personas.png"
+      src: "/images/landing/tres-personas-reloaded.webp"
       shadow: true
     section_heading: 
       text: ""
