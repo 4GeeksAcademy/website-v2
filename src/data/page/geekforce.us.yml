@@ -9,9 +9,10 @@ meta_info:
 
 seo_title: "geekforce"
 header:
-  title: "<strong style='color:black; font-family: Archivo-Black;'>Geek</strong>
-  <strong style = 'color:rgba(255, 183, 24, 1); font-family: Archivo-Black;'>FORCE</strong> <br>
-  <strong style='font-family: Archivo;'>the collective process of Career Support at the Academy</strong>"
+  title: |
+    <strong style='color:black; font-family: Archivo-Black;'>Geek</strong>
+    <strong style = 'color:rgba(255, 183, 24, 1); font-family: Archivo-Black;'>FORCE</strong> <br>
+    <strong style='font-family: Archivo;'>the collective process of Career Support at the Academy</strong>
   image: "../../../static/images/bg/companies-bg.jpg"
   image_alt: ""
   paragraph: |
@@ -46,8 +47,9 @@ list:
   - title: "Interview Simulation"
     image: "../../../static/images/landing/dos-mujeres-1.png" 
     position: "left"
-    text: "We will hold mock interviews to assess your strengths and weaknesses to create a stronger profile before the actual interviews. Every time you have an interview, we will practice using different technologies.
-    We have our very own pool of auto-graded exercises, so you can practice until you master the skills to get the job you want."
+    text: |
+      We will hold mock interviews to assess your strengths and weaknesses to create a stronger profile before the actual interviews. Every time you have an interview, we will practice using different technologies.
+      We have our very own pool of auto-graded exercises, so you can practice until you master the skills to get the job you want.
     button:
       link: "/"
       text: ""
@@ -56,11 +58,12 @@ list:
   - title: "Lifetime Mentoring"
     image: "../../../static/images/Group-6617.png"
     position: "right"
-    text: "Launching a career in tech involves assessing your current situation and making informed decisions about the future.
-    It requires assessment of yourself, your context, and ACTION. You can do this alone; or you can rely on a mentor's experience which can give you
-    perspective, information and access to the right resources. In 4Geeks we adjust the sessions according to your calendar,
-    we also give you the opportunity to have them online or in-person.
-    In any case, we assure you that you have the opportunity for constant mentoring whenever you need it. "
+    text: |
+      Launching a career in tech involves assessing your current situation and making informed decisions about the future.
+      It requires assessment of yourself, your context, and ACTION. You can do this alone; or you can rely on a mentor's experience which can give you
+      Perspective, information and access to the right resources. In 4Geeks we adjust the sessions according to your calendar,
+      We also give you the opportunity to have them online or in-person.
+      In any case, we assure you that you have the opportunity for constant mentoring whenever you need it.
 
 # benefits:
 #   - p:
