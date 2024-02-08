@@ -104,14 +104,7 @@ const _fields = {
     place_holder: "",
     error: "You need to accept the privacy terms",
   },
-  wa_consent: {
-    value: true,
-    valid: true,
-    required: true,
-    type: "text",
-    place_holder: "",
-    error: "You need to accept Whatsapp contact",
-  },
+  consents: [],
   client_comments: {
     value: "",
     valid: true,
@@ -220,9 +213,6 @@ const LeadForm = ({
               link_label
               url
             }
-            wa_consent {
-              message
-            }
           }
         }
       }
@@ -260,14 +250,14 @@ const LeadForm = ({
 
   const [formStatus, setFormStatus] = useState({ status: "idle", msg: "" });
   const [formData, setVal] = useState(_fields);
-  const [consentValueGdpr, setConsentValueGdpr] = useState(false);
-  const [consentValueWa, setConsentValueWa] = useState(false);
+  const [consentValue, setConsentValue] = useState([false, false]); //colocar un valor por defecto con map en session.location.consent
   const { session, setLocation } = useContext(SessionContext);
   const courseSelector = yml.form_fields.find((f) => f.name === "course");
   const locationSelector = yml.form_fields.find((f) => f.name === "location");
   const consentCheckboxField = yml.form_fields.find(
     (f) => f.name === "consent"
   );
+  const [isFormValid, setIsFormValid] = useState(false);
 
   React.useEffect(() => {
     setVal((_data) => {
@@ -311,10 +301,21 @@ const LeadForm = ({
       style={style}
       onSubmit={(e) => {
         e.preventDefault();
+        console.log("formData", formData);
+        const isConsentsFilled = formData.consents.every(Boolean);
 
+        // Actualiza el estado de la validez del formulario
+        setIsFormValid(isConsentsFilled);
+
+        // Si el formulario es válido, realiza la lógica de envío
+        if (isConsentsFilled) {
+          // Tu lógica de envío aquí
+          console.log("Formulario enviado correctamente");
+        } else {
+          console.log("Por favor, completa todos los campos obligatorios");
+        }
         if (formStatus.status === "error")
           setFormStatus({ status: "idle", msg: "" });
-
         const cleanedData = clean(fields, formData);
 
         if (!formIsValid(cleanedData)) {
@@ -331,16 +332,6 @@ const LeadForm = ({
           formData.utm_location.value.length > 1
         ) {
           setFormStatus({ status: "error", msg: locationSelector.error });
-        } else if (
-          consentValueGdpr === false &&
-          session.location?.gdpr_compliant === true
-        ) {
-          setFormStatus({ status: "error", msg: consentCheckboxField.error });
-        } else if (
-          consentValueWa === false &&
-          session.location?.wa_compliant === true
-        ) {
-          setFormStatus({ status: "error", msg: consentCheckboxField.error });
         } else {
           setFormStatus({ status: "loading", msg: yml.messages.loading });
           formHandler(cleanedData, session)
@@ -547,80 +538,55 @@ const LeadForm = ({
                 {formStatus.status === "loading" ? "Loading..." : sendLabel}
               </Button>
             )}
-
-            {session && session.location && session.location.gdpr_compliant && (
-              <Div position="relative" margin="10px 0 0 0">
-                <input
-                  name="isGoing"
-                  type="checkbox"
-                  checked={consentValueGdpr}
-                  onChange={() => {
-                    setConsentValueGdpr(!consentValueGdpr);
-                    setVal({
-                      ...formData,
-                      consent: {
-                        ...formData.consent,
-                        valid: !formData.consent.valid,
-                      },
-                    });
-                  }}
-                  style={{
-                    width: "24px",
-                    height: "24px",
-                    top: "10px",
-                    left: "7px",
-                  }}
-                />
-                <Paragraph
-                  fontSize="11px"
-                  margin="5px 0 0 5px"
-                  textAlign="left"
-                >
-                  {yml.consent.message}
-                  <a
-                    style={{ marginLeft: "5px" }}
-                    target="_blank"
-                    rel="noopener noreferrer nofollow"
-                    className="decorated"
-                    href={yml.consent.url}
-                  >
-                    {yml.consent.link_label}
-                  </a>
-                </Paragraph>
-              </Div>
-            )}
-            {session && session.location && session.location.wa_compliant && (
-              <Div position="relative" margin="10px 0 0 0">
-                <input
-                  name="isGoing"
-                  type="checkbox"
-                  checked={consentValueWa}
-                  onChange={() => {
-                    setConsentValueWa(!consentValueWa);
-                    setVal({
-                      ...formData,
-                      wa_consent: {
-                        ...formData.wa_consent,
-                        valid: !formData.wa_consent.valid,
-                      },
-                    });
-                  }}
-                  style={{
-                    width: "24px",
-                    height: "24px",
-                    top: "10px",
-                    left: "7px",
-                  }}
-                />
-                <Paragraph
-                  fontSize="11px"
-                  margin="5px 0 0 5px"
-                  textAlign="left"
-                >
-                  {yml.wa_consent.message}
-                </Paragraph>
-              </Div>
-            )}
+            {session &&
+              session.location &&
+              session.location.consents &&
+              session.location.consents.map((consent, index) => {
+                return (
+                  <Div position="relative" margin="10px 0 0 0">
+                    <input
+                      name="isGoing"
+                      type="checkbox"
+                      checked={consentValue[index]}
+                      onChange={() => {
+                        const updatedConsentValue = [...consentValue];
+                        updatedConsentValue[index] = !consentValue[index];
+                        setConsentValue(updatedConsentValue);
+                        setVal((prevFormData) => ({
+                          ...prevFormData,
+                          consents: updatedConsentValue,
+                        }));
+                      }}
+                      style={{
+                        width: "24px",
+                        height: "24px",
+                        top: "10px",
+                        left: "7px",
+                      }}
+                    />
+                    <Paragraph
+                      fontSize="11px"
+                      margin="5px 0 0 5px"
+                      textAlign="left"
+                    >
+                      {consent.message}
+                      {consent.url ? (
+                        <a
+                          style={{ marginLeft: "5px" }}
+                          target="_blank"
+                          rel="noopener noreferrer nofollow"
+                          className="decorated"
+                          href={consent.url}
+                        >
+                          {yml.consent.link_label}
+                        </a>
+                      ) : (
+                        <></>
+                      )}
+                    </Paragraph>
+                  </Div>
+                );
+              })}
             {formStatus.status === "error" && (
               <Alert color="red" margin="20px 0 0 0" padding="5px 0 0 0">
                 {formStatus.msg}

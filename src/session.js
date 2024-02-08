@@ -37,6 +37,15 @@ export default ({ children }) => {
             gdpr_compliant
             in_person_available
             wa_compliant
+            consents {
+              slug
+              name
+              active
+              message
+              error_message
+              link_label
+              url
+            }
             online_available
             meta_info {
               slug
