@@ -551,14 +551,16 @@ export const Header = ({
   margin,
   margin_tablet,
   padding,
+  paddingTitle,
+  paddingParagraph,
+  paddingParagraph_tablet,
+  paddingTitle_tablet,
   padding_xxs,
   padding_tablet,
   padding_lg,
   padding_md,
   position,
   textAlign_tablet,
-  paddingParagraph_tablet,
-  paddingTitle_tablet,
   display_mobile,
   fontSize_title,
   fontSizeTitle_tablet,
@@ -606,7 +608,7 @@ export const Header = ({
             type="h2"
             textAlign_tablet={textAlign_tablet}
             margin="0 0 11px 0"
-            padding="0 20px"
+            padding={paddingTitle || "0 20px"}
             color="#606060"
             fontSize={fontSize_seo || "12px"}
             //fontFamily={fontFamily_title}
@@ -617,7 +619,9 @@ export const Header = ({
             type="h1"
             textAlign_tablet={textAlign_tablet}
             padding="0 20px"
-            padding_tablet={paddingTitle_tablet}
+            padding_tablet={
+              paddingTitle ? paddingTitle : paddingTitle_tablet || "0 20px"
+            }
             fontSize={fontSize_title || "40px"}
             fontSize_tablet={fontSizeTitle_tablet || "50px"}
             lineHeight={lineHeight || "50px"}
@@ -631,10 +635,12 @@ export const Header = ({
             {hideArrowKey ? title : `< ${title} >`}
           </H1>
           <Paragraph
-            padding="0"
+            padding={paddingParagraph || "0"}
             width="auto"
             letterSpacing="0.05em"
-            padding_tablet={paddingParagraph_tablet}
+            padding_tablet={
+              paddingParagraph ? paddingParagraph : paddingParagraph_tablet || 0
+            }
             textAlign_tablet={textAlign_tablet}
             margin={paragraphMargin || "26px 0"}
             margin_tablet={paragraphMargin_Tablet}

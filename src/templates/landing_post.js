@@ -82,7 +82,7 @@ export default function Template(props) {
 
     Array.from(anchors).forEach((anchor) => {
       const linkRegex = new RegExp("(http)");
-      console.log(anchor.href);
+      // console.log(anchor.href);
       if (
         linkRegex.test(anchor.href) &&
         !anchor.href.includes("4geeks.com") &&
@@ -105,8 +105,11 @@ export default function Template(props) {
         <Header
           hideArrowKey
           padding="90px 10px 70px 10px"
-          padding_tablet="90px 0 70px 0"
-          paddingParagraph="0px 14% 0px 0"
+          padding_tablet="90px 8% 70px 4%"
+          padding_md="90px 11% 70px 11%"
+          padding_lg="90px 8% 70px 4%"
+          paddingParagraph="0 0 0 12px"
+          paddingTitle="0 0 0 12px"
           textAlign_tablet="left"
           seo_title={post.frontmatter.cluster}
           title={post.frontmatter.title}
@@ -122,6 +125,7 @@ export default function Template(props) {
               width_lg="630px"
               bsize="cover"
               position="right"
+              margin="0 12px"
               url={post.frontmatter.image}
             />
           }
@@ -151,7 +155,6 @@ export default function Template(props) {
           <ScrollSpy offsetTop={200} autoScrollOffsetTop={-190}>
             {filteredH2.map((nav) => {
               const { id, children } = nav.props;
-
               return (
                 <button
                   key={id}
@@ -175,6 +178,7 @@ export default function Template(props) {
           padding="0 10px"
           padding_tablet="0 8% 0 4%"
           padding_md="0 11%"
+          padding_lg="0 8% 0 4%"
           gap="6%"
         >
           <Div
