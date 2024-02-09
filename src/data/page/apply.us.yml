@@ -45,12 +45,13 @@ left:
 ## APPLY RIGHT SECTION
 
 right:
-  heading: "Once you click on apply, you will"
+  heading: "What to expect after applying"
   content_section:
-    - "1- Receive an email from your City Advisor"
-    - "2- Get Info and details about the programs, people, community, outcomes, campus and more."
-    - "3- Receive info related to the options you have for scholarships or financing your tuition."
-    - "4- A syllabus explanation of the program, our endless mentorship and unlimited support that will help you make the best decision for your career."
+    - "1- Receive an email from an advisor"
+    - "2- Get more information about the program, campus, community, outcomes, and more."
+    - "3- Get detailed information about scholarships and financing options."
+    - "4- Receive the program syllabus and info about our unlimited mentorship and career support."
+    - "Now you're ready to make the best decision for your career!"
 
   ## TESTIMONIAL SECTION
 testimonial_header:
