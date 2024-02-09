@@ -156,6 +156,7 @@ const clean = (fields, data) => {
 };
 
 const LeadForm = ({
+  id,
   marginButton,
   marginButton_tablet,
   widthButton,
@@ -286,6 +287,7 @@ const LeadForm = ({
 
   return (
     <Form
+      id={id}
       boxShadow={boxShadow}
       width_md={width_md}
       margin={margin}
@@ -609,6 +611,7 @@ const LeadForm = ({
 };
 
 LeadForm.propTypes = {
+  id: PropTypes.string,
   heading: PropTypes.string,
   motivation: PropTypes.string,
   sendLabel: PropTypes.string,
@@ -626,6 +629,7 @@ LeadForm.defaultProps = {
   redirect: null,
   handleClose: null,
   layout: "block",
+  id: "leadform",
   data: {},
   fields: ["full_name", "phone", "email"],
 };

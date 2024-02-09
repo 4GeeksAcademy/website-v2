@@ -1,7 +1,7 @@
 meta_info:
   slug: full-stack-full-time
-  title: "Full Stack Developer Course, 10 weeks duration on a full-time basis."
-  description: "Become a Full Stack Developer in only 10 weeks, study full-time to speed up your learning and turn around your career in the fastest possible way"
+  title: "Full Stack Developer Bootcamp, 10 semanas de estudio"
+  description: "Conviértete en Desarrollador Full Stack en tan solo 10 semanas, estudia a tiempo completo y acelera tu aprendizaje de la manera más rápida posible"
   image: "/images/og-preview/full-stack-ft.es.png"
   visibility: "visible"
   bc_slug: "full-stack-ft"
@@ -29,13 +29,13 @@ header:
   title: "Full Stack Developer"
   image: "../../../static/images/bg/program-bg.png"
   image_alt: "FullStack"
-  paragraph: "De cero a tener tu primer trabajo como programador, aprende todo lo necesario, recibe soporte de por vida y consigue un trabajo después de 9 semanas de estudio."
+  paragraph: "De cero a tener tu primer trabajo como programador, aprende todo lo necesario, recibe soporte de por vida y consigue un trabajo después de 10 semanas de estudio."
 button:
   syllabus_heading: "Descargar Detalles del Curso"
   syllabus_btn_label: "Descarga Instantánea"
   syllabus_motivation: "En 2 min. recibirás en tu buzón de correo un PDF con información muy detallada sobre nuestra metodología, tecnologías, financiación e información del curso."
   apply_button_link: "/es/aplica"
-  apply_button_text: "Aplicar"
+  apply_button_text: "Postúlate"
 
 course_instructors: 
   header:
@@ -62,39 +62,39 @@ badges:
 
 # OVERLAPED
 overlaped:
-  heading: "Why learning Python and Javascript is essential"
-  paragraph: "Programming in Python and JavaScript offers some of the highest-paid career opportunities in the US. There are currently over 26 times more job opportunities in JavaScript compared to Ruby on Rails, and 10 times more jobs in Python compared to node.js. According to Indeed, Python and JavaScript developers enjoy average salaries exceeding $110k."
+  heading: "Por qué aprender Python y JavaScript es esencial"
+  paragraph: "Aprender Python y JavaScript es fundamental si quieres buscar trabajo como programador. Estos lenguajes ofrecen las oportunidades de empleo más lucrativas. De hecho, hay una gran demanda por desarrolladores con habilidades en Python y JavaScript, con más de 26 veces más oportunidades en JavaScript que en Ruby on Rails, y 10 veces más en Python que en node.js. Según datos de Indeed, los desarrolladores expertos en estos lenguajes pueden disfrutar de salarios promedio que superan los $110,000 en los Estados Unidos ¿Qué esperas para sumergirte en el mundo de la programación?"
   button:
-    text: "LEARN MORE"
+    text: "Postúlate"
     color: "blue"
-    link: "/"  
+    link: "#prices_and_payment"  
   image:
-    src: "/images/landing/tres-personas.png"
+    src: "/images/landing/tres-personas-reloaded.webp"
 
 ## TWO COLUMNS
 two_columns:
   proportions: [6, 6]
   image:
     style: '{"border" : "3px solid black", "backgroundSize": "contain" }'
-    src: "/static/images/staff/luisa.png"
+    src: "/static/images/staff/entrevista-victor-4geeks.webp"
     shadow: true  
-  video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
+  video: "tyb4WuO5Pdo"
   heading:
-    text: "4Geeks, Miami and a story full of opportunities"
+    text: "Entrevista con Víctor Gómez, Director de la academia en Europa y España"
     font_size: ["30px", "30px", "30px", "30px", "30px"]
   sub_heading:
-    text: "We are Miami based and we have been focusing in bringing on more opportunities in South Florida."
+    text: "Descubre porqué 4Geeks Academy impulsa las carreras de sus estudiantes y como los guia al éxito profesional en el mundo de la programación"
     font_size: ["16px", "16px", "16px", "16px", "16px"]
   button:
-    text: "Apply now"
+    text: "¡POSTÚLATE AHORA!"
     color: "white"
     background: "black"
-    path: "#"
+    path: "/es/aplica"
   bullets:
     items: 
-    - text: "There is always a full or partial scholarship open"
-    - text: "There is always opportunities for everyone in Miami-Dade County, Broward and Palm Beach"
-    - text: "We have ongoing partnerships with Miami Dade College, Miami Tech Coalition, UWM, The City of Miami, Miami Dade County and many more."
+    - text: "Ofrece un exclusivo sistema de mentorías que no tiene límites, brindando apoyo continuo a los estudiantes incluso después de la graduación"
+    - text: "Centrado en impulsar la carrera de los estudiantes, con un compromiso garantizado de obtener empleo en menos de 6 meses tras completar el programa"
+    - text: "Proporciona una experiencia educativa intensiva que prepara a los estudiantes para roles como full stack developer o data scientist, asegurando un aprendizaje profundo y práctico"
 
 upcoming:
   no_dates_message: "Actualmente no hay próximas fechas para este programa"
@@ -109,34 +109,28 @@ details:
   about:
       title: "Acerca del programa"
       sub_title: "En esta carrera te desarrollarás desde cero como Full Stack Developer.
-      Aprenderás a crear un sitio web sumergiéndote en las mejores prácticas del
-      diseño web responsive, trabajando con diversos lenguajes. Obtedrás una       
-      sólida base de front end, back end, base de datos, manejo de procesos       
-      distribuidos y despliegue a distintas plataformas web.
+      Aprenderás a crear applicaciones web con web responsivo como las mas utilizadas hoy en dia, exactamente lo que busca un posible empleador. 
+      
+      Obtedrás una sólida base de front-end, back-end, base de datos, creacion de API's, metodologías agiles, despliegue a distintas plataformas web, etc.
 
-      Al finalizar este programa, contarás con los conocimientos para       
-      desempeñarte como Full Stack Developer. "
+      Al finalizar este programa, contarás con los conocimientos para desempeñarte como Full Stack Developer. "
       list:
         - label: "Duración"
           content:  "10 semanas"
           icon: "calendar"
-        - label: "Inicio del Bootcamp"
-          content:  "20 de Mayo del 2024"
-          icon: "calendar"
-        - label: "Cierre de Postulación"
-          content:  "4 de Marzo del 2024"
-          icon: "calendar"
         - label: "Clases"
           content: "De Lunes a Viernes"
           icon: "book"
-        - label: "Certificados"
-          content: "Nuestros certificados son  reconocidos por múltiples instuticiones."
+        - label: "Certificado"
+          content: "Nuestros certificados son  reconocidos por múltiples instituciones."
+          link_text: "Ver certificado"
+          link: "https://certificate.breatheco.de/4ae7a46bba78dc19b823e124fea120c17b45e044"
           icon: "certificate"
         - label: "Requisitos"
           content: "Tan solo necesitas un ordenador y una conexión a internet"
           icon: "contract-checked"
         - label: "Idioma"
-          content: "Por ahora las clases se imparten solo en español"
+          content: " Puedes elegir entre inglés y español para consumir el plan de estudios y el contenido. Las clases se imparten en el idioma oficial de tú campus."
           icon: "contract-checked"
           
   heading: DETALLES DEL PROGRAMA FULL-TIME
