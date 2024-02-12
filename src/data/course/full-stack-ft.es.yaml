@@ -69,7 +69,7 @@ overlaped:
     color: "blue"
     link: "#prices_and_payment"  
   image:
-    src: "/images/landing/tres-personas.png"
+    src: "/images/landing/tres-personas-reloaded.webp"
 
 ## TWO COLUMNS
 two_columns:

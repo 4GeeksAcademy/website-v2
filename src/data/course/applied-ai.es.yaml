@@ -6,7 +6,7 @@ meta_info:
   image: "/images/og-preview/datascience-ml.es.png"
   visibility: "visible"
   keywords: ""
-  show_in_apply: true
+  show_in_apply: false
   redirects: ["/es/applied-ai"]
   related_clusters: ["trends-and-tech"]
 
@@ -161,7 +161,7 @@ potential_companies:
   sub_heading: "Da un salto a tu carrera y trabaja en las mejores empresas"
   companies:
     - name: "Facebook"
-      image: "../../../static/images/partner/facebook.png"
+      image: "../../../static/images/partner/meta-logo.png"
       alt: ""
     - name: "Google"
       image: "../../../static/images/partner/google.png"
@@ -325,7 +325,7 @@ faq:
 #   sub_heading: "Prepárate para aplicar a las mejores empresas del mundo: Desarrolla las herramientas para actualizarte para el futuro del trabajo en IA."
 #   companies:
 #     - name: "Facebook"
-#       image: "../../../static/images/partner/facebook.png"
+#       image: "../../../static/images/partner/meta-logo.png"
 #       alt: ""
 #     # (Otras empresas omitidas por brevedad)
 

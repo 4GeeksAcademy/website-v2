@@ -91,7 +91,7 @@ who_is_hiring:
   sub_heading: "Más de 500 partners, más de 150 vacantes abiertas como Full-Stack Developer en nuestra bolsa de empleo "
   featured:
     - name: "Facebook"
-      image: "../../../static/images/partner/facebook.png"
+      image: "../../../static/images/partner/meta-logo.png"
     - name: "Microsoft"
       image: "../../../static/images/partner/microsoft.png"
     - name: "Apple"

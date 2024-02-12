@@ -95,7 +95,7 @@ who_is_hiring:
   sub_heading: "A nivel mundial ya somos más de 500 partners que, como tú, reciben el mejor servicio (gratuito) para acceder a candidatos tech junior, de la forma más personalizada que puedas imaginarte "
   featured:
     - name: "Facebook"
-      image: "../../../static/images/partner/facebook.png"
+      image: "../../../static/images/partner/meta-logo.png"
     - name: "Microsoft"
       image: "../../../static/images/partner/microsoft.png"
     - name: "Apple"

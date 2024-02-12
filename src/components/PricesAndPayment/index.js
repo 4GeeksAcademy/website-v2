@@ -532,13 +532,13 @@ const PricesAndPayments = (props) => {
           );
 
         console.log("currentPlans", currentPlans, schedule);
-        currentPlans = currentPlans.node[schedule];
+        currentPlans = currentPlans?.node[schedule];
 
-        const availablePlans = currentPlans.filter((plan) =>
+        const availablePlans = currentPlans?.filter((plan) =>
           plan.academies.includes(currentLocation.fields.file_name.slice(0, -3))
         );
 
-        if (availablePlans.length > 0) {
+        if (availablePlans && availablePlans.length > 0) {
           courseFilteredAux.push(course);
         }
       });
@@ -546,7 +546,6 @@ const PricesAndPayments = (props) => {
     }
   }, [currentLocation]);
 
-  console.log("course", course);
   return (
     <Div
       id="prices_and_payment"
