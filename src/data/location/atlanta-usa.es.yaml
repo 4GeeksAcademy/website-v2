@@ -106,7 +106,7 @@ images_box:
   images:
     - path: "../../../static/images/locations/atlanta-new.jpg"
       alt: "Atlanta city"
-    - path: "../../../static/images/locations/ownpeoplecoding2.jpg"
+    - path: "../../../static/images/ownpeoplecoding2.webp"
       alt: "4Geeks Own People Coding"
     - path: "../../../static/images/locations/ownmancoding.jpg"
       alt: "Remote-Coding-Bootcamp"

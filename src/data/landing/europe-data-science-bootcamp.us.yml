@@ -71,7 +71,7 @@ short_badges:
     alt: "Mejor centro de Coding Bootcamp"
   - name: "Course Report"
     url: ""
-    image: "../../../static/images/badges/Course-Report-Badge-2023.png"
+    image: "../../../static/images/badges/Course-Report-Badge-2024.webp"
     alt: "Top Coding Bootcamps Course Report"
   - name: "Switchup"
     url: ""
@@ -158,7 +158,7 @@ components:
     swipable: False
     background: "#FFFFFF"
     image:
-      src: "/images/landing/dos-mujeres-1.png"
+      src: "/images/landing/two-womans-and-laptop.webp"
       shadow: true
     heading: 
       text: "Become a Data Scientist in just 16 Weeks"

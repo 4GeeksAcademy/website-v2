@@ -45,7 +45,7 @@ header_data:
   partner_logo_url: "../../../static/images/landing/logos-promin2.png"
   tagline: ProInnóvate otorga becas para bootcamps de programación de 4Geeks Academy. 
   sub_heading: "El concurso está dirigido a jóvenes técnicos o no universitarios que buscan formación técnica especializada para mejorar su empleabilidad."
-  badge: "../../../static/images/badges/Course-Report-Badge-2023.png"
+  badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
   image_filter: brightness(0.3)
 
 features:
@@ -78,7 +78,7 @@ short_badges:
     alt: "Mejor centro de Coding Bootcamp"
   - name: "Course Report"
     url: ""
-    image: "../../../static/images/badges/Course-Report-Badge-2023.png"
+    image: "../../../static/images/badges/Course-Report-Badge-2024.webp"
     alt: "Top Coding Bootcamps Course Report"
   - name: "Switchup"
     url: ""
@@ -220,7 +220,7 @@ components:
       color: white
       hover_color: "white"
       background: "black"
-      path: "https://inngenius.proinnovate.gob.pe/ "
+      path: "https://inngenius.proinnovate.gob.pe"
     bullets:
       items:
         - heading: "Paso 1: Registro"
