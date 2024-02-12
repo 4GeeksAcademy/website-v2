@@ -8,7 +8,7 @@ meta_info:
   keywords: "full stack, full stack coding bootcamp, programming bootcamp, Coding Classes, Learn to code, 4Geeks Academy"
   visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   template: "landing_a" # <--- choose your landing template
-  redirects: [""]
+  redirects: ["/full-stack-coding-bootcamp"]
 
   # Set a particular course or location to the landing page
   # this UTM fields will be also included in the CRM contact
