@@ -120,8 +120,16 @@ heading_section:
 
 active_campaign_location_slug: "panamacity-panama"
 breathecode_location_slug: "panamacity-panama"
-gdpr_compliant: false # do we need to ask for permision?
 in_person_available: false # important to accept in-person applicants
+
+consents:
+  - slug: "gdpr_consent"
+    name: "GDPR Consent"
+    active: false
+    message: "By submitting this form, I accept that my data may be used for a quote request that could result in a commercial relationship. Check out our complete"
+    error_message: "You need to accept the privacy terms"
+    link_label: "Privacy Policy"
+    url: "/us/privacy-policy"
 
 city: "Panama City"
 name: "Panama"
