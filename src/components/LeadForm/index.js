@@ -242,7 +242,7 @@ const LeadForm = ({
 
   const [formStatus, setFormStatus] = useState({ status: "idle", msg: "" });
   const [formData, setVal] = useState(_fields);
-  const [consentValue, setConsentValue] = useState([]); //colocar un valor por defecto con map en session.location.consent
+  const [consentValue, setConsentValue] = useState([]);
   const { session, setLocation } = useContext(SessionContext);
   const courseSelector = yml.form_fields.find((f) => f.name === "course");
   const locationSelector = yml.form_fields.find((f) => f.name === "location");

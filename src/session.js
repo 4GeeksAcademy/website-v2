@@ -34,13 +34,10 @@ export default ({ children }) => {
             defaultLanguage
             breathecode_location_slug
             active_campaign_location_slug
-            gdpr_compliant
             in_person_available
-            wa_compliant
             consents {
               slug
               name
-              active
               message
               error_message
               link_label
