@@ -110,9 +110,17 @@ two_columns:
 
 active_campaign_location_slug: "houston-usa"
 breathecode_location_slug: "houston-usa"
-gdpr_compliant: false # do we need to ask for permision?
 in_person_available: true # important to accept in-person applicants
 online_available: false # important to accept online-only applicants
+
+consents:
+  - slug: "gdpr_consent"
+    name: "GDPR Consent"
+    active: false
+    message: "Al completar este formulario acepto que mi información será utilizada para enviarme información comercial sobre 4Geeks Academy y que podria resultar una relación comercial a partir de esto."
+    error_message: "Debes aceptar el consent de GDPR"
+    link_label: "Política de Privacidad"
+    url: "/es/privacidad"
 
 city: "Houston"
 name: "Houston, USA"

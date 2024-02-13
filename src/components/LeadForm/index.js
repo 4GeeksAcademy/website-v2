@@ -522,54 +522,56 @@ const LeadForm = ({
               session.location &&
               session.location.consents &&
               session.location.consents.map((consent, index) => {
-                return (
-                  <Div position="relative" margin="10px 0 0 0">
-                    <input
-                      required
-                      name="isGoing"
-                      type="checkbox"
-                      checked={consentValue[index]}
-                      onChange={() => {
-                        const updatedConsentValue = [...consentValue];
-                        updatedConsentValue[index] = !consentValue[index];
-                        setConsentValue(updatedConsentValue);
-                        setVal({
-                          ...formData,
-                          consents: {
-                            ...formData.consents,
-                            value: updatedConsentValue,
-                          },
-                        });
-                      }}
-                      style={{
-                        width: "24px",
-                        height: "24px",
-                        top: "10px",
-                        left: "7px",
-                      }}
-                    />
-                    <Paragraph
-                      fontSize="11px"
-                      margin="5px 0 0 5px"
-                      textAlign="left"
-                    >
-                      {consent.message}
-                      {consent.url ? (
-                        <a
-                          style={{ marginLeft: "5px" }}
-                          target="_blank"
-                          rel="noopener noreferrer nofollow"
-                          className="decorated"
-                          href={consent.url}
-                        >
-                          {yml.consent.link_label}
-                        </a>
-                      ) : (
-                        <></>
-                      )}
-                    </Paragraph>
-                  </Div>
-                );
+                if (consent.active) return <></>;
+                else
+                  return (
+                    <Div position="relative" margin="10px 0 0 0">
+                      <input
+                        required
+                        name="isGoing"
+                        type="checkbox"
+                        checked={consentValue[index]}
+                        onChange={() => {
+                          const updatedConsentValue = [...consentValue];
+                          updatedConsentValue[index] = !consentValue[index];
+                          setConsentValue(updatedConsentValue);
+                          setVal({
+                            ...formData,
+                            consents: {
+                              ...formData.consents,
+                              value: updatedConsentValue,
+                            },
+                          });
+                        }}
+                        style={{
+                          width: "24px",
+                          height: "24px",
+                          top: "10px",
+                          left: "7px",
+                        }}
+                      />
+                      <Paragraph
+                        fontSize="11px"
+                        margin="5px 0 0 5px"
+                        textAlign="left"
+                      >
+                        {consent.message}
+                        {consent.url ? (
+                          <a
+                            style={{ marginLeft: "5px" }}
+                            target="_blank"
+                            rel="noopener noreferrer nofollow"
+                            className="decorated"
+                            href={consent.url}
+                          >
+                            {yml.consent.link_label}
+                          </a>
+                        ) : (
+                          <></>
+                        )}
+                      </Paragraph>
+                    </Div>
+                  );
               })}
             {formStatus.status === "error" && (
               <Alert color="red" margin="20px 0 0 0" padding="5px 0 0 0">

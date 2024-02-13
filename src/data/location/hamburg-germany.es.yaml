@@ -107,8 +107,16 @@ two_columns:
     
 active_campaign_location_slug: "hamburg-germany"
 breathecode_location_slug: "hamburg-germany"
-gdpr_compliant: true # do we need to ask for permision?
 in_person_available: false # important to accept in-person applicants
+
+consents:
+  - slug: "gdpr_consent"
+    name: "GDPR Consent"
+    active: true
+    message: "Al completar este formulario acepto que mi información será utilizada para enviarme información comercial sobre 4Geeks Academy y que podria resultar una relación comercial a partir de esto."
+    error_message: "Debes aceptar el consent de GDPR"
+    link_label: "Política de Privacidad"
+    url: "/es/privacidad"
 
 city: "Hamburg"
 name: "Hamburgo, Alemania"
