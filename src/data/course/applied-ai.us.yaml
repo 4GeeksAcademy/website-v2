@@ -64,6 +64,16 @@ upcoming:
 #     Entrénate con expertos en Data Science, Machine Learning e Inteligencia Artificial. Aprende Data Science desde las bases, recolecta, manipula y modela datos. Crea modelos de Machine Learning e iníciate en el Deep Learning.\n
 #     Practica con escenarios típicos de empresas de la vida real y conoce algunas de las herramientas más utilizadas en la industria. \n
 
+overlaped:
+  heading: "Becoming proficient using AI tools is essential"
+  paragraph: "AI will not replace your jobs, AI will boost your productivity to the point that only AI-proficient professionals will be hired in the future. Do more with less. Don't get left behind."
+  button:
+    text: "LEARN MORE"
+    color: "blue"  
+    link: "/"
+  image:
+    src: "/images/landing/tres-personas-reloaded.webp"  
+
 ## PROGRAM DETAILS
 details:
   about:
