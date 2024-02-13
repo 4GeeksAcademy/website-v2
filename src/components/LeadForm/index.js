@@ -96,15 +96,6 @@ const _fields = {
     place_holder: "Phone number",
     error: "Please specify a valid phone",
   },
-  consent: {
-    value: true,
-    valid: true,
-    required: true,
-    type: "text",
-    place_holder: "",
-    error: "You need to accept the privacy terms",
-  },
-  consents: [],
   client_comments: {
     value: "",
     valid: true,
@@ -251,14 +242,13 @@ const LeadForm = ({
 
   const [formStatus, setFormStatus] = useState({ status: "idle", msg: "" });
   const [formData, setVal] = useState(_fields);
-  const [consentValue, setConsentValue] = useState([false, false]); //colocar un valor por defecto con map en session.location.consent
+  const [consentValue, setConsentValue] = useState([]); //colocar un valor por defecto con map en session.location.consent
   const { session, setLocation } = useContext(SessionContext);
   const courseSelector = yml.form_fields.find((f) => f.name === "course");
   const locationSelector = yml.form_fields.find((f) => f.name === "location");
   const consentCheckboxField = yml.form_fields.find(
     (f) => f.name === "consent"
   );
-  const [isFormValid, setIsFormValid] = useState(false);
 
   React.useEffect(() => {
     setVal((_data) => {
@@ -303,19 +293,7 @@ const LeadForm = ({
       style={style}
       onSubmit={(e) => {
         e.preventDefault();
-        console.log("formData", formData);
-        const isConsentsFilled = formData.consents.every(Boolean);
 
-        // Actualiza el estado de la validez del formulario
-        setIsFormValid(isConsentsFilled);
-
-        // Si el formulario es válido, realiza la lógica de envío
-        if (isConsentsFilled) {
-          // Tu lógica de envío aquí
-          console.log("Formulario enviado correctamente");
-        } else {
-          console.log("Por favor, completa todos los campos obligatorios");
-        }
         if (formStatus.status === "error")
           setFormStatus({ status: "idle", msg: "" });
         const cleanedData = clean(fields, formData);
@@ -547,6 +525,7 @@ const LeadForm = ({
                 return (
                   <Div position="relative" margin="10px 0 0 0">
                     <input
+                      required
                       name="isGoing"
                       type="checkbox"
                       checked={consentValue[index]}
@@ -554,10 +533,13 @@ const LeadForm = ({
                         const updatedConsentValue = [...consentValue];
                         updatedConsentValue[index] = !consentValue[index];
                         setConsentValue(updatedConsentValue);
-                        setVal((prevFormData) => ({
-                          ...prevFormData,
-                          consents: updatedConsentValue,
-                        }));
+                        setVal({
+                          ...formData,
+                          consents: {
+                            ...formData.consents,
+                            value: updatedConsentValue,
+                          },
+                        });
                       }}
                       style={{
                         width: "24px",
