@@ -8,7 +8,7 @@ meta_info:
   keywords: "Coding Classes, Learn to code, 4Geeks Academy"
   visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   template: "landing_a" # <--- choose your landing template
-  redirects: ["/front-end-developer-coding-bootcamp"]
+  redirects: []
 
   # Set a particular course or location to the landing page
   # this UTM fields will be also included in the CRM contact
@@ -35,7 +35,7 @@ form:
   # posible fields: "first_name", "last_name", "full_name", "phone", "email"
   # always the first_name, email and phone will be mandatory if added.
   fields: ["full_name", "phone", "email"]
-  heading: "Get more information, Join the Full Stack Developer Bootcamp and code your career dreams"
+  heading: "Craft stunning, interactive web experiences and launch your dream career with our immersive Front-End Developer Bootcamp"
   motivation: "APPLY NOW and change your life."
   button_label: Apply  NOW
   redirect: null #you can redirect to another url or entirely diffrent website
@@ -101,8 +101,8 @@ short_badges:
 
 program_details:
   position: 2
-  heading: "Master Python, JS and React"
-  sub_heading: "The 3 most used languages in the world"
+  heading: "Master Front-End Development with JS & React at 4GeekJS Academy"
+  sub_heading: "Domain Front-End and Back-End in just 18 weeks!"
 
 badges:
   position: 5
@@ -159,7 +159,7 @@ components:
       link: "https://google.com" # take uses somewhere when they click on the image
       shadow: true
     section_heading:
-      text: "Launch Your Tech Career with NO Experience with our Coding Bootcamp"
+      text: "Go Beyond Basics Become a Pro Front-End Developer with 4Geeks"
       style: '{ "font-size": "30px" }'
     heading:
       text: "Stay ahead of the curve with lifetime learning access"
@@ -190,10 +190,10 @@ components:
     layout: iconogram
     swipable: True
     heading:
-      text: "How It Works"
+      text: "How It Works?"
       font_size: ["30px", "30px", "30px", "30px", "30px"]
     sub_heading:
-      text: 'According to the U.S. Bureau of Labor Statistics, <strong style="font-weight: bold;">software developers in the U.S. have a higher than average job outlook and earn a median salary of $110,140 a year</strong>. Improve your chances to be one of them.'
+      text: 'The U.S. Bureau of Labor Statistics (BLS) projects web developer jobs to grow by 13% from 2022 to 2032, much faster than the average for all occupations (8%). This translates to roughly 89,400 new jobs in the field'
       font_size: ["16px", "16px", "16px", "16px", "16px"]
       style: '{ "textAlign": "center", "width": "60%" }'
     text_link: "/"
