@@ -62,10 +62,10 @@ custom_bar:
     path: "/us/apply" #string (can be inline path using #, relative path or absolute path)
 
 info_box:
-  heading: ""
-  address: ""
-  iframeMapUrl: ""
-  open_on_maps: ""
+  heading: "Find us in Atlanta"
+  address: "Serendipity Labs - Atlanta, GA - Buckhead 3 Alliance Center, 3550 Lenox Road NE, Atlanta, GA 30326"
+  iframeMapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d828.3678093854274!2d-84.36823843038579!3d33.851744412090255!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f50f981674984b%3A0x22facb6fc6aa110b!2sSerendipity%20Labs%20Private%20Offices%20%26%20Coworking!5e0!3m2!1sen!2sve!4v1707938125649!5m2!1sen!2sve"
+  open_on_maps: "Open on Maps"
   contact_heading: "Contacts"
   phone: "(786) 416-6640"
   email: "info@4GeeksAcademy.com"
