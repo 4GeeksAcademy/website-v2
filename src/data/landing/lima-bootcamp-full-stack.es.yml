@@ -67,7 +67,7 @@ follow_bar:
     font_size: ["25px", "25px", "25px", "18px", "4.3vw"]
   button:
     text: "Inicia tu Popstulación"
-    path: "https://inngenius.proinnovate.gob.pe/ "
+    path: "https://inngenius.proinnovate.gob.pe"
   phone: 
     text: ""
 
