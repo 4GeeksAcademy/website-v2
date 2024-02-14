@@ -522,8 +522,7 @@ const LeadForm = ({
               session.location &&
               session.location.consents &&
               session.location.consents.map((consent, index) => {
-                if (consent.active) return <></>;
-                else
+                if (consent.active)
                   return (
                     <Div position="relative" margin="10px 0 0 0">
                       <input

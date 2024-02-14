@@ -38,6 +38,7 @@ export default ({ children }) => {
             consents {
               slug
               name
+              active
               message
               error_message
               link_label
