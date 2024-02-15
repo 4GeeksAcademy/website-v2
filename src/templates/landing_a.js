@@ -109,7 +109,7 @@ const Landing = (props) => {
             ? yml.navbar.buttonText
             : pageContext.lang === "us"
             ? "Apply"
-            : "Solicita una plaza"
+            : "¡Postúlate Ahora!"
         }
         buttonUrl={yml.navbar?.buttonUrl}
         logoUrl={yml.navbar?.logoUrl}
@@ -277,6 +277,7 @@ const Landing = (props) => {
               textAlign_sm="center"
             >
               <LeadForm
+                id="leadform_bottom"
                 landingTemplate
                 titleMargin="20px 0px 15px 0px"
                 titleMargin_tablet="20px 0px 15px 0px"

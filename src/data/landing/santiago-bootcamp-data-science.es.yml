@@ -40,7 +40,7 @@ apply_schollarship: # form that is displayed at the end of the landing
 # jumbotron on the top (cannot be commented out)
 header_data:
   background: "#FFF1D1"
-  tagline: Clases de Machine Learning y Data Science
+  tagline: Curso de Ciencia de Datos 
   sub_heading: "Domina Machine Learning y Data Science desde cero y accede a oportunidades como Junior Data Scientist"
   badge: "../../../static/images/badges/Course-Report-Badge-2023.png"
   image_filter: brightness(0.3)
@@ -181,7 +181,7 @@ components:
       text:
         "Python y Machine Learning"
         #           xl      lg      md      sm      xs
-      font_size: ["50px", "50px", "50px", "50px", "50px"]
+      font_size: ["45px", "45px", "30px", "28px", "25px"]
     sub_heading:
       text: "Nuestro programa te capacita en Python, SQL, Looker, Streamlit y Estadísticas para convertirte en analista de datos. Desarrolla modelos predictivos, aplica algoritmos como vecinos cercanos y árboles de decisión, y trabaja en casos reales. Únete a equipos técnicos en diversas compañías."
     content:

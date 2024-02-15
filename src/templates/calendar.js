@@ -81,6 +81,39 @@ const Calendar = (props) => {
       : { label: "Próximos Cursos y Eventos", value: "cohorts" }
   );
 
+  const filterCohorts = (cohorts, location) => {
+    const _filtered = cohorts.filter((elm) => {
+      if (Array.isArray(location.cohort_exclude_regex)) {
+        if (
+          location.cohort_exclude_regex.some((regx) =>
+            RegExp(regx).test(elm.slug)
+          )
+        ) {
+          console.log(`removing ${elm.slug}`);
+          return false;
+        }
+      }
+      if (Array.isArray(location.cohort_include_regex)) {
+        console.log(
+          `Testing the following regex for ${elm.slug}`,
+          location.cohort_include_regex
+        );
+        if (
+          location.cohort_include_regex.some((regx) =>
+            RegExp(regx).test(elm.slug)
+          )
+        ) {
+          console.log(`adding ${elm.slug}`);
+          return true;
+        }
+      }
+
+      if (elm.academy.slug === location.value) return true;
+      return false;
+    });
+    return _filtered;
+  };
+
   useEffect(() => {
     const getData = async () => {
       let cohorts = await getCohorts({ limit: 100 });
@@ -116,7 +149,6 @@ const Calendar = (props) => {
         }
       }
       setData((oldData) => {
-        console.log(oldData);
         let defaultValue = oldData.cohorts.catalog.find((opt) =>
           opt.value?.includes("miami")
         );
@@ -127,7 +159,7 @@ const Calendar = (props) => {
             catalog: oldData.cohorts.catalog,
             all: cohorts,
             filtered: defaultValue
-              ? cohorts.filter((elm) => elm.academy.slug === defaultValue.value)
+              ? filterCohorts(cohorts, defaultValue)
               : cohorts,
           },
         };
@@ -145,6 +177,8 @@ const Calendar = (props) => {
             session.locations.map((l) => ({
               label: l.name,
               value: l.breathecode_location_slug,
+              cohort_include_regex: l.meta_info.cohort_include_regex,
+              cohort_exclude_regex: l.meta_info.cohort_exclude_regex,
             }))
           ),
         },
@@ -372,21 +406,10 @@ const Calendar = (props) => {
                 value={academy}
                 onChange={(opt) => {
                   setAcademy(opt);
-                  const academySlug =
-                    session.academyAliasDictionary[opt.value] || opt.value;
-
                   let filtered =
                     opt.label !== "All Locations"
-                      ? datas[filterType.value].all.filter(
-                          (elm) => elm.academy.slug === academySlug
-                        )
-                      : datas[filterType.value].all;
-                  // if no cohorts on location, try to include online
-                  if (filtered.length === 0)
-                    filtered = datas[filterType.value].all.filter((elm) =>
-                      elm.academy.slug.includes("online")
-                    );
-
+                      ? filterCohorts(datas[filterType.value].all, opt)
+                      : cohorts;
                   setData({
                     ...datas,
                     [filterType.value]: {

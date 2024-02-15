@@ -109,7 +109,7 @@ const Landing = (props) => {
             ? yml.navbar.buttonText
             : pageContext.lang === "us"
             ? "Apply"
-            : "Solicita una plaza"
+            : "¡Postúlate Ahora!"
         }
         buttonUrl={yml.navbar?.buttonUrl}
         logoUrl={yml.navbar?.logoUrl}

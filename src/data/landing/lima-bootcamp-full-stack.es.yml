@@ -3,7 +3,7 @@ meta_info:
 
   # This will show on social media when shared
   title: "ProInnóvate y 4Geeks: Full Stack Developer Bootcamp, aprende todo lo necesario para integrarte en el mundo laboral de la industria Tech."
-  description: "El Bootcamp de Full-Satack con mayor credibilidad del mercado."
+  description: "El Bootcamp de Full-Stack con mayor credibilidad del mercado."
   image: "/images/bg/main-bg.jpg"
   keywords: "Clase de programación, Clase de python, clase de javascript, Clase de informática, Coding Bootcamp, 4Geeks Academy"
   visibility: "hidden" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
@@ -67,7 +67,7 @@ follow_bar:
     font_size: ["25px", "25px", "25px", "18px", "4.3vw"]
   button:
     text: "Inicia tu Popstulación"
-    path: "https://inngenius.proinnovate.gob.pe/ "
+    path: "https://inngenius.proinnovate.gob.pe"
   phone: 
     text: ""
 
@@ -220,7 +220,7 @@ components:
       color: white
       hover_color: "white"
       background: "black"
-      path: "https://inngenius.proinnovate.gob.pe/ "
+      path: "https://inngenius.proinnovate.gob.pe"
     bullets:
       items:
         - heading: "Paso 1: Registro"

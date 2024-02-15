@@ -3,7 +3,7 @@ meta_info:
 
   # This will show on social media when shared
   title: "Full Stack Developer Bootcamp, aprende todo lo necesario para integrarte en el mundo laboral de la industria Tech."
-  description: "El Bootcamp de Full-Satack más premiado en Santiago, Chile. Con 4Geeks, te convertirás en experto en 18 semanas"
+  description: "El Bootcamp de Full-Stack más premiado en Santiago, Chile. Con 4Geeks, te convertirás en experto en 18 semanas"
   image: "/images/bg/main-bg.jpg"
   keywords: "Clase de programación, Clase de python, clase de javascript, Clase de informática, Coding Bootcamp, 4Geeks Academy"
   visibility: "hidden" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
@@ -182,7 +182,7 @@ components:
       text:
         "JavaScript y Python"
         #           xl      lg      md      sm      xs
-      font_size: ["50px", "50px", "50px", "50px", "50px"]
+      font_size: ["45px", "45px", "30px", "28px", "25px"]
     content:
       text: "El Bootcamp abarca desde los fundamentos de programación en JavaScript hasta la creación de aplicaciones dinámicas con React.js. También incluye conceptos avanzados como Python, Flask, bases de datos y la publicación de sitios web. Prepárate para desarrollar proyectos web de forma efectiva y aplicar tus conocimientos en entornos profesionales, donde se valora altamente a profesionales bien preparados en esta área."
       font_size: ["18px"]

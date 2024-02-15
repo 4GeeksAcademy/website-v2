@@ -394,6 +394,7 @@ const TwoColumn = ({ left, right, proportions, session }) => {
           right?.video ? "center" : right?.image ? "end" : "start"
         }
         flexDirection="column"
+        justifyContent="center"
         size_tablet={right_size || 6}
         padding_xs="0"
         padding_md={left?.image?.shadow ? "0 0 0 20px" : "0px"}
