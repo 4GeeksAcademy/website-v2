@@ -41,7 +41,7 @@ custom_bar:
   message: Conviértete en programador por aprox. COP 600.000 al mes
 #  button: 
 #    label: "Read More"
-#    path: "#leadform_header" #string (can be inline path using #, relative path or absolute path)
+#    path: "#" #string (can be inline path using #, relative path or absolute path)
 
 badges:
   title: ""

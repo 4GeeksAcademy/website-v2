@@ -41,7 +41,7 @@ custom_bar:
   message: '4Geeks offers scholarships and financing tailored to your needs.<a class="customBar-link" href="/us/apply">¡Apply now!</a>'
   button: 
     label: "Read More"
-    path: "#leadform_header" #string (can be inline path using #, relative path or absolute path)
+    path: "#" #string (can be inline path using #, relative path or absolute path)
 
 badges:
   title: ""

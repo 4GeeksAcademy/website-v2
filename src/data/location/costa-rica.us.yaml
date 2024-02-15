@@ -41,7 +41,7 @@ custom_bar:
   message: Become a fullstack developer, and get lifetime mentoring starting at $150 per month
 #  button: 
  #   label: "Read More"
- #   path: "#leadform_header" #string (can be inline path using #, relative path or absolute path)
+ #   path: "#" #string (can be inline path using #, relative path or absolute path)
 
 badges:
   title: ""

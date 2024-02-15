@@ -42,7 +42,7 @@ custom_bar:
   message: 'Desde $150 al mes. O paga cuando obtengas un trabajo! <a class="customBar-link" href="/es/aplica">Postúlate</a>'
   button: 
     label: "Read More"
-    path: "#leadform_header" #string (can be inline path using #, relative path or absolute path)
+    path: "#" #string (can be inline path using #, relative path or absolute path)
 
 badges:
   title: ""

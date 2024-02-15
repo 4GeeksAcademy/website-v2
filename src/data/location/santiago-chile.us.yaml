@@ -46,7 +46,7 @@ custom_bar:
   message: Would you like your first job as a full stack devoloper? Become one and get hired! <a class="customBar-link" href="/us/apply">Apply now!</a>
   # button: 
     # label: ""
-    # path: "#leadform_header" #string (can be inline path using #, relative path or absolute path)
+    # path: "#" #string (can be inline path using #, relative path or absolute path)
 
 info_box:
   heading: "Find us in Santiago de Chile"
