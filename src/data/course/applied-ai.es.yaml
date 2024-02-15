@@ -6,7 +6,7 @@ meta_info:
   image: "/images/og-preview/datascience-ml.es.png"
   visibility: "visible"
   keywords: ""
-  show_in_apply: true
+  show_in_apply: false
   redirects: ["/es/applied-ai"]
   related_clusters: ["trends-and-tech"]
 
@@ -15,7 +15,7 @@ apply_form:
 
 seo_title: "Curso de Inteligencia Artificial Aplicada"
 header:
-  title: "Aprende a utilizar la inteligencia artificial en tu trabajo"
+  title: "Aprende I.A. y como utilizarla en tu trabajo"
   paragraph: "¡Conviértete un experto en AI y como aplicarla en las empresas, en diferentes roles y en tu trabajo!"
   image: "../../../static/images/bg/circles.jpg"
   image_alt: "círculos"
@@ -63,6 +63,15 @@ upcoming:
 #   content: >
 #     Entrénate con expertos en Data Science, Machine Learning e Inteligencia Artificial. Aprende Data Science desde las bases, recolecta, manipula y modela datos. Crea modelos de Machine Learning e iníciate en el Deep Learning.\n
 #     Practica con escenarios típicos de empresas de la vida real y conoce algunas de las herramientas más utilizadas en la industria. \n
+overlaped:
+  heading: "Utilizar AI en tu trabajo es indispensable"
+  paragraph: "La inteligencia artificial te reemplazará en tú trabajo, sino que potenciará tu productividad hasta el punto de que en el futuro cercano solo contratarán a profesionales competentes en IA. Haz más con menos. No te quedes atrás."
+  button:
+    text: "MÁS INFORMACIÓN"
+    color: "blue"  
+    link: "/"
+  image:
+    src: "/images/landing/tres-personas-reloaded.webp"  
 
 ## PROGRAM DETAILS
 details:
