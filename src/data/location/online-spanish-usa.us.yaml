@@ -44,7 +44,7 @@ custom_bar:
   message: 'From US$90/mo. Or pay after you get a job. <a class="customBar-link" href="/us/apply">¡Apply now!</a>'
   button: 
     label: "Read More"
-    path: "#" #string (can be inline path using #, relative path or absolute path)
+    path: "#leadform_header" #string (can be inline path using #, relative path or absolute path)
 
 badges:
   title: ""

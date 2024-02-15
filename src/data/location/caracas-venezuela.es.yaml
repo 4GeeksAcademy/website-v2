@@ -48,7 +48,7 @@ custom_bar:
   message: Aplica y conviértete en Full-Stack Developer
 #   button:
 #     label: "Read More"
-#     path: "#" #string (can be inline path using #, relative path or absolute path)
+#     path: "#leadform_header" #string (can be inline path using #, relative path or absolute path)
 
 badges:
   title: ""

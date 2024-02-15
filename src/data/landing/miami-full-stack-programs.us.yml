@@ -59,7 +59,7 @@ follow_bar:
     font_size: ["25px", "25px", "25px", "20px", "18px"]
   button:
     text: "Get more information"
-    path: "#top"
+    path: "#leadform_header"
   phone:
     text: "Call "
 
@@ -161,7 +161,7 @@ components:
       background: black
       color: white
       hover_color: "#white"
-      path: "#bottom"
+      path: "#leadform_bottom"m_bottom"
   - name: top_coding_bootcamp
     position: 8
     background: "#fbfbfb"

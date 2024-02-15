@@ -42,7 +42,7 @@ custom_bar:
   message: Conviértete en programador. Recibe mentoría de código y de carrera de por vida. Paga desde $150 al mes.
   # button: 
    # label: "Read More"
-   # path: "#" #string (can be inline path using #, relative path or absolute path)
+   # path: "#leadform_header" #string (can be inline path using #, relative path or absolute path)
 
 badges:
   title: ""
