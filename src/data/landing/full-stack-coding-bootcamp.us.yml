@@ -22,9 +22,9 @@ form:
   # posible fields: "first_name", "last_name", "full_name", "phone", "email"
   # always the first_name, email and phone will be mandatory if added.
   fields: ["full_name", "phone", "email"]
-  heading: "Get more information, Join the Full Stack Developer Bootcamp and code your career dreams"
-  motivation: "APPLY NOW and change your life."
-  button_label: Apply  NOW
+  heading: "Get more information in minutes"
+  motivation: "After submitting the from you will receive email from advisor with information about the program, campus, community, outcomes, scholarships, financing, syllabus, and support."
+  button_label: Request More Information
   redirect: null #you can redirect to another url or entirely diffrent website
 
 apply_schollarship: # form that is displayed at the end of the landing
@@ -34,8 +34,8 @@ apply_schollarship: # form that is displayed at the end of the landing
 
 # jumbotron on the top (cannot be commented out)
 header_data:
-  tagline: Transform your future in just 18 weeks as a full-stack developer with our coding bootcamp
-  sub_heading: "Our program teaches you in-demand web development skills without requiring a degree"
+  tagline: Coding Bootcamp with unlimited mentorships and career support
+  sub_heading: "Become a Full Stack Developer in 18 weeks"
   background: "#FFF1D1"
   badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
   image_filter: brightness(0.3)
@@ -251,7 +251,7 @@ components:
       link: "https://www.switchup.org/bootcamps/4geeks-academy"
     video: "EcqasocRKHo"
     heading:
-      text: "Immerse Yourself in 4Geeks' Full-Stack Bootcamp"
+      text: "Immerse Yourself in 4Geeks' Coding Bootcamp"
       font_size: ["40px", "40px", "40px", "40px", "40px"]
     content:
       text: ""
