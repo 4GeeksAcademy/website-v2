@@ -20,7 +20,7 @@ meta_info:
 
 navbar:
   buttonText: "Postular"
-  buttonUrl: "https://www.proinnovate.gob.pe/convocatorias/por-tipo-de-concurso/concursos-para-actores-del-ecosistema/630-bootcamp" # url accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
+  buttonUrl: "https://www.gob.pe/institucion/proinnovate/campa%C3%B1as/49409-concurso-de-becas-para-programas-de-bootcamps-de-codigo-etapa-2" # url accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
   logoUrl: "#"
 
 form:
@@ -154,7 +154,7 @@ components:
       color: white
       hover_color: "white"
       background: "black"
-      path: "https://www.proinnovate.gob.pe/convocatorias/por-tipo-de-concurso/concursos-para-actores-del-ecosistema/630-bootcamp"
+      path: "https://www.gob.pe/institucion/proinnovate/campa%C3%B1as/49409-concurso-de-becas-para-programas-de-bootcamps-de-codigo-etapa-2"
 
 
   - name: new_design_with_bullets
@@ -178,7 +178,7 @@ components:
       color: white
       hover_color: "white"
       background: "black"
-      path: "https://www.proinnovate.gob.pe/convocatorias/por-tipo-de-concurso/concursos-para-actores-del-ecosistema/630-bootcamp"
+      path: "https://www.gob.pe/institucion/proinnovate/campa%C3%B1as/49409-concurso-de-becas-para-programas-de-bootcamps-de-codigo-etapa-2"
     content: 
       text: ""
       font_size: ["16px"]
