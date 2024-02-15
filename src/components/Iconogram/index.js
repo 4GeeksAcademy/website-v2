@@ -46,7 +46,7 @@ const Iconogram = ({ session, data, pageContext, yml, index }) => {
           //margin="30px 0 30px 0"
           maxWidth="1366px"
           margin="30px auto"
-          style={{ ...JSON.parse(heading?.style) } || { textAlign: "center" }}
+          style={heading?.style ? { ...JSON.parse(heading.style) } : { textAlign: "center" }}
         >
           {heading.text}
         </H2>
@@ -61,7 +61,7 @@ const Iconogram = ({ session, data, pageContext, yml, index }) => {
           fontHeight="30px"
           maxWidth="1366px"
           dangerouslySetInnerHTML={{ __html: sub_heading.text }}
-          style={{ ...JSON.parse(sub_heading?.style) } || {}}
+          style={sub_heading?.style ? { ...JSON.parse(sub_heading.style) } : {}}
         />
       ) : sub_heading.text == !"" ? (
         <Paragraph
@@ -72,7 +72,7 @@ const Iconogram = ({ session, data, pageContext, yml, index }) => {
           fontSize="16px"
           fontHeight="30px"
           maxWidth="1366px"
-          style={{ ...JSON.parse(sub_heading?.style) } || {}}
+          style={sub_heading?.style ? { ...JSON.parse(sub_heading.style) } : {}}
         >
           {sub_heading.text}
         </Paragraph>
