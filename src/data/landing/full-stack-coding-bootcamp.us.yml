@@ -23,7 +23,7 @@ form:
   # always the first_name, email and phone will be mandatory if added.
   fields: ["full_name", "phone", "email"]
   heading: "Get more information in minutes"
-  motivation: "After submitting the from you will receive email from advisor with information about the program, campus, community, outcomes, scholarships, financing, syllabus, and support."
+  motivation: "After submitting the form, you will receive an email from the advisor with information about the programming bootcamp, campus, community, outcomes, scholarships, financing, syllabus, and support."
   button_label: Request More Information
   redirect: null #you can redirect to another url or entirely diffrent website
 
@@ -97,7 +97,7 @@ badges:
 
 geeks_vs_others:
   position: 7
-  heading: "What made us so successful?"
+  heading: "What makes this coding bootcamp so successful?"
   paragraph: ""
   total_rows: 5
 
@@ -133,7 +133,7 @@ who_is_hiring:
   heading: "Who is hiring our students?"
   sub_heading: "500+ hiring partners, and 50+ job openings right now for software development"
 
-# Possible layours: [two_column_left_image, two_column_right_image]
+# Possible layouts: [two_column_left_image, two_column_right_image]
 components:
   - name: new_design_with_bullets
     position: 1
@@ -147,12 +147,12 @@ components:
       shadow: true
     section_heading:
       text: |
-        Launch Your Tech Career with NO Experience with our full stack Coding Bootcamp
+        Launch Your Tech Career with no previous Experience
       style: '{ "font-size": "30px"}'
     heading:
-      text: "Stay ahead of the curve with lifetime learning access"
+      text: "Lifetime learning access"
     sub_heading:
-      text: "Are you excited about technology but concerned about finding your first job? Traditional ways of learning can be costly and lengthy, leaving you lacking the hands-on experience and valuable connections necessary for success. Don't worry, that's where 4Geeks Academy coding bootcamp with guaranteed job placement come into play!"
+      text: "Are you excited about technology but concerned about finding your first job? Traditional ways of learning can be costly and lengthy, leaving you lacking the hands-on experience and valuable connections necessary for success. Don't worry, that's where 4Geeks Academy coding boot camp with guaranteed job placement comes into play!"
     button:
       text: "APPLY NOW!"
       color: white
@@ -178,7 +178,7 @@ components:
     layout: iconogram
     swipable: True
     heading:
-      text: "How It Works?"
+      text: "3 step programming bootcamp"
       font_size: ["30px", "30px", "30px", "30px", "30px"]
     sub_heading:
       text: 'According to the U.S. Bureau of Labor Statistics, <strong style="font-weight: bold;">software developers in the U.S. have a higher than average job outlook and earn a median salary of $110,140 a year</strong>. Improve your chances to be one of them.'
