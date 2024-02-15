@@ -91,7 +91,7 @@ iconogram:
 two_column:
   - image:
       style: '{ "backgroundSize": "contain" }'
-      src: /images/landing/Group-6626.png
+      src: /images/landing/Group-6626.webp
     heading:
       text: $20 Million in scholarships
       font_size:

@@ -433,7 +433,7 @@ components:
     position: 8
     layout: overlaped
     image:
-      src: "/images/landing/dos-mujeres-1.png"
+      src: "/images/landing/two-womans-and-laptop.webp"
     heading:
       text: "Python y Javascript"
     content:

@@ -83,7 +83,7 @@ images_box:
       alt: "Caracas 4Geeks"
     - path: "../../../static/images/locations/caracas-loc-3.png"
       alt: "Caracas Office Jalisco"
-    - path: "../../../static/images/ownpeoplecoding2.jpg"
+    - path: "../../../static/images/ownpeoplecoding2.webp"
       alt: "4Geeks Own People Coding"
     - path: "../../../static/images/ownmancoding.jpg"
       alt: "Remote-Coding-Bootcamp"

@@ -856,7 +856,7 @@ export const landingSections = {
             margin="30px 0 0px 0"
             style={
               yml.section_heading.style
-                ? JSON.parse(heading.section_heading.style)
+                ? JSON.parse(yml.section_heading.style)
                 : null
             }
           >

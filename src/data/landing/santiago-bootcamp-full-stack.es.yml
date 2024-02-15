@@ -42,7 +42,7 @@ header_data:
   background: "#FFF1D1"
   tagline: Full-stack software developer bootcamp
   sub_heading: "Desde cero hasta conseguir tu primer trabajo como programador, aprende todo lo necesario, recibe soporte de por vida y consigue un empleo después de 18 semanas de estudio."
-  badge: "../../../static/images/badges/Course-Report-Badge-2023.png"
+  badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
   image_filter: brightness(0.3)
 
 features:
@@ -76,7 +76,7 @@ short_badges:
     alt: "Mejor centro de Coding Bootcamp"
   - name: "Course Report"
     url: ""
-    image: "../../../static/images/badges/Course-Report-Badge-2023.png"
+    image: "../../../static/images/badges/Course-Report-Badge-2024.webp"
     alt: "Top Coding Bootcamps Course Report"
   - name: "Switchup"
     url: ""
