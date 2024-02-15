@@ -22,9 +22,9 @@ form:
   # posible fields: "first_name", "last_name", "full_name", "phone", "email"
   # always the first_name, email and phone will be mandatory if added.
   fields: ["full_name", "phone", "email"]
-  heading: "Get more information, Become a Fullstack developer with our Coding Bootcamp and code your career dreams"
-  motivation: "APPLY NOW and change your life."
-  button_label: Apply  NOW
+  heading: "Get more information"
+  motivation: "Get a PDF and email in just 5 minutes"
+  button_label: Get more information
   redirect: null #you can redirect to another url or entirely diffrent website
 
 apply_schollarship: # form that is displayed at the end of the landing
@@ -34,7 +34,7 @@ apply_schollarship: # form that is displayed at the end of the landing
 
 # jumbotron on the top (cannot be commented out)
 header_data:
-  tagline: No Coding Experience? Become a Full-Stack Developer with 4Geeks Academy
+  tagline: Become a Full-Stack Developer with no previous coding experience
   sub_heading: "Our program teaches you in-demand web development skills without requiring a degree"
   background: "#FFF1D1"
   badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
@@ -146,12 +146,12 @@ components:
       link: "https://google.com" # take uses somewhere when they click on the image
       shadow: true
     section_heading:
-      text: "Launch Your Tech Career Without a Degree"
+      text: "Launch Your Tech Career Without Previous Experience"
       style: '{ "font-size": "30px"}'
     heading:
-      text: "No diploma? No problem! Get job-ready coding skills in just months"
+      text: "From zero to job-ready coding skills in just months"
     sub_heading:
-      text: "Don't let a traditional degree hold you back from your tech dreams. 4Geeks Academy's Full-Stack Bootcamp provides intensive, hands-on training that equips you with the in-demand skills employers seek, regardless of your academic background. Our immersive program focuses on practical learning, building a strong portfolio, and career support to jumpstart your journey in the exciting world of software development."
+      text: "Don't let a traditional degree hold you back from your tech dreams. 4Geeks Academy's Full-Stack Bootcamp provides intensive, hands-on training that equips you with the in-demand skills employers seek, regardless of your previous background. Our immersive program focuses on practical learning, building a strong portfolio, and career support to jumpstart your journey in the exciting world of software development."
     button:
       text: "APPLY NOW!"
       color: white
