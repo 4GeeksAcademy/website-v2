@@ -35,9 +35,9 @@ form:
   # posible fields: "first_name", "last_name", "full_name", "phone", "email"
   # always the first_name, email and phone will be mandatory if added.
   fields: ["full_name", "phone", "email"]
-  heading: "Craft stunning, interactive web experiences and launch your dream career with our immersive Front-End Developer Bootcamp"
-  motivation: "APPLY NOW and change your life."
-  button_label: Apply  NOW
+  heading: "Get more information in minutes"
+  motivation: "After submitting the form, you will receive an email from the advisor with information about the programming bootcamp, campus, community, outcomes, scholarships, financing, syllabus, and support."
+  button_label: Request More Information
   redirect: null #you can redirect to another url or entirely diffrent website
 
 apply_schollarship: # form that is displayed at the end of the landing
@@ -47,8 +47,8 @@ apply_schollarship: # form that is displayed at the end of the landing
 
 # jumbotron on the top (cannot be commented out)
 header_data:
-  tagline: Transform your future in just 18 weeks as a coding bootcamp graduate and launch your tech career
-  sub_heading: "Our immersive programming bootcamp teaches in-demand web development skills without the need for a degree"
+  tagline: Front-End Developer Bootcamp
+  sub_heading: "No previous experience required"
   background: "#FFF1D1"
   badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
   image_filter: brightness(0.3)
@@ -159,12 +159,12 @@ components:
       link: "https://google.com" # take uses somewhere when they click on the image
       shadow: true
     section_heading:
-      text: "Go Beyond Basics Become a Pro Front-End Developer with 4Geeks"
+      text: "From zero to Front-End Developer"
       style: '{ "font-size": "30px" }'
     heading:
-      text: "Stay ahead of the curve with lifetime learning access"
+      text: "Lifetime learning access"
     sub_heading:
-      text: "Are you excited about technology but concerned about finding your first job? Traditional ways of learning can be costly and lengthy, leaving you lacking the hands-on experience and valuable connections necessary for success. Don't worry, that's where 4Geeks Academy coding bootcamp with guaranteed job placement come into play!"
+      text: "The overwhelming majority of job openings are in Front-End Development. It's the ideal skill to find your first job. This boot camp will give you all the skills you need to get your first job as a front-end developer with unlimited and lifetime coding and career support."
     button:
       text: "APPLY NOW!"
       color: white
