@@ -1,11 +1,11 @@
 meta_info:
-  slug: full-stack-coding-bootcamp # <--- URL 4geeksacademy.com/us/landing/example
+  slug: no-experience-coding-bootcamp # <--- URL 4geeksacademy.com/us/landing/example
 
   # This will show on social media when shared
-  title: "Gain a Lifetime of Tech Skills with our Fullstack Coding Bootcamp"
-  description: "Learn in-demand programming skills close to home with our convenient bootcamp locations"
+  title: "Gain a Lifetime of Tech Skills with 4Geeks Academy Coding Bootcamp"
+  description: "Learn in-demand programming skills with no experience with our Coding bootcamp"
   image: "/images/bg/main-bg.jpg"
-  keywords: "full stack, full stack coding bootcamp, programming bootcamp, Coding Classes, Learn to code, 4Geeks Academy"
+  keywords: "coding bootcamp without degree, coding bootcamp no experience, coding bootcamp with job placement, full stack, full stack coding bootcamp, programming bootcamp, Coding Classes, Learn to code, 4Geeks Academy"
   visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   template: "landing_a" # <--- choose your landing template
   redirects: []
@@ -22,7 +22,7 @@ form:
   # posible fields: "first_name", "last_name", "full_name", "phone", "email"
   # always the first_name, email and phone will be mandatory if added.
   fields: ["full_name", "phone", "email"]
-  heading: "Get more information, Join the Full Stack Developer Bootcamp and code your career dreams"
+  heading: "Get more information, Become a Fullstack developer with our Coding Bootcamp and code your career dreams"
   motivation: "APPLY NOW and change your life."
   button_label: Apply  NOW
   redirect: null #you can redirect to another url or entirely diffrent website
@@ -34,7 +34,7 @@ apply_schollarship: # form that is displayed at the end of the landing
 
 # jumbotron on the top (cannot be commented out)
 header_data:
-  tagline: Transform your future in just 18 weeks as a full-stack developer with our coding bootcamp
+  tagline: No Coding Experience? Become a Full-Stack Developer with 4Geeks Academy
   sub_heading: "Our program teaches you in-demand web development skills without requiring a degree"
   background: "#FFF1D1"
   badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
@@ -92,7 +92,7 @@ program_details:
   sub_heading: "The 3 most used languages in the world"
 
 badges:
-  position: 5
+  position: 6
   heading: "4Geeks Academy has awards and recognitions that validate it's excellence"
 
 geeks_vs_others:
@@ -146,13 +146,12 @@ components:
       link: "https://google.com" # take uses somewhere when they click on the image
       shadow: true
     section_heading:
-      text: |
-        Launch Your Tech Career with NO Experience with our full stack Coding Bootcamp
+      text: "Launch Your Tech Career Without a Degree"
       style: '{ "font-size": "30px"}'
     heading:
-      text: "Stay ahead of the curve with lifetime learning access"
+      text: "No diploma? No problem! Get job-ready coding skills in just months"
     sub_heading:
-      text: "Are you excited about technology but concerned about finding your first job? Traditional ways of learning can be costly and lengthy, leaving you lacking the hands-on experience and valuable connections necessary for success. Don't worry, that's where 4Geeks Academy coding bootcamp with guaranteed job placement come into play!"
+      text: "Don't let a traditional degree hold you back from your tech dreams. 4Geeks Academy's Full-Stack Bootcamp provides intensive, hands-on training that equips you with the in-demand skills employers seek, regardless of your academic background. Our immersive program focuses on practical learning, building a strong portfolio, and career support to jumpstart your journey in the exciting world of software development."
     button:
       text: "APPLY NOW!"
       color: white
@@ -181,7 +180,7 @@ components:
       text: "How It Works?"
       font_size: ["30px", "30px", "30px", "30px", "30px"]
     sub_heading:
-      text: 'According to the U.S. Bureau of Labor Statistics, <strong style="font-weight: bold;">software developers in the U.S. have a higher than average job outlook and earn a median salary of $110,140 a year</strong>. Improve your chances to be one of them.'
+      text: 'More than just learning to code, 4Geeks Academy prepares you for the job market. Our Full-Stack Bootcamp goes beyond technical skills, incorporating career coaching, resume writing workshops, and mock interviews to ensure you stand out in the application process.'
       font_size: ["16px", "16px", "16px", "16px", "16px"]
       style: '{ "textAlign": "center", "width": "60%" }'
     text_link: "/"
@@ -198,7 +197,7 @@ components:
 
   - name: geekinfo_2
     position: 4
-    layout: two_column_right
+    layout: two_column_left
     proportions: [6, 6]
     background: ""
     image:
@@ -226,18 +225,71 @@ components:
       path: ""
     bullets:
       items:
+        - heading: "Financial aid options"
+          text: "Explore flexible payment plans and scholarship opportunities"
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
         - heading: "Real-world focus"
           text: "Build a portfolio of practical projects that showcase your abilities to potential employers"
           icon: "check" #string with icon for example ['check', 'cicle', etc]
         - heading: "Supportive community"
           text: "Connect with fellow learners and instructors in a collaborative and encouraging environment"
           icon: "check" #string with icon for example ['check', 'cicle', etc]
-        - heading: "career support"
+        - heading: "High Graduate Employment Rate"
           text: "Benefit from career coaching, resume writing workshops, and industry connections to help you land your dream job"
           icon: "check" #string with icon for example ['check', 'cicle', etc]
-        - heading: "Financial aid options"
-          text: "Explore flexible payment plans and scholarship opportunities"
-          icon: "check" #string with icon for example ['check', 'cicle', etc]
+
+  # - name: top_coding_bootcamp
+  #   position: 4
+  #   layout: two_column_left
+  #   background: "#fbfbfb"
+  #   proportions: [4, 8]
+  #   image:
+  #     style: '{ "backgroundSize": "contain" "height": "200px"}'
+  #     src: "/images/badges/ebootcamp-top.png"
+  #   heading:
+  #     text: "We have been named one of the TOP programming bootcamps in the World"
+  #     #             xl      lg      md      sm      xs
+  #     font_size: ["38px", "36px", "32px", "32px", "28px"]
+
+  - name: geekinfo_3
+    position: 5
+    layout: two_column_right
+    proportions: [6, 6]
+    background: ""
+    image:
+      style: '{ "backgroundSize": "cover"}'
+      src: "/images/landing/tres-personas-reloaded.webp"
+      shadow: true
+    section_heading:
+      text: ""
+      style: '{ "font-size": "30px" }'
+    heading:
+      text: "Coding Bootcamp with Job Placement"
+      font_size: ["40px", "40px", "40px", "40px", "40px"]
+    sub_heading:
+      text: "We are all in with you, every step of the way! Secure a job within 6 months of graduation"
+      font_size: ["16px", "16px", "16px", "16px", "16px"]
+    button:
+      text: "Apply now"
+      color: white
+      hover_color: "white"
+      background: "black"
+      path: "#leadform_bottom"
+    content:
+      text: ""
+      font_size: ["16px"]
+      path: ""
+    bullets:
+      items:
+        - heading: "Dedicated Career Services"
+          text: "Access personalized guidance and support from our experienced career coaches"
+          icon: "circle" #string with icon for example ['check', 'cicle', etc]
+        - heading: "Portfolio Powerhouse"
+          text: "Showcase your skills through industry-relevant projects reviewed by experts"
+          icon: "circle" #string with icon for example ['check', 'cicle', etc]
+        - heading: "Mock Interviews & Resume Workshops"
+          text: "Sharpen your presentation skills and impress potential employers"
+          icon: "circle" #string with icon for example ['check', 'cicle', etc]
 
   - name: passion
     position: 10
@@ -251,10 +303,10 @@ components:
       link: "https://www.switchup.org/bootcamps/4geeks-academy"
     video: "EcqasocRKHo"
     heading:
-      text: "Immerse Yourself in 4Geeks' Full-Stack Bootcamp"
+      text: "Alissa Landra, Campus Manager USA at 4Geeks Academy, dives into the exciting possibilities of our Coding Bootcamp"
       font_size: ["40px", "40px", "40px", "40px", "40px"]
     content:
-      text: ""
+      text: "Discover how 4Geeks Academy empowers individuals of all backgrounds to master in-demand skills and land fulfilling tech jobs, regardless of their academic history."
       font_size: ["16px"]
     button:
       text: "GET MORE INFO"
@@ -262,19 +314,6 @@ components:
       color: white
       hover_color: "#white"
       path: "#leadform_bottom"
-    bullets:
-      items:
-        - heading: "Scholarships Breaking Barriers"
-          text: "We believe in accessible tech education. With a $20 million scholarship initiative, 4Geeks removes financial barriers, making tech education available to everyone."
-          icon: "check"
-        - heading: "Fits Your Life"
-          text: "Don't put your life on hold for your tech dreams. Our part-time, flexible programs seamlessly fit into your schedule, letting you pursue your goals without compromising your life."
-          icon: "check"
-        - heading: "Career Support for Life"
-          text: "We're with you beyond graduation. Get continuous job placement assistance, refine your soft skills, and receive support throughout your entire tech career."
-          icon: "check"
-        - heading: "Dive Deep, Code Strong"
-          text: "Immerse yourself in coding with our hands-on curriculum. Learn not just to code but to excel, mastering the most relevant industry skills that set you apart."
-          icon: "check"
+
 
 
