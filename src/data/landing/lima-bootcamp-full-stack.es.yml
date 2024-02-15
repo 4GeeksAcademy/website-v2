@@ -67,7 +67,7 @@ follow_bar:
     font_size: ["25px", "25px", "25px", "18px", "4.3vw"]
   button:
     text: "Inicia tu Popstulación"
-    path: "https://inngenius.proinnovate.gob.pe"
+    path: "https://www.gob.pe/institucion/proinnovate/campa%C3%B1as/49409-concurso-de-becas-para-programas-de-bootcamps-de-codigo-etapa-2"
   phone: 
     text: ""
 
@@ -220,7 +220,7 @@ components:
       color: white
       hover_color: "white"
       background: "black"
-      path: "https://inngenius.proinnovate.gob.pe"
+      path: "https://www.gob.pe/institucion/proinnovate/campa%C3%B1as/49409-concurso-de-becas-para-programas-de-bootcamps-de-codigo-etapa-2"
     bullets:
       items:
         - heading: "Paso 1: Registro"
