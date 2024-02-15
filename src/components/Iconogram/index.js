@@ -46,7 +46,11 @@ const Iconogram = ({ session, data, pageContext, yml, index }) => {
           //margin="30px 0 30px 0"
           maxWidth="1366px"
           margin="30px auto"
-          style={heading?.style ? { ...JSON.parse(heading.style) } : { textAlign: "center" }}
+          style={
+            heading?.style
+              ? { ...JSON.parse(heading.style) }
+              : { textAlign: "center" }
+          }
         >
           {heading.text}
         </H2>
