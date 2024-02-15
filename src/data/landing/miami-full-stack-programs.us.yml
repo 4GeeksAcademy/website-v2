@@ -161,7 +161,7 @@ components:
       background: black
       color: white
       hover_color: "#white"
-      path: "#leadform_bottom"m_bottom"
+      path: "#leadform_bottom"
   - name: top_coding_bootcamp
     position: 8
     background: "#fbfbfb"
