@@ -2,7 +2,7 @@ meta_info:
   slug: "bootcamp-programacion-uruguay"
   title: "Bootcamp Programación Uruguay"
   position: 38
-  description: "Conoce aquí todo sobre nuestro campus de bootcamp de programación en Uruguay, Monte Video de 4Geeks Academy"
+  description: "Conoce aquí todo sobre nuestro campus de bootcamp de programación en Uruguay, Monte Video de 4GeeksAcademy"
   image: "/images/og-preview/montevideo-uruguay.es.png"
   # it will not show up on the applications forms
   visibility: "visible"
@@ -11,6 +11,11 @@ meta_info:
   region: "latam"
   dialCode: "598"
   related_clusters: ["desarrollador-full-stack"]
+  
+  # ⬇️ cohort_include_regex field is used to filter cohorts on the calendar that only test successfully for a particular regex
+  # for example: for this location, only show cohorts starting with usa-xx-spanish
+  cohort_include_regex: ["latam"]
+  cohort_exclude_regex: []
 
 seo_title: "Aprende a programar en Uruguay"
 header:
@@ -26,7 +31,7 @@ button_header:
   button_link: "#programs"
 button:
   syllabus_button_text: "DESCARGAR PROGRAMA" # <-- this will show everywhere in the website
-  apply_button_text: "APLICAR" # <-- this will show everywhere in the website
+  apply_button_text: "POSTÚLATE" # <-- this will show everywhere in the website
 
   syllabus_submit_text: "DESCARGAR"
   apply_button_link: "/aplica"
@@ -34,7 +39,7 @@ button:
 
 custom_bar:
   active: false
-  message: Lorem ipsum dot simet mosd ei
+  message: 'Desde US$90 al mes. O paga cuando obtengas un trabajo! <a class="customBar-link" href="/es/aplica">Postúlate</a>'
   button: 
     label: "Read More"
     path: "#" #string (can be inline path using #, relative path or absolute path)
@@ -70,7 +75,7 @@ images_box:
   images:
     - path: "../../../static/images/locations/uruguay-new.jpg"
       alt: "Uruguay city"
-    - path: "../../../static/images/ownpeoplecoding2.jpg"
+    - path: "../../../static/images/ownpeoplecoding2.webp"
       alt: "4Geeks Own People Coding"
     - path: "../../../static/images/ownmancoding.jpg"
       alt: "Remote-Coding-Bootcamp"
@@ -78,6 +83,31 @@ images_box:
       alt: "4Geeeks location"
     - path: "../../../static/images/locations/miami-people.jpeg"
       alt: "4Geeeks lab"
+  layout_horizontal: true #false == "mode mosaic"
+
+two_columns:
+  proportions: [6, 6]
+  image:
+    style: '{"border" : "5px solid black", "backgroundSize": "contain" }'
+    src: "/static/images/testimonials/pablo-review.jpg"
+    shadow: true 
+  video: "ScqncejBOvY"
+  heading:
+    text: "La Experiencia de Pablo en 4Geeks Academy en Montevideo"
+    font_size: ["30px", "30px", "30px", "30px", "30px"]
+  sub_heading:
+    text: "Oportunidades de Financiamiento y Adaptabilidad al Mercado"
+    font_size: ["18px", "18px", "22px", "22px", "22px"]
+  button:
+    text: "¡Únete ahora!"
+    color: "white"
+    background: "black"
+    path: "/es/aplica"
+  bullets:
+    items: 
+    - text: "Pablo resalta las variadas oportunidades de financiamiento disponibles para estudiantes que deseen unirse a 4Geeks Academy en Argentina"
+    - text: "Explora cómo nuestros programas están meticulosamente diseñados para alinearse con las demandas del mercado tecnológico actual"
+    - text: "Nuestros graduados tienen una tasa de colocación laboral del 95% dentro de los seis meses posteriores a la graduación, asegurando transiciones exitosas al mundo laboral"
 
 ## START FROM HERE - DON'T CHANGE ANYTHING ABOVE
 ## HEADING SECTION
@@ -102,13 +132,13 @@ country_shortname: "uy"
 socials:
   - name: "Facebook"
     icon: "facebook"
-    link: "https://www.facebook.com/4geeksacademy"
+    link: "https://www.facebook.com/4geeksacademyve"
   - name: "Twitter"
-    icon: "twitter"
-    link: "https://www.twitter.com/4geeksacademy"
+    icon: "x-logo"
+    link: "https://twitter.com/4geeksacademyES"
   - name: "Instagram"
     icon: "instagram"
-    link: "https://www.instagram.com/4geeksacademy"
+    link: "https://www.instagram.com/4geeksacademylatam/"
 courses:
   - "Full-Time"
   - "Part-Time"

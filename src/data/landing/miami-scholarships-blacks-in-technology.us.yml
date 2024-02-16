@@ -38,7 +38,7 @@ header_data:
   tagline_color: "white"
   sub_heading: ""
   partner_logo_url: "../../../static/images/partner/bit-logo.png" # optional
-  badge: "../../../static/images/badges/Course-Report-Badge-2023.png"
+  badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
   background_image: "../../../static/images/Happy-People-Landing-4Geeks-ES.jpg" # optional
   background: "#000000" #background property, it can be a hex color
   image_filter: brightness(0.25)
@@ -61,12 +61,12 @@ short_badges:
     alt: "Mejor centro de Coding Bootcamp"
   - name: "Course Report"
     url: ""
-    image: "../../../static/images/badges/Course-Report-Badge-2023.png"
+    image: "../../../static/images/badges/Course-Report-Badge-2024.webp"
     alt: "Top Coding Bootcamps Course Report"
   - name: "Switchup"
     url: ""
     image: "../../../static/images/badges/switchup-badge-2023.png"
-    alt: "Best coding bootcamp Switchup 2023"   
+    alt: "Best coding bootcamp Switchup 2023"
   - name: "Florida Department of Education"
     url: ""
     image: "../../../static/images/badges/licensed-inverted.png"
@@ -91,7 +91,7 @@ follow_bar:
 # ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇
 #
 rating_reviews:
-  position: 3
+  position: 4
   heading: "Top rated on all available review sites"
   rating_list:
     - alt: "Career Karma"
@@ -117,19 +117,17 @@ who_is_hiring:
   sub_heading: "Get a job in less than 3 months thanks to our growing network of more than 500 technology companies. Access to national and international offers and a community of more than 2000 graduates"
   featured:
     - name: "Facebook"
-      image: "../../../static/images/partner/facebook.png"
+      image: "../../../static/images/partner/meta-logo.png"
     - name: "Microsoft"
       image: "../../../static/images/partner/microsoft.png"
     - name: "Apple"
       image: "../../../static/images/partner/apple.png"
 
-
 geeks_vs_others:
-  position: 4
+  position: 5
   heading: "Compare 4Geeks to other bootcamps"
   # sub_heading: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
   total_rows: 5
-
 
 why_4geeks:
   position: 7
@@ -142,14 +140,13 @@ why_4geeks:
 apply_schollarship: # form that is displayed at the end of the landing
   # title: "Apoyo Profesional Ilimitado"
   imageSide: "left"
-  image: "../../../static/images/landing/apply.png"  
+  image: "../../../static/images/landing/apply.png"
 
 # Possible layours: [two_column_left_image, two_column_right_image]
 
 components:
-
   - name: how-it-works
-    position: 2
+    position: 3
     background: "veryLightBlue2"
     layout: iconogram
     swipable: True
@@ -162,19 +159,18 @@ components:
       style: '{ "textAlign": "center", "width": "60%" }'
     text_link: "#"
     icons:
-    - icon: "touch"
-      title: Apply for your scholarship before March 31st, 2022
-    - icon: "receive_mail"
-      title: You will receive an email with all the information and a logic test 
-    - icon: "talk"
-      title: Do an online interview with our admissions team 
-    - icon: "terminal"
-      title: Get the result, book your spot and start coding
-  
+      - icon: "touch"
+        title: Apply for your scholarship before March 31st, 2022
+      - icon: "receive_mail"
+        title: You will receive an email with all the information and a logic test
+      - icon: "talk"
+        title: Do an online interview with our admissions team
+      - icon: "terminal"
+        title: Get the result, book your spot and start coding
 
   - name: "whatever"
     layout: choose_your_program
-    position: 1
+    position: 2
     heading:
       text: Our Programs
     content:
@@ -182,25 +178,25 @@ components:
       font_size: ["16px"]
       path: ""
     programs:
-    - title: "Full Stack Developer"
-      sub_title: "Level 1"
-      icon: "fullstack_2"
-      description: |
-        From 0 to becoming a Full-Stack Jr. programmer, you will work with HTML5, CSS3, Bootstrap, JS, Reactjs, SQL, Python, Flask, REST API's, etc. to design and create responsive websites. You'll gain a solid foundation of front, back, database, distributed processes, and deployment with passionate instructors and an up-to-date, hands-on syllabus.
-        Available Part-Time or Full-Time mode. Download <a href=https://storage.googleapis.com/4geeks-academy-website/syllabus/europe/Syllabus%20Europe%20EN.pdf target=_blank>"here the syllabus"</a>.  
-      
-      text_link: Apply for a scholarship
-      link: "#" # moves to start position
-      
-    - title: "AI & Machine Learning"
-      sub_title: "Developers and STEM Profiles"
-      icon: "machine_2"
-      description: |
-        Get trained by a renowned expert in A.I.; explore Machine Learning's fundamentals and Deep Learning with some of the most powerful technologies that truly scale intelligence for business. Practice with real-life business scenarios typical in business and review some of the tools used in the industry. Strategize and develop your A.I. following the lifecycle development from start to end, including deployment into production and maintenance with Privacy, Security, and Ethics. 
-        Download <a href=https://storage.googleapis.com/4geeks-academy-website/syllabus/europe/Syllabus%20Europe%20EN.pdf target=_blank>"here the syllabus"</a>. 
-        
-      text_link: Apply for a scholarship
-      link: "#"
+      - title: "Full Stack Developer"
+        sub_title: "Level 1"
+        icon: "fullstack_2"
+        description: |
+          From 0 to becoming a Full-Stack Jr. programmer, you will work with HTML5, CSS3, Bootstrap, JS, Reactjs, SQL, Python, Flask, REST API's, etc. to design and create responsive websites. You'll gain a solid foundation of front, back, database, distributed processes, and deployment with passionate instructors and an up-to-date, hands-on syllabus.
+          Available Part-Time or Full-Time mode. Download <a href=https://storage.googleapis.com/4geeks-academy-website/syllabus/europe/Syllabus%20Europe%20EN.pdf target=_blank>"here the syllabus"</a>.
+
+        text_link: Apply for a scholarship
+        link: "#" # moves to start position
+
+      - title: "AI & Machine Learning"
+        sub_title: "Developers and STEM Profiles"
+        icon: "machine_2"
+        description: |
+          Get trained by a renowned expert in A.I.; explore Machine Learning's fundamentals and Deep Learning with some of the most powerful technologies that truly scale intelligence for business. Practice with real-life business scenarios typical in business and review some of the tools used in the industry. Strategize and develop your A.I. following the lifecycle development from start to end, including deployment into production and maintenance with Privacy, Security, and Ethics. 
+          Download <a href=https://storage.googleapis.com/4geeks-academy-website/syllabus/europe/Syllabus%20Europe%20EN.pdf target=_blank>"here the syllabus"</a>.
+
+        text_link: Apply for a scholarship
+        link: "#"
 
   - name: blacks_in_technolgy
     position: 6
@@ -215,9 +211,41 @@ components:
         "Blacks In Technology Foundation"
         #           xl      lg      md      sm      xs
       font_size: ["40px", "40px", "40px", "40px", "40px"]
-    sub_heading: 
+    sub_heading:
       text: "Access to the largest community of black technologists"
       font_size: ["18px", "18px", "18px", "18px", "18px"]
     content:
-      text: "<strong>CAREER SUPPORT</strong> <br>Job boards, mentorships, and strategic partnerships give members an upper hand in their job search and career advancement goals.<br><br><strong>NETWORKING</strong><br>Professional and social events connect our community. Virtual and physical events are core to the BIT mission.<br><br><strong>TECH RESOURCES</strong><br>Through our relationships, the BIT Foundation offers discounts on technical training, and events and conferences."
+      text: ""
       font_size: ["16px"]
+    bullets:
+      items:
+        - heading: "CAREER SUPPORT"
+          text: "Job boards, mentorships, and strategic partnerships give members an upper hand in their job search and career advancement goals."
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
+        - heading: "NETWORKING"
+          text: "Professional and social events connect our community. Virtual and physical events are core to the BIT mission."
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
+        - heading: "TECH RESOURCES"
+          text: "Through our relationships, the BIT Foundation offers discounts on technical training, and events and conferences."
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
+
+  - name: some_id
+    position: 1
+    layout: two_column_right
+    image:
+      src: "/images/testimonials/allisa-testimonial.jpg"
+    video: "https://www.youtube.com/watch?v=TCHASxvkhpI"
+    heading:
+      text:
+        "Unlock Your Future: Exclusive Scholarships with Miami Dade College, Clark University, and United Way Miami for South Florida Applicants!"
+        #xl      lg     md     sm    xs
+      font_size: ["40px", "34px", "34px", "25px", "20px"]
+    content:
+      text: "Seize this chance to supercharge your education. Join the academy now and pave the way to your brightest future! Contact our admissions team to learn more and join our coding bootcamp today!"
+      font_size: ["16px"]
+    button:
+      text: "Apply Now"
+      background: black
+      color: white
+      hover_color: "#white"
+      path: "#top"

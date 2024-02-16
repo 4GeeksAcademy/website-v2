@@ -4,7 +4,6 @@ import process from "process";
 import ChooseProgram from "../components/ChooseProgram";
 import Badges from "../components/Badges";
 import Loc from "../components/Loc";
-import OurPartners from "../components/OurPartners";
 import { isCustomBarActive } from "../actions";
 import ChooseYourProgram from "../components/ChooseYourProgram";
 import UpcomingDates from "../components/UpcomingDates";
@@ -26,6 +25,12 @@ import { SessionContext } from "../session";
 import JobGuaranteeSmall from "../components/JobGuaranteeSmall";
 import RelatedPosts from "../components/RelatedPosts";
 import FaqCard from "../components/FaqCard";
+import TwoColumn from "../components/TwoColumn/index.js";
+import GeeksInfo from "../components/GeeksInfo";
+import With4Geeks from "../components/With4Geeks";
+import MosaicImages from "../components/MosaicImages/index.js";
+import Carousel from "../components/Carousel/index.js";
+import Gallery from "../components/Gallery/index.js";
 
 const MapFrame = lazy(() => import("../components/MapFrame"));
 
@@ -56,7 +61,7 @@ const Location = ({ data, pageContext, yml }) => {
 
   const open = {
     us: "Open on Maps",
-    es: "Abrir en Mpas",
+    es: "Abrir Mapa",
   };
   const chooseButton = {
     us: "CHOOSE PROGRAM",
@@ -66,16 +71,27 @@ const Location = ({ data, pageContext, yml }) => {
   return (
     <>
       <GridContainerWithImage
-        padding="0"
-        padding_tablet="0 0 20px 0"
+        padding="40px 20px"
+        padding_md="40px 80px"
+        padding_lg="40px 0px"
+        padding_tablet="40px 40px"
         columns_tablet="14"
-        margin={isCustomBarActive(session) ? "70px 0 24px 0" : "70px 0"}
+        margin={
+          isCustomBarActive(session)
+            ? "138px auto 30px auto"
+            : "72px auto 30px auto"
+        }
+        margin_md={
+          isCustomBarActive(session)
+            ? "120px auto 30px auto"
+            : "72px auto 30px auto"
+        }
       >
         <Div
           flexDirection="column"
           justifyContent_tablet="start"
           padding_tablet="70px 0 0 0"
-          padding={isCustomBarActive(session) ? "70px 25px 0 25px" : "0 25px"}
+          padding={isCustomBarActive(session) ? "50px 25px 0 25px" : "0 25px"}
           gridColumn_tablet="1 / 7"
         >
           <H1 type="h1" textAlign="left" margin="0 0 11px 0" color="#606060">
@@ -195,43 +211,6 @@ const Location = ({ data, pageContext, yml }) => {
               </Paragraph>
             )}
           </Div>
-
-          {/* <Paragraph textAlign_tablet="left">{yml.info_box.phone} </Paragraph>
-          {yml.info_box.whatsapp && (
-            <Paragraph
-              justifyContent="center"
-              justifyContent_tablet="start"
-              textAlign_tablet="left"
-              display="flex"
-              alignItems="center"
-            >
-              {yml.info_box.whatsapp_link ? (
-                <>
-                  <Div
-                    width="22px"
-                    height="22px"
-                    alignItems="center"
-                    margin="0 8px 0 0"
-                  >
-                    <Icon icon="whatsapp" />
-                  </Div>
-                  Whatsapp:
-                  <a
-                    href={yml.info_box.whatsapp_link}
-                    target="_blank"
-                    rel="noopener noreferrer nofollow"
-                  >
-                    {yml.info_box.whatsapp}
-                  </a>
-                </>
-              ) : (
-                `Whatsapp: ${yml.info_box.whatsapp}`
-              )}
-            </Paragraph>
-          )}
-          <Paragraph textAlign_tablet="left" margin="0 0 30px 0">
-            {yml.info_box.email}{" "}
-          </Paragraph> */}
         </Div>
         <Div
           height="auto"
@@ -249,6 +228,18 @@ const Location = ({ data, pageContext, yml }) => {
           />
         </Div>
       </GridContainerWithImage>
+
+      <Badges
+        lang={pageContext.lang}
+        short_link={true}
+        short_text="15px"
+        margin="40px auto"
+        paragraph={yml.badges.paragraph}
+        bottom_paragraph
+        maxWidth="1366px"
+        paddingText_tablet="0 10% 55px 10%"
+      />
+
       {data.allJobGuaranteeSmallYaml.edges[0].node.locations.includes(
         yml.breathecode_location_slug
       ) && (
@@ -257,76 +248,43 @@ const Location = ({ data, pageContext, yml }) => {
         />
       )}
 
-      <Badges
-        lang={pageContext.lang}
-        background={Colors.verylightGray}
-        paragraph={yml.badges.paragraph}
-        margin="0 0 57px 0"
-        padding="27px 17px 50px 17px"
-        padding_tablet="80px 0 100px 0"
+      <TwoColumn
+        left={{ image: yml.two_columns?.image, video: yml.two_columns?.video }}
+        right={{
+          heading: yml.two_columns?.heading,
+          sub_heading: yml.two_columns?.sub_heading,
+          bullets: yml.two_columns?.bullets,
+          content: yml.two_columns?.content,
+          button: yml.two_columns?.button,
+        }}
+        proportions={yml.two_columns?.proportions}
+        session={session}
       />
-      <GridContainer
-        columns_tablet="12"
-        padding_tablet="60px 0 77px 0"
-        padding="40px 17px"
-      >
-        <Div gridColumn_tablet="1 / 4">
-          <H2 textAlign="left">{images.images_box.heading}</H2>
-        </Div>
-        <Div flexDirection="column" gridColumn_tablet="5 / 13">
-          {images.images_box.content.split("\n").map((m, i) => (
-            <Paragraph
-              key={i}
-              textAlign="left"
-              margin="0 0 20px 0"
-              fontSize="15px"
-              lineHeight="26px"
-            >
-              {m}
-            </Paragraph>
-          ))}
-        </Div>
-      </GridContainer>
-      {yml.images_box.images && (
-        <GridContainer
-          columns_tablet="10"
-          gridTemplateRows_tablet="repeat(4, 1fr)"
-          gridTemplateAreas={`
-        'image1 image1 image1 image1 image1 image1 image1 image2 image2 image2'
-        'image1 image1 image1 image1 image1 image1 image1 image2 image2 image2'
-        'image3 image3 image3 image3 image5 image5 image5 image5 image5 image5'
-        'image4 image4 image4 image4 image5 image5 image5 image5 image5 image5'
-        `}
-          gridTemplateAreas_tablet={`
-          'image1 image1 image1 image1 image1 image1 image1 image2 image2 image2'
-          'image1 image1 image1 image1 image1 image1 image1 image2 image2 image2'
-          'image3 image3 image3 image3 image5 image5 image5 image5 image5 image5'
-          'image4 image4 image4 image4 image5 image5 image5 image5 image5 image5'
-          `}
-          height_tablet="813px"
-          height="304px"
-          childHeight="inherit"
-        >
-          {yml.images_box.images.map((m, i) => {
-            return (
-              <GatsbyImage
-                style={{ gridArea: `image${i + 1}`, borderRadius: "3px" }}
-                key={i}
-                image={getImage(m.path.childImageSharp.gatsbyImageData)}
-                alt={m.alt}
-              />
-            );
-          })}
-        </GridContainer>
+
+      {/* GEEKSINFO IS A TWOCOLUMN WITH TITLE */}
+      <GeeksInfo lang={pageContext.lang} />
+
+      {yml?.images_box?.layout_horizontal ? (
+        <Gallery
+          images={yml?.images_box?.images}
+          heading={yml?.images_box?.heading}
+          paragraph={yml?.images_box?.content}
+          widthImage="315px"
+          heightImage="347px"
+          previewArrow
+          nextArrow
+          //customSettingsCarousel={}
+        />
+      ) : (
+        <MosaicImages
+          images={yml?.images_box?.images}
+          heading={yml?.images_box?.heading}
+          paragraph={yml?.images_box?.content}
+        />
       )}
-      <OurPartners
-        images={hiring.partners.images}
-        showFeatured
-        marquee
-        title={hiring.partners.tagline}
-        paragraph={hiring.partners.sub_heading}
-      />
+
       <ChooseYourProgram
+        id="choose-program"
         chooseProgramRef={chooseProgramRef}
         lang={pageContext.lang}
         programs={data.allChooseYourProgramYaml.edges[0].node.programs}
@@ -338,9 +296,10 @@ const Location = ({ data, pageContext, yml }) => {
         message={yml.upcoming.no_dates_message}
         actionMessage={yml.upcoming.actionMessage}
       />
-      <Staff lang={pageContext.lang} />
 
-      {/* IFRAME map */}
+      <Staff lang={pageContext.lang} heading={yml?.staff?.heading} />
+
+      {/* IFRAME map
       <Div>
         {!ready ? (
           <H1>Loading Map...</H1>
@@ -355,21 +314,15 @@ const Location = ({ data, pageContext, yml }) => {
             )}
           </Suspense>
         )}
-      </Div>
-      <GridContainer
-        padding="0 4%"
-        gridGap="0px"
-        padding_tablet="0 20%"
-        padding_lg="0 26%"
-      >
-        <FaqCard
-          faqs={data.allFaqYaml.edges[0].node.faq}
-          topicSlug="enrollment"
-          minPriority="1"
-          // locationSlug={yml.breathecode_location_slug}
-        />
-      </GridContainer>
-      <Divider height="50px" />
+      </Div> */}
+
+      <FaqCard
+        faqs={data.allFaqYaml.edges[0].node.faq}
+        topicSlug="enrollment"
+        minPriority="1"
+        // locationSlug={yml.breathecode_location_slug}
+      />
+
       <RelatedPosts
         lang={pageContext.lang}
         posts={data.allMarkdownRemark.edges}
@@ -453,7 +406,7 @@ export const query = graphql`
               childImageSharp {
                 gatsbyImageData(
                   layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                  width: 800
+                  width: 1000
                   quality: 100
                   placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                 )
@@ -471,6 +424,7 @@ export const query = graphql`
           images_box {
             heading
             content
+            layout_horizontal
             images {
               path {
                 childImageSharp {
@@ -483,6 +437,38 @@ export const query = graphql`
                 }
               }
               alt
+            }
+          }
+          staff {
+            heading
+            sub_heading
+          }
+          two_columns {
+            proportions
+            image {
+              style
+              src
+              shadow
+            }
+            video
+            heading {
+              text
+              font_size
+            }
+            sub_heading {
+              text
+              font_size
+            }
+            button {
+              text
+              color
+              background
+              path
+            }
+            bullets {
+              items {
+                text
+              }
             }
           }
         }
@@ -558,7 +544,7 @@ export const query = graphql`
       }
     }
     allMarkdownRemark(
-      limit: 4
+      limit: 3
       sort: { frontmatter: { date: DESC } }
       filter: { frontmatter: { cluster: { in: $related_clusters } } }
     ) {

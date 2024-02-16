@@ -35,9 +35,9 @@ export default ({ icon, title, content }) => {
       minWidth_tablet="120px"
       minWidth_md="180px"
       //minWidth_lg="240px"
-      width_xs="100%"
+      width_xs="50%"
       margin_tablet="0 10px"
-      margin_xs="20px 0"
+      margin_xxs="20px 0"
       padding_xs="0"
     >
       <Div

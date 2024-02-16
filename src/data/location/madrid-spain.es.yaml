@@ -6,10 +6,15 @@ meta_info:
   image: "/images/og-preview/madrid-spain.es.png"
   keywords: "Coding bootcamp Madrid"
   redirects:
-    ["madrid", "/es/location/madrid-espana"]
+    ["/madrid", "/es/location/madrid-espana"]
   region: "europe"
   dialCode: "34"
   related_clusters: ["desarrollador-full-stack"]
+  
+  # ⬇️ cohort_include_regex field is used to filter cohorts on the calendar that only test successfully for a particular regex
+  # for example: for this location, only show cohorts starting with usa-xx-spanish
+  cohort_include_regex: []
+  cohort_exclude_regex: []
 
 seo_title: "4Geeks Academy Madrid, España"
 header:
@@ -78,6 +83,31 @@ images_box:
       alt: "4Geeeks España lab"
     - path: "../../../static/images/locations/madrid-2.png"
       alt: "4Geeeks España lab"
+  layout_horizontal: true #false == "mode mosaic"
+
+two_columns:
+  proportions: [6, 6]
+  image:
+    style: '{"border" : "5px solid black", "backgroundSize": "contain" }'
+    src: "/static/images/testimonials/javier-murillo-testimonial.jpg"
+    shadow: true  
+  video: "c14ZDHXN6_w"
+  heading:
+    text: "La Experiencia de Javier Murillo en 4Geeks Academy en Madrid"
+    font_size: ["30px", "30px", "30px", "30px", "30px"]
+  sub_heading:
+    text: "Fortalece tus Habilidades Tecnológicas desde Madrid, España"
+    font_size: ["18px", "18px", "22px", "22px", "22px"]
+  button:
+    text: "¡Únete ahora!"
+    color: "white"
+    background: "black"
+    path: "/es/aplica"
+  bullets:
+    items: 
+    - text: "Aprende las tecnologías más demandadas por las empresas y entra en el mundo laboral en tiempo récord"
+    - text: "Te acompañaremos durante todo el proceso, con mentorías ilimitadas y de por vida, ¡para que nunca más programes solo!"
+    - text: "Ofrecemos becas parciales y múltiples opciones de financiación, para que el dinero no te frene"
 
 active_campaign_location_slug: "madrid-spain"
 breathecode_location_slug: "madrid-spain"
@@ -97,16 +127,16 @@ country_shortname: "es"
 socials:
   - name: "Facebook"
     icon: "facebook"
-    link: "https://www.facebook.com/4geeksacademyes"
+    link: "https://www.instagram.com/4geeksacademy/"
   - name: "Twitter"
-    icon: "twitter"
-    link: "https://www.twitter.com/4geeksacademyes"
+    icon: "x-logo"
+    link: "https://twitter.com/4GeeksAcademy"
   - name: "Instagram"
     icon: "instagram"
-    link: "https://www.instagram.com/4geeksacademyes"
-  - name: "Meetup"
-    icon: "meetup"
-    link: "https://www.meetup.com/4geeks-academy-madrid"
+    link: "https://www.facebook.com/4geeksacademy"
+  - name: "Linkedin"
+    icon: "linkedin"
+    link: "https://www.linkedin.com/school/4geeksacademyes/"
 courses:
   - "Full-Time"
   - "Part-Time"

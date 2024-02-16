@@ -30,9 +30,10 @@ const ProgramDetailsMobile = (props) => {
       <Div
         //className="program-details-mobile"
         flexWrap="wrap"
-        padding_xxs="20px"
+        padding="20px"
         padding_tablet="35px"
         gridGap="10px"
+        display_md="none"
       >
         {props.details.details_modules.map((item, index) => {
           return (
@@ -55,23 +56,26 @@ const ProgramDetailsMobile = (props) => {
                 }
                 justifyContent={`between`}
                 flexDirection={selected.index === index && "column"}
+                style={{ position: "relative" }}
               >
                 <Div
                   display="flex"
                   flexDirection={`column`}
                   alignItems={`flex-start`}
-                  style={{ position: "relative" }}
                 >
                   <H3 textAlign="left">{item.module_name}</H3>
                   <Paragraph textAlign="left" margin="0 0 20px 0">
                     {item.duration}
                   </Paragraph>
                 </Div>
-                <Icon
-                  icon="arrowdown"
-                  width="32px"
-                  style={{ position: "absolute", right: "35px" }}
-                />
+                <Div
+                  style={{ position: "absolute", right: "13px", top: "15px" }}
+                  transform={
+                    selected.index === index ? "rotate(180deg)" : "rotate(0deg)"
+                  }
+                >
+                  <Icon icon="arrowdown" width="32px" height="32px" />
+                </Div>
                 {selected.index === index && (
                   <Div flexDirection="column">
                     <Div alignItems={`center`} margin={`10px 0`}>

@@ -7,7 +7,7 @@ import { Div } from "../Sections";
 
 const regex = {
   email:
-    /^[-!#$%&'*+\/0-9=?A-Z^_a-z`{|}~](\.?[-!#$%&'*+\/0-9=?A-Z^_a-z`{|}~])*@(?!mailinator|leonvero|ichkoch|naymeo|naymio)[a-zA-Z0-9]*\.[a-zA-Z](-?[a-zA-Z0-9])*.*[a-zA-Z]+$/,
+    /^[-!#$%&'*+\/0-9=?A-Z^_a-z`{|}~](\.?[-!#$%&'*+\/0-9=?A-Z^_a-z`{|}~])*@(?!mailinator|leonvero|ichkoch|naymeo|naymio)[\-a-zA-Z0-9]*\.[a-zA-Z](-?[a-zA-Z0-9])*.*[a-zA-Z]+$/,
   text: /^.+$/,
   textarea: /^.+$/,
   number: /^\d+$/,
@@ -139,7 +139,7 @@ const StyledTextArea = styled.textarea`
   padding: 5px 10px;
   border: none;
   font-family: "Lato", sans-serif;
-  border: ${(props) => props.border || "1px solid #606060"};
+  border: ${(props) => props.border || "1px solid #828282"};
   opacity: 0.7;
   font-size: 16px;
   font-color: ${Colors.black};

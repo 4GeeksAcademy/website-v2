@@ -7,7 +7,13 @@ import { SessionContext } from "../session";
 // components
 import News from "../components/News";
 import Icon from "../components/Icon";
-import { Colors, StyledBackgroundSection, Anchor } from "../components/Styling";
+import TestimonialCard from "../components/TestimonialCard";
+import {
+  Colors,
+  StyledBackgroundSection,
+  Anchor,
+  Img,
+} from "../components/Styling";
 import { GridContainer, Div, Header } from "../components/Sections";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
@@ -15,314 +21,165 @@ const Press = (props) => {
   const { data, pageContext, yml } = props;
   const { session } = React.useContext(SessionContext);
   let content = data.allPageYaml.edges[0].node.content;
+  let position = 0;
   return (
     <Div
-      margin={isCustomBarActive(session) ? "120px 0 75px 0" : "90px 0 75px 0"}
+      margin={
+        isCustomBarActive(session)
+          ? "120px auto 75px auto"
+          : "90px auto 75px auto"
+      }
       flexDirection="column"
+      maxWidth="1366px"
+      position="relative"
     >
-      <Div id="circles-left" display="none" display_tablet="inherit">
-        {/* first column smCircles */}
-        <Icon
-          icon="landingCircles/smCircle-gray"
-          width="17px"
-          height="17px"
-          style={{
-            zIndex: 3,
-            position: "absolute",
-            left: "90px",
-            top: "121px",
-          }}
-        />
-        <Icon
-          icon="landingCircles/smCircle-black"
-          width="17px"
-          height="17px"
-          style={{
-            zIndex: 3,
-            position: "absolute",
-            left: "125px",
-            top: "121px",
-          }}
-        />
-        <Icon
-          icon="landingCircles/smCircle-gray"
-          width="17px"
-          height="17px"
-          style={{
-            zIndex: 3,
-            position: "absolute",
-            left: "168px",
-            top: "121px",
-          }}
-        />
-        <Icon
-          icon="landingCircles/smCircle-gray"
-          width="17px"
-          height="17px"
-          style={{
-            zIndex: 3,
-            position: "absolute",
-            left: "205px",
-            top: "121px",
-          }}
-        />
-        <Icon
-          icon="landingCircles/smCircle-gray"
-          width="17px"
-          height="17px"
-          style={{
-            zIndex: 3,
-            position: "absolute",
-            left: "304px",
-            top: "121px",
-          }}
-        />
+      <Img
+        src="/images/slash-light.png"
+        width="44px"
+        height="121px"
+        style={{
+          position: "absolute",
+          right: "12%",
+          top: "3%",
+          zIndex: "0",
+        }}
+        display_xxs="none"
+        display_tablet="flex"
+      />
+      <Img
+        src="/images/slash-black.png"
+        width="44px"
+        height="121px"
+        style={{
+          position: "absolute",
+          right: "16%",
+          top: "3%",
+          zIndex: "0",
+        }}
+        display_xxs="none"
+        display_tablet="flex"
+      />
+      <Img
+        src="/images/Vector-right-large.png"
+        width="89px"
+        height="121px"
+        style={{
+          position: "absolute",
+          right: "4%",
+          top: "3%",
+          zIndex: "0",
+        }}
+      />
+      <Img
+        src="/images/Group-6594-e.png"
+        width="50px"
+        height="289px"
+        style={{
+          position: "absolute",
+          left: "12%",
+          top: "0%",
+          zIndex: "1",
+        }}
+        display_xxs="none"
+        display_tablet="flex"
+      />
+      <Img
+        src="/images/Vector-light.png"
+        width="164px"
+        height="222px"
+        style={{
+          position: "absolute",
+          left: "4%",
+          top: "0%",
+          zIndex: "0",
+        }}
+      />
 
-        {/* second column smCircles */}
-        <Icon
-          icon="landingCircles/mdCircle-blue"
-          width="17px"
-          height="17px"
-          style={{
-            zIndex: 3,
-            position: "absolute",
-            left: "249px",
-            top: "153px",
-          }}
-        />
-        <Icon
-          icon="landingCircles/smCircle-gray"
-          width="17px"
-          height="17px"
-          style={{
-            zIndex: 3,
-            position: "absolute",
-            left: "168px",
-            top: "153px",
-          }}
-        />
-        <Icon
-          icon="landingCircles/smCircle-gray"
-          width="17px"
-          height="17px"
-          style={{
-            zIndex: 3,
-            position: "absolute",
-            left: "125px",
-            top: "153px",
-          }}
-        />
-        <Icon
-          icon="landingCircles/smCircle-black"
-          width="17px"
-          height="17px"
-          style={{
-            zIndex: 3,
-            position: "absolute",
-            left: "70px",
-            top: "153px",
-          }}
-        />
-        <Icon
-          icon="landingCircles/smCircle-yellowLight"
-          width="17px"
-          height="17px"
-          style={{
-            zIndex: 3,
-            position: "absolute",
-            left: "35px",
-            top: "153px",
-          }}
-        />
-        <Icon
-          icon="landingCircles/smCircle-red"
-          width="27"
-          height="27"
-          style={{
-            zIndex: 2,
-            position: "absolute",
-            left: "214px",
-            top: "224px",
-          }}
-        />
-        <Icon
-          icon="landingCircles/right-mdCircle-mustard"
-          width="79px"
-          height="116px"
-          style={{ zIndex: 2, position: "absolute", left: "0px", top: "269px" }}
-        />
-      </Div>
-      <Div id="circles-right" display="none" display_tablet="inherit">
-        <Icon
-          icon="landingCircles/smCircle-mustard"
-          style={{
-            zIndex: 2,
-            position: "absolute",
-            right: "287px",
-            top: "115px",
-          }}
-        />
-        <Icon
-          icon="landingCircles/smCircle-gray"
-          width="17px"
-          height="17px"
-          style={{
-            zIndex: 3,
-            position: "absolute",
-            right: "270px",
-            top: "238px",
-          }}
-        />
-        <Icon
-          icon="landingCircles/smCircle-gray"
-          width="17px"
-          height="17px"
-          style={{
-            zIndex: 3,
-            position: "absolute",
-            right: "192px",
-            top: "238px",
-          }}
-        />
-        <Icon
-          icon="landingCircles/mdCircle-blue"
-          width="53px"
-          height="53px"
-          style={{
-            zIndex: 3,
-            position: "absolute",
-            right: "71px",
-            top: "134px",
-          }}
-        />
-        <Icon
-          icon="landingCircles/smCircle-black"
-          width="17px"
-          height="17px"
-          style={{
-            zIndex: 3,
-            position: "absolute",
-            right: "90px",
-            top: "238px",
-          }}
-        />
-        <Icon
-          icon="landingCircles/md-rightCircle-yellowLight"
-          width="233px"
-          height="238px"
-          style={{ zIndex: 2, position: "absolute", right: "0", top: "128px" }}
-        />
-      </Div>
       <Header
-        padding="0 10px"
-        padding_tablet="0 18%"
+        //margin={isCustomBarActive(session) ? "120px auto 0 auto" : "90px auto 0 auto"}
+        margin="0"
+        paragraphMargin="26px 20px"
+        paragraphMargin_Tablet="26px 22%"
+        paddingParagraph_tablet="0 40px"
         seo_title={yml.seo_title}
         title={yml.header.title}
         paragraph={yml.header.paragraph}
+        padding_xxs="40px 20px"
+        padding_md="40px 80px"
+        padding_lg="40px 0px"
+        padding_tablet="40px 40px"
+        position="relative"
+        fontSize_title="40px"
+        fontSizeTitle_tablet="60px"
+        fontFamily_title="Archivo-Black"
+        fontSize_paragraph="24px"
+        gridTemplateColumns_tablet="repeat(14, 1fr)"
+        maxWidth="1366px"
+        uppercase
       />
       <News
         lang={pageContext.lang}
         limit={content.limit}
         height="50px"
         width="120px"
-        justifyContent="flex-start"
-        padding="50px 10px"
-        padding_tablet="20px 22%  70px 22%"
+        justifyContent="evenly"
+        padding="20px"
+        padding_tablet="20px 40px 70px 40px"
+        padding_md="20px 80px 70px 80px"
+        padding_lg="20px 0 70px 0"
       />
-      {/* <Div  flexDirection="column"> */}
-      {Array.isArray(content.news) &&
-        content.news.slice(0, content.limit).map((l, i) => {
-          return (
-            <GridContainer
-              key={`${i}-${l.title}`}
-              columns_tablet="12"
-              background={i % 2 == 0 && Colors.lightYellow2}
-              padding_tablet="83px 0"
-            >
-              <Div
-                flexDirection="column"
-                justifyContent_tablet="start"
-                padding_tablet="70px 0 0 0"
-                gridArea_tablet={i % 2 != 0 ? "1/1/1/6" : "1/7/1/13"}
-              >
-                <GatsbyImage
-                  key={i}
-                  style={{
-                    height: "50px",
-                    width: "100%",
-                    minWidth: "60px",
-                    margin: "22px 0",
-                  }}
-                  imgStyle={{
-                    objectPosition: "left",
-                    width: "120px",
-                    objectFit: "contain",
-                  }}
-                  alt={l.name}
-                  image={getImage(
-                    l.logo != null && l.logo.childImageSharp.gatsbyImageData
-                  )}
-                />
-                <H3
-                  type="h3"
-                  textAlign="left"
-                  fontSize="22px"
-                  lineHeight="26.4px"
-                >
-                  {l.title}
-                </H3>
-                <Paragraph
-                  textAlign="left"
-                  margin="15px 0"
-                  fontSize="15px"
-                  lineHeight="22px"
-                  letterSpacing="0.05em"
-                  fontWeight="300"
-                >
-                  {l.text}
-                </Paragraph>
-                <Paragraph
-                  style={{ alignItems: "center" }}
-                  padding="15px 0px"
-                  display="flex"
-                  fontWeight="700"
-                  letterSpacing="0.05em"
-                  lineHeight="16px"
-                  textAlign="left"
-                  fontSize="13px"
-                  color={Colors.blue}
-                >
-                  <Anchor cursor="pointer" to={l.url}>
-                    {l.textUrl}
-                    <Icon
-                      style={{ margin: "0 0 0 10px", placeSelf: "center" }}
-                      icon="arrow-right"
-                      width="10"
-                      height="12px"
-                      color={Colors.blue}
-                    />
-                  </Anchor>
-                </Paragraph>
-              </Div>
-              <Div
-                height="auto"
-                width="100%"
-                gridArea_tablet={i % 2 != 0 ? "1/7/1/13" : "1/1/1/6"}
-              >
-                <StyledBackgroundSection
-                  height={`389px`}
-                  image={
-                    l.image != null && l.image.childImageSharp.gatsbyImageData
-                  }
-                  bgSize={`cover`}
-                  alt={l.name}
-                />
-              </Div>
-            </GridContainer>
-          );
-        })}
+      <Div
+        display="column"
+        columns="3"
+        columnCount="3"
+        gap_tablet="24px"
+        //style={{ gridAutoFlow: "dense" }}
+        padding_xxs="40px 20px"
+        padding_tablet="0 40px 60px 40px"
+        padding_md="0 80px 60px 80px"
+        padding_lg="0 0 60px 0"
+        columnCount_xxs="1"
+        columnCount_tablet="3"
+        height="auto"
+      >
+        {Array.isArray(content.news) &&
+          content.news.slice(0, content.limit).map((l, i) => {
+            i == 0
+              ? (position = 0)
+              : position == 2
+              ? (position = 0)
+              : (position += 1);
+            return (
+              <TestimonialCard
+                key={i}
+                background={
+                  position == 0
+                    ? Colors.white
+                    : position == 1
+                    ? Colors.veryLightBlue
+                    : Colors.lightYellow2
+                }
+                image={l.logo && l.logo}
+                imgStyle={{
+                  objectPosition: "left",
+                  objectFit: "contain",
+                  height: "40px",
+                  width: "150px",
+                  minWidth: "60px",
+                  margin: "0 0 0 0",
+                }}
+                name={l.title}
+                textUrl={l.textUrl}
+                url={l.url}
+                location={l.location}
+                //short_content={l.text}
+                description={l.text}
+                starRating={false}
+              />
+            );
+          })}
+      </Div>
     </Div>
-    // </Div>
   );
 };
 export const query = graphql`

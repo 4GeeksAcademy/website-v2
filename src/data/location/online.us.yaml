@@ -2,7 +2,7 @@ meta_info:
   slug: "online-coding-bootcamp"
   title: "Online Coding Bootcamps"
   position: 102
-  description: "Discover here all the online coding bootcamps taught by 4Geeks Academy. Sign up today!"
+  description: "Discover here all the online coding bootcamps taught by 4GeeksAcademy. Sign up today!"
   image: "/images/og-preview/online.us.png"
   keywords: "null"
   redirects:
@@ -14,6 +14,11 @@ meta_info:
     ]
   region: "usa-canada"
   related_clusters: ["trends-and-tech"]
+  
+  # ⬇️ cohort_include_regex field is used to filter cohorts on the calendar that only test successfully for a particular regex
+  # for example: for this location, only show cohorts starting with usa-xx-spanish
+  cohort_include_regex: []
+  cohort_exclude_regex: []
 
 seo_title: "Online Coding Bootcamp"
 header:
@@ -36,7 +41,7 @@ button:
 
 custom_bar:
   active: false
-  message: Lorem ipsum dot simet mosd ei
+  message: '4Geeks offers scholarships and financing tailored to your needs.<a class="customBar-link" href="/us/apply">¡Apply now!</a>'
   button: 
     label: "Read More"
     path: "#" #string (can be inline path using #, relative path or absolute path)
@@ -83,6 +88,32 @@ images_box:
       alt: "4Geeeks miami day"
     - path: "../../../static/images/locations/miami-old2.jpg"
       alt: "4Geeeks miami lab"
+  layout_horizontal: true #false == "mode mosaic"
+
+two_columns:
+  proportions: [6, 6]
+  image:
+    style: '{"border" : "5px solid black", "backgroundSize": "contain" }'
+    src: "/static/images/testimonials/allisa-testimonial.jpg"
+    shadow: true  
+  video: "https://www.youtube.com/watch?v=TCHASxvkhpI"
+  heading:
+    text: "Your Journey with 4Geeks Academy Online"
+    font_size: ["30px", "30px", "30px", "30px", "30px"]
+  sub_heading:
+    text: "Develop Your Tech Skills from Anywhere"
+    font_size: ["18px", "18px", "22px", "22px", "22px"]
+  button:
+    text: "APPLY NOW"
+    color: "white"
+    background: "black"
+    path: "/us/apply"
+  bullets:
+    items: 
+    - text: "Interactive courses focusing on essential technical skills for today's digital world"
+    - text: "Access to experienced instructors and a collaborative learning community"
+    - text: "Flexibility to study from anywhere at your own pace"
+    - text: "Preparation for real-world challenges and job opportunities in technology"
 
 ## HEADING SECTION
 
@@ -92,7 +123,7 @@ gdpr_compliant: true # do we need to ask for permision?
 in_person_available: false # important to accept in-person applicants
 
 city: "Rest of America"
-name: "Rest of America"
+name: "Rest of America in English"
 latitude: "10000.760158"
 longitude: "-800000.200154"
 phone: "+1 (786) 416-6640"
@@ -106,11 +137,14 @@ socials:
     icon: "facebook"
     link: "https://www.facebook.com/4geeksacademy"
   - name: "Twitter"
-    icon: "twitter"
+    icon: "x-logo"
     link: "https://www.twitter.com/4geeksacademy"
   - name: "Instagram"
     icon: "instagram"
-    link: "https://www.instagram.com/4geeksacademy"
+    link: "https://www.instagram.com/4geeksacademy/"
+  - name: "Linkedin"
+    icon: "linkedin"
+    link: "https://www.linkedin.com/school/4geeksacademy/"
 
 courses:
   - "Full-Time"

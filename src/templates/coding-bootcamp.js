@@ -38,8 +38,7 @@ const Program = ({ data, pageContext, yml }) => {
   const [open, setOpen] = React.useState(false);
   const hiring = data.allPartnerYaml.edges[0].node;
 
-  const course_type = "full_stack";
-  const program_type = "part_time";
+  const defaultCourse = "full-stack";
 
   const [toggleIndex, setToggleIndex] = useState();
 
@@ -161,7 +160,7 @@ const Program = ({ data, pageContext, yml }) => {
         background={Colors.white}
         details={pageDetails.details}
         lang={pageContext.lang}
-        course={program_type}
+        course={"part-time"}
       />
 
       <GridContainerWithImage
@@ -583,8 +582,7 @@ const Program = ({ data, pageContext, yml }) => {
           type={pageContext.slug}
           lang={pageContext.lang}
           locations={data.allLocationYaml.edges}
-          programType={program_type}
-          courseType={course_type}
+          defaultCourse={defaultCourse}
           title={yml.prices.heading}
           paragraph={yml.prices.sub_heading}
         />

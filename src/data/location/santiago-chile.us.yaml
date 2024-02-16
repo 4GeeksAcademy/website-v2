@@ -16,13 +16,18 @@ meta_info:
   region: "latam"
   dialCode: "56"
   related_clusters: ["trends-and-tech"]
+  
+  # ⬇️ cohort_include_regex field is used to filter cohorts on the calendar that only test successfully for a particular regex
+  # for example: for this location, only show cohorts starting with usa-xx-spanish
+  cohort_include_regex: []
+  cohort_exclude_regex: []
 
 seo_title: "Coding Bootcamp Santiago de Chile"
 header:
   tagline: "4Geeks Academy in Santiago de Chile"
   sub_header: "All programs are taught "
   sub_header_highlighted: "Online or Hybrid."
-  paragraph: "Chile is positioned as one of the countries with the highest digital growth in the coming years, and particularly in Santiago the trend of bootcamps has been fostered in recent years, among them is 4Geeks Academy. We have become a great study opportunity for many Chileans and foreigners who want to change their lives and learn about web development."
+  paragraph: "Chile is positioned as one of the countries with the highest digital growth in the coming years, and particularly in Santiago the trend of bootcamps has been fostered in recent years, among them is 4GeeksAcademy. We have become a great study opportunity for many Chileans and foreigners who want to change their lives and learn about web development."
   image: "../../../static/images/locations/santiago-home.png"
   alt: ""
 button_header:
@@ -74,7 +79,7 @@ upcoming:
 
 images_box:
   heading: "What you should know about this location: "
-  content: "Chile is positioning itself as one of the countries with the highest digital growth in the coming years, and particularly in Santiago, the trend of bootcamps has been encouraged in recent years, including 4Geeks Academy. We have become a great study opportunity for many Chileans and foreigners who want to change their lives and learn about web development. Located a 10-minute walk from the metro station and situated in the eastern part of the city, this office is ideal for all Santiaguinos who want to become programmers. Recently renovated, with high-speed internet and unlimited access for our students."
+  content: "Chile is positioning itself as one of the countries with the highest digital growth in the coming years, and particularly in Santiago, the trend of bootcamps has been encouraged in recent years, including 4GeeksAcademy. We have become a great study opportunity for many Chileans and foreigners who want to change their lives and learn about web development. Located a 10-minute walk from the metro station and situated in the eastern part of the city, this office is ideal for all Santiaguinos who want to become programmers. Recently renovated, with high-speed internet and unlimited access for our students."
   images:
     - path: "../../../static/images/locations/santiago-office-1.jpeg"
       alt: "Santiago Location Image"
@@ -86,6 +91,31 @@ images_box:
       alt: "Santiago Location Image"
     - path: "../../../static/images/locations/santiago-1.png"
       alt: "Santiago Location Image"
+  layout_horizontal: true #false == "mode mosaic"
+
+two_columns:
+  proportions: [6, 6]
+  image:
+    style: '{"border" : "5px solid black", "backgroundSize": "contain" }'
+    src: "/static/images/staff/luisa.png"
+    shadow: true  
+  video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
+  heading:
+    text: "Luisa Glum's Experience at 4Geeks Academy in Santiago, Chile"
+    font_size: ["30px", "30px", "30px", "30px", "30px"]
+  sub_heading:
+    text: "Transformative Journeys and the Income Share Agreement, Elevate Your Tech Skills from Santiago, Chile"
+    font_size: ["18px", "18px", "22px", "22px", "22px"]
+  button:
+    text: "APPLY NOW"
+    color: "white"
+    background: "black"
+    path: "/us/apply"
+  bullets:
+    items: 
+    - text: "Luisa Glum shares her personal journey and how 4Geeks Academy transformed her career path in Santiago's evolving tech landscape"
+    - text: "Learn about the innovative Income Share Agreement (ISA) model, a pioneering approach where tuition is paid after securing a job, ensuring access to quality education"
+    - text: "With a 95% job placement rate within six months of graduation, our programs ensure tangible outcomes for career advancement"
 
 active_campaign_location_slug: "santiago-chile"
 breathecode_location_slug: "santiago-chile"
@@ -105,16 +135,16 @@ country_shortname: "cl"
 socials:
   - name: "Facebook"
     icon: "facebook"
-    link: "https://www.facebook.com/4geeksacademycl"
+    link: "https://www.facebook.com/4GeeksAcademyCL"
   - name: "Twitter"
-    icon: "twitter"
-    link: "https://www.twitter.com/4geeksacademycl"
+    icon: "x-logo"
+    link: "https://twitter.com/4geeksacademycl"
   - name: "Instagram"
     icon: "instagram"
     link: "https://www.instagram.com/4geeksacademycl"
-  - name: "Meetup"
-    icon: "meetup"
-    link: "https://www.meetup.com/4geeks-academy-chile"
+  - name: "Eventbrite"
+    icon: "eventbrite"
+    link: "https://www.eventbrite.com/o/4geeks-academy-chile-impulsando-carreras-18840433269"
 courses:
   - "Full-Time"
   - "Part-Time"

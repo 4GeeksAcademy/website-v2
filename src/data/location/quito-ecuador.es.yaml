@@ -2,7 +2,7 @@ meta_info:
   slug: "bootcamp-programacion-ecuador"
   title: "Bootcamp Programación Ecuador"
   position: 36
-  description: "Conoce aquí todo sobre nuestro campus de bootcamp de programación en Ecuador, Quito de 4Geeks Academy"
+  description: "Conoce aquí todo sobre nuestro campus de bootcamp de programación en Ecuador, Quito de 4GeeksAcademy"
   image: "/images/og-preview/quito-ecuador.es.png"
   # it will not show up on the applications forms
   visibility: "visible"
@@ -11,6 +11,11 @@ meta_info:
   region: "latam"
   dialCode: "593"
   related_clusters: ["desarrollador-full-stack"]
+  
+  # ⬇️ cohort_include_regex field is used to filter cohorts on the calendar that only test successfully for a particular regex
+  # for example: for this location, only show cohorts starting with usa-xx-spanish
+  cohort_include_regex: ["online"]
+  cohort_exclude_regex: []
 
 seo_title: "Aprende a programar en Ecuador"
 header:
@@ -34,7 +39,7 @@ button:
 
 custom_bar:
   active: false
-  message: Lorem ipsum dot simet mosd ei
+  message: 'Desde US$90 al mes. ¡O paga cuando obtengas un trabajo! <a class="customBar-link" href="/es/aplica">Postúlate</a>'
   button: 
     label: "Read More"
     path: "#" #string (can be inline path using #, relative path or absolute path)
@@ -70,7 +75,7 @@ images_box:
   images:
     - path: "../../../static/images/locations/ecuador-new.png"
       alt: "Quito city"
-    - path: "../../../static/images/ownpeoplecoding2.jpg"
+    - path: "../../../static/images/ownpeoplecoding2.webp"
       alt: "4Geeks Own People Coding"
     - path: "../../../static/images/ownmancoding.jpg"
       alt: "Remote-Coding-Bootcamp"
@@ -78,7 +83,33 @@ images_box:
       alt: "4Geeeks location"
     - path: "../../../static/images/locations/miami-people.jpeg"
       alt: "4Geeeks lab"
+  layout_horizontal: true #false == "mode mosaic"
 
+
+two_columns:
+  proportions: [6, 6]
+  image:
+    style: '{"border" : "5px solid black", "backgroundSize": "contain" }'
+    src: "/static/images/testimonials/valentina-review.jpg"
+    shadow: true  
+  video: "Vyrynn4Ey1U"
+  heading:
+    text: "Perspectivas de Valentina sobre 4Geeks Academy en Ecuador"
+    font_size: ["30px", "30px", "30px", "30px", "30px"]
+  sub_heading:
+    text: "Oportunidades de Financiamiento y Adaptabilidad al Mercado"
+    font_size: ["18px", "18px", "22px", "22px", "22px"]
+  button:
+    text: "¡Únete ahora!"
+    color: "white"
+    background: "black"
+    path: "/es/aplica"
+  bullets:
+    items: 
+    - text: "Explora cómo nuestros programas están meticulosamente diseñados para alinearse con las demandas actuales del mercado tecnológico"
+    - text: "Los graduados de 4Geeks Academy han experimentado un aumento promedio del 30% en sus salarios después de completar nuestros programas"
+    - text: "Nuestros graduados tienen una tasa de colocación laboral del 95% dentro de los seis meses posteriores a la graduación"
+   
 ## START FROM HERE - DON'T CHANGE ANYTHING ABOVE
 ## HEADING SECTION
 heading_section:
@@ -102,13 +133,13 @@ country_shortname: "ec"
 socials:
   - name: "Facebook"
     icon: "facebook"
-    link: "https://www.facebook.com/4geeksacademy"
+    link: "https://www.facebook.com/4geeksacademyve"
   - name: "Twitter"
-    icon: "twitter"
-    link: "https://www.twitter.com/4geeksacademy"
+    icon: "x-logo"
+    link: "https://twitter.com/4geeksacademyES"
   - name: "Instagram"
     icon: "instagram"
-    link: "https://www.instagram.com/4geeksacademy"
+    link: "https://www.instagram.com/4geeksacademylatam/"
 courses:
   - "Full-Time"
   - "Part-Time"

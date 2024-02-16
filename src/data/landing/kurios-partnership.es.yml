@@ -38,7 +38,7 @@ header_data:
   tagline: ¡Bienvenido a 4Geeks Academy! La academia de programación líder en el mundo
   tagline_color: "black"
   sub_heading: ""
-  badge: "../../../static/images/badges/Course-Report-Badge-2023.png"
+  badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
   #background_image: "../../../static/images/bg/main-bg.jpg"
   #video: "https://www.videoask.com/fm984j5nz"
   image_filter: brightness(0.4)
@@ -56,7 +56,7 @@ short_badges:
     alt: "Mejor centro de Coding Bootcamp"
   - name: "Course Report"
     url: ""
-    image: "../../../static/images/badges/Course-Report-Badge-2023.png"
+    image: "../../../static/images/badges/Course-Report-Badge-2024.webp"
     alt: "Top Coding Bootcamps Course Report"
   - name: "Switchup"
     url: ""
@@ -126,19 +126,21 @@ components:
   - name: geeksinfo
     position: 1
     layout: geeksInfo
+
   - name: how_it_works
     position: 4
     background: "veryLightBlue2"
     layout: two_column_right
     proportions: [6, 6]
     image:
-      style: '{ "backgroundSize": "contain" }'
-      src: "/images/ownpeoplecoding2.jpg"
+      style: '{ "backgroundSize": "cover" }'
+      src: "/images/ownpeoplecoding2.webp"
+      shadow: true
     heading:
       text: "4Geeks y Kurios: Una Alianza para el Éxito"
       font_size: ["30px", "30px", "30px", "30px", "30px"]
     sub_heading:
-      text: "Conviértete en Full-Stack Developer y/o Data Scientist, sin necesidad de tener experiencia previa, en tan solo 18 semanas con 4Geeks Academy. Con más de 8 años de experiencia, contamos con presencia en diferentes partes del mundo, además de ser acreedores de diferentes premios a nivel mundial. ¿Cómo funciona esta alianza?"
+      text: "Conviértete en Full-Stack Developer y/o Data Scientist, sin necesidad de tener experiencia previa, en tan solo 18 semanas con 4Geeks Academy. "
       font_size: ["18px", "18px", "18px", "18px", "18px"]
     button:
       text: "¡Aplica hoy!"
@@ -146,14 +148,28 @@ components:
       background: "black"
       hover: "white"
       path: "#top"
-    content:
-      text: |
-        <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">20% de descuento sobre los (3) tres programas vigentes:</strong></h2>
-        <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">Full Stack Developer*</strong></h2>
-        <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">Node.js</strong></h2>
-        <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">Data Science y Machine Learning</strong></h2>
-        <h2 style="margin-bottom:3px"><strong style="font-weight: italic;">*Beneficios extra disponibles</strong></h2>
-      font_size: ["16px"]
+    # content:
+    #   text: "Con más de 8 años de experiencia, contamos con presencia en diferentes partes del mundo, además de ser acreedores de diferentes premios a nivel mundial. ¿Cómo funciona esta alianza?"
+    #   font_size: ["16px"]
+    bullets:
+      items:
+      - heading: "20% de descuento sobre los (3) tres programas vigentes:"
+        text: ""
+        icon: "circle" #string with icon for example ['check', 'cicle', etc]
+      - heading: "Full Stack Developer"
+        text: ""
+        icon: "check" #string with icon for example ['check', 'cicle', etc]      
+      - heading: "Node.js"
+        text: ""
+        icon: "check" #string with icon for example ['check', 'cicle', etc]
+      - heading: "Data Science y Machine Learning"
+        text: ""
+        icon: "check" #string with icon for example ['check', 'cicle', etc]    
+      - heading: "Beneficios extra disponibles"
+        text: ""
+        icon: "check" #string with icon for example ['check', 'cicle', etc]      
+
+
   - name: top_coding_bootcamp
     position: 5
     layout: two_column_left
@@ -161,7 +177,7 @@ components:
     proportions: [4, 8]
     image:
       style: '{ "backgroundSize": "contain"}'
-      src: "/images/badges/Course-Report-Badge-2023.png"
+      src: "/images/badges/Course-Report-Badge-2024.webp"
       link: "https://www.coursereport.com/schools/4geeks-academy"
     heading:
       text:

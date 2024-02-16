@@ -14,6 +14,11 @@ meta_info:
   region: "europe"
   dialCode: "49"
   related_clusters: ["trends-and-tech"]
+  
+  # ⬇️ cohort_include_regex field is used to filter cohorts on the calendar that only test successfully for a particular regex
+  # for example: for this location, only show cohorts starting with usa-xx-spanish
+  cohort_include_regex: ["europe"]
+  cohort_exclude_regex: []
 
 seo_title: "Coding Bootcamp Hamburg, Germany"
 header:
@@ -83,6 +88,32 @@ images_box:
       alt: "4Geeeks miami day"
     - path: "../../../static/images/locations/miami-old2.jpg"
       alt: "4Geeeks miami lab"
+  layout_horizontal: true #false == "mode mosaic"
+
+two_columns:
+  proportions: [6, 6]
+  image:
+    style: '{"border" : "5px solid black", "backgroundSize": "contain" }'
+    src: "/static/images/testimonials/allisa-testimonial.jpg"
+    shadow: true  
+  video: "https://www.youtube.com/watch?v=TCHASxvkhpI"
+  heading:
+    text: "Transforming Tech Careers from Hamburg"
+    font_size: ["30px", "30px", "30px", "30px", "30px"]
+  sub_heading:
+    text: "Navigating Hamburg's Tech Domain for Career Excellence"
+    font_size: ["18px", "18px", "22px", "22px", "22px"]
+  button:
+    text: "APPLY NOW"
+    color: "white"
+    background: "black"
+    path: "/us/apply"
+  bullets:
+    items: 
+    - text: "4GeeksAcademy's job placement rate of 95% within six months post-graduation"
+    - text: "Flexible learning options, encompassing part-time and immersive courses, accommodate diverse schedules and learning preferences"
+    - text: "Flexibility to study from anywhere at your own pace"
+    - text: "Our personalized mentorship program connects students with industry professionals, fostering insights and guidance for career growth"
 
 active_campaign_location_slug: "hamburg-germany"
 breathecode_location_slug: "hamburg-germany"
@@ -105,15 +136,15 @@ socials:
     icon: "facebook"
     link: "https://www.facebook.com/4geeksacademy"
   - name: "Twitter"
-    icon: "twitter"
-    link: "https://www.twitter.com/4geeksacademy"
+    icon: "x-logo"
+    link: "https://twitter.com/4GeeksAcademy"
   - name: "Instagram"
     icon: "instagram"
-    link: "https://www.instagram.com/4geeksacademy"
-  - name: "Meetup"
-    icon: "meetup"
-    link: "https://www.meetup.com/4geeks-academy"
-
+    link: "https://www.instagram.com/4geeksacademy/"
+  - name: "Linkedin"
+    icon: "linkedin"
+    link: "https://www.linkedin.com/school/4geeksacademy/"
+    
 courses:
   - "Full-Time"
   - "Part-Time"

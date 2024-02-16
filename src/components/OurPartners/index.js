@@ -16,14 +16,14 @@ const Title_Paragraph = (props) => {
         maxWidth="1366px"
         margin="0 auto 20px auto"
         background={props.background}
-        containerColumns_tablet="1fr repeat(12, 1fr) 1fr"
+        gridTemplateColumns_tablet="1fr repeat(12, 1fr) 1fr"
       >
         <Div
           display="flex"
           flexDirection="column"
           alignItems="center"
-          padding_tablet="0"
-          padding="0 10px"
+          margin_tablet="0px"
+          margin_xxs="0 20px"
           gridColumn_tablet="1 / 15"
         >
           {/*<H2 margin="0 0 15px 0" fontSize="15px" lineHeight="19px" fontWeight="900">{title}</H2>*/}
@@ -32,7 +32,7 @@ const Title_Paragraph = (props) => {
             fontFamily="Lato"
             fontWeight="900"
             fontSize="32px"
-            lineHeight="30px"
+            lineHeight="40px"
             letterSpacing="0.05em"
             color="#3A3A3A"
             width="100%"
@@ -47,11 +47,11 @@ const Title_Paragraph = (props) => {
           <Paragraph
             fontFamily="Lato"
             fontWeight="normal"
-            fontSize="21px"
+            fontSize={props.fontSize || "16px"}
             lineHeight="22px"
             padding="0"
             padding_tablet="0px 10%"
-            letterSpacing="0.05em"
+            letterSpacing="0.06em"
             color="#3A3A3A"
             width="100%"
             margin="0 0 15px 0"
@@ -148,10 +148,10 @@ const Images_Centered = (props) => {
       // columnGap="70px"
       justifyContent="center"
       background={Colors.white}
-      padding="25px 0 0 0"
+      padding="0 0 0 0"
       margin="0 0 50px 0"
     >
-      {props.images.map((l, i) => {
+      {props.images?.map((l, i) => {
         return (
           <Div
             key={`${i}-${l.name}`}
@@ -162,7 +162,16 @@ const Images_Centered = (props) => {
           >
             <GatsbyImage
               key={i}
-              style={{ height: "60px", minWidth: "90px", maxWidth: "150px" }}
+              style={
+                props.gray
+                  ? {
+                      filter: "grayscale(100%)",
+                      height: "60px",
+                      minWidth: "90px",
+                      maxWidth: "150px",
+                    }
+                  : { height: "60px", minWidth: "90px", maxWidth: "150px" }
+              }
               imgStyle={{ objectFit: "contain" }}
               alt={l.name}
               fluid={l.image.childImageSharp.fluid}
@@ -245,7 +254,11 @@ const OurPartners = ({
   withoutLine,
   slider,
   marquee,
+  fontSize,
+  width,
+  gridColumn,
   maxWidth,
+  gray,
   ...rest
 }) => {
   let FragmentStyle = {
@@ -253,13 +266,15 @@ const OurPartners = ({
     margin: `${margin || "40px 0 0 0"}`,
     padding: `${padding || "75px 0"}`,
     borderBottom: borderBottom,
+    width: width,
   };
-
   //Renderized...
   return (
     <Fragment github="/components/partner" style={FragmentStyle}>
       {title && (
         <Title_Paragraph
+          gridColumn={gridColumn}
+          fontSize={fontSize}
           title={title}
           paragraph={paragraph}
           background={background}
@@ -278,7 +293,7 @@ const OurPartners = ({
       ) : marquee ? (
         <Images_With_Marquee images={images} />
       ) : (
-        <Images_Centered images={images} />
+        <Images_Centered images={images} gray={gray} />
       )}
       {link && (
         <Div gridArea_md="2/3/2/11" justifyContent="center" margin="50px 0 0 0">

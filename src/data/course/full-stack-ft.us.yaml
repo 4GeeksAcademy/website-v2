@@ -10,7 +10,7 @@ meta_info:
   redirects:
     [
       "/course/full-time",
-      "full-time",
+      "/full-time",
       "/us/full-time",
       "/us/course/full-time",
       "/us/full-stack-ft",
@@ -35,6 +35,7 @@ button:
   syllabus_heading: "Download Syllabus"
   syllabus_btn_label: "Instant Download"
   syllabus_motivation: "Get it in just a few seconds"
+  apply_button_text: "Apply now"
   apply_button_link: "/us/apply"
 
 course_instructors: 
@@ -68,20 +69,53 @@ credentials:
   heading: "This Program By The Numbers"
   paragraph: "Our results speak for themselves"
 
+# OVERLAPED
+overlaped:
+  heading: "Why learning Python and Javascript is essential"
+  paragraph: "Programming in Python and JavaScript offers some of the highest-paid career opportunities in the US. There are currently over 26 times more job opportunities in JavaScript compared to Ruby on Rails, and 10 times more jobs in Python compared to node.js. According to Indeed, Python and JavaScript developers enjoy average salaries exceeding $110k."
+  button:
+    text: "LEARN MORE"
+    color: "blue"
+    link: "/"  
+  image:
+    src: "/images/landing/tres-personas-reloaded.webp"
+
+## TWO COLUMNS
+two_columns:
+  proportions: [6, 6]
+  image:
+    style: '{"border" : "3px solid black", "backgroundSize": "contain" }'
+    src: "/static/images/staff/luisa.png"
+    shadow: true  
+  video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
+  heading:
+    text: "4Geeks, Miami and a story full of opportunities"
+    font_size: ["30px", "30px", "30px", "30px", "30px"]
+  sub_heading:
+    text: "We are Miami based and we have been focusing in bringing on more opportunities in South Florida."
+    font_size: ["16px", "16px", "16px", "16px", "16px"]
+  button:
+    text: "Apply now"
+    color: "white"
+    background: "black"
+    path: "#"
+  bullets:
+    items: 
+    - text: "There is always a full or partial scholarship open"
+    - text: "There is always opportunities for everyone in Miami-Dade County, Broward and Palm Beach"
+    - text: "We have ongoing partnerships with Miami Dade College, Miami Tech Coalition, UWM, The City of Miami, Miami Dade County and many more."
+      
+
 ## PROGRAM DETAILS
 details:
   about:
       title: "About the program"
-      sub_title: "Learn the most wanted and highest paid technologies that will help you create amazing websites.
-      
-      The tech industry consistently requires Python and JavaScript developers. Both are the most popular programming languages to learn in 2021. 
-      
-      Start coding in a web development language and algorithm scripting. Build awesome apps using a front-end library. Use an API so you can consume data to fill your app.
-      
-      The program will end with the presentation of your final project that will help you get ready for  more web development experiences
-      
-      You will re-shape your mind to embrace new logical, developmental and researching skills.
-    "
+      sub_title: |
+        Learn the most wanted and highest paid technologies that will help you create amazing websites.
+        The tech industry consistently requires Python and JavaScript developers. Both are the most popular programming languages to learn in 2024. 
+        Start coding in a web development language and algorithm scripting. Build awesome apps using a front-end library. Use an API so you can consume data to fill your app.
+        The program will end with the presentation of your final project that will help you get ready for  more web development experiences
+        You will re-shape your mind to embrace new logical, developmental and researching skills.
       list:
         - label: "Duration"
           content:  "9 Weeks"

@@ -39,7 +39,7 @@ header_data:
   tagline: ¡Bienvenido a 4Geeks Academy!
   tagline_color: "black"
   sub_heading: ""
-  badge: "../../../static/images/badges/Course-Report-Badge-2023.png"
+  badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
   image_filter: brightness(0.3)
   # right_image: "../../../static/images/landing/header_united_way.png"
   # right_image:
@@ -64,7 +64,7 @@ short_badges:
     alt: "Mejor centro de Coding Bootcamp"
   - name: "Course Report"
     url: ""
-    image: "../../../static/images/badges/Course-Report-Badge-2023.png"
+    image: "../../../static/images/badges/Course-Report-Badge-2024.webp"
     alt: "Top Coding Bootcamps Course Report"
   - name: "Switchup"
     url: ""
@@ -106,6 +106,9 @@ components:
       src: "/images/landing/grupo-ventanas.png"
       link: "#top" # take uses somewhere when they click on the image
       # shadow: true
+    section_heading: 
+      text: "Diseñado para hacerte exitoso en el mundo de la programación"
+      style: '{ "font-size": "30px" }'
     heading:
       text: ""
     sub_heading:
@@ -137,29 +140,36 @@ components:
 
   - name: coding
     position: 6
-    layout: two_column_right
-    proportions: [6, 6]
-    background: "rgba(255, 183, 24, 0.2)"
+    layout: two_column_left
+    swipable: False
+    background: "lightBlue2"
     image:
       style: '{ "backgroundSize": "contain" }'
-      src: "/images/landing/group_194.png"
-    heading:
+      src: "/images/landing/metting-img.png"
+      shadow: false
+    heading: 
       text: "Membresías"
-      font_size: ["50px", "50px", "50px", "50px", "50px"]
     sub_heading:
-      text:
-      font_size: ["16px", "16px", "16px", "16px", "16px"]
-    content:
+      text: ""
+    button: 
+      text: "Descubre lo que dicen nuestros estudiantes"
+      color: white
+      hover_color: "white"
+      background: "black"
+      path: "#why_4geeks"
+    content: 
+      text: ""
       font_size: ["16px"]
-      text: |
-        <img src="/images/geekpal.png" style="max-width: 200px;">
-        <br>
-        <p>GeekPAL es una membresía instantánea que obtienes cuando te conviertes en estudiante de 4Geeks Academy. Te garantiza que no volverás a programar solo. Con GeekPAL contará con un compañero por el resto de su vida, sí, incluso después de graduarse. Si te quedas atascado, siempre habrá un mentor disponible para que puedas obtener ayuda con tu código</p>
-        <br>
-        <br>
-        <img src="/images/geekforce.png" style="max-width: 200px;">
-        <p>GeekForce es el proceso colectivo de apoyo profesional del Bootcamp. La 'fuerza' significa empoderamiento profesional y es una membresía de por vida. Brinda asistencia para la colocación laboral del estudiante y para que se prepare para conseguir un trabajo en tecnología.</p>
-
+      path: ""
+    bullets:
+      items:
+      - heading: "GeekPAL"
+        text: "Es una membresía instantánea que obtienes cuando te conviertes en estudiante de 4Geeks Academy. Te garantiza que no volverás a programar solo. Con GeekPAL contará con un compañero por el resto de su vida, sí, incluso después de graduarse. Si te quedas atascado, siempre habrá un mentor disponible para que puedas obtener ayuda con tu código"
+        icon: "circle" #string with icon for example ['check', 'cicle', etc]
+      - heading: "GeekForce"
+        text: "Es el proceso colectivo de apoyo profesional del Bootcamp. La 'fuerza' significa empoderamiento profesional y es una membresía de por vida. Brinda asistencia para la colocación laboral del estudiante y para que se prepare para conseguir un trabajo en tecnología."
+        icon: "circle" #string with icon for example ['check', 'cicle', etc]
+        
   - name: top_coding_bootcamp
     position: 4
     layout: two_column_left
@@ -167,7 +177,7 @@ components:
     background: "#fbfbfb"
     image:
       style: '{ "backgroundSize": "contain" }'
-      src: "/images/badges/Course-Report-Badge-2023.png"
+      src: "/images/badges/Course-Report-Badge-2024.webp"
       link: "https://www.coursereport.com/schools/4geeks-academy"
     heading:
       text:
@@ -180,7 +190,7 @@ components:
     proportions: [5, 7]
     image:
       style: '{ "backgroundSize": "cover", "background-position": "top"}'
-      src: "/images/ownpeoplecoding2.jpg"
+      src: "/images/ownpeoplecoding2.webp"
       shadow: true
     heading:
       text: "4Geeks Academy & Tecnología Financiera: ¡La alianza que impulsará tu vida profesional!"
@@ -204,6 +214,7 @@ components:
 badges:
   position: 7
   heading: "4Geeks Academy cuenta con premios y reconocimientos de validan su excelencia"
+  style: '{ "font-size":"22px", "font-weight":"800"}'
 
 why_4geeks:
   position: 7

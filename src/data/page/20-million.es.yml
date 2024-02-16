@@ -5,7 +5,7 @@ meta_info:
   visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   image: "/images/programs-heading.png"
   keywords: "Programs at 4Geeks Academy"
-  redirects: ["/20-millones"]
+  redirects: ["/20-millones", "/20millones"]
 
 seo_title: "level up as a developer"
 header:
@@ -53,7 +53,7 @@ two_column_left:
     color: white
     background: blue
     hover_color: white
-    path: "#top"
+    path: "#bottom"
 form:
   title: Conviertete en un 4Geeks Partner
   paragraph: |

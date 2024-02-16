@@ -43,7 +43,7 @@ header_data:
   background: "#FFF1D1"
   tagline: "Aprende a programar desde cero o potencia tu carrera en el mundo tech"
   sub_heading: ""
-  badge: "../../../static/images/badges/Course-Report-Badge-2023.png"
+  badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
   image_filter: brightness(0.3)
 
 features:
@@ -63,7 +63,7 @@ short_badges:
     alt: "Mejor centro de Coding Bootcamp"
   - name: "Course Report"
     url: ""
-    image: "../../../static/images/badges/Course-Report-Badge-2023.png"
+    image: "../../../static/images/badges/Course-Report-Badge-2024.webp"
     alt: "Top Coding Bootcamps Course Report"
   - name: "Switchup"
     url: ""
@@ -139,3 +139,28 @@ who_is_hiring:
   heading: "¿Quién contrata a nuestros alumnos?"
   sub_heading: "84% de nuestros estudiantes que completaron el proceso de GeekFORCE han conseguido trabajo luego de haberse graduado (incluso dentro de los sigiuientes  100 días)"
 
+components:
+    - name: some_id
+      position: 6
+      layout: two_column_right
+      # proportions: [8, 4]
+      background: "#fbfbfb"
+      image:
+        style: '{ "border" : "3px solid black" }' 
+        # shadow: true 
+        src: "../../../static/images/testimonials/samantha-review.png"
+        shadow: true
+      video: "https://www.youtube.com/watch?v=DrzRJICxjOU"
+      heading:
+        text: "4Geeks en México La Elección de Samantha para su Bootcamp Ideal"
+        #xl      lg     md     sm    xs
+      font_size: ["40px", "34px", "34px", "25px", "20px"]
+      content:
+        text: "La mentoría individualizada, con respuestas en menos de 15 minutos, proporciona un apoyo inigualable. Las sólidas alianzas estrategicas y un historial de éxito del 81% en la colocación laboral respaldan la reputación de la institución. Esto garantiza una transición sin problemas hacia una exitosa carrera en desarrollo de software."
+        font_size: ["16px"]
+      button:
+        text: "¡Únete a la Academia!"
+        path: "#bottom"
+        color: "white"
+        background: "black"
+        hover: "lightBlue"

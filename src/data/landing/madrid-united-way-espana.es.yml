@@ -67,7 +67,7 @@ short_badges:
     alt: "Mejor centro de Coding Bootcamp"
   - name: "Course Report"
     url: ""
-    image: "../../../static/images/badges/Course-Report-Badge-2023.png"
+    image: "../../../static/images/badges/Course-Report-Badge-2024.webp"
     alt: "Top Coding Bootcamps Course Report"
   - name: "Switchup"
     url: ""
@@ -193,9 +193,9 @@ components:
     layout: two_column_right
     proportions: [6, 6]
     image:
-      style: '{ "backgroundSize": "contain" }'
+      style: '{ "border" : "3px solid black", "backgroundSize": "contain" }' 
+      shadow: true 
       src: "/static/images/staff/luisa.png"
-      shadow: true
       
     video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
     heading:

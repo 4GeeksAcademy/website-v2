@@ -35,7 +35,7 @@ header_data:
   background: "#FFF1D1"
   tagline: Cambia tu vida y aprende a programar
   sub_heading: ""
-  badge: "../../../static/images/badges/Course-Report-Badge-2023.png"
+  badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
   # partner_logo_url: "../../../static/images/partner/microsoft.png"
   # background_image: "../../../static/images/Happy-People-Landing-4Geeks-ES.jpg"
   image_filter: brightness(0.4)
@@ -58,7 +58,7 @@ short_badges:
     alt: "Mejor centro de Coding Bootcamp"
   - name: "Course Report"
     url: ""
-    image: "../../../static/images/badges/Course-Report-Badge-2023.png"
+    image: "../../../static/images/badges/Course-Report-Badge-2024.webp"
     alt: "Top Coding Bootcamps Course Report"
   - name: "Switchup"
     url: ""
@@ -91,13 +91,13 @@ apply_schollarship: # form that is displayed at the end of the landing
   image: "../../../static/images/landing/apply.png"
 
 badges:
-  position: 5
+  position: 8
   heading: "Premios y reconocimientos que validan nuestra excelencia"
 
 program_details:
   position: 1
   heading: "Lo que aprenderás"
-  sub_heading: "Python, Javascript y React son las tecnologías más usadas del mundo"
+  sub_heading: "Python, Javascript y React son las tecnologías más demandadas del mundo"
 
 geeks_vs_others:
   position: 4
@@ -111,7 +111,7 @@ why_4geeks:
   sub_heading: ""
 
 who_is_hiring:
-  position: 6
+  position: 10
   limit: 4
   heading: "¿Quién contrata a nuestros alumnos?"
   sub_heading: "Nuestros partners de contratación crecen todos los días, con más de 150 aliados a nivel global y decenas de vacantes activas en nuestras bolsas de empleo."
@@ -130,7 +130,7 @@ components:
     background: "#e6e6e6"
     image:
       style: '{ "backgroundSize": "contain"}'
-      src: "/images/badges/Course-Report-Badge-2023.png"
+      src: "/images/badges/Course-Report-Badge-2024.webp"
       link: "https://www.coursereport.com/schools/4geeks-academy"
     heading:
       text:
@@ -178,8 +178,8 @@ components:
       text: "Descubre la cautivadora historia de Mattia Tozzi, quien, en busca de un cambio en su trayectoria profesional, se unió a 4Geeks Academy. Su experiencia es un testimonio vivo de cómo la dedicación y el aprendizaje en este bootcamp lo llevaron a convertirse en un profesional altamente capacitado."
       font_size: ["16px"]
     button:
-      text: "Unete a la academia!"
-      path: "https://4geeksacademy.com/us/coding-campus/coding-bootcamp-caracas"
+      text: "¡Únete a la Academia!"
+      path: "#bottom"
       color: "white"
       background: "black"
       hover: "lightBlue"

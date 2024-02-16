@@ -2,13 +2,18 @@ meta_info:
   slug: "bootcamp-programacion-chicago"
   position: 1
   title: "4Geeks Academy Chicago - Bootcamp de programación en Chicago, aprende a programar en Chicago"
-  description: "Conoce aquí todo sobre nuestro campus de bootcamp de programación en Chicago, Illinois de 4Geeks Academy"
+  description: "Conoce aquí todo sobre nuestro campus de bootcamp de programación en Chicago, Illinois de 4GeeksAcademy"
   image: "/images/og-preview/downtown-miami.es.png"
   keywords: "null"
   redirects: []
   region: "usa-canada"
   dialCode: "1"
   related_clusters: ["desarrollador-full-stack"]
+  
+  # ⬇️ cohort_include_regex field is used to filter cohorts on the calendar that only test successfully for a particular regex
+  # for example: for this location, only show cohorts starting with usa-xx-spanish
+  cohort_include_regex: ["miami"]
+  cohort_exclude_regex: ['usa-\d{1,10}-spanish']
 
 seo_title: "Bootcamp de Programación en Chicago"
 header:
@@ -29,11 +34,12 @@ button:
   apply_button_link: "/aplica"
 
 custom_bar:
-  active: false
-  message: 'Potencia tu carrera a través del código. <a class="customBar-link" href="/es/aplica">Aplica</a> Próximas fechas: 06/27 Full-Stack | 07/11 ML + AI!'
+  active: true
+  message: 'Desde $150 al mes. O paga cuando obtengas un trabajo! <a class="customBar-link" href="/es/aplica">Aplica</a>'
   button:
-    label: "Read More"
-    path: "#" #string (can be inline path using #, relative path or absolute path)
+    label: "" # leave empty to hide button
+    path: "/es/aplica" #string (can be inline path using #, relative path or absolute path)
+
 
 badges:
   title: ""
@@ -68,7 +74,7 @@ images_box:
   images:
     - path: "../../../static/images/locations/chicago-new.png"
       alt: "Chicago city"
-    - path: "../../../static/images/ownpeoplecoding2.jpg"
+    - path: "../../../static/images/ownpeoplecoding2.webp"
       alt: "4Geeks Own People Coding"
     - path: "../../../static/images/ownmancoding.jpg"
       alt: "Remote-Coding-Bootcamp"
@@ -76,8 +82,31 @@ images_box:
       alt: "4Geeeks location"
     - path: "../../../static/images/locations/miami-people.jpeg"
       alt: "4Geeeks lab"
+  layout_horizontal: true #false == "mode mosaic"
 
-
+two_columns:
+  proportions: [6, 6]
+  image:
+    style: '{"border" : "5px solid black", "backgroundSize": "contain" }'
+    src: "/static/images/testimonials/allisa-testimonial.jpg"
+    shadow: true  
+  video: "https://www.youtube.com/watch?v=TCHASxvkhpI"
+  heading:
+    text: "Descubre el Escenario de la Programación en Chicago"
+    font_size: ["30px", "30px", "30px", "30px", "30px"]
+  sub_heading:
+    text: "Perspectivas de Alissa sobre 4GeeksAcademy"
+    font_size: ["18px", "18px", "22px", "22px", "22px"]
+  button:
+    text: "¡Únete ahora!"
+    color: "white"
+    background: "black"
+    path: "/es/aplica"
+  bullets:
+    items: 
+    - text: "Plan de estudios alineado con la industria enfocado en su aplicabilidad práctica"
+    - text: "Aprendizaje práctico basado en proyectos para el perfeccionamiento de habilidades"
+    - text: "Orientación profesional para navegar el dinámico sector tecnológico de Chicago"
 
 active_campaign_location_slug: "chicago-usa"
 breathecode_location_slug: "chicago-usa"
@@ -100,14 +129,14 @@ socials:
     icon: "facebook"
     link: "https://www.facebook.com/4geeksacademy"
   - name: "Twitter"
-    icon: "twitter"
+    icon: "x-logo"
     link: "https://www.twitter.com/4geeksacademy"
   - name: "Instagram"
     icon: "instagram"
-    link: "https://www.instagram.com/4geeksacademy"
-  - name: "Meetup"
-    icon: "meetup"
-    link: "https://www.meetup.com/4geeks-academy"
+    link: "https://www.instagram.com/4geeksacademy/"
+  - name: "Linkedin"
+    icon: "linkedin"
+    link: "https://www.linkedin.com/school/4geeksacademy/"
 courses:
   - "Full-Time"
   - "Part-Time"

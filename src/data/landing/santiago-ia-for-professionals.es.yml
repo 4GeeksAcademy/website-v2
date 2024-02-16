@@ -1,0 +1,244 @@
+meta_info:
+  slug: bootcamp-applied-ia-for-professionals-santiago # <--- URL 4geeksacademy.com/us/landing/example
+
+  # This will show on social media when shared
+  title: "Aprende cómo utilizar esta potente herramienta de IA y descubre las mejores estrategias para redactar de manera efectiva."
+  description: "Descubre la potencia de ChatGPT aprende y aplica la inteligencia artificial en casos empresariales con nuestro curso en 4Geeks Academy."
+  image: "/images/bg/main-bg.jpg"
+  keywords: "ChatGPT, Inteligencia Artificial, Aprendizaje Automático, Procesamiento de Lenguaje Natural, Redes Neuronales, Desarrollo de Chatbots, IA en Empresas, Aplicaciones Empresariales de ChatGPT, Estrategias de Redacción para IA, Automatización de Tareas con IA, 4Geeks Academy"
+  visibility: "hidden" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
+  template: "landing_a" # <--- choose your landing template
+  # <--- URL redirections to avoid 404 errors
+  redirects: []
+
+  # Set a particular course or location to the landing page
+  # this UTM fields will be also included in the CRM contact
+  utm_course: ["applied-ai"]
+  utm_location: ["santiago-chile"]
+  automation: soft # comma separated, "soft" is the default value
+  tag: request_more_info # comma separated, "request_more_info" is the default value
+
+navbar:
+  buttonText: "Postular"
+  buttonUrl: "#bottom" # url accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
+  logoUrl: "#"
+
+form:
+  # posible fields: "first_name", "last_name", "full_name", "phone", "email"
+  # always the first_name, email and phone will be mandatory if added.
+  fields: ["full_name", "phone", "email"]
+  heading: "Conoce más información"
+  motivation: "Completa el formulario y te enviaremos la información en unos minutos a tu correo electrónico."
+  button_label: Obtener malla y más información
+  redirect: "https://meetings.hubspot.com/javiera-contreras?__hstc=150733353.2127a3a1c4f5adcc6600b24ac0229a8e.1700587210752.1701287076058.1701347349533.15&__hssc=150733353.1.1701347349533&__hsfp=608161142"  #you can redirect to another url or entirely diffrent website
+
+apply_schollarship: # form that is displayed at the end of the landing
+  # title: "Get more info about this award-winning development course"
+  imageSide: "right"
+  image: "../../../static/images/landing/apply.png"
+
+# jumbotron on the top (cannot be commented out)
+header_data:
+  tagline: Aprende a utilizar inteligencia artificial en tu dia a dia y potencia tus resultados
+  tagline_color: "#FFFFFF"
+  sub_heading: "Aprende a sacar provecho a las herramientas actuales y optimiza tus resultados en tiempo record"
+  badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
+  background_image: "../../../static/images/Happy-People-Landing-4Geeks-ES.jpg"
+  image_filter: brightness(0.1)
+
+features:
+  marginTop: 0px #<-- separation between tagline and the bullets
+
+  #                                         up   left down  right
+  styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
+  bullets:
+    - No se requiere experiencia previa
+    - Horario part-time 
+    - Incorpora la Inteligencia Artificial en tu Rutina Diaria
+
+follow_bar:
+  position: "top" # top, bottom, hidden
+  content:
+    text: "Diversos planes de financiamiento \n Hasta 18 cuotas"
+    text_mobile: "Diversos planes de financiamiento \n Hasta 18 cuotas"
+    # devices:    XL      LG      MD      SM       XS
+    font_size: ["25px", "25px", "25px", "18px", "4.3vw"]
+  button:
+    text: "Escribir por WhatsApp"
+    path: "https://api.whatsapp.com/send/?phone=56920065786&text&type=phone_number&app_absent=0&utm_source=GADS&utm_medium=GADS&utm_campaign=GADS&utm_id=GADS&utm_term=GADS&utm_content=GADS"
+  phone: 
+    text: ""
+
+short_badges:
+  - name: "Premios Tecnologia Siglo XXI"
+    url: ""
+    image: "../../../static/images/awards/premios_tecnologia_sigloxxi.png"
+    alt: "Mejor centro de Coding Bootcamp"
+  - name: "Course Report"
+    url: ""
+    image: "../../../static/images/badges/Course-Report-Badge-2024.webp"
+    alt: "Top Coding Bootcamps Course Report"
+  - name: "Switchup"
+    url: ""
+    image: "../../../static/images/badges/switchup-badge-2023.png"
+    alt: "Best coding bootcamp Switchup 2023"   
+  - name: "Florida Department of Education"
+    url: ""
+    image: "../../../static/images/badges/licensed-inverted.png"
+    alt: "Florida Department of Education"
+
+#
+# ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇
+#
+
+rating_reviews:
+  position: 6
+  heading: "Lee acerca de nosotros"
+  rating_list:
+    - alt: "Career Karma"
+      image: "../../../static/images/badges/career-karma.png"
+      rating: 4.8
+      url: "https://careerkarma.com/schools/4geeks-academy/"
+    - alt: "Switchup"
+      image: "../../../static/images/badges/switchup-img.png"
+      rating: 4.89
+      url: "https://www.switchup.org/bootcamps/4geeks-academy"
+    - alt: "Course Report"
+      image: "../../../static/images/badges/course-report.png"
+      rating: 4.84
+      url: "https://www.coursereport.com/schools/4geeks-academy"
+    - alt: "Google"
+      image: "../../../static/images/badges/google.png"
+      rating: 4.9
+      url: ""
+
+program_details:
+  position: 3
+  heading: "Únete a la Revolución de la Inteligencia Artificial y No te Quedes Atrás"
+  sub_heading: ""
+
+why_4geeks:
+  position: 7
+  heading: "¿Por qué 4Geeks?"
+  sub_heading: " "
+
+who_is_hiring:
+  position: 15
+  limit: 4
+  heading: "¿Quién contrata a nuestros alumnos?"
+  sub_heading: "Nos encanta ver crecer a nuestros estudiantes, es por eso que nos esforzamos cada día por tener más aliados, para que puedas trabajar en empresas que te ayuden a seguir creciendo profesionalmente."
+
+# Possible layours: [two_column_left_image, two_column_right_image]
+components:
+  - name: new_design_with_bullets
+    position: 1
+    layout: two_column_right 
+    swipable: False
+    background: "#fbfbfb"
+    image:
+      style: '{"backgroundSize": "contain;"}'
+      src: "/images/landing/hombre-con-laptop.png"
+      shadow: false
+    section_heading: 
+      text: "Multiplica Tus Resultados"
+      style: '{ "font-size": "30px" }'
+    heading: 
+      text: "¡Únete a nosotros para impulsar tu carrera!"
+    sub_heading:
+      text: "Obtén las habilidades claves para dominar las herramientas de Inteligencia Artificial"
+    button: 
+      text: "Explora más sobre nuestro curso de Applied IA"
+      color: white
+      hover_color: "white"
+      background: "black"
+      path: "#top"
+    content: 
+      text: ""
+      font_size: ["16px"]
+      path: ""
+    bullets:
+      items:
+      - heading: "Experiencia Práctica en IA"
+        text: "Aprende aplicaciones prácticas de IA en diferentes industrias como salud, marketing y más."
+        icon: "circle" 
+      - heading: "Identificación de Oportunidades"
+        text: "Aprende a identificar y aprovechar oportunidades de implementación de IA en entornos laborales."
+        icon: "circle" 
+      - heading: "Dominio de Herramientas de IA"
+        text: "Adquiere destrezas con herramientas como ChatGPT, Midjourney, StableDiffusion, y Claude."
+        icon: "circle" 
+      - heading: "Perspectiva Ética y Futuro de la IA"
+        text: "Discusión sobre ética, impacto social, y el panorama legal y regulatorio de la IA."
+        icon: "circle" 
+
+
+  - name: python_y_javascript
+    position: 2
+    layout: two_column_left
+    background: "veryLightBlue2" # Name of the color(from components/Styling/index.js) or color code ex: #C9F9F9
+    image:
+      src: "/images/blog/blog_3.jpg"
+      shadow: true
+    heading:
+      text: "Aumenta Tus Resultados con Inteligencia Artificial"
+      font_size: ["50px", "50px", "50px", "50px", "50px"]
+    sub_heading:
+      text: "Desarrolla habilidades clave en Inteligencia Artificial para impulsar tu éxito profesional"
+    content:
+      style: '{}'
+      text: "Este curso de 6 semanas te brindará una sólida base en Inteligencia Artificial (IA) para sobresalir en tu carrera."
+      font_size: ["16px"]
+    bullets:
+      items:
+      - heading: "Aplicaciones Prácticas de IA"
+        text: "Descubre cómo aplicar la IA en diversas industrias como salud, marketing y más, abordando casos reales y desafíos específicos"
+        icon: "circle"
+      - heading: "Identificación y Aprovechamiento de Oportunidades en IA"
+        text: "Aprende a identificar y aprovechar oportunidades de implementación de IA en entornos laborales, maximizando su impacto en el rendimiento laboral"
+        icon: "circle"
+      - heading: "Aprovecha la IA para optimizar tus tareas"
+        text: "Tareas repetitivas pueden ser optimizadas por IAs para aprovecar el tiempo y maximizar resultados"
+        icon: "circle"
+      - heading: "Entendimiento de las Herramientas actuales"
+        text: "Al entenderlas herramientas podrás optener los mejores resultados de ellas, podrás pensar en como aplicarlas de una forma efectiva a tu entorno"
+        icon: "circle"
+
+
+  # - name: some_id
+  #   position: 4
+  #   layout: two_column_right
+  #   background: "#fbfbfb"
+  #   image:
+  #     style: '{ "border" : "3px solid black" }' 
+  #     shadow: true 
+  #     src: "../../../static/images/testimonials/joshua-bravo-testimonial.jpg"
+  #   video: "https://www.youtube.com/watch?v=rtpfwwfE0yY"
+  #   heading:
+  #     text:
+  #       "De ayudante de cocina al mundo tecnológico, El camino de Joshua hacia una carrera en la industria de la tecnología"
+  #       #xl      lg     md     sm    xs
+  #     font_size: ["40px", "34px", "34px", "25px", "20px"]
+  #   content:
+  #     #style: '{}'
+  #     #text: "De asistente de cocina a programador gracias a 4Geeks Academy. Su dedicación y formación lo convirtieron en un profesional altamente capacitado."
+  #     #font_size: ["16px"]
+  #   button:
+  #     text: "Experiencias de Éxito"
+  #     path: "#why_4geeks"
+  #     color: "white"
+  #     background: "black"
+  #     hover: "lightBlue"
+
+# choose_your_program:
+#   position: 5
+#   title: Nuestra Modalidad
+#   paragraph: Applied IA para mejorar la productividad
+#   programs:  
+#   - title: "Part Time"
+#     sub_title: "16 semanas"
+#     icon: "fullstack"
+#     description: |
+#       De cero a tener tu primer trabajo como Data Scientist, con una duración de 16 semanas, con clases en vivo 3 veces por semana, compatible con horario laboral o de estudios. 
+#     text_link: Obtener más información
+#     link: "#top" # moves to start position
+  

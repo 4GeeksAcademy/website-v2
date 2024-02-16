@@ -48,8 +48,8 @@ const LandingNavbar = ({ lang, onToggle, buttonUrl, logoUrl, buttonText }) => {
       file(relativePath: { eq: "images/4geeksacademy-logo.png" }) {
         childImageSharp {
           gatsbyImageData(
-            layout: FIXED # --> CONSTRAINED || FIXED || FULL_WIDTH
-            width: 125
+            layout: FULL_WIDTH # --> CONSTRAINED || FIXED || FULL_WIDTH
+            width: 300
             placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
           )
         }

@@ -18,6 +18,11 @@ meta_info:
   region: "latam"
   dialCode: "58"
   related_clusters: ["desarrollador-full-stack"]
+  
+  # ⬇️ cohort_include_regex field is used to filter cohorts on the calendar that only test successfully for a particular regex
+  # for example: for this location, only show cohorts starting with usa-xx-spanish
+  cohort_include_regex: ["latam"]
+  cohort_exclude_regex: []
 
 seo_title: "Curso de Informática Caracas"
 header:
@@ -78,12 +83,39 @@ images_box:
       alt: "Caracas 4Geeks"
     - path: "../../../static/images/locations/caracas-loc-3.png"
       alt: "Caracas Office Jalisco"
-    - path: "../../../static/images/ownpeoplecoding2.jpg"
+    - path: "../../../static/images/ownpeoplecoding2.webp"
       alt: "4Geeks Own People Coding"
     - path: "../../../static/images/ownmancoding.jpg"
       alt: "Remote-Coding-Bootcamp"
     - path: "../../../static/images/locations/caracas-graduates.png"
       alt: "4Geeeks Caracas graduates"
+  layout_horizontal: true #false == "mode mosaic"
+
+two_columns:
+  proportions: [6, 6]
+  image:
+    style: '{"border" : "5px solid black", "backgroundSize": "contain" }'
+    src: "/static/images/testimonials/paola-testimonial.webp"
+    shadow: true  
+  video: "https://www.youtube.com/watch?v=4H_Sp28PFLc"
+  heading:
+    text: "Entrenamiento, Impacto y Programación en Caracas"
+    font_size: ["30px", "30px", "30px", "30px", "30px"]
+  sub_heading:
+    text: "Paola elige 4Geeks Academy en Venezuela por esta y otras ventajas"
+    font_size: ["18px", "18px", "22px", "22px", "22px"]
+  button:
+    text: "¡Únete ahora!"
+    color: "white"
+    background: "black"
+    path: "/es/aplica"
+  bullets:
+    items:
+    - text: "Recibe orientación de mentores expertos para soporte personalizado en codificación"
+    - text: "Accede a desarrollo profesional y apoyo continuo de por vida"
+    - text: "Enfoque en habilidades prácticas para el mercado laboral"
+    - text: "Descubre por qué 4Geeks Academy destaca como la mejor opción para aprender a programar"
+
 
 ## START FROM HERE - DON'T CHANGE ANYTHING ABOVE
 ## HEADING SECTION
@@ -112,11 +144,14 @@ socials:
     icon: "facebook"
     link: "https://www.facebook.com/4geeksacademyve"
   - name: "Twitter"
-    icon: "twitter"
-    link: "https://www.twitter.com/4geeksacademyve"
+    icon: "x-logo"
+    link: "https://twitter.com/4geeksacademyES"
   - name: "Instagram"
     icon: "instagram"
-    link: "https://www.instagram.com/4geeksacademyve"
+    link: "https://www.instagram.com/4geeksacademylatam/"
+  - name: "Linkdein"
+    icon: "linkedin"
+    link: "https://www.linkedin.com/company/79678753/admin/feed/posts/"
 courses:
   - "Full-Time"
   - "Part-Time"

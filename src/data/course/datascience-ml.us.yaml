@@ -26,6 +26,7 @@ button:
   syllabus_btn_label: "Instant Download"
   syllabus_motivation: "Get it in just a few seconds"
   apply_button_link: "/us/apply"
+  apply_button_text: "Apply"
 
 course_instructors: 
   header:
@@ -60,6 +61,43 @@ course_instructors:
 
 badges:
   paragraph: "Kickstart your career at 4Geeks Academy, where developers grow and thrive. Named the best <a href='/us/coding-bootcamp'>coding bootcamp</a> 2023 by Course Report, best center for coding bootcamps 2023 by Premios de Excelencia Educativa in Spain, listed among the top 10 in the US by Newsweek, and rated 4.92/5 on Switchup. Licensed by the Florida Department of Education, USA."
+
+# OVERLAPED
+overlaped:
+  heading: "Learn to create predictive models and Master Machine Learning with 4Geeks Academy"
+  paragraph: "Dive into the world of machine learning with 4Geeks Academy's specialized program. Gain the skills to build predictive models for practical applications like fraud detection and natural language processing, using industry-leading tools such as Python, TensorFlow, and Scikit-learn."
+  button:
+    text: "LEARN MORE"
+    color: "blue" 
+    link: "/us/apply" 
+  image:
+    src: "/images/landing/tres-personas-reloaded.webp"
+
+## TWO COLUMNS
+two_columns:
+  proportions: [6, 6]
+  image:
+    style: '{"border" : "3px solid black", "backgroundSize": "contain" }'
+    src: "/static/images/staff/luisa.png"
+    shadow: true  
+  video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
+  heading:
+    text: "4Geeks, Miami and a story full of opportunities"
+    font_size: ["30px", "30px", "30px", "30px", "30px"]
+  sub_heading:
+    text: "We are Miami based and we have been focusing in bringing on more opportunities in South Florida."
+    font_size: ["16px", "16px", "16px", "16px", "16px"]
+  button:
+    text: "Apply now"
+    color: "white"
+    background: "black"
+    path: "#"
+  bullets:
+    items: 
+    - text: "There is always a full or partial scholarship open"
+    - text: "There is always opportunities for everyone in Miami-Dade County, Broward and Palm Beach"
+    - text: "We have ongoing partnerships with Miami Dade College, Miami Tech Coalition, UWM, The City of Miami, Miami Dade County and many more."
+
 
 upcoming:
   no_dates_message: "There are currently no upcoming dates for this program"
@@ -190,7 +228,7 @@ potential_companies:
   sub_heading: "Get ready to apply to the best companies in the world: Develop the tools to upskill for the future of AI work."
   companies:
     - name: "Facebook"
-      image: "../../../static/images/partner/facebook.png"
+      image: "../../../static/images/partner/meta-logo.png"
       alt: ""
     - name: "Google"
       image: "../../../static/images/partner/google.png"

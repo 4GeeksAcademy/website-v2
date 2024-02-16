@@ -1,14 +1,19 @@
 meta_info:
   slug: "coding-bootcamp-barcelona-spain"
-  title: "Coding Bootcamp Barcelona, Spain of 4Geeks Academy"
+  title: "Coding Bootcamp Barcelona, Spain of 4GeeksAcademy"
   position: 20
-  description: "Know here all about our coding bootcamp campus in Barcelona, Spain of 4Geeks Academy"
+  description: "Know here all about our coding bootcamp campus in Barcelona, Spain of 4GeeksAcademy"
   image: "/images/og-preview/barcelona-spain.us.png"
   keywords: "Coding Bootcamp, Barcelona"
   redirects: []
   region: "europe"
   dialCode: "34"
   related_clusters: ["trends-and-tech"]
+  
+  # ⬇️ cohort_include_regex field is used to filter cohorts on the calendar that only test successfully for a particular regex
+  # for example: for this location, only show cohorts starting with usa-xx-spanish
+  cohort_include_regex: ["spain"]
+  cohort_exclude_regex: []
 
 seo_title: "Coding Bootcamp Barcelona"
 header:
@@ -74,7 +79,7 @@ images_box:
   images:
     - path: "../../../static/images/locations/barcelona-new.png"
       alt: "Barcelona city"
-    - path: "../../../static/images/ownpeoplecoding2.jpg"
+    - path: "../../../static/images/ownpeoplecoding2.webp"
       alt: "4Geeks Own People Coding"
     - path: "../../../static/images/ownmancoding.jpg"
       alt: "Remote-Coding-Bootcamp"
@@ -82,6 +87,84 @@ images_box:
       alt: "4Geeeks location"
     - path: "../../../static/images/locations/madrid-3.png"
       alt: "4Geeeks lab"
+  layout_horizontal: true #false == "mode mosaic"
+
+## START FROM HERE - DON'T CHANGE ANYTHING ABOVE
+
+two_columns:
+  proportions: [6, 6]
+  image:
+    style: '{"border" : "5px solid black", "backgroundSize": "contain" }'
+    src: "/static/images/testimonials/Mattia-Tozzi-testimonial.jpg"
+    shadow: true  
+  video: "B01-eTfgqqc"
+  heading:
+    text: "Mattia's Insight on 4GeeksAcademy's Value"
+    font_size: ["30px", "30px", "30px", "30px", "30px"]
+  sub_heading:
+    text: "Unlock Your Potential in Barcelona's Tech Sphere"
+    font_size: ["18px", "18px", "22px", "22px", "22px"]
+  button:
+    text: "APPLY NOW"
+    color: "white"
+    background: "black"
+    path: "/us/apply"
+  bullets:
+    items: 
+    - text: "Practical learning experiences refining skills for Barcelona's competitive tech job market"
+    - text: "Access to experienced instructors and a collaborative learning community"
+    - text: "Flexibility to study from anywhere at your own pace"
+
+  title: "Related articles"
+  stories:
+  - name: ""
+    title: "Conseguí trabajo..."
+    open_in_modal: true
+    description: "En una investigación realizada y publicada por Forbes, se detallaron todas las formas posibles de convertirse en desarrollador web en los Estados Unidos."
+    image: ../../../static/images/consegui-trabajo.png
+    alt: ""
+    video: "" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    video_height: "173px"
+    location: ["all", "downtown-miami"]
+    icon: ""
+    footer:
+      is_image: false
+      image: ""
+      image_link: ""
+      text: ""
+      text_link: ""
+  - name: ""
+    title: "Financiaron mi carrera..."
+    open_in_modal: true
+    description: "Paga el programa después de que te gradues y encuentra trabajo, aplica al ISA (Income Share Agreement)"
+    image: ../../../static/images/financiaron-carrera.png
+    alt: ""
+    video: "" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    video_height: "173px"
+    location: ["all", "downtown-miami"]
+    icon: ""
+    footer:
+      is_image: false
+      image: ""
+      image_link: ""
+      text: ""
+      text_link: ""
+  - name: ""
+    title: "Nunca programé solo otra vez..."
+    open_in_modal: true
+    description: "Obten mentores de codificación mientras estudias, después de graduarte e incluso en sus trabajos."
+    image: ../../../static/images/nunca-programa-solo.png
+    alt: ""
+    video: "" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    video_height: "173px"
+    location: ["all", "downtown-miami"]
+    icon: ""
+    footer:
+      is_image: false
+      image: ""
+      image_link: ""
+      text: ""
+      text_link: ""
 
 active_campaign_location_slug: "barcelona-spain"
 breathecode_location_slug: "barcelona-spain"
@@ -100,16 +183,16 @@ country_shortname: "es"
 socials:
   - name: "Facebook"
     icon: "facebook"
-    link: "https://www.facebook.com/4geeksacademyes"
+    link: "https://www.facebook.com/4GeeksAcademyES"
   - name: "Twitter"
-    icon: "twitter"
-    link: "https://www.twitter.com/4geeksacademyes"
+    icon: "x-logo"
+    link: "https://twitter.com/4geeksacademyES"
   - name: "Instagram"
     icon: "instagram"
-    link: "https://www.instagram.com/4geeksacademyes"
-  - name: "Meetup"
-    icon: "meetup"
-    link: "https://www.meetup.com/4geeks-academy-madrid"
+    link: "https://www.instagram.com/4geeksacademyes/"
+  - name: "Linkedin"
+    icon: "linkedin"
+    link: "https://www.linkedin.com/school/4geeksacademyes/"
 courses:
   - "Full-Time"
   - "Part-Time"

@@ -418,12 +418,12 @@ const createEntityPagesfromYml = async (
         isPermanent: true,
       });
 
-      _createRedirect({
-        fromPath: `/en/${node.fields.defaultTemplate}/${node.fields.slug}`,
-        toPath: node.fields.pagePath,
-        redirectInBrowser: true,
-        isPermanent: true,
-      });
+      // _createRedirect({
+      //   fromPath: `/en/${node.fields.defaultTemplate}/${node.fields.slug}`,
+      //   toPath: node.fields.pagePath,
+      //   redirectInBrowser: true,
+      //   isPermanent: true,
+      // });
     }
     if (node.fields.lang === "es") {
       _createRedirect({
@@ -432,13 +432,6 @@ const createEntityPagesfromYml = async (
         redirectInBrowser: true,
         isPermanent: true,
       });
-
-      // _createRedirect({
-      //     fromPath: `/en/${node.fields.template}/${node.fields.slug}`,
-      //     toPath: node.fields.pagePath,
-      //     redirectInBrowser: true,
-      //     isPermanent: true
-      // });
     }
 
     if (node.meta_info && node.meta_info.redirects) {

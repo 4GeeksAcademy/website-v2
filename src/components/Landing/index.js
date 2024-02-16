@@ -27,314 +27,22 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { smartRedirecting, transferQuerystrings } from "../../utils/utils.js";
 import CardsCarousel from "../CardsCarousel";
 import Overlaped from "../Overlaped";
+import TwoColumn from "../TwoColumn/index.js";
+import { SingleColumn } from "../TwoColumn/index.js";
+import Iconogram from "../Iconogram/index.js";
 import { background } from "@storybook/theming";
 
 const Title = ({ id, title, paragraph }) => {
   return (
-    <GridContainer id={id} margin="40px 0 40px 0">
+    <GridContainer
+      id={id}
+      margin={paragraph ? "40px 0 20px 0" : "40px 0 30px 0"}
+      margin_tablet={paragraph ? "80px 0 20px 0" : "80px 0 60px 0"}
+    >
       <H2 type="h2">{title}</H2>
       {paragraph && <Paragraph margin="26px 0">{paragraph}</Paragraph>}
     </GridContainer>
   );
-};
-
-const Side = ({
-  video,
-  image,
-  heading,
-  sub_heading,
-  content,
-  button,
-  bullets,
-  session,
-  padding_tablet,
-}) => {
-  const utm = session && session.utm;
-  if (video)
-    return (
-      <ReactPlayer
-        thumb={image && image.src}
-        image_thumb={image}
-        id={video}
-        videoHeight="360px"
-        margin_tablet="0px"
-        style={{
-          width: "100%",
-        }}
-      />
-    );
-
-  if (image) {
-    const imgStyles = image.style ? JSON.parse(image.style) : null;
-    const [img_h_xl, img_h_lg, img_h_md, img_h_sm, img_h_xs] =
-      imgStyles && imgStyles.height
-        ? Array.isArray(imgStyles.height)
-          ? imgStyles.height
-          : [imgStyles.height]
-        : ["100%"];
-    return (
-      <Img
-        src={image.src}
-        onClick={() => {
-          if (image.link) {
-            if (image.link.indexOf("http") > -1) window.open(image.link);
-            else navigate(image.link);
-          }
-        }}
-        style={imgStyles}
-        alt="4Geeks Academy Section"
-        margin="0px"
-        height={img_h_xl}
-        width={imgStyles ? imgStyles.width || "100%" : "100%"}
-        h_sm={img_h_sm || "250px"}
-        backgroundSize={image.shadow ? "cover" : "contain"}
-        //backgroundPosition="center right"
-        //border={image.shadow && "3px solid black"}
-        boxShadow={image.shadow && "20px 15px 0px 0px rgba(0,0,0,1)"}
-      />
-    );
-  }
-
-  const [h_xl, h_lg, h_md, h_sm, h_xs] =
-    heading && heading.font_size ? heading.font_size : [];
-  const [sh_xl, sh_lg, sh_md, sh_sm, sh_xs] =
-    sub_heading && Array.isArray(sub_heading.font_size)
-      ? sub_heading.font_size
-      : [];
-  const [c_xl, c_lg, c_md, c_sm, c_xs] = content ? content.font_size : [];
-
-  let subHeadingStyles = {};
-  if (sub_heading?.style) subHeadingStyles = JSON.parse(sub_heading.style);
-
-  return (
-    <Div
-      flexDirection_tablet="column"
-      flexDirection="column"
-      padding_tablet={padding_tablet || "10px 0px 0px 0px"}
-    >
-      {heading && (
-        <H2
-          type="h2"
-          textAlign_tablet="left"
-          lineHeight="38px"
-          lineHeight_tablet="38px"
-          fontSize={h_xs || "30px"}
-          fs_xl={h_xl}
-          fontSize_md={h_md || "30px"}
-          fontSize_sm={h_sm}
-          margin="30px 0 20px 0"
-          style={heading.style ? JSON.parse(heading.style) : null}
-        >
-          {heading.text}
-        </H2>
-      )}
-      {sub_heading && (
-        <Paragraph
-          textAlign_tablet="left"
-          margin="0"
-          fontSize={sh_xl || "18px"}
-          fontSize_sm={sh_sm}
-          fonSize_md={sh_md}
-          fontSize_xs={sh_xs}
-          fontHeight="30px"
-          fontWeight={subHeadingStyles["font-weight"] || 700}
-          opacity="1"
-          style={sub_heading.style ? JSON.parse(sub_heading.style) : null}
-        >
-          {sub_heading.text}
-        </Paragraph>
-      )}
-
-      {Array.isArray(bullets?.items) && (
-        <Div
-          display="grid"
-          gridAutoFlow="dense"
-          gridTemplateColumns="repeat(auto-fill, minmax(40%, 100%))"
-          gridAutoRows="auto" //"minmax(100px, auto);"
-          margin={sub_heading ? "16px 0 16px 0" : "0 0 16px 0"}
-          gridGap="24px"
-        >
-          {bullets.items?.map((bullet, index) => {
-            return (
-              <Div
-                key={index}
-                gridColumn_tablet="1/1"
-                height="auto"
-                alignItems="center"
-                padding="16px 5px 0 0"
-                padding_tablet="16px 0 0 0"
-                display="grid"
-                gridTemplateColumns="100%"
-                //gridAutoRows="auto"
-                gridGap="0"
-                style={
-                  bullets.item_style ? JSON.parse(bullets.item_style) : null
-                }
-              >
-                <Div
-                  display="flex"
-                  flexDirection="row"
-                  alignSelf="left"
-                  padding="0 8px 0 0"
-                >
-                  <Icon
-                    icon={bullet.icon || "check"}
-                    width="13px"
-                    display="inline"
-                    color={Colors.blue}
-                    fill={Colors.yellow}
-                    style={{ strokeWidth: "2px" }}
-                  />
-                  {bullet.heading ? (
-                    <H2
-                      type="h3"
-                      textAlign="left"
-                      fontSize="15px"
-                      fontWeight="900"
-                      lineHeight="19px"
-                      textTransform="uppercase"
-                      padding="0 0 0 5px"
-                    >
-                      {bullet.heading}
-                    </H2>
-                  ) : (
-                    <Paragraph
-                      textAlign="left"
-                      fontSize="18px"
-                      fontWeight="400"
-                      lineHeight="22px"
-                      margin="0px 0px 0px 5px"
-                    >
-                      {bullet.text}
-                    </Paragraph>
-                  )}
-                </Div>
-                {bullet.heading && (
-                  <Paragraph
-                    textAlign="left"
-                    fontSize="15px"
-                    fontWeight="400"
-                    lineHeight="22px"
-                    margin="12px 0 0 0"
-                  >
-                    {bullet.text}
-                  </Paragraph>
-                )}
-              </Div>
-            );
-          })}
-        </Div>
-      )}
-
-      {content && /<\/?[a-z0-9]+>/g.test(content.text) ? (
-        <Paragraph
-          textAlign="left"
-          textAlign_tablet="left"
-          margin="10px 0"
-          opacity="1"
-          fontSize={c_xl || "16px"}
-          fontSize_sm={c_sm}
-          fonSize_md={c_md}
-          fontSize_xs={c_xs}
-          style={content.style ? JSON.parse(content.style) : null}
-          dangerouslySetInnerHTML={{ __html: content.text }}
-        />
-      ) : (
-        content &&
-        content.text.split("\n").map((p, i) => (
-          <Paragraph
-            key={`${i}-${p}`}
-            textAlign="left"
-            textAlign_tablet="left"
-            margin="10px 0"
-            opacity="1"
-            fontSize={c_xl || "16px"}
-            fontSize_sm={c_sm}
-            fonSize_md={c_md}
-            fontSize_xs={c_xs}
-            style={content.style ? JSON.parse(content.style) : null}
-            fontHeight="30px"
-          >
-            {p}
-          </Paragraph>
-        ))
-      )}
-
-      {button && (
-        <Button
-          outline
-          borderRadius="0"
-          colorHoverText={button.hover_color || Colors.blue}
-          background={Colors[button.background] || button.background}
-          lineHeight="26px"
-          textColor={Colors.black}
-          textTransform="none"
-          color={Colors[button.color] || button.color}
-          fontSize="15px"
-          textAlign="left"
-          margin="2rem 0"
-          padding="32px .85rem 0 .85rem"
-          onClick={() => {
-            if (button.path && button.path.indexOf("http") > -1)
-              window.open(transferQuerystrings(button.path, utm));
-            else navigate(button.path);
-          }}
-        >
-          {button.text}
-        </Button>
-      )}
-    </Div>
-  );
-};
-
-export const TwoColumn = ({ left, right, proportions, session }) => {
-  const [left_size, right_size] = proportions ? proportions : [];
-
-  return (
-    <Div
-      flexDirection="column"
-      gap={left.gap || right.gap || "0px"}
-      gap_tablet={left.gap_tablet || right.gap_tablet || "20px"}
-      flexDirection_tablet="row"
-      m_sm="0px auto 100px auto"
-      margin="auto"
-      padding_xxs="0 20px"
-      padding_md="40px 80px"
-      padding_lg="40px 0px"
-      padding_tablet="40px 40px"
-      width_tablet="100%"
-      maxWidth_md="1366px"
-    >
-      <Div
-        justifyContent={left.video && "center"}
-        flexDirection="column"
-        size_tablet={left_size || 6}
-        size="12"
-        padding_xs="0"
-        padding_md={right.image?.shadow ? "0 20px 0 0 " : "0px"}
-        // maxHeight="300px"
-        textAlign="center"
-      >
-        <Side session={session} {...left} />
-      </Div>
-      <Div
-        justifyContent={right.video && "center"}
-        flexDirection="column"
-        size_tablet={right_size || 6}
-        padding_xs="0"
-        padding_md={left.image?.shadow ? "0 0 0 20px" : "0px"}
-        size="12"
-        textAlign="center"
-      >
-        <Side session={session} {...right} />
-      </Div>
-    </Div>
-  );
-};
-TwoColumn.defaultProps = {
-  proportions: [],
-  left: null,
-  right: null,
 };
 
 export const MultiColumns = ({
@@ -465,19 +173,6 @@ MultiColumns.defaultProps = {
   columns: [],
 };
 
-export const SingleColumn = ({ column }) => {
-  return (
-    <Div flexDirection="row" m_sm="0px 0px 100px 0">
-      <Div flexDirection="column" size={12} size_sm="12" align_sm="center">
-        <Side {...column} />
-      </Div>
-    </Div>
-  );
-};
-TwoColumn.defaultProps = {
-  column: null,
-};
-
 export const Columns = ({ columns, proportions, swipable }) => {
   return swipable ? (
     <Div
@@ -510,12 +205,12 @@ export const Columns = ({ columns, proportions, swipable }) => {
             style={c.image.style ? JSON.parse(c.image.style) : null}
             // borderRadius={"1.25rem"}
             className="pointer"
-            alt={"4Geeks Academy Section"}
+            alt="4Geeks Academy Section"
             margin="auto"
             height="100%"
             width="100%"
             h_sm="250px"
-            backgroundSize={`cover`}
+            backgroundSize="cover"
           />
 
           {/* <div style={{background:"red", width:"250px", height:"250px"}}></div> */}
@@ -639,115 +334,7 @@ export const landingSections = {
 
   iconogram: ({ session, data, pageContext, yml, index }) => {
     const { heading, sub_heading, icons, button } = yml;
-    return (
-      <Div
-        key={index}
-        padding={heading.text ? "30px 0 60px 0" : "60px 0 60px 0"}
-        display="flex"
-        flexDirection="column"
-        id="iconogram"
-        containerColumns_tablet="repeat(14, 1fr)"
-        columns="1"
-        rows="2"
-        margin="auto"
-        height="auto"
-        width="100%"
-        alignItems="center"
-        background={Colors.lightYellow}
-      >
-        {heading.text && (
-          <H2
-            type="h2"
-            lineHeight="28px"
-            lineHeight_tablet="28px"
-            fontSize="38px"
-            //margin="30px 0 30px 0"
-            maxWidth="1366px"
-            margin="30px auto"
-            style={{ textAlign: "center" }}
-          >
-            {heading.text}
-          </H2>
-        )}
-        {sub_heading && /<\/?[a-z0-9]+>/g.test(sub_heading.text) ? (
-          <Paragraph
-            padding_xs={heading.text ? "0 10%" : "20px 10%"}
-            padding_tablet={heading.text ? "0 10%" : "20px 10%"}
-            padding_md={heading.text ? "0 10%" : "20px 10%"}
-            margin="15px auto"
-            fontSize="16px"
-            fontHeight="30px"
-            maxWidth="1366px"
-            dangerouslySetInnerHTML={{ __html: sub_heading.text }}
-          />
-        ) : sub_heading.text == !"" ? (
-          <Paragraph
-            padding_xs={heading.text ? "0 10%" : "20px 10%"}
-            padding_tablet={heading.text ? "0 10%" : "20px 10%"}
-            padding_md={heading.text ? "0 10%" : "20px 10%"}
-            margin="15px auto"
-            fontSize="16px"
-            fontHeight="30px"
-            maxWidth="1366px"
-          >
-            {sub_heading.text}
-          </Paragraph>
-        ) : null}
-        <Div
-          display="flex"
-          flexDirection="column"
-          flexDirection_tablet="row "
-          justifyContent="center"
-          // gap="45px"
-          gap_tablet={icons.length > 4 ? "0px" : "5%"}
-          //gap_md="10%"
-          maxWidth="1366px"
-          margin="20px auto 0 auto"
-          padding_tablet="0 40px"
-          padding_md="0 80px"
-          padding_lg="0"
-          //className="badge-slider hideOverflowX__"
-        >
-          {Array.isArray(icons) &&
-            icons?.map((item, index) => {
-              return (
-                <React.Fragment key={index}>
-                  <IconsBanner
-                    icon={item.icon}
-                    title={item.title}
-                    content={item.content}
-                  />
-                </React.Fragment>
-              );
-            })}
-        </Div>
-        {button && (
-          <Button
-            outline
-            borderRadius="0"
-            colorHoverText={button.hover_color || Colors.blue}
-            background={Colors[button.background] || button.background}
-            lineHeight="26px"
-            textColor={Colors.black}
-            textTransform="none"
-            color={Colors[button.color] || button.color}
-            fontSize="18px"
-            fontFamily="Lato"
-            fontWeight="500"
-            textAlign="left"
-            margin="2rem 0"
-            padding="32px .85rem 0 .85rem"
-            onClick={() => {
-              if (button.path && button.path.indexOf("http") > -1)
-                window.open(transferQuerystrings(button.path, utm));
-              else navigate(button.path);
-            }}
-          >
-            {button.text}
-          </Button>
-        )}
-      </Div>
-    );
+    return <Iconogram yml={yml} session={session} data={data} index={index} />;
   },
 
   badges: ({ session, data, pageContext, yml, course, index }) => {
@@ -1005,7 +592,7 @@ export const landingSections = {
   },
 
   cards_carousel: ({ session, pageContext, yml, data, index }) => {
-    const { heading, sub_heading, content, cards, button } = yml;
+    const { heading, sub_heading, content, cards, button, width } = yml;
     return (
       <React.Fragment key={index}>
         <Div
@@ -1022,6 +609,7 @@ export const landingSections = {
           <CardsCarousel
             landingTemplate
             title={heading}
+            cardWidth={width}
             sub_title={sub_heading}
             content={content}
             cards={cards}
@@ -1096,7 +684,7 @@ export const landingSections = {
       id="testimonials_new"
       key={`${index}-testimonials_new`}
       flexDirection="column"
-      margin="30px auto 50px auto"
+      margin="50px auto"
       m_sm="0"
       p_xs="0 10px"
       width_tablet="100%"
@@ -1204,7 +792,10 @@ export const landingSections = {
   },
 
   divider: ({ session, data, pageContext, yml, index }) => {
-    const [h_xl, h_lg, h_md, h_sm, h_xs] = yml.section_heading && yml.section_heading.font_size ? yml.section_heading.font_size : [];
+    const [h_xl, h_lg, h_md, h_sm, h_xs] =
+      yml.section_heading && yml.section_heading.font_size
+        ? yml.section_heading.font_size
+        : [];
     return (
       <Div
         id="divider"
@@ -1215,24 +806,31 @@ export const landingSections = {
         md={yml.height[2]}
         sm={yml.height[3]}
         xs={yml.height[4]}
-      >{yml.heading && yml.heading !== "" && <H2
-          type="h2"
-          textAlign_tablet="center"
-          lineHeight="38px"
-          lineHeight_tablet="38px"
-          fontSize={h_xs || "30px"}
-          fs_xl={h_xl}
-          fontSize_md={h_md || "30px"}
-          fontSize_sm={h_sm}
-          margin="30px 0 0px 0"
-          style={yml.heading.style ? JSON.parse(heading.heading.style) : null}
-        >
-          {yml.heading.text}
-      </H2>}
-    </Div>);
+      >
+        {yml.heading && yml.heading !== "" && (
+          <H2
+            type="h2"
+            textAlign_tablet="center"
+            lineHeight="38px"
+            lineHeight_tablet="38px"
+            fontSize={h_xs || "30px"}
+            fs_xl={h_xl}
+            fontSize_md={h_md || "30px"}
+            fontSize_sm={h_sm}
+            margin="30px 0 0px 0"
+            style={yml.heading.style ? JSON.parse(heading.heading.style) : null}
+          >
+            {yml.heading.text}
+          </H2>
+        )}
+      </Div>
+    );
   },
   two_column_left: ({ session, data, pageContext, yml, index }) => {
-    const [h_xl, h_lg, h_md, h_sm, h_xs] = yml.section_heading && yml.section_heading.font_size ? yml.section_heading.font_size : [];
+    const [h_xl, h_lg, h_md, h_sm, h_xs] =
+      yml.section_heading && yml.section_heading.font_size
+        ? yml.section_heading.font_size
+        : [];
     return (
       <Div
         id="two_column_left"
@@ -1245,7 +843,8 @@ export const landingSections = {
         width_md="100%"
         padding_xs="30px 0px"
       >
-        {yml.section_heading && yml.section_heading !== "" && <H2
+        {yml.section_heading && yml.section_heading !== "" && (
+          <H2
             type="h2"
             textAlign_tablet="center"
             lineHeight="38px"
@@ -1255,10 +854,15 @@ export const landingSections = {
             fontSize_md={h_md || "30px"}
             fontSize_sm={h_sm}
             margin="30px 0 0px 0"
-            style={yml.section_heading.style ? JSON.parse(heading.section_heading.style) : null}
+            style={
+              yml.section_heading.style
+                ? JSON.parse(yml.section_heading.style)
+                : null
+            }
           >
             {yml.section_heading.text}
-        </H2>}
+          </H2>
+        )}
         <TwoColumn
           left={{ image: yml.image, video: yml.video }}
           right={{
@@ -1275,7 +879,10 @@ export const landingSections = {
     );
   },
   two_column_right: ({ session, data, pageContext, yml, index }) => {
-    const [h_xl, h_lg, h_md, h_sm, h_xs] = yml.section_heading && yml.section_heading.font_size ? yml.section_heading.font_size : [];
+    const [h_xl, h_lg, h_md, h_sm, h_xs] =
+      yml.section_heading && yml.section_heading.font_size
+        ? yml.section_heading.font_size
+        : [];
     return (
       <Div
         id="two_column_right"
@@ -1287,7 +894,8 @@ export const landingSections = {
         width_md="100%"
         padding_xs="30px 0px"
       >
-        {yml.section_heading && yml.section_heading !== "" && <H2
+        {yml.section_heading && yml.section_heading !== "" && (
+          <H2
             type="h2"
             textAlign_tablet="center"
             lineHeight="38px"
@@ -1297,10 +905,15 @@ export const landingSections = {
             fontSize_md={h_md || "30px"}
             fontSize_sm={h_sm}
             margin="30px 0 0px 0"
-            style={yml.section_heading.style ? JSON.parse(yml.section_heading.style) : null}
+            style={
+              yml.section_heading.style
+                ? JSON.parse(yml.section_heading.style)
+                : null
+            }
           >
             {yml.section_heading.text}
-        </H2>}
+          </H2>
+        )}
         <TwoColumn
           left={{
             heading: yml.heading,

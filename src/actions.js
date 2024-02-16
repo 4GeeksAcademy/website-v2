@@ -44,12 +44,11 @@ export const isCustomBarActive = (session) => {
 
 export const locByLanguage = (locations, languageToFilter) => {
   if (languageToFilter == "en") languageToFilter = "us";
-
   let repeated = [];
+
   const locs = locations.nodes
     .filter((l) => {
       const [name, _lang] = l.fields.file_name.split(".");
-
       //filter repetead locations and only focuse on the desired language
       if (_lang !== languageToFilter || repeated.includes(name)) return false;
       repeated.push(name);
@@ -390,9 +389,8 @@ export const getCohorts = async (_query = {}) => {
     .filter((key) => query[key] && query[key] != undefined)
     .map((key) => key + "=" + query[key])
     .join("&");
-  console.log("query", query);
   var resp = (resp = await fetch(
-    `${process.env.GATSBY_BREATHECODE_HOST}/admissions/cohort/all?${query}`
+    `https://breathecode.herokuapp.com/v1/admissions/cohort/all?${query}`
   ));
   return await resp.json();
 };
@@ -407,7 +405,7 @@ export const getEvents = async (_query = {}) => {
     .map((key) => key + "=" + query[key])
     .join("&");
   const resp = await fetch(
-    `${process.env.GATSBY_BREATHECODE_HOST}/events/all?${query}`
+    `https://breathecode.herokuapp.com/v1/events/all?${query}`
   );
   return await resp.json();
 };

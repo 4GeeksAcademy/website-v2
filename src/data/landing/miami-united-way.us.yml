@@ -27,12 +27,12 @@ form:
   heading: "Apply to 4Geeks"
   motivation: "A top quality program at No Cost for you. No excuses. Become a developer and change your life"
   button_label: Apply Now
-  redirect: "/us/thank-you/?lang=us"  #you can redirect to another url or entirely diffrent website
+  redirect: "/us/thank-you/?lang=us" #you can redirect to another url or entirely diffrent website
 
 apply_schollarship: # form that is displayed at the end of the landing
   # title: "Apoyo Profesional Ilimitado"
   imageSide: "left"
-  image: "../../../static/images/landing/apply.png"  
+  image: "../../../static/images/landing/apply.png"
 
 navbar:
   buttonText: "Apply now"
@@ -44,10 +44,10 @@ header_data:
   tagline: "There are no excuses to enter the tech industry."
   tagline_color: "black"
   sub_heading: "No cost, ever, for your Coding education. We changed the game."
-  badge: "../../../static/images/badges/Course-Report-Badge-2023.png"
+  badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
   image_filter: brightness(0.3)
   right_image: "../../../static/images/landing/header_united_way.png"
-  # right_image: 
+  # right_image:
   #   style: '{ "backgroundSize": "contain" }'
   #   src: "/images/landing/header_united_way.png"
 
@@ -57,10 +57,10 @@ features:
   bullets:
     - "Become a Software Developer and get a new career"
     - "Get up to $6400 for living stipends to pay your regular costs while taking the program"
-    - "100 Spots Available. Only 50 left!" 
+    - "100 Spots Available. Only 50 left!"
     - "Now open and accepting applications!"
   styles: '{ "color": "gray", "fontWeight":"500" }'
-  
+
 short_badges:
   - name: "Premios Tecnologia Siglo XXI"
     url: ""
@@ -68,12 +68,12 @@ short_badges:
     alt: "Mejor centro de Coding Bootcamp"
   - name: "Course Report"
     url: ""
-    image: "../../../static/images/badges/Course-Report-Badge-2023.png"
+    image: "../../../static/images/badges/Course-Report-Badge-2024.webp"
     alt: "Top Coding Bootcamps Course Report"
   - name: "Switchup"
     url: ""
     image: "../../../static/images/badges/switchup-badge-2023.png"
-    alt: "Best coding bootcamp Switchup 2023"   
+    alt: "Best coding bootcamp Switchup 2023"
   - name: "Florida Department of Education"
     url: ""
     image: "../../../static/images/badges/licensed.png"
@@ -97,15 +97,15 @@ iconogram:
   heading:
     text: "Aqui puede ser un titulo"
   icons:
-  - icon: "graduation-2" 
-    title: ""
-    content: "Apply to the United Way Miami Workforce Project to jumpstart your career in coding."
-  - icon: "laptop_new"
-    title: ""
-    content: "Once accepted, students enroll in the 4Geeks Full-Stack Software Development Program. 4Geeks provides quality training and offers supporting services —like resume review and career coaching—to help participants find jobs after graduating."
-  - icon: "job"
-    title: ""
-    content: "Participants pay program costs after they start jobs making more than $35,000 a year. Participants who don't find a job or keep jobs with salaries above $35,000 pay nothing."
+    - icon: "graduation-2"
+      title: ""
+      content: "Apply to the United Way Miami Workforce Project to jumpstart your career in coding."
+    - icon: "laptop_new"
+      title: ""
+      content: "Once accepted, students enroll in the 4Geeks Full-Stack Software Development Program. 4Geeks provides quality training and offers supporting services —like resume review and career coaching—to help participants find jobs after graduating."
+    - icon: "job"
+      title: ""
+      content: "Participants pay program costs after they start jobs making more than $35,000 a year. Participants who don't find a job or keep jobs with salaries above $35,000 pay nothing."
 
 components:
   - name: how-it-works
@@ -122,7 +122,7 @@ components:
       style: '{ "textAlign": "center", "width": "60%" }'
     text_link: "/"
     icons:
-      - icon: "graduation-2" 
+      - icon: "graduation-2"
         title: ""
         content: "Apply to the United Way Miami Workforce Project to jumpstart your career in coding."
       - icon: "laptop_new"
@@ -131,12 +131,13 @@ components:
       - icon: "circle"
         title: ""
         content: "Participants pay program costs after they start jobs making more than $35,000 a year. Participants who don't find a job or keep jobs with salaries above $35,000 pay nothing."
-    
 
   - name: elegibility
-    position: 3
+    position: 4
     layout: cards_carousel
     swipable: True
+    #            xs         sm       md        lg
+    width: ["280px", "280px", "280px", 280px"]
     heading:
       text: "Elegibility in this Program"
       font_size: ["30px", "30px", "30px", "30px", "30px"]
@@ -158,7 +159,7 @@ components:
       - image:
           style: '{ "backgroundSize": "cover", "minHeight": "230px", "borderRadius": "80px" }'
           src: "/images/low-income-people-of-color.png"
-        heading: 
+        heading:
           text: "Low-income people of color"
           style: '{ "fontWeight": "700" }'
           font_size: "15px"
@@ -167,16 +168,20 @@ components:
       - image:
           style: '{ "backgroundSize": "cover", "minHeight": "230px", "borderRadius": "80px" }'
           src: "/images/low-income-veterans.png"
-        heading: 
+        heading:
           text: "Low-income veterans"
           style: '{ "fontWeight": "700" }'
           font_size: "15px"
         # button:
         #   text: "See more"
+        # content:
+        #   text: "Learn from senior-level professionals with successful careers in tech and real industry experience."
+        #   style: '{ "padding": "0px 10px" }'
+
       - image:
           style: '{ "backgroundSize": "cover", "minHeight": "230px", "borderRadius": "80px" }'
           src: "/images/low-income-female-heads-of-household.png"
-        heading: 
+        heading:
           text: "Low-income single female heads of household"
           style: '{ "fontWeight": "700" }'
           font_size: "15px"
@@ -235,14 +240,15 @@ components:
         <p>These <strong style="font-weight: bold;font-size:20px;">programs (Part-time -16 weeks long- or Full-Time -9 weeks long-)</strong> will teach you the skills you need to succeed as a software developer. </p>
         <br>
         <h2><strong style="font-weight: bold;font-size:20px;color:black;">Are you ready to break down obstacles and start a new career?</strong></h2>
-    
+
   - name: pay
     position: 8
     background: "#C7F3FD"
     layout: two_column_right
     proportions: [6, 6]
     image:
-      style: '{ "backgroundSize": "contain" }'
+      style: '{ "border" : "3px solid black", "backgroundSize": "contain"  }'
+      shadow: true
       src: "/static/images/staff/luisa.png"
     video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
     heading:
@@ -253,16 +259,30 @@ components:
       font_size: ["18px", "18px", "18px", "18px", "18px"]
     button:
       text: "Review Conditions"
-      color: null
+      color: white
+      background: black
+      hover: "lightBlue"
       path: "https://storage.googleapis.com/media-breathecode/bc38ffebe9e56f8cd62e10d5d0839f98d7528c4fe7756456630588d2c2048a2a"
     content:
-      text: |
-        <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">1. Enroll in the program.</strong></h2>
-        <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">2. Learn software development skills.</strong></h2>
-        <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">3. Graduate and complete your projects.</strong></h2>
-        <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">4. Land a job.</strong></h2>
-        <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">5. Keep building a career you love.</strong></h2>
+      text: ""
       font_size: ["16px"]
+    bullets:
+      items:
+        - heading: "Enroll in the program."
+          text: ""
+          icon: "circle" #string with icon for example ['check', 'cicle', etc]
+        - heading: "Learn software development skills."
+          text: ""
+          icon: "circle" #string with icon for example ['check', 'cicle', etc]
+        - heading: "Graduate and complete your projects."
+          text: ""
+          icon: "circle" #string with icon for example ['check', 'cicle', etc]
+        - heading: "Land a job."
+          text: ""
+          icon: "circle" #string with icon for example ['check', 'cicle', etc]
+        - heading: "Keep building a career you love."
+          text: ""
+          icon: "circle" #string with icon for example ['check', 'cicle', etc]
 
   - name: testimonials
     position: 9
@@ -270,7 +290,8 @@ components:
     text: "Testimonials"
     layout: testimonials_new
     # filter_indexes: [6,7,8]
-    filter_indexes: ['azu-bota','nai-kali','cha-fabr']
+    filter_indexes:
+      ["azu-bota", "nai-kali", "cha-fabr"]
       # - "azu-bota"
       # - "nai-kali"
       # - "cha-fabr"
@@ -312,5 +333,5 @@ components:
     content:
       text: |
         <p>United Way Miami envisions a thriving and equitable community where all people have access to quality education and the opportunity to lead healthy and financially secure lives – the building blocks of a thriving community.</p>
-        <br> 
-      font_size: ["16px"] 
+        <br>
+      font_size: ["16px"]

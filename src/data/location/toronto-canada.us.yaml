@@ -2,27 +2,32 @@ meta_info:
   slug: "coding-bootcamp-toronto-canada"
   title: "Toronto Coding Bootcamp in Canada"
   position: 2
-  description: "Get to know here all about our coding bootcamp campus in Toronto, Canada of 4Geeks Academy"
+  description: "Get to know here all about our coding bootcamp campus in Toronto, Canada of 4geeks academy"
   image: "/images/og-preview/toronto-canada.us.png"
   keywords: "null"
   redirects: []
   region: "usa-canada"
   dialCode: "1"
   related_clusters: ["trends-and-tech"]
+  
+  # ⬇️ cohort_include_regex field is used to filter cohorts on the calendar that only test successfully for a particular regex
+  # for example: for this location, only show cohorts starting with usa-xx-spanish
+  cohort_include_regex: ["miami"]
+  cohort_exclude_regex: []
 
 seo_title: "Coding Bootcamp in Toronto, Canada"
 header:
-  tagline: "4Geeks Academy in Toronto, Canada"
+  tagline: "4geeks academy in Toronto, Canada"
   sub_header: "All programs are taught "
   sub_header_highlighted: "Online, Hybrid or In-person."
   paragraph: ""
   image: "../../../static/images/locations/toronto-header.png"
-  alt: "4Geeks Academy online and in-person coding bootcamp in Toronto, Canada"
+  alt: "4geeks academy online and in-person coding bootcamp in Toronto, Canada"
 
 badges:
   title: ""
   paragraph: |
-    4Geeks Academy is the place where developers grow and thrive.
+    4geeks academy is the place where developers grow and thrive.
  
     We are licensed by the USA F. Dep. of Education.
   
@@ -49,7 +54,7 @@ custom_bar:
   active: true
   message: 'NOW open: 06/27 Full-Stack | 07/11 Machine Learning! <a class="customBar-link" href="/us/apply" taget="_blank" rel="noopener noreferrer nofollow">Apply</a>'
   button: 
-    label: "Read More"
+    label: "" # leave empty to hide button
     path: "#" #string (can be inline path using #, relative path or absolute path)
 
 info_box:
@@ -65,7 +70,7 @@ images_box:
   images:
     - path: "../../../static/images/locations/toronto-new.png"
       alt: "Atlanta city"
-    - path: "../../../static/images/ownpeoplecoding2.jpg"
+    - path: "../../../static/images/ownpeoplecoding2.webp"
       alt: "4Geeks Own People Coding"
     - path: "../../../static/images/ownmancoding.jpg"
       alt: "Remote-Coding-Bootcamp"
@@ -73,6 +78,33 @@ images_box:
       alt: "4Geeeks miami location"
     - path: "../../../static/images/locations/miami-people.jpeg"
       alt: "4Geeeks miami lab"
+  layout_horizontal: true #false == "mode mosaic"
+
+two_columns:
+  proportions: [6, 6]
+  image:
+    style: '{"border" : "5px solid black", "backgroundSize": "contain" }'
+    src: "/static/images/staff/luisa.png"
+    shadow: true  
+  video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
+  heading:
+    text: "Luisa's Experience at 4Geeks Academy in Toronto, Canada"
+    font_size: ["30px", "30px", "30px", "30px", "30px"]
+  sub_heading:
+    text: "Empower Your Tech Journey in Toronto's Thriving Scene"
+    font_size: ["18px", "18px", "22px", "22px", "22px"]
+  button:
+    text: "APPLY NOW"
+    color: "white"
+    background: "black"
+    path: "/us/apply"
+  bullets:
+    items: 
+    - text: "Tailored courses aligned with Toronto's tech demands for career advancement"
+    - text: "Networking opportunities within Toronto's thriving tech community"
+    - text: "Expert guidance and insights shared by industry professionals"
+    - text: "Preparation for real-world challenges and job opportunities in technology"
+
 
 active_campaign_location_slug: "toronto-canada"
 breathecode_location_slug: "toronto-canada"
@@ -94,14 +126,14 @@ socials:
     icon: "facebook"
     link: "https://www.facebook.com/4geeksacademy"
   - name: "Twitter"
-    icon: "twitter"
+    icon: "x-logo"
     link: "https://www.twitter.com/4geeksacademy"
   - name: "Instagram"
     icon: "instagram"
     link: "https://www.instagram.com/4geeksacademy"
-  - name: "Meetup"
-    icon: "meetup"
-    link: "https://www.meetup.com/4geeks-academy"
+  - name: "Linkedin"
+    icon: "linkedin"
+    link: "https://www.linkedin.com/school/4geeksacademy/"
 courses:
   - "Full-Time"
   - "Part-Time"

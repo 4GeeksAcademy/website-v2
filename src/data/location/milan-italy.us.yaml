@@ -9,6 +9,11 @@ meta_info:
   region: "europe"
   dialCode: "39"
   related_clusters: ["trends-and-tech"]
+  
+  # ⬇️ cohort_include_regex field is used to filter cohorts on the calendar that only test successfully for a particular regex
+  # for example: for this location, only show cohorts starting with usa-xx-spanish
+  cohort_include_regex: ["europe"]
+  cohort_exclude_regex: []
 
 seo_title: "Coding Bootcamp Milano, Italy"
 header:
@@ -69,7 +74,7 @@ images_box:
   images:
     - path: "../../../static/images/locations/milan-new.png"
       alt: "Milan city"
-    - path: "../../../static/images/ownpeoplecoding2.jpg"
+    - path: "../../../static/images/ownpeoplecoding2.webp"
       alt: "4Geeks Own People Coding"
     - path: "../../../static/images/ownmancoding.jpg"
       alt: "Remote-Coding-Bootcamp"
@@ -77,6 +82,32 @@ images_box:
       alt: "4Geeeks location"
     - path: "../../../static/images/locations/miami-people.jpeg"
       alt: "4Geeeks lab"
+  layout_horizontal: true #false == "mode mosaic"
+
+two_columns:
+  proportions: [6, 6]
+  image:
+    style: '{"border" : "5px solid black", "backgroundSize": "contain" }'
+    src: "/static/images/staff/hernan-new.png"
+    shadow: true  
+  video: "ln3bQsV1BaQ"
+  heading:
+    text: "Hernan García's Experience with 4Geeks Academy in Milan"
+    font_size: ["30px", "30px", "30px", "30px", "30px"]
+  sub_heading:
+    text: "Discover how Hernan García has shaped his career with 4GeeksAcademy. Explore how our programs have molded his professional journey"
+    font_size: ["18px", "18px", "22px", "22px", "22px"]
+  button:
+    text: "APPLY NOW"
+    color: "white"
+    background: "black"
+    path: "/us/apply"
+  bullets:
+    items: 
+    - text: "With a 90% job placement rate within six months of graduation, our programs ensure tangible outcomes for career advancement"
+    - text: "Flexible learning options, including part-time and immersive courses, cater to diverse schedules and learning preferences"
+    - text: "Exclusive networking events and workshops provide opportunities to interact with tech leaders and expand professional connections"
+
 
 ## HEADING SECTION
 
@@ -101,14 +132,14 @@ socials:
     icon: "facebook"
     link: "https://www.facebook.com/4geeksacademy"
   - name: "Twitter"
-    icon: "twitter"
-    link: "https://www.twitter.com/4geeksacademy"
+    icon: "x-logo"
+    link: "https://twitter.com/4GeeksAcademy"
   - name: "Instagram"
     icon: "instagram"
-    link: "https://www.instagram.com/4geeksacademy"
-  - name: "Meetup"
-    icon: "meetup"
-    link: "https://www.meetup.com/4geeks-academy"
+    link: "https://www.instagram.com/4geeksacademy/"
+  - name: "Linkedin"
+    icon: "linkedin"
+    link: "https://www.linkedin.com/school/4geeksacademy/"
 
 courses:
   - "Full-Time"
