@@ -79,7 +79,7 @@ images_box:
   images:
     - path: "../../../static/images/locations/barcelona-new.png"
       alt: "Barcelona city"
-    - path: "../../../static/images/ownpeoplecoding2.jpg"
+    - path: "../../../static/images/ownpeoplecoding2.webp"
       alt: "4Geeks Own People Coding"
     - path: "../../../static/images/ownmancoding.jpg"
       alt: "Remote-Coding-Bootcamp"

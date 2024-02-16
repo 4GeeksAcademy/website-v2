@@ -25,8 +25,10 @@ const Financial = (props) => {
   if (session && session.location) {
     location = data.allLocationYaml.edges.find(
       (l) =>
+        l &&
+        l.node &&
         l.node.active_campaign_location_slug ===
-        session.location.active_campaign_location_slug
+          session.location.active_campaign_location_slug
     );
     if (location) location = location.node;
   }

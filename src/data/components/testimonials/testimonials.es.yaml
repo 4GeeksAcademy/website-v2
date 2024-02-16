@@ -44,8 +44,8 @@ testimonials:
   - student_name: "Naila Kaliyeva"
     slug: "nai-kali"
     country:
-      iso: ve
-      name: Venezuela
+      iso: us
+      name: United States of America
     featured: false
     highlighted: false
     testimonial_date: ""
@@ -83,8 +83,8 @@ testimonials:
   - student_name: "Azul Botaya"
     slug: "azu-bota"
     country:
-      iso: ve
-      name: Venezuela
+      iso: us
+      name: United States of America
     featured: false
     highlighted: false
     testimonial_date: ""
@@ -110,8 +110,8 @@ testimonials:
   - student_name: "Charles Fabricius"
     slug: "cha-fabr"
     country:
-      iso: ve
-      name: Venezuela
+      iso: us
+      name: United States of America
     featured: false
     highlighted: false
     testimonial_date: ""
@@ -137,6 +137,9 @@ testimonials:
     featured: false
     highlighted: false
     testimonial_date: ""
+    country:
+      iso: us
+      name: United States of America
     rating: 5
     student_thumb: "../../../../static/images/testimonials/fernando-funez.jpg"
     student_video: "" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
@@ -156,6 +159,9 @@ testimonials:
     featured: false
     highlighted: false
     testimonial_date: ""
+    country:
+      iso: us
+      name: United States of America
     rating: 5
     student_thumb: "../../../../static/images/testimonials/salvador-desravines.jpg"
     student_video: "" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
@@ -175,6 +181,9 @@ testimonials:
     featured: false
     highlighted: false
     testimonial_date: ""
+    country:
+      iso: us
+      name: United States of America
     rating: 5
     student_thumb: "../../../../static/images/testimonials/jorge-montes.jpg"
     student_video: "" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
@@ -195,6 +204,9 @@ testimonials:
     highlighted: false
     testimonial_date: ""
     include_in_marquee: true
+    country:
+      iso: us
+      name: United States of America
     rating: 5
     hidden: false
     linkedin_url: "https://www.linkedin.com/in/fidelrosell/"
@@ -214,6 +226,9 @@ testimonials:
     featured: false
     highlighted: false
     testimonial_date: ""
+    country:
+      iso: us
+      name: United States of America
     rating: 5
     student_thumb: "../../../../static/images/testimonials/guensie-grecy.jpeg"
     linkedin_url: "https://www.linkedin.com/in/guensiegrecy/"
@@ -231,6 +246,9 @@ testimonials:
     featured: false
     highlighted: false
     testimonial_date: ""
+    country:
+      iso: us
+      name: United States of America
     rating: null
     student_thumb: "../../../../static/images/testimonials/Leslie-.jpg"
     linkedin_url: ""
@@ -248,6 +266,9 @@ testimonials:
     featured: false
     highlighted: false
     testimonial_date: ""
+    country:
+      iso: us
+      name: United States of America
     rating: null
     student_thumb: "../../../../static/images/testimonials/Manuel-alejandro.jpg"
     linkedin_url: ""
