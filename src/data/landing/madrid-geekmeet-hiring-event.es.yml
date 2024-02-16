@@ -37,7 +37,7 @@ header_data:
   background: "#FFF1D1"
   tagline: En Marzo llega el evento más esperado del año.
   sub_heading: "GeekMeet primera edición: punto de encuentro entre empresas y el mejor talento tech junior."
-  badge: "../../../static/images/badges/Course-Report-Badge-2023.png"
+  badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
   image_filter: brightness(0.3)
 
 features:
@@ -61,7 +61,7 @@ short_badges:
     alt: "Premio Nacional de Tecnología 2023"
   - name: "Course Report"
     url: ""
-    image: "../../../static/images/badges/Course-Report-Badge-2023.png"
+    image: "../../../static/images/badges/Course-Report-Badge-2024.webp"
     alt: "Best cooding bootcamp Course Report 2023"   
   - name: "European Excellence Education"
     url: ""
@@ -95,7 +95,7 @@ who_is_hiring:
   sub_heading: "A nivel mundial ya somos más de 500 partners que, como tú, reciben el mejor servicio (gratuito) para acceder a candidatos tech junior, de la forma más personalizada que puedas imaginarte "
   featured:
     - name: "Facebook"
-      image: "../../../static/images/partner/facebook.png"
+      image: "../../../static/images/partner/meta-logo.png"
     - name: "Microsoft"
       image: "../../../static/images/partner/microsoft.png"
     - name: "Apple"
@@ -183,7 +183,7 @@ components:
     proportions: [4, 8]
     image:
       style: '{ "backgroundSize": "contain" }'
-      src: "/images/badges/Course-Report-Badge-2023.png"
+      src: "/images/badges/Course-Report-Badge-2024.webp"
       link: "https://www.coursereport.com/schools/4geeks-academy"
     heading:
       text:

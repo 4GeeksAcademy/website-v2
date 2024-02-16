@@ -75,7 +75,7 @@ short_badges:
     alt: "Mejor centro de Coding Bootcamp"
   - name: "Course Report"
     url: ""
-    image: "../../../static/images/badges/Course-Report-Badge-2023.png"
+    image: "../../../static/images/badges/Course-Report-Badge-2024.webp"
     alt: "Top Coding Bootcamps Course Report"
   - name: "Switchup"
     url: ""
@@ -114,7 +114,7 @@ who_is_hiring:
   sub_heading: "Consigue un trabajo en menos de 6 meses gracias a nuestra creciente red de más de 500 partners. Accede a ofertas nacionales e internacionales y a una comunidad de más de 3500 graduados."
   featured:
     - name: "Facebook"
-      image: "../../../static/images/partner/facebook.png"
+      image: "../../../static/images/partner/meta-logo.png"
     - name: "Microsoft"
       image: "../../../static/images/partner/microsoft.png"
     - name: "Apple"

@@ -184,3 +184,18 @@ redirects:
     toPath: "/es/desarrollador-full-stack/desarrollador-full-stack"
     #redirectInBrowser: true
     isPermanent: true # if permanent google will erase the original url from its results 
+    
+  - fromPath: "/us/aprender-a-programar/como-pagar-bootcamp-de-programacion"
+    toPath: "/es/aprender-a-programar/como-pagar-bootcamp-de-programacion"
+    #redirectInBrowser: true
+    isPermanent: true # if permanent google will erase the original url from its results 
+
+  - fromPath: "/us/aprender-a-programar/aprende-a-programar-en-espanol"
+    toPath: "/es/aprender-a-programar/aprende-a-programar-en-espanol"
+    #redirectInBrowser: true
+    isPermanent: true # if permanent google will erase the original url from its results 
+    
+  - fromPath: "/us/aprender-a-programar/aprende-a-programacion-desde-cero"
+    toPath: "/es/aprender-a-programar/aprende-a-programacion-desde-cero"
+    #redirectInBrowser: true
+    isPermanent: true # if permanent google will erase the original url from its results 
