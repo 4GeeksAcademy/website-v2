@@ -164,6 +164,6 @@ components:
         color: "white"
         background: "black"
         hover: "lightBlue"
-      videoHeight: "30px"
-      videoWidth: "60px"
+      videoHeight: "360px"
+      videoWidth: "202px"
     
