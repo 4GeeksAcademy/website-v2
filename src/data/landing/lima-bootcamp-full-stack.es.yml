@@ -3,7 +3,7 @@ meta_info:
 
   # This will show on social media when shared
   title: "ProInnóvate y 4Geeks: Full Stack Developer Bootcamp, aprende todo lo necesario para integrarte en el mundo laboral de la industria Tech."
-  description: "El Bootcamp de Full-Satack con mayor credibilidad del mercado."
+  description: "El Bootcamp de Full-Stack con mayor credibilidad del mercado."
   image: "/images/bg/main-bg.jpg"
   keywords: "Clase de programación, Clase de python, clase de javascript, Clase de informática, Coding Bootcamp, 4Geeks Academy"
   visibility: "hidden" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
@@ -45,7 +45,7 @@ header_data:
   partner_logo_url: "../../../static/images/landing/logos-promin2.png"
   tagline: ProInnóvate otorga becas para bootcamps de programación de 4Geeks Academy. 
   sub_heading: "El concurso está dirigido a jóvenes técnicos o no universitarios que buscan formación técnica especializada para mejorar su empleabilidad."
-  badge: "../../../static/images/badges/Course-Report-Badge-2023.png"
+  badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
   image_filter: brightness(0.3)
 
 features:
@@ -67,7 +67,7 @@ follow_bar:
     font_size: ["25px", "25px", "25px", "18px", "4.3vw"]
   button:
     text: "Inicia tu Popstulación"
-    path: "https://inngenius.proinnovate.gob.pe/ "
+    path: "https://inngenius.proinnovate.gob.pe"
   phone: 
     text: ""
 
@@ -78,7 +78,7 @@ short_badges:
     alt: "Mejor centro de Coding Bootcamp"
   - name: "Course Report"
     url: ""
-    image: "../../../static/images/badges/Course-Report-Badge-2023.png"
+    image: "../../../static/images/badges/Course-Report-Badge-2024.webp"
     alt: "Top Coding Bootcamps Course Report"
   - name: "Switchup"
     url: ""
@@ -220,7 +220,7 @@ components:
       color: white
       hover_color: "white"
       background: "black"
-      path: "https://inngenius.proinnovate.gob.pe/ "
+      path: "https://inngenius.proinnovate.gob.pe"
     bullets:
       items:
         - heading: "Paso 1: Registro"

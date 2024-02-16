@@ -70,7 +70,7 @@ overlaped:
     color: "blue"  
     link: "/"
   image:
-    src: "/images/landing/tres-personas.png"  
+    src: "/images/landing/tres-personas-reloaded.webp"  
 
 ## TWO COLUMNS
 two_columns:
@@ -218,7 +218,7 @@ potential_companies:
   sub_heading: "Da un salto a tu carrera y trabaja en las mejores empresas"
   companies:
     - name: "Facebook"
-      image: "../../../static/images/partner/facebook.png"
+      image: "../../../static/images/partner/meta-logo.png"
       alt: ""
     - name: "Google"
       image: "../../../static/images/partner/google.png"

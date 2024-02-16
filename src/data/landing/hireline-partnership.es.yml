@@ -38,7 +38,7 @@ header_data:
   tagline: ¡Bienvenido a 4Geeks Academy! La academia de programación líder en el mundo
   tagline_color: "black"
   sub_heading: ""
-  badge: "../../../static/images/badges/Course-Report-Badge-2023.png"
+  badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
   #background_image: "../../../static/images/bg/main-bg.jpg"
   #video: "https://www.videoask.com/fm984j5nz"
   image_filter: brightness(0.4)
@@ -56,7 +56,7 @@ short_badges:
     alt: "Mejor centro de Coding Bootcamp"
   - name: "Course Report"
     url: ""
-    image: "../../../static/images/badges/Course-Report-Badge-2023.png"
+    image: "../../../static/images/badges/Course-Report-Badge-2024.webp"
     alt: "Top Coding Bootcamps Course Report"
   - name: "Switchup"
     url: ""
@@ -138,7 +138,7 @@ components:
     proportions: [6, 6]
     image:
       style: '{ "backgroundSize": "cover", "background-position": "top"}'
-      src: "/images/ownpeoplecoding2.jpg"
+      src: "/images/ownpeoplecoding2.webp"
       shadow: true
     heading:
       text: "En Alianza con Hireline"
@@ -165,7 +165,7 @@ components:
     background: "#e6e6e6"
     image:
       style: '{ "backgroundSize": "contain" }'
-      src: "/images/badges/Course-Report-Badge-2023.png"
+      src: "/images/badges/Course-Report-Badge-2024.webp"
       link: "https://www.coursereport.com/schools/4geeks-academy"
     heading:
       text:

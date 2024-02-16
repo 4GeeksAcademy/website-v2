@@ -21,7 +21,7 @@ meta_info:
   
   # ⬇️ cohort_include_regex field is used to filter cohorts on the calendar that only test successfully for a particular regex
   # for example: for this location, only show cohorts starting with usa-xx-spanish
-  cohort_include_regex: []
+  cohort_include_regex: ["latam"]
   cohort_exclude_regex: []
 
 seo_title: "Curso de Informática Caracas"
@@ -83,7 +83,7 @@ images_box:
       alt: "Caracas 4Geeks"
     - path: "../../../static/images/locations/caracas-loc-3.png"
       alt: "Caracas Office Jalisco"
-    - path: "../../../static/images/ownpeoplecoding2.jpg"
+    - path: "../../../static/images/ownpeoplecoding2.webp"
       alt: "4Geeks Own People Coding"
     - path: "../../../static/images/ownmancoding.jpg"
       alt: "Remote-Coding-Bootcamp"
