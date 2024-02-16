@@ -71,7 +71,7 @@ overlaped:
     color: "blue" 
     link: "/" 
   image:
-    src: "/images/landing/tres-personas.png"
+    src: "/images/landing/tres-personas-reloaded.webp"
 
 ## TWO COLUMNS
 two_columns:
@@ -210,7 +210,7 @@ potential_companies:
   sub_heading: "Get ready to apply to the best companies in the world: Develop the tools to upskill for the future of AI work."
   companies:
     - name: "Facebook"
-      image: "../../../static/images/partner/facebook.png"
+      image: "../../../static/images/partner/meta-logo.png"
       alt: ""
     - name: "Google"
       image: "../../../static/images/partner/google.png"

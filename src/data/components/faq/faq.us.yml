@@ -30,7 +30,7 @@ faq:
         answer: |-
           "Once you start the admissions process, you will receive an email from one of our student counselors. We will guide you through the whole process. Simply reply to our email and we will set up a call at your convenience. After the phone call, you will be invited to an interview online or personal. 
           If you wish you can visit our campus to get to know the team and the location. During the meeting you will be able to let us know why you want to become a developer."
-      - question: "¿Do I need to have my own laptop?"
+      - question: "Do I need to have my own laptop?"
         priority: 1
         answer: "The simple and quick answer is YES! You will need to bring your computer to class, we don't require a specific operating system because the classes and exercises are uploaded to the cloud."
       - question: "How do I pay for my tuition?"
