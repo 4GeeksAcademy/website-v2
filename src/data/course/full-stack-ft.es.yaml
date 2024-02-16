@@ -69,7 +69,7 @@ overlaped:
     color: "blue"
     link: "#prices_and_payment"  
   image:
-    src: "/images/landing/tres-personas-reloaded.webp"
+    src: "/images/landing/tres-personas.png"
 
 ## TWO COLUMNS
 two_columns:
@@ -108,12 +108,15 @@ credentials:
 details:
   about:
       title: "Acerca del programa"
-      sub_title: "En esta carrera te desarrollarás desde cero como Full Stack Developer.
-      Aprenderás a crear applicaciones web con web responsivo como las mas utilizadas hoy en dia, exactamente lo que busca un posible empleador. 
-      
-      Obtedrás una sólida base de front-end, back-end, base de datos, creacion de API's, metodologías agiles, despliegue a distintas plataformas web, etc.
+      sub_title: |
+        En esta carrera te desarrollarás desde cero como Full Stack Developer.
+        Aprenderás a crear un sitio web sumergiéndote en las mejores prácticas del
+        diseño web responsive, trabajando con diversos lenguajes. Obtedrás una       
+        sólida base de front end, back end, base de datos, manejo de procesos       
+        distribuidos y despliegue a distintas plataformas web.
 
-      Al finalizar este programa, contarás con los conocimientos para desempeñarte como Full Stack Developer. "
+        Al finalizar este programa, contarás con los conocimientos para       
+        desempeñarte como Full Stack Developer.
       list:
         - label: "Duración"
           content:  "10 semanas"

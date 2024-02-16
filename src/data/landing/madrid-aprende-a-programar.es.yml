@@ -29,8 +29,8 @@ form:
 header_data:
   tagline: ¡Aprende a Programar en 18 Semanas!
   sub_heading: " "
-  badge: "../../../static/images/badges/Course-Report-Badge-2024.png"
-  background_image: "../../../static/images/landing/4Geeks-Espana.jpg"
+  badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
+  background_image: "../../../static/images/Happy-People-Landing-4Geeks-ES.jpg"
   image_filter: brightness(0.2)
 
 features:
@@ -64,7 +64,7 @@ short_badges:
     alt: "Mejor centro de Coding Bootcamp"
   - name: "Course Report"
     url: ""
-    image: "../../../static/images/badges/Course-Report-Badge-2023.png"
+    image: "../../../static/images/badges/Course-Report-Badge-2024.webp"
     alt: "Top Coding Bootcamps Course Report"
   - name: "Switchup"
     url: ""
@@ -124,8 +124,8 @@ components:
     background: "#f1f1f1"
     image:
       style: '{ "backgroundSize": "contain" }'
-      src: "/images/badges/Course-Report-Badge-2024.png"
-      
+      src: "/images/badges/Course-Report-Badge-2024.webp"
+      link: "https://www.coursereport.com/schools/4geeks-academy"
     heading:
       text:
         "Llevamos 5 años consecutivos siendo seleccionados como uno de los mejores coding bootcamps del mundo"
