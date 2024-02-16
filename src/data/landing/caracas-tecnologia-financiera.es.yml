@@ -39,7 +39,7 @@ header_data:
   tagline: ¡Bienvenido a 4Geeks Academy!
   tagline_color: "black"
   sub_heading: ""
-  badge: "../../../static/images/badges/Course-Report-Badge-2023.png"
+  badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
   image_filter: brightness(0.3)
   # right_image: "../../../static/images/landing/header_united_way.png"
   # right_image:
@@ -64,7 +64,7 @@ short_badges:
     alt: "Mejor centro de Coding Bootcamp"
   - name: "Course Report"
     url: ""
-    image: "../../../static/images/badges/Course-Report-Badge-2023.png"
+    image: "../../../static/images/badges/Course-Report-Badge-2024.webp"
     alt: "Top Coding Bootcamps Course Report"
   - name: "Switchup"
     url: ""
@@ -177,7 +177,7 @@ components:
     background: "#fbfbfb"
     image:
       style: '{ "backgroundSize": "contain" }'
-      src: "/images/badges/Course-Report-Badge-2023.png"
+      src: "/images/badges/Course-Report-Badge-2024.webp"
       link: "https://www.coursereport.com/schools/4geeks-academy"
     heading:
       text:
@@ -190,7 +190,7 @@ components:
     proportions: [5, 7]
     image:
       style: '{ "backgroundSize": "cover", "background-position": "top"}'
-      src: "/images/ownpeoplecoding2.jpg"
+      src: "/images/ownpeoplecoding2.webp"
       shadow: true
     heading:
       text: "4Geeks Academy & Tecnología Financiera: ¡La alianza que impulsará tu vida profesional!"

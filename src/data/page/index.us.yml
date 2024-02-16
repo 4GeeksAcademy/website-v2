@@ -22,7 +22,7 @@ header_data:
   free_button_path: ""
   #If it doesn't have a video it will show the image
   #It must be a video from videoaks
-  # video: "https://www.videoask.com/fm984j5nz"
+  # video: "https://www.videoask.com/f5rg0mmi4"
   video: ""
   image: "../../../static/images/bg/more-new-main-home-bg.png"
 
