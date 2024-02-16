@@ -563,7 +563,7 @@ const LeadForm = ({
                             className="decorated"
                             href={consent.url}
                           >
-                            {yml.consent.link_label}
+                            {consent.link_label}
                           </a>
                         ) : (
                           <></>
