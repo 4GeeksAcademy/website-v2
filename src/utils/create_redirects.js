@@ -23,11 +23,11 @@ walk(`${__dirname}/../data/blog/`, async function (err, files) {
     if (!doc) fail("Invalid Markdown syntax for " + _path);
     if (!doc.lang) fail("Missing language on .md file name for " + _path);
 
-      redirects.push({
-        source: `/${doc.lang}/post/${doc.name}`,
-        destination: `/${doc.lang}/${doc.attributes.cluster}/${doc.name}`,
-        statusCode: 301,
-      });
+    redirects.push({
+      source: `/${doc.lang}/post/${doc.name}`,
+      destination: `/${doc.lang}/${doc.attributes.cluster}/${doc.name}`,
+      statusCode: 301,
+    });
   }
 
   const fileContent = JSON.stringify(redirects, null, 2);

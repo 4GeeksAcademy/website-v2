@@ -1,8 +1,8 @@
-import { NextResponse } from '@vercel/edge';
+import { NextResponse } from "@vercel/edge";
 
 export const config = {
   // Specify the matcher for the routes you want to redirect
-  matcher: '/:lang/post/:postName*',
+  matcher: "/:lang/post/:postName*",
 };
 
 const getPost = async (slug) => {
@@ -20,9 +20,9 @@ const getPost = async (slug) => {
 
 export default function middleware(request) {
   const { nextUrl } = request;
-  const [ postLang, _, postSlug] = nextUrl.pathname.split('/')[3];
+  const [postLang, _, postSlug] = nextUrl.pathname.split("/")[3];
 
-  const post = getPost()
+  const post = getPost();
 
   // Construct the destination URL
   const destinationUrl = `/us/post_topic_cluster/${postSlug}`;
