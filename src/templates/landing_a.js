@@ -89,16 +89,18 @@ const Landing = (props) => {
 
   const landingLocation =
     session &&
-    (yml.meta_info.utm_location.length > 1
+    (yml.meta_info.utm_location?.length > 1
       ? session.locations?.find(
           (l) =>
             l.breathecode_location_slug ===
             yml.meta_info.utm_location?.find(
-              (l) => l === session.location?.breathecode_location_slug
+              (loc) => loc === session.location?.breathecode_location_slug
             )
         )
       : session.locations?.find(
-          (l) => l.breathecode_location_slug === yml.meta_info.utm_location[0]
+          (l) =>
+            Array.isArray(yml.meta_info.utm_location) &&
+            l.breathecode_location_slug === yml.meta_info.utm_location[0]
         ));
 
   return (
