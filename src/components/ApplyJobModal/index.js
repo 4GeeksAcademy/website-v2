@@ -128,7 +128,6 @@ const ApplyJobModal = (props) => {
                 onClick={onClose}
                 type="button"
                 fontSize="12px"
-                borderRadius="3px"
               >
                 {form_data.apply_job.close}
               </Button>
@@ -332,7 +331,6 @@ const ApplyJobModal = (props) => {
                   type="submit"
                   fontSize="12px"
                   variant="full"
-                  borderRadius="3px"
                   color={
                     formStatus.status === "loading"
                       ? Colors.darkGray

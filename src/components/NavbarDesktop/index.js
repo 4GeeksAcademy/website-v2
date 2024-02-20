@@ -358,7 +358,6 @@ const CampusMenu = ({ status, setStatus, menu }) => {
                     ? `5px solid ${Colors.blue}`
                     : null
                 }
-                borderRadius="none"
                 padding="10px"
                 onClick={() => {
                   setActiveOpt({ ...m });
@@ -541,7 +540,6 @@ export const MegaMenu = ({ status, setStatus, menu }) => {
                                       pointer
                                       textColor={Colors.black}
                                       fontSize={"13px"}
-                                      borderRadius="3px"
                                       padding="10px"
                                     >
                                       {m.text}

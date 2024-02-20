@@ -22,7 +22,7 @@ body {
 
 #custom-bar a {
   color: #00a0da;
-  border-radius: 4px;
+  /* border-radius: 4px; */
   padding: 4px;
   background: #fffaf0;
 }
