@@ -558,7 +558,7 @@ Button.defaultProps = {
   width: "fit-content",
   type: "button",
   colorHover: null,
-  borderRadius: "3px",
+  borderRadius: "0px",
   outline: false,
   onClick: null,
   display: "flex",
