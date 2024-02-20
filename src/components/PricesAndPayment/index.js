@@ -753,7 +753,6 @@ const PricesAndPayments = (props) => {
             fontSize="25px"
             display="block"
             textAlign="center"
-            fontFamily="Lato,sans-serif"
             dangerouslySetInnerHTML={{
               __html: jobGuarantee
                 ? info.not_available_job_guarantee
