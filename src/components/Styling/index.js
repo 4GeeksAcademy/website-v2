@@ -423,7 +423,6 @@ const getVariant = (props) => ({
     border: `1px solid ${props.color}`,
     background: props.background || "initial",
     color: props.color,
-    borderRadius: "3px",
   },
   full: {
     border: "none",
@@ -558,7 +557,7 @@ Button.defaultProps = {
   width: "fit-content",
   type: "button",
   colorHover: null,
-  borderRadius: "3px",
+  borderRadius: "0px",
   outline: false,
   onClick: null,
   display: "flex",

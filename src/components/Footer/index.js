@@ -231,7 +231,6 @@ const Footer = ({ yml }) => {
                     type="submit"
                     fontSize="22px"
                     variant="full"
-                    borderRadius="3px"
                     color={
                       formStatus.status === "loading"
                         ? Colors.darkGray

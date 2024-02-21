@@ -320,7 +320,6 @@ const CampusMenu = ({ status, setStatus, menu }) => {
                     ? `5px solid ${Colors.blue}`
                     : null
                 }
-                borderRadius="none"
                 padding="10px"
                 display="inline-block"
                 onClick={() => {
