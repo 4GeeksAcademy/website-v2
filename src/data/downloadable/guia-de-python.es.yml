@@ -124,9 +124,9 @@ components:
       text: "La guía de Python es solo un breve contenido de todo lo que nuestro Bootcamp de programación tiene para ofrecer, aquí te explicamos brevemente algunas de las opciones que tienes disponible  y ya sea que aspires a convertirte en un Fullstack developer o analista de datos, 4Geeks está listo para llevarte de la mano para que puedas convertirte en un profesional de la programación."
       font_size: ["16px"]
     button:
-      text: "Más información"
-      path: "/es/aplica"
-
+      text: "Descargar guía"
+      path: "#leadform_header"
+      
   - name: python_guide
     position: 3
     layout: two_column_left
