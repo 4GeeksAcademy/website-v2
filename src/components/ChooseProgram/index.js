@@ -127,7 +127,6 @@ const ChooseProgram = (props) => {
                     }}
                     textColor={Colors.gray}
                     fontSize={"16px"}
-                    borderRadius="3px"
                     padding="10px"
                   >
                     {item.text}
