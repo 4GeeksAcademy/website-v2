@@ -160,6 +160,7 @@ const Financial = (props) => {
         title={yml.prices.heading}
         paragraph={yml.prices.sub_heading}
         chooseProgram // Allow choosing the program (used in financial.js)
+        financial
       />
 
       <TwoColumn
