@@ -18,6 +18,7 @@ form:
   # always the first_name, email and phone will be mandatory if added.
   fields: ["full_name", "phone", "email"]
   heading: "Descargar Guía" 
+  motivation: "En minutos, después de completar el formulario, recibirás la guía completa en tu correo electrónico. Con ella, tendrás acceso a todo lo que necesitas para empezar a programar en Python."
   button_label: Descargar Gratis
   redirect: null #you can redirect to another url or entirely diffrent website
 # jumbotron on the top (cannot be commented out)
@@ -126,7 +127,7 @@ components:
     button:
       text: "Descargar guía"
       path: "#leadform_header"
-      
+
   - name: python_guide
     position: 3
     layout: two_column_left
