@@ -37,7 +37,7 @@ header_data:
   background: "#FFF1D1"
   tagline: Conviértete en Full-Stack Developer en 18 semanas
   sub_heading: "El 86% de nuestros alumnos ya han empezado su carrera en el sector tech con un salario medio de 22.000€ al año. Desarrolla proyectos reales y recibe mentorías de programadores senior."
-  badge: "../../../static/images/badges/Course-Report-Badge-2023.png"
+  badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
   image_filter: brightness(0.3)
 
 features:
@@ -57,7 +57,7 @@ short_badges:
     alt: "Mejor centro de Coding Bootcamp"
   - name: "Course Report"
     url: ""
-    image: "../../../static/images/badges/Course-Report-Badge-2023.png"
+    image: "../../../static/images/badges/Course-Report-Badge-2024.webp"
     alt: "Top Coding Bootcamps Course Report"
   - name: "Switchup"
     url: ""
@@ -91,7 +91,7 @@ who_is_hiring:
   sub_heading: "Más de 500 partners, más de 150 vacantes abiertas como Full-Stack Developer en nuestra bolsa de empleo "
   featured:
     - name: "Facebook"
-      image: "../../../static/images/partner/facebook.png"
+      image: "../../../static/images/partner/meta-logo.png"
     - name: "Microsoft"
       image: "../../../static/images/partner/microsoft.png"
     - name: "Apple"
@@ -194,7 +194,7 @@ components:
     proportions: [4, 8]
     image:
       style: '{ "backgroundSize": "contain" }'
-      src: "/images/badges/Course-Report-Badge-2023.png"
+      src: "/images/badges/Course-Report-Badge-2024.webp"
       link: "https://www.coursereport.com/schools/4geeks-academy"
     heading:
       text:

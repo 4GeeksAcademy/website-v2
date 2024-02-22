@@ -42,7 +42,7 @@ header_data:
   tagline: Aprende a utilizar inteligencia artificial en tu dia a dia y potencia tus resultados
   tagline_color: "#FFFFFF"
   sub_heading: "Aprende a sacar provecho a las herramientas actuales y optimiza tus resultados en tiempo record"
-  badge: "../../../static/images/badges/Course-Report-Badge-2023.png"
+  badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
   background_image: "../../../static/images/Happy-People-Landing-4Geeks-ES.jpg"
   image_filter: brightness(0.1)
 
@@ -76,7 +76,7 @@ short_badges:
     alt: "Mejor centro de Coding Bootcamp"
   - name: "Course Report"
     url: ""
-    image: "../../../static/images/badges/Course-Report-Badge-2023.png"
+    image: "../../../static/images/badges/Course-Report-Badge-2024.webp"
     alt: "Top Coding Bootcamps Course Report"
   - name: "Switchup"
     url: ""
