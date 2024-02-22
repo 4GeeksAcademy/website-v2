@@ -21,7 +21,7 @@ header:
   sub_header: "Todos los programas son enseñados "
   sub_header_highlighted: "Online"
   paragraph: ""
-  image: "../../../static/images/locations/houston-home.png"
+  image: "../../../static/images/locations/austin-location.webp"
   alt: "4Geeks Academy modalidad online en Austin, Texas"
 button_header:
   button_text: Ver Programas

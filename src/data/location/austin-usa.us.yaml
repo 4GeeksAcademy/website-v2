@@ -21,7 +21,7 @@ header:
   sub_header: "All programs are taught "
   sub_header_highlighted: "Online"
   paragraph: ""
-  image: "../../../static/images/locations/houston-home.png"
+  image: "../../../static/images/locations/austin-location.webp"
   alt: "4Geeks Academy live coding bootcamp in Austin, Texas"
 
 badges:
