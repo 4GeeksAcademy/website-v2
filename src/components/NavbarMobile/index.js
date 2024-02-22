@@ -70,6 +70,7 @@ const Nav = styled.nav`
   align-items: center;
   justify-content: space-between;
   padding: 15px;
+  margin: ${(props) => props.margin};
   @media ${Devices.xxs} {
   }
   @media ${Devices.xs} {
@@ -251,6 +252,7 @@ export const NavbarMobile = ({
         position="static"
         top="0"
         height="60px"
+        margin="1px 0"
       >
         <Div alignItems="center">
           <BurgerIcon
