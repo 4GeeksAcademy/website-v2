@@ -44,7 +44,7 @@ two_column_left:
       color: "white"
       background: "black"
       hover_color: "white"
-      path: "/es/aplica"
+      path: "#top"
 
 we_trust_section:
   title: ¿Por qué deberías confiar en nosotros?
