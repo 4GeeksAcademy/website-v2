@@ -95,7 +95,6 @@ const About4Geeks = ({ id, lang }) => {
                 pointer
                 textColor={Colors.white}
                 fontSize={"13px"}
-                borderRadius="3px"
               >
                 {about.button_text}
               </Button>

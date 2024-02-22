@@ -295,7 +295,6 @@ const ChooseYourProgram = ({
                           pointer
                           textColor={Colors.black}
                           fontSize={"13px"}
-                          borderRadius="3px"
                           //margin_xs="5px 0 0 0"
                           padding="10px"
                           position="absolute"

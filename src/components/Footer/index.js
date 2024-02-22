@@ -78,7 +78,7 @@ const Footer = ({ yml }) => {
           gridArea_tablet="1/1/2/3"
         >
           <RoundImage
-            url="/images/4geeksacademy-logo.png"
+            url="/images/4Geeks-new-logo.png"
             height="43px"
             width="143px"
             backgroundColor="transparent"
@@ -231,7 +231,6 @@ const Footer = ({ yml }) => {
                     type="submit"
                     fontSize="22px"
                     variant="full"
-                    borderRadius="3px"
                     color={
                       formStatus.status === "loading"
                         ? Colors.darkGray

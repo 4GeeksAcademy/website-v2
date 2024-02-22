@@ -20,7 +20,7 @@ header_data:
   free_button_text: PRUEBA GRATIS
   #If it doesn't have a video it will show the image
   #It must be a video from videoaks
-  video: ""
+  video: "https://ask.4geeks.com/f67qc0ewu"
   image: "../../../static/images/bg/more-new-main-home-bg.png"
 
 why_4geeks:
