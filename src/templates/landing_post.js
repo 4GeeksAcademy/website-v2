@@ -244,7 +244,6 @@ export default function Template(props) {
                       width="100%"
                       fontSize="12px"
                       background={Colors.blue}
-                      borderRadius=".25rem"
                       padding="5px"
                       // flexDirection
                       justifyContent="center"

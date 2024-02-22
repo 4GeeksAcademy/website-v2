@@ -17,8 +17,8 @@ job_guarantee:
 apply_button: 
   label: APPLY NOW
   link: /us/apply
-not_available: '<p>No payment information has been found for this location and program.</p> Please apply for more information or <a class="faq-link" href="/us/contact" rel="noopener noreferrer nofollow">send us a message.</a>'
-not_available_job_guarantee: '<p>We have no plans available with the modality Job Guarantee on this program at this location.</p> Please apply for more information or <a class="faq-link" href="/us/contact" rel="noopener noreferrer nofollow">send us a message.</a>'
+not_available: '<style type="text/css">p { font-family: "Lato",sans-serif; }</style> <p>No payment information has been found for this location and program.</p> <p>Please apply for more information or <a class="faq-link" href="/us/contact" rel="noopener noreferrer nofollow">send us a message.</a></p>'
+not_available_job_guarantee: '<style type="text/css">p { font-family: "Lato",sans-serif; }</style> <p>We have no plans available with the modality Job Guarantee on this program at this location.</p> <p>Please apply for more information or <a class="faq-link" href="/us/contact" rel="noopener noreferrer nofollow">send us a message.</a></p>'
 chart_section:
   title: '4Geeks: Breaking Down Barriers to Education'
   data:
