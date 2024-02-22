@@ -115,7 +115,6 @@ const Iconogram = ({ session, data, pageContext, yml, index }) => {
       {button && (
         <Button
           outline
-          borderRadius="0"
           colorHoverText={button.hover_color || Colors.blue}
           background={Colors[button.background] || button.background}
           lineHeight="26px"
