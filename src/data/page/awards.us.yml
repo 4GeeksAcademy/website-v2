@@ -9,8 +9,8 @@ meta_info:
 
 seo_title: "Awards"
 header:
-  title: "AWARD WINNING BOOTCAMP"
-  paragraph: "It's fantastic to have been recognized for years of effort into making one of the best coding communities and learning ecosystems in the world."
+  title: "Awards and Recognitions"
+  paragraph: "It's fantastic to be recognized for years of effort in creating one of the best coding communities and learning ecosystems worldwide."
   image: "../../../static/images/awards/awards.png"
 
 awards_list:
