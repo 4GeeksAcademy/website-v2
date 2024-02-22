@@ -165,5 +165,5 @@ components:
         background: "black"
         hover: "lightBlue"
       videoHeight: "360px"
-      videoWidth: "202px"
+      videoWidth: "245px"
     

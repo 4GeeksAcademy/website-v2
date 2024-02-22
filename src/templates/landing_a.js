@@ -524,6 +524,8 @@ export const query = graphql`
             proportions
             layout
             video
+            height
+            width
             videoHeight
             videoWidth
             filter_indexes

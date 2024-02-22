@@ -360,7 +360,6 @@ const Side = ({
 
 const TwoColumn = ({ left, right, proportions, session }) => {
   const [left_size, right_size] = proportions ? proportions : [];
-  console.log(right);
   return (
     <Div
       flexDirection="column"

@@ -882,7 +882,6 @@ export const landingSections = {
       yml.section_heading && yml.section_heading.font_size
         ? yml.section_heading.font_size
         : [];
-    console.log("this is the yml", yml);
     return (
       <Div
         id="two_column_right"
