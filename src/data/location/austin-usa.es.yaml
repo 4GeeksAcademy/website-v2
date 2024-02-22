@@ -72,12 +72,16 @@ images_box:
   content: |
     La ciudad ha presenciado un crecimiento sustancial de la demanda de conocimientos en programación, a medida que la tecnología se integra cada vez más en diversos sectores. Los bootcamps de programación han surgido como contribuyentes clave a esta tendencia, ofreciendo programas de capacitación accesibles y integrales que permiten que las personas aprendan programación y participen activamente en la creciente comunidad tecnológica de Austin.
   images:
-    - path: "../../../static/images/locations/houston-new.png"
+    - path: "../../../static/images/locations/location-austin1-1.webp"
       alt: "Austin city"
     - path: "../../../static/images/ownpeoplecoding2.webp"
       alt: "4Geeks Own People Coding"
+    - path: "../../../static/images/locations/location-austin3.webp"
+      alt: "Austin city"
     - path: "../../../static/images/ownmancoding.jpg"
       alt: "Remote-Coding-Bootcamp"
+    - path: "../../../static/images/locations/location-austin1.webp"
+      alt: "Austin city"
     - path: "../../../static/images/locations/miami-old.jpg"
       alt: "4Geeeks location"
     - path: "../../../static/images/locations/miami-people.jpeg"
