@@ -381,7 +381,7 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
         />
       </Container>
 
-      <Container padding="0" padding_tablet="0 90px">
+      <Container padding="0" padding_tablet="0 90px" padding_lg="0">
         <WeTrust we_trust={yml.we_trust_section} />
       </Container>
 
