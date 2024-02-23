@@ -504,11 +504,13 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
           </Paragraph>
         )}
       </Container>
+
       <Div
         background={Colors.lightGray}
         padding="30px"
         padding_tablet="80px 130px"
-        padding_lg="80px 130px"
+        padding_lg="80px 0px"
+        margin_lg="auto"
         gap="10px"
         display="block"
         display_tablet="flex"
@@ -520,6 +522,7 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
           justifyContent_md="between"
           width_tablet="300px"
           width_md="395px"
+          width_lg="450px"
           gap="10px"
           margin="0 0 15px 0"
           margin_tablet="0"
@@ -546,6 +549,7 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
           width_md="fit-content"
           minWidth_md="400px"
           maxWidth_md="900px"
+          maxWidth_lg="906px"
         >
           <Slider {...settings} ref={sliderRef}>
             {testimonials.map((testimonial) => {
@@ -652,36 +656,38 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
         height="5px"
         margin="40px 0"
       />
-      <GridContainer
-        columns_tablet="12"
-        padding="0 17px 40px 17px"
-        padding_tablet="0"
-        margin_tablet="0 0 81px 0"
-      >
-        <Div gridColumn_tablet="1 / 7" flexDirection="column">
-          <H2 textAlign_md="left" margin="0 0 30px 0">
-            {yml.form.title}
-          </H2>
-          {yml.form.paragraph.split("\n").map((m, i) => (
-            <Paragraph
-              key={i}
-              margin="7px 0"
-              textAlign_md="left"
-              dangerouslySetInnerHTML={{ __html: m }}
+      <Container>
+        <GridContainer
+          columns_tablet="12"
+          padding="0 17px 40px 17px"
+          padding_tablet="0"
+          margin_tablet="0 0 81px 0"
+        >
+          <Div gridColumn_tablet="1 / 7" flexDirection="column">
+            <H2 textAlign_md="left" margin="0 0 30px 0">
+              {yml.form.title}
+            </H2>
+            {yml.form.paragraph.split("\n").map((m, i) => (
+              <Paragraph
+                key={i}
+                margin="7px 0"
+                textAlign_md="left"
+                dangerouslySetInnerHTML={{ __html: m }}
+              />
+            ))}
+          </Div>
+          <Div flexDirection="column" gridColumn_tablet="7 / 13">
+            <LeadForm
+              formHandler={beHiringPartner}
+              // handleClose={handleClose}
+              enableAreaCodes={false}
+              lang={pageContext.lang}
+              inputBgColor={Colors.white}
+              fields={["full_name", "email", "phone"]}
             />
-          ))}
-        </Div>
-        <Div flexDirection="column" gridColumn_tablet="7 / 13">
-          <LeadForm
-            formHandler={beHiringPartner}
-            // handleClose={handleClose}
-            enableAreaCodes={false}
-            lang={pageContext.lang}
-            inputBgColor={Colors.white}
-            fields={["full_name", "email", "phone"]}
-          />
-        </Div>
-      </GridContainer>
+          </Div>
+        </GridContainer>
+      </Container>
     </>
   );
 };
