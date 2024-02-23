@@ -7,7 +7,7 @@ import {
   beHiringPartner,
 } from "../actions";
 import BaseRender from "./_baseLayout";
-import { Div, HR, GridContainer } from "../components/Sections";
+import { Container, Div, HR, GridContainer } from "../components/Sections";
 import { H2, H3, H4, Paragraph } from "../components/Heading";
 import {
   Anchor,
@@ -90,6 +90,7 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
         margin={isCustomBarActive(session) ? "40px 0 0 0" : "0"}
         padding="90px 30px 0 30px"
         padding_tablet="120px 130px 72px 130px"
+        padding_lg="120px 0 72px 0"
         position="relative"
         display="block"
       >
@@ -261,7 +262,7 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
           display="inline"
           display_tablet="none"
         />
-        <Div display="block">
+        <Container display="block">
           <H2
             type="h2"
             textAlign="center"
@@ -355,16 +356,16 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
               }}
             />
           </Modal>
-        </Div>
+        </Container>
       </Div>
-      <Div
+      <Container
         id="two_column_left"
         flexDirection="column"
         margin="0"
         padding="0 10px"
         padding_tablet="0 90px"
         padding_md="0 50px"
-        padding_lg="0 130px"
+        padding_lg="0"
       >
         <TwoColumn
           right={{ image: ymlTwoColumn.image }}
@@ -378,22 +379,23 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
           proportions={ymlTwoColumn.proportions}
           session={session}
         />
-      </Div>
+      </Container>
 
-      <Div padding="0 10px" padding_tablet="0 90px" padding_lg="0 130px">
+      <Container padding="0" padding_tablet="0 90px">
         <WeTrust we_trust={yml.we_trust_section} />
-      </Div>
+      </Container>
 
-      <Div
+      <Container
         display="block"
-        maxWidth="1695px"
         margin="40px 0"
+        margin_md="40px 0"
+        margin_lg="40px 0"
         padding="0 10px"
         padding_tablet="0 90px"
         padding_md="0 130px"
         padding_lg="0 30px"
       >
-        <Div display="block" margin="0 auto 40px 0" padding="0 20px">
+        <Div display="block" margin="0px auto 40px 0" padding="0 20px">
           <H2 margin="0 0 15px 0">{yml.how_it_works.title}</H2>
           <Paragraph color="#000" opacity="1" fontSize="18px">
             {yml.how_it_works.text}
@@ -401,6 +403,7 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
         </Div>
         <Div
           margin="auto"
+          margin_lg="auto"
           width="300px"
           width_tablet="fit-content"
           width_md="auto"
@@ -501,7 +504,7 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
             </Anchor>
           </Paragraph>
         )}
-      </Div>
+      </Container>
       <Div
         background={Colors.lightGray}
         padding="30px"

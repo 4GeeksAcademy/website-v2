@@ -20,7 +20,7 @@ const WeTrust = ({ we_trust }) => {
       width="100%"
     >
       <Div
-        padding="50px 20px"
+        padding="50px 30px"
         padding_md="40px 80px"
         padding_lg="40px"
         padding_tablet="40px 40px"
