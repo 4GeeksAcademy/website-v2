@@ -387,13 +387,11 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
 
       <Container
         display="block"
-        margin="40px 0"
-        margin_md="40px 0"
-        margin_lg="40px 0"
-        padding="0 10px"
-        padding_tablet="0 90px"
-        padding_md="0 130px"
-        padding_lg="0 30px"
+        margin="40px auto"
+        padding="40px 10px"
+        padding_tablet="40px 90px"
+        padding_md="40px 130px"
+        padding_lg="40px 0"
       >
         <Div display="block" margin="0px auto 40px 0" padding="0 20px">
           <H2 margin="0 0 15px 0">{yml.how_it_works.title}</H2>
@@ -411,6 +409,7 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
           gap_md="40px"
           flexDirection="column"
           flexDirection_tablet="row"
+          justifyContent="center"
         >
           {yml.how_it_works.steps.map((step, i) => (
             <Div
