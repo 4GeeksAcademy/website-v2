@@ -41,8 +41,6 @@ export default ({ children }) => {
               active
               message
               error_message
-              link_label
-              url
             }
             online_available
             meta_info {

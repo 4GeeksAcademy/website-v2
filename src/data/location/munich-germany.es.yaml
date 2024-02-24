@@ -115,11 +115,9 @@ consents:
   - slug: "gdpr_consent"
     name: "GDPR Consent"
     active: true
-    message: "Al completar este formulario acepto que mi información será utilizada para enviarme información comercial sobre 4Geeks Academy y que podria resultar una relación comercial a partir de esto."
+    message: 'Al completar este formulario acepto que mi información será utilizada para enviarme información comercial sobre 4Geeks Academy y que podria resultar una relación comercial a partir de esto. Revisa nuestra <a style={{ marginLeft: "5px" }} target="_blank" rel="noopener noreferrer nofollow" className="decorated" href="/es/privacidad">Política de Privacidad</a>'
     error_message: "Debes aceptar el consent de GDPR"
-    link_label: "Política de Privacidad"
-    url: "/es/privacidad"
-
+    
 city: "Munich"
 name: "Munich, Alemania"
 latitude: "48.145100"
