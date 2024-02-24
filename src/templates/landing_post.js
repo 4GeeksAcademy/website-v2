@@ -10,7 +10,7 @@ import ScrollSpy from "../components/ScrollSpy";
 import { SessionContext } from "../session";
 
 //FROM components
-import { GridContainer, Div, Header } from "../components/Sections";
+import { GridContainer, Div, Header, Container } from "../components/Sections";
 
 export default function Template(props) {
   const { data, pageContext } = props;
@@ -104,10 +104,10 @@ export default function Template(props) {
       >
         <Header
           hideArrowKey
-          padding="90px 10px 70px 10px"
-          padding_tablet="90px 8% 70px 4%"
-          padding_md="90px 11% 70px 11%"
-          padding_lg="90px 8% 70px 4%"
+          padding="90px 0 70px 0"
+          padding_tablet="90px 0 70px 0"
+          // padding_md="90px 0 70px 0"
+          // padding_lg="90px 8% 70px 4%"
           paddingParagraph="0 0 0 12px"
           paddingTitle="0 0 0 12px"
           textAlign_tablet="left"
@@ -172,97 +172,99 @@ export default function Template(props) {
             })}
           </ScrollSpy>
         </Div>
-
-        {/* Container */}
-        <Div
-          padding="0 10px"
-          padding_tablet="0 8% 0 4%"
-          padding_md="0 11%"
-          padding_lg="0 8% 0 4%"
-          gap="6%"
-        >
+        <Container padding="0">
+          {/* Container */}
           <Div
-            size="12"
-            size_tablet="8"
-            padding="0 12px"
-            flexDirection="column"
-            margin="30px 0 0 0"
-            background={Colors.white}
+            // padding="0 10px"
+            // padding_tablet="0 8% 0 4%"
+            // padding_md="0 11%"
+            // padding_lg="0 8% 0 4%"
+            gap="6%"
+            width="100%"
           >
-            <Div className="single-post" flexDirection="Column">
-              {sanitizedData}
-            </Div>
-          </Div>
-
-          {filteredH2.length >= 1 && (
-            <>
-              <Div
-                display="none"
-                size_tablet="4"
-                display_tablet="flex"
-                margin="54px 0 0 0"
-                style={{ position: "relative" }}
-              >
-                <Div
-                  style={{
-                    boxShadow: "0px 2px 5px rgba(0, 0, 0, 0.1)",
-                    top: `${isCustombarActive ? "150px" : "85px"}`,
-                  }}
-                  className="container-sidebar-content"
-                  padding="25px 0"
-                  margin="0 0 35px 0"
-                  justifyContent="space-around"
-                  gap="8px"
-                  flexDirection="column"
-                  position="sticky"
-                  borderRadius="3px"
-                  border={`1px solid #e5e5e5`}
-                  width="250px"
-                  height="fit-content"
-                >
-                  <ScrollSpy offsetTop={60} autoScrollOffsetTop={-50}>
-                    {filteredH2.map((heading, i) => {
-                      const { id, children } = heading.props;
-                      return (
-                        <button ref={React.createRef()} href={`#${id}`}>
-                          <Paragraph
-                            className="sidebar-content"
-                            letterSpacing="0.05em"
-                            key={id}
-                            fontSize="14px"
-                            textAlign="center"
-                            textAlign_tablet="left"
-                          >
-                            {children[1].props?.children?.toString() ||
-                              children[1].toString()}
-                          </Paragraph>
-                        </button>
-                      );
-                    })}
-                  </ScrollSpy>
-                  <Link
-                    style={{ color: Colors.white, margin: "0 30px" }}
-                    to={lang === "us" ? "/us/apply" : "/es/aplica"}
-                  >
-                    <Button
-                      width="100%"
-                      fontSize="12px"
-                      background={Colors.blue}
-                      borderRadius=".25rem"
-                      padding="5px"
-                      // flexDirection
-                      justifyContent="center"
-                      margin="14px 0 4px 0"
-                      color="#FFFFFF !important"
-                    >
-                      {lang === "us" ? "APPLY NOW" : "APLICA AHORA"}
-                    </Button>
-                  </Link>
-                </Div>
+            <Div
+              size="12"
+              size_tablet="8"
+              padding="0 12px"
+              flexDirection="column"
+              margin="30px 0 0 0"
+              background={Colors.white}
+            >
+              <Div className="single-post" flexDirection="Column">
+                {sanitizedData}
               </Div>
-            </>
-          )}
-        </Div>
+            </Div>
+
+            {filteredH2.length >= 1 && (
+              <>
+                <Div
+                  display="none"
+                  size_tablet="4"
+                  display_tablet="flex"
+                  margin="54px 0 0 0"
+                  style={{ position: "relative" }}
+                >
+                  <Div
+                    style={{
+                      boxShadow: "0px 2px 5px rgba(0, 0, 0, 0.1)",
+                      top: `${isCustombarActive ? "150px" : "85px"}`,
+                    }}
+                    className="container-sidebar-content"
+                    padding="25px 0"
+                    margin="0 0 35px 0"
+                    justifyContent="space-around"
+                    gap="8px"
+                    flexDirection="column"
+                    position="sticky"
+                    borderRadius="3px"
+                    border={`1px solid #e5e5e5`}
+                    width="250px"
+                    height="fit-content"
+                  >
+                    <ScrollSpy offsetTop={60} autoScrollOffsetTop={-50}>
+                      {filteredH2.map((heading, i) => {
+                        const { id, children } = heading.props;
+                        return (
+                          <button ref={React.createRef()} href={`#${id}`}>
+                            <Paragraph
+                              className="sidebar-content"
+                              letterSpacing="0.05em"
+                              key={id}
+                              fontSize="14px"
+                              textAlign="center"
+                              textAlign_tablet="left"
+                            >
+                              {children[1].props?.children?.toString() ||
+                                children[1].toString()}
+                            </Paragraph>
+                          </button>
+                        );
+                      })}
+                    </ScrollSpy>
+                    <Link
+                      style={{ color: Colors.white, margin: "0 30px" }}
+                      to={lang === "us" ? "/us/apply" : "/es/aplica"}
+                    >
+                      <Button
+                        width="100%"
+                        fontSize="12px"
+                        background={Colors.blue}
+                        borderRadius=".25rem"
+                        padding="5px"
+                        // flexDirection
+                        justifyContent="center"
+                        margin="14px 0 4px 0"
+                        color="#FFFFFF !important"
+                      >
+                        {lang === "us" ? "APPLY NOW" : "APLICA AHORA"}
+                      </Button>
+                    </Link>
+                  </Div>
+                </Div>
+              </>
+            )}
+          </Div>
+        </Container>
       </Layout>
     </>
   );
