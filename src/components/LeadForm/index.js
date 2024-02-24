@@ -200,11 +200,6 @@ const LeadForm = ({
             fields {
               lang
             }
-            consent {
-              message
-              link_label
-              url
-            }
           }
         }
       }

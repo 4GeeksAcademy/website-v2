@@ -774,11 +774,6 @@ export const query = graphql`
           fields {
             lang
           }
-          consent {
-            message
-            link_label
-            url
-          }
         }
       }
     }
