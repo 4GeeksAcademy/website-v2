@@ -620,7 +620,9 @@ export const Header = ({
             textAlign_tablet={textAlign_tablet}
             padding="0 20px"
             padding_tablet={
-              paddingTitle ? paddingTitle : paddingTitle_tablet || "0 20px"
+              paddingTitle_tablet
+                ? paddingTitle_tablet
+                : paddingTitle || "0 20px"
             }
             fontSize={fontSize_title || "40px"}
             fontSize_tablet={fontSizeTitle_tablet || "50px"}
@@ -639,7 +641,9 @@ export const Header = ({
             width="auto"
             letterSpacing="0.05em"
             padding_tablet={
-              paddingParagraph ? paddingParagraph : paddingParagraph_tablet || 0
+              paddingParagraph_tablet
+                ? paddingParagraph_tablet
+                : paddingParagraph || 0
             }
             textAlign_tablet={textAlign_tablet}
             margin={paragraphMargin || "26px 0"}
