@@ -45,7 +45,7 @@ header_data:
   tagline_color: white
   sub_heading: Conviértete en Full-Stack Developer o Data Scientist. Disfruta de beneficios que no encontrarás en ningún otro lugar.
   partner_logo_url: "../../../static/images/partner/Cobee.png"
-  badge: "../../../static/images/badges/Course-Report-Badge-2023.png"
+  badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
   background_image: "../../../static/images/PeopleStudying.jpeg"
   image_filter: brightness(0.3)
 
@@ -66,7 +66,7 @@ short_badges:
     alt: "Mejor centro de Coding Bootcamp"
   - name: "Course Report"
     url: ""
-    image: "../../../static/images/badges/Course-Report-Badge-2023.png"
+    image: "../../../static/images/badges/Course-Report-Badge-2024.webp"
     alt: "Top Coding Bootcamps Course Report"
   - name: "Switchup"
     url: ""
@@ -186,7 +186,7 @@ components:
     proportions: [4, 8]
     image:
       style: '{ "backgroundSize": "contain" }'
-      src: "/images/badges/Course-Report-Badge-2023.png"
+      src: "/images/badges/Course-Report-Badge-2024.webp"
       link: "https://www.coursereport.com/schools/4geeks-academy"
     heading:
       text:

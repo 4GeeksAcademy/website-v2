@@ -36,7 +36,7 @@ header_data:
   tagline: Become a Software Developer and Boost your Career in Tech
   sub_heading: "Get a Career in Tech."
   background: "#FFF1D1"
-  badge: "../../../static/images/badges/Course-Report-Badge-2023.png"
+  badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
   image_filter: brightness(0.3)
 
 features:
@@ -70,7 +70,7 @@ short_badges:
     alt: "Mejor centro de Coding Bootcamp"
   - name: "Course Report"
     url: ""
-    image: "../../../static/images/badges/Course-Report-Badge-2023.png"
+    image: "../../../static/images/badges/Course-Report-Badge-2024.webp"
     alt: "Top Coding Bootcamps Course Report"
   - name: "Switchup"
     url: ""
@@ -169,7 +169,7 @@ components:
     proportions: [4, 8]
     image:
       style: '{ "backgroundSize": "contain", "maxWidth": "250px", "margin": "0 auto"}'
-      src: "/images/badges/Course-Report-Badge-2023.png"
+      src: "/images/badges/Course-Report-Badge-2024.webp"
       link: "https://www.coursereport.com/schools/4geeks-academy"
     content:
       style: '{ "line-height": "30px", "textAling": "center", "padding": "0 20px"}'

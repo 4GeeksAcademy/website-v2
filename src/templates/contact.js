@@ -355,7 +355,6 @@ const Contact = (props) => {
                       }
                       margin="23px 0px 0px 0px"
                       padding="12px 24px"
-                      borderRadius="3px"
                       disabled={formStatus.status === "loading" ? true : false}
                       type="submit"
                     >

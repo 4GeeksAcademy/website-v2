@@ -237,7 +237,7 @@ components:
     background: "#FFFFFF"
     image:
       style: "{}"
-      src: "/images/ownpeoplecoding2.jpg"
+      src: "/images/ownpeoplecoding2.webp"
       shadow: true
     heading: 
       text: "¿Por qué 4Geeks Academy?"
