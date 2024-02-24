@@ -144,7 +144,7 @@ export const Navbar = ({
 
   const data = useStaticQuery(graphql`
     query {
-      file(relativePath: { eq: "images/4geeksacademy-logo.png" }) {
+      file(relativePath: { eq: "images/4Geeks-new-logo.png" }) {
         childImageSharp {
           gatsbyImageData(
             layout: FULL_WIDTH # --> CONSTRAINED || FIXED || FULL_WIDTH
@@ -242,8 +242,8 @@ export const Navbar = ({
             // fixed={data.file.childImageSharp.fixed}
             alt="4Geeks Logo"
             style={{
-              height: "38px",
-              width: "141px",
+              height: "auto",
+              width: "132px",
             }}
           />
         </Link>
@@ -357,7 +357,6 @@ const CampusMenu = ({ status, setStatus, menu }) => {
                     ? `5px solid ${Colors.blue}`
                     : null
                 }
-                borderRadius="none"
                 padding="10px"
                 onClick={() => {
                   setActiveOpt({ ...m });
@@ -540,7 +539,6 @@ export const MegaMenu = ({ status, setStatus, menu }) => {
                                       pointer
                                       textColor={Colors.black}
                                       fontSize={"13px"}
-                                      borderRadius="3px"
                                       padding="10px"
                                     >
                                       {m.text}

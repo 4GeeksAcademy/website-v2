@@ -613,7 +613,6 @@ const UpcomingDates = ({
                         width="100%"
                         fontSize="14px"
                         variant="full"
-                        borderRadius="3px"
                         color={
                           formStatus.status === "loading"
                             ? Colors.darkGray
