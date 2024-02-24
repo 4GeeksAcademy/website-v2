@@ -54,6 +54,7 @@ const Apply = (props) => {
     referral_key: { value: null, valid: true },
     course: { value: null, valid: false },
   });
+  const [consentValue, setConsentValue] = useState([]);
 
   const programs = data.allCourseYaml.edges
     .filter(
@@ -635,22 +636,10 @@ const Apply = (props) => {
                         fontSize="11px"
                         margin="5px 0 0 5px"
                         textAlign="left"
-                      >
-                        {consent.message}
-                        {consent.url ? (
-                          <a
-                            style={{ marginLeft: "5px" }}
-                            target="_blank"
-                            rel="noopener noreferrer nofollow"
-                            className="decorated"
-                            href={consent.url}
-                          >
-                            {yml.consent.link_label}
-                          </a>
-                        ) : (
-                          <></>
-                        )}
-                      </Paragraph>
+                        dangerouslySetInnerHTML={{
+                          __html: consent.message,
+                        }}
+                      ></Paragraph>
                     </Div>
                   );
               })}
