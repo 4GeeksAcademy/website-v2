@@ -104,10 +104,8 @@ export default function Template(props) {
       >
         <Header
           hideArrowKey
-          padding="90px 0 70px 0"
-          padding_tablet="90px 0 70px 0"
-          // padding_md="90px 0 70px 0"
-          // padding_lg="90px 8% 70px 4%"
+          padding={isCustombarActive ? "90px 0 70px 0" : undefined}
+          // padding_tablet="90px 0 70px 0"
           paddingParagraph="0 0 0 12px"
           paddingTitle="0 0 0 12px"
           textAlign_tablet="left"
