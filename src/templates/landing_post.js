@@ -82,7 +82,6 @@ export default function Template(props) {
 
     Array.from(anchors).forEach((anchor) => {
       const linkRegex = new RegExp("(http)");
-      // console.log(anchor.href);
       if (
         linkRegex.test(anchor.href) &&
         !anchor.href.includes("4geeks.com") &&
@@ -105,7 +104,6 @@ export default function Template(props) {
         <Header
           hideArrowKey
           padding={isCustombarActive ? "90px 0 70px 0" : undefined}
-          // padding_tablet="90px 0 70px 0"
           paddingParagraph="0 0 0 12px"
           paddingTitle="0 0 0 12px"
           textAlign_tablet="left"
