@@ -21,7 +21,7 @@ meta_info:
   tag: request_more_info # comma separated, "request_more_info" is the default value
 
 navbar:
-  logoUrl: "#" # relative(/apply), absolute(https://google.com) or id(#componentName)
+  logoUrl: "#leadform_bottom" # relative(/apply), absolute(https://google.com) or id(#componentName)
   buttonText: "Get More Info"
   buttonUrl: "#bottom" # url accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
 
@@ -92,7 +92,7 @@ follow_bar:
 # ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇
 #
 rating_reviews:
-  position: 4
+  position: 8
   heading: "Top rated on all available review sites"
   rating_list:
     - alt: "Career Karma"
@@ -113,7 +113,7 @@ rating_reviews:
       url: ""
 
 program_details:
-  position: 1
+  position: 2
   background: "#FFFFFF"
   heading: "Program details"
   sub_heading: "Real-life projects and exactly what companies are looking for"
@@ -124,7 +124,7 @@ why_python:
   sub_heading: "JavaScript has 26x's more job vacancies than Ruby On Rails. Python has 10x's more job vacancies than Node.js" # optional or set to white space to hide
 
 geeks_vs_others:
-  position: 3
+  position: 7
   heading: "Compare 4Geeks to other bootcamps"
   # sub_heading: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
   total_rows: 5
@@ -135,7 +135,7 @@ why_4geeks:
   sub_heading: ""
 
 badges:
-  position: 7
+  position: 6
   heading: "4Geeks Academy has awards and recognitions that validate its excellence"
 
 who_is_hiring:
@@ -151,10 +151,10 @@ who_is_hiring:
 
 components:
   - name: Reserva tu plaza y ¡acelera tu carrera!
-    position: 2
+    position: 5
     background: "veryLightBlue2"
     layout: iconogram
-    swipable: True
+    swipable: false
     heading:
       text: "How it works"
       font_size: ["30px", "30px", "30px", "30px", "30px"]
@@ -173,10 +173,10 @@ components:
       - icon: "talk"
         title: ""
         content: 3. If you are unemployed, that's good here. But if you are underpaid or need a new job or a new salary, you also are subject to receive the Scholarship
-      - icon: "talk"
+      - icon: "yellowhat"
         title: ""
         content: 4. Complete the program.
-      - icon: "talk"
+      - icon: "stairswflag"
         title: ""
         content: 5. Let's start together to find a job. Your success will open more doors to upcoming students.
 
@@ -217,10 +217,11 @@ components:
           icon: "circle" #string with icon for example ['check', 'cicle', etc]
 
   - name: some_id
-    position: 7
+    position: 6
     layout: two_column_right
     image:
       src: "/images/testimonials/allisa-testimonial.jpg"
+      shadow: true
     video: "https://www.youtube.com/watch?v=TCHASxvkhpI"
     heading:
       text:
