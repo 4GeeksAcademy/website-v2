@@ -113,7 +113,7 @@ consents:
   - slug: "gdpr_consent"
     name: "GDPR Consent"
     active: true
-    message: 'Al completar este formulario acepto que mi información será utilizada para enviarme información comercial sobre 4Geeks Academy y que podria resultar una relación comercial a partir de esto. Revisa nuestra <a style={{ marginLeft: "5px" }} target="_blank" rel="noopener noreferrer nofollow" className="decorated" href="/es/privacidad">Política de Privacidad</a>'
+    message: 'Al completar este formulario acepto que mi información será utilizada para enviarme información comercial sobre 4Geeks Academy y que podría resultar una relación comercial a partir de esto. Revisa nuestra <a style={{ marginLeft: "5px" }} target="_blank" rel="noopener noreferrer nofollow" className="decorated" href="/es/privacidad">Política de Privacidad</a>'
     error_message: "Debes aceptar el consent de GDPR"
 
 city: "Dublin"
