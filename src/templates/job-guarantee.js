@@ -656,38 +656,38 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
         height="5px"
         margin="40px 0"
       />
-      <Container>
-        <GridContainer
-          columns_tablet="12"
-          padding="0 17px 40px 17px"
-          padding_tablet="0"
-          margin_tablet="0 0 81px 0"
-        >
-          <Div gridColumn_tablet="1 / 7" flexDirection="column">
-            <H2 textAlign_md="left" margin="0 0 30px 0">
-              {yml.form.title}
-            </H2>
-            {yml.form.paragraph.split("\n").map((m, i) => (
-              <Paragraph
-                key={i}
-                margin="7px 0"
-                textAlign_md="left"
-                dangerouslySetInnerHTML={{ __html: m }}
-              />
-            ))}
-          </Div>
-          <Div flexDirection="column" gridColumn_tablet="7 / 13">
-            <LeadForm
-              formHandler={beHiringPartner}
-              // handleClose={handleClose}
-              enableAreaCodes={false}
-              lang={pageContext.lang}
-              inputBgColor={Colors.white}
-              fields={["full_name", "email", "phone"]}
+      <GridContainer
+        columns_tablet="12"
+        padding="0 17px 40px 17px"
+        padding_tablet="0"
+        margin_tablet="0 auto 81px auto"
+        childMargin="auto"
+        childMaxWidth="1366px"
+      >
+        <Div gridColumn_tablet="1 / 7" flexDirection="column">
+          <H2 textAlign_md="left" margin="0 0 30px 0">
+            {yml.form.title}
+          </H2>
+          {yml.form.paragraph.split("\n").map((m, i) => (
+            <Paragraph
+              key={i}
+              margin="7px 0"
+              textAlign_md="left"
+              dangerouslySetInnerHTML={{ __html: m }}
             />
-          </Div>
-        </GridContainer>
-      </Container>
+          ))}
+        </Div>
+        <Div flexDirection="column" gridColumn_tablet="7 / 13">
+          <LeadForm
+            formHandler={beHiringPartner}
+            // handleClose={handleClose}
+            enableAreaCodes={false}
+            lang={pageContext.lang}
+            inputBgColor={Colors.white}
+            fields={["full_name", "email", "phone"]}
+          />
+        </Div>
+      </GridContainer>
     </>
   );
 };

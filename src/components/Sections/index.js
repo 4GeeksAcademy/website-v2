@@ -917,6 +917,8 @@ export const GridContainer = ({
   gridTemplateAreas,
   gridTemplateAreas_tablet,
   maxWidth,
+  childMaxWidth,
+  childMargin,
   childHeight,
   displayChild,
   displayChild_tablet,
@@ -1005,6 +1007,8 @@ export const GridContainer = ({
         gridTemplateAreas={gridTemplateAreas}
         gridTemplateAreas_tablet={gridTemplateAreas_tablet}
         height={childHeight}
+        margin={childMargin}
+        maxWidth={childMaxWidth}
       >
         {children}
       </Grid>
