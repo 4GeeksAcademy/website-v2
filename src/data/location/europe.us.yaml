@@ -94,15 +94,15 @@ two_columns:
   proportions: [6, 6]
   image:
     style: '{"border" : "5px solid black", "backgroundSize": "contain" }'
-    src: "/static/images/testimonials/allisa-testimonial.jpg"
-    shadow: true  
-  video: "https://www.youtube.com/watch?v=TCHASxvkhpI"
+    src: "/images/landing/alissa-video.webp"
+    shadow: true
+  video: "EcqasocRKHo"
   heading:
-    text: "Your Journey with 4Geeks Academy in Europe"
+    text: "Launch your coding career in Europe with 4Geeks Academy's Unique Advantages"
     font_size: ["30px", "30px", "30px", "30px", "30px"]
   sub_heading:
-    text: "Develop Your Tech Skills from Anywhere"
-    font_size: ["18px", "18px", "22px", "22px", "22px"]
+    text: "Enjoy the perks of unlimited coding mentorship and career support with personalized 1-on-1 sessions with your mentor and career support team and become a full-stack developer in just 18 weeks."
+    font_size: ["18px", "18px", "18px", "18px", "18px"]
   button:
     text: "APPLY NOW"
     color: "white"

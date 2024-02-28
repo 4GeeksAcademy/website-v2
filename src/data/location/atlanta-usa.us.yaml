@@ -91,15 +91,15 @@ two_columns:
   proportions: [6, 6]
   image:
     style: '{"border" : "5px solid black", "backgroundSize": "contain" }'
-    src: "/static/images/testimonials/allisa-testimonial.jpg"
-    shadow: true  
-  video: "https://www.youtube.com/watch?v=TCHASxvkhpI"
+    src: "/images/landing/alissa-video.webp"
+    shadow: true
+  video: "EcqasocRKHo"
   heading:
     text: "Unlocking Atlanta's Coding Potential"
     font_size: ["30px", "30px", "30px", "30px", "30px"]
   sub_heading:
-    text: "Alissa Reveals Why 4Geeks Academy is the best option"
-    font_size: ["18px", "18px", "22px", "22px", "22px"]
+    text: "Receive unlimited guidance and support from experienced mentors throughout your journey, even after graduation. Master in-demand skills and launch your coding career with confidence."
+    font_size: ["18px", "18px", "18px", "18px", "18px"]
   button:
     text: "APPLY NOW"
     color: "white"

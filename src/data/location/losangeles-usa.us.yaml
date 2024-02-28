@@ -87,15 +87,15 @@ two_columns:
   proportions: [6, 6]
   image:
     style: '{"border" : "5px solid black", "backgroundSize": "contain" }'
-    src: "/static/images/testimonials/allisa-testimonial.jpg"
-    shadow: true  
-  video: "https://www.youtube.com/watch?v=TCHASxvkhpI"
+    src: "/images/landing/alissa-video.webp"
+    shadow: true
+  video: "EcqasocRKHo"
   heading:
-    text: "Empowering Futures 4Geeks Academy in LA"
+    text: "Master Your Coding Journey in LA with 4Geeks Academy's Unique Support"
     font_size: ["30px", "30px", "30px", "30px", "30px"]
   sub_heading:
-    text: "Empowering Careers in LA Job Guarantee and Lifelong Support"
-    font_size: ["18px", "18px", "22px", "22px", "22px"]
+    text: "4Geeks Academy goes beyond a typical coding bootcamp. We offer lifetime mentorship from industry professionals, a focused code curriculum, and flexible learning schedules. This unique combination allows you to master the skills needed to succeed as a full-stack developer while balancing your life."
+    font_size: ["18px", "18px", "18px", "18px", "18px"]
   button:
     text: "APPLY NOW"
     color: "white"

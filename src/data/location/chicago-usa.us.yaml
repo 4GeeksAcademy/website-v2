@@ -86,16 +86,16 @@ images_box:
 two_columns:
   proportions: [6, 6]
   image:
-    style: '{"border" : "5px solid black", "backgroundSize": "contain" }'
-    src: "/static/images/testimonials/allisa-testimonial.jpg"
-    shadow: true  
-  video: "https://www.youtube.com/watch?v=TCHASxvkhpI"
+    style: '{"border" : "5px solid black", "backgroundSize": "cover" }'
+    src: "/images/landing/alissa-video.webp"
+    shadow: true
+  video: "EcqasocRKHo"
   heading:
     text: "Unveiling Chicago's Coding Landscape"
     font_size: ["30px", "30px", "30px", "30px", "30px"]
   sub_heading:
-    text: "Insights from Alissa on 4GeeksAcademy"
-    font_size: ["18px", "18px", "22px", "22px", "22px"]
+    text: "Get personalized guidance, flexible learning, and scholarship opportunities. Our unique features, including unlimited mentorship and a focus on code, will equip you to succeed as a full-stack developer."
+    font_size: ["18px", "18px", "18px", "18px", "18px"]
   button:
     text: "APPLY NOW"
     color: "white"

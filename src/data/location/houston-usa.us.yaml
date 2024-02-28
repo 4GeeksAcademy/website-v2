@@ -88,15 +88,15 @@ two_columns:
   proportions: [6, 6]
   image:
     style: '{"border" : "5px solid black", "backgroundSize": "contain" }'
-    src: "/static/images/testimonials/allisa-testimonial.jpg"
-    shadow: true  
-  video: "https://www.youtube.com/watch?v=TCHASxvkhpI"
+    src: "/images/landing/alissa-video.webp"
+    shadow: true
+  video: "EcqasocRKHo"
   heading:
     text: "Exploring Houston's Coding Frontier"
     font_size: ["30px", "30px", "30px", "30px", "30px"]
   sub_heading:
-    text: "Insights from Alissa on 4GeeksAcademy"
-    font_size: ["18px", "18px", "22px", "22px", "22px"]
+    text: "Enjoy the perks of unlimited coding mentorship and career support with personalized 1-on-1 sessions with your mentor and career support team and become a developer in just 18 weeks."
+    font_size: ["18px", "18px", "18px", "18px", "18px"]
   button:
     text: "APPLY NOW"
     color: "white"
