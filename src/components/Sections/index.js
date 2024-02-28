@@ -1330,7 +1330,7 @@ Div.defaultProps = {
 };
 
 Container.defaultProps = {
-  padding: "0",
+  padding: "17px",
   padding_tablet: "0 40px",
   padding_md: "0 80px",
   padding_lg: "0",

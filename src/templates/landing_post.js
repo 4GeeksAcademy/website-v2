@@ -103,9 +103,9 @@ export default function Template(props) {
       >
         <Header
           hideArrowKey
-          padding={isCustombarActive ? "90px 0 70px 0" : undefined}
-          paddingParagraph="0 0 0 12px"
-          paddingTitle="0 0 0 12px"
+          padding={isCustombarActive ? "90px 17px 70px 17px" : undefined}
+          paddingParagraph="0"
+          paddingTitle="0"
           textAlign_tablet="left"
           seo_title={post.frontmatter.cluster}
           title={post.frontmatter.title}
@@ -121,7 +121,6 @@ export default function Template(props) {
               width_lg="630px"
               bsize="cover"
               position="right"
-              margin="0 12px"
               url={post.frontmatter.image}
             />
           }
@@ -168,20 +167,12 @@ export default function Template(props) {
             })}
           </ScrollSpy>
         </Div>
-        <Container padding="0">
+        <Container>
           {/* Container */}
-          <Div
-            // padding="0 10px"
-            // padding_tablet="0 8% 0 4%"
-            // padding_md="0 11%"
-            // padding_lg="0 8% 0 4%"
-            gap="6%"
-            width="100%"
-          >
+          <Div gap="6%" width="100%">
             <Div
               size="12"
               size_tablet="8"
-              padding="0 12px"
               flexDirection="column"
               margin="30px 0 0 0"
               background={Colors.white}
