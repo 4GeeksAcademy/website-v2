@@ -6,30 +6,21 @@ meta_info:
   description: "Master industry-standard languages such as HTML, CSS, and JavaScript, along with popular frameworks like React – acquiring real-world, in-demand skills"
   image: "/images/bg/main-bg.jpg"
   keywords: "Coding Classes, Learn to code, 4Geeks Academy"
-  visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
+  visibility: "hidden" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   template: "landing_a" # <--- choose your landing template
   redirects: []
 
   # Set a particular course or location to the landing page
   # this UTM fields will be also included in the CRM contact
   utm_course: ["full-stack"]
-  utm_location:
-    [
-      "downtown-miami",
-      "atlanta-usa",
-      "chicago-usa",
-      "dublin-ireland",
-      "europe",
-      "hamburg-germany",
-      "houston-usa",
-      "losangeles-usa",
-      "munich-germany",
-      "newyork-usa",
-      "online",
-      "toronto-canada",
-    ]
+  utm_location: ["downtown-miami"]
   automation: soft # comma separated, "soft" is the default value
   tag: request_more_info # comma separated, "request_more_info" is the default value
+
+navbar:
+  logoUrl: "#"
+  buttonText: "Request Information" # this modifies the button text in the navbar
+  buttonUrl: "#leadform_bottom" #accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
 
 form:
   # posible fields: "first_name", "last_name", "full_name", "phone", "email"
@@ -67,17 +58,21 @@ features:
 follow_bar:
   position: "top" # top, bottom, hidden
   content:
-    text: "No Coding Experience? Build Your Tech Skills from Scratch with Our Coding Bootcamp"
-    text_mobile: "No Coding Experience? Build Your Tech Skills from Scratch with Our Coding Bootcamp"
+    text: "Build Your Tech Skills from Scratch with\n Our Front-End Developer Bootcamp"
+    text_mobile: "Build Your Tech Skills from Scratch with\n Our Front-End Developer Bootcamp"
     # devices:   XL      LG    MD      SM    XS
     font_size: ["25px", "25px", "25px", "20px", "18px"]
   button:
     text: "Get more information"
-    path: "#leadform_header"
+    path: "#leadform_bottom"
   phone:
     text: "Call"
 
 short_badges:
+  - name: "Ebootcamp"
+    url: ""
+    image: "../../../static/images/badges/ebootcamp-top.png"
+    alt: "Top Coding Bootcamp"
   - name: "Premios Tecnologia Siglo XXI"
     url: ""
     image: "../../../static/images/awards/premios_tecnologia_sigloxxi.png"
@@ -110,7 +105,7 @@ badges:
 
 geeks_vs_others:
   position: 7
-  heading: "What made us so successful?"
+  heading: "What made our front end developer bootcamp so successful?"
   paragraph: ""
   total_rows: 5
 
@@ -156,7 +151,6 @@ components:
     image:
       style: "{}"
       src: "/images/woman-afro-with-laptop.webp"
-      link: "https://google.com" # take uses somewhere when they click on the image
       shadow: true
     section_heading:
       text: "From zero to Front-End Developer"
@@ -221,17 +215,17 @@ components:
       text: ""
       style: '{ "font-size": "30px" }'
     heading:
-      text: "Why 4Geeks?"
+      text: "Why our front end developer bootcamp?"
       font_size: ["40px", "40px", "40px", "40px", "40px"]
     sub_heading:
-      text: "The Unique Benefits of Choosing 4Geeks Academy"
+      text: "The Unique Benefits of Choosing Our Front-End Developer Bootcamp"
       font_size: ["16px", "16px", "16px", "16px", "16px"]
     button:
-      text: "Compare 4Geeks Vs others"
+      text: "Requests more information"
       color: white
       hover_color: "white"
       background: "black"
-      path: "#geeks_vs_others"
+      path: "#leadform_header"
     content:
       text: ""
       font_size: ["16px"]
@@ -261,7 +255,7 @@ components:
       link: "https://www.switchup.org/bootcamps/4geeks-academy"
     video: "EcqasocRKHo"
     heading:
-      text: "4Geeks Academy Where Support and Focus Propel Your Coding Journey"
+      text: "Front-end Developer Bootcamp insights from Alissa"
       font_size: ["40px", "40px", "40px", "40px", "40px"]
     content:
       text: "Join us in celebrating his success story and discover how you too can unlock a world of opportunities through our comprehensive bootcamp program!"
@@ -271,6 +265,6 @@ components:
       background: black
       color: white
       hover_color: "#white"
-      path: "#bottom"
+      path: "#leadform_bottom"
 
 

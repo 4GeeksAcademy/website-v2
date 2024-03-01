@@ -6,7 +6,7 @@ meta_info:
   description: "Elevate your skills and launch your dream tech career with our web development bootcamp experience"
   image: "/images/bg/main-bg.jpg"
   keywords: ""
-  visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
+  visibility: "hidden" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   template: "landing_a" # <--- choose your landing template
   redirects: []
 
@@ -17,13 +17,18 @@ meta_info:
   automation: soft # comma separated, "soft" is the default value
   tag: request_more_info # comma separated, "request_more_info" is the default value
 
+navbar:
+  logoUrl: "#"
+  buttonText: "Apply" # this modifies the button text in the navbar
+  buttonUrl: "#leadform_bottom" #accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
+
 form:
   # posible fields: "first_name", "last_name", "full_name", "phone", "email"
   # always the first_name, email and phone will be mandatory if added.
   fields: ["full_name", "phone", "email"]
-  heading: "Get more information, and change your life!"
+  heading: "Apply now, and change your life!"
   motivation: "Upon applying, expect a personalized advisor email, comprehensive program details, financial insights, syllabus, and mentorship information."
-  button_label: Request More Information
+  button_label: Apply Now
   redirect: null #you can redirect to another url or entirely diffrent website
 
 apply_schollarship: # form that is displayed at the end of the landing
@@ -53,13 +58,13 @@ features:
 follow_bar:
   position: "top" # top, bottom, hidden
   content:
-    text: "Enroll in Our Full-Stack Developer Bootcamp 18-week program Today!"
-    text_mobile: "Enroll in Our Full-Stack Developer Bootcamp 18-week program Today!."
+    text: "Master Web Development\n Join 4Geeks Academy's Bootcamp"
+    text_mobile: "Master Web Development\n Join 4Geeks Academy's Bootcamp"
     # devices:   XL      LG    MD      SM    XS
     font_size: ["25px", "25px", "25px", "20px", "18px"]
   button:
-    text: "Get more information"
-    path: "#leadform_header"
+    text: "Apply Now"
+    path: "#leadform_bottom"
   phone:
     text: "Call"
 
@@ -125,18 +130,17 @@ components:
     image:
       style: '{"backgroundSize": "cover"}'
       src: "/images/woman-laptop-smile-bg.webp"
-      link: "https://google.com" # take uses somewhere when they click on the image
       shadow: false
     section_heading:
-      text: "Launch Your Tech Career with 4Geeks Academy Full-Stack Web Developer Bootcamp"
+      text: "Full-Stack Web Developer Bootcamp for Everyone"
       style: '{ "font-size": "30px"}'
     heading:
-      text: "Become a web developer in a few weeks with our bootcamp"
+      text: "Become a web developer in just 18 weeks with our bootcamp"
       font_size: ["22px", "22px", "22px", "22px", "22px"]
     sub_heading:
       text: "Dreaming of a career where you build dynamic websites and applications? A web developer bootcamp can turn your passion for code into a reality. These immersive programs provide focused training in essential languages like HTML, CSS, and JavaScript, equipping you with the skills needed to thrive in the tech industry."
     button:
-      text: "APPLY NOW!"
+      text: "Apply"
       color: white
       hover_color: "white"
       background: "black"
@@ -258,13 +262,13 @@ components:
       link: "https://www.switchup.org/bootcamps/4geeks-academy"
     video: "EcqasocRKHo"
     heading:
-      text: "Immerse Yourself in 4Geeks Academy's Web Developer Bootcamp"
+      text: "Launch Your Web Development Career at 4Geeks Academy"
       font_size: ["40px", "40px", "40px", "40px", "40px"]
     content:
       text: ""
       font_size: ["16px"]
     button:
-      text: "GET MORE INFO"
+      text: "Apply Now"
       background: black
       color: white
       hover_color: "#white"
