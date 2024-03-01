@@ -275,7 +275,7 @@ components:
   - name: passion
     position: 10
     background: "#fbfbfb"
-    layout: two_column_left
+    layout: two_column_right
     proportions: [6, 6]
     image:
       style: '{ "border" : "3px solid black", "backgroundSize": "contain", "marginTop": "15px"}'
