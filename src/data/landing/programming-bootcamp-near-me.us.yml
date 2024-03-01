@@ -18,6 +18,11 @@ meta_info:
   automation: soft # comma separated, "soft" is the default value
   tag: request_more_info # comma separated, "request_more_info" is the default value
 
+navbar:
+  buttonText: "Request more Info"
+  buttonUrl: "#leadform_bottom" # url accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
+  logoUrl: "#"
+
 form:
   # posible fields: "first_name", "last_name", "full_name", "phone", "email"
   # always the first_name, email and phone will be mandatory if added.
@@ -34,7 +39,7 @@ apply_schollarship: # form that is displayed at the end of the landing
 
 # jumbotron on the top (cannot be commented out)
 header_data:
-  tagline: Programming Bootcamp Near Me?
+  tagline: Explore 4Geeks Academy's programming bootcamps near you
   sub_heading: "Master in-demand coding skills with our immersive programming bootcamps near you. We have several locations around the world and online."
   background: "#FFF1D1"
   badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
@@ -54,8 +59,8 @@ features:
 follow_bar:
   position: "top" # top, bottom, hidden
   content:
-    text: "Become a full-stack developer near your location with 4Geeks Academy; the opportunity awaits you!"
-    text_mobile: "Become a full-stack developer near your location with 4Geeks Academy; the opportunity awaits you!"
+    text: "Become a full-stack developer \nnear your location"
+    text_mobile: "Become a full-stack developer \nnear your location"
     # devices:   XL      LG    MD      SM    XS
     font_size: ["25px", "25px", "25px", "20px", "18px"]
   button:
@@ -158,7 +163,7 @@ components:
     sub_heading:
       text: "Ready to code but unsure if you want an in-person or online experience? We've got you covered! 4Geeks Academy offers both formats, letting you choose the learning style that fits your location and preferences."
     button:
-      text: "APPLY NOW!"
+      text: "Get more Info"
       color: white
       hover_color: "white"
       background: "black"
@@ -176,7 +181,7 @@ components:
         - heading: "Master in-Demand Skills"
           icon: "circle" #string with icon for example ['check', 'cicle', etc]
         - heading: "No relocation is needed"
-          icon: "check" #string with icon for example ['check', 'cicle', etc]
+          icon: "circle" #string with icon for example ['check', 'cicle', etc]
 
 
   - name: how-it-works
@@ -185,7 +190,7 @@ components:
     layout: iconogram
     swipable: True
     heading:
-      text: "3 step programming bootcamp"
+      text: "3 steps of our programming bootcamp"
       font_size: ["30px", "30px", "30px", "30px", "30px"]
     sub_heading:
       text: 'According to the U.S. Bureau of Labor Statistics, <strong style="font-weight: bold;">software developers in the U.S. have a higher than average job outlook and earn a median salary of $110,140 a year</strong>. Improve your chances to be one of them.'
@@ -279,7 +284,7 @@ components:
       link: "https://www.switchup.org/bootcamps/4geeks-academy"
     video: "EcqasocRKHo"
     heading:
-      text: "Unleash Your Coding Potential: In-Person or Online Bootcamps Near You!"
+      text: "Programming Bootcamps Near You at 4Geeks Academy"
       font_size: ["32px", "32px", "32px", "32px", "32px"]
     sub_heading:
       text: "Master in-demand skills with flexible learning options at 4Geeks Academy."
