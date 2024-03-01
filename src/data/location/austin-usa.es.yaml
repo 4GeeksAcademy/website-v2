@@ -1,8 +1,8 @@
 meta_info:
-  slug: "bootcamp-programacion-houston"
+  slug: "bootcamp-programacion-austin"
   position: 1
-  title: "4Geeks Academy Houston - Bootcamp de programación en Houston, aprende a programar en Houston"
-  description: "Conoce aquí todo sobre nuestro campus de bootcamp de programación en Houston, Texas de 4GeeksAcademy"
+  title: "4Geeks Academy Austin - Bootcamp de programación en Austin, aprende a programar en Austin"
+  description: "Conoce aquí todo sobre nuestro campus de bootcamp de programación en Austin, Texas de 4GeeksAcademy"
   image: "/images/og-preview/downtown-miami.es.png"
   keywords: "null"
   redirects: []
@@ -15,14 +15,14 @@ meta_info:
   cohort_include_regex: ["miami"]
   cohort_exclude_regex: ['usa-\d{1,10}-spanish']
 
-seo_title: "Bootcamp de Programación en Houston"
+seo_title: "Bootcamp de Programación en Austin"
 header:
-  tagline: "4Geeks Academy en Houston"
+  tagline: "4Geeks Academy en Austin"
   sub_header: "Todos los programas son enseñados "
   sub_header_highlighted: "Online"
   paragraph: ""
-  image: "../../../static/images/locations/houston-home.png"
-  alt: "4Geeks Academy modalidad online en Houston, Texas"
+  image: "../../../static/images/locations/austin-location.webp"
+  alt: "4Geeks Academy modalidad online en Austin, Texas"
 button_header:
   button_text: Ver Programas
   button_link: "#programs"
@@ -48,13 +48,13 @@ badges:
   
     Estamos autorizados por el Departamento de Educación de Florida.
       
-    Elegido como uno de los 35 mejores bootcamps de codificación del mundo y el mejor bootcamp de codificación en Houston según SwitchUp.
+    Elegido como uno de los 35 mejores bootcamps de codificación del mundo y el mejor bootcamp de codificación en Austin según SwitchUp.
 
     4Geeks Academy ha sido reconocida como uno de los 10 mejores bootcamps de codificación en los Estados Unidos según Newsweek.
 
     Una comunidad construida para desarrolladores.
 news:
-  title: "4Geeks Academy Houston en las noticias..."
+  title: "4Geeks Academy Austin en las noticias..."
 upcoming:
   no_dates_message: "Actualmente no hay próximas fechas para este campus"
   actionMessage: "Avisenme fechas disponibles"
@@ -70,14 +70,18 @@ info_box:
 images_box:
   heading: "Qué deberías saber acerca de esta ubicacion: "
   content: |
-    La ciudad ha presenciado un crecimiento sustancial de la demanda de conocimientos en programación, a medida que la tecnología se integra cada vez más en diversos sectores. Los bootcamps de programación han surgido como contribuyentes clave a esta tendencia, ofreciendo programas de capacitación accesibles y integrales que permiten que las personas aprendan programación y participen activamente en la creciente comunidad tecnológica de Houston.
+    La ciudad ha presenciado un crecimiento sustancial de la demanda de conocimientos en programación, a medida que la tecnología se integra cada vez más en diversos sectores. Los bootcamps de programación han surgido como contribuyentes clave a esta tendencia, ofreciendo programas de capacitación accesibles y integrales que permiten que las personas aprendan programación y participen activamente en la creciente comunidad tecnológica de Austin.
   images:
-    - path: "../../../static/images/locations/houston-new.png"
-      alt: "Houston city"
+    - path: "../../../static/images/locations/location-austin1-1.webp"
+      alt: "Austin city"
     - path: "../../../static/images/ownpeoplecoding2.webp"
       alt: "4Geeks Own People Coding"
+    - path: "../../../static/images/locations/location-austin3.webp"
+      alt: "Austin city"
     - path: "../../../static/images/ownmancoding.jpg"
       alt: "Remote-Coding-Bootcamp"
+    - path: "../../../static/images/locations/location-austin1.webp"
+      alt: "Austin city"
     - path: "../../../static/images/locations/miami-old.jpg"
       alt: "4Geeeks location"
     - path: "../../../static/images/locations/miami-people.jpeg"
@@ -92,7 +96,7 @@ two_columns:
     shadow: true  
   video: "https://www.youtube.com/watch?v=TCHASxvkhpI"
   heading:
-    text: "Descubre el Escenario de la Programación en Houston"
+    text: "Descubre el Escenario de la Programación en Austin"
     font_size: ["30px", "30px", "30px", "30px", "30px"]
   sub_heading:
     text: "Perspectivas de Alissa sobre 4GeeksAcademy"
@@ -108,22 +112,16 @@ two_columns:
     - text: "Aprendizaje práctico basado en proyectos para el perfeccionamiento de habilidades"
     - text: "Orientación profesional para navegar el dinámico sector tecnológico de Chicago"
 
-active_campaign_location_slug: "houston-usa"
-breathecode_location_slug: "houston-usa"
+active_campaign_location_slug: "austin-usa"
+breathecode_location_slug: "austin-usa"
+gdpr_compliant: false # do we need to ask for permision?
 in_person_available: true # important to accept in-person applicants
 online_available: false # important to accept online-only applicants
 
-consents:
-  - slug: "gdpr_consent"
-    name: "GDPR Consent"
-    active: false
-    message: 'Al completar este formulario acepto que mi información será utilizada para enviarme información comercial sobre 4Geeks Academy y que podría resultar una relación comercial a partir de esto. Revisa nuestra <a style={{ marginLeft: "5px" }} target="_blank" rel="noopener noreferrer nofollow" className="decorated" href="/es/privacidad">Política de Privacidad</a>'
-    error_message: "Debes aceptar el consent de GDPR"
-
-city: "Houston"
-name: "Houston, USA"
-latitude: "29.734440"
-longitude: "-95.382080"
+city: "Austin"
+name: "Austin, USA"
+latitude: "30.267253"
+longitude: "-97.743073"
 address: "4201 Main St Ste 200"
 zip_code: "77002"
 phone: "+1 (786) 416-6640"
@@ -153,5 +151,5 @@ location_office_image: ""
 location_office_image2: ""
 location_office_image3: ""
 should_know: ""
-value: "Houston"
+value: "Austin"
 defaultLanguage: "us" # All lead marketing communications will arrive on this language

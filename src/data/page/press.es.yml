@@ -17,6 +17,15 @@ content:
   heading: "Lea sobre este bootcamp de codificación en las noticias..."
   limit: 7
   news:
+    - name: "Forbes"
+      logo: "../../../static/images/news/forbes.png"
+      #location: ["downtown-miami", "online", "madrid-spain"]
+      image: "../../../static/images/partner/forbes-coder.jpg"
+      title: "Mejores Bootcamps de Ciencia de Datos en 2024"
+      text: "Los profesionales actuales y futuros de la tecnología pueden completar un bootcamp de ciencia de datos para perfeccionar sus habilidades existentes para cambiar de campo o avanzar en sus carreras actuales..."
+      textUrl: "Leer Artículo"
+      url: "https://www.forbes.com/advisor/education/bootcamps/best-data-science-bootcamps/"
+
     - name: "Miami Herald"
       logo: "../../../static/images/news/the-miami-herald.png"
       #location: ["santiago-chile", "online", "downtown-miami", "bogota-colombia", "mexicocity-mexico", "costa-rica", "lima-peru", "buenosaires-argentina", "lapaz-bolivia", "montevideo-uruguay", "quito-ecuador"]
@@ -25,6 +34,7 @@ content:
       text: "Después de mucho trabajo hemos logrado aliarnos con United Way para ofrecer 100 becas en poblaciones minorias para convertirse en desarrollador de software"
       textUrl: "Leer Artículo"
       url: "https://www.miamiherald.com/news/business/article263937731.html"
+
     - name: "Forbes"
       logo: "../../../static/images/news/forbes.png"
       #location: ["downtown-miami", "online", "madrid-spain"]
@@ -33,6 +43,16 @@ content:
       text: "En un estudio publicado por Forbes donde se especifica todas las maneras en las que puedes convertirte en un desarrollador web en los EEUU"
       textUrl: "Leer Artículo"
       url: "https://www.forbes.com/advisor/education/what-is-web-development"
+
+    - name: "Forbes"
+      logo: "../../../static/images/news/forbes.png"
+      #location: ["downtown-miami", "online", "madrid-spain"]
+      image: "../../../static/images/partner/forbes-coder.jpg"
+      title: "5 Mejores Bootcamps Full-Stack en Línea para este 2024"
+      text: "Los desarrolladores full-stack crean y solucionan problemas para la web y software, habilidades muy demandadas actualmente para diversas industrias."
+      textUrl: "Leer Artículo"
+      url: "https://www.forbes.com/advisor/education/bootcamps/best-full-stack-developer-bootcamp/"
+
     - name: "CNN Español"
       logo: "../../../static/images/news/cnn-chile.png"
       #location: ["santiago-chile", "online", "downtown-miami", "bogota-colombia", "mexicocity-mexico", "costa-rica", "lima-peru", "buenosaires-argentina", "lapaz-bolivia", "montevideo-uruguay", "quito-ecuador"]
@@ -73,3 +93,4 @@ content:
       text: "Su método potencia el 'learning by doing' y utiliza la programación como medio para que los alumnos 'transformen sus vidas'. Ha formado a más de 600 personas en España desde 2020 y cosechado múltiples premios."
       textUrl: "Ver Entrevista"
       url: "https://www.elespanol.com/invertia/disruptores-innovadores/disruptores/startups/20230304/no-academia-vuelco-programacion-chatgpt-quitara-trabajo/745675491_0.html"
+      

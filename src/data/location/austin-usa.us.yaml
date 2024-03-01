@@ -1,9 +1,9 @@
 meta_info:
-  slug: "coding-bootcamp-losangeles"
-  title: "Los Angeles Coding Bootcamp"
+  slug: "coding-bootcamp-austin"
+  title: "Austin Coding Bootcamp"
   position: 1
-  description: "Get to know here all about our coding bootcamp campus in Los Angeles, Texas of 4GeeksAcademy"
-  image: "/images/og-preview/downtown-miami.us.png"
+  description: "Get to know here all about our coding bootcamp campus in Austin, Texas of 4GeeksAcademy"
+  image: "/images/landing/tres-personas-reloaded.webp"
   keywords: "null"
   redirects: []
   region: "usa-canada"
@@ -12,17 +12,17 @@ meta_info:
   
   # ⬇️ cohort_include_regex field is used to filter cohorts on the calendar that only test successfully for a particular regex
   # for example: for this location, only show cohorts starting with usa-xx-spanish
-  cohort_include_regex: ["miami"]
+  cohort_include_regex: ['miami']
   cohort_exclude_regex: ['usa-\d{1,10}-spanish']
 
-seo_title: "Coding Bootcamp in Los Angeles"
+seo_title: "Coding Bootcamp in Austin"
 header:
-  tagline: "4Geeks Academy in Los Angeles"
+  tagline: "4Geeks Academy in Austin"
   sub_header: "All programs are taught "
   sub_header_highlighted: "Online"
   paragraph: ""
-  image: "../../../static/images/locations/california-home.png"
-  alt: "4Geeks Academy live coding bootcamp in Los Angeles, Texas"
+  image: "../../../static/images/locations/austin-location.webp"
+  alt: "4Geeks Academy live coding bootcamp in Austin, Texas"
 
 badges:
   title: ""
@@ -31,14 +31,14 @@ badges:
   
     We are licensed by the USA F. Dep. of Education.
       
-    Chosen as one of the top 35 coding bootcamps of the world and the top coding bootcamp in Los Angeles according to SwitchUp.
+    Chosen as one of the top 35 coding bootcamps of the world and the top coding bootcamp in Austin according to SwitchUp.
 
     4Geeks Academy has been recognized as one of the top 10 coding bootcamps in the United States according to Newsweek.
 
 
     A community built for developers.
 news:
-  title: "4Geeks Academy Los Angeles has been reviewed in:"
+  title: "4Geeks Academy Austin has been reviewed in:"
 upcoming:
   no_dates_message: "There are currently no upcoming dates for this campus"
   actionMessage: "Let me know when dates are available"
@@ -61,27 +61,32 @@ custom_bar:
 
 info_box:
   heading: ""
-  address: ""
-  iframeMapUrl: ""
+  address: "4201 Main St Ste 200, Houston, TX 77002"
+  iframeMapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3464.4976302493887!2d-95.38481442403555!3d29.734308033197614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640bf708cbfffff%3A0x4f27b43b5c32577e!2s4201%20Main%20St%20Suite%20200%2C%20Houston%2C%20TX%2077002%2C%20USA!5e0!3m2!1sen!2sve!4v1708561512277!5m2!1sen!2sve"
   open_on_maps: ""
   contact_heading: "Contacts"
   phone: "(786) 416-6640"
   email: "info@4GeeksAcademy.com"
 images_box:
   heading: "What you should know about this location: "
-  content: "LA boasts a flourishing tech ecosystem and a dynamic startup community. The city has witnessed remarkable expansion in its tech industry, where coding and programming have become pivotal. Coding bootcamps, gaining traction among individuals from diverse backgrounds, have become increasingly popular in the region."
+  content: "The city has witnessed substantial growth in the demand for coding proficiency, as technology becomes increasingly integrated into diverse sectors. Coding bootcamps have emerged as key contributors to this trend, offering accessible and comprehensive training programs that enable individuals to learn coding and actively participate in Houston's expanding tech community."
   images:
-    - path: "../../../static/images/locations/losangeles-new.png"
-      alt: "Los Angeles city"
+    - path: "../../../static/images/locations/location-austin1-1.webp"
+      alt: "Austin city"
     - path: "../../../static/images/ownpeoplecoding2.webp"
       alt: "4Geeks Own People Coding"
+    - path: "../../../static/images/locations/location-austin3.webp"
+      alt: "Austin city"
     - path: "../../../static/images/ownmancoding.jpg"
       alt: "Remote-Coding-Bootcamp"
+    - path: "../../../static/images/locations/location-austin1.webp"
+      alt: "Austin city"
     - path: "../../../static/images/locations/miami-old.jpg"
       alt: "4Geeeks location"
     - path: "../../../static/images/locations/miami-people.jpeg"
       alt: "4Geeeks lab"
   layout_horizontal: true #false == "mode mosaic"
+
 
 two_columns:
   proportions: [6, 6]
@@ -91,10 +96,10 @@ two_columns:
     shadow: true  
   video: "https://www.youtube.com/watch?v=TCHASxvkhpI"
   heading:
-    text: "Empowering Futures 4Geeks Academy in LA"
+    text: "Exploring Austin's Coding Frontier"
     font_size: ["30px", "30px", "30px", "30px", "30px"]
   sub_heading:
-    text: "Empowering Careers in LA Job Guarantee and Lifelong Support"
+    text: "Insights from Alissa on 4GeeksAcademy"
     font_size: ["18px", "18px", "22px", "22px", "22px"]
   button:
     text: "APPLY NOW"
@@ -103,29 +108,23 @@ two_columns:
     path: "/us/apply"
   bullets:
     items: 
-    - text: "Job guarantee ensuring career empowerment"
-    - text: "Courses dedicated to enhancing programming skills and mastering coding"
-    - text: "Professional guidance maximizing opportunities within Los Angeles' tech industry"
+    - text: "Practical projects refining skills on demand within professional environment"
+    - text: "Curriculum aligned with industry needs for seamless job market integration"
+    - text: "Professional guidance maximizing opportunities within Austin's thriving tech industry"
 
-active_campaign_location_slug: "losangeles-usa"
-breathecode_location_slug: "losangeles-usa"
+active_campaign_location_slug: "austin-usa"
+breathecode_location_slug: "austin-usa"
+gdpr_compliant: false # do we need to ask for permision?
 in_person_available: true # important to accept in-person applicants
 online_available: false # important to accept online-only applicants
 
-consents:
-  - slug: "gdpr_consent"
-    name: "GDPR Consent"
-    active: false
-    message: 'By submitting this form, I accept that my data may be used for a quote request that could result in a commercial relationship. Check out our complete <a style={{ marginLeft: "5px" }} target="_blank" rel="noopener noreferrer nofollow" className="decorated" href="/us/privacy-policy">Privacy Policy</a>'
-    error_message: "You need to accept the privacy terms"
-
-city: "Los Angeles"
-name: "Los Angeles, USA"
-latitude: "34.052235"
-longitude: "-118.243683"
+city: "Austin"
+name: "Austin, USA"
+latitude: "30.267253"
+longitude: "-97.743073"
+address: "4201 Main St Ste 200"
+zip_code: "77002"
 phone: "+1 (786) 416-6640"
-address: "1801 SW 3rd Ave #100"
-zip_code: "33130"
 state: "Texas"
 country: "USA"
 country_shortname: "us"
@@ -146,7 +145,7 @@ courses:
   - "Full-Time"
   - "Part-Time"
 flag_icon: ""
-value: "Los Angeles"
+value: "Austin"
 defaultLanguage: "us" # All lead marketing communications will arrive on this language
 
 documents:
