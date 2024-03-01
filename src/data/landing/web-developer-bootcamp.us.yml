@@ -5,7 +5,7 @@ meta_info:
   title: "Elevate your skills and launch your dream tech career with our web development bootcamp experience"
   description: "Elevate your skills and launch your dream tech career with our web development bootcamp experience"
   image: "/images/bg/main-bg.jpg"
-  keywords: "web development bootcamp, full stack, full stack web developer bootcamp, programming bootcamp"
+  keywords: ""
   visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   template: "landing_a" # <--- choose your landing template
   redirects: []
@@ -13,7 +13,7 @@ meta_info:
   # Set a particular course or location to the landing page
   # this UTM fields will be also included in the CRM contact
   utm_course: ["full-stack"]
-  utm_location: ["downtown-miami","atlanta-usa","chicago-usa","dublin-ireland","europe","hamburg-germany","houston-usa","losangeles-usa","munich-germany","newyork-usa","online","toronto-canada",]
+  utm_location: ["downtown-miami"]
   automation: soft # comma separated, "soft" is the default value
   tag: request_more_info # comma separated, "request_more_info" is the default value
 
@@ -258,7 +258,7 @@ components:
       link: "https://www.switchup.org/bootcamps/4geeks-academy"
     video: "EcqasocRKHo"
     heading:
-      text: "Immerse Yourself in 4Geeks Academy Fullstack Developer Bootcamp"
+      text: "Immerse Yourself in 4Geeks Academy's Web Developer Bootcamp"
       font_size: ["40px", "40px", "40px", "40px", "40px"]
     content:
       text: ""
