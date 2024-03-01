@@ -49,7 +49,7 @@ two_column_left:
       color: "white"
       background: "black"
       hover_color: "white"
-      path: "#top"
+      path: "#leadform"
 
 we_trust_section:
   title: Why trust us?
