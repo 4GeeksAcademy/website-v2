@@ -8,7 +8,7 @@ meta_info:
   keywords: "web development bootcamp, full stack, full stack web developer bootcamp, programming bootcamp"
   visibility: "hidden" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   template: "landing_a" # <--- choose your landing template
-  redirects: [""]
+  redirects: []
 
   # Set a particular course or location to the landing page
   # this UTM fields will be also included in the CRM contact
