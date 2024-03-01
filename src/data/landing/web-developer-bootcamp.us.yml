@@ -8,7 +8,7 @@ meta_info:
   keywords: "web development bootcamp, full stack, full stack web developer bootcamp, programming bootcamp"
   visibility: "hidden" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   template: "landing_a" # <--- choose your landing template
-  redirects: []
+  redirects: [""]
 
   # Set a particular course or location to the landing page
   # this UTM fields will be also included in the CRM contact
@@ -258,11 +258,7 @@ components:
       link: "https://www.switchup.org/bootcamps/4geeks-academy"
     video: "EcqasocRKHo"
     heading:
-<<<<<<< HEAD
       text: "Immerse Yourself in 4Geeks Academy's Web Developer Bootcamp"
-=======
-      text: "Immerse Yourself in 4Geeks Academy Fullstack Developer Bootcamp"
->>>>>>> a540a009 (Merge branch 'development' into master)
       font_size: ["40px", "40px", "40px", "40px", "40px"]
     content:
       text: ""
@@ -284,7 +280,3 @@ components:
         - heading: "Dive Deep, Code Strong"
           text: "Immerse yourself in coding with our hands-on curriculum. Learn not just to code but to excel, mastering the most relevant industry skills that set you apart."
           icon: "check"
-<<<<<<< HEAD
-=======
-
->>>>>>> a540a009 (Merge branch 'development' into master)
