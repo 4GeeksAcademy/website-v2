@@ -6,7 +6,7 @@ meta_info:
   description: "Elevate your skills and launch your dream tech career with our web development bootcamp experience"
   image: "/images/bg/main-bg.jpg"
   keywords: ""
-  visibility: "hidden" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
+  visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   template: "landing_a" # <--- choose your landing template
   redirects: []
 
