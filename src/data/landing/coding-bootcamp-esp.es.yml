@@ -29,7 +29,7 @@ form:
   fields: ["full_name", "phone", "email"]
   #margin_md: "0 auto 0 -30px"
   heading: "Conoce más información"
-  button_label: Obtener más información
+  button_label: Rellena el formulario y obtén más información
   redirect: "/es/gracias" #you can redirect to another url or entirely diffrent website
     
   # jumbotron on the top (cannot be commented out)
