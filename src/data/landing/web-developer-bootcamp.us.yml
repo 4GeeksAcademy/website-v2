@@ -5,7 +5,7 @@ meta_info:
   title: "Elevate your skills and launch your dream tech career with our web development bootcamp experience"
   description: "Elevate your skills and launch your dream tech career with our web development bootcamp experience"
   image: "/images/bg/main-bg.jpg"
-  keywords: "web development bootcamp, full stack, full stack web developer bootcamp, programming bootcamp"
+  keywords: ""
   visibility: "hidden" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   template: "landing_a" # <--- choose your landing template
   redirects: []
