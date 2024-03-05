@@ -271,6 +271,6 @@ components:
       background: black
       color: white
       hover_color: "#white"
-      path: "#bottom"
+      path: "#leadform_bottom"
 
 
