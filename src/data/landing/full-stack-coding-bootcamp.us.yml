@@ -38,8 +38,8 @@ apply_schollarship: # form that is displayed at the end of the landing
 
 # jumbotron on the top (cannot be commented out)
 header_data:
-  tagline: Coding Bootcamp with unlimited mentorships and career support
-  sub_heading: "Become a Full Stack Developer in 18 weeks"
+  tagline: Full Stack Coding Bootcamp
+  sub_heading: "Become a Full Stack Developer in 18 weeks  with unlimited mentorships and career support"
   background: "#FFF1D1"
   badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
   image_filter: brightness(0.3)
@@ -58,8 +58,8 @@ features:
 follow_bar:
   position: "top" # top, bottom, hidden
   content:
-    text: "No Experience Needed! \nJoin Today to our Coding bootcamp"
-    text_mobile: "No Experience Needed! \nJoin Today to our Coding Bootcamp"
+    text: "No Experience Needed! \nJoin to our Full stack Coding bootcamp"
+    text_mobile: "No Experience Needed! \nJoin to our Full stack Coding bootcamp"
     # devices:   XL      LG    MD      SM    XS
     font_size: ["25px", "25px", "25px", "20px", "18px"]
   button:
@@ -153,10 +153,10 @@ components:
       src: "/images/woman-afro-with-laptop.webp"
       shadow: true
     section_heading:
-      text: "Launch Your Tech Career with no previous Experience with our Coding Bootcamp"
+      text: "Launch Your Tech Career with our Fullstack Coding Bootcamp"
       style: '{ "font-size": "30px"}'
     heading:
-      text: "Coding Bootcamp with Lifetime Learning Access"
+      text: "Fullstack Coding Bootcamp with Lifetime Learning Access"
     sub_heading:
       text: "Are you excited about technology but concerned about finding your first job? Traditional ways of learning can be costly and lengthy, leaving you lacking the hands-on experience and valuable connections necessary for success. Don't worry, that's where 4Geeks Academy coding boot camp with guaranteed job placement comes into play!"
     button:
@@ -184,7 +184,7 @@ components:
     layout: iconogram
     swipable: True
     heading:
-      text: "3 steps of our programming bootcamp"
+      text: "3 steps of our fullstack coding bootcamp"
       font_size: ["30px", "30px", "30px", "30px", "30px"]
     sub_heading:
       text: 'According to the U.S. Bureau of Labor Statistics, <strong style="font-weight: bold;">software developers in the U.S. have a higher than average job outlook and earn a median salary of $110,140 a year</strong>. Improve your chances to be one of them.'
