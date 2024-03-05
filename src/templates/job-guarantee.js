@@ -8,7 +8,7 @@ import {
 } from "../actions";
 import BaseRender from "./_baseLayout";
 import { Div, HR, GridContainer } from "../components/Sections";
-import { H2, H3, H4, Paragraph } from "../components/Heading";
+import { H1, H2, H3, H4, Paragraph } from "../components/Heading";
 import {
   Anchor,
   Button,
@@ -262,8 +262,8 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
           display_tablet="none"
         />
         <Div display="block">
-          <H2
-            type="h2"
+          <H1
+            type="h1"
             textAlign="center"
             fontSize="36px"
             fontSize_tablet="80px"
@@ -271,9 +271,10 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
             lineHeight_tablet="87px"
             margin_tablet="40px 0 40px 0"
             textTransform="uppercase"
+            fontFamily="Archivo, Lato, sans-serif"
           >
             {yml.header.title}
-          </H2>
+          </H1>
           <Paragraph
             color="black"
             opacity="1"
@@ -381,7 +382,7 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
 
       <WeTrust we_trust={yml.we_trust_section} />
 
-      <Div display="block" margin="40px 0px">
+      <Div display="block" margin="60px 0 100px 0">
         <Div display="block" margin="0 auto 40px 0" padding="0 20px">
           <H2 margin="0 0 15px 0">{yml.how_it_works.title}</H2>
           <Paragraph color="#000" opacity="1" fontSize="18px">
@@ -491,7 +492,7 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
         )}
       </Div>
       <Div
-        background={Colors.lightGray}
+        background="#FAFAFA"
         padding="30px"
         padding_tablet="80px 70px"
         gap="10px"
