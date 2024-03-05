@@ -38,7 +38,7 @@ apply_schollarship: # form that is displayed at the end of the landing
 
 # jumbotron on the top (cannot be commented out)
 header_data:
-  tagline: Coding Bootcamps for Beginners No Experience Needed
+  tagline: Coding Bootcamp for Beginners No Experience Needed
   sub_heading: "Our program teaches you in-demand web development skills without requiring a degree"
   background: "#FFF1D1"
   badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
