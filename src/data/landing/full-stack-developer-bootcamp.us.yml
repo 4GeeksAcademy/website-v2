@@ -17,6 +17,11 @@ meta_info:
   automation: soft # comma separated, "soft" is the default value
   tag: request_more_info # comma separated, "request_more_info" is the default value
 
+navbar:
+  logoUrl: "#"
+  buttonText: "Request Information" # this modifies the button text in the navbar
+  buttonUrl: "#leadform_bottom" #accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
+
 form:
   # posible fields: "first_name", "last_name", "full_name", "phone", "email"
   # always the first_name, email and phone will be mandatory if added.
@@ -53,8 +58,8 @@ features:
 follow_bar:
   position: "top" # top, bottom, hidden
   content:
-    text: "Enroll in Our Full-Stack Developer Bootcamp 18-week program Today!"
-    text_mobile: "Enroll in Our Full-Stack Developer Bootcamp 18-week program Today!."
+    text: "Enroll in Our Full-Stack Developer Bootcamp \n18-week program Today!"
+    text_mobile: "Enroll in Our Full-Stack Developer Bootcamp \n18-week program Today!."
     # devices:   XL      LG    MD      SM    XS
     font_size: ["25px", "25px", "25px", "20px", "18px"]
   button:
@@ -100,7 +105,7 @@ badges:
 
 geeks_vs_others:
   position: 7
-  heading: "What makes this Full Stack Coding Bootcamp so successful?"
+  heading: "What makes this Full Stack Developer Bootcamp so successful?"
   paragraph: ""
   total_rows: 5
 
@@ -146,17 +151,16 @@ components:
     image:
       style: '{"backgroundSize": "cover"}'
       src: "/images/woman-afro-with-laptop.webp"
-      link: "https://google.com" # take uses somewhere when they click on the image
       shadow: true
     section_heading:
       text: "Launch Your Tech Career with 4Geeks Academy Full-Stack Developer Bootcamp"
       style: '{ "font-size": "30px"}'
     heading:
-      text: "Lifetime learning access"
+      text: "Become a full-stack developer in just 18 weeks"
     sub_heading:
       text: "Are you excited about technology but concerned about finding your first job? Traditional ways of learning can be costly and lengthy, leaving you lacking the hands-on experience and valuable connections necessary for success. Don't worry, that's where 4Geeks Academy's Full-Stack Developer Bootcamp with guaranteed job placement comes into play!"
     button:
-      text: "APPLY NOW!"
+      text: "Request more Information"
       color: white
       hover_color: "white"
       background: "black"
@@ -180,7 +184,7 @@ components:
     layout: iconogram
     swipable: True
     heading:
-      text: "3 step programming bootcamp"
+      text: "3 steps of our Fullstack Developer Bootcamp"
       font_size: ["30px", "30px", "30px", "30px", "30px"]
     sub_heading:
       text: 'According to the U.S. Bureau of Labor Statistics, <strong style="font-weight: bold;">software developers in the U.S. have a higher than average job outlook and earn a median salary of $110,140 a year</strong>. Improve your chances to be one of them.'
