@@ -78,7 +78,7 @@ const Footer = ({ yml }) => {
           gridArea_tablet="1/1/2/3"
         >
           <RoundImage
-            url="/images/4Geeks-new-logo.png"
+            url="/images/4geeksacademy-logo-old.png"
             height="43px"
             width="143px"
             backgroundColor="transparent"
