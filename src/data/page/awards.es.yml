@@ -21,7 +21,7 @@ awards_list:
 
   - image: "../../../static/images/badges/forbes-logo-award.png"
     title: "Los mejores Bootcamps Online del 2024"
-    paragraph: "Hemos sido seleccionados por forbes como uno de los mejores bootcamps de programación para este 2024."
+    paragraph: "Hemos sido seleccionados por Forbes como uno de los mejores bootcamps de programación para este 2024."
     link: "https://www.forbes.com/advisor/education/bootcamps/best-full-stack-developer-bootcamp/#4geeks_academy_full_stack_developer_bootcamp_section"
     text_link: Ver Articulo
 
