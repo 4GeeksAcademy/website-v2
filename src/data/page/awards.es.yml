@@ -19,6 +19,12 @@ awards_list:
   #   title: "Departamento de Education de EEUU"
   #   paragraph: "Los Estados Unidos de America se aseguran de la calidad de la educación a través de los departamentos de educación a nivel federal. Contar con la certificación significa que estamos comprometidos a cumplir con todas las regulaciones nacionales y estatales y a ser supervisados y auditados anualmente para asegurar el éxito de la academia."
 
+  - image: "../../../static/images/badges/forbes-logo-award.png"
+    title: "Los mejores Bootcamps Online del 2024"
+    paragraph: "Hemos sido seleccionados por forbes como uno de los mejores bootcamps de programación para este 2024."
+    link: "https://www.forbes.com/advisor/education/bootcamps/best-full-stack-developer-bootcamp/#4geeks_academy_full_stack_developer_bootcamp_section"
+    text_link: Ver Articulo
+
   - image: "../../../static/images/badges/Course-Report-Badge-2024.webp"
     title: "Mejor bootcamp de programación para Course Report 2024"
     paragraph: "Tenemos 3 años consecutivos siendo reconocidos por Course Report como uno de los mejores bootcamp de programación del mundo."
