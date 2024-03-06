@@ -6,7 +6,7 @@ meta_info:
   title: "Coding Bootcamp enfocado solo en enseñarte a programar"
   description: "La Escuela de programación esencial para tu éxito profesional, únete a 4Geeks Academy, el Coding Bootcamp número uno en Latinoamérica."
   image: "../../../static/images/bg/main-bg.jpg"
-  keywords: "Coding Bootcamp, it bootcamp, programming bootcamp, web development bootcamp, escuela de programacion, bootcamp online"
+  keywords: ""
 
   template: "landing_a" # <--- choose your landing template
   redirects: [] # <--- URL redirections to avoid 404 errors
@@ -190,7 +190,7 @@ components:
       text: ""
       style: '{ "font-size": "30px" }'
     heading:
-      text: "Web Development Bootcamp"
+      text: "¿Cansado de tu trabajo? Cambia tu vida con un Coding Bootcamp"
       font_size: ["40px", "40px", "40px", "40px", "40px"]
     sub_heading:
       text: ""
