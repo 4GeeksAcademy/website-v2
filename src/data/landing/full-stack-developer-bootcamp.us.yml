@@ -58,8 +58,8 @@ features:
 follow_bar:
   position: "top" # top, bottom, hidden
   content:
-    text: "Enroll in Our Full-Stack Developer Bootcamp 18-week program Today!"
-    text_mobile: "Enroll in Our Full-Stack Developer Bootcamp 18-week program Today!."
+    text: "Enroll in Our Full-Stack Developer Bootcamp \n18-week program Today!"
+    text_mobile: "Enroll in Our Full-Stack Developer Bootcamp \n18-week program Today!."
     # devices:   XL      LG    MD      SM    XS
     font_size: ["25px", "25px", "25px", "20px", "18px"]
   button:
@@ -156,7 +156,7 @@ components:
       text: "Launch Your Tech Career with 4Geeks Academy Full-Stack Developer Bootcamp"
       style: '{ "font-size": "30px"}'
     heading:
-      text: "Lifetime learning access"
+      text: "Become a full-stack developer in just 18 weeks"
     sub_heading:
       text: "Are you excited about technology but concerned about finding your first job? Traditional ways of learning can be costly and lengthy, leaving you lacking the hands-on experience and valuable connections necessary for success. Don't worry, that's where 4Geeks Academy's Full-Stack Developer Bootcamp with guaranteed job placement comes into play!"
     button:
