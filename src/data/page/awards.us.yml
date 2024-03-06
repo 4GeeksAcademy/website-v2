@@ -26,6 +26,12 @@ awards_list:
     link: "https://www.coursereport.com/best-coding-bootcamps"
     text_link: See article
 
+  - image: "../../../static/images/badges/ebootcamp-top.png"
+    title: "Best Bootcamp Ebootcamp for 2024"
+    paragraph: "We've been nominated by eBootcamp as the top coding bootcamp for 2024"
+    link: "https://ebootcamp.net/top-bootcamps-programacion/"
+    text_link: See article
+
   - image: "../../../static/images/badges/switchup-badge-2023.png"
     title: "Best Bootcamp according to Switchup 2023"
     paragraph: "Not only in Florida, but over each of our campus 4Geeks is constantly keeping a ~5 start rating that makes us one of the top bootcamp in the world"
