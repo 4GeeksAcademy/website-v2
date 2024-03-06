@@ -6,17 +6,21 @@ meta_info:
   description: "Learn in-demand programming skills close to home with our convenient bootcamp locations"
   image: "/images/bg/main-bg.jpg"
   keywords: "full stack, full stack coding bootcamp, programming bootcamp, Coding Classes, Learn to code, 4Geeks Academy"
-  visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
+  visibility: "hidden" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   template: "landing_a" # <--- choose your landing template
   redirects: []
 
   # Set a particular course or location to the landing page
   # this UTM fields will be also included in the CRM contact
   utm_course: ["full-stack"]
-  utm_location:
-    ["downtown-miami","atlanta-usa","chicago-usa","dublin-ireland","europe","hamburg-germany","houston-usa","losangeles-usa","munich-germany","newyork-usa","online","toronto-canada",]
+  utm_location: ["downtown-miami"]
   automation: soft # comma separated, "soft" is the default value
   tag: request_more_info # comma separated, "request_more_info" is the default value
+
+navbar:
+  logoUrl: "#"
+  buttonText: "Request Information" # this modifies the button text in the navbar
+  buttonUrl: "#leadform_bottom" #accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
 
 form:
   # posible fields: "first_name", "last_name", "full_name", "phone", "email"
@@ -34,8 +38,8 @@ apply_schollarship: # form that is displayed at the end of the landing
 
 # jumbotron on the top (cannot be commented out)
 header_data:
-  tagline: Coding Bootcamp with unlimited mentorships and career support
-  sub_heading: "Become a Full Stack Developer in 18 weeks"
+  tagline: Full Stack Coding Bootcamp
+  sub_heading: "Become a Full Stack Developer in 18 weeks  with unlimited mentorships and career support"
   background: "#FFF1D1"
   badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
   image_filter: brightness(0.3)
@@ -54,8 +58,8 @@ features:
 follow_bar:
   position: "top" # top, bottom, hidden
   content:
-    text: "No Experience Needed! Join Today and Take the First Step Towards Your Dream Job"
-    text_mobile: "No Experience Needed! Join Today and Take the First Step Towards Your Dream Job."
+    text: "No Experience Needed! \nJoin to our Full stack Coding bootcamp"
+    text_mobile: "No Experience Needed! \nJoin to our Full stack Coding bootcamp"
     # devices:   XL      LG    MD      SM    XS
     font_size: ["25px", "25px", "25px", "20px", "18px"]
   button:
@@ -65,6 +69,10 @@ follow_bar:
     text: "Call"
 
 short_badges:
+  - name: "Ebootcamp"
+    url: ""
+    image: "../../../static/images/badges/ebootcamp-top.png"
+    alt: "Top Coding Bootcamp"
   - name: "Premios Tecnologia Siglo XXI"
     url: ""
     image: "../../../static/images/awards/premios_tecnologia_sigloxxi.png"
@@ -143,18 +151,16 @@ components:
     image:
       style: '{"backgroundSize": "cover"}'
       src: "/images/woman-afro-with-laptop.webp"
-      link: "https://google.com" # take uses somewhere when they click on the image
       shadow: true
     section_heading:
-      text: |
-        Launch Your Tech Career with no previous Experience
+      text: "Launch Your Tech Career with our Fullstack Coding Bootcamp"
       style: '{ "font-size": "30px"}'
     heading:
-      text: "Lifetime learning access"
+      text: "Fullstack Coding Bootcamp with Lifetime Learning Access"
     sub_heading:
       text: "Are you excited about technology but concerned about finding your first job? Traditional ways of learning can be costly and lengthy, leaving you lacking the hands-on experience and valuable connections necessary for success. Don't worry, that's where 4Geeks Academy coding boot camp with guaranteed job placement comes into play!"
     button:
-      text: "APPLY NOW!"
+      text: "Request more information"
       color: white
       hover_color: "white"
       background: "black"
@@ -178,7 +184,7 @@ components:
     layout: iconogram
     swipable: True
     heading:
-      text: "3 step programming bootcamp"
+      text: "3 steps of our fullstack coding bootcamp"
       font_size: ["30px", "30px", "30px", "30px", "30px"]
     sub_heading:
       text: 'According to the U.S. Bureau of Labor Statistics, <strong style="font-weight: bold;">software developers in the U.S. have a higher than average job outlook and earn a median salary of $110,140 a year</strong>. Improve your chances to be one of them.'
@@ -269,9 +275,6 @@ components:
           icon: "check"
         - heading: "Fits Your Life"
           text: "Don't put your life on hold for your tech dreams. Our part-time, flexible programs seamlessly fit into your schedule, letting you pursue your goals without compromising your life."
-          icon: "check"
-        - heading: "Career Support for Life"
-          text: "We're with you beyond graduation. Get continuous job placement assistance, refine your soft skills, and receive support throughout your entire tech career."
           icon: "check"
         - heading: "Dive Deep, Code Strong"
           text: "Immerse yourself in coding with our hands-on curriculum. Learn not just to code but to excel, mastering the most relevant industry skills that set you apart."

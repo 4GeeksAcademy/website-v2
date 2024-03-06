@@ -2,29 +2,33 @@ meta_info:
   slug: no-experience-coding-bootcamp # <--- URL 4geeksacademy.com/us/landing/example
 
   # This will show on social media when shared
-  title: "Gain a Lifetime of Tech Skills with 4Geeks Academy Coding Bootcamp"
+  title: "Gain a Lifetime of Tech Skills with 4Geeks Academy Coding Bootcamp no experience needed"
   description: "Learn in-demand programming skills with no experience with our Coding bootcamp"
   image: "/images/bg/main-bg.jpg"
-  keywords: "coding bootcamp without degree, coding bootcamp no experience, coding bootcamp with job placement, full stack, full stack coding bootcamp, programming bootcamp, Coding Classes, Learn to code, 4Geeks Academy"
-  visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
+  keywords: ""
+  visibility: "hidden" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   template: "landing_a" # <--- choose your landing template
   redirects: []
 
   # Set a particular course or location to the landing page
   # this UTM fields will be also included in the CRM contact
   utm_course: ["full-stack"]
-  utm_location:
-    ["downtown-miami","atlanta-usa","chicago-usa","dublin-ireland","europe","hamburg-germany","houston-usa","losangeles-usa","munich-germany","newyork-usa","online","toronto-canada",]
+  utm_location: ["downtown-miami"]
   automation: soft # comma separated, "soft" is the default value
   tag: request_more_info # comma separated, "request_more_info" is the default value
+
+navbar:
+  logoUrl: "#"
+  buttonText: "Request Information" # this modifies the button text in the navbar
+  buttonUrl: "#leadform_bottom" #accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
 
 form:
   # posible fields: "first_name", "last_name", "full_name", "phone", "email"
   # always the first_name, email and phone will be mandatory if added.
   fields: ["full_name", "phone", "email"]
-  heading: "Get more information"
-  motivation: "Get a PDF and email in just 5 minutes"
-  button_label: Get more information
+  heading: "Get more information in minutes"
+  motivation: "After submitting the form, you will receive an email from the advisor with information about the programming bootcamp, campus, community, outcomes, scholarships, financing, syllabus, and support."
+  button_label: Request More Information
   redirect: null #you can redirect to another url or entirely diffrent website
 
 apply_schollarship: # form that is displayed at the end of the landing
@@ -34,7 +38,7 @@ apply_schollarship: # form that is displayed at the end of the landing
 
 # jumbotron on the top (cannot be commented out)
 header_data:
-  tagline: Become a Full-Stack Developer with no previous coding experience
+  tagline: Coding Bootcamp for Beginners No Experience Needed
   sub_heading: "Our program teaches you in-demand web development skills without requiring a degree"
   background: "#FFF1D1"
   badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
@@ -143,13 +147,12 @@ components:
     image:
       style: '{"backgroundSize": "cover"}'
       src: "/images/woman-afro-with-laptop.webp"
-      link: "https://google.com" # take uses somewhere when they click on the image
       shadow: true
     section_heading:
       text: "Launch Your Tech Career Without Previous Experience"
       style: '{ "font-size": "30px"}'
     heading:
-      text: "From zero to job-ready coding skills in just months"
+      text: "From zero to Code with our Coding Bootcamp, no experience is requiered"
     sub_heading:
       text: "Don't let a traditional degree hold you back from your tech dreams. 4Geeks Academy's Full-Stack Bootcamp provides intensive, hands-on training that equips you with the in-demand skills employers seek, regardless of your previous background. Our immersive program focuses on practical learning, building a strong portfolio, and career support to jumpstart your journey in the exciting world of software development."
     button:
@@ -177,7 +180,7 @@ components:
     layout: iconogram
     swipable: True
     heading:
-      text: "How It Works?"
+      text: "Do I need experience or a degree?, NO!"
       font_size: ["30px", "30px", "30px", "30px", "30px"]
     sub_heading:
       text: 'More than just learning to code, 4Geeks Academy prepares you for the job market. Our Full-Stack Bootcamp goes beyond technical skills, incorporating career coaching, resume writing workshops, and mock interviews to ensure you stand out in the application process.'
@@ -186,13 +189,13 @@ components:
     text_link: "/"
     icons:
       - icon: "graduation-2"
-        title: "Join to 4Geeks Academy"
+        title: "1.- Join to 4Geeks Academy"
         content: "Unleash your potential in tech. Learn from industry experts, connect with a growing community, network with leaders, and showcase your skills."
       - icon: "laptop_new"
-        title: "Immerse & Code"
+        title: "2.- Code Immerse"
         content: "Dive into interactive learning with live online classes and access to recorded materials for deeper understanding. Tackle challenging hands-on projects using in-demand tools and frameworks."
       - icon: "stairswflag"
-        title: "Job placement"
+        title: "3.- Career Support guarantee"
         content: "Our program guarantees to equip you with the most in-demand skills, connect you with top companies, and help you secure your dream job (we mean it!)."
 
   - name: geekinfo_2
@@ -270,7 +273,7 @@ components:
       text: "We are all in with you, every step of the way! Secure a job within 6 months of graduation"
       font_size: ["16px", "16px", "16px", "16px", "16px"]
     button:
-      text: "Apply now"
+      text: "Request more info"
       color: white
       hover_color: "white"
       background: "black"
@@ -303,8 +306,8 @@ components:
       link: "https://www.switchup.org/bootcamps/4geeks-academy"
     video: "EcqasocRKHo"
     heading:
-      text: "Alissa Landra, Campus Manager USA at 4Geeks Academy, dives into the exciting possibilities of our Coding Bootcamp"
-      font_size: ["40px", "40px", "40px", "40px", "40px"]
+      text: "Coding Bootcamp designed to equip you with the essential skills and knowledge to launch your tech career, even without a degree."
+      font_size: ["26px", "26px", "26px", "26px", "26px"]
     content:
       text: "Discover how 4Geeks Academy empowers individuals of all backgrounds to master in-demand skills and land fulfilling tech jobs, regardless of their academic history."
       font_size: ["16px"]

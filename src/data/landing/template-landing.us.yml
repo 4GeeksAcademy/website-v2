@@ -163,7 +163,6 @@ components:
     image:
       style: "{}"
       src: "/images/landing/feliz-empresario.png"
-      link: "https://google.com" # take uses somewhere when they click on the image
       shadow: true
     heading: 
       text: "Finance your future"
@@ -188,7 +187,6 @@ components:
     image:
       style: "{}"
       src: "/images/landing/grupo-ventanas.png"
-      link: "https://google.com" # take uses somewhere when they click on the image
       shadow: true
     section_heading: 
       text: "Finance your future"
@@ -224,7 +222,6 @@ components:
     image: 
       style: "{}"
       src: "/images/landing/hombre-con-laptop.png"
-      link: "https://google.com" # take uses somewhere when they click on the image
     heading: 
       text: "Escúchalo de nuestros alumnos"
                   #xl      lg     md     sm    xs
