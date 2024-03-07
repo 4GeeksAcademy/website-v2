@@ -3,7 +3,7 @@ meta_info:
 
   visibility: "hidden" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   # This will show on social media when shared
-  title: "500.000€ en becas ¡Aplica ahora!"
+  title: "500.000€ en becas ¡Solicita tu plaza!"
   description: "Aprende Data Science y Machine Learning, en 4Geeks Academy España a un precio imbatible. Becas superiores al 40%. ¡Lanza tu carrera!"
   image: "/images/bg/remote.jpeg"
   keywords: "Data Science, Analista de Datos, 4Geeks academy, aprende programación, aprende ingeniería informática, aprende Inteligencia Artificial, aprende Data Science, aprende Machine Learning, ticjob"
@@ -31,6 +31,11 @@ form:
   heading: "Solicita tu beca"
   button_label: Solicita Tu beca
   redirect: "/es/gracias" #you can redirect to another url or entirely diffrent website
+
+apply_schollarship: # form that is displayed at the end of the landing
+  # title: "Apoyo Profesional Ilimitado"
+  imageSide: "left"
+  image: "../../../static/images/landing/apply.png"
 
 # jumbotron on the top (cannot be commented out)
 header_data:
@@ -136,7 +141,7 @@ components:
     layout: iconogram
     swipable: True
     heading:
-      text: ""
+      text: "¿Cómo solicitar tu plaza?"
       font_size: ["30px", "30px", "30px", "30px", "30px"]
     sub_heading:
       text: ""
@@ -145,13 +150,13 @@ components:
     text_link: "#"
     icons:
     - icon: "touch"
-      title: Completa el formulario
+      title: 1. Completa el formulario
     - icon: "receive_mail"
-      title: Recibirás un correo electrónico con toda la información para avanzar en el proceso
+      title: 2. Recibirás un correo electrónico con toda la información para avanzar en el proceso
     - icon: "talk"
-      title: Haz una entrevista personal vía telefónica con el equipo de admisiones
-    - icon: "terminal"
-      title: Reserva tu plaza y ¡acelera tu carrera!
+      title: 3. Haz una entrevista personal vía telefónica con el equipo de admisiones
+    - icon: "stairswflag"
+      title: 4. Reserva tu plaza y ¡acelera tu carrera!
 
   # - name: python_y_javascript
   #   position: 8
@@ -183,7 +188,4 @@ why_4geeks:
     text: Ver opciones de financiación
     text_link: ""
 
-apply_schollarship: # form that is displayed at the end of the landing
-  # title: "Apoyo Profesional Ilimitado"
-  imageSide: "right"
-  image: "../../../static/images/landing/apply.png"
+
