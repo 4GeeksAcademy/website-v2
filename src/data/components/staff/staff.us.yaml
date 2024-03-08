@@ -71,42 +71,6 @@ staff:
     coding_skills:
       - 
     location: ["all"]
-  - name: "Maria Fernanda"
-    last_name: "Castro"
-    nick_name: ""
-    slug: "mafe-castrp"
-    job_title: "CMO"
-    bio: "Leading the efforts of our Marketing Department for our HP operations."
-    github: ""
-    linkdin: "https://www.linkedin.com/in/mafecasvi/"
-    twitter: "https://twitter.com/mafecasvi"
-    website: ""
-    image: "../../../../static/images/staff/mariafernanda.jpg"
-    age: 35
-    interests:
-      - Fashion Design
-    coding_skills:
-      - Bootstrap
-    location: ["all"]
-  - name: "Pablo"
-    last_name: "Bullor"
-    nick_name: "Pablo"
-    slug: "pablo-bullor"
-    job_title: "Lead Mentor"
-    bio: "Systems Engineer with more than 10 years of experience in IT."
-    github: "https://github.com/pbullor"
-    linkdin: "https://www.linkedin.com/in/pablobullor/"
-    twitter: ""
-    website: ""
-    image: "../../../../static/images/staff/pablobullor2.jpg"
-    age: 42
-    interests:
-      - Board Games
-      - Soccer
-      - Music
-    coding_skills:
-      - Javascript and Python
-    location: ["all"]
   - name: "Macarena"
     last_name: "Rebolledo"
     nick_name: "Macarena"
@@ -126,3 +90,141 @@ staff:
     coding_skills:
       - Javascript and Python
     location: ["all"]    
+  - name: "Pablo"
+    last_name: "Bullor"
+    nick_name: "Pablo"
+    slug: "pablo-bullor"
+    job_title: "Program Manager Latam"
+    bio: "Systems Engineer with more than 10 years of experience in IT."
+    github: "https://github.com/pbullor"
+    linkdin: "https://www.linkedin.com/in/pablobullor/"
+    twitter: ""
+    website: ""
+    image: "../../../../static/images/staff/pablobullor2.jpg"
+    age: 42
+    interests:
+      - Board Games
+      - Soccer
+      - Music
+    coding_skills:
+      - Javascript and Python
+    location: ["all"]
+  - name: "Valentina"
+    last_name: "Ancieta"
+    nick_name: ""
+    slug: "Vale-anci"
+    job_title: "Career Support USA & Latam"
+    bio: ""
+    github: ""
+    linkdin: "https://www.linkedin.com/in/valentinaancieta/"
+    twitter: ""
+    website: ""
+    image: "../../../../static/images/staff/valentina-ancieta.jpg"
+    age: 26
+    interests:
+      -
+    coding_skills:
+      - 
+    location: ["all"]
+  - name: "Tomas"
+    last_name: "Gonzalez"
+    nick_name: ""
+    slug: "tom-gon"
+    job_title: "Product Manager"
+    bio: ""
+    github: ""
+    linkdin: "https://www.linkedin.com/in/tomasgonzaleza/"
+    twitter: ""
+    website: ""
+    image: "../../../../static/images/staff/tomas-gonzalez.jpg"
+    age: 28
+    interests:
+      -
+    coding_skills:
+      - 
+    location: ["all"]
+  - name: "Martha"
+    last_name: "López"
+    nick_name: ""
+    slug: "mart-lop"
+    job_title: "Culture & Recruitment Analyst"
+    bio: ""
+    github: ""
+    linkdin: "https://www.linkedin.com/in/martha-lópez-929b55145/"
+    twitter: ""
+    website: ""
+    image: "../../../../static/images/staff/marta-lopez.jpg"
+    age: 26
+    interests:
+      -
+    coding_skills:
+      - 
+    location: ["all"]
+  - name: "Gustavo"
+    last_name: "Marquez"
+    nick_name: ""
+    slug: "gusmar"
+    job_title: "Software Engineer"
+    bio: ""
+    github: ""
+    linkdin: "https://www.linkedin.com/in/gustavo-marquez-ing/"
+    twitter: ""
+    website: ""
+    image: "../../../../static/images/staff/gustavo-marquez.jpg"
+    age: 25
+    interests:
+      -
+    coding_skills:
+      - 
+    location: ["all"]
+  - name: "María"
+    last_name: "Miranda"
+    nick_name: ""
+    slug: "mamira"
+    job_title: "Product Marketing Developer Europa"
+    bio: ""
+    github: ""
+    linkdin: "https://www.linkedin.com/in/maria-miranda-marketing/"
+    twitter: ""
+    website: ""
+    image: "../../../../static/images/staff/maria-miranda.jpg"
+    age: 26
+    interests:
+      -
+    coding_skills:
+      - 
+    location: ["all"]
+  - name: "Ariana"
+    last_name: "Sánchez"
+    nick_name: ""
+    slug: "arisan"
+    job_title: "Culture & Talent Leader"
+    bio: ""
+    github: ""
+    linkdin: "https://www.linkedin.com/in/ariana-sánchez-7720aa78/"
+    twitter: ""
+    website: ""
+    image: "../../../../static/images/staff/ariana-sanchez.jpg"
+    age: 30
+    interests:
+      -
+    coding_skills:
+      - 
+    location: ["all"]
+  - name: "Ivan"
+    last_name: "Aranzazu"
+    nick_name: ""
+    slug: "ivan-aran"
+    job_title: "Operational Coordinator"
+    bio: ""
+    github: ""
+    linkdin: "https://www.linkedin.com/in/ivan-aranzazu-56651a87/"
+    twitter: ""
+    website: ""
+    image: "../../../../static/images/staff/ivan-aranzazu.jpg"
+    age: 32
+    interests:
+      -
+    coding_skills:
+      - 
+    location: ["all"]
