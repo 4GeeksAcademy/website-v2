@@ -86,7 +86,7 @@ iconogram:
   button:
     text: "Condiciones aplican."
     color: ""
-    path: "#top"
+    path: "#prices_and_payment"
     background: ""
     hover_color: ""
 
