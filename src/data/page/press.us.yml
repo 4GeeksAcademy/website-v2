@@ -15,8 +15,24 @@ header:
 
 content:
   heading: "Read about this coding bootcamp in the news..."
-  limit: 7
+  limit: 9
   news:
+    - name: "Global Miami"
+      logo: "../../../static/images/news/Global-Miami-Logo.webp"
+      location: ["downtown-miami", "online", "madrid-spain"]
+      image: "../../../static/images/the-academy/4geeks-academy-founders.webp"
+      title: "The future Workforce"
+      text: "Since tech training boot camps are skills-based and shorter than an academic degree program, they can be an effective way to reach the incumbet workforce."
+      textUrl: "Read Article"
+      url: "https://issuu.com/coralgablesmagazine.com/docs/gm_jan-feb_2024_fullissue/74?ff"
+    - name: "Forbes"
+      logo: "../../../static/images/news/forbes.png"
+      location: ["downtown-miami", "online", "madrid-spain"]
+      image: "../../../static/images/partner/forbes-coder.jpg"
+      title: "5 Best Online Full-Stack Bootcamps Of 2024"
+      text: "Full-stack developers create and troubleshoot both the back-end and front-end of websites and software—an indispensable skill set for companies across industries."
+      textUrl: "Read Article"
+      url: "https://www.forbes.com/advisor/education/bootcamps/best-full-stack-developer-bootcamp/"
     - name: "Forbes"
       logo: "../../../static/images/news/forbes.png"
       location: ["downtown-miami", "online", "madrid-spain"]

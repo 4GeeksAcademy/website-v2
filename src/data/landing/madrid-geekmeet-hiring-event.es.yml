@@ -81,7 +81,7 @@ follow_bar:
     font_size: ["25px", "25px", "25px", "20px", "18px"]
   button:
     text: "¡Quiero asistir!"
-    path: "#top"
+    path: "#leadform_header"
   phone:
     text: "Llámanos "
 
@@ -129,7 +129,7 @@ components:
       font_size: ["16px"]
     button:
       text: "¡Confirmar asistencia!"
-      path: "#bottom"
+      path: "#leadform_bottom"
       color: "white"
       background: "black"
       hover: "lightBlue"
@@ -171,7 +171,7 @@ components:
       font_size: ["16px"]
     button:
       text: "¡Confirmar asistencia!"
-      path: "#bottom"
+      path: "#leadform_bottom"
       color: "white"
       background: "black"
       hover: "lightBlue"
