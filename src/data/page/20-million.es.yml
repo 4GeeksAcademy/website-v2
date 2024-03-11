@@ -53,7 +53,7 @@ two_column_left:
     color: white
     background: blue
     hover_color: white
-    path: "#bottom"
+    path: "#leadform_bottom"
 form:
   title: Conviertete en un 4Geeks Partner
   paragraph: |

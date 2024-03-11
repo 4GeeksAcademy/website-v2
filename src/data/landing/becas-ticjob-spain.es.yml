@@ -21,7 +21,7 @@ meta_info:
 navbar:
   logoUrl: "#" # relative(/apply), absolute(https://google.com) or id(#componentName)
   buttonText: "Aplica ahora"
-  buttonUrl: "#bottom" # url accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
+  buttonUrl: "#leadform_bottom" # url accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
 
 form:
   # posible fields: "first_name", "last_name", "full_name", "phone", "email"
@@ -61,7 +61,7 @@ follow_bar:
     font_size: ["24px", "24px", "24px", "18px", "4.3vw"]
   button:
     text: "Aplica ya"
-    path: "#top" #top, #bottom, #anotherComponentId
+    path: "#leadform_header" #top, #bottom, #anotherComponentId
     # ├──if path is empty("") it point to top per default ("#" -> points to top)
     # └── path accepts: relative(/example/path), absolute(https://google.com) or id(#idName)
   phone:
@@ -104,7 +104,7 @@ about4Geeks:
     - title: "Acceso 24/7 a nuestra plataforma de aprendizaje y comunidad de +3000 Developers."
   paragraph: ""
   button_text: "Aplica ahora"
-  button_link: "#" # accepts url: relative(/us/apply), absolute(https://google.com) or component id(#componentName)
+  button_link: "#leadform_header" # accepts url: relative(/us/apply), absolute(https://google.com) or component id(#componentName)
   image: "../../../static/images/bg/remote.jpeg"
   image_mobile: "../../../static/images/bg/remote.jpeg"
 
@@ -140,7 +140,7 @@ components:
       text: ""
       font_size: ["16px", "16px", "16px", "16px", "16px"]
       style: '{ "textAlign": "center", "width": "60%" }'
-    text_link: "#"
+    text_link: "#leadform_header"
     icons:
     - icon: "touch"
       title: Completa el formulario
