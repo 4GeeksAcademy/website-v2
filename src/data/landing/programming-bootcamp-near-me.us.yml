@@ -1,45 +1,46 @@
 meta_info:
-  slug: web-developer-bootcamp # <--- URL 4geeksacademy.com/us/landing/example
+  slug: programming-bootcamp-near-me # <--- URL 4geeksacademy.com/us/landing/example
 
   # This will show on social media when shared
-  title: "Elevate your skills and launch your dream tech career with our web development bootcamp experience"
-  description: "Elevate your skills and launch your dream tech career with our web development bootcamp experience"
+  title: "Gain a lifetime of tech skills with our Fullstack Coding Bootcamp near your location"
+  description: "Learn in-demand programming skills close to home with our convenient bootcamp locations."
   image: "/images/bg/main-bg.jpg"
-  keywords: ""
-  visibility: "hidden" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
+  keywords: "programming bootcamp near me, programming bootcamp, Coding Classes, Learn to code, 4Geeks Academy"
+  visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   template: "landing_a" # <--- choose your landing template
   redirects: []
 
   # Set a particular course or location to the landing page
   # this UTM fields will be also included in the CRM contact
   utm_course: ["full-stack"]
-  utm_location: ["downtown-miami"]
+  utm_location:
+    ["downtown-miami","atlanta-usa","chicago-usa","dublin-ireland","europe","hamburg-germany","houston-usa","losangeles-usa","munich-germany","newyork-usa","online","toronto-canada",]
   automation: soft # comma separated, "soft" is the default value
   tag: request_more_info # comma separated, "request_more_info" is the default value
 
 navbar:
+  buttonText: "Request more Info"
+  buttonUrl: "#leadform_bottom" # url accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
   logoUrl: "#"
-  buttonText: "Apply" # this modifies the button text in the navbar
-  buttonUrl: "#leadform_bottom" #accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
 
 form:
   # posible fields: "first_name", "last_name", "full_name", "phone", "email"
   # always the first_name, email and phone will be mandatory if added.
   fields: ["full_name", "phone", "email"]
-  heading: "Apply now, and change your life!"
-  motivation: "Upon applying, expect a personalized advisor email, comprehensive program details, financial insights, syllabus, and mentorship information."
-  button_label: Apply Now
+  heading: "Get more information in minutes"
+  motivation: "After submitting the form, you will receive an email from the advisor with information about the programming bootcamp, locations, campus, community, outcomes, scholarships, financing, syllabus, and support."
+  button_label: Request More Information
   redirect: null #you can redirect to another url or entirely diffrent website
 
 apply_schollarship: # form that is displayed at the end of the landing
-  title: "Apoyo Profesional Ilimitado"
+  # title: "Apoyo Profesional Ilimitado"
   imageSide: "left"
   image: "../../../static/images/landing/apply.png"
 
 # jumbotron on the top (cannot be commented out)
 header_data:
-  tagline: "Web Developer Bootcamp: Code Your Career Potential"
-  sub_heading: "Become a web developer with our coding bootcamp in just 18 weeks"
+  tagline: Explore 4Geeks Academy's programming bootcamps near you
+  sub_heading: "Master in-demand coding skills with our immersive programming bootcamps near you. We have several locations around the world and online."
   background: "#FFF1D1"
   badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
   image_filter: brightness(0.3)
@@ -58,13 +59,13 @@ features:
 follow_bar:
   position: "top" # top, bottom, hidden
   content:
-    text: "Master Web Development\n Join 4Geeks Academy's Bootcamp"
-    text_mobile: "Master Web Development\n Join 4Geeks Academy's Bootcamp"
+    text: "Become a full-stack developer \nnear your location"
+    text_mobile: "Become a full-stack developer \nnear your location"
     # devices:   XL      LG    MD      SM    XS
     font_size: ["25px", "25px", "25px", "20px", "18px"]
   button:
-    text: "Apply Now"
-    path: "#leadform_bottom"
+    text: "Get more information"
+    path: "#leadform_header"
   phone:
     text: "Call"
 
@@ -95,19 +96,40 @@ short_badges:
 #
 
 program_details:
-  position: 8
+  position: 2
   heading: "Master Python, JS and React"
   sub_heading: "The 3 most used languages in the world"
 
 badges:
-  position: 10
+  position: 5
   heading: "4Geeks Academy has awards and recognitions that validate it's excellence"
 
 geeks_vs_others:
   position: 7
-  heading: "What makes our web development bootcamp so successful?"
+  heading: "What makes our coding bootcamp so successful?"
   paragraph: ""
   total_rows: 5
+
+rating_reviews:
+  position: 11
+  heading: "Top rated on all available review sites"
+  rating_list:
+    - alt: "Career Karma"
+      image: "../../../static/images/badges/career-karma.png"
+      rating: 4.89
+      url: ""
+    - alt: "Switchup"
+      image: "../../../static/images/badges/switchup-img.png"
+      rating: 4.91
+      url: ""
+    - alt: "Course Report"
+      image: "../../../static/images/badges/course-report.png"
+      rating: 4.84
+      url: ""
+    - alt: "Google"
+      image: "../../../static/images/badges/google.png"
+      rating: 5
+      url: ""
 
 alumni_projects:
   position: 14
@@ -129,18 +151,19 @@ components:
     background: "#FFFFFF"
     image:
       style: '{"backgroundSize": "cover"}'
-      src: "/images/woman-laptop-smile-bg.webp"
-      shadow: false
+      src: "/images/woman-afro-with-laptop.webp"
+      link: "https://google.com" # take uses somewhere when they click on the image
+      shadow: true
     section_heading:
-      text: "Full-Stack Web Developer Bootcamp for Everyone"
-      style: '{ "font-size": "30px"}'
+      text: Online or In-Person Programming Bootcamp Near You with 4Geeks Academy!
+      style: '{ "font-size": "25px"}'
     heading:
-      text: "Become a web developer in just 18 weeks with our bootcamp"
-      font_size: ["22px", "22px", "22px", "22px", "22px"]
+      text: "No relocation is needed. Our programming bootcamps are near you."
+      font_size: ["25px", "25px", "25px", "25px", "25px"]
     sub_heading:
-      text: "Dreaming of a career where you build dynamic websites and applications? A web developer bootcamp can turn your passion for code into a reality. These immersive programs provide focused training in essential languages like HTML, CSS, and JavaScript, equipping you with the skills needed to thrive in the tech industry."
+      text: "Ready to code but unsure if you want an in-person or online experience? We've got you covered! 4Geeks Academy offers both formats, letting you choose the learning style that fits your location and preferences."
     button:
-      text: "Apply"
+      text: "Get more Info"
       color: white
       hover_color: "white"
       background: "black"
@@ -151,22 +174,49 @@ components:
       path: ""
     bullets:
       items:
-        - heading: "Interview Simulation"
-          icon: "check" #string with icon for example ['check', 'cicle', etc]
-        - heading: "Lifetime Mentoring"
-          icon: "check" #string with icon for example ['check', 'cicle', etc]
-        - heading: "ultimited 1-1 mentoring"
-          icon: "check" #string with icon for example ['check', 'cicle', etc]
+        - heading: "Hands-On Learning"
+          icon: "circle" #string with icon for example ['check', 'cicle', etc]
+        - heading: "Flexible Option"
+          icon: "circle" #string with icon for example ['check', 'cicle', etc]
+        - heading: "Master in-Demand Skills"
+          icon: "circle" #string with icon for example ['check', 'cicle', etc]
+        - heading: "No relocation is needed"
+          icon: "circle" #string with icon for example ['check', 'cicle', etc]
+
+
+  - name: how-it-works
+    position: 3
+    background: "#E3F9FE !important"
+    layout: iconogram
+    swipable: True
+    heading:
+      text: "3 steps of our programming bootcamp"
+      font_size: ["30px", "30px", "30px", "30px", "30px"]
+    sub_heading:
+      text: 'According to the U.S. Bureau of Labor Statistics, <strong style="font-weight: bold;">software developers in the U.S. have a higher than average job outlook and earn a median salary of $110,140 a year</strong>. Improve your chances to be one of them.'
+      font_size: ["16px", "16px", "16px", "16px", "16px"]
+      style: '{ "textAlign": "center", "width": "60%" }'
+    text_link: "/"
+    icons:
+      - icon: "graduation-2"
+        title: "Join to 4Geeks Academy"
+        content: "Unleash your potential in tech. Learn from industry experts, connect with a growing community, network with leaders, and showcase your skills."
+      - icon: "laptop_new"
+        title: "Immerse & Code"
+        content: "Dive into interactive learning with live online classes and access to recorded materials for deeper understanding. Tackle challenging hands-on projects using in-demand tools and frameworks."
+      - icon: "stairswflag"
+        title: "Job placement"
+        content: "Our program guarantees to equip you with the most in-demand skills, connect you with top companies, and help you secure your dream job (we mean it!)."
 
   - name: geekinfo_2
-    position: 2
+    position: 4
     layout: two_column_right
     proportions: [6, 6]
     background: ""
     image:
-      style: '{ "backgroundSize": "contain" }'
-      src: "/images/landing/Group-6626.webp"
-      shadow: false
+      style: '{ "backgroundSize": "cover" }'
+      src: "/images/landing/two-womans-and-laptop.webp"
+      shadow: true
     section_heading:
       text: ""
       style: '{ "font-size": "30px" }'
@@ -201,59 +251,31 @@ components:
           text: "Explore flexible payment plans and scholarship opportunities"
           icon: "check" #string with icon for example ['check', 'cicle', etc]
 
-  - name: how-it-works
-    position: 3
-    background: "#E3F9FE !important"
-    layout: iconogram
-    swipable: True
-    heading:
-      text: "3 steps of a web developer bootcamp"
-      font_size: ["30px", "30px", "30px", "30px", "30px"]
-    sub_heading:
-      text: 'According to the U.S. Bureau of Labor Statistics, <strong style="font-weight: bold;">software developers in the U.S. have a higher than average job outlook and earn a median salary of $110,140 a year</strong>. Improve your chances to be one of them.'
-      font_size: ["16px", "16px", "16px", "16px", "16px"]
-      style: '{ "textAlign": "center", "width": "60%" }'
-    text_link: "/"
-    icons:
-      - icon: "graduation-2"
-        title: "Join to 4Geeks Academy"
-        content: "Unleash your potential in tech. Learn from industry experts, connect with a growing community, network with leaders, and showcase your skills."
-      - icon: "laptop_new"
-        title: "Immerse & Code"
-        content: "Dive into interactive learning with live online classes and access to recorded materials for deeper understanding. Tackle challenging hands-on projects using in-demand tools and frameworks."
-      - icon: "stairswflag"
-        title: "Job placement"
-        content: "Our program guarantees to equip you with the most in-demand skills, connect you with top companies, and help you secure your dream job (we mean it!)."
-
   - name: locations-online-or-in-person
-    position: 9
+    position: 6
     layout: two_column_left
     background: "veryLightBlue2" # Name of the color(from components/Styling/index.js) or color code ex: #C9F9F9
     image:
-      src: "/images/landing/4Geeks-Espana.jpg"
+      src: "/images/landing/affrican_person_small.jpeg"
       shadow: true
     # video: "B01-eTfgqqc"
     heading:
-      text: "Ready to see success stories? Explore real-world projects built by Web Developer Bootcamp graduates!"
+      text: "Programming Bootcamps Near You: Explore Online, Hybrid, or In-Person Options"
         #           xl      lg      md      sm      xs
       font_size: ["26px", "26px", "26px", "26px", "26px"]
     sub_heading:
-      text: "Ready to code your way to a fulfilling career? Web developer bootcamps offer a unique pathway to acquire the skills and knowledge necessary to succeed in this exciting field. These intensive prog"
+      text: "Whether you decide to enroll in our online or in-person program, you'll enjoy real-time, live interactions with our teachers, mentors, and fellow classmates. Engage in dynamic lectures, hands-on projects, and interactive exercises alongside your cohort and gain all the knowledge you need to become a highly skilled professional."
       font_size: ["16px", "16px", "16px", "16px", "16px"]
     content:
       text: ""
       font_size: ["16px"]
-    button:
-      text: "See Alumni Projects"
-      background: black
-      color: white
-      hover_color: "#white"
-      path: "#alumni_projects"
+
+
 
   - name: passion
-    position: 11
+    position: 10
     background: "#fbfbfb"
-    layout: two_column_left
+    layout: two_column_right
     proportions: [6, 6]
     image:
       style: '{ "border" : "3px solid black", "backgroundSize": "contain", "marginTop": "15px"}'
@@ -262,13 +284,16 @@ components:
       link: "https://www.switchup.org/bootcamps/4geeks-academy"
     video: "EcqasocRKHo"
     heading:
-      text: "Launch Your Web Development Career at 4Geeks Academy"
-      font_size: ["40px", "40px", "40px", "40px", "40px"]
+      text: "Programming Bootcamps Near You at 4Geeks Academy"
+      font_size: ["32px", "32px", "32px", "32px", "32px"]
+    sub_heading:
+      text: "Master in-demand skills with flexible learning options at 4Geeks Academy."
+      font_size: ["18px", "18px", "18px", "18px", "18px"]
     content:
       text: ""
       font_size: ["16px"]
     button:
-      text: "Apply Now"
+      text: "GET MORE INFO"
       background: black
       color: white
       hover_color: "#white"
@@ -281,6 +306,5 @@ components:
         - heading: "Career Support for Life"
           text: "We're with you beyond graduation. Get continuous job placement assistance, refine your soft skills, and receive support throughout your entire tech career."
           icon: "check"
-        - heading: "Dive Deep, Code Strong"
-          text: "Immerse yourself in coding with our hands-on curriculum. Learn not just to code but to excel, mastering the most relevant industry skills that set you apart."
-          icon: "check"
+
+
