@@ -20,7 +20,7 @@ meta_info:
 
 navbar:
   buttonText: "Postular"
-  buttonUrl: "https://www.gob.pe/institucion/proinnovate/campa%C3%B1as/49409-concurso-de-becas-para-programas-de-bootcamps-de-codigo-etapa-2" # url accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
+  buttonUrl: "#leadform_bottom"
   logoUrl: "#"
 
 form:
@@ -67,7 +67,7 @@ follow_bar:
     font_size: ["22px", "22px", "22px", "16px", "4vw"]
   button:
     text: "Inicia tu Popstulación"
-    path: "https://inngenius.proinnovate.gob.pe"
+    path: "#leadform_bottom"
   phone: 
     text: ""
 
