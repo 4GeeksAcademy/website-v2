@@ -171,7 +171,6 @@ export const Navbar = ({
             defaultLanguage
             breathecode_location_slug
             active_campaign_location_slug
-            gdpr_compliant
             in_person_available
             online_available
             meta_info {
@@ -201,9 +200,7 @@ export const Navbar = ({
     }
   `);
 
-  const isContentBarActive = true;
-  // (contentBar.active && isTestMode) ||
-  // (contentBar.active && !isDevelopment());
+  const isContentBarActive = contentBar.active || isDevelopment();
 
   const langDictionary = {
     us: "es",

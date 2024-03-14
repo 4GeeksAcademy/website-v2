@@ -19,67 +19,266 @@ const containerVariants = {
   },
 };
 export const Container = styled(Fragment)`
-  ${(props) =>
-    props.variant === "fixed"
-      ? css`
-          @media ${Devices.xxs} {
-          }
-          @media ${Devices.xs} {
-          }
-          @media ${Devices.sm} {
-            max-width: 540px;
-          }
-          @media ${Devices.tablet} {
-            max-width: 720px;
-            height: ${(props) => props.height_tablet};
-          }
-          @media ${Devices.md} {
-            max-width: 960px;
-            height: ${(props) => props.height_md};
-            transform: ${(props) => props.transform_md};
-            padding: ${(props) => props.padding_md};
-          }
-          @media ${Devices.lg} {
-            max-width: 1024px;
-          }
-          @media ${Devices.xl} {
-            max-width: 1140px;
-          }
-          @media ${Devices.xxl} {
-            max-width: 1320px;
-          }
-        `
-      : css`
-          @media ${Devices.xxs} {
-          }
-          @media ${Devices.xs} {
-          }
-          @media ${Devices.sm} {
-          }
-          @media ${Devices.tablet} {
-            height: ${(props) => props.height_tablet};
-            margin: ${(props) => props.margin_tablet};
-          }
-          @media ${Devices.md} {
-            height: ${(props) => props.height_md};
-            margin: ${(props) => props.margin_md};
-            padding: ${(props) => props.padding_md};
-          }
-          @media ${Devices.lg} {
-            margin: ${(props) => props.margin_lg};
-          }
-          @media ${Devices.xl} {
-          }
-          @media ${Devices.xxl} {
-          }
-        `}
-  display: ${(props) => props.display};
-  background: ${(props) => props.background};
   width: ${(props) => containerVariants[props.variant || "fixed"]};
   height: ${(props) => props.height};
-  margin: ${(props) => props.margin || "0 auto"};
-  padding: ${(props) => props.padding};
+  margin: ${(props) => props.margin || "auto"};
+  padding: ${(props) => props.padding || "0"};
   transform: ${(props) => props.transform};
+  flex: ${(props) =>
+    props.flex || props.size ? `0 0 ${(props.size / 12) * 100}%` : null};
+  max-width: ${(props) =>
+    props.size ? `${(props.size / 12) * 100}%` : props.maxWidth || "1366px"};
+  max-height: ${(props) => (props.maxHeight ? props.maxHeight : "none")};
+  overflow: ${(props) => props.overflow};
+  overflow-wrap: ${(props) => props.overflowWrap};
+  overflow-x: ${(props) => props.overflowX};
+  grid-area: ${(props) => props.gridArea};
+  place-self: ${(props) => props.placeSelf};
+  grid-column: ${(props) => props.gridColumn};
+  flex-flow: ${(props) => props.flexFlow};
+  grid-row: ${(props) => props.gridRow};
+  gap: ${(props) => props.gap};
+  row-gap: ${(props) => props.rowGap};
+  column-count: ${(props) => props.columnCount};
+  grid-auto-flow: ${(props) => props.gridAutoFlow};
+  grid-template-columns: ${(props) => props.gridTemplateColumns};
+  grid-auto-rows: ${(props) => props.gridAutoRows};
+  column-gap: ${(props) => props.columnGap};
+  min-width: ${(props) => props.minWidth};
+  min-height: ${(props) => props.minHeight};
+  position: ${(props) => props.position};
+  top: ${(props) => props.top};
+  bottom: ${(props) => props.bottom};
+  right: ${(props) => props.right};
+  left: ${(props) => props.left};
+  display: ${(props) => props.display || "flex"};
+  flex-direction: ${(props) => props.flexDirection || "row"};
+  direction: ${(props) => props.direction};
+  align-items: ${(props) => props.alignItems};
+  align-self: ${(props) => props.alignSelf};
+  border: ${(props) => props.border};
+  border-radius: ${(props) => props.borderRadius};
+  background-color: ${(props) => props.backgroundColor};
+  background: ${(props) =>
+    props.isActive ? props.backgroundActive : props.background};
+  background-image: url(${(props) => props.bgImage});
+  background-size: ${(props) => props.bgSize};
+  background-repeat: ${(props) => props.bgRepeat};
+  border-left: ${(props) =>
+    props.isActive ? props.borderLeftActive : props.borderLeft};
+  border-top: ${(props) => props.borderTop};
+  border-bottom: ${(props) => props.borderBottom};
+  border-right: ${(props) => props.borderRight};
+  justify-content: ${(props) => justifyContentOptions[props.justifyContent]};
+  order: ${(props) => props.order};
+  text-align: ${(props) => props.textAlign};
+  justify-self: ${(props) => props.justifySelf};
+  box-shadow: ${(props) =>
+    props.isActive ? props.boxShadowActive : props.boxShadow};
+  flex-wrap: ${(props) => props.flexWrap || "nowrap"};
+  flex-grow: ${(props) => props.flexGrow || "0"};
+  flex-shrink: ${(props) => props.flexShrink};
+  align-content: ${(props) => props.alignContent};
+  cursor: ${(props) => props.cursor};
+  z-index: ${(props) => props.zIndex};
+  place-items: ${(props) => props.placeItems};
+  font-size: ${(props) => props.fontSize};
+  &:after {
+    content: ${(props) => props.contentAfter};
+    display: ${(props) => props.displayAfter || "block"};
+    background-color: ${(props) => props.backgroundColorAfter};
+    height: ${(props) => props.heightAfter};
+    width: ${(props) => props.widthAfter};
+    margin-left: ${(props) => props.marginLeftAfter};
+    position: ${(props) => props.positionAfter};
+    top: ${(props) => props.topAfter};
+    bottom: ${(props) => props.bottomAfter};
+    left: ${(props) => props.leftAfter};
+    right: ${(props) => props.rightAfter};
+  }
+  &:hover {
+    background: ${(props) => props.backgroundHover};
+    border-bottom: ${(props) => props.borderBottomHover};
+  }
+  @media ${Devices.xxs} {
+    column-count: ${(props) => props.columnCount_xxs};
+    padding: ${(props) => props.padding_xxs};
+    background: ${(props) => props.background_xxs};
+    display: ${(props) => props.display_xxs};
+    top: ${(props) => props.top_xxs};
+    left: ${(props) => props.left_xxs};
+    margin: ${(props) => props.margin_xxs || "0 auto"};
+    display: ${(props) => props.display_xxs};
+    justify-content: ${(props) => props.justifyContent_xxs};
+    width: ${(props) => props.width_xxs};
+  }
+  @media ${Devices.xs} {
+    padding: ${(props) => props.padding_xs};
+    column-count: ${(props) => props.columnCount_xs};
+    flex-direction: ${(props) => props.flexDirection_xs};
+    flex-wrap: ${(props) => props.flexWrap_xs};
+    width: ${(props) => props.width_xs};
+    max-width: ${(props) => props.maxWidth_xs};
+    height: ${(props) => props.height_xs};
+    order: ${(props) => props.order_xs};
+    margin: ${(props) => props.margin_xs || "0 auto"};
+    display: ${(props) => props.display_xs};
+    justify-content: ${(props) =>
+      justifyContentOptions[props.justifyContent_xs]};
+    order: ${(props) => props.order_xs};
+    border: ${(props) => props.border_xs};
+    border-top: ${(props) => props.borderTop_xs};
+    border-right: ${(props) => props.borderRight_xs};
+    border-bottom: ${(props) => props.borderBottom_xs};
+    border-left: ${(props) => props.borderLeft_xs};
+    align-content: ${(props) => props.alignContent_xs};
+    top: ${(props) => props.top_xs};
+    right: ${(props) => props.right_xs};
+    left: ${(props) => props.left_xs};
+    background: ${(props) => props.background_xs};
+  }
+  @media ${Devices.sm} {
+    padding: ${(props) => props.padding_sm};
+    justify-content: ${(props) =>
+      justifyContentOptions[props.justifyContent_sm]};
+    height: ${(props) => props.height_sm};
+    position: ${(props) => props.position_sm};
+    margin: ${(props) => props.margin_sm || "0 auto"};
+    display: ${(props) => props.display_sm};
+    column-count: ${(props) => props.columnCount_sm};
+    flex-direction: ${(props) => props.flexDirection_sm};
+    flex-wrap: ${(props) => props.flexWrap_sm};
+    order: ${(props) => props.order_sm};
+    top: ${(props) => props.top_sm};
+    right: ${(props) => props.right_sm};
+    border-radius: ${(props) => props.borderRadius_sm};
+    max-width: ${(props) => props.maxWidth_sm};
+    width: ${(props) => props.width_sm};
+    background: ${(props) => props.background_sm};
+  }
+  @media ${Devices.tablet} {
+    flex: ${(props) =>
+      props.flex_tablet || props.size_tablet
+        ? `0 0 ${(props.size_tablet / 12) * 100}%`
+        : null};
+    flex-flow: ${(props) => props.flexFlow_tablet};
+    max-width: ${(props) =>
+      props.size_tablet ? `${(props.size_tablet / 12) * 100}%` : null};
+    max-width: ${(props) =>
+      props.maxWidth_tablet
+        ? props.maxWidth_tablet
+        : props.size_tablet
+        ? `${(props.size_tablet / 12) * 100}%`
+        : null};
+    align-self: ${(props) => props.alignSelf_tablet};
+    order: ${(props) => props.order_tablet};
+    gap: ${(props) => (props) => props.gap_tablet};
+    column-count: ${(props) => props.columnCount_tablet};
+    place-self: ${(props) => props.placeSelf_tablet};
+    background: ${(props) => props.background_tablet};
+    display: ${(props) => props.display_tablet};
+    position: ${(props) => props.position_tablet};
+    flex-direction: ${(props) => props.flexDirection_tablet};
+    text-align: ${(props) => props.textAlign_tablet};
+    align-content: ${(props) => props.alignContent_tablet};
+    height: ${(props) => props.height_tablet};
+    align-items: ${(props) => props.alignItems_tablet};
+    padding: ${(props) => props.padding_tablet};
+    margin: ${(props) => props.margin_tablet || "0 auto"};
+    width: ${(props) => props.width_tablet};
+    min-width: ${(props) => props.minWidth_tablet};
+    min-height: ${(props) => props.minHeight_tablet};
+    height: ${(props) => props.height_tablet};
+    flex: ${(props) => props.flex_tablet};
+    flex-shrink: ${(props) =>
+      props.flexShrink_tablet ? props.flexShrink_tablet : 1};
+    flex-wrap: ${(props) => props.flexWrap_tablet};
+    border: ${(props) => props.border_tablet};
+    border-top: ${(props) => props.borderTop_tablet};
+    top: ${(props) => props.top_tablet};
+    right: ${(props) => props.right_tablet};
+    left: ${(props) => props.left_tablet};
+    border-right: ${(props) => props.borderRight_tablet};
+    border-bottom: ${(props) => props.borderBottom_tablet};
+    border-radius: ${(props) => props.borderRadius_tablet};
+    box-shadow: ${(props) => props.boxShadow_tablet};
+    border-left: ${(props) => props.borderLeft_tablet};
+    transform: ${(props) => props.transform_tablet};
+    grid-area: ${(props) => props.gridArea_tablet};
+    grid-column: ${(props) => props.gridColumn_tablet};
+    grid-row: ${(props) => props.gridRow_tablet};
+    justify-self: ${(props) => props.justifySelf_tablet};
+    justify-content: ${(props) =>
+      justifyContentOptions[props.justifyContent_tablet]};
+    z-index: ${(props) => props.zIndex_tablet};
+    top: ${(props) => props.top_tablet};
+    bottom: ${(props) => props.bottom_tablet};
+    right: ${(props) => props.right_tablet};
+    left: ${(props) => props.left_tablet};
+    &:after {
+      display: ${(props) => props.displayAfter_tablet};
+    }
+  }
+  @media ${Devices.md} {
+    flex: ${(props) =>
+      props.size_md ? `0 0 ${(props.size_md / 12) * 100}%` : null};
+    max-width: ${(props) =>
+      props.maxWidth_md
+        ? props.maxWidth_md
+        : props.size_md
+        ? `${(props.size_md / 12) * 100}%`
+        : null};
+    min-width: ${(props) => props.minWidth_md};
+    min-height: ${(props) => props.minHeight_md};
+    grid-area: ${(props) => props.gridArea_md};
+    display: ${(props) => props.display_md};
+    flex-direction: ${(props) => props.flexDirection_md};
+    gap: ${(props) => (props) => props.gap_md};
+    flex-wrap: ${(props) => props.flexWrap_md};
+    justify-content: ${(props) =>
+      justifyContentOptions[props.justifyContent_md]};
+    text-align: ${(props) => props.textAlign_md};
+    align-items: ${(props) => props.alignItems_md};
+    margin: ${(props) => props.margin_md || "0 auto"};
+    padding: ${(props) => props.padding_md};
+    width: ${(props) => props.width_md};
+    height: ${(props) => props.height_md};
+    border: ${(props) => props.border_md};
+    border-top: ${(props) => props.borderTop_md};
+    border-right: ${(props) => props.borderRight_md};
+    border-left: ${(props) => props.borderLeft_md};
+    place-items: ${(props) => props.placeItems_md};
+    grid-column: ${(props) => props.gridColumn_md};
+    grid-row: ${(props) => props.gridRow_md};
+    position: ${(props) => props.position_md};
+    top: ${(props) => props.top_md};
+    bottom: ${(props) => props.bottom_md};
+    right: ${(props) => props.right_md};
+    left: ${(props) => props.left_md};
+  }
+  @media ${Devices.lg} {
+    display: ${(props) => props.display_lg};
+    width: ${(props) => props.width_lg};
+    justify-content: ${(props) =>
+      justifyContentOptions[props.justifyContent_lg]};
+    padding: ${(props) => props.padding_lg};
+    gap: ${(props) => props.gap_lg};
+    max-width: ${(props) => props.maxWidth_lg};
+    min-width: ${(props) => props.minWidth_lg};
+    right: ${(props) => props.right_lg};
+    left: ${(props) => props.left_lg};
+    margin: ${(props) => props.margin_lg || "0 auto"};
+    transform: ${(props) => props.transform_lg};
+    grid-column: ${(props) => props.gridColumn_lg};
+    top: ${(props) => props.top_lg};
+    bottom: ${(props) => props.bottom_lg};
+    right: ${(props) => props.right_lg};
+    left: ${(props) => props.left_lg};
+  }
+  @media ${Devices.xl} {
+  }
+  @media ${Devices.xxl} {
+  }
 `;
 
 const justifyContentOptions = {
@@ -550,15 +749,18 @@ export const Header = ({
   background,
   margin,
   margin_tablet,
+  margin_xxs,
   padding,
+  paddingTitle,
+  paddingParagraph,
+  paddingParagraph_tablet,
+  paddingTitle_tablet,
   padding_xxs,
   padding_tablet,
   padding_lg,
   padding_md,
   position,
   textAlign_tablet,
-  paddingParagraph_tablet,
-  paddingTitle_tablet,
   display_mobile,
   fontSize_title,
   fontSizeTitle_tablet,
@@ -583,6 +785,7 @@ export const Header = ({
       position={position}
       margin={margin || "70px 0 0 0"}
       margin_tablet={margin_tablet}
+      margin_xxs={margin_xxs}
       //padding={padding_xxs || "60px 20px"}
       padding={padding || "0 0"}
       padding_tablet={padding_tablet || "60px 40px"}
@@ -595,6 +798,8 @@ export const Header = ({
       <Grid
         gridTemplateColumns_tablet={`repeat(12, 1fr)`}
         gridArea_tablet="1/1/1/15"
+        maxWidth="1366px"
+        margin="auto"
       >
         {/* hacer cambios aqui ... remover svg en mobile */}
         <Div
@@ -606,7 +811,7 @@ export const Header = ({
             type="h2"
             textAlign_tablet={textAlign_tablet}
             margin="0 0 11px 0"
-            padding="0 20px"
+            padding={paddingTitle || "0 20px"}
             color="#606060"
             fontSize={fontSize_seo || "12px"}
             //fontFamily={fontFamily_title}
@@ -617,7 +822,11 @@ export const Header = ({
             type="h1"
             textAlign_tablet={textAlign_tablet}
             padding="0 20px"
-            padding_tablet={paddingTitle_tablet}
+            padding_tablet={
+              paddingTitle_tablet
+                ? paddingTitle_tablet
+                : paddingTitle || "0 20px"
+            }
             fontSize={fontSize_title || "40px"}
             fontSize_tablet={fontSizeTitle_tablet || "50px"}
             lineHeight={lineHeight || "50px"}
@@ -631,10 +840,14 @@ export const Header = ({
             {hideArrowKey ? title : `< ${title} >`}
           </H1>
           <Paragraph
-            padding="0"
+            padding={paddingParagraph || "0"}
             width="auto"
             letterSpacing="0.05em"
-            padding_tablet={paddingParagraph_tablet}
+            padding_tablet={
+              paddingParagraph_tablet
+                ? paddingParagraph_tablet
+                : paddingParagraph || 0
+            }
             textAlign_tablet={textAlign_tablet}
             margin={paragraphMargin || "26px 0"}
             margin_tablet={paragraphMargin_Tablet}
@@ -718,6 +931,8 @@ export const GridContainer = ({
   gridTemplateAreas,
   gridTemplateAreas_tablet,
   maxWidth,
+  childMaxWidth,
+  childMargin,
   childHeight,
   displayChild,
   displayChild_tablet,
@@ -806,6 +1021,8 @@ export const GridContainer = ({
         gridTemplateAreas={gridTemplateAreas}
         gridTemplateAreas_tablet={gridTemplateAreas_tablet}
         height={childHeight}
+        margin={childMargin}
+        maxWidth={childMaxWidth}
       >
         {children}
       </Grid>
@@ -1120,6 +1337,9 @@ Div.defaultProps = {
 
 Container.defaultProps = {
   padding: "17px",
+  padding_tablet: "0 40px",
+  padding_md: "0 80px",
+  padding_lg: "0",
 };
 
 Row.defaultProps = {
