@@ -38,7 +38,7 @@ apply_schollarship: # form that is displayed at the end of the landing
 
 # jumbotron on the top (cannot be commented out)
 header_data:
-  tagline: "Web Developer Bootcamp: Code Your Career Potential"
+  tagline: "Web Developer Bootcamp: Code Your Career"
   sub_heading: "Become a web developer with our coding bootcamp in just 18 weeks"
   background: "#FFF1D1"
   badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
@@ -52,7 +52,7 @@ features:
   bullets:
     - No previous experience or coding skills required.
     - Choose from options that fit your schedule — part-time, online, or hybrid programs
-    - Flexible payment plans starting at $150 a month, with the option to pay after landing a job
+    - Flexible payment plans starting at ~$120 a month, with the option to pay after landing a job
     - Get lifetime access to our mentors and Career Growth Support (Your first Job in Tech is our goal)
 
 follow_bar:
@@ -216,11 +216,11 @@ components:
     text_link: "/"
     icons:
       - icon: "graduation-2"
-        title: "Join to 4Geeks Academy"
+        title: "Join 4Geeks Academy"
         content: "Unleash your potential in tech. Learn from industry experts, connect with a growing community, network with leaders, and showcase your skills."
       - icon: "laptop_new"
-        title: "Immerse & Code"
-        content: "Dive into interactive learning with live online classes and access to recorded materials for deeper understanding. Tackle challenging hands-on projects using in-demand tools and frameworks."
+        title: "Get Immerse in Coding"
+        content: "Dive into LIVE and interactive classes -online or hybrid- and build a strong portfolio on projects using in-demand tools and frameworks."
       - icon: "stairswflag"
         title: "Job placement"
         content: "Our program guarantees to equip you with the most in-demand skills, connect you with top companies, and help you secure your dream job (we mean it!)."
