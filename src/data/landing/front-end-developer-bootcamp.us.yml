@@ -50,10 +50,10 @@ features:
   #                                         up   left down  right
   styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
   bullets:
-    - No previous experience or coding skills required.
-    - Choose from options that fit your schedule — part-time, online, or hybrid programs
     - Flexible payment plans starting at $150 a month, with the option to pay after landing a job
-    - Get lifetime access to our mentors and Career Growth Support (Your first Job in Tech is our goal)
+    - Choose from options that fit your schedule — part-time, online, or hybrid programs
+    - Get lifetime access to our mentors and Career Growth Support (Your first Job in Tech is our
+     goal)
 
 follow_bar:
   position: "top" # top, bottom, hidden
@@ -158,7 +158,7 @@ components:
     heading:
       text: "Lifetime learning access"
     sub_heading:
-      text: "The overwhelming majority of job openings are in Front-End Development. It's the ideal skill to find your first job. This boot camp will give you all the skills you need to get your first job as a front-end developer with unlimited and lifetime coding and career support."
+      text: "The overwhelming majority of job openings are in Front-End Development. It's the ideal skill to find your first job. This bootcamp will give you all the skills you need to get your first job as a front-end developer with unlimited and lifetime coding and career support."
     button:
       text: "APPLY NOW!"
       color: white
