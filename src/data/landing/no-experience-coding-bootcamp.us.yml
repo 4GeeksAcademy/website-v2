@@ -180,7 +180,7 @@ components:
     layout: iconogram
     swipable: True
     heading:
-      text: "Do I need experience or a degree?, NO!"
+      text: "Do I need experience or a degree? NO!"
       font_size: ["30px", "30px", "30px", "30px", "30px"]
     sub_heading:
       text: 'More than just learning to code, 4Geeks Academy prepares you for the job market. Our Full-Stack Bootcamp goes beyond technical skills, incorporating career coaching, resume writing workshops, and mock interviews to ensure you stand out in the application process.'
@@ -189,10 +189,10 @@ components:
     text_link: "/"
     icons:
       - icon: "graduation-2"
-        title: "1.- Join to 4Geeks Academy"
+        title: "1.- Join 4Geeks Academy"
         content: "Unleash your potential in tech. Learn from industry experts, connect with a growing community, network with leaders, and showcase your skills."
       - icon: "laptop_new"
-        title: "2.- Code Immerse"
+        title: "2.- Intensive Coding"
         content: "Dive into interactive learning with live online classes and access to recorded materials for deeper understanding. Tackle challenging hands-on projects using in-demand tools and frameworks."
       - icon: "stairswflag"
         title: "3.- Career Support guarantee"
