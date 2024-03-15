@@ -130,7 +130,7 @@ details:
         content: "No previous experience needed"
         icon: "contract-checked"
       - label: "Language"
-        content: "You can decide between English and Spanish to consume the syllabus and content. Live classes are taught in the language of your campus."
+        content: "You can choose between English and Spanish for the syllabus and content. Live classes are taught in the language of your campus."
         icon: "contract-checked"
 
   heading: Machine Learning Engineering Syllabus
