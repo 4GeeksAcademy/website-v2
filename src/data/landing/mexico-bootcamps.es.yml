@@ -1,11 +1,11 @@
 meta_info: 
-  slug: mejores-bootcamps-de-programacion-mexico # <--- URL 4geeksacademy.com/us/landing/example
+  slug: mexico-bootcamps # <--- URL 4geeksacademy.com/us/landing/example
 
   # This will show on social media when shared
-  title: "Descubre por qué somos uno de los mejores bootcamps de programación en México"
-  description: "4Geeks Academy es una escuela de tecnología líder en América Latina que te ofrece la oportunidad de convertirte en un profesional del futuro."
+  title: "Descubre por qué somos uno de los mejores bootcamps en México"
+  description: "Descubre por qué somos uno de los mejores bootcamps de México y cómo te ayudamos a alcanzar tus metas"
   image: "/images/bg/main-bg.jpg"
-  keywords: "Aprender a programar, Bootcamp de Programación, Bootcamp programacion Mexico, Bootcamp de python, Bootcamp de React y Javascript, Bootcamp de Informática, 4Geeks Academy"
+  keywords: ""
   visibility: "unlisted"
   template: "landing_a" # <--- choose your landing template
   redirects: # <--- URL redirections to avoid 404 errors
@@ -13,7 +13,7 @@ meta_info:
 
   # Set a particular course or location to the landing page
   # this UTM fields will be also included in the CRM contact
-  utm_course: ["full-stack"]
+  utm_course: ["full-stack", "datascience-ml"]
   utm_location: ["mexicocity-mexico"]
   automation: strong # comma separated, "soft" is the default value
   tag: website-lead # comma separated, "request_more_info" is the default value
@@ -22,7 +22,7 @@ form:
   # posible fields: "first_name", "last_name", "full_name", "phone", "email"
   # always the first_name, email and phone will be mandatory if added.
   fields: ["full_name", "phone", "email"]
-  heading: "Completa el formulario"
+  heading: "Únete a la Academia"
   motivation: "luego de haber completado el formulario, recibirás una confirmación por correo con detalles del programa, financiamiento y apoyo para tomar decisiones informadas sobre tu carrera"
   button_label: APLICA YA
   redirect: "/es/gracias/?lang=es"  #you can redirect to another url or entirely diffrent website
@@ -40,9 +40,9 @@ apply_schollarship: # form that is displayed at the end of the landing
 
 # jumbotron on the top (cannot be commented out)
 header_data:
-  background: "#FFF1D1"
-  tagline: "Descubre por qué somos el mejor bootcamp de programación en México"
-  sub_heading: ""
+  background: "lightBlue"
+  tagline: "Bootcamps en México"
+  sub_heading: "Descubre por qué 4Geeks Academy es el mejor bootcamp en México"
   badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
   image_filter: brightness(0.3)
 
@@ -77,13 +77,13 @@ short_badges:
 follow_bar:
   position: "top" # top, bottom, hidden
   content:
-    text: "Unete al mejor Bootcamp de programación en México "
-    text_mobile: "Unete al mejor Bootcamp de programación en México "
+    text: "Con planes de financiamiento desde 90$ al mes \nÚnete ya al mejor bootcamp de México"
+    text_mobile: "Con planes de financiamiento desde 90$ al mes \nÚnete ya al mejor bootcamp de México"
     # devices:    XL      LG      MD      SM       XS
-    font_size: ["25px", "25px", "25px", "18px", "4.3vw"]
+    font_size: ["22px", "22px", "22px", "18px", "4vw"]
   button:
     text: "APLICA YA"
-    path: "#top"
+    path: "#leadform_header"
   phone:
     text: "Llama "
 
@@ -102,13 +102,13 @@ program_details:
   sub_heading: "Un curso de programación sobre las tecnologías más usadas del mundo"
 
 why_4geeks:
-  position: 6
+  position: 5
   heading: "Por qué 4Geeks"
   sub_heading: " "
 
 geeks_vs_others:
   position: 7
-  heading: "¿Qué nos hace el mejor bootcamp en México?"
+  heading: "Compara 4Geeks vs. otros Bootcamps en México"
   paragraph: ""
   total_rows: 5
 
@@ -147,18 +147,18 @@ who_is_hiring:
 components:
     - name: first-section
       position: 1
-      layout: two_column_left
+      layout: two_column_right
       proportions: [6, 6]
       background: "#fbfbfb"
       image:
-        style: '{ "border" : "3px solid black" }' 
+        style: '{"background-position": "center"}' 
         # shadow: true 
-        src: "/images/landing/4Geeks-Espana.jpg"
-        shadow: true
+        src: "/images/landing/Group-6626.webp"
+        shadow: false
       section_heading:
-        text: "¿Por qué ele­gir 4Geeks Academy como uno de­ los mejores bootcamps de México?"
+        text: "Descubre Nuestros Intensivos Bootcamps en México"
       heading:
-        text: "Las razones por las que somos el mejor bootcamp de programación en mexico"
+        text: "Diseñados para aquellos que desean entrar en el mundo de la tecnología con una formación práctica y de calidad."
                     #xl      lg     md     sm    xs
         font_size: ["24px", "24px", "24px", "18px", "18px"]
       content:
@@ -166,7 +166,7 @@ components:
         font_size: ["16px"]
       button:
         text: "¡Únete a la Academia!"
-        path: "#bottom"
+        path: "#leadform_header"
         color: "white"
         background: "black"
         hover: "lightBlue"
@@ -186,8 +186,8 @@ components:
 
     - name: some_id
       position: 2
-      layout: two_column_right
-      proportions: [7, 5]
+      layout: two_column_left
+      proportions: [5, 7]
       background: "#fbfbfb"
       image:
         style: '{ "border" : "3px solid black" }' 
@@ -196,52 +196,71 @@ components:
         shadow: true
       video: "https://www.youtube.com/watch?v=DrzRJICxjOU"
       heading:
-        text: "4Geeks en México La mejor elección para un Bootcamp"
+        text: "¿Por qué elegir 4Geeks Academy entre los mejores bootcamps de México?"
         #xl      lg     md     sm    xs
       font_size: ["40px", "34px", "34px", "25px", "20px"]
       content:
-        text: "La mentoría individualizada, con respuestas en menos de 30 minutos, proporciona un apoyo inigualable. Las sólidas alianzas estrategicas y un historial de éxito del 81% en la colocación laboral respaldan la reputación de la institución. Esto garantiza una transición sin problemas hacia una exitosa carrera en desarrollo de software."
+        text: "La mentoría individualizada, con respuestas en menos de 30 minutos, proporciona un apoyo inigualable. Las sólidas alianzas estrategicas y un historial de éxito del ~90% en la colocación laboral respaldan la reputación de la institución. Esto garantiza una transición sin problemas hacia una exitosa carrera en desarrollo de software."
+        font_size: ["16px"]
+      # button:
+      #   text: "¡Únete a la Academia!"
+      #   path: "#leadform_bottom"
+      #   color: "white"
+      #   background: "black"
+      #   hover: "lightBlue"
+
+    - name: testimonial-section
+      position: 6
+      layout: two_column_left
+      proportions: [6, 6]
+      background: "#fbfbfb"
+      image:
+        style: '{ "border" : "3px solid black" }' 
+        # shadow: true 
+        src: "/images/testimonials/yasmine-testimonial.jpg"
+        shadow: true
+      video: "https://www.youtube.com/watch?v=mSn16mIKQ2o"
+      section_heading:
+        text: ""
+      heading:
+        text: "Bootcamps en México Testimonio de Yasmín"
+                    #xl      lg     md     sm    xs
+        font_size: ["24px", "24px", "24px", "18px", "18px"]
+      content:
+        text: "Siempre pude contar con apoyo por parte de la academia y de su comunidad, haber tomado la decisión de hacer este bootcamp fue la mejor decisión que he tomado en mucho tiempo estoy muy feliz y agradecida porque pude encontrar trabajo al menos en un mes, recomendaría a todo el mundo que quiera cambiar su rumbo y cambiar su carrera  y el rumbo que se unan a la academia."
         font_size: ["16px"]
       button:
         text: "¡Únete a la Academia!"
-        path: "#bottom"
+        path: "#leadform_bottom"
         color: "white"
         background: "black"
         hover: "lightBlue"
 
-    # - name: first-section
-    #   position: 4
-    #   layout: two_column_left
-    #   proportions: [6, 6]
-    #   background: "#fbfbfb"
-    #   image:
-    #     style: '{ "border" : "3px solid black" }' 
-    #     # shadow: true 
-    #     src: "/images/landing/4Geeks-Espana.jpg"
-    #     shadow: true
-    #   section_heading:
-    #     text: "¿Por qué ele­gir 4Geeks Academy como uno de­ los mejores bootcamps de México?"
-    #   heading:
-    #     text: "Las razones por las que somos el mejor bootcamp de programación en mexico"
-    #                 #xl      lg     md     sm    xs
-    #     font_size: ["24px", "24px", "24px", "18px", "18px"]
-    #   content:
-    #     text: ""
-    #     font_size: ["16px"]
-    #   button:
-    #     text: "¡Únete a la Academia!"
-    #     path: "#bottom"
-    #     color: "white"
-    #     background: "black"
-    #     hover: "lightBlue"
-    #   bullets:
-    #     items:
-    #       - heading: ""
-    #         text: "Somos una de las escuelas de tecnología líderes en América Latina, con presencia en varios países, incluyendo México."
-    #         icon: "circle" #string with icon for example ['check', 'cicle', etc]
-    #       - heading: ""
-    #         text: "Contamos con un plan de estudios innovador y actualizado, que se adapta constantemente a las necesidades del mercado."
-    #         icon: "circle" #string with icon for example ['check', 'cicle', etc]
-    #       - heading: ""
-    #         text: "Utilizamos una metodología innovadora y práctica, Aprender haciendo, que te permite adquirir las habilidades necesarias para el trabajo real."
-    #         icon: "circle" #string with icon for example ['check', 'cicle', etc]
+    - name: "select-your-program"
+      layout: choose_your_program
+      position: 7
+      heading:
+        text: Nuestros Programas
+      content:
+        text: Nuestros programas se centran únicamente en brindarte habilidades de programación en un período de 18 semanas. Cada uno de ellos se especializa en un área específica, ya sea que tu interés se incline hacia el desarrollo web para convertirte en un Full Stack Developer, o si prefieres incursionar en la ciencia de datos para convertirte en un Data Scientist puedes elegir algunas de nuestras opciones.
+        font_size: ["16px"]
+        path: ""
+      programs:
+      - title: "Desarrollador Full Stack"
+        sub_title: ""
+        icon: "fullstack_2"
+        description: |
+          De cero a tener tu primer trabajo como programador, aprende todo lo necesario, recibe soporte de por vida y consigue un trabajo después de 18 semanas de estudio.
+
+          Nuestro programa se fundamenta en el uso de Python y JavaScript. ¿La razón? En el ámbito laboral, JavaScript cuenta con 26 veces más oportunidades de empleo que Ruby on Rails, mientras que Python tiene 10 veces más posiciones que Node.js. Además, dentro de nuestro plan de estudios, también te familiarizarás con otras herramientas imprescindibles como GitHub, CSS3, HTML5, Flask, entre otras.
+        text_link: Aplica a la academia
+        link: "#leadform_bottom"
+
+      - title: "Data Science and Machine Learning"
+        sub_title: ""
+        icon: "software_2"
+        description: |
+          En el bootcamp de Data Science y Machine Learning de 4Geeks Academy, adquirirás habilidades para utilizar eficazmente las herramientas líderes en este campo, como Python, TensorFlow y Scikit-learn. 
+          A lo largo del programa, te sumergirás en el desarrollo de modelos predictivos con aplicaciones prácticas en áreas tan diversas como la detección de fraude, recomendación de productos, clasificación de imágenes y procesamiento del lenguaje natural.
+        text_link: Aplica a la academia
+        link: "#leadform_bottom"

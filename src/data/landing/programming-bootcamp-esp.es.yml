@@ -7,7 +7,6 @@ meta_info:
   description: "¿Sueñas con convertirte en un desarrollador pero no sabes por dónde empezar? El Programming Bootcamp de 4Geeks Academy es tu camino ideal."
   image: "../../../static/images/bg/the-academy-bg.jpg"
   keywords: ""
-
   template: "landing_a" # <--- choose your landing template
   redirects: [] # <--- URL redirections to avoid 404 errors
 
