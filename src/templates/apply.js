@@ -184,7 +184,6 @@ const Apply = (props) => {
         });
       });
   };
-  console.log("formData is", formData);
   return (
     <>
       <Header
