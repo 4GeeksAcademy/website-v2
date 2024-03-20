@@ -70,16 +70,22 @@ export default ({
   if (info) info = info.node;
 
   let locationFiltered;
-
+  const sortByLocation = (n) => {
+    if (n.location.includes(sessionLocation)) return -1;
+    return 1;
+  };
   if (sessionLocation)
-    locationFiltered = info.with.filter(
-      (n) =>
-        n.location === "all" ||
-        n.location.includes("all") ||
-        !sessionLocation ||
-        n.location.includes(sessionLocation)
-    );
-  else locationFiltered = stories || info.with;
+    locationFiltered = info.with
+      .filter(
+        (n) =>
+          n.location === "all" ||
+          n.location.includes("all") ||
+          !sessionLocation ||
+          n.location.includes(sessionLocation)
+      )
+      .sort(sortByLocation)
+      .slice(0, 3);
+  else locationFiltered = info.with;
 
   return (
     <Fragment github="/components/with_4geeks">
@@ -201,8 +207,7 @@ export default ({
                     )}
                   </Div>
                   <Div
-                    //marginTop="20px"
-                    style={{ padding: "20px 32px" }}
+                    marginTop="40px"
                     padding_tablet="20px 32px"
                     padding_xxs="20px 16px"
                     display={`flex`}
