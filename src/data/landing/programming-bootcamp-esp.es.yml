@@ -169,7 +169,7 @@ components:
     image:
       style: '{ "background-size": "contain", "height":"180px", "min-height":"auto", "background-position": "center"}'
       src: "/images/badges/ebootcamp-top.png"
-      link: "https://www.coursereport.com/schools/4geeks-academy"
+      link: ""
     heading:
       text:
         "Nuestros premios como Best Programming Bootcamp demuestran nuestro compromiso con tu educación"
@@ -202,7 +202,7 @@ components:
       background: "black"
       path: "#leadform_bottom"
     content:
-      text: "¡No esperes más! Inscríbete hoy mismo en el Programming Bootcamp de 4Geeks Academy y comienza tu futuro en tecnología."
+      text: "Nuestro programa part-time puede ajustarse a tu estilo de vida,  no lo dudes más y solicita más información sobre nuestro programa."
       font_size: ["16px"]
       path: ""
     bullets:
