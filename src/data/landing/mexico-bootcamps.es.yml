@@ -28,7 +28,7 @@ form:
   redirect: "/es/gracias/?lang=es"  #you can redirect to another url or entirely diffrent website
 
 navbar:
-  buttonText: "APLICAR AHORA"
+  buttonText: "¡Únete a la Academia!"
   buttonUrl: "#leadform_bottom" # url accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
   logoUrl: "#"
 
@@ -82,7 +82,7 @@ follow_bar:
     # devices:    XL      LG      MD      SM       XS
     font_size: ["22px", "22px", "22px", "18px", "4vw"]
   button:
-    text: "APLICA YA"
+    text: "¡Únete al Bootcamp!"
     path: "#leadform_header"
   phone:
     text: "Llama "
@@ -173,13 +173,13 @@ components:
       bullets:
         items:
           - heading: ""
-            text: "Somos una de las escuelas de tecnología líderes en América Latina, con presencia en varios países, incluyendo México."
+            text: "Aprende los lenguajes de programación, librerías y herramientas más demandados por las empresas."
             icon: "circle" #string with icon for example ['check', 'cicle', etc]
           - heading: ""
-            text: "Contamos con un plan de estudios innovador y actualizado, que se adapta constantemente a las necesidades del mercado."
+            text: "Mentorías personalizadas ilimitadas de por vida por parte de expertos en la industria."
             icon: "circle" #string with icon for example ['check', 'cicle', etc]
           - heading: ""
-            text: "Utilizamos una metodología innovadora y práctica, Aprender haciendo, que te permite adquirir las habilidades necesarias para el trabajo real."
+            text: "Horarios flexibles para que puedas compaginar tu formación con tu vida personal y laboral."
             icon: "circle" #string with icon for example ['check', 'cicle', etc]
 
 
@@ -196,7 +196,7 @@ components:
         shadow: true
       video: "https://www.youtube.com/watch?v=DrzRJICxjOU"
       heading:
-        text: "¿Por qué elegir 4Geeks Academy entre los mejores bootcamps de México?"
+        text: "¿Por qué elegir el Bootcamp de 4Geeks Academy en México? "
         #xl      lg     md     sm    xs
       font_size: ["40px", "34px", "34px", "25px", "20px"]
       content:

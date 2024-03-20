@@ -193,7 +193,7 @@ components:
       text: "¿A quién está dirigido nuestro Programming Bootcamp?"
       font_size: ["40px", "40px", "40px", "40px", "40px"]
     sub_heading:
-      text: ""
+      text: "Nuestro programa part-time puede ajustarse a tu estilo de vida,  no lo dudes más y solicita más información sobre nuestro programa."
       font_size: ["16px", "16px", "16px", "16px", "16px"]
     button:
       text: "Solicitar infomación"
@@ -202,22 +202,18 @@ components:
       background: "black"
       path: "#leadform_bottom"
     content:
-      text: "Nuestro programa part-time puede ajustarse a tu estilo de vida,  no lo dudes más y solicita más información sobre nuestro programa."
+      text: ""
       font_size: ["16px"]
       path: ""
     bullets:
       items:
-        - heading: "Personas con o sin experiencia previa en programación"
-          text: ""
+        - text: "Personas con o sin experiencia previa en programación"
           icon: "circle" #string with icon for example ['check', 'cicle', etc]
-        - heading: "Profesionales que buscan cambiar de carrera"
-          text: ""
+        - text: "Profesionales que buscan cambiar de carrera"
           icon: "circle" #string with icon for example ['check', 'cicle', etc]
-        - heading: "Desarrolladores que desean actualizar sus conocimientos"
-          text: ""
+        - text: "Desarrolladores que desean actualizar sus conocimientos"
           icon: "circle" #string with icon for example ['check', 'cicle', etc]
-        - heading: "Emprendedores que quieren crear su propio negocio"
-          text: ""
+        - text: "Emprendedores que quieren crear su propio negocio"
           icon: "circle" #string with icon for example ['check', 'cicle', etc]
  
   # - name: top_coding_bootcamp

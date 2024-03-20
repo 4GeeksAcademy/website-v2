@@ -29,7 +29,7 @@ form:
   fields: ["first_name", "email", "phone"]
   #margin_md: "0 auto 0 -30px"
   heading: "Obtener más información"
-  motivation: "Completa el formulario y recibe info. del programa, financiamiento y apoyo para tu futuro."
+  motivation: "Completa el formulario y recibe información del programa, financiamiento y apoyo para tu futuro."
   button_label: Enviar 
   redirect: "/es/gracias" #you can redirect to another url or entirely diffrent website
     
@@ -158,17 +158,17 @@ components:
       path: ""
     bullets:
       items:
-        - heading: ""
-          text: "Somos una escuela de programación con años de experiencia en la formación de programadores exitosos."
+        - heading: "Mentorías personalizadas e ilimitadas y de por vida"
+          text: "Contamos con una red de mentores que están dispuestos a darte soporte 1:1 de manera presencial o remota, de forma ilimitada de por vida."
           icon: "circle" #string with icon for example ['check', 'cicle', etc]
-        - heading: ""
-          text: "Contamos con una red de mentores que están dispuestos a darte soporte 1:1 de manera presencial o remota, de forma ilimitada."
+        - heading: "Comunidad internacional +5000 personas"
+          text: "Acceso ilimitado y de por vida a una comunidad de más de 3.000 alumnos graduados en Latinoamérica, Estados Unidos y Europa."
           icon: "circle" #string with icon for example ['check', 'cicle', etc]
-        - heading: ""
-          text: "Nuestro plan de estudios está actualizado con las tecnologías más demandadas del mercado."
+        - heading: "Clases personalizadas Ratio: Profesor/Alumno 1 a 7"
+          text: "Nuestras clases personalizadas tienen una proporción media de alumnos por profesor de 7 a 1, lo que garantiza una rápida resolución de dudas durante las clases."
           icon: "circle" #string with icon for example ['check', 'cicle', etc]
-        - heading: ""
-          text: "Contamos con un equipo de profesores expertos y apasionados por la programación."
+        - heading: "Oportunidades laborales"
+          text: "Nuestros programas están diseñados para prepararte para el mercado laboral actual, brindándote las habilidades y conocimientos necesarios para destacarte en la industria."
           icon: "circle" #string with icon for example ['check', 'cicle', etc]
 
   - name: top_coding_bootcamp
@@ -244,7 +244,11 @@ components:
       text: "Tu éxito es nuestro objetivo"
       font_size: ["40px", "40px", "40px", "40px", "40px"]
     sub_heading:
-      text: "¿A quienes están dirigidos nuestros Bootcamps de programación?"
+      text: |
+        Entrar a 4Geeks Academy es un compromiso que abre puertas a un futuro brillante.
+
+        No solo te brindamos las herramientas, te acompañamos en cada paso del camino.
+
       font_size: ["16px", "16px", "16px", "16px", "16px"]
     button:
       text: "Solicitar infomación"
@@ -258,18 +262,18 @@ components:
       path: ""
     bullets:
       items:
-        - heading: "Personas con o sin experiencia previa en programación"
-          text: ""
-          icon: "circle" 
-        - heading: "Profesionales que buscan cambiar de carrera"
-          text: ""
-          icon: "circle"
-        - heading: "Desarrolladores que desean actualizar sus conocimientos"
-          text: ""
-          icon: "circle" 
-        - heading: "Emprendedores que quieren crear su propio negocio"
-          text: ""
-          icon: "circle"
+        - heading: "Acompañamiento ilimitado de por vida"
+          text: "Recibe el apoyo individual de mentores expertos en cada etapa de tu carrera."
+          icon: "check" 
+        - heading: "Respaldo personalizado"
+          text: "Aprende a tu ritmo y supera tus desafíos con la guía y el asesoramiento que necesitas."
+          icon: "check"
+        - heading: "Desarrollo de Habilidades"
+          text: "En 4Geeks Academy no solo aprenderás a programar, sino que te convertirás en un desarrollador completo, con habilidades como aprendizaje autodidacta e investigación de problemas."
+          icon: "check" 
+        - heading: "Soporte Profesional"
+          text: "También contamos con un programa de apoyo profesional ilimitado donde te damos mentorías de cómo mejorar tu curriculum, talleres y coaching personalizado. lo que incluye preparación para entrevistas y otras herramientas esenciales para tu éxito profesional."
+          icon: "check"
  
   # - name: top_coding_bootcamp
   #   position: 8

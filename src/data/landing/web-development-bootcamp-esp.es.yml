@@ -151,11 +151,11 @@ components:
       path: "#leadform_header"
     bullets:
       items:
-        - heading: "¡Conviértete en un FullStack developer en tan solo 18 semanas!"
+        - text: "¡Conviértete en un FullStack developer en tan solo 18 semanas!"
           icon: "circle" 
-        - heading: "Desarrollo de habilidades altamente valoradas en el mercado profesional."
+        - text: "Desarrollo de habilidades altamente valoradas en el mercado profesional."
           icon: "circle" 
-        - heading: "Acceso a oportunidades laborales al momento de la graducación."
+        - text: "Acceso a oportunidades laborales al momento de la graducación."
           icon: "circle" 
     content:
       font_size: ["16px"]
@@ -170,7 +170,7 @@ components:
     image:
       style: '{ "background-size": "contain", "height":"180px", "min-height":"auto", "background-position": "center"}'
       src: "/images/badges/ebootcamp-top.png"
-      link: "https://www.coursereport.com/schools/4geeks-academy"
+      link: ""
     heading:
       text:
         "Nuestro Web Development Bootcamp ha ganado múltiples premios a lo largo de su trayectoria, lo que demuestra nuestro compromiso con tu formación profesional."
@@ -208,17 +208,13 @@ components:
       path: ""
     bullets:
       items:
-        - heading: "Personas con o sin experiencia previa en programación"
-          text: ""
+        - text: "Personas con o sin experiencia previa en programación"
           icon: "circle" #string with icon for example ['check', 'cicle', etc]
-        - heading: "Profesionales que buscan cambiar de carrera"
-          text: ""
+        - text: "Profesionales que buscan cambiar de carrera"
           icon: "circle" #string with icon for example ['check', 'cicle', etc]
-        - heading: "Desarrolladores que desean actualizar sus conocimientos"
-          text: ""
+        - text: "Desarrolladores que desean actualizar sus conocimientos"
           icon: "circle" #string with icon for example ['check', 'cicle', etc]
-        - heading: "Emprendedores que quieren crear su propio negocio"
-          text: ""
+        - text: "Emprendedores que quieren crear su propio negocio"
           icon: "circle" #string with icon for example ['check', 'cicle', etc]
  
   # - name: top_coding_bootcamp
