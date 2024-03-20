@@ -158,17 +158,17 @@ components:
       path: ""
     bullets:
       items:
-        - heading: "Somos una escuela de programación con años de experiencia en la formación de programadores exitosos."
-          text: ""
+        - heading: ""
+          text: "Somos una escuela de programación con años de experiencia en la formación de programadores exitosos."
           icon: "circle" #string with icon for example ['check', 'cicle', etc]
-        - heading: "Ofrecemos un enfoque innovador en la enseñanza que te permite aprender de forma práctica y efectiva."
-          text: ""
+        - heading: ""
+          text: "Contamos con una red de mentores que están dispuestos a darte soporte 1:1 de manera presencial o remota, de forma ilimitada."
           icon: "circle" #string with icon for example ['check', 'cicle', etc]
-        - heading: "Nuestro plan de estudios está actualizado con las tecnologías más demandadas del mercado."
-          text: ""
+        - heading: ""
+          text: "Nuestro plan de estudios está actualizado con las tecnologías más demandadas del mercado."
           icon: "circle" #string with icon for example ['check', 'cicle', etc]
-        - heading: "Contamos con un equipo de profesores expertos y apasionados por la programación."
-          text: ""
+        - heading: ""
+          text: "Contamos con un equipo de profesores expertos y apasionados por la programación."
           icon: "circle" #string with icon for example ['check', 'cicle', etc]
 
   - name: top_coding_bootcamp
@@ -179,7 +179,7 @@ components:
     image:
       style: '{ "background-size": "contain", "height":"180px", "min-height":"auto", "background-position": "center"}'
       src: "/images/badges/ebootcamp-top.png"
-      link: "https://www.coursereport.com/schools/4geeks-academy"
+      link: ""
     heading:
       text: "Tenemos años de experiencia y reconocimientos como la mejor escuela de programación"
       style: '{ "font-weight":"600" }'
@@ -212,17 +212,17 @@ components:
       path: "#leadform_header"
     bullets:
       items:
-        - heading: "Personas con o sin experiencia previa en programación"
-          text: ""
+        - heading: ""
+          text: "Personas con o sin experiencia previa en programación"
           icon: "circle" #string with icon for example ['check', 'cicle', etc]
-        - heading: "Profesionales que buscan cambiar de carrera"
-          text: ""
+        - heading: ""
+          text: "Profesionales que buscan cambiar de carrera"
           icon: "circle" #string with icon for example ['check', 'cicle', etc]
-        - heading: "Desarrolladores que desean actualizar sus conocimientos"
-          text: ""
+        - heading: ""
+          text: "Desarrolladores que desean actualizar sus conocimientos"
           icon: "circle" #string with icon for example ['check', 'cicle', etc]
-        - heading: "Emprendedores que quieren crear su propio negocio"
-          text: ""
+        - heading: ""
+          text: "Emprendedores que quieren crear su propio negocio"
           icon: "circle" #string with icon for example ['check', 'cicle', etc]
     content:
       font_size: ["16px"]
@@ -244,7 +244,7 @@ components:
       text: "Tu éxito es nuestro objetivo"
       font_size: ["40px", "40px", "40px", "40px", "40px"]
     sub_heading:
-      text: "4Geeks Academy te ofrece las herramientas que necesitas para alcanzar tus metas profesionales."
+      text: "¿A quienes están dirigidos nuestros Bootcamps de programación?"
       font_size: ["16px", "16px", "16px", "16px", "16px"]
     button:
       text: "Solicitar infomación"
