@@ -749,15 +749,18 @@ export const Header = ({
   background,
   margin,
   margin_tablet,
+  margin_xxs,
   padding,
+  paddingTitle,
+  paddingParagraph,
+  paddingParagraph_tablet,
+  paddingTitle_tablet,
   padding_xxs,
   padding_tablet,
   padding_lg,
   padding_md,
   position,
   textAlign_tablet,
-  paddingParagraph_tablet,
-  paddingTitle_tablet,
   display_mobile,
   fontSize_title,
   fontSizeTitle_tablet,
@@ -782,6 +785,7 @@ export const Header = ({
       position={position}
       margin={margin || "70px 0 0 0"}
       margin_tablet={margin_tablet}
+      margin_xxs={margin_xxs}
       //padding={padding_xxs || "60px 20px"}
       padding={padding || "0 0"}
       padding_tablet={padding_tablet || "60px 40px"}
@@ -794,6 +798,8 @@ export const Header = ({
       <Grid
         gridTemplateColumns_tablet={`repeat(12, 1fr)`}
         gridArea_tablet="1/1/1/15"
+        maxWidth="1366px"
+        margin="auto"
       >
         {/* hacer cambios aqui ... remover svg en mobile */}
         <Div
@@ -805,7 +811,7 @@ export const Header = ({
             type="h2"
             textAlign_tablet={textAlign_tablet}
             margin="0 0 11px 0"
-            padding="0 20px"
+            padding={paddingTitle || "0 20px"}
             color="#606060"
             fontSize={fontSize_seo || "12px"}
             //fontFamily={fontFamily_title}
@@ -816,7 +822,11 @@ export const Header = ({
             type="h1"
             textAlign_tablet={textAlign_tablet}
             padding="0 20px"
-            padding_tablet={paddingTitle_tablet}
+            padding_tablet={
+              paddingTitle_tablet
+                ? paddingTitle_tablet
+                : paddingTitle || "0 20px"
+            }
             fontSize={fontSize_title || "40px"}
             fontSize_tablet={fontSizeTitle_tablet || "50px"}
             lineHeight={lineHeight || "50px"}
@@ -830,10 +840,14 @@ export const Header = ({
             {hideArrowKey ? title : `< ${title} >`}
           </H1>
           <Paragraph
-            padding="0"
+            padding={paddingParagraph || "0"}
             width="auto"
             letterSpacing="0.05em"
-            padding_tablet={paddingParagraph_tablet}
+            padding_tablet={
+              paddingParagraph_tablet
+                ? paddingParagraph_tablet
+                : paddingParagraph || 0
+            }
             textAlign_tablet={textAlign_tablet}
             margin={paragraphMargin || "26px 0"}
             margin_tablet={paragraphMargin_Tablet}
@@ -1323,6 +1337,10 @@ Div.defaultProps = {
 
 Container.defaultProps = {
   maxWidth: "1366px",
+  padding: "17px",
+  padding_tablet: "0 40px",
+  padding_md: "0 80px",
+  padding_lg: "0",
 };
 
 Row.defaultProps = {

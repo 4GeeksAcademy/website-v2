@@ -8,7 +8,7 @@ import {
 } from "../actions";
 import BaseRender from "./_baseLayout";
 import { Container, Div, HR, GridContainer } from "../components/Sections";
-import { H2, H3, H4, Paragraph } from "../components/Heading";
+import { H1, H2, H3, H4, Paragraph } from "../components/Heading";
 import {
   Anchor,
   Button,
@@ -264,7 +264,7 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
         />
         <Container display="block">
           <H2
-            type="h2"
+            type="h1"
             textAlign="center"
             fontSize="36px"
             fontSize_tablet="80px"
@@ -272,9 +272,10 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
             lineHeight_tablet="87px"
             margin_tablet="40px 0 40px 0"
             textTransform="uppercase"
+            fontFamily="Archivo, Lato, sans-serif"
           >
             {yml.header.title}
-          </H2>
+          </H1>
           <Paragraph
             color="black"
             opacity="1"
@@ -506,7 +507,7 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
       </Container>
 
       <Div
-        background={Colors.lightGray}
+        background="#FAFAFA"
         padding="30px"
         padding_tablet="80px 130px"
         padding_lg="80px 0px"
