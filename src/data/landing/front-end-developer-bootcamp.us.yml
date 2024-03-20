@@ -6,7 +6,7 @@ meta_info:
   description: "Master industry-standard languages such as HTML, CSS, and JavaScript, along with popular frameworks like React – acquiring real-world, in-demand skills"
   image: "/images/bg/main-bg.jpg"
   keywords: "Coding Classes, Learn to code, 4Geeks Academy"
-  visibility: "hidden" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
+  visibility: "unlisted" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   template: "landing_a" # <--- choose your landing template
   redirects: []
 
