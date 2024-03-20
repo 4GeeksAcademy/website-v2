@@ -42,13 +42,13 @@ const Triangle = styled.div`
 `;
 
 const Nav = styled.nav`
-  height: 71px;
+  height: ${(props) => props.height || "71px"};
   display: ${(props) => props.display};
-  position: fixed;
+  position: ${(props) => props.position || "fixed"};
   width: 100%;
-  background: white;
-  z-index: 100;
-  top: 0;
+  background: ${(props) => props.background || "white"};
+  z-index: ${(props) => props.zIndex || "100"};
+  top: ${(props) => props.top || "0"};
   align-items: center;
   justify-content: space-between;
   padding: 15px;
@@ -89,7 +89,7 @@ const MenuItem = styled.li`
     }
     .triangle {
       display: block;
-      z-index: 2;
+      z-index: 1;
     }
   }
 `;
@@ -144,11 +144,11 @@ export const Navbar = ({
 
   const data = useStaticQuery(graphql`
     query {
-      file(relativePath: { eq: "images/4geeksacademy-logo.png" }) {
+      file(relativePath: { eq: "images/4geeksacademy-logo-old.png" }) {
         childImageSharp {
           gatsbyImageData(
-            layout: FIXED # --> CONSTRAINED || FIXED || FULL_WIDTH
-            width: 125
+            layout: FULL_WIDTH # --> CONSTRAINED || FIXED || FULL_WIDTH
+            width: 200
             placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
           )
         }
@@ -171,7 +171,6 @@ export const Navbar = ({
             defaultLanguage
             breathecode_location_slug
             active_campaign_location_slug
-            gdpr_compliant
             in_person_available
             online_available
             meta_info {
@@ -201,9 +200,9 @@ export const Navbar = ({
     }
   `);
 
-  const isContentBarActive =
-    (contentBar.active && isTestMode) ||
-    (contentBar.active && !isDevelopment());
+  const isContentBarActive = true;
+  // (contentBar.active && isTestMode) ||
+  // (contentBar.active && !isDevelopment());
 
   const langDictionary = {
     us: "es",
@@ -213,15 +212,27 @@ export const Navbar = ({
   const locations = locByLanguage(data.allLocationYaml, langDictionary[lang]);
 
   return (
-    <>
+    <Div
+      display="inline"
+      position="fixed"
+      width="100%"
+      top="0"
+      opacity="1"
+      zIndex="100"
+    >
       <CustomBar
         isContentBarActive={isContentBarActive}
         contentBar={contentBar}
+        display_md="flex"
+        display_xxs="none"
+        position="static"
       />
       <Nav
         display_md="flex"
         display="none"
-        style={{ top: `${isContentBarActive ? "50px" : "0px"}` }}
+        position="relative"
+        top="0"
+        height="60px"
       >
         <Link to={lang == "es" ? "/es/inicio" : "/"}>
           <GatsbyImage
@@ -230,6 +241,10 @@ export const Navbar = ({
             image={getImage(data.file.childImageSharp.gatsbyImageData)}
             // fixed={data.file.childImageSharp.fixed}
             alt="4Geeks Logo"
+            style={{
+              height: "auto",
+              width: "132px",
+            }}
           />
         </Link>
         <Menu>
@@ -319,7 +334,7 @@ export const Navbar = ({
           </Link>
         </Div>
       </Nav>
-    </>
+    </Div>
   );
 };
 
@@ -342,7 +357,6 @@ const CampusMenu = ({ status, setStatus, menu }) => {
                     ? `5px solid ${Colors.blue}`
                     : null
                 }
-                borderRadius="none"
                 padding="10px"
                 onClick={() => {
                   setActiveOpt({ ...m });
@@ -525,7 +539,6 @@ export const MegaMenu = ({ status, setStatus, menu }) => {
                                       pointer
                                       textColor={Colors.black}
                                       fontSize={"13px"}
-                                      borderRadius="3px"
                                       padding="10px"
                                     >
                                       {m.text}

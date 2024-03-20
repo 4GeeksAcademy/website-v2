@@ -2,7 +2,7 @@ meta_info:
   slug: "coding-bootcamp-uruguay"
   title: "4Geeks Academy in Uruguay, Monte Video"
   position: 38
-  description: "Get to know here all about our coding bootcamp campus in Uruguay, Monte Video of 4Geeks Academy"
+  description: "Get to know here all about our coding bootcamp campus in Uruguay, Monte Video of 4GeeksAcademy"
   image: "/images/og-preview/montevideo-uruguay.us.png"
   keywords: ""
   # it will not show up on the applications forms
@@ -11,6 +11,11 @@ meta_info:
   region: "latam"
   dialCode: "598"
   related_clusters: ["trends-and-tech"]
+  
+  # ⬇️ cohort_include_regex field is used to filter cohorts on the calendar that only test successfully for a particular regex
+  # for example: for this location, only show cohorts starting with usa-xx-spanish
+  cohort_include_regex: ["latam"]
+  cohort_exclude_regex: []
 
 seo_title: "Coding Bootcamp Uruguay"
 header:
@@ -33,7 +38,7 @@ button:
 
 custom_bar:
   active: false
-  message: Lorem ipsum dot simet mosd ei
+  message: '4Geeks offers scholarships and financing tailored to your needs.<a class="customBar-link" href="/us/apply">¡Apply now!</a>'
   button: 
     label: "Read More"
     path: "#" #string (can be inline path using #, relative path or absolute path)
@@ -72,7 +77,7 @@ images_box:
   images:
     - path: "../../../static/images/locations/uruguay-new.jpg"
       alt: "Uruguay city"
-    - path: "../../../static/images/ownpeoplecoding2.jpg"
+    - path: "../../../static/images/ownpeoplecoding2.webp"
       alt: "4Geeks Own People Coding"
     - path: "../../../static/images/ownmancoding.jpg"
       alt: "Remote-Coding-Bootcamp"
@@ -80,6 +85,31 @@ images_box:
       alt: "4Geeeks location"
     - path: "../../../static/images/locations/miami-people.jpeg"
       alt: "4Geeeks lab"
+  layout_horizontal: true #false == "mode mosaic"
+
+two_columns:
+  proportions: [6, 6]
+  image:
+    style: '{"border" : "5px solid black", "backgroundSize": "contain" }'
+    src: "/static/images/testimonials/pablo-review.jpg"
+    shadow: true 
+  video: "ScqncejBOvY"
+  heading:
+    text: "4Geeks Academy in Montevideo Pablo's Testimonial"
+    font_size: ["30px", "30px", "30px", "30px", "30px"]
+  sub_heading:
+    text: "We are in Monte Video based and we have been focusing in bringing on more opportunities."
+    font_size: ["18px", "18px", "22px", "22px", "22px"]
+  button:
+    text: "APPLY NOW"
+    color: "white"
+    background: "black"
+    path: "/us/apply"
+  bullets:
+    items: 
+    - text: "There is always a full or partial scholarship open"
+    - text: "Our programs are tailored to meet the current demands of the tech industry, ensuring graduates possess relevant skills"
+    - text: "A track record of high job placement rates post-graduation, ensuring career progression for our students"
 
 ## START FROM HERE - DON'T CHANGE ANYTHING ABOVE
 ## HEADING SECTION
@@ -89,8 +119,14 @@ heading_section:
 
 active_campaign_location_slug: "montevideo-uruguay"
 breathecode_location_slug: "montevideo-uruguay"
-gdpr_compliant: false # do we need to ask for permision?
 in_person_available: false # important to accept in-person applicants
+
+consents:
+  - slug: "gdpr_consent"
+    name: "GDPR Consent"
+    active: false
+    message: 'By submitting this form, I accept that my data may be used for a quote request that could result in a commercial relationship. Check out our complete <a style={{ marginLeft: "5px" }} target="_blank" rel="noopener noreferrer nofollow" className="decorated" href="/us/privacy-policy">Privacy Policy</a>'
+    error_message: "You need to accept the privacy terms"
 
 city: "Monte Video"
 name: "Uruguay"
@@ -104,13 +140,13 @@ country_shortname: "uy"
 socials:
   - name: "Facebook"
     icon: "facebook"
-    link: "https://www.facebook.com/4geeksacademy"
+    link: "https://www.facebook.com/4geeksacademylatinoamerica"
   - name: "Twitter"
-    icon: "twitter"
-    link: "https://www.twitter.com/4geeksacademy"
+    icon: "x-logo"
+    link: "https://twitter.com/4geeksacademyES"
   - name: "Instagram"
     icon: "instagram"
-    link: "https://www.instagram.com/4geeksacademy"
+    link: "https://www.instagram.com/4geeksacademylatam/"
 courses:
   - "Full-Time"
   - "Part-Time"

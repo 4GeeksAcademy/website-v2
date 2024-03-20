@@ -14,7 +14,7 @@ partners:
   images:
     - name: "Facebook"
       #locations: ["madrid-spain"]
-      image: "../../../../static/images/partner/facebook.png"
+      image: "../../../../static/images/partner/meta-logo.png"
       featured: true
     - name: "Microsoft"
       #locations: ["madrid-spain"]

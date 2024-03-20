@@ -9,23 +9,26 @@ meta_info:
 
 seo_title: "geekforce"
 header:
-  title: ""
+  title: |
+    <strong style='color:black; font-family: Archivo-Black;'>Geek</strong>
+    <strong style = 'color:rgba(255, 183, 24, 1); font-family: Archivo-Black;'>FORCE</strong> <br>
+    <strong style='font-family: Archivo;'>the collective process of Career Support at the Academy</strong>
   image: "../../../static/images/bg/companies-bg.jpg"
   image_alt: ""
   paragraph: |
-    GeekForce is the collective process of Career Support at the Academy. The "force" stands For Career Empowerment and it is a lifetime membership. It provides you job placement assistance so you get ready to get a job in tech.
+    The "force" stands For Career Empowerment and it is a lifetime membership. It provides you job placement assistance so you get ready to get a job in tech.
   image_logo: "/images/geekforce.png"
   
 # Introduction Video here
 geekForce:
   - videoId: "ln3bQsV1BaQ"
-    image: ../../../static/images/staff/hernan.png
+    image: ../../../static/images/staff/hernan-new.png
 
 # Banner of icons
 icons:
-  - icon: "contract-checked"
+  - icon: "contract"
     title: "86% of our students hired"
-  - icon: "job"
+  - icon: "ratio" #"group"
     title: "POST PROGRAM LABOR SUPPORT"
   - icon: "talk"
     title: "PREPARING FOR INTERVIEWS"
@@ -34,27 +37,33 @@ icons:
 
 list:
   - title: "Unlimited Professional Support"
-    image: "../../../static/images/professional-profile.png"
+    image: "../../../static/images/Group-6618-2.png"
     position: "right"
     sub:
-      - title: "✔ Advice and creation of professional profile"
+      - title: "Advice and creation of professional profile"
         text: "At 4Geeks we will help you perfect your professional profile. You will have personalized advice with our experts to improve your CV, LinkedIn, GitHub and Portfolio."
 
 
   - title: "Interview Simulation"
-    image: "../../../static/images/tech-interview.png"
+    image: "../../../static/images/landing/two-womans-and-laptop.webp" 
     position: "left"
-    text: "We will hold mock interviews to assess your strengths and weaknesses to create a stronger profile before the actual interviews. Every time you have an interview, we will practice using different technologies.
-    We have our very own pool of auto-graded exercises, so you can practice until you master the skills to get the job you want."
+    text: |
+      We will hold mock interviews to assess your strengths and weaknesses to create a stronger profile before the actual interviews. Every time you have an interview, we will practice using different technologies.
+      We have our very own pool of auto-graded exercises, so you can practice until you master the skills to get the job you want.
+    button:
+      link: "/"
+      text: ""
+      color: "black"
 
   - title: "Lifetime Mentoring"
-    image: "../../../static/images/bg/main-bg.jpg"
+    image: "../../../static/images/Group-6617.png"
     position: "right"
-    text: "Launching a career in tech involves assessing your current situation and making informed decisions about the future.
-    It requires assessment of yourself, your context, and ACTION. You can do this alone; or you can rely on a mentor's experience which can give you
-    perspective, information and access to the right resources. In 4Geeks we adjust the sessions according to your calendar,
-    we also give you the opportunity to have them online or in-person.
-    In any case, we assure you that you have the opportunity for constant mentoring whenever you need it. "
+    text: |
+      Launching a career in tech involves assessing your current situation and making informed decisions about the future.
+      It requires assessment of yourself, your context, and ACTION. You can do this alone; or you can rely on a mentor's experience which can give you
+      Perspective, information and access to the right resources. In 4Geeks we adjust the sessions according to your calendar,
+      We also give you the opportunity to have them online or in-person.
+      In any case, we assure you that you have the opportunity for constant mentoring whenever you need it.
 
 # benefits:
 #   - p:

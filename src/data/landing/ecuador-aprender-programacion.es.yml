@@ -9,7 +9,7 @@ meta_info:
 
   template: "landing_a" # <--- choose your landing template
   redirects: # <--- URL redirections to avoid 404 errors
-    ["/landing/bootcamp-colombia"]
+    []
 
   # Set a particular course or location to the landing page
   # this UTM fields will be also included in the CRM contact
@@ -43,7 +43,7 @@ header_data:
   background: "#FFF1D1"
   tagline: Aprende a programar desde cero o potencia tu carrera en el mundo tech!
   sub_heading: 
-  badge: "../../../static/images/badges/Course-Report-Badge-2023.png"
+  badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
   image_filter: brightness(0.3)
 
 features:
@@ -63,7 +63,7 @@ short_badges:
     alt: "Mejor centro de Coding Bootcamp"
   - name: "Course Report"
     url: ""
-    image: "../../../static/images/badges/Course-Report-Badge-2023.png"
+    image: "../../../static/images/badges/Course-Report-Badge-2024.webp"
     alt: "Top Coding Bootcamps Course Report"
   - name: "Switchup"
     url: ""
@@ -98,13 +98,33 @@ components:
     background: "#f1f1f1"
     image:
       style: '{ "backgroundSize": "contain" }'
-      src: "/images/badges/Course-Report-Badge-2023.png"
+      src: "/images/badges/Course-Report-Badge-2024.webp"
       link: "https://www.coursereport.com/schools/4geeks-academy"
     heading:
       text:
         "Tenemos 3 años consecutivos siendo seleccionados como uno de los mejores coding bootcamps del mundo"
         #xl      lg     md     sm    xs
       font_size: ["38px", "36px", "32px", "30px", "30px"]
+
+  - name: some_id
+    position: 2
+    layout: two_column_right
+    image:
+      src: "/images/testimonials/valentina-review.jpg"
+    video: "https://www.youtube.com/watch?v=Vyrynn4Ey1U"
+    heading:
+      text: "¡Aprende a programar con los mejores en Ecuador!🖥️"
+        #xl      lg     md     sm    xs
+      font_size: ["40px", "34px", "34px", "25px", "20px"]
+    content:
+      text: "Con más de 18 meses operando en el país contamos con uno de los mejores programas de estudio para aprender a programar a nivel mundial🌍 además de fuertes alianzas con diferentes empresas a nivel nacional e internacional que nos permiten ayudar a nuestros estudiantes a encontrar empleo ¡en tiempo record!⏰"
+      font_size: ["16px"]
+    button:
+      text: "Únete a la Academia"
+      background: black
+      color: white
+      hover_color: "#white"
+      path: "#bottom"
 
 rating_reviews:
   position: 2

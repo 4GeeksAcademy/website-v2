@@ -8,7 +8,7 @@ meta_info:
   keywords: ""
   visibility: "hidden" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   template: "landing_a" # <--- choose your landing template
-  redirects: [""] # <--- URL redirections to avoid 404 errors
+  redirects: ["/example-redirect"] # <--- URL redirections to avoid 404 errors
 
   automation: downloadable # optional, lead as "null" if you don't know, it can be more than one (comma separated)
   tag: request_downloadable # mandatory: at lease one tag (comma separated)
@@ -142,7 +142,7 @@ who_is_hiring:
   sub_heading: "Get a job in less than 3 months thanks to our growing network of more than 500 technology companies. Access to national and international offers and a community of more than 2000 graduates"
   featured:
     - name: "Facebook"
-      image: "../../../static/images/partner/facebook.png"
+      image: "../../../static/images/partner/meta-logo.png"
     - name: "Microsoft"
       image: "../../../static/images/partner/microsoft.png"
     - name: "Apple"

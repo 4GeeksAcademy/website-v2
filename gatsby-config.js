@@ -62,6 +62,10 @@ module.exports = {
       options: {
         plugins: [
           {
+            resolve: `gatsby-remark-prismjs`,
+            options: {},
+          },
+          {
             resolve: "gatsby-remark-component",
             options: { components: ["button", "call-to-action"] },
           },
@@ -109,7 +113,7 @@ module.exports = {
       resolve: "gatsby-plugin-web-font-loader",
       options: {
         custom: {
-          families: ["Lato", "Inter"],
+          families: ["Lato", "Inter", "Archivo"],
           urls: ["/fonts/fonts.css"],
         },
       },

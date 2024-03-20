@@ -1,14 +1,19 @@
 meta_info:
   slug: "coding-bootcamp-malaga-spain"
-  title: "Coding Bootcamp Málaga, Spain with 4Geeks Academy"
+  title: "Coding Bootcamp Málaga, Spain with 4GeeksAcademy"
   position: 20
-  description: "Know here all about our coding bootcamp campus in Málaga, Spain with 4Geeks Academy"
+  description: "Know here all about our coding bootcamp campus in Málaga, Spain with 4GeeksAcademy"
   image: "/images/og-preview/malaga-spain.us.png"
   keywords: "Coding Bootcamp Malaga"
   redirects: ["/location/malaga", "/us/location/malaga-spain"]
   region: "europe"
   dialCode: "34"
   related_clusters: ["trends-and-tech"]
+
+  # ⬇️ cohort_include_regex field is used to filter cohorts on the calendar that only test successfully for a particular regex
+  # for example: for this location, only show cohorts starting with usa-xx-spanish
+  cohort_include_regex: ["spain"]
+  cohort_exclude_regex: []
 
 seo_title: "Coding Bootcamp Málaga"
 header:
@@ -82,11 +87,44 @@ images_box:
       alt: "4Geeeks miami day"
     - path: "../../../static/images/locations/miami-old2.jpg"
       alt: "4Geeeks miami lab"
+  layout_horizontal: true #false == "mode mosaic"
+
+two_columns:
+  proportions: [6, 6]
+  image:
+    style: '{"border" : "5px solid black", "backgroundSize": "contain" }'
+    src: "/static/images/staff/luisa.png"
+    shadow: true  
+  video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
+  heading:
+    text: "Luisa Glum's Journey with 4GeeksAcademy"
+    font_size: ["30px", "30px", "30px", "30px", "30px"]
+  sub_heading:
+    text: "Expert Guidance and Mentorship in Malaga Driving Professional Development within the Tech Community"
+    font_size: ["18px", "18px", "22px", "22px", "22px"]
+  button:
+    text: "APPLY NOW"
+    color: "white"
+    background: "black"
+    path: "/us/apply"
+  bullets:
+    items: 
+    - text: "Industry-aligned curriculum focused on practical skills and project-based learning"
+    - text: "Mentorship programs connecting students with industry professionals for insights and guidance"
+    - text: "Hands-on learning experiences refining skills for Málaga's competitive tech job market"
+
 
 active_campaign_location_slug: "malaga-spain"
 breathecode_location_slug: "malaga-spain"
-gdpr_compliant: true # do we need to ask for permision?
 in_person_available: true # important to accept in-person applicants
+
+consents:
+  - slug: "gdpr_consent"
+    name: "GDPR Consent"
+    active: true
+    message: 'By submitting this form, I accept that my data may be used for a quote request that could result in a commercial relationship. Check out our complete <a style={{ marginLeft: "5px" }} target="_blank" rel="noopener noreferrer nofollow" className="decorated" href="/us/privacy-policy">Privacy Policy</a>'
+    error_message: "You need to accept the privacy terms"
+
 city: "Málaga"
 name: "Málaga, Spain"
 latitude: "36.728080"
@@ -100,16 +138,16 @@ country_shortname: "es"
 socials:
   - name: "Facebook"
     icon: "facebook"
-    link: "https://www.facebook.com/4geeksacademyes"
+    link: "https://www.facebook.com/4GeeksAcademyES"
   - name: "Twitter"
-    icon: "twitter"
+    icon: "x-logo"
     link: "https://www.twitter.com/4geeksacademyes"
   - name: "Instagram"
     icon: "instagram"
-    link: "https://www.instagram.com/4geeksacademyes"
-  - name: "Meetup"
-    icon: "meetup"
-    link: "https://www.meetup.com/4geeks-academy-madrid"
+    link: "https://www.instagram.com/4geeksacademyes/"
+  - name: "Linkedin"
+    icon: "linkedin"
+    link: "https://www.linkedin.com/school/4geeksacademyes/"
 courses:
   - "Full-Time"
   - "Part-Time"

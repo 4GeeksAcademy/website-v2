@@ -20,11 +20,11 @@ info:
     why_important: "It is really easy to get stuck when you are learning to code: You need personal mentorship. That is why you will find more teachers at 4Geeks than the industry average."
     icon: "glasses"
 
-  - features: "Questions Response Time"
-    at4_Geeks: "15 min"
+  - features: "RESPONSE TIME"
+    at4_Geeks: "30 min"
     industry_average: "Not measured"
     why_important: |
-      Getting stuck is the 1st reason that leads to both frustration and to loss of motivation. That is why we have created the "15 min rule" to keep you going. Someone will always be available to help you.
+      Getting stuck is the 1st reason that leads to both frustration and to loss of motivation. That is why we have created the "30 min rule" to keep you going. Someone will always be available to help you.
     icon: "clock"
 
   - features: "Mentoring 1-on-1"
@@ -41,7 +41,7 @@ info:
 
   - features: "Focus"
     at4_Geeks: "We only teach code"
-    industry_average: "Other schools teach many things"
+    industry_average: "Diverse Subjects"
     why_important: "Thanks to our focus on coding-related skills we are able offer the best learning experience possible. You are in good hands - we are all developers, we code every day and we love to teach it."
     icon: ""
 
@@ -64,7 +64,7 @@ info:
     icon: ""
 
   - features: "Support at job (after hiring)"
-    at4_Geeks: "Unlimited"
+    at4_Geeks: "Lifetime career support"
     industry_average: "Limited or non existent"
     why_important: "Once our students find a job, our mentorship does not cease.  All of our alumni are welcome to continuous training for their careers as well."
     icon: ""
@@ -77,7 +77,7 @@ info:
 
   - features: "Type of class"
     at4_Geeks: "Blended, Online, Offline, customizadas y grabaciones"
-    industry_average: "Solo online, solo offline"
+    industry_average: "Online or offline"
     why_important: "Our classes can be taken in-person or online, we stream them all. All part-time classes get recorded and are available for future access."
     icon: ""
 

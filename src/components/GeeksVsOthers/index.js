@@ -64,7 +64,8 @@ const GeeksVsOthers = (props) => {
               fontSize_tablet="32px"
               fontWeight="700"
               lineHeight="29px"
-              lineHeight_tablet="38"
+              lineHeight_tablet="38px"
+              marginTop="30px"
             >
               {props.title}
             </H2>
@@ -82,7 +83,7 @@ const GeeksVsOthers = (props) => {
         display_xxs="none"
         display_md="flex"
         maxWidth="1366px"
-        margin="auto"
+        margin="0 auto"
         justifyContent="center"
       >
         <GridContainer
@@ -227,8 +228,8 @@ const GeeksVsOthers = (props) => {
           })}
         </GridContainer>
       </Div>
-      <GridContainer margin="0 0 36px 0" margin_tablet="0 0 76px 0">
-        {props.link && (
+      {props.link && (
+        <GridContainer margin="0 0 36px 0" margin_tablet="0 0 76px 0">
           <Div justifyContent="center" margin="50px 0 0 0">
             <Link to={geeks.button.button_link}>
               <Paragraph color={Colors.blue}>
@@ -236,15 +237,15 @@ const GeeksVsOthers = (props) => {
               </Paragraph>
             </Link>
           </Div>
-        )}
-      </GridContainer>
+        </GridContainer>
+      )}
 
       {/* MOBILE VERSION*/}
 
       <Div
         //className="program-details-mobile"
         flexWrap="wrap"
-        padding_xs="40px 0 20px 0"
+        padding_xs="0 0 20px 0"
         margin_tablet="20px 35px"
         margin_xxs="30px 20px"
         gridGap="10px"
@@ -257,6 +258,7 @@ const GeeksVsOthers = (props) => {
           lineHeight="19px"
           textAlign="center"
           color={Colors.darkGray}
+          padding="30px 0 10px 0"
         >
           {geeks.titles.featured}
         </H2>
@@ -269,8 +271,8 @@ const GeeksVsOthers = (props) => {
                 <Div
                   key={index}
                   width="100%"
-                  height={selected.index === index ? "auto" : "76px"}
-                  padding_xs="15px 0 0 0"
+                  height={selected.index === index ? "auto" : "50px"}
+                  //padding_xs="15px 0 0 0"
                   margin_xs="0 15px"
                   display_md="none"
                   cursor={`pointer`}
@@ -283,7 +285,7 @@ const GeeksVsOthers = (props) => {
                   flexDirection={selected.index === index && "column"}
                   borderBottom={`1px solid ${Colors.gray2}`}
                   position="relative"
-                  alignItems="stretch"
+                  alignItems="center"
                 >
                   <H3
                     textAlign="left"
@@ -292,17 +294,23 @@ const GeeksVsOthers = (props) => {
                     lineHeight="22px"
                     textTransform="uppercase"
                     color={Colors.darkGray}
+                    padding={selected.index === index ? "14px 0 0 0" : "0px"}
+                    //style={{ position: "absolute", left: "0px", top: "15px" }}
                   >
                     {item.features}
                   </H3>
-                  <Icon
-                    icon="arrow-right"
-                    width="32px"
-                    height="16px"
+                  <Div
                     style={{ position: "absolute", right: "0px", top: "15px" }}
-                  />
+                    transform={
+                      selected.index === index
+                        ? "rotate(90deg)"
+                        : "rotate(0deg)"
+                    }
+                  >
+                    <Icon icon="arrow-right" width="32px" height="16px" />
+                  </Div>
                   {selected.index === index && (
-                    <Div flexDirection="row" margin="10px 0">
+                    <Div flexDirection="row" margin="10px 0" width="100%">
                       <Div
                         flexDirection="column"
                         width="50%"

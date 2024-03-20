@@ -2,13 +2,18 @@ meta_info:
   slug: "bootcamp-programacion-nyc"
   position: 1
   title: "4Geeks Academy NYC - Bootcamp de programación en NYC, aprende a programar en NYC"
-  description: "Conoce aquí todo sobre nuestro campus de bootcamp de programación en NYC, New York de 4Geeks Academy"
+  description: "Conoce aquí todo sobre nuestro campus de bootcamp de programación en NYC, New York de 4GeeksAcademy"
   image: "/images/og-preview/downtown-miami.es.png"
   keywords: "null"
   redirects: []
   region: "usa-canada"
   dialCode: "1"
   related_clusters: ["trends-and-tech"]
+  
+  # ⬇️ cohort_include_regex field is used to filter cohorts on the calendar that only test successfully for a particular regex
+  # for example: for this location, only show cohorts starting with usa-xx-spanish
+  cohort_include_regex: ["miami"]
+  cohort_exclude_regex: ['usa-\d{1,10}-spanish']
 
 seo_title: "Bootcamp de Programación en NYC"
 header:
@@ -29,11 +34,11 @@ button:
   apply_button_link: "/aplica"
 
 custom_bar:
-  active: false
-  message: 'Potencia tu carrera a través del código. <a class="customBar-link" href="/es/aplica">Aplica</a> Próximas fechas: 06/27 Full-Stack | 07/11 ML + AI!'
+  active: true
+  message: 'Desde $150 al mes. O paga cuando obtengas un trabajo! <a class="customBar-link" href="/es/aplica">Aplica</a>'
   button:
-    label: "Read More"
-    path: "#" #string (can be inline path using #, relative path or absolute path)
+    label: "" # leave empty to hide button
+    path: "/es/aplica" #string (can be inline path using #, relative path or absolute path)
 
 badges:
   title: ""
@@ -57,7 +62,7 @@ info_box:
   heading: ""
   address: ""
   iframeMapUrl: ""
-  open_on_maps: "Abrir en Maps."
+  open_on_maps: "Abrir Mapa."
   contact_heading: "Contacts"
   phone: "(786) 416-6640"
   email: "info@4GeeksAcademy.com"
@@ -68,7 +73,7 @@ images_box:
   images:
     - path: "../../../static/images/locations/nyc-new.png"
       alt: "New York city"
-    - path: "../../../static/images/ownpeoplecoding2.jpg"
+    - path: "../../../static/images/ownpeoplecoding2.webp"
       alt: "4Geeks Own People Coding"
     - path: "../../../static/images/ownmancoding.jpg"
       alt: "Remote-Coding-Bootcamp"
@@ -76,13 +81,43 @@ images_box:
       alt: "4Geeeks location"
     - path: "../../../static/images/locations/miami-people.jpeg"
       alt: "4Geeeks lab"
+  layout_horizontal: true #false == "mode mosaic"
 
+two_columns:
+  proportions: [6, 6]
+  image:
+    style: '{"border" : "5px solid black", "backgroundSize": "contain" }'
+    src: "/static/images/testimonials/allisa-testimonial.jpg"
+    shadow: true  
+  video: "https://www.youtube.com/watch?v=TCHASxvkhpI"
+  heading:
+    text: "Explorando 4Geeks Academy en Nueva York"
+    font_size: ["30px", "30px", "30px", "30px", "30px"]
+  sub_heading:
+    text: "Únete a nosotros para explorar el aprendizaje práctico, interactuar con líderes de la industria y forjar tu camino en el próspero ámbito tecnológico de Nueva York"
+    font_size: ["18px", "18px", "22px", "22px", "22px"]
+  button:
+    text: "¡Únete ahora!"
+    color: "white"
+    background: "black"
+    path: "/es/aplica"
+  bullets:
+    items: 
+    - text: "Plan de estudios orientado al empleo asegurando el éxito profesional"
+    - text: "Cursos que enfatizan el dominio en codificación y mejora de habilidades"
+    - text: "Asesoramiento profesional maximizando oportunidades dentro de la vibrante industria tecnológica de Nueva York"
 
 active_campaign_location_slug: "newyork-usa"
 breathecode_location_slug: "newyork-usa"
-gdpr_compliant: false # do we need to ask for permision?
 in_person_available: true # important to accept in-person applicants
 online_available: false # important to accept online-only applicants
+
+consents:
+  - slug: "gdpr_consent"
+    name: "GDPR Consent"
+    active: false
+    message: 'Al completar este formulario acepto que mi información será utilizada para enviarme información comercial sobre 4Geeks Academy y que podría resultar una relación comercial a partir de esto. Revisa nuestra <a style={{ marginLeft: "5px" }} target="_blank" rel="noopener noreferrer nofollow" className="decorated" href="/es/privacidad">Política de Privacidad</a>'
+    error_message: "Debes aceptar el consent de GDPR"
 
 city: "NYC"
 name: "NYC, USA"
@@ -99,14 +134,14 @@ socials:
     icon: "facebook"
     link: "https://www.facebook.com/4geeksacademy"
   - name: "Twitter"
-    icon: "twitter"
+    icon: "x-logo"
     link: "https://www.twitter.com/4geeksacademy"
   - name: "Instagram"
     icon: "instagram"
-    link: "https://www.instagram.com/4geeksacademy"
-  - name: "Meetup"
-    icon: "meetup"
-    link: "https://www.meetup.com/4geeks-academy"
+    link: "https://www.instagram.com/4geeksacademy/"
+  - name: "Linkedin"
+    icon: "linkedin"
+    link: "https://www.linkedin.com/school/4geeksacademy/"
 courses:
   - "Full-Time"
   - "Part-Time"

@@ -7,9 +7,28 @@ meta_info:
   keywords: "Testimonios, historias de éxito, 4Geeks Academy"
   redirects: []
 
-seo_title: "testimonios"
+seo_title: "Conoce a las personas que cambiaron sus carreras al aprender a programar"
 header:
-  title: "Conoce a las personas que cambiaron sus carreras al aprender a programar"
+  title: "¿QUÉ DICEN NUESTROS ALUMNOS?"
   paragraph: "Aprender a codificar puede llevar a diferentes caminos. Nuestros graduados se inscribieron con un objetivo: cambiar su futuro. Estos son algunos de nuestros ex alumnos que tomaron la decisión de impulsar sus carreras."
   image: "../../../static/images/locations/caracas-loc-2.jpeg"
   image_alt: ""
+
+images:
+  - name: "Facebook"
+    image: "../../../static/images/partner/meta-logo.png"
+  - name: "Microsoft"
+    image: "../../../static/images/partner/google-gray.png"
+  - name: "Apple"
+    image: "../../../static/images/partner/apple.png"
+  - name: "Uber"
+    image: "../../../static/images/partner/uber.png"
+  - name: "globant"
+    image: "../../../static/images/partner/globant-gray.png"
+  - name: "accenture"
+    image: "../../../static/images/partner/accenture-gray.png"
+  - name: "discord"
+    image: "../../../static/images/partner/discord-gray.png"
+
+partners:
+  title: Las mejores empresas contratan a nuestros estudiantes

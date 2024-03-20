@@ -11,6 +11,11 @@ meta_info:
   region: "latam"
   dialCode: "54"
   related_clusters: ["desarrollador-full-stack"]
+  
+  # ⬇️ cohort_include_regex field is used to filter cohorts on the calendar that only test successfully for a particular regex
+  # for example: for this location, only show cohorts starting with usa-xx-spanish
+  cohort_include_regex: ["latam"]
+  cohort_exclude_regex: []
 
 seo_title: "Aprende a programar en Argentina"
 header:
@@ -42,12 +47,7 @@ custom_bar:
 badges:
   title: ""
   paragraph: |
-    4Geeks Academy es el lugar donde los desarrolladores crecen y prosperan. 
-    Estamos autorizados por el Departamento de Educación de Florida. 
-    Elegido como uno de los 35 mejores cursos de programacion del mundo y 
-    el mejor <a href="https://4geeksacademy.com/es/curso-de-programacion-desde-cero/?lang=es" rel="nofollow">curso de programacion</a> en Miami según SwitchUp. 
-    4Geeks Academy ha sido reconocida como uno de los 10 mejores bootcamps de codificación en los Estados Unidos según Newsweek. 
-    Una comunidad construida para desarrolladores.
+    Pon en marcha tu carrera en 4GeeksAcademy, donde los desarrolladores crecen y prosperan. Nombrada el mejor <a style='color:black; text-decoration: underline;'} href="https://4geeksacademy.com/us/coding-bootcamp" rel="nofollow">coding bootcamp</a> del 2023 por Course Report, el mejor centro de bootcamps de codificación de 2023 por los Premios de Excelencia Educativa en España, incluida entre las 10 mejores de los EE. UU. por Newsweek y calificada con 4.92/5 en Switchup. Licenciada por el Departamento de Educación de Florida, EE. UU.
 news:
   title: "4Geeks Academy Argentina en las noticias..."
 upcoming:
@@ -70,7 +70,7 @@ images_box:
   images: 
     - path: "../../../static/images/locations/buenosaires-new.png"
       alt: "BAires city"
-    - path: "../../../static/images/ownpeoplecoding2.jpg"
+    - path: "../../../static/images/ownpeoplecoding2.webp"
       alt: "4Geeks Own People Coding"
     - path: "../../../static/images/ownmancoding.jpg"
       alt: "Remote-Coding-Bootcamp"
@@ -78,8 +78,40 @@ images_box:
       alt: "4Geeeks location"
     - path: "../../../static/images/locations/miami-people.jpeg"
       alt: "4Geeeks lab"
+  layout_horizontal: true #false == "mode mosaic"
+
 
 ## START FROM HERE - DON'T CHANGE ANYTHING ABOVE
+
+
+
+
+## TWO COLUMNS
+two_columns:
+  proportions: [6, 6]
+  image:
+    style: '{"border" : "5px solid black", "backgroundSize": "contain" }'
+    src: "/static/images/testimonials/pablo-review.jpg"
+    shadow: true 
+  video: "ScqncejBOvY"
+  heading:
+    text: "4Geeks Academy en Argentina"
+    font_size: ["30px", "30px", "30px", "30px", "30px"]
+  sub_heading:
+    text: "Oportunidades de Financiamiento y Adaptabilidad al Mercado de Buenos Aires"
+    font_size: ["18px", "18px", "22px", "22px", "22px"]
+  button:
+    text: "¡Únete ahora!"
+    color: "white"
+    background: "black"
+    path: "/es/aplica"
+  bullets:
+    items: 
+    - text: "Pablo resalta las variadas oportunidades de financiamiento disponibles para estudiantes que deseen unirse a 4Geeks Academy en Argentina"
+    - text: "Explora cómo nuestros programas están meticulosamente diseñados para alinearse con las demandas del mercado tecnológico actual"
+    - text: "Nuestros graduados tienen una tasa de colocación laboral del 95% dentro de los seis meses posteriores a la graduación, asegurando transiciones exitosas al mundo laboral"
+
+
 ## HEADING SECTION
 heading_section:
   heading: "PRECIO Y FINANCIACIÓN"
@@ -87,8 +119,14 @@ heading_section:
 
 active_campaign_location_slug: "buenosaires-argentina"
 breathecode_location_slug: "buenosaires-argentina"
-gdpr_compliant: false # do we need to ask for permision?
 in_person_available: false # important to accept in-person applicants
+
+consents:
+  - slug: "gdpr_consent"
+    name: "GDPR Consent"
+    active: false
+    message: 'Al completar este formulario acepto que mi información será utilizada para enviarme información comercial sobre 4Geeks Academy y que podría resultar una relación comercial a partir de esto. Revisa nuestra <a style={{ marginLeft: "5px" }} target="_blank" rel="noopener noreferrer nofollow" className="decorated" href="/es/privacidad">Política de Privacidad</a>'
+    error_message: "Debes aceptar el consent de GDPR"
 
 city: "Buenos Aires"
 name: "Argentina"
@@ -102,13 +140,13 @@ country_shortname: ar"
 socials:
   - name: "Facebook"
     icon: "facebook"
-    link: "https://www.facebook.com/4geeksacademycr"
+    link: "https://www.facebook.com/4geeksacademylatinoamerica"
   - name: "Twitter"
-    icon: "twitter"
-    link: "https://www.twitter.com/4geeksacademycr"
+    icon: "x-logo"
+    link: "https://twitter.com/4geeksacademyES"
   - name: "Instagram"
     icon: "instagram"
-    link: "https://www.instagram.com/4geeksacademycr"
+    link: "https://www.instagram.com/4geeksacademylatam/"
 courses:
   - "Full-Time"
   - "Part-Time"

@@ -2,7 +2,7 @@ meta_info:
   slug: "coding-bootcamp-argentina-buenos-aires"
   title: "4Geeks Academy in Argentina, Buenos Aires"
   position: 33
-  description: "Get to know here all about our coding bootcamp campus in Argentina, Buenos Aires of 4Geeks Academy"
+  description: "Get to know here all about our coding bootcamp campus in Argentina, Buenos Aires of 4GeeksAcademy"
   image: "/images/og-preview/buenosaires-argentina.us.png"
   keywords: ""
   # it will not show up on the applications forms
@@ -11,6 +11,11 @@ meta_info:
   region: "latam"
   dialCode: "54"
   related_clusters: ["trends-and-tech"]
+  
+  # ⬇️ cohort_include_regex field is used to filter cohorts on the calendar that only test successfully for a particular regex
+  # for example: for this location, only show cohorts starting with usa-xx-spanish
+  cohort_include_regex: ["latam"]
+  cohort_exclude_regex: []
 
 seo_title: "Coding Bootcamp Argentina"
 header:
@@ -41,15 +46,8 @@ custom_bar:
 badges:
   title: ""
   paragraph: |
-    4Geeks Academy is the place where developers grow and thrive.
- 
-    We are licensed by the USA F. Dep. of Education.
-  
-    Chosen as one of the top 35 coding bootcamps of the world and the top <a href="https://4geeksacademy.com/us/coding-bootcamp" rel="nofollow">coding bootcamp</a> in Miami according to SwitchUp.
+    Kickstart your career at 4GeeksAcademy, where developers grow and thrive. Named best <a style='color:black; text-decoration: underline;'} href="https://4geeksacademy.com/us/coding-bootcamp" rel="nofollow">coding bootcamp</a> 2023 by Course Report, best center for coding bootcamps 2023 by Premios de Excelencia Educativa in Spain, listed among the top 10 in the US by Newsweek, and rated 4.92/5 on Switchup. Licensed by the Florida Department of Education, USA.
 
-    4Geeks Academy has been recognized as one of the top 10 coding bootcamps in the United States according to Newsweek.
-
-    A community built for developers.
 news:
   title: "4Geeks Academy Argentina in the news..."
 upcoming:
@@ -72,7 +70,7 @@ images_box:
   images: 
     - path: "../../../static/images/locations/buenosaires-new.png"
       alt: "Buenos Aires city"
-    - path: "../../../static/images/ownpeoplecoding2.jpg"
+    - path: "../../../static/images/ownpeoplecoding2.webp"
       alt: "4Geeks Own People Coding"
     - path: "../../../static/images/ownmancoding.jpg"
       alt: "Remote-Coding-Bootcamp"
@@ -80,8 +78,34 @@ images_box:
       alt: "4Geeeks location"
     - path: "../../../static/images/locations/miami-people.jpeg"
       alt: "4Geeeks lab"
+  layout_horizontal: true #false == "mode mosaic"
 
 ## START FROM HERE - DON'T CHANGE ANYTHING ABOVE
+
+two_columns:
+  proportions: [6, 6]
+  image:
+    style: '{"border" : "5px solid black", "backgroundSize": "contain" }'
+    src: "/static/images/staff/luisa.png"
+    shadow: true  
+  video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
+  heading:
+    text: "4Geeks, Argentina and a story full of opportunities"
+    font_size: ["30px", "30px", "30px", "30px", "30px"]
+  sub_heading:
+    text: "We are Buenos Aires based and we have been focusing in bringing on more opportunities."
+    font_size: ["18px", "18px", "22px", "22px", "22px"]
+  button:
+    text: "APPLY NOW"
+    color: "white"
+    background: "black"
+    path: "/us/apply"
+  bullets:
+    items: 
+    - text: "Luisa Glum shares her personal journey and how 4Geeks Academy transformed her career path in Santiago's evolving tech landscape"
+    - text: "With a 95% job placement rate within six months of graduation, our programs ensure tangible outcomes for career advancement"
+    - text: "Flexible learning options, including part-time and immersive courses, cater to diverse schedules and learning preferences"
+
 ## HEADING SECTION
 heading_section:
   heading: "PRICING AND FINANCING"
@@ -89,8 +113,14 @@ heading_section:
 
 active_campaign_location_slug: "buenosaires-argentina"
 breathecode_location_slug: "buenosaires-argentina"
-gdpr_compliant: false # do we need to ask for permision?
 in_person_available: false # important to accept in-person applicants
+
+consents:
+  - slug: "gdpr_consent"
+    name: "GDPR Consent"
+    active: false
+    message: 'By submitting this form, I accept that my data may be used for a quote request that could result in a commercial relationship. Check out our complete <a style={{ marginLeft: "5px" }} target="_blank" rel="noopener noreferrer nofollow" className="decorated" href="/us/privacy-policy">Privacy Policy</a>'
+    error_message: "You need to accept the privacy terms"
 
 city: "Buenos Aires"
 name: "Argentina"
@@ -104,13 +134,13 @@ country_shortname: "ar"
 socials:
   - name: "Facebook"
     icon: "facebook"
-    link: "https://www.facebook.com/4geeksacademy"
+    link: "https://www.facebook.com/4geeksacademylatinoamerica"
   - name: "Twitter"
-    icon: "twitter"
-    link: "https://www.twitter.com/4geeksacademy"
+    icon: "x-logo"
+    link: "https://twitter.com/4geeksacademyES"
   - name: "Instagram"
     icon: "instagram"
-    link: "https://www.instagram.com/4geeksacademy"
+    link: "https://www.instagram.com/4geeksacademylatam/"
 courses:
   - "Full-Time"
   - "Part-Time"

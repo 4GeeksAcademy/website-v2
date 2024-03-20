@@ -2,13 +2,18 @@ meta_info:
   slug: "bootcamp-programacion-miami"
   position: 1
   title: "4Geeks Academy Miami - Bootcamp de programación en Miami, aprende a programar en Miami"
-  description: "Conoce aquí todo sobre nuestro campus de bootcamp de programación en Miami, Florida de 4Geeks Academy"
+  description: "Conoce aquí todo sobre nuestro campus de bootcamp de programación en Miami, Florida de 4GeeksAcademy"
   image: "/images/og-preview/downtown-miami.es.png"
   keywords: "null"
   redirects: []
   region: "usa-canada"
   dialCode: "1"
   related_clusters: ["desarrollador-full-stack"]
+  
+  # ⬇️ cohort_include_regex field is used to filter cohorts on the calendar that only test successfully for a particular regex
+  # for example: for this location, only show cohorts starting with usa-xx-spanish
+  cohort_include_regex: []
+  cohort_exclude_regex: ['usa-\d{1,10}-spanish']
 
 seo_title: "Bootcamp de Programación en Miami"
 header:
@@ -29,11 +34,11 @@ button:
   apply_button_link: "/aplica"
 
 custom_bar:
-  active: false
-  message: 'Potencia tu carrera a través del código. <a class="customBar-link" href="/es/aplica">Aplica</a> Próximas fechas: 06/27 Full-Stack | 07/11 ML + AI!'
+  active: true
+  message: 'Desde $150 al mes. O paga cuando obtengas un trabajo! <a class="customBar-link" href="/es/aplica">Aplica</a>'
   button:
-    label: "Read More"
-    path: "#" #string (can be inline path using #, relative path or absolute path)
+    label: "" # leave empty to hide button
+    path: "/es/aplica" #string (can be inline path using #, relative path or absolute path)
 
 badges:
   title: ""
@@ -55,8 +60,8 @@ info_box:
   heading: "Encuéntranos en Miami"
   address: "1801 SW 3rd Ave #100, Miami, FL 33129."
   iframeMapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1126.521243034489!2d-80.20142868794088!3d25.759937884725943!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b153865e526d%3A0xf884fb3f86a9c7db!2s4Geeks%20Academy!5e0!3m2!1ses-419!2scl!4v1621010581768!5m2!1ses-419!2scl"
-  open_on_maps: "Abrir en Maps."
-  contact_heading: "Contacts"
+  open_on_maps: "Abrir Mapa."
+  contact_heading: "Contáctanos"
   phone: "(786) 416-6640"
   email: "info@4GeeksAcademy.com"
   image: "../../../static/images/locations/miami-map.png"
@@ -76,6 +81,32 @@ images_box:
       alt: "4Geeeks miami location"
     - path: "../../../static/images/locations/miami-old2.jpg"
       alt: "4Geeeks miami lab"
+  layout_horizontal: true #false == "mode mosaic"
+
+
+two_columns:
+  proportions: [6, 6]
+  image:
+    style: '{"border" : "5px solid black", "backgroundSize": "contain" }'
+    src: "/static/images/staff/luisa.png"
+    shadow: true  
+  video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
+  heading:
+    text: "Becas Exclusivas con Miami Dade College, Clark University y United Way Miami"
+    font_size: ["30px", "30px", "30px", "30px", "30px"]
+  sub_heading:
+    text: "Potencia tu Trayectoria Profesional con 4GeeksAcademy"
+    font_size: ["18px", "18px", "22px", "22px", "22px"]
+  button:
+    text: "¡Únete ahora!"
+    color: "white"
+    background: "black"
+    path: "/es/aplica"
+  bullets:
+    items: 
+    - text: "Siempre hay becas completas o parciales disponibles."
+    - text: "Hay oportunidades para todos en los condados de Miami-Dade, Broward y Palm Beach."
+    - text: "Mantenemos colaboraciones continuas con Miami Dade College, Miami Tech Coalition, UWM, la Ciudad de Miami, Miami Dade County y muchos más."
 
 chart_section:
   data:
@@ -91,9 +122,15 @@ chart_section:
 
 active_campaign_location_slug: "downtown-miami"
 breathecode_location_slug: "downtown-miami"
-gdpr_compliant: false # do we need to ask for permision?
 in_person_available: true # important to accept in-person applicants
 online_available: false # important to accept online-only applicants
+
+consents:
+  - slug: "gdpr_consent"
+    name: "GDPR Consent"
+    active: false
+    message: 'Al completar este formulario acepto que mi información será utilizada para enviarme información comercial sobre 4Geeks Academy y que podría resultar una relación comercial a partir de esto. Revisa nuestra <a style={{ marginLeft: "5px" }} target="_blank" rel="noopener noreferrer nofollow" className="decorated" href="/es/privacidad">Política de Privacidad</a>'
+    error_message: "Debes aceptar el consent de GDPR"
 
 city: "Miami"
 name: "Miami, USA"
@@ -110,14 +147,14 @@ socials:
     icon: "facebook"
     link: "https://www.facebook.com/4geeksacademy"
   - name: "Twitter"
-    icon: "twitter"
+    icon: "x-logo"
     link: "https://www.twitter.com/4geeksacademy"
   - name: "Instagram"
     icon: "instagram"
-    link: "https://www.instagram.com/4geeksacademy"
-  - name: "Meetup"
-    icon: "meetup"
-    link: "https://www.meetup.com/4geeks-academy"
+    link: "https://www.instagram.com/4geeksacademy/"
+  - name: "Linkedin"
+    icon: "linkedin"
+    link: "https://www.linkedin.com/school/4geeksacademy/"
 courses:
   - "Full-Time"
   - "Part-Time"

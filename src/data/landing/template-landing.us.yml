@@ -8,7 +8,7 @@ meta_info:
   keywords: "" # SEO optimized keywords
   visibility: "hidden" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   template: "landing_a" # <--- choose your landing template
-  redirects: [""] # <--- URL redirections to avoid 404 errors
+  redirects: [] # <--- URL redirections to avoid 404 errors
   
   # this UTM fields will be included in the CRM
   # utm_course available ["full-stack", "software-engineering", "machine-learning-engineering"]
@@ -146,7 +146,7 @@ who_is_hiring:
   position: 9
   limit: 3
   heading: "Who is hiring"
-  sub_heading: "These comanies are hiring"
+  sub_heading: "These companies are hiring"
 
 badges:
   position: 5
@@ -163,7 +163,6 @@ components:
     image:
       style: "{}"
       src: "/images/landing/feliz-empresario.png"
-      link: "https://google.com" # take uses somewhere when they click on the image
       shadow: true
     heading: 
       text: "Finance your future"
@@ -188,8 +187,10 @@ components:
     image:
       style: "{}"
       src: "/images/landing/grupo-ventanas.png"
-      link: "https://google.com" # take uses somewhere when they click on the image
       shadow: true
+    section_heading: 
+      text: "Finance your future"
+      style: '{ "font-size": "30px" }'
     heading: 
       text: "Finance your future"
     sub_heading:
@@ -221,7 +222,6 @@ components:
     image: 
       style: "{}"
       src: "/images/landing/hombre-con-laptop.png"
-      link: "https://google.com" # take uses somewhere when they click on the image
     heading: 
       text: "Escúchalo de nuestros alumnos"
                   #xl      lg     md     sm    xs
@@ -312,6 +312,11 @@ components:
           font_size: "15px"
         button:
           text: "See more"
+
+        content: 
+          text: "Learn from senior-level professionals with successful careers in tech and real industry experience."
+          style: '{ "padding": "0px 10px" }'
+
       - image:
           style: '{ "backgroundSize": "cover", "minHeight": "230px", "borderRadius": "80px" }'
           src: "/images/low-income-veterans.png"
@@ -425,7 +430,7 @@ components:
     position: 8
     layout: overlaped
     image:
-      src: "/images/landing/dos-mujeres-1.png"
+      src: "/images/landing/two-womans-and-laptop.webp"
     heading:
       text: "Python y Javascript"
     content:

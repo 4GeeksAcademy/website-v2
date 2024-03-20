@@ -20,6 +20,8 @@ export default ({
   filter,
   padding,
   padding_tablet,
+  padding_md,
+  padding_lg,
   height,
   width,
   maxWidth,
@@ -77,10 +79,13 @@ export default ({
     <Div
       width="100%"
       justifySelf={justifySelf}
+      maxWidth={maxWidth}
       margin={margin ? margin : "35px 0"}
       margin_tablet={margin ? margin : "40px 0 0 0"}
       padding={padding}
       padding_tablet={padding_tablet}
+      padding_md={padding_md}
+      padding_lg={padding_lg}
       display="flex"
       gap="20px"
       height="auto"

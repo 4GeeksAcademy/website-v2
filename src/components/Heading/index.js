@@ -57,7 +57,11 @@ const BaseHeading = styled(Heading)`
     border-bottom: ${(props) => props.borderBottomHover};
   }
   @media ${Devices.xxs} {
+    padding: ${(props) => props.padding_xxs};
+    line-height: ${(props) => props.lineHeight_xxs};
+    margin: ${(props) => props.margin_xxs};
   }
+
   @media ${Devices.xs} {
     margin: ${(props) => props.margin_xs};
     max-width: ${(props) => props.maxWidth_xs};
@@ -102,11 +106,22 @@ const BaseHeading = styled(Heading)`
 
 export const H1 = styled(BaseHeading)`
   z-index: ${(props) => props.zIndex};
+  letter-spacing: 0.05em;
+  font-family: ${(props) => props.fontFamily};
+  text-decoration: ${(props) => props.textTransform};
 `;
 
 export const H2 = styled(BaseHeading)`
   z-index: ${(props) => props.zIndex};
   letter-spacing: 0.05em;
+  text-align: ${(props) => props.textAlign};
+  @media ${Devices.xxs} {
+    text-align: ${(props) => props.textAlign_xxs};
+  }
+  @media ${Devices.tablet} {
+    text-align: ${(props) => props.textAlign_tablet};
+  }
+  font-family: ${(props) => props.fontFamily};
 `;
 export const H3 = styled(BaseHeading)`
   font-weight: ${(props) => props.fontWeight || "700"};
@@ -114,6 +129,13 @@ export const H3 = styled(BaseHeading)`
   text-align: ${(props) => props.textAlign};
   letter-spacing: 0.05em;
   place-self: ${(props) => props.placeSelf};
+  font-family: ${(props) => props.fontFamily};
+  @media ${Devices.xxs} {
+    margin: ${(props) => props.margin_xxs};
+  }
+  @media ${Devices.tablet} {
+    margin: ${(props) => props.margin_tablet};
+  }
 `;
 export const H4 = styled(BaseHeading)`
   font-weight: ${(props) => props.fontWeight || "400"};
@@ -197,6 +219,7 @@ export const Paragraph = styled.p`
   text-shadow: ${(props) => props.textShadow};
   line-height: ${(props) => props.lineHeight};
   color: ${(props) => props.color};
+  text-decoration: ${(props) => props.textDecoration};
   text-align: ${(props) => props.textAlign || "center"};
   align-self: ${(props) => props.alignSelf};
   align-items: ${(props) => props.alignItems};
@@ -205,13 +228,15 @@ export const Paragraph = styled.p`
   border-left: ${(props) => props.borderLeft};
   opacity: ${(props) =>
     props.isActive ? 1 : props.opacity ? props.opacity : 0.8};
-
+  top: ${(props) => props.top};
+  left: ${(props) => props.left};
   a {
     color: ${Colors.blue};
   }
 
   @media ${Devices.xxs} {
     margin: ${(props) => props.margin_xxs};
+    padding: ${(props) => props.padding_xxs};
   }
   @media ${Devices.xs} {
     padding: ${(props) => props.padding_xs};
@@ -242,6 +267,9 @@ export const Paragraph = styled.p`
     margin: ${(props) => props.margin_tablet};
     text-transform: ${(props) => props.textTransform_tablet};
     line-height: ${(props) => props.lineHeight_tablet};
+    z-index: ${(props) => props.zIndex_tablet};
+    top: ${(props) => props.top_tablet};
+    left: ${(props) => props.left_tablet};
   }
   @media ${Devices.md} {
     text-align: ${(props) => props.textAlign_md};

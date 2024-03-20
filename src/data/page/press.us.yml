@@ -21,10 +21,10 @@ content:
       logo: "../../../static/images/news/forbes.png"
       location: ["downtown-miami", "online", "madrid-spain"]
       image: "../../../static/images/partner/forbes-coder.jpg"
-      title: "Web Development Coding Bootcamp"
-      text: "On a research made and published by Forbes while specified all the possible ways you can become a web developer in the USA."
+      title: "Best Data Science Bootcamps Online In 2024"
+      text: "Current and prospective tech professionals can complete data science bootcamps to sharpen their existing skills, change fields or advance in their current careers."
       textUrl: "Read Article"
-      url: "https://www.forbes.com/advisor/education/what-is-web-development"
+      url: "https://www.forbes.com/advisor/education/bootcamps/best-data-science-bootcamps/"
     - name: "BusinessWire"
       logo: "../../../static/images/news/businesswire.png"
       #location: ["downtown-miami", "online", "madrid-spain"]
@@ -33,6 +33,14 @@ content:
       text: "The publisher's robust vendor analysis is designed to help clients improve their market position, and in line with this, this report provides a detailed analysis of several leading coding bootcamp market vendors that include 4Geeks Academy LLC"
       textUrl: "Read Article"
       url: "https://www.businesswire.com/news/home/20210519005401/en/Global-Coding-Bootcamp-Market-2021-2025---Low-Cost-of-Bootcamps-and-an-Increase-in-Student-Enrollments-to-Drive-Growth---ResearchAndMarkets.com"
+    - name: "Forbes"
+      logo: "../../../static/images/news/forbes.png"
+      location: ["downtown-miami", "online", "madrid-spain"]
+      image: "../../../static/images/partner/forbes-coder.jpg"
+      title: "5 Best Online Full-Stack Bootcamps Of 2024"
+      text: "Full-stack developers create and troubleshoot both the back-end and front-end of websites and software—an indispensable skill set for companies across industries."
+      textUrl: "Read Article"
+      url: "https://www.forbes.com/advisor/education/bootcamps/best-full-stack-developer-bootcamp/"
     - name: "Refresh Miami"
       logo: "../../../static/images/news/refresh-miami.png"
       #location: ["santiago-chile", "online", "downtown-miami", "bogota-colombia", "mexicocity-mexico", "costa-rica", "lima-peru", "buenosaires-argentina", "lapaz-bolivia", "montevideo-uruguay", "quito-ecuador"]
@@ -42,13 +50,21 @@ content:
       textUrl: "See Interview"
       url: "https://refreshmiami.com/miami-based-coding-school-4geeks-is-breaking-down-the-barriers-to-becoming-a-software-developer/"
     - name: "Miami Herald"
-      logo: "../../../static/images/news/miami-herald.png"
+      logo: "../../../static/images/news/the-miami-herald.png"
       #location: ["santiago-chile", "online", "downtown-miami", "bogota-colombia", "mexicocity-mexico", "costa-rica", "lima-peru", "buenosaires-argentina", "lapaz-bolivia", "montevideo-uruguay", "quito-ecuador"]
       image: "../../../static/images/partner/united-way-schoolarship.jpeg"
       title: "Learn to Code Scholarships"
       text: "After a lot of hard word we were able to partner with United Way to offer 100 schollarships in minority populations to become a software engineer or software developer"
       textUrl: "See Interview"
       url: "https://www.miamiherald.com/news/business/article263937731.html"
+    - name: "Forbes"
+      logo: "../../../static/images/news/forbes.png"
+      location: ["downtown-miami", "online", "madrid-spain"]
+      image: "../../../static/images/partner/forbes-coder.jpg"
+      title: "Web Development Coding Bootcamp"
+      text: "On a research made and published by Forbes while specified all the possible ways you can become a web developer in the USA."
+      textUrl: "Read Article"
+      url: "https://www.forbes.com/advisor/education/what-is-web-development"
     - name: "NBC"
       logo: "../../../static/images/news/nbc.png"
       #location: ["downtown-miami", "orlando"]
@@ -58,7 +74,7 @@ content:
       textUrl: "Watch Video"
       url: "https://www.nbcmiami.com/on-air/as-seen-on/students-with-autism-learn-to-code_miami/159640/"
     - name: "Newsweek"
-      logo: "../../../static/images/news/newsweek.png"
+      logo: "../../../static/images/news/newsweek-2.png"
       #location: ["downtown-miami", "online", "madrid-spain"]
       image: "../../../static/images/news/newsWeek-TopCodingSchools-2017.png"
       title: "A Coding Career and You  - Top Coding Schools 2017"

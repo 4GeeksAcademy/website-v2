@@ -2,7 +2,7 @@ meta_info:
   slug: miami-tech-talent-coalition # <--- URL 4geeksacademy.com/us/landing/example
 
   # This will show on social media when shared
-  title: "4GeeksAcademy & Miami Tech Talent Coalition"
+  title: "4Geeks Academy & Miami Tech Talent Coalition"
   description: "The Miami Tech Talent Coalition is a community forum connecting employers with technology talent and creating a sustainable tech talent pipeline in Miami."
   visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   # This will show on social media when shared
@@ -41,9 +41,9 @@ navbar:
 
 header_data:
   background: "#FFF1D1"
-  tagline: "No excuses. No Cost. Miami Tech Talent is bringing 100% scholarships. We are changing the Game"
+  tagline: "No excuses. No Cost. Miami Tech Talent is bringing up to 100% scholarships"
   tagline_color: "black"
-  badge: "../../../static/images/badges/Course-Report-Badge-2023.png"
+  badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
   image_filter: brightness(0.3)
 
 features:
@@ -52,8 +52,8 @@ features:
   bullets:
     - "Get a career in Tech and join the #MiamiTechLife"
     - "Be a software Developer or a Data Scientist"
-    - "30 Spots Available. Only 15 left!" 
-    - "Now open and accepting applications!"
+    - "30 Spots Available. Just a few spot left." 
+    - "APPLY NOW, We are accepting applications!"
   styles: '{ "color": "black", "fontWeight":"500" }'
 
 short_badges:
@@ -63,7 +63,7 @@ short_badges:
     alt: "Mejor centro de Coding Bootcamp"
   - name: "Course Report"
     url: ""
-    image: "../../../static/images/badges/Course-Report-Badge-2023.png"
+    image: "../../../static/images/badges/Course-Report-Badge-2024.webp"
     alt: "Top Coding Bootcamps Course Report"
   - name: "Switchup"
     url: ""
@@ -91,11 +91,11 @@ components:
   - name: "whatever"
     layout: choose_your_program
     background: "lightBlue"
-    position: 3
+    position: 4
     heading:
       text: Our Programs
     content:
-      text: Programs in Full-Time or Part-Time modality with live classes taught by experts
+      text: Part-Time programs with live classes taught by experts
       font_size: ["16px"]
       path: ""
     programs:
@@ -122,7 +122,7 @@ components:
 
 
   - name: how-it-works
-    position: 2
+    position: 3
     background: "veryLightBlue2"
     layout: iconogram
     swipable: True
@@ -145,7 +145,7 @@ components:
         content: "Participants pay program costs after they start jobs making more than $35,000 a year. Participants who don't find a job or keep jobs with salaries above $35,000 pay nothing."
 
   - name: elegibility
-    position: 3
+    position: 5
     layout: cards_carousel
     heading:
       text: "Elegibility in this Program"
@@ -194,56 +194,37 @@ components:
         # button:
         #   text: "See more"
 
-  - name: coding
-    position: 4
-    layout: two_column_right
-    proportions: [6, 6]
-    background: "rgba(255, 183, 24, 0.2)"
-    image:
-      style: '{ "backgroundSize": "contain" }'
-      src: "/images/landing/group_194.png"
-    heading:
-      text: "Why coding?"
-      font_size: ["40px", "40px", "40px", "40px", "40px"]
-    sub_heading:
-      text: "Learning to code will give you access to:"
-      font_size: ["16px", "16px", "16px", "16px", "16px"]
-    content:
-      font_size: ["16px"]
-      text: |
-        <h4><strong style="font-weight: bold;"> > JOB OPPORTUNITIES </strong></h4>
-        <p>Computer programmers are in high demand—and the demand for programmers will keep increasing over the decade.</p>
-        <br>
-        <h4><strong style="font-weight: bold;"> > BETTER PAY </strong></h4>
-        <p>Starting salary for a Jr. Software Developer in Miami is $48,000.</p>
-        <br>
-        <h4><strong style="font-weight: bold;"> > CAREER FLEXIBILITY </strong></h4>
-        <p>Coding skills prepare you for a variety of jobs in the rapidly-shifting digital economy.</p>
-  - name: geeksinfo
+  - name: geekinfo
     position: 1
     layout: two_column_right
     proportions: [6, 6]
-    background: "White"
+    background: ""
     image:
       style: '{ "backgroundSize": "contain" }'
-      src: "/images/geeksinfo/geeksinfo.png"
+      src: "/images/landing/group_194.png"
+
     heading:
       text: "Why coding?"
       font_size: ["40px", "40px", "40px", "40px", "40px"]
     sub_heading:
       text: "Learning to code will give you access to:"
       font_size: ["16px", "16px", "16px", "16px", "16px"]
-    content:
+    content: 
+      text: ""
       font_size: ["16px"]
-      text: |
-        <h4><strong style="font-weight: bold;"> > JOB OPPORTUNITIES </strong></h4>
-        <p>Computer programmers are in high demand—and the demand for programmers will keep increasing over the decade.</p>
-        <br>
-        <h4><strong style="font-weight: bold;"> > BETTER PAY </strong></h4>
-        <p>Starting salary for a Jr. Software Developer in Miami is $48,000.</p>
-        <br>
-        <h4><strong style="font-weight: bold;"> > CAREER FLEXIBILITY </strong></h4>
-        <p>Coding skills prepare you for a variety of jobs in the rapidly-shifting digital economy.</p>
+      path: ""
+    bullets:
+      items:
+      - heading: "JOB OPPORTUNITIES"
+        text: "Computer programmers are in high demand—and the demand for programmers will keep increasing over the decade."
+        icon: "circle" #string with icon for example ['check', 'cicle', etc]
+      - heading: "BETTER PAY"
+        text: "Starting salary for a Jr. Software Developer in Miami is $48,000."
+        icon: "circle" #string with icon for example ['check', 'cicle', etc]
+      - heading: "CAREER FLEXIBILITY"
+        text: "Coding skills prepare you for a variety of jobs in the rapidly-shifting digital economy."
+        icon: "circle" #string with icon for example ['check', 'cicle', etc]
+
 
   - name: why4geeks
     position: 5
@@ -275,7 +256,8 @@ components:
     layout: two_column_right
     proportions: [6, 6]
     image:
-      style: '{ "backgroundSize": "contain" }'
+      style: '{ "border" : "3px solid black", "backgroundSize": "contain"  }' 
+      shadow: true 
       src: "/static/images/staff/luisa.png"
     video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
     heading:
@@ -342,7 +324,7 @@ components:
     proportions: [6, 6]
     background: "veryLightBlue2"
     image:
-      style: '{ "backgroundSize": "contain", "maxHeight": "130px" }'
+      style: '{ "backgroundSize": "contain", "maxHeight": "130px", "margin": "auto" }'
       src: "/images/landing/miamitech-logo.png"
     heading:
       text: "The Miami Tech Coalition and 4Geeks Academy Mission" 

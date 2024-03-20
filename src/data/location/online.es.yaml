@@ -1,13 +1,18 @@
 meta_info:
   slug: "online-bootcamp-programacion"
   title: "Bootcamps de Programación Online"
-  description: "Descubre aquí todos los bootcamps de programación online impartidos por 4geeks Academy. ¡Regístrate hoy!"
+  description: "Descubre aquí todos los bootcamps de programación online impartidos por 4GeeksAcademy. ¡Regístrate hoy!"
   position: 102
   image: "/images/og-preview/online.es.png"
   keywords: "null"
   redirects: ["/location/remoto", "/remoto", "/es/location/enlinea-remoto"]
   region: "usa-canada"
   related_clusters: ["desarrollador-full-stack"]
+  
+  # ⬇️ cohort_include_regex field is used to filter cohorts on the calendar that only test successfully for a particular regex
+  # for example: for this location, only show cohorts starting with usa-xx-spanish
+  cohort_include_regex: []
+  cohort_exclude_regex: []
 
 seo_title: "Coding Bootcamp Remoto"
 header:
@@ -22,7 +27,7 @@ button_header:
   button_link: "#programs"
 button:
   syllabus_button_text: "DESCARGAR CURRÍCULO" # <-- this will show everywhere in the website
-  apply_button_text: "APLICA YA" # <-- this will show everywhere in the website
+  apply_button_text: "POSTÚLATE YA" # <-- this will show everywhere in the website
 
   syllabus_submit_text: "DESCARGAR"
   apply_button_link: "/aplica"
@@ -30,7 +35,7 @@ button:
 
 custom_bar:
   active: false
-  message: Lorem ipsum dot simet mosd ei
+  message: 'Desde US$90 al mes. ¡O paga cuando obtengas un trabajo! <a class="customBar-link" href="/es/aplica">Postúlate</a>'
   button: 
     label: "Read More"
     path: "#" #string (can be inline path using #, relative path or absolute path)
@@ -73,15 +78,45 @@ images_box:
       alt: "4Geeeks miami day"
     - path: "../../../static/images/locations/miami-old2.jpg"
       alt: "4Geeeks miami lab"
+  layout_horizontal: true #false == "mode mosaic"
 
+two_columns:
+  proportions: [6, 6]
+  image:
+    style: '{"border" : "5px solid black", "backgroundSize": "contain" }'
+    src: "/static/images/testimonials/allisa-testimonial.jpg"
+    shadow: true  
+  video: "https://www.youtube.com/watch?v=TCHASxvkhpI"
+  heading:
+    text: "Tu Viaje con 4Geeks Academy en Línea"
+    font_size: ["30px", "30px", "30px", "30px", "30px"]
+  sub_heading:
+    text: "Desarrolla tus Habilidades en Tecnología desde Cualquier Lugar"
+    font_size: ["18px", "18px", "22px", "22px", "22px"]
+  button:
+    text: "¡Únete ahora!"
+    color: "white"
+    background: "black"
+    path: "/es/aplica"
+  bullets:
+    items: 
+    - text: "Cursos interactivos enfocados en habilidades técnicas esenciales para el mundo digital actual"
+    - text: "Acceso a profesores experimentados y una comunidad colaborativa de aprendizaje"
+    - text: "Preparación para desafíos del mundo real y oportunidades laborales en tecnología"
 
 active_campaign_location_slug: "online"
 breathecode_location_slug: "online"
-gdpr_compliant: true # do we need to ask for permision?
 in_person_available: false # important to accept in-person applicants
 
+consents:
+  - slug: "gdpr_consent"
+    name: "GDPR Consent"
+    active: true
+    message: 'Al completar este formulario acepto que mi información será utilizada para enviarme información comercial sobre 4Geeks Academy y que podría resultar una relación comercial a partir de esto. Revisa nuestra <a style={{ marginLeft: "5px" }} target="_blank" rel="noopener noreferrer nofollow" className="decorated" href="/es/privacidad">Política de Privacidad</a>'
+    error_message: "Debes aceptar el consent de GDPR"
+
 city: "Resto de América"
-name: "Resto de América"
+name: "Resto de América en Inglés"
 latitude: "10000.760158"
 longitude: "-800000.200154"
 address: "1801 SW 18th Road"
@@ -95,11 +130,14 @@ socials:
     icon: "facebook"
     link: "https://www.facebook.com/4geeksacademy"
   - name: "Twitter"
-    icon: "twitter"
+    icon: "x-logo"
     link: "https://www.twitter.com/4geeksacademy"
   - name: "Instagram"
     icon: "instagram"
-    link: "https://www.instagram.com/4geeksacademy"
+    link: "https://www.instagram.com/4geeksacademy/"
+  - name: "Linkedin"
+    icon: "linkedin"
+    link: "https://www.linkedin.com/school/4geeksacademy/"
 
 courses:
   - "Full-Time"

@@ -9,6 +9,11 @@ meta_info:
   region: "europe"
   dialCode: "49"
   related_clusters: ["desarrollador-full-stack"]
+  
+  # ⬇️ cohort_include_regex field is used to filter cohorts on the calendar that only test successfully for a particular regex
+  # for example: for this location, only show cohorts starting with usa-xx-spanish
+  cohort_include_regex: ["europe"]
+  cohort_exclude_regex: []
 
 seo_title: "Coding Bootcamp Berlín, Alemania"
 header:
@@ -66,7 +71,7 @@ images_box:
   images:
     - path: "../../../static/images/locations/berlin-new.png"
       alt: "Berlin city"
-    - path: "../../../static/images/ownpeoplecoding2.jpg"
+    - path: "../../../static/images/ownpeoplecoding2.webp"
       alt: "4Geeks Own People Coding"
     - path: "../../../static/images/ownmancoding.jpg"
       alt: "Remote-Coding-Bootcamp"
@@ -74,13 +79,46 @@ images_box:
       alt: "4Geeeks location"
     - path: "../../../static/images/locations/miami-people.jpeg"
       alt: "4Geeeks lab"
+  layout_horizontal: true #false == "mode mosaic"
+  
+## START FROM HERE - DON'T CHANGE ANYTHING ABOVE
+
+two_columns:
+  proportions: [6, 6]
+  image:
+    style: '{"border" : "5px solid black", "backgroundSize": "contain" }'
+    src: "/static/images/staff/luisa.png"
+    shadow: true  
+  video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
+  heading:
+    text: "Tu Viaje con 4Geeks Academy en Berlin"
+    font_size: ["30px", "30px", "30px", "30px", "30px"]
+  sub_heading:
+    text: "Desarrolla tus Habilidades en Tecnología desde Berlin"
+    font_size: ["18px", "18px", "22px", "22px", "22px"]
+  button:
+    text: "¡Únete ahora!"
+    color: "white"
+    background: "black"
+    path: "/es/aplica"
+  bullets:
+    items: 
+    - text: "Cursos interactivos enfocados en habilidades técnicas esenciales para el mundo digital actual"
+    - text: "Acceso a profesores experimentados y una comunidad colaborativa de aprendizaje"
+    - text: "Preparación para desafíos del mundo real y oportunidades laborales en tecnología"
 
 ## HEADING SECTION
 
 active_campaign_location_slug: "berlin-germany"
 breathecode_location_slug: "berlin-germany"
-gdpr_compliant: true # do we need to ask for permision?
 in_person_available: false # important to accept in-person applicants
+
+consents:
+  - slug: "gdpr_consent"
+    name: "GDPR Consent"
+    active: true
+    message: 'Al completar este formulario acepto que mi información será utilizada para enviarme información comercial sobre 4Geeks Academy y que podría resultar una relación comercial a partir de esto. Revisa nuestra <a style={{ marginLeft: "5px" }} target="_blank" rel="noopener noreferrer nofollow" className="decorated" href="/es/privacidad">Política de Privacidad</a>'
+    error_message: "Debes aceptar el consent de GDPR"
 
 city: "Berlin"
 name: "Berlín, Alemania"
@@ -96,16 +134,16 @@ country_shortname: "de"
 socials:
   - name: "Facebook"
     icon: "facebook"
-    link: "https://www.facebook.com/4geeksacademyes"
+    link: "https://www.facebook.com/4geeksacademy"
   - name: "Twitter"
-    icon: "twitter"
-    link: "https://www.twitter.com/4geeksacademyes"
+    icon: "x-logo"
+    link: "https://twitter.com/4GeeksAcademy"
   - name: "Instagram"
     icon: "instagram"
-    link: "https://www.instagram.com/4geeksacademyes"
-  - name: "Meetup"
-    icon: "meetup"
-    link: "https://www.meetup.com/4geeks-academy"
+    link: "https://www.instagram.com/4geeksacademy/"
+  - name: "Linkedin"
+    icon: "linkedin"
+    link: "https://www.linkedin.com/school/4geeksacademyes/"
 
 courses:
   - "Full-Time"

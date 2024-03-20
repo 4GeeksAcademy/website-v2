@@ -17,6 +17,12 @@ meta_info:
   automation: soft # comma separated, "soft" is the default value
   tag: request_more_info # comma separated, "request_more_info" is the default value
 
+navbar:
+  logoUrl: "#" # relative(/apply), absolute(https://google.com) or id(#componentName)
+  buttonText: "Solicitar plaza"
+  buttonUrl: "#leadform_bottom" # url accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
+
+
 form:
   # posible fields: "first_name", "last_name", "full_name", "phone", "email"
   # always the first_name, email and phone will be mandatory if added.
@@ -27,9 +33,9 @@ form:
 
 # jumbotron on the top (cannot be commented out)
 header_data:
-  tagline: ¡Aprende a Programar y Desarrolla en Madrid!
+  tagline: ¡Aprende a Programar en 18 Semanas!
   sub_heading: " "
-  badge: "../../../static/images/badges/Course-Report-Badge-2023.png"
+  badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
   background_image: "../../../static/images/Happy-People-Landing-4Geeks-ES.jpg"
   image_filter: brightness(0.2)
 
@@ -39,10 +45,10 @@ features:
   #                                         up   left down  right
   styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
   bullets:
-    - Empieza a Ganar 24.000€ al Año Como Desarrollador en Madrid
-    - La Industria de la Programación Tiene un 30%
+    - Gana 24.000 € al año como desarrollador.
+    - El 86% de nuestros estudiantes encuentran trabajo en menos de 180 días.
     - No necesitas experiencia previa para comenzar.
-  text: Te animamos a inscribirse en nuestro curso de programación para dar el primer paso hacia un futuro lleno de oportunidades emocionantes en la industria tecnológica🚀 Estamos aquí para apoyarte <br>en cada etapa de tu aprendizaje. 😎
+  text: 
 
 follow_bar:
   position: "top" # top, bottom, hidden
@@ -64,7 +70,7 @@ short_badges:
     alt: "Mejor centro de Coding Bootcamp"
   - name: "Course Report"
     url: ""
-    image: "../../../static/images/badges/Course-Report-Badge-2023.png"
+    image: "../../../static/images/badges/Course-Report-Badge-2024.webp"
     alt: "Top Coding Bootcamps Course Report"
   - name: "Switchup"
     url: ""
@@ -91,11 +97,11 @@ badges:
 program_details:
   position: 1
   heading: "Lo que aprenderás"
-  sub_heading: "Python, Javascript y React son las tecnologías más usadas del mundo"
+  sub_heading: "Python, Javascript y React son las tecnologías más demandadas del mundo"
 
 geeks_vs_others:
   position: 4
-  heading: "¿Qué hace a 4Geeks Academy tan exitoso?"
+  heading: "¿Por qué formarse en 4Geeks Academy?"
   paragraph: ""
   total_rows: 5
 
@@ -108,7 +114,7 @@ who_is_hiring:
   position: 6
   limit: 4
   heading: "¿Quién contrata a nuestros alumnos?"
-  sub_heading: "Nuestros partners de contratación crecen todos los días, con más de 150 aliados a nivel global y decenas de vacantes activas en nuestras bolsas de empleo."
+  sub_heading: "Nuestros partners de contratación aumentan todos los días, con más de 150 aliados a nivel global y decenas de vacantes activas en nuestras bolsas de empleo."
 
 #alumni_projects:
 # position: 7
@@ -124,11 +130,11 @@ components:
     background: "#f1f1f1"
     image:
       style: '{ "backgroundSize": "contain" }'
-      src: "/images/badges/Course-Report-Badge-2023.png"
+      src: "/images/badges/Course-Report-Badge-2024.webp"
       link: "https://www.coursereport.com/schools/4geeks-academy"
     heading:
       text:
-        "Llevamos 3 años consecutivos siendo seleccionados como uno de los mejores coding bootcamps del mundo"
+        "Llevamos 5 años consecutivos siendo seleccionados como uno de los mejores coding bootcamps del mundo"
         #xl      lg     md     sm    xs
       font_size: ["36px", "32px", "30px", "26px", "26px"]
   - name: some_id
@@ -141,15 +147,15 @@ components:
     video: "B01-eTfgqqc"
     heading:
       text:
-        "El viaje de Mattia Tozzi en 4geeks Academy y como cambió su vida profesional."
+        "El viaje de Mattia Tozzi en 4Geeks Academy y como cambió su vida profesional."
         #xl      lg     md     sm    xs
       font_size: ["40px", "34px", "34px", "25px", "20px"]
     content:
       text: "Descubre la cautivadora historia de Mattia Tozzi, quien, en busca de un cambio en su trayectoria profesional, se unió a 4Geeks Academy. Su experiencia es un testimonio vivo de cómo la dedicación y el aprendizaje en este bootcamp lo llevaron a convertirse en un profesional altamente capacitado."
       font_size: ["16px"]
     button:
-      text: "Unete a la academia!"
-      path: "#bottom"
+      text: "¡Únete a 4Geeks!"
+      path: "#leadform_bottom"
       color: "white"
       background: "black"
       hover: "lightBlue"
@@ -158,27 +164,26 @@ components:
     position: 9
     layout: two_column_left
     image:
-      src: "https://storage.googleapis.com/4geeks-academy-website/landing-pictures/testimonials.webp"
       shadow: true
+      src: "https://storage.googleapis.com/4geeks-academy-website/landing-pictures/testimonials.webp"
     heading:
       text: "Escúchalo de nuestros alumnos"
       #xl      lg     md     sm    xs
       font_size: ["40px", "34px", "34px", "25px", "20px"]
     button:
-      text: "Más testimoniales"
+      text: "Ver más opiniones"
       path: "#why_4geeks"
       color: "white"
       background: "black"
       hover: "lightBlue"
     content:
-      text: "'Mi experiencia con 4Geeks ha sido magnífica, me ha encantado. Tengo unos profesores maravillosos y tengo unos compañeros súper geniales. He aprendido bastante sobre HTML, CSS, JavaScript, React y Python. Mis profesores siempre estuvieron atentos a lo que necesitaba. Igual hay una plataforma donde podemos hablar todos los estudiantes de 4Geeks y nos ayudamos entre todos.... ¡Ha sido genial tomar esta decisión!' Beatriz Hernández"
+      text: "'Mi experiencia con 4Geeks ha sido magnífica, me ha encantado. Tengo unos profesores maravillosos y tengo unos compañeros geniales. He aprendido bastante sobre HTML, CSS, JavaScript, React y Python. Mis profesores siempre estuvieron atentos a lo que necesitaba. También contamos con una plataforma donde podemos hablar todos los estudiantes de 4Geeks y nos ayudamos entre todos.... ¡Ha sido genial tomar esta decisión!' Beatriz Hernández"
       font_size: ["16px"]
   
   - name: divider_one
     position: 9
     layout: divider
     height: ["50px", "50px", "50px", "0px", "0px"]
-  
 
 # why_python:
 #   position: 7

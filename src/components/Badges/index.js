@@ -22,6 +22,11 @@ const Badges = ({
   margin,
   wrapped_images,
   maxWidth,
+  badges,
+  height_badge,
+  style,
+  paragraph_style,
+  bottom_paragraph,
 }) => {
   const data = useStaticQuery(graphql`
     query myNewQueryBadges {
@@ -36,7 +41,7 @@ const Badges = ({
                 childImageSharp {
                   gatsbyImageData(
                     layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                    height: 120 # --> maxHeight
+                    height: 150 # --> maxHeight
                     quality: 100
                     placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                     # transformOptions: {fit: COVER}
@@ -62,15 +67,16 @@ const Badges = ({
   let content = data.allBadgesYaml.edges.find(
     ({ node }) => node.fields.lang === lang
   );
-  if (content) content = content.node;
-  else return null;
+  // if (content) content = content.node;
+  // else return null;
+  content = badges || content.node || null;
 
   return (
     <>
       {/* <Fragment github="/components/badges"> */}
       <Div
         width="100%"
-        maxWidth={maxWidth}
+        maxWidth={maxWidth || "1366px"}
         margin_tablet="0 auto"
         justifyContent="center"
         background={background}
@@ -91,12 +97,12 @@ const Badges = ({
           maxWidth={maxWidth}
         >
           {/* <Grid columns_md="12" background={background} padding_md={padding_md} rows={paragraph && `3`} padding="0 17px" margin="36px 0 58px 0" margin_md="73px 0"> */}
-          {paragraph && (
+          {!bottom_paragraph && paragraph && (
             <Div className="badge-slider" justifyContent="between">
               <Paragraph
                 fontFamily="Lato-Light"
                 padding={paddingText || "0 10px 45px 10px"}
-                padding_tablet={paddingText_tablet || "0 12% 55px 12%"}
+                padding_tablet={paddingText_tablet || "0 5% 55px 5%"}
                 fontSize={short_link || short_text ? "16px" : "16px"}
                 fontSize_tablet={short_link || short_text ? "16px" : "16px"}
                 lineHeight={short_link || short_text ? "29px" : "38px"}
@@ -198,6 +204,22 @@ const Badges = ({
                   </Link>
                 )}
               </Div>
+            </Div>
+          )}
+
+          {bottom_paragraph && (
+            <Div className="badge-slider" justifyContent="between">
+              <Paragraph
+                fontFamily="Lato"
+                padding={paddingText || "0 10px 45px 10px"}
+                padding_tablet={paddingText_tablet || "0 5% 55px 5%"}
+                fontSize={short_link || short_text ? "14px" : "14px"}
+                fontSize_tablet={short_link || short_text ? "14px" : "14px"}
+                lineHeight={short_link || short_text ? "29px" : "38px"}
+                color={Colors.black}
+                dangerouslySetInnerHTML={{ __html: paragraph }}
+                margin="15px 0 0 0"
+              />
             </Div>
           )}
 

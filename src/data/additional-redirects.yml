@@ -79,7 +79,7 @@ redirects:
     toPath: "/us/trends-and-tech/feelings-learning-coding"
     #redirectInBrowser: true
     isPermanent: true # if permanent google will erase the original url from its results 
-           
+    
   - fromPath: "/us/trends-and-tech/4geeks-academy-history"
     toPath: "/"
     #redirectInBrowser: true
@@ -177,5 +177,25 @@ redirects:
 
   - fromPath: "/us/coding-campus/coding-bootcamp-argentina"
     toPath: "/us/coding-campus/coding-bootcamp-argentina-buenos-aires/"
+    #redirectInBrowser: true
+    isPermanent: true # if permanent google will erase the original url from its results 
+    
+  - fromPath: "/es/full-stack-developer/desarrollador-full-stack"
+    toPath: "/es/desarrollador-full-stack/desarrollador-full-stack"
+    #redirectInBrowser: true
+    isPermanent: true # if permanent google will erase the original url from its results 
+    
+  - fromPath: "/us/aprender-a-programar/como-pagar-bootcamp-de-programacion"
+    toPath: "/es/aprender-a-programar/como-pagar-bootcamp-de-programacion"
+    #redirectInBrowser: true
+    isPermanent: true # if permanent google will erase the original url from its results 
+
+  - fromPath: "/us/aprender-a-programar/aprende-a-programar-en-espanol"
+    toPath: "/es/aprender-a-programar/aprende-a-programar-en-espanol"
+    #redirectInBrowser: true
+    isPermanent: true # if permanent google will erase the original url from its results 
+    
+  - fromPath: "/us/aprender-a-programar/aprende-a-programacion-desde-cero"
+    toPath: "/es/aprender-a-programar/aprende-a-programacion-desde-cero"
     #redirectInBrowser: true
     isPermanent: true # if permanent google will erase the original url from its results 

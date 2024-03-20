@@ -27,7 +27,7 @@ const LandingContainer = ({ background, children, filter, image, badge }) => {
           width_tablet="100%"
           height="auto"
           margin="0 0 auto 0"
-          filter={filter}
+          filter_xxs={filter}
           backgroundColor={Colors.lightGray}
           align="center"
           alt="4Geeks Academy"

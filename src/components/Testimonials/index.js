@@ -20,19 +20,31 @@ const Testimonials = (props) => {
         id={props.id}
         fluid
         background={props.background || "linear-gradient(#f5f5f5, white)"}
-        height="425px"
+        height={props.noMove ? "580px" : "520px"}
+        height_tablet={props.noMove ? "500px" : "450px"}
+        //childHeight="540px"
         margin={props.margin}
         margin_tablet={props.margin_tablet}
-        padding="30px 20px 60px 20px"
+        padding="30px 20px 0 20px"
         padding_tablet="48px 0 36px 0"
       >
-        <H2>{testimonialsArray.heading}</H2>
-        <Link to={testimonialsArray.button_link}>
-          <Paragraph margin="25px 0 36px 0" color={Colors.blue}>
-            {testimonialsArray.button_text}
-          </Paragraph>
-        </Link>
-
+        <Div
+          id="AQUI"
+          flexDirection="column"
+          padding_lg="0px"
+          padding_md="10px 80px"
+          padding_tablet="10px 40px"
+          padding_xxs="0 20px"
+        >
+          <H2 lineHeight_tablet="40px" lineHeight_xxs="30px">
+            {testimonialsArray.heading}
+          </H2>
+          <Link to={testimonialsArray.button_link}>
+            <Paragraph margin="25px 0 36px 0" color={Colors.blue}>
+              {testimonialsArray.button_text}
+            </Paragraph>
+          </Link>
+        </Div>
         {/* MARQUEE_V2 
 
                     Optional atrributes:
@@ -41,15 +53,16 @@ const Testimonials = (props) => {
                         containerstyle
                 */}
         <Marquee_v2
-          speed={0.7}
+          speed={props.noMove ? 0 : 0.5} // false == no movement
           reversed={false}
-          containerstyle={{ height: "215px" }}
+          containerstyle={{ height: "210px" }}
+          showSlider={props.noMove ? true : false}
         >
           <Div
             className="testimonial-slider"
             display="flex"
             height="auto"
-            padding="0 0 40px 0"
+            padding="0 0 50px 0"
           >
             {testimonialsFiltered.map((item, i) => {
               return (

@@ -34,8 +34,14 @@ export default ({ children }) => {
             defaultLanguage
             breathecode_location_slug
             active_campaign_location_slug
-            gdpr_compliant
             in_person_available
+            consents {
+              slug
+              name
+              active
+              message
+              error_message
+            }
             online_available
             meta_info {
               slug
@@ -43,6 +49,8 @@ export default ({ children }) => {
               position
               region
               dialCode
+              cohort_include_regex
+              cohort_exclude_regex
             }
             button {
               apply_button_text

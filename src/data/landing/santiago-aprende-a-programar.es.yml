@@ -43,7 +43,7 @@ header_data:
   background: "#FFF1D1"
   tagline: Aprende a programar 
   sub_heading: ""
-  badge: "../../../static/images/badges/Course-Report-Badge-2023.png"
+  badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
   image_filter: brightness(0.3)
 
 features:
@@ -77,7 +77,7 @@ short_badges:
     alt: "Mejor centro de Coding Bootcamp"
   - name: "Course Report"
     url: ""
-    image: "../../../static/images/badges/Course-Report-Badge-2023.png"
+    image: "../../../static/images/badges/Course-Report-Badge-2024.webp"
     alt: "Top Coding Bootcamps Course Report"
   - name: "Switchup"
     url: ""
@@ -101,8 +101,13 @@ badges:
   position: 5
   heading: "4Geeks Academy cuenta con premios y reconocimientos que validan su excelencia"
 
-about4Geeks:
+program_details:
   position: 1
+  heading: "Domina Python, JS y React"
+  sub_heading: "Un bootcamp de programación sobre las tecnologías más usadas del mundo"
+
+about4Geeks:
+  position: 4
   heading: Aprende a programar desde cero con 4Geeks
   sub_heading: "Una comunidad de más de 4000 estudiantes, profesores, partners y exalumnos, conectados por medio de Slack, GitHub, Social Media y 4Geeks.com (nuestra plataforma educacional)"
   list:
@@ -117,19 +122,19 @@ about4Geeks:
   image_mobile: "../../../static/images/bg/community.png"
 
 who_is_hiring:
-  position: 4
+  position: 15
   heading: "DÓNDE TRABAJAN NUESTROS ESTUDIANTES"
   sub_heading: "Nos encanta ver crecer a nuestros estudiantes, es por eso que nos esforzamos cada día por tener más aliados, para que puedas trabajar en empresas que te ayuden a seguir creciendo profesionalmente."
   featured:
     - name: "Facebook"
-      image: "../../../static/images/partner/facebook.png"
+      image: "../../../static/images/partner/meta-logo.png"
     - name: "Microsoft"
       image: "../../../static/images/partner/microsoft.png"
     - name: "Apple"
       image: "../../../static/images/partner/apple.png"
 
 why_4geeks:
-  position: 7
+  position: 9
   heading: "Escúchalo de nuestros alumnos"
   sub_heading: " "
 
@@ -214,11 +219,11 @@ components:
       src: "/images/badges/switchup-badge-2023.png"
       link: "https://www.switchup.org/bootcamps/4geeks-academy"
     button:
-      text: "Leer testimoniales"
+      text: "Testimoniales"
       color: white
       background: black
       hover: "blue"
-      path: "https://www.switchup.org/bootcamps/4geeks-academy"
+      path: "#why_4geeks"
     heading:
       text:
         "Hemos sido nombrados uno de los TOP coding bootcamps en el mundo"

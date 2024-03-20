@@ -60,7 +60,7 @@ short_badges:
     alt: "Mejor centro de Coding Bootcamp"
   - name: "Course Report"
     url: ""
-    image: "../../../static/images/badges/Course-Report-Badge-2023.png"
+    image: "../../../static/images/badges/Course-Report-Badge-2024.webp"
     alt: "Top Coding Bootcamps Course Report"
   - name: "Switchup"
     url: ""
@@ -130,7 +130,7 @@ components:
       text: ""
       font_size: ["16px", "16px", "16px", "16px", "16px"]
     button:
-      text: "Unete a la academia!"
+      text: "¡Únete a la academia!"
       color: white
       hover_color: "white"
       background: "black"
@@ -138,7 +138,7 @@ components:
       path: "#top"
     bullets:
       items:
-        - heading: "¡Conviertete en un FullStack developer en tan solo 18 semanas!"
+        - heading: "¡Conviértete en un FullStack developer en tan solo 18 semanas!"
           icon: "check" #string with icon for example ['check', 'cicle', etc]
         - heading: "Desarrollo de habilidades altamente valoradas en el mercado profesional."
           icon: "check" #string with icon for example ['check', 'cicle', etc]
@@ -157,7 +157,7 @@ components:
     background: "#f1f1f1"
     image:
       style: '{ "backgroundSize": "contain" }'
-      src: "/images/badges/Course-Report-Badge-2023.png"
+      src: "/images/badges/Course-Report-Badge-2024.webp"
       link: "https://www.coursereport.com/schools/4geeks-academy"
     heading:
       text:

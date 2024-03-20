@@ -13,6 +13,11 @@ meta_info:
   region: "latam"
   dialCode: "56"
   related_clusters: ["desarrollador-full-stack"]
+  
+  # ⬇️ cohort_include_regex field is used to filter cohorts on the calendar that only test successfully for a particular regex
+  # for example: for this location, only show cohorts starting with usa-xx-spanish
+  cohort_include_regex: []
+  cohort_exclude_regex: []
 
 seo_title: "Coding Bootcamp en Santiago de Chile"
 header:
@@ -67,7 +72,7 @@ upcoming:
 
 images_box:
   heading: "Lo que debes saber de nuestra sede en Santiago de Chile: "
-  content: "Chile se posiciona como uno de los países con mayor crecimiento digital en los próximos años, y particularmente en Santiago se ha fomentado la tendencia de los bootcamps en estos últimos años, entre ellos se encuentra 4Geeks Academy. Nos hemos convertido en una gran oportunidad de estudio para muchos chilenos y extranjeros que quieren cambiar su vida y aprender acerca del desarrollo web.A 10 min camindando desde la estación del metro y ubicada en la zona oriente de la ciudad, esta oficina es ideal para todos los Santiaguinos que quieran convertirse en programadores. Reciendemente remodelada, con internet de alta velocidad y acceso ilimitado para nuestros alumnos."
+  content: "Chile se posiciona como uno de los países con mayor crecimiento digital en los próximos años, y particularmente en Santiago se ha fomentado la tendencia de los bootcamps en estos últimos años, entre ellos se encuentra 4GeeksAcademy. Nos hemos convertido en una gran oportunidad de estudio para muchos chilenos y extranjeros que quieren cambiar su vida y aprender acerca del desarrollo web.A 10 min camindando desde la estación del metro y ubicada en la zona oriente de la ciudad, esta oficina es ideal para todos los Santiaguinos que quieran convertirse en programadores. Reciendemente remodelada, con internet de alta velocidad y acceso ilimitado para nuestros alumnos."
   images:
     - path: "../../../static/images/locations/santiago-office-1.jpeg"
       alt: "Santiago Location Image"
@@ -79,11 +84,47 @@ images_box:
       alt: "Santiago Location Image"
     - path: "../../../static/images/locations/santiago-1.png"
       alt: "Santiago Location Image"
+  layout_horizontal: true #false == "mode mosaic"
+
+two_columns:
+  proportions: [6, 6]
+  image:
+    style: '{"border" : "5px solid black", "backgroundSize": "contain" }'
+    src: "/static/images/staff/luisa.png"
+    shadow: true  
+  video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
+  heading:
+    text: "La Experiencia de Luisa Glum en 4Geeks Academy en Santiago, Chile"
+    font_size: ["30px", "30px", "30px", "30px", "30px"]
+  sub_heading:
+    text: "Desarrolla tus Habilidades Tecnológicas desde Santiago, Chile"
+    font_size: ["18px", "18px", "22px", "22px", "22px"]
+  button:
+    text: "¡Únete ahora!"
+    color: "white"
+    background: "black"
+    path: "/es/aplica"
+  bullets:
+    items: 
+    - text: "Luisa Glum comparte su trayectoria personal y cómo 4Geeks Academy transformó su camino profesional en el cambiante panorama tecnológico de Santiago"
+    - text: "4Geeks Academy se enorgullece de tener una tasa de colocación laboral del 95% en los seis meses posteriores a la graduación, garantizando un progreso profesional concreto para nuestros estudiantes"
+    - text: "Preparación para desafíos del mundo real y oportunidades laborales en tecnología"
 
 active_campaign_location_slug: "santiago-chile"
 breathecode_location_slug: "santiago-chile"
-gdpr_compliant: false # do we need to ask for permision?
 in_person_available: true # important to accept in-person applicants
+
+consents:
+  - slug: "gdpr_consent"
+    name: "GDPR Consent"
+    active: true
+    message: 'Al completar este formulario acepto que mi información será utilizada para enviarme información comercial sobre 4Geeks Academy y que podría resultar una relación comercial a partir de esto. Revisa nuestra <a style={{ marginLeft: "5px" }} target="_blank" rel="noopener noreferrer nofollow" className="decorated" href="/es/privacidad">Política de Privacidad</a>'
+    error_message: "Debes aceptar el consent de GDPR"
+  - slug: "wa_consent"
+    name: "WhatsApp Consent"
+    active: true
+    message: "Al completar este formulario acepto que me contacten por WhatsApp."
+    error_message: "Debes aceptar el consent de WhatsApp"
 
 city: "Santiago de Chile"
 hasFinancialsOption: true
@@ -101,16 +142,16 @@ country_shortname: "cl"
 socials:
   - name: "Facebook"
     icon: "facebook"
-    link: "https://www.facebook.com/4geeksacademycl"
+    link: "https://www.facebook.com/4GeeksAcademyCL"
   - name: "Twitter"
-    icon: "twitter"
-    link: "https://www.twitter.com/4geeksacademycl"
+    icon: "x-logo"
+    link: "https://twitter.com/4geeksacademycl"
   - name: "Instagram"
     icon: "instagram"
     link: "https://www.instagram.com/4geeksacademycl"
-  - name: "Meetup"
-    icon: "meetup"
-    link: "https://www.meetup.com/4geeks-academy-chile"
+  - name: "Eventbrite"
+    icon: "eventbrite"
+    link: "https://www.eventbrite.com/o/4geeks-academy-chile-impulsando-carreras-18840433269"
 courses:
   - "Full-Time"
   - "Part-Time"

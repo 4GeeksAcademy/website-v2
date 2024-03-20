@@ -2,13 +2,18 @@ meta_info:
   slug: "coding-bootcamp-chicago"
   title: "Chicago Coding Bootcamp"
   position: 1
-  description: "Get to know here all about our coding bootcamp campus in Chicago, Illinois of 4Geeks Academy"
+  description: "Get to know here all about our coding bootcamp campus in Chicago, Illinois of 4GeeksAcademy"
   image: "/images/og-preview/downtown-miami.us.png"
   keywords: "null"
   redirects: []
   region: "usa-canada"
   dialCode: "1"
   related_clusters: ["trends-and-tech"]
+  
+  # ⬇️ cohort_include_regex field is used to filter cohorts on the calendar that only test successfully for a particular regex
+  # for example: for this location, only show cohorts starting with usa-xx-spanish
+  cohort_include_regex: ["miami"]
+  cohort_exclude_regex: ['usa-\d{1,10}-spanish']
 
 seo_title: "Coding Bootcamp in Chicago"
 header:
@@ -48,11 +53,11 @@ button:
   cohort_more_details_text: "DETAILS"
 
 custom_bar:
-  active: false
-  message: 'Change your life with Code. <a class="customBar-link" href="/us/apply">Apply</a> Upcoming programs: June 6 Full-Stack | July 7 ML+AI!'
+  active: true
+  message: 'Change your life with Code. Starting at $150 a month. Or you can pay after you get a job! <a class="customBar-link" href="/us/apply">Apply</a>'
   button: 
-    label: "Read More"
-    path: "#" #string (can be inline path using #, relative path or absolute path)
+    label: "" # leave empty to hide button
+    path: "/us/apply" #string (can be inline path using #, relative path or absolute path)
 
 info_box:
   heading: ""
@@ -68,7 +73,7 @@ images_box:
   images:
     - path: "../../../static/images/locations/chicago-new.png"
       alt: "Chicago city"
-    - path: "../../../static/images/ownpeoplecoding2.jpg"
+    - path: "../../../static/images/ownpeoplecoding2.webp"
       alt: "4Geeks Own People Coding"
     - path: "../../../static/images/ownmancoding.jpg"
       alt: "Remote-Coding-Bootcamp"
@@ -76,14 +81,43 @@ images_box:
       alt: "4Geeeks location"
     - path: "../../../static/images/locations/miami-people.jpeg"
       alt: "4Geeeks lab"
+  layout_horizontal: true #false == "mode mosaic"
 
-
+two_columns:
+  proportions: [6, 6]
+  image:
+    style: '{"border" : "5px solid black", "backgroundSize": "contain" }'
+    src: "/static/images/testimonials/allisa-testimonial.jpg"
+    shadow: true  
+  video: "https://www.youtube.com/watch?v=TCHASxvkhpI"
+  heading:
+    text: "Unveiling Chicago's Coding Landscape"
+    font_size: ["30px", "30px", "30px", "30px", "30px"]
+  sub_heading:
+    text: "Insights from Alissa on 4GeeksAcademy"
+    font_size: ["18px", "18px", "22px", "22px", "22px"]
+  button:
+    text: "APPLY NOW"
+    color: "white"
+    background: "black"
+    path: "/us/apply"
+  bullets:
+    items: 
+    - text: "Tailored learning catering to Chicago's tech environment"
+    - text: "Industry-aligned curriculum prioritizing real-world applicability"
+    - text: "Professional guidance navigating Chicago's dynamic tech sector"
 
 active_campaign_location_slug: "chicago-usa"
 breathecode_location_slug: "chicago-usa"
-gdpr_compliant: false # do we need to ask for permision?
 in_person_available: true # important to accept in-person applicants
 online_available: false # important to accept online-only applicants
+
+consents:
+  - slug: "gdpr_consent"
+    name: "GDPR Consent"
+    active: false
+    message: 'By submitting this form, I accept that my data may be used for a quote request that could result in a commercial relationship. Check out our complete <a style={{ marginLeft: "5px" }} target="_blank" rel="noopener noreferrer nofollow" className="decorated" href="/us/privacy-policy">Privacy Policy</a>'
+    error_message: "You need to accept the privacy terms"
 
 city: "Chicago"
 name: "Chicago, USA"
@@ -100,14 +134,14 @@ socials:
     icon: "facebook"
     link: "https://www.facebook.com/4geeksacademy"
   - name: "Twitter"
-    icon: "twitter"
+    icon: "x-logo"
     link: "https://www.twitter.com/4geeksacademy"
   - name: "Instagram"
     icon: "instagram"
-    link: "https://www.instagram.com/4geeksacademy"
-  - name: "Meetup"
-    icon: "meetup"
-    link: "https://www.meetup.com/4geeks-academy"
+    link: "https://www.instagram.com/4geeksacademy/"
+  - name: "Linkedin"
+    icon: "linkedin"
+    link: "https://www.linkedin.com/school/4geeksacademy/"
 courses:
   - "Full-Time"
   - "Part-Time"
