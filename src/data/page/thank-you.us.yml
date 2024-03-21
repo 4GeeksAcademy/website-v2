@@ -12,8 +12,8 @@ banner:
 content:
   title: "Check your email! :)"
   message: "We have received your application.  Our Geeky Advisor is going to contact you shortly.  Sit tight!
-
-In the meantime, please read our blog.  It's full of important info that we are sure you will find useful. :)"
+    In the meantime, please read our blog.  It's full of important info that we are sure you will find useful. :)"
+    
   articles_title: "Some articles that may interest you:"
   button: "Read our blog"
 social: 
