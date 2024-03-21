@@ -20,7 +20,7 @@ meta_info:
 
 navbar:
   buttonText: "Postular"
-  buttonUrl: "https://www.gob.pe/institucion/proinnovate/campa%C3%B1as/49409-concurso-de-becas-para-programas-de-bootcamps-de-codigo-etapa-2" # url accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
+  buttonUrl: "#leadform_bottom"
   logoUrl: "#"
 
 form:
@@ -31,7 +31,7 @@ form:
   fields: ["full_name", "phone", "email"]
   heading: "Solicita información"
   motivation: "Completa el formulario y te enviaremos la información en unos minutos a tu correo electrónico."
-  button_label: Solicitar más información
+  button_label: Enviar
   # redirect: "/es/gracias/?lang=es"  #you can redirect to another url or entirely diffrent website
 
 apply_schollarship: # form that is displayed at the end of the landing
@@ -43,8 +43,8 @@ apply_schollarship: # form that is displayed at the end of the landing
 header_data:
   background: "#FFF1D1"
   partner_logo_url: "../../../static/images/landing/logos-promin2.png"
-  tagline: ProInnóvate otorga becas para bootcamps de programación de 4Geeks Academy. 
-  sub_heading: "El concurso está dirigido a jóvenes técnicos o no universitarios que buscan formación técnica especializada para mejorar su empleabilidad."
+  tagline: ProInnóvate y 4Geeks Academy
+  sub_heading: "El programa de becas ProInnóvate ha finalizado, pero aún puedes conseguir una oferta especial y convertirte en un fullstack developer "
   badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
   image_filter: brightness(0.3)
 
@@ -54,20 +54,20 @@ features:
   #                                         up   left down  right
   styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
   bullets:
-    - ProInnóvate financiará este programa intensivo valorizado en hasta US$ 7,500
+    - ProInnóvate financió este programa intensivo valorizado en hasta US$ 7,500
     - Mentorías y career support de por vida
     - Horario Full-Time 
 
 follow_bar:
   position: "top" # top, bottom, hidden
   content:
-    text: "Solicita una beca de ProInnóvate y ¡conviértete en desarrollador!"
-    text_mobile: "Solicita una beca de ProInnóvate y ¡conviértete en desarrollador!  "
+    text: "Aplicaciones cerradas Puedes unirte a 4Geeks\n agregando la Clave de referencia \" Proinnovate\" "
+    text_mobile: "Aplicaciones cerradas Puedes unirte a 4Geeks\n agregando la Clave de referencia \" Proinnovate\""
     # devices:    XL      LG      MD      SM       XS
-    font_size: ["25px", "25px", "25px", "18px", "4.3vw"]
+    font_size: ["22px", "22px", "22px", "16px", "4vw"]
   button:
     text: "Inicia tu Popstulación"
-    path: "https://inngenius.proinnovate.gob.pe"
+    path: "#leadform_bottom"
   phone: 
     text: ""
 
@@ -139,6 +139,7 @@ components:
     layout: two_column_left
     background: "#fff" # Name of the color(from components/Styling/index.js) or color code ex: #C9F9F9
     image:
+      style: '{ "background-size": "contain", "height":"140px", "min-height":"auto", "background-position": "center"}'
       src: "/images/partner/pro-innovate-logo.png"
     heading:
       # style: '{"padding": "0 20px", "line-height": "50px"}'
@@ -147,19 +148,21 @@ components:
         #           xl      lg      md      sm      xs
       font_size: ["50px", "50px", "50px", "50px", "50px"]
     content:
-      text: "4Geeks Academy, la escuela de tecnología líder en América Latina, se une a ProInnóvate, el programa de innovación del Ministerio de la Producción del Perú, para ofrecer becas integrales para bootcamps de programación."
+      text: "4Geeks Academy, la escuela de tecnología líder en América Latina, se unió a ProInnóvate, el programa de innovación del Ministerio de la Producción del Perú, para ofrecer becas integrales para bootcamps de programación.<br><br>
+        Si bien la convocatoria para las becas con ProInnóvate ha cerrado, 4Geeks Academy sigue comprometida con la formación de talento digital en Perú."
       font_size: ["18px"]
     button: 
       text: "OBTENER MÁS INFORMACIÓN"
       color: white
       hover_color: "white"
       background: "black"
-      path: "https://www.gob.pe/institucion/proinnovate/campa%C3%B1as/49409-concurso-de-becas-para-programas-de-bootcamps-de-codigo-etapa-2"
+      path: "#leadform_header"
 
 
   - name: new_design_with_bullets
     position: 3
-    layout: two_column_right 
+    layout: two_column_right
+    proportions: [7, 5] 
     swipable: False
     background: "#fbfbfb"
     image:
@@ -170,15 +173,15 @@ components:
       text: "Aprende a programar con las últimas tecnologías y mejora tus oportunidades laborales"
       style: '{ "font-size": "30px" }'
     heading: 
-      text: "El programa, que tendrá una duración de 10 semanas, comenzará el 20 de mayo de 2024."
+      text: "¿Te apasiona la tecnología y quieres aprender a programar?"
     sub_heading:
-      text: "¿Quieres aprender a programar y mejorar tus oportunidades laborales? ¡No te pierdas esta oportunidad única!"
+      text: "En 4Geeks Academy te ofrecemos la oportunidad de formarte como programador profesional, incluso si la beca con Proinnóvate ha finalizado."
     button: 
       text: "OBTENER MÁS INFORMACIÓN"
       color: white
       hover_color: "white"
       background: "black"
-      path: "https://www.gob.pe/institucion/proinnovate/campa%C3%B1as/49409-concurso-de-becas-para-programas-de-bootcamps-de-codigo-etapa-2"
+      path: "#leadform_header"
     content: 
       text: ""
       font_size: ["16px"]
@@ -205,38 +208,40 @@ components:
     layout: two_column_left
     background: "#fbfbfb" # Name of the color(from components/Styling/index.js) or color code ex: #C9F9F9
     image:
+      style: '{ "background-size": "contain", "background-position": "center", "justify-content": "center"}'
       src: "/images/landing/bootcamps.png"
     heading:
       # style: '{"padding": "0 20px", "line-height": "50px"}'
       text:
-        "¿Cómo puedes postular al Concurso de Becas para Programas de Bootcamp de Código?"
+        "El Concurso de Becas ya ha cerrado"
         #           xl      lg      md      sm      xs
-      font_size: ["50px", "50px", "50px", "50px", "50px"]
+      font_size: ["32px", "32px", "32px", "32px", "32px"]
     content:
-      text: ""
+      text: "Aunque la beca con Proinnóvate ha finalizado, todavía puedes acceder a una formación de calidad a un precio especial.<br><br>
+        Si estás realmente motivado y dispuesto a trabajar duro, aplica a 4Geeks Academy y añade el Referral Key <strong>\"Proinnóvate\"."
       font_size: ["18px"]
     button: 
-      text: "Postúlate a la Beca"
+      text: "Más información"
       color: white
       hover_color: "white"
       background: "black"
-      path: "https://inngenius.proinnovate.gob.pe"
+      path: "#leadform_bottom"
     bullets:
       items:
-        - heading: "Paso 1: Registro"
-          text: "Regístrate y accede al Sistema en Línea de ProInnóvate: https://inngenius.proinnovate.gob.pe/. "
-          icon: "circle" 
-        - heading: "Paso 2: Selección de Beca"
-          text: "Selecciona el Concurso de Becas para Programas de Bootcamps de Código y haz clic en \"Sí, quiero postular\""
-          icon: "circle" 
-        - heading: "Paso 3: Evaluación y Selección"
-          text: "Completa y envía el Formulario de Postulación del Sistema en Línea de ProInnóvate hasta el 4 de marzo del 2024, a las 13:00 horas (Perú). Revisa el manual de postulación aquí: "
-          icon: "circle" 
-        - heading: "Paso 4: Pasos de Selección y Pre-aprobación de 4Geeks"
-          text: "Una vez que hayas enviado tu formulario de postulación por el Sistema en Línea de ProInnóvate, 4GeeksAcademy realizará los siguientes pasos: 1. completar test lógico. 2. Hacer Primeros dos módulos del Precurso. 3. Aprobar entrevista de admisiones. 4. Acreditación legal de PronInnóvate."
-        - heading: "Resultados y Consultas del Bootcamp"
-          text: "Una vez aprobado lo anterior, se realizarán las evaluaciones finales y se procederá a poublicar los resultados. Para consultas relacionadas con las bases del concurso, pueden comunicarse a: latam@4geeksacademy.com o bootcamps@proinnovate.gob.pe"
-          icon: "circle" 
+        # - heading: "Paso 1: Registro"
+        #   text: "Regístrate y accede al Sistema en Línea de ProInnóvate: https://inngenius.proinnovate.gob.pe/. "
+        #   icon: "circle" 
+        # - heading: "Paso 2: Selección de Beca"
+        #   text: "Selecciona el Concurso de Becas para Programas de Bootcamps de Código y haz clic en \"Sí, quiero postular\""
+        #   icon: "circle" 
+        # - heading: "Paso 3: Evaluación y Selección"
+        #   text: "Completa y envía el Formulario de Postulación del Sistema en Línea de ProInnóvate hasta el 4 de marzo del 2024, a las 13:00 horas (Perú). Revisa el manual de postulación aquí: "
+        #   icon: "circle" 
+        # - heading: "Paso 4: Pasos de Selección y Pre-aprobación de 4Geeks"
+        #   text: "Una vez que hayas enviado tu formulario de postulación por el Sistema en Línea de ProInnóvate, 4GeeksAcademy realizará los siguientes pasos: 1. completar test lógico. 2. Hacer Primeros dos módulos del Precurso. 3. Aprobar entrevista de admisiones. 4. Acreditación legal de PronInnóvate."
+        # - heading: "Resultados y Consultas del Bootcamp"
+        #   text: "Una vez aprobado lo anterior, se realizarán las evaluaciones finales y se procederá a poublicar los resultados. Para consultas relacionadas con las bases del concurso, pueden comunicarse a: latam@4geeksacademy.com o bootcamps@proinnovate.gob.pe"
+        #   icon: "circle" 
 
 
 

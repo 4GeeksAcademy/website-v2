@@ -172,7 +172,7 @@ export const NavbarMobile = ({
 
   const data = useStaticQuery(graphql`
     query {
-      file(relativePath: { eq: "images/4Geeks-new-logo.png" }) {
+      file(relativePath: { eq: "images/4geeksacademy-logo-old.png" }) {
         childImageSharp {
           gatsbyImageData(
             layout: FULL_WIDTH # --> CONSTRAINED || FIXED || FULL_WIDTH
@@ -199,7 +199,6 @@ export const NavbarMobile = ({
             defaultLanguage
             breathecode_location_slug
             active_campaign_location_slug
-            gdpr_compliant
             in_person_available
             online_available
             meta_info {
