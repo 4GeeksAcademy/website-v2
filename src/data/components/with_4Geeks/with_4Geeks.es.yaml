@@ -61,14 +61,14 @@ with:
 
 
   - name: "Mattia Tozzi"
-    title: "Vi en 4Geeks un trampolin para entrar en el mundo laboral"
+    title: "Vi en 4Geeks un trampolín para entrar en el mundo laboral"
     open_in_modal: true
     description: "Si alguna vez te has preguntado si es posible cambiar de carrera, déjame decirte que sí, ¡es posible! Pero es importante tener pasión y perseverancia. El camino puede ser desafiante, pero con determinación y dedicación, puedes alcanzar tus metas profesionales."
     image: ../../../../static/images/testimonials/Mattia-Tozzi-testimonial.jpg
     alt: ""
     video: "https://www.youtube.com/watch?v=B01-eTfgqqc&t" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     video_height: 173px
-    location: ["all", "downtown-miami"]
+    location: ["all", "madrid-spain"]
     # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     icon: address
     footer:
@@ -78,15 +78,15 @@ with:
       text: ""
       text_link: ""
 
-  - name: "Mattia Tozzi"
-    title: "Vi en 4Geeks un trampolin para entrar en el mundo laboral"
+  - name: "Ana Romero"
+    title: "Ana aprovechó al máximo su tiempo"
     open_in_modal: true
-    description: "Joao cuenta su experiencia obteniendo mentores de codificación mientras estudiaba, después de graduarse e incluso en sus trabajos."
-    image: ../../../../static/images/staff/joao.png
+    description: "La reputación y orientación de la academia han proporcionado una experiencia extremadamente positiva. Destaca especialmente la valiosa ayuda y mentoría brindada por los profesores, lo que ha sido fundamental para su aprendizaje."
+    image: ../../../../static/images/testimonials/ana-romero.jpg
     alt: ""
-    video: "https://www.youtube.com/watch?v=B01-eTfgqqc&t" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    video: "https://www.youtube.com/watch?v=XqyM_QSVcOs&t" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     video_height: 173px
-    location: ["all", "downtown-miami"]
+    location: ["all", "caracas-venezuela.es"]
     # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     icon: address
     footer:
@@ -96,16 +96,15 @@ with:
       text: ""
       text_link: ""
 
-  - name: "Mattia Tozzi"
-    title: "Vi en 4Geeks un trampolin para entrar en el mundo laboral"
+  - name: "Joshua Bravo"
+    title: "De asistente de cocina a desarrollador Full Stack"
     open_in_modal: true
-    description: "Joao cuenta su experiencia obteniendo mentores de codificación mientras estudiaba, después de graduarse e incluso en sus trabajos."
-    image: ../../../../static/images/staff/joao.png
+    description: "Decidí abandonar la rutina y los interminables tutoriales para embarcarme en una nueva aventura profesional. Fue entonces cuando elegí 4Geeks Academy, no solo por su reputación, sino también por su equipo humano y su programa educativo."
+    image: ../../../../static/images/testimonials/joshua-bravo-testimonial.jpg
     alt: ""
-    video: "https://www.youtube.com/watch?v=B01-eTfgqqc&t" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    video: "https://www.youtube.com/watch?v=rtpfwwfE0yY&t" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     video_height: 173px
-    location: ["all", "downtown-miami"]
-    # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    location: ["all", "santiago-chile"]
     icon: address
     footer:
       is_image: true
