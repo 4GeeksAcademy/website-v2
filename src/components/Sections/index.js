@@ -1336,6 +1336,7 @@ Div.defaultProps = {
 };
 
 Container.defaultProps = {
+  maxWidth: "1366px",
   padding: "17px",
   padding_tablet: "0 40px",
   padding_md: "0 80px",
