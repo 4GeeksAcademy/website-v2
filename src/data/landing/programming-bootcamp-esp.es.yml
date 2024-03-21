@@ -1,20 +1,19 @@
 meta_info:
-  slug: academia-programacion # <--- URL 4geeksacademy.com/es/landing/academia-programacion
+  slug: programming-bootcamp-esp # <--- URL 4geeksacademy.com/es/landing/academia-programacion
 # landing para campañas con influencers
-  visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
+  visibility: "unlisted" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   # This will show on social media when shared
-  title: "Academia de Programación Online"
-  description: "La programación es esencial para tu éxito profesional, únete a 4Geeks Academy, el bootcamp de programación número uno en Latinoamérica."
-  image: "../../../static/images/bg/main-bg.jpg"
-  keywords: "Aprende a programar, 4Geeks academy, aprende programacion, aprende ingenieria informatica, curso programacion"
-
+  title: "Conviértete en un desarrollador Full-Stack con nuestro programming Bootcamp en 4Geeks Academy"
+  description: "¿Sueñas con convertirte en un desarrollador pero no sabes por dónde empezar? El Programming Bootcamp de 4Geeks Academy es tu camino ideal."
+  image: "../../../static/images/bg/the-academy-bg.jpg"
+  keywords: ""
   template: "landing_a" # <--- choose your landing template
   redirects: [] # <--- URL redirections to avoid 404 errors
 
   # Set a particular course or location to the landing page
   # this UTM fields will be also included in the CRM contact
   utm_course: ["full-stack"]
-  utm_location: ["caracas-venezuela","santiago-chile","buenosaires-argentina","bogota-colombia","montevideo-uruguay","mexicocity-mexico","costa-rica","panamacity-panama","quito-ecuador","lima-peru","madrid-spain","downtown-miami"]
+  utm_location: ["online"]
   automation: strong # comma separated, "soft" is the default value
   tag: website-lead # comma separated, "request_more_info" is the default value
 
@@ -26,32 +25,37 @@ navbar:
 form:
   # posible fields: "first_name", "last_name", "full_name", "phone", "email"
   # always the first_name, email and phone will be mandatory if added.
-  fields: ["full_name", "phone", "email"]
+  fields: ["first_name", "email", "phone"]
   #margin_md: "0 auto 0 -30px"
-  heading: "Conoce más información"
-  button_label: Obtener más información
-  redirect: "https://marketing892162.typeform.com/to/XhfwihKQ" #you can redirect to another url or entirely diffrent website
+  heading: "Obtener más información"
+  motivation: "luego de haber rellenado el formulario, recibirás confirmación por correo y detalles sobre el programa, financiamiento y apoyo para tomar decisiones informadas sobre tu carrera"
+  button_label: Enviar 
+  redirect: "/es/gracias" #you can redirect to another url or entirely diffrent website
     
   # jumbotron on the top (cannot be commented out)
 apply_schollarship: # form that is displayed at the end of the landing
   # title: "Get more info about this award-winning development course"
   imageSide: "left"
-  image: "../../../static/images/landing/apply.png"
+  image: "../../../static/images/woman-laptop-smile-bg.webp"
   
 header_data:
-  background: "#FFFFFF"
-  tagline: ¡Bienvenido a 4Geeks Academy! La academia de programación líder en el mundo
+  background: "#fcf2cf"
+  tagline: Acelera tu futuro con nuestro Programming Bootcamp
   tagline_color: "black"
-  sub_heading: Con más de 7 años de experiencia tenemos presencia en USA, Europa y Latinoamérica. En nuestra academia, te enseñamos habilidades y destrezas relevantes para el futuro
+  sub_heading: Aprende las habilidades más demandadas por la industria con nuestro intensivo programming botcamp de 18 semanas
   # background_image: "../../../static/images/bg/main-bg.jpg"
   #video: "https://www.videoask.com/fm984j5nz"
   image_filter: brightness(0.4)
 
 features:
   marginTop: 0px #<-- separation between tagline and the bullets
+
   #                                         up   left down  right
-  styles: '{"fontSize": "15px", "margin": "10px 0px 0px 0px" , "color": "darkslategray"}'
-  text: Al aprender a programar con 4Geeks Academy tendrás clases online completamente en vivo, la oportunidad de certificarte internacionalmente en poco tiempo y de conseguir tu primer empleo como programador con nuestro apoyo. Descubre cómo puede ser tu vida como un profesional en programación con 4Geeks Academy, ¡comienza ahora!
+  styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
+  bullets:
+    - No necesitas experiencia previa para comenzar un Programming Bootcamp
+    - Aprende a crear sitios web y aplicaciones web desde cero
+    - Clases en vivo y grabadas para que puedas elegir la modalidad que mejor se adapte a tu estilo de vida
 
 short_badges:
   - name: "Premios Tecnologia Siglo XXI"
@@ -65,17 +69,22 @@ short_badges:
   - name: "Switchup"
     url: ""
     image: "../../../static/images/badges/switchup-badge-2023.png"
-    alt: "Best coding bootcamp Switchup 2023"   
+    alt: "Best coding bootcamp Switchup 2023"
+  - name: "Ebootcamp"
+    url: ""
+    image: "../../../static/images/badges/ebootcamp-top.png"
+    alt: "Best coding bootcamp Switchup 2023"
   - name: "Florida Department of Education"
     url: ""
     image: "../../../static/images/badges/licensed.png"
     alt: "Florida Department of Education"
 
+
 follow_bar:
   position: "top" # top, bottom, hidden
   content:
-    text: "Financiamiento sin interés. \n Plan de pago a 12 cuotas."
-    text_mobile: "Financiamiento sin interés. \n Hasta 12 cuotas."
+    text: "programa tu futuro hoy \ncon nuestro programming bootcamp"
+    text_mobile: "programa tu futuro hoy \ncon nuestro programming bootcamp"
     # devices:    XL      LG      MD      SM       XS
     font_size: ["25px", "25px", "25px", "18px", "4.3vw"]
   button:
@@ -93,15 +102,15 @@ program_details:
   heading: "Domina Python, JS y React"
   sub_heading: "Un curso de programación sobre las tecnologías más usadas del mundo"
 
-why_4geeks:
-  position: 4
-  heading: "¿Por qué 4Geeks?"
-  sub_heading: " "
+# why_4geeks:
+#   position: 4
+#   heading: "¿Por qué 4Geeks?"
+#   sub_heading: " "
 
 geeks_vs_others:
   position: 5
-  heading: "¿Por qué somos tan exitosos?"
-  paragraph: "Un galardonado curso de programación"
+  heading: "¿Por qué nuestro coding bootcamp es tan exitoso?"
+  paragraph: ""
   total_rows: 5
 
 badges:
@@ -119,18 +128,21 @@ components:
     position: 1
     layout: two_column_left
     proportions: [5, 7]
-    background: "#FFF8E8"
+    background: "#fbfbfb"
     image:
       style: '{ "backgroundSize": "contain", "width": "auto"}'
       src: "/images/landing/hombre-con-laptop.png"
+    section_heading:
+      text: "Conviértete en un desarrollador Full-Stack con nuestro intensivo Programming Bootcamp"
+      style: '{ "font-size": "30px"}'
     heading:
-      text: "¿Cómo Funciona?"
-      font_size: ["30px", "30px", "30px", "30px", "30px"]
+      text: "Escuela de programación enfocada en enseñarte a programar"
+      font_size: ["24px", "24px", "24px", "24px", "24px"]
     sub_heading:
-      text: ""
+      text: "¿Quieres convertirte en un desarrollador web cotizado? 4Geeks Academy te ofrece el Programming Bootcamp #1 de Latinoamérica, donde aprenderás las habilidades más demandadas por las empresas en solo 18 semanas."
       font_size: ["16px", "16px", "16px", "16px", "16px"]
     button:
-      text: "¡Únete a la academia!"
+      text: "¡Obtener información!"
       color: white
       hover_color: "white"
       background: "black"
@@ -139,31 +151,70 @@ components:
     bullets:
       items:
         - heading: "¡Conviértete en un FullStack developer en tan solo 18 semanas!"
-          icon: "check" #string with icon for example ['check', 'cicle', etc]
+          icon: "circle" 
         - heading: "Desarrollo de habilidades altamente valoradas en el mercado profesional."
-          icon: "check" #string with icon for example ['check', 'cicle', etc]
+          icon: "circle" 
         - heading: "Acceso a oportunidades laborales al momento de la graducación."
-          icon: "check" #string with icon for example ['check', 'cicle', etc]
+          icon: "circle" 
     content:
       font_size: ["16px"]
-      text: |
-        Imagina certificarte a nivel internacional en un tiempo récord, abriendo las puertas a nuevas oportunidades laborales. Y lo mejor de todo, no estarás solo en este camino. <br>Nuestro apoyo no termina con la certificación; estamos comprometidos contigo hasta que consigas tu primer empleo como programador. <br>
-        <strong style="font-weight: bold;">Descubre cómo puede ser tu vida como un profesional en programación con 4Geeks Academy, ¡comienza ahora! </strong>
+      text: ""
+        
   
   - name: top_coding_bootcamp
     position: 3
     layout: two_column_left
     proportions: [4, 8]
-    background: "#f1f1f1"
+    background: "#fbfbfb"
     image:
-      style: '{ "backgroundSize": "contain" }'
-      src: "/images/badges/Course-Report-Badge-2024.webp"
-      link: "https://www.coursereport.com/schools/4geeks-academy"
+      style: '{ "background-size": "contain", "height":"180px", "min-height":"auto", "background-position": "center"}'
+      src: "/images/badges/ebootcamp-top.png"
+      link: ""
     heading:
       text:
-        "Tenemos 3 años consecutivos siendo seleccionados como uno de los mejores coding bootcamps del mundo"
+        "Nuestros premios como Best Programming Bootcamp demuestran nuestro compromiso con tu educación"
+      style: '{ "font-weight":"500" }'
         #xl      lg     md     sm    xs
-      font_size: ["38px", "36px", "32px", "30px", "30px"]
+      font_size: ["28px", "28px", "28px", "18px", "18px"]
+
+  - name: geekinfo_2
+    position: 4
+    layout: two_column_right
+    proportions: [6, 6]
+    background: ""
+    image:
+      style: '{ "backgroundSize": "contain" }'
+      src: "/images/landing/Group-6626.webp"
+      shadow: false
+    section_heading:
+      text: ""
+      style: '{ "font-size": "30px" }'
+    heading:
+      text: "¿A quién está dirigido nuestro Programming Bootcamp?"
+      font_size: ["40px", "40px", "40px", "40px", "40px"]
+    sub_heading:
+      text: "Nuestro programa part-time puede ajustarse a tu estilo de vida,  no lo dudes más y solicita más información sobre nuestro programa."
+      font_size: ["16px", "16px", "16px", "16px", "16px"]
+    button:
+      text: "Solicitar infomación"
+      color: white
+      hover_color: "white"
+      background: "black"
+      path: "#leadform_bottom"
+    content:
+      text: ""
+      font_size: ["16px"]
+      path: ""
+    bullets:
+      items:
+        - text: "Personas con o sin experiencia previa en programación"
+          icon: "circle" #string with icon for example ['check', 'cicle', etc]
+        - text: "Profesionales que buscan cambiar de carrera"
+          icon: "circle" #string with icon for example ['check', 'cicle', etc]
+        - text: "Desarrolladores que desean actualizar sus conocimientos"
+          icon: "circle" #string with icon for example ['check', 'cicle', etc]
+        - text: "Emprendedores que quieren crear su propio negocio"
+          icon: "circle" #string with icon for example ['check', 'cicle', etc]
  
   # - name: top_coding_bootcamp
   #   position: 8
