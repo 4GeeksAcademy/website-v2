@@ -41,7 +41,7 @@ navbar:
 
 header_data:
   background: "#FFF1D1"
-  tagline: "No excuses. No Cost. Miami Tech Talent is bringing 100% scholarships. We are changing the Game"
+  tagline: "No excuses. No Cost. Miami Tech Talent is bringing up to 100% scholarships"
   tagline_color: "black"
   badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
   image_filter: brightness(0.3)
@@ -52,8 +52,8 @@ features:
   bullets:
     - "Get a career in Tech and join the #MiamiTechLife"
     - "Be a software Developer or a Data Scientist"
-    - "30 Spots Available. Only 15 left!" 
-    - "Now open and accepting applications!"
+    - "30 Spots Available. Just a few spot left." 
+    - "APPLY NOW, We are accepting applications!"
   styles: '{ "color": "black", "fontWeight":"500" }'
 
 short_badges:
@@ -95,7 +95,7 @@ components:
     heading:
       text: Our Programs
     content:
-      text: Programs in Full-Time or Part-Time modality with live classes taught by experts
+      text: Part-Time programs with live classes taught by experts
       font_size: ["16px"]
       path: ""
     programs:

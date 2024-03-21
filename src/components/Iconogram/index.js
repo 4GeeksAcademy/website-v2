@@ -97,7 +97,6 @@ const Iconogram = ({ session, data, pageContext, yml, index }) => {
         padding_tablet="0 40px"
         padding_lg="0"
         className={swipable && "badge-slider hideOverflowX__"}
-        id="accccccccccc"
       >
         {Array.isArray(icons) &&
           icons?.map((item, index) => {
