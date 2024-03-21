@@ -275,7 +275,7 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
             fontFamily="Archivo, Lato, sans-serif"
           >
             {yml.header.title}
-          </H1>
+          </H2>
           <Paragraph
             color="black"
             opacity="1"
