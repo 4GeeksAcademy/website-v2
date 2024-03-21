@@ -1,34 +1,34 @@
 meta_info:
-  slug: full-stack-coding-bootcamp # <--- URL 4geeksacademy.com/us/landing/example
+  slug: full-stack-developer-bootcamp # <--- URL 4geeksacademy.com/us/landing/example
 
   # This will show on social media when shared
-  title: "Gain a Lifetime of Tech Skills with our Fullstack Coding Bootcamp"
-  description: "Learn in-demand programming skills close to home with our convenient bootcamp locations"
+  title: "Gain a Lifetime of Tech Skills with our Fullstack Developer Bootcamp"
+  description: "Learn in-demand programming skills with our fullstack development bootcamp"
   image: "/images/bg/main-bg.jpg"
-  keywords: "full stack, full stack coding bootcamp, programming bootcamp, Coding Classes, Learn to code, 4Geeks Academy"
-  visibility: "hidden" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
+  keywords: "full stack, full stack developer bootcamp, programming bootcamp, Coding Classes, Learn to code, 4Geeks Academy"
+  visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   template: "landing_a" # <--- choose your landing template
   redirects: []
 
   # Set a particular course or location to the landing page
   # this UTM fields will be also included in the CRM contact
   utm_course: ["full-stack"]
-  utm_location: ["downtown-miami"]
+  utm_location: ["downtown-miami","atlanta-usa","chicago-usa","dublin-ireland","europe","hamburg-germany","houston-usa","losangeles-usa","munich-germany","newyork-usa","online","toronto-canada",]
   automation: soft # comma separated, "soft" is the default value
   tag: request_more_info # comma separated, "request_more_info" is the default value
 
 navbar:
   logoUrl: "#"
-  buttonText: "REQUEST MORE INFO NOW" # this modifies the button text in the navbar
+  buttonText: "Request Information" # this modifies the button text in the navbar
   buttonUrl: "#leadform_bottom" #accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
 
 form:
   # posible fields: "first_name", "last_name", "full_name", "phone", "email"
   # always the first_name, email and phone will be mandatory if added.
   fields: ["full_name", "phone", "email"]
-  heading: "Get more information "
-  motivation: "Submit the form below and one of our advisors will promptly email you everything you need to know about our Bootcamp, including locations and learning formats, the syllabus, our latest outcome report, scholarships and financing opportunities, and much more."
-  button_label: REQUEST MORE INFO NOW
+  heading: "Get more information"
+  motivation: "Submit the form below and one of our advisors will promptly email you with everything you need to know about our bootcamp."
+  button_label: Request More Information
   redirect: null #you can redirect to another url or entirely diffrent website
 
 apply_schollarship: # form that is displayed at the end of the landing
@@ -38,7 +38,7 @@ apply_schollarship: # form that is displayed at the end of the landing
 
 # jumbotron on the top (cannot be commented out)
 header_data:
-  tagline: Full Stack Coding Bootcamp
+  tagline: Full Stack Developer Bootcamp
   sub_heading: "Become a Full Stack Developer in 18 weeks with unlimited mentorships and career support"
   background: "#FFF1D1"
   badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
@@ -58,8 +58,8 @@ features:
 follow_bar:
   position: "top" # top, bottom, hidden
   content:
-    text: "No Experience Needed! \nJoin to our Full stack Coding bootcamp"
-    text_mobile: "No Experience Needed! \nJoin to our Full stack Coding bootcamp"
+    text: "Enroll in Our Full-Stack Developer Bootcamp \n18-week program Today!"
+    text_mobile: "Enroll in Our Full-Stack Developer Bootcamp \n18-week program Today!."
     # devices:   XL      LG    MD      SM    XS
     font_size: ["25px", "25px", "25px", "20px", "18px"]
   button:
@@ -69,14 +69,14 @@ follow_bar:
     text: "Call"
 
 short_badges:
-  - name: "Ebootcamp"
-    url: ""
-    image: "../../../static/images/badges/ebootcamp-top.png"
-    alt: "Top Coding Bootcamp"
   - name: "Premios Tecnologia Siglo XXI"
     url: ""
     image: "../../../static/images/awards/premios_tecnologia_sigloxxi.png"
     alt: "Mejor centro de Coding Bootcamp"
+  - name: "Best coding bootcamp Ebootcamp"
+    url: ""
+    image: "../../../static/images/badges/ebootcamp-top.png"
+    alt: "Best coding bootcamp Ebootcamp"
   - name: "Course Report"
     url: ""
     image: "../../../static/images/badges/Course-Report-Badge-2024.webp"
@@ -97,11 +97,11 @@ short_badges:
 program_details:
   position: 2
   heading: "Master Python, JS and React"
-  sub_heading: "The programming languages with the highest demand worldwide"
+  sub_heading: "The most in-demand programming languages worldwide"
 
 badges:
   position: 5
-  heading: "Awards and recognitions that validate Our excellence"
+  heading: "Awards and recognitions that validate our excellence"
 
 geeks_vs_others:
   position: 7
@@ -132,20 +132,21 @@ rating_reviews:
 
 alumni_projects:
   position: 14
-  heading: "Projects you will be able to make"
-  sub_heading: "Take a look at our previous student projects"
+  heading: "Explore our graduates' final projects"
+  sub_heading: "See what you could be building after 18 weeks"
 
 who_is_hiring:
   position: 15
   limit: 4
-  heading: "Who is hiring our students?"
-  sub_heading: "500+ hiring partners, and 50+ job openings right now for software development"
+  heading: "WHO IS HIRING OUR STUDENTS?"
+  sub_heading: "500+ hiring partners, and hundreds of job openings for full-stack developers"
 
 # Possible layouts: [two_column_left_image, two_column_right_image]
 components:
   - name: new_design_with_bullets
     position: 1
     layout: two_column_left
+    proportions: [5, 7]
     swipable: False
     background: "#FFFFFF"
     image:
@@ -153,12 +154,13 @@ components:
       src: "/images/woman-afro-with-laptop.webp"
       shadow: true
     section_heading:
-      text: "Become a Successful Developer with our Full Stack Coding Bootcamp"
+      text: "Launch your Tech Career with our Full Stack Developer Bootcamp"
       style: '{ "font-size": "30px"}'
     heading:
-      text: "From Our Full Stack Coding Bootcamp to a Professional Career in Tech - We’ve Got Your Back!"
+      text: "From our Full Stack Developer Bootcamp to Landing a Job in Tech - We’ve Got Your Back!"
+      font_size: ["30px","30px","30px","25px", "20px"]
     sub_heading:
-      text: "Are you excited about switching to a tech career but worried about landing your first job? Traditional ways of learning can be costly, lengthy, and often lack the hands-on training and industry knowledge to guarantee your real-world success. Don't worry, at 4Geeks Academy we know exactly how to get you career-ready and hired!"
+      text: "Are you excited about switching to a tech career but worried about landing your first job? Traditional ways of learning can be costly, lengthy, and often lack the hands-on training and industry knowledge to guarantee real-world success. Don't worry, at 4Geeks Academy we know exactly how to get you career-ready and hired!"
     button:
       text: "Send me more information"
       color: white
@@ -171,7 +173,7 @@ components:
       path: ""
     bullets:
       items:
-        - heading: "CAREER RELEVANT SYLLABUS"
+        - heading: "CAREER- RELEVANT SYLLABUS"
           icon: "check" #string with icon for example ['check', 'cicle', etc]
         - heading: "PERSONALIZED CAREER SUPPORT"
           icon: "check" #string with icon for example ['check', 'cicle', etc]
@@ -180,27 +182,27 @@ components:
 
   - name: how-it-works
     position: 3
-    background: "#E3F9FE !important"
+    background: "#E3F9FE"
     layout: iconogram
     swipable: True
     heading:
-      text: "The 3 steps from full stack coding bootcamp to the job of your dreams"
+      text: "From Full Stack Developer Bootcamp to Your Dream Job"
       font_size: ["30px", "30px", "30px", "30px", "30px"]
     sub_heading:
-      text: 'According to the U.S. Bureau of Labor Statistics, software developers in the U.S. have a higher-than-average job outlook and earn a median salary of $110,140 a year. Here’s how to join the ranks of successful programmers!'
+      text: 'According to the U.S. Bureau of Labor Statistics, software developers in the U.S. have a higher-than-average job outlook and earn a median salary of <strong>$110,140 a year</strong>. Here’s how you can join the ranks of successful programmers!'
       font_size: ["16px", "16px", "16px", "16px", "16px"]
       style: '{ "textAlign": "center", "width": "60%" }'
     text_link: "/"
     icons:
       - icon: "graduation-2"
         title: "Join 4Geeks Academy"
-        content: "Develop your full techie potential! Learn industry-relevant skills from true coding experts, connect with a vibrant community, and get a support network like no other."
+        content: "Become a professional developer! Learn industry-relevant skills from seasoned coding experts, connect with a vibrant community, and access a support network like no other. No previous experience required."
       - icon: "laptop_new"
-        title: "Dive in & Code"
-        content: "Experience interactive, hands-on learning with live online classes and access to recorded materials to deepen your understanding. Tackle challenging projects using the most important tools and frameworks in the tech industry."
+        title: "Learn to Code"
+        content: "Immerse yourself in interactive, hands-on learning through live online classes. Take on challenging projects using cutting-edge tools and frameworks. Create a final project to showcase your newfound skills."
       - icon: "stairswflag"
-        title: "Job placement"
-        content: "Thanks to our program you’ll be equipped with the most sought-after skills in the job market and a portfolio to show it. We’ll help you prepare your professional profile, portfolio and CV like a pro, connect you with top companies, and help you land your dream job. You’ll have all you need to launch a fulfilling coding career!"
+        title: "Land Your Dream Job"
+        content: "Receive expert guidance in crafting your professional profile, portfolio, and CV. We'll connect you with top companies and assist you in securing your dream job. With our comprehensive program, you'll have all the tools you need to launch a successful coding career!"
 
   - name: geekinfo_2
     position: 4
@@ -208,9 +210,9 @@ components:
     proportions: [6, 6]
     background: ""
     image:
-      style: '{ "backgroundSize": "cover" }'
-      src: "/images/landing/two-womans-and-laptop.webp"
-      shadow: true
+      style: '{ "backgroundSize": "contain" }'
+      src: "/images/landing/Group-6626.webp"
+      shadow: false
     section_heading:
       text: ""
       style: '{ "font-size": "30px" }'
@@ -218,7 +220,7 @@ components:
       text: "Why 4Geeks?"
       font_size: ["40px", "40px", "40px", "40px", "40px"]
     sub_heading:
-      text: "The Unique Advantages of Our Academy"
+      text: "The Unique Advantages of our Academy"
       font_size: ["16px", "16px", "16px", "16px", "16px"]
     button:
       text: "Compare 4Geeks Vs others"
@@ -235,7 +237,7 @@ components:
         - heading: "FOCUS ON CAREER-RELEVANT SKILLS"
           text: "Master the most in-demand skills of the tech industry. Gain real-world practical knowledge and confidence with our hands-on methodology."
           icon: "check" #string with icon for example ['check', 'cicle', etc]
-        - heading: "UNLIMITED 1:1 MENTORSHIP"
+        - heading: "UNLIMITED 1:1 MENTORING"
           text: "Get expert assistance whenever you need it. Our mentors will always be available to support you, even after graduation."
           icon: "check" #string with icon for example ['check', 'cicle', etc]
         - heading: "COMPREHENSIVE CAREER SUPPORT"
@@ -257,27 +259,25 @@ components:
       link: "https://www.switchup.org/bootcamps/4geeks-academy"
     video: "EcqasocRKHo"
     heading:
-      text: "Dive into our game-changing coding bootcamp"
+      text: "Dive into our Game-changing  Full- Stack Developer Bootcamp"
       font_size: ["40px", "40px", "40px", "40px", "40px"]
     content:
       text: ""
       font_size: ["16px"]
     button:
-      text: "GET MORE INFO"
+      text: "GET MORE INFO NOW"
       background: black
       color: white
       hover_color: "#white"
       path: "#leadform_bottom"
     bullets:
       items:
-        - heading: "OVERCOME FINANCIAL BARRIERS"
+        - heading: "UNMATCHED FINANCING OPPORTUNITIES"
           text: "With a $20 million scholarship fund, 4Geeks is set on making high quality tech education accessible. We’ll help you find a solution that suits your needs!"
           icon: "check"
-        - heading: "FITS YOUR LIFE"
-          text: "Our part-time programs are designed to  fit busy schedules, letting you pursue your tech goals without compromising your life"
+        - heading: "EFFICIENT LEARNING FORMATS"
+          text: "Our part-time programs are designed to fit busy schedules, letting you pursue your tech goals without putting your life on hold."
           icon: "check"
-        - heading: "HANDS-ON, INDUSTRY-RELEVANT SYLLABUS"
+        - heading: "HANDS-ON METHODOLOGY"
           text: "Become a confident full-stack developer with our hands-on curriculum. Acquire the mindset and master the skills that will set you apart in the job market."
           icon: "check"
-
-

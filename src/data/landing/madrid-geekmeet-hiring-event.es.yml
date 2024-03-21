@@ -18,6 +18,11 @@ meta_info:
   automation: hiring-partner # comma separated, "soft" is the default value
   tag: hiring_partner # comma separated, "request_more_info" is the default value
 
+navbar:
+  logoUrl: "#" # relative(/apply), absolute(https://google.com) or id(#componentName)
+  buttonText: "Solicitar plaza"
+  buttonUrl: "#leadform_bottom" # url accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
+
 form:
   # posible fields: "first_name", "last_name", "full_name", "phone", "email"
   # always the first_name, email and phone will be mandatory if added.
@@ -83,7 +88,7 @@ follow_bar:
     text: "¡Quiero asistir!"
     path: "#leadform_header"
   phone:
-    text: "Llámanos "
+    text: "Llámanos"
 
 #
 # ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇
@@ -139,6 +144,7 @@ components:
     layout: two_column_right
     background: "lightBlue" # Name of the color(from components/Styling/index.js) or color code ex: #C9F9F9
     image:
+      style: '{"min-height": "200px","max-height": "250px", "align-self": "center", "margin": "0"}'
       src: "/images/why-4geeks/python-image.png"
     heading:
       text:
@@ -146,11 +152,10 @@ components:
         #           xl      lg      md      sm      xs
       font_size: ["50px", "50px", "50px", "50px", "50px"]
     content:
-      text: "4Geeks Academy centra su formación en dos programas principales: Full-Stack (Javascript, React y Python como tecnologías principales) y Data Science & Machine Learning. 
-      
-      En ambos programas nos centramos en Python. Como lenguaje de programación más utilizado en el mundo, ¡nuestros estudiantes deben dominarlo! 
-      
-      Nuestra metodología se basa en dos pilares que permiten que nuestros estudiantes puedan enfrentarse a tecnologías totalmente nuevas para ellos, de forma autodidacta, a través de la práctica y, además, cuentan con mentorías ilimitadas y de por vida. "
+      text: |
+        4Geeks Academy centra su formación en dos programas principales: Full-Stack (Javascript, React y Python como tecnologías principales) y Data Science & Machine Learning.        
+        En ambos programas nos centramos en Python. Como lenguaje de programación más utilizado en el mundo, ¡nuestros estudiantes deben dominarlo! 
+        Nuestra metodología se basa en dos pilares que permiten que nuestros estudiantes puedan enfrentarse a tecnologías totalmente nuevas para ellos, de forma autodidacta, a través de la práctica y, además, cuentan con mentorías ilimitadas y de por vida.
       font_size: ["16px"]  
 
   - name: inmediatez
@@ -176,20 +181,20 @@ components:
       background: "black"
       hover: "lightBlue"
 
-  - name: top_coding_bootcamp
-    position: 11
-    background: "#F1f1f1"
-    layout: two_column_left
-    proportions: [4, 8]
-    image:
-      style: '{ "backgroundSize": "contain" }'
-      src: "/images/badges/Course-Report-Badge-2024.webp"
-      link: "https://www.coursereport.com/schools/4geeks-academy"
-    heading:
-      text:
-        "Hemos sido seleccionados entre los mejores Coding Bootcamps del mundo por 3 años consecutivos"
-        #xl      lg     md     sm    xs
-      font_size: ["36px", "34px", "32px", "30px", "30px"]
+  # - name: top_coding_bootcamp
+  #   position: 11
+  #   background: "#F1f1f1"
+  #   layout: two_column_left
+  #   proportions: [4, 8]
+  #   image:
+  #     style: '{ "backgroundSize": "contain" }'
+  #     src: "/images/badges/Course-Report-Badge-2024.webp"
+  #     link: "https://www.coursereport.com/schools/4geeks-academy"
+  #   heading:
+  #     text:
+  #       "Hemos sido seleccionados entre los mejores Coding Bootcamps del mundo por 3 años consecutivos"
+  #       #xl      lg     md     sm    xs
+  #     font_size: ["36px", "34px", "32px", "30px", "30px"]
 
   - name: seguridad_europa
     position: 9
@@ -197,7 +202,7 @@ components:
     layout: two_column_right
     proportions: [8, 4]
     image:
-      style: '{ "backgroundSize": "contain" }'
+      style: '{"min-height": "200px","max-height": "200px", "align-self": "left", "margin": "0"}'
       src: "/images/badges/european_excellence_education_black.png"
       link:
     heading:

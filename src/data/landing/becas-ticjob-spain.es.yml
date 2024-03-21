@@ -1,14 +1,14 @@
 meta_info:
   slug: becas-ticjob-espana # <--- URL 4geeksacademy.com/us/landing/example
 
-  visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
+  visibility: "hidden" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   # This will show on social media when shared
-  title: "500.000€ en becas ¡Aplica ahora!"
+  title: "500.000€ en becas ¡Solicita tu plaza!"
   description: "Aprende Data Science y Machine Learning, en 4Geeks Academy España a un precio imbatible. Becas superiores al 40%. ¡Lanza tu carrera!"
   image: "/images/bg/remote.jpeg"
   keywords: "Data Science, Analista de Datos, 4Geeks academy, aprende programación, aprende ingeniería informática, aprende Inteligencia Artificial, aprende Data Science, aprende Machine Learning, ticjob"
 
-  template: "landing_nonav" # <--- choose your landing template
+  template: "landing_a" # <--- choose your landing template
   redirects: ["/landing/becas-ticjob-españa"] # <--- URL redirections to avoid 404 errors
 
   # Set a particular course or location to the landing page
@@ -20,21 +20,27 @@ meta_info:
 
 navbar:
   logoUrl: "#" # relative(/apply), absolute(https://google.com) or id(#componentName)
-  buttonText: "Aplica ahora"
+  buttonText: "Solicitar plaza"
   buttonUrl: "#leadform_bottom" # url accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
 
 form:
   # posible fields: "first_name", "last_name", "full_name", "phone", "email"
   # always the first_name, email and phone will be mandatory if added.
   fields: ["full_name", "phone", "email"]
+  motivation: "Después de enviar el formulario, recibirás un correo electrónico de un asesor con información sobre el bootcamp de programación, las becas, el campus, la comunidad, Planes de financiamiento, Plan de estudios y todo el apoyo necesario."
   heading: "Solicita tu beca"
-  button_label: Aplica ahora
+  button_label: Solicita Tu beca
   redirect: "/es/gracias" #you can redirect to another url or entirely diffrent website
+
+apply_schollarship: # form that is displayed at the end of the landing
+  # title: "Apoyo Profesional Ilimitado"
+  imageSide: "left"
+  image: "../../../static/images/landing/apply.png"
 
 # jumbotron on the top (cannot be commented out)
 header_data:
   tagline: "+500.000€ en Becas"
-  sub_heading: ""
+  sub_heading: "TicJob ofrece más de 500.000€ en Becas para que te conviertas en Data Scientist en 4Geeks Academy. No te quedes atrás, Aprende Data Science y Machine Learning, el perfil más demandado por las empresas. Impulsarás tu carrera en el Mejor Coding Bootcamp de España según los Premios Excelencia Educativa. Se te descontarán 3.900 €. ¿Listo para unirte y reinventar tu futuro?"
   partner_logo_url: "../../../static/images/partner/logo-ticjob-blanco.png"
   background_image: "../../../static/images/bg/community.png"
   image_filter: brightness(0.2)
@@ -46,7 +52,7 @@ features:
 
   #                                         up   left down  right
   styles: '{ "fontSize": "16.5px", "line-height": "2", "margin": "10px 0px 10px 0px", "letter-spacing": ".5px" }'
-  text: TicJob ofrece más de 500.000€ en Becas para que te conviertas en Data Scientist en 4Geeks Academy. No te quedes atrás, Aprende Data Science y Machine Learning, el perfil más demandado por las empresas. Impulsarás tu carrera en el Mejor Coding Bootcamp de España según los Premios Excelencia Educativa. Se te descontarán 3.900 €. ¿Listo para unirte y reinventar tu futuro?
+  text: 
   bullets:
     - +125 becas, todas del 50% (Válido únicamente para 4Geeks España)  
     - Programa Data Science y Machine Learning
@@ -55,12 +61,12 @@ features:
 follow_bar:
   position: "top" # top, bottom, hidden
   content:
-    text: "Solicita tu beca TicJob ahora. \n Planes de pago de hasta 48 meses."
-    text_mobile: "Becas TicJob. \n Plan de pago de hasta 48 m."
+    text: "Solicita tu beca TicJob ahora \n Planes de pago de hasta 48 meses."
+    text_mobile: "Becas TicJob \n Plan de pago de hasta 48 m."
     # devices:    XL      LG      MD      SM      XS
     font_size: ["24px", "24px", "24px", "18px", "4.3vw"]
   button:
-    text: "Aplica ya"
+    text: "Solicita Tu plaza"
     path: "#leadform_header" #top, #bottom, #anotherComponentId
     # ├──if path is empty("") it point to top per default ("#" -> points to top)
     # └── path accepts: relative(/example/path), absolute(https://google.com) or id(#idName)
@@ -103,10 +109,11 @@ about4Geeks:
     - title: " GeekForce: Apoyo profesional para siempre."
     - title: "Acceso 24/7 a nuestra plataforma de aprendizaje y comunidad de +3000 Developers."
   paragraph: ""
-  button_text: "Aplica ahora"
+  button_text: "¡Reserva tu plaza ahora!"
   button_link: "#leadform_header" # accepts url: relative(/us/apply), absolute(https://google.com) or component id(#componentName)
   image: "../../../static/images/bg/remote.jpeg"
   image_mobile: "../../../static/images/bg/remote.jpeg"
+  shadow: true
 
 who_is_hiring:
   position: 10
@@ -134,7 +141,7 @@ components:
     layout: iconogram
     swipable: True
     heading:
-      text: ""
+      text: "¿Cómo solicitar tu plaza?"
       font_size: ["30px", "30px", "30px", "30px", "30px"]
     sub_heading:
       text: ""
@@ -143,13 +150,13 @@ components:
     text_link: "#leadform_header"
     icons:
     - icon: "touch"
-      title: Completa el formulario
+      title: 1. Completa el formulario
     - icon: "receive_mail"
-      title: Recibirás un correo electrónico con toda la información para avanzar en el proceso
+      title: 2. Recibirás un correo electrónico con toda la información para avanzar en el proceso
     - icon: "talk"
-      title: Haz una entrevista personal vía telefónica con el equipo de admisiones
-    - icon: "terminal"
-      title: Reserva tu plaza y ¡acelera tu carrera!
+      title: 3. Haz una entrevista personal vía telefónica con el equipo de admisiones
+    - icon: "stairswflag"
+      title: 4. Reserva tu plaza y ¡acelera tu carrera!
 
   # - name: python_y_javascript
   #   position: 8
@@ -181,7 +188,4 @@ why_4geeks:
     text: Ver opciones de financiación
     text_link: ""
 
-apply_schollarship: # form that is displayed at the end of the landing
-  # title: "Apoyo Profesional Ilimitado"
-  imageSide: "right"
-  image: "../../../static/images/landing/apply.png"
+
