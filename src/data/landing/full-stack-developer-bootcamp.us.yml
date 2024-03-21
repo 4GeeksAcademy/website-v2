@@ -26,8 +26,8 @@ form:
   # posible fields: "first_name", "last_name", "full_name", "phone", "email"
   # always the first_name, email and phone will be mandatory if added.
   fields: ["full_name", "phone", "email"]
-  heading: "Get more information, and change your life!"
-  motivation: "Upon applying, expect a personalized advisor email, comprehensive program details, financial insights, syllabus, and mentorship information."
+  heading: "Get more information"
+  motivation: "Submit the form below and one of our advisors will promptly email you with everything you need to know about our bootcamp."
   button_label: Request More Information
   redirect: null #you can redirect to another url or entirely diffrent website
 
@@ -39,7 +39,7 @@ apply_schollarship: # form that is displayed at the end of the landing
 # jumbotron on the top (cannot be commented out)
 header_data:
   tagline: Full Stack Developer Bootcamp
-  sub_heading: "Become a Full-Stack Developer with 4Geeks Academy's 18-week bootcamp"
+  sub_heading: "Become a Full Stack Developer in 18 weeks with unlimited mentorships and career support"
   background: "#FFF1D1"
   badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
   image_filter: brightness(0.3)
@@ -51,9 +51,9 @@ features:
   styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
   bullets:
     - No previous experience or coding skills required.
-    - Choose from options that fit your schedule — part-time, online, or hybrid programs
-    - Flexible payment plans starting at $150 a month, with the option to pay after landing a job
-    - Get lifetime access to our mentors and Career Growth Support (Your first Job in Tech is our goal)
+    - Choose the schedule and format that suits you best — part-time, online, in-person, or hybrid.
+    - Flexible payment plans starting at $150 a month, with the option to start paying after landing a job.
+    - Get lifelong access to our mentors and career support.
 
 follow_bar:
   position: "top" # top, bottom, hidden
@@ -97,15 +97,15 @@ short_badges:
 program_details:
   position: 2
   heading: "Master Python, JS and React"
-  sub_heading: "The 3 most used languages in the world"
+  sub_heading: "The most in-demand programming languages worldwide"
 
 badges:
   position: 5
-  heading: "4Geeks Academy has awards and recognitions that validate it's excellence"
+  heading: "Awards and recognitions that validate our excellence"
 
 geeks_vs_others:
   position: 7
-  heading: "What makes this Full Stack Developer Bootcamp so successful?"
+  heading: "What sets our coding bootcamp apart?"
   paragraph: ""
   total_rows: 5
 
@@ -132,20 +132,21 @@ rating_reviews:
 
 alumni_projects:
   position: 14
-  heading: "Projects you will be able to make"
-  sub_heading: "Take a look at our previous student projects"
+  heading: "Explore our graduates' final projects"
+  sub_heading: "See what you could be building after 18 weeks"
 
 who_is_hiring:
   position: 15
   limit: 4
-  heading: "Who is hiring our students?"
-  sub_heading: "500+ hiring partners, and 50+ job openings right now for software development"
+  heading: "WHO IS HIRING OUR STUDENTS?"
+  sub_heading: "500+ hiring partners, and hundreds of job openings for full-stack developers"
 
 # Possible layouts: [two_column_left_image, two_column_right_image]
 components:
   - name: new_design_with_bullets
     position: 1
     layout: two_column_left
+    proportions: [5, 7]
     swipable: False
     background: "#FFFFFF"
     image:
@@ -153,14 +154,15 @@ components:
       src: "/images/woman-afro-with-laptop.webp"
       shadow: true
     section_heading:
-      text: "Launch Your Tech Career with 4Geeks Academy Full-Stack Developer Bootcamp"
+      text: "Launch your Tech Career with our Full Stack Developer Bootcamp"
       style: '{ "font-size": "30px"}'
     heading:
-      text: "Become a full-stack developer in just 18 weeks"
+      text: "From our Full Stack Developer Bootcamp to Landing a Job in Tech - We’ve Got Your Back!"
+      font_size: ["30px","30px","30px","25px", "20px"]
     sub_heading:
-      text: "Are you excited about technology but concerned about finding your first job? Traditional ways of learning can be costly and lengthy, leaving you lacking the hands-on experience and valuable connections necessary for success. Don't worry, that's where 4Geeks Academy's Full-Stack Developer Bootcamp with guaranteed job placement comes into play!"
+      text: "Are you excited about switching to a tech career but worried about landing your first job? Traditional ways of learning can be costly, lengthy, and often lack the hands-on training and industry knowledge to guarantee real-world success. Don't worry, at 4Geeks Academy we know exactly how to get you career-ready and hired!"
     button:
-      text: "Request more Information"
+      text: "Send me more information"
       color: white
       hover_color: "white"
       background: "black"
@@ -171,36 +173,36 @@ components:
       path: ""
     bullets:
       items:
-        - heading: "Unlimited Professional Support"
+        - heading: "CAREER- RELEVANT SYLLABUS"
           icon: "check" #string with icon for example ['check', 'cicle', etc]
-        - heading: "Interview Simulation"
+        - heading: "PERSONALIZED CAREER SUPPORT"
           icon: "check" #string with icon for example ['check', 'cicle', etc]
-        - heading: "Lifetime Mentoring"
+        - heading: "LIFELONG ACCESS TO MENTORSHIPS"
           icon: "check" #string with icon for example ['check', 'cicle', etc]
 
   - name: how-it-works
     position: 3
-    background: "#E3F9FE !important"
+    background: "#E3F9FE"
     layout: iconogram
     swipable: True
     heading:
-      text: "3 steps of our Fullstack Developer Bootcamp"
+      text: "From Full Stack Developer Bootcamp to Your Dream Job"
       font_size: ["30px", "30px", "30px", "30px", "30px"]
     sub_heading:
-      text: 'According to the U.S. Bureau of Labor Statistics, <strong style="font-weight: bold;">software developers in the U.S. have a higher than average job outlook and earn a median salary of $110,140 a year</strong>. Improve your chances to be one of them.'
+      text: 'According to the U.S. Bureau of Labor Statistics, software developers in the U.S. have a higher-than-average job outlook and earn a median salary of <strong>$110,140 a year</strong>. Here’s how you can join the ranks of successful programmers!'
       font_size: ["16px", "16px", "16px", "16px", "16px"]
       style: '{ "textAlign": "center", "width": "60%" }'
     text_link: "/"
     icons:
       - icon: "graduation-2"
-        title: "Join to 4Geeks Academy"
-        content: "Unleash your potential in tech. Learn from industry experts, connect with a growing community, network with leaders, and showcase your skills."
+        title: "Join 4Geeks Academy"
+        content: "Become a professional developer! Learn industry-relevant skills from seasoned coding experts, connect with a vibrant community, and access a support network like no other. No previous experience required."
       - icon: "laptop_new"
-        title: "Immerse & Code"
-        content: "Dive into interactive learning with live online classes and access to recorded materials for deeper understanding. Tackle challenging hands-on projects using in-demand tools and frameworks."
+        title: "Learn to Code"
+        content: "Immerse yourself in interactive, hands-on learning through live online classes. Take on challenging projects using cutting-edge tools and frameworks. Create a final project to showcase your newfound skills."
       - icon: "stairswflag"
-        title: "Job placement"
-        content: "Our program guarantees to equip you with the most in-demand skills, connect you with top companies, and help you secure your dream job (we mean it!)."
+        title: "Land Your Dream Job"
+        content: "Receive expert guidance in crafting your professional profile, portfolio, and CV. We'll connect you with top companies and assist you in securing your dream job. With our comprehensive program, you'll have all the tools you need to launch a successful coding career!"
 
   - name: geekinfo_2
     position: 4
@@ -218,7 +220,7 @@ components:
       text: "Why 4Geeks?"
       font_size: ["40px", "40px", "40px", "40px", "40px"]
     sub_heading:
-      text: "The Unique Benefits of Choosing 4Geeks Academy"
+      text: "The Unique Advantages of our Academy"
       font_size: ["16px", "16px", "16px", "16px", "16px"]
     button:
       text: "Compare 4Geeks Vs others"
@@ -232,17 +234,17 @@ components:
       path: ""
     bullets:
       items:
-        - heading: "Real-world focus"
-          text: "Build a portfolio of practical projects that showcase your abilities to potential employers"
+        - heading: "FOCUS ON CAREER-RELEVANT SKILLS"
+          text: "Master the most in-demand skills of the tech industry. Gain real-world practical knowledge and confidence with our hands-on methodology."
           icon: "check" #string with icon for example ['check', 'cicle', etc]
-        - heading: "Supportive community"
-          text: "Connect with fellow learners and instructors in a collaborative and encouraging environment"
+        - heading: "UNLIMITED 1:1 MENTORING"
+          text: "Get expert assistance whenever you need it. Our mentors will always be available to support you, even after graduation."
           icon: "check" #string with icon for example ['check', 'cicle', etc]
-        - heading: "career support"
-          text: "Benefit from career coaching, resume writing workshops, and industry connections to help you land your dream job"
+        - heading: "COMPREHENSIVE CAREER SUPPORT"
+          text: "Receive personalized guidance for preparing your profile, resume, and portfolio. Benefit from tailored practice interviews and job search tips, accessible for a lifetime."
           icon: "check" #string with icon for example ['check', 'cicle', etc]
-        - heading: "Financial aid options"
-          text: "Explore flexible payment plans and scholarship opportunities"
+        - heading: "AFFORDABILITY AND FINANCIAL SUPPORT"
+          text: "Access high-quality education at the most affordable price, complemented by flexible payment plans, scholarship opportunities, ISAs, and more."
           icon: "check" #string with icon for example ['check', 'cicle', etc]
 
   - name: passion
@@ -257,25 +259,25 @@ components:
       link: "https://www.switchup.org/bootcamps/4geeks-academy"
     video: "EcqasocRKHo"
     heading:
-      text: "Immerse Yourself in 4Geeks Academy Fullstack Developer Bootcamp"
+      text: "Dive into our Game-changing  Full- Stack Developer Bootcamp"
       font_size: ["40px", "40px", "40px", "40px", "40px"]
     content:
       text: ""
       font_size: ["16px"]
     button:
-      text: "GET MORE INFO"
+      text: "GET MORE INFO NOW"
       background: black
       color: white
       hover_color: "#white"
       path: "#leadform_bottom"
     bullets:
       items:
-        - heading: "Scholarships Breaking Barriers"
-          text: "We believe in accessible tech education. With a $20 million scholarship initiative, 4Geeks removes financial barriers, making tech education available to everyone."
+        - heading: "UNMATCHED FINANCING OPPORTUNITIES"
+          text: "With a $20 million scholarship fund, 4Geeks is set on making high quality tech education accessible. We’ll help you find a solution that suits your needs!"
           icon: "check"
-        - heading: "Career Support for Life"
-          text: "We're with you beyond graduation. Get continuous job placement assistance, refine your soft skills, and receive support throughout your entire tech career."
+        - heading: "EFFICIENT LEARNING FORMATS"
+          text: "Our part-time programs are designed to fit busy schedules, letting you pursue your tech goals without putting your life on hold."
           icon: "check"
-        - heading: "Dive Deep, Code Strong"
-          text: "Immerse yourself in coding with our hands-on curriculum. Learn not just to code but to excel, mastering the most relevant industry skills that set you apart."
+        - heading: "HANDS-ON METHODOLOGY"
+          text: "Become a confident full-stack developer with our hands-on curriculum. Acquire the mindset and master the skills that will set you apart in the job market."
           icon: "check"
