@@ -150,7 +150,7 @@ export default ({
             gap="0px 20px"
             gap_tablet="0px 20px"
           >
-            {locationFiltered.map((element, index) => {
+            {locationFiltered.slice(0, 3).map((element, index) => {
               return (
                 <Div
                   display="flex"

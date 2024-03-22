@@ -256,5 +256,5 @@ components:
 #    description: |
 #      De cero a tener tu primer trabajo como Data Scientist, con una duración de 16 semanas, con clases en vivo 3 veces por semana, compatible con horario laboral o de estudios. 
 #    text_link: Obtener más información
-#    link: "#top" # moves to start position
+#    link: "#leadform_header" # moves to start position
   

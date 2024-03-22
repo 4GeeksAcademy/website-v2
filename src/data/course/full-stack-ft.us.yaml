@@ -98,7 +98,7 @@ two_columns:
     text: "Apply now"
     color: "white"
     background: "black"
-    path: "#"
+    path: "#prices_and_payment"
   bullets:
     items: 
     - text: "There is always a full or partial scholarship open"
