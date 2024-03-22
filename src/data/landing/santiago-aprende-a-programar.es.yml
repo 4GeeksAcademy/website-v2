@@ -22,7 +22,7 @@ navbar:
   logoUrl: "#"
   buttonText: "Postula"
   # url accepts: relative(/apply), absolute(https://google.com) or id(#componentName)
-  buttonUrl: "#bottom" # [#top, #bottom or another #componentId]
+  buttonUrl: "#leadform_bottom" # [#top, #bottom or another #componentId]
 
 form:
   # posible fields: "first_name", "last_name", "full_name", "phone", "email"
@@ -66,7 +66,7 @@ follow_bar:
     font_size: ["25px", "25px", "25px", "18px", "4.3vw"]
   button:
     text: "Más Información"
-    path: "#top"
+    path: "#leadform_header"
   phone:
     text: "Llama "
 

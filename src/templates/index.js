@@ -242,7 +242,7 @@ const Home = (props) => {
                 width="100%"
                 className="wrapper-container"
                 position="relative"
-                padding_tablet="50px 10px 0 20px"
+                padding_tablet="50px 0 0 0"
                 padding="0"
               >
                 <Circle
@@ -285,7 +285,8 @@ const Home = (props) => {
                   height="427px"
                   height_tablet="469px"
                   margin_tablet="0"
-                  margin="auto"
+                  margin_lg="0 auto"
+                  margin_md="0 auto"
                   zIndex="2"
                 >
                   <iframe
