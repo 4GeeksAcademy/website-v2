@@ -7,68 +7,16 @@ header:
   paragraph: ""
 
 with:
-  # - name: "Hernan García"
-  #   title: "Recibí ofertas de empresas que nunca me lo esperé"
-  #   open_in_modal: true
-  #   description: "Hernán tardó un mes en conseguir un trabajo en tecnología una vez que comenzó a aplicar."
-  #   image: ../../../../static/images/staff/hernan.png
-  #   alt: ""
-  #   video: "https://www.youtube.com/watch?v=ln3bQsV1BaQ" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
-  #   video_height: 173px
-  #   location: ["all", "downtown-miami"]
-  #   # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
-  #   icon: address
-  #   footer:
-  #     is_image: true
-  #     image: "/images/geekforce-logo-new.png"
-  #     image_link: "/es/geekforce"
-  #     text: ""
-  #     text_link: ""
-  # - name: "Luisa Glum"
-  #   title: "La Academia estaba tan comprometida como yo"
-  #   open_in_modal: true
-  #   description: "Luisa pagó el programa después de que se graduó y encontró trabajo, ella aplicó al ISA (Income Share Agreement)"
-  #   image: ../../../../static/images/staff/luisa.png
-  #   alt: ""
-  #   video: "https://www.youtube.com/watch?v=PWkgaAT8pHg" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
-  #   video_height: 173px
-  #   location: ["all"]
-  #   # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
-  #   icon: address
-  #   footer:
-  #     is_image: false
-  #     image: ""
-  #     image_link: ""
-  #     text: "Ver opciones de financiación"
-  #     text_link: "/es/financiacion"
-  # - name: "Joao Henrique"
-  #   title: "Siempre tendrás apoyo por parte de la Academia"
-  #   open_in_modal: true
-  #   description: "Joao cuenta su experiencia obteniendo mentores de codificación mientras estudiaba, después de graduarse e incluso en sus trabajos."
-  #   image: ../../../../static/images/staff/joao.png
-  #   alt: ""
-  #   video: "https://www.youtube.com/watch?v=MBXqEnhodx0" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
-  #   video_height: 173px
-  #   location: ["all", "downtown-miami"]
-  #   # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
-  #   icon: address
-  #   footer:
-  #     is_image: true
-  #     image: "/images/geekpal-logo-new.png"
-  #     image_link: "/es/geekpal"
-  #     text: ""
-  #     text_link: ""
-
 
   - name: "Mattia Tozzi"
-    title: "Vi en 4Geeks un trampolín para entrar en el mundo laboral"
+    title: "4Geeks ha empujado mi futuro laboral"
     open_in_modal: true
-    description: "Si alguna vez te has preguntado si es posible cambiar de carrera, déjame decirte que sí, ¡es posible! Pero es importante tener pasión y perseverancia. El camino puede ser desafiante, pero con determinación y dedicación, puedes alcanzar tus metas profesionales."
+    description: "Las tutorías ilimitadas de 4Geeks fue clave para elegirlos, con la ayuda de sus profesores y la comunidad, pude resolver todas mis dudas rápidamente y avanzar en mi aprendizaje."
     image: ../../../../static/images/testimonials/Mattia-Tozzi-testimonial.jpg
     alt: ""
     video: "https://www.youtube.com/watch?v=B01-eTfgqqc&t" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     video_height: 173px
-    location: ["all", "madrid-spain"]
+    location: ["all"]
     # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     icon: address
     footer:
@@ -79,14 +27,14 @@ with:
       text_link: ""
 
   - name: "Ana Romero"
-    title: "Ana aprovechó al máximo su tiempo"
+    title: "He superado mi miedo a programar"
     open_in_modal: true
-    description: "La reputación y orientación de la academia han proporcionado una experiencia extremadamente positiva. Destaca especialmente la valiosa ayuda y mentoría brindada por los profesores, lo que ha sido fundamental para su aprendizaje."
+    description: "Están allí siempre para brindarte apoyo, sus buenos mentores, guías de programación y la herramienta desarrollada por 4Geeks Breathcode son excelentes  y recomendaría la academia un millón de veces."
     image: ../../../../static/images/testimonials/ana-romero.jpg
     alt: ""
     video: "https://www.youtube.com/watch?v=XqyM_QSVcOs&t" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     video_height: 173px
-    location: ["all", "caracas-venezuela.es"]
+    location: ["all"]
     # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     icon: address
     footer:
@@ -97,14 +45,14 @@ with:
       text_link: ""
 
   - name: "Joshua Bravo"
-    title: "De asistente de cocina a desarrollador Full Stack"
+    title: "De asistente de cocina a Desarrollador FullStack"
     open_in_modal: true
-    description: "Decidí abandonar la rutina y los interminables tutoriales para embarcarme en una nueva aventura profesional. Fue entonces cuando elegí 4Geeks Academy, no solo por su reputación, sino también por su equipo humano y su programa educativo."
+    description: "Gracias a la academia y sus planes de financiamiento ahora soy un Desarrollador Full Stack, su programa te deja preparado para el mundo laboral actual y la recomendaría todas las veces."
     image: ../../../../static/images/testimonials/joshua-bravo-testimonial.jpg
     alt: ""
     video: "https://www.youtube.com/watch?v=rtpfwwfE0yY&t" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     video_height: 173px
-    location: ["all", "santiago-chile"]
+    location: ["all"]
     icon: address
     footer:
       is_image: true
