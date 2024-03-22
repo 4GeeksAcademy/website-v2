@@ -69,6 +69,17 @@ export default ({ children }) => {
           }
         }
       }
+      allDataYaml {
+        edges {
+          node {
+            block_list_criteria {
+              academies
+              country_regex
+              phone_regex
+            }
+          }
+        }
+      }
     }
   `);
 
@@ -88,6 +99,7 @@ export default ({ children }) => {
     };
     const message = {
       locationsArray: data.allLocationYaml,
+      blockListArray: data.allDataYaml.edges,
       storedSession: getStorage("academy_session"),
       path: window.location.pathname,
       seed: {
@@ -119,6 +131,7 @@ export default ({ children }) => {
     console.log("Initializing worker with: ", message);
     worker.postMessage(message);
     worker.onmessage = (e) => {
+      console.log("this is e:", e);
       const _session = e.data;
       setStorage(_session);
       setSession(_session);
@@ -140,7 +153,8 @@ export default ({ children }) => {
               l.breathecode_location_slug ===
               _s.location.breathecode_location_slug
           );
-          const _session = { ..._s, location };
+          const blockList = data.allDataYaml.edges;
+          const _session = { ..._s, location, blockList };
           setStorage(_session);
           setSession(_session);
           dayjs.locale(_session.language == "us" ? "en" : _session.language);

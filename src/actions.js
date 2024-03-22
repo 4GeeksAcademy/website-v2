@@ -22,6 +22,7 @@ export const defaultSession = {
   email: null,
   location: null,
   language: "en",
+  blockList: [],
   utm: {
     gclid: undefined,
     utm_campaign: undefined,

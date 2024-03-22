@@ -184,6 +184,7 @@ const Apply = (props) => {
         });
       });
   };
+  console.log(session);
   return (
     <>
       <Header
