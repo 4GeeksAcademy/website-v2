@@ -4,7 +4,7 @@ meta_info:
   # This will show on social media when shared
   title: "United Way España"
   description: "United Way España"
-  visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
+  visibility: "hidden" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   # This will show on social media when shared
   image: "public/images/landing/uwm_pantone_2021_2.png"
   keywords: "Clases de programacion, aprender a programar, Madrid, 4Geeks Academy"
@@ -20,6 +20,11 @@ meta_info:
   automation: strong # comma separated, "soft" is the default value
   tag: website-lead # comma separated, "request_more_info" is the default value
 
+navbar:
+  logoUrl: "#" # relative(/apply), absolute(https://google.com) or id(#componentName)
+  buttonText: "Solicitar plaza"
+  buttonUrl: "#leadform_bottom" # url accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
+
 form:
   # posible fields: "first_name", "last_name", "full_name", "phone", "email"
   # always the first_name, email and phone will be mandatory if added.
@@ -34,17 +39,13 @@ apply_schollarship: # form that is displayed at the end of the landing
   imageSide: "left"
   image: "../../../static/images/landing/apply.png"  
   
-navbar:
-  buttonText: "Aplica ahora"
-  buttonUrl: "#leadform_header" # url accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
-  logoUrl: "#"
 
 header_data:
   background: "#FFF1D1"
   tagline: "Impulsa tu carrera gracias a la programación"
   tagline_color: "black"
   sub_heading: ""
-  badge: "../../../static/images/badges/exelencia-educativa-es.png"
+  badge: "../../../static/images/badges/Course-Report-Badge-2024.png"
   image_filter: brightness(0.3)
   right_image: "../../../static/images/landing/header_united_way.png"
   # right_image: 
@@ -79,26 +80,67 @@ short_badges:
     alt: "Florida Department of Education"
 
 follow_bar:
-  position: "top" # top, bottom, hidden
   content:
-    text: "Paga solo cuando consigas trabajo."
-    text_mobile: "Paga solo cuando consigas trabajo."
+    text: "Solicita tu plaza hoy \npaga solo cuando consigas trabajo"
+    text_mobile: "Solicita tu plaza hoy \npaga solo cuando consigas trabajo."
     # devices:   XL      LG    MD      SM    XS
     font_size: ["25px", "25px", "25px", "20px", "18px"]
+  position: "top" # top, bottom, hidden
   button:
-    text: "Aplica ahora"
+    text: "Solicita tu Plaza"
     path: "#leadform_header"
   phone:
-    text: "Call "
+    text: "¡Llama ya!"
 
 components:
+
+  - name: geeksinfo
+    position: 1
+    layout: two_column_right 
+    swipable: False
+    background: "#FFFFFF"
+    image:
+      src: "/images/landing/grupo-ventanas.png"
+      shadow: false
+    section_heading: 
+      text: "Diseñado para hacerte exitoso en el mundo de la programación"
+      style: '{ "font-size": "30px" }'
+    heading: 
+      text: ""
+    sub_heading:
+      text: ""
+    button: 
+      text: "Solicita tu Plaza"
+      color: white
+      hover_color: "white"
+      background: "black"
+      path: "#leadform_header"
+    content: 
+      text: ""
+      font_size: ["16px"]
+      path: ""
+    bullets:
+      items:
+      - heading: "Todas las mentorías que necesitas"
+        text: "En línea y en persona, por el resto de tu vida."
+        icon: "check" #string with icon for example ['check', 'cicle', etc]
+      - heading: "Tiempo de respuesta"
+        text: "No te quedes atascado con tu código, el tiempo de respuesta es menor a 30 minutos."
+        icon: "check" #string with icon for example ['check', 'cicle', etc]
+      - heading: "Proporción Profesor/estudiante 1:7"
+        text: "Encontrarás más profesores en 4Geeks que el promedio de la industria."
+        icon: "check" #string with icon for example ['check', 'cicle', etc]
+      - heading: "Soporte profesional a la medida"
+        text: "Nuestros estudiantes suelen conseguir empleo en un promedio de 6 meses una vez graduados."
+        icon: "check" #string with icon for example ['check', 'cicle', etc]
+
   - name: how-it-works
     position: 2
     background: "veryLightBlue2"
     layout: iconogram
     swipable: True
     heading:
-      text: "Cómo funciona"
+      text: "¿Cómo funciona?"
       font_size: ["30px", "30px", "30px", "30px", "30px"]
     sub_heading:
       text: 'La Fundación United Way y 4Geeks Academy España se unen con el objetivo de proporcionar formación digital a través de becas a personas con bajos recursos económicos, para que inicien su carrera profesional en el ámbito de la tecnología, mejorando la inclusión en un sector poco diverso.'
@@ -106,15 +148,15 @@ components:
       style: '{ "textAlign": "center", "width": "60%" }'
     text_link: "#"
     icons:
-    - icon: "graduation-2" 
-      title: REQUEST INFO
-      content: "Conviértete en Full-Stack Developer aplicando a esta iniciativa impulsada por United Way. ¡Acelera tu carrera!"
     - icon: "laptop_new"
-      title: RECEIVE AN E-MAIL WITH THE DETAILS
-      content: "Una vez aceptado en el Programa Full-Stack recibirás formación de calidad, mentorías y servicio de carreras para que impulses tu futuro."
-    - icon: "job"
-      title: TALK TO ADMISSIONS
-      content: "Para ayudar a otros participantes, deberás pagar esta beca solo cuando consigas trabajo, sin intereses y a un precio muy por debajo del mercado."
+      title: Completa el formulario
+      content: "Completa el formulario de inscripción, contacta con nuestro asesor y preparate para comenzar."
+    - icon: "talk"
+      title: Aprendizaje y desarrollo
+      content: "Aprende de programadores profesionales y experimenta de primera mano un aprendizaje acelerado con mentorías antes durante y despues de haberte graduado."
+    - icon: "graduation-2" 
+      title: Inserción laboral
+      content: "Inicia tu carrera en la industria tecnológica con las habilidades y el conocimiento necesarios para destacar."
 
   - name: a-quien-va-dirigido
     position: 3
@@ -133,6 +175,12 @@ components:
     content:
       font_size: ["16px"]
       text: "Toda persona con la motivación y la capacidad de trabajo necesaria para realizar un cambio en su carrera profesional. Personas en riesgo de exclusión social, migrantes, mujeres, desempleados, etc. Para estudiar en 4Geeks no es necesario tener experiencia previa, cualquier persona podría aprender a programar, sin embargo, se evaluarán las habilidades lógicas y tecnológicas, capacidad de aprendizaje y motivaciones, para determinar si tendrán éxito en este tipo de programas de estudios, así como también dentro del mundo tecnológico, como  profesionales. Mira aquí el criterio de elegibilidad"
+    button: 
+      text: "Solicita tu Plaza"
+      color: white
+      hover_color: "white"
+      background: "black"
+      path: "#leadform_header"
 
   - name: coding
     position: 4
@@ -143,25 +191,26 @@ components:
       style: '{ "backgroundSize": "contain" }'
       src: "/images/landing/group_194.png"
     heading:
-      text: "Porqué aprender a programar"
+      text: "¿Porqué aprender a programar?"
       font_size: ["40px", "40px", "40px", "40px", "40px"]
     sub_heading:
-      text: "Aprender a programar te dará acceso a"
+      text: "Aprender a programar te dará acceso a: "
       font_size: ["16px", "16px", "16px", "16px", "16px"]
     content:
       font_size: ["16px"]
-      text: |
-        <h4><strong style="font-weight: bold;"> > Oportunidades de empleo </strong></h4>
-        <p>El 80% de los trabajos del futuro todavía no se han inventado pero requerirán saber programar.</p>
-        <br>
-        <h4><strong style="font-weight: bold;"> > Mejores salarios </strong></h4>
-        <p>Un programador junior puede ganar en su primer trabajo entre 18.000 € y 24.000 €</p>
-        <br>
-        <h4><strong style="font-weight: bold;"> > Flexibilidad de carrera </strong></h4>
-        <p>Como programador podrás trabajar en diversas áreas. Esta habilidad te abre muchas puertas.</p>
-  - name: geeksinfo
-    position: 1
-    layout: geeksInfo
+      text: ""
+    bullets:
+      items:
+      - heading: "Oportunidades de empleo"
+        text: "El 80% de los trabajos del futuro todavía no se han inventado pero requerirán saber programar."
+        icon: "circle" #string with icon for example ['check', 'cicle', etc]
+      - heading: "Mejores salarios"
+        text: "Un programador junior puede ganar en su primer trabajo entre 18.000 € y 24.000 €"
+        icon: "circle" #string with icon for example ['check', 'cicle', etc]
+      - heading: "Flexibilidad de carrera"
+        text: "Como programador podrás trabajar en diversas áreas. Esta habilidad te abre muchas puertas."
+        icon: "circle" #string with icon for example ['check', 'cicle', etc]
+
 
   - name: why4geeks
     position: 5
@@ -195,9 +244,8 @@ components:
     image:
       style: '{ "border" : "3px solid black", "backgroundSize": "contain" }' 
       shadow: true 
-      src: "/static/images/staff/luisa.png"
-      
-    video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
+      src: "/static/images/testimonials/Mattia-Tozzi-testimonial.jpg"
+    video: "B01-eTfgqqc"
     heading:
       text: "¡Paga solo cuando consigas trabajo!"
       font_size: ["30px", "30px", "30px", "30px", "30px"]
@@ -205,18 +253,29 @@ components:
       text: "No tienes que pagar absolutamente nada para apuntarte al programa. Solo cuando consigas un trabajo en el que ganes más de 16.000 € al año pagarás tu formación. Sin intereses, sin incrementos, sin trucos. Es el Income Share Agreement (ISA) más económico que conseguirás."
       font_size: ["18px", "18px", "18px", "18px", "18px"]
     button:
+      color: white
+      hover_color: "white"
+      background: "black"
       text: "Mira las condiciones aquí"
-      color: null
       path: "https://storage.googleapis.com/4geeks-academy-website/syllabus/madrid-spain/UnitedWay/Criterios%20de%20elegibilidad%20UWay.docx.pdf"
     content:
-      text: |
-        <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">1. Apúntate al programa.</strong></h2>
-        <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">2. Aprende a programar.</strong></h2>
-        <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">3. Entrega tu proyecto final.</strong></h2>
-        <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">4. Conviértete en Programador.</strong></h2>
-        <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">5. Consigue un trabajo.</strong></h2>
-        <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">6. Paga solo cuando consigas un trabajo de más de 16.000 € al año ¡sin intereses!</strong></h2>
       font_size: ["16px"]
+      text: ""
+    bullets:
+      items:
+      - heading: "1. Apúntate al programa"
+        icon: "circle" 
+      - heading: "2. Aprende a programar"
+        icon: "circle" 
+      - heading: "3. Entrega tu proyecto final"
+        icon: "circle" 
+      - heading: "4. Conviértete en Programador"
+        icon: "circle" 
+      - heading: "5. Consigue un trabajo"
+        icon: "circle" 
+      - heading: "6. Paga solo cuando consigas un trabajo de más de 16.000 € al año ¡sin intereses!"
+        icon: "circle" 
+
 
   - name: testimonials
     position: 9
@@ -228,31 +287,33 @@ components:
       # - "cha-fabr"
     # ["azu-bota","nai-kali","cha-fabr"]
 
-  - name: better-future
-    position: 10
-    layout: two_column_left
-    proportions: [6, 6]
-    background: "#F5F5F5"
-    image:
-      style: '{ "backgroundSize": "cover" }'
-      src: "/images/landing/comunity-support.png"
-      shadow: true
-    heading:
-      text: "¿Preparado para iniciar el camino hacia un mejor futuro?"
-      font_size: ["40px", "40px", "40px", "40px", "40px"]
-    content:
-      text: "Solo 50 estudiantes serán beneficiados por esta iniciativa"
-      font_size: ["16px"]
-    button:
-      text: "Solicita tu Plaza"
-      color: "white"
-      background: "black"
-      hover_color: "white"
-      path: "#leadform_bottom"
+
+  # - name: better-future
+  #   position: 10
+  #   layout: two_column_left
+  #   proportions: [6, 6]
+  #   background: "#F5F5F5"
+  #   image:
+  #     style: '{ "backgroundSize": "cover" }'
+  #     src: "/images/landing/comunity-support.png"
+  #     shadow: true
+  #   heading:
+  #     text: "¿Preparado para iniciar el camino hacia un mejor futuro?"
+  #     font_size: ["40px", "40px", "40px", "40px", "40px"]
+  #   content:
+  #     text: "Solo 50 estudiantes serán beneficiados por esta iniciativa"
+  #     font_size: ["16px"]
+  #   button:
+  #     text: "Solicita tu Plaza"
+  #     color: "white"
+  #     background: "black"
+  #     hover_color: "white"
+  #     path: "#bottom"
+
 
   - name: united
     position: 11
-    layout: two_column_right
+    layout: two_column_left
     proportions: [6, 6]
     background: "veryLightBlue2"
     image:
