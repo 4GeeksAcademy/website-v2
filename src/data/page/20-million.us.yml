@@ -54,7 +54,7 @@ two_column_left:
     color: white
     background: blue
     hover_color: white
-    path: "#bottom"
+    path: "#leadform_bottom"
 form:
   title: "Become a Catalyst for Change: Join Our Network of Partners"
   paragraph: >

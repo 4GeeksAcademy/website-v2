@@ -15,10 +15,12 @@ const WeTrust = ({ we_trust }) => {
       display="block"
       margin="0 auto"
       padding="0"
+      padding_lg="0"
       padding_tablet="40px 40px"
+      width="100%"
     >
       <Div
-        padding="50px 20px"
+        padding="50px 30px"
         padding_md="40px 80px"
         padding_lg="40px"
         padding_tablet="40px 40px"
