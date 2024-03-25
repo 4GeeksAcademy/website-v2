@@ -121,8 +121,14 @@ heading_section:
 
 active_campaign_location_slug: "caracas-venezuela"
 breathecode_location_slug: "caracas-venezuela"
-gdpr_compliant: false # do we need to ask for permision?
 in_person_available: true # important to accept in-person applicants
+
+consents:
+  - slug: "gdpr_consent"
+    name: "GDPR Consent"
+    active: false
+    message: 'By submitting this form, I accept that my data may be used for a quote request that could result in a commercial relationship. Check out our complete <a style={{ marginLeft: "5px" }} target="_blank" rel="noopener noreferrer nofollow" className="decorated" href="/us/privacy-policy">Privacy Policy</a>'
+    error_message: "You need to accept the privacy terms"
 
 city: "Caracas"
 name: "Venezuela"
@@ -137,10 +143,10 @@ country_shortname: "ve"
 socials:
   - name: "Facebook"
     icon: "facebook"
-    link: "https://www.facebook.com/4geeksacademyve"
+    link: "https://www.facebook.com/4geeksacademylatinoamerica"
   - name: "Twitter"
     icon: "x-logo"
-    link: "https://twitter.com/4GeeksAcademy"
+    link: "https://twitter.com/4geeksacademyES"
   - name: "Instagram"
     icon: "instagram"
     link: "https://www.instagram.com/4geeksacademylatam/"

@@ -36,7 +36,7 @@ apply_schollarship: # form that is displayed at the end of the landing
 
 navbar:
   buttonText: "Postular"
-  buttonUrl: "#bottom" # url accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
+  buttonUrl: "#leadform_bottom" # url accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
   logoUrl: "#"
 
 header_data:
@@ -115,7 +115,7 @@ components:
       description: |
         De cero a tener tu primer trabajo como Full Stack Developer, con una duración de 18 semanas, con clases 3 veces por semana, compatible con horario laboral o de estudios. 
       text_link: Obtener más información
-      link: "#top" # moves to start position
+      link: "#leadform_header" # moves to start position
       
     - title: "Full Time"
       sub_title: "9 semanas"
@@ -123,7 +123,7 @@ components:
       description: |
         Programa intensivo de 9 semanas, con clases de lunes a viernes durante todo el día, para vivir una experiencia inmersiva en el mundo del código.
       text_link: Obtener más información
-      link: "#top"
+      link: "#leadform_header"
 
   - name: geeksinfo
     position: 4
@@ -207,7 +207,7 @@ components:
       text: "Postula Ahora"
       color: "white"
       hover_color: "rgb(255, 183, 24)"
-      path: "#top"
+      path: "#leadform_header"
       background: "black"
     columns:
       - image:

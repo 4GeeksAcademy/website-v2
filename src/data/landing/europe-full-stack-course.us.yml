@@ -20,7 +20,7 @@ meta_info:
 
 navbar:
   buttonText: "Apply now"
-  buttonUrl: "#bottom" # url accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
+  buttonUrl: "#leadform_bottom" # url accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
   logoUrl: "#"
 
 form:
@@ -57,7 +57,7 @@ follow_bar:
     font_size: ["25px", "25px", "25px", "18px", "4.3vw"]
   button:
     text: "Apply now"
-    path: "#top" #top, #bottom, #anotherComponentId
+    path: "#leadform_header" #top, #bottom, #anotherComponentId
     # ├──if path is empty("") it point to top per default ("#" -> points to top)
     # └── path accepts: relative(/example/path), absolute(https://google.com) or id(#idName)
   phone:
@@ -105,7 +105,7 @@ about4Geeks:
     - title: "Preparation for interviews and selection processes"
   paragraph: ""
   button_text: "Apply for a scholarship"
-  button_link: "#"
+  button_link: "#leadform_header"
   image: "../../../static/images/bg/community.png"
   image_mobile: "../../../static/images/bg/community.png"
 

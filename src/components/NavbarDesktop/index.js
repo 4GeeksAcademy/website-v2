@@ -144,7 +144,7 @@ export const Navbar = ({
 
   const data = useStaticQuery(graphql`
     query {
-      file(relativePath: { eq: "images/4Geeks-new-logo.png" }) {
+      file(relativePath: { eq: "images/4geeksacademy-logo-old.png" }) {
         childImageSharp {
           gatsbyImageData(
             layout: FULL_WIDTH # --> CONSTRAINED || FIXED || FULL_WIDTH
@@ -171,7 +171,6 @@ export const Navbar = ({
             defaultLanguage
             breathecode_location_slug
             active_campaign_location_slug
-            gdpr_compliant
             in_person_available
             online_available
             meta_info {
@@ -201,9 +200,7 @@ export const Navbar = ({
     }
   `);
 
-  const isContentBarActive = true;
-  // (contentBar.active && isTestMode) ||
-  // (contentBar.active && !isDevelopment());
+  const isContentBarActive = contentBar.active || isDevelopment();
 
   const langDictionary = {
     us: "es",

@@ -34,8 +34,14 @@ export default ({ children }) => {
             defaultLanguage
             breathecode_location_slug
             active_campaign_location_slug
-            gdpr_compliant
             in_person_available
+            consents {
+              slug
+              name
+              active
+              message
+              error_message
+            }
             online_available
             meta_info {
               slug
