@@ -37,12 +37,15 @@ export const save_form = async (
   };
 
   const blockNumber = session.blockList.find(
-    (element) => element.phone_regex === formData.phone.value
+    (element) => element.phone_regex === formData.phone.phoneCode
   );
 
   if (blockNumber) {
     console.log("From save_form", blockNumber);
     return false;
+  } else {
+    delete formData.phone.phoneCode;
+    return true;
   }
 
   const resp = await fetch(`${getEnvironmentAPI()}/marketing/lead`, {
