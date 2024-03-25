@@ -47,7 +47,7 @@ const Apply = (props) => {
   });
   const [formData, setVal] = useState({
     first_name: { value: "", valid: false },
-    phone: { value: "", valid: false },
+    phone: { value: "", phoneCode: "", valid: false },
     email: { value: "", valid: false },
     location: { value: "", valid: false },
     consents: { value: [], valid: true },
@@ -184,7 +184,9 @@ const Apply = (props) => {
         });
       });
   };
-  console.log(session);
+  console.log("session", session);
+  console.log("formData", formData);
+
   return (
     <>
       <Header

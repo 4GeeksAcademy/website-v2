@@ -36,6 +36,15 @@ export const save_form = async (
     return undefined;
   };
 
+  const blockNumber = session.blockList.find(
+    (element) => element.phone_regex === formData.phone.value
+  );
+
+  if (blockNumber) {
+    console.log("From save_form", blockNumber);
+    return false;
+  }
+
   const resp = await fetch(`${getEnvironmentAPI()}/marketing/lead`, {
     headers: new Headers({ "content-type": "application/json" }),
     method: "POST",
