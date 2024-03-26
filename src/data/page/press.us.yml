@@ -40,6 +40,7 @@ content:
       title: "Best Data Science Bootcamps Online In 2024"
       text: "Current and prospective tech professionals can complete data science bootcamps to sharpen their existing skills, change fields or advance in their current careers."
       textUrl: "Read Article"
+
       url: "https://www.forbes.com/advisor/education/bootcamps/best-data-science-bootcamps/"
     - name: "BusinessWire"
       logo: "../../../static/images/news/businesswire.png"

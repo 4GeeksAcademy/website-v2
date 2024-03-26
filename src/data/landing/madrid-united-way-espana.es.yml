@@ -38,7 +38,6 @@ apply_schollarship: # form that is displayed at the end of the landing
   # title: "Apoyo Profesional Ilimitado"
   imageSide: "left"
   image: "../../../static/images/landing/apply.png"  
-  
 
 header_data:
   background: "#FFF1D1"
