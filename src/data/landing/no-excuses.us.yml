@@ -186,9 +186,10 @@ components:
 
   - name: some_id
     position: 1
-    layout: two_column_right
+    layout: two_column_left
     image:
       src: "/images/testimonials/allisa-testimonial.jpg"
+      shadow: true
     video: "https://www.youtube.com/watch?v=TCHASxvkhpI"
     heading:
       text:
