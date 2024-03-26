@@ -85,6 +85,7 @@ follow_bar:
     # devices:   XL      LG    MD      SM    XS
     font_size: ["25px", "25px", "25px", "20px", "18px"]
   button:
+
     text: "¡Solicita tu Plaza!"
     path: "#leadform_header"
   phone:
