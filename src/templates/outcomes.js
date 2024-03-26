@@ -148,6 +148,8 @@ const Outcomes = ({ data, pageContext, yml }) => {
         background={Colors.lightYellow}
         padding="40px 20px"
         padding_tablet="0px"
+        padding_xxs="20px 20px"
+        margin_md="70px auto 0 auto"
       >
         <Header
           hideArrowKey
@@ -157,7 +159,8 @@ const Outcomes = ({ data, pageContext, yml }) => {
           title={yml.header.title}
           paragraph={yml.header.paragraph}
           svg_image={<SVGImage />}
-          margin_tablet="70px auto 0 auto"
+          margin_tablet="0px auto 0 auto"
+          margin_xxs="0px auto 0 auto"
           maxWidth="1366px"
         />
       </Div>

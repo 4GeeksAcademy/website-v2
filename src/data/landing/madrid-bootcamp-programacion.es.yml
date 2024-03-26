@@ -18,6 +18,11 @@ meta_info:
   automation: soft # comma separated, "soft" is the default value
   tag: request_more_info # comma separated, "request_more_info" is the default value
 
+navbar:
+  logoUrl: "#" # relative(/apply), absolute(https://google.com) or id(#componentName)
+  buttonText: "Solicitar plaza"
+  buttonUrl: "#leadform_bottom" # url accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
+
 form:
   # posible fields: "first_name", "last_name", "full_name", "phone", "email"
   # always the first_name, email and phone will be mandatory if added.
@@ -80,10 +85,10 @@ follow_bar:
     # devices:   XL      LG    MD      SM    XS
     font_size: ["25px", "25px", "25px", "20px", "18px"]
   button:
-    text: "¡Quiero mi beca!"
-    path: "#top"
+    text: "¡Solicita tu Plaza!"
+    path: "#leadform_header"
   phone:
-    text: "Llámanos "
+    text: "Llámanos"
 
 #
 # ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇
@@ -180,8 +185,8 @@ components:
       text: "No esperes demasiado, ya que las plazas están sujetas a disponibilidad y se asignarán por orden de solicitud. Si deseas obtener más información o tienes preguntas, no dudes en ponerte en contacto con nuestro equipo de admisiones. ¡Estamos aquí para ayudarte a aprovechar al máximo esta valiosa oportunidad!"
       font_size: ["16px"]
     button:
-      text: "¡Aplica Ahora!"
-      path: "#bottom"
+      text: "¡Solicita tu Plaza!"
+      path: "#leadform_bottom"
       color: "white"
       background: "black"
       hover: "lightBlue"
@@ -196,6 +201,7 @@ components:
     background: "lightBlue" # Name of the color(from components/Styling/index.js) or color code ex: #C9F9F9
     image:
       src: "/images/why-4geeks/python-image.png"
+      style: '{"min-height": "200px","max-height": "200px", "align-self": "center", "margin": "0"}'
     heading:
       text:
         "Python y Javascript"
@@ -211,14 +217,13 @@ components:
     layout: two_column_left
     proportions: [4, 8]
     image:
-      style: '{ "backgroundSize": "contain" }'
+      style: '{"min-height": "200px","max-height": "200px", "align-self": "center", "backgroundSize": "contain" }'
       src: "/images/badges/Course-Report-Badge-2024.webp"
       link: "https://www.coursereport.com/schools/4geeks-academy"
     heading:
-      text:
-        "Hemos sido seleccionados entre los mejores Coding Bootcamps del mundo por 3 años consecutivos"
+      text: "Hemos sido seleccionados entre los mejores Coding Bootcamps del mundo por 5 años consecutivos"
         #xl      lg     md     sm    xs
-      font_size: ["36px", "34px", "32px", "30px", "30px"]
+      font_size: ["28px", "28px", "28px", "28px", "28px"]
 
   - name: seguridad_europa
     position: 9
@@ -226,7 +231,7 @@ components:
     layout: two_column_right
     proportions: [8, 4]
     image:
-      style: '{ "backgroundSize": "contain" }'
+      style: '{"min-height": "200px","max-height": "200px", "align-self": "center", "backgroundSize": "contain" }'
       src: "/images/badges/european_excellence_education_black.png"
       link:
     heading:

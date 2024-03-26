@@ -97,6 +97,7 @@ const Apply = (props) => {
         region: m.meta_info.region,
         dialCode: m.meta_info.dialCode,
         country: m.country,
+        consents: m.consents,
       }));
 
   React.useEffect(() => {
@@ -603,8 +604,8 @@ const Apply = (props) => {
             />
             {session &&
               session.location &&
-              session.location.consents &&
-              session.location.consents.map((consent, index) => {
+              formData.location.value.consents &&
+              formData.location.value.consents.map((consent, index) => {
                 if (consent.active)
                   return (
                     <Div position="relative" margin="10px 0 0 0">
