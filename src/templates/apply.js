@@ -50,10 +50,11 @@ const Apply = (props) => {
     phone: { value: "", valid: false },
     email: { value: "", valid: false },
     location: { value: "", valid: false },
-    consent: { value: true, valid: true },
+    consents: { value: [], valid: true },
     referral_key: { value: null, valid: true },
     course: { value: null, valid: false },
   });
+  const [consentValue, setConsentValue] = useState([]);
 
   const programs = data.allCourseYaml.edges
     .filter(
@@ -96,6 +97,7 @@ const Apply = (props) => {
         region: m.meta_info.region,
         dialCode: m.meta_info.dialCode,
         country: m.country,
+        consents: m.consents,
       }));
 
   React.useEffect(() => {
@@ -600,34 +602,48 @@ const Apply = (props) => {
                 setVal({ ...formData, referral_key: { value, valid } })
               }
             />
-            {session && session.location && location.gdpr_compliant && (
-              <Div>
-                <Paragraph fontSize="14px" margin="5px 0 0 0">
-                  <input
-                    type="checkbox"
-                    checked={formData.consent.valid}
-                    onChange={() =>
-                      setVal({
-                        ...formData,
-                        consent: {
-                          ...formData.consent,
-                          valid: !formData.consent.valid,
-                        },
-                      })
-                    }
-                  />
-                  {privacy.consent.message}
-                  <a
-                    target="_blank"
-                    rel="noopener noreferrer nofollow"
-                    className="decorated"
-                    href={privacy.consent.url}
-                  >
-                    {privacy.consent.link_label}
-                  </a>
-                </Paragraph>
-              </Div>
-            )}
+            {session &&
+              session.location &&
+              formData.location.value.consents &&
+              formData.location.value.consents.map((consent, index) => {
+                if (consent.active)
+                  return (
+                    <Div position="relative" margin="10px 0 0 0">
+                      <input
+                        required
+                        name="isGoing"
+                        type="checkbox"
+                        checked={consentValue[index]}
+                        onChange={() => {
+                          const updatedConsentValue = [...consentValue];
+                          updatedConsentValue[index] = !consentValue[index];
+                          setConsentValue(updatedConsentValue);
+                          setVal({
+                            ...formData,
+                            consents: {
+                              ...formData.consents,
+                              value: updatedConsentValue,
+                            },
+                          });
+                        }}
+                        style={{
+                          width: "24px",
+                          height: "24px",
+                          top: "10px",
+                          left: "7px",
+                        }}
+                      />
+                      <Paragraph
+                        fontSize="11px"
+                        margin="5px 0 0 5px"
+                        textAlign="left"
+                        dangerouslySetInnerHTML={{
+                          __html: consent.message,
+                        }}
+                      ></Paragraph>
+                    </Div>
+                  );
+              })}
             <Div
               flexDirection_tablet="column"
               flexDirection="column"
@@ -747,11 +763,6 @@ export const query = graphql`
         node {
           fields {
             lang
-          }
-          consent {
-            message
-            link_label
-            url
           }
         }
       }

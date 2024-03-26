@@ -29,7 +29,7 @@ form:
 
 navbar:
   buttonText: "APLICAR YA"
-  buttonUrl: "#bottom" # url accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
+  buttonUrl: "#leadform_bottom" # url accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
   logoUrl: "#"
 
 
@@ -83,7 +83,7 @@ follow_bar:
     font_size: ["25px", "25px", "25px", "18px", "4.3vw"]
   button:
     text: "APLICA YA"
-    path: "#top"
+    path: "#leadform_header"
   phone:
     text: "Llama "
 
@@ -109,7 +109,7 @@ components:
       font_size: ["16px"]
     button:
       text: "¡Únete a la Academia!"
-      path: "#bottom"
+      path: "#leadform_bottom"
       color: "white"
       background: "black"
       hover: "lightBlue"

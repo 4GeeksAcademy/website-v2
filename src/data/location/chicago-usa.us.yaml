@@ -14,6 +14,7 @@ meta_info:
   # for example: for this location, only show cohorts starting with usa-xx-spanish
   cohort_include_regex: ["miami"]
   cohort_exclude_regex: ['usa-\d{1,10}-spanish']
+  home_video: "https://www.videoask.com/fyq2h2hvx"
 
 seo_title: "Coding Bootcamp in Chicago"
 header:
@@ -109,9 +110,15 @@ two_columns:
 
 active_campaign_location_slug: "chicago-usa"
 breathecode_location_slug: "chicago-usa"
-gdpr_compliant: false # do we need to ask for permision?
 in_person_available: true # important to accept in-person applicants
 online_available: false # important to accept online-only applicants
+
+consents:
+  - slug: "gdpr_consent"
+    name: "GDPR Consent"
+    active: false
+    message: 'By submitting this form, I accept that my data may be used for a quote request that could result in a commercial relationship. Check out our complete <a style={{ marginLeft: "5px" }} target="_blank" rel="noopener noreferrer nofollow" className="decorated" href="/us/privacy-policy">Privacy Policy</a>'
+    error_message: "You need to accept the privacy terms"
 
 city: "Chicago"
 name: "Chicago, USA"

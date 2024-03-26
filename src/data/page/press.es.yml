@@ -17,6 +17,14 @@ content:
   heading: "Lea sobre este bootcamp de codificación en las noticias..."
   limit: 7
   news:
+    - name: "Global Miami"
+      logo: "../../../static/images/news/Global-Miami-Logo.webp"
+      location: ["downtown-miami", "online", "madrid-spain"]
+      image: "../../../static/images/the-academy/4geeks-academy-founders.webp"
+      title: "El Futuro del Trabajo"
+      text: "Los bootcamps de tecnología ofrecen una formación rápida y práctica, enfocada en habilidades específicas. Esto los convierte en una opción atractiva para trabajadores que quieren actualizar sus conocimientos o cambiar de carrera sin necesidad de invertir años en un título universitario."
+      textUrl: "Leer Artículo"
+      url: "https://issuu.com/coralgablesmagazine.com/docs/gm_jan-feb_2024_fullissue/74?ff"
     - name: "Forbes"
       logo: "../../../static/images/news/forbes.png"
       #location: ["downtown-miami", "online", "madrid-spain"]
@@ -94,3 +102,4 @@ content:
       textUrl: "Ver Entrevista"
       url: "https://www.elespanol.com/invertia/disruptores-innovadores/disruptores/startups/20230304/no-academia-vuelco-programacion-chatgpt-quitara-trabajo/745675491_0.html"
       
+

@@ -20,10 +20,22 @@ awards_list:
   #   text_link: "See article"
   #   link: "/"
 
+  - image: "../../../static/images/badges/forbes-logo-award.png"
+    title: "Top Online Full-Stack Bootcamps Of 2024"
+    paragraph: "We have been selected as one of the Top Online Coding Bootcamps by Forbes."
+    link: "https://www.forbes.com/advisor/education/bootcamps/best-full-stack-developer-bootcamp/#4geeks_academy_full_stack_developer_bootcamp_section"
+    text_link: See article
+
   - image: "../../../static/images/badges/Course-Report-Badge-2024.webp"
     title: "Best Bootcamp for Course Report 2024"
     paragraph: "We have been selected as one of the Top Coding Bootcamps globally for 3 years in a row"
     link: "https://www.coursereport.com/best-coding-bootcamps"
+    text_link: See article
+
+  - image: "../../../static/images/badges/ebootcamp-top.png"
+    title: "Best Bootcamp Ebootcamp for 2024"
+    paragraph: "We've been nominated by eBootcamp as the top coding bootcamp for 2024"
+    link: "https://ebootcamp.net/top-bootcamps-programacion/"
     text_link: See article
 
   - image: "../../../static/images/badges/switchup-badge-2023.png"

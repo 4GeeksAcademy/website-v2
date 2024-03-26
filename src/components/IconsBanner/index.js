@@ -71,7 +71,7 @@ export default ({ icon, title, content }) => {
             padding="0 15%"
             margin_xs="10px 0 0 0"
             width="100%"
-            textAlign="center"
+            textAlign="justify"
           >
             {content}
           </Paragraph>
