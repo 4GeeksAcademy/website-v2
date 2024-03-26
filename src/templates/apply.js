@@ -103,6 +103,7 @@ const Apply = (props) => {
   React.useEffect(() => {
     tagManager("application_rendered");
   }, []);
+
   React.useEffect(() => {
     const urlParams = new URLSearchParams(window.location.search);
     // Pre-fill the location
