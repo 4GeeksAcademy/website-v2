@@ -39,10 +39,6 @@ apply_schollarship: # form that is displayed at the end of the landing
   imageSide: "left"
   image: "../../../static/images/landing/apply.png"  
   
-# navbar:
-#   buttonText: "Aplica ahora"
-#   buttonUrl: "#leadform_header" # url accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
-#   logoUrl: "#"
 
 header_data:
   background: "#FFF1D1"
@@ -291,6 +287,7 @@ components:
       # - "cha-fabr"
     # ["azu-bota","nai-kali","cha-fabr"]
 
+
   # - name: better-future
   #   position: 10
   #   layout: two_column_left
@@ -312,6 +309,7 @@ components:
   #     background: "black"
   #     hover_color: "white"
   #     path: "#bottom"
+
 
   - name: united
     position: 11
