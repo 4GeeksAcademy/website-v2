@@ -97,15 +97,15 @@ two_columns:
   proportions: [6, 6]
   image:
     style: '{"border" : "5px solid black", "backgroundSize": "contain" }'
-    src: "/static/images/testimonials/allisa-testimonial.jpg"
-    shadow: true  
-  video: "https://www.youtube.com/watch?v=TCHASxvkhpI"
+    src: "/images/landing/alissa-video.webp"
+    shadow: true
+  video: "EcqasocRKHo"
   heading:
     text: "Exclusive Scholarships with Miami Dade College, Clark University, and United Way Miami"
     font_size: ["30px", "30px", "30px", "30px", "30px"]
   sub_heading:
-    text: "Enhance Your Professional Trajectory with 4GeeksAcademy"
-    font_size: ["18px", "18px", "22px", "22px", "22px"]
+    text: "Launch your coding career in 18 weeks with 4Geeks Academy. Get access to unlimited mentorship and personalized career support to become a full-stack developer or data scientist."
+    font_size: ["18px", "18px", "18px", "18px", "18px"]
   button:
     text: "APPLY NOW"
     color: "white"
