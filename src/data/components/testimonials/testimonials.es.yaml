@@ -41,11 +41,208 @@ testimonials:
     student_thumb: "../../../../static/images/testimonials/florencia-viera.jpeg"
     linkedin_image: "../../../../static/images/linkedin.png"
 
+  - student_name: "Veronica Larrondo"
+    slug: "vero-la"
+    country:
+      iso: LATAM
+      name: LATAM
+    featured: false
+    highlighted: false
+    testimonial_date: ""
+    rating: 5
+    student_thumb: "../../../../static/images/testimonials/veronica-larrondo.jpg"
+    student_video: "https://www.youtube.com/watch?v=hpvI_iBaX28" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    hidden: false
+    linkedin_url: ""
+    linkedin_text: "Linkedin Perfil"
+    linkedin_image: "../../../../static/images/linkedin.png"
+    source_url: ""
+    source_url_text: ""
+    short_content: "Full Stack Developer"
+    content: "Entre las habilidades que se desarrollan al aprender a programar  se ecuentra la resolucion y manejo de conflictos y capacidad de adaptacion, el curso me ha parecido excelente desde sus mentorías hasta la comunidad ha sido de gran ayuda durante este proceso."
+
+  - student_name: "Azul Botaya"
+    slug: "azu-bota"
+    country:
+      iso: us
+      name: United States of America
+    featured: false
+    highlighted: false
+    testimonial_date: ""
+    rating: 5
+    student_thumb: "../../../../static/images/testimonials/azul-botaya.jpg"
+    student_video: "" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    hidden: false
+    linkedin_url: "https://www.linkedin.com/in/azul-botaya-31669b151/"
+    linkedin_text: "Linkedin Perfil"
+    linkedin_image: "../../../../static/images/linkedin.png"
+    source_url: ""
+    #source_url_text: ""
+    short_content: "Full Stack Developer"
+    content: |
+      Estuve a punto de dejar toda mi carrera atrás y olvidarme de todo. Luego consegúi 4Geeks y recuperé 
+      la esperanza de ser una gran profesional. Me uní a 4Geeks y encontré un gran equipo, una gran comunidad y sobre todo
+      mucha calidad humana. Fui capaz finalmente de comprometerme en algo realmente interesante y que se sumaría 
+      a mi carrera de Diseñadora Gráfica, permitiéndome fortalecer mis habilidades. Además un programa Part-time! 
+      No tenía que renunciar a nada. 
+      Se que hice un gran grupo y que además podré volver siempre con ellos.
+
+  - student_name: "Joshua Bravo"
+    slug: "jos-bra"
+    country:
+      iso: chile
+      name: chile
+    featured: false
+    highlighted: false
+    testimonial_date: ""
+    rating: 5
+    student_thumb: "../../../../static/images/testimonials/joshua-bravo.jpg"
+    student_video: "https://www.youtube.com/watch?v=rtpfwwfE0yY" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    hidden: false
+    linkedin_url: ""
+    linkedin_text: "Linkedin Perfil"
+    linkedin_image: "../../../../static/images/linkedin.png"
+    source_url: ""
+    source_url_text: ""
+    short_content: "Full Stack Developer"
+    content: "Me solía dedicar como asistente de cocina y contable y ahora soy full stack developer en una startup."
+      
+  - student_name: "Ana Romero"
+    slug: "ana-ro"
+    country:
+      iso: LATAM
+      name: LATAM
+    featured: false
+    highlighted: false
+    testimonial_date: ""
+    rating: 5
+    student_thumb: "../../../../static/images/testimonials/ana-romero.jpg"
+    student_video: "https://www.youtube.com/watch?v=XqyM_QSVcOs" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    hidden: false
+    linkedin_url: ""
+    linkedin_text: "Linkedin Perfil"
+    linkedin_image: "../../../../static/images/linkedin.png"
+    source_url: ""
+    source_url_text: ""
+    short_content: "Full Stack Developer"
+    content: "aproveche el tiempo para justo despues de terminar la preparatoria, me inscribí en 4Geeks academi y me parece que ha sido excelente, me parece que tienen una comunidad muy unida que están allí siempre para darte la mano."
+  
+  - student_name: "Jonathan Ferragut"
+    slug: "jona-ferra"
+    country:
+      iso: us
+      name: United States of America
+    featured: false
+    highlighted: false
+    testimonial_date: ""
+    rating: 5
+    source_link: ""
+    student_thumb: "../../../../static/images/testimonials/jonathan-ferragut.jpg"
+    student_video: "" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    hidden: false
+    linkedin_url: ""
+    linkedin_text: ""
+    linkedin_image: "../../../../static/images/linkedin.png"
+    source_url: ""
+    ##source_url_text: ""
+    short_content: "Full Stack Developer"
+    content: "Tomar un curso como este nos beneficia de diversas maneras. No solo se trata de aspectos de programación, sino también de confianza, añadiendo una dimensión significativa en el sentido de que puedes crear algo a partir de la nada."
+    
+  - student_name: "Virginia Martinez"
+    slug: "virma"
+    country:
+      iso: España
+      name: España
+    featured: false
+    highlighted: false
+    testimonial_date: ""
+    rating: 5
+    student_thumb: "../../../../static/images/testimonials/virginia-martinez.jpg"
+    student_video: "https://www.youtube.com/watch?v=Hm7qfrGQilY" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    hidden: false
+    linkedin_url: ""
+    linkedin_text: "Linkedin Perfil"
+    linkedin_image: "../../../../static/images/linkedin.png"
+    source_url: ""
+    source_url_text: ""
+    short_content: "Full Stack Developer"
+    content: "vengo del sector UX UI y ahora soy Fullstack Developer os animo a  os apuntéis a la academia. "
+
+  - student_name: "Fernando Villanueva"
+    slug: "fer-vill"
+    country:
+      iso: España
+      name: España
+    featured: false
+    highlighted: false
+    testimonial_date: ""
+    rating: 5
+    student_thumb: "../../../../static/images/testimonials/fernando-manrique-villanueva.jpg"
+    student_video: "https://www.youtube.com/watch?v=XfjVbYr9Hds" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    hidden: false
+    linkedin_url: ""
+    linkedin_text: "Linkedin Perfil"
+    linkedin_image: "../../../../static/images/linkedin.png"
+    source_url: ""
+    # source_url_text: ""
+    short_content: "Full Stack Developer"
+    content: "Fernando Villanueva técnico de calidad de software, es importante conocer cómo están construidas las web actualmente, el bootcamp de 4Geeks academy me ha dado las herramientas para evaluar de forma precisa las páginas, mejorando así en mi trabajo."
+ 
+  - student_name: "Olson Dimache"
+    slug: "ols-di"
+    country:
+      iso: us
+      name: United States of America
+    featured: false
+    highlighted: false
+    testimonial_date: ""
+    rating: 5
+    source_link: ""
+    student_thumb: "../../../../static/images/testimonials/olson-dimanche.jpg"
+    student_video: "" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    hidden: false
+    linkedin_url: ""
+    linkedin_text: ""
+    linkedin_image: "../../../../static/images/linkedin.png"
+    source_url: ""
+    ##source_url_text: ""
+    short_content: "Full Stack Developer"
+    content: "Esto es como cuando vas al océano  la parte más importante es mojarse los pies, yo lo recomendaría  !salta¡ ve a por ello y después de este bootcamp me siento preparado para saltar al medio del océano."
+      
+  - student_name: "Carlos Avila"
+    slug: "car-avi"
+    country:
+      iso: LATAM
+      name: LATAM
+    featured: false
+    highlighted: false
+    testimonial_date: ""
+    rating: 5
+    student_thumb: "../../../../static/images/testimonials/carlos-avila.jpg"
+    student_video: "https://www.youtube.com/watch?v=plwPwyrxX84" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    hidden: false
+    linkedin_url: ""
+    linkedin_text: "Linkedin Perfil"
+    linkedin_image: "../../../../static/images/linkedin.png"
+    source_url: ""
+    # source_url_text: ""
+    short_content: "Full Stack Developer"
+    content: "Solo intentalo vas a aprender porque el sistema de 4Geeks te empuja en esa dirección, 4geeks es la mejor opcion para cambiar de carrera y aprender a programar"
+
   - student_name: "Naila Kaliyeva"
     slug: "nai-kali"
     country:
-      iso: ve
-      name: Venezuela
+      iso: us
+      name: United States of America
     featured: false
     highlighted: false
     testimonial_date: ""
@@ -80,38 +277,36 @@ testimonials:
   #     for a coding school in Miami and I found the best one: 4Geeks Academy. And thanks to
   #     the program they offer, the Income Sharing Agreement, I could enroll right away and pay once I get a job
 
-  - student_name: "Azul Botaya"
-    slug: "azu-bota"
+  - student_name: "Ibai Fernández"
+    slug: "ibai"
     country:
-      iso: ve
-      name: Venezuela
+      iso: España
+      name: España
     featured: false
     highlighted: false
     testimonial_date: ""
     rating: 5
-    student_thumb: "../../../../static/images/testimonials/azul-botaya.jpg"
-    student_video: "" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    student_thumb: "../../../../static/images/testimonials/ibai-fernandez.jpg"
+    student_video: "https://www.youtube.com/watch?v=J9Xg03u3MxA" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     hidden: false
-    linkedin_url: "https://www.linkedin.com/in/azul-botaya-31669b151/"
+    linkedin_url: ""
     linkedin_text: "Linkedin Perfil"
     linkedin_image: "../../../../static/images/linkedin.png"
     source_url: ""
-    #source_url_text: ""
+    # source_url_text: ""
     short_content: "Full Stack Developer"
-    content: |
-      Estuve a punto de dejar toda mi carrera atrás y olvidarme de todo. Luego consegúi 4Geeks y recuperé 
-      la esperanza de ser una gran profesional. Me uní a 4Geeks y encontré un gran equipo, una gran comunidad y sobre todo
-      mucha calidad humana. Fui capaz finalmente de comprometerme en algo realmente interesante y que se sumaría 
-      a mi carrera de Diseñadora Gráfica, permitiéndome fortalecer mis habilidades. Además un programa Part-time! 
-      No tenía que renunciar a nada. 
-      Se que hice un gran grupo y que además podré volver siempre con ellos.
+    content: "Antes de entrar a la academia ya tenía un poco de experiencia con la programación, Wordpress me abrió las puertas del manejo del código y también había tenido experiencia con otros coding bootcamp pero a partir del 2023 y gracias al acuerdo compartido y el esfuerzo invertido ahora tengo dos trabajos como programador."
+      
+
+
+
 
   - student_name: "Charles Fabricius"
     slug: "cha-fabr"
     country:
-      iso: ve
-      name: Venezuela
+      iso: us
+      name: United States of America
     featured: false
     highlighted: false
     testimonial_date: ""
@@ -137,6 +332,9 @@ testimonials:
     featured: false
     highlighted: false
     testimonial_date: ""
+    country:
+      iso: us
+      name: United States of America
     rating: 5
     student_thumb: "../../../../static/images/testimonials/fernando-funez.jpg"
     student_video: "" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
@@ -156,6 +354,9 @@ testimonials:
     featured: false
     highlighted: false
     testimonial_date: ""
+    country:
+      iso: us
+      name: United States of America
     rating: 5
     student_thumb: "../../../../static/images/testimonials/salvador-desravines.jpg"
     student_video: "" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
@@ -175,6 +376,9 @@ testimonials:
     featured: false
     highlighted: false
     testimonial_date: ""
+    country:
+      iso: us
+      name: United States of America
     rating: 5
     student_thumb: "../../../../static/images/testimonials/jorge-montes.jpg"
     student_video: "" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
@@ -195,6 +399,9 @@ testimonials:
     highlighted: false
     testimonial_date: ""
     include_in_marquee: true
+    country:
+      iso: us
+      name: United States of America
     rating: 5
     hidden: false
     linkedin_url: "https://www.linkedin.com/in/fidelrosell/"
@@ -214,8 +421,11 @@ testimonials:
     featured: false
     highlighted: false
     testimonial_date: ""
+    country:
+      iso: us
+      name: United States of America
     rating: 5
-    student_thumb: "../../../../static/images/testimonials/guensie-grecy.jpeg"
+    student_thumb: "../../../../static/images/testimonials/guensie-grecy.jpg"
     linkedin_url: "https://www.linkedin.com/in/guensiegrecy/"
     linkedin_text: "Linkedin Perfil"
     linkedin_image: "../../../../static/images/linkedin.png"
@@ -231,6 +441,9 @@ testimonials:
     featured: false
     highlighted: false
     testimonial_date: ""
+    country:
+      iso: us
+      name: United States of America
     rating: null
     student_thumb: "../../../../static/images/testimonials/Leslie-.jpg"
     linkedin_url: ""
@@ -248,6 +461,9 @@ testimonials:
     featured: false
     highlighted: false
     testimonial_date: ""
+    country:
+      iso: us
+      name: United States of America
     rating: null
     student_thumb: "../../../../static/images/testimonials/Manuel-alejandro.jpg"
     linkedin_url: ""

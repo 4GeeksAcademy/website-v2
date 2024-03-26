@@ -1,14 +1,18 @@
 # This section is mean for badges, awards and recognitions
 # For example:
-paragraph: "Este curso cuenta con premios y reconocimientos que validan su excelencia"
+paragraph: "Awards and recognitions that validate our excellence"
 badges:
+  - name: "Ebootcamp top"
+    url: ""
+    image: "../../../../static/images/badges/ebootcamp-top.png"
+    alt: "Best Coding Bootcamp"
   - name: "Premios Exelencia Educativa"
     url: ""
     image: "../../../../static/images/badges/exelencia-educativa.png"
     alt: "Mejor centro de Coding Bootcamp"
   - name: "Switchup"
     url: ""
-    image: "../../../../static/images/badges/Course-Report-Badge-2023.png"
+    image: "../../../../static/images/badges/Course-Report-Badge-2024.png"
     alt: "Best cooding bootcamp Course Report 2023"
   - name: "FDOE"
     url: ""

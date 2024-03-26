@@ -31,7 +31,7 @@ form:
 
 navbar:
   buttonText: "Aplica hoy"
-  buttonUrl: "#bottom" # url accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
+  buttonUrl: "#leadform_bottom" # url accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
   logoUrl: "#"
 
 header_data:
@@ -39,7 +39,7 @@ header_data:
   tagline: ¡Bienvenido a 4Geeks Academy!
   tagline_color: "black"
   sub_heading: ""
-  badge: "../../../static/images/badges/Course-Report-Badge-2023.png"
+  badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
   image_filter: brightness(0.3)
   # right_image: "../../../static/images/landing/header_united_way.png"
   # right_image:
@@ -64,7 +64,7 @@ short_badges:
     alt: "Mejor centro de Coding Bootcamp"
   - name: "Course Report"
     url: ""
-    image: "../../../static/images/badges/Course-Report-Badge-2023.png"
+    image: "../../../static/images/badges/Course-Report-Badge-2024.webp"
     alt: "Top Coding Bootcamps Course Report"
   - name: "Switchup"
     url: ""
@@ -104,7 +104,7 @@ components:
     image:
       style: '{ "backgroundSize": "contain" }'
       src: "/images/landing/grupo-ventanas.png"
-      link: "#top" # take uses somewhere when they click on the image
+      link: "#leadform_header" # take uses somewhere when they click on the image
       # shadow: true
     section_heading: 
       text: "Diseñado para hacerte exitoso en el mundo de la programación"
@@ -177,7 +177,7 @@ components:
     background: "#fbfbfb"
     image:
       style: '{ "backgroundSize": "contain" }'
-      src: "/images/badges/Course-Report-Badge-2023.png"
+      src: "/images/badges/Course-Report-Badge-2024.webp"
       link: "https://www.coursereport.com/schools/4geeks-academy"
     heading:
       text:
@@ -190,7 +190,7 @@ components:
     proportions: [5, 7]
     image:
       style: '{ "backgroundSize": "cover", "background-position": "top"}'
-      src: "/images/ownpeoplecoding2.jpg"
+      src: "/images/ownpeoplecoding2.webp"
       shadow: true
     heading:
       text: "4Geeks Academy & Tecnología Financiera: ¡La alianza que impulsará tu vida profesional!"
@@ -209,7 +209,7 @@ components:
       background: black
       color: white
       hover_color: "#white"
-      path: "#top"
+      path: "#leadform_header"
 
 badges:
   position: 7

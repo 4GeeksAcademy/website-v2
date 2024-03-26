@@ -1,0 +1,286 @@
+meta_info:
+  slug: web-developer-bootcamp # <--- URL 4geeksacademy.com/us/landing/example
+
+  # This will show on social media when shared
+  title: "Elevate your skills and launch your dream tech career with our web development bootcamp experience"
+  description: "Elevate your skills and launch your dream tech career with our web development bootcamp experience"
+  image: "/images/bg/main-bg.jpg"
+  keywords: ""
+  visibility: "hidden" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
+  template: "landing_a" # <--- choose your landing template
+  redirects: []
+
+  # Set a particular course or location to the landing page
+  # this UTM fields will be also included in the CRM contact
+  utm_course: ["full-stack"]
+  utm_location: ["downtown-miami"]
+  automation: soft # comma separated, "soft" is the default value
+  tag: request_more_info # comma separated, "request_more_info" is the default value
+
+navbar:
+  logoUrl: "#"
+  buttonText: "Apply" # this modifies the button text in the navbar
+  buttonUrl: "#leadform_bottom" #accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
+
+form:
+  # posible fields: "first_name", "last_name", "full_name", "phone", "email"
+  # always the first_name, email and phone will be mandatory if added.
+  fields: ["full_name", "phone", "email"]
+  heading: "Apply now, and change your life!"
+  motivation: "Upon applying, expect a personalized advisor email, comprehensive program details, financial insights, syllabus, and mentorship information."
+  button_label: Apply Now
+  redirect: null #you can redirect to another url or entirely diffrent website
+
+apply_schollarship: # form that is displayed at the end of the landing
+  title: "Apoyo Profesional Ilimitado"
+  imageSide: "left"
+  image: "../../../static/images/landing/apply.png"
+
+# jumbotron on the top (cannot be commented out)
+header_data:
+  tagline: "Web Developer Bootcamp: Code Your Career"
+  sub_heading: "Become a web developer with our coding bootcamp in just 18 weeks"
+  background: "#FFF1D1"
+  badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
+  image_filter: brightness(0.3)
+
+features:
+  marginTop: 0px #<-- separation between tagline and the bullets
+
+  #                                         up   left down  right
+  styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
+  bullets:
+    - No previous experience or coding skills required.
+    - Choose from options that fit your schedule — part-time, online, or hybrid programs
+    - Flexible payment plans starting at ~$120 a month, with the option to pay after landing a job
+    - Get lifetime access to our mentors and Career Growth Support (Your first Job in Tech is our goal)
+
+follow_bar:
+  position: "top" # top, bottom, hidden
+  content:
+    text: "Master Web Development\n Join 4Geeks Academy's Bootcamp"
+    text_mobile: "Master Web Development\n Join 4Geeks Academy's Bootcamp"
+    # devices:   XL      LG    MD      SM    XS
+    font_size: ["25px", "25px", "25px", "20px", "18px"]
+  button:
+    text: "Apply Now"
+    path: "#leadform_bottom"
+  phone:
+    text: "Call"
+
+short_badges:
+  - name: "Premios Tecnologia Siglo XXI"
+    url: ""
+    image: "../../../static/images/awards/premios_tecnologia_sigloxxi.png"
+    alt: "Mejor centro de Coding Bootcamp"
+  - name: "Best coding bootcamp Ebootcamp"
+    url: ""
+    image: "../../../static/images/badges/ebootcamp-top.png"
+    alt: "Best coding bootcamp Ebootcamp"
+  - name: "Course Report"
+    url: ""
+    image: "../../../static/images/badges/Course-Report-Badge-2024.webp"
+    alt: "Top Coding Bootcamps Course Report"
+  - name: "Switchup"
+    url: ""
+    image: "../../../static/images/badges/switchup-badge-2023.png"
+    alt: "Best coding bootcamp Switchup 2023"
+  - name: "Florida Department of Education"
+    url: ""
+    image: "../../../static/images/badges/licensed.png"
+    alt: "Florida Department of Education"
+
+#
+# ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇
+#
+
+program_details:
+  position: 8
+  heading: "Master Python, JS and React"
+  sub_heading: "The 3 most used languages in the world"
+
+badges:
+  position: 10
+  heading: "4Geeks Academy has awards and recognitions that validate it's excellence"
+
+geeks_vs_others:
+  position: 7
+  heading: "What makes our web development bootcamp so successful?"
+  paragraph: ""
+  total_rows: 5
+
+alumni_projects:
+  position: 14
+  heading: "Projects you will be able to make"
+  sub_heading: "Take a look at our previous student projects"
+
+who_is_hiring:
+  position: 15
+  limit: 4
+  heading: "Who is hiring our students?"
+  sub_heading: "500+ hiring partners, and 50+ job openings right now for software development"
+
+# Possible layouts: [two_column_left_image, two_column_right_image]
+components:
+  - name: new_design_with_bullets
+    position: 1
+    layout: two_column_left
+    swipable: False
+    background: "#FFFFFF"
+    image:
+      style: '{"backgroundSize": "cover"}'
+      src: "/images/woman-laptop-smile-bg.webp"
+      shadow: false
+    section_heading:
+      text: "Full-Stack Web Developer Bootcamp for Everyone"
+      style: '{ "font-size": "30px"}'
+    heading:
+      text: "Become a web developer in just 18 weeks with our bootcamp"
+      font_size: ["22px", "22px", "22px", "22px", "22px"]
+    sub_heading:
+      text: "Dreaming of a career where you build dynamic websites and applications? A web developer bootcamp can turn your passion for code into a reality. These immersive programs provide focused training in essential languages like HTML, CSS, and JavaScript, equipping you with the skills needed to thrive in the tech industry."
+    button:
+      text: "Apply"
+      color: white
+      hover_color: "white"
+      background: "black"
+      path: "#leadform_header"
+    content:
+      text: ""
+      font_size: ["16px"]
+      path: ""
+    bullets:
+      items:
+        - heading: "Interview Simulation"
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
+        - heading: "Lifetime Mentoring"
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
+        - heading: "ultimited 1-1 mentoring"
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
+
+  - name: geekinfo_2
+    position: 2
+    layout: two_column_right
+    proportions: [6, 6]
+    background: ""
+    image:
+      style: '{ "backgroundSize": "contain" }'
+      src: "/images/landing/Group-6626.webp"
+      shadow: false
+    section_heading:
+      text: ""
+      style: '{ "font-size": "30px" }'
+    heading:
+      text: "Why 4Geeks?"
+      font_size: ["40px", "40px", "40px", "40px", "40px"]
+    sub_heading:
+      text: "The Unique Benefits of Choosing 4Geeks Academy"
+      font_size: ["16px", "16px", "16px", "16px", "16px"]
+    button:
+      text: "Compare 4Geeks Vs others"
+      color: white
+      hover_color: "white"
+      background: "black"
+      path: "#geeks_vs_others"
+    content:
+      text: ""
+      font_size: ["16px"]
+      path: ""
+    bullets:
+      items:
+        - heading: "Real-world focus"
+          text: "Build a portfolio of practical projects that showcase your abilities to potential employers"
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
+        - heading: "Supportive community"
+          text: "Connect with fellow learners and instructors in a collaborative and encouraging environment"
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
+        - heading: "career support"
+          text: "Benefit from career coaching, resume writing workshops, and industry connections to help you land your dream job"
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
+        - heading: "Financial aid options"
+          text: "Explore flexible payment plans and scholarship opportunities"
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
+
+  - name: how-it-works
+    position: 3
+    background: "#E3F9FE !important"
+    layout: iconogram
+    swipable: True
+    heading:
+      text: "3 steps of a web developer bootcamp"
+      font_size: ["30px", "30px", "30px", "30px", "30px"]
+    sub_heading:
+      text: 'According to the U.S. Bureau of Labor Statistics, <strong style="font-weight: bold;">software developers in the U.S. have a higher than average job outlook and earn a median salary of $110,140 a year</strong>. Improve your chances to be one of them.'
+      font_size: ["16px", "16px", "16px", "16px", "16px"]
+      style: '{ "textAlign": "center", "width": "60%" }'
+    text_link: "/"
+    icons:
+      - icon: "graduation-2"
+        title: "Join 4Geeks Academy"
+        content: "Unleash your potential in tech. Learn from industry experts, connect with a growing community, network with leaders, and showcase your skills."
+      - icon: "laptop_new"
+        title: "Get Immerse in Coding"
+        content: "Dive into LIVE and interactive classes -online or hybrid- and build a strong portfolio on projects using in-demand tools and frameworks."
+      - icon: "stairswflag"
+        title: "Job placement"
+        content: "Our program guarantees to equip you with the most in-demand skills, connect you with top companies, and help you secure your dream job (we mean it!)."
+
+  - name: locations-online-or-in-person
+    position: 9
+    layout: two_column_left
+    background: "veryLightBlue2" # Name of the color(from components/Styling/index.js) or color code ex: #C9F9F9
+    image:
+      src: "/images/landing/4Geeks-Espana.jpg"
+      shadow: true
+    # video: "B01-eTfgqqc"
+    heading:
+      text: "Ready to see success stories? Explore real-world projects built by Web Developer Bootcamp graduates!"
+        #           xl      lg      md      sm      xs
+      font_size: ["26px", "26px", "26px", "26px", "26px"]
+    sub_heading:
+      text: "Ready to code your way to a fulfilling career? Web developer bootcamps offer a unique pathway to acquire the skills and knowledge necessary to succeed in this exciting field. These intensive prog"
+      font_size: ["16px", "16px", "16px", "16px", "16px"]
+    content:
+      text: ""
+      font_size: ["16px"]
+    button:
+      text: "See Alumni Projects"
+      background: black
+      color: white
+      hover_color: "#white"
+      path: "#alumni_projects"
+
+  - name: passion
+    position: 11
+    background: "#fbfbfb"
+    layout: two_column_left
+    proportions: [6, 6]
+    image:
+      style: '{ "border" : "3px solid black", "backgroundSize": "contain", "marginTop": "15px"}'
+      shadow: true
+      src: "/images/landing/alissa-video.webp"
+      link: "https://www.switchup.org/bootcamps/4geeks-academy"
+    video: "EcqasocRKHo"
+    heading:
+      text: "Launch Your Web Development Career at 4Geeks Academy"
+      font_size: ["40px", "40px", "40px", "40px", "40px"]
+    content:
+      text: ""
+      font_size: ["16px"]
+    button:
+      text: "Apply Now"
+      background: black
+      color: white
+      hover_color: "#white"
+      path: "#leadform_bottom"
+    bullets:
+      items:
+        - heading: "Scholarships Breaking Barriers"
+          text: "We believe in accessible tech education. With a $20 million scholarship initiative, 4Geeks removes financial barriers, making tech education available to everyone."
+          icon: "check"
+        - heading: "Career Support for Life"
+          text: "We're with you beyond graduation. Get continuous job placement assistance, refine your soft skills, and receive support throughout your entire tech career."
+          icon: "check"
+        - heading: "Dive Deep, Code Strong"
+          text: "Immerse yourself in coding with our hands-on curriculum. Learn not just to code but to excel, mastering the most relevant industry skills that set you apart."
+          icon: "check"

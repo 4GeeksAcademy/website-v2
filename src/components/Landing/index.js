@@ -524,7 +524,6 @@ export const landingSections = {
     );
   },
   geeks_vs_others: ({ session, pageContext, yml, course, index }) => {
-    console.log("YML", yml);
     return (
       <React.Fragment key={index}>
         <Title
@@ -856,7 +855,7 @@ export const landingSections = {
             margin="30px 0 0px 0"
             style={
               yml.section_heading.style
-                ? JSON.parse(heading.section_heading.style)
+                ? JSON.parse(yml.section_heading.style)
                 : null
             }
           >
@@ -922,7 +921,12 @@ export const landingSections = {
             content: yml.content,
             button: yml.button,
           }}
-          right={{ image: yml.image, video: yml.video }}
+          right={{
+            image: yml.image,
+            video: yml.video,
+            videoHeight: yml.videoHeight,
+            videoWidth: yml.videoWidth,
+          }}
           proportions={yml.proportions}
           session={session}
         />

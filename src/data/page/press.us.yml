@@ -15,16 +15,33 @@ header:
 
 content:
   heading: "Read about this coding bootcamp in the news..."
-  limit: 7
+  limit: 9
   news:
+    - name: "Global Miami"
+      logo: "../../../static/images/news/Global-Miami-Logo.webp"
+      location: ["downtown-miami", "online", "madrid-spain"]
+      image: "../../../static/images/the-academy/4geeks-academy-founders.webp"
+      title: "The future Workforce"
+      text: "Since tech training boot camps are skills-based and shorter than an academic degree program, they can be an effective way to reach the incumbet workforce."
+      textUrl: "Read Article"
+      url: "https://issuu.com/coralgablesmagazine.com/docs/gm_jan-feb_2024_fullissue/74?ff"
     - name: "Forbes"
       logo: "../../../static/images/news/forbes.png"
       location: ["downtown-miami", "online", "madrid-spain"]
       image: "../../../static/images/partner/forbes-coder.jpg"
-      title: "Web Development Coding Bootcamp"
-      text: "On a research made and published by Forbes while specified all the possible ways you can become a web developer in the USA."
+      title: "5 Best Online Full-Stack Bootcamps Of 2024"
+      text: "Full-stack developers create and troubleshoot both the back-end and front-end of websites and software—an indispensable skill set for companies across industries."
       textUrl: "Read Article"
-      url: "https://www.forbes.com/advisor/education/what-is-web-development"
+      url: "https://www.forbes.com/advisor/education/bootcamps/best-full-stack-developer-bootcamp/"
+    - name: "Forbes"
+      logo: "../../../static/images/news/forbes.png"
+      location: ["downtown-miami", "online", "madrid-spain"]
+      image: "../../../static/images/partner/forbes-coder.jpg"
+      title: "Best Data Science Bootcamps Online In 2024"
+      text: "Current and prospective tech professionals can complete data science bootcamps to sharpen their existing skills, change fields or advance in their current careers."
+      textUrl: "Read Article"
+
+      url: "https://www.forbes.com/advisor/education/bootcamps/best-data-science-bootcamps/"
     - name: "BusinessWire"
       logo: "../../../static/images/news/businesswire.png"
       #location: ["downtown-miami", "online", "madrid-spain"]
@@ -49,6 +66,14 @@ content:
       text: "After a lot of hard word we were able to partner with United Way to offer 100 schollarships in minority populations to become a software engineer or software developer"
       textUrl: "See Interview"
       url: "https://www.miamiherald.com/news/business/article263937731.html"
+    - name: "Forbes"
+      logo: "../../../static/images/news/forbes.png"
+      location: ["downtown-miami", "online", "madrid-spain"]
+      image: "../../../static/images/partner/forbes-coder.jpg"
+      title: "Web Development Coding Bootcamp"
+      text: "On a research made and published by Forbes while specified all the possible ways you can become a web developer in the USA."
+      textUrl: "Read Article"
+      url: "https://www.forbes.com/advisor/education/what-is-web-development"
     - name: "NBC"
       logo: "../../../static/images/news/nbc.png"
       #location: ["downtown-miami", "orlando"]

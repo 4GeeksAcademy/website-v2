@@ -36,7 +36,7 @@ apply_schollarship: # form that is displayed at the end of the landing
 
 navbar:
   buttonText: "Postular"
-  buttonUrl: "#bottom" # url accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
+  buttonUrl: "#leadform_bottom" # url accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
   logoUrl: "#"
 
 header_data:
@@ -44,7 +44,7 @@ header_data:
   tagline: Bootcamp de Programación Web
   tagline_color: "black"
   sub_heading: ""
-  badge: "../../../static/images/badges/Course-Report-Badge-2023.png"
+  badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
   image_filter: brightness(0.3)
   # right_image: "../../../static/images/landing/header_united_way.png"
   # right_image: 
@@ -68,7 +68,7 @@ short_badges:
     alt: "Mejor centro de Coding Bootcamp"
   - name: "Course Report"
     url: ""
-    image: "../../../static/images/badges/Course-Report-Badge-2023.png"
+    image: "../../../static/images/badges/Course-Report-Badge-2024.webp"
     alt: "Top Coding Bootcamps Course Report"
   - name: "Switchup"
     url: ""
@@ -115,7 +115,7 @@ components:
       description: |
         De cero a tener tu primer trabajo como Full Stack Developer, con una duración de 18 semanas, con clases 3 veces por semana, compatible con horario laboral o de estudios. 
       text_link: Obtener más información
-      link: "#top" # moves to start position
+      link: "#leadform_header" # moves to start position
       
     - title: "Full Time"
       sub_title: "9 semanas"
@@ -123,7 +123,7 @@ components:
       description: |
         Programa intensivo de 9 semanas, con clases de lunes a viernes durante todo el día, para vivir una experiencia inmersiva en el mundo del código.
       text_link: Obtener más información
-      link: "#top"
+      link: "#leadform_header"
 
   - name: geeksinfo
     position: 4
@@ -145,14 +145,14 @@ components:
     content:
       font_size: ["16px"]
       text: |
-        <img src="/images/geekpal.png" style="max-width: 200px;">
+        <img src="/images/geekpal.png" alt="geekpal" style="max-width: 100%; height: auto; display: block;">
         <br>
         <p>GeekPAL es una membresía instantánea que obtienes cuando te conviertes en estudiante de 4Geeks Academy. Te garantiza que no volverás a programar solo. Con GeekPAL contará con un compañero por el resto de su vida, sí, incluso después de graduarse. Si te quedas atascado, siempre habrá un mentor disponible para que puedas obtener ayuda con tu código</p>
         <br>
         <br>
-        <img src="/images/geekforce.png" style="max-width: 200px;">
+        <img src="/images/geekforce.png" alt="geekpal" style="max-width: 100%; height: auto; display: block;">
         <p>GeekForce es el proceso colectivo de apoyo profesional del Bootcamp. La 'fuerza' significa empoderamiento profesional y es una membresía de por vida. Brinda asistencia para la colocación laboral del estudiante y para que se prepare para conseguir un trabajo en tecnología.</p>
-  
+          
   - name: python_y_javascript
     position: 3
     layout: two_column_left
@@ -207,7 +207,7 @@ components:
       text: "Postula Ahora"
       color: "white"
       hover_color: "rgb(255, 183, 24)"
-      path: "#top"
+      path: "#leadform_header"
       background: "black"
     columns:
       - image:

@@ -21,7 +21,7 @@ meta_info:
 navbar:
   logoUrl: "#" # relative(/apply), absolute(https://google.com) or id(#componentName)
   buttonText: "Solicita tu beca"
-  buttonUrl: "#bottom" # url accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
+  buttonUrl: "#leadform_bottom" # url accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
 
 form:
   # posible fields: "first_name", "last_name", "full_name", "phone", "email"
@@ -59,7 +59,7 @@ follow_bar:
     font_size: ["25px", "25px", "25px", "18px", "4.3vw"]
   button:
     text: "Solicita tu beca"
-    path: "#top" #top, #bottom, #anotherComponentId
+    path: "#leadform_header" #top, #bottom, #anotherComponentId
     # ├──if path is empty("") it point to top per default ("#" -> points to top)
     # └── path accepts: relative(/example/path), absolute(https://google.com) or id(#idName)
   phone:
@@ -72,7 +72,7 @@ short_badges:
     alt: "Mejor centro de Coding Bootcamp"
   - name: "Course Report"
     url: ""
-    image: "../../../static/images/badges/Course-Report-Badge-2023.png"
+    image: "../../../static/images/badges/Course-Report-Badge-2024.webp"
     alt: "Top Coding Bootcamps Course Report"
   - name: "Switchup"
     url: ""
@@ -101,7 +101,7 @@ about4Geeks:
     - title: "Preparación para entrevistas y procesos de selección"
   paragraph: ""
   button_text: "Solicita tu beca"
-  button_link: "#" # accepts url: relative(/us/apply), absolute(https://google.com) or component id(#componentName)
+  button_link: "#leadform_header" # accepts url: relative(/us/apply), absolute(https://google.com) or component id(#componentName)
   image: "../../../static/images/bg/community.png"
   image_mobile: "../../../static/images/bg/community.png"
 
@@ -111,7 +111,7 @@ who_is_hiring:
   sub_heading: "Consigue un trabajo en menos de 3 meses gracias a nuestra creciente red de más de 500 empresas tecnológicas. Accede a ofertas nacionales e internacionales y a una comunidad de más de 2000 graduados"
   featured:
     - name: "Facebook"
-      image: "../../../static/images/partner/facebook.png"
+      image: "../../../static/images/partner/meta-logo.png"
     - name: "Microsoft"
       image: "../../../static/images/partner/microsoft.png"
     - name: "Apple"
@@ -144,7 +144,7 @@ components:
       text: ""
       font_size: ["16px", "16px", "16px", "16px", "16px"]
       style: '{ "textAlign": "center", "width": "60%" }'
-    text_link: "#"
+    text_link: "#leadform_header"
     icons:
     - icon: "touch"
       title: Solicita tu beca antes del 8 de octubre
@@ -173,7 +173,7 @@ components:
         Disponible en modalidad part time y full time.
       
       text_link: Solicita tu beca
-      link: "#" # moves to start position
+      link: "#leadform_header" # moves to start position
     
     - title: "AI & Machine Learning"
       sub_title: "Developers o perfiles STEM"
@@ -185,7 +185,7 @@ components:
         Descarga aquí el <a href=https://storage.googleapis.com/4geeks-academy-website/syllabus/madrid-spain/Syllabus-Fullstack-2021-Espa%C3%B1a.pdf target=_blank>"programa de estudios"</a>.
 
       text_link: Solicita tu beca
-      link: "#"
+      link: "#leadform_header"
 
 
   - name: python_y_javascript
