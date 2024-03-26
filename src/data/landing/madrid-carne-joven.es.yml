@@ -54,7 +54,7 @@ follow_bar:
     font_size: ["25px", "25px", "25px", "18px", "4.3vw"]
   button:
     text: "Solicitar"
-    path: "#top"
+    path: "#leadform_header"
   phone:
     text: "Llama "
 
@@ -187,7 +187,7 @@ components:
       font_size: ["16px"]
     button:
       text: "¡Únete a la Academia!"
-      path: "#bottom"
+      path: "#leadform_bottom"
       color: "white"
       background: "black"
       hover: "lightBlue"

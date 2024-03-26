@@ -44,7 +44,7 @@ header_data:
   background: "#FFF1D1"
   partner_logo_url: "../../../static/images/landing/logos-promin2.png"
   tagline: ProInnóvate y 4Geeks Academy
-  sub_heading: "El programa de becas ProInnóvate ha finalizado, pero aún puedes conseguir una oferta especial y convertirte en un fullstack developer "
+  sub_heading: "Si estás interesado en unirte a 4Geeks y vienes motivado por el proyecto con Proinnóvate, por favor aplica, agrega el Referral Key  'Proinnóvate' y te daremos una oferta muy especial"
   badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
   image_filter: brightness(0.3)
 
@@ -256,5 +256,5 @@ components:
 #    description: |
 #      De cero a tener tu primer trabajo como Data Scientist, con una duración de 16 semanas, con clases en vivo 3 veces por semana, compatible con horario laboral o de estudios. 
 #    text_link: Obtener más información
-#    link: "#top" # moves to start position
+#    link: "#leadform_header" # moves to start position
   
