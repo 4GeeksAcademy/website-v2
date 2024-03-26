@@ -4,7 +4,7 @@ meta_info:
   visibility: "visible"
   description: "Work as non-technical writer at 4Geeks. Help us build and create clear, concise, and engaging content about the ed-tech industry and our school."
   template: "job" # js component that will be handling the rendering
-  open: true #if true, this job will be accepting candidates
+  open: false #if true, this job will be accepting candidates
   image: "https://storage.googleapis.com/media-breathecode/59c3afdc064670e4d0062a42cd4bf954d1b9c93720500d4fdce265b4792538ab"
   keywords: ""
   redirects: []
