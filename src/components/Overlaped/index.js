@@ -143,6 +143,11 @@ const Overlaped = ({ heading, content, button, background, image }) => {
                 background={Colors[button.color]}
                 color={Colors.white}
                 margin="20px 0 0 0"
+                onClick={() => {
+                  if (button.path && button.path.indexOf("http") > -1)
+                    window.open(transferQuerystrings(button.path, utm));
+                  else navigate(button.path);
+                }}
               >
                 {button.text}
               </Button>

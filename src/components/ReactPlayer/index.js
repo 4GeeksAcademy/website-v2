@@ -345,7 +345,7 @@ const Player = ({
               alt="Video"
               style={{
                 height: `${style.height}` || "100%",
-                width: `${style.width}` || "100%",
+                width: "100%",
                 //borderRadius: `${style.borderRadius}` || "auto",
               }}
             />

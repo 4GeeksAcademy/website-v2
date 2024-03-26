@@ -57,7 +57,7 @@ const Footer = ({ yml }) => {
 
   return (
     <>
-      <GridContainer margin="44px 0" margin_tablet="0 0 40px 0">
+      <GridContainer margin="44px auto" margin_tablet="0 0 40px 0">
         <Div background="#EBEBEB" height="1px" />
       </GridContainer>
       <GridContainer
@@ -66,6 +66,8 @@ const Footer = ({ yml }) => {
         columns_tablet="12"
         padding="0 17px"
         margin="0 0 60px 0"
+        childMargin="auto"
+        childMaxWidth="1366px"
       >
         <Div
           justifyContent="center"
@@ -338,95 +340,97 @@ const Footer = ({ yml }) => {
           />
         </Div>
       </GridContainer>
-      <GridContainer
-        columns_tablet="12"
-        background={Colors.lightGray}
-        padding="11px 17px 29px 17px"
-        padding_tablet="31px 0"
-      >
-        <Div
-          gridArea_tablet="1/6/1/13"
-          justifyContent="end"
-          alignItems="center"
-          flexDirection="column"
-          flexDirection_tablet="row"
-          width="100%"
-          width_tablet="100%"
-          height_tablet="100%"
+      <Container>
+        <GridContainer
+          columns_tablet="12"
+          background={Colors.lightGray}
+          padding="11px 17px 29px 17px"
+          padding_tablet="31px 0"
         >
-          {yml.policy ? (
-            yml.policy.map((item, i) => (
-              <Link key={i} to={item.link}>
-                <H4
-                  border={i % 2 == 1 && "1px solid"}
-                  borderWidth={i % 2 == 1 && "0px 1px 0px 1px"}
-                  key={item.name}
-                  fontSize="13px"
-                  lineHeight="16px"
-                  width="fit-content"
-                  color={Colors.darkGray}
-                  padding="0 15px"
-                >
-                  {item.name}
-                </H4>
-              </Link>
-            ))
-          ) : (
-            <>
-              <Link to="/us/privacy-policy">
-                <H4
-                  fontSize="13px"
-                  padding="0 15px"
-                  lineHeight="16px"
-                  width="fit-content"
-                  color={Colors.darkGray}
-                >
-                  Privacy Policy
-                </H4>
-              </Link>
-              <Link to="/us/cookies">
-                <H4
-                  border="1px solid"
-                  padding="0 15px"
-                  borderWidth="0px 1px 0px 1px"
-                  fontSize="13px"
-                  lineHeight="16px"
-                  width="fit-content"
-                  color={Colors.darkGray}
-                >
-                  Cookies
-                </H4>
-              </Link>
-              <Link to="/us/terms-conditions">
-                <H4
-                  fontSize="13px"
-                  padding="0 15px"
-                  lineHeight="16px"
-                  width="fit-content"
-                  color={Colors.darkGray}
-                >
-                  Terms and Conditions
-                </H4>
-              </Link>
-            </>
-          )}
-        </Div>
-        <Div
-          gridArea_tablet="1/1/1/6"
-          justifyContent="center"
-          alignItems="center"
-          height_tablet="100%"
-        >
-          <H4
-            fontSize="13px"
-            lineHeight="22px"
-            textAlign_tablet="left"
-            color={Colors.darkGray}
+          <Div
+            gridArea_tablet="1/6/1/13"
+            justifyContent="end"
+            alignItems="center"
+            flexDirection="column"
+            flexDirection_tablet="row"
+            width="100%"
+            width_tablet="100%"
+            height_tablet="100%"
           >
-            @ 4Geeks Academy LLC 2019
-          </H4>
-        </Div>
-      </GridContainer>
+            {yml.policy ? (
+              yml.policy.map((item, i) => (
+                <Link key={i} to={item.link}>
+                  <H4
+                    border={i % 2 == 1 && "1px solid"}
+                    borderWidth={i % 2 == 1 && "0px 1px 0px 1px"}
+                    key={item.name}
+                    fontSize="13px"
+                    lineHeight="16px"
+                    width="fit-content"
+                    color={Colors.darkGray}
+                    padding="0 15px"
+                  >
+                    {item.name}
+                  </H4>
+                </Link>
+              ))
+            ) : (
+              <>
+                <Link to="/us/privacy-policy">
+                  <H4
+                    fontSize="13px"
+                    padding="0 15px"
+                    lineHeight="16px"
+                    width="fit-content"
+                    color={Colors.darkGray}
+                  >
+                    Privacy Policy
+                  </H4>
+                </Link>
+                <Link to="/us/cookies">
+                  <H4
+                    border="1px solid"
+                    padding="0 15px"
+                    borderWidth="0px 1px 0px 1px"
+                    fontSize="13px"
+                    lineHeight="16px"
+                    width="fit-content"
+                    color={Colors.darkGray}
+                  >
+                    Cookies
+                  </H4>
+                </Link>
+                <Link to="/us/terms-conditions">
+                  <H4
+                    fontSize="13px"
+                    padding="0 15px"
+                    lineHeight="16px"
+                    width="fit-content"
+                    color={Colors.darkGray}
+                  >
+                    Terms and Conditions
+                  </H4>
+                </Link>
+              </>
+            )}
+          </Div>
+          <Div
+            gridArea_tablet="1/1/1/6"
+            justifyContent="center"
+            alignItems="center"
+            height_tablet="100%"
+          >
+            <H4
+              fontSize="13px"
+              lineHeight="22px"
+              textAlign_tablet="left"
+              color={Colors.darkGray}
+            >
+              @ 4Geeks Academy LLC 2019
+            </H4>
+          </Div>
+        </GridContainer>
+      </Container>
     </>
   );
 };

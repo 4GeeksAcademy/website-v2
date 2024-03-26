@@ -236,7 +236,7 @@ part_time:
       - "/images//flevo-new.png"
 
   - slug: 'latam-solo-programa-ds'
-    academies: ['caracas-venezuela', 'montevideo-uruguay','bogota-colombia', 'costa-rica', 'mexicocity-mexico','quito-ecuador', 'panamacity-panama', 'buenosaires-argentina','lima-peru','lapaz-bolivia']
+    academies: ['montevideo-uruguay','bogota-colombia', 'costa-rica', 'mexicocity-mexico','quito-ecuador', 'panamacity-panama', 'buenosaires-argentina','lima-peru','lapaz-bolivia']
     recomended: true
     scholarship: "Sólo paga el programa"
     payment_time: "Enfócate en obtener nuevas habilidades. Paga mensualmente."
@@ -250,7 +250,7 @@ part_time:
       - "/images//flevo-new.png" 
 
   - slug: 'latam-program-only-ds-upfront'
-    academies: ['caracas-venezuela', 'montevideo-uruguay','bogota-colombia', 'costa-rica', 'mexicocity-mexico','quito-ecuador', 'panamacity-panama', 'buenosaires-argentina','lima-peru','lapaz-bolivia']
+    academies: ['montevideo-uruguay','bogota-colombia', 'costa-rica', 'mexicocity-mexico','quito-ecuador', 'panamacity-panama', 'buenosaires-argentina','lima-peru','lapaz-bolivia']
     recomended: false
     scholarship: "Sólo el Programa Data Science"
     payment_time: "Enfócate en obtener nuevas habilidades. Paga de contado."
@@ -264,7 +264,7 @@ part_time:
       - "/images//flevo-new.png" 
 
   - slug: 'latam-upfront-ds-cs'
-    academies: ['caracas-venezuela', 'montevideo-uruguay','bogota-colombia', 'costa-rica', 'mexicocity-mexico','quito-ecuador', 'panamacity-panama', 'buenosaires-argentina','lima-peru','lapaz-bolivia']
+    academies: ['montevideo-uruguay','bogota-colombia', 'costa-rica', 'mexicocity-mexico','quito-ecuador', 'panamacity-panama', 'buenosaires-argentina','lima-peru','lapaz-bolivia']
     recomended: false
     scholarship: "Program Data Science + Career Support"
     payment_time: "Te ayudamos a pulir tu perfil profesional"
@@ -276,3 +276,32 @@ part_time:
       - "Además del programa de Data Science, obtén apoyo profesional de por vida de nuestro equipo especializado y acceso permanente a nuestra comunidad en línea de graduados"   
     icons: 
       - "/images//flevo-new.png"    
+
+
+  - slug: 'latam-solo-programa-ds'
+    academies: ['caracas-venezuela']
+    recomended: true
+    scholarship: "Sólo paga el programa"
+    payment_time: "Enfócate en obtener nuevas habilidades. Paga mensualmente."
+    price: "A partir de $240/m"
+    bullets: 
+      - "Siempre hay un plan de pago disponible para que te unas a 4Geeks Academy"
+      - "Si no encuentras aquí lo que esperas, por favor contáctanos y trataremos de encontrar nuevas formas de ayudarte"     
+      - "Debes elegir si tomarás solo el programa, si también quieres obtener nuestro sistema de Career Support, o si quieres ir a por todo y registrarte con nuestra opción de Trabajo Garantizado"  
+      - "Pague solamente por el programa de Data Science si todavía no está interesado en nuestro programa de apoyo profesional y nuestra garantía de empleo."   
+    icons: 
+      - "/images//flevo-new.png" 
+
+  - slug: 'latam-program-only-ds-upfront'
+    academies: ['caracas-venezuela']
+    recomended: false
+    scholarship: "Sólo el Programa Data Science"
+    payment_time: "Enfócate en obtener nuevas habilidades. Paga de contado."
+    price: "USD $2400"
+    bullets: 
+      - "Siempre hay un plan de pago disponible para que te unas a 4Geeks Academy"
+      - "Si no encuentras aquí lo que esperas, por favor contáctanos y trataremos de encontrar nuevas formas de ayudarte"     
+      - "Debes elegir si tomarás solo el programa, si también quieres obtener nuestro sistema de Career Support, o si quieres ir a por todo y registrarte con nuestra opción de Trabajo Garantizado"  
+      - "Pague solamente por el programa Science si todavía no está interesado en nuestro programa de apoyo profesional y nuestra garantía de empleo."   
+    icons: 
+      - "/images//flevo-new.png" 
