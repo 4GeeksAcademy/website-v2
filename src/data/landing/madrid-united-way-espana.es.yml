@@ -39,7 +39,6 @@ apply_schollarship: # form that is displayed at the end of the landing
   imageSide: "left"
   image: "../../../static/images/landing/apply.png"  
 
-
 header_data:
   background: "#FFF1D1"
   tagline: "Impulsa tu carrera gracias a la programación"
