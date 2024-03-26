@@ -1,0 +1,47 @@
+meta_info:
+  slug: "coding-instructor-es"
+  title: "Coding Instructor"
+  visibility: "visible"
+  description: "Las mentes más brillantes siempre han dedicado tiempo a enseñar lo que saben. Conviértete en un profesor de programación en 4Geeks Academy."
+  template: "job" # js component that will be handling the rendering
+  open: true #if true, this job will be accepting candidates
+  image: "https://storage.googleapis.com/media-breathecode/59c3afdc064670e4d0062a42cd4bf954d1b9c93720500d4fdce265b4792538ab"
+  keywords: ""
+  redirects: []
+
+## BANNER INFO
+banner_heading: "Instructor Full-Stack"
+banner_sub_heading: ""
+banner_image: "/images/bg/pricing-bg.jpg"
+link_back: "/us/jobs"
+button_url: "https://marketing892162.typeform.com/to/SN5YOA8d"
+cities:
+  - "Imparte clases de forma Online y en Remoto En países como : \n
+    USA, España, Europa y LATAM "
+
+button_text: "¡Aplica ahora!"
+## JOB MAIN SECTION INFO
+title: "¿Qué podría ser más importante para una academia de programación que contar con excelentes docentes?"
+description: "En 4Geeks Academy buscamos un Instructor de Fullstack altamente calificado para unirse a nuestro equipo. Algunos de los requisitos para este puesto incluyen:"
+
+content:
+  - label: "¿Cuáles serían tus responsabilidades?"
+    list:
+      - "Responsable de dirigir las clases dentro del aula virtual."
+      - "Establecer el ritmo de la clase y asegurarse de que comience a tiempo."
+      - "Garantizar el cumplimiento del plan de estudios."
+      - "Dar retroalimentación sobre los proyectos entregados."
+      - "Motivar al alumnado para logar el objetivo de convertirse en Full Stack Developers."
+      - "Tenemos todo el material listo para impartir las clases (teoria/ejercicios), e incluso tendrás una guía didáctica sobre como impartirlas."
+  - label: "Requerimientos técnicos 💻"
+    list:
+      - "1. Full Stack Developer con al menos 5 años de experiencia."
+      - "2. Un conocimiento avanzado de HTML y CSS implica comprender a fondo conceptos como selectores CSS, pseudo-selectores y especificidad, así como también propiedades de estilo como display, position, flex, Bootstrap, entre otros."
+      - "3. Un profundo entendimiento de los conceptos de JavaScript ES2017 implica dominar tanto la iteración con y sin mutaciones (mediante for, while, forEach, map, reduce, entre otros), así como comprender la diferencia entre clases y funciones, las estructuras de datos, literales de objetos, eventos y el trabajo con el DOM (Document Object Model)."
+      - "4. Experiencia con React.js: La mayor parte de la codificación del frontend se basa en React.js, por lo que es necesario comprender conceptos como Flux, Context API, el ciclo de vida de los componentes, entre otros."
+      - "5. Consumo de API: Se requiere habilidad en el uso de fetch, consumir API's REST, trabajar con async/await, Promises, JSON, serialización, entre otros."
+      - "6. Conocimiento de Python y Django: Capacidad para desarrollar API's utilizando el framework Django o Flask."
+
+  - label: "Horario"
+    list:
+      - "1. Estamos buscando a un/a mentor/a en horario deLunes, Miércoles y Viernes  de 18:00 a 21:00 EST, o 18:30 a 21:30 CET, para enseñar a programar en remoto."
