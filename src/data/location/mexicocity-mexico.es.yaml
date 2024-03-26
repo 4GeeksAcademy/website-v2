@@ -11,6 +11,7 @@ meta_info:
   region: "latam"
   dialCode: "52"
   related_clusters: ["desarrollador-full-stack"]
+  home_video: "https://ask.4geeks.com/f67qc0ewu"
   
   # ⬇️ cohort_include_regex field is used to filter cohorts on the calendar that only test successfully for a particular regex
   # for example: for this location, only show cohorts starting with usa-xx-spanish
