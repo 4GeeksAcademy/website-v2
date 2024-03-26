@@ -16,6 +16,7 @@ meta_info:
   # for example: for this location, only show cohorts starting with usa-xx-spanish
   cohort_include_regex: ["latam"]
   cohort_exclude_regex: []
+  home_video: "https://www.videoask.com/fyq2h2hvx"
 
 seo_title: "Coding Bootcamp Argentina"
 header:
