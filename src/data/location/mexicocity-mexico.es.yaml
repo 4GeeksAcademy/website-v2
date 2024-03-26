@@ -11,6 +11,7 @@ meta_info:
   region: "latam"
   dialCode: "52"
   related_clusters: ["desarrollador-full-stack"]
+  home_video: "https://ask.4geeks.com/f67qc0ewu"
   
   # ⬇️ cohort_include_regex field is used to filter cohorts on the calendar that only test successfully for a particular regex
   # for example: for this location, only show cohorts starting with usa-xx-spanish
@@ -116,8 +117,14 @@ heading_section:
 
 active_campaign_location_slug: "mexicocity-mexico"
 breathecode_location_slug: "mexicocity-mexico"
-gdpr_compliant: false # do we need to ask for permision?
 in_person_available: false # important to accept in-person applicants
+
+consents:
+  - slug: "gdpr_consent"
+    name: "GDPR Consent"
+    active: false
+    message: 'Al completar este formulario acepto que mi información será utilizada para enviarme información comercial sobre 4Geeks Academy y que podría resultar una relación comercial a partir de esto. Revisa nuestra <a style={{ marginLeft: "5px" }} target="_blank" rel="noopener noreferrer nofollow" className="decorated" href="/es/privacidad">Política de Privacidad</a>'
+    error_message: "Debes aceptar el consent de GDPR"
 
 city: "Mexico City"
 name: "Mexico"
@@ -132,7 +139,7 @@ country_shortname: "mx"
 socials:
   - name: "Facebook"
     icon: "facebook"
-    link: "https://www.facebook.com/4geeksacademyve"
+    link: "https://www.facebook.com/4geeksacademylatinoamerica"
   - name: "Twitter"
     icon: "x-logo"
     link: "https://twitter.com/4geeksacademyES"
