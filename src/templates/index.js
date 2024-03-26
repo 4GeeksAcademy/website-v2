@@ -236,7 +236,10 @@ const Home = (props) => {
             </Div>
           </Div>
           <Div display="flex" height="auto" width="100%">
-            {yml.header_data.video && yml.header_data.video != "" ? (
+            {session &&
+            session.location &&
+            session.location.meta_info &&
+            session.location.meta_info.home_video ? (
               <Div
                 height_tablet="623px"
                 width="100%"
@@ -290,7 +293,7 @@ const Home = (props) => {
                   zIndex="2"
                 >
                   <iframe
-                    src={yml.header_data.video}
+                    src={session.location.meta_info.home_video}
                     allow="camera *; microphone *; autoplay *; encrypted-media *; fullscreen *; display-capture *;"
                     width="100%"
                     height="100%"
