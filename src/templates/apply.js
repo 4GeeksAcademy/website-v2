@@ -102,6 +102,7 @@ const Apply = (props) => {
 
   React.useEffect(() => {
     tagManager("application_rendered");
+    window.captcha_key = process.env.GATSBY_CAPTCHA_KEY
   }, []);
   React.useEffect(() => {
     const urlParams = new URLSearchParams(window.location.search);
