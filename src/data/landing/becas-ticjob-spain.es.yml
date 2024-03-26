@@ -66,6 +66,7 @@ follow_bar:
     # devices:    XL      LG      MD      SM      XS
     font_size: ["24px", "24px", "24px", "18px", "4.3vw"]
   button:
+
     text: "Solicita Tu plaza"
     path: "#leadform_header" #top, #bottom, #anotherComponentId
     # ├──if path is empty("") it point to top per default ("#" -> points to top)
@@ -109,6 +110,7 @@ about4Geeks:
     - title: " GeekForce: Apoyo profesional para siempre."
     - title: "Acceso 24/7 a nuestra plataforma de aprendizaje y comunidad de +3000 Developers."
   paragraph: ""
+
   button_text: "¡Reserva tu plaza ahora!"
   button_link: "#leadform_header" # accepts url: relative(/us/apply), absolute(https://google.com) or component id(#componentName)
   image: "../../../static/images/bg/remote.jpeg"
