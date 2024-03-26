@@ -21,6 +21,7 @@ import {
 import { H1, H2, H3, Paragraph } from "../components/Heading";
 import { Button, RoundImage, Img } from "../components/Styling";
 import { StyledBackgroundSection } from "../components/Styling";
+import BoxesSection from "../components/BoxesSection";
 
 const GeekForce = (props) => {
   const { data, pageContext, yml } = props;
@@ -225,7 +226,7 @@ const GeekForce = (props) => {
       </Grid>
 
       {/* ICONOGRAM-GEEKPAL */}
-      <Div
+      {/* <Div
         display="flex"
         flexDirection="column"
         id="iconogram"
@@ -265,7 +266,9 @@ const GeekForce = (props) => {
               );
             })}
         </Div>
-      </Div>
+      </Div> */}
+
+      <BoxesSection data={content.benefits} />
 
       {Array.isArray(content.list) &&
         content.list.map((m, i) => {
@@ -537,9 +540,12 @@ export const query = graphql`
               color
             }
           }
-          icons {
-            icon
+          benefits {
             title
+            boxes {
+              icon
+              text
+            }
           }
           geekForce {
             videoId
