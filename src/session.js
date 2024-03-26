@@ -51,6 +51,7 @@ export default ({ children }) => {
               dialCode
               cohort_include_regex
               cohort_exclude_regex
+              home_video
             }
             button {
               apply_button_text
