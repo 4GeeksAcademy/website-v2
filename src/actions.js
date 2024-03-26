@@ -22,6 +22,7 @@ export const defaultSession = {
   email: null,
   location: null,
   language: "en",
+  blockList: [],
   utm: {
     gclid: undefined,
     utm_campaign: undefined,
@@ -194,6 +195,10 @@ export function tagManager(eventName, payload = {}) {
 export const apply = async (data, session) => {
   console.log("Apply action called with session: ", session);
 
+  let isBlockNumber = session.blockList.find(
+    (element) => element.phone_regex === data.phone.phoneCode
+  );
+
   let body = {};
 
   Object.keys(data).forEach((key) => {
@@ -207,7 +212,7 @@ export const apply = async (data, session) => {
   const action = "submit";
   let token = await getToken(action);
 
-  if (!session || !session.utm || !session.utm.utm_test) {
+  if ((!session || !session.utm || !session.utm.utm_test) && !isBlockNumber) {
     const _data = await save_form(
       body,
       [tag.value || tag],
