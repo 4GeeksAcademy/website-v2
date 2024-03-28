@@ -17,6 +17,12 @@ meta_info:
   automation: soft # comma separated, "soft" is the default value
   tag: request_more_info # comma separated, "request_more_info" is the default value
 
+navbar:
+  logoUrl: "#" # relative(/apply), absolute(https://google.com) or id(#componentName)
+  buttonText: "Get more Info"
+  buttonUrl: "#leadform_bottom" # url accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
+
+
 form:
   # posible fields: "first_name", "last_name", "full_name", "phone", "email"
   # always the first_name, email and phone will be mandatory if added.
@@ -28,16 +34,17 @@ form:
 
 apply_schollarship: # form that is displayed at the end of the landing
   # title: "Apoyo Profesional Ilimitado"
-  imageSide: "left"
-  image: "../../../static/images/landing/apply.png"  
+  imageSide: "right"
+  image: "../../../static/images/landing/hombre-con-laptop.png"  
 
 # jumbotron on the top (cannot be commented out)
 header_data:
   tagline: Become a Software Developer and Boost your Career in Tech
   sub_heading: "Get a Career in Tech."
-  background: "#FFF1D1"
+  # background: "#FFF1D1"
   badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
-  image_filter: brightness(0.3)
+  background_image: "../../../static/images/landing/4Geeks-Espana.jpg"
+  image_filter: brightness(1)
 
 features:
   marginTop: 0px #<-- separation between tagline and the bullets
@@ -53,12 +60,12 @@ features:
 follow_bar:
   position: "top" # top, bottom, hidden
   content:
-    text: "Get $1,500 off if you enroll with our Labor Day Deal."
+    text: "Join 4Geeks Academy with an Income Share Agreement, Finance Your Future"
     text_mobile: "ENROLL NOW and get $1,500 off when you use our code LABOR in our apply form"
     # devices:   XL      LG    MD      SM    XS
     font_size: ["25px", "25px", "25px", "20px", "18px"]
   button:
-    text: "Get more information"
+    text: "Get more Info"
     path: "#leadform_header"
   phone:
     text: "Call "
@@ -78,7 +85,7 @@ short_badges:
     alt: "Best coding bootcamp Switchup 2023"   
   - name: "Florida Department of Education"
     url: ""
-    image: "../../../static/images/badges/licensed.png"
+    image: "../../../static/images/badges/licensed-inverted.png"
     alt: "Florida Department of Education"
 
 #
@@ -106,14 +113,14 @@ rating_reviews:
       rating: 5
       url: ""
 
-badges:
-  position: 5
-  heading: "4Geeks Academy has awards and recognitions that validate it's excellence"
-
 program_details:
-  position: 1
+  position: 2
   heading: "Master Python, JS and React"
   sub_heading: "The 3 most used languages in the world"
+
+badges:
+  position: 3
+  heading: "4Geeks Academy has awards and recognitions that validate it's excellence"
 
 geeks_vs_others:
   position: 6
@@ -127,7 +134,7 @@ geeks_vs_others:
 #   sub_heading: " "
 
 who_is_hiring:
-  position: 8
+  position: 12
   limit: 4
   heading: "Who is hiring our students?"
   sub_heading: "500+ hiring partners, and 50+ job openings right now for software development"
@@ -140,8 +147,8 @@ alumni_projects:
 # Possible layours: [two_column_left_image, two_column_right_image]
 components:
   - name: passion
-    position: 4
-    background: "lightYellow"
+    position: 1
+    background: "lightBlue"
     layout: two_column_left
     proportions: [6, 6]
     image:
@@ -162,39 +169,23 @@ components:
       color: white
       hover_color: "#white"
       path: "#leadform_bottom"
-  - name: top_coding_bootcamp
-    position: 8
-    background: "#fbfbfb"
-    layout: two_column_left
-    proportions: [4, 8]
-    image:
-      style: '{ "backgroundSize": "contain", "maxWidth": "250px", "margin": "0 auto"}'
-      src: "/images/badges/Course-Report-Badge-2024.webp"
-      link: "https://www.coursereport.com/schools/4geeks-academy"
-    content:
-      style: '{ "line-height": "30px", "textAling": "center", "padding": "0 20px"}'
-      text:
-        "We have been selected as one of the Top Coding Bootcamps globally for 3 years in a row"
-                    #xl      lg     md     sm       xs
-      font_size: ["35px", "30px", "30px", "28px", "20px"]
-  # - name: geeksinfo
-  #   position: 1
-  #   layout: geeksInfo
-  - name: working_in_tech
-    position: 3
-    background: "#f1f1f1"
-    proportions: [4, 8]
-    layout: two_column_left
-    image:
-      style: '{ "backgroundSize": "cover" }'
-      src: "https://storage.googleapis.com/4geeks-academy-website/landing-pictures/testimonials.webp"
-      shadow: true
-    heading:
-      text:
-        "86% of our graduates are now working in the field with an average entry salary of $50,000/yr."
-        #           xl      lg     md     sm    xs
-      font_size: ["40px", "34px"]
-    
+
+  # - name: top_coding_bootcamp
+  #   position: 8
+  #   background: "#fbfbfb"
+  #   layout: two_column_left
+  #   proportions: [4, 8]
+  #   image:
+  #     style: '{ "background-size": "contain", "height":"180px", "min-height":"auto", "background-position": "center"}'
+  #     src: "/images/badges/Course-Report-Badge-2024.webp"
+  #     link: "https://www.coursereport.com/schools/4geeks-academy"
+  #   content:
+  #     style: '{ "line-height": "30px", "textAling": "center", "padding": "0 20px"}'
+  #     text:
+  #       "We have been selected as one of the Top Coding Bootcamps globally for 3 years in a row"
+  #                   #xl      lg     md     sm       xs
+  #     font_size: ["35px", "30px", "30px", "28px", "20px"]
+
   - name: geekinfo_2
     position: 3
     layout: two_column_right
@@ -213,11 +204,11 @@ components:
       text: "Learning to code will give you access to:"
       font_size: ["16px", "16px", "16px", "16px", "16px"]
     button: 
-      text: "Compare 4Geeks with other bootcamps."
+      text: "Compare 4Geeks with other bootcamps"
       color: white
       hover_color: "white"
       background: "black"
-      path: "https://4geeksacademy.com/us/geeks-vs-others"
+      path: "#geeks_vs_others"
     content: 
       text: ""
       font_size: ["16px"]
@@ -233,6 +224,23 @@ components:
       - heading: "CAREER FLEXIBILITY"
         text: "Coding skills prepare you for a variety of roles in the rapidly shifting digital economy."
         icon: "circle" #string with icon for example ['check', 'cicle', etc]
+
+  - name: working_in_tech
+    position: 5
+    background: "#fbfbfb"
+    proportions: [4, 8]
+    layout: two_column_left
+    image:
+      style: '{ "background-size": "cover", "height":"250px", "min-height":"auto", "background-position": "top"}'
+      src: "/images/landing/feliz-empresario-laptop.png"
+      shadow: true
+    heading:
+      style: '{ "justify-content": "center", "marginTop": "150px"}'
+      text:
+        "86% of our graduates are now working in the field with an average entry salary of $50,000/yr."
+        #           xl      lg     md     sm    xs
+      font_size: ["40px", "34px"]
+    
 
 # why_python:
 #   position: 7
