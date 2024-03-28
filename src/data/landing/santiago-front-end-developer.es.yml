@@ -5,7 +5,7 @@ meta_info:
   title: "El mejor Bootcamp de programación por 4 años consecutivos"
   description: "El programa de 4Geeks Academy es un ambiente intensivo de aprendizaje donde te convertirás en Front-End Developer."
   image: "/images/bg/main-bg.jpg"
-  keywords: "Coding Classes, Learn to code, 4Geeks Academy"
+  keywords: ""
   visibility: "unlisted" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   template: "landing_a" # <--- choose your landing template
   redirects: []
@@ -13,7 +13,7 @@ meta_info:
   # Set a particular course or location to the landing page
   # this UTM fields will be also included in the CRM contact
   utm_course: ["full-stack"]
-  utm_location: ["downtown-miami"]
+  utm_location: ["santiago-chile"]
   automation: soft # comma separated, "soft" is the default value
   tag: request_more_info # comma separated, "request_more_info" is the default value
 
@@ -33,8 +33,8 @@ form:
 
 apply_schollarship: # form that is displayed at the end of the landing
   # title: "Apoyo Profesional Ilimitado"
-  imageSide: "left"
-  image: "../../../static/images/landing/apply.png"
+  imageSide: "right"
+  image: "../../../static/images/landing/hombre-con-laptop.png"
 
 # jumbotron on the top (cannot be commented out)
 header_data:
@@ -42,7 +42,7 @@ header_data:
   sub_heading: "¡Conviértete en desarrollador en 12 semanas!"
   # background: "#FFF1D1"
   badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
-  background_image: "../../../static/images/locations/santiago-noche.jpg"
+  background_image: "../../../static/images/locations/satiago-background.webp"
   image_filter: brightness(0.15)
 
 features:
@@ -60,15 +60,15 @@ features:
 follow_bar:
   position: "top" # top, bottom, hidden
   content:
-    text: "Build Your Tech Skills from Scratch with\n Our Front-End Developer Bootcamp"
-    text_mobile: "Build Your Tech Skills from Scratch with\n Our Front-End Developer Bootcamp"
+    text: "Reserva tu lugar ahora y comienza\n tu futuro como desarrollador Front-End"
+    text_mobile: "Reserva tu lugar ahora y comienza\n tu futuro como desarrollador Front-End"
     # devices:   XL      LG    MD      SM    XS
-    font_size: ["25px", "25px", "25px", "20px", "18px"]
+    font_size: ["22px", "22px", "22px", "20px", "18px"]
   button:
-    text: "Get more information"
+    text: "Obtén más información"
     path: "#leadform_bottom"
   phone:
-    text: "Call"
+    text: ""
 
 short_badges:
   - name: "Ebootcamp"
@@ -99,21 +99,21 @@ short_badges:
 program_details:
   position: 2
   heading: "Domina el Front-End con JS & React con 4Geeks Academy"
-  sub_heading: "Become an expert in both front-end and back-end development in just 18 weeks!"
+  sub_heading: "Conviértete en desarrollador Front-End en tan solo 12 semanas"
 
 badges:
   position: 5
-  heading: "Numerous awards and recognitions validate our excellence"
+  heading: "Numerosos premios y reconocimientos avalan nuestra excelencia"
 
 geeks_vs_others:
-  position: 7
-  heading: "What sets our front-end developer bootcamp apart?"
+  position: 10
+  heading: "¿Qué hace a nuestro Front-End Developer Bootcamp el mejor?"
   paragraph: ""
   total_rows: 5
 
 rating_reviews:
   position: 11
-  heading: "Top rated on all available review sites"
+  heading: "Excelentes reseñas de múltiples sitios"
   rating_list:
     - alt: "Career Karma"
       image: "../../../static/images/badges/career-karma.png"
@@ -134,14 +134,14 @@ rating_reviews:
 
 alumni_projects:
   position: 14
-  heading: "Discover What You Can Create: Student Project Showcase"
-  sub_heading: "Explore our graduates' final projects"
+  heading: "Proyectos hechos por nuestros alumnos"
+  sub_heading: ""
 
 who_is_hiring:
   position: 15
   limit: 4
-  heading: "Who is hiring our students?"
-  sub_heading: "500+ hiring partners, and 50+ job openings right now for software development"
+  heading: "¿Quién contrata a nuestros alumnos?"
+  sub_heading: "Nos encanta ver crecer a nuestros estudiantes, es por eso que nos esforzamos cada día por tener más aliados, para que puedas trabajar en empresas que te ayuden a seguir creciendo profesionalmente."
 
 # Possible layours: [two_column_left_image, two_column_right_image]
 components:
@@ -161,7 +161,7 @@ components:
       text: "¿Por qué Estudiar programación Front-End?"
     sub_heading:
       text: |
-        El salario promedio de un Front_End Developer Junior es de unos 600.000 CLP y 800.000 CLP aproximadamente.
+        El salario promedio de un Front-End Developer Junior es de unos 600.000 CLP y 800.000 CLP aproximadamente.
 
         Nuestro programa no solo te capacitará para convertirte en desarrollador Front-End, sino que también te enseñará las tecnologías más buscadas y mejor pagadas del mercado actual. 
         como : JavaScript, HTML, CSS, librerías, Frameworks, etc.
@@ -193,23 +193,23 @@ components:
     layout: iconogram
     swipable: True
     heading:
-      text: "How it Works?"
+      text: "Aprende a tu ritmo y con la mejor atención"
       font_size: ["30px", "30px", "30px", "30px", "30px"]
     sub_heading:
-      text: 'The U.S. Bureau of Labor Statistics (BLS) projects web developer jobs to grow by 13% from 2022 to 2032, much faster than the average for all occupations (8%). This translates to roughly 89,400 new jobs in the field'
+      text: 'El sector tecnológico está en constante crecimiento, lo que significa que las oportunidades laborales como desarrollador Front-End son infinitas.'
       font_size: ["16px", "16px", "16px", "16px", "16px"]
       style: '{ "textAlign": "center", "width": "60%" }'
     text_link: "/"
     icons:
-      - icon: "graduation-2"
-        title: "Join 4Geeks Academy"
-        content: "Develop your full techie potential! Learn from industry experts, connect with a vibrant community, network with fellow coders and industry leaders, and showcase your skills."
       - icon: "laptop_new"
-        title: "Dive in & Code"
-        content: "Experience interactive, hands-on learning with live online classes and access to recorded materials to deepen your understanding. Tackle challenging projects using the most important tools and frameworks in the tech industry."
+        title: "Inscripción"
+        content: "En 4Geeks Academy, la inscripción a nuestro Bootcamp es sencilla y rápida. En pocos pasos, podrás iniciar tu camino hacia una transformación profesional sin igual."
+      - icon: "graduation-2"
+        title: "Clases personalizadas"
+        content: "Disfruta de una experiencia de aprendizaje personalizada con un ratio de profesor/alumno de 1 a 7. Recibe la atención individualizada que necesitas para convertirte en un experto en desarrollo Front-End."
       - icon: "stairswflag"
-        title: "Job placement"
-        content: "Our program will equip you with the most sought-after skills in the job market, connect you with top companies, and help you secure your dream job. With our expert career coaching and support network, you’ll have it all to launch a fulfilling coding career. (And we mean it!)"
+        title: "Mentorías ilimitadas"
+        content: "Contamos con un equipo de mentores apasionados por la enseñanza que te brindarán apoyo y acompañamiento durante todo tu proceso de aprendizaje. Tendrás acceso a mentorías ilimitadas, incluso después de graduarte, para que nunca te falte el impulso que necesitas para alcanzar tus metas."
 
   - name: geekinfo_2
     position: 4
@@ -224,13 +224,13 @@ components:
       text: ""
       style: '{ "font-size": "30px" }'
     heading:
-      text: "Why choose our front-end development bootcamp?"
+      text: "¿Por qué elegir nuestro bootcamp de desarrollo front-end?"
       font_size: ["40px", "40px", "40px", "40px", "40px"]
     sub_heading:
-      text: "The Unique Features of Our Coding Bootcamp"
+      text: "Las características únicas de 4Geeks Academy"
       font_size: ["16px", "16px", "16px", "16px", "16px"]
     button:
-      text: "Get more information"
+      text: "Obtén más información"
       color: white
       hover_color: "white"
       background: "black"
@@ -241,39 +241,38 @@ components:
       path: ""
     bullets:
       items:
-        - heading: "FROM ZERO TO PRO"
-          text: "Whether you have zero coding knowledge, lack a college degree, or aim to professionalize your coding abilities, our hands-on teaching methodology will transform you into a career-ready full-stack developer."
+        - heading: "De cero a Desarrollador"
+          text: "Ya sea que tengas o no conocimiento previo sobre programación, este punto no es limitante cualquier persona puede ingresar a la academia donde tendrá acceso a todas las herramientas para convertirse en todo un Front-End Developer."
           icon: "circle" #string with icon for example ['check', 'cicle', etc]
-        - heading: "UNLIMITED MENTORSHIP"
-          text: "Get expert assistance whenever you need it. Access a mentor at any time, even after graduation."
+        - heading: "Mentorías ilimitadas"
+          text: "Recibirás asesoramiento de carrera personalizado y apoyo en la búsqueda de empleo, con acceso ilimitado y de por vida a recursos y a una comunidad en la que estamos allí para impulsar tu éxito profesional."
           icon: "circle" #string with icon for example ['check', 'cicle', etc]
-        - heading: "COMPREHENSIVE CAREER SUPPORT"
-          text: "Receive personalized guidance for preparing your profile, resume, and portfolio. Benefit from tailored practice interviews and job search tips. Accessible for a lifetime."
+        - heading: "Programa de Contenido"
+          text: "Nuestro Bootcamp está enfocado en las tecnologías más demandadas del mercado, lo que te da un sólido punto de partida para ingresar al mundo laboral."
           icon: "circle" #string with icon for example ['check', 'cicle', etc]
 
 
   - name: passion
-    position: 10
+    position: 7
     background: "#fbfbfb"
     layout: two_column_left
     proportions: [6, 6]
     image:
-      style: '{ "border" : "3px solid black", "backgroundSize": "contain", "marginTop": "15px"}'
-      shadow: true
-      src: "/images/landing/alissa-video.webp"
-      link: "https://www.switchup.org/bootcamps/4geeks-academy"
-    video: "EcqasocRKHo"
+      style: '{ "border" : "3px solid black" }' 
+      shadow: true 
+      src: "../../../static/images/testimonials/joshua-bravo-testimonial.jpg"
+    video: "https://www.youtube.com/watch?v=rtpfwwfE0yY"
     heading:
-      text: "Unlock a World of Opportunities!"
-      font_size: ["40px", "40px", "40px", "40px", "40px"]
+      text: "Conoce la historia de Joshua que se convirtió en desarrollador y ya forma parte de la industria Tecnológica."
+        #xl      lg     md     sm    xs
+      font_size: ["40px", "34px", "34px", "25px", "20px"]
     content:
-      text: "Listen to our campus manager Alissa explain the unique features that make our Front End Development Bootcamp so successful."
+      text: "Descubre la inspiradora historia de Joshua Bravo, quien pasó de ser un asistente de cocina a programador gracias a su decisión de formar parte de 4Geeks Academy. Su experiencia es un testimonio vivo de cómo la dedicación y el aprendizaje en este bootcamp lo llevaron a convertirse en un profesional altamente capacitado."
       font_size: ["16px"]
     button:
-      text: "GET MORE INFO"
-      background: black
-      color: white
-      hover_color: "#white"
+      text: "OBTÉN MÁS INFORMACIÓN"
       path: "#leadform_bottom"
-
+      color: "white"
+      background: "black"
+      hover: "lightBlue"
 
