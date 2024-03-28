@@ -125,7 +125,7 @@ components:
     proportions: [4, 8]
     background: "#f1f1f1"
     image:
-      style: '{ "backgroundSize": "contain" }'
+      style: '{ "backgroundSize": "contain", "height": "250px", "minHeight": "250px" }'
       src: "/images/badges/Course-Report-Badge-2024.webp"
       link: "https://www.coursereport.com/schools/4geeks-academy"
     heading:
