@@ -14,6 +14,7 @@ meta_info:
   # for example: for this location, only show cohorts starting with usa-xx-spanish
   cohort_include_regex: ["miami"]
   cohort_exclude_regex: ['usa-\d{1,10}-spanish']
+  home_video: "https://www.videoask.com/fyq2h2hvx"
 
 seo_title: "Coding Bootcamp in Orlando"
 header:
@@ -87,15 +88,15 @@ two_columns:
   proportions: [6, 6]
   image:
     style: '{"border" : "5px solid black", "backgroundSize": "contain" }'
-    src: "/static/images/testimonials/allisa-testimonial.jpg"
-    shadow: true  
-  video: "https://www.youtube.com/watch?v=TCHASxvkhpI"
+    src: "/images/landing/alissa-video.webp"
+    shadow: true
+  video: "EcqasocRKHo"
   heading:
-    text: "Your Path to Tech with 4Geeks Academy in Orlando"
+    text: "Launch your coding career in Orlando with 4Geeks Academy's Unique Advantages"
     font_size: ["30px", "30px", "30px", "30px", "30px"]
   sub_heading:
-    text: "Unlock Your Tech Potential through Coding Mastery in Orlando"
-    font_size: ["18px", "18px", "22px", "22px", "22px"]
+    text: "4Geeks Academy offer unique features like unlimited mentorship from experienced professionals and a laser focus on code, ensuring you gain the in-demand skills needed to thrive as a full-stack developer."
+    font_size: ["18px", "18px", "18px", "18px", "18px"]
   button:
     text: "APPLY NOW"
     color: "white"

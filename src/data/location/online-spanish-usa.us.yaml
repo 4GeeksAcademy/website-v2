@@ -19,6 +19,7 @@ meta_info:
   # for example: for this location, only show cohorts starting with usa-xx-spanish
   cohort_include_regex: ['usa-\d{1,10}-spanish']
   cohort_exclude_regex: ["miami"]
+  home_video: "https://www.videoask.com/fyq2h2hvx"
 
 seo_title: "Coding Bootcamp in Spanish"
 header:
@@ -93,9 +94,9 @@ two_columns:
   proportions: [6, 6]
   image:
     style: '{"border" : "5px solid black", "backgroundSize": "contain" }'
-    src: "/static/images/testimonials/allisa-testimonial.jpg"
-    shadow: true  
-  video: "https://www.youtube.com/watch?v=TCHASxvkhpI"
+    src: "/images/landing/alissa-video.webp"
+    shadow: true
+  video: "EcqasocRKHo"
   heading:
     text: "Your Journey with 4Geeks Academy Online"
     font_size: ["30px", "30px", "30px", "30px", "30px"]
