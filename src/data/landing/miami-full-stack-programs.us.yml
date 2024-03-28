@@ -44,7 +44,7 @@ header_data:
   # background: "#FFF1D1"
   badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
   background_image: "../../../static/images/landing/4Geeks-Espana.jpg"
-  image_filter: brightness(1)
+  image_filter: brightness(0.1)
 
 features:
   marginTop: 0px #<-- separation between tagline and the bullets
