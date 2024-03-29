@@ -96,33 +96,28 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
     body2: Colors.darkGray,
   };
 
-  const paragraphParts = yml.header.paragraph.split("||");
+  // const paragraphParts = yml.header.paragraph.split("||");
 
   return (
     <>
       <Div
-        margin={isCustomBarActive(session) ? "40px 0 0 0" : "0"}
-        padding="90px 30px 0 30px"
-        padding_tablet="120px 130px 72px 130px"
-        padding_lg="120px 0 72px 0"
+        margin={isCustomBarActive(session) ? "50px auto 0 auto" : "auto"}
+        padding="0 30px"
+        padding_tablet="48px 80px"
+        padding_lg="48px 80px"
         position="relative"
         display="block"
       >
-        <Container
-          display="block"
-          padding_md="0"
+        <GridContainerWithImage
+          padding="30px 0 0 0"
           padding_tablet="0"
-          padding="0"
+          columns_tablet="2"
+          margin_tablet="30px auto 20px auto"
+          position="relative"
+          gridColumn_tablet="1/15"
+          maxWidth="1366px"
         >
-          <GridContainerWithImage
-            padding="30px 0 0 0"
-            padding_tablet="0"
-            columns_tablet="2"
-            margin_tablet="30px 0 20px 0"
-            position="relative"
-            gridColumn_tablet="1/15"
-          >
-            {/* <Div
+          {/* <Div
               position="absolute"
               zIndex="5"
               left_tablet={"50%"}
@@ -143,113 +138,105 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
             >
               <Icon icon="logo-badge" width="100%" height="100%" />
             </Div> */}
-
-            <Div
-              flexDirection="column"
-              alignItems="start"
-              alignItems_tablet="center"
-              alignItems_sm="center"
-              margin="auto"
-              padding_tablet="0"
-              // margin_tablet="0"
-              // margin_sm="0 0 20px 0"
+          <Div
+            flexDirection="column"
+            alignItems="start"
+            alignItems_tablet="center"
+            alignItems_sm="center"
+            margin="auto"
+            padding_tablet="0"
+          >
+            <H1
+              type="h1"
+              textAlign="center"
+              textAlign_tablet="left"
+              textShadow="none"
+              fontSize="50px"
+              lineHeight="54.4px"
+              color={colors.title}
+              fontFamily="Archivo,Lato,sans-serif"
+              fontWeight="900"
             >
-              <H1
-                type="h1"
+              {yml.header.title}
+            </H1>
+            <Div display="block" margin="20px 0">
+              <Paragraph
                 textAlign="center"
                 textAlign_tablet="left"
-                textShadow="none"
-                fontSize="50px"
-                lineHeight="54.4px"
-                color={colors.title}
+                padding="0"
+                color={colors.body}
+                fontSize="24px"
+                lineHeight="26.11px"
                 fontFamily="Archivo,Lato,sans-serif"
-                fontWeight="900"
-              >
-                {yml.header.title}
-              </H1>
-              <Div display="block" margin="20px 0">
-                {paragraphParts.map((part, index) => (
-                  <Paragraph
-                    key={index}
-                    textAlign="center"
-                    textAlign_tablet="left"
-                    padding="0"
-                    color={colors.body}
-                    fontSize="24px"
-                    lineHeight="26.11px"
-                    fontFamily="Archivo,Lato,sans-serif"
-                  >
-                    {part}
-                  </Paragraph>
-                ))}
-              </Div>
-
-              <Div
-                flexDirection_tablet="row"
-                flexDirection="column"
-                justifyContent="center"
-                justifyContent_tablet="center"
-                alignItems="center"
-                width="100%"
-                //margin_tablet="0 0 50px 0"
-              >
-                <Div width="100%" width_tablet="fit-content">
-                  <Link
-                    to={yml.button.apply_button_link}
-                    style={{ width: "100%" }}
-                  >
-                    <Button
-                      variant="full"
-                      justifyContent="center"
-                      width="100%"
-                      width_tablet="fit-content"
-                      color={Colors.black}
-                      margin_tablet="10px 24px 10px 0"
-                      textColor="white"
-                    >
-                      {applyButtonText}
-                    </Button>
-                  </Link>
-                </Div>
-                <Button
-                  onClick={handleOpen}
-                  display="block"
-                  width="100%"
-                  width_tablet="fit-content"
-                  variant="outline"
-                  background="#FFF"
-                  color={Colors.black}
-                  margin="10px 0 0 0"
-                  margin_tablet="0"
-                  textColor={Colors.black}
-                  textAlign="center"
-                >
-                  {yml.button.btn_label}
-                </Button>
-              </Div>
-            </Div>
-            <Div
-              display="flex"
-              justifyContent="center"
-              height="auto"
-              width="100%"
-            >
-              <StyledBackgroundSection
-                height_tablet="533px"
-                display_tablet="block"
-                // display="none"
-                height="390px"
-                width="100%"
-                image={
-                  yml.header.image &&
-                  yml.header.image.childImageSharp.gatsbyImageData
-                }
-                alt="Hero image"
-                bgSize="contain"
+                dangerouslySetInnerHTML={{ __html: yml.header.paragraph }}
               />
             </Div>
-          </GridContainerWithImage>
-        </Container>
+
+            <Div
+              flexDirection_tablet="row"
+              flexDirection="column"
+              justifyContent="center"
+              justifyContent_tablet="center"
+              alignItems="center"
+              width="100%"
+              //margin_tablet="0 0 50px 0"
+            >
+              <Div width="100%" width_tablet="fit-content">
+                <Link
+                  to={yml.button.apply_button_link}
+                  style={{ width: "100%" }}
+                >
+                  <Button
+                    variant="full"
+                    justifyContent="center"
+                    width="100%"
+                    width_tablet="fit-content"
+                    color={Colors.black}
+                    margin_tablet="10px 24px 10px 0"
+                    textColor="white"
+                  >
+                    {applyButtonText}
+                  </Button>
+                </Link>
+              </Div>
+              <Button
+                onClick={handleOpen}
+                display="block"
+                width="100%"
+                width_tablet="fit-content"
+                variant="outline"
+                background="#FFF"
+                color={Colors.black}
+                margin="10px 0 0 0"
+                margin_tablet="0"
+                textColor={Colors.black}
+                textAlign="center"
+              >
+                {yml.button.btn_label}
+              </Button>
+            </Div>
+          </Div>
+          <Div
+            display="flex"
+            justifyContent="center"
+            height="auto"
+            width="100%"
+          >
+            <StyledBackgroundSection
+              height_tablet="533px"
+              display_tablet="block"
+              // display="none"
+              height="390px"
+              width="100%"
+              image={
+                yml.header.image &&
+                yml.header.image.childImageSharp.gatsbyImageData
+              }
+              alt="Hero image"
+              bgSize="contain"
+            />
+          </Div>
+        </GridContainerWithImage>
       </Div>
 
       <Container padding="0" padding_tablet="0 90px" padding_lg="0">

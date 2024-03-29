@@ -17,7 +17,8 @@ button:
 seo_title: "Job Guarantee"
 header:
   title: Get a job or your money back
-  paragraph: We are all in with you, every step of the way! || Secure a job within 6 months of graduation or receive a full refund!
+  paragraph: |
+    We are all in with you, every step of the way! <br> Secure a job within 6 months of graduation or receive a full refund!
   image: "../../../static/images/persons-with-laptop.png"
 
 two_column_left:
@@ -53,7 +54,7 @@ two_column_left:
       path: "#leadform"
 
 we_trust_section:
-  title: Why trust us?
+  title: Why should you trust us?
   text: |
     A job guarantee seals our commitment to your success! With a proven track record of success, our program will continue to empower future graduates. 
     <br>
