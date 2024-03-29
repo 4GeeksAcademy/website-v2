@@ -21,35 +21,36 @@ header:
     We are all in with you, every step of the way! <br> Secure a job within 6 months of graduation or receive a full refund!
   image: "../../../static/images/persons-with-laptop.png"
 
-two_column_left:
+two_column_right:
   proportions: [6, 6]
   image:
-    style: '{ "backgroundSize": "contain" }'
-    src: "/images/woman-glasses-laptop.png"
+    style: '{ "backgroundSize": "contain", "minHeight": "200px", "height": ["500px", "500px", "500px", "500px", "100%"] }'
+    src: "/images/woman-in-laptop.png"
   heading:
     text: "Why are we offering a job guarantee?"
     font_size: ["30px", "30px", "30px", "30px", "30px"]
+    style: '{ "fontFamily": "Archivo, Lato, sans-serif", "fontWeight": "900", "fontSize": "38px"}'
   content:
     font_size: ["24px", "24px", "24px", "18px", "18px"]
     #Using <p> tags gives <p> inside <p> bug
     text: |
-      We’re here to challenge the traditional education model. Our bootcamps go beyond teaching relevant skills; they are designed to launch new, rewarding careers. Together, we’ll shape your future.
+      We're challenging the traditional education model. It's not just about teaching the relevant skills; it's about the opportunities we’ll create for your career. Together.
       <br>
       <br>
-      <span style="color: #0097CD;">✓</span> We <strong style="font-weight: bold;">trust</strong> the effectiveness of the program
+      <span style="color: #0084FF; width: 20px; display: inline-block">✓</span> We <strong style="font-weight: bold;">trust</strong> the effectiveness of the program
       <br>
       <br>
-      <span style="color: #0097CD;">✓</span> We <strong style="font-weight: bold;">trust</strong> the industry
+      <span style="color: #0084FF; width: 20px; display: inline-block">✓</span> We <strong style="font-weight: bold;">trust</strong> the industry
       <br>
       <br>
-      <span style="color: #0097CD;">✓</span> We <strong style="font-weight: bold;">trust</strong> the process
+      <span style="color: #0084FF; width: 20px; display: inline-block">✓</span> We <strong style="font-weight: bold;">trust</strong> the process
       <br>
       <br>
-      <span style="color: #0097CD;">✓</span> We <strong style="font-weight: bold;">trust</strong> you
+      <span style="color: #0084FF; width: 20px; display: inline-block">✓</span> We <strong style="font-weight: bold;">trust</strong> you
   button:
       text: "APPLY"
       color: "white"
-      background: "black"
+      background: "blue3"
       hover_color: "white"
       path: "#leadform"
 
@@ -73,7 +74,7 @@ we_trust_section:
 
 how_it_works:
   title: How does it work?
-  text: Here's how you qualify for the job guarantee. If you follow every step and do not get hired within 6 months of graduation, you’ll get 100% of your tuition back.
+  text1: Here's how you qualify for the job guarantee.
   steps:
     - icon: rocket-2
       title: Start the program
@@ -91,6 +92,7 @@ how_it_works:
   link:
     url: https://storage.googleapis.com/4geeks-academy-website/PDF%20and%20Docs/Conditions%20Job%20Guaranteed%20Program.pdf
     label: Conditions Apply.
+  text2: If you follow every step and do not get hired within 6 months of graduation, you’ll get 100% of your tuition back.
 
 successful_stories:
   title: Success stories

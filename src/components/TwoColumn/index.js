@@ -81,6 +81,7 @@ const Side = ({
     );
   }
 
+  const headingStyle = heading.style ? JSON.parse(heading.style) : null;
   const [h_xl, h_lg, h_md, h_sm, h_xs] =
     heading && heading.font_size ? heading.font_size : [];
   const [sh_xl, sh_lg, sh_md, sh_sm, sh_xs] =
@@ -122,6 +123,7 @@ const Side = ({
       {heading && (
         <H2
           type="h2"
+          style={headingStyle}
           textAlign_tablet="left"
           lineHeight="38px"
           lineHeight_tablet="38px"
@@ -131,7 +133,6 @@ const Side = ({
           fontSize_md={h_md || "30px"}
           fontSize_sm={h_sm}
           margin="30px 0 20px 0"
-          style={heading.style ? JSON.parse(heading.style) : null}
         >
           {heading.text}
         </H2>

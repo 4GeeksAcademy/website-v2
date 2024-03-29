@@ -20,30 +20,31 @@ header:
   paragraph: ¡Estamos contigo en cada paso del camino! ¡Encuentra trabajo dentro de los 6 meses de graduación o recibe un reembolso completo!
   image: "/images/persons-with-laptop.png"
 
-two_column_left:
+two_column_right:
   proportions: [6, 6]
   image:
-    style: '{ "backgroundSize": "contain" }'
-    src: "/images/woman-glasses-laptop.png"
+    style: '{ "backgroundSize": "contain", "minHeight": "200px", "height": ["500px", "500px", "500px", "500px", "100%"] }'
+    src: "/images/woman-in-laptop.png"
   heading:
     text: "¿Por qué ofrecemos trabajo garantizado?"
     font_size: ["30px", "30px", "30px", "30px", "30px"]
+    style: '{ "fontFamily": "Archivo,Lato,sans-serif", }'
   content:
     font_size: ["24px", "24px", "24px", "18px", "18px"]
     text: |
       <p>Estamos desafiando el modelo educativo tradicional. No se trata solo de enseñar las habilidades relevantes; se trata de las oportunidades que crearemos para tu carrera. Juntos.</p>
       <br>
-      <p><span style="color: #0097CD;">✓</span> Nosotros <strong style="font-weight: bold;">confiamos</strong> en la efectividad del programa</p>
+      <p><span style="color: #0084FF; width: 20px; display: inline-block"">✓</span> Nosotros <strong style="font-weight: bold;">confiamos</strong> en la efectividad del programa</p>
       <br>
-      <p><span style="color: #0097CD;">✓</span> Nosotros <strong style="font-weight: bold;">confiamos</strong> en la industria</p>
+      <p><span style="color: #0084FF; width: 20px; display: inline-block"">✓</span> Nosotros <strong style="font-weight: bold;">confiamos</strong> en la industria</p>
       <br>
-      <p><span style="color: #0097CD;">✓</span> Nosotros <strong style="font-weight: bold;">confiamos</strong> en el proceso</p>
+      <p><span style="color: #0084FF; width: 20px; display: inline-block"">✓</span> Nosotros <strong style="font-weight: bold;">confiamos</strong> en el proceso</p>
       <br>
-      <p><span style="color: #0097CD;">✓</span> Nosotros <strong style="font-weight: bold;">confiamos</strong> en ti</p>
+      <p><span style="color: #0084FF; width: 20px; display: inline-block"">✓</span> Nosotros <strong style="font-weight: bold;">confiamos</strong> en ti</p>
   button:
       text: "APLICA"
       color: "white"
-      background: "black"
+      background: "blue3"
       hover_color: "white"
       path: "#leadform"
 
@@ -67,7 +68,7 @@ we_trust_section:
 
 how_it_works:
   title: ¿Cómo funciona?
-  text: Aquí te explicamos cómo calificar para el trabajo garantizado. Si sigues todos los pasos y no consigues trabajo en los 6 meses posteriores a la graduación, te devolveremos el 100 % de tu matrícula.
+  text1: Aquí te explicamos cómo calificar para el trabajo garantizado.
   steps:
     - icon: rocket-2
       title: Inicia el programa
@@ -82,6 +83,7 @@ how_it_works:
       title: Completa el proceso de apoyo a la carrera
     - icon: briefcase-2
       title: Consigue trabajo en 6 meses
+  text2: Si sigues todos los pasos y no consigues trabajo en los 6 meses posteriores a la graduación, te devolveremos el 100 % de tu matrícula.
   link:
     url: https://storage.googleapis.com/4geeks-academy-website/PDF%20and%20Docs/Condiciones%20y%20Requerimientos%20Job%20Guaranteed%20Program.pdf
     label: Condiciones que aplican.

@@ -34,6 +34,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import WeTrust from "../components/WeTrust/index.js";
+import HowItWorks from "../components/HowItWorks/index.js";
 
 const JobGuarantee = ({ data, pageContext, yml }) => {
   const { session } = useContext(SessionContext);
@@ -71,7 +72,7 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
       value: node.meta_info.bc_slug,
     }));
 
-  const ymlTwoColumn = yml?.two_column_left;
+  const ymlTwoColumn = yml?.two_column_right;
 
   const settings = {
     className: "slider variable-width",
@@ -179,7 +180,6 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
               justifyContent_tablet="center"
               alignItems="center"
               width="100%"
-              //margin_tablet="0 0 50px 0"
             >
               <Div width="100%" width_tablet="fit-content">
                 <Link
@@ -241,148 +241,20 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
 
       <WeTrust we_trust={yml.we_trust_section} />
 
-      <Container
-        id="two_column_left"
-        flexDirection="column"
-        margin="0"
-        padding="0 10px"
-        padding_tablet="0 90px"
-        padding_md="0 50px"
-        padding_lg="0"
-      >
-        <TwoColumn
-          right={{ image: ymlTwoColumn.image }}
-          left={{
-            heading: ymlTwoColumn.heading,
-            sub_heading: ymlTwoColumn.sub_heading,
-            bullets: ymlTwoColumn.bullets,
-            content: ymlTwoColumn.content,
-            button: ymlTwoColumn.button,
-          }}
-          proportions={ymlTwoColumn.proportions}
-          session={session}
-        />
-      </Container>
+      <TwoColumn
+        left={{ image: ymlTwoColumn.image }}
+        right={{
+          heading: ymlTwoColumn.heading,
+          sub_heading: ymlTwoColumn.sub_heading,
+          bullets: ymlTwoColumn.bullets,
+          content: ymlTwoColumn.content,
+          button: ymlTwoColumn.button,
+        }}
+        proportions={ymlTwoColumn.proportions}
+        session={session}
+      />
 
-      <Container
-        display="block"
-        margin="40px auto"
-        padding="40px 10px"
-        padding_tablet="40px 90px"
-        padding_md="40px 130px"
-        padding_lg="40px 0"
-      >
-        <Div display="block" margin="0px auto 40px 0" padding="0 20px">
-          <H2 margin="0 0 15px 0">{yml.how_it_works.title}</H2>
-          <Paragraph color="#000" opacity="1" fontSize="18px">
-            {yml.how_it_works.text}
-          </Paragraph>
-        </Div>
-        <Div
-          margin="auto"
-          margin_lg="auto"
-          width="300px"
-          width_tablet="fit-content"
-          width_md="auto"
-          gap_tablet="30px"
-          gap_md="40px"
-          flexDirection="column"
-          flexDirection_tablet="row"
-          justifyContent="center"
-        >
-          {yml.how_it_works.steps.map((step, i) => (
-            <Div
-              width="100%"
-              width_tablet="90px"
-              width_md="130px"
-              height_tablet="300px"
-              position="relative"
-            >
-              {i !== yml.how_it_works.steps.length - 1 && (
-                <ImgV2
-                  src="/images/dotted-line.png"
-                  position="absolute"
-                  left_tablet="50%"
-                  left="90px"
-                  top_md={i % 2 === 0 ? "30px" : "5px"}
-                  top_tablet="30px"
-                  top="80px"
-                  rotate_tablet={i % 2 !== 0 && "123deg"}
-                  rotate={i % 2 !== 0 && "-45deg"}
-                  alt="Dashed line"
-                  width_tablet="150px"
-                  width_md="200px"
-                  width="150px"
-                  height="69px"
-                  height_tablet="69px"
-                  height_md="119px"
-                  backgroundSize="contain"
-                />
-              )}
-              <Div
-                flexDirection={i % 2 === 0 ? "row" : "row-reverse"}
-                justifyContent="between"
-                justifyContent_tablet="start"
-                flexDirection_tablet="column"
-                alignItems="center"
-                position_tablet="absolute"
-                top={i % 2 !== 0 && "70px"}
-                zIndex="5"
-                width="100%"
-                width_tablet="auto"
-              >
-                <Div
-                  flexDirection="column"
-                  justifyContent="center"
-                  width="120px"
-                  width_tablet="90px"
-                  width_md="120px"
-                  height="120px"
-                  height_tablet="90px"
-                  height_md="120px"
-                  border={`4px solid #FFB718`}
-                  background="#FFF1D1"
-                  borderRadius="60px"
-                >
-                  <Icon
-                    style={{ margin: "auto" }}
-                    color="#FFB718"
-                    icon={step.icon}
-                    width="45px"
-                    height="45px"
-                  />
-                </Div>
-                <Paragraph
-                  fontSize={step.highlight ? "20px" : "18px"}
-                  color={step.highlight ? "#FFB718" : "#000"}
-                  opacity="1"
-                  maxWidth="130px"
-                  maxWidth_tablet="90px"
-                  maxWidth_md="130px"
-                >
-                  {`${i + 1}. ${step.title}`}
-                </Paragraph>
-              </Div>
-            </Div>
-          ))}
-        </Div>
-        {yml.how_it_works.link && (
-          <Paragraph
-            margin="30px 0 0 0"
-            fontSize="18px"
-            color={Colors.black}
-            opacity="1"
-            textDecoration="underline"
-          >
-            <Anchor
-              color={`${Colors.black} !important`}
-              to={yml.how_it_works.link.url}
-            >
-              {yml.how_it_works.link.label}
-            </Anchor>
-          </Paragraph>
-        )}
-      </Container>
+      <HowItWorks how_it_works={yml.how_it_works} />
 
       <Div
         background="#FAFAFA"
@@ -603,7 +475,7 @@ export const query = graphql`
             syllabus_heading
             syllabus_motivation
           }
-          two_column_left {
+          two_column_right {
             proportions
             image {
               style
@@ -612,6 +484,7 @@ export const query = graphql`
             heading {
               text
               font_size
+              style
             }
             content {
               text
@@ -636,7 +509,7 @@ export const query = graphql`
           }
           how_it_works {
             title
-            text
+            text1
             steps {
               icon
               title
@@ -646,6 +519,7 @@ export const query = graphql`
               url
               label
             }
+            text2
           }
           successful_stories {
             title
