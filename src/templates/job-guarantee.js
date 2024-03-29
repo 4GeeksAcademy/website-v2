@@ -91,9 +91,9 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
     );
 
   const colors = {
-    title: Colors.black2,
-    body: Colors.black3,
-    body2: Colors.darkGray,
+    title: Colors.black2, //#2E2E38
+    body: Colors.black3, //#4D4D5C
+    body2: Colors.darkGray, //3A3A3A
   };
 
   // const paragraphParts = yml.header.paragraph.split("||");
@@ -239,9 +239,7 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
         </GridContainerWithImage>
       </Div>
 
-      <Container padding="0" padding_tablet="0 90px" padding_lg="0">
-        <WeTrust we_trust={yml.we_trust_section} />
-      </Container>
+      <WeTrust we_trust={yml.we_trust_section} />
 
       <Container
         id="two_column_left"

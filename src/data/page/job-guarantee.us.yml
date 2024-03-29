@@ -56,7 +56,7 @@ two_column_left:
 we_trust_section:
   title: Why should you trust us?
   text: |
-    A job guarantee seals our commitment to your success! With a proven track record of success, our program will continue to empower future graduates. 
+    Our program has a proven track record of success and will continue to do so.
     <br>
     <br>
     The numbers speak for themselves
@@ -66,10 +66,10 @@ we_trust_section:
       text: Job placement rate
     - icon: chart
       title: "60K"
-      text: Avg. Income at a new job
+      text: Average income at new job
     - icon: graduation-2
       title: "130"
-      text: Average days to get hired
+      text: Days to get a job after graduation
 
 how_it_works:
   title: How does it work?

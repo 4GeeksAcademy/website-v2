@@ -3,55 +3,50 @@ import { useStaticQuery, graphql, Link } from "gatsby";
 import ReactPlayer from "../ReactPlayer";
 import { H2, Paragraph, H3 } from "../Heading";
 import Icon from "../Icon";
-import { Div } from "../Sections";
+import { Container, Div } from "../Sections";
 import { Button, Colors, Img } from "../Styling";
 import { navigate } from "gatsby";
 import { transferQuerystrings, smartRedirecting } from "../../utils/utils";
 
 const WeTrust = ({ we_trust }) => {
   return (
-    <Div
+    <Container
       id="we-trust"
       display="block"
+      padding="0 30px"
       margin="0 auto"
-      padding="0"
       padding_lg="0"
       padding_tablet="40px 40px"
       width="100%"
     >
-      {/* <Div
-        padding="50px 30px"
-        padding_md="40px 80px"
-        padding_lg="40px"
-        padding_tablet="40px 40px"
-        margin="0 auto"
-        background={Colors.lightBlue}
-        display="block"
-        maxWidth="1366px"
-      > */}
       <Div display="block">
         <H2
-          textAlign="left"
+          textAlign="center"
           margin="0 0 22px 0"
-          fontSize_tablet="32px"
-          fontSize="21px"
-          lineHeight=""
+          // fontSize_tablet="35px"
+          fontSize="35px"
+          lineHeight="38.08px"
+          fontFamily="Archivo,Lato,sans-serif"
+          fontWeight="400"
+          color={Colors.black2}
         >
           {we_trust.title}
         </H2>
         <Paragraph
-          textAlign="left"
+          textAlign="center"
           color={Colors.darkGray}
           opacity="1"
-          fontSize_tablet="18px"
-          fontSize="16px"
+          fontFamily="Archivo,Lato,sans-serif"
+          fontWeight="400"
+          fontSize="24px"
+          lineHeight="26.11px"
           dangerouslySetInnerHTML={{ __html: we_trust.text }}
         />
       </Div>
       <Div
         margin="15px 0 0 0"
-        justifyContent_tablet="between"
-        gap="15px"
+        // justifyContent_tablet="between"
+        gap="17px"
         flexDirection="column"
         flexDirection_tablet="row"
       >
@@ -61,12 +56,10 @@ const WeTrust = ({ we_trust }) => {
             background="#FFF"
             border="3px solid #000"
             width="100%"
-            width_md="320px"
             height_md="320px"
-            width_tablet="200px"
             height_tablet="240px"
-            boxShadow="6px 6px 0px 0px rgba(0,0,0,1)"
-            boxShadow_tablet="9px 8px 0px 0px rgba(0,0,0,1)"
+            boxShadow="-6px 6px 0px 0px rgba(0,0,0,1)"
+            boxShadow_tablet="-9px 8px 0px 0px rgba(0,0,0,1)"
             flexDirection_tablet="column"
             justifyContent_tablet="center"
             padding="15px"
@@ -102,8 +95,7 @@ const WeTrust = ({ we_trust }) => {
           </Div>
         ))}
       </Div>
-      {/* </Div> */}
-    </Div>
+    </Container>
   );
 };
 export default WeTrust;
