@@ -15,7 +15,7 @@ const WeTrust = ({ we_trust }) => {
       display="block"
       padding="0 30px"
       margin="0 auto"
-      padding_lg="0"
+      padding_lg="58px 0 80px 0"
       padding_tablet="40px 40px"
       width="100%"
     >
