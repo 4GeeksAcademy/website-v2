@@ -18,6 +18,7 @@ seo_title: "Trabajo garantizado"
 header:
   title: Consigue trabajo o te devolvemos tu dinero
   paragraph: ¡Estamos contigo en cada paso del camino! ¡Encuentra trabajo dentro de los 6 meses de graduación o recibe un reembolso completo!
+  image: "/images/persons-with-laptop.png"
 
 two_column_left:
   proportions: [6, 6]

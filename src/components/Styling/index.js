@@ -59,6 +59,8 @@ export const Colors = {
   lightYellow2: "rgba(255, 183, 24, 0.2)",
   darkYellow: "#FFECBF",
   black: "#000000",
+  black2: "#2E2E38",
+  black3: "#4D4D5C",
   white: "#FFFFFF",
   red: "red",
   lightRed: "#ffcdc9",

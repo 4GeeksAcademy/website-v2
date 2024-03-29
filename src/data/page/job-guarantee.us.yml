@@ -17,7 +17,8 @@ button:
 seo_title: "Job Guarantee"
 header:
   title: Get a job or your money back
-  paragraph: We are all in with you, every step of the way! Secure a job within 6 months of graduation or receive a full refund!
+  paragraph: We are all in with you, every step of the way! || Secure a job within 6 months of graduation or receive a full refund!
+  image: "../../../static/images/persons-with-laptop.png"
 
 two_column_left:
   proportions: [6, 6]
