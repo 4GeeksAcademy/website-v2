@@ -257,36 +257,46 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
       <HowItWorks how_it_works={yml.how_it_works} />
 
       <Div
-        background="#FAFAFA"
+        background={Colors.white}
         padding="30px"
-        padding_tablet="80px 130px"
+        padding_tablet="80px 80px"
         padding_lg="80px 0px"
         margin_lg="auto"
         gap="10px"
         display="block"
         display_tablet="flex"
-        justifyContent="center"
+        justifyContent="between"
+        maxWidth="1366px"
+        width="100%"
       >
         <Div
           height_md="299px"
           flexDirection="column"
           justifyContent_md="between"
-          width_tablet="300px"
+          width_tablet="200px"
           width_md="395px"
-          width_lg="450px"
+          width_lg="388px"
           gap="10px"
           margin="0 0 15px 0"
           margin_tablet="0"
         >
           <Div display="block">
-            <H3 textAlign="left" margin="0 0 10px 0">
+            <H3
+              textAlign="left"
+              margin="0 0 10px 0"
+              fontFamily="Archivo, Lato, sans-serif"
+              fontSize="35px"
+              fontWeight="400"
+            >
               {yml.successful_stories.title}
             </H3>
             <Paragraph
               color="#000"
               opacity="1"
               textAlign="left"
-              fontSize="18px"
+              fontSize="24px"
+              fontWeight="500"
+              lineHeight="28.8px"
             >
               {yml.successful_stories.text}
             </Paragraph>
@@ -297,22 +307,24 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
           display="block"
           width="100%"
           width_tablet="400px"
-          width_md="fit-content"
-          minWidth_md="400px"
-          maxWidth_md="900px"
-          maxWidth_lg="906px"
+          width_md="72%"
+          minWidth_md="330px"
+          maxWidth_md="632px"
+          maxWidth_lg="632px"
+          height_tablet="555px"
+          height_md="375px"
+          border="2px solid black"
+          borderRadius="4px"
+          boxShadow="-6px 6px 0px 0px rgba(0,0,0,1)"
         >
           <Slider {...settings} ref={sliderRef}>
             {testimonials.map((testimonial) => {
               return (
-                <Div
-                  display="block"
-                  // boxShadow_tablet="9px 8px 0px 0px rgba(0,0,0,1)"
-                >
+                <Div display="block" height="360px">
                   <Div
-                    background={Colors.veryLightBlue}
+                    background={Colors.white}
                     margin="0"
-                    border="2px solid black"
+                    padding="0"
                     display="block"
                     display_md="flex"
                     height_tablet="548px"
@@ -329,12 +341,18 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
                       width_md="200px"
                       height="340px"
                       height_tablet="240px"
-                      height_md="100%"
+                      height_md="372px"
                       backgroundSize="contain"
                       flexShrink="0"
                     />
                     <Div padding="10px" display="block">
-                      <H4 textAlign="left" fontWeight="700">
+                      <H4
+                        textAlign="left"
+                        fontWeight="700"
+                        fontFamily="Archivo, Lato, sans-serif"
+                        fontSize="24px"
+                        lineHeight="26.11px"
+                      >
                         {testimonial.student_name}
                       </H4>
                       <Div gap="10px" alignItems="center" margin="0 0 10px 0">
@@ -354,6 +372,9 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
                               textAlign="left"
                               opacity="1"
                               color={Colors.black}
+                              fontFamily="Inter, Lato, sans-serif"
+                              fontSize="12px"
+                              lineHeight="20.52px"
                             >
                               {testimonial.country.name}
                             </Paragraph>
@@ -371,7 +392,7 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
                               cursor: "pointer",
                             }}
                             alt="Linkedin profile"
-                            height="20px"
+                            height="14px"
                             width="60px"
                             backgroundSize="contain"
                           />
@@ -387,6 +408,8 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
                         textAlign="left"
                         opacity="1"
                         color={Colors.black}
+                        fontSize="16px"
+                        lineHeight="24px"
                       >
                         {testimonial.content}
                       </Paragraph>

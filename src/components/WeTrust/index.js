@@ -23,7 +23,6 @@ const WeTrust = ({ we_trust }) => {
         <H2
           textAlign="center"
           margin="0 0 22px 0"
-          // fontSize_tablet="35px"
           fontSize="35px"
           lineHeight="38.08px"
           fontFamily="Archivo,Lato,sans-serif"
@@ -45,7 +44,6 @@ const WeTrust = ({ we_trust }) => {
       </Div>
       <Div
         margin="15px 0 0 0"
-        // justifyContent_tablet="between"
         gap="17px"
         flexDirection="column"
         flexDirection_tablet="row"
