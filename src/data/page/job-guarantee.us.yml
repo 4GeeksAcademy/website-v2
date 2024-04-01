@@ -103,5 +103,6 @@ successful_stories:
     - "cha-fabr"
 
 form:
-  title: "Become a 4Geeks Partner"
+  image: "../../../static/images/woman-with-laptop-in-puff.png"
+  title: "Apply for your scholarship"
   paragraph: "Contact us today to join our network and start benefiting from the opportunities we offer.  Let us help you choose the right track to achieve your goals. Get in touch!"

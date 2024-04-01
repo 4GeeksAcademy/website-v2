@@ -372,7 +372,7 @@ const LeadForm = ({
             display="block"
             className={"leadform-" + layout}
             size="12"
-            padding="0 24px"
+            padding={padding || "0 24px"}
             gap={gap}
           >
             {heading && (
@@ -561,7 +561,12 @@ const LeadForm = ({
               </Alert>
             )}
             {layout === "block" && (
-              <Div display="flex" padding="10px 0 0 0" width="100%">
+              <Div
+                display="flex"
+                padding="10px 0 0 0"
+                width="100%"
+                justifyContent_tablet="end"
+              >
                 <Button
                   //variant="full"
                   type="submit"
@@ -569,6 +574,7 @@ const LeadForm = ({
                   margin={marginButton}
                   margin_tablet={marginButton_tablet}
                   width_lg={widthButton}
+                  width_tablet={buttonWidth_tablet}
                   width_xs="100%"
                   justifyContent="center"
                   background={Colors.blue}

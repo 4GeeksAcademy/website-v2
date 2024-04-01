@@ -17,8 +17,9 @@ button:
 seo_title: "Trabajo garantizado"
 header:
   title: Consigue trabajo o te devolvemos tu dinero
-  paragraph: ¡Estamos contigo en cada paso del camino! ¡Encuentra trabajo dentro de los 6 meses de graduación o recibe un reembolso completo!
-  image: "/images/persons-with-laptop.png"
+  paragraph: |
+    ¡Estamos contigo en cada paso del camino! <br> ¡Encuentra trabajo dentro de los 6 meses de graduación o recibe un reembolso completo!
+  image: "../../../static/images/persons-with-laptop.png"
 
 two_column_right:
   proportions: [6, 6]
@@ -26,9 +27,9 @@ two_column_right:
     style: '{ "backgroundSize": "contain", "minHeight": "200px", "height": ["500px", "500px", "500px", "500px", "100%"] }'
     src: "/images/woman-in-laptop.png"
   heading:
-    text: "¿Por qué ofrecemos trabajo garantizado?"
+    text: "Why are we offering a job guarantee?"
     font_size: ["30px", "30px", "30px", "30px", "30px"]
-    style: '{ "fontFamily": "Archivo,Lato,sans-serif", }'
+    style: '{ "fontFamily": "Archivo, Lato, sans-serif", "fontWeight": "900", "fontSize": "38px"}'
   content:
     font_size: ["24px", "24px", "24px", "18px", "18px"]
     text: |
@@ -97,7 +98,8 @@ successful_stories:
     - "cha-fabr"
 
 form:
-  title: "Conviértete en Partner de 4Geeks"
+  image: "../../../static/images/woman-with-laptop-in-puff.png"
+  title: "Solicita tu beca"
   paragraph: "¡Contáctanos hoy para unirte a nuestra red y comenzar a beneficiarte de las oportunidades que te ofrecemos!
   Déjanos ayudarte a elegir el camino correcto para alcanzar tus metas.
 

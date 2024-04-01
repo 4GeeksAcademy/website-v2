@@ -8,7 +8,6 @@ import {
 } from "../actions";
 import BaseRender from "./_baseLayout";
 import {
-  Container,
   Div,
   HR,
   GridContainer,
@@ -421,47 +420,85 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
           </Slider>
         </Div>
       </Div>
+
       <ScholarshipSuccessCases
         content={data.allScholarshipSuccessCasesYaml.edges[0].node}
       />
+
       <HR
         background={Colors.verylightGray}
         width="100%"
         height="5px"
         margin="40px 0"
       />
-      <GridContainer
-        columns_tablet="12"
-        padding="0 17px 40px 17px"
-        padding_tablet="0"
-        margin_tablet="0 auto 81px auto"
-        childMargin="auto"
-        childMaxWidth="1366px"
+
+      <Div
+        margin={isCustomBarActive(session) ? "50px auto 0 auto" : "auto"}
+        padding="0 30px"
+        padding_tablet="48px 80px"
+        padding_lg="48px 80px"
+        position="relative"
+        display="block"
       >
-        <Div gridColumn_tablet="1 / 7" flexDirection="column">
-          <H2 textAlign_md="left" margin="0 0 30px 0">
-            {yml.form.title}
-          </H2>
-          {yml.form.paragraph.split("\n").map((m, i) => (
-            <Paragraph
-              key={i}
-              margin="7px 0"
-              textAlign_md="left"
-              dangerouslySetInnerHTML={{ __html: m }}
+        <GridContainerWithImage
+          columns_tablet="12"
+          childMargin="auto"
+          childMaxWidth="1366px"
+          padding="30px 0 0 0"
+          padding_tablet="0"
+          margin_tablet="30px auto 20px auto"
+          position="relative"
+          gridColumn_tablet="1/15"
+          maxWidth="1366px"
+        >
+          <Div
+            gridColumn_tablet="1 / 6"
+            display="flex"
+            justifyContent="center"
+            alignItems="center"
+            height="auto"
+            width="100%"
+          >
+            <StyledBackgroundSection
+              height_tablet="463.71px"
+              display_tablet="block"
+              // display="none"
+              height="390px"
+              width="100%"
+              maxWidth="551px"
+              image={
+                yml.form.image && yml.form.image.childImageSharp.gatsbyImageData
+              }
+              alt="Form image"
+              bgSize="contain"
             />
-          ))}
-        </Div>
-        <Div flexDirection="column" gridColumn_tablet="7 / 13">
-          <LeadForm
-            formHandler={beHiringPartner}
-            // handleClose={handleClose}
-            enableAreaCodes={false}
-            lang={pageContext.lang}
-            inputBgColor={Colors.white}
-            fields={["full_name", "email", "phone"]}
-          />
-        </Div>
-      </GridContainer>
+          </Div>
+          <Div flexDirection="column" gridColumn_tablet="6 / 13">
+            <H2
+              textAlign="center"
+              textAlign_md="left"
+              fontFamily="Archivo, Lato, sans-serif"
+              fontSize="30px"
+              margin="0 0 30px 0"
+            >
+              {yml.form.title}
+            </H2>
+            <LeadForm
+              formHandler={beHiringPartner}
+              // handleClose={handleClose}
+              enableAreaCodes={false}
+              lang={pageContext.lang}
+              inputBgColor={Colors.white}
+              fields={["full_name", "email", "phone"]}
+              selectProgram={programs}
+              padding="0"
+              sendLabel="Apply"
+              widthButton="auto"
+              buttonWidth_tablet="auto"
+            />
+          </Div>
+        </GridContainerWithImage>
+      </Div>
     </>
   );
 };
@@ -550,6 +587,17 @@ export const query = graphql`
             testimonials
           }
           form {
+            image {
+              childImageSharp {
+                gatsbyImageData(
+                  layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                  width: 700
+                  quality: 100
+                  placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                  breakpoints: [200, 340, 520, 890]
+                )
+              }
+            }
             title
             paragraph
           }
