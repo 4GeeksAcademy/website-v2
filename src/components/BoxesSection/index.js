@@ -16,17 +16,16 @@ const BoxesSection = ({ data }) => {
       width="100%"
     >
       <Div margin="0 auto" display="block" maxWidth="1366px">
-        <Div display="block">
-          <H2
-            textAlign="center"
-            margin="0 0 50px 0"
-            fontSize_tablet="32px"
-            fontSize="21px"
-            lineHeight=""
-          >
-            {data.title}
-          </H2>
-        </Div>
+        <H2
+          textAlign="center"
+          margin="0 0 50px 0"
+          fontSize_tablet="32px"
+          fontSize="21px"
+          lineHeight="48.96px"
+        >
+          {data.title}
+        </H2>
+
         <Div
           margin="15px 0 0 0"
           justifyContent_tablet="between"

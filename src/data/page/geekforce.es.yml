@@ -21,17 +21,20 @@ geekForce:
   - videoId: "ln3bQsV1BaQ"
     image: ../../../static/images/staff/hernan-new.png
 
-benefits:
-  title: "Beneficios"
-  boxes:
+iconogram:
+  heading:
+    text: "Beneficios"
+    style: '{ "textAlign": "center" }'
+  swipable: false
+  icons:
     - icon: "briefcase-new"
-      text: "86% de nuestros alumnos contratados"
+      content: "86% de nuestros alumnos contratados"
     - icon: "four_persons"
-      text: "Soporte laboral post programa"
+      content: "Soporte laboral post programa"
     - icon: "teacher_teaching"
-      text: "Preparación a entrevistas"
+      content: "Preparación a entrevistas"
     - icon: "resume"
-      text: "1500 hojas de vida creadas"
+      content: "1500 hojas de vida creadas"
 
 list:
   - title: "Apoyo Profesional Ilimitado"
