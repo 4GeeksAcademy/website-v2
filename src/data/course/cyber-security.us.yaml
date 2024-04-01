@@ -1,0 +1,286 @@
+meta_info:
+  slug: cyber-security
+  title: "Study Cyber Security at 4Geeks Academy"
+  description: "Become a Cybersecurity expert with no prior knowledge and protect the digital future."
+  bc_slug: "cyber-security"
+  template: "course-cyber-security"
+  image: "/images/og-preview/datascience-ml.en.png"
+  visibility: "visible"
+  show_in_apply: true
+  keywords: ""
+  redirects: [""]
+  related_clusters: ["trends-and-tech"]
+
+apply_form:
+  label: cyber-security
+
+seo_title: "Cybersecurity Course"
+
+header:
+  title: "Become a Cybersecurity Expert"
+  paragraph: "The median annual salary for cybersecurity professionals in the United States is $103,560."
+  image: "../../../static/images/bg/apple-building.jpg"
+  image_alt: "apple-building"
+
+button:
+  syllabus_heading: "Download Syllabus"
+  syllabus_btn_label: "Instant Download"
+  syllabus_motivation: "Get it in just a few seconds"
+  apply_button_link: "/us/apply"
+  apply_button_text: "Apply"
+
+course_instructors: 
+  header:
+    title: "Meet our instructors"
+    paragraph: ""
+
+  instructors:
+    - name: "Sayyed Nezhadi"
+      sub_title: "PhD in Artificial Intelligence from Toronto University"
+      degree: "PhD in Artificial Intelligence"
+      image: "../../../static/images/instructors/sayyed.jpeg"
+      bio: "25+ years of experience in delivering complex AI-enabled solutions and digital architectures for large enterprises. PhD in Artificial Intelligence from the Toronto University, and and certificates in Big Data Analytics and Big Data from Hardvard and MIT respectively."
+      github: "https://github.com/snezhadi"
+      linkedin: "https://www.linkedin.com/in/sayyednezhadi"
+
+    - name: "Francesco Pugliese"
+      sub_title: "Computer Scientist and PhD in Robotics & Artificial Intelligence"
+      job: "Machine and Deep Learning Scientist at ISTAT (Italy National Institute of Statistic)."
+      degree: PhD in Robotics & Artificial Intelligence"
+      image: "../../../static/images/instructors/fpugliese.jpeg"
+      bio: "Deeply specialized in Deep Learning, Neural Networks and Evolutionary Robotics; Francesco has a 20+ experience working on Robotics Research topics with several publications; He its currently working as Machine and Deep Learning Scientist at ISTAT (Italy National Institute of Statistic)."
+      github: "https://github.com/neural1977"
+      linkedin: "https://www.linkedin.com/in/francescopugliese77"
+
+    - name: "Manuel Mena"
+      sub_title: "Senior Data Scientist | AI & Machine Learning"
+      job: "Data Scientist at the Georgia Institute of Technology"
+      image: "../../../static/images/instructors/manu-mena.jpeg"
+      bio: "Computer Scientist from the Georgia Institute of Technology with 5+ years of experience in the field of Machine Learning and Business Intelligence applied to commercial strategy, designing data workflows, testing experiments and delivering data science solutions. Experience leading teams in financial, market research and automotive industries. Proficient in R, Python, AWS and PostgreSQL."
+      github: "https://github.com/alexismenanieves"
+      linkedin: "https://www.linkedin.com/in/alexismena/"
+
+badges:
+  paragraph: "Kickstart your career at 4Geeks Academy, where developers grow and thrive. Named the best <a href='/us/coding-bootcamp'>coding bootcamp</a> 2023 by Course Report, best center for coding bootcamps 2023 by Premios de Excelencia Educativa in Spain, listed among the top 10 in the US by Newsweek, and rated 4.92/5 on Switchup. Licensed by the Florida Department of Education, USA."
+
+# OVERLAPED
+overlaped:
+  heading: "Learn to create predictive models and Master Machine Learning with 4Geeks Academy"
+  paragraph: "Dive into the world of machine learning with 4Geeks Academy's specialized program. Gain the skills to build predictive models for practical applications like fraud detection and natural language processing, using industry-leading tools such as Python, TensorFlow, and Scikit-learn."
+  button:
+    text: "LEARN MORE"
+    color: "blue" 
+    link: "/us/apply" 
+  image:
+    src: "/images/landing/tres-personas-reloaded.webp"
+
+## TWO COLUMNS
+two_columns:
+  proportions: [6, 6]
+  image:
+    style: '{"border" : "3px solid black", "backgroundSize": "contain" }'
+    src: "/static/images/staff/luisa.png"
+    shadow: true  
+  video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
+  heading:
+    text: "4Geeks, Miami and a story full of opportunities"
+    font_size: ["30px", "30px", "30px", "30px", "30px"]
+  sub_heading:
+    text: "We are Miami based and we have been focusing in bringing on more opportunities in South Florida."
+    font_size: ["16px", "16px", "16px", "16px", "16px"]
+  button:
+    text: "Apply now"
+    color: "white"
+    background: "black"
+    path: "#prices_and_payment"
+  bullets:
+    items: 
+    - text: "There is always a full or partial scholarship open"
+    - text: "There is always opportunities for everyone in Miami-Dade County, Broward and Palm Beach"
+    - text: "We have ongoing partnerships with Miami Dade College, Miami Tech Coalition, UWM, The City of Miami, Miami Dade County and many more."
+
+
+upcoming:
+  no_dates_message: "There are currently no upcoming dates for this program"
+  actionMessage: "Let me know when dates are available"
+
+## PROGRAM DETAILS
+details:
+  about:
+      title: "About Our Data Science & Machine Learning Course"
+      sub_title: |
+        Learn Python, SQL, Looker (Google Data Studio), Streamlit, and Statistics and become a professional Data Analyst, ready to contribute to any data-driven team at any company.
+        Create predictive models using Python, Pandas, Numpy, and other powerful libraries. Explore algorithms like Close Neighbors, Decision Trees, and more. Work with supervised and unsupervised learning models.
+        Practice solving real-life cases, and learn to tackle the type of challenges you’ll encounter in your career. Master the use of industry-standard tools.
+        Strategize and develop your own A.I. projects, following the complete lifecycle from development to deployment and maintenance, ensuring privacy and security.
+
+      list:
+        - label: "Duration"
+          content:  "16 Weeks"
+          icon: "calendar"
+        - label: "Classes"
+          content: "3 classes weekly"
+          icon: "book"
+        - label: "Class size"
+          content: "12 people max"
+          icon: "laptop"
+        - label: "Certificate"
+          content: "Our certificates are recognized by multiple organizations."
+          link_text: "See example"
+          link: "https://certificate.4geeks.com/44c61b294a248f91088f5355aea09606126795e3"
+          icon: "certificate"
+        - label: "Requisites"
+          content: "No previous experience needed"
+          icon: "contract-checked"
+        - label: "Language"
+          content: "You can choose between English and Spanish for the syllabus and content. Live classes are taught in the language of your campus."
+          icon: "contract-checked"
+          
+  heading: Data Science and Machine Learning Syllabus
+  weeks: 16
+  weeks_label: "weeks"
+  facts:
+    - label: "Duration"
+      value: "16 weeks"
+    - label: "Commitment"
+      value: "20 hrs (Mon - Wed - Fri)"
+    - label: "Certificate"
+      content: "Our certificates are recognized by multiple organizations."
+      link_text: "See example"
+      link: "https://certificate.4geeks.com/44c61b294a248f91088f5355aea09606126795e3"
+      icon: "certificate"
+    - label: Delivery
+      value: "Online / Remote"
+    - label: Classroom Size
+      value: "12 People Max"
+    - label: Total Hours
+      value: "320"
+  sub_heading: "Start with Python, Data Science, Machine Learning, Deep Learning, and the maintenance of a production environment in A.I."
+  left_labels:
+    description: "DESCRIPTION:"
+    projects: "PROJECTS:"
+    duration: "DURATION:"
+    skills: "Skills / Weeks:"
+  details_modules:
+    - module_name: "Python"
+      title: "Introduction to Python"
+      description: >
+        Starting from a Prework (2 weeks before), get introduced into the world of coding and learn Python and Algorithms' basics; This module will help you prepare to code and develop the different A.I. and Machine Learning model training and evaluations for the next step.
+      projects: "Collect, store and mesassure with Numpy, Pandas, Mstplotlib, etc."
+      slug: "python-intro"
+      duration: "2 wks"
+      step: 2
+    - module_name: "Fundamentals"
+      title: "Statistics and Linear Algebra with Python"
+      description: "Use python to write code that reviews and applies the most used Linear Algebra concepts, Matrix and Vectors, F(x), and the relation functions have between variables. We will also be coding the most used concepts in probabilities understanding core trends, standard deviation, mean median and mode. Finally, we will calculate the probability of an event happening: This is a very important skill used to build prediction models that we will be using further along."
+      projects: "We will provide you with a list of real life problems and solutions for the different concepts, you will use python to solve them."
+      slug: "datascience-fundamentals"
+      duration: "2 wks"
+      step: 2
+    - module_name: "Collect"
+      title: "Collect and store data"
+      description: "Probably longest step in most professional projects is collecting and cleaning the data. In this module you use Python and connect to a SQL Database, learn the SQL syntax to query and manipulate that date, upload and download static files (CSV, JSON, etc.). Learn how to connect with API's or scrape websites that don't have available API's. Store the data in an organized way."
+      projects: "Loading structured and unstructured data from different sources (e.g. SQL, Web Scraping, text files) and connect with the Twitter API."
+      slug: "data-science"
+      duration: "2 wks"
+      step: 2
+    - module_name: "Clean"
+      title: "Manipulate data with Python"
+      description: "Once you data has been stored, its necesary to undestand it. We will start with simple visualization techniques for better understanding of some samples and developing the different strategies to clean and optimize your dataset: Feature Engineering, Outliers, Missing Data, Feature encoding, Feature Scaling. \n Learn how to develop reports using Looker (Google DataStudio) with advanced graphs, filters and other dashboard elements and KPI's, one of the most popular datawarehousing tools in the market."
+      projects: "Explor the Airbnb dataset and publish a report using Google Cloud and Looker Studio."
+      slug: "data-analysis"
+      duration: "3 wks"
+      step: 3
+    - module_name: "Model"
+      title: "Practical Machine Learning"
+      description: "One by one we will be reviewing the most used algorithms and predictive models: Supervised and not Supervised. Every model will be used to fix a problem using Python: Lineal Regresion, Logistic Regresion, Decision Trees, Random Forest, Bayes, Support Vector Machine, NLP, KNN, Time Series, NN and others."
+      projects: "Predict medical insurance costs, classify patients based on diabetes. Sentiment Analysis on Google Play Store reviews. Email Spam Detector. Group houses based on geolocation or avg income. Classify images and more."
+      slug: "machine-learning"
+      duration: "4 wks"
+      step: 4
+    - module_name: "Deploy"
+      title: "A.I. In Production"
+      description: "One of the most important aspects of developing Artificial Intelligence solutions is understanding how to prepare, deploy, and manage the solution in a Production Environment. We walk you through developing an AI Strategy, Machine Learning Lifecycle of development and deployment, Machine Learning Operations (MLOps), as well as Privacy, Security, and Ethics. Your final project will be to deploy your machine learning model into production."
+      projects: "Building data architectures, deploying AI models into production both on-premiss and on cloud, monitoring and maintenance of the models"
+      slug: "quality-deploy"
+      duration: "1 wks"
+      step: 1
+    - module_name: "Final Project"
+      title: "Choose a problem and fix it with Machine Learning"
+      description: "Work in a team to choose a real life problem, start collecting the data needed to predict, make an exploratory analysis using several ways of visualizing data in order to understand it. Clean your dataset and optimized for your prediction needs, choose two models and start predicting. Evaluate how effective your models were by using the different techniques we saw in class. Deploy in production using Streamlit o Looker (Google DataStudio)."
+      projects: "Building data architectures, deploying AI models into production both on-premiss and on cloud, monitoring and maintenance of the models"
+      slug: "quality-deploy"
+      duration: "2 wks"
+      step: 1.9
+    - module_name: "LIFELONG"
+      title: "Lifelong Support"
+      description: "Keep practicing with the academy's help - we will be coaching you for life. We will help you apply for jobs and continue to support you once you find a job in A.I."
+      projects: "Get paid to keep learning and raise your income gradually as you become a Machine Learning Engineer. Lead a successful career in AI and Machine Learning development, management, and leadership."
+      slug: "lifelong-learning"
+      duration: "forever"
+      step: 0.1
+
+syllabus:
+  heading: Get all the information about the syllabus
+  button_label: Download
+
+potential_companies:
+  tagline: "Get trained to thrive at major companies"
+  sub_heading: "Get ready to apply to the best companies in the world: Develop the tools to upskill for the future of AI work."
+  companies:
+    - name: "Facebook"
+      image: "../../../static/images/partner/meta-logo.png"
+      alt: ""
+    - name: "Google"
+      image: "../../../static/images/partner/google.png"
+      alt: ""
+    - name: "Microsoft"
+      image: "../../../static/images/partner/microsoft.png"
+      alt: ""
+    - name: "Apple"
+      image: "../../../static/images/partner/apple.png"
+      alt: ""
+    - name: "Salesforce"
+      image: "../../../static/images/partner/salesforce.png"
+      alt: ""
+    - name: "Oracle"
+      image: "../../../static/images/partner/oracle.png"
+      alt: ""
+    - name: "AirBnB"
+      image: "../../../static/images/partner/airbnb.png"
+      alt: ""
+    - name: "Uber"
+      image: "../../../static/images/partner/uber.png"
+      alt: ""
+
+## 4GEEKS VS OTHERS SECTION
+geeks_vs_others:
+  heading: "WHAT MAKES US SO SUCCESSFULL?"
+  sub_heading: "Compare 4Geeks with other coding schools"
+  sub_heading_link: ""
+## GEEK PAL AND GEEK FORCE BOXES
+geek_data:
+  heading: And Fortune 500 companies will hire you!
+  geek_pal:
+    - Unlimited Senior mentorship.
+    - Lifetime access to the software community.
+    - Worldwide access and support.
+  geek_force:
+    - Helping you land a job in a 500 Fortune company.
+    - Profile, portfolio, interviews, workshops, talks, software community, network, active projects collaboration.
+    - It's about getting your career to the next level.
+
+## PRICES AND PAYMENTS SECTION
+prices:
+  heading: "PRICES AND PAYMENTS"
+  sub_heading: ""
+
+## ALUMNI SECTION
+alumni:
+  heading: "MEET THE ALUMNI AND PROJECTS"
+  sub_heading: "Get to know our graduates and some of the projects you will be building during the program"
+
+faq:
+  title: "Frequently Asked Questions"
+  read_more: "Contact us for more questions"
+  link: "/faq"

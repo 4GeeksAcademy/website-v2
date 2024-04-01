@@ -1,0 +1,283 @@
+meta_info:
+  slug: cyber-security-es
+  title: "Estudia cyber security en 4Geeks Academy"
+  description: "Sin conocimientos previos, Conviértete en un experto en Ciberseguridad y protege el futuro digital"
+  bc_slug: "cyber-security"
+  template: "course-cyber-security"
+  image: "/images/og-preview/datascience-ml.es.png"
+  visibility: "visible"
+  show_in_apply: true
+  keywords: ""
+  redirects: [""]
+  related_clusters: ["trends-and-tech"]
+
+apply_form:
+  label: cyber-security
+
+seo_title: "Curso de Ciberseguridad"
+header:
+  title: "Conviértete en un experto en Ciberseguridad"
+  paragraph: "El salario medio anual para los profesionales de la ciberseguridad en Estados Unidos es de $103,560."
+  image: "../../../static/images/bg/apple-building.jpg"
+  image_alt: "apple-building"
+
+button:
+  # syllabus_heading: "" #Syllabus pendiente? 
+  # syllabus_btn_label: ""
+  # syllabus_motivation: "En 2 min. recibirás en tu buzón de correo un PDF con información muy detallada sobre nuestra metodología, tecnologías, becas, financiación e información del curso."
+  apply_button_link: "/es/aplica"
+  apply_button_text: "Aplicar"
+
+course_instructors:
+  header:
+    title: "Conoce a nuestros instructores"
+    paragraph: ""
+
+  instructors:
+    # - name: "Sayyed Nezhadi"
+    #   sub_title: "Doctorado en Inteligencia Artificial de la Universidad de Toronto"
+    #   degree: "Doctorado en Inteligencia Artificial"
+    #   image: "../../../static/images/instructors/sayyed.jpeg"
+    #   bio: "Más de 25 años de experiencia en la entrega de soluciones complejas habilitadas para IA y arquitecturas digitales para grandes empresas. PhD en Inteligencia Artificial de la Universidad de Toronto, y certificados en Big Data Analytics y Big Data de Hardvard y MIT respectivamente."
+    #   github: "https://github.com/snezhadi"
+    #   linkedin: "https://www.linkedin.com/in/sayyednezhadi"
+
+
+badges:
+  paragraph: "Gracias a un enfoque hacia la programación, nuestros programas han sido galardonados como TOP Coding Bootcamp en <a href='/es/premios'>España, USA y otros países</a>. Nuestros certificados estan avalados por el Departamento de Educación de Estado Unidos en Florida."
+
+
+overlaped:
+  heading: "Conviértete en un experto en Ciberseguridad"
+  paragraph: "En el bootcamp de Ciberseguridad de 4Geeks Academy desarrollarás las habilidades y conocimientos necesarios para enfrentar las amenazas del mundo digital actual <br> Las prácticas de pentesting se basan en los laboratorios de la certificación EJPT. Ningún bootcamp del mundo te deja preparado para certificarte en nada (EJPT, CEH, etc.), pero si deseas certificarte después del bootcamp, tendrás gran parte del estudio ya realizado."
+  button:
+    text: "Aplicar"
+    color: "blue"  
+    path: "/es/aplica"
+  image:
+    src: "/images/landing/tres-personas-reloaded.webp"  
+
+
+# two_columns:
+#   proportions: [6, 6]
+#   image:
+#     style: '{"border" : "3px solid black", "backgroundSize": "contain" }'
+#     src: "/static/images/staff/luisa.png"
+#     shadow: true  
+#   video: "https://www.youtube.com/watch?v=c14ZDHXN6_w"
+#   heading:
+#     text: "4Geeks Academy "
+#     font_size: ["30px", "30px", "30px", "30px", "30px"]
+#   sub_heading:
+#     text: "Descubre por qué nuestro Bootcamp de Data Science es el mejor"
+#     font_size: ["16px", "16px", "16px", "16px", "16px"]
+#   button:
+#     text: "Apply now"
+#     color: "white"
+#     background: "black"
+#     path: "#prices_and_payment"
+#   bullets:
+#     items: 
+#     - text: "There is always a full or partial scholarship open"
+#     - text: "There is always opportunities for everyone in Miami-Dade County, Broward and Palm Beach"
+#     - text: "We have ongoing partnerships with Miami Dade College, Miami Tech Coalition, UWM, The City of Miami, Miami Dade County and many more."
+
+
+upcoming:
+  no_dates_message: "Actualmente no hay próximas fechas para este programa"
+  actionMessage: "Avisadme de fechas disponibles"
+
+# description:
+#   heading: "Sobre este curso"
+#   sub_heading: "Prepárate para la era de la Ciencia de Datos."
+#   content: >
+#     Entrénate con expertos en Data Science, Machine Learning e Inteligencia Artificial. Aprende Data Science desde las bases, recolecta, manipula y modela datos. Crea modelos de Machine Learning e iníciate en el Deep Learning.\n
+#     Practica con escenarios típicos de empresas de la vida real y conoce algunas de las herramientas más utilizadas en la industria. \n
+
+
+
+
+## PROGRAM DETAILS
+details:
+  about:
+      title: "Sobre este programa"
+      sub_title: |
+        Obtendrás una base sólida en redes, Linux y administración de servidores, al mismo tiempo que adquirirás habilidades prácticas para proteger estos entornos. 
+        El programa profundiza en la seguridad en la nube, pruebas de penetración (tanto ofensivas como defensivas) y análisis de inteligencia cibernética. 
+        Aprende a gestionar riesgos con estrategias de prevención de pérdida de datos (DLP) y navega por el cumplimiento de estándares internacionales como <strong>ISO 27001 y NIST.</strong>
+        
+      list:
+        - label: "Duración"
+          content:  "14 semanas"
+          icon: "calendar"
+        - label: "Clases"
+          content: "3 Clases semanales"
+          icon: "book"
+        - label: "Tamaño de la clase"
+          content: "10 personas máx"
+          icon: "laptop"
+        - label: "Certificado"
+          content: "Nuestros certificados son reconocidos por múltiples instuticiones."
+          link_text: ""
+          link: ""
+          icon: "certificate"
+        - label: "Requisitos"
+          content: "No se necesita experiencia previa"
+          icon: "contract-checked"
+
+  heading: DETALLES DEL PROGRAMA
+  weeks: 14
+  facts:
+    - label: "Duración"
+      value: "14 semanas"
+    - label: "Compromiso"
+      value: "20 hrs/sem. (Lun - Mie - Vie)"
+    - label: "Certificado"
+      content: "Nuestros certificados son reconocidos por múltiples instituciones."
+      link_text: "Ver ejemplo"
+      link: "https://certificate.4geeks.com/44c61b294a248f91088f5355aea09606126795e3"
+      icon: "certificate"
+    - label: "Horario"
+      value: "Online / Remoto"
+    - label: "Tamaño Clase"
+      value: "Hasta 14 personas"
+    # - label: "Horas totales"
+    #   value: "320"
+  sub_heading: "Mejora tus habilidades de Ciberseguridad De Fundamentos a Técnicas Avanzadas"
+  left_labels:
+    description: "DESCRIPCIÓN:"
+    projects: "PROYECTOS:"
+    duration: "DURACIÓN:"
+    skills: "Habilidades / Semanas:"
+  details_modules:
+    - module_name: "PreWork"
+      title: "Introducción a la ciberseguridad"
+      description: "Empezaremos con un 'prework', donde aprenderás  los conceptos básicos de la seguridad informática, incluyendo las principales amenazas, vulnerabilidades y también conocerás la importancia de la ciberseguridad en el mundo actual."
+      projects: "Introducción a la ciberseguridad, a las tecnologías de Información [TI] y a las buenas prácticas de seguridad de la información además de tener una introducción al Packet Tracer una herramienta de simulación visual para rastrear paquetes."
+      slug: "security-intro"
+      duration: "1 sem"
+      step: 1
+    - module_name: "Fundamentos de Redes"
+      title: "Conceptos básicos de redes y Seguridad en redes"
+      description: "Profundizarás en los conceptos básicos de redes, como el modelo OSI, TCP/IP, arquitecturas de redes y dispositivos incluyendo las diferentes tecnologías de red y protocolos de comunicación."
+      projects: "En la práctica entrarás de lleno con modelos de referencia, ip-address-management, network protocols, enterprise-network-architecture y Virtual Box."
+      slug: "cybersecurity-fundamentals"
+      duration: "1 sem"
+      step: 1
+    - module_name: "Linux y Administración de Servidores"
+      title: " Linux y Administración de Servidores"
+      description: "Profundizarás en los conceptos de Linux, proteger tus sistemas mediante hardening, seguridad de archivos, permisos y herramientas de seguridad para Linux. 
+        También aprenderás sobre instalación y configuración de servidores, la gestión de usuarios y grupos, y los servicios y procesos en servidores."
+      projects: "Preparación del entorno virtual, administración básica de usuarios y grupos, configuración de seguridad del servidor, programación de tareas automatizadas y monitoreo  y optimización del rendimiento del servidor."
+      slug: "datacollection"
+      duration: "2 sem"
+      step: 2
+    - module_name: "Seguridad en Redes"
+      title: "vulnerabilidades e Implementación de medidas de seguridad"
+      description: "Te familiarizarás con las principales amenazas y vulnerabilidades en redes, como ataques comunes, vulnerabilidades de software y hardware, y explotación de vulnerabilidades."
+      projects: "Aprenderás a implementar medidas de seguridad avanzadas, como firewalls de última generación, sistemas de detección y prevención de intrusiones, y redes privadas virtuales."
+      slug: "data-analysis"
+      duration: "2 sem"
+      step: 2
+    - module_name: "Pentesting"
+      title: "Fundamentos de Pentesting"
+      description: "Adquirirás los conocimientos básicos de las pruebas de penetración, incluyendo las diferentes metodologías, herramientas y técnicas, Aprenderás a realizar pruebas básicas de pentesting, como escaneo de vulnerabilidades, ataques a aplicaciones web y ataques a redes y sistemas, lo que se conoce como Blue Team (que se centra en la defenza) o Red Team (que se centra en el ataque)"
+      projects: "Aprenderás a monitorizar redes y sistemas, analizar incidentes de seguridad y desarrollar planes de respuesta. Te familiarizarás con el enfoque Blue Team, que se centra en la defensa y respuesta a ataques y también Adquirirás los conocimientos del enfoque Red Team, que se centra en la simulación de ataques avanzados."
+      slug: "pentesting-module"
+      duration: "3 sem"
+      step: 3
+    - module_name: "DLP"
+      title: "DLP y gestión de riesgos"
+      description: "Aprenderás sobre la prevensión de perdida de datos (DLP), como proteger los datos sensibles de tu organización mediante técnicas de clasificación de datos, control de acceso y protección de datos en tránsito y en reposo."
+      projects: "Adquirirás los conocimientos para identificar y evaluar los riesgos de seguridad, implementar medidas de control, Prevención de amenazas y Protección contra ataques externos."
+      slug: "dlp-and-risks"
+      duration: "3 sem"
+      step: 3
+    - module_name: "NIST"
+      title: "Instituto Nacional de Estándares"
+      description: "Profundizarás en el marco de trabajo NIST Cybersecurity Framework, sus componentes y cómo implementarlo en tu organización."
+      projects: "Planificación de la seguridad, Respaldo y recuperación de datos y pruebas y ejercicios de continuidad."
+      slug: "nist"
+      duration: "3 sem"
+      step: 3
+    - module_name: "DE POR VIDA"
+      title: "De por vida"
+      description: "Recibe ayuda de la academia antes, durante y después de graduarte, con acceso ilimitado a los contenidos y soporte profesional (career support) de por vida. Incluso recibirás ayuda durante el inicio de tu nuevo trabajo, ¡nunca más estarás solo!"
+      projects: "Este programa te equipa con los conocimientos y habilidades para lanzar una carrera gratificante en ciberseguridad, Se espera que la demanda de profesionales de la ciberseguridad crezca un 31% entre 2020 y 2030, mucho más rápido que el promedio de todas las ocupaciones."
+      slug: "lifelong-learning"
+      duration: "Para siempre"
+      step: 0.1
+
+syllabus:
+  heading: Descarga toda la información acerca de este programa
+  button_label: Descargar
+
+potential_companies:
+  tagline: "Entrénate para destacar en las compañías más exigentes"
+  sub_heading: "Da un salto a tu carrera y trabaja en las mejores empresas"
+  companies:
+    - name: "Facebook"
+      image: "../../../static/images/partner/meta-logo.png"
+      alt: ""
+    - name: "Google"
+      image: "../../../static/images/partner/google.png"
+      alt: ""
+    - name: "Microsoft"
+      image: "../../../static/images/partner/microsoft.png"
+      alt: ""
+    - name: "Apple"
+      image: "../../../static/images/partner/apple.png"
+      alt: ""
+    - name: "Salesforce"
+      image: "../../../static/images/partner/salesforce.png"
+      alt: ""
+    - name: "Oracle"
+      image: "../../../static/images/partner/oracle.png"
+      alt: ""
+    - name: "AirBnB"
+      image: "../../../static/images/partner/airbnb.png"
+      alt: ""
+    - name: "Uber"
+      image: "../../../static/images/partner/uber.png"
+      alt: ""
+
+## 4GEEKS VS OTHERS SECTION
+geeks_vs_others:
+  heading: "¿Qué nos hace tan exitosos?"
+  sub_heading: ""
+  sub_heading_link: ""
+## GEEK PAL AND GEEK FORCE BOXES
+geek_data:
+  heading: ¡Para que te contraten empresas de Fortune 500!
+  geek_pal:
+    - Un profesor cada siete estudiantes (1:7).
+    - Sesiones ilimitadas de tutoría 1-1 por demanda, en persona o en línea.
+    - Miles de ejercicios interactivos y autoevaluados.
+    - Soluciones en video para una retroalimentación instantánea.
+    - Chat de apoyo en línea 12 horas al día.
+    - Transmisión en línea de las clases.
+    - Grabación de las clases para su posterior revisión.
+  geek_force:
+    - Construcción de CV y LinkedIn.
+    - Construcción del perfil de Github y portafolio desde el dia 1.
+    - Career Week para dedicación exclusiva a tu perfil profesional.
+    - Preparación de simulación de entrevistas.
+    - Sesión de preparación de entrevistas personalizadas para trabajos específicos.
+    - Entrenamiento en marca personal.
+    - Prácticas y ejercicios de programación posteriores a la graduación.
+    - Coaching SEMANAL hasta que consigas trabajo.
+
+## PRICES AND PAYMENTS SECTION
+prices:
+  heading: "PRECIOS Y PAGOS"
+  sub_heading: ""
+
+## ALUMNI SECTION
+alumni:
+  heading: "Conoce a ex-estudiantes y sus proyectos"
+  sub_heading: "Conoce a personas que ya se han graduado y algunos de los proyectos que estarás construyendo durante el programa"
+
+faq:
+  title: "Preguntas Frecuentes"
+  read_more: "Ver más preguntas"
+  link: "/faq"
