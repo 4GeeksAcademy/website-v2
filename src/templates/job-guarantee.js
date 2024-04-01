@@ -175,8 +175,8 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
             <Div
               flexDirection_tablet="row"
               flexDirection="column"
-              justifyContent="center"
-              justifyContent_tablet="center"
+              justifyContent_tablet="left"
+              justifyContent="left"
               alignItems="center"
               width="100%"
             >
@@ -194,7 +194,7 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
                     margin_tablet="10px 24px 10px 0"
                     textColor="white"
                   >
-                    {applyButtonText}
+                    {`${applyButtonText} →`}
                   </Button>
                 </Link>
               </Div>
