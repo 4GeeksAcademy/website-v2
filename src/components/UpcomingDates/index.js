@@ -144,7 +144,6 @@ const UpcomingDates = ({
         : location;
       let cohorts = await getCohorts({ academy: academySlug, limit: 10 });
       cohorts = cohorts?.results || [];
-      console.log("cohorts upcoming", cohorts);
       let syllabus = [];
       for (let i in cohorts) {
         let name = cohorts[i].syllabus_version.name;
@@ -219,12 +218,11 @@ const UpcomingDates = ({
     <GridContainer
       id={id}
       style={style}
-      margin_tablet="0 auto 0 auto"
+      margin_tablet="0 auto 48px auto"
       maxWidth="1366px"
       containerColumns_tablet="14fr"
       gridColumn_tablet="1 / 15"
-      padding="0 20px"
-      paddingChild="0"
+      padding_xxs="0 20px"
       padding_md="40px 80px"
       padding_lg="40px 0px"
       padding_tablet="40px 40px"
@@ -251,6 +249,41 @@ const UpcomingDates = ({
               width_xxs="280px"
             >
               <SelectRaw
+                style={{
+                  input: (styles) => ({
+                    ...styles,
+                    width: "100%",
+                    margin: "5px 0px",
+                  }),
+                  control: (styles, state) => ({
+                    ...styles,
+                    fontFamily: "Lato, sans-serif",
+                    background: "#ffffff",
+                    border: "1px solid #000",
+                    boxShadow: "none",
+                    marginBottom: "0px",
+                    marginTop: "0px",
+                    width: "100%",
+                    fontSize: "15px",
+                    fontWeight: "400",
+                    color: "#000",
+                    lineHeight: "22px",
+                    "&:hover": { boxShadow: "0 0 0 1px black" },
+                    "&:focus": {
+                      boxShadow: "0 0 0 1px black",
+                      border: "1px solid #000000",
+                    },
+                  }),
+                  option: (
+                    styles,
+                    { data, isDisabled, isFocused, isSelected }
+                  ) => {
+                    return {
+                      ...styles,
+                      fontFamily: "Lato, sans-serif",
+                    };
+                  },
+                }}
                 options={data?.cohorts?.catalog}
                 placeholder={
                   lang == "us"
@@ -580,7 +613,6 @@ const UpcomingDates = ({
                         width="100%"
                         fontSize="14px"
                         variant="full"
-                        borderRadius="3px"
                         color={
                           formStatus.status === "loading"
                             ? Colors.darkGray

@@ -20,7 +20,7 @@ meta_info:
 
 navbar:
   buttonText: "Postular"
-  buttonUrl: "#bottom" # url accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
+  buttonUrl: "#leadform_bottom" # url accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
   logoUrl: "#"
 
 form:
@@ -40,9 +40,9 @@ apply_schollarship: # form that is displayed at the end of the landing
 # jumbotron on the top (cannot be commented out)
 header_data:
   background: "#FFF1D1"
-  tagline: Clases de Machine Learning y Data Science
+  tagline: Curso de Ciencia de Datos 
   sub_heading: "Domina Machine Learning y Data Science desde cero y accede a oportunidades como Junior Data Scientist"
-  badge: "../../../static/images/badges/Course-Report-Badge-2023.png"
+  badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
   image_filter: brightness(0.3)
 
 features:
@@ -76,7 +76,7 @@ short_badges:
     alt: "Mejor centro de Coding Bootcamp"
   - name: "Course Report"
     url: ""
-    image: "../../../static/images/badges/Course-Report-Badge-2023.png"
+    image: "../../../static/images/badges/Course-Report-Badge-2024.webp"
     alt: "Top Coding Bootcamps Course Report"
   - name: "Switchup"
     url: ""
@@ -181,7 +181,7 @@ components:
       text:
         "Python y Machine Learning"
         #           xl      lg      md      sm      xs
-      font_size: ["50px", "50px", "50px", "50px", "50px"]
+      font_size: ["45px", "45px", "30px", "28px", "25px"]
     sub_heading:
       text: "Nuestro programa te capacita en Python, SQL, Looker, Streamlit y Estadísticas para convertirte en analista de datos. Desarrolla modelos predictivos, aplica algoritmos como vecinos cercanos y árboles de decisión, y trabaja en casos reales. Únete a equipos técnicos en diversas compañías."
     content:
@@ -233,5 +233,5 @@ choose_your_program:
     description: |
       De cero a tener tu primer trabajo como Data Scientist, con una duración de 16 semanas, con clases en vivo 3 veces por semana, compatible con horario laboral o de estudios. 
     text_link: Obtener más información
-    link: "#top" # moves to start position
+    link: "#leadform_header" # moves to start position
   

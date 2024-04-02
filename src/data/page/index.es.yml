@@ -19,7 +19,8 @@ header_data:
   join_button_path: "#choose-program"
   free_button_text: PRUEBA GRATIS
   #If it doesn't have a video it will show the image
-  #It must be a video from videoaks
+  #It must be a video from videoaks 
+  #TODO: Este es el video para poner en español https://ask.4geeks.com/f67qc0ewu
   video: ""
   image: "../../../static/images/bg/more-new-main-home-bg.png"
 
@@ -55,7 +56,7 @@ two_columns:
     font_size: ["30px", "30px", "30px", "30px", "30px"]
   sub_heading:
     text: "Nuestra prioridad es que nuestra educación de alta calidad sea accesible para todos. Por eso, ofrecemos múltiples opciones para que puedas financiar tus estudios en nuestros bootcamps de programación sin estrés. Ya sea a través de un ISA (Income Share Agreement), becas, planes de pago o la garantía de empleo, estamos aquí para guiarte en cada paso del camino."
-    font_size: ["18px", "18px", "18px", "18px", "18px"]
+    font_size: ["16px", "16px", "16px", "16px", "16px"]
   button:
     text: "VER OPCIONES DE FINANCIACIÓN"
     color: "white"

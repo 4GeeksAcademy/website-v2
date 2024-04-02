@@ -22,7 +22,7 @@ header_data:
   free_button_path: ""
   #If it doesn't have a video it will show the image
   #It must be a video from videoaks
-  # video: "https://www.videoask.com/fm984j5nz"
+  # video: "https://www.videoask.com/f5rg0mmi4"
   video: ""
   image: "../../../static/images/bg/more-new-main-home-bg.png"
 
@@ -53,7 +53,7 @@ two_columns:
     font_size: ["30px", "30px", "30px", "30px", "30px"]
   sub_heading:
     text: "We’re all about making our high-quality education affordable to everyone. That's why we offer multiple options to help you fund our coding bootcamps stress-free. Whether it's an ISA, scholarship, payment plan or Job Guarantee we're here to guide you every step of the way."
-    font_size: ["18px", "18px", "18px", "18px", "18px"]
+    font_size: ["16px", "16px", "16px", "16px", "16px"]
   button:
     text: "SEE ALL FINANCING OPTIONS"
     color: "white"

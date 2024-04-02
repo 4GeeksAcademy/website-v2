@@ -121,7 +121,7 @@ full_time:
       - "Financimiento a tu medida desde 6 hasta 18 meses"  
       - "Se debe pagar un anticipo correspondiente al 20% del valor del programa" 
     icons: 
-      - "/images/partner/flevo-new.png"
+      - "/images//flevo-new.png"
                        
   - slug: 'chile-isa-fs-ft'
     academies: ['santiago-chile']
@@ -161,17 +161,17 @@ full_time:
       - "Asiste a una entrevista con Flevo y obtén financiamiento rápidamente."
       - "El valor del programa se modifica con la modalidad de financiamiento."
     icons: 
-      - "/images/partner/flevo-new.png"
+      - "/images//flevo-new.png"
 
-  - slug: 'venezuela-laptop-pt'
-    academies: ['caracas-venezuela']
-    recomended: false
-    scholarship: "Incluye laptop para programar"
-    payment_time: "Oferta especial con equipo incluido"
-    price: "~$1600"
-    bullets: 
-      - "El equipo es totalmente tuyo para lo que requieras"
-      - "Paga temprano y ahorra hasta $500"
+  # - slug: 'venezuela-laptop-pt'
+  #   academies: ['caracas-venezuela']
+  #   recomended: false
+  #   scholarship: "Incluye laptop para programar"
+  #   payment_time: "Oferta especial con equipo incluido"
+  #   price: "~$1600"
+  #   bullets: 
+  #     - "El equipo es totalmente tuyo para lo que requieras"
+  #     - "Paga temprano y ahorra hasta $500"
     # icons: 
     #   - "/images/laptp.jpg"
 
@@ -187,7 +187,7 @@ part_time:
       - "Ahorras $4000 USD. Gracias al Clark University TechBoost Fund"
       - "Tienes que estar desempleado o subempleado, y contar con un permiso de trabajo en US válido."
     icons: 
-      - "/static/images/clarkuniversity.png"
+      - "/images/clarkuniversity.png"
 
   - slug: 'usa-clark-scholarship-pt-miami'
     academies: ['downtown-miami', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa']
@@ -199,7 +199,7 @@ part_time:
       - "Ahorras $4000 USD. Gracias al Clark University TechBoost Fund"
       - "Tienes que estar desempleado o subempleado, y contar con un permiso de trabajo en US válido."
     icons: 
-      - "/static/images/clarkuniversity.png"      
+      - "/images/clarkuniversity.png"      
 
   - slug: 'usa-financed-pt'
     academies: ['downtown-miami', 'orlando', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa']
@@ -236,7 +236,7 @@ part_time:
       - "Con $400 p/ semana en gastos de vida"
       - "8.5% de tu salario hasta el pago completo, sólo si consigues un trabajo en tech."
     icons: 
-      - "/static/images/miashare.png"      
+      - "/images/miashare.png"      
 
   - slug: 'spain-scholarships-fs-pt'
     academies: ['barcelona-spain', 'madrid-spain', 'malaga-spain', 'valencia-spain']
@@ -378,7 +378,7 @@ part_time:
       - "Financiamiento a tu medida desde 6 hasta 24 meses"  
       - "Se debe pagar un anticipo correspondiente al 20% del valor total del programa sin descuentos" 
     icons: 
-      - "/images/partner/flevo-new.png"
+      - "/images//flevo-new.png"
 
   - slug: 'chile-solo-fs-pt'
     academies: ['santiago-chile']
@@ -446,7 +446,7 @@ part_time:
       - "Debes elegir si tomarás solo el programa, si también quieres obtener nuestro sistema de Career Support, o si quieres ir a por todo y registrarte con nuestra opción de Trabajo Garantizado"  
       - "Pague solamente por el programa Full-Stack si todavía no está interesado en nuestro programa de apoyo profesional y nuestra garantía de empleo."   
     icons: 
-      - "/images/partner/flevo-new.png" 
+      - "/images//flevo-new.png" 
 
   - slug: 'venezuela-scholarship-pt'
     academies: ['caracas-venezuela']
@@ -474,7 +474,7 @@ part_time:
       - "Debes elegir si tomarás solo el programa, si también quieres obtener nuestro sistema de Career Support, o si quieres ir a por todo y registrarte con nuestra opción de Trabajo Garantizado"  
       - "Pague solamente por el programa Full-Stack si todavía no está interesado en nuestro programa de apoyo profesional y nuestra garantía de empleo."   
     icons: 
-      - "/images/partner/flevo-new.png" 
+      - "/images//flevo-new.png" 
 
   - slug: 'venezuela-financed-pt'
     academies: ['caracas-venezuela']
@@ -487,19 +487,19 @@ part_time:
       - "Ten una entrevista con Flevo para la rápida aprobación de tu financiamiento"
       - "Los precios variarán de acuerdo con la duración de tu período de pago"    
     icons: 
-      - "/images/partner/flevo.png" 
+      - "/images/partner/flevo-new.png" 
 
-  - slug: 'venezuela-laptop-pt'
-    academies: ['caracas-venezuela']
-    recomended: false
-    scholarship: "Incluye laptop para programar"
-    payment_time: "Oferta especial con equipo incluido"
-    price: "~$2500"
-    bullets: 
-      - "Siempre hay un plan de pago disponible para que te unas a 4Geeks Academy"
-      - "Si no encuentras aquí lo que esperas, por favor contáctanos y trataremos de encontrar nuevas formas de ayudarte"     
-      - "El equipo es totalmente tuyo para lo que requieras"
-      - "Paga con transferencia bancaria, tarjeta de crédito o débito"
+  # - slug: 'venezuela-laptop-pt'
+  #   academies: ['caracas-venezuela']
+  #   recomended: false
+  #   scholarship: "Incluye laptop para programar"
+  #   payment_time: "Oferta especial con equipo incluido"
+  #   price: "~$2500"
+  #   bullets: 
+  #     - "Siempre hay un plan de pago disponible para que te unas a 4Geeks Academy"
+  #     - "Si no encuentras aquí lo que esperas, por favor contáctanos y trataremos de encontrar nuevas formas de ayudarte"     
+  #     - "El equipo es totalmente tuyo para lo que requieras"
+  #     - "Paga con transferencia bancaria, tarjeta de crédito o débito"
     # icons: 
     #   - "/images/laptp.jpg"
 

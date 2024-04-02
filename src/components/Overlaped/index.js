@@ -7,6 +7,7 @@ import { H4, H3, H2, H1, Paragraph } from "../Heading";
 import Icon from "../Icon";
 import { DirectiveLocation } from "graphql";
 import { transferQuerystrings, smartRedirecting } from "../../utils/utils";
+
 const Overlaped = ({ heading, content, button, background, image }) => {
   const data = useStaticQuery(graphql`
     {
@@ -142,6 +143,11 @@ const Overlaped = ({ heading, content, button, background, image }) => {
                 background={Colors[button.color]}
                 color={Colors.white}
                 margin="20px 0 0 0"
+                onClick={() => {
+                  if (button.path && button.path.indexOf("http") > -1)
+                    window.open(transferQuerystrings(button.path, utm));
+                  else navigate(button.path);
+                }}
               >
                 {button.text}
               </Button>

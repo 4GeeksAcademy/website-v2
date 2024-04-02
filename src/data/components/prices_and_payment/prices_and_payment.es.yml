@@ -1,19 +1,23 @@
 pricing_error: En este momento no estan disponibles los precios para
 pricing_error_contact: Para más información por favor contáctanos a info@4geeksacademy.com.
-get_notified: Pregunta por nuestras Becas. Siempre estamos trabajando y aliándonos para poder ofrecerte mejores opciones. Contáctanos para más información.
-top_label: sede
+get_notified: Pregunta por nuestras Becas. Siempre estamos trabajando y aliándonos para poder ofrecerte mejores opciones. 
+contact_carrer_advisor: Contáctanos para más información.
+contact_link: /us/contact
+top_label: Sede
+top_label_2: Programa
 recomended: Recomendado
 plans_title: Planes y precios
 plan_details: Detalles del plan
-select: Selecciona el plan que mejor se ajusta a ti
+select: Selecciona la ubicacion y el plan que mejor se ajusta a ti
+select_2: Selecciona la ubicación, el programa y la opción de pago que mejor se adapte a sus necesidades
 job_guarantee:
   title:  "Compromiso de Garantía de Empleo:"
   description:  "Ambos nos comprometemos con tu futura carrera (te devolvemos el dinero si no lo logras)."
 apply_button: 
   label: APLICAR
   link: /es/aplica
-not_available: '<p>No se ha encontrado information de pago para este programa en este país.</p> Para conocer más le invitamos a aplicar al programa y sera contactado por uno de nuestros asesores vocacionales o <a class="faq-link" href="/es/contactanos" rel="noopener noreferrer nofollow">envíenos un mensaje.</a>'
-not_available_job_guarantee: '<p>No tenemos disponible la modalidad Garantía de Empleo en este programa en esta locación.</p> Para conocer más le invitamos a aplicar al programa y sera contactado por uno de nuestros asesores vocacionales o <a class="faq-link" href="/es/contactanos" rel="noopener noreferrer nofollow">envíenos un mensaje.</a>'
+not_available: '<style type="text/css">p { font-family: "Lato",sans-serif; }</style> <p>No se ha encontrado information de pago para este programa en este país.</p> <p>Para conocer más le invitamos a aplicar al programa y sera contactado por uno de nuestros asesores vocacionales o <a class="faq-link" href="/es/contactanos" rel="noopener noreferrer nofollow">envíenos un mensaje.</a></p>'
+not_available_job_guarantee: '<style type="text/css">p { font-family: "Lato",sans-serif; }</style> <p>No tenemos disponible la modalidad Garantía de Empleo en este programa en esta locación.</p> <p>Para conocer más le invitamos a aplicar al programa y sera contactado por uno de nuestros asesores vocacionales o <a class="faq-link" href="/es/contactanos" rel="noopener noreferrer nofollow">envíenos un mensaje.</a></p>'
 chart_section:
   title: '4Geeks: Cuando pagar deja de ser una preocupación'
   data:

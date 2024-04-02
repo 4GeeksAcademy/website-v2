@@ -29,7 +29,7 @@ form:
 
 navbar:
   buttonText: "APLICA YA"
-  buttonUrl: "#bottom" # url accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
+  buttonUrl: "#leadform_bottom" # url accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
   logoUrl: "#"
 
 apply_schollarship: # form that is displayed at the end of the landing
@@ -42,7 +42,7 @@ header_data:
   background: "#FFF1D1"
   tagline: Empleo Garantizado en 6 meses con nuestro programa Full-Stack Developer
   sub_heading: Si no consigues empleo con nuestro Programa te devolvemos tu dinero. Da el paso hoy y Conviértete en Full-Stack Developer.
-  badge: "../../../static/images/badges/Course-Report-Badge-2023.png"
+  badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
   image_filter: brightness(0.3)
 
 features:
@@ -62,7 +62,7 @@ short_badges:
     alt: "Mejor centro de Coding Bootcamp"
   - name: "Course Report"
     url: ""
-    image: "../../../static/images/badges/Course-Report-Badge-2023.png"
+    image: "../../../static/images/badges/Course-Report-Badge-2024.webp"
     alt: "Top Coding Bootcamps Course Report"
   - name: "Switchup"
     url: ""
@@ -82,7 +82,7 @@ follow_bar:
     font_size: ["25px", "25px", "25px", "18px", "4.3vw"]
   button:
     text: "APLICA YA"
-    path: "#top"
+    path: "#leadform_header"
   phone:
     text: "Llama "
 
@@ -161,7 +161,7 @@ components:
       color: black
       # hover_color: "white"
       # background: "black"
-      path: "#"
+      path: "https://storage.googleapis.com/4geeks-academy-website/PDF%20and%20Docs/Condiciones%20y%20Requerimientos%20Job%20Guaranteed%20Program.pdf"
     icons:
       - icon: "yellowhat"
         title: Si no encuentras empleo en los primeros 180 días tras graduarte, te devolvemos tu dinero.
@@ -204,7 +204,7 @@ components:
       color: white
       hover_color: "white"
       background: "black"
-      path: "#bottom"
+      path: "#leadform_bottom"
     # content:
     #   text: "text after bullets"
     #   font_size: ["16px"]

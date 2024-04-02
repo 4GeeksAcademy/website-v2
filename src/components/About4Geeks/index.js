@@ -95,7 +95,6 @@ const About4Geeks = ({ id, lang }) => {
                 pointer
                 textColor={Colors.white}
                 fontSize={"13px"}
-                borderRadius="3px"
               >
                 {about.button_text}
               </Button>
@@ -114,7 +113,7 @@ const About4Geeks = ({ id, lang }) => {
           image={about.image.childImageSharp.gatsbyImageData}
           bgSize={`contain`}
           alt="Cnn Logo"
-          borderRadius={`0 0 0 3px`}
+          borderRadius={`0`}
         />
       </Div>
     </GridContainerWithImage>

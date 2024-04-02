@@ -64,39 +64,40 @@ badges:
 
 
 overlaped:
-  heading: "Python y Javascript"
-  paragraph: "Nuestros programa está basado en el uso de Phyton y Javascript. La razón?En el mercado laboral JavaScript tiene 26 veces más vacantes de trabajo que Ruby on Rails. Python tiene 10 veces más trabajos que node.js. Otras herramientas que también aprenderás a usar en nuestro programa: son GitHub, CSS3, HTML5, Flask, etc."
+  heading: "Aprende a crear modelos predictivos que cambien el mundo"
+  paragraph: "En el bootcamp de Data Science y Machine Learning de 4Geeks Academy, adquirirás habilidades para utilizar eficazmente las herramientas líderes en este campo, como Python, TensorFlow y Scikit-learn. A lo largo del programa, te sumergirás en el desarrollo de modelos predictivos con aplicaciones prácticas en áreas tan diversas como la detección de fraude, recomendación de productos, clasificación de imágenes y procesamiento del lenguaje natural"
   button:
     text: "Aplicar"
     color: "blue"  
-    link: "/"
+    path: "/es/aplica"
   image:
-    src: "/images/landing/tres-personas.png"  
+    src: "/images/landing/tres-personas-reloaded.webp"  
 
-## TWO COLUMNS
-two_columns:
-  proportions: [6, 6]
-  image:
-    style: '{"border" : "3px solid black", "backgroundSize": "contain" }'
-    src: "/static/images/staff/luisa.png"
-    shadow: true  
-  video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
-  heading:
-    text: "4Geeks, Miami and a story full of opportunities"
-    font_size: ["30px", "30px", "30px", "30px", "30px"]
-  sub_heading:
-    text: "We are Miami based and we have been focusing in bringing on more opportunities in South Florida."
-    font_size: ["18px", "18px", "18px", "18px", "18px"]
-  button:
-    text: "Apply now"
-    color: "white"
-    background: "black"
-    path: "#"
-  bullets:
-    items: 
-    - text: "There is always a full or partial scholarship open"
-    - text: "There is always opportunities for everyone in Miami-Dade County, Broward and Palm Beach"
-    - text: "We have ongoing partnerships with Miami Dade College, Miami Tech Coalition, UWM, The City of Miami, Miami Dade Counti and so manu more."
+
+# two_columns:
+#   proportions: [6, 6]
+#   image:
+#     style: '{"border" : "3px solid black", "backgroundSize": "contain" }'
+#     src: "/static/images/staff/luisa.png"
+#     shadow: true  
+#   video: "https://www.youtube.com/watch?v=c14ZDHXN6_w"
+#   heading:
+#     text: "4Geeks Academy "
+#     font_size: ["30px", "30px", "30px", "30px", "30px"]
+#   sub_heading:
+#     text: "Descubre por qué nuestro Bootcamp de Data Science es el mejor"
+#     font_size: ["16px", "16px", "16px", "16px", "16px"]
+#   button:
+#     text: "Apply now"
+#     color: "white"
+#     background: "black"
+#     path: "#prices_and_payment"
+#   bullets:
+#     items: 
+#     - text: "There is always a full or partial scholarship open"
+#     - text: "There is always opportunities for everyone in Miami-Dade County, Broward and Palm Beach"
+#     - text: "We have ongoing partnerships with Miami Dade College, Miami Tech Coalition, UWM, The City of Miami, Miami Dade County and many more."
+
 
 upcoming:
   no_dates_message: "Actualmente no hay próximas fechas para este programa"
@@ -231,7 +232,7 @@ potential_companies:
   sub_heading: "Da un salto a tu carrera y trabaja en las mejores empresas"
   companies:
     - name: "Facebook"
-      image: "../../../static/images/partner/facebook.png"
+      image: "../../../static/images/partner/meta-logo.png"
       alt: ""
     - name: "Google"
       image: "../../../static/images/partner/google.png"

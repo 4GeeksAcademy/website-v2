@@ -82,14 +82,15 @@ const LandingHeader = (props) => {
             {yml.header_data.partner_logo_url && (
               <>
                 <Div
-                  width="242px"
+                  width="auto"
+                  maxHeight="150px"
                   flexDirection_tablet="column"
                   height="auto"
                   padding="0 0 25px 0"
                 >
                   <GatsbyImage
                     loading="eager"
-                    imgStyle={{ objectFit: "contain" }}
+                    imgStyle={{ objectFit: "contain", objectPosition: "left" }}
                     image={getImage(
                       yml.header_data.partner_logo_url.childImageSharp
                         .gatsbyImageData
@@ -306,6 +307,7 @@ const LandingHeader = (props) => {
             </Div>
             {!hideForm ? (
               <LeadForm
+                id={"leadform_header"}
                 landingTemplate
                 headerImage={
                   yml.header_data.badge &&

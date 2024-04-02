@@ -73,7 +73,7 @@ overlaped:
     color: "blue"  
     link: "/"
   image:
-    src: "/images/landing/tres-personas.png"  
+    src: "/images/landing/tres-personas-reloaded.webp"  
 
 ## TWO COLUMNS
 two_columns:
@@ -84,21 +84,21 @@ two_columns:
     shadow: true  
   video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
   heading:
-    text: "4Geeks, Miami and a story full of opportunities"
+    text: "4Geeks Academy and a story full of opportunities"
     font_size: ["30px", "30px", "30px", "30px", "30px"]
   sub_heading:
     text: "We are Miami based and we have been focusing in bringing on more opportunities in South Florida."
-    font_size: ["18px", "18px", "18px", "18px", "18px"]
+    font_size: ["16px", "16px", "16px", "16px", "16px"]
   button:
     text: "Apply now"
     color: "white"
     background: "black"
-    path: "#"
+    path: "#prices_and_payment"
   bullets:
     items: 
     - text: "There is always a full or partial scholarship open"
     - text: "There is always opportunities for everyone in Miami-Dade County, Broward and Palm Beach"
-    - text: "We have ongoing partnerships with Miami Dade College, Miami Tech Coalition, UWM, The City of Miami, Miami Dade Counti and so manu more."
+    - text: "We have ongoing partnerships with Miami Dade College, Miami Tech Coalition, UWM, The City of Miami, Miami Dade County and many more."
 
 
 badges:
@@ -115,14 +115,14 @@ credentials:
 details:
   about:
       title: "Acerca del programa"
-      sub_title: "En esta carrera te desarrollarás desde cero como Full Stack Developer.       
-      Aprenderás a crear un sitio web sumergiéndote en las mejores prácticas del       
-      diseño web responsive, trabajando con diversos lenguajes. Obtedrás una       
-      sólida base de frontend, backend, base de datos, manejo de procesos       
-      distribuídos y despliegue en plataformas web.
-      |
-      Al finalizar este programa, contarás con los conocimientos para       
-      desempeñarte como <strong style='font-weight: 700'>Full Stack Developer</strong>." 
+      sub_title: |
+        En este Bootcamp te desarrollarás desde cero como Full Stack Developer.
+        Aprenderás a crear un sitio web sumergiéndote en las mejores prácticas del       
+        diseño web responsive, trabajando con diversos lenguajes. Obtedrás una       
+        sólida base de frontend, backend, base de datos, manejo de procesos       
+        distribuidos y despliegue en plataformas web. <br>
+        Al finalizar este programa, contarás con los conocimientos para       
+        incorporarte al sector tecnológico como <strong style='font-weight: 700'>Full Stack Developer</strong>. 
     
       list:
         - label: "Duración"
@@ -155,23 +155,23 @@ details:
     - module_name: "PREWORK"
       title: "Prework"
       description: >
-        Empezando por lo básico: HTML5 + CSS3 + Javascript. Revisamos los fundamentos de la codificación y nos aseguramos de que todos estamos en la misma página.
-        Durante el prework revisarás cómo hacer un website con HTML y CSS, luego desarrollarás varios proyectos y por último te iniciaras en el mundo de Javascript, aprendiendo sobre variables, loops, condicionales, y funciones.
+        Empezamos por lo básico: HTML5 + CSS3 + Javascript. Revisamos los fundamentos de la programación y nos aseguramos de que todos estamos en la misma página.
+        Durante el prework revisarás cómo hacer un sitio web con HTML y CSS, luego desarrollarás varios proyectos y por último te iniciarás en el mundo de Javascript, aprendiendo sobre variables, loops, condicionales, y funciones.
       projects: "Construye tu primera página web, y una versión mínima de Instagram."
       slug: "prework"
       duration: "~ 60 horas"
       step: 0
     - module_name: "FUNDAMENTOS"
       title: "Aprende a programar"
-      description: "Piensa como un ordenador: Controla el flujo de tu código, crea algoritmos, haz un bucle, usa condicionales y usa/mezcla JavaScript con HTML5 y CSS3 para lanzar tu primer sitio web interactivo."
-      projects: "Aplicación de Instagram, Juego de cartas de memoria, Tic Tac Toe, Flappy Bird, etc."
+      description: "Piensa como un ordenador: Controlarás el flujo de tu código, crearás algoritmos, harás bucles, usarás condicionales y una mezcla de JavaScript con HTML5 y CSS3 para lanzar tu primer sitio web interactivo."
+      projects: "Construye tu aplicación de Instagram, juego de cartas de memoria, Tic Tac Toe, Flappy Bird, etc."
       slug: "fundamentos"
       duration: "2 sem"
       step: 2
     - module_name: "LA WEB"
       title: "Desarrollo web"
-      description: "Crea tu primera aplicación con React.js, Patrón MVC, Módulos JS, Bundling, Babel JS, el DOM, Eventos."
-      projects: "Clon de Coursera, clon de Instagram, clon de Youtube, etc."
+      description: "Crearás tu primera aplicación con React.js, Patrón MVC, Módulos JS, Bundling, Babel JS, el DOM, Eventos."
+      projects: "Construirás un clon de Coursera, clon de Instagram, clon de Youtube, entre otros..."
       slug: "desarrollo-web"
       duration: "6 sem"
       step: 6
@@ -191,8 +191,8 @@ details:
       step: 7.9
     - module_name: "DE POR VIDA"
       title: "De por vida"
-      description: "Sigue recibiendo la ayuda de la academia de por vida, acceso a los contenidos, soporte profesional (career support). Recibe incluso ayuda durante el inicio de tu nuevo trabajo, nunca más estarás sólo."
-      projects: "Conseguirás tu primer trabajo, empezarás a ganar dinero pero continuarás aprendiendo hasta convertirte en Senior Developer, ganar muy bien y disfrutar de la vida de un programador."
+      description: "Seguirás recibiendo la ayuda de la academia de por vida, mantendrás el acceso a los contenidos, soporte profesional (career support) y disfrutarás de mentorías ilimitadas, incluso cuando comiences tu primer empleo: ¡nunca más estarás solo!"
+      projects: "Consigue tu primer empleo en el sector tecnológico y empieza a ganar dinero como un programador y sigue desarrollándote hasta convertirte en un programador Senior."
       slug: "lifelong-learning"
       duration: "Para siempre"
       step: 0.1
