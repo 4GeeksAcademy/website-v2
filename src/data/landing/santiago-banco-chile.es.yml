@@ -41,7 +41,7 @@ navbar:
 
 header_data:
   partner_logo_url: "../../../static/images/partner/banco-de-chile-logo.png"
-  background_image: "../../../static/images/landing/GrupoVariasNacionalidades.png"
+  background_image: "../../../static/images/landing/GrupoVariasNacionalidades.webp"
   tagline: Bootcamp de Programación Web
   tagline_color: "white"
   sub_heading: ""

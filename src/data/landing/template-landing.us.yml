@@ -525,3 +525,12 @@ components:
 
 #NUEVO COMPONENTE PROGRAMAS
 
+  # - name: first_syllabus_form
+  #   position: 4
+  #   layout: syllabus
+  #   button:
+  #     text: "Instant Download"
+  #   heading:
+  #     text: "Download the course syllabus"
+  #     #             xl      lg      md      sm      xs
+  #     font_size: ["40px", "40px", "40px", "40px", "40px"]
