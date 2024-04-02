@@ -8,7 +8,7 @@ meta_info:
   visibility: "visible"
   show_in_apply: true
   keywords: ""
-  redirects: [""]
+  redirects: []
   related_clusters: ["trends-and-tech"]
 
 apply_form:
@@ -23,54 +23,38 @@ header:
   image_alt: "apple-building"
 
 button:
-  syllabus_heading: "Download Syllabus"
-  syllabus_btn_label: "Instant Download"
-  syllabus_motivation: "Get it in just a few seconds"
+  # syllabus_heading: "Download Syllabus"
+  # syllabus_btn_label: "Instant Download"
+  # syllabus_motivation: "Get it in just a few seconds"
   apply_button_link: "/us/apply"
   apply_button_text: "Apply"
 
-course_instructors: 
+course_instructors:
   header:
     title: "Meet our instructors"
     paragraph: ""
 
   instructors:
-    - name: "Sayyed Nezhadi"
-      sub_title: "PhD in Artificial Intelligence from Toronto University"
-      degree: "PhD in Artificial Intelligence"
-      image: "../../../static/images/instructors/sayyed.jpeg"
-      bio: "25+ years of experience in delivering complex AI-enabled solutions and digital architectures for large enterprises. PhD in Artificial Intelligence from the Toronto University, and and certificates in Big Data Analytics and Big Data from Hardvard and MIT respectively."
-      github: "https://github.com/snezhadi"
-      linkedin: "https://www.linkedin.com/in/sayyednezhadi"
-
-    - name: "Francesco Pugliese"
-      sub_title: "Computer Scientist and PhD in Robotics & Artificial Intelligence"
-      job: "Machine and Deep Learning Scientist at ISTAT (Italy National Institute of Statistic)."
-      degree: PhD in Robotics & Artificial Intelligence"
-      image: "../../../static/images/instructors/fpugliese.jpeg"
-      bio: "Deeply specialized in Deep Learning, Neural Networks and Evolutionary Robotics; Francesco has a 20+ experience working on Robotics Research topics with several publications; He its currently working as Machine and Deep Learning Scientist at ISTAT (Italy National Institute of Statistic)."
-      github: "https://github.com/neural1977"
-      linkedin: "https://www.linkedin.com/in/francescopugliese77"
-
-    - name: "Manuel Mena"
-      sub_title: "Senior Data Scientist | AI & Machine Learning"
-      job: "Data Scientist at the Georgia Institute of Technology"
-      image: "../../../static/images/instructors/manu-mena.jpeg"
-      bio: "Computer Scientist from the Georgia Institute of Technology with 5+ years of experience in the field of Machine Learning and Business Intelligence applied to commercial strategy, designing data workflows, testing experiments and delivering data science solutions. Experience leading teams in financial, market research and automotive industries. Proficient in R, Python, AWS and PostgreSQL."
-      github: "https://github.com/alexismenanieves"
-      linkedin: "https://www.linkedin.com/in/alexismena/"
+    # - name: "Sayyed Nezhadi"
+    #   sub_title: "PhD in Artificial Intelligence from Toronto University"
+    #   degree: "PhD in Artificial Intelligence"
+    #   image: "../../../static/images/instructors/sayyed.jpeg"
+    #   bio: "25+ years of experience in delivering complex AI-enabled solutions and digital architectures for large enterprises. PhD in Artificial Intelligence from the Toronto University, and and certificates in Big Data Analytics and Big Data from Hardvard and MIT respectively."
+    #   github: "https://github.com/snezhadi"
+    #   linkedin: "https://www.linkedin.com/in/sayyednezhadi"
 
 badges:
   paragraph: "Kickstart your career at 4Geeks Academy, where developers grow and thrive. Named the best <a href='/us/coding-bootcamp'>coding bootcamp</a> 2023 by Course Report, best center for coding bootcamps 2023 by Premios de Excelencia Educativa in Spain, listed among the top 10 in the US by Newsweek, and rated 4.92/5 on Switchup. Licensed by the Florida Department of Education, USA."
 
 # OVERLAPED
 overlaped:
-  heading: "Learn to create predictive models and Master Machine Learning with 4Geeks Academy"
-  paragraph: "Dive into the world of machine learning with 4Geeks Academy's specialized program. Gain the skills to build predictive models for practical applications like fraud detection and natural language processing, using industry-leading tools such as Python, TensorFlow, and Scikit-learn."
+  heading: "Become an Expert in Cybersecurity"
+  paragraph: |
+    In the Cybersecurity bootcamp at 4Geeks Academy, you will develop the skills and knowledge necessary to face the threats of today's digital world. <br> Pentesting practices are based on the EJPT certification labs.<br>No bootcamp in the world leaves you ready to certify in anything (EJPT, CEH, etc.), but if you wish to get certified after the bootcamp, you will have a large part of the study already done..
   button:
     text: "LEARN MORE"
-    color: "blue" 
-    link: "/us/apply" 
+    color: "blue"
+    link: "/us/apply"
   image:
     src: "/images/landing/tres-personas-reloaded.webp"
 
@@ -80,13 +64,13 @@ two_columns:
   image:
     style: '{"border" : "3px solid black", "backgroundSize": "contain" }'
     src: "/static/images/staff/luisa.png"
-    shadow: true  
+    shadow: true
   video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
   heading:
-    text: "4Geeks, Miami and a story full of opportunities"
+    text: "Discover Your Potential with 4Geeks Academy"
     font_size: ["30px", "30px", "30px", "30px", "30px"]
   sub_heading:
-    text: "We are Miami based and we have been focusing in bringing on more opportunities in South Florida."
+    text: "4Geeks Academy isn't just a bootcamp – it's a life-changing adventure that helps people like you and me tap into our true potential. It's not just about learning skills; it's about finding a family and a community where we belong, where we support each other every step of the way."
     font_size: ["16px", "16px", "16px", "16px", "16px"]
   button:
     text: "Apply now"
@@ -94,11 +78,10 @@ two_columns:
     background: "black"
     path: "#prices_and_payment"
   bullets:
-    items: 
-    - text: "There is always a full or partial scholarship open"
-    - text: "There is always opportunities for everyone in Miami-Dade County, Broward and Palm Beach"
-    - text: "We have ongoing partnerships with Miami Dade College, Miami Tech Coalition, UWM, The City of Miami, Miami Dade County and many more."
-
+    items:
+      - text: "There is always a full or partial scholarship open"
+      - text: "Unlimited access to career support services"
+      - text: "Lifetime access to mentorship"
 
 upcoming:
   no_dates_message: "There are currently no upcoming dates for this program"
@@ -107,122 +90,120 @@ upcoming:
 ## PROGRAM DETAILS
 details:
   about:
-      title: "About Our Data Science & Machine Learning Course"
-      sub_title: |
-        Learn Python, SQL, Looker (Google Data Studio), Streamlit, and Statistics and become a professional Data Analyst, ready to contribute to any data-driven team at any company.
-        Create predictive models using Python, Pandas, Numpy, and other powerful libraries. Explore algorithms like Close Neighbors, Decision Trees, and more. Work with supervised and unsupervised learning models.
-        Practice solving real-life cases, and learn to tackle the type of challenges you’ll encounter in your career. Master the use of industry-standard tools.
-        Strategize and develop your own A.I. projects, following the complete lifecycle from development to deployment and maintenance, ensuring privacy and security.
+    title: "About This Program"
+    sub_title: |
+      You will gain a solid foundation in networking, Linux, and server administration, while also acquiring practical skills to secure these environments.
+      The program delves into cloud security, penetration testing (both offensive and defensive), and cyber threat intelligence analysis.
+      Learn to manage risks with data loss prevention (DLP) strategies and navigate compliance with international standards such as <strong>ISO 27001 and NIST.</strong>
+    list:
+      - label: "Duration"
+        content: "14 weeks"
+        icon: "calendar"
+      - label: "Classes"
+        content: "3 Classes per week"
+        icon: "book"
+      - label: "Class Size"
+        content: "Up to 10 people"
+        icon: "laptop"
+      - label: "Certificate"
+        content: "Our certificates are recognized by multiple institutions."
+        link_text: ""
+        link: ""
+        icon: "certificate"
+      - label: "Requirements"
+        content: "No prior experience needed"
+        icon: "contract-checked"
 
-      list:
-        - label: "Duration"
-          content:  "16 Weeks"
-          icon: "calendar"
-        - label: "Classes"
-          content: "3 classes weekly"
-          icon: "book"
-        - label: "Class size"
-          content: "12 people max"
-          icon: "laptop"
-        - label: "Certificate"
-          content: "Our certificates are recognized by multiple organizations."
-          link_text: "See example"
-          link: "https://certificate.4geeks.com/44c61b294a248f91088f5355aea09606126795e3"
-          icon: "certificate"
-        - label: "Requisites"
-          content: "No previous experience needed"
-          icon: "contract-checked"
-        - label: "Language"
-          content: "You can choose between English and Spanish for the syllabus and content. Live classes are taught in the language of your campus."
-          icon: "contract-checked"
-          
-  heading: Data Science and Machine Learning Syllabus
-  weeks: 16
-  weeks_label: "weeks"
+  heading: PROGRAM DETAILS
+  weeks: 14
   facts:
     - label: "Duration"
-      value: "16 weeks"
+      value: "14 weeks"
     - label: "Commitment"
-      value: "20 hrs (Mon - Wed - Fri)"
+      value: "20 hrs/week (Mon - Wed - Fri)"
     - label: "Certificate"
-      content: "Our certificates are recognized by multiple organizations."
-      link_text: "See example"
-      link: "https://certificate.4geeks.com/44c61b294a248f91088f5355aea09606126795e3"
+      content: "Our certificates are recognized by multiple institutions."
+      link_text: "View example"
+      link: ""
       icon: "certificate"
-    - label: Delivery
+    - label: "Schedule"
       value: "Online / Remote"
-    - label: Classroom Size
-      value: "12 People Max"
-    - label: Total Hours
-      value: "320"
-  sub_heading: "Start with Python, Data Science, Machine Learning, Deep Learning, and the maintenance of a production environment in A.I."
+    - label: "Class Size"
+      value: "Up to 14 people"
+  sub_heading: "Enhance Your Cybersecurity Skills From Fundamentals to Advanced Techniques"
   left_labels:
     description: "DESCRIPTION:"
     projects: "PROJECTS:"
     duration: "DURATION:"
     skills: "Skills / Weeks:"
   details_modules:
-    - module_name: "Python"
-      title: "Introduction to Python"
-      description: >
-        Starting from a Prework (2 weeks before), get introduced into the world of coding and learn Python and Algorithms' basics; This module will help you prepare to code and develop the different A.I. and Machine Learning model training and evaluations for the next step.
-      projects: "Collect, store and mesassure with Numpy, Pandas, Mstplotlib, etc."
-      slug: "python-intro"
-      duration: "2 wks"
-      step: 2
-    - module_name: "Fundamentals"
-      title: "Statistics and Linear Algebra with Python"
-      description: "Use python to write code that reviews and applies the most used Linear Algebra concepts, Matrix and Vectors, F(x), and the relation functions have between variables. We will also be coding the most used concepts in probabilities understanding core trends, standard deviation, mean median and mode. Finally, we will calculate the probability of an event happening: This is a very important skill used to build prediction models that we will be using further along."
-      projects: "We will provide you with a list of real life problems and solutions for the different concepts, you will use python to solve them."
-      slug: "datascience-fundamentals"
-      duration: "2 wks"
-      step: 2
-    - module_name: "Collect"
-      title: "Collect and store data"
-      description: "Probably longest step in most professional projects is collecting and cleaning the data. In this module you use Python and connect to a SQL Database, learn the SQL syntax to query and manipulate that date, upload and download static files (CSV, JSON, etc.). Learn how to connect with API's or scrape websites that don't have available API's. Store the data in an organized way."
-      projects: "Loading structured and unstructured data from different sources (e.g. SQL, Web Scraping, text files) and connect with the Twitter API."
-      slug: "data-science"
-      duration: "2 wks"
-      step: 2
-    - module_name: "Clean"
-      title: "Manipulate data with Python"
-      description: "Once you data has been stored, its necesary to undestand it. We will start with simple visualization techniques for better understanding of some samples and developing the different strategies to clean and optimize your dataset: Feature Engineering, Outliers, Missing Data, Feature encoding, Feature Scaling. \n Learn how to develop reports using Looker (Google DataStudio) with advanced graphs, filters and other dashboard elements and KPI's, one of the most popular datawarehousing tools in the market."
-      projects: "Explor the Airbnb dataset and publish a report using Google Cloud and Looker Studio."
-      slug: "data-analysis"
-      duration: "3 wks"
-      step: 3
-    - module_name: "Model"
-      title: "Practical Machine Learning"
-      description: "One by one we will be reviewing the most used algorithms and predictive models: Supervised and not Supervised. Every model will be used to fix a problem using Python: Lineal Regresion, Logistic Regresion, Decision Trees, Random Forest, Bayes, Support Vector Machine, NLP, KNN, Time Series, NN and others."
-      projects: "Predict medical insurance costs, classify patients based on diabetes. Sentiment Analysis on Google Play Store reviews. Email Spam Detector. Group houses based on geolocation or avg income. Classify images and more."
-      slug: "machine-learning"
-      duration: "4 wks"
-      step: 4
-    - module_name: "Deploy"
-      title: "A.I. In Production"
-      description: "One of the most important aspects of developing Artificial Intelligence solutions is understanding how to prepare, deploy, and manage the solution in a Production Environment. We walk you through developing an AI Strategy, Machine Learning Lifecycle of development and deployment, Machine Learning Operations (MLOps), as well as Privacy, Security, and Ethics. Your final project will be to deploy your machine learning model into production."
-      projects: "Building data architectures, deploying AI models into production both on-premiss and on cloud, monitoring and maintenance of the models"
-      slug: "quality-deploy"
-      duration: "1 wks"
+    - module_name: "PreWork"
+      title: "Introduction to Cybersecurity"
+      description: "We'll start with a 'prework', where you'll learn the basics of computer security, including major threats, vulnerabilities, and the importance of cybersecurity in today's world."
+      projects: "Introduction to cybersecurity, information technology [IT] technologies, and information security best practices, as well as an introduction to Packet Tracer, a visual simulation tool for packet tracing."
+      slug: "security-intro"
+      duration: "1 week"
       step: 1
-    - module_name: "Final Project"
-      title: "Choose a problem and fix it with Machine Learning"
-      description: "Work in a team to choose a real life problem, start collecting the data needed to predict, make an exploratory analysis using several ways of visualizing data in order to understand it. Clean your dataset and optimized for your prediction needs, choose two models and start predicting. Evaluate how effective your models were by using the different techniques we saw in class. Deploy in production using Streamlit o Looker (Google DataStudio)."
-      projects: "Building data architectures, deploying AI models into production both on-premiss and on cloud, monitoring and maintenance of the models"
-      slug: "quality-deploy"
-      duration: "2 wks"
-      step: 1.9
-    - module_name: "LIFELONG"
-      title: "Lifelong Support"
-      description: "Keep practicing with the academy's help - we will be coaching you for life. We will help you apply for jobs and continue to support you once you find a job in A.I."
-      projects: "Get paid to keep learning and raise your income gradually as you become a Machine Learning Engineer. Lead a successful career in AI and Machine Learning development, management, and leadership."
+    - module_name: "Fundamentals and Network Security"
+      title: "Networking Basics and Network Security"
+      description: |
+        You will delve into networking basics, such as the OSI model, TCP/IP, network architectures, and devices, including different network technologies and communication protocols.
+        \n You will become familiar with major threats and vulnerabilities in networks, such as common attacks, software and hardware vulnerabilities, and vulnerability exploitation.
+      projects: |
+        In practice, you will dive into reference models, IP address management, network protocols, enterprise network architecture, and Virtual Box. \n
+        You will master tools like Nmap, Wireshark, and Nessus for analyzing and securing networks.
+      slug: "cybersecurity-fundamentals"
+      duration: "1 week"
+      step: 1
+    - module_name: "Linux and Server Administration"
+      title: "Linux and Server Administration"
+      description:
+        "You will delve into Linux concepts, securing your systems through hardening, file security, permissions, and Linux security tools.
+        You will also learn about server installation and configuration, user and group management, and services and processes on servers."
+      projects: "Preparation of the virtual environment, basic administration of users and groups, server security configuration, scheduling automated tasks, and monitoring and optimizing server performance."
+      slug: "datacollection"
+      duration: "2 weeks"
+      step: 2
+    - module_name: "Cyber Intelligence"
+      title: "Threat and Vulnerability Management"
+      description: "You will understand the principles and techniques of cyber intelligence, learning to collect, analyze, and process information on cyber threats."
+      projects: |
+        You will acquire skills to investigate cyber incidents, determine their origin and scope, and take appropriate measures to mitigate their impact \n by learning to implement and maintain an Information Security Management System (ISMS) in accordance with ISO 27001.
+      slug: "data-analysis"
+      duration: "2 weeks"
+      step: 3
+    - module_name: "Pentesting"
+      title: "Pentesting Fundamentals"
+      description: "You will acquire the basic knowledge of penetration testing, including different methodologies, tools, and techniques. You will learn to perform basic pentesting tests, such as vulnerability scanning, web application attacks, and network and system attacks, known as Blue Team (focused on defense) or Red Team (focused on attack)."
+      projects: "You will learn to monitor networks and systems, analyze security incidents, and develop response plans. You will become familiar with the Blue Team approach, which focuses on defense and response to attacks, and also acquire knowledge of the Red Team approach, which focuses on simulating advanced attacks."
+      slug: "pentesting-module"
+      duration: "3 weeks"
+      step: 3
+    - module_name: "DLP"
+      title: "DLP and Risk Management"
+      description: "You will learn about data loss prevention (DLP), protecting your organization's sensitive data through data classification techniques, access control, and data protection in transit and at rest."
+      projects: "You will acquire knowledge to identify and assess security risks, implement control measures, prevent threats, and protect against external attacks."
+      slug: "dlp-and-risks"
+      duration: "3 weeks"
+      step: 3
+    - module_name: "NIST"
+      title: "National Institute of Standards"
+      description: "You will delve into the NIST Cybersecurity Framework, its components, and how to implement it in your organization."
+      projects: "Security planning, data backup and recovery, and continuity testing and exercises."
+      slug: "nist"
+      duration: "3 weeks"
+      step: 3
+    - module_name: "LIFELONG LEARNING"
+      title: "Lifelong Learning"
+      description: "Receive assistance from the academy before, during, and after graduation, with unlimited access to content and professional support (career support) for life. You will even receive help during the start of your new job, you will never be alone again!"
+      projects: "This program equips you with the knowledge and skills to launch a rewarding career in cybersecurity. The demand for cybersecurity professionals is expected to grow by 31% between 2020 and 2030, much faster than the average for all occupations."
       slug: "lifelong-learning"
-      duration: "forever"
+      duration: "Lifetime"
       step: 0.1
 
-syllabus:
-  heading: Get all the information about the syllabus
-  button_label: Download
+# syllabus:
+#   heading: Get all the information about the syllabus
+#   button_label: Download
 
 potential_companies:
   tagline: "Get trained to thrive at major companies"
@@ -256,7 +237,7 @@ potential_companies:
 ## 4GEEKS VS OTHERS SECTION
 geeks_vs_others:
   heading: "WHAT MAKES US SO SUCCESSFULL?"
-  sub_heading: "Compare 4Geeks with other coding schools"
+  sub_heading: "The unique features of 4Geeks Academy"
   sub_heading_link: ""
 ## GEEK PAL AND GEEK FORCE BOXES
 geek_data:

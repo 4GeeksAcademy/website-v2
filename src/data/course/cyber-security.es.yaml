@@ -8,7 +8,7 @@ meta_info:
   visibility: "visible"
   show_in_apply: true
   keywords: ""
-  redirects: [""]
+  redirects: []
   related_clusters: ["trends-and-tech"]
 
 apply_form:
@@ -157,10 +157,14 @@ details:
       slug: "security-intro"
       duration: "1 sem"
       step: 1
-    - module_name: "Fundamentos de Redes"
+    - module_name: "Fundamentos y Seguridad en Redes"
       title: "Conceptos básicos de redes y Seguridad en redes"
-      description: "Profundizarás en los conceptos básicos de redes, como el modelo OSI, TCP/IP, arquitecturas de redes y dispositivos incluyendo las diferentes tecnologías de red y protocolos de comunicación."
-      projects: "En la práctica entrarás de lleno con modelos de referencia, ip-address-management, network protocols, enterprise-network-architecture y Virtual Box."
+      description: |
+        Profundizarás en los conceptos básicos de redes, como el modelo OSI, TCP/IP, arquitecturas de redes y dispositivos incluyendo las diferentes tecnologías de red y protocolos de comunicación.
+        \n Te familiarizarás con las principales amenazas y vulnerabilidades en redes, como ataques comunes, vulnerabilidades de software y hardware, y explotación de vulnerabilidades.
+      projects: |
+        En la práctica entrarás de lleno con modelos de referencia, ip-address-management, network protocols, enterprise-network-architecture y Virtual Box. \n 
+        Dominarás herramientas como Nmap, Wireshark y Nessus para analizar y proteger redes.
       slug: "cybersecurity-fundamentals"
       duration: "1 sem"
       step: 1
@@ -172,10 +176,11 @@ details:
       slug: "datacollection"
       duration: "2 sem"
       step: 2
-    - module_name: "Seguridad en Redes"
-      title: "vulnerabilidades e Implementación de medidas de seguridad"
-      description: "Te familiarizarás con las principales amenazas y vulnerabilidades en redes, como ataques comunes, vulnerabilidades de software y hardware, y explotación de vulnerabilidades."
-      projects: "Aprenderás a implementar medidas de seguridad avanzadas, como firewalls de última generación, sistemas de detección y prevención de intrusiones, y redes privadas virtuales."
+    - module_name: "Ciberinteligencia"
+      title: "Gestión de amenazas y vulnerabilidades"
+      description: "Comprenderás los principios y técnicas de la ciberinteligencia, aprendiendo a recopilar, analizar y procesar información sobre amenazas cibernéticas."
+      projects: |
+        Adquirirás las habilidades para investigar incidentes cibernéticos, determinar su origen y alcance, y tomar las medidas adecuadas para mitigar su impacto \n aprendiendo a implementar y mantener un Sistema de Gestión de Seguridad de la Información (SGSI) conforme a la norma ISO 27001.
       slug: "data-analysis"
       duration: "2 sem"
       step: 2
@@ -208,9 +213,9 @@ details:
       duration: "Para siempre"
       step: 0.1
 
-syllabus:
-  heading: Descarga toda la información acerca de este programa
-  button_label: Descargar
+# syllabus:
+#   heading: Descarga toda la información acerca de este programa
+#   button_label: Descargar
 
 potential_companies:
   tagline: "Entrénate para destacar en las compañías más exigentes"
