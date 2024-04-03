@@ -10,9 +10,9 @@ meta_info:
 seo_title: "geekforce"
 header:
   title: |
-    <strong style='color:black; font-family: Archivo-Black;'>Geek</strong>
+    <h1><strong style='color:black; font-family: Archivo-Black;'>Geek</strong>
     <strong style = 'color:rgba(255, 183, 24, 1); font-family: Archivo-Black;'>FORCE</strong> <br>
-    <strong style='font-family: Archivo;'>the collective process of Career Support at the Academy</strong>
+    Career Support at 4Geeks Academy</h1>
   image: "../../../static/images/bg/companies-bg.jpg"
   image_alt: ""
   paragraph: |
