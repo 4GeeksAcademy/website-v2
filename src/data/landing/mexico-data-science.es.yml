@@ -75,23 +75,23 @@ short_badges:
     alt: "Mejor centro de Coding Bootcamp"
   - name: "Course Report"
     url: ""
-    image: "../../../static/images/badges/Course-Report-Badge-2023.png"
-    alt: "Top Coding Bootcamps Course Report"
+    image: "../../../static/images/badges/Course-Report-Badge-2024.webp"
+    alt: "El mejor Bootcamp de programación de Course Report 2024"
   - name: "Switchup"
-    url: ""
+    url: "https://www.coursereport.com/best-coding-bootcamps"
     image: "../../../static/images/badges/switchup-badge-2023.png"
-    alt: "Best coding bootcamp Switchup 2023"   
+    alt: "El mejor Bootcamp de Programación Switchup 2023"   
   - name: "Florida Department of Education"
     url: ""
     image: "../../../static/images/badges/licensed.png"
-    alt: "Florida Department of Education"
+    alt: "Departamento de Educación de Florida"
 
 #
 # ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇
 #
 
 
-rating_reviews:
+# rating_reviews:
   # position: 6
   # heading: "Lee acerca de nosotros"
   # rating_list:
@@ -229,16 +229,16 @@ components:
         text: "Proporcionamos ayuda para la colocación laboral y preparación para el empleo en tecnología."
         icon: "circle" 
 
-choose_your_program:
-  position: 5
-  title: Nuestra Modalidad
-  paragraph: Programa de Machine Learning y Data Science en Modalidad Part Time y Full Time
-  programs:  
-  - title: "Part Time"
-    sub_title: "16 semanas"
-    icon: "fullstack"
-    description: |
-      De cero a tener tu primer trabajo como Data Scientist, con una duración de 16 semanas, con clases en vivo 3 veces por semana, compatible con horario laboral o de estudios. 
-    text_link: Obtener más información
-    link: "#leadform_header" # moves to start position
+# choose_your_program:
+#   position: 5
+#   title: Nuestra Modalidad
+#   paragraph: Programa de Machine Learning y Data Science en Modalidad Part Time
+#   programs:  
+#   - title: "Part Time"
+#     sub_title: "16 semanas"
+#     icon: "fullstack"
+#     description: |
+#       De cero a tener tu primer trabajo como Data Scientist, con una duración de 16 semanas, con clases en vivo 3 veces por semana, compatible con horario laboral o de estudios. 
+#     text_link: Obtener más información
+#     link: "#leadform_header" # moves to start position
   
