@@ -26,7 +26,7 @@ navbar:
         - title: "CyberSecurity Bootcamp"
           level: " "
           icon: "cyber-security"
-          paragraph: "Become an ethical hacker and learn to detect, correct, and protect yourself from vulnerabilities in computer systems."
+          paragraph: "Become an ethical hacker and learn to detect, correct, and protect from vulnerabilities in computer systems."
           buttons:
             - text: "View program"
               link: "/us/coding-bootcamps/cyber-security"
