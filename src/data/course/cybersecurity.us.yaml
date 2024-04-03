@@ -92,9 +92,11 @@ details:
   about:
     title: "About This Program"
     sub_title: |
-      You will gain a solid foundation in networking, Linux, and server administration, while also acquiring practical skills to secure these environments.
+      You will gain a solid foundation in Networking, Microsoft Windows, Linux, and server administration while also acquiring practical skills to secure these environments.
       The program delves into cloud security, penetration testing (both offensive and defensive), and cyber threat intelligence analysis.
       Learn to manage risks with data loss prevention (DLP) strategies and navigate compliance with international standards such as <strong>ISO 27001 and NIST.</strong>
+
+      This syllabus was built using hands-on labs and projects based on eJTP and CEH; as you complete this bootcamp, you will also prepare for the official industry certifications.
     list:
       - label: "Duration"
         content: "16 weeks"
