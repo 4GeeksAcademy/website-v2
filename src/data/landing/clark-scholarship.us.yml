@@ -172,11 +172,11 @@ components:
         content: 2. Show/provide proof of working permit in the US.
       - icon: "talk"
         title: ""
-        content: 3. If you are unemployed, that's good here. But if you are underpaid or need a new job or a new salary, you also are subject to receive the Scholarship
-      - icon: "yellowhat"
+        content: 3. If unemployed, you qualify. Seeking better pay or a new job? You're still eligible for the Scholarship.
+      - icon: "laptop_new"
         title: ""
         content: 4. Complete the program.
-      - icon: "stairswflag"
+      - icon: "job"
         title: ""
         content: 5. Let's start together to find a job. Your success will open more doors to upcoming students.
 
