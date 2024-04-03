@@ -96,14 +96,6 @@ const _fields = {
     place_holder: "Phone number",
     error: "Please specify a valid phone",
   },
-  consent: {
-    value: true,
-    valid: true,
-    required: true,
-    type: "text",
-    place_holder: "",
-    error: "You need to accept the privacy terms",
-  },
   client_comments: {
     value: "",
     valid: true,
@@ -156,6 +148,7 @@ const clean = (fields, data) => {
 };
 
 const LeadForm = ({
+  id,
   marginButton,
   marginButton_tablet,
   widthButton,
@@ -207,11 +200,6 @@ const LeadForm = ({
             fields {
               lang
             }
-            consent {
-              message
-              link_label
-              url
-            }
           }
         }
       }
@@ -249,7 +237,7 @@ const LeadForm = ({
 
   const [formStatus, setFormStatus] = useState({ status: "idle", msg: "" });
   const [formData, setVal] = useState(_fields);
-  const [consentValue, setConsentValue] = useState(false);
+  const [consentValue, setConsentValue] = useState([]);
   const { session, setLocation } = useContext(SessionContext);
   const courseSelector = yml.form_fields.find((f) => f.name === "course");
   const locationSelector = yml.form_fields.find((f) => f.name === "location");
@@ -286,6 +274,7 @@ const LeadForm = ({
 
   return (
     <Form
+      id={id}
       boxShadow={boxShadow}
       width_md={width_md}
       margin={margin}
@@ -302,7 +291,6 @@ const LeadForm = ({
 
         if (formStatus.status === "error")
           setFormStatus({ status: "idle", msg: "" });
-
         const cleanedData = clean(fields, formData);
 
         if (!formIsValid(cleanedData)) {
@@ -319,11 +307,6 @@ const LeadForm = ({
           formData.utm_location.value.length > 1
         ) {
           setFormStatus({ status: "error", msg: locationSelector.error });
-        } else if (
-          consentValue === false &&
-          session.location?.gdpr_compliant === true
-        ) {
-          setFormStatus({ status: "error", msg: consentCheckboxField.error });
         } else {
           setFormStatus({ status: "loading", msg: yml.messages.loading });
           formHandler(cleanedData, session)
@@ -530,48 +513,48 @@ const LeadForm = ({
                 {formStatus.status === "loading" ? "Loading..." : sendLabel}
               </Button>
             )}
-
-            {session && session.location && session.location.gdpr_compliant && (
-              <Div position="relative" margin="10px 0 0 0">
-                <input
-                  name="isGoing"
-                  type="checkbox"
-                  checked={consentValue}
-                  onChange={() => {
-                    setConsentValue(!consentValue);
-                    setVal({
-                      ...formData,
-                      consent: {
-                        ...formData.consent,
-                        valid: !formData.consent.valid,
-                      },
-                    });
-                  }}
-                  style={{
-                    width: "24px",
-                    height: "24px",
-                    top: "10px",
-                    left: "7px",
-                  }}
-                />
-                <Paragraph
-                  fontSize="11px"
-                  margin="5px 0 0 5px"
-                  textAlign="left"
-                >
-                  {yml.consent.message}
-                  <a
-                    style={{ marginLeft: "5px" }}
-                    target="_blank"
-                    rel="noopener noreferrer nofollow"
-                    className="decorated"
-                    href={yml.consent.url}
-                  >
-                    {yml.consent.link_label}
-                  </a>
-                </Paragraph>
-              </Div>
-            )}
+            {session &&
+              session.location &&
+              session.location.consents &&
+              session.location.consents.map((consent, index) => {
+                if (consent.active)
+                  return (
+                    <Div position="relative" margin="10px 0 0 0">
+                      <input
+                        required
+                        name="isGoing"
+                        type="checkbox"
+                        checked={consentValue[index]}
+                        onChange={() => {
+                          const updatedConsentValue = [...consentValue];
+                          updatedConsentValue[index] = !consentValue[index];
+                          setConsentValue(updatedConsentValue);
+                          setVal({
+                            ...formData,
+                            consents: {
+                              ...formData.consents,
+                              value: updatedConsentValue,
+                            },
+                          });
+                        }}
+                        style={{
+                          width: "24px",
+                          height: "24px",
+                          top: "10px",
+                          left: "7px",
+                        }}
+                      />
+                      <Paragraph
+                        fontSize="11px"
+                        margin="5px 0 0 5px"
+                        textAlign="left"
+                        dangerouslySetInnerHTML={{
+                          __html: consent.message,
+                        }}
+                      ></Paragraph>
+                    </Div>
+                  );
+              })}
             {formStatus.status === "error" && (
               <Alert color="red" margin="20px 0 0 0" padding="5px 0 0 0">
                 {formStatus.msg}
@@ -609,6 +592,7 @@ const LeadForm = ({
 };
 
 LeadForm.propTypes = {
+  id: PropTypes.string,
   heading: PropTypes.string,
   motivation: PropTypes.string,
   sendLabel: PropTypes.string,
@@ -626,6 +610,7 @@ LeadForm.defaultProps = {
   redirect: null,
   handleClose: null,
   layout: "block",
+  id: "leadform",
   data: {},
   fields: ["full_name", "phone", "email"],
 };

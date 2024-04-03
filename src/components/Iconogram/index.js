@@ -46,7 +46,11 @@ const Iconogram = ({ session, data, pageContext, yml, index }) => {
           //margin="30px 0 30px 0"
           maxWidth="1366px"
           margin="30px auto"
-          style={{ ...JSON.parse(heading?.style) } || { textAlign: "center" }}
+          style={
+            heading?.style
+              ? { ...JSON.parse(heading.style) }
+              : { textAlign: "center" }
+          }
         >
           {heading.text}
         </H2>
@@ -61,7 +65,7 @@ const Iconogram = ({ session, data, pageContext, yml, index }) => {
           fontHeight="30px"
           maxWidth="1366px"
           dangerouslySetInnerHTML={{ __html: sub_heading.text }}
-          style={{ ...JSON.parse(sub_heading?.style) } || {}}
+          style={sub_heading?.style ? { ...JSON.parse(sub_heading.style) } : {}}
         />
       ) : sub_heading.text == !"" ? (
         <Paragraph
@@ -72,7 +76,7 @@ const Iconogram = ({ session, data, pageContext, yml, index }) => {
           fontSize="16px"
           fontHeight="30px"
           maxWidth="1366px"
-          style={{ ...JSON.parse(sub_heading?.style) } || {}}
+          style={sub_heading?.style ? { ...JSON.parse(sub_heading.style) } : {}}
         >
           {sub_heading.text}
         </Paragraph>
@@ -91,10 +95,8 @@ const Iconogram = ({ session, data, pageContext, yml, index }) => {
         maxWidth="1366px"
         margin="20px auto 0 auto"
         padding_tablet="0 40px"
-        padding_md="0 80px"
         padding_lg="0"
         className={swipable && "badge-slider hideOverflowX__"}
-        id="accccccccccc"
       >
         {Array.isArray(icons) &&
           icons?.map((item, index) => {
@@ -112,7 +114,6 @@ const Iconogram = ({ session, data, pageContext, yml, index }) => {
       {button && (
         <Button
           outline
-          borderRadius="0"
           colorHoverText={button.hover_color || Colors.blue}
           background={Colors[button.background] || button.background}
           lineHeight="26px"

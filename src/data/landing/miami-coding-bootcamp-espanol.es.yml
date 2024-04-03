@@ -21,9 +21,9 @@ form:
   # posible fields: "first_name", "last_name", "full_name", "phone", "email"
   # always the first_name, email and phone will be mandatory if added.
   fields: ["full_name", "phone", "email"]
-  heading: "¡Aprende más, vive mejor!"
-  motivation: "Únete y cambia tu vida"
-  button_label: opten más información
+  heading: "Descargar curriculum y obtener más información"
+  motivation: "Recibirás un e-mail de nuestro equipo con detalles sobre cómo funciona el programa incluyendo financiamiento, oportunidades, y todo lo que necesitas para tomar la mejor decisión para tu carrera."
+  button_label: Solicita más información
   redirect: null #you can redirect to another url or entirely diffrent website
 
 apply_schollarship: # form that is displayed at the end of the landing
@@ -33,8 +33,8 @@ apply_schollarship: # form that is displayed at the end of the landing
 
 # jumbotron on the top (cannot be commented out)
 header_data:
-  tagline: Aprende a Programar en Español con 4Geeks Academy en los EE. UU.
-  sub_heading: " En 4Geeks Academy, Rompemos Barreras para que Tu Futuro no tenga Límites. ¡Inicia Tu Viaje en la Programación Hoy Mismo!"
+  tagline: Aprende a Programar en Español en los EE. UU.
+  sub_heading: "Pocos cupos disponibles"
   background: "#FFF1D1"
   badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
   image_filter: brightness(0.3)
@@ -45,16 +45,16 @@ features:
   #                                         up   left down  right
   styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
   bullets:
+    - Pregunta por la oferta de $4000 de descuento
     - No requiere experiencia previa
     - Bootcamp a tiempo parcial diseñado para adaptarse a tu vida actual
-    - Experimenta la gratificación de aplicar lo que aprendes en el aula o directamente en proyectos prácticos
     - El salario promedio de un desarrollador fullstack en Estados Unidos en 2024 es de $100K al año
 
 follow_bar:
   position: "top" # top, bottom, hidden
   content:
     text: |
-      Aprende a Programar en Español y Prepárate para tu Futuro Laboral. ¡Empieza Hoy!
+      Aprende a Programar en Español en Estados Unidos ¡Empieza Hoy!
     text_mobile: "Aprende a Programar en Español y Prepárate para tu Futuro Laboral. ¡Empieza Hoy!"
     # devices:   XL      LG    MD      SM    XS
     font_size: ["25px", "25px", "25px", "20px", "18px"]
@@ -75,9 +75,13 @@ short_badges:
     alt: "Top Coding Bootcamps Course Report"
   - name: "Switchup"
     url: ""
-    image: "../../../static/images/badges/Course-Report-Badge-2024.webp"
+    image: "../../../static/images/badges/switchup-badge-2023.png"
     alt: "Best coding bootcamp Switchup 2024"   
-  - name: "Florida Department of Education"
+  - name: "Switchup"
+    url: ""
+    image: "../../../static/images/badges/european_excellence_education_black.png"
+    alt: "Premio Excelencia Educativa al Mejor Programa Educativo para la Inserción Profesional"   
+  - name: "European Excellence"
     url: ""
     image: "../../../static/images/badges/licensed.png"
     alt: "Florida Department of Education"
@@ -165,7 +169,7 @@ components:
       background: black
       color: white
       hover_color: "#white"
-      path: "#bottom"
+      path: "#leadform_bottom"
 
   - name: top_coding_bootcamp
     position: 8
@@ -177,7 +181,7 @@ components:
       src: "/images/badges/Course-Report-Badge-2024.webp"
       link: "https://www.coursereport.com/schools/4geeks-academy"
     content:
-      style: '{ "line-height": "30px", "textAling": "center", "padding": "0 20px"}'
+      style: '{ "line-height": "30px", "textAling": "center", "padding": "0 20px", "justifyContent":"center"}'
       text: "hemos sido seleccionados como uno de los mejores bootcamps de codificación a nivel mundial durante cuatro años consecutivo"
                     #xl      lg     md     sm       xs
       font_size: ["35px", "30px", "30px", "28px", "20px"]
@@ -205,11 +209,11 @@ components:
       text: "Aprender a programar te dará acceso a: "
       font_size: ["16px", "16px", "16px", "16px", "16px"]
     button: 
-      text: "Aplica ahora "
+      text: "¡POSTÚLATE AHORA! "
       color: white
       hover_color: "white"
       background: "black"
-      path: "#top"
+      path: "#leadform_header"
     content: 
       text: ""
       font_size: ["16px"]
@@ -233,18 +237,18 @@ components:
     background: "#FFFFFF"
     image:
       style: "{}"
-      src: "/images/ownpeoplecoding2.jpg"
+      src: "/images/ownpeoplecoding2.webp"
       shadow: true
     heading: 
       text: "¿Por qué 4Geeks Academy?"
     sub_heading:
       text: "Hay varias razones por las que elegir 4Geeks Academy para aprender a programar"
     button: 
-      text: "Aplica ahora"
+      text: "¡POSTÚLATE AHORA!"
       color: white
       hover_color: "white"
       background: "black"
-      path: "#bottom"
+      path: "#leadform_bottom"
     content: 
       text: ""
       font_size: ["16px"]

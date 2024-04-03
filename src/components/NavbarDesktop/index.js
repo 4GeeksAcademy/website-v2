@@ -144,7 +144,7 @@ export const Navbar = ({
 
   const data = useStaticQuery(graphql`
     query {
-      file(relativePath: { eq: "images/4geeksacademy-logo.png" }) {
+      file(relativePath: { eq: "images/4geeksacademy-logo-old.png" }) {
         childImageSharp {
           gatsbyImageData(
             layout: FULL_WIDTH # --> CONSTRAINED || FIXED || FULL_WIDTH
@@ -171,7 +171,6 @@ export const Navbar = ({
             defaultLanguage
             breathecode_location_slug
             active_campaign_location_slug
-            gdpr_compliant
             in_person_available
             online_available
             meta_info {
@@ -201,9 +200,7 @@ export const Navbar = ({
     }
   `);
 
-  const isContentBarActive = true;
-  // (contentBar.active && isTestMode) ||
-  // (contentBar.active && !isDevelopment());
+  const isContentBarActive = contentBar.active || isDevelopment();
 
   const langDictionary = {
     us: "es",
@@ -243,8 +240,8 @@ export const Navbar = ({
             // fixed={data.file.childImageSharp.fixed}
             alt="4Geeks Logo"
             style={{
-              height: "38px",
-              width: "141px",
+              height: "auto",
+              width: "132px",
             }}
           />
         </Link>
@@ -358,7 +355,6 @@ const CampusMenu = ({ status, setStatus, menu }) => {
                     ? `5px solid ${Colors.blue}`
                     : null
                 }
-                borderRadius="none"
                 padding="10px"
                 onClick={() => {
                   setActiveOpt({ ...m });
@@ -541,7 +537,6 @@ export const MegaMenu = ({ status, setStatus, menu }) => {
                                       pointer
                                       textColor={Colors.black}
                                       fontSize={"13px"}
-                                      borderRadius="3px"
                                       padding="10px"
                                     >
                                       {m.text}

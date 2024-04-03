@@ -20,7 +20,7 @@ meta_info:
 
 navbar:
   buttonText: "Postular"
-  buttonUrl: "#bottom" # url accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
+  buttonUrl: "#leadform_bottom" # url accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
   logoUrl: "#"
 
 form:
@@ -42,7 +42,7 @@ header_data:
   background: "#FFF1D1"
   tagline: Clases de Programación Web
   sub_heading: "Aprende a programar desde cero y consigue trabajo como Full Stack Developer Junior"
-  badge: "../../../static/images/badges/Course-Report-Badge-2023.png"
+  badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
   image_filter: brightness(0.3)
 
 features:
@@ -76,7 +76,7 @@ short_badges:
     alt: "Mejor centro de Coding Bootcamp"
   - name: "Course Report"
     url: ""
-    image: "../../../static/images/badges/Course-Report-Badge-2023.png"
+    image: "../../../static/images/badges/Course-Report-Badge-2024.webp"
     alt: "Top Coding Bootcamps Course Report"
   - name: "Switchup"
     url: ""
@@ -149,7 +149,7 @@ components:
         Precio: 3.450.000 CLP
       
       text_link: Obtener más información
-      link: "#top" # moves to start position
+      link: "#leadform_header" # moves to start position
       
     - title: "Full Time"
       sub_title: "9 semanas"
@@ -160,7 +160,7 @@ components:
         Precio: 3.800.000 CLP
         
       text_link: Obtener más información
-      link: "#top"
+      link: "#leadform_header"
 
   - name: geeksinfo
     position: 3
@@ -171,8 +171,9 @@ components:
     proportions: [6, 6]
     background: "rgba(255, 183, 24, 0.2)"
     image:
-      style: '{ "backgroundSize": "contain" }'
-      src: "/images/landing/group_194.png"
+      style: '{ "backgroundSize": "cover" }'
+      src: "/images/landing/GrupoVariasNacionalidades.png"
+      shadow: true
     heading:
       text: "Membresías"
       font_size: ["50px", "50px", "50px", "50px", "50px"]
@@ -182,13 +183,14 @@ components:
     content:
       font_size: ["16px"]
       text: |
-        <img src="/images/geekpal.png">
+        <img src="/images/geekpal.png" alt="geekpal" style="max-width: 100%; height: auto; display: block;">
         <br>
         <p>GeekPAL es una membresía instantánea que obtienes cuando te conviertes en estudiante de 4Geeks Academy. Te garantiza que no volverás a programar solo. Con GeekPAL contará con un compañero por el resto de su vida, sí, incluso después de graduarse. Si te quedas atascado, siempre habrá un mentor disponible para que puedas obtener ayuda con tu código</p>
         <br>
         <br>
-        <img src="/images/geekforce.png">
+        <img src="/images/geekforce.png" alt="geekpal" style="max-width: 100%; height: auto; display: block;">
         <p>GeekForce es el proceso colectivo de apoyo profesional del Bootcamp. La 'fuerza' significa empoderamiento profesional y es una membresía de por vida. Brinda asistencia para la colocación laboral del estudiante y para que se prepare para conseguir un trabajo en tecnología.</p>
+
   - name: python_y_javascript
     position: 3
     layout: two_column_right

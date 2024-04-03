@@ -61,7 +61,7 @@ overlaped:
     color: "blue" 
     link: "/" 
   image:
-    src: "/images/landing/tres-personas.png"
+    src: "/images/landing/tres-personas-reloaded.webp"
 
 ## TWO COLUMNS
 two_columns:
@@ -116,7 +116,7 @@ details:
           content: "1-year experience as Software Developer"
           icon: "contract-checked"
         - label: "Language"
-          content: "You can decide between English and Spanish to consume the syllabus and content. Live classes are taught in the language of your campus."
+          content: "You can choose between English and Spanish for the syllabus and content. Live classes are taught in the language of your campus."
           icon: "contract-checked"
           
   heading: Software Engineering Syllabus
@@ -191,7 +191,7 @@ potential_companies:
   sub_heading: "Get ready to apply to the best companies in the world: The next level in your career as Software Engineer"
   companies:
     - name: "Facebook"
-      image: "../../../static/images/partner/facebook.png"
+      image: "../../../static/images/partner/meta-logo.png"
       alt: ""
     - name: "Google"
       image: "../../../static/images/partner/google.png"

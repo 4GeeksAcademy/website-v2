@@ -9,6 +9,12 @@ meta_info:
   region: "usa-canada"
   dialCode: "1"
   related_clusters: ["trends-and-tech"]
+  
+  # ⬇️ cohort_include_regex field is used to filter cohorts on the calendar that only test successfully for a particular regex
+  # for example: for this location, only show cohorts starting with usa-xx-spanish
+  cohort_include_regex: ["miami"]
+  cohort_exclude_regex: ['usa-\d{1,10}-spanish']
+  home_video: "https://www.videoask.com/fyq2h2hvx"
 
 seo_title: "Coding Bootcamp in Los Angeles"
 header:
@@ -68,7 +74,7 @@ images_box:
   images:
     - path: "../../../static/images/locations/losangeles-new.png"
       alt: "Los Angeles city"
-    - path: "../../../static/images/ownpeoplecoding2.jpg"
+    - path: "../../../static/images/ownpeoplecoding2.webp"
       alt: "4Geeks Own People Coding"
     - path: "../../../static/images/ownmancoding.jpg"
       alt: "Remote-Coding-Bootcamp"
@@ -82,15 +88,15 @@ two_columns:
   proportions: [6, 6]
   image:
     style: '{"border" : "5px solid black", "backgroundSize": "contain" }'
-    src: "/static/images/testimonials/allisa-testimonial.jpg"
-    shadow: true  
-  video: "https://www.youtube.com/watch?v=TCHASxvkhpI"
+    src: "/images/landing/alissa-video.webp"
+    shadow: true
+  video: "EcqasocRKHo"
   heading:
-    text: "Empowering Futures 4Geeks Academy in LA"
+    text: "Master Your Coding Journey in LA with 4Geeks Academy's Unique Support"
     font_size: ["30px", "30px", "30px", "30px", "30px"]
   sub_heading:
-    text: "Empowering Careers in LA Job Guarantee and Lifelong Support"
-    font_size: ["18px", "18px", "22px", "22px", "22px"]
+    text: "4Geeks Academy goes beyond a typical coding bootcamp. We offer lifetime mentorship from industry professionals, a focused code curriculum, and flexible learning schedules. This unique combination allows you to master the skills needed to succeed as a full-stack developer while balancing your life."
+    font_size: ["18px", "18px", "18px", "18px", "18px"]
   button:
     text: "APPLY NOW"
     color: "white"
@@ -104,9 +110,15 @@ two_columns:
 
 active_campaign_location_slug: "losangeles-usa"
 breathecode_location_slug: "losangeles-usa"
-gdpr_compliant: false # do we need to ask for permision?
 in_person_available: true # important to accept in-person applicants
 online_available: false # important to accept online-only applicants
+
+consents:
+  - slug: "gdpr_consent"
+    name: "GDPR Consent"
+    active: false
+    message: 'By submitting this form, I accept that my data may be used for a quote request that could result in a commercial relationship. Check out our complete <a style={{ marginLeft: "5px" }} target="_blank" rel="noopener noreferrer nofollow" className="decorated" href="/us/privacy-policy">Privacy Policy</a>'
+    error_message: "You need to accept the privacy terms"
 
 city: "Los Angeles"
 name: "Los Angeles, USA"

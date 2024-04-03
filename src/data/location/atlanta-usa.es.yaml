@@ -9,6 +9,12 @@ meta_info:
   region: "usa-canada"
   dialCode: "1"
   related_clusters: ["desarrollador-full-stack"]
+  
+  # ⬇️ cohort_include_regex field is used to filter cohorts on the calendar that only test successfully for a particular regex
+  # for example: for this location, only show cohorts starting with usa-xx-spanish
+  cohort_include_regex: ["miami"]
+  cohort_exclude_regex: ['usa-\d{1,10}-spanish']
+  home_video: "https://ask.4geeks.com/f67qc0ewu"
 
 seo_title: "Bootcamp de Programación en Atlanta"
 header:
@@ -87,11 +93,11 @@ staff:
 
 
 info_box:
-  heading: ""
-  address: ""
+  heading: "Encuéntranos en Atlanta"
+  address: "Serendipity Labs - Atlanta, GA - Buckhead 3 Alliance Center, 3550 Lenox Road NE, Atlanta, GA 30326"
   iframeMapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1126.521243034489!2d-80.20142868794088!3d25.759937884725943!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b153865e526d%3A0xf884fb3f86a9c7db!2s4Geeks%20Academy!5e0!3m2!1ses-419!2scl!4v1621010581768!5m2!1ses-419!2scl"
-  open_on_maps: ""
-  contact_heading: "Contacts"
+  open_on_maps: "Abrir Mapa."
+  contact_heading: "contáctanos"
   phone: "(786) 416-6640"
   email: "info@4GeeksAcademy.com"
 images_box:
@@ -101,7 +107,7 @@ images_box:
   images:
     - path: "../../../static/images/locations/atlanta-new.jpg"
       alt: "Atlanta city"
-    - path: "../../../static/images/locations/ownpeoplecoding2.jpg"
+    - path: "../../../static/images/ownpeoplecoding2.webp"
       alt: "4Geeks Own People Coding"
     - path: "../../../static/images/locations/ownmancoding.jpg"
       alt: "Remote-Coding-Bootcamp"
@@ -114,9 +120,15 @@ images_box:
 
 active_campaign_location_slug: "atlanta-usa"
 breathecode_location_slug: "atlanta-usa"
-gdpr_compliant: false # do we need to ask for permision?
 in_person_available: true # important to accept in-person applicants
 online_available: false # important to accept online-only applicants
+
+consents:
+  - slug: "gdpr_consent"
+    name: "GDPR Consent"
+    active: false
+    message: 'Al completar este formulario acepto que mi información será utilizada para enviarme información comercial sobre 4Geeks Academy y que podría resultar una relación comercial a partir de esto. Revisa nuestra <a style={{ marginLeft: "5px" }} target="_blank" rel="noopener noreferrer nofollow" className="decorated" href="/es/privacidad">Política de Privacidad</a>'
+    error_message: "Debes aceptar el consent de GDPR"
 
 city: "Atlanta"
 name: "Atlanta, USA"

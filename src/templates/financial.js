@@ -25,8 +25,10 @@ const Financial = (props) => {
   if (session && session.location) {
     location = data.allLocationYaml.edges.find(
       (l) =>
+        l &&
+        l.node &&
         l.node.active_campaign_location_slug ===
-        session.location.active_campaign_location_slug
+          session.location.active_campaign_location_slug
     );
     if (location) location = location.node;
   }
@@ -158,6 +160,7 @@ const Financial = (props) => {
         title={yml.prices.heading}
         paragraph={yml.prices.sub_heading}
         chooseProgram // Allow choosing the program (used in financial.js)
+        financial
       />
 
       <TwoColumn

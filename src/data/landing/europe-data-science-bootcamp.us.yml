@@ -21,7 +21,7 @@ meta_info:
 
 navbar:
   buttonText: "Apply now"
-  buttonUrl: "#bottom" # url accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
+  buttonUrl: "#leadform_bottom" # url accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
   logoUrl: "#"
 
 form:
@@ -58,7 +58,7 @@ follow_bar:
     font_size: ["25px", "25px", "25px", "18px", "4.3vw"]
   button:
     text: "Apply now"
-    path: "#top" #top, #bottom, #anotherComponentId
+    path: "#leadform_header" #top, #bottom, #anotherComponentId
     # ├──if path is empty("") it point to top per default ("#" -> points to top)
     # └── path accepts: relative(/example/path), absolute(https://google.com) or id(#idName)
   phone:
@@ -71,7 +71,7 @@ short_badges:
     alt: "Mejor centro de Coding Bootcamp"
   - name: "Course Report"
     url: ""
-    image: "../../../static/images/badges/Course-Report-Badge-2023.png"
+    image: "../../../static/images/badges/Course-Report-Badge-2024.webp"
     alt: "Top Coding Bootcamps Course Report"
   - name: "Switchup"
     url: ""
@@ -106,7 +106,7 @@ about4Geeks:
     - title: "Preparation for interviews and selection processes"
   paragraph: ""
   button_text: "Apply for a scholarship"
-  button_link: "#"
+  button_link: "#leadform_header"
   image: "../../../static/images/bg/companies-bg.jpg"
   image_mobile: "../../../static/images/bg/community.png"
 
@@ -158,7 +158,7 @@ components:
     swipable: False
     background: "#FFFFFF"
     image:
-      src: "/images/landing/dos-mujeres-1.png"
+      src: "/images/landing/two-womans-and-laptop.webp"
       shadow: true
     heading: 
       text: "Become a Data Scientist in just 16 Weeks"
