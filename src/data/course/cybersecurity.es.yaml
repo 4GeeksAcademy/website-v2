@@ -1,9 +1,9 @@
 meta_info:
-  slug: cyber-security-es
-  title: "Estudia cyber security en 4Geeks Academy"
-  description: "Sin conocimientos previos, Conviértete en un experto en Ciberseguridad y protege el futuro digital"
-  bc_slug: "cyber-security"
-  template: "course-cyber-security"
+  slug: ciberseguridad-curso
+  title: "Conviertete en experto en ciberseguridad en el curso de 4Geeks Academy"
+  description: "Sin conocimientos previos, este curso te conviérte en un especialista de la Ciberseguridad, una de las profesiones mejor pagadas y protege el futuro digital."
+  bc_slug: "cybersecurity"
+  template: "course-cybersecurity"
   image: "/images/og-preview/datascience-ml.es.png"
   visibility: "visible"
   show_in_apply: true
@@ -17,7 +17,7 @@ apply_form:
 seo_title: "Curso de Ciberseguridad"
 header:
   title: "Conviértete en un experto en Ciberseguridad"
-  paragraph: "El salario medio anual para los profesionales de la ciberseguridad en Estados Unidos es de $103,560."
+  paragraph: "De cero a tener tu primer trabajo como especialista en ciberseguridad, recibe soporte de por vida y consigue un trabajo después de 16 semanas de estudio."
   image: "../../../static/images/bg/apple-building.jpg"
   image_alt: "apple-building"
 
@@ -28,12 +28,12 @@ button:
   apply_button_link: "/es/aplica"
   apply_button_text: "Aplicar"
 
-course_instructors:
-  header:
-    title: "Conoce a nuestros instructores"
-    paragraph: ""
+# course_instructors:
+#   header:
+#     title: "Conoce a nuestros instructores"
+#     paragraph: ""
 
-  instructors:
+#   instructors:
     # - name: "Sayyed Nezhadi"
     #   sub_title: "Doctorado en Inteligencia Artificial de la Universidad de Toronto"
     #   degree: "Doctorado en Inteligencia Artificial"
@@ -44,12 +44,12 @@ course_instructors:
 
 
 badges:
-  paragraph: "Gracias a un enfoque hacia la programación, nuestros programas han sido galardonados como TOP Coding Bootcamp en <a href='/es/premios'>España, USA y otros países</a>. Nuestros certificados estan avalados por el Departamento de Educación de Estado Unidos en Florida."
+  paragraph: "Gracias a un enfoque hacia la programación, nuestros programas han sido galardonados como TOP en <a href='/es/premios'>España, USA y otros países</a>. Nuestros certificados estan avalados por el Departamento de Educación de Estado Unidos en Florida."
 
 
 overlaped:
-  heading: "Conviértete en un experto en Ciberseguridad"
-  paragraph: "En el bootcamp de Ciberseguridad de 4Geeks Academy desarrollarás las habilidades y conocimientos necesarios para enfrentar las amenazas del mundo digital actual <br> Las prácticas de pentesting se basan en los laboratorios de la certificación EJPT. Ningún bootcamp del mundo te deja preparado para certificarte en nada (EJPT, CEH, etc.), pero si deseas certificarte después del bootcamp, tendrás gran parte del estudio ya realizado."
+  heading: "Conviértete en un especialista en Ciberseguridad"
+  paragraph: "En el curso de Ciberseguridad de 4Geeks Academy desarrollarás las habilidades y conocimientos necesarios para enfrentar las amenazas del mundo digital actual <br> Las prácticas de pentesting se basan en los laboratorios de la certificación EJPT. Ningún bootcamp del mundo te deja preparado para certificarte en nada (EJPT, CEH, etc.), pero si deseas certificarte después del bootcamp, tendrás gran parte del estudio ya realizado."
   button:
     text: "Aplicar"
     color: "blue"  
@@ -108,13 +108,13 @@ details:
         
       list:
         - label: "Duración"
-          content:  "14 semanas"
+          content:  "16 semanas"
           icon: "calendar"
         - label: "Clases"
           content: "3 Clases semanales"
           icon: "book"
         - label: "Tamaño de la clase"
-          content: "10 personas máx"
+          content: "14 personas máx"
           icon: "laptop"
         - label: "Certificado"
           content: "Nuestros certificados son reconocidos por múltiples instuticiones."
@@ -126,10 +126,10 @@ details:
           icon: "contract-checked"
 
   heading: DETALLES DEL PROGRAMA
-  weeks: 14
+  weeks: 16
   facts:
     - label: "Duración"
-      value: "14 semanas"
+      value: "16 semanas"
     - label: "Compromiso"
       value: "20 hrs/sem. (Lun - Mie - Vie)"
     - label: "Certificado"
@@ -156,7 +156,7 @@ details:
       projects: "Introducción a la ciberseguridad, a las tecnologías de Información [TI] y a las buenas prácticas de seguridad de la información además de tener una introducción al Packet Tracer una herramienta de simulación visual para rastrear paquetes."
       slug: "security-intro"
       duration: "1 sem"
-      step: 1
+      step: 2
     - module_name: "Fundamentos y Seguridad en Redes"
       title: "Conceptos básicos de redes y Seguridad en redes"
       description: |
@@ -204,7 +204,7 @@ details:
       projects: "Planificación de la seguridad, Respaldo y recuperación de datos y pruebas y ejercicios de continuidad."
       slug: "nist"
       duration: "3 sem"
-      step: 3
+      step: 2.9
     - module_name: "DE POR VIDA"
       title: "De por vida"
       description: "Recibe ayuda de la academia antes, durante y después de graduarte, con acceso ilimitado a los contenidos y soporte profesional (career support) de por vida. Incluso recibirás ayuda durante el inicio de tu nuevo trabajo, ¡nunca más estarás solo!"
