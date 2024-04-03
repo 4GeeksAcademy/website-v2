@@ -1,9 +1,9 @@
 meta_info:
-  slug: cyber-security
-  title: "Study Cyber Security at 4Geeks Academy"
-  description: "Become a Cybersecurity expert with no prior knowledge and protect the digital future."
-  bc_slug: "cyber-security"
-  template: "course-cyber-security"
+  slug: cybersecurity
+  title: "Cybersecurity Bootcamp at 4Geeks Academy"
+  description: "Become a Cybersecurity specialist in 16 weeks, join the BootCamp with no prior knowledge, and get a job in one of the highest-paid roles."
+  bc_slug: "cybersecurity"
+  template: "course-cybersecurity"
   image: "/images/og-preview/datascience-ml.en.png"
   visibility: "visible"
   show_in_apply: true
@@ -14,11 +14,11 @@ meta_info:
 apply_form:
   label: cyber-security
 
-seo_title: "Cybersecurity Course"
+seo_title: "Cybersecurity Bootcamp"
 
 header:
-  title: "Become a Cybersecurity Expert"
-  paragraph: "The median annual salary for cybersecurity professionals in the United States is $103,560."
+  title: "Become a Cybersecurity Specialist"
+  paragraph: "Start from zero and learn everything needed to get your first job in cybersecurity, get career support for life."
   image: "../../../static/images/bg/apple-building.jpg"
   image_alt: "apple-building"
 
@@ -29,12 +29,12 @@ button:
   apply_button_link: "/us/apply"
   apply_button_text: "Apply"
 
-course_instructors:
-  header:
-    title: "Meet our instructors"
-    paragraph: ""
+# course_instructors:
+#   header:
+#     title: "Meet our instructors"
+#     paragraph: ""
 
-  instructors:
+#   instructors:
     # - name: "Sayyed Nezhadi"
     #   sub_title: "PhD in Artificial Intelligence from Toronto University"
     #   degree: "PhD in Artificial Intelligence"
@@ -48,7 +48,7 @@ badges:
 
 # OVERLAPED
 overlaped:
-  heading: "Become an Expert in Cybersecurity"
+  heading: "Become a Cybersecurity Specialist"
   paragraph: |
     In the Cybersecurity bootcamp at 4Geeks Academy, you will develop the skills and knowledge necessary to face the threats of today's digital world. <br> Pentesting practices are based on the EJPT certification labs.<br>No bootcamp in the world leaves you ready to certify in anything (EJPT, CEH, etc.), but if you wish to get certified after the bootcamp, you will have a large part of the study already done..
   button:
@@ -97,7 +97,7 @@ details:
       Learn to manage risks with data loss prevention (DLP) strategies and navigate compliance with international standards such as <strong>ISO 27001 and NIST.</strong>
     list:
       - label: "Duration"
-        content: "14 weeks"
+        content: "16 weeks"
         icon: "calendar"
       - label: "Classes"
         content: "3 Classes per week"
@@ -115,10 +115,10 @@ details:
         icon: "contract-checked"
 
   heading: PROGRAM DETAILS
-  weeks: 14
+  weeks: 16
   facts:
     - label: "Duration"
-      value: "14 weeks"
+      value: "16 weeks"
     - label: "Commitment"
       value: "20 hrs/week (Mon - Wed - Fri)"
     - label: "Certificate"
@@ -143,7 +143,7 @@ details:
       projects: "Introduction to cybersecurity, information technology [IT] technologies, and information security best practices, as well as an introduction to Packet Tracer, a visual simulation tool for packet tracing."
       slug: "security-intro"
       duration: "1 week"
-      step: 1
+      step: 2
     - module_name: "Fundamentals and Network Security"
       title: "Networking Basics and Network Security"
       description: |
@@ -171,7 +171,7 @@ details:
         You will acquire skills to investigate cyber incidents, determine their origin and scope, and take appropriate measures to mitigate their impact \n by learning to implement and maintain an Information Security Management System (ISMS) in accordance with ISO 27001.
       slug: "data-analysis"
       duration: "2 weeks"
-      step: 3
+      step: 2
     - module_name: "Pentesting"
       title: "Pentesting Fundamentals"
       description: "You will acquire the basic knowledge of penetration testing, including different methodologies, tools, and techniques. You will learn to perform basic pentesting tests, such as vulnerability scanning, web application attacks, and network and system attacks, known as Blue Team (focused on defense) or Red Team (focused on attack)."
@@ -192,7 +192,7 @@ details:
       projects: "Security planning, data backup and recovery, and continuity testing and exercises."
       slug: "nist"
       duration: "3 weeks"
-      step: 3
+      step: 2.9
     - module_name: "LIFELONG LEARNING"
       title: "Lifelong Learning"
       description: "Receive assistance from the academy before, during, and after graduation, with unlimited access to content and professional support (career support) for life. You will even receive help during the start of your new job, you will never be alone again!"
