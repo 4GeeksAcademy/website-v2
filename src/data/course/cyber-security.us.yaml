@@ -71,10 +71,10 @@ overlaped:
 two_columns:
   proportions: [6, 6]
   image:
-    style: '{"border" : "3px solid black", "backgroundSize": "contain" }'
-    src: "/static/images/staff/chema-daniela.jpg"
+    style: '{"border" : "0px solid black", "backgroundSize": "contain", "height": "400px", "background-position": "center" }'
+    src: "../../images/staff/chema-daniela.jpg"
     shadow: false
-  video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
+  # video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
   heading:
     text: "Course taught by the experts in cybersecurity, Chema Alonso and Daniela Maissi"
     font_size: ["30px", "30px", "30px", "30px", "30px"]

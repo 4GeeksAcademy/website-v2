@@ -71,8 +71,8 @@ overlaped:
 two_columns:
   proportions: [6, 6]
   image:
-    style: '{"border": "0px solid black", "backgroundSize": "contain"}'
-    src: "/static/images/staff/chema-daniela.webp"  
+    style: '{"border" : "0px solid black", "backgroundSize": "contain", "height": "400px", "background-position": "center" }'
+    src: "../../images/staff/chema-daniela.jpg"  
     shadow: false
   heading:
     text: "Aprende ciberseguridad de los expertos Chema Alonso y Daniela Maissi"
