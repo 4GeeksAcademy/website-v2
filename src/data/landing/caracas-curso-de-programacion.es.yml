@@ -27,7 +27,7 @@ form:
 
 navbar:
   buttonText: "APLICAR AHORA"
-  buttonUrl: "#bottom" # url accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
+  buttonUrl: "#leadform_bottom" # url accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
   logoUrl: "#"
 
 # jumbotron on the top (cannot be commented out)
@@ -35,7 +35,7 @@ header_data:
   background: "#FFF1D1"
   tagline: Cambia tu vida y aprende a programar
   sub_heading: ""
-  badge: "../../../static/images/badges/Course-Report-Badge-2023.png"
+  badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
   # partner_logo_url: "../../../static/images/partner/microsoft.png"
   # background_image: "../../../static/images/Happy-People-Landing-4Geeks-ES.jpg"
   image_filter: brightness(0.4)
@@ -58,7 +58,7 @@ short_badges:
     alt: "Mejor centro de Coding Bootcamp"
   - name: "Course Report"
     url: ""
-    image: "../../../static/images/badges/Course-Report-Badge-2023.png"
+    image: "../../../static/images/badges/Course-Report-Badge-2024.webp"
     alt: "Top Coding Bootcamps Course Report"
   - name: "Switchup"
     url: ""
@@ -78,7 +78,7 @@ follow_bar:
     font_size: ["25px", "25px", "25px", "18px", "4.3vw"]
   button:
     text: "Más información"
-    path: "#top"
+    path: "#leadform_header"
   phone:
     text: "Llama "
 
@@ -98,7 +98,7 @@ badges:
 program_details:
   position: 1
   heading: "Lo que aprenderás"
-  sub_heading: "Python, Javascript y React son las tecnologías más usadas del mundo"
+  sub_heading: "Python, Javascript y React son las tecnologías más demandadas del mundo"
 
 geeks_vs_others:
   position: 4
@@ -131,7 +131,7 @@ components:
     background: "#fbfbfb"
     image:
       style: '{ "backgroundSize": "contain" }'
-      src: "/images/badges/Course-Report-Badge-2023.png"
+      src: "/images/badges/Course-Report-Badge-2024.webp"
       link: "https://www.coursereport.com/schools/4geeks-academy"
     heading:
       text:
@@ -176,7 +176,7 @@ components:
       font_size: ["16px"]
     button:
       text: "¡Únete a la Academia!"
-      path: "#bottom"
+      path: "#leadform_bottom"
       color: "white"
       background: "black"
       hover: "lightBlue"

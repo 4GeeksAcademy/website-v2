@@ -37,7 +37,7 @@ const LandingFooter = ({ yml }) => {
           // gridArea_tablet="1/1/2/3"
         >
           <RoundImage
-            url="/images/4geeksacademy-logo.png"
+            url="/images/4geeksacademy-logo-old.png"
             height="125px"
             width="70%"
             backgroundColor="transparent"
@@ -59,7 +59,7 @@ const LandingFooter = ({ yml }) => {
           <H4 margin="0 0 10px 0" display="none" display_md="block">
             {yml.newsletter.heading}
           </H4>
-          <Div>
+          <Div alignItems="center" gap="8px">
             {socials?.map((ln, i) => (
               <Anchor
                 key={i}
@@ -76,7 +76,7 @@ const LandingFooter = ({ yml }) => {
                 {ln.icon && (
                   <Icon
                     icon={ln.icon}
-                    style={{ margin: "0 15px 0 0" }}
+                    style={{ margin: "0 0 0 0" }}
                     color={Colors.black}
                     fill={Colors.black}
                     height="32px"

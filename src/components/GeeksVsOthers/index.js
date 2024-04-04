@@ -64,7 +64,8 @@ const GeeksVsOthers = (props) => {
               fontSize_tablet="32px"
               fontWeight="700"
               lineHeight="29px"
-              lineHeight_tablet="38"
+              lineHeight_tablet="38px"
+              marginTop="30px"
             >
               {props.title}
             </H2>

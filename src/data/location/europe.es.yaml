@@ -8,7 +8,13 @@ meta_info:
   redirects: ["/location/remoto", "/remoto", "/es/location/enlinea-remoto"]
   region: "europe"
   related_clusters: ["desarrollador-full-stack"]
-
+  
+  # ⬇️ cohort_include_regex field is used to filter cohorts on the calendar that only test successfully for a particular regex
+  # for example: for this location, only show cohorts starting with usa-xx-spanish
+  cohort_include_regex: []
+  cohort_exclude_regex: []
+  home_video: "https://ask.4geeks.com/f67qc0ewu"
+  
 seo_title: "Coding Bootcamp Remoto Europa"
 header:
   tagline: "Aprende a programar en Europa y desde casa"
@@ -73,6 +79,7 @@ images_box:
       alt: "4Geeeks miami day"
     - path: "../../../static/images/locations/miami-old2.jpg"
       alt: "4Geeeks miami lab"
+  layout_horizontal: true #false == "mode mosaic"
 
 two_columns:
   proportions: [6, 6]
@@ -102,8 +109,14 @@ two_columns:
 
 active_campaign_location_slug: "europe"
 breathecode_location_slug: "europe"
-gdpr_compliant: true # do we need to ask for permision?
 in_person_available: false # important to accept in-person applicants
+
+consents:
+  - slug: "gdpr_consent"
+    name: "GDPR Consent"
+    active: true
+    message: 'Al completar este formulario acepto que mi información será utilizada para enviarme información comercial sobre 4Geeks Academy y que podría resultar una relación comercial a partir de esto. Revisa nuestra <a style={{ marginLeft: "5px" }} target="_blank" rel="noopener noreferrer nofollow" className="decorated" href="/es/privacidad">Política de Privacidad</a>'
+    error_message: "Debes aceptar el consent de GDPR"
 
 city: "Resto de Europa"
 name: "Resto de Europa"
@@ -118,16 +131,16 @@ country: "Remoto"
 socials:
   - name: "Facebook"
     icon: "facebook"
-    link: "https://www.facebook.com/4geeksacademyes"
+    link: "https://www.facebook.com/4geeksacademy"
   - name: "Twitter"
-    icon: "twitter"
-    link: "https://www.twitter.com/4geeksacademyes"
+    icon: "x-logo"
+    link: "https://twitter.com/4GeeksAcademy"
   - name: "Instagram"
     icon: "instagram"
-    link: "https://www.instagram.com/4geeksacademyes"
-  - name: "Meetup"
-    icon: "meetup"
-    link: "https://www.meetup.com/4geeks-academy"
+    link: "https://www.instagram.com/4geeksacademy/"
+  - name: "Linkedin"
+    icon: "linkedin"
+    link: "https://www.linkedin.com/school/4geeksacademyes/"
 
 courses:
   - "Full-Time"

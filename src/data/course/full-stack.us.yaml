@@ -76,7 +76,7 @@ overlaped:
     color: "blue"  
     link: "/"
   image:
-    src: "/images/landing/tres-personas.png"  
+    src: "/images/landing/tres-personas-reloaded.webp"  
 
 two_columns:
   proportions: [6, 6]
@@ -90,17 +90,17 @@ two_columns:
     font_size: ["30px", "30px", "30px", "30px", "30px"]
   sub_heading:
     text: "We are Miami based and we have been focusing in bringing on more opportunities in South Florida."
-    font_size: ["18px", "18px", "18px", "18px", "18px"]
+    font_size: ["16px", "16px", "16px", "16px", "16px"]
   button:
     text: "Apply now"
     color: "white"
     background: "black"
-    path: "#"
+    path: "#prices_and_payment"
   bullets:
     items: 
     - text: "There is always a full or partial scholarship open"
     - text: "There is always opportunities for everyone in Miami-Dade County, Broward and Palm Beach"
-    - text: "We have ongoing partnerships with Miami Dade College, Miami Tech Coalition, UWM, The City of Miami, Miami Dade Counti and so manu more."
+    - text: "We have ongoing partnerships with Miami Dade College, Miami Tech Coalition, UWM, The City of Miami, Miami Dade County and many more."
 
 
 badges:
@@ -118,12 +118,12 @@ details:
   about:
       title: "About the program"
       sub_title: "Learn the most sought-after and highest-paid technologies and become a pro at building websites. Python and JavaScript developers are consistently in demand, making them the top programming languages to master in 2023. 
-      
-      Code in a web development language, learn algorithm scripting and build awesome apps using front-end libraries. Utilize APIs to consume data and enhance your app's functionality. 
-      
-      Finalize the program by developing and presenting your own project, gaining game-changing hands-on experience.
-      
-      Reshape your mindset and embrace the programming, logic, and research skills to succeed in the tech industry."
+        
+        Code in a web development language, learn algorithm scripting and build awesome apps using front-end libraries. Utilize APIs to consume data and enhance your app's functionality. 
+        
+        Finalize the program by developing and presenting your own project, gaining game-changing hands-on experience.
+        
+        Reshape your mindset and embrace the programming, logic, and research skills to succeed in the tech industry."
       list:
         - label: "Duration"
           content:  "16+2 Weeks"
@@ -137,10 +137,10 @@ details:
           link: "https://certificate.breatheco.de/4ae7a46bba78dc19b823e124fea120c17b45e044"
           icon: "certificate"
         - label: "Requisites"
-          content: "No previous coding skills required, no advanced Math required, logical thinking recommended."
+          content: "No previous coding skills or advanced math are required."
           icon: "contract-checked"
         - label: "Language"
-          content: "You can decide between English and Spanish to consume the syllabus and content. Live classes are taught in the language of your campus."
+          content: "You can choose between English and Spanish for the syllabus and content. Live classes are taught in the language of your campus."
           icon: "contract-checked"
          
   heading: Program Details Part-Time Full Stack Developer
@@ -189,7 +189,7 @@ details:
       step: 8
     - module_name: "LIFELONG SUPPORT"
       title: "Lifelong Support"
-      description: "Keep practicing with the academy's help - we will be coaching you for life.  Build your Resume, Github, LinkedIn.  We will help you apply for jobs and continue to support you once you have found a job"
+      description: "Keep evolving in your career with the academy's help - we’re your learning partners for life. You’ll have access to 1:1 mentorships for all your coding needs throughout the bootcamp and beyond. Our expert career coaches will help you prepare for a successful job search and will continue to be there for you throughout your career."
       projects: "Get paid to keep learning and raise your income gradually as you become a Senior Developer. Enjoy and build software for life."
       slug: "lifelong-learning"
       duration: "forever"

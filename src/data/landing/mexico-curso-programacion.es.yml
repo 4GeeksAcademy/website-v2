@@ -29,7 +29,7 @@ form:
 
 navbar:
   buttonText: "APLICAR AHORA"
-  buttonUrl: "#bottom" # url accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
+  buttonUrl: "#leadform_bottom" # url accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
   logoUrl: "#"
 
 
@@ -43,7 +43,7 @@ header_data:
   background: "#FFF1D1"
   tagline: "Aprende a programar desde cero o potencia tu carrera en el mundo tech"
   sub_heading: ""
-  badge: "../../../static/images/badges/Course-Report-Badge-2023.png"
+  badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
   image_filter: brightness(0.3)
 
 features:
@@ -63,7 +63,7 @@ short_badges:
     alt: "Mejor centro de Coding Bootcamp"
   - name: "Course Report"
     url: ""
-    image: "../../../static/images/badges/Course-Report-Badge-2023.png"
+    image: "../../../static/images/badges/Course-Report-Badge-2024.webp"
     alt: "Top Coding Bootcamps Course Report"
   - name: "Switchup"
     url: ""
@@ -83,7 +83,7 @@ follow_bar:
     font_size: ["25px", "25px", "25px", "18px", "4.3vw"]
   button:
     text: "APLICA YA"
-    path: "#top"
+    path: "#leadform_header"
   phone:
     text: "Llama "
 
@@ -92,7 +92,7 @@ follow_bar:
 #
 
 rating_reviews:
-  position: 3
+  position: 5
   heading: "Lee acerca de nosotros"
   rating_list:
     - alt: "Career Karma"
@@ -123,7 +123,7 @@ badges:
   heading: "4Geeks Academy cuenta con premios y reconocimientos que validan su excelencia"
 
 geeks_vs_others:
-  position: 3
+  position: 4
   heading: "¿Qué hace a 4Geeks Academy tan exitoso?"
   paragraph: ""
   total_rows: 5
@@ -141,7 +141,7 @@ who_is_hiring:
 
 components:
     - name: some_id
-      position: 6
+      position: 3
       layout: two_column_right
       # proportions: [8, 4]
       background: "#fbfbfb"
@@ -151,6 +151,8 @@ components:
         src: "../../../static/images/testimonials/samantha-review.png"
         shadow: true
       video: "https://www.youtube.com/watch?v=DrzRJICxjOU"
+      videoHeight: "360px"
+      videoWidth: "243px"
       heading:
         text: "4Geeks en México La Elección de Samantha para su Bootcamp Ideal"
         #xl      lg     md     sm    xs
@@ -160,7 +162,35 @@ components:
         font_size: ["16px"]
       button:
         text: "¡Únete a la Academia!"
-        path: "#bottom"
+        path: "#leadform_bottom"
         color: "white"
         background: "black"
         hover: "lightBlue"
+
+    - name: how-it-works
+      position: 2
+      background: "veryLightBlue2"
+      layout: iconogram
+      swipable: True
+      heading:
+        text: "Garantía de Empleo"
+        font_size: ["30px", "30px", "30px", "30px", "30px"]
+      sub_heading:
+        text: ""
+        font_size: ["16px", "16px", "16px", "16px", "16px"]
+        style: '{ "textAlign": "center", "width": "60%" }'
+      button:
+        text: "Condiciones Aplican"
+        color: black
+        # hover_color: "white"
+        # background: "black"
+        path: "#"
+      icons:
+        - icon: "yellowhat"
+          title: Si no encuentras empleo en los primeros 180 días tras graduarte, te devolvemos tu dinero.
+        - icon: "stairswflag"
+          title: Completa las etapas de nuestro proceso de apoyo para la carrera profesional.
+        - icon: "group"
+          title: Optimiza tu perfil profesional y preparate para las entrevistas.
+        - icon: "hands"
+          title: Ambos nos comprometemos con tu futura carrera

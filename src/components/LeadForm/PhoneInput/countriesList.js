@@ -381,7 +381,14 @@ const countriesList = [
   ["United Kingdom", ["europe", "eu-union"], "gb", "44", ".... ......"],
   [
     "United States",
-    ["america", "downtown-miami", "orlando", "north-america"],
+    [
+      "america",
+      "downtown-miami",
+      "orlando",
+      "north-america",
+      "online-spanish-usa",
+      "online",
+    ],
     "us",
     "1",
     "(...) ...-....",

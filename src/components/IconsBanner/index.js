@@ -35,7 +35,7 @@ export default ({ icon, title, content }) => {
       minWidth_tablet="120px"
       minWidth_md="180px"
       //minWidth_lg="240px"
-      width_xs="100%"
+      width_xs="50%"
       margin_tablet="0 10px"
       margin_xxs="20px 0"
       padding_xs="0"
@@ -71,7 +71,7 @@ export default ({ icon, title, content }) => {
             padding="0 15%"
             margin_xs="10px 0 0 0"
             width="100%"
-            textAlign="center"
+            textAlign="justify"
           >
             {content}
           </Paragraph>

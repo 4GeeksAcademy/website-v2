@@ -17,7 +17,7 @@ meta_info:
 navbar:
   logoUrl: "#"
   buttonText: "Solicitar" # this modifies the button text in the navbar
-  buttonUrl: "#bottom"
+  buttonUrl: "#leadform_bottom"
 # └── url accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
 
 form:
@@ -142,7 +142,7 @@ who_is_hiring:
   sub_heading: "Get a job in less than 3 months thanks to our growing network of more than 500 technology companies. Access to national and international offers and a community of more than 2000 graduates"
   featured:
     - name: "Facebook"
-      image: "../../../static/images/partner/facebook.png"
+      image: "../../../static/images/partner/meta-logo.png"
     - name: "Microsoft"
       image: "../../../static/images/partner/microsoft.png"
     - name: "Apple"

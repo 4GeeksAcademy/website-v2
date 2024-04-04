@@ -78,7 +78,7 @@ overlaped:
     color: "blue"
     link: "/"  
   image:
-    src: "/images/landing/tres-personas.png"
+    src: "/images/landing/tres-personas-reloaded.webp"
 
 ## TWO COLUMNS
 two_columns:
@@ -93,33 +93,29 @@ two_columns:
     font_size: ["30px", "30px", "30px", "30px", "30px"]
   sub_heading:
     text: "We are Miami based and we have been focusing in bringing on more opportunities in South Florida."
-    font_size: ["18px", "18px", "18px", "18px", "18px"]
+    font_size: ["16px", "16px", "16px", "16px", "16px"]
   button:
     text: "Apply now"
     color: "white"
     background: "black"
-    path: "#"
+    path: "#prices_and_payment"
   bullets:
     items: 
     - text: "There is always a full or partial scholarship open"
     - text: "There is always opportunities for everyone in Miami-Dade County, Broward and Palm Beach"
-    - text: "We have ongoing partnerships with Miami Dade College, Miami Tech Coalition, UWM, The City of Miami, Miami Dade Counti and so manu more."
+    - text: "We have ongoing partnerships with Miami Dade College, Miami Tech Coalition, UWM, The City of Miami, Miami Dade County and many more."
       
 
 ## PROGRAM DETAILS
 details:
   about:
       title: "About the program"
-      sub_title: "Learn the most wanted and highest paid technologies that will help you create amazing websites.
-      
-      The tech industry consistently requires Python and JavaScript developers. Both are the most popular programming languages to learn in 2021. 
-      
-      Start coding in a web development language and algorithm scripting. Build awesome apps using a front-end library. Use an API so you can consume data to fill your app.
-      
-      The program will end with the presentation of your final project that will help you get ready for  more web development experiences
-      
-      You will re-shape your mind to embrace new logical, developmental and researching skills.
-    "
+      sub_title: |
+        Learn the most wanted and highest paid technologies that will help you create amazing websites.
+        The tech industry consistently requires Python and JavaScript developers. Both are the most popular programming languages to learn in 2024. 
+        Start coding in a web development language and algorithm scripting. Build awesome apps using a front-end library. Use an API so you can consume data to fill your app.
+        The program will end with the presentation of your final project that will help you get ready for  more web development experiences
+        You will re-shape your mind to embrace new logical, developmental and researching skills.
       list:
         - label: "Duration"
           content:  "9 Weeks"
@@ -133,10 +129,10 @@ details:
           link: "https://certificate.breatheco.de/4ae7a46bba78dc19b823e124fea120c17b45e044"
           icon: "certificate"
         - label: "Requisites"
-          content: "No previous coding skills required, no advanced Math required, logical thinking recommended."
+          content: "No previous coding skills or advanced math are required."
           icon: "contract-checked"
         - label: "Language"
-          content: "You can decide between English and Spanish to consume the syllabus and content. Live classes are taught in the language of your campus."
+          content: "You can choose between English and Spanish for the syllabus and content. Live classes are taught in the language of your campus."
           icon: "contract-checked"
           
   heading: PROGRAM DETAILS FULL-TIME

@@ -45,7 +45,7 @@ const LandingNavbar = ({ lang, onToggle, buttonUrl, logoUrl, buttonText }) => {
 
   const data = useStaticQuery(graphql`
     query {
-      file(relativePath: { eq: "images/4geeksacademy-logo.png" }) {
+      file(relativePath: { eq: "images/4Geeks-new-logo.png" }) {
         childImageSharp {
           gatsbyImageData(
             layout: FULL_WIDTH # --> CONSTRAINED || FIXED || FULL_WIDTH
@@ -59,7 +59,7 @@ const LandingNavbar = ({ lang, onToggle, buttonUrl, logoUrl, buttonText }) => {
   return (
     <>
       <Nav display="flex">
-        <Link to={logoUrl || "#top"}>
+        <Link to={logoUrl || "#top"} style={{ width: "130px" }}>
           <GatsbyImage
             loading="eager"
             image={getImage(data.file.childImageSharp.gatsbyImageData)}

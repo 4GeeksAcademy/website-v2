@@ -22,7 +22,7 @@ body {
 
 #custom-bar a {
   color: #00a0da;
-  border-radius: 4px;
+  /* border-radius: 4px; */
   padding: 4px;
   background: #fffaf0;
 }
@@ -200,6 +200,11 @@ a {
   display: inline-block;
   width: 33%;
 }
+.logo-navbar {
+  width: 141px;
+  height: 38px;
+}
+
 @media (max-width: 768px) {
   .card-columns {
     column-count: 2;
@@ -248,6 +253,10 @@ a {
 }
 
 @media (min-width: 320px) {
+  .logo-navbar {
+    width: 114px;
+    height: 31px;
+  }
 }
 @media (min-width: 576px) {
   .trend {

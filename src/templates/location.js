@@ -61,18 +61,16 @@ const Location = ({ data, pageContext, yml }) => {
 
   const open = {
     us: "Open on Maps",
-    es: "Abrir en Mpas",
+    es: "Abrir Mapa",
   };
   const chooseButton = {
     us: "CHOOSE PROGRAM",
     es: "SELECCIONAR PROGRAMA",
   };
 
-  console.log(yml);
-
   return (
     <>
-      <GridContainerWithImage
+      <GridContainer
         padding="40px 20px"
         padding_md="40px 80px"
         padding_lg="40px 0px"
@@ -88,6 +86,8 @@ const Location = ({ data, pageContext, yml }) => {
             ? "120px auto 30px auto"
             : "72px auto 30px auto"
         }
+        childMargin="auto"
+        childMaxWidth="1366px"
       >
         <Div
           flexDirection="column"
@@ -216,7 +216,7 @@ const Location = ({ data, pageContext, yml }) => {
         </Div>
         <Div
           height="auto"
-          width="100%"
+          // width="100%"
           gridColumn_tablet="7 / 15"
           style={{ position: "relative" }}
         >
@@ -229,7 +229,7 @@ const Location = ({ data, pageContext, yml }) => {
             alt={yml.header.alt}
           />
         </Div>
-      </GridContainerWithImage>
+      </GridContainer>
 
       <Badges
         lang={pageContext.lang}
@@ -266,68 +266,31 @@ const Location = ({ data, pageContext, yml }) => {
       {/* GEEKSINFO IS A TWOCOLUMN WITH TITLE */}
       <GeeksInfo lang={pageContext.lang} />
 
-      {/* <MosaicImages yml={yml.images_box}/> */}
-
-      <Gallery
-        images={yml?.images_box?.images}
-        heading={yml?.images_box?.heading}
-        paragraph={yml?.images_box?.content}
-        widthImage="315px"
-        heightImage="347px"
-        previewArrow
-        nextArrow
-        customSettingsCarousel={{
-          dotsClass: "slick-dots-staff",
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          className: "carousel-class ", // staff-class | carousel-class-noprev-arrow | carousel-class-nonext-arrow | carousel-class-noarrow
-          responsive: [
-            {
-              breakpoint: 1439,
-              settings: {
-                slidesToShow: 3,
-                slidesToScroll: 3,
-                infinite: false,
-                dots: true,
-              },
-            },
-            {
-              breakpoint: 1024,
-              settings: {
-                slidesToShow: 3,
-                slidesToScroll: 3,
-                infinite: false,
-                dots: true,
-              },
-            },
-            {
-              breakpoint: 768,
-              settings: {
-                slidesToShow: 2,
-                slidesToScroll: 2,
-                infinite: false,
-                dots: true,
-              },
-            },
-            {
-              breakpoint: 450,
-              settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                infinite: false,
-                dots: true,
-              },
-            },
-          ],
-        }}
-      />
+      {yml?.images_box?.layout_horizontal ? (
+        <Gallery
+          images={yml?.images_box?.images}
+          heading={yml?.images_box?.heading}
+          paragraph={yml?.images_box?.content}
+          widthImage="315px"
+          heightImage="347px"
+          previewArrow
+          nextArrow
+          //customSettingsCarousel={}
+        />
+      ) : (
+        <MosaicImages
+          images={yml?.images_box?.images}
+          heading={yml?.images_box?.heading}
+          paragraph={yml?.images_box?.content}
+        />
+      )}
 
       <ChooseYourProgram
+        id="choose-program"
         chooseProgramRef={chooseProgramRef}
         lang={pageContext.lang}
         programs={data.allChooseYourProgramYaml.edges[0].node.programs}
       />
-
       <UpcomingDates
         lang={pageContext.lang}
         location={yml.breathecode_location_slug}
@@ -367,7 +330,6 @@ const Location = ({ data, pageContext, yml }) => {
         posts={data.allMarkdownRemark.edges}
         relatedClusters={yml.meta_info.related_clusters}
       />
-
       <Loc lang={pageContext.lang} allLocationYaml={data.test} />
     </>
   );
@@ -464,6 +426,7 @@ export const query = graphql`
           images_box {
             heading
             content
+            layout_horizontal
             images {
               path {
                 childImageSharp {
