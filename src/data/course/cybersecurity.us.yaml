@@ -1,9 +1,9 @@
 meta_info:
-  slug: cyber-security
+  slug: cybersecurity
   title: "Study Cyber Security at 4Geeks Academy"
   description: "Become a Cybersecurity expert with no prior knowledge and protect the digital future."
-  bc_slug: "cyber-security"
-  template: "course-cyber-security"
+  bc_slug: "cybersecurity"
+  template: "course-cybersecurity"
   image: "/images/og-preview/datascience-ml.en.png"
   visibility: "visible"
   show_in_apply: true
