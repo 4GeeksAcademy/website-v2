@@ -30,7 +30,7 @@ navbar:
           paragraph: "Conviértete en un hacker ético y aprende a detectar, corregir y protegerte de ataques y vulnerabilidades en sistemas informáticos "
           buttons:
             - text: "Ver Programa"
-              link: "/es/coding-bootcamps/cyber-security-es"
+              link: "/es/coding-bootcamps/curso-ciberseguridad"
 
         - title: "Blockchain y Web3"
           level: "Desde cero"

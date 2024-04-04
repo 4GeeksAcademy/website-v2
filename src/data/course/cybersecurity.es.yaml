@@ -1,9 +1,9 @@
 meta_info:
-  slug: cyber-security-es
-  title: "Estudia cyber security en 4Geeks Academy"
-  description: "Sin conocimientos previos, Conviértete en un experto en Ciberseguridad y protege el futuro digital"
-  bc_slug: "cyber-security"
-  template: "course-cyber-security"
+  slug: curso-ciberseguridad
+  title: "Estudia ciberseguridad en el curso de 4Geeks Academy"
+  description: "Sin conocimientos previos, conviértete en especialista de ciberseguridad, únete al mundo tech y protege el futuro digital"
+  bc_slug: "cybersecurity"
+  template: "course-cybersecurity"
   image: "/images/og-preview/datascience-ml.es.png"
   visibility: "visible"
   show_in_apply: true
