@@ -30,7 +30,7 @@ const Program = ({ data, pageContext, yml }) => {
   const geek = data.allCourseYaml.edges[0].node;
   const [open, setOpen] = React.useState(false);
 
-  const defaultCourse = "datascience-ml";
+  const defaultCourse = "cyber-security";
   const program_type = yml.meta_info.slug.includes("full-time")
     ? "full_time"
     : "part_time";
@@ -218,7 +218,7 @@ const Program = ({ data, pageContext, yml }) => {
 
       {/* TWO COLUMN CREAR EN EL YML*/}
       <TwoColumn
-        left={{ image: yml.two_columns?.image, video: yml.two_columns?.video }}
+        left={{ image: yml.two_columns?.image}}
         right={{
           heading: yml.two_columns?.heading,
           sub_heading: yml.two_columns?.sub_heading,
@@ -483,7 +483,6 @@ export const query = graphql`
               src
               shadow
             }
-            video
             heading {
               text
               font_size

@@ -17,14 +17,14 @@ apply_form:
 seo_title: "Curso de Ciberseguridad"
 header:
   title: "Conviértete en un experto en Ciberseguridad"
-  paragraph: "El salario medio anual para los profesionales de la ciberseguridad en Estados Unidos es de $103,560."
+  paragraph: "La demanda de profesionales de ciberseguridad se estima que crecerá un 33% entre 2020 y 2030, superando el promedio de crecimiento de todas las ocupaciones."
   image: "../../../static/images/bg/apple-building.jpg"
   image_alt: "apple-building"
 
 button:
-  # syllabus_heading: "" #Syllabus pendiente? 
-  # syllabus_btn_label: ""
-  # syllabus_motivation: "En 2 min. recibirás en tu buzón de correo un PDF con información muy detallada sobre nuestra metodología, tecnologías, becas, financiación e información del curso."
+  syllabus_heading: "DESCARGAR DETALLES DEL CURSO" 
+  syllabus_btn_label: "Descarga Instantanea"
+  syllabus_motivation: "En 2 min. recibirás en tu buzón de correo un PDF con información muy detallada sobre nuestra metodología, tecnologías, becas, financiación e información del curso."
   apply_button_link: "/es/aplica"
   apply_button_text: "Aplicar"
 
@@ -33,14 +33,22 @@ course_instructors:
     title: "Conoce a nuestros instructores"
     paragraph: ""
 
-  instructors:
-    # - name: "Sayyed Nezhadi"
-    #   sub_title: "Doctorado en Inteligencia Artificial de la Universidad de Toronto"
-    #   degree: "Doctorado en Inteligencia Artificial"
-    #   image: "../../../static/images/instructors/sayyed.jpeg"
-    #   bio: "Más de 25 años de experiencia en la entrega de soluciones complejas habilitadas para IA y arquitecturas digitales para grandes empresas. PhD en Inteligencia Artificial de la Universidad de Toronto, y certificados en Big Data Analytics y Big Data de Hardvard y MIT respectivamente."
-    #   github: "https://github.com/snezhadi"
-    #   linkedin: "https://www.linkedin.com/in/sayyednezhadi"
+instructors:
+  - name: "Chema Alonso"
+    sub_title: "El hacker más importante de España"
+    degree: "Ph.D. en Seguridad Informática"  
+    image: "../../../static/images/staff/chema-alonso.webp"
+    bio: "Chema Alonso actualmente se desempeña como Director Digital (CDO) de Telefónica, donde supervisa áreas clave como Innovación, Datos, Plataformas, Productos Digitales y Servicios. Las unidades bajo su cargo incluyen Wayra, OpenGate, Aplicaciones Digitales, Kernel, Plataformas de Video y WiFi."  
+    github: ""
+    linkedin: "https://www.linkedin.com/in/chemaalonso/"
+
+  - name: "Daniela Maissi"
+    sub_title: "Instructora de Ethical Hacking y Ciberseguridad" 
+    degree: "Máster en Business Intelligence y Big Data"  
+    image: "../../../static/images/staff/daniela-maissi.webp"
+    bio: "Daniela Maissi es Instructora Principal de Ciberseguridad en The Bridge, con experiencia en hacking ético, pruebas de penetración, investigación y desarrollo back-end."  
+    github: ""
+    linkedin: "https://www.linkedin.com/in/daniela-maissi-43045510b/"
 
 
 badges:
@@ -48,39 +56,41 @@ badges:
 
 
 overlaped:
-  heading: "Conviértete en un experto en Ciberseguridad"
-  paragraph: "En el bootcamp de Ciberseguridad de 4Geeks Academy desarrollarás las habilidades y conocimientos necesarios para enfrentar las amenazas del mundo digital actual <br> Las prácticas de pentesting se basan en los laboratorios de la certificación EJPT. Ningún bootcamp del mundo te deja preparado para certificarte en nada (EJPT, CEH, etc.), pero si deseas certificarte después del bootcamp, tendrás gran parte del estudio ya realizado."
+  heading: "Certifícate como especialista en ciberseguridad" 
+  paragraph: |
+    Domina las amenazas del mundo digital actual con el bootcamp de Ciberseguridad de 4Geeks Academy. Aprende las habilidades y conocimientos claves para protegerte.  Las prácticas de pentesting se basan en los laboratorios de certificación EJPT. <br><br>
+    Si bien ningún bootcamp te garantiza la certificación (EJPT, CEH, etc.), al finalizar, habrás adquirido una sólida base para aprobar los exámenes.  
   button:
-    text: "Aplicar"
-    color: "blue"  
-    path: "/es/aplica"
+    text: "MÁS INFORMACIÓN"  # Translated button text
+    color: "blue"
+    link: "/es/aplica"
   image:
-    src: "/images/landing/tres-personas-reloaded.webp"  
+    src: "/images/landing/cybersecurity-bg.webp"
 
 
-# two_columns:
-#   proportions: [6, 6]
-#   image:
-#     style: '{"border" : "3px solid black", "backgroundSize": "contain" }'
-#     src: "/static/images/staff/luisa.png"
-#     shadow: true  
-#   video: "https://www.youtube.com/watch?v=c14ZDHXN6_w"
-#   heading:
-#     text: "4Geeks Academy "
-#     font_size: ["30px", "30px", "30px", "30px", "30px"]
-#   sub_heading:
-#     text: "Descubre por qué nuestro Bootcamp de Data Science es el mejor"
-#     font_size: ["16px", "16px", "16px", "16px", "16px"]
-#   button:
-#     text: "Apply now"
-#     color: "white"
-#     background: "black"
-#     path: "#prices_and_payment"
-#   bullets:
-#     items: 
-#     - text: "There is always a full or partial scholarship open"
-#     - text: "There is always opportunities for everyone in Miami-Dade County, Broward and Palm Beach"
-#     - text: "We have ongoing partnerships with Miami Dade College, Miami Tech Coalition, UWM, The City of Miami, Miami Dade County and many more."
+two_columns:
+  proportions: [6, 6]
+  image:
+    style: '{"border": "0px solid black", "backgroundSize": "contain"}'
+    src: "/static/images/staff/chema-daniela.webp"  
+    shadow: false
+  heading:
+    text: "Aprende ciberseguridad de los expertos Chema Alonso y Daniela Maissi"
+    font_size: ["30px", "30px", "30px", "30px", "30px"]
+  sub_heading:
+    text: "Conviértete en un especialista en ciberseguridad. Domina estándares ISO y NIST, adquiere habilidades prácticas en DLP, hacking ético, pruebas de penetración y gestión de riesgos." 
+    font_size: ["16px", "16px", "16px", "16px", "16px"]
+  button:
+    text: "Inscríbete ahora"
+    color: "white"
+    background: "black"
+    path: "#prices_and_payment"
+  bullets:
+    items:
+      - text: "Domina los estándares de ciberseguridad ISO y NIST" 
+      - text: "Explora estrategias de hacking ético, pruebas de penetración y gestión de riesgos"
+      - text: "Desarrolla habilidades prácticas en técnicas de prevención de pérdida de datos (DLP)"
+      - text: "Bootcamp de ciberseguridad aprobado por Chema Alonso, garantizando educación de primer nivel y experiencia en la industria."  
 
 
 upcoming:
@@ -102,7 +112,7 @@ details:
   about:
       title: "Sobre este programa"
       sub_title: |
-        Obtendrás una base sólida en redes, Linux y administración de servidores, al mismo tiempo que adquirirás habilidades prácticas para proteger estos entornos. 
+        Obtendrás una base sólida en redes, Windows, Linux y administración de servidores, al mismo tiempo que adquirirás habilidades prácticas para proteger estos entornos. 
         El programa profundiza en la seguridad en la nube, pruebas de penetración (tanto ofensivas como defensivas) y análisis de inteligencia cibernética. 
         Aprende a gestionar riesgos con estrategias de prevención de pérdida de datos (DLP) y navega por el cumplimiento de estándares internacionales como <strong>ISO 27001 y NIST.</strong>
         
