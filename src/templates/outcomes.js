@@ -211,116 +211,121 @@ const Outcomes = ({ data, pageContext, yml }) => {
           </ScrollSpy>
         </Div>
 
-      <GridContainer columns="12" padding="0 17px" padding_tablet="0 65px 0 0 ">
-        <Div gridArea="1/2/1/12" flexDirection="column">
-          {yml.sections
-            .filter((section) => section.title !== "")
-            .map((section, i) => {
-              return (
-                <React.Fragment key={i}>
-                  <Div>
-                    <H2
-                      id={convertToSlug(section.title)}
-                      type="h2"
-                      padding="10px 0"
-                      margin="54px 0 0 0 "
-                      textAlign="left"
+        <GridContainer
+          columns="12"
+          padding="0 17px"
+          padding_tablet="0 65px 0 0 "
+        >
+          <Div gridArea="1/2/1/12" flexDirection="column">
+            {yml.sections
+              .filter((section) => section.title !== "")
+              .map((section, i) => {
+                return (
+                  <React.Fragment key={i}>
+                    <Div>
+                      <H2
+                        id={convertToSlug(section.title)}
+                        type="h2"
+                        padding="10px 0"
+                        margin="54px 0 0 0 "
+                        textAlign="left"
+                      >
+                        {section.title}
+                      </H2>
+                    </Div>
+                    <Div
+                      style={{
+                        margin: "20px 0",
+                        height: "1px",
+                        background: "#c4c4c4",
+                      }}
+                    />
+                    {section.paragraph.split("\n").map((m, i) => (
+                      <Paragraph
+                        key={i}
+                        letterSpacing="0.05em"
+                        textAlign="left"
+                        margin="10px 0"
+                      >
+                        {m}
+                      </Paragraph>
+                    ))}
+                    <GridContainer
+                      justifyContent="between"
+                      gridGap_tablet="30px"
+                      containerColumns_tablet={`0fr repeat(12, 1fr) 1fr`}
+                      columns_tablet={
+                        Array.isArray(section.stats) && section.stats.length
+                      }
+                      margin="41px 0 0 0"
                     >
-                      {section.title}
-                    </H2>
-                  </Div>
-                  <Div
-                    style={{
-                      margin: "20px 0",
-                      height: "1px",
-                      background: "#c4c4c4",
-                    }}
-                  />
-                  {section.paragraph.split("\n").map((m, i) => (
-                    <Paragraph
-                      key={i}
-                      letterSpacing="0.05em"
-                      textAlign="left"
-                      margin="10px 0"
-                    >
-                      {m}
-                    </Paragraph>
-                  ))}
-                  <GridContainer
-                    justifyContent="between"
-                    gridGap_tablet="30px"
-                    containerColumns_tablet={`0fr repeat(12, 1fr) 1fr`}
-                    columns_tablet={
-                      Array.isArray(section.stats) && section.stats.length
-                    }
-                    margin="41px 0 0 0"
-                  >
-                    {section.stats.map((m, i) => {
-                      return (
-                        <Div
-                          key={i}
-                          gap="0"
-                          gridColumnGap="40px"
-                          flexDirection="column"
-                          margin="0 0 38px 0"
-                        >
-                          <H2
-                            type="h2"
-                            textAlign_tablet="left"
-                            color={Colors.blue}
-                            margin="0 0 10px 0"
-                            fontSize="27px"
-                            lineHeight="28px"
-                          >
-                            {m.stat}
-                          </H2>
-                          <H3
-                            type="h3"
-                            textAlign_tablet="left"
-                            lineHeight="28px"
-                          >
-                            {m.content}
-                          </H3>
-                        </Div>
-                      );
-                    })}
-                  </GridContainer>
-                  {Array.isArray(section.sub_sections) &&
-                    section.sub_sections
-                      .filter((section) => section.title !== "")
-                      .map((m, i) => {
+                      {section.stats.map((m, i) => {
                         return (
-                          <React.Fragment key={i}>
-                            <H4
-                              type="h4"
-                              textAlign="left"
-                              textTransform="uppercase"
-                              fontWeight="700"
-                              margin="42px 0 13px 0"
+                          <Div
+                            key={i}
+                            gap="0"
+                            gridColumnGap="40px"
+                            flexDirection="column"
+                            margin="0 0 38px 0"
+                          >
+                            <H2
+                              type="h2"
+                              textAlign_tablet="left"
+                              color={Colors.blue}
+                              margin="0 0 10px 0"
+                              fontSize="27px"
+                              lineHeight="28px"
                             >
-                              {m.title}
-                            </H4>
-                            <Paragraph
-                              letterSpacing="0.05em"
-                              textAlign="left"
-                              margin_md="10px 0"
-                              dangerouslySetInnerHTML={{ __html: m.content }}
-                            ></Paragraph>
-                            {Array.isArray(m.image_section) &&
-                              m.image_section.map((m, i) => {
-                                return (
-                                  <React.Fragment key={i}>
-                                    <StyledBackgroundSection
-                                      margin="30px 0"
-                                      minHeight={`100px`}
-                                      height={`255px`}
-                                      width="100%"
-                                      image={
-                                        m.image &&
-                                        m.image.childImageSharp.gatsbyImageData
-                                      }
-                                      bgSize={`contain`}
-                                    />
+                              {m.stat}
+                            </H2>
+                            <H3
+                              type="h3"
+                              textAlign_tablet="left"
+                              lineHeight="28px"
+                            >
+                              {m.content}
+                            </H3>
+                          </Div>
+                        );
+                      })}
+                    </GridContainer>
+                    {Array.isArray(section.sub_sections) &&
+                      section.sub_sections
+                        .filter((section) => section.title !== "")
+                        .map((m, i) => {
+                          return (
+                            <React.Fragment key={i}>
+                              <H4
+                                type="h4"
+                                textAlign="left"
+                                textTransform="uppercase"
+                                fontWeight="700"
+                                margin="42px 0 13px 0"
+                              >
+                                {m.title}
+                              </H4>
+                              <Paragraph
+                                letterSpacing="0.05em"
+                                textAlign="left"
+                                margin_md="10px 0"
+                                dangerouslySetInnerHTML={{ __html: m.content }}
+                              ></Paragraph>
+                              {Array.isArray(m.image_section) &&
+                                m.image_section.map((m, i) => {
+                                  return (
+                                    <React.Fragment key={i}>
+                                      <StyledBackgroundSection
+                                        margin="30px 0"
+                                        minHeight={`100px`}
+                                        height={`255px`}
+                                        width="100%"
+                                        image={
+                                          m.image &&
+                                          m.image.childImageSharp
+                                            .gatsbyImageData
+                                        }
+                                        bgSize={`contain`}
+                                      />
 
                                       <Paragraph
                                         justifyContent="center"
