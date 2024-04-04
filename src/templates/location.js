@@ -70,7 +70,7 @@ const Location = ({ data, pageContext, yml }) => {
 
   return (
     <>
-      <GridContainerWithImage
+      <GridContainer
         padding="40px 20px"
         padding_md="40px 80px"
         padding_lg="40px 0px"
@@ -86,6 +86,8 @@ const Location = ({ data, pageContext, yml }) => {
             ? "120px auto 30px auto"
             : "72px auto 30px auto"
         }
+        childMargin="auto"
+        childMaxWidth="1366px"
       >
         <Div
           flexDirection="column"
@@ -214,7 +216,7 @@ const Location = ({ data, pageContext, yml }) => {
         </Div>
         <Div
           height="auto"
-          width="100%"
+          // width="100%"
           gridColumn_tablet="7 / 15"
           style={{ position: "relative" }}
         >
@@ -227,7 +229,7 @@ const Location = ({ data, pageContext, yml }) => {
             alt={yml.header.alt}
           />
         </Div>
-      </GridContainerWithImage>
+      </GridContainer>
 
       <Badges
         lang={pageContext.lang}
@@ -289,7 +291,6 @@ const Location = ({ data, pageContext, yml }) => {
         lang={pageContext.lang}
         programs={data.allChooseYourProgramYaml.edges[0].node.programs}
       />
-
       <UpcomingDates
         lang={pageContext.lang}
         location={yml.breathecode_location_slug}
@@ -329,7 +330,6 @@ const Location = ({ data, pageContext, yml }) => {
         posts={data.allMarkdownRemark.edges}
         relatedClusters={yml.meta_info.related_clusters}
       />
-
       <Loc lang={pageContext.lang} allLocationYaml={data.test} />
     </>
   );

@@ -20,7 +20,7 @@ meta_info:
 navbar:
   logoUrl: "#"
   buttonText: "Solicitar" # this modifies the button text in the navbar
-  buttonUrl: "#bottom" #accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
+  buttonUrl: "#leadform_bottom" #accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
 
 form:
   # posible fields: "first_name", "last_name", "full_name", "phone", "email"
@@ -70,7 +70,7 @@ follow_bar:
     font_size: ["25px", "25px", "25px", "18px", "4.3vw"]
   button:
     text: "Más información"
-    path: "#bottom" # #top, #bottom, #anotherComponentId
+    path: "#leadform_bottom" # #top, #bottom, #anotherComponentId
     # ├──if path is empty("") it point to top per default
     # └── path accepts: relative(/example/path), absolute(https://google.com) or id(#idName)
   phone:
@@ -146,7 +146,7 @@ who_is_hiring:
   position: 9
   limit: 3
   heading: "Who is hiring"
-  sub_heading: "These comanies are hiring"
+  sub_heading: "These companies are hiring"
 
 badges:
   position: 5
@@ -163,7 +163,6 @@ components:
     image:
       style: "{}"
       src: "/images/landing/feliz-empresario.png"
-      link: "https://google.com" # take uses somewhere when they click on the image
       shadow: true
     heading: 
       text: "Finance your future"
@@ -188,7 +187,6 @@ components:
     image:
       style: "{}"
       src: "/images/landing/grupo-ventanas.png"
-      link: "https://google.com" # take uses somewhere when they click on the image
       shadow: true
     section_heading: 
       text: "Finance your future"
@@ -224,7 +222,6 @@ components:
     image: 
       style: "{}"
       src: "/images/landing/hombre-con-laptop.png"
-      link: "https://google.com" # take uses somewhere when they click on the image
     heading: 
       text: "Escúchalo de nuestros alumnos"
                   #xl      lg     md     sm    xs
@@ -433,7 +430,7 @@ components:
     position: 8
     layout: overlaped
     image:
-      src: "/images/landing/dos-mujeres-1.png"
+      src: "/images/landing/two-womans-and-laptop.webp"
     heading:
       text: "Python y Javascript"
     content:

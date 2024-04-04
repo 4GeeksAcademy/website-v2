@@ -11,6 +11,12 @@ meta_info:
   region: "latam"
   dialCode: "506"
   related_clusters: ["desarrollador-full-stack"]
+  
+  # ⬇️ cohort_include_regex field is used to filter cohorts on the calendar that only test successfully for a particular regex
+  # for example: for this location, only show cohorts starting with usa-xx-spanish
+  cohort_include_regex: ["latam"]
+  cohort_exclude_regex: []
+  home_video: "https://ask.4geeks.com/f67qc0ewu"
 
 seo_title: "Coding Bootcamp Costa Rica"
 header:
@@ -70,7 +76,7 @@ images_box:
   images: 
     - path: "../../../static/images/locations/costarica-new.png"
       alt: "Costa Rica city"
-    - path: "../../../static/images/ownpeoplecoding2.jpg"
+    - path: "../../../static/images/ownpeoplecoding2.webp"
       alt: "4Geeks Own People Coding"
     - path: "../../../static/images/ownmancoding.jpg"
       alt: "Remote-Coding-Bootcamp"
@@ -113,8 +119,14 @@ heading_section:
 
 active_campaign_location_slug: "costa-rica"
 breathecode_location_slug: "costa-rica"
-gdpr_compliant: false # do we need to ask for permision?
 in_person_available: false # important to accept in-person applicants
+
+consents:
+  - slug: "gdpr_consent"
+    name: "GDPR Consent"
+    active: false
+    message: 'Al completar este formulario acepto que mi información será utilizada para enviarme información comercial sobre 4Geeks Academy y que podría resultar una relación comercial a partir de esto. Revisa nuestra <a style={{ marginLeft: "5px" }} target="_blank" rel="noopener noreferrer nofollow" className="decorated" href="/es/privacidad">Política de Privacidad</a>'
+    error_message: "Debes aceptar el consent de GDPR"
 
 city: "San Jose"
 name: "Costa Rica"
@@ -128,16 +140,13 @@ country_shortname: "cr"
 socials:
   - name: "Facebook"
     icon: "facebook"
-    link: "https://www.facebook.com/4geeksacademy"
+    link: "https://www.facebook.com/4geeksacademylatinoamerica"
   - name: "Twitter"
     icon: "x-logo"
     link: "https://twitter.com/4geeksacademyES"
   - name: "Instagram"
     icon: "instagram"
-    link: "https://www.instagram.com/4geeksacademy/"
-  - name: "Linkedin"
-    icon: "linkedin"
-    link: "https://www.linkedin.com/school/4geeksacademy/"
+    link: "https://www.instagram.com/4geeksacademylatam/"
 courses:
   - "Full-Time"
   - "Part-Time"

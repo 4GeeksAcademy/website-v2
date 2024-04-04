@@ -39,7 +39,7 @@ apply_schollarship: # form that is displayed at the end of the landing
 
 navbar:
   buttonText: "Apply now"
-  buttonUrl: "#top" # url accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
+  buttonUrl: "#leadform_header" # url accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
   logoUrl: "#"
 
 header_data:
@@ -48,7 +48,7 @@ header_data:
   # sub_heading: "Miami Tech Talent is bringing 100% scholarships. We are changing the Game"
   sub_heading: "The Miami Tech Talent Coalition is creating a sustainable pipeline of skilled tech workers in Miami by bridging the gap between employers and talent."
   tagline_color: "black"
-  badge: "../../../static/images/badges/Course-Report-Badge-2023.png"
+  badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
   image_filter: brightness(0.3)
   
 
@@ -58,8 +58,8 @@ features:
   bullets:
     - "Get a career in Tech and join the #MiamiTechLife"
     - "Be a software Developer or a Data Scientist"
-    - "30 Spots Available. Only 15 left!" 
-    - "Now open and accepting applications!"
+    - "30 Spots Available. Just a few spot left." 
+    - "APPLY NOW, We are accepting applications!"
   styles: '{ "color": "black", "fontWeight":"500" }'
 
 short_badges:
@@ -69,7 +69,7 @@ short_badges:
     alt: "Mejor centro de Coding Bootcamp"
   - name: "Course Report"
     url: ""
-    image: "../../../static/images/badges/Course-Report-Badge-2023.png"
+    image: "../../../static/images/badges/Course-Report-Badge-2024.webp"
     alt: "Top Coding Bootcamps Course Report"
   - name: "Switchup"
     url: ""
@@ -89,7 +89,7 @@ follow_bar:
     font_size: ["25px", "25px", "25px", "20px", "18px"]
   button:
     text: "Apply Now"
-    path: "#top"
+    path: "#leadform_header"
   phone:
     text: "Call "
 
@@ -101,7 +101,7 @@ components:
     heading:
       text: Our Programs
     content:
-      text: Programs in Full-Time or Part-Time modality with live classes taught by experts
+      text: Part-Time programs with live classes taught by experts
       font_size: ["16px"]
       path: ""
     programs:
@@ -177,6 +177,7 @@ components:
     #   hover_color: "white"
     #   path: "#bottom"
     #   background: "black"
+  
     cards:
       - image:
           style: '{ "backgroundSize": "cover", "minHeight": "230px", "borderRadius": "80px" }'
@@ -349,6 +350,7 @@ components:
   #     background: "black"
   #     hover_color: "white"
   #     path: "#top"
+
 
   - name: Miami Tech Talent Coalition
     position: 6

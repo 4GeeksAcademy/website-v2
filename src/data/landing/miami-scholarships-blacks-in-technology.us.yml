@@ -20,7 +20,7 @@ meta_info:
 
 navbar:
   buttonText: "Apply now"
-  buttonUrl: "#bottom" # url accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
+  buttonUrl: "#leadform_bottom" # url accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
   logoUrl: "#"
 
 form:
@@ -38,7 +38,7 @@ header_data:
   tagline_color: "white"
   sub_heading: ""
   partner_logo_url: "../../../static/images/partner/bit-logo.png" # optional
-  badge: "../../../static/images/badges/Course-Report-Badge-2023.png"
+  badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
   background_image: "../../../static/images/Happy-People-Landing-4Geeks-ES.jpg" # optional
   background: "#000000" #background property, it can be a hex color
   image_filter: brightness(0.25)
@@ -61,7 +61,7 @@ short_badges:
     alt: "Mejor centro de Coding Bootcamp"
   - name: "Course Report"
     url: ""
-    image: "../../../static/images/badges/Course-Report-Badge-2023.png"
+    image: "../../../static/images/badges/Course-Report-Badge-2024.webp"
     alt: "Top Coding Bootcamps Course Report"
   - name: "Switchup"
     url: ""
@@ -81,7 +81,7 @@ follow_bar:
     font_size: ["25px", "25px", "25px", "18px", "4.3vw"]
   button:
     text: "Apply for a scholarship"
-    path: "#top" #top, #bottom, #anotherComponentId
+    path: "#leadform_header" #top, #bottom, #anotherComponentId
     # ├──if path is empty("") it point to top per default ("#" -> points to top)
     # └── path accepts: relative(/example/path), absolute(https://google.com) or id(#idName)
   phone:
@@ -117,7 +117,7 @@ who_is_hiring:
   sub_heading: "Get a job in less than 3 months thanks to our growing network of more than 500 technology companies. Access to national and international offers and a community of more than 2000 graduates"
   featured:
     - name: "Facebook"
-      image: "../../../static/images/partner/facebook.png"
+      image: "../../../static/images/partner/meta-logo.png"
     - name: "Microsoft"
       image: "../../../static/images/partner/microsoft.png"
     - name: "Apple"
@@ -233,19 +233,19 @@ components:
     position: 1
     layout: two_column_right
     image:
-      src: "/images/testimonials/allisa-testimonial.jpg"
-    video: "https://www.youtube.com/watch?v=TCHASxvkhpI"
+      src: "/images/landing/alissa-video.webp"
+      shadow: true
+    video: "EcqasocRKHo"
     heading:
-      text:
-        "Unlock Your Future: Exclusive Scholarships with Miami Dade College, Clark University, and United Way Miami for South Florida Applicants!"
+      text: "Launch your coding career with 4Geeks Academy's Unique Advantages"
         #xl      lg     md     sm    xs
       font_size: ["40px", "34px", "34px", "25px", "20px"]
     content:
-      text: "Seize this chance to supercharge your education. Join the academy now and pave the way to your brightest future! Contact our admissions team to learn more and join our coding bootcamp today!"
+      text: "Enjoy the perks of unlimited coding mentorship and career support with personalized 1-on-1 sessions with your mentor and career support team and become a full-stack developer in just 18 weeks."
       font_size: ["16px"]
     button:
       text: "Apply Now"
       background: black
       color: white
       hover_color: "#white"
-      path: "#top"
+      path: "#leadform_header"

@@ -37,7 +37,7 @@ header_data:
   background: "#FFF1D1"
   tagline: Become a web developer in a few as 18 weeks through work on real projects and mentorship by experienced professionals
   sub_heading: "86% of our graduates have already started their future-proof, tech careers with an average entry salary of $50,000/yr"
-  badge: "../../../static/images/badges/Course-Report-Badge-2023.png"
+  badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
   image_filter: brightness(0.3)
 
 features:
@@ -57,7 +57,7 @@ short_badges:
     alt: "Mejor centro de Coding Bootcamp"
   - name: "Course Report"
     url: ""
-    image: "../../../static/images/badges/Course-Report-Badge-2023.png"
+    image: "../../../static/images/badges/Course-Report-Badge-2024.webp"
     alt: "Top Coding Bootcamps Course Report"
   - name: "Switchup"
     url: ""
@@ -77,7 +77,7 @@ follow_bar:
     font_size: ["25px", "25px", "25px", "20px", "18px"]
   button:
     text: "Get more information"
-    path: "#top"
+    path: "#leadform_header"
   phone:
     text: "Call "
 

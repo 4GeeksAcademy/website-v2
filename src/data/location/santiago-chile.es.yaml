@@ -13,6 +13,12 @@ meta_info:
   region: "latam"
   dialCode: "56"
   related_clusters: ["desarrollador-full-stack"]
+  
+  # ⬇️ cohort_include_regex field is used to filter cohorts on the calendar that only test successfully for a particular regex
+  # for example: for this location, only show cohorts starting with usa-xx-spanish
+  cohort_include_regex: []
+  cohort_exclude_regex: []
+  # home_video: "https://ask.4geeks.com/f67qc0ewu"
 
 seo_title: "Coding Bootcamp en Santiago de Chile"
 header:
@@ -107,8 +113,19 @@ two_columns:
 
 active_campaign_location_slug: "santiago-chile"
 breathecode_location_slug: "santiago-chile"
-gdpr_compliant: false # do we need to ask for permision?
 in_person_available: true # important to accept in-person applicants
+
+consents:
+  - slug: "gdpr_consent"
+    name: "GDPR Consent"
+    active: true
+    message: 'Al completar este formulario acepto que mi información será utilizada para enviarme información comercial sobre 4Geeks Academy y que podría resultar una relación comercial a partir de esto. Revisa nuestra <a style={{ marginLeft: "5px" }} target="_blank" rel="noopener noreferrer nofollow" className="decorated" href="/es/privacidad">Política de Privacidad</a>'
+    error_message: "Debes aceptar el consent de GDPR"
+  - slug: "wa_consent"
+    name: "WhatsApp Consent"
+    active: true
+    message: "Al completar este formulario acepto que me contacten por WhatsApp."
+    error_message: "Debes aceptar el consent de WhatsApp"
 
 city: "Santiago de Chile"
 hasFinancialsOption: true

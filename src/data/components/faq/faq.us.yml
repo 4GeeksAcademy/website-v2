@@ -8,20 +8,14 @@ faq:
         locations: ["santiago-chile", "downtown-miami"]
         priority: 0
         answer: |-
-          "Well, it's kind of weird to talk about yourself a lot ... but, okay, since you asked!
-          We offer a unique methodology in which we will improve your general capabilities; We will train you and turn you into a software developer. We are constantly bringing innovative new approaches to teaching programming that not many other educational organizations are doing.
-          "Breathe Coding". That's our motto, because we understand that to become a developer, you have to be part of the programming culture. We've made learning fun and we've mastered the art of showing how programming skills can fit into everyday life."
+            "We offer several advantages that make us stand out from other coding bootcamps: Unlimited mentorships (for life), coding-centric approach (we don't teach nothing else), lifetime career support. You can compare better by visiting https://4geeksacademy.com/us/geeks-vs-others"
       - question: "Is 4Geeks a certified institution?"
         priority: 1
-        answer: "For sure! We are licensed (not accredited) in Florida by the Commission for Independent Education of the Florida Department of Education"
-      - question: "Why our campus?"
-        priority: 1
-        answer: |-
-          "Anywhere you choose to attend is an excellent option, whether it is in Miami, Madrid, Santiago de Chile, Caracas o San José in Costa Rica, in every city you will live an excellent experience with an environment totally prepared to offer you a unique learning experience through your journey."
+        answer: "Yes! We are licensed by the Commission for Independent Education of the Florida Department of Education."
       - question: "Who is that face in the logo?"
         priority: 3
         answer: |-
-          "Oh, you mean Rigoberto? He is the heart and spirit of everyone working for the Academy"
+          "Meet Rigoberto! He is the heart and spirit of everyone working at 4Geeks Academy."
 
   - topic: "Frequently Asked Questions about Enrollment"
     slug: "enrollment"
@@ -30,13 +24,13 @@ faq:
         locations: ["santiago-chile", "downtown-miami"]
         priority: 0
         answer: |-
-          "To begin your career as a Developer, you only need to click <a class="faq-link" href="/us/apply">here</a> and fill out a very simple form.  We will take care of the rest. "
+          "You only need to click <a class="faq-link" href="/us/apply">here</a> and fill out a very simple form. You will receive all the information about the program you chose, and one of our career specialists will email you just in case you have any questions."
       - question: "What is your admission process?"
         priority: 0
         answer: |-
-          "Once you start the admissions process, you will receive and email from one of our student counselors. We will guide you through the whole process. Simply reply to our email and we will set up a call at your convenience. After the phone call, you will be invited to an interview online or personal. 
+          "Once you start the admissions process, you will receive an email from one of our student counselors. We will guide you through the whole process. Simply reply to our email and we will set up a call at your convenience. After the phone call, you will be invited to an interview online or personal. 
           If you wish you can visit our campus to get to know the team and the location. During the meeting you will be able to let us know why you want to become a developer."
-      - question: "¿Do I need to have my own laptop?"
+      - question: "Do I need to have my own laptop?"
         priority: 1
         answer: "The simple and quick answer is YES! You will need to bring your computer to class, we don't require a specific operating system because the classes and exercises are uploaded to the cloud."
       - question: "How do I pay for my tuition?"

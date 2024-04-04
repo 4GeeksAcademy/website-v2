@@ -423,7 +423,6 @@ const getVariant = (props) => ({
     border: `1px solid ${props.color}`,
     background: props.background || "initial",
     color: props.color,
-    borderRadius: "3px",
   },
   full: {
     border: "none",
@@ -456,6 +455,8 @@ export const Button = styled(SmartButton)`
   font-size: ${(props) => props.fontSize};
   font-family: "Lato", sans-serif;
   text-transform: ${(props) => props.textTransform || "uppercase"};
+  text-decoration: ${(props) => props.textDecoration || "none"};
+  text-decoration-line: ${(props) => props.textDecorationLine || "none"};
   font-weight: ${(props) => props.fontWeight || "700"};
   margin: ${(props) => props.margin};
   border-radius: ${(props) => props.borderRadius};
@@ -556,7 +557,7 @@ Button.defaultProps = {
   width: "fit-content",
   type: "button",
   colorHover: null,
-  borderRadius: "3px",
+  borderRadius: "0px",
   outline: false,
   onClick: null,
   display: "flex",

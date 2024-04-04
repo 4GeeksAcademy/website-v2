@@ -14,6 +14,12 @@ meta_info:
     ]
   region: "usa-canada"
   related_clusters: ["trends-and-tech"]
+  
+  # ⬇️ cohort_include_regex field is used to filter cohorts on the calendar that only test successfully for a particular regex
+  # for example: for this location, only show cohorts starting with usa-xx-spanish
+  cohort_include_regex: ['usa-\d{1,10}-spanish']
+  cohort_exclude_regex: ["miami"]
+  home_video: "https://www.videoask.com/fyq2h2hvx"
 
 seo_title: "Coding Bootcamp in Spanish"
 header:
@@ -88,9 +94,9 @@ two_columns:
   proportions: [6, 6]
   image:
     style: '{"border" : "5px solid black", "backgroundSize": "contain" }'
-    src: "/static/images/testimonials/allisa-testimonial.jpg"
-    shadow: true  
-  video: "https://www.youtube.com/watch?v=TCHASxvkhpI"
+    src: "/images/landing/alissa-video.webp"
+    shadow: true
+  video: "EcqasocRKHo"
   heading:
     text: "Your Journey with 4Geeks Academy Online"
     font_size: ["30px", "30px", "30px", "30px", "30px"]
@@ -113,8 +119,14 @@ two_columns:
 
 active_campaign_location_slug: "online-spanish-usa"
 breathecode_location_slug: "online-spanish-usa"
-gdpr_compliant: false # do we need to ask for permision?
 in_person_available: false # important to accept in-person applicants
+
+consents:
+  - slug: "gdpr_consent"
+    name: "GDPR Consent"
+    active: false
+    message: 'By submitting this form, I accept that my data may be used for a quote request that could result in a commercial relationship. Check out our complete <a style={{ marginLeft: "5px" }} target="_blank" rel="noopener noreferrer nofollow" className="decorated" href="/us/privacy-policy">Privacy Policy</a>'
+    error_message: "You need to accept the privacy terms"
 
 city: "Houston"
 name: "Rest of America in Spanish"
@@ -131,7 +143,7 @@ socials:
     icon: "facebook"
     link: "https://www.facebook.com/4geeksacademy"
   - name: "Twitter"
-    icon: "twitter"
+    icon: "x-logo"
     link: "https://www.twitter.com/4geeksacademy"
   - name: "Instagram"
     icon: "instagram"

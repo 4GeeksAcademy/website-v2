@@ -1,0 +1,243 @@
+meta_info:
+  slug: santiago-bootcamp-datascience-meta # <--- URL 4geeksacademy.com/us/landing/example
+
+  # This will show on social media when shared
+  title: "Bootcamp de Data Science en Santiago de Chile, aprende ciencia de datos en 15 semanas"
+  description: "El Bootcamp de Data Science y Machine Learning el más premiado en Santiago, Con 4Geeks te convertirás en experto"
+  image: "/images/bg/main-bg.jpg"
+  keywords: "data science, machine learning, ciencia de datos, Coding Bootcamp, 4Geeks Academy"
+  visibility: "unlisted" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
+  template: "landing_a" # <--- choose your landing template
+  # <--- URL redirections to avoid 404 errors
+  redirects: []
+
+  # Set a particular course or location to the landing page
+  # this UTM fields will be also included in the CRM contact
+  utm_course: ["datascience-ml"]
+  utm_location: ["santiago-chile"]
+  automation: soft # comma separated, "soft" is the default value
+  tag: request_more_info # comma separated, "request_more_info" is the default value
+
+navbar:
+  buttonText: "Postular"
+  buttonUrl: "#leadform_bottom" # url accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
+  logoUrl: "#"
+
+form:
+  # posible fields: "first_name", "last_name", "full_name", "phone", "email"
+  # always the first_name, email and phone will be mandatory if added.
+  fields: ["full_name", "phone", "email"]
+  heading: "Conoce más información"
+  motivation: "Completa el formulario y te enviaremos la información en unos minutos a tu correo electrónico."
+  button_label: Obtener malla y más información
+  redirect: "/es/gracias/?lang=es"  #you can redirect to another url or entirely diffrent website
+
+apply_schollarship: # form that is displayed at the end of the landing
+  # title: "Get more info about this award-winning development course"
+  imageSide: "right"
+  image: "../../../static/images/landing/apply.png"
+
+# jumbotron on the top (cannot be commented out)
+header_data:
+  background: "#FFF1D1"
+  tagline: Conviértete en Data Scientist
+  sub_heading: "Construye tu camino"
+  badge: "../../../static/images/badges/Course-Report-Badge-2023.png"
+  image_filter: brightness(0.3)
+
+features:
+  marginTop: 0px #<-- separation between tagline and the bullets
+
+  #                                         up   left down  right
+  styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
+  bullets:
+    - Accede a oportunidades profesionales como Junior Data Scientist sin necesidad de experiencia previa
+    - Disfruta de un horario part-time adaptado a tu ritmo de vida
+    - Industrias como banca, finanzas, comercio online y telecomunicaciones buscan profesionales de Data Science y Machine Learning.
+    - El salario promedio para un Junior Data Scientist en Chile oscila entre $800.000 y $1.200.000 CLP al mes
+
+follow_bar:
+  position: "top" # top, bottom, hidden
+  content:
+    text: "Diversos planes de financiamiento \n Hasta 18 meses"
+    text_mobile: "Diversos planes de financiamiento \n Hasta 18 meses"
+    # devices:    XL      LG      MD      SM       XS
+    font_size: ["25px", "25px", "25px", "18px", "4.3vw"]
+  button:
+    text: "Escribir por WhatsApp"
+    path: "https://api.whatsapp.com/send/?phone=56920065786&text&type=phone_number&app_absent=0&utm_source=GADS&utm_medium=GADS&utm_campaign=GADS&utm_id=GADS&utm_term=GADS&utm_content=GADS"
+  phone: 
+    text: ""
+
+short_badges:
+  - name: "Premios Tecnologia Siglo XXI"
+    url: ""
+    image: "../../../static/images/awards/premios_tecnologia_sigloxxi.png"
+    alt: "Mejor centro de Coding Bootcamp"
+  - name: "Course Report"
+    url: ""
+    image: "../../../static/images/badges/Course-Report-Badge-2023.png"
+    alt: "Top Coding Bootcamps Course Report"
+  - name: "Switchup"
+    url: ""
+    image: "../../../static/images/badges/switchup-badge-2023.png"
+    alt: "Best coding bootcamp Switchup 2023"   
+  - name: "Florida Department of Education"
+    url: ""
+    image: "../../../static/images/badges/licensed.png"
+    alt: "Florida Department of Education"
+
+#
+# ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇
+#
+
+
+rating_reviews:
+  # position: 6
+  # heading: "Lee acerca de nosotros"
+  # rating_list:
+  #   - alt: "Career Karma"
+  #     image: "../../../static/images/badges/career-karma.png"
+  #     rating: 4.8
+  #     url: "https://careerkarma.com/schools/4geeks-academy/"
+  #   - alt: "Switchup"
+  #     image: "../../../static/images/badges/switchup-img.png"
+  #     rating: 4.89
+  #     url: "https://www.switchup.org/bootcamps/4geeks-academy"
+  #   - alt: "Course Report"
+  #     image: "../../../static/images/badges/course-report.png"
+  #     rating: 4.84
+  #     url: "https://www.coursereport.com/schools/4geeks-academy"
+  #   - alt: "Google"
+  #     image: "../../../static/images/badges/google.png"
+  #     rating: 4.9
+  #     url: ""
+
+program_details:
+  position: 4
+  heading: "Ciencia de Datos y Machine Learning"
+  sub_heading: "Comienza con Python, Ciencia de Datos, Aprendizaje Automático, Deep Learning y el mantenimiento de un entorno de producción en Inteligencia Artificial."
+
+why_4geeks:
+  position: 7
+  heading: "¿Por qué 4Geeks?"
+  sub_heading: " "
+
+who_is_hiring:
+  position: 15
+  limit: 4
+  heading: "¿Quién contrata a nuestros alumnos?"
+  sub_heading: "Nos encanta ver crecer a nuestros estudiantes, es por eso que nos esforzamos cada día por tener más aliados, para que puedas trabajar en empresas que te ayuden a seguir creciendo profesionalmente."
+
+# Possible layours: [two_column_left_image, two_column_right_image]
+components:
+  - name: two-colums-right
+    position: 1
+    layout: two_column_right 
+    swipable: False
+    background: "#fbfbfb"
+    image:
+      style: '{"backgroundSize": "contain;"}'
+      src: "/images/landing/tres-personas-reloaded.webp"
+      shadow: true
+    section_heading: 
+      text: ""
+      style: '{ "font-size": "30px" }'
+    heading: 
+      text: "Transforma tu carrera con las habilidades más demandadas del mercado"
+    sub_heading:
+      text: |
+        Clases Exclusivas con Enfoque Práctico,
+        Descubre el emocionante mundo de Machine Learning y Data Science con nuestro programa integral. Aprende desde cero y prepárate para acceder a oportunidades como Junior Data Scientist.
+    button: 
+      text: "Postúlate ahora"
+      color: white
+      hover_color: "white"
+      background: "black"
+      path: "#leadform_header"
+    content: 
+      text: ""
+      font_size: ["16px"]
+      path: ""
+    bullets:
+      items:
+      - heading: "Análisis de datos"
+        text: "Extrae valiosos insights de grandes conjuntos de datos."
+        icon: "circle" 
+      - heading: "Machine Learning"
+        text: "Crea modelos predictivos para tomar decisiones inteligentes"
+        icon: "circle" 
+      - heading: "Impulsa tu trayectoria profesional"
+        text: "Trabaja en proyectos reales y desafiantes para adquirir experiencia práctica. - Domina las herramientas más utilizadas en la industria."
+        icon: "circle" 
+
+  - name: python_y_javascript
+    position: 2
+    layout: two_column_left
+    background: "veryLightBlue2" # Name of the color(from components/Styling/index.js) or color code ex: #C9F9F9
+    image:
+      src: "/images/why-4geeks/python-image.png"
+    heading:
+      # style: '{"padding": "0 20px", "line-height": "50px"}'
+      text:
+        "Conviértete en Data Scientist con nuestro programa intensivo"
+        #           xl      lg      md      sm      xs
+      font_size: ["45px", "45px", "30px", "28px", "25px"]
+    content:
+      text: "Te brindaremos todas las herramientas, conocimientos y experiencia práctica que requieres para conquistar las técnicas más avanzadas, forjar un portafolio profesional impresionante y convertirte en un especialista en la materia. No importa si estás comenzando desde cero o si ya posees cierto conocimiento en Data Science, nuestro programa está especialmente diseñado para ayudarte a alcanzar tus metas. ¿A qué estás esperando? ¡Inscríbete hoy mismo y comienza tu camino hacia una exitosa carrera en el fascinante mundo del Data Science!"
+      font_size: ["18px"]
+
+  - name: new_design_with_bullets
+    position: 3
+    layout: two_column_right 
+    swipable: False
+    background: "#fbfbfb"
+    image:
+      style: '{"backgroundSize": "contain;"}'
+      src: "/images/landing/hombre-con-laptop.png"
+      shadow: false
+    section_heading: 
+      text: "Diseñado para hacerte exitoso en el mundo de la programación"
+      style: '{ "font-size": "30px" }'
+    heading: 
+      text: "Desbloquea tu potencial"
+    sub_heading:
+      text: ""
+    button: 
+      text: "OBTENER MÁS INFORMACIÓN"
+      color: white
+      hover_color: "white"
+      background: "black"
+      path: "#leadform_header"
+    content: 
+      text: ""
+      font_size: ["16px"]
+      path: ""
+    bullets:
+      items:
+      - heading: "TODAS LAS MENTORIAS QUE NECESITAS"
+        text: "En línea y en persona, por el resto de tu vida, incluso para codificación de dudas laborales"
+        icon: "circle" 
+      - heading: "TIEMPO DE RESPUESTA"
+        text: "No te quedes atascado con tu código, no te llevará más de 30 minutos para que un instructor te ayude."
+        icon: "circle" 
+      - heading: "1:7 PROPORCIÓN PROFESOR: ESTUDIANTE"
+        text: "Encontrarás más profesores en 4Geeks que el promedio de la industria."
+        icon: "circle" 
+      - heading: "SOPORTE PROFESIONAL A LA MEDIDA"
+        text: "Proporcionamos ayuda para la colocación laboral y preparación para el empleo en tecnología."
+        icon: "circle" 
+
+choose_your_program:
+  position: 5
+  title: Nuestra Modalidad
+  paragraph: Programa de Machine Learning y Data Science en Modalidad Part Time y Full Time
+  programs:  
+  - title: "Part Time"
+    sub_title: "16 semanas"
+    icon: "fullstack"
+    description: |
+      De cero a tener tu primer trabajo como Data Scientist, con una duración de 16 semanas, con clases en vivo 3 veces por semana, compatible con horario laboral o de estudios. 
+    text_link: Obtener más información
+    link: "#leadform_header" # moves to start position
+  
