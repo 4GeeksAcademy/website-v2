@@ -26,7 +26,7 @@ form:
   fields: ["full_name", "phone", "email", "course"]
   heading: "Apply to 4Geeks"
   motivation: |
-    Upon completing the form, you'll receive an email from our team containing program details, including financing options and career opportunities.🚀
+    When you fill out this form, someone from our team will contact you with information about this scholarship.
   button_label: Apply
   redirect: "/us/thank-you/?lang=us"  #you can redirect to another url or entirely diffrent website
 
