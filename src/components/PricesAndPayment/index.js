@@ -37,9 +37,7 @@ const PricingCard = ({
       >
         {data.offer && (
           <Div>
-            <Div>
-              {data.offer}
-            </Div>
+            <Div>{data.offer}</Div>
           </Div>
         )}
         {recomended && (
@@ -56,9 +54,13 @@ const PricingCard = ({
           </Div>
         )}
         <Div
-          border={isSelected ? `${recomended ? 2 : 1}px solid ${Colors.blue}` : `1px solid black`}
-          borderTop={recomended && 'none'}
-          borderRadius={recomended ? '0 0 4px 4px' : '4px'}
+          border={
+            isSelected
+              ? `${recomended ? 2 : 1}px solid ${Colors.blue}`
+              : `1px solid black`
+          }
+          borderTop={recomended && "none"}
+          borderRadius={recomended ? "0 0 4px 4px" : "4px"}
           padding_md="17px 20px"
           padding_tablet="8px 5px"
           padding_xs="8px 20px"
