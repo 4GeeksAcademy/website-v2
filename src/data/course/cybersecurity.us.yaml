@@ -36,18 +36,18 @@ course_instructors:
 
 instructors:
   - name: "Chema Alonso"
-    sub_title: "The most important Hacker in Spain"
-    degree: "Ph.D. en Seguridad Informática"  # Translated degree
-    image: "../../../static/images/staff/chema-alonso.webp"
-    bio: "Chema Alonso actualmente se desempeña como Director Digital (CDO) de Telefónica, donde supervisa áreas clave como Innovación, Datos, Plataformas, Productos Digitales y Servicios. Las unidades bajo su cargo incluyen Wayra, OpenGate, Aplicaciones Digitales, Kernel, Plataformas de Video y WiFi."  # Translated bio
+    sub_title: "El hacker más importante de España"
+    degree: "Ph.D. in Computer Security"
+    image: "../../../static/images/instructors/sayyed.jpeg"
+    bio: "Chema Alonso currently serves as the CDO (Chief Digital Officer) of Telefónica, where he oversees key areas such as Innovation, Data, Platforms, Digital Products, and Services. Units under his purview include Wayra, OpenGate, Digital Applications, Kernel, Video Platforms, and WiFi. "
     github: ""
     linkedin: "https://www.linkedin.com/in/chemaalonso/"
 
   - name: "Daniela Maissi"
-    sub_title: "Instructora de Ethical Hacking y Ciberseguridad"  # Translated subtitle
-    degree: "Máster en Business Intelligence y Big Data"  # Translated degree
-    image: "../../../static/images/staff/daniela-maissi.webp"
-    bio: "Daniela Maissi es Instructora Principal de Ciberseguridad en The Bridge, con experiencia en hacking ético, pruebas de penetración, investigación y desarrollo back-end."  # Translated bio
+    sub_title: "Ethical Hacking & Cybersecurity Educator"
+    degree: "Master in business Intelligence and Big Data"
+    image: "../../../static/images/instructors/sayyed.jpeg"
+    bio: "Daniela Maissi is a Cyber Security Lead Instructor at The Bridge, with expertise in ethical hacking, penetration testing, research, and back-end development. "
     github: ""
     linkedin: "https://www.linkedin.com/in/daniela-maissi-43045510b/"
 
@@ -71,15 +71,14 @@ overlaped:
 two_columns:
   proportions: [6, 6]
   image:
-    style: '{"border" : "0px solid black", "backgroundSize": "contain", "height": "400px", "background-position": "center" }'
+    style: '{"border" : "0px solid black", "backgroundSize": "contain", "background-position": "center" }'
     src: "../../images/staff/chema-daniela.jpg"
     shadow: false
-  # video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
   heading:
-    text: "Course taught by the experts in cybersecurity, Chema Alonso and Daniela Maissi"
+    text: "Cybersecurity Specialist Bootcamp Endorsed by Chema Alonso"
     font_size: ["30px", "30px", "30px", "30px", "30px"]
   sub_heading:
-    text: "Become an Specialist and Delve into ISO and NIST standards, gain practical experience in DLP techniques, and focus on ethical hacking, penetration testing, and risk management. Become a confident cybersecurity professional, ready to tackle any security challenge."
+    text: "As Chief Digital Officer at Telefónica S.A., Chema's expertise in cybersecurity drives innovation and digitalization. In this course, you'll delve into ISO and NIST standards, gain hands-on experience in data loss prevention (DLP) techniques, and focus on ethical hacking, penetration testing, and risk management. But that's not all. You'll also benefit from the wealth of knowledge and experience brought by Daniela Maissi, a skilled web developer and cybersecurity expert with over 5 years of experience and 12+ certifications in cloud computing, OSINT, and IT solutions."
     font_size: ["16px", "16px", "16px", "16px", "16px"]
   button:
     text: "Apply now"
@@ -88,9 +87,8 @@ two_columns:
     path: "#prices_and_payment"
   bullets:
     items:
-      - text: "Gain expertise in cybersecurity standards like ISO and NIST"
       - text: "Develop practical skills in data loss prevention (DLP) techniques"
-      - text: "Explore ethical hacking, penetration testing, and risk management strategies"
+      - text: "Techniques for hardening Windows and Linux systems against cyber threats"
       - text: "This cybersecurity bootcamp is officially approved and taught by Chema Alonso, guaranteeing top-tier education and industry expertise."
 
 upcoming:

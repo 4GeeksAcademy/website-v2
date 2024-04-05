@@ -1,0 +1,307 @@
+full_time:
+  - slug: 'plan-1'
+    academies: ['downtown-miami', 'orlando']
+    recomended: true
+    scholarship: "Scholarship"
+    payment_time: "Pay today"
+    price: "$4999"
+    bullets: 
+      - "You're saving $4000 USD "
+      - "9% of your salary until paid in full, only if you get a job in tech."
+    icons: 
+      - "/images/landing/uwm_pantone_2021_2.png"
+  - slug: 'plan-2'
+    academies: ['downtown-miami', 'orlando']
+    recomended: false
+    scholarship: "Financed"
+    payment_time: "24 months payment"
+    price: "$310"
+    bullets: 
+      - "With $400 p/ week living stipends"
+      - "9% of your salary until paid in full, only if you get a job in tech."
+    icons: 
+      - "/images/ascent_logo.jpg"
+      - "/images/climb-logo.png"
+      - "/images/quotanda-logo.png"
+  - slug: 'plan-3'
+    academies: ['downtown-miami', 'orlando']
+    recomended: false
+    scholarship: "Income Share Agreement"
+    payment_time: "Pay after you get a job"
+    price: "$0"
+    bullets: 
+      - "With $400 p/ week living stipends"
+      - "9% of your salary until paid in full, only if you get a job in tech."
+    icons: 
+      - "/images/ascent_logo.jpg"
+      - "/images/climb-logo.png"
+      - "/images/quotanda-logo.png"
+  - slug: 'plan-4'
+    academies: ['downtown-miami', 'orlando']
+    recomended: false
+    scholarship: "Full Payment"
+    payment_time: "Pay today"
+    price: "$8099"
+    bullets: 
+      - "You're saving $1000 USD"
+
+part_time:
+  - slug: 'plan-1'
+    academies: ['orlando', 'downtown-miami', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa']
+    recomended: true
+    scholarship: "Beca"
+    payment_time: "Paga hoy o en 3 partes"
+    price: "$6999"
+    original_price: "$10999"
+    bullets: 
+      - "Ahorras $4000 USD "
+    icons: 
+      - "/images/clarkuniversity.png"
+
+  - slug: 'plan-2'
+    academies: ['orlando', 'downtown-miami', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa']
+    recomended: false
+    scholarship: "Financiado"
+    payment_time: "Paga en 3, 4 o 5 años"
+    price: "~$250p/m"
+    bullets: 
+      - "Varios partners ofreciendo préstamos y planes de pago"
+      - "Puedes obtener una beca parcial y el balance restante con un plan de pago"
+    icons: 
+      - "/images/ascent_logo.jpg"
+      - "/images/climb-logo.png"
+      - "/images/quotanda-logo.png"
+
+  - slug: 'plan-4'
+    recomended: false
+    academies: ['orlando', 'downtown-miami', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa']
+    scholarship: "Pago Completo"
+    payment_time: "Paga hoy"
+    price: "$9999"
+    original_price: "$10999"
+    bullets: 
+      - "Ahorras $1000 USD"
+      - "Sólo si la Beca de Clark University no aplica (Desempleado o subempleado)"
+
+  - slug: 'spain-scholarships-cs-pt'
+    academies: ['barcelona-spain', 'madrid-spain', 'malaga-spain', 'valencia-spain']
+    recomended: true
+    scholarship: "Becas disponibles"
+    payment_time: ""
+    price: "~200 € al mes"
+    bullets:
+      - "Financiación a tu medida, con o sin intereses, desde 4 hasta 30 meses"
+      - "Becas disponibles de hasta 2.500 €. Desde 5.300 € en vez de 7.800 €. ¡Becas sujetas a disponibilidad!"     
+    icons: 
+      - "/images/zank.png"
+      - "/images/sequra.png"
+      - "/images/nemuru.png"
+      - "/images/quotanda-logo.png"
+
+  - slug: 'spain-upfront-cs-pt'
+    academies: ['barcelona-spain', 'madrid-spain', 'malaga-spain', 'valencia-spain']
+    recomended: false
+    scholarship: "Paga de contado"
+    payment_time: "Y obtén un descuento"
+    price: "4.950 €*"
+    bullets:
+      - "Paga con trasnferencia bancaria, tarjeta de crédito o débito, Paypal, Bitcoin o Ethereum"
+      - "*Descuento de hasta 2.850 €. Desde 4.950 € en vez de 7.800 €. ¡Descuento sujeto a disponibilidad!"     
+    icons: 
+      - "/images/visa-mastercard.png"    
+      - "/images/bitcoin_logo.png"  
+      - "/images/ethereum.png"    
+
+  - slug: 'spain-isa-cs-pt'
+    academies: ['barcelona-spain', 'madrid-spain', 'malaga-spain', 'valencia-spain']
+    recomended: true
+    scholarship: "Acuerdo de Ingresos Comparsidos (ISA)"
+    payment_time: "Paga sólo cuando trabajes"
+    price: "0 €*"
+    bullets: 
+      - "Solo tendrás que pagar cuando tus ingresos sean superiores a 16.000 € al año"
+      - "*Paga una pequeña parte de tu salario cuando encuentres trabajo. ¡SIN INTERESES!"
+    icons: 
+      - "/images/bcas.png" 
+  - slug: 'north-europe-scholarships-cs-pt'
+    academies: ['berlin-germany','dublin-ireland', 'europe','hamburg-germany','munich-germany']
+    recomended: true
+    scholarship: "Becas disponibles"
+    payment_time: ""
+    price: "~200 € al mes"
+    bullets:
+      - "Financiación a tu medida, con o sin intereses, desde 4 hasta 30 meses"
+      - "Becas disponibles de hasta 2.500 €. Desde 5.300 € en vez de 7.800 €"     
+    icons: 
+      - "/images/quotanda-logo.png"
+
+  - slug: 'north-europe-upfront-cs-pt'
+    academies: ['berlin-germany','dublin-ireland', 'europe','hamburg-germany','munich-germany']
+    recomended: false
+    scholarship: "Paga de contado"
+    payment_time: "Y obtén un descuento"
+    price: "5.000 €*"
+    bullets:
+      - "Paga con trasnferencia bancaria, tarjeta de crédito o débito, Paypal, Bitcoin o Ethereum"
+      - "*Descuento de hasta 2.800 €. Desde 5.000 € en vez de 7.800 €"     
+    icons: 
+      - "/images/visa-mastercard.png"    
+      - "/images/bitcoin_logo.png"  
+      - "/images/ethereum.png"    
+                       
+  - slug: 'north-europe-isa-cs-pt'
+    academies: ['berlin-germany','dublin-ireland', 'europe','hamburg-germany', 'munich-germany']
+    recomended: true
+    scholarship: "Acuerdo de Ingresos Compartidos (ISA)"
+    payment_time: "Paga sólo cuando trabajes"
+    price: "0 €*"
+    bullets: 
+      - "Solo tendrás que pagar cuando tus ingresos sean superiores a 22.000 € al año"
+      - "*Paga una pequeña parte de tu salario cuando encuentres trabajo"
+    icons: 
+      - "/images/stepex.png"     
+
+  - slug: 'south-europe-scholarships-cs-pt'
+    academies: ['lisbon-portugal','milan-italy','rome-italy']
+    recomended: true
+    scholarship: "Becas disponibles"
+    payment_time: ""
+    price: "~200 € al mes"
+    bullets:
+      - "Financiación a tu medida, con o sin intereses, desde 4 hasta 30 meses"
+      - "Becas disponibles de hasta 2.800 €. Desde 5.000 € en vez de 7.800 €"     
+    icons: 
+      - "/images/quotanda-logo.png"
+
+  - slug: 'south-europe-upfront-cs-pt'
+    academies: ['lisbon-portugal','milan-italy','rome-italy']
+    recomended: false
+    scholarship: "Paga de contado"
+    payment_time: "Y obtén un descuento"
+    price: "4.500 €*"
+    bullets:
+      - "Paga con transferencia bancaria, tarjeta de crédito o débito, Paypal, Bitcoin o Ethereum"
+      - "*Descuento de hasta 3.300 €. Desde 4.500 € en vez de 7.800 €"     
+    icons: 
+      - "/images/visa-mastercard.png"    
+      - "/images/bitcoin_logo.png"  
+      - "/images/ethereum.png"
+
+  - slug: 'south-europe-isa-cs-pt'
+    academies: ['lisbon-portugal','milan-italy','rome-italy']
+    recomended: true
+    scholarship: "Acuerdo de Ingresos Compartidos (ISA)"
+    payment_time: "Paga sólo cuando trabajes"
+    price: "0 €*"
+    bullets: 
+      - "Solo tendrás que pagar cuando tus ingresos sean superiores a 16.000 € al año"
+      - "*Paga una pequeña parte de tu salario cuando encuentres trabajo"
+    icons: 
+      - "/images/stepex.png"     
+
+  - slug: 'chile-cs-pt'
+    academies: ['santiago-chile']
+    recomended: true
+    scholarship: "Paga al contado"
+    payment_time: "Y obtén un descuento"
+    price: "4.500.000 CLP*"
+    bullets:
+      - "Paga con transferencia bancaria, tarjeta de crédito o débito"    
+      - "*Precio sin descuento aplicado"
+    icons: 
+      - "/images/visa-mastercard.png"
+
+  - slug: 'chile-geekforce-fs-pt'
+    academies: ['santiago-chaaile']
+    recomended: true
+    scholarship: "Pago de contado"
+    payment_time: "Y obtén un descuento"
+    price: "4.500.000 CLP*"
+    bullets:
+      - "Paga con transferencia bancaria, tarjeta de crédito o débito"    
+      - "*Precio sin descuento aplicado"
+    icons: 
+      - "/images/visa-mastercard.png"    
+
+  - slug: 'chile-cs-pt'
+    academies: ['santiago-chile']
+    recomended: false
+    scholarship: "Cuotas desde"
+    payment_time: ""
+    price: "~220.500 CLP"
+    bullets:
+      - "Financiamiento a tu medida desde 6 hasta 18 meses"  
+      - "Se debe pagar un anticipo correspondiente al 20% del valor del programa" 
+    icons: 
+      - "/images//flevo-new.png"
+
+  - slug: 'latam-solo-programa-cs'
+    academies: ['montevideo-uruguay','bogota-colombia', 'costa-rica', 'mexicocity-mexico','quito-ecuador', 'panamacity-panama', 'buenosaires-argentina','lima-peru','lapaz-bolivia']
+    recomended: true
+    scholarship: "Sólo paga el programa"
+    payment_time: "Enfócate en obtener nuevas habilidades. Paga mensualmente."
+    price: "A partir de $120/m"
+    bullets: 
+      - "Siempre hay un plan de pago disponible para que te unas a 4Geeks Academy"
+      - "Si no encuentras aquí lo que esperas, por favor contáctanos y trataremos de encontrar nuevas formas de ayudarte"     
+      - "Debes elegir si tomarás solo el programa, si también quieres obtener nuestro sistema de Career Support, o si quieres ir a por todo y registrarte con nuestra opción de Trabajo Garantizado"  
+      - "Pague solamente por el programa de ciberseguridad si todavía no está interesado en nuestro programa de apoyo profesional y nuestra garantía de empleo."   
+    icons: 
+      - "/images//flevo-new.png" 
+
+  - slug: 'latam-program-only-cs-upfront'
+    academies: ['montevideo-uruguay','bogota-colombia', 'costa-rica', 'mexicocity-mexico','quito-ecuador', 'panamacity-panama', 'buenosaires-argentina','lima-peru','lapaz-bolivia']
+    recomended: false
+    scholarship: "Sólo el Programa ciberseguridad"
+    payment_time: "Enfócate en obtener nuevas habilidades. Paga de contado."
+    price: "USD $4000"
+    bullets: 
+      - "Siempre hay un plan de pago disponible para que te unas a 4Geeks Academy"
+      - "Si no encuentras aquí lo que esperas, por favor contáctanos y trataremos de encontrar nuevas formas de ayudarte"     
+      - "Debes elegir si tomarás solo el programa, si también quieres obtener nuestro sistema de Career Support, o si quieres ir a por todo y registrarte con nuestra opción de Trabajo Garantizado"  
+      - "Pague solamente por el programa Science si todavía no está interesado en nuestro programa de apoyo profesional y nuestra garantía de empleo."   
+    icons: 
+      - "/images//flevo-new.png" 
+
+  - slug: 'latam-upfront-cs'
+    academies: ['montevideo-uruguay','bogota-colombia', 'costa-rica', 'mexicocity-mexico','quito-ecuador', 'panamacity-panama', 'buenosaires-argentina','lima-peru','lapaz-bolivia']
+    recomended: false
+    scholarship: "Program ciberseguridad + Career Support"
+    payment_time: "Te ayudamos a pulir tu perfil profesional"
+    price: "USD $5000"
+    bullets:
+      - "Siempre hay un plan de pago disponible para que te unas a 4Geeks Academy"
+      - "Si no encuentras aquí lo que esperas, por favor contáctanos y trataremos de encontrar nuevas formas de ayudarte"     
+      - "Debes elegir si tomarás solo el programa, si también quieres obtener nuestro sistema de Career Support, o si quieres ir a por todo y registrarte con nuestra opción de Trabajo Garantizado"  
+      - "Además del programa de ciberseguridad, obtén apoyo profesional de por vida de nuestro equipo especializado y acceso permanente a nuestra comunidad en línea de graduados"   
+    icons: 
+      - "/images//flevo-new.png"    
+
+
+  - slug: 'latam-solo-programa-cs'
+    academies: ['caracas-venezuela']
+    recomended: true
+    scholarship: "Sólo paga el programa"
+    payment_time: "Enfócate en obtener nuevas habilidades. Paga mensualmente."
+    price: "A partir de $240/m"
+    bullets: 
+      - "Siempre hay un plan de pago disponible para que te unas a 4Geeks Academy"
+      - "Si no encuentras aquí lo que esperas, por favor contáctanos y trataremos de encontrar nuevas formas de ayudarte"     
+      - "Debes elegir si tomarás solo el programa, si también quieres obtener nuestro sistema de Career Support, o si quieres ir a por todo y registrarte con nuestra opción de Trabajo Garantizado"  
+      - "Pague solamente por el programa de ciberseguridad si todavía no está interesado en nuestro programa de apoyo profesional y nuestra garantía de empleo."   
+    icons: 
+      - "/images//flevo-new.png" 
+
+  - slug: 'latam-program-only-cs-upfront'
+    academies: ['caracas-venezuela']
+    recomended: false
+    scholarship: "Sólo el Programa ciberseguridad"
+    payment_time: "Enfócate en obtener nuevas habilidades. Paga de contado."
+    price: "USD $2400"
+    bullets: 
+      - "Siempre hay un plan de pago disponible para que te unas a 4Geeks Academy"
+      - "Si no encuentras aquí lo que esperas, por favor contáctanos y trataremos de encontrar nuevas formas de ayudarte"     
+      - "Debes elegir si tomarás solo el programa, si también quieres obtener nuestro sistema de Career Support, o si quieres ir a por todo y registrarte con nuestra opción de Trabajo Garantizado"  
+      - "Pague solamente por el programa de ciberseguridad si todavía no está interesado en nuestro programa de apoyo profesional y nuestra garantía de empleo."   
+    icons: 
+      - "/images//flevo-new.png" 

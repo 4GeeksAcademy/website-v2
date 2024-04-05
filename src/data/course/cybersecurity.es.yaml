@@ -71,14 +71,14 @@ overlaped:
 two_columns:
   proportions: [6, 6]
   image:
-    style: '{"border" : "0px solid black", "backgroundSize": "contain", "height": "400px", "background-position": "center" }'
+    style: '{"border" : "0px solid black", "backgroundSize": "contain", "background-position": "center" }'
     src: "../../images/staff/chema-daniela.jpg"  
     shadow: false
   heading:
-    text: "Aprende ciberseguridad de los expertos Chema Alonso y Daniela Maissi"
+    text: "Obtén tu certificación como Especialista en Ciberseguridad con nuestro bootcamp, respaldado por Chema Alonso"
     font_size: ["30px", "30px", "30px", "30px", "30px"]
   sub_heading:
-    text: "Conviértete en un especialista en ciberseguridad. Domina estándares ISO y NIST, adquiere habilidades prácticas en DLP, hacking ético, pruebas de penetración y gestión de riesgos." 
+    text: "La experiencia reconocida de Chema en ciberseguridad respalda este curso, asegurando calidad y perspectiva centrada en los estándares ISO y NIST, así como experiencia práctica en técnicas de prevención de pérdida de datos (DLP) y pruebas de penetración. Además, te beneficiarás de la experiencia de Daniela Maissi, una hábil desarrolladora web y experta en ciberseguridad con más de 5 años de experiencia y 12+ certificaciones en computación en la nube, OSINT y soluciones de TI." 
     font_size: ["16px", "16px", "16px", "16px", "16px"]
   button:
     text: "Inscríbete ahora"
@@ -87,8 +87,7 @@ two_columns:
     path: "#prices_and_payment"
   bullets:
     items:
-      - text: "Domina los estándares de ciberseguridad ISO y NIST" 
-      - text: "Explora estrategias de hacking ético, pruebas de penetración y gestión de riesgos"
+      - text: "Técnicas para fortalecer sistemas Windows y Linux contra amenazas cibernéticas"
       - text: "Desarrolla habilidades prácticas en técnicas de prevención de pérdida de datos (DLP)"
       - text: "Bootcamp de ciberseguridad aprobado por Chema Alonso, garantizando educación de primer nivel y experiencia en la industria."  
 
