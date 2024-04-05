@@ -255,7 +255,7 @@ components:
   - name: passion
     position: 7
     background: "#fbfbfb"
-    layout: two_column_left
+    layout: programming-bootcamp
     proportions: [6, 6]
     image:
       style: '{ "border" : "3px solid black" }' 
@@ -263,11 +263,11 @@ components:
       src: "../../../static/images/testimonials/joshua-bravo-testimonial.jpg"
     video: "https://www.youtube.com/watch?v=rtpfwwfE0yY"
     heading:
-      text: "Conoce la historia de Joshua que se convirtió en desarrollador y ya forma parte de la industria Tecnológica."
+      text: "Joshua, quien ahora es desarrollador y forma parte de la industria tecnológica."
         #xl      lg     md     sm    xs
       font_size: ["40px", "34px", "34px", "25px", "20px"]
     content:
-      text: "Descubre la inspiradora historia de Joshua Bravo, quien pasó de ser un asistente de cocina a programador gracias a su decisión de formar parte de 4Geeks Academy. Su experiencia es un testimonio vivo de cómo la dedicación y el aprendizaje en este bootcamp lo llevaron a convertirse en un profesional altamente capacitado."
+      text: "Testimonio de Joshua Bravo, quien pasó de ser un asistente de cocina a programador gracias a su dedicación en el bootcamp de 4Geeks Academy. Su experiencia es un testimonio vivo de cómo la dedicación y el aprendizaje en este bootcamp lo llevaron a convertirse en un profesional altamente capacitado."
       font_size: ["16px"]
     button:
       text: "OBTÉN MÁS INFORMACIÓN"

@@ -129,7 +129,7 @@ components:
     swipable: False
     background: "#FFFFFF"
     image:
-      style: '{"backgroundSize": "cover"}'
+      style: '{"backgroundSize": "cover", "margin-top": "40px"}'
       src: "/images/woman-afro-with-laptop.webp"
       shadow: true
     section_heading:
