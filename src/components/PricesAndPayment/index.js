@@ -36,16 +36,29 @@ const PricingCard = ({
         margin_tablet="0"
       >
         {data.offer && (
-          <Div>
-            <Div>{data.offer}</Div>
+          <Div position="absolute" right="0" top="-20px">
+            <Div
+              borderRadius="55px"
+              background={Colors.red}
+              padding="2px 8px"
+              position="relative"
+            >
+              <Div top="-9px" left="-37px" justifyContent="center" textAlign="center" width="44px" height="44px" fontSize="24px" position="absolute" borderRadius="41px" padding="10px" border="2px solid #C20000" background={Colors.red}>
+                🔥
+              </Div>
+              <Paragraph fontSize="24px" opacity="1" color={Colors.white}>
+                {data.offer}
+              </Paragraph>
+            </Div>
           </Div>
         )}
         {recomended && (
-          <Div background={Colors.blue} borderRadius="2px 2px 0 0">
+          <Div padding="4px 0" background={Colors.blue} borderRadius="2px 2px 0 0">
             <Paragraph
               color={Colors.white}
-              fontSize="14px"
-              fontWeight="500"
+              fontSize="18px"
+              fontWeight="700"
+              fontWeight_tablet="700"
               lineHeight="17px"
               opacity="1"
             >
