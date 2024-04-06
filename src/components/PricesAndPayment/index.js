@@ -43,7 +43,20 @@ const PricingCard = ({
               padding="2px 8px"
               position="relative"
             >
-              <Div top="-9px" left="-37px" justifyContent="center" textAlign="center" width="44px" height="44px" fontSize="24px" position="absolute" borderRadius="41px" padding="10px" border="2px solid #C20000" background={Colors.red}>
+              <Div
+                top="-9px"
+                left="-37px"
+                justifyContent="center"
+                textAlign="center"
+                width="44px"
+                height="44px"
+                fontSize="24px"
+                position="absolute"
+                borderRadius="41px"
+                padding="10px"
+                border="2px solid #C20000"
+                background={Colors.red}
+              >
                 🔥
               </Div>
               <Paragraph fontSize="24px" opacity="1" color={Colors.white}>
@@ -53,7 +66,11 @@ const PricingCard = ({
           </Div>
         )}
         {recomended && (
-          <Div padding="4px 0" background={Colors.blue} borderRadius="2px 2px 0 0">
+          <Div
+            padding="4px 0"
+            background={Colors.blue}
+            borderRadius="2px 2px 0 0"
+          >
             <Paragraph
               color={Colors.white}
               fontSize="18px"
