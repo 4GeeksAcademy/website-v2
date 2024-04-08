@@ -54,7 +54,7 @@ const Overlaped = ({ heading, content, button, background, image }) => {
               margin="0px"
               image={image}
               bgSize="cover"
-              justify_content= "flex-start"
+              justify_content="flex-start"
               alt="geekforce image"
             />
           )}
