@@ -9,8 +9,8 @@ meta_info:
 
 seo_title: "Awards"
 header:
-  title: "AWARDS WINNING BOOTCAMP"
-  paragraph: "It's fantastic to have been recognized for years of effort into making one of the best coding communities and learning ecosystems in the world."
+  title: "AWARDS AND RECOGNITIONS"
+  paragraph: "It's fantastic to be recognized for years of effort in creating one of the best coding communities and learning ecosystems worldwide."
   image: "../../../static/images/awards/awards.png"
 
 awards_list:
@@ -19,6 +19,12 @@ awards_list:
   #   paragraph: "The United States of America ensures education quality thru federal deparments of education, being certified means we have to anually commit and comply with federal and national regulations to ensure academy success and renewed license."
   #   text_link: "See article"
   #   link: "/"
+
+  - image: "../../../static/images/badges/forbes-logo-award.png"
+    title: "Top Online Full-Stack Bootcamps Of 2024"
+    paragraph: "We have been selected as one of the Top Online Coding Bootcamps by Forbes."
+    link: "https://www.forbes.com/advisor/education/bootcamps/best-full-stack-developer-bootcamp/#4geeks_academy_full_stack_developer_bootcamp_section"
+    text_link: See article
 
   - image: "../../../static/images/badges/Course-Report-Badge-2024.webp"
     title: "Best Bootcamp for Course Report 2024"
