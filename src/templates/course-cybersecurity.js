@@ -85,8 +85,10 @@ const Program = ({ data, pageContext, yml }) => {
         padding_lg="40px 0px"
         padding_tablet="40px 40px"
         position="relative"
-        fontSize_title="40px"
-        fontSizeTitle_tablet="60px"
+        fontSize_title="26px"
+        lineHeight= "30px"
+        fontSizeTitle_tablet="40px"
+        lineHeight_table= "44px"
         fontFamily_title="Archivo-Black"
         fontSize_paragraph="24px"
         gridTemplateColumns_tablet="repeat(14, 1fr)"
@@ -190,8 +192,22 @@ const Program = ({ data, pageContext, yml }) => {
         />
       </Header>
 
-      <JobGuaranteeSmall
+      {/* <JobGuaranteeSmall
         content={data.allJobGuaranteeSmallYaml.edges[0].node}
+      /> */}
+
+      {/* TWO COLUMN CREAR EN EL YML*/}
+      <TwoColumn
+        left={{ image: yml.two_columns_first?.image }}
+        right={{
+          heading: yml.two_columns_first?.heading,
+          sub_heading: yml.two_columns_first?.sub_heading,
+          bullets: yml.two_columns_first?.bullets,
+          content: yml.two_columns_first?.content,
+          button: yml.two_columns_first?.button,
+        }}
+        proportions={yml.two_columns_first?.proportions}
+        session={session}
       />
       <ProgramDetails
         details={courseDetails.details}
@@ -218,8 +234,8 @@ const Program = ({ data, pageContext, yml }) => {
 
       {/* TWO COLUMN CREAR EN EL YML*/}
       <TwoColumn
-        left={{ image: yml.two_columns?.image}}
-        right={{
+        right={{ image: yml.two_columns?.image }}
+        left={{
           heading: yml.two_columns?.heading,
           sub_heading: yml.two_columns?.sub_heading,
           bullets: yml.two_columns?.bullets,
@@ -473,6 +489,33 @@ export const query = graphql`
                     placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                   )
                 }
+              }
+            }
+          }
+          two_columns_first {
+            proportions
+            image {
+              style
+              src
+              shadow
+            }
+            heading {
+              text
+              font_size
+            }
+            sub_heading {
+              text
+              font_size
+            }
+            button {
+              text
+              color
+              background
+              path
+            }
+            bullets {
+              items {
+                text
               }
             }
           }

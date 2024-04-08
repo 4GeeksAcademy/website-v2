@@ -12,7 +12,7 @@ meta_info:
   related_clusters: ["trends-and-tech"]
 
 apply_form:
-  label: cyber-security
+  label: cyber-security-pt-16-wk
 
 seo_title: "Curso de Ciberseguridad"
 header:
@@ -55,6 +55,30 @@ badges:
   paragraph: "Gracias a un enfoque hacia la programación, nuestros programas han sido galardonados como TOP Coding Bootcamp en <a href='/es/premios'>España, USA y otros países</a>. Nuestros certificados estan avalados por el Departamento de Educación de Estado Unidos en Florida."
 
 
+two_columns_first:
+  proportions: [6, 6]
+  image:
+    style: '{"border" : "0px solid black", "backgroundSize": "contain", "background-position": "center" }'
+    src: "../../images/staff/chema-alonso.jpg"  
+    shadow: false
+  heading:
+    text: "Bootcamp de Ciberseguridad validado por Chema Alonso el Hacker más Importante de España"
+    font_size: ["30px", "30px", "30px", "30px", "30px"]
+  sub_heading:
+    text: "Conviértete en un especialista en ciberseguridad y protege sistemas informáticos contra las crecientes amenazas cibernéticas. Este bootcamp intensivo te brindará las habilidades técnicas necesarias para identificar, analizar y prevenir ataques, utilizando herramientas como Nessus, Nmap, Wireshark y Metasploit." 
+    font_size: ["16px", "16px", "16px", "16px", "16px"]
+  button:
+    text: "Inscríbete ahora"
+    color: "white"
+    background: "black"
+    path: "#prices_and_payment"
+  bullets:
+    items:
+      - text: "ZeroxWord Computing, S.L. venderá un pack de 4 libros por alumno del Bootcamp Ciberseguridad."
+      - text: "Sesión de Q&A con Chema Alonso: Sobre orientación profesional en Ciberseguridad."
+      - text: "Chema Alonso ha validado los contenidosy los profesores de este bootcamp."  
+      - text: "Chema Alonso participará en una sesión de orientación profesional en ciberseguridad para los alumnos de este bootcamp."  
+
 overlaped:
   heading: "Certifícate como especialista en ciberseguridad" 
   paragraph: |
@@ -75,7 +99,7 @@ two_columns:
     src: "../../images/staff/chema-daniela.jpg"  
     shadow: false
   heading:
-    text: "Obtén tu certificación como Especialista en Ciberseguridad con nuestro bootcamp, respaldado por Chema Alonso"
+    text: "Obtén tu certificación como Especialista en Ciberseguridad con nuestro bootcamp"
     font_size: ["30px", "30px", "30px", "30px", "30px"]
   sub_heading:
     text: "La experiencia reconocida de Chema en ciberseguridad respalda este curso, asegurando calidad y perspectiva centrada en los estándares ISO y NIST, así como experiencia práctica en técnicas de prevención de pérdida de datos (DLP) y pruebas de penetración. Además, te beneficiarás de la experiencia de Daniela Maissi, una hábil desarrolladora web y experta en ciberseguridad con más de 5 años de experiencia y 12+ certificaciones en computación en la nube, OSINT y soluciones de TI." 
