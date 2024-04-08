@@ -167,7 +167,7 @@ const Loc = ({ lang, yml, allLocationYaml }) => {
           margin_xs="15px 0"
           margin="0 0 10px 0"
           gridGap="17px"
-          maxWidth="1366px"
+          maxWidth="1280px"
         >
           <Div display="flex" flexDirection="column" alignItems="center">
             <H2
@@ -199,7 +199,7 @@ const Loc = ({ lang, yml, allLocationYaml }) => {
         margin="0 auto 20px auto"
         // margin="auto"
         // width="70%"
-        maxWidth="1366px"
+        maxWidth="1280px"
         height="100%"
         maxHeight="none"
       >

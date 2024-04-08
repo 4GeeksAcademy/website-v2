@@ -87,7 +87,7 @@ export default ({
         <Grid
           margin="40px 5px 20px 5px"
           margin_tablet="40px auto 20px auto"
-          maxWidth_tablet="1366px"
+          maxWidth_tablet="1280px"
           gridTemplateColumns_tablet="repeat(14, 1fr)"
           padding_tablet="0 40px"
           padding_md="40px 80px"
@@ -141,7 +141,7 @@ export default ({
           padding_lg="0"
           //margin="0 10px 73px 10px"
           margin_tablet="0 auto 84px auto"
-          maxWidth_md="1366px"
+          maxWidth_md="1280px"
         >
           <Div
             gridColumn="1/15"

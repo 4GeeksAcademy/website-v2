@@ -32,7 +32,7 @@ const Gallery = ({
         padding_tablet="40px 40px 10px 40px"
         margin_tablet="0 auto 30px auto"
         margin="0 0 36px 0"
-        maxWidth={"1366px"}
+        maxWidth={"1280px"}
       >
         {heading && (
           <Div

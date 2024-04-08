@@ -34,7 +34,7 @@ const MosaicImages = ({
           padding_tablet="40px 40px 10px 40px"
           margin_tablet="0 auto 30px auto"
           margin="0 0 36px 0"
-          maxWidth={"1366px"}
+          maxWidth={"1280px"}
         >
           <Div
             alignItems="start"
@@ -76,7 +76,7 @@ const MosaicImages = ({
           padding_lg={padding_lg || "20px 0px"}
           padding_tablet={padding_tablet || "20px 40px"}
           width_tablet="100%"
-          maxWidth="1366px"
+          maxWidth="1280px"
           columns_tablet="10"
           containerColumns_tablet="12"
           containerGridGap="0px"

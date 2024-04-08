@@ -161,7 +161,7 @@ const Outcomes = ({ data, pageContext, yml }) => {
           svg_image={<SVGImage />}
           margin_tablet="0px auto 0 auto"
           margin_xxs="0px auto 0 auto"
-          maxWidth="1366px"
+          maxWidth="1280px"
         />
       </Div>
       <Div
