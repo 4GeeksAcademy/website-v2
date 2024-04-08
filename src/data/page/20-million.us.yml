@@ -14,6 +14,7 @@ seo_title: Level up as a developer
 header:
   title: $20+ Million in Scholarships
   paragraph: Fueling the Future of Tech Education, Making Coding Accessible to All.
+  image: "../../../static/images/20-million/girls-with-laptop.png"
 
 button:
   btn_label: I want to Contribute
