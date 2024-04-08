@@ -280,9 +280,7 @@ const initSession = async (
     academyAliasDictionary[key] = alias.academy.slug;
   });
 
-  const blockList = blockListArray.find(
-    (element) => element.node.block_list_criteria !== null
-  );
+  const blockList = blockListArray.find((element) => element !== null);
   const _session = {
     ...defaultSession,
     ...storedSession,
@@ -296,7 +294,7 @@ const initSession = async (
     longitude,
     academyAliasDictionary,
     pathsDictionary,
-    blockList: blockList.node.block_list_criteria,
+    blockList: blockList,
     // marketing utm info
     utm: { ...storedSession.utm, ...utm },
 

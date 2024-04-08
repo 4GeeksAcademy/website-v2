@@ -186,8 +186,6 @@ const Apply = (props) => {
         });
       });
   };
-  console.log("session", session);
-  console.log("formData", formData);
 
   return (
     <>

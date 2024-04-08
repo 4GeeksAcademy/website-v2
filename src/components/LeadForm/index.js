@@ -273,7 +273,6 @@ const LeadForm = ({
       );
   });
 
-  console.log("formData", formData);
   return (
     <Form
       id={id}
