@@ -57,9 +57,9 @@ const LandingHeader = (props) => {
         background={yml.header_data.background || Colors.white}
       >
         <Grid
-          style={{ maxWidth: "1366px" }}
+          style={{ maxWidth: "1280px" }}
           margin="0 auto"
-          maxWidth="1366px"
+          maxWidth="1280px"
           containerGridGap="0"
           gridTemplateColumns_tablet="repeat(14,1fr)"
           padding_xs="132px 20px 60px 20px"

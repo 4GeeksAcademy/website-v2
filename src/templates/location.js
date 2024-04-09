@@ -87,7 +87,7 @@ const Location = ({ data, pageContext, yml }) => {
             : "72px auto 30px auto"
         }
         childMargin="auto"
-        childMaxWidth="1366px"
+        childMaxWidth="1280px"
       >
         <Div
           flexDirection="column"
@@ -238,7 +238,7 @@ const Location = ({ data, pageContext, yml }) => {
         margin="40px auto"
         paragraph={yml.badges.paragraph}
         bottom_paragraph
-        maxWidth="1366px"
+        maxWidth="1280px"
         paddingText_tablet="0 10% 55px 10%"
       />
 

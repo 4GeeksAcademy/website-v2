@@ -65,7 +65,7 @@ const GeeksInfo = ({ lang }) => {
           margin_tablet="30px auto 0 auto"
           margin_xxs="15px auto 0px auto"
           width_tablet="100%"
-          maxWidth="1366px"
+          maxWidth="1280px"
           lineHeight="35px"
         >
           {content.heading}

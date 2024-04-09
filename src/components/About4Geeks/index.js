@@ -13,7 +13,7 @@ const About4Geeks = ({ id, lang }) => {
       columns_tablet="12"
       margin_tablet="80px auto"
       margin="80px 0 64px 0"
-      maxWidth="1366px"
+      maxWidth="1280px"
       gridColumn_tablet="1/15"
       padding_xxs="0 20px"
       padding_tablet="0 40px"

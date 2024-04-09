@@ -663,7 +663,7 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
         padding_tablet="0"
         margin_tablet="0 auto 81px auto"
         childMargin="auto"
-        childMaxWidth="1366px"
+        childMaxWidth="1280px"
       >
         <Div gridColumn_tablet="1 / 7" flexDirection="column">
           <H2 textAlign_md="left" margin="0 0 30px 0">
