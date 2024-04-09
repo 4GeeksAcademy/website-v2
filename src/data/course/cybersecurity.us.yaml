@@ -61,10 +61,10 @@ two_columns_first:
     src: "../../images/staff/chema-alonso.jpg"  
     shadow: false
   heading:
-    text: "Cybersecurity Bootcamp, endorsed by Chema Alonso, Spain's foremost hacker"
-    font_size: ["30px", "30px", "30px", "30px", "30px"]
+    text: "Cybersecurity Bootcamp validated by Chema Alonso, Spain's foremost Hacker"
+    font_size: ["28px", "28px", "28px", "23px", "23px"]
   sub_heading:
-    text: "Become a cybersecurity specialist and safeguard computer systems against a myriad of cyber threats. This intensive bootcamp will provide you with the technical skills needed to identify, analyze, and prevent attacks using tools such as Nessus, Nmap, Wireshark, and Metasploit. It includes: " 
+    text: "Chema Alonso's years of experience, coupled with his contribution and recognition in the industry, endorse this cybersecurity Bootcamp, ensuring quality, up-to-date content, and a perspective focused on ISO and NIST standards, as well as practical experience in data loss prevention (DLP) techniques, penetration testing, and includes: " 
     font_size: ["16px", "16px", "16px", "16px", "16px"]
   button:
     text: "Enroll Now"
@@ -83,7 +83,8 @@ two_columns_first:
 overlaped:
   heading: "Get certified as a cybersecurity specialist"
   paragraph: |
-    In the Cybersecurity bootcamp at 4Geeks Academy, you will develop the skills and knowledge necessary to face the threats of today's digital world. <br> Pentesting practices are based on the EJPT certification labs.<br><br>No bootcamp in the world leaves you ready to certify in anything (EJPT, CEH, etc.), but if you wish to get certified after the bootcamp, you will have a large part of the study already done.
+    No bootcamp in the world leaves you ready to certify in anything (EJPT, CEH, etc.), but if you wish to get certified after the bootcamp, you will have a large part of the study already done.<br><br>
+    In the Cybersecurity bootcamp at 4Geeks Academy, you will develop the skills and knowledge necessary to face the threats of today's digital world. <br> Pentesting practices are based on the EJPT certification labs.
   button:
     text: "LEARN MORE"
     color: "blue"
@@ -100,10 +101,10 @@ two_columns:
     src: "../../images/staff/chema-daniela.jpg"
     shadow: false
   heading:
-    text: "Cybersecurity Specialist Bootcamp Endorsed by Chema Alonso"
-    font_size: ["30px", "30px", "30px", "30px", "30px"]
+    text: "Become a Specialist with Our Cybersecurity Bootcamp"
+    font_size: ["30px", "30px", "30px", "26px", "24px"]
   sub_heading:
-    text: "As Chief Digital Officer at Telefónica S.A., Chema's expertise in cybersecurity drives innovation and digitalization. In this Bootcamp, you'll delve into ISO and NIST standards, gain hands-on experience in data loss prevention (DLP) techniques, and focus on ethical hacking, penetration testing, and risk management. But that's not all. You'll also benefit from the wealth of knowledge and experience brought by Daniela Maissi, a skilled web developer and cybersecurity expert with over 5 years of experience and 12+ certifications in cloud computing, OSINT, and IT solutions."
+    text: "Gain the knowledge to protect systems against cyber threats. This intensive Bootcamp will provide you with the necessary skills to identify, analyze, and prevent attacks, using tools such as Nessus, Nmap, Wireshark, and Metasploit. Additionally, you will benefit from the expertise of Daniela Maissi, a skilled web developer and cybersecurity expert with over 5 years of experience and 12+ certifications in cloud computing, OSINT, and IT solutions."
     font_size: ["16px", "16px", "16px", "16px", "16px"]
   button:
     text: "Apply now"
