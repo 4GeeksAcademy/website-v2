@@ -326,7 +326,7 @@ const TwentyMillion = ({ data, pageContext, yml }) => {
         id="two_column_left"
         flexDirection="column"
         margin="0 auto"
-        maxWidth="1366px"
+        maxWidth="1280px"
       >
         <TwoColumn
           left={{ image: ymlTwoColumn.image }}
@@ -366,7 +366,7 @@ const TwentyMillion = ({ data, pageContext, yml }) => {
         padding_md="60px 80px"
         padding_lg="80px 0"
         margin_tablet="0 auto 81px auto"
-        style={{ maxWidth: "1366px" }}
+        style={{ maxWidth: "1280px" }}
         containerGridGap="0px"
       >
         <Div

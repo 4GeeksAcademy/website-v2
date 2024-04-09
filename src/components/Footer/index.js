@@ -67,7 +67,7 @@ const Footer = ({ yml }) => {
         padding="0 17px"
         margin="0 0 60px 0"
         childMargin="auto"
-        childMaxWidth="1366px"
+        childMaxWidth="1280px"
       >
         <Div
           justifyContent="center"

@@ -29,7 +29,7 @@ export default (props) => {
           columns_tablet={credentials.length}
           margin="0 20px"
           margin_tablet="0 auto"
-          maxWidth="1366px"
+          maxWidth="1280px"
           gridGap_xxs="30px 15px"
           gridGap_tablet="15px"
         >

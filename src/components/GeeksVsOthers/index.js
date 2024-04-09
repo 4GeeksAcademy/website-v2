@@ -82,7 +82,7 @@ const GeeksVsOthers = (props) => {
         width="100%"
         display_xxs="none"
         display_md="flex"
-        maxWidth="1366px"
+        maxWidth="1280px"
         margin="0 auto"
         justifyContent="center"
       >

@@ -74,7 +74,7 @@ const ChooseYourProgram = ({
         padding_md="10px 80px 50px 80px"
         padding_tablet="10px 40px 50px 40px"
         padding_xxs="0 20px 40px 20px "
-        maxWidth_tablet="1366px"
+        maxWidth_tablet="1280px"
         margin_tablet="0 auto 50px auto"
         margin_lg="0 auto 50px auto"
       >

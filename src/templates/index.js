@@ -89,7 +89,7 @@ const Home = (props) => {
         margin_tablet={
           isContentBarActive ? "120px auto 108px auto" : "72px auto 108px auto"
         }
-        maxWidth="1366px"
+        maxWidth="1280px"
         padding_xxs="0px 0px"
         padding_tablet="0 40px"
         padding_md="0 80px"
