@@ -30,7 +30,7 @@ const Press = (props) => {
           : "90px auto 75px auto"
       }
       flexDirection="column"
-      maxWidth="1366px"
+      maxWidth="1280px"
       position="relative"
     >
       <Img
@@ -114,7 +114,7 @@ const Press = (props) => {
         fontFamily_title="Archivo-Black"
         fontSize_paragraph="24px"
         gridTemplateColumns_tablet="repeat(14, 1fr)"
-        maxWidth="1366px"
+        maxWidth="1280px"
         uppercase
       />
       <News

@@ -358,7 +358,7 @@ export const landingSections = {
             padding="60px 0"
             padding_tablet="68px 0"
             margin_tablet="0 0 78px 0"
-            maxWidth="1366px"
+            maxWidth="1280px"
           />
         </Div>
       </React.Fragment>
@@ -687,7 +687,7 @@ export const landingSections = {
       m_sm="0"
       p_xs="0 10px"
       width_tablet="100%"
-      maxWidth_tablet="1366px"
+      maxWidth_tablet="1280px"
     >
       <SuccessStories
         lang={pageContext.lang}

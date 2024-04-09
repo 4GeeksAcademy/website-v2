@@ -84,7 +84,7 @@ const Program = ({ data, pageContext, yml }) => {
         fontFamily_title="Archivo-Black"
         fontSize_paragraph="24px"
         gridTemplateColumns_tablet="repeat(14, 1fr)"
-        maxWidth="1366px"
+        maxWidth="1280px"
         uppercase
       >
         <Img

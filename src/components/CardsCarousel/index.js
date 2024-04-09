@@ -30,7 +30,7 @@ const CardsCarousel = ({
         flexDirection="column"
         gap="10px"
         margin="60px 10% 30px 10%"
-        maxWidth_tablet="1366px"
+        maxWidth_tablet="1280px"
         margin_md="60px auto 20px auto"
         padding_tablet="0px"
         padding_xs="10px 0 0 0"
@@ -69,7 +69,7 @@ const CardsCarousel = ({
         justifyContent_tablet={cards.length < 3 ? "center" : "flex-start"}
         justifyContent_md={cards.length > 3 ? "flex-start" : "center"}
         justifyContent_lg="center"
-        maxWidth_tablet="1366px"
+        maxWidth_tablet="1280px"
         margin="auto"
       >
         {cards.map((card, index) => (

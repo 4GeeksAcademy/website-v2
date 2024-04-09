@@ -276,7 +276,7 @@ const Awards = ({ data, pageContext, yml }) => {
         padding_md="0 80px"
         padding_lg="0"
         margin="120px auto 0 auto"
-        maxWidth="1366px"
+        maxWidth="1280px"
         position="relative"
       >
         <Img
@@ -371,7 +371,7 @@ const Awards = ({ data, pageContext, yml }) => {
         gap="36px 25px"
         flexDirection="row"
         flexWrap="wrap"
-        maxWidth="1366px"
+        maxWidth="1280px"
         justifyContent_xxs="center"
         justifyContent_tablet="between"
         height="auto"
