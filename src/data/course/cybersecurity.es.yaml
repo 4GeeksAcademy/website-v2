@@ -4,7 +4,7 @@ meta_info:
   description: "Sin conocimientos previos, conviértete en especialista de ciberseguridad, únete al mundo tech y protege el futuro digital"
   bc_slug: "cybersecurity"
   template: "course-cybersecurity"
-  image: "/images/og-preview/datascience-ml.es.png"
+  image: "/images/landing/4Geeks-Espana.jpg"
   visibility: "visible"
   show_in_apply: true
   keywords: ""
@@ -16,8 +16,8 @@ apply_form:
 
 seo_title: "Curso de Ciberseguridad"
 header:
-  title: "Conviértete en un experto en Ciberseguridad"
-  paragraph: "La demanda de profesionales expertos en el campo de la ciberseguridad se ha disparado en los últimos 6 años, con un aumento del 300% en comparación con el mercado laboral TI en general."
+  title: "Conviértete en un Especialista en Ciberseguridad"
+  paragraph: "La demanda de profesionales especialistas en el campo de la ciberseguridad se ha disparado en los últimos 6 años, con un aumento del 300% en comparación con el mercado laboral TI en general."
   image: "../../../static/images/bg/apple-building.jpg"
   image_alt: "apple-building"
 
@@ -65,7 +65,7 @@ two_columns_first:
     text: "Bootcamp de Ciberseguridad validado por Chema Alonso el Hacker más Importante de España"
     font_size: ["30px", "30px", "30px", "30px", "30px"]
   sub_heading:
-    text: "Conviértete en un especialista en ciberseguridad y protege sistemas informáticos contra las crecientes amenazas cibernéticas. Este bootcamp intensivo te brindará las habilidades técnicas necesarias para identificar, analizar y prevenir ataques, utilizando herramientas como Nessus, Nmap, Wireshark y Metasploit." 
+    text: "Conviértete en un especialista en ciberseguridad y protege sistemas informáticos contra amenazas cibernéticas. Este bootcamp intensivo te brindará las habilidades técnicas necesarias para identificar, analizar y prevenir ataques, utilizando herramientas como Nessus, Nmap, Wireshark y Metasploit. E incluye: " 
     font_size: ["16px", "16px", "16px", "16px", "16px"]
   button:
     text: "Inscríbete ahora"
@@ -74,10 +74,10 @@ two_columns_first:
     path: "#prices_and_payment"
   bullets:
     items:
-      - text: "ZeroxWord Computing, S.L. venderá un pack de 4 libros por alumno del Bootcamp Ciberseguridad."
-      - text: "Sesión de Q&A con Chema Alonso: Sobre orientación profesional en Ciberseguridad."
-      - text: "Chema Alonso ha validado los contenidosy los profesores de este bootcamp."  
-      - text: "Chema Alonso participará en una sesión de orientación profesional en ciberseguridad para los alumnos de este bootcamp."  
+      - text: "Sala de Chat con el profesor y Chema Alonso."
+      - text: "4 libros de Ciberseguridad de 0xWORD, la editorial de Chema Alonso."
+      - text: "Chema Alonso ha validado los contenidos y los profesores de este bootcamp."  
+      - text: "Orientación laboral y ayuda para conseguir empleo en colaboración con Chema Alonso Y por supuesto nuestras mentorias ilimitadas y de por vida."  
 
 overlaped:
   heading: "Certifícate como especialista en ciberseguridad" 

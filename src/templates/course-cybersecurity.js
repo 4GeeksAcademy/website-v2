@@ -192,10 +192,6 @@ const Program = ({ data, pageContext, yml }) => {
         />
       </Header>
 
-      {/* <JobGuaranteeSmall
-        content={data.allJobGuaranteeSmallYaml.edges[0].node}
-      /> */}
-
       {/* TWO COLUMN CREAR EN EL YML*/}
       <TwoColumn
         left={{ image: yml.two_columns_first?.image }}
@@ -209,6 +205,11 @@ const Program = ({ data, pageContext, yml }) => {
         proportions={yml.two_columns_first?.proportions}
         session={session}
       />
+
+      <JobGuaranteeSmall
+        content={data.allJobGuaranteeSmallYaml.edges[0].node}
+      />
+
       <ProgramDetails
         details={courseDetails.details}
         lang={pageContext.lang}
