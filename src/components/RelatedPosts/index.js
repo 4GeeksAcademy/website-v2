@@ -137,7 +137,7 @@ const RelatedPosts = ({ posts, lang, relatedClusters }) => {
           columns_tablet={articles.length <= 3 ? articles.length : "3"}
           //margin="0 10px 73px 10px"
           margin_tablet="0 auto 84px auto"
-          maxWidth_md="1366px"
+          maxWidth_md="1280px"
         >
           <Div
             gridColumn="1/15"

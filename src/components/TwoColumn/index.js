@@ -375,7 +375,7 @@ const TwoColumn = ({ left, right, proportions, session }) => {
       padding_lg="40px 0px"
       padding_tablet="40px 40px"
       width_tablet="100%"
-      maxWidth_md="1366px"
+      maxWidth_md="1280px"
     >
       <Div
         justifyContent={left?.video ? "center" : left?.image ? "end" : "start"}

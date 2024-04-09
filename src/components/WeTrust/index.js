@@ -27,7 +27,7 @@ const WeTrust = ({ we_trust }) => {
         margin="0 auto"
         background={Colors.lightBlue}
         display="block"
-        maxWidth="1366px"
+        maxWidth="1280px"
       >
         <Div display="block">
           <H2

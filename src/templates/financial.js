@@ -54,7 +54,7 @@ const Financial = (props) => {
         fontFamily_title="Archivo-Black"
         fontSize_paragraph="15px"
         gridTemplateColumns_tablet="repeat(14, 1fr)"
-        maxWidth="1366px"
+        maxWidth="1280px"
         hideArrowKey
         id="financials"
       >
@@ -191,7 +191,7 @@ const Financial = (props) => {
         padding="60px 0"
         padding_tablet="68px 0"
         margin_tablet="0 0 78px 0"
-        maxWidth="1366px"
+        maxWidth="1280px"
         //wrapped_images
         style={{
           height: "100px",

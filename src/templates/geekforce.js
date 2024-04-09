@@ -57,7 +57,7 @@ const GeekForce = (props) => {
             ? "120px auto 24px auto"
             : "70px auto 24px auto"
         }
-        maxWidth="1366px"
+        maxWidth="1280px"
         position="relative"
         gridTemplateColumns_tablet="repeat(21, 1fr)"
         gridGap="0px"
@@ -245,7 +245,7 @@ const GeekForce = (props) => {
           // gap="45px"
           //gap_tablet={content.icons.length > 4 ? "0px" : "5%"}
           //gap_md="10%"
-          maxWidth="1366px"
+          maxWidth="1280px"
           margin="20px auto 0 auto"
           padding_tablet="50px 40px"
           padding_md="50px 80px"
@@ -290,7 +290,7 @@ const GeekForce = (props) => {
                     padding_lg={i === 0 ? "100px 0 50px 0" : "50px 0 100px 0"}
                     padding_xxs="0 20px"
                     columns_tablet="14"
-                    maxWidth_tablet="1366px"
+                    maxWidth_tablet="1280px"
                     margin_tablet="0 auto"
                     gridGap="0px"
                   >
@@ -455,7 +455,7 @@ const GeekForce = (props) => {
         padding_lg="100px 0px 100px 0px"
       >
         <Div
-          maxWidth="1366px"
+          maxWidth="1280px"
           margin="0 auto"
           style={{
             background: "white",

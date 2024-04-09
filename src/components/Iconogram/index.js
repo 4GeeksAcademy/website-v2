@@ -44,7 +44,7 @@ const Iconogram = ({ session, data, pageContext, yml, index }) => {
           fontSize_tablet="24px"
           fontSize="24px"
           //margin="30px 0 30px 0"
-          maxWidth="1366px"
+          maxWidth="1280px"
           margin="30px auto"
           style={
             heading?.style
@@ -63,7 +63,7 @@ const Iconogram = ({ session, data, pageContext, yml, index }) => {
           margin="15px auto"
           fontSize="16px"
           fontHeight="30px"
-          maxWidth="1366px"
+          maxWidth="1280px"
           dangerouslySetInnerHTML={{ __html: sub_heading.text }}
           style={sub_heading?.style ? { ...JSON.parse(sub_heading.style) } : {}}
         />
@@ -75,7 +75,7 @@ const Iconogram = ({ session, data, pageContext, yml, index }) => {
           margin="15px auto"
           fontSize="16px"
           fontHeight="30px"
-          maxWidth="1366px"
+          maxWidth="1280px"
           style={sub_heading?.style ? { ...JSON.parse(sub_heading.style) } : {}}
         >
           {sub_heading.text}
@@ -92,7 +92,7 @@ const Iconogram = ({ session, data, pageContext, yml, index }) => {
         // gap="45px"
         gap_tablet={icons.length > 4 ? "0px" : "3%"}
         //gap_md="10%"
-        maxWidth="1366px"
+        maxWidth="1280px"
         margin="20px auto 0 auto"
         padding_tablet="0 40px"
         padding_lg="0"
