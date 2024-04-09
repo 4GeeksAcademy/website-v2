@@ -78,20 +78,65 @@ two_columns_first:
       - text: "Chema Alonso has endorsed the content and instructors of this bootcamp."  
       - text: "Career guidance and assistance in securing employment in collaboration with Chema Alonso. And of course, our unlimited, lifetime mentoring."
 
+two_columns_second:
+  proportions: [6, 6]
+  image:
+    style: '{"border" : "0px solid black", "backgroundSize": "contain", "background-position": "center" }'
+    src: "../../images/landing/cybersecurity-bg.webp"  
+    shadow: false
+  heading:
+    text: "Get certified as a cybersecurity specialist"
+    font_size: ["28px", "28px", "28px", "23px", "23px"]
+  sub_heading:
+    text: |
+      No bootcamp in the world leaves you ready to certify in anything (EJPT, CEH, etc.), but if you wish to get certified after the bootcamp, you will have a large part of the study already done.
+
+      In the Cybersecurity bootcamp at 4Geeks Academy, you will develop the skills and knowledge necessary to face the threats of today's digital world.
+
+      Pentesting practices are based on the EJPT certification labs.
+    font_size: ["16px", "16px", "16px", "16px", "16px"]
+  button:
+    text: "Enroll Now"
+    color: "white"
+    background: "black"
+    path: "#prices_and_payment"
+
+
 
 # OVERLAPED
 overlaped:
-  heading: "Get certified as a cybersecurity specialist"
+  heading: "Cybersecurity Industry High Demand, Lucrative Careers, and Ever-Present Threats"
   paragraph: |
-    No bootcamp in the world leaves you ready to certify in anything (EJPT, CEH, etc.), but if you wish to get certified after the bootcamp, you will have a large part of the study already done.<br><br>
-    In the Cybersecurity bootcamp at 4Geeks Academy, you will develop the skills and knowledge necessary to face the threats of today's digital world. <br> Pentesting practices are based on the EJPT certification labs.
-  button:
-    text: "LEARN MORE"
-    color: "blue"
-    link: "/us/apply"
+    <strong style="font-weight: 800;">Market on the Rise</strong>: Global cybersecurity spending surpassed a staggering $1 trillion in 2021, and is projected to reach a significant $314.28 billion by 2029.<br><br>
+    <strong style="font-weight: 800;">Unfilled Positions Galore</strong>: The cybersecurity workforce gap is vast, with a concerning 4 million unfilled positions in 2023. This translates to a surge in job opportunities, with the US alone witnessing a remarkable 74% increase in new cybersecurity jobs between 2022 and 2023.
   image:
-    src: "/images/landing/cybersecurity-bg.webp"
+    src: "/images/landing/feliz-empresario.png"
 
+
+## TWO COLUMNS
+two_columns_info:
+  proportions: [6, 6]
+  image:
+    style: '{"border" : "0px solid black", "backgroundSize": "contain", "background-position": "center" }'
+    src: "../../images/landing/grupo-ventanas.png"
+    shadow: false
+  heading:
+    text: "Be part of the next Generation of Cybersecurity Professionals"
+    font_size: ["30px", "30px", "30px", "26px", "24px"]
+  sub_heading:
+    text: ""
+    font_size: ["16px", "16px", "16px", "16px", "16px"]
+  button:
+    text: "Apply now"
+    color: "white"
+    background: "black"
+    path: "#prices_and_payment"
+  bullets:
+    items:
+      - text: "Connect with a network of over 6,000 professionals and students worldwide."
+      - text: "Part-time programs that allow you to study without giving up your current life."
+      - text: "Not only do you learn to code, but you also develop practical, real-world applicable skills."
+      - text: "Lifetime access to personalized mentorship to support you at every step of your professional journey."
 
 ## TWO COLUMNS
 two_columns:

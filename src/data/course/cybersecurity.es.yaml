@@ -79,18 +79,59 @@ two_columns_first:
       - text: "Chema Alonso ha validado los contenidos y los profesores de este Curso."  
       - text: "Orientación laboral y ayuda para conseguir empleo en colaboración con Chema Alonso Y por supuesto nuestras mentorias ilimitadas y de por vida."  
 
-overlaped:
-  heading: "Certifícate como especialista en ciberseguridad" 
-  paragraph: |
-    Si bien ningún Curso te garantiza la certificación (EJPT, CEH, etc.), al finalizar, habrás adquirido una sólida base para aprobar los exámenes. <br><br>
-    Domina las amenazas del mundo digital actual con el Curso de Ciberseguridad de 4Geeks Academy. Aprende las habilidades y conocimientos claves para protegerte.  Las prácticas de pentesting se basan en los laboratorios de certificación EJPT. 
-      
-  button:
-    text: "MÁS INFORMACIÓN"  # Translated button text
-    color: "blue"
-    link: "/es/aplica"
+two_columns_second:
+  proportions: [6, 6]
   image:
-    src: "/images/landing/cybersecurity-bg.webp"
+    style: '{"border" : "0px sólido negro", "backgroundSize": "contain", "background-position": "center" }'
+    src: "../../images/landing/cybersecurity-bg.webp"  
+    shadow: false
+  heading:
+    text: "Certifícate como especialista en ciberseguridad"
+    font_size: ["28px", "28px", "28px", "23px", "23px"]
+  sub_heading:
+    text: |
+      Si bien ningún Curso te garantiza la certificación (EJPT, CEH, etc.), al finalizar, habrás adquirido una sólida base para aprobar los exámenes.
+      Domina las amenazas del mundo digital actual con el Curso de Ciberseguridad de 4Geeks Academy. Aprende las habilidades y conocimientos claves para protegerte. Las prácticas de pentesting se basan en los laboratorios de certificación EJPT.
+    font_size: ["16px", "16px", "16px", "16px", "16px"]
+  button:
+    text: "Más información"
+    color: "white"
+    background: "black"
+    path: "/es/aplica"
+
+
+overlaped:
+  heading: "Oportunidades Lucrativas y Retos Constantes en la industria de Ciberseguridad"
+  paragraph: |
+    <strong style="font-weight: 800;">Mercado en crecimiento</strong>: La inversión global en ciberseguridad superó el billón de dólares en 2021 y se prevé que alcance los $314.28 mil millones para el año 2029.<br><br>
+    <strong style="font-weight: 800;">Gran cantidad de posiciones sin cubrir</strong>: Se estima que existe una brecha de talento en ciberseguridad de alrededor del 98.52%. Esto significa que hay una gran cantidad de puestos vacantes que necesitan ser cubiertos por profesionales cualificados.
+  image:
+    src: "/images/landing/feliz-empresario.png"
+
+two_columns_info:
+  proportions: [6, 6]
+  image:
+    style: '{"border" : "0px sólido negro", "backgroundSize": "contain", "background-position": "center" }'
+    src: "../../images/landing/grupo-ventanas.png"
+    shadow: false
+  heading:
+    text: "Sé parte de la próxima generación de profesionales en ciberseguridad"
+    font_size: ["30px", "30px", "30px", "26px", "24px"]
+  sub_heading:
+    text: ""
+    font_size: ["16px", "16px", "16px", "16px", "16px"]
+  button:
+    text: "Aplica ahora"
+    color: "white"
+    background: "black"
+    path: "#prices_and_payment"
+  bullets:
+    items:
+      - text: "Conéctate con una red de más de 6,000 profesionales y estudiantes en todo el mundo."
+      - text: "Programas de tiempo parcial que te permiten estudiar sin renunciar a tu vida actual."
+      - text: "No solo aprendes a programar, sino que también desarrollas habilidades prácticas y aplicables en el mundo real."
+      - text: "Acceso de por vida a mentorías personalizadas para apoyarte en cada paso de tu trayectoria profesional."
+
 
 
 two_columns:
