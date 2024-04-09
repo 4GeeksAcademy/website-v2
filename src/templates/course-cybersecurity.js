@@ -532,12 +532,6 @@ export const query = graphql`
               text
               font_size
             }
-            button {
-              text
-              color
-              background
-              path
-            }
             bullets {
               items {
                 text

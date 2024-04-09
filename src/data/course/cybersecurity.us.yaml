@@ -67,7 +67,7 @@ two_columns_first:
     text: "Chema Alonso's years of experience, coupled with his contribution and recognition in the industry, endorse this cybersecurity Bootcamp, ensuring quality, up-to-date content, and a perspective focused on ISO and NIST standards, as well as practical experience in data loss prevention (DLP) techniques, penetration testing, and includes: " 
     font_size: ["16px", "16px", "16px", "16px", "16px"]
   button:
-    text: "Enroll Now"
+    text: "APPLY NOW"
     color: "white"
     background: "black"
     path: "#prices_and_payment"
@@ -96,7 +96,7 @@ two_columns_second:
       Pentesting practices are based on the EJPT certification labs.
     font_size: ["16px", "16px", "16px", "16px", "16px"]
   button:
-    text: "Enroll Now"
+    text: "APPLY NOW"
     color: "white"
     background: "black"
     path: "#prices_and_payment"
@@ -126,11 +126,7 @@ two_columns_info:
   sub_heading:
     text: ""
     font_size: ["16px", "16px", "16px", "16px", "16px"]
-  button:
-    text: "Apply now"
-    color: "white"
-    background: "black"
-    path: "#prices_and_payment"
+
   bullets:
     items:
       - text: "Connect with a network of over 6,000 professionals and students worldwide."

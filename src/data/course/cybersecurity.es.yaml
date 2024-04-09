@@ -94,7 +94,7 @@ two_columns_second:
       Domina las amenazas del mundo digital actual con el Curso de Ciberseguridad de 4Geeks Academy. Aprende las habilidades y conocimientos claves para protegerte. Las prácticas de pentesting se basan en los laboratorios de certificación EJPT.
     font_size: ["16px", "16px", "16px", "16px", "16px"]
   button:
-    text: "Más información"
+    text: "Inscríbete ahora"
     color: "white"
     background: "black"
     path: "/es/aplica"
@@ -120,11 +120,7 @@ two_columns_info:
   sub_heading:
     text: ""
     font_size: ["16px", "16px", "16px", "16px", "16px"]
-  button:
-    text: "Aplica ahora"
-    color: "white"
-    background: "black"
-    path: "#prices_and_payment"
+
   bullets:
     items:
       - text: "Conéctate con una red de más de 6,000 profesionales y estudiantes en todo el mundo."
