@@ -11,10 +11,28 @@ seo_title: "level up as a developer"
 header:
   title: $20+ Millones en becas
   paragraph: Impulsando el Futuro de la Educación Tecnológica, Haciendo la Programación Accesible para Todos
+  image: "../../../static/images/20-million/girls-with-laptop.png"
 
 button:
   btn_label: "Quiero contribuir"
   apply_button_link: "/es/aplica"
+
+for_everyone:
+  title: "We make education accessible to everyone"
+  text: "You may qualify if are a Miami resident and belong to one of these groups:"
+  boxes:
+    - title: "LGBTQI Community"
+      color: "#E0D1FF"
+    - title: "Vets and Military"
+      color: "#FFB718"
+    - title: "Women in Tech"
+      color: "#0084FF"
+    - title: "Underemployed or Unemployed"
+      color: "#A3DA68"
+    - title: "Hispanics in USA"
+      color: "#FFFFFF"
+    - title: "Underrepresented"
+      color: "#F15E64"
 
 two_column_left:
   proportions:

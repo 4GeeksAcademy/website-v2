@@ -1021,7 +1021,7 @@ export const GridContainer = ({
         gridTemplateAreas={gridTemplateAreas}
         gridTemplateAreas_tablet={gridTemplateAreas_tablet}
         height={childHeight}
-        margin={childMargin}
+        margin={childMargin || "auto"}
         maxWidth={childMaxWidth}
       >
         {children}

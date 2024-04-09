@@ -21,6 +21,7 @@ import ScholarshipProjects from "../components/ScholarshipProjects";
 import ScholarshipSuccessCases from "../components/ScholarshipSuccessCases";
 import BenefitsAndCharts from "../components/BenefitsAndCharts";
 import TwoColumn from "../components/TwoColumn/index.js";
+import ForEveryoneBoxes from "../components/ForEveryoneboxes/index.js";
 
 const TwentyMillion = ({ data, pageContext, yml }) => {
   const { session } = React.useContext(SessionContext);
@@ -94,6 +95,7 @@ const TwentyMillion = ({ data, pageContext, yml }) => {
               fontWeight="400"
               margin_tablet="0"
               fontFamily="Archivo,Lato,sans-serif"
+              color={Colors.black2}
             >
               {yml.header.title}
             </H1>
@@ -103,7 +105,7 @@ const TwentyMillion = ({ data, pageContext, yml }) => {
               textAlign_md="left"
               textAlign_xl="left"
               fontFamily="Lato,sans-serif"
-              color="black"
+              color={Colors.black3}
               opacity="1"
               margin="20px 0"
               padding="0"
@@ -182,7 +184,52 @@ const TwentyMillion = ({ data, pageContext, yml }) => {
           </Div>
         </GridContainerWithImage>
       </Div>
+
+      {/* accesible_education */}
+      <Div background={Colors.black} padding="20px" padding_tablet="50px 80px">
+        <GridContainer
+          columns_tablet="12"
+          columns_md="12"
+          containerColumns_tablet="none"
+          padding="30px 20px"
+          padding_tablet="40px 80px"
+          padding_md="60px 80px"
+          padding_lg="80px 0"
+          margin_tablet="0 auto 81px auto"
+          childMaxWidth="1280px"
+          maxWidth="1280px"
+          containerGridGap="0px"
+          childMargin="auto"
+        >
+          <Div
+            ref={joinPartnersRef}
+            gridColumn_tablet="1 / 5"
+            flexDirection="column"
+          >
+            <H2
+              textAlign_tablet="start"
+              margin="0 0 30px 0"
+              lineHeight="35px"
+              color={Colors.white}
+            >
+              {yml.for_everyone.title}
+            </H2>
+            <Paragraph
+              margin="7px 0"
+              textAlign_tablet="start"
+              color={Colors.white}
+            >
+              {yml.for_everyone.text}
+            </Paragraph>
+          </Div>
+          <Div flexDirection="column" gridColumn_tablet="5 / 13" id="bottom">
+            <ForEveryoneBoxes for_everyone_boxes={yml.for_everyone.boxes} />
+          </Div>
+        </GridContainer>
+      </Div>
+
       <OurPartners margin="0" images={partnersData.partners.images} marquee />
+
       <ScholarshipProjects
         content={data.allScholarshipProjectsYaml.edges[0].node}
         lang={pageContext.lang}
@@ -297,6 +344,14 @@ export const query = graphql`
           button {
             btn_label
             apply_button_link
+          }
+          for_everyone {
+            title
+            text
+            boxes {
+              title
+              color
+            }
           }
           two_column_left {
             proportions
