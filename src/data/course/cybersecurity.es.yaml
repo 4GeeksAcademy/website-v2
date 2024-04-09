@@ -63,7 +63,7 @@ two_columns_first:
     shadow: false
   heading:
     text: "Curso de Ciberseguridad validado por Chema Alonso el Hacker más Importante de España"
-    font_size: ["30px", "30px", "30px", "30px", "30px"]
+    font_size: ["28px", "28px", "28px", "23px", "23px"]
   sub_heading:
     text: "Los años de experiencia de Chema Alonso, junto con su aporte y reconocimiento en la industria, respaldan este curso de ciberseguridad, asegurando calidad, un contenido actualizado y una perspectiva centrada en los estándares ISO y NIST, así como experiencia práctica en técnicas de prevención de pérdida de datos (DLP), pruebas de penetración y a demás incluye: " 
     font_size: ["16px", "16px", "16px", "16px", "16px"]
