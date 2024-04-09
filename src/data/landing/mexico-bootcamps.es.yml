@@ -64,15 +64,15 @@ short_badges:
   - name: "Course Report"
     url: ""
     image: "../../../static/images/badges/Course-Report-Badge-2024.webp"
-    alt: "Top Coding Bootcamps Course Report"
+    alt: "El mejor Bootcamp de programación de Course Report 2024"
   - name: "Switchup"
-    url: ""
+    url: "https://www.coursereport.com/best-coding-bootcamps"
     image: "../../../static/images/badges/switchup-badge-2023.png"
-    alt: "Best coding bootcamp Switchup 2023"   
+    alt: "El mejor Bootcamp de Programación Switchup 2023"   
   - name: "Florida Department of Education"
     url: ""
     image: "../../../static/images/badges/licensed.png"
-    alt: "Florida Department of Education"
+    alt: "Departamento de Educación de Florida"
 
 follow_bar:
   position: "top" # top, bottom, hidden

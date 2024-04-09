@@ -140,7 +140,7 @@ components:
     background: "rgba(255, 183, 24, 0.2)"
     image:
       style: '{ "backgroundSize": "cover" }'
-      src: "/images/landing/GrupoVariasNacionalidades.png"
+      src: "/images/landing/GrupoVariasNacionalidades.webp"
       shadow: true
     heading:
       text: "Membresías"
