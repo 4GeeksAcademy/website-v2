@@ -65,7 +65,7 @@ two_columns_first:
     text: "Curso de Ciberseguridad validado por Chema Alonso el Hacker más Importante de España"
     font_size: ["30px", "30px", "30px", "30px", "30px"]
   sub_heading:
-    text: "Conviértete en un especialista en ciberseguridad y protege sistemas informáticos contra amenazas cibernéticas. Este Curso intensivo te brindará las habilidades técnicas necesarias para identificar, analizar y prevenir ataques, utilizando herramientas como Nessus, Nmap, Wireshark y Metasploit. E incluye: " 
+    text: "Los años de experiencia de Chema Alonso, junto con su aporte y reconocimiento en la industria, respaldan este curso de ciberseguridad, asegurando calidad, un contenido actualizado y una perspectiva centrada en los estándares ISO y NIST, así como experiencia práctica en técnicas de prevención de pérdida de datos (DLP), pruebas de penetración y a demás incluye: " 
     font_size: ["16px", "16px", "16px", "16px", "16px"]
   button:
     text: "Inscríbete ahora"
@@ -99,10 +99,10 @@ two_columns:
     src: "../../images/staff/chema-daniela.jpg"  
     shadow: false
   heading:
-    text: "Obtén tu certificación como Especialista con nuestro Curso de Ciberseguridad"
+    text: "Conviertete en un especialista con nuestro curso en Ciberseguridad"
     font_size: ["30px", "30px", "30px", "30px", "30px"]
   sub_heading:
-    text: "La experiencia reconocida de Chema en ciberseguridad respalda este curso, asegurando calidad y perspectiva centrada en los estándares ISO y NIST, así como experiencia práctica en técnicas de prevención de pérdida de datos (DLP) y pruebas de penetración. Además, te beneficiarás de la experiencia de Daniela Maissi, una hábil desarrolladora web y experta en ciberseguridad con más de 5 años de experiencia y 12+ certificaciones en computación en la nube, OSINT y soluciones de TI." 
+    text: "Adquiere los conocimientos para proteger sistemas contra amenazas cibernéticas. Este curso intensivo te brindará las habilidades necesarias para identificar, analizar y prevenir ataques, usando herramientas como Nessus, Nmap, Wireshark y Metasploit. Además, te beneficiarás de la experiencia de Daniela Maissi, una hábil desarrolladora web y experta en ciberseguridad con más de 5 años de experiencia y 12+ certificaciones en computación en la nube, OSINT y soluciones de TI." 
     font_size: ["16px", "16px", "16px", "16px", "16px"]
   button:
     text: "Inscríbete ahora"
