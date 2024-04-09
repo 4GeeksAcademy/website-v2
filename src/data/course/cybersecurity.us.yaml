@@ -103,7 +103,7 @@ two_columns:
     text: "Cybersecurity Specialist Bootcamp Endorsed by Chema Alonso"
     font_size: ["30px", "30px", "30px", "30px", "30px"]
   sub_heading:
-    text: "As Chief Digital Officer at Telefónica S.A., Chema's expertise in cybersecurity drives innovation and digitalization. In this course, you'll delve into ISO and NIST standards, gain hands-on experience in data loss prevention (DLP) techniques, and focus on ethical hacking, penetration testing, and risk management. But that's not all. You'll also benefit from the wealth of knowledge and experience brought by Daniela Maissi, a skilled web developer and cybersecurity expert with over 5 years of experience and 12+ certifications in cloud computing, OSINT, and IT solutions."
+    text: "As Chief Digital Officer at Telefónica S.A., Chema's expertise in cybersecurity drives innovation and digitalization. In this Bootcamp, you'll delve into ISO and NIST standards, gain hands-on experience in data loss prevention (DLP) techniques, and focus on ethical hacking, penetration testing, and risk management. But that's not all. You'll also benefit from the wealth of knowledge and experience brought by Daniela Maissi, a skilled web developer and cybersecurity expert with over 5 years of experience and 12+ certifications in cloud computing, OSINT, and IT solutions."
     font_size: ["16px", "16px", "16px", "16px", "16px"]
   button:
     text: "Apply now"

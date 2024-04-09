@@ -62,10 +62,10 @@ two_columns_first:
     src: "../../images/staff/chema-alonso.jpg"  
     shadow: false
   heading:
-    text: "Bootcamp de Ciberseguridad validado por Chema Alonso el Hacker más Importante de España"
+    text: "Curso de Ciberseguridad validado por Chema Alonso el Hacker más Importante de España"
     font_size: ["30px", "30px", "30px", "30px", "30px"]
   sub_heading:
-    text: "Conviértete en un especialista en ciberseguridad y protege sistemas informáticos contra amenazas cibernéticas. Este bootcamp intensivo te brindará las habilidades técnicas necesarias para identificar, analizar y prevenir ataques, utilizando herramientas como Nessus, Nmap, Wireshark y Metasploit. E incluye: " 
+    text: "Conviértete en un especialista en ciberseguridad y protege sistemas informáticos contra amenazas cibernéticas. Este Curso intensivo te brindará las habilidades técnicas necesarias para identificar, analizar y prevenir ataques, utilizando herramientas como Nessus, Nmap, Wireshark y Metasploit. E incluye: " 
     font_size: ["16px", "16px", "16px", "16px", "16px"]
   button:
     text: "Inscríbete ahora"
@@ -76,14 +76,14 @@ two_columns_first:
     items:
       - text: "Sala de Chat con el profesor y Chema Alonso."
       - text: "4 libros de Ciberseguridad de 0xWORD, la editorial de Chema Alonso."
-      - text: "Chema Alonso ha validado los contenidos y los profesores de este bootcamp."  
+      - text: "Chema Alonso ha validado los contenidos y los profesores de este Curso."  
       - text: "Orientación laboral y ayuda para conseguir empleo en colaboración con Chema Alonso Y por supuesto nuestras mentorias ilimitadas y de por vida."  
 
 overlaped:
   heading: "Certifícate como especialista en ciberseguridad" 
   paragraph: |
-    Domina las amenazas del mundo digital actual con el bootcamp de Ciberseguridad de 4Geeks Academy. Aprende las habilidades y conocimientos claves para protegerte.  Las prácticas de pentesting se basan en los laboratorios de certificación EJPT. <br><br>
-    Si bien ningún bootcamp te garantiza la certificación (EJPT, CEH, etc.), al finalizar, habrás adquirido una sólida base para aprobar los exámenes.  
+    Domina las amenazas del mundo digital actual con el Curso de Ciberseguridad de 4Geeks Academy. Aprende las habilidades y conocimientos claves para protegerte.  Las prácticas de pentesting se basan en los laboratorios de certificación EJPT. <br><br>
+    Si bien ningún Curso te garantiza la certificación (EJPT, CEH, etc.), al finalizar, habrás adquirido una sólida base para aprobar los exámenes.  
   button:
     text: "MÁS INFORMACIÓN"  # Translated button text
     color: "blue"
@@ -99,7 +99,7 @@ two_columns:
     src: "../../images/staff/chema-daniela.jpg"  
     shadow: false
   heading:
-    text: "Obtén tu certificación como Especialista en Ciberseguridad con nuestro bootcamp"
+    text: "Obtén tu certificación como Especialista con nuestro Curso de Ciberseguridad"
     font_size: ["30px", "30px", "30px", "30px", "30px"]
   sub_heading:
     text: "La experiencia reconocida de Chema en ciberseguridad respalda este curso, asegurando calidad y perspectiva centrada en los estándares ISO y NIST, así como experiencia práctica en técnicas de prevención de pérdida de datos (DLP) y pruebas de penetración. Además, te beneficiarás de la experiencia de Daniela Maissi, una hábil desarrolladora web y experta en ciberseguridad con más de 5 años de experiencia y 12+ certificaciones en computación en la nube, OSINT y soluciones de TI." 
@@ -113,7 +113,7 @@ two_columns:
     items:
       - text: "Técnicas para fortalecer sistemas Windows y Linux contra amenazas cibernéticas"
       - text: "Desarrolla habilidades prácticas en técnicas de prevención de pérdida de datos (DLP)"
-      - text: "Bootcamp de ciberseguridad aprobado por Chema Alonso, garantizando educación de primer nivel y experiencia en la industria."  
+      - text: "Curso de ciberseguridad aprobado por Chema Alonso, garantizando educación de primer nivel y experiencia en la industria."  
 
 
 upcoming:
