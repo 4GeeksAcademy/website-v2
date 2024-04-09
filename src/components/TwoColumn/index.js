@@ -391,7 +391,13 @@ const TwoColumn = ({ left, right, proportions, session }) => {
       </Div>
       <Div
         justifyContent={
-          right?.video ? "center" : right?.image ? "end" : "start"
+          right?.video
+            ? "center"
+            : right?.image
+            ? "end"
+            : right?.heading
+            ? "center"
+            : "start"
         }
         flexDirection="column"
         size_tablet={right_size || 6}
