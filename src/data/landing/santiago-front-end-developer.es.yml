@@ -255,7 +255,7 @@ components:
   - name: passion
     position: 7
     background: "#fbfbfb"
-    layout: programming-bootcamp
+    layout: two_column_left
     proportions: [6, 6]
     image:
       style: '{ "border" : "3px solid black" }' 
