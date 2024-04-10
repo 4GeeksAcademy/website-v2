@@ -191,7 +191,7 @@ const Landing = (props) => {
           margin="0"
           margin_tablet="auto"
           gridTemplateColumns_tablet="repeat(16, 1fr)"
-          maxWidth_tablet="1366px"
+          maxWidth_tablet="1280px"
         >
           <Div
             //height="auto"
@@ -528,6 +528,7 @@ export const query = graphql`
             width
             videoHeight
             videoWidth
+            justify
             filter_indexes
             text_link
             icons {

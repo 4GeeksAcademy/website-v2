@@ -161,7 +161,7 @@ const Outcomes = ({ data, pageContext, yml }) => {
           svg_image={<SVGImage />}
           margin_tablet="0px auto 0 auto"
           margin_xxs="0px auto 0 auto"
-          maxWidth="1366px"
+          maxWidth="1280px"
         />
       </Div>
       <Div
@@ -213,13 +213,10 @@ const Outcomes = ({ data, pageContext, yml }) => {
 
         <GridContainer
           columns="12"
-          gridColumn_tablet="1 / span 13"
-          padding="0 0"
-          padding_tablet="0 0 0 0 "
-          maxWidth="1366px"
-          margin_tablet="0 auto"
+          padding="0 17px"
+          padding_tablet="0 65px 0 0 "
         >
-          <Div gridArea="1/1/1/13" flexDirection="column">
+          <Div gridArea="1/2/1/12" flexDirection="column">
             {yml.sections
               .filter((section) => section.title !== "")
               .map((section, i) => {
@@ -266,19 +263,26 @@ const Outcomes = ({ data, pageContext, yml }) => {
                         return (
                           <Div
                             key={i}
+                            gap="0"
                             gridColumnGap="40px"
                             flexDirection="column"
                             margin="0 0 38px 0"
-                            gap="10px"
                           >
                             <H2
                               type="h2"
                               textAlign_tablet="left"
                               color={Colors.blue}
+                              margin="0 0 10px 0"
+                              fontSize="27px"
+                              lineHeight="28px"
                             >
                               {m.stat}
                             </H2>
-                            <H3 type="h3" textAlign_tablet="left">
+                            <H3
+                              type="h3"
+                              textAlign_tablet="left"
+                              lineHeight="28px"
+                            >
                               {m.content}
                             </H3>
                           </Div>

@@ -31,7 +31,7 @@ const Overlaped = ({ heading, content, button, background, image }) => {
     }
   `);
   return (
-    <Div maxWidth_tablet="1366px" margin_tablet="50px auto" width="100%">
+    <Div maxWidth_tablet="1280px" margin_tablet="50px auto" width="100%">
       <Grid
         display_xxs="none"
         display="grid"

@@ -31,101 +31,80 @@ const Iconogram = ({ session, data, pageContext, yml, index }) => {
       padding_tablet="40px 40px"
       width="100%"
     >
-      <Div margin="0 auto" display="block" maxWidth="1366px">
-        {heading.text && (
-          <Div display="block">
-            <H2
-              textAlign="center"
-              margin="0 0 50px 0"
-              fontSize_tablet="32px"
-              fontSize="21px"
-              lineHeight="48.96px"
-              style={
-                heading?.style
-                  ? { ...JSON.parse(heading.style) }
-                  : { textAlign: "center" }
-              }
-            >
-              {heading.text}
-            </H2>
-          </Div>
-        )}
-        {sub_heading && /<\/?[a-z0-9]+>/g.test(sub_heading.text) ? (
-          <Paragraph
-            padding_xs={heading.text ? "0 10%" : "20px 10%"}
-            padding_tablet={heading.text ? "0 10%" : "20px 10%"}
-            padding_md={heading.text ? "0 10%" : "20px 10%"}
-            margin="15px auto"
-            fontSize="16px"
-            fontHeight="30px"
-            maxWidth="1366px"
-            dangerouslySetInnerHTML={{ __html: sub_heading.text }}
-            style={
-              sub_heading?.style ? { ...JSON.parse(sub_heading.style) } : {}
-            }
-          />
-        ) : sub_heading && sub_heading.text == !"" ? (
-          <Paragraph
-            padding_xs={heading.text ? "0 10%" : "20px 10%"}
-            padding_tablet={heading.text ? "0 10%" : "20px 10%"}
-            padding_md={heading.text ? "0 10%" : "20px 10%"}
-            margin="15px auto"
-            fontSize="16px"
-            fontHeight="30px"
-            maxWidth="1366px"
-            style={
-              sub_heading?.style ? { ...JSON.parse(sub_heading.style) } : {}
-            }
-          >
-            {sub_heading.text}
-          </Paragraph>
-        ) : null}
-        <Div
-          margin="15px 0 0 0"
-          justifyContent_tablet="between"
-          gap="15px"
-          flexDirection="column"
-          flexDirection_tablet="row"
-          className={swipable && "badge-slider hideOverflowX__"}
+      {heading.text && (
+        <H2
+          type="h2"
+          lineHeight="35px"
+          lineHeight_tablet="28px"
+          fontSize_tablet="24px"
+          fontSize="24px"
+          //margin="30px 0 30px 0"
+          maxWidth="1280px"
+          margin="30px auto"
+          style={
+            heading?.style
+              ? { ...JSON.parse(heading.style) }
+              : { textAlign: "center" }
+          }
         >
-          {Array.isArray(icons) &&
-            icons?.map((item, index) => {
-              return (
-                <React.Fragment key={index}>
-                  <IconsBanner
-                    icon={item.icon}
-                    title={item.title}
-                    content={item.content}
-                  />
-                </React.Fragment>
-              );
-            })}
-        </Div>
-        {button && (
-          <Button
-            outline
-            colorHoverText={button.hover_color || Colors.blue}
-            background={Colors[button.background] || button.background}
-            lineHeight="26px"
-            textColor={Colors.black}
-            textTransform="none"
-            textDecorationLine="underline"
-            color={Colors[button.color] || button.color}
-            fontSize="18px"
-            fontFamily="Lato"
-            fontWeight="500"
-            textAlign="left"
-            margin="2rem 0 1rem 0"
-            padding="32px .85rem 0 .85rem"
-            onClick={() => {
-              if (button.path && button.path.indexOf("http") > -1)
-                window.open(transferQuerystrings(button.path, utm));
-              else navigate(button.path);
-            }}
-          >
-            <Link to={button.path}>{button.text}</Link>
-          </Button>
-        )}
+          {heading.text}
+        </H2>
+      )}
+      {/<\/?[a-z0-9]+>/g.test(sub_heading?.text) ? (
+        <Paragraph
+          padding_xs={heading.text ? "0 10%" : "20px 10%"}
+          padding_tablet={heading.text ? "0 10%" : "20px 10%"}
+          padding_md={heading.text ? "0 10%" : "20px 10%"}
+          margin="15px auto"
+          fontSize="16px"
+          fontHeight="30px"
+          maxWidth="1280px"
+          dangerouslySetInnerHTML={{ __html: sub_heading.text }}
+          style={sub_heading?.style ? { ...JSON.parse(sub_heading.style) } : {}}
+        />
+      ) : sub_heading && sub_heading?.text !== "" ? (
+        <Paragraph
+          padding_xs={heading.text ? "0 10%" : "20px 10%"}
+          padding_tablet={heading.text ? "0 10%" : "20px 10%"}
+          padding_md={heading.text ? "0 10%" : "20px 10%"}
+          margin="15px auto"
+          fontSize="16px"
+          fontHeight="30px"
+          maxWidth="1280px"
+          style={sub_heading?.style ? { ...JSON.parse(sub_heading.style) } : {}}
+        >
+          {sub_heading.text}
+        </Paragraph>
+      ) : null}
+      <Div
+        display="flex"
+        flexDirection="column"
+        flexDirection_xs="row"
+        flexDirection_tablet="row "
+        flexWrap_xs="wrap"
+        flexWrap_tablet="nowrap"
+        justifyContent="center"
+        // gap="45px"
+        gap_tablet={icons.length > 4 ? "0px" : "3%"}
+        //gap_md="10%"
+        maxWidth="1280px"
+        margin="20px auto 0 auto"
+        padding_tablet="0 40px"
+        padding_lg="0"
+        className={swipable && "badge-slider hideOverflowX__"}
+      >
+        {Array.isArray(icons) &&
+          icons?.map((item, index) => {
+            return (
+              <React.Fragment key={index}>
+                <IconsBanner
+                  icon={item.icon}
+                  title={item.title}
+                  content={item.content}
+                />
+              </React.Fragment>
+            );
+          })}
       </Div>
     </Div>
   );

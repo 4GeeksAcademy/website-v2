@@ -76,7 +76,7 @@ const Badges = ({
       {/* <Fragment github="/components/badges"> */}
       <Div
         width="100%"
-        maxWidth={maxWidth || "1366px"}
+        maxWidth={maxWidth || "1280px"}
         margin_tablet="0 auto"
         justifyContent="center"
         background={background}
