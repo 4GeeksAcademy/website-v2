@@ -25,15 +25,20 @@ geekForce:
     image: ../../../static/images/staff/hernan-new.png
 
 # Banner of icons
-icons:
-  - icon: "contract"
-    title: "86% of our students hired"
-  - icon: "ratio" #"group"
-    title: "POST PROGRAM LABOR SUPPORT"
-  - icon: "talk"
-    title: "PREPARING FOR INTERVIEWS"
-  - icon: "worker-portrait"
-    title: "+1500 LIFE SHEETS CREATED"
+iconogram:
+  heading:
+    text: "Benefits"
+    style: '{ "textAlign": "center"}'
+  swipable: false
+  icons:
+    - icon: "briefcase-new"
+      content: "86% of our students hired"
+    - icon: "four_persons" #"group"
+      content: "Post program labor support"
+    - icon: "teacher_teaching"
+      content: "Preparing for interviews"
+    - icon: "resume"
+      content: "+1500 life sheets created"
 
 list:
   - title: "Unlimited Professional Support"

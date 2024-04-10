@@ -41,26 +41,28 @@ testimonials:
     student_thumb: "../../../../static/images/testimonials/florencia-viera.jpeg"
     linkedin_image: "../../../../static/images/linkedin.png"
 
-  - student_name: "Veronica Larrondo"
-    slug: "vero-la"
+
+  - student_name: "Ibai Fernández"
+    slug: "ibai"
     country:
-      iso: LATAM
-      name: LATAM
+      iso: España
+      name: España
     featured: false
     highlighted: false
     testimonial_date: ""
     rating: 5
-    student_thumb: "../../../../static/images/testimonials/veronica-larrondo.jpg"
-    student_video: "https://www.youtube.com/watch?v=hpvI_iBaX28" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    student_thumb: "../../../../static/images/testimonials/ibai-fernandez.jpg"
+    student_video: "https://www.youtube.com/watch?v=J9Xg03u3MxA" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     hidden: false
     linkedin_url: ""
     linkedin_text: "Linkedin Perfil"
     linkedin_image: "../../../../static/images/linkedin.png"
     source_url: ""
-    source_url_text: ""
+    # source_url_text: ""
     short_content: "Full Stack Developer"
-    content: "Entre las habilidades que se desarrollan al aprender a programar  se ecuentra la resolucion y manejo de conflictos y capacidad de adaptacion, el curso me ha parecido excelente desde sus mentorías hasta la comunidad ha sido de gran ayuda durante este proceso."
+    content: "Antes de entrar a la academia ya tenía un poco de experiencia con la programación, Wordpress me abrió las puertas del manejo del código y también había tenido experiencia con otros coding bootcamp pero a partir del 2023 y gracias al acuerdo compartido y el esfuerzo invertido ahora tengo dos trabajos como programador."
+      
 
   - student_name: "Azul Botaya"
     slug: "azu-bota"
@@ -82,7 +84,7 @@ testimonials:
     #source_url_text: ""
     short_content: "Full Stack Developer"
     content: |
-      Estuve a punto de dejar toda mi carrera atrás y olvidarme de todo. Luego consegúi 4Geeks y recuperé 
+      Estuve a punto de dejar toda mi carrera atrás y olvidarme de todo. Luego conseguí 4Geeks y recuperé 
       la esperanza de ser una gran profesional. Me uní a 4Geeks y encontré un gran equipo, una gran comunidad y sobre todo
       mucha calidad humana. Fui capaz finalmente de comprometerme en algo realmente interesante y que se sumaría 
       a mi carrera de Diseñadora Gráfica, permitiéndome fortalecer mis habilidades. Además un programa Part-time! 
@@ -216,6 +218,27 @@ testimonials:
     ##source_url_text: ""
     short_content: "Full Stack Developer"
     content: "Esto es como cuando vas al océano  la parte más importante es mojarse los pies, yo lo recomendaría  !salta¡ ve a por ello y después de este bootcamp me siento preparado para saltar al medio del océano."
+    
+  - student_name: "Veronica Larrondo"
+    slug: "vero-la"
+    country:
+      iso: LATAM
+      name: LATAM
+    featured: false
+    highlighted: false
+    testimonial_date: ""
+    rating: 5
+    student_thumb: "../../../../static/images/testimonials/veronica-larrondo.jpg"
+    student_video: "https://www.youtube.com/watch?v=hpvI_iBaX28" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    hidden: false
+    linkedin_url: ""
+    linkedin_text: "Linkedin Perfil"
+    linkedin_image: "../../../../static/images/linkedin.png"
+    source_url: ""
+    source_url_text: ""
+    short_content: "Full Stack Developer"
+    content: "Entre las habilidades que se desarrollan al aprender a programar  se ecuentra la resolucion y manejo de conflictos y capacidad de adaptacion, el curso me ha parecido excelente desde sus mentorías hasta la comunidad ha sido de gran ayuda durante este proceso."
       
   - student_name: "Carlos Avila"
     slug: "car-avi"
@@ -276,30 +299,6 @@ testimonials:
   #     I've been struggling a lot trying to make a dynamic website, so I started to look
   #     for a coding school in Miami and I found the best one: 4Geeks Academy. And thanks to
   #     the program they offer, the Income Sharing Agreement, I could enroll right away and pay once I get a job
-
-  - student_name: "Ibai Fernández"
-    slug: "ibai"
-    country:
-      iso: España
-      name: España
-    featured: false
-    highlighted: false
-    testimonial_date: ""
-    rating: 5
-    student_thumb: "../../../../static/images/testimonials/ibai-fernandez.jpg"
-    student_video: "https://www.youtube.com/watch?v=J9Xg03u3MxA" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
-    # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
-    hidden: false
-    linkedin_url: ""
-    linkedin_text: "Linkedin Perfil"
-    linkedin_image: "../../../../static/images/linkedin.png"
-    source_url: ""
-    # source_url_text: ""
-    short_content: "Full Stack Developer"
-    content: "Antes de entrar a la academia ya tenía un poco de experiencia con la programación, Wordpress me abrió las puertas del manejo del código y también había tenido experiencia con otros coding bootcamp pero a partir del 2023 y gracias al acuerdo compartido y el esfuerzo invertido ahora tengo dos trabajos como programador."
-      
-
-
 
 
   - student_name: "Charles Fabricius"

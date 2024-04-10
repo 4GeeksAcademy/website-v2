@@ -863,7 +863,13 @@ export const landingSections = {
           </H2>
         )}
         <TwoColumn
-          left={{ image: yml.image, video: yml.video }}
+          left={{
+            image: yml.image,
+            video: yml.video,
+            videoHeight: yml.videoHeight,
+            videoWidth: yml.videoWidth,
+            justify: yml.justify,
+          }}
           right={{
             heading: yml.heading,
             sub_heading: yml.sub_heading,
@@ -926,6 +932,7 @@ export const landingSections = {
             video: yml.video,
             videoHeight: yml.videoHeight,
             videoWidth: yml.videoWidth,
+            justify: yml.justify,
           }}
           proportions={yml.proportions}
           session={session}
