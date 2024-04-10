@@ -863,8 +863,8 @@ export const landingSections = {
           </H2>
         )}
         <TwoColumn
-          left={{ 
-            image: yml.image, 
+          left={{
+            image: yml.image,
             video: yml.video,
             videoHeight: yml.videoHeight,
             videoWidth: yml.videoWidth,
