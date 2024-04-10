@@ -21,6 +21,7 @@ import {
 import { H1, H2, H3, Paragraph } from "../components/Heading";
 import { Button, RoundImage, Img } from "../components/Styling";
 import { StyledBackgroundSection } from "../components/Styling";
+import Iconogram from "../components/Iconogram";
 
 const GeekForce = (props) => {
   const { data, pageContext, yml } = props;
@@ -224,48 +225,7 @@ const GeekForce = (props) => {
         </Div>
       </Grid>
 
-      {/* ICONOGRAM-GEEKPAL */}
-      <Div
-        display="flex"
-        flexDirection="column"
-        id="iconogram"
-        containerColumns_tablet="repeat(14, 1fr)"
-        columns="1"
-        rows="2"
-        margin="auto"
-        height="auto"
-        width="100%"
-        background={Colors.lightYellow}
-      >
-        <Div
-          display="flex"
-          flexDirection="column"
-          flexDirection_tablet="row "
-          justifyContent="center"
-          // gap="45px"
-          //gap_tablet={content.icons.length > 4 ? "0px" : "5%"}
-          //gap_md="10%"
-          maxWidth="1366px"
-          margin="20px auto 0 auto"
-          padding_tablet="50px 40px"
-          padding_md="50px 80px"
-          padding_lg="50px 0"
-          //className="badge-slider hideOverflowX__"
-        >
-          {Array.isArray(content.icons) &&
-            content.icons?.map((item, index) => {
-              return (
-                <React.Fragment key={index}>
-                  <IconsBanner
-                    icon={item.icon}
-                    title={item.title}
-                    content={item.content}
-                  />
-                </React.Fragment>
-              );
-            })}
-        </Div>
-      </Div>
+      <Iconogram yml={content.iconogram} />
 
       {Array.isArray(content.list) &&
         content.list.map((m, i) => {
@@ -537,9 +497,16 @@ export const query = graphql`
               color
             }
           }
-          icons {
-            icon
-            title
+          iconogram {
+            heading {
+              text
+              style
+            }
+            swipable
+            icons {
+              icon
+              content
+            }
           }
           geekForce {
             videoId
