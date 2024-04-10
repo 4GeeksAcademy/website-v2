@@ -85,7 +85,7 @@ two_columns_second:
     src: "../../images/landing/cybersecurity-bg.webp"  
     shadow: false
   heading:
-    text: "Boost Your Career as a Cybersecurity Specialist"
+    text: "Prepare for Cybersecurity Certifications"
     font_size: ["28px", "28px", "28px", "23px", "23px"]
   sub_heading:
     text: |
@@ -145,7 +145,7 @@ two_columns:
     text: "Become a Specialist with Our Cybersecurity Bootcamp"
     font_size: ["30px", "30px", "30px", "26px", "24px"]
   sub_heading:
-    text: "Gain the knowledge to protect systems against cyber threats. This intensive Bootcamp will provide you with the necessary skills to identify, analyze, and prevent attacks, using tools such as Nessus, Nmap, Wireshark, and Metasploit. Additionally, you will benefit from the expertise of Daniela Maissi, a skilled web developer and cybersecurity expert with over 5 years of experience and 12+ certifications in cloud computing, OSINT, and IT solutions."
+    text: "Gain the knowledge to protect systems against cyber threats. This intensive Bootcamp will provide you with the necessary skills to identify, analyze, and prevent attacks, using tools such as Nessus, Nmap, Wireshark, and Metasploit. Additionally, This syllabus was co-created by Daniela Maissi, an ethical hacer from the EC-Council as Malware researcher and cybersecurity expert with over 5 years of experience and 12+ certifications in cloud computing, OSINT, and IT solutions."
     font_size: ["16px", "16px", "16px", "16px", "16px"]
   button:
     text: "Apply now"

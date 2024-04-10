@@ -86,7 +86,7 @@ two_columns_second:
     src: "../../images/landing/cybersecurity-bg.webp"  
     shadow: false
   heading:
-    text: "Impulsa tu Carrera como Especialista en Ciberseguridad"
+    text: "Prepárate para obtener certificaciones en ciberseguridad"
     font_size: ["28px", "28px", "28px", "23px", "23px"]
   sub_heading:
     text: |
@@ -140,7 +140,7 @@ two_columns:
     text: "Conviertete en un especialista con nuestro curso en Ciberseguridad"
     font_size: ["30px", "30px", "30px", "30px", "30px"]
   sub_heading:
-    text: "Adquiere los conocimientos para proteger sistemas contra amenazas cibernéticas. Este curso intensivo te brindará las habilidades necesarias para identificar, analizar y prevenir ataques, usando herramientas como Nessus, Nmap, Wireshark y Metasploit. Además, te beneficiarás de la experiencia de Daniela Maissi, una hábil desarrolladora web y experta en ciberseguridad con más de 5 años de experiencia y 12+ certificaciones en computación en la nube, OSINT y soluciones de TI." 
+    text: "Adquiere los conocimientos para proteger sistemas contra amenazas cibernéticas. Este curso intensivo te brindará las habilidades necesarias para identificar, analizar y prevenir ataques, usando herramientas como Nessus, Nmap, Wireshark y Metasploit. Este programa de estudios fue cocreado por Daniela Maissi, una hacker ética del EC-Council como investigadora de malware y hábil desarrolladora web experta en ciberseguridad con más de 5 años de experiencia y 12+ certificaciones en computación en la nube, OSINT y soluciones de TI." 
     font_size: ["16px", "16px", "16px", "16px", "16px"]
   button:
     text: "Inscríbete ahora"
@@ -234,7 +234,7 @@ details:
         Profundizarás en los conceptos básicos de redes, como el modelo OSI, TCP/IP, arquitecturas de redes y dispositivos incluyendo las diferentes tecnologías de red y protocolos de comunicación.
         \n Te familiarizarás con las principales amenazas y vulnerabilidades en redes, como ataques comunes, vulnerabilidades de software y hardware, y explotación de vulnerabilidades.
       projects: |
-        En la práctica entrarás de lleno con modelos de referencia, ip-address-management, network protocols, enterprise-network-architecture y Virtual Box. \n 
+        En la práctica entrarás de lleno con modelos de referencia, gestión de direcciones IP, protocolos de red, arquitectura de red empresarial y Virtual Box. \n 
         Dominarás herramientas como Nmap, Wireshark y Nessus para analizar y proteger redes.
       slug: "cybersecurity-fundamentals"
       duration: "1 sem"
