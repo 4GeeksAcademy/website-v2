@@ -528,6 +528,7 @@ export const query = graphql`
             width
             videoHeight
             videoWidth
+            justify
             filter_indexes
             text_link
             icons {

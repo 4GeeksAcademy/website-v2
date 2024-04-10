@@ -523,6 +523,9 @@ export const query = graphql`
             swipable
             proportions
             layout
+            justify
+            videoHeight
+            videoWidth
             text_link
             icons {
               icon
