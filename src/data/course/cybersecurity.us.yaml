@@ -85,7 +85,7 @@ two_columns_second:
     src: "../../images/landing/cybersecurity-bg.webp"  
     shadow: false
   heading:
-    text: "Get certified as a cybersecurity specialist"
+    text: "Boost Your Career as a Cybersecurity Specialist"
     font_size: ["28px", "28px", "28px", "23px", "23px"]
   sub_heading:
     text: |

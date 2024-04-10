@@ -86,7 +86,7 @@ two_columns_second:
     src: "../../images/landing/cybersecurity-bg.webp"  
     shadow: false
   heading:
-    text: "Certifícate como especialista en ciberseguridad"
+    text: "Impulsa tu Carrera como Especialista en Ciberseguridad"
     font_size: ["28px", "28px", "28px", "23px", "23px"]
   sub_heading:
     text: |
