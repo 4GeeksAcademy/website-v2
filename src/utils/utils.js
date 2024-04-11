@@ -58,7 +58,9 @@ export const dateDifference = (startDate, endDate) => {
   differenceMs -= days * (1000 * 60 * 60 * 24);
 
   // Calculate hours
-  const hours = Math.floor((differenceMs % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const hours = Math.floor(
+    (differenceMs % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+  );
   differenceMs -= hours * (1000 * 60 * 60);
 
   // Calculate minutes
@@ -72,9 +74,9 @@ export const dateDifference = (startDate, endDate) => {
     days,
     hours,
     minutes,
-    seconds
+    seconds,
   };
-}
+};
 
 // export const separateCurrencySymbols = (mount) => {
 //   const currency = [];

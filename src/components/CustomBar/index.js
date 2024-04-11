@@ -20,27 +20,27 @@ const CustomBar = ({
     // Convert both dates to milliseconds
     const date1_ms = date1.getTime();
     const date2_ms = date2.getTime();
-  
+
     // Calculate the difference in milliseconds
     const difference_ms = Math.abs(date1_ms - date2_ms);
-  
+
     // Convert the difference to weeks
     // const difference_weeks = Math.floor(difference_ms / (1000 * 60 * 60 * 24 * 7));
     const difference_weeks = difference_ms / (1000 * 60 * 60 * 24 * 7);
-  
+
     return difference_weeks;
-  }
+  };
 
   const addWeeks = (date, weeks) => {
     date.setDate(date.getDate() + 7 * weeks);
     return date;
-  }
+  };
 
   useEffect(() => {
     let interval;
 
     interval = setInterval(() => {
-      let referenceDate = new Date('2024-04-01');
+      let referenceDate = new Date("2024-04-01");
       // let referenceDate = new Date('2024-03-24');
       const now = new Date();
       const weeksDifference = differenceInWeeks(referenceDate, now);
@@ -56,7 +56,7 @@ const CustomBar = ({
       }
 
       const intervalDurationObj = dateDifference(referenceDate, now);
-      
+
       setTimer({
         days: intervalDurationObj.days,
         hours: intervalDurationObj.hours,
@@ -81,8 +81,8 @@ const CustomBar = ({
       padding="10px 20px"
       alignItems="center"
       background="#0097CD"
-      justifyContent={showDiscount && 'center'}
-      gap={showDiscount && '10px'}
+      justifyContent={showDiscount && "center"}
+      gap={showDiscount && "10px"}
       position={position}
     >
       {showDiscount ? (
@@ -98,32 +98,32 @@ const CustomBar = ({
             opacity="1"
           >
             {discountContent.bar_content.discount.message}
-            <span style={{ fontWeight: '900' }}>
-              {'  '}
+            <span style={{ fontWeight: "900" }}>
+              {"  "}
               {discountContent.bar_content.discount.ends_in}
-              {'  '}
+              {"  "}
               {timer.days && timer.days !== 0 && (
                 <>
-                  {timer.days}d
-                  {'  '}
+                  {timer.days}d{"  "}
                 </>
               )}
               {timer.hours && timer.hours !== 0 && (
                 <>
-                  {timer.hours}h
-                  {'  '}
+                  {timer.hours}h{"  "}
                 </>
               )}
               {timer.minutes && timer.minutes !== 0 && (
                 <>
-                  {timer.minutes}m
-                  {'  '}
+                  {timer.minutes}m{"  "}
                 </>
               )}
               {timer.seconds}s
             </span>
           </Paragraph>
-          <Link to={discountContent.bar_content.discount.button.path} style={{ padding: '0' }}>
+          <Link
+            to={discountContent.bar_content.discount.button.path}
+            style={{ padding: "0" }}
+          >
             <Button
               variant="full"
               style={{ height: "34px", padding: "16px 20px" }}
