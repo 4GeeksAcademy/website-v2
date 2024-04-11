@@ -155,7 +155,7 @@ export const NavbarMobile = ({
   /* In case of want change the Button text "Aplica" search the key 
         "apply_button_text" in /src/data/location/locationfile.yaml
     */
-  let findCity = myLocations.find((loc) => loc.node?.city === city);
+  let findCity = myLocations?.find((loc) => loc.node?.city === city);
 
   const isContentBarActive = contentBar.active || isDevelopment();
 

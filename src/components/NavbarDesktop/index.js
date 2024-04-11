@@ -134,7 +134,7 @@ export const Navbar = ({
   /* In case of want change the Button text "Aplica" search the key 
        "apply_button_text" in /src/data/location/locationfile.yaml
     */
-  let findCity = myLocations.find((loc) => loc.node?.city === city);
+  let findCity = myLocations?.find((loc) => loc.node?.city === city);
   useEffect(() => {
     if (findCity !== undefined && findCity.node) {
       setButtonText(findCity.node.button.apply_button_text);
