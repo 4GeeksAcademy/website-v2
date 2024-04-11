@@ -1,0 +1,342 @@
+meta_info:
+  slug: cybersecurity
+  title: "Study Cyber Security at 4Geeks Academy"
+  description: "Become a Cybersecurity Specialist with no prior knowledge and protect the digital future."
+  bc_slug: "cybersecurity"
+  template: "course-cybersecurity"
+  image: "/images/landing/4Geeks-Espana.jpg"
+  visibility: "visible"
+  show_in_apply: true
+  keywords: ""
+  redirects: []
+  related_clusters: ["trends-and-tech"]
+
+apply_form:
+  label: Cybersecurity
+
+seo_title: "Cybersecurity Bootcamp"
+
+header:
+  title: "Become a Cybersecurity Specialist"
+  paragraph: "The median annual salary for cybersecurity professionals in the United States is $103,560."
+  image: "../../../static/images/bg/apple-building.jpg"
+  image_alt: "apple-building"
+
+button:
+  syllabus_heading: "Download Syllabus"
+  syllabus_btn_label: "Instant Download"
+  syllabus_motivation: "Get it in just a few seconds"
+  apply_button_link: "/us/apply"
+  apply_button_text: "Apply"
+
+course_instructors:
+  header:
+    title: "Meet our instructors"
+    paragraph: ""
+
+instructors:
+  - name: "Chema Alonso"
+    sub_title: "El hacker más importante de España"
+    degree: "Ph.D. in Computer Security"
+    image: "../../../static/images/instructors/sayyed.jpeg"
+    bio: "Chema Alonso currently serves as the CDO (Chief Digital Officer) of Telefónica, where he oversees key areas such as Innovation, Data, Platforms, Digital Products, and Services. Units under his purview include Wayra, OpenGate, Digital Applications, Kernel, Video Platforms, and WiFi. "
+    github: ""
+    linkedin: "https://www.linkedin.com/in/chemaalonso/"
+
+  - name: "Daniela Maissi"
+    sub_title: "Ethical Hacking & Cybersecurity Educator"
+    degree: "Master in business Intelligence and Big Data"
+    image: "../../../static/images/instructors/sayyed.jpeg"
+    bio: "Daniela Maissi is a Cyber Security Lead Instructor at The Bridge, with expertise in ethical hacking, penetration testing, research, and back-end development. "
+    github: ""
+    linkedin: "https://www.linkedin.com/in/daniela-maissi-43045510b/"
+
+badges:
+  paragraph: "Kickstart your career at 4Geeks Academy, where developers grow and thrive. Named the best <a href='/us/coding-bootcamp'>coding bootcamp</a> 2023 by Course Report, best center for coding bootcamps 2023 by Premios de Excelencia Educativa in Spain, listed among the top 10 in the US by Newsweek, and rated 4.92/5 on Switchup. Licensed by the Florida Department of Education, USA."
+
+two_columns_first:
+  proportions: [6, 6]
+  image:
+    style: '{"border" : "0px solid black", "backgroundSize": "contain", "background-position": "center" }'
+    src: "../../images/staff/chema-alonso.jpg"  
+    shadow: false
+  heading:
+    text: "Cybersecurity Bootcamp validated by Chema Alonso, Spain's foremost Hacker"
+    font_size: ["28px", "28px", "28px", "23px", "23px"]
+  sub_heading:
+    text: "Chema Alonso's years of experience, coupled with his contribution and recognition in the industry, endorse this cybersecurity Bootcamp, ensuring quality, up-to-date content, and a perspective focused on ISO and NIST standards, as well as practical experience in data loss prevention (DLP) techniques, penetration testing, and includes: " 
+    font_size: ["16px", "16px", "16px", "16px", "16px"]
+  button:
+    text: "APPLY NOW"
+    color: "white"
+    background: "black"
+    path: "#prices_and_payment"
+  bullets:
+    items:
+      - text: "Chat Room with the instructor and Chema Alonso."
+      - text: "4 Cybersecurity books from 0xWORD, Chema Alonso's publishing company."
+      - text: "Chema Alonso has endorsed the content and instructors of this bootcamp."  
+      - text: "Career guidance and assistance in securing employment in collaboration with Chema Alonso. And of course, our unlimited, lifetime mentoring."
+
+two_columns_second:
+  proportions: [6, 6]
+  image:
+    style: '{"border" : "0px solid black", "backgroundSize": "contain", "background-position": "center" }'
+    src: "../../images/landing/cybersecurity-bg.webp"  
+    shadow: false
+  heading:
+    text: "Prepare for Cybersecurity Certifications"
+    font_size: ["28px", "28px", "28px", "23px", "23px"]
+  sub_heading:
+    text: |
+      No bootcamp in the world leaves you ready to certify in anything (EJPT, CEH, etc.), but if you wish to get certified after the bootcamp, you will have a large part of the study already done.
+
+      In the Cybersecurity bootcamp at 4Geeks Academy, you will develop the skills and knowledge necessary to face the threats of today's digital world.
+
+      Pentesting practices are based on the EJPT certification labs.
+    font_size: ["16px", "16px", "16px", "16px", "16px"]
+  button:
+    text: "APPLY NOW"
+    color: "white"
+    background: "black"
+    path: "#prices_and_payment"
+
+
+
+# OVERLAPED
+overlaped:
+  heading: "Cybersecurity Specialists are in High Demand"
+  paragraph: |
+    <strong style="font-weight: 800;">Market on the Rise</strong>: Global cybersecurity spending surpassed a staggering $1 trillion in 2021, and is projected to reach a significant $314.28 billion by 2029.<br><br>
+    <strong style="font-weight: 800;">Unfilled Positions Galore</strong>: The cybersecurity workforce gap is vast, with a concerning 4 million unfilled positions in 2023. This translates to a surge in job opportunities, with the US alone witnessing a remarkable 74% increase in new cybersecurity jobs between 2022 and 2023.
+  image:
+    src: "/images/landing/feliz-empresario.png"
+
+
+## TWO COLUMNS
+two_columns_info:
+  proportions: [6, 6]
+  image:
+    style: '{"border" : "0px solid black", "backgroundSize": "contain", "background-position": "center" }'
+    src: "../../images/landing/grupo-ventanas.png"
+    shadow: false
+  heading:
+    text: "Be part of the next Generation of Cybersecurity Professionals"
+    font_size: ["30px", "30px", "30px", "26px", "24px"]
+  sub_heading:
+    text: ""
+    font_size: ["16px", "16px", "16px", "16px", "16px"]
+
+  bullets:
+    items:
+      - text: "Connect with a network of over 6,000 professionals and students worldwide."
+      - text: "Part-time programs that allow you to study without giving up your current life."
+      - text: "Not only do you learn to code, but you also develop practical, real-world applicable skills."
+      - text: "Lifetime access to personalized mentorship to support you at every step of your professional journey."
+
+## TWO COLUMNS
+two_columns:
+  proportions: [6, 6]
+  image:
+    style: '{"border" : "0px solid black", "backgroundSize": "contain", "background-position": "center" }'
+    src: "../../images/staff/chema-daniela.jpg"
+    shadow: false
+  heading:
+    text: "Become a Specialist with Our Cybersecurity Bootcamp"
+    font_size: ["30px", "30px", "30px", "26px", "24px"]
+  sub_heading:
+    text: "Gain the knowledge to protect systems against cyber threats. This intensive Bootcamp will provide you with the necessary skills to identify, analyze, and prevent attacks, using tools such as Nessus, Nmap, Wireshark, and Metasploit. Additionally, This syllabus was co-created by Daniela Maissi, an ethical hacer from the EC-Council as Malware researcher and cybersecurity expert with over 5 years of experience and 12+ certifications in cloud computing, OSINT, and IT solutions."
+    font_size: ["16px", "16px", "16px", "16px", "16px"]
+  button:
+    text: "Apply now"
+    color: "white"
+    background: "black"
+    path: "#prices_and_payment"
+  bullets:
+    items:
+      - text: "Develop practical skills in data loss prevention (DLP) techniques"
+      - text: "Techniques for hardening Windows and Linux systems against cyber threats"
+      - text: "This cybersecurity bootcamp is officially approved and taught by Chema Alonso, guaranteeing top-tier education and industry expertise."
+
+upcoming:
+  no_dates_message: "There are currently no upcoming dates for this program"
+  actionMessage: "Let me know when dates are available"
+
+## PROGRAM DETAILS
+details:
+  about:
+    title: "About This Program"
+    sub_title: |
+      You will gain a solid foundation in networking, Windows, Linux, and server administration, while also acquiring practical skills to secure these environments.
+      The program delves into cloud security, penetration testing (both offensive and defensive), and cyber threat intelligence analysis.
+      Learn to manage risks with data loss prevention (DLP) strategies and navigate compliance with international standards such as <strong>ISO 27001 and NIST.</strong>
+    list:
+      - label: "Duration"
+        content: "14 weeks"
+        icon: "calendar"
+      - label: "Classes"
+        content: "3 Classes per week"
+        icon: "book"
+      - label: "Class Size"
+        content: "Up to 10 people"
+        icon: "laptop"
+      - label: "Certificate"
+        content: "Our certificates are recognized by multiple institutions."
+        link_text: ""
+        link: ""
+        icon: "certificate"
+      - label: "Requirements"
+        content: "No prior experience needed"
+        icon: "contract-checked"
+
+  heading: PROGRAM DETAILS
+  weeks: 14
+  facts:
+    - label: "Duration"
+      value: "14 weeks"
+    - label: "Commitment"
+      value: "20 hrs/week (Mon - Wed - Fri)"
+    - label: "Certificate"
+      content: "Our certificates are recognized by multiple institutions."
+      link_text: "View example"
+      link: ""
+      icon: "certificate"
+    - label: "Schedule"
+      value: "Online / Remote"
+    - label: "Class Size"
+      value: "Up to 14 people"
+  sub_heading: "Enhance Your Cybersecurity Skills From Fundamentals to Advanced Techniques"
+  left_labels:
+    description: "DESCRIPTION:"
+    projects: "PROJECTS:"
+    duration: "DURATION:"
+    skills: "Skills / Weeks:"
+  details_modules:
+    - module_name: "PreWork"
+      title: "Introduction to Cybersecurity"
+      description: "We'll start with a 'prework', where you'll learn the basics of computer security, including major threats, vulnerabilities, and the importance of cybersecurity in today's world."
+      projects: "Introduction to cybersecurity, information technology [IT] technologies, and information security best practices, as well as an introduction to Packet Tracer, a visual simulation tool for packet tracing."
+      slug: "security-intro"
+      duration: "1 week"
+      step: 1
+    - module_name: "Fundamentals and Network Security"
+      title: "Networking Basics and Network Security"
+      description: |
+        You will delve into networking basics, such as the OSI model, TCP/IP, network architectures, and devices, including different network technologies and communication protocols.
+        \n You will become familiar with major threats and vulnerabilities in networks, such as common attacks, software and hardware vulnerabilities, and vulnerability exploitation.
+      projects: |
+        In practice, you will dive into reference models, IP address management, network protocols, enterprise network architecture, and Virtual Box. \n
+        You will master tools like Nmap, Wireshark, and Nessus for analyzing and securing networks.
+      slug: "cybersecurity-fundamentals"
+      duration: "1 week"
+      step: 1
+    - module_name: "Linux and Server Administration"
+      title: "Linux and Server Administration"
+      description:
+        "You will delve into Linux concepts, securing your systems through hardening, file security, permissions, and Linux security tools.
+        You will also learn about server installation and configuration, user and group management, and services and processes on servers."
+      projects: "Preparation of the virtual environment, basic administration of users and groups, server security configuration, scheduling automated tasks, and monitoring and optimizing server performance."
+      slug: "datacollection"
+      duration: "2 weeks"
+      step: 2
+    - module_name: "Cyber Intelligence"
+      title: "Threat and Vulnerability Management"
+      description: "You will understand the principles and techniques of cyber intelligence, learning to collect, analyze, and process information on cyber threats."
+      projects: |
+        You will acquire skills to investigate cyber incidents, determine their origin and scope, and take appropriate measures to mitigate their impact \n by learning to implement and maintain an Information Security Management System (ISMS) in accordance with ISO 27001.
+      slug: "data-analysis"
+      duration: "2 weeks"
+      step: 3
+    - module_name: "Pentesting"
+      title: "Pentesting Fundamentals"
+      description: "You will acquire the basic knowledge of penetration testing, including different methodologies, tools, and techniques. You will learn to perform basic pentesting tests, such as vulnerability scanning, web application attacks, and network and system attacks, known as Blue Team (focused on defense) or Red Team (focused on attack)."
+      projects: "You will learn to monitor networks and systems, analyze security incidents, and develop response plans. You will become familiar with the Blue Team approach, which focuses on defense and response to attacks, and also acquire knowledge of the Red Team approach, which focuses on simulating advanced attacks."
+      slug: "pentesting-module"
+      duration: "3 weeks"
+      step: 3
+    - module_name: "DLP"
+      title: "DLP and Risk Management"
+      description: "You will learn about data loss prevention (DLP), protecting your organization's sensitive data through data classification techniques, access control, and data protection in transit and at rest."
+      projects: "You will acquire knowledge to identify and assess security risks, implement control measures, prevent threats, and protect against external attacks."
+      slug: "dlp-and-risks"
+      duration: "3 weeks"
+      step: 3
+    - module_name: "NIST"
+      title: "National Institute of Standards"
+      description: "You will delve into the NIST Cybersecurity Framework, its components, and how to implement it in your organization."
+      projects: "Security planning, data backup and recovery, and continuity testing and exercises."
+      slug: "nist"
+      duration: "3 weeks"
+      step: 3
+    - module_name: "LIFELONG LEARNING"
+      title: "Lifelong Learning"
+      description: "Receive assistance from the academy before, during, and after graduation, with unlimited access to content and professional support (career support) for life. You will even receive help during the start of your new job, you will never be alone again!"
+      projects: "This program equips you with the knowledge and skills to launch a rewarding career in cybersecurity. The demand for cybersecurity professionals is expected to grow by 31% between 2020 and 2030, much faster than the average for all occupations."
+      slug: "lifelong-learning"
+      duration: "Lifetime"
+      step: 0.1
+
+syllabus:
+  heading: Get all the information about the syllabus
+  button_label: Download
+
+potential_companies:
+  tagline: "Get trained to thrive at major companies"
+  sub_heading: "Get ready to apply to the best companies in the world: Develop the tools to upskill for the future of AI work."
+  companies:
+    - name: "Facebook"
+      image: "../../../static/images/partner/meta-logo.png"
+      alt: ""
+    - name: "Google"
+      image: "../../../static/images/partner/google.png"
+      alt: ""
+    - name: "Microsoft"
+      image: "../../../static/images/partner/microsoft.png"
+      alt: ""
+    - name: "Apple"
+      image: "../../../static/images/partner/apple.png"
+      alt: ""
+    - name: "Salesforce"
+      image: "../../../static/images/partner/salesforce.png"
+      alt: ""
+    - name: "Oracle"
+      image: "../../../static/images/partner/oracle.png"
+      alt: ""
+    - name: "AirBnB"
+      image: "../../../static/images/partner/airbnb.png"
+      alt: ""
+    - name: "Uber"
+      image: "../../../static/images/partner/uber.png"
+      alt: ""
+
+## 4GEEKS VS OTHERS SECTION
+geeks_vs_others:
+  heading: "WHAT MAKES US SO SUCCESSFULL?"
+  sub_heading: "The unique features of 4Geeks Academy"
+  sub_heading_link: ""
+## GEEK PAL AND GEEK FORCE BOXES
+geek_data:
+  heading: And Fortune 500 companies will hire you!
+  geek_pal:
+    - Unlimited Senior mentorship.
+    - Lifetime access to the software community.
+    - Worldwide access and support.
+  geek_force:
+    - Helping you land a job in a 500 Fortune company.
+    - Profile, portfolio, interviews, workshops, talks, software community, network, active projects collaboration.
+    - It's about getting your career to the next level.
+
+## PRICES AND PAYMENTS SECTION
+prices:
+  heading: "PRICES AND PAYMENTS"
+  sub_heading: ""
+
+## ALUMNI SECTION
+alumni:
+  heading: "MEET THE ALUMNI AND PROJECTS"
+  sub_heading: "Get to know our graduates and some of the projects you will be building during the program"
+
+faq:
+  title: "Frequently Asked Questions"
+  read_more: "Contact us for more questions"
+  link: "/faq"

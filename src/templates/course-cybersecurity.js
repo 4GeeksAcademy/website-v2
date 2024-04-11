@@ -30,7 +30,7 @@ const Program = ({ data, pageContext, yml }) => {
   const geek = data.allCourseYaml.edges[0].node;
   const [open, setOpen] = React.useState(false);
 
-  const defaultCourse = "datascience-ml";
+  const defaultCourse = "cyber-security";
   const program_type = yml.meta_info.slug.includes("full-time")
     ? "full_time"
     : "part_time";
@@ -85,12 +85,14 @@ const Program = ({ data, pageContext, yml }) => {
         padding_lg="40px 0px"
         padding_tablet="40px 40px"
         position="relative"
-        fontSize_title="40px"
-        fontSizeTitle_tablet="60px"
+        fontSize_title="26px"
+        lineHeight="30px"
+        fontSizeTitle_tablet="40px"
+        lineHeight_table="44px"
         fontFamily_title="Archivo-Black"
         fontSize_paragraph="24px"
         gridTemplateColumns_tablet="repeat(14, 1fr)"
-        maxWidth="1280px"
+        maxWidth="1366px"
         uppercase
       >
         <Img
@@ -190,9 +192,24 @@ const Program = ({ data, pageContext, yml }) => {
         />
       </Header>
 
+      {/* TWO COLUMN CREAR EN EL YML*/}
+      <TwoColumn
+        left={{ image: yml.two_columns_first?.image }}
+        right={{
+          heading: yml.two_columns_first?.heading,
+          sub_heading: yml.two_columns_first?.sub_heading,
+          bullets: yml.two_columns_first?.bullets,
+          content: yml.two_columns_first?.content,
+          button: yml.two_columns_first?.button,
+        }}
+        proportions={yml.two_columns_first?.proportions}
+        session={session}
+      />
+
       <JobGuaranteeSmall
         content={data.allJobGuaranteeSmallYaml.edges[0].node}
       />
+
       <ProgramDetails
         details={courseDetails.details}
         lang={pageContext.lang}
@@ -205,6 +222,20 @@ const Program = ({ data, pageContext, yml }) => {
         course={program_type}
       />
 
+      {/* TWO COLUMN CREAR EN EL YML*/}
+      <TwoColumn
+        right={{ image: yml.two_columns_second?.image }}
+        left={{
+          heading: yml.two_columns_second?.heading,
+          sub_heading: yml.two_columns_second?.sub_heading,
+          bullets: yml.two_columns_second?.bullets,
+          content: yml.two_columns_second?.content,
+          button: yml.two_columns_second?.button,
+        }}
+        proportions={yml.two_columns_second?.proportions}
+        session={session}
+      />
+
       {/* OVERLAPED CREAR EN EL YML*/}
       <Overlaped
         heading={yml.overlaped?.heading}
@@ -213,12 +244,22 @@ const Program = ({ data, pageContext, yml }) => {
         image={yml.overlaped?.image}
       />
 
-      {/* GEEKSINFO IS A TWOCOLUMN WITH TITLE */}
-      <GeeksInfo lang={pageContext.lang} />
-
       {/* TWO COLUMN CREAR EN EL YML*/}
       <TwoColumn
-        left={{ image: yml.two_columns?.image, video: yml.two_columns?.video }}
+        right={{ image: yml.two_columns_info?.image }}
+        left={{
+          heading: yml.two_columns_info?.heading,
+          sub_heading: yml.two_columns_info?.sub_heading,
+          bullets: yml.two_columns_info?.bullets,
+          content: yml.two_columns_info?.content,
+          button: yml.two_columns_info?.button,
+        }}
+        proportions={yml.two_columns?.proportions}
+        session={session}
+      />
+      {/* TWO COLUMN CREAR EN EL YML*/}
+      <TwoColumn
+        left={{ image: yml.two_columns?.image }}
         right={{
           heading: yml.two_columns?.heading,
           sub_heading: yml.two_columns?.sub_heading,
@@ -473,6 +514,76 @@ export const query = graphql`
                     placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                   )
                 }
+              }
+            }
+          }
+          two_columns_info {
+            proportions
+            image {
+              style
+              src
+              shadow
+            }
+            heading {
+              text
+              font_size
+            }
+            sub_heading {
+              text
+              font_size
+            }
+            bullets {
+              items {
+                text
+              }
+            }
+          }
+          two_columns_second {
+            proportions
+            image {
+              style
+              src
+              shadow
+            }
+            heading {
+              text
+              font_size
+            }
+            sub_heading {
+              text
+              font_size
+            }
+            button {
+              text
+              color
+              background
+              path
+            }
+          }
+          two_columns_first {
+            proportions
+            image {
+              style
+              src
+              shadow
+            }
+            heading {
+              text
+              font_size
+            }
+            sub_heading {
+              text
+              font_size
+            }
+            button {
+              text
+              color
+              background
+              path
+            }
+            bullets {
+              items {
+                text
               }
             }
           }

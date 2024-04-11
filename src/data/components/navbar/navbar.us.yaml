@@ -23,6 +23,14 @@ navbar:
             - text: "View program"
               link: "/us/coding-bootcamps/datascience-machine-learning"
 
+        - title: "CyberSecurity Bootcamp"
+          level: " "
+          icon: "cyber-security"
+          paragraph: "Become a cybersecurity specialist, equipped to identify, manage and mitigate system vulnerabilities, in compliance with ISO and other standards"
+          buttons:
+            - text: "View program"
+              link: "/us/coding-bootcamps/cybersecurity"
+
         - title: "Blockchain and Web3"
           level: " "
           icon: "blockchain"

@@ -92,7 +92,7 @@ follow_bar:
 #
 components:
   - name: top_coding_bootcamp
-    position: 6
+    position: 1
     layout: two_column_left
     proportions: [4, 8]
     background: "#f1f1f1"
@@ -107,7 +107,7 @@ components:
       font_size: ["38px", "36px", "32px", "30px", "30px"]
 
   - name: some_id
-    position: 3
+    position: 2
     layout: two_column_right
     image:
       src: "/images/testimonials/valentina-review.jpg"
@@ -120,37 +120,14 @@ components:
       text: "Con más de 18 meses operando en el país contamos con uno de los mejores programas de estudio para aprender a programar a nivel mundial🌍 además de fuertes alianzas con diferentes empresas a nivel nacional e internacional que nos permiten ayudar a nuestros estudiantes a encontrar empleo ¡en tiempo record!⏰"
       font_size: ["16px"]
     button:
-      text: "Testimonios de estudiantes"
+      text: "Únete a la Academia"
       background: black
       color: white
       hover_color: "#white"
-      path: "#why_4geeks"
-
-  - name: how-it-works
-    position: 2
-    background: "veryLightBlue2"
-    layout: iconogram
-    swipable: True
-    heading:
-      text: "¿Cómo funciona?"
-      font_size: ["30px", "30px", "30px", "30px", "30px"]
-    sub_heading:
-      text: "Descubre el proceso paso a paso para unirte a 4Geeks Academy."
-      font_size: ["16px", "16px", "16px", "16px", "16px"]
-      style: '{ "textAlign": "center", "width": "60%" }'
-    text_link: "#"
-    icons:
-    - icon: "touch"
-      title: Completa el formulario
-    - icon: "receive_mail"
-      title: Recibirás un correo con detalles para avanzar en el proceso
-    - icon: "talk"
-      title: Realiza una entrevista telefónica con el equipo de admisiones
-    - icon: "terminal"
-      title: Reserva tu lugar y ¡Avanza en tu carrera!
+      path: "#leadform_bottom"
 
 rating_reviews:
-  position: 5
+  position: 2
   heading: "Lee acerca de nosotros"
   rating_list:
     - alt: "Career Karma"
@@ -171,7 +148,7 @@ rating_reviews:
       url: ""
 
 badges:
-  position: 4
+  position: 3
   heading: "4Geeks Academy cuenta con premios y reconocimientos que validan su excelencia"
 
 program_details:
