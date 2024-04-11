@@ -7,7 +7,7 @@ full_time:
     price: "$7999"
     original_price: "$9999"
     warning_message: "Limited seats!"
-    offer: "40% OFF"
+    offer: "20% OFF"
     bullets: 
       - "You're saving $4000 USD"
       - "Regular tuition is $11999. Avg tuition in the US is $15k."

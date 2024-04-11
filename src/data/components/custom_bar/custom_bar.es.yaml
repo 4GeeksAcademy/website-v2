@@ -1,7 +1,11 @@
 bar_content:
-  heading: "Conviértete en desarrollador 
-  
-  in 16 semanas"
+  heading: "Conviértete en desarrollador in 16 semanas"
   sub_heading: ""
   button_text: "Read More"
   link_to: "/es/part-time"
+  discount:
+    message: "¡¡Precios tan bajos como 40 % de descuento!!"
+    ends_in: "Termina en"
+    button:
+      label: "Ver precios →"
+      path: /es/financials#prices_and_payment

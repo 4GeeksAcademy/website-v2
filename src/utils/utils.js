@@ -50,6 +50,32 @@ export const transferQuerystrings = (url, utmSession) => {
   return `${origin}?${joinQS({ ...params, ...utmSession })}`;
 };
 
+export const dateDifference = (startDate, endDate) => {
+  let differenceMs = Math.abs(startDate - endDate);
+
+  // Calculate days
+  const days = Math.floor(differenceMs / (1000 * 60 * 60 * 24));
+  differenceMs -= days * (1000 * 60 * 60 * 24);
+
+  // Calculate hours
+  const hours = Math.floor((differenceMs % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  differenceMs -= hours * (1000 * 60 * 60);
+
+  // Calculate minutes
+  const minutes = Math.floor((differenceMs % (1000 * 60 * 60)) / (1000 * 60));
+  differenceMs -= minutes * (1000 * 60);
+
+  // Calculate seconds
+  const seconds = Math.floor((differenceMs % (1000 * 60)) / 1000);
+
+  return {
+    days,
+    hours,
+    minutes,
+    seconds
+  };
+}
+
 // export const separateCurrencySymbols = (mount) => {
 //   const currency = [];
 //   const notCurrency = [];

@@ -193,6 +193,7 @@ const PricingCard = ({
             >
               {data.icons.map((icon) => (
                 <Img
+                  key={`${icon}-${slug}`}
                   src={icon}
                   alt="4Geeks Academy Icon"
                   backgroundSize="contain"
@@ -222,7 +223,7 @@ const PricingCard = ({
           </H3>
           {data.bullets &&
             data.bullets.map((bullet) => (
-              <Div alignItems="center" margin="21px 0 0 0">
+              <Div key={bullet} alignItems="center" margin="21px 0 0 0">
                 <Icon
                   icon="check"
                   width="17px"

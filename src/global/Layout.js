@@ -44,6 +44,7 @@ const Layout = ({ children, seo, context }) => {
             custom_bar {
               active
               message
+              discounts
               button {
                 label
                 path
@@ -170,7 +171,7 @@ const Layout = ({ children, seo, context }) => {
       )}
       <SEO {...seo} context={{ ...context, locations: myLocations }} />
       <Navbar
-        locationCity={myLocations}
+        myLocations={myLocations}
         currentURL={context.pagePath}
         onLocationChange={(slug) => setLocation(slug)}
         menu={myNavbar.node.navbar}
@@ -179,7 +180,7 @@ const Layout = ({ children, seo, context }) => {
         lang={context.lang}
       />
       <NavbarMobile
-        locationCity={myLocations}
+        myLocations={myLocations}
         currentURL={context.pagePath}
         onLocationChange={(slug) => setLocation(slug)}
         menu={myNavbar.node.navbar}

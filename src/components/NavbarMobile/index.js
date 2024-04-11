@@ -126,7 +126,7 @@ export const NavbarMobile = ({
   languageButton,
   onLocationChange,
   currentURL,
-  locationCity,
+  myLocations,
 }) => {
   const { session } = useContext(SessionContext);
   const [status, setStatus] = useState({
@@ -149,16 +149,13 @@ export const NavbarMobile = ({
 
   const [contentBar, setContentBar] = useState({});
 
-  let currentLocation = locationCity ? locationCity : [];
   const [buttonText, setButtonText] = useState("");
+  const [showDiscount, setShowDiscount] = useState(false);
 
   /* In case of want change the Button text "Aplica" search the key 
         "apply_button_text" in /src/data/location/locationfile.yaml
     */
-  let findCity = currentLocation.find((loc) => loc.node?.city === city);
-
-  // let isCustombarActive =
-  //   session && session.location && session.location.custom_bar.active;
+  let findCity = myLocations.find((loc) => loc.node?.city === city);
 
   const isContentBarActive = contentBar.active || isDevelopment();
 
@@ -166,6 +163,7 @@ export const NavbarMobile = ({
     if (findCity !== undefined && findCity.node) {
       setButtonText(findCity.node.button.apply_button_text);
       setContentBar(findCity?.node.custom_bar);
+      if (findCity.node.custom_bar.discounts) setShowDiscount(true);
     }
   }, [findCity]);
 
@@ -224,10 +222,33 @@ export const NavbarMobile = ({
           }
         }
       }
+      allCustomBarYaml {
+        edges {
+          node {
+            bar_content {
+              discount {
+                message
+                ends_in
+                button {
+                  label
+                  path
+                }
+              }
+            }
+            fields {
+              lang
+            }
+          }
+        }
+      }
     }
   `);
 
   const locations = locByLanguage(data.allLocationYaml, langDictionary[lang]);
+
+  const myCustomBar = data.allCustomBarYaml.edges.find(
+    (item) => item.node.fields.lang === lang
+  );
 
   return (
     <Div
@@ -241,6 +262,8 @@ export const NavbarMobile = ({
       <CustomBar
         isContentBarActive={isContentBarActive}
         contentBar={contentBar}
+        discountContent={myCustomBar?.node}
+        showDiscount={showDiscount}
         display_md="none"
         display_xxs="flex"
         position="static"
@@ -647,72 +670,3 @@ export const MegaMenu = ({
     </>
   );
 };
-
-// {status.toggle && status.itemIndex != null && status.itemIndex != menu.length - 1 &&
-//     <MegaMenuContainer
-//         onMouseLeave={() => {
-//             setStatus({...status, hovered: false});
-//             setTimeout(() => {
-//                 setStatus(_status => ({..._status, toggle: _status.hovered}));
-//             }, 300)
-//         }}
-//         background="white" transform={MegaMenuPositions[status.itemIndex].transform} padding_tablet="30px 30px 45px 30px" position="absolute" top="100px" left={status.itemIndex == 0 ? "0" : MegaMenuPositions[status.itemIndex].left} zIndex_tablet="1" borderRadius="3px" minWidth_tablet={status.itemIndex == 0 ? "100%" : "432px"} maxWidth_tablet="100%" minHeight_tablet="347px" boxShadow="0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" >
-//         <Grid gridTemplateColumns_tablet="repeat(12, 1fr)" gridTemplateRows="2" width="100%">
-//             <Div borderBottom_tablet="1px solid #EBEBEB" gridArea_tablet="1/1/1/13" padding="0 0 27px 0" margin="0 0 50px 0">
-//                 {menu[status.itemIndex].sub_menu.icon && <Div margin="0 15px 0 0"><Icon icon={menu[status.itemIndex].sub_menu.icon} width="43px" height="34px" /></Div>}
-//                 <Div flexDirection="column" >
-//                     <H3 textAlign="left" fontSize="15px" lineHeight="22px" fontWeight="900" margin="0 0 5px 0">{status.itemIndex != null && menu[status.itemIndex].sub_menu.title}</H3>
-// {menu[status.itemIndex].sub_menu.paragraph.split('\n').map((d, i) =>
-//     <Paragraph
-//         textAlign="left"
-//         color={Colors.darkGray}
-//         key={i}                        >
-//         {d}
-//     </Paragraph>
-// )}
-//                 </Div>
-//             </Div>
-//             <Div gridArea_tablet="2/1/2/13" >
-//                 <Grid gridTemplateColumns_tablet={`repeat(${menu[status.itemIndex].sub_menu.links.length}, 1fr)`} width="100%">
-//                     {Array.isArray(menu[status.itemIndex].sub_menu.links) && menu[status.itemIndex].sub_menu.links.map((m, i) => {
-//                         return (
-//                             <Div flexDirection="column" key={i}>
-//                                 {m.icon && <Icon icon={m.icon} width="100px" height="73px" />}
-//                                 {m.level && <H4 textAlign="left" margin="19px 0 5px 0" fontSize="15px" fontWeight="400" lineHeight="22px">{m.level}</H4>}
-//                                 <H3 textAlign="left" fontSize="15px" lineHeight="22px" fontWeight="900" margin="0 0 5px 0">{m.title}</H3>
-//                                 {m.paragraph && <Paragraph textAlign="left">{m.paragraph}</Paragraph>}
-//                                 {m.buttons != undefined &&
-//                                     <Div>
-//                                         {Array.isArray(m.buttons) && m.buttons.map((m, i) => {
-//                                             return (
-//                                                 <Button
-//                                                     outline
-//                                                     color="black"
-//                                                     font='"Lato", sans-serif'
-//                                                     width="fit-content"
-//                                                     margin="20px 10px 0 0"
-//                                                     pointer
-//                                                     textColor={Colors.black}
-//                                                     fontSize={"13px"}
-//                                                     borderRadius="3px" padding="10px"
-//                                                 >
-//                                                     {m.text}
-//                                                 </Button>
-//                                             )
-//                                         })}
-//                                     </Div>
-//                                 }
-// {m.sub_links != undefined && Array.isArray(m.sub_links) && m.sub_links.map((m, i) => {
-//     return (
-//         <Link to={m.link_to} key={i}><Div alignItems="baseline" margin="5px 0 "><H3 textAlign="left" width="fit-content" fontSize="15px" lineHeight="20px" fontWeight="400" margin="0 5px 0 0">{m.title}</H3><Icon icon="arrow-right" color="#A4A4A4" width="8px" height="8px" /></Div></Link>
-//     )
-// })}
-
-//                             </Div>
-//                         )
-//                     })}
-//                 </Grid>
-//             </Div>
-//         </Grid>
-//     </MegaMenuContainer>
-// }
