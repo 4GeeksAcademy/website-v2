@@ -66,10 +66,10 @@ full_time:
     recomended: true
     scholarship: "Scholarships Available"
     payment_time: ""
-    price: "From €160 /mo."
+    price: "From €150 /mo."
     bullets:
       - "Customized financing without interests. From 4 to 30 months."
-      - "Scholarships available up to €1,900. Pay €4,800 instead of €6,700. Scholarships subject to availability!"     
+      - "Scholarships available up to €1,850. Pay €4,950 instead of €6,800. Scholarships subject to availability!"     
     icons: 
       - "/images/zank.png"
       - "/images/sequra.png"
@@ -196,10 +196,10 @@ part_time:
     recomended: false
     scholarship: "Pay upfront"
     payment_time: "And get a discount"
-    price: "€4600*"
+    price: "€4,750*"
     bullets:
-      - "Pay with wire transfer, credit or debit card, Paypal, Bitcoin or Ethereum"
-      - "*Discount up to €1700. From €4600 instead of €6300"     
+      - "Pay using your bank account, credit or debit card, Paypal, Bitcoin or Etherium."
+      - "*Discounts up to €2,050. Pay €4,750 instead of €6,800. Discount subject to availability."     
     icons: 
       - "/images/visa-mastercard.png"    
       - "/images/bitcoin_logo.png"  
@@ -210,11 +210,11 @@ part_time:
     recomended: true
     scholarship: "Scholarships available"
     payment_time: ""
-    price: "~€175 / mo."
+    price: "From €150 /mo."
     bullets:
-      - "Tailor-made financing plans, with or without interest, from 4 to 30 installments"
-      - "Scholarships available up to €1600. From €4700 instead of €6300"     
-    icons: 
+      - "Customized financing without interests. From 4 to 30 months."
+      - "Scholarships available up to €1,850. Pay €4,950 instead of €6,800. Scholarships subject to availability!"     
+    icons:
       - "/images/quotanda-logo.png"
 
   - slug: 'spain-isa-fs-pt'
@@ -245,11 +245,11 @@ part_time:
     recomended: true
     scholarship: "Scholarships available"
     payment_time: ""
-    price: "From €160 / mo."
+    price: "From €150 /mo."
     bullets:
-      - "Tailor-made financing plans, with or without interest, from 4 to 30 installments"
-      - "Scholarships available up to €1,800. From €4,800 instead of €6,700. Scholarships subject to availability."     
-    icons: 
+      - "Customized financing without interests. From 4 to 30 months."
+      - "Scholarships available up to €1,850. Pay €4,950 instead of €6,800. Scholarships subject to availability!"     
+    icons:  
       - "/images/zank.png"
       - "/images/sequra.png"
       - "/images/nemuru.png"
@@ -310,10 +310,10 @@ part_time:
     recomended: false
     scholarship: "Pay upfront"
     payment_time: "And get a discount"
-    price: "€4,550*"
+    price: "€4,750*"
     bullets:
-      - "Pay with wire transfer, credit or debit card, Paypal, Bitcoin or Ethereum"
-      - "*Discount up to €2,150. From €4,550 instead of €6,700. Scholarships subject to availability."     
+      - "Pay using your bank account, credit or debit card, Paypal, Bitcoin or Etherium."
+      - "*Discounts up to €2,050. Pay €4,750 instead of €6,800. Discount subject to availability."     
     icons: 
       - "/images/visa-mastercard.png"    
       - "/images/bitcoin_logo.png"  
@@ -337,10 +337,10 @@ part_time:
     recomended: true
     scholarship: "Scholarships available"
     payment_time: ""
-    price: "From €150 / mo."
+    price: "From €150 /mo."
     bullets:
-      - "Tailor-made financing plans, with or without interest, from 4 to 30 installments"
-      - "Scholarships available up to €2300. From €4000 instead of €6300"     
+      - "Customized financing without interests. From 4 to 30 months."
+      - "Scholarships available up to €1,850. Pay €4,950 instead of €6,800. Scholarships subject to availability!"     
     icons: 
       - "/images/quotanda-logo.png"
 
@@ -349,10 +349,10 @@ part_time:
     recomended: false
     scholarship: "Pay upfront"
     payment_time: "And get a discount"
-    price: "€3850*"
+    price: "€4,750*"
     bullets:
-      - "Pay with wire transfer, credit or debit card, Paypal, Bitcoin or Ethereum"
-      - "*Discount up to €2450. From €3850 instead of €6300"     
+      - "Pay using your bank account, credit or debit card, Paypal, Bitcoin or Etherium."
+      - "*Discounts up to €2,050. Pay €4,750 instead of €6,800. Discount subject to availability."     
     icons: 
       - "/images/visa-mastercard.png"    
       - "/images/bitcoin_logo.png"  

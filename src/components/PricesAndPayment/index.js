@@ -601,7 +601,7 @@ const PricesAndPayment = (props) => {
       padding_tablet="70px 40px"
       padding_md="70px 80px"
       padding_lg="70px 0px"
-      maxWidth_md="1366px"
+      maxWidth_md="1280px"
       margin="0 auto"
     >
       <H2
@@ -781,6 +781,8 @@ const PricesAndPayment = (props) => {
       <Div
         display="block"
         background="#FFF"
+        padding_tablet="0 0 38px 0"
+        maxWidth_md="1280px"
         minWidth_md="580px"
         margin="20px auto"
         className="main-container"

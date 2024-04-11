@@ -91,7 +91,7 @@ part_time:
     price: "~€200 / mo."
     bullets:
       - "Tailor-made financing plans, with or without interest, from 4 to 30 installments"
-      - "Scholarships available up to €2500. From €5300 instead of €7800. Scholarships subject to availability!"     
+      - "Scholarships available up to €2400. From €5400 instead of €7800. Scholarships subject to availability!"     
     icons: 
       - "/images/zank.png"
       - "/images/sequra.png"
@@ -103,10 +103,10 @@ part_time:
     recomended: false
     scholarship: "Pay upfront"
     payment_time: "And get a discount"
-    price: "€4950*"
+    price: "€5200*"
     bullets:
       - "Pay with wire transfer, credit or debit card, Paypal, Bitcoin or Ethereum"
-      - "*Discount up to €2850. From €4950 instead of €7800. Scholarships subject to availability."     
+      - "*Discount up to €2600. From €5200 instead of €7800. Scholarships subject to availability."     
     icons: 
       - "/images/visa-mastercard.png"    
       - "/images/bitcoin_logo.png"  
@@ -132,7 +132,7 @@ part_time:
     price: "~€200 / mo."
     bullets:
       - "Tailor-made financing plans, with or without interest, from 4 to 30 installments"
-      - "Scholarships available up to €2500. From €5300 instead of €7800"     
+      - "Scholarships available up to €2400. From €5400 instead of €7800"     
     icons: 
       - "/images/quotanda-logo.png"
 
@@ -141,10 +141,10 @@ part_time:
     recomended: false
     scholarship: "Pay upfront"
     payment_time: "And get a discount"
-    price: "€5000*"
+    price: "€5200*"
     bullets:
       - "Pay with wire transfer, credit or debit card, Paypal, Bitcoin or Ethereum"
-      - "*Discount up to €2800. From €5000 instead of €7800"     
+      - "*Discount up to €2600. From €5200 instead of €7800"     
     icons: 
       - "/images/visa-mastercard.png"    
       - "/images/bitcoin_logo.png"  
@@ -170,7 +170,7 @@ part_time:
     price: "~€200 / mo."
     bullets:
       - "Tailor-made financing plans, with or without interest, from 4 to 30 installments"
-      - "Scholarships available up to €2800. From €5000 instead of €7800"     
+      - "Scholarships available up to €2400. From €5400 instead of €7800"     
     icons: 
       - "/images/quotanda-logo.png"
 
@@ -179,10 +179,10 @@ part_time:
     recomended: false
     scholarship: "Pay upfront"
     payment_time: "And get a discount"
-    price: "€4500*"
+    price: "€5200*"
     bullets:
       - "Pay with wire transfer, credit or debit card, Paypal, Bitcoin or Ethereum"
-      - "*Discount up to €3300. From €4500 instead of €7800"     
+      - "*Discount up to €2600. From €5200 instead of €7800"     
     icons: 
       - "/images/visa-mastercard.png"    
       - "/images/bitcoin_logo.png"  

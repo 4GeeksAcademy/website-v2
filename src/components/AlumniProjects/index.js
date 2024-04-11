@@ -108,7 +108,7 @@ const AlumniProjects = ({
     <Div
       flexDirection="column"
       style={containerStyle}
-      maxWidth_lg="1366px"
+      maxWidth_lg="1280px"
       maxWidth_md="1024px"
       maxWidth_tablet="768px"
       margin_md="0px auto 30px auto"

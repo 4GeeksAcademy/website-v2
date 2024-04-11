@@ -135,7 +135,7 @@ const Contact = (props) => {
         padding_md="40px 80px"
         padding_lg="40px 0px"
         padding_tablet="40px 40px"
-        maxWidth="1366px"
+        maxWidth="1280px"
       >
         <Div
           paddingRight="0px"

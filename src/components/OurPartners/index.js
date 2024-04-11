@@ -13,7 +13,7 @@ const Title_Paragraph = (props) => {
   return (
     <>
       <Grid
-        maxWidth="1366px"
+        maxWidth="1280px"
         margin="0 auto 20px auto"
         background={props.background}
         gridTemplateColumns_tablet="1fr repeat(12, 1fr) 1fr"
@@ -197,7 +197,7 @@ const Images_Featured = (props) => {
         display_sm="none"
         //display_tablet="block"
         justifyContentChild="center"
-        maxWidth="1366px"
+        maxWidth="1280px"
         margin="0 auto"
         columns_tablet={
           imagesFiltered.length <= 4 ? imagesFiltered.length : "3"

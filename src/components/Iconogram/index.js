@@ -23,18 +23,13 @@ const Iconogram = ({ session, data, pageContext, yml, index }) => {
   return (
     <Div
       key={index}
-      padding={heading.text ? "30px 0 30px 0" : "60px 0 60px 0"}
-      display="flex"
-      flexDirection="column"
-      id="iconogram"
-      containerColumns_tablet="repeat(14, 1fr)"
-      columns="1"
-      rows="2"
-      margin="auto"
-      height="auto"
+      display="block"
+      margin="0 auto"
+      padding="40px 20px"
+      padding_lg="40px 0"
+      padding_md="40px 80px"
+      padding_tablet="40px 40px"
       width="100%"
-      alignItems="center"
-      background={Colors.lightYellow}
     >
       {heading.text && (
         <H2
@@ -44,7 +39,7 @@ const Iconogram = ({ session, data, pageContext, yml, index }) => {
           fontSize_tablet="24px"
           fontSize="24px"
           //margin="30px 0 30px 0"
-          maxWidth="1366px"
+          maxWidth="1280px"
           margin="30px auto"
           style={
             heading?.style
@@ -55,7 +50,7 @@ const Iconogram = ({ session, data, pageContext, yml, index }) => {
           {heading.text}
         </H2>
       )}
-      {sub_heading && /<\/?[a-z0-9]+>/g.test(sub_heading.text) ? (
+      {/<\/?[a-z0-9]+>/g.test(sub_heading?.text) ? (
         <Paragraph
           padding_xs={heading.text ? "0 10%" : "20px 10%"}
           padding_tablet={heading.text ? "0 10%" : "20px 10%"}
@@ -63,11 +58,11 @@ const Iconogram = ({ session, data, pageContext, yml, index }) => {
           margin="15px auto"
           fontSize="16px"
           fontHeight="30px"
-          maxWidth="1366px"
+          maxWidth="1280px"
           dangerouslySetInnerHTML={{ __html: sub_heading.text }}
           style={sub_heading?.style ? { ...JSON.parse(sub_heading.style) } : {}}
         />
-      ) : sub_heading.text == !"" ? (
+      ) : sub_heading && sub_heading?.text !== "" ? (
         <Paragraph
           padding_xs={heading.text ? "0 10%" : "20px 10%"}
           padding_tablet={heading.text ? "0 10%" : "20px 10%"}
@@ -75,7 +70,7 @@ const Iconogram = ({ session, data, pageContext, yml, index }) => {
           margin="15px auto"
           fontSize="16px"
           fontHeight="30px"
-          maxWidth="1366px"
+          maxWidth="1280px"
           style={sub_heading?.style ? { ...JSON.parse(sub_heading.style) } : {}}
         >
           {sub_heading.text}
@@ -92,7 +87,7 @@ const Iconogram = ({ session, data, pageContext, yml, index }) => {
         // gap="45px"
         gap_tablet={icons.length > 4 ? "0px" : "3%"}
         //gap_md="10%"
-        maxWidth="1366px"
+        maxWidth="1280px"
         margin="20px auto 0 auto"
         padding_tablet="0 40px"
         padding_lg="0"
@@ -111,31 +106,6 @@ const Iconogram = ({ session, data, pageContext, yml, index }) => {
             );
           })}
       </Div>
-      {button && (
-        <Button
-          outline
-          colorHoverText={button.hover_color || Colors.blue}
-          background={Colors[button.background] || button.background}
-          lineHeight="26px"
-          textColor={Colors.black}
-          textTransform="none"
-          textDecorationLine="underline"
-          color={Colors[button.color] || button.color}
-          fontSize="18px"
-          fontFamily="Lato"
-          fontWeight="500"
-          textAlign="left"
-          margin="2rem 0 1rem 0"
-          padding="32px .85rem 0 .85rem"
-          onClick={() => {
-            if (button.path && button.path.indexOf("http") > -1)
-              window.open(transferQuerystrings(button.path, utm));
-            else navigate(button.path);
-          }}
-        >
-          <Link to={button.path}>{button.text}</Link>
-        </Button>
-      )}
     </Div>
   );
 };
