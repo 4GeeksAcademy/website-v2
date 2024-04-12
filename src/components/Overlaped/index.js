@@ -214,12 +214,13 @@ const Overlaped = ({ heading, content, button, background, image }) => {
           position="absolute"
           top={heading?.length > 4 ? "40%" : "50%"}
           zIndex="1"
-          width_xxs="51%"
-          width_xs="59%"
-          width_sm="66%"
+          width_xxs="90%"
+          width_xs="88%"
+          width_sm="89%"
           width_tablet="100%"
           padding="20px"
-          margin="10px"
+          margin="5px"
+          margin_xs="10px"
           background={Colors.white}
           boxShadow="20px 15px 0px 0px rgba(0,0,0,1)"
         >
