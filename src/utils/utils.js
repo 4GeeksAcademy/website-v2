@@ -1,6 +1,6 @@
 import { navigate } from "gatsby";
 
-const isWindow = () => (window !== undefined ? true : false);
+export const isWindow = () => (window !== undefined ? true : false);
 
 export const smartRedirecting = (e, path) => {
   e.preventDefault();

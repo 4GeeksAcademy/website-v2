@@ -4,7 +4,7 @@ bar_content:
   button_text: "Read More"
   link_to: "/us/part-time"
   discount:
-    message: "Prices as low as 40% off!!"
+    message: "Prices as low as 40% off!"
     ends_in: "Ends in"
     button:
       label: "See prices →"

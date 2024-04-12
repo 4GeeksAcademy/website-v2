@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from "react";
+import React, { useState, useContext, useEffect, useRef } from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import Icon from "../Icon";
 import Toggle from "../ToggleSwitch";
@@ -8,6 +8,7 @@ import Select, { SelectRaw } from "../Select";
 import { H2, H3, H4, H5, Paragraph } from "../Heading";
 import { Button, Colors, RoundImage, Img } from "../Styling";
 import { SessionContext } from "../../session";
+import { isWindow } from "../../utils/utils";
 
 const PricingCard = ({
   data,
@@ -451,6 +452,7 @@ const PricesAndPayment = (props) => {
     return phoneNumber;
   }
 
+  const mainContainer = useRef(null);
   const { session, setSession } = useContext(SessionContext);
   const [currentLocation, setCurrentLocation] = useState(false);
   const [course, setCourse] = useState(false);
@@ -471,7 +473,6 @@ const PricesAndPayment = (props) => {
         )
       );
 
-    console.log("_plans", _plans);
     if (_plans) _plans = _plans.node[schedule];
     else _plans = [];
 
@@ -511,7 +512,17 @@ const PricesAndPayment = (props) => {
     return [];
   };
 
-  // const steps = props.details.details_modules.reduce((total, current, i) => [...total, (total[i - 1] || 0) + current.step], [])
+  useEffect(() => {
+    if (isWindow) {
+      if (window.location.hash.includes('prices_and_payment')) {
+        window.scrollTo({
+          top: mainContainer.current?.offsetTop,
+          behavior: "smooth",
+        })
+      }
+    }
+  }, [mainContainer.current]);
+  
   useEffect(() => {
     setLocations(
       props.locations
@@ -574,7 +585,6 @@ const PricesAndPayment = (props) => {
             )
           );
 
-        console.log("currentPlans", currentPlans, schedule);
         currentPlans = currentPlans?.node[schedule];
 
         const availablePlans = currentPlans?.filter((plan) =>
@@ -591,6 +601,7 @@ const PricesAndPayment = (props) => {
 
   return (
     <Div
+      ref={mainContainer}
       id="prices_and_payment"
       display="block"
       background={props.background}
