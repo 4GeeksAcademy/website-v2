@@ -260,8 +260,13 @@ export const requestSyllabus = async (data, session) => {
   const automation = body.automation || "soft";
   const action = "submit";
   let token = await getToken(action);
+
+  let isBlockNumber = session.blockList.find(
+    (element) => element.phone_regex === data.phone.phoneCode
+  );
+
   //tag                automation
-  if (!session || !session.utm || !session.utm.utm_test) {
+  if ((!session || !session.utm || !session.utm.utm_test) && !isBlockNumber) {
     const _data = await save_form(
       body,
       [tag.value || tag],
@@ -295,7 +300,12 @@ export const beHiringPartner = async (data, session) => {
   for (let key in data) body[key] = data[key].value;
   const action = "submit";
   let token = await getToken(action);
-  if (!session || !session.utm || !session.utm.utm_test) {
+
+  let isBlockNumber = session.blockList.find(
+    (element) => element.phone_regex === data.phone.phoneCode
+  );
+
+  if ((!session || !session.utm || !session.utm.utm_test) && !isBlockNumber) {
     const _data = await save_form(
       body,
       ["hiring-partner"],
@@ -315,6 +325,7 @@ export const beHiringPartner = async (data, session) => {
   }
   return true;
 };
+
 export const applyJob = async (data) => {
   console.log("New job application", data);
   let body = {};
@@ -324,21 +335,33 @@ export const applyJob = async (data) => {
   // if(!session || !session.utm || !session.utm.utm_test) return await save_form(body, ['hiring-partner'], ['hiring-partner']);
   return true;
 };
+
 export const contactUs = async (data, session) => {
   console.log("Succesfully contact us", data);
   let body = {};
   for (let key in data) body[key] = data[key].value;
 
-  //                                                                                      tag       automation
+  //Contact us form don´t admit phone number so it's not posible block it
+  // let isBlockNumber = session.blockList.find(
+  //   (element) => element.phone_regex === data.phone.phoneCode
+  // );
+  // if ((!session || !session.utm || !session.utm.utm_test) && !isBlockNumber)
   if (!session || !session.utm || !session.utm.utm_test)
+    //                                                                                      tag       automation
     return await save_form(body, ["contact-us"], ["soft"], session);
   return true;
 };
+
 export const newsletterSignup = async (data, session) => {
   console.log("Succesfully newsletter signup", data);
   let body = {};
   for (let key in data) body[key] = data[key].value;
 
+  //Newaletter form don´t admit phone number so it's not posible block it
+  // let isBlockNumber = session.blockList.find(
+  //   (element) => element.phone_regex === data.phone.phoneCode
+  // );
+  // if ((!session || !session.utm || !session.utm.utm_test) && !isBlockNumber)
   //                                                                                      tag          automation
   if (!session || !session.utm || !session.utm.utm_test) {
     const _data = await save_form(
@@ -363,8 +386,11 @@ export const outcomesReport = async (data, session) => {
   let body = {};
   for (let key in data) body[key] = data[key].value;
 
+  let isBlockNumber = session.blockList.find(
+    (element) => element.phone_regex === data.phone.phoneCode
+  );
   //                                                                                      tag                automation
-  if (!session || !session.utm || !session.utm.utm_test) {
+  if ((!session || !session.utm || !session.utm.utm_test) && !isBlockNumber) {
     const _data = await save_form(
       body,
       ["download_outcome"],
@@ -428,8 +454,11 @@ export const processFormEntry = async (data, session) => {
   const action = "submit";
   let token = await getToken(action);
 
-  //                                                                                      tag                automation
-  if (!session || !session.utm || !session.utm.utm_test) {
+  let isBlockNumber = session.blockList.find(
+    (element) => element.phone_regex === data.phone.phoneCode
+  );
+  // tag   automation
+  if ((!session || !session.utm || !session.utm.utm_test) && !isBlockNumber) {
     const _data = await save_form(
       body,
       [tag.value || tag],
