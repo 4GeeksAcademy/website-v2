@@ -47,7 +47,7 @@ const Apply = (props) => {
   });
   const [formData, setVal] = useState({
     first_name: { value: "", valid: false },
-    phone: { value: "", valid: false },
+    phone: { value: "", phoneCode: "", valid: false },
     email: { value: "", valid: false },
     location: { value: "", valid: false },
     consents: { value: [], valid: true },
@@ -103,6 +103,7 @@ const Apply = (props) => {
   React.useEffect(() => {
     tagManager("application_rendered");
   }, []);
+
   React.useEffect(() => {
     const urlParams = new URLSearchParams(window.location.search);
     // Pre-fill the location
@@ -184,6 +185,7 @@ const Apply = (props) => {
         });
       });
   };
+
   return (
     <>
       <Header

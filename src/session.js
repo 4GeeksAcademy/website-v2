@@ -10,6 +10,8 @@ import {
   locByLanguage,
 } from "./actions";
 
+const blockList = require("./utils/dictionaries/blockList.json");
+
 // import ActionsWorker from "./actions.worker.js";
 export const SessionContext = createContext(defaultSession);
 
@@ -89,6 +91,7 @@ export default ({ children }) => {
     };
     const message = {
       locationsArray: data.allLocationYaml,
+      blockListArray: blockList,
       storedSession: getStorage("academy_session"),
       path: window.location.pathname,
       seed: {
@@ -141,7 +144,7 @@ export default ({ children }) => {
               l.breathecode_location_slug ===
               _s.location.breathecode_location_slug
           );
-          const _session = { ..._s, location };
+          const _session = { ..._s, location, blockList };
           setStorage(_session);
           setSession(_session);
           dayjs.locale(_session.language == "us" ? "en" : _session.language);

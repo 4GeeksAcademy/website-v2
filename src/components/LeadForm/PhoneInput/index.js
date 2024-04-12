@@ -238,7 +238,12 @@ const PhoneInput = ({
     }
     setVal({
       ...formData,
-      phone: { ...phoneFormValues, value: cleanedPhoneInput, valid: true },
+      phone: {
+        ...phoneFormValues,
+        value: cleanedPhoneInput,
+        valid: true,
+        phoneCode: prefixCode,
+      },
     });
   };
 

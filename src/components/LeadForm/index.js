@@ -91,6 +91,7 @@ const _fields = {
   phone: {
     value: "",
     valid: false,
+    phoneCode: "",
     required: true,
     type: "phone",
     place_holder: "Phone number",

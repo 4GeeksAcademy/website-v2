@@ -113,7 +113,13 @@ const getRegion = (shortName, regions) => {
   return region.length === 1 ? region[0] : null;
 };
 
-const initSession = async (locationsArray, storedSession, path, seed = {}) => {
+const initSession = async (
+  locationsArray,
+  blockListArray,
+  storedSession,
+  path,
+  seed = {}
+) => {
   console.log("Initializing session");
   var v4 = null;
   var latitude = null;
@@ -274,6 +280,7 @@ const initSession = async (locationsArray, storedSession, path, seed = {}) => {
     academyAliasDictionary[key] = alias.academy.slug;
   });
 
+  const blockList = blockListArray.find((element) => element !== null);
   const _session = {
     ...defaultSession,
     ...storedSession,
@@ -287,7 +294,7 @@ const initSession = async (locationsArray, storedSession, path, seed = {}) => {
     longitude,
     academyAliasDictionary,
     pathsDictionary,
-
+    blockList: blockList,
     // marketing utm info
     utm: { ...storedSession.utm, ...utm },
 
@@ -303,7 +310,14 @@ const initSession = async (locationsArray, storedSession, path, seed = {}) => {
 };
 
 self.onmessage = async (message) => {
-  const { locationsArray, storedSession, seed, path } = message.data;
-  const _session = await initSession(locationsArray, storedSession, path, seed);
+  const { locationsArray, blockListArray, storedSession, seed, path } =
+    message.data;
+  const _session = await initSession(
+    locationsArray,
+    blockListArray,
+    storedSession,
+    path,
+    seed
+  );
   self.postMessage(_session);
 };
