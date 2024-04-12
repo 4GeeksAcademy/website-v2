@@ -514,15 +514,15 @@ const PricesAndPayment = (props) => {
 
   useEffect(() => {
     if (isWindow) {
-      if (window.location.hash.includes('prices_and_payment')) {
+      if (window.location.hash.includes("prices_and_payment")) {
         window.scrollTo({
           top: mainContainer.current?.offsetTop,
           behavior: "smooth",
-        })
+        });
       }
     }
   }, [mainContainer.current]);
-  
+
   useEffect(() => {
     setLocations(
       props.locations
