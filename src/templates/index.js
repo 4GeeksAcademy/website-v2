@@ -114,11 +114,11 @@ const Home = (props) => {
           <Div
             position="absolute"
             zIndex="5"
-            left_tablet={yml.header_data.video ? "40%" : "50%"}
+            left_tablet={indexVideo || sessionVideo ? "40%" : "50%"}
             left="50%"
             left_xxs="65%"
             left_xs="74%"
-            top_tablet={yml.header_data.video ? "1%" : "25%"}
+            top_tablet={indexVideo || sessionVideo ? "1%" : "25%"}
             top="90px"
             top_xxs="20px"
             top_xs="100px"
@@ -292,6 +292,7 @@ const Home = (props) => {
                   width_tablet="368px"
                   height="427px"
                   height_tablet="469px"
+                  margin="0 auto"
                   margin_tablet="0"
                   margin_lg="0 auto"
                   margin_md="0 auto"
