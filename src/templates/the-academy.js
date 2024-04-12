@@ -89,7 +89,7 @@ const Why = (props) => {
       <Badges
         lang={pageContext.lang}
         paragraph={yml.badges.paragraph}
-        background={Colors.lightYellow}
+        background={Colors.darkYellow}
         link
         padding="58px 17px"
         padding_tablet="70px 0"
