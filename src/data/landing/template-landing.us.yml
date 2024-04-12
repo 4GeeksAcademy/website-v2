@@ -160,8 +160,9 @@ components:
     layout: two_column_right 
     swipable: False
     background: "#FFFFFF"
+    justify: "start" #start,end,center
     image:
-      style: "{}"
+      style: '{ "height": "20px", "margin-top": "20px" }'
       src: "/images/landing/feliz-empresario.png"
       shadow: true
     heading: 
@@ -178,6 +179,23 @@ components:
       text: "We're all about making our high-quality education affordable to everyone. That's why we offer multiple options to help you fund our coding bootcamps stress-free. Whether it's an ISA, scholarship, payment plan or Job Guarantee we're here to guide you every step of the way."
       font_size: ["16px"]
       path: ""
+    bullets:
+      items:
+        - heading: "Lorem ipsum dolor sit amet"
+          text: "Some text description for the bullet"
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
+        - heading: "Lorem ipsum dolor sit amet"
+          text: "Some text description for the bullet"
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
+        - heading: "Lorem ipsum dolor sit amet"
+          text: "Some text description for the bullet"
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
+        - heading: "Lorem ipsum dolor sit amet"
+          text: "Some text description for the bullet"
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
+        - heading: "Lorem ipsum dolor sit amet"
+          text: "Some text description for the bullet"
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
 
   - name: new_design_with_bullets
     position: 2
@@ -525,3 +543,12 @@ components:
 
 #NUEVO COMPONENTE PROGRAMAS
 
+  # - name: first_syllabus_form
+  #   position: 4
+  #   layout: syllabus
+  #   button:
+  #     text: "Instant Download"
+  #   heading:
+  #     text: "Download the course syllabus"
+  #     #             xl      lg      md      sm      xs
+  #     font_size: ["40px", "40px", "40px", "40px", "40px"]

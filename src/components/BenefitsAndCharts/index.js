@@ -39,7 +39,7 @@ const BenefitsAndCharts = (props) => {
         padding_tablet="40px 40px"
         padding_md="60px 80px"
         padding_lg="80px 0"
-        maxWidth={props.maxWidth || "1366px"}
+        maxWidth={props.maxWidth || "1280px"}
       >
         <Div flexDirection="column" flex="1" flex_tablet="1">
           <H2 type="h2" textAlign="left" lineHeight="30px">
