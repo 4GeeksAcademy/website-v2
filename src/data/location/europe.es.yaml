@@ -13,8 +13,8 @@ meta_info:
   # for example: for this location, only show cohorts starting with usa-xx-spanish
   cohort_include_regex: []
   cohort_exclude_regex: []
-  home_video: "https://ask.4geeks.com/f67qc0ewu"
-  
+  home_video: ""
+
 seo_title: "Coding Bootcamp Remoto Europa"
 header:
   tagline: "Aprende a programar en Europa y desde casa"
