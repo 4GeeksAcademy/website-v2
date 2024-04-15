@@ -168,6 +168,27 @@ testimonials:
     short_content: "QA Engineer en Deutsche Bank"
     content: "Fernando Villanueva, a software quality technician, finds it crucial to understand how websites are currently built. The 4Geeks Academy bootcamp has equipped him with the tools to assess web pages accurately, enhancing his performance at work."
 
+  - student_name: "Carlos Avila"
+    slug: "car-avi"
+    country:
+      iso: LATAM
+      name: LATAM
+    featured: false
+    highlighted: false
+    testimonial_date: ""
+    rating: 5
+    student_thumb: "../../../../static/images/testimonials/carlos-avila.jpg"
+    student_video: "" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    hidden: false
+    linkedin_url: "https://www.linkedin.com/in/carlos-e-avila/"
+    linkedin_text: "LinkedIn profile"
+    linkedin_image: "../../../../static/images/linkedin.png"
+    source_url: ""
+    # source_url_text: ""
+    short_content: "Web Developer at Everwell Parts, Inc."
+    content: "Just give it a try, you'll learn because the 4Geeks system nudges you in that direction. 4Geeks is the best choice for a career change and learning how to program."
+
   - student_name: "Olson Dimache"
     slug: "ols-di"
     country:
@@ -189,27 +210,6 @@ testimonials:
     ##source_url_text: ""
     short_content: "Senior Software Engineer II en Domino Data Labs"
     content: "This is like when you go to the ocean the most important part is getting your feet wet, I would recommend it, jump in, go for it and after this bootcamp I feel ready to jump into the middle of the ocean."
-
-  - student_name: "Carlos Avila"
-    slug: "car-avi"
-    country:
-      iso: LATAM
-      name: LATAM
-    featured: false
-    highlighted: false
-    testimonial_date: ""
-    rating: 5
-    student_thumb: "../../../../static/images/testimonials/carlos-avila.jpg"
-    student_video: "" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
-    # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
-    hidden: false
-    linkedin_url: "https://www.linkedin.com/in/carlos-e-avila/"
-    linkedin_text: "LinkedIn profile"
-    linkedin_image: "../../../../static/images/linkedin.png"
-    source_url: ""
-    # source_url_text: ""
-    short_content: "Web Developer at Everwell Parts, Inc."
-    content: "Just give it a try, you'll learn because the 4Geeks system nudges you in that direction. 4Geeks is the best choice for a career change and learning how to program."
 
   - student_name: "Ibai Fernández"
     slug: "ibai"
@@ -319,6 +319,32 @@ testimonials:
   #     I've been struggling a lot trying to make a dynamic website, so I started to look
   #     for a coding school in Miami and I found the best one: 4Geeks Academy. And thanks to
   #     the Income Sharing Agreement, I could enroll right away and pay once I found a job.
+
+  - student_name: Joao Henrique Xavier
+    slug: "joao-xav"
+    country:
+      iso: us
+      name: United States of America
+    featured: true
+    highlighted: true
+    testimonial_date: ""
+    rating: 5
+    student_thumb: "../../../../static/images/staff/joao.png"
+    student_video: "https://www.youtube.com/watch?v=MBXqEnhodx0" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    hidden: false
+    linkedin_url: "https://www.linkedin.com/in/joao-henrique-xavier/"
+    linkedin_text: "Linkedin Profile"
+    linkedin_image: "../../../../static/images/linkedin.png"
+    source_url: ""
+    #source_url_text: ""
+    short_content: "Software Engineer at NCCI"
+    content: |
+      Before 4Geeks, I worked in law enforcement; after that, I wasn't very motivated by the idea of law enforcement.
+      But when I came to live in San Francisco, I learned about technology and the benefits that come with working in this field.
+      and this is what brought me to 4Geeks. Now I am working for a company called NCCI, which is located in Boca, and it is amazing.
+      I couldn't have made a better decision by choosing to code.
+
   - student_name: "Charles Fabricius"
     slug: "cha-fabr"
     country:

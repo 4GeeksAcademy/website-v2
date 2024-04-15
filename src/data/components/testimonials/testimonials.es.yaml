@@ -41,9 +41,8 @@ testimonials:
     student_thumb: "../../../../static/images/testimonials/florencia-viera.jpeg"
     linkedin_image: "../../../../static/images/linkedin.png"
 
-
-  - student_name: "Ibai Fernández"
-    slug: "ibai"
+  - student_name: "Rita Lopez Cobo"
+    slug: "rita-lopz"
     country:
       iso: España
       name: España
@@ -51,18 +50,17 @@ testimonials:
     highlighted: false
     testimonial_date: ""
     rating: 5
-    student_thumb: "../../../../static/images/testimonials/ibai-fernandez.jpg"
-    student_video: "https://www.youtube.com/watch?v=J9Xg03u3MxA" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    student_thumb: "../../../../static/images/testimonials/rita-lopez.jpg"
+    student_video: "https://www.youtube.com/watch?v=I87ONvJB2OM" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     hidden: false
-    linkedin_url: "https://www.linkedin.com/in/ibaifernandez/"
+    linkedin_url: "https://www.linkedin.com/in/rita-lopez-cobo"
     linkedin_text: "Linkedin Perfil"
     linkedin_image: "../../../../static/images/linkedin.png"
     source_url: ""
     # source_url_text: ""
-    short_content: "Diseñador web en LFi "
-    content: "Antes de entrar a la academia ya tenía un poco de experiencia con la programación, Wordpress me abrió las puertas del manejo del código y también había tenido experiencia con otros coding bootcamp pero a partir del 2023 y gracias al acuerdo compartido y el esfuerzo invertido ahora tengo dos trabajos como programador."
-      
+    short_content: "Desarrollador web en Residencia de mayores Azahar"
+    content: "Lo que más me gustó de 4Geeks fue que me ha cambiado la vida. 4Geeks ha sido solo cosas positivas ya que vengo de un perfil completamente diferente, era técnico ortopedico y ahora soy fullstack, lo cual me ha traído tranquilidad y estabilidad."
 
   - student_name: "Azul Botaya"
     slug: "azu-bota"
@@ -91,6 +89,27 @@ testimonials:
       No tenía que renunciar a nada. 
       Se que hice un gran grupo y que además podré volver siempre con ellos.
 
+  - student_name: "Ibai Fernández"
+    slug: "ibai"
+    country:
+      iso: España
+      name: España
+    featured: false
+    highlighted: false
+    testimonial_date: ""
+    rating: 5
+    student_thumb: "../../../../static/images/testimonials/ibai-fernandez.jpg"
+    student_video: "https://www.youtube.com/watch?v=J9Xg03u3MxA" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    hidden: false
+    linkedin_url: "https://www.linkedin.com/in/ibaifernandez/"
+    linkedin_text: "Linkedin Perfil"
+    linkedin_image: "../../../../static/images/linkedin.png"
+    source_url: ""
+    # source_url_text: ""
+    short_content: "Diseñador web en LFi "
+    content: "Antes de entrar a la academia ya tenía un poco de experiencia con la programación, Wordpress me abrió las puertas del manejo del código y también había tenido experiencia con otros coding bootcamp pero a partir del 2023 y gracias al acuerdo compartido y el esfuerzo invertido ahora tengo dos trabajos como programador."
+      
   - student_name: "Joshua Bravo"
     slug: "jos-bra"
     country:
@@ -111,6 +130,33 @@ testimonials:
     source_url_text: ""
     short_content: "Full Stack Developer en Regcheq"
     content: "Me solía dedicar como asistente de cocina y contable y ahora soy full stack developer en una startup."
+
+  - student_name: "Naila Kaliyeva"
+    slug: "nai-kali"
+    country:
+      iso: us
+      name: United States of America
+    featured: false
+    highlighted: false
+    testimonial_date: ""
+    rating: 5
+    source_link: ""
+    student_thumb: "../../../../static/images/testimonials/naila-kaliyeva.jpg"
+    student_video: "" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    hidden: false
+    linkedin_url: "https://www.linkedin.com/in/naila-kaliyeva-a8863a181/"
+    linkedin_text: "Linkedin Perfil"
+    linkedin_image: "../../../../static/images/linkedin.png"
+    source_url: ""
+    #source_url_text: ""
+    short_content: "Web developer Independiente"
+    content: |
+      Me encanta el enfoque de 4Geeks Academy para enseñar Programación. Siempre hay -al menos- 3 mentores disponibles para ayudarte y asegurar que puedas entender todo el contenido.  
+      Nunca dejan las preguntas sin responder, a pesar que algunas son bastante obvias!. 
+      La atomósfera de la Academia es bastante cercana y cálida. 
+      Yo estoy muy agradecida por todo el apoyo que siempre 24/7 nos han dado. 
+      Gracias 4Geeks!!
 
   - student_name: "Veronica Larrondo"
     slug: "vero-la"
@@ -218,46 +264,6 @@ testimonials:
     source_url_text: ""
     short_content: "Full Stack Developer"
     content: "aproveche el tiempo para justo despues de terminar la preparatoria, me inscribí en 4Geeks academi y me parece que ha sido excelente, me parece que tienen una comunidad muy unida que están allí siempre para darte la mano."
-
-  - student_name: "Naila Kaliyeva"
-    slug: "nai-kali"
-    country:
-      iso: us
-      name: United States of America
-    featured: false
-    highlighted: false
-    testimonial_date: ""
-    rating: 5
-    source_link: ""
-    student_thumb: "../../../../static/images/testimonials/naila-kaliyeva.jpg"
-    student_video: "" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
-    # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
-    hidden: false
-    linkedin_url: "https://www.linkedin.com/in/naila-kaliyeva-a8863a181/"
-    linkedin_text: "Linkedin Perfil"
-    linkedin_image: "../../../../static/images/linkedin.png"
-    source_url: ""
-    #source_url_text: ""
-    short_content: "Web developer Independiente"
-    content: |
-      Me encanta el enfoque de 4Geeks Academy para enseñar Programación. Siempre hay -al menos- 3 mentores disponibles para ayudarte y asegurar que puedas entender todo el contenido.  
-      Nunca dejan las preguntas sin responder, a pesar que algunas son bastante obvias!. 
-      La atomósfera de la Academia es bastante cercana y cálida. 
-      Yo estoy muy agradecida por todo el apoyo que siempre 24/7 nos han dado. 
-      Gracias 4Geeks!!
-  # - student_name: "Samir Benzada"
-  #   testimonial_date: ""
-  #   student_thumb: "../../../../static/images/testimonials/samir-benzada.jpg"
-  #   alt: ""
-  #   hidden: false
-  #   source_url: ""
-  #   #source_url_text: ""
-  #   content: |
-  #     I've been learning how to code by myself for 4 years, mostly HTML, CSS and PHP.
-  #     I've been struggling a lot trying to make a dynamic website, so I started to look
-  #     for a coding school in Miami and I found the best one: 4Geeks Academy. And thanks to
-  #     the program they offer, the Income Sharing Agreement, I could enroll right away and pay once I get a job
-
 
   - student_name: "Charles Fabricius"
     slug: "cha-fabr"
@@ -373,6 +379,29 @@ testimonials:
       Este programa es definitivamente una de las cosas más difíciles que he hecho en mi vida. Pero lo completé y me gradué como Desarrollador de Software en 16 semanas. 
       Estar todos los días y practicar mucho es clave para poder lograrlo. Todas las cosas de la vida que valen la pena requieren de cierto sacrificio. 
       Si le pones pasión, los prefores y mentores te van a ayudar en todo momento.
+
+  - student_name: "Javier Murillo"
+    featured: false
+    highlighted: false
+    testimonial_date: ""
+    country:
+      iso: es
+      name: España
+    rating: 5
+    student_thumb: "../../../../static/images/testimonials/javier-murillo-testimonial.jpg"
+    student_video: "https://www.youtube.com/watch?v=c14ZDHXN6_w" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    hidden: false
+    linkedin_url: "https://www.linkedin.com/in/javiermurilloromero"
+    linkedin_text: "Linkedin Perfil"
+    linkedin_image: "../../../../static/images/linkedin.png"
+    source_url: ""
+    #source_url_text: ""
+    short_content: "Desarrollador Web en beBee"
+    content: |
+      Al principio tenía muchas dudas y me preguntaba si podría y si pude. Una vez que entré a 4Geeks e iban pasando las semanas e iba pasando los proyectos, me daba cuenta de que mis capacidades aumentaban y es que en 4Geeks te enseñan a programar, a buscarte la vida, aprendes pensamiento lógico, nuevos lenguajes, etc.
+      Yo os animo a que entren al mundo de la programación con 4Geeks Academy.
+
   - student_name: "Jorge Montes"
     featured: false
     highlighted: false
