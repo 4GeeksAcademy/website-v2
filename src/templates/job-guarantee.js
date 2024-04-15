@@ -194,7 +194,7 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
                     margin_tablet="10px 24px 10px 0"
                     textColor="white"
                   >
-                    {`${applyButtonText} →`}
+                    {applyButtonText}
                   </Button>
                 </Link>
               </Div>
