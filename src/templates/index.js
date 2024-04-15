@@ -79,6 +79,14 @@ const Home = (props) => {
   // (session?.location?.custom_bar.active && isTestMode) ||
   // (session?.location?.custom_bar.active && !isDevelopment());
 
+  const indexVideo = yml && yml.header_data && yml.header_data.video;
+  const sessionVideo =
+    session &&
+    session.location &&
+    session.location.meta_info &&
+    session.location.meta_info.home_video;
+  const video = sessionVideo && sessionVideo !== "" ? sessionVideo : indexVideo;
+
   return (
     <>
       <Div
@@ -89,7 +97,7 @@ const Home = (props) => {
         margin_tablet={
           isContentBarActive ? "120px auto 108px auto" : "72px auto 108px auto"
         }
-        maxWidth="1366px"
+        maxWidth="1280px"
         padding_xxs="0px 0px"
         padding_tablet="0 40px"
         padding_md="0 80px"
@@ -236,10 +244,7 @@ const Home = (props) => {
             </Div>
           </Div>
           <Div display="flex" height="auto" width="100%">
-            {session &&
-            session.location &&
-            session.location.meta_info &&
-            session.location.meta_info.home_video ? (
+            {indexVideo || sessionVideo ? (
               <Div
                 height_tablet="623px"
                 width="100%"
@@ -293,7 +298,7 @@ const Home = (props) => {
                   zIndex="2"
                 >
                   <iframe
-                    src={session.location.meta_info.home_video}
+                    src={video}
                     allow="camera *; microphone *; autoplay *; encrypted-media *; fullscreen *; display-capture *;"
                     width="100%"
                     height="100%"
