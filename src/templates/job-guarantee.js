@@ -7,7 +7,12 @@ import {
   beHiringPartner,
 } from "../actions";
 import BaseRender from "./_baseLayout";
-import { Container, Div, HR, GridContainer } from "../components/Sections";
+import {
+  Div,
+  HR,
+  GridContainer,
+  GridContainerWithImage,
+} from "../components/Sections";
 import { H1, H2, H3, H4, Paragraph } from "../components/Heading";
 import {
   Anchor,
@@ -28,6 +33,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import WeTrust from "../components/WeTrust/index.js";
+import HowItWorks from "../components/HowItWorks/index.js";
 
 const JobGuarantee = ({ data, pageContext, yml }) => {
   const { session } = useContext(SessionContext);
@@ -65,7 +71,7 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
       value: node.meta_info.bc_slug,
     }));
 
-  const ymlTwoColumn = yml?.two_column_left;
+  const ymlTwoColumn = yml?.two_column_right;
 
   const settings = {
     className: "slider variable-width",
@@ -84,459 +90,212 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
       yml.successful_stories.testimonials.includes(elem.slug)
     );
 
+  const colors = {
+    title: Colors.black2, //#2E2E38
+    body: Colors.black3, //#4D4D5C
+    body2: Colors.darkGray, //3A3A3A
+  };
+
+  // const paragraphParts = yml.header.paragraph.split("||");
+
   return (
     <>
       <Div
-        margin={isCustomBarActive(session) ? "40px 0 0 0" : "0"}
-        padding="90px 30px 0 30px"
-        padding_tablet="120px 130px 72px 130px"
-        padding_lg="120px 0 72px 0"
+        margin={isCustomBarActive(session) ? "50px auto 0 auto" : "auto"}
+        padding="0 30px"
+        padding_tablet="48px 80px"
+        padding_lg="48px 80px"
         position="relative"
         display="block"
       >
-        <Circle
-          color="yellow"
-          width="17px"
-          height="17px"
-          top="87px"
-          left="74px"
-          zIndex="1"
-          display="none"
-          display_tablet="inline"
-        />
-        <Circle
-          color="black"
-          width="17px"
-          height="17px"
-          top="116px"
-          left="74px"
-          zIndex="1"
-          display="none"
-          display_tablet="inline"
-        />
-        <Circle
-          color="grey"
-          width="17px"
-          height="17px"
-          top="172px"
-          left="74px"
-          zIndex="1"
-          display="none"
-          display_tablet="inline"
-        />
-        <Circle
-          color="blue"
-          width="17px"
-          height="17px"
-          top="216px"
-          left="74px"
-          zIndex="1"
-          display="none"
-          display_tablet="inline"
-        />
-        <Circle
-          color="grey"
-          width="17px"
-          height="17px"
-          top="298px"
-          left="74px"
-          zIndex="1"
-          display="none"
-          display_tablet="inline"
-        />
-        <Circle
-          color="black"
-          width="17px"
-          height="17px"
-          top="116px"
-          left="106px"
-          zIndex="1"
-          display="none"
-          display_tablet="inline"
-        />
-        <Circle
-          color="grey"
-          width="17px"
-          height="17px"
-          top="145px"
-          left="106px"
-          zIndex="1"
-          display="none"
-          display_tablet="inline"
-        />
-        <Circle
-          color="grey"
-          width="17px"
-          height="17px"
-          top="182px"
-          left="106px"
-          zIndex="1"
-          display="none"
-          display_tablet="inline"
-        />
-        <Circle
-          color="yellow"
-          width="17px"
-          height="17px"
-          top="246px"
-          left="106px"
-          zIndex="1"
-          display="none"
-          display_tablet="inline"
-        />
-        <Circle
-          color="yellow"
-          width="21px"
-          height="21px"
-          top="10px"
-          right="320px"
-          zIndex="1"
-          display="none"
-          display_tablet="inline"
-        />
-        <Circle
-          color="yellow"
-          opacity="0.2"
-          width="300px"
-          height="300px"
-          top="100px"
-          right="-40px"
-          display="none"
-          display_tablet="inline"
-        />
-        <Circle
-          color="yellow"
-          width="30px"
-          height="30px"
-          top="370px"
-          right="150px"
-          display="none"
-          display_tablet="inline"
-        />
-        <Circle
-          color="blue"
-          width="15px"
-          height="15px"
-          top="92px"
-          left="14px"
-          zIndex="1"
-          display="inline"
-          display_tablet="none"
-        />
-        <Circle
-          color="grey"
-          width="15px"
-          height="15px"
-          top="130px"
-          left="15px"
-          zIndex="1"
-          display="inline"
-          display_tablet="none"
-        />
-        <Circle
-          color="darkGray"
-          width="15px"
-          height="15px"
-          top="195px"
-          left="10px"
-          zIndex="1"
-          display="inline"
-          display_tablet="none"
-        />
-        <Circle
-          color="yellow"
-          opacity="0.2"
-          width="300px"
-          height="300px"
-          top="150px"
-          right="-220px"
-          display="inline"
-          display_tablet="none"
-        />
-        <Circle
-          color="yellow"
-          width="30px"
-          height="30px"
-          top="370px"
-          right="40px"
-          display="inline"
-          display_tablet="none"
-        />
-        <Container display="block">
-          <H2
-            type="h1"
-            textAlign="center"
-            fontSize="36px"
-            fontSize_tablet="80px"
-            lineHeight="38px"
-            lineHeight_tablet="87px"
-            margin_tablet="40px 0 40px 0"
-            textTransform="uppercase"
-            fontFamily="Archivo, Lato, sans-serif"
-          >
-            {yml.header.title}
-          </H2>
-          <Paragraph
-            color="black"
-            opacity="1"
-            margin="15px auto"
-            padding="0"
-            width="auto"
-            letterSpacing="0.05em"
-            textAlign="center"
-            fontSize_tablet="24px"
-            fontSize="18px"
-            lineHeight="28px"
-            maxWidth="760px"
-          >
-            {yml.header.paragraph}
-          </Paragraph>
-          <Div
-            flexDirection_tablet="row"
-            flexDirection="column"
-            justifyContent="start"
-            justifyContent_tablet="center"
-            alignItems="center"
-            margin_tablet="0 0 50px 0"
-          >
-            <Div width="100%" width_tablet="fit-content">
-              <Link to={yml.button.apply_button_link} style={{ width: "100%" }}>
-                <Button
-                  variant="full"
-                  justifyContent="center"
-                  width="100%"
-                  width_tablet="fit-content"
-                  color={Colors.blue}
-                  margin_tablet="10px 24px 10px 0"
-                  textColor="white"
-                >
-                  {applyButtonText}
-                </Button>
-              </Link>
-            </Div>
-            <Button
-              onClick={handleOpen}
-              display="block"
-              width="100%"
-              width_tablet="fit-content"
-              variant="outline"
-              background="#FFF"
-              color={Colors.blue}
-              margin="10px 0 0 0"
-              margin_tablet="0"
-              textColor={Colors.blue}
-              textAlign="center"
-            >
-              {yml.button.btn_label}
-            </Button>
-          </Div>
-          <Modal
-            aria-labelledby="simple-modal-title"
-            aria-describedby="simple-modal-description"
-            open={open}
-            onClose={handleClose}
-          >
-            <LeadForm
-              style={{ marginTop: "50px" }}
-              heading={yml.button.syllabus_heading}
-              motivation={yml.button.syllabus_motivation}
-              sendLabel={yml.button.syllabus_heading}
-              formHandler={requestSyllabus}
-              handleClose={handleClose}
-              lang={pageContext.lang}
-              redirect={
-                pageContext.lang === "us" ? "/us/thank-you" : "/es/gracias"
-              }
-              selectProgram={programs}
-              data={{
-                course: {
-                  type: "hidden",
-                  value: yml.meta_info?.utm_course,
-                  valid: true,
-                },
-              }}
-            />
-          </Modal>
-        </Container>
-      </Div>
-      <Container
-        id="two_column_left"
-        flexDirection="column"
-        margin="0"
-        padding="0 10px"
-        padding_tablet="0 90px"
-        padding_md="0 50px"
-        padding_lg="0"
-      >
-        <TwoColumn
-          right={{ image: ymlTwoColumn.image }}
-          left={{
-            heading: ymlTwoColumn.heading,
-            sub_heading: ymlTwoColumn.sub_heading,
-            bullets: ymlTwoColumn.bullets,
-            content: ymlTwoColumn.content,
-            button: ymlTwoColumn.button,
-          }}
-          proportions={ymlTwoColumn.proportions}
-          session={session}
-        />
-      </Container>
-
-      <Container padding="0" padding_tablet="0 90px" padding_lg="0">
-        <WeTrust we_trust={yml.we_trust_section} />
-      </Container>
-
-      <Container
-        display="block"
-        margin="40px auto"
-        padding="40px 10px"
-        padding_tablet="40px 90px"
-        padding_md="40px 130px"
-        padding_lg="40px 0"
-      >
-        <Div display="block" margin="0px auto 40px 0" padding="0 20px">
-          <H2 margin="0 0 15px 0">{yml.how_it_works.title}</H2>
-          <Paragraph color="#000" opacity="1" fontSize="18px">
-            {yml.how_it_works.text}
-          </Paragraph>
-        </Div>
-        <Div
-          margin="auto"
-          margin_lg="auto"
-          width="300px"
-          width_tablet="fit-content"
-          width_md="auto"
-          gap_tablet="30px"
-          gap_md="40px"
-          flexDirection="column"
-          flexDirection_tablet="row"
-          justifyContent="center"
+        <GridContainerWithImage
+          padding="30px 0 0 0"
+          padding_tablet="0"
+          columns_tablet="2"
+          margin_tablet="30px auto 20px auto"
+          position="relative"
+          gridColumn_tablet="1/15"
+          maxWidth="1280px"
         >
-          {yml.how_it_works.steps.map((step, i) => (
-            <Div
-              width="100%"
-              width_tablet="90px"
-              width_md="130px"
-              height_tablet="300px"
-              position="relative"
+          {/* <Div
+              position="absolute"
+              zIndex="5"
+              left_tablet={"50%"}
+              left="50%"
+              left_xxs="65%"
+              left_xs="74%"
+              top_tablet={"25%"}
+              top="90px"
+              top_xxs="20px"
+              top_xs="100px"
+              width_xxs="80px"
+              width_sm="100px"
+              height_xxs="80px"
+              width_tablet="160px"
+              height_tablet="152px"
+              width="100px"
+              height="100px"
             >
-              {i !== yml.how_it_works.steps.length - 1 && (
-                <ImgV2
-                  src="/images/dotted-line.png"
-                  position="absolute"
-                  left_tablet="50%"
-                  left="90px"
-                  top_md={i % 2 === 0 ? "30px" : "5px"}
-                  top_tablet="30px"
-                  top="80px"
-                  rotate_tablet={i % 2 !== 0 && "123deg"}
-                  rotate={i % 2 !== 0 && "-45deg"}
-                  alt="Dashed line"
-                  width_tablet="150px"
-                  width_md="200px"
-                  width="150px"
-                  height="69px"
-                  height_tablet="69px"
-                  height_md="119px"
-                  backgroundSize="contain"
-                />
-              )}
-              <Div
-                flexDirection={i % 2 === 0 ? "row" : "row-reverse"}
-                justifyContent="between"
-                justifyContent_tablet="start"
-                flexDirection_tablet="column"
-                alignItems="center"
-                position_tablet="absolute"
-                top={i % 2 !== 0 && "70px"}
-                zIndex="5"
-                width="100%"
-                width_tablet="auto"
-              >
-                <Div
-                  flexDirection="column"
-                  justifyContent="center"
-                  width="120px"
-                  width_tablet="90px"
-                  width_md="120px"
-                  height="120px"
-                  height_tablet="90px"
-                  height_md="120px"
-                  border={`4px solid #FFB718`}
-                  background="#FFF1D1"
-                  borderRadius="60px"
-                >
-                  <Icon
-                    style={{ margin: "auto" }}
-                    color="#FFB718"
-                    icon={step.icon}
-                    width="45px"
-                    height="45px"
-                  />
-                </Div>
-                <Paragraph
-                  fontSize={step.highlight ? "20px" : "18px"}
-                  color={step.highlight ? "#FFB718" : "#000"}
-                  opacity="1"
-                  maxWidth="130px"
-                  maxWidth_tablet="90px"
-                  maxWidth_md="130px"
-                >
-                  {`${i + 1}. ${step.title}`}
-                </Paragraph>
-              </Div>
-            </Div>
-          ))}
-        </Div>
-        {yml.how_it_works.link && (
-          <Paragraph
-            margin="30px 0 0 0"
-            fontSize="18px"
-            color={Colors.black}
-            opacity="1"
-            textDecoration="underline"
+              <Icon icon="logo-badge" width="100%" height="100%" />
+            </Div> */}
+          <Div
+            flexDirection="column"
+            alignItems="start"
+            alignItems_tablet="center"
+            alignItems_sm="center"
+            margin="auto"
+            padding_tablet="0"
           >
-            <Anchor
-              color={`${Colors.black} !important`}
-              to={yml.how_it_works.link.url}
+            <H1
+              type="h1"
+              textAlign="center"
+              textAlign_tablet="left"
+              textShadow="none"
+              fontSize="50px"
+              lineHeight="54.4px"
+              color={colors.title}
+              fontFamily="Archivo,Lato,sans-serif"
+              fontWeight="900"
             >
-              {yml.how_it_works.link.label}
-            </Anchor>
-          </Paragraph>
-        )}
-      </Container>
+              {yml.header.title}
+            </H1>
+            <Div display="block" margin="20px 0">
+              <Paragraph
+                textAlign="center"
+                textAlign_tablet="left"
+                padding="0"
+                color={colors.body}
+                fontSize="24px"
+                lineHeight="26.11px"
+                fontFamily="Archivo,Lato,sans-serif"
+                dangerouslySetInnerHTML={{ __html: yml.header.paragraph }}
+              />
+            </Div>
+
+            <Div
+              flexDirection_tablet="row"
+              flexDirection="column"
+              justifyContent_tablet="left"
+              justifyContent="left"
+              alignItems="center"
+              width="100%"
+            >
+              <Div width="100%" width_tablet="fit-content">
+                <Link
+                  to={yml.button.apply_button_link}
+                  style={{ width: "100%" }}
+                >
+                  <Button
+                    variant="full"
+                    justifyContent="center"
+                    width="100%"
+                    width_tablet="fit-content"
+                    color={Colors.black}
+                    margin_tablet="10px 24px 10px 0"
+                    textColor="white"
+                  >
+                    {applyButtonText}
+                  </Button>
+                </Link>
+              </Div>
+              <Button
+                onClick={handleOpen}
+                display="block"
+                width="100%"
+                width_tablet="fit-content"
+                variant="outline"
+                background="#FFF"
+                color={Colors.black}
+                margin="10px 0 0 0"
+                margin_tablet="0"
+                textColor={Colors.black}
+                textAlign="center"
+              >
+                {yml.button.btn_label}
+              </Button>
+            </Div>
+          </Div>
+          <Div
+            display="flex"
+            justifyContent="center"
+            height="auto"
+            width="100%"
+          >
+            <StyledBackgroundSection
+              height_tablet="533px"
+              display_tablet="block"
+              // display="none"
+              height="390px"
+              width="100%"
+              image={
+                yml.header.image &&
+                yml.header.image.childImageSharp.gatsbyImageData
+              }
+              alt="Hero image"
+              bgSize="contain"
+            />
+          </Div>
+        </GridContainerWithImage>
+      </Div>
+
+      <WeTrust we_trust={yml.we_trust_section} />
+
+      <TwoColumn
+        left={{ image: ymlTwoColumn.image }}
+        right={{
+          heading: ymlTwoColumn.heading,
+          sub_heading: ymlTwoColumn.sub_heading,
+          bullets: ymlTwoColumn.bullets,
+          content: ymlTwoColumn.content,
+          button: ymlTwoColumn.button,
+        }}
+        proportions={ymlTwoColumn.proportions}
+        session={session}
+      />
+
+      <HowItWorks how_it_works={yml.how_it_works} />
 
       <Div
-        background="#FAFAFA"
+        background={Colors.white}
         padding="30px"
-        padding_tablet="80px 130px"
+        padding_tablet="80px 80px"
         padding_lg="80px 0px"
         margin_lg="auto"
         gap="10px"
         display="block"
         display_tablet="flex"
-        justifyContent="center"
+        justifyContent="between"
+        maxWidth="1280px"
+        width="100%"
       >
         <Div
           height_md="299px"
           flexDirection="column"
           justifyContent_md="between"
-          width_tablet="300px"
+          width_tablet="200px"
           width_md="395px"
-          width_lg="450px"
+          width_lg="388px"
           gap="10px"
           margin="0 0 15px 0"
           margin_tablet="0"
         >
           <Div display="block">
-            <H3 textAlign="left" margin="0 0 10px 0">
+            <H3
+              textAlign="left"
+              margin="0 0 10px 0"
+              fontFamily="Archivo, Lato, sans-serif"
+              fontSize="35px"
+              fontWeight="400"
+            >
               {yml.successful_stories.title}
             </H3>
             <Paragraph
               color="#000"
               opacity="1"
               textAlign="left"
-              fontSize="18px"
+              fontSize="24px"
+              fontWeight="500"
+              lineHeight="28.8px"
             >
               {yml.successful_stories.text}
             </Paragraph>
@@ -547,22 +306,24 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
           display="block"
           width="100%"
           width_tablet="400px"
-          width_md="fit-content"
-          minWidth_md="400px"
-          maxWidth_md="900px"
-          maxWidth_lg="906px"
+          width_md="72%"
+          minWidth_md="330px"
+          maxWidth_md="632px"
+          maxWidth_lg="632px"
+          height_tablet="555px"
+          height_md="375px"
+          border="2px solid black"
+          borderRadius="4px"
+          boxShadow="-6px 6px 0px 0px rgba(0,0,0,1)"
         >
           <Slider {...settings} ref={sliderRef}>
             {testimonials.map((testimonial) => {
               return (
-                <Div
-                  display="block"
-                  // boxShadow_tablet="9px 8px 0px 0px rgba(0,0,0,1)"
-                >
+                <Div display="block" height="360px">
                   <Div
-                    background={Colors.veryLightBlue}
+                    background={Colors.white}
                     margin="0"
-                    border="2px solid black"
+                    padding="0"
                     display="block"
                     display_md="flex"
                     height_tablet="548px"
@@ -579,12 +340,18 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
                       width_md="200px"
                       height="340px"
                       height_tablet="240px"
-                      height_md="100%"
+                      height_md="372px"
                       backgroundSize="contain"
                       flexShrink="0"
                     />
                     <Div padding="10px" display="block">
-                      <H4 textAlign="left" fontWeight="700">
+                      <H4
+                        textAlign="left"
+                        fontWeight="700"
+                        fontFamily="Archivo, Lato, sans-serif"
+                        fontSize="24px"
+                        lineHeight="26.11px"
+                      >
                         {testimonial.student_name}
                       </H4>
                       <Div gap="10px" alignItems="center" margin="0 0 10px 0">
@@ -604,6 +371,9 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
                               textAlign="left"
                               opacity="1"
                               color={Colors.black}
+                              fontFamily="Inter, Lato, sans-serif"
+                              fontSize="12px"
+                              lineHeight="20.52px"
                             >
                               {testimonial.country.name}
                             </Paragraph>
@@ -621,7 +391,7 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
                               cursor: "pointer",
                             }}
                             alt="Linkedin profile"
-                            height="20px"
+                            height="14px"
                             width="60px"
                             backgroundSize="contain"
                           />
@@ -637,6 +407,8 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
                         textAlign="left"
                         opacity="1"
                         color={Colors.black}
+                        fontSize="16px"
+                        lineHeight="24px"
                       >
                         {testimonial.content}
                       </Paragraph>
@@ -648,47 +420,85 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
           </Slider>
         </Div>
       </Div>
+
       <ScholarshipSuccessCases
         content={data.allScholarshipSuccessCasesYaml.edges[0].node}
       />
+
       <HR
         background={Colors.verylightGray}
         width="100%"
         height="5px"
         margin="40px 0"
       />
-      <GridContainer
-        columns_tablet="12"
-        padding="0 17px 40px 17px"
-        padding_tablet="0"
-        margin_tablet="0 auto 81px auto"
-        childMargin="auto"
-        childMaxWidth="1280px"
+
+      <Div
+        margin={isCustomBarActive(session) ? "50px auto 0 auto" : "auto"}
+        padding="0 30px"
+        padding_tablet="48px 80px"
+        padding_lg="48px 80px"
+        position="relative"
+        display="block"
       >
-        <Div gridColumn_tablet="1 / 7" flexDirection="column">
-          <H2 textAlign_md="left" margin="0 0 30px 0">
-            {yml.form.title}
-          </H2>
-          {yml.form.paragraph.split("\n").map((m, i) => (
-            <Paragraph
-              key={i}
-              margin="7px 0"
-              textAlign_md="left"
-              dangerouslySetInnerHTML={{ __html: m }}
+        <GridContainerWithImage
+          columns_tablet="12"
+          childMargin="auto"
+          childMaxWidth="1280px"
+          padding="30px 0 0 0"
+          padding_tablet="0"
+          margin_tablet="30px auto 20px auto"
+          position="relative"
+          gridColumn_tablet="1/15"
+          maxWidth="1280px"
+        >
+          <Div
+            gridColumn_tablet="1 / 6"
+            display="flex"
+            justifyContent="center"
+            alignItems="center"
+            height="auto"
+            width="100%"
+          >
+            <StyledBackgroundSection
+              height_tablet="463.71px"
+              display_tablet="block"
+              // display="none"
+              height="390px"
+              width="100%"
+              maxWidth="551px"
+              image={
+                yml.form.image && yml.form.image.childImageSharp.gatsbyImageData
+              }
+              alt="Form image"
+              bgSize="contain"
             />
-          ))}
-        </Div>
-        <Div flexDirection="column" gridColumn_tablet="7 / 13">
-          <LeadForm
-            formHandler={beHiringPartner}
-            // handleClose={handleClose}
-            enableAreaCodes={false}
-            lang={pageContext.lang}
-            inputBgColor={Colors.white}
-            fields={["full_name", "email", "phone"]}
-          />
-        </Div>
-      </GridContainer>
+          </Div>
+          <Div flexDirection="column" gridColumn_tablet="6 / 13">
+            <H2
+              textAlign="center"
+              textAlign_md="left"
+              fontFamily="Archivo, Lato, sans-serif"
+              fontSize="30px"
+              margin="0 0 30px 0"
+            >
+              {yml.form.title}
+            </H2>
+            <LeadForm
+              formHandler={beHiringPartner}
+              // handleClose={handleClose}
+              enableAreaCodes={false}
+              lang={pageContext.lang}
+              inputBgColor={Colors.white}
+              fields={["full_name", "email", "phone"]}
+              selectProgram={programs}
+              padding="0"
+              sendLabel="Apply"
+              widthButton="auto"
+              buttonWidth_tablet="auto"
+            />
+          </Div>
+        </GridContainerWithImage>
+      </Div>
     </>
   );
 };
@@ -707,6 +517,17 @@ export const query = graphql`
           header {
             title
             paragraph
+            image {
+              childImageSharp {
+                gatsbyImageData(
+                  layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                  width: 700
+                  quality: 100
+                  placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                  breakpoints: [200, 340, 520, 890]
+                )
+              }
+            }
           }
           button {
             btn_label
@@ -714,7 +535,7 @@ export const query = graphql`
             syllabus_heading
             syllabus_motivation
           }
-          two_column_left {
+          two_column_right {
             proportions
             image {
               style
@@ -723,6 +544,7 @@ export const query = graphql`
             heading {
               text
               font_size
+              style
             }
             content {
               text
@@ -747,7 +569,7 @@ export const query = graphql`
           }
           how_it_works {
             title
-            text
+            text1
             steps {
               icon
               title
@@ -757,6 +579,7 @@ export const query = graphql`
               url
               label
             }
+            text2
           }
           successful_stories {
             title
@@ -764,6 +587,17 @@ export const query = graphql`
             testimonials
           }
           form {
+            image {
+              childImageSharp {
+                gatsbyImageData(
+                  layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                  width: 700
+                  quality: 100
+                  placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                  breakpoints: [200, 340, 520, 890]
+                )
+              }
+            }
             title
             paragraph
           }
