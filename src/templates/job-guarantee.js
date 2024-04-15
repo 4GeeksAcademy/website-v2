@@ -115,7 +115,7 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
           margin_tablet="30px auto 20px auto"
           position="relative"
           gridColumn_tablet="1/15"
-          maxWidth="1366px"
+          maxWidth="1280px"
         >
           {/* <Div
               position="absolute"
@@ -265,7 +265,7 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
         display="block"
         display_tablet="flex"
         justifyContent="between"
-        maxWidth="1366px"
+        maxWidth="1280px"
         width="100%"
       >
         <Div
@@ -443,13 +443,13 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
         <GridContainerWithImage
           columns_tablet="12"
           childMargin="auto"
-          childMaxWidth="1366px"
+          childMaxWidth="1280px"
           padding="30px 0 0 0"
           padding_tablet="0"
           margin_tablet="30px auto 20px auto"
           position="relative"
           gridColumn_tablet="1/15"
-          maxWidth="1366px"
+          maxWidth="1280px"
         >
           <Div
             gridColumn_tablet="1 / 6"
