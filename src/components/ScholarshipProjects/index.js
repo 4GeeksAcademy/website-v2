@@ -27,7 +27,7 @@ const ScholarshipProjects = ({ content, maxWidth }) => {
     <Div
       display="block"
       position="relative"
-      maxWidth={maxWidth || "1366px"}
+      maxWidth={maxWidth || "1280px"}
       margin="auto"
       padding_xxs="20px"
       padding_tablet="50px 40px"

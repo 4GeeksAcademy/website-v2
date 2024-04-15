@@ -20,59 +20,45 @@ const positions = [
   },
 ];
 
-export default ({ icon, title, content }) => {
+export default ({ icon, title, content, index }) => {
   return (
     <Div
-      gridGap="0"
-      //alignItems="stretch"
-      justifyContent_tablet="flex-start"
-      justifyContent_xs="flex-start"
-      flexDirection="column"
+      key={index}
+      background="#FFF"
+      border="3px solid #000"
+      width="100%"
+      width_md="320px"
+      width_tablet="200px"
+      boxShadow="6px 6px 0px 0px rgba(0,0,0,1)"
+      boxShadow_tablet="9px 8px 0px 0px rgba(0,0,0,1)"
       flexDirection_tablet="column"
-      height="auto"
-      width_tablet="100%"
-      minWidth_lg="320px"
-      minWidth_tablet="120px"
-      minWidth_md="180px"
-      //minWidth_lg="240px"
-      width_xs="50%"
-      margin_tablet="0 10px"
-      margin_xxs="20px 0"
-      padding_xs="0"
+      justifyContent_tablet="start"
+      padding="15px"
+      alignItems="center"
+      alignItems_tablet="start"
+      borderRadius="4px"
     >
+      {icon && <Icon icon={icon} width="56px" height="56px" color={null} />}
       <Div
+        margin="0 0 0 15px"
+        margin_tablet="30px 0 0 0"
         display="flex"
         flexDirection="column"
-        alignItems="center"
-        padding_tablet="0"
-        padding_xs="0 10%"
-        width="100%"
+        display_tablet="block"
       >
-        <Icon icon={icon} width="94" height="98" margin="0 0 20px 0" />
         {title && (
-          <H2
-            type="h2"
+          <H3
+            textAlign="left"
             fontSize="16px"
-            width="140px"
-            width_md="auto"
-            lineHeight="19px"
-            padding="0"
-            padding_tablet="20px 15%"
-            textAlign="center"
+            fontFamily="Archivo-Black"
+            // lineHeight="20px"
+            margin="0"
           >
             {title}
-          </H2>
+          </H3>
         )}
         {content && (
-          <Paragraph
-            fontSize="14px"
-            lineHeight="17px"
-            color={Colors.black}
-            padding="0 15%"
-            margin_xs="10px 0 0 0"
-            width="100%"
-            textAlign="justify"
-          >
+          <Paragraph textAlign="left" color="#000" opacity="1" fontSize="24px">
             {content}
           </Paragraph>
         )}

@@ -27,7 +27,7 @@ export const Container = styled(Fragment)`
   flex: ${(props) =>
     props.flex || props.size ? `0 0 ${(props.size / 12) * 100}%` : null};
   max-width: ${(props) =>
-    props.size ? `${(props.size / 12) * 100}%` : props.maxWidth || "1366px"};
+    props.size ? `${(props.size / 12) * 100}%` : props.maxWidth || "1280px"};
   max-height: ${(props) => (props.maxHeight ? props.maxHeight : "none")};
   overflow: ${(props) => props.overflow};
   overflow-wrap: ${(props) => props.overflowWrap};
@@ -798,7 +798,7 @@ export const Header = ({
       <Grid
         gridTemplateColumns_tablet={`repeat(12, 1fr)`}
         gridArea_tablet="1/1/1/15"
-        maxWidth="1366px"
+        maxWidth="1280px"
         margin="auto"
       >
         {/* hacer cambios aqui ... remover svg en mobile */}
@@ -1336,7 +1336,7 @@ Div.defaultProps = {
 };
 
 Container.defaultProps = {
-  maxWidth: "1366px",
+  maxWidth: "1280px",
   padding: "17px",
   padding_tablet: "0 40px",
   padding_md: "0 80px",
