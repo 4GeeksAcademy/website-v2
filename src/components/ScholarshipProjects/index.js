@@ -13,7 +13,7 @@ const ScholarshipProjects = ({ content, maxWidth }) => {
   const sliderRef = useRef();
 
   const settings = {
-    dots: false,
+    dots: true,
     infinite: true,
     autoplay: true,
     autoplaySpeed: 6000,
@@ -34,8 +34,25 @@ const ScholarshipProjects = ({ content, maxWidth }) => {
       padding_md="50px 80px"
       padding_lg="70px 0px"
     >
-      <H2 margin="0 0 10px 0">{content.title}</H2>
-      <Paragraph margin="0 0 25px 0">{content.description}</Paragraph>
+      <H2
+        margin="0 0 10px 0"
+        fontFamily="Archivo, Lato, sans-serif"
+        fontSize="30px"
+        fontSize_md="45px"
+        fontWeight="400"
+        lineHeight="48.96px"
+      >
+        {content.title}
+      </H2>
+      <Paragraph
+        margin="18px 0 32px 0"
+        fontFamily="Archivo, Lato, sans-serif"
+        fontSize="15px"
+        fontSize_md="21px"
+        lineHeight="22.85px"
+      >
+        {content.description}
+      </Paragraph>
       <Button
         display="none"
         display_tablet="block"
@@ -82,18 +99,18 @@ const ScholarshipProjects = ({ content, maxWidth }) => {
       </Button>
       <Slider {...settings} ref={sliderRef}>
         {content?.projects.map((project) => (
-          <Div margin_md="50px auto">
+          <Div margin_md="0px auto">
             <Div
               padding="15px"
               padding_tablet="0"
               margin="auto"
               width_tablet="100%"
               width_lg="90%"
-              // width_md="900px"
               minHeight_tablet="605px"
-              border_tablet="1px solid #000000"
+              border_tablet="2px solid #000000"
               flexDirection_tablet="row"
               flexDirection="column"
+              borderRadius="4px"
             >
               <Div width="100%" width_tablet="50%">
                 <StyledBackgroundSection
@@ -124,7 +141,6 @@ const ScholarshipProjects = ({ content, maxWidth }) => {
                     {project.description}
                   </Paragraph>
                 </Div>
-                <HR background={Colors.lightGray} width="100%" height="1px" />
                 <Div margin="20px 0 0 0" display="block">
                   <H4
                     fontWeight="600"
@@ -236,16 +252,19 @@ const ScholarshipProjects = ({ content, maxWidth }) => {
                   >
                     {content.press}
                   </H4>
-                  <Div flexWrap="wrap" gap="10px">
+                  <Div flexWrap="wrap" gap="16px">
                     {project.press.map((obj) => (
                       <Button
                         // width="200px"
                         padding="5px"
                         padding_xs="5px"
-                        padding_tablet="5px"
+                        padding_tablet="7px"
                         width_tablet="fit-content"
-                        variant="outline"
+                        variant="full"
                         onClick={(e) => smartRedirecting(e, obj.link)}
+                        borderRadius="4px"
+                        color={Colors.lightBlue3}
+                        textColor={Colors.black}
                         icon={
                           <Icon
                             icon="link"
@@ -253,8 +272,6 @@ const ScholarshipProjects = ({ content, maxWidth }) => {
                             style={{ marginRight: "5px" }}
                           />
                         }
-                        color={Colors.black}
-                        textColor={Colors.black}
                       >
                         {obj.name}
                       </Button>
@@ -281,7 +298,7 @@ const ScholarshipProjects = ({ content, maxWidth }) => {
                     color={`${Colors.black} !important`}
                     textColor={`${Colors.black} !important`}
                   >
-                    {content.see_project}
+                    <u>{content.see_project}</u>
                   </Button>
                 )}
               </Div>

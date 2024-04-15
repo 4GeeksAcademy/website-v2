@@ -11,16 +11,18 @@ const ForEveryoneBoxes = ({ for_everyone_boxes }) => {
         flexDirection="column"
         flexDirection_tablet="row"
         flexWrap="wrap"
-        flexWrap_tablet="no-wrap"
+        flexWrap_tablet="wrap"
+        width="100%"
       >
         {for_everyone_boxes.map((box, index) => (
           <Div
             key={index}
             background={box.color}
             border="3px solid #000"
-            width_md="31%"
-            width_lg="31%"
+            width_tablet="calc((100% - 17px)/2)"
+            width_md="calc((100% - 34px)/3)"
             width="100%"
+            height="140px"
             height_md="140px"
             height_tablet="140px"
             flexDirection_tablet="column"

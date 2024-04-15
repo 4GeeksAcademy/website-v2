@@ -192,8 +192,8 @@ const TwentyMillion = ({ data, pageContext, yml }) => {
           columns_md="12"
           containerColumns_tablet="none"
           padding="30px 20px"
-          padding_tablet="40px 80px"
-          padding_md="60px 80px"
+          padding_tablet="40px 0px"
+          padding_md="60px 0px"
           padding_lg="80px 0"
           margin_tablet="0 auto 81px auto"
           childMaxWidth="1280px"
@@ -228,15 +228,17 @@ const TwentyMillion = ({ data, pageContext, yml }) => {
         </GridContainer>
       </Div>
 
-      <OurPartners margin="0" images={partnersData.partners.images} marquee />
-
       <ScholarshipProjects
         content={data.allScholarshipProjectsYaml.edges[0].node}
         lang={pageContext.lang}
       />
-      <ScholarshipSuccessCases
-        content={data.allScholarshipSuccessCasesYaml.edges[0].node}
+
+      <Testimonials
+        lang={data.allTestimonialsYaml.edges}
+        margin_tablet="75px 0 0 0"
+        margin="45px 0 0 0"
       />
+
       <BenefitsAndCharts data={partnersData} goToForm={goToForm} />
 
       <Div
@@ -261,10 +263,8 @@ const TwentyMillion = ({ data, pageContext, yml }) => {
         />
       </Div>
 
-      <Testimonials
-        lang={data.allTestimonialsYaml.edges}
-        margin_tablet="75px 0 0 0"
-        margin="45px 0 0 0"
+      <ScholarshipSuccessCases
+        content={data.allScholarshipSuccessCasesYaml.edges[0].node}
       />
 
       <HR
