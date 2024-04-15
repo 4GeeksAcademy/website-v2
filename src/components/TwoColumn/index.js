@@ -81,7 +81,9 @@ const Side = ({
     );
   }
 
-  const headingStyle = heading.style ? JSON.parse(heading.style) : null;
+  let headingStyle = {};
+  if (heading?.style) headingStyle = JSON.parse(heading.style);
+
   const [h_xl, h_lg, h_md, h_sm, h_xs] =
     heading && heading.font_size ? heading.font_size : [];
   const [sh_xl, sh_lg, sh_md, sh_sm, sh_xs] =
