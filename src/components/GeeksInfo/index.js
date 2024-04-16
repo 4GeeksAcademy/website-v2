@@ -72,7 +72,7 @@ const GeeksInfo = ({ lang }) => {
         </H2>
       )}
       <TwoColumn
-        left={{
+        right={{
           //heading: yml.heading,
           //sub_heading: yml.sub_heading,
           bullets: content.bullets,
@@ -81,7 +81,7 @@ const GeeksInfo = ({ lang }) => {
           //paragraph: content.paragraph,
           //header: content.header
         }}
-        right={{ image: content.image }}
+        left={{ image: content.image }}
         //proportions={yml.proportions}
         //session={session}
       />
