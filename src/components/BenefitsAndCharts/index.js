@@ -3,6 +3,7 @@ import { Div } from "../Sections";
 import { H2, H3, Paragraph } from "../Heading";
 import { Button, Colors } from "../Styling";
 import Icon from "../Icon";
+import Iconogram from "../Iconogram";
 
 const BenefitsAndCharts = (props) => {
   const { data, goToForm } = props;
@@ -29,59 +30,77 @@ const BenefitsAndCharts = (props) => {
   return (
     <>
       <Div
-        className="benefits_and_charts"
         display="flex"
         flexDirection="column"
-        gap="50px"
+        gap="24px"
         padding="30px 20px 80px 20px"
         flexDirection_tablet="row"
         margin="auto"
-        padding_tablet="40px 40px"
-        padding_md="60px 80px"
-        padding_lg="80px 0"
+        padding_tablet="40px"
+        // padding_md="60px 80px"
+        // padding_lg="80px 0"
         maxWidth={props.maxWidth || "1280px"}
       >
         <Div flexDirection="column" flex="1" flex_tablet="1">
-          <H2 type="h2" textAlign="left" lineHeight="30px">
+          <H2
+            type="h2"
+            fontFamily="Archivo, Lato, sans-serif"
+            fontWeight="400"
+            fontSize="30px"
+            fontSize_tablet="45px"
+            textAlign="center"
+            textAlign_tablet="left"
+            lineHeight="30px"
+            lineHeight_tablet="48.96px"
+            margin="0 0 24px 0"
+            margin_tablet="0 0 48px 0"
+            padding="8px 0 0 0"
+          >
             {data.benefits_and_charts.title}
           </H2>
-          <Paragraph
-            textAlign="left"
-            fontSize="15px"
-            color="#3A3A3A"
-            padding="20px 0 30px 0"
-            padding_tablet="20px 0 30px 0"
-            letterSpacing="0.05em"
-          >
-            {data.benefits_and_charts.description}
-          </Paragraph>
+          {data?.benefits_and_charts?.description &&
+            data.benefits_and_charts.description !== "" && (
+              <Paragraph
+                textAlign="left"
+                fontSize="15px"
+                color="#3A3A3A"
+                padding="20px 0 30px 0"
+                padding_tablet="20px 0 30px 0"
+                letterSpacing="0.05em"
+              >
+                {data.benefits_and_charts.description}
+              </Paragraph>
+            )}
 
+          <ButtonPartner />
+        </Div>
+
+        <Div
+          flexDirection="column"
+          flex="1"
+          flex_tablet="1"
+          padding="0 0 40px 0"
+          padding_tablet="0"
+        >
           {Array.isArray(data.benefits_and_charts.bullets) && (
-            <Div
-              display="flex"
-              flexDirection="column"
-              gridGap="0"
-              padding="0 0 30px 0"
-              padding_tablet="0 0 30px 0"
-            >
+            <>
               {data.benefits_and_charts.bullets.map((p, index) => (
                 <Div
                   key={index}
-                  borderBottom={`${
-                    index !== data.benefits_and_charts.bullets.length - 1
-                      ? "1px solid #EBEBEB"
-                      : "0"
-                  }`}
+                  // borderBottom={`${
+                  //   index !== data.benefits_and_charts.bullets.length - 1
+                  //     ? "1px solid #EBEBEB"
+                  //     : "0"
+                  // }`}
                   height="auto"
                   alignItems="center"
-                  padding="0"
-                  padding_tablet="0 10% 0 0"
+                  padding="8px 0 4px 0"
                 >
                   <Div
                     flexDirection="column"
                     // alignSelf="center"
                     alignSelf="flex-start"
-                    padding="22px 10px 20px 0"
+                    padding="0 10px 0 0"
                   >
                     <Icon
                       icon="check"
@@ -92,7 +111,6 @@ const BenefitsAndCharts = (props) => {
                   </Div>
                   <H2
                     type="h3"
-                    padding="20px 0"
                     textAlign="left"
                     fontSize="15px"
                     fontWeight="400"
@@ -102,75 +120,11 @@ const BenefitsAndCharts = (props) => {
                   </H2>
                 </Div>
               ))}
-            </Div>
+            </>
           )}
-
-          <ButtonPartner />
-        </Div>
-
-        <Div
-          flexDirection="column"
-          flex="1"
-          flex_tablet="1"
-          padding="20px 10px 40px 10px"
-          padding_tablet="4% 30px 2% 30px"
-          background={Colors.lightYellow}
-        >
-          <Div
-            height="auto"
-            alignItems="center"
-            gap="40px"
-            padding="0 5px 0 20px"
-            padding_tablet="0 5px 0 10px"
-          >
-            <Div
-              flexDirection="column"
-              alignSelf="center"
-              padding="0 8px 0 0"
-              style={{ opacity: 0 }}
-            >
-              <Icon icon="job" width="65px" />
-            </Div>
-            <H3
-              type="h3"
-              textAlign="left"
-              fontSize="15px"
-              textTransform="uppercase"
-              letterSpacing="0.05em"
-            >
-              {data.benefits_and_charts.charts.title}
-            </H3>
-          </Div>
-          <Div flexDirection="column" gap="48px">
-            {data.benefits_and_charts.charts.list.map((chart, index) => (
-              <Div
-                height="auto"
-                key={`${chart.icon}-${index}`}
-                alignItems="center"
-                padding="0 5px 0 20px"
-                padding_tablet="0 5px 0 10px"
-                gap="40px"
-              >
-                <Div
-                  flexDirection="column"
-                  alignSelf="center"
-                  padding="0 8px 0 0"
-                >
-                  <Icon icon={chart.icon} width="65px" />
-                </Div>
-                <Paragraph
-                  textAlign="left"
-                  fontSize="15px"
-                  fontWeight="400"
-                  lineHeight="22px"
-                >
-                  {chart.description}
-                </Paragraph>
-              </Div>
-            ))}
-          </Div>
         </Div>
       </Div>
+      <Iconogram yml={data.benefits_and_charts.charts} textSize="15px" />
     </>
   );
 };

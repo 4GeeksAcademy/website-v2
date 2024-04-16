@@ -226,9 +226,9 @@ work_together:
 
 benefits_and_charts:
   title: "Forma parte de nuestra red de socios"
-  description: "Estos son algunos de los beneficios:"
+  description: "" #"Estos son algunos de los beneficios:"
   button_section:
-    button_text: "UNETE A NUESTROS ALIADOS"
+    button_text: "Quiero contribuir ➜"
     button_link: ""
   bullets:
     - Acceso a una gran reserva de talento único y de alta calidad.
@@ -238,19 +238,22 @@ benefits_and_charts:
     - Aumente el conocimiento y el valor de la marca con el taller patrocinios y oportunidades para hablar.
     - Establezca su marca como un líder sólido en la industria de la tecnología.
     - Construcción comunitaria.
+    - Reducción de impuestos.
 
   charts:
-    title: "Los números"
-    list:
+    heading:
+      text: "Los números"
+      style: '{ "left": "center" }'
+    swipable: false
+    icons:
       - icon: "chart-62"
-        description: |
-          El 62% de los ejecutivos "cree que necesitarán volver a capacitar o reemplazar a más de una cuarta parte de su fuerza laboral de aquí a 2023 debido al avance de la automatización y la digitalización" Un estudio de 2018 del informe McKinsey.
+        content: El 62% de los ejecutivos "cree que necesitarán volver a capacitar o reemplazar a más de una cuarta parte de su fuerza laboral de aquí a 2023 debido al avance de la automatización y la digitalización" Un estudio de 2018 del informe McKinsey.
       - icon: "job"
-        description: "Según un estudio de 2016 realizado por la Society for Human Resource Management, cuesta un promedio de $ 4,129 contratar a un nuevo empleado, y se tarda un promedio de 42 días en encontrar un nuevo empleado."
+        content: "Según un estudio de 2016 realizado por la Society for Human Resource Management, cuesta un promedio de $ 4,129 contratar a un nuevo empleado, y se tarda un promedio de 42 días en encontrar un nuevo empleado."
       - icon: "notes-2"
-        description: "Los bootcamps de programación y las universidades  tienen un porcentaje casi idéntico de exalumnos empleados"
+        content: "Los bootcamps de programación y las universidades de 4 años tienen un porcentaje casi idéntico de exalumnos empleados"
       - icon: "chart-72"
-        description: "72% de los empleadores dicen que contratar a alguien egresado de un Bootcamp es más o menos lo mismo que un graduado universitario"
+        content: "72% de los empleadores dicen que contratar a alguien egresado de un Bootcamp es más o menos lo mismo que un graduado universitario"
 
 partners_in_education:
   title: "Aliados en educación"

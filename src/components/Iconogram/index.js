@@ -17,7 +17,7 @@ import StarRating from "../StarRating";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { smartRedirecting, transferQuerystrings } from "../../utils/utils.js";
 
-const Iconogram = ({ session, data, pageContext, yml, index }) => {
+const Iconogram = ({ session, data, pageContext, yml, index, textSize }) => {
   const { heading, sub_heading, icons, button, swipable } = yml;
 
   return (
@@ -101,6 +101,7 @@ const Iconogram = ({ session, data, pageContext, yml, index }) => {
                   icon={item.icon}
                   title={item.title}
                   content={item.content}
+                  textSize={textSize}
                 />
               </React.Fragment>
             );

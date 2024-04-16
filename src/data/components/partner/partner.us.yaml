@@ -263,32 +263,35 @@ work_together:
       description: "Your go-to partner for tech candidates, have a constant flow of high- quality candidates with our amazing talent pipeline!"
 
 benefits_and_charts:
-  title: "BECOME A PARTNER"
-  description: "Collaborate with our mission and leverage yours!"
+  title: "Become part of our Partnership Network"
+  description: "" #"Collaborate with our mission and leverage yours!"
   button_section:
-    button_text: "JOIN OUR PARTNERSHIP NETWORK"
+    button_text: "I want to contribute ➜"
     button_link: ""
   bullets:
-    - Elevate your brand's visibility and exposure.
-    - Establish your brand as a leading force in the tech industry.
-    - Foster a spirit of community and collaboration.
-    - Strengthen job retention through our impactful reskilling programs.
-    - Bridge the technology divide within your community.
-    - Fill vital tech roles within your organization with our highly skilled bootcamp graduates.
-    - Enhance brand recognition and add value by sponsoring significant events.
+    - Access to a big pool of high quality and unique talent.
+    - Increase job retention with reskilling programs.
+    - Bridge the tech gap within the community.
+    - Fill tech job openings.
+    - Increase brand awareness and value with workshop sponsorships and speaking opportunities.
+    - Establish your brand as a strong leader in the tech industry.
+    - Community Building.
+    - Tax reduction.
 
   charts:
-    title: "Some Numbers worth Considering:"
-    list:
+    heading:
+      text: "Some Numbers worth Considering:"
+      style: '{ "left": "center" }'
+    swipable: false
+    icons:
       - icon: "chart-62"
-        description: |
-          According to a study by the Society for Human Resource Management, it costs an average of $4,129 to hire a new employee, with an average of 42 days to find a suitable candidate.
-      - icon: "job"
-        description: "62% of executives believe they will need to retrain or replace more than a quarter of their workforce between now and 2023 due to advancing automation and digitization (McKinsey report, 2018)."
-      - icon: "notes-2"
-        description: "Coding bootcamp graduates and college graduates exhibit strikingly similar employment rates."
+        content: "62% of executives “believe they will need to retrain or replace more than a quarter of their workforce between now and 2023 due to advancing automation and digitization. A 2018 study by McKinsey report."
+      - icon: "certificate-2"
+        content: "According to a 2016 study by the Society for Human Resource Management, it costs an average of $4,129 to hire a new employee, and it takes an average of 42 days to find a new hire."
+      - icon: "briefcase-new"
+        content: "Coding bootcamps and 4-year colleges have nearly identical percentage of alumni employed"
       - icon: "chart-72"
-        description: "72% of employers say that hiring bootcamp graduates is comparable to hiring a college graduate."
+        content: "72% of employers say that hiring from a Bootcamp is pretty much the same than a College Graduate"
 
 partners_in_education:
   title: "Partners in education"

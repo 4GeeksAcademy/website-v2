@@ -20,7 +20,7 @@ const positions = [
   },
 ];
 
-export default ({ icon, title, content, index }) => {
+export default ({ icon, title, content, index, textSize }) => {
   return (
     <Div
       key={index}
@@ -58,7 +58,12 @@ export default ({ icon, title, content, index }) => {
           </H3>
         )}
         {content && (
-          <Paragraph textAlign="left" color="#000" opacity="1" fontSize="24px">
+          <Paragraph
+            textAlign="left"
+            color="#000"
+            opacity="1"
+            fontSize={textSize || "24px"}
+          >
             {content}
           </Paragraph>
         )}

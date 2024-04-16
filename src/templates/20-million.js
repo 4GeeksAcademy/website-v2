@@ -550,10 +550,14 @@ export const query = graphql`
               button_link
             }
             charts {
-              title
-              list {
-                description
+              heading {
+                text
+                style
+              }
+              swipable
+              icons {
                 icon
+                content
               }
             }
           }
