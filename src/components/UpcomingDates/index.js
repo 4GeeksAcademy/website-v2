@@ -143,7 +143,11 @@ const UpcomingDates = ({
       const academySlug = session.academyAliasDictionary[location]
         ? session.academyAliasDictionary[location]
         : location;
-      let cohorts = await getCohorts({ academy: academySlug, limit: 10, syllabus_slug_like: defaultCourse || undefined });
+      let cohorts = await getCohorts({
+        academy: academySlug,
+        limit: 10,
+        syllabus_slug_like: defaultCourse || undefined,
+      });
       cohorts = cohorts?.results || [];
       let syllabus = [];
       for (let i in cohorts) {
@@ -215,7 +219,7 @@ const UpcomingDates = ({
   }, [session]);
   const buttonText = session?.location?.button.apply_button_text;
 
-    console.log("defaultCourse", defaultCourse)
+  console.log("defaultCourse", defaultCourse);
   return (
     <GridContainer
       id={id}
