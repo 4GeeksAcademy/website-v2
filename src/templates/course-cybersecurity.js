@@ -193,7 +193,7 @@ const Program = ({ data, pageContext, yml }) => {
       </Header>
 
       {/* TWO COLUMN CREAR EN EL YML*/}
-      <TwoColumn
+      {/* {session.location?.breathecode_location_slug.includes("spain") && <TwoColumn
         left={{ image: yml.two_columns_first?.image }}
         right={{
           heading: yml.two_columns_first?.heading,
@@ -204,7 +204,7 @@ const Program = ({ data, pageContext, yml }) => {
         }}
         proportions={yml.two_columns_first?.proportions}
         session={session}
-      />
+      />} */}
 
       <JobGuaranteeSmall
         content={data.allJobGuaranteeSmallYaml.edges[0].node}

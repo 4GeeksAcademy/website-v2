@@ -156,7 +156,7 @@ two_columns:
     items:
       - text: "Develop practical skills in data loss prevention (DLP) techniques"
       - text: "Techniques for hardening Windows and Linux systems against cyber threats"
-      - text: "This cybersecurity bootcamp is officially approved and taught by Chema Alonso, guaranteeing top-tier education and industry expertise."
+      - text: "This cybersecurity bootcamp is officially approved by Chema Alonso, guaranteeing top-tier education and industry expertise."
 
 upcoming:
   no_dates_message: "There are currently no upcoming dates for this program"
