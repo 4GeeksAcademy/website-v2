@@ -247,7 +247,7 @@ benefits_and_charts:
     swipable: false
     icons:
       - icon: "chart-62"
-        content: El 62% de los ejecutivos "cree que necesitarán volver a capacitar o reemplazar a más de una cuarta parte de su fuerza laboral de aquí a 2023 debido al avance de la automatización y la digitalización" Un estudio de 2018 del informe McKinsey.
+        content: 'El 62% de los ejecutivos "cree que necesitarán volver a capacitar o reemplazar a más de una cuarta parte de su fuerza laboral de aquí a 2023 debido al avance de la automatización y la digitalización" Un estudio de 2018 del informe McKinsey.'
       - icon: "job"
         content: "Según un estudio de 2016 realizado por la Society for Human Resource Management, cuesta un promedio de $ 4,129 contratar a un nuevo empleado, y se tarda un promedio de 42 días en encontrar un nuevo empleado."
       - icon: "notes-2"
