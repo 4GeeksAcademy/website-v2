@@ -7,6 +7,7 @@ import { Link } from "gatsby";
 import Fragment from "../Fragment";
 import Marquee_v2 from "../Marquee_v2";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import Icon from "../Icon";
 
 const Testimonials = (props) => {
   let testimonialsArray = props.lang[0].node;
@@ -18,15 +19,15 @@ const Testimonials = (props) => {
     <Fragment github="/components/testimonials">
       <GridContainer
         id={props.id}
-        fluid
         background={props.background || "linear-gradient(#f5f5f5, white)"}
         height={props.noMove ? "580px" : "520px"}
         height_tablet={props.noMove ? "500px" : "450px"}
-        //childHeight="540px"
         margin={props.margin}
         margin_tablet={props.margin_tablet}
         padding="30px 20px 0 20px"
         padding_tablet="48px 0 36px 0"
+        childMaxWidth="1280px"
+        width="100%"
       >
         <Div
           id="AQUI"
@@ -55,7 +56,7 @@ const Testimonials = (props) => {
         <Marquee_v2
           speed={props.noMove ? 0 : 0.5} // false == no movement
           reversed={false}
-          containerstyle={{ height: "210px" }}
+          containerstyle={{ height: "240px" }}
           showSlider={props.noMove ? true : false}
         >
           <Div
@@ -68,16 +69,17 @@ const Testimonials = (props) => {
               return (
                 <Div
                   key={`${i}-${item.student_name}`}
-                  display="flex"
+                  display="block"
+                  // alignItems="flex-start"
                   background="#ffffff"
                   minWidth="245px"
                   boxShadow="0px 2px 5px rgba(0, 0, 0, 0.1)"
                   width="320px"
-                  height="150px"
+                  height="auto"
                   margin="0 12px 0 0"
                   padding="20px 24px 30px 20px"
                   border="1px solid #EBEBEB"
-                  alignItems="flex-start"
+                  textAlign="center"
                 >
                   <GatsbyImage
                     // fluid={item.student_thumb.childImageSharp.fluid}
@@ -86,34 +88,43 @@ const Testimonials = (props) => {
                     )}
                     alt={item.student_name}
                     style={{
-                      height: "39px",
-                      minWidth: "39px",
-                      width: "39px",
+                      display: "block",
+                      height: "59px",
+                      minWidth: "59px",
+                      width: "59px",
                       backgroundSize: `cover`,
+                      textAlign: "center",
+                      borderRadius: "100%",
+                      margin: "13px auto 0px auto",
                     }}
                   />
                   <Div
                     display="flex"
                     flexDirection="column"
-                    alignItems="flex-start"
+                    alignItems="center"
                     width="100%"
                     height="100%"
-                    padding="0 9px 0 9px"
-                    style={{ position: "relative" }}
+                    padding="9px"
+                    // style={{ position: "relative" }}
                   >
-                    <H3 fontSize="15px" lineHeight="19px" textAlign="left">
+                    <H3
+                      fontSize="12px"
+                      fontWeight="900"
+                      lineHeight="19px"
+                      textAlign="center"
+                    >
                       {item.student_name}
                     </H3>
-                    <H4 fontSize="14px" lineHeight="22px" textAlign="left">
+                    <H4 fontSize="12px" lineHeight="22px" textAlign="center">
                       {item.short_content}
                     </H4>
-                    {item.linkedin_url != "" && item.linkedin_image != null && (
+                    {item.linkedin_url != "" && (
                       <a
                         href={item.linkedin_url}
                         target="_blank"
                         rel="noopener noreferrer nofollow"
                       >
-                        <GatsbyImage
+                        {/* <GatsbyImage
                           // fluid={item.linkedin_image.childImageSharp.fluid}
                           image={getImage(
                             item.linkedin_image.childImageSharp.gatsbyImageData
@@ -128,7 +139,8 @@ const Testimonials = (props) => {
                             bottom: "0",
                             right: "0",
                           }}
-                        />
+                        /> */}
+                        <Icon icon="linkedin-new" width="20px" height="20px" />
                       </a>
                     )}
                   </Div>

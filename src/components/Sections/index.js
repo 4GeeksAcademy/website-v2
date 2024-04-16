@@ -944,6 +944,7 @@ export const GridContainer = ({
   justifyContentChild,
   justifyItemsChild,
   border,
+  width,
 }) => {
   return (
     <Grid
@@ -1023,6 +1024,7 @@ export const GridContainer = ({
         height={childHeight}
         margin={childMargin || "auto"}
         maxWidth={childMaxWidth}
+        width={width}
       >
         {children}
       </Grid>
