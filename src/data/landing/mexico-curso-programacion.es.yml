@@ -92,7 +92,7 @@ follow_bar:
 #
 
 rating_reviews:
-  position: 5
+  position: 3
   heading: "Lee acerca de nosotros"
   rating_list:
     - alt: "Career Karma"
@@ -123,7 +123,7 @@ badges:
   heading: "4Geeks Academy cuenta con premios y reconocimientos que validan su excelencia"
 
 geeks_vs_others:
-  position: 4
+  position: 3
   heading: "¿Qué hace a 4Geeks Academy tan exitoso?"
   paragraph: ""
   total_rows: 5
@@ -141,7 +141,7 @@ who_is_hiring:
 
 components:
     - name: some_id
-      position: 3
+      position: 6
       layout: two_column_right
       # proportions: [8, 4]
       background: "#fbfbfb"
@@ -151,8 +151,6 @@ components:
         src: "../../../static/images/testimonials/samantha-review.png"
         shadow: true
       video: "https://www.youtube.com/watch?v=DrzRJICxjOU"
-      videoHeight: "360px"
-      videoWidth: "243px"
       heading:
         text: "4Geeks en México La Elección de Samantha para su Bootcamp Ideal"
         #xl      lg     md     sm    xs
@@ -166,31 +164,6 @@ components:
         color: "white"
         background: "black"
         hover: "lightBlue"
-
-    - name: how-it-works
-      position: 2
-      background: "veryLightBlue2"
-      layout: iconogram
-      swipable: True
-      heading:
-        text: "Garantía de Empleo"
-        font_size: ["30px", "30px", "30px", "30px", "30px"]
-      sub_heading:
-        text: ""
-        font_size: ["16px", "16px", "16px", "16px", "16px"]
-        style: '{ "textAlign": "center", "width": "60%" }'
-      button:
-        text: "Condiciones Aplican"
-        color: black
-        # hover_color: "white"
-        # background: "black"
-        path: "#"
-      icons:
-        - icon: "yellowhat"
-          title: Si no encuentras empleo en los primeros 180 días tras graduarte, te devolvemos tu dinero.
-        - icon: "stairswflag"
-          title: Completa las etapas de nuestro proceso de apoyo para la carrera profesional.
-        - icon: "group"
-          title: Optimiza tu perfil profesional y preparate para las entrevistas.
-        - icon: "hands"
-          title: Ambos nos comprometemos con tu futura carrera
+      videoHeight: "360px"
+      videoWidth: "243px"
+    
