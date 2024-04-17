@@ -152,7 +152,7 @@ two_columns:
       - text: "Este programa de estudios fue cocreado por Daniela Maissi, una hacker ética del EC-Council como investigadora de malware y hábil desarrolladora web experta en ciberseguridad con más de 5 años de experiencia y 12+ certificaciones en computación en la nube, OSINT y soluciones de TI."
       - text: "Técnicas para fortalecer sistemas Windows y Linux contra amenazas cibernéticas"
       - text: "Desarrolla habilidades prácticas en técnicas de prevención de pérdida de datos (DLP)"
-      # - text: "Curso de ciberseguridad aprobado por Chema Alonso, garantizando educación de primer nivel y experiencia en la industria."  
+#      - text: "Curso de ciberseguridad aprobado por Chema Alonso, garantizando educación de primer nivel y experiencia en la industria."  
 
 
 upcoming:
