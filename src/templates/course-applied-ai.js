@@ -1,39 +1,44 @@
-import React, { useState, useEffect } from "react";
-import { isCustomBarActive } from "../actions";
-import { graphql, Link } from "gatsby";
-import { GridContainer, Header, Div } from "../components/Sections";
+import React, { useEffect, useState } from "react";
+import { Link, graphql } from "gatsby";
+import BaseRender from "./_baseLayout";
+import { Header, Div, GridContainer } from "../components/Sections";
 import { Button, Colors, Img } from "../components/Styling";
-import UpcomingDates from "../components/UpcomingDates";
+import { requestSyllabus, isCustomBarActive } from "../actions";
+import { SessionContext } from "../session";
+import AboutTheProgram from "../components/AboutTheProgram";
 import ProgramDetails from "../components/ProgramDetails";
 import ProgramDetailsMobile from "../components/ProgramDetailsMobile";
-import TechsWeTeach from "../components/TechsWeTeach";
-import GeeksInfo from "../components/GeeksInfo";
-import OurPartners from "../components/OurPartners";
-import BaseRender from "./_baseLayout";
-import Icon from "../components/Icon";
-import { requestSyllabus } from "../actions";
-import { SessionContext } from "../session";
-import ScholarshipProjects from "../components/ScholarshipProjects";
-import Badges from "../components/Badges";
 import PricesAndPayment from "../components/PricesAndPayment";
-import { Circle } from "../components/BackgroundDrawing";
-import LeadForm from "../components/LeadForm";
 import Modal from "../components/Modal";
-import TwoColumn from "../components/TwoColumn/index.js";
-import Overlaped from "../components/Overlaped";
+import LeadForm from "../components/LeadForm";
+import AlumniProjects from "../components/AlumniProjects";
+import Badges from "../components/Badges";
+import TechsWeTeach from "../components/TechsWeTeach";
+import { Circle } from "../components/BackgroundDrawing";
+import UpcomingDates from "../components/UpcomingDates";
 import JobGuaranteeSmall from "../components/JobGuaranteeSmall";
+import GeeksInfo from "../components/GeeksInfo";
+import Testimonials from "../components/Testimonials";
+import OurPartners from "../components/OurPartners";
+import RelatedPosts from "../components/RelatedPosts";
+import Icon from "../components/Icon";
+import Overlaped from "../components/Overlaped";
 import Loc from "../components/Loc";
+import ScholarshipProjects from "../components/ScholarshipProjects";
+import TwoColumn from "../components/TwoColumn/index.js";
 
 const Program = ({ data, pageContext, yml }) => {
   const { session } = React.useContext(SessionContext);
   const courseDetails = data.allCourseYaml.edges[0].node;
-  const geek = data.allCourseYaml.edges[0].node;
   const [open, setOpen] = React.useState(false);
+  const hiring = data.allPartnerYaml.edges[0].node;
+  const landingHiring = yml.partners;
 
-  const defaultCourse = "machine-learning-engineering";
+  const defaultCourse = "applied-ai";
   const program_schedule = yml.meta_info.slug.includes("full-time")
     ? "full_time"
     : "part_time";
+
   const handleOpen = () => {
     setOpen(true);
   };
@@ -41,8 +46,6 @@ const Program = ({ data, pageContext, yml }) => {
   const handleClose = () => {
     setOpen(false);
   };
-  const hiring = data.allPartnerYaml.edges[0].node;
-  const landingHiring = yml.partners;
 
   const [applyButtonText, setApplyButtonText] = useState("");
   let city = session && session.location ? session.location.city : [];
@@ -50,24 +53,14 @@ const Program = ({ data, pageContext, yml }) => {
     (loc) => loc.node?.city === city
   );
 
+  const syllabus_button_text = yml.button.syllabus_heading;
+  const apply_button_text = yml.button.apply_button_text;
+
   useEffect(() => {
     if (currentLocation !== undefined) {
       setApplyButtonText(currentLocation.node.button.apply_button_text);
     }
   }, [currentLocation]);
-
-  const syllabus_button_text = yml.button.syllabus_heading;
-  const apply_button_text = yml.button.apply_button_text;
-
-  const partners = data.allPartnerYaml.edges[0].node.partners.images
-    .filter(
-      (i) => !Array.isArray(i.courses) || i.courses.includes("machine-learning")
-    )
-    .sort((a, b) =>
-      Array.isArray(a.courses) && a.courses.includes("machine-learning")
-        ? -1
-        : 1
-    );
 
   return (
     <>
@@ -129,7 +122,7 @@ const Program = ({ data, pageContext, yml }) => {
               margin_tablet="10px 24px 10px 0"
               textColor="white"
             >
-              {apply_button_text || applyButtonText}
+              {applyButtonText || apply_button_text}
               {/* {applyButtonText} */}
             </Button>
           </Link>
@@ -189,15 +182,10 @@ const Program = ({ data, pageContext, yml }) => {
           paragraph={yml.badges.paragraph}
         />
       </Header>
-
-      <JobGuaranteeSmall
-        content={data.allJobGuaranteeSmallYaml.edges[0].node}
-      />
       <ProgramDetails
         details={courseDetails.details}
         lang={pageContext.lang}
         course={program_schedule}
-        background={Colors.white}
       />
       <ProgramDetailsMobile
         details={courseDetails.details}
@@ -232,16 +220,18 @@ const Program = ({ data, pageContext, yml }) => {
 
       <UpcomingDates
         lang={pageContext.lang}
-        message={courseDetails.upcoming?.no_dates_message}
-        actionMessage={courseDetails.upcoming?.actionMessage}
+        message={courseDetails.upcoming.no_dates_message}
+        actionMessage={courseDetails.upcoming.actionMessage}
+        defaultCourse={defaultCourse}
         locations={data.allLocationYaml.edges}
       />
-
       <PricesAndPayment
+        background={`linear-gradient(to bottom, ${Colors.white} 50%, ${Colors.lightYellow2} 50%)`}
         type={pageContext.slug}
         lang={pageContext.lang}
         locations={data.allLocationYaml.edges}
         defaultCourse={defaultCourse}
+        defaultSchedule={program_schedule}
         title={yml.prices.heading}
         paragraph={yml.prices.sub_heading}
       />
@@ -250,6 +240,8 @@ const Program = ({ data, pageContext, yml }) => {
         content={data.allScholarshipProjectsYaml.edges[0].node}
         lang={pageContext.lang}
       />
+
+      {/*<OurPartners images={hiring.partners.images} marquee/>*/}
 
       <OurPartners
         images={hiring.partners.images}
@@ -269,23 +261,17 @@ const Program = ({ data, pageContext, yml }) => {
       />
 
       <Loc lang={pageContext.lang} allLocationYaml={data.allLocationYaml} />
-
-      {/* <RelatedPosts
-        lang={pageContext.lang}
-        posts={data.allMarkdownRemark.edges}
-        relatedClusters={courseDetails.meta_info.related_clusters}
-      /> */}
     </>
   );
 };
 
 export const query = graphql`
-  query CourseMachineLearningQuery(
+  query CourseQuery(
     $file_name: String!
     $lang: String!
     $related_clusters: [String]
   ) {
-    allMachineLearningTechsYaml(filter: { fields: { lang: { eq: $lang } } }) {
+    allFullStackTechsYaml(filter: { fields: { lang: { eq: $lang } } }) {
       edges {
         node {
           title
@@ -356,32 +342,6 @@ export const query = graphql`
       edges {
         node {
           seo_title
-          course_instructors {
-            header {
-              title
-              paragraph
-            }
-            instructors {
-              name
-              bio
-              job
-              degree
-              github
-              linkedin
-              sub_title
-              image {
-                childImageSharp {
-                  gatsbyImageData(
-                    layout: CONSTRAINED
-                    width: 500
-                    placeholder: NONE
-                    quality: 100
-                    breakpoints: [200, 340, 420, 490]
-                  )
-                }
-              }
-            }
-          }
           header {
             title
             paragraph
@@ -419,13 +379,6 @@ export const query = graphql`
             geek_force
             geek_pal
           }
-          badges {
-            paragraph
-          }
-          credentials {
-            heading
-            paragraph
-          }
           details {
             about {
               title
@@ -435,14 +388,12 @@ export const query = graphql`
                 content
                 link
                 link_text
+                icon
               }
             }
             heading
+            weeks
             sub_heading
-            facts {
-              value
-              label
-            }
             left_labels {
               description
               projects
@@ -463,35 +414,31 @@ export const query = graphql`
             heading
             button_label
           }
-          teacher {
-            picture {
-              childImageSharp {
-                gatsbyImageData(
-                  layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                  width: 500
-                  placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
-                )
-              }
-            }
-            greeting
-            linkedin
-            full_name
-            bio
+          badges {
+            paragraph
           }
-          potential_companies {
-            tagline
+          upcoming {
+            no_dates_message
+            actionMessage
+          }
+          credentials {
+            heading
+            paragraph
+          }
+          geeks_vs_others {
+            heading
             sub_heading
-            companies {
-              name
-              image {
-                childImageSharp {
-                  gatsbyImageData(
-                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                    width: 100
-                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
-                  )
-                }
-              }
+            sub_heading_link
+          }
+          overlaped {
+            heading
+            paragraph
+            button {
+              text
+              color
+            }
+            image {
+              src
             }
           }
           two_columns {
@@ -522,25 +469,17 @@ export const query = graphql`
               }
             }
           }
-          overlaped {
-            heading
-            paragraph
-            button {
-              text
-              color
-            }
-            image {
-              src
-            }
-          }
-          geeks_vs_others {
-            heading
-            sub_heading
-            sub_heading_link
-          }
           prices {
             heading
             sub_heading
+            selector {
+              top_label
+              placeholder
+            }
+            button {
+              text
+              link
+            }
           }
           typical {
             heading
@@ -550,6 +489,7 @@ export const query = graphql`
               time
               icon
               content
+              step
             }
           }
           alumni {
@@ -562,11 +502,6 @@ export const query = graphql`
             geeks_vs_other
             pricing
             alumni
-          }
-          faq {
-            title
-            link
-            read_more
           }
         }
       }
@@ -626,6 +561,71 @@ export const query = graphql`
           }
           fields {
             lang
+          }
+        }
+      }
+    }
+    allTestimonialsYaml(filter: { fields: { lang: { eq: $lang } } }) {
+      edges {
+        node {
+          heading
+          button_text
+          button_link
+          testimonials {
+            student_name
+            testimonial_date
+            include_in_marquee
+            hidden
+            linkedin_url
+            linkedin_text
+            linkedin_image {
+              childImageSharp {
+                gatsbyImageData(
+                  layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                  height: 14
+                  placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                )
+              }
+            }
+            student_thumb {
+              childImageSharp {
+                gatsbyImageData(
+                  layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                  width: 200
+                  placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                )
+              }
+            }
+            short_content
+            content
+            source_url
+            source_url_text
+          }
+        }
+      }
+    }
+    allCredentialsYaml(filter: { fields: { lang: { eq: $lang } } }) {
+      edges {
+        node {
+          credentials {
+            title
+            icon
+            value
+          }
+        }
+      }
+    }
+    allJobGuaranteeSmallYaml(filter: { fields: { lang: { eq: $lang } } }) {
+      edges {
+        node {
+          title
+          icons {
+            title
+            icon
+          }
+          link {
+            url
+            label
           }
         }
       }
@@ -696,7 +696,7 @@ export const query = graphql`
                 childImageSharp {
                   gatsbyImageData(
                     layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                    width: 300
+                    width: 100
                     placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                   )
                 }
@@ -705,110 +705,6 @@ export const query = graphql`
             }
             tagline
             sub_heading
-          }
-        }
-      }
-    }
-    allTestimonialsYaml(filter: { fields: { lang: { eq: $lang } } }) {
-      edges {
-        node {
-          heading
-          button_text
-          button_link
-          testimonials {
-            student_name
-            testimonial_date
-            include_in_marquee
-            hidden
-            linkedin_url
-            linkedin_text
-            linkedin_image {
-              childImageSharp {
-                gatsbyImageData(
-                  layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                  height: 14
-                  placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
-                )
-              }
-            }
-            student_thumb {
-              childImageSharp {
-                gatsbyImageData(
-                  layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                  height: 200
-                  placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
-                )
-              }
-            }
-            short_content
-            content
-            source_url
-            source_url_text
-          }
-        }
-      }
-    }
-    allAlumniProjectsYaml(filter: { fields: { lang: { eq: $lang } } }) {
-      edges {
-        node {
-          header {
-            tagline
-            sub_heading
-          }
-          projects {
-            project_name
-            slug
-            project_image {
-              childImageSharp {
-                gatsbyImageData(
-                  layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                  width: 800
-                  placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
-                )
-              }
-            }
-            project_content
-            project_video
-            live_link
-            github_repo
-            alumni {
-              first_name
-              last_name
-              job_title
-              github
-              linkedin
-              twitter
-            }
-          }
-          button_section {
-            button_text
-            button_link
-          }
-        }
-      }
-    }
-    allCredentialsYaml(filter: { fields: { lang: { eq: $lang } } }) {
-      edges {
-        node {
-          credentials {
-            title
-            icon
-            value
-          }
-        }
-      }
-    }
-    allJobGuaranteeSmallYaml(filter: { fields: { lang: { eq: $lang } } }) {
-      edges {
-        node {
-          title
-          icons {
-            title
-            icon
-          }
-          link {
-            url
-            label
           }
         }
       }
@@ -878,4 +774,5 @@ export const query = graphql`
     }
   }
 `;
+
 export default BaseRender(Program);

@@ -16,6 +16,13 @@ programs:
     description_mobile: "Online, presencial y flexible"
     link: "/es/coding-bootcamps/curso-datascience-machine-learning"
 
+  - title: "Applied AI"
+    sub_title: "No code"
+    description: "Explore in detail artificial intelligence and how to apply it in different industries, roles, and your work."
+    description_mobile: "Online, face-to-face and flexible"
+    icon: "applied-ai"
+    link: "/us/coding-bootcamps/applied-ai-course"
+
   - title: "Blockchain y Web3"
     sub_title: "Desde cero"
     icon: "blockchain"
