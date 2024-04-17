@@ -1,22 +1,23 @@
 meta_info:
-  slug: applied-ai
+  slug: curso-inteligencia-artificial
   title: "Curso de Inteligencia Artificial Aplicada"
   description: "Explora a detalle la inteligencia artificial y cómo aplicarla en diferentes industrias, roles y en tu trabajo. Sin conocimientos previos requeridos."
   bc_slug: "applied-ai"
+  template: "course-applied-ai"
   image: "/images/og-preview/datascience-ml.es.png"
   visibility: "visible"
   keywords: ""
-  show_in_apply: false
+  show_in_apply: true
   redirects: ["/es/applied-ai"]
   related_clusters: ["trends-and-tech"]
 
 apply_form:
-  label: Curso de Inteligencia Artificial Aplicada
+  label: Inteligencia Artificial Aplicada (sin codificación)
 
 seo_title: "Curso de Inteligencia Artificial Aplicada"
 header:
-  title: "Aprende I.A. y como utilizarla en tu trabajo"
-  paragraph: "¡Conviértete un experto en AI y como aplicarla en las empresas, en diferentes roles y en tu trabajo!"
+  title: "Aprende I.A. y cómo utilizarla en tu trabajo"
+  paragraph: "¡Conviértete un experto en AI y cómo aplicarla en las empresas, en diferentes roles y en tu trabajo!"
   image: "../../../static/images/bg/circles.jpg"
   image_alt: "círculos"
 

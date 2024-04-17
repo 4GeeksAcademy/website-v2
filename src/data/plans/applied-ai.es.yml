@@ -1,0 +1,101 @@
+full_time: []
+part_time:
+  - slug: 'plan-2'
+    academies: ['orlando', 'downtown-miami', 'austin-usa', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa']
+    recomended: false
+    scholarship: "Financiado"
+    payment_time: "Paga en 12 meses"
+    price: "~$292p/m"
+    bullets: 
+      - "Varios partners ofreciendo préstamos y planes de pago"
+      - "Puedes obtener una beca parcial y el balance restante con un plan de pago"
+    icons: 
+      - "/images/ascent_logo.jpg"
+      - "/images/climb-logo.png"
+      - "/images/quotanda-logo.png"
+
+  - slug: 'plan-4'
+    recomended: false
+    academies: ['orlando', 'downtown-miami', 'austin-usa', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa']
+    scholarship: "Pago Completo"
+    payment_time: "Paga hoy"
+    price: "$4000"
+    original_price: "$3500"
+    bullets: 
+      - "Ahorras $500 USD"
+      - "Sólo si la Beca de Clark University no aplica (Desempleado o subempleado)"
+
+  - slug: 'spain-upfront-ai-pt'
+    academies: ['barcelona-spain', 'madrid-spain', 'malaga-spain', 'valencia-spain']
+    recomended: false
+    scholarship: "Paga de contado"
+    payment_time: "Y obtén un descuento"
+    price: "€3000*"
+    bullets:
+      - "Paga con trasnferencia bancaria, tarjeta de crédito o débito, Paypal, Bitcoin o Ethereum"
+      - "*Descuento de hasta €500. Desde €3500 en vez de €3000. ¡Descuento sujeto a disponibilidad!"     
+    icons: 
+      - "/images/visa-mastercard.png"    
+      - "/images/bitcoin_logo.png"  
+      - "/images/ethereum.png"    
+
+  - slug: 'europe-upfront-ai-pt'
+    academies: ['berlin-germany','dublin-ireland', 'europe','hamburg-germany','munich-germany', 'lisbon-portugal','milan-italy','rome-italy']
+    recomended: false
+    scholarship: "Paga de contado"
+    payment_time: "Y obtén un descuento"
+    price: "€3000*"
+    bullets:
+      - "Paga con trasnferencia bancaria, tarjeta de crédito o débito, Paypal, Bitcoin o Ethereum"
+      - "*Descuento de hasta €500. Desde €3000 € en vez de €3500"     
+    icons: 
+      - "/images/visa-mastercard.png"    
+      - "/images/bitcoin_logo.png"  
+      - "/images/ethereum.png"    
+                       
+  - slug: 'chile-ai-ufront'
+    academies: ['santiago-chile']
+    recomended: true
+    scholarship: "Paga al contado"
+    payment_time: "Y obtén un descuento"
+    price: "~120.000 CLP*"
+    bullets:
+      - "Paga con transferencia bancaria, tarjeta de crédito o débito"    
+      - "*Precio sin descuento aplicado"
+    icons: 
+      - "/images/visa-mastercard.png"
+
+  - slug: 'chile-cs-pt'
+    academies: ['santiago-chile']
+    recomended: false
+    scholarship: "Cuotas desde"
+    payment_time: "Pago a 12 meses"
+    price: "~120.000 CLP*"
+    bullets:
+      - "Financiamiento a tu medida desde 6 hasta 18 meses"  
+      - "Se debe pagar un anticipo correspondiente al 20% del valor del programa" 
+    icons: 
+      - "/images//flevo-new.png"
+
+  - slug: 'latam-financed-ai'
+    academies: ['montevideo-uruguay','bogota-colombia', 'costa-rica', 'mexicocity-mexico','quito-ecuador', 'panamacity-panama', 'buenosaires-argentina','lima-peru','lapaz-bolivia']
+    recomended: true
+    scholarship: "Paga una mensualidad por 12 meses"
+    payment_time: "Enfócate en obtener nuevas habilidades. Paga mensualmente."
+    price: "A partir de $120/m"
+    bullets: 
+      - "Ahorras $500. Pagas $1500 en lugar de $2000"
+      - "Siempre hay un plan de pago disponible para que te unas a 4Geeks Academy"
+      - "Si no encuentras aquí lo que esperas, por favor contáctanos y trataremos de encontrar nuevas formas de ayudarte"     
+
+  - slug: 'latam-upfront-ai'
+    academies: ['montevideo-uruguay','bogota-colombia', 'costa-rica', 'mexicocity-mexico','quito-ecuador', 'panamacity-panama', 'buenosaires-argentina','lima-peru','lapaz-bolivia']
+    recomended: false
+    scholarship: "Paga una sola vez"
+    payment_time: "Ahorra en intereses y obtén un gran descuento adicional"
+    price: "USD $1500"
+    bullets:
+      - "Ahorras $500. Pagas $1500 en lugar de $2000"
+      - "Si no encuentras aquí lo que esperas, por favor contáctanos y trataremos de encontrar nuevas formas de ayudarte"     
+    icons: 
+      - "/images//flevo-new.png"    

@@ -234,6 +234,7 @@ const Program = ({ data, pageContext, yml }) => {
         lang={pageContext.lang}
         message={courseDetails.upcoming?.no_dates_message}
         actionMessage={courseDetails.upcoming?.actionMessage}
+        defaultCourse={defaultCourse}
         locations={data.allLocationYaml.edges}
       />
 
