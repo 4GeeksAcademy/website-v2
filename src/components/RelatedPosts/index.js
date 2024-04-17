@@ -20,7 +20,7 @@ const Post = ({ item, i, lang }) => {
       width="100%"
     >
       <Link to={item.node.fields.pagePath}>
-        {item.node.frontmatter.image !== "" && (
+        {item.node.frontmatter.image && (
           <LazyLoad
             height={10}
             scroll={true}
@@ -28,11 +28,7 @@ const Post = ({ item, i, lang }) => {
             style={{ height: "173px" }}
           >
             <RoundImage
-              url={
-                item.node.frontmatter.image !== null
-                  ? item.node.frontmatter.image
-                  : yml.banner.no_image
-              }
+              url={item.node.frontmatter.image}
               bsize="cover"
               border="0px"
               position="center"

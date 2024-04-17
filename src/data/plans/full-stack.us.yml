@@ -282,18 +282,6 @@ part_time:
     icons: 
       - "/images/clarkuniversity.png"
     
-  # - slug: 'usa-clark-scholarship-pt-miami'
-  #   academies: ['downtown-miami', 'orlando', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'toronto-canada']
-  #   recomended: true
-  #   scholarship: "Scholarship"
-  #   payment_time: "Pay today or with a Payment Plan for $100 p/mo"
-  #   price: "$5999"
-  #   bullets: 
-  #     - "You're saving $4000 USD. Thanks to Clark University TechBoost Fund"
-  #     - "You have to be underemployed or unemployed, and provide a valid US Work permit."
-  #   icons: 
-  #     - "/images/clarkuniversity.png"
-
   - slug: 'usa-isa-pt'
     academies: ['orlando', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa','toronto-canada']
     recomended: false
