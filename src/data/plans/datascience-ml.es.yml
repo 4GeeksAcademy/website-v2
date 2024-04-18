@@ -207,23 +207,26 @@ part_time:
     price: "4.500.000 CLP*"
     bullets:
       - "Paga con transferencia bancaria, tarjeta de crédito o débito"    
-      - "*Precio sin descuento aplicado"
+      - "Hasta 12 cuotas sin interés con tarjeta de crédito"
+      - "*Descuento de hasta 1.125.000 CLP. Desde 3.375.000 CLP en vez de 4.500.000 CLP"
     icons: 
       - "/images/visa-mastercard.png"
 
-  - slug: 'chile-geekforce-fs-pt'
+  - slug: 'chile-ds-solo-pt'
     academies: ['santiago-chaaile']
     recomended: true
-    scholarship: "Pago de contado"
-    payment_time: "Y obtén un descuento"
-    price: "4.500.000 CLP*"
+    scholarship: "Solo paga el programa"
+    payment_time: "Enfócate en obtener nuevas habilidades. Paga mensualmente."
+    price: "A partir de 198.000 CLP"
     bullets:
-      - "Paga con transferencia bancaria, tarjeta de crédito o débito"    
-      - "*Precio sin descuento aplicado"
+      - "Se debe pagar un anticipo correspondiente al 20% del valor del programa" 
+      - "Siempre hay un plan de pago disponible para que te unas a 4Geeks Academy"
+      - "Si no encuentras aquí lo que esperas, por favor contáctanos y trataremos de encontrar nuevas formas de ayudarte"      
+      - "Pague solamente por el programa de Data Science si todavía no quiere contratar nuestro programa de apoyo profesional" 
     icons: 
-      - "/images/visa-mastercard.png"    
+      - "/images//flevo-new.png"   
 
-  - slug: 'chile-ds-ml-pt'
+  - slug: 'chile-ds-ml-financed-pt'
     academies: ['santiago-chile']
     recomended: false
     scholarship: "Cuotas desde"
@@ -232,6 +235,7 @@ part_time:
     bullets:
       - "Financiamiento a tu medida desde 6 hasta 18 meses"  
       - "Se debe pagar un anticipo correspondiente al 20% del valor del programa" 
+      - "Si no encuentras aquí lo que esperas, por favor contáctanos y trataremos de encontrar nuevas formas de ayudarte"  
     icons: 
       - "/images//flevo-new.png"
 
