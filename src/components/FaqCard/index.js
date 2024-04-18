@@ -21,7 +21,9 @@ const FaqCard = ({ faqs, topicSlug, locationSlug, minPriority, template }) => {
 
   const filterByTemplate = (question) => {
     if (!template) return true;
-    return Array.isArray(question.templates) && question.templates.includes(template);
+    return (
+      Array.isArray(question.templates) && question.templates.includes(template)
+    );
   };
 
   const filterByPriority = (question) => {
