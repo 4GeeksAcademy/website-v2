@@ -199,15 +199,15 @@ part_time:
       - "*Pay a small part of your salary when you find a job"
     icons: 
       - "/images/stepex.png"     
-  - slug: 'chile-geekforce-fs-pt'
+  - slug: 'chile-ds-upfront-pt'
     academies: ['santiago-chile']
     recomended: true
     scholarship: "Pay Upfront"
     payment_time: "And get a discount"
     price: "4.500.000 CLP*"
     bullets:
-      - "Pay with bank transfer, credit or debit card"    
-      - "*Price without discount applied"
+      - "Pay with bank transfer, credit or debit card"  
+      - "*Discount up to 1.125.000 CLP. From 3.375.000 CLP instead of 4.500.000 CLP"
     icons: 
       - "/images/visa-mastercard.png"   
 
@@ -220,8 +220,23 @@ part_time:
     bullets:
       - "Tailor-made financing from 6 to 18 months"  
       - "An advance payment corresponding to 20% of the value of the program must be paid" 
+      - "If you don't find here what you are expecting, please contact us and we will try to find new ways to help" 
     icons: 
       - "/images//flevo-new.png"
+
+  - slug: 'chile-ds-solo-pt'
+    academies: ['santiago-chile']
+    recomended: true
+    scholarship: "Only pay for the program"
+    payment_time: "Focus on gaining skills. Pay monthly."
+    price: "Starting from 198.000 CLP/m"
+    bullets: 
+      - "An advance payment corresponding to 20% of the value of the program must be paid" 
+      - "There is always a payment plan available for you to join 4Geeks Academy. If you don't find here what you are expecting, please contact us and we will try to find new ways to help" 
+      - "Pay only for the Data Science program if you are not interested yet in our career support program."  
+      
+    icons: 
+      - "/images//flevo-new.png" 
 
   - slug: 'latam-solo-programa-ds'
     academies: ['montevideo-uruguay','bogota-colombia', 'costa-rica', 'mexicocity-mexico','quito-ecuador', 'panamacity-panama', 'buenosaires-argentina','lima-peru','lapaz-bolivia']
