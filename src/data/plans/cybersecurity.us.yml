@@ -153,27 +153,41 @@ part_time:
       - "*Pay a small part of your salary when you find a job"
     icons: 
       - "/images/stepex.png"     
-  - slug: 'chile-geekforce-fs-pt'
+  - slug: 'chile-upfront-cs-ciber'
     academies: ['santiago-chile']
     recomended: true
     scholarship: "Pay Upfront"
     payment_time: "And get a discount"
-    price: "4.500.000 CLP*"
+    price: "3.500.000 CLP*"
     bullets:
       - "Pay with bank transfer, credit or debit card"    
-      - "*Price without discount applied"
+      - "*Discuount up to 500.000 CLP. Price without discount applied"
     icons: 
       - "/images/visa-mastercard.png"   
 
-  - slug: 'chile-cs-pt'
+  - slug: 'chile-financed-cs-ciber'
     academies: ['santiago-chile']
     recomended: false
     scholarship: "Financed"
     payment_time: "18 months payment"
-    price: "~220.500 CLP"
+    price: "~184.800 CLP"
     bullets:
       - "Tailor-made financing from 6 to 18 months"  
       - "An advance payment corresponding to 20% of the value of the program must be paid" 
+      - "If you don't find here what you are expecting, please contact us and we will try to find new ways to help" 
+    icons: 
+      - "/images//flevo-new.png"
+
+    - slug: 'chile-solo-ciber'
+    academies: ['santiago-chile']
+    recomended: true
+    scholarship: "Only pay for the program"
+    payment_time: "Focus on gaining skills. Pay monthly."
+    price: "~145.000 CLP"
+    bullets:
+      - "An advance payment corresponding to 20% of the value of the program must be paid" 
+      - "There is always a payment plan available for you to join 4Geeks Academy. If you don't find here what you are expecting, please contact us and we will try to find new ways to help" 
+      - "Pay only for the Cybersecurity program if you are not interested yet in our career support program."  
     icons: 
       - "/images//flevo-new.png"
 
