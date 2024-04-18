@@ -320,9 +320,9 @@ const Location = ({ data, pageContext, yml }) => {
 
       <FaqCard
         faqs={data.allFaqYaml.edges[0].node.faq}
-        topicSlug="enrollment"
+        // topicSlug="enrollment"
         minPriority="1"
-        // locationSlug={yml.breathecode_location_slug}
+        locationSlug={yml.breathecode_location_slug}
       />
 
       <RelatedPosts

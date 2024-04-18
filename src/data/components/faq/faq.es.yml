@@ -5,131 +5,273 @@ faq:
     slug: "4geeks"
     questions:
       - question: "¿Por qué 4Geeks Academy?"
+        templates: ["faq"]
         priority: 0
-        locations: ["santiago-chile", "downtown-miami"]
-        answer: |
-          Bueno, es un poco extraño hablar mucho sobre uno mismo ... pero, está bien, ¡ya que lo preguntaste! 
-          Ofrecemos una metodología única en la que mejoraremos tu capacidades generales; te formaremos y convertiremos en un desarrollador de software. Estamos constantemente brindando nuevos enfoques innovadores para enseñar programación que no muchas otras organizaciones educativas están haciendo. 
-          "Breathe Coding" (respirar código). Ese es nuestro lema, porque entendemos que, para convertirse en desarrollador, uno tiene que ser parte de la cultura de la programación. Hemos hecho que el aprendizaje sea divertido y hemos dominado el arte de mostrar cómo las habilidades de programación pueden encajar en la vida cotidiana.
-      - question: "¿4Geeks es una institución académica certificada?"
-        priority: 1
-        answer: "¡Sin lugar a dudas! Estamos certificados por la Comisión de Educación Independiente del Departamento de Educación de Florida en Estados Unidos."
-      - question: "¿Por qué nuestros campus?"
-        priority: 1
         answer: |-
-          "Cualquiera de ellos será una excelente opción, bien sea en Miami, Madrid, Santiago de Chile, Caracas o San José de Costa Rica, en cualquiera de nuestras ciudades vivirás una excelente experiencia con un ambiente totalmente preparado para la formación y vivir una experiencia única durante tu paso por el bootcamp."
+          ¿Qué nos diferencia de otros bootcamps de programación? Ofrecemos varias ventajas que nos destacan: Mentorías ilimitadas (de por vida), enfoque centrado exclusivamente en la codificación y apoyo profesional de por vida. Puedes comparar nuestra academia visitando <a href="/es/geeks-vs-otros">Comparar 4Geeks vs otros</a><br>
+          Breathe Coding" (respirar código). Ese es nuestro lema, porque entendemos que, para convertirse en desarrollador, uno tiene que ser parte de la cultura de la programación. Hemos hecho que el aprendizaje sea divertido y hemos dominado el arte de mostrar cómo las habilidades de programación pueden encajar en la vida cotidiana.
+      - question: "¿4Geeks es una institución académica certificada?"
+        templates: ["faq"]
+        priority: 0
+        answer: |-
+          ¡Por supuesto! 4Geeks Academy es una institución con licencia de la Comisión de Educación Independiente del Departamento de Educación de Florida. Esto garantiza que nuestros programas cumplan con rigurosos estándares educativos y te proporcionen una credencial valiosa al completarlos.
+      - question: "¿Por qué nuestros campus?"
+        templates: ["faq"]
+        priority: 0
+        answer: |-
+          Cualquiera de nuestros campus será una excelente opción, ya sea en Miami, Madrid, Santiago de Chile, Caracas o San José de Costa Rica. En cada una de nuestras ciudades, disfrutarás de una experiencia excelente en un ambiente completamente preparado para tu formación, garantizando una experiencia única durante tu tiempo en el bootcamp.
       - question: "¿Quien es esa cara en el logo?"
-        priority: 3
+        templates: ["faq"]
+        priority: 0
         answer: |-
           "Oh, ¿te refieres a Rigoberto? Él es el corazón y el espíritu de todos los que trabajan para la Academia."
 
   - topic: "Preguntas Frecuentes sobre Inscripciones"
     slug: "enrollment"
     questions:
-      - question: "¿Cómo me inscribo?"
-        priority: 0
+      - question: "¿Cómo me inscribo?" #Todas las locaciones
+        locations: ["atlanta-usa", "austin-usa", "barcelona-spain", "berlin-germany", "bogota-colombia", "buenosaires-argentina", "caracas-venezuela", "chicago-usa", "costa-rica", "downtown-miami", "dublin-ireland", "europe", "hamburg-germany", "houston-usa", "lapaz-bolivia", "lima-peru", "lisbon-portugal", "losangeles-usa", "madrid-spain", "malaga-spain", "mexicocity-mexico", "milan-italy", "montevideo-uruguay", "munich-germany", "newyork-usa", "online", "orlando", "panamacity-panama", "quito-ecuador", "rome-italy", "santiago-chile", "toronto-canada", "valencia-spain", "online", "online-spanish-usa"]
+        templates: ["faq"]
+        priority: 1
         answer: |-
-          "Para comenzar tu carrera como Desarrollador, solo necesitas hacer clic <a  class="faq-link" href="/es/aplica">aquí</a> y completar un formulario muy simple. Nosotros nos encargaremos del resto".
+          Para comenzar el proceso de solicitud, simplemente haz clic <a class="faq-link" href="/es/aplica">"Aquí"</a> y completa un breve formulario. Después de enviar el formulario, recibirás información detallada sobre el programa que has seleccionado. Además, nuestro equipo de especialistas en carrera está disponible para responder cualquier pregunta que tengas por correo electrónico.
       - question: "¿Cuál es el proceso de admisión?"
-        priority: 1
-        answer: |-
-          "Una vez que comiences el proceso de solicitud, recibirás un correo electrónico de uno de nuestros Consejeros Estudiantiles. Te guiaremos durante todo el proceso. Simplemente responde a nuestro correo electrónico y te llamaremos a tu conveniencia. 
-          Después de la llamada telefónica, serás invitado a una reunión personal o por videollamada. Si lo deseas, podrás visitar nuestra ubicación, conocer al equipo y conocernos. Durante la reunión, podrás explicarnos por qué deseas convertirte en desarrollador. Nosotros nos encargaremos de todo."
-      - question: "¿TENGO que traer mi propia laptop/portátil/notebook?"
-        priority: 1
-        answer: "Absolutamente, inequívocamente, la respuesta es: SI. Trae tu computadora/ordenador portátil CADA VEZ.  No requerimos de un sistema operativo específico y, dado que nuestras lecciones y prácticas están en la nube, incluso puedes usar una Chromebook."
-      - question: "¿Cómo pago mi matrícula?"
-        priority: 3
-        answer: |-
-          "Tienes varias opciones. Nuestro precio varía según el país en el que te encuentres, sin embargo, no hay otros costes asociados, cargos ocultos ni nada más. 
-          Además, contamos con increíbles partners para ofrecerte la mejor financiación. Puedes solicitar un plan de 6, 12, 18 o 24 meses (según cada sede) preocúpate solo por obtener la educación que necesitas.
-          El financiamiento está disponible para aquellos que califiquen dondequiera que haya financiamiento disponible.
-          Si te encuentras en Chile o en España, también tenemos a Quotanda como nuestro partner que ofrece varias opciones para hacer posible tu educación.
-          Si necesitas más información no dudes en enviarnos un correo electrónico a: info@4geeksacademy.com "
-      - question: "¿Plan de pago extendido? ¿Cómo funciona? ¿Qué significa eso?"
+        templates: ["faq"]
         priority: 0
         answer: |-
-          "El Plan de pago extendido ha sido diseñado específicamente para NUESTROS estudiantes.
-          Puedes solicitar un plan de pago extendido de 6, 12, 18 o 24 meses. Sólo debes pagar un depósito o inicial y firmar el contrato correspondiente para las cuotas que mejor se adapten a tu situación.
-          Si deseas obtener más información sobre este plan, haz clic <a class="faq-link" target="a_blank" rel="noopener noreferrer nofollow"href="https://quotanda.com/es/4geeks/">aquí</a>."
+          Nuestro proceso de admisión comienza con un correo electrónico de uno de nuestros asesores estudiantiles una vez que inicias la solicitud. Te guiaremos en cada paso del proceso. Al recibir nuestro correo electrónico, simplemente responde para programar una llamada a tu conveniencia. Después de la llamada, serás invitado a una entrevista en línea o presencial.<br>
+          Además, te invitamos a visitar nuestro campus para conocer al equipo y explorar nuestras instalaciones. Esta es una oportunidad para compartir tus motivaciones para seguir una carrera en el mundo Tech.
+      - question: "¿Necesito tener mi propia laptop/portátil/notebook?" #todas las locaciones
+        templates: ["faq"]
+        locations: ["atlanta-usa", "austin-usa", "barcelona-spain", "berlin-germany", "bogota-colombia", "buenosaires-argentina", "caracas-venezuela", "chicago-usa", "costa-rica", "downtown-miami", "dublin-ireland", "europe", "hamburg-germany", "houston-usa", "lapaz-bolivia", "lima-peru", "lisbon-portugal", "losangeles-usa", "madrid-spain", "malaga-spain", "mexicocity-mexico", "milan-italy", "montevideo-uruguay", "munich-germany", "newyork-usa", "online", "orlando", "panamacity-panama", "quito-ecuador", "rome-italy", "santiago-chile", "toronto-canada", "valencia-spain", "online", "online-spanish-usa"]
+        priority: 1
+        answer: |-
+          Sí, tener tu propia laptop es esencial para nuestras clases. Aunque no exigimos un sistema operativo específico para la mayoría de los programas, se recomienda tener una laptop con Windows, macOS o Linux instalado.<br>
+          Sin embargo, para el <a class="faq-link" href="/es/coding-bootcamps/curso-ciberseguridad">programa de ciberseguridad</a>, es altamente recomendable contar con una laptop con sistema operativo Windows o Linux debido a la naturaleza de los materiales del curso y las herramientas utilizadas. Las clases y ejercicios de todos los programas se acceden a través de la nube.
+      
+      ## ¿Cómo pago mi matrícula?
+      - question: "¿Cómo pago mi matrícula?" #USA
+        locations: ["atlanta-usa", "austin-usa", "chicago-usa", "downtown-miami", "houston-usa", "losangeles-usa", "newyork-usa", "orlando", "online", "online-spanish-usa"]
+        templates: ["faq"]
+        priority: 1
+        answer: |-
+          Ofrecemos varias opciones de pago para adaptarnos a tus necesidades. Estas incluyen préstamos con pagos desde $150 por mes, planes de pago extendidos, acuerdos de participación en ingresos (pago después de conseguir un trabajo) y descuentos por pagos anticipados. Además, ofrecemos becas basadas en tu historial. Para obtener más información, comunícate con nuestro equipo de admisiones o visita nuestra <a class="faq-link" href="/es/financiacion">página de financiación</a>.
+      - question: "¿Cómo pago mi matrícula?" #Europe + Chile
+        locations: ["barcelona-spain", "berlin-germany", "dublin-ireland", "europe", "hamburg-germany", "lisbon-portugal", "madrid-spain", "malaga-spain", "milan-italy", "munich-germany", "rome-italy", "valencia-spain"] 
+        priority: 1
+        answer: |-
+          Proporcionamos múltiples opciones de pago adaptadas a tus necesidades. Puedes optar por realizar un pago único por adelantado o financiar tu matrícula hasta por 24 meses. Para determinar la mejor opción para ti, programa una llamada con nuestro equipo de admisiones o visita nuestra <a class="faq-link" href="/es/financiacion">página de financiación</a>.
+      - question: "¿Cómo pago mi matrícula?" #LATAM
+        locations: ["bogota-colombia", "buenosaires-argentina", "caracas-venezuela", "costa-rica", "lapaz-bolivia", "lima-peru", "mexico-city-mexico", "montevideo-uruguay", "panamacity-panama", "quito-ecuador", "santiago-chile"]
+        priority: 1
+        answer: |-
+           4Geeks Academy ofrece opciones de pago flexibles, incluyendo pagos únicos y financiamiento hasta por 24 meses. ¡Nos adaptamos a tus necesidades! Para más detalles, visita nuestra <a class="faq-link" href="/es/financiacion">página de financiación</a>.
+      ## // ¿Cómo pago mi matrícula? // 
+      
+      ## // ¿Cómo pago mi matrícula? // 
+      - question: "¿4Geeks academy Ofrece  apoyo profesional?"
+        locations: ["atlanta-usa", "austin-usa", "barcelona-spain", "berlin-germany", "bogota-colombia", "buenosaires-argentina", "caracas-venezuela", "chicago-usa", "costa-rica", "downtown-miami", "dublin-ireland", "europe", "hamburg-germany", "houston-usa", "lapaz-bolivia", "lima-peru", "lisbon-portugal", "losangeles-usa", "madrid-spain", "malaga-spain", "mexicocity-mexico", "milan-italy", "montevideo-uruguay", "munich-germany", "newyork-usa", "online", "online-spanish-usa", "orlando", "panamacity-panama", "quito-ecuador", "rome-italy", "santiago-chile", "toronto-canada", "valencia-spain"]
+        templates: ["faq"]
+        priority: 1
+        answer: |-
+          ¡Sí! Ofrecemos apoyo profesional ilimitado. Al igual que nuestra tutoría en programación, tendrás acceso ilimitado a sesiones profesionales individuales y grupales. Durante estas sesiones, te equiparemos con todas las herramientas necesarias para conseguir un trabajo. Esto incluye optimizar tu currículum vitae, perfiles de LinkedIn y GitHub, conectarte con eventos y nuestra red de contratación, y prepararte para entrevistas técnicas y conductuales, entre otros servicios. Obtén más información sobre nuestro programa de apoyo profesional <a class="faq-link" href="/es/geekforce">aquí</a>.
+      ## // ¿Cómo pago mi matrícula? // 
+
+
+      ##  ¿Plan de pago extendido? ¿Cómo funciona? ¿Qué significa eso? 
+      - question: "¿Plan de pago extendido? ¿Cómo funciona? ¿Qué significa eso?" #USA
+        locations: ["atlanta-usa", "austin-usa", "chicago-usa", "downtown-miami", "houston-usa", "losangeles-usa", "newyork-usa", "orlando", "online", "online-spanish-usa"]
+        priority: 1
+        answer: |-
+          Nuestro plan de pagos extendido te permite distribuir los pagos de tu matrícula durante un período de hasta 2 años, lo que te permite pagar gradualmente durante y después del curso. Para inscribirte, se requiere un depósito inicial de $500, y el saldo restante se divide por igual durante el número acordado de meses, <span style="font-weight: 700;">sin cargos de interés</span>
+      - question: "¿Plan de pago extendido? ¿Cómo funciona? ¿Qué significa eso?" #Europe + LATAM + chile
+        locations: ["barcelona-spain", "berlin-germany", "dublin-ireland", "europe", "hamburg-germany", "lisbon-portugal", "madrid-spain", "malaga-spain", "milan-italy", "munich-germany", "rome-italy", "valencia-spain", "bogota-colombia", "buenosaires-argentina", "caracas-venezuela", "costa-rica", "lapaz-bolivia", "lima-peru", "mexico-city-mexico", "montevideo-uruguay", "panamacity-panama", "quito-ecuador", "santiago-chile"]
+        templates: ["faq"]
+        priority: 1
+        answer: |-
+          El Plan de Pagos Extendido está diseñado específicamente para satisfacer las necesidades de nuestros estudiantes. Puedes solicitar un plan que dure 6, 12, 18 o 24 meses, lo que te permite pagar de manera gradual. Simplemente paga el depósito requerido y firma un contrato que detalle el calendario de pagos que mejor se adapte a tu estilo de vida. Para obtener más detalles sobre el plan, haz clic <a rel="noopener noreferrer nofollow" href="https://quotanda.com/en/4geeks/">aquí</a>
+      ##  // ¿Plan de pago extendido? ¿Cómo funciona? ¿Qué significa eso?  //
+
+      ##  ¿Puedo pagar después de conseguir un trabajo?
+      - question: "¿Puedo pagar después de conseguir un trabajo?"
+        templates: ["faq"]
+        priority: 0
+        answer: |-
+          En 4Geeks Academy, ofrecemos opciones de pago como Acuerdos de Participación en Ingresos (ISA) o planes de Matrícula Diferida, que te permiten pagar después de asegurar empleo. <br>
+          Estos modelos están diseñados para apoyar tu proceso de aprendizaje, permitiéndote enfocarte en la educación antes de comenzar a pagar una vez que estés empleado. Sin embargo, los términos y condiciones varían según el programa y la ubicación elegidos.<br>
+          Para obtener más detalles y criterios de elegibilidad, discute estas opciones con nuestro <a class="faq-link" href="mailto:admission@4geeksacademy.com">equipo de admisiones</a>.
+
+      - question: "¿Puedo pagar después de conseguir un trabajo?" #USA
+        locations: ["atlanta-usa", "austin-usa", "chicago-usa", "downtown-miami", "houston-usa", "losangeles-usa", "newyork-usa", "orlando", "online", "online-spanish-usa"]
+        priority: 1
+        answer: |-
+          ¡Sí! Con nuestro Acuerdo de Participación en Ingresos (ISA), solo pagarás $1,000 por adelantado por el bootcamp. La matrícula restante se paga solo después de que consigas un trabajo que te reporte más de $35,000 al año. Si no eres contratado, no pagarás nada. Además, si pierdes tu trabajo por cualquier razón, tus pagos se pausarán hasta que vuelvas a estar empleado.
+
+      - question: "¿Puedo pagar después de conseguir un trabajo?" #Europe + LATAM
+        locations: ["barcelona-spain", "berlin-germany", "dublin-ireland", "europe", "hamburg-germany", "lisbon-portugal", "madrid-spain", "malaga-spain", "milan-italy", "munich-germany", "rome-italy", "valencia-spain", "bogota-colombia", "buenosaires-argentina", "caracas-venezuela", "costa-rica", "lapaz-bolivia", "lima-peru", "mexico-city-mexico", "montevideo-uruguay", "panamacity-panama", "quito-ecuador", "santiago-chile"]
+        priority: 1
+        answer: |-
+          ¡Sí! Ofrecemos un programa de Acuerdo de Participación en Ingresos (ISA) como una opción de financiamiento innovadora para nuestros estudiantes. Con un ISA, puedes comenzar tus estudios de inmediato y comenzar a hacer pagos una vez que consigas un trabajo bien remunerado. A diferencia de los préstamos tradicionales, el pago bajo un ISA se basa en un porcentaje de tu ingreso una vez que superas un salario mínimo establecido.
+      ##  // ¿Puedo pagar después de conseguir un trabajo? //
+
+      ##  ¿4Geeks Academy Ofrece  mentorías?
+      - question: "¿4Geeks Academy Ofrece  mentorías?" # Europe + Latam + Chile
+        locations: ["barcelona-spain", "berlin-germany", "dublin-ireland", "europe", "hamburg-germany", "lisbon-portugal", "madrid-spain", "malaga-spain", "milan-italy", "munich-germany", "rome-italy", "valencia-spain", "bogota-colombia", "buenosaires-argentina", "caracas-venezuela", "costa-rica", "lapaz-bolivia", "lima-peru", "mexico-city-mexico", "montevideo-uruguay", "panamacity-panama", "quito-ecuador", "santiago-chile"]
+        templates: ["faq"]
+        priority: 1
+        answer: |-
+          ¡Claro que sí! En 4Geeks Academy, ofrecemos mentorías de por vida a través de nuestros programas GeekPal y GeekForce. GeekPal ofrece coaching técnico mediante sesiones de mentoría grupal y uno a uno, cubriendo entrevistas simuladas, preparación para entrevistas, depuración y resolución de problemas. Por otro lado, GeekForce proporciona orientación profesional, incluyendo entrevistas simuladas para habilidades blandas, orientación profesional y elaboración de currículums. Obtén más información sobre GeekPal <a class="faq-link" href="/es/geekpal">aquí</a> y sobre GeekForce <a class="faq-link" href="/es/geekforce">aquí</a>.
+      
+      - question: "¿4Geeks Academy Ofrece  mentorías?" #USA
+        locations: ["atlanta-usa", "austin-usa", "chicago-usa", "downtown-miami", "houston-usa", "losangeles-usa", "newyork-usa", "orlando", "online", "online-spanish-usa"]
+        priority: 1
+        answer: |-
+          ¡Sí, absolutamente! La mentoría es fundamental en lo que hacemos. Como estudiante de 4Geeks, disfrutarás de acceso ilimitado a mentoría de por vida. Esto incluye sesiones uno a uno, sesiones grupales, acceso a un canal de soporte de Slack con más de 5,000 desarrolladores en todo el mundo y participación en talleres técnicos.
+      ##  // ¿4Geeks Academy Ofrece  mentorías? //
+
+      ##  ¿Necesito experiencia previa?
+      - question: "¿Necesito experiencia previa?"   
+        templates: ["faq"]
+        priority: 0
+        answer: |-
+          No, no necesitas experiencia previa para unirte a nuestros bootcamps. Creemos en hacer que nuestros cursos sean accesibles para cualquier persona que quiera cambiar sus vidas, independientemente de su experiencia anterior o conocimientos previos. Hemos desarrollado internamente herramientas de aprendizaje interactivas, en tiempo real y galardonadas con contenido, planes de estudio y un marco para ayudar a todos a aprender de manera eficiente, independientemente de su experiencia previa. Nuestra experiencia previa nivelará a los estudiantes y ofrecerá desafíos de manera incremental, junto con videos, tutoría de inteligencia artificial, mentorías ilimitadas y documentación para apoyar su viaje de aprendizaje.
+      
+      - question: "¿Necesito experiencia previa?" #all locations
+        locations: ["atlanta-usa", "austin-usa", "barcelona-spain", "berlin-germany", "bogota-colombia", "buenosaires-argentina", "caracas-venezuela", "chicago-usa", "costa-rica", "downtown-miami", "dublin-ireland", "europe", "hamburg-germany", "houston-usa", "lapaz-bolivia", "lima-peru", "lisbon-portugal", "losangeles-usa", "madrid-spain", "malaga-spain", "mexicocity-mexico", "milan-italy", "montevideo-uruguay", "munich-germany", "newyork-usa", "online", "online-spanish-usa", "orlando", "panamacity-panama", "quito-ecuador", "rome-italy", "santiago-chile", "toronto-canada", "valencia-spain"]
+        priority: 1
+        answer: |-
+          No, no necesitas experiencia previa para unirte Nuestro plan de estudios está diseñado para llevarte de 0 a especialista. Comenzamos desde lo básico, así que si no tienes experiencia previa en tecnología, ¡no hay problema!
+      ##  // ¿Necesito experiencia previa? //
 
   - topic: "Preguntas Frecuentes sobre Programas"
     slug: "programs"
     questions:
+      - question: "¿GeekForce o GeekPal, cuál elegir?" #all locations
+        locations: ["atlanta-usa", "austin-usa", "barcelona-spain", "berlin-germany", "bogota-colombia", "buenosaires-argentina", "caracas-venezuela", "chicago-usa", "costa-rica", "downtown-miami", "dublin-ireland", "europe", "hamburg-germany", "houston-usa", "lapaz-bolivia", "lima-peru", "lisbon-portugal", "losangeles-usa", "madrid-spain", "malaga-spain", "mexicocity-mexico", "milan-italy", "montevideo-uruguay", "munich-germany", "newyork-usa", "online", "online-spanish-usa", "orlando", "panamacity-panama", "quito-ecuador", "rome-italy", "santiago-chile", "toronto-canada", "valencia-spain"]
+        templates: ["faq"]
+        priority: 1
+        answer: |-
+          <span style="font-weight: 700;">GeekForce y GeekPal</span> son ambos programas valiosos de mentoría ofrecidos por 4Geeks Academy, y la elección entre ellos depende de tus necesidades actuales.<br>
+          <a class="faq-link" href="/es/geekpal">GeekPal</a> es ideal si buscas orientación técnica, como depuración de código, resolución de problemas y preparación para entrevistas. Es perfecto para perfeccionar tus habilidades técnicas y obtener orientación práctica.<br>
+          <a class="faq-link" href="/es/geekforce">GeekForce</a>, por otro lado, se enfoca en la orientación profesional, que incluye el desarrollo de habilidades blandas, consejos profesionales y creación de currículums. Esta es una excelente opción si buscas mejorar tu empleabilidad y desarrollo profesional.<br>
+          Recuerda, ambos servicios son ilimitados y de por vida, por lo que siempre puedes cambiar o usar ambos a medida que evolucionen tus necesidades a lo largo de tu carrera.
+
       - question: "¿Cuántas horas a la semana necesito tener disponibles?"
-        priority: 0
+        locations: ["atlanta-usa", "austin-usa", "barcelona-spain", "berlin-germany", "bogota-colombia", "buenosaires-argentina", "caracas-venezuela", "chicago-usa", "costa-rica", "downtown-miami", "dublin-ireland", "europe", "hamburg-germany", "houston-usa", "lapaz-bolivia", "lima-peru", "lisbon-portugal", "losangeles-usa", "madrid-spain", "malaga-spain", "mexicocity-mexico", "milan-italy", "montevideo-uruguay", "munich-germany", "newyork-usa", "online", "orlando", "panamacity-panama", "quito-ecuador", "rome-italy", "santiago-chile", "toronto-canada", "valencia-spain"]
+        templates: ["faq"]
+        priority: 1
         answer: |
           Para convertirte en el mejor developer posible debes dedicar tiempo, no hay otra manera, en nuestro programa "part-time" tendrás clases 3 horas 3 días a la semana, y debes dedicar en total unas 20-24 horas de estudio semanal. En el caso del programa a tiempo completo, que son 8 horas de clases al día, con dedicar en total unas 48 horas a la semana es suficiente.
       - question: |
           ¿Por qué "Part-time?"" ¿Cómo funciona?
+        templates: ["faq"]
         priority: 0
         answer: |-
-          "Creemos que el futuro de la educación es el 'tiempo parcial'. Lo que ofrecemos es una educación combinada que aprovecha dos formatos probados: formación a tiempo parcial y aula invertida. La metodología tiene una combinación de los siguientes cuatro pilares: 
+          Creemos que el futuro de la educación es el 'tiempo parcial'. Lo que ofrecemos es una educación combinada que aprovecha dos formatos probados: formación a tiempo parcial y aula invertida. La metodología tiene una combinación de los siguientes cuatro pilares: 
           Aula invertida: la teoría se imparte a través de videos, animación, imágenes e infografías. El tiempo de clase se usa para debatir, crear y construir proyectos, y ser mentorizado para resolver muchos ejercicios prácticos. 
           Mentorías personalizadas: cada estudiante tiene la oportunidad de tener conversaciones privadas con un mentor principal de manera regular. 
           Proporción de mentor-estudiante 1: 6 (en promedio): Un entorno cercano y personalizado  brinda a nuestra academia la oportunidad de adaptarse al ritmo particular de cada estudiante. 
-          Árbol de talentos: el plan de estudios traza 44 habilidades en las que los estudiantes ganan puntos por cada habilidad aprendida de una manera lúdica."
+          Árbol de talentos: el plan de estudios traza 44 habilidades en las que los estudiantes ganan puntos por cada habilidad aprendida de una manera lúdica.
       - question: |
           ¿Por qué "Full-time?" ¿Cómo funciona?
+        templates: ["faq"]
         priority: 0
         answer: |-
-          "También ofrecemos formación a tiempo completo, entendemos que si buscas un curso full-time es porque no tienes que renunciar a tu empleo y que lejos de frenarte profesionalmente, ¡impulsará tu carrera!. La metodología, que además de ser super inmersiva, tiene una combinación de los siguientes cuatro pilares: 
+          También ofrecemos formación a tiempo completo, entendemos que si buscas un curso full-time es porque no tienes que renunciar a tu empleo y que lejos de frenarte profesionalmente, ¡impulsará tu carrera!. La metodología, que además de ser super inmersiva, tiene una combinación de los siguientes cuatro pilares: 
           Aula invertida: la teoría se imparte a través de videos, animación, imágenes e infografías. El tiempo de clase se usa para debatir, crear y construir proyectos, y ser mentorizado para resolver muchos ejercicios prácticos. 
           Mentorías personalizadas: cada estudiante tiene la oportunidad de tener conversaciones privadas con un mentor principal de manera regular. 
           Proporción de mentor-estudiante 1: 6 (en promedio): Un entorno cercano y personalizado brinda a nuestra academia la oportunidad de adaptarse al ritmo particular de cada estudiante. 
-          Árbol de talentos: el plan de estudios traza 44 habilidades en las que los estudiantes ganan puntos por cada habilidad aprendida de una manera lúdica."
+          Árbol de talentos: el plan de estudios traza 44 habilidades en las que los estudiantes ganan puntos por cada habilidad aprendida de una manera lúdica.
       - question: "¿Cuál es la diferencia entre el programa Full Stack Development y otros programas más junior como los Website Developer?"
+        templates: ["faq"]
         priority: 0
         answer: |-
-          "En el caso de Website Developer, el plan de estudios incluye: HTML, CSS, PHP, JavaScript, WordPress, API y más.
+          En el caso de Website Developer, el plan de estudios incluye: HTML, CSS, PHP, JavaScript, WordPress, API y más.
           Ahora bien, el programa Full Stack Software Development está diseñado en cuatro etapas:
           Prework + Aprender a programar + Crear sitios web + Crear aplicaciones web
           Tiene una duración de 18 semanas e incluye más de 300 horas de aprendizaje.
           El stack de tecnologías aquí son: JavaScript, React, Python, Flask, API, AJAX, SASS, HTML, CSS y más.
           Te guiaremos y te ayudaremos a encontrar un trabajo después del curso a través de nuestro Programa de Colocación.
           Tendrás acceso de por vida  a nuestra plataforma de aprendizaje Breatheco.de 
-          Podrás crear y construir sitios web, pero obtendrás las habilidades y herramientas para abordar proyectos más desafiantes como: análisis de datos, aprendizaje automático y realidad aumentada, por nombrar algunos."
-      - question: "¿Cuál es el horario?"
+          Podrás crear y construir sitios web, pero obtendrás las habilidades y herramientas para abordar proyectos más desafiantes como: análisis de datos, aprendizaje automático y realidad aumentada, por nombrar algunos.
+
+      ##  ¿Cuál es el horario?
+      - question: "¿Cuál es el horario?" 
+        templates: ["faq"]
         priority: 0
         answer: |-
-          "Los horarios varían según la sede.
-          Part-Time
-          1. España: lunes, miércoles y viernes de 18:30 a 21:30 hrs o martes y jueves de 18:30 a 21:30 hrs y sábados de 10:00 a 13:00 hrs
-          2. Chile y Estados Unidos: lunes, miércoles y viernes de 18:30 a 21:30 hrs o martes y jueves de 18:30 a 21:30 hrs y sábados de 9:00 a 12:00 hrs
-          3. Venezuela: lunes a viernes de 16:00 a 18:00 hrs
-          Full-Time
-          De lunes a viernes de 9:00 a 18:00 hrs."
-      - question: "¿Consigo un trabajo después de completar el programa?"
+          Los horarios varían según la ubicación.
+          - Tiempo parcial:
+            1. España: lunes, miércoles y viernes de 18:30 a 21:30 hrs o martes y jueves de 18:30 a 21:30 hrs y sábados de 10:00 a 13:00 hrs.
+            2. Chile y Estados Unidos: lunes, miércoles y viernes de 18:30 a 21:30 hrs o martes y jueves de 18:30 a 21:30 hrs y sábado de 9:00 a 12:00 hrs.
+            3. LATAM: lunes y viernes de 16:00 a 18:00 hrs.
+          - Tiempo completo:
+            De lunes a viernes de 9:00 a 18:00 hrs.
+      - question: "¿Cuál es el horario?" #Europe
+        locations: ["barcelona-spain", "berlin-germany", "dublin-ireland", "europe", "hamburg-germany", "lisbon-portugal", "madrid-spain", "malaga-spain", "milan-italy", "munich-germany", "rome-italy", "valencia-spain"]
+        priority: 1
+        answer: |-
+          - Tiempo parcial:
+            España: lunes, miércoles y viernes de 18:30 a 21:30 hrs o martes y jueves de 18:30 a 21:30 hrs y sábados de 10:00 a 13:00 hrs.
+          - Tiempo completo:
+            De lunes a viernes de 9:00 a 18:00 hrs.
+      - question: "¿Cuál es el horario?" #USA + Chile
+        locations: ["atlanta-usa", "austin-usa", "chicago-usa", "downtown-miami", "houston-usa", "losangeles-usa", "newyork-usa", "orlando", "online", "online-spanish-usa", "santiago-chile"]
+        priority: 1
+        answer: |-
+          Chile y Estados Unidos: lunes, miércoles y viernes de 18:30 a 21:30 hrs o martes y jueves de 18:30 a 21:30 hrs y sábado de 9:00 a 12:00 hrs.
+          - Tiempo completo:
+            De lunes a viernes de 9:00 a 18:00 hrs.
+      - question: "¿Cuál es el horario?" #Latam
+        locations: ["bogota-colombia", "buenosaires-argentina", "caracas-venezuela", "costa-rica", "lapaz-bolivia", "lima-peru", "mexico-city-mexico", "montevideo-uruguay", "panamacity-panama", "quito-ecuador"]
+        priority: 1
+        answer: |-
+          Los horarios varían según la ubicación.<br>
+          Lunes y viernes:
+          6:30pm a 9:30pm 🇲🇽 🇨🇷
+          7:30pm a 10:30pm 🇨🇴 🇪🇨 🇵🇦 🇵🇪
+          8:30pm a 11:30pm 🇧🇴 🇻🇪
+          9:30pm a 12:30am 🇺🇾 🇦🇷 🇧🇷 🇵🇾
+      ##  // ¿Cuál es el horario?//
+
+      - question: "¿Consigo un trabajo después de completar el programa?" # Todas las ubicaciones
+        locations: ["atlanta-usa", "austin-usa", "barcelona-spain", "berlin-germany", "bogota-colombia", "buenosaires-argentina", "caracas-venezuela", "chicago-usa", "costa-rica", "downtown-miami", "dublin-ireland", "europe", "hamburg-germany", "houston-usa", "lapaz-bolivia", "lima-peru", "lisbon-portugal", "losangeles-usa", "madrid-spain", "malaga-spain", "mexicocity-mexico", "milan-italy", "montevideo-uruguay", "munich-germany", "newyork-usa", "online", "orlando", "panamacity-panama", "quito-ecuador", "rome-italy", "santiago-chile", "toronto-canada", "valencia-spain"]
+        templates: ["faq"]
         priority: 0
         answer: |-
-          "Esta es la parte en la que todos prestan atención ... no podemos garantizar que obtendrás un trabajo después de completar nuestro curso. Nadie puede, en realidad. Sin embargo, al inscribirte en nuestro programa, tendrás acceso a nuestros asesores y partners. Serás parte de una nueva red y te ayudaremos y guiaremos a lo largo del proceso de búsqueda de empleo, trabajaremos en tu CV, Linkedin, GitHub y haremos todo lo necesario para que consigas trabajo ".
+          En 4Geeks Academy nos dedicamos a prepararte para el mercado laboral y apoyarte en tu búsqueda de empleo después de completar el programa. Si bien no podemos garantizar un trabajo, brindamos soporte técnico y profesional ilimitado y de por vida, que incluye ayuda con la elaboración de currículos, preparación para entrevistas y acceso a nuestra red de empleadores asociados. Además, según nuestras estadísticas, el 84% de los graduados en EE. UU. que completan las etapas y requisitos consiguen empleo con un salario promedio de más de $50,000 al año.
 
   - topic: "Preguntas Frecuentes sobre Experiencia"
     slug: "experience"
     questions:
       - question: "¿Por qué Javascript?"
+        templates: ["faq"]
         priority: 0
         answer: |-
-          "JavaScript "es dueño" de la web; es el único lenguaje que todos los navegadores web entienden,es el lenguaje de programación más utilizado en el mundo; todos los sitios web lo necesitan, y es el más demandado por las empresas en diez veces el siguiente."
+          JavaScript "es dueño" de la web; es el único lenguaje que todos los navegadores web entienden,es el lenguaje de programación más utilizado en el mundo; todos los sitios web lo necesitan, y es el más demandado por las empresas en diez veces el siguiente.
       - question: "¿Por qué Python?"
+        templates: ["faq"]
         priority: 0
         answer: |-
-          "Python es el lenguaje de más rápido crecimiento en los países más ricos. Se usa ampliamente en prácticamente todas las industrias y tiene bibliotecas de alta calidad para todos los campos que crecen para ser 'el futuro': Web, IA, Robótica, Big Data, etc. Según profesores del MIT, es el lenguaje de programación esencial para aprender. Adelante, échale un vistazo <a class="faq-link" target="a_blank" rel="noopener noreferrer nofollow" href="https://www.python.org/">aquí</a>. 
-          Tiene que ser Python. Encontrarás más oportunidades laborales, aprenderás a programar y te ayudará con otros lenguajes y frameworks. ¡Incluso Google aprobó Python y lo ha incorporado en todas partes!"
+          Python es el lenguaje de más rápido crecimiento en los países más ricos. Se usa ampliamente en prácticamente todas las industrias y tiene bibliotecas de alta calidad para todos los campos que crecen para ser 'el futuro': Web, IA, Robótica, Big Data, etc. Según profesores del MIT, es el lenguaje de programación esencial para aprender. Adelante, échale un vistazo <a class="faq-link" target="a_blank" rel="noopener noreferrer nofollow" href="https://www.python.org/">aquí</a>. 
+          Tiene que ser Python. Encontrarás más oportunidades laborales, aprenderás a programar y te ayudará con otros lenguajes y frameworks. ¡Incluso Google aprobó Python y lo ha incorporado en todas partes!
       - question: "¿Por qué no Node JS?"
+        templates: ["faq"]
         priority: 0
         answer: |-
-          "Node es asombroso. Desafía la forma en que se crea la web. Sin embargo, solo el 0,3% de la web ha adoptado Node JS y su crecimiento se ha ralentizado aún más en los últimos meses. Python, Java, PHP y otros lenguajes similares todavía gobiernan el mundo (y eso no va a cambiar en el corto plazo). 
-          Funcionan de una manera muy diferente a como lo hace Node; nuestro propósito es prepararte para el "mundo real". Capacitamos a nuestros desarrolladores Full-Stack usando / enseñando sólo las tecnologías más estándar y profesionales. <a class="faq-link" href="/us/trends-and-tech/dont-teach-nodejs-full-stack-development-program">Aquí</a> puedes encontrar un gran argumento de por qué no estamos enseñando Node JS."
+          Node es asombroso. Desafía la forma en que se crea la web. Sin embargo, solo el 0,3% de la web ha adoptado Node JS y su crecimiento se ha ralentizado aún más en los últimos meses. Python, Java, PHP y otros lenguajes similares todavía gobiernan el mundo (y eso no va a cambiar en el corto plazo). 
+          Funcionan de una manera muy diferente a como lo hace Node; nuestro propósito es prepararte para el "mundo real". Capacitamos a nuestros desarrolladores Full-Stack usando / enseñando sólo las tecnologías más estándar y profesionales. <a class="faq-link" href="https://4geeksacademy.com/es/tendencias-y-tecnologia/porque-ensenamos-python-4geeks">Aquí</a> puedes encontrar un gran argumento de por qué no estamos enseñando Node JS.
       - question: "¿Necesito experiencia previa en programación para inscribirme en el programa?"
         answer: |-
-          "No. Solo necesitas querer aprender. La programación debe existir en alguna parte de tu cuerpo, ¡y la encontraremos! Si ya sabes cómo abrir un navegador y revisar tu Facebook, ¡entonces estaremos bien!"
+          No. Solo necesitas querer aprender. La programación debe existir en alguna parte de tu cuerpo, ¡y la encontraremos! Si ya sabes cómo abrir un navegador y revisar tu Facebook, ¡entonces estaremos bien!
       - question: "¿Me gradúo como 'Senior Developer?'"
+        templates: ["faq"]
         priority: 0
         answer: |
           No. Por favor, no corras antes de aprender a caminar. La programación es como la vida: si eres bueno en eso, aprenderás más rápido, pero no al instante. Obtendrás la experiencia de ver todos los detalles una vez hayas dominado el arte.
           Hacer nuestro programa Full Stack significa que tu vida tendrá una nueva habilidad, pero también desarrollará una nueva forma de "pensar". Te gradúas como "Desarrollador Junior", pero como un "Desarrollador Junior" REALMENTE BUENO, ¡no como uno más en el grupo!
       - question: "¿Cómo es el mercado para las empresas que buscan desarrolladores?"
+        templates: ["faq"]
         priority: 0
         answer: |-
-          " De acuerdo a estimaciones del IDC entre 2020 y 2025 se necesitarán sumar 10.5 millones de profesionales en el área de tecnología en todo el mundo. Por el momento hay más de 1.4 millones de puestos de trabajo de programación abiertos solo en los Estados Unidos y se espera que este número siga creciendo para el 2021;  en España, durante la pandemia, se crearon 1.500 ofertas como programador junior en tan solo una de las webs para búsqueda de empleo y por otro lado en Latinoamérica se necesitarán alrededor de 1.2millones de profesionales para disminuir la brecha. Por lo tanto el mercado para las empresas que buscan desarrolladores seguirá creciendo a un paso acelerado para poder cumplir con la alta demanda."
+          De acuerdo a estimaciones del IDC entre 2020 y 2025 se necesitarán sumar 10.5 millones de profesionales en el área de tecnología en todo el mundo. Por el momento hay más de 1.4 millones de puestos de trabajo de programación abiertos solo en los Estados Unidos y se espera que este número siga creciendo para el 2021;  en España, durante la pandemia, se crearon 1.500 ofertas como programador junior en tan solo una de las webs para búsqueda de empleo y por otro lado en Latinoamérica se necesitarán alrededor de 1.2millones de profesionales para disminuir la brecha. Por lo tanto el mercado para las empresas que buscan desarrolladores seguirá creciendo a un paso acelerado para poder cumplir con la alta demanda.
