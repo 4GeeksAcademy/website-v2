@@ -166,7 +166,7 @@ const TestimonialCard = ({
           </Div>
         </>
       )}
-      
+
       {description && (
         <Paragraph
           textAlign="left"
@@ -175,12 +175,14 @@ const TestimonialCard = ({
           lineHeight="22px"
           letterSpacing="0.05em"
           fontWeight="300"
-          dangerouslySetInnerHTML={{ 
-            __html: description.length > 500 && !isExpanded
-              ? description.substring(0, 500) + "..."
-              : description
+          dangerouslySetInnerHTML={{
+            __html:
+              description.length > 500 && !isExpanded
+                ? description.substring(0, 500) + "..."
+                : description,
           }}
-        />)}
+        />
+      )}
 
       {description.length > 500 && (
         <Paragraph
