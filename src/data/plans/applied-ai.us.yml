@@ -1,25 +1,43 @@
 full_time: []
 part_time:
+
+  - slug: 'plan-3'
+    academies: ['orlando', 'downtown-miami', 'austin-usa', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa']
+    recomended: false
+    scholarship: "Financed"
+    payment_time: "Pay in 24 months"
+    price: "~$145 p/m"
+    bullets: 
+      - "There is always a payment plan available to help you join 4Geeks Academy."
+      - "You can get a partial scholarship and the remaining balance with a payment plan"
+      - "If you don't find anything that works for you here, please contact us so we can try to find other ways to help you."
+    icons: 
+      - "/images/ascent_logo.jpg"
+      - "/images/climb-logo.png"
+      - "/images/quotanda-logo.png"
+
   - slug: 'plan-2'
     academies: ['orlando', 'downtown-miami', 'austin-usa', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa']
     recomended: false
     scholarship: "Financed"
     payment_time: "Pay in 12 months"
-    price: "~$292p/m"
+    price: "~$266 p/m"
     bullets: 
-      - "Several partners offering loans and payment plans"
+      - "There is always a payment plan available to help you join 4Geeks Academy."
       - "You can get a partial scholarship and the remaining balance with a payment plan"
+      - "If you don't find anything that works for you here, please contact us so we can try to find other ways to help you."
     icons: 
       - "/images/ascent_logo.jpg"
       - "/images/climb-logo.png"
       - "/images/quotanda-logo.png"
+
       
   - slug: 'plan-4'
-    recomended: false
+    recomended: true
     academies: ['orlando', 'downtown-miami', 'austin-usa', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa']
     scholarship: "Full Payment"
     payment_time: "Pay today"
-    price: "$4000"
+    price: "$3000"
     original_price: "$3500"
     bullets: 
       - "When you pay upfront you save interests and get a special $500 discount"
@@ -80,23 +98,22 @@ part_time:
   - slug: 'latam-financed-ai'
     academies: ['montevideo-uruguay','bogota-colombia', 'costa-rica', 'mexicocity-mexico','quito-ecuador', 'panamacity-panama', 'buenosaires-argentina','lima-peru','lapaz-bolivia', 'caracas-venezuela']
     recomended: true
-    scholarship: "Pay a little every month"
-    payment_time: "Focus on gaining skills. Pay monthly."
-    price: "Starting from $120/m"
+    scholarship: "Pay a little every month. "
+    payment_time: "Pay in 6 months"
+    price: "Starting at $250 p/mo"
     bullets: 
-      - "There is always a payment plan available for you to join 4Geeks Academy"
-      - "If you don't find here what you are expecting, please contact us and we will try to find new ways to help"     
-      - "You need to choose if you are taking just the program, or if you also want to get our Career Support in full, or if you want to go all in and sign up with our Job Guaranteed Feature"  
-      - "Pay only for the Cybersecurity program if you are not interested yet in our career support program and our job guarantee"   
+      - "There is always a payment plan available to help you join 4Geeks Academy."
+      - "If you don't find anything that works for you here, please contact us so we can try to find other ways to help you."      
     icons: 
       - "/images//flevo-new.png" 
 
   - slug: 'latam-upfront-ai'
-    academies: ['montevideo-uruguay','bogota-colombia', 'costa-rica', 'mexicocity-mexico','quito-ecuador', 'panamacity-panama', 'buenosaires-argentina','lima-peru','lapaz-bolivia']
+    academies: ['montevideo-uruguay','bogota-colombia', 'costa-rica', 'mexicocity-mexico','quito-ecuador', 'panamacity-panama', 'buenosaires-argentina','lima-peru','lapaz-bolivia', 'caracas-venezuela']
     recomended: false
-    scholarship: "Pay upfront and save"
+    scholarship: "Pay upfront and "
     payment_time: "Save $500"
     price: "USD $1500"
+    original_price: "$2000"
     bullets:
       - "Save $500. From $2000 to $1500."
       - "If you don't find here what you are expecting, please contact us and we will try to find new ways to help"     

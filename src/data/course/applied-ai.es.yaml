@@ -17,7 +17,7 @@ apply_form:
 seo_title: "Curso de Inteligencia Artificial Aplicada"
 header:
   title: "Aprende I.A. y cómo utilizarla en tu trabajo"
-  paragraph: "¡Conviértete un experto en AI y cómo aplicarla en las empresas, en diferentes roles y en tu trabajo!"
+  paragraph: "¡Prepárate para maximizar tu productividad en solo 6 semanas!"
   image: "../../../static/images/bg/circles.jpg"
   image_alt: "círculos"
 
@@ -136,7 +136,7 @@ details:
       description: "Comparación entre la IA y los humanos en diversas tareas, cuándo utilizar la Inteligencia Artificial, ejemplos de prompts relacionados con los campos de los estudiantes, y consejos de Ingeniería de Prompts."
       projects: "Creación de flujos de trabajo para profesiones como profesores, lingüistas y desarrolladores."
       slug: "generation-estrategies"
-      duration: "1 semanas"
+      duration: "1 semana"
       step: 2
     - module_name: "Generación de Texto"
       title: "Generación de Texto"
@@ -157,7 +157,7 @@ details:
       description: "Evaluación de herramientas de Inteligencia Artificial, proyectos prácticos utilizando herramientas populares."
       projects: "Graduación del curso, preguntas finales, tareas y próximos pasos..."
       slug: "final-project"
-      duration: "1 semanas"
+      duration: "1 semana"
       step: 5
 
 
@@ -236,6 +236,25 @@ faq:
   read_more: "Ver más preguntas"
   link: "/faq"
 
+
+## TWO COLUMNS
+two_columns:
+  proportions: [5, 9]
+  image:
+    style: '{"backgroundSize": "cover", "background-position": "center", "min-height": "300px", "height": "300px"}'
+    src: "../../images/landing/two-womans-and-laptop.webp"
+    shadow: true
+  heading:
+    text: "¡Expande tus capacidades y aumenta tu eficiencia!"
+    font_size: ["30px", "30px", "30px", "26px", "24px"]
+  sub_heading:
+    text: "Aprende a aprovechar los modelos generativos basados en texto como ChatGPT, Claude y Llama3, junto con herramientas de generación de imágenes como Stable Diffusion, DALL-E y Midjourney."
+    font_size: ["16px", "16px", "16px", "16px", "16px"]
+  button:
+    text: "Aplicar al programa"
+    color: "white"
+    background: "black"
+    path: "#prices_and_payment"
 
 # button:
 #   syllabus_heading: "Descargar Syllabus"

@@ -16,7 +16,7 @@ apply_form:
 
 seo_title: "Applied AI Course"
 header:
-  title: "Apply into your job"
+  title: "Leverage AI to stay ahead in your career"
   paragraph: "Get ready to maximize your productivity in just 6 weeks!"
   image: "../../../static/images/bg/circles.jpg"
   image_alt: "Applied AI"
@@ -37,7 +37,7 @@ course_instructors:
       sub_title: "AI builder"
       degree: "Prompt Engineer"
       image: "../../../static/images/instructors/charly.jpeg"
-      bio: | 
+      bio: |
         "2nd-degree contact
         📓 #Tana creator 🧠 Prompt Engineer 🐍⚛️ Fullstack project leader Django and Next 📽️ Code Speller on YouTube
         Cloud application development, Web development, Web design, and User Experience (UX) Design."
@@ -52,7 +52,7 @@ course_instructors:
     #   linkedin: "https://www.linkedin.com/in/sayyednezhadi"
 
 badges:
-  paragraph: "Kickstart your career at 4Geeks Academy, where developers grow and thrive. Named the best <a href='/us/coding-bootcamp'>coding bootcamp</a> 2023 by Course Report, best center for coding bootcamps 2023 by Premios de Excelencia Educativa in Spain, listed among the top 10 in the US by Newsweek, and rated 4.92/5 on Switchup. Licensed by the Florida Department of Education, USA."
+  paragraph: "Boost your career at 4Geeks Academy, where developers grow and thrive.  Listed among the world’s best coding bootcamps of 2024 by Course Report, the 5 best <a href='/us/coding-bootcamp'>coding bootcamp</a> in 2024 by Forbes, named best center for coding bootcamps 2023 by Premios de Excelencia Educativa in Spain, rated 4.92/5 on Switchup and more. Licensed by the Florida Department of Education, USA"
 
 upcoming:
   no_dates_message: "Currently, there are no upcoming dates for this program"
@@ -70,33 +70,33 @@ overlaped:
   paragraph: "AI will not replace your jobs, AI will boost your productivity to the point that only AI-proficient professionals will be hired in the future. Do more with less. Don't get left behind."
   button:
     text: "LEARN MORE"
-    color: "blue"  
+    color: "blue"
     link: "/"
   image:
-    src: "/images/landing/tres-personas-reloaded.webp"  
+    src: "/images/landing/tres-personas-reloaded.webp"
 
 ## PROGRAM DETAILS
 details:
   about:
     title: "About this program"
-    sub_title: |
-      This artificial intelligence course is designed for those looking to integrate artificial intelligence (AI) into their current jobs and roles. Over six weeks, participants will gain a comprehensive understanding of AI and its practical applications in various industries.
-      The course covers essential concepts such as AI definitions, benefits in the workplace, and key elements like Context, Prompts, and Models. Participants will learn to identify opportunities to implement AI, overcome challenges, develop effective AI strategies, and create practical commands.
-        
+    sub_title: |-
+      Our comprehensive Applied AI course is tailored for professionals eager to leverage the power of AI within their current roles. Over six dynamic weeks, you’ll gain a deep understanding of AI and its real-world applications. From understanding the various types of generative AI to mastering key elements like context, prompts, and models, this course will equip you with essential tools and best practices to optimize AI integration. <br>
+      You'll be ready to strategically implement AI and significantly  enhance your workplace capabilities by course completion. Don't just adapt to the future – lead the way by leveraging AI to your advantage!
+
     list:
       - label: "Duration"
-        content:  "6 Weeks"
+        content: "6 Weeks"
         icon: "calendar"
       - label: "Classes"
-        content: "2 classes per week"
+        content: "2 live, online classes per week"
         icon: "book"
       - label: "Size of the Class"
         content: "12 people máx"
         icon: "laptop"
       - label: "Certificate"
-        content: "Multiple institutions recognize our certificates."
+        content: "Official 4Geeks Completion Certificate, recognized by multiple institutions."
         icon: "certificate"
-      - label: "Requierements"
+      - label: "Requirements"
         content: "No previous experience is required"
         icon: "contract-checked"
 
@@ -118,7 +118,7 @@ details:
       value: "Up to 14 people"
     - label: "Total Hours"
       value: "24"
-  sub_heading: "6-week course for professionals looking to incorporate AI into their job roles."
+  sub_heading: "6-week course designed to help you leverage the power of AI in the workplace."
   left_labels:
     description: "DESCRIPTION:"
     projects: "PROJECTS:"
@@ -127,36 +127,36 @@ details:
   details_modules:
     - module_name: "Intro to AI"
       title: "Introduction to AI"
-      description: "Definitions of AI, workplace benefits, types of Artificial Intelligence with practical examples, and key concepts like Context, Prompts, and Models."
-      projects: "Identifying opportunities to implement AI, understanding challenges and risks, developing AI strategies, and creating useful commands."
+      description: "Understand AI definitions, types of Artificial Intelligence and how it can benefit your career. Cover practical examples and key concepts like context, prompts, and models"
+      projects: "Learn to identify opportunities to implement AI, understand challenges and risks, develop AI strategies, and create useful commands."
       slug: "intro-ai-workplace"
       duration: "1 week"
       step: 1
     - module_name: "Be More Productive"
       title: "Strategies for Improving Work Performance"
-      description: "Comparison between AI and humans in various tasks, when to use Artificial Intelligence, examples of prompts related to students' fields, and Prompt Engineering tips."
-      projects: "Creating workflows for professions such as teachers, linguists, and developers."
+      description: "Compare AI and human capacities in various tasks, identify when to leverage AI, explore relevant prompts, optimize prompt engineering."
+      projects: "Design a job-relevant workflow integrating AI."
       slug: "generation-strategies"
       duration: "1 week"
       step: 2
     - module_name: "Text Generation"
       title: "Text Generation"
-      description: "Capabilities of popular models like ChatGPT, Claude, and Llama-2. Detailed explanation of prompt strategies, AI workflows, and tools to automate prompts."
-      projects: "Reviewing and debugging prompts, assessing if a model's response is good, and how to instruct a model effectively."
+      description: " Explore the capabilities of popular models like ChatGPT, Claude, and Llama-2. Learn to master prompt strategies, AI workflows, and tools to automate prompts."
+      projects: "Review and debug prompts, learn to assess the quality of responses, and how to instruct a model effectively."
       slug: "text-generation"
       duration: "2 weeks"
       step: 3
     - module_name: "Image Generation"
       title: "Image Generation and AI Implementation"
-      description: "Review of capabilities of popular models for image generation like Stable Diffusion, Dall-E, Midjourney. How to craft good prompts for image generation models."
-      projects: "Developing an AI strategy and creating useful prompts for generating images in specific use cases."
+      description: "Review the capabilities of popular models for image generation like Stable Diffusion, Dall-E, Midjourney. Optimize prompt engineering for image generation."
+      projects: "Develop an AI strategy and create useful image generation prompts for specific use cases."
       slug: "img-generation"
       duration: "1 week"
       step: 4
     - module_name: "Tools and Future of AIs"
-      title: "Tools and the Future of AIs"
-      description: "Evaluation of Artificial Intelligence tools, practical projects using popular tools."
-      projects: "Course graduation, final questions, assignments, and next steps..."
+      title: "Tools and the Future of AI"
+      description: "Evaluate Artificial Intelligence tools, work on hands- on projects using popular AI models and tools."
+      projects: "Final project, assignments, and next steps..."
       slug: "final-project"
       duration: "1 week"
       step: 5
@@ -213,7 +213,7 @@ geek_data:
 
 ## PRICES AND PAYMENTS SECTION
 prices:
-  heading: "PRICES AND PAYMENTS"
+  heading: "Prices and payment plans"
   sub_heading: ""
 
 ## ALUMNI SECTION
@@ -226,13 +226,33 @@ faq:
   read_more: "Contact us for more questions"
   link: "/faq"
 
+## TWO COLUMNS
+two_columns:
+  proportions: [5, 9]
+  image:
+    style: '{"backgroundSize": "cover", "background-position": "center", "min-height": "300px", "height": "300px"}'
+    src: "../../images/landing/two-womans-and-laptop.webp"
+    shadow: true
+  heading:
+    text: "Expand your capabilities and boost your efficiency!"
+    font_size: ["30px", "30px", "30px", "26px", "24px"]
+  sub_heading:
+    text: "Learn to leverage text-based generative models like
+      ChatGPT, Claude, and Llama3, along with image generation tools such as Stable Diffusion, DALL-E, and Midjourney."
+    font_size: ["16px", "16px", "16px", "16px", "16px"]
+  button:
+    text: "Apply now"
+    color: "white"
+    background: "black"
+    path: "#prices_and_payment"
+
 # button:
 #   syllabus_heading: "Descargar Syllabus"
 #   syllabus_btn_label: "Descarga Instantánea"
 #   syllabus_motivation: "Obténlo en solo unos segundos"
 #   apply_button_link: "/us/apply"
 
-# course_instructors: 
+# course_instructors:
 #   header:
 #     title: "Conoce a nuestros instructores"
 #     paragraph: ""
