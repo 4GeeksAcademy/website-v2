@@ -139,13 +139,13 @@ two_columns:
   proportions: [6, 6]
   image:
     style: '{"border" : "0px solid black", "backgroundSize": "contain", "background-position": "center" }'
-    src: "../../images/staff/chema-daniela.jpg"
+    src: "../../images/staff/daniela-maissi-bg.jpg"
     shadow: false
   heading:
     text: "Become a Specialist with Our Cybersecurity Bootcamp"
     font_size: ["30px", "30px", "30px", "26px", "24px"]
   sub_heading:
-    text: "Gain the knowledge to protect systems against cyber threats. This intensive Bootcamp will provide you with the necessary skills to identify, analyze, and prevent attacks, using tools such as Nessus, Nmap, Wireshark, and Metasploit. Additionally, This syllabus was co-created by Daniela Maissi, an ethical hacer from the EC-Council as Malware researcher and cybersecurity expert with over 5 years of experience and 12+ certifications in cloud computing, OSINT, and IT solutions."
+    text: "Gain the knowledge to protect systems against cyber threats. This intensive Bootcamp will provide you with the necessary skills to identify, analyze, and prevent attacks, using tools such as Nessus, Nmap, Wireshark, and Metasploit."
     font_size: ["16px", "16px", "16px", "16px", "16px"]
   button:
     text: "Apply now"
@@ -154,9 +154,10 @@ two_columns:
     path: "#prices_and_payment"
   bullets:
     items:
+      - text: "This syllabus was co-created by Daniela Maissi, an ethical hacer from the EC-Council as Malware researcher and cybersecurity expert with over 5 years of experience and 12+ certifications in cloud computing, OSINT, and IT solutions."
       - text: "Develop practical skills in data loss prevention (DLP) techniques"
       - text: "Techniques for hardening Windows and Linux systems against cyber threats"
-      - text: "This cybersecurity bootcamp is officially approved by Chema Alonso, guaranteeing top-tier education and industry expertise."
+#      - text: "This cybersecurity bootcamp is officially approved by Chema Alonso, guaranteeing top-tier education and industry expertise."
 
 upcoming:
   no_dates_message: "There are currently no upcoming dates for this program"
