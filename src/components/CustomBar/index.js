@@ -40,21 +40,10 @@ const CustomBar = ({
     let interval;
 
     interval = setInterval(() => {
-      let referenceDate = new Date("2024-04-01");
-      // let referenceDate = new Date('2024-03-24');
+      const initialReferenceDate = new Date("2024-04-01");
       const now = new Date();
-      const weeksDifference = differenceInWeeks(referenceDate, now);
-      const weekGap = weeksDifference % 2;
-      if (weekGap === 0) {
-        referenceDate = addWeeks(referenceDate, weeksDifference + 2);
-      } else {
-        if (weeksDifference < 2) {
-          referenceDate = addWeeks(referenceDate, 2);
-        } else {
-          referenceDate = addWeeks(referenceDate, weeksDifference + weekGap);
-        }
-      }
-
+      let referenceDate = addWeeks(initialReferenceDate, Math.ceil(differenceInWeeks(initialReferenceDate, now) / 2) * 2);
+      
       const intervalDurationObj = dateDifference(referenceDate, now);
 
       setTimer({
