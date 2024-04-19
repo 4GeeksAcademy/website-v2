@@ -777,6 +777,8 @@ export const Header = ({
   zIndex,
   id,
 }) => {
+
+  const multilineTitle = title.split("\n").map(l => <span className="d-block">{l}</span>)
   return (
     <Grid
       background={background}
@@ -808,7 +810,7 @@ export const Header = ({
           gridArea_tablet={svg_image ? "1/1/1/7" : null}
         >
           <H2
-            type="h2"
+            type="h1"
             textAlign_tablet={textAlign_tablet}
             margin="0 0 11px 0"
             padding={paddingTitle || "0 20px"}
@@ -819,7 +821,7 @@ export const Header = ({
             {seo_title}
           </H2>
           <H1
-            type="h1"
+            type="h2"
             textAlign_tablet={textAlign_tablet}
             padding="0 20px"
             padding_tablet={
@@ -837,7 +839,7 @@ export const Header = ({
             //fontSize_tablet={fontSize_tablet || "50px"}
             zindex={zIndex}
           >
-            {hideArrowKey ? title : `< ${title} >`}
+            {multilineTitle}
           </H1>
           <Paragraph
             padding={paddingParagraph || "0"}
