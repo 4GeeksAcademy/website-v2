@@ -42,8 +42,11 @@ const CustomBar = ({
     interval = setInterval(() => {
       const initialReferenceDate = new Date("2024-04-01");
       const now = new Date();
-      let referenceDate = addWeeks(initialReferenceDate, Math.ceil(differenceInWeeks(initialReferenceDate, now) / 2) * 2);
-      
+      let referenceDate = addWeeks(
+        initialReferenceDate,
+        Math.ceil(differenceInWeeks(initialReferenceDate, now) / 2) * 2
+      );
+
       const intervalDurationObj = dateDifference(referenceDate, now);
 
       setTimer({
