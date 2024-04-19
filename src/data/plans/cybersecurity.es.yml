@@ -1,53 +1,7 @@
-full_time:
-  - slug: 'plan-1'
-    academies: ['downtown-miami', 'orlando']
-    recomended: true
-    scholarship: "Scholarship"
-    payment_time: "Pay today"
-    price: "$4999"
-    bullets: 
-      - "You're saving $4000 USD "
-      - "9% of your salary until paid in full, only if you get a job in tech."
-    icons: 
-      - "/images/landing/uwm_pantone_2021_2.png"
-  - slug: 'plan-2'
-    academies: ['downtown-miami', 'orlando']
-    recomended: false
-    scholarship: "Financed"
-    payment_time: "24 months payment"
-    price: "$310"
-    bullets: 
-      - "With $400 p/ week living stipends"
-      - "9% of your salary until paid in full, only if you get a job in tech."
-    icons: 
-      - "/images/ascent_logo.jpg"
-      - "/images/climb-logo.png"
-      - "/images/quotanda-logo.png"
-  - slug: 'plan-3'
-    academies: ['downtown-miami', 'orlando']
-    recomended: false
-    scholarship: "Income Share Agreement"
-    payment_time: "Pay after you get a job"
-    price: "$0"
-    bullets: 
-      - "With $400 p/ week living stipends"
-      - "9% of your salary until paid in full, only if you get a job in tech."
-    icons: 
-      - "/images/ascent_logo.jpg"
-      - "/images/climb-logo.png"
-      - "/images/quotanda-logo.png"
-  - slug: 'plan-4'
-    academies: ['downtown-miami', 'orlando']
-    recomended: false
-    scholarship: "Full Payment"
-    payment_time: "Pay today"
-    price: "$8099"
-    bullets: 
-      - "You're saving $1000 USD"
-
+full_time: []
 part_time:
   - slug: 'plan-1'
-    academies: ['orlando', 'downtown-miami', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa']
+    academies: ['orlando', 'downtown-miami', 'austin-usa', 'austin-usa', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa']
     recomended: true
     scholarship: "Beca"
     payment_time: "Paga hoy o en 3 partes"
@@ -59,7 +13,7 @@ part_time:
       - "/images/clarkuniversity.png"
 
   - slug: 'plan-2'
-    academies: ['orlando', 'downtown-miami', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa']
+    academies: ['orlando', 'downtown-miami', 'austin-usa', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa']
     recomended: false
     scholarship: "Financiado"
     payment_time: "Paga en 3, 4 o 5 años"
@@ -74,7 +28,7 @@ part_time:
 
   - slug: 'plan-4'
     recomended: false
-    academies: ['orlando', 'downtown-miami', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa']
+    academies: ['orlando', 'downtown-miami', 'austin-usa', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa']
     scholarship: "Pago Completo"
     payment_time: "Paga hoy"
     price: "$9999"

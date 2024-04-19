@@ -31,13 +31,13 @@ navbar:
             - text: "View program"
               link: "/us/coding-bootcamps/cybersecurity"
 
-        - title: "Blockchain and Web3"
+        - title: "Artificial Inteligence"
           level: " "
-          icon: "blockchain"
-          paragraph: "Build applications for the Web3 with Solidity and Blockchain. Get a job as a blockchain developer and help build tomorrows web."
+          icon: "applied-ai"
+          paragraph: "Explore in detail artificial intelligence and how to apply it in different industries, roles, and your work. Maximize your productivity in just 6 weeks!"
           buttons:
-            - text: "Comming Soon"
-              link: "#"
+            - text: "View program"
+              link: "/us/coding-bootcamps/applied-ai-course"
 
   - name: "Why 4Geeks"
     link: "/why-4geeks"
