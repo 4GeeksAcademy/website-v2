@@ -199,39 +199,43 @@ part_time:
     icons: 
       - "/images/stepex.png"     
 
-  - slug: 'chile-ds-ml-pt'
+  - slug: 'chile-ds-gf-pt'
     academies: ['santiago-chile']
     recomended: true
-    scholarship: "Paga al contado"
-    payment_time: "Y obtén un descuento"
-    price: "4.500.000 CLP*"
+    scholarship: "Programa + Apoyo en la búsqueda laboral"
+    payment_time: "Paga al contado"
+    price: "3.375.000 CLP*"
     bullets:
       - "Paga con transferencia bancaria, tarjeta de crédito o débito"    
-      - "*Precio sin descuento aplicado"
+      - "Hasta 12 cuotas sin interés con tarjeta de crédito"
+      - "*Descuento de hasta 1.125.000 CLP. Desde 3.375.000 CLP en vez de 4.500.000 CLP"
     icons: 
       - "/images/visa-mastercard.png"
 
-  - slug: 'chile-geekforce-fs-pt'
-    academies: ['santiago-chaaile']
-    recomended: true
-    scholarship: "Pago de contado"
-    payment_time: "Y obtén un descuento"
-    price: "4.500.000 CLP*"
+  - slug: 'chile-ds-solo-pt'
+    academies: ['santiago-chile']
+    recomended: false
+    scholarship: "Solo paga el programa"
+    payment_time: "Enfócate en obtener nuevas habilidades. Paga al contado."
+    price: "3.000.000 CLP*"
     bullets:
       - "Paga con transferencia bancaria, tarjeta de crédito o débito"    
-      - "*Precio sin descuento aplicado"
+      - "Hasta 12 cuotas sin interés con tarjeta de crédito"
+      - "*Descuento de hasta 750.000 CLP. Desde 3.000.000 CLP en vez de 3.750.000 CLP"
+      - "Paga solamente por el programa de Data Science si todavía no quieres contratar nuestro programa de apoyo profesional" 
     icons: 
       - "/images/visa-mastercard.png"    
 
-  - slug: 'chile-ds-ml-pt'
+  - slug: 'chile-ds-financed-pt'
     academies: ['santiago-chile']
     recomended: false
-    scholarship: "Cuotas desde"
-    payment_time: ""
-    price: "~220.500 CLP"
+    scholarship: "Financiamiento a tu medida"
+    payment_time: "Programa + Apoyo en la búsqueda laboral. Paga mensualmente"
+    price: "A partir de 220.500 CLP al mes"
     bullets:
       - "Financiamiento a tu medida desde 6 hasta 18 meses"  
       - "Se debe pagar un anticipo correspondiente al 20% del valor del programa" 
+      - "Si no encuentras aquí lo que esperas, por favor contáctanos y trataremos de encontrar nuevas formas de ayudarte" 
     icons: 
       - "/images//flevo-new.png"
 
