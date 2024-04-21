@@ -69,27 +69,29 @@ part_time:
       - "/images/bitcoin_logo.png"  
       - "/images/ethereum.png"    
                        
-  - slug: 'chile-ai-ufront'
+  - slug: 'chile-ai-upfront'
     academies: ['santiago-chile']
     recomended: true
     scholarship: "Paga al contado"
     payment_time: "Y obtén un descuento"
-    price: "~120.000 CLP*"
+    price: "800.000 CLP*"
     bullets:
       - "Paga con transferencia bancaria, tarjeta de crédito o débito"    
-      - "*Precio sin descuento aplicado"
+      - "Hasta 12 cuotas sin interés con tarjeta de crédito"
+      - "*Descuento de hasta 100.000 CLP"
     icons: 
       - "/images/visa-mastercard.png"
 
-  - slug: 'chile-cs-pt'
+  - slug: 'chile-financed-ai'
     academies: ['santiago-chile']
     recomended: false
-    scholarship: "Cuotas desde"
+    scholarship: "Financiamiento a tu medida"
     payment_time: "Pago a 12 meses"
-    price: "~120.000 CLP*"
+    price: "58.000 CLP al mes"
     bullets:
-      - "Financiamiento a tu medida desde 6 hasta 18 meses"  
+      - "Financiamiento a tu medida desde 6 hasta 12 meses"  
       - "Se debe pagar un anticipo correspondiente al 20% del valor del programa" 
+      - "Si no encuentras aquí lo que esperas, por favor contáctanos y trataremos de encontrar nuevas formas de ayudarte"
     icons: 
       - "/images//flevo-new.png"
 
