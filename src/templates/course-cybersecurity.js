@@ -3,22 +3,22 @@ import { isCustomBarActive } from "../actions";
 import { graphql, Link } from "gatsby";
 import { GridContainer, Header, Div } from "../components/Sections";
 import { Button, Colors, Img } from "../components/Styling";
-import UpcomingDates from "../components/UpcomingDates";
+import AboutTheProgram from "../components/AboutTheProgram";
 import ProgramDetails from "../components/ProgramDetails";
 import ProgramDetailsMobile from "../components/ProgramDetailsMobile";
-import TechsWeTeach from "../components/TechsWeTeach";
 import GeeksInfo from "../components/GeeksInfo";
 import OurPartners from "../components/OurPartners";
 import BaseRender from "./_baseLayout";
 import Icon from "../components/Icon";
 import { requestSyllabus } from "../actions";
 import { SessionContext } from "../session";
-import ScholarshipProjects from "../components/ScholarshipProjects";
+import UpcomingDates from "../components/UpcomingDates";
 import Badges from "../components/Badges";
 import PricesAndPayment from "../components/PricesAndPayment";
 import { Circle } from "../components/BackgroundDrawing";
 import LeadForm from "../components/LeadForm";
 import Modal from "../components/Modal";
+import ScholarshipProjects from "../components/ScholarshipProjects";
 import TwoColumn from "../components/TwoColumn/index.js";
 import Overlaped from "../components/Overlaped";
 import JobGuaranteeSmall from "../components/JobGuaranteeSmall";
@@ -30,8 +30,8 @@ const Program = ({ data, pageContext, yml }) => {
   const geek = data.allCourseYaml.edges[0].node;
   const [open, setOpen] = React.useState(false);
 
-  const defaultCourse = "machine-learning-engineering";
-  const program_schedule = yml.meta_info.slug.includes("full-time")
+  const defaultCourse = "cybersecurity";
+  const program_type = yml.meta_info.slug.includes("full-time")
     ? "full_time"
     : "part_time";
   const handleOpen = () => {
@@ -68,7 +68,6 @@ const Program = ({ data, pageContext, yml }) => {
         ? -1
         : 1
     );
-
   return (
     <>
       <Header
@@ -86,12 +85,14 @@ const Program = ({ data, pageContext, yml }) => {
         padding_lg="40px 0px"
         padding_tablet="40px 40px"
         position="relative"
-        fontSize_title="40px"
-        fontSizeTitle_tablet="60px"
+        fontSize_title="26px"
+        lineHeight="30px"
+        fontSizeTitle_tablet="40px"
+        lineHeight_table="44px"
         fontFamily_title="Archivo-Black"
         fontSize_paragraph="24px"
         gridTemplateColumns_tablet="repeat(14, 1fr)"
-        maxWidth="1280px"
+        maxWidth="1366px"
         uppercase
       >
         <Img
@@ -130,7 +131,6 @@ const Program = ({ data, pageContext, yml }) => {
               textColor="white"
             >
               {apply_button_text || applyButtonText}
-              {/* {applyButtonText} */}
             </Button>
           </Link>
           <Button
@@ -154,6 +154,8 @@ const Program = ({ data, pageContext, yml }) => {
           >
             {syllabus_button_text}
           </Button>
+          {/* <Button onClick={handleOpen} variant="outline" width="200px" color={Colors.black} margin="10px 0 58px 0" textColor={Colors.black}>{syllabus_button_text}</Button> */}
+          {/* <Button variant="outline" icon={<Icon icon="download" stroke={Colors.black} style={{marginRight: "10px"}} width="46px" height="46px" />} color={Colors.black} margin="10px 0 50px 0" margin_tablet="0" textColor={Colors.black}>{syllabus_button_text}</Button> */}
         </Div>
         <Modal
           aria-labelledby="simple-modal-title"
@@ -190,19 +192,48 @@ const Program = ({ data, pageContext, yml }) => {
         />
       </Header>
 
+      {/* TWO COLUMN CREAR EN EL YML*/}
+      {/* {session.location?.breathecode_location_slug.includes("spain") && <TwoColumn
+        left={{ image: yml.two_columns_first?.image }}
+        right={{
+          heading: yml.two_columns_first?.heading,
+          sub_heading: yml.two_columns_first?.sub_heading,
+          bullets: yml.two_columns_first?.bullets,
+          content: yml.two_columns_first?.content,
+          button: yml.two_columns_first?.button,
+        }}
+        proportions={yml.two_columns_first?.proportions}
+        session={session}
+      />} */}
+
       <JobGuaranteeSmall
         content={data.allJobGuaranteeSmallYaml.edges[0].node}
       />
+
       <ProgramDetails
         details={courseDetails.details}
         lang={pageContext.lang}
-        course={program_schedule}
+        course={program_type}
         background={Colors.white}
       />
       <ProgramDetailsMobile
         details={courseDetails.details}
         lang={pageContext.lang}
-        course={program_schedule}
+        course={program_type}
+      />
+
+      {/* TWO COLUMN CREAR EN EL YML*/}
+      <TwoColumn
+        right={{ image: yml.two_columns_second?.image }}
+        left={{
+          heading: yml.two_columns_second?.heading,
+          sub_heading: yml.two_columns_second?.sub_heading,
+          bullets: yml.two_columns_second?.bullets,
+          content: yml.two_columns_second?.content,
+          button: yml.two_columns_second?.button,
+        }}
+        proportions={yml.two_columns_second?.proportions}
+        session={session}
       />
 
       {/* OVERLAPED CREAR EN EL YML*/}
@@ -213,12 +244,22 @@ const Program = ({ data, pageContext, yml }) => {
         image={yml.overlaped?.image}
       />
 
-      {/* GEEKSINFO IS A TWOCOLUMN WITH TITLE */}
-      <GeeksInfo lang={pageContext.lang} />
-
       {/* TWO COLUMN CREAR EN EL YML*/}
       <TwoColumn
-        left={{ image: yml.two_columns?.image, video: yml.two_columns?.video }}
+        right={{ image: yml.two_columns_info?.image }}
+        left={{
+          heading: yml.two_columns_info?.heading,
+          sub_heading: yml.two_columns_info?.sub_heading,
+          bullets: yml.two_columns_info?.bullets,
+          content: yml.two_columns_info?.content,
+          button: yml.two_columns_info?.button,
+        }}
+        proportions={yml.two_columns?.proportions}
+        session={session}
+      />
+      {/* TWO COLUMN CREAR EN EL YML*/}
+      <TwoColumn
+        left={{ image: yml.two_columns?.image }}
         right={{
           heading: yml.two_columns?.heading,
           sub_heading: yml.two_columns?.sub_heading,
@@ -233,6 +274,7 @@ const Program = ({ data, pageContext, yml }) => {
       <UpcomingDates
         lang={pageContext.lang}
         message={courseDetails.upcoming?.no_dates_message}
+        defaultCourse={defaultCourse}
         actionMessage={courseDetails.upcoming?.actionMessage}
         locations={data.allLocationYaml.edges}
       />
@@ -280,7 +322,7 @@ const Program = ({ data, pageContext, yml }) => {
 };
 
 export const query = graphql`
-  query CourseMachineLearningQuery(
+  query CourseDataScienceQuery(
     $file_name: String!
     $lang: String!
     $related_clusters: [String]
@@ -422,10 +464,6 @@ export const query = graphql`
           badges {
             paragraph
           }
-          credentials {
-            heading
-            paragraph
-          }
           details {
             about {
               title
@@ -435,6 +473,7 @@ export const query = graphql`
                 content
                 link
                 link_text
+                icon
               }
             }
             heading
@@ -463,21 +502,6 @@ export const query = graphql`
             heading
             button_label
           }
-          teacher {
-            picture {
-              childImageSharp {
-                gatsbyImageData(
-                  layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                  width: 500
-                  placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
-                )
-              }
-            }
-            greeting
-            linkedin
-            full_name
-            bio
-          }
           potential_companies {
             tagline
             sub_heading
@@ -494,6 +518,76 @@ export const query = graphql`
               }
             }
           }
+          two_columns_info {
+            proportions
+            image {
+              style
+              src
+              shadow
+            }
+            heading {
+              text
+              font_size
+            }
+            sub_heading {
+              text
+              font_size
+            }
+            bullets {
+              items {
+                text
+              }
+            }
+          }
+          two_columns_second {
+            proportions
+            image {
+              style
+              src
+              shadow
+            }
+            heading {
+              text
+              font_size
+            }
+            sub_heading {
+              text
+              font_size
+            }
+            button {
+              text
+              color
+              background
+              path
+            }
+          }
+          two_columns_first {
+            proportions
+            image {
+              style
+              src
+              shadow
+            }
+            heading {
+              text
+              font_size
+            }
+            sub_heading {
+              text
+              font_size
+            }
+            button {
+              text
+              color
+              background
+              path
+            }
+            bullets {
+              items {
+                text
+              }
+            }
+          }
           two_columns {
             proportions
             image {
@@ -501,7 +595,6 @@ export const query = graphql`
               src
               shadow
             }
-            video
             heading {
               text
               font_size
@@ -537,6 +630,10 @@ export const query = graphql`
             heading
             sub_heading
             sub_heading_link
+          }
+          upcoming {
+            no_dates_message
+            actionMessage
           }
           prices {
             heading
@@ -696,7 +793,7 @@ export const query = graphql`
                 childImageSharp {
                   gatsbyImageData(
                     layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                    width: 300
+                    width: 100
                     placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                   )
                 }

@@ -113,7 +113,7 @@ const SuccessStoriescomponent = ({ filterIndexes, lang }) => {
             ? (position = 0)
             : (position += 1);
           return (
-            i < 9 && (
+            i < 30 && (
               <TestimonialCard
                 key={i}
                 studentRating={m.rating}

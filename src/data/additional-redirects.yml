@@ -199,3 +199,8 @@ redirects:
     toPath: "/es/aprender-a-programar/aprende-a-programacion-desde-cero"
     #redirectInBrowser: true
     isPermanent: true # if permanent google will erase the original url from its results 
+    
+  - fromPath: "/us/coding-bootcamps/machine-learning-engineering"
+    toPath: "/us/machine-learning-engineer/machine-learning-engineer"
+    #redirectInBrowser: true
+    isPermanent: true # if permanent google will erase the original url from its results 

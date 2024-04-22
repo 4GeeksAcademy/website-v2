@@ -47,11 +47,16 @@
   font-size: 26px;
   margin: 0 0 20px 0;
   text-align: left;
-  position: relative;
   padding: 30px 0 20px 0px;
   border-bottom: 1px solid #c4c4c4;
   /* margin: 30px 0px; */
 }
+
+.single-post h3 {
+  font-size: 22px;
+  font-weight: 700px;
+}
+
 .single-event p {
   font-size: 16px;
   line-height: 20px;
@@ -79,8 +84,11 @@
 .single-post ul,
 .single-post ol,
 .single-post blockquote {
-  margin: 25px 30px;
   line-height: 30px;
+  padding: 25px 30px;
+  background: #e7e7e7;
+  position: relative;
+  font-size: 120%;
 }
 .single-post p a,
 .single-post li a {
