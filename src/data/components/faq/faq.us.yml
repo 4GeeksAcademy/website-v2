@@ -41,7 +41,7 @@ faq:
         priority: 1
         answer: |-
           Yes, having your own laptop is essential for our classes. While we don't mandate a specific operating system for most programs, it's recommended to have a laptop with Windows, macOS, or Linux installed.<br>
-          However, for the [cybersecurity program](/es/coding-bootcamps/curso-ciberseguridad), it's highly recommended to have a laptop with either Windows or Linux operating system due to the nature of the course materials and tools used. For example, applications like VirtualBox and Packet Tracer will be used, so please consider the technical requirements for these tools. Packet Tracer is available for Linux and Windows, while VirtualBox is only compatible with Mac for Intel processors. Additionally, for virtual machines, it's recommended to have at least 4 processor threads and 8 GB of RAM to ensure optimal performance.<br>
+          However, for the <a class="faq-link" href="/es/coding-bootcamps/curso-ciberseguridad">cybersecurity program</a>, it's highly recommended to have a laptop with either Windows or Linux operating system due to the nature of the course materials and tools used. For example, applications like VirtualBox and Packet Tracer will be used, so please consider the technical requirements for these tools. Packet Tracer is available for Linux and Windows, while VirtualBox is only compatible with Mac for Intel processors. Additionally, for virtual machines, it's recommended to have at least 4 processor threads and 8 GB of RAM to ensure optimal performance.<br>
           The classes and exercises for all programs are accessed through the cloud.
       
       ## how do I pay for my tuition?
