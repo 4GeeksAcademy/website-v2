@@ -85,7 +85,7 @@ const SuccessStoriescomponent = ({ filterIndexes, lang, variant }) => {
     }
   }, []);
 
-  const Card = variant === 'small' ? TestimonialCardSmall : TestimonialCard;
+  const Card = variant === "small" ? TestimonialCardSmall : TestimonialCard;
 
   return (
     <>

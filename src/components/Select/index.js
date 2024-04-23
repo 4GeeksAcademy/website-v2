@@ -151,7 +151,7 @@ const customStyles = (props) => ({
     color: "#000",
     lineHeight: "22px",
     "&:hover": { border: "1px solid #000000" },
-    ...props?.controlStyles
+    ...props?.controlStyles,
     //"&:focus": { boxShadow: "0 0 0 1px black", border: "1px solid #000000" },
   }),
   option: (styles, { data, isDisabled, isFocused, isSelected }) => {

@@ -1,12 +1,9 @@
 import React from "react";
 import { Div } from "../Sections";
 import { H2, H3, Paragraph } from "../Heading";
-import {
-  Colors,
-} from "../Styling";
+import { Colors } from "../Styling";
 
 const SimpleCards = ({ heading, sub_heading, cards, background }) => {
-
   return (
     <Div background={Colors[background] || background}>
       <Div
@@ -52,7 +49,9 @@ const SimpleCards = ({ heading, sub_heading, cards, background }) => {
             textAlign_sm="center"
             textAlign_tablet="left"
             dangerouslySetInnerHTML={{ __html: sub_heading.text }}
-            style={sub_heading?.style ? { ...JSON.parse(sub_heading.style) } : {}}
+            style={
+              sub_heading?.style ? { ...JSON.parse(sub_heading.style) } : {}
+            }
           />
         </Div>
         <Div
@@ -80,9 +79,7 @@ const SimpleCards = ({ heading, sub_heading, cards, background }) => {
                   widt_tablet="280px"
                   height="240px"
                 >
-                  <H3>
-                    {item.heading.text}
-                  </H3>
+                  <H3>{item.heading.text}</H3>
                 </Div>
               );
             })}

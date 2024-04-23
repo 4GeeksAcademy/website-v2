@@ -22,7 +22,14 @@ export default ({ icon, title, content, index, color }) => {
       alignItems_tablet="start"
       borderRadius="4px"
     >
-      {icon && <Icon icon={icon} width="56px" height="56px" color={Colors[color] || color} />}
+      {icon && (
+        <Icon
+          icon={icon}
+          width="56px"
+          height="56px"
+          color={Colors[color] || color}
+        />
+      )}
       <Div
         margin="0 0 0 15px"
         margin_tablet="30px 0 0 0"
@@ -42,7 +49,13 @@ export default ({ icon, title, content, index, color }) => {
           </H3>
         )}
         {content && (
-          <Paragraph lineHeight="24px" textAlign="left" color="#000" opacity="1" fontSize="14px">
+          <Paragraph
+            lineHeight="24px"
+            textAlign="left"
+            color="#000"
+            opacity="1"
+            fontSize="14px"
+          >
             {content}
           </Paragraph>
         )}

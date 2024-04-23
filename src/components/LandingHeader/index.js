@@ -44,13 +44,14 @@ const LandingHeader = (props) => {
 
   const taglineColor = () => {
     if (yml.header_data.tagline_color) return yml.header_data.tagline_color;
-    return yml.header_data.background ? Colors.black : Colors.white
-  }
+    return yml.header_data.background ? Colors.black : Colors.white;
+  };
 
   const formColor = () => {
-    if (yml.header_data?.form_styles?.background) return yml.header_data?.form_styles?.background;
-    return yml.header_data.background === "#FFF1D1" ? Colors.white : "#FFF1D1"
-  }
+    if (yml.header_data?.form_styles?.background)
+      return yml.header_data?.form_styles?.background;
+    return yml.header_data.background === "#FFF1D1" ? Colors.white : "#FFF1D1";
+  };
 
   return (
     <>
@@ -137,24 +138,32 @@ const LandingHeader = (props) => {
               {inLocation}
               {yml.header_data.tagline}
             </H1>
-            {yml.header_data.sub_heading && yml.header_data.sub_heading !== "" && (
-              <H2
-                zIndex="1"
-                type="h2"
-                textAlign="left"
-                fontSize="18px"
-                color={yml.header_data.background ? Colors.black : Colors.white}
-                variant="main"
-                fontWeight="bolder"
-                padding="0 0 10px 0"
-              >
-                {yml.header_data.sub_heading}
-              </H2>
-            )}
+            {yml.header_data.sub_heading &&
+              yml.header_data.sub_heading !== "" && (
+                <H2
+                  zIndex="1"
+                  type="h2"
+                  textAlign="left"
+                  fontSize="18px"
+                  color={
+                    yml.header_data.background ? Colors.black : Colors.white
+                  }
+                  variant="main"
+                  fontWeight="bolder"
+                  padding="0 0 10px 0"
+                >
+                  {yml.header_data.sub_heading}
+                </H2>
+              )}
 
             {Array.isArray(yml.features.bullets) &&
               yml.features.bullets.map((bullet, i) => (
-                <Div alignItems="center" margin="8px 0" padding="0px 20px" gap="10px">
+                <Div
+                  alignItems="center"
+                  margin="8px 0"
+                  padding="0px 20px"
+                  gap="10px"
+                >
                   <Icon
                     style={{
                       background:

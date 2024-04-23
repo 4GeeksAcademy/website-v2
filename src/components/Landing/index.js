@@ -621,7 +621,8 @@ export const landingSections = {
   },
 
   simple_cards: ({ yml, index }) => {
-    const { heading, sub_heading, content, cards, button, width, background } = yml;
+    const { heading, sub_heading, content, cards, button, width, background } =
+      yml;
     return (
       <SimpleCards
         index={index}
@@ -696,9 +697,7 @@ export const landingSections = {
 
   testimonials_new: ({ session, data, pageContext, yml, index }) => {
     const [h_xl, h_lg, h_md, h_sm, h_xs] =
-      yml.heading && yml.heading.font_size
-        ? yml.heading.font_size
-        : [];
+      yml.heading && yml.heading.font_size ? yml.heading.font_size : [];
 
     return (
       <Div
@@ -723,11 +722,7 @@ export const landingSections = {
             fontSize_md={h_md || "30px"}
             fontSize_sm={h_sm}
             margin="30px 0 0px 0"
-            style={
-              yml.heading.style
-                ? JSON.parse(yml.heading.style)
-                : null
-            }
+            style={yml.heading.style ? JSON.parse(yml.heading.style) : null}
           >
             {yml.heading.text}
           </H2>
@@ -738,7 +733,7 @@ export const landingSections = {
           variant={yml.variant}
         />
       </Div>
-    )
+    );
   },
 
   why_4geeks: ({ session, pageContext, yml, index }) => (

@@ -1,9 +1,7 @@
 import React from "react";
 import { Div } from "../Sections";
 import { H2, Paragraph } from "../Heading";
-import {
-  Colors,
-} from "../Styling";
+import { Colors } from "../Styling";
 import IconsBanner from "../IconsBanner";
 
 const Iconogram = ({ yml, index }) => {
