@@ -872,7 +872,7 @@ export const landingSections = {
         : [];
     return (
       <Div
-        id="two_column_left"
+        id={`two_column_left-${index}`}
         key={index}
         background={Colors[yml.background] || yml.background}
         flexDirection="column"
@@ -880,7 +880,7 @@ export const landingSections = {
         // padding_tablet="30px 40px"
         margin_tablet="0 auto"
         width_md="100%"
-        padding_xs="30px 0px"
+        // padding_xs="30px 0px"
       >
         {yml.section_heading && yml.section_heading !== "" && (
           <H2
@@ -931,14 +931,14 @@ export const landingSections = {
         : [];
     return (
       <Div
-        id="two_column_right"
+        id={`two_column_right-${index}`}
         key={index}
         background={Colors[yml.background] || yml.background}
         flexDirection="column"
         //padding="40px 0 50px 0"
         margin_tablet="0 auto"
         width_md="100%"
-        padding_xs="30px 0px"
+        // padding_xs="30px 0px"
       >
         {yml.section_heading && yml.section_heading !== "" && (
           <H2

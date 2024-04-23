@@ -210,6 +210,7 @@ const StyledImage = styled.div`
   }
   @media ${Devices.sm} {
     width: ${(props) => props.width_sm};
+    height: ${(props) => props.height_sm};
   }
   @media ${Devices.tablet} {
     padding: ${(props) => props.padding_tablet};
@@ -228,6 +229,7 @@ const StyledImage = styled.div`
     right: ${(props) => props.right_md};
     top: ${(props) => props.top_md};
     bottom: ${(props) => props.bottom_md};
+    height: ${(props) => props.height_md};
   }
   @media ${Devices.lg} {
     display: ${(props) => props.display_lg};
@@ -235,6 +237,7 @@ const StyledImage = styled.div`
     right: ${(props) => props.right_lg};
     top: ${(props) => props.top_lg};
     bottom: ${(props) => props.bottom_lg};
+    height: ${(props) => props.height_lg};
   }
 `;
 export const Img = React.memo(StyledImage);

@@ -101,7 +101,7 @@ components:
     layout: two_column_right
     proportions: [6, 6]
     image:
-      style: '{ "backgroundSize": "contain" }'
+      style: '{ "backgroundSize": "contain", "height": ["500px", "500px", "500px", "500px", "300px"], "minHeight": "auto" }'
       src: "/images/landing/grupo-ventanas.png"
     heading:
       text: "Why coding?"
@@ -138,7 +138,7 @@ components:
       font_size: ["16px"]
       text: "A total of 100 students will be accepted into the program."
     image:
-      style: '{ "backgroundSize": "contain" }'
+      style: '{ "backgroundSize": "contain", "height": ["500px", "500px", "500px", "300px", "300px"], "minHeight": "auto" }'
       src: "/images/landing/community-support-2.png"
     heading:
       text: "Ready to start your journey to a better future?"
@@ -297,7 +297,7 @@ components:
     proportions: [6, 6]
     background: "#fbfbfb"
     image:
-      style: '{ "backgroundSize": "contain", "maxHeight": "130px", "margin": "auto" }'
+      style: '{ "backgroundSize": "contain", "height": ["300px", "300px", "300px", "300px", "300px"], "minHeight": "auto" }'
       src: "/images/landing/miamitech-logo-sidetext.png"
     heading:
       style: '{ "font-weight": "400", "margin-bottom": "0" }'
@@ -319,11 +319,10 @@ components:
     layout: two_column_left
     proportions: [6, 6]
     image:
-      style: '{ "backgroundSize": "cover" }'
+      style: '{ "backgroundSize": "cover", "backgroundPosition": "center" }'
       shadow: true 
       src: "/images/landing/latin-woman-laptop-coffee.png"
     heading:
-      style: '{ "margin-top": "0px" }'
       text: "You don't need to be worried about payments. Only about your career ahead"
       font_size: ["30px", "30px", "30px", "30px", "30px"]
     # sub_heading:
