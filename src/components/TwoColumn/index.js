@@ -358,7 +358,7 @@ const Side = ({
   );
 };
 
-const TwoColumn = ({ left, right, proportions, session }) => {
+const TwoColumn = ({ left, right, proportions, session, alignment }) => {
   const [left_size, right_size] = proportions ? proportions : [];
   return (
     <Div
@@ -366,6 +366,7 @@ const TwoColumn = ({ left, right, proportions, session }) => {
       gap={left?.gap || right?.gap || "0px"}
       gap_tablet={left?.gap_tablet || right?.gap_tablet || "20px"}
       flexDirection_tablet="row"
+      alignItems_tablet={alignment}
       m_sm="0px auto 100px auto"
       margin_tablet="0 auto"
       margin_xxs="0"

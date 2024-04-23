@@ -27,10 +27,10 @@ const StyledInput = styled.input`
   font-family: "Lato", sans-serif;
   font-size: 15px;
   line-height: 22px;
-  fontweight: 400;
-  font-color: ${(props) => props.color || "#606060"};
+  font-weight: 400;
+  color: ${(props) => props.color || "#606060"};
   user-select: initial;
-  opacity: 0.7;
+  opacity: ${(props) => props.opacity || 0.7};
   :focus {
     opacity: 1;
     border: 1px solid ${(props) => (props.valid ? props.lightGray : "#d79f9f")};
@@ -127,7 +127,7 @@ export const Alert = styled.div`
   font-family: "Lato", sans-serif;
 
   font-size: 14px;
-  font-color: ${(props) => colors[props.color][1]};
+  color: ${(props) => colors[props.color][1]};
   margin: ${(props) => props.margin};
 `;
 
@@ -142,7 +142,7 @@ const StyledTextArea = styled.textarea`
   border: ${(props) => props.border || "1px solid #828282"};
   opacity: 0.7;
   font-size: 16px;
-  font-color: ${Colors.black};
+  color: ${Colors.black};
   border-radius: ${(props) => props.borderRadius};
   background-color: ${(props) =>
     props.valid ? props.bgColor : Colors.lightRed};

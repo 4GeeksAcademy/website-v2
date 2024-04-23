@@ -1,26 +1,10 @@
 import React from "react";
-import { H2, H3, H4, Paragraph } from "../Heading";
-import { Colors } from "../Styling";
+import { H3, Paragraph } from "../Heading";
 import { Div } from "../Sections";
-import { Link } from "gatsby";
+import { Colors } from "../Styling";
 import Icon from "../Icon";
 
-const positions = [
-  {
-    position: "1/3/1/5",
-  },
-  {
-    position: "1/5/1/7",
-  },
-  {
-    position: "1/7/1/9",
-  },
-  {
-    position: "1/9/1/11",
-  },
-];
-
-export default ({ icon, title, content, index }) => {
+export default ({ icon, title, content, index, color }) => {
   return (
     <Div
       key={index}
@@ -38,7 +22,7 @@ export default ({ icon, title, content, index }) => {
       alignItems_tablet="start"
       borderRadius="4px"
     >
-      {icon && <Icon icon={icon} width="56px" height="56px" color={null} />}
+      {icon && <Icon icon={icon} width="56px" height="56px" color={Colors[color] || color} />}
       <Div
         margin="0 0 0 15px"
         margin_tablet="30px 0 0 0"
@@ -58,7 +42,7 @@ export default ({ icon, title, content, index }) => {
           </H3>
         )}
         {content && (
-          <Paragraph textAlign="left" color="#000" opacity="1" fontSize="24px">
+          <Paragraph lineHeight="24px" textAlign="left" color="#000" opacity="1" fontSize="14px">
             {content}
           </Paragraph>
         )}

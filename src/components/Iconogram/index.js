@@ -1,24 +1,13 @@
 import React from "react";
-import { GridContainerWithImage, Div, GridContainer } from "../Sections";
-import { H3, H2, H5, H4, Paragraph } from "../Heading";
+import { Div } from "../Sections";
+import { H2, Paragraph } from "../Heading";
 import {
   Colors,
-  Img,
-  Button,
-  StyledBackgroundSection,
-  Link,
-  Anchor,
 } from "../Styling";
-import { navigate } from "gatsby";
 import IconsBanner from "../IconsBanner";
-import Icon from "../Icon";
-import ChooseYourProgram from "../ChooseYourProgram";
-import StarRating from "../StarRating";
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
-import { smartRedirecting, transferQuerystrings } from "../../utils/utils.js";
 
-const Iconogram = ({ session, data, pageContext, yml, index }) => {
-  const { heading, sub_heading, icons, button, swipable } = yml;
+const Iconogram = ({ yml, index }) => {
+  const { heading, sub_heading, icons, button, swipable, background } = yml;
 
   return (
     <Div
@@ -30,17 +19,18 @@ const Iconogram = ({ session, data, pageContext, yml, index }) => {
       padding_md="40px 80px"
       padding_tablet="40px 40px"
       width="100%"
+      background={Colors[background] || background}
     >
       {heading.text && (
         <H2
           type="h2"
           lineHeight="35px"
           lineHeight_tablet="28px"
-          fontSize_tablet="24px"
+          fontSize_tablet="35px"
           fontSize="24px"
-          //margin="30px 0 30px 0"
           maxWidth="1280px"
           margin="30px auto"
+          fontWeight="400"
           style={
             heading?.style
               ? { ...JSON.parse(heading.style) }
@@ -89,8 +79,8 @@ const Iconogram = ({ session, data, pageContext, yml, index }) => {
         //gap_md="10%"
         maxWidth="1280px"
         margin="20px auto 0 auto"
-        padding_tablet="0 40px"
-        padding_lg="0"
+        padding_tablet="0 40px 10px 40px"
+        padding_lg="0 0 10px 0"
         className={swipable && "badge-slider hideOverflowX__"}
       >
         {Array.isArray(icons) &&
@@ -99,6 +89,7 @@ const Iconogram = ({ session, data, pageContext, yml, index }) => {
               <React.Fragment key={index}>
                 <IconsBanner
                   icon={item.icon}
+                  color={item.color}
                   title={item.title}
                   content={item.content}
                 />

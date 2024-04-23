@@ -128,7 +128,7 @@ SmartSelect.defaultProps = {
 };
 export default SmartSelect;
 
-const customStyles = {
+const customStyles = (props) => ({
   input: (styles) => ({
     ...styles,
     width: "100%",
@@ -151,6 +151,7 @@ const customStyles = {
     color: "#000",
     lineHeight: "22px",
     "&:hover": { border: "1px solid #000000" },
+    ...props?.controlStyles
     //"&:focus": { boxShadow: "0 0 0 1px black", border: "1px solid #000000" },
   }),
   option: (styles, { data, isDisabled, isFocused, isSelected }) => {
@@ -159,7 +160,7 @@ const customStyles = {
       fontFamily: "Lato, sans-serif",
     };
   },
-};
+});
 
 export const SelectRaw = ({ onChange, ...rest }) => {
   return (
@@ -196,7 +197,7 @@ export const SelectRaw = ({ onChange, ...rest }) => {
       <Select
         className="react-select-wrapper"
         data-cy="react_select_wrapper"
-        styles={rest.style || customStyles}
+        styles={rest.style || customStyles({ ...rest })}
         {...rest}
         onChange={(opt) => {
           if (onChange) onChange(opt, true);
