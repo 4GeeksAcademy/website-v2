@@ -820,9 +820,7 @@ export const Header = ({
             type="h1"
             textAlign_tablet={textAlign_tablet}
             padding="0 20px"
-            padding_tablet={
-              paddingTitle_tablet || paddingTitle || "0 20px"
-            }
+            padding_tablet={paddingTitle_tablet || paddingTitle || "0 20px"}
             fontSize={fontSize_title || "40px"}
             fontSize_tablet={fontSizeTitle_tablet || "50px"}
             lineHeight={lineHeight || "50px"}
