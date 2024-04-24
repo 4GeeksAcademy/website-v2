@@ -3,8 +3,8 @@ header:
   sub_heading: "We want to show you some projects pitched by our graduates and alumni who are already working as software developers in the Tech Industry"
 
 project: Project
-made_by: "> Made by"
-description: "> Description"
+made_by: "> MADE BY"
+description: "> DESCRIPTION"
 
 button_section:
   button_text: "VIEW ALL PROJECTS"
