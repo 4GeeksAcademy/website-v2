@@ -20,7 +20,6 @@ const AlumniProjects = ({
   paragraph,
   yml,
 }) => {
-
   const projects = data.projects.slice(0, limit || data.projects.length);
   const [switched, setSwitched] = useState(false);
 
