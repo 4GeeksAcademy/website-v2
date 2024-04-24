@@ -786,7 +786,6 @@ export const Header = ({
       margin={margin || "70px 0 0 0"}
       margin_tablet={margin_tablet}
       margin_xxs={margin_xxs}
-      //padding={padding_xxs || "60px 20px"}
       padding={padding || "0 0"}
       padding_tablet={padding_tablet || "60px 40px"}
       padding_md={padding_md || "60px 80px"}
@@ -796,7 +795,7 @@ export const Header = ({
       id={id}
     >
       <Grid
-        gridTemplateColumns_tablet={`repeat(12, 1fr)`}
+        gridTemplateColumns_tablet="repeat(12, 1fr)"
         gridArea_tablet="1/1/1/15"
         maxWidth="1280px"
         margin="auto"
@@ -814,7 +813,6 @@ export const Header = ({
             padding={paddingTitle || "0 20px"}
             color="#606060"
             fontSize={fontSize_seo || "12px"}
-            //fontFamily={fontFamily_title}
           >
             {seo_title}
           </H2>
@@ -823,9 +821,7 @@ export const Header = ({
             textAlign_tablet={textAlign_tablet}
             padding="0 20px"
             padding_tablet={
-              paddingTitle_tablet
-                ? paddingTitle_tablet
-                : paddingTitle || "0 20px"
+              paddingTitle_tablet || paddingTitle || "0 20px"
             }
             fontSize={fontSize_title || "40px"}
             fontSize_tablet={fontSizeTitle_tablet || "50px"}
@@ -833,20 +829,16 @@ export const Header = ({
             lineHeight_tablet={lineHeight_tablet || "60px"}
             fontFamily={fontFamily_title}
             textTransform={uppercase && "uppercase"}
-            //fontSize={fontSize || "40px"}
-            //fontSize_tablet={fontSize_tablet || "50px"}
             zindex={zIndex}
           >
             {hideArrowKey ? title : `< ${title} >`}
           </H1>
           <Paragraph
-            padding={paddingParagraph || "0"}
             width="auto"
             letterSpacing="0.05em"
+            padding={paddingParagraph || "20px"}
             padding_tablet={
-              paddingParagraph_tablet
-                ? paddingParagraph_tablet
-                : paddingParagraph || 0
+              paddingParagraph_tablet || paddingParagraph || "0 20px"
             }
             textAlign_tablet={textAlign_tablet}
             margin={paragraphMargin || "26px 0"}
