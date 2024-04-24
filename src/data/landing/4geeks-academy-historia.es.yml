@@ -155,17 +155,16 @@ components:
     swipable: False
     background: "#FFFFFF"
     image:
-      style: '{"backgroundSize": "cover"}'
-      src: "/images/our-story.webp"
+      style: '{ "background-size": "cover", "height":"320px", "min-height":"auto", "background-position": "center"}'
+      src: "/images/landing/4geeks_academy_picture.jpg"
       shadow: true
     section_heading:
       text: "Comienzos simples para una simple idea, el Desarrollo."
-      style: '{ "font-size": "30px"}'
     heading:
       text: "Nuestra historia comenzó en 2009"
     sub_heading:
       text: |
-        cuando un grupo de amigos unidos por su pasión por la tecnología fundaron 4Geeks, una pequeña empresa de desarrollo de software. Tras años de esfuerzo y dedicación, nos convertimos en una empresa próspera con operaciones en 5 países y más de 250 proyectos entregados.
+        Cuando un grupo de amigos unidos por su pasión por la tecnología fundaron 4Geeks, una pequeña empresa de desarrollo de software. Tras años de esfuerzo y dedicación, nos convertimos en una empresa próspera con operaciones en 5 países y más de 250 proyectos entregados.
     content:
       text: ""
       font_size: ["16px"]
