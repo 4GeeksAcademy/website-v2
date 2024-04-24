@@ -1,0 +1,233 @@
+meta_info:
+  slug: bootcamp-full-stack-santiago-go # <--- URL 4geeksacademy.com/us/landing/example
+
+  # This will show on social media when shared
+  title: "Full Stack Developer Part-time / Full-time bootcamp"
+  description: "4Geeks Academy El Bootcamp de Full-Stack más premiado en Santiago de Chile."
+  image: "/images/bg/more-new-main-home-bg.png"
+  keywords: ""
+  visibility: "hidden" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
+  template: "landing_a" # <--- choose your landing template
+  # <--- URL redirections to avoid 404 errors
+  redirects: []
+
+  # Set a particular course or location to the landing page
+  # this UTM fields will be also included in the CRM contact
+  utm_course: ["full-stack"]
+  utm_location: ["santiago-chile"]
+  automation: soft # comma separated, "soft" is the default value
+  tag: request_more_info # comma separated, "request_more_info" is the default value
+
+navbar:
+  buttonText: "Más información"
+  buttonUrl: "#leadform_bottom" # url accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
+  logoUrl: "#"
+
+form:
+  # posible fields: "first_name", "last_name", "full_name", "phone", "email"
+  # always the first_name, email and phone will be mandatory if added.
+  fields: ["full_name", "phone", "email"]
+  heading: "Completa el formulario para recibir información."
+  motivation: "Una vez completado el formulario en unos minutos recibirás información sobre la academia y nuestros planes de plagos en tu correo electrónico."
+  button_label: Obtener más información
+  redirect: "/es/gracias/?lang=es"  #you can redirect to another url or entirely diffrent website
+
+apply_schollarship: # form that is displayed at the end of the landing
+  # title: "Get more info about this award-winning development course"
+  imageSide: "right"
+  image: "../../../static/images/landing/apply.png"
+
+# jumbotron on the top (cannot be commented out)
+header_data:
+  background: "#FFF1D1"
+  tagline: Conviértete en un Desarrollador Full Stack
+  sub_heading: "Construye tu camino"
+  badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
+  image_filter: brightness(0.3)
+
+features:
+  marginTop: 0px #<-- separation between tagline and the bullets
+
+  #                                         up   left down  right
+  styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
+  bullets:
+    - Aprende a programar desde cero hasta ser un profesional
+    - ¡Somos el único bootcamp que no finaliza cuando te gradúas! En 4Geeks dispones de mentorías ilimitadas y de por vida.
+    - Contamos con diferentes opciones de financiamiento puedes financiar el importe en 6, 9, 18, 12 y 24 meses.
+
+follow_bar:
+  position: "top" # top, bottom, hidden
+  content:
+    text: "Conviértete en un desarrollador Fullstack\ncon Pago único o en cómodas cuotas"
+    text_mobile: "Conviértete en un desarrollador Fullstack\ncon Pago único o en cómodas cuotas"
+    # devices:    XL      LG      MD      SM       XS
+    font_size: ["22px", "22px", "22px", "18px", "4.3vw"]
+  button:
+    text: "Más información"
+    path: "#leadform_bottom"
+  phone: 
+    text: ""
+
+short_badges:
+  - name: "Premios Tecnologia Siglo XXI"
+    url: ""
+    image: "../../../static/images/awards/premios_tecnologia_sigloxxi.png"
+    alt: "Mejor centro de Coding Bootcamp"
+  - name: "Course Report"
+    url: ""
+    image: "../../../static/images/badges/Course-Report-Badge-2024.webp"
+    alt: "Top Coding Bootcamps Course Report"
+  - name: "Switchup"
+    url: ""
+    image: "../../../static/images/badges/switchup-badge-2023.png"
+    alt: "Best coding bootcamp Switchup 2023"   
+  - name: "Florida Department of Education"
+    url: ""
+    image: "../../../static/images/badges/licensed.png"
+    alt: "Florida Department of Education"
+
+#
+# ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇
+#
+
+rating_reviews:
+  position: 6
+  heading: "Lee acerca de nosotros"
+  rating_list:
+    - alt: "Career Karma"
+      image: "../../../static/images/badges/career-karma.png"
+      rating: 4.8
+      url: "https://careerkarma.com/schools/4geeks-academy/"
+    - alt: "Switchup"
+      image: "../../../static/images/badges/switchup-img.png"
+      rating: 4.89
+      url: "https://www.switchup.org/bootcamps/4geeks-academy"
+    - alt: "Course Report"
+      image: "../../../static/images/badges/course-report.png"
+      rating: 4.84
+      url: "https://www.coursereport.com/schools/4geeks-academy"
+    - alt: "Google"
+      image: "../../../static/images/badges/google.png"
+      rating: 4.9
+      url: ""
+
+program_details:
+  position: 3
+  heading: "Ciencia de Datos y Machine Learning"
+  sub_heading: "Comienza con Python, Ciencia de Datos, Aprendizaje Automático, Deep Learning y el mantenimiento de un entorno de producción en Inteligencia Artificial."
+
+why_4geeks:
+  position: 7
+  heading: "¿Por qué 4Geeks?"
+  sub_heading: " "
+
+who_is_hiring:
+  position: 15
+  limit: 4
+  heading: "¿Quién contrata a nuestros alumnos?"
+  sub_heading: "Nos encanta ver crecer a nuestros estudiantes, es por eso que nos esforzamos cada día por tener más aliados, para que puedas trabajar en empresas que te ayuden a seguir creciendo profesionalmente."
+
+# Possible layours: [two_column_left_image, two_column_right_image]
+components:
+  - name: new_design_with_bullets
+    position: 1
+    layout: two_column_right 
+    swipable: False
+    background: "#fbfbfb"
+    image:
+      style: '{"backgroundSize": "contain;"}'
+      src: "/images/landing/hombre-con-laptop.png"
+      shadow: false
+    section_heading: 
+      text: "Aprende a Programar y Abre las Puertas a un Mundo de Oportunidades"
+      style: '{ "font-size": "30px" }'
+    heading: 
+      text: "¡Desde Cero Hasta Tu Primer Empleo!"
+    sub_heading:
+      text: "Descubre una oportunidad única para transformar tu carrera y adentrarte en el mundo de la programación. En solo 18 semanas, te guiaremos desde cero hasta conseguir tu primer trabajo como programador."
+    button: 
+      text: "OBTENER MÁS INFORMACIÓN"
+      color: white
+      hover_color: "white"
+      background: "black"
+      path: "#leadform_header"
+    content: 
+      text: ""
+      font_size: ["16px"]
+      path: ""
+    bullets:
+      items:
+      - heading: "No se requiere experiencia previa"
+        icon: "check" 
+      - heading: "Horario part-time adaptable a tu vida actual"
+        icon: "check" 
+      - heading: "Mentorías y career support de por vida"
+        icon: "check" 
+
+
+  - name: python_y_javascript
+    position: 2
+    layout: two_column_left
+    background: "veryLightBlue2" # Name of the color(from components/Styling/index.js) or color code ex: #C9F9F9
+    image:
+      src: "/images/why-4geeks/python-image.png"
+      style: '{ "backgroundSize": "contain", "height": "250px", "minHeight": "250px" }'
+    heading:
+      # style: '{"padding": "0 20px", "line-height": "50px"}'
+      text:
+        "JavaScript y Python"
+        #           xl      lg      md      sm      xs
+      font_size: ["45px", "45px", "30px", "28px", "25px"]
+    content:
+      text: "El Bootcamp abarca desde los fundamentos de programación en JavaScript hasta la creación de aplicaciones dinámicas con React.js. También incluye conceptos avanzados como Python, Flask, bases de datos y la publicación de sitios web. Prepárate para desarrollar proyectos web de forma efectiva y aplicar tus conocimientos en entornos profesionales, donde se valora altamente a profesionales bien preparados en esta área."
+      font_size: ["18px"]
+
+  - name: "chooseYourProgram"
+    layout: choose_your_program
+    background: "veryLightBlue2"
+    position: 4
+    heading:
+      text: Nuestras Modalidades
+    content:
+      text: "Elige el horario que mejor se adapte a tu ritmo"
+      font_size: ["16px"]
+      path: ""
+    programs:
+    - title: "Full Time Bootcamp"
+      sub_title: "10 Semanas"
+      icon: "fullstack_2"
+      description: "Embárcate en un viaje de 10 semanas para convertirte en un desarrollador Fullstack de alta demanda con el Bootcamp Fulltime de 4Geeks Academy. Nuestras clases intensivas de lunes a viernes te brindarán una base sólida en front-end y back-end, equipándote con las habilidades más buscadas por las empresas líderes en tecnología."
+      text_link: Más información
+      link: "/es/aplica"
+    - title: "Part Time Bootcamp"
+      sub_title: "18 Semanas"
+      icon: "software_2"
+      description: "El programa part-time de 4Geeks Academy te permite convertirte en un desarrollador Fullstack a tu propio ritmo, adaptándose a tus horarios y compromisos personales. Con 3 clases semanales a lo largo de 18 semanas, podrás adquirir las habilidades necesarias para dominar el front-end y back-end, sin renunciar a tu trabajo o estudios actuales."
+      text_link: Más información
+      link: "#leadform_bottom"
+
+  - name: some_id
+    position: 5
+    layout: two_column_right
+    background: "#fbfbfb"
+    image:
+      style: '{ "border" : "3px solid black" }' 
+      shadow: true 
+      src: "../../../static/images/testimonials/joshua-bravo-testimonial.jpg"
+    video: "https://www.youtube.com/watch?v=rtpfwwfE0yY"
+    heading:
+      text:
+        "De asistente de cocina a Full-stack la decisión que llevo a Joshua a un futuro en la industria Tecnológica."
+        #xl      lg     md     sm    xs
+      font_size: ["40px", "34px", "34px", "25px", "20px"]
+    content:
+      text: "Descubre la inspiradora historia de Joshua Bravo, quien pasó de ser un asistente de cocina a programador gracias a su decisión de formar parte de 4Geeks Academy. Su experiencia es un testimonio vivo de cómo la dedicación y el aprendizaje en este bootcamp lo llevaron a convertirse en un profesional altamente capacitado."
+      font_size: ["16px"]
+    button:
+      text: "Experiencias de Éxito"
+      path: "#why_4geeks"
+      color: "white"
+      background: "black"
+      hover: "lightBlue"
+
+

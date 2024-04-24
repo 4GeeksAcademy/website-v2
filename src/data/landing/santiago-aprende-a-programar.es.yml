@@ -20,7 +20,7 @@ meta_info:
 
 navbar:
   logoUrl: "#"
-  buttonText: "Postula"
+  buttonText: "Más información"
   # url accepts: relative(/apply), absolute(https://google.com) or id(#componentName)
   buttonUrl: "#leadform_bottom" # [#top, #bottom or another #componentId]
 
@@ -98,16 +98,16 @@ short_badges:
 #  filter: ["CNN Español", "La Tercera", "Las Ultimas Noticias", "Emol"]
 
 badges:
-  position: 5
+  position: 8
   heading: "4Geeks Academy cuenta con premios y reconocimientos que validan su excelencia"
 
 program_details:
-  position: 1
+  position: 3
   heading: "Domina Python, JS y React"
   sub_heading: "Un bootcamp de programación sobre las tecnologías más usadas del mundo"
 
 about4Geeks:
-  position: 4
+  position: 1
   heading: Aprende a programar desde cero con 4Geeks
   sub_heading: "Una comunidad de más de 4000 estudiantes, profesores, partners y exalumnos, conectados por medio de Slack, GitHub, Social Media y 4Geeks.com (nuestra plataforma educacional)"
   list:
@@ -116,8 +116,8 @@ about4Geeks:
     - title: "Mentorias 1:1 ilimitadas"
     - title: "Preparación para Entrevistas personalizada"
   paragraph: ""
-  button_text: "Postula"
-  button_link: "/es/aplica"
+  button_text: "Más información"
+  button_link: "#leadform_bottom"
   image: "../../../static/images/bg/community.png"
   image_mobile: "../../../static/images/bg/community.png"
 
@@ -142,11 +142,11 @@ why_4geeks:
 components:
 
   - name: how-it-works
-    position: 3
+    position: 5
     layout: iconogram
     swipable: True
     heading:
-      text: ""
+      text: "¿CÓMO INSCRIBIRSE EN LA ACADEMIA?"
       font_size: ["30px", "30px", "30px", "30px", "30px"]
     sub_heading:
       text: ""
@@ -163,7 +163,7 @@ components:
     - icon: "terminal"
       title: Aprende a programar con nosotros
 
-  - name: "whatever"
+  - name: "choose-your-program"
     layout: choose_your_program
     position: 5
     heading:
@@ -181,27 +181,24 @@ components:
         
         Aprende las habilidades más solicitadas con instructores apasionados y un plan de estudios práctico para ayudarte a encontrar un trabajo de programación como desarrollador Jr.
       
-      text_link: Postula
-      link: "#"
+      text_link: "Más información"
+      link: "#leadform_bottom"
     - title: "NodeJs Back End Development"
       sub_title: "Nivel 2"
       icon: "software_2"
       description: |
         Este programa de estudio te permitirá trabajar y desarrollar el back-end de software y aplicaciones web, utilizando uno de los lenguajes de programacion más demandados en el mundo, Javascript.
-
         Aprenderás a crear tu ambiente de trabajo y realizar las configuraciones pertinentes para poder trabajar con el stack más solicitado de NodeJs
-      
-      text_link: Postula
-      link: "#"
+      text_link: "Más información"
+      link: "#leadform_bottom"
 
   - name: python_y_javascript
-    position: 6
+    position: 4
     layout: two_column_right
-    background: "veryLightBlue2" # Name of the color(from components/Styling/index.js) or color code ex: #C9F9F9
+    background: "#C9F9F9" # Name of the color(from components/Styling/index.js) or color code ex: #C9F9F9
     image:
       src: "/images/why-4geeks/python-image.png"
-      # /static/images/why-4geeks/python-image.png
-    # video: "B01-eTfgqqc"
+      style: '{ "background-size": "contain", "height":"200px", "min-height":"auto", "background-position": "center"}'
     heading:
       text:
         "Python y Javascript"
@@ -210,12 +207,14 @@ components:
     content:
       text: "Nuestros programa está basado en el uso de Python y Javascript. ¿La razón? En el mercado laboral JavaScript tiene 26 veces más vacantes de trabajo que Ruby on Rails y  Python tiene 10 veces más trabajos que node.js. <br> Otras herramientas que también aprenderás a usar en nuestro programa son: GitHub, CSS3, HTML5, Flask, etc."
       font_size: ["16px"]
+
   - name: top_coding_bootcamp
-    position: 8
+    position: 2
     layout: two_column_left
+    background: "#C9F9F9"
     proportions: [4, 8]
     image:
-      style: '{ "backgroundSize": "contain" }'
+      style: '{ "background-size": "contain", "height":"200px", "min-height":"auto", "background-position": "center"}'
       src: "/images/badges/switchup-badge-2023.png"
       link: "https://www.switchup.org/bootcamps/4geeks-academy"
     button:

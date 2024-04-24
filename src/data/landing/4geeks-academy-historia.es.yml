@@ -1,0 +1,227 @@
+meta_info:
+  slug: 4geeks-academy-historia # <--- URL 4geeksacademy.com/us/landing/example
+
+  # This will show on social media when shared
+  title: "Historia de 4Geeks Academy"
+  description: "4Geeks Academy Una historia de pasión por la educación y el desarrollo de software"
+  image: "/images/bg/community.png"
+  keywords: ""
+  visibility: "hidden" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
+  template: "landing_a" # <--- choose your landing template
+  redirects: []
+
+  # Set a particular course or location to the landing page
+  # this UTM fields will be also included in the CRM contact
+  utm_course: ["full-stack"]
+  utm_location: ["downtown-miami"]
+  automation: soft # comma separated, "soft" is the default value
+  tag: request_more_info # comma separated, "request_more_info" is the default value
+
+navbar:
+  logoUrl: "#"
+  buttonText: "Solicitar más información" # this modifies the button text in the navbar
+  buttonUrl: "#leadform_bottom" #accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
+
+form:
+  # posible fields: "first_name", "last_name", "full_name", "phone", "email"
+  # always the first_name, email and phone will be mandatory if added.
+  fields: ["full_name", "phone", "email"]
+  heading: "Rellena el formulario y optén más información"
+  motivation: "Una vez completado el formulario, alguien de nuestro equipo se pondrá en contacto contigo en breves minutos a través de un correo electrónico."
+  button_label: Solicita más información
+  redirect: null #you can redirect to another url or entirely diffrent website
+
+apply_schollarship: # form that is displayed at the end of the landing
+  # title: "Apoyo Profesional Ilimitado"
+  imageSide: "left"
+  image: "../../../static/images/landing/apply.png"
+
+# jumbotron on the top (cannot be commented out)
+header_data:
+  tagline: Historia de 4Geeks Academy
+  sub_heading: "Una historia de pasión por la educación y el desarrollo de software"
+  # background: "#FFFFFF"
+  background_image: "../../../static/images/historia-de4geeks2.webp"
+  badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
+  image_filter: brightness(0.3)
+
+features:
+  marginTop: 0px #<-- separation between tagline and the bullets
+
+  #                                         up   left down  right
+  styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
+  # bullets:
+  #   - No previous experience or coding skills required.
+  #   - Choose the schedule and format that suits you best — part-time, online, in-person, or hybrid.
+  #   - Flexible payment plans starting at $150 a month, with the option to start paying after landing a job.
+  #   - Get lifelong access to our mentors and career support.
+
+follow_bar:
+  position: "top" # top, bottom, hidden
+  content:
+    text: "Solicita más información \nsobre la academia y sus planes"
+    text_mobile: "Solicita más información \nsobre la academia y sus planes"
+    # devices:   XL      LG    MD      SM    XS
+    font_size: ["22px", "22px", "22px", "20px", "18px"]
+  button:
+    text: "Más información"
+    path: "#leadform_header"
+  phone:
+    text: "Call"
+
+short_badges:
+  - name: "Ebootcamp"
+    url: ""
+    image: "../../../static/images/badges/ebootcamp-top.png"
+    alt: "Top Coding Bootcamp"
+  - name: "Premios Tecnologia Siglo XXI"
+    url: ""
+    image: "../../../static/images/awards/premios_tecnologia_sigloxxi.png"
+    alt: "Mejor centro de Coding Bootcamp"
+  - name: "Course Report"
+    url: ""
+    image: "../../../static/images/badges/Course-Report-Badge-2024.webp"
+    alt: "Top Coding Bootcamps Course Report"
+  - name: "Switchup"
+    url: ""
+    image: "../../../static/images/badges/switchup-badge-2023.png"
+    alt: "Best coding bootcamp Switchup 2023"
+  - name: "Florida Department of Education"
+    url: ""
+    image: "../../../static/images/badges/licensed-inverted.png"
+    alt: "Florida Department of Education"
+
+#
+# ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇
+#
+
+# program_details:
+#   position: 2
+#   heading: "Master Python, JS and React"
+#   sub_heading: "The programming languages with the highest demand worldwide"
+
+badges:
+  position: 5
+  heading: "Premios y Reconocimientos que avalan nuestra excelencia"
+
+geeks_vs_others:
+  position: 7
+  heading: "¿Qué diferencia a nuestro bootcamp de programación de los demás?"
+  paragraph: ""
+  total_rows: 5
+
+rating_reviews:
+  position: 11
+  heading: "¡Los mejor valorados en todos los sitios de reseñas!"
+  rating_list:
+    - alt: "Career Karma"
+      image: "../../../static/images/badges/career-karma.png"
+      rating: 4.89
+      url: ""
+    - alt: "Switchup"
+      image: "../../../static/images/badges/switchup-img.png"
+      rating: 4.91
+      url: ""
+    - alt: "Course Report"
+      image: "../../../static/images/badges/course-report.png"
+      rating: 4.84
+      url: ""
+    - alt: "Google"
+      image: "../../../static/images/badges/google.png"
+      rating: 5
+      url: ""
+
+alumni_projects:
+  position: 14
+  heading: "Proyectos que podrás crear luego de haberte graduado"
+  sub_heading: ""
+
+who_is_hiring:
+  position: 15
+  limit: 4
+  heading: "¿Quién contrata a nuestros alumnos?"
+  sub_heading: ""
+
+why_4geeks:
+  position: 9
+  heading: "Porqué 4Geeks"
+  sub_heading: ""
+
+# Possible layouts: [two_column_left_image, two_column_right_image]
+components:
+  - name: the-begin
+    position: 1
+    layout: two_column_left
+    swipable: False
+    background: "#FFFFFF"
+    image:
+      style: '{"backgroundSize": "cover"}'
+      src: "/images/our-story.webp"
+      shadow: true
+    section_heading:
+      text: "Comienzos simples para una simple idea, el Desarrollo."
+      style: '{ "font-size": "30px"}'
+    heading:
+      text: "Nuestra historia comenzó en 2009"
+    sub_heading:
+      text: |
+        cuando un grupo de amigos unidos por su pasión por la tecnología fundaron 4Geeks, una pequeña empresa de desarrollo de software. Tras años de esfuerzo y dedicación, nos convertimos en una empresa próspera con operaciones en 5 países y más de 250 proyectos entregados.
+    content:
+      text: ""
+      font_size: ["16px"]
+      path: ""
+
+
+  - name: the-academy
+    position: 2
+    layout: two_column_right
+    swipable: False
+    background: "#C9F9F9" # Name of the color(from components/Styling/index.js) or color code ex: #C9F9F9
+    image:
+      style: '{ "background-size": "cover", "height":"300px", "min-height":"auto", "background-position": "top"}'
+      src: "/images/the-academy/what-is-4geeks.jpg"
+      shadow: true
+    section_heading:
+      text: ""
+      style: '{ "font-size": "30px"}'
+    heading:
+      text: "Sin embargo, no nos quedamos ahí"
+    sub_heading:
+      text: |
+        En 2014, decidimos dar un paso más y crear 4Geeks Academy, una academia no convencional con un objetivo claro: formar desarrolladores de software de alto nivel que pudieran adaptarse a las demandas del mercado laboral actual.
+    content:
+      text: ""
+      font_size: ["16px"]
+      path: ""
+    # button:
+    #   text: "Send me more information"
+    #   color: white
+    #   hover_color: "white"
+    #   background: "black"
+    #   path: "#leadform_header"
+
+
+  - name: how-it-works
+    position: 3
+    background: "#E3F9FE !important"
+    layout: iconogram
+    swipable: True
+    heading:
+      text: "Objetivos de nuestra academia"
+      font_size: ["30px", "30px", "30px", "30px", "30px"]
+    sub_heading:
+      text: '¿Qué nos hace diferentes?'
+      font_size: ["16px", "16px", "16px", "16px", "16px"]
+      style: '{ "textAlign": "center", "width": "60%" }'
+    text_link: "/"
+    icons:
+      - icon: "stairswflag"
+        title: "Aprendizaje práctico y orientado a la realidad"
+        content: "Nos enfocamos en las herramientas y tecnologías más demandadas por las empresas líderes del sector, lo que te permitirá estar preparado para cualquier trabajo una vez que te gradues."
+      - icon: "timer"
+        title: "Horarios y métodos de pago Flexibles"
+        content: "Ofrecemos un modelo de formación a medio tiempo, para que puedas conciliar tus estudios con otras actividades. Además, también contamos con múltiples formas de financiación para hacer más accesibles los costos de un curso de esta calidad."
+      - icon: "community"
+        title: "Una comunidad apasionada por la tecnología"
+        content: "Desde un principio decidimos crear una comunidad de programadores de calidad con el propósito de que puedas encontrar apoyo, colaboración y oportunidades de networking que te ayudarán a alcanzar tus metas."
+
