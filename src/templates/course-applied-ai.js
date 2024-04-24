@@ -11,7 +11,6 @@ import ProgramDetailsMobile from "../components/ProgramDetailsMobile";
 import PricesAndPayment from "../components/PricesAndPayment";
 import Modal from "../components/Modal";
 import LeadForm from "../components/LeadForm";
-import AlumniProjects from "../components/AlumniProjects";
 import Badges from "../components/Badges";
 import TechsWeTeach from "../components/TechsWeTeach";
 import { Circle } from "../components/BackgroundDrawing";
@@ -27,7 +26,7 @@ import Loc from "../components/Loc";
 import ScholarshipProjects from "../components/ScholarshipProjects";
 import TwoColumn from "../components/TwoColumn/index.js";
 
-const Program = ({ data, pageContext, yml }) => {
+const ApliedAi = ({ data, pageContext, yml }) => {
   const { session } = React.useContext(SessionContext);
   const courseDetails = data.allCourseYaml.edges[0].node;
   const [open, setOpen] = React.useState(false);
@@ -775,4 +774,4 @@ export const query = graphql`
   }
 `;
 
-export default BaseRender(Program);
+export default BaseRender(ApliedAi);

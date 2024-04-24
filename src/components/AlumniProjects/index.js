@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { GridContainer, GridContainerWithImage, Div, Grid } from "../Sections";
+import { GridContainer, GridContainerWithImage, Div } from "../Sections";
 import PropTypes from "prop-types";
-import { H2, H3, H4, H5, Paragraph } from "../Heading";
-import { Colors, StyledBackgroundSection, Span } from "../Styling";
+import { H2, H3, H4, Paragraph } from "../Heading";
+import { Colors, StyledBackgroundSection } from "../Styling";
 import Icon from "../Icon";
 import ReactPlayer from "../ReactPlayer";
 import Slider from "react-slick";
@@ -11,7 +11,7 @@ import "slick-carousel/slick/slick-theme.css";
 import "../../assets/css/utils.css";
 
 const AlumniProjects = ({
-  lang,
+  data,
   showThumbs,
   containerStyle,
   limit,
@@ -20,10 +20,8 @@ const AlumniProjects = ({
   paragraph,
   yml,
 }) => {
-  const [projects, setProjects] = useState(
-    lang[0].node.projects.slice(0, limit || lang[0].node.projects.length)
-  );
-  const [value, setValue] = useState(0);
+
+  const projects = data.projects.slice(0, limit || data.projects.length);
   const [switched, setSwitched] = useState(false);
 
   const CustomNextArrow = (props) => {
@@ -85,25 +83,6 @@ const AlumniProjects = ({
     prevArrow: <CustomPrevArrow />,
   };
 
-  // Not works as expected (stop when hover outside of screen), rethink another idea
-  // const stopVideo = () => {
-  //     // check if document is defined
-  //     if(typeof document !== "undefined") {
-  //         const iframe = document.querySelector( 'iframe');
-  //         const video = document.querySelector( 'video' );
-  //         const containerSlider = document.querySelector('.container-slider')
-
-  //         if ( containerSlider && iframe ) {
-  //             const iframeSrc = iframe.src;
-  //             iframe.src = iframeSrc;
-  //         }
-  //         if ( containerSlider && video ) {
-  //             console.log('isOutContainerSlider')
-  //             video && video.pause();
-  //             // disable function for 5 seconds after paused
-  //         }
-  //     }
-  // };
   return (
     <Div
       flexDirection="column"
@@ -152,7 +131,7 @@ const AlumniProjects = ({
                 {item.project_video === "" ? (
                   <StyledBackgroundSection
                     image={item.project_image.childImageSharp.gatsbyImageData}
-                    bgSize={`cover`}
+                    bgSize="cover"
                     alt="Cnn Logo"
                     style={{
                       width: "100%",
@@ -191,10 +170,10 @@ const AlumniProjects = ({
               <Div flexDirection="column" gridColumn_tablet="8 / 15 ">
                 <H3
                   textAlign="left"
-                  margin_tablet={`0 0 10px 0`}
+                  margin_tablet="0 0 10px 0"
                   margin_xs="20px 0 5px 0"
                 >
-                  Project: {`${item.project_name}`}
+                  {`${data.project}: ${item.project_name}`}
                 </H3>
                 <H4
                   textAlign="left"
@@ -203,10 +182,9 @@ const AlumniProjects = ({
                   margin_tablet="9px 0"
                   margin_xs="20px 0 0 0"
                   margin_md="20px 0 0 0"
-                  margin={`24px 0 9px 0`}
+                  margin="24px 0 9px 0"
                 >
-                  {" "}
-                  {`> MADE BY:`}
+                  {data?.made_by}
                 </H4>
                 {item.alumni.map((alumni, i) => {
                   return (
@@ -221,7 +199,7 @@ const AlumniProjects = ({
                     >
                       <H4
                         textAlign="left"
-                        fontWeight={`400`}
+                        fontWeight="400"
                         width="fit-content"
                         margin="0 20px 0 0"
                         lineHeight="22px"
@@ -266,12 +244,11 @@ const AlumniProjects = ({
                 <H4
                   textAlign="left"
                   fontWeight="900"
-                  margin={`30px 0 10px 0`}
+                  margin="30px 0 10px 0"
                   lineHeight="19px"
                   style={{ borderTop: "1px solid #ebebeb" }}
                 >
-                  {" "}
-                  {`> DESCRIPTION:`}
+                  {data?.description}
                 </H4>
                 <Paragraph
                   color={Colors.gray}
