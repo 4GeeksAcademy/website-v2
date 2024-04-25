@@ -21,10 +21,10 @@ const Financial = (props) => {
   const { session } = React.useContext(SessionContext);
   const { data, pageContext, yml } = props;
   const { seo_title, header } = yml;
-  console.log('yml');
+  console.log("yml");
   console.log(yml);
   const { button } = header;
-  console.log('button');
+  console.log("button");
   console.log(button);
 
   let location = null;
@@ -44,7 +44,11 @@ const Financial = (props) => {
 
   return (
     <>
-      <Div maxWidth="1280px" margin={isCustomBarActive(session) ? "140px auto 0 auto" : "60px auto"} gap="25px">
+      <Div
+        maxWidth="1280px"
+        margin={isCustomBarActive(session) ? "140px auto 0 auto" : "60px auto"}
+        gap="25px"
+      >
         <Div display="block">
           <H1 type="h1" textAlign="left">
             {seo_title}
