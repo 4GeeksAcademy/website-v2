@@ -1,6 +1,6 @@
 import React from "react";
 import { graphql } from "gatsby";
-import { Colors, Img } from "../components/Styling";
+import { Button, Colors, Img } from "../components/Styling";
 import BaseRender from "./_baseLayout";
 import { SessionContext } from "../session";
 import { isCustomBarActive } from "../actions";
@@ -9,7 +9,7 @@ import { isCustomBarActive } from "../actions";
 import FinancialFilter from "../components/FinancialFilter";
 import { Header } from "../components/Sections";
 import { Div } from "../components/Sections";
-import { H2, Paragraph, H3, H4 } from "../components/Heading";
+import { H1, H2, Paragraph, H3, H4 } from "../components/Heading";
 import Icon from "../components/Icon";
 import WeTrust from "../components/WeTrust";
 import PricesAndPayment from "../components/PricesAndPayment";
@@ -20,6 +20,12 @@ import Badges from "../components/Badges";
 const Financial = (props) => {
   const { session } = React.useContext(SessionContext);
   const { data, pageContext, yml } = props;
+  const { seo_title, header } = yml;
+  console.log('yml');
+  console.log(yml);
+  const { button } = header;
+  console.log('button');
+  console.log(button);
 
   let location = null;
   if (session && session.location) {
@@ -38,14 +44,68 @@ const Financial = (props) => {
 
   return (
     <>
-      <Header
+      <Div maxWidth="1280px" margin={isCustomBarActive(session) ? "140px auto 0 auto" : "60px auto"} gap="25px">
+        <Div display="block">
+          <H1 type="h1" textAlign="left">
+            {seo_title}
+          </H1>
+          <H2
+            margin="20px 0"
+            type="h2"
+            fontFamily="Archivo-Black"
+            textAlign="left"
+            fontSize="40px"
+            fontSize_tablet="50px"
+          >
+            {header.title}
+          </H2>
+          <Paragraph
+            color={Colors.black}
+            textAlign="left"
+            opacity="1"
+            fontSize="24px"
+            lineHeight="28px"
+          >
+            {header.paragraph}
+          </Paragraph>
+          <Button
+            outline
+            colorHoverText={button.hover_color || ""}
+            background={Colors[button.background] || button.background}
+            lineHeight="26px"
+            textColor={Colors.black}
+            textTransform="none"
+            color={Colors[button.color] || button.color}
+            fontSize="15px"
+            textAlign="left"
+            margin="2rem 0"
+            padding_xxs="0 .5rem"
+            padding_xs="0 .85rem"
+            //padding_tablet="32px .85rem 0 .85rem"
+            onClick={() => {
+              if (button.path && button.path.indexOf("http") > -1)
+                window.open(transferQuerystrings(button.path, utm));
+              else navigate(button.path);
+            }}
+          >
+            {button.text}
+          </Button>
+        </Div>
+        <Div>
+          <Img
+            backgroundSize="contain"
+            src="/images/Group-6663.png"
+            width="600px"
+            height="400px"
+          />
+        </Div>
+      </Div>
+      {/* <Header
         margin={isCustomBarActive(session) ? "140px auto 0 auto" : "60px auto"}
-        paragraphMargin="26px 20px"
-        paragraphMargin_Tablet="26px 22%"
-        paddingParagraph_tablet="0 40px"
         seo_title={yml.seo_title}
         title={yml.header.title}
-        //paragraph={yml.header.paragraph}
+        paragraph={yml.header.paragraph}
+        textAlign="left"
         padding_tablet="72px 0 40px 0"
         padding="0px 20px"
         position="relative"
@@ -57,98 +117,14 @@ const Financial = (props) => {
         maxWidth="1280px"
         hideArrowKey
         id="financials"
-      >
-        <Img
-          src="/images/landing/group-3.png"
-          width="49px"
-          height="286px"
-          style={{
-            position: "absolute",
-            zIndex: "-1",
-          }}
-          display_xxs="none"
-          display_tablet="flex"
-          left_tablet="72px"
-          top_tablet="0%"
-          left_lg="0%"
-          top_lg="-10%"
-        />
-        <Img
-          src="/images/landing/Ellipse-40.png"
-          width="53px"
-          height="53px"
-          style={{
-            position: "absolute",
-            zIndex: "-1",
-          }}
-          display_xxs="none"
-          display_tablet="flex"
-          right_tablet="85px"
-          top_tablet="15%"
-          right_lg="5%"
-          top_lg="15%"
-        />
-        <Img
-          src="/images/landing/Ellipse-39.png"
-          width="17px"
-          height="17px"
-          style={{
-            position: "absolute",
-            zIndex: "-1",
-          }}
-          display_xxs="none"
-          display_tablet="flex"
-          right_tablet="16%"
-          top_tablet="45%"
-          right_lg="3%"
-          top_lg="45%"
-        />
-        <Img
-          src="/images/landing/Ellipse-38.png"
-          width="17px"
-          height="17px"
-          style={{
-            position: "absolute",
-            zIndex: "-1",
-          }}
-          display_xxs="none"
-          display_tablet="flex"
-          right_tablet="12%"
-          top_tablet="45%"
-          right_lg="6%"
-          top_lg="45%"
-        />
-        <Img
-          src="/images/landing/Ellipse-39.png"
-          width="17px"
-          height="17px"
-          style={{
-            position: "absolute",
-            zIndex: "-1",
-          }}
-          display_xxs="none"
-          display_tablet="flex"
-          right_tablet="8%"
-          top_tablet="45%"
-          right_lg="9%"
-          top_lg="45%"
-        />
-        <Img
-          src="/images/landing/Ellipse-39.png"
-          width="28px"
-          height="28px"
-          style={{
-            position: "absolute",
-            zIndex: "-1",
-          }}
-          display_xxs="none"
-          display_tablet="flex"
-          right_tablet="25%"
-          top_tablet="13%"
-          right_lg="23%"
-          top_lg="12%"
-        />
-      </Header>
+        svg_image={
+          <Img
+            src="/images/Group-6663.png"
+            width="600px"
+            height="400px"
+          />
+        }
+      /> */}
 
       <Iconogram yml={yml.iconogram} />
       <PricesAndPayment
@@ -382,6 +358,7 @@ export const query = graphql`
               src
             }
             heading {
+              style
               text
               font_size
             }

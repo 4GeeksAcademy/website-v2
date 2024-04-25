@@ -10,12 +10,14 @@ meta_info:
 ## BANNER - HEADER
 seo_title: "Bootcamp Financing"
 header:
-  title: FINANCING
-  paragraph: Indicate the following information to show you the financing options
+  title: Finance your future
+  paragraph: Finance your future with diverse education funding options, from scholarships to inclusive payment methods. Explore our platform for inclusive financing solutions tailored to your academic journey.
   tagline: CELEBRATE THE BEST PRICE IN TOWN
   sub_heading: We never stopped trying until we mastered a real premium but affordable program. Our philosophy is rooted in making coding education available to everyone.
   image: "../../../static/images/bg/pricing-bg.jpg"
-  alt: ""
+  alt: "financing"
+  button:
+    text: See plans & prices
 
 ## FIRST SECTION AFTER THE BANNER
 intro:
@@ -91,8 +93,9 @@ iconogram:
 two_column:
   - image:
       style: '{ "backgroundSize": "contain" }'
-      src: /images/landing/Group-6626.webp
+      src: /images/landing/Group-6626-with-border.webp
     heading:
+      style: '{ "fontWeight": 400 }'
       text: $20 Million in scholarships
       font_size:
         - 38px

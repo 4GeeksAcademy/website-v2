@@ -10,12 +10,14 @@ meta_info:
 ## BANNER - HEADER
 seo_title: "Financiación de Bootcamp"
 header:
-  title: FINANCIACIÓN
-  paragraph: Indicanos los siguientes datos para mostrarte tus opciones de financiación
+  title: Financia tu futuro
+  paragraph: Financia tu futuro con diversas opciones de financiación educativa, desde becas hasta métodos de pago inclusivos. Explore nuestra plataforma para encontrar soluciones de financiación inclusivas adaptadas a su trayectoria académica.
   tagline: CELEBRA EL MEJOR PRECIO DE LA CIUDAD
   sub_heading: Nunca dejamos de trabajar para construir un programa verdaderamente 'premium', pero asequible. Nuestra filosofía se basa en hacer que la educación en programación esté disponible para todas las personas.
   image: "../../../static/images/bg/pricing-bg.jpg"
-  alt: ""
+  alt: "financing"
+  button:
+    text: Ver planes y precios
 
 ## FIRST SECTION AFTER THE BANNER
 intro:
@@ -93,8 +95,9 @@ iconogram:
 two_column:
   - image:
       style: '{ "backgroundSize": "contain" }'
-      src: /images/landing/Group-6626.webp
+      src: /images/landing/Group-6626-with-border.webp
     heading:
+      style: '{ "fontWeight": 400 }'
       text: $20 millones en becas
       font_size:
         - 38px
