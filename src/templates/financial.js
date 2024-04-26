@@ -24,7 +24,7 @@ const Financial = (props) => {
     return data.allPlansYaml.edges
       .flatMap(({ node }) => [...node.part_time, ...node.full_time])
       .filter((plan) =>
-        plan.academies.includes(session.location?.breathecode_location_slug)
+        plan.academies.includes(session?.location?.breathecode_location_slug)
       );
   }, [session]);
   const academyHasJobGuarantee = allPlans.some(
