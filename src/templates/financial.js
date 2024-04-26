@@ -23,9 +23,13 @@ const Financial = (props) => {
   const allPlans = useMemo(() => {
     return data.allPlansYaml.edges
       .flatMap(({ node }) => [...node.part_time, ...node.full_time])
-      .filter((plan) => plan.academies.includes(session.location?.breathecode_location_slug))
+      .filter((plan) =>
+        plan.academies.includes(session.location?.breathecode_location_slug)
+      );
   }, [session]);
-  const academyHasJobGuarantee = allPlans.some(({ job_guarantee_price }) => job_guarantee_price);
+  const academyHasJobGuarantee = allPlans.some(
+    ({ job_guarantee_price }) => job_guarantee_price
+  );
 
   let location = null;
   if (session && session.location) {
@@ -46,7 +50,9 @@ const Financial = (props) => {
     <>
       <Div
         maxWidth="1280px"
-        margin_tablet={isCustomBarActive(session) ? "140px auto 0 auto" : "60px auto"}
+        margin_tablet={
+          isCustomBarActive(session) ? "140px auto 0 auto" : "60px auto"
+        }
         gap="25px"
         alignItems_tablet="center"
         flexDirection="column"
@@ -88,7 +94,7 @@ const Financial = (props) => {
             padding_xxs="0 .5rem"
             padding_xs="0 .85rem"
             onClick={() => {
-              navigate('#prices_and_payment');
+              navigate("#prices_and_payment");
             }}
           >
             {header.button}
@@ -157,7 +163,7 @@ const Financial = (props) => {
               right_tablet="0%"
               width="20px"
               onClick={onClick}
-              style={{ height: '20px' }}
+              style={{ height: "20px" }}
             >
               <Icon width="100%" height="100%" icon="arrow-right" />
             </Button>
@@ -168,15 +174,25 @@ const Financial = (props) => {
             content: yml.who_is_hiring.paragraph,
           }}
           customSettings={{
-            dotsClass: 'slick-dots-staff',
+            dotsClass: "slick-dots-staff",
             slidesToShow: 5,
             infinite: true,
-            slidesToScroll: 5
+            slidesToScroll: 5,
           }}
         >
           {yml.who_is_hiring.images.map((image) => (
-            <Div border="1px solid #C4C4C4" key={image} width="240px !important" height="240px">
-              <Div height="100%" display="flex" flexDirection="column" justifyContent="center">
+            <Div
+              border="1px solid #C4C4C4"
+              key={image}
+              width="240px !important"
+              height="240px"
+            >
+              <Div
+                height="100%"
+                display="flex"
+                flexDirection="column"
+                justifyContent="center"
+              >
                 <Img
                   backgroundSize="contain"
                   src={image}
@@ -204,8 +220,8 @@ const Financial = (props) => {
       <WeTrust
         we_trust={yml.we_trust_section}
         background="none"
-        titleProps={{ textAlign: 'center' }}
-        paragraphProps={{ textAlign: 'center' }}
+        titleProps={{ textAlign: "center" }}
+        paragraphProps={{ textAlign: "center" }}
       />
       {academyHasJobGuarantee && (
         <TwoColumn
