@@ -186,11 +186,12 @@ const UpcomingDates = ({
   }, [session]);
   const buttonText = session?.location?.button.apply_button_text;
 
-  if (isLoading) return (
-    <Div margin="30px 0" justifyContent="center">
-      <Spinner />
-    </Div> 
-  );
+  if (isLoading)
+    return (
+      <Div margin="30px 0" justifyContent="center">
+        <Spinner />
+      </Div>
+    );
 
   return (
     <GridContainer
@@ -625,7 +626,8 @@ const UpcomingDates = ({
           </>
         )}
         {Array.isArray(data.cohorts.filtered) &&
-          data.cohorts.filtered.length > 0 && showMoreRedirect && (
+          data.cohorts.filtered.length > 0 &&
+          showMoreRedirect && (
             <Link to={content.footer.button_link}>
               <Paragraph margin="20px 0" color={Colors.blue}>
                 {content.footer.button_text}

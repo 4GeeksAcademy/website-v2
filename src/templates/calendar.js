@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext } from "react";
 import { Header, Div, GridContainer } from "../components/Sections";
 import { H3, H4, Paragraph } from "../components/Heading";
 import { Colors, Button, Img, Anchor } from "../components/Styling";
-import UpcomingDates from '../components/UpcomingDates'
+import UpcomingDates from "../components/UpcomingDates";
 import { getEvents } from "../actions";
 import BaseRender from "./_baseLayout";
 import dayjs from "dayjs";
