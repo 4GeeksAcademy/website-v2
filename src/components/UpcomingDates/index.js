@@ -124,9 +124,13 @@ const UpcomingDates = ({
 
       const cohorts = response?.results || [];
       cohorts.forEach((cohort) => {
-        const syllabus = syllabusAlias.find((syll) => syll.default_course === defaultCourse) ||
-          syllabusAlias
-            .find((syll) => cohort.syllabus_version.slug.toLowerCase().includes(syll.default_course))
+        const syllabus =
+          syllabusAlias.find((syll) => syll.default_course === defaultCourse) ||
+          syllabusAlias.find((syll) =>
+            cohort.syllabus_version.slug
+              .toLowerCase()
+              .includes(syll.default_course)
+          );
 
         if (syllabus) {
           cohort.syllabus_version.name = syllabus.name;
@@ -244,9 +248,7 @@ const UpcomingDates = ({
                 }}
                 options={data?.cohorts?.catalog}
                 placeholder={
-                  academy
-                    ? `Campus: ${academy.label}`
-                    : content.placeholder
+                  academy ? `Campus: ${academy.label}` : content.placeholder
                 }
                 onChange={(opt) => {
                   setAcademy(opt);
@@ -270,7 +272,10 @@ const UpcomingDates = ({
         {Array.isArray(data.cohorts.filtered) &&
         data.cohorts.filtered.length > 0 ? (
           data.cohorts.filtered.map((cohort, i) => {
-            const loc = locations.find(({ node }) => node.breathecode_location_slug === cohort.academy.slug)
+            const loc = locations.find(
+              ({ node }) =>
+                node.breathecode_location_slug === cohort.academy.slug
+            );
             return (
               i < 4 && (
                 <Div
@@ -334,7 +339,11 @@ const UpcomingDates = ({
                     </H4>
 
                     <Link
-                      to={cohort.syllabus_version.courseSlug ? `/${lang}/coding-bootcamps/${cohort.syllabus_version.courseSlug}` : ""}
+                      to={
+                        cohort.syllabus_version.courseSlug
+                          ? `/${lang}/coding-bootcamps/${cohort.syllabus_version.courseSlug}`
+                          : ""
+                      }
                     >
                       <Paragraph textAlign="left" color={Colors.blue}>
                         {cohort.syllabus_version.name}
@@ -351,23 +360,30 @@ const UpcomingDates = ({
                       {content.info.location_label}
                     </H4>
                     <Div>
-                      <Link to={loc ? `/${lang}/coding-campus/${loc.node.meta_info.slug}` : ''}>
+                      <Link
+                        to={
+                          loc
+                            ? `/${lang}/coding-campus/${loc.node.meta_info.slug}`
+                            : ""
+                        }
+                      >
                         <Paragraph textAlign="left" color={Colors.blue}>
                           {cohort.academy.city.name}
                         </Paragraph>
                       </Link>
 
-                      {cohort.academy.slug !== "online" && cohort.academy.city.name !== 'Remote' && (
-                        <Paragraph textAlign="left" margin="0 0 0 3px">
-                          {content.conector}{" "}
-                          <Link
-                            color={Colors.blue}
-                            to={content.online_bootcamp}
-                          >
-                            {content.remote}
-                          </Link>
-                        </Paragraph>
-                      )}
+                      {cohort.academy.slug !== "online" &&
+                        cohort.academy.city.name !== "Remote" && (
+                          <Paragraph textAlign="left" margin="0 0 0 3px">
+                            {content.conector}{" "}
+                            <Link
+                              color={Colors.blue}
+                              to={content.online_bootcamp}
+                            >
+                              {content.remote}
+                            </Link>
+                          </Paragraph>
+                        )}
                     </Div>
                   </Div>
 
@@ -395,7 +411,13 @@ const UpcomingDates = ({
                         {content.info.location_label}
                       </H4>
                       <Div>
-                        <Link to={loc ? `/${lang}/coding-campus/${loc.node.meta_info.slug}` : ''}>
+                        <Link
+                          to={
+                            loc
+                              ? `/${lang}/coding-campus/${loc.node.meta_info.slug}`
+                              : ""
+                          }
+                        >
                           <Paragraph textAlign="left" color={Colors.blue}>
                             {cohort.academy.city.name}
                           </Paragraph>
