@@ -2,23 +2,23 @@ full_time:
   - slug: 'usa-clark-scholarship-ft'
     academies: ['downtown-miami', 'orlando', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa']
     recomended: true
-    scholarship: "Scholarship"
-    payment_time: "Pay today"
+    scholarship: "Beca"
+    payment_time: "Pagar hoy"
     price: "$4999"
     bullets: 
-      - "You're saving $4000 USD "
-      - "9% of your salary until paid in full, only if you get a job in tech."
+      - "Ahorras $4000 USD"
+      - "9% de tu salario hasta que se pague en su totalidad, solo si consigues un trabajo en tecnología."
     icons: 
       - "/images/landing/uwm_pantone_2021_2.png"
   - slug: 'usa-financed-ft'
     academies: ['downtown-miami', 'orlando', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa']
     recomended: false
-    scholarship: "Financed"
-    payment_time: "24 months payment"
+    scholarship: "Financiado"
+    payment_time: "Pago en 24 meses"
     price: "$310"
     bullets: 
-      - "With $400 p/ week living stipends"
-      - "9% of your salary until paid in full, only if you get a job in tech."
+      - "Con $400 p/ semana de estipendios de vida"
+      - "9% de tu salario hasta que se pague en su totalidad, solo si consigues un trabajo en tecnología."
     icons: 
       - "/images/ascent_logo.jpg"
       - "/images/climb-logo.png"
@@ -26,13 +26,13 @@ full_time:
   - slug: 'usa-isa-ft'
     academies: ['downtown-miami', 'orlando', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa']
     recomended: false
-    scholarship: "Income Share Agreement"
-    payment_time: "Pay after you get a job"
+    scholarship: "Acuerdo de Participación en Ingresos"
+    payment_time: "Pagar después de conseguir un trabajo"
     job_guarantee_price: "USD $4000"
     price: "$0"
     bullets: 
-      - "With $400 p/ week living stipends"
-      - "9% of your salary until paid in full, only if you get a job in tech."
+      - "Con $400 p/ semana de estipendios de vida"
+      - "9% de tu salario hasta que se pague en su totalidad, solo si consigues un trabajo en tecnología."
     icons: 
       - "/images/ascent_logo.jpg"
       - "/images/climb-logo.png"
@@ -40,113 +40,116 @@ full_time:
   - slug: 'usa-upfront-ft'
     academies: ['downtown-miami', 'orlando', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa']
     recomended: false
-    scholarship: "Full Payment"
-    payment_time: "Pay today"
+    scholarship: "Pago Completo"
+    payment_time: "Pagar hoy"
     price: "$8099"
+    original_price: "$13498"
     bullets: 
-      - "You're saving $1000 USD"
+      - "Ahorras ~$5399 USD"
 
   - slug: 'usa-fs-ft'
     academies: ['downtown-miami']
     recomended: false
-    scholarship: "Full Scholarship"
-    payment_time: "If you live or work in Miami"
+    scholarship: "Beca Completa"
+    payment_time: "Si vives o trabajas en Miami"
     price: "$0"
     bullets:
-      - "Focus on your career and not how to afford your education"
-      - "8.5% of your salary until paid in full (1.5x revenue cap), only if you get a job in tech."
+      - "Enfócate en tu carrera y no en cómo pagar tu educación"
+      - "8.5% de tu salario hasta que se pague en su totalidad (límite de ingresos 1.5x), solo si consigues un trabajo en tecnología."
     icons: 
       - ""        
 
   - slug: 'spain-scholarships-fs-ft'
-    academies: ['barcelona-spain','madrid-spain', 'malaga-spain', 'valencia-spain']
-    recomended: true
+    academies: ['barcelona-spain', 'madrid-spain', 'malaga-spain', 'valencia-spain']
+    recommended: true
     scholarship: "Becas disponibles"
     payment_time: ""
     price: "Desde 150 € al mes"
     bullets:
-      - "Financiación a tu medida, con o sin intereses, desde 4 hasta 48 meses"
-      - "Becas disponibles de hasta 1.850 €. Desde 4.950 € en vez de 6.800 €. ¡BECAS SUJETAS A DISPONIBILIDAD!"     
+      - "Financiación a tu medida, con o sin intereses, desde 4 hasta 48 meses."
+      - "Becas disponibles de hasta 1.850 €. Desde 4.950 € en vez de 6.800 €. ¡BECAS SUJETAS A DISPONIBILIDAD!"
     icons: 
       - "/images/zank.png"
       - "/images/sequra.png"
       - "/images/nemuru.png"
 
   - slug: 'spain-upfront-fs-ft'
-    academies: ['barcelona-spain','madrid-spain', 'malaga-spain', 'valencia-spain']
-    recomended: false
+    academies: ['barcelona-spain', 'madrid-spain', 'malaga-spain', 'valencia-spain']
+    recommended: false
     scholarship: "Paga de contado"
     payment_time: "Y obtén un descuento"
     price: "4.750 €*"
+    original_price: "7.916 €*"
     bullets:
-      - "Paga con transferencia bancaria, tarjeta de crédito o débito, Paypal, Bitcoin o Ethereum"
-      - "*Descuento de hasta 2.050 €. Desde 4.750 € en vez de 6.800 €. ¡Descuento sujeto a disponibilidad!"     
+      - "Paga con transferencia bancaria, tarjeta de crédito o débito, Paypal, Bitcoin o Ethereum."
+      - "*Descuento de hasta ~3.166 €. Desde 4.750 € en vez de 7916 €. ¡Descuento sujeto a disponibilidad!"
     icons: 
       - "/images/visa-mastercard.png"    
       - "/images/bitcoin_logo.png"  
       - "/images/ethereum.png"    
-                       
+
   - slug: 'spain-isa-fs-ft'
-    academies: ['barcelona-spain','madrid-spain', 'malaga-spain', 'valencia-spain']
-    recomended: true
+    academies: ['barcelona-spain', 'madrid-spain', 'malaga-spain', 'valencia-spain']
+    recommended: true
     scholarship: "Acuerdo de Ingresos Compartidos (ISA)"
     payment_time: "Paga sólo cuando trabajes"
     price: "0 €*"
     bullets: 
-      - "Solo tendrás que pagar cuando tus ingresos sean superiores a 16.000 € al año"
+      - "Solo tendrás que pagar cuando tus ingresos sean superiores a 16.000 € al año."
       - "*Paga una pequeña parte de tu salario cuando encuentres trabajo. ¡SIN INTERESES!"
     icons: 
       - "/images/bcas.png"   
 
   - slug: 'chile-contado-fs-ft'
     academies: ['santiago-chile']
-    recomended: true
+    recommended: true
     scholarship: "Paga al contado"
     payment_time: "Y obtén un descuento"
     price: "3.040.000* CLP"
+    original_price: "5.066.670* CLP"
     bullets:
-      - "*Precio final con descuento ya aplicado. El descuento es de hasta 760.000 CLP sobre el precio total: 3.800.000 CLP"
-      - "Paga con transferencia bancaria, tarjeta de crédito o débito"    
-      - "**Precio varía según modalidad escogida y membresías incluidas"
+      - "*Precio final con descuento ya aplicado. El descuento es de hasta ~2.026.000 CLP sobre el precio total: 5.066.670 CLP."
+      - "Paga con transferencia bancaria, tarjeta de crédito o débito."    
+      - "**Precio varía según modalidad escogida y membresías incluidas."
     icons: 
       - "/images/visa-mastercard.png"    
 
   - slug: 'chile-fs-ft'
     academies: ['santiago-chile']
-    recomended: false
+    recommended: false
     scholarship: "Cuotas desde"
     payment_time: ""
     price: "~184.000 CLP"
     bullets:
-      - "Financimiento a tu medida desde 6 hasta 18 meses"  
-      - "Se debe pagar un anticipo correspondiente al 20% del valor del programa" 
+      - "Financiamiento a tu medida desde 6 hasta 18 meses."  
+      - "Se debe pagar un anticipo correspondiente al 20% del valor del programa." 
     icons: 
-      - "/images//flevo-new.png"
-                       
+      - "/images/flevo-new.png"
+                        
   - slug: 'chile-isa-fs-ft'
     academies: ['santiago-chile']
-    recomended: false
+    recommended: false
     scholarship: "Acuerdo de Ingresos Compartidos (ISA)"
     payment_time: ""
     price: "0 CLP*"
     bullets: 
-      - "*Pagas el 16% de tu salario cuando consigas empleo hasta pagarlo todo"
-      - "Sólo si consigues trabajo en el área de tecnología" 
+      - "*Pagas el 16% de tu salario cuando consigas empleo hasta pagarlo todo."
+      - "Solo si consigues trabajo en el área de tecnología." 
     icons: 
-    - "/images/lumni.png"
+      - "/images/lumni.png"
 
   - slug: 'venezuela-scholarship-pt'
     academies: ['caracas-venezuela']
-    recomended: true
+    recommended: true
     scholarship: "Paga de Contado"
     payment_time: "Descuento especial por pago temprano"
     price: "$1300*"
+    original_price: "$2166*"
     bullets: 
-      - "Ahorra $500 de la matrícula"
-      - "Al menos 20 días antes del inicio del programa"
-      - "Paga con transferencia bancaria, tarjeta de crédito o débito"
-    # icons: 
-    #   - "/images/landing/uwm_pantone_2021_2.png"
+      - "Ahorra ~$866 de la matrícula."
+      - "Al menos 20 días antes del inicio del programa."
+      - "Paga con transferencia bancaria, tarjeta de crédito o débito."
+
 
 
 
@@ -209,9 +212,9 @@ part_time:
     scholarship: "Pago Completo"
     payment_time: "Paga hoy"
     price: "$8999"
-    original_price: "$9999"
+    original_price: "$14998"
     bullets: 
-      - "Ahorras $1000 USD"
+      - "Ahorras $5999 USD"
       - "Sólo si la Beca de Clark University no aplica (Desempleado o subempleado)"
 
   - slug: 'usa-isa-pt'
@@ -234,7 +237,7 @@ part_time:
     price: "Desde 150 € al mes"
     bullets:
       - "Financiación a tu medida, con o sin intereses, desde 4 hasta 48 meses"
-      - "Becas disponibles de hasta 1.850 €. Desde 4.950 € en vez de 6.800 €. ¡BECAS SUJETAS A DISPONIBILIDAD!"     
+      - "Becas disponibles de hasta 1.850 €. Desde 4.950 € en vez de 7.916.67 €. ¡BECAS SUJETAS A DISPONIBILIDAD!"     
     icons:  
       - "/images/zank.png"
       - "/images/sequra.png"
@@ -247,9 +250,10 @@ part_time:
     scholarship: "Paga de contado"
     payment_time: "Y obtén un descuento"
     price: "4.750 €*"
+    original_price: "7916 €*"
     bullets:
       - "Paga con transferencia bancaria, tarjeta de crédito o débito, Paypal, Bitcoin o Ethereum"
-      - "*Descuento de hasta 2.050 €. Desde 4.750 € en vez de 6.800 €. ¡Descuento sujeto a disponibilidad!"     
+      - "*Descuento de hasta 2.050 €. Desde 4.750 € en vez de 7.916.67 €. ¡Descuento sujeto a disponibilidad!"     
     icons: 
       - "/images/visa-mastercard.png"    
       - "/images/bitcoin_logo.png"  
@@ -275,7 +279,7 @@ part_time:
     price: "Desde 150 € al mes"
     bullets:
       - "Financiación a tu medida, con o sin intereses, desde 4 hasta 48 meses"
-      - "Becas disponibles de hasta 1.850 €. Desde 4.950 € en vez de 6.800 €. ¡BECAS SUJETAS A DISPONIBILIDAD!"     
+      - "Becas disponibles de hasta 1.850 €. Desde 4.950 € en vez de 7.916.67 €. ¡BECAS SUJETAS A DISPONIBILIDAD!"     
     icons: 
       - "/images/quotanda-logo.png"
 
@@ -285,9 +289,10 @@ part_time:
     scholarship: "Paga de contado"
     payment_time: "Y obtén un descuento"
     price: "4.750 €*"
+    original_price: "7916 €*"
     bullets:
       - "Paga con transferencia bancaria, tarjeta de crédito o débito, Paypal, Bitcoin o Ethereum"
-      - "*Descuento de hasta 2.050 €. Desde 4.750 € en vez de 6.800 €. ¡Descuento sujeto a disponibilidad!"     
+      - "*Descuento de hasta 2.050 €. Desde 4.750 € en vez de 7.916.67 €. ¡Descuento sujeto a disponibilidad!"     
     icons:  
       - "/images/visa-mastercard.png"    
       - "/images/bitcoin_logo.png"  
@@ -313,7 +318,7 @@ part_time:
     price: "Desde 150 € al mes"
     bullets:
       - "Financiación a tu medida, con o sin intereses, desde 4 hasta 48 meses"
-      - "Becas disponibles de hasta 1.850 €. Desde 4.950 € en vez de 6.800 €. ¡BECAS SUJETAS A DISPONIBILIDAD!"     
+      - "Becas disponibles de hasta 1.850 €. Desde 4.950 € en vez de 7.916.67 €. ¡BECAS SUJETAS A DISPONIBILIDAD!"     
     icons: 
       - "/images/quotanda-logo.png"
 
@@ -323,9 +328,10 @@ part_time:
     scholarship: "Paga de contado"
     payment_time: "Y obtén un descuento"
     price: "4.750 €*"
+    original_price: "7.916.67 €*"
     bullets:
       - "Paga con transferencia bancaria, tarjeta de crédito o débito, Paypal, Bitcoin o Ethereum"
-      - "*Descuento de hasta 2.050 €. Desde 4.750 € en vez de 6.800 €. ¡Descuento sujeto a disponibilidad!"     
+      - "*Descuento de hasta 2.050 €. Desde 4.750 € en vez de 7.916.67 €. ¡Descuento sujeto a disponibilidad!"     
     icons:   
       - "/images/visa-mastercard.png"    
       - "/images/bitcoin_logo.png"  
@@ -349,8 +355,9 @@ part_time:
     scholarship: "Paga al contado"
     payment_time: "Y obtén un descuento"
     price: "2.760.000 CLP*"
+    original_price: "4.600.000 CLP*"
     bullets:
-      - "*Precio final con descuento ya aplicado. El descuento es de hasta 690.000 CLP sobre el precio total: 3.450.000 CLP"
+      - "*Precio final con descuento ya aplicado. El descuento es de hasta 1.840.000 CLP sobre el precio total: 4.600.000 CLP"
       - "Paga con transferencia bancaria, tarjeta de crédito o débito"    
       - "Tendrás acceso a todo el programa y a todo el Sistema de Apoyo Laboral de 4Geeks"
     icons: 
@@ -374,6 +381,7 @@ part_time:
     scholarship: "Full Stack"
     payment_time: "Sin Apoyo Laboral"
     price: "2.700.000 CLP"
+    original_price: "4.500.000 CLP"
     bullets:
       - "Tendrás acceso total y para siempre al programa Full-Stack"    
       - "No incluye acceso a todo el Sistema de Apoyo Laboral de 4Geeks"
@@ -442,9 +450,9 @@ part_time:
     scholarship: "Paga de Contado"
     payment_time: "Descuento especial por pago temprano"
     price: "$1750*"
-    original_price: "$2000"
+    original_price: "$2916"
     bullets: 
-      - "Ahorra $250 de la matrícula"
+      - "Ahorra ~$1166 de la matrícula"
       - "Al menos 20 días antes del inicio del programa"
       - "Paga con transferencia bancaria, tarjeta de crédito o débito"
     # icons: 
@@ -496,11 +504,12 @@ part_time:
     recomended: false
     scholarship: "Paga en hoy o en 4 partes"
     payment_time: "Hasta 4 cuotas, sin interés"
-    price: "$2000"
+    price: "$2.000"
+    original_price: "$3.300"
     bullets: 
       - "Siempre hay un plan de pago disponible para que te unas a 4Geeks Academy"
       - "Si no encuentras aquí lo que esperas, por favor contáctanos y trataremos de encontrar nuevas formas de ayudarte"     
-      - "Pay early and save up to $500."
+      - "Pay early and save up to $1300."
       - "Paga con transferencia bancaria, tarjeta de crédito o débito"
     # icons:
     #   - "/images/laptp.jpg"

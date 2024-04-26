@@ -6,8 +6,8 @@ full_time:
     payment_time: "There is nothing like this"
     price: "$7999"
     bullets: 
-      - "You're saving $4000 USD"
-      - "Regular tuition is $11999. Avg tuition in the US is $15k."
+      - "You're saving ~$5331 USD"
+      - "Regular tuition is $13330. Avg tuition in the US is $15k."
       - "Remaining balance could be paid over time $100 p/mo"
     icons: 
       - "images/clarkuniversity.png"
@@ -55,8 +55,9 @@ full_time:
     scholarship: "Full Payment"
     payment_time: "Pay today"
     price: "$10999"
+    original_price: "$18331.67"
     bullets: 
-      - "You're saving $1000 USD"
+      - "You're saving $7332.67 USD"
 
   - slug: 'spain-scholarships-fs-ft'
     academies: ['barcelona-spain','madrid-spain', 'malaga-spain', 'valencia-spain']
@@ -78,9 +79,10 @@ full_time:
     scholarship: "Pay Upfront"
     payment_time: "Get a better price"
     price: "€4,550*"
+    original_price: "€7,583.33"
     bullets:
       - "Pay using your bank account, credit or debit card, Paypal, Bitcoin or Etherium."
-      - "*Discounts up to €2,150. Pay €4,550 instead of €6,700. Discount subject to availability."     
+      - "*Discounts up to €3,033.33 Pay €4,550 instead of €7,583.33. Discount subject to availability."     
     icons: 
       - "/images/visa-mastercard.png"    
       - "/images/bitcoin_logo.png"  
@@ -104,6 +106,7 @@ full_time:
     scholarship: "Pay Upfront"
     payment_time: "And get a discount"
     price: "3.800.000 CLP"
+    original_price: "6.333.333"
     bullets:
       - "Pay with bank transfer, credit or debit card"
       - "*Price without discount applied"  
@@ -141,8 +144,9 @@ full_time:
     scholarship: "Paga de Contado"
     payment_time: "Pay early and get 30% off."
     price: "$1300*"
+    original_price: "$2160"
     bullets: 
-      - "Pay early and save up to $500"
+      - "Pay early and save up to $830"
       - "Pay with debit, credit or wire transfer."
     # icons: 
     #   - "/images/landing/uwm_pantone_2021_2.png"
@@ -194,9 +198,10 @@ part_time:
     scholarship: "Pay upfront"
     payment_time: "And get a discount"
     price: "€4,750*"
+    original_price: "€7,916*"
     bullets:
       - "Pay using your bank account, credit or debit card, Paypal, Bitcoin or Etherium."
-      - "*Discounts up to €2,050. Pay €4,750 instead of €6,800. Discount subject to availability."     
+      - "*Discounts up to €3,166. Pay €4,750 instead of €7,916. Discount subject to availability."     
     icons: 
       - "/images/visa-mastercard.png"    
       - "/images/bitcoin_logo.png"  
@@ -232,9 +237,9 @@ part_time:
     scholarship: "Full Payment"
     payment_time: "Pay today"
     price: "$8999"
-    original_price: "$9999"
+    original_price: "$14,998"
     bullets: 
-      - "You're saving $1000 USD"
+      - "You're saving $5,999 USD"
       - "Only if the Clark University Scholarship doesn't apply (unemployed or underemployed)"
 
   - slug: 'spain-scholarships-fs-pt'
@@ -294,9 +299,10 @@ part_time:
     scholarship: "Pay upfront"
     payment_time: "And get a discount"
     price: "€4,750*"
+    original_price: "€7,916*"
     bullets:
       - "Pay using your bank account, credit or debit card, Paypal, Bitcoin or Etherium."
-      - "*Discounts up to €2,050. Pay €4,750 instead of €6,800. Discount subject to availability."     
+      - "*Discounts up to €3,166. Pay €4,750 instead of €7,916. Discount subject to availability."     
     icons: 
       - "/images/visa-mastercard.png"    
       - "/images/bitcoin_logo.png"  
@@ -333,9 +339,10 @@ part_time:
     scholarship: "Pay upfront"
     payment_time: "And get a discount"
     price: "€4,750*"
+    original_price: "€7,916*"
     bullets:
       - "Pay using your bank account, credit or debit card, Paypal, Bitcoin or Etherium."
-      - "*Discounts up to €2,050. Pay €4,750 instead of €6,800. Discount subject to availability."     
+      - "*Discounts up to €3,166. Pay €4,750 instead of €7,916. Discount subject to availability."      
     icons: 
       - "/images/visa-mastercard.png"    
       - "/images/bitcoin_logo.png"  
@@ -359,6 +366,7 @@ part_time:
     scholarship: "Pay Upfront"
     payment_time: "And get a discount"
     price: "3.450.000 CLP*"
+    original_price: "5.750.000 CLP*"
     bullets:
       - "Pay with bank transfer, credit or debit card"    
       - "*Price without discount applied"
@@ -384,6 +392,7 @@ part_time:
     scholarship: "Full Stack"
     payment_time: "Program Only"
     price: "2.700.000 CLP"
+    original_price: "4.500.000 CLP"
     bullets:
       - "You will have full and forever access to the Full-Stack program" 
       - "Does not include access to the entire 4Geeks Career Support System"   
@@ -424,6 +433,7 @@ part_time:
     scholarship: "Full-stack program + Career Support"
     payment_time: "Learn to code and get full support building your career"
     price: "USD $3000"
+    original_price: "USD $5000"
     bullets:
       - "We're fully committed to making our education accessible and offer multiple payment plans and financing options to hold up to our promise."
       - "You can adapt your learning path to your financial considerations. Choose between joining the Full-stack program only, adding our career support services, or enrolling with a Job Guarantee."     
@@ -450,6 +460,7 @@ part_time:
     scholarship: "Full-Stack Program Only"
     payment_time: "Focus on learning to code. Pay upfront."
     price: "$2000"
+    original_price: "$3330"
     bullets: 
       - "We’re fully committed to making our education accessible and offer multiple payment plans and financing options to hold up to our promise."
       - "You can adapt your learning path to your financial considerations. Choose between joining the Full-stack program only, adding our career support services, or enrolling with a Job Guarantee."     
@@ -464,7 +475,7 @@ part_time:
     scholarship: "Pay upfront"
     payment_time: "Pay early and $250 off"
     price: "$1750*"
-    original_price: "$2000"
+    original_price: "$2916"
     bullets: 
       - "There is always a payment plan available for you to join 4Geeks Academy"
       - "If you don't find here what you are expecting, please contact us and we will try to find new ways to help"     
