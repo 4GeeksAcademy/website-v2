@@ -1,5 +1,6 @@
 import React, { useContext, useMemo } from "react";
 import { graphql, navigate } from "gatsby";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { Button, Colors, Img } from "../components/Styling";
 import BaseRender from "./_baseLayout";
 import { SessionContext } from "../session";
@@ -101,14 +102,15 @@ const Financial = (props) => {
           </Button>
         </Div>
         <Div>
-          <Img
-            backgroundSize="contain"
-            src="/images/Group-6663.png"
-            width="100%"
-            height="300px"
-            width_tablet="400px"
-            height_tablet="400px"
-            width_md="600px"
+          <GatsbyImage
+            image={getImage(
+              header.image && header.image.childImageSharp.gatsbyImageData
+            )}
+            style={{
+              height: "100%",
+              backgroundSize: `cover`,
+            }}
+            alt={header.alt}
           />
         </Div>
       </Div>
@@ -135,7 +137,6 @@ const Financial = (props) => {
           content: ymlTwoColumn[0].content,
           button: ymlTwoColumn[0].button,
           boxes: ymlTwoColumn[0].boxes,
-          //padding_tablet: "20px",
           gap_tablet: "40px",
         }}
         proportions={ymlTwoColumn.proportions}
@@ -156,14 +157,14 @@ const Financial = (props) => {
               padding_tablet="0"
               position="absolute"
               zIndex="9"
-              bottom="0"
+              bottom="-40px"
               right="1%"
               right_md="0%"
               right_lg="0%"
               right_tablet="0%"
               width="20px"
               onClick={onClick}
-              style={{ height: "20px" }}
+              style={{ height: "25px" }}
             >
               <Icon width="100%" height="100%" icon="arrow-right" />
             </Button>
@@ -241,7 +242,6 @@ const Financial = (props) => {
   );
 };
 
-// REMOVED: payment_guide[...] ecosystem{...}
 export const query = graphql`
   query FinancialQuery($file_name: String!, $lang: String!) {
     allPageYaml(
@@ -431,26 +431,6 @@ export const query = graphql`
             position
             redirects
             visibility
-          }
-          header {
-            sub_heading
-            tagline
-            alt
-            image {
-              childImageSharp {
-                gatsbyImageData(
-                  layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                  width: 1200
-                  quality: 100
-                  placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
-                )
-              }
-            }
-          }
-          documents {
-            payment_guidebook {
-              url
-            }
           }
         }
       }
