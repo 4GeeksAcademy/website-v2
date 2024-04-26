@@ -228,6 +228,7 @@ const StyledImage = styled.div`
     right: ${(props) => props.right_md};
     top: ${(props) => props.top_md};
     bottom: ${(props) => props.bottom_md};
+    width: ${(props) => props.width_md};
   }
   @media ${Devices.lg} {
     display: ${(props) => props.display_lg};

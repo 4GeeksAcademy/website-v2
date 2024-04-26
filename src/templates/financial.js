@@ -1,31 +1,31 @@
-import React from "react";
-import { graphql } from "gatsby";
+import React, { useContext, useMemo } from "react";
+import { graphql, navigate } from "gatsby";
 import { Button, Colors, Img } from "../components/Styling";
 import BaseRender from "./_baseLayout";
 import { SessionContext } from "../session";
 import { isCustomBarActive } from "../actions";
 
 // components
-import FinancialFilter from "../components/FinancialFilter";
-import { Header } from "../components/Sections";
 import { Div } from "../components/Sections";
-import { H1, H2, Paragraph, H3, H4 } from "../components/Heading";
+import { H1, H2, Paragraph } from "../components/Heading";
 import Icon from "../components/Icon";
 import WeTrust from "../components/WeTrust";
+import Carousel from "../components/Carousel";
 import PricesAndPayment from "../components/PricesAndPayment";
 import Iconogram from "../components/Iconogram";
-import TwoColumn from "../components/TwoColumn/index.js";
-import Badges from "../components/Badges";
+import TwoColumn from "../components/TwoColumn";
 
 const Financial = (props) => {
-  const { session } = React.useContext(SessionContext);
+  const { session } = useContext(SessionContext);
   const { data, pageContext, yml } = props;
   const { seo_title, header } = yml;
-  console.log("yml");
-  console.log(yml);
-  const { button } = header;
-  console.log("button");
-  console.log(button);
+
+  const allPlans = useMemo(() => {
+    return data.allPlansYaml.edges
+      .flatMap(({ node }) => [...node.part_time, ...node.full_time])
+      .filter((plan) => plan.academies.includes(session.location?.breathecode_location_slug))
+  }, [session]);
+  const academyHasJobGuarantee = allPlans.some(({ job_guarantee_price }) => job_guarantee_price);
 
   let location = null;
   if (session && session.location) {
@@ -46,8 +46,13 @@ const Financial = (props) => {
     <>
       <Div
         maxWidth="1280px"
-        margin={isCustomBarActive(session) ? "140px auto 0 auto" : "60px auto"}
+        margin_tablet={isCustomBarActive(session) ? "140px auto 0 auto" : "60px auto"}
         gap="25px"
+        alignItems_tablet="center"
+        flexDirection="column"
+        flexDirection_tablet="row"
+        padding_lg="0"
+        padding="0 20px"
       >
         <Div display="block">
           <H1 type="h1" textAlign="left">
@@ -60,6 +65,7 @@ const Financial = (props) => {
             textAlign="left"
             fontSize="40px"
             fontSize_tablet="50px"
+            lineHeight="54px"
           >
             {header.title}
           </H2>
@@ -73,62 +79,33 @@ const Financial = (props) => {
             {header.paragraph}
           </Paragraph>
           <Button
-            outline
-            colorHoverText={button.hover_color || ""}
-            background={Colors[button.background] || button.background}
+            background="#0084FF"
             lineHeight="26px"
-            textColor={Colors.black}
             textTransform="none"
-            color={Colors[button.color] || button.color}
+            color="white"
+            margin="30px 0 0 0"
             fontSize="15px"
-            textAlign="left"
-            margin="2rem 0"
             padding_xxs="0 .5rem"
             padding_xs="0 .85rem"
-            //padding_tablet="32px .85rem 0 .85rem"
             onClick={() => {
-              if (button.path && button.path.indexOf("http") > -1)
-                window.open(transferQuerystrings(button.path, utm));
-              else navigate(button.path);
+              navigate('#prices_and_payment');
             }}
           >
-            {button.text}
+            {header.button}
           </Button>
         </Div>
         <Div>
           <Img
             backgroundSize="contain"
             src="/images/Group-6663.png"
-            width="600px"
-            height="400px"
+            width="100%"
+            height="300px"
+            width_tablet="400px"
+            height_tablet="400px"
+            width_md="600px"
           />
         </Div>
       </Div>
-      {/* <Header
-        margin={isCustomBarActive(session) ? "140px auto 0 auto" : "60px auto"}
-        seo_title={yml.seo_title}
-        title={yml.header.title}
-        paragraph={yml.header.paragraph}
-        textAlign="left"
-        padding_tablet="72px 0 40px 0"
-        padding="0px 20px"
-        position="relative"
-        fontSize_title="40px"
-        fontSizeTitle_tablet="60px"
-        fontFamily_title="Archivo-Black"
-        fontSize_paragraph="15px"
-        gridTemplateColumns_tablet="repeat(14, 1fr)"
-        maxWidth="1280px"
-        hideArrowKey
-        id="financials"
-        svg_image={
-          <Img
-            src="/images/Group-6663.png"
-            width="600px"
-            height="400px"
-          />
-        }
-      /> */}
 
       <Iconogram yml={yml.iconogram} />
       <PricesAndPayment
@@ -158,29 +135,60 @@ const Financial = (props) => {
         proportions={ymlTwoColumn.proportions}
         session={session}
       />
-
-      <Badges
-        link
-        id="partners"
-        lang={pageContext.lang}
-        //background={Colors.verylightGray2}
-        badges={yml.partners}
-        paragraph={yml.partners.paragraph}
-        //short_text
-        height_badge="80px"
-        padding="60px 0"
-        padding_tablet="68px 0"
-        margin_tablet="0 0 78px 0"
-        maxWidth="1280px"
-        //wrapped_images
-        style={{
-          height: "100px",
-          minWidth: "150px",
-          width: "min-content",
-          //margin: "0 20px",
-        }}
-      />
-
+      <Div
+        margin="20px 0"
+        background="#FBFCFC"
+        position="relative"
+        display="block"
+        padding="20px"
+      >
+        <Carousel
+          nextArrow={({ onClick }) => (
+            <Button
+              padding="0"
+              padding_xs="0"
+              padding_tablet="0"
+              position="absolute"
+              zIndex="9"
+              bottom="0"
+              right="1%"
+              right_md="0%"
+              right_lg="0%"
+              right_tablet="0%"
+              width="20px"
+              onClick={onClick}
+              style={{ height: '20px' }}
+            >
+              <Icon width="100%" height="100%" icon="arrow-right" />
+            </Button>
+          )}
+          maxWidth="1280px"
+          content={{
+            heading: yml.who_is_hiring.title,
+            content: yml.who_is_hiring.paragraph,
+          }}
+          customSettings={{
+            dotsClass: 'slick-dots-staff',
+            slidesToShow: 5,
+            infinite: true,
+            slidesToScroll: 5
+          }}
+        >
+          {yml.who_is_hiring.images.map((image) => (
+            <Div border="1px solid #C4C4C4" key={image} width="240px !important" height="240px">
+              <Div height="100%" display="flex" flexDirection="column" justifyContent="center">
+                <Img
+                  backgroundSize="contain"
+                  src={image}
+                  width="112px"
+                  height="112px"
+                  margin="auto"
+                />
+              </Div>
+            </Div>
+          ))}
+        </Carousel>
+      </Div>
       <TwoColumn
         left={{ image: ymlTwoColumn[1].image }}
         right={{
@@ -189,27 +197,30 @@ const Financial = (props) => {
           bullets: ymlTwoColumn[1].bullets,
           content: ymlTwoColumn[1].content,
           button: ymlTwoColumn[1].button,
-          //padding_tablet: "20px",
           gap_tablet: "40px",
         }}
         session={session}
       />
-
-      <WeTrust we_trust={yml.we_trust_section} />
-
-      <TwoColumn
-        right={{ image: ymlTwoColumn[2].image }}
-        left={{
-          heading: ymlTwoColumn[2].heading,
-          sub_heading: ymlTwoColumn[2].sub_heading,
-          bullets: ymlTwoColumn[2].bullets,
-          content: ymlTwoColumn[2].content,
-          button: ymlTwoColumn[2].button,
-          //padding_tablet: "20px",
-          gap_tablet: "40px",
-        }}
-        session={session}
+      <WeTrust
+        we_trust={yml.we_trust_section}
+        background="none"
+        titleProps={{ textAlign: 'center' }}
+        paragraphProps={{ textAlign: 'center' }}
       />
+      {academyHasJobGuarantee && (
+        <TwoColumn
+          right={{ image: ymlTwoColumn[2].image }}
+          left={{
+            heading: ymlTwoColumn[2].heading,
+            sub_heading: ymlTwoColumn[2].sub_heading,
+            bullets: ymlTwoColumn[2].bullets,
+            content: ymlTwoColumn[2].content,
+            button: ymlTwoColumn[2].button,
+            gap_tablet: "40px",
+          }}
+          session={session}
+        />
+      )}
     </>
   );
 };
@@ -233,6 +244,7 @@ export const query = graphql`
             title
             paragraph
             tagline
+            button
             image {
               childImageSharp {
                 gatsbyImageData(
@@ -255,9 +267,6 @@ export const query = graphql`
                   height: 300
                   placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                 )
-                # fixed(width: 300, height: 300) {
-                #   ...GatsbyImageSharpFixed
-                # }
               }
             }
             image_second {
@@ -290,26 +299,6 @@ export const query = graphql`
             }
           }
           syllabus_button_text
-          partners {
-            paragraph
-            link_to
-            link_text
-            badges {
-              name
-              url
-              image {
-                childImageSharp {
-                  gatsbyImageData(
-                    layout: FULL_WIDTH # --> CONSTRAINED || FIXED || FULL_WIDTH
-                    width: 1500
-                    quality: 100
-                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
-                  )
-                }
-              }
-              alt
-            }
-          }
           we_trust_section {
             title
             text
@@ -356,6 +345,11 @@ export const query = graphql`
               hover_color
             }
           }
+          who_is_hiring {
+            title
+            paragraph
+            images
+          }
           two_column {
             image {
               style
@@ -367,6 +361,7 @@ export const query = graphql`
               font_size
             }
             sub_heading {
+              style
               text
               font_size
             }
@@ -394,17 +389,6 @@ export const query = graphql`
               title
               text
             }
-          }
-        }
-      }
-    }
-    allCredentialsYaml(filter: { fields: { lang: { eq: $lang } } }) {
-      edges {
-        node {
-          credentials {
-            title
-            icon
-            value
           }
         }
       }
@@ -455,78 +439,25 @@ export const query = graphql`
         }
       }
     }
-    allPartnerYaml(filter: { fields: { lang: { eq: $lang } } }) {
+    allPlansYaml(filter: { fields: { lang: { eq: $lang } } }) {
       edges {
         node {
-          partners {
-            images {
-              name
-              link
-              follow
-              image {
-                childImageSharp {
-                  gatsbyImageData(
-                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                    width: 100
-                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
-                  )
-                }
-              }
-              featured
-            }
-            tagline
-            sub_heading
+          full_time {
+            slug
+            academies
+            scholarship
+            payment_time
+            price
+            job_guarantee_price
           }
-          coding {
-            images {
-              name
-              image {
-                childImageSharp {
-                  gatsbyImageData(
-                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                    width: 100
-                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
-                  )
-                }
-              }
-              featured
-            }
-            tagline
-            sub_heading
-          }
-          influencers {
-            images {
-              name
-              image {
-                childImageSharp {
-                  gatsbyImageData(
-                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                    width: 100
-                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
-                  )
-                }
-              }
-              featured
-            }
-            tagline
-            sub_heading
-          }
-          financials {
-            images {
-              name
-              image {
-                childImageSharp {
-                  gatsbyImageData(
-                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                    width: 200
-                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
-                  )
-                }
-              }
-              featured
-            }
-            tagline
-            sub_heading
+          part_time {
+            slug
+            academies
+            scholarship
+            payment_time
+            price
+            original_price
+            job_guarantee_price
           }
         }
       }

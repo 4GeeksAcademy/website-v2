@@ -14,10 +14,9 @@ header:
   paragraph: Financia tu futuro con diversas opciones de financiación educativa, desde becas hasta métodos de pago inclusivos. Explore nuestra plataforma para encontrar soluciones de financiación inclusivas adaptadas a su trayectoria académica.
   tagline: CELEBRA EL MEJOR PRECIO DE LA CIUDAD
   sub_heading: Nunca dejamos de trabajar para construir un programa verdaderamente 'premium', pero asequible. Nuestra filosofía se basa en hacer que la educación en programación esté disponible para todas las personas.
-  image: "../../../static/images/bg/pricing-bg.jpg"
+  image: "../../../static/images/images/Group-6663.png"
   alt: "financing"
-  button:
-    text: Ver planes y precios
+  button: Ver planes y precios
 
 ## FIRST SECTION AFTER THE BANNER
 intro:
@@ -92,6 +91,18 @@ iconogram:
     background: ""
     hover_color: ""
 
+who_is_hiring:
+  title: ¿Quién esta contratando a nuestros estudiantes?
+  paragraph: ¡No te pierdas a los grandiosos aliados de 4GeeksAcademy! Aquí hay algunos de ellos.
+  images:
+    - '/images/allies/miamitech-works-logo.png'
+    - '/images/allies/utec.png'
+    - '/images/allies/clark-uni-rounded-logo.png'
+    - '/images/allies/cinde.png'
+    - '/images/allies/idb.png'
+    - '/images/partner/agilia.png'
+    - '/images/partner/facebook-2.png'
+
 two_column:
   - image:
       style: '{ "backgroundSize": "contain" }'
@@ -129,7 +140,7 @@ two_column:
 
   - image:
       style: '{ "backgroundSize": "contain" }'
-      src: /images/landing/20-million-column.png
+      src: /images/landing/20-million-column-4geeks.png
     heading:
       text: El 62% de los solicitantes de bootcamps son rechazados por razones financieras.
       font_size:
@@ -154,15 +165,16 @@ two_column:
     button:
       text: ÚNETE AL PROGRAMA
       color: white
-      background: black
+      background: "#0084FF"
       hover_color: white
       path: "#prices_and_payment"
 
   - image:
       style: '{ "backgroundSize": "contain" }'
-      src: "/images/woman-glasses-laptop.png"
+      src: "/images/pretty-woman-in-a-computer.png"
     heading:
-      text: "Compromiso de garantía de empleo"
+      style: '{ "fontWeight": 400 }'
+      text: "¿Por qué ofrecemos garantía de empleo?"
       font_size:
         - 38px
         - 38px
@@ -170,33 +182,33 @@ two_column:
         - 21px
         - 21px
     sub_heading:
-      text: "Nuestro Programa de Garantía de Empleo consta de 3 etapas que son necesarias para completar como parte de su proceso. ¡Son tres bootcamps en uno!"
+      style: '{ "color": "#4D4D5C", "fontWeight": 400 }'
+      text: "Estamos desafiando el modelo educativo tradicional. No se trata sólo de enseñar las habilidades relevantes; se trata de las oportunidades que crearemos para su carrera. Juntos"
       font_size:
-        - 24px
-        - 24px
-        - 24px
+        - 16px
+        - 16px
+        - 16px
         - 16px
         - 16px
     bullets:
       item_style: ""
       items:
-        - heading: "Conviértete en Desarrollador de Software."
-          text: ""
+        - heading: ""
+          text: "Confiamos en la eficacia del programa"
           icon: "check" #string with icon for example ['check', 'cicle', etc]
-        - heading: "Prepárate para tu carrera profesional."
-          text: ""
+        - heading: ""
+          text: "Confiamos en la industria"
           icon: "check" #string with icon for example ['check', 'cicle', etc]
-        - heading: "¡Consigue un trabajo!."
-          text: ""
+        - heading: ""
+          text: "Confiamos en el proceso"
           icon: "check" #string with icon for example ['check', 'cicle', etc]
-    content:
-      font_size:
-        - 16px
-      text: Nuestro objetivo es ayudarte a conseguir un trabajo dentro de los 180 días posteriores a tu graduación. Debes completar y cumplir con los requisitos para optar por la devolución del dinero si la oportunidad laboral no ha llegado dentro del plazo.
+        - heading: ""
+          text: "Confiamos en ti"
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
     button:
         text: "APLICAR"
         color: "white"
-        background: "black"
+        background: "#0084FF"
         hover_color: "white"
         path: "/es/aplica"
 
@@ -227,12 +239,9 @@ partners:
   link_to: "/us/partners"
 
 we_trust_section:
-  title: ¿Por qué deberías confiar en nosotros?
+  title: Los números que nos respaldan
   text: |
-    !Una garantía de trabajo sella nuestro compromiso con tu éxito! Con un historial comprobado de éxito, nuestro programa continuará empoderando a los futuros graduados.
-    <br>
-    <br>
-    Los números hablan por sí solos.
+    Este es un programa sostenible comprobado, funciona y seguirá funcionando.
   boxes:
     - icon: briefcase-2
       title: 82%
