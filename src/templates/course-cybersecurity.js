@@ -277,6 +277,7 @@ const Program = ({ data, pageContext, yml }) => {
         defaultCourse={defaultCourse}
         actionMessage={courseDetails.upcoming?.actionMessage}
         locations={data.allLocationYaml.edges}
+        showMoreRedirect
       />
 
       <PricesAndPayment

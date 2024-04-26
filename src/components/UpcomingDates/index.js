@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext } from "react";
 import { useStaticQuery, graphql, Link } from "gatsby";
 import { GridContainer, Div } from "../Sections";
 import { H2, H3, H4, Paragraph } from "../Heading";
-import { Colors, Button } from "../Styling";
+import { Colors, Button, Spinner } from "../Styling";
 import dayjs from "dayjs";
 import Select, { SelectRaw } from "../Select";
 import "dayjs/locale/de";
@@ -28,6 +28,7 @@ const UpcomingDates = ({
   message,
   defaultCourse,
   actionMessage,
+  showMoreRedirect,
 }) => {
   const dataQuery = useStaticQuery(graphql`
     {
@@ -87,8 +88,9 @@ const UpcomingDates = ({
     cohorts: { catalog: [], all: [], filtered: [] },
   });
   const [showForm, setShowForm] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const [academy, setAcademy] = useState(null);
-  const [filterType, setFilterType] = useState({
+  const [filterType] = useState({
     label: "Upcoming Courses and Events",
     value: "cohorts",
   });
@@ -113,38 +115,46 @@ const UpcomingDates = ({
 
   useEffect(() => {
     const getData = async () => {
-      const academySlug = session.academyAliasDictionary[location]
-        ? session.academyAliasDictionary[location]
-        : location;
-      const response = await getCohorts({
-        academy: academySlug,
-        limit: 10,
-        syllabus_slug_like: defaultCourse || undefined,
-      });
+      try {
+        const academySlug = session.academyAliasDictionary[location]
+          ? session.academyAliasDictionary[location]
+          : location;
+        const response = await getCohorts({
+          academy: academySlug,
+          limit: 10,
+          syllabus_slug_like: defaultCourse || undefined,
+        });
 
-      const cohorts = response?.results || [];
-      cohorts.forEach((cohort) => {
-        const syllabus =
-          syllabusAlias.find((syll) => syll.default_course === defaultCourse) ||
-          syllabusAlias.find((syll) =>
-            cohort.syllabus_version.slug
-              .toLowerCase()
-              .includes(syll.default_course)
-          );
+        const cohorts = response?.results || [];
+        cohorts.forEach((cohort) => {
+          const syllabus =
+            syllabusAlias.find(
+              (syll) => syll.default_course === defaultCourse
+            ) ||
+            syllabusAlias.find((syll) =>
+              cohort.syllabus_version.slug
+                .toLowerCase()
+                .includes(syll.default_course)
+            );
 
-        if (syllabus) {
-          cohort.syllabus_version.name = syllabus.name;
-          cohort.syllabus_version.courseSlug = syllabus.course_slug;
-        }
-      });
+          if (syllabus) {
+            cohort.syllabus_version.name = syllabus.name;
+            cohort.syllabus_version.courseSlug = syllabus.course_slug;
+          }
+        });
 
-      setData((oldData) => ({
-        cohorts: {
-          catalog: oldData.cohorts.catalog,
-          all: cohorts,
-          filtered: cohorts,
-        },
-      }));
+        setData((oldData) => ({
+          cohorts: {
+            catalog: oldData.cohorts.catalog,
+            all: cohorts,
+            filtered: cohorts,
+          },
+        }));
+        setIsLoading(false);
+      } catch (e) {
+        console.log(e);
+        setIsLoading(false);
+      }
     };
     if (session?.academyAliasDictionary) getData();
   }, [session]);
@@ -175,6 +185,12 @@ const UpcomingDates = ({
     }
   }, [session]);
   const buttonText = session?.location?.button.apply_button_text;
+
+  if (isLoading) return (
+    <Div margin="30px 0" justifyContent="center">
+      <Spinner />
+    </Div> 
+  );
 
   return (
     <GridContainer
@@ -576,7 +592,6 @@ const UpcomingDates = ({
                         errorMsg="Please specify a valid email"
                         required
                       />
-                      {/* <button type="submit">{formStatus.status === "loading" ? "Loading..." : "text"}</button> */}
                       <Button
                         height="40px"
                         background={Colors.blue}
@@ -610,7 +625,7 @@ const UpcomingDates = ({
           </>
         )}
         {Array.isArray(data.cohorts.filtered) &&
-          data.cohorts.filtered.length > 0 && (
+          data.cohorts.filtered.length > 0 && showMoreRedirect && (
             <Link to={content.footer.button_link}>
               <Paragraph margin="20px 0" color={Colors.blue}>
                 {content.footer.button_text}

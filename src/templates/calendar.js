@@ -2,140 +2,29 @@ import React, { useState, useEffect, useContext } from "react";
 import { Header, Div, GridContainer } from "../components/Sections";
 import { H3, H4, Paragraph } from "../components/Heading";
 import { Colors, Button, Img, Anchor } from "../components/Styling";
-// import Icon from '../components/Icon'
-import { SelectRaw } from "../components/Select";
-// import UpcomingDates from '../components/UpcomingDates'
-import { getCohorts, getEvents } from "../actions";
+import UpcomingDates from '../components/UpcomingDates'
+import { getEvents } from "../actions";
 import BaseRender from "./_baseLayout";
 import dayjs from "dayjs";
 import "dayjs/locale/de";
 import LazyLoad from "react-lazyload";
-import { Link, graphql } from "gatsby";
+import { graphql } from "gatsby";
 import { Circle } from "../components/BackgroundDrawing";
 import { SessionContext } from "../session";
-
-const info = {
-  us: {
-    "full-stack": "/us/coding-bootcamps/part-time-full-stack-developer",
-    "software-engineering": "/us/coding-bootcamps/software-engineer-bootcamp",
-    "machine-learning-pt-16w":
-      "/us/coding-bootcamps/machine-learning-engineering",
-    "full-stack-ft": "/us/coding-bootcamps/full-time-full-stack-developer",
-  },
-  es: {
-    "full-stack": "/es/coding-bootcamps/full-stack-part-time",
-    "software-engineering":
-      "/es/coding-bootcamps/ingenieria-de-software-programacion",
-    "machine-learning-pt-16w":
-      "/es/coding-bootcamps/curso-inteligencia-artificial",
-    "full-stack-ft": "/es/coding-bootcamps/full-stack-full-time",
-  },
-};
-const locations = {
-  us: {
-    "santiago-chile": "/us/coding-campus/coding-bootcamp-santiago",
-    "downtown-miami": "/us/coding-campus/coding-bootcamp-miami",
-    "madrid-spain": "/us/coding-campus/coding-bootcamp-madrid",
-    online: "/us/coding-campus/online-coding-bootcamp",
-    "caracas-venezuela": "/us/coding-campus/coding-bootcamp-caracas",
-    "costa-rica": "/us/coding-campus/coding-bootcamp-costa-rica",
-  },
-  es: {
-    "downtown-miami": "/es/coding-campus/bootcamp-programacion-miami",
-    "santiago-chile": "/es/coding-campus/bootcamp-programacion-santiago",
-    "madrid-spain": "/es/coding-campus/bootcamp-programacion-madrid",
-    online: "/es/coding-campus/online-bootcamp-programacion",
-    "caracas-venezuela": "/es/coding-campus/bootcamp-programacion-caracas",
-    "costa-rica": "/es/coding-campus/bootcamp-programacion-costa-rica",
-  },
-};
-const locationText = {
-  us: "or",
-  es: "u",
-};
-
-const dateText = {
-  us: "to",
-  es: "al",
-};
-
-let modality = {
-  full_time: "Full Stack Developer - Full Time",
-  part_time: "Full Stack Developer - Part Time",
-};
 
 const Calendar = (props) => {
   const { pageContext, yml, data } = props;
   const [limit, setLimit] = useState(true);
   const { session } = useContext(SessionContext);
-  const [backgroundSize, setBackgroundSize] = useState("100%");
   const [datas, setData] = useState({
     events: { catalog: [], all: [], filtered: [] },
-    cohorts: { catalog: [], all: [], filtered: [] },
   });
   let content = data.allPageYaml.edges[0].node;
-  const [academy, setAcademy] = useState(null);
-  const [filterType, setFilterType] = useState(
-    pageContext.lang == "us"
-      ? { label: "Upcoming Courses and Events", value: "cohorts" }
-      : { label: "Próximos Cursos y Eventos", value: "cohorts" }
-  );
-
-  const filterCohorts = (cohorts, location) => {
-    const _filtered = cohorts.filter((elm) => {
-      if (Array.isArray(location.cohort_exclude_regex)) {
-        if (
-          location.cohort_exclude_regex.some((regx) =>
-            RegExp(regx).test(elm.slug)
-          )
-        ) {
-          console.log(`removing ${elm.slug}`);
-          return false;
-        }
-      }
-      if (Array.isArray(location.cohort_include_regex)) {
-        console.log(
-          `Testing the following regex for ${elm.slug}`,
-          location.cohort_include_regex
-        );
-        if (
-          location.cohort_include_regex.some((regx) =>
-            RegExp(regx).test(elm.slug)
-          )
-        ) {
-          console.log(`adding ${elm.slug}`);
-          return true;
-        }
-      }
-
-      if (elm.academy.slug === location.value) return true;
-      return false;
-    });
-    return _filtered;
-  };
 
   useEffect(() => {
     const getData = async () => {
-      let cohorts = await getCohorts({ limit: 100 });
       let events = await getEvents();
-      let syllabus = [];
-      cohorts = cohorts?.results || [];
-      for (let i in cohorts) {
-        let name = cohorts[i].syllabus_version.name;
-        name === "Full-Stack Software Developer FT"
-          ? (name = modality["full_time"])
-          : name;
 
-        name === "Full-Stack Software Developer"
-          ? (name = modality["part_time"])
-          : name;
-
-        syllabus.push(name);
-      }
-
-      for (let zx in cohorts) {
-        cohorts[zx].syllabus_version.name = syllabus[zx];
-      }
       let _types = [];
       for (let i = 0; i < events.length; i++) {
         if (
@@ -148,21 +37,8 @@ const Calendar = (props) => {
           });
         }
       }
-      setData((oldData) => {
-        let defaultValue = oldData.cohorts.catalog.find((opt) =>
-          opt.value?.includes("miami")
-        );
-        setAcademy(defaultValue);
-        return {
-          events: { catalog: _types, all: events, filtered: events },
-          cohorts: {
-            catalog: oldData.cohorts.catalog,
-            all: cohorts,
-            filtered: defaultValue
-              ? filterCohorts(cohorts, defaultValue)
-              : cohorts,
-          },
-        };
+      setData({
+        events: { catalog: _types, all: events, filtered: events },
       });
     };
     getData();
@@ -171,17 +47,6 @@ const Calendar = (props) => {
     if (session && Array.isArray(session.locations)) {
       const _data = {
         ...datas,
-        cohorts: {
-          ...datas.cohorts,
-          catalog: [{ label: "All Locations", value: null }].concat(
-            session.locations.map((l) => ({
-              label: l.name,
-              value: l.breathecode_location_slug,
-              cohort_include_regex: l.meta_info.cohort_include_regex,
-              cohort_exclude_regex: l.meta_info.cohort_exclude_regex,
-            }))
-          ),
-        },
       };
       setData(_data);
     }
@@ -364,267 +229,15 @@ const Calendar = (props) => {
           justifyContent="center"
           alignItems="center"
           margin_tablet="0 0 50px 0"
-        ></Div>
+        />
       </Header>
 
-      <GridContainer
-        padding_tablet="0"
-        margin="65px 0 65px 0"
-        margin_tablet="65px 0 65px 0"
-      >
-        <Div flexDirection="column">
-          <Div
-            padding="0"
-            style={{ borderBottom: "1px solid black" }}
-            justifyContent_md="between"
-            flexDirection="column"
-            flexDirection_tablet="row"
-            alignItems_tablet="center"
-          >
-            <H3 type="h3" textAlign="left" padding="25px 0" width="300px">
-              {yml.cohorts.title}
-            </H3>
-            {/* <Button outline width="100%" width_md="314px" color={Colors.black} margin="19px 0 10px 0" textColor="white">APPLY NOW</Button> */}
-            <Div width="320px">
-              <SelectRaw
-                bgColor={Colors.white}
-                options={datas.cohorts.catalog.sort((a, b) => {
-                  if (a.label.includes("Rest")) return 2;
-                  if (a.label < b.label) {
-                    return -1;
-                  }
-                  if (a.label > b.label) {
-                    return 1;
-                  }
-                  return 0;
-                })}
-                placeholder={
-                  pageContext.lang == "us"
-                    ? "Select one academy"
-                    : "Escoge una academia"
-                }
-                value={academy}
-                onChange={(opt) => {
-                  setAcademy(opt);
-                  let filtered =
-                    opt.label !== "All Locations"
-                      ? filterCohorts(datas[filterType.value].all, opt)
-                      : cohorts;
-                  setData({
-                    ...datas,
-                    [filterType.value]: {
-                      ...datas[filterType.value],
-                      filtered,
-                    },
-                  });
-                }}
-              />
-            </Div>
-          </Div>
-          {Array.isArray(datas.cohorts.filtered) &&
-            datas.cohorts.filtered.map((m, i) => {
-              return (
-                i < 4 && (
-                  <Div
-                    key={i}
-                    flexDirection="column"
-                    flexDirection_tablet="row"
-                    style={{ borderBottom: "1px solid black" }}
-                    padding="30px 0"
-                    justifyContent="between"
-                  >
-                    <Div
-                      flexDirection_tablet="column"
-                      width_tablet="15%"
-                      alignItems="center"
-                      alignItems_tablet="start"
-                      margin="0 0 10px 0"
-                    >
-                      <H4
-                        textAlign="left"
-                        textTransform="uppercase"
-                        width="fit-content"
-                        margin="0 10px 0 0"
-                        fontWeight="700"
-                        lineHeight="22px"
-                      >
-                        {dayjs(m.kickoff_date)
-                          .locale(`${pageContext.lang === "us" ? "en" : "es"}`)
-                          .format("MMMM")}
-                      </H4>
-                      <Paragraph textAlign="left" fontWeight="700">{`
-                      ${
-                        pageContext.lang === "us"
-                          ? dayjs(m.kickoff_date).locale("en").format("MM/DD")
-                          : dayjs(m.kickoff_date).locale("es").format("DD/MM")
-                      } 
-                      ${dateText[pageContext.lang]}
-                      ${
-                        pageContext.lang === "us"
-                          ? dayjs(m.ending_date).locale("en").format("MM/DD")
-                          : dayjs(m.ending_date).locale("es").format("DD/MM")
-                      }
-                  `}</Paragraph>
-                    </Div>
-                    <Div
-                      flexDirection="column"
-                      width_tablet="calc(35% - 15%)"
-                      margin="0 0 20px 0"
-                    >
-                      <H4 textAlign="left" textTransform="uppercase">
-                        {content.cohorts.info.program_label}
-                      </H4>
-                      <Link
-                        to={
-                          info[pageContext.lang][m.syllabus_version.slug] || ""
-                        }
-                      >
-                        <Paragraph textAlign="left" color={Colors.blue}>
-                          {m.syllabus_version.name}
-                        </Paragraph>
-                      </Link>
-                    </Div>
-                    <Div
-                      flexDirection="column"
-                      display="none"
-                      display_tablet="flex"
-                      minWidth="120px"
-                    >
-                      <H4 textAlign="left" textTransform="uppercase">
-                        {content.cohorts.info.location_label}
-                      </H4>
-                      <Div>
-                        <Link
-                          to={locations[pageContext.lang][m.academy.slug] || ""}
-                        >
-                          <Paragraph textAlign="left" color={Colors.blue}>
-                            {m.academy.city.name}{" "}
-                            {m.academy.slug === "online" && "(online)"}
-                          </Paragraph>
-                        </Link>
-                        {m.academy.slug !== "online" &&
-                          m.remote_available !== false && (
-                            <Paragraph textAlign="left" margin="0 0 0 3px">
-                              {locationText[pageContext.lang]}{" "}
-                              <Link
-                                color={Colors.blue}
-                                to={locations[pageContext.lang]["online"] || ""}
-                              >{`Online`}</Link>
-                            </Paragraph>
-                          )}
-                      </Div>
-                    </Div>
-                    <Div
-                      flexDirection="column"
-                      display="none"
-                      display_tablet="flex"
-                    >
-                      <H4 textAlign="left" textTransform="uppercase">
-                        {content.cohorts.info.duration_label}
-                      </H4>
-                      <Paragraph textAlign="left">
-                        {m.syllabus_version.name === modality["full_time"]
-                          ? content.cohorts.info.duration_full_time
-                          : m.syllabus_version.name === modality["part_time"]
-                          ? content.cohorts.info.duration_part_time
-                          : content.cohorts.info.duration_weeks}
-                      </Paragraph>
-                    </Div>
-                    <Div
-                      display="flex"
-                      display_tablet="none"
-                      justifyContent="between"
-                      margin="0 0 20px 0"
-                    >
-                      <Div flexDirection="column" width="50%">
-                        <H4 textAlign="left" textTransform="uppercase">
-                          {content.cohorts.info.location_label}
-                        </H4>
-                        <Div>
-                          <Link to="">
-                            <Paragraph textAlign="left" color={Colors.blue}>
-                              {m.academy.city.name}
-                            </Paragraph>
-                          </Link>
-                          {m.academy.slug != "online" &&
-                            m.remote_available !== false && (
-                              <Link
-                                to={locations[pageContext.lang]["online"] || ""}
-                              >
-                                <Paragraph
-                                  textAlign="left"
-                                  margin="0 0 0 3px"
-                                  color={Colors.blue}
-                                >{`${
-                                  locationText[pageContext.lang]
-                                } Online`}</Paragraph>
-                              </Link>
-                            )}
-                        </Div>
-                      </Div>
-                      <Div flexDirection="column" width="50%">
-                        <H4 textAlign="left" textTransform="uppercase">
-                          {content.cohorts.info.duration_label}
-                        </H4>
-                        <Paragraph textAlign="left">
-                          {m.syllabus_version.name === modality["full_time"]
-                            ? content.cohorts.info.duration_full_time
-                            : m.syllabus_version.name === modality["part_time"]
-                            ? content.cohorts.info.duration_part_time
-                            : content.cohorts.info.duration_weeks}
-                        </Paragraph>
-                      </Div>
-                    </Div>
-                    <Div flexDirection="column">
-                      <Link to={content.cohorts.info.button_link}>
-                        <Button
-                          variant="full"
-                          width="fit-content"
-                          color={Colors.black}
-                          margin="10px 0"
-                          textColor="white"
-                        >
-                          {session?.location?.button.apply_button_text ||
-                            content.cohorts.info.button_text}
-                        </Button>
-                      </Link>
-                    </Div>
-                  </Div>
-                )
-              );
-            })}
-        </Div>
-      </GridContainer>
-      {limit && datas.events.filtered.length > 6 && (
-        <GridContainer
-          columns_tablet="1"
-          margin="30px 0"
-          margin_tablet="48px 0 38px 0"
-        >
-          <Paragraph
-            color={Colors.blue}
-            cursor="pointer"
-            onClick={() => setLimit(!limit)}
-          >
-            {content.show_more}
-          </Paragraph>
-        </GridContainer>
-      )}
-      {!limit && datas.events.filtered.length > 6 && (
-        <GridContainer
-          columns_tablet="1"
-          margin="30px 0"
-          margin_tablet="48px 0 38px 0"
-        >
-          <Paragraph
-            color={Colors.blue}
-            cursor="pointer"
-            onClick={() => setLimit(!limit)}
-          >
-            {content.show_less}
-          </Paragraph>
-        </GridContainer>
-      )}
+      <UpcomingDates
+        id="upcoming_dates"
+        lang={pageContext.lang}
+        message={yml.cohorts.title}
+        locations={data.allLocationYaml.edges}
+      />
 
       {yml.events.title && (
         <GridContainer
@@ -714,6 +327,36 @@ const Calendar = (props) => {
           })}
         </>
       </GridContainer>
+      {limit && datas.events.filtered.length > 6 && (
+        <GridContainer
+          columns_tablet="1"
+          margin="30px 0"
+          margin_tablet="48px 0 38px 0"
+        >
+          <Paragraph
+            color={Colors.blue}
+            cursor="pointer"
+            onClick={() => setLimit(!limit)}
+          >
+            {content.show_more}
+          </Paragraph>
+        </GridContainer>
+      )}
+      {!limit && datas.events.filtered.length > 6 && (
+        <GridContainer
+          columns_tablet="1"
+          margin="30px 0"
+          margin_tablet="48px 0 38px 0"
+        >
+          <Paragraph
+            color={Colors.blue}
+            cursor="pointer"
+            onClick={() => setLimit(!limit)}
+          >
+            {content.show_less}
+          </Paragraph>
+        </GridContainer>
+      )}
     </>
   );
 };
@@ -749,6 +392,8 @@ export const query = graphql`
             paragraph
           }
           cohorts {
+            no_dates_message
+            actionMessage
             title
             paragraph
             button {
@@ -769,6 +414,69 @@ export const query = graphql`
               button_text_close
               button_text_open
             }
+          }
+        }
+      }
+    }
+    allLocationYaml(
+      filter: {
+        fields: { lang: { eq: $lang } }
+        meta_info: { visibility: { nin: ["hidden", "unlisted"] } }
+      }
+    ) {
+      edges {
+        node {
+          id
+          city
+          country
+          name
+          active_campaign_location_slug
+          breathecode_location_slug
+          fields {
+            lang
+            file_name
+          }
+          button {
+            apply_button_text
+          }
+          meta_info {
+            slug
+            description
+            title
+            image
+            position
+            visibility
+            keywords
+            redirects
+            region
+          }
+          header {
+            sub_heading
+            tagline
+            alt
+            image {
+              childImageSharp {
+                gatsbyImageData(
+                  layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                  width: 800
+                  placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                )
+              }
+            }
+          }
+          chart_section {
+            data {
+              percentage
+              color
+              description
+            }
+          }
+          button {
+            apply_button_link
+            apply_button_text
+            cohort_more_details_text
+            syllabus_button_text
+            syllabus_submit_text
           }
         }
       }
