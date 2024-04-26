@@ -1,8 +1,38 @@
 title: "Próximas Fechas"
 paragraph: ""
+conector: o
+to: al
+remote: Remoto
+placeholder: Escoge una academia
 button:
   text: Buscar por sede o modalidad
   top_label: Sede / Modalidad
+
+syllabus_alias:
+  # EVERYTHING must be in lower case except for the name
+  - default_course: full-stack
+    course_slug: desarrollador-full-stack
+    name: Desarrollador de Software Full Stack
+
+  - default_course: machine-learning
+    course_slug: curso-datascience-machine-learning
+    name: Datascience
+
+  - default_course: cyber-security
+    course_slug: curso-ciberseguridad
+    name: Ciberseguridad
+
+  - default_course: applied-ai
+    course_slug: curso-inteligencia-artificial
+    name: IA Aplicada
+
+email_form_content:
+  heading: Indicanos tu mail para avisarte cuando haya una fecha disponible para este campus
+  button_text: Avisenme cuando haya una fecha
+  successful_text: ¡Listo! Te avisaremos cuando haya una fecha disponible para este campus
+
+online_bootcamp: "/es/coding-campus/online-bootcamp-programacion"
+
 info:
   date:
   program_label: programas
