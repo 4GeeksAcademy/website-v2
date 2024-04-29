@@ -3,9 +3,9 @@ import React from "react";
 export default (props) => (
   <svg
     style={props.style}
-    width="75"
-    height="75"
-    viewBox="0 0 164 164"
+    width="70"
+    height="70"
+    viewBox="0 0 180 180"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
