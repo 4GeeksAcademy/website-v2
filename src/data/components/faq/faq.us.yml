@@ -5,7 +5,7 @@ faq:
     slug: "4geeks"
     questions:
       - question: "Why 4Geeks Academy?"
-        templates: ["faq"]
+        templates: ["faq"] # To show this question inside the faqs page just write "template: ["faq"]"
         priority: 0
         answer: |-
             "We offer several advantages that make us stand out from other coding bootcamps: Unlimited mentorships (for life), coding-centric approach (we don't teach nothing else), lifetime career support. You can compare better by visiting https://4geeksacademy.com/us/geeks-vs-others"

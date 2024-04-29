@@ -5,21 +5,21 @@ faq:
     slug: "4geeks"
     questions:
       - question: "¿Por qué 4Geeks Academy?"
-        templates: ["faq"]
+        templates: ["faq"] # "template: ["faq"]" es para mostrar esta pregunta en la pagina de preguntas frecuentes
         priority: 0
         answer: |-
           ¿Qué nos diferencia de otros bootcamps de programación? Ofrecemos varias ventajas que nos destacan: Mentorías ilimitadas (de por vida), enfoque centrado exclusivamente en la codificación y apoyo profesional de por vida. Puedes comparar nuestra academia visitando <a href="/es/geeks-vs-otros">Comparar 4Geeks vs otros</a><br>
-          Breathe Coding" (respirar código). Ese es nuestro lema, porque entendemos que, para convertirse en desarrollador, uno tiene que ser parte de la cultura de la programación. Hemos hecho que el aprendizaje sea divertido y hemos dominado el arte de mostrar cómo las habilidades de programación pueden encajar en la vida cotidiana.
+          Breathe Coding" (respirar código). Ese es nuestro lema, porque entendemos que, para convertirse en desarrollador, uno tiene que ser parte de la cultura de la programación. Hemos hecho que el <a class="faq-link" href="/es/blog-en-espanol/aprender-a-programar">aprender a programar</a> sea divertido y hemos dominado el arte de mostrar cómo las habilidades de programación pueden encajar en la vida cotidiana.
       - question: "¿4Geeks es una institución académica certificada?"
         templates: ["faq"]
         priority: 0
         answer: |-
-          ¡Por supuesto! 4Geeks Academy es una institución con licencia de la Comisión de Educación Independiente del Departamento de Educación de Florida. Esto garantiza que nuestros programas cumplan con rigurosos estándares educativos y te proporcionen una credencial valiosa al completarlos.
+          ¡Por supuesto! 4Geeks Academy es una institución con licencia de la Comisión de Educación Independiente del Departamento de Educación de Florida <a class="faq-link" href="/es/resultados">ver más</a>. Esto garantiza que nuestros programas cumplan con rigurosos estándares educativos y te proporcionen una credencial valiosa al completarlos.
       - question: "¿Por qué nuestros campus?"
         templates: ["faq"]
         priority: 0
         answer: |-
-          Cualquiera de nuestros campus será una excelente opción, ya sea en Miami, Madrid, Santiago de Chile, Caracas o San José de Costa Rica. En cada una de nuestras ciudades, disfrutarás de una experiencia excelente en un ambiente completamente preparado para tu formación, garantizando una experiencia única durante tu tiempo en el bootcamp.
+          Cualquiera de nuestros campus será una excelente opción, ya sea en Miami, Madrid, Santiago de Chile, Caracas o San José de Costa Rica. Nuestras ciudades te brindarán una experiencia excelente en un entorno completamente preparado para tu formación, garantizando una experiencia única durante tu tiempo en el bootcamp. ¡Pero por qué un bootcamp, <a class="faq-link" href="https://4geeksacademy.com/es/bootcamp-de-programacion/estudiar-en-un-bootcamp-de-programacion">encontrarás la respuesta aquí!</a>.
       - question: "¿Quien es esa cara en el logo?"
         templates: ["faq"]
         priority: 0
@@ -69,14 +69,14 @@ faq:
            4Geeks Academy ofrece opciones de pago flexibles, incluyendo pagos únicos y financiamiento hasta por 24 meses. ¡Nos adaptamos a tus necesidades! Para más detalles, visita nuestra <a class="faq-link" href="/es/financiacion">página de financiación</a>.
       ## // ¿Cómo pago mi matrícula? // 
       
-      ## // ¿Cómo pago mi matrícula? // 
+      ## ¿4Geeks academy Ofrece  apoyo profesional?
       - question: "¿4Geeks academy Ofrece  apoyo profesional?"
         locations: ["atlanta-usa", "austin-usa", "barcelona-spain", "berlin-germany", "bogota-colombia", "buenosaires-argentina", "caracas-venezuela", "chicago-usa", "costa-rica", "downtown-miami", "dublin-ireland", "europe", "hamburg-germany", "houston-usa", "lapaz-bolivia", "lima-peru", "lisbon-portugal", "losangeles-usa", "madrid-spain", "malaga-spain", "mexicocity-mexico", "milan-italy", "montevideo-uruguay", "munich-germany", "newyork-usa", "online", "online-spanish-usa", "orlando", "panamacity-panama", "quito-ecuador", "rome-italy", "santiago-chile", "toronto-canada", "valencia-spain"]
         templates: ["faq"]
         priority: 1
         answer: |-
           ¡Sí! Ofrecemos apoyo profesional ilimitado. Al igual que nuestra tutoría en programación, tendrás acceso ilimitado a sesiones profesionales individuales y grupales. Durante estas sesiones, te equiparemos con todas las herramientas necesarias para conseguir un trabajo. Esto incluye optimizar tu currículum vitae, perfiles de LinkedIn y GitHub, conectarte con eventos y nuestra red de contratación, y prepararte para entrevistas técnicas y conductuales, entre otros servicios. Obtén más información sobre nuestro programa de apoyo profesional <a class="faq-link" href="/es/geekforce">aquí</a>.
-      ## // ¿Cómo pago mi matrícula? // 
+      ## // ¿4Geeks academy Ofrece  apoyo profesional? // 
 
 
       ##  ¿Plan de pago extendido? ¿Cómo funciona? ¿Qué significa eso? 
