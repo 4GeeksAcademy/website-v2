@@ -14,29 +14,29 @@ const front_matter_fields = [
 ];
 
 const landingSections = [
-  'in_the_news',
-  'about4Geeks',
-  'iconogram',
-  'badges',
-  'rating_reviews',
-  'syllabus',
-  'geeks_vs_others',
-  'program_details',
-  'overlaped',
-  'cards_carousel',
-  'choose_your_program',
-  'testimonials',
-  'geeksInfo',
-  'testimonials_new',
-  'why_4geeks',
-  'alumni_projects',
-  'who_is_hiring',
-  'divider',
-  'two_column_left',
-  'two_column_right',
-  'multi_column',
-  'single_column',
-  'columns',
+  "in_the_news",
+  "about4Geeks",
+  "iconogram",
+  "badges",
+  "rating_reviews",
+  "syllabus",
+  "geeks_vs_others",
+  "program_details",
+  "overlaped",
+  "cards_carousel",
+  "choose_your_program",
+  "testimonials",
+  "geeksInfo",
+  "testimonials_new",
+  "why_4geeks",
+  "alumni_projects",
+  "who_is_hiring",
+  "divider",
+  "two_column_left",
+  "two_column_right",
+  "multi_column",
+  "single_column",
+  "columns",
 ];
 
 async function listDir(dir) {
@@ -78,16 +78,15 @@ const validateUtmLocation = (val, locations, _path) => {
 };
 
 const validateComponents = (val, components, _path) => {
-  
   if (!Array.isArray(val))
     fail(`\n${`components`.yellow} ${`expected an array in ${_path}`.red}\n`);
   const unMatchingComponent = val.find((el) => !components.includes(el.layout));
   if (unMatchingComponent)
     fail(
       `${`\nProblem found in: landing ${_path}`.red}\n\n${
-        `using a component layout that does not exist: ${`${unMatchingComponent.layout}`.yellow} ${
-          `not match with available components:`.red
-        }`.red
+        `using a component layout that does not exist: ${
+          `${unMatchingComponent.layout}`.yellow
+        } ${`not match with available components:`.red}`.red
       }\n\n${components.map((el) => `${el.green}\n`)} \n`
     );
 };
@@ -143,7 +142,7 @@ walk(`${__dirname}/../data/landing`, async (err, files) => {
         },
         components: (val) => {
           validateComponents(val, landingSections, _path);
-        }
+        },
       });
     } catch (error) {
       console.error(`Error on file: ${_path}`.red);
