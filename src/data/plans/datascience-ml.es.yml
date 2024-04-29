@@ -27,7 +27,6 @@ full_time:
     payment_time: "Pago en 24 meses"
     price: "$310"
     bullets: 
-      # - "Con $400 por semana en estipendios de vida"
       - "El 9% de tu salario hasta que esté completamente pagado, solo si consigues un trabajo en tecnología."
     icons: 
       - "/images/ascent_logo.jpg"
@@ -40,7 +39,6 @@ full_time:
     payment_time: "Paga después de conseguir un trabajo"
     price: "$0"
     bullets: 
-      # - "Con $400 por semana en estipendios de vida"
       - "El 9% de tu salario hasta que esté completamente pagado, solo si consigues un trabajo en tecnología."
     icons: 
       - "/images/ascent_logo.jpg"
