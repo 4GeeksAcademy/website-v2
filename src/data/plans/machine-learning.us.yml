@@ -17,7 +17,6 @@ full_time:
     payment_time: "24 months payment"
     price: "$310"
     bullets: 
-      # - "With $400 p/ week living stipends"
       - "9% of your salary until paid in full, only if you get a job in tech."
     icons: 
       - "/images/ascent_logo.jpg"
@@ -30,7 +29,6 @@ full_time:
     payment_time: "Pay after you get a job"
     price: "$0"
     bullets: 
-      # - "With $400 p/ week living stipends"
       - "9% of your salary until paid in full, only if you get a job in tech."
     icons: 
       - "/images/ascent_logo.jpg"
@@ -65,7 +63,6 @@ part_time:
     payment_time: "24 months payment"
     price: "$310"
     bullets: 
-      # - "With $400 p/ week living stipends"
       - "9% of your salary until paid in full, only if you get a job in tech."
     icons: 
       - "/images/ascent_logo.jpg"
@@ -78,7 +75,6 @@ part_time:
     payment_time: "Pay after you get a job"
     price: "$0"
     bullets: 
-      # - "With $400 p/ week living stipends"
       - "9% of your salary until paid in full, only if you get a job in tech."
     icons: 
       - "/images/ascent_logo.jpg"
