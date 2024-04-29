@@ -41,6 +41,7 @@ const Layout = ({ children, seo, context }) => {
               apply_button_text
             }
             country_shortname
+            breathecode_location_slug
             custom_bar {
               active
               message
