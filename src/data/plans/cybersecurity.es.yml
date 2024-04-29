@@ -1,5 +1,16 @@
 full_time: []
 part_time:
+  - slug: 'plan-4'
+    recomended: false
+    academies: ['orlando', 'downtown-miami', 'austin-usa', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa']
+    scholarship: "Pago Completo"
+    payment_time: "Paga hoy"
+    price: "$10,999"
+    original_price: "$18,330"
+    bullets: 
+      - "Ahorras ~$7,330 USD"
+      - "Sólo si la Beca de Clark University no aplica (Desempleado o subempleado)"
+
   - slug: 'plan-1'
     academies: ['orlando', 'downtown-miami', 'austin-usa', 'austin-usa', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa']
     recomended: true
@@ -26,16 +37,6 @@ part_time:
       - "/images/climb-logo.png"
       - "/images/quotanda-logo.png"
 
-  - slug: 'plan-4'
-    recomended: false
-    academies: ['orlando', 'downtown-miami', 'austin-usa', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa']
-    scholarship: "Pago Completo"
-    payment_time: "Paga hoy"
-    price: "$9999"
-    original_price: "$10999"
-    bullets: 
-      - "Ahorras $1000 USD"
-      - "Sólo si la Beca de Clark University no aplica (Desempleado o subempleado)"
 
   - slug: 'spain-scholarships-cs-pt'
     academies: ['barcelona-spain', 'madrid-spain', 'malaga-spain', 'valencia-spain']
@@ -159,10 +160,11 @@ part_time:
     scholarship: "Programa + Apoyo en la búsqueda laboral"
     payment_time: "Paga al contado"
     price: "3.000.000 CLP*"
+    original_price: "5.000.000 CLP*"
     bullets:
       - "Paga con transferencia bancaria, tarjeta de crédito o débito"  
       - "Hasta 12 cuotas sin interés con tarjeta de crédito"
-      - "*Descuento de hasta 500.000 CLP. Paga 3.000.000 CLP en vez de 3.500.000 CLP ¡Descuento sujeto a disponibilidad!"
+      - "*Descuento de hasta 500.000 CLP. Paga 3.000.000 CLP en vez de 5.000.000 CLP ¡Descuento sujeto a disponibilidad!"
       - "Siempre hay un plan de pago disponible para que te unas a 4Geeks Academy, si no encuentras aquí lo que esperas, por favor contáctanos y trataremos de encontrar nuevas formas de ayudarte"      
     icons: 
       - "/images/visa-mastercard.png"
@@ -213,7 +215,7 @@ part_time:
     recomended: false
     scholarship: "Sólo el Programa ciberseguridad"
     payment_time: "Enfócate en obtener nuevas habilidades. Paga de contado."
-    price: "USD $4000"
+    price: "USD $4,000"
     bullets: 
       - "Siempre hay un plan de pago disponible para que te unas a 4Geeks Academy"
       - "Si no encuentras aquí lo que esperas, por favor contáctanos y trataremos de encontrar nuevas formas de ayudarte"     
@@ -227,7 +229,8 @@ part_time:
     recomended: false
     scholarship: "Program ciberseguridad + Career Support"
     payment_time: "Te ayudamos a pulir tu perfil profesional"
-    price: "USD $5000"
+    price: "USD $5,000"
+    original_price: "USD $8,300"
     bullets:
       - "Siempre hay un plan de pago disponible para que te unas a 4Geeks Academy"
       - "Si no encuentras aquí lo que esperas, por favor contáctanos y trataremos de encontrar nuevas formas de ayudarte"     
@@ -256,7 +259,8 @@ part_time:
     recomended: false
     scholarship: "Sólo el Programa ciberseguridad"
     payment_time: "Enfócate en obtener nuevas habilidades. Paga de contado."
-    price: "USD $2400"
+    price: "USD $2,400"
+    original_price: "USD $4,000"
     bullets: 
       - "Siempre hay un plan de pago disponible para que te unas a 4Geeks Academy"
       - "Si no encuentras aquí lo que esperas, por favor contáctanos y trataremos de encontrar nuevas formas de ayudarte"     

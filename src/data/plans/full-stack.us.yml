@@ -1,13 +1,23 @@
 full_time:
-  - slug: 'usa-clark-scholarship-ft'
+  - slug: 'usa-upfront-ft'
     academies: ['toronto-canada', downtown-miami', 'orlando', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa']
     recomended: true
+    scholarship: "Full Payment"
+    payment_time: "Pay today"
+    price: "$10,999"
+    original_price: "$18,331.67"
+    bullets: 
+      - "You're saving $7,332.67 USD"
+
+  - slug: 'usa-clark-scholarship-ft'
+    academies: ['toronto-canada', downtown-miami', 'orlando', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa']
+    recomended: false
     scholarship: "Scholarship"
     payment_time: "There is nothing like this"
-    price: "$7999"
+    price: "$7,999"
     bullets: 
-      - "You're saving ~$5331 USD"
-      - "Regular tuition is $13330. Avg tuition in the US is $15k."
+      - "You're saving ~$5,331 USD"
+      - "Regular tuition is $13,330. Avg tuition in the US is $15k."
       - "Remaining balance could be paid over time $100 p/mo"
     icons: 
       - "images/clarkuniversity.png"
@@ -29,7 +39,7 @@ full_time:
     recomended: false
     scholarship: "Income Share Agreement"
     payment_time: "Pay only when you get a job. Ask for living stipends."
-    job_guarantee_price: "USD $4000"
+    job_guarantee_price: "USD $4,000"
     price: "$0"
     bullets: 
       - "8.5% of your salary until paid in full, only if you get a job in tech."
@@ -49,16 +59,6 @@ full_time:
     icons: 
       - "static/images/landing/miamitech-logo.png"  
         
-  - slug: 'usa-upfront-ft'
-    academies: ['toronto-canada', downtown-miami', 'orlando', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa']
-    recomended: false
-    scholarship: "Full Payment"
-    payment_time: "Pay today"
-    price: "$10999"
-    original_price: "$18331.67"
-    bullets: 
-      - "You're saving $7332.67 USD"
-
   - slug: 'spain-scholarships-fs-ft'
     academies: ['barcelona-spain','madrid-spain', 'malaga-spain', 'valencia-spain']
     recomended: true
@@ -79,10 +79,9 @@ full_time:
     scholarship: "Pay Upfront"
     payment_time: "Get a better price"
     price: "€4,550*"
-    original_price: "€7,583.33"
     bullets:
       - "Pay using your bank account, credit or debit card, Paypal, Bitcoin or Etherium."
-      - "*Discounts up to €3,033.33 Pay €4,550 instead of €7,583.33. Discount subject to availability."     
+      - "*Discounts up to €2,150. Pay €4,550 instead of €6,700. Discount subject to availability." 
     icons: 
       - "/images/visa-mastercard.png"    
       - "/images/bitcoin_logo.png"  
@@ -140,8 +139,8 @@ full_time:
 
   - slug: 'venezuela-scholarship-pt'
     academies: ['caracas-venezuela']
-    recomended: false
-    scholarship: "Paga de Contado"
+    recomended: true
+    scholarship: "Pay in cash"
     payment_time: "Pay early and get 30% off."
     price: "$1300*"
     original_price: "$2160"
@@ -153,7 +152,7 @@ full_time:
 
   - slug: 'venezuela-financed-pt'
     academies: ['caracas-venezuela']
-    recomended: true
+    recomended: false
     scholarship: "Financed"
     payment_time: "12 months"
     price: "~$200 / mo."
@@ -197,8 +196,7 @@ part_time:
     recomended: false
     scholarship: "Pay upfront"
     payment_time: "And get a discount"
-    price: "€4,750*"
-    original_price: "€7,916*"
+    price: "€4,550*"
     bullets:
       - "Pay using your bank account, credit or debit card, Paypal, Bitcoin or Etherium."
       - "*Discounts up to €3,166. Pay €4,750 instead of €7,916. Discount subject to availability."     
@@ -232,11 +230,11 @@ part_time:
       - "/images/bcas.png" 
 
   - slug: 'usa-upfront-pt'
-    recomended: false
+    recomended: true
     academies: ['downtown-miami', 'orlando', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'toronto-canada']
     scholarship: "Full Payment"
     payment_time: "Pay today"
-    price: "$8999"
+    price: "$8,999"
     original_price: "$14,998"
     bullets: 
       - "You're saving $5,999 USD"
@@ -271,12 +269,12 @@ part_time:
       
   - slug: 'usa-clark-scholarship-pt'
     academies: ['downtown-miami', 'orlando', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'toronto-canada']
-    recomended: true
+    recomended: false
     scholarship: "Scholarship"
     payment_time: "Pay today or with a Payment Plan for $100 p/mo"
-    price: "$5999"
+    price: "$5,999"
     bullets: 
-      - "You're saving $4000 USD. Thanks to Clark University and the TechBoost Fund"
+      - "You're saving $4,000 USD. Thanks to Clark University and the TechBoost Fund"
       - "You have to be underemployed or unemployed, and provide a valid US Work permit."
     icons: 
       - "/images/clarkuniversity.png"
@@ -298,11 +296,10 @@ part_time:
     recomended: false
     scholarship: "Pay upfront"
     payment_time: "And get a discount"
-    price: "€4,750*"
-    original_price: "€7,916*"
+    price: "€4,550*"
     bullets:
       - "Pay using your bank account, credit or debit card, Paypal, Bitcoin or Etherium."
-      - "*Discounts up to €3,166. Pay €4,750 instead of €7,916. Discount subject to availability."     
+      - "*Discounts up to €2,150. Pay €4,550 instead of €6,700. Discount subject to availability."        
     icons: 
       - "/images/visa-mastercard.png"    
       - "/images/bitcoin_logo.png"  
@@ -310,7 +307,7 @@ part_time:
       
   - slug: 'venezuela-financed-pt'
     academies: ['caracas-venezuela']
-    recomended: true
+    recomended: false
     scholarship: "Financed"
     payment_time: "12 months"
     price: "~$200 / mo."
@@ -339,10 +336,9 @@ part_time:
     scholarship: "Pay upfront"
     payment_time: "And get a discount"
     price: "€4,750*"
-    original_price: "€7,916*"
     bullets:
       - "Pay using your bank account, credit or debit card, Paypal, Bitcoin or Etherium."
-      - "*Discounts up to €3,166. Pay €4,750 instead of €7,916. Discount subject to availability."      
+      - "*Discounts up to €1,950. Pay €4,750 instead of €6,700. Discount subject to availability."          
     icons: 
       - "/images/visa-mastercard.png"    
       - "/images/bitcoin_logo.png"  
@@ -471,7 +467,7 @@ part_time:
 
   - slug: 'venezuela-scholarship-pt'
     academies: ['caracas-venezuela']
-    recomended: false
+    recomended: true
     scholarship: "Pay upfront"
     payment_time: "Pay early and $250 off"
     price: "$1750*"

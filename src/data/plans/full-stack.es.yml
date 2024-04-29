@@ -79,10 +79,9 @@ full_time:
     scholarship: "Paga de contado"
     payment_time: "Y obtén un descuento"
     price: "4.750 €*"
-    original_price: "7.916 €*"
     bullets:
       - "Paga con transferencia bancaria, tarjeta de crédito o débito, Paypal, Bitcoin o Ethereum."
-      - "*Descuento de hasta ~3.166 €. Desde 4.750 € en vez de 7916 €. ¡Descuento sujeto a disponibilidad!"
+      - "*Descuento de hasta ~3.166 €. Desde 4.750 € en vez de 6700 €. ¡Descuento sujeto a disponibilidad!"
     icons: 
       - "/images/visa-mastercard.png"    
       - "/images/bitcoin_logo.png"  
@@ -237,7 +236,7 @@ part_time:
     price: "Desde 150 € al mes"
     bullets:
       - "Financiación a tu medida, con o sin intereses, desde 4 hasta 48 meses"
-      - "Becas disponibles de hasta 1.850 €. Desde 4.950 € en vez de 7.916.67 €. ¡BECAS SUJETAS A DISPONIBILIDAD!"     
+      - "Becas disponibles de hasta 1.850 €. Desde 4.950 € en vez de 6.800 €. ¡BECAS SUJETAS A DISPONIBILIDAD!"       
     icons:  
       - "/images/zank.png"
       - "/images/sequra.png"
@@ -250,10 +249,9 @@ part_time:
     scholarship: "Paga de contado"
     payment_time: "Y obtén un descuento"
     price: "4.750 €*"
-    original_price: "7916 €*"
     bullets:
       - "Paga con transferencia bancaria, tarjeta de crédito o débito, Paypal, Bitcoin o Ethereum"
-      - "*Descuento de hasta 2.050 €. Desde 4.750 € en vez de 7.916.67 €. ¡Descuento sujeto a disponibilidad!"     
+      - "*Descuento de hasta 2.050 €. Desde 4.750 € en vez de 6.800 €. ¡Descuento sujeto a disponibilidad!"     
     icons: 
       - "/images/visa-mastercard.png"    
       - "/images/bitcoin_logo.png"  
@@ -279,7 +277,7 @@ part_time:
     price: "Desde 150 € al mes"
     bullets:
       - "Financiación a tu medida, con o sin intereses, desde 4 hasta 48 meses"
-      - "Becas disponibles de hasta 1.850 €. Desde 4.950 € en vez de 7.916.67 €. ¡BECAS SUJETAS A DISPONIBILIDAD!"     
+      - "Becas disponibles de hasta 1.850 €. Desde 4.950 € en vez de 6.800 €. ¡BECAS SUJETAS A DISPONIBILIDAD!" 
     icons: 
       - "/images/quotanda-logo.png"
 
@@ -289,10 +287,9 @@ part_time:
     scholarship: "Paga de contado"
     payment_time: "Y obtén un descuento"
     price: "4.750 €*"
-    original_price: "7916 €*"
     bullets:
       - "Paga con transferencia bancaria, tarjeta de crédito o débito, Paypal, Bitcoin o Ethereum"
-      - "*Descuento de hasta 2.050 €. Desde 4.750 € en vez de 7.916.67 €. ¡Descuento sujeto a disponibilidad!"     
+      - "*Descuento de hasta 2.050 €. Desde 4.750 € en vez de 6.800 €. ¡Descuento sujeto a disponibilidad!"     
     icons:  
       - "/images/visa-mastercard.png"    
       - "/images/bitcoin_logo.png"  
@@ -318,7 +315,7 @@ part_time:
     price: "Desde 150 € al mes"
     bullets:
       - "Financiación a tu medida, con o sin intereses, desde 4 hasta 48 meses"
-      - "Becas disponibles de hasta 1.850 €. Desde 4.950 € en vez de 7.916.67 €. ¡BECAS SUJETAS A DISPONIBILIDAD!"     
+      - "Becas disponibles de hasta 1.850 €. Desde 4.950 € en vez de 6.800 €. ¡BECAS SUJETAS A DISPONIBILIDAD!" 
     icons: 
       - "/images/quotanda-logo.png"
 
@@ -328,10 +325,9 @@ part_time:
     scholarship: "Paga de contado"
     payment_time: "Y obtén un descuento"
     price: "4.750 €*"
-    original_price: "7.916.67 €*"
     bullets:
       - "Paga con transferencia bancaria, tarjeta de crédito o débito, Paypal, Bitcoin o Ethereum"
-      - "*Descuento de hasta 2.050 €. Desde 4.750 € en vez de 7.916.67 €. ¡Descuento sujeto a disponibilidad!"     
+      - "*Descuento de hasta 2.050 €. Desde 4.750 € en vez de 6.800 €. ¡Descuento sujeto a disponibilidad!"   
     icons:   
       - "/images/visa-mastercard.png"    
       - "/images/bitcoin_logo.png"  

@@ -4,9 +4,10 @@ full_time:
     recomended: true
     scholarship: "Scholarship"
     payment_time: "Pay today"
-    price: "$4999"
+    price: "$4,999"
+    original_price: "$8,330"
     bullets: 
-      - "You're saving $4000 USD "
+      - "You're saving $3300 USD "
       - "9% of your salary until paid in full, only if you get a job in tech."
     icons: 
       - "/images/landing/uwm_pantone_2021_2.png"
@@ -38,22 +39,23 @@ full_time:
       - "/images/quotanda-logo.png"
   - slug: 'plan-4'
     academies: ['downtown-miami', 'orlando']
-    recomended: false
+    recomended: true
     scholarship: "Full Payment"
     payment_time: "Pay today"
     price: "$8099"
+    original_price: "$13,500"
     bullets: 
-      - "You're saving $1000 USD"
+      - "You're saving $5400 USD"
 
 part_time:
   - slug: 'plan-1'
     academies: ['downtown-miami', 'orlando']
-    recomended: true
+    recomended: false
     scholarship: "Scholarship"
     payment_time: "Pay today"
     price: "$4999"
     bullets: 
-      - "You're saving $4000 USD "
+      - "You're saving $8500 USD "
       - "9% of your salary until paid in full, only if you get a job in tech."
     icons: 
       - "/images/landing/uwm_pantone_2021_2.png"
@@ -84,10 +86,11 @@ part_time:
       - "/images/climb-logo.png"
       - "/images/quotanda-logo.png"
   - slug: 'plan-4'
-    recomended: false
+    recomended: true
     academies: ['downtown-miami', 'orlando']
     scholarship: "Full Payment"
     payment_time: "Pay today"
     price: "$8099"
+    original_price: "$13,500"
     bullets: 
-      - "You're saving $1000 USD"
+      - "You're saving $5,400 USD"

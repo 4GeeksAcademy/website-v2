@@ -1,24 +1,34 @@
 full_time:
-  - slug: 'plan-1'
+  - slug: 'plan-4'
     academies: ['downtown-miami', 'orlando']
     recomended: true
-    scholarship: "Scholarship"
-    payment_time: "Pay today"
-    price: "$4999"
+    scholarship: "Pago Completo"
+    payment_time: "Paga hoy"
+    price: "$8,099"
+    original_price: "$13,500"
     bullets: 
-      - "You're saving $4000 USD "
-      - "9% of your salary until paid in full, only if you get a job in tech."
+      - "Ahorras ~$5,399 USD"
+
+  - slug: 'plan-1'
+    academies: ['downtown-miami', 'orlando']
+    recomended: false
+    scholarship: "Beca"
+    payment_time: "Paga hoy"
+    price: "$4,999"
+    bullets: 
+      - "Ahorras $8,500 USD"
+      - "El 9% de tu salario hasta que esté completamente pagado, solo si consigues un trabajo en tecnología."
     icons: 
       - "/images/landing/uwm_pantone_2021_2.png"
   - slug: 'plan-2'
     academies: ['downtown-miami', 'orlando']
     recomended: false
-    scholarship: "Financed"
-    payment_time: "24 months payment"
+    scholarship: "Financiado"
+    payment_time: "Pago en 24 meses"
     price: "$310"
     bullets: 
-      - "With $400 p/ week living stipends"
-      - "9% of your salary until paid in full, only if you get a job in tech."
+      # - "Con $400 por semana en estipendios de vida"
+      - "El 9% de tu salario hasta que esté completamente pagado, solo si consigues un trabajo en tecnología."
     icons: 
       - "/images/ascent_logo.jpg"
       - "/images/climb-logo.png"
@@ -26,35 +36,27 @@ full_time:
   - slug: 'plan-3'
     academies: ['downtown-miami', 'orlando']
     recomended: false
-    scholarship: "Income Share Agreement"
-    payment_time: "Pay after you get a job"
+    scholarship: "Acuerdo de Participación en los Ingresos"
+    payment_time: "Paga después de conseguir un trabajo"
     price: "$0"
     bullets: 
-      - "With $400 p/ week living stipends"
-      - "9% of your salary until paid in full, only if you get a job in tech."
+      # - "Con $400 por semana en estipendios de vida"
+      - "El 9% de tu salario hasta que esté completamente pagado, solo si consigues un trabajo en tecnología."
     icons: 
       - "/images/ascent_logo.jpg"
       - "/images/climb-logo.png"
       - "/images/quotanda-logo.png"
-  - slug: 'plan-4'
-    academies: ['downtown-miami', 'orlando']
-    recomended: false
-    scholarship: "Full Payment"
-    payment_time: "Pay today"
-    price: "$8099"
-    bullets: 
-      - "You're saving $1000 USD"
 
 part_time:
   - slug: 'plan-1'
     academies: ['orlando', 'downtown-miami', 'austin-usa', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa']
-    recomended: true
+    recomended: false
     scholarship: "Beca"
     payment_time: "Paga hoy o en 3 partes"
     price: "$6999"
-    original_price: "$10999"
+    original_price: "$11,665"
     bullets: 
-      - "Ahorras $4000 USD "
+      - "Ahorras más de ~$4600 USD "
     icons: 
       - "/images/clarkuniversity.png"
 
@@ -78,9 +80,9 @@ part_time:
     scholarship: "Pago Completo"
     payment_time: "Paga hoy"
     price: "$9999"
-    original_price: "$10999"
+    original_price: "$16,665"
     bullets: 
-      - "Ahorras $1000 USD"
+      - "Ahorras ~$6600 USD"
       - "Sólo si la Beca de Clark University no aplica (Desempleado o subempleado)"
 
   - slug: 'spain-scholarships-ds-pt'
@@ -205,10 +207,11 @@ part_time:
     scholarship: "Programa + Apoyo en la búsqueda laboral"
     payment_time: "Paga al contado"
     price: "3.375.000 CLP*"
+    original_price: "5.625.000 CLP*"
     bullets:
       - "Paga con transferencia bancaria, tarjeta de crédito o débito"    
       - "Hasta 12 cuotas sin interés con tarjeta de crédito"
-      - "*Descuento de hasta 1.125.000 CLP. Desde 3.375.000 CLP en vez de 4.500.000 CLP"
+      - "*Descuento de hasta 1.125.000 CLP. Desde 3.375.000 CLP en vez de 5.625.000 CLP"
     icons: 
       - "/images/visa-mastercard.png"
 
@@ -218,10 +221,11 @@ part_time:
     scholarship: "Solo paga el programa"
     payment_time: "Enfócate en obtener nuevas habilidades. Paga al contado."
     price: "3.000.000 CLP*"
+    original_price: "5.000.000 CLP*"
     bullets:
       - "Paga con transferencia bancaria, tarjeta de crédito o débito"    
       - "Hasta 12 cuotas sin interés con tarjeta de crédito"
-      - "*Descuento de hasta 750.000 CLP. Desde 3.000.000 CLP en vez de 3.750.000 CLP"
+      - "*Descuento de hasta 750.000 CLP. Desde 3.000.000 CLP en vez de 5.000.000 CLP"
       - "Paga solamente por el programa de Data Science si todavía no quieres contratar nuestro programa de apoyo profesional" 
     icons: 
       - "/images/visa-mastercard.png"    
@@ -258,7 +262,8 @@ part_time:
     recomended: false
     scholarship: "Sólo el Programa Data Science"
     payment_time: "Enfócate en obtener nuevas habilidades. Paga de contado."
-    price: "USD $4000"
+    price: "USD $4.000"
+    original_price: "USD $6.670"
     bullets: 
       - "Siempre hay un plan de pago disponible para que te unas a 4Geeks Academy"
       - "Si no encuentras aquí lo que esperas, por favor contáctanos y trataremos de encontrar nuevas formas de ayudarte"     
@@ -269,10 +274,11 @@ part_time:
 
   - slug: 'latam-upfront-ds-cs'
     academies: ['montevideo-uruguay','bogota-colombia', 'costa-rica', 'mexicocity-mexico','quito-ecuador', 'panamacity-panama', 'buenosaires-argentina','lima-peru','lapaz-bolivia']
-    recomended: false
+    recomended: true
     scholarship: "Program Data Science + Career Support"
     payment_time: "Te ayudamos a pulir tu perfil profesional"
-    price: "USD $5000"
+    price: "USD $5.000"
+    original_price: "USD $8.300"
     bullets:
       - "Siempre hay un plan de pago disponible para que te unas a 4Geeks Academy"
       - "Si no encuentras aquí lo que esperas, por favor contáctanos y trataremos de encontrar nuevas formas de ayudarte"     
@@ -301,7 +307,8 @@ part_time:
     recomended: false
     scholarship: "Sólo el Programa Data Science"
     payment_time: "Enfócate en obtener nuevas habilidades. Paga de contado."
-    price: "USD $2400"
+    price: "USD $2.400"
+    original_price: "USD $4.000"
     bullets: 
       - "Siempre hay un plan de pago disponible para que te unas a 4Geeks Academy"
       - "Si no encuentras aquí lo que esperas, por favor contáctanos y trataremos de encontrar nuevas formas de ayudarte"     

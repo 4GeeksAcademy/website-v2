@@ -1,12 +1,12 @@
 full_time:
   - slug: 'plan-1'
     academies: ['downtown-miami', 'orlando']
-    recomended: true
+    recomended: false
     scholarship: "Scholarship"
     payment_time: "Pay today"
-    price: "$4999"
+    price: "$4,999"
     bullets: 
-      - "You're saving $4000 USD "
+      - "You're saving $8,500 USD "
       - "9% of your salary until paid in full, only if you get a job in tech."
     icons: 
       - "/images/landing/uwm_pantone_2021_2.png"
@@ -17,7 +17,7 @@ full_time:
     payment_time: "24 months payment"
     price: "$310"
     bullets: 
-      - "With $400 p/ week living stipends"
+      # - "With $400 p/ week living stipends"
       - "9% of your salary until paid in full, only if you get a job in tech."
     icons: 
       - "/images/ascent_logo.jpg"
@@ -30,7 +30,7 @@ full_time:
     payment_time: "Pay after you get a job"
     price: "$0"
     bullets: 
-      - "With $400 p/ week living stipends"
+      # - "With $400 p/ week living stipends"
       - "9% of your salary until paid in full, only if you get a job in tech."
     icons: 
       - "/images/ascent_logo.jpg"
@@ -38,22 +38,23 @@ full_time:
       - "/images/quotanda-logo.png"
   - slug: 'plan-4'
     academies: ['downtown-miami', 'orlando']
-    recomended: false
+    recomended: true
     scholarship: "Full Payment"
     payment_time: "Pay today"
-    price: "$8099"
+    price: "$8,099"
+    original_price: "$13,499"
     bullets: 
-      - "You're saving $1000 USD"
+      - "You're saving $5,400 USD"
 
 part_time:
   - slug: 'plan-1'
     academies: ['downtown-miami', 'orlando']
-    recomended: true
+    recomended: false
     scholarship: "Scholarship"
     payment_time: "Pay today"
-    price: "$4999"
+    price: "$4,999"
     bullets: 
-      - "You're saving $4000 USD "
+      - "You're saving $8500 USD "
       - "9% of your salary until paid in full, only if you get a job in tech."
     icons: 
       - "/images/landing/uwm_pantone_2021_2.png"
@@ -64,7 +65,7 @@ part_time:
     payment_time: "24 months payment"
     price: "$310"
     bullets: 
-      - "With $400 p/ week living stipends"
+      # - "With $400 p/ week living stipends"
       - "9% of your salary until paid in full, only if you get a job in tech."
     icons: 
       - "/images/ascent_logo.jpg"
@@ -77,7 +78,7 @@ part_time:
     payment_time: "Pay after you get a job"
     price: "$0"
     bullets: 
-      - "With $400 p/ week living stipends"
+      # - "With $400 p/ week living stipends"
       - "9% of your salary until paid in full, only if you get a job in tech."
     icons: 
       - "/images/ascent_logo.jpg"
@@ -88,6 +89,7 @@ part_time:
     academies: ['downtown-miami', 'orlando']
     scholarship: "Full Payment"
     payment_time: "Pay today"
-    price: "$8099"
+    price: "$8,099"
+    original_price: "$13,499"
     bullets: 
-      - "You're saving $1000 USD"
+      - "You're saving $5,400 USD"

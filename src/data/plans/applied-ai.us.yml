@@ -1,5 +1,15 @@
 full_time: []
 part_time:
+  - slug: 'plan-4'
+    recomended: true
+    academies: ['orlando', 'downtown-miami', 'austin-usa', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa']
+    scholarship: "Full Payment"
+    payment_time: "Pay today"
+    price: "$3,000"
+    original_price: "$5,000"
+    bullets: 
+      - "When you pay upfront you save interests and get a special $2,000 discount"
+      - "Get ready to maximize your productivity with AI"
 
   - slug: 'plan-3'
     academies: ['orlando', 'downtown-miami', 'austin-usa', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa']
@@ -31,24 +41,12 @@ part_time:
       - "/images/climb-logo.png"
       - "/images/quotanda-logo.png"
 
-      
-  - slug: 'plan-4'
-    recomended: true
-    academies: ['orlando', 'downtown-miami', 'austin-usa', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa']
-    scholarship: "Full Payment"
-    payment_time: "Pay today"
-    price: "$3000"
-    original_price: "$3500"
-    bullets: 
-      - "When you pay upfront you save interests and get a special $500 discount"
-      - "Get ready to maximize your productivity with AI"
-
   - slug: 'spain-upfront-ai-pt'
     academies: ['barcelona-spain','madrid-spain', 'malaga-spain', 'valencia-spain', 'lisbon-portugal','milan-italy','rome-italy']
     recomended: false
     scholarship: "Pay upfront"
     payment_time: "And get a discount"
-    price: "€3000*"
+    price: "€3.000*"
     bullets:
       - "Pay with wire transfer, credit or debit card, Paypal, Bitcoin or Ethereum"
       - "*Discount up to €500. From €3500 to €3000"     
@@ -62,7 +60,7 @@ part_time:
     recomended: false
     scholarship: "Pay upfront"
     payment_time: "And get a discount"
-    price: "€3000*"
+    price: "€3.000*"
     bullets:
       - "Pay with wire transfer, credit or debit card, Paypal, Bitcoin or Ethereum"
       - "*Discount up to €500. From €3500 instead of €3000"     
@@ -77,9 +75,10 @@ part_time:
     scholarship: "Pay Upfront"
     payment_time: "And get a discount"
     price: "800.000 CLP*"
+    original_price: "1.330.000 CLP*"
     bullets:
       - "Pay with bank transfer, credit or debit card"    
-      - "*Discount up to 100.000 CLP"
+      - "*Discount up to 530.000 CLP"
     icons: 
       - "/images/visa-mastercard.png"   
 
@@ -112,9 +111,9 @@ part_time:
     academies: ['montevideo-uruguay','bogota-colombia', 'costa-rica', 'mexicocity-mexico','quito-ecuador', 'panamacity-panama', 'buenosaires-argentina','lima-peru','lapaz-bolivia', 'caracas-venezuela']
     recomended: false
     scholarship: "Pay upfront and "
-    payment_time: "Save $500"
-    price: "USD $1500"
-    original_price: "$2000"
+    payment_time: "save $1.000"
+    price: "USD $1.500"
+    original_price: "$2.500"
     bullets:
-      - "Save $500. From $2000 to $1500."
+      - "save $1000 From $2.500 to $1.500"
       - "If you don't find here what you are expecting, please contact us and we will try to find new ways to help"     

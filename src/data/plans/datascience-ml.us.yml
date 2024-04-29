@@ -1,12 +1,12 @@
 full_time:
   - slug: 'plan-1'
     academies: ['downtown-miami', 'orlando']
-    recomended: true
+    recomended: false
     scholarship: "Scholarship"
     payment_time: "Pay today"
     price: "$4999"
     bullets: 
-      - "You're saving $4000 USD "
+      - "You're saving $8500 USD "
       - "9% of your salary until paid in full, only if you get a job in tech."
     icons: 
       - "/images/landing/uwm_pantone_2021_2.png"
@@ -38,23 +38,24 @@ full_time:
       - "/images/quotanda-logo.png"
   - slug: 'plan-4'
     academies: ['downtown-miami', 'orlando']
-    recomended: false
+    recomended: true
     scholarship: "Full Payment"
     payment_time: "Pay today"
-    price: "$8099"
+    price: "$8,099"
+    original_price: "$13,500"
     bullets: 
-      - "You're saving $1000 USD"
+      - "You're saving $5400 USD"
 
 part_time:
   - slug: 'plan-1'
     academies: ['orlando', 'downtown-miami', 'austin-usa', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa']
-    recomended: true
+    recomended: false
     scholarship: "Scholarship"
     payment_time: "Pay today or in 3 parts"
-    price: "$6999"
-    original_price: "$10999"
+    price: "$6,999"
+    original_price: "$11,660"
     bullets: 
-      - "You're saving $4000 USD. Thanks to Clark University TechBoost Fund"
+      - "You're saving ~$4,600 USD. Thanks to Clark University TechBoost Fund"
     icons: 
       - "/images/clarkuniversity.png"
 
@@ -73,14 +74,14 @@ part_time:
       - "/images/quotanda-logo.png"
       
   - slug: 'plan-4'
-    recomended: false
+    recomended: true
     academies: ['orlando', 'downtown-miami', 'austin-usa', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa']
     scholarship: "Full Payment"
     payment_time: "Pay today"
     price: "$9999"
-    original_price: "$10999"
+    original_price: "$16,665"
     bullets: 
-      - "You're saving $1000 USD"
+      - "You're saving ~$6,660 USD"
       - "Only if the Clark University Scholarship doesn't apply (unemployed or underemployed)"
 
   - slug: 'spain-scholarships-ds-pt'
@@ -206,9 +207,10 @@ part_time:
     scholarship: "Program + Career Support"
     payment_time: "Pay Upfront"
     price: "3.375.000 CLP*"
+    original_price: "5.625.000 CLP*"
     bullets:
       - "Pay with bank transfer, credit or debit card"    
-      - "*Discount up to 1.125.000 CLP. From 3.375.000 CLP instead of 4.500.000 CLP"  
+      - "*Discount up to 2.250.000 CLP. From 3.375.000 CLP instead of 5.625.000 CLP"  
     icons: 
       - "/images/visa-mastercard.png"   
 
@@ -218,9 +220,10 @@ part_time:
     scholarship: "Data Science Program Only"
     payment_time: "Focus on gaining skills. Pay upfront."
     price: "3.000.000 CLP*"
+    original_price: "5.625.000 CLP*"
     bullets:
       - "Pay with bank transfer, credit or debit card"    
-      - "*Discount up to 750.000 CLP. From 3.000.000 CLP instead of 3.750.000 CLP"  
+      - "*Discount up to 2.625.000 CLP. From 3.000.000 CLP instead of 5.625.000 CLP"  
       - "There is always a payment plan available for you to join 4Geeks Academy, if you don't find here what you are expecting, please contact us and we will try to find new ways to help"    
       - "Pay only for the Data Science program if you are not interested yet in our career support program."  
     icons: 
@@ -241,7 +244,7 @@ part_time:
 
   - slug: 'latam-solo-programa-ds'
     academies: ['montevideo-uruguay','bogota-colombia', 'costa-rica', 'mexicocity-mexico','quito-ecuador', 'panamacity-panama', 'buenosaires-argentina','lima-peru','lapaz-bolivia']
-    recomended: true
+    recomended: false
     scholarship: "Only pay for the program"
     payment_time: "Focus on gaining skills. Pay monthly."
     price: "Starting from $120/m"
@@ -255,10 +258,11 @@ part_time:
 
   - slug: 'latam-program-only-ds-upfront'
     academies: ['montevideo-uruguay','bogota-colombia', 'costa-rica', 'mexicocity-mexico','quito-ecuador', 'panamacity-panama', 'buenosaires-argentina','lima-peru','lapaz-bolivia']
-    recomended: false
+    recomended: true
     scholarship: "Data Science Program Only"
     payment_time: "Focus on gaining skills. Pay upfront."
     price: "$4000"
+    original_price: "$6.779"
     bullets: 
       - "There is always a payment plan available for you to join 4Geeks Academy"
       - "If you don't find here what you are expecting, please contact us and we will try to find new ways to help"     
@@ -273,6 +277,7 @@ part_time:
     scholarship: "Data Science program + Career Support"
     payment_time: "We help you build your professional profile"
     price: "USD $5000"
+    original_price: "USD $8.330"
     bullets:
       - "There is always a payment plan available for you to join 4Geeks Academy"
       - "If you don't find here what you are expecting, please contact us and we will try to find new ways to help"     

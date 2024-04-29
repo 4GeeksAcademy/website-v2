@@ -1,12 +1,22 @@
 full_time: []
 part_time:
+  - slug: 'plan-4'
+    recomended: false
+    academies: ['orlando', 'downtown-miami', 'austin-usa', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa']
+    scholarship: "Full Payment"
+    payment_time: "Pay today"
+    price: "$10,999"
+    original_price: "$18,330"
+    bullets: 
+      - "You're saving ~$7,330 USD"
+      - "Only if the Clark University Scholarship doesn't apply (unemployed or underemployed)"
   - slug: 'plan-1'
     academies: ['orlando', 'downtown-miami', 'austin-usa', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa']
-    recomended: true
+    recomended: false
     scholarship: "Scholarship"
     payment_time: "Pay today or in 3 parts"
-    price: "$6999"
-    original_price: "$10999"
+    price: "$6,999"
+    original_price: "$18,330"
     bullets: 
       - "You're saving $4000 USD. Thanks to Clark University TechBoost Fund"
     icons: 
@@ -25,17 +35,6 @@ part_time:
       - "/images/ascent_logo.jpg"
       - "/images/climb-logo.png"
       - "/images/quotanda-logo.png"
-      
-  - slug: 'plan-4'
-    recomended: false
-    academies: ['orlando', 'downtown-miami', 'austin-usa', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa']
-    scholarship: "Full Payment"
-    payment_time: "Pay today"
-    price: "$9999"
-    original_price: "$10999"
-    bullets: 
-      - "You're saving $1000 USD"
-      - "Only if the Clark University Scholarship doesn't apply (unemployed or underemployed)"
 
   - slug: 'spain-scholarships-cs-pt'
     academies: ['barcelona-spain','madrid-spain', 'malaga-spain', 'valencia-spain']
@@ -159,19 +158,21 @@ part_time:
     scholarship: "Program + Career Support"
     payment_time: "Pay Upfront"
     price: "3.000.000 CLP*"
+    original_price: "5.000.000 CLP*"
     bullets:
       - "Pay with bank transfer, credit or debit card"    
-      - "*Discount up to 500.000 CLP. From 3.000.000 CLP instead of 3.500.000 CLP" 
+      - "*Discount up to 500.000 CLP. From 3.000.000 CLP instead of 5.000.000 CLP" 
       - "There is always a payment plan available for you to join 4Geeks Academy, if you don't find here what you are expecting, please contact us and we will try to find new ways to help"   
     icons: 
       - "/images/visa-mastercard.png"   
 
   - slug: 'chile-solo-cs'
     academies: ['santiago-chile']
-    recomended: false
+    recomended: true
     scholarship: "Only pay for the program"
     payment_time: "Focus on gaining skills. Pay Upfront"
     price: "2.750.000 CLP"
+    original_price: "4.583.300 CLP"
     bullets:
       - "Pay with bank transfer, credit or debit card"    
       - "There is always a payment plan available for you to join 4Geeks Academy, if you don't find here what you are expecting, please contact us and we will try to find new ways to help"    
@@ -211,7 +212,7 @@ part_time:
     recomended: false
     scholarship: "Cybersecurity Program Only"
     payment_time: "Focus on gaining skills. Pay upfront."
-    price: "$4000"
+    price: "$4,000"
     bullets: 
       - "There is always a payment plan available for you to join 4Geeks Academy"
       - "If you don't find here what you are expecting, please contact us and we will try to find new ways to help"     
@@ -225,7 +226,8 @@ part_time:
     recomended: false
     scholarship: "Cybersecurity program + Career Support"
     payment_time: "We help you build your professional profile"
-    price: "USD $5000"
+    price: "USD $5,000"
+    original_price: "USD $8,300"
     bullets:
       - "There is always a payment plan available for you to join 4Geeks Academy"
       - "If you don't find here what you are expecting, please contact us and we will try to find new ways to help"     

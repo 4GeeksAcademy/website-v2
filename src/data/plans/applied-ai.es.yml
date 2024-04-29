@@ -1,5 +1,16 @@
 full_time: []
 part_time:
+  - slug: 'plan-4'
+    recomended: true
+    academies: ['orlando', 'downtown-miami', 'austin-usa', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa']
+    scholarship: "Pago Completo"
+    payment_time: "Paga hoy"
+    price: "$3,000"
+    original_price: "$5,000"
+    bullets: 
+      - "Paga con trasnferencia bancaria, tarjeta de crédito o débito, Paypal, Bitcoin o Ethereum"
+      - "Ahorras $2,000 USD"
+
   - slug: 'plan-3'
     academies: ['orlando', 'downtown-miami', 'austin-usa', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa']
     recomended: false
@@ -29,16 +40,7 @@ part_time:
       - "/images/climb-logo.png"
       - "/images/quotanda-logo.png"
 
-  - slug: 'plan-4'
-    recomended: true
-    academies: ['orlando', 'downtown-miami', 'austin-usa', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa']
-    scholarship: "Pago Completo"
-    payment_time: "Paga hoy"
-    price: "$3000"
-    original_price: "$3500"
-    bullets: 
-      - "Paga con trasnferencia bancaria, tarjeta de crédito o débito, Paypal, Bitcoin o Ethereum"
-      - "Ahorras $500 USD"
+
 
   - slug: 'spain-upfront-ai-pt'
     academies: ['barcelona-spain', 'madrid-spain', 'malaga-spain', 'valencia-spain']
