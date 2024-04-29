@@ -210,13 +210,28 @@ const Program = ({ data, pageContext, yml }) => {
       {/* OVERLAPED CREAR EN EL YML*/}
       <Overlaped
         heading={yml.overlaped?.heading}
+        headingStyle = {{fontSize: '26px'}}
         content={yml.overlaped?.paragraph}
         button={yml.overlaped?.button}
         image={yml.overlaped?.image}
       />
 
-      {/* GEEKSINFO IS A TWOCOLUMN WITH TITLE */}
-      <GeeksInfo lang={pageContext.lang} />
+      {/* GEEKSINFO IS A TWOCOLUMN WITH TITLE 
+      <GeeksInfo lang={pageContext.lang} /> */}
+
+      {/* TWO COLUMN CREAR EN EL YML*/}
+      <TwoColumn
+        right={{ image: yml.two_columns_second?.image}}
+        left={{
+          heading: yml.two_columns_second?.heading,
+          sub_heading: yml.two_columns_second?.sub_heading,
+          bullets: yml.two_columns_second?.bullets,
+          content: yml.two_columns_second?.content,
+          button: yml.two_columns_second?.button,
+        }}
+        proportions={yml.two_columns_second?.proportions}
+        session={session}
+      />
 
       <UpcomingDates
         lang={pageContext.lang}
@@ -465,6 +480,34 @@ export const query = graphql`
             }
             bullets {
               items {
+                text
+              }
+            }
+          }
+          two_columns_second {
+            proportions
+            image {
+              style
+              src
+              shadow
+            }
+            heading {
+              text
+              font_size
+            }
+            sub_heading {
+              text
+              font_size
+            }
+            button {
+              text
+              color
+              background
+              path
+            }
+            bullets {
+              items {
+                heading
                 text
               }
             }
