@@ -37,12 +37,16 @@ const SchemaOrg = ({
     }
   `);
 
-  const faqs = dataQuery.allFaqYaml.edges.find(
-    ({ node }) => node.fields.lang === context.lang
-  )?.node.faq.flatMap((elem) => elem.questions);
+  const faqs = dataQuery.allFaqYaml.edges
+    .find(({ node }) => node.fields.lang === context.lang)
+    ?.node.faq.flatMap((elem) => elem.questions);
 
-  const campusLocation = context.locations.find(({ node }) => node.meta_info.slug === context.slug)?.node;
-  const faqsFilteredByLocation = faqs.filter((faq) => faq.locations?.includes(campusLocation?.breathecode_location_slug));
+  const campusLocation = context.locations.find(
+    ({ node }) => node.meta_info.slug === context.slug
+  )?.node;
+  const faqsFilteredByLocation = faqs.filter((faq) =>
+    faq.locations?.includes(campusLocation?.breathecode_location_slug)
+  );
 
   const baseSchema = [
     {
@@ -53,20 +57,21 @@ const SchemaOrg = ({
     },
   ];
   const page = [...baseSchema];
-  const location = [...baseSchema, {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: faqsFilteredByLocation.map((faq) => (
-      {
+  const location = [
+    ...baseSchema,
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: faqsFilteredByLocation.map((faq) => ({
         "@type": "Question",
         name: faq.question,
         acceptedAnswer: {
           "@type": "Answer",
           text: faq.answer,
         },
-      }
-    ))
-  }];
+      })),
+    },
+  ];
   const blog = [
     ...baseSchema,
     {
@@ -117,16 +122,14 @@ const SchemaOrg = ({
     {
       "@context": "https://schema.org",
       "@type": "FAQPage",
-      mainEntity: faqs.map((faq) => (
-        {
-          "@type": "Question",
-          name: faq.question,
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: faq.answer,
-          },
-        }
-      )),
+      mainEntity: faqs.map((faq) => ({
+        "@type": "Question",
+        name: faq.question,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: faq.answer,
+        },
+      })),
     },
   ];
 
