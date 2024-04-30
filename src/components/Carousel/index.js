@@ -30,8 +30,6 @@ const Carousel = ({
   const CustomNextArrow = (props) => {
     const { className, style, onClick } = props;
 
-    console.log("typeof nextArrow");
-    console.log(typeof nextArrow);
     if (typeof nextArrow === "function") return nextArrow({ onClick });
     return (
       <>
