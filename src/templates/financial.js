@@ -369,6 +369,7 @@ export const query = graphql`
             }
             icons {
               icon
+              color
               title
               content
             }

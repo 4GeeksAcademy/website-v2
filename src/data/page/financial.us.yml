@@ -70,16 +70,19 @@ iconogram:
   text_link: "#"
   swipable: false
   icons:
-  - icon: "contract-money"
+  - icon: "bill"
     title: Payment Plans - No interest
     content: " No interest: you can pay in up to 6 months"
-  - icon: "handmoney-new"
+  - icon: "money"
+    color: "#0084FF"
     title: Loans - long term
     content: "long term: 3, 4 or 5 years loan"
-  - icon: "hand-puzzle"
+  - icon: "hands-group"
+    color: "#25BF6C"
     title: Scholarships and partnerships
     content: "We are working with several organizations to reduce your tuition fee."
-  - icon: "briefcase-new"
+  - icon: "contract-2"
+    color: "#BE8BFF"
     title: Income Sharing Agreement
     content: "Only pay when you get a job above a thereshold"
   button:

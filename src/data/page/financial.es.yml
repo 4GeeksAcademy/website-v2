@@ -72,16 +72,19 @@ iconogram:
   text_link: "#"
   swipable: false
   icons:
-  - icon: "contract-money"
+  - icon: "bill"
     title: Planes de pago - Sin intereses
     content: " Sin intereses: puedes pagar en hasta 6 meses."
-  - icon: "handmoney-new"
+  - icon: "money"
+    color: "#0084FF"
     title: Financiamiento a largo plazo.
     content: "long term: 3, 4 or 5 years loan"
-  - icon: "hand-puzzle"
+  - icon: "hands-group"
+    color: "#25BF6C"
     title: Becas y alianzas.
     content: "Nos hemos asociado con varias organizaciones para que tu matrícula sea más asequible."
-  - icon: "briefcase-new"
+  - icon: "contract-2"
+    color: "#BE8BFF"
     title: Acuerdo de participación en ingresos
     content: "Solo pagas si encuentras un trabajo con un salario superior a un determinado monto."
   button:
