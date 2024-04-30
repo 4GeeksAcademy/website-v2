@@ -345,7 +345,8 @@ const Footer = ({ yml }) => {
           background={Colors.lightGray}
           padding="11px 17px 29px 17px"
           padding_tablet="31px 0"
-          margin="auto"
+          // margin="auto"
+          width="100%"
         >
           <Div
             gridArea_tablet="1/6/1/13"
