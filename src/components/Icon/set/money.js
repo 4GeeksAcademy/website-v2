@@ -2,14 +2,21 @@ import React from "react";
 
 export default (props) => (
   <svg
-    width={props.width || '65'}
-    height={props.height || '51'}
+    width={props.width || "65"}
+    height={props.height || "51"}
     style={props.style}
     viewBox="0 0 65 51"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <rect x="13" y="17" width="52" height="34" rx="17" fill={props.color || '#0084FF'} />
+    <rect
+      x="13"
+      y="17"
+      width="52"
+      height="34"
+      rx="17"
+      fill={props.color || "#0084FF"}
+    />
     <mask
       id="path-2-outside-1_12046_334"
       maskUnits="userSpaceOnUse"
