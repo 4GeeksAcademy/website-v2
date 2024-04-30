@@ -22,7 +22,7 @@ header:
 # Introduction Video here
 geekForce:
   - videoId: "ln3bQsV1BaQ"
-    image: ../../../static/images/staff/hernan-new.png
+    image: ../../../static/images/staff/hernan-new.webp
 
 # Banner of icons
 iconogram:

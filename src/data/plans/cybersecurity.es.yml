@@ -153,39 +153,44 @@ part_time:
     icons: 
       - "/images/stepex.png"     
 
-  - slug: 'chile-cs-pt'
+  - slug: 'chile-upfront-cs'
     academies: ['santiago-chile']
     recomended: true
-    scholarship: "Paga al contado"
-    payment_time: "Y obtén un descuento"
-    price: "4.500.000 CLP*"
+    scholarship: "Programa + Apoyo en la búsqueda laboral"
+    payment_time: "Paga al contado"
+    price: "3.000.000 CLP*"
     bullets:
-      - "Paga con transferencia bancaria, tarjeta de crédito o débito"    
-      - "*Precio sin descuento aplicado"
+      - "Paga con transferencia bancaria, tarjeta de crédito o débito"  
+      - "Hasta 12 cuotas sin interés con tarjeta de crédito"
+      - "*Descuento de hasta 500.000 CLP. Paga 3.000.000 CLP en vez de 3.500.000 CLP ¡Descuento sujeto a disponibilidad!"
+      - "Siempre hay un plan de pago disponible para que te unas a 4Geeks Academy, si no encuentras aquí lo que esperas, por favor contáctanos y trataremos de encontrar nuevas formas de ayudarte"      
     icons: 
       - "/images/visa-mastercard.png"
 
-  - slug: 'chile-geekforce-fs-pt'
-    academies: ['santiago-chaaile']
-    recomended: true
-    scholarship: "Pago de contado"
-    payment_time: "Y obtén un descuento"
-    price: "4.500.000 CLP*"
-    bullets:
-      - "Paga con transferencia bancaria, tarjeta de crédito o débito"    
-      - "*Precio sin descuento aplicado"
-    icons: 
-      - "/images/visa-mastercard.png"    
-
-  - slug: 'chile-cs-pt'
+  - slug: 'chile-solo-cs'
     academies: ['santiago-chile']
     recomended: false
-    scholarship: "Cuotas desde"
-    payment_time: ""
-    price: "~220.500 CLP"
+    scholarship: "Sólo paga el programa"
+    payment_time: "Enfócate en obtener nuevas habilidades. Paga al contado"
+    price: "2.750.000 CLP"
+    bullets:
+      - "Paga con transferencia bancaria, tarjeta de crédito o débito"  
+      - "Hasta 12 cuotas sin interés con tarjeta de crédito"
+      - "Siempre hay un plan de pago disponible para que te unas a 4Geeks Academy, si no encuentras aquí lo que esperas, por favor contáctanos y trataremos de encontrar nuevas formas de ayudarte"      
+      - "Pague solamente por el programa de ciberseguridad, si todavía no quieres contratar nuestro programa de apoyo profesional."  
+    icons: 
+      - "/images/visa-mastercard.png" 
+
+  - slug: 'chile-financed-cs'
+    academies: ['santiago-chile']
+    recomended: false
+    scholarship: "Financiamiento a tu medida"
+    payment_time: "Programa + Apoyo Laboral. Paga mensualmente"
+    price: "~184.800 CLP al mes"
     bullets:
       - "Financiamiento a tu medida desde 6 hasta 18 meses"  
       - "Se debe pagar un anticipo correspondiente al 20% del valor del programa" 
+      - "Si no encuentras aquí lo que esperas, por favor contáctanos y trataremos de encontrar nuevas formas de ayudarte" 
     icons: 
       - "/images//flevo-new.png"
 
