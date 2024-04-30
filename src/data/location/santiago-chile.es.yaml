@@ -91,14 +91,14 @@ two_columns:
   proportions: [6, 6]
   image:
     style: '{"border" : "5px solid black", "backgroundSize": "contain" }'
-    src: "/static/images/staff/luisa.png"
+    src: "/static/images/testimonials/joshua-bravo-testimonial.jpg"
     shadow: true  
-  video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
+  video: "https://www.youtube.com/watch?v=rtpfwwfE0yY"
   heading:
-    text: "La Experiencia de Luisa Glum en 4Geeks Academy en Santiago, Chile"
+    text: "La Experiencia de Joshua Bravo en 4Geeks Academy Chile"
     font_size: ["30px", "30px", "30px", "30px", "30px"]
   sub_heading:
-    text: "Desarrolla tus Habilidades Tecnológicas desde Santiago, Chile"
+    text: "Programa tu historia con 4Geeks Academy en Santiago de Chile"
     font_size: ["18px", "18px", "22px", "22px", "22px"]
   button:
     text: "¡Únete ahora!"
@@ -107,9 +107,9 @@ two_columns:
     path: "/es/aplica"
   bullets:
     items: 
-    - text: "Luisa Glum comparte su trayectoria personal y cómo 4Geeks Academy transformó su camino profesional en el cambiante panorama tecnológico de Santiago"
-    - text: "4Geeks Academy se enorgullece de tener una tasa de colocación laboral del 95% en los seis meses posteriores a la graduación, garantizando un progreso profesional concreto para nuestros estudiantes"
-    - text: "Preparación para desafíos del mundo real y oportunidades laborales en tecnología"
+    - text: "Joshua comparte su trayectoria personal que pasó a ser asistente de cocina a programador Fullstack"
+    - text: "Aprendió todo lo necesario para construir una pagina web desde cero, conocimientos que utilizó en su proyecto final y ahora en su carrera"
+    - text: "Con el Plan de ingresos compartidos Joshua pudo convertirse en un desarrollador sin tener que esperar a tener un pago completo"
 
 active_campaign_location_slug: "santiago-chile"
 breathecode_location_slug: "santiago-chile"
