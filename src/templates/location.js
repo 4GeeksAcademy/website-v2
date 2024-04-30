@@ -417,6 +417,7 @@ export const query = graphql`
             alt
           }
           meta_info {
+            slug
             title
             description
             image
