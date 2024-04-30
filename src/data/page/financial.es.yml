@@ -14,7 +14,7 @@ header:
   paragraph: Financia tu futuro con diversas opciones de financiación educativa, desde becas hasta métodos de pago inclusivos. Explore nuestra plataforma para encontrar soluciones de financiación inclusivas adaptadas a su trayectoria académica.
   tagline: CELEBRA EL MEJOR PRECIO DE LA CIUDAD
   sub_heading: Nunca dejamos de trabajar para construir un programa verdaderamente 'premium', pero asequible. Nuestra filosofía se basa en hacer que la educación en programación esté disponible para todas las personas.
-  image: "../../../static/images/images/Group-6663.png"
+  image: "../../../static/images/Group-6663.png"
   alt: "financing"
   button: Ver planes y precios
 
@@ -78,7 +78,7 @@ iconogram:
   - icon: "money"
     color: "#0084FF"
     title: Financiamiento a largo plazo.
-    content: "long term: 3, 4 or 5 years loan"
+    content: "Largo plazo: 3, 4 o 5 años de préstamo"
   - icon: "hands-group"
     color: "#25BF6C"
     title: Becas y alianzas.
