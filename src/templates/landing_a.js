@@ -836,6 +836,7 @@ export const query = graphql`
               src
               style
               link
+              shadow
             }
             programs {
               title
@@ -851,6 +852,7 @@ export const query = graphql`
               text
               color
               path
+              background
             }
             heading {
               text
