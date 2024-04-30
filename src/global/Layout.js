@@ -74,6 +74,7 @@ const Layout = ({ children, seo, context }) => {
               icon
               link
             }
+            we_accept
             policy {
               name
               link
