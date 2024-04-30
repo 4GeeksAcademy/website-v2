@@ -19,7 +19,7 @@ const Carousel = ({
   margin,
   maxWidth,
   customSettings,
-  previewArrow,
+  previousArrow,
   nextArrow,
   className,
   children,
@@ -61,11 +61,11 @@ const Carousel = ({
   const CustomPrevArrow = (props) => {
     const { className, style, onClick } = props;
 
-    if (typeof previewArrow === "function") return previewArrow({ onClick });
+    if (typeof previousArrow === "function") return previousArrow({ onClick });
 
     return (
       <>
-        {previewArrow && (
+        {previousArrow && (
           <Button
             padding="0"
             padding_xs="0"
