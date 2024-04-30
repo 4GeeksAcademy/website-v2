@@ -314,18 +314,15 @@ const Footer = ({ yml }) => {
         display_tablet="flex"
         maxWidth="1280px"
       >
-        <Div
-          margin="auto"
-          justifyContent="center"
-          alignItems="center"
-        >
+        <Div margin="auto" justifyContent="center" alignItems="center">
           <H4
             fontSize="13px"
             lineHeight="22px"
             width="fit-content"
             color={Colors.darkGray}
           >
-            {yml.we_accept}{"  "}
+            {yml.we_accept}
+            {"  "}
           </H4>
           <RoundImage
             url="/images/bitcoin.png"
