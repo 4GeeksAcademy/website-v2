@@ -366,6 +366,7 @@ const PricesAndPayment = (props) => {
             get_notified
             contact_carrer_advisor
             contact_link
+            we_accept
             top_label
             top_label_2
             plans_title
@@ -985,7 +986,7 @@ const PricesAndPayment = (props) => {
             width="fit-content"
             color={Colors.darkGray}
           >
-            We accept:{" "}
+            {info.we_accept}{" "}
           </H4>
           <RoundImage
             url="/images/bitcoin.png"
