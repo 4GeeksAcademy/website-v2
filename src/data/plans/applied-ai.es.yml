@@ -1,11 +1,26 @@
 full_time: []
 part_time:
+  - slug: 'plan-3'
+    academies: ['orlando', 'downtown-miami', 'austin-usa', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa']
+    recomended: false
+    scholarship: "Financiado"
+    payment_time: "Paga en 24 meses"
+    price: "~$145 p/m"
+    bullets: 
+      - "Puedes obtener una beca parcial y el monto restante con un plan de pago."
+      - "Siempre hay disponible un plan de pago para ayudarte a unirte a 4Geeks Academy."
+      - "Si no encuentras ningun plan que se ajuste a tus necesidades, por favor contáctanos para que podamos intentar encontrar otras formas de ayudarte."
+    icons: 
+      - "/images/ascent_logo.jpg"
+      - "/images/climb-logo.png"
+      - "/images/quotanda-logo.png"
+
   - slug: 'plan-2'
     academies: ['orlando', 'downtown-miami', 'austin-usa', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa']
     recomended: false
     scholarship: "Financiado"
     payment_time: "Paga en 12 meses"
-    price: "~$292p/m"
+    price: "~$266p/m"
     bullets: 
       - "Varios partners ofreciendo préstamos y planes de pago"
       - "Puedes obtener una beca parcial y el balance restante con un plan de pago"
@@ -15,15 +30,15 @@ part_time:
       - "/images/quotanda-logo.png"
 
   - slug: 'plan-4'
-    recomended: false
+    recomended: true
     academies: ['orlando', 'downtown-miami', 'austin-usa', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa']
     scholarship: "Pago Completo"
     payment_time: "Paga hoy"
-    price: "$4000"
+    price: "$3000"
     original_price: "$3500"
     bullets: 
+      - "Paga con trasnferencia bancaria, tarjeta de crédito o débito, Paypal, Bitcoin o Ethereum"
       - "Ahorras $500 USD"
-      - "Sólo si la Beca de Clark University no aplica (Desempleado o subempleado)"
 
   - slug: 'spain-upfront-ai-pt'
     academies: ['barcelona-spain', 'madrid-spain', 'malaga-spain', 'valencia-spain']
@@ -31,6 +46,7 @@ part_time:
     scholarship: "Paga de contado"
     payment_time: "Y obtén un descuento"
     price: "€3000*"
+    original_price: "€3500"
     bullets:
       - "Paga con trasnferencia bancaria, tarjeta de crédito o débito, Paypal, Bitcoin o Ethereum"
       - "*Descuento de hasta €500. Desde €3500 en vez de €3000. ¡Descuento sujeto a disponibilidad!"     
@@ -53,47 +69,49 @@ part_time:
       - "/images/bitcoin_logo.png"  
       - "/images/ethereum.png"    
                        
-  - slug: 'chile-ai-ufront'
+  - slug: 'chile-ai-upfront'
     academies: ['santiago-chile']
     recomended: true
     scholarship: "Paga al contado"
     payment_time: "Y obtén un descuento"
-    price: "~120.000 CLP*"
+    price: "800.000 CLP*"
     bullets:
       - "Paga con transferencia bancaria, tarjeta de crédito o débito"    
-      - "*Precio sin descuento aplicado"
+      - "Hasta 12 cuotas sin interés con tarjeta de crédito"
+      - "*Descuento de hasta 100.000 CLP"
     icons: 
       - "/images/visa-mastercard.png"
 
-  - slug: 'chile-cs-pt'
+  - slug: 'chile-financed-ai'
     academies: ['santiago-chile']
     recomended: false
-    scholarship: "Cuotas desde"
+    scholarship: "Financiamiento a tu medida"
     payment_time: "Pago a 12 meses"
-    price: "~120.000 CLP*"
+    price: "58.000 CLP al mes"
     bullets:
-      - "Financiamiento a tu medida desde 6 hasta 18 meses"  
+      - "Financiamiento a tu medida desde 6 hasta 12 meses"  
       - "Se debe pagar un anticipo correspondiente al 20% del valor del programa" 
+      - "Si no encuentras aquí lo que esperas, por favor contáctanos y trataremos de encontrar nuevas formas de ayudarte"
     icons: 
       - "/images//flevo-new.png"
 
   - slug: 'latam-financed-ai'
-    academies: ['montevideo-uruguay','bogota-colombia', 'costa-rica', 'mexicocity-mexico','quito-ecuador', 'panamacity-panama', 'buenosaires-argentina','lima-peru','lapaz-bolivia']
+    academies: ['montevideo-uruguay','bogota-colombia', 'costa-rica', 'mexicocity-mexico','quito-ecuador', 'panamacity-panama', 'buenosaires-argentina','lima-peru','lapaz-bolivia', 'caracas-venezuela']
     recomended: true
-    scholarship: "Paga una mensualidad por 12 meses"
+    scholarship: "Paga una mensualidad por 6 meses"
     payment_time: "Enfócate en obtener nuevas habilidades. Paga mensualmente."
-    price: "A partir de $120/m"
+    price: "A partir de $250/m"
     bullets: 
-      - "Ahorras $500. Pagas $1500 en lugar de $2000"
       - "Siempre hay un plan de pago disponible para que te unas a 4Geeks Academy"
       - "Si no encuentras aquí lo que esperas, por favor contáctanos y trataremos de encontrar nuevas formas de ayudarte"     
 
   - slug: 'latam-upfront-ai'
-    academies: ['montevideo-uruguay','bogota-colombia', 'costa-rica', 'mexicocity-mexico','quito-ecuador', 'panamacity-panama', 'buenosaires-argentina','lima-peru','lapaz-bolivia']
+    academies: ['montevideo-uruguay','bogota-colombia', 'costa-rica', 'mexicocity-mexico','quito-ecuador', 'panamacity-panama', 'buenosaires-argentina','lima-peru','lapaz-bolivia', 'caracas-venezuela']
     recomended: false
     scholarship: "Paga una sola vez"
     payment_time: "Ahorra en intereses y obtén un gran descuento adicional"
     price: "USD $1500"
+    original_price: "USD $2000"
     bullets:
       - "Ahorras $500. Pagas $1500 en lugar de $2000"
       - "Si no encuentras aquí lo que esperas, por favor contáctanos y trataremos de encontrar nuevas formas de ayudarte"     
