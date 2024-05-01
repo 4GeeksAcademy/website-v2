@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect, useContext, useRef } from "react";
 import { Header, Div, GridContainer } from "../components/Sections";
 import { H3, H4, Paragraph } from "../components/Heading";
 import { Colors, Button, Img, Anchor } from "../components/Styling";
@@ -15,6 +15,7 @@ import { SessionContext } from "../session";
 const Calendar = (props) => {
   const { pageContext, yml, data } = props;
   const [limit, setLimit] = useState(true);
+  const eventsTitle = useRef(null);
   const { session } = useContext(SessionContext);
   const [datas, setData] = useState({
     events: { catalog: [], all: [], filtered: [] },
@@ -240,14 +241,16 @@ const Calendar = (props) => {
       />
 
       {yml.events.title && (
-        <GridContainer
-          columns_tablet="1"
-          margin="30px 0"
-          margin_tablet="48px 0 38px 0"
-          id="upcoming-events"
-        >
-          <H3 textAlign="left">{yml.events.title}</H3>
-        </GridContainer>
+        <Div ref={eventsTitle} display="block">
+          <GridContainer
+            columns_tablet="1"
+            margin="30px 0"
+            margin_tablet="48px 0 38px 0"
+            id="upcoming-events"
+          >
+            <H3 textAlign="left">{yml.events.title}</H3>
+          </GridContainer>
+        </Div>
       )}
       <GridContainer
         columns_tablet="3"
@@ -351,7 +354,10 @@ const Calendar = (props) => {
           <Paragraph
             color={Colors.blue}
             cursor="pointer"
-            onClick={() => setLimit(!limit)}
+            onClick={() => {
+              setLimit(!limit);
+              if (eventsTitle?.current) eventsTitle.current.scrollIntoView();
+            }}
           >
             {content.show_less}
           </Paragraph>
