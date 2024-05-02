@@ -15,7 +15,7 @@ meta_info:
   # this UTM fields will be also included in the CRM contact
   utm_course: ["applied-ai"]
   utm_location: ["santiago-chile"]
-  automation: soft # comma separated, "soft" is the default value
+  automation: applied-ia-chile # comma separated, "soft" is the default value
   tag: request_more_info # comma separated, "request_more_info" is the default value
 
 navbar:
@@ -65,7 +65,7 @@ follow_bar:
     font_size: ["25px", "25px", "25px", "18px", "4.3vw"]
   button:
     text: "Escribir por WhatsApp"
-    path: "https://api.whatsapp.com/send/?phone=56920065786&text&type=phone_number&app_absent=0&utm_source=GADS&utm_medium=GADS&utm_campaign=GADS&utm_id=GADS&utm_term=GADS&utm_content=GADS"
+    path: "https://api.whatsapp.com/send/?phone=56972848039&text&type=phone_number&app_absent=0&utm_source=GADS&utm_medium=GADS&utm_campaign=GADS&utm_id=GADS&utm_term=GADS&utm_content=GADS"
   phone: 
     text: ""
 
@@ -165,7 +165,7 @@ components:
         text: "Aprende a identificar y aprovechar oportunidades de implementación de IA en entornos laborales."
         icon: "circle" 
       - heading: "Dominio de Herramientas de IA"
-        text: "Adquiere destrezas con herramientas como ChatGPT, Midjourney, StableDiffusion, y Claude."
+        text: "Adquiere destrezas con herramientas como ChatGPT, StableDiffusion, y Claude."
         icon: "circle" 
       - heading: "Perspectiva Ética y Futuro de la IA"
         text: "Discusión sobre ética, impacto social, y el panorama legal y regulatorio de la IA."

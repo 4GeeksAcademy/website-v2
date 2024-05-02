@@ -9,7 +9,6 @@ part_time:
     price: "~$145 p/m"
     bullets: 
       - "There is always a payment plan available to help you join 4Geeks Academy."
-      - "You can get a partial scholarship and the remaining balance with a payment plan"
       - "If you don't find anything that works for you here, please contact us so we can try to find other ways to help you."
     icons: 
       - "/images/ascent_logo.jpg"
@@ -24,7 +23,6 @@ part_time:
     price: "~$266 p/m"
     bullets: 
       - "There is always a payment plan available to help you join 4Geeks Academy."
-      - "You can get a partial scholarship and the remaining balance with a payment plan"
       - "If you don't find anything that works for you here, please contact us so we can try to find other ways to help you."
     icons: 
       - "/images/ascent_logo.jpg"
@@ -112,9 +110,9 @@ part_time:
     academies: ['montevideo-uruguay','bogota-colombia', 'costa-rica', 'mexicocity-mexico','quito-ecuador', 'panamacity-panama', 'buenosaires-argentina','lima-peru','lapaz-bolivia', 'caracas-venezuela']
     recomended: false
     scholarship: "Pay upfront and "
-    payment_time: "Save $500"
+    payment_time: "save $500"
     price: "USD $1500"
     original_price: "$2000"
     bullets:
-      - "Save $500. From $2000 to $1500."
+      - "save $500. From $2000 to $1500."
       - "If you don't find here what you are expecting, please contact us and we will try to find new ways to help"     

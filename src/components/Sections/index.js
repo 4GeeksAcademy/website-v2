@@ -777,8 +777,9 @@ export const Header = ({
   zIndex,
   id,
 }) => {
-
-  const multilineTitle = title.split("\n").map(l => <span className="d-block">{l}</span>)
+  const multilineTitle = title
+    .split("\n")
+    .map((l) => <span className="d-block">{l}</span>);
   return (
     <Grid
       background={background}
