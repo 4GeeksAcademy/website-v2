@@ -30,7 +30,7 @@ form:
   heading: "Conoce más información"
   motivation: "Completa el formulario y te enviaremos la información en unos minutos a tu correo electrónico."
   button_label: Obtener malla y más información
-  redirect: "https://meetings.hubspot.com/javiera-contreras?__hstc=150733353.2127a3a1c4f5adcc6600b24ac0229a8e.1700587210752.1701287076058.1701347349533.15&__hssc=150733353.1.1701347349533&__hsfp=608161142"  #you can redirect to another url or entirely diffrent website
+  redirect: "/es/gracias"  #you can redirect to another url or entirely diffrent website
 
 apply_schollarship: # form that is displayed at the end of the landing
   # title: "Get more info about this award-winning development course"
