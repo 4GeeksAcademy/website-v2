@@ -9,7 +9,7 @@ export const save_form = async (
   formData = null,
   tags = [],
   automations = [],
-  session = null,
+  session = null
 ) => {
   if (!Array.isArray(tags)) throw Error("Tags must be an array");
   if (typeof session !== "object") throw Error("Missing session");

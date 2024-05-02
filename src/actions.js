@@ -209,7 +209,7 @@ export const apply = async (data, session) => {
       body,
       [tag.value || tag],
       [automation.value || automation],
-      session,
+      session
     );
 
     // save conversion info to GTM
@@ -255,7 +255,7 @@ export const requestSyllabus = async (data, session) => {
       body,
       [tag.value || tag],
       [automation.value || automation],
-      session,
+      session
     );
 
     // save conversion info to GTM
@@ -286,7 +286,7 @@ export const beHiringPartner = async (data, session) => {
       body,
       ["hiring-partner"],
       ["hiring-partner"],
-      session,
+      session
     );
 
     setDataLayer({
@@ -416,7 +416,7 @@ export const processFormEntry = async (data, session) => {
       body,
       [tag.value || tag],
       [automation.value || automation],
-      session,
+      session
     );
 
     if (data.form_type.value === "landing") {

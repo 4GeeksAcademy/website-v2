@@ -190,7 +190,8 @@ const Apply = (props) => {
 
   const captchaChange = () => {
     const captchaValue = captcha?.current?.getValue();
-    if (captchaValue) setVal({ ...formData, token: { value: captchaValue, valid: true } });
+    if (captchaValue)
+      setVal({ ...formData, token: { value: captchaValue, valid: true } });
     else setVal({ ...formData, token: { value: null, valid: false } });
   };
   return (
@@ -683,7 +684,11 @@ const Apply = (props) => {
                 }
                 textColor={Colors.white}
                 padding=".45rem 3rem"
-                disabled={(formStatus.status === "loading" || !formData.token.valid) ? true : false}
+                disabled={
+                  formStatus.status === "loading" || !formData.token.valid
+                    ? true
+                    : false
+                }
               >
                 {formStatus.status === "loading"
                   ? "Loading..."
