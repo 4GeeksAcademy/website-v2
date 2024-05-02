@@ -10,8 +10,6 @@ export const save_form = async (
   tags = [],
   automations = [],
   session = null,
-  token = null,
-  action = null
 ) => {
   if (!Array.isArray(tags)) throw Error("Tags must be an array");
   if (typeof session !== "object") throw Error("Missing session");
@@ -42,8 +40,6 @@ export const save_form = async (
     body: JSON.stringify({
       ...formData,
       ...session.utm,
-      token,
-      action,
       tags: tags.join(","),
       automations: automations.join(","),
       utm_language: formData.utm_language || session.language,
