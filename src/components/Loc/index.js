@@ -2,10 +2,10 @@ import React, { useState, useEffect } from "react";
 import { useStaticQuery, graphql, Link } from "gatsby";
 import { H2, H3, Paragraph } from "../Heading";
 import { GridContainer, Div } from "../Sections";
-import { Img, Colors } from "../Styling";
+import { Colors } from "../Styling";
 import Icon from "../Icon";
 
-const Loc = ({ lang, yml, allLocationYaml }) => {
+const Loc = ({ lang, hideHeading, allLocationYaml }) => {
   const data = useStaticQuery(graphql`
     {
       allLocYaml {
@@ -13,10 +13,12 @@ const Loc = ({ lang, yml, allLocationYaml }) => {
           node {
             heading
             sub_heading
-            title_image
-            sub_title_image
-            image
-            choose
+            title
+            highlighted_text {
+              text
+              color
+            }
+            sub_title
             regions {
               name
               title
@@ -38,12 +40,11 @@ const Loc = ({ lang, yml, allLocationYaml }) => {
 
   const {
     heading,
-    image,
     sub_heading,
-    choose,
+    title,
+    highlighted_text,
+    sub_title,
     regions,
-    title_image,
-    sub_title_image,
   } = content;
 
   useEffect(() => {
@@ -159,9 +160,11 @@ const Loc = ({ lang, yml, allLocationYaml }) => {
     );
   };
 
+  const highlightedText = highlighted_text.map((elem, index) => `<span style="color:${elem.color};">${elem.text}</span>`).join(' ');
+
   return (
     <>
-      {heading && (
+      {heading && !hideHeading && (
         <GridContainer
           margin_tablet="35px auto"
           margin_xs="15px 0"
@@ -190,15 +193,12 @@ const Loc = ({ lang, yml, allLocationYaml }) => {
         padding_lg="0px"
         padding_md="0 80px"
         padding_tablet="0 40px"
-        // padding="0 0 5% 0"
         flexDirection_md="row"
         flexDirection_tablet="column"
         flexDirection_sm="column"
         flexDirection_xs="column"
         flexDirection="column"
         margin="0 auto 20px auto"
-        // margin="auto"
-        // width="70%"
         maxWidth="1280px"
         height="100%"
         maxHeight="none"
@@ -214,76 +214,41 @@ const Loc = ({ lang, yml, allLocationYaml }) => {
           margin_md="0 20px 0 0"
           margin_xxs="0 auto 20px auto"
         >
-          <H3
-            textAlign_md="left"
-            textAlign_tablet="center"
-            color={Colors.blue}
-            width="100%"
-            margin_xxs="0 20px 10px 20px"
-            margin_tablet="0 0 10px 0"
-          >
-            {title_image}
-          </H3>
-          {sub_title_image && /<\/?[a-z0-9]+>/g.test(sub_title_image) ? (
-            <Div
-              display="block"
-              margin_tablet="0 0 20px 0"
-              marginxs="0 0 5px 0"
-              textAlign_md="left"
-              textAlign_tablet="center"
-              textAlign="center"
-              color={Colors.darkGray2}
-              style={{
-                fontFamily: "Lato, sans-serif",
-                fontWeight: "700",
-                fontSize: "18px",
-                lineHeight: "22px",
-                color: Colors.darkGray2,
-              }}
-              // fontWeight="700"
-              dangerouslySetInnerHTML={{ __html: sub_title_image }}
-            />
-          ) : (
-            sub_title_image && (
-              <Paragraph
-                margin_tablet="0 0 5px 0"
-                marginxs="0 0 5px 0"
-                textAlign_tablet="left"
-                color={Colors.darkGray2}
-                fontWeight="700"
-                fontSize="18px"
-                lineHeight="22px"
-              >
-                {sub_title_image}
-              </Paragraph>
-            )
-          )}
-          {image && (
-            <Div
-              id="img-container"
-              height_tablet="280px"
-              height="200px"
-              order="-1"
-              order_tablet="0"
-              margin_tablet="0"
-              margin_xs="0 0 20px 0"
-            >
-              <Img
-                src={image}
-                // borderRadius={"1.25rem"}
-                borderRadius={"3px"}
-                // className="pointer"
-                alt={"4Geeks Academy Section"}
-                margin="auto"
-                width="100%"
-                height="100%"
-                maxHeight="300px"
-                minHeight_tablet="none"
-                minHeight="200px"
-                backgroundSize="contain"
-              />
-            </Div>
-          )}
+          <Paragraph
+            margin_tablet="0 0 5px 0"
+            marginxs="0 0 5px 0"
+            textAlign_tablet="left"
+            color={Colors.black}
+            opacity="1"
+            fontWeight="700"
+            fontSize="36px"
+            lineHeight="39px"
+            dangerouslySetInnerHTML={{ __html: title }}
+          />
+          <Paragraph
+            margin_tablet="0 0 5px 0"
+            marginxs="0 0 5px 0"
+            textAlign_tablet="left"
+            opacity="1"
+            fontWeight="800"
+            fontFamily="Archivo-Black"
+            fontSize="55px"
+            lineHeight="60px"
+            fontSize_tablet="96px"
+            lineHeight_tablet="104px"
+            dangerouslySetInnerHTML={{ __html: highlightedText }}
+          />
+          <Paragraph
+            margin_tablet="0 0 5px 0"
+            marginxs="0 0 5px 0"
+            textAlign_tablet="left"
+            color={Colors.black}
+            opacity="1"
+            fontWeight="700"
+            fontSize="36px"
+            lineHeight="39px"
+            dangerouslySetInnerHTML={{ __html: sub_title }}
+          />
         </Div>
         <ResponsiveMenu />
         <Div
@@ -298,7 +263,6 @@ const Loc = ({ lang, yml, allLocationYaml }) => {
           <Div
             id="links-container"
             flexShrink_tablet="0"
-            // flexDirection="column"
             width_tablet="100%"
             width_xs="100%"
             justifyContent="around"
@@ -331,7 +295,6 @@ const Loc = ({ lang, yml, allLocationYaml }) => {
                       fontSize="15px"
                       lineHeight="20px"
                       fontWeight="400"
-                      // margin="0 5px 0 0"
                       border="2px solid transparent"
                       borderBottomHover="2px solid black"
                       minWidth="max-content"

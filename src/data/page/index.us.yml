@@ -16,15 +16,15 @@ header_data:
     - Lifetime Coding Mentorship, endless Career Support, and a tech-driven community of developers.
     - 'Job Guarantee: get a job within the next 6 months upon graduation or money back, <a href="https://storage.googleapis.com/4geeks-academy-website/PDF%20and%20Docs/Conditions%20Job%20Guaranteed%20Program.pdf" style="text-decoration: none; color: #000000;"> conditions apply. </a>'
     - Learn everywhere, all the time, you choose the methodology.
-  join_button_text: CHOOSE A PROGRAM
+  join_button_text: Start a course →
   join_button_path: "#choose-program"
   free_button_text: TAKE FREE TRIAL AT NO COST
   free_button_path: ""
   #If it doesn't have a video it will show the image
-  #It must be a video from videoaks
+  #It must be a video from videoask
   # video: "https://www.videoask.com/f5rg0mmi4"
   video: ""
-  image: "../../../static/images/bg/more-new-main-home-bg.png"
+  image: "../../../static/images/bg/1250-sudents-bg.png"
 
 news:
   heading: "Read about this coding bootcamp in the news..."
@@ -44,20 +44,27 @@ choose_program:
 ## TWO COLUMNS
 two_columns:
   proportions: [6, 6]
+  justify: "center"
   image:
-    style: '{ "backgroundSize": "cover" }'
-    src: "/images/landing/feliz-empresario-laptop.png"
-    shadow: true  
+    style: '{ "backgroundSize": "contain" }'
+    src: "/images/landing/feliz-empresario-laptop-2.png"
+    shadow: false  
   heading:
     text: "Finance your future"
+    style: '{ "fontWeight": 400 }'
     font_size: ["30px", "30px", "30px", "30px", "30px"]
   sub_heading:
-    text: "We’re all about making our high-quality education affordable to everyone. That's why we offer multiple options to help you fund our coding bootcamps stress-free. Whether it's an ISA, scholarship, payment plan or Job Guarantee we're here to guide you every step of the way."
+    text: "We’re all about making our high-quality education affordable to everyone."
     font_size: ["16px", "16px", "16px", "16px", "16px"]
+  content:
+    text: |
+      We’re all about making our high-quality education affordable to everyone. 
+      That's why we offer multiple options to help you fund our coding bootcamps stress-free. Whether it's an ISA, scholarship, payment plan or Job Guarantee we're here to guide you every step of the way.
+    font_size: ["16px"]
   button:
-    text: "SEE ALL FINANCING OPTIONS"
+    text: "See all financing options"
     color: "white"
-    background: "black"
+    background: "#0084FF"
     path: "/us/financials"
 
 ## 4GEEKS VS OTHERS SECTION
@@ -67,8 +74,32 @@ geeks_vs_others:
   sub_heading_link: "/geeks-vs-others"
 
 why_4geeks:
-  heading: Why 4Geeks Academy?
-  sub_heading: ""
+  proportions: [6, 6]
+  image:
+    style: '{ "backgroundSize": "contain" }'
+    src: "/images/landing/hombre-con-laptop-2.png"
+    shadow: false  
+  heading:
+    text: "Why 4Ggeeks"
+    style: '{ "fontWeight": 400 }'
+    font_size: ["30px", "30px", "30px", "30px", "30px"]
+  sub_heading:
+    text: "Do you want to unleash your potential as a Full-Stack Developer and/or Data Scientist?"
+    font_size: ["16px", "16px", "16px", "16px", "16px"]
+  content:
+    text: |
+      Become a Full-Stack Developer and/or Data Scientist in just 18 weeks with 4Geeks Academy. No previous experience necessary. We have more than 8 years of experience, presence in different parts of the world and awards worldwide.
+
+      Join the academy and transform your career!
+    font_size: ["16px"]
+  button:
+    text: "Apply now"
+    color: "white"
+    background: "#0084FF"
+    path: "/us/apply"
+
+with_4geeks:
+  title: Hear it from our students
 
 ## JOIN 4GEEKS SECTION DATA
 join_geeks:

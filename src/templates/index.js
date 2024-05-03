@@ -20,7 +20,6 @@ import { SessionContext } from "../session.js";
 import Loc from "../components/Loc";
 import Badges from "../components/Badges";
 import With4Geeks from "../components/With4Geeks";
-import About4Geeks from "../components/About4Geeks";
 import OurPartners from "../components/OurPartners";
 import ChooseYourProgram from "../components/ChooseYourProgram";
 import Testimonials from "../components/Testimonials";
@@ -91,9 +90,6 @@ const Home = (props) => {
     <>
       <Div
         flexDirection="column"
-        margin={
-          isContentBarActive ? "138px auto 72px auto" : "72px auto 72px auto"
-        }
         margin_tablet={
           isContentBarActive ? "120px auto 108px auto" : "72px auto 108px auto"
         }
@@ -111,30 +107,31 @@ const Home = (props) => {
           position="relative"
           gridColumn_tablet="1/15"
         >
-          <Div
-            position="absolute"
-            zIndex="5"
-            left_tablet={yml.header_data.video ? "40%" : "50%"}
-            left="50%"
-            left_xxs="65%"
-            left_xs="74%"
-            top_tablet={yml.header_data.video ? "1%" : "25%"}
-            top="90px"
-            top_xxs="20px"
-            top_xs="100px"
-            width_xxs="80px"
-            width_sm="100px"
-            height_xxs="80px"
-            width_tablet="160px"
-            height_tablet="152px"
-            width="100px"
-            height="100px"
-          >
-            <Icon icon="logo-badge" width="100%" height="100%" />
-          </Div>
+          {yml.header_data.video && (
+            <Div
+              position="absolute"
+              zIndex="5"
+              left_tablet={yml.header_data.video ? "40%" : "50%"}
+              left="50%"
+              left_xxs="65%"
+              left_xs="74%"
+              top_tablet={yml.header_data.video ? "1%" : "25%"}
+              top="90px"
+              top_xxs="20px"
+              top_xs="100px"
+              width_xxs="80px"
+              width_sm="100px"
+              height_xxs="80px"
+              width_tablet="160px"
+              height_tablet="152px"
+              width="100px"
+              height="100px"
+            >
+              <Icon icon="logo-badge" width="100%" height="100%" />
+            </Div>
+          )}
           <Div
             flexDirection="column"
-            // justifyContent_tablet="evenly"
             alignItems="start"
             alignItems_tablet="start"
             margin_xxs="0 20px"
@@ -147,14 +144,14 @@ const Home = (props) => {
               margin_tablet="0"
               margin_sm="0 0 20px 0"
             >
-              {/* <CityH1 yml={yml} /> */}
               <H1
                 type="h1"
                 textAlign="left"
                 textShadow="none"
-                fontSize="15px"
+                fontSize="16px"
                 lineHeight="18px"
-                color="#606060"
+                fontWeight="400"
+                color={Colors.black}
               >
                 {city} {yml.header_data.tagline}
               </H1>
@@ -168,26 +165,29 @@ const Home = (props) => {
                 lineHeight_xxs="45px"
                 lineHeight_tablet="60px"
                 width_tablet="100%"
-                width_xs="80%"
-              >{`${yml.header_data.title}`}</H2>
+                fontFamily="Archivo-Black"
+              >
+                {`${yml.header_data.title}`}
+              </H2>
               <Div display="block" margin="20px 0">
                 {yml.header_data.bullets.map((bullet) => (
-                  <Div alignItems="center" margin="0 0 15px 0">
+                  <Div alignItems="center" margin="0 0 15px 0" gap="5px">
                     <Icon
-                      icon="check-circle"
-                      style={{ marginRight: "10px" }}
+                      icon="check"
                       fill={Colors.blue}
+                      color={Colors.blue}
+                      width="20px"
+                      height="15px"
                     />
                     <Paragraph
                       textAlign="left"
-                      padding="0 20% 0 0"
+                      padding_tablet="0 20% 0 0"
                       color={Colors.black}
                       fontSize="16px"
                       lineHeight="19px"
+                      opacity="1"
                       dangerouslySetInnerHTML={{ __html: bullet }}
                     />
-                    {/* {bullet}{" "}
-                    </Paragraph> */}
                   </Div>
                 ))}
               </Div>
@@ -200,6 +200,8 @@ const Home = (props) => {
                   color={Colors.blue}
                   margin="0 10px 0 0"
                   textColor="white"
+                  textTransform="none"
+                  fontSize="17px"
                   onClick={() => {
                     if (
                       yml.header_data.join_button_path &&
@@ -216,35 +218,11 @@ const Home = (props) => {
                 >
                   {yml.header_data.join_button_text}
                 </Button>
-                {/* <Button
-                  variant="outline"
-                  justifyContent="center"
-                  // width="200px"
-                  width_tablet="fit-content"
-                  color={Colors.blue}
-                  margin="0 0 0 10px"
-                  textColor={Colors.blue}
-                  onClick={() => {
-                    if (
-                      yml.header_data.free_button_path &&
-                      yml.header_data.free_button_path.indexOf("http") > -1
-                    )
-                      window.open(
-                        transferQuerystrings(
-                          yml.header_data.free_button_path,
-                          utm
-                        )
-                      );
-                    else navigate(yml.header_data.free_button_path);
-                  }}
-                >
-                  {yml.header_data.free_button_text}
-                </Button> */}
               </Div>
             </Div>
           </Div>
           <Div display="flex" height="auto" width="100%">
-            {indexVideo || sessionVideo ? (
+            {(indexVideo || sessionVideo) && false ? (
               <Div
                 height_tablet="623px"
                 width="100%"
@@ -325,14 +303,13 @@ const Home = (props) => {
         </GridContainerWithImage>
         <Div
           margin="70px auto 0 auto"
-          margin_tablet="90px auto 0 auto"
-          width="90%"
+          margin_tablet="30px auto 0 auto"
+          width="100%"
           className="badge-slider hideOverflowX__"
         >
           <News
             lang={pageContext.lang}
             limit={yml.news.limit}
-            // width={`17%`}
             height="45px"
             margin="0"
             justifyContent="between"
@@ -346,7 +323,19 @@ const Home = (props) => {
         //noMove // no movement and show slider
       />
 
-      <About4Geeks lang={data.allAbout4GeeksYaml.edges} />
+      <TwoColumn
+        left={{ image: yml.why_4geeks?.image }}
+        right={{
+          heading: yml.why_4geeks?.heading,
+          sub_heading: yml.why_4geeks?.sub_heading,
+          content: yml.why_4geeks?.content,
+          button: yml.why_4geeks?.button,
+        }}
+        proportions={yml.why_4geeks?.proportions}
+        session={session}
+      />
+
+      {/* <About4Geeks lang={data.allAbout4GeeksYaml.edges} /> */}
 
       <Credentials lang={data.allCredentialsYaml.edges} shadow={false} />
 
@@ -358,6 +347,7 @@ const Home = (props) => {
           session.location.breathecode_location_slug
         }
         playerHeight="600px"
+        title={yml.with_4geeks.title}
       />
       <ChooseYourProgram
         chooseProgramRef={chooseProgramRef}
@@ -375,12 +365,14 @@ const Home = (props) => {
           heading: yml.two_columns?.heading,
           sub_heading: yml.two_columns?.sub_heading,
           button: yml.two_columns?.button,
+          content: yml.two_columns?.content,
+          justify: yml.two_columns?.justify,
         }}
         proportions={yml.two_columns?.proportions}
         session={session}
       />
 
-      <OurPartners
+      {/* <OurPartners
         images={hiring.partners.images}
         margin="0"
         padding="50px 0"
@@ -395,8 +387,8 @@ const Home = (props) => {
             ? landingHiring.sub_heading
             : hiring.partners.sub_heading
         }
-      />
-      <Loc lang={pageContext.lang} allLocationYaml={data.allLocationYaml} />
+      /> */}
+      <Loc lang={pageContext.lang} allLocationYaml={data.allLocationYaml} hideHeading />
     </>
   );
 };
@@ -456,10 +448,6 @@ export const query = graphql`
             sub_heading_link
           }
           why_4geeks {
-            heading
-            sub_heading
-          }
-          two_columns {
             proportions
             image {
               style
@@ -469,8 +457,44 @@ export const query = graphql`
             heading {
               text
               font_size
+              style
             }
             sub_heading {
+              text
+              font_size
+            }
+            content {
+              text
+              font_size
+            }
+            button {
+              text
+              color
+              background
+              path
+            }
+          }
+          with_4geeks {
+            title
+          }
+          two_columns {
+            proportions
+            justify
+            image {
+              style
+              src
+              shadow
+            }
+            heading {
+              text
+              style
+              font_size
+            }
+            sub_heading {
+              text
+              font_size
+            }
+            content {
               text
               font_size
             }
