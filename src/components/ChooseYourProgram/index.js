@@ -118,10 +118,10 @@ const ChooseYourProgram = ({
           gridColumn_md="1 / 15"
           gridRow_tablet="2 / 4"
           gridTemplateColumns_md={
-            landingTemplate ? "repeat(2, 4fr)" : "repeat(3, 4fr)"
+            landingTemplate ? "repeat(2, 4fr)" : "repeat(4fr)"
           }
           gridTemplateColumns_tablet={
-            landingTemplate ? "repeat(2, 4fr)" : "repeat(3 , 32%)"
+            landingTemplate ? "repeat(2, 4fr)" : "repeat(4 , 25%)"
           }
           zIndex="1"
           margin="0px auto"
@@ -134,7 +134,7 @@ const ChooseYourProgram = ({
                 <Div
                   key={index}
                   display="flex"
-                  padding=" 24px 24px"
+                  padding=" 20px 20px"
                   //margin_xs="20px 0px"
                   margin_tablet="0px"
                   border="3px solid black"
