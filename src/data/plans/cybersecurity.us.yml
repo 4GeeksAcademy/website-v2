@@ -153,27 +153,42 @@ part_time:
       - "*Pay a small part of your salary when you find a job"
     icons: 
       - "/images/stepex.png"     
-  - slug: 'chile-geekforce-fs-pt'
+  - slug: 'chile-upfront-cs'
     academies: ['santiago-chile']
     recomended: true
-    scholarship: "Pay Upfront"
-    payment_time: "And get a discount"
-    price: "4.500.000 CLP*"
+    scholarship: "Program + Career Support"
+    payment_time: "Pay Upfront"
+    price: "3.000.000 CLP*"
     bullets:
       - "Pay with bank transfer, credit or debit card"    
-      - "*Price without discount applied"
+      - "*Discount up to 500.000 CLP. From 3.000.000 CLP instead of 3.500.000 CLP" 
+      - "There is always a payment plan available for you to join 4Geeks Academy, if you don't find here what you are expecting, please contact us and we will try to find new ways to help"   
     icons: 
       - "/images/visa-mastercard.png"   
 
-  - slug: 'chile-cs-pt'
+  - slug: 'chile-solo-cs'
+    academies: ['santiago-chile']
+    recomended: false
+    scholarship: "Only pay for the program"
+    payment_time: "Focus on gaining skills. Pay Upfront"
+    price: "2.750.000 CLP"
+    bullets:
+      - "Pay with bank transfer, credit or debit card"    
+      - "There is always a payment plan available for you to join 4Geeks Academy, if you don't find here what you are expecting, please contact us and we will try to find new ways to help"    
+      - "Pay only for the Cybersecurity program if you are not interested yet in our career support program."    
+    icons: 
+      - "/images/visa-mastercard.png"  
+    
+  - slug: 'chile-financed-cs'
     academies: ['santiago-chile']
     recomended: false
     scholarship: "Financed"
-    payment_time: "18 months payment"
-    price: "~220.500 CLP"
+    payment_time: "Program + Career Support. Pay monthly"
+    price: "~184.800 CLP per month"
     bullets:
       - "Tailor-made financing from 6 to 18 months"  
       - "An advance payment corresponding to 20% of the value of the program must be paid" 
+      - "If you don't find here what you are expecting, please contact us and we will try to find new ways to help"     
     icons: 
       - "/images//flevo-new.png"
 

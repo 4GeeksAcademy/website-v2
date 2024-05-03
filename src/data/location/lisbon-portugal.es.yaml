@@ -87,7 +87,7 @@ two_columns:
   proportions: [6, 6]
   image:
     style: '{"border" : "5px solid black", "backgroundSize": "contain" }'
-    src: "/static/images/staff/hernan-new.png"
+    src: "/static/images/staff/hernan-new.webp"
     shadow: true  
   video: "ln3bQsV1BaQ"
   heading:

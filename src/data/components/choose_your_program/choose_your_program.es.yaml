@@ -16,18 +16,17 @@ programs:
     description_mobile: "Online, presencial y flexible"
     link: "/es/coding-bootcamps/curso-datascience-machine-learning"
 
-  - title: "Applied AI"
-    sub_title: "No code"
-    description: "Explore in detail artificial intelligence and how to apply it in different industries, roles, and your work."
-    description_mobile: "Online, face-to-face and flexible"
-    icon: "applied-ai"
-    link: "/us/coding-bootcamps/applied-ai-course"
 
-  - title: "Blockchain y Web3"
-    sub_title: "Desde cero"
-    icon: "blockchain"
-    description: "Construye applicaciones en la Web3 utilizando Solidity y Etherium Blockchain. Obtén un trabajo como desarrolaldor de blockchain."
-    description_mobile: "Registro temprano"
-    link: "#"
-    text_link: Registro temprano
-    comming_soon: true
+  - title: "Curso de Ciberseguridad"
+    sub_title: "Para Windows y Linux"
+    description: "Conviértete en un especialista en ciberseguridad, preparado para identificar, gestionar y mitigar las vulnerabilidades del sistema de acuerdo con las normas ISO y otros estándares."  # Translated description
+    description_mobile: "En línea, presencial y flexible"
+    icon: "cyber-security"
+    link: "/es/coding-bootcamps/curso-inteligencia-artificial"
+
+  - title: "Inteligencia Artificial Aplicada"
+    sub_title: "Sin código"
+    description: "Explora en detalle la inteligencia artificial y cómo aplicarla en diferentes industrias, roles y tu trabajo."  # Translated description
+    description_mobile: "En línea, presencial y flexible"
+    icon: "applied-ai"
+    link: "/es/coding-bootcamps/curso-inteligencia-artificial"
