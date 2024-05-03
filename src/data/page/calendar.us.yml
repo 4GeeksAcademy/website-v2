@@ -1,44 +1,46 @@
 meta_info:
-    slug: next-dates
-    title: "Upcoming dates, cohorts, workshops and events at 4Geeks Academy"
-    visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
-    description: "Learn about 4Geeks Academy's upcoming cohorts and also our exciting workshops and events tailred for the local software development community"
-    image: ""
-    keywords: "4Geeks Academy Events, 4Geeks Academy Workshops, 4Geeks Academy Events, Workshops, Events, Upcoming Cohorts, Upcoming Dates"
-    redirects: ["/upcoming", "/dates", "/calendar", "/us/calendar"]
+  slug: next-dates
+  title: "Upcoming dates, cohorts, workshops and events at 4Geeks Academy"
+  visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
+  description: "Learn about 4Geeks Academy's upcoming cohorts and also our exciting workshops and events tailred for the local software development community"
+  image: ""
+  keywords: "4Geeks Academy Events, 4Geeks Academy Workshops, 4Geeks Academy Events, Workshops, Events, Upcoming Cohorts, Upcoming Dates"
+  redirects: ["/upcoming", "/dates", "/calendar", "/us/calendar"]
 
 seo_title: "Coding Bootcamp"
 show_more: Show more
 show_less: Show less
 header:
-    title: Upcoming Courses
-    paragraph: "Filter the events or cohorts based what you are interested on"
-    image: ""
-    image_alt: ""
+  title: Upcoming Courses
+  paragraph: "Filter the events or cohorts based what you are interested on"
+  image: ""
+  image_alt: ""
 events:
-    title: "Upcoming Events"
-    paragraph: ""
+  title: "Upcoming Events"
+  paragraph: ""
 button:
-    apply_button_text: "APPLY"
-    apply_button_link: "/us/apply"
-    cohort_more_details_text: "DETAILS"
-    event_register_button_link: "DETAILS"
+  apply_button_text: "APPLY"
+  apply_button_link: "/us/apply"
+  cohort_more_details_text: "DETAILS"
+  event_register_button_link: "DETAILS"
 cohorts:
-    title: "Next Dates"
-    paragraph: ""
-    button:
-        text: Select Location
-        top_label: Location / Mode
-    info:
-        date:
-        program_label: program
-        location_label: location
-        duration_label: duration
-        duration_weeks: 18 Weeks
-        duration_part_time: 18 Weeks
-        duration_full_time: 9 weeks
-        button_text: apply now
-        button_link: "/us/apply"
-    footer:
-        button_text_open: See more dates
-        button_text_close: See less dates
+  no_dates_message: "Currently, there are no upcoming dates for this program"
+  actionMessage: "Notify me of available dates"
+  title: "Next Dates"
+  paragraph: ""
+  button:
+    text: Select Location
+    top_label: Location / Mode
+  info:
+    date:
+    program_label: program
+    location_label: location
+    duration_label: duration
+    duration_weeks: 18 Weeks
+    duration_part_time: 18 Weeks
+    duration_full_time: 9 weeks
+    button_text: apply now
+    button_link: "/us/apply"
+  footer:
+    button_text_open: See more dates
+    button_text_close: See less dates
