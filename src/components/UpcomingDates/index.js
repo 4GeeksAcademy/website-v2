@@ -113,7 +113,10 @@ const UpcomingDates = ({
     const getData = async () => {
       try {
         setIsLoading(true);
-        const academySlug = session?.academyAliasDictionary?.[location] || location || academy?.value;
+        const academySlug =
+          session?.academyAliasDictionary?.[location] ||
+          location ||
+          academy?.value;
         const response = await getCohorts({
           academy: academySlug,
           limit: 10,
