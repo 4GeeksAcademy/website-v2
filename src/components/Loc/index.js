@@ -38,14 +38,8 @@ const Loc = ({ lang, hideHeading, allLocationYaml }) => {
   if (content) content = content.node;
   else return null;
 
-  const {
-    heading,
-    sub_heading,
-    title,
-    highlighted_text,
-    sub_title,
-    regions,
-  } = content;
+  const { heading, sub_heading, title, highlighted_text, sub_title, regions } =
+    content;
 
   useEffect(() => {
     regions.forEach((reg, ind, arr) => {
@@ -160,7 +154,11 @@ const Loc = ({ lang, hideHeading, allLocationYaml }) => {
     );
   };
 
-  const highlightedText = highlighted_text.map((elem, index) => `<span style="color:${elem.color};">${elem.text}</span>`).join(' ');
+  const highlightedText = highlighted_text
+    .map(
+      (elem, index) => `<span style="color:${elem.color};">${elem.text}</span>`
+    )
+    .join(" ");
 
   return (
     <>

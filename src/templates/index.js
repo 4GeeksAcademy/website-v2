@@ -388,7 +388,11 @@ const Home = (props) => {
             : hiring.partners.sub_heading
         }
       /> */}
-      <Loc lang={pageContext.lang} allLocationYaml={data.allLocationYaml} hideHeading />
+      <Loc
+        lang={pageContext.lang}
+        allLocationYaml={data.allLocationYaml}
+        hideHeading
+      />
     </>
   );
 };
