@@ -11,7 +11,7 @@ meta_info:
   visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   automation: downloadable # optional, lead as "null" if you don't know, it can be more than one (comma separated)
   tag: request_downloadable # mandatory: at lease one tag (comma separated)
-  current_download: "python-guide" #FALTA AGREGAR EL PDF DE LA GUIA DE HTML
+  current_download: "guia-html-css" #FALTA AGREGAR EL PDF DE LA GUIA DE HTML
 
 form:
   # posible fields: "first_name", "last_name", "full_name", "phone", "email"
