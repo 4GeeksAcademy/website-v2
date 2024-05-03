@@ -76,11 +76,6 @@ const Location = ({ data, pageContext, yml }) => {
         padding_lg="40px 0px"
         padding_tablet="40px 40px"
         columns_tablet="14"
-        margin={
-          isCustomBarActive(session)
-            ? "138px auto 30px auto"
-            : "72px auto 30px auto"
-        }
         margin_md={
           isCustomBarActive(session)
             ? "120px auto 30px auto"

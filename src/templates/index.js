@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useContext, useEffect } from "react";
 import { graphql, navigate } from "gatsby";
 import { H1, H2, Paragraph, Span } from "../components/Heading";
 import {
@@ -12,6 +12,7 @@ import {
 } from "../components/Sections";
 import { Button, Colors, StyledBackgroundSection } from "../components/Styling";
 import { Circle } from "../components/BackgroundDrawing";
+import Iconogram from "../components/Iconogram";
 import News from "../components/News";
 import Icon from "../components/Icon";
 import Credentials from "../components/Credentials";
@@ -20,6 +21,7 @@ import { SessionContext } from "../session.js";
 import Loc from "../components/Loc";
 import Badges from "../components/Badges";
 import With4Geeks from "../components/With4Geeks";
+import PricesAndPayment from "../components/PricesAndPayment";
 import OurPartners from "../components/OurPartners";
 import ChooseYourProgram from "../components/ChooseYourProgram";
 import Testimonials from "../components/Testimonials";
@@ -31,13 +33,12 @@ const Home = (props) => {
 
   const hiring = data.allPartnerYaml.edges[0].node;
   const landingHiring = yml.partners;
-  const { session } = React.useContext(SessionContext);
+  const { session } = useContext(SessionContext);
   const [city, setCity] = useState("");
 
-  //
-  // const city = session && session.location ? "" : "Miami";
+  const applyButton = session?.location?.button?.apply_button_text;
 
-  React.useEffect(() => {
+  useEffect(() => {
     console.log("HASH: ", window.location);
 
     if (
@@ -62,21 +63,7 @@ const Home = (props) => {
 
   const chooseProgramRef = useRef(null);
 
-  const goToChooseProgram = (e) => {
-    e.preventDefault();
-    window.scrollTo({
-      top: chooseProgramRef.current?.offsetTop,
-      behavior: "smooth",
-    });
-  };
-  const buttonProgram = {
-    es: "VER PROGRAMAS",
-    en: "CHOOSE PROGRAM",
-  };
-
   const isContentBarActive = true;
-  // (session?.location?.custom_bar.active && isTestMode) ||
-  // (session?.location?.custom_bar.active && !isDevelopment());
 
   const indexVideo = yml && yml.header_data && yml.header_data.video;
   const sessionVideo =
@@ -222,6 +209,7 @@ const Home = (props) => {
             </Div>
           </Div>
           <Div display="flex" height="auto" width="100%">
+            {/* IMPORTANT: REMOVE THE FALSE CONDITION */}
             {(indexVideo || sessionVideo) && false ? (
               <Div
                 height_tablet="623px"
@@ -329,15 +317,12 @@ const Home = (props) => {
           heading: yml.why_4geeks?.heading,
           sub_heading: yml.why_4geeks?.sub_heading,
           content: yml.why_4geeks?.content,
-          button: yml.why_4geeks?.button,
+          button: { ...yml.why_4geeks?.button, text: applyButton || yml.why_4geeks?.button?.text },
         }}
         proportions={yml.why_4geeks?.proportions}
         session={session}
       />
-
-      {/* <About4Geeks lang={data.allAbout4GeeksYaml.edges} /> */}
-
-      <Credentials lang={data.allCredentialsYaml.edges} shadow={false} />
+      <Iconogram yml={yml.iconogram} />
 
       <With4Geeks
         lang={pageContext.lang}
@@ -388,6 +373,12 @@ const Home = (props) => {
             : hiring.partners.sub_heading
         }
       /> */}
+      <PricesAndPayment
+        lang={pageContext.lang}
+        locations={data.allLocationYaml.edges}
+        defaultCourse="full-stack"
+        defaultSchedule="part_time"
+      />
       <Loc
         lang={pageContext.lang}
         allLocationYaml={data.allLocationYaml}
@@ -439,17 +430,9 @@ export const query = graphql`
             button_text
             button_link
           }
-          badges {
-            paragraph
-          }
           choose_program {
             title
             paragraph
-          }
-          geeks_vs_others {
-            heading
-            sub_heading
-            sub_heading_link
           }
           why_4geeks {
             proportions
@@ -476,6 +459,19 @@ export const query = graphql`
               color
               background
               path
+            }
+          }
+          iconogram {
+            heading {
+              text
+              font_size
+              style
+            }
+            swipable
+            icons {
+              icon
+              color
+              content
             }
           }
           with_4geeks {
@@ -508,58 +504,6 @@ export const query = graphql`
               background
               path
             }
-          }
-          join_geeks {
-            heading
-            sub_heading
-            geek_data {
-              geek_force_data {
-                content
-                icon_link
-              }
-              geek_pal_data {
-                content
-                icon_link
-              }
-
-              geek_force_heading
-              geek_pal_heading
-            }
-          }
-          alumni_header {
-            heading
-            sub_heading
-          }
-          testimonial_header {
-            heading
-            button_text
-            button_link
-          }
-        }
-      }
-    }
-    allCredentialsYaml(filter: { fields: { lang: { eq: $lang } } }) {
-      edges {
-        node {
-          credentials {
-            title
-            icon
-            value
-          }
-        }
-      }
-    }
-    allJobsStatisticsYaml(filter: { fields: { lang: { eq: $lang } } }) {
-      edges {
-        node {
-          id
-          jobs {
-            title
-            slug
-            sub_title
-            value
-            value_symbol
-            chart_data
           }
         }
       }
@@ -647,6 +591,7 @@ export const query = graphql`
     allLocationYaml(filter: { fields: { lang: { eq: $lang } } }) {
       edges {
         node {
+          active_campaign_location_slug
           breathecode_location_slug
           city
           name
@@ -660,54 +605,12 @@ export const query = graphql`
             keywords
             region
           }
+          fields {
+            lang
+            file_name
+          }
           seo_title
           online_available
-          header {
-            sub_heading
-            tagline
-            alt
-            image {
-              childImageSharp {
-                gatsbyImageData(
-                  layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                  width: 800
-                  placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
-                )
-              }
-            }
-          }
-          info_box {
-            heading
-            address
-            contact_heading
-            phone
-            email
-            image {
-              childImageSharp {
-                gatsbyImageData(
-                  layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                  width: 800
-                  placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
-                )
-              }
-            }
-          }
-          images_box {
-            images {
-              path {
-                childImageSharp {
-                  gatsbyImageData(
-                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                    width: 100
-                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
-                  )
-                }
-              }
-              alt
-            }
-            content
-            heading
-          }
         }
       }
     }
@@ -750,45 +653,6 @@ export const query = graphql`
         }
       }
     }
-    allAlumniProjectsYaml(filter: { fields: { lang: { eq: $lang } } }) {
-      edges {
-        node {
-          header {
-            tagline
-            sub_heading
-          }
-          projects {
-            project_name
-            slug
-            project_image {
-              childImageSharp {
-                gatsbyImageData(
-                  layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                  width: 800
-                  placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
-                )
-              }
-            }
-            project_content
-            project_video
-            live_link
-            github_repo
-            alumni {
-              first_name
-              last_name
-              job_title
-              github
-              linkedin
-              twitter
-            }
-          }
-          button_section {
-            button_text
-            button_link
-          }
-        }
-      }
-    }
     allChooseYourProgramYaml(filter: { fields: { lang: { eq: $lang } } }) {
       edges {
         node {
@@ -799,29 +663,6 @@ export const query = graphql`
             description
             description_mobile
             icon
-          }
-        }
-      }
-    }
-    allAbout4GeeksYaml(filter: { fields: { lang: { eq: $lang } } }) {
-      edges {
-        node {
-          heading
-          sub_heading
-          list {
-            title
-          }
-          paragraph
-          button_text
-          button_link
-          image {
-            childImageSharp {
-              gatsbyImageData(
-                layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                width: 1200
-                placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
-              )
-            }
           }
         }
       }

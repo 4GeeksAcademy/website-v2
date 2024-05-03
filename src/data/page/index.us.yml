@@ -98,6 +98,30 @@ why_4geeks:
     background: "#0084FF"
     path: "/us/apply"
 
+iconogram:
+  heading:
+    text: "Numbers that support us"
+    font_size:
+      - 45px
+      - 45px
+      - 45px
+      - 21px
+      - 21px
+    style: '{ "textAlign": "center", "fontSize": "40px", "fontWeight": 400 }'
+  swipable: false
+  icons:
+  - icon: "graduation-2"
+    content: "1100 Graduates"
+  - icon: "group-2"
+    color: "#23C520"
+    content: "7 Campus"
+  - icon: "briefcase-new"
+    color: "#7D79FF"
+    content: "89% hired"
+  - icon: "star-2"
+    color: "#0084FF"
+    content: "4.85 rating"
+
 with_4geeks:
   title: Hear it from our students
 

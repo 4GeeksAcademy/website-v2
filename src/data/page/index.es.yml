@@ -89,6 +89,30 @@ two_columns:
     background: "black"
     path: "/es/financiacion"
 
+iconogram:
+  heading:
+    text: "Números que nos respaldan"
+    font_size:
+      - 45px
+      - 45px
+      - 45px
+      - 21px
+      - 21px
+    style: '{ "textAlign": "center", "fontSize": "40px", "fontWeight": 400 }'
+  swipable: false
+  icons:
+  - icon: "graduation-2"
+    content: "1100 Graduados"
+  - icon: "group-2"
+    color: "#23C520"
+    content: "7 Campuses"
+  - icon: "briefcase-new"
+    color: "#7D79FF"
+    content: "89% contratados"
+  - icon: "star-2"
+    color: "#0084FF"
+    content: "4.85 de valoración"
+
 ## 4GEEKS VS OTHERS SECTION
 geeks_vs_others:
   heading: "¿Qué hace que este programa destaque?"
