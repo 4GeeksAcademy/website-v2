@@ -297,6 +297,7 @@ const Location = ({ data, pageContext, yml }) => {
         locations={data.allLocationYaml.edges}
         message={yml.upcoming.no_dates_message}
         actionMessage={yml.upcoming.actionMessage}
+        showMoreRedirect
       />
 
       <Staff lang={pageContext.lang} heading={yml?.staff?.heading} />
