@@ -30,7 +30,7 @@ const Program = ({ data, pageContext, yml }) => {
   const geek = data.allCourseYaml.edges[0].node;
   const [open, setOpen] = React.useState(false);
 
-  const defaultCourse = "datascience-ml";
+  const defaultCourse = "machine-learning";
   const program_type = yml.meta_info.slug.includes("full-time")
     ? "full_time"
     : "part_time";
@@ -484,6 +484,7 @@ export const query = graphql`
               src
               shadow
             }
+            video
             heading {
               text
               font_size
