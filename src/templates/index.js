@@ -317,7 +317,10 @@ const Home = (props) => {
           heading: yml.why_4geeks?.heading,
           sub_heading: yml.why_4geeks?.sub_heading,
           content: yml.why_4geeks?.content,
-          button: { ...yml.why_4geeks?.button, text: applyButton || yml.why_4geeks?.button?.text },
+          button: {
+            ...yml.why_4geeks?.button,
+            text: applyButton || yml.why_4geeks?.button?.text,
+          },
         }}
         proportions={yml.why_4geeks?.proportions}
         session={session}
