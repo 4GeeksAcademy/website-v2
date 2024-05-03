@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useContext } from "react";
 import { useStaticQuery, graphql, Link } from "gatsby";
-import { GridContainer, Div, Grid } from "../Sections";
-import { H2, H3, H4, H5, Paragraph } from "../Heading";
-import { Colors, Button, Img, Anchor } from "../Styling";
+import { GridContainer, Div } from "../Sections";
+import { H2, H3, H4, Paragraph } from "../Heading";
+import { Colors, Button, Spinner } from "../Styling";
 import dayjs from "dayjs";
 import Select, { SelectRaw } from "../Select";
 import "dayjs/locale/de";
@@ -11,51 +11,6 @@ import styled from "styled-components";
 import { Input } from "../Form";
 import { getCohorts, newsletterSignup } from "../../actions";
 import { SessionContext } from "../../session";
-import { node } from "prop-types";
-
-const info = {
-  us: {
-    "full-stack": "/us/coding-bootcamps/part-time-full-stack-developer",
-    "software-engineering": "/us/coding-bootcamps/software-engineer-bootcamp",
-    "machine-learning-pt-16w":
-      "/us/coding-bootcamps/machine-learning-engineering",
-    "full-stack-ft": "/us/coding-bootcamps/full-time-full-stack-developer",
-  },
-  es: {
-    "full-stack": "/es/coding-bootcamps/full-stack-part-time",
-    "software-engineering":
-      "/es/coding-bootcamps/ingenieria-de-software-programacion",
-    "machine-learning-pt-16w":
-      "/es/coding-bootcamps/curso-inteligencia-artificial",
-    "full-stack-ft": "/es/coding-bootcamps/full-stack-full-time",
-  },
-};
-const locationUrls = {
-  us: {
-    "santiago-chile": "/us/coding-campus/coding-bootcamp-santiago",
-    "downtown-miami": "/us/coding-campus/coding-bootcamp-miami",
-    "madrid-spain": "/us/coding-campus/coding-bootcamp-madrid",
-    online: "/us/coding-campus/online-coding-bootcamp",
-    "caracas-venezuela": "/us/coding-campus/coding-bootcamp-caracas",
-    "costa-rica": "/us/coding-campus/coding-bootcamp-costa-rica",
-  },
-  es: {
-    "downtown-miami": "/es/coding-campus/bootcamp-programacion-miami",
-    "santiago-chile": "/es/coding-campus/bootcamp-programacion-santiago",
-    "madrid-spain": "/es/coding-campus/bootcamp-programacion-madrid",
-    online: "/es/coding-campus/online-bootcamp-programacion",
-    "caracas-venezuela": "/es/coding-campus/bootcamp-programacion-caracas",
-    "costa-rica": "/es/coding-campus/bootcamp-programacion-costa-rica",
-  },
-};
-const locationText = {
-  us: "or",
-  es: "u",
-};
-let modality = {
-  full_time: "Full Stack Developer - Full Time",
-  part_time: "Full Stack Developer - Part Time",
-};
 
 const Form = styled.form`
   margin: 0 11px 0 0;
@@ -73,6 +28,7 @@ const UpcomingDates = ({
   message,
   defaultCourse,
   actionMessage,
+  showMoreRedirect,
 }) => {
   const dataQuery = useStaticQuery(graphql`
     {
@@ -81,10 +37,25 @@ const UpcomingDates = ({
           node {
             title
             paragraph
+            conector
+            to
+            remote
+            placeholder
             button {
               text
               top_label
             }
+            syllabus_alias {
+              default_course
+              course_slug
+              name
+            }
+            email_form_content {
+              heading
+              button_text
+              successful_text
+            }
+            online_bootcamp
             info {
               button_link
               button_text
@@ -117,8 +88,9 @@ const UpcomingDates = ({
     cohorts: { catalog: [], all: [], filtered: [] },
   });
   const [showForm, setShowForm] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const [academy, setAcademy] = useState(null);
-  const [filterType, setFilterType] = useState({
+  const [filterType] = useState({
     label: "Upcoming Courses and Events",
     value: "cohorts",
   });
@@ -138,41 +110,51 @@ const UpcomingDates = ({
   if (content) content = content.node;
   else return null;
 
+  const emailFormContent = content.email_form_content;
+  const syllabusAlias = content.syllabus_alias;
+
   useEffect(() => {
     const getData = async () => {
-      const academySlug = session.academyAliasDictionary[location]
-        ? session.academyAliasDictionary[location]
-        : location;
-      let cohorts = await getCohorts({
-        academy: academySlug,
-        limit: 10,
-        syllabus_slug_like: defaultCourse || undefined,
-      });
-      cohorts = cohorts?.results || [];
-      let syllabus = [];
-      for (let i in cohorts) {
-        let name = cohorts[i].syllabus_version.name;
-        name === "Full-Stack Software Developer FT"
-          ? (name = modality["full_time"])
-          : name;
-        name === "Full-Stack Software Developer"
-          ? (name = modality["part_time"])
-          : name;
-        syllabus.push(name);
-      }
+      try {
+        const academySlug = session.academyAliasDictionary[location]
+          ? session.academyAliasDictionary[location]
+          : location;
+        const response = await getCohorts({
+          academy: academySlug,
+          limit: 10,
+          syllabus_slug_like: defaultCourse || undefined,
+        });
 
-      for (let zx in cohorts) {
-        // console.log("COHORTS - modified", cohorts[zx].syllabus_version.name)
-        cohorts[zx].syllabus_version.name = syllabus[zx];
-      }
+        const cohorts = response?.results || [];
+        cohorts.forEach((cohort) => {
+          const syllabus =
+            syllabusAlias.find(
+              (syll) => syll.default_course === defaultCourse
+            ) ||
+            syllabusAlias.find((syll) =>
+              cohort.syllabus_version.slug
+                .toLowerCase()
+                .includes(syll.default_course)
+            );
 
-      setData((oldData) => ({
-        cohorts: {
-          catalog: oldData.cohorts.catalog,
-          all: cohorts,
-          filtered: cohorts,
-        },
-      }));
+          if (syllabus) {
+            cohort.syllabus_version.name = syllabus.name;
+            cohort.syllabus_version.courseSlug = syllabus.course_slug;
+          }
+        });
+
+        setData((oldData) => ({
+          cohorts: {
+            catalog: oldData.cohorts.catalog,
+            all: cohorts,
+            filtered: cohorts,
+          },
+        }));
+        setIsLoading(false);
+      } catch (e) {
+        console.log(e);
+        setIsLoading(false);
+      }
     };
     if (session?.academyAliasDictionary) getData();
   }, [session]);
@@ -183,21 +165,6 @@ const UpcomingDates = ({
       if (!formData[key].valid) return false;
     }
     return true;
-  };
-
-  const emailFormContent = {
-    heading:
-      lang === "us"
-        ? "Send your email to notify you when there is a date available for this campus"
-        : "Indicanos tu mail para avisarte cuando haya una fecha disponible para este campus",
-    buttonText:
-      lang === "us"
-        ? "Let me know when there is a date"
-        : "Avisenme cuando haya una fecha",
-    successfulText:
-      lang === "us"
-        ? "Thanks for subscribing! We will notify you when there is a date available for this campus."
-        : "¡Listo! Te avisaremos cuando haya una fecha disponible para este campus",
   };
 
   useEffect(() => {
@@ -219,7 +186,13 @@ const UpcomingDates = ({
   }, [session]);
   const buttonText = session?.location?.button.apply_button_text;
 
-  console.log("defaultCourse", defaultCourse);
+  if (isLoading)
+    return (
+      <Div margin="30px 0" justifyContent="center">
+        <Spinner />
+      </Div>
+    );
+
   return (
     <GridContainer
       id={id}
@@ -292,13 +265,7 @@ const UpcomingDates = ({
                 }}
                 options={data?.cohorts?.catalog}
                 placeholder={
-                  lang == "us"
-                    ? academy
-                      ? "Campus: " + academy.label
-                      : "Select one academy"
-                    : academy
-                    ? "Campus: " + academy.label
-                    : "Escoge una academia"
+                  academy ? `Campus: ${academy.label}` : content.placeholder
                 }
                 onChange={(opt) => {
                   setAcademy(opt);
@@ -321,7 +288,11 @@ const UpcomingDates = ({
         </Div>
         {Array.isArray(data.cohorts.filtered) &&
         data.cohorts.filtered.length > 0 ? (
-          data.cohorts.filtered.map((m, i) => {
+          data.cohorts.filtered.map((cohort, i) => {
+            const loc = locations.find(
+              ({ node }) =>
+                node.breathecode_location_slug === cohort.academy.slug
+            );
             return (
               i < 4 && (
                 <Div
@@ -347,32 +318,32 @@ const UpcomingDates = ({
                       fontWeight="700"
                       lineHeight="22px"
                     >
-                      {dayjs(m.kickoff_date)
+                      {dayjs(cohort.kickoff_date)
                         .locale(`${lang === "us" ? "en" : "es"}`)
                         .format("MMMM")}
                     </H4>
                     <Paragraph textAlign="left" fontWeight="700">
                       {`
-                                ${
-                                  lang === "us"
-                                    ? dayjs(m.kickoff_date)
-                                        .locale("en")
-                                        .format("MM/DD")
-                                    : dayjs(m.kickoff_date)
-                                        .locale("es")
-                                        .format("DD/MM")
-                                } 
-                                ${lang === "us" ? " to " : " al "} 
-                                ${
-                                  lang === "us"
-                                    ? dayjs(m.ending_date)
-                                        .locale("en")
-                                        .format("MM/DD")
-                                    : dayjs(m.ending_date)
-                                        .locale("es")
-                                        .format("DD/MM")
-                                }
-                                `}
+                        ${
+                          lang === "us"
+                            ? dayjs(cohort.kickoff_date)
+                                .locale("en")
+                                .format("MM/DD")
+                            : dayjs(cohort.kickoff_date)
+                                .locale("es")
+                                .format("DD/MM")
+                        } 
+                        ${content.to} 
+                        ${
+                          lang === "us"
+                            ? dayjs(cohort.ending_date)
+                                .locale("en")
+                                .format("MM/DD")
+                            : dayjs(cohort.ending_date)
+                                .locale("es")
+                                .format("DD/MM")
+                        }
+                      `}
                     </Paragraph>
                   </Div>
                   <Div
@@ -384,9 +355,15 @@ const UpcomingDates = ({
                       {content.info.program_label}
                     </H4>
 
-                    <Link to={info[lang][m.syllabus_version.slug] || ""}>
+                    <Link
+                      to={
+                        cohort.syllabus_version.courseSlug
+                          ? `/${lang}/coding-bootcamps/${cohort.syllabus_version.courseSlug}`
+                          : ""
+                      }
+                    >
                       <Paragraph textAlign="left" color={Colors.blue}>
-                        {m.syllabus_version.name}
+                        {cohort.syllabus_version.name}
                       </Paragraph>
                     </Link>
                   </Div>
@@ -400,21 +377,30 @@ const UpcomingDates = ({
                       {content.info.location_label}
                     </H4>
                     <Div>
-                      <Link to={locationUrls[lang][m.academy.slug] || ""}>
+                      <Link
+                        to={
+                          loc
+                            ? `/${lang}/coding-campus/${loc.node.meta_info.slug}`
+                            : ""
+                        }
+                      >
                         <Paragraph textAlign="left" color={Colors.blue}>
-                          {m.academy.city.name}
+                          {cohort.academy.city.name}
                         </Paragraph>
                       </Link>
 
-                      {m.academy.slug != "online" && (
-                        <Paragraph textAlign="left" margin="0 0 0 3px">
-                          {locationText[lang]}{" "}
-                          <Link
-                            color={Colors.blue}
-                            to={locationUrls[lang]["online"] || ""}
-                          >{`Online`}</Link>
-                        </Paragraph>
-                      )}
+                      {cohort.academy.slug !== "online" &&
+                        cohort.academy.city.name !== "Remote" && (
+                          <Paragraph textAlign="left" margin="0 0 0 3px">
+                            {content.conector}{" "}
+                            <Link
+                              color={Colors.blue}
+                              to={content.online_bootcamp}
+                            >
+                              {content.remote}
+                            </Link>
+                          </Paragraph>
+                        )}
                     </Div>
                   </Div>
 
@@ -427,11 +413,7 @@ const UpcomingDates = ({
                       {content.info.duration_label}
                     </H4>
                     <Paragraph textAlign="left">
-                      {m.syllabus_version.name === modality["full_time"]
-                        ? content.info.duration_full_time
-                        : m.syllabus_version.name === modality["part_time"]
-                        ? content.info.duration_part_time
-                        : content.info.duration_weeks}
+                      {content.info.duration_weeks}
                     </Paragraph>
                   </Div>
 
@@ -446,18 +428,26 @@ const UpcomingDates = ({
                         {content.info.location_label}
                       </H4>
                       <Div>
-                        <Link to={locationUrls[lang][m.academy.slug] || ""}>
+                        <Link
+                          to={
+                            loc
+                              ? `/${lang}/coding-campus/${loc.node.meta_info.slug}`
+                              : ""
+                          }
+                        >
                           <Paragraph textAlign="left" color={Colors.blue}>
-                            {m.academy.city.name}
+                            {cohort.academy.city.name}
                           </Paragraph>
                         </Link>
-                        {m.academy.slug != "online" && (
-                          <Link to={locationUrls[lang]["online"] || ""}>
+                        {cohort.academy.slug !== "online" && (
+                          <Link to={content.online_bootcamp}>
                             <Paragraph
                               textAlign="left"
                               margin="0 0 0 3px"
                               color={Colors.blue}
-                            >{`${locationText[lang]} Online`}</Paragraph>
+                            >
+                              {`${content.conector} ${content.remote}`}
+                            </Paragraph>
                           </Link>
                         )}
                       </Div>
@@ -467,11 +457,7 @@ const UpcomingDates = ({
                         {content.info.duration_label}
                       </H4>
                       <Paragraph textAlign="left">
-                        {m.syllabus_version.name === modality["full_time"]
-                          ? content.info.duration_full_time
-                          : m.syllabus_version.name === modality["part_time"]
-                          ? content.info.duration_part_time
-                          : content.info.duration_weeks}
+                        {content.info.duration_weeks}
                       </Paragraph>
                     </Div>
                   </Div>
@@ -532,7 +518,7 @@ const UpcomingDates = ({
                     margin="25px 0 10px 10px"
                     align="center"
                   >
-                    {emailFormContent.successfulText}
+                    {emailFormContent.successful_text}
                   </H4>
                 </Div>
               ) : (
@@ -607,7 +593,6 @@ const UpcomingDates = ({
                         errorMsg="Please specify a valid email"
                         required
                       />
-                      {/* <button type="submit">{formStatus.status === "loading" ? "Loading..." : "text"}</button> */}
                       <Button
                         height="40px"
                         background={Colors.blue}
@@ -631,7 +616,7 @@ const UpcomingDates = ({
                       >
                         {formStatus.status === "loading"
                           ? "Loading..."
-                          : emailFormContent.buttonText}
+                          : emailFormContent.button_text}
                       </Button>
                     </Form>
                   </Div>
@@ -641,7 +626,8 @@ const UpcomingDates = ({
           </>
         )}
         {Array.isArray(data.cohorts.filtered) &&
-          data.cohorts.filtered.length > 0 && (
+          data.cohorts.filtered.length > 0 &&
+          showMoreRedirect && (
             <Link to={content.footer.button_link}>
               <Paragraph margin="20px 0" color={Colors.blue}>
                 {content.footer.button_text}
