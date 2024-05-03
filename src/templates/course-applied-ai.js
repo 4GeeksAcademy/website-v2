@@ -224,6 +224,7 @@ const Program = ({ data, pageContext, yml }) => {
         actionMessage={courseDetails.upcoming.actionMessage}
         defaultCourse={defaultCourse}
         locations={data.allLocationYaml.edges}
+        showMoreRedirect
       />
       <PricesAndPayment
         background={`linear-gradient(to bottom, ${Colors.white} 50%, ${Colors.lightYellow2} 50%)`}
