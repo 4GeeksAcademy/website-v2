@@ -114,7 +114,10 @@ export default ({ children, ...props }) => {
         referral_code: getReferral(),
         utm_test: urlParams.get("utm_test") || undefined,
         language:
-          pageContext?.lang || urlParams.get("lang") || urlParams.get("language") || undefined,
+          pageContext?.lang ||
+          urlParams.get("lang") ||
+          urlParams.get("language") ||
+          undefined,
       },
     };
     const worker = new Worker(new URL("./worker.js", import.meta.url));
