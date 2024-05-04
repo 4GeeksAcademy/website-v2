@@ -13,7 +13,8 @@ import {
 // import ActionsWorker from "./actions.worker.js";
 export const SessionContext = createContext(defaultSession);
 
-export default ({ children }) => {
+export default ({ children, ...props }) => {
+  const { pageContext } = props;
   const data = useStaticQuery(graphql`
     query myQuerySession {
       allLocationYaml {
@@ -113,7 +114,7 @@ export default ({ children }) => {
         referral_code: getReferral(),
         utm_test: urlParams.get("utm_test") || undefined,
         language:
-          urlParams.get("lang") || urlParams.get("language") || undefined,
+          pageContext?.lang || urlParams.get("lang") || urlParams.get("language") || undefined,
       },
     };
     const worker = new Worker(new URL("./worker.js", import.meta.url));
@@ -146,10 +147,10 @@ export default ({ children }) => {
           setSession(_session);
           dayjs.locale(_session.language == "us" ? "en" : _session.language);
         },
-        setLocation: (slug) => {
+        setLocation: (slug, language) => {
           const location = locByLanguage(
             data.allLocationYaml,
-            session.language
+            language || session.language
           ).find((l) => l.breathecode_location_slug === slug);
           if (location) {
             const _session = { ...session, location };
