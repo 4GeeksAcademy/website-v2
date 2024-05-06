@@ -565,6 +565,7 @@ const Program = ({ data, pageContext, yml }) => {
         lang={pageContext.lang}
         message={pageDetails.upcoming.no_dates_message}
         locations={data.allLocationYaml.edges}
+        showMoreRedirect
       />
       <GridContainer padding_tablet="0" margin_tablet="0 0 62px 0">
         <Div height="1px" background="#EBEBEB"></Div>

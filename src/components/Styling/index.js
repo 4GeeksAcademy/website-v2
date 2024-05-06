@@ -667,3 +667,21 @@ export const Anchor = styled(StyledLink)`
 //     font-size: ${props => props.fs_xs};
 //     text-align: ${props => props.align_xs};
 //   }
+
+export const Spinner = styled.div`
+  border: ${(props) => `16px solid ${props.color || Colors.blue}`};
+  border-radius: 50%;
+  border-top-color: #3498db;
+  width: 120px;
+  height: 120px;
+  animation: spin 1s linear infinite;
+
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+`;
