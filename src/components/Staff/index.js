@@ -119,7 +119,7 @@ const Staff = (props) => {
           display="block"
         >
           <Carousel
-            previewArrow
+            previousArrow
             nextArrow
             customSettings={{
               dotsClass: "slick-dots-staff",
