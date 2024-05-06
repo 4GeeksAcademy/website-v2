@@ -100,6 +100,7 @@ socials:
   # - name: "Youtube"
   #   link: "https://www.youtube.com/4GeeksAcademy"
 
+we_accept: "Aceptamos:"
 policy:
   - name: "Políticas de Privacidad"
     link: "/es/privacidad"

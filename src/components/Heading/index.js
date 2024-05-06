@@ -7,10 +7,10 @@ import { Devices } from "../Responsive";
 import { Blink } from "../Animations";
 import { redirectTo } from "@reach/router";
 
-const Heading = ({ type, children, className, id }) => {
+const Heading = ({ type, children, className, id, ...rest }) => {
   const Comp = type;
   return (
-    <Comp id={id} className={className}>
+    <Comp id={id} className={className} {...rest}>
       {children}
     </Comp>
   );
