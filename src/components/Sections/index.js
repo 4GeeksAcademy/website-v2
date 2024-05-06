@@ -909,6 +909,7 @@ export const GridContainer = ({
   gridGap_tablet,
   gridTemplateRows,
   gridTemplateRows_tablet,
+  width,
   height,
   height_tablet,
   minHeight,
@@ -971,6 +972,7 @@ export const GridContainer = ({
       justifyContent_tablet={justifyContent_tablet}
       position={position}
       borderTop={borderTop}
+      width={width}
       maxWidth={maxWidth}
       height={height}
       height_tablet={height_tablet}

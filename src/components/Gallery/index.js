@@ -18,7 +18,7 @@ const Gallery = ({
   customSettingsCarousel,
   widthImage,
   heightImage,
-  previewArrow,
+  previousArrow,
   nextArrow,
   horizontal,
 }) => {
@@ -119,7 +119,7 @@ const Gallery = ({
                 ],
               }
             }
-            previewArrow={previewArrow}
+            previousArrow={previousArrow}
             nextArrow={nextArrow}
           >
             {Array.isArray(images) &&

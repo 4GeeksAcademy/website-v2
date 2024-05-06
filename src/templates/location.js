@@ -268,7 +268,7 @@ const Location = ({ data, pageContext, yml }) => {
           paragraph={yml?.images_box?.content}
           widthImage="315px"
           heightImage="347px"
-          previewArrow
+          previousArrow
           nextArrow
           //customSettingsCarousel={}
         />
