@@ -18,7 +18,7 @@ const LandingHeader = (props) => {
 
   useEffect(() => {
     if (yml.meta_info && yml.meta_info.utm_location)
-      setLocation(yml.meta_info?.utm_location[0]);
+      setLocation(yml.meta_info?.utm_location[0], pageContext.lang);
 
     const urlParams = new URLSearchParams(window.location.search);
     const _inLoc = urlParams.get("in") || null;
