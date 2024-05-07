@@ -62,6 +62,10 @@ button:
 badges:
   paragraph: "Este es el lugar para impulsar tu carrera aprendiendo a programar. Estamos muy orgullosos de nuestros programas y metodología para capacitar a los desarrolladores en solo unos meses y ayudarlos a impulsar sus carreras profesionales."
 
+success_cases:
+  title: Historias de éxito
+  content: 86% de nuestros alumnos han sido contratados
+
 ## CHOOSE YOUR PROGRAM /components/ChooseYourProgram
 choose_program:
   title: Elige tu programa
