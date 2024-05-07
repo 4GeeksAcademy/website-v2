@@ -27,7 +27,7 @@ export const Container = styled(Fragment)`
   flex: ${(props) =>
     props.flex || props.size ? `0 0 ${(props.size / 12) * 100}%` : null};
   max-width: ${(props) =>
-    props.size ? `${(props.size / 12) * 100}%` : props.maxWidth || "1366px"};
+    props.size ? `${(props.size / 12) * 100}%` : props.maxWidth || "1280px"};
   max-height: ${(props) => (props.maxHeight ? props.maxHeight : "none")};
   overflow: ${(props) => props.overflow};
   overflow-wrap: ${(props) => props.overflowWrap};
@@ -777,6 +777,9 @@ export const Header = ({
   zIndex,
   id,
 }) => {
+  const multilineTitle = title
+    .split("\n")
+    .map((l) => <span className="d-block">{l}</span>);
   return (
     <Grid
       background={background}
@@ -798,7 +801,7 @@ export const Header = ({
       <Grid
         gridTemplateColumns_tablet={`repeat(12, 1fr)`}
         gridArea_tablet="1/1/1/15"
-        maxWidth="1366px"
+        maxWidth="1280px"
         margin="auto"
       >
         {/* hacer cambios aqui ... remover svg en mobile */}
@@ -808,7 +811,7 @@ export const Header = ({
           gridArea_tablet={svg_image ? "1/1/1/7" : null}
         >
           <H2
-            type="h2"
+            type="h1"
             textAlign_tablet={textAlign_tablet}
             margin="0 0 11px 0"
             padding={paddingTitle || "0 20px"}
@@ -819,7 +822,7 @@ export const Header = ({
             {seo_title}
           </H2>
           <H1
-            type="h1"
+            type="h2"
             textAlign_tablet={textAlign_tablet}
             padding="0 20px"
             padding_tablet={
@@ -837,7 +840,7 @@ export const Header = ({
             //fontSize_tablet={fontSize_tablet || "50px"}
             zindex={zIndex}
           >
-            {hideArrowKey ? title : `< ${title} >`}
+            {multilineTitle}
           </H1>
           <Paragraph
             padding={paddingParagraph || "0"}
@@ -1336,7 +1339,7 @@ Div.defaultProps = {
 };
 
 Container.defaultProps = {
-  maxWidth: "1366px",
+  maxWidth: "1280px",
   padding: "17px",
   padding_tablet: "0 40px",
   padding_md: "0 80px",

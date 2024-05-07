@@ -74,7 +74,7 @@ const ChooseYourProgram = ({
         padding_md="10px 80px 50px 80px"
         padding_tablet="10px 40px 50px 40px"
         padding_xxs="0 20px 40px 20px "
-        maxWidth_tablet="1366px"
+        maxWidth_tablet="1280px"
         margin_tablet="0 auto 50px auto"
         margin_lg="0 auto 50px auto"
       >
@@ -118,10 +118,10 @@ const ChooseYourProgram = ({
           gridColumn_md="1 / 15"
           gridRow_tablet="2 / 4"
           gridTemplateColumns_md={
-            landingTemplate ? "repeat(2, 4fr)" : "repeat(3, 4fr)"
+            landingTemplate ? "repeat(2, 4fr)" : "repeat(4fr)"
           }
           gridTemplateColumns_tablet={
-            landingTemplate ? "repeat(2, 4fr)" : "repeat(3 , 32%)"
+            landingTemplate ? "repeat(2, 4fr)" : "repeat(4 , 25%)"
           }
           zIndex="1"
           margin="0px auto"
@@ -134,7 +134,7 @@ const ChooseYourProgram = ({
                 <Div
                   key={index}
                   display="flex"
-                  padding=" 24px 24px"
+                  padding=" 20px 20px"
                   //margin_xs="20px 0px"
                   margin_tablet="0px"
                   border="3px solid black"

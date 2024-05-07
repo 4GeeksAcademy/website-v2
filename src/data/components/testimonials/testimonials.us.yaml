@@ -22,12 +22,12 @@ testimonials:
     linkedin_url: "https://www.linkedin.com/in/willettrebecca/"
     student_thumb: "../../../../static/images/testimonials/rebecca-willett.jpeg"
     linkedin_image: "../../../../static/images/linkedin.png"
-  - student_name: Hernán García
-    include_in_marquee: true
-    short_content: "Software Developer at Celerity"
-    linkedin_url: "https://www.linkedin.com/in/hernan-garcia/"
-    student_thumb: "../../../../static/images/testimonials/hernan-garcia.jpeg"
-    linkedin_image: "../../../../static/images/linkedin.png"
+  # - student_name: Hernán García
+  #   include_in_marquee: true
+  #   short_content: "Software Developer at Celerity"
+  #   linkedin_url: "https://www.linkedin.com/in/hernan-garcia/"
+  #   student_thumb: "../../../../static/images/testimonials/hernan-garcia.jpeg"
+  #   linkedin_image: "../../../../static/images/linkedin.png"
   - student_name: João Henrique Xavier
     include_in_marquee: true
     short_content: "Software Engineer at NCCI"
@@ -55,8 +55,8 @@ testimonials:
     student_video: "https://www.youtube.com/watch?v=oeX_ocy6zv4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     hidden: false
-    linkedin_url: ""
-    linkedin_text: ""
+    linkedin_url: "https://www.linkedin.com/in/jonnycodes/"
+    linkedin_text: "Full Stack Developer at AutoBell"
     linkedin_image: "../../../../static/images/linkedin.png"
     source_url: ""
     ##source_url_text: ""
@@ -76,12 +76,12 @@ testimonials:
     student_video: "" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     hidden: false
-    linkedin_url: ""
-    linkedin_text: "Linkedin Perfil"
+    linkedin_url: "https://www.linkedin.com/in/joshua-bravo-leon/"
+    linkedin_text: "LinkedIn profile"
     linkedin_image: "../../../../static/images/linkedin.png"
     source_url: ""
     source_url_text: ""
-    short_content: "Full Stack Developer"
+    short_content: "Full Stack Developer at Regcheq"
     content: "I used to be a kitchen assistant and accountant, but now I'm a full stack developer at a startup thanks to 4Geeks. "
 
   - student_name: "Ana Romero"
@@ -98,13 +98,34 @@ testimonials:
     # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     hidden: false
     linkedin_url: ""
-    linkedin_text: "Linkedin Perfil"
+    linkedin_text: "LinkedIn profile"
     linkedin_image: "../../../../static/images/linkedin.png"
     source_url: ""
     source_url_text: ""
     short_content: "Full Stack Developer"
     content: "I wasted no time after graduating from high school and enrolled in 4Geeks Academy. It has been an excellent experience so far. I love their close-knit community that is always there to lend a helping hand."
-      
+
+  - student_name: "Kevin Soria"
+    slug: "kev-so"
+    country:
+      iso: LATAM
+      name: LATAM
+    featured: false
+    highlighted: false
+    testimonial_date: ""
+    rating: 5
+    student_thumb: "../../../../static/images/testimonials/kevin-soria.jpg"
+    student_video: "https://www.youtube.com/watch?v=JcZpQkKwP4E" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    hidden: false
+    linkedin_url: "https://www.linkedin.com/in/kevin-soria/"
+    linkedin_text: "LinkedIn profile"
+    linkedin_image: "../../../../static/images/linkedin.png"
+    source_url: ""
+    source_url_text: ""
+    short_content: "Software Engineer at RVCM"
+    content: "I really enjoy everyday sitting down and being able to solve problems and create projects, create things that weren't out there in the world and somewhat feel like an inventor of sorts I love  that about programming."
+            
   - student_name: "Virginia Martinez"
     slug: "virma"
     country:
@@ -118,13 +139,55 @@ testimonials:
     student_video: "" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     hidden: false
-    linkedin_url: ""
-    linkedin_text: "Linkedin Perfil"
+    linkedin_url: "https://www.linkedin.com/in/virginiakmartinez"
+    linkedin_text: "LinkedIn profile"
     linkedin_image: "../../../../static/images/linkedin.png"
     source_url: ""
     source_url_text: ""
-    short_content: "Full Stack Developer"
+    short_content: "FrontEnd Developer at Staff & Go"
     content: "I used to work in UX UI, but now I'm a Fullstack Developer. I highly recommend 4Geeks Academy to anyone who wants to learn how to code."
+
+  - student_name: "Fernando Villanueva"
+    slug: "fer-vill"
+    country:
+      iso: España
+      name: España
+    featured: false
+    highlighted: false
+    testimonial_date: ""
+    rating: 5
+    student_thumb: "../../../../static/images/testimonials/fernando-manrique-villanueva.jpg"
+    student_video: "" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    hidden: false
+    linkedin_url: "https://www.linkedin.com/in/fernando-m-544ba12b4/"
+    linkedin_text: "LinkedIn profile"
+    linkedin_image: "../../../../static/images/linkedin.png"
+    source_url: ""
+    # source_url_text: ""
+    short_content: "QA Engineer en Deutsche Bank"
+    content: "Fernando Villanueva, a software quality technician, finds it crucial to understand how websites are currently built. The 4Geeks Academy bootcamp has equipped him with the tools to assess web pages accurately, enhancing his performance at work."
+
+  - student_name: "Carlos Avila"
+    slug: "car-avi"
+    country:
+      iso: LATAM
+      name: LATAM
+    featured: false
+    highlighted: false
+    testimonial_date: ""
+    rating: 5
+    student_thumb: "../../../../static/images/testimonials/carlos-avila.jpg"
+    student_video: "" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    hidden: false
+    linkedin_url: "https://www.linkedin.com/in/carlos-e-avila/"
+    linkedin_text: "LinkedIn profile"
+    linkedin_image: "../../../../static/images/linkedin.png"
+    source_url: ""
+    # source_url_text: ""
+    short_content: "Web Developer at Everwell Parts, Inc."
+    content: "Just give it a try, you'll learn because the 4Geeks system nudges you in that direction. 4Geeks is the best choice for a career change and learning how to program."
 
   - student_name: "Olson Dimache"
     slug: "ols-di"
@@ -140,56 +203,14 @@ testimonials:
     student_video: "https://www.youtube.com/watch?v=dQrMEb8iiyM" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     hidden: false
-    linkedin_url: ""
-    linkedin_text: ""
+    linkedin_url: "https://www.linkedin.com/in/jdimanche/"
+    linkedin_text: "LinkedIn profile"
     linkedin_image: "../../../../static/images/linkedin.png"
     source_url: ""
     ##source_url_text: ""
-    short_content: "Full Stack Developer"
-    content: ""
+    short_content: "Senior Software Engineer II en Domino Data Labs"
+    content: "This is like when you go to the ocean the most important part is getting your feet wet, I would recommend it, jump in, go for it and after this bootcamp I feel ready to jump into the middle of the ocean."
 
-  - student_name: "Fernando Villanueva"
-    slug: "fer-vill"
-    country:
-      iso: España
-      name: España
-    featured: false
-    highlighted: false
-    testimonial_date: ""
-    rating: 5
-    student_thumb: "../../../../static/images/testimonials/fernando-manrique-villanueva.jpg"
-    student_video: "" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
-    # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
-    hidden: false
-    linkedin_url: ""
-    linkedin_text: "Linkedin Perfil"
-    linkedin_image: "../../../../static/images/linkedin.png"
-    source_url: ""
-    # source_url_text: ""
-    short_content: "Full Stack Developer"
-    content: "Fernando Villanueva, a software quality technician, finds it crucial to understand how websites are currently built. The 4Geeks Academy bootcamp has equipped him with the tools to assess web pages accurately, enhancing his performance at work."
-      
-  - student_name: "Carlos Avila"
-    slug: "car-avi"
-    country:
-      iso: LATAM
-      name: LATAM
-    featured: false
-    highlighted: false
-    testimonial_date: ""
-    rating: 5
-    student_thumb: "../../../../static/images/testimonials/carlos-avila.jpg"
-    student_video: "" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
-    # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
-    hidden: false
-    linkedin_url: ""
-    linkedin_text: "Linkedin Perfil"
-    linkedin_image: "../../../../static/images/linkedin.png"
-    source_url: ""
-    # source_url_text: ""
-    short_content: "Full Stack Developer"
-    content: "Just give it a try, you'll learn because the 4Geeks system nudges you in that direction. 4Geeks is the best choice for a career change and learning how to program."
-      
   - student_name: "Ibai Fernández"
     slug: "ibai"
     country:
@@ -203,12 +224,12 @@ testimonials:
     student_video: "" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     hidden: false
-    linkedin_url: ""
-    linkedin_text: "Linkedin Perfil"
+    linkedin_url: "https://www.linkedin.com/in/ibaifernandez/"
+    linkedin_text: "LinkedIn profile"
     linkedin_image: "../../../../static/images/linkedin.png"
     source_url: ""
     # source_url_text: ""
-    short_content: "Full Stack Developer"
+    short_content: "Web designer at LFi"
     content: "Before joining the academy, I already had some experience with programming. WordPress paved the way for me to handle code, and I had prior experience with other coding bootcamps. However, starting in 2023, thanks to a shared agreement and invested effort, I now have two jobs as a programmer."
 
   - student_name: "Veronica Larrondo"
@@ -224,12 +245,12 @@ testimonials:
     student_video: "" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     hidden: false
-    linkedin_url: ""
-    linkedin_text: "Linkedin Perfil"
+    linkedin_url: "https://www.linkedin.com/in/vmlarrondo/"
+    linkedin_text: "LinkedIn profile"
     linkedin_image: "../../../../static/images/linkedin.png"
     source_url: ""
     source_url_text: ""
-    short_content: "Full Stack Developer"
+    short_content: "Software Engineer at Tekton Labs"
     content: "Among the skills that are developed when learning to program are conflict resolution, management, and adaptability. I have found the course to be excellent, from the mentoring to the community, which has been a great help during this process."
 
   - student_name: "Naila Kaliyeva"
@@ -251,7 +272,7 @@ testimonials:
     linkedin_image: "../../../../static/images/linkedin.png"
     source_url: ""
     ##source_url_text: ""
-    short_content: "Full Stack Developer"
+    short_content: "Freelance Web developer"
     content: |
       I love 4Geeks Academy's approach to teaching students. There are always at least three 
       tutors who will make sure you master your skills and will not give up on you if there's 
@@ -277,7 +298,7 @@ testimonials:
     linkedin_image: "../../../../static/images/linkedin.png"
     source_url: ""
     #source_url_text: ""
-    short_content: "Full Stack Developer"
+    short_content: "Web Desing Specialist at Apple"
     content: |
       I felt lost in my career and could not see clear goals for myself anymore. I came across 
       this great opportunity to join this community of knowledge and, to top it all off, great 
@@ -298,6 +319,29 @@ testimonials:
   #     I've been struggling a lot trying to make a dynamic website, so I started to look
   #     for a coding school in Miami and I found the best one: 4Geeks Academy. And thanks to
   #     the Income Sharing Agreement, I could enroll right away and pay once I found a job.
+
+  - student_name: Hernan García
+    slug: "her-gar"
+    country:
+      iso: us
+      name: United States of America
+    featured: true
+    highlighted: true
+    testimonial_date: ""
+    rating: 5
+    student_thumb: "../../../../static/images/staff/hernan-new.webp"
+    student_video: "https://www.youtube.com/watch?v=ln3bQsV1BaQ" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    hidden: false
+    linkedin_url: "https://www.linkedin.com/in/hernan-garcia/"
+    linkedin_text: "Linkedin Profile"
+    linkedin_image: "../../../../static/images/linkedin.png"
+    source_url: ""
+    #source_url_text: ""
+    short_content: "Full Stack Developer at Celerity"
+    content: |
+      Before I decided to become a developer, I had several works, I did not enjoy those works so I tried to put as much effort into earning a significant amount of money. Thanks to that vision, I became a full-stack developer, and 4Geeks was part of that process. I’ll recommend 4Geeks Academy.
+
   - student_name: "Charles Fabricius"
     slug: "cha-fabr"
     country:
@@ -316,7 +360,7 @@ testimonials:
     linkedin_image: "../../../../static/images/linkedin.png"
     source_url: ""
     #source_url_text: ""
-    short_content: "Full Stack Developer"
+    short_content: "Marketing Designer Developer at Legacy Research Group"
     content: |
       Overall just a great group of people with a common goal. I came into 4Geeks with little to 
       no knowledge about coding and after 16 weeks I was building projects I could have never 
@@ -324,6 +368,23 @@ testimonials:
       become a successful developer ready for hire.... Ask as many questions as you need and
       they will be happy to help. Not to mention the lifetime support you get even after 
       completing the Bootcamp.
+
+  - student_name: "Gabriela Rodriguez"
+    featured: false
+    highlighted: false
+    rating: 5
+    last_name: "Rodriguez"
+    job_title: "Web Developer"
+    student_thumb: "../../../../static/images/testimonials/gabriela-rodrigez.webp"
+    student_video: "https://www.youtube.com/watch?v=l0OgTgDIMnM" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    hidden: false
+    github: "https://github.com/gabsssrod"
+    # linkedin_url: "https://www.linkedin.com/in/gabriela-rodriguez-2b5235187/"
+    linkedin_text: "Linkedin Profile"
+    linkedin_image: "../../../../static/images/linkedin.png"
+    short_content: "Full Stack Developer"
+    content: "A love for programming that started as a hobby soon blossomed into a career aspiration. With a booming job market and a growing dissatisfaction with my current job, I knew it was time to make a change.  4Geeks Academy's well-structured curriculum and competitive pricing made it the perfect platform to launch my coding journey."
 
   - student_name: "Fernando Funez"
     featured: false
@@ -339,7 +400,7 @@ testimonials:
     linkedin_image: "../../../../static/images/linkedin.png"
     source_url: ""
     #source_url_text: ""
-    short_content: "Full Stack Developer"
+    short_content: "Front End Developer at Hogart Worldwide"
     content: |
       I highly recommend this coding boot camp!!!! Before 4Geeks I never had any experience with 
       code - I didn't know where to start. Within 10 weeks I was able to grasp the core concepts 
@@ -359,7 +420,7 @@ testimonials:
     linkedin_image: "../../../../static/images/linkedin.png"
     source_url: ""
     #source_url_text: ""
-    short_content: "Full Stack Developer"
+    short_content: "Full Stack Developer at Facebook"
     content: |
       This program was definitely one of the hardest things I've done in my life. It was 16 weeks of 
       constant work and practice. All things in life worth having is not going to be easily obtained. 
@@ -384,6 +445,94 @@ testimonials:
       the professors have been a great help along the process. I would recommend this Bootcamp to 
       everyone.
 
+  - student_name: "Guensie Grecy"
+    include_in_marquee: true
+    featured: true
+    highlighted: false
+    testimonial_date: ""
+    rating: 5
+    student_thumb: "../../../../static/images/testimonials/guensie-grecy.jpg"
+    student_video: "https://www.youtube.com/watch?v=LvnxLyqaQDo" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    linkedin_url: "https://www.linkedin.com/in/guensiegrecy/"
+    linkedin_text: "Linkedin Profile"
+    linkedin_image: "../../../../static/images/linkedin.png"
+    hidden: false
+    source_url: ""
+    #source_url_text: ""
+    video_url: "https://www.youtube.com/watch?v=LvnxLyqaQDo"
+    short_content: "Third-Party Risk Management at GitHub"
+    content: |
+      I was a lawyer for 6 years and I decided to change my career. I attended 4Geeks Academy, a coding bootcamp, that was last year (2018), I graduated in August, and after graduating in October, I was able to get a job as a web developer. I had no background whatsoever in coding. I didn't know anything about anything computer-technology wise, so that's an encouragement because it's possible!
+
+  - student_name: "Javier Murillo"  
+    featured: false  
+    highlighted: false  
+    testimonial_date: "" 
+    country:
+      iso: es  
+      name: España  
+    rating: 5  
+    student_thumb: "../../../../static/images/testimonials/javier-murillo-testimonial.jpg" 
+    student_video: ""  # URL to student video (if any)
+    # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # URL to student video (if any)
+    hidden: false  
+    linkedin_url: "https://www.linkedin.com/in/javiermurilloromero"  
+    linkedin_text: "Linkedin Perfil"  
+    linkedin_image: "../../../../static/images/linkedin.png" 
+    source_url: ""  # Source URL (if any)
+    #source_url_text: ""  # Text for source URL button (if any)
+    short_content: "Desarrollador Web en beBee"  # Short description of the student
+    content: |
+      At first I had many doubts and wondered if I could do it, and I did. Once I entered 4Geeks and the weeks and projects went by, I realized that my skills were increasing. At 4Geeks they teach you how to program, how to solve problems, you learn logical thinking, new languages, etc.
+      I encourage you to enter the world of programming with 4Geeks Academy.
+
+  - student_name: Joao Henrique Xavier
+    slug: "joao-xav"
+    country:
+      iso: us
+      name: United States of America
+    featured: true
+    highlighted: true
+    testimonial_date: ""
+    rating: 5
+    student_thumb: "../../../../static/images/staff/joao.png"
+    student_video: "https://www.youtube.com/watch?v=MBXqEnhodx0" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    hidden: false
+    linkedin_url: "https://www.linkedin.com/in/joao-henrique-xavier/"
+    linkedin_text: "Linkedin Profile"
+    linkedin_image: "../../../../static/images/linkedin.png"
+    source_url: ""
+    #source_url_text: ""
+    short_content: "Software Engineer at NCCI"
+    content: |
+      Before 4Geeks, I worked in law enforcement; after that, I wasn't very motivated by the idea of law enforcement.
+      But when I came to live in San Francisco, I learned about technology and the benefits that come with working in this field.
+      and this is what brought me to 4Geeks. Now I am working for a company called NCCI, which is located in Boca, and it is amazing.
+      I couldn't have made a better decision by choosing to code.
+
+  - student_name: "Mattia Tozzi"
+    slug: "ma-tozzi"
+    country:
+      iso: Spain
+      name: Spain
+    featured: false
+    highlighted: false
+    testimonial_date: ""
+    rating: 5
+    student_thumb: "../../../../static/images/testimonials/Mattia-Tozzi-testimonial.jpg"
+    student_video: "" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    hidden: false
+    linkedin_url: "https://www.linkedin.com/in/mattia-tozzi/"
+    linkedin_text: "Linkedin Profile"
+    linkedin_image: "../../../../static/images/linkedin.png"
+    source_url: ""
+    source_url_text: ""
+    short_content: "Back-end Developer at negg Group"
+    content: "Seeking a new professional path, Mattia found the ideal option in 4Geeks Academy. Impressed by the unlimited tutoring and focus on practical skills, he enrolled with the goal of entering the technology industry. The challenges he faced not only equipped him with programming skills but also broadened his perspectives. Responsive tutoring provided him with the support he needed for his professional success."
+
   - student_name: "Fidel Rosell"
     featured: false
     include_in_marquee: true
@@ -406,6 +555,28 @@ testimonials:
       responses are strong and different solutions are provided. If you have an interview and you 
       want to refresh your knowledge or exercise do not hesitate to go to 4Geeks, you will find 
       someone ready to help you.
+
+  - student_name: "Josh Lewis"
+    slug: "josh-le"
+    country:
+      iso: us
+      name: United States of America
+    featured: false
+    highlighted: false
+    testimonial_date: ""
+    rating: 5
+    source_link: ""
+    student_thumb: "../../../../static/images/testimonials/josh-lewis.jpg"
+    student_video: "https://www.youtube.com/watch?v=ZlyVlif9jts" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    hidden: false
+    linkedin_url: ""
+    linkedin_text: "LinkedIn profile"
+    linkedin_image: "../../../../static/images/linkedin.png"
+    source_url: ""
+    ##source_url_text: ""
+    short_content: "Full Stack Developer"
+    content: "I manage several websites and implement SEO strategies for them. While proficient in SEO, I recognized the value of acquiring coding skills to enhance communication with development teams and potentially improve SEO implementation. Having reviewed the positive experiences of others and the program's attractive pricing structure, I was impressed by the value proposition offered by 4Geeks Academy. The extensive course duration and focus on practical application solidified my decision"
+    
   - student_name: "Jordan"
     featured: false
     highlighted: false
@@ -423,42 +594,7 @@ testimonials:
     linkedin_image: "../../../../static/images/linkedin.png"
     short_content: "Full Stack Developer"
     content: ""
-  - student_name: "Gabriela"
-    featured: false
-    highlighted: false
-    rating: 5
-    last_name: "Rodriguez"
-    job_title: "Web Developer"
-    student_thumb: ""
-    student_video: "" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
-    # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
-    hidden: true
-    github: "https://github.com/gabsssrod"
-    linkedin_url: "https://www.linkedin.com/in/gabriela-rodriguez-2b5235187/"
-    linkedin_text: "Linkedin Profile"
-    linkedin_image: "../../../../static/images/linkedin.png"
-    short_content: "Full Stack Developer"
-    content: ""
-  - student_name: "Guensie Grecy"
-    include_in_marquee: true
-    featured: true
-    highlighted: false
-    testimonial_date: ""
-    rating: 5
-    student_thumb: "../../../../static/images/testimonials/guensie-grecy.jpg"
-    student_video: "https://www.youtube.com/watch?v=LvnxLyqaQDo" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
-    # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
-    linkedin_url: "https://www.linkedin.com/in/guensiegrecy/"
-    linkedin_text: "Linkedin Profile"
-    linkedin_image: "../../../../static/images/linkedin.png"
-    hidden: false
-    source_url: ""
-    #source_url_text: ""
-    video_url: "https://www.youtube.com/watch?v=LvnxLyqaQDo"
- 
-    short_content: "Third-Party Risk Management at GitHub"
-    content: |
-      I was a lawyer for 6 years and I decided to change my career. I attended 4Geeks Academy, a coding bootcamp, that was last year (2018), I graduated in August, and after graduating in October, I was able to get a job as a web developer. I had no background whatsoever in coding. I didn't know anything about anything computer-technology wise, so that's an encouragement because it's possible!
+
   # - student_name: "Darius Bounds"
   #   testimonial_date: ""
   #   student_thumb: "../../../../static/images/testimonials/darius-bounds.jpg"

@@ -14,7 +14,7 @@ const JobGuaranteeSmall = ({ content }) => {
     >
       {content.title && <H2 margin="0 0 30px 0">{content.title}</H2>}
       <Div
-        maxWidth="1366px"
+        maxWidth="1280px"
         margin_tablet="0 auto"
         justifyContent="around"
         flexWrap="wrap"

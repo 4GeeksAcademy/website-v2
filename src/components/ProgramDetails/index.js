@@ -70,7 +70,7 @@ const ProgramDetails = (props) => {
     <>
       <Grid
         gridTemplateColumns_tablet="repeat(14,1fr)"
-        maxWidth="1366px"
+        maxWidth="1280px"
         margin_xs="0 auto 45px auto"
         padding_tablet="0 40px"
         padding_md="0 80px"
@@ -162,7 +162,7 @@ const ProgramDetails = (props) => {
           gridTemplateColumns_tablet="repeat(14,1fr)"
           margin="0 auto"
           justifyItems="center"
-          maxWidth="1366px"
+          maxWidth="1280px"
           padding_tablet="0 40px"
           padding_md="0 80px"
           padding_lg="0"

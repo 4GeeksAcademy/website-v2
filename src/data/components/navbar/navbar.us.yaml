@@ -23,13 +23,21 @@ navbar:
             - text: "View program"
               link: "/us/coding-bootcamps/datascience-machine-learning"
 
-        - title: "Blockchain and Web3"
+        - title: "CyberSecurity Bootcamp"
           level: " "
-          icon: "blockchain"
-          paragraph: "Build applications for the Web3 with Solidity and Blockchain. Get a job as a blockchain developer and help build tomorrows web."
+          icon: "cyber-security"
+          paragraph: "Become a cybersecurity specialist, equipped to identify, manage and mitigate system vulnerabilities, in compliance with ISO and other standards"
           buttons:
-            - text: "Comming Soon"
-              link: "#"
+            - text: "View program"
+              link: "/us/coding-bootcamps/cybersecurity"
+
+        - title: "Artificial Inteligence"
+          level: " "
+          icon: "applied-ai"
+          paragraph: "Explore in detail artificial intelligence and how to apply it in different industries, roles, and your work. Maximize your productivity in just 6 weeks!"
+          buttons:
+            - text: "View program"
+              link: "/us/coding-bootcamps/applied-ai-course"
 
   - name: "Why 4Geeks"
     link: "/why-4geeks"

@@ -65,14 +65,14 @@ const GeeksInfo = ({ lang }) => {
           margin_tablet="30px auto 0 auto"
           margin_xxs="15px auto 0px auto"
           width_tablet="100%"
-          maxWidth="1366px"
+          maxWidth="1280px"
           lineHeight="35px"
         >
           {content.heading}
         </H2>
       )}
       <TwoColumn
-        left={{
+        right={{
           //heading: yml.heading,
           //sub_heading: yml.sub_heading,
           bullets: content.bullets,
@@ -81,7 +81,7 @@ const GeeksInfo = ({ lang }) => {
           //paragraph: content.paragraph,
           //header: content.header
         }}
-        right={{ image: content.image }}
+        left={{ image: content.image }}
         //proportions={yml.proportions}
         //session={session}
       />

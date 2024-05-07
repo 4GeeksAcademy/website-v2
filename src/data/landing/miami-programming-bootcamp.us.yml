@@ -23,21 +23,22 @@ form:
   # always the first_name, email and phone will be mandatory if added.
   fields: ["full_name", "phone", "email"]
   heading: "Get more information"
-  motivation: "Get a PDF and email in just 5 minutes"
-  button_label: Get more information
+  motivation: "Once you complete the form, our advisors will email you everything you need to know: program details, scholarship options, career support info, and more."
+  button_label: REQUEST MORE INFO NOW
   redirect: null #you can redirect to another url or entirely diffrent website
 
 apply_schollarship: # form that is displayed at the end of the landing
   # title: "Apoyo Profesional Ilimitado"
   imageSide: "left"
-  image: "../../../static/images/landing/apply.png"
+  image: "../../../static/images/woman-glasses-laptop.png"
 
 # jumbotron on the top (cannot be commented out)
 header_data:
-  tagline: Programming Bootcamp
-  sub_heading: "Become a web developer in 9 or 16 weeks"
-  background_image: "../../../static/images/4geeks-main.jpg"
-  image_filter: brightness(0.3)
+  tagline: Intensive Programming Bootcamp
+  sub_heading: "Become a Full Stack Developer in 18 weeks with unlimited mentorships and career support"
+  # background: "#FFF1D1"
+  background_image: "../../../static/images/landing/grupo-varias-nacionalidades.jpg"
+  image_filter: brightness(0.25)
 
 features:
   marginTop: 0px #<-- separation between tagline and the bullets
@@ -45,18 +46,18 @@ features:
   #                                         up   left down  right
   styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
   bullets:
-    - No previous experience or coding skills required.
-    - Part-Time or Full-Time Schedules Available. Online or in our beautiful campus in Miami.
-    - Get lifetime access to our mentors and Career Growth Support (Your first Job in Tech is our goal).
-    - Junior developers make avg $55k per year in Florida.
+    - No previous experience or coding skills required
+    - Lifelong access to coding mentorships and career support
+    - Junior developers make avg $55k per year in the U.S.
+    - Choose the schedule and format that suits you best — part-time, online, in-person, or hybrid
 
 follow_bar:
   position: "top" # top, bottom, hidden
   content:
-    text: "You don't have to pay anything until \n you get a job in tech. Starting at $165/mo."
-    text_mobile: "As low as $169/mo. \n Don't pay anything until you get a job in tech"
+    text: "Flexible payment plans starting at $150 a month,\n with the option to start paying after landing a job."
+    text_mobile: "Flexible payment plans starting at $150 a month,\n with the option to start paying after landing a job."
     # devices:    xl      lg      md      sm      xs
-    font_size: ["25px", "25px", "25px", "20px", "18px"]
+    font_size: ["20px", "20px", "20px", "18px", "18px"]
   button:
     text: "Get more information"
     path: "#leadform_header"
@@ -94,18 +95,18 @@ badges:
   heading: "4Geeks Academy has awards and recognitions that validate it's excellence"
 
 program_details:
-  position: 2
+  position: 3
   heading: "Master Python, JS and React"
-  sub_heading: "The 3 most used languages in the world"
+  sub_heading: "The programming languages with the highest demand worldwide"
 
 geeks_vs_others:
-  position: 5
+  position: 6
   heading: "What made us so successfull?"
   paragraph: ""
   total_rows: 5
 
 why_4geeks:
-  position: 6
+  position: 7
   heading: "Why choosing 4Geeks Academy"
   sub_heading: " "
 
@@ -122,62 +123,96 @@ alumni_projects:
 
 # Possible layours: [two_column_left_image, two_column_right_image]
 components:
-  - name: first_syllabus_form
-    position: 4
-    layout: syllabus
-    button:
-      text: "Instant Download"
+  - name: new_design_with_bullets
+    position: 1
+    layout: two_column_left
+    swipable: False
+    background: "#FFFFFF"
+    image:
+      style: '{"backgroundSize": "cover", "margin-top": "40px"}'
+      src: "/images/woman-afro-with-laptop.webp"
+      shadow: true
+    section_heading:
+      text: "Become a Successful Full-Stack Developer with our Programming Bootcamp"
+      style: '{ "font-size": "30px"}'
     heading:
-      text: "Download the course syllabus"
-      #             xl      lg      md      sm      xs
-      font_size: ["40px", "40px", "40px", "40px", "40px"]
+      text: "From Our Programming Bootcamp to a Professional Career in Tech - We’ve Got Your Back!"
+    sub_heading:
+      text: "Are you excited about switching to a tech career but worried about how to finance it and landing your first job? Traditional ways of learning can be costly, lengthy, and often lack the hands-on training and industry knowledge to guarantee your real-world success. Don't worry, at 4Geeks Academy we know exactly how to get you career-ready and hired, without breaking the bank!"
+    button:
+      text: "Send me more information"
+      color: white
+      hover_color: "white"
+      background: "black"
+      path: "#leadform_header"
+    content:
+      text: ""
+      font_size: ["16px"]
+      path: ""
+    bullets:
+      items:
+        - heading: "CAREER-RELEVANT SYLLABUS"
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
+        - heading: "PERSONALIZED CAREER SUPPORT"
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
+        - heading: "LIFELONG ACCESS TO MENTORSHIPS"
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
+        - heading: "UNMATCHED FINANCING AND SCHOLARSHIP OPTIONS"
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
+
   - name: top_coding_bootcamp
     position: 2
     layout: two_column_left
     background: "#ebebeb"
     proportions: [4, 8]
     image:
-      style: '{ "backgroundSize": "contain" }'
-      src: "/images/badges/switchup-badge-2023.png"
-      link: "https://www.switchup.org/bootcamps/4geeks-academy"
-    button:
-      text: "Explore Success Stories"
-      color: "white"
-      background: "black"
-      path: "#why_4geeks"
+      style: '{ "background-size": "contain", "height":"180px", "min-height":"auto", "background-position": "center"}'
+      src: "/images/badges/Course-Report-Badge-2024.webp"
+      link: ""
     heading:
-      text: "We have been named one of the TOP programming bootcamps in the World"
+      text: "We have been named one of the best programming bootcamps in the world in 2024"
       #             xl      lg      md      sm      xs
       font_size: ["38px", "36px", "32px", "32px", "28px"]
-  - name: working_as_software_developers
-    position: 6
-    proportions: [4, 8]
-    background: "#fbfbfb"
-    layout: two_column_left
-    image:
-      src: "https://storage.googleapis.com/4geeks-academy-website/landing-pictures/testimonials.webp"
-      shadow: true
+
+  - name: how-it-works
+    position: 4
+    background: "#E3F9FE !important"
+    layout: iconogram
+    swipable: True
     heading:
-      text: "89% of our graduates are now working as software developers with an average entry salary of $50,000/yr."
-      #             xl      lg      md      sm      xs
-      font_size: ["40px", "34px"]
-    # content:
-    #   text:
-    #     "89% of our graduates are now working as software developers with an average entry salary of $50,000/yr."
+      text: "How it Works?"
+      font_size: ["30px", "30px", "30px", "30px", "30px"]
+    sub_heading:
+      text: 'The U.S. Bureau of Labor Statistics (BLS) projects web developer jobs to grow by 13% from 2022 to 2032, much faster than the average for all occupations (8%). This translates to roughly 89,400 new jobs in the field'
+      font_size: ["16px", "16px", "16px", "16px", "16px"]
+      style: '{ "textAlign": "center", "width": "60%" }'
+    text_link: "/"
+    icons:
+      - icon: "graduation-2"
+        title: "Join 4Geeks Academy"
+        content: "Develop your full techie potential! Learn from industry experts, connect with a vibrant community, network with fellow coders and industry leaders, and showcase your skills."
+      - icon: "laptop_new"
+        title: "Learn to Code"
+        content: "Experience interactive, hands-on learning with live online classes and access to recorded materials to deepen your understanding. Tackle challenging projects using the most important tools and frameworks in the tech industry."
+      - icon: "stairswflag"
+        title: "Job placement"
+        content: "Our program will equip you with the most sought-after skills in the job market, connect you with top companies, and help you secure your dream job. With our expert career coaching and support network, you’ll have it all to launch a fulfilling coding career. (And we mean it!)"
+
+
+
 
   - name: some_id
-    position: 1
-    layout: two_column_right
+    position: 5
+    layout: two_column_left
     image:
-      src: "/images/testimonials/allisa-testimonial.jpg"
-    video: "https://www.youtube.com/watch?v=TCHASxvkhpI"
+      src: "/images/landing/alissa-video.webp"
+      shadow: true
+    video: "https://www.youtube.com/watch?v=EcqasocRKHo"
     heading:
-      text:
-        "Unlock Your Future: Exclusive Scholarships with Miami Dade College, Clark University, and United Way Miami for South Florida Applicants!"
-        #xl      lg     md     sm    xs
-      font_size: ["40px", "34px", "34px", "25px", "20px"]
+      text: "Master in-demand skills with the 4Geeks Academy Programming Bootcamp"
+      font_size: ["40px", "40px", "40px", "40px", "40px"]
     content:
-      text: "Seize this chance to supercharge your education. Join the academy now and pave the way to your brightest future! Contact our admissions team to learn more and join our coding bootcamp today!"
+      text: "At 4Geeks Academy, we offer a unique approach to programming bootcamps that sets us apart from the rest. Our three main assets include lifetime access to mentorship, unlimited career support services, and a coding-centric curriculum. With top tech mentors, industry recognition, and a focus on creating a thriving developer community, 4Geeks Academy is the place where developers grow and thrive."
       font_size: ["16px"]
     button:
       text: "GET MORE INFO"

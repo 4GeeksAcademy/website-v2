@@ -47,7 +47,7 @@ full_time:
 
 part_time:
   - slug: 'plan-1'
-    academies: ['orlando', 'downtown-miami', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa']
+    academies: ['orlando', 'downtown-miami', 'austin-usa', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa']
     recomended: true
     scholarship: "Scholarship"
     payment_time: "Pay today or in 3 parts"
@@ -59,7 +59,7 @@ part_time:
       - "/images/clarkuniversity.png"
 
   - slug: 'plan-2'
-    academies: ['orlando', 'downtown-miami', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa']
+    academies: ['orlando', 'downtown-miami', 'austin-usa', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa']
     recomended: false
     scholarship: "Financed"
     payment_time: "Pay in 3, 4 or 5 years"
@@ -74,7 +74,7 @@ part_time:
       
   - slug: 'plan-4'
     recomended: false
-    academies: ['orlando', 'downtown-miami', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa']
+    academies: ['orlando', 'downtown-miami', 'austin-usa', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa']
     scholarship: "Full Payment"
     payment_time: "Pay today"
     price: "$9999"
@@ -91,7 +91,7 @@ part_time:
     price: "~€200 / mo."
     bullets:
       - "Tailor-made financing plans, with or without interest, from 4 to 30 installments"
-      - "Scholarships available up to €2500. From €5300 instead of €7800. Scholarships subject to availability!"     
+      - "Scholarships available up to €2400. From €5400 instead of €7800. Scholarships subject to availability!"     
     icons: 
       - "/images/zank.png"
       - "/images/sequra.png"
@@ -103,10 +103,10 @@ part_time:
     recomended: false
     scholarship: "Pay upfront"
     payment_time: "And get a discount"
-    price: "€4950*"
+    price: "€5200*"
     bullets:
       - "Pay with wire transfer, credit or debit card, Paypal, Bitcoin or Ethereum"
-      - "*Discount up to €2850. From €4950 instead of €7800. Scholarships subject to availability."     
+      - "*Discount up to €2600. From €5200 instead of €7800. Scholarships subject to availability."     
     icons: 
       - "/images/visa-mastercard.png"    
       - "/images/bitcoin_logo.png"  
@@ -132,7 +132,7 @@ part_time:
     price: "~€200 / mo."
     bullets:
       - "Tailor-made financing plans, with or without interest, from 4 to 30 installments"
-      - "Scholarships available up to €2500. From €5300 instead of €7800"     
+      - "Scholarships available up to €2400. From €5400 instead of €7800"     
     icons: 
       - "/images/quotanda-logo.png"
 
@@ -141,10 +141,10 @@ part_time:
     recomended: false
     scholarship: "Pay upfront"
     payment_time: "And get a discount"
-    price: "€5000*"
+    price: "€5200*"
     bullets:
       - "Pay with wire transfer, credit or debit card, Paypal, Bitcoin or Ethereum"
-      - "*Discount up to €2800. From €5000 instead of €7800"     
+      - "*Discount up to €2600. From €5200 instead of €7800"     
     icons: 
       - "/images/visa-mastercard.png"    
       - "/images/bitcoin_logo.png"  
@@ -170,7 +170,7 @@ part_time:
     price: "~€200 / mo."
     bullets:
       - "Tailor-made financing plans, with or without interest, from 4 to 30 installments"
-      - "Scholarships available up to €2800. From €5000 instead of €7800"     
+      - "Scholarships available up to €2400. From €5400 instead of €7800"     
     icons: 
       - "/images/quotanda-logo.png"
 
@@ -179,10 +179,10 @@ part_time:
     recomended: false
     scholarship: "Pay upfront"
     payment_time: "And get a discount"
-    price: "€4500*"
+    price: "€5200*"
     bullets:
       - "Pay with wire transfer, credit or debit card, Paypal, Bitcoin or Ethereum"
-      - "*Discount up to €3300. From €4500 instead of €7800"     
+      - "*Discount up to €2600. From €5200 instead of €7800"     
     icons: 
       - "/images/visa-mastercard.png"    
       - "/images/bitcoin_logo.png"  
@@ -198,28 +198,44 @@ part_time:
       - "You will only have to pay when your income is greater than €16000 per year"
       - "*Pay a small part of your salary when you find a job"
     icons: 
-      - "/images/stepex.png"     
-  - slug: 'chile-geekforce-fs-pt'
+      - "/images/stepex.png"    
+
+  - slug: 'chile-ds-gf-pt'
     academies: ['santiago-chile']
     recomended: true
-    scholarship: "Pay Upfront"
-    payment_time: "And get a discount"
-    price: "4.500.000 CLP*"
+    scholarship: "Program + Career Support"
+    payment_time: "Pay Upfront"
+    price: "3.375.000 CLP*"
     bullets:
       - "Pay with bank transfer, credit or debit card"    
-      - "*Price without discount applied"
+      - "*Discount up to 1.125.000 CLP. From 3.375.000 CLP instead of 4.500.000 CLP"  
     icons: 
       - "/images/visa-mastercard.png"   
 
-  - slug: 'chile-ds-ml-pt'
+  - slug: 'chile-ds-solo-pt'
+    academies: ['santiago-chile']
+    recomended: false
+    scholarship: "Data Science Program Only"
+    payment_time: "Focus on gaining skills. Pay upfront."
+    price: "3.000.000 CLP*"
+    bullets:
+      - "Pay with bank transfer, credit or debit card"    
+      - "*Discount up to 750.000 CLP. From 3.000.000 CLP instead of 3.750.000 CLP"  
+      - "There is always a payment plan available for you to join 4Geeks Academy, if you don't find here what you are expecting, please contact us and we will try to find new ways to help"    
+      - "Pay only for the Data Science program if you are not interested yet in our career support program."  
+    icons: 
+      - "/images/visa-mastercard.png"  
+
+  - slug: 'chile-ds-financed-pt'
     academies: ['santiago-chile']
     recomended: false
     scholarship: "Financed"
-    payment_time: "18 months payment"
-    price: "~220.500 CLP"
+    payment_time: "Program + Career Support. Pay monthly"
+    price: "~220.500 CLP per month"
     bullets:
       - "Tailor-made financing from 6 to 18 months"  
       - "An advance payment corresponding to 20% of the value of the program must be paid" 
+      - "If you don't find here what you are expecting, please contact us and we will try to find new ways to help"  
     icons: 
       - "/images//flevo-new.png"
 

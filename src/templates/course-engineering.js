@@ -82,7 +82,7 @@ const Program = ({ data, pageContext, yml }) => {
         fontFamily_title="Archivo-Black"
         fontSize_paragraph="24px"
         gridTemplateColumns_tablet="repeat(14, 1fr)"
-        maxWidth="1366px"
+        maxWidth="1280px"
         uppercase
       >
         <Img
@@ -231,6 +231,7 @@ const Program = ({ data, pageContext, yml }) => {
         message={courseDetails.upcoming?.no_dates_message}
         actionMessage={courseDetails.upcoming?.actionMessage}
         locations={data.allLocationYaml.edges}
+        showMoreRedirect
       />
 
       <PricesAndPayment

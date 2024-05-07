@@ -20,7 +20,7 @@ const Post = ({ item, i, lang }) => {
       width="100%"
     >
       <Link to={item.node.fields.pagePath}>
-        {item.node.frontmatter.image !== "" && (
+        {item.node.frontmatter.image && (
           <LazyLoad
             height={10}
             scroll={true}
@@ -28,11 +28,7 @@ const Post = ({ item, i, lang }) => {
             style={{ height: "173px" }}
           >
             <RoundImage
-              url={
-                item.node.frontmatter.image !== null
-                  ? item.node.frontmatter.image
-                  : yml.banner.no_image
-              }
+              url={item.node.frontmatter.image}
               bsize="cover"
               border="0px"
               position="center"
@@ -137,7 +133,7 @@ const RelatedPosts = ({ posts, lang, relatedClusters }) => {
           columns_tablet={articles.length <= 3 ? articles.length : "3"}
           //margin="0 10px 73px 10px"
           margin_tablet="0 auto 84px auto"
-          maxWidth_md="1366px"
+          maxWidth_md="1280px"
         >
           <Div
             gridColumn="1/15"

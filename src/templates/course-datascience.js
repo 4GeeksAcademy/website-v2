@@ -30,7 +30,7 @@ const Program = ({ data, pageContext, yml }) => {
   const geek = data.allCourseYaml.edges[0].node;
   const [open, setOpen] = React.useState(false);
 
-  const defaultCourse = "datascience-ml";
+  const defaultCourse = "machine-learning";
   const program_type = yml.meta_info.slug.includes("full-time")
     ? "full_time"
     : "part_time";
@@ -90,7 +90,7 @@ const Program = ({ data, pageContext, yml }) => {
         fontFamily_title="Archivo-Black"
         fontSize_paragraph="24px"
         gridTemplateColumns_tablet="repeat(14, 1fr)"
-        maxWidth="1366px"
+        maxWidth="1280px"
         uppercase
       >
         <Img
@@ -234,7 +234,9 @@ const Program = ({ data, pageContext, yml }) => {
         lang={pageContext.lang}
         message={courseDetails.upcoming?.no_dates_message}
         actionMessage={courseDetails.upcoming?.actionMessage}
+        defaultCourse={defaultCourse}
         locations={data.allLocationYaml.edges}
+        showMoreRedirect
       />
 
       <PricesAndPayment

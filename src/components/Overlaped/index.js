@@ -8,7 +8,14 @@ import Icon from "../Icon";
 import { DirectiveLocation } from "graphql";
 import { transferQuerystrings, smartRedirecting } from "../../utils/utils";
 
-const Overlaped = ({ heading, content, button, background, image }) => {
+const Overlaped = ({
+  heading,
+  content,
+  button,
+  background,
+  image,
+  headingStyle,
+}) => {
   const data = useStaticQuery(graphql`
     {
       allOverlapedYaml {
@@ -31,7 +38,7 @@ const Overlaped = ({ heading, content, button, background, image }) => {
     }
   `);
   return (
-    <Div maxWidth_tablet="1366px" margin_tablet="50px auto" width="100%">
+    <Div maxWidth_tablet="1280px" margin_tablet="50px auto" width="100%">
       <Grid
         display_xxs="none"
         display="grid"
@@ -53,7 +60,8 @@ const Overlaped = ({ heading, content, button, background, image }) => {
               height_tablet="533px"
               margin="0px"
               image={image}
-              bgSize="cover"
+              bgSize={`contain`}
+              justify_content="flex-start"
               alt="geekforce image"
             />
           )}
@@ -122,9 +130,12 @@ const Overlaped = ({ heading, content, button, background, image }) => {
           background={Colors.white}
           boxShadow="20px 15px 0px 0px rgba(0,0,0,1)"
         >
-          <H2 textAlign="start" lineHeight_tablet="36px" margin="0 0 12px 0">
-            {heading}
-          </H2>
+          <H2
+            textAlign="start"
+            lineHeight_tablet="36px"
+            margin="0 0 12px 0"
+            dangerouslySetInnerHTML={{ __html: heading }}
+          />
           {content && /<\/?[a-z0-9]+>/g.test(content) ? (
             <Paragraph
               textAlign="start"
@@ -222,9 +233,12 @@ const Overlaped = ({ heading, content, button, background, image }) => {
           background={Colors.white}
           boxShadow="20px 15px 0px 0px rgba(0,0,0,1)"
         >
-          <H2 textAlign="start" lineHeight_xxs="36px" margin="0 0 12px 0">
-            {heading}
-          </H2>
+          <H2
+            textAlign="start"
+            lineHeight_xxs="36px"
+            margin="0 0 12px 0"
+            dangerouslySetInnerHTML={{ __html: heading }}
+          />
           {content && /<\/?[a-z0-9]+>/g.test(content) ? (
             <Paragraph
               textAlign="start"

@@ -33,7 +33,7 @@ const SuccessStories = (props) => {
           }
           position="relative"
           zIndex="1"
-          maxWidth="1366px"
+          maxWidth="1280px"
         >
           <Img
             src="/images/slash-light.png"
@@ -95,7 +95,7 @@ const SuccessStories = (props) => {
       />
 
       <Div
-        maxWidth="1366px"
+        maxWidth="1280px"
         margin="0 auto"
         padding_xxs="80px 20px 0 20px"
         padding_md="50px 10% 10px 10%"

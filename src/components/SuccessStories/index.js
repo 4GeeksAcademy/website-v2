@@ -104,7 +104,7 @@ const SuccessStoriescomponent = ({ filterIndexes, lang }) => {
         columnCount_sm="1"
         columnCount_xxs="1"
         columnCount_tablet="3"
-        maxWidth="1366px"
+        maxWidth="1280px"
       >
         {testimonials.map((m, i) => {
           i == 0
@@ -113,7 +113,7 @@ const SuccessStoriescomponent = ({ filterIndexes, lang }) => {
             ? (position = 0)
             : (position += 1);
           return (
-            i < 9 && (
+            i < 30 && (
               <TestimonialCard
                 key={i}
                 studentRating={m.rating}

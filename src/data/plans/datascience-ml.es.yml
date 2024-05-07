@@ -47,7 +47,7 @@ full_time:
 
 part_time:
   - slug: 'plan-1'
-    academies: ['orlando', 'downtown-miami', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa']
+    academies: ['orlando', 'downtown-miami', 'austin-usa', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa']
     recomended: true
     scholarship: "Beca"
     payment_time: "Paga hoy o en 3 partes"
@@ -59,7 +59,7 @@ part_time:
       - "/images/clarkuniversity.png"
 
   - slug: 'plan-2'
-    academies: ['orlando', 'downtown-miami', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa']
+    academies: ['orlando', 'downtown-miami', 'austin-usa', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa']
     recomended: false
     scholarship: "Financiado"
     payment_time: "Paga en 3, 4 o 5 años"
@@ -74,7 +74,7 @@ part_time:
 
   - slug: 'plan-4'
     recomended: false
-    academies: ['orlando', 'downtown-miami', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa']
+    academies: ['orlando', 'downtown-miami', 'austin-usa', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa']
     scholarship: "Pago Completo"
     payment_time: "Paga hoy"
     price: "$9999"
@@ -91,7 +91,7 @@ part_time:
     price: "~200 € al mes"
     bullets:
       - "Financiación a tu medida, con o sin intereses, desde 4 hasta 30 meses"
-      - "Becas disponibles de hasta 2.500 €. Desde 5.300 € en vez de 7.800 €. ¡Becas sujetas a disponibilidad!"     
+      - "Becas disponibles de hasta 2.400 €. Desde 5.400 € en vez de 7.800 €. ¡Becas sujetas a disponibilidad!"     
     icons: 
       - "/images/zank.png"
       - "/images/sequra.png"
@@ -103,10 +103,10 @@ part_time:
     recomended: false
     scholarship: "Paga de contado"
     payment_time: "Y obtén un descuento"
-    price: "4.950 €*"
+    price: "5.200 €*"
     bullets:
       - "Paga con trasnferencia bancaria, tarjeta de crédito o débito, Paypal, Bitcoin o Ethereum"
-      - "*Descuento de hasta 2.850 €. Desde 4.950 € en vez de 7.800 €. ¡Descuento sujeto a disponibilidad!"     
+      - "*Descuento de hasta 2.600 €. Desde 5.200 € en vez de 7.800 €. ¡Descuento sujeto a disponibilidad!"     
     icons: 
       - "/images/visa-mastercard.png"    
       - "/images/bitcoin_logo.png"  
@@ -131,7 +131,7 @@ part_time:
     price: "~200 € al mes"
     bullets:
       - "Financiación a tu medida, con o sin intereses, desde 4 hasta 30 meses"
-      - "Becas disponibles de hasta 2.500 €. Desde 5.300 € en vez de 7.800 €"     
+      - "Becas disponibles de hasta 2.400 €. Desde 5.400 € en vez de 7.800 €"     
     icons: 
       - "/images/quotanda-logo.png"
 
@@ -140,10 +140,10 @@ part_time:
     recomended: false
     scholarship: "Paga de contado"
     payment_time: "Y obtén un descuento"
-    price: "5.000 €*"
+    price: "5.200 €*"
     bullets:
       - "Paga con trasnferencia bancaria, tarjeta de crédito o débito, Paypal, Bitcoin o Ethereum"
-      - "*Descuento de hasta 2.800 €. Desde 5.000 € en vez de 7.800 €"     
+      - "*Descuento de hasta 2.600 €. Desde 5.200 € en vez de 7.800 €"     
     icons: 
       - "/images/visa-mastercard.png"    
       - "/images/bitcoin_logo.png"  
@@ -169,7 +169,7 @@ part_time:
     price: "~200 € al mes"
     bullets:
       - "Financiación a tu medida, con o sin intereses, desde 4 hasta 30 meses"
-      - "Becas disponibles de hasta 2.800 €. Desde 5.000 € en vez de 7.800 €"     
+      - "Becas disponibles de hasta 2.400 €. Desde 5.400 € en vez de 7.800 €"     
     icons: 
       - "/images/quotanda-logo.png"
 
@@ -178,10 +178,10 @@ part_time:
     recomended: false
     scholarship: "Paga de contado"
     payment_time: "Y obtén un descuento"
-    price: "4.500 €*"
+    price: "5.200 €*"
     bullets:
       - "Paga con transferencia bancaria, tarjeta de crédito o débito, Paypal, Bitcoin o Ethereum"
-      - "*Descuento de hasta 3.300 €. Desde 4.500 € en vez de 7.800 €"     
+      - "*Descuento de hasta 2.600 €. Desde 5.200 € en vez de 7.800 €"     
     icons: 
       - "/images/visa-mastercard.png"    
       - "/images/bitcoin_logo.png"  
@@ -199,39 +199,43 @@ part_time:
     icons: 
       - "/images/stepex.png"     
 
-  - slug: 'chile-ds-ml-pt'
+  - slug: 'chile-ds-gf-pt'
     academies: ['santiago-chile']
     recomended: true
-    scholarship: "Paga al contado"
-    payment_time: "Y obtén un descuento"
-    price: "4.500.000 CLP*"
+    scholarship: "Programa + Apoyo en la búsqueda laboral"
+    payment_time: "Paga al contado"
+    price: "3.375.000 CLP*"
     bullets:
       - "Paga con transferencia bancaria, tarjeta de crédito o débito"    
-      - "*Precio sin descuento aplicado"
+      - "Hasta 12 cuotas sin interés con tarjeta de crédito"
+      - "*Descuento de hasta 1.125.000 CLP. Desde 3.375.000 CLP en vez de 4.500.000 CLP"
     icons: 
       - "/images/visa-mastercard.png"
 
-  - slug: 'chile-geekforce-fs-pt'
-    academies: ['santiago-chaaile']
-    recomended: true
-    scholarship: "Pago de contado"
-    payment_time: "Y obtén un descuento"
-    price: "4.500.000 CLP*"
+  - slug: 'chile-ds-solo-pt'
+    academies: ['santiago-chile']
+    recomended: false
+    scholarship: "Solo paga el programa"
+    payment_time: "Enfócate en obtener nuevas habilidades. Paga al contado."
+    price: "3.000.000 CLP*"
     bullets:
       - "Paga con transferencia bancaria, tarjeta de crédito o débito"    
-      - "*Precio sin descuento aplicado"
+      - "Hasta 12 cuotas sin interés con tarjeta de crédito"
+      - "*Descuento de hasta 750.000 CLP. Desde 3.000.000 CLP en vez de 3.750.000 CLP"
+      - "Paga solamente por el programa de Data Science si todavía no quieres contratar nuestro programa de apoyo profesional" 
     icons: 
       - "/images/visa-mastercard.png"    
 
-  - slug: 'chile-ds-ml-pt'
+  - slug: 'chile-ds-financed-pt'
     academies: ['santiago-chile']
     recomended: false
-    scholarship: "Cuotas desde"
-    payment_time: ""
-    price: "~220.500 CLP"
+    scholarship: "Financiamiento a tu medida"
+    payment_time: "Programa + Apoyo en la búsqueda laboral. Paga mensualmente"
+    price: "A partir de 220.500 CLP al mes"
     bullets:
       - "Financiamiento a tu medida desde 6 hasta 18 meses"  
       - "Se debe pagar un anticipo correspondiente al 20% del valor del programa" 
+      - "Si no encuentras aquí lo que esperas, por favor contáctanos y trataremos de encontrar nuevas formas de ayudarte" 
     icons: 
       - "/images//flevo-new.png"
 

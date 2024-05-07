@@ -87,7 +87,7 @@ const Location = ({ data, pageContext, yml }) => {
             : "72px auto 30px auto"
         }
         childMargin="auto"
-        childMaxWidth="1366px"
+        childMaxWidth="1280px"
       >
         <Div
           flexDirection="column"
@@ -238,7 +238,7 @@ const Location = ({ data, pageContext, yml }) => {
         margin="40px auto"
         paragraph={yml.badges.paragraph}
         bottom_paragraph
-        maxWidth="1366px"
+        maxWidth="1280px"
         paddingText_tablet="0 10% 55px 10%"
       />
 
@@ -297,6 +297,7 @@ const Location = ({ data, pageContext, yml }) => {
         locations={data.allLocationYaml.edges}
         message={yml.upcoming.no_dates_message}
         actionMessage={yml.upcoming.actionMessage}
+        showMoreRedirect
       />
 
       <Staff lang={pageContext.lang} heading={yml?.staff?.heading} />
@@ -417,6 +418,7 @@ export const query = graphql`
             alt
           }
           meta_info {
+            slug
             title
             description
             image
@@ -600,8 +602,6 @@ export const query = graphql`
             title
             description
             icon
-            comming_soon
-            text_link
           }
         }
       }
