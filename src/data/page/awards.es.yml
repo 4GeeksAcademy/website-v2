@@ -50,18 +50,48 @@ awards_list:
     text_link: Ver artículo
 
   - image: "../../../static/images/badges/exelencia-educativa-es.png"
+    title: "Mejor Programa Especializado en Coding Bootcamp 2022"
+    paragraph: 'Nos complace anunciar que hemos sido distinguidos con el <a href="http://premiosexcelenciaeducativa.org/wp-content/uploads/2022/03/PALMAR%C3%89S-EXCELENCIA-2022.pdf" rel="noopener noreferrer nofollow">Premio Excelencia Educativa al Mejor Programa Especializado en Coding Bootcamp del año 2022</a>. Este reconocimiento resalta nuestro compromiso con la excelencia en la formación en tecnología.'
+    link: ""
+    text_link: 
+
+  - image: "../../../static/images/badges/exelencia-educativa-es.png"
+    title: "Mejor Programa Educativo 2022"
+    paragraph: 'Nos han otorgado el Premio Excelencia Educativa al <a href="http://premiosexcelenciaeducativa.org/wp-content/uploads/2022/03/PALMAR%C3%89S-EXCELENCIA-2022.pdf" rel="noopener noreferrer nofollow">Mejor Programa Educativo 2022</a>  Este reconocimiento es un testimonio de nuestro compromiso con la calidad y la innovación en la educación.'
+    link: ""
+    text_link: 
+
+  - image: "../../../static/images/badges/exelencia-educativa-es.png"
+    title: "Mejor Plan de Becas Internacionales 2022"
+    paragraph: 'Nos han otorgado el Premio Excelencia Educativa al <a href="http://premiosexcelenciaeducativa.org/wp-content/uploads/2022/03/PALMAR%C3%89S-EXCELENCIA-2022.pdf" rel="noopener noreferrer nofollow">Mejor Programa de Becas Internacionales 2022</a>! Reconoce nuestro esfuerzo por ofrecer oportunidades educativas globales a estudiantes talentosos, sin importar su situación económica.'
+    link: ""
+    text_link: 
+
+  - image: "../../../static/images/badges/exelencia-educativa-es.png"
+    title: "Premios al Mejor bootcamp presencial 2022"
+    paragraph: 'Nuestro campus de España ha sido honrado con el Premio <a href="http://premiosexcelenciaeducativa.org/wp-content/uploads/2022/03/PALMAR%C3%89S-EXCELENCIA-2022.pdf" rel="noopener noreferrer nofollow">Excelencia Educativa al Mejor Bootcamp Presencial 2022</a>. Este reconocimiento es un testimonio de nuestro compromiso inquebrantable con la excelencia en la educación presencial en el campo de la tecnología.'
+    link: ""
+    text_link: 
+
+  - image: "../../../static/images/badges/exelencia-educativa-es.png"
+    title: "Reconocimiento a la Trayectoria Internacional"
+    paragraph: 'En el marco de los Premios Excelencia Educativa 2022, nos enorgullece haber sido galardonados con el <a href="http://premiosexcelenciaeducativa.org/wp-content/uploads/2022/03/PALMAR%C3%89S-EXCELENCIA-2022.pdf" rel="noopener noreferrer nofollow">premio a la Trayectoria Internacional</a> Destacada en el ámbito de la Escuela de Desarrollo de Software.'
+    link: ""
+    text_link: 
+
+  - image: "../../../static/images/awards/pee-career.png"
     title: "Mejor Programa Educativo para la Inserción Profesional"
     paragraph: 'Premio Excelencia Educativa 2021 al Mejor Programa Educativo para la Inserción Profesional Especializado en Coding Bootcamp, más información en el <a href="https://premiosexcelenciaeducativa.org/wp-content/uploads/2016/05/PALMARE%CC%81S-EXCELENCIA-2020-1.pdf" rel="noopener noreferrer nofollow">palmares 2021 de los premios excelencia educativa</a>'
     link: ""
     text_link: 
 
-  - image: "../../../static/images/badges/exelencia-educativa-es.png"
-    title: "Mejor Innovación"
+  - image: "../../../static/images/awards/pee-innovation.png"
+    title: "Excelencia Educativa a la Mejor innovación"
     paragraph: 'Premio Excelencia Educativa 2021 a la Mejor Innovación en Escuela de Coding Bootcamp, más información en el <a href="https://premiosexcelenciaeducativa.org/wp-content/uploads/2016/05/PALMARE%CC%81S-EXCELENCIA-2020-1.pdf" rel="noopener noreferrer nofollow">palmares 2021 de los premios excelencia educativa</a>'
     link: ""
     text_link: 
 
-  - image: "../../../static/images/badges/exelencia-educativa-es.png"
+  - image: "../../../static/images/awards/pee-trajectory.png"
     title: "Mejor Trayectoria Internacional"
     paragraph: 'Premio Excelencia Educativa 2021 a la Mejor Trayectoria Internacional en Escuela de Desarrollo de Software, más información en el <a href="https://premiosexcelenciaeducativa.org/wp-content/uploads/2016/05/PALMARE%CC%81S-EXCELENCIA-2020-1.pdf" rel="noopener noreferrer nofollow">palmares 2021 de los premios excelencia educativa</a>'
     link: ""
