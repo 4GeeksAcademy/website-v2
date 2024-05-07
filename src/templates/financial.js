@@ -149,17 +149,15 @@ const Financial = (props) => {
         content={yml.who_is_hiring.paragraph}
       >
         {yml.who_is_hiring.images.map((image) => (
-          <Div
-            border="1px solid #C4C4C4"
-            key={image}
-            width="240px !important"
-            height="240px"
-          >
+          <Div key={image}>
             <Div
-              height="100%"
+              border="1px solid #C4C4C4"
+              width="240px !important"
+              height="240px"
               display="flex"
               flexDirection="column"
               justifyContent="center"
+              margin="auto"
             >
               <Img
                 backgroundSize="contain"

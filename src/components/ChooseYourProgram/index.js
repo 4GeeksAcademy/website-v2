@@ -76,7 +76,7 @@ const ChooseYourProgram = ({
         padding_lg="10px 0 50px 0"
         padding_md="10px 80px 50px 80px"
         padding_tablet="10px 40px 50px 40px"
-        padding_xxs="0 20px 40px 20px "
+        padding="0 20px 40px 20px "
         maxWidth_tablet="1280px"
         margin_tablet="0 auto 50px auto"
         margin_lg="0 auto 50px auto"
@@ -153,8 +153,9 @@ const ChooseYourProgram = ({
                   zIndex="1"
                   width_md="100%"
                   width_tablet="100%"
-                  width_xxs="95%"
-                  width_xs="100%"
+                  width="100%"
+                  // width_xxs="95%"
+                  // width_xs="100%"
                 >
                   <Div
                     placeSelf_tablet={landingTemplate && "flex-start"}
@@ -194,8 +195,8 @@ const ChooseYourProgram = ({
                         className="choose-your-program-icon"
                         icon={program.icon}
                         padding="0 0 0 20px"
-                        height="40px"
-                        width="52px"
+                        height="75px"
+                        width="68px"
                       />
                     </Div>
                   </Div>
@@ -281,8 +282,8 @@ const ChooseYourProgram = ({
                             justifyContent="center"
                             width_xs="auto"
                             width_tablet="150px"
+                            position_tablet="absolute"
                             style={{
-                              position: "absolute",
                               bottom: "24px",
                               left: "24px",
                               right: "24px",

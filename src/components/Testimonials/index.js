@@ -85,6 +85,7 @@ const Testimonials = (props) => {
                 flexDirection="column"
                 justifyContent="between"
                 alignItems="center"
+                margin="auto"
               >
                 <Div width="59px" height="59px" position="relative">
                   <Div

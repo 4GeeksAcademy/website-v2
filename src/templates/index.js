@@ -260,6 +260,7 @@ const Home = (props) => {
                   margin_tablet="0"
                   margin_lg="0 auto"
                   margin_md="0 auto"
+                  margin="auto"
                   zIndex="2"
                 >
                   <iframe

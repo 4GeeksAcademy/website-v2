@@ -328,18 +328,16 @@ const OurPartners = ({
           if (typeof elem.follow === "string" && elem.follow === "false")
             follow = false;
           return (
-            <Div
-              key={elem.name}
-              border="1px solid #C4C4C4"
-              borderRadius="4px"
-              height="236px"
-              width="260px !important"
-            >
+            <Div key={elem.name}>
               <Div
-                height="100%"
                 display="flex"
                 flexDirection="column"
                 justifyContent="center"
+                border="1px solid #C4C4C4"
+                borderRadius="4px"
+                height="236px"
+                width="260px !important"
+                margin="auto"
               >
                 {elem.link ? (
                   <a
