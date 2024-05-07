@@ -1,18 +1,21 @@
 full_time:
   - slug: 'usa-clark-scholarship-ft'
-    academies: ['toronto-canada', downtown-miami', 'orlando', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa']
+    academies: ['toronto-canada', 'downtown-miami', 'orlando', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa']
     recomended: true
     scholarship: "Scholarship"
     payment_time: "There is nothing like this"
     price: "$7999"
+    original_price: "$9999"
+    warning_message: "Limited seats!"
+    offer: "20% OFF"
     bullets: 
       - "You're saving $4000 USD"
       - "Regular tuition is $11999. Avg tuition in the US is $15k."
       - "Remaining balance could be paid over time $100 p/mo"
-    icons: 
-      - "images/clarkuniversity.png"
+    icons:
+      - "/images/clarkuniversity.png"
   - slug: 'usa-financed-ft'
-    academies: ['toronto-canada', downtown-miami', 'orlando', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa']
+    academies: ['toronto-canada', 'downtown-miami', 'orlando', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa']
     recomended: false
     scholarship: "Financed"
     payment_time: "24 months payment"
@@ -25,7 +28,7 @@ full_time:
       - "/images/climb-logo.png"
       - "/images/quotanda-logo.png"
   - slug: 'usa-isa-ft'
-    academies: ['toronto-canada', downtown-miami', 'orlando', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa']
+    academies: ['toronto-canada', 'downtown-miami', 'orlando', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa']
     recomended: false
     scholarship: "Income Share Agreement"
     payment_time: "Pay only when you get a job. Ask for living stipends."
@@ -47,10 +50,10 @@ full_time:
       - "Focus on your career and not how to afford your education"
       - "8.5% of your salary until paid in full (1.5x revenue cap), only if you get a job in tech."
     icons: 
-      - "static/images/landing/miamitech-logo.png"  
+      - "/images/landing/miamitech-logo.png"  
         
   - slug: 'usa-upfront-ft'
-    academies: ['toronto-canada', downtown-miami', 'orlando', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa']
+    academies: ['toronto-canada', 'downtown-miami', 'orlando', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa']
     recomended: false
     scholarship: "Full Payment"
     payment_time: "Pay today"
@@ -121,7 +124,7 @@ full_time:
       - "Tailor-made financing from 6 to 18 months"  
       - "An advance payment corresponding to 20% of the value of the program must be paid" 
     icons: 
-      - "/images//flevo-new.png"
+      - "/images/flevo-new.png"
                        
   - slug: 'chile-isa-fs-ft'
     academies: ['santiago-chile']
@@ -158,7 +161,7 @@ full_time:
       - "Get interview with Flevo for fast financing approval."
       - "Prices may vary depending on the length of your financing period."
     icons: 
-      - "/images//flevo-new.png"
+      - "/images/flevo-new.png"
 
   # - slug: 'venezuela-laptop-pt'
   #   academies: ['caracas-venezuela']
@@ -270,6 +273,9 @@ part_time:
     scholarship: "Scholarship"
     payment_time: "Pay today or with a Payment Plan for $100 p/mo"
     price: "$5999"
+    original_price: "$9999"
+    warning_message: "Limited seats!"
+    offer: "40% OFF"
     bullets: 
       - "You're saving $4000 USD. Thanks to Clark University and the TechBoost Fund"
       - "You have to be underemployed or unemployed, and provide a valid US Work permit."
@@ -313,7 +319,7 @@ part_time:
       - "Get interview with Flevo for fast financing approval."
       - "Prices may vary depending on the length of your financing period."
     icons: 
-      - "/images//flevo-new.png"
+      - "/images/flevo-new.png"
 
   - slug: 'south-europe-scholarships-fs-pt'
     academies: ['lisbon-portugal','milan-italy','rome-italy']
@@ -376,7 +382,7 @@ part_time:
       - "Tailor-made financing from 6 to 18 months"  
       - "An advance payment corresponding to 20% of the value of the program must be paid" 
     icons: 
-      - "/images//flevo-new.png"
+      - "/images/flevo-new.png"
 
   - slug: 'chile-solo-fs-pt'
     academies: ['santiago-chile']
@@ -416,7 +422,7 @@ part_time:
       - "We offer a number of full or partial scholarship options that you could be eligible for."  
       - "Pay only for the Full-Stack program if you are not interested yet in our career support program and our job guarantee"   
     icons: 
-      - "/images//flevo-new.png" 
+      - "/images/flevo-new.png" 
 
   - slug: 'latam-upfront-fs-pt'
     academies: ['montevideo-uruguay','bogota-colombia', 'costa-rica', 'mexicocity-mexico','quito-ecuador', 'panamacity-panama', 'buenosaires-argentina','lima-peru','lapaz-bolivia']
@@ -430,7 +436,7 @@ part_time:
       - "We offer a number of full or partial scholarship options that you could be eligible for."  
       - "Additionally to the Full-Stack program, get a lifetime of career support from our specialized team and permanent access to our online community of graduates"   
     icons: 
-      - "/images//flevo-new.png"    
+      - "/images/flevo-new.png"    
 
   #- slug: 'latam-job-guarantee-fs-pt'
     #academies: ['montevideo-uruguay','bogota-colombia', 'costa-rica', 'mexicocity-mexico','quito-ecuador', 'panamacity-panama', 'buenosaires-argentina','lima-peru','lapaz-bolivia']

@@ -43,7 +43,7 @@ const Side = ({
     );
   if (image) {
     const imgStyles = image.style ? JSON.parse(image.style) : null;
-    const [img_h_xl, img_h_lg, img_h_md, img_h_sm, img_h_xs] =
+    const [img_h_lg, img_h_md, img_h_tablet, img_h_sm, img_h_xs] =
       imgStyles && imgStyles.height
         ? Array.isArray(imgStyles.height)
           ? imgStyles.height
@@ -61,11 +61,13 @@ const Side = ({
         style={imgStyles}
         alt="4Geeks Academy Section"
         margin="0px"
-        height_md={img_h_xl || "100%"}
+        height_lg={img_h_lg || "100%"}
+        height_md={img_h_md || "100%"}
+        height_tablet={img_h_tablet || "100%"}
+        height_sm={img_h_sm}
+        height_xxs={img_h_xs || "500px"}
         minHeight="500px"
         width={imgStyles ? imgStyles.width || "100%" : "100%"}
-        h_sm={img_h_sm}
-        height_xxs={img_h_xs || "500px"}
         backgroundSize={image.shadow ? "cover" : "contain"}
         position={side}
         //border={image.shadow && "3px solid black"}
@@ -358,7 +360,7 @@ const Side = ({
   );
 };
 
-const TwoColumn = ({ left, right, proportions, session }) => {
+const TwoColumn = ({ left, right, proportions, session, alignment }) => {
   const [left_size, right_size] = proportions ? proportions : [];
   return (
     <Div
@@ -366,6 +368,7 @@ const TwoColumn = ({ left, right, proportions, session }) => {
       gap={left?.gap || right?.gap || "0px"}
       gap_tablet={left?.gap_tablet || right?.gap_tablet || "20px"}
       flexDirection_tablet="row"
+      alignItems_tablet={alignment}
       m_sm="0px auto 100px auto"
       margin_tablet="0 auto"
       margin_xxs="0"

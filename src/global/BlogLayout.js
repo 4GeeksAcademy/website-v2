@@ -176,7 +176,7 @@ const BlogLayout = ({ children, seo, context }) => {
       {myNavbar && (
         <>
           <Navbar
-            locationCity={myLocations}
+            myLocations={myLocations}
             currentURL={context.pagePath}
             onLocationChange={(slug) => setLocation(slug)}
             menu={myNavbar.node.navbar}
@@ -185,7 +185,7 @@ const BlogLayout = ({ children, seo, context }) => {
             lang={context.lang}
           />
           <NavbarMobile
-            locationCity={myLocations}
+            myLocations={myLocations}
             currentURL={context.pagePath}
             onLocationChange={(slug) => setLocation(slug)}
             menu={myNavbar.node.navbar}

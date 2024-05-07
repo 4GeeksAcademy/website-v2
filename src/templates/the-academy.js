@@ -89,7 +89,7 @@ const Why = (props) => {
       <Badges
         lang={pageContext.lang}
         paragraph={yml.badges.paragraph}
-        background={Colors.lightYellow}
+        background={Colors.darkYellow}
         link
         padding="58px 17px"
         padding_tablet="70px 0"
@@ -102,6 +102,8 @@ const Why = (props) => {
         columns_tablet="2"
         padding="0"
         margin_tablet="0 0 88px 0"
+        childMaxWidth="1280px"
+        childMargin="auto"
       >
         <Div
           flexDirection="column"
@@ -137,7 +139,12 @@ const Why = (props) => {
         </Div>
       </GridContainer>
       <Credentials lang={data.allCredentialsYaml.edges} />
-      <GridContainer margin="0 0 40px 0" padding="0">
+      <GridContainer
+        margin="0 0 40px 0"
+        padding="0"
+        childMaxWidth="1280px"
+        childMargin="auto"
+      >
         <Div flexDirection="column">
           <H2>{cornerstones.title}</H2>
         </Div>

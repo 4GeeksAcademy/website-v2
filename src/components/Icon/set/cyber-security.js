@@ -2,8 +2,9 @@ import React from "react";
 
 export default (props) => (
   <svg
-    width="160"
-    height="80"
+    width={props.width || "160"}
+    height={props.height || "80"}
+    style={props.style}
     viewBox="0 0 80 80"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"

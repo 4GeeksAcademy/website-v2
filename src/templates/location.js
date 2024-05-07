@@ -76,11 +76,6 @@ const Location = ({ data, pageContext, yml }) => {
         padding_lg="40px 0px"
         padding_tablet="40px 40px"
         columns_tablet="14"
-        margin={
-          isCustomBarActive(session)
-            ? "138px auto 30px auto"
-            : "72px auto 30px auto"
-        }
         margin_md={
           isCustomBarActive(session)
             ? "120px auto 30px auto"
@@ -273,7 +268,7 @@ const Location = ({ data, pageContext, yml }) => {
           paragraph={yml?.images_box?.content}
           widthImage="315px"
           heightImage="347px"
-          previewArrow
+          previousArrow
           nextArrow
           //customSettingsCarousel={}
         />
@@ -297,6 +292,7 @@ const Location = ({ data, pageContext, yml }) => {
         locations={data.allLocationYaml.edges}
         message={yml.upcoming.no_dates_message}
         actionMessage={yml.upcoming.actionMessage}
+        showMoreRedirect
       />
 
       <Staff lang={pageContext.lang} heading={yml?.staff?.heading} />
