@@ -276,7 +276,7 @@ const OurPartners = ({
       <SectionCarousel
         margin="20px 0"
         background="#FBFCFC"
-        padding="20px"
+        padding="20px 0 40px 0"
         heading={title}
         content={paragraph}
         headingProps={{ fontWeight: "400" }}

@@ -74,9 +74,8 @@ const Loc = ({ lang, hideHeading, allLocationYaml }) => {
         width="100%"
         display_tablet="none"
         display="block"
-        margin_xxs="0 20px"
       >
-        <Div id="responsive-options-selector" width="90%">
+        <Div id="responsive-options-selector" width="100%">
           {regions.map((m, i) => (
             <Div
               color={activeOpt.title === m.title ? Colors.black : Colors.gray}
@@ -92,7 +91,7 @@ const Loc = ({ lang, hideHeading, allLocationYaml }) => {
               }}
               style={{ cursor: "pointer" }}
               display="block"
-              width="33%"
+              width="100%"
               key={`${m.title}-${i}`}
             >
               <H3
@@ -106,7 +105,7 @@ const Loc = ({ lang, hideHeading, allLocationYaml }) => {
           ))}
         </Div>
         <Div
-          padding_sm="20px 20px 0 20px"
+          padding_sm="20px 0 0 0"
           padding="20px 0 0 0"
           flexDirection="column"
           flexWrap="wrap"
@@ -118,22 +117,21 @@ const Loc = ({ lang, hideHeading, allLocationYaml }) => {
               return (
                 <Link
                   to={`/${lang}/coding-campus/${l.node.meta_info.slug}`}
-                  key={i}
+                  key={`${l.node.meta_info.slug}-mobile`}
                   style={{
                     marginBottom: "8px",
-                    width: "fit-content",
+                    maxWidth: "50%",
                     display: "flex",
                     alignItems: "center",
+                    gap: "5px",
                   }}
                 >
                   <H3
                     textAlign="left"
                     width="fit-content"
-                    // maxWidth="135px"
                     fontSize="15px"
                     lineHeight="20px"
                     fontWeight="400"
-                    // margin="0 5px 0 0"
                     border="2px solid transparent"
                     borderBottomHover="2px solid black"
                   >
@@ -144,7 +142,6 @@ const Loc = ({ lang, hideHeading, allLocationYaml }) => {
                     color={Colors.blue}
                     width="10px"
                     height="10px"
-                    style={{ marginLeft: "5px" }}
                   />
                 </Link>
               );

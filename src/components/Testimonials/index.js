@@ -22,6 +22,7 @@ const Testimonials = (props) => {
         heading={props.heading || testimonialsArray.heading}
         content={props.content}
         background={props.background}
+        padding="20px 0 40px 0"
         headingProps={{ fontWeight: "400" }}
         contentProps={{ color: "#000", opacity: "1" }}
         customSettings={{
@@ -80,7 +81,7 @@ const Testimonials = (props) => {
                 height="230px"
                 padding="20px 24px 30px 20px"
                 border="1px solid #C4C4C4"
-                borderRadius="16px"
+                borderRadius="4px"
                 flexDirection="column"
                 justifyContent="between"
                 alignItems="center"

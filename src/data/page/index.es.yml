@@ -27,16 +27,16 @@ header_data:
 why_4geeks:
   proportions: [6, 6]
   image:
-    style: '{ "backgroundSize": "cover" }'
+    style: '{ "backgroundSize": "contain" }'
     src: "/images/landing/hombre-con-laptop-2.png"
     shadow: false  
   heading:
     text: "¿Por qué 4Geeks?"
     style: '{ "fontWeight": 400 }'
-    font_size: ["30px", "30px", "30px", "30px", "30px"]
+    font_size: ["35px", "35px", "35px", "35px", "35px"]
   sub_heading:
     text: "¿Quieres desatar tu potencial como Full-Stack Developer y/o Data Scientist?"
-    font_size: ["16px", "16px", "16px", "16px", "16px"]
+    font_size: ["21px", "21px", "21px", "21px", "21px"]
   content:
     text: |
       Conviértete en un Full-Stack Developer y/o Data Scientist en solo 18 semanas con 4Geeks Academy. Sin experiencia previa necesaria. Contamos con más de 8 años de experiencia, presencia en diferentes partes del mundo y premios a nivel mundial. 
@@ -90,7 +90,7 @@ two_columns:
   button:
     text: "Ver opciones de financiación"
     color: "white"
-    background: "black"
+    background: "#0084FF"
     path: "#prices_and_payment"
 
 iconogram:

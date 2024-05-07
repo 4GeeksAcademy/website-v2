@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link, useStaticQuery, graphql } from "gatsby";
 import PropTypes from "prop-types";
 import { Button, Colors } from "../Styling";
 import { Grid, Div } from "../Sections";
 import { H4, H3, H2, Paragraph } from "../Heading";
+import { SessionContext } from "../../session.js";
 import Icon from "../Icon";
 
 const ChooseYourProgram = ({
@@ -15,6 +16,8 @@ const ChooseYourProgram = ({
   landingTemplate,
   id,
 }) => {
+  const { session } = useContext(SessionContext);
+  const applyButton = session?.location?.button?.apply_button_text;
   const data = useStaticQuery(graphql`
     {
       allChooseYourProgramYaml {
@@ -270,19 +273,26 @@ const ChooseYourProgram = ({
                             {program.text_link}
                           </Button>
                         ) : (
-                          <Div displey="flex">
-                            <Icon
-                              //className="mobile"
-                              style={{
-                                position: "absolute",
-                                bottom: "24px",
-                                right: "24px",
-                              }}
-                              icon="arrowright"
-                              height="32px"
-                              width="32px"
-                            />
-                          </Div>
+                          <Button
+                            display="flex"
+                            background="#0084FF"
+                            colorHover="#0084FF"
+                            color={Colors.white}
+                            justifyContent="center"
+                            width_xs="auto"
+                            width_tablet="150px"
+                            style={{
+                              position: "absolute",
+                              bottom: "24px",
+                              left: "24px",
+                              right: "24px",
+                              gap: "10px",
+                            }}
+                          >
+                            {applyButton || program.text_link}
+                            {"  "}
+                            <span>→</span>
+                          </Button>
                         )}
                       </Link>
                     ) : (

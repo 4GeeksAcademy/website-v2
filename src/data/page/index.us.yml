@@ -45,6 +45,31 @@ choose_program:
   title: Choose your program
   paragraph: Find the path that’s right for you
 
+why_4geeks:
+  proportions: [6, 6]
+  image:
+    style: '{ "backgroundSize": "contain" }'
+    src: "/images/landing/hombre-con-laptop-2.png"
+    shadow: false  
+  heading:
+    text: "Why 4Ggeeks"
+    style: '{ "fontWeight": 400 }'
+    font_size: ["35px", "35px", "35px", "35px", "35px"]
+  sub_heading:
+    text: "Do you want to unleash your potential as a Full-Stack Developer and/or Data Scientist?"
+    font_size: ["21px", "21px", "21px", "21px", "21px"]
+  content:
+    text: |
+      Become a Full-Stack Developer and/or Data Scientist in just 18 weeks with 4Geeks Academy. No previous experience necessary. We have more than 8 years of experience, presence in different parts of the world and awards worldwide.
+
+      Join the academy and transform your career!
+    font_size: ["16px"]
+  button:
+    text: "Apply now"
+    color: "white"
+    background: "#0084FF"
+    path: "/us/apply"
+
 ## TWO COLUMNS
 two_columns:
   proportions: [6, 6]
@@ -76,31 +101,6 @@ geeks_vs_others:
   heading: "WHAT MAKES THIS CODING BOOTCAMP STAND OUT?"
   sub_heading: "In a nutshell, the simplest way to compare coding focused schools:"
   sub_heading_link: "/geeks-vs-others"
-
-why_4geeks:
-  proportions: [6, 6]
-  image:
-    style: '{ "backgroundSize": "contain" }'
-    src: "/images/landing/hombre-con-laptop-2.png"
-    shadow: false  
-  heading:
-    text: "Why 4Ggeeks"
-    style: '{ "fontWeight": 400 }'
-    font_size: ["30px", "30px", "30px", "30px", "30px"]
-  sub_heading:
-    text: "Do you want to unleash your potential as a Full-Stack Developer and/or Data Scientist?"
-    font_size: ["16px", "16px", "16px", "16px", "16px"]
-  content:
-    text: |
-      Become a Full-Stack Developer and/or Data Scientist in just 18 weeks with 4Geeks Academy. No previous experience necessary. We have more than 8 years of experience, presence in different parts of the world and awards worldwide.
-
-      Join the academy and transform your career!
-    font_size: ["16px"]
-  button:
-    text: "Apply now"
-    color: "white"
-    background: "#0084FF"
-    path: "/us/apply"
 
 iconogram:
   heading:

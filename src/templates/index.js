@@ -309,7 +309,7 @@ const Home = (props) => {
         background={Colors.verylightGray}
         heading={yml.success_cases.title}
         content={yml.success_cases.content}
-        padding="20px"
+        margin="20px 0 0 0"
         variant="carousel"
       />
 
