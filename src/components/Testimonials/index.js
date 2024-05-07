@@ -22,9 +22,9 @@ const Testimonials = (props) => {
         heading={props.heading || testimonialsArray.heading}
         content={props.content}
         background={props.background}
-        headingProps={{ fontWeight: '400' }}
-        contentProps={{ color: '#000', opacity: '1' }}
-        customSettings={{ 
+        headingProps={{ fontWeight: "400" }}
+        contentProps={{ color: "#000", opacity: "1" }}
+        customSettings={{
           slidesToShow: 4,
           slidesToScroll: 4,
           responsive: [
@@ -86,7 +86,13 @@ const Testimonials = (props) => {
                 alignItems="center"
               >
                 <Div width="59px" height="59px" position="relative">
-                  <Div borderRadius="100%" background="#FFB718" position="absolute" zIndex="10" right="0">
+                  <Div
+                    borderRadius="100%"
+                    background="#FFB718"
+                    position="absolute"
+                    zIndex="10"
+                    right="0"
+                  >
                     <Icon
                       width="18px"
                       height="18px"
@@ -94,7 +100,7 @@ const Testimonials = (props) => {
                       color="#FFF1D1"
                     />
                   </Div>
-                  
+
                   <GatsbyImage
                     image={getImage(
                       item.student_thumb.childImageSharp.gatsbyImageData
@@ -104,9 +110,9 @@ const Testimonials = (props) => {
                       height: "59px",
                       minWidth: "59px",
                       width: "59px",
-                      borderRadius: '100%',
+                      borderRadius: "100%",
                       backgroundSize: "cover",
-                      margin: "auto"
+                      margin: "auto",
                     }}
                   />
                 </Div>
@@ -128,15 +134,15 @@ const Testimonials = (props) => {
                   </H4>
                 </Div>
                 {item.linkedin_url != "" && item.linkedin_image != null && (
-                    <a
-                      href={item.linkedin_url}
-                      target="_blank"
-                      rel="noopener noreferrer nofollow"
-                      style={{ margin: 'auto' }}
-                    >
-                      <Icon icon="linkedin-new" style={{ margin: 'auto' }} />
-                    </a>
-                  )}
+                  <a
+                    href={item.linkedin_url}
+                    target="_blank"
+                    rel="noopener noreferrer nofollow"
+                    style={{ margin: "auto" }}
+                  >
+                    <Icon icon="linkedin-new" style={{ margin: "auto" }} />
+                  </a>
+                )}
               </Div>
             </Div>
           );

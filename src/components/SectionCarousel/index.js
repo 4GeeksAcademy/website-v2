@@ -4,14 +4,17 @@ import { Div } from "../Sections";
 import Icon from "../Icon";
 import Carousel from "../Carousel";
 
-const SectionCarousel = ({ heading, content, children, customSettings, headingProps, contentProps, ...rest }) => {
-
+const SectionCarousel = ({
+  heading,
+  content,
+  children,
+  customSettings,
+  headingProps,
+  contentProps,
+  ...rest
+}) => {
   return (
-    <Div
-      position="relative"
-      display="block"
-      {...rest}
-    >
+    <Div position="relative" display="block" {...rest}>
       <Carousel
         maxWidth="1280px"
         content={{

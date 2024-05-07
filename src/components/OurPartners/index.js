@@ -271,7 +271,7 @@ const OurPartners = ({
     width: width,
   };
 
-  if (variant === 'carousel')
+  if (variant === "carousel")
     return (
       <SectionCarousel
         margin="20px 0"
@@ -279,8 +279,8 @@ const OurPartners = ({
         padding="20px"
         heading={title}
         content={paragraph}
-        headingProps={{ fontWeight: '400' }}
-        contentProps={{ lineHeight: '24px' }}
+        headingProps={{ fontWeight: "400" }}
+        contentProps={{ lineHeight: "24px" }}
         customSettings={{
           slidesToShow: 4,
           slidesToScroll: 4,
@@ -288,7 +288,8 @@ const OurPartners = ({
       >
         {images.map((elem) => {
           let follow = elem.follow;
-          if (typeof elem.follow === "string" && elem.follow === "false") follow = false;
+          if (typeof elem.follow === "string" && elem.follow === "false")
+            follow = false;
           return (
             <Div
               key={elem.name}
@@ -304,7 +305,11 @@ const OurPartners = ({
                 justifyContent="center"
               >
                 {elem.link ? (
-                  <a href={elem.link} rel={!follow ? "nofollow" : ""} target="__blank">
+                  <a
+                    href={elem.link}
+                    rel={!follow ? "nofollow" : ""}
+                    target="__blank"
+                  >
                     <GatsbyImage
                       style={{
                         cursor: "pointer",
@@ -314,7 +319,9 @@ const OurPartners = ({
                       height="112px"
                       objectFit="contain"
                       alt={elem.name}
-                      image={getImage(elem.image.childImageSharp.gatsbyImageData)}
+                      image={getImage(
+                        elem.image.childImageSharp.gatsbyImageData
+                      )}
                     />
                   </a>
                 ) : (
