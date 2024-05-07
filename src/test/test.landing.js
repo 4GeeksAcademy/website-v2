@@ -13,6 +13,33 @@ const front_matter_fields = [
   { key: "utm_location", type: "array", mandatory: true },
 ];
 
+const landingSections = [
+  "in_the_news",
+  "about4Geeks",
+  "iconogram",
+  "badges",
+  "rating_reviews",
+  "syllabus",
+  "geeks_vs_others",
+  "program_details",
+  "overlaped",
+  "cards_carousel",
+  "choose_your_program",
+  "testimonials",
+  "geeksInfo",
+  "testimonials_new",
+  "why_4geeks",
+  "alumni_projects",
+  "who_is_hiring",
+  "divider",
+  "two_column_left",
+  "two_column_right",
+  "multi_column",
+  "single_column",
+  "columns",
+  "simple_cards",
+];
+
 async function listDir(dir) {
   try {
     return await fs.promises.readdir(`${__dirname}${dir}`);
@@ -48,6 +75,20 @@ const validateUtmLocation = (val, locations, _path) => {
           `not match with the location list:`.red
         }`.red
       } \n\n${locations.map((el) => `${el.green}\n`)} \n`
+    );
+};
+
+const validateComponents = (val, components, _path) => {
+  if (!Array.isArray(val))
+    fail(`\n${`components`.yellow} ${`expected an array in ${_path}`.red}\n`);
+  const unMatchingComponent = val.find((el) => !components.includes(el.layout));
+  if (unMatchingComponent)
+    fail(
+      `${`\nProblem found in: landing ${_path}`.red}\n\n${
+        `using a component layout that does not exist: ${
+          `${unMatchingComponent.layout}`.yellow
+        } ${`not match with available components:`.red}`.red
+      }\n\n${components.map((el) => `${el.green}\n`)} \n`
     );
 };
 
@@ -94,12 +135,14 @@ walk(`${__dirname}/../data/landing`, async (err, files) => {
 
     try {
       const landing = doc.yaml;
-      const meta_keys = Object.keys(landing.meta_info);
 
       validateObjectProperties(landing, {
         meta_info: (val) => {
           validateUtmCourse(val.utm_course, coursesYml, _path);
           validateUtmLocation(val.utm_location, locationsYml, _path);
+        },
+        components: (val) => {
+          validateComponents(val, landingSections, _path);
         },
       });
     } catch (error) {

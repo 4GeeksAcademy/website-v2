@@ -114,6 +114,7 @@ const Carousel = ({
           slidesToShow: 2,
           slidesToScroll: 2,
           initialSlide: 2,
+          dots: false,
         },
       },
       {
@@ -121,6 +122,7 @@ const Carousel = ({
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
+          dots: false,
         },
       },
     ],
@@ -154,17 +156,13 @@ const Carousel = ({
 
           {content?.content && (
             <Div flexDirection="column" margin="0 0 10px 0">
-              {content?.content.split("\n").map((text) => (
-                <Paragraph
-                  key={text}
-                  margin="0 0 0 0"
-                  fontSize="21px"
-                  lineHeight="20px"
-                  {...content.contentProps}
-                >
-                  {text}
-                </Paragraph>
-              ))}
+              <Paragraph
+                margin="0 0 0 0"
+                fontSize="21px"
+                lineHeight="20px"
+                dangerouslySetInnerHTML={{ __html: content.content }}
+                {...content.contentProps}
+              />
             </Div>
           )}
         </Div>

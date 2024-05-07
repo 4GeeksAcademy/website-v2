@@ -6,6 +6,7 @@ import { Link } from "gatsby";
 import { smartRedirecting } from "../../utils/utils.js";
 import Fragment from "../Fragment";
 import Marquee from "../Marquee";
+import SectionCarousel from "../SectionCarousel";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 // Display centered TITLE + PARAGRAPH
@@ -259,6 +260,7 @@ const OurPartners = ({
   gridColumn,
   maxWidth,
   gray,
+  variant,
   ...rest
 }) => {
   let FragmentStyle = {
@@ -268,6 +270,113 @@ const OurPartners = ({
     borderBottom: borderBottom,
     width: width,
   };
+
+  if (variant === "carousel")
+    return (
+      <SectionCarousel
+        margin="20px 0"
+        background="#FBFCFC"
+        padding="20px 0 40px 0"
+        heading={title}
+        content={paragraph}
+        headingProps={{ fontWeight: "400" }}
+        contentProps={{ lineHeight: "24px" }}
+        customSettings={{
+          slidesToShow: 4,
+          slidesToScroll: 4,
+          responsive: [
+            {
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3,
+                infinite: true,
+                dots: true,
+              },
+            },
+            {
+              breakpoint: 780,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2,
+                initialSlide: 2,
+                dots: false,
+              },
+            },
+            {
+              breakpoint: 600,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2,
+                initialSlide: 2,
+                dots: false,
+              },
+            },
+            {
+              breakpoint: 480,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                dots: false,
+              },
+            },
+          ],
+        }}
+      >
+        {images.map((elem) => {
+          let follow = elem.follow;
+          if (typeof elem.follow === "string" && elem.follow === "false")
+            follow = false;
+          return (
+            <Div key={elem.name}>
+              <Div
+                display="flex"
+                flexDirection="column"
+                justifyContent="center"
+                border="1px solid #C4C4C4"
+                borderRadius="4px"
+                height="236px"
+                width="260px !important"
+                margin="auto"
+              >
+                {elem.link ? (
+                  <a
+                    href={elem.link}
+                    rel={!follow ? "nofollow" : ""}
+                    target="__blank"
+                  >
+                    <GatsbyImage
+                      style={{
+                        cursor: "pointer",
+                        margin: "auto",
+                        width: "60%",
+                      }}
+                      height="112px"
+                      objectFit="contain"
+                      alt={elem.name}
+                      image={getImage(
+                        elem.image.childImageSharp.gatsbyImageData
+                      )}
+                    />
+                  </a>
+                ) : (
+                  <GatsbyImage
+                    style={{
+                      margin: "auto",
+                      height: "112px",
+                      width: "60%",
+                    }}
+                    objectFit="contain"
+                    alt={elem.name}
+                    image={getImage(elem.image.childImageSharp.gatsbyImageData)}
+                  />
+                )}
+              </Div>
+            </Div>
+          );
+        })}
+      </SectionCarousel>
+    );
   //Renderized...
   return (
     <Fragment github="/components/partner" style={FragmentStyle}>

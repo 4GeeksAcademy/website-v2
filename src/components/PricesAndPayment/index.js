@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from "react";
+import React, { useState, useContext, useEffect, useRef } from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import Icon from "../Icon";
 import Toggle from "../ToggleSwitch";
@@ -8,6 +8,7 @@ import Select, { SelectRaw } from "../Select";
 import { H2, H3, H4, H5, Paragraph } from "../Heading";
 import { Button, Colors, RoundImage, Img } from "../Styling";
 import { SessionContext } from "../../session";
+import { isWindow } from "../../utils/utils";
 
 const PricingCard = ({
   data,
@@ -16,7 +17,6 @@ const PricingCard = ({
   setSelectedPlan,
   buttonText,
   jobGuarantee,
-  index,
 }) => {
   const { session, setSession } = useContext(SessionContext);
   const { recomended, scholarship, payment_time, slug } = data;
@@ -24,6 +24,7 @@ const PricingCard = ({
   return (
     <>
       <Div
+        position="relative"
         cursor="pointer"
         display="block"
         width="100%"
@@ -35,13 +36,47 @@ const PricingCard = ({
         margin_xs="9px 0 0 0"
         margin_tablet="0"
       >
+        {data.offer && (
+          <Div position="absolute" right="0" top="-20px">
+            <Div
+              borderRadius="55px"
+              background={Colors.red}
+              padding="2px 8px"
+              position="relative"
+            >
+              <Div
+                top="-9px"
+                left="-37px"
+                justifyContent="center"
+                textAlign="center"
+                width="44px"
+                height="44px"
+                fontSize="24px"
+                position="absolute"
+                borderRadius="41px"
+                padding="10px"
+                border="2px solid #C20000"
+                background={Colors.red}
+              >
+                🔥
+              </Div>
+              <Paragraph fontSize="24px" opacity="1" color={Colors.white}>
+                {data.offer}
+              </Paragraph>
+            </Div>
+          </Div>
+        )}
         {recomended && (
-          <Div background={Colors.blue}>
+          <Div
+            padding="4px 0"
+            background={Colors.blue}
+            borderRadius="2px 2px 0 0"
+          >
             <Paragraph
               color={Colors.white}
-              // fontWeight_tablet="700"
-              fontSize="14px"
-              fontWeight="500"
+              fontSize="18px"
+              fontWeight="700"
+              fontWeight_tablet="700"
               lineHeight="17px"
               opacity="1"
             >
@@ -50,9 +85,13 @@ const PricingCard = ({
           </Div>
         )}
         <Div
-          //border={`2px solid ${Colors.blue}`}
-          //border={`2px solid ${isSelected ? Colors.blue : "black"}`}
-          border={isSelected ? `1px solid ${Colors.blue}` : "1px solid black"}
+          border={
+            isSelected
+              ? `${recomended ? 2 : 1}px solid ${Colors.blue}`
+              : `1px solid black`
+          }
+          borderTop={recomended && "none"}
+          borderRadius={recomended ? "0 0 4px 4px" : "4px"}
           padding_md="17px 20px"
           padding_tablet="8px 5px"
           padding_xs="8px 20px"
@@ -118,14 +157,26 @@ const PricingCard = ({
               </H3>
               {!jobGuarantee && (
                 <Paragraph
-                  fontWeight="700"
-                  fontSize="30px"
-                  lineHeight="36px"
-                  color={Colors.black}
+                  fontWeight="500"
+                  fontSize="18px"
+                  lineHeight="21px"
                   opacity="1"
                   textAlign="right"
+                  color="#B4B4B4"
                 >
                   <s>{data.original_price}</s>
+                </Paragraph>
+              )}
+              {data.warning_message && (
+                <Paragraph
+                  fontWeight="500"
+                  fontSize="18px"
+                  lineHeight="36px"
+                  opacity="1"
+                  textAlign="right"
+                  color={Colors.red}
+                >
+                  {data.warning_message}
                 </Paragraph>
               )}
             </Div>
@@ -143,6 +194,7 @@ const PricingCard = ({
             >
               {data.icons.map((icon) => (
                 <Img
+                  key={`${icon}-${slug}`}
                   src={icon}
                   alt="4Geeks Academy Icon"
                   backgroundSize="contain"
@@ -172,7 +224,7 @@ const PricingCard = ({
           </H3>
           {data.bullets &&
             data.bullets.map((bullet) => (
-              <Div alignItems="center" margin="21px 0 0 0">
+              <Div key={bullet} alignItems="center" margin="21px 0 0 0">
                 <Icon
                   icon="check"
                   width="17px"
@@ -300,20 +352,9 @@ const ChartSection = ({ info, currentLocation }) => {
   );
 };
 
-const modalityArray = [
-  {
-    value: "part_time",
-    label: "Part Time",
-  },
-  {
-    value: "full_time",
-    label: "Full Time",
-  },
-];
-
-const PricesAndPayments = (props) => {
+const PricesAndPayment = (props) => {
   const data = useStaticQuery(graphql`
-    query PricesAndPayments {
+    query PricesAndPayment {
       content: allPricesAndPaymentYaml {
         edges {
           node {
@@ -325,6 +366,7 @@ const PricesAndPayments = (props) => {
             get_notified
             contact_carrer_advisor
             contact_link
+            we_accept
             top_label
             top_label_2
             plans_title
@@ -367,6 +409,9 @@ const PricesAndPayments = (props) => {
               scholarship
               payment_time
               price
+              original_price
+              warning_message
+              offer
               job_guarantee_price
               bullets
               icons
@@ -379,6 +424,8 @@ const PricesAndPayments = (props) => {
               payment_time
               price
               original_price
+              warning_message
+              offer
               job_guarantee_price
               bullets
               icons
@@ -406,6 +453,7 @@ const PricesAndPayments = (props) => {
     return phoneNumber;
   }
 
+  const mainContainer = useRef(null);
   const { session, setSession } = useContext(SessionContext);
   const [currentLocation, setCurrentLocation] = useState(false);
   const [course, setCourse] = useState(false);
@@ -414,10 +462,8 @@ const PricesAndPayments = (props) => {
   const [selectedPlan, setSelectedPlan] = useState(null);
   const [jobGuarantee, setJobGuarantee] = useState(false);
   const [schedule, setSchedule] = useState("part_time");
-  //const [currentPlans] = useState();
   const [availablePlans, setAvailablePlans] = useState([]);
   const [courseArrayFiltered, setCourseArrayFiltered] = useState([]);
-  // const courseArrayFiltered = []
 
   const getCurrentPlans = () => {
     let _plans = data.allPlansYaml.edges
@@ -428,7 +474,6 @@ const PricesAndPayments = (props) => {
         )
       );
 
-    console.log("_plans", _plans);
     if (_plans) _plans = _plans.node[schedule];
     else _plans = [];
 
@@ -468,7 +513,17 @@ const PricesAndPayments = (props) => {
     return [];
   };
 
-  // const steps = props.details.details_modules.reduce((total, current, i) => [...total, (total[i - 1] || 0) + current.step], [])
+  useEffect(() => {
+    if (isWindow) {
+      if (window.location.hash.includes("prices_and_payment")) {
+        window.scrollTo({
+          top: mainContainer.current?.offsetTop,
+          behavior: "smooth",
+        });
+      }
+    }
+  }, [mainContainer.current]);
+
   useEffect(() => {
     setLocations(
       props.locations
@@ -531,7 +586,6 @@ const PricesAndPayments = (props) => {
             )
           );
 
-        console.log("currentPlans", currentPlans, schedule);
         currentPlans = currentPlans?.node[schedule];
 
         const availablePlans = currentPlans?.filter((plan) =>
@@ -548,7 +602,9 @@ const PricesAndPayments = (props) => {
 
   return (
     <Div
+      ref={mainContainer}
       id="prices_and_payment"
+      display="block"
       background={props.background}
       github="/location"
       flexDirection="column"
@@ -572,7 +628,7 @@ const PricesAndPayments = (props) => {
       </H2>
       <Grid
         gridTemplateColumns_lg={
-          props.financial ? "repeat(26,1fr)" : "3fr repeat(23,1fr) 3fr"
+          props.financial ? "repeat(26,1fr)" : "repeat(23,1fr)"
         }
         gridTemplateColumns_md="1fr repeat(14,1fr) 1fr"
         gridTemplateColumns_tablet={
@@ -582,9 +638,9 @@ const PricesAndPayments = (props) => {
         margin_tablet="20px 0 0 0"
       >
         <Div
-          gridColumn_md="2/9"
-          gridColumn_lg={props.financial ? "2/14" : "2/16"}
-          gridColumn_tablet={props.financial ? "1/9" : "2/10"}
+          gridColumn_md="1/9"
+          gridColumn_lg={props.financial ? "2/14" : "1/16"}
+          gridColumn_tablet={props.financial ? "1/9" : "1/10"}
           alignItems="center"
         >
           <H3
@@ -734,16 +790,14 @@ const PricesAndPayments = (props) => {
         </Div>
       </Grid>
 
-      {/* <Div display="block" minHeight_tablet="600px" padding_md="20px"> */}
-      {/* <ChartSection info={info} currentLocation={currentLocation} /> */}
       <Div
-        //border="1px solid #000"
+        display="block"
         background="#FFF"
         padding_tablet="0 0 38px 0"
         maxWidth_md="1280px"
         minWidth_md="580px"
         margin="20px auto"
-        //display="block"
+        className="main-container"
       >
         {availablePlans && availablePlans.length === 0 ? (
           <Div
@@ -763,19 +817,16 @@ const PricesAndPayments = (props) => {
           <>
             <Grid
               gridTemplateColumns_tablet="repeat(20,1fr)"
-              // gridTemplateColumns_md="repeat(22,1fr)"
-              // gridTemplateColumns_lg="repeat(24,1fr)"
               gridTemplateRows_tablet="1fr 1fr 1fr"
               gridGap="32px 0px"
+              className="inner-container"
             >
               {availablePlans.some((plan) => plan.job_guarantee_price) && (
                 <Div
-                  background={Colors.veryLightBlue}
+                  className="job-guarantee"
                   padding="8px"
                   margin_tablet="32px 0 0 0"
                   gridColumn_tablet="1/21"
-                  // gridColumn_md="2/24"
-                  // gridColumn_lg="2/26"
                   gridRow_tablet="1"
                   flexWrap="wrap"
                 >
@@ -807,6 +858,7 @@ const PricesAndPayments = (props) => {
               )}
               {availablePlans && availablePlans.length > 0 && (
                 <Div
+                  className="bullets-container"
                   display="none"
                   display_tablet="block"
                   background="#F9F9F9"
@@ -814,8 +866,6 @@ const PricesAndPayments = (props) => {
                   padding="24px 15px"
                   margin_tablet="0 8px 0 0"
                   gridColumn_tablet="1/11"
-                  // gridColumn_md="2/13"
-                  // gridColumn_lg="2/14"
                   gridRow_tablet="2"
                 >
                   <H3
@@ -860,18 +910,16 @@ const PricesAndPayments = (props) => {
                 gap="16px"
                 margin_tablet="0 0 0 8px"
                 gridColumn_tablet="11/21"
-                // gridColumn_md="13/24"
-                // gridColumn_lg="14/26"
                 gridRow="2"
               >
                 {availablePlans &&
-                  availablePlans.map((plan, index) => (
+                  availablePlans.map((plan) => (
                     <PricingCard
+                      key={plan.slug}
                       data={plan}
                       info={info}
                       selectedPlan={selectedPlan}
                       setSelectedPlan={setSelectedPlan}
-                      index={index}
                       buttonText={buttonText}
                       jobGuarantee={jobGuarantee}
                     />
@@ -886,7 +934,6 @@ const PricesAndPayments = (props) => {
                   gridColumn_tablet="12/22"
                   gridColumn_md="13/24"
                   gridColumn_lg="14/26"
-                  //margin="32px 0 0 0"
                 >
                   <Link
                     style={{
@@ -923,7 +970,6 @@ const PricesAndPayments = (props) => {
           </>
         )}
       </Div>
-      {/* </Div> */}
       <GridContainer
         columns_tablet="12"
         gridGap="0"
@@ -940,7 +986,7 @@ const PricesAndPayments = (props) => {
             width="fit-content"
             color={Colors.darkGray}
           >
-            We accept:{" "}
+            {info.we_accept}{" "}
           </H4>
           <RoundImage
             url="/images/bitcoin.png"
@@ -971,8 +1017,7 @@ const PricesAndPayments = (props) => {
           {info.contact_carrer_advisor}
         </Link>
       </Paragraph>
-      {/* <Div background={Colors.lightYellow} height="511px" width="100%" style={{position: "absolute", height: "511px"}}>f</Div> */}
     </Div>
   );
 };
-export default PricesAndPayments;
+export default PricesAndPayment;
