@@ -722,45 +722,6 @@ export const query = graphql`
         }
       }
     }
-    allAlumniProjectsYaml(filter: { fields: { lang: { eq: $lang } } }) {
-      edges {
-        node {
-          header {
-            tagline
-            sub_heading
-          }
-          projects {
-            project_name
-            slug
-            project_image {
-              childImageSharp {
-                gatsbyImageData(
-                  layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                  width: 800
-                  placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
-                )
-              }
-            }
-            project_content
-            project_video
-            live_link
-            github_repo
-            alumni {
-              first_name
-              last_name
-              job_title
-              github
-              linkedin
-              twitter
-            }
-          }
-          button_section {
-            button_text
-            button_link
-          }
-        }
-      }
-    }
     allChooseYourProgramYaml(filter: { fields: { lang: { eq: $lang } } }) {
       edges {
         node {

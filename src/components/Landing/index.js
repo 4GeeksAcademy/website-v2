@@ -779,7 +779,7 @@ export const landingSections = {
         display_tablet="flex"
       />
       <AlumniProjects
-        lang={data.allAlumniProjectsYaml.edges}
+        data={data.allAlumniProjectsYaml.edges[0]?.node}
         yml={yml}
         hasTitle
         showThumbs="false"
