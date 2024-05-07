@@ -4,7 +4,7 @@ import { GridContainer, Div } from "../Sections";
 import { H2, H3, H4, Paragraph } from "../Heading";
 import { Colors, Button, Spinner } from "../Styling";
 import dayjs from "dayjs";
-import Select, { SelectRaw } from "../Select";
+import { SelectRaw } from "../Select";
 import "dayjs/locale/de";
 import Icon from "../Icon";
 import styled from "styled-components";
@@ -90,10 +90,6 @@ const UpcomingDates = ({
   const [showForm, setShowForm] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const [academy, setAcademy] = useState(null);
-  const [filterType] = useState({
-    label: "Upcoming Courses and Events",
-    value: "cohorts",
-  });
 
   const [formStatus, setFormStatus] = useState({
     status: "idle",
@@ -116,9 +112,11 @@ const UpcomingDates = ({
   useEffect(() => {
     const getData = async () => {
       try {
-        const academySlug = session.academyAliasDictionary[location]
-          ? session.academyAliasDictionary[location]
-          : location;
+        setIsLoading(true);
+        const academySlug =
+          session?.academyAliasDictionary?.[location] ||
+          location ||
+          academy?.value;
         const response = await getCohorts({
           academy: academySlug,
           limit: 10,
@@ -157,7 +155,7 @@ const UpcomingDates = ({
       }
     };
     if (session?.academyAliasDictionary) getData();
-  }, [session]);
+  }, [session, academy]);
 
   const formIsValid = (formData = null) => {
     if (!formData) return null;
@@ -185,13 +183,6 @@ const UpcomingDates = ({
     }
   }, [session]);
   const buttonText = session?.location?.button.apply_button_text;
-
-  if (isLoading)
-    return (
-      <Div margin="30px 0" justifyContent="center">
-        <Spinner />
-      </Div>
-    );
 
   return (
     <GridContainer
@@ -269,61 +260,55 @@ const UpcomingDates = ({
                 }
                 onChange={(opt) => {
                   setAcademy(opt);
-                  setData({
-                    ...data,
-                    [filterType.value]: {
-                      ...data[filterType.value],
-                      filtered:
-                        opt.label !== "All Locations"
-                          ? data[filterType.value].all.filter(
-                              (elm) => elm.academy.slug === opt.value
-                            )
-                          : data[filterType.value].all,
-                    },
-                  });
                 }}
               />
             </Div>
           )}
         </Div>
-        {Array.isArray(data.cohorts.filtered) &&
-        data.cohorts.filtered.length > 0 ? (
-          data.cohorts.filtered.map((cohort, i) => {
-            const loc = locations.find(
-              ({ node }) =>
-                node.breathecode_location_slug === cohort.academy.slug
-            );
-            return (
-              i < 4 && (
-                <Div
-                  key={i}
-                  flexDirection="column"
-                  flexDirection_tablet="row"
-                  style={{ borderBottom: "1px solid black" }}
-                  padding="30px 0"
-                  justifyContent="between"
-                >
-                  <Div
-                    flexDirection_tablet="column"
-                    width_tablet="15%"
-                    alignItems="center"
-                    alignItems_tablet="start"
-                    margin="0 0 10px 0"
-                  >
-                    <H4
-                      textAlign="left"
-                      textTransform="uppercase"
-                      width="fit-content"
-                      margin="0 10px 0 0"
-                      fontWeight="700"
-                      lineHeight="22px"
+        {isLoading ? (
+          <Div margin="30px 0" justifyContent="center">
+            <Spinner />
+          </Div>
+        ) : (
+          <>
+            {Array.isArray(data.cohorts.filtered) &&
+            data.cohorts.filtered.length > 0 ? (
+              data.cohorts.filtered.map((cohort, i) => {
+                const loc = locations.find(
+                  ({ node }) =>
+                    node.breathecode_location_slug === cohort.academy.slug
+                );
+                return (
+                  i < 4 && (
+                    <Div
+                      key={i}
+                      flexDirection="column"
+                      flexDirection_tablet="row"
+                      style={{ borderBottom: "1px solid black" }}
+                      padding="30px 0"
+                      justifyContent="between"
                     >
-                      {dayjs(cohort.kickoff_date)
-                        .locale(`${lang === "us" ? "en" : "es"}`)
-                        .format("MMMM")}
-                    </H4>
-                    <Paragraph textAlign="left" fontWeight="700">
-                      {`
+                      <Div
+                        flexDirection_tablet="column"
+                        width_tablet="15%"
+                        alignItems="center"
+                        alignItems_tablet="start"
+                        margin="0 0 10px 0"
+                      >
+                        <H4
+                          textAlign="left"
+                          textTransform="uppercase"
+                          width="fit-content"
+                          margin="0 10px 0 0"
+                          fontWeight="700"
+                          lineHeight="22px"
+                        >
+                          {dayjs(cohort.kickoff_date)
+                            .locale(`${lang === "us" ? "en" : "es"}`)
+                            .format("MMMM")}
+                        </H4>
+                        <Paragraph textAlign="left" fontWeight="700">
+                          {`
                         ${
                           lang === "us"
                             ? dayjs(cohort.kickoff_date)
@@ -344,296 +329,306 @@ const UpcomingDates = ({
                                 .format("DD/MM")
                         }
                       `}
-                    </Paragraph>
-                  </Div>
-                  <Div
-                    flexDirection="column"
-                    width_tablet="calc(35% - 15%)"
-                    margin="0 0 20px 0"
-                  >
-                    <H4 textAlign="left" textTransform="uppercase">
-                      {content.info.program_label}
-                    </H4>
-
-                    <Link
-                      to={
-                        cohort.syllabus_version.courseSlug
-                          ? `/${lang}/coding-bootcamps/${cohort.syllabus_version.courseSlug}`
-                          : ""
-                      }
-                    >
-                      <Paragraph textAlign="left" color={Colors.blue}>
-                        {cohort.syllabus_version.name}
-                      </Paragraph>
-                    </Link>
-                  </Div>
-                  <Div
-                    flexDirection="column"
-                    display="none"
-                    display_tablet="flex"
-                    minWidth="120px"
-                  >
-                    <H4 textAlign="left" textTransform="uppercase">
-                      {content.info.location_label}
-                    </H4>
-                    <Div>
-                      <Link
-                        to={
-                          loc
-                            ? `/${lang}/coding-campus/${loc.node.meta_info.slug}`
-                            : ""
-                        }
-                      >
-                        <Paragraph textAlign="left" color={Colors.blue}>
-                          {cohort.academy.city.name}
                         </Paragraph>
-                      </Link>
+                      </Div>
+                      <Div
+                        flexDirection="column"
+                        width_tablet="calc(35% - 15%)"
+                        margin="0 0 20px 0"
+                      >
+                        <H4 textAlign="left" textTransform="uppercase">
+                          {content.info.program_label}
+                        </H4>
 
-                      {cohort.academy.slug !== "online" &&
-                        cohort.academy.city.name !== "Remote" && (
-                          <Paragraph textAlign="left" margin="0 0 0 3px">
-                            {content.conector}{" "}
-                            <Link
-                              color={Colors.blue}
-                              to={content.online_bootcamp}
-                            >
-                              {content.remote}
-                            </Link>
-                          </Paragraph>
-                        )}
-                    </Div>
-                  </Div>
-
-                  <Div
-                    flexDirection="column"
-                    display="none"
-                    display_tablet="flex"
-                  >
-                    <H4 textAlign="left" textTransform="uppercase">
-                      {content.info.duration_label}
-                    </H4>
-                    <Paragraph textAlign="left">
-                      {content.info.duration_weeks}
-                    </Paragraph>
-                  </Div>
-
-                  <Div
-                    display="flex"
-                    display_tablet="none"
-                    justifyContent="between"
-                    margin="0 0 20px 0"
-                  >
-                    <Div flexDirection="column" width="50%">
-                      <H4 textAlign="left" textTransform="uppercase">
-                        {content.info.location_label}
-                      </H4>
-                      <Div>
                         <Link
                           to={
-                            loc
-                              ? `/${lang}/coding-campus/${loc.node.meta_info.slug}`
+                            cohort.syllabus_version.courseSlug
+                              ? `/${lang}/coding-bootcamps/${cohort.syllabus_version.courseSlug}`
                               : ""
                           }
                         >
                           <Paragraph textAlign="left" color={Colors.blue}>
-                            {cohort.academy.city.name}
+                            {cohort.syllabus_version.name}
                           </Paragraph>
                         </Link>
-                        {cohort.academy.slug !== "online" && (
-                          <Link to={content.online_bootcamp}>
-                            <Paragraph
-                              textAlign="left"
-                              margin="0 0 0 3px"
-                              color={Colors.blue}
-                            >
-                              {`${content.conector} ${content.remote}`}
+                      </Div>
+                      <Div
+                        flexDirection="column"
+                        display="none"
+                        display_tablet="flex"
+                        minWidth="120px"
+                      >
+                        <H4 textAlign="left" textTransform="uppercase">
+                          {content.info.location_label}
+                        </H4>
+                        <Div>
+                          <Link
+                            to={
+                              loc
+                                ? `/${lang}/coding-campus/${loc.node.meta_info.slug}`
+                                : ""
+                            }
+                          >
+                            <Paragraph textAlign="left" color={Colors.blue}>
+                              {cohort.academy.city.name}
                             </Paragraph>
                           </Link>
-                        )}
+
+                          {cohort.academy.slug !== "online" &&
+                            cohort.academy.city.name !== "Remote" && (
+                              <Paragraph textAlign="left" margin="0 0 0 3px">
+                                {content.conector}{" "}
+                                <Link
+                                  color={Colors.blue}
+                                  to={content.online_bootcamp}
+                                >
+                                  {content.remote}
+                                </Link>
+                              </Paragraph>
+                            )}
+                        </Div>
+                      </Div>
+
+                      <Div
+                        flexDirection="column"
+                        display="none"
+                        display_tablet="flex"
+                      >
+                        <H4 textAlign="left" textTransform="uppercase">
+                          {content.info.duration_label}
+                        </H4>
+                        <Paragraph textAlign="left">
+                          {content.info.duration_weeks}
+                        </Paragraph>
+                      </Div>
+
+                      <Div
+                        display="flex"
+                        display_tablet="none"
+                        justifyContent="between"
+                        margin="0 0 20px 0"
+                      >
+                        <Div flexDirection="column" width="50%">
+                          <H4 textAlign="left" textTransform="uppercase">
+                            {content.info.location_label}
+                          </H4>
+                          <Div>
+                            <Link
+                              to={
+                                loc
+                                  ? `/${lang}/coding-campus/${loc.node.meta_info.slug}`
+                                  : ""
+                              }
+                            >
+                              <Paragraph textAlign="left" color={Colors.blue}>
+                                {cohort.academy.city.name}
+                              </Paragraph>
+                            </Link>
+                            {cohort.academy.slug !== "online" && (
+                              <Link to={content.online_bootcamp}>
+                                <Paragraph
+                                  textAlign="left"
+                                  margin="0 0 0 3px"
+                                  color={Colors.blue}
+                                >
+                                  {`${content.conector} ${content.remote}`}
+                                </Paragraph>
+                              </Link>
+                            )}
+                          </Div>
+                        </Div>
+                        <Div flexDirection="column" width="50%">
+                          <H4 textAlign="left" textTransform="uppercase">
+                            {content.info.duration_label}
+                          </H4>
+                          <Paragraph textAlign="left">
+                            {content.info.duration_weeks}
+                          </Paragraph>
+                        </Div>
+                      </Div>
+                      <Div flexDirection="column">
+                        <Link to={content.info.button_link}>
+                          <Button
+                            variant="full"
+                            width="fit-content"
+                            color={Colors.black}
+                            margin="10px 0"
+                            textColor="white"
+                          >
+                            {buttonText || content.info.button_text}
+                          </Button>
+                        </Link>
                       </Div>
                     </Div>
-                    <Div flexDirection="column" width="50%">
-                      <H4 textAlign="left" textTransform="uppercase">
-                        {content.info.duration_label}
-                      </H4>
-                      <Paragraph textAlign="left">
-                        {content.info.duration_weeks}
-                      </Paragraph>
-                    </Div>
-                  </Div>
-                  <Div flexDirection="column">
-                    <Link to={content.info.button_link}>
-                      <Button
-                        variant="full"
-                        width="fit-content"
-                        color={Colors.black}
-                        margin="10px 0"
-                        textColor="white"
-                      >
-                        {buttonText || content.info.button_text}
-                      </Button>
-                    </Link>
-                  </Div>
-                </Div>
-              )
-            );
-          })
-        ) : (
-          <>
-            <Div
-              display={showForm ? "none" : "flex"}
-              padding="70px 0"
-              flexDirection="column"
-              justifyContent="center"
-              alignItems="center"
-              padding_tablet="90px 0"
-            >
-              <Icon icon="agenda" />
-              {message && <Paragraph margin="25px 0 0 0">{message}</Paragraph>}
-              {actionMessage && (
-                <Paragraph
-                  color={Colors.blue}
-                  onClick={() => setShowForm(true)}
-                  width="auto"
-                  cursor="pointer"
-                  margin="10px 0 0 0"
-                  fontWeight="700"
+                  )
+                );
+              })
+            ) : (
+              <>
+                <Div
+                  display={showForm ? "none" : "flex"}
+                  padding="70px 0"
+                  flexDirection="column"
+                  justifyContent="center"
+                  alignItems="center"
+                  padding_tablet="90px 0"
                 >
-                  {actionMessage}
-                </Paragraph>
-              )}
-            </Div>
-            <Div
-              padding="70px 10%"
-              padding_tablet="90px 32%"
-              display={showForm ? "flex" : "none"}
-              flexDirection="column"
-            >
-              {formStatus.status === "thank-you" ? (
-                <Div alignItems="center" flexDirection="column">
-                  <Icon icon="success" width="80px" height="80px" />{" "}
-                  <H4
-                    fontSize="15px"
-                    lineHeight="22px"
-                    margin="25px 0 10px 10px"
-                    align="center"
-                  >
-                    {emailFormContent.successful_text}
-                  </H4>
+                  <Icon icon="agenda" />
+                  {message && (
+                    <Paragraph margin="25px 0 0 0">{message}</Paragraph>
+                  )}
+                  {actionMessage && (
+                    <Paragraph
+                      color={Colors.blue}
+                      onClick={() => setShowForm(true)}
+                      width="auto"
+                      cursor="pointer"
+                      margin="10px 0 0 0"
+                      fontWeight="700"
+                    >
+                      {actionMessage}
+                    </Paragraph>
+                  )}
                 </Div>
-              ) : (
-                <>
-                  <H4
-                    margin="0 0 25px 0"
-                    textAlign="left"
-                    display="block"
-                    display_tablet="block"
-                  >
-                    {emailFormContent.heading}
-                  </H4>
-                  <Div justifyContent="center" width="100%">
-                    <Form
-                      onSubmit={(e) => {
-                        e.preventDefault();
-                        if (formStatus.status === "error") {
-                          setFormStatus({ status: "idle", msg: "Resquest" });
-                        }
-                        if (!formIsValid(formData)) {
-                          setFormStatus({
-                            status: "error",
-                            msg: "There are some errors in your form",
-                          });
-                        } else {
-                          setFormStatus({
-                            status: "loading",
-                            msg: "Loading...",
-                          });
-                          newsletterSignup(formData, session)
-                            .then((data) => {
-                              if (
-                                data.error !== false &&
-                                data.error !== undefined
-                              ) {
-                                setFormStatus({
-                                  status: "error",
-                                  msg: "Fix errors",
-                                });
-                              } else {
-                                setFormStatus({
-                                  status: "thank-you",
-                                  msg: "Thank you",
-                                });
-                              }
-                            })
-                            .catch((error) => {
-                              console.log("error", error);
+                <Div
+                  padding="70px 10%"
+                  padding_tablet="90px 32%"
+                  display={showForm ? "flex" : "none"}
+                  flexDirection="column"
+                >
+                  {formStatus.status === "thank-you" ? (
+                    <Div alignItems="center" flexDirection="column">
+                      <Icon icon="success" width="80px" height="80px" />{" "}
+                      <H4
+                        fontSize="15px"
+                        lineHeight="22px"
+                        margin="25px 0 10px 10px"
+                        align="center"
+                      >
+                        {emailFormContent.successful_text}
+                      </H4>
+                    </Div>
+                  ) : (
+                    <>
+                      <H4
+                        margin="0 0 25px 0"
+                        textAlign="left"
+                        display="block"
+                        display_tablet="block"
+                      >
+                        {emailFormContent.heading}
+                      </H4>
+                      <Div justifyContent="center" width="100%">
+                        <Form
+                          onSubmit={(e) => {
+                            e.preventDefault();
+                            if (formStatus.status === "error") {
+                              setFormStatus({
+                                status: "idle",
+                                msg: "Resquest",
+                              });
+                            }
+                            if (!formIsValid(formData)) {
                               setFormStatus({
                                 status: "error",
-                                msg: error.message || error,
+                                msg: "There are some errors in your form",
                               });
-                            });
-                        }
-                      }}
-                    >
-                      <Input
-                        type="email"
-                        className="form-control"
-                        width="100%"
-                        placeholder="E-mail *"
-                        borderRadius="3px"
-                        bgColor={Colors.white}
-                        margin="0"
-                        onChange={(value, valid) => {
-                          setVal({ ...formData, email: { value, valid } });
-                          if (formStatus.status === "error") {
-                            setFormStatus({ status: "idle", msg: "Resquest" });
-                          }
-                        }}
-                        value={formData.email.value}
-                        errorMsg="Please specify a valid email"
-                        required
-                      />
-                      <Button
-                        height="40px"
-                        background={Colors.blue}
-                        // margin="0 0 0 10px"
-                        type="submit"
-                        fontWeight="700"
-                        justifyContent="center"
-                        margin="35px 0 0 0"
-                        width="100%"
-                        fontSize="14px"
-                        variant="full"
-                        color={
-                          formStatus.status === "loading"
-                            ? Colors.darkGray
-                            : Colors.blue
-                        }
-                        textColor={Colors.white}
-                        disabled={
-                          formStatus.status === "loading" ? true : false
-                        }
-                      >
-                        {formStatus.status === "loading"
-                          ? "Loading..."
-                          : emailFormContent.button_text}
-                      </Button>
-                    </Form>
-                  </Div>
-                </>
+                            } else {
+                              setFormStatus({
+                                status: "loading",
+                                msg: "Loading...",
+                              });
+                              newsletterSignup(formData, session)
+                                .then((data) => {
+                                  if (
+                                    data.error !== false &&
+                                    data.error !== undefined
+                                  ) {
+                                    setFormStatus({
+                                      status: "error",
+                                      msg: "Fix errors",
+                                    });
+                                  } else {
+                                    setFormStatus({
+                                      status: "thank-you",
+                                      msg: "Thank you",
+                                    });
+                                  }
+                                })
+                                .catch((error) => {
+                                  console.log("error", error);
+                                  setFormStatus({
+                                    status: "error",
+                                    msg: error.message || error,
+                                  });
+                                });
+                            }
+                          }}
+                        >
+                          <Input
+                            type="email"
+                            className="form-control"
+                            width="100%"
+                            placeholder="E-mail *"
+                            borderRadius="3px"
+                            bgColor={Colors.white}
+                            margin="0"
+                            onChange={(value, valid) => {
+                              setVal({ ...formData, email: { value, valid } });
+                              if (formStatus.status === "error") {
+                                setFormStatus({
+                                  status: "idle",
+                                  msg: "Resquest",
+                                });
+                              }
+                            }}
+                            value={formData.email.value}
+                            errorMsg="Please specify a valid email"
+                            required
+                          />
+                          <Button
+                            height="40px"
+                            background={Colors.blue}
+                            // margin="0 0 0 10px"
+                            type="submit"
+                            fontWeight="700"
+                            justifyContent="center"
+                            margin="35px 0 0 0"
+                            width="100%"
+                            fontSize="14px"
+                            variant="full"
+                            color={
+                              formStatus.status === "loading"
+                                ? Colors.darkGray
+                                : Colors.blue
+                            }
+                            textColor={Colors.white}
+                            disabled={
+                              formStatus.status === "loading" ? true : false
+                            }
+                          >
+                            {formStatus.status === "loading"
+                              ? "Loading..."
+                              : emailFormContent.button_text}
+                          </Button>
+                        </Form>
+                      </Div>
+                    </>
+                  )}
+                </Div>
+              </>
+            )}
+            {Array.isArray(data.cohorts.filtered) &&
+              data.cohorts.filtered.length > 0 &&
+              showMoreRedirect && (
+                <Link to={content.footer.button_link}>
+                  <Paragraph margin="20px 0" color={Colors.blue}>
+                    {content.footer.button_text}
+                  </Paragraph>
+                </Link>
               )}
-            </Div>
           </>
         )}
-        {Array.isArray(data.cohorts.filtered) &&
-          data.cohorts.filtered.length > 0 &&
-          showMoreRedirect && (
-            <Link to={content.footer.button_link}>
-              <Paragraph margin="20px 0" color={Colors.blue}>
-                {content.footer.button_text}
-              </Paragraph>
-            </Link>
-          )}
       </Div>
     </GridContainer>
   );
