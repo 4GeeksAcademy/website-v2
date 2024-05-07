@@ -29,7 +29,7 @@ navbar:
 
 # jumbotron on the top (cannot be commented out)
 header_data:
-  background: "black"
+  # background: "black"
   color: "white"
   tagline: "Amazing Python:\nCrash Course for beginners"
   sub_heading: ""

@@ -4,7 +4,7 @@ meta_info:
   description: "Become a Cybersecurity Specialist with no prior knowledge and protect the digital future."
   bc_slug: "cybersecurity"
   template: "course-cybersecurity"
-  image: "/images/landing/4Geeks-Espana.jpg"
+  image: "/images/og-preview/cybersecurity-bg.jpg"
   visibility: "visible"
   show_in_apply: true
   keywords: ""

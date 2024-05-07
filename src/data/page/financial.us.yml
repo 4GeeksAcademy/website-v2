@@ -55,7 +55,7 @@ syllabus_button_text: "Search"
 
 iconogram:
   heading:
-    text: "How your tuition is no longer a concern"
+    text: "Paying your tuition should not be a concern"
     font_size:
       - 38px
       - 38px
@@ -84,7 +84,7 @@ iconogram:
   - icon: "contract-2"
     color: "#BE8BFF"
     title: Income Sharing Agreement
-    content: "Only pay when you get a job above a thereshold"
+    content: "Pay only when you secure a well-paying job."
   button:
     text: "Conditions apply."
     color: ""
@@ -118,7 +118,7 @@ two_column:
         - 21px
         - 21px
     sub_heading:
-      text: 1.456 people have benefited from our scholarship programs, from all possible backgrounds, read here stories of the beneficiaries and projects.
+      text: Over 1,456 individuals, from diverse backgrounds, have benefited from our scholarship programs. Explore their stories and the projects they've contributed to.
       font_size:
         - 24px
         - 24px
@@ -143,7 +143,7 @@ two_column:
       style: '{ "backgroundSize": "contain"}'
       src: /images/landing/20-million-column-4geeks.png
     heading:
-      text: 62% of bootcamp applicants are rejected due to financial reasons.
+      text: In the past, 68% of bootcamp applicants could not enroll due to financial reasons.
       font_size:
         - 38px
         - 38px
@@ -151,7 +151,7 @@ two_column:
         - 21px
         - 21px
     sub_heading:
-      text: 4Geeks is committed to removing the cost as a possible factor to prevent talented individuals to become coders.
+      text: At 4Geeks, we're dedicated to breaking down the barriers that prevent aspiring coders from pursuing their goals. 
       font_size:
         - 24px
         - 24px
@@ -162,7 +162,7 @@ two_column:
       font_size:
         - 16px
       text: |
-        Thanks to a deep network of 2000+ partners and donors from  Government Institutions, none profit organizations and private companies enables our scholarship platform to be one of the biggest in the world.
+        Through our expansive network of 2000+ partners and donors, spanning government institutions, non-profit organizations, and private companies, our scholarship offerings rank among the largest globally. 
     button:
       text: JOIN THE PROGRAM
       color: white
@@ -249,10 +249,10 @@ we_trust_section:
       text: Job placement rate
     - icon: chart
       title: "60K"
-      text: Avg. Income at a new job
+      text: Avg. income at new job
     - icon: graduation-2
       title: "20MM"
-      text: Millions in scolarchips and counting
+      text: Funding for scholarships 
 
 ## PAYMENT GUIDE SECTION
 # payment_guide:

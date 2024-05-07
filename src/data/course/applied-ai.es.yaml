@@ -4,7 +4,7 @@ meta_info:
   description: "Explora a detalle la inteligencia artificial y cómo aplicarla en diferentes industrias, roles y en tu trabajo. Sin conocimientos previos requeridos."
   bc_slug: "applied-ai"
   template: "course-applied-ai"
-  image: "/images/og-preview/datascience-ml.es.png"
+  image: "/images/og-preview/applied-ai-bg-es.jpg"
   visibility: "visible"
   keywords: ""
   show_in_apply: true
