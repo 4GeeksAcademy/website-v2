@@ -2,29 +2,21 @@ import React, { useState } from "react";
 import { Div } from "../Sections";
 import { H3, H4, Paragraph } from "../Heading";
 import { Colors, Anchor } from "../Styling";
-import ReactPlayer from "../ReactPlayer";
 import Icon from "../Icon";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
-const TestimonialCard = ({
+const TestimonialCardSmall = ({
   lang,
-  highlighted,
-  featured,
   height,
   minHeight,
-  height_tablet,
   studentRating,
-  className,
-  background,
   image,
-  video,
   name,
   short_content,
   description,
   url,
   textUrl,
   linkedin_url,
-  location,
   starRating,
   imgStyle,
   style,
@@ -58,8 +50,8 @@ const TestimonialCard = ({
             icon="star"
             height="12px"
             width="12px"
-            stroke={Colors.darkGray}
-            fill={i >= studentRating ? "transparent" : `${Colors.darkGray}`}
+            stroke={Colors.yellow}
+            fill={i >= studentRating ? "transparent" : `${Colors.yellow}`}
           />
         ))}
       </div>
@@ -69,7 +61,6 @@ const TestimonialCard = ({
     <Div
       flexDirection="column"
       position="relative"
-      background={background}
       borderRadius="3px"
       padding="16px"
       border={`1px solid ${Colors.lightGray}`}
@@ -85,18 +76,8 @@ const TestimonialCard = ({
       minHeight={minHeight}
       gap="24px 0px"
     >
-      <Div
-        flexDirection={stories ? "row" : "column"}
-        justifyContent="between"
-        borderBottom={stories ? `1px solid ${Colors.lightGray}` : ""}
-        padding={stories ? "0 0 16px 0" : "0"}
-      >
+      <Div>
         <Div flexDirection={stories ? "row" : "column"}>
-          <GatsbyImage
-            image={getImage(image && image.childImageSharp.gatsbyImageData)}
-            style={style}
-            imgStyle={imgStyle}
-          />
           {stories ? ( //Where the component is called (true/false)
             <Div flexDirection="column" margin="0 0 0 9px">
               <H3
@@ -128,43 +109,7 @@ const TestimonialCard = ({
             </H3>
           )}
         </Div>
-
-        {linkedin_url && (
-          <Div>
-            <Anchor
-              to={linkedin_url}
-              target="_blank"
-              rel="noopener noreferrer nofollow"
-            >
-              <Icon
-                icon="linkedin-new"
-                width="22px"
-                height="22px"
-                fill="#2867b2"
-                stroke="#2867b2"
-              />
-            </Anchor>
-          </Div>
-        )}
       </Div>
-
-      {video && (
-        <>
-          <Div padding_tablet="0" width="100%" style={{ breakInside: "avoid" }}>
-            <ReactPlayer
-              margin_tablet="0px 0px"
-              With_Modal={true}
-              className={"react-player-testimonials-small"}
-              thumb={image}
-              id={video && video}
-              width="100%"
-              width_tablet="100%"
-              style={{ breakInside: "avoid" }}
-              videoHeight="286px"
-            />
-          </Div>
-        </>
-      )}
 
       {description && (
         <Paragraph
@@ -176,14 +121,14 @@ const TestimonialCard = ({
           fontWeight="300"
           dangerouslySetInnerHTML={{
             __html:
-              description.length > 500 && !isExpanded
-                ? description.substring(0, 500) + "..."
+              description.length > 150 && !isExpanded
+                ? description.substring(0, 150) + "..."
                 : description,
           }}
         />
       )}
 
-      {description.length > 500 && (
+      {description.length > 150 && (
         <Paragraph
           textAlign="left"
           margin="0 0 0 0"
@@ -222,4 +167,4 @@ const TestimonialCard = ({
   );
 };
 
-export default TestimonialCard;
+export default TestimonialCardSmall;
