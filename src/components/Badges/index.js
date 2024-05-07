@@ -76,7 +76,6 @@ const Badges = ({
       {/* <Fragment github="/components/badges"> */}
       <Div
         width="100%"
-        maxWidth={maxWidth || "1280px"}
         margin_tablet="0 auto"
         justifyContent="center"
         background={background}
@@ -95,6 +94,7 @@ const Badges = ({
           rows={paragraph && `3`}
           margin={margin}
           maxWidth={maxWidth}
+          childMaxWidth="1266px"
         >
           {/* <Grid columns_md="12" background={background} padding_md={padding_md} rows={paragraph && `3`} padding="0 17px" margin="36px 0 58px 0" margin_md="73px 0"> */}
           {!bottom_paragraph && paragraph && (
@@ -120,7 +120,7 @@ const Badges = ({
               justifyContent="center"
               rowGap="3rem"
               flexWrap="wrap"
-              columnGap="1rem"
+              columnGap="0rem"
             >
               {content.badges.map((l, i) => {
                 return (
@@ -181,7 +181,7 @@ const Badges = ({
                             height: "85px",
                             // minWidth: "200px",
                             minWidth: "150px",
-                            margin: "0 24px",
+                            margin: "0 14px",
                           }}
                           imgStyle={{ objectFit: "contain" }}
                           loading="eager"

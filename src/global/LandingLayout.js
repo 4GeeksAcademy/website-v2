@@ -147,7 +147,7 @@ const Layout = ({ children, seo, context, landingFooter, landingNavbar }) => {
       {landingNavbar === true ? null : (
         <>
           <Navbar
-            locationCity={myLocations}
+            myLocations={myLocations}
             onLocationChange={(slug) => setLocation(slug)}
             menu={myNavbar.node.navbar}
             languageButton={myNavbar.node.language_button}
@@ -155,7 +155,7 @@ const Layout = ({ children, seo, context, landingFooter, landingNavbar }) => {
             lang={context.lang}
           />
           <NavbarMobile
-            locationCity={myLocations}
+            myLocations={myLocations}
             onLocationChange={(slug) => setLocation(slug)}
             menu={myNavbar.node.navbar}
             languageButton={myNavbar.node.language_button}
