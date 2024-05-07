@@ -37,6 +37,7 @@ const landingSections = [
   "multi_column",
   "single_column",
   "columns",
+  "simple_cards",
 ];
 
 async function listDir(dir) {
