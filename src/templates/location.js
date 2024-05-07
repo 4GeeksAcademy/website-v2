@@ -273,7 +273,7 @@ const Location = ({ data, pageContext, yml }) => {
           paragraph={yml?.images_box?.content}
           widthImage="315px"
           heightImage="347px"
-          previewArrow
+          previousArrow
           nextArrow
           //customSettingsCarousel={}
         />
@@ -602,8 +602,6 @@ export const query = graphql`
             title
             description
             icon
-            comming_soon
-            text_link
           }
         }
       }
