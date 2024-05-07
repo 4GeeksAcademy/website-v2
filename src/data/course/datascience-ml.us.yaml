@@ -64,7 +64,7 @@ badges:
 
 # OVERLAPED
 overlaped:
-  heading: "Learn to create predictive models and Master Machine Learning with 4Geeks Academy"
+  heading: "Learn to create predictive models and master machine learning with 4Geeks Academy"
   paragraph: "Dive into the world of machine learning with 4Geeks Academy's specialized program. Gain the skills to build predictive models for practical applications like fraud detection and natural language processing, using industry-leading tools such as Python, TensorFlow, and Scikit-learn."
   button:
     text: "LEARN MORE"
@@ -73,19 +73,45 @@ overlaped:
   image:
     src: "/images/landing/tres-personas-reloaded.webp"
 
+## TWO COLUMNS INFO
+two_columns_info:
+  proportions: [6, 6]
+  image:
+    style: '{"backgroundSize": "contain" }'
+    src: "/images/landing/grupo-ventanas.webp"
+    shadow: false  
+  heading:
+    text: "Get everything you need to succeed"
+    font_size: ["30px", "30px", "30px", "30px", "30px"]
+  sub_heading:
+    text: ""
+    font_size: ["16px", "16px", "16px", "16px", "16px"]
+
+  bullets:
+    items:
+    - heading: "UNLIMITED MENTORING" 
+      text: "Get expert support for all your coding needs. Our mentors are available online or in-person, ready to help you from day one to ever after. "
+    - heading: "HIGH AVAILABILITY" 
+      text: "Never get stuck with a coding problem. Our dedicated instructors will respond within 15 minutes or less."
+    - heading: "1:7 PROFESSOR: STUDENT RATIO" 
+      text: "Experience individualized attention with our higher-than-average professor-to-student ratio."
+    - heading: "TAILOR-MADE CAREER SUPPORT" 
+      text: "Receive unlimited advice, guidance, and training tailored to your unique profile and specific job offers. "
+
+    
 ## TWO COLUMNS
 two_columns:
   proportions: [6, 6]
   image:
-    style: '{"border" : "3px solid black", "backgroundSize": "contain" }'
-    src: "/static/images/staff/luisa.png"
+    style: '{"border" : "3px solid black", "backgroundSize": "cover", "backgroundPosition": "right" }'
+    src: "/images/testimonials/luisa-glum.jpg"
     shadow: true  
   video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
   heading:
-    text: "4Geeks, Miami and a story full of opportunities"
+    text: "4Geeks, Miami and a mission of creating opportunities"
     font_size: ["30px", "30px", "30px", "30px", "30px"]
   sub_heading:
-    text: "We are Miami based and we have been focusing in bringing on more opportunities in South Florida."
+    text: "With Miami as our home base, we're dedicated to fostering opportunities throughout South Florida."
     font_size: ["16px", "16px", "16px", "16px", "16px"]
   button:
     text: "Apply now"
@@ -94,9 +120,9 @@ two_columns:
     path: "#prices_and_payment"
   bullets:
     items: 
-    - text: "There is always a full or partial scholarship open"
-    - text: "There is always opportunities for everyone in Miami-Dade County, Broward and Palm Beach"
-    - text: "We have ongoing partnerships with Miami Dade College, Miami Tech Coalition, UWM, The City of Miami, Miami Dade County and many more."
+    - text: "Accessible scholarships, whether full or partial, are always available."
+    - text: "Exclusive opportunities await residents of Miami-Dade, Broward, and Palm Beach counties, ensuring local talent thrives."
+    - text: "We maintain ongoing partnerships with institutions such as Miami Dade College, Miami Tech Coalition, UWM, The City of Miami, Miami Dade County, and many more."
 
 
 upcoming:

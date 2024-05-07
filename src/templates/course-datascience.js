@@ -213,8 +213,23 @@ const Program = ({ data, pageContext, yml }) => {
         image={yml.overlaped?.image}
       />
 
-      {/* GEEKSINFO IS A TWOCOLUMN WITH TITLE */}
-      <GeeksInfo lang={pageContext.lang} />
+      {/* GEEKSINFO IS A TWOCOLUMN WITH TITLE 
+      <GeeksInfo lang={pageContext.lang} /> */}
+
+      {/* TWO COLUMN INFO CREAR EN EL YML*/}
+      <TwoColumn
+        right={{ image: yml.two_columns_info?.image, video: yml.two_columns_info?.video }}
+        left={{
+          section_heading: yml.two_columns_info?.section_heading,
+          heading: yml.two_columns_info?.heading,
+          sub_heading: yml.two_columns_info?.sub_heading,
+          bullets: yml.two_columns_info?.bullets,
+          content: yml.two_columns_info?.content,
+          button: yml.two_columns_info?.button,
+        }}
+        proportions={yml.two_columns_info?.proportions}
+        session={session}
+      />
 
       {/* TWO COLUMN CREAR EN EL YML*/}
       <TwoColumn
@@ -474,6 +489,29 @@ export const query = graphql`
                     placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                   )
                 }
+              }
+            }
+          }
+          two_columns_info {
+            proportions
+            image {
+              style
+              src
+              shadow
+            }
+            heading {
+              text
+              font_size
+            }
+            sub_heading {
+              text
+              font_size
+            }
+
+            bullets {
+              items {
+                heading
+                text
               }
             }
           }

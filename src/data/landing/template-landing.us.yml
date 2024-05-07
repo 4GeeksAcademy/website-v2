@@ -204,7 +204,7 @@ components:
     background: "#FFFFFF"
     image:
       style: "{}"
-      src: "/images/landing/grupo-ventanas.png"
+      src: "/images/landing/grupo-ventanas.webp"
       shadow: true
     section_heading: 
       text: "Finance your future"
