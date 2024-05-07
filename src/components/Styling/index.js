@@ -535,6 +535,7 @@ export const Button = styled(SmartButton)`
     bottom: ${(props) => props.bottom_tablet};
     left: ${(props) => props.left_tablet};
     right: ${(props) => props.right_tablet};
+    position: ${(props) => props.position_tablet};
   }
   @media ${Devices.md} {
     width: ${(props) => props.width_md};

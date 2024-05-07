@@ -9,9 +9,8 @@ import { isCustomBarActive } from "../actions";
 // components
 import { Div } from "../components/Sections";
 import { H1, H2, Paragraph } from "../components/Heading";
-import Icon from "../components/Icon";
 import WeTrust from "../components/WeTrust";
-import Carousel from "../components/Carousel";
+import SectionCarousel from "../components/SectionCarousel";
 import PricesAndPayment from "../components/PricesAndPayment";
 import Iconogram from "../components/Iconogram";
 import TwoColumn from "../components/TwoColumn";
@@ -142,89 +141,35 @@ const Financial = (props) => {
         proportions={ymlTwoColumn.proportions}
         session={session}
       />
-      <Div
+      <SectionCarousel
         margin="20px 0"
         background="#FBFCFC"
-        position="relative"
-        display="block"
         padding="20px"
+        heading={yml.who_is_hiring.title}
+        content={yml.who_is_hiring.paragraph}
       >
-        <Carousel
-          nextArrow={({ onClick }) => (
-            <Button
-              padding="0"
-              padding_xs="0"
-              padding_tablet="0"
-              position="absolute"
-              zIndex="9"
-              bottom="-40px"
-              right="1%"
-              right_md="0%"
-              right_lg="0%"
-              right_tablet="0%"
-              width="20px"
-              onClick={onClick}
-              style={{ height: "25px" }}
-            >
-              <Icon width="100%" height="100%" icon="arrow-right" />
-            </Button>
-          )}
-          previousArrow={({ onClick }) => (
-            <Button
-              padding="0"
-              padding_xs="0"
-              padding_tablet="0"
-              position="absolute"
-              zIndex="9"
-              bottom="-40px"
-              left="1%"
-              left_md="0%"
-              left_lg="0%"
-              left_tablet="0%"
-              width="20px"
-              onClick={onClick}
-              style={{ height: "25px", transform: "rotate(180deg)" }}
-            >
-              <Icon width="100%" height="100%" icon="arrow-right" />
-            </Button>
-          )}
-          maxWidth="1280px"
-          content={{
-            heading: yml.who_is_hiring.title,
-            content: yml.who_is_hiring.paragraph,
-          }}
-          customSettings={{
-            dotsClass: "slick-dots-staff",
-            slidesToShow: 5,
-            infinite: true,
-            slidesToScroll: 5,
-          }}
-        >
-          {yml.who_is_hiring.images.map((image) => (
+        {yml.who_is_hiring.images.map((image) => (
+          <Div key={image}>
             <Div
               border="1px solid #C4C4C4"
-              key={image}
               width="240px !important"
               height="240px"
+              display="flex"
+              flexDirection="column"
+              justifyContent="center"
+              margin="auto"
             >
-              <Div
-                height="100%"
-                display="flex"
-                flexDirection="column"
-                justifyContent="center"
-              >
-                <Img
-                  backgroundSize="contain"
-                  src={image}
-                  width="112px"
-                  height="112px"
-                  margin="auto"
-                />
-              </Div>
+              <Img
+                backgroundSize="contain"
+                src={image}
+                width="112px"
+                height="112px"
+                margin="auto"
+              />
             </Div>
-          ))}
-        </Carousel>
-      </Div>
+          </Div>
+        ))}
+      </SectionCarousel>
       <TwoColumn
         left={{ image: ymlTwoColumn[1].image }}
         right={{
