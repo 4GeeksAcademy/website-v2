@@ -732,8 +732,6 @@ export const query = graphql`
             description
             description_mobile
             icon
-            comming_soon
-            text_link
           }
         }
       }

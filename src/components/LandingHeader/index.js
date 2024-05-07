@@ -42,6 +42,17 @@ const LandingHeader = (props) => {
     },
   ];
 
+  const taglineColor = () => {
+    if (yml.header_data.tagline_color) return yml.header_data.tagline_color;
+    return yml.header_data.background ? Colors.black : Colors.white;
+  };
+
+  const formColor = () => {
+    if (yml.header_data?.form_styles?.background)
+      return yml.header_data?.form_styles?.background;
+    return yml.header_data.background === "#FFF1D1" ? Colors.white : "#FFF1D1";
+  };
+
   return (
     <>
       <LandingContainer
@@ -118,13 +129,7 @@ const LandingHeader = (props) => {
               margin="20px 0"
               margin_xs="10px 0"
               padding="0 10px 20px 0px"
-              color={
-                yml.header_data.tagline_color
-                  ? yml.header_data.tagline_color
-                  : yml.header_data.background
-                  ? Colors.black
-                  : Colors.white
-              }
+              color={taglineColor()}
               fontSize="32px"
               fontSize_tablet="52px"
               fontWeight="700"
@@ -133,37 +138,31 @@ const LandingHeader = (props) => {
               {inLocation}
               {yml.header_data.tagline}
             </H1>
-            {yml.header_data.sub_heading !== "" && (
-              <H2
-                zIndex="1"
-                type="h2"
-                textAlign="left"
-                fontSize="18px"
-                color={yml.header_data.background ? Colors.black : Colors.white}
-                variant="main"
-                fontWeight="bolder"
-                padding="0 0 10px 0"
-              >
-                {yml.header_data.sub_heading}
-              </H2>
-            )}
-
-            {Array.isArray(yml.features.bullets) &&
-              yml.features.bullets.map((f, i) => (
-                <Paragraph
+            {yml.header_data.sub_heading &&
+              yml.header_data.sub_heading !== "" && (
+                <H2
                   zIndex="1"
-                  key={i}
-                  fontSize="21px"
-                  style={{
-                    ...JSON.parse(yml.features.styles),
-                    fontWeight: "bolder",
-                  }}
-                  margin="8px 0"
-                  padding="0px 20px"
+                  type="h2"
                   textAlign="left"
+                  fontSize="18px"
                   color={
                     yml.header_data.background ? Colors.black : Colors.white
                   }
+                  variant="main"
+                  fontWeight="bolder"
+                  padding="0 0 10px 0"
+                >
+                  {yml.header_data.sub_heading}
+                </H2>
+              )}
+
+            {Array.isArray(yml.features.bullets) &&
+              yml.features.bullets.map((bullet, i) => (
+                <Div
+                  alignItems="center"
+                  margin="8px 0"
+                  padding="0px 20px"
+                  gap="10px"
                 >
                   <Icon
                     style={{
@@ -178,9 +177,21 @@ const LandingHeader = (props) => {
                     icon={bulletIcons[i % bulletIcons.length].icon}
                     color="white"
                   />
-
-                  {" " + f}
-                </Paragraph>
+                  <Paragraph
+                    zIndex="1"
+                    key={i}
+                    fontSize="21px"
+                    style={{
+                      ...JSON.parse(yml.features.styles),
+                      fontWeight: "bolder",
+                    }}
+                    textAlign="left"
+                    color={
+                      yml.header_data.background ? Colors.black : Colors.white
+                    }
+                    dangerouslySetInnerHTML={{ __html: bullet }}
+                  />
+                </Div>
               ))}
             {yml.features.text && (
               <Paragraph
@@ -307,17 +318,15 @@ const LandingHeader = (props) => {
             </Div>
             {!hideForm ? (
               <LeadForm
-                id={"leadform_header"}
+                id="leadform_header"
                 landingTemplate
                 headerImage={
                   yml.header_data.badge &&
                   yml.header_data.badge.childImageSharp.gatsbyImageData
                 }
-                background={
-                  yml.header_data.background === "#FFF1D1"
-                    ? Colors.white
-                    : "#FFF1D1"
-                }
+                background={formColor()}
+                textColor={yml.header_data?.form_styles?.color}
+                buttonStyles={yml.header_data?.form_styles?.button || {}}
                 margin_md="50px 0 0 14.5%"
                 margin_tablet="18px 0"
                 selectProgram={programs}

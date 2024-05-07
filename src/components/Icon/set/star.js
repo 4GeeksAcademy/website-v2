@@ -25,7 +25,7 @@ export default (props) => (
       <path
         d="M6 0.5L7.5 4.5H11.5L8.5 7L9.5 11L6 8.5L2.5 11L3.5 7L0.5 4.5H4.5L6 0.5Z"
         strokeMiterlimit="10"
-        stroke="#3a3a3a"
+        stroke={props.stroke || "#3a3a3a"}
         strokeLinejoin="round"
       />
     </g>

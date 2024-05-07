@@ -180,6 +180,8 @@ const LeadForm = ({
   motivation,
   layout,
   inputBgColor,
+  textColor,
+  buttonStyles,
   landingTemplate,
   selectProgram,
   selectLocation,
@@ -363,7 +365,7 @@ const LeadForm = ({
       )}
       {/* {heading && <H4 type="h4" fontSize="25px" width="auto" textAlign="center" textAlign_tablet={titleTextAlign || "left"} margin={landingTemplate ? "15px 0px 30px 0" : titleMargin || "20px 30px 15px 30px"} margin_tablet={titleMargin_tablet || "20px 40px 15px 40px"}>{heading}</H4>} */}
       {formStatus.status === "thank-you" ? (
-        <Paragraph margin="20px 0px 0px 0px">
+        <Paragraph color={textColor} margin="20px 0px 0px 0px">
           {thankyou || formStatus.msg}
         </Paragraph>
       ) : (
@@ -381,6 +383,7 @@ const LeadForm = ({
                 lineHeight="26px"
                 fontSize="22px"
                 padding={headerImage && "0 10% 0 0"}
+                color={textColor}
                 fontWeight="700"
                 width="auto"
                 textAlign={titleTextAlign || "left"}
@@ -396,10 +399,11 @@ const LeadForm = ({
             )}
             {motivation && (
               <Paragraph
-                style={{ fontWeight: "700", color: "#000" }}
+                style={{ fontWeight: "700", color: textColor || "#000" }}
                 textAlign="left"
                 padding={textPadding || "0px 0px 10px 0px"}
                 padding_tablet={textPadding_tablet || "0px 0px 20px 0px"}
+                opacity="1"
               >
                 {motivation}
               </Paragraph>
@@ -419,6 +423,7 @@ const LeadForm = ({
                         data-cy={f}
                         id={f}
                         bgColor={inputBgColor || "#FFFFFF"}
+                        opacity="1"
                         type={_field.type}
                         className="form-control"
                         placeholder={_field.place_holder}
@@ -448,6 +453,7 @@ const LeadForm = ({
                 return (
                   <PhoneInput
                     style={{ margin: "0 0 16px 0" }}
+                    inputStyle={{ opacity: 1 }}
                     key={i}
                     data-cy="phone"
                     id="phone"
@@ -467,6 +473,7 @@ const LeadForm = ({
                   options={selectProgram}
                   placeholder={courseSelector.place_holder}
                   valid={true}
+                  controlStyles={{ opacity: 1 }}
                   onChange={(selected, valid) =>
                     setVal({
                       ...formData,
@@ -483,6 +490,7 @@ const LeadForm = ({
                   options={selectLocation}
                   placeholder={locationSelector.place_holder}
                   valid={true}
+                  controlStyles={{ opacity: 1 }}
                   onChange={(selected, valid) => {
                     setVal({
                       ...formData,
@@ -571,7 +579,7 @@ const LeadForm = ({
                   width_lg={widthButton}
                   width_xs="100%"
                   justifyContent="center"
-                  background={Colors.blue}
+                  background={buttonStyles?.background || Colors.blue}
                   //textAlign="center"
                   color={
                     formStatus.status === "loading"
@@ -601,6 +609,7 @@ LeadForm.propTypes = {
   fields: PropTypes.array,
   formHandler: PropTypes.func,
   handleClose: PropTypes.func,
+  buttonStyles: PropTypes.object,
 };
 LeadForm.defaultProps = {
   heading: null,
@@ -612,6 +621,7 @@ LeadForm.defaultProps = {
   layout: "block",
   id: "leadform",
   data: {},
+  buttonStyles: {},
   fields: ["full_name", "phone", "email"],
 };
 export default LeadForm;

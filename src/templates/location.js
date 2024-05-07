@@ -273,7 +273,7 @@ const Location = ({ data, pageContext, yml }) => {
           paragraph={yml?.images_box?.content}
           widthImage="315px"
           heightImage="347px"
-          previewArrow
+          previousArrow
           nextArrow
           //customSettingsCarousel={}
         />
@@ -297,6 +297,7 @@ const Location = ({ data, pageContext, yml }) => {
         locations={data.allLocationYaml.edges}
         message={yml.upcoming.no_dates_message}
         actionMessage={yml.upcoming.actionMessage}
+        showMoreRedirect
       />
 
       <Staff lang={pageContext.lang} heading={yml?.staff?.heading} />
@@ -417,6 +418,7 @@ export const query = graphql`
             alt
           }
           meta_info {
+            slug
             title
             description
             image
@@ -600,8 +602,6 @@ export const query = graphql`
             title
             description
             icon
-            comming_soon
-            text_link
           }
         }
       }

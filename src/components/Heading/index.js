@@ -7,10 +7,10 @@ import { Devices } from "../Responsive";
 import { Blink } from "../Animations";
 import { redirectTo } from "@reach/router";
 
-const Heading = ({ type, children, className, id }) => {
+const Heading = ({ type, children, className, id, ...rest }) => {
   const Comp = type;
   return (
-    <Comp id={id} className={className}>
+    <Comp id={id} className={className} {...rest}>
       {children}
     </Comp>
   );
@@ -49,7 +49,6 @@ const BaseHeading = styled(Heading)`
   padding: ${(props) => props.padding};
   border-bottom: ${(props) => props.borderBottom};
   text-decoration: ${(props) => props.textDecoration};
-  text-decoration-offset: ${(props) => props.textDecorationOffset};
 
   &:hover {
     background-color: ${(props) => props.bgHover || props.bg};
@@ -252,6 +251,7 @@ export const Paragraph = styled.p`
     padding: ${(props) => props.padding_sm};
     text-transform: ${(props) => props.textTransform_sm};
     font-size: ${(props) => props.fontSize_sm};
+    text-align: ${(props) => props.textAlign_sm};
   }
   @media ${Devices.tablet} {
     display: ${(props) => props.display_tablet};
