@@ -1,11 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { H2, H3, H4, Paragraph } from "../Heading";
 import { GridContainer, Div } from "../Sections";
 import { Colors } from "../Styling";
 import { Link } from "gatsby";
 import Fragment from "../Fragment";
+import SectionCarousel from "../SectionCarousel";
 import Marquee_v2 from "../Marquee_v2";
+import Icon from "../Icon";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 const Testimonials = (props) => {
@@ -13,6 +15,134 @@ const Testimonials = (props) => {
   let testimonialsFiltered = testimonialsArray.testimonials.filter(
     (item) => item.hidden !== true || item.include_in_marquee === true
   );
+
+  if (props.variant === "carousel")
+    return (
+      <SectionCarousel
+        heading={props.heading || testimonialsArray.heading}
+        content={props.content}
+        background={props.background}
+        headingProps={{ fontWeight: '400' }}
+        contentProps={{ color: '#000', opacity: '1' }}
+        customSettings={{ 
+          slidesToShow: 4,
+          slidesToScroll: 4,
+          responsive: [
+            {
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3,
+                infinite: true,
+                dots: true,
+              },
+            },
+            {
+              breakpoint: 780,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2,
+                initialSlide: 2,
+                dots: false,
+              },
+            },
+            {
+              breakpoint: 600,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2,
+                initialSlide: 2,
+                dots: false,
+              },
+            },
+            {
+              breakpoint: 480,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                dots: false,
+              },
+            },
+          ],
+        }}
+        {...props}
+      >
+        {testimonialsFiltered.map((item, i) => {
+          return (
+            <Div key={`${i}-${item.student_name}`}>
+              <Div
+                display="flex"
+                gap="9px"
+                background="#ffffff"
+                minWidth="245px"
+                width="270px"
+                width_tablet="300px"
+                height="230px"
+                padding="20px 24px 30px 20px"
+                border="1px solid #C4C4C4"
+                borderRadius="16px"
+                flexDirection="column"
+                justifyContent="between"
+                alignItems="center"
+              >
+                <Div width="59px" height="59px" position="relative">
+                  <Div borderRadius="100%" background="#FFB718" position="absolute" zIndex="10" right="0">
+                    <Icon
+                      width="18px"
+                      height="18px"
+                      icon="graduation"
+                      color="#FFF1D1"
+                    />
+                  </Div>
+                  
+                  <GatsbyImage
+                    image={getImage(
+                      item.student_thumb.childImageSharp.gatsbyImageData
+                    )}
+                    alt={item.student_name}
+                    style={{
+                      height: "59px",
+                      minWidth: "59px",
+                      width: "59px",
+                      borderRadius: '100%',
+                      backgroundSize: "cover",
+                      margin: "auto"
+                    }}
+                  />
+                </Div>
+                <Div
+                  display="flex"
+                  flexDirection="column"
+                  alignItems="flex-start"
+                  width="100%"
+                  height="100%"
+                  padding="0 9px 0 9px"
+                  gap="10px"
+                  style={{ position: "relative" }}
+                >
+                  <H3 fontSize="15px" lineHeight="19px">
+                    {item.student_name}
+                  </H3>
+                  <H4 fontSize="14px" lineHeight="22px">
+                    {item.short_content}
+                  </H4>
+                </Div>
+                {item.linkedin_url != "" && item.linkedin_image != null && (
+                    <a
+                      href={item.linkedin_url}
+                      target="_blank"
+                      rel="noopener noreferrer nofollow"
+                      style={{ margin: 'auto' }}
+                    >
+                      <Icon icon="linkedin-new" style={{ margin: 'auto' }} />
+                    </a>
+                  )}
+              </Div>
+            </Div>
+          );
+        })}
+      </SectionCarousel>
+    );
 
   return (
     <Fragment github="/components/testimonials">
@@ -89,7 +219,7 @@ const Testimonials = (props) => {
                       height: "39px",
                       minWidth: "39px",
                       width: "39px",
-                      backgroundSize: `cover`,
+                      backgroundSize: "cover",
                     }}
                   />
                   <Div
@@ -123,7 +253,7 @@ const Testimonials = (props) => {
                             height: "14px",
                             width: "59px",
                             margin: "auto",
-                            backgroundSize: `cover`,
+                            backgroundSize: "cover",
                             position: "absolute",
                             bottom: "0",
                             right: "0",

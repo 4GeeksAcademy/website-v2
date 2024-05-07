@@ -87,7 +87,7 @@ two_columns:
     text: "Ver opciones de financiación"
     color: "white"
     background: "black"
-    path: "/es/financiacion"
+    path: "#prices_and_payment"
 
 iconogram:
   heading:

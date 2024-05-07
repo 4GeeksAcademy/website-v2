@@ -308,7 +308,10 @@ const Home = (props) => {
       <Testimonials
         lang={data.allTestimonialsYaml.edges}
         background={Colors.verylightGray}
-        //noMove // no movement and show slider
+        heading={yml.success_cases.title}
+        content={yml.success_cases.content}
+        padding="20px"
+        variant="carousel"
       />
 
       <TwoColumn
@@ -360,14 +363,14 @@ const Home = (props) => {
         session={session}
       />
 
-      {/* <OurPartners
+      <OurPartners
         images={hiring.partners.images}
         margin="0"
         padding="50px 0"
         marquee
         paddingFeatured="0 0 50px 0"
         featuredImages={landingHiring?.featured}
-        showFeatured
+        variant="carousel"
         withoutLine
         title={landingHiring ? landingHiring.heading : hiring.partners.tagline}
         paragraph={
@@ -375,7 +378,7 @@ const Home = (props) => {
             ? landingHiring.sub_heading
             : hiring.partners.sub_heading
         }
-      /> */}
+      />
       <PricesAndPayment
         lang={pageContext.lang}
         locations={data.allLocationYaml.edges}
@@ -432,6 +435,10 @@ export const query = graphql`
           button {
             button_text
             button_link
+          }
+          success_cases {
+            title
+            content
           }
           choose_program {
             title

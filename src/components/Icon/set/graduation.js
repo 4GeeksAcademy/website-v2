@@ -6,12 +6,12 @@ export default (props) => (
     width={props.width}
     height={props.height}
     viewBox="0 0 67 46"
-    fill={props.fill || "none"}
+    fill={props.color || "none"}
     xmlns="https://www.w3.org/2000/svg"
   >
     <path
       d="M35.6674 27.4L66.0144 14.2L35.6674 1L5.32031 14.2L35.6674 27.4Z"
-      stroke="#A4A4A4"
+      stroke={props.color || "#A4A4A4"}
       strokeWidth="2"
       strokeMiterlimit="10"
       strokeLinecap="round"
@@ -19,7 +19,7 @@ export default (props) => (
     />
     <path
       d="M18.3262 20.8V36.2L35.6673 45L53.0085 36.2V20.8"
-      stroke="#A4A4A4"
+      stroke={props.color || "#A4A4A4"}
       strokeWidth="2"
       strokeMiterlimit="10"
       strokeLinecap="round"
@@ -27,7 +27,7 @@ export default (props) => (
     />
     <path
       d="M5.32031 14.2V29.6"
-      stroke="#A4A4A4"
+      stroke={props.color || "#A4A4A4"}
       strokeWidth="2"
       strokeMiterlimit="10"
       strokeLinecap="round"
@@ -35,7 +35,7 @@ export default (props) => (
     />
     <path
       d="M5.32065 29.6L0.985352 42.8H9.65594L5.32065 29.6Z"
-      stroke="#A4A4A4"
+      stroke={props.color || "#A4A4A4"}
       strokeWidth="2"
       strokeMiterlimit="10"
       strokeLinecap="round"

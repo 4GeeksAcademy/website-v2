@@ -6,6 +6,7 @@ import { Link } from "gatsby";
 import { smartRedirecting } from "../../utils/utils.js";
 import Fragment from "../Fragment";
 import Marquee from "../Marquee";
+import SectionCarousel from "../SectionCarousel";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 // Display centered TITLE + PARAGRAPH
@@ -259,6 +260,7 @@ const OurPartners = ({
   gridColumn,
   maxWidth,
   gray,
+  variant,
   ...rest
 }) => {
   let FragmentStyle = {
@@ -268,6 +270,71 @@ const OurPartners = ({
     borderBottom: borderBottom,
     width: width,
   };
+
+  if (variant === 'carousel')
+    return (
+      <SectionCarousel
+        margin="20px 0"
+        background="#FBFCFC"
+        padding="20px"
+        heading={title}
+        content={paragraph}
+        headingProps={{ fontWeight: '400' }}
+        contentProps={{ lineHeight: '24px' }}
+        customSettings={{
+          slidesToShow: 4,
+          slidesToScroll: 4,
+        }}
+      >
+        {images.map((elem) => {
+          let follow = elem.follow;
+          if (typeof elem.follow === "string" && elem.follow === "false") follow = false;
+          return (
+            <Div
+              key={elem.name}
+              border="1px solid #C4C4C4"
+              borderRadius="4px"
+              height="236px"
+              width="260px !important"
+            >
+              <Div
+                height="100%"
+                display="flex"
+                flexDirection="column"
+                justifyContent="center"
+              >
+                {elem.link ? (
+                  <a href={elem.link} rel={!follow ? "nofollow" : ""} target="__blank">
+                    <GatsbyImage
+                      style={{
+                        cursor: "pointer",
+                        margin: "auto",
+                        width: "60%",
+                      }}
+                      height="112px"
+                      objectFit="contain"
+                      alt={elem.name}
+                      image={getImage(elem.image.childImageSharp.gatsbyImageData)}
+                    />
+                  </a>
+                ) : (
+                  <GatsbyImage
+                    style={{
+                      margin: "auto",
+                      height: "112px",
+                      width: "60%",
+                    }}
+                    objectFit="contain"
+                    alt={elem.name}
+                    image={getImage(elem.image.childImageSharp.gatsbyImageData)}
+                  />
+                )}
+              </Div>
+            </Div>
+          );
+        })}
+      </SectionCarousel>
+    );
   //Renderized...
   return (
     <Fragment github="/components/partner" style={FragmentStyle}>
