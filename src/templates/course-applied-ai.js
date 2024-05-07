@@ -210,7 +210,7 @@ const Program = ({ data, pageContext, yml }) => {
       {/* OVERLAPED CREAR EN EL YML*/}
       <Overlaped
         heading={yml.overlaped?.heading}
-        headingStyle = {{fontSize: '26px'}}
+        headingStyle={{ fontSize: "26px" }}
         content={yml.overlaped?.paragraph}
         button={yml.overlaped?.button}
         image={yml.overlaped?.image}
@@ -221,7 +221,7 @@ const Program = ({ data, pageContext, yml }) => {
 
       {/* TWO COLUMN CREAR EN EL YML*/}
       <TwoColumn
-        right={{ image: yml.two_columns_second?.image}}
+        right={{ image: yml.two_columns_second?.image }}
         left={{
           heading: yml.two_columns_second?.heading,
           sub_heading: yml.two_columns_second?.sub_heading,
@@ -239,6 +239,7 @@ const Program = ({ data, pageContext, yml }) => {
         actionMessage={courseDetails.upcoming.actionMessage}
         defaultCourse={defaultCourse}
         locations={data.allLocationYaml.edges}
+        showMoreRedirect
       />
       <PricesAndPayment
         background={`linear-gradient(to bottom, ${Colors.white} 50%, ${Colors.lightYellow2} 50%)`}
