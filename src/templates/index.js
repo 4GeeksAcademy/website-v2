@@ -209,8 +209,7 @@ const Home = (props) => {
             </Div>
           </Div>
           <Div display="flex" height="auto" width="100%">
-            {/* IMPORTANT: REMOVE THE FALSE CONDITION */}
-            {(indexVideo || sessionVideo) && false ? (
+            {indexVideo || sessionVideo? (
               <Div
                 height_tablet="623px"
                 width="100%"
