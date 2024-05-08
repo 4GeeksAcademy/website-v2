@@ -10,7 +10,7 @@ meta_info:
 ## BANNER - HEADER
 seo_title: "Bootcamp Financing"
 header:
-  title: FINANCING
+  title: FINANCING OPTIONS
   paragraph: Indicate the following information to show you the financing options
   tagline: CELEBRATE THE BEST PRICE IN TOWN
   sub_heading: We never stopped trying until we mastered a real premium but affordable program. Our philosophy is rooted in making coding education available to everyone.
@@ -54,7 +54,7 @@ syllabus_button_text: "Search"
 
 iconogram:
   heading:
-    text: "How your tuition is no longer a concern"
+    text: "Paying your tuition should not be a concern"
     font_size:
       - 38px
       - 38px
@@ -70,17 +70,17 @@ iconogram:
   swipable: false
   icons:
   - icon: "contract-money"
-    title: Payment Plans - No interest
-    content: " No interest: you can pay in up to 6 months"
+    title: Interest-Free Payment Plans
+    content: "Pay installments every 6 months with no interest."
   - icon: "handmoney-new"
-    title: Loans - long term
-    content: "long term: 3, 4 or 5 years loan"
+    title: Long-Term Loans
+    content: "Choose from 3, 4, or 5-year loan options."
   - icon: "hand-puzzle"
-    title: Scholarships and partnerships
-    content: "We are working with several organizations to reduce your tuition fee."
+    title: Scholarships and Partnerships
+    content: "Benefit from partial or full funding options of your tuition."
   - icon: "briefcase-new"
     title: Income Sharing Agreement
-    content: "Only pay when you get a job above a thereshold"
+    content: "Pay only when you secure a well-paying job."
   button:
     text: "Conditions apply."
     color: ""
@@ -93,7 +93,7 @@ two_column:
       style: '{ "backgroundSize": "contain" }'
       src: /images/landing/Group-6626.webp
     heading:
-      text: $20 Million in scholarships
+      text: $20 Million in Scholarships
       font_size:
         - 38px
         - 38px
@@ -101,7 +101,7 @@ two_column:
         - 21px
         - 21px
     sub_heading:
-      text: 1.456 people have benefited from our scholarship programs, from all possible backgrounds, read here stories of the beneficiaries and projects.
+      text: Over 1,456 individuals, from diverse backgrounds, have benefited from our scholarship programs. Explore their stories and the projects they've contributed to.
       font_size:
         - 24px
         - 24px
@@ -126,7 +126,7 @@ two_column:
       style: '{ "backgroundSize": "contain"}'
       src: /images/landing/20-million-column.png
     heading:
-      text: 62% of bootcamp applicants are rejected due to financial reasons.
+      text: In the past, 68% of bootcamp applicants could not enroll due to financial reasons.
       font_size:
         - 38px
         - 38px
@@ -134,7 +134,7 @@ two_column:
         - 21px
         - 21px
     sub_heading:
-      text: 4Geeks is committed to removing the cost as a possible factor to prevent talented individuals to become coders.
+      text: At 4Geeks, we're dedicated to breaking down the barriers that prevent aspiring coders from pursuing their goals. 
       font_size:
         - 24px
         - 24px
@@ -145,7 +145,7 @@ two_column:
       font_size:
         - 16px
       text: |
-        Thanks to a deep network of 2000+ partners and donors from  Government Institutions, none profit organizations and private companies enables our scholarship platform to be one of the biggest in the world.
+        Through our expansive network of 2000+ partners and donors, spanning government institutions, non-profit organizations, and private companies, our scholarship offerings rank among the largest globally. 
     button:
       text: JOIN THE PROGRAM
       color: white
@@ -157,7 +157,7 @@ two_column:
       style: '{ "backgroundSize": "contain"}'
       src: "/images/woman-glasses-laptop.png"
     heading:
-      text: "Job guarantee commitment"
+      text: "Get a Job Guarantee"
       font_size:
         - 38px
         - 38px
@@ -165,7 +165,7 @@ two_column:
         - 21px
         - 21px
     sub_heading:
-      text: "Our Job Guarantee Program consists of 3 stages that are needed to be complete as part of your process. It’s three bootcamps in One:"
+      text: "Our Job Guarantee Program consists of 3 stages:"
       font_size:
         - 24px
         - 24px
@@ -175,19 +175,19 @@ two_column:
     bullets:
       item_style: ""
       items:
-        - heading: "Become a Software Developer."
+        - heading: "BECOME A SOFTWARE DEVELOPER."
           text: ""
           icon: "check" #string with icon for example ['check', 'cicle', etc]
-        - heading: "Get career ready."
+        - heading: "PREPARE FOR THE JOB SEARCH."
           text: ""
           icon: "check" #string with icon for example ['check', 'cicle', etc]
-        - heading: "Get a job!"
+        - heading: "GET HIRED!"
           text: ""
           icon: "check" #string with icon for example ['check', 'cicle', etc]
     content:
       font_size:
         - 16px
-      text: The goal is to help you get a job within 180 days after graduation. You need to complete and meet the requirements in order to opt for the Money back if the job opportunity has not arrived within the time frame.
+      text: With the Job Guarantee, our joint goal will be to get you hired within 180 days of graduation. If you completed all stages and met all requirements, and don’t, you will get all your money back. (But to this day, it has never happened!)
     button:
       text: "APPLY"
       color: "white"
@@ -224,7 +224,7 @@ partners:
 we_trust_section:
   title: Why trust us?
   text: |
-    A job guarantee seals our commitment to your success! With a proven track record of success, our program will continue to empower future graduates. 
+    A job guarantee seals our commitment to your success! With a proven track record, our program gives future graduates the confidence to reach for their career goals. 
     <br>
     <br>
     The numbers speak for themselves
@@ -234,10 +234,10 @@ we_trust_section:
       text: Job placement rate
     - icon: chart
       title: "60K"
-      text: Avg. Income at a new job
+      text: Avg. income at new job
     - icon: graduation-2
       title: "20MM"
-      text: Millions in scolarchips and counting
+      text: Funding for scholarships 
 
 ## PAYMENT GUIDE SECTION
 # payment_guide:

@@ -56,6 +56,36 @@ awards_list:
     link: "https://www.newsweek.com/insights/coding-career-and-you-top-coding-schools-2017/4geeks-academy"
     text_link: See article
 
+  - image: "../../../static/images/badges/exelencia-educativa-es.png"
+    title: "Best Coding Bootcamp Program 2022"
+    paragraph: 'We are pleased to announce that we have been distinguished with the <a href="http://premiosexcelenciaeducativa.org/wp-content/uploads/2022/03/PALMAR%C3%89S-EXCELENCIA-2022.pdf" rel="noopener noreferrer nofollow">Excellence in Education Award for Best Coding Bootcamp Program of 2022</a>. This recognition highlights our commitment to excellence in technology education.'
+    link: ""
+    text_link: 
+
+  - image: "../../../static/images/badges/exelencia-educativa-es.png"
+    title: "Best Educational Program 2022"
+    paragraph: 'We have been awarded the Excellence in Education Award for <a href="http://premiosexcelenciaeducativa.org/wp-content/uploads/2022/03/PALMAR%C3%89S-EXCELENCIA-2022.pdf" rel="noopener noreferrer nofollow">Best Educational Program 2022</a>. This recognition is a testament to our commitment to quality and innovation in education.'
+    link: ""
+    text_link: 
+
+  - image: "../../../static/images/badges/exelencia-educativa-es.png"
+    title: "Best International Scholarship Program 2022"
+    paragraph: 'We have been awarded the Excellence in Education Award for the <a href="http://premiosexcelenciaeducativa.org/wp-content/uploads/2022/03/PALMAR%C3%89S-EXCELENCIA-2022.pdf" rel="noopener noreferrer nofollow">Best International Scholarship Program 2022</a>! It recognizes our effort to offer global educational opportunities to talented students, regardless of their financial situation.'
+    link: ""
+    text_link: 
+
+  - image: "../../../static/images/badges/exelencia-educativa-es.png"
+    title: "Best On-site Bootcamp Awards 2022"
+    paragraph: 'Our campus in Spain has been honored with the Excellence in Education <a href="http://premiosexcelenciaeducativa.org/wp-content/uploads/2022/03/PALMAR%C3%89S-EXCELENCIA-2022.pdf" rel="noopener noreferrer nofollow">Award for Best On-site Bootcamp 2022</a>. This recognition is a testament to our unwavering commitment to excellence in on-site education in the field of technology.'
+    link: ""
+    text_link: 
+
+  - image: "../../../static/images/badges/exelencia-educativa-es.png"
+    title: "International Trajectory Recognition"
+    paragraph: 'As part of the Excellence in Education Awards 2022, we are proud to have been awarded the <a href="http://premiosexcelenciaeducativa.org/wp-content/uploads/2022/03/PALMAR%C3%89S-EXCELENCIA-2022.pdf" rel="noopener noreferrer nofollow">International Trajectory</a> Outstanding Award in the field of Software Development School.'
+    link: ""
+    text_link:
+
   - image: "../../../static/images/awards/pee-career.png"
     title: "Best Career Oriented Educational Program"
     paragraph: 'Educational Excelence Awards 2021 to the Best Career Oriented Educational Program specialized in Coding Bootcamps, more information found on the palmares <a href="https://premiosexcelenciaeducativa.org/wp-content/uploads/2016/05/PALMARE%CC%81S-EXCELENCIA-2020-1.pdf" rel="noopener noreferrer nofollow">for the 2021 awards</a>'
