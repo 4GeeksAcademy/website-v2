@@ -11,7 +11,6 @@ import ProgramDetailsMobile from "../components/ProgramDetailsMobile";
 import PricesAndPayment from "../components/PricesAndPayment";
 import Modal from "../components/Modal";
 import LeadForm from "../components/LeadForm";
-import AlumniProjects from "../components/AlumniProjects";
 import Badges from "../components/Badges";
 import TechsWeTeach from "../components/TechsWeTeach";
 import { Circle } from "../components/BackgroundDrawing";

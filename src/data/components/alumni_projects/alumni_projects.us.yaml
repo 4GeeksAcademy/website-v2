@@ -2,6 +2,10 @@ header:
   tagline: "MEET THE ALUMNI AND PROJECTS"
   sub_heading: "We want to show you some projects pitched by our graduates and alumni who are already working as software developers in the Tech Industry"
 
+project: Project
+made_by: "> MADE BY"
+description: "> DESCRIPTION"
+
 button_section:
   button_text: "VIEW ALL PROJECTS"
   button_link: "/us/graduates"

@@ -118,7 +118,7 @@ export const Navbar = ({
   onToggle,
   languageButton,
   onLocationChange,
-  locationCity,
+  myLocations,
 }) => {
   const { session, setSession } = useContext(SessionContext);
   const [status, setStatus] = useState({
@@ -128,17 +128,18 @@ export const Navbar = ({
   });
 
   let city = session && session.location ? session.location.city : [];
-  let currentLocation = locationCity ? locationCity : [];
   const [buttonText, setButtonText] = useState("");
   const [contentBar, setContentBar] = useState({});
+  const [showDiscount, setShowDiscount] = useState(false);
   /* In case of want change the Button text "Aplica" search the key 
        "apply_button_text" in /src/data/location/locationfile.yaml
     */
-  let findCity = currentLocation.find((loc) => loc.node?.city === city);
+  let findCity = myLocations?.find((loc) => loc.node?.city === city);
   useEffect(() => {
     if (findCity !== undefined && findCity.node) {
       setButtonText(findCity.node.button.apply_button_text);
       setContentBar(findCity.node.custom_bar);
+      if (findCity.node.custom_bar.discounts) setShowDiscount(true);
     }
   }, [findCity]);
 
@@ -197,6 +198,25 @@ export const Navbar = ({
           }
         }
       }
+      allCustomBarYaml {
+        edges {
+          node {
+            bar_content {
+              discount {
+                message
+                ends_in
+                button {
+                  label
+                  path
+                }
+              }
+            }
+            fields {
+              lang
+            }
+          }
+        }
+      }
     }
   `);
 
@@ -208,6 +228,10 @@ export const Navbar = ({
   };
 
   const locations = locByLanguage(data.allLocationYaml, langDictionary[lang]);
+
+  const myCustomBar = data.allCustomBarYaml.edges.find(
+    (item) => item.node.fields.lang === lang
+  );
 
   return (
     <Div
@@ -221,6 +245,8 @@ export const Navbar = ({
       <CustomBar
         isContentBarActive={isContentBarActive}
         contentBar={contentBar}
+        discountContent={myCustomBar?.node}
+        showDiscount={showDiscount}
         display_md="flex"
         display_xxs="none"
         position="static"
