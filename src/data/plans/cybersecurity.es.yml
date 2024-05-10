@@ -244,19 +244,3 @@ part_time:
       - "Además del programa de Ciberseguridad, obtén un apoyo profesional de por vida de nuestro equipo especializado y acceso permanente a nuestra comunidad en línea de graduados"   
     icons: 
       - "/images/visa-mastercard.png"   
-
-  - slug: 'latam-program-only-cs-upfront'
-    academies: ['montevideo-uruguay','bogota-colombia','caracas-venezuela',  'costa-rica', 'mexicocity-mexico','quito-ecuador', 'panamacity-panama', 'buenosaires-argentina','lima-peru','lapaz-bolivia']
-    recomended: false
-    scholarship: "Solo Programa de Ciberseguridad"
-    payment_time: "Concéntrate en adquirir habilidades. Paga por adelantado."
-    price: "$ 1.399 USD"
-    original_price: "$ 2.500 USD"
-    bullets: 
-      - "Siempre hay un plan de pago disponible para que te unas a 4Geeks Academy"
-      - "Si no encuentras aquí lo que esperas, contáctanos y trataremos de encontrar nuevas formas de ayudarte"     
-      - "Debes elegir si solo tomas el programa, si también quieres obtener nuestro Apoyo Profesional completo, o si quieres ir por todo y registrarte con nuestra Función de Garantía de Empleo"  
-      - "Paga solo por el programa de Ciberseguridad si aún no estás interesado en nuestro programa de apoyo profesional y nuestra garantía de empleo"   
-    icons:
-      - "/images/visa-mastercard.png"
-      - "/images//flevo-new.png"

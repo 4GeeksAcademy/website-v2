@@ -282,7 +282,7 @@ part_time:
 
 ##  LATAM
   - slug: 'latam-upfront-ds-cs'
-    academies: ['buenosaires-argentina', 'costa-rica', 'lapaz-bolivia', 'lima-peru', 'mexico-city-mexico', 'montevideo-uruguay', 'panamacity-panama', 'quito-ecuador']
+    academies: ['buenosaires-argentina', 'costa-rica', 'lapaz-bolivia', 'lima-peru', 'mexicocity-mexico', 'montevideo-uruguay', 'panamacity-panama', 'quito-ecuador']
     recomended: true
     scholarship: "Data Science program + Career Support"
     payment_time: "We help you build your professional profile"
@@ -315,7 +315,7 @@ part_time:
       - "/images/flevo-new.png"    
 
   # - slug: 'latam-solo-programa-ds'
-  #   academies: ['bogota-colombia', 'buenosaires-argentina', 'costa-rica', 'lapaz-bolivia', 'lima-peru', 'mexico-city-mexico', 'montevideo-uruguay', 'panamacity-panama', 'quito-ecuador']
+  #   academies: ['bogota-colombia', 'buenosaires-argentina', 'costa-rica', 'lapaz-bolivia', 'lima-peru', 'mexicocity-mexico', 'montevideo-uruguay', 'panamacity-panama', 'quito-ecuador']
   #   recomended: false
   #   scholarship: "Only pay for the program"
   #   payment_time: "Focus on gaining skills. Pay monthly."
@@ -330,7 +330,7 @@ part_time:
   #     - "/images/flevo-new.png" 
 
   # - slug: 'latam-program-only-ds-upfront'
-  #   academies: ['bogota-colombia', 'buenosaires-argentina', 'costa-rica', 'lapaz-bolivia', 'lima-peru', 'mexico-city-mexico', 'montevideo-uruguay', 'panamacity-panama', 'quito-ecuador']
+  #   academies: ['bogota-colombia', 'buenosaires-argentina', 'costa-rica', 'lapaz-bolivia', 'lima-peru', 'mexicocity-mexico', 'montevideo-uruguay', 'panamacity-panama', 'quito-ecuador']
   #   recomended: false
   #   scholarship: "Data Science Program Only"
   #   payment_time: "Focus on gaining skills. Pay upfront."

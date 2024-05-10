@@ -457,7 +457,7 @@ part_time:
 ## LATAM
 
   - slug: 'latam-trabajo-garantizado-fs-pt'
-    academies: ['bogota-colombia', 'buenosaires-argentina', 'costa-rica', 'lapaz-bolivia', 'lima-peru', 'mexico-city-mexico', 'montevideo-uruguay', 'panamacity-panama', 'quito-ecuador']
+    academies: ['bogota-colombia', 'buenosaires-argentina', 'costa-rica', 'lapaz-bolivia', 'lima-peru', 'mexicocity-mexico', 'montevideo-uruguay', 'panamacity-panama', 'quito-ecuador']
     recomended: true
     scholarship: "Trabajo Garantizado"
     payment_time: "Consigue un trabajo dentro de los 6 meses posteriores a la graduación o te devolvemos tu dinero"
@@ -476,7 +476,7 @@ part_time:
       - "/images/flevo-new.png"
 
   - slug: 'latam-probram-only-fs-pt'
-    academies: ['bogota-colombia', 'buenosaires-argentina', 'costa-rica', 'lapaz-bolivia', 'lima-peru', 'mexico-city-mexico', 'montevideo-uruguay', 'panamacity-panama', 'quito-ecuador']
+    academies: ['bogota-colombia', 'buenosaires-argentina', 'costa-rica', 'lapaz-bolivia', 'lima-peru', 'mexicocity-mexico', 'montevideo-uruguay', 'panamacity-panama', 'quito-ecuador']
     recomended: false
     scholarship: "Solo Programa Full-Stack"
     payment_time: "Enfócate en aprender a programar. Paga por adelantado."
@@ -491,7 +491,7 @@ part_time:
       - "/images/partner/flevo-new.png" 
 
   # - slug: 'latam-solo-programa-pt'
-  #   academies: ['bogota-colombia', 'buenosaires-argentina', 'costa-rica', 'lapaz-bolivia', 'lima-peru', 'mexico-city-mexico', 'montevideo-uruguay', 'panamacity-panama', 'quito-ecuador']
+  #   academies: ['bogota-colombia', 'buenosaires-argentina', 'costa-rica', 'lapaz-bolivia', 'lima-peru', 'mexicocity-mexico', 'montevideo-uruguay', 'panamacity-panama', 'quito-ecuador']
   #   recomended: false
   #   scholarship: "Only pay for the program"
   #   payment_time: "Focus on gaining skills. Pay monthly."
@@ -505,7 +505,7 @@ part_time:
   #     - "/images/flevo-new.png" 
 
   # - slug: 'latam-upfront-fs-pt'
-  #   academies: ['bogota-colombia', 'buenosaires-argentina', 'costa-rica', 'lapaz-bolivia', 'lima-peru', 'mexico-city-mexico', 'montevideo-uruguay', 'panamacity-panama', 'quito-ecuador']
+  #   academies: ['bogota-colombia', 'buenosaires-argentina', 'costa-rica', 'lapaz-bolivia', 'lima-peru', 'mexicocity-mexico', 'montevideo-uruguay', 'panamacity-panama', 'quito-ecuador']
   #   recomended: false
   #   scholarship: "Full-stack program + Career Support"
   #   payment_time: "Learn to code and get full support building your career"
@@ -519,7 +519,7 @@ part_time:
   #     - "/images/flevo-new.png"
 
   #- slug: 'latam-job-guarantee-fs-pt'
-    #academies: ['bogota-colombia', 'buenosaires-argentina', 'costa-rica', 'lapaz-bolivia', 'lima-peru', 'mexico-city-mexico', 'montevideo-uruguay', 'panamacity-panama', 'quito-ecuador']
+    #academies: ['bogota-colombia', 'buenosaires-argentina', 'costa-rica', 'lapaz-bolivia', 'lima-peru', 'mexicocity-mexico', 'montevideo-uruguay', 'panamacity-panama', 'quito-ecuador']
     #recomended: false
     #scholarship: "Trabajo garantizado"
     #payment_time: "Consigues un trabajo o te devolvemos tu dinero"
