@@ -239,12 +239,7 @@ const Images_Featured = (props) => {
   );
 };
 
-const VariantCarousel = ({
-  title,
-  paragraph,
-  images,
-  ...rest
-}) => {
+const VariantCarousel = ({ title, paragraph, images, ...rest }) => {
   return (
     <SectionCarousel
       margin="20px 0"
@@ -328,9 +323,7 @@ const VariantCarousel = ({
                     height="112px"
                     objectFit="contain"
                     alt={elem.name}
-                    image={getImage(
-                      elem.image.childImageSharp.gatsbyImageData
-                    )}
+                    image={getImage(elem.image.childImageSharp.gatsbyImageData)}
                   />
                 </a>
               ) : (
@@ -350,7 +343,7 @@ const VariantCarousel = ({
         );
       })}
     </SectionCarousel>
-  )
+  );
 };
 
 //Punto de entrada al componente

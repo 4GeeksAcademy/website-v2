@@ -9,10 +9,7 @@ import ChooseYourProgram from "../components/ChooseYourProgram";
 import UpcomingDates from "../components/UpcomingDates";
 import Staff from "../components/Staff";
 import "dayjs/locale/de";
-import {
-  Div,
-  GridContainer,
-} from "../components/Sections";
+import { Div, GridContainer } from "../components/Sections";
 import { H1, H2, H3, Paragraph } from "../components/Heading";
 import { Colors, StyledBackgroundSection } from "../components/Styling";
 import BaseRender from "./_baseLayout";
