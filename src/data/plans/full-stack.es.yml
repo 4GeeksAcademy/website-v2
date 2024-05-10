@@ -123,6 +123,61 @@ full_time:
   #   icons: 
   #     - "/images/bcas.png"   
 
+  - slug: 'north-europe-upfront-fs-pt'
+    academies: ['berlin-germany','dublin-ireland', 'europe','hamburg-germany','munich-germany']
+    recomended: false
+    scholarship: "Pago por adelantado"
+    payment_time: "Y obtén un descuento"
+    price: "€4,750*"
+    bullets:
+      - "Paga usando tu cuenta bancaria, tarjeta de crédito o débito, Paypal, Bitcoin o Ethereum."
+      - "Descuentos de hasta €2,050. Paga €4,750 en lugar de €6,800. Descuento sujeto a disponibilidad."     
+    icons: 
+      - "/images/visa-mastercard.png"    
+      - "/images/bitcoin_logo.png"  
+      - "/images/ethereum.png"    
+
+  - slug: 'north-europe-scholarships-fs-pt'
+    academies: ['berlin-germany','dublin-ireland', 'europe','hamburg-germany','munich-germany']
+    recomended: true
+    scholarship: "Becas disponibles"
+    payment_time: ""
+    price: "Desde €150 /mes."
+    bullets:
+      - "Financiamiento personalizado sin intereses. De 4 a 30 meses."
+      - "Becas disponibles de hasta €1,850. Paga €4,950 en lugar de €6,800. ¡Becas sujetas a disponibilidad!"     
+    icons:
+      - "/images/quotanda-logo.png"
+
+  - slug: 'south-europe-upfront-fs-pt'
+    academies: ['lisbon-portugal', 'milan-italy', 'rome-italy']
+    recomended: true
+    scholarship: "Pago por adelantado"
+    payment_time: "Y obtén un descuento"
+    price: "€4,750*"
+    original_price: "€6,800"
+    offer: "Hasta €2,050 de descuento"
+    bullets:
+      - "Paga usando tu cuenta bancaria, tarjeta de crédito o débito, Paypal, Bitcoin o Ethereum."
+      - "Precio original €6,800. Ahorra hasta €2,050 con nuestro descuento por pago por adelantado."
+      - "Descuento sujeto a disponibilidad. Contáctanos para confirmar tu elegibilidad."
+    icons:
+      - "/images/visa-mastercard.png"
+      - "/images/bitcoin_logo.png"
+      - "/images/ethereum.png"
+
+  - slug: 'south-europe-scholarships-fs-pt'
+    academies: ['lisbon-portugal','milan-italy','rome-italy']
+    recomended: false
+    scholarship: "Becas disponibles"
+    payment_time: ""
+    price: "Desde €150 /mes."
+    bullets:
+      - "Financiamiento personalizado sin intereses. De 4 a 30 meses."
+      - "Becas disponibles de hasta €1,850. Paga €4,950 en lugar de €6,800. ¡Becas sujetas a disponibilidad!"     
+    icons: 
+      - "/images/quotanda-logo.png"
+
 ## Chile 
 
   - slug: 'chile-contado-fs-ft'
