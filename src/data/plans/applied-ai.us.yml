@@ -85,7 +85,7 @@ part_time:
     offer: "30% OFF"
     bullets:
       - "Pay with bank transfer, credit or debit card"    
-      - "*Discount up to 100.000 CLP"
+      - "*Discount of 300.000 CLP OFF"
     icons: 
       - "/images/visa-mastercard.png"   
 
@@ -95,6 +95,7 @@ part_time:
     scholarship: "Financed"
     payment_time: "12 months payment"
     price: Starting from 58.000 CLP"
+    warning_message: "Limited seats!"
     bullets:
       - "Tailor-made financing from 6 to 12 months"  
       - "An advance payment corresponding to 20% of the value of the program must be paid" 

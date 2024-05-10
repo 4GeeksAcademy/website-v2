@@ -86,7 +86,7 @@ part_time:
     offer: "30% de descuento"
     bullets:
       - "Paga con transferencia bancaria, tarjeta de crédito o débito"    
-      - "*Descuento de hasta 100.000 CLP"
+      - "*Descuento de 300.000 CLP al pagar por adelantado"
     icons: 
       - "/images/visa-mastercard.png"   
 
@@ -96,6 +96,7 @@ part_time:
     scholarship: "Financiado"
     payment_time: "Pago en 12 meses"
     price: "Desde 58.000 CLP"
+    warning_message: "¡Plazas limitadas!"
     bullets:
       - "Financiamiento a medida de 6 a 12 meses"  
       - "Se debe pagar un pago inicial correspondiente al 20% del valor del programa" 

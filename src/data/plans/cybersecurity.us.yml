@@ -167,7 +167,6 @@ part_time:
     offer: "15% OFF"
     bullets:
       - "Pay with bank transfer, credit or debit card"    
-      - "Price without discount applied"
       - "You will have access to the entire program and the entire 4Geeks Career Support System"
     icons: 
       - "/images/visa-mastercard.png"
@@ -192,7 +191,7 @@ part_time:
     scholarship: "Financed"
     payment_time: "18 months payment"
     price: "~168.000 CLP"
-    original_price: "3.500.000 CLP*"
+    warning_message: "Limited seats!"
     bullets:
       - "Tailor-made financing from 6 to 18 months"  
       - "An advance payment corresponding to 20% of the value of the program must be paid."

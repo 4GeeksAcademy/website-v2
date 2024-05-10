@@ -195,7 +195,6 @@ part_time:
     offer: "15% DE DESCUENTO"
     bullets:
       - "Paga con transferencia bancaria, tarjeta de crédito o débito"    
-      - "Precio sin descuento aplicado"
       - "Tendrás acceso al programa completo y a todo el Sistema de Apoyo Profesional de 4Geeks"
     icons: 
       - "/images/visa-mastercard.png"
@@ -220,7 +219,7 @@ part_time:
     scholarship: "Financiado"
     payment_time: "Pago en 18 meses"
     price: "~168.000 CLP"
-    original_price: "3.500.000 CLP*"
+    warning_message: "¡Plazas limitadas!"
     bullets:
       - "Financiamiento a medida de 6 a 18 meses"  
       - "Se debe pagar un pago inicial correspondiente al 20% del valor del programa."

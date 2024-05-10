@@ -357,7 +357,6 @@ part_time:
     offer: "20% OFF"
     bullets:
       - "Pay with bank transfer, credit or debit card"    
-      - "Price without discount applied"
       - "You will have access to the entire program and the entire 4Geeks Career Support System"
     icons: 
       - "/images/visa-mastercard.png"
