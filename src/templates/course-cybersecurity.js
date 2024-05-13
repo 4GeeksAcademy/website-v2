@@ -193,7 +193,7 @@ const Program = ({ data, pageContext, yml }) => {
       </Header>
 
       {/* TWO COLUMN CREAR EN EL YML*/}
-      {/* {session.location?.breathecode_location_slug.includes("spain") && <TwoColumn
+      <TwoColumn
         left={{ image: yml.two_columns_first?.image }}
         right={{
           heading: yml.two_columns_first?.heading,
@@ -204,7 +204,7 @@ const Program = ({ data, pageContext, yml }) => {
         }}
         proportions={yml.two_columns_first?.proportions}
         session={session}
-      />} */}
+      />
 
       <JobGuaranteeSmall
         content={data.allJobGuaranteeSmallYaml.edges[0].node}
@@ -274,10 +274,8 @@ const Program = ({ data, pageContext, yml }) => {
       <UpcomingDates
         lang={pageContext.lang}
         message={courseDetails.upcoming?.no_dates_message}
-        defaultCourse={defaultCourse}
         actionMessage={courseDetails.upcoming?.actionMessage}
         locations={data.allLocationYaml.edges}
-        showMoreRedirect
       />
 
       <PricesAndPayment
