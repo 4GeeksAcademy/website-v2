@@ -48,7 +48,7 @@ choose_program:
 two_columns:
   proportions: [6, 6]
   image:
-    style: '{ "backgroundSize": "cover" }'
+    style: '{ "backgroundSize": "cover", "background-position": "center", "min-height": "350px", "height": "350px"}'
     src: "/images/landing/feliz-empresario-laptop.png"
     shadow: true  
   heading:
