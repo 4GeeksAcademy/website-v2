@@ -3,7 +3,7 @@
 
 ## IF THE video url IS SPECIFIED, THE IMAGE WILL HAVE A PLAY ICON TO PLAY THE VIDEO, OTHERWISE ONLY THE IMAGE IS SHOWN
 header:
-  title: The 4Geeks Way in three stories
+  title: THREE STORIES, THE 4GEEKS WAY 
   paragraph: ""
 with:
   - name: "Hernán García"
