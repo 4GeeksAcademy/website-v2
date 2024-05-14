@@ -77,7 +77,6 @@ const Side = ({
       <GatsbyImage
         height_xxs="450px"
         image={getImage(image.childImageSharp.gatsbyImageData)}
-        //bgSize={`contain`}
         alt="geekforce image"
       />
     );
@@ -90,9 +89,6 @@ const Side = ({
       ? sub_heading.font_size
       : [];
   const [c_xl, c_lg, c_md, c_sm, c_xs] = content ? content.font_size : [];
-
-  let subHeadingStyles = {};
-  if (sub_heading?.style) subHeadingStyles = JSON.parse(sub_heading.style);
 
   return (
     <Div
@@ -128,10 +124,11 @@ const Side = ({
           lineHeight="38px"
           lineHeight_tablet="38px"
           fontSize={h_xs || "30px"}
-          fs_xl={h_xl}
           fontSize_xxs={h_xs || "21px"}
           fontSize_md={h_md || "30px"}
           fontSize_sm={h_sm}
+          fontSize_tablet={h_lg}
+          fontSize_lg={h_xl}
           margin="30px 0 20px 0"
           style={heading.style ? JSON.parse(heading.style) : null}
         >
@@ -145,12 +142,14 @@ const Side = ({
           textAlign="left"
           margin="0"
           letterSpacing="0.06em"
-          fontSize={sh_xl || "16px"}
-          fontSize_sm={sh_sm || "16px"}
-          fonSize_md={sh_md}
+          fontSize={sh_xs || sh_xl || "16px"}
           fontSize_xs={sh_xs}
+          fontSize_sm={sh_sm || "16px"}
+          fontSize_tablet={sh_md}
+          fonSize_md={sh_lg}
           fontHeight="30px"
-          fontWeight={subHeadingStyles["font-weight"] || 700}
+          fontWeight="700"
+          lineHeight="24px"
           opacity="1"
           style={sub_heading.style ? JSON.parse(sub_heading.style) : null}
         >
@@ -246,10 +245,13 @@ const Side = ({
           textAlign_tablet="left"
           margin="10px 0"
           opacity="1"
-          fontSize={c_xl || "16px"}
-          fontSize_sm={c_sm}
-          fonSize_md={c_md}
+          fontSize={c_xs || c_xl || "16px"}
           fontSize_xs={c_xs}
+          fontSize_sm={c_sm}
+          fontSize_tablet={c_md}
+          fontSize_md={c_lg}
+          fontSize_lg={c_xl}
+          lineHeight="20px"
           style={content.style ? JSON.parse(content.style) : null}
           dangerouslySetInnerHTML={{ __html: content.text }}
         />
@@ -262,10 +264,13 @@ const Side = ({
             textAlign_tablet="left"
             margin="10px 0"
             opacity="1"
-            fontSize={c_xl || "16px"}
-            fontSize_sm={c_sm}
-            fonSize_md={c_md}
+            fontSize={c_xs || c_xl || "16px"}
             fontSize_xs={c_xs}
+            fontSize_sm={c_sm}
+            fontSize_tablet={c_md}
+            fontSize_md={c_lg}
+            fontSize_lg={c_xl}
+            lineHeight="20px"
             style={content.style ? JSON.parse(content.style) : null}
             fontHeight="30px"
           >
