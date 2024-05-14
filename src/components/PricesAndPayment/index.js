@@ -70,7 +70,7 @@ const PricingCard = ({
           <Div
             padding="4px 0"
             background={Colors.blue}
-            borderRadius="2px 2px 0 0"
+            borderRadius="4px 4px 0 0"
           >
             <Paragraph
               color={Colors.white}
@@ -218,6 +218,7 @@ const PricingCard = ({
           border="1px solid #EBEBEB"
           padding="24px 15px"
           width="100%"
+          borderRadius="4px"
         >
           <H3 textAlign="center" margin="0 0 15px 0" fontSize="21px">
             {info.plan_details}
@@ -617,8 +618,9 @@ const PricesAndPayment = (props) => {
       margin="0 auto"
     >
       <H2
-        fontSize_md="38px"
-        fontSize_xs="21px"
+        fontSize="21px"
+        fontSize_md="35px"
+        fontWeight="400"
         lineHeight="46px"
         textAlign="center"
         width="100%"
@@ -644,10 +646,10 @@ const PricesAndPayment = (props) => {
           alignItems="center"
         >
           <H3
-            fontSize_md="22px"
-            fontSize_xs="16px"
+            fontSize="16px"
+            fontSize_md="24px"
             lineHeight="26px"
-            fontWeight="700"
+            fontWeight="400"
             textAlign_tablet="start"
             textAlign_xs="center"
             opacity="1"
@@ -859,6 +861,7 @@ const PricesAndPayment = (props) => {
               {availablePlans && availablePlans.length > 0 && (
                 <Div
                   className="bullets-container"
+                  borderRadius="4px"
                   display="none"
                   display_tablet="block"
                   background="#F9F9F9"
