@@ -77,7 +77,7 @@ images_box:
       alt: "4Geeks Own People Coding"
     - path: "../../../static/images/locations/location-austin3.webp"
       alt: "Austin city"
-    - path: "../../../static/images/ownmancoding.jpg"
+    - path: "../../../static/images/ownmancoding.webp"
       alt: "Remote-Coding-Bootcamp"
     - path: "../../../static/images/locations/location-austin1.webp"
       alt: "Austin city"

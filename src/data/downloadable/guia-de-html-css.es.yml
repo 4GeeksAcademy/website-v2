@@ -11,7 +11,7 @@ meta_info:
   visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   automation: downloadable # optional, lead as "null" if you don't know, it can be more than one (comma separated)
   tag: request_downloadable # mandatory: at lease one tag (comma separated)
-  current_download: "guia-html-css" #FALTA AGREGAR EL PDF DE LA GUIA DE HTML
+  current_download: "guia-html-css" 
 
 form:
   # posible fields: "first_name", "last_name", "full_name", "phone", "email"
@@ -20,7 +20,7 @@ form:
   heading: "Descargar Guía" 
   motivation: "En breves minutos, después de haber completado el formulario, en tu correo electrónico habrás recibido la guía de HTML y CSS, tendrás acceso a todo lo que necesitas para empezar a aprender programación web."
   button_label: Descargar la Guía Gratis
-  redirect: null #you can redirect to another url or entirely diffrent website
+  redirect: https://storage.googleapis.com/4geeks-academy-website/downloadables/4Geeks-Academy-guia-HTML-CSS.pdf #you can redirect to another url or entirely diffrent website
 # jumbotron on the top (cannot be commented out)
 
 navbar:
