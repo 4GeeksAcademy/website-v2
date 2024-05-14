@@ -3,11 +3,12 @@
 ## THIS COMPONENT IS USED IN "/partners" and "/pricing"
 
 partners:
-  tagline: "¿Quién contrata a nuestros alumnos?"
-  sub_heading: "Gracias a nuestra creciente lista de aliados, tenemos ofertas de trabajo locales e internacionales para nuestros estudiantes a diario.
+  tagline: "¿Quién contrata a nuestros estudiantes?"
+  sub_heading: |
+    Gracias a nuestra creciente lista de aliados, tenemos ofertas de trabajo locales e internacionales para nuestros estudiantes a diario.
 
-  Junto con nuestro servicio GeekFORCE (Career Support), nos complace tener ~ 86% de nuestros estudiantes contratados dentro de los 100 días o menos desde el día de graduación.
-  "
+    Junto con nuestro servicio GeekFORCE (Career Support), nos complace tener ~ 86% de nuestros estudiantes contratados dentro de los 100 días o menos desde el día de graduación.
+  
   footer_tagline: 438 EMPRESAS
   footer_button: Revisa nuestra lista de aliados
   footer_link: "/es/aliados"

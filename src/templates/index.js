@@ -1,31 +1,20 @@
 import React, { useRef, useState, useContext, useEffect } from "react";
 import { graphql, navigate } from "gatsby";
-import { H1, H2, Paragraph, Span } from "../components/Heading";
-import {
-  Row,
-  Column,
-  GridContainerWithImage,
-  Container,
-  Grid,
-  Div,
-  GridContainer,
-} from "../components/Sections";
+import { H1, H2, Paragraph } from "../components/Heading";
+import { GridContainerWithImage, Div } from "../components/Sections";
 import { Button, Colors, StyledBackgroundSection } from "../components/Styling";
 import { Circle } from "../components/BackgroundDrawing";
 import Iconogram from "../components/Iconogram";
 import News from "../components/News";
 import Icon from "../components/Icon";
-import Credentials from "../components/Credentials";
 import BaseRender from "./_baseLayout";
 import { SessionContext } from "../session.js";
 import Loc from "../components/Loc";
-import Badges from "../components/Badges";
 import With4Geeks from "../components/With4Geeks";
 import PricesAndPayment from "../components/PricesAndPayment";
 import OurPartners from "../components/OurPartners";
 import ChooseYourProgram from "../components/ChooseYourProgram";
 import Testimonials from "../components/Testimonials";
-import { isDevelopment, isTestMode } from "../components/NavbarDesktop";
 import TwoColumn from "../components/TwoColumn/index.js";
 
 const Home = (props) => {
@@ -544,57 +533,6 @@ export const query = graphql`
               }
               featured
             }
-          }
-          coding {
-            images {
-              name
-              image {
-                childImageSharp {
-                  gatsbyImageData(
-                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                    width: 100
-                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
-                  )
-                }
-              }
-              featured
-            }
-            tagline
-            sub_heading
-          }
-          influencers {
-            images {
-              name
-              image {
-                childImageSharp {
-                  gatsbyImageData(
-                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                    width: 100
-                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
-                  )
-                }
-              }
-              featured
-            }
-            tagline
-            sub_heading
-          }
-          financials {
-            images {
-              name
-              image {
-                childImageSharp {
-                  gatsbyImageData(
-                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                    width: 100
-                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
-                  )
-                }
-              }
-              featured
-            }
-            tagline
-            sub_heading
           }
         }
       }

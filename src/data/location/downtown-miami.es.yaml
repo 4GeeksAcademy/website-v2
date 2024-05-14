@@ -58,6 +58,27 @@ upcoming:
   no_dates_message: "Actualmente no hay próximas fechas para este campus"
   actionMessage: "Avisenme fechas disponibles"
 
+our_partners:
+  tagline: Quienes contratan a nuestros estudiantes
+  images:
+    - name: "Microsoft"
+      follow: False
+      image: "../../../static/images/partner/microsoft.png"
+      featured: true
+      link: "https://microsoft.com"
+    - name: "Google Developers"
+      image: "../../../static/images/coding/google-developers.png"
+      featured: true
+    - name: "Boats Group"
+      image: "../../../static/images/partner/boats.jpg"
+      featured: false
+    - name: "Facebook"
+      image: "../../../static/images/partner/meta-logo.png"
+      featured: true
+    - name: "Ebay"
+      image: "../../../static/images/partner/ebay.png"
+      featured: false
+
 info_box:
   heading: "Encuéntranos en Miami"
   address: "1801 SW 3rd Ave #100, Miami, FL 33129."
