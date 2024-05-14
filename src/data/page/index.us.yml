@@ -48,7 +48,7 @@ choose_program:
 why_4geeks:
   proportions: [6, 6]
   image:
-    style: '{ "backgroundSize": "contain" }'
+    style: '{ "backgroundSize": "contain", "height": ["500px", "500px", "500px", "500px", "300px"], "minHeight": "auto" }'
     src: "/images/landing/hombre-con-laptop-2.png"
     shadow: false  
   heading:
@@ -75,7 +75,7 @@ two_columns:
   proportions: [6, 6]
   justify: "center"
   image:
-    style: '{ "backgroundSize": "contain" }'
+    style: '{ "backgroundSize": "contain", "height": ["500px", "500px", "500px", "500px", "300px"], "minHeight": "auto" }'
     src: "/images/landing/feliz-empresario-laptop-2.png"
     shadow: false  
   heading:

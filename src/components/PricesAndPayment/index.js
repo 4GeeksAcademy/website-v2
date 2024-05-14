@@ -144,7 +144,7 @@ const PricingCard = ({
                 </Paragraph>
               </Div>
             </Div>
-            <Div className="price-container" display="block" width="40%">
+            <Div className="price-container" display="block">
               <H3
                 textAlign="end"
                 fontWeight="700"
