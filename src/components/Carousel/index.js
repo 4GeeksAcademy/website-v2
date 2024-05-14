@@ -158,7 +158,7 @@ const Carousel = ({
             <Div flexDirection="column" margin="0 0 10px 0">
               <Paragraph
                 margin="0 0 0 0"
-                fontSize="21px"
+                fontSize="16px"
                 lineHeight="20px"
                 dangerouslySetInnerHTML={{ __html: content.content }}
                 {...content.contentProps}
