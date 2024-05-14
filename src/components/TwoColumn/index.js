@@ -1,5 +1,4 @@
 import React from "react";
-import { useStaticQuery, graphql, Link } from "gatsby";
 import ReactPlayer from "../ReactPlayer";
 import { H2, Paragraph, H3 } from "../Heading";
 import Icon from "../Icon";
@@ -293,7 +292,7 @@ const Side = ({
           margin="2rem 0"
           padding_xxs="0 .5rem"
           padding_xs="0 .85rem"
-          //padding_tablet="32px .85rem 0 .85rem"
+          borderRadius="4px"
           onClick={() => {
             if (button.path && button.path.indexOf("http") > -1)
               window.open(transferQuerystrings(button.path, utm));

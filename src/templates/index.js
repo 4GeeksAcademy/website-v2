@@ -178,6 +178,7 @@ const Home = (props) => {
                   textColor="white"
                   textTransform="none"
                   fontSize="17px"
+                  borderRadius="4px"
                   onClick={() => {
                     if (
                       yml.header_data.join_button_path &&
