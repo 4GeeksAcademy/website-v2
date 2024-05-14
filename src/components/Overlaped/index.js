@@ -16,7 +16,6 @@ const Overlaped = ({
   image,
   headingStyle,
 }) => {
-
   return (
     <Div maxWidth_tablet="1280px" margin_tablet="50px auto" width="100%">
       <Grid
