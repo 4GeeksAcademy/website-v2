@@ -53,7 +53,7 @@ why_4geeks:
     shadow: false  
   heading:
     text: "Why 4Ggeeks"
-    style: '{ "fontWeight": 400 }'
+    style: '{ "fontWeight": 400, "marginBottom": "32px" }'
     font_size: ["35px", "35px", "35px", "35px", "35px"]
   sub_heading:
     text: "Do you want to unleash your potential as a Full-Stack Developer and/or Data Scientist?"
@@ -80,7 +80,7 @@ two_columns:
     shadow: false  
   heading:
     text: "Finance your future"
-    style: '{ "fontWeight": 400 }'
+    style: '{ "fontWeight": 400, "marginBottom": "32px" }'
     font_size: ["35px", "35px", "35px", "35px", "35px"]
   sub_heading:
     text: "We’re all about making our high-quality education affordable to everyone."

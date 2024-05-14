@@ -27,7 +27,7 @@ header_data:
 why_4geeks:
   proportions: [6, 6]
   image:
-    style: '{ "backgroundSize": "contain" }'
+    style: '{ "backgroundSize": "contain", "marginBottom": "32px" }'
     src: "/images/landing/hombre-con-laptop-2.png"
     shadow: false  
   heading:
@@ -77,7 +77,7 @@ two_columns:
   proportions: [6, 6]
   justify: "start"
   image:
-    style: '{ "backgroundSize": "contain" }'
+    style: '{ "backgroundSize": "contain", "marginBottom": "32px" }'
     src: "/images/landing/feliz-empresario-laptop-2.png"
     shadow: false  
   heading:
