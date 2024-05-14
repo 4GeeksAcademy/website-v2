@@ -24,7 +24,7 @@ const JobGuaranteeSmall = ({ content }) => {
       >
         {content.icons.map((icon) => (
           <Div width="225px" flexDirection="column" alignItems="center">
-            <Icon icon={icon.icon} width="94" height="98" />
+            <Icon icon={icon.icon} color="#FFCF18" width="94" height="98" />
             <Paragraph
               opacitu-="1"
               fontSize="14px"
