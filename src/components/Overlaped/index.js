@@ -16,27 +16,7 @@ const Overlaped = ({
   image,
   headingStyle,
 }) => {
-  const data = useStaticQuery(graphql`
-    {
-      allOverlapedYaml {
-        edges {
-          node {
-            heading
-            content
-            button {
-              text
-              color
-              path
-            }
-            background
-            image {
-              src
-            }
-          }
-        }
-      }
-    }
-  `);
+
   return (
     <Div maxWidth_tablet="1280px" margin_tablet="50px auto" width="100%">
       <Grid
