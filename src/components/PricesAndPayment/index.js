@@ -955,6 +955,7 @@ const PricesAndPayment = (props) => {
                       margin="auto"
                       textAlign="center"
                       display="block"
+                      borderRadius="4px"
                       onClick={() => {
                         if (selectedPlan) {
                           setSession({
