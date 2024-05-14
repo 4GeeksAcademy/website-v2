@@ -4,7 +4,7 @@ import { Div } from "../Sections";
 import Icon from "../Icon";
 import Carousel from "../Carousel";
 
-const SectionCarousel = ({
+const CarouselV2 = ({
   heading,
   content,
   children,
@@ -75,4 +75,4 @@ const SectionCarousel = ({
   );
 };
 
-export default SectionCarousel;
+export default CarouselV2;

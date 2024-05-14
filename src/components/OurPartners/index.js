@@ -6,7 +6,7 @@ import { Link } from "gatsby";
 import { smartRedirecting } from "../../utils/utils.js";
 import Fragment from "../Fragment";
 import Marquee from "../Marquee";
-import SectionCarousel from "../SectionCarousel";
+import CarouselV2 from "../CarouselV2/index.js";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 // Display centered TITLE + PARAGRAPH
@@ -241,14 +241,13 @@ const Images_Featured = (props) => {
 
 const VariantCarousel = ({ title, paragraph, images, ...rest }) => {
   return (
-    <SectionCarousel
+    <CarouselV2
       margin="20px 0"
       background="#FBFCFC"
       padding="20px 0 40px 0"
       heading={title}
       content={paragraph}
-      headingProps={{ fontWeight: "400" }}
-      contentProps={{ lineHeight: "24px" }}
+      headingProps={{ fontWeight: "400", fontSize: "35px" }}
       customSettings={{
         slidesToShow: 4,
         slidesToScroll: 4,
@@ -342,7 +341,7 @@ const VariantCarousel = ({ title, paragraph, images, ...rest }) => {
           </Div>
         );
       })}
-    </SectionCarousel>
+    </CarouselV2>
   );
 };
 
