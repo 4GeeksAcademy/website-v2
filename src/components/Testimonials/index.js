@@ -10,7 +10,11 @@ import Marquee_v2 from "../Marquee_v2";
 import Icon from "../Icon";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
-const VariantCarousel = ({ testimonialsArray, testimonialsFiltered, ...props }) => {
+const VariantCarousel = ({
+  testimonialsArray,
+  testimonialsFiltered,
+  ...props
+}) => {
   return (
     <CarouselV2
       heading={props.heading || testimonialsArray.heading}
