@@ -13,7 +13,7 @@ header_data:
   sub_heading: "Únete a miles de graduados que viven como programadores, trabajan en grandes empresas y forman parte de una de las comunidades de programación más grandes del mundo."
   bullets:
     - Tutoría de codificación de por vida, asistencia profesional interminable y una comunidad de desarrolladores impulsada por la tecnología.
-    - 'Trabajo Garantizado: Obtenga un trabajo hasta 6 meses después de graduarse o le devolvemos el dinero, <a href="https://storage.googleapis.com/4geeks-academy-website/PDF%20and%20Docs/Condiciones%20y%20Requerimientos%20Job%20Guaranteed%20Program.pdf" style="text-decoration: none; color: #000000;"> condiciones aplican. </a>'
+    - 'Trabajo Garantizado: Obtenga un trabajo hasta 6 meses después de graduarse o le devolvemos el dinero, <a href="https://storage.googleapis.com/4geeks-academy-website/PDF%20and%20Docs/Condiciones%20y%20Requerimientos%20Job%20Guaranteed%20Program.pdf" style="text-decoration: none; color: #000000; font-weight: 700;"> condiciones aplican. </a>'
     - Aprende en todas partes, todo el tiempo, tú eliges la metodología.
   join_button_text: Empezar un curso →
   join_button_path: "#choose-program"
@@ -107,15 +107,19 @@ iconogram:
   icons:
   - icon: "graduation-2"
     content: "1100 Graduados"
+    content_style: '{ "fontSize": "24px" }'
   - icon: "group-2"
     color: "#23C520"
     content: "7 Campuses"
+    content_style: '{ "fontSize": "24px" }'
   - icon: "briefcase-new"
     color: "#7D79FF"
     content: "89% contratados"
+    content_style: '{ "fontSize": "24px" }'
   - icon: "star-2"
     color: "#0084FF"
     content: "4.85 de valoración"
+    content_style: '{ "fontSize": "24px" }'
 
 ## 4GEEKS VS OTHERS SECTION
 geeks_vs_others:

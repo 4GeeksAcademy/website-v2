@@ -482,6 +482,7 @@ export const query = graphql`
               icon
               color
               content
+              content_style
             }
           }
           with_4geeks {

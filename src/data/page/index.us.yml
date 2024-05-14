@@ -14,7 +14,7 @@ header_data:
   sub_heading: Lifetime Coding Mentorship, endless Career Support, and a tech-driven community of developers.
   bullets:
     - Lifetime Coding Mentorship, endless Career Support, and a tech-driven community of developers.
-    - 'Job Guarantee: get a job within the next 6 months upon graduation or money back, <a href="https://storage.googleapis.com/4geeks-academy-website/PDF%20and%20Docs/Conditions%20Job%20Guaranteed%20Program.pdf" style="text-decoration: none; color: #000000;"> conditions apply. </a>'
+    - 'Job Guarantee: get a job within the next 6 months upon graduation or money back, <a href="https://storage.googleapis.com/4geeks-academy-website/PDF%20and%20Docs/Conditions%20Job%20Guaranteed%20Program.pdf" style="text-decoration: none; color: #000000; font-weight: 700;"> conditions apply. </a>'
     - Learn everywhere, all the time, you choose the methodology.
   join_button_text: Start a course →
   join_button_path: "#choose-program"
@@ -116,15 +116,19 @@ iconogram:
   icons:
   - icon: "graduation-2"
     content: "1100 Graduates"
+    content_style: '{ "fontSize": "24px" }'
   - icon: "group-2"
     color: "#23C520"
     content: "7 Campus"
+    content_style: '{ "fontSize": "24px" }'
   - icon: "briefcase-new"
     color: "#7D79FF"
     content: "89% hired"
+    content_style: '{ "fontSize": "24px" }'
   - icon: "star-2"
     color: "#0084FF"
     content: "4.85 rating"
+    content_style: '{ "fontSize": "24px" }'
 
 with_4geeks:
   title: Hear it from our students
