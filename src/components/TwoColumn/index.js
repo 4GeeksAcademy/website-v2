@@ -290,8 +290,7 @@ const Side = ({
           fontSize="15px"
           textAlign="left"
           margin="2rem 0"
-          padding_xxs="0 .5rem"
-          padding_xs="0 .85rem"
+          padding="10px 20px"
           borderRadius="4px"
           onClick={() => {
             if (button.path && button.path.indexOf("http") > -1)
