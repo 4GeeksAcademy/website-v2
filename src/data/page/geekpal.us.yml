@@ -64,7 +64,7 @@ list:
       color: "black"
 
   - title: "Community Support"
-    image: "../../../static/images/Group-6606.png"
+    image: "../../../static/images/Group-6606.webp"
     position: "right"
     sub:
       - title: "4Geeks.com"
