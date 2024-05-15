@@ -52,7 +52,7 @@ why_4geeks:
     src: "/images/landing/hombre-con-laptop-2.png"
     shadow: false  
   heading:
-    text: "Why 4Ggeeks"
+    text: "Why 4Geeks"
     style: '{ "fontWeight": 400, "marginBottom": "32px" }'
     font_size: ["35px", "35px", "35px", "35px", "35px"]
   sub_heading:
