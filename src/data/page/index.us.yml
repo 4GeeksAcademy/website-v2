@@ -67,7 +67,7 @@ why_4geeks:
   button:
     text: "Apply now"
     color: "white"
-    background: "#0084FF"
+    background: "blue"
     path: "/us/apply"
 
 ## TWO COLUMNS
@@ -93,7 +93,7 @@ two_columns:
   button:
     text: "See all financing options"
     color: "white"
-    background: "#0084FF"
+    background: "blue"
     path: "#prices_and_payment"
 
 ## 4GEEKS VS OTHERS SECTION
