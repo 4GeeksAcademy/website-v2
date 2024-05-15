@@ -27,7 +27,7 @@ header_data:
 why_4geeks:
   proportions: [6, 6]
   image:
-    style: '{ "backgroundSize": "contain", "marginBottom": "32px" }'
+    style: '{ "backgroundSize": "contain", "background-position": "center", "min-height": "400px", "height": "400px"}'
     src: "/images/landing/hombre-con-laptop-2.png"
     shadow: false  
   heading:
@@ -35,13 +35,13 @@ why_4geeks:
     style: '{ "fontWeight": 400 }'
     font_size: ["35px", "35px", "35px", "35px", "35px"]
   sub_heading:
-    text: "¿Quieres desatar tu potencial como Full-Stack Developer y/o Data Scientist?"
+    text: "¿Listo para potenciar tu talento con la amplia variedad de programas de 4Geeks Academy?"
     font_size: ["21px", "21px", "21px", "21px", "21px"]
   content:
-    text: |
-      Conviértete en un Full-Stack Developer y/o Data Scientist en solo 18 semanas con 4Geeks Academy. Sin experiencia previa necesaria. Contamos con más de 8 años de experiencia, presencia en diferentes partes del mundo y premios a nivel mundial. 
-
-      ¡Únete a la academia y transforma tu carrera!
+    text: |-
+      Ya sea que quieras convertirte en un Desarrollador Full-Stack, Científico de Datos, o explorar cualquiera de nuestros otros programas, en 4Geeks Academy te ofrecemos diversas opciones para ayudarte a iniciar tu carrera en tecnología. Con más de 8 años de experiencia, presencia global y reconocimiento a nivel mundial, ¡estamos aquí para guiarte hacia el éxito en la industria tecnológica! 
+      <br>
+      <span style="font-weight: 800;">Únete a la academia y transforma tu carrera!.</span>
     font_size: ["16px"]
   button:
     text: "Aplica ahora"
@@ -120,6 +120,45 @@ iconogram:
     color: "#0084FF"
     content: "4.85 de valoración"
     content_style: '{ "fontSize": "24px" }'
+
+iconogram_two:
+  heading:
+    text: "Paying your tuition should not be a concern"
+    font_size:
+      - 38px
+      - 38px
+      - 38px
+      - 21px
+      - 21px
+    style: '{ "textAlign": "center", "width": "60%" }'
+  sub_heading:
+    text: ""
+    font_size: ["16px", "16px", "16px", "16px", "16px"]
+    style: '{ "textAlign": "center", "width": "60%" }'
+  text_link: "#"
+  swipable: false
+  icons:
+  - icon: "bill"
+    title: Planes de pago
+    content: "Pague cuotas cada 6 meses, sin intereses."
+  - icon: "money"
+    color: "#0084FF"
+    title: Préstamos
+    content: "Elija entre opciones de préstamos a 3, 4 o 5 años."
+  - icon: "hands-group"
+    color: "#25BF6C"
+    title: Becas
+    content: "Ofrecemos varias becas completas y parciales."
+  - icon: "contract-2"
+    color: "#BE8BFF"
+    title: Contáctenos
+    content: "Para obtener ayuda, contáctenos. Estamos aquí <a href=\"para usted."
+  button:
+    text: "Conditions apply."
+    color: ""
+    path: "#prices_and_payment"
+    background: ""
+    hover_color: ""
 
 ## 4GEEKS VS OTHERS SECTION
 geeks_vs_others:

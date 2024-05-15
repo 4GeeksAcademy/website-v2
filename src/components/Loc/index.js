@@ -186,7 +186,6 @@ const Loc = ({ lang, hideHeading, allLocationYaml }) => {
         id="locations-container"
         padding_xxs="0 20px"
         padding_lg="0px"
-        padding_md="0 80px"
         padding_tablet="0 40px"
         flexDirection_md="row"
         flexDirection_tablet="column"
@@ -227,10 +226,10 @@ const Loc = ({ lang, hideHeading, allLocationYaml }) => {
             opacity="1"
             fontWeight="800"
             fontFamily="Archivo-Black"
-            fontSize="55px"
-            lineHeight="60px"
-            fontSize_tablet="96px"
-            lineHeight_tablet="104px"
+            fontSize="45px"
+            lineHeight="55px"
+            fontSize_tablet="86px"
+            lineHeight_tablet="96px"
             dangerouslySetInnerHTML={{ __html: highlightedText }}
           />
           <Paragraph

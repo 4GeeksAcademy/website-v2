@@ -16,6 +16,7 @@ import OurPartners from "../components/OurPartners";
 import ChooseYourProgram from "../components/ChooseYourProgram";
 import Testimonials from "../components/Testimonials";
 import TwoColumn from "../components/TwoColumn/index.js";
+import Badges from "../components/Badges";
 
 const Home = (props) => {
   const { data, pageContext, yml } = props;
@@ -279,19 +280,24 @@ const Home = (props) => {
             )}
           </Div>
         </GridContainerWithImage>
+
         <Div
           margin="70px auto 0 auto"
           margin_tablet="30px auto 0 auto"
           width="100%"
           className="badge-slider hideOverflowX__"
         >
-          <News
-            lang={pageContext.lang}
-            limit={yml.news.limit}
-            height="45px"
-            margin="0"
-            justifyContent="between"
-          />
+
+        <Badges
+        lang={pageContext.lang}
+        short_link={true}
+        short_text="15px"
+        margin="40px auto"
+        paragraph={yml.badges.paragraph}
+        bottom_paragraph
+        maxWidth="1280px"
+        paddingText_tablet="0 10% 5px 10%"
+        />
         </Div>
       </Div>
 
@@ -303,6 +309,7 @@ const Home = (props) => {
         margin="20px 0 0 0"
         variant="carousel"
       />
+
 
       <TwoColumn
         left={{ image: yml.why_4geeks?.image }}
@@ -340,7 +347,7 @@ const Home = (props) => {
       />
 
       {/* TWO COLUMN CREAR EN EL YML*/}
-      <TwoColumn
+      {/* <TwoColumn
         right={{ image: yml.two_columns?.image }}
         left={{
           heading: yml.two_columns?.heading,
@@ -351,7 +358,9 @@ const Home = (props) => {
         }}
         proportions={yml.two_columns?.proportions}
         session={session}
-      />
+      /> */}
+
+      <Iconogram yml={yml.iconogram_two} />
 
       <OurPartners
         images={hiring.partners.images}
@@ -369,12 +378,12 @@ const Home = (props) => {
             : hiring.partners.sub_heading
         }
       />
-      <PricesAndPayment
+      {/* <PricesAndPayment
         lang={pageContext.lang}
         locations={data.allLocationYaml.edges}
         defaultCourse="full-stack"
         defaultSchedule="part_time"
-      />
+      /> */}
       <Loc
         lang={pageContext.lang}
         allLocationYaml={data.allLocationYaml}
@@ -417,6 +426,10 @@ export const query = graphql`
                 )
               }
             }
+          }
+          badges {
+            title
+            paragraph
           }
           news {
             limit
@@ -475,36 +488,35 @@ export const query = graphql`
               content_style
             }
           }
-          with_4geeks {
-            title
-          }
-          two_columns {
-            proportions
-            justify
-            image {
-              style
-              src
-              shadow
-            }
+          iconogram_two {
+            swipable
             heading {
               text
               style
               font_size
+              style
             }
             sub_heading {
               text
+              style
               font_size
             }
-            content {
-              text
-              font_size
+            icons {
+              icon
+              color
+              title
+              content
             }
             button {
               text
               color
-              background
               path
+              background
+              hover_color
             }
+          }
+          with_4geeks {
+            title
           }
         }
       }

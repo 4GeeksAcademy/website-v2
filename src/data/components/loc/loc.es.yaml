@@ -2,7 +2,7 @@ heading: "SEDES: EN LÍNEA O EN PERSONA"
 image: "/images/locations/locations_image.png"
 sub_heading: "Sea online o presencial, tendrás una interacción real e instantánea con tus profesores, mentores y compañeros de clase para trabajar en ejercicios o proyectos y tendrás acceso a materiales, conferencias y todo lo que necesitas para convertirte en un profesional de la programación."
 title_image: "Online, Híbrido o Presencial."
-title: "Nuestros campus son"
+title: "Nuestros programas son"
 highlighted_text:
   - text: Virtuales,
     color: "#0084FF"
@@ -12,7 +12,7 @@ highlighted_text:
     color: "#000000"
   - text: <br/>En persona
     color: "#23C520"
-sub_title: "Entorno de aula en vivo, tutoría 1-1 ilimitadas, basada en cohortes y en tiempo real."
+sub_title: ""
 sub_title_image: |
   <p>Entorno de aula en vivo, tutoría 1-1 ilimitada,<br> basada en cohortes y en tiempo real.</p>
 choose: "Escoge una región"
