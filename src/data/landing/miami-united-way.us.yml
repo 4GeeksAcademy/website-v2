@@ -137,7 +137,7 @@ components:
     layout: cards_carousel
     swipable: True
     #            xs         sm       md        lg
-    width: ["280px", "280px", "280px", 280px"]
+    width: ["280px", "280px", "280px", "280px"]
     heading:
       text: "Elegibility in this Program"
       font_size: ["30px", "30px", "30px", "30px", "30px"]
