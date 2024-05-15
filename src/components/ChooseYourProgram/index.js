@@ -254,8 +254,8 @@ const ChooseYourProgram = ({
                         ) : (
                           <Button
                             display="flex"
-                            background="#000000"
-                            colorHover="#0084FF"
+                            background={Colors.blue}
+                            colorHover={Colors.blue}
                             color={Colors.white}
                             justifyContent="center"
                             width="auto"

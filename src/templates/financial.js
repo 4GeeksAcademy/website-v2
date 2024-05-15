@@ -85,7 +85,7 @@ const Financial = (props) => {
             {header.paragraph}
           </Paragraph>
           <Button
-            background="#0084FF"
+            background={Colors.blue}
             lineHeight="26px"
             textTransform="none"
             color="white"

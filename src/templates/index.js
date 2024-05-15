@@ -287,17 +287,16 @@ const Home = (props) => {
           width="100%"
           className="badge-slider hideOverflowX__"
         >
-
-        <Badges
-        lang={pageContext.lang}
-        short_link={true}
-        short_text="15px"
-        margin="40px auto"
-        paragraph={yml.badges.paragraph}
-        bottom_paragraph
-        maxWidth="1280px"
-        paddingText_tablet="0 10% 5px 10%"
-        />
+          <Badges
+            lang={pageContext.lang}
+            short_link={true}
+            short_text="15px"
+            margin="40px auto"
+            paragraph={yml.badges.paragraph}
+            bottom_paragraph
+            maxWidth="1280px"
+            paddingText_tablet="0 10% 5px 10%"
+          />
         </Div>
       </Div>
 
@@ -309,7 +308,6 @@ const Home = (props) => {
         margin="20px 0 0 0"
         variant="carousel"
       />
-
 
       <TwoColumn
         left={{ image: yml.why_4geeks?.image }}

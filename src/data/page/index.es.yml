@@ -46,7 +46,7 @@ why_4geeks:
   button:
     text: "Aplica ahora"
     color: "white"
-    background: "#0084FF"
+    background: "blue"
     path: "/es/aplica"
 
 with_4geeks:
@@ -90,7 +90,7 @@ two_columns:
   button:
     text: "Ver opciones de financiación"
     color: "white"
-    background: "#0084FF"
+    background: "blue"
     path: "#prices_and_payment"
 
 iconogram:
