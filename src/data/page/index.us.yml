@@ -115,7 +115,7 @@ iconogram:
   swipable: false
   icons:
   - icon: "graduation-2"
-    content: "1100 Graduates"
+    content: "4500+ Graduates"
     content_style: '{ "fontSize": "24px" }'
   - icon: "group-2"
     color: "#23C520"
@@ -123,7 +123,7 @@ iconogram:
     content_style: '{ "fontSize": "24px" }'
   - icon: "briefcase-new"
     color: "#7D79FF"
-    content: "89% hired"
+    content: "86% hired"
     content_style: '{ "fontSize": "24px" }'
   - icon: "star-2"
     color: "#0084FF"
