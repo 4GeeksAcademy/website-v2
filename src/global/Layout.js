@@ -41,9 +41,11 @@ const Layout = ({ children, seo, context }) => {
               apply_button_text
             }
             country_shortname
+            breathecode_location_slug
             custom_bar {
               active
               message
+              discounts
               button {
                 label
                 path
@@ -74,6 +76,7 @@ const Layout = ({ children, seo, context }) => {
               icon
               link
             }
+            we_accept
             policy {
               name
               link
@@ -170,7 +173,7 @@ const Layout = ({ children, seo, context }) => {
       )}
       <SEO {...seo} context={{ ...context, locations: myLocations }} />
       <Navbar
-        locationCity={myLocations}
+        myLocations={myLocations}
         currentURL={context.pagePath}
         onLocationChange={(slug) => setLocation(slug)}
         menu={myNavbar.node.navbar}
@@ -179,7 +182,7 @@ const Layout = ({ children, seo, context }) => {
         lang={context.lang}
       />
       <NavbarMobile
-        locationCity={myLocations}
+        myLocations={myLocations}
         currentURL={context.pagePath}
         onLocationChange={(slug) => setLocation(slug)}
         menu={myNavbar.node.navbar}

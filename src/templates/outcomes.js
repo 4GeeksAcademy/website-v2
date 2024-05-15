@@ -1,6 +1,6 @@
-import React, { useCallback, useState } from "react";
+import React, { useState } from "react";
 import { graphql } from "gatsby";
-import { Div, Header, GridContainer } from "../components/Sections";
+import { Div, Header, GridContainer, Grid } from "../components/Sections";
 import { H2, H3, H4, Paragraph } from "../components/Heading";
 import { Colors, Button } from "../components/Styling";
 import { Charts } from "../components/Chart";
@@ -125,7 +125,6 @@ const SVGImage = () => (
 const Outcomes = ({ data, pageContext, yml }) => {
   const { session } = React.useContext(SessionContext);
   const [open, setOpen] = useState(false);
-  const [active, setActive] = useState(false);
 
   const handleOpen = () => {
     setOpen(true);
@@ -153,7 +152,6 @@ const Outcomes = ({ data, pageContext, yml }) => {
       >
         <Header
           hideArrowKey
-          paddingParagraph="0px 14% 0px 0"
           textAlign_tablet="left"
           seo_title={yml.seo_title}
           title={yml.header.title}
@@ -169,7 +167,6 @@ const Outcomes = ({ data, pageContext, yml }) => {
         padding_md="40px 80px"
         padding_lg="40px 0px"
         padding_tablet="40px 40px"
-        // padding="0 0 50px 0"
         flexDirection="column"
       >
         <Div
@@ -211,12 +208,13 @@ const Outcomes = ({ data, pageContext, yml }) => {
           </ScrollSpy>
         </Div>
 
-        <GridContainer
-          columns="12"
-          padding="0 17px"
-          padding_tablet="0 65px 0 0 "
+        <Grid
+          gridTemplateColumns_tablet="repeat(12, 1fr)"
+          gridArea_tablet="1/1/1/15"
+          maxWidth="1280px"
+          margin="auto"
         >
-          <Div gridArea="1/2/1/12" flexDirection="column">
+          <Div gridArea="1/1/1/12" flexDirection="column" padding="0 0 0 20px">
             {yml.sections
               .filter((section) => section.title !== "")
               .map((section, i) => {
@@ -309,7 +307,7 @@ const Outcomes = ({ data, pageContext, yml }) => {
                                 textAlign="left"
                                 margin_md="10px 0"
                                 dangerouslySetInnerHTML={{ __html: m.content }}
-                              ></Paragraph>
+                              />
                               {Array.isArray(m.image_section) &&
                                 m.image_section.map((m, i) => {
                                   return (
@@ -465,7 +463,7 @@ const Outcomes = ({ data, pageContext, yml }) => {
               </Modal>
             </Div>
           </Div>
-        </GridContainer>
+        </Grid>
       </Div>
     </>
   );

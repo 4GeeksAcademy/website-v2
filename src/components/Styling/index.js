@@ -36,7 +36,7 @@ const convertToBgImage = (imageData) => {
 };
 
 export const Colors = {
-  blue: "#00A0DA",
+  blue: "#0084FF",
   lightBlue: "#BBEAFC",
   lightBlue2: "rgba(199, 243, 253, 0.5)",
   blue2: "#0097CD",
@@ -98,6 +98,7 @@ export const Tooltip = styled.div`
   line-height: 1.2;
   text-align: center;
   -webkit-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
 `;
 export const RoundImage = styled.div`
   display: ${(props) => props.display || "block"};
@@ -210,6 +211,7 @@ const StyledImage = styled.div`
   }
   @media ${Devices.sm} {
     width: ${(props) => props.width_sm};
+    height: ${(props) => props.height_sm};
   }
   @media ${Devices.tablet} {
     padding: ${(props) => props.padding_tablet};
@@ -228,6 +230,8 @@ const StyledImage = styled.div`
     right: ${(props) => props.right_md};
     top: ${(props) => props.top_md};
     bottom: ${(props) => props.bottom_md};
+    height: ${(props) => props.height_md};
+    width: ${(props) => props.width_md};
   }
   @media ${Devices.lg} {
     display: ${(props) => props.display_lg};
@@ -235,6 +239,7 @@ const StyledImage = styled.div`
     right: ${(props) => props.right_lg};
     top: ${(props) => props.top_lg};
     bottom: ${(props) => props.bottom_lg};
+    height: ${(props) => props.height_md};
   }
 `;
 export const Img = React.memo(StyledImage);
@@ -530,6 +535,7 @@ export const Button = styled(SmartButton)`
     bottom: ${(props) => props.bottom_tablet};
     left: ${(props) => props.left_tablet};
     right: ${(props) => props.right_tablet};
+    position: ${(props) => props.position_tablet};
   }
   @media ${Devices.md} {
     width: ${(props) => props.width_md};
@@ -620,7 +626,7 @@ export const Anchor = styled(StyledLink)`
   font-weight: ${(props) => props.fontWeight};
   letter-spacing: 0.05em;
   text-transform: ${(props) => props.textTransform};
-  maxwidth: ${(props) => props.maxWidth};
+  max-width: ${(props) => props.maxWidth};
   cursor: ${(props) => props.cursor};
   margin: ${(props) => props.margin};
   max-width: ${(props) => props.maxWidth};

@@ -1,10 +1,7 @@
 import React from "react";
-import { useStaticQuery, graphql, Link } from "gatsby";
+import { useStaticQuery, graphql } from "gatsby";
 import styled from "styled-components";
-import { Row, Div } from "../Sections";
-import { Colors } from "../Styling";
-import graphic from "../../assets/images/graphic.png";
-import Fragment from "../Fragment";
+import { Div } from "../Sections";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 const Helper = styled.span`
@@ -101,10 +98,10 @@ export default ({
             <GatsbyImage
               key={i}
               style={{
-                height: `${height}`,
-                width: `${width}`,
+                height,
+                width,
                 minWidth: "60px",
-                maxWidth: `${maxWidth}`,
+                maxWidth,
                 margin: "0",
               }}
               imgStyle={{ objectFit: "contain" }}

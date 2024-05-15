@@ -94,7 +94,7 @@ const About4Geeks = ({ id, lang }) => {
                 margin="20px 0"
                 pointer
                 textColor={Colors.white}
-                fontSize={"13px"}
+                fontSize="13px"
               >
                 {about.button_text}
               </Button>
@@ -108,12 +108,12 @@ const About4Geeks = ({ id, lang }) => {
         gridColumn_tablet="7 / 14"
       >
         <StyledBackgroundSection
-          className={`image`}
-          height={`468px`}
+          className="image"
+          height="468px"
           image={about.image.childImageSharp.gatsbyImageData}
-          bgSize={`contain`}
+          bgSize="contain"
           alt="Cnn Logo"
-          borderRadius={`0`}
+          borderRadius="0"
         />
       </Div>
     </GridContainerWithImage>

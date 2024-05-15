@@ -23,7 +23,8 @@ meta_info:
 form:
   # posible fields: "first_name", "last_name", "full_name", "phone", "email"
   # always the first_name, email and phone will be mandatory if added.
-  fields: ["full_name", "phone", "email", "course"]
+  # NOTE: THERE IS NO NEED TO ADD THE COURSE FIELD HERE. IT IS CONTROLLED THROUGH THE utm_course
+  fields: ["full_name", "phone", "email"]
   heading: "Apply to 4Geeks"
   motivation: |
     When you fill out this form, you will immediately get more information about the program and scholarship and one of our admissions advisors will contact you to finish your application.
@@ -41,23 +42,26 @@ navbar:
   logoUrl: "#"
 
 header_data:
-  background: "#FFF1D1"
-  tagline: "No Cost. No excuses! "
-  # sub_heading: "Miami Tech Talent is bringing 100% scholarships. We are changing the Game"
-  sub_heading: "The Miami Tech Talent Coalition is creating a sustainable pipeline of skilled tech workers in Miami by bridging the gap between employers and talent."
-  tagline_color: "black"
+  tagline: "No excuses. No Cost. Miami Tech Talent is bringing up to 100% scholarships"
+  # sub_heading: "The Miami Tech Talent Coalition is creating a sustainable pipeline of skilled tech workers in Miami by bridging the gap between employers and talent."
+  tagline_color: "#2E2E38"
+  form_styles: 
+    background: "#0084FF"
+    color: "white"
+    button:
+      background: "black"
   badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
   image_filter: brightness(0.3)
   
 
 features:
   marginTop: 0px #<-- separation between tagline and the bullets
-  text: ''
+  text: 'The Miami Tech Talent Coalition is creating a sustainable pipeline of skilled tech workers in Miami by bridging the gap between employers and talent.'
   bullets:
-    - "Get a career in Tech and join the #MiamiTechLife"
-    - "Be a software Developer or a Data Scientist"
-    - "30 Spots Available. Just a few spot left." 
-    - "APPLY NOW, We are accepting applications!"
+    - 'Get a career in Tech and join the <span style="color:#0097CD;">#MiamiTechLife</span>'
+    - 'Be a software Developer or a Data Scientist'
+    - '30 Spots Available. Just a few spot left.'
+    - 'APPLY NOW, We are accepting applications!'
   styles: '{ "color": "black", "fontWeight":"500" }'
 
 short_badges:
@@ -92,10 +96,65 @@ follow_bar:
     text: "Call "
 
 components:
-  - name: "whatever"
+  - name: why_coding
+    position: 1
+    layout: two_column_right
+    proportions: [6, 6]
+    image:
+      style: '{ "backgroundSize": "contain", "height": ["500px", "500px", "500px", "500px", "300px"], "minHeight": "auto" }'
+      src: "/images/landing/grupo-ventanas.png"
+    heading:
+      text: "Why coding?"
+      font_size: ["30px", "30px", "30px", "30px", "30px"]
+    sub_heading:
+      text: "Learning to code will give you access to:"
+      font_size: ["16px", "16px", "16px", "16px", "16px"]
+    button:
+      style: '{ "padding": "10px", "border-radius": "3px" }'
+      text: "Apply Now"
+      color: white
+      hover_color: "white"
+      background: "blue"
+      path: "#"
+
+    bullets:
+      items:
+        - heading: "JOB OPPORTUNITIES"
+          text: "Computer programmers are in high demand—and the demand for programmers will keep increasing over the decade."
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
+        - heading: "BETTER PAY"
+          text: "Starting salary for a Jr. Software Developer in Miami is $48,000."
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
+        - heading: "CAREER FLEXIBILITY"
+          text: "Coding skills prepare you for a variety of jobs in the rapidly-shifting digital economy."
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
+
+  - name: start_your_journey
+    position: 2
+    layout: two_column_left
+    proportions: [6, 6]
+    alignment: center
+    content:
+      font_size: ["16px"]
+      text: "A total of 100 students will be accepted into the program."
+    image:
+      style: '{ "backgroundSize": "contain", "height": ["500px", "500px", "500px", "300px", "300px"], "minHeight": "auto" }'
+      src: "/images/landing/community-support-2.png"
+    heading:
+      text: "Ready to start your journey to a better future?"
+      font_size: ["30px", "30px", "30px", "30px", "30px"]
+    button:
+      style: '{ "padding": "10px", "border-radius": "3px" }'
+      text: "Apply Now"
+      color: white
+      hover_color: "white"
+      background: "blue"
+      path: "#"
+
+  - name: "choose_your_program"
     layout: choose_your_program
     background: "lightBlue"
-    position: 4
+    position: 5
     heading:
       text: Our Programs
     content:
@@ -124,27 +183,25 @@ components:
       text_link: Apply now
       link: "#"
 
-
   - name: how-it-works
-    position: 2
-    background: "veryLightBlue2"
+    position: 3
+    background: "#0084FF"
     layout: iconogram
     swipable: True
     heading:
       text: "How It Works"
       font_size: ["30px", "30px", "30px", "30px", "30px"]
-    sub_heading:
-      text: 'According to the U.S. Bureau of Labor Statistics, <strong style="font-weight: bold;">software developers in the U.S. have a higher than average job outlook and earn a median salary of $110,140 a year</strong>. Improve your chances to be one of them.'
-      font_size: ["16px", "16px", "16px", "16px", "16px"]
-      style: '{ "textAlign": "center", "width": "60%" }'
+      style: '{ "color": "white" }'
     icons:
-      - icon: "graduation-2" 
+      - icon: "graduation-2"
+        color: "#0084FF"
         title: ""
         content: "Apply to the United Way Miami Workforce Project to jumpstart your career in coding."
-      - icon: "terminal"
+      - icon: "presentation"
         title: ""
-        content: "Accepted students join 4Geeks' Full-Stack Software Development Program, receiving quality training and support for job placement."
-      - icon: "job"
+        content: "Once accepted, students enroll in the 4Geeks Full-Stack Software Development Program. 4Geeks provides quality training and offers supporting services —like resume review and career coaching—to help participants find jobs after graduating."
+      - icon: "briefcase-2"
+        color: "#FFB718"
         title: ""
         content: "Participants pay program costs after they start jobs making more than $35,000 a year. Participants who don't find a job or keep jobs with salaries above $35,000 pay nothing."
     button:
@@ -156,155 +213,128 @@ components:
       style: '{font-weight: 800}'
 
   - name: elegibility
-    position: 8
-    layout: cards_carousel
+    position: 7
+    layout: simple_cards
+    background: black
     heading:
-      text: "Elegibility in this Program"
+      text: "We make education accessible to everyone"
+      style: '{ "color": "white" }'
       font_size: ["30px", "30px", "30px", "30px", "30px"]
-    content: #If a link is placed in the content, use the same inline style as the example.
-      text: 'Learn more about <a style="color: rgb(0, 160, 218); text-decoration:underline; cursor:pointer;">eligibility conditions</a> and apply'
-      font_size: ["18px", "18px", "18px", "18px", "18px"]
-      path: "https://storage.googleapis.com/media-breathecode/bc38ffebe9e56f8cd62e10d5d0839f98d7528c4fe7756456630588d2c2048a2a"
     sub_heading:
       text: |
         You may qualify if are a <strong style="font-weight: bold;"> Miami resident </strong> and belong to one of these groups:
+      style: '{ "color": "white", "opacity": "1" }'
       font_size: ["16px", "16px", "16px", "16px", "16px"]
-    # button:
-    #   text: "APPLY NOW"
-    #   color: "white"
-    #   hover_color: "white"
-    #   path: "#bottom"
-    #   background: "black"
-  
     cards:
-      - image:
-          style: '{ "backgroundSize": "cover", "minHeight": "230px", "borderRadius": "80px" }'
-          src: "/images/low-income-people-of-color.png"
+      - background: "#E0D1FF"
         heading: 
           text: "Low-income people of color"
           style: '{ "fontWeight": "700" }'
           font_size: "15px"
-        # button:
-        #   text: "See more"
-      - image:
-          style: '{ "backgroundSize": "cover", "minHeight": "230px", "borderRadius": "80px" }'
-          src: "/images/low-income-veterans.png"
+      - background: "#FFB718"
         heading: 
           text: "Low-income veterans"
           style: '{ "fontWeight": "700" }'
           font_size: "15px"
-        # button:
-        #   text: "See more"
-        #   link: /
-      - image:
-          style: '{ "backgroundSize": "cover", "minHeight": "230px", "borderRadius": "80px" }'
-          src: "/images/low-income-female-heads-of-household.png"
+      - background: "#0084FF"
         heading: 
           text: "Low-income single female heads of household"
           style: '{ "fontWeight": "700" }'
           font_size: "15px"
-        # button:
-        #   text: "See more"
 
-  # - name: geekinfo
-  #   position: 30
-  #   layout: two_column_right
-  #   proportions: [6, 6]
-  #   background: ""
-  #   image:
-  #     style: '{ "backgroundSize": "contain" }'
-  #     src: "/images/landing/group_194.png"
-    # heading:
-    #   text: "Why coding?"
-    #   font_size: ["40px", "40px", "40px", "40px", "40px"]
-    # sub_heading:
-    #   text: "Learning to code will give you access to:"
-    #   font_size: ["16px", "16px", "16px", "16px", "16px"]
-    # content: 
-    #   text: ""
-    #   font_size: ["16px"]
-    #   path: ""
-    # bullets:
-    #   items:
-    #   - heading: "JOB OPPORTUNITIES"
-    #     text: "Computer programmers are in high demand—and the demand for programmers will keep increasing over the decade."
-    #     icon: "circle" #string with icon for example ['check', 'cicle', etc]
-    #   - heading: "BETTER PAY"
-    #     text: "Starting salary for a Jr. Software Developer in Miami is $48,000."
-    #     icon: "circle" #string with icon for example ['check', 'cicle', etc]
-    #   - heading: "CAREER FLEXIBILITY"
-    #     text: "Coding skills prepare you for a variety of jobs in the rapidly-shifting digital economy."
-    #     icon: "circle" #string with icon for example ['check', 'cicle', etc]
-
-
-  - name: why4geeks
-    position: 3
-    layout: two_column_right
-    proportions: [5, 7]
+  - name: pay
+    position: 6
+    layout: two_column_left
+    proportions: [6, 6]
     image:
       style: '{ "backgroundSize": "contain" }'
-      src: "/images/bg/main.png"
-    section_heading: 
-      text: "Designed to make you successful in the world of programming"
-      style: '{ "font-size": "30px" }'
+      src: "/images/landing/blonde-girl-laptop.png"
     heading:
-      # text: "Why 4Geeks Academy?"
+      style: '{ "margin-top": "0px" }'
+      text: "Why 4Geeks?"
       font_size: ["30px", "30px", "30px", "30px", "30px"]
+
     sub_heading:
-      # text: "Students and alumni from 4Geeks Academy grow and thrive."
-      font_size: ["16px", "16px", "16px", "16px", "16px"]
+      font_size: ["18px", "18px", "18px", "18px", "18px"]
+      style: '{ "font-weight": "100" }'
+      text: |
+        Students and alumni from 4Geeks Academy grow and thrive.
+
+    content:
+      font_size: ["16px"]
+      text: |
+        Founded in 2015, we are specialists of code. We have +7 campuses spread over the United States, Latin America and Europe. Over 2,500 students have graduated from our programs with valuable coding skills.
+
+        Our coding bootcamps are designed to be flexible so that anyone, including learners raising children or working full-time, can enroll and succeed.
+
+        These programs (Part-time -16 weeks long- or Full-Time -9 weeks long-) will teach you the skills you need to succeed as a software developer.
+
+        Are you ready to break down obstacles and start a new career?
     button:
       style: '{ "padding": "10px", "border-radius": "3px" }'
       text: "Apply Now"
       color: white
       hover_color: "white"
-      background: "black"
+      background: "blue"
       path: "#"
-    content:
-      font_size: ["16px"]
-      text: |
-        <p style="background: rgb(255, 183, 24); padding: 5px; box-shadow: 5px 5px 0px 0px rgba(0,0,0);"></span></p>
-        <br>
-        <h2><strong style="font-weight: bold;font-size:20px;color:black;">Are you ready to break down obstacles and start a new career?</strong></h2>
-    bullets:
-      items:
-        - heading: "UNLIMITED MENTORING"
-          text: "Get expert support for all your coding needs. Our mentors are available online or in-person, ready to help you from day one to ever after."
-          icon: "circle" #string with icon for example ['check', 'cicle', etc]
-        - heading: "HIGH AVAILABILITY"
-          text: "Never get stuck with a coding problem. Our dedicated instructors will respond within 15 minutes or less."
-          icon: "circle" #string with icon for example ['check', 'cicle', etc]
-        - heading: "1:7 PROFESSOR: STUDENT RATIO"
-          text: "Experience individualized attention with our higher-than-average professor-to-student ratio."
-          icon: "circle" #string with icon for example ['check', 'cicle', etc]
-        - heading: "TAILOR-MADE CAREER SUPPORT"
-          text: "Receive customized advice, guidance, and training tailored to your unique profile and specific job offers."
-          icon: "circle" #string with icon for example ['check', 'cicle', etc]
-    
-  - name: pay
-    position: 6
-    # background: "veryLightBlue2"
+
+  - name: testimonials
+    position: 7
+    layout: testimonials_new
+    heading:
+      style: '{ "font-weight": "400", "color": "#3A3A3A" }'
+      text: "Hear it from our students"
+      font_size: ["35px", "35px", "30px", "30px", "30px"]
+    # filter_indexes: [6,7,8]
+    filter_indexes: ['azu-bota','nai-kali','cha-fabr', 'jona-ferra', 'jos-bra', 'kev-so']
+    variant: small
+
+  - name: MiamiTechTalentCoalition
+    position: 7
+    style: '{ "margin": "20px 0" }'
     layout: two_column_right
+    alignment: center
+    proportions: [6, 6]
+    background: "#fbfbfb"
+    image:
+      style: '{ "backgroundSize": "contain", "height": ["300px", "300px", "300px", "300px", "300px"], "minHeight": "auto" }'
+      src: "/images/landing/miamitech-logo-sidetext.png"
+    heading:
+      style: '{ "font-weight": "400", "margin-bottom": "0" }'
+      text: "The Miami Tech Coalition and 4Geeks Academy Mission" 
+      font_size: ["40px", "40px", "40px", "40px", "40px"]
+    content:
+      text: "is to actively engage employers, academic institutions, government entities, service providers, and local training providers for the purpose of connecting employers with technology talent and creating a sustainable tech talent pipeline in Miami."
+      font_size: ["16px"]
+    button:
+      style: '{ "padding": "10px", "border-radius": "3px" }'
+      text: "Apply Now"
+      color: white
+      hover_color: "white"
+      background: "blue"
+      path: "#"
+
+  - name: no-worries
+    position: 8
+    layout: two_column_left
     proportions: [6, 6]
     image:
-      style: '{ "border" : "3px solid black", "backgroundSize": "contain"  }' 
+      style: '{ "backgroundSize": "cover", "backgroundPosition": "center" }'
       shadow: true 
-      src: "/static/images/staff/luisa.png"
-    video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
+      src: "/images/landing/latin-woman-laptop-coffee.png"
     heading:
-      style: '{ "margin-top": "0px" }'
       text: "You don't need to be worried about payments. Only about your career ahead"
       font_size: ["30px", "30px", "30px", "30px", "30px"]
     # sub_heading:
     #   text: "We changed the game by offering the program with no costs associated. You will need to find a job to make the program worth it, and to keep the program alive for new students."
     sub_heading:
       font_size: ["18px", "18px", "18px", "18px", "18px"]
-      style: '{ "font-weight": "100" }'
+      style: '{ "font-weight": "100", "color": "#4D4D5C" }'
       text: |
         We changed the game by offering the program with no costs associated. You will need to find a job to make the program worth it, and to keep the program alive for new students.
         
     bullets:
-      item_style: '{ "padding": 0, "font-weight": "100" }'
+      item_style: '{ "padding": 0, "font-weight": "100", "margin-bottom": "10px" }'
       items:
         - text: Enroll in the program.
           icon: null
@@ -317,78 +347,10 @@ components:
         - text: Keep building a career you love.
           icon: null
 
-  - name: testimonials
-    position: 7
-    layout: testimonials_new
-    # filter_indexes: [6,7,8]
-    filter_indexes: ['azu-bota','nai-kali','cha-fabr']
-      # - "azu-bota"
-      # - "nai-kali"
-      # - "cha-fabr"
-    # ["azu-bota","nai-kali","cha-fabr"]
-
-  # - name: better-future
-  #   position: 30
-  #   layout: two_column_left
-  #   proportions: [6, 6]
-  #   background: "#F5F5F5"
-  #   image:
-  #     style: '{ "backgroundSize": "cover" }'
-  #     src: "/images/landing/comunity-support.png"
-  #     shadow: true
-  #   heading:
-  #     text: "Ready to start your journey to a better future?"
-  #     font_size: ["40px", "40px", "40px", "40px", "40px"]
-  #   content:
-  #     text: "A total of 100 students will be accepted into the program."
-  #     font_size: ["16px"]
-  #   button:
-  #     text: "APPLY NOW"
-  #     color: "white"
-  #     background: "black"
-  #     hover_color: "white"
-  #     path: "#top"
-
-
-  - name: Miami Tech Talent Coalition
-    position: 6
-    style: '{ "margin": "20px 0" }'
-    layout: two_column_right
-    proportions: [6, 6]
-    background: "#fbfbfb"
-    image:
-      style: '{ "backgroundSize": "contain", "maxHeight": "130px", "margin": "auto" }'
-      src: "/images/landing/miamitech-logo.png"
-    heading:
-      text: "Building Miami's Tech Workforce The Mission of The Miami Tech Coalition and 4Geeks Academy" 
-      font_size: ["40px", "40px", "40px", "40px", "40px"]
-    # content:
-    #   #text: |
-    #     <p>The Miami Tech Coalition and 4Geeks Academy Mission is to actively engage employers, academic institutions, government entities, service providers, and local training providers for the purpose of connecting employers with technology talent and creating a sustainable tech talent pipeline in Miami.</p>
-    #     <br> 
-    #   font_size: ["16px"] 
-
-who_is_hiring:
-  position: 10
-  heading: "WHERE OUR STUDENTS WORK"
-  sub_heading: "Our partner network consistently expands, providing numerous local and international job opportunities for our students. Thanks to GeekFORCE, our dedicated career support service, we proudly achieve an 84% employment rate within 100 days of graduation. The best part? Employers continually express amazement at our graduates' skills. Join our community of successful graduates and launch your career with 4Geeks."
-  featured:
-    - name: "Facebook"
-      image: "../../../static/images/partner/facebook.png"
-    - name: "Microsoft"
-      image: "../../../static/images/partner/microsoft.png"
-    - name: "Apple"
-      image: "../../../static/images/partner/apple.png"
-      
-
-program_details:
-  position: 1
-  background: "#FFFFFF"
-  heading: "Program Details"
-  sub_heading: "Learn the technologies that companies are looking for"
-
-geeks_vs_others:
-  position: 5
-  heading: "What makes 4Geeks Academy so successful?"
-  paragraph: ""
-  total_rows: 5 
+    button:
+      style: '{ "padding": "10px", "border-radius": "3px" }'
+      text: "Apply Now"
+      color: white
+      hover_color: "white"
+      background: "blue"
+      path: "#"
