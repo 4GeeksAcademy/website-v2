@@ -26,6 +26,7 @@ import StarRating from "../StarRating";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { smartRedirecting, transferQuerystrings } from "../../utils/utils.js";
 import CardsCarousel from "../CardsCarousel";
+import SimpleCards from "../SimpleCards";
 import Overlaped from "../Overlaped";
 import TwoColumn from "../TwoColumn/index.js";
 import { SingleColumn } from "../TwoColumn/index.js";
@@ -332,9 +333,8 @@ export const landingSections = {
     );
   },
 
-  iconogram: ({ session, data, pageContext, yml, index }) => {
-    const { heading, sub_heading, icons, button } = yml;
-    return <Iconogram yml={yml} session={session} data={data} index={index} />;
+  iconogram: ({ pageContext, yml, index }) => {
+    return <Iconogram yml={yml} index={index} />;
   },
 
   badges: ({ session, data, pageContext, yml, course, index }) => {
@@ -620,6 +620,23 @@ export const landingSections = {
     );
   },
 
+  simple_cards: ({ yml, index }) => {
+    const { heading, sub_heading, content, cards, button, width, background } =
+      yml;
+    return (
+      <SimpleCards
+        index={index}
+        heading={heading}
+        cardWidth={width}
+        background={background}
+        sub_heading={sub_heading}
+        content={content}
+        cards={cards}
+        button={button}
+      />
+    );
+  },
+
   choose_your_program: ({ session, pageContext, yml, data, index }) => {
     return (
       <React.Fragment key={index}>
@@ -678,23 +695,46 @@ export const landingSections = {
     </Div>
   ),
 
-  testimonials_new: ({ session, data, pageContext, yml, index }) => (
-    <Div
-      id="testimonials_new"
-      key={`${index}-testimonials_new`}
-      flexDirection="column"
-      margin="50px auto"
-      m_sm="0"
-      p_xs="0 10px"
-      width_tablet="100%"
-      maxWidth_tablet="1280px"
-    >
-      <SuccessStories
-        lang={pageContext.lang}
-        filterIndexes={yml.filter_indexes}
-      />
-    </Div>
-  ),
+  testimonials_new: ({ session, data, pageContext, yml, index }) => {
+    const [h_xl, h_lg, h_md, h_sm, h_xs] =
+      yml.heading && yml.heading.font_size ? yml.heading.font_size : [];
+
+    return (
+      <Div
+        id="testimonials_new"
+        key={`${index}-testimonials_new`}
+        flexDirection="column"
+        margin="50px auto"
+        m_sm="0"
+        p_xs="0 10px"
+        width_tablet="100%"
+        maxWidth_tablet="1280px"
+      >
+        {yml.heading && yml.heading.text !== "" && (
+          <H2
+            type="h2"
+            textAlign_tablet="center"
+            lineHeight="38px"
+            lineHeight_tablet="38px"
+            fontSize={h_xs || "30px"}
+            fs_xl={h_xl}
+            fontSize_lg={h_lg || "30px"}
+            fontSize_md={h_md || "30px"}
+            fontSize_sm={h_sm}
+            margin="30px 0 0px 0"
+            style={yml.heading.style ? JSON.parse(yml.heading.style) : null}
+          >
+            {yml.heading.text}
+          </H2>
+        )}
+        <SuccessStories
+          lang={pageContext.lang}
+          filterIndexes={yml.filter_indexes}
+          variant={yml.variant}
+        />
+      </Div>
+    );
+  },
 
   why_4geeks: ({ session, pageContext, yml, index }) => (
     <Div
@@ -739,7 +779,7 @@ export const landingSections = {
         display_tablet="flex"
       />
       <AlumniProjects
-        lang={data.allAlumniProjectsYaml.edges}
+        data={data.allAlumniProjectsYaml.edges[0]?.node}
         yml={yml}
         hasTitle
         showThumbs="false"
@@ -832,7 +872,7 @@ export const landingSections = {
         : [];
     return (
       <Div
-        id="two_column_left"
+        id={`two_column_left-${index}`}
         key={index}
         background={Colors[yml.background] || yml.background}
         flexDirection="column"
@@ -840,7 +880,7 @@ export const landingSections = {
         // padding_tablet="30px 40px"
         margin_tablet="0 auto"
         width_md="100%"
-        padding_xs="30px 0px"
+        // padding_xs="30px 0px"
       >
         {yml.section_heading && yml.section_heading !== "" && (
           <H2
@@ -877,6 +917,7 @@ export const landingSections = {
             content: yml.content,
             button: yml.button,
           }}
+          alignment={yml.alignment}
           proportions={yml.proportions}
           session={session}
         />
@@ -890,14 +931,14 @@ export const landingSections = {
         : [];
     return (
       <Div
-        id="two_column_right"
+        id={`two_column_right-${index}`}
         key={index}
         background={Colors[yml.background] || yml.background}
         flexDirection="column"
         //padding="40px 0 50px 0"
         margin_tablet="0 auto"
         width_md="100%"
-        padding_xs="30px 0px"
+        // padding_xs="30px 0px"
       >
         {yml.section_heading && yml.section_heading !== "" && (
           <H2
@@ -934,6 +975,7 @@ export const landingSections = {
             videoWidth: yml.videoWidth,
             justify: yml.justify,
           }}
+          alignment={yml.alignment}
           proportions={yml.proportions}
           session={session}
         />

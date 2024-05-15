@@ -1,44 +1,34 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useContext, useEffect } from "react";
 import { graphql, navigate } from "gatsby";
-import { H1, H2, Paragraph, Span } from "../components/Heading";
-import {
-  Row,
-  Column,
-  GridContainerWithImage,
-  Container,
-  Grid,
-  Div,
-  GridContainer,
-} from "../components/Sections";
+import { H1, H2, Paragraph } from "../components/Heading";
+import { GridContainerWithImage, Div } from "../components/Sections";
 import { Button, Colors, StyledBackgroundSection } from "../components/Styling";
 import { Circle } from "../components/BackgroundDrawing";
+import Iconogram from "../components/Iconogram";
 import News from "../components/News";
 import Icon from "../components/Icon";
-import Credentials from "../components/Credentials";
 import BaseRender from "./_baseLayout";
 import { SessionContext } from "../session.js";
 import Loc from "../components/Loc";
-import Badges from "../components/Badges";
 import With4Geeks from "../components/With4Geeks";
-import About4Geeks from "../components/About4Geeks";
+import PricesAndPayment from "../components/PricesAndPayment";
 import OurPartners from "../components/OurPartners";
 import ChooseYourProgram from "../components/ChooseYourProgram";
 import Testimonials from "../components/Testimonials";
-import { isDevelopment, isTestMode } from "../components/NavbarDesktop";
 import TwoColumn from "../components/TwoColumn/index.js";
+import Badges from "../components/Badges";
 
 const Home = (props) => {
   const { data, pageContext, yml } = props;
 
   const hiring = data.allPartnerYaml.edges[0].node;
   const landingHiring = yml.partners;
-  const { session } = React.useContext(SessionContext);
+  const { session } = useContext(SessionContext);
   const [city, setCity] = useState("");
 
-  //
-  // const city = session && session.location ? "" : "Miami";
+  const applyButton = session?.location?.button?.apply_button_text;
 
-  React.useEffect(() => {
+  useEffect(() => {
     console.log("HASH: ", window.location);
 
     if (
@@ -63,21 +53,7 @@ const Home = (props) => {
 
   const chooseProgramRef = useRef(null);
 
-  const goToChooseProgram = (e) => {
-    e.preventDefault();
-    window.scrollTo({
-      top: chooseProgramRef.current?.offsetTop,
-      behavior: "smooth",
-    });
-  };
-  const buttonProgram = {
-    es: "VER PROGRAMAS",
-    en: "CHOOSE PROGRAM",
-  };
-
   const isContentBarActive = true;
-  // (session?.location?.custom_bar.active && isTestMode) ||
-  // (session?.location?.custom_bar.active && !isDevelopment());
 
   const indexVideo = yml && yml.header_data && yml.header_data.video;
   const sessionVideo =
@@ -91,9 +67,6 @@ const Home = (props) => {
     <>
       <Div
         flexDirection="column"
-        margin={
-          isContentBarActive ? "138px auto 72px auto" : "72px auto 72px auto"
-        }
         margin_tablet={
           isContentBarActive ? "120px auto 108px auto" : "72px auto 108px auto"
         }
@@ -111,30 +84,31 @@ const Home = (props) => {
           position="relative"
           gridColumn_tablet="1/15"
         >
-          <Div
-            position="absolute"
-            zIndex="5"
-            left_tablet={yml.header_data.video ? "40%" : "50%"}
-            left="50%"
-            left_xxs="65%"
-            left_xs="74%"
-            top_tablet={yml.header_data.video ? "1%" : "25%"}
-            top="90px"
-            top_xxs="20px"
-            top_xs="100px"
-            width_xxs="80px"
-            width_sm="100px"
-            height_xxs="80px"
-            width_tablet="160px"
-            height_tablet="152px"
-            width="100px"
-            height="100px"
-          >
-            <Icon icon="logo-badge" width="100%" height="100%" />
-          </Div>
+          {yml.header_data.video && (
+            <Div
+              position="absolute"
+              zIndex="5"
+              left_tablet={yml.header_data.video ? "40%" : "50%"}
+              left="50%"
+              left_xxs="65%"
+              left_xs="74%"
+              top_tablet={yml.header_data.video ? "1%" : "25%"}
+              top="90px"
+              top_xxs="20px"
+              top_xs="100px"
+              width_xxs="80px"
+              width_sm="100px"
+              height_xxs="80px"
+              width_tablet="160px"
+              height_tablet="152px"
+              width="100px"
+              height="100px"
+            >
+              <Icon icon="logo-badge" width="100%" height="100%" />
+            </Div>
+          )}
           <Div
             flexDirection="column"
-            // justifyContent_tablet="evenly"
             alignItems="start"
             alignItems_tablet="start"
             margin_xxs="0 20px"
@@ -147,14 +121,14 @@ const Home = (props) => {
               margin_tablet="0"
               margin_sm="0 0 20px 0"
             >
-              {/* <CityH1 yml={yml} /> */}
               <H1
                 type="h1"
                 textAlign="left"
                 textShadow="none"
-                fontSize="15px"
+                fontSize="16px"
                 lineHeight="18px"
-                color="#606060"
+                fontWeight="400"
+                color={Colors.black}
               >
                 {city} {yml.header_data.tagline}
               </H1>
@@ -168,26 +142,29 @@ const Home = (props) => {
                 lineHeight_xxs="45px"
                 lineHeight_tablet="60px"
                 width_tablet="100%"
-                width_xs="80%"
-              >{`${yml.header_data.title}`}</H2>
+                fontFamily="Archivo-Black"
+              >
+                {`${yml.header_data.title}`}
+              </H2>
               <Div display="block" margin="20px 0">
                 {yml.header_data.bullets.map((bullet) => (
-                  <Div alignItems="center" margin="0 0 15px 0">
+                  <Div alignItems="center" margin="0 0 15px 0" gap="5px">
                     <Icon
-                      icon="check-circle"
-                      style={{ marginRight: "10px" }}
+                      icon="check"
                       fill={Colors.blue}
+                      color={Colors.blue}
+                      width="20px"
+                      height="15px"
                     />
                     <Paragraph
                       textAlign="left"
-                      padding="0 20% 0 0"
+                      padding_tablet="0 20% 0 0"
                       color={Colors.black}
                       fontSize="16px"
                       lineHeight="19px"
+                      opacity="1"
                       dangerouslySetInnerHTML={{ __html: bullet }}
                     />
-                    {/* {bullet}{" "}
-                    </Paragraph> */}
                   </Div>
                 ))}
               </Div>
@@ -200,6 +177,9 @@ const Home = (props) => {
                   color={Colors.blue}
                   margin="0 10px 0 0"
                   textColor="white"
+                  textTransform="none"
+                  fontSize="17px"
+                  borderRadius="4px"
                   onClick={() => {
                     if (
                       yml.header_data.join_button_path &&
@@ -216,30 +196,6 @@ const Home = (props) => {
                 >
                   {yml.header_data.join_button_text}
                 </Button>
-                {/* <Button
-                  variant="outline"
-                  justifyContent="center"
-                  // width="200px"
-                  width_tablet="fit-content"
-                  color={Colors.blue}
-                  margin="0 0 0 10px"
-                  textColor={Colors.blue}
-                  onClick={() => {
-                    if (
-                      yml.header_data.free_button_path &&
-                      yml.header_data.free_button_path.indexOf("http") > -1
-                    )
-                      window.open(
-                        transferQuerystrings(
-                          yml.header_data.free_button_path,
-                          utm
-                        )
-                      );
-                    else navigate(yml.header_data.free_button_path);
-                  }}
-                >
-                  {yml.header_data.free_button_text}
-                </Button> */}
               </Div>
             </Div>
           </Div>
@@ -295,6 +251,7 @@ const Home = (props) => {
                   margin_tablet="0"
                   margin_lg="0 auto"
                   margin_md="0 auto"
+                  margin="auto"
                   zIndex="2"
                 >
                   <iframe
@@ -323,19 +280,22 @@ const Home = (props) => {
             )}
           </Div>
         </GridContainerWithImage>
+
         <Div
           margin="70px auto 0 auto"
-          margin_tablet="90px auto 0 auto"
-          width="90%"
+          margin_tablet="30px auto 0 auto"
+          width="100%"
           className="badge-slider hideOverflowX__"
         >
-          <News
+          <Badges
             lang={pageContext.lang}
-            limit={yml.news.limit}
-            // width={`17%`}
-            height="45px"
-            margin="0"
-            justifyContent="between"
+            short_link={true}
+            short_text="15px"
+            margin="40px auto"
+            paragraph={yml.badges.paragraph}
+            bottom_paragraph
+            maxWidth="1280px"
+            paddingText_tablet="0 10% 5px 10%"
           />
         </Div>
       </Div>
@@ -343,12 +303,27 @@ const Home = (props) => {
       <Testimonials
         lang={data.allTestimonialsYaml.edges}
         background={Colors.verylightGray}
-        //noMove // no movement and show slider
+        heading={yml.success_cases.title}
+        content={yml.success_cases.content}
+        margin="20px 0 0 0"
+        variant="carousel"
       />
 
-      <About4Geeks lang={data.allAbout4GeeksYaml.edges} />
-
-      <Credentials lang={data.allCredentialsYaml.edges} shadow={false} />
+      <TwoColumn
+        left={{ image: yml.why_4geeks?.image }}
+        right={{
+          heading: yml.why_4geeks?.heading,
+          sub_heading: yml.why_4geeks?.sub_heading,
+          content: yml.why_4geeks?.content,
+          button: {
+            ...yml.why_4geeks?.button,
+            text: applyButton || yml.why_4geeks?.button?.text,
+          },
+        }}
+        proportions={yml.why_4geeks?.proportions}
+        session={session}
+      />
+      <Iconogram yml={yml.iconogram} />
 
       <With4Geeks
         lang={pageContext.lang}
@@ -358,6 +333,7 @@ const Home = (props) => {
           session.location.breathecode_location_slug
         }
         playerHeight="600px"
+        title={yml.with_4geeks.title}
       />
       <ChooseYourProgram
         chooseProgramRef={chooseProgramRef}
@@ -369,16 +345,20 @@ const Home = (props) => {
       />
 
       {/* TWO COLUMN CREAR EN EL YML*/}
-      <TwoColumn
+      {/* <TwoColumn
         right={{ image: yml.two_columns?.image }}
         left={{
           heading: yml.two_columns?.heading,
           sub_heading: yml.two_columns?.sub_heading,
           button: yml.two_columns?.button,
+          content: yml.two_columns?.content,
+          justify: yml.two_columns?.justify,
         }}
         proportions={yml.two_columns?.proportions}
         session={session}
-      />
+      /> */}
+
+      <Iconogram yml={yml.iconogram_two} />
 
       <OurPartners
         images={hiring.partners.images}
@@ -387,7 +367,7 @@ const Home = (props) => {
         marquee
         paddingFeatured="0 0 50px 0"
         featuredImages={landingHiring?.featured}
-        showFeatured
+        variant="carousel"
         withoutLine
         title={landingHiring ? landingHiring.heading : hiring.partners.tagline}
         paragraph={
@@ -396,7 +376,17 @@ const Home = (props) => {
             : hiring.partners.sub_heading
         }
       />
-      <Loc lang={pageContext.lang} allLocationYaml={data.allLocationYaml} />
+      {/* <PricesAndPayment
+        lang={pageContext.lang}
+        locations={data.allLocationYaml.edges}
+        defaultCourse="full-stack"
+        defaultSchedule="part_time"
+      /> */}
+      <Loc
+        lang={pageContext.lang}
+        allLocationYaml={data.allLocationYaml}
+        hideHeading
+      />
     </>
   );
 };
@@ -435,6 +425,10 @@ export const query = graphql`
               }
             }
           }
+          badges {
+            title
+            paragraph
+          }
           news {
             limit
             heading
@@ -443,23 +437,15 @@ export const query = graphql`
             button_text
             button_link
           }
-          badges {
-            paragraph
+          success_cases {
+            title
+            content
           }
           choose_program {
             title
             paragraph
           }
-          geeks_vs_others {
-            heading
-            sub_heading
-            sub_heading_link
-          }
           why_4geeks {
-            heading
-            sub_heading
-          }
-          two_columns {
             proportions
             image {
               style
@@ -469,8 +455,13 @@ export const query = graphql`
             heading {
               text
               font_size
+              style
             }
             sub_heading {
+              text
+              font_size
+            }
+            content {
               text
               font_size
             }
@@ -481,57 +472,49 @@ export const query = graphql`
               path
             }
           }
-          join_geeks {
-            heading
-            sub_heading
-            geek_data {
-              geek_force_data {
-                content
-                icon_link
-              }
-              geek_pal_data {
-                content
-                icon_link
-              }
-
-              geek_force_heading
-              geek_pal_heading
+          iconogram {
+            heading {
+              text
+              font_size
+              style
+            }
+            swipable
+            icons {
+              icon
+              color
+              content
+              content_style
             }
           }
-          alumni_header {
-            heading
-            sub_heading
+          iconogram_two {
+            swipable
+            heading {
+              text
+              style
+              font_size
+              style
+            }
+            sub_heading {
+              text
+              style
+              font_size
+            }
+            icons {
+              icon
+              color
+              title
+              content
+            }
+            button {
+              text
+              color
+              path
+              background
+              hover_color
+            }
           }
-          testimonial_header {
-            heading
-            button_text
-            button_link
-          }
-        }
-      }
-    }
-    allCredentialsYaml(filter: { fields: { lang: { eq: $lang } } }) {
-      edges {
-        node {
-          credentials {
+          with_4geeks {
             title
-            icon
-            value
-          }
-        }
-      }
-    }
-    allJobsStatisticsYaml(filter: { fields: { lang: { eq: $lang } } }) {
-      edges {
-        node {
-          id
-          jobs {
-            title
-            slug
-            sub_title
-            value
-            value_symbol
-            chart_data
           }
         }
       }
@@ -562,63 +545,13 @@ export const query = graphql`
               featured
             }
           }
-          coding {
-            images {
-              name
-              image {
-                childImageSharp {
-                  gatsbyImageData(
-                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                    width: 100
-                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
-                  )
-                }
-              }
-              featured
-            }
-            tagline
-            sub_heading
-          }
-          influencers {
-            images {
-              name
-              image {
-                childImageSharp {
-                  gatsbyImageData(
-                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                    width: 100
-                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
-                  )
-                }
-              }
-              featured
-            }
-            tagline
-            sub_heading
-          }
-          financials {
-            images {
-              name
-              image {
-                childImageSharp {
-                  gatsbyImageData(
-                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                    width: 100
-                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
-                  )
-                }
-              }
-              featured
-            }
-            tagline
-            sub_heading
-          }
         }
       }
     }
     allLocationYaml(filter: { fields: { lang: { eq: $lang } } }) {
       edges {
         node {
+          active_campaign_location_slug
           breathecode_location_slug
           city
           name
@@ -632,54 +565,12 @@ export const query = graphql`
             keywords
             region
           }
+          fields {
+            lang
+            file_name
+          }
           seo_title
           online_available
-          header {
-            sub_heading
-            tagline
-            alt
-            image {
-              childImageSharp {
-                gatsbyImageData(
-                  layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                  width: 800
-                  placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
-                )
-              }
-            }
-          }
-          info_box {
-            heading
-            address
-            contact_heading
-            phone
-            email
-            image {
-              childImageSharp {
-                gatsbyImageData(
-                  layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                  width: 800
-                  placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
-                )
-              }
-            }
-          }
-          images_box {
-            images {
-              path {
-                childImageSharp {
-                  gatsbyImageData(
-                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                    width: 100
-                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
-                  )
-                }
-              }
-              alt
-            }
-            content
-            heading
-          }
         }
       }
     }
@@ -722,45 +613,6 @@ export const query = graphql`
         }
       }
     }
-    allAlumniProjectsYaml(filter: { fields: { lang: { eq: $lang } } }) {
-      edges {
-        node {
-          header {
-            tagline
-            sub_heading
-          }
-          projects {
-            project_name
-            slug
-            project_image {
-              childImageSharp {
-                gatsbyImageData(
-                  layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                  width: 800
-                  placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
-                )
-              }
-            }
-            project_content
-            project_video
-            live_link
-            github_repo
-            alumni {
-              first_name
-              last_name
-              job_title
-              github
-              linkedin
-              twitter
-            }
-          }
-          button_section {
-            button_text
-            button_link
-          }
-        }
-      }
-    }
     allChooseYourProgramYaml(filter: { fields: { lang: { eq: $lang } } }) {
       edges {
         node {
@@ -771,29 +623,6 @@ export const query = graphql`
             description
             description_mobile
             icon
-          }
-        }
-      }
-    }
-    allAbout4GeeksYaml(filter: { fields: { lang: { eq: $lang } } }) {
-      edges {
-        node {
-          heading
-          sub_heading
-          list {
-            title
-          }
-          paragraph
-          button_text
-          button_link
-          image {
-            childImageSharp {
-              gatsbyImageData(
-                layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                width: 1200
-                placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
-              )
-            }
           }
         }
       }

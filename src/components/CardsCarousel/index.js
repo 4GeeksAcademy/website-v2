@@ -1,13 +1,11 @@
 import React from "react";
 import { Link } from "gatsby";
 import { Button, Colors, Img } from "../Styling";
-import { Grid, Div } from "../Sections";
-import { H4, H3, H2, H1, Paragraph } from "../Heading";
+import { Div } from "../Sections";
+import { H3, H2, H1, Paragraph } from "../Heading";
 import Icon from "../Icon";
 
 const CardsCarousel = ({
-  lang,
-  landingTemplate,
   title,
   cardWidth,
   sub_title,

@@ -24,7 +24,7 @@ import Overlaped from "../components/Overlaped";
 import JobGuaranteeSmall from "../components/JobGuaranteeSmall";
 import Loc from "../components/Loc";
 
-const Program = ({ data, pageContext, yml }) => {
+const Cybersecurity = ({ data, pageContext, yml }) => {
   const { session } = React.useContext(SessionContext);
   const courseDetails = data.allCourseYaml.edges[0].node;
   const geek = data.allCourseYaml.edges[0].node;
@@ -193,7 +193,7 @@ const Program = ({ data, pageContext, yml }) => {
       </Header>
 
       {/* TWO COLUMN CREAR EN EL YML*/}
-      {/* {session.location?.breathecode_location_slug.includes("spain") && <TwoColumn
+      <TwoColumn
         left={{ image: yml.two_columns_first?.image }}
         right={{
           heading: yml.two_columns_first?.heading,
@@ -204,7 +204,7 @@ const Program = ({ data, pageContext, yml }) => {
         }}
         proportions={yml.two_columns_first?.proportions}
         session={session}
-      />} */}
+      />
 
       <JobGuaranteeSmall
         content={data.allJobGuaranteeSmallYaml.edges[0].node}
@@ -274,10 +274,8 @@ const Program = ({ data, pageContext, yml }) => {
       <UpcomingDates
         lang={pageContext.lang}
         message={courseDetails.upcoming?.no_dates_message}
-        defaultCourse={defaultCourse}
         actionMessage={courseDetails.upcoming?.actionMessage}
         locations={data.allLocationYaml.edges}
-        showMoreRedirect
       />
 
       <PricesAndPayment
@@ -846,45 +844,6 @@ export const query = graphql`
         }
       }
     }
-    allAlumniProjectsYaml(filter: { fields: { lang: { eq: $lang } } }) {
-      edges {
-        node {
-          header {
-            tagline
-            sub_heading
-          }
-          projects {
-            project_name
-            slug
-            project_image {
-              childImageSharp {
-                gatsbyImageData(
-                  layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                  width: 800
-                  placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
-                )
-              }
-            }
-            project_content
-            project_video
-            live_link
-            github_repo
-            alumni {
-              first_name
-              last_name
-              job_title
-              github
-              linkedin
-              twitter
-            }
-          }
-          button_section {
-            button_text
-            button_link
-          }
-        }
-      }
-    }
     allCredentialsYaml(filter: { fields: { lang: { eq: $lang } } }) {
       edges {
         node {
@@ -976,4 +935,4 @@ export const query = graphql`
     }
   }
 `;
-export default BaseRender(Program);
+export default BaseRender(Cybersecurity);
