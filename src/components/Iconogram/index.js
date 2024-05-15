@@ -90,6 +90,7 @@ const Iconogram = ({ yml, index }) => {
                   color={item.color}
                   title={item.title}
                   content={item.content}
+                  {...item}
                 />
               </React.Fragment>
             );

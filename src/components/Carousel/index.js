@@ -8,6 +8,68 @@ import "../../assets/css/carousel.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
+const CustomNextArrow = ({ nextArrow, ...props }) => {
+  const { className, style, onClick } = props;
+
+  if (typeof nextArrow === "function") return nextArrow({ onClick });
+  return (
+    <>
+      {nextArrow && (
+        <Button
+          padding="0"
+          padding_xs="0"
+          padding_tablet="0"
+          position="absolute"
+          zIndex="9"
+          top="50%"
+          right="1%"
+          right_md="0%"
+          right_lg="0%"
+          right_tablet="0%"
+          height="30px"
+          width="24px"
+          height_tablet="44px"
+          onClick={onClick}
+        >
+          <Icon width="100%" height="100%" icon="arrow-right" />
+        </Button>
+      )}
+    </>
+  );
+};
+
+const CustomPrevArrow = ({ previousArrow, ...props }) => {
+  const { className, style, onClick } = props;
+
+  if (typeof previousArrow === "function") return previousArrow({ onClick });
+
+  return (
+    <>
+      {previousArrow && (
+        <Button
+          padding="0"
+          padding_xs="0"
+          padding_tablet="0"
+          position="absolute"
+          zIndex="9"
+          top="50%"
+          left="1%"
+          left_md="0%"
+          left_lg="0%"
+          left_tablet="0%"
+          height="30px"
+          width="24px"
+          height_tablet="44px"
+          style={{ transform: "rotate(180deg)" }}
+          onClick={onClick}
+        >
+          <Icon width="100%" height="100%" icon="arrow-right" />
+        </Button>
+      )}
+    </>
+  );
+};
+
 const Carousel = ({
   content,
   flexDirection,
@@ -27,74 +89,13 @@ const Carousel = ({
 }) => {
   const sliderRef = useRef();
 
-  const CustomNextArrow = (props) => {
-    const { className, style, onClick } = props;
-
-    if (typeof nextArrow === "function") return nextArrow({ onClick });
-    return (
-      <>
-        {nextArrow && (
-          <Button
-            padding="0"
-            padding_xs="0"
-            padding_tablet="0"
-            position="absolute"
-            zIndex="9"
-            top="50%"
-            right="1%"
-            right_md="0%"
-            right_lg="0%"
-            right_tablet="0%"
-            height="30px"
-            width="24px"
-            height_tablet="44px"
-            onClick={onClick}
-          >
-            <Icon width="100%" height="100%" icon="arrow-right" />
-          </Button>
-        )}
-      </>
-    );
-  };
-  const CustomPrevArrow = (props) => {
-    const { className, style, onClick } = props;
-
-    if (typeof previousArrow === "function") return previousArrow({ onClick });
-
-    return (
-      <>
-        {previousArrow && (
-          <Button
-            padding="0"
-            padding_xs="0"
-            padding_tablet="0"
-            position="absolute"
-            zIndex="9"
-            top="50%"
-            left="1%"
-            left_md="0%"
-            left_lg="0%"
-            left_tablet="0%"
-            height="30px"
-            width="24px"
-            height_tablet="44px"
-            style={{ transform: "rotate(180deg)" }}
-            onClick={onClick}
-          >
-            <Icon width="100%" height="100%" icon="arrow-right" />
-          </Button>
-        )}
-      </>
-    );
-  };
-
-  var settings = {
+  const settings = {
     dots: true,
     infinite: false,
     speed: 500,
     arrows: true,
-    nextArrow: <CustomNextArrow />,
-    prevArrow: <CustomPrevArrow />,
+    nextArrow: <CustomNextArrow nextArrow={nextArrow} />,
+    prevArrow: <CustomPrevArrow previousArrow={previousArrow} />,
     slidesToShow: 4,
     slidesToScroll: 3,
     initialSlide: 0,
@@ -158,7 +159,7 @@ const Carousel = ({
             <Div flexDirection="column" margin="0 0 10px 0">
               <Paragraph
                 margin="0 0 0 0"
-                fontSize="21px"
+                fontSize="16px"
                 lineHeight="20px"
                 dangerouslySetInnerHTML={{ __html: content.content }}
                 {...content.contentProps}

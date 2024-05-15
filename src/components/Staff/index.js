@@ -1,19 +1,14 @@
-import React, { useState, useRef, useEffect } from "react";
+import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
-import { H1, H2, H3, H4, Title, Separator, Paragraph } from "../Heading";
-import { Anchor, Colors, Button } from "../Styling";
-import { Row, GridContainer, Div } from "../Sections";
+import { H3, H4, Paragraph } from "../Heading";
+import { Anchor } from "../Styling";
+import { Div } from "../Sections";
 import Fragment from "../Fragment";
-import styled from "styled-components";
 import Icon from "../Icon";
-import DraggableDiv from "../DraggableDiv";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { SessionContext } from "../../session";
-import Slider from "react-slick";
 import "../../assets/css/staff-css.css";
 import Carousel from "../Carousel";
-// import "slick-carousel/slick/slick.css";
-// import "slick-carousel/slick/slick-theme.css";
 
 const Staff = (props) => {
   const data = useStaticQuery(graphql`
@@ -75,8 +70,6 @@ const Staff = (props) => {
         n.location.includes("all") ||
         n.location.includes(sessionLocation)
     );
-
-  const sliderRef = useRef();
 
   return (
     <Fragment github="/components/staff">

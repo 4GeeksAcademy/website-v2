@@ -4,10 +4,9 @@ import { Div } from "../Sections";
 import { Colors } from "../Styling";
 import Icon from "../Icon";
 
-export default ({ icon, title, content, index, color }) => {
+export default ({ icon, title, content, color, content_style }) => {
   return (
     <Div
-      key={index}
       background="#FFF"
       border="3px solid #000"
       width="100%"
@@ -55,6 +54,7 @@ export default ({ icon, title, content, index, color }) => {
             color="#000"
             opacity="1"
             fontSize="14px"
+            style={content_style ? JSON.parse(content_style) : {}}
           >
             {content}
           </Paragraph>

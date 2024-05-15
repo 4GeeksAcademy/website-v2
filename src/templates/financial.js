@@ -10,7 +10,7 @@ import { isCustomBarActive } from "../actions";
 import { Div } from "../components/Sections";
 import { H1, H2, Paragraph } from "../components/Heading";
 import WeTrust from "../components/WeTrust";
-import SectionCarousel from "../components/SectionCarousel";
+import CarouselV2 from "../components/CarouselV2";
 import PricesAndPayment from "../components/PricesAndPayment";
 import Iconogram from "../components/Iconogram";
 import TwoColumn from "../components/TwoColumn";
@@ -141,7 +141,7 @@ const Financial = (props) => {
         proportions={ymlTwoColumn.proportions}
         session={session}
       />
-      <SectionCarousel
+      <CarouselV2
         margin="20px 0"
         background="#FBFCFC"
         padding="20px"
@@ -169,7 +169,7 @@ const Financial = (props) => {
             </Div>
           </Div>
         ))}
-      </SectionCarousel>
+      </CarouselV2>
       <TwoColumn
         left={{ image: ymlTwoColumn[1].image }}
         right={{

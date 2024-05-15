@@ -28,14 +28,14 @@ locations:
 - "rome-italy"
 - "toronto-canada"
 icons:
-  - icon: "graduation-2"
-    title: Get a job within 180 days after graduation or get your money back.
-  - icon: "stairswflag"
-    title: Complete the stages of our career support procces.
-  - icon: "network"
-    title: Access a network of 5K hiring partners.
   - icon: "handshake"
     title: We both commit to your future career
+  - icon: "stairswflag"
+    title: Complete all stages of our career support process.
+  - icon: "network"
+    title: Access a network of 5K hiring partners.
+  - icon: "graduation-2"
+    title: Get a job within 180 days after graduation or your money back.
 link:
   url: https://storage.googleapis.com/4geeks-academy-website/PDF%20and%20Docs/Conditions%20Job%20Guaranteed%20Program.pdf
-  label: Conditions Apply when you add the Job Guarantee Feature
+  label: Conditions apply

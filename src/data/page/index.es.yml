@@ -13,7 +13,7 @@ header_data:
   sub_heading: "Únete a miles de graduados que viven como programadores, trabajan en grandes empresas y forman parte de una de las comunidades de programación más grandes del mundo."
   bullets:
     - Tutoría de codificación de por vida, asistencia profesional interminable y una comunidad de desarrolladores impulsada por la tecnología.
-    - 'Trabajo Garantizado: Obtenga un trabajo hasta 6 meses después de graduarse o le devolvemos el dinero, <a href="https://storage.googleapis.com/4geeks-academy-website/PDF%20and%20Docs/Condiciones%20y%20Requerimientos%20Job%20Guaranteed%20Program.pdf" style="text-decoration: none; color: #000000;"> condiciones aplican. </a>'
+    - 'Trabajo Garantizado: Obtenga un trabajo hasta 6 meses después de graduarse o le devolvemos el dinero, <a href="https://storage.googleapis.com/4geeks-academy-website/PDF%20and%20Docs/Condiciones%20y%20Requerimientos%20Job%20Guaranteed%20Program.pdf" style="text-decoration: none; color: #000000; font-weight: 700;"> condiciones aplican. </a>'
     - Aprende en todas partes, todo el tiempo, tú eliges la metodología.
   join_button_text: Empezar un curso →
   join_button_path: "#choose-program"
@@ -27,7 +27,7 @@ header_data:
 why_4geeks:
   proportions: [6, 6]
   image:
-    style: '{ "backgroundSize": "contain" }'
+    style: '{ "backgroundSize": "contain", "marginBottom": "32px" }'
     src: "/images/landing/hombre-con-laptop-2.png"
     shadow: false  
   heading:
@@ -77,16 +77,16 @@ two_columns:
   proportions: [6, 6]
   justify: "start"
   image:
-    style: '{ "backgroundSize": "contain" }'
+    style: '{ "backgroundSize": "contain", "marginBottom": "32px" }'
     src: "/images/landing/feliz-empresario-laptop-2.png"
     shadow: false  
   heading:
     text: "Invierte en tu futuro"
     style: '{ "fontWeight": 400 }'
-    font_size: ["30px", "30px", "30px", "30px", "30px"]
+    font_size: ["35px", "35px", "50px", "35px", "35px"]
   sub_heading:
     text: "Nuestra prioridad es que nuestra educación de alta calidad sea accesible para todos. Por eso, ofrecemos múltiples opciones para que puedas financiar tus estudios en nuestros bootcamps de programación sin estrés. Ya sea a través de un ISA (Income Share Agreement), becas, planes de pago o la garantía de empleo, estamos aquí para guiarte en cada paso del camino."
-    font_size: ["16px", "16px", "16px", "16px", "16px"]
+    font_size: ["21px", "21px", "21px", "21px", "21px"]
   button:
     text: "Ver opciones de financiación"
     color: "white"
@@ -97,25 +97,29 @@ iconogram:
   heading:
     text: "Números que nos respaldan"
     font_size:
-      - 45px
-      - 45px
-      - 45px
-      - 21px
-      - 21px
+      - 35px
+      - 35px
+      - 35px
+      - 35px
+      - 35px
     style: '{ "textAlign": "center", "fontSize": "40px", "fontWeight": 400 }'
   swipable: false
   icons:
   - icon: "graduation-2"
     content: "1100 Graduados"
+    content_style: '{ "fontSize": "24px" }'
   - icon: "group-2"
     color: "#23C520"
     content: "7 Campuses"
+    content_style: '{ "fontSize": "24px" }'
   - icon: "briefcase-new"
     color: "#7D79FF"
     content: "89% contratados"
+    content_style: '{ "fontSize": "24px" }'
   - icon: "star-2"
     color: "#0084FF"
     content: "4.85 de valoración"
+    content_style: '{ "fontSize": "24px" }'
 
 ## 4GEEKS VS OTHERS SECTION
 geeks_vs_others:
