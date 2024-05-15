@@ -52,7 +52,7 @@ two_columns:
     text: "Finance your future"
     font_size: ["30px", "30px", "30px", "30px", "30px"]
   sub_heading:
-    text: "We’re all about making our high-quality education affordable to everyone. That's why we offer multiple options to help you fund our coding bootcamps stress-free. Whether it's an ISA, scholarship, payment plan or job guarantee we're here to guide you every step of the way."
+    text: "We’re all about making our high-quality education affordable to everyone. That's why we offer multiple options to help you fund our coding bootcamps stress-free. Whether it's a scholarship, payment plan, or job guarantee we're here to guide you every step of the way."
     font_size: ["16px", "16px", "16px", "16px", "16px"]
   button:
     text: "SEE ALL FINANCING OPTIONS"
