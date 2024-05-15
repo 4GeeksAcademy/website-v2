@@ -162,7 +162,7 @@ components:
     background: "#FFFFFF"
     justify: "start" #start,end,center
     image:
-      style: '{ "height": "20px", "margin-top": "20px" }'
+      style: '{ "backgroundSize": "cover", "background-position": "center", "min-height": "350px", "height": "350px"}'
       src: "/images/landing/feliz-empresario.png"
       shadow: true
     heading: 
@@ -209,7 +209,7 @@ components:
       shadow: true
     section_heading: 
       text: "Finance your future"
-      style: '{ "font-size": "30px" }'
+      style: '{ "backgroundSize": "cover", "background-position": "center", "min-height": "350px", "height": "350px"}'
     heading: 
       text: "Finance your future"
     sub_heading:

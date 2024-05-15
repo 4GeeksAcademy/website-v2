@@ -13,10 +13,10 @@ header_data:
   title: Empower Your Life With Coding Skills
   sub_heading: Lifetime Coding Mentorship, endless Career Support, and a tech-driven community of developers.
   bullets:
-    - Lifetime Coding Mentorship, endless Career Support, and a tech-driven community of developers.
-    - 'Job Guarantee: get a job within the next 6 months upon graduation or money back, <a href="https://storage.googleapis.com/4geeks-academy-website/PDF%20and%20Docs/Conditions%20Job%20Guaranteed%20Program.pdf" style="text-decoration: none; color: #000000; font-weight: 700;"> conditions apply. </a>'
-    - Learn everywhere, all the time, you choose the methodology.
-  join_button_text: Start a course →
+    - Lifelong coding mentorship, unlimited career support, and a tech-driven community of developers.
+    - 'Job Guarantee: get a job within the next 6 months upon graduation or money back, <a href="https://storage.googleapis.com/4geeks-academy-website/PDF%20and%20Docs/Conditions%20Job%20Guaranteed%20Program.pdf" style="text-decoration: none; color: #000000;"> conditions apply. </a>'
+    - Learn anywhere, anytime, you choose the format.
+  join_button_text: CHOOSE A PROGRAM
   join_button_path: "#choose-program"
   free_button_text: TAKE FREE TRIAL AT NO COST
   free_button_path: ""

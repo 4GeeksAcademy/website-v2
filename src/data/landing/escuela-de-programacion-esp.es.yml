@@ -234,7 +234,7 @@ components:
     proportions: [6, 6]
     background: ""
     image:
-      style: '{ "backgroundSize": "cover" }'
+      style: '{ "backgroundSize": "cover", "background-position": "center", "min-height": "350px", "height": "350px"}'
       src: "/images/landing/feliz-empresario-laptop.png"
       shadow: true
     section_heading:
