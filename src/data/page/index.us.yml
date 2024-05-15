@@ -13,9 +13,9 @@ header_data:
   title: Empower Your Life With Coding Skills
   sub_heading: Lifetime Coding Mentorship, endless Career Support, and a tech-driven community of developers.
   bullets:
-    - Lifetime Coding Mentorship, endless Career Support, and a tech-driven community of developers.
-    - 'Job Guarantee: get a job within the next 6 months upon graduation or money back, <a href="https://storage.googleapis.com/4geeks-academy-website/PDF%20and%20Docs/Conditions%20Job%20Guaranteed%20Program.pdf" style="text-decoration: none; color: #000000; font-weight: 800;"> conditions apply. </a>'
-    - Learn anywhere, anytime, you choose the methodology.
+    - Lifelong coding mentorship, unlimited career support, and a tech-driven community of developers.
+    - 'Job Guarantee: get a job within 6 months of graduation or your money back, <a href="https://storage.googleapis.com/4geeks-academy-website/PDF%20and%20Docs/Conditions%20Job%20Guaranteed%20Program.pdf" style="text-decoration: none; color: #000000; font-weight: 800;"> conditions apply. </a>'
+    - Learn anywhere, anytime, you choose the format.
   join_button_text: CHOOSE A PROGRAM
   join_button_path: "#choose-program"
   free_button_text: TAKE FREE TRIAL AT NO COST
@@ -45,14 +45,14 @@ choose_program:
 two_columns:
   proportions: [6, 6]
   image:
-    style: '{ "backgroundSize": "cover" }'
+    style: '{ "backgroundSize": "cover", "background-position": "center", "min-height": "350px", "height": "350px"}'
     src: "/images/landing/feliz-empresario-laptop.png"
     shadow: true  
   heading:
     text: "Finance your future"
     font_size: ["30px", "30px", "30px", "30px", "30px"]
   sub_heading:
-    text: "We’re all about making our high-quality education affordable to everyone. That's why we offer multiple options to help you fund our coding bootcamps stress-free. Whether it's an ISA, scholarship, payment plan or job guarantee we're here to guide you every step of the way."
+    text: "We’re all about making our high-quality education affordable to everyone. That's why we offer multiple options to help you fund our coding bootcamps stress-free. Whether it's a scholarship, payment plan, or job guarantee we're here to guide you every step of the way."
     font_size: ["16px", "16px", "16px", "16px", "16px"]
   button:
     text: "SEE ALL FINANCING OPTIONS"
