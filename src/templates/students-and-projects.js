@@ -191,6 +191,9 @@ export const query = graphql`
             tagline
             sub_heading
           }
+          project
+          made_by
+          description
           projects {
             project_name
             slug

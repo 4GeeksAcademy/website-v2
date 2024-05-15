@@ -2,6 +2,10 @@ header:
   tagline: "¿QUÉ TIPO DE PROYECTOS CONSTRUIRÁS?"
   sub_heading: "El último día del curso los alumnos presentarán sus proyectos ante expertos de la industria y posibles hiring partners"
 
+project: Projecto
+made_by: "> HECHO POR"
+description: "> DESCRIPCIÓN"
+
 button_section:
   button_text: "VER MÁS PROYECTOS"
   button_link: "/es/graduados"

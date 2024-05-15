@@ -1,25 +1,35 @@
-import React from "react";
-import { graphql } from "gatsby";
-import { Colors, Img } from "../components/Styling";
+import React, { useContext, useMemo } from "react";
+import { graphql, navigate } from "gatsby";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import { Button, Colors, Img } from "../components/Styling";
 import BaseRender from "./_baseLayout";
 import { SessionContext } from "../session";
 import { isCustomBarActive } from "../actions";
 
 // components
-import FinancialFilter from "../components/FinancialFilter";
-import { Header } from "../components/Sections";
 import { Div } from "../components/Sections";
-import { H2, Paragraph, H3, H4 } from "../components/Heading";
-import Icon from "../components/Icon";
+import { H1, H2, Paragraph } from "../components/Heading";
 import WeTrust from "../components/WeTrust";
+import CarouselV2 from "../components/CarouselV2";
 import PricesAndPayment from "../components/PricesAndPayment";
 import Iconogram from "../components/Iconogram";
-import TwoColumn from "../components/TwoColumn/index.js";
-import Badges from "../components/Badges";
+import TwoColumn from "../components/TwoColumn";
 
 const Financial = (props) => {
-  const { session } = React.useContext(SessionContext);
+  const { session } = useContext(SessionContext);
   const { data, pageContext, yml } = props;
+  const { seo_title, header } = yml;
+
+  const allPlans = useMemo(() => {
+    return data.allPlansYaml.edges
+      .flatMap(({ node }) => [...node.part_time, ...node.full_time])
+      .filter((plan) =>
+        plan.academies.includes(session?.location?.breathecode_location_slug)
+      );
+  }, [session]);
+  const academyHasJobGuarantee = allPlans.some(
+    ({ job_guarantee_price }) => job_guarantee_price
+  );
 
   let location = null;
   if (session && session.location) {
@@ -38,117 +48,71 @@ const Financial = (props) => {
 
   return (
     <>
-      <Header
-        margin={isCustomBarActive(session) ? "140px auto 0 auto" : "60px auto"}
-        paragraphMargin="26px 20px"
-        paragraphMargin_Tablet="26px 22%"
-        paddingParagraph_tablet="0 40px"
-        seo_title={yml.seo_title}
-        title={yml.header.title}
-        //paragraph={yml.header.paragraph}
-        padding_tablet="72px 0 40px 0"
-        padding="0px 20px"
-        position="relative"
-        fontSize_title="40px"
-        fontSizeTitle_tablet="60px"
-        fontFamily_title="Archivo-Black"
-        fontSize_paragraph="15px"
-        gridTemplateColumns_tablet="repeat(14, 1fr)"
+      <Div
         maxWidth="1280px"
-        hideArrowKey
-        id="financials"
+        margin_tablet={
+          isCustomBarActive(session) ? "140px auto 0 auto" : "60px auto"
+        }
+        gap="25px"
+        alignItems_tablet="center"
+        flexDirection="column"
+        flexDirection_tablet="row"
+        padding_lg="0"
+        padding="0 20px"
       >
-        <Img
-          src="/images/landing/group-3.png"
-          width="49px"
-          height="286px"
-          style={{
-            position: "absolute",
-            zIndex: "-1",
-          }}
-          display_xxs="none"
-          display_tablet="flex"
-          left_tablet="72px"
-          top_tablet="0%"
-          left_lg="0%"
-          top_lg="-10%"
-        />
-        <Img
-          src="/images/landing/Ellipse-40.png"
-          width="53px"
-          height="53px"
-          style={{
-            position: "absolute",
-            zIndex: "-1",
-          }}
-          display_xxs="none"
-          display_tablet="flex"
-          right_tablet="85px"
-          top_tablet="15%"
-          right_lg="5%"
-          top_lg="15%"
-        />
-        <Img
-          src="/images/landing/Ellipse-39.png"
-          width="17px"
-          height="17px"
-          style={{
-            position: "absolute",
-            zIndex: "-1",
-          }}
-          display_xxs="none"
-          display_tablet="flex"
-          right_tablet="16%"
-          top_tablet="45%"
-          right_lg="3%"
-          top_lg="45%"
-        />
-        <Img
-          src="/images/landing/Ellipse-38.png"
-          width="17px"
-          height="17px"
-          style={{
-            position: "absolute",
-            zIndex: "-1",
-          }}
-          display_xxs="none"
-          display_tablet="flex"
-          right_tablet="12%"
-          top_tablet="45%"
-          right_lg="6%"
-          top_lg="45%"
-        />
-        <Img
-          src="/images/landing/Ellipse-39.png"
-          width="17px"
-          height="17px"
-          style={{
-            position: "absolute",
-            zIndex: "-1",
-          }}
-          display_xxs="none"
-          display_tablet="flex"
-          right_tablet="8%"
-          top_tablet="45%"
-          right_lg="9%"
-          top_lg="45%"
-        />
-        <Img
-          src="/images/landing/Ellipse-39.png"
-          width="28px"
-          height="28px"
-          style={{
-            position: "absolute",
-            zIndex: "-1",
-          }}
-          display_xxs="none"
-          display_tablet="flex"
-          right_tablet="25%"
-          top_tablet="13%"
-          right_lg="23%"
-          top_lg="12%"
-        />
-      </Header>
+        <Div display="block">
+          <H1 type="h1" textAlign="left">
+            {seo_title}
+          </H1>
+          <H2
+            margin="20px 0"
+            type="h2"
+            fontFamily="Archivo-Black"
+            textAlign="left"
+            fontSize="40px"
+            fontSize_tablet="50px"
+            lineHeight="54px"
+          >
+            {header.title}
+          </H2>
+          <Paragraph
+            color={Colors.black}
+            textAlign="left"
+            opacity="1"
+            fontSize="24px"
+            lineHeight="28px"
+          >
+            {header.paragraph}
+          </Paragraph>
+          <Button
+            background="#0084FF"
+            lineHeight="26px"
+            textTransform="none"
+            color="white"
+            margin="30px 0 0 0"
+            fontSize="15px"
+            padding_xxs="0 .5rem"
+            padding_xs="0 .85rem"
+            onClick={() => {
+              navigate("#prices_and_payment");
+            }}
+          >
+            {header.button}
+          </Button>
+        </Div>
+        <Div>
+          <GatsbyImage
+            image={getImage(
+              header.image && header.image.childImageSharp.gatsbyImageData
+            )}
+            style={{
+              height: "100%",
+              backgroundSize: `cover`,
+            }}
+            alt={header.alt}
+          />
+        </Div>
+      </Div>
 
       <Iconogram yml={yml.iconogram} />
       <PricesAndPayment
@@ -172,35 +136,40 @@ const Financial = (props) => {
           content: ymlTwoColumn[0].content,
           button: ymlTwoColumn[0].button,
           boxes: ymlTwoColumn[0].boxes,
-          //padding_tablet: "20px",
           gap_tablet: "40px",
         }}
         proportions={ymlTwoColumn.proportions}
         session={session}
       />
-
-      <Badges
-        link
-        id="partners"
-        lang={pageContext.lang}
-        //background={Colors.verylightGray2}
-        badges={yml.partners}
-        paragraph={yml.partners.paragraph}
-        //short_text
-        height_badge="80px"
-        padding="60px 0"
-        padding_tablet="68px 0"
-        margin_tablet="0 0 78px 0"
-        maxWidth="1280px"
-        //wrapped_images
-        style={{
-          height: "100px",
-          minWidth: "150px",
-          width: "min-content",
-          //margin: "0 20px",
-        }}
-      />
-
+      <CarouselV2
+        margin="20px 0"
+        background="#FBFCFC"
+        padding="20px"
+        heading={yml.who_is_hiring.title}
+        content={yml.who_is_hiring.paragraph}
+      >
+        {yml.who_is_hiring.images.map((image) => (
+          <Div key={image}>
+            <Div
+              border="1px solid #C4C4C4"
+              width="240px !important"
+              height="240px"
+              display="flex"
+              flexDirection="column"
+              justifyContent="center"
+              margin="auto"
+            >
+              <Img
+                backgroundSize="contain"
+                src={image}
+                width="112px"
+                height="112px"
+                margin="auto"
+              />
+            </Div>
+          </Div>
+        ))}
+      </CarouselV2>
       <TwoColumn
         left={{ image: ymlTwoColumn[1].image }}
         right={{
@@ -209,32 +178,34 @@ const Financial = (props) => {
           bullets: ymlTwoColumn[1].bullets,
           content: ymlTwoColumn[1].content,
           button: ymlTwoColumn[1].button,
-          //padding_tablet: "20px",
           gap_tablet: "40px",
         }}
         session={session}
       />
-
-      <WeTrust we_trust={yml.we_trust_section} />
-
-      <TwoColumn
-        right={{ image: ymlTwoColumn[2].image }}
-        left={{
-          heading: ymlTwoColumn[2].heading,
-          sub_heading: ymlTwoColumn[2].sub_heading,
-          bullets: ymlTwoColumn[2].bullets,
-          content: ymlTwoColumn[2].content,
-          button: ymlTwoColumn[2].button,
-          //padding_tablet: "20px",
-          gap_tablet: "40px",
-        }}
-        session={session}
+      <WeTrust
+        we_trust={yml.we_trust_section}
+        background="none"
+        titleProps={{ textAlign: "center" }}
+        paragraphProps={{ textAlign: "center" }}
       />
+      {academyHasJobGuarantee && (
+        <TwoColumn
+          right={{ image: ymlTwoColumn[2].image }}
+          left={{
+            heading: ymlTwoColumn[2].heading,
+            sub_heading: ymlTwoColumn[2].sub_heading,
+            bullets: ymlTwoColumn[2].bullets,
+            content: ymlTwoColumn[2].content,
+            button: ymlTwoColumn[2].button,
+            gap_tablet: "40px",
+          }}
+          session={session}
+        />
+      )}
     </>
   );
 };
 
-// REMOVED: payment_guide[...] ecosystem{...}
 export const query = graphql`
   query FinancialQuery($file_name: String!, $lang: String!) {
     allPageYaml(
@@ -253,6 +224,7 @@ export const query = graphql`
             title
             paragraph
             tagline
+            button
             image {
               childImageSharp {
                 gatsbyImageData(
@@ -275,9 +247,6 @@ export const query = graphql`
                   height: 300
                   placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
                 )
-                # fixed(width: 300, height: 300) {
-                #   ...GatsbyImageSharpFixed
-                # }
               }
             }
             image_second {
@@ -310,26 +279,6 @@ export const query = graphql`
             }
           }
           syllabus_button_text
-          partners {
-            paragraph
-            link_to
-            link_text
-            badges {
-              name
-              url
-              image {
-                childImageSharp {
-                  gatsbyImageData(
-                    layout: FULL_WIDTH # --> CONSTRAINED || FIXED || FULL_WIDTH
-                    width: 1500
-                    quality: 100
-                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
-                  )
-                }
-              }
-              alt
-            }
-          }
           we_trust_section {
             title
             text
@@ -365,6 +314,7 @@ export const query = graphql`
             }
             icons {
               icon
+              color
               title
               content
             }
@@ -376,16 +326,23 @@ export const query = graphql`
               hover_color
             }
           }
+          who_is_hiring {
+            title
+            paragraph
+            images
+          }
           two_column {
             image {
               style
               src
             }
             heading {
+              style
               text
               font_size
             }
             sub_heading {
+              style
               text
               font_size
             }
@@ -417,17 +374,6 @@ export const query = graphql`
         }
       }
     }
-    allCredentialsYaml(filter: { fields: { lang: { eq: $lang } } }) {
-      edges {
-        node {
-          credentials {
-            title
-            icon
-            value
-          }
-        }
-      }
-    }
     allLocationYaml(filter: { fields: { lang: { eq: $lang } } }) {
       edges {
         node {
@@ -451,101 +397,28 @@ export const query = graphql`
             redirects
             visibility
           }
-          header {
-            sub_heading
-            tagline
-            alt
-            image {
-              childImageSharp {
-                gatsbyImageData(
-                  layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                  width: 1200
-                  quality: 100
-                  placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
-                )
-              }
-            }
-          }
-          documents {
-            payment_guidebook {
-              url
-            }
-          }
         }
       }
     }
-    allPartnerYaml(filter: { fields: { lang: { eq: $lang } } }) {
+    allPlansYaml(filter: { fields: { lang: { eq: $lang } } }) {
       edges {
         node {
-          partners {
-            images {
-              name
-              link
-              follow
-              image {
-                childImageSharp {
-                  gatsbyImageData(
-                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                    width: 100
-                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
-                  )
-                }
-              }
-              featured
-            }
-            tagline
-            sub_heading
+          full_time {
+            slug
+            academies
+            scholarship
+            payment_time
+            price
+            job_guarantee_price
           }
-          coding {
-            images {
-              name
-              image {
-                childImageSharp {
-                  gatsbyImageData(
-                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                    width: 100
-                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
-                  )
-                }
-              }
-              featured
-            }
-            tagline
-            sub_heading
-          }
-          influencers {
-            images {
-              name
-              image {
-                childImageSharp {
-                  gatsbyImageData(
-                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                    width: 100
-                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
-                  )
-                }
-              }
-              featured
-            }
-            tagline
-            sub_heading
-          }
-          financials {
-            images {
-              name
-              image {
-                childImageSharp {
-                  gatsbyImageData(
-                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                    width: 200
-                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
-                  )
-                }
-              }
-              featured
-            }
-            tagline
-            sub_heading
+          part_time {
+            slug
+            academies
+            scholarship
+            payment_time
+            price
+            original_price
+            job_guarantee_price
           }
         }
       }
