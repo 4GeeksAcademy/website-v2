@@ -116,11 +116,9 @@ part_time:
     recomended: false
     scholarship: "Data Science Program Only"
     payment_time: "Focus on gaining skills. Pay upfront."
-    price: "3.000.000 CLP*"
-    original_price: "3.750.000 CLP*"
+    price: "3.750.000 CLP*"
     bullets:
       - "Pay with bank transfer, credit or debit card"    
-      - "*Discount up to 750.000 CLP. From 3.000.000 CLP instead of 3.750.000 CLP"  
       - "There is always a payment plan available for you to join 4Geeks Academy, if you don't find here what you are expecting, please contact us and we will try to find new ways to help"    
       - "Pay only for the Data Science program if you are not interested yet in our career support program."  
     icons: 

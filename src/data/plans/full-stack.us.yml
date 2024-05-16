@@ -381,7 +381,7 @@ part_time:
     scholarship: "Financed"
     payment_time: "18 months payment"
     price: "~168.000 CLP"
-    original_price: "3.450.000 CLP*"
+    warning_message: "Limited seats!"
     bullets:
       - "Tailor-made financing from 6 to 18 months"  
       - "An advance payment corresponding to 20% of the value of the program must be paid."

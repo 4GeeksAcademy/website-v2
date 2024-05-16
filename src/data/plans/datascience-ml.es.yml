@@ -242,11 +242,9 @@ part_time:
     recomended: false
     scholarship: "Solo Programa de Ciencia de Datos"
     payment_time: "Enfócate en adquirir habilidades. Paga por adelantado."
-    price: "3.000.000 CLP*"
-    original_price: "3.750.000 CLP*"
+    price: "3.750.000 CLP*"
     bullets:
       - "Paga con transferencia bancaria, tarjeta de crédito o débito"
-      - "*Descuento de hasta 750.000 CLP. Desde 3.000.000 CLP en lugar de 3.750.000 CLP"
       - "Siempre hay un plan de pago disponible para que te unas a 4Geeks Academy. Si no encuentras aquí lo que esperas, contáctanos y trataremos de encontrar nuevas formas de ayudarte."
       - "Paga solo por el programa de Ciencia de Datos si aún no estás interesado en nuestro programa de apoyo profesional."
     icons: 
