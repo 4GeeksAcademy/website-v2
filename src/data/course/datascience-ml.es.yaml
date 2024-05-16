@@ -142,10 +142,10 @@ details:
           icon: "contract-checked"
 
   heading: DETALLES DEL PROGRAMA
-  weeks: 18
+  weeks: 16
   facts:
     - label: "Duración"
-      value: "18 semanas"
+      value: "16 semanas"
     - label: "Compromiso"
       value: "20 hrs/sem. (Lun - Mie - Vie)"
     - label: "Certificado"

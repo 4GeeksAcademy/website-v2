@@ -120,7 +120,7 @@ components:
         #           xl      lg      md      sm      xs
       font_size: ["40px", "40px", "35px", "35px", "30px"]
     content:
-      text: "En 4Geeks Academy, comprendemos que invertir en tu educación tecnológica es una decisión importante. Por eso, nos hemos asociado con Banco de Chile para ofrecerte opciones de financiamiento flexibles que se adapten a tus necesidades. Con nuestros planes de pago de 3 a 24 cuotas sin interés, podrás acceder a nuestros bootcamps de programación sin preocupaciones financieras y comenzar a construir tu futuro profesional con total tranquilidad."
+      text: "En 4Geeks Academy, comprendemos que invertir en tu educación tecnológica es una decisión importante. Por eso, nos hemos asociado con Banco de Chile para ofrecerte opciones de financiamiento flexibles que se adapten a tus necesidades. Con nuestros planes de pago de 4 a 18 cuotas sin interés, podrás acceder a nuestros bootcamps de programación sin preocupaciones financieras y comenzar a construir tu futuro profesional con total tranquilidad."
       font_size: ["16px"]
 
   - name: "whatever"
@@ -142,10 +142,10 @@ components:
       link: "#leadform_header" # moves to start position
       
     - title: "Full Time"
-      sub_title: "9 semanas"
+      sub_title: "10 semanas"
       icon: "fullstack_2"
       description: |
-        Programa intensivo de 9 semanas, con clases de lunes a viernes durante todo el día, para vivir una experiencia inmersiva en el mundo del código.
+        programa intensivo de 10 semanas, con clases de lunes a viernes durante todo el día, para vivir una experiencia inmersiva en el mundo del código.
       text_link: Obtener más información
       link: "#leadform_header"
 
