@@ -1,5 +1,5 @@
 meta_info:
-  slug: santiago-front-end-developer # <--- URL 4geeksacademy.com/us/landing/example
+  slug: santiago-front-end-developer-go # <--- URL 4geeksacademy.com/us/landing/example
 
   # This will show on social media when shared
   title: "El mejor Bootcamp de programación por 4 años consecutivos"
@@ -12,7 +12,7 @@ meta_info:
 
   # Set a particular course or location to the landing page
   # this UTM fields will be also included in the CRM contact
-  utm_course: ["full-stack"]
+  utm_course: ["front-end"]
   utm_location: ["santiago-chile"]
   automation: soft # comma separated, "soft" is the default value
   tag: request_more_info # comma separated, "request_more_info" is the default value
@@ -39,7 +39,7 @@ apply_schollarship: # form that is displayed at the end of the landing
 # jumbotron on the top (cannot be commented out)
 header_data:
   tagline: Front-End Developer Bootcamp
-  sub_heading: "¡Conviértete en desarrollador en 12 semanas!"
+  sub_heading: "¡Conviértete en desarrollador Front-End en 12 semanas!"
   # background: "#FFF1D1"
   badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
   background_image: "../../../static/images/locations/satiago-background.webp"
@@ -51,11 +51,9 @@ features:
   #                                         up   left down  right
   styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
   bullets:
-    - Aprende los lenguajes de programación más demandados por las empresas.
     - Mentorías/Tutorías personalizadas ilimitadas y de por vida
     - Comunidad internacional +5000 personas
-    - Clases personalizadas (Ratio Profesor/Alumno promedio 1 a 7)
-    - No vienes a aprender a programar, ¡vienes a convertirte en Developer!
+    - Aprende los lenguajes más demandados para el front de una web
 
 follow_bar:
   position: "top" # top, bottom, hidden

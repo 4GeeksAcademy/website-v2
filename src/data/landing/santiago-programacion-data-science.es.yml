@@ -210,17 +210,17 @@ components:
     image:
       style: '{ "border" : "3px solid black" }' 
       shadow: true 
-      src: "../../../static/images/testimonials/joshua-bravo-testimonial.jpg"
-    video: "https://www.youtube.com/watch?v=rtpfwwfE0yY"
+      src: "../../../static/images/testimonials/fidel-vera-testimonio-ds.jpg"
+    video: "https://www.youtube.com/watch?v=zfLGOolXHWQ"
     heading:
       text:
-        "De ayudante de cocina al mundo tecnológico, El camino de Joshua hacia una carrera en la industria de la tecnología"
+        "De estudiante a profesional en data science, la historia de Fidel Vera"
         #xl      lg     md     sm    xs
       font_size: ["40px", "34px", "34px", "25px", "20px"]
     content:
-      #style: '{}'
-      #text: "De asistente de cocina a programador gracias a 4Geeks Academy. Su dedicación y formación lo convirtieron en un profesional altamente capacitado."
-      #font_size: ["16px"]
+      style: '{}'
+      text: "El alto nivel del bootcamp, la metodología práctica orientada a proyectos reales y el enfoque en la resolución de problemas le brindaron las herramientas y la confianza necesarias para avanzar en su carrera. Ahora, Fidel continúa profundizando en el campo con Python y SQL, demostrando su compromiso con el aprendizaje continuo y su pasión por la ciencia de datos. Su historia es un ejemplo inspirador de cómo la dedicación y el esfuerzo pueden abrir las puertas al éxito profesional."
+      font_size: ["16px"]
     button:
       text: "Experiencias de Éxito"
       path: "#why_4geeks"

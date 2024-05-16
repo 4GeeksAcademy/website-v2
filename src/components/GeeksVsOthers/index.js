@@ -84,6 +84,7 @@ const GeeksVsOthers = (props) => {
         display_md="flex"
         maxWidth="1280px"
         margin="0 auto"
+        padding="20px"
         justifyContent="center"
       >
         <GridContainer

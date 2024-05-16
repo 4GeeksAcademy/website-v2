@@ -1,0 +1,251 @@
+meta_info:
+  slug: "front-end-developer"
+  title: "Frontend Development Course at 4Geeks Academy"
+  description: "Become a successful web developer with the Frontend program at 4Geeks Academy! Acquire skills in HTML, CSS, and JavaScript."
+  image: "/images/og-preview/full-stack.es.png"
+  bc_slug: "front-end"
+  visibility: "unlisted"
+  keywords: "front-end"
+  show_in_apply: true
+  redirects: []
+  related_clusters: ["desarrollador-full-stack"]
+
+apply_form:
+  label: Curso de Desarrollo Frontend
+
+
+seo_title: "Curso de Desarrollo Frontend"
+header:
+  title: "Curso de Desarrollo Frontend"
+  image: "../../../static/images/bg/program-bg.png"
+  image_alt: "Programa"
+  paragraph: " Conoce los conceptos básicos del desarrollo frontend, las tecnologías más utilizadas y cómo se relacionan con el diseño de interfaces de usuario."
+
+button:
+  syllabus_heading: "Descargar Detalles del Curso"
+  syllabus_btn_label: "Descarga Instantánea"
+  syllabus_motivation: "En 2 min. recibirás en tu buzón de correo un PDF con información muy detallada sobre nuestra metodología, tecnologías, financiación e información del curso."
+  apply_button_link: "/es/aplica"
+  apply_button_text: "Aplicar"
+  
+course_instructors: 
+  header:
+    title: "Conoce a nuestros instructores"
+    paragraph: ""
+
+  instructors:
+    # - name: "Roldolfo Campos"
+    #   sub_title: "Co fundador de 4geeks y director de educación"
+    #   image: "../../../static/images/instructors/example.png"
+    #   bio: "Currently working as a Senior Solutions Architect at VMware, Rodolfo Campos is a Software Engineer with 17 years of experience in Linux, Java, SQL, Blockchain, etc. Master in Computer Science and passionate about Big Data and Entrepreneurship."
+    #   github: ""
+    #   linkedin: "https://www.linkedin.com/"
+
+    # - name: "Gabriel Salinas"
+    #   sub_title: "Sophisticated Software Systems Engineer"
+    #   image: "../../../static/images/instructors/example.png"
+    #   bio: "Currently working as a Senior Solutions Architect at VMware"
+    #   github: ""
+    #   linkedin: "https://www.linkedin.com/"
+
+overlaped:
+  heading: "Html, CSS y JS"
+  paragraph: "Aprenderás a descomponer problemas complejos en pequeñas partes más sencillas, siguiendo las bases y buenas prácticas de la programación."
+  button:
+    text: "Aplicar"
+    color: "blue"  
+    link: "/"
+  image:
+    src: "/images/landing/tres-personas-reloaded.webp"  
+
+## TWO COLUMNS
+# two_columns:
+#   proportions: [6, 6]
+#   image:
+#     style: '{"border" : "3px solid black", "backgroundSize": "contain" }'
+#     src: "/static/images/staff/luisa.png"
+#     shadow: true  
+#   video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
+#   heading:
+#     text: "4Geeks Academy and a story full of opportunities"
+#     font_size: ["30px", "30px", "30px", "30px", "30px"]
+#   sub_heading:
+#     text: "We are Miami based and we have been focusing in bringing on more opportunities in South Florida."
+#     font_size: ["16px", "16px", "16px", "16px", "16px"]
+#   button:
+#     text: "Apply now"
+#     color: "white"
+#     background: "black"
+#     path: "#prices_and_payment"
+#   bullets:
+#     items: 
+#     - text: "There is always a full or partial scholarship open"
+#     - text: "There is always opportunities for everyone in Miami-Dade County, Broward and Palm Beach"
+#     - text: "We have ongoing partnerships with Miami Dade College, Miami Tech Coalition, UWM, The City of Miami, Miami Dade County and many more."
+
+
+badges:
+  paragraph: "4Geeks Academy es el lugar idóneo para <a href='/es/curso-de-programacion-desde-cero'>aprender a programar desde cero</a>. Estamos avalados y autorizados por el Departamento de Educación de Florida y hemos sido reconocidos como el mejor de Miami, según SwitchUp y de los 10 mejores cursos de programación, según Newsweek. En España, hemos recibido el Premio Excelencia Educativa durante dos años consecutivos. Y a nivel global formamos parte del top 35 de cursos de programación en el mundo."
+
+upcoming:
+  no_dates_message: "Actualmente no hay próximas fechas para este programa"  
+  actionMessage: "Avísame cuando haya fechas disponibles"
+
+credentials:
+  heading: "RESULTADOS"
+  paragraph: "Nuestros números hablan por sí solos"
+## PROGRAM DETAILS
+details:
+  about:
+      title: "Acerca del programa"
+      sub_title: |
+        El programa de Frontend en 4Geeks Academy te brinda la oportunidad de adquirir las habilidades necesarias para convertirte en un desarrollador web exitoso, con un enfoque en las tecnologías más demandadas por las empresas. 
+        Dirigido a aquellos que buscan una carrera emocionante en el mundo del desarrollo web, una vez completado el curso podrás asumir roles como Desarrollador Frontend, Diseñador de Interfaz de Usuario o Web Designer Specialist. 
+        ¡Únete a nosotros y comienza a construir tu futuro en la industria tecnológica! 
+    
+      list:
+        - label: "Duración"
+          content:  "12 semanas"
+          icon: "calendar"
+        - label: "Clases"
+          content: "3 Clases semanales"
+          icon: "book"
+        - label: "Certificado"
+          content: "Nuestros certificados son  reconocidos por múltiples instituciones."
+          link_text: ""
+          link: ""
+          icon: "certificate"
+        - label: "Requisitos"
+          content: "Tan solo necesitas un ordenador y una conexión a internet"
+          icon: "contract-checked"
+        - label: "Idioma"
+          content: "Puedes elegir entre inglés y español para consumir el plan de estudios y el contenido. Las clases se imparten en el idioma oficial de tú campus."
+          icon: "contract-checked"
+          
+  heading: DETALLES DEL PROGRAMA PART-TIME
+  weeks: 12
+  sub_heading: "Proyectos practicos de la vida real, exactamente lo que buscan las empresas"
+  left_labels:
+    description: "DESCRIPCION:"
+    projects: "PROYECTOS:"
+    duration: "DURACIÓN:"
+    skills: "Tópico / Semana:"
+  details_modules:
+    - module_name: "Prework"
+      title: "Prework"
+      description: >
+        Aprenderás los conceptos básicos de HTML para estructurar el contenido de una página web, CSS para dar estilo y diseño, y JavaScript para añadir interactividad.
+      projects: "Te familiarizarás con las herramientas y plataformas que utilizarás durante el curso, como editores de código, sistemas de control de versiones y entornos de desarrollo integrados."
+      slug: "prework"
+      duration: "~ 60 horas"
+      step: 0
+    - module_name: "Diseño web"
+      title: "Diseño web"
+      description: "Introducción a la estructura y diseño web con HTML y CSS, además de la implementación de Bootstrap para estilos y componentes predefinidos."
+      projects: "Creación de una página web estática utilizando HTML, CSS y Bootstrap."
+      slug: "desarrollo-web"
+      duration: "1 semana"
+      step: 1
+    - module_name: "Git"
+      title: "GitHub, Git y Gitflow"
+      description: "Uso de la línea de comandos, control de versiones con Git y GitHub, así como la metodología Gitflow para la gestión de ramas."
+      projects: "Creación y colaboración en repositorios de GitHub, prácticas con comandos de Git."
+      slug: "web-development"
+      duration: "1 semana"
+      step: 1
+    - module_name: "Java Script"
+      title: "Javascript, Dom, Eventos"
+      description: "Fundamentos de JavaScript, manipulación del DOM y manejo de eventos para la interactividad en páginas web."
+      projects: "Desarrollo de pequeñas aplicaciones web que utilicen JavaScript para la interacción con el usuario."
+      slug: "java-script"
+      duration: "2 semanas"
+      step: 2
+    - module_name: "React y Jest"
+      title: "Test Unitarios Jest y React"
+      description: "Implementación de pruebas unitarias con Jest y introducción al framework React para el desarrollo de aplicaciones web dinámicas."
+      projects: "Creación de componentes en React y escritura de pruebas unitarias para garantizar su funcionamiento."
+      slug: "jest-and-react"
+      duration: "2 semanas"
+      step: 2
+    - module_name: "Integración de APIs"
+      title: "API Rest"
+      description: "Conexión con APIs RESTful para obtener y enviar datos, además de la creación de user histories para el desarrollo ágil de aplicaciones."
+      projects: "Integración de una API externa en una aplicación web y seguimiento de user histories para la implementación de nuevas funcionalidades."
+      slug: "apis-rest"
+      duration: "2 semanas"
+      step: 2
+    - module_name: "Proyecto Final"
+      title: "Proyecto Final"
+      description: "Aplicación práctica de todos los conocimientos adquiridos en un proyecto final que englobe los aspectos fundamentales del desarrollo frontend."
+      projects: "Desarrollo de un proyecto completo que muestre las habilidades y competencias adquiridas durante el curso."
+      slug: "final-work"
+      duration: "4 semanas"
+      step: 3.5
+    - module_name: "DE POR VIDA"
+      title: "De por vida"
+      description: "Seguirás recibiendo la ayuda de la academia de por vida, mantendrás el acceso a los contenidos, soporte profesional (career support) y disfrutarás de mentorías ilimitadas, incluso cuando comiences tu primer empleo: ¡nunca más estarás solo!"
+      projects: "Consigue tu primer empleo en el sector tecnológico y empieza a ganar dinero como un programador y sigue desarrollándote hasta convertirte en un programador Senior."
+      slug: "lifelong-learning"
+      duration: "Para siempre"
+      step: 0.5
+
+syllabus:
+  heading: Descarga toda la infomación sobre este programa
+  button_label: Descargar
+
+## 4GEEKS VS OTHERS SECTION
+geeks_vs_others:
+  heading: "EN NÚMEROS: 4GEEKS VS OTROS"
+  sub_heading: ""
+  sub_heading_link: ""
+
+why_4geeks:
+  heading: Porqué 4Geeks Academy
+  sub_heading: ""
+
+## GEEK PAL AND GEEK FORCE BOXES
+geek_data:
+  heading: ¡Career Support de por vida!
+  geek_pal:
+    - Aprenderas Python, Javascript y React. Los Lenguajes más buscados.
+    - Un profesor cada siete estudiantes (1:7).
+    - Sesiones ilimitadas de tutoría 1-1 por demanda, en persona o en línea.
+    - Miles de ejercicios interactivos y autoevaluados.
+    - Soluciones en video para una retroalimentación instantánea.
+    - Chat de apoyo en línea 12 horas al día.
+    - Transmisión en línea de las clases.
+    - Grabación de las clases para su posterior revisión.
+  geek_force:
+    - Construcción de CV y LinkedIn.
+    - Construcción del perfil de Github y portafolio desde el dia 1.
+    - Career Week para dedicación exclusiva a tu perfil profesional.
+    - Preparación de simulación de entrevistas.
+    - Sesión de preparación de entrevistas personalizadas para trabajos específicos.
+    - Entrenamiento de marca personal.
+    - Prácticas y ejercicios de programación posteriores a la graduación.
+    - Coaching SEMANAL hasta que consigas trabajo.
+
+## PRICES AND PAYMENTS SECTION
+prices:
+  heading: "Planes y Precios"
+  sub_heading: "Selecciona la sede o modalidad de tu curso para ver los precios y planes de pago"
+  selector:
+    top_label: Sede
+    placeholder: Selecciona una sede
+  button:
+    text: Ver planes / precios
+    link: ""
+## ALUMNI SECTION
+alumni:
+  heading: "Conoce a los graduados y sus proyectos"
+  sub_heading: "La última fase del curso debes construir un proyecto final que tú mismo escogerás, 
+    puede ser un emprendimiento o trabajarás directamente en un proyecto de la vida real en 
+    colaboración con nuestros hiring partners."
+
+## SIDEBAR
+sidebar:
+  membership: "MEMBRESÍA"
+  program: "PROGRAMA"
+  geeks_vs_other: "4GEEKS vs OTROS"
+  pricing: "PRECIO"
+  alumni: "GRADUADOS"

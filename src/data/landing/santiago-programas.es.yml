@@ -1,10 +1,10 @@
 meta_info:
-  slug: 4geeks-academy-historia # <--- URL 4geeksacademy.com/us/landing/example
+  slug: santiago-programas # <--- URL 4geeksacademy.com/us/landing/example
 
   # This will show on social media when shared
-  title: "Historia de 4Geeks Academy"
-  description: "4Geeks Academy Una historia de pasión por la educación y el desarrollo de software"
-  image: "/images/bg/community.png"
+  title: "Nuestros programas en chile"
+  description: "Descubre el potencial de nuestros programas en chile - 4Geeks Academy chile"
+  image: "/images/bg/pricing-bg.jpg"
   keywords: ""
   visibility: "hidden" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   template: "landing_a" # <--- choose your landing template
@@ -13,7 +13,7 @@ meta_info:
   # Set a particular course or location to the landing page
   # this UTM fields will be also included in the CRM contact
   utm_course: ["full-stack"]
-  utm_location: ["downtown-miami"]
+  utm_location: ["santiago-chile"]
   automation: soft # comma separated, "soft" is the default value
   tag: request_more_info # comma separated, "request_more_info" is the default value
 
@@ -38,36 +38,36 @@ apply_schollarship: # form that is displayed at the end of the landing
 
 # jumbotron on the top (cannot be commented out)
 header_data:
-  tagline: Historia de 4Geeks Academy
-  sub_heading: "Una historia de pasión por la educación y el desarrollo de software"
+  tagline: Descubre tu potencial en 4Geeks Academy
+  sub_heading: "Programas para convertirte en un experto en programación y complementar tu perfil profesional"
   # background: "#FFFFFF"
-  background_image: "../../../static/images/historia-de4geeks2.webp"
-  badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
-  image_filter: brightness(0.3)
+  background_image: "../../../static/images/bg/pricing-bg.jpg"
+  badge: "../../../static/images/badges/ebootcamp-top.png"
+  image_filter: brightness(0.1)
 
 features:
   marginTop: 0px #<-- separation between tagline and the bullets
 
   #                                         up   left down  right
   styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
-  # bullets:
-  #   - No previous experience or coding skills required.
-  #   - Choose the schedule and format that suits you best — part-time, online, in-person, or hybrid.
-  #   - Flexible payment plans starting at $150 a month, with the option to start paying after landing a job.
-  #   - Get lifelong access to our mentors and career support.
+  bullets:
+    - Aprende a resolver problemas de manera efectiva
+    - Desarrolla habilidades de aprendizaje autodidacta
+    - Accede a mentorías personalizadas ilimitadas y de por vida
+    - Forma parte de una comunidad internacional de más de 5,000 personas
 
 follow_bar:
   position: "top" # top, bottom, hidden
   content:
-    text: "Solicita más información \nsobre la academia y sus planes"
-    text_mobile: "Solicita más información \nsobre la academia y sus planes"
+    text: "Solicita más información \nsobre nuestros programas y la academia"
+    text_mobile: "Solicita más información \nsobre nuestros programas y la academia"
     # devices:   XL      LG    MD      SM    XS
     font_size: ["22px", "22px", "22px", "20px", "18px"]
   button:
     text: "Más información"
     path: "#leadform_header"
   phone:
-    text: "Call"
+    text: "llama"
 
 short_badges:
   - name: "Ebootcamp"
@@ -149,49 +149,60 @@ why_4geeks:
 
 # Possible layouts: [two_column_left_image, two_column_right_image]
 components:
-  - name: the-begin
+  - name: how-it-works
     position: 1
-    layout: two_column_left
-    swipable: False
-    background: "#FFFFFF"
-    image:
-      style: '{ "background-size": "cover", "height":"320px", "min-height":"auto", "background-position": "center"}'
-      src: "/images/landing/4geeks_academy_picture.jpg"
-      shadow: true
-    section_heading:
-      text: "Comienzos simples para una simple idea, el Desarrollo."
+    background: "lightYellow"
+    layout: iconogram
+    swipable: True
     heading:
-      text: "Nuestra historia comenzó en 2009"
+      text: "Descubre tu potencial en 4Geeks Academy"
+      font_size: ["30px", "30px", "30px", "30px", "30px"]
     sub_heading:
-      text: |
-        Cuando un grupo de amigos unidos por su pasión por la tecnología fundaron 4Geeks, una pequeña empresa de desarrollo de software. Tras años de esfuerzo y dedicación, nos convertimos en una empresa próspera con operaciones en 5 países y más de 250 proyectos entregados.
-    content:
-      text: ""
-      font_size: ["16px"]
-      path: ""
+      text: 'Programas para convertirte en un experto en programación y complementar tu perfil profesional'
+      font_size: ["16px", "16px", "16px", "16px", "16px"]
+      style: '{ "textAlign": "center", "width": "60%" }'
+    icons:
+      - icon: "fullstack" 
+        title: "Full-Stack Dev"
+        content: "Aprende a crear aplicaciones web completas, dominando tanto el frontend como el backend de un proyecto."
 
+      - icon: "machine"
+        title: "Data Science"
+        content: "Entra al mundo de la ciencia de datos y el machine learning, adquiriendo habilidades para analizar y visualizar información."
 
-  - name: the-academy
-    position: 2
-    layout: two_column_right
-    swipable: False
-    background: "#C9F9F9" # Name of the color(from components/Styling/index.js) or color code ex: #C9F9F9
-    image:
-      style: '{ "background-size": "cover", "height":"300px", "min-height":"auto", "background-position": "top"}'
-      src: "/images/the-academy/what-is-4geeks.jpg"
-      shadow: true
-    section_heading:
-      text: ""
-      style: '{ "font-size": "30px"}'
-    heading:
-      text: "Sin embargo, no nos quedamos ahí"
-    sub_heading:
-      text: |
-        En 2014, decidimos dar un paso más y crear 4Geeks Academy, una academia no convencional con un objetivo claro: formar desarrolladores de software de alto nivel que pudieran adaptarse a las demandas del mercado laboral actual.
-    content:
-      text: ""
-      font_size: ["16px"]
-      path: ""
+      - icon: "fullstack_2"
+        title: "Frontend"
+        content: "Especialízate en el desarrollo de la interfaz de usuario de aplicaciones web, con lenguajes como HTML, CSS y JavaScript."
+
+      - icon: "applied-ai"
+        title: "IA para Profesionales"
+        content: "Aprende a utilizar la Inteligencia Artificial como herramienta para potenciar tus resultados y optimizar procesos."
+
+      - icon: "cibersecurity"
+        title: "Ciberseguridad"
+        content: "Conviértete en un especialista en ciberseguridad y prepárate contra posibles ataques en sistemas como Windows o Linux."
+      
+  # - name: the-academy
+  #   position: 2
+  #   layout: two_column_right
+  #   swipable: False
+  #   background: "#C9F9F9" # Name of the color(from components/Styling/index.js) or color code ex: #C9F9F9
+  #   image:
+  #     style: '{ "background-size": "cover", "height":"300px", "min-height":"auto", "background-position": "top"}'
+  #     src: "/images/the-academy/what-is-4geeks.jpg"
+  #     shadow: true
+  #   section_heading:
+  #     text: ""
+  #     style: '{ "font-size": "30px"}'
+  #   heading:
+  #     text: "Sin embargo, no nos quedamos ahí"
+  #   sub_heading:
+  #     text: |
+  #       En 2014, decidimos dar un paso más y crear 4Geeks Academy, una academia no convencional con un objetivo claro: formar desarrolladores de software de alto nivel que pudieran adaptarse a las demandas del mercado laboral actual.
+  #   content:
+  #     text: ""
+  #     font_size: ["16px"]
+  #     path: ""
     # button:
     #   text: "Send me more information"
     #   color: white
@@ -200,8 +211,8 @@ components:
     #   path: "#leadform_header"
 
 
-  - name: how-it-works
-    position: 3
+  - name: how-it-works-2
+    position: 8
     background: "#E3F9FE !important"
     layout: iconogram
     swipable: True

@@ -204,17 +204,17 @@ components:
     image:
       style: '{ "border" : "3px solid black" }' 
       shadow: true 
-      src: "../../../static/images/testimonials/joshua-bravo-testimonial.jpg"
-    video: "https://www.youtube.com/watch?v=rtpfwwfE0yY"
+      src: "../../../static/images/testimonials/fidel-vera-testimonio-ds.jpg"
+    video: "https://www.youtube.com/watch?v=zfLGOolXHWQ"
     heading:
       text:
-        "De ayudante de cocina al mundo tecnológico, El camino de Joshua hacia una carrera en la industria de la tecnología"
+        "Fidel Vera De Estudiante a Profesional en Data Science"
         #xl      lg     md     sm    xs
       font_size: ["40px", "34px", "34px", "25px", "20px"]
     content:
-      #style: '{}'
-      #text: "De asistente de cocina a programador gracias a 4Geeks Academy. Su dedicación y formación lo convirtieron en un profesional altamente capacitado."
-      #font_size: ["16px"]
+      style: '{}'
+      text: "Fidel Vera, siempre interesado en el potencial de los datos, encontró en 4Geeks Academy la plataforma perfecta para convertir su afición en una carrera profesional sólida. El bootcamp de Data Science de 4Geeks Academy le brindó las herramientas y el conocimiento necesarios para desenvolverse con éxito en este campo tan demandado."
+      font_size: ["16px"]
     button:
       text: "Experiencias de Éxito"
       path: "#why_4geeks"

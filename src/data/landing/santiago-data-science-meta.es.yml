@@ -228,6 +228,31 @@ components:
         text: "Proporcionamos ayuda para la colocación laboral y preparación para el empleo en tecnología."
         icon: "circle" 
 
+  - name: some_id
+    position: 7
+    layout: two_column_right
+    background: "#fbfbfb"
+    image:
+      style: '{ "border" : "3px solid black" }' 
+      shadow: true 
+      src: "../../../static/images/testimonials/fidel-vera-testimonio-ds.jpg"
+    video: "https://www.youtube.com/watch?v=zfLGOolXHWQ"
+    heading:
+      text:
+        "Un Ejemplo de Superación y Éxito en el Campo de la Data Science"
+        #xl      lg     md     sm    xs
+      font_size: ["40px", "34px", "34px", "25px", "20px"]
+    content:
+      style: '{}'
+      text: "Fidel Vera, impulsado por su curiosidad por el potencial de la ciencia de datos, tomó la decisión de invertir en su futuro profesional inscribiéndose en el bootcamp de Data Science de 4Geeks Academy. Esta experiencia le brindó las bases sólidas y la confianza necesaria para convertirse en un experto en este campo tan demandado."
+      font_size: ["16px"]
+    button:
+      text: "Postúlate ahora"
+      path: "#leadform_bottom"
+      color: "white"
+      background: "black"
+      hover: "lightBlue"
+
 choose_your_program:
   position: 5
   title: Nuestra Modalidad
