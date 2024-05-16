@@ -113,12 +113,12 @@ components:
     layout: two_column_left
     background: "veryLightBlue2" # Name of the color(from components/Styling/index.js) or color code ex: #C9F9F9
     image:
-      style: '{ "background-size": "contain", "height":"200px", "min-height":"auto", "background-position": "center"}'
+      style: '{ "background-size": "contain", "height":"200px", "min-height":"auto", "background-position": "center", "justify-content": "center"}'
       src: "/images/logoweb.png"
     heading:
       text: "Financiación Flexible para Alcanzar Tus Metas Tecnológicas"
         #           xl      lg      md      sm      xs
-      font_size: ["50px", "50px", "50px", "50px", "50px"]
+      font_size: ["40px", "40px", "35px", "35px", "30px"]
     content:
       text: "En 4Geeks Academy, comprendemos que invertir en tu educación tecnológica es una decisión importante. Por eso, nos hemos asociado con Banco de Chile para ofrecerte opciones de financiamiento flexibles que se adapten a tus necesidades. Con nuestros planes de pago de 3 a 24 cuotas sin interés, podrás acceder a nuestros bootcamps de programación sin preocupaciones financieras y comenzar a construir tu futuro profesional con total tranquilidad."
       font_size: ["16px"]

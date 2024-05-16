@@ -147,7 +147,7 @@ details:
       step: 3
     - module_name: "Generación de imagenes"
       title: "Generación de Imágenes e Implementación de IA"
-      description: "Revisión de capacidades de modelos populares para generación de imágenes como Stable Diffusion, Dall-E, Midjourney. Cómo redactar buenos prompts para modelos de generación de imágenes."
+      description: "Revisión de capacidades de modelos populares para generación de imágenes como Stable Diffusion, Dall-E, Entre otras, A demás de cómo redactar buenos prompts para modelos de generación de imágenes."
       projects: "Desarrollo de una estrategia de Inteligencia Artificial y creación de prompts útiles para generar imágenes en casos de uso específicos."
       slug: "img-generation"
       duration: "1 semana"

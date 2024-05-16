@@ -472,7 +472,6 @@ part_time:
     icons: 
       - "/images/quotanda-logo.png"
       - "/images/visa-mastercard.png"
-      - "/images/flevo-new.png"
 
   - slug: 'latam-probram-only-fs-pt'
     academies: ['bogota-colombia', 'buenosaires-argentina', 'costa-rica', 'lapaz-bolivia', 'lima-peru', 'mexicocity-mexico', 'montevideo-uruguay', 'panamacity-panama', 'quito-ecuador']
