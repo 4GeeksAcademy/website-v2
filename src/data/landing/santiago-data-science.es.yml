@@ -41,7 +41,7 @@ apply_schollarship: # form that is displayed at the end of the landing
 header_data:
   background: "#FFF1D1"
   tagline: Aprende Data Science y Machine Learning 
-  sub_heading: "Descubre por qué nuestro bootcamp es la clave para tu éxito en Machine Learning y Data Science"
+  sub_heading: "Descubre por qué nuestro bootcamp es la clave para tu éxito en Data Science y Machine Learning"
   badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
   image_filter: brightness(0.3)
 

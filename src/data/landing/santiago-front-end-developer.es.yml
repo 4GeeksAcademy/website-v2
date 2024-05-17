@@ -38,7 +38,7 @@ apply_schollarship: # form that is displayed at the end of the landing
 
 # jumbotron on the top (cannot be commented out)
 header_data:
-  tagline: ¿Por qué estudiar programación Front-End?
+  tagline: Bootcamp Front-End Developer
   sub_heading: "El salario promedio de un Front-End Developer Junior es entre 650.000 CLP y 800.000 CLP aproximadamente. Nuestro programa no solo te capacitará para convertirte en desarrollador Front-End, sino que también te enseñará las tecnologías más buscadas y mejor pagadas del mercado actual, como: HTML, CSS, JavaScript, React, API REST, entre otras."
   # background: "#FFF1D1"
   badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
