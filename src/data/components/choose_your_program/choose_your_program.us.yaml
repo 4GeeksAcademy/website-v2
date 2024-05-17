@@ -7,23 +7,25 @@ programs:
     description_mobile: "Online, face-to-face and flexible"
     icon: "fullstack_2"
     link: "/us/coding-bootcamps/part-time-full-stack-developer"
+
   - title: "Data Science and ML"
     sub_title: "With Python"
     description: "Learn Python to collect and manage data. Create models and solve problems using Machine Learning, Deep Learning, and AI."
     description_mobile: "Online, face-to-face and flexible"
     icon: "machine_2"
     link: "/us/coding-bootcamps/datascience-machine-learning"
+
+  - title: "CyberSecurity Bootcamp"
+    sub_title: "For Windows & Linux"
+    description: "Become a cybersecurity specialist, equipped to identify, manage, and mitigate system vulnerabilities in compliance with ISO and other standards."
+    description_mobile: "Online, face-to-face and flexible"
+    icon: "cyber-security"
+    link: "/us/coding-bootcamps/cybersecurity"
+
   - title: "Applied AI"
     sub_title: "No code"
-    description: "Explore in detail artificial intelligence and how to apply it in different industries, roles, and your work."
+    description: "Explore how to leverage artificial intelligence to advance your career.  Learn best practices to use generative AI to your advantage and become more productive."
     description_mobile: "Online, face-to-face and flexible"
     icon: "applied-ai"
     link: "/us/coding-bootcamps/applied-ai-course"
-  - title: "Blockchain and Web3"
-    sub_title: "With Solidity"
-    description: "Build applications for Web3 with Solidity and Blockchain. Start a career as a blockchain developer and help build tomorrow's web."
-    description_mobile: "Online, face-to-face and flexible"
-    icon: "blockchain"
-    link: "#"
-    text_link: COMING SOON
-    comming_soon: true
+

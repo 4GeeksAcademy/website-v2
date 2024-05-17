@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link, useStaticQuery, graphql } from "gatsby";
-import PropTypes from "prop-types";
 import { Button, Colors } from "../Styling";
 import { Grid, Div } from "../Sections";
 import { H4, H3, H2, Paragraph } from "../Heading";
+import { SessionContext } from "../../session.js";
 import Icon from "../Icon";
 
 const ChooseYourProgram = ({
@@ -15,6 +15,8 @@ const ChooseYourProgram = ({
   landingTemplate,
   id,
 }) => {
+  const { session } = useContext(SessionContext);
+  const applyButton = session?.location?.button?.apply_button_text;
   const data = useStaticQuery(graphql`
     {
       allChooseYourProgramYaml {
@@ -41,25 +43,10 @@ const ChooseYourProgram = ({
   let info = data.allChooseYourProgramYaml.edges.find(
     ({ node }) => node.fields.lang === lang
   );
-  const linearGradient = (color1, color2) => {
-    return `linear-gradient(to right, ${color1}, ${color2})`;
-  };
+
   if (info) info = info.node;
   return (
-    <Div
-      //background={landingTemplate ? Colors.white : Colors.verylightGray}
-      position="relative"
-      id={id}
-      ref={chooseProgramRef}
-    >
-      <Div
-        background={Colors.verylightGray}
-        display_xxs="none"
-        display_tablet={landingTemplate ? "none" : "flex"}
-        height_tablet="50%"
-        width_tablet="100%"
-        position="absolute"
-      />
+    <Div id={id} ref={chooseProgramRef}>
       <Grid
         gridTemplateColumns_md={
           landingTemplate ? "repeat(14, 1fr)" : "repeat(14, 1fr)"
@@ -73,7 +60,7 @@ const ChooseYourProgram = ({
         padding_lg="10px 0 50px 0"
         padding_md="10px 80px 50px 80px"
         padding_tablet="10px 40px 50px 40px"
-        padding_xxs="0 20px 40px 20px "
+        padding="0 20px 40px 20px "
         maxWidth_tablet="1280px"
         margin_tablet="0 auto 50px auto"
         margin_lg="0 auto 50px auto"
@@ -92,10 +79,9 @@ const ChooseYourProgram = ({
           zIndex="1"
         >
           <H2
-            //margin="0 0 10px 0"
-            fontWeight="700"
-            fontSize_tablet="30px"
-            fontSize_xs="24px"
+            fontWeight="400"
+            fontSize="24px"
+            fontSize_tablet="35px"
             lineHeight_tablet="36px"
             lineHeight_xs="28.8px"
           >
@@ -118,10 +104,10 @@ const ChooseYourProgram = ({
           gridColumn_md="1 / 15"
           gridRow_tablet="2 / 4"
           gridTemplateColumns_md={
-            landingTemplate ? "repeat(2, 4fr)" : "repeat(3, 4fr)"
+            landingTemplate ? "repeat(2, 4fr)" : "repeat(4fr)"
           }
           gridTemplateColumns_tablet={
-            landingTemplate ? "repeat(2, 4fr)" : "repeat(3 , 32%)"
+            landingTemplate ? "repeat(2, 4fr)" : "repeat(4 , 25%)"
           }
           zIndex="1"
           margin="0px auto"
@@ -132,17 +118,15 @@ const ChooseYourProgram = ({
             programs.map((program, index) => {
               return (
                 <Div
-                  key={index}
+                  key={`${index}-program`}
                   display="flex"
-                  padding=" 24px 24px"
-                  //margin_xs="20px 0px"
+                  padding=" 20px 20px"
                   margin_tablet="0px"
-                  border="3px solid black"
+                  border="1px solid black"
+                  borderRadius="4px"
+                  flexDirection="column"
                   flexDirection_tablet="column"
-                  flexDirection_xs="column"
-                  alignItems="center"
-                  justifyContent="space-between"
-                  //alignItems_tablet="flex-end"
+                  justifyContent="between"
                   background="#ffffff"
                   style={{ position: "relative" }}
                   flexWrap_sm="nowrap"
@@ -150,103 +134,107 @@ const ChooseYourProgram = ({
                   zIndex="1"
                   width_md="100%"
                   width_tablet="100%"
-                  width_xxs="95%"
-                  width_xs="100%"
+                  width="100%"
                 >
-                  <Div
-                    placeSelf_tablet={landingTemplate && "flex-start"}
-                    display="flex"
-                    justifyContent="space-between"
-                    margin_xs="10px 0 0 0"
-                    margin_tablet="0"
-                    width="100%"
-                    width_tablet="100%"
-                  >
-                    <Div display="inline" width="75%" padding="0 5px 0 0">
-                      <H4
-                        textTransform="uppercase"
-                        textAlign="left"
-                        fontSize="15px"
-                        lineHeight="19px"
-                        letterSpacing="0.05em"
-                        color={Colors.darkGray}
-                        margin="0 0 5px 0"
-                      >
-                        {program.sub_title}
-                      </H4>
-                      {program.title.split("\n").map((title, index) => (
-                        <Link key={index} to={program.link}>
-                          <H3
-                            textAlign="left"
-                            fontSize="22px"
-                            lineHeight="26px"
-                          >
-                            {title}
-                          </H3>
-                        </Link>
-                      ))}
-                    </Div>
-                    <Div display="flex" justifyContent_sm="end" width="25%">
-                      <Icon
-                        className="choose-your-program-icon"
-                        icon={program.icon}
-                        padding="0 0 0 20px"
-                        height="40px"
-                        width="52px"
-                      />
-                    </Div>
-                  </Div>
-                  <Div
-                    display="flex"
-                    flexDirection="column"
-                    width="100%"
-                    alignContent="flex-start"
-                    margin_tablet={
-                      landingTemplate ? "10px 0 50px 0" : "10px 0 0 0"
-                    }
-                    margin_xs={landingTemplate ? "10px 0 50px 0" : "10px 0 0 0"}
-                    padding={
-                      landingTemplate
-                        ? "10px 0px 20px 0px"
-                        : "10px 0px 15px 0px"
-                    }
-                  >
-                    {program.description &&
-                      program.description
-                        .split("\n")
-                        .map((paragraph, index) => (
-                          <Paragraph
-                            key={index}
-                            letterSpacing="0.05em"
-                            display_tablet="inline"
-                            display_xs="inline"
-                            textAlign="left"
-                            fontSize="15px"
-                            lineHeight="22px"
-                            fontWeight="400"
-                            opacity="1"
-                            margin={index == 0 && "10px 0px 10px 0"}
-                            dangerouslySetInnerHTML={{ __html: paragraph }}
-                          />
+                  <Div display="block">
+                    <Div
+                      placeSelf_tablet={landingTemplate && "flex-start"}
+                      display="flex"
+                      justifyContent="space-between"
+                      margin_xs="10px 0 0 0"
+                      margin_tablet="0"
+                      width="100%"
+                      width_tablet="100%"
+                    >
+                      <Div display="inline" width="75%" padding="0 5px 0 0">
+                        <H4
+                          textTransform="uppercase"
+                          textAlign="left"
+                          fontSize="15px"
+                          lineHeight="19px"
+                          letterSpacing="0.05em"
+                          color={Colors.darkGray}
+                          margin="0 0 5px 0"
+                        >
+                          {program.sub_title}
+                        </H4>
+                        {program.title.split("\n").map((title, index) => (
+                          <Link key={index} to={program.link}>
+                            <H3
+                              textAlign="left"
+                              fontSize="22px"
+                              lineHeight="26px"
+                            >
+                              {title}
+                            </H3>
+                          </Link>
                         ))}
+                      </Div>
+                      <Div display="flex" justifyContent_sm="end" width="25%">
+                        <Icon
+                          className="choose-your-program-icon"
+                          icon={program.icon}
+                          padding="0 0 0 20px"
+                          height="75px"
+                          width="68px"
+                        />
+                      </Div>
+                    </Div>
+                    <Div
+                      display="flex"
+                      flexDirection="column"
+                      width="100%"
+                      alignContent="flex-start"
+                      margin_tablet={
+                        landingTemplate ? "10px 0 50px 0" : "10px 0 0 0"
+                      }
+                      margin_xs={
+                        landingTemplate ? "10px 0 50px 0" : "10px 0 0 0"
+                      }
+                      padding={
+                        landingTemplate
+                          ? "10px 0px 20px 0px"
+                          : "10px 0px 15px 0px"
+                      }
+                    >
+                      {program.description &&
+                        program.description
+                          .split("\n")
+                          .map((paragraph, index) => (
+                            <Paragraph
+                              key={index}
+                              letterSpacing="0.05em"
+                              display_tablet="inline"
+                              display_xs="inline"
+                              textAlign="left"
+                              fontSize="15px"
+                              lineHeight="22px"
+                              fontWeight="400"
+                              opacity="1"
+                              margin={index == 0 && "10px 0px 10px 0"}
+                              dangerouslySetInnerHTML={{ __html: paragraph }}
+                            />
+                          ))}
 
-                    {program.description_mobile && (
-                      <Paragraph
-                        letterSpacing="0.05em"
-                        display="block"
-                        display_tablet="none"
-                        textAlign="left"
-                        fontSize="15px"
-                        lineHeight="19px"
-                        fontWeight="400"
-                        opacity="1"
-                        margin="10px 0px 25px 0"
-                      >
-                        {program.description_mobile}
-                      </Paragraph>
-                    )}
+                      {program.description_mobile && (
+                        <Paragraph
+                          letterSpacing="0.05em"
+                          display="block"
+                          display_tablet="none"
+                          textAlign="left"
+                          fontSize="15px"
+                          lineHeight="19px"
+                          fontWeight="400"
+                          opacity="1"
+                          margin="10px 0px 25px 0"
+                        >
+                          {program.description_mobile}
+                        </Paragraph>
+                      )}
+                    </Div>
                   </Div>
-                  <Div margin="20px 0 0 0" width_xs="100%" width_tablet="150px">
+
+                  <Div margin="20px 0 0 0" width="100%" width_tablet="150px">
                     {!program.comming_soon ? (
                       <Link to={program.link} style={{ width: "100%" }}>
                         {landingTemplate ? (
@@ -257,32 +245,33 @@ const ChooseYourProgram = ({
                             colorHover={Colors.black}
                             color={Colors.white}
                             justifyContent="center"
-                            //className="mobile"
-                            width_xs="auto"
+                            width="auto"
                             width_tablet="150px"
-                            style={{
-                              position: "absolute",
-                              bottom: "24px",
-                              left: "24px",
-                              right: "24px",
-                            }}
+                            borderRadius="4px"
                           >
                             {program.text_link}
                           </Button>
                         ) : (
-                          <Div displey="flex">
-                            <Icon
-                              //className="mobile"
-                              style={{
-                                position: "absolute",
-                                bottom: "24px",
-                                right: "24px",
-                              }}
-                              icon="arrowright"
-                              height="32px"
-                              width="32px"
-                            />
-                          </Div>
+                          <Button
+                            display="flex"
+                            background="#0084FF"
+                            colorHover="#0084FF"
+                            color={Colors.white}
+                            justifyContent="center"
+                            width="auto"
+                            width_tablet="150px"
+                            borderRadius="4px"
+                            style={{
+                              bottom: "24px",
+                              left: "24px",
+                              right: "24px",
+                              gap: "10px",
+                            }}
+                          >
+                            {applyButton || program.text_link}
+                            {"  "}
+                            <span>→</span>
+                          </Button>
                         )}
                       </Link>
                     ) : (
@@ -294,11 +283,10 @@ const ChooseYourProgram = ({
                           width="fit-content"
                           pointer
                           textColor={Colors.black}
-                          fontSize={"13px"}
-                          //margin_xs="5px 0 0 0"
+                          fontSize="13px"
                           padding="10px"
-                          position="absolute"
                           bottom="24px"
+                          borderRadius="4px"
                           right="24px"
                         >
                           {program.text_link}

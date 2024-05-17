@@ -80,7 +80,7 @@ images_box:
       alt: "Quito city"
     - path: "../../../static/images/ownpeoplecoding2.webp"
       alt: "4Geeks Own People Coding"
-    - path: "../../../static/images/ownmancoding.jpg"
+    - path: "../../../static/images/ownmancoding.webp"
       alt: "Remote-Coding-Bootcamp"
     - path: "../../../static/images/locations/miami-old.jpg"
       alt: "4Geeeks location"
