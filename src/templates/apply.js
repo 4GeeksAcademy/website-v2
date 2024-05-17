@@ -650,7 +650,7 @@ const Apply = (props) => {
                         dangerouslySetInnerHTML={{
                           __html: consent.message,
                         }}
-                      ></Paragraph>
+                      />
                     </Div>
                   );
               })}
