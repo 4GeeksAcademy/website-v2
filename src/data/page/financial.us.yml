@@ -166,7 +166,7 @@ two_column:
     button:
       text: JOIN THE PROGRAM
       color: white
-      background: "#0084FF"
+      background: "blue"
       hover_color: white
       path: "#prices_and_payment"
 
@@ -209,7 +209,7 @@ two_column:
     button:
       text: "APPLY"
       color: "white"
-      background: "#0084FF"
+      background: "blue"
       hover_color: "white"
       path: "/us/apply"
 

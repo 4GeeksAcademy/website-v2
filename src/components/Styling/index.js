@@ -36,7 +36,7 @@ const convertToBgImage = (imageData) => {
 };
 
 export const Colors = {
-  blue: "#00A0DA",
+  blue: "#0084FF",
   lightBlue: "#BBEAFC",
   lightBlue2: "rgba(199, 243, 253, 0.5)",
   blue2: "#0097CD",

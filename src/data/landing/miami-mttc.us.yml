@@ -114,7 +114,7 @@ components:
       text: "Apply Now"
       color: white
       hover_color: "white"
-      background: "#0084FF"
+      background: "blue"
       path: "#"
 
     bullets:
@@ -148,7 +148,7 @@ components:
       text: "Apply Now"
       color: white
       hover_color: "white"
-      background: "#0084FF"
+      background: "blue"
       path: "#"
 
   - name: "choose_your_program"
@@ -275,7 +275,7 @@ components:
       text: "Apply Now"
       color: white
       hover_color: "white"
-      background: "#0084FF"
+      background: "blue"
       path: "#"
 
   - name: testimonials
@@ -311,10 +311,10 @@ components:
       text: "Apply Now"
       color: white
       hover_color: "white"
-      background: "#0084FF"
+      background: "blue"
       path: "#"
 
-  - name: pay
+  - name: no-worries
     position: 8
     layout: two_column_left
     proportions: [6, 6]
@@ -352,5 +352,5 @@ components:
       text: "Apply Now"
       color: white
       hover_color: "white"
-      background: "#0084FF"
+      background: "blue"
       path: "#"
